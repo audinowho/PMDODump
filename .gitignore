@@ -1,0 +1,11 @@
+packages/
+bin/
+obj/
+.vs/
+*.csproj.user
+*.suo
+*.tmp
+*.zip
+*.manifest
+.vscode
+publish/

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{92BFCDA9-3AF8-4370-906A-4F3AB0B1246C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DataGenerator</RootNamespace>
+    <AssemblyName>DataGenerator</AssemblyName>
+    <TargetFramework>net5.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Data\Zones\ZoneInfoHelpers.cs" />
+    <Compile Include="Data\Zones\ZoneInfoBase.cs" />
+    <Compile Include="Data\Zones\ZoneInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite" Version="1.0.113.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PMDC\PMDC\PMDC.csproj" />
+    <ProjectReference Include="..\PMDC\RogueEssence\RogueElements\RogueElements\RogueElements.csproj" />
+    <ProjectReference Include="..\PMDC\RogueEssence\RogueEssence\RogueEssence.csproj" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;EDITORS</DefineConstants>
+  </PropertyGroup>
+</Project>
