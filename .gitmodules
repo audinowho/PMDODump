@@ -1,0 +1,3 @@
+[submodule "PMDC"]
+	path = PMDC
+	url = https://github.com/PMDCollab/PMDC.git
