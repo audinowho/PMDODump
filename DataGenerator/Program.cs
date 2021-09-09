@@ -48,6 +48,9 @@ namespace DataGenerator
                 DataManager.InitInstance();
                 DataManager.Instance.InitData();
 
+                //uncomment this if you have the proper sqlite table
+                //ZoneInfo.AddMonsterData();
+                //RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Monster);
                 ZoneInfo.AddZoneData();
                 RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Zone);
             }
