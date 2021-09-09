@@ -16,6 +16,10 @@
     <Compile Include="Data\Zones\ZoneInfoHelpers.cs" />
     <Compile Include="Data\Zones\ZoneInfoBase.cs" />
     <Compile Include="Data\Zones\ZoneInfo.cs" />
+    <Compile Include="Data\MonsterInfo.cs" />
+    <Compile Include="Data\GrowthInfo.cs" />
+    <Compile Include="Data\SkillGroupInfo.cs" />
+    <Compile Include="Data\ElementInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

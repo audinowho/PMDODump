@@ -24,7 +24,7 @@ namespace DataGenerator.Data
 
         public static void AddZoneData()
         {
-
+            //DataInfo.DeleteIndexedData(DataManager.DataType.Zone.ToString());
             for (int ii = 0; ii < MAX_ZONES; ii++)
             {
                 ZoneData zone = GetZoneData(ii);
