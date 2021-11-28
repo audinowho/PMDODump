@@ -1,0 +1,1 @@
+﻿{"Object":{"$type":"RogueEssence.Data.RankData, RogueEssence","Name":{"DefaultText":"Hyper","LocalTexts":{"fr-ca":"Extraordinaire","de":"Hyper","es":"Avanzado","pt":"Hiper","ko":"하이퍼"}},"Comment":"","BagSize":24,"FameToNext":50000},"Version":"0.5.2.0"}

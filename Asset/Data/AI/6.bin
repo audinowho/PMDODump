@@ -1,0 +1,1 @@
+﻿{"Object":{"$type":"RogueEssence.Data.AITactic, RogueEssence","Name":{"DefaultText":"Wait Only","LocalTexts":{}},"Released":true,"Comment":"","ID":6,"Assignable":false,"Plans":[{"$type":"PMDC.Dungeon.WaitPlan, PMDC","IQ":400}]},"Version":"1.0.0.0"}

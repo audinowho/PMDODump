@@ -1,0 +1,1725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_ENUM_BattleSpeed_Fast" xml:space="preserve">
+    <value>Schnell</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_BattleSpeed_Normal" xml:space="preserve">
+    <value>Normal</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_BattleSpeed_Slow" xml:space="preserve">
+    <value>Langsam</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_BattleSpeed_VeryFast" xml:space="preserve">
+    <value>Sehr Schnell</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_BattleSpeed_VerySlow" xml:space="preserve">
+    <value>Sehr Langsam</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Dir4_Down" xml:space="preserve">
+    <value>Unten</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Dir4_Left" xml:space="preserve">
+    <value>Links</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Dir4_Right" xml:space="preserve">
+    <value>Rechts</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Dir4_Up" xml:space="preserve">
+    <value>Oben</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_ConnectionFailed_msg" xml:space="preserve">
+    <value>Verbindung fehlgeschlagen.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_ConnectionRejected_msg" xml:space="preserve">
+    <value>Verbindung wurde abgelehnt.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_HostUnreachable_msg" xml:space="preserve">
+    <value>Host ist nicht erreichbar.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_InvalidProtocol_msg" xml:space="preserve">
+    <value>Falsches Protokoll.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_RemoteConnectionClose_msg" xml:space="preserve">
+    <value>Die Serververbindung wurde geschlossen.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_Timeout_msg" xml:space="preserve">
+    <value>Verbindungsversuch fehlgeschlagen.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_ExchangeState_Exchange_msg" xml:space="preserve">
+    <value>Tausche...</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_ExchangeState_Ready_msg" xml:space="preserve">
+    <value>Bereit!</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_ExchangeState_Selecting_msg" xml:space="preserve">
+    <value>Wählt aus...</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_ExchangeState_Viewing_msg" xml:space="preserve">
+    <value>Überlegt...</value>
+    <comment>The status for a player when they're viewing the Pokemon they can trade.</comment>  </data>
+  <data name="_ENUM_ExchangeState_Waiting_msg" xml:space="preserve">
+    <value>Wartet...</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Double" xml:space="preserve">
+    <value>Doppelt</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Eighth" xml:space="preserve">
+    <value>Achtel</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Fourth" xml:space="preserve">
+    <value>Viertel</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Half" xml:space="preserve">
+    <value>Halbiert</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Normal" xml:space="preserve">
+    <value>Normal</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Octuple" xml:space="preserve">
+    <value>Achtfach</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Quadruple" xml:space="preserve">
+    <value>Vierfach</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Female" xml:space="preserve">
+    <value>Weiblich</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Genderless" xml:space="preserve">
+    <value>Geschlechtslos</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Male" xml:space="preserve">
+    <value>Männlich</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Unknown" xml:space="preserve">
+    <value>Unbekannt</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Attack" xml:space="preserve">
+    <value>Angriff</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Confirm" xml:space="preserve">
+    <value>Bestätigen</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Diagonal" xml:space="preserve">
+    <value>Diagonal</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_ItemMenu" xml:space="preserve">
+    <value>Item Menü</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap1" xml:space="preserve">
+    <value>Anführerwechsel 1</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap2" xml:space="preserve">
+    <value>Anführerwechsel 2</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap3" xml:space="preserve">
+    <value>Anführerwechsel 3</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap4" xml:space="preserve">
+    <value>Anführerwechsel 4</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwapBack" xml:space="preserve">
+    <value>Anführerwechsel zurück</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwapForth" xml:space="preserve">
+    <value>Anführerwechsel vorwärts</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Menu" xml:space="preserve">
+    <value>Menü</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Minimap" xml:space="preserve">
+    <value>Karte</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_MsgLog" xml:space="preserve">
+    <value>Nachrichtenverlauf</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Run" xml:space="preserve">
+    <value>Laufen</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_SelectItems" xml:space="preserve">
+    <value>Items auswählen</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Skill1" xml:space="preserve">
+    <value>Attacke 1</value>
+    <comment>Moves as in "Attacks"</comment>  </data>
+  <data name="_ENUM_InputType_Skill2" xml:space="preserve">
+    <value>Attacke 2</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Skill3" xml:space="preserve">
+    <value>Attacke 3</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Skill4" xml:space="preserve">
+    <value>Attacke 4</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_SkillMenu" xml:space="preserve">
+    <value>Attacken Menü</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Skills" xml:space="preserve">
+    <value>Attacken</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_SortItems" xml:space="preserve">
+    <value>Items sortieren</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Start" xml:space="preserve">
+    <value>Start</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_TacticMenu" xml:space="preserve">
+    <value>Taktik Menü</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_TeamMenu" xml:space="preserve">
+    <value>Team Menü</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_TeamMode" xml:space="preserve">
+    <value>Team Modus</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Turn" xml:space="preserve">
+    <value>Runde</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Keys_Escape" xml:space="preserve">
+    <value>Esc</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_NetCloseReason_AlreadyConnected_msg" xml:space="preserve">
+    <value>Du bist bereits mit einem weiteren Programm verbunden.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_NetCloseReason_DifferentActivity_msg" xml:space="preserve">
+    <value>Der andere Spieler sucht nach einer anderen Aktivität.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_NetCloseReason_OtherEnded_msg" xml:space="preserve">
+    <value>Der andere Spieler hat sich entschieden, die Verbindung zu trennen.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_NetCloseReason_PeerIDMismatch_msg" xml:space="preserve">
+    <value>Einer der Spieler hat sich nicht mit der richtigen Team ID verbunden.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_NetCloseReason_ServerShutdown_msg" xml:space="preserve">
+    <value>Der Server wurde geschlossen.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_Magical" xml:space="preserve">
+    <value>Spezial</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_None" xml:space="preserve">
+    <value>Keine</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_Physical" xml:space="preserve">
+    <value>Physisch</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_Status" xml:space="preserve">
+    <value>Status</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Attack" xml:space="preserve">
+    <value>Angriff</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Defense" xml:space="preserve">
+    <value>Verteidigung</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_DodgeRate" xml:space="preserve">
+    <value>Fluchtwert</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_HitRate" xml:space="preserve">
+    <value>Genauigkeit</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_HP" xml:space="preserve">
+    <value>KP</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MAtk" xml:space="preserve">
+    <value>Spezial Angriff</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MAtk_short" xml:space="preserve">
+    <value>Sp. Angriff</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MAtk_tiny" xml:space="preserve">
+    <value>Sp. Ang.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MDef" xml:space="preserve">
+    <value>Spezial Verteidigung</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MDef_short" xml:space="preserve">
+    <value>Sp. Verteidigung</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MDef_tiny" xml:space="preserve">
+    <value>Sp. Vert.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Range" xml:space="preserve">
+    <value>Reichweite</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Speed" xml:space="preserve">
+    <value>Initiative</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Dawn" xml:space="preserve">
+    <value>Morgen</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Day" xml:space="preserve">
+    <value>Tag</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Dusk" xml:space="preserve">
+    <value>Abend</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Night" xml:space="preserve">
+    <value>Nacht</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Unknown" xml:space="preserve">
+    <value>Unbekannt</value>
+    <comment></comment>  </data>
+  <data name="ADD_END" xml:space="preserve">
+    <value> und</value>
+    <comment>Last conjunction word when creating lists of words.  Ex. "Attack, Defense, and Special Defense" There needs to be a space before the word for "and", otherwise the previous word will be followed directly by the "and". That's to make sure the oxford comma does NOT have a space before it. Silly English people with their oxford commas.</comment>  </data>
+  <data name="DLG_ASK_ENTER_DUNGEON" xml:space="preserve">
+    <value>Möchtest du {0} betreten?</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASK_ENTER_GROUND" xml:space="preserve">
+    <value>Zum Rastplatz {0} reisen?</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASK_GENDER" xml:space="preserve">
+    <value>Bist du ein Junge oder ein Mädchen?</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASSEMBLY_RELEASE" xml:space="preserve">
+    <value>{0} wurde freigelassen.[pause=0]\nTschüß {0}...</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASSEMBLY_RELEASE_ASK" xml:space="preserve">
+    <value>Nach dem Freilassen wird {0} nicht wiederkommen. Bist du dir sicher?</value>
+    <comment></comment>  </data>
+  <data name="DLG_AWAIT_RESCUE_AOK_FAIL" xml:space="preserve">
+    <value>Verifizierung fehlgeschlagen. [pause=0] Der OK Brief wurde gelöscht.</value>
+    <comment></comment>  </data>
+  <data name="DLG_AWAIT_RESCUE_AOK_FOUND" xml:space="preserve">
+    <value>Ein OK Brief wurde geladen. [pause=0] Verifizierung wird nun beginnen.</value>
+    <comment></comment>  </data>
+  <data name="DLG_AWAIT_RESCUE_ASK" xml:space="preserve">
+    <value>Du wartest im Moment auf eine Rettung. Was willst du tun?</value>
+    <comment>This is asked when you faint in a dungeon and are given the opportunity to send an SOS.</comment>  </data>
+  <data name="DLG_AWAIT_RESCUE_RESUME" xml:space="preserve">
+    <value>Dein Team wurde erfolgreich gerettet! [pause=0] Kehre nun zum Rettungsmenü zurück.</value>
+    <comment></comment>  </data>
+  <data name="DLG_CHOICE_NO" xml:space="preserve">
+    <value>Nein</value>
+    <comment></comment>  </data>
+  <data name="DLG_CHOICE_YES" xml:space="preserve">
+    <value>Ja</value>
+    <comment></comment>  </data>
+  <data name="DLG_DELETE_COMPLETE" xml:space="preserve">
+    <value>Dein Abenteuer wurde gelöscht.</value>
+    <comment></comment>  </data>
+  <data name="DLG_DELETE_CONFIRM" xml:space="preserve">
+    <value>Ist das wirklich OK?</value>
+    <comment></comment>  </data>
+  <data name="DLG_DELETE_SAVE" xml:space="preserve">
+    <value>Dein Abenteuer wird gelöscht. [pause=0] Dies beinhaltet nicht deine Kontakte, Wiederholungen oder Roguelockes.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_FILE" xml:space="preserve">
+    <value>Die Datei kann nicht gelesen werden, da sie das falsche Format hat oder beschädigt ist.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_FILE_FALLBACK" xml:space="preserve">
+    <value>Bitte lösche sie oder verschiebe sie aus {0}.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_SAVE" xml:space="preserve">
+    <value>Die Speicherdatei konnte nicht gelesen werden, da sie das falsche Format hat oder beschädigt wurde.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_SAVE_FALLBACK" xml:space="preserve">
+    <value>Die jetzigen Spieldaten werden von nun an als neue permanente Spieldaten verwendet.</value>
+    <comment></comment>  </data>
+  <data name="DLG_LANGUAGE_SET" xml:space="preserve">
+    <value>Die Sprache wurde auf {0} geändert.</value>
+    <comment></comment>  </data>
+  <data name="DLG_LEVEL_DOWN" xml:space="preserve">
+    <value>{0} ist auf Level {1} abgestiegen!</value>
+    <comment></comment>  </data>
+  <data name="DLG_LEVEL_UP" xml:space="preserve">
+    <value>{0} ist auf Level {1} aufgestiegen!</value>
+    <comment></comment>  </data>
+  <data name="DLG_NEW_CHARS" xml:space="preserve">
+    <value>Neue Pokémon sind als Starter verfügbar!</value>
+    <comment></comment>  </data>
+  <data name="DLG_NO_ADVENTURE" xml:space="preserve">
+    <value>Aber das Abenteuer endete bevor es überhaupt anfangen konnte...</value>
+    <comment></comment>  </data>
+  <data name="DLG_ONLINE_TRADE_END_ASK" xml:space="preserve">
+    <value>Möchtest du aufhören dich mit deinem Partner auszutauschen?</value>
+    <comment></comment>  </data>
+  <data name="DLG_QUIT_ASK" xml:space="preserve">
+    <value>Möchstest du das Abenteuer aufgeben? Es wird als Niederlage gewertet.</value>
+    <comment></comment>  </data>
+  <data name="DLG_REPLAY_DESYNC" xml:space="preserve">
+    <value>Die Wiederholung ist unsynchron geworden. [pause=0] Kehre zum Menü zurück.</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_ADD_REWARD_ASK" xml:space="preserve">
+    <value>Was möchtest du anbieten?</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_ASK" xml:space="preserve">
+    <value>Möchtest du um eine Rettung bitten?</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_GET_AOK_ASK" xml:space="preserve">
+    <value>Willst du diesen OK Brief von {0} erhalten?</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_GET_AOK_ASK_REWARD" xml:space="preserve">
+    <value>Willst du diesen OK Brief von {0} erhalten? Dabei wirst du der Person die genannte Belohnung senden.</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_GOT_AOK" xml:space="preserve">
+    <value>{0} hat den OK Brief empfangen.</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_GOT_AOK_REWARD" xml:space="preserve">
+    <value>Du hast ebenso eine Belohnung als Dank versendet!</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_INFO_1" xml:space="preserve">
+    <value>Um eine Rettung anzufragen, wähle 'Hole Hilfe' innerhalb von 'Erwarte Rettung'.</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_QUIT_ASK" xml:space="preserve">
+    <value>Möchtest du die Rettung nicht mehr abwarten und die Mission aufgeben?</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_RECEIVE_SOS" xml:space="preserve">
+    <value>Du hast den SOS Brief von {0} empfangen.</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_RECEIVE_SOS_ASK" xml:space="preserve">
+    <value>Willst du den SOS Brief von {0} empfangen?</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_AOK" xml:space="preserve">
+    <value>Der OK Brief wurde an {0} versendet.</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_AOK_ASK" xml:space="preserve">
+    <value>Willst du den OK Brief an {0} versenden?</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_AOK_ASK_REWARD" xml:space="preserve">
+    <value>Willst du den OK Brief an {0} versenden? Du erhältst ebenso die genannte Belohnung.</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_AOK_REWARD" xml:space="preserve">
+    <value>Du erhältst auch eine Belohnung für die Rettung als Dank!</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_SOS" xml:space="preserve">
+    <value>Der SOS Brief wurde an {0} versendet.</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_SOS_ASK" xml:space="preserve">
+    <value>Willst du den SOS Brief an {0} versenden?</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESTRICT_BAG" xml:space="preserve">
+    <value>{0} wurden im Lager verstaut.</value>
+    <comment>ex. "All (P), and items beyond the Xth slot have been stored away."</comment>  </data>
+  <data name="DLG_RESTRICT_ITEM_ALL" xml:space="preserve">
+    <value>alle Items</value>
+    <comment>Will be used in the sentence "All items have been stored away." May be used in the middle of a sentence so do not capitalize.</comment>  </data>
+  <data name="DLG_RESTRICT_ITEM_SLOT" xml:space="preserve">
+    <value>Items nach dem {0}ten Platz</value>
+    <comment>Will be used in the sentence "Items beyond the Xth slot have been stored away." May be used in the middleof a sentence so do not capitalize.</comment>  </data>
+  <data name="DLG_RESTRICT_LEVEL" xml:space="preserve">
+    <value>Die Teammitglieder wurden vorübergehend auf Level {0} zurückgesetzt.</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESTRICT_MONEY" xml:space="preserve">
+    <value>alle \uE024</value>
+    <comment>Will be used in the sentence "All (P) have been stored away." May be used in the middle of a sentence so do not capitalize.</comment>  </data>
+  <data name="DLG_ROGUE_INFO_1" xml:space="preserve">
+    <value>Im Roguelocke Modus wird der ausgewählte Dungeon mit einem brandneuem Team betreten.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_INFO_2" xml:space="preserve">
+    <value>Du kannst auswählen mit welchem Pokémon du beginnst und kannst seine Fähigkeit, Geschlecht oder auch Farbe verändern.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_INFO_3" xml:space="preserve">
+    <value>Items und rekrutierte Pokemon werden nach Abschluss des Dungeons auf den Hauptspielstand übertragen.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_INFO_4" xml:space="preserve">
+    <value>Wenn die gesamte Gruppe KO geht, sind alle Gruppenmitglieder für immer verloren.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SEED_INFO_1" xml:space="preserve">
+    <value>Du kannst einen Startwert für den Zufallsgenerator eingeben, wenn du einen Dungeon zum Spielen auswählst.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SEED_INFO_2" xml:space="preserve">
+    <value>Dungeons mit demselben Startwert haben immer den gleichen Aufbau, egal wie oft sie gespielt werden.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SEED_INFO_3" xml:space="preserve">
+    <value>Du kannst Dungeon mit dem gleichen Aufbau erneut spielen, indem du den Startwert von der Aufzeichnung eines abgeschlossenen Abenteuers kopierst.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SEED_INFO_4" xml:space="preserve">
+    <value>Allerdings kannst du keine Items oder Pokémon übertragen, wenn du einen Startwert eingibst.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SPECIAL_INFO_1" xml:space="preserve">
+    <value>In diesem Roguelocke Modus erscheinen schillernde Pokémon viel öfter und du kannst ebenso eines zu Beginn auswählen!</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SPECIAL_INFO_2" xml:space="preserve">
+    <value>Jedoch kannst du sie in diesem Modus nicht nach Hause schicken und falls die schillernden Pokémon besiegt werden, können sie nicht übertragen werden. </value>
+    <comment></comment>  </data>
+  <data name="DLG_SAVE_COMPLETE" xml:space="preserve">
+    <value>Spiel gespeichert!</value>
+    <comment></comment>  </data>
+  <data name="DLG_SEND_HOME_ASK" xml:space="preserve">
+    <value>{0} zurücksenden?</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_DELETE" xml:space="preserve">
+    <value>Einen Angriff verlernen, um {0} erlernen zu können?</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_FULL" xml:space="preserve">
+    <value>{0} möchte {1} erlernen, aber {0} kennt bereits 4 Angriffe.</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_LEARN" xml:space="preserve">
+    <value>{0} hat {1} erlernt!</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_NO_LEARN" xml:space="preserve">
+    <value>{0} hat {1} nicht erlernt.</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_REPLACE" xml:space="preserve">
+    <value>{0} hat {2} vergessen[pause=0] und hat {1} erlernt!</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_STOP_LEARN" xml:space="preserve">
+    <value>Aufhören {0} zu erlernen?</value>
+    <comment></comment>  </data>
+  <data name="DLG_SUSPEND_ASK" xml:space="preserve">
+    <value>Abenteuer speichern und zum Titelbildschirm zurückkehren?</value>
+    <comment></comment>  </data>
+  <data name="DLG_TEAM_FULL" xml:space="preserve">
+    <value>Dein Team ist voll! Wähle ein Pokémon aus um es nach Hause zu schicken.</value>
+    <comment></comment>  </data>
+  <data name="DLG_TEAM_SENT_HOME" xml:space="preserve">
+    <value>{0} ist nach Hause zurückgekehrt.</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_CANCELED" xml:space="preserve">
+    <value>Der andere Spieler hat den Tausch abgebrochen.</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_ITEM_ASK" xml:space="preserve">
+    <value>Möchtest du diese Items tauschen?</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_ITEM_COMPLETE" xml:space="preserve">
+    <value>Tausch erfolgreich! Die Items wurde in das Lager gesendet.</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_AND" xml:space="preserve">
+    <value>Und im Austausch...</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_ASK" xml:space="preserve">
+    <value>Möchtest du {0} gegen {1} tauschen?</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_RECEIVED" xml:space="preserve">
+    <value>{1} hat {0} gesendet, um deinem Abenteuer beizutreten!</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_RECEIVED_BACK" xml:space="preserve">
+    <value>{0} ist von {1} zurückgekehrt!</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_SENT" xml:space="preserve">
+    <value>{0} wurde zu {1} versendet.</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_SENT_BACK" xml:space="preserve">
+    <value>{0} wurde wieder zu {1} zurückgesendet.</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRANSFER_ASK" xml:space="preserve">
+    <value>Items, Geld und Pokémon die nicht KO gegangen sind können zum Hauptspielstand übertragen werden. Möchtest du diesen Transfer ausführen?</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRANSFER_COMPLETE" xml:space="preserve">
+    <value>Transfer abgeschlossen!</value>
+    <comment></comment>  </data>
+  <data name="DLG_WHAT_DO" xml:space="preserve">
+    <value>Was wirst du machen?</value>
+    <comment></comment>  </data>
+  <data name="GAME_SPLASH" xml:space="preserve">
+    <value>Dies ist ein kostenloses Fan-Spiel\ndas von Pokemon Mystery Dungeon Fans\n entwickelt wurde.\n\nBitte kaufe ein offizielles Spiel,\num die Serie zu unterstuetzen.\n\n\nPokemon Mystery Dungeon ist eine Marke von:\nNintendo\nPokemon\nCreatures Inc\nGAME FREAK Inc\nSpike Chunsoft</value>
+    <comment>CAREFUL.  A line can only contain up to 40 characters before it overflows the screen!  Due to font limitations, it also cannot contain anything other than plain ASCII. (Letters A-Z, numbers, punctuation.)</comment>  </data>
+  <data name="GAME_TITLE" xml:space="preserve">
+    <value>Pokémon Mystery Dungeon: Ursprünge</value>
+    <comment>The title of the game.  Based off of "Pokemon Origins" (the anime)</comment>  </data>
+  <data name="INPUT_CAN_PASTE" xml:space="preserve">
+    <value>Benutze STRG+V zum Einfügen.</value>
+    <comment></comment>  </data>
+  <data name="INPUT_CONTACT_TITLE" xml:space="preserve">
+    <value>Trage hier die ID deines Kontaktes ein.</value>
+    <comment></comment>  </data>
+  <data name="INPUT_IP_SUB" xml:space="preserve">
+    <value>Formatierung ist "Hostname:Port". Benutze STRG+V zum Einfügen.</value>
+    <comment></comment>  </data>
+  <data name="INPUT_IP_TITLE" xml:space="preserve">
+    <value>Gebe einen Server und eine optionale Portnummer ein.</value>
+    <comment></comment>  </data>
+  <data name="INPUT_NAME_DESC" xml:space="preserve">
+    <value>Freilassen, um keinen Spitznamen zu vergeben.</value>
+    <comment></comment>  </data>
+  <data name="INPUT_NAME_TITLE" xml:space="preserve">
+    <value>Bitte gib einen Spitznamen ein.</value>
+    <comment></comment>  </data>
+  <data name="INPUT_SEED_TITLE" xml:space="preserve">
+    <value>Gebe den Startwert ein.</value>
+    <comment></comment>  </data>
+  <data name="INPUT_TEAM_DESC" xml:space="preserve">
+    <value>Drücke [TAB] für Namensvorschläge. \nLasse für einen zufälligen Namen dieses Feld leer.</value>
+    <comment></comment>  </data>
+  <data name="INPUT_TEAM_TITLE" xml:space="preserve">
+    <value>Bitte gib einen Teamnamen ein.</value>
+    <comment></comment>  </data>
+  <data name="MENU_ADD_NEW" xml:space="preserve">
+    <value>Hinzufügen</value>
+    <comment></comment>  </data>
+  <data name="MENU_AOK_TEAM" xml:space="preserve">
+    <value>Retter: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_AOK_TITLE" xml:space="preserve">
+    <value>OK Zusammenfassung</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_FAVORITE" xml:space="preserve">
+    <value>Favorit</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_JOIN" xml:space="preserve">
+    <value>Team beitreten</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_RELEASE" xml:space="preserve">
+    <value>Entlassen</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_RENAME" xml:space="preserve">
+    <value>Umbenennen</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_STANDBY" xml:space="preserve">
+    <value>Auf Abruf</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_TITLE" xml:space="preserve">
+    <value>Teambildung</value>
+    <comment>Title of the Assembly menu, for choosing team members in the assembly to add to the team.  Based off of "Chimecho Assembly" as it was called in EN versions.</comment>  </data>
+  <data name="MENU_ASSEMBLY_UNFAVORITE" xml:space="preserve">
+    <value>Favorit entfernen</value>
+    <comment></comment>  </data>
+  <data name="MENU_BAG_MONEY" xml:space="preserve">
+    <value>Geld: {0}</value>
+    <comment>For labeling the amount of money the team has on hand</comment>  </data>
+  <data name="MENU_BANK_BANK" xml:space="preserve">
+    <value>Bank:</value>
+    <comment></comment>  </data>
+  <data name="MENU_BANK_MONEY" xml:space="preserve">
+    <value>Geld:</value>
+    <comment></comment>  </data>
+  <data name="MENU_BANK_TITLE" xml:space="preserve">
+    <value>Wie viele \uE024 sollen entnommen werden?</value>
+    <comment></comment>  </data>
+  <data name="MENU_BOY" xml:space="preserve">
+    <value>Junge</value>
+    <comment></comment>  </data>
+  <data name="MENU_CANCEL" xml:space="preserve">
+    <value>Abbrechen</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_CHOICE_TITLE" xml:space="preserve">
+    <value>Starter?</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_CUSTOMIZE" xml:space="preserve">
+    <value>{0} Details bearbeiten</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_DETAIL_INTRINSIC" xml:space="preserve">
+    <value>Fähigkeit</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_DETAIL_SKIN" xml:space="preserve">
+    <value>Farbe: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_DETAILS" xml:space="preserve">
+    <value>Details</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_FORM" xml:space="preserve">
+    <value>Form</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_GENDER" xml:space="preserve">
+    <value>Geschlecht</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_INTRINSIC" xml:space="preserve">
+    <value>Fähigkeit #{0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_SKIN" xml:space="preserve">
+    <value>Farbe</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHOOSE" xml:space="preserve">
+    <value>Auswählen</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONNECTING_CANCEL" xml:space="preserve">
+    <value>Drücke {0} um abzubrechen.</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONNECTING_PARTNER" xml:space="preserve">
+    <value>Warte auf deinen Partner...</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONNECTING_SERVER" xml:space="preserve">
+    <value>Verbinde mit Server...</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTACT_ID" xml:space="preserve">
+    <value>ID: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTACT_IP" xml:space="preserve">
+    <value>IP: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTACT_LAST_SEEN" xml:space="preserve">
+    <value>Zuletzt gesehen: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTACT_RANK" xml:space="preserve">
+    <value>Rang: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTACTS_TITLE" xml:space="preserve">
+    <value>Kontakte</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTROLS_CHOOSE_BUTTON" xml:space="preserve">
+    <value>DRÜCKE EINEN KNOPF</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTROLS_CHOOSE_KEY" xml:space="preserve">
+    <value>DRÜCKE EINE TASTE</value>
+    <comment>Tells the player to press a key for the controls in the Controls menu</comment>  </data>
+  <data name="MENU_CONTROLS_CONFIRM" xml:space="preserve">
+    <value>Bestätigen</value>
+    <comment>Menu option to confirm the controls changed by the player</comment>  </data>
+  <data name="MENU_CONTROLS_RESET" xml:space="preserve">
+    <value>Standard wiederherstellen</value>
+    <comment>Menu option to reset controls to their defaults</comment>  </data>
+  <data name="MENU_COPY_UUID" xml:space="preserve">
+    <value>ID kopieren</value>
+    <comment></comment>  </data>
+  <data name="MENU_DELETE" xml:space="preserve">
+    <value>Löschen</value>
+    <comment></comment>  </data>
+  <data name="MENU_DELETE_SAVE_TITLE" xml:space="preserve">
+    <value>Spielstand löschen</value>
+    <comment></comment>  </data>
+  <data name="MENU_DEX_CAUGHT" xml:space="preserve">
+    <value>Rekrutiert: {0}</value>
+    <comment>For labeling how many species have been caught in the Pokedex.  "Caught" is used in the EN version simply because it's what's always displayed in the Pokedex.  This isn't required for other translations if it sounds too off.</comment>  </data>
+  <data name="MENU_DEX_SEEN" xml:space="preserve">
+    <value>Gesehen: {0}</value>
+    <comment>For labeling how many species have been seen in the Pokedex</comment>  </data>
+  <data name="MENU_DEX_TITLE" xml:space="preserve">
+    <value>Pokédex</value>
+    <comment>Title of the Pokedex menu, where the pokedex progress can be viewed</comment>  </data>
+  <data name="MENU_DUNGEON_FLOORS" xml:space="preserve">
+    <value>Ebenen: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_DUNGEON_TITLE" xml:space="preserve">
+    <value>Standorte</value>
+    <comment></comment>  </data>
+  <data name="MENU_EXIT" xml:space="preserve">
+    <value>Schließen</value>
+    <comment>Menu option to exit the current menu</comment>  </data>
+  <data name="MENU_GIRL" xml:space="preserve">
+    <value>Mädchen</value>
+    <comment></comment>  </data>
+  <data name="MENU_GROUND_CHECK" xml:space="preserve">
+    <value>Untersuchen</value>
+    <comment>Underfoot menu option to examine the tile underneath (ex. evo site)</comment>  </data>
+  <data name="MENU_GROUND_GET" xml:space="preserve">
+    <value>Aufnehmen</value>
+    <comment>Underfoot menu option to pick up the item on the ground</comment>  </data>
+  <data name="MENU_GROUND_PROCEED" xml:space="preserve">
+    <value>Fortfahren</value>
+    <comment>Underfoot menu option to proceed with the tile underneath (ex. stairs)</comment>  </data>
+  <data name="MENU_GROUND_TITLE" xml:space="preserve">
+    <value>Boden</value>
+    <comment>Title of the window for looking at the item/tile on the ground.</comment>  </data>
+  <data name="MENU_GROUND_TRIGGER" xml:space="preserve">
+    <value>Aktivieren</value>
+    <comment>Underfoot menu option to trigger the tile underneath (ex. traps)</comment>  </data>
+  <data name="MENU_HELD_ITEM" xml:space="preserve">
+    <value>Item: {0}</value>
+    <comment>For labeling the held item of a team member</comment>  </data>
+  <data name="MENU_HELD_NO_ITEM" xml:space="preserve">
+    <value>Kein Item</value>
+    <comment>For labeling there is no held item for this team member</comment>  </data>
+  <data name="MENU_INFO" xml:space="preserve">
+    <value>Info</value>
+    <comment>Menu option to look at the info of an item, tile, etc.</comment>  </data>
+  <data name="MENU_INTRINSIC_RECALL" xml:space="preserve">
+    <value>Fähigkeiten</value>
+    <comment>Title of the Ability recall menu, to browse abilities that can be learned</comment>  </data>
+  <data name="MENU_INTRINSIC_TITLE" xml:space="preserve">
+    <value>{0}s Fähigkeiten:</value>
+    <comment>Title of the Ability menu, to look at a team member's abilities</comment>  </data>
+  <data name="MENU_ITEM_AMOUNT_TITLE" xml:space="preserve">
+    <value>Wie viele?</value>
+    <comment></comment>  </data>
+  <data name="MENU_ITEM_DRINK" xml:space="preserve">
+    <value>Einnehmen</value>
+    <comment>Menu option to ingest item (drinks and herbs)</comment>  </data>
+  <data name="MENU_ITEM_EAT" xml:space="preserve">
+    <value>Essen</value>
+    <comment>Menu option to eat item</comment>  </data>
+  <data name="MENU_ITEM_GIVE" xml:space="preserve">
+    <value>Geben</value>
+    <comment>Menu option to give item to a different team member to hold</comment>  </data>
+  <data name="MENU_ITEM_HELD_TITLE" xml:space="preserve">
+    <value>{0}s Item</value>
+    <comment>Title of the item menu when checking held items</comment>  </data>
+  <data name="MENU_ITEM_HOLD" xml:space="preserve">
+    <value>Halten</value>
+    <comment>Menu option to give item to yourself to hold</comment>  </data>
+  <data name="MENU_ITEM_LEARN" xml:space="preserve">
+    <value>Lernen</value>
+    <comment>Menu option to teach self a TM</comment>  </data>
+  <data name="MENU_ITEM_PLACE" xml:space="preserve">
+    <value>Ablegen</value>
+    <comment>Menu option to place an item on the ground</comment>  </data>
+  <data name="MENU_ITEM_PUT" xml:space="preserve">
+    <value>Nehmen</value>
+    <comment>Menu option to put your held item back in the bag</comment>  </data>
+  <data name="MENU_ITEM_RARITY" xml:space="preserve">
+    <value>Seltenheit: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_ITEM_REPLACE" xml:space="preserve">
+    <value>Ersetzen</value>
+    <comment>Menu option to replace the item on the ground with one of your items</comment>  </data>
+  <data name="MENU_ITEM_STORE" xml:space="preserve">
+    <value>Lager</value>
+    <comment></comment>  </data>
+  <data name="MENU_ITEM_SWAP" xml:space="preserve">
+    <value>Tauschen</value>
+    <comment>menu option to swap a team member's held item with an item in the inventory</comment>  </data>
+  <data name="MENU_ITEM_SWAP_TITLE" xml:space="preserve">
+    <value>Tausche mit?</value>
+    <comment>Title of the item menu when swapping items</comment>  </data>
+  <data name="MENU_ITEM_TAKE" xml:space="preserve">
+    <value>Nehmen</value>
+    <comment>Menu option to take held item away from a different team member, and put back in bag</comment>  </data>
+  <data name="MENU_ITEM_TARGET_TITLE" xml:space="preserve">
+    <value>Auf wen?</value>
+    <comment>Title of the menu for choosing who to use an item on</comment>  </data>
+  <data name="MENU_ITEM_TEACH" xml:space="preserve">
+    <value>Lernen</value>
+    <comment>Menu option to teach someone a TM</comment>  </data>
+  <data name="MENU_ITEM_THROW" xml:space="preserve">
+    <value>Werfen</value>
+    <comment>Menu option to throw an item</comment>  </data>
+  <data name="MENU_ITEM_TITLE" xml:space="preserve">
+    <value>Schatzbeutel</value>
+    <comment>Title of the item menu</comment>  </data>
+  <data name="MENU_ITEM_TRASH" xml:space="preserve">
+    <value>Müll</value>
+    <comment></comment>  </data>
+  <data name="MENU_ITEM_USE" xml:space="preserve">
+    <value>Benutzen</value>
+    <comment>Menu option to use item</comment>  </data>
+  <data name="MENU_ITEM_VALUE" xml:space="preserve">
+    <value>Wert: {0}</value>
+    <comment>Money value of the item</comment>  </data>
+  <data name="MENU_ITEM_WITHDRAW" xml:space="preserve">
+    <value>Nehmen</value>
+    <comment></comment>  </data>
+  <data name="MENU_KEYBOARD_TITLE" xml:space="preserve">
+    <value>Tastatur</value>
+    <comment></comment>  </data>
+  <data name="MENU_LABEL" xml:space="preserve">
+    <value>{0}:</value>
+    <comment>For putting a colon in front as with a labeling stats</comment>  </data>
+  <data name="MENU_MAIL_AOK_TITLE" xml:space="preserve">
+    <value>OK Brief</value>
+    <comment></comment>  </data>
+  <data name="MENU_MAIL_ERROR" xml:space="preserve">
+    <value>FEHLER BEIM LESEN DES BRIEFS</value>
+    <comment></comment>  </data>
+  <data name="MENU_MAIL_SOS_TITLE" xml:space="preserve">
+    <value>SOS Brief</value>
+    <comment></comment>  </data>
+  <data name="MENU_MAIN_INVENTORY" xml:space="preserve">
+    <value>Items</value>
+    <comment>Main menu option to look at inventory</comment>  </data>
+  <data name="MENU_MAIN_SAVE" xml:space="preserve">
+    <value>Speichern</value>
+    <comment></comment>  </data>
+  <data name="MENU_MAIN_SKILLS" xml:space="preserve">
+    <value>Attacken</value>
+    <comment>Main menu option to look at the team's moves</comment>  </data>
+  <data name="MENU_MAKE_LEADER" xml:space="preserve">
+    <value>Anführer</value>
+    <comment></comment>  </data>
+  <data name="MENU_MAP_CONDITION" xml:space="preserve">
+    <value>Wetter: {0}</value>
+    <comment>For labeling the current map's weather or terrain.</comment>  </data>
+  <data name="MENU_MODS_EXIT" xml:space="preserve">
+    <value>Episode verlassen</value>
+    <comment></comment>  </data>
+  <data name="MENU_MODS_TITLE" xml:space="preserve">
+    <value>Bonusepisoden</value>
+    <comment></comment>  </data>
+  <data name="MENU_MSG_LOG_TITLE" xml:space="preserve">
+    <value>Textprotokoll</value>
+    <comment>Title of the window for message log</comment>  </data>
+  <data name="MENU_MUSIC_TITLE" xml:space="preserve">
+    <value>Musik</value>
+    <comment></comment>  </data>
+  <data name="MENU_NEW_CONTACT" xml:space="preserve">
+    <value>Neuer Kontakt</value>
+    <comment></comment>  </data>
+  <data name="MENU_NONE" xml:space="preserve">
+    <value>Keine</value>
+    <comment></comment>  </data>
+  <data name="MENU_OPTIONS_TITLE" xml:space="preserve">
+    <value>Optionen</value>
+    <comment></comment>  </data>
+  <data name="MENU_OTHERS_TITLE" xml:space="preserve">
+    <value>Anderes</value>
+    <comment>Title of the Others menu, for misc menu options</comment>  </data>
+  <data name="MENU_QUIT_GAME" xml:space="preserve">
+    <value>Spiel verlassen</value>
+    <comment></comment>  </data>
+  <data name="MENU_REPLAY_ADVANCE_TURN" xml:space="preserve">
+    <value>Nächster Zug</value>
+    <comment>The "advance turn" action of a replay</comment>  </data>
+  <data name="MENU_REPLAY_END" xml:space="preserve">
+    <value>Wiederholung beenden</value>
+    <comment>Replay menu option to view the replay info</comment>  </data>
+  <data name="MENU_REPLAY_INFO" xml:space="preserve">
+    <value>Info</value>
+    <comment>Replay menu option to end the replay</comment>  </data>
+  <data name="MENU_REPLAY_INFO_TITLE" xml:space="preserve">
+    <value>Wiederholungsdetails</value>
+    <comment>Title of the window for displaying replay info</comment>  </data>
+  <data name="MENU_REPLAY_PAUSE" xml:space="preserve">
+    <value>Pause</value>
+    <comment>The "pause" action of a replay</comment>  </data>
+  <data name="MENU_REPLAY_REPLAY" xml:space="preserve">
+    <value>Wiederholung</value>
+    <comment>Replay menu option for replaying a chosen recorded game</comment>  </data>
+  <data name="MENU_REPLAY_SEED" xml:space="preserve">
+    <value>Startwert für Zufallsgenerator kopieren</value>
+    <comment></comment>  </data>
+  <data name="MENU_REPLAY_SLOW_DOWN" xml:space="preserve">
+    <value>Langsamer</value>
+    <comment>The "slow down" action of a replay</comment>  </data>
+  <data name="MENU_REPLAY_SPEED_UP" xml:space="preserve">
+    <value>Schneller</value>
+    <comment>The "speed up" action of a replay</comment>  </data>
+  <data name="MENU_REPLAY_TITLE" xml:space="preserve">
+    <value>Wiederholung</value>
+    <comment>Title of the Replay menu, for options within a replay</comment>  </data>
+  <data name="MENU_REPLAYS_TITLE" xml:space="preserve">
+    <value>Wiederholungen</value>
+    <comment>Title for the Replays menu, where the player can view replays</comment>  </data>
+  <data name="MENU_RESCUE" xml:space="preserve">
+    <value>Freundrettung</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_CONFIGURE_SERVER" xml:space="preserve">
+    <value>Server Einstellung</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_GET_HELP" xml:space="preserve">
+    <value>Hole Hilfe</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_OFFER_REWARD" xml:space="preserve">
+    <value>Belohnung anbieten</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_REMOVE_REWARD" xml:space="preserve">
+    <value>Belohnung entfernen</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_AOK_CONFIRMING" xml:space="preserve">
+    <value>Bestätige OK...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_AOK_RECEIVING" xml:space="preserve">
+    <value>Erhalte OK...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_AOK_SENDING" xml:space="preserve">
+    <value>Versende OK...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_COMMUNICATING" xml:space="preserve">
+    <value>Kommuniziere...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_SOS_CONFIRMING" xml:space="preserve">
+    <value>Bestätige SOS...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_SOS_RECEIVING" xml:space="preserve">
+    <value>Erhalte SOS...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_SOS_SENDING" xml:space="preserve">
+    <value>Versende SOS...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_WAITING" xml:space="preserve">
+    <value>Warten...</value>
+    <comment></comment>  </data>
+  <data name="MENU_REST_QUIT" xml:space="preserve">
+    <value>Aufgeben</value>
+    <comment>Rest menu option for giving up the exploration</comment>  </data>
+  <data name="MENU_REST_SUSPEND" xml:space="preserve">
+    <value>Schnellspeichern</value>
+    <comment>Rest menu option for quicksaving</comment>  </data>
+  <data name="MENU_REST_TITLE" xml:space="preserve">
+    <value>Ausruhen</value>
+    <comment>Title of the Rest menu, for giving up and quicksaving</comment>  </data>
+  <data name="MENU_RESULTS_ASSEMBLY_TITLE" xml:space="preserve">
+    <value>{0}s Team ({1}/{2})</value>
+    <comment>Title for the window displaying the assembly results of the last outing</comment>  </data>
+  <data name="MENU_RESULTS_ASSEMBLY_TITLE_ANY" xml:space="preserve">
+    <value>Teambildung ({0}/{1})</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESULTS_BONUS_VALUE" xml:space="preserve">
+    <value>Bonuspunkte: {0}</value>
+    <comment>For labeling the bonus points given in the end of an adventure</comment>  </data>
+  <data name="MENU_RESULTS_COMPLETE" xml:space="preserve">
+    <value>{0} abgeschlossen!</value>
+    <comment>Ex. "completed Guildmaster Island!"</comment>  </data>
+  <data name="MENU_RESULTS_DEFEAT" xml:space="preserve">
+    <value>Wurde auf Ebene {0} besiegt.</value>
+    <comment>Ex. "was defeated on Guildmaster Island 29F"</comment>  </data>
+  <data name="MENU_RESULTS_ESCAPE" xml:space="preserve">
+    <value>Von der Ebene {0} geflohen.</value>
+    <comment>Ex. "escaped from Guildmaster Island 29F"</comment>  </data>
+  <data name="MENU_RESULTS_INV_VALUE" xml:space="preserve">
+    <value>Inventarwert: {0}</value>
+    <comment>For labeling the total value of all the items in the inventory</comment>  </data>
+  <data name="MENU_RESULTS_INVENTORY_TITLE" xml:space="preserve">
+    <value>Inventar</value>
+    <comment>Title for the window displaying the inventory results of the last outing</comment>  </data>
+  <data name="MENU_RESULTS_QUIT" xml:space="preserve">
+    <value>bei {0} aufgegeben.</value>
+    <comment>denotes that the team gave up at a certain floor of the dungeon.</comment>  </data>
+  <data name="MENU_RESULTS_RESCUE" xml:space="preserve">
+    <value>hat die Rettung in {0} abgeschlossen.</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESULTS_SEED" xml:space="preserve">
+    <value>Startwert: {0}</value>
+    <comment>The dungeon seed, used to initialize the dungeon randomizer.  If two dungeon seeds are the same, they will generate exactly the same. Ex. "Seed: 17B7244FC0C0ED"</comment>  </data>
+  <data name="MENU_RESULTS_TIMEOUT" xml:space="preserve">
+    <value>wurde auf {0} von einer unsichtbaren Kraft herausgeworfen.</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESULTS_TITLE" xml:space="preserve">
+    <value>Abschlussbericht</value>
+    <comment>Title for the window displaying the overall results of the last outing</comment>  </data>
+  <data name="MENU_RESULTS_TOTAL_SCORE" xml:space="preserve">
+    <value>Gesamtpunktzahl: {0}</value>
+    <comment>For labeling the total score at the end of an adventure</comment>  </data>
+  <data name="MENU_RESULTS_TOTAL_TURNS" xml:space="preserve">
+    <value>Züge: {0}</value>
+    <comment>For labeling the total amount of turns taken in the entire adventure</comment>  </data>
+  <data name="MENU_RESULTS_VANISHED" xml:space="preserve">
+    <value>Verschwand ohne eine Spur.</value>
+    <comment>denotes that the team vanished mid-exploration</comment>  </data>
+  <data name="MENU_RESULTS_VANISHED_AT" xml:space="preserve">
+    <value>Verschwand plötzlich bei {0}.</value>
+    <comment>denotes that the team vanished at a certain floor of the dungeon</comment>  </data>
+  <data name="MENU_REWARD_ITEM" xml:space="preserve">
+    <value>Item</value>
+    <comment></comment>  </data>
+  <data name="MENU_REWARD_MONEY" xml:space="preserve">
+    <value>Geld</value>
+    <comment></comment>  </data>
+  <data name="MENU_ROGUE_BASIC_INFO" xml:space="preserve">
+    <value>Allgemeine Informationen</value>
+    <comment></comment>  </data>
+  <data name="MENU_ROGUE_SEED_INFO" xml:space="preserve">
+    <value>Informationen über den Startwert des Zufallsgenerators</value>
+    <comment></comment>  </data>
+  <data name="MENU_ROGUE_SPECIAL_INFO" xml:space="preserve">
+    <value>Informationen über schillernde Pokémon</value>
+    <comment></comment>  </data>
+  <data name="MENU_SAVE_AND_CONTINUE" xml:space="preserve">
+    <value>Speichern und fortfahren.</value>
+    <comment></comment>  </data>
+  <data name="MENU_SAVE_AND_QUIT" xml:space="preserve">
+    <value>Speichern und beenden.</value>
+    <comment></comment>  </data>
+  <data name="MENU_SAVE_RESUME" xml:space="preserve">
+    <value>Fortsetzen</value>
+    <comment>Quicksave menu option for resuming a quicksave</comment>  </data>
+  <data name="MENU_SAVE_TITLE" xml:space="preserve">
+    <value>Schnellspeicherungen</value>
+    <comment>Title for the quicksave menu, where the player can view quicksaves</comment>  </data>
+  <data name="MENU_SCORES_TITLE" xml:space="preserve">
+    <value>Punktzahlen</value>
+    <comment>Title for the Scores window, where the player can view the top scores</comment>  </data>
+  <data name="MENU_SERVERS_TITLE" xml:space="preserve">
+    <value>Server</value>
+    <comment></comment>  </data>
+  <data name="MENU_SETTINGS_BATTLE_SPEED" xml:space="preserve">
+    <value>Kampfgeschwind.</value>
+    <comment>Label for the battle speed in the Settings menu</comment>  </data>
+  <data name="MENU_SETTINGS_BORDER_STYLE" xml:space="preserve">
+    <value>Rahmentyp</value>
+    <comment>For choosing border style</comment>  </data>
+  <data name="MENU_SETTINGS_FULL_SCREEN" xml:space="preserve">
+    <value>Vollbild</value>
+    <comment>The Full-Screen option when setting window size in the Settings menu</comment>  </data>
+  <data name="MENU_SETTINGS_LANGUAGE" xml:space="preserve">
+    <value>Sprache</value>
+    <comment></comment>  </data>
+  <data name="MENU_SETTINGS_MUSIC" xml:space="preserve">
+    <value>Musik</value>
+    <comment>Label for the music volume in the Settings menu</comment>  </data>
+  <data name="MENU_SETTINGS_SOUND" xml:space="preserve">
+    <value>Sound</value>
+    <comment>Label for the sound volume in the Settings menu</comment>  </data>
+  <data name="MENU_SETTINGS_TITLE" xml:space="preserve">
+    <value>Einstellungen</value>
+    <comment>Title of Settings menu</comment>  </data>
+  <data name="MENU_SETTINGS_WINDOW_SIZE" xml:space="preserve">
+    <value>Bildschirmgröße</value>
+    <comment>Label for the window size in the Settings menu</comment>  </data>
+  <data name="MENU_SHIFT_DOWN" xml:space="preserve">
+    <value>Ab</value>
+    <comment>Menu option to shift something down</comment>  </data>
+  <data name="MENU_SHIFT_UP" xml:space="preserve">
+    <value>Auf</value>
+    <comment>Menu option to shift something up</comment>  </data>
+  <data name="MENU_SHOP_BUY" xml:space="preserve">
+    <value>Kaufen</value>
+    <comment></comment>  </data>
+  <data name="MENU_SHOP_SELL" xml:space="preserve">
+    <value>Verkaufen</value>
+    <comment></comment>  </data>
+  <data name="MENU_SHOP_TITLE" xml:space="preserve">
+    <value>Güter</value>
+    <comment></comment>  </data>
+  <data name="MENU_SKILL_RECALL" xml:space="preserve">
+    <value>Attacke erinnern</value>
+    <comment>Title of Move recall menu, to relearn moves</comment>  </data>
+  <data name="MENU_SKILL_SWITCH" xml:space="preserve">
+    <value>An/Aus</value>
+    <comment>Move menu option to switch a move on or off</comment>  </data>
+  <data name="MENU_SKILL_USE" xml:space="preserve">
+    <value>Einsetzen</value>
+    <comment>Move menu option to use a move</comment>  </data>
+  <data name="MENU_SKILLS_CATEGORY" xml:space="preserve">
+    <value>Kategorie: {0}</value>
+    <comment>For labeling the move's category</comment>  </data>
+  <data name="MENU_SKILLS_ELEMENT" xml:space="preserve">
+    <value>Typ: {0}</value>
+    <comment>For labeling the move's type</comment>  </data>
+  <data name="MENU_SKILLS_HIT_RATE" xml:space="preserve">
+    <value>Trefferquote: {0}</value>
+    <comment>For labeling the move's accuracy</comment>  </data>
+  <data name="MENU_SKILLS_POWER" xml:space="preserve">
+    <value>Stärke: {0}</value>
+    <comment>For labeling the move's basepower</comment>  </data>
+  <data name="MENU_SKILLS_RANGE" xml:space="preserve">
+    <value>Reichweite: {0}</value>
+    <comment>For labeling the move's range</comment>  </data>
+  <data name="MENU_SKILLS_TITLE" xml:space="preserve">
+    <value>{0}s Attacken:</value>
+    <comment>Title of the menu listing the team member's moves</comment>  </data>
+  <data name="MENU_SKILLS_TOTAL_CHARGES" xml:space="preserve">
+    <value>{0}AP</value>
+    <comment></comment>  </data>
+  <data name="MENU_SONG_ARTIST" xml:space="preserve">
+    <value>Künstler: {0}</value>
+    <comment>[Sound Test] The composer of the song, View example: https://cdn.discordapp.com/attachments/626994148494409738/729883368493285476/unknown.png</comment>  </data>
+  <data name="MENU_SONG_ORIGIN" xml:space="preserve">
+    <value>Herkunft: {0}</value>
+    <comment>[Sound Test] The original game that the song came from</comment>  </data>
+  <data name="MENU_SONG_ORIGIN_NAME" xml:space="preserve">
+    <value>Titel: {0}</value>
+    <comment>[Sound Test] The original name that the song had.</comment>  </data>
+  <data name="MENU_SOS_CLIENT" xml:space="preserve">
+    <value>Klient: {0}</value>
+    <comment>The team that needs rescue</comment>  </data>
+  <data name="MENU_SOS_DATE" xml:space="preserve">
+    <value>Datum: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_SOS_GOAL" xml:space="preserve">
+    <value>Ziel: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_SOS_REWARD" xml:space="preserve">
+    <value>Belohnung: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_SOS_TITLE" xml:space="preserve">
+    <value>SOS Beschreibung</value>
+    <comment></comment>  </data>
+  <data name="MENU_START_RANDOM" xml:space="preserve">
+    <value>Zufall</value>
+    <comment>Starter menu option for choosing a random starter</comment>  </data>
+  <data name="MENU_START_TEAM" xml:space="preserve">
+    <value>Team: {0}</value>
+    <comment>For labeling the name of the team the player has chosen</comment>  </data>
+  <data name="MENU_STATS_TITLE" xml:space="preserve">
+    <value>Statuswerte</value>
+    <comment>Title for the Stats menu, showing the team member's stats</comment>  </data>
+  <data name="MENU_STORAGE_MONEY" xml:space="preserve">
+    <value>Geld</value>
+    <comment></comment>  </data>
+  <data name="MENU_STORAGE_STORE" xml:space="preserve">
+    <value>Items lagern</value>
+    <comment></comment>  </data>
+  <data name="MENU_STORAGE_TAKE_BOX" xml:space="preserve">
+    <value>Boxen nehmen</value>
+    <comment></comment>  </data>
+  <data name="MENU_STORAGE_TAKE_ITEM" xml:space="preserve">
+    <value>Items nehmen</value>
+    <comment></comment>  </data>
+  <data name="MENU_STORAGE_TITLE" xml:space="preserve">
+    <value>Lager</value>
+    <comment>Title of the Storage menu</comment>  </data>
+  <data name="MENU_SWAP_ANY" xml:space="preserve">
+    <value>{0} einzigartige Items</value>
+    <comment></comment>  </data>
+  <data name="MENU_SWAP_NEEDED" xml:space="preserve">
+    <value>Voraussetzungen</value>
+    <comment></comment>  </data>
+  <data name="MENU_TACTICS_EVERYONE" xml:space="preserve">
+    <value>Alle</value>
+    <comment>For labeling the tactic that gets assigned to everyone, if there is one.</comment>  </data>
+  <data name="MENU_TACTICS_TITLE" xml:space="preserve">
+    <value>Taktiken</value>
+    <comment>Title of the Tactics menu, for changing the team's tactics</comment>  </data>
+  <data name="MENU_TEACH_TITLE" xml:space="preserve">
+    <value>Wer?</value>
+    <comment>Title of the menu in which you select who to teach a move to</comment>  </data>
+  <data name="MENU_TEAM_CATEGORY" xml:space="preserve">
+    <value>Kategorie: {0} Pokémon</value>
+    <comment>For labeling the dex category of a team member</comment>  </data>
+  <data name="MENU_TEAM_ELEMENT" xml:space="preserve">
+    <value>Typ: {0}</value>
+    <comment>For labeling a team member's type</comment>  </data>
+  <data name="MENU_TEAM_EXP" xml:space="preserve">
+    <value>Erf.: {0}/{1}</value>
+    <comment>For labeling a team member's current EXP out of the amount needed to level up</comment>  </data>
+  <data name="MENU_TEAM_FEATURES" xml:space="preserve">
+    <value>Eigenschaften</value>
+    <comment>Title of the Features menu, detailing the features of a team member</comment>  </data>
+  <data name="MENU_TEAM_FELL_AT" xml:space="preserve">
+    <value>Ohnmächtig geworden bei: {0}</value>
+    <comment>For labeling where the team member fainted at</comment>  </data>
+  <data name="MENU_TEAM_HP" xml:space="preserve">
+    <value>KP: {0}/{1}</value>
+    <comment>For labeling a team member's current and maximum HP</comment>  </data>
+  <data name="MENU_TEAM_HUNGER" xml:space="preserve">
+    <value>Magen: {0}/{1}</value>
+    <comment>For labeling a team member's current and max belly</comment>  </data>
+  <data name="MENU_TEAM_INFO" xml:space="preserve">
+    <value>Info</value>
+    <comment>Title of the Info menu, detailing the species info of a team member</comment>  </data>
+  <data name="MENU_TEAM_INTRINSIC" xml:space="preserve">
+    <value>Fähigkeit: {0}</value>
+    <comment>For labeling a team member's ability</comment>  </data>
+  <data name="MENU_TEAM_LEVEL" xml:space="preserve">
+    <value>Level</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_LEVEL_SHORT" xml:space="preserve">
+    <value>Lv.{0}</value>
+    <comment>For labeling a team member's current level</comment>  </data>
+  <data name="MENU_TEAM_MET_AT" xml:space="preserve">
+    <value>Getroffen bei: {0}</value>
+    <comment>For labeling where the team member was recruited at</comment>  </data>
+  <data name="MENU_TEAM_MODE" xml:space="preserve">
+    <value>Team Modus</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_MODE_OFF" xml:space="preserve">
+    <value>Team Modus aus</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_MODE_ON" xml:space="preserve">
+    <value>Team Modus an</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_PROMOTE_NONE" xml:space="preserve">
+    <value>Keine</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_PROMOTION" xml:space="preserve">
+    <value>Entwicklung:</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_RENAME" xml:space="preserve">
+    <value>Umbenennen</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_SEND_HOME" xml:space="preserve">
+    <value>Zur. n. Hause</value>
+    <comment>Team menu option for sending a selected team member home</comment>  </data>
+  <data name="MENU_TEAM_SKILLS" xml:space="preserve">
+    <value>Attacken:</value>
+    <comment>For labeling a team member's moves</comment>  </data>
+  <data name="MENU_TEAM_SPECIES" xml:space="preserve">
+    <value>Spezies: {0}</value>
+    <comment>For labeling the species of a team member</comment>  </data>
+  <data name="MENU_TEAM_STATS" xml:space="preserve">
+    <value>Statistiken:</value>
+    <comment>For labeling the team member's stats</comment>  </data>
+  <data name="MENU_TEAM_STATUS_TITLE" xml:space="preserve">
+    <value>Status</value>
+    <comment>Title of the Status menu, showing all of the status conditions of a team member</comment>  </data>
+  <data name="MENU_TEAM_SUMMARY" xml:space="preserve">
+    <value>Übersicht</value>
+    <comment>Team menu option for opening the summary menu of a selected team member</comment>  </data>
+  <data name="MENU_TEAM_TITLE" xml:space="preserve">
+    <value>Team</value>
+    <comment>Title of the Team menu, to look at the team's stats</comment>  </data>
+  <data name="MENU_TEAM_TRADED_FROM" xml:space="preserve">
+    <value>Getauscht von: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_TIME_OF_DAY" xml:space="preserve">
+    <value>Zeit: {0}</value>
+    <comment>Ex. "Time: Night"</comment>  </data>
+  <data name="MENU_TOP_CONTINUE" xml:space="preserve">
+    <value>Fortfahren</value>
+    <comment></comment>  </data>
+  <data name="MENU_TOP_LOAD" xml:space="preserve">
+    <value>Spielstand laden</value>
+    <comment>Top menu option for loading a saved game</comment>  </data>
+  <data name="MENU_TOP_NEW" xml:space="preserve">
+    <value>Neues Spiel</value>
+    <comment>Top menu option for starting a new game</comment>  </data>
+  <data name="MENU_TOP_RECORD" xml:space="preserve">
+    <value>Aufzeichnungen</value>
+    <comment>Top menu option for viewing records such as replays or high scores</comment>  </data>
+  <data name="MENU_TOP_RESCUE_AWAIT" xml:space="preserve">
+    <value>Erwarte Rettung</value>
+    <comment></comment>  </data>
+  <data name="MENU_TOP_ROGUE" xml:space="preserve">
+    <value>Roguelocke</value>
+    <comment></comment>  </data>
+  <data name="MENU_TRADE_ITEM" xml:space="preserve">
+    <value>Schatzaustausch</value>
+    <comment></comment>  </data>
+  <data name="MENU_TRADE_ITEM_OFFER" xml:space="preserve">
+    <value>Angebotene Items</value>
+    <comment></comment>  </data>
+  <data name="MENU_TRADE_MAIL" xml:space="preserve">
+    <value>Missionsaustausch</value>
+    <comment></comment>  </data>
+  <data name="MENU_TRADE_TEAM" xml:space="preserve">
+    <value>Teamaustausch</value>
+    <comment></comment>  </data>
+  <data name="MENU_TREASURE_TITLE" xml:space="preserve">
+    <value>Schatz </value>
+    <comment></comment>  </data>
+  <data name="MENU_UPDATE_TEAM" xml:space="preserve">
+    <value>Team aktualisieren</value>
+    <comment></comment>  </data>
+  <data name="MET_AT_START" xml:space="preserve">
+    <value>Von Anfang an</value>
+    <comment>The "recruit location" of starters, who were recruited into the team from the beginning.</comment>  </data>
+  <data name="MSG_CANT_CHECK_TILE" xml:space="preserve">
+    <value>{0} kann im Moment keine Felder auslösen.</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_DEQUIP" xml:space="preserve">
+    <value>{0} kann im Moment keine Items ablegen.</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_DROP_HERE" xml:space="preserve">
+    <value>Dieses Item kann hier nicht abgelegt werden.</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_DROP_ITEM" xml:space="preserve">
+    <value>{0} kann im Moment keine Items ablegen.</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_PICKUP_ITEM" xml:space="preserve">
+    <value>{0} kann im Moment keine Items aufheben.</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_REPLACE_MONEY" xml:space="preserve">
+    <value>Das Geld auf dem Boden kann nicht ausgetauscht werden.</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_SWAP_ITEM" xml:space="preserve">
+    <value>{0} kann im Moment keine Items tauschen.</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_SWAP_LEADER" xml:space="preserve">
+    <value>{0} kann momentan den Anführer nicht wechseln.</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_USE_ITEM" xml:space="preserve">
+    <value>{0} kann im Moment keine Items nutzen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_LOST" xml:space="preserve">
+    <value>{0}s {1} verliert [color=#00FFFF]{2}[color] AP!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_LOST_ALL" xml:space="preserve">
+    <value>{0}s Attacken verlieren [color=#00FFFF]{1}[color] AP!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_LOST_ALL_NO_MORE" xml:space="preserve">
+    <value>{0}s Attacken besitzen keine AP mehr!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_LOST_NO_MORE" xml:space="preserve">
+    <value>{0}s {1} besitzt bereits keine AP mehr!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_LOST_ZERO" xml:space="preserve">
+    <value>{0}s AP sind nicht gefallen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_RESTORE" xml:space="preserve">
+    <value>{0} füllt seine AP auf.</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_ZERO" xml:space="preserve">
+    <value>{0}s {1} hat den Rest seiner AP verloren!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_ZERO_ALL" xml:space="preserve">
+    <value>{0}s {1} haben den Rest ihrer AP verloren!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DAMAGE" xml:space="preserve">
+    <value>{0} hat [color=#00FFFF]{1}[color] Schaden genommen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DAMAGE_ENDURE" xml:space="preserve">
+    <value>{0} hat durchgehalten!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DAMAGE_INFINITY" xml:space="preserve">
+    <value>{0} hat katastrophalen Schaden genommen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DAMAGE_ZERO" xml:space="preserve">
+    <value>{0} hat keinen Schaden genommen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DANGER_CONFIRM" xml:space="preserve">
+    <value>... Bist du dir sicher?</value>
+    <comment></comment>  </data>
+  <data name="MSG_DEFEAT" xml:space="preserve">
+    <value>Oh nein! {0} ist ohnmächtig!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DEFEAT_FOE" xml:space="preserve">
+    <value>{0} wurde besiegt!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DEQUIP_CURSED" xml:space="preserve">
+    <value>{0}s {1} ist klebrig und kann nicht abgelegt werden!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ELEMENT_CHANGE" xml:space="preserve">
+    <value>{0} wurde ein {1}-Typ!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ELEMENT_CHANGE_DUAL" xml:space="preserve">
+    <value>{0} wurde ein {1}-/{2}-Typ!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ENTER_MAP" xml:space="preserve">
+    <value>{0} hat {1} erreicht.</value>
+    <comment></comment>  </data>
+  <data name="MSG_EQUIP_AUTOCURSE" xml:space="preserve">
+    <value>{0} wurde klebrig und klebt an {1} fest!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EQUIP_AUTOCURSE_AVOID" xml:space="preserve">
+    <value>{0} wurde klebrig aber klebt nicht an {1} fest!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EQUIP_CURSED" xml:space="preserve">
+    <value>{0} klebt an {1} fest!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXP_GAIN" xml:space="preserve">
+    <value>Das Team erhält [color=#00FFFF]{0}[color] Erfahrungspunkte.</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXP_GAIN_MEMBER" xml:space="preserve">
+    <value>{0} erhält [color=#00FFFF]{1}[color] Erfahrungspunkte.</value>
+    <comment></comment>  </data>
+  <data name="MSG_HP_RESTORE" xml:space="preserve">
+    <value>{0} heilt [color=#00FFFF]{1}[color] KP.</value>
+    <comment></comment>  </data>
+  <data name="MSG_HUNGER_CRITICAL" xml:space="preserve">
+    <value>{0} wird schwindelig vor Hunger...</value>
+    <comment></comment>  </data>
+  <data name="MSG_HUNGER_EMPTY" xml:space="preserve">
+    <value>Oh nein! {0}s Magen ist leer!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HUNGER_EMPTY_FOE" xml:space="preserve">
+    <value>{0}s Magen ist leer!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HUNGER_LOW" xml:space="preserve">
+    <value>{0} wird langsam hungrig...</value>
+    <comment></comment>  </data>
+  <data name="MSG_INTRINSIC_CHANGE_GAIN" xml:space="preserve">
+    <value>{0} erlangt {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INTRINSIC_CHANGE_LOST" xml:space="preserve">
+    <value>{0} verliert {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INTRINSIC_CHANGE_NONE" xml:space="preserve">
+    <value>{0}s Fähigkeiten ändern sich nicht!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ITEM_DEQUIP" xml:space="preserve">
+    <value>{0} legt {1} zurück in den Schatzbeutel.</value>
+    <comment></comment>  </data>
+  <data name="MSG_ITEM_GIVE" xml:space="preserve">
+    <value>{0} erhält {1}.</value>
+    <comment></comment>  </data>
+  <data name="MSG_ITEM_SWAP" xml:space="preserve">
+    <value>{0} erhält {1} und legt {2} zurück in den Schatzbeutel.</value>
+    <comment></comment>  </data>
+  <data name="MSG_JUMP" xml:space="preserve">
+    <value>{0} ist weggesprungen!</value>
+    <comment>Used for when someone uses Splash, and bounces over the pokemon in front, OR uses U-Turn/Volt Switch and jumps back several steps after hitting.</comment>  </data>
+  <data name="MSG_JUMP_FAIL" xml:space="preserve">
+    <value>{0} ist nirgendwo hingesprungen.</value>
+    <comment>Same as above, but didn't find a place to jump to.</comment>  </data>
+  <data name="MSG_LEADER_SWAP" xml:space="preserve">
+    <value>{0} wurde zum Anführer!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LEADER_SWAP_REQ" xml:space="preserve">
+    <value>Der Anführer kann nur im Zug des momentanen Anführers getauscht werden.</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAP_ITEM_FALL" xml:space="preserve">
+    <value>{0} ist außer Sicht gefallen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAP_ITEM_GROUND" xml:space="preserve">
+    <value>{0} ist auf den Boden gefallen.</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAP_ITEM_LOST" xml:space="preserve">
+    <value>{0} ist verloren gegangen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAP_ITEM_WATER" xml:space="preserve">
+    <value>{0} ist ins Wasser gefallen.</value>
+    <comment></comment>  </data>
+  <data name="MSG_NOTHING_UNDERFOOT" xml:space="preserve">
+    <value>Es ist nichts unter {0}.</value>
+    <comment></comment>  </data>
+  <data name="MSG_OUT_OF_CHARGES" xml:space="preserve">
+    <value>{0}s {1} hat keine AP mehr!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PASS_ITEM" xml:space="preserve">
+    <value>{0} tritt auf {1}.</value>
+    <comment></comment>  </data>
+  <data name="MSG_PICKUP_HOLD_ITEM" xml:space="preserve">
+    <value>{0} nimmt {1} auf.</value>
+    <comment></comment>  </data>
+  <data name="MSG_PICKUP_ITEM" xml:space="preserve">
+    <value>{0} nimmt {1} auf und packt es in den Schatzbeutel.</value>
+    <comment></comment>  </data>
+  <data name="MSG_PICKUP_MONEY" xml:space="preserve">
+    <value>{0} nimmt {1} auf.</value>
+    <comment></comment>  </data>
+  <data name="MSG_PICKUP_SOME_ITEM" xml:space="preserve">
+    <value>{0} nimmt {1} auf und packt es in den Schatzbeutel.</value>
+    <comment></comment>  </data>
+  <data name="MSG_PLACE_ITEM" xml:space="preserve">
+    <value>{0} legt {1} auf den Boden.</value>
+    <comment></comment>  </data>
+  <data name="MSG_REPLACE_HOLD_ITEM" xml:space="preserve">
+    <value>{0} nimmt {1} und legt {2} auf den Boden.</value>
+    <comment></comment>  </data>
+  <data name="MSG_REPLACE_ITEM" xml:space="preserve">
+    <value>{0} wurde mit {1} ausgetauscht.</value>
+    <comment></comment>  </data>
+  <data name="MSG_REPLAY_PAUSED" xml:space="preserve">
+    <value>Wiederholung pausiert.</value>
+    <comment></comment>  </data>
+  <data name="MSG_REPLAY_SPEED" xml:space="preserve">
+    <value>Geschwind.: {0}</value>
+    <comment></comment>  </data>
+  <data name="MSG_REPLAY_UNPAUSED" xml:space="preserve">
+    <value>Wiederholung wird fortgesetzt.</value>
+    <comment></comment>  </data>
+  <data name="MSG_RESCUED_BY" xml:space="preserve">
+    <value>Von {0} gerettet!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RESCUES_LEFT" xml:space="preserve">
+    <value>Rettungen übrig: {0}</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKIP_TURN" xml:space="preserve">
+    <value>{0} hat seine Runde übersprungen.</value>
+    <comment></comment>  </data>
+  <data name="MSG_TEAM_MODE_ALONE" xml:space="preserve">
+    <value>Der Team Modus kann nicht benutzt werden, während du alleine bist.</value>
+    <comment></comment>  </data>
+  <data name="MSG_TEAM_SENT_HOME" xml:space="preserve">
+    <value>{0} wurde zum Treffpunkt des Teams geschickt.</value>
+    <comment></comment>  </data>
+  <data name="MSG_TEAM_SENT_HOME_PLURAL" xml:space="preserve">
+    <value>{0} wurden zum Treffpunkt des Teams geschickt.</value>
+    <comment>ex. "Pikachu, Charmander, and Bulbasaur were sent back to the assembly."</comment>  </data>
+  <data name="MSG_WARP" xml:space="preserve">
+    <value>{0} wurde teleportiert!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WARP_FAIL" xml:space="preserve">
+    <value>{0} wurde nicht teleportiert!</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ARC_LINE" xml:space="preserve">
+    <value>{1} in einer {0}-Felder Linie</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ARC_SINGLE" xml:space="preserve">
+    <value>{1} in {0} Felder Entfernung</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ARC_WIDE" xml:space="preserve">
+    <value>{1} in einem {0}-Felder Bogen</value>
+    <comment>Ex. "Foe in 4-Tile Arc"</comment>  </data>
+  <data name="RANGE_AREA_CONE" xml:space="preserve">
+    <value>{1} in einem {0}-Felder Kegel</value>
+    <comment></comment>  </data>
+  <data name="RANGE_AREA_FULL" xml:space="preserve">
+    <value>{1} in einem {0}-Felder Bereich</value>
+    <comment>Ex. "Foe in 4-Tile Area"</comment>  </data>
+  <data name="RANGE_AREA_SIDES" xml:space="preserve">
+    <value>{1} seitlich in {0}-Feldern</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ATTACK_AROUND" xml:space="preserve">
+    <value>{0} um den Anwender</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ATTACK_CORNER" xml:space="preserve">
+    <value>{0} voraus, überwindet Ecken</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ATTACK_FRONT" xml:space="preserve">
+    <value>{0} voraus</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ATTACK_WIDE" xml:space="preserve">
+    <value>{0} seitlich und voraus</value>
+    <comment>Ex. "Foe in Front and Sides"</comment>  </data>
+  <data name="RANGE_BEAM" xml:space="preserve">
+    <value>Strahl</value>
+    <comment>Used to describe a beam move. Will have descriptors Ex. "Beam", "Wide-Beam", "Piercing Beam"</comment>  </data>
+  <data name="RANGE_DASH" xml:space="preserve">
+    <value>Sprint</value>
+    <comment>Used to describe a dashing move. Will have descriptors Ex. "Dash", "Wide-Dash", "Piercing Dash"</comment>  </data>
+  <data name="RANGE_LINEAR" xml:space="preserve">
+    <value>{2} in {1}-Feld {0}</value>
+    <comment>Ex. "Foes in 6-Tile Shot", "Foes in 3-Tile Piercing Dash", "Others in 8-Tile Wide-Beam"</comment>  </data>
+  <data name="RANGE_LINEAR_PASS" xml:space="preserve">
+    <value>{0}, durchdringt Wände</value>
+    <comment>Takes the phrase created by RANGE_LINEAR and adds "Passes walls" to it if the move passes through walls</comment>  </data>
+  <data name="RANGE_LINEAR_PHASE" xml:space="preserve">
+    <value>durchlaufender {0}</value>
+    <comment>For attacks that can phase through walls (ex. Shadow Sneak)</comment>  </data>
+  <data name="RANGE_LINEAR_PIERCE" xml:space="preserve">
+    <value>Durchdringender {0}</value>
+    <comment>Adds the "Piercing" descriptor to a move target description Ex. "Shot", "Spread Shot", "Piercing Shot"</comment>  </data>
+  <data name="RANGE_LINEAR_WIDE" xml:space="preserve">
+    <value>Weiter {0}</value>
+    <comment>Adds the "Wide" descriptor to a move target description Ex. "Beam", "Wide-Beam", "Piercing Beam"</comment>  </data>
+  <data name="RANGE_OFFSET_AREA" xml:space="preserve">
+    <value>{1} im Bereich, {0} Felder entfernt</value>
+    <comment></comment>  </data>
+  <data name="RANGE_OFFSET_SIDES" xml:space="preserve">
+    <value>{1} in einer Reihe, {0} Felder entfernt</value>
+    <comment>Ex. "Foe in Tile/Sides, 3 Tiles Away" Used for attacks that hit a disjointed row such as Rock Slide. https://cdn.discordapp.com/attachments/626994148494409738/748631075344875570/unknown.png</comment>  </data>
+  <data name="RANGE_OFFSET_TILE" xml:space="preserve">
+    <value>{1} in {0} Feldern Entfernung</value>
+    <comment></comment>  </data>
+  <data name="RANGE_PROJECTILE" xml:space="preserve">
+    <value>Schuss</value>
+    <comment>Used to describe a projectile move. Will have descriptors Ex. "Shot", "Spread Shot", "Piercing Shot"</comment>  </data>
+  <data name="RANGE_PROJECTILE_SPREAD" xml:space="preserve">
+    <value>Gestreuter {0}</value>
+    <comment>Adds the "Spread" descriptor to a move target description Ex. "Shot", "Spread Shot", "Piercing Shot"</comment>  </data>
+  <data name="TARGET_HIT_ALL" xml:space="preserve">
+    <value>Jeden</value>
+    <comment>For when a move can hit ally, foe, and self. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_ALLY" xml:space="preserve">
+    <value>Verbündeten</value>
+    <comment>For when a move can hit only ally. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_ALLY_PLURAL" xml:space="preserve">
+    <value>Verbündete</value>
+    <comment>For when a move can hit only ally (plural). Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_FOE" xml:space="preserve">
+    <value>Gegner</value>
+    <comment>For when a move can hit only foe. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_FOE_PLURAL" xml:space="preserve">
+    <value>Gegner</value>
+    <comment>For when a move can hit only foe (plural). Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_NONE" xml:space="preserve">
+    <value>Niemanden</value>
+    <comment>For when a move targets no one. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_OTHER" xml:space="preserve">
+    <value>Verbündeten/Gegner</value>
+    <comment>For when a move can hit ally and foe. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_OTHER_PLURAL" xml:space="preserve">
+    <value>Andere</value>
+    <comment>For when a move can hit ally and foe (plural). Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_PARTY" xml:space="preserve">
+    <value>Gruppe</value>
+    <comment>For when a move can hit ally and self. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_USER" xml:space="preserve">
+    <value>Anwender</value>
+    <comment>For when a move can hit only self. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_USERFOE" xml:space="preserve">
+    <value>Anwender/Gegner</value>
+    <comment>For when a move can hit foe and self. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_USERFOE_PLURAL" xml:space="preserve">
+    <value>Anwender/Gegner</value>
+    <comment>For when a move can hit foe and self (plural). Used in RANGE_ strings</comment>  </data>
+  <data name="TEAM_NAME" xml:space="preserve">
+    <value>Team {0}</value>
+    <comment>For putting together the team name.</comment>  </data>
+  <data name="ZONE_EXPECT_LEVEL" xml:space="preserve">
+    <value>Erwartetes Level: {0}</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_ALONE" xml:space="preserve">
+    <value>Alleine betreten</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_BAG" xml:space="preserve">
+    <value>Schatzbeutelgröße wird auf {0} gesetzt</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_EXP" xml:space="preserve">
+    <value>Keine Erf.</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_ITEM" xml:space="preserve">
+    <value>Item Limit: {0}</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_ITEM_ALL" xml:space="preserve">
+    <value>Keine Items erlaubt</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_LEVEL" xml:space="preserve">
+    <value>Level wird auf {0} gesetzt</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_MONEY" xml:space="preserve">
+    <value>Kein Geld erlaubt</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_TEAM" xml:space="preserve">
+    <value>Teamgröße ist auf {0} gesetzt</value>
+    <comment></comment>  </data>
+</root>

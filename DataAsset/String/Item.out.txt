@@ -1,0 +1,1132 @@
+Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
+0000-0000|data.Name		Empty	Vide	Leer	Vacío	Vazio		비었음				
+0000-0001|data.Desc												
+0001-0000|data.Name		Apple	Pomme	Apfel	Manzanita	Maçã	Mela	사과				
+0001-0001|data.Desc		A food item that somewhat fills the Pokémon's belly.	Aliment remplissant correctement l'Estomac du Pokémon.	Nahrungsmittel, das den Magen des Pokémon etwas füllt.	Alimento que llena algo la Tripa del Pokémon.	Um alimento que enche a Barriga do Pokémon um pouco.		먹으면 포만감이 약간 회복된다.				
+0002-0000|data.Name		Big Apple	Grosse Pomme	Großer Apfel	Manzana	Maçã Grande	Melagrande	큰사과				
+0002-0001|data.Desc		A food item that amply fills the Pokémon's belly.	Aliment remplissant entièrement l'Estomac du Pokémon.	Nahrungsmittel, das den Magen des Pokémon reichlich füllt.	Alimento que llena del todo la Tripa del Pokémon.	Um alimento que enche a Barriga do Pokémon por completo.		먹으면 포만감이 꽤 회복된다.				
+0003-0000|data.Name		Huge Apple	Pomme Géante	Riesenapfel	Manzanota	Maçã Gigante	Gigantomela	특대사과				
+0003-0001|data.Desc		A food item that completely fills and slightly enlarges the Pokémon's belly.			Alimento que llena del todo y amplia ligeramente la Tripa del Pokémon.							
+0004-0000|data.Name		Golden Apple	Pomme d'Or	Goldener Apfel	Manzana Oro	Maçã Dourada	Mela Dorata	황금사과				
+0004-0001|data.Desc		A miraculous apple that glows with an alluring golden aura. It's far too precious and beautiful to even consider eating! If eaten, however, it would completely fill and greatly enlarge the Pokémon's belly.	Pomme miraculeuse dont émane une séduisante aura dorée. Elle est vraiment trop belle et trop précieuse, pas question de la manger! Cependant, si elle était mangée, elle remplirait complètement l'Estomac du Pokémon et en agrandirait beaucoup la taille.	Ein wundersamer Apfel, den eine verlockende, leuchtende Aura umgibt. Er ist viel zu kostbar und schön, um verspeist zu werden! Sollte er trotzdem gegessen werden, würde er den Magen des Pokémon vollständig füllen und ihn in hohem Maße erweitern.	Manzana milagrosa que brilla con una atrayente aura dorada. ¡Es demasiado preciosa para considerar comérsela! Sin embargo, si se come, llena por completo y amplia mucho la Tripa del Pokémon.	Uma maçã milagrosa que brilha com uma aura dourada atraente. É preciosa e bonita demais para se pensar em comer ela! Se consumida, entretanto, ela encheria e expandiria incrívelmente a Barriga do Pokémon.		황금 광택을 띠는 기적의 사과. 너무 아름다워서 먹기 아깝다. 먹으면 포만감이 완전히 회복되고 배부름의 최대치도 매우 늘어날 것이다.				
+0005-0000|data.Name		Perfect Apple	Pomme Parfaite	Perfekter Apfel	Manzana Perfecta		Mela Perfetta	거대사과	セカイイチ						
+0005-0001|data.Desc		A food item that completely fills and somewhat enlarges the Pokémon's belly.			Alimento que llena del todo y amplia un poco la Tripa del Pokémon.							
+0006-0000|data.Name		Banana	Banane	Banane	Plátano	Banana	Banana	바나나				
+0006-0001|data.Desc		A rare food item that somewhat fills the entire team's belly.	Aliment rare qui remplit légèrement l'Estomac de chaque Pokémon de l'équipe.	Ein seltenes Nahrungsmittel, welches den Magen des gesamten Teams etwas füllt.	Alimento raro que llena algo la Tripa de todo el equipo.	Um alimento raro que enche um pouco a Barriga de toda a Equipe.		동료 전원의 포만감을 약간 회복하는 귀한 음식.				
+0007-0000|data.Name		Big Banana	Grosse Banane	Große Banane	Gran Plátano	Banana Grande		큰바나나				
+0007-0001|data.Desc		A rare food item that amply fills the entire team's belly.	Aliment rare qui aggrandit et remplit entièrement l'Estomac de chaque Pokémon de l'équipe.	Ein seltenes Nahrungsmittel, welches den Magen des gesamten Teams reichlich füllt.	Alimento raro que llena por completo la Tripa de todo el equipo.	Alimento raro que enche por completo a Barriga de toda a Equipe.		동료 전원의 포만감을 꽤 회복하는 귀한 음식.				
+0008-0000|data.Name		Golden Banana	Banane d'Or	Goldene Banane	Plátano Dorado	Banana Dourada	Banana d'Oro	황금바나나	おうごんのバナナ			
+0008-0001|data.Desc		An alluring banana that gives off a golden glow. It's valued far more as a treasure than as a food. If eaten, however, it would completely fill and enlarge the entire team's belly.										
+0009-0000|data.Name		Chestnut	Châtaigne	Kastanie	Castaña	Castanha	Castagna	밤송이																	
+0009-0001|data.Desc															
+0010-0000|data.Name		Oran Berry	Baie Oran	Sinelbeere	Baya Aranja	Fruta Laran	Baccarancia	오랭열매	オレンのみ	オレンのみ	橙橙果	橙橙果													
+0010-0001|data.Desc		A peculiar berry with a mix of flavors. It fully restores HP.	Une baie particulière avec un subtil mélange de saveur. Elle restaure tout les PV du Pokémon.	Eine eigenartige Beere mit einer Mischung aus Geschmäckern. Es füllt die KP vollständig auf.	Baya peculiar con una mezcla de sabores. Restaura por completo los PS.	Uma fruta peculiar com uma mistura de sabores. Restaura os PV por completo.		여러가지 맛이 섞인 신기한 열매. 먹으면 체력을 완전히 회복한다.																	
+0011-0000|data.Name		Leppa Berry	Baie Mepo	Jonagobeere	Baya Zanama	Fruta Leppa	Baccamela	과사열매	ヒメリのみ	ヒメリのみ	苹野果	蘋野果
+0011-0001|data.Desc		A berry that takes a long time to grow. It fully restores PP.	Une baie qui prend du temps à pousser. Elle restaure les PP du Pokémon.	Eine Beere, die eine lange Zeit zum wachsen braucht. Es füllt die AP vollständig auf.	Una baya que tarda mucho tiempo en crecer. Restaura por completo todos los PP.	Uma fruta que leva bastante tempo para crescer. Restaura todos os PP completamente.		성장시간이 길다는 열매. 먹으면 PP를 완전히 회복한다.				
+0012-0000|data.Name		Lum Berry	Baie Prine	Prunusbeere	Baya Ziuela	Fruta Lum	Baccaprugna	리샘열매	ラムのみ	ラムのみ	木子果	木子果
+0012-0001|data.Desc		A berry that matures slowly, storing nutrients beneficial to Pokémon health. It cures many status problems.	Une baie qui mûrit lentement, elle contient des nutriments essentiel à la santé du Pokémon. Elle soigne de nombreux problème de statut.	Eine Beere, welche langsam reift, um somit Nährstoffe zu speichern. Sie ist gesund und heilt viele Statusprobleme.	Una baya que madura lentamente, guardando beneficiosos nutrientes para la salud del Pokémon. Cura varios problemas de estado.	Uma fruta que amadurece lentamente, armazenando nutrientes importantes para a saude de Pokémon. Cura vários problemas de estado.		포켓몬의 몸에 좋은 성분을 내부에 천천히 비축하며 자라는 열매. 먹으면 대부분의 상태이상을 치료한다.				
+0013-0000|data.Name		Cheri Berry	Baie Ceriz	Amrenabeere	Baya Zreza	Fruta Cheri	Baccaliegia	버치열매	クラボのみ	クラボのみ	樱子果	櫻子果
+0013-0001|data.Desc												
+0014-0000|data.Name		Chesto Berry	Baie Maron	Maronbeere	Baya Atania	Fruta Chesto	Baccastagna	유루열매	カゴのみ	カゴのみ	零余果	零餘果
+0014-0001|data.Desc												
+0015-0000|data.Name		Pecha Berry	Baie Pêcha	Pirsifbeere	Baya Meloc	Fruta Pecha	Baccapesca	복슝열매	モモンのみ	モモンのみ	桃桃果	桃桃果
+0015-0001|data.Desc												
+0016-0000|data.Name		Aspear Berry	Baie Willia	Wilbirbeere	Baya Perasi	Fruta Aspear	Baccaperina	배리열매	ナナシのみ	ナナシのみ	利木果	利木果
+0016-0001|data.Desc												
+0017-0000|data.Name		Rawst Berry	Baie Fraive	Fragiabeere	Baya Safre	Fruta Rawst	Baccafrago	복분열매	チーゴのみ	チーゴのみ	莓莓果	莓莓果
+0017-0001|data.Desc												
+0018-0000|data.Name		Persim Berry	Baie Kika	Persimbeere	Baya Caquic	Fruta Persim	Baccaki	시몬열매	キーのみ	キーのみ	柿仔果	柿仔果
+0018-0001|data.Desc												
+0019-0000|data.Name		Tanga Berry	Baie Panga	Tanigabeere	Baya Yecana	Fruta Tanga	Baccaitan	리체열매	タンガのみ	タンガのみ	扁樱果	扁櫻果
+0019-0001|data.Desc		The flower grows at the tip of this berry. It attracts Bug Pokémon by letting its stringy petals stream out. It changes the Pokémon to the Bug-type.		Die Blume wächst an der Spitze dieser Beere. Sie lockt Käfer Pokémon an, indem sie ihre sehnigen Blütenblätter herausströmen lässt. Es wechselt den Typen des Pokémon zu Käfer.	La flor crece en la punta de esta baya. Atrae a Pokémon al dejar salir sus fibrosos petalos. Cambia el tipo de Pokémon a Bicho.	A flor cresce na ponta desta Fruta. Ela atrai Pókemon do tipo Inseto deixando suas pétalas longas soltas. Altera o tipo do Pokémon para Inseto.		끝에서 자란 실 같은 꽃잎으로 벌레포켓몬을 불러들인다는 열매. 먹은 포켓몬을 벌레타입으로 변화시킨다.				
+0020-0000|data.Name		Colbur Berry	Baie Lampou	Burleobeere	Baya Dillo	Fruta Colbur	Baccaxan	마코열매	ナモのみ	ナモのみ	刺耳果	刺耳果
+0020-0001|data.Desc		Tiny hooks grow on the surface of this berry. It latches on to Pokémon so it can be carried to far-off places. It changes the Pokémon to the Dark-type.		Kleine Haken wachsen auf der Oberfläche dieser Beere. Es hängt sich an das Pokémon, um somit an zu weit entfernten Orte getragen werden zu können. Es wechselt den Typen des Pokémon zu Unlicht.	Pequeñas púas crecen en la superficie de esta baya. Se agarra al Pokémon para poderse llevar a grandes distancias. Cambia el tipo de Pokémon a Siniestro.			표면에 자란 가시들로 포켓몬에게 들러붙어 먼 땅까지 운반된다는 열매. 먹은 포켓몬을 악타입으로 변화시킨다.				
+0021-0000|data.Name		Haban Berry	Baie Fraigo	Terirobeere	Baya Anjiro		Baccahaban	하반열매	ハバンのみ	ハバンのみ	莓榴果	莓榴果
+0021-0001|data.Desc		If a large enough volume of this berry is boiled down, its bitterness fades away. It makes a good jam. It changes the Pokémon to the Dragon-type.		Wenn diese Beere genügend heruntergekocht wird, dann verschwindet die Bitterkeit. Daraus lässt sich gute Marmelade machen. Es wechselt den Typen des Pokémon zu Drache.	Si un volumen grande de esta baya se reduce, su amargura se desvanece. Con ella se hace una buena mermelada. Cambia el tipo del Pokémon a Dragón.			많은 하반열매를 한꺼번에 졸이면 쓴맛이 사라지고 먹을만한 잼이 나온다고 한다. 먹은 포켓몬을 드래곤타입으로 변화시킨다.				
+0022-0000|data.Name		Wacan Berry	Baie Parma	Kerzalbeere	Baya Gualot		Baccaparmen	초나열매	ソクノのみ	ソクノのみ	烛木果	燭木果
+0022-0001|data.Desc		Energy from lightning strikes is drawn into the plant, making the berries grow big and rich. It changes the Pokémon to the Electric-type.		Die Energie von Blitzeinschlägen werden in die Pflanze hineingezogen, sodass die Beeren groß und reichlich wachsen. Es wechselt den Typen des Pokémon zu Elektro.	Energía de los rayos es absorbido por la planta, haciendo que la baya crezca rica y grande. Cambia el tipo del Pokémon a Eléctrico			근처에 치는 낙뢰의 에너지를 받아들여 크고 탐스럽게 자라나는 열매. 먹은 포켓몬을 전기타입으로 변화시킨다.				
+0023-0000|data.Name		Chople Berry	Baie Pomroz	Rospelbeere	Baya Pomaro		Baccarosmel	로플열매	ヨプのみ	ヨプのみ	莲蒲果	蓮蒲果
+0023-0001|data.Desc		This berry contains a substance that generates heat. It can even heat up a chilly heart. It changes the Pokémon to the Fighting-type.		Diese Beere besitzt eine Substanz, welche Hitze generieren kann. Es kann sogar ein kaltes Herz aufwärmen. Es wechselt den Typen des Pokémon zu Kampf.	Esta baya contiene una sustancia que genera calor. Puede calentar incluso un corazón frío. Cambia el tipo del Pokémon a Lucha			과육 속에 열을 발생시키는 성분이 있다. 차가운 마음도 따뜻하게 만들 수 있다고. 먹은 포켓몬을 격투타입으로 변화시킨다.				
+0024-0000|data.Name		Occa Berry	Baie Chocco	Koakobeere	Baya Caoca		Baccacao	오카열매	オッカのみ	オッカのみ	巧可果	巧可果
+0024-0001|data.Desc		This berry is said to have grown plentiful in the tropics of the past. It boasts an intensely hot spiciness. It changes the Pokémon to the Fire-type.		Man sagt, diese Beere wuchs früher in den Tropen. Sie hat einen sehr scharfen Geschmack. Es wechselt den Typen des Pokémon zu Feuer.	Esta baya se dice que en el pasado crecía abundantemente en los trópicos. Presume de un intenso sabor picante. Cambia el tipo del Pokémon a Fuego.			옛날, 열대지방에서 많이 생산되었다고 하는 나무열매다. 작열하는 매운 맛이 자랑이다. 먹은 포켓몬을 불타입으로 변화시킨다.				
+0025-0000|data.Name		Coba Berry	Baie Cobaba	Kobabeere	Baya Kouba		Baccababa	바코열매	バコウのみ	バコウのみ	棱瓜果	稜瓜果
+0025-0001|data.Desc		This berry is said to be a new kind that is a cross of two berries brought together by winds from far away. It changes the Pokémon to the Flying-type.		Es wird erzählt, dass es sich um eine neue Art Beere handelt. Sie soll nämlich eine Kreuzung zwischen zwei Beeren sein, die der Wind zusammengebracht hat. Es wechselt den Typ des Pokémon zu Fug.	Esta baya se dice que es un nuevo tipo que es un cruce entre dos bayas reunidos por los vientos desde un lugar lejano. Cambia el tipo del Pokémon a Volador.			멀리 있던 각각의 나무열매가 바람에 날려와 열매를 맺어 신종의 나무열매가 되었다고 한다. 먹은 포켓몬을 비행타입으로 변화시킨다.				
+0026-0000|data.Name		Kasib Berry	Baie Sédra	Zitarzbeere	Baya Drasi		Baccacitrus	수불열매	カシブのみ	カシブのみ	佛柑果	佛柑果
+0026-0001|data.Desc		Considered to have a special power from the olden days, this berry is sometimes dried and used as a good-luck charm. It changes the Pokémon to the Ghost-type.		Man sagt, diese Beere besitze mystische Kräfte. Daher wird sie manchmal getrocknet und als Glücksbringer verwendet. Es wechselt den Typ des Pokémon zu Geist.	Considerado que tiene un poder especial desde tiempo antiguos, esta baya se suele secar y usar para amuletos de buena suerte. Cambia el tipo del Pokémon a Fantasma.			고대의 특별한 힘을 지녔다고 여겨지기에 말려서 행운의 부적으로 쓰기도 한다는 열매. 먹은 포켓몬을 고스트타입으로 변화시킨다.				
+0027-0000|data.Name		Rindo Berry	Baie Ratam	Grindobeere	Baya Tamar		Baccarindo	린드열매	リンドのみ	リンドのみ	罗子果	羅子果
+0027-0001|data.Desc		This berry has a disagreeable "green" flavor and scent typical of vegetables. It is rich in health-promoting fiber. It changes the Pokémon to the Grass-type.		Diese Beere besitzt einen unangenehm "grünen" Geschmack und Duft von üppigen Gemüse. Es ist reich an gesundheitsfördernden Fasern. Es wechselt den Typ des Pokémon zu Pflanze.	Esta baya tiene un desagradable sabor verde y huele a vegetales. Es rica en fibras que benefician la salud. Cambia el tipo de Pokémon a Planta.			식물 특유의 풋내는 호불호가 갈리지만 건강한 섬유질이 풍부하다. 먹은 포켓몬을 풀타입으로 변화시킨다.				
+0028-0000|data.Name		Shuca Berry	Baie Jouca	Schukebeere	Baya Acardo		Baccanaca	슈캐열매	シュカのみ	シュカのみ	腰木果	腰木果
+0028-0001|data.Desc		The sweetness-laden pulp has just the hint of a hard-edged and fragrant bite to it. It changes the Pokémon to the Ground-type.		Das von Süße beladene Fruchtfleisch lässt auf einen hartkantigen und würzigen Biss vermuten. Es wechselt den Typ des Pokémon zu Boden.	La dulce pulpa de esta baya camufla su dureza y la dulzura que desprende provoca a morderla. Cambia el tipo de Pokémon a Tierra.			단맛이 가득한 과육 속에 단단하고 향기로운 풍미를 희미하게 느낄 수 있다. 먹은 포켓몬을 땅타입으로 변화시킨다.				
+0029-0000|data.Name		Yache Berry	Baie Nanone	Kiroyabeere	Baya Rimoya		Baccamoya	플카열매	ヤチェのみ	ヤチェのみ	番荔果	番荔果
+0029-0001|data.Desc		This berry has a refreshing flavor that strikes a good balance of dryness and sourness. It tastes better chilled. It changes the Pokémon to the Ice-type.		Diese Beere hat einen erfrischenden Geschmack, welcher ein gutes Gleichgewicht zwischen Trockenheit und Sauerkeit trifft. Es schmeckt gekühlt besser. Es wechselt den Typ des Pokémon zu Eis.	Esta baya posee un sabor refrescante que combina balanceadamente lo seco con lo agrio. Sabe mejor fria. Cambia el tipo de Pokémon a Hielo.			떫은맛과 신맛이 잘 어우러지는 상큼한 맛. 차게 하면 맛이 한층 더 좋아진다. 먹은 포켓몬을 얼음타입으로 변화시킨다.				
+0030-0000|data.Name		Chilan Berry	Baie Zalis	Latchibeere	Baya Chilan		Baccacinlan	카리열매	ホズのみ	ホズのみ	灯浆果	燈漿果
+0030-0001|data.Desc		This berry can be cored out and dried to make a whistle. Blowing through its hole makes an indescribable sound. It changes the Pokémon to the Normal-type.		Diese Beere kann entkernt und getrocknet werden, um eine Pfeife zu schaffen. Bläst man dabei durch das Loch, bekommt man einen unbeschreibbaren Ton. Es wechselt den Typ des Pokémon zu Normal.	Esta baya puede ser extraida y secada para crear un silbato. Soplando a través de su agujero se produce un sonido indescriptible. Cambia el tipo de Pokémon a Normal.			속을 파내고 말려 피리를 만들 수 있는 열매. 불면 뭐라 말할 수가 없는 기묘한 소리가 난다고. 먹은 포켓몬을 노멀타입으로 변화시킨다.				
+0031-0000|data.Name		Kebia Berry	Baie Kébia	Grarzbeere	Baya Kebia		Baccakebia	으름열매	ビアーのみ	ビアーのみ	通通果	通通果
+0031-0001|data.Desc		This berry is a brilliant green on the outside. Inside, it is packed with a dry-flavored, black-colored flesh. It changes the Pokémon to the Poison-type.		Diese Beere erstrahlt in einem hellen Grün. Ihr Fleisch hingegen ist schwarz und hat einen trockenen Geschmack. Es wechselt den Typ des Pokémon zu Gift.	Por fuera, esta baya es de un color verde brillante. Por dentro, tiene un sabor seco y su fruta posee un color negro. Cambia el tipo de Pokémon a Veneno. 			겉은 선명한 녹색이다. 안쪽에는 떫은 흑색의 과육으로 가득차 있다. 먹은 포켓몬을 독타입으로 변화시킨다.				
+0032-0000|data.Name		Payapa Berry	Baie Yapap	Pyapabeere	Baya Payapa		Baccapayapa	야파열매	ウタンのみ	ウタンのみ	福禄果	福祿果
+0032-0001|data.Desc		This berry is said to sense emotions for the way it swells roundly when anything approaches. It changes the Pokémon to the Psychic-type.		Von dieser Beere wird erzählt, dass sie Emotionen wahrnehmen kann indem sie ründlich anschwellt, falls irgendetwas nähert. Es wechselt den Typ des Pokémon zu Psycho.				무언가 접근할 때마다 둥글게 부풀어오르는 것은 마음을 감지하는 것이라고 한다. 먹은 포켓몬을 에스퍼타입으로 변화시킨다.				
+0033-0000|data.Name		Charti Berry	Baie Charti	Chiaribeere	Baya Alcho		Baccaciofo	루미열매	ヨロギのみ	ヨロギのみ	草蚕果	草蠶果
+0033-0001|data.Desc		It is often used for pickles because of its very dry flavor. It can also be eaten raw for its provocative taste. It changes the Pokémon to the Rock-type.		Es wird oft für Gurken genutzt, da es einen sehr trockenen Geschmack besitzt. Sie kann für ihren provokativen Geschmack auch roh gegessen werden. Es wechselt den Typ des Pokémon zu Stein.				아주 떫기에 피클의 재료로 자주 쓰인다. 자극적인 맛을 좋아하는 포켓몬은 그대로 먹기도 한다. 먹은 포켓몬을 바위타입으로 변화시킨다.				
+0034-0000|data.Name		Babiri Berry	Baie Babiri	Babiribeere	Baya Baribá		Baccababiri	바리비열매	リリバのみ	リリバのみ	霹霹果	霹霹果
+0034-0001|data.Desc		This berry is very tough with a strong flavor. It was used to make medicine in the past. It changes the Pokémon to the Steel-type.		Diese Beere ist sehr hart mit einem starken Geschmack. Es wurde in der Vergangenheit zur Herstellung von Medizin benutzt. Es wechselt den Typ des Pokémon zu Stahl.				매우 단단한데다가 맛은 자극적이다. 과거에는 약재로 쓰였다. 먹은 포켓몬을 강철타입으로 변화시킨다.				
+0035-0000|data.Name		Passho Berry	Baie Pocpoc	Foepasbeere	Baya Pasio		Baccapasflo	꼬시개열매	イトケのみ	イトケのみ	千香果	千香果
+0035-0001|data.Desc		This berry's flesh is dotted with tiny bubbles of air that keep it afloat in water. It changes the Pokémon to the Water-type.		Das Beerenfleisch ist mit kleinen Bläschen aus Luft gepunktet, welche sie im Wasser schwimmen lässt. Es wechselt den Typ des Pokémon zu Wasser.				껍질에는 작은 기포가 가득해 물에서도 잘 뜬다. 먹은 포켓몬을 물타입으로 변화시킨다.				
+0036-0000|data.Name		Roseli Berry	Baie Selro	Hibisbeere	Baya Hibis		Baccarcadè	로셀열매	ロゼルのみ	ロゼルのみ	洛玫果	洛玫果
+0036-0001|data.Desc		A mysterious berry. It changes the Pokémon to the Fairy-type.		Eine mysteriöse Beere. Es wechselt den Typ des Pokémon zu Fee.				불가사의한 열매. 먹은 포켓몬을 페어리타입으로 변화시킨다.				
+0037-0000|data.Name		Jaboca Berry	Baie Jaboca	Jabocabeere	Baya Jaboca		Baccajaba	자보열매	ジャポのみ	ジャポのみ	嘉珍果	嘉珍果
+0037-0001|data.Desc		The cluster of drupelets that make up this berry pop rhythmically if the berry is handled roughly. If a physical attack hits the Pokémon, the damage will be reflected to all enemies nearby.	Le grappe de drupéoles qui compose cette Baie éclate en rythme si on la manipule avec trop de vigueur. Si une attaque physique touche le Pokémon, les dégâts seront reflétés à tout les ennemis proches.	Die winzigen Beeren auf der Oberfläche dieser Beere platzen auf rhythmische Weise auf, wenn man sie hart anfasst. Falls eine physische Attacke das Pokémon trifft, wird der Schaden an alle benachbarten Gegner reflektiert.				이 열매의 낱알들은 거칠게 다루면 튀면서 리드미컬한 소리를 낸다. 먹은 포켓몬은 물리공격을 받았을 때 데미지를 근처 적들에게 반사시킨다.				
+0038-0000|data.Name		Rowap Berry	Baie Pommo	Roselbeere	Baya Magua		Baccaroam	애터열매	レンブのみ	レンブのみ	雾莲果	霧蓮果
+0038-0001|data.Desc		In days of old, people worked the top-shaped pieces of this berry free and used them as toys. If a special attack hits the Pokémon, the damage will be reflected to all enemies nearby.	Autrefois, on détachait les morceaux supérieurs de cette Baie pour en faire des jouets. Si une attaque spécial touche le Pokémon, les dégâts seront reflétés à tout les ennemis proches.	Früher haben die Menschen die kreiselförmige Oberfläche dieser Beere abgetrennt und sie als Spielzeug verwendet. Falls eine spezielle Attacke das Pokémon trifft, wird der Schaden an alle benachbarten Gegner reflektiert.				열매를 떼어내면 하나하나가 팽이 모양이다. 옛날에는 이것을 장난감 삼았다고 한다. 먹은 포켓몬은 특수공격을 받았을 때 데미지를 근처 적들에게 반사시킨다.				
+0039-0000|data.Name		Kelpsy Berry	Baie Alga	Setangbeere	Baya Algama		Baccalga	시마열매	ネコブのみ	ネコブのみ	藻根果	藻根果
+0039-0001|data.Desc												
+0040-0000|data.Name		Qualot Berry	Baie Qualot	Qualotbeere	Baya Ispero		Baccaloquat	파비열매	タポルのみ	タポルのみ	比巴果	比巴果
+0040-0001|data.Desc												
+0041-0000|data.Name		Tamato Berry	Baie Tamato	Tamotbeere	Baya Tamate		Baccamodoro	토망열매	マトマのみ	マトマのみ	茄番果	茄番果
+0041-0001|data.Desc												
+0042-0000|data.Name		Hondew Berry	Baie Lonme	Honmelbeere	Baya Meluce		Baccamelon	로매열매	ロメのみ	ロメのみ	哈密果	哈密果
+0042-0001|data.Desc												
+0043-0000|data.Name		Apicot Berry	Baie Abriko	Apikobeere	Baya Aricoc		Baccacocca	규살열매	ズアのみ	ズアのみ	杏仔果	杏仔果
+0043-0001|data.Desc		A very mystifying Berry. There is no telling how it can be used, or what may happen if it is used. It maximizes Special Defense.	Une Baie particulièrement déconcertante. On ne sait pas comment l'utiliser ni quelles peuvent être les conséquences. Augmente la Défense Spéciale.	Eine rätselhafte Beere. Man kann nicht sagen, wie und was sie ist. Sie maximiert die Spezial Verteidigung.				수수께끼의 열매. 어떻게 쓰는지, 사용하면 어떤 일이 일어날지 알수가 없다. 먹으면 특수방어를 최대로 만들 것 같은 기분이 든다.				
+0044-0000|data.Name		Liechi Berry	Baie Lichii	Lydzibeere	Baya Lichi		Baccalici	치리열매	チイラのみ	チイラのみ	枝荔果	枝荔果
+0044-0001|data.Desc		A mysterious Berry, rumored to contain the power of the sea. It maximizes Attack.	Une Baie mystérieuse, censée contenir le pouvoir de la mer. Augmente l'Attaque.	Eine geheimnisvolle Beere. Man sagt, sie enthalte die Kraft des Meeres. Sie maximiert den Angriff.	Una misteriosa Baya, que se rumorea que contiene la fuerza del mar. Maximiza el Ataque.			불가사의한 열매. 소문에 따르면 바다의 힘을 머금고 있다고. 먹으면 공격을 최대로 만든다.				
+0045-0000|data.Name		Ganlon Berry	Baie Lingan	Linganbeere	Baya Gonlan		Baccalongan	용아열매	リュガのみ	リュガのみ	龙睛果	龍睛果
+0045-0001|data.Desc		A Berry surrounded by mystery, rumored to be imbued with the power of the land. It maximizes Defense.	Une Baie mystérieuse, censée contenir le pouvoir de la terre. Augmente la Défense.	Eine geheimnisvolle Beere. Man sagt, sie enthalte die Kraft des Landes. Sie maximiert die Verteidigung.				대지의 기운을 담고 있다는 의문의 열매. 먹으면 방어를 최대로 만든다.				
+0046-0000|data.Name		Salac Berry	Baie Sailak	Salkabeere	Baya Aslac		Baccasalak	캄라열매	カムラのみ	カムラのみ	沙鳞果	沙鱗果
+0046-0001|data.Desc		A Berry surrounded by mystery, rumored to be imbued with the power of the sky. It maximizes Movement Speed.		Eine geheimnisvolle Beere. Man sagt, sie enthalte die Kraft des Himmels. Sie maximiert die Bewegungsgeschwindigkeit				하늘의 기운을 담고 있다는 의문의 열매. 행동속도를 최대로 만든다.				
+0047-0000|data.Name		Petaya Berry	Baie Pitaye	Tahaybeere	Baya Yapati		Baccapitaya	야타비열매	ヤタピのみ	ヤタピのみ	龙火果	龍火果
+0047-0001|data.Desc		A mysterious Berry rumored to contain the power of all living things. It maximizes Special Attack.	Une Baie mystérieuse, censée contenir le pouvoir de la vie. Augmente l'Attaque Spéciale.	Eine geheimnisvolle Beere. Man sagt, sie enthalte die Kraft allen Lebens. Sie maximiert den Spezial Angriff.				살아있는 모든 것의 힘이 담겨 있다는 소문의 열매. 특수공격을 최대로 만든다.				
+0048-0000|data.Name		Starf Berry	Baie Frista	Krambobeere	Baya Arabol		Baccambola	스타열매	スターのみ	スターのみ	星桃果	星桃果
+0048-0001|data.Desc		So strong, it was abandoned at the world's edge. It is still considered a mirage to this very day. It sharply raises all stats.	Cette Baie est considérée comme un mirage. On dit qu'elle était si puissante qu'on dut l'abandonner au bout du monde. Augmente brusquement chaque stats.	Diese Beere wird als Illusion angesehen. Sie soll so mächtig gewesen sein, dass sie an den Rand der Welt verbannt wurde. Sie erhöht alle Werte drastisch.				너무나 강력했기에 세계의 끝에 버려졌었다. 현재까지도 신기루로 여겨지는 진귀한 열매. 먹으면 모든 스탯을 꽤 올려준다. 				
+0049-0000|data.Name		Micle Berry	Baie Micle	Wunfrubeere	Baya Lagro		Baccaracolo	미클열매	ミクルのみ	ミクルのみ	奇秘果	奇秘果
+0049-0001|data.Desc		This berry has a very dry flavor. It has the effect of making other food eaten at the same time taste sweet. It maximizes Accuracy.	Cette Baie a une saveur très sèche. En accompagnement, elle a la particularité de donner un goût sucré aux aliments. Augmente la Précision.	Diese Beere hat ein trockenes Aroma. Isst man sie mit anderen Lebensmitteln, erhalten diese eine gewisse Süße. Sie maximiert die Genauigkeit.				아주 떫은 열매다. 동시에 먹은 음식을 달게 느껴지게 만드는 효과가 있다. 먹으면 명중률을 최대로 만든다.				
+0050-0000|data.Name		Custap Berry	Baie Chérim	Eipfelbeere	Baya Chiri		Baccacrela	애슈열매	イバンのみ	イバンのみ	释陀果	釋陀果
+0050-0001|data.Desc												
+0051-0000|data.Name		Enigma Berry	Baie Enigma	Enigmabeere	Baya Enigma		Baccaenigma	의문열매	ナゾのみ	ナゾのみ	谜芝果	謎芝果
+0051-0001|data.Desc		A completely enigmatic Berry that appears to have the power of stars. It restores HP when hit by a super-effective move.		Eine enigmatische Beere. Sie scheint die Macht der Sterne zu besitzen. Füllt KP auf, wenn man von einem sehr effektiven Angriff getroffen wird.				별들의 힘을 지닌 것으로 보이는 수수께끼의 열매. 먹으면 효과가 굉장한 기술로 인해 데미지를 입었을 때 체력을 회복하게 된다.				
+0052-0000|data.Name		Kee Berry	Baie Éka	Akibeere	Baya Biglia		Baccalighia	악키열매	アッキのみ	アッキのみ	亚开果	亞開果
+0052-0001|data.Desc												
+0053-0000|data.Name		Maranga Berry	Baie Rangma	Tarabeere	Baya Maranga		Baccapane	타라프열매	タラプのみ	タラプのみ	香罗果	香羅果
+0053-0001|data.Desc												
+0072-0000|data.Name		Sitrus Berry	Baie Sitrus	Tsitrubeere	Baya Zidra	Fruta Cítrica	Baccacedro	자뭉열매	オボンのみ	オボンのみ	文柚果	文柚果
+0072-0001|data.Desc		A large berry with a well-rounded flavor. It gradually restores HP for a few turns.		Eine große Beere mit vielseitigem Geschmack. Sie regeneriert ein paar Züge lang zusätzliche KP.		Uma fruta grande com um sabor bem balanceado. Restaura PV gradualmente por alguns turnos.		균형잡힌 맛의 커다란 열매. 먹으면 몇 턴동안 천천히 체력을 회복한다.				
+0075-0000|data.Name		Wonder Gummi	Gelée Miracle	Wundergummi				이상한구미				
+0075-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats.	Aliment à la texture étrange, différent des autres gelées, qui augmente de façon permanente le Q.I. du coéquipier qui en mange. Remplit aussi un peu l'estomac du Pokémon.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다.				
+0076-0000|data.Name		Blue Gummi	Gelée Bleue	Blaugummi				파란구미				
+0076-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Water-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Eau.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Wasser-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 물타입 포켓몬이 좋아한다.				
+0077-0000|data.Name		Black Gummi	Gelée Noire	Schwarzgummi				검정구미				
+0077-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Dark-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Ténèbres.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Unlicht-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 악타입 포켓몬이 좋아한다.				
+0078-0000|data.Name		Clear Gummi	Gelée Ivoire	Klargummi				투명구미				
+0078-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ice-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Glace.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Eis-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 얼음타입 포켓몬이 좋아한다.				
+0079-0000|data.Name		Grass Gummi	Gelée Plante	Floragummi				새싹구미				
+0079-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Grass-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Plante.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Pflanzen-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 풀타입 포켓몬이 좋아한다.				
+0080-0000|data.Name		Green Gummi	Gelée Verte	Grüngummi				초록구미				
+0080-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Bug-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Insecte.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Käfer-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 벌레타입 포켓몬이 좋아한다.				
+0081-0000|data.Name		Brown Gummi	Gelée Marron	Braungummi				갈색구미				
+0081-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ground-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Sol.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Boden-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 땅타입 포켓몬이 좋아한다.				
+0082-0000|data.Name		Orange Gummi	Gelée Orange	Orangegummi				주황구미				
+0082-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fighting-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Combat.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Kampf-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 격투타입 포켓몬이 좋아한다.				
+0083-0000|data.Name		Gold Gummi	Gelée Dorée	Goldgummi				금색구미				
+0083-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Psychic-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Psy.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Psycho-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 에스퍼타입 포켓몬이 좋아한다.				
+0084-0000|data.Name		Pink Gummi	Gelée Pêche	Rosagummi				분홍구미				
+0084-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Poison-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Poison.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Gift-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 독타입 포켓몬이 좋아한다.				
+0085-0000|data.Name		Purple Gummi	Gelée Mauve	Lilagummi				보라구미				
+0085-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ghost-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Spectre.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Geist-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 고스트타입 포켓몬이 좋아한다.				
+0086-0000|data.Name		Red Gummi	Gelée Rouge	Rotgummi				빨간구미				
+0086-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fire-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Feu.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Feuer-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 불타입 포켓몬이 좋아한다.				
+0087-0000|data.Name		Royal Gummi	Gelée Royale	Royalgummi				로열구미				
+0087-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Dragon-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Dragon.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Drachen-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 드래곤타입 포켓몬이 좋아한다.				
+0088-0000|data.Name		Silver Gummi	Gelée Argent	Silbergummi				은색구미				
+0088-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Steel-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Acier.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Stahl-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 강철타입 포켓몬이 좋아한다.				
+0089-0000|data.Name		White Gummi	Gelée Claire	Weißgummi				하얀구미				
+0089-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Normal-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Normal.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Normal-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 노멀타입 포켓몬이 좋아한다.				
+0090-0000|data.Name		Yellow Gummi	Gelée Jaune	Gelbgummi				노란구미				
+0090-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Electric-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Électrik.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Elektro-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 전기타입 포켓몬이 좋아한다.				
+0091-0000|data.Name		Sky Gummi	Gelée Azur	Azurgummi				하늘색구미				
+0091-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Flying-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Vol.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Flug-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 비행타입 포켓몬이 좋아한다.				
+0092-0000|data.Name		Gray Gummi	Gelée Grise	Graugummi				회색구미				
+0092-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Rock-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Roche.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Gestein-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 바위타입 포켓몬이 좋아한다.				
+0093-0000|data.Name		Magenta Gummi	Gelée Fuschia	Magentagummi				자홍구미				
+0093-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fairy-type Pokémon like it the most.	Aliment qui remplit légèrement l'Estomac du Pokémon. Augmente le Q.I. des membres de l'équipe de secours qui en mangent. Plaît particulièrement aux Pokémon de type Fée.	Nahrungsmittel, dass den Magen des Pokémons einigermaßen füllt und die Basiswerte permanent erhöht. Feen-Pokémon mögen es am liebsten.				먹으면 포만감을 약간 회복하고 스탯을 영구적으로 증가시킨다. 페어리타입 포켓몬이 좋아한다.				
+0100-0000|data.Name		Plain Seed	Graine Vide	Samen				보통씨앗				
+0100-0001|data.Desc		A seed that has no special effect.	Aliment n'ayant aucun effet particulier, à part remplir légèrement l'Estomac du Pokémon.	Samen ohne Wirkung.				먹어도 아무런 효과가 없는 씨앗.				
+0101-0000|data.Name		Reviver Seed	Résugraine	Belebersamen				부활의씨앗				
+0101-0001|data.Desc		A seed that revives a fainted Pokémon, then becomes a Plain Seed after use.	Objet qui permet de ranimer un Pokémon K.O. Il devient l'objet Graine Vide une fois utilisé. Tenu, il ne ranime que le porteur. Ne peut être utilisé que par un Maître des Objets.	Ein Samen, der ein kampfunfähiges Pokémon wiederbelebt und dann zu einem Samen wird.				포켓몬이 쓰러졌을때 부활하게 해준다. 부활시킨 후에는 보통씨앗으로 변해버린다.				
+0102-0000|data.Name		Joy Seed	Allégraine	Lv.+ Samen				행복의씨앗				
+0102-0001|data.Desc		A seed that raises the Pokémon's level by 1.	Aliment qui fait gagner un niveau au Pokémon.	Ein Samen, der das Level des Pokémon um 1 erhöht.				먹으면 레벨이 1 올라간다.				
+0103-0000|data.Name		Golden Seed	Aurigraine	Goldsamen				황금씨앗				
+0103-0001|data.Desc		A seed that raises the Pokémon's level by 3.	Graine complexe brillant d'un éclat doré. Elle augmente de 3 le niveau du Pokémon qui la mange.	Ein Samen, der das Level des Pokémon um 3 erhöht.				먹으면 레벨이 3 올라간다.				
+0104-0000|data.Name		Doom Seed	Pépingraine	Schwundsamen				불행의씨앗				
+0104-0001|data.Desc		A seed that reduces the Pokémon's level by 5.	Aliment qui fait baisser le Pokémon de 5 niveaux.	Ein Samen, der das Level des Pokémon um 5 verringert.				먹으면 레벨이 5 내려간다.				
+0105-0000|data.Name		Spreader Seed		Verteilersamen				나눔의씨앗				
+0105-0001|data.Desc	Further explanation: It turns all hits into splash damage	A seed that causes the Pokémon to share the effects of moves used on it.		Ein Samen, der Effekte von Angriffen, die auf das Pokémon verwendet werden, auf andere in der Nähe verteilt.				먹은 포켓몬은 받는 데미지와 상태이상을 근처의 포켓몬과 함께 나누게 된다.				
+0106-0000|data.Name		Training Seed	Bachograine	Trainingssamen				수련의씨앗				
+0106-0001|data.Desc												
+0107-0000|data.Name		Hunger Seed	Famigraine	Gustosamen				공복의씨앗				
+0107-0001|data.Desc		A seed that makes the Pokémon's belly somewhat emptier.	Vide un peu l'Estomac du Pokémon.	Ein Samen, der den Magen des Pokémon ein wenig leerer macht.				먹으면 약간 배고파지는 씨앗.				
+0108-0000|data.Name		Warp Seed	Télégraine	Warp-Samen				워프의씨앗				
+0108-0001|data.Desc		A seed that warps the Pokémon and its nearby allies to a different place on the floor.		Ein Samen, der das Pokémon und Verbündete in der Nähe auf eine zufällige Position auf der Ebene teleportiert.				먹은 포켓몬과 근처의 동료를 다른 곳으로 순간이동시킨다.				
+0109-0000|data.Name		Vanish Seed	Disparigraine	Tarnsamen				사라짐씨앗				
+0109-0001|data.Desc												
+0110-0000|data.Name		Sleep Seed	Roupigraine	Schlafsamen				수면의씨앗				
+0110-0001|data.Desc		A seed that puts the Pokémon to sleep for many turns.		Ein Samen, der das Pokémon für viele Runden in Schlaf versetzt.				먹으면 몇 턴동안 잠들게 된다.				
+0111-0000|data.Name		Vile Seed		Schadsamen								
+0111-0001|data.Desc		A seed that drastically lowers the Pokémon's Defense and Special Defense.		Ein Samen, der die Verteidigung und Spezial Verteidigung vom Pokémon stark verringert.								
+0112-0000|data.Name		Blast Seed	Explograine	Plosivsamen				폭렬의씨앗				
+0112-0001|data.Desc		A seed that causes the Pokémon to release a blast on the tile in front of it, causing damage.	Aliment qui permet au Pokémon de cracher des flammes puissantes et dangereuses.	Ein Samen, durch welches eine Explosion auf dem Feld vor dem Pokémon verursacht wird, welche Schaden verursacht.				먹으면 바로 앞에 폭발을 일으켜 데미지를 준다.				
+0113-0000|data.Name		Blinker Seed	Eblouigraine	Flairsamen				앞못봄씨앗				
+0113-0001|data.Desc		A seed that gives the Blinker status, reducing the Pokémon's Attack Range to its lowest level.	Aliment qui donne le statut Eblouissement au Pokémon. Réduit la portée des attaques du Pokémon au minimum.	Ein Samen, der den Schieler-Status verursacht, wodurch die Angriffsreichweite des Pokémon auf den geringsten Wert verringert wird.				먹으면 앞못봄 상태가 되어 공격 범위가 최소로 된다.				
+0114-0000|data.Name		Pure Seed	Puregraine	Reinsamen				성스러운씨앗				
+0114-0001|data.Desc		A seed that warps the Pokémon close to the stairs.	Aliment téléportant le Pokémon dans la salle où se trouve l'escalier de l'étage.	Ein Samen, der das Pokémon in die Nähe der Treppe teleportiert.				먹으면 계단 근처로 순간이동한다.				
+0115-0000|data.Name		Ice Seed	Glacigraine	Eissamen				얼음씨앗				
+0115-0001|data.Desc		A seed that freezes the Pokémon for many turns.		Ein Samen, der das Pokémon für viele Runden einfriert.				먹으면 몇 턴동안 얼게 된다.				
+0116-0000|data.Name		Decoy Seed	Appâgraine	Ködersamen				대타씨앗				
+0116-0001|data.Desc		A seed that gives the Pokémon the Decoy status, making it a target of everyone's attacks. Moves that target the team's inventory will always pick this item first.	La cible reçoit le statut Appât et elle devient la cible de tout le monde. Les attaques qui volent l'inventaire cibleront toujours cet objet en prioritée.	Ein Samen, welcher das Pokémon in den Köder-Status versetzt, wodurch es zum Ziel aller Angriffe wird. Angriffe, die auf das Inventar des Teams wirken, bevorzugen dieses Item.				먹으면 대타가 되어 모두의 공격을 유도한다. 아군의 도구를 대상으로 삼는 기술은 항상 이 씨앗을 우선으로 고른다.				
+0117-0000|data.Name		Last-Chance Seed	Faibligraine	Ultima-Ratio Samen				비장의씨앗				
+0117-0001|data.Desc		A seed that sets the PP of the Pokémon's moves to 1, and drastically raises its Attack, Special Attack, and Speed.	Aliment qui réduit les PP du Pokémon à 1. En contrepartie, son Attaque, Attaque Spéciale et Vitesse augmenteront brutalement.	Ein Samen, der die AP aller Angriffe des Pokémon auf 1 setzt und dabei den Wert von Angriff, Spezial-Angriff und Tempo erhöht.				먹으면 모든 기술의 PP가 1이 되고, 공격, 특수공격, 스피드가 극적으로 상승한다.				
+0118-0000|data.Name		Ban Seed	Entravegraine	Verbotssamen				금지의씨앗				
+0118-0001|data.Desc		A seed that bans the last move used by the Pokémon, preventing anyone in the dungeon from using it.		Ein Samen, der die Anwendung des zuletzt verwendeten Angriffs von dem Pokémon für alle auf der Ebene verbietet.				먹은 포켓몬이 마지막으로 썼던 기술을 금지해, 던전의 모두가 사용하지 못하게 한다.				
+0150-0000|data.Name		Nectar	Nectar	Nektar				맛있는꿀				
+0150-0001|data.Desc		A drink that permanently raises the Pokémon's stats.	Une boisson très sucrée qui augmente toute les statistiques du Pokémon de façon permanente.	Ein Getränk, das die Basiswerte eines Pokémon dauerhaft erhöht.				마시면 스탯이 영구적으로 상승한다.				
+0151-0000|data.Name		Protein	Protéine	Protein	Proteína		Proteina	타우린	タウリン	タウリン	攻击增强剂	攻擊增強劑
+0151-0001|data.Desc		A drink that permanently raises the Pokémon's Attack.	Une boisson très nutritive qui augmente l’Attaque de base d’un Pokémon.	Ein gehaltvolles Getränk, das den Angriffs-Basiswert eines Pokémon dauerhaft erhöht.	Nutritiva bebida que potencia el Ataque de base de un Pokémon.		Bevanda nutriente per Pokémon. Aumenta i punti base dell’Attacco.	마시는 포켓몬의 공격을 영구적으로 올린다.	ポケモンの　えいようドリンク。 ポケモン　１ひきの　こうげきの きそポイントを　あげる。	ポケモンの　栄養ドリンク。 ポケモン　１匹の　攻撃の 基礎ポイントを　あげる。	宝可梦的营养饮料。 能提高１只宝可梦的 攻击的基础点数。	寶可夢的營養飲料。 能提高１隻寶可夢的 攻擊的基礎點數。
+0152-0000|data.Name		Iron	Fer	Eisen	Hierro		Ferro	사포닌	ブロムヘキシン	ブロムヘキシン	防御增强剂	防禦增強劑
+0152-0001|data.Desc		A drink that permanently raises the Pokémon's Defense.	Une boisson très nutritive qui augmente la Défense de base d’un Pokémon.	Ein gehaltvolles Getränk, das den Verteidigungs-Basiswert eines Pokémon dauerhaft erhöht.	Nutritiva bebida que potencia la Defensa de base de un Pokémon.		Bevanda nutriente per Pokémon. Aumenta i punti base della Difesa.	마시는 포켓몬의 방어를 영구적으로 올린다.	ポケモンの　えいようドリンク。 ポケモン　１ひきの　ぼうぎょの きそポイントを　あげる。	ポケモンの　栄養ドリンク。 ポケモン　１匹の　防御の 基礎ポイントを　あげる。	宝可梦的营养饮料。 能提高１只宝可梦的 防御的基础点数。	寶可夢的營養飲料。 能提高１隻寶可夢的 防禦的基礎點數。
+0153-0000|data.Name		Calcium	Calcium	Kalzium	Calcio		Calcio	리보플라빈	リゾチウム	リゾチウム	特攻增强剂	特攻增強劑
+0153-0001|data.Desc		A drink that permanently raises the Pokémon's Special Attack.	Une boisson très nutritive qui augmente l’Attaque Spéciale de base d’un Pokémon.	Ein gehaltvolles Getränk, das den Spezial-Angriffs-Basiswert eines Pokémon dauerhaft erhöht.	Nutritiva bebida que potencia el Ataque Especial de base de un Pokémon.		Bevanda nutriente per Pokémon. Aumenta i punti base dell’Attacco Speciale.	마시는 포켓몬의 특수공격을 영구적으로 올린다.	ポケモンの　えいようドリンク。 ポケモン　１ひきの　とくこうの きそポイントを　あげる。	ポケモンの　栄養ドリンク。 ポケモン　１匹の　特攻の 基礎ポイントを　あげる。	宝可梦的营养饮料。 能提高１只宝可梦的 特攻的基础点数。	寶可夢的營養飲料。 能提高１隻寶可夢的 特攻的基礎點數。
+0154-0000|data.Name		Zinc	Zinc	Zink	Zinc		Zinco	키토산	キトサン	キトサン	特防增强剂	特防增強劑
+0154-0001|data.Desc		A drink that permanently raises the Pokémon's Special Defense.	Une boisson très nutritive qui augmente la Défense Spéciale de base d’un Pokémon.	Ein gehaltvolles Getränk, das den Spezial-Verteidigungs-Basiswert eines Pokémon dauerhaft erhöht.	Nutritiva bebida que aumenta la Defensa Especial de base de un Pokémon.		Bevanda nutriente per Pokémon. Aumenta i punti base della Difesa Speciale.	마시는 포켓몬의 특수방어를 영구적으로 올린다.	ポケモンの　えいようドリンク。 ポケモン　１ひきの　とくぼうの きそポイントを　あげる。	ポケモンの　栄養ドリンク。 ポケモン　１匹の　特防の 基礎ポイントを　あげる。	宝可梦的营养饮料。 能提高１只宝可梦的 特防的基础点数。	寶可夢的營養飲料。 能提高１隻寶可夢的 特防的基礎點數。
+0155-0000|data.Name		Carbos	Carbone	Carbon	Carburante		Carburante	알칼로이드	インドメタシン	インドメタシン	速度增强剂	速度增強劑
+0155-0001|data.Desc		A drink that permanently raises the Pokémon's Speed.	Une boisson très nutritive qui augmente la Vitesse de base d’un Pokémon.	Ein gehaltvolles Getränk, das den Initiative-Basiswert eines Pokémon dauerhaft erhöht.	Nutritiva bebida que potencia la Velocidad de base de un Pokémon.		Bevanda nutriente per Pokémon. Aumenta i punti base della Velocità.	마시는 포켓몬의 스피드를 영구적으로 올린다.	ポケモンの　えいようドリンク。 ポケモン　１ひきの　すばやさの きそポイントを　あげる。	ポケモンの　栄養ドリンク。 ポケモン　１匹の　素早さの 基礎ポイントを　あげる。	宝可梦的营养饮料。 能提高１只宝可梦的 速度的基础点数。	寶可夢的營養飲料。 能提高１隻寶可夢的 速度的基礎點數。
+0156-0000|data.Name		HP Up	PV Plus	KP-Plus	Más PS		PS-Su	맥스업	マックスアップ	マックスアップ	ＨＰ增强剂	ＨＰ增強劑
+0156-0001|data.Desc		A drink that permanently raises the Pokémon's Maximum HP.	Une boisson très nutritive qui augmente les PV de base d’un Pokémon.	Ein gehaltvolles Getränk, das den KP-Basiswert eines Pokémon dauerhaft erhöht.	Nutritiva bebida que potencia los PS de base de un Pokémon.		Bevanda nutriente per Pokémon. Aumenta i punti base dei PS.	마시는 포켓몬의 체력을 영구적으로 올린다.	ポケモンの　えいようドリンク。 ポケモン　１ひきの　ＨＰの きそポイントを　あげる。	ポケモンの　栄養ドリンク。 ポケモン　１匹の　ＨＰの 基礎ポイントを　あげる。	宝可梦的营养饮料。 能提高１只宝可梦的 ＨＰ的基础点数。	寶可夢的營養飲料。 能提高１隻寶可夢的 ＨＰ的基礎點數。
+0158-0000|data.Name		Amber Tear	Larme Ambrée	Amberträne				등색의눈물				
+0158-0001|data.Desc	Imply that it raises recruitment rate of wild Pokemon that drink it, if possible.	An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises the Pokémon's chances of recruitment on the floor it's used.	Un liquide ambré qui scintille de mille feu, on dit que le plus précieux de tout les trésors. Augmente les chances du porteur de recruter des Pokémon dans l'équipe.	Eine bernsteinfarbige Träne. Gerüchten nach soll es das Wertvollste aller seltenen Schätze sein. Sie erhöht auf der Ebene auf der sie verwendet wird die Chance wilde Pokémon zu rekrutieren.				호박과도 같은 투명한 빛깔의 반짝이는 액체. 귀중한 보물 중에서도 보물이라는 소문이다. 야생의 포켓몬이 마시게 되면 마음이 누그러질지도 모른다.				
+0160-0000|data.Name		Potion	Potion	Trank	Poción		Pozione	상처약	キズぐすり	キズぐすり	伤药	傷藥
+0160-0001|data.Desc		A spray-type medicine that somewhat restores HP. It affects all team members up to 5 tiles away.										
+0161-0000|data.Name		Max Potion	Potion Max	Top-Trank	Poción Máxima		Pozione Max	풀회복약	まんたんのくすり	まんたんのくすり	全满药	全滿藥													
+0161-0001|data.Desc		A spray-type medicine that fully restores HP. It affects all team members up to 3 tiles away.										
+0164-0000|data.Name		Elixir	Élixir	Elixier	Elixir		Elisir	PP에이더	ピーピーエイダー	ピーピーエイダー	ＰＰ多项小补剂	ＰＰ多項小補劑													
+0164-0001|data.Desc		A spray-type medicine that somewhat restores PP. It affects all team members up to 5 tiles away.										
+0166-0000|data.Name		Max Elixir	Max Élixir	Top-Elixier	Elixir Máximo		Elisir Max	PP맥스	ピーピーマックス	ピーピーマックス	ＰＰ多项全补剂	ＰＰ多項全補劑													
+0166-0001|data.Desc		A spray-type medicine that completely restores PP. It affects all team members up to 3 tiles away.										
+0173-0000|data.Name		Full Heal	Total Soin	Hyperheiler	Cura Total		Cura Totale	만병통치제	なんでもなおし	なんでもなおし	万灵药	萬靈藥
+0173-0001|data.Desc		A spray-type medicine that cures status problems. It affects all team members up to 3 tiles away.										
+0174-0000|data.Name		Full Restore	Guérison	Top-Genesung	Restaurar Todo		Ricarica Totale	회복약	かいふくのくすり	かいふくのくすり	全复药	全復藥
+0174-0001|data.Desc												
+0175-0000|data.Name		X Attack	Attaque +	X-Angriff	Ataque X		Attacco X	플러스파워	プラスパワー	プラスパワー	力量强化	力量強化
+0175-0001|data.Desc		An item that sharply raises Attack. It affects all team members up to 3 tiles away.	Un objet qui augmente drastiquement l' Attaque. Affecte les membres de l'équipe sur une portée de 3 cases.	Ein Item, das den Angriff stark erhöht. Es wirkt auf Teammitglieder im Umkreis von 3 Feldern.				공격을 크게 올리는 도구. 3칸 범위 내의 모든 동료가 영향받는다.				
+0176-0000|data.Name		X Defense	Défense +	X-Abwehr	Defensa X		Difesa X	디펜드업	ディフェンダー	ディフェンダー	防御强化	防禦強化
+0176-0001|data.Desc		An item that sharply raises Defense. It affects all team members up to 3 tiles away.	Un objet qui augmente drastiquement la Défense. Affecte les membres de l'équipe sur une portée de 3 cases.	Ein Item, das die Abwehr stark erhöht. Es wirkt auf Teammitglieder im Umkreis von 3 Feldern.				방어를 크게 올리는 도구. 3칸 범위 내의 모든 동료가 영향받는다.				
+0177-0000|data.Name		X Sp. Atk	Special +	X-Spezial	Especial X		Special X	스페셜업	スペシャルアップ	スペシャルアップ	特攻强化	特攻強化
+0177-0001|data.Desc		An item that sharply raises Special Attack. It affects all team members up to 3 tiles away.	Un objet qui augmente drastiquement l' Attaque Sp. Affecte les membres de l'équipe sur une portée de 3 cases.	Ein Item, das den Spezial-Angriff stark erhöht. Es wirkt auf Teammitglieder im Umkreis von 3 Feldern.				특수공격을 크게 올리는 도구. 3칸 범위 내의 모든 동료가 영향받는다.				
+0178-0000|data.Name		X Sp. Def	Déf. Spé. +	X-SpezialVer	Def. Especial X		Dif. Speciale X	스페셜가드	スペシャルガード	スペシャルガード	特防强化	特防強化
+0178-0001|data.Desc		An item that sharply raises Special Defense. It affects all team members up to 3 tiles away.	Un objet qui augmente drastiquement la Défense Sp. Affecte les membres de l'équipe sur une portée de 3 cases.	Ein Item, das die Spezial-Verteidigung stark erhöht. Es wirkt auf Teammitglieder im Umkreis von 3 Feldern.				특수방어를 크게 올리는 도구. 3칸 범위 내의 모든 동료가 영향받는다.				
+0179-0000|data.Name		X Speed	Vitesse +	X-Tempo	Velocidad X		Velocità X	스피드업	スピーダー	スピーダー	速度强化	速度強化
+0179-0001|data.Desc		An item that boosts Movement Speed by 1 stage. It affects all team members up to 3 tiles away.	Un objet qui augmente la vitesse de 1 point. Affecte les membres de l'équipe sur une portée de 3 cases.	Ein Item, das die Bewegungsgeschwindigkeit um 1 erhöht. Es wirkt auf Teammitglieder im Umkreis von 3 Feldern.				행동속도를 1단계 올리는 도구. 3칸 범위 내의 모든 동료가 영향받는다.				
+0180-0000|data.Name		X Accuracy	Précision +	X-Treffer	Precisión X		Precisione X	잘-맞히기	ヨクアタール	ヨクアタール	命中强化	命中強化
+0180-0001|data.Desc		An item that sharply raises Accuracy. It affects all team members up to 3 tiles away.	Un objet qui augmente drastiquement la Précision. Affecte les membres de l'équipe sur une portée de 3 cases.	Ein Item, das die Genauigkeit stark erhöht. Es wirkt auf Teammitglieder im Umkreis von 3 Feldern.				명중률을 크게 올리는 도구. 3칸 범위 내의 모든 동료가 영향받는다.				
+0181-0000|data.Name		Dire Hit	Muscle +	Angriffplus	Directo		Supercolpo	크리티컬커터	クリティカット	クリティカット	要害攻击	要害攻擊
+0181-0001|data.Desc		An item that raises critical-hit ratio. It affects all team members up to 3 tiles away.	Un objet qui augmente le taux de coups critiques. Affecte les membres de l'équipe sur une portée de 3 cases.	Ein Item, das die kritische Trefferchance stark erhöht. Es wirkt auf Teammitglieder im Umkreis von 3 Feldern.				치명타율을 크게 올리는 도구. 3칸 범위 내의 모든 동료가 영향받는다.				
+0182-0000|data.Name		Guard Spec.	Défense Spéciale	Megablock	Protec. Especial		Superguardia	이펙트가드	エフェクトガード	エフェクトガード	能力防守	能力防守
+0182-0001|data.Desc												
+0183-0000|data.Name		Mental Herb	Herbe Mental	Mentalkraut	Hierba Mental		Mentalerba	멘탈허브	メンタルハーブ	メンタルハーブ	心灵香草	心靈香草
+0183-0001|data.Desc		An herb that removes all move-binding effects, and prevents moves from being sealed.		Ein Kraut, welches alle Attacken versiegelnde Effekte aufhebt und verhindert				기술을 봉인하는 효과를 모두 무효화하고, 기술봉인을 방지하는 허브.				
+0184-0000|data.Name		Power Herb	Herbe Pouvoir	Energiekraut	Hierba Única		Vigorerba	파워풀허브	パワフルハーブ	パワフルハーブ	强力香草	強力香草
+0184-0001|data.Desc		An herb that allows the use of two-turn attacks in one turn, and prevents PP from dropping.	Une plante qui permet d'utiliser directement une capacité nécessitant normalement 2 tours et empêche les PP de baisser.	Ein Kraut, das einem die sofortige Verwendung von Attacken erlaubt, die normalerweise zwei Züge zum Ausführen brauchen. Erlaubt ebenfalls Attacken ohne AP-Verbrauch anzuwenden.				사용하는 데 두 턴이 걸리는 기술을 1턴째에 사용할 수 있게 하고, PP가 떨어지는 걸 방지하는 허브.				
+0185-0000|data.Name		White Herb	Herbe Blanche	Schlohkraut	Hierba Blanca		Erbachiara	하양허브	しろいハーブ	しろいハーブ	白色香草	白色香草
+0185-0001|data.Desc		An herb that removes all stat changes, and prevents them from changing.										
+0200-0000|data.Name		Stick	Bâton	Stock				나뭇가지				
+0200-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. Critical hits land more easily.	Objet à lancer qui inflige des dégâts et baisse l'Attaque du Pokémon qu'il touche. Taux de coups critiques élevé.	Eine Wurfwaffe. Fliegt in einer graden Linie und fügt Schaden zu. Kritische Trefferchance ist höher.				던지는 무기. 직선으로 날아가 맞는 포켓몬에게 데미지를 입힌다. 급소에 맞기 쉽다.				
+0201-0000|data.Name		Cacnea Spike	Cacnepic	Tuskadorn				선인왕가시				
+0201-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage and may lower the Attack of any Pokémon it hits.	Objet à lancer qui inflige des dégâts et baisse l'Attaque du Pokémon qu'il touche.	Eine Wurfwaffe. Fliegt in einer graden Linie und fügt Schaden zu. Kann beim Treffer den Angriff verringern.				던지는 무기. 직선으로 날아가 맞는 포켓몬에게 데미지를 입히며, 추가로 공격을 낮출 수도 있다.				
+0202-0000|data.Name		Corsola Twig	Corapic	Corasonnast				코산호가시				
+0202-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage and may lower the Sp.Atk of any Pokémon it hits.	Objet à lancer qui inflige des dégâts et baisse l'Attaque Sp du Pokémon qu'il touche.	Eine Wurfwaffe. Fliegt in einer graden Linie und fügt Schaden zu. Kann beim Treffer den Spezial-Angriff verringern.				던지는 무기. 직선으로 날아가 맞는 포켓몬에게 데미지를 입히며, 추가로 특수공격을 낮출 수도 있다.				
+0203-0000|data.Name		Iron Thorn	Epine de Fer	Eisendorn				철가시				
+0203-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict heavy damage on any Pokémon it hits.	Objet à lancer qui inflige des dégâts au Pokémon qu'il touche.	Eine Wurfwaffe. Fliegt in einer graden Linie und fügt schweren Schaden zu.				던지는 무기. 직선으로 날아가 맞는 포켓몬에게 큰 데미지를 입힌다.				
+0204-0000|data.Name		Silver Spike	Pic d'Argent	Silberdorn				은바늘				
+0204-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage to any Pokémon it hits, passing through walls.	Objet à lancer qui inflige des dégâts au Pokémon qu'il touche. Passe à travers les murs.	Eine Wurfwaffe. Fliegt in einer graden Linie und fügt Schaden zu. Durchdringt Wände.				던지는 무기. 벽을 관통하며 직선으로 날아가 맞는 포켓몬에게 데미지를 입힌다.				
+0205-0000|data.Name		Golden Thorn	Epine d'Or	Golddorn				황금가시				
+0205-0001|data.Desc		A brilliantly shining thorn crafted from solid gold. It is a fantastically precious item that gives its owner serious bragging rights. When hurled, it flies in a straight line to inflict damage on any Pokémon it hits, scattering coins everywhere.	Epine en or massif brillant d'un vif éclat. Il s'agit d'un objet très précieux qui suscite une immense fierté chez son détenteur. Projetée, elle file en ligne droite et inflige des dégâts au Pokémon qu'elle touche. Dépose des Poké sur le sol.	Ein brilliant scheinender Dorn, welcher aus festem Gold hergestellt wurde. Es ist ein fantastisch kostbares Item, mit dem der Besitzer das Recht hat anzugeben. Wenn dieser geworfen wird, fliegt er in einer geraden Linie, fügt jedem getroffenen Pokémon Schaden zu und verstreut überall Münzen.				순금으로 조각한 훌륭히 빛나는 가시. 기가 막히게 귀중한 도구이기에 곳곳에 자랑하는 것도 좋을 것이다. 던지면 직선으로 날아가 맞는 포켓몬에게 데미지를 입히고, 동전이 마구 떨어져나온다.				
+0206-0000|data.Name		Rare Fossil	Fossile Rare	Rares Fossil				태고화석				
+0206-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target's area. It deals Special damage.	Fossile merveilleux semblant irradier une énergie préhistorique. C'est aussi une arme à lancer dont la trajectoire décrit un arc de cercle pour éviter les obstacles et toucher sa cible. Dégât basés sur l'Attaque Sp.	Wurfwaffe die im hohen Bogen geworfen wird um Hindernisse zu umgehen und den Zielbereich zu treffen. Fügt speziellen Schaden zu.				던지는 무기. 높은 포물선을 그리며 날아가 대상의 주변을 맞춘다. 특수데미지를 입힌다.				
+0207-0000|data.Name		Geo Pebble	Racaillasse	Kleinkiesel				돌멩이				
+0207-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target.	Objet à lancer dont la trajectoire décrit une courbe par-dessus les obstacles pour toucher la cible.	Wurfwaffe die im hohen Bogen geworfen wird um Hindernisse zu umgehen und das Ziel direkt zu treffen.				던지는 무기. 높은 포물선을 그리며 날아가 대상을 맞춘다.				
+0208-0000|data.Name		Gravelerock	Gravalroche	Georokbrock				데구리돌				
+0208-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target's area.	Objet à lancer dont la trajectoire décrit une courbe par-dessus les obstacles pour toucher la cible.	Wurfwaffe die im hohen Bogen geworfen wird um Hindernisse zu umgehen und den Zielbereich zu treffen.				던지는 무기. 높은 포물선을 그리며 날아가 대상의 주변을 맞춘다.				
+0209-0000|data.Name		Big Apricorn													
+0209-0001|data.Desc		An apricorn with a pleasant scent. It can tossed at wild Pokémon as a gift for a high chance to recruit them into the team.													
+0210-0000|data.Name		Plain Apricorn	Noigrume Simple	Aprikoko				보통규토리				
+0210-0001|data.Desc		An apricorn with a pleasant scent. It can tossed at wild Pokémon of any type, as a gift to recruit them into the team.	Un Noigrume à l'odeur agréable. Il peut être lancé sur un Pokémon comme cadeau l'invitant à rejoindre l'équipe.	Eine wohlriechende Aprikoko. Sie kann als Geschenk auf jeden Typ von Pokémon geworfen werden um es ins Team einzuladen.				향긋한 큐토리. 아무 타입의 야생포켓몬에게 선물로 던져, 동료로 영입할 수 있다.				
+0211-0000|data.Name		Blue Apricorn	Noigrume Bleu	Blaue Aprikoko				파란규토리				
+0211-0001|data.Desc		An apricorn that can be tossed at Water- or Ice-type Pokémon as a gift for a high chance to recruit them into the team.	Un Noigrume qui peut être lancé à un Pokémon de type Eau ou Glace comme cadeau l'invitant à rejoindre l'équipe. Taux de réussite élevé.	Eine Aprikoko, die geworfen wird um ein Pokémon ins Team einzuladen. Es besteht eine besonders große Chance auf Rekrutierung von Pokémon der Typen Wasser und Eis.				물타입 또는 얼음타입의 야생포켓몬에게 선물로 던져, 높은 확률로 동료로 영입할 수 있다.				
+0212-0000|data.Name		Green Apricorn	Noigrume Vert	Grüne Aprikoko				초록규토리				
+0212-0001|data.Desc		An apricorn that can be tossed at Grass- or Bug-type Pokémon as a gift for a high chance to recruit them into the team.		Eine Aprikoko, die geworfen wird um ein Pokémon ins Team einzuladen. Es besteht eine besonders große Chance auf Rekrutierung von Pokémon der Typen Pflanze und Käfer.								
+0213-0000|data.Name		Brown Apricorn	Noigrume Marron	Braune Aprikoko				갈색규토리				
+0213-0001|data.Desc		An apricorn that can be tossed at Fighting-, Rock-, or Ground-type Pokémon as a gift for a high chance to recruit them into the team.	Un Noigrume qui peut être lancé à un Pokémon de type Combat, Roche ou Sol comme cadeau l'invitant à rejoindre l'équipe. Taux de réussite élevé.	Eine Aprikoko, die geworfen wird um ein Pokémon ins Team einzuladen. Es besteht eine besonders große Chance auf Rekrutierung von Pokémon der Typen Kampf, Gestein und Boden.				격투타입, 바위타입, 땅타입 야생포켓몬에게 선물로 던져, 높은 확률로 동료로 영입할 수 있다.				
+0214-0000|data.Name		Purple Apricorn	Noigrume Mauve	Lilane Aprikoko				보라규토리				
+0214-0001|data.Desc		An apricorn that can be tossed at Poison- or Psychic-type Pokémon as a gift for a high chance to recruit them into the team.		Eine Aprikoko, die geworfen wird um ein Pokémon ins Team einzuladen. Es besteht eine besonders große Chance auf Rekrutierung von Pokémon der Typen Gift und Psycho.								
+0215-0000|data.Name		Red Apricorn	Noigrume Rouge	Rote Aprikoko				빨간규토리				
+0215-0001|data.Desc		An apricorn that can be tossed at Fire- or Dragon-type Pokémon as a gift for a high chance to recruit them into the team.	Un Noigrume qui peut être lancé à un Pokémon de type Feu ou Dragon comme cadeau l'invitant à rejoindre l'équipe. Taux de réussite élevé.	Eine Aprikoko, die geworfen wird um ein Pokémon ins Team einzuladen. Es besteht eine besonders große Chance auf Rekrutierung von Pokémon der Typen Feuer und Drache.				불타입 또는 드래곤타입 야생포켓몬에게 선물로 던져, 높은 확률로 동료로 영입할 수 있다.				
+0216-0000|data.Name		White Apricorn	Noigrume Blanc	Weiße Aprikoko				하얀규토리				
+0216-0001|data.Desc		An apricorn that can be tossed at Normal-, Flying-, or Fairy-type Pokémon as a gift for a high chance to recruit them into the team.	An Noigrume that can be tossed at Normal-, Flying-, or Fairy-type Pokémon as a gift for a high chance to recruit them into the team.	Eine Aprikoko, die geworfen wird um ein Pokémon ins Team einzuladen. Es besteht eine besonders große Chance auf Rekrutierung von Pokémon der Typen Normal, Flug und Fee.				노멀타입, 비행타입, 페어리타입 야생포켓몬에게 선물로 던져, 높은 확률로 동료로 영입할 수 있다.				
+0217-0000|data.Name		Yellow Apricorn	Noigrume Jaune	Gelbe Aprikoko				노랑규토리				
+0217-0001|data.Desc		An apricorn that can be tossed at Electric- or Steel-type Pokémon as a gift for a high chance to recruit them into the team.	Un Noigrume qui peut être lancé à un Pokémon de type Électrick ou Acier comme cadeau, l'invitant à rejoindre l'équipe. Taux de réussite élevé.	Eine Aprikoko, die geworfen wird um ein Pokémon ins Team einzuladen. Es besteht eine besonders große Chance auf Rekrutierung von Pokémon der Typen Elektro und Stahl.				전기타입 또는 강철타입 야생포켓몬에게 선물로 던져, 높은 확률로 동료로 영입할 수 있다.				
+0218-0000|data.Name		Black Apricorn													
+0218-0001|data.Desc		An apricorn that can be tossed at Ghost- or Dark-type Pokémon as a gift for a high chance to recruit them into the team.													
+0219-0000|data.Name		Perfect Apricorn	Noigrume Parfaite	Perfekte Aprikoko				완벽규토리				
+0219-0001|data.Desc		A beautiful apricorn with an indescribable scent. It can be tossed at wild Pokémon as a gift to recruit them into the team without any hesitation.	Un Noigrume magnifique à l'odeur indescriptible. Hors de question de le donner! Mais si cela arrivait le Pokémon honoré rejoindrait immédiatement l'équipe.	Diese Aprikoko hat einen unbeschreiblichen Geruch. Sie kann auf wilde Pokémon geworfen werden um sie ohne Zweifel ins Team zu rekrutieren.				이루 말할 수 없는 향의 아름다운 규토리. 야생포켓몬에게 선물로 던지면 주저없이 동료가 되어줄 것이다.				
+0220-0000|data.Name		Path Wand		Pfadzweig				길의지팡이				
+0220-0001|data.Desc		A wand to be waved at terrain features. It clears obstacles to form a path directly in front of the user.		Ein Zweig, der gegen Geländeeigenschaften geschwungen werden kann. Es entfernt Hindernisse, um dadurch einen Pfad direkt vor dem Nutzer zu formen.				지형을 향해 휘두르면 장애물을 제거해 사용자 앞에 길을 만든다.				
+0221-0000|data.Name		Pounce Wand		Wuchtzweig				바운스지팡이				
+0221-0001|data.Desc		A wand to be waved at a Pokémon or wall. It causes the user to jump to that location.		Ein Zweig, der gegen Pokémon oder Wände geschwungen werden kann. Der Nutzer springt an die getroffene Position.				포켓몬이나 벽을 향해 휘두르면 그 위치로 뛰게 된다.				
+0222-0000|data.Name		Whirlwind Wand		Wirbelzweig				돌풍지팡이				
+0222-0001|data.Desc		A wand to be waved at a Pokémon. It knocks the target back.		Ein Zweig, der gegen Pokémon geschwungen werden kann. Er schlägt das Ziel zurück.				포켓몬에게 휘두르면 멀리 날려보낸다.				
+0223-0000|data.Name		Switcher Wand		Wechselzweig				뒤바꿈지팡이				
+0223-0001|data.Desc		A wand to be waved at a Pokémon. It causes the user to switch places with the target.		Ein Zweig, der gegen Pokémon geschwungen werden kann. Der Nutzer tauscht den Platz mit seinem Ziel.				포켓몬에게 휘두르면 사용자와 위치를 뒤바꾸게 된다.				
+0224-0000|data.Name		Surround Wand		Umzingelzweig				포위지팡이				
+0224-0001|data.Desc		A wand to be waved at a Pokémon. It causes the user's allies to warp to the target.		Ein Zweig, der gegen Pokémon geschwungen werden kann. Die Verbündeten des Nutzers werden zum Ziel teleportiert.				포켓몬에게 휘두르면 사용자의 동료 포켓몬이 순간이동해 포위하게 된다.				
+0225-0000|data.Name		Lure Wand		Lockzweig				유인지팡이				
+0225-0001|data.Desc		A wand to be waved at a Pokémon. It causes the target to warp in front of the user.		Ein Zweig, der gegen Pokémon geschwungen werden kann. Er teleportiert das Ziel direkt vor dem Nutzer.				포켓몬에게 휘두르면 사용자 앞으로 순간이동하게 된다.				
+0226-0000|data.Name		Slow Wand		Reduzierzweig				느림보지팡이				
+0226-0001|data.Desc		A wand to be waved at a Pokémon. It reduces the Movement Speed of the target by 1 level.		Ein Zweig, der gegen Pokémon geschwungen werden kann. Er reduziert das Tempo des Ziels um 1.				포켓몬에게 휘두르면 행동속도가 1랭크 감소한다.				
+0227-0000|data.Name		Stayaway Wand		Wandelzweig				저리가지팡이				
+0227-0001|data.Desc		A wand to be waved at enemy Pokémon. It warps the target to the nearest stairway, and puts it into a deep sleep.		Ein Zweig, der gegen gegnerische Pokémon geschwungen werden kann. Er teleportiert das Ziel zur nächstgelegenen Treppe und lässt es in einen tiefen Schlaf fallen.				적 포켓몬에게 휘두르면 가장 가까이 있는 계단으로 순간이동시킨 뒤, 깊은 잠에 빠지게 한다.				
+0228-0000|data.Name		Fear Wand		Angstzweig				깜짝지팡이				
+0228-0001|data.Desc		A wand to be waved at a Pokémon. It causes the target to flinch.		Ein Zweig, der gegen Pokémon geschwungen werden kann. Er lässt das Ziel zurückschrecken.				포켓몬에게 휘두르면 풀죽게 된다.				
+0229-0000|data.Name		Totter Wand		Konfusionszweig				혼란지팡이				
+0229-0001|data.Desc		A wand to be waved at a Pokémon. It causes the target to become briefly confused.		Ein Zweig, der gegen Pokémon geschwungen werden kann. Das Ziel wird für kurze Zeit verwirrt.				포켓몬에게 휘두르면 잠깐동안 혼란에 빠지게 된다.				
+0230-0000|data.Name		Infatuation Wand		Anziehungszweig				헤롱지팡이				
+0230-0001|data.Desc		A wand to be waved at Pokémon of the opposite gender. It causes the target to become attracted to the user.		Ein Zweig, der gegen Pokémon des anderen Geschlechtes geschwungen werden kann. Das Ziel vernarrt sich in den Nutzer.				다른 성별의 포켓몬에게 휘두르면 사용자에 대한 사랑에 빠지게 된다.				
+0231-0000|data.Name		Topsy-Turvy Wand		Invertigozweig				뒤죽박죽지팡이				
+0231-0001|data.Desc		A wand to be waved at a Pokémon. It reverses all stat changes on the target.		Ein Zweig, der gegen Pokémon geschwungen werden kann. Er kehrt alle Statuswertveränderungen des Zieles um.				포켓몬에게 휘두르면 모든 스탯 변화가 반전된다.				
+0232-0000|data.Name		Warp Wand		Warpzweig				워프지팡이				
+0232-0001|data.Desc		A wand to be waved at a Pokémon. It warps the target to a different place on the floor.		Ein Zweig, der gegen Pokémon geschwungen werden kann. Er teleportiert das Ziel zu einem anderen Platz auf der momentanen Ebene.				포켓몬에게 휘두르면 층의 다른 위치로 순간이동한다.				
+0233-0000|data.Name		Purge Wand		Reinigungszweig				말끔지팡이				
+0233-0001|data.Desc		A wand to be waved at a Pokémon. It removes all stat boosts and damages the target for each stat boosted. Stat drops will heal the target instead.		Ein Zweig, der gegen Pokémon geschwungen werden kann. Er entfernt alle Statuswertverbesserungen und schadet dem Ziel für jede Wertverbesserung. Wertsenkungen hingegen heilen das Ziel.				포켓몬에게 휘두르면 모든 스탯 변화가 사라지며, 증가했던 스탯이 사라지면 데미지를 입게 된다. 하락했던 스탯이 사라지면 대신 체력이 회복된다.				
+0234-0000|data.Name		Lob Wand		Lobzweig				발사지팡이				
+0234-0001|data.Desc		A wand to be waved at a Pokémon. It inflicts damage on any Pokémon in a straight line, passing through walls.		Ein Zweig, der gegen Pokémon geschwungen werden kann. Er verursacht jedem Pokémon in einer geraden Linie Schaden. Er kann ebenfalls durch Wände gehen.				포켓몬에게 휘두르면 벽을 관통하며 직선상에 있는 모든 포켓몬에게 데미지를 입힌다.				
+0235-0000|data.Name		Transfer Wand										
+0235-0001|data.Desc		A wand to be waved at a Pokémon. It transforms the target into the same Pokémon as the user.										
+0236-0000|data.Name		Vanish Wand										
+0236-0001|data.Desc		A wand to be waved at a Pokémon. It temporarily makes the target invisible.										
+0250-0000|data.Name		Escape Orb	Echaporbe	Fliehorb				던전탈출구슬				
+0250-0001|data.Desc		An orb that allows the team to instantly warp out of the dungeon.	Permet à l'équipe de secours de s'échapper du donjon.	Ein Orb, welcher das Team aus dem Dungeon teleportiert.				팀을 즉시 던전에서 순간이동해 나갈 수 있게 해준다.				
+0251-0000|data.Name		Weather Orb	Météorbe	Wetterorb				기후조절구슬				
+0251-0001|data.Desc		A climate-control orb that changes the dungeon floor's condition depending on the user's type.	Un orbe météorologique qui change le climat de l'étage en fonction du type du Pokémon qui l'active.	Ein klimawechselnder Orb, welcher das Wetter der momentanen Dungeon-Ebene beeinflusst. Das Wetter ist dabei abhängig vom Typen des Nutzers.				사용자의 타입에 따라 그 층의 날씨를 변화시킨다.				
+0252-0000|data.Name		Mobile Orb	Passmurorbe	Mobilorb				통과구슬				
+0252-0001|data.Desc		An orb that allows the user's team to move through walls.	Permet à l'équipe de traverser les murs.	Ein Orb, welcher dem Team des Nutzers ermöglicht, durch Wände zu laufen.				아군이 벽을 통과할 수 있게 된다.				
+0253-0000|data.Name		Luminous Orb	Lumiorbe	Strahlorb				빛의구슬				
+0253-0001|data.Desc		A mapping orb that reveals the entire floor.	Révèle l'étage entier au lanceur.	Ein kartierter Orb, welcher die gesamte Dungeon-Ebene anzeigt.				층 전체의 지도를 보이게 하는 구슬.				
+0254-0000|data.Name		Invert Orb		Umkehrorb				트릭구슬				
+0254-0001|data.Desc		An orb that temporarily reverses all type matchups.		Ein Orb, der temporär alle Typ Vor- und Nachteile umkehrt.				잠깐동안 모든 타입 상성을 반전시킨다.				
+0255-0000|data.Name		Invisify Orb	Invisiblorbe	Unsichtorb				투명화구슬				
+0255-0001|data.Desc		An orb that temporarily makes the user's team invisible.										
+0256-0000|data.Name		Fill-In Orb	Solidifiorbe	Füllorb				채움구슬				
+0256-0001|data.Desc		An orb that fills in all holes on the floor, removing all gullies, water, or lava.	Solidifie l'eau ou le magma et comble le vide dans tout l'étage.	Ein Orb, welcher alle Löcher in der Ebene füllt. Dabei werden Löcher, Wasser und Lava entfernt.				층의 구덩이, 물, 용암이 있는 공간을 모두 채워넣어 사라지게 한다.				
+0257-0000|data.Name		Devolve Orb	Rembobinorbe	Rückspulorb				퇴화구슬				
+0257-0001|data.Desc		An orb that devolves all enemies up to 5 tiles away.	Un orbe qui dé-évolue tout les ennemis sur un rayon de 5 cases.	Ein Orb, welcher alle Gegner in 5 Felder Entfernung zurückentwickelt.				5칸 범위 내의 적을 모두 퇴화시킨다.				
+0258-0000|data.Name		All-Aim Orb	Visorbe Tous	Trefferorb				모두조준구슬				
+0258-0001|data.Desc		An orb that ensures that all of the team's attacks hit.	Un orbe qui permet à l'équipe de toucher à coup sûr.	Ein Orb, welcher das Treffen von Attacken des Teams garantiert.				모든 동료들의 공격이 빗나가지 않게 하는 구슬.				
+0259-0000|data.Name		Trawl Orb	Aspirorbe	Sogorb				끌어당김구슬				
+0259-0001|data.Desc		An orb that pulls unclaimed items on the floor to the user.	Tous les objets au sol sont attirés par le lanceur.	Ein Orb, welcher alle herrenlosen Items auf der Ebene zum Nutzer zieht.				층의 주인 없는 도구를 모두 사용자에게 끌어당긴다.				
+0260-0000|data.Name		Revival Orb	Résurectorbe	Team-Beleberorb				부활구슬				
+0260-0001|data.Desc		An orb that revives all team members that have fainted.	Un orbe qui ranime tout les membres de l'équipe.	Ein Orb, welcher alle kampfunfähigen Mitstreiter wiederbelebt.				기절한 모든 동료를 부활시킨다.				
+0261-0000|data.Name		Scanner Orb	Révélorbe	Scannerorb				스캔구슬				
+0261-0001|data.Desc												
+0262-0000|data.Name		All-Hit Orb	Concentrorbe	Zielorb				모두히트구슬				
+0262-0001|data.Desc												
+0263-0000|data.Name		Cleanse Orb	Nettoyorbe	Sterilorb				깨끗구슬				
+0263-0001|data.Desc		An orb that un-sticks the team's items, allowing them to be removed.	Les objets collants sont nettoyés et sont de nouveau utilisables.	Ein Orb, welcher klebrige Items des Teams sauber macht, wodurch diese abgelegt werden können.				동료의 도구의 끈적임을 없애서 버릴 수 있게 해준다.				
+0264-0000|data.Name		One-Shot Orb	Fulgurorbe	Einmal-Orb				일격의구슬				
+0264-0001|data.Desc		An orb that causes the target to instantly faint, if it hits. It affects all enemies up to 5 tiles away.		Ein Orb, welcher das gegnerische Pokémon auf der Stelle besiegt, falls es trifft. Es betrifft alle Gegner, die 5 Felder vom Nutzer entfernt sind.				맞은 대상은 즉시 기절하지만, 맞추기 어렵다. 5칸 범위내의 모든 적 포켓몬을 대상으로 한다.				
+0265-0000|data.Name		Endure Orb		Ausdauerorb				기합의구슬				
+0265-0001|data.Desc		An orb that allows the team to endure any attack with at least 1 HP.		Ein Orb, welcher dem Team erlaubt, jede Attacke mit 1 KP auszuhalten.				동료 전원이 공격을 받았을 때 HP를 최소한 1 남기고 버티게 해준다.				
+0266-0000|data.Name		Pierce Orb	Perçorbe	Perforierorb				관통구슬				
+0266-0001|data.Desc		An orb that allows the team's attacks and items to pierce through multiple targets.	Un orbe qui permet aux attaques et aux objets lancés par l'équipe de traverser plusieurs cibles.	Ein Orb, welcher erlaubt, dass Attacken des Teams und Items durch mehrere Ziele durchdringen.				동료의 기술과 도구가 여러 대상을 관통할 수 있게 된다.				
+0267-0000|data.Name		Stayaway Orb	Envoûtorbe	Wandelorb				저리가구슬				
+0267-0001|data.Desc		An orb that warps enemies to the nearest stairway, and puts them all into a deep sleep. It affects all enemies up to 5 tiles away.	Un orbe qui téléporte les ennemis près des escaliers et les plongent dans un sommeil profond. Affecte tout les ennemis dans un rayon de 5 cases.	Ein Orb, welcher Gegner zur nächstgelegenen Treppe teleportiert und diese in einen tiefen Schlaf versetzt. Es betrifft alle Gegner in 5 Felder Entfernung.				5칸 범위 내의 적을 가장 근처의 계단으로 순간이동시킨뒤, 깊은 잠에 빠지게 한다.				
+0268-0000|data.Name		All Protect Orb	Invinçorbe Tous	Allmachtorb				모두보호구슬				
+0268-0001|data.Desc		An orb that protects the team from all attacks for several turns.	Un orbe qui protège l'équipe de toute les attaques pendant plusieurs tours.	Ein Orb, welcher das Team für einige Züge vor allen Angriffen schützt.				동료 전원을 모든 공격으로부터 수 턴동안 보호한다.				
+0269-0000|data.Name		Trap-See Orb	Détectorbe	Seherorb				함정보임구슬				
+0269-0001|data.Desc		An orb that reveals all traps on the floor.	Révèle tous les pièges cachés de l'étage.	Ein Orb, welcher alle Fallen auf der Ebene aufdeckt.				층에 있는 모든 함정이 보이게 된다.				
+0270-0000|data.Name		Trapbust Orb	Désamorbe	Annulierorb				함정파괴구슬				
+0270-0001|data.Desc		An orb that destroys all traps on the floor.	Détruit tout les pièges de l'étage.	Ein Orb, welcher alle Fallen auf der Ebene zerstört.				층에 있는 모든 함정을 파괴한다.				
+0271-0000|data.Name		Slumber Orb	Roupillorbe	Schlaforb				잠들기구슬				
+0271-0001|data.Desc		An orb that puts all enemies to sleep. It affects all enemies up to 5 tiles away.		Ein Orb, welcher alle Gegner in Schlaf versetzt. Es betrifft alle Gegner in 5 Felder Entfernung.				5칸 범위 내의 모든 적 포켓몬을 잠들게 한다.				
+0272-0000|data.Name		Totter Orb	Foliorbe	Wirrorb				비틀비틀구슬				
+0272-0001|data.Desc		An orb that confuses all enemies. It affects all enemies up to 5 tiles away.		Ein Orb, welcher alle Gegner verwirrt. Es betrifft alle Gegner in 5 Felder Entfernung.				5칸 범위 내의 모든 포켓몬을 혼란에 빠지게 한다.				
+0273-0000|data.Name		Petrify Orb	Pétrifiorbe	Erstarrorb				묶어둠구슬				
+0273-0001|data.Desc		An orb that paralyzes all enemies. It affects all enemies up to 5 tiles away.		Ein Orb, welcher alle Gegner paralysiert. Es betrifft alle Gegner in 5 Felder Entfernung.				5칸 범위 내의 모든 포켓몬을 경직 상태로 만든다.				
+0274-0000|data.Name		Freeze Orb	Blizzorbe	Frierorb				빙결구슬				
+0274-0001|data.Desc		An orb that freezes all enemies. It affects all enemies up to 5 tiles away.		Ein Orb, welcher alle Gegner einfriert. Es betrifft alle Gegner in 5 Felder Entfernung.				5칸 범위 내의 모든 포켓몬을 빙결 상태로 만든다.				
+0275-0000|data.Name		Spurn Orb	Repoussorbe	Streuorb				날려보냄구슬				
+0275-0001|data.Desc		An orb that warps all enemies to random locations on the floor. It affects all enemies up to 5 tiles away.	Un orbe qui téléporte les ennemis aléatoirement dans l'étage. Affecte tout les ennemis dans un rayon de 5 cases.	Ein Orb, welcher alle Gegner an zufällige Orte auf der Ebene teleportiert. Es betrifft alle Gegner in 5 Felder Entfernung.				5칸 범위 내의 모든 적 포켓몬을 층의 어딘가로 순간이동시킨다.				
+0276-0000|data.Name		Foe-Hold Orb	Stupéfiorbe	Stopperorb				상대묶음구슬				
+0276-0001|data.Desc		An orb that immobilizes all enemies for many turns. It affects all enemies up to 5 tiles away.		Ein Orb, welcher alle Gegner für einige Runden immobilisiert. Es betrifft alle Gegner in 5 Felder Entfernung.								
+0277-0000|data.Name		Nullify Orb	Orbe AntiCapSpé	Fähigkeitensperrorb				무효구슬				
+0277-0001|data.Desc		An orb that nullifies the Abilities of all enemies up to 5 tiles away.	Un orbe qui annule les Capacités Spéciales des ennemis dans un rayon de 5 cases.	Ein Orb, welcher Fähigkeiten aller Gegner auf der Ebene annulliert.				5칸 범위 내의 모든 적 포켓몬의 특성을 무효화한다.				
+0278-0000|data.Name		All-Dodge Orb	Esquivorbe Tous	Ausweichorb				모두회피구슬				
+0278-0001|data.Desc		An orb that sharply boosts Evasion. It affects team members up to 5 tiles away.		Ein Orb, der den Fluchtwert erhöht. Team Mitglieder in einer Reichweite von 5 Feldern sind betroffen.				5칸 범위 내의 모든 동료의 회피율을 크게 올린다.				
+0279-0000|data.Name		Health Orb	Formorbe	Gesundheitsorb				체력구슬				
+0279-0001|data.Desc												
+0280-0000|data.Name		All Power-Up Orb	Forçorbe Tous	Kräfteorb				모두파워업구슬				
+0280-0001|data.Desc												
+0281-0000|data.Name		One-Room Orb	Bulldozorbe	Ein-Raum-Orb				큰방구슬				
+0281-0001|data.Desc		A destructive orb that tears down all walls on the floor, turning the floor into one vast, open room.	Détruit tous les murs de l'étage, faisant de l'étage une salle unique.	Ein zerstörerischer Orb, welcher alle Wände auf der Ebene entfernt und dadurch einen einzigen riesigen Raum erzeugt.				층의 모든 벽을 허물어서 층을 하나의 큰 방으로 만들어버리는 파괴적인 구슬.				
+0282-0000|data.Name		Slow Orb	Lentorbe	Reduzorb				느림구슬				
+0282-0001|data.Desc		An orb that reduces the Movement Speed of all enemies by 1 level. It affects all enemies up to 5 tiles away.	Baisse d'un niveau la Vitesse de Mouvement des ennemis sur un rayon de 5 cases.	Ein Orb, welcher das Tempo aller Gegner um 1 senkt. Es betrifft alle Gegner in 5 Felder Entfernung.				5칸 범위 내의 모든 적의 행동속도를 1랭크 낮춘다.				
+0283-0000|data.Name		Rebound Orb	Rebondorbe	Konterorb				반사구슬				
+0283-0001|data.Desc		An orb that gives the team the Mini-Counter status. If an attack hits any member of the team, the damage will be reflected back at the user.										
+0284-0000|data.Name		Mirror Orb		Spiegelorb				거울구슬				
+0284-0001|data.Desc		An orb that protects the team with a barrier that reflects status moves.		Ein Orb, der das Team mit einer Barriere umgibt, die Status-Angriffe reflektiert.				동료 전원에게 상태변화 기술을 반사하는 장막을 씌운다.				
+0285-0000|data.Name		Itemizer Orb										
+0285-0001|data.Desc		An orb that transforms the target into an item. It affects the enemy in front.										
+0286-0000|data.Name		Foe-Seal Orb	Immobilisorbe	Lähmorb				적봉인구슬				
+0286-0001|data.Desc		An orb that seals the last-used move of all enemies. It affects all enemies up to 5 tiles away.	Un orbe qui verrouille la dernière capacité utilisée de chaque ennemi dans rayon de 5 cases.	Ein Orb, welcher die zuletzt eingesetzte Attacke von allen Gegnern blockiert. Es betrifft alle Gegner in 5 Felder Entfernung.				5칸 범위 내의 보든 적 포켓몬이 마지막으로 사용한 기술을 봉인한다.				
+0287-0000|data.Name		Halving Orb		Halbierorb				절반구슬				
+0287-0001|data.Desc		An orb that halves the HP of all enemies. It affects all enemies up to 5 tiles away.		Ein Orb, welcher die KP aller Gegner halbiert. Es betrifft alle Gegner in 5 Felder Entfernung.				5칸 범위 내의 모든 적 포켓몬의 HP를 반으로 줄인다.				
+0288-0000|data.Name		Rollcall Orb	Convocorbe	Appellorb				출석구슬				
+0288-0001|data.Desc		A warping orb that draws all teammates to the user.	Attire tous les membres de l'équipe vers le lanceur.	Ein Warporb, welcher alle Teammitglieder zum Nutzer teleportiert.				모든 동료를 사용자에게로 순간이동시킨다.				
+0289-0000|data.Name		Mug Orb	Dépouillorbe	Rauborb				훔치기구슬				
+0289-0001|data.Desc		An orb that pulls all items held by enemy Pokémon to the user.		Ein Orb, welcher gehaltene Items von allen gegnerischen Pokémon zum Benutzer zieht.								
+0300-0000|data.Name		Friend Bow	Ruban Ami	Sympathie				친구리본				
+0300-0001|data.Desc		A held item that makes it easier for team members to recruit lower-leveled wild Pokémon.																							
+0301-0000|data.Name		Pierce Band	Passetout	Perforband				관통머리띠				
+0301-0001|data.Desc		A headband that allows the Pokémon's moves and items to hit through multiple targets.	Objet à tenir qui permet aux objets lancés par le Pokémon toucher plusieurs cibles.	Dieses Kopfband erlaubt dem Träger seine Attacken und Items durch mehrere Ziele zu nutzen.				지니게 하면 기술과 도구가 여러 대상을 맞출 수 있게 된다.				
+0302-0000|data.Name		Golden Mask	Masque d'Or	Goldene Maske				황금가면				
+0302-0001|data.Desc		A held item that makes it easier for team members to recruit wild Pokémon.	Tenu par le meneur de l'équipe, cet objet permet de recruter plus facilement les Pokémon vaincus dans l'équipe.	Erhöht die Chance wilde Pokémon zu rekrutieren, wenn das Item gehalten wird.				지니게 하면 팀원이 야생 포켓몬을 동료로 영입하기 쉬워진다.																	
+0303-0000|data.Name		Mobile Scarf	Passmuraille	Mobilschal				통과스카프				
+0303-0001|data.Desc		A held item that enables the Pokémon to move through walls.	Objet à tenir qui permet au Pokémon de se déplacer à travers les murs.	Dieser Schal erlaubt das Pokémon durch Wände zu gehen.				지니게 하면 벽을 통과할 수 있게 된다.				
+0304-0000|data.Name		Pass Scarf	Dérivation	Zueigner				넘김스카프				
+0304-0001|data.Desc		A held item that causes the Pokémon to shrug off any damaging moves and pass them on to an adjacent Pokémon.	Objet à tenir qui permet au Pokémon de transférer les effets des attaques et de certaines capacités hostiles à un Pokémon proche de lui.	Ein Item zum Tragen, welches ermöglicht, dass das Pokémon gegnerische Attacken wegzuckt und an ein Pokémon neben ihm abgibt.				지니게 하면 자신에게 쓰인 데미지를 주는 기술을 옆에 있는 포켓몬에게 넘겨주게 된다.				
+0305-0000|data.Name		Warp Scarf	Télécharpe	Warp-Schal				워프스카프				
+0305-0001|data.Desc		A held item that warps the Pokémon to another place on the floor after being attacked.	Objet à tenir qui téléporte le Pokémon à un autre endroit du même étage lorsqu'il est attaqué.	Teleportiert den Träger zu einem Ort auf der Ebene, wenn dieser angegriffen wurde.				지니게 하면 공격당했을 때 층의 다른 위치로 순간이동하게 된다.				
+0306-0000|data.Name		Trap Scarf	Trappeur	Fallenschal				함정회피스카프				
+0306-0001|data.Desc		A held item that prevents the Pokémon from setting off traps.	Objet à tenir qui empêche les pièges de se déclencher quand le Pokémon marche dessus.	Dieser Schal verhindert Fallenaktivierungen für den Träger.				지니게 하면 함정을 밟아도 작동되지 않게 된다.				
+0307-0000|data.Name		Grip Claw	Accro Griffe	Griffklaue	Garra Garfio		Presartigli	끈기갈고리손톱	ねばりのかぎづめ	ねばりのかぎづめ	紧缠钩爪	緊纏鉤爪
+0307-0001|data.Desc		An item that increases the duration of binding moves used by the holder.	Objet à tenir qui empêche les pièges de se déclencher quand le Pokémon marche dessus.	Dieses Band verlängert die Dauer von Bindungsattacken des Trägers. (Klammergriff, Wickel etc.)				지니게 하면 조이기 기술의 턴 수가 늘어난다.				
+0308-0000|data.Name		Binding Band	Bande Étreinte	Klammerband	Banda Atadura		Legafascia	조임밴드	しめつけバンド	しめつけバンド	紧绑束带	緊綁束帶
+0308-0001|data.Desc		A band that increases the power of binding moves used by the holder.	Objet à tenir. Augmente la puissance des attaques immobilisantes telles que Ligotage ou Étreinte.	Ein Band, das die Stärke aller Klammerattacken des Trägers erhöht.	Joya de un solo uso que potencia los movimientos de tipo Acero. Debe llevarla un Pokémon.		Strumento da dare a un Pokémon che aumenta la potenza di mosse come Avvolgibotta e Legatutto.	지니게 하면 조이기 기술의 위력이 강해진다.	しめつけるわざを　ほじょする　バンド。 もたせると　しめつけるわざの いりょくが　つよく　なる。	締めつける技を　補助する　バンド。 持たせると　締めつける技の 威力が　強くなる。	能增强绑紧招式的束带。 携带后，绑紧招式的威力会变强。	輔助綁緊類招式的束帶。 攜帶後，綁緊類招式的 威力會變強。
+0309-0000|data.Name		Twist Band	Turban	Spiralband				꽈배기머리띠				
+0309-0001|data.Desc		A held item that prevents the Pokémon's Attack and Special Attack from being reduced.	Objet à tenir qui empêche l'Attaque et l'Attaque Spéciale du Pokémon de baisser.	Ein Item zum Tragen, das verhindert, dass Angriff und Spezial-Angriff absinken.				지니게 하면 공격과 특수공격 스탯이 하락하는 것을 방지한다.				
+0310-0000|data.Name		Metronome	Métronome	Metronom	Metrónomo		Plessimetro	메트로놈	メトロノーム	メトロノーム	节拍器	節拍器
+0310-0001|data.Desc		An item to be held by a Pokémon. It boosts moves used consecutively, but only until a different move is used.	Objet à tenir. Booste une capacité utilisée à répétition. L’effet s’annule si une autre capacité est utilisée.	Ein Item zum Tragen. Verstärkt eine Attacke, je öfter sie in Folge ausgeführt wird.	Mejora los PS de base, pero reduce la Velocidad en combate. Debe llevarla un Pokémon.		Strumento da dare a un Pokémon. Potenzia una mossa usata più volte di seguito. Il potenziamento svanisce al cambio di mossa.	지니게 하면 똑같은 기술을 연속으로 사용했을 때 위력이 올라간다. 그만두면 위력이 되돌아간다.	もたせると　おなじわざを　れんぞくで つかったとき　いりょくが　あがる。 やめると　いりょくは　もどる。	持たせると　同じ技を　連続で 使ったとき　威力が　あがる。 やめると　威力は　もどる。	携带后，连续使出相同招式时， 威力就会提高。不再使出 相同招式时，威力就会复原。	攜帶後，連續使出相同招式時， 威力就會提高。停止時， 威力就會復原。
+0311-0000|data.Name		Shed Shell	Carapace Mue	Wechselhülle	Muda Concha		Disfoguscio	아름다운허물	きれいなぬけがら	きれいなぬけがら	美丽空壳	美麗空殼
+0311-0001|data.Desc		A tough, discarded carapace that prevents the holder from being immobilized.	Une carapace dure et rebuté qui empêche le porteur d'être immobilisé.	Dieser harte, hinterlassene Panzer verhindert, dass der Träger bewegungsunfähig werden kann.				튼튼하고 단단한 허물. 지니게 하면 경직 상태에 빠지는 걸 방지한다.				
+0312-0000|data.Name		Shell Bell	Grelot Coque	Seegesang	Campana Concha		Conchinella	조개껍질방울	かいがらのすず	かいがらのすず	贝壳之铃	貝殼之鈴
+0312-0001|data.Desc		A held item that restores a little HP to the holder every time it inflicts damage on others.	Objet à tenir. Restaure un peu les PV du porteur à chaque fois qu’il inflige des dégâts.	Ein Item zum Tragen. Es stellt einige KP des Trägers immer dann wieder her, wenn dieser dem Ziel Schaden zufügt.	Potencia los movimientos, pero consume PS con cada ataque. Debe llevarla un Pokémon.		Strumento da dare a un Pokémon. Chi ce l’ha recupera un po’ di PS ogni volta che infligge danni.	지니게 한 포켓몬이 공격하여 상대에게 데미지를 줬을 때 HP를 조금 회복할 수 있다.	もたせた　ポケモンが　こうげきして あいてに　ダメージを　あたえたとき ＨＰを　すこし　かいふく　できる。	持たせた　ポケモンが　攻撃して 相手に　ダメージを　あたえたとき ＨＰを　少し　回復できる。	当携带它的宝可梦 攻击对手并造成伤害时， 能回复少量ＨＰ。	當攜帶它的寶可夢 攻擊並造成對手傷害時， 能回復少量ＨＰ。
+0313-0000|data.Name		Scope Lens	Lentilscope	Scope-Linse	Periscopio		Mirino	초점렌즈	ピントレンズ	ピントレンズ	焦点镜	焦點鏡
+0313-0001|data.Desc		A lens used for scoping out weak points. It boosts the holder’s critical-hit ratio.	Objet à tenir. Une lentille qui augmente le taux de critiques du porteur.	Ein Item, das einem Pokémon zum Tragen gegeben werden kann. Es erhöht die Volltrefferquote.	Actúa como combustible y potencia los movimientos de tipo Fuego. Debe llevarlo un Pokémon.		Strumento da dare a un Pokémon. Lente che aumenta la probabilità di sferrare brutti colpi.	약점이 보이는 렌즈. 지니게 한 포켓몬의 기술이 급소에 맞기 쉬워진다.	じゃくてんが　みえる　レンズ。 もたせた　ポケモンの　わざが きゅうしょに　あたりやすくなる。	弱点が　みえる　レンズ。 持たせた　ポケモンの　技が 急所に　当たりやすくなる。	能看见弱点的镜片。 携带它的宝可梦的招式 会变得容易击中要害。	能看見弱點的鏡片。 攜帶它的寶可夢的招式 會變得容易擊中要害。
+0314-0000|data.Name		Wide Lens	Loupe	Großlinse	Lupa		Grandelente	광각렌즈	こうかくレンズ	こうかくレンズ	广角镜	廣角鏡
+0314-0001|data.Desc		A magnifying lens that boosts the Pokémon's Attack Range.	Une loupe qui booste la portée des attaques du Pokémon.	Dieses Vergrößerungsglas erhöht die Reichweite von Angriffen.				물건이 크게 보이는 렌즈. 지니게 하면 기술의 공격 범위가 조금 올라간다.				
+0315-0000|data.Name		Heal Ribbon													
+0315-0001|data.Desc		A held item that speeds up the Pokémon's natural HP recovery. This item sticks when held.													
+0317-0000|data.Name		Sticky Barb	Piquants	Klettdorn	Toxiestrella		Vischiopunta	끈적끈적바늘	くっつきバリ	くっつきバリ	附着针	附著針
+0317-0001|data.Desc		A held item that damages the holder and sticks when held. It may latch on to Pokémon that make contact with the holder.	Objet à tenir. Inflige des dégâts au porteur et devient collant lorsqu'il est tenu. Il est susceptible de s'accrocher aux ennemis ou alliés qui rentre en contact avec le porteur.	Bleibt kleben und verursacht beim Angreifen Schaden solange er gehalten wird. Er kann jedoch an Angreifern haften bleiben, die ihn berühren.				지니게 하면 데미지를 입고 끈적거리게 된다. 지닌 포켓몬과 접촉하는 포켓몬에게 옮겨갈 수도 있다.				
+0318-0000|data.Name		Choice Band	Bandeau Choix	Wahlband	Cinta Elegida		Bendascelta	구애머리띠	こだわりハチマキ	こだわりハチマキ	讲究头带	講究頭帶
+0318-0001|data.Desc		A curious headband that boosts Attack, but only allows the use of one move. This item sticks when held.	Un curieux bandana qui booste l'Attaque du porteur mais ne permet lui d'utiliser qu'une capacité. Cet objet devient collant lorsqu'il est tenu.	Dieses merkwürdige Band stärkt den Angriffs-Wert, aber nur eine Attacke ist einsetzbar. Das Item wird klebrig, sobald es getragen wird.				지니게 하면 끈적거리게 되는 기묘한 머리띠. 공격이 올라가지만 똑같은 기술밖에 쓰지 못하게 된다.				
+0319-0000|data.Name		Choice Specs	Lunettes Choix	Wahlglas	Gafas Elegid		Lentiscelta	구애안경	こだわりメガネ	こだわりメガネ	讲究眼镜	講究眼鏡
+0319-0001|data.Desc		Distinctive glasses that boost Special Attack, but only allows the use of one move. This item sticks when held.	Lunettes de vue qui booste l'Attaque Sp du porteur mais ne permet lui d'utiliser qu'une capacité. Cet objet devient collant lorsqu'il est tenu.	Diese ausgeprägte Brille erhöht den Spezial-Angriff, aber nur eine Attacke ist einsetzbar. Das Item wird klebrig, sobald es getragen wird.				지니게 하면 끈적거리게 되는 개성적인 안경. 특수공격이 올라가지만 똑같은 기술밖에 쓰지 못하게 된다.				
+0320-0000|data.Name		Choice Scarf	Mouchoir Choix	Wahlschal	Pañuelo Elegido		Stolascelta	구애스카프	こだわりスカーフ	こだわりスカーフ	讲究围巾	講究圍巾
+0320-0001|data.Desc		A curious scarf that boosts Movement Speed, but only allows the use of one move. This item sticks when held.	Un curieux mouchoir qui booste la Vitesse de Mouvement du porteur mais ne lui permet d'utiliser qu'une capacité. Cet objet devient collant lorsqu'il est tenu.	Dieser merkwürdige Schal erhöht den Initiative-Wert, aber nur eine Attacke ist einsetzbar. Das Item wird klebrig, sobald es getragen wird.				지니게 하면 끈적거리게 되는 이상한 스카프. 행동속도가 올라가지만 똑같은 기술밖에 쓰지 못하게 된다.				
+0321-0000|data.Name		Assault Vest	Veste de Combat	Offensivweste	Chaleco Asalto		Corpetto assalto	돌격조끼	とつげきチョッキ	とつげきチョッキ	突击背心	突擊背心
+0321-0001|data.Desc		An offensive vest that raises Special Defense, but prevents the use of status moves. This item sticks when held.	Une veste qui augmente la Défense Sp du porteur mais empêche l'utilisation de capacité de status. Cet objet devient collant lorsqu'il est tenu.	Trägt ein Pokémon diese Weste, erhöht sich seine Spezial-Verteidigung, aber es kann keine Status-Attacken mehr einsetzen. Das Item wird klebrig, sobald es getragen wird.				지니게 하면 끈적거리게 되는 조끼. 특수방어가 올라가지만 상태이상 기술을 쓰지 못하게 된다.				
+0322-0000|data.Name		Life Orb	Orbe Vie	Leben-Orb	Vidasfera		Assorbisfera	생명의구슬	いのちのたま	いのちのたま	生命宝珠	生命寶珠
+0322-0001|data.Desc		A held item that boosts the power of moves, but at the cost of some HP on each use. This item sticks when held.	Objet à tenir qui booste la puissance des capacités mais augmente leurs coût en PP à l'usage. Cet objet devient collant lorsqu'il est tenu.	Ein Item zum Tragen, welcher die Stärke von Attacken erhöht, jedoch kostet jede Nutzung von Angriffen ein wenig KP. Das Item wird klebrig, sobald es getragen wird.				지니게 하면 끈적거리게 된다. 공격할 때마다 HP가 조금씩 줄지만 기술의 위력이 올라간다.				
+0323-0000|data.Name		Toxic Orb	Orbe Toxique	Toxik-Orb	Toxisfera		Tossicsfera	맹독구슬	どくどくだま	どくどくだま	剧毒宝珠	劇毒寶珠
+0323-0001|data.Desc		A bizarre orb that will badly poison the holder. This item sticks when held.	Une orbe étrange qui donne à son porteur le status Grave Empoisonement. Cet objet devient collant lorsqu'il est tenu.	Ein bizarrer Orb, welcher den Träger schwer vergiftet. Das Item wird klebrig, sobald es getragen wird.				지니게 하면 맹독에 걸리게 하고 끈적거리게 되는 요상한 구슬.				
+0324-0000|data.Name		Flame Orb	Orbe Flamme	Heiß-Orb	Llamasfera		Fiammosfera	화염구슬	かえんだま	かえんだま	火焰宝珠	火焰寶珠
+0324-0001|data.Desc		A bizarre orb that will afflict the holder with a burn. This item sticks when held.	Une orbe étrange qui donne à son porteur le status Brûlure. Cet objet devient collant lorsqu'il est tenu.	Ein bizarrer Orb, welcher den Träger Verbrennungen erleiden lässt. Das Item wird klebrig, sobald es getragen wird.				지니게 하면 화상에 걸리게 하고 끈적거리게 되는 요상한 구슬.				
+0325-0000|data.Name		Iron Ball	Balle Fer	Eisenkugel	Bola Férrea		Ferropalla	검은철구	くろいてっきゅう	くろいてっきゅう	黑色铁球	黑色鐵球
+0325-0001|data.Desc		A held item that anchors the Pokémon to the ground, and allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.	Objet à tenir qui cloue son porteur au sol permettant aux capacités de type Sol de l'affecter même si il est de type Vol ou si il lévite. Cet objet devient collant lorsqu'il est tenu.	Ein Item zum Tragen, welches das Pokémon auf den Boden verankert. Dadurch können schwebende Pokémon und Flug-Pokémon von Boden-Attacken getroffen werden. Das Item wird klebrig, sobald es getragen wird.				지니게 하면 끈적거리게 된다. 지닌 포켓몬은 비행타입이거나 부유중이어도 땅타입 기술의 영향을 받게 된다.				
+0326-0000|data.Name		Ring Target	Point de Mire	Zielscheibe	Blanco		Facilsaglio	겨냥표적	ねらいのまと	ねらいのまと	标靶	標靶
+0326-0001|data.Desc		A held item that removes the Pokémon's type immunities. This item sticks when held.	Objet à tenir qui retire au porteur l'immunité lié à son type, le rendant sensible à des capacités qui ne lui font aucun effet normalement. Cet objet devient collant lorsqu'il est tenu.	Dieses Item entfernt jegliche Immunitäten, die der Träger dank seines Typen besitzt. Das Item wird klebrig, sobald es getragen wird.				지니게 하면 끈적거리게 된다. 지닌 포켓몬의 특정 타입에 대한 면역이 사라진다.				
+0327-0000|data.Name		Black Sludge	Boue Noire	Giftschleim	Lodo Negro		Fangopece	검은진흙	くろいヘドロ	くろいヘドロ	黑色污泥	黑色污泥
+0327-0001|data.Desc		A held item that increases the HP regeneration of Poison-types, but prevents it for any other type. This item sticks when held.		Dieses Item kann gehalten werden, wodurch Pokémon des Typen Gift eine bessere KP-Regeneration erhalten, bei anderen Typen jedoch komplett verhindert. Außerdem wird das Item klebrig, sobald es getragen wird.								
+0328-0000|data.Name		X-Ray Specs	Rayons X	Röntgenaugen				투시안경				
+0328-0001|data.Desc		A held item that enables the Pokémon to see enemies through heavy darkness.	Objet à tenir qui permet au Pokémon de voir les ennemis dans l'obscuritée.	Diese Brille erlaubt dem Pokémon alle Gegner in schwerer Dunkelheit zu sehen.				지니게 하면 깊은 어둠 속에서도 상대를 볼 수 있게 된다.				
+0329-0000|data.Name		Reunion Cape	Cape Union	Versammlungscape				재회망토				
+0329-0001|data.Desc		A held item that warps the Pokémon to its teammate or leader when attacked.	Objet à tenir qui téléporte son porteur près du meneur ou de l'équipe quand il est attaqué.	Der Träger wird zu einem Teammitglied oder Anführer teleportiert, wenn dieser angegriffen wird.				지니게 하면 공격받았을 때 팀원 또는 리더에게 순간이동하게 된다.				
+0330-0000|data.Name		Cover Band	Bandeau Couverture	Schützerband				도움밴드				
+0330-0001|data.Desc		An item to be held by a Pokémon. When a Pokémon with low HP is nearby, the holder will take attacks for it.	Objet à tenir. Si un Pokémon ami proche est attaqué lorsqu'il a peu de PV le porteur prend les dégâts à sa place.	Ein Pokémon, das es bei sich trägt, hilft Freunden in Not. Wird ein naher Verbündeter mit sehr niedrigen KP angegriffen, nimmt es den Schaden auf sich.				지니게 하면 HP가 낮은 포켓몬이 근처에 있을 때 공격을 대신 받아주게 된다.				
+0331-0000|data.Name		Silver Powder	Poudre Argentée	Silberstaub	Polvo Plata		Argenpolvere	은빛가루	ぎんのこな	ぎんのこな	银粉	銀粉
+0331-0001|data.Desc		An item to be held by a Pokémon. It is a shiny, silver powder that will boost the power of Bug-type moves.	Objet à tenir. De la poudre d’argent brillante qui augmente la puissance des capacités de type Insecte.	Ein Item, zum Tragen. Ein glänzendes, silbernes Puder, das Attacken vom Typ Käfer verstärkt.	Debe llevarla un Pokémon. La vitalidad de la semilla fortalece los movimientos de tipo Planta.		Strumento da dare a un Pokémon. Polvere argentea e brillante che potenzia le mosse di tipo Coleottero.	은색으로 반짝이는 가루. 지니게 하면 벌레타입 기술의 위력이 올라간다.	ぎんいろに　かがやく　こな。 もたせると　むしタイプの わざの　いりょくが　あがる。	銀色に　輝く　粉。 持たせると　むしタイプの 技の　威力が　あがる。	散发着银色光辉的粉末。 携带后，虫属性的 招式威力就会提高。	散發著銀色光輝的粉末。 攜帶後，蟲屬性的 招式威力就會提高。
+0332-0000|data.Name		Black Glasses	Lunettes Noires	Schattenglas	Gafas de Sol		Occhialineri	검은안경	くろいメガネ	くろいメガネ	黑色眼镜	黑色眼鏡
+0332-0001|data.Desc		An item to be held by a Pokémon. A pair of shady-looking glasses that boost the power of Dark-type moves.	Objet à tenir. Une paire de lunettes à l’aspect louche qui augmente la puissance des capacités de type Ténèbres.	Ein Item zum Tragen. Eine dunkle Brille, die Attacken vom Typ Unlicht verstärkt.	Debe llevarlo Ditto. Es un polvo muy fino, pero a la vez resistente, que aumenta su Defensa.		Strumento da dare a un Pokémon. Inquietante paio di occhiali che potenzia le mosse di tipo Buio.	어딘가 질이 나빠 보이는 안경. 지니게 하면 악타입 기술의 위력이 올라간다.	あやしく　みえる　メガネ。 もたせると　あくタイプの わざの　いりょくが　あがる。	怪しく　みえる　メガネ。 持たせると　あくタイプの 技の　威力が　あがる。	看上去很奇怪的眼镜。 携带后，恶属性的 招式威力就会提高。	看起來很奇怪的眼鏡。 攜帶後，惡屬性的 招式威力就會提高。
+0333-0000|data.Name		Dragon Scale	Écaille Draco	Drachenhaut	Escamadragón		Squama Drago	용의비늘	りゅうのウロコ	りゅうのウロコ	龙之鳞片	龍之鱗片															
+0333-0001|data.Desc		An item to be held by a Pokémon. This thick, tough scale boosts the power of Dragon-type moves.			Objeto que debe ser llevado por un Pokémon. Esta gruesa y resistente escama potencia el poder de los movimientos de tipo Dragón.							
+0334-0000|data.Name		Magnet	Aimant	Magnet	Imán		Calamita	자석	じしゃく	じしゃく	磁铁	磁鐵
+0334-0001|data.Desc		An item to be held by a Pokémon. It is a powerful magnet that boosts the power of Electric-type moves.	Objet à tenir. Un aimant puissant qui augmente la puissance des capacités de type Électrik.	Ein Item zum Tragen, dessen magnetische Kraft Attacken vom Typ Elektro verstärkt.	Es un puerro muy largo que debe llevar Farfetch’d. Aumenta mucho la probabilidad de que logre un golpe crítico.		Strumento da dare a un Pokémon. Potente magnete che potenzia le mosse di tipo Elettro.	강력한 자석. 지니게 하면 전기타입 기술의 위력이 올라간다.	きょうりょくな　じしゃく。 もたせると　でんきタイプの わざの　いりょくが　あがる。	強力な　磁石。 持たせると　でんきタイプの 技の　威力が　あがる。	强力的磁铁。 携带后，电属性的 招式威力就会提高。	強力的磁鐵。 攜帶後，電屬性的 招式威力就會提高。
+0335-0000|data.Name		Pink Bow	Ruban Rose	Rosane Schleife				분홍리본				
+0335-0001|data.Desc	This was an item in Gen2, which boosted normal-type moves.	An item to be held by a Pokémon. It's a cute bow that boosts the power of Fairy-type moves.	Objet à tenir. Un joli ruban qui booste la puissance des capacités de type Fée.	Ein Item zum Tragen. Es ist eine süße Schleife, welche die Kraft von Attacken des Typs Fee verstärkt.				귀여운 리본. 지니게 하면 페어리타입 기술의 위력이 올라간다.				
+0336-0000|data.Name		Black Belt	Ceinture Noire	Schwarzgurt	Cinturón Negro		Cinturanera	검은띠	くろおび	くろおび	黑带	黑帶
+0336-0001|data.Desc		An item to be held by a Pokémon. This belt helps the wearer to focus and boosts the power of Fighting-type moves.	Objet à tenir. Une ceinture qui augmente la détermination et la puissance des capacités de type Combat.	Ein Item zum Tragen. Ein Gürtel, der die Entschlossenheit sowie Attacken vom Typ Kampf verstärkt.	Un extraño tipo de hueso que potencia el Ataque. Deben llevarlo Cubone o Marowak.		Strumento da dare a un Pokémon. Cintura che potenzia la determinazione e le mosse di tipo Lotta.	집중을 돕는 띠. 지니게 하면 격투타입 기술의 위력이 올라간다.	きが　ひきしまる　おび。 もたせると　かくとうタイプの わざの　いりょくが　あがる。	気が　ひきしまる　帯。 持たせると　かくとうタイプの 技の　威力が　あがる。	能振作精神的带子。 携带后，格斗属性的 招式威力就会提高。	能振作精神的帶子。 攜帶後，格鬥屬性的 招式威力就會提高。
+0337-0000|data.Name		Charcoal	Charbon	Holzkohle	Carbón		Carbonella	목탄	もくたん	もくたん	木炭	木炭
+0337-0001|data.Desc		An item to be held by a Pokémon. It is a combustible fuel that boosts the power of Fire-type moves.	Objet à tenir. Un combustible qui augmente la puissance des capacités de type Feu.	Ein Item zum Tragen. Ein Brennstoff, der Attacken vom Typ Feuer verstärkt.	Cinta de pelo que aumenta ligeramente la potencia de los movimientos físicos. Debe llevarla un Pokémon.		Strumento da dare a un Pokémon. Sostanza combustibile che potenzia le mosse di tipo Fuoco.	잘 타는 연료. 지니게 하면 불꽃타입 기술의 위력이 올라간다.	ものを　もやす　ねんりょう。 もたせると　ほのおタイプの わざの　いりょくが　あがる。	ものを　燃やす　燃料。 持たせると　ほのおタイプの 技の　威力が　あがる。	焚烧用的燃料。 携带后，火属性的 招式威力就会提高。	燒東西的燃料。 攜帶後，火屬性的 招式威力就會提高。
+0338-0000|data.Name		Sharp Beak	Bec Pointu	Hackattack	Pico Afilado		Beccaffilato	예리한부리	するどいくちばし	するどいくちばし	锐利鸟嘴	銳利鳥嘴
+0338-0001|data.Desc		An item to be held by a Pokémon. It's a long, sharp beak that boosts the power of Flying-type moves.	Objet à tenir. Un bec long et pointu qui augmente la puissance des capacités de type Vol.	Ein Item zum Tragen. Ein langer, scharfer Schnabel verstärkt Attacken vom Typ Flug.	Debe llevarlo un Pokémon. Aumenta la belleza en los concursos.		Strumento da dare a un Pokémon. Becco lungo e affilato che potenzia le mosse di tipo Volante.	길고 뾰족한 부리. 지니게 하면 비행타입 기술의 위력이 올라간다.	ながく　とがった　くちばし。 もたせると　ひこうタイプの わざの　いりょくが　あがる。	長く　とがった　くちばし。 持たせると　ひこうタイプの 技の　威力が　あがる。	又长又尖的鸟嘴。 携带后，飞行属性的 招式威力就会提高。	又長又尖的鳥嘴。 攜帶後，飛行屬性的 招式威力就會提高。
+0339-0000|data.Name		Spell Tag	Rune Sort	Bannsticker	Hechizo		Spettrotarga	저주의부적	のろいのおふだ	のろいのおふだ	诅咒之符	詛咒之符
+0339-0001|data.Desc		An item to be held by a Pokémon. It is a sinister, eerie tag that boosts the power of Ghost-type moves.	Objet à tenir. Une plaque sinistre et étrange qui augmente la puissance des capacités de type Spectre.	Ein Item zum Tragen. Ein fieser, unheimlicher Sticker, der Attacken vom Typ Geist verstärkt.	Debe llevarlo un Pokémon. Aumenta la dureza en los concursos.		Strumento da dare a un Pokémon. Targa sinistra e inquietante che potenzia le mosse di tipo Spettro.	괴상하고 으스스한 부적. 지니게 하면 고스트타입 기술의 위력이 올라간다.	あやしくて　ぶきみな　おふだ。 もたせると　ゴーストタイプの わざの　いりょくが　あがる。	怪しくて　不気味な　お札。 持たせると　ゴーストタイプの 技の　威力が　あがる。	古怪可怕的咒符。 携带后，幽灵属性的 招式威力就会提高。	古怪可怕的咒符。 攜帶後，幽靈屬性的 招式威力就會提高。
+0340-0000|data.Name		Miracle Seed	Grain Miracle	Wundersaat	Semilla Milagro		Miracolseme	기적의씨	きせきのタネ	きせきのタネ	奇迹种子	奇跡種子
+0340-0001|data.Desc		An item to be held by a Pokémon. It is a seed imbued with life force that boosts the power of Grass-type moves.	Objet à tenir. Une graine remplie de vie qui augmente la puissance des capacités de type Plante.	Ein Item zum Tragen. Ein Samen voller Lebenskraft, der Attacken vom Typ Pflanze verstärkt.	Un par de guantes que debe llevar Chansey. Potencian mucho su índice de golpe crítico.		Strumento da dare a un Pokémon. Seme intriso di vita che potenzia le mosse di tipo Erba.	생명이 깃든 씨앗. 지니게 하면 풀타입 기술의 위력이 올라간다.	せいめいが　やどる　タネ。 もたせると　くさタイプの わざの　いりょくが　あがる。	生命が　宿る　タネ。 持たせると　くさタイプの 技の　威力が　あがる。	孕育生命的种子。 携带后，草属性的 招式威力就会提高。	蘊藏生命的種子。 攜帶後，草屬性的 招式威力就會提高。
+0341-0000|data.Name		Soft Sand	Sable Doux	Pudersand	Arena Fina		Sabbia Soffice	부드러운모래	やわらかいすな	やわらかいすな	柔软沙子	柔軟沙子
+0341-0001|data.Desc		An item to be held by a Pokémon. It is a loose, silky sand that boosts the power of Ground-type moves.	Objet à tenir. Du sable fin et soyeux qui augmente la puissance des capacités de type Sol.	Ein Item zum Tragen. Samtiger Sand, der Attacken vom Typ Boden verstärkt.	Tiene un curioso aroma que potencia los movimientos de tipo Agua. Debe llevarlo un Pokémon.		Strumento da dare a un Pokémon. Sabbia leggera e farinosa che potenzia le mosse di tipo Terra.	만지면 보슬보슬한 모래. 지니게 하면 땅타입 기술의 위력이 올라간다.	さわると　サラサラする　すな。 もたせると　じめんタイプの わざの　いりょくが　あがる。	さわると　サラサラする　砂。 持たせると　じめんタイプの 技の　威力が　あがる。	手感细腻的沙子。 携带后，地面属性的 招式威力就会提高。	手感細緻的沙子。 攜帶後，地面屬性的 招式威力就會提高。
+0342-0000|data.Name		Never-Melt Ice	Glace Éternelle	Ewiges Eis	Antiderretir		Gelomai	녹지않는얼음	とけないこおり	とけないこおり	不融冰	不融冰
+0342-0001|data.Desc		An item to be held by a Pokémon. It's a piece of ice that repels heat effects and boosts Ice-type moves.	Objet à tenir. Un morceau de glace qui réfléchit la chaleur et augmente la puissance des capacités de type Glace.	Ein Item zum Tragen. Ein Stück Eis, das Hitze fernhält und Attacken vom Typ Eis verstärkt.	Debe llevarlo un Pokémon. Aumenta el ingenio en los concursos.		Strumento da dare a un Pokémon. Pezzo di ghiaccio che respinge il calore e potenzia le mosse di tipo Ghiaccio.	더울 때 지니면 시원한 얼음조각. 지니게 하면 얼음타입 기술의 위력이 올라간다.	ねつを　よせつけない　こおり。 もたせると　こおりタイプの わざの　いりょくが　あがる。	熱を　よせつけない　氷。 持たせると　こおりタイプの 技の　威力が　あがる。	能隔绝热量的冰。 携带后，冰属性的 招式威力就会提高。	隔絕熱的冰。 攜帶後，冰屬性的 招式威力就會提高。
+0343-0000|data.Name		Silk Scarf	Mouchoir Soie	Seidenschal	Pañuelo Seda		Sciarpa Seta	실크스카프	シルクのスカーフ	シルクのスカーフ	丝绸围巾	絲綢圍巾
+0343-0001|data.Desc		An item to be held by a Pokémon. It's a sumptuous scarf that boosts the power of Normal-type moves.	Objet à tenir. Un mouchoir somptueux qui augmente la puissance des capacités de type Normal.	Ein Item zum Tragen. Ein kostbarer Schal, der Attacken vom Typ Normal verstärkt.	Potencia ligeramente los movimientos supereficaces. Debe llevarla un Pokémon.		Strumento da dare a un Pokémon. Sciarpa raffinata che potenzia le mosse di tipo Normale.	감촉이 좋은 스카프. 지니게 하면 노말타입 기술의 위력이 올라간다.	はだざわりの　よい　スカーフ。 もたせると　ノーマルタイプの わざの　いりょくが　あがる。	はだざわりの　よい　スカーフ。 持たせると　ノーマルタイプの 技の　威力が　あがる。	手感不错的围巾。 携带后，一般属性的 招式威力就会提高。	手感不錯的圍巾。 攜帶後，一般屬性的 招式威力就會提高。
+0344-0000|data.Name		Poison Barb	Pic Venin	Giftstich	Flecha Venenosa		Velenaculeo	독바늘	どくバリ	どくバリ	毒针	毒針
+0344-0001|data.Desc		An item to be held by a Pokémon. This small, poisonous barb boosts the power of Poison-type moves.	Objet à tenir. Un petit pic empoisonné qui augmente la puissance des capacités de type Poison.	Ein Item zum Tragen. Ein schmaler und giftiger Widerhaken, der Attacken vom Typ Gift verstärkt.	Debe llevarlo un Pokémon. Aumenta la dulzura en los concursos.		Strumento da dare a un Pokémon. Aculeo piccolo e tossico che potenzia le mosse di tipo Veleno.	독이 있는 작은 침. 지니게 하면 독타입 기술의 위력이 올라간다.	どくのある　ちいさな　ハリ。 もたせると　どくタイプの わざの　いりょくが　あがる。	どくのある　ちいさな　ハリ。 持たせると　どくタイプの 技の　威力が　あがる。	有毒的小针。 携带后，毒属性的 招式威力就会提高。	有毒的小針。 攜帶後，毒屬性的 招式威力就會提高。
+0345-0000|data.Name		Twisted Spoon	Cuiller Tordue	Krummlöffel	Cuchara Torcida		Cucchiaio Torto	휘어진스푼	まがったスプーン	まがったスプーン	弯曲的汤匙	彎曲的湯匙
+0345-0001|data.Desc		An item to be held by a Pokémon. This spoon is imbued with telekinetic power and boosts Psychic-type moves.	Objet à tenir. Une cuiller contenant un pouvoir télékinésique qui augmente la puissance des capacités de type Psy.	Ein Item zum Tragen. Ein Löffel voller telekinetischer Energie, der Attacken vom Typ Psycho verstärkt.	Debe llevarla un Pokémon. Aumenta ligeramente la Precisión de los movimientos.		Strumento da dare a un Pokémon. Cucchiaio dotato di potere telecinetico che potenzia le mosse di tipo Psico.	염동력을 담은 숟가락. 지니게 하면 에스퍼타입 기술의 위력이 올라간다.	ねんりきを　こめた　スプーン。 もたせると　エスパータイプの わざの　いりょくが　あがる。	念力を　こめた　スプーン。 持たせると　エスパータイプの 技の　威力が　あがる。	注入了念力的汤匙。 携带后，超能力属性的 招式威力就会提高。	注入了念力的湯匙。 攜帶後，超能力屬性的 招式威力就會提高。
+0346-0000|data.Name		Hard Stone	Pierre Dure	Granitstein	Piedra Dura		Pietradura	딱딱한돌	かたいいし	かたいいし	硬石头	硬石頭
+0346-0001|data.Desc		An item to be held by a Pokémon. It is a durable stone that boosts the power of Rock-type moves.	Objet à tenir. Une pierre incassable qui augmente la puissance des capacités de type Roche.	Ein Item zum Tragen. Ein unzerbrechlicher Stein, der Attacken vom Typ Gestein verstärkt.	Debe llevarlo un Pokémon. Su peculiar aroma reduce la Precisión del objetivo.		Strumento da dare a un Pokémon. Pietra indistruttibile che potenzia le mosse di tipo Roccia.	절대 깨지지 않는 돌. 지니게 하면 바위타입 기술의 위력이 올라간다.	ぜったいに　われない　いし。 もたせると　いわタイプの わざの　いりょくが　あがる。	絶対に　割れない　石。 持たせると　いわタイプの 技の　威力が　あがる。	绝对不会裂开的石头。 携带后，岩石属性的 招式威力就会提高。	絕對不會裂開的石頭。 攜帶後，岩石屬性的 招式威力就會提高。
+0347-0000|data.Name		Metal Coat	Peau Métal	Metallmantel	Revest. Metálico		Metalcoperta	금속코트	メタルコート	メタルコート	金属膜	金屬膜
+0347-0001|data.Desc		An item to be held by a Pokémon. It is a special metallic film that can boost the power of Steel-type moves.	Objet à tenir. Une pellicule métallique spéciale qui augmente la puissance des capacités de type Acier.	Ein Item, das einem Pokémon zum Tragen gegeben werden kann. Es verstärkt Attacken vom Typ Stahl.	Colmillo de gran dureza que refuerza los movimientos de tipo Dragón. Debe llevarlo un Pokémon.		Strumento da dare a un Pokémon. Speciale pellicola metallica che potenzia le mosse di tipo Acciaio.	특수한 금속 장막. 지니게 하면 강철타입 기술의 위력이 올라간다.	とくしゅな　きんぞくの　まく。 もたせると　はがねタイプの わざの　いりょくが　あがる。	特殊な　金属の　膜。 持たせると　はがねタイプの 技の　威力が　あがる。	特殊的金属膜。 携带后，钢属性的 招式威力就会提高。	特殊的金屬膜。 攜帶後，鋼屬性的 招式威力就會提高。
+0348-0000|data.Name		Mystic Water	Eau Mystique	Zauberwasser	Agua Mística		Acqua Magica	신비의물방울	しんぴのしずく	しんぴのしずく	神秘水滴	神秘水滴
+0348-0001|data.Desc		An item to be held by a Pokémon. This teardrop-shaped gem boosts the power of Water-type moves.	Objet à tenir. Une gemme en forme de goutte d’eau qui augmente la puissance des capacités de type Eau.	Ein Item zum Tragen. Ein tränenförmiger Edelstein, der Attacken vom Typ Wasser verstärkt.	Debe llevarlo un Pokémon. Aumenta el carisma en los concursos.		Strumento da dare a un Pokémon. Gemma a forma di goccia che potenzia le mosse di tipo Acqua.	물방울 모양의 보석. 지니게 하면 물타입 기술의 위력이 올라간다.	しずくの　かたちの　ほうせき。 もたせると　みずタイプの わざの　いりょくが　あがる。	しずくの　形の　宝石。 持たせると　みずタイプの 技の　威力が　あがる。	水滴形状的宝石。 携带后，水属性的 招式威力就会提高。	水滴形狀的寶石。 攜帶後，水屬性的 招式威力就會提高。
+0349-0000|data.Name		Harmony Scarf		Freundschaftsschal											
+0349-0001|data.Desc		A scarf woven from the fibers of a legendary tree. It allows the Pokémon to evolve, regardless of its requirements.		Ein Schal, der aus den Fasern eines legendären Baumes gewoben wurde. Der Träger kann sich unabhängig von üblichen Voraussetzungen entwickeln.											
+0350-0000|data.Name		Everstone	Pierre Stase	Ewigstein	Piedra Eterna		Pietrastante	변함없는돌	かわらずのいし	かわらずのいし	不变之石	不變之石
+0350-0001|data.Desc												
+0351-0000|data.Name		Fire Stone	Pierre Feu	Feuerstein	Piedra Fuego		Pietrafocaia	불꽃의돌	ほのおのいし	ほのおのいし	火之石	火之石
+0351-0001|data.Desc		A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve.	Une pierre étrange qui fait évoluer certaines espèces de Pokémon. Elle est jaune et orange.	Dieser spezielle Stein löst bei bestimmten Pokémon die Entwicklung aus. Er schimmert in den Farben Orange und Gelb.	Curiosa piedra que hace evolucionar a determinadas especies de Pokémon. Es amarilla con una marca naranja.		Pietra particolare che fa evolvere determinate specie di Pokémon. È gialla e arancione.	어느 특정 포켓몬을 진화시키는 이상한 주황색 돌.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　いし。 だいだいいろを　している。	ある　特定の　ポケモンを 進化させる　不思議な　石。 だいだい色を　している。	能让某些特定宝可梦 进化的神奇石头。 看上去是橙黄色的。	能讓特定寶可夢 進化的神奇石頭。 看起來是橙黃色的。
+0352-0000|data.Name		Thunder Stone	Pierre Foudre	Donnerstein	Piedra Trueno		Pietratuono	천둥의돌	かみなりのいし	かみなりのいし	雷之石	雷之石
+0352-0001|data.Desc		A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve.	Une pierre étrange qui fait évoluer certaines espèces de Pokémon. Un éclair est dessiné dessus.	Dieser spezielle Stein löst bei bestimmten Pokémon die Entwicklung aus. Er hat ein Blitzmuster.	Curiosa piedra que hace evolucionar a determinadas especies de Pokémon. Tiene grabado un rayo.		Pietra particolare che fa evolvere determinate specie di Pokémon. Riporta l’immagine di un fulmine.	어느 특정 포켓몬을 진화시키는 이상한 돌. 천둥번개 무늬가 있다.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　いし。 いなずまの　もようが　ある。	ある　特定の　ポケモンを 進化させる　不思議な　石。 稲妻の　模様が　ある。	能让某些特定宝可梦 进化的神奇石头。 有着闪电般的花纹。	能讓特定寶可夢 進化的神奇石頭。 上面有著閃電花紋。
+0353-0000|data.Name		Water Stone	Pierre Eau	Wasserstein	Piedra Agua		Pietraidrica	물의돌	みずのいし	みずのいし	水之石	水之石
+0353-0001|data.Desc		A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve.	Une pierre étrange qui fait évoluer certaines espèces de Pokémon. Elle est de couleur bleue.	Dieser spezielle Stein löst bei bestimmten Pokémon die Entwicklung aus. Er ist hellblau.	Curiosa piedra que hace evolucionar a determinadas especies de Pokémon. Es de color azul.		Pietra particolare che fa evolvere determinate specie di Pokémon. Ha delle macchioline azzurre.	어느 특정 포켓몬을 진화시키는 이상한 돌. 투명한 푸른색을 띠고 있다.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　いし。 すんだ　みずいろを　している。	ある　特定の　ポケモンを 進化させる　不思議な　石。 澄んだ　水色を　している。	能让某些特定宝可梦 进化的神奇石头。 看上去是澄蓝色的。	能讓特定寶可夢 進化的神奇石頭。 看起來是澄澈的藍色。
+0354-0000|data.Name		Leaf Stone	Pierre Plante	Blattstein	Piedra Hoja		Pietrafoglia	리프의돌	リーフのいし	リーフのいし	叶之石	葉之石
+0354-0001|data.Desc		A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve.	Une pierre étrange qui fait évoluer certaines espèces de Pokémon. Une feuille est dessinée dessus.	Dieser spezielle Stein löst bei bestimmten Pokémon die Entwicklung aus. Er hat ein Blattmuster.	Curiosa piedra que hace evolucionar a determinadas especies de Pokémon. Tiene grabada una hoja.		Pietra particolare che fa evolvere determinate specie di Pokémon. Riporta l’immagine di una foglia.	어느 특정 포켓몬을 진화시키는 이상한 돌. 잎사귀 무늬가 있다.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　いし。 はっぱの　もようが　ある。	ある　特定の　ポケモンを 進化させる　不思議な　石。 はっぱの　模様が　ある。	能让某些特定宝可梦 进化的神奇石头。 有着叶子般的花纹。	能讓特定寶可夢 進化的神奇石頭。 上面有著葉子花紋。
+0355-0000|data.Name		Moon Stone	Pierre Lune	Mondstein	Piedra Lunar		Pietralunare	달의돌	つきのいし	つきのいし	月之石	月之石
+0355-0001|data.Desc		An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve.	Une pierre étrange qui fait évoluer certaines espèces de Pokémon. Elle est noire comme la nuit.	Dieser spezielle Stein löst bei bestimmten Pokémon die Entwicklung aus. Er ist schwarz wie die Nacht.	Curiosa piedra que hace evolucionar a determinadas especies de Pokémon. Es negra como el azabache.		Pietra particolare che fa evolvere determinate specie di Pokémon. È nera come la notte.	어느 특정 포켓몬을 진화시키는 이상한 돌. 저녁하늘의 달처럼 빛난다.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　いし。 よぞらのように　くろい。	ある　特定の　ポケモンを 進化させる　不思議な　石。 夜空のように　黒い。	能让某些特定宝可梦 进化的神奇石头。 像夜空一样乌黑。	能讓特定寶可夢 進化的神奇石頭。 像夜空一樣深黑。
+0356-0000|data.Name		Sun Stone	Pierre Soleil	Sonnenstein	Piedra Solar		Pietrasolare	태양의돌	たいようのいし	たいようのいし	日之石	日之石
+0356-0001|data.Desc		An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve.	Une pierre étrange qui fait évoluer certaines espèces de Pokémon. Elle est rouge comme le soleil couchant.	Dieser spezielle Stein löst bei bestimmten Pokémon die Entwicklung aus. Er ist rot wie die Abendsonne.	Curiosa piedra que hace evolucionar a determinadas especies de Pokémon. Es roja como el núcleo del sol.		Pietra particolare che fa evolvere determinate specie di Pokémon. È rossa come il sole al tramonto.	어느 특정 포켓몬을 진화시키는 이상한 돌. 태양의 온기를 지녔다.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　いし。 たいようのように　あかい。	ある　特定の　ポケモンを 進化させる　不思議な　石。 太陽のように　赤い。	能让某些特定宝可梦 进化的神奇石头。 像太阳一样赤红。	能讓特定寶可夢 進化的神奇石頭。 像太陽一樣赤紅。
+0357-0000|data.Name		Magmarizer	Magmariseur	Magmaisierer	Magmatizador		Magmatore	마그마부스터	マグマブースター	マグマブースター	熔岩增幅器	熔岩增幅器
+0357-0001|data.Desc		A box brimming with a huge amount of magma energy. It allows a certain kind of Pokémon to evolve.	Une boîte remplie d’une énorme quantité d’énergie magmatique. Appréciée d’un certain Pokémon.	Eine Schachtel mit Magmaenergie. Das Lieblingsstück eines bestimmten Pokémon.	Ataca al objetivo con un rayo de hielo que puede llegar a congelarlo.		Scatola strapiena di energia lavica. Piace a un Pokémon in particolare.	엄청난 마그마의 에너지가 비축되어 있는 상자. 어떤 포켓몬을 진화시킨다.	とてつもない　マグマの　エネルギーが たくわえられている　はこ。 ある　ポケモンが　このんでいる。	とてつもない　マグマの　エネルギーが 蓄えられている　箱。 ある　ポケモンが　好んでいる。	积蓄着庞大熔岩能量的箱子。 某种宝可梦很喜欢它。	蓄積著龐大 熔岩能量的箱子。 某種寶可夢很喜歡它。
+0358-0000|data.Name		Electirizer	Électriseur	Stromisierer	Electrizador		Elettritore	에레키부스터	エレキブースター	エレキブースター	电力增幅器	電力增幅器
+0358-0001|data.Desc		A box full of a massive amount of electric energy. It allows a certain kind of Pokémon to evolve.	Une boîte remplie d’une énorme quantité d’énergie électrique. Appréciée d’un certain Pokémon.	Eine Schachtel mit elektrischer Energie. Das Lieblingsstück eines bestimmten Pokémon.	Provoca un ataque de ira en el objetivo que solo le permite usar movimientos de ataque durante tres turnos.		Scatola strapiena di energia elettrica. Piace a un Pokémon in particolare.	엄청난 전기의 에너지가 비축되어 있는 상자. 어떤 포켓몬을 진화시킨다.	とてつもない　でんきの　エネルギーが たくわえられている　はこ。 ある　ポケモンが　このんでいる。	とてつもない　電気の　エネルギーが 蓄えられている　箱。 ある　ポケモンが　好んでいる。	积蓄着庞大电气能量的箱子。 某种宝可梦很喜欢它。	蓄積著龐大 電氣能量的箱子。 某種寶可夢很喜歡它。
+0359-0000|data.Name		Reaper Cloth	Tissu Fauche	Düsterumhang	Tela Terrible		Terrorpanno	영계의천	れいかいのぬの	れいかいのぬの	灵界之布	靈界之布
+0359-0001|data.Desc		An eerie cloth imbued with horrifyingly strong spiritual energy. It allows a certain kind of Pokémon to evolve.	Un tissu imprégné d’une énergie spirituelle horriblement puissante. Apprécié d’un certain Pokémon.	Ein Stoffumhang mit geistiger Energie. Das Lieblingsstück eines bestimmten Pokémon.	Ataca al objetivo con un potente rayo, pero quien lo usa debe descansar en el siguiente turno para reponer energía.		Panno intriso di un’energia spirituale terribilmente forte. Piace a un Pokémon in particolare.	무섭고 강한 영력이 담겨 있는 천. 어떤 포켓몬을 진화시킨다.	おそろしく　つよい　れいりょくが こめられている　ぬの。 ある　ポケモンが　このんでいる。	おそろしく　強い　霊力が こめられている　布。 ある　ポケモンが　好んでいる。	蕴含着惊人强大灵力的布。 某种宝可梦很喜欢它。	蘊含著驚人的 強大靈力的布。 某種寶可夢很喜歡它。
+0360-0000|data.Name		Cracked Pot													
+0360-0001|data.Desc		A peculiar teapot that can make a certain species of Pokémon evolve. It may be cracked, but tea poured from it is delicious.													
+0361-0000|data.Name		Chipped Pot													
+0361-0001|data.Desc		A peculiar teapot that can make a certain species of Pokémon evolve. It may be chipped, but tea poured from it is delicious.													
+0362-0000|data.Name		Shiny Stone	Pierre Éclat	Leuchtstein	Piedra Día		Pietrabrillo	빛의돌	ひかりのいし	ひかりのいし	光之石	光之石
+0362-0001|data.Desc		An odd stone that shines with dazzling light. It allows certain kinds of Pokémon to evolve.	Une pierre étrange qui fait évoluer certaines espèces de Pokémon. Elle brille d’une lumière aveuglante.	Dieser besondere, hell leuchtende Stein hilft manchen Pokémon bei ihrer Evolution.	Una piedra peculiar que hace evolucionar a algunos Pokémon. Tiene un brillo espectacular.		Pietra particolare che fa evolvere determinate specie di Pokémon. Brilla di una luce abbagliante.	어느 특정 포켓몬을 진화시키는 이상한 돌. 빛처럼 눈부시다.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　いし。 ひかりのように　まぶしい。	ある　特定の　ポケモンを 進化させる　不思議な　石。 ひかりのように　まぶしい。	能让某些特定宝可梦 进化的神奇石头。 像光芒一样耀眼。	能讓特定寶可夢 進化的神奇石頭。 像光芒一樣耀眼。
+0363-0000|data.Name		Dusk Stone	Pierre Nuit	Finsterstein	Piedra Noche		Neropietra	어둠의돌	やみのいし	やみのいし	暗之石	暗之石
+0363-0001|data.Desc		An odd stone with a mesmerizing darkness. It allows certain kinds of Pokémon to evolve.	Une pierre étrange qui fait évoluer certaines espèces de Pokémon. Elle est sombre comme une nuit sans lune.	Dieser besondere, düstere Stein hilft manchen Pokémon bei ihrer Evolution.	Una piedra peculiar que hace evolucionar a algunos Pokémon. Es oscura como la noche.		Pietra particolare che fa evolvere determinate specie di Pokémon. È scura come le tenebre.	어느 특정 포켓몬을 진화시키는 이상한 돌. 빠져들게 되는 어두운 색이다.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　いし。 やみのように　くらい。	ある　特定の　ポケモンを 進化させる　不思議な　石。 やみのように　暗い。	能让某些特定宝可梦 进化的神奇石头。 像黑夜一般漆黑。	能讓特定寶可夢 進化的神奇石頭。 像黑暗一般漆黑。
+0364-0000|data.Name		Dawn Stone	Pierre Aube	Funkelstein	Piedra Alba		Pietralbore	각성의돌	めざめいし	めざめいし	觉醒之石	覺醒之石
+0364-0001|data.Desc		An odd stone that glints like an eye. It allows certain kinds of Pokémon to evolve.	Une pierre étrange qui fait évoluer certaines espèces de Pokémon. Elle brille comme un œil.	Dieser besondere, glitzernde Stein hilft manchen Pokémon bei ihrer Evolution.	Una piedra peculiar que hace evolucionar a algunos Pokémon. Brilla como un lucero.		Pietra particolare che fa evolvere determinate specie di Pokémon. È luccicante come gli occhi.	어느 특정 포켓몬을 진화시키는 이상한 돌. 눈동자처럼 빛난다.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　いし。 ひとみのように　まばゆい。	ある　特定の　ポケモンを 進化させる　不思議な　石。 ひとみのように　まばゆい。	能让某些特定宝可梦 进化的神奇石头。 像眼眸一般光彩动人。	能讓特定寶可夢 進化的神奇石頭。 像眼眸一般光彩動人。
+0365-0000|data.Name		Link Cable	Câble Link	Linkkabel				링크케이블				
+0365-0001|data.Desc		An intriguing cable used for linking unknown devices. It allows a certain kind of Pokémon to evolve.	Un câble intriguant qui sert à lier deux appareils inconnu. Il permet à certains Pokémon d'évoluer.	Ein faszinierendes Kabel, welches für Verbindungen von unbekannten Geräten verwendet wurde. Es erlaubt bestimmten Pokémon sich zu entwickeln.				어떠한 장치들을 연결하는 데 쓰였을 묘한 케이블. 어떤 포켓몬을 진화시킨다.				
+0366-0000|data.Name		Up-Grade	Améliorator	Up-Grade	Mejora		Upgrade	업그레이드	アップグレード	アップグレード	升级数据	升級資料
+0366-0001|data.Desc	Don't mention Silph Co.  Mention it can evolve stuff.	A mysterious device filled with all sorts of data. It allows a certain kind of Pokémon to evolve.	Un dispositif étrange rempli de données diverses. Il permet à certains Pokémon d'évoluer.	Dieses mysteriöse Gerät ist mit verschiedenen Arten von Daten gefüllt. Es erlaubt bestimmten Pokémon sich zu entwickeln.				안에 여러 가지 정보가 가득한 기계다. 어떤 포켓몬을 진화시킨다.				
+0367-0000|data.Name		Dubious Disc	CD Douteux	Dubiosdisc	Disco Extraño		Dubbiodisco	괴상한패치	あやしいパッチ	あやしいパッチ	可疑补丁	可疑修正檔
+0367-0001|data.Desc	Mention it can evolve stuff.	An enigmatic disc that overflows with dubious data. It allows a certain kind of Pokémon to evolve.	Un disque énigmatique débordant de données doûteuse. Il permet à certains Pokémon d'évoluer.	Diese rätselhafte Disc ist mit dubiosen Daten überfüllt. Es erlaubt bestimmten Pokémon sich zu entwickeln.				안에 괴상한 정보가 가득한 투명한 기계다. 어떤 포켓몬을 진화시킨다.				
+0368-0000|data.Name		Razor Fang	Croc Rasoir	Scharfzahn	Colmillo Agudo		Affilodente	예리한이빨	するどいキバ	するどいキバ	锐利之牙	銳利之牙
+0368-0001|data.Desc		A savagely sharp, piercing fang. When the holder successfully inflicts damage, the target may also flinch.	Objet à tenir. Peut apeurer l’ennemi quand le porteur lui inflige des dégâts.	Ein Item zum Tragen. Verursacht der Träger Schaden, schreckt das Ziel eventuell zurück.	Bloquea todos los ataques. Puede fallar si se usa repetidamente.		Strumento da dare a un Pokémon. Chi ce l’ha può far tentennare il nemico colpito.	날카롭고 뾰족한 이빨. 지니게 하면 데미지를 줬을 때 풀죽게 하기도 한다.	するどく　とがった　キバ。 もたせると　ダメージを　あたえたとき ひるませることが　ある。	鋭く　とがった　キバ。 持たせると　ダメージを　与えたとき ひるませることが　ある。	尖锐的牙齿。 携带后，在给予伤害时， 有时会让对手畏缩。	尖銳的牙齒。 攜帶後，在給予傷害時， 有時會讓對手畏縮。
+0369-0000|data.Name		Razor Claw	Griffe Rasoir	Scharfklaue	Garra Afilada		Affilartigli	예리한손톱	するどいツメ	するどいツメ	锐利之爪	銳利之爪		
+0369-0001|data.Desc		A wickedly sharp claw perfect for raking enemies. It increases the holder’s critical-hit ratio.	Objet à tenir. Une griffe crochue et pointue augmentant le taux de critiques.	Ein Item zum Tragen. Die scharfe Klaue erhöht die Volltrefferquote des Trägers.	Impresionante pared de luz que reduce el daño de los ataques especiales durante cinco turnos.		Strumento da dare a un Pokémon. Artiglio che aumenta la probabilità di sferrare brutti colpi.	날카롭고 뾰족한 손톱. 지니게 하면 기술이 급소에 맞기 쉬워진다.	するどく　とがった　ツメ。 もたせると　わざが　きゅうしょに あたりやすくなる。	鋭く　とがった　ツメ。 持たせると　技が　急所に 当たりやすくなる。	尖锐的爪子。 携带后，招式会 变得容易击中要害。	尖銳的爪子。 攜帶後，招式會 變得容易擊中要害。		
+0371-0000|data.Name		Protector	Protecteur	Schützer	Protector		Copertura	프로텍터	プロテクター	プロテクター	护具	護具		
+0371-0001|data.Desc		A heavy, durable piece of protective equipment. It allows a certain kind of Pokémon to evolve.	Un objet protecteur très dur et très lourd, apprécié d’un certain Pokémon.	Ein schützendes Item. Steif und schwer. Das Lieblingsstück eines bestimmten Pokémon.	Quien lo usa intensifica el efecto del sol durante cinco turnos, lo que potencia los movimientos de tipo Fuego.		Strumento protettivo, molto duro e pesante, prediletto da un Pokémon in particolare.	무겁고 튼튼한 보호장비. 어떤 포켓몬을 진화시킨다.	なにかの　プロテクター。 とても　かたくて　おもい。 ある　ポケモンが　このんでいる。	なにかの　プロテクター。 とても　硬くて　重い。 ある　ポケモンが　好んでいる。	某种护具。 非常坚硬而且沉重。 某种宝可梦很喜欢它。	某種護具。 非常堅硬而且沉重。 某種寶可夢很喜歡它。		
+0372-0000|data.Name		Oval Stone	Pierre Ovale	Ovaler Stein	Piedra Oval		Pietraovale	동글동글돌	まんまるいし	まんまるいし	浑圆之石	渾圓之石		
+0372-0001|data.Desc		A surprisingly smooth, rounded stone. It allows a certain kind of Pokémon to evolve.	Une pierre étrange qui fait évoluer certaines espèces de Pokémon. Elle a la forme d’un œuf.	Dieser besondere, eiförmige Stein hilft manchen Pokémon bei ihrer Evolution.	Una piedra peculiar que hace evolucionar a algunos Pokémon. Tiene forma de huevo.		Pietra particolare che fa evolvere determinate specie di Pokémon. È a forma di uovo.	어느 특정 포켓몬을 진화시키는 이상한 돌. 구슬처럼 둥글다.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　いし。 たまのように　まるい。	ある　特定の　ポケモンを 進化させる　不思議な　石。 たまのように　まるい。	能让某些特定宝可梦 进化的神奇石头。 像珠子一般圆润。	能讓特定寶可夢 進化的神奇石頭。 像珠子一般圓潤。		
+0373-0000|data.Name		Prism Scale	Bel'Écaille	Schönschuppe	Escama Bella		Squama Bella	고운비늘	きれいなウロコ	きれいなウロコ	美丽鳞片	美麗鱗片		
+0373-0001|data.Desc		A mysterious scale that shines in rainbow colors. It allows a certain kind of Pokémon to evolve.	Une écaille étrange qui fait évoluer certaines espèces de Pokémon. Elle a une couleur arc-en-ciel.	Eine seltsame Schuppe, durch die sich bestimmte Pokémon entwickeln. Sie funkelt in den Farben des Regenbogens.	Joya de un solo uso que potencia los movimientos de tipo Volador. Debe llevarla un Pokémon.		Squama misteriosa che fa evolvere determinate specie di Pokémon. Riflette i colori dell’arcobaleno.	어느 특정 포켓몬을 진화시키는 이상한 비늘. 무지갯빛으로 빛나고 있다.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　ウロコ。 にじいろに　かがやいている。	ある　特定の　ポケモンを 進化させる　不思議な　ウロコ。 にじ色に　輝いている。	能让某些特定宝可梦 进化的神奇鳞片。 散发着虹色光辉。	能讓特定寶可夢 進化的神奇鱗片。 散發著虹色光輝。		
+0374-0000|data.Name		King's Rock	Roche Royale	King-Stein	Roca del Rey		Roccia di Re	왕의징표석	おうじゃのしるし	おうじゃのしるし	王者之证	王者之證		
+0374-0001|data.Desc		An impressive icon that conveys a kingly nobility. When the holder successfully inflicts damage, the target may also flinch.	Objet à tenir. Peut apeurer l’ennemi lorsque le porteur lui inflige des dégâts.	Gibst du es einem Pokémon zum Tragen, lässt es mit seinem Angriff das Ziel gelegentlich zurückschrecken.	Debe llevarla un Pokémon. La robustez de la piedra fortalece los movimientos de tipo Roca.		Strumento da dare a un Pokémon. Se chi lo usa arreca danni, può far tentennare il nemico.	지니게 하면 공격해서 데미지를 줄 때 상대를 풀죽이기도 한다.	もたせると　こうげきして ダメージを　あたえたときに あいてを　ひるませることが　ある。	持たせると　攻撃して ダメージを　与えたときに 相手を　ひるませることが　ある。	携带后进行攻击， 在造成伤害时， 有时会让对手畏缩。	攜帶後進行攻擊， 並造成傷害時， 有時會讓對手畏縮。		
+0375-0000|data.Name		Deep Sea Tooth	Dent Océan	Abysszahn	Diente Marino		Dente Abissi	심해의이빨	しんかいのキバ	しんかいのキバ	深海之牙	深海之牙		
+0375-0001|data.Desc		A supersharp fang with a subtle gleam. It allows a certain kind of Pokémon to evolve.	Une dent très tranchante et argentée. Elle permet à certains Pokémon d'évoluer.	Ein superscharfer Zahn mit einem subtilen Glanz. Es erlaubt einer bestimmten Art von Pokémon die Entwicklung.				약간 빛나는 날카로운 이빨.  어떤 포켓몬을 진화시킨다.		パールルに　持たせると 特攻が　あがる　キバ。 鋭く　銀色に　光る。	让珍珠贝携带后， 特攻就会提高的牙齿。 散发着闪亮的银光。	讓珍珠貝攜帶後， 特攻就會提高的牙齒。 散發著銳利的銀色光芒。		
+0376-0000|data.Name		Deep Sea Scale	Écaille Océan	Abyssplatte	Escama Marina		Squamabissi	심해의비늘	しんかいのウロコ	しんかいのウロコ	深海鳞片	深海鱗片		
+0376-0001|data.Desc		A pretty scale that shines faintly. It allows a certain kind of Pokémon to evolve.	Une jolie écaille rose un peu brillante. Elle permet à certains Pokémon d'évoluer.	Eine schöne Schuppe, welche leicht scheint. Es erlaubt einer bestimmten Art von Pokémon die Entwicklung.				약간 반짝이는 예쁜 비늘. 어떤 포켓몬을 진화시킨다.		パールルに　持たせると 特防が　あがる　ウロコ。 うすい　ピンク色に　光る。	让珍珠贝携带后， 特防就会提高的鳞片。 散发着淡淡的粉红色光芒。	讓珍珠貝攜帶後， 特防就會提高的鱗片。 散發著淡淡的粉紅色光芒。		
+0377-0000|data.Name		Sun Ribbon	Ruban Soleil	Sonnenschleife				태양리본						
+0377-0001|data.Desc		A ribbon infused with sunshine. It allows a certain kind of Pokémon to evolve.	Un ruban imprégné des rayons du soleil. Il permet à certains Pokémon d'évoluer.	Eine Schleife eingeflößt mit Sonnenschein. Es erlaubt einer bestimmten Art von Pokémon sich zu entwickeln.				태양빛을 머금은 리본. 어떤 포켓몬을 진화시킨다.						
+0378-0000|data.Name		Lunar Ribbon	Ruban Lune	Mondschleife				달빛리본						
+0378-0001|data.Desc		A ribbon infused with moonlight. It allows a certain kind of Pokémon to evolve.	Un ruban gorgé de lumière lunaire. Il permet à certains Pokémon d'évoluer.	Eine Schleife eingeflößt mit Mondlicht. Es erlaubt einer bestimmten Art von Pokémon sich zu entwickeln.				달빛을 머금은 리본. 어떤 포켓몬을 진화시킨다.						
+0379-0000|data.Name		Ice Stone	Pierre Glace	Eisstein	Piedra Hielo		Pietragelo	얼음의돌	こおりのいし	こおりのいし	冰之石	冰之石																			
+0379-0001|data.Desc		A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern.	Une pierre étrange qui fait évoluer certaines espèces de Pokémon. Un flocon de neige semble dessiné dessus.	Dieser spezielle Stein löst bei bestimmten Pokémon die Entwicklung aus. Er hat ein Schneeflockenmuster.	Una piedra peculiar que hace evolucionar a algunos Pokémon. Presenta motivos que recuerdan a los cristales de hielo.		Pietra particolare che fa evolvere determinate specie di Pokémon. Si intravede l'immagine di un fiocco di neve.	어느 특정 포켓몬을 진화시키는 이상한 돌. 눈송이 무늬가 있다.	ある　とくていの　ポケモンを しんかさせる　ふしぎな　いし。 ゆきの　もようが　ある。	ある　特定の　ポケモンを 進化させる　不思議な　石。 雪の　模様が　ある。	能让某些特定宝可梦 进化的神奇石头。 有着雪花般的花纹。	能讓特定寶可夢 進化的神奇石頭。 有著雪花般的花紋。																			
+0380-0000|data.Name		Insect Plate	Plaque Insecte	Käfertafel	Tabla Bicho		Lastrabaco	비단벌레플레이트	たまむしプレート	たまむしプレート	玉虫石板	玉蟲石板		
+0380-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Bug-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Käfer.				지니게 하면 벌레타입 기술의 위력이 절반이 되는 석판.						
+0381-0000|data.Name		Dread Plate	Plaque Ombre	Furchttafel	Tabla Oscura		Lastratimore	공포플레이트	こわもてプレート	こわもてプレート	恶颜石板	惡顏石板		
+0381-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Dark-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Unlicht.				지니게 하면 악타입 기술의 위력이 절반이 되는 석판.						
+0382-0000|data.Name		Draco Plate	Plaque Draco	Dracotafel	Tabla Draco		Lastradrakon	용의플레이트	りゅうのプレート	りゅうのプレート	龙之石板	龍之石板		
+0382-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Dragon-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Drache.				지니게 하면 드래곤타입 기술의 위력이 절반이 되는 석판.						
+0383-0000|data.Name		Zap Plate	Plaque Volt	Blitztafel	Tabla Trueno		Lastrasaetta	우뢰플레이트	いかずちプレート	いかずちプレート	雷电石板	雷電石板		
+0383-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Electric-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Elektro.				지니게 하면 전기타입 기술의 위력이 절반이 되는 석판.						
+0384-0000|data.Name		Pixie Plate	Plaque Pixie	Feentafel	Tabla Duende		Lastraspiritello	정령플레이트	せいれいプレート	せいれいプレート	妖精石板	妖精石板		
+0384-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Fairy-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Fee.				지니게 하면 페어리타입 기술의 위력이 절반이 되는 석판.						
+0385-0000|data.Name		Fist Plate	Plaque Poing	Fausttafel	Tabla Fuerte		Lastrapugno	주먹플레이트	こぶしのプレート	こぶしのプレート	拳头石板	拳頭石板		
+0385-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Fighting-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Kampf.				지니게 하면 격투타입 기술의 위력이 절반이 되는 석판.						
+0386-0000|data.Name		Flame Plate	Plaque Flamme	Feuertafel	Tabla Llama		Lastrarogo	불구슬플레이트	ひのたまプレート	ひのたまプレート	火球石板	火球石板		
+0386-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Fire-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Feuer.				지니게 하면 불타입 기술의 위력이 절반이 되는 석판.						
+0387-0000|data.Name		Sky Plate	Plaque Ciel	Wolkentafel	Tabla Cielo		Lastracielo	푸른하늘플레이트	あおぞらプレート	あおぞらプレート	蓝天石板	藍天石板		
+0387-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Flying-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Flug.				지니게 하면 비행타입 기술의 위력이 절반이 되는 석판.						
+0388-0000|data.Name		Spooky Plate	Plaque Fantô	Spuktafel	Tabla Terror		Lastratetra	원령플레이트	もののけプレート	もののけプレート	妖怪石板	妖怪石板		
+0388-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ghost-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Geist.				지니게 하면 고스트타입 기술의 위력이 절반이 되는 석판.						
+0389-0000|data.Name		Meadow Plate	Plaque Herbe	Wiesentafel	Tabla Pradal		Lastraprato	초록플레이트	みどりのプレート	みどりのプレート	碧绿石板	碧綠石板		
+0389-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Grass-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Pflanze.				지니게 하면 풀타입 기술의 위력이 절반이 되는 석판.						
+0390-0000|data.Name		Earth Plate	Plaque Terre	Erdtafel	Tabla Terrax		Lastrageo	대지플레이트	だいちのプレート	だいちのプレート	大地石板	大地石板		
+0390-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ground-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Boden.				지니게 하면 땅타입 기술의 위력이 절반이 되는 석판.						
+0391-0000|data.Name		Icicle Plate	Plaque Glace	Frosttafel	Tabla Helada		Lastragelo	고드름플레이트	つららのプレート	つららのプレート	冰柱石板	冰柱石板		
+0391-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ice-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Eis.				지니게 하면 얼음타입 기술의 위력이 절반이 되는 석판.						
+0393-0000|data.Name		Toxic Plate	Plaque Toxik	Gifttafel	Tabla Tóxica		Lastrafiele	맹독플레이트	もうどくプレート	もうどくプレート	剧毒石板	劇毒石板		
+0393-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Poison-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Gift.				지니게 하면 독타입 기술의 위력이 절반이 되는 석판.						
+0394-0000|data.Name		Mind Plate	Plaque Esprit	Hirntafel	Tabla Mental		Lastramente	이상한플레이트	ふしぎのプレート	ふしぎのプレート	神奇石板	神奇石板		
+0394-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Psychic-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Psycho.				지니게 하면 에스퍼타입 기술의 위력이 절반이 되는 석판.						
+0395-0000|data.Name		Stone Plate	Plaque Roc	Steintafel	Tabla Pétrea		Lastrapietra	암석플레이트	がんせきプレート	がんせきプレート	岩石石板	岩石石板		
+0395-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Rock-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Gestein.				지니게 하면 바위타입 기술의 위력이 절반이 되는 석판.						
+0396-0000|data.Name		Iron Plate	Plaque Fer	Eisentafel	Tabla Acero		Lastraferro	강철플레이트	こうてつプレート	こうてつプレート	钢铁石板	鋼鐵石板		
+0396-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Steel-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Stahl.				지니게 하면 강철타입 기술의 위력이 절반이 되는 석판.						
+0397-0000|data.Name		Splash Plate	Plaque Hydro	Wassertafel	Tabla Linfa		Lastraidro	물방울플레이트	しずくプレート	しずくプレート	水滴石板	水滴石板		
+0397-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Water-type moves.		Ein Item zum Tragen. Diese Steintafel halbiert den erlittenen Schaden von Attacken des Typen Wasser.				지니게 하면 물타입 기술의 위력이 절반이 되는 석판.						
+0400-0000|data.Name		Power Band		Machtband										
+0400-0001|data.Desc		A hold item that slightly boosts the Pokémon's Attack.		Ein Item zum Tragen. Der Angriff des Trägers wird leicht erhöht.										
+0401-0000|data.Name		Special Band		Spezialband										
+0401-0001|data.Desc		A hold item that slightly boosts the Pokémon's Special Attack.		Ein Item zum Tragen. Der Spezial Angriff des Trägers wird leicht erhöht.										
+0402-0000|data.Name		Defense Scarf		Panzerschal										
+0402-0001|data.Desc		A hold item that slightly boosts the Pokémon's Defense.		Ein Item zum Tragen. Die Verteidigung des Trägers wird leicht erhöht.										
+0403-0000|data.Name		Zinc Band		Zinkband										
+0403-0001|data.Desc		A hold item that slightly boosts the Pokémon's Special Defense.		Ein Item zum Tragen. Die Spezial Verteidigung des Trägers wird leicht erhöht.										
+0404-0000|data.Name		Big Root	Grosse Racine	Großwurzel	Raíz Grande		Granradice	큰뿌리	おおきなねっこ	おおきなねっこ	大根茎	大根莖		
+0404-0001|data.Desc		A held item that increases HP recovery.	Objet à tenir qui améliore la récupération des PV du porteur.	Ein Item zum Tragen. Verstärkt KP-stehlende Attacken.				지니게 하면 모든 종류의 HP회복이 증가한다.						
+0405-0000|data.Name		Expert Belt	Ceinture Pro	Expertengurt	Cinta Experto		Abilcintura	달인의띠	たつじんのおび	たつじんのおび	达人带	達人帶		
+0405-0001|data.Desc		A well-worn belt that boosts the power of super-effective moves.	Objet à tenir. Une ceinture usée augmentant légèrement la puissance des capacités super efficaces.	Ein Item zum Tragen. Dieser alte Gürtel verstärkt sehr effektive Attacken.	Prolonga la duración del movimiento Danza Lluvia que use el Pokémon que la lleva.		Strumento da dare a un Pokémon. Cintura consumata che potenzia di poco le mosse superefficaci.	오래 사용한 까만 띠. 지니게 하면 효과가 뛰어날 때 기술의 위력이 조금 올라간다.	つかいこまれた　くろい　おび。 もたせると　こうかばつぐんの　とき わざの　いりょくが　すこし　あがる。	使いこまれた　黒い　帯。 持たせると　効果バツグンの　とき 技の　威力が　少し　あがる。	用惯了的黑色带子。 携带后，效果绝佳时的 招式威力就会少量提高。	用慣了的黑色帶子。 攜帶後，效果絕佳時的 招式威力就會少量提高。		
+0444-0000|data.Name		Light Box		Leichte Box										
+0444-0001|data.Desc		A box that is somewhat light. Specific Pokémon adore the items inside.		Eine Box, die recht leicht ist. Bestimmte Pokémon lieben den Inhalt.										
+0445-0000|data.Name		Heavy Box		Schwere Box										
+0445-0001|data.Desc		A box that is unbelievably heavy. Specific Pokémon adore the items inside.		Eine Box, die unglaublich schwer ist. Bestimmte Pokémon lieben den Inhalt.										
+0446-0000|data.Name		Nifty Box		Coole Box										
+0446-0001|data.Desc		A box that is completely impressive. There is something mysterious inside.		Eine Box, die total beeindruckend ist. Der Inhalt hilft Pokémon generell dabei ihre Fähigkeiten zu verbessern.										
+0447-0000|data.Name		Dainty Box		Schicke Box										
+0447-0001|data.Desc		A box that is dainty and fashionable. There is something tasty inside!		Eine schicke, modische Box. Der Inhalt hilft Pokémon generell dabei stärker zu werden.										
+0448-0000|data.Name		Glittery Box		Glitzerbox										
+0448-0001|data.Desc		A box that glitters with dazzling light. Whatever's inside is sure to sell for a high price!		Das Glitzern dieser Box ist blendend. Was auch immer da drinnen ist wird sich sicher gut verkaufen lassen.										
+0449-0000|data.Name		Deluxe Box		Luxusbox										
+0449-0001|data.Desc		A box that is extravagant and opulent. It looks like something is inside.		Diese Box ist extravagant und üppig. Sieht so aus, als wäre etwas drinnen.										
+0450-0000|data.Name		Link Box	Boîte Chaîne	Link Box				링크박스						
+0450-0001|data.Desc		A marvelous box that lets the user recall any move they've learned in the past.	Une boîte merveilleuse qui permet à l'utilisateur de se souvenir de n'importe quelle capacité apprise auparavant.	Diese fabelhafte Box erlaubt dem Nutzer sich an jegliche Attacken, die er in seiner Vergangenheit erlernt hat, zu erinnern.				예전에 습득한 기술을 다시 배울 수 있게 하는 환상적인 상자.						
+0451-0000|data.Name		Assembly Box	Boîte Rassemblement	Versammlungsbox				모여라상자						
+0451-0001|data.Desc		A marvelous box that lets the user add any Pokémon from the assembly to the team.	Une boîte merveilleuse qui permet à l'utilisateur de convoquer un Pokémon du Rassemblement.	Diese fabelhafte Box erlaubt es ein vorher rekrutiertes Pokémon wieder in das Team hinzuzufügen.				집합한 포켓몬을 아무나 하나 팀에 추가할 수 있게 하는 환상적인 상자.						
+0452-0000|data.Name		Storage Box	Boîte Réserve	Lagerbox				보관상자						
+0452-0001|data.Desc		A marvelous box that lets the user add any item from storage into the Treasure Bag.	Une boîte merveilleuse qui permet à l'utilisateur d'ajouter objet de la Réserve dans son Sac à Trésor.	Diese fabelhafte Box erlaubt dem Nutzer ein beliebiges Item vom Lager in den Schatzbeutel hinzuzufügen.				보관하고 있던 도구를 하나 가방에 옮겨주는 환상적인 상자.						
+0453-0000|data.Name		Ability Capsule	Pilule Talent	Fähigk.-Kapsel	Cáps. Habilidad		Capsula abilità	특성캡슐	とくせいカプセル	とくせいカプセル	特性胶囊	特性膠囊		
+0453-0001|data.Desc		A capsule that allows a Pokémon to change its Abilities when used.	Une pilule qui permet au Pokémon de changer sa Capacité Spéciale.	Eine Kapsel, welche bei Nutzung einem Pokémon erlaubt, seine Fähigkeit zu ändern.				포켓몬의 특성을 바꾸는 캡슐.						
+0454-0000|data.Name		Grimy Food	Morviture	Sleimkost				질퍽음식						
+0454-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also inflict a variety of status problems because it's covered in filthy grime. Be careful of what you eat!	Aliment qui remplit un peu l'Estomac du Pokémon. Provoque cependant divers problèmes de statut car il est couvert de crasse répugnante. Faites attention à ce que vous mangez!	Ein Nahrungsmittel, welches den Magen des Pokémons etwas füllt. Jedoch wird der Anwender auch von einer Reihe möglicher Statusproblemen getroffen, da dieses Item in ekligem Sleim überzogen ist. Sei vorsichtig was du isst!				포만감이 약간 회복되지만, 위생적이지 않아 상태이상에 걸리게 된다. 식중독에 주의하도록 하자.						
+0455-0000|data.Name		Key	Clé	Schlüssel				열쇠						
+0455-0001|data.Desc		A key that unlocks a chest or door inside a dungeon.		Ein Schlüssel, welcher eine Truhe oder eine Tür in einem Dungeon öffnen kann.				던전의 문이나 상자를 열 수 있는 열쇠.						
+0456-0000|data.Name		Ancient Key	Clé Ancienne	Antiker Schlüssel				고대열쇠						
+0456-0001|data.Desc		A key that unlocks an ancient door inside a dungeon.	Clé déverrouillant une Porte Ancienne dans un donjon.	Ein Schlüssel, welcher eine antike Tür in einem Dungeon öffnen kann.				던전의 고대의 문을 열 수 있는 열쇠.						
+0477-0000|data.Name		Nugget	Pépite	Nugget	Pepita		Pepita	금구슬	きんのたま	きんのたま	金珠	金珠		
+0477-0001|data.Desc		A nugget of pure gold. It sells for a very high price.	Une pépite d’or pur qui brille d’un éclat magnifique. Peut être vendue à bon prix aux magasins.	Ein Nugget aus purem Gold, das einen schimmernden Glanz besitzt. Es ist von großem Wert.	Pepita de oro puro que desprende un brillo espectacular. Puede venderse muy cara en las tiendas.		Pepita d’oro puro dal luccichio sfavillante. Si può vendere a un prezzo piuttosto alto nei negozi.	금색으로 반짝반짝 빛나는 순금으로 만들어진 구슬. 상점에서 비싸게 팔린다.	キラキラと　きんいろに　ひかる じゅんきん　せいの　たま。 ショップで　たかく　うれる。	キラキラと　金色に　光る 純金製の　玉。 ショップで　高く　売れる。	闪着金光， 以纯金制成的珠子。 可以在商店高价出售。	閃著金光的 純金製珠子。 可以在商店高價出售。		
+0478-0000|data.Name		Mystery Part		Mysteriöses Teil										
+0478-0001|data.Desc														
+0479-0000|data.Name		Berserk Gene		Berserker Gen										
+0479-0001|data.Desc														
+0480-0000|data.Name		Pearl		Perle										
+0480-0001|data.Desc		A rather small pearl that has a very nice silvery sheen to it. It sells for a moderately high price.		Eine ziemlich kleine Perle die silbernd glänzt. Sie kann für einen ziemlich guten Preis verkauft werden.										
+0481-0000|data.Name		Heart Scale		Herzschuppe										
+0481-0001|data.Desc		A pretty, heart-shaped scale that is extremely rare. It glows faintly with all of the colors of the rainbow.		Eine schöne, Herz-förmige Schuppe, die sehr selten ist. Sie schimmert leicht in allen Regenbogenfarben.										
+0482-0000|data.Name		Red Orb	Orbe Rouge	Rote Kugel	Esfera Roja		Sfera Rossa	주홍구슬	べにいろのたま	べにいろのたま	朱红色宝珠	朱紅色寶珠		
+0482-0001|data.Desc			Un orbe incarnat dont on dit qu’il a un lien très étroit avec les légendes de Hoenn.	Eine rot schimmernde Kugel, von der in den Legenden der Hoenn-Region berichtet wird.	Joya de un solo uso que potencia los movimientos de tipo Lucha. Debe llevarla un Pokémon.		Sfera con riflessi rossi, che pare essere strettamente legata alle leggende della regione di Hoenn.		ホウエンちほうの　でんせつと ふかい　かかわりが　あると　いわれる あかく　かがやく　たま。	ホウエン地方の　伝説と 深い　関わりが　あると　いわれる あかく　かがやく　たま。	散发着红色光辉的宝珠。 据说和丰缘地区的传说渊源颇深。	據說和豐緣地區的傳說 有著很深淵源的， 散發著紅色光輝的寶珠。		
+0483-0000|data.Name		Blue Orb	Orbe Bleu	Blaue Kugel	Esfera Azul		Sfera Blu	쪽빛구슬	あいいろのたま	あいいろのたま	靛蓝色宝珠	靛藍色寶珠		
+0483-0001|data.Desc			Un orbe céruléen dont on dit qu’il a un lien très étroit avec les légendes de Hoenn.	Eine blau schimmernde Kugel, von der in den Legenden der Hoenn-Region berichtet wird.	Joya de un solo uso que potencia los movimientos de tipo Veneno. Debe llevarla un Pokémon.		Sfera con riflessi blu, che pare essere strettamente legata alle leggende della regione di Hoenn.		ホウエンちほうの　でんせつと ふかい　かかわりが　あると　いわれる あおく　かがやく　たま。	ホウエン地方の　伝説と 深い　関わりが　あると　いわれる あおく　かがやく　たま。	散发着蓝色光辉的宝珠。 据说和丰缘地区的传说渊源颇深。	據說和豐緣地區的傳說 有著很深淵源的， 散發著藍色光輝的寶珠。		
+0484-0000|data.Name		Green Orb		Grüne Kugel				옥색구슬						
+0484-0001|data.Desc														
+0486-0000|data.Name		Meteorite	Météorite	Meteorit	Meteorito		Meteorite	운석	いんせき	いんせき	陨石	隕石		
+0486-0001|data.Desc		A meteorite that fell from space long ago. It can be used on Deoxys once per floor to cause a Forme change.												
+0487-0000|data.Name		Adamant Orb	Orbe Adamant	Adamant-Orb	Diamansfera		Adamasfera	금강옥	こんごうだま	こんごうだま	金刚宝珠	金剛寶珠		
+0487-0001|data.Desc			Un orbe très brillant destiné à Dialga. Augmente la puissance des capacités de type Dragon et Acier.	Ein hell leuchtender Orb. Verstärkt Attacken vom Typ Drache und Stahl, wenn Dialga ihn trägt.	Los Pokémon pueden llevarla o usarla para curarse las quemaduras.		Sfera molto luminosa da dare a Dialga. Potenzia le mosse di tipo Drago e Acciaio.		ディアルガに　もたせると　ドラゴンと はがねタイプの　わざの　いりょくが あがる　ひかり　かがやく　たま。	ディアルガに　持たせると　ドラゴンと はがねタイプの　技の　威力が あがる　光り　輝く　珠。	让帝牙卢卡携带的话， 龙和钢属性的招式威力就会提高。 散发着光辉的宝珠。	讓帝牙盧卡攜帶的話， 龍和鋼屬性的招式威力就會提高。 散發著光輝的寶珠。		
+0488-0000|data.Name		Lustrous Orb	Orbe Perlé	Weiß-Orb	Lustresfera		Splendisfera	백옥	しらたま	しらたま	白玉宝珠	白玉寶珠		
+0488-0001|data.Desc			Un bel orbe luisant destiné à Palkia. Augmente la puissance des capacités de type Dragon et Eau.	Ein hell leuchtender Orb. Verstärkt Attacken vom Typ Drache und Wasser, wenn Palkia ihn trägt.	Los Pokémon pueden llevarla o usarla para descongelarse.		Sfera splendente da dare a Palkia. Potenzia le mosse di tipo Drago e Acqua.		パルキアに　もたせると　ドラゴンと みずタイプの　わざの　いりょくが あがる　うつくしく　かがやく　たま。	パルキアに　持たせると　ドラゴンと みずタイプの　技の　威力が あがる　美しく　輝く　珠。	让帕路奇亚携带的话， 龙和水属性的招式威力就会提高。 散发着美丽光辉的宝珠。	讓帕路奇亞攜帶的話， 龍和水屬性的招式威力就會提高。 散發著美麗光輝的寶珠。		
+0489-0000|data.Name		Griseous Orb	Orbe Platiné	Platinum-Orb	Griseosfera		Grigiosfera	백금옥	はっきんだま	はっきんだま	白金宝珠	白金寶珠		
+0489-0001|data.Desc		A glowing orb can be used on Giratina once per floor to cause a Forme change.												
+0490-0000|data.Name		Spacetime Globe		Raumglobus				우주의구슬					
+0490-0001|data.Desc												
+0491-0000|data.Name		Gracidea						
+0491-0001|data.Desc		A beautiful flower that blooms in the Secret Garden. It can be used on Shaymin once per floor to cause a Forme change.						
+0700-0000|data.Name		Green Silk	Soie Verte	Grünseide	Seda Verde		Setaverde	초록시폰	みどりのシフォン
+0701-0000|data.Name		Wonder Dust	Poudre Miracle	Wunderstaub	Ceniza Única		Magipolvere	이상한파우더	ふしぎなパウダー
+0702-0000|data.Name		Guard Gem	Gemme Garde	Schutzgemme	Joya Defensa		Gemmadifesa	가드젬	ガードジェム
+0703-0000|data.Name		Defend Globe	Défensphère	Abwehrglobus	Globodefensa		Globodifesa	지키미오브	まもりのオーブ
+0704-0000|data.Name		Black Silk	Soie Noire	Schwarzseide	Seda Negra		Setanera	검정시폰	くろいシフォン
+0705-0000|data.Name		Dark Dust	Poudrobscure	Dunkelstaub	Ceniza Negra		Polvoscura	악파우더	あくのパウダー
+0706-0000|data.Name		Dark Gem	Gemmobscure	Dunkelgemme	Joya Oscura		Gemmascura	다크젬	ダークジェム
+0707-0000|data.Name		Dusk Globe	Sphère Nuit	Dunkelglobus	Globo Ocaso		Globoscuro	어둠오브	やみのオーブ
+0708-0000|data.Name		Royal Silk	Soie Royale	Königsseide	Seda Real		Setareale	감색시폰	こんいろシフォン
+0709-0000|data.Name		Dragon Dust	Dracopoudre	Drachenstaub	Ceniza Drago		Polvodrago	용파우더	りゅうのパウダー
+0710-0000|data.Name		Dragon Gem	Dracogemme	Drachengemme	Joya Dragón		Gemmadrago	드래곤젬	ドラゴンジェム
+0711-0000|data.Name		Dragon Globe	Dracosphère	Drachenglob.	Globo Dragón		Globodrago	드래곤오브	ドラゴンオーブ
+0712-0000|data.Name		Yellow Silk	Soie Jaune	Gelbseide	Seda Ámbar		Setagialla	노랑시폰	きいろのシフォン
+0713-0000|data.Name		Thunder Dust	Poudre Volt	Donnerstaub	Ceniza Elec.		Tuonopolvere	전기파우더	でんきのパウダー
+0714-0000|data.Name		Thunder Gem	Gemme Foudre	Donnergemme	Joya Trueno		Gemmatuono	썬더젬	サンダージェム
+0715-0000|data.Name		Volt Globe	Sphère Volt	Voltglobus	Electroglobo		Globovolt	천둥오브	かみなりのオーブ
+0716-0000|data.Name		Magenta Silk		Purpurseide				
+0717-0000|data.Name		Fairy Dust		Feenstaub				
+0718-0000|data.Name		Fairy Gem		Feengemme				
+0719-0000|data.Name		Fairy Globe		Feenglobus				
+0720-0000|data.Name		Orange Silk	Soie Orange	Orangeseide	Seda Naranja		Setarancio	주황시폰	だいだいシフォン
+0721-0000|data.Name		Courage Dust	Poudrehardie	Mutstaub	Ceniza Audaz		Polvaudacia	기합파우더	きあいのパウダー
+0722-0000|data.Name		Fight Gem	Gemme Combat	Kampfgemme	Joya Lucha		Gemmalotta	파이트젬	ファイトジェム
+0723-0000|data.Name		Power Globe	Sphèrpouvoir	Kraftglobus	Globo Empuje		Globoforza	파워풀오브	パワフルオーブ
+0724-0000|data.Name		Red Silk	Soie Rouge	Rotseide	Seda Roja		Setarossa	빨강시폰	あかいシフォン
+0725-0000|data.Name		Fire Dust	Poudre Feu	Feuerstaub	Ceniza Fuego		Polvofuoco	불꽃파우더	ほのおのパウダー
+0726-0000|data.Name		Fiery Gem	Gemme Feu	Feuergemme	Joya Fuego		Gemmardente	파이어젬	ファイヤージェム
+0727-0000|data.Name		Fiery Globe	Sphère Feu	Feuerglobus	Globo Fuego		Globardente	불꽃오브	ほのおのオーブ
+0728-0000|data.Name		Sky Silk	Soiecéleste	Himmelseide	Seda Aire		Setacielo	하늘색시폰	そらいろシフォン
+0729-0000|data.Name		Sky Dust	Poudrecéleste	Himmelstaub	Ceniza Aire		Polvercielo	하늘파우더	そらのパウダー
+0730-0000|data.Name		Sky Gem	Gemmecéleste	Himmelgemme	Joya Aire		Gemmacielo	스카이젬	スカイジェム
+0731-0000|data.Name		Sky Globe	Sphèrecéleste	Himmelglobus	Globo Aire		Globocielo	천공오브	てんくうのオーブ
+0732-0000|data.Name		Purple Silk	Soie Mauve	Lilaseide	Seda Morada		Setaporpora	보라시폰	むらさきシフォン
+0733-0000|data.Name		Shady Dust	Poudredouteuse	Düsterstaub	Ceniza Parda		Polverombra	괴상한파우더	あやしいパウダー
+0734-0000|data.Name		Shadow Gem	Gemme Ombre	Schattengem.	Joya Sombría		Ombrogemma	섀도젬	シャドージェム
+0735-0000|data.Name		Nether Globe	Infrasphère	Geistglobus	Infraglobo		Oltreglobo	영계오브	れいかいのオーブ
+0736-0000|data.Name		Grass Silk	Soie Plante	Grasseide	Seda Líquen		Setaerba	새싹시폰	わかくさシフォン
+0737-0000|data.Name		Grass Dust	Poudreplante	Grasstaub	Ceniza Hoja		Polvererba	풀파우더	くさのパウダー
+0738-0000|data.Name		Grass Gem	Gemme Plante	Grasgemme	Joya Planta		Erbagemma	그라스젬	グラスジェム
+0739-0000|data.Name		Soothe Globe	Calmisphère	Sanftglobus	Globo Alivio		Leniglobo	치유오브	いやしのオーブ
+0740-0000|data.Name		Brown Silk	Soie Brune	Braunseide	Seda Marrón		Setabruna	갈색시폰	ちゃいろシフォン
+0741-0000|data.Name		Ground Dust	Poudre Sol	Grundstaub	Ceniza Terra		Polverterra	땅파우더	じめんのパウダー
+0742-0000|data.Name		Earth Gem	Tellurigemme	Erdgemme	Joya Tierra		Gemmaterra	어스젬	アースジェム
+0743-0000|data.Name		Terra Globe	Terrasphère	Terra-Globus	Globo Tierra		Globoterra	대지오브	だいちのオーブ
+0744-0000|data.Name		Clear Silk	Soie Claire	Klarseide	Seda Fina		Setachiara	투명시폰	とうめいシフォン
+0745-0000|data.Name		Icy Dust	Poudreglacée	Eisstaub	Ceniza Hielo		Polvergelo	얼음파우더	こおりのパウダー
+0746-0000|data.Name		Icy Gem	Gemme Glacée	Eisgemme	Joya Hielo		Gemmagelo	아이스젬	アイスジェム
+0747-0000|data.Name		Icy Globe	Sphèreglacée	Eisglobus	Globo Hielo		Globogelo	얼음오브	こおりのオーブ
+0748-0000|data.Name		White Silk	Soie Blanche	Weißseide	Seda Blanca		Setabianca	하양시폰	しろいシフォン
+0749-0000|data.Name		Normal Dust	Normalpoudre	Normalstaub	Ceniza Común		Normopolvere	노말파우더	ノーマルパウダー
+0750-0000|data.Name		White Gem	Gemmeblanche	Weißgemme	Joya Blanca		Gemmabianca	화이트젬	ホワイトジェム
+0751-0000|data.Name		Joy Globe	Sphère Joie	Freudeglobus	Globo Júbilo		Globogioia	행복오브	しあわせのオーブ
+0752-0000|data.Name		Pink Silk	Soie Rose	Rosaseide	Seda Rosa		Setarosa	분홍시폰	ももいろシフォン
+0753-0000|data.Name		Poison Dust	Poudrepoison	Giftstaub	Ceniza Áspid		Polveleno	독파우더	どくのパウダー
+0754-0000|data.Name		Poison Gem	Gemme Poison	Giftgemme	Joya Veneno		Velengemma	포이즌젬	ポイズンジェム
+0755-0000|data.Name		Poison Globe	Sphèrepoison	Giftglobus	Globo Veneno		Velenglobo	독오브	どくのオーブ
+0756-0000|data.Name		Gold Silk	Soie Dorée	Goldseide	Seda Oro		Setadoro	금색시폰	きんいろシフォン
+0757-0000|data.Name		Psyche Dust	Poudre Psy	Psychostaub	Ceniza Mente		Psicopolvere	염동력파우더	ねんりきパウダー
+0758-0000|data.Name		Psyche Gem	Gemme Psy	Psychogemme	Joya Psique		Psicogemma	사이킥젬	サイキックジェム
+0759-0000|data.Name		Psyche Globe	Sphère Psy	Psychoglobus	Globo Psique		Psicoglobo	사이킥오브	サイキックオーブ
+0760-0000|data.Name		Gray Silk	Soie Grise	Grauseide	Seda Gris		Setagrigia	회색시폰	はいいろシフォン
+0761-0000|data.Name		Rock Dust	Poudre Roche	Felsstaub	Ceniza Roca		Polvoroccia	바위파우더	いわのパウダー
+0762-0000|data.Name		Stone Gem	Gemme Pierre	Steingemme	Joya Pétrea		Gemmaroccia	스톤젬	ストーンジェム
+0763-0000|data.Name		Rock Globe	Sphère Roche	Felsglobus	Globo Roca		Globoroccia	바위오브	いわのオーブ
+0764-0000|data.Name		Iron Silk	Soie Fer	Eisenseide	Seda Hierro		Setaferro	은색시폰	ぎんいろシフォン
+0765-0000|data.Name		Steel Dust	Poudre Acier	Stahlstaub	Ceniza Acero		Polvacciaio	강철파우더	はがねのパウダー
+0766-0000|data.Name		Metal Gem	Gemme Métal	Metallgemme	Joya Metal		Metalgemma	메탈젬	メタルジェム
+0767-0000|data.Name		Steel Globe	Sphère Acier	Stahlglobus	Globo Acero		Globacciaio	강철오브	はがねのオーブ
+0768-0000|data.Name		Blue Silk	Soie Bleue	Blauseide	Seda Azul		Setablu	파랑시폰	あおいシフォン
+0769-0000|data.Name		Water Dust	Poudre Eau	Wasserstaub	Ceniza Agua		Idropolvere	물파우더	みずのパウダー
+0770-0000|data.Name		Aqua Gem	Aquagemme	Aquagemme	Acuajoya		Idrogemma	아쿠아젬	アクアジェム
+0771-0000|data.Name		Aqua Globe	Aquasphère	Aquaglobus	Globo Agua		Idroglobo	물오브	みずのオーブ
+0804-0000|data.Name	Do not translate	TypeBulldozer Test						
+0805-0000|data.Name	Do not translate	SuperCrit Test						
+0806-0000|data.Name	Do not translate	NVECrit Test						
+0807-0000|data.Name	Do not translate	Nontraitor Test						
+0808-0000|data.Name	Do not translate	WaterTerrain Test						
+0809-0000|data.Name	Do not translate	LavaTerrain Test						
+0810-0000|data.Name	Do not translate	AllTerrain Test						
+0811-0000|data.Name	Do not translate	Wallbreaker Test						
+0812-0000|data.Name	Do not translate	GapFiller Test													
+0813-0000|data.Name	Do not translate	PPBoost Test													
+0814-0000|data.Name	Do not translate	DeepBreather Test						
+0815-0000|data.Name	Do not translate	PracticeSwinger Test						
+0816-0000|data.Name	Do not translate	MisfortuneMirror Test						
+0817-0000|data.Name	Do not translate	CounterBasher Test						
+0818-0000|data.Name	Do not translate	DoubleAttacker Test						
+0819-0000|data.Name	Do not translate	MasterHurler Test						
+0820-0000|data.Name	Do not translate	AllyReviver Test						
+0821-0000|data.Name	Do not translate	AllyReviverBattle Test						
+0822-0000|data.Name	Do not translate	PressurePlus Test						
+0823-0000|data.Name	Do not translate	StatusOnAttack Test													
+0824-0000|data.Name	Do not translate	KnockbackOnAttack Test						
+0825-0000|data.Name	Do not translate	ThrowOnAttack Test						
+0826-0000|data.Name	Do not translate	SureHitAttacker Test						
+0827-0000|data.Name	Do not translate	SpecialAttacker Test						
+0828-0000|data.Name	Do not translate	StatusImmune Test						
+0829-0000|data.Name	Do not translate	StatDropImmune Test						
+0830-0000|data.Name	Do not translate	SleepWalker Test						
+0831-0000|data.Name	Do not translate	ChargeWalker Test						
+0832-0000|data.Name	Do not translate	StairSensor Test						
+0833-0000|data.Name	Do not translate	AcuteSniffer Test													
+0834-0000|data.Name	Do not translate	MapSurveyor Test						
+0835-0000|data.Name	Do not translate	XRay Test						
+0836-0000|data.Name	Do not translate	WeaknessPayback Test						
+0837-0000|data.Name	Do not translate	WarpPayback Test						
+0838-0000|data.Name	Do not translate	LungeAttack Test						
+0839-0000|data.Name	Do not translate	WideAttack Test						
+0840-0000|data.Name	Do not translate	ExplosiveAttack Test						
+0841-0000|data.Name	Do not translate	TrapBuster Test						
+0842-0000|data.Name	Do not translate	ExplosionGuard Test													
+0843-0000|data.Name	Do not translate	WandMaster Test													
+0844-0000|data.Name	Do not translate	WandSpread Test						
+0845-0000|data.Name	Do not translate	MultiRayShot Test						
+0846-0000|data.Name	Do not translate	RoyalVeil Test						
+0847-0000|data.Name	Do not translate	Celebrate Test						
+0848-0000|data.Name	Do not translate	Absorption Test						
+0849-0000|data.Name	Do not translate	ExcessiveForce Test						
+0850-0000|data.Name	Do not translate	Anchor Test						
+0851-0000|data.Name	Do not translate	BarrageGuard Test						
+0852-0000|data.Name	Do not translate	BetterOdds Test						
+0853-0000|data.Name	Do not translate	ClutchPerformer Test													
+0854-0000|data.Name	Do not translate	DistanceDodge Test						
+0855-0000|data.Name	Do not translate	CloseDodge Test						
+0856-0000|data.Name	Do not translate	FastHealer Test						
+0857-0000|data.Name	Do not translate	SelfCurer Test						
+0858-0000|data.Name	Do not translate	StatusMirror Test						
+0859-0000|data.Name	Do not translate	StatMirror Test						
+0860-0000|data.Name	Do not translate	ErraticAttacker Test						
+0861-0000|data.Name	Do not translate	ErraticDefender Test						
+0862-0000|data.Name	Do not translate	FastFriend Test						
+0863-0000|data.Name	Do not translate	CoinWatcher Test													
+0864-0000|data.Name	Do not translate	HiddenStairFinder Test						
+0865-0000|data.Name	Do not translate	ChestFinder Test						
+0866-0000|data.Name	Do not translate	ShopFinder Test						
+0867-0000|data.Name	Do not translate	SecondSTAB Test						
+0868-0000|data.Name	Do not translate	TypedAttack Test						
+0869-0000|data.Name	Do not translate	GapProber Test						
+0870-0000|data.Name	Do not translate	PassThroughAttacker Test						
+0871-0000|data.Name	Do not translate	WeatherProtection Test						
+0872-0000|data.Name	Do not translate	RemoveAbilityAttack Test													
+0873-0000|data.Name	Do not translate	CheekPouch Test													
+0874-0000|data.Name	Do not translate	HealInWater Test						
+0875-0000|data.Name	Do not translate	HealInLava Test						
+0876-0000|data.Name	Do not translate	HealOnNewFloor Test						
+0877-0000|data.Name	Do not translate	EndureCategory Test						
+0878-0000|data.Name	Do not translate	EndureType Test						
+0879-0000|data.Name	Do not translate	SpikeDropper Test						
+0880-0000|data.Name	Do not translate	NoStatusInWeather Test						
+0881-0000|data.Name	Do not translate	DeepBreatherPlus Test						
+0882-0000|data.Name	Do not translate	WeaknessReduce Test						
+0883-0000|data.Name	Do not translate	Gratitude Test						
+0884-0000|data.Name	Do not translate	HitAndRun Test						
+0885-0000|data.Name		StatusOnCategoryHit Test						
+0886-0000|data.Name		StatusOnCategoryUse Test						
+0887-0000|data.Name		MapStatusOnCategoryUse Test						
+0888-0000|data.Name		DoubleDash Test						
+0889-0000|data.Name		StatusSplash Test						
+0900-0000|data.Name		Solar Sash	Etolesolaire	Solargurt	Banda Solar		Fasciasole	솔라밴드	ソーラーバンダナ
+0901-0000|data.Name		Plant Torc	Torqueplante	Pflanzenreif	Alhaja Hoja		Piantorque	플랜트링	プラントリング
+0904-0000|data.Name		Grass Guard	Garde Plante	Grasschild	Defensa Vid		Erbatutela	풀지키미돌	くさまもりのいし
+0906-0000|data.Name		Flame Bangle	Jonc Flamme	Flammarmreif	Aro Llama		Lacciofiamma	플레임뱅글	フレイムバングル
+0907-0000|data.Name		Kindle Scarf	Echarpe Ignée	Zündelschal	Pañ. Lumbre		Velofuoco	화염스카프	かえんのスカーフ
+0910-0000|data.Name		Fiery Heart	Cœur Brasier	Feuerherz	Llamacorazón		Cuorevampa	불꽃하트	ほのおのハート
+0912-0000|data.Name		Hydro Band	Hydrobande	Hydroband	Hidrocinta		Idronastro	하이드로머리띠	ハイドロハチマキ
+0913-0000|data.Name		Bubble Bangle	Jonc Bulle	Blubbarmreif	Aro Burbuja		Lacciobolla	버블뱅글	バブルバングル
+0916-0000|data.Name		Water Guard	Hydrogarde	Wasserschild	Acuadefensa		Idrodifesa	물지키미돌	みずまもりのいし
+0918-0000|data.Name		Glittery Bow	Ruban Strass	Glitzerband	Lazo Brillo		Sfavilfiocco		グリッターリボン
+0924-0000|data.Name		Charge Scarf	Chargécharpe	Ansturmschal	Pañ. Carga		Assaltovelo		とっかんスカーフ
+0936-0000|data.Name		Overcome Bow	Ruban Preux	Bezwingband	Lazo Firmeza		Varcofiocco		つよすぎリボン
+0942-0000|data.Name		Wing Scarf	Echarpe Aile	Flügelschal	Pañ. Aleteo		Piumavelo		はばたきスカーフ
+0948-0000|data.Name		Shock Ruff	Col Horreur	Schockkrause	Chal Asombro		Bandashock		ビックリマフラー
+0954-0000|data.Name		Zapper Scarf	Echarpéclair	Blitzschal	Pañ. Trueno		Elettrovelo	낙뢰스카프	らくらいスカーフ
+0955-0000|data.Name		Volt Torc	Torque Volt	Voltreif	Alhaja Elec.		Voltorque	볼트링	ボルテックリング
+0958-0000|data.Name		Express Tag	Marquexpress	Expressmarke	Nota Express		Taccarapida	선제공격호신부	せんせいのおふだ
+0959-0000|data.Name		Volt Charm	Charme Volt	Voltamulett	Amul. Elec.		Monilevolt	전기부적	でんきのおまもり
+0960-0000|data.Name		Sandy Torc	Torque Sable	Sandam-Reif	Alhaja Arena		Sabbiatorque		すなまもリング
+0966-0000|data.Name		Impact Torc	Torquimpact	Aufprallreif	Alhaja Golpe		Impattorque		インパクトリング
+0967-0000|data.Name		Nido-Crest		Nidokranz				
+0968-0000|data.Name		Nido-Claw		Nidoklaue				
+0969-0000|data.Name		Nido-Thorn		Nidodorn				
+0970-0000|data.Name		Nido-Seal		Nidosiegel				
+0971-0000|data.Name		Thorny Scarf	Epinécharpe	Dornschal	Pañ. Espina		Velospinoso		とげつきスカーフ
+0972-0000|data.Name		King Sash	Etole Royale	King-Gurt	Banda Regia		Fasciareale		キングのバンダナ
+0973-0000|data.Name		Fairy Bow	Ruban Féerik	Elfenband	Lazo Hada		Fioccofatato	요정리본	ようせいのリボン
+0974-0000|data.Name		Moon Scarf	Echarpe Lune	Mondschal	Pañ. Lunar		Veloluna	문스카프	ムーンスカーフ
+0977-0000|data.Name		Starry Ore	Minerai Etoilé	Sternenerz	Pepita Astro		Metalstella	별보석	ほしのほうせき
+0979-0000|data.Name		Afire Collar	Collier Feu	Brennschal	Collar Fatuo		Collarfiamme		おにびのえりまき
+0985-0000|data.Name		Friend Torc	Torque Ami	Freundreif	Alhaja Unión		Torquintesa	프렌드링	フレンドリング
+0986-0000|data.Name		Snooze Ring	Roupibague	Dösring	Anillo Sueño		Anellopisolo	잠듦반지	ねむりのゆびわ
+0989-0000|data.Name		Bouncy Charm	Charmerebond	Hüpfamulett	Amuleto Gozo		Monilesalto	탄력부적	はずむおまもり
+0990-0000|data.Name		Slumber Rock	Roc Sommeil	Ruhestein	Roca Onírica		Rocciasonno	선잠돌	うたたねのいし
+0991-0000|data.Name		Slash Bow	Rubantranche	Schlitzband	Lazo Tajo		Fioccolama		スラッシュリボン
+0992-0000|data.Name		Absorb Scarf	Absorbécharp	Absorbschal	Pañ. Succión		Assorbivelo		すいとりスカーフ
+0997-0000|data.Name		Bright Tiara	Tiare Clarté	Helldiadem	Tiara Luz		Tiaralucente		ひかりのティアラ
+0998-0000|data.Name		Aroma Scarf	Arômécharpe	Duftschal	Pañ. Aroma		Veloaroma		アロマスカーフ
+1003-0000|data.Name		Firm Hat	Chapeauferme	Steifmütze	Gorro Firme		Cappelsaldo		しゃっきりハット
+1009-0000|data.Name		Gaze Goggles	Verres Touvu	Starrbrille	Gaf. Mirada		Scrutalenti		みすかしゴーグル
+1021-0000|data.Name		Noble Scarf	Echarpenoble	Nobelschal	Pañ. Noble		Nobilvelo	고귀스카프	こうきなスカーフ
+1025-0000|data.Name		Coin Charm	Monécharme	Münzenamul.	Amuleto Yen		Soldomonile	금화부적	こばんのおまもり
+1026-0000|data.Name		Insight Rock	Roc Sagace	Einblickfels	Roca Lúcida		Rocciagatta	통찰돌	みきわめのいし
+1027-0000|data.Name		Paddle Scarf	Echarpe Rame	Paddelschal	Pañ. Aleta		Velopalmato		みずかきスカーフ
+1033-0000|data.Name		Nullify Belt	Annihilobi	Tilggürtel	Cinto Romo		Annullocinta		きかないベルト
+1039-0000|data.Name		Legend Bow	Ruban Mythe	Legendenband	Lazo Leyenda		Miticofiocco		レジェンドリボン
+1045-0000|data.Name		Rain Crown	Pluicouronne	Regenkrone	Florón Gotas		Pluviocorona		あめのかんむり
+1046-0000|data.Name		Bold Belt	Obi Audace	Kühngürtel	Cinto Valor		Cintaudace		こんじょうベルト
+1051-0000|data.Name		Sparkle Ruff	Col Etincel	Funkelkrause	Chal Fulgor		Bandafavilla		きらめくマフラー
+1064-0000|data.Name		Digest Scarf	Digestécharp	Verdauschal	Pañ. Gourmet		Digestiovelo		しょうかスカーフ
+1075-0000|data.Name		Rugged Sash	Rugueusétole	Raugurt	Banda Áspera		Durafascia		ごつごつバンダナ
+1081-0000|data.Name		Sunlight Bow	Ruban Rayon	Glimmerband	Lazo Solar		Raggiofiocco		サンライトリボン
+1087-0000|data.Name		King Cap	Chapo Royal	Lascho-Hut	Gorro Regio		Kingcappello		おうじゃのぼうし
+1093-0000|data.Name		Builder Sash	Bâtissétole	Baugurt	Banda Alisar		Magnefascia		じがためバンダナ
+1099-0000|data.Name		Bullseye Bow	Ruban Mire	Trefferband	Lazo Diana		Centrofiocco		めいちゅうリボン
+1105-0000|data.Name		Fight Torc	Torquecombat	Kampfreif	Alhaja Lucha		Colpotorque		とうこんリング
+1111-0000|data.Name		North Torc	Torque Nord	Nordreif	Alhaja Norte		Nordtorque		ノーザンリング
+1117-0000|data.Name		Slimy Bow	Glairoruban	Glibberband	Lazo Viscoso		Viscitorque		ねばつきリボン
+1123-0000|data.Name		Cover Armor	Cotte Nacrée	Panzerhülle	Armad. Nácar		Scudodifesa		かいがらアーマー
+1129-0000|data.Name		Sunglasses	Lunettes UV	Sonnenbrille	Gafas Pardas		Lentioscure		くろいサングラス
+1130-0000|data.Name		Slip Scarf	Glissécharpe	Rutschschal	Pañ. Huida		Sgusciavelo		すりぬけスカーフ
+1135-0000|data.Name		Quartz Torc	Torquequartz	Quarzreif	Alh. Cuarzo		Torquequarzo		クォーツリング
+1141-0000|data.Name		Dream Coin	Pièce Songe	Traummünze	Moneda Sueño		Sognosoldo		ゆめのコイン
+1147-0000|data.Name		Super Sash	Super Etole	Supergurt	Banda Guay		Superfascia		すごいバンダナ
+1171-0000|data.Name		Victory Ruff		Siegeskragen				
+1173-0000|data.Name		Victory Belt	Obi Victoire	Siegesgürtel	Cinto Gloria		Vittorcinta	승리벨트	しょうりのベルト
+1175-0000|data.Name		Victory Bangle		Siegesreif				
+1177-0000|data.Name		Muscle Charm	Charmemuscle	Muskelamul.	Amuleto Brío		Monileforza	힘부적	ちからのおまもり
+1180-0000|data.Name		Flabby Belt	Obi Flasque	Wabbelgürtel	Cinto Fofo		Mollecinta		ぶよぶよベルト
+1193-0000|data.Name		Pierce Drill	Foret Pointu	Drillbohrer	Tal. Envite		Perforopunta		とつげきドリル
+1198-0000|data.Name		Faith Ring	Bague Foi	Vertrauring	Anillo Fe		Fiducianello	기원반지	いのりのゆびわ
+1199-0000|data.Name		Lucky Scarf	Echarpeveine	Glücksschal	Pañuelo Azar		Velofortuna	럭키스카프	ラッキースカーフ
+1202-0000|data.Name		Play Tag	Marquenjouée	Spielmarke	Nota Juego		Taccagioco	소꿉놀이호신부	ままごとのおふだ
+1204-0000|data.Name		Clinging Bow	Ruban Podcol	Halteband	Lazo Agarre		Ghermifiocco		しがみつきリボン
+1216-0000|data.Name		Tornado Bow	Ruban Typhon	Tornadoband	Lazo Tornado		Turbinfiocco		トルネードリボン
+1217-0000|data.Name		Swirl Scarf	Vortexécharp	Strudelschal	Pañ. Espiral		Mulinovelo		うずしおスカーフ
+1234-0000|data.Name		Barrier Bow	Rubanbarrière	Barriereband	Lazo Muro		Fioccoblocco	배리어리본	バリヤーリボン
+1236-0000|data.Name		Junior Beam	Rayon Junior	Mimi-Strahl	Rayo Junior		Raggiojunior	흉내내빛	マネネのひかり
+1237-0000|data.Name		Junior Card	Carte Junior	Mimi-Karte	Juniorpapiro		Cartajunior	흉내내카드	マネネのカード
+1238-0000|data.Name		Mimic Pebble	Galet Copie	Mimikkiesel	Mimoguijarro		Pietramimo	미믹스톤	ミミックストーン
+1239-0000|data.Name		Bulwark Rock	Roc Rempart	Bollwerkfels	Roca Bastión		Rocciamuro	벽만들기돌	かべつくりのいし
+1240-0000|data.Name		Red Armlet	Bracelet Rouge	Rotarmreif	Brazal Grana		Brac. Rosso	빨강팔찌	くれないのうでわ
+1244-0000|data.Name		Ambush Rock	Roc Affût	Prognosestein	Roca Adivina		Rocciagguato	그림자읽기돌	かげよみのいし
+1245-0000|data.Name		Steel Charm	Charme Acier	Stahlamulett	Amul. Acero		Monilacciaio	강철부적	はがねのおまもり
+1246-0000|data.Name		Ruin Scarf	Echarperuine	Ruinschal	Pañ. Ruina		Velorovina	멸망스카프	ほろびのスカーフ
+1250-0000|data.Name		Kiss Charm	Charme Bisou	Kussamulett	Amuleto Beso		Monilebacio	키스부적	キッスのおまもり
+1251-0000|data.Name		Frozen Ore	Mineraigivre	Gefriererz	Pepita Nívea		Metalgelo	얼음보석	こおりのほうせき
+1252-0000|data.Name		Voltaic Band	Bande Volta	Voltaikband	Cinta Voltio		Nastrovolt	뇌전머리띠	らいでんハチマキ
+1256-0000|data.Name		Jolt Charm	Charme Choc	Schockamul.	Voltamuleto		Monileshock	저리부적	しびれるおまもり
+1257-0000|data.Name		Charge Seal	Sceau Charge	Ladesiegel	Cuño Voltio		Sigilcarica	충전호신부	じゅうでんのふだ
+1262-0000|data.Name		Ember Jewel	Joyau Braise	Glutjuwel	Gema Ascuas		Bijoufiamma	불씨보주	ひだねのほうじゅ
+1263-0000|data.Name		Erupt Ore	Minerai Lave	Erupterz	Pepita Lava		Metallolava	불뿜기보석	ひふきのほうせき
+1270-0000|data.Name		Rushing Bow	Ruban Ruée	Sprinterband	Lazo Carga		Fioccocarica		もうしんリボン
+1271-0000|data.Name		Milky Scarf	Lactécharpe	Milchschal	Pañ. Lácteo		Lattevelo		ミルキースカーフ
+1276-0000|data.Name		Field Crest						
+1277-0000|data.Name		Tempest Sash	Etolecyclone	Gewittergurt	Banda Tifón		Turbinfascia		あらしのバンダナ
+1283-0000|data.Name		Mystic Scarf	Echarpmystik	Mystikschal	Pañ. Místico		Velomistico	신비스카프	しんぴのスカーフ
+1287-0000|data.Name		Wavy Charm	Charme Onde	Wogenamulett	Amuleto Onda		Monileonda	파도부적	なみのおまもり
+1295-0000|data.Name		Fairy Collar		Feenschal				
+1298-0000|data.Name		Icy Collar	Cryocollier	Eisschal	Collar Hielo		Collaregelo	눈보라목도리	ふぶきのえりまき
+1301-0000|data.Name		Virid Collar	Phytocollier	Grünschal	Collar Hoja		Collarfronda	기적목도리	きせきのえりまき
+1304-0000|data.Name		Dusk Collar	Nocticollier	Dämmerschal	Collar Ocaso		Collarescuro	어둠목도리	やみのえりまき
+1307-0000|data.Name		Light Collar	Lumicollier	Lichtschal	Collar Luz		Collareluce	빛목도리	ひかりのえりまき
+1310-0000|data.Name		Fire Collar	Pyrocollier	Feuerschal	Collar Fuego		Collarefuoco	불꽃목도리	ほのおのえりまき
+1313-0000|data.Name		Volt Collar	Voltacollier	Stromschal	Collar Elec.		Collarevolt	천둥목도리	かみなりえりまき
+1316-0000|data.Name		Aqua Collar	Aquacollier	Aquaschal	Acuacollar		Acquacollare	물목도리	みずのえりまき
+1319-0000|data.Name		Prism Ruff	Col Prisme	Prismakrause	Chal Irisado		Bandaprisma	무지개빛머플러	なないろマフラー
+1322-0000|data.Name		Best Scarf	Elitécharpe	Ultraschal	Pañ. Óptimo		Migliorvelo		さいてきスカーフ
+1323-0000|data.Name		Virtual Bow	Cyber Ruban	Virtuellband	Lazo Virtual		Virtuafiocco		バーチャルリボン
+1326-0000|data.Name		AI Brooch	Broche I.A.	KI-Spange	Broche Chip		Spilla IA		でんのうブローチ
+1328-0000|data.Name		Aged Scarf	Echarpâgée	Uraltschal	Pañ. Viejo		Velantico		げんしのスカーフ
+1340-0000|data.Name		Old Brooch	Broche Antik	Altspange	Broche Viejo		Spillantica		たいこのブローチ
+1346-0000|data.Name		Glee Scarf	Jubilécharpe	Freudenschal	Pañuelo Gozo		Velogioia	지복스카프	しふくのスカーフ
+1350-0000|data.Name		Tummy Charm	Bidocharme	Bauchamulett	Amuleto Ñam		Monilepancia	배부적	おなかのおまもり
+1351-0000|data.Name		Valor Charm	Charmevaleur	Mummamulett	Amuleto León		Monilardito	이판사판부적	すてみのおまもり
+1352-0000|data.Name		Freeze Veil	Voile Givre	Eisschleier	Velo Hielo		Pannofreddo	프리즈베일	フリーズベール
+1355-0000|data.Name		Thunder Veil	Voile Foudre	Donnerschl.	Velo Trueno		Pannotuono	썬더베일	サンダーベール
+1358-0000|data.Name		Fire Veil	Pyrovoile	Feuerschlei.	Velo Fuego		Pannoardente	파이어베일	ファイヤーベール
+1361-0000|data.Name		Mystery Wing						
+1362-0000|data.Name		Mystery Card						
+1363-0000|data.Name		Mystery Seal						
+1364-0000|data.Name		Mirage Cape	Cape Mirage	Wundercape	Sayo Ilusión		Illusidrappo		まぼろしのマント
+1370-0000|data.Name		Havoc Robe	Robe Ravages	Chaosrobe	Toga Caos		Dannoveste	파괴로브	はかいのローブ
+1375-0000|data.Name		Life Ring	Bague Vie	Lebensring	Anillo Vida		Vitanello	생명반지	いのちのゆびわ
+1381-0000|data.Name		Bright Veil	Voilumineux	Hellschleier	Velo Fulgor		Pannolucente	브라이트베일	ブライトベール
+1382-0000|data.Name		Spice Bow	Ruban Epice	Gewürzband	Lazo Especia		Fioccoaroma	스파이스리본	スパイスリボン
+1385-0000|data.Name		Dawn Jewel	Joyau Aurore	Dämmerjuwel	Gema Alba		Albabijou	아침햇빛보주	あさひのほうじゅ
+1387-0000|data.Name		Blast Bangle	Explojonc	Knallarmreif	Aro Ígneo		Lacciovampa	블라스트뱅글	ブラストバングル
+1388-0000|data.Name		Volcano Torc	Torquevolcan	Vulkanreif	Alhaja Magma		Vulcatorque	볼케이노링	ボルケーノリング
+1391-0000|data.Name		Blazing Rock	Roc Ardent	Loderstein	Roca Fogosa		Rocciavampa	활활타는돌	もえさかるいし
+1394-0000|data.Name		Anger Scarf	Echarpecolère	Zornschal	Pañuelo Ira		Velofuria	분노스카프	いかりのスカーフ
+1397-0000|data.Name		Water Heart	Hydrocœur	Wasserherz	Acuacorazón		Cuoredacqua	물하트	みずのハート
+1398-0000|data.Name		Swirl Rock	Tourbiroc	Wirbelstein	Remolirroca		Rocciafango	탁류돌	だくりゅうのいし
+1399-0000|data.Name		Body Collar	Colliercorps	Körperschal	Collar Corpo		Corpocollare		ぜんしんえりまき
+1429-0000|data.Name		Glitter Robe	Robeluisante	Glitzerrobe	Toga Brillo		Riluciveste	빛나는로브	かがやきのローブ
+1430-0000|data.Name		Luck Brooch	Brocheveine	Glücksspange	Broche Azar		Spillasorte	럭키브로치	ラックのブローチ
+1433-0000|data.Name		Pure Heart	Cœur Pur	Reines Herz	Corazón Puro		Cuorepuro	천진난만하트	むじゃきなハート
+1434-0000|data.Name		Happy Rock	Roc Jovial	Heiterstein	Roca Alegría		Rocciagioia	행복돌	しあわせのいし
+1441-0000|data.Name		Sacred Scarf	Sacrécharpe	Läuterschal	Pañ. Sagrado		Sacrovelo		せいなるスカーフ
+1447-0000|data.Name		Dotted Scarf	Echarpe Apoi	Tüpfelschal	Pañ. Lunares		Macchiavelo	물방울스카프	みずたまスカーフ
+1452-0000|data.Name		Surfer Rock	Roc Surfeur	Gischtstein	Roca Ola		Rocciasurf	파도타기돌	なみのりのいし
+1453-0000|data.Name		Fake Torc	Similitorque	Pseudoreif	Alhaja Farsa		Fintorque	페이크링	フェイクリング
+1457-0000|data.Name		Arid Tag	Marque Aride	Dürremarke	Nota Árida		Taccarida	건조호신부	かんそうのおふだ
+1458-0000|data.Name		Drain Rock	Roc Sangsue	Senkstein	Roca Seca		Drenoroccia	물빠짐돌	みずはけのいし
+1459-0000|data.Name		Cotton Torc	Torque Coton	Baumwollreif	Alh. Algadón		Cotontorque		わたくさのリング
+1471-0000|data.Name		Sun Scarf	Hélioécharpe	Sonn-Schal	Pañuelo Sol		Velosole		おひさまスカーフ
+1495-0000|data.Name		Magic Hat	Chapomagie	Magiemütze	Gorro Magia		Magicappello		スペルハット
+1527-0000|data.Name		Suffer Scarf	Echarpetenace	Qualschal	Pañ. Esponja		Velotempra	시련스카프	しれんのスカーフ
+1531-0000|data.Name		Grin Charm	Charmejoyeux	Feixamulett	Amuleto Risa		Monilallegro	웃는얼굴부적	えがおのおまもり
+1532-0000|data.Name		Endure Rock	Roc Robuste	Ausdauerfels	Roca Eterna		Rocciaforza	참기돌	がまんのいし
+1533-0000|data.Name		Reverse Bow	Ruban Revers	Retourband	Lazo Reverso		Fioccoreflex		リバースリボン
+1539-0000|data.Name		Dense Poncho	Poncho Dense	Dichtponcho	Poncho Recio		Ponchotenace		かたいポンチョ
+1545-0000|data.Name		Escape Scarf	Echapécharpe	Fluchtschal	Pañuelo Fuga		Fugavelo		にげあしスカーフ
+1557-0000|data.Name		Stern Sash	Etole Sévère	Strenggurt	Banda Seria		Fasciasevera		いかついバンダナ
+1575-0000|data.Name		Horn Torc	Torque Corne	Hornreif	Alh. Cuerno		Torquecorno		ツノリング
+1581-0000|data.Name		Ruin Armlet	Bracelet Ruine	Ruinarmreif	Brazal Ruina		Brac. Rovina	파멸팔찌	はめつのうでわ
+1585-0000|data.Name		Dusk Jewel	Joyau Nuit	Finsterjuwel	Gema Ocaso		Bijounotte	어둠보주	やみのほうじゅ
+1586-0000|data.Name		Vile Tag	Marque Vile	Schadmarke	Nota Horror		Taccavile	악마호신부	あくまのおふだ
+1587-0000|data.Name		Hiber Scarf	Hiberécharpe	Schlafschal	Pañ. Letargo		Letargovelo	동면스카프	とうみんスカーフ
+1591-0000|data.Name		Honey Rock	Roc Miel	Honigstein	Roca Miel		Rocciamiele	꿀모으기돌	みつあつめのいし
+1592-0000|data.Name		Calming Rock	Calmiroc	Sanftstein	Roca Calma		Rocciaquiete	평온돌	やすらぎのいし
+1593-0000|data.Name		Lava Bow	Ruban Lave	Lavaband	Lazo Lava		Fioccolava		ようがんリボン
+1599-0000|data.Name		Glacier Cape	Cape Glacier	Firneiscape	Sayo Glacial		Drappogelo		ひょうがのマント
+1600-0000|data.Name		Frost Torc	Torque Givre	Frostreif	Alhaja Helor		Gelotorque		いてつくリング
+1605-0000|data.Name		Eager Brooch	Broche Zèle	Eiferspange	Broche Ánimo		Spillabrama		はりきりブローチ
+1617-0000|data.Name		Snow Brooch	Broche Neige	Schneespange	Broche Nieve		Spillaneve		ふぶきのブローチ
+1623-0000|data.Name		Horizon Bow	Ruban Horizon	Horizontband	Lazo Ocaso		Fioccolimite	호라이즌리본	ホライズンリボン
+1624-0000|data.Name		Ocean Bow	Ruban Océan	Ozeanband	Lazo Océano		Fioccoceano	오션리본	オーシャンリボン
+1627-0000|data.Name		Waft Rock	Roc Glisse	Windstein	Roca Brisa		Rocciaflusso	바닷바람돌	しおかぜのいし
+1628-0000|data.Name		Sunset Rock	Roc Crépuscule	Dämmerstein	Roca Ocaso		Rocciavespro	저녁노을돌	ゆうやけのいし
+1635-0000|data.Name		Pit Fang	Croc Abîme	Grubenzahn	Diente Sima		Zannabisso		じごくのキバ
+1641-0000|data.Name		Armor Scarf	Armurécharpe	Panzerschal	Pañ. Coraza		Corazzavelo		よろいのスカーフ
+1647-0000|data.Name		Delusion Bow	Ruban Leurre	Täuschband	Lazo Irreal		Fioccoamaro		さっかくリボン
+1653-0000|data.Name		Paint Scarf	Peintécharpe	Farbschal	Pañ. Pintura		Pennelvelo		パレットスカーフ
+1659-0000|data.Name		Rainbow Veil	Voile-en-ciel	Regenbogenschl.	Velo Irisado		Pannobaleno	레인보우베일	レインボーベール
+1660-0000|data.Name		Rainbow Wing		Regenbogenflügel				
+1663-0000|data.Name		Rainbow Brooch		Regenbogenspange				
+1664-0000|data.Name		Clear Wing						
+1665-0000|data.Name		Bolt Fang	Croc Eclair	Blitzzahn	Truenodiente		Zannafulmine	우뢰이빨	いかずちのキバ
+1669-0000|data.Name		Flare Fang	Croc Brasier	Flammenzahn	Diente Llama		Ardizanna	타오름이빨	えんじょうのキバ
+1673-0000|data.Name		Aqua Mantle	Aquamanteau	Wassermantel	Acuamanto		Idromanto	물우의	みずのはごろも
+1677-0000|data.Name		Sacred Collar						
+1679-0000|data.Name		Crash Claw	Destrugriffe	Quetschklaue	Garra Chocar		Spaccartigli		ほうかいのツメ
+1685-0000|data.Name		Silver Veil	Voile Argent	Silberschl.	Velo Plata		Pannargento	플래티넘베일	プラチナベール
+1686-0000|data.Name		Silver Wing		Silberflügel				
+1689-0000|data.Name		Silver Brooch		Silberspange				
+1690-0000|data.Name		Deep Sea Jewel		Tiefseejuwel				
+1691-0000|data.Name		Chrono Veil	Chronovoile	Zeitschleier	Velo Tiempo		Cronopanno	시간베일	ときのベール
+1697-0000|data.Name		Drain Bangle	Jonc Sangsue	Absorbarmrf.	Aro Drenaje		Drenolaccio	드레인뱅글	ドレインバングル
+1701-0000|data.Name		Forest Ore	Mineraisylvain	Walderz	Pepita Roble		Metalloselva	숲보석	もりのほうせき
+1702-0000|data.Name		Jungle Tag	Marquejungle	Dschungelmrk.	Nota Jungla		Taccagiungla	밀림호신부	みつりんのおふだ
+1704-0000|data.Name		Gutsy Band	Bande Hardie	Mummband	Cintagallas		Nastrofegato	열혈머리띠	ねっけつハチマキ
+1707-0000|data.Name		Hot Pebble	Galet Chaud	Heißkiesel	Solguijarro		Pietracalda	핫스톤	ホットストーン
+1708-0000|data.Name		Charge Tag	Marquecharge	Sturmmarke	Nota Carga		Taccacolpo	맹진호신부	もうしんのおふだ
+1728-0000|data.Name		Vivid Silk	Soie Vive	Munterseide	Seda Nítida		Setavivida		あざやかシフォン
+1734-0000|data.Name		Jolly Scarf	Echarpenjoué	Fidelschal	Pañ. Alegre		Velogioviale		ようきなスカーフ
+1745-0000|data.Name		Midair Scarf	Echarpenlair	Fliegerschal	Pañ. Swellow		Ariavelo		おおぞらスカーフ
+1751-0000|data.Name		Stock Scarf	Stockécharpe	Lagerschal	Pañ. Reserva		Veloriserva		たくわえスカーフ
+1757-0000|data.Name		Gallant Torc	Galantorque	Galagla-Reif	Alh. Galante		Galantorque		ゆうしゃのリング
+1758-0000|data.Name		Caring Scarf	Loyalécharpe	Fürsorgschal	Pañ. Caridad		Premurovelo		じあいのスカーフ
+1769-0000|data.Name		Thwart Bow	Ruban Contre	Vereitelband	Lazo Nulo		Controfiocco		むこうのリボン
+1775-0000|data.Name		Lazy Ruff	Col Flemme	Faulkrause	Chal Pereza		Bandapigra		ものぐさマフラー
+1781-0000|data.Name		Ninja Ruff	Col Ninja	Ninja-Krause	Chal Ninja		Ninjabanda		しのびのマフラー
+1787-0000|data.Name		Awe Mantle	Estimanteau	Scheumantel	Manto Hala		Mantotimore		ふしぎなはごろも
+1795-0000|data.Name		Thrust Belt	Obi Cogneur	Stoßgürtel	Empujoncinto		Sberlacinta		つっぱりハラマキ
+1807-0000|data.Name		Guard Collar	Colliergarde	Schutzschal	Collar Vigía		Collartutela	지키미목도리	まもりのえりまき
+1811-0000|data.Name		Smile Pebble	Galetsourire	Lächelkiesel	Risaguijarro		Pietrariso	스마일스톤	スマイルストーン
+1819-0000|data.Name		Deceit Mask	Trompemask	Listmaske	Bombín Timo		Dolomaschera		あざむきずきん
+1825-0000|data.Name		Iron Helmet	Casque Fer	Eisenhelm	Casco Hierro		Elmoferro		てつのヘルメット
+1831-0000|data.Name		Ponder Sash	Méditétole	Sinniergurt	Meditabanda		Meditofascia		めいそうバンダナ
+1843-0000|data.Name		Pulse Bow	Ruban Pouls	Pulsband	Lazo Plusle		Fioccovitale	펄스리본	パルスリボン
+1844-0000|data.Name		Spark Tie	Lien Etincel	Funkenbinde	Fular Chispa		Bendafavilla	스파크미산가	スパークミサンガ
+1849-0000|data.Name		Volt Heart	Cœur Volt	Voltherz	Corazón Rayo		Cuordivolt	전기하트	でんきのハート
+1850-0000|data.Name		Neon Scarf	Echarpe Néon	Neonschal	Pañ. Neón		Luminovelo		ネオンスカーフ
+1851-0000|data.Name		Evening Bow	Vespéruban	Abendband	Lazo Noche		Seralfiocco		よぞらのリボン
+1856-0000|data.Name		Glowing Seal		Leuchtsiegel				
+1857-0000|data.Name		Bouquet Cape	Cape Bouquet	Bouquet-Cape	Sayo Ramo		Drappofiore		はなたばのマント
+1858-0000|data.Name		Thorned Torc	Torque Epine	Dornenreif	Alh. Espina		Torquespina		いばらのリング
+1869-0000|data.Name		Vicious Bow	Ruban Fourbe	Boshaftband	Lazo Atroz		Ferocefiocco		きょうあくリボン
+1875-0000|data.Name		Huge Bow	Ruban Géant	Riesenband	Lazo Gigante		Gigafiocco		きょだいなリボン
+1881-0000|data.Name		Erupt Scarf	Eruptécharpe	Erupt-Schal	Pañ. Lava		Velolava		ふんかスカーフ
+1887-0000|data.Name		Sooty Sash	Etole Suie	Rußgurt	Banda Hollín		Carbonfascia		すすけたバンダナ
+1893-0000|data.Name		Scheme Scarf	Echarpe Ruse	Schemenschal	Pañ. Ardid		Tramavelo		あやつりスカーフ
+1899-0000|data.Name		Hula Bow	Rubantitub	Hulaband	Lazo Vaivén		Hulafiocco		フラフラリボン
+1905-0000|data.Name		Red Glasses	Lunetrouges	Rotglas	Gafas Rojas		Lentirosse		あかいサングラス
+1917-0000|data.Name		Cloud Ruff	Col Nuage	Wolkenkrause	Chal Nube		Nuvolobanda		わたぐもマフラー
+1923-0000|data.Name		Strong Sash	Etole Force	Starkgurt	Banda Firme		Fortefascia		つよきのバンダナ
+1941-0000|data.Name		Meteor Charm		Meteoramulett				
+1948-0000|data.Name		Cower Sash	Etolefrousse	Kauerband	Espantobanda		Panicofascia		ひるませバンダナ
+1966-0000|data.Name		Rigid Cape	Cape Rigide	Starrcape	Sayo Rígido		Drapporigido		きょうこなマント
+1972-0000|data.Name		Grace Scarf	Belécharpe	Prachtschal	Pañ. Primor		Splendorvelo		うるわしスカーフ
+1978-0000|data.Name		Weather Cape	Cape Météo	Wettercape	Capa Clima		Drappotempo	날씨스카프	おてんきスカーフ
+1982-0000|data.Name		Cloud Rock	Roc Nuage	Wolkenstein	Roca Nube		Roccianube	비구름돌	あまぐものいし
+1990-0000|data.Name		Ominous Torc	Torquenéfast	Ominösreif	Alhaja Gafe		Tetrotorque		ふうんなリング
+1996-0000|data.Name		Unlucky Sash	Etole Poisse	Unglückgurt	Banda Suerte		Sfortufascia		あくうんバンダナ
+2014-0000|data.Name		Perish Torc	Calamitorque	Scheidreif	Alh. Mortal		Ultimotorque		わざわいリング
+2033-0000|data.Name		Deep Torc	Torque Abyss	Tiefreif	Alhaja Honda		Abissotorque		ディープリング
+2051-0000|data.Name		Outlast Bow	Ruban Survie	Bestandband	Lazo Aguante		Stoicofiocco		にんたいリボン
+2062-0000|data.Name		Ancient Ring	Baguancienne	Antikring	Anillo Viejo		Anelloantico	옛날반지	いにしえのゆびわ
+2066-0000|data.Name		Rock Sash	Etole Roche	Felsgurt	Banda Roca		Fasciaroccia	락밴드	ロックバンダナ
+2070-0000|data.Name		Ice Sash	Etole Glace	Eisgurt	Banda Hielo		Fasciagelo	아이스밴드	アイスバンダナ
+2074-0000|data.Name		Steel Sash	Etole Acier	Stahlgurt	Banda Acero		Fasciacciaio	스틸밴드	スチルバンダナ
+2078-0000|data.Name		Royal Mantle						
+2080-0000|data.Name		Heart Brooch	Broche Cœur	Herzspange	Broche Flor		Spillacuore	마음브로치	こころのブローチ
+2082-0000|data.Name		Eon Veil	Voile Eon	Äonenschlei.	Velo Eón		Pannoeterno	무한베일	むげんのベール
+2086-0000|data.Name		Eon Seal						
+2087-0000|data.Name		Heart Crest						
+2088-0000|data.Name		Seabed Veil	Voile Abysse	Tiefseeschl.	Velo Marino		Pannomare	해저베일	かいていのベール
+2090-0000|data.Name		Seabed Dew						
+2091-0000|data.Name		Seabed Coin						
+2092-0000|data.Name		Seabed Crest						
+2094-0000|data.Name		Terra Ring	Terrabague	Terra-Ring	Anillo Terra		Terranello	대지반지	だいちのゆびわ
+2096-0000|data.Name		Terra Tag						
+2097-0000|data.Name		Terra Coin						
+2098-0000|data.Name		Terra Crest						
+2100-0000|data.Name		SkyHigh Veil	Stratovoile	Himmelsschl.	Velo Celeste		Pannocielo	천공베일	てんくうのベール
+2102-0000|data.Name		SkyHigh Tag						
+2103-0000|data.Name		SkyHigh Coin						
+2104-0000|data.Name		SkyHigh Crest						
+2106-0000|data.Name		Wish Mantle	Manteau Vœu	Wunschmantel	Manto Deseo		Mantosogno	소망우의	ねがいのはごろも
+2108-0000|data.Name		Wish Shard						
+2109-0000|data.Name		Wish Dust						
+2110-0000|data.Name		Wish Tag						
+2112-0000|data.Name		Revive Robe	Robe Rappel	Beleberobe	Toga Drenaje		Vitalveste	재생로브	さいせいのローブ
+2118-0000|data.Name		Forest Torc	Torquesylve	Waldreif	Alhaja Roble		Selvatorque	포리스트링	フォレストリング
+2119-0000|data.Name		Woody Scarf	Echarpe Bois	Holzschal	Pañ. Madera		Velolegno	우디스카프	ウッディスカーフ
+2120-0000|data.Name		Lucky Leaf	Feuilleveine	Glücksblatt	Hoja Suerte		Fogliasorte	행운잎사귀	こううんなはっぱ
+2122-0000|data.Name		Sprout Rock	Roc Bourgeon	Sprossfels	Roca Brote		Rocciaboccio	싹틈돌	めばえのいし
+2124-0000|data.Name		Blazing Ruff	Col Ardent	Flammkrause	Chal Fogoso		Bandafiamma	초염머플러	ごうかのマフラー
+2125-0000|data.Name		Burst Sash	Etolardente	Platzgurt	Banda Ráfaga		Fasciafoga	맹화밴드	もうかのバンダナ
+2128-0000|data.Name		Nimble Charm	Charmeagile	Flinkamulett	Amuleto Ágil		Monileagile	사뿐사뿐부적	みがるなおまもり
+2130-0000|data.Name		Marine Crown	Hydrocouronne	Meereskrone	Corona Marea		Coronamare	바다왕관	うみのクラウン
+2134-0000|data.Name		Sea Ore	Mineraimarin	Meereserz	Pepita Mar		Metallomare	바다보석	うみのほうせき
+2136-0000|data.Name		Guts Sash	Etole Cran	Mummgurt	Banda Valor		Fierofascia		ガッツバンダナ
+2137-0000|data.Name		Regret Torc	Torqueregret	Bedauerreif	Alhaja Pena		Pentotorque		つうこんのリング
+2142-0000|data.Name		Dam Scarf	Echarpedigue	Dammschal	Pañ. Presa		Velodiga	흐름차단스카프	せきとめスカーフ
+2146-0000|data.Name		Fall Charm	Charme Chute	Sturzamulett	Amuleto Leña		Cascamonile	폭포부적	たきのおまもり
+2147-0000|data.Name		River Charm	Charmefleuve	Flussamulett	Amuleto Río		Monilefiume	큰강부적	たいがのおまもり
+2154-0000|data.Name		Glare Sash	Etole Furie	Blendegurt	Banda Brillo		Fasciabaleno	라이트밴드	ライトバンダナ
+2155-0000|data.Name		Spark Scarf	Echarpelueur	Funkenschal	Pañ. Chispa		Velofavilla	감전스카프	かんでんスカーフ
+2158-0000|data.Name		Flash Tag	Marque Flash	Blitzmarke	Nota Flash		Taccaflash	섬광호신부	せんこうのおふだ
+2159-0000|data.Name		Spark Tag	Marque Lueur	Funkenmarke	Nota Chispa		Taccafavilla	전광호신부	でんこうのおふだ
+2160-0000|data.Name		Skull Helmet	Casque Crâne	Schädelhelm	Casco Pardo		Elmoteschio		スカルヘルメット
+2166-0000|data.Name		Block Brooch	Blocabroche	Blockspange	Broche Recio		Bloccospilla		とおさずブローチ
+2184-0000|data.Name		Miracle Bow	Rubanmiracle	Wunderband	Lazo Milagro		Fioccomagico	미라클리본	ミラクルリボン
+2188-0000|data.Name		Rouse Charm	Charme Eveil	Weckamulett	Amuleto Alba		Dinamonile	각성부적	めざめのおまもり
+2190-0000|data.Name		Float Aid	Flottaide	Schwebehilfe	Flotsortija		Aiutoboa	도움플로트	おたすけフロート
+2194-0000|data.Name		Swimmer Rock	Roc Nageur	Schwimmstein	Roca Buceo		Roccianuoto	빠른수영돌	はやおよぎのいし
+2195-0000|data.Name		Rescue Rock	Rocrescousse	Befreistein	Roca Rescate		Rocciasalva	구원돌	きゅうえんのいし
+2196-0000|data.Name		Petal Dress	Robe Pétale	Blätterkleid	Traje Pétalo		Petalabito	꽃잎드레스	はなびらのドレス
+2200-0000|data.Name		Cute Ore	Joli Minerai	Süßerz	Pepita Linda		Metallobello	귀여운보석	かわいいほうせき
+2208-0000|data.Name		Breeze Scarf	Echarpebrise	Windschal	Pañ. Brisa		Velozefiro	브리즈스카프	ブリーズスカーフ
+2212-0000|data.Name		Wind Heart	Cœur Vent	Windherz	Corazón Aire		Cuordivento	바람하트	かぜのハート
+2213-0000|data.Name		Easy Charm	Charme Relax	Leichtamul.	Amuleto Puro		Monilefacile	마음대로부적	きままなおまもり
+2214-0000|data.Name		Allure Coat	Veste Chic	Reizmantel	Capa Encanto		Copertamalia		みわくのコート
+2220-0000|data.Name		Scary Belt	Abominablobi	Gruselgürtel	Cinto Miedo		Cintatruce		こわいベルト
+2232-0000|data.Name		Mirror Torc	Miroitorque	Spiegelreif	Alh. Espejo		Specultorque		ミラーリング
+2244-0000|data.Name		Shadow Veil	Voile Ombre	Dunkelschl.	Velo Sombra		Ombrapanno	섀도베일	シャドーベール
+2250-0000|data.Name		Mach Scarf	Echarpe Mach	Robustschal	Pañuelo Mach		Veloveloce	마하스카프	マッハスカーフ
+2251-0000|data.Name		Meteor Torc	Torquemétéore	Meteorreif	Alhaja Astro		Meteotorque	메테오링	メテオリング
+2256-0000|data.Name		Ravage Ring	Baguedésastre	Verwüstring	Anillo Rabia		Devastanello	파사반지	はじゃのゆびわ
+2260-0000|data.Name		Valiant Rock	Roc Vaillant	Mummstein	Roca Coraje		Rocciavalore	용기돌	ゆうきのいし
+2261-0000|data.Name		Pledge Rock	Roc Serment	Schwurstein	Roca Promesa		Roccia Onore	맹세돌	ちかいのいし
+2262-0000|data.Name		Grit Veil	Voilesableux	Dünenschlei.	Velo Grava		Pannosabbia		すなのベール
+2268-0000|data.Name		Dust Scarf	Poudrécharpe	Staubschal	Pañ. Polvo		Polvervelo		さじんのスカーフ
+2292-0000|data.Name		Frozen Cape	Cape Gelée	Gefriercape	Sayo Helado		Polardrappo		フローズンマント
+2298-0000|data.Name		Plasma Veil	Voile Plasma	Plasmaschl.	Velo Plasma		Plasmapanno	플라스마베일	プラズマベール
+2304-0000|data.Name		Edify Robe	Robe Edifiante	Erbaurobe	Toga Huída		Saggioveste	득도로브	さとりのローブ
+2306-0000|data.Name		Charity Robe	Robe Charité	Benefizrobe	Toga Socorro		Vestedono	은혜로브	めぐみのローブ
+2308-0000|data.Name		Hope Robe	Robe Espoir	Chancenrobe	Toga Evasión		Sognoveste	희망로브	きぼうのローブ
+2310-0000|data.Name		Spirit Dust						
+2311-0000|data.Name		Spirit Shard						
+2312-0000|data.Name		Red Chain						
+2313-0000|data.Name		Spirit Crest						
+2314-0000|data.Name		Time Shield	Chronoécu	Zeitschild	Escudo Eón		Scudotempo	타임실드	タイムシールド
+2318-0000|data.Name		Time Jewel						
+2320-0000|data.Name		Space Blade						
+2324-0000|data.Name		Space Jewel						
+2326-0000|data.Name		Searing Ring	Bague Ignée	Brennring	Anillo Brasa		Anellofiamma	불타는반지	やけつくゆびわ
+2332-0000|data.Name		Nether Veil	Infravoile	Geistschl.	Infravelo		Oltrepanno	명계베일	めいかいのベール
+2338-0000|data.Name		Lunar Veil	Voile Lune	Mondschleier	Velo Lunar		Pannolunare	초승달베일	みかづきのベール
+2344-0000|data.Name		Tidal Cape	Cape Marées	Gezeitencape	Capa Marea		Mareadrappo	파도소리케이프	しおさいのケープ
+2345-0000|data.Name		Ripple Cape	Cape Onde	Kräuselcape	Capa Onda		Drappocrespo	잔물결케이프	さざなみのケープ
+2346-0000|data.Name		Marine Cache	Trésor Marin	Meerschatz	Tesoro Nácar		Tesoromarino	심해보물	しんかいのたから
+2349-0000|data.Name		Wave Jewel	Joyau Marin	Wellenjuwel	Gema Onda		Ondabijou	파도보주	なみのほうじゅ
+2351-0000|data.Name		Eclipse Robe	Robe Eclipse	Finsterrobe	Toga Eclipse		Vesteclisse	암흑로브	あんこくのローブ
+2357-0000|data.Name		Purify Veil	Purifivoile	Reinschleier	Velo Pureza		Panno Puro		じょうかのベール

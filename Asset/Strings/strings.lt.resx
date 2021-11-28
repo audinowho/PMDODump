@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_ENUM_BattleSpeed_VeryFast" xml:space="preserve">
+    <value>Labai greitai</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_BattleSpeed_VerySlow" xml:space="preserve">
+    <value>Labai lėtai</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Double" xml:space="preserve">
+    <value>Dvigubai</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Half" xml:space="preserve">
+    <value>Per pusę</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Normal" xml:space="preserve">
+    <value>Normalus</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Octuple" xml:space="preserve">
+    <value>Aštuongubai</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Quadruple" xml:space="preserve">
+    <value>Keturgubai</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Female" xml:space="preserve">
+    <value>Moteriška</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Genderless" xml:space="preserve">
+    <value>Nėra lyties</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Male" xml:space="preserve">
+    <value>Vyriška</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Unknown" xml:space="preserve">
+    <value>Nežinoma</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Attack" xml:space="preserve">
+    <value>Atakuoti</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Cancel" xml:space="preserve">
+    <value>Atšaukti</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Confirm" xml:space="preserve">
+    <value>Patvirtinti</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Diagonal" xml:space="preserve">
+    <value>Įstrižai</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_ItemMenu" xml:space="preserve">
+    <value>Daiktų meniu</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap1" xml:space="preserve">
+    <value>Lyderių apkeitimas 1</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap2" xml:space="preserve">
+    <value>Lyderių apkeitimas 2</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap3" xml:space="preserve">
+    <value>Lyderių apkeitimas 3</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap4" xml:space="preserve">
+    <value>Lyderių apkeitimas 4</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Menu" xml:space="preserve">
+    <value>Meniu</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Minimap" xml:space="preserve">
+    <value>Mini-žemėlapis</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_MsgLog" xml:space="preserve">
+    <value>Pranešimų žurnalas</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Run" xml:space="preserve">
+    <value>Bėgti</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_SelectItems" xml:space="preserve">
+    <value>Pasirinkti dalykus</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Skill1" xml:space="preserve">
+    <value>1 ataka</value>
+    <comment>Moves as in "Attacks"</comment>  </data>
+  <data name="_ENUM_InputType_Skill2" xml:space="preserve">
+    <value>2 ataka</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Skill3" xml:space="preserve">
+    <value>3 ataka</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Skill4" xml:space="preserve">
+    <value>4 ataka</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_SkillMenu" xml:space="preserve">
+    <value>Atakų meniu</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_SortItems" xml:space="preserve">
+    <value>Surūšiuoti dalykus</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Start" xml:space="preserve">
+    <value>Pradėti</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_TacticMenu" xml:space="preserve">
+    <value>Taktikų meniu</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_TeamMenu" xml:space="preserve">
+    <value>Komandos meniu</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_TeamMode" xml:space="preserve">
+    <value>Komandos režimas</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Turn" xml:space="preserve">
+    <value>Ėjimas</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_Magical" xml:space="preserve">
+    <value>Specialus</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_None" xml:space="preserve">
+    <value>Bereikšmis</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_Physical" xml:space="preserve">
+    <value>Fizikinis</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_Status" xml:space="preserve">
+    <value>Statusas</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Attack" xml:space="preserve">
+    <value>Ataka</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Defense" xml:space="preserve">
+    <value>Gynyba</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_DodgeRate" xml:space="preserve">
+    <value>Vengimas</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_HitRate" xml:space="preserve">
+    <value>Tikslumas</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_HP" xml:space="preserve">
+    <value>GT</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MAtk" xml:space="preserve">
+    <value>Speciali ataka</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MAtk_short" xml:space="preserve">
+    <value>Sp. ataka</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MAtk_tiny" xml:space="preserve">
+    <value>Sp. atk.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MDef" xml:space="preserve">
+    <value>Speciali gynyba</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MDef_short" xml:space="preserve">
+    <value>Sp. gynyba</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MDef_tiny" xml:space="preserve">
+    <value>Sp. gyn.</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Range" xml:space="preserve">
+    <value>Atstumas</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Speed" xml:space="preserve">
+    <value>Greitis</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Dawn" xml:space="preserve">
+    <value>Rytas</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Day" xml:space="preserve">
+    <value>Diena</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Dusk" xml:space="preserve">
+    <value>Vakaras</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Night" xml:space="preserve">
+    <value>Naktis</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Unknown" xml:space="preserve">
+    <value>Nežinoma</value>
+    <comment></comment>  </data>
+  <data name="ADD_END" xml:space="preserve">
+    <value> ir</value>
+    <comment>Last conjunction word when creating lists of words.  Ex. "Attack, Defense, and Special Defense" There needs to be a space before the word for "and", otherwise the previous word will be followed directly by the "and". That's to make sure the oxford comma does NOT have a space before it. Silly English people with their oxford commas.</comment>  </data>
+  <data name="DLG_ASK_ENTER_DUNGEON" xml:space="preserve">
+    <value>Ar jūs įeisite į {0}?</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASK_ENTER_GROUND" xml:space="preserve">
+    <value>Ar jūs eisite į {0}?</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASK_GENDER" xml:space="preserve">
+    <value>Ar jūs esate berniukas, ar mergaitė?</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASSEMBLY_RELEASE" xml:space="preserve">
+    <value>{0} buvo paleistas.[pause=0]\nAte {0}...</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASSEMBLY_RELEASE_ASK" xml:space="preserve">
+    <value>Jeigu paleisite {0}, jis bus prarastas amžinai.[pause=0] Ar jūs įsitikinę?</value>
+    <comment></comment>  </data>
+  <data name="DLG_CHOICE_NO" xml:space="preserve">
+    <value>Ne</value>
+    <comment></comment>  </data>
+  <data name="DLG_CHOICE_YES" xml:space="preserve">
+    <value>Taip</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_FILE" xml:space="preserve">
+    <value>Failas nebuvo nuskaitytas, nes jis buvo blogo formato arba pažeistas.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_FILE_FALLBACK" xml:space="preserve">
+    <value>Prašome pašalinti, arba perkelti iš {0}.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_SAVE" xml:space="preserve">
+    <value>Pagrindinis išsaugojimas nebuvo nuskaitytas, nes jis buvo blogo formato arba pažeistas.</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_SAVE_FALLBACK" xml:space="preserve">
+    <value>Dabartinis žaidimo statusas bus naudojamas kaip atsarginė kopija, kuris bus pritaikytas visam laikui.</value>
+    <comment></comment>  </data>
+</root>

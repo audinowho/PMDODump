@@ -1,0 +1,901 @@
+ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
+0* None	0* 000: None	000: HP	000: Missingno.	000: None	001: Asleep	000: Clear	000: None
+1* Beam	1* 001: TypeStatBonus	001: Attack	001: Bulbasaur	001: Bug	002: Burned	001: Rain	001: Physical
+1* Branch	1* 006: NVECrit	002: Defense	002: Ivysaur	002: Dark	003: Frozen	002: Sunny	002: Magical
+1* Card	1* 014: DeepBreather	003: MAtk	003: Venusaur	003: Dragon	004: Paralyzed	003: Sandstorm	003: Status
+1* Claw	1* 015: PracticeSwinger	004: MDef	004: Charmander	004: Electric	005: Poisoned	004: Hail	
+1* Dew	1* 026: SureHitAttacker	005: Speed	005: Charmeleon	005: Fairy	006: Badly Poisoned	005: Fog	
+1* Drool	1* 027: SpecialAttacker	006: HitRate	006: Charizard	006: Fighting	007: Confused	006: Cloudy	
+1* Fang	1* 050: Anchor	007: DodgeRate	007: Squirtle	007: Fire	008: Cringing	007: Snow	
+1* Foam	1* 061: ErraticDefender	008: Range	008: Wartortle	008: Flying	009: Movement Speed	008: Blizzard	
+1* Gasp	1* 062: FastFriend	-001: None	009: Blastoise	009: Ghost	010: Attack	009: Trick Room	
+1* Hair	1* 084: HitAndRun		010: Caterpie	010: Grass	011: Defense	010: Gravity	
+1* Horn	2* 008: WaterTerrain		011: Metapod	011: Ground	012: Special Attack	011: Wonder Room	
+1* Leaf	2* 009: LavaTerrain		012: Butterfree	012: Ice	013: Special Defense	012: Magic Room	
+1* Mud	2* 013: PPBoost		013: Weedle	013: Normal	014: Accuracy	013: Electric Terrain	
+1* Root	2* 016: MisfortuneMirror		014: Kakuna	014: Poison	015: Evasion	014: Grassy Terrain	
+1* Seed	2* 018: DoubleAttacker		015: Beedrill	015: Psychic	016: Range	015: Misty Terrain	
+1* Shoot	2* 019: MasterHurler		016: Pidgey	016: Rock	017: Reflect	016: Inverse	
+1* Song	2* 022: PressurePlus		017: Pidgeotto	017: Steel	018: Light Screen	017: Heavy Rain	
+1* Sweat	2* 023: StatusOnAttack		018: Pidgeot	018: Water	021: In Love	018: Harsh Sun	
+1* Tail	2* 029: StatDropImmune		019: Rattata		022: Rage Powder	019: Wind	
+1* Thorn	2* 030: SleepWalker		020: Raticate		023: Destiny Bond	020: Move Ban	
+1* Tooth	2* 033: AcuteSniffer		021: Spearow		024: Chasing	021: Mysterious Force	
+1* Twig	2* 039: WideAttack		022: Fearow		044: Fire Spin	032: Dark	
+1* Wing	2* 051: BarrageGuard		023: Ekans		045: Whirlpool		
+2* Aroma	2* 052: BetterOdds		024: Arbok		046: Sand Tomb		
+2* Brooch	2* 053: ClutchPerformer		025: Pikachu		050: Cursed		
+2* Charm	2* 059: StatMirror		026: Raichu		053: Stockpile		
+2* Coin	2* 060: ErraticAttacker		027: Sandshrew		054: Perish Song		
+2* Crest	2* 083: Gratitude		028: Sandslash		055: Paused		
+2* Dust	2* 088: DoubleDash		029: Nidoran♀		057: Wish		
+2* Earring	3* 002: TypeSpeedBoost		030: Nidorina		058: Telekinesis		
+2* Guard	3* 005: SuperCrit		031: Nidoqueen		059: Charge		
+2* Heart	3* 017: CounterBasher		032: Nidoran♂		060: Disable		
+2* Jaw	3* 024: KnockbackOnAttack		033: Nidorino		061: Yawning		
+2* Jewel	3* 028: StatusImmune		034: Nidoking		062: Exposed		
+2* Key	3* 031: ChargeWalker		035: Clefairy		063: Miracle Eye		
+2* Medal	3* 032: StairSensor		036: Clefable		064: Endure		
+2* Ore	3* 038: LungeAttack		037: Vulpix		065: Ingrain		
+2* Pebble	3* 042: ExplosionGuard		038: Ninetales		066: Mirror Coat		
+2* Ring	3* 043: WandMaster		039: Jigglypuff		067: Counter		
+2* Rock	3* 048: Absorption		040: Wigglytuff		068: Safeguard		
+2* Seal	3* 049: ExcessiveForce		041: Zubat		069: Mist		
+2* Shard	3* 054: DistanceDodge		042: Golbat		070: Sleepless		
+2* Tag	3* 055: CloseDodge		043: Oddish		071: Enraged		
+3* Apron	3* 057: SelfCurer		044: Gloom		072: Taunted		
+3* Armlet	3* 058: StatusMirror		045: Vileplume		073: Encore		
+3* Armor	3* 063: CoinWatcher		046: Paras		074: Torment		
+3* Band	3* 064: HiddenStairFinder		047: Parasect		075: Grudge		
+3* Bangle	3* 065: ChestFinder		048: Venonat		076: Lucky Chant		
+3* Belt	3* 066: ShopFinder		049: Venomoth		077: Aqua Ring		
+3* Blade	3* 069: GapProber		050: Diglett		078: Focus Energy		
+3* Bow	3* 071: WeatherProtection		051: Dugtrio		079: Embargo		
+3* Cap	3* 072: RemoveAbilityAttack		052: Meowth		080: Area Counter		
+3* Cape	3* 075: HealInLava		053: Persian		081: Heal Block		
+3* Choker	3* 076: HealOnNewFloor		054: Psyduck		082: Magic Coat		
+3* Coat	3* 085: StatusOnCategoryHit		055: Golduck		083: Metal Burst		
+3* Collar	3* 089: StatusSplash		056: Mankey		084: Type-Boosted		
+3* Crown	4* 010: AllTerrain		057: Primeape		085: Type-Converted		
+3* Dress	4* 025: ThrowOnAttack		058: Growlithe		086: Status Protection		
+3* Drill	4* 041: TrapBuster		059: Arcanine		087: Wide Guard		
+3* Float	4* 044: WandSpread		060: Poliwag		088: Quick Guard		
+3* Glasses	4* 045: MultiRayShot		061: Poliwhirl		089: Protect		
+3* Hat	4* 046: RoyalVeil		062: Poliwrath		090: Immobilized		
+3* Helmet	4* 047: Celebrate		063: Abra		091: Follow Me		
+3* Mantle	4* 056: FastHealer		064: Kadabra		092: Super Mobile		
+3* Mask	4* 068: TypedAttack		065: Alakazam		093: Slip		
+3* Poncho	4* 070: PassThroughAttacker		066: Machop		094: Snatch		
+3* Robe	4* 073: CheekPouch		067: Machoke		095: Roosting		
+3* Ruff	4* 074: HealInWater		068: Machamp		096: Belch		
+3* Sash	4* 080: NoStatusInWeather		069: Bellsprout		097: Electrified		
+3* Scarf	4* 081: DeepBreatherPlus		070: Weepinbell		098: Sure Shot		
+3* Scope	4* 086: StatusOnCategoryUse		071: Victreebel		099: Power-Charged		
+3* Shield	4* 090: DevolveOnAttack		072: Tentacool		100: Mini-Counter		
+3* Specs	4* 091: ProjectileAttack		073: Tentacruel		101: Leech Seed		
+3* Tiara	4* 093: AttackRangeInWeather		074: Geodude		102: Magnet Rise		
+3* Tie	5* 003: TypeGroupWeaknessReduce		075: Graveler		104: Infestation		
+3* Torc	5* 004: TypeBulldozer		076: Golem		105: Nightmare		
+3* Veil	5* 007: Nontraitor		077: Ponyta		106: Magma Storm		
+	5* 011: Wallbreaker		078: Rapidash		107: Retaliate		
+	5* 012: GapFiller		079: Slowpoke		108: Water Pledge		
+	5* 020: AllyReviver		080: Slowbro		109: Fire Pledge		
+	5* 021: AllyReviverBattle		081: Magnemite		110: Grass Pledge		
+	5* 034: MapSurveyor		082: Magneton		111: Illusion		
+	5* 035: XRay		083: Farfetch'd		112: Decoy		
+	5* 036: WeaknessPayback		084: Doduo		113: Type-Protected		
+	5* 037: WarpPayback		085: Dodrio		114: Blinker		
+	5* 040: ExplosiveAttack		086: Seel		115: Pierce		
+	5* 067: SecondSTAB		087: Dewgong		116: Conversion		
+	5* 077: EndureCategory		088: Grimer		117: Conversion 2		
+	5* 078: EndureType		089: Muk		118: Recruit Boost		
+	5* 079: SpikeDropper		090: Shellder		119: Stat-Charged		
+	5* 082: WeaknessReduce		091: Cloyster		120: Mental-Charged		
+	5* 087: MapStatusOnCategoryUse		092: Gastly		121: Weakness Drain		
+	5* 092: MetronomePlus		093: Haunter		123: Powder		
+			094: Gengar		124: Regeneration		
+			095: Onix		125: Detect		
+			096: Drowzee		129: Invisible		
+			097: Hypno				
+			098: Krabby				
+			099: Kingler				
+			100: Voltorb				
+			101: Electrode				
+			102: Exeggcute				
+			103: Exeggutor				
+			104: Cubone				
+			105: Marowak				
+			106: Hitmonlee				
+			107: Hitmonchan				
+			108: Lickitung				
+			109: Koffing				
+			110: Weezing				
+			111: Rhyhorn				
+			112: Rhydon				
+			113: Chansey				
+			114: Tangela				
+			115: Kangaskhan				
+			116: Horsea				
+			117: Seadra				
+			118: Goldeen				
+			119: Seaking				
+			120: Staryu				
+			121: Starmie				
+			122: Mr. Mime				
+			123: Scyther				
+			124: Jynx				
+			125: Electabuzz				
+			126: Magmar				
+			127: Pinsir				
+			128: Tauros				
+			129: Magikarp				
+			130: Gyarados				
+			131: Lapras				
+			132: Ditto				
+			133: Eevee				
+			134: Vaporeon				
+			135: Jolteon				
+			136: Flareon				
+			137: Porygon				
+			138: Omanyte				
+			139: Omastar				
+			140: Kabuto				
+			141: Kabutops				
+			142: Aerodactyl				
+			143: Snorlax				
+			144: Articuno				
+			145: Zapdos				
+			146: Moltres				
+			147: Dratini				
+			148: Dragonair				
+			149: Dragonite				
+			150: Mewtwo				
+			151: Mew				
+			152: Chikorita				
+			153: Bayleef				
+			154: Meganium				
+			155: Cyndaquil				
+			156: Quilava				
+			157: Typhlosion				
+			158: Totodile				
+			159: Croconaw				
+			160: Feraligatr				
+			161: Sentret				
+			162: Furret				
+			163: Hoothoot				
+			164: Noctowl				
+			165: Ledyba				
+			166: Ledian				
+			167: Spinarak				
+			168: Ariados				
+			169: Crobat				
+			170: Chinchou				
+			171: Lanturn				
+			172: Pichu				
+			173: Cleffa				
+			174: Igglybuff				
+			175: Togepi				
+			176: Togetic				
+			177: Natu				
+			178: Xatu				
+			179: Mareep				
+			180: Flaaffy				
+			181: Ampharos				
+			182: Bellossom				
+			183: Marill				
+			184: Azumarill				
+			185: Sudowoodo				
+			186: Politoed				
+			187: Hoppip				
+			188: Skiploom				
+			189: Jumpluff				
+			190: Aipom				
+			191: Sunkern				
+			192: Sunflora				
+			193: Yanma				
+			194: Wooper				
+			195: Quagsire				
+			196: Espeon				
+			197: Umbreon				
+			198: Murkrow				
+			199: Slowking				
+			200: Misdreavus				
+			201: Unown				
+			202: Wobbuffet				
+			203: Girafarig				
+			204: Pineco				
+			205: Forretress				
+			206: Dunsparce				
+			207: Gligar				
+			208: Steelix				
+			209: Snubbull				
+			210: Granbull				
+			211: Qwilfish				
+			212: Scizor				
+			213: Shuckle				
+			214: Heracross				
+			215: Sneasel				
+			216: Teddiursa				
+			217: Ursaring				
+			218: Slugma				
+			219: Magcargo				
+			220: Swinub				
+			221: Piloswine				
+			222: Corsola				
+			223: Remoraid				
+			224: Octillery				
+			225: Delibird				
+			226: Mantine				
+			227: Skarmory				
+			228: Houndour				
+			229: Houndoom				
+			230: Kingdra				
+			231: Phanpy				
+			232: Donphan				
+			233: Porygon2				
+			234: Stantler				
+			235: Smeargle				
+			236: Tyrogue				
+			237: Hitmontop				
+			238: Smoochum				
+			239: Elekid				
+			240: Magby				
+			241: Miltank				
+			242: Blissey				
+			243: Raikou				
+			244: Entei				
+			245: Suicune				
+			246: Larvitar				
+			247: Pupitar				
+			248: Tyranitar				
+			249: Lugia				
+			250: Ho-Oh				
+			251: Celebi				
+			252: Treecko				
+			253: Grovyle				
+			254: Sceptile				
+			255: Torchic				
+			256: Combusken				
+			257: Blaziken				
+			258: Mudkip				
+			259: Marshtomp				
+			260: Swampert				
+			261: Poochyena				
+			262: Mightyena				
+			263: Zigzagoon				
+			264: Linoone				
+			265: Wurmple				
+			266: Silcoon				
+			267: Beautifly				
+			268: Cascoon				
+			269: Dustox				
+			270: Lotad				
+			271: Lombre				
+			272: Ludicolo				
+			273: Seedot				
+			274: Nuzleaf				
+			275: Shiftry				
+			276: Taillow				
+			277: Swellow				
+			278: Wingull				
+			279: Pelipper				
+			280: Ralts				
+			281: Kirlia				
+			282: Gardevoir				
+			283: Surskit				
+			284: Masquerain				
+			285: Shroomish				
+			286: Breloom				
+			287: Slakoth				
+			288: Vigoroth				
+			289: Slaking				
+			290: Nincada				
+			291: Ninjask				
+			292: Shedinja				
+			293: Whismur				
+			294: Loudred				
+			295: Exploud				
+			296: Makuhita				
+			297: Hariyama				
+			298: Azurill				
+			299: Nosepass				
+			300: Skitty				
+			301: Delcatty				
+			302: Sableye				
+			303: Mawile				
+			304: Aron				
+			305: Lairon				
+			306: Aggron				
+			307: Meditite				
+			308: Medicham				
+			309: Electrike				
+			310: Manectric				
+			311: Plusle				
+			312: Minun				
+			313: Volbeat				
+			314: Illumise				
+			315: Roselia				
+			316: Gulpin				
+			317: Swalot				
+			318: Carvanha				
+			319: Sharpedo				
+			320: Wailmer				
+			321: Wailord				
+			322: Numel				
+			323: Camerupt				
+			324: Torkoal				
+			325: Spoink				
+			326: Grumpig				
+			327: Spinda				
+			328: Trapinch				
+			329: Vibrava				
+			330: Flygon				
+			331: Cacnea				
+			332: Cacturne				
+			333: Swablu				
+			334: Altaria				
+			335: Zangoose				
+			336: Seviper				
+			337: Lunatone				
+			338: Solrock				
+			339: Barboach				
+			340: Whiscash				
+			341: Corphish				
+			342: Crawdaunt				
+			343: Baltoy				
+			344: Claydol				
+			345: Lileep				
+			346: Cradily				
+			347: Anorith				
+			348: Armaldo				
+			349: Feebas				
+			350: Milotic				
+			351: Castform				
+			352: Kecleon				
+			353: Shuppet				
+			354: Banette				
+			355: Duskull				
+			356: Dusclops				
+			357: Tropius				
+			358: Chimecho				
+			359: Absol				
+			360: Wynaut				
+			361: Snorunt				
+			362: Glalie				
+			363: Spheal				
+			364: Sealeo				
+			365: Walrein				
+			366: Clamperl				
+			367: Huntail				
+			368: Gorebyss				
+			369: Relicanth				
+			370: Luvdisc				
+			371: Bagon				
+			372: Shelgon				
+			373: Salamence				
+			374: Beldum				
+			375: Metang				
+			376: Metagross				
+			377: Regirock				
+			378: Regice				
+			379: Registeel				
+			380: Latias				
+			381: Latios				
+			382: Kyogre				
+			383: Groudon				
+			384: Rayquaza				
+			385: Jirachi				
+			386: Deoxys				
+			387: Turtwig				
+			388: Grotle				
+			389: Torterra				
+			390: Chimchar				
+			391: Monferno				
+			392: Infernape				
+			393: Piplup				
+			394: Prinplup				
+			395: Empoleon				
+			396: Starly				
+			397: Staravia				
+			398: Staraptor				
+			399: Bidoof				
+			400: Bibarel				
+			401: Kricketot				
+			402: Kricketune				
+			403: Shinx				
+			404: Luxio				
+			405: Luxray				
+			406: Budew				
+			407: Roserade				
+			408: Cranidos				
+			409: Rampardos				
+			410: Shieldon				
+			411: Bastiodon				
+			412: Burmy				
+			413: Wormadam				
+			414: Mothim				
+			415: Combee				
+			416: Vespiquen				
+			417: Pachirisu				
+			418: Buizel				
+			419: Floatzel				
+			420: Cherubi				
+			421: Cherrim				
+			422: Shellos				
+			423: Gastrodon				
+			424: Ambipom				
+			425: Drifloon				
+			426: Drifblim				
+			427: Buneary				
+			428: Lopunny				
+			429: Mismagius				
+			430: Honchkrow				
+			431: Glameow				
+			432: Purugly				
+			433: Chingling				
+			434: Stunky				
+			435: Skuntank				
+			436: Bronzor				
+			437: Bronzong				
+			438: Bonsly				
+			439: Mime Jr.				
+			440: Happiny				
+			441: Chatot				
+			442: Spiritomb				
+			443: Gible				
+			444: Gabite				
+			445: Garchomp				
+			446: Munchlax				
+			447: Riolu				
+			448: Lucario				
+			449: Hippopotas				
+			450: Hippowdon				
+			451: Skorupi				
+			452: Drapion				
+			453: Croagunk				
+			454: Toxicroak				
+			455: Carnivine				
+			456: Finneon				
+			457: Lumineon				
+			458: Mantyke				
+			459: Snover				
+			460: Abomasnow				
+			461: Weavile				
+			462: Magnezone				
+			463: Lickilicky				
+			464: Rhyperior				
+			465: Tangrowth				
+			466: Electivire				
+			467: Magmortar				
+			468: Togekiss				
+			469: Yanmega				
+			470: Leafeon				
+			471: Glaceon				
+			472: Gliscor				
+			473: Mamoswine				
+			474: Porygon-Z				
+			475: Gallade				
+			476: Probopass				
+			477: Dusknoir				
+			478: Froslass				
+			479: Rotom				
+			480: Uxie				
+			481: Mesprit				
+			482: Azelf				
+			483: Dialga				
+			484: Palkia				
+			485: Heatran				
+			486: Regigigas				
+			487: Giratina				
+			488: Cresselia				
+			489: Phione				
+			490: Manaphy				
+			491: Darkrai				
+			492: Shaymin				
+			493: Arceus				
+			494: Victini				
+			495: Snivy				
+			496: Servine				
+			497: Serperior				
+			498: Tepig				
+			499: Pignite				
+			500: Emboar				
+			501: Oshawott				
+			502: Dewott				
+			503: Samurott				
+			504: Patrat				
+			505: Watchog				
+			506: Lillipup				
+			507: Herdier				
+			508: Stoutland				
+			509: Purrloin				
+			510: Liepard				
+			511: Pansage				
+			512: Simisage				
+			513: Pansear				
+			514: Simisear				
+			515: Panpour				
+			516: Simipour				
+			517: Munna				
+			518: Musharna				
+			519: Pidove				
+			520: Tranquill				
+			521: Unfezant				
+			522: Blitzle				
+			523: Zebstrika				
+			524: Roggenrola				
+			525: Boldore				
+			526: Gigalith				
+			527: Woobat				
+			528: Swoobat				
+			529: Drilbur				
+			530: Excadrill				
+			531: Audino				
+			532: Timburr				
+			533: Gurdurr				
+			534: Conkeldurr				
+			535: Tympole				
+			536: Palpitoad				
+			537: Seismitoad				
+			538: Throh				
+			539: Sawk				
+			540: Sewaddle				
+			541: Swadloon				
+			542: Leavanny				
+			543: Venipede				
+			544: Whirlipede				
+			545: Scolipede				
+			546: Cottonee				
+			547: Whimsicott				
+			548: Petilil				
+			549: Lilligant				
+			550: Basculin				
+			551: Sandile				
+			552: Krokorok				
+			553: Krookodile				
+			554: Darumaka				
+			555: Darmanitan				
+			556: Maractus				
+			557: Dwebble				
+			558: Crustle				
+			559: Scraggy				
+			560: Scrafty				
+			561: Sigilyph				
+			562: Yamask				
+			563: Cofagrigus				
+			564: Tirtouga				
+			565: Carracosta				
+			566: Archen				
+			567: Archeops				
+			568: Trubbish				
+			569: Garbodor				
+			570: Zorua				
+			571: Zoroark				
+			572: Minccino				
+			573: Cinccino				
+			574: Gothita				
+			575: Gothorita				
+			576: Gothitelle				
+			577: Solosis				
+			578: Duosion				
+			579: Reuniclus				
+			580: Ducklett				
+			581: Swanna				
+			582: Vanillite				
+			583: Vanillish				
+			584: Vanilluxe				
+			585: Deerling				
+			586: Sawsbuck				
+			587: Emolga				
+			588: Karrablast				
+			589: Escavalier				
+			590: Foongus				
+			591: Amoonguss				
+			592: Frillish				
+			593: Jellicent				
+			594: Alomomola				
+			595: Joltik				
+			596: Galvantula				
+			597: Ferroseed				
+			598: Ferrothorn				
+			599: Klink				
+			600: Klang				
+			601: Klinklang				
+			602: Tynamo				
+			603: Eelektrik				
+			604: Eelektross				
+			605: Elgyem				
+			606: Beheeyem				
+			607: Litwick				
+			608: Lampent				
+			609: Chandelure				
+			610: Axew				
+			611: Fraxure				
+			612: Haxorus				
+			613: Cubchoo				
+			614: Beartic				
+			615: Cryogonal				
+			616: Shelmet				
+			617: Accelgor				
+			618: Stunfisk				
+			619: Mienfoo				
+			620: Mienshao				
+			621: Druddigon				
+			622: Golett				
+			623: Golurk				
+			624: Pawniard				
+			625: Bisharp				
+			626: Bouffalant				
+			627: Rufflet				
+			628: Braviary				
+			629: Vullaby				
+			630: Mandibuzz				
+			631: Heatmor				
+			632: Durant				
+			633: Deino				
+			634: Zweilous				
+			635: Hydreigon				
+			636: Larvesta				
+			637: Volcarona				
+			638: Cobalion				
+			639: Terrakion				
+			640: Virizion				
+			641: Tornadus				
+			642: Thundurus				
+			643: Reshiram				
+			644: Zekrom				
+			645: Landorus				
+			646: Kyurem				
+			647: Keldeo				
+			648: Meloetta				
+			649: Genesect				
+			650: Chespin				
+			651: Quilladin				
+			652: Chesnaught				
+			653: Fennekin				
+			654: Braixen				
+			655: Delphox				
+			656: Froakie				
+			657: Frogadier				
+			658: Greninja				
+			659: Bunnelby				
+			660: Diggersby				
+			661: Fletchling				
+			662: Fletchinder				
+			663: Talonflame				
+			664: Scatterbug				
+			665: Spewpa				
+			666: Vivillon				
+			667: Litleo				
+			668: Pyroar				
+			669: Flabébé				
+			670: Floette				
+			671: Florges				
+			672: Skiddo				
+			673: Gogoat				
+			674: Pancham				
+			675: Pangoro				
+			676: Furfrou				
+			677: Espurr				
+			678: Meowstic				
+			679: Honedge				
+			680: Doublade				
+			681: Aegislash				
+			682: Spritzee				
+			683: Aromatisse				
+			684: Swirlix				
+			685: Slurpuff				
+			686: Inkay				
+			687: Malamar				
+			688: Binacle				
+			689: Barbaracle				
+			690: Skrelp				
+			691: Dragalge				
+			692: Clauncher				
+			693: Clawitzer				
+			694: Helioptile				
+			695: Heliolisk				
+			696: Tyrunt				
+			697: Tyrantrum				
+			698: Amaura				
+			699: Aurorus				
+			700: Sylveon				
+			701: Hawlucha				
+			702: Dedenne				
+			703: Carbink				
+			704: Goomy				
+			705: Sliggoo				
+			706: Goodra				
+			707: Klefki				
+			708: Phantump				
+			709: Trevenant				
+			710: Pumpkaboo				
+			711: Gourgeist				
+			712: Bergmite				
+			713: Avalugg				
+			714: Noibat				
+			715: Noivern				
+			716: Xerneas				
+			717: Yveltal				
+			718: Zygarde				
+			719: Diancie				
+			720: Hoopa				
+			721: Volcanion				
+			722: Rowlet				
+			723: Dartrix				
+			724: Decidueye				
+			725: Litten				
+			726: Torracat				
+			727: Incineroar				
+			728: Popplio				
+			729: Brionne				
+			730: Primarina				
+			731: Pikipek				
+			732: Trumbeak				
+			733: Toucannon				
+			734: Yungoos				
+			735: Gumshoos				
+			736: Grubbin				
+			737: Charjabug				
+			738: Vikavolt				
+			739: Crabrawler				
+			740: Crabominable				
+			741: Oricorio				
+			742: Cutiefly				
+			743: Ribombee				
+			744: Rockruff				
+			745: Lycanroc				
+			746: Wishiwashi				
+			747: Mareanie				
+			748: Toxapex				
+			749: Mudbray				
+			750: Mudsdale				
+			751: Dewpider				
+			752: Araquanid				
+			753: Fomantis				
+			754: Lurantis				
+			755: Morelull				
+			756: Shiinotic				
+			757: Salandit				
+			758: Salazzle				
+			759: Stufful				
+			760: Bewear				
+			761: Bounsweet				
+			762: Steenee				
+			763: Tsareena				
+			764: Comfey				
+			765: Oranguru				
+			766: Passimian				
+			767: Wimpod				
+			768: Golisopod				
+			769: Sandygast				
+			770: Palossand				
+			771: Pyukumuku				
+			772: Type: Null				
+			773: Silvally				
+			774: Minior				
+			775: Komala				
+			776: Turtonator				
+			777: Togedemaru				
+			778: Mimikyu				
+			779: Bruxish				
+			780: Drampa				
+			781: Dhelmise				
+			782: Jangmo-o				
+			783: Hakamo-o				
+			784: Kommo-o				
+			785: Tapu Koko				
+			786: Tapu Lele				
+			787: Tapu Bulu				
+			788: Tapu Fini				
+			789: Cosmog				
+			790: Cosmoem				
+			791: Solgaleo				
+			792: Lunala				
+			793: Nihilego				
+			794: Buzzwole				
+			795: Pheromosa				
+			796: Xurkitree				
+			797: Celesteela				
+			798: Kartana				
+			799: Guzzlord				
+			800: Necrozma				
+			801: Magearna				
+			802: Marshadow				
+			803: Poipole				
+			804: Naganadel				
+			805: Stakataka				
+			806: Blacephalon				
+			807: Zeraora				
+			808: Meltan				
+			809: Melmetal				
+			810: Grookey				
+			811: Thwackey				
+			812: Rillaboom				
+			813: Scorbunny				
+			814: Raboot				
+			815: Cinderace				
+			816: Sobble				
+			817: Drizzile				
+			818: Inteleon				
+			819: Skwovet				
+			820: Greedent				
+			821: Rookidee				
+			822: Corvisquire				
+			823: Corviknight				
+			824: Blipbug				
+			825: Dottler				
+			826: Orbeetle				
+			827: Nickit				
+			828: Thievul				
+			829: Gossifleur				
+			830: Eldegoss				
+			831: Wooloo				
+			832: Dubwool				
+			833: Chewtle				
+			834: Drednaw				
+			835: Yamper				
+			836: Boltund				
+			837: Rolycoly				
+			838: Carkol				
+			839: Coalossal				
+			840: Applin				
+			841: Flapple				
+			842: Appletun				
+			843: Silicobra				
+			844: Sandaconda				
+			845: Cramorant				
+			846: Arrokuda				
+			847: Barraskewda				
+			848: Toxel				
+			849: Toxtricity				
+			850: Sizzlipede				
+			851: Centiskorch				
+			852: Clobbopus				
+			853: Grapploct				
+			854: Sinistea				
+			855: Polteageist				
+			856: Hatenna				
+			857: Hattrem				
+			858: Hatterene				
+			859: Impidimp				
+			860: Morgrem				
+			861: Grimmsnarl				
+			862: Obstagoon				
+			863: Perrserker				
+			864: Cursola				
+			865: Sirfetch'd				
+			866: Mr. Rime				
+			867: Runerigus				
+			868: Milcery				
+			869: Alcremie				
+			870: Falinks				
+			871: Pincurchin				
+			872: Snom				
+			873: Frosmoth				
+			874: Stonjourner				
+			875: Eiscue				
+			876: Indeedee				
+			877: Morpeko				
+			878: Cufant				
+			879: Copperajah				
+			880: Dracozolt				
+			881: Arctozolt				
+			882: Dracovish				
+			883: Arctovish				
+			884: Duraludon				
+			885: Dreepy				
+			886: Drakloak				
+			887: Dragapult				
+			888: Zacian				
+			889: Zamazenta				
+			890: Eternatus				
+			891: Kubfu				
+			892: Urshifu				
+			893: Zarude				
+			894: Regieleki				
+			895: Regidrago				
+			896: Glastrier				
+			897: Spectrier				
+			898: Calyrex				
+							

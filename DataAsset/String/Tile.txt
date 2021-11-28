@@ -1,0 +1,99 @@
+Key		EN
+0000-0000|data.Name		None
+0000-0001|data.Desc		This tile has no effect.
+0001-0000|data.Name		Stairs
+0001-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.
+0002-0000|data.Name		Stairs
+0002-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.
+0003-0000|data.Name		Poison Trap
+0003-0001|data.Desc		Triggering this trap will shoot poison spikes in all directions. Pokémon hit will become poisoned.
+0004-0000|data.Name		Slumber Trap
+0004-0001|data.Desc		Triggering this trap releases a sleeping gas that puts all nearby Pokémon to sleep.
+0005-0000|data.Name		Spin Trap
+0005-0001|data.Desc		Triggering this trap spins all nearby Pokémon around dizzyingly, making them confused.
+0006-0000|data.Name		Slow Trap
+0006-0001|data.Desc		Triggering this trap lowers the Movement Speed of nearby Pokémon by one level.
+0007-0000|data.Name		Mud Trap
+0007-0001|data.Desc		Triggering this trap makes it blow mud that sharply lowers the highest base stat of all nearby Pokémon.
+0008-0000|data.Name		Seal Trap
+0008-0001|data.Desc		Triggering this trap disables the last-used move of all nearby Pokémon.
+0009-0000|data.Name		PP-Leech Trap
+0009-0001|data.Desc		Triggering this trap completely drains the PP of the Pokémon's last-used move.
+0010-0000|data.Name		Grimy Trap
+0010-0001|data.Desc		Triggering this trap makes it spew a muck that gums up food and removes abilities.
+0011-0000|data.Name		Sticky Trap
+0011-0001|data.Desc		Triggering this trap makes all nearby Pokémon immobilized. It will also cause items to become sticky.
+0012-0000|data.Name		Apple Trap
+0012-0001|data.Desc		Triggering this trap turns a held-effect item into an apple.
+0013-0000|data.Name		Warp Trap
+0013-0001|data.Desc		Triggering this trap instantly warps the Pokémon to another spot on the floor.
+0014-0000|data.Name		Gust Trap
+0014-0001|data.Desc		Activating this trap triggers a gust of wind that sends nearby Pokémon flying.
+0015-0000|data.Name		Summon Trap
+0015-0001|data.Desc		Triggering this trap releases a sweet aroma that attracts Pokémon from afar.
+0016-0000|data.Name		Pokémon Trap
+0016-0001|data.Desc		Triggering this trap transforms all items in the area into hostile Pokémon.
+0017-0000|data.Name		Chestnut Trap
+0017-0001|data.Desc		Triggering this trap makes spiky unshelled Chestnuts drop, inflicting damage on nearby Pokémon.
+0018-0000|data.Name		Self-Destruct Trap
+0018-0001|data.Desc		Triggering this trap makes it explode. Its damage extends to everything near the trap.
+0019-0000|data.Name		Explosion Trap
+0019-0001|data.Desc		Activating this trap triggers a huge explosion. Its damage extends to everything up to 2 steps away from it.
+0020-0000|data.Name		Spikes
+0020-0001|data.Desc		Stepping on this trap damages the Pokémon standing on it.
+0021-0000|data.Name		Toxic Spikes
+0021-0001|data.Desc		Stepping on this trap badly poisons the Pokémon standing on it.
+0022-0000|data.Name		Stealth Rock
+0022-0001|data.Desc		Stepping on this trap damages the Pokémon standing on it with a Rock-type attack.
+0023-0000|data.Name		Trip Trap
+0023-0001|data.Desc		Triggering this trap causes nearby Pokémon to trip and drop their items.
+0024-0000|data.Name		Grudge Trap
+0024-0001|data.Desc		Triggering this trap gives the Grudge status to all opposing Pokémon in the area.
+0025-0000|data.Name		Hunger Trap
+0025-0001|data.Desc		Triggering this trap causes the Pokémon to become hungry.
+0026-0000|data.Name		Training Switch
+0026-0001|data.Desc		Stepping on this tile gives the Trained status to the party.
+0027-0000|data.Name		Wonder Tile
+0027-0001|data.Desc		An odd floor tile seen in many dungeons. Triggering it resets nearby Pokémon's stats if they are boosted or reduced.
+0028-0000|data.Name		Trigger Trap
+0028-0001|data.Desc		Triggering this trap sets off all other traps in the area.
+0029-0000|data.Name		Pitfall Trap
+0029-0001|data.Desc		Stepping on this trap drops the Pokémon to the floor below, inflicting damage.
+0030-0000|data.Name		Discord Trap
+0030-0001|data.Desc		Triggering this trap creates a discord among the party.
+0031-0000|data.Name		Emera-Swap Trap
+0031-0001|data.Desc		Triggering this trap swaps an emera on a looplet for another emera.
+0032-0000|data.Name		Emera-Crush Trap
+0032-0001|data.Desc		Triggering this trap causes an emera on a looplet to come off and disappear.
+0033-0000|data.Name		Luminous Area
+0033-0001|data.Desc		A mysterious area that allows Pokémon to evolve.
+0034-0000|data.Name		Secret Stairs
+0034-0001|data.Desc		Stairs leading to an unknown location.
+0035-0000|data.Name		Secret Stairs
+0035-0001|data.Desc		Stairs leading to an unknown location.
+0036-0000|data.Name		Empty Chest
+0036-0001|data.Desc		
+0037-0000|data.Name		Treasure Chest
+0037-0001|data.Desc		
+0038-0000|data.Name		Signal Area
+0038-0001|data.Desc		A mysterious signal that calls Pokémon to the area.
+0039-0000|data.Name		Sealed Door
+0039-0001|data.Desc		
+0040-0000|data.Name		Sealed Block
+0040-0001|data.Desc		
+0041-0000|data.Name		Switch Tile
+0041-0001|data.Desc		A switch that opens various blocked passageways found on the floor.
+0042-0000|data.Name		Reset Tile
+0042-0001|data.Desc		A switch that resets the floor, returning all items, traps, and wild Pokémon to their original positions.
+0043-0000|data.Name		Sign
+0043-0001|data.Desc		
+0044-0000|data.Name		Rescue Point
+0044-0001|data.Desc		It's the rescue spot where your friend's team went down! Send an A-OK mail to rescue the defeated team.
+0045-0000|data.Name		Shop Tile
+0045-0001|data.Desc		
+0046-0000|data.Name		Exit Stairs
+0046-0001|data.Desc		Stairs leading to the dungeon's exit.
+0047-0000|data.Name		Exit Stairs
+0047-0001|data.Desc		Stairs leading to the dungeon's exit.
+0048-0000|data.Name		Script Trigger
+0048-0001|data.Desc		

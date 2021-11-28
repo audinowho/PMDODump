@@ -1,0 +1,1 @@
+﻿{"Object":{"$type":"RogueEssence.Data.RankData, RogueEssence","Name":{"DefaultText":"Master","LocalTexts":{"fr-ca":"Maître","de":"Meister","es":"Experto","pt":"Mestre","ko":"마스터"}},"Comment":"","BagSize":24,"FameToNext":100000},"Version":"0.5.2.0"}

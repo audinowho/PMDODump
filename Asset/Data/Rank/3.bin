@@ -1,0 +1,1 @@
+﻿{"Object":{"$type":"RogueEssence.Data.RankData, RogueEssence","Name":{"DefaultText":"Silver","LocalTexts":{"fr-ca":"Argent","de":"Silber","es":"Plata","pt":"Prata","ko":"실버"}},"Comment":"","BagSize":24,"FameToNext":1200},"Version":"0.5.2.0"}

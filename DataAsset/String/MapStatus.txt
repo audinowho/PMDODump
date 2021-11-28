@@ -1,0 +1,79 @@
+Key		EN
+0000-0000|data.Name		Clear
+0000-0001|data.Desc		The weather is clear.
+0001-0000|data.Name		Rain
+0001-0001|data.Desc		Water-type attacks are boosted and Fire-type attacks are weakened.
+0002-0000|data.Name		Sunny
+0002-0001|data.Desc		Fire-type attacks are boosted and Water-type attacks are weakened.
+0003-0000|data.Name		Sandstorm
+0003-0001|data.Desc		All Pokémon on the floor will take damage except Rock, Ground, and Steel-types. The Sp. Def of Rock-types is boosted.
+0004-0000|data.Name		Hail
+0004-0001|data.Desc		All Pokémon on the floor will take damage except Ice-types.
+0005-0000|data.Name		Fog
+0005-0001|data.Desc		
+0006-0000|data.Name		Cloudy
+0006-0001|data.Desc		
+0007-0000|data.Name		Snow
+0007-0001|data.Desc		
+0008-0000|data.Name		Blizzard
+0008-0001|data.Desc		
+0009-0000|data.Name		Trick Room
+0009-0001|data.Desc		Effects on all Pokémon's Movement Speed are reversed.
+0010-0000|data.Name		Gravity
+0010-0001|data.Desc		All Pokémon on the floor become less evasive and are forced to drop to the ground.
+0011-0000|data.Name		Wonder Room
+0011-0001|data.Desc		Physical attacks become Special attacks, and vice versa.
+0012-0000|data.Name		Magic Room
+0012-0001|data.Desc		All Pokémon on the floor have their held items and abilities disabled.
+0013-0000|data.Name		Electric Terrain
+0013-0001|data.Desc		Electric-type attacks are boosted, and all Pokémon on the floor cannot sleep.
+0014-0000|data.Name		Grassy Terrain
+0014-0001|data.Desc		Grass-type attacks are boosted, Ground-type attacks are weakened, and all Pokémon on the floor slowly gain HP except Flying types.
+0015-0000|data.Name		Misty Terrain
+0015-0001|data.Desc		Dragon-type attacks are weakened, and all Pokémon are protected from major status problems.
+0016-0000|data.Name		Inverse
+0016-0001|data.Desc		All type matchups are reversed.
+0017-0000|data.Name		Heavy Rain
+0017-0001|data.Desc		
+0018-0000|data.Name		Harsh Sun
+0018-0001|data.Desc		
+0019-0000|data.Name		Wind
+0019-0001|data.Desc		Flying-type Pokémon are protected from their weaknesses.
+0020-0000|data.Name		Move Ban
+0020-0001|data.Desc		A move has been banned and can no longer be used.
+0021-0000|data.Name		Mysterious Force
+0021-0001|data.Desc		A mysterious force prevents Orbs, Machines, and special items from working.
+0022-0000|data.Name		Something's stirring...
+0022-0001|data.Desc		Something's approaching. The exploration team must leave the floor before it arrives, or they will be forced out of the dungeon.
+0023-0000|data.Name		Items Sniffed
+0023-0001|data.Desc		
+0024-0000|data.Name		Default Weather
+0024-0001|data.Desc		
+0025-0000|data.Name		Default MapStatus
+0025-0001|data.Desc		
+0027-0000|data.Name		Mercy Revive
+0027-0001|data.Desc		
+0028-0000|data.Name		Stairs Sensed
+0028-0001|data.Desc		
+0029-0000|data.Name		Map Surveyed
+0029-0001|data.Desc		
+0030-0000|data.Name		Monster Mansion
+0030-0001|data.Desc		
+0031-0000|data.Name		Thief
+0031-0001|data.Desc		
+0032-0000|data.Name		Dark
+0032-0001|data.Desc		
+0033-0000|data.Name		Intrusion Check
+0033-0001|data.Desc		
+0034-0000|data.Name		Map Clear Check
+0034-0001|data.Desc		
+0035-0000|data.Name		Outlaw Clear Check
+0035-0001|data.Desc		
+0037-0000|data.Name		Shopping
+0037-0001|data.Desc		
+0038-0000|data.Name		Shop Security
+0038-0001|data.Desc		
+0039-0000|data.Name		Rescued
+0039-0001|data.Desc		
+0040-0000|data.Name		Foe FOV
+0040-0001|data.Desc		

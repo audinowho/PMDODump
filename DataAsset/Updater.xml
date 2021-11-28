@@ -1,0 +1,23 @@
+<Config>
+  <UpdateFile>http://127.0.0.1/pmdo-x64.zip</UpdateFile>
+  <VersionFile>http://127.0.0.1/version</VersionFile>
+  <LastVersion>0.0.0</LastVersion>
+  <Exclusions>
+    <Exclusion>PMDO/Config.xml</Exclusion>
+    <Exclusion>PMDO/Keyboard.xml</Exclusion>
+    <Exclusion>PMDO/Gamepad.xml</Exclusion>
+    <Exclusion>PMDO/Contacts.xml</Exclusion>
+    <Exclusion>PMDO/LOG/</Exclusion>
+    <Exclusion>PMDO/MODS/</Exclusion>
+    <Exclusion>PMDO/REPLAY/</Exclusion>
+    <Exclusion>PMDO/RESCUE/</Exclusion>
+    <Exclusion>PMDO/SAVE/</Exclusion>
+  </Exclusions>
+  <Executables>
+    <Exe>PMDO/PMDO</Exe>
+    <Exe>PMDO/dev.sh</Exe>
+    <Exe>PMDO/MapGenTest</Exe>
+    <Exe>WaypointServer/WaypointServer</Exe>
+    <Exe>WaypointServer.app/Contents/MacOS/WaypointServer</Exe>
+  </Executables>
+</Config>

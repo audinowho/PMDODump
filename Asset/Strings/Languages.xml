@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="en" xml:space="preserve">
+    <value>English</value>
+    <comment></comment>  </data>
+  <data name="fr" xml:space="preserve">
+    <value>Français</value>
+    <fallback>fr-ca</fallback>
+    <comment></comment>  </data>
+  <data name="fr-ca" xml:space="preserve">
+    <value>Français Québécois</value>
+    <fallback>fr</fallback>
+    <comment></comment>  </data>
+  <data name="de" xml:space="preserve">
+    <value>Deutsch</value>
+    <comment></comment>  </data>
+  <data name="es" xml:space="preserve">
+    <value>Español</value>
+    <fallback>es-la</fallback>
+    <comment></comment>  </data>
+  <data name="es-la" xml:space="preserve">
+    <value>Español Latino</value>
+    <fallback>es</fallback>
+    <comment></comment>  </data>
+  <data name="it" xml:space="preserve">
+    <value>Italiano</value>
+    <comment></comment>  </data>
+  <data name="pt" xml:space="preserve">
+    <value>Português</value>
+    <comment></comment>  </data>
+  <data name="ko" xml:space="preserve">
+    <value>한국어</value>
+    <comment></comment>  </data>
+  <data name="ja" xml:space="preserve">
+    <value>にほんご</value>
+    <fallback>ja-jp</fallback>
+    <comment></comment>  </data>
+  <data name="ja-jp" xml:space="preserve">
+    <value>日本語 (漢字)</value>
+    <fallback>ja</fallback>
+    <comment></comment>  </data>
+  <data name="zh-hans" xml:space="preserve">
+    <value>简体中文</value>
+    <fallback>zh-hant</fallback>
+    <comment></comment>  </data>
+  <data name="zh-hant" xml:space="preserve">
+    <value>繁體中文</value>
+    <fallback>zh-hans</fallback>
+    <comment></comment>  </data>
+</root>

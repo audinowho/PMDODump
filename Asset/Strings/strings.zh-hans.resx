@@ -1,0 +1,1731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_ENUM_BattleSpeed_Fast" xml:space="preserve">
+    <value>快</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_BattleSpeed_Normal" xml:space="preserve">
+    <value>普通</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_BattleSpeed_Slow" xml:space="preserve">
+    <value>慢</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_BattleSpeed_VeryFast" xml:space="preserve">
+    <value>非常快</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_BattleSpeed_VerySlow" xml:space="preserve">
+    <value>非常慢</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Dir4_Down" xml:space="preserve">
+    <value>下</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Dir4_Left" xml:space="preserve">
+    <value>左</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Dir4_Right" xml:space="preserve">
+    <value>右</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Dir4_Up" xml:space="preserve">
+    <value>上</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_ConnectionFailed_msg" xml:space="preserve">
+    <value>联通失败</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_ConnectionRejected_msg" xml:space="preserve">
+    <value>联通被拒绝。</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_HostUnreachable_msg" xml:space="preserve">
+    <value>主机无法接通。</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_InvalidProtocol_msg" xml:space="preserve">
+    <value>无效游戏规则</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_RemoteConnectionClose_msg" xml:space="preserve">
+    <value>服务器关闭连接。</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_DisconnectReason_Timeout_msg" xml:space="preserve">
+    <value>连接超时。</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_ExchangeState_Exchange_msg" xml:space="preserve">
+    <value>交换中...</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_ExchangeState_Ready_msg" xml:space="preserve">
+    <value>做好准备！</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_ExchangeState_Selecting_msg" xml:space="preserve">
+    <value>选择中...</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_ExchangeState_Viewing_msg" xml:space="preserve">
+    <value>观看中...</value>
+    <comment>The status for a player when they're viewing the Pokemon they can trade.</comment>  </data>
+  <data name="_ENUM_ExchangeState_Waiting_msg" xml:space="preserve">
+    <value>等待中...</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Double" xml:space="preserve">
+    <value>双倍</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Eighth" xml:space="preserve">
+    <value>八分之一倍</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Fourth" xml:space="preserve">
+    <value>四分之一倍</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Half" xml:space="preserve">
+    <value>半倍</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Normal" xml:space="preserve">
+    <value>普通</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Octuple" xml:space="preserve">
+    <value>八倍</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_GameSpeed_Quadruple" xml:space="preserve">
+    <value>四倍</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Female" xml:space="preserve">
+    <value>女</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Genderless" xml:space="preserve">
+    <value>无</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Male" xml:space="preserve">
+    <value>男</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Gender_Unknown" xml:space="preserve">
+    <value>不明</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Attack" xml:space="preserve">
+    <value>普通攻击</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Cancel" xml:space="preserve">
+    <value>取消</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Confirm" xml:space="preserve">
+    <value>确定</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Diagonal" xml:space="preserve">
+    <value>对角线</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_ItemMenu" xml:space="preserve">
+    <value>项目选项单</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap1" xml:space="preserve">
+    <value>1号领队</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap2" xml:space="preserve">
+    <value>2号领队</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap3" xml:space="preserve">
+    <value>3号领队</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwap4" xml:space="preserve">
+    <value>4号领队</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwapBack" xml:space="preserve">
+    <value>领队向后交换</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_LeaderSwapForth" xml:space="preserve">
+    <value>领队向前交换</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Menu" xml:space="preserve">
+    <value>选项</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Minimap" xml:space="preserve">
+    <value>迷你地图</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_MsgLog" xml:space="preserve">
+    <value>消息日志</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Run" xml:space="preserve">
+    <value>跑</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_SelectItems" xml:space="preserve">
+    <value>选项目</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Skill1" xml:space="preserve">
+    <value>攻击 1</value>
+    <comment>Moves as in "Attacks"</comment>  </data>
+  <data name="_ENUM_InputType_Skill2" xml:space="preserve">
+    <value>攻击 2</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Skill3" xml:space="preserve">
+    <value>攻击 3</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Skill4" xml:space="preserve">
+    <value>攻击 4</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_SkillMenu" xml:space="preserve">
+    <value>攻击选项</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Skills" xml:space="preserve">
+    <value>攻击</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_SortItems" xml:space="preserve">
+    <value>排序项目</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Start" xml:space="preserve">
+    <value>START</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_TacticMenu" xml:space="preserve">
+    <value>战术选项</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_TeamMenu" xml:space="preserve">
+    <value>团队选项</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_TeamMode" xml:space="preserve">
+    <value>团队模式</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_InputType_Turn" xml:space="preserve">
+    <value>回合</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Keys_Escape" xml:space="preserve">
+    <value>Esc</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_NetCloseReason_AlreadyConnected_msg" xml:space="preserve">
+    <value>您已从另一个应用程序连接。</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_NetCloseReason_DifferentActivity_msg" xml:space="preserve">
+    <value>另一个游戏玩家正在请求不同的活动。</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_NetCloseReason_OtherEnded_msg" xml:space="preserve">
+    <value>另一个游戏玩家终止了通讯。</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_NetCloseReason_PeerIDMismatch_msg" xml:space="preserve">
+    <value>其中一个游戏玩家没有连接到正确的团队身份证。</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_NetCloseReason_ServerShutdown_msg" xml:space="preserve">
+    <value>服务器已关闭。</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_Magical" xml:space="preserve">
+    <value>特殊</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_None" xml:space="preserve">
+    <value>无</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_Physical" xml:space="preserve">
+    <value>物理</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_SkillCategory_Status" xml:space="preserve">
+    <value>狀態</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Attack" xml:space="preserve">
+    <value>攻击</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Defense" xml:space="preserve">
+    <value>防御</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_DodgeRate" xml:space="preserve">
+    <value>閃避率</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_HitRate" xml:space="preserve">
+    <value>命中率</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_HP" xml:space="preserve">
+    <value>HP</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MAtk" xml:space="preserve">
+    <value>特击</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MAtk_short" xml:space="preserve">
+    <value>特击</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MAtk_tiny" xml:space="preserve">
+    <value>特击</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MDef" xml:space="preserve">
+    <value>特防</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MDef_short" xml:space="preserve">
+    <value>特防</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_MDef_tiny" xml:space="preserve">
+    <value>特防</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Range" xml:space="preserve">
+    <value>范围</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_Stat_Speed" xml:space="preserve">
+    <value>速度</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Dawn" xml:space="preserve">
+    <value>黎明</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Day" xml:space="preserve">
+    <value>白日</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Dusk" xml:space="preserve">
+    <value>黄昏</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Night" xml:space="preserve">
+    <value>夜晚</value>
+    <comment></comment>  </data>
+  <data name="_ENUM_TimeOfDay_Unknown" xml:space="preserve">
+    <value>不明</value>
+    <comment></comment>  </data>
+  <data name="ADD_END" xml:space="preserve">
+    <value>和</value>
+    <comment>Last conjunction word when creating lists of words.  Ex. "Attack, Defense, and Special Defense" There needs to be a space before the word for "and", otherwise the previous word will be followed directly by the "and". That's to make sure the oxford comma does NOT have a space before it. Silly English people with their oxford commas.</comment>  </data>
+  <data name="DLG_ASK_ENTER_DUNGEON" xml:space="preserve">
+    <value>你要进入{0}吗？</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASK_ENTER_GROUND" xml:space="preserve">
+    <value>你要去{0}吗？</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASK_GENDER" xml:space="preserve">
+    <value>以男孩还是女孩来玩此游戏？</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASSEMBLY_RELEASE" xml:space="preserve">
+    <value>{0} 被放走了[pause=0]\n再见 {0}...</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASSEMBLY_RELEASE_ASK" xml:space="preserve">
+    <value>一旦放走，{0} 就永远消失了.[pause=0] 你确认吗？</value>
+    <comment></comment>  </data>
+  <data name="DLG_AWAIT_RESCUE_AOK_FAIL" xml:space="preserve">
+    <value>验证失败。[pause=0]  A-OK邮件已被删除。</value>
+    <comment></comment>  </data>
+  <data name="DLG_AWAIT_RESCUE_AOK_FOUND" xml:space="preserve">
+    <value>A-OK邮件已加载。[pause=0] 验证将开始。</value>
+    <comment></comment>  </data>
+  <data name="DLG_AWAIT_RESCUE_ASK" xml:space="preserve">
+    <value>您目前正在等待救援。 您会怎么做？</value>
+    <comment>This is asked when you faint in a dungeon and are given the opportunity to send an SOS.</comment>  </data>
+  <data name="DLG_AWAIT_RESCUE_RESUME" xml:space="preserve">
+    <value>您的团队已成功获救。[pause = 0]从顶部菜单继续。</value>
+    <comment></comment>  </data>
+  <data name="DLG_CHOICE_NO" xml:space="preserve">
+    <value>否</value>
+    <comment></comment>  </data>
+  <data name="DLG_CHOICE_YES" xml:space="preserve">
+    <value>是</value>
+    <comment></comment>  </data>
+  <data name="DLG_DELETE_COMPLETE" xml:space="preserve">
+    <value>您的探险已被删除。</value>
+    <comment></comment>  </data>
+  <data name="DLG_DELETE_CONFIRM" xml:space="preserve">
+    <value>真的可以吗？</value>
+    <comment></comment>  </data>
+  <data name="DLG_DELETE_SAVE" xml:space="preserve">
+    <value>您的探险将被删除。[pause= 0]这将不包括挑战模式，重播或联系人。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_FILE" xml:space="preserve">
+    <value>该文件无法读取，因为它的格式不正确或已损坏。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_FILE_FALLBACK" xml:space="preserve">
+    <value>请删除或将其从{0}中移出。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_SAVE" xml:space="preserve">
+    <value>主要保存文件无法读取，因为它de格式不正确或已损坏。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ERR_READ_SAVE_FALLBACK" xml:space="preserve">
+    <value>当前的游戏统计信息将用作后备状态，成为永久的游戏统计信息。</value>
+    <comment></comment>  </data>
+  <data name="DLG_LANGUAGE_SET" xml:space="preserve">
+    <value>语言已设置为{0}.</value>
+    <comment></comment>  </data>
+  <data name="DLG_LEVEL_DOWN" xml:space="preserve">
+    <value>{0}降到了{1}级！</value>
+    <comment></comment>  </data>
+  <data name="DLG_LEVEL_UP" xml:space="preserve">
+    <value>{0}升至{1}级！</value>
+    <comment></comment>  </data>
+  <data name="DLG_NEW_AREA" xml:space="preserve">
+    <value>现在你可以去{0}！</value>
+    <comment></comment>  </data>
+  <data name="DLG_NEW_AREA_TO" xml:space="preserve">
+    <value>地牢之外有一个新的区域。</value>
+    <comment></comment>  </data>
+  <data name="DLG_NEW_CHARS" xml:space="preserve">
+    <value>新的宝可梦作为起始参赛者出现了！</value>
+    <comment></comment>  </data>
+  <data name="DLG_NO_ADVENTURE" xml:space="preserve">
+    <value>但是探险还没有开始就结束了...</value>
+    <comment></comment>  </data>
+  <data name="DLG_ONLINE_TRADE_END_ASK" xml:space="preserve">
+    <value>你想退出与你的伴侣的交换吗？</value>
+    <comment></comment>  </data>
+  <data name="DLG_QUIT_ASK" xml:space="preserve">
+    <value>放弃探险？ 它将被视为失败。</value>
+    <comment></comment>  </data>
+  <data name="DLG_REPLAY_DESYNC" xml:space="preserve">
+    <value>重播不同步。[pauce= 0]返回选项单...</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_ADD_REWARD_ASK" xml:space="preserve">
+    <value>您会献出什么？</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_ASK" xml:space="preserve">
+    <value>您想发出一个救援请求？</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_GET_AOK_ASK" xml:space="preserve">
+    <value>收到来自{0}的A-OK邮件？</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_GET_AOK_ASK_REWARD" xml:space="preserve">
+    <value>收到来自{0}的A-OK邮件？ 您还将向他们发送列出的奖励。</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_GOT_AOK" xml:space="preserve">
+    <value>已从{0}收到A-OK邮件。</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_GOT_AOK_REWARD" xml:space="preserve">
+    <value>您还向他们发送了感谢的奖励！</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_INFO_1" xml:space="preserve">
+    <value>要请求救援，请在“等待救援”中选择“需要帮助”。</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_QUIT_ASK" xml:space="preserve">
+    <value>停止等待救援并放弃探险吗？</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_RECEIVE_SOS" xml:space="preserve">
+    <value>已从{0}收到求救邮件。</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_RECEIVE_SOS_ASK" xml:space="preserve">
+    <value>从{0}接收求救邮件吗？</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_AOK" xml:space="preserve">
+    <value>A-OK邮件已发送到{0}。</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_AOK_ASK" xml:space="preserve">
+    <value>将此A-OK邮件发送到{0}？</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_AOK_ASK_REWARD" xml:space="preserve">
+    <value>将此A-OK邮件发送到{0}？ 您将收到列出的奖励。</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_AOK_REWARD" xml:space="preserve">
+    <value>您也获得了感谢的奖励！</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_SOS" xml:space="preserve">
+    <value>求救邮件已发送到{0}。</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESCUE_SEND_SOS_ASK" xml:space="preserve">
+    <value>将此求救邮件发送到{0}？</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESTRICT_BAG" xml:space="preserve">
+    <value>{0}已被保存了。</value>
+    <comment>ex. "All (P), and items beyond the Xth slot have been stored away."</comment>  </data>
+  <data name="DLG_RESTRICT_ITEM_ALL" xml:space="preserve">
+    <value>所有项目</value>
+    <comment>Will be used in the sentence "All items have been stored away." May be used in the middle of a sentence so do not capitalize.</comment>  </data>
+  <data name="DLG_RESTRICT_ITEM_SLOT" xml:space="preserve">
+    <value>超出{0}的位置的项目</value>
+    <comment>Will be used in the sentence "Items beyond the Xth slot have been stored away." May be used in the middleof a sentence so do not capitalize.</comment>  </data>
+  <data name="DLG_RESTRICT_LEVEL" xml:space="preserve">
+    <value>团队成员已暂时减至Lv。{0}。</value>
+    <comment></comment>  </data>
+  <data name="DLG_RESTRICT_MONEY" xml:space="preserve">
+    <value>全部\ uE024</value>
+    <comment>Will be used in the sentence "All (P) have been stored away." May be used in the middle of a sentence so do not capitalize.</comment>  </data>
+  <data name="DLG_ROGUE_INFO_1" xml:space="preserve">
+    <value>在挑战模式下，您将与一个全新的团队一起进入选定的地牢。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_INFO_2" xml:space="preserve">
+    <value>您可以选择以什么作为宝可梦开始，并自定义其能力，性别或肤色。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_INFO_3" xml:space="preserve">
+    <value>如果您的团队完成了地牢，则所有物品和新兵都可以发送到主保存文件。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_INFO_4" xml:space="preserve">
+    <value>但是，如果玩家在探险中晕倒，他们将永远输掉了。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SEED_INFO_1" xml:space="preserve">
+    <value>您可以在选择要玩的地牢时指定种子。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SEED_INFO_2" xml:space="preserve">
+    <value>种子地牢无论播放多少次，都将始终具有相同的布局。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SEED_INFO_3" xml:space="preserve">
+    <value>您可以通过复制完成的探险纪录种子重播地牢布局。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SEED_INFO_4" xml:space="preserve">
+    <value>但是，您将无法在种子游戏中转移物品和宝可梦。</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SPECIAL_INFO_1" xml:space="preserve">
+    <value>在挑战模式中，闪亮的宝可梦会更频繁地出现，你也可以选择以一个闪亮的宝可梦开始！</value>
+    <comment></comment>  </data>
+  <data name="DLG_ROGUE_SPECIAL_INFO_2" xml:space="preserve">
+    <value>但是，它们不能在此模式下被送回家，并且如果它们晕倒了，将无法将其转移。</value>
+    <comment></comment>  </data>
+  <data name="DLG_SAVE_COMPLETE" xml:space="preserve">
+    <value>游戏已保存！</value>
+    <comment></comment>  </data>
+  <data name="DLG_SEND_HOME_ASK" xml:space="preserve">
+    <value>发回{0}？</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_DELETE" xml:space="preserve">
+    <value>删除此举是为{0}腾出空间？</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_FULL" xml:space="preserve">
+    <value>{0}试图学习{1}，但是{0}已经有4个动作。</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_LEARN" xml:space="preserve">
+    <value>{0}学会了{1}！</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_NO_LEARN" xml:space="preserve">
+    <value>{0}没有学会{1}。</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_REPLACE" xml:space="preserve">
+    <value>{0}忘记了{2}，[pause = 0]并学会了{1}！</value>
+    <comment></comment>  </data>
+  <data name="DLG_SKILL_STOP_LEARN" xml:space="preserve">
+    <value>停止尝试学习{0}？</value>
+    <comment></comment>  </data>
+  <data name="DLG_SUSPEND_ASK" xml:space="preserve">
+    <value>保存探险并返回标题屏幕？</value>
+    <comment></comment>  </data>
+  <data name="DLG_TEAM_FULL" xml:space="preserve">
+    <value>您的团队已满！ 选择一个宝可梦送回家。</value>
+    <comment></comment>  </data>
+  <data name="DLG_TEAM_SENT_HOME" xml:space="preserve">
+    <value>{0}已返回。</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_CANCELED" xml:space="preserve">
+    <value>另一个玩家取消了交换。</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_ITEM_ASK" xml:space="preserve">
+    <value>您将交换这些物品吗？</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_ITEM_COMPLETE" xml:space="preserve">
+    <value>交换完成！ 这些物品已发送到仓库。</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_AND" xml:space="preserve">
+    <value>作为交换...</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_ASK" xml:space="preserve">
+    <value>您将{0}换成{1}吗？</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_RECEIVED" xml:space="preserve">
+    <value>{1}已发送{0}来加入您的探险！</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_RECEIVED_BACK" xml:space="preserve">
+    <value>{0}从{1}返回！</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_SENT" xml:space="preserve">
+    <value>{0}已发送到{1}。</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRADE_TEAM_SENT_BACK" xml:space="preserve">
+    <value>{0}已发送回{1}。</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRANSFER_ASK" xml:space="preserve">
+    <value>物品和宝可梦可以发送到主保存文件。 开始转移？</value>
+    <comment></comment>  </data>
+  <data name="DLG_TRANSFER_COMPLETE" xml:space="preserve">
+    <value>转移完成！</value>
+    <comment></comment>  </data>
+  <data name="DLG_WHAT_DO" xml:space="preserve">
+    <value>你想做什么？</value>
+    <comment></comment>  </data>
+  <data name="GAME_ERROR_SPLASH" xml:space="preserve">
+    <value>游戏已中止\因为出现了太多错误。\n\n请关闭游戏并重新启动。</value>
+    <comment></comment>  </data>
+  <data name="GAME_SPLASH" xml:space="preserve">
+    <value>这是一款免费的粉丝游戏\n由宝可梦神秘的地牢的粉丝创建。\n\n请购买官方游戏支持该系列\n。\n\n\n\n宝可梦神秘的地牢归\n\n仁天堂\n宝可梦\n怪物公司\n游戏怪物公司\n长钉春软公司所有。</value>
+    <comment>CAREFUL.  A line can only contain up to 40 characters before it overflows the screen!  Due to font limitations, it also cannot contain anything other than plain ASCII. (Letters A-Z, numbers, punctuation.)</comment>  </data>
+  <data name="GAME_TITLE" xml:space="preserve">
+    <value>宝可梦神秘地牢：起源</value>
+    <comment>The title of the game.  Based off of "Pokemon Origins" (the anime)</comment>  </data>
+  <data name="INPUT_CAN_PASTE" xml:space="preserve">
+    <value>使用 CTRL+V 粘贴。</value>
+    <comment></comment>  </data>
+  <data name="INPUT_CONTACT_TITLE" xml:space="preserve">
+    <value>输入您的联系人的身份证。</value>
+    <comment></comment>  </data>
+  <data name="INPUT_IP_SUB" xml:space="preserve">
+    <value>格式为“主机名：端口”。 使用 CTRL+V 粘贴。</value>
+    <comment></comment>  </data>
+  <data name="INPUT_IP_TITLE" xml:space="preserve">
+    <value>输入服务器和可选的端口号码。</value>
+    <comment></comment>  </data>
+  <data name="INPUT_NAME_DESC" xml:space="preserve">
+    <value>如果没有昵称，请留空。</value>
+    <comment></comment>  </data>
+  <data name="INPUT_NAME_TITLE" xml:space="preserve">
+    <value>请输入昵称。</value>
+    <comment></comment>  </data>
+  <data name="INPUT_SEED_TITLE" xml:space="preserve">
+    <value>输入种子。</value>
+    <comment></comment>  </data>
+  <data name="INPUT_TEAM_DESC" xml:space="preserve">
+    <value>使用[TAB] 获取建议。 留空白表示随意。</value>
+    <comment></comment>  </data>
+  <data name="INPUT_TEAM_TITLE" xml:space="preserve">
+    <value>请输入团队名称。</value>
+    <comment></comment>  </data>
+  <data name="MENU_ADD_NEW" xml:space="preserve">
+    <value>添加新的</value>
+    <comment></comment>  </data>
+  <data name="MENU_AOK_TEAM" xml:space="preserve">
+    <value>救援人员：{0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_AOK_TITLE" xml:space="preserve">
+    <value>A-OK 总结</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_FAVORITE" xml:space="preserve">
+    <value>最喜欢的</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_JOIN" xml:space="preserve">
+    <value>加入团队</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_RELEASE" xml:space="preserve">
+    <value>释放</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_RENAME" xml:space="preserve">
+    <value>更改名字</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_STANDBY" xml:space="preserve">
+    <value>一旁等候</value>
+    <comment></comment>  </data>
+  <data name="MENU_ASSEMBLY_TITLE" xml:space="preserve">
+    <value>宝可梦集会</value>
+    <comment>Title of the Assembly menu, for choosing team members in the assembly to add to the team.  Based off of "Chimecho Assembly" as it was called in EN versions.</comment>  </data>
+  <data name="MENU_ASSEMBLY_UNFAVORITE" xml:space="preserve">
+    <value>不喜欢</value>
+    <comment></comment>  </data>
+  <data name="MENU_BAG_MONEY" xml:space="preserve">
+    <value>钱：{0}</value>
+    <comment>For labeling the amount of money the team has on hand</comment>  </data>
+  <data name="MENU_BANK_BANK" xml:space="preserve">
+    <value>银行</value>
+    <comment></comment>  </data>
+  <data name="MENU_BANK_MONEY" xml:space="preserve">
+    <value>钱：{0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_BANK_TITLE" xml:space="preserve">
+    <value>选择要携带多少 \uE024。</value>
+    <comment></comment>  </data>
+  <data name="MENU_BOY" xml:space="preserve">
+    <value>男生</value>
+    <comment></comment>  </data>
+  <data name="MENU_CANCEL" xml:space="preserve">
+    <value>取消</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_CHOICE_TITLE" xml:space="preserve">
+    <value>新手？</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_CUSTOMIZE" xml:space="preserve">
+    <value>{0}编辑详情</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_DETAIL_INTRINSIC" xml:space="preserve">
+    <value>能力</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_DETAIL_SKIN" xml:space="preserve">
+    <value>颜色: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_DETAILS" xml:space="preserve">
+    <value>详细资料</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_FORM" xml:space="preserve">
+    <value>形式</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_GENDER" xml:space="preserve">
+    <value>性别</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_INTRINSIC" xml:space="preserve">
+    <value>能力 #{0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHARA_SKIN" xml:space="preserve">
+    <value>颜色</value>
+    <comment></comment>  </data>
+  <data name="MENU_CHOOSE" xml:space="preserve">
+    <value>选择</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONNECTING_CANCEL" xml:space="preserve">
+    <value>按 {0} 取消。</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONNECTING_PARTNER" xml:space="preserve">
+    <value>等待合作伙伴...</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONNECTING_SERVER" xml:space="preserve">
+    <value>连接服务器...</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTACT_ID" xml:space="preserve">
+    <value>身份证明：{0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTACT_IP" xml:space="preserve">
+    <value>IP: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTACT_LAST_SEEN" xml:space="preserve">
+    <value>最后出现时间：{0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTACT_RANK" xml:space="preserve">
+    <value>等级：{0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTACTS_TITLE" xml:space="preserve">
+    <value>联络人</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTROLS_CHOOSE_BUTTON" xml:space="preserve">
+    <value>按一个按钮</value>
+    <comment></comment>  </data>
+  <data name="MENU_CONTROLS_CHOOSE_KEY" xml:space="preserve">
+    <value>按任何一个键</value>
+    <comment>Tells the player to press a key for the controls in the Controls menu</comment>  </data>
+  <data name="MENU_CONTROLS_CONFIRM" xml:space="preserve">
+    <value>确认</value>
+    <comment>Menu option to confirm the controls changed by the player</comment>  </data>
+  <data name="MENU_CONTROLS_RESET" xml:space="preserve">
+    <value>重置预设</value>
+    <comment>Menu option to reset controls to their defaults</comment>  </data>
+  <data name="MENU_COPY_UUID" xml:space="preserve">
+    <value>复制身份证</value>
+    <comment></comment>  </data>
+  <data name="MENU_DELETE" xml:space="preserve">
+    <value>删除</value>
+    <comment></comment>  </data>
+  <data name="MENU_DELETE_SAVE_TITLE" xml:space="preserve">
+    <value>删除保存数据</value>
+    <comment></comment>  </data>
+  <data name="MENU_DEX_CAUGHT" xml:space="preserve">
+    <value>已加入：{0}</value>
+    <comment>For labeling how many species have been caught in the Pokedex.  "Caught" is used in the EN version simply because it's what's always displayed in the Pokedex.  This isn't required for other translations if it sounds too off.</comment>  </data>
+  <data name="MENU_DEX_SEEN" xml:space="preserve">
+    <value>看过：{0}</value>
+    <comment>For labeling how many species have been seen in the Pokedex</comment>  </data>
+  <data name="MENU_DEX_TITLE" xml:space="preserve">
+    <value>宝可梦图鉴</value>
+    <comment>Title of the Pokedex menu, where the pokedex progress can be viewed</comment>  </data>
+  <data name="MENU_DUNGEON_FLOORS" xml:space="preserve">
+    <value>楼层：{0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_DUNGEON_TITLE" xml:space="preserve">
+    <value>地点</value>
+    <comment></comment>  </data>
+  <data name="MENU_EXIT" xml:space="preserve">
+    <value>出口</value>
+    <comment>Menu option to exit the current menu</comment>  </data>
+  <data name="MENU_GAMEPAD_TITLE" xml:space="preserve">
+    <value>游戏手持控制器。</value>
+    <comment></comment>  </data>
+  <data name="MENU_GIRL" xml:space="preserve">
+    <value>女性</value>
+    <comment></comment>  </data>
+  <data name="MENU_GROUND_CHECK" xml:space="preserve">
+    <value>查看</value>
+    <comment>Underfoot menu option to examine the tile underneath (ex. evo site)</comment>  </data>
+  <data name="MENU_GROUND_GET" xml:space="preserve">
+    <value>拾起</value>
+    <comment>Underfoot menu option to pick up the item on the ground</comment>  </data>
+  <data name="MENU_GROUND_PROCEED" xml:space="preserve">
+    <value>进行</value>
+    <comment>Underfoot menu option to proceed with the tile underneath (ex. stairs)</comment>  </data>
+  <data name="MENU_GROUND_TITLE" xml:space="preserve">
+    <value>地面</value>
+    <comment>Title of the window for looking at the item/tile on the ground.</comment>  </data>
+  <data name="MENU_GROUND_TRIGGER" xml:space="preserve">
+    <value>触发器</value>
+    <comment>Underfoot menu option to trigger the tile underneath (ex. traps)</comment>  </data>
+  <data name="MENU_HELD_ITEM" xml:space="preserve">
+    <value>物品：{0}</value>
+    <comment>For labeling the held item of a team member</comment>  </data>
+  <data name="MENU_HELD_NO_ITEM" xml:space="preserve">
+    <value>没有物品</value>
+    <comment>For labeling there is no held item for this team member</comment>  </data>
+  <data name="MENU_INFO" xml:space="preserve">
+    <value>物品介绍</value>
+    <comment>Menu option to look at the info of an item, tile, etc.</comment>  </data>
+  <data name="MENU_INTRINSIC_RECALL" xml:space="preserve">
+    <value>能力</value>
+    <comment>Title of the Ability recall menu, to browse abilities that can be learned</comment>  </data>
+  <data name="MENU_INTRINSIC_TITLE" xml:space="preserve">
+    <value>{0}'s 能力</value>
+    <comment>Title of the Ability menu, to look at a team member's abilities</comment>  </data>
+  <data name="MENU_ITEM_AMOUNT_TITLE" xml:space="preserve">
+    <value>多少？</value>
+    <comment></comment>  </data>
+  <data name="MENU_ITEM_DRINK" xml:space="preserve">
+    <value>摄取</value>
+    <comment>Menu option to ingest item (drinks and herbs)</comment>  </data>
+  <data name="MENU_ITEM_EAT" xml:space="preserve">
+    <value>吃</value>
+    <comment>Menu option to eat item</comment>  </data>
+  <data name="MENU_ITEM_GIVE" xml:space="preserve">
+    <value>给予</value>
+    <comment>Menu option to give item to a different team member to hold</comment>  </data>
+  <data name="MENU_ITEM_HELD_TITLE" xml:space="preserve">
+    <value>{0}'s 宝物</value>
+    <comment>Title of the item menu when checking held items</comment>  </data>
+  <data name="MENU_ITEM_HOLD" xml:space="preserve">
+    <value>收着</value>
+    <comment>Menu option to give item to yourself to hold</comment>  </data>
+  <data name="MENU_ITEM_LEARN" xml:space="preserve">
+    <value>自学</value>
+    <comment>Menu option to teach self a TM</comment>  </data>
+  <data name="MENU_ITEM_PLACE" xml:space="preserve">
+    <value>放到地上</value>
+    <comment>Menu option to place an item on the ground</comment>  </data>
+  <data name="MENU_ITEM_PUT" xml:space="preserve">
+    <value>放回袋子里</value>
+    <comment>Menu option to put your held item back in the bag</comment>  </data>
+  <data name="MENU_ITEM_RARITY" xml:space="preserve">
+    <value>稀有度：{0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_ITEM_REPLACE" xml:space="preserve">
+    <value>替换</value>
+    <comment>Menu option to replace the item on the ground with one of your items</comment>  </data>
+  <data name="MENU_ITEM_STORE" xml:space="preserve">
+    <value>存放</value>
+    <comment></comment>  </data>
+  <data name="MENU_ITEM_SWAP" xml:space="preserve">
+    <value>互换</value>
+    <comment>menu option to swap a team member's held item with an item in the inventory</comment>  </data>
+  <data name="MENU_ITEM_SWAP_TITLE" xml:space="preserve">
+    <value>互换什么？</value>
+    <comment>Title of the item menu when swapping items</comment>  </data>
+  <data name="MENU_ITEM_TAKE" xml:space="preserve">
+    <value>拿走</value>
+    <comment>Menu option to take held item away from a different team member, and put back in bag</comment>  </data>
+  <data name="MENU_ITEM_TARGET_TITLE" xml:space="preserve">
+    <value>给谁？</value>
+    <comment>Title of the menu for choosing who to use an item on</comment>  </data>
+  <data name="MENU_ITEM_TEACH" xml:space="preserve">
+    <value>传授</value>
+    <comment>Menu option to teach someone a TM</comment>  </data>
+  <data name="MENU_ITEM_THROW" xml:space="preserve">
+    <value>扔</value>
+    <comment>Menu option to throw an item</comment>  </data>
+  <data name="MENU_ITEM_TITLE" xml:space="preserve">
+    <value>包包</value>
+    <comment>Title of the item menu</comment>  </data>
+  <data name="MENU_ITEM_TRASH" xml:space="preserve">
+    <value>垃圾</value>
+    <comment></comment>  </data>
+  <data name="MENU_ITEM_USE" xml:space="preserve">
+    <value>使用</value>
+    <comment>Menu option to use item</comment>  </data>
+  <data name="MENU_ITEM_VALUE" xml:space="preserve">
+    <value>价值: {0}</value>
+    <comment>Money value of the item</comment>  </data>
+  <data name="MENU_ITEM_WITHDRAW" xml:space="preserve">
+    <value>拿走</value>
+    <comment></comment>  </data>
+  <data name="MENU_KEYBOARD_TITLE" xml:space="preserve">
+    <value>键盘</value>
+    <comment></comment>  </data>
+  <data name="MENU_LABEL" xml:space="preserve">
+    <value>{0}:</value>
+    <comment>For putting a colon in front as with a labeling stats</comment>  </data>
+  <data name="MENU_MAIL_AOK_TITLE" xml:space="preserve">
+    <value>A-OK邮件</value>
+    <comment></comment>  </data>
+  <data name="MENU_MAIL_ERROR" xml:space="preserve">
+    <value>阅读邮件错误</value>
+    <comment></comment>  </data>
+  <data name="MENU_MAIL_SOS_TITLE" xml:space="preserve">
+    <value>求救邮件</value>
+    <comment></comment>  </data>
+  <data name="MENU_MAIN_INVENTORY" xml:space="preserve">
+    <value>物品</value>
+    <comment>Main menu option to look at inventory</comment>  </data>
+  <data name="MENU_MAIN_SAVE" xml:space="preserve">
+    <value>保存</value>
+    <comment></comment>  </data>
+  <data name="MENU_MAIN_SKILLS" xml:space="preserve">
+    <value>游戏动作</value>
+    <comment>Main menu option to look at the team's moves</comment>  </data>
+  <data name="MENU_MAKE_LEADER" xml:space="preserve">
+    <value>使成为领导者</value>
+    <comment></comment>  </data>
+  <data name="MENU_MAP_CONDITION" xml:space="preserve">
+    <value>地图</value>
+    <comment>For labeling the current map's weather or terrain.</comment>  </data>
+  <data name="MENU_MODS_EXIT" xml:space="preserve">
+    <value>退出这一集</value>
+    <comment></comment>  </data>
+  <data name="MENU_MODS_TITLE" xml:space="preserve">
+    <value>特殊的几集</value>
+    <comment></comment>  </data>
+  <data name="MENU_MSG_LOG_TITLE" xml:space="preserve">
+    <value>讯息记录</value>
+    <comment>Title of the window for message log</comment>  </data>
+  <data name="MENU_MUSIC_TITLE" xml:space="preserve">
+    <value>音乐</value>
+    <comment></comment>  </data>
+  <data name="MENU_NEW_CONTACT" xml:space="preserve">
+    <value>新联系人</value>
+    <comment></comment>  </data>
+  <data name="MENU_NONE" xml:space="preserve">
+    <value>没有</value>
+    <comment></comment>  </data>
+  <data name="MENU_OPTIONS_TITLE" xml:space="preserve">
+    <value>选项</value>
+    <comment></comment>  </data>
+  <data name="MENU_OTHERS_TITLE" xml:space="preserve">
+    <value>其他选项</value>
+    <comment>Title of the Others menu, for misc menu options</comment>  </data>
+  <data name="MENU_QUIT_GAME" xml:space="preserve">
+    <value>退出游戏</value>
+    <comment></comment>  </data>
+  <data name="MENU_REPLAY_ADVANCE_TURN" xml:space="preserve">
+    <value>提前转弯</value>
+    <comment>The "advance turn" action of a replay</comment>  </data>
+  <data name="MENU_REPLAY_END" xml:space="preserve">
+    <value>结束重播</value>
+    <comment>Replay menu option to view the replay info</comment>  </data>
+  <data name="MENU_REPLAY_INFO" xml:space="preserve">
+    <value>信息</value>
+    <comment>Replay menu option to end the replay</comment>  </data>
+  <data name="MENU_REPLAY_INFO_TITLE" xml:space="preserve">
+    <value>重播信息</value>
+    <comment>Title of the window for displaying replay info</comment>  </data>
+  <data name="MENU_REPLAY_PAUSE" xml:space="preserve">
+    <value>暂停</value>
+    <comment>The "pause" action of a replay</comment>  </data>
+  <data name="MENU_REPLAY_REPLAY" xml:space="preserve">
+    <value>重播</value>
+    <comment>Replay menu option for replaying a chosen recorded game</comment>  </data>
+  <data name="MENU_REPLAY_SEED" xml:space="preserve">
+    <value>复制种子</value>
+    <comment></comment>  </data>
+  <data name="MENU_REPLAY_SLOW_DOWN" xml:space="preserve">
+    <value>慢下来</value>
+    <comment>The "slow down" action of a replay</comment>  </data>
+  <data name="MENU_REPLAY_SPEED_UP" xml:space="preserve">
+    <value>快起来</value>
+    <comment>The "speed up" action of a replay</comment>  </data>
+  <data name="MENU_REPLAY_TITLE" xml:space="preserve">
+    <value>重播</value>
+    <comment>Title of the Replay menu, for options within a replay</comment>  </data>
+  <data name="MENU_REPLAYS_TITLE" xml:space="preserve">
+    <value>重播</value>
+    <comment>Title for the Replays menu, where the player can view replays</comment>  </data>
+  <data name="MENU_RESCUE" xml:space="preserve">
+    <value>朋友救援</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_CONFIGURE_SERVER" xml:space="preserve">
+    <value>设置服务器</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_GET_HELP" xml:space="preserve">
+    <value>寻求帮助</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_OFFER_REWARD" xml:space="preserve">
+    <value>提供奖励</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_REMOVE_REWARD" xml:space="preserve">
+    <value>删除奖励</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_AOK_CONFIRMING" xml:space="preserve">
+    <value>确认 A-OK...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_AOK_RECEIVING" xml:space="preserve">
+    <value>接收 A-OK...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_AOK_SENDING" xml:space="preserve">
+    <value>发送 A-OK...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_COMMUNICATING" xml:space="preserve">
+    <value>正在通讯中...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_SOS_CONFIRMING" xml:space="preserve">
+    <value>正在确认 SOS...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_SOS_RECEIVING" xml:space="preserve">
+    <value>正在接收 SOS...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_SOS_SENDING" xml:space="preserve">
+    <value>正在发送 SOS...</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESCUE_STATUS_WAITING" xml:space="preserve">
+    <value>等待中...</value>
+    <comment></comment>  </data>
+  <data name="MENU_REST_QUIT" xml:space="preserve">
+    <value>放弃</value>
+    <comment>Rest menu option for giving up the exploration</comment>  </data>
+  <data name="MENU_REST_SUSPEND" xml:space="preserve">
+    <value>快速保存</value>
+    <comment>Rest menu option for quicksaving</comment>  </data>
+  <data name="MENU_REST_TITLE" xml:space="preserve">
+    <value>停歇</value>
+    <comment>Title of the Rest menu, for giving up and quicksaving</comment>  </data>
+  <data name="MENU_RESULTS_ASSEMBLY_TITLE" xml:space="preserve">
+    <value>{0} 的集会 ({1}/{2})</value>
+    <comment>Title for the window displaying the assembly results of the last outing</comment>  </data>
+  <data name="MENU_RESULTS_ASSEMBLY_TITLE_ANY" xml:space="preserve">
+    <value>集会 ({0}/{1})</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESULTS_BONUS_VALUE" xml:space="preserve">
+    <value>额外奖励：{0}</value>
+    <comment>For labeling the bonus points given in the end of an adventure</comment>  </data>
+  <data name="MENU_RESULTS_COMPLETE" xml:space="preserve">
+    <value>完成{0}！</value>
+    <comment>Ex. "completed Guildmaster Island!"</comment>  </data>
+  <data name="MENU_RESULTS_DEFEAT" xml:space="preserve">
+    <value>在 {0} 被击败。</value>
+    <comment>Ex. "was defeated on Guildmaster Island 29F"</comment>  </data>
+  <data name="MENU_RESULTS_ESCAPE" xml:space="preserve">
+    <value>从{0}逃脱。</value>
+    <comment>Ex. "escaped from Guildmaster Island 29F"</comment>  </data>
+  <data name="MENU_RESULTS_INV_VALUE" xml:space="preserve">
+    <value>库存价值：{0}</value>
+    <comment>For labeling the total value of all the items in the inventory</comment>  </data>
+  <data name="MENU_RESULTS_INVENTORY_TITLE" xml:space="preserve">
+    <value>库存</value>
+    <comment>Title for the window displaying the inventory results of the last outing</comment>  </data>
+  <data name="MENU_RESULTS_QUIT" xml:space="preserve">
+    <value>在 {0} 放弃。</value>
+    <comment>denotes that the team gave up at a certain floor of the dungeon.</comment>  </data>
+  <data name="MENU_RESULTS_RESCUE" xml:space="preserve">
+    <value>在 {0} 完成救援。</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESULTS_SEED" xml:space="preserve">
+    <value>种子：{0}</value>
+    <comment>The dungeon seed, used to initialize the dungeon randomizer.  If two dungeon seeds are the same, they will generate exactly the same. Ex. "Seed: 17B7244FC0C0ED"</comment>  </data>
+  <data name="MENU_RESULTS_TIMEOUT" xml:space="preserve">
+    <value>在 {0} 被一股看不见的力量炸毁。</value>
+    <comment></comment>  </data>
+  <data name="MENU_RESULTS_TITLE" xml:space="preserve">
+    <value>最后的一次出游</value>
+    <comment>Title for the window displaying the overall results of the last outing</comment>  </data>
+  <data name="MENU_RESULTS_TOTAL_SCORE" xml:space="preserve">
+    <value>总分：{0}</value>
+    <comment>For labeling the total score at the end of an adventure</comment>  </data>
+  <data name="MENU_RESULTS_TOTAL_TURNS" xml:space="preserve">
+    <value>回合：{0}</value>
+    <comment>For labeling the total amount of turns taken in the entire adventure</comment>  </data>
+  <data name="MENU_RESULTS_VANISHED" xml:space="preserve">
+    <value>消失得无影无踪。</value>
+    <comment>denotes that the team vanished mid-exploration</comment>  </data>
+  <data name="MENU_RESULTS_VANISHED_AT" xml:space="preserve">
+    <value>在{0}突然消失了。</value>
+    <comment>denotes that the team vanished at a certain floor of the dungeon</comment>  </data>
+  <data name="MENU_REWARD_ITEM" xml:space="preserve">
+    <value>奖品</value>
+    <comment></comment>  </data>
+  <data name="MENU_REWARD_MONEY" xml:space="preserve">
+    <value>奖金</value>
+    <comment></comment>  </data>
+  <data name="MENU_ROGUE_BASIC_INFO" xml:space="preserve">
+    <value>基本信息</value>
+    <comment></comment>  </data>
+  <data name="MENU_ROGUE_SEED_INFO" xml:space="preserve">
+    <value>种子信息</value>
+    <comment></comment>  </data>
+  <data name="MENU_ROGUE_SPECIAL_INFO" xml:space="preserve">
+    <value>闪亮信息</value>
+    <comment></comment>  </data>
+  <data name="MENU_SAVE_AND_CONTINUE" xml:space="preserve">
+    <value>保存并继续。</value>
+    <comment></comment>  </data>
+  <data name="MENU_SAVE_AND_QUIT" xml:space="preserve">
+    <value>保存并退出。</value>
+    <comment></comment>  </data>
+  <data name="MENU_SAVE_RESUME" xml:space="preserve">
+    <value>恢复</value>
+    <comment>Quicksave menu option for resuming a quicksave</comment>  </data>
+  <data name="MENU_SAVE_TITLE" xml:space="preserve">
+    <value>快速保存</value>
+    <comment>Title for the quicksave menu, where the player can view quicksaves</comment>  </data>
+  <data name="MENU_SCORES_TITLE" xml:space="preserve">
+    <value>比分</value>
+    <comment>Title for the Scores window, where the player can view the top scores</comment>  </data>
+  <data name="MENU_SETTINGS_BATTLE_SPEED" xml:space="preserve">
+    <value>游戏速度</value>
+    <comment>Label for the battle speed in the Settings menu</comment>  </data>
+  <data name="MENU_SETTINGS_BORDER_STYLE" xml:space="preserve">
+    <value>屏幕框架</value>
+    <comment>For choosing border style</comment>  </data>
+  <data name="MENU_SETTINGS_FULL_SCREEN" xml:space="preserve">
+    <value>全屏</value>
+    <comment>The Full-Screen option when setting window size in the Settings menu</comment>  </data>
+  <data name="MENU_SETTINGS_LANGUAGE" xml:space="preserve">
+    <value>语言</value>
+    <comment></comment>  </data>
+  <data name="MENU_SETTINGS_MUSIC" xml:space="preserve">
+    <value>音乐</value>
+    <comment>Label for the music volume in the Settings menu</comment>  </data>
+  <data name="MENU_SETTINGS_SOUND" xml:space="preserve">
+    <value>音效</value>
+    <comment>Label for the sound volume in the Settings menu</comment>  </data>
+  <data name="MENU_SETTINGS_TITLE" xml:space="preserve">
+    <value>设置</value>
+    <comment>Title of Settings menu</comment>  </data>
+  <data name="MENU_SETTINGS_WINDOW_SIZE" xml:space="preserve">
+    <value>屏幕尺寸</value>
+    <comment>Label for the window size in the Settings menu</comment>  </data>
+  <data name="MENU_SHIFT_DOWN" xml:space="preserve">
+    <value>降档</value>
+    <comment>Menu option to shift something down</comment>  </data>
+  <data name="MENU_SHIFT_UP" xml:space="preserve">
+    <value>上档</value>
+    <comment>Menu option to shift something up</comment>  </data>
+  <data name="MENU_SHOP_BUY" xml:space="preserve">
+    <value>买</value>
+    <comment></comment>  </data>
+  <data name="MENU_SHOP_SELL" xml:space="preserve">
+    <value>卖</value>
+    <comment></comment>  </data>
+  <data name="MENU_SHOP_TITLE" xml:space="preserve">
+    <value>货物</value>
+    <comment></comment>  </data>
+  <data name="MENU_SKILL_RECALL" xml:space="preserve">
+    <value>重温先前的游戏动作</value>
+    <comment>Title of Move recall menu, to relearn moves</comment>  </data>
+  <data name="MENU_SKILL_SWITCH" xml:space="preserve">
+    <value>开关</value>
+    <comment>Move menu option to switch a move on or off</comment>  </data>
+  <data name="MENU_SKILL_USE" xml:space="preserve">
+    <value>使用</value>
+    <comment>Move menu option to use a move</comment>  </data>
+  <data name="MENU_SKILLS_CATEGORY" xml:space="preserve">
+    <value>种类：{0}</value>
+    <comment>For labeling the move's category</comment>  </data>
+  <data name="MENU_SKILLS_ELEMENT" xml:space="preserve">
+    <value>类别: {0}</value>
+    <comment>For labeling the move's type</comment>  </data>
+  <data name="MENU_SKILLS_HIT_RATE" xml:space="preserve">
+    <value>准确度：{0}</value>
+    <comment>For labeling the move's accuracy</comment>  </data>
+  <data name="MENU_SKILLS_POWER" xml:space="preserve">
+    <value>强度：{0}</value>
+    <comment>For labeling the move's basepower</comment>  </data>
+  <data name="MENU_SKILLS_RANGE" xml:space="preserve">
+    <value>范围：{0}</value>
+    <comment>For labeling the move's range</comment>  </data>
+  <data name="MENU_SKILLS_TITLE" xml:space="preserve">
+    <value>{0}的动作：</value>
+    <comment>Title of the menu listing the team member's moves</comment>  </data>
+  <data name="MENU_SKILLS_TOTAL_CHARGES" xml:space="preserve">
+    <value>{0}PP</value>
+    <comment></comment>  </data>
+  <data name="MENU_SONG_ARTIST" xml:space="preserve">
+    <value>作曲者: {0}</value>
+    <comment>[Sound Test] The composer of the song, View example: https://cdn.discordapp.com/attachments/626994148494409738/729883368493285476/unknown.png</comment>  </data>
+  <data name="MENU_SONG_ORIGIN" xml:space="preserve">
+    <value>原曲: {0}</value>
+    <comment>[Sound Test] The original game that the song came from</comment>  </data>
+  <data name="MENU_SONG_ORIGIN_NAME" xml:space="preserve">
+    <value>曲名: {0}</value>
+    <comment>[Sound Test] The original name that the song had.</comment>  </data>
+  <data name="MENU_SOS_CLIENT" xml:space="preserve">
+    <value>需救援的团队：{0}</value>
+    <comment>The team that needs rescue</comment>  </data>
+  <data name="MENU_SOS_DATE" xml:space="preserve">
+    <value>日期: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_SOS_GOAL" xml:space="preserve">
+    <value>目标: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_SOS_REWARD" xml:space="preserve">
+    <value>奖励: {0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_SOS_TITLE" xml:space="preserve">
+    <value>求救总结</value>
+    <comment></comment>  </data>
+  <data name="MENU_START_RANDOM" xml:space="preserve">
+    <value>任选</value>
+    <comment>Starter menu option for choosing a random starter</comment>  </data>
+  <data name="MENU_START_TEAM" xml:space="preserve">
+    <value>团队: {0}</value>
+    <comment>For labeling the name of the team the player has chosen</comment>  </data>
+  <data name="MENU_STATS_TITLE" xml:space="preserve">
+    <value>游戏积分</value>
+    <comment>Title for the Stats menu, showing the team member's stats</comment>  </data>
+  <data name="MENU_STORAGE_MONEY" xml:space="preserve">
+    <value>金额</value>
+    <comment></comment>  </data>
+  <data name="MENU_STORAGE_STORE" xml:space="preserve">
+    <value>储存物品</value>
+    <comment></comment>  </data>
+  <data name="MENU_STORAGE_TAKE_BOX" xml:space="preserve">
+    <value>支出箱子</value>
+    <comment></comment>  </data>
+  <data name="MENU_STORAGE_TAKE_ITEM" xml:space="preserve">
+    <value>支出物品</value>
+    <comment></comment>  </data>
+  <data name="MENU_STORAGE_TITLE" xml:space="preserve">
+    <value>储存</value>
+    <comment>Title of the Storage menu</comment>  </data>
+  <data name="MENU_SWAP_ANY" xml:space="preserve">
+    <value>{0} 个独特的项目</value>
+    <comment></comment>  </data>
+  <data name="MENU_SWAP_NEEDED" xml:space="preserve">
+    <value>要求</value>
+    <comment></comment>  </data>
+  <data name="MENU_TACTICS_EVERYONE" xml:space="preserve">
+    <value>每个人</value>
+    <comment>For labeling the tactic that gets assigned to everyone, if there is one.</comment>  </data>
+  <data name="MENU_TACTICS_TITLE" xml:space="preserve">
+    <value>战术</value>
+    <comment>Title of the Tactics menu, for changing the team's tactics</comment>  </data>
+  <data name="MENU_TEACH_TITLE" xml:space="preserve">
+    <value>哪个？</value>
+    <comment>Title of the menu in which you select who to teach a move to</comment>  </data>
+  <data name="MENU_TEAM_CATEGORY" xml:space="preserve">
+    <value>种类：{0} 宝可梦</value>
+    <comment>For labeling the dex category of a team member</comment>  </data>
+  <data name="MENU_TEAM_ELEMENT" xml:space="preserve">
+    <value>类别：{0} </value>
+    <comment>For labeling a team member's type</comment>  </data>
+  <data name="MENU_TEAM_EXP" xml:space="preserve">
+    <value>Exp. 积分：{0}/{1}</value>
+    <comment>For labeling a team member's current EXP out of the amount needed to level up</comment>  </data>
+  <data name="MENU_TEAM_FEATURES" xml:space="preserve">
+    <value>特征</value>
+    <comment>Title of the Features menu, detailing the features of a team member</comment>  </data>
+  <data name="MENU_TEAM_FELL_AT" xml:space="preserve">
+    <value>昏倒于：{0}</value>
+    <comment>For labeling where the team member fainted at</comment>  </data>
+  <data name="MENU_TEAM_HP" xml:space="preserve">
+    <value>HP: {0}/{1}</value>
+    <comment>For labeling a team member's current and maximum HP</comment>  </data>
+  <data name="MENU_TEAM_HUNGER" xml:space="preserve">
+    <value>腹部：{0} / {1}</value>
+    <comment>For labeling a team member's current and max belly</comment>  </data>
+  <data name="MENU_TEAM_INFO" xml:space="preserve">
+    <value>信息</value>
+    <comment>Title of the Info menu, detailing the species info of a team member</comment>  </data>
+  <data name="MENU_TEAM_INTRINSIC" xml:space="preserve">
+    <value>能力：{0}</value>
+    <comment>For labeling a team member's ability</comment>  </data>
+  <data name="MENU_TEAM_LEVEL" xml:space="preserve">
+    <value>级别</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_LEVEL_SHORT" xml:space="preserve">
+    <value>Lv.{0}</value>
+    <comment>For labeling a team member's current level</comment>  </data>
+  <data name="MENU_TEAM_MET_AT" xml:space="preserve">
+    <value>首次见面在：{0}</value>
+    <comment>For labeling where the team member was recruited at</comment>  </data>
+  <data name="MENU_TEAM_MODE" xml:space="preserve">
+    <value>团队模式</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_MODE_OFF" xml:space="preserve">
+    <value>团队模式关闭</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_MODE_ON" xml:space="preserve">
+    <value>团队模式开启</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_PROMOTE_NONE" xml:space="preserve">
+    <value>无</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_PROMOTION" xml:space="preserve">
+    <value>进化：</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_RENAME" xml:space="preserve">
+    <value>重新命名</value>
+    <comment></comment>  </data>
+  <data name="MENU_TEAM_SEND_HOME" xml:space="preserve">
+    <value>送回家</value>
+    <comment>Team menu option for sending a selected team member home</comment>  </data>
+  <data name="MENU_TEAM_SKILLS" xml:space="preserve">
+    <value>游戏动作</value>
+    <comment>For labeling a team member's moves</comment>  </data>
+  <data name="MENU_TEAM_SPECIES" xml:space="preserve">
+    <value>物种：{0}</value>
+    <comment>For labeling the species of a team member</comment>  </data>
+  <data name="MENU_TEAM_STATS" xml:space="preserve">
+    <value>统计数据：</value>
+    <comment>For labeling the team member's stats</comment>  </data>
+  <data name="MENU_TEAM_STATUS_TITLE" xml:space="preserve">
+    <value>地位</value>
+    <comment>Title of the Status menu, showing all of the status conditions of a team member</comment>  </data>
+  <data name="MENU_TEAM_SUMMARY" xml:space="preserve">
+    <value>概诉</value>
+    <comment>Team menu option for opening the summary menu of a selected team member</comment>  </data>
+  <data name="MENU_TEAM_TITLE" xml:space="preserve">
+    <value>团队</value>
+    <comment>Title of the Team menu, to look at the team's stats</comment>  </data>
+  <data name="MENU_TEAM_TRADED_FROM" xml:space="preserve">
+    <value>交换自：{0}</value>
+    <comment></comment>  </data>
+  <data name="MENU_TIME_OF_DAY" xml:space="preserve">
+    <value>时间</value>
+    <comment>Ex. "Time: Night"</comment>  </data>
+  <data name="MENU_TOP_CONTINUE" xml:space="preserve">
+    <value>继续</value>
+    <comment></comment>  </data>
+  <data name="MENU_TOP_LOAD" xml:space="preserve">
+    <value>加载游戏</value>
+    <comment>Top menu option for loading a saved game</comment>  </data>
+  <data name="MENU_TOP_NEW" xml:space="preserve">
+    <value>新游戏</value>
+    <comment>Top menu option for starting a new game</comment>  </data>
+  <data name="MENU_TOP_RECORD" xml:space="preserve">
+    <value>记录</value>
+    <comment>Top menu option for viewing records such as replays or high scores</comment>  </data>
+  <data name="MENU_TOP_RESCUE_AWAIT" xml:space="preserve">
+    <value>等待救援</value>
+    <comment></comment>  </data>
+  <data name="MENU_TRADE_ITEM" xml:space="preserve">
+    <value>交换宝物</value>
+    <comment></comment>  </data>
+  <data name="MENU_TRADE_ITEM_OFFER" xml:space="preserve">
+    <value>提供的物品</value>
+    <comment></comment>  </data>
+  <data name="MENU_TRADE_MAIL" xml:space="preserve">
+    <value>交换任务</value>
+    <comment></comment>  </data>
+  <data name="MENU_TRADE_TEAM" xml:space="preserve">
+    <value>交换团队</value>
+    <comment></comment>  </data>
+  <data name="MENU_TREASURE_TITLE" xml:space="preserve">
+    <value>宝物</value>
+    <comment></comment>  </data>
+  <data name="MENU_UPDATE_TEAM" xml:space="preserve">
+    <value>更新团队</value>
+    <comment></comment>  </data>
+  <data name="MET_AT_START" xml:space="preserve">
+    <value>起始</value>
+    <comment>The "recruit location" of starters, who were recruited into the team from the beginning.</comment>  </data>
+  <data name="MSG_CANT_CHECK_TILE" xml:space="preserve">
+    <value>{0}现在不能触发瓷砖。</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_DEQUIP" xml:space="preserve">
+    <value>{0} 目前无法取下物品。</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_DROP_HERE" xml:space="preserve">
+    <value>物品不能丢在这里。</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_DROP_ITEM" xml:space="preserve">
+    <value>{0} 现在无法丢弃物品。</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_PICKUP_ITEM" xml:space="preserve">
+    <value>{0}现在不能拾取物品。</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_REPLACE_MONEY" xml:space="preserve">
+    <value>地面上的钱不能更换。</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_SWAP_ITEM" xml:space="preserve">
+    <value>{0}现在不能交换物品。</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_SWAP_LEADER" xml:space="preserve">
+    <value>{0} 目前无法交换领导者。</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_USE_ITEM" xml:space="preserve">
+    <value>{0}现在不能使用物品！</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_LOST" xml:space="preserve">
+    <value>{0}的{1}丢失[color=＃00FFFF] {2} [color] PP！</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_LOST_ALL" xml:space="preserve">
+    <value>{0} 的动作失败了 [color=#00FFFF]{1}[color] PP！</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_LOST_ALL_NO_MORE" xml:space="preserve">
+    <value>{0}的招式已经没有PP了！</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_LOST_NO_MORE" xml:space="preserve">
+    <value>{0}的{1}已经没有PP了！</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_LOST_ZERO" xml:space="preserve">
+    <value>{0}的PP没有失掉！</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_RESTORE" xml:space="preserve">
+    <value>{0} 恢复了 PP。</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_ZERO" xml:space="preserve">
+    <value>{0} 的 {1} 失去了自己剩余的 PP！</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGES_ZERO_ALL" xml:space="preserve">
+    <value>{0} 的 {1} 失去了他们剩余的 PP！</value>
+    <comment></comment>  </data>
+  <data name="MSG_DAMAGE" xml:space="preserve">
+    <value>{0} 受到 [color=#00FFFF]{1}[color] 损坏！</value>
+    <comment></comment>  </data>
+  <data name="MSG_DAMAGE_ENDURE" xml:space="preserve">
+    <value>{0}经受住了打击！</value>
+    <comment></comment>  </data>
+  <data name="MSG_DAMAGE_INFINITY" xml:space="preserve">
+    <value>{0} 遭受了灾难性的破坏！</value>
+    <comment></comment>  </data>
+  <data name="MSG_DAMAGE_ZERO" xml:space="preserve">
+    <value>{0}没有受到任何伤害！</value>
+    <comment></comment>  </data>
+  <data name="MSG_DANGER_CONFIRM" xml:space="preserve">
+    <value>...你确定吗？</value>
+    <comment></comment>  </data>
+  <data name="MSG_DEFEAT" xml:space="preserve">
+    <value>不好了！ {0}晕倒了！</value>
+    <comment></comment>  </data>
+  <data name="MSG_DEFEAT_FOE" xml:space="preserve">
+    <value>{0} 被打败了！</value>
+    <comment></comment>  </data>
+  <data name="MSG_DEQUIP_CURSED" xml:space="preserve">
+    <value>{0}的{1}很粘，取不下来！</value>
+    <comment></comment>  </data>
+  <data name="MSG_ELEMENT_CHANGE" xml:space="preserve">
+    <value>{0} 变成了 {1} 类型！</value>
+    <comment></comment>  </data>
+  <data name="MSG_ELEMENT_CHANGE_DUAL" xml:space="preserve">
+    <value>{0} 变成了 {1}/{2} 类型！</value>
+    <comment></comment>  </data>
+  <data name="MSG_ENTER_MAP" xml:space="preserve">
+    <value>{0} 达到了 {1}。</value>
+    <comment></comment>  </data>
+  <data name="MSG_EQUIP_AUTOCURSE" xml:space="preserve">
+    <value>{0} 变粘并粘在 {1} 上！</value>
+    <comment></comment>  </data>
+  <data name="MSG_EQUIP_AUTOCURSE_AVOID" xml:space="preserve">
+    <value>{0} 变粘了，但没有粘到 {1}！</value>
+    <comment></comment>  </data>
+  <data name="MSG_EQUIP_CURSED" xml:space="preserve">
+    <value>{0} 粘在 {1} 上！</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXP_GAIN" xml:space="preserve">
+    <value>团队获得了 [color=#00FFFF]{0}[color] Exp.积分！</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXP_GAIN_MEMBER" xml:space="preserve">
+    <value>{0} 获得 [color=#00FFFF]{1}[color] Exp.积分！</value>
+    <comment></comment>  </data>
+  <data name="MSG_HP_RESTORE" xml:space="preserve">
+    <value>{0} 恢复了 [color=#00FFFF]{1}[color] HP。</value>
+    <comment></comment>  </data>
+  <data name="MSG_HUNGER_CRITICAL" xml:space="preserve">
+    <value>{0} 因饥饿而头晕...</value>
+    <comment></comment>  </data>
+  <data name="MSG_HUNGER_EMPTY" xml:space="preserve">
+    <value>不好了！ {0}的肚子是空的！</value>
+    <comment></comment>  </data>
+  <data name="MSG_HUNGER_EMPTY_FOE" xml:space="preserve">
+    <value>{0}的肚子是空的！</value>
+    <comment></comment>  </data>
+  <data name="MSG_HUNGER_LOW" xml:space="preserve">
+    <value>{0} 饿了...</value>
+    <comment></comment>  </data>
+  <data name="MSG_INTRINSIC_CHANGE_GAIN" xml:space="preserve">
+    <value>{0}获取了 {1}！</value>
+    <comment></comment>  </data>
+  <data name="MSG_INTRINSIC_CHANGE_LOST" xml:space="preserve">
+    <value>{0}丢失{1}！</value>
+    <comment></comment>  </data>
+  <data name="MSG_INTRINSIC_CHANGE_NONE" xml:space="preserve">
+    <value>{0}的能力没有改变！</value>
+    <comment></comment>  </data>
+  <data name="MSG_ITEM_DEQUIP" xml:space="preserve">
+    <value>{0} 将 {1} 放回宝物袋中。</value>
+    <comment></comment>  </data>
+  <data name="MSG_ITEM_GIVE" xml:space="preserve">
+    <value>{0} 得到了 {1}。</value>
+    <comment></comment>  </data>
+  <data name="MSG_ITEM_SWAP" xml:space="preserve">
+    <value>{0} 拿到了 {1} 并将 {2} 放入了宝物袋中。</value>
+    <comment></comment>  </data>
+  <data name="MSG_JUMP" xml:space="preserve">
+    <value>{0}跳开了！</value>
+    <comment>Used for when someone uses Splash, and bounces over the pokemon in front, OR uses U-Turn/Volt Switch and jumps back several steps after hitting.</comment>  </data>
+  <data name="MSG_JUMP_FAIL" xml:space="preserve">
+    <value>{0} 没有跳到任何地方。</value>
+    <comment>Same as above, but didn't find a place to jump to.</comment>  </data>
+  <data name="MSG_LEADER_SWAP" xml:space="preserve">
+    <value>{0}成为团队领袖！</value>
+    <comment></comment>  </data>
+  <data name="MSG_LEADER_SWAP_REQ" xml:space="preserve">
+    <value>领导者只能在轮到领导者时更换。</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAP_ITEM_FALL" xml:space="preserve">
+    <value>{0} 不见了！</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAP_ITEM_GROUND" xml:space="preserve">
+    <value>{0} 掉在地上。</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAP_ITEM_LOST" xml:space="preserve">
+    <value>{0} 丢失了！</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAP_ITEM_WATER" xml:space="preserve">
+    <value>{0} 掉入水中。 </value>
+    <comment></comment>  </data>
+  <data name="MSG_NOTHING_UNDERFOOT" xml:space="preserve">
+    <value>{0} 下方的地面上没有任何东西。</value>
+    <comment></comment>  </data>
+  <data name="MSG_OUT_OF_CHARGES" xml:space="preserve">
+    <value>{0} 的 {1} 没有 PP！</value>
+    <comment></comment>  </data>
+  <data name="MSG_PASS_ITEM" xml:space="preserve">
+    <value>{0}越过{1}。</value>
+    <comment></comment>  </data>
+  <data name="MSG_PICKUP_HOLD_ITEM" xml:space="preserve">
+    <value>{0} 拿起了 {1}。</value>
+    <comment></comment>  </data>
+  <data name="MSG_PICKUP_ITEM" xml:space="preserve">
+    <value>{0}拿起{1}并将其放入宝物袋中。</value>
+    <comment></comment>  </data>
+  <data name="MSG_PICKUP_MONEY" xml:space="preserve">
+    <value>{0} 拿起了 {1}。</value>
+    <comment></comment>  </data>
+  <data name="MSG_PICKUP_SOME_ITEM" xml:space="preserve">
+    <value>{0}拿起一些{1}并将其放入宝物袋中。</value>
+    <comment></comment>  </data>
+  <data name="MSG_PLACE_ITEM" xml:space="preserve">
+    <value>{0} 将 {1} 放在地上。</value>
+    <comment></comment>  </data>
+  <data name="MSG_REPLACE_HOLD_ITEM" xml:space="preserve">
+    <value>{0} 拿到 {1} 并将 {2} 放在地上。</value>
+    <comment></comment>  </data>
+  <data name="MSG_REPLACE_ITEM" xml:space="preserve">
+    <value>地面上的 {0} 已替换为 {1}。</value>
+    <comment></comment>  </data>
+  <data name="MSG_REPLAY_PAUSED" xml:space="preserve">
+    <value>重播暂停。</value>
+    <comment></comment>  </data>
+  <data name="MSG_REPLAY_SPEED" xml:space="preserve">
+    <value>速度：{0}</value>
+    <comment></comment>  </data>
+  <data name="MSG_REPLAY_UNPAUSED" xml:space="preserve">
+    <value>重播暂停取消。</value>
+    <comment></comment>  </data>
+  <data name="MSG_RESCUED_BY" xml:space="preserve">
+    <value>被{0}救了！</value>
+    <comment></comment>  </data>
+  <data name="MSG_RESCUES_LEFT" xml:space="preserve">
+    <value>救援人离开了：{0}</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKIP_TURN" xml:space="preserve">
+    <value>{0} 将轮到它的机会让了出去。</value>
+    <comment></comment>  </data>
+  <data name="MSG_TEAM_MODE_ALONE" xml:space="preserve">
+    <value>单独时无法使用团队模式。</value>
+    <comment></comment>  </data>
+  <data name="MSG_TEAM_SENT_HOME" xml:space="preserve">
+    <value>{0} 已被送回集hui。</value>
+    <comment></comment>  </data>
+  <data name="MSG_TEAM_SENT_HOME_PLURAL" xml:space="preserve">
+    <value>{0}都被发送回集会。</value>
+    <comment>ex. "Pikachu, Charmander, and Bulbasaur were sent back to the assembly."</comment>  </data>
+  <data name="MSG_WARP" xml:space="preserve">
+    <value>{0} 扭曲了！</value>
+    <comment></comment>  </data>
+  <data name="MSG_WARP_FAIL" xml:space="preserve">
+    <value>{0}没有 扭曲！</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ARC_LINE" xml:space="preserve">
+    <value>{1}在{0} -格子线上</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ARC_SINGLE" xml:space="preserve">
+    <value>{1} 在 {0} 格子之外</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ARC_WIDE" xml:space="preserve">
+    <value>{1}在{0} -格子弧上</value>
+    <comment>Ex. "Foe in 4-Tile Arc"</comment>  </data>
+  <data name="RANGE_AREA_CONE" xml:space="preserve">
+    <value>{1}在{0} -格子圆锥体里</value>
+    <comment></comment>  </data>
+  <data name="RANGE_AREA_FULL" xml:space="preserve">
+    <value>{1}在{0} -格子区</value>
+    <comment>Ex. "Foe in 4-Tile Area"</comment>  </data>
+  <data name="RANGE_AREA_SIDES" xml:space="preserve">
+    <value>{1}在{0} -格子周边</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ATTACK_AROUND" xml:space="preserve">
+    <value>{0} z用户周围</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ATTACK_CORNER" xml:space="preserve">
+    <value>{0} 在前面，偷工减料</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ATTACK_FRONT" xml:space="preserve">
+    <value>{0} 在前面</value>
+    <comment></comment>  </data>
+  <data name="RANGE_ATTACK_WIDE" xml:space="preserve">
+    <value>{0} 在前面和边上</value>
+    <comment>Ex. "Foe in Front and Sides"</comment>  </data>
+  <data name="RANGE_BEAM" xml:space="preserve">
+    <value>光束</value>
+    <comment>Used to describe a beam move. Will have descriptors Ex. "Beam", "Wide-Beam", "Piercing Beam"</comment>  </data>
+  <data name="RANGE_DASH" xml:space="preserve">
+    <value>快跑</value>
+    <comment>Used to describe a dashing move. Will have descriptors Ex. "Dash", "Wide-Dash", "Piercing Dash"</comment>  </data>
+  <data name="RANGE_LINEAR" xml:space="preserve">
+    <value>{2}在{1} -格子 {0}</value>
+    <comment>Ex. "Foes in 6-Tile Shot", "Foes in 3-Tile Piercing Dash", "Others in 8-Tile Wide-Beam"</comment>  </data>
+  <data name="RANGE_LINEAR_PASS" xml:space="preserve">
+    <value>{0}，通过墙</value>
+    <comment>Takes the phrase created by RANGE_LINEAR and adds "Passes walls" to it if the move passes through walls</comment>  </data>
+  <data name="RANGE_LINEAR_PHASE" xml:space="preserve">
+    <value>将 {0}分段</value>
+    <comment>For attacks that can phase through walls (ex. Shadow Sneak)</comment>  </data>
+  <data name="RANGE_LINEAR_PIERCE" xml:space="preserve">
+    <value>将{0}穿孔</value>
+    <comment>Adds the "Piercing" descriptor to a move target description Ex. "Shot", "Spread Shot", "Piercing Shot"</comment>  </data>
+  <data name="RANGE_LINEAR_WIDE" xml:space="preserve">
+    <value>宽{0}</value>
+    <comment>Adds the "Wide" descriptor to a move target description Ex. "Beam", "Wide-Beam", "Piercing Beam"</comment>  </data>
+  <data name="RANGE_OFFSET_AREA" xml:space="preserve">
+    <value>{1} 在区域内，{0} 离开了</value>
+    <comment></comment>  </data>
+  <data name="RANGE_OFFSET_SIDES" xml:space="preserve">
+    <value>{1} 在排行中，{0} 格子之外</value>
+    <comment>Ex. "Foe in Tile/Sides, 3 Tiles Away" Used for attacks that hit a disjointed row such as Rock Slide. https://cdn.discordapp.com/attachments/626994148494409738/748631075344875570/unknown.png</comment>  </data>
+  <data name="RANGE_OFFSET_TILE" xml:space="preserve">
+    <value>{1} 在 {0} 格子之外</value>
+    <comment></comment>  </data>
+  <data name="RANGE_PROJECTILE" xml:space="preserve">
+    <value>射击</value>
+    <comment>Used to describe a projectile move. Will have descriptors Ex. "Shot", "Spread Shot", "Piercing Shot"</comment>  </data>
+  <data name="RANGE_PROJECTILE_SPREAD" xml:space="preserve">
+    <value>分散 {0}</value>
+    <comment>Adds the "Spread" descriptor to a move target description Ex. "Shot", "Spread Shot", "Piercing Shot"</comment>  </data>
+  <data name="TARGET_HIT_ALL" xml:space="preserve">
+    <value>每个玩家</value>
+    <comment>For when a move can hit ally, foe, and self. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_ALLY" xml:space="preserve">
+    <value>队友</value>
+    <comment>For when a move can hit only ally. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_ALLY_PLURAL" xml:space="preserve">
+    <value>队友们</value>
+    <comment>For when a move can hit only ally (plural). Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_FOE" xml:space="preserve">
+    <value>对手</value>
+    <comment>For when a move can hit only foe. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_FOE_PLURAL" xml:space="preserve">
+    <value>对手们</value>
+    <comment>For when a move can hit only foe (plural). Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_NONE" xml:space="preserve">
+    <value>没有人</value>
+    <comment>For when a move targets no one. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_OTHER" xml:space="preserve">
+    <value>队友/对手</value>
+    <comment>For when a move can hit ally and foe. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_OTHER_PLURAL" xml:space="preserve">
+    <value>其他队友或对手们</value>
+    <comment>For when a move can hit ally and foe (plural). Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_PARTY" xml:space="preserve">
+    <value>队友和自己</value>
+    <comment>For when a move can hit ally and self. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_USER" xml:space="preserve">
+    <value>自己</value>
+    <comment>For when a move can hit only self. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_USERFOE" xml:space="preserve">
+    <value>自己/对手</value>
+    <comment>For when a move can hit foe and self. Used in RANGE_ strings</comment>  </data>
+  <data name="TARGET_HIT_USERFOE_PLURAL" xml:space="preserve">
+    <value>自己/对手们</value>
+    <comment>For when a move can hit foe and self (plural). Used in RANGE_ strings</comment>  </data>
+  <data name="TEAM_NAME" xml:space="preserve">
+    <value>团队{0}</value>
+    <comment>For putting together the team name.</comment>  </data>
+  <data name="ZONE_EXPECT_LEVEL" xml:space="preserve">
+    <value>预期级别：{0}</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_ALONE" xml:space="preserve">
+    <value>单独进入</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_BAG" xml:space="preserve">
+    <value>宝物袋尺寸设置为 {0}</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_EXP" xml:space="preserve">
+    <value>没有经验。 积分</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_ITEM" xml:space="preserve">
+    <value>物品数目限制：{0}</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_ITEM_ALL" xml:space="preserve">
+    <value>没有物品被许可</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_LEVEL" xml:space="preserve">
+    <value>设置级别：{0}</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_MONEY" xml:space="preserve">
+    <value>钱是不允许的</value>
+    <comment></comment>  </data>
+  <data name="ZONE_RESTRICT_TEAM" xml:space="preserve">
+    <value>团队规模设置为 {0}</value>
+    <comment></comment>  </data>
+</root>

@@ -1,0 +1,23 @@
+<Config>
+  <ActionButtons>
+    <ActionButton>B</ActionButton>
+    <ActionButton>A</ActionButton>
+    <ActionButton>B</ActionButton>
+    <ActionButton>A</ActionButton>
+    <ActionButton>LeftTrigger</ActionButton>
+    <ActionButton>X</ActionButton>
+    <ActionButton>RightTrigger</ActionButton>
+    <ActionButton>Start</ActionButton>
+    <ActionButton>Back</ActionButton>
+    <ActionButton>Y</ActionButton>
+    <ActionButton>LeftShoulder</ActionButton>
+    <ActionButton>RightShoulder</ActionButton>
+    <ActionButton>B</ActionButton>
+    <ActionButton>A</ActionButton>
+    <ActionButton>Y</ActionButton>
+    <ActionButton>X</ActionButton>
+    <ActionButton>X</ActionButton>
+    <ActionButton>LeftTrigger</ActionButton>
+  </ActionButtons>
+  <InactiveInput>True</InactiveInput>
+</Config>

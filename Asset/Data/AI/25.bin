@@ -1,0 +1,1 @@
+﻿{"Object":{"$type":"RogueEssence.Data.AITactic, RogueEssence","Name":{"DefaultText":"Turret","LocalTexts":{}},"Released":true,"Comment":"","ID":25,"Assignable":false,"Plans":[{"$type":"PMDC.Dungeon.PreparePlan, PMDC","AttackPattern":2,"IQ":128},{"$type":"PMDC.Dungeon.WaitPlan, PMDC","IQ":128}]},"Version":"1.0.0.0"}

@@ -1,0 +1,59 @@
+//items
+ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+
+
+//necessities
+CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
+necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("necessities", necessities);
+
+
+necessities.Spawns.Add(new InvItem(0011), new IntRange(0, max_floors), 9);//Leppa Berry
+necessities.Spawns.Add(new InvItem(0010), new IntRange(0, max_floors), 12);//Oran Berry
+necessities.Spawns.Add(new InvItem(0001), new IntRange(0, max_floors), 10);//Apple
+necessities.Spawns.Add(new InvItem(0012), new IntRange(0, max_floors), 10);//Lum Berry
+necessities.Spawns.Add(new InvItem(0101), new IntRange(0, max_floors), 5);//Reviver Seed
+//snacks
+CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
+snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("snacks", snacks);
+
+
+snacks.Spawns.Add(new InvItem(0112), new IntRange(0, max_floors), 20);//Blast Seed
+snacks.Spawns.Add(new InvItem(0108), new IntRange(0, max_floors), 10);//Warp Seed
+snacks.Spawns.Add(new InvItem(0110), new IntRange(0, max_floors), 10);//Sleep Seed
+
+
+floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+//mobs
+TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+poolSpawn.Priority = PR_RESPAWN_MOB;
+
+
+//164 Noctowl : 143 Sky Attack
+poolSpawn.Spawns.Add(GetTeamMob(164, -1, 143, -1, -1, -1, new RandRange(15), 16), new IntRange(0, max_floors), 10);
+//083 Farfetch'd : 128 Defiant : 332 Aerial Ace : 282 Knock Off
+poolSpawn.Spawns.Add(GetTeamMob(083, 128, 332, 282, -1, -1, new RandRange(15), TeamMemberSpawn.MemberRole.Loner, 16), new IntRange(0, max_floors), 10);
+//017 Pidgeotto : 017 Wing Attack
+poolSpawn.Spawns.Add(GetTeamMob(017, -1, 017, -1, -1, -1, new RandRange(15), 16), new IntRange(0, max_floors), 10);
+//188 Skiploom : 073 Leech Seed
+poolSpawn.Spawns.Add(GetTeamMob(188, -1, 073, -1, -1, -1, new RandRange(15), 16), new IntRange(0, max_floors), 10);
+//108 Lickitung : 035 Wrap
+poolSpawn.Spawns.Add(GetTeamMob(108, -1, 035, -1, -1, -1, new RandRange(15), 16), new IntRange(0, max_floors), 10);
+//190 Aipom : 321 Tickle
+poolSpawn.Spawns.Add(GetTeamMob(190, -1, 321, -1, -1, -1, new RandRange(15), 16), new IntRange(0, max_floors), 10);
+//441 Chatot : 496 Round
+poolSpawn.Spawns.Add(GetTeamMob(441, -1, 496, -1, -1, -1, new RandRange(15), 16), new IntRange(0, max_floors), 10);
+//203 Girafarig : 060 Psybeam
+poolSpawn.Spawns.Add(GetTeamMob(203, -1, 060, -1, -1, -1, new RandRange(15), 16), new IntRange(0, max_floors), 10);
+//327 Spinda : 146 Dizzy Punch
+poolSpawn.Spawns.Add(GetTeamMob(327, -1, 146, -1, -1, -1, new RandRange(15), 16), new IntRange(0, max_floors), 10);
+//162 Furret : 266 Follow Me
+poolSpawn.Spawns.Add(GetTeamMob(162, -1, 266, -1, -1, -1, new RandRange(15), 16), new IntRange(0, max_floors), 10);
+//227 Skarmory : 211 Steel Wing
+poolSpawn.Spawns.Add(GetTeamMob(227, -1, 211, -1, -1, -1, new RandRange(15), 16), new IntRange(0, max_floors), 10);
+//399 Bidoof : 111 Defense Curl : 033 Tackle
+poolSpawn.Spawns.Add(GetTeamMob(399, -1, 111, 033, -1, -1, new RandRange(15), 16), new IntRange(0, max_floors), 10);

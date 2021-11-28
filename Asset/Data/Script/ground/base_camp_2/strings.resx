@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Appraisal_Bag_Empty" xml:space="preserve">
+    <value>Huh?[pause=0] You don't have any items on you.</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Choose" xml:space="preserve">
+    <value>Choose a box you want me to open. (You can use {0} to choose multiple items.)</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Choose_Multi" xml:space="preserve">
+    <value>I can open all that for {0}.</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Choose_One" xml:space="preserve">
+    <value>I can open your {1} for {0}.</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_End" xml:space="preserve">
+    <value>All done![pause=0] Check out the goods.</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Goodbye" xml:space="preserve">
+    <value>Come back with more boxes next time!</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Info_001" xml:space="preserve">
+    <value>Those boxes you pick up in dungeons... Ever wonder what's inside them?</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Info_002" xml:space="preserve">
+    <value>They're locked shut.[pause=0] There's no key in the world that can open them.</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Info_003" xml:space="preserve">
+    <value>But I don't need no key![pause=0] I'll bust right through all of them and give you what's inside!</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Info_004" xml:space="preserve">
+    <value>Just pay me {0} for each and it's a done deal.</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Intro" xml:space="preserve">
+    <value>Got any boxes you want me to bust? Only {0} apiece!</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_No_Money" xml:space="preserve">
+    <value>Whoa, whoa![pause=0] You don't have enough \uE024 for that!</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Option_Open" xml:space="preserve">
+    <value>Open Boxes</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Return" xml:space="preserve">
+    <value>Need anything else?</value>
+    <comment></comment>  </data>
+  <data name="Appraisal_Start" xml:space="preserve">
+    <value>Wait here.[pause=0] This'll only take a second.</value>
+    <comment></comment>  </data>
+  <data name="Item_Give_Storage" xml:space="preserve">
+    <value>The {0} was sent to storage.</value>
+    <comment></comment>  </data>
+  <data name="Juice_Intro" xml:space="preserve">
+    <value>Welcome, this is Shuckle's Juice Stand.</value>
+    <comment></comment>  </data>
+  <data name="Locator_Intro" xml:space="preserve">
+    <value>Welcome to Nosepass Compass, your one and only locator for roaming Pokémon.</value>
+    <comment></comment>  </data>
+  <data name="Music_End" xml:space="preserve">
+    <value>Come again \u266A</value>
+    <comment></comment>  </data>
+  <data name="Music_Intro" xml:space="preserve">
+    <value>Greetings, traveler.[pause=0] Fancy a tune for this town?</value>
+    <comment></comment>  </data>
+  <data name="Shop_Bag_Empty" xml:space="preserve">
+    <value>Oh?[pause=0] Nothing to sell?</value>
+    <comment></comment>  </data>
+  <data name="Shop_Bag_Full" xml:space="preserve">
+    <value>Oh![pause=0] You have no more space for items!</value>
+    <comment></comment>  </data>
+  <data name="Shop_Buy" xml:space="preserve">
+    <value>Very well![pause=0] Feel free to examine my merchandise! (You can use {0} to choose multiple items.)</value>
+    <comment></comment>  </data>
+  <data name="Shop_Buy_Complete" xml:space="preserve">
+    <value>Thank you! All yours~</value>
+    <comment></comment>  </data>
+  <data name="Shop_Buy_Empty" xml:space="preserve">
+    <value>I'm sold out.[pause=0] Please forgive me.[pause=0] I will have new merchandise tomorrow!</value>
+    <comment></comment>  </data>
+  <data name="Shop_Buy_Multi" xml:space="preserve">
+    <value>Altogether, that comes to {0}. Is that OK?</value>
+    <comment></comment>  </data>
+  <data name="Shop_Buy_No_Money" xml:space="preserve">
+    <value>What?[pause=0] You don't seem to have the money.</value>
+    <comment></comment>  </data>
+  <data name="Shop_Buy_One" xml:space="preserve">
+    <value>That {1}? That will be {0}.</value>
+    <comment></comment>  </data>
+  <data name="Shop_Goodbye" xml:space="preserve">
+    <value>Thanks! \u266A Please come again \u266A</value>
+    <comment></comment>  </data>
+  <data name="Shop_Info_001" xml:space="preserve">
+    <value>This shop specializes in selling items!</value>
+    <comment></comment>  </data>
+  <data name="Shop_Info_002" xml:space="preserve">
+    <value>Items are useful for your dungeon adventures!</value>
+    <comment></comment>  </data>
+  <data name="Shop_Info_003" xml:space="preserve">
+    <value>Use items with imagination! And invent new uses for them!</value>
+    <comment></comment>  </data>
+  <data name="Shop_Info_004" xml:space="preserve">
+    <value>If the shop sells out,[pause=0] we'll always have new things to sell on the next day!</value>
+    <comment></comment>  </data>
+  <data name="Shop_Info_005" xml:space="preserve">
+    <value>So spend time in dungeons until we restock! Visit us when you return~</value>
+    <comment></comment>  </data>
+  <data name="Shop_Intro" xml:space="preserve">
+    <value>Hello~\u266A \nWelcome to the Kecleon Shop~\u266A</value>
+    <comment></comment>  </data>
+  <data name="Shop_Intro_Return" xml:space="preserve">
+    <value>May I help you with anything else?</value>
+    <comment></comment>  </data>
+  <data name="Shop_Option_Buy" xml:space="preserve">
+    <value>Buy</value>
+    <comment></comment>  </data>
+  <data name="Shop_Option_Sell" xml:space="preserve">
+    <value>Sell</value>
+    <comment></comment>  </data>
+  <data name="Shop_Sell" xml:space="preserve">
+    <value>Very well! What will you sell? (You can use {0} to choose multiple items.)</value>
+    <comment></comment>  </data>
+  <data name="Shop_Sell_Complete" xml:space="preserve">
+    <value>Done deal! Thank you~\u266A</value>
+    <comment></comment>  </data>
+  <data name="Shop_Sell_Multi" xml:space="preserve">
+    <value>I can pay {0} for everything. Is that acceptable?</value>
+    <comment></comment>  </data>
+  <data name="Shop_Sell_One" xml:space="preserve">
+    <value>I can pay {0} for that {1}. Is that acceptable?</value>
+    <comment></comment>  </data>
+  <data name="Swap_Choose" xml:space="preserve">
+    <value>Feel free to look, hehehe...</value>
+    <comment></comment>  </data>
+  <data name="Swap_Complete_001" xml:space="preserve">
+    <value>MINE![pause=0] Hahahaha![pause=0] Come to me, my precious!</value>
+    <comment></comment>  </data>
+  <data name="Swap_Complete_002" xml:space="preserve">
+    <value>Oh right,[pause=0] here's your end of the deal.</value>
+    <comment></comment>  </data>
+  <data name="Swap_Confirm_001" xml:space="preserve">
+    <value>Your {0} for my {1}.</value>
+    <comment></comment>  </data>
+  <data name="Swap_Confirm_002" xml:space="preserve">
+    <value>That'll be {0}, deal?</value>
+    <comment></comment>  </data>
+  <data name="Swap_Give" xml:space="preserve">
+    <value>{0} accepted the {1}!</value>
+    <comment></comment>  </data>
+  <data name="Swap_Give_Choose" xml:space="preserve">
+    <value>A {0}? And what will you give in exchange for it?</value>
+    <comment></comment>  </data>
+  <data name="Swap_Goodbye" xml:space="preserve">
+    <value>Come back soon... Hehehe...</value>
+    <comment></comment>  </data>
+  <data name="Swap_Info_001" xml:space="preserve">
+    <value>You have treasure I want.[pause=0] I have treasure you want.</value>
+    <comment></comment>  </data>
+  <data name="Swap_Info_002" xml:space="preserve">
+    <value>We can help each other.[pause=0] Get the picture?</value>
+    <comment></comment>  </data>
+  <data name="Swap_Info_003" xml:space="preserve">
+    <value>I rotate my selections once every day.[pause=0] Come back often...</value>
+    <comment></comment>  </data>
+  <data name="Swap_Intro" xml:space="preserve">
+    <value>Hehehe... this is Sableye's Treasure Trade. Shall we make a deal?</value>
+    <comment></comment>  </data>
+  <data name="Swap_Intro_Return" xml:space="preserve">
+    <value>Anything else?</value>
+    <comment></comment>  </data>
+  <data name="Swap_Option_Swap" xml:space="preserve">
+    <value>Swap</value>
+    <comment></comment>  </data>
+  <data name="Trades_Intro" xml:space="preserve">
+    <value></value>
+    <comment></comment>  </data>
+  <data name="Tutor_Cant_Forget" xml:space="preserve">
+    <value>Hold up![pause=0] There's no moves to forget!</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Cant_Remember" xml:space="preserve">
+    <value>Hold up![pause=0] There's no moves to remember!</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Forget_Begin" xml:space="preserve">
+    <value>Now hold still![pause=0] This won't hurt a bit! Hiyah!</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Forget_Success" xml:space="preserve">
+    <value>Success![pause=0] {0} forgot {1}!</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Forget_What" xml:space="preserve">
+    <value>What move should {0} forget?</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Forget_Who" xml:space="preserve">
+    <value>Who wants to forget a move?</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Goodbye" xml:space="preserve">
+    <value>Come back soon![pause=0] Hiyah!</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Info_001" xml:space="preserve">
+    <value>Forgot a move you needed?[pause=0] I'll show you your moves!</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Info_002" xml:space="preserve">
+    <value>For a small fee, any move you've learned from leveling up can be learned again!</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Info_003" xml:space="preserve">
+    <value>I can also help forget moves.</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Intro" xml:space="preserve">
+    <value>Hiyah![pause=0] Relearn your moves! Only {0}!</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Intro_Return" xml:space="preserve">
+    <value>Come on! Ready for more?</value>
+    <comment></comment>  </data>
+  <data name="Tutor_No_Money" xml:space="preserve">
+    <value>Hold up! You're short on \uE024!</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Option_Tutor" xml:space="preserve">
+    <value>Tutor</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Remember_Begin" xml:space="preserve">
+    <value>Let's get right to it![pause=0] Hiyah!</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Remember_Replace" xml:space="preserve">
+    <value>We'll need to replace a move![pause=0] What'll it be?</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Remember_Success" xml:space="preserve">
+    <value>Success![pause=0] {0} relearned {1}!</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Remember_What" xml:space="preserve">
+    <value>What move should {0} remember?</value>
+    <comment></comment>  </data>
+  <data name="Tutor_Remember_Who" xml:space="preserve">
+    <value>Who wants to remember a move?</value>
+    <comment></comment>  </data>
+</root>

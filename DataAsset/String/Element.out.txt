@@ -1,0 +1,20 @@
+Key	Comment	EN	FR	FR-CA	DE	ES	ES-LA	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU	LT
+Element-0000|data.Name		None	Aucun	Nul	Kein	Ninguno		Nenhum		무속성			无	無		
+Element-0001|data.Name		Bug	Insecte		Käfer	Bicho		Inseto	Coleottero	벌레	むし	むし	虫	蟲		Vabzdys
+Element-0002|data.Name		Dark	Ténèbres		Unlicht	Siniestro		Sombra	Buio	악	あく	あく	恶	惡		Tamsus
+Element-0003|data.Name		Dragon	Dragon		Drache	Dragón		Dragão	Drago	드래곤	ドラゴン	ドラゴン	龙	龍		Drakonas
+Element-0004|data.Name		Electric	Électrik		Elektro	Eléctrico		Elétrico	Elettro	전기	でんき	でんき	电	電		Elekrinis
+Element-0005|data.Name		Fairy	Fée		Fee	Hada		Fada	Folletto	페어리	フェアリー	フェアリー	妖精	妖精		Fėja
+Element-0006|data.Name		Fighting	Combat		Kampf	Lucha		Lutador	Lotta	격투	かくとう	かくとう	格斗	格鬥		Kovinis
+Element-0007|data.Name		Fire	Feu		Feuer	Fuego		Fogo	Fuoco	불꽃	ほのお	ほのお	火	火		Ugninis
+Element-0008|data.Name		Flying	Vol		Flug	Volador		Voador	Volante	비행	ひこう	ひこう	飞行	飛行		Skraidantis
+Element-0009|data.Name		Ghost	Spectre		Geist	Fantasma		Fantasma	Spettro	고스트	ゴースト	ゴースト	幽灵	幽靈		Vaiduoklis
+Element-0010|data.Name		Grass	Plante		Pflanze	Planta		Planta	Erba	풀	くさ	くさ	草	草		Augalinis
+Element-0011|data.Name		Ground	Sol		Boden	Tierra		Terra	Terra	땅	じめん	じめん	地面	地面		Žemė
+Element-0012|data.Name		Ice	Glace		Eis	Hielo		Gelo	Ghiaccio	얼음	こおり	こおり	冰	冰		Ledinis
+Element-0013|data.Name		Normal	Normal		Normal	Normal		Normal	Normale	노말	ノーマル	ノーマル	一般	一般		Normalus
+Element-0014|data.Name		Poison	Poison		Gift	Veneno		Veneno	Veleno	독	どく	どく	毒	毒		Nuodingas
+Element-0015|data.Name		Psychic	Psy		Psycho	Psíquico		Psíquico	Psico	에스퍼	エスパー	エスパー	超能力	超能力		Psichinis
+Element-0016|data.Name		Rock	Roche		Gestein	Roca		Pedra	Roccia	바위	いわ	いわ	岩石	岩石		Akmuo
+Element-0017|data.Name		Steel	Acier		Stahl	Acero		Aço	Acciaio	강철	はがね	はがね	钢	鋼		Plieninis
+Element-0018|data.Name		Water	Eau		Wasser	Agua		Água	Acqua	물	みず	みず	水	水		Vandeninis

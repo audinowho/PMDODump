@@ -1,0 +1,3516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BASE_STAT" xml:space="preserve">
+    <value>Base {0}</value>
+    <comment>Ex. "Base Attack", "Base Speed", "Base Sp. Defense"</comment>  </data>
+  <data name="DLG_ASK_FREE_REVIVE" xml:space="preserve">
+    <value>Will you revive {0}?</value>
+    <comment></comment>  </data>
+  <data name="DLG_ASK_REVIVE" xml:space="preserve">
+    <value>Will you use a revival item?</value>
+    <comment>Keep in mind there is an option to cancel and not revive.</comment>  </data>
+  <data name="DLG_ASK_STORAGE" xml:space="preserve">
+    <value>What will you take out?</value>
+    <comment></comment>  </data>
+  <data name="DLG_CANT_FORGET_SKILL" xml:space="preserve">
+    <value>{0} can't forget any more moves.</value>
+    <comment></comment>  </data>
+  <data name="DLG_CANT_RECALL_INTRINSIC" xml:space="preserve">
+    <value>{0} has no other abilities.</value>
+    <comment></comment>  </data>
+  <data name="DLG_CANT_RECALL_SKILL" xml:space="preserve">
+    <value>{0} has no moves to relearn.</value>
+    <comment></comment>  </data>
+  <data name="DLG_DUNGEON_UNLOCK" xml:space="preserve">
+    <value>A new dungeon has been discovered!</value>
+    <comment></comment>  </data>
+  <data name="DLG_EVO_ASK" xml:space="preserve">
+    <value>Ye who seek awakening... Do you wish to evolve?</value>
+    <comment>This text is made to be very similar to the dialogue in Luminous Cave/Luminous Spring</comment>  </data>
+  <data name="DLG_EVO_BEGIN" xml:space="preserve">
+    <value>Ye who seek awakening,[pause=0] let us begin.</value>
+    <comment></comment>  </data>
+  <data name="DLG_EVO_CHOICE" xml:space="preserve">
+    <value>What will {0} evolve into?</value>
+    <comment></comment>  </data>
+  <data name="DLG_EVO_COMPLETE" xml:space="preserve">
+    <value>{0} evolved into {1}!</value>
+    <comment></comment>  </data>
+  <data name="DLG_EVO_CONFIRM" xml:space="preserve">
+    <value>{0} shall evolve into {1}. Is that OK?</value>
+    <comment></comment>  </data>
+  <data name="DLG_EVO_CONFIRM_ITEM" xml:space="preserve">
+    <value>{0} shall give a {1}, and evolve into {2}.[pause=20] Is that OK?</value>
+    <comment></comment>  </data>
+  <data name="DLG_EVO_END" xml:space="preserve">
+    <value>Ye shall return if evolution is what ye seek...</value>
+    <comment></comment>  </data>
+  <data name="DLG_EVO_INTRO" xml:space="preserve">
+    <value>...[pause=0]A voice emanates from somewhere.</value>
+    <comment></comment>  </data>
+  <data name="DLG_EVO_NONE" xml:space="preserve">
+    <value>...[pause=0]{0} cannot evolve any further.</value>
+    <comment></comment>  </data>
+  <data name="DLG_EVO_NONE_NOW" xml:space="preserve">
+    <value>...[pause=0]{0} cannot evolve right now.</value>
+    <comment></comment>  </data>
+  <data name="DLG_FORGET_INTRINSIC" xml:space="preserve">
+    <value>{0} lost the ability {1}.</value>
+    <comment></comment>  </data>
+  <data name="DLG_FORGET_SKILL" xml:space="preserve">
+    <value>{0} forgot the move {1}.</value>
+    <comment></comment>  </data>
+  <data name="DLG_LEARN_INTRINSIC" xml:space="preserve">
+    <value>{0} gained the ability {1}!</value>
+    <comment></comment>  </data>
+  <data name="DLG_LOCK" xml:space="preserve">
+    <value>It's locked...</value>
+    <comment></comment>  </data>
+  <data name="DLG_LOCK_KEY" xml:space="preserve">
+    <value>Will you use a key?</value>
+    <comment></comment>  </data>
+  <data name="DLG_STORAGE_EMPTY" xml:space="preserve">
+    <value>There are no items in storage.</value>
+    <comment></comment>  </data>
+  <data name="DLG_WHICH_FORM" xml:space="preserve">
+    <value>Which form will {0} change into?</value>
+    <comment></comment>  </data>
+  <data name="EVO_REQ_ALLIES" xml:space="preserve">
+    <value>have {0} evolved allies</value>
+    <comment>Evolution requirement: have a certain number of EVOLVED allies on the team</comment>  </data>
+  <data name="EVO_REQ_ALLY_ELEMENT" xml:space="preserve">
+    <value>have a {0}-type ally</value>
+    <comment>Evolution requirement: must learn an ally of a certain type</comment>  </data>
+  <data name="EVO_REQ_ALLY_SPECIES" xml:space="preserve">
+    <value>have a {0} ally</value>
+    <comment>Evolution requirement: must have an ally of a certain species</comment>  </data>
+  <data name="EVO_REQ_ATK_DEF_EQUAL" xml:space="preserve">
+    <value>Attack equals Defense</value>
+    <comment>Evolution requirement: the attack stat must be equal to defense</comment>  </data>
+  <data name="EVO_REQ_ATK_DEF_GREATER" xml:space="preserve">
+    <value>Attack is more than Defense</value>
+    <comment>Evolution requirement: the attack stat must be higher than defense</comment>  </data>
+  <data name="EVO_REQ_ATK_DEF_LESS" xml:space="preserve">
+    <value>Attack is less than Defense</value>
+    <comment>Evolution requirement: the attack stat must be lower than defense</comment>  </data>
+  <data name="EVO_REQ_CRITS" xml:space="preserve">
+    <value>land {0} critical hits in battle</value>
+    <comment></comment>  </data>
+  <data name="EVO_REQ_HUNGER_HIGH" xml:space="preserve">
+    <value>be full</value>
+    <comment></comment>  </data>
+  <data name="EVO_REQ_HUNGER_LOW" xml:space="preserve">
+    <value>be hungry</value>
+    <comment></comment>  </data>
+  <data name="EVO_REQ_ITEM" xml:space="preserve">
+    <value>hold {0}</value>
+    <comment>Evolution requirement: hold a certain item</comment>  </data>
+  <data name="EVO_REQ_LEVEL" xml:space="preserve">
+    <value>reach level {0}</value>
+    <comment>Evolution requirement: reach a certain level</comment>  </data>
+  <data name="EVO_REQ_MAP" xml:space="preserve">
+    <value>floor has {0}</value>
+    <comment>Evolution requirement: the floor must have a certain map condition (rain, etc)</comment>  </data>
+  <data name="EVO_REQ_SKILL" xml:space="preserve">
+    <value>learn {0}</value>
+    <comment>Evolution requirement: must learn a certain move</comment>  </data>
+  <data name="EVO_REQ_SKILL_ELEMENT" xml:space="preserve">
+    <value>learn a {0}-type move</value>
+    <comment>Evolution requirement: must learn a move of a certain type</comment>  </data>
+  <data name="EVO_REQ_STAT_BOOST" xml:space="preserve">
+    <value>raise {0} in battle</value>
+    <comment></comment>  </data>
+  <data name="EVO_REQ_TILE_ELEMENT" xml:space="preserve">
+    <value>be at a {0}-type area</value>
+    <comment>Evolution requirement: must be at a location with a certain element (mossy rock, coronet, etc)</comment>  </data>
+  <data name="EVO_REQ_TIME" xml:space="preserve">
+    <value>during {0}</value>
+    <comment>Evolution requirement: it must be a certain time of day (day, night)</comment>  </data>
+  <data name="EVO_REQ_TRADE" xml:space="preserve">
+    <value>must be from another team</value>
+    <comment>Evolution requirement: must be from another team</comment>  </data>
+  <data name="MENU_FORGET_SKILL" xml:space="preserve">
+    <value>Forget Move</value>
+    <comment></comment>  </data>
+  <data name="MENU_RECALL_SKILL" xml:space="preserve">
+    <value>Recall Move</value>
+    <comment></comment>  </data>
+  <data name="MSG_ABSORB" xml:space="preserve">
+    <value>{0} absorbed the attack with {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ACUTE_SNIFFER" xml:space="preserve">
+    <value>{0} found {2} items on the floor with its {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_AIR_LOCK" xml:space="preserve">
+    <value>{0}'s Air Lock made the weather disappear!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ALREADY_CURSED" xml:space="preserve">
+    <value>{0}'s {1} is already sticky!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ALREADY_HAS_ELEMENT" xml:space="preserve">
+    <value>{0} is already {1}-type!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ALREADY_HAS_SKILL" xml:space="preserve">
+    <value>{0} already knows {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ALREADY_HAS_SPECIES" xml:space="preserve">
+    <value>{0} is already a {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ALREADY_PROTECTED" xml:space="preserve">
+    <value>{0} is already protected by {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ALREADY_TRANSFORMED" xml:space="preserve">
+    <value>{0} is already transformed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ANCHORED" xml:space="preserve">
+    <value>{0} is firmly anchored to the ground!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ANGER_POINT" xml:space="preserve">
+    <value>The critical hit triggered {0}'s Anger Point!</value>
+    <comment></comment>  </data>
+  <data name="MSG_AQUA_RING_START" xml:space="preserve">
+    <value>{0} is surrounded by a veil of water!</value>
+    <comment></comment>  </data>
+  <data name="MSG_AREA_COUNTER_END" xml:space="preserve">
+    <value>{0} will no longer reflect {1} damage!</value>
+    <comment>Ex. "Wobbuffet will no longer reflect Physical damage!"</comment>  </data>
+  <data name="MSG_AREA_COUNTER_START" xml:space="preserve">
+    <value>{0} will reflect {1} damage!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ARENA_TRAP" xml:space="preserve">
+    <value>{0}'s Arena Trap prevents escape!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ASK_ASSEMBLY" xml:space="preserve">
+    <value>Who will you send over?</value>
+    <comment></comment>  </data>
+  <data name="MSG_ASK_NICKNAME" xml:space="preserve">
+    <value>Will you give it a nickname?</value>
+    <comment></comment>  </data>
+  <data name="MSG_ASLEEP" xml:space="preserve">
+    <value>{0} is fast asleep...</value>
+    <comment></comment>  </data>
+  <data name="MSG_ASSEMBLY_EMPTY" xml:space="preserve">
+    <value>There are no recruits in the assembly.</value>
+    <comment></comment>  </data>
+  <data name="MSG_ASSEMBLY_TAKE" xml:space="preserve">
+    <value>{0} joined {1} from the assembly!</value>
+    <comment>Ex. "Bulby joined Team Bulbasour from the assembly!"</comment>  </data>
+  <data name="MSG_ASSEMBLY_TAKE_ANY" xml:space="preserve">
+    <value>{0} joined the party from the assembly!</value>
+    <comment>The version for when the player doesn't have a team name.</comment>  </data>
+  <data name="MSG_ATTACK_USE" xml:space="preserve">
+    <value>{0} used its regular attack!</value>
+    <comment></comment>  </data>
+  <data name="MSG_AVOID" xml:space="preserve">
+    <value>{0} avoided the attack with {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BAN_FAIL" xml:space="preserve">
+    <value>{0}'s move wasn't banned!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BELCH" xml:space="preserve">
+    <value>{0} belched!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BELCH_ALREADY" xml:space="preserve">
+    <value>{0} is already ready to belch!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BELCH_END" xml:space="preserve">
+    <value>{0} is no longer ready to belch!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BELCH_START" xml:space="preserve">
+    <value>{0} is ready to belch!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BESTOW_ITEM" xml:space="preserve">
+    <value>{0} received the {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BESTOW_ITEM_CURSED" xml:space="preserve">
+    <value>{0} couldn't give the {1} away because it was sticky!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BESTOW_ITEM_FAIL" xml:space="preserve">
+    <value>{0} doesn't have an item to give!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BIDE_ATTACK" xml:space="preserve">
+    <value>{0} unleashed energy!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BIDE_CHARGE" xml:space="preserve">
+    <value>{0} began storing energy!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BIND" xml:space="preserve">
+    <value>{0} is being bound by the foe!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BIND_ALREADY" xml:space="preserve">
+    <value>{0} is already bound!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BIND_START" xml:space="preserve">
+    <value>{0} was bound by {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BLINKER_END" xml:space="preserve">
+    <value>{0}'s Attack Range returned to normal!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BLINKER_START" xml:space="preserve">
+    <value>{0}'s Attack Range became limited!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BOUNCE_CHARGE" xml:space="preserve">
+    <value>{0} sprang up!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BOUNCE_END" xml:space="preserve">
+    <value>{0} dropped back down!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_COPY" xml:space="preserve">
+    <value>{0} copied {1}'s stat changes!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_MAX" xml:space="preserve">
+    <value>{0}'s {1} was maxed out!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_MIN" xml:space="preserve">
+    <value>{0}'s {1} went as low as it can go!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_MINUS_1" xml:space="preserve">
+    <value>{0}'s {1} fell slightly.</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_MINUS_2" xml:space="preserve">
+    <value>{0}'s {1} fell harshly!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_MINUS_3" xml:space="preserve">
+    <value>{0}'s {1} fell drastically!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_NO_LESS" xml:space="preserve">
+    <value>{0}'s {1} won't go lower!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_NO_MORE" xml:space="preserve">
+    <value>{0}'s {1} won't go higher!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_PLUS_1" xml:space="preserve">
+    <value>{0}'s {1} rose slightly.</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_PLUS_2" xml:space="preserve">
+    <value>{0}'s {1} rose sharply!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_PLUS_3" xml:space="preserve">
+    <value>{0}'s {1} rose drastically!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_REMOVE" xml:space="preserve">
+    <value>{0}'s stat changes were eliminated!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_REVERSE" xml:space="preserve">
+    <value>{0}'s stat changes were reversed!</value>
+    <comment>Topsy Turvy, etc.</comment>  </data>
+  <data name="MSG_BUFF_REVERT" xml:space="preserve">
+    <value>{0}'s {1} returned to normal!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_SWAP" xml:space="preserve">
+    <value>{0} and {1} swapped {2}s!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BUFF_UNCHANGED" xml:space="preserve">
+    <value>{0}'s {1} didn't change.</value>
+    <comment></comment>  </data>
+  <data name="MSG_BURN_ALREADY" xml:space="preserve">
+    <value>{0} is already burned!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BURN_END" xml:space="preserve">
+    <value>{0} recovered from the burn!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BURN_FAIL" xml:space="preserve">
+    <value>{0} didn't get burned!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BURN_FAIL_ELEMENT" xml:space="preserve">
+    <value>{0}'s type doesn't get burned!</value>
+    <comment></comment>  </data>
+  <data name="MSG_BURN_START" xml:space="preserve">
+    <value>{0} sustained a burn!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_LEARN_SKILL" xml:space="preserve">
+    <value>{0} can't learn the move!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_RECRUIT" xml:space="preserve">
+    <value>{0} can't join the team!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_RECRUIT_LEVEL" xml:space="preserve">
+    <value>{0}'s level isn't high enough to recruit {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CANT_RECRUIT_RATE" xml:space="preserve">
+    <value>But it wasn't good enough for {0}...</value>
+    <comment></comment>  </data>
+  <data name="MSG_CATCH_ITEM" xml:space="preserve">
+    <value>{0} caught the {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGE_END" xml:space="preserve">
+    <value>{0} lost its charge!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHARGE_START" xml:space="preserve">
+    <value>{0} charged electricity!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHASE" xml:space="preserve">
+    <value>{0} won't let {1} get away!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHASE_ANCHOR" xml:space="preserve">
+    <value>{0} is anchored to the ground and can't chase {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CHASE_END" xml:space="preserve">
+    <value>{0} gave up the chase!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CLAMP" xml:space="preserve">
+    <value>{0} is being clamped by the foe!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CLAMP_START" xml:space="preserve">
+    <value>{0} was clamped by {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CLEANSE_ALL" xml:space="preserve">
+    <value>It cleaned up all sticky items!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CLEANSE_HELD_ITEM" xml:space="preserve">
+    <value>{0}'s {1} is no longer sticky!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CLEANSE_ITEM" xml:space="preserve">
+    <value>The {1} in {0}'s bag is no longer sticky!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CLOUD_NINE" xml:space="preserve">
+    <value>{0}'s Cloud Nine made the weather disappear!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CONFUSE_ALREADY" xml:space="preserve">
+    <value>{0} is already confused!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CONFUSE_END" xml:space="preserve">
+    <value>{0} snapped out of confusion!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CONFUSE_START" xml:space="preserve">
+    <value>{0} became confused!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CONVERSION_2_START" xml:space="preserve">
+    <value>{0} has Conversion 2 up!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CONVERSION_START" xml:space="preserve">
+    <value>{0} has Conversion up!</value>
+    <comment></comment>  </data>
+  <data name="MSG_COUNTER_ALREADY" xml:space="preserve">
+    <value>{0} already has a Counter up!</value>
+    <comment></comment>  </data>
+  <data name="MSG_COUNTER_START" xml:space="preserve">
+    <value>{0} will counter Physical Attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_COVER_ATTACK" xml:space="preserve">
+    <value>{0} took the attack!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CRINGE" xml:space="preserve">
+    <value>{0} is cringing!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CRINGE_END" xml:space="preserve">
+    <value>{0} is no longer cringing!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CRINGE_START" xml:space="preserve">
+    <value>{0} cringed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CRITICAL_HIT" xml:space="preserve">
+    <value>A critical hit!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CURE_ALL" xml:space="preserve">
+    <value>{0} was cured of status problems!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CURE_MAJOR" xml:space="preserve">
+    <value>{0} was cured of major status problems!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CURE_SELF" xml:space="preserve">
+    <value>{0}'s {1} removed its status problem!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CURSE" xml:space="preserve">
+    <value>{0} is tormented by the curse!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CURSE_END" xml:space="preserve">
+    <value>The curse was lifted from {0}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CURSE_HELD_ITEM" xml:space="preserve">
+    <value>{0}'s {1} became sticky!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CURSE_ITEM" xml:space="preserve">
+    <value>The {1} in {0}'s bag became sticky!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CURSE_START" xml:space="preserve">
+    <value>A curse was put on {0}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CURSED_BODY" xml:space="preserve">
+    <value>{0}'s Cursed Body disables moves!</value>
+    <comment></comment>  </data>
+  <data name="MSG_CUTE_CHARM" xml:space="preserve">
+    <value>{0}'s Cute Charm infatuates on contact!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DAMP" xml:space="preserve">
+    <value>{0}'s Damp prevented an explosion!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DECOY_ALREADY" xml:space="preserve">
+    <value>{0} is already a decoy!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DECOY_END" xml:space="preserve">
+    <value>{0} is no longer a decoy!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DECOY_START" xml:space="preserve">
+    <value>{0} became a decoy to attract attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DESTINY_BOND" xml:space="preserve">
+    <value></value>
+    <comment></comment>  </data>
+  <data name="MSG_DESTINY_BOND_END" xml:space="preserve">
+    <value>{0} gave up the Destiny Bond!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DESTINY_BOND_START" xml:space="preserve">
+    <value>{0} is trying to take {1} with it!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DEVOLVE" xml:space="preserve">
+    <value>{0} devolved into {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DEVOLVE_FAIL" xml:space="preserve">
+    <value>{0} can't be devolved!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DIG_CHARGE" xml:space="preserve">
+    <value>{0} dug underground!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DIG_END" xml:space="preserve">
+    <value>{0} resurfaced!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DISABLE_ALREADY" xml:space="preserve">
+    <value>{0} is already disabled!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DISABLE_END" xml:space="preserve">
+    <value>{0} is no longer disabled!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DISABLE_FAIL" xml:space="preserve">
+    <value>{0}'s move wasn't disabled!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DISABLE_START" xml:space="preserve">
+    <value>{0}'s {1} was disabled!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DIVE_CHARGE" xml:space="preserve">
+    <value>{0} hid underwater!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DIVE_END" xml:space="preserve">
+    <value>{0} resurfaced!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DMG_BOOST_ANY_STATUS" xml:space="preserve">
+    <value>The power was boosted due to the target's major status!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DMG_BOOST_LOW_HP" xml:space="preserve">
+    <value>The target's low HP boosts its power!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DMG_BOOST_NO_ITEM" xml:space="preserve">
+    <value>The power was boosted due to having no held item!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DMG_BOOST_REVENGE" xml:space="preserve">
+    <value>The power was boosted due to being previously attacked!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DMG_BOOST_STATUS" xml:space="preserve">
+    <value>The power was boosted due to the target's status!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DOOM_DESIRE_ATTACK" xml:space="preserve">
+    <value>{0} took the Doom Desire attack!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DOWNLOAD" xml:space="preserve">
+    <value>{0}'s downloaded data from {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DRAW_ATTACK" xml:space="preserve">
+    <value>{0}'s {1} drew the attack!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DRIZZLE" xml:space="preserve">
+    <value>{0}'s Drizzle made it rain!</value>
+    <comment></comment>  </data>
+  <data name="MSG_DROUGHT" xml:space="preserve">
+    <value>{0}'s Drought made the weather sunny!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EFFECT_SPORE" xml:space="preserve">
+    <value>{0}'s Effect Spore causes status on contact!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ELECTRIC_TERRAIN_END" xml:space="preserve">
+    <value>The electricity disappeared from the battlefield.</value>
+    <comment></comment>  </data>
+  <data name="MSG_ELECTRIC_TERRAIN_NO_DROWSY" xml:space="preserve">
+    <value>{0} can't become drowsy due to the electric current!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ELECTRIC_TERRAIN_NO_SLEEP" xml:space="preserve">
+    <value>{0} can't sleep due to the electric current!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ELECTRIC_TERRAIN_START" xml:space="preserve">
+    <value>An electric current runs across the battlefield!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ELECTRIFY_END" xml:space="preserve">
+    <value>{0}'s attacks are no longer electrified!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ELECTRIFY_START" xml:space="preserve">
+    <value>{0}'s attacks became electrified!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ELEMENT_WEATHER" xml:space="preserve">
+    <value>{0}'s {1} typing turned it into {2}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EMBARGO" xml:space="preserve">
+    <value>{0} can't use items due to Embargo!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EMBARGO_ALREADY" xml:space="preserve">
+    <value>{0} is already under the effects of Embargo!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EMBARGO_END" xml:space="preserve">
+    <value>{0} can use items again!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EMBARGO_START" xml:space="preserve">
+    <value>{0} was prevented from using items!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ENCORE_ALREADY" xml:space="preserve">
+    <value>{0} already has an encore!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ENCORE_END" xml:space="preserve">
+    <value>{0}'s encore ended!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ENCORE_START" xml:space="preserve">
+    <value>{0} received an encore!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ENDURE_END" xml:space="preserve">
+    <value>{0} stopped enduring!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ENDURE_START" xml:space="preserve">
+    <value>{0} braced itself!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXCESSIVE_FORCE" xml:space="preserve">
+    <value>{0}'s {1} spread the damage!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXCHANGE_HELD_ITEM" xml:space="preserve">
+    <value>{0} and {1} had their held items switched!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXCHANGE_ITEM" xml:space="preserve">
+    <value>{0}'s {2} was exchanged with {1}'s {3}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXCHANGE_ITEM_FAIL" xml:space="preserve">
+    <value>But neither {0} nor {1} have an item to switch!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXCL_ITEM_TYPE" xml:space="preserve">
+    <value>{0}'s {1} took effect!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXPLODE" xml:space="preserve">
+    <value>{0} exploded!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXPLORER_IMMUNE" xml:space="preserve">
+    <value>Explorers aren't affected by the move!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXPOSE_END" xml:space="preserve">
+    <value>{0} is no longer exposed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXPOSE_START" xml:space="preserve">
+    <value>{0} was exposed! Its resistances and immunities were removed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_EXTRA_TURN" xml:space="preserve">
+    <value>{0}'s {1} let it move again!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FIRE_SPIN_START" xml:space="preserve">
+    <value>{0} was trapped in a vortex of fire!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FLAME_BODY" xml:space="preserve">
+    <value>{0}'s Flame Body burns on contact!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FLOOR_FILL" xml:space="preserve">
+    <value>The entire floor was filled in!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FLOOR_MAP" xml:space="preserve">
+    <value>The floor was mapped out!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FLOOR_REVEAL" xml:space="preserve">
+    <value>All traps on the floor were revealed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FLOOR_ROOM" xml:space="preserve">
+    <value>The walls crumbled, making one big room!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FLOOR_TRAPBUST" xml:space="preserve">
+    <value>All traps on the floor were destroyed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FLOWER_VEIL_STATS" xml:space="preserve">
+    <value>{0} is protected from stat drops by Flower Veil!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FLY_CHARGE" xml:space="preserve">
+    <value>{0} flew up high!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FLY_END" xml:space="preserve">
+    <value>{0} dropped back down!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FOCUS_ENERGY_START" xml:space="preserve">
+    <value>{0} is getting pumped!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FOCUS_PUNCH_CHARGE" xml:space="preserve">
+    <value>{0} is tightening its focus!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FOCUS_PUNCH_END" xml:space="preserve">
+    <value>{0} lost its focus!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FOG_END" xml:space="preserve">
+    <value>The fog cleared.</value>
+    <comment></comment>  </data>
+  <data name="MSG_FOG_START" xml:space="preserve">
+    <value>The fog is deep...</value>
+    <comment></comment>  </data>
+  <data name="MSG_FOLLOW_ME_ALREADY" xml:space="preserve">
+    <value>{0} is already the center of attention!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FOLLOW_ME_END" xml:space="preserve">
+    <value>{0} is no longer the center of attention!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FOLLOW_ME_START" xml:space="preserve">
+    <value>{0} became the center of attention!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FORM_CHANGE" xml:space="preserve">
+    <value>{0} changed form!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FREEZE_ALREADY" xml:space="preserve">
+    <value>{0} is already frozen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FREEZE_END" xml:space="preserve">
+    <value>{0} thawed out!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FREEZE_FAIL" xml:space="preserve">
+    <value>{0} didn't get frozen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FREEZE_FAIL_ELEMENT" xml:space="preserve">
+    <value>{0}'s type doesn't get frozen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FREEZE_START" xml:space="preserve">
+    <value>{0} became frozen solid!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FRISK" xml:space="preserve">
+    <value>{0} removed {1}'s item with Frisk!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FROZEN" xml:space="preserve">
+    <value>{0} is frozen solid!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FULL_HP_REQ" xml:space="preserve">
+    <value>{0} isn't at full HP!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FUTURE_SIGHT_ATTACK" xml:space="preserve">
+    <value>{0} took the Future Sight attack!</value>
+    <comment></comment>  </data>
+  <data name="MSG_FUTURE_SIGHT_START" xml:space="preserve">
+    <value>{0} will be attacked at some point in the future!</value>
+    <comment></comment>  </data>
+  <data name="MSG_GIVE_ITEM_AWAY" xml:space="preserve">
+    <value>{0} gave away the {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_GRASSY_TERRAIN_END" xml:space="preserve">
+    <value>The grass disappeared from the battlefield.</value>
+    <comment></comment>  </data>
+  <data name="MSG_GRASSY_TERRAIN_START" xml:space="preserve">
+    <value>Grass covered the battlefield!</value>
+    <comment></comment>  </data>
+  <data name="MSG_GRAVITY_END" xml:space="preserve">
+    <value>The gravity returned to normal.</value>
+    <comment></comment>  </data>
+  <data name="MSG_GRAVITY_NO_BOUNCE" xml:space="preserve">
+    <value>{0} can't bounce due to gravity!</value>
+    <comment></comment>  </data>
+  <data name="MSG_GRAVITY_NO_FLY" xml:space="preserve">
+    <value>{0} can't fly due to gravity!</value>
+    <comment></comment>  </data>
+  <data name="MSG_GRAVITY_NO_LEVITATE" xml:space="preserve">
+    <value>{0} can't levitate due to gravity!</value>
+    <comment></comment>  </data>
+  <data name="MSG_GRAVITY_START" xml:space="preserve">
+    <value>Gravity intensified!</value>
+    <comment></comment>  </data>
+  <data name="MSG_GRUDGE" xml:space="preserve">
+    <value>The grudge took effect!</value>
+    <comment></comment>  </data>
+  <data name="MSG_GRUDGE_START" xml:space="preserve">
+    <value>{0} wants the foe to bear a grudge!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HAIL_END" xml:space="preserve">
+    <value>The hail stopped.</value>
+    <comment></comment>  </data>
+  <data name="MSG_HAIL_START" xml:space="preserve">
+    <value>It started to hail!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HARVEST" xml:space="preserve">
+    <value>{0}'s Harvest shared the effect!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HEAL_BLOCK_ALREADY" xml:space="preserve">
+    <value>{0} is already under the effects of Heal Block!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HEAL_BLOCK_END" xml:space="preserve">
+    <value>{0} can recover HP again!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HEAL_BLOCK_START" xml:space="preserve">
+    <value>{0} was prevented from recovering HP!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HEAL_WITH" xml:space="preserve">
+    <value>{0} recovered HP with {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HEALER" xml:space="preserve">
+    <value>{0}'s Healer removed {1}'s status problem!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HIT_CRASH" xml:space="preserve">
+    <value>{0} didn't hit anyone and crashed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HIT_RECOIL" xml:space="preserve">
+    <value>{0} was hit with recoil!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HP_NEEDED" xml:space="preserve">
+    <value>But {0} doesn't have enough HP!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HP_SPLIT" xml:space="preserve">
+    <value>{0} split its HP with {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HP_TO_ONE" xml:space="preserve">
+    <value>{0}'s HP dropped to 1!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HUNGER_DROP" xml:space="preserve">
+    <value>{0} became hungrier.</value>
+    <comment></comment>  </data>
+  <data name="MSG_HUNGER_FILL" xml:space="preserve">
+    <value>{0}'s belly was filled.</value>
+    <comment></comment>  </data>
+  <data name="MSG_HUNGER_FILL_MIN" xml:space="preserve">
+    <value>{0}'s belly was filled slightly.</value>
+    <comment></comment>  </data>
+  <data name="MSG_HURT_BY" xml:space="preserve">
+    <value>{0} is hurt by {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_HURT_BY_OTHER" xml:space="preserve">
+    <value>{0} is hurt by {2}'s {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ILLUMINATE" xml:space="preserve">
+    <value>{0}'s Illuminate called Pokémon to its side!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ILLUSION_START" xml:space="preserve">
+    <value>{0} hid behind an illusion!</value>
+    <comment></comment>  </data>
+  <data name="MSG_IMMOBILIZE_ALREADY" xml:space="preserve">
+    <value>{0} is already immobilized!</value>
+    <comment></comment>  </data>
+  <data name="MSG_IMMOBILIZE_END" xml:space="preserve">
+    <value>{0} is no longer immobilized!</value>
+    <comment></comment>  </data>
+  <data name="MSG_IMMOBILIZE_FAIL_ELEMENT" xml:space="preserve">
+    <value>{0}'s type doesn't get immobilized!</value>
+    <comment></comment>  </data>
+  <data name="MSG_IMMOBILIZE_START" xml:space="preserve">
+    <value>{0} became immobilized!</value>
+    <comment></comment>  </data>
+  <data name="MSG_IMMUNITY" xml:space="preserve">
+    <value>{0} can't be poisoned due to Immunity!</value>
+    <comment></comment>  </data>
+  <data name="MSG_IMPOSTER" xml:space="preserve">
+    <value>{0} returned to its original form!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INCINERATE" xml:space="preserve">
+    <value>The {0} was incinerated!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INFESTATION_START" xml:space="preserve">
+    <value>{0} was trapped in the infestation!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INFILTRATOR" xml:space="preserve">
+    <value>{0} passed through {1} with Infiltrator!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INGRAIN_START" xml:space="preserve">
+    <value>{0} planted its roots!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INNER_FOCUS" xml:space="preserve">
+    <value>{0} didn't cringe due to its Inner Focus!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INSOMNIA" xml:space="preserve">
+    <value>{0} can't fall asleep due to Insomnia!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INSOMNIA_DROWSY" xml:space="preserve">
+    <value>{0} can't become drowsy due to Insomnia!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INV_FULL" xml:space="preserve">
+    <value>{0}'s bag is too full to hold the {1}!</value>
+    <comment>Used when a player steals something, but doesn't have the bag space for it.</comment>  </data>
+  <data name="MSG_INVERSE_END" xml:space="preserve">
+    <value>Type matchups returned to normal.</value>
+    <comment></comment>  </data>
+  <data name="MSG_INVERSE_START" xml:space="preserve">
+    <value>Type matchups were reversed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INVISIBLE_ALREADY" xml:space="preserve">
+    <value>{0} is already invisible!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INVISIBLE_END" xml:space="preserve">
+    <value>{0} is no longer invisible!</value>
+    <comment></comment>  </data>
+  <data name="MSG_INVISIBLE_START" xml:space="preserve">
+    <value>{0} became invisible!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ITEM_BAN" xml:space="preserve">
+    <value>A mysterious force prevents {0} from using the item!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ITEM_CANT_USE_NOW" xml:space="preserve">
+    <value>This item can't be used right now.</value>
+    <comment></comment>  </data>
+  <data name="MSG_ITEM_NO_EFFECT" xml:space="preserve">
+    <value>It won't have any effect on {0}.</value>
+    <comment></comment>  </data>
+  <data name="MSG_JUSTIFIED" xml:space="preserve">
+    <value>{0}'s Justified raised its Attack!</value>
+    <comment></comment>  </data>
+  <data name="MSG_KEY_MISS" xml:space="preserve">
+    <value>There's nothing to unlock!</value>
+    <comment></comment>  </data>
+  <data name="MSG_KNOCK_ITEM" xml:space="preserve">
+    <value>{0} knocked off {1}'s {2}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_KNOCK_MONEY" xml:space="preserve">
+    <value>{0} dropped {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LEADER_ONLY_ITEM" xml:space="preserve">
+    <value>Only the team leader can use the item!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LEADER_ONLY_TILE" xml:space="preserve">
+    <value>Only the team leader can use this tile!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LEECH_SEED" xml:space="preserve">
+    <value>{0}'s health is sapped by Leech Seed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LEECH_SEED_ALREADY" xml:space="preserve">
+    <value>{0} is already seeded!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LEECH_SEED_END" xml:space="preserve">
+    <value>{0} is no longer seeded!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LEECH_SEED_FAIL_ELEMENT" xml:space="preserve">
+    <value>{0}'s type won't take on the Leech Seed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LEECH_SEED_START" xml:space="preserve">
+    <value>{0} was seeded!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LEVEL_IMMUNE" xml:space="preserve">
+    <value>{0}'s level is too high to be affected!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LIGHT_SCREEN_ALREADY" xml:space="preserve">
+    <value>{0} already has a Light Screen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LIGHT_SCREEN_START" xml:space="preserve">
+    <value>Light Screen protected {0} from Special attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LIMBER" xml:space="preserve">
+    <value>{0} can't be paralyzed due to Limber!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LIQUID_OOZE" xml:space="preserve">
+    <value>{0} sucked up the Liquid Ooze!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LOCK_OPEN" xml:space="preserve">
+    <value>The locked doors opened!</value>
+    <comment>English translation is intentionally using phrases that are unofficial, so feel free to use your own spin on things for translation.</comment>  </data>
+  <data name="MSG_LOCK_OPEN_FLOOR" xml:space="preserve">
+    <value>Doors were opened throughout the floor!</value>
+    <comment>English translation is intentionally using phrases that are unofficial, so feel free to use your own spin on things for translation.</comment>  </data>
+  <data name="MSG_LOSE_HELD_ITEM" xml:space="preserve">
+    <value>{0}'s {1} was lost!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LOSE_ITEM" xml:space="preserve">
+    <value>The {1} in {0}'s bag was lost!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LOVE" xml:space="preserve">
+    <value>{0} is attracted and can't target {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LOVE_ALREADY" xml:space="preserve">
+    <value>{0} is already in love with {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LOVE_END" xml:space="preserve">
+    <value>{0} is no longer in love with {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LOVE_FAIL" xml:space="preserve">
+    <value>{0} didn't fall in love with {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LOVE_START" xml:space="preserve">
+    <value>{0} fell in love with {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LUCKY_CHANT_ALREADY" xml:space="preserve">
+    <value>{0} is already under the effects of Lucky Chant!</value>
+    <comment></comment>  </data>
+  <data name="MSG_LUCKY_CHANT_START" xml:space="preserve">
+    <value>{0}'s Lucky Chant blocked it from critical hits and additional effects!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAGIC_BOUNCE" xml:space="preserve">
+    <value>The attack rebounded from {0}'s Magic Bounce!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAGIC_COAT" xml:space="preserve">
+    <value>The attack rebounded from {0}'s Magic Coat!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAGIC_COAT_START" xml:space="preserve">
+    <value>{0} will reflect status moves!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAGIC_ROOM_END" xml:space="preserve">
+    <value>Held items and abilities regained their effects.</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAGIC_ROOM_START" xml:space="preserve">
+    <value>Held items and abilities lost their effects!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAGMA_ARMOR" xml:space="preserve">
+    <value>{0}'s Magma Armor prevented it from being frozen!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAGMA_STORM_START" xml:space="preserve">
+    <value>{0} was trapped in a vortex of magma!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAGNET_PULL" xml:space="preserve">
+    <value>{0}'s Magnet Pull attracted {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAGNET_RISE_START" xml:space="preserve">
+    <value>{0} levitated using Magnet Rise!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAP_SURVEYOR" xml:space="preserve">
+    <value>{0} revealed a part of the floor with its {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MATCHUP_NE" xml:space="preserve">
+    <value>It doesn't affect {0}...</value>
+    <comment></comment>  </data>
+  <data name="MSG_MATCHUP_NVE" xml:space="preserve">
+    <value>It's not very effective...</value>
+    <comment></comment>  </data>
+  <data name="MSG_MATCHUP_NVE_2" xml:space="preserve">
+    <value>It has little effect...</value>
+    <comment></comment>  </data>
+  <data name="MSG_MATCHUP_SE" xml:space="preserve">
+    <value>It's super effective!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MATCHUP_SE_2" xml:space="preserve">
+    <value>It's super effective!!!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAX_HUNGER_BOOST" xml:space="preserve">
+    <value>{0}'s belly size increased!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MAX_HUNGER_DROP" xml:space="preserve">
+    <value>{0}'s belly size decreased!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MENTAL_CHARGE" xml:space="preserve">
+    <value>{0} is protected from move-binding effects!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MENTAL_CHARGE_END" xml:space="preserve">
+    <value>{0} is no longer protected from move-binding effects!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MENTAL_CHARGE_START" xml:space="preserve">
+    <value>{0} was protected from move-binding effects!</value>
+    <comment></comment>  </data>
+  <data name="MSG_METAL_BURST_ALREADY" xml:space="preserve">
+    <value>{0} already has Metal Burst up!</value>
+    <comment></comment>  </data>
+  <data name="MSG_METAL_BURST_START" xml:space="preserve">
+    <value>{0} will reflect damaging attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MIMIC" xml:space="preserve">
+    <value>{0} mimicked {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MIMIC_FAIL" xml:space="preserve">
+    <value>{0}'s move wasn't mimicked!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MINI_COUNTER_ALREADY" xml:space="preserve">
+    <value>{0} already has a Mini-Counter!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MINI_COUNTER_START" xml:space="preserve">
+    <value>{0} will counter damaging attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MIRACLE_EYE_START" xml:space="preserve">
+    <value>{0} can hit through type-based immunities!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MIRROR_COAT_ALREADY" xml:space="preserve">
+    <value>{0} already has a Mirror Coat!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MIRROR_COAT_START" xml:space="preserve">
+    <value>{0} will counter Special Attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MISS" xml:space="preserve">
+    <value>{0} avoided the attack!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MIST_ALREADY" xml:space="preserve">
+    <value>{0} is already shrouded in Mist!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MIST_START" xml:space="preserve">
+    <value>{0} was protected from stat drops!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MISTY_TERRAIN_END" xml:space="preserve">
+    <value>The mist disappeared from the battlefield.</value>
+    <comment></comment>  </data>
+  <data name="MSG_MISTY_TERRAIN_NO_STATUS" xml:space="preserve">
+    <value>The Misty Terrain protected {0} from major status problems!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MISTY_TERRAIN_START" xml:space="preserve">
+    <value>Mist swirled about the battlefield!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MOBILE_END" xml:space="preserve">
+    <value>{0} can no longer travel through walls!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MOBILE_START" xml:space="preserve">
+    <value>{0} can now travel through walls!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MONSTER_HOUSE" xml:space="preserve">
+    <value>It's a monster house!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MOODY" xml:space="preserve">
+    <value>{0} is Moody!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MOVE_BAN_END" xml:space="preserve">
+    <value>The ban on {0} was lifted!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MOVE_BAN_START" xml:space="preserve">
+    <value>The move {0} has been banned from the dungeon!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MOXIE" xml:space="preserve">
+    <value>{0} is showing its Moxie!</value>
+    <comment></comment>  </data>
+  <data name="MSG_MUG" xml:space="preserve">
+    <value>All held items were drawn to {0}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_NIGHTMARE" xml:space="preserve">
+    <value>{0} is having nightmares!</value>
+    <comment></comment>  </data>
+  <data name="MSG_NIGHTMARE_ALREADY" xml:space="preserve">
+    <value>{0} is already stalked by a nightmare!</value>
+    <comment></comment>  </data>
+  <data name="MSG_NIGHTMARE_END" xml:space="preserve">
+    <value>{0} is no longer stalked by a nightmare!</value>
+    <comment></comment>  </data>
+  <data name="MSG_NIGHTMARE_START" xml:space="preserve">
+    <value>{0} is being stalked by a nightmare!</value>
+    <comment></comment>  </data>
+  <data name="MSG_NO_EFFECT" xml:space="preserve">
+    <value>But it failed to affect {0}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_NO_EXIT" xml:space="preserve">
+    <value>There doesn't seem to be an exit around...</value>
+    <comment></comment>  </data>
+  <data name="MSG_NO_LONGER_PROTECTED" xml:space="preserve">
+    <value>{0} is no longer protected by {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_NO_MORE_CHARGES" xml:space="preserve">
+    <value>There's no PP left for that move!</value>
+    <comment></comment>  </data>
+  <data name="MSG_NO_SPLASH_DAMAGE" xml:space="preserve">
+    <value>{0} prevented the splash damage!</value>
+    <comment></comment>  </data>
+  <data name="MSG_NOT_ASLEEP" xml:space="preserve">
+    <value>{0} isn't asleep!</value>
+    <comment></comment>  </data>
+  <data name="MSG_NOTHING_HAPPENED" xml:space="preserve">
+    <value>But nothing happened.</value>
+    <comment></comment>  </data>
+  <data name="MSG_OBLIVIOUS" xml:space="preserve">
+    <value>{0} is Oblivious!</value>
+    <comment></comment>  </data>
+  <data name="MSG_OWN_TEMPO" xml:space="preserve">
+    <value>{0}'s Own Tempo prevented confusion!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PARALYZE_ALREADY" xml:space="preserve">
+    <value>{0} is already paralyzed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PARALYZE_END" xml:space="preserve">
+    <value>{0} shook off the paralysis!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PARALYZE_FAIL" xml:space="preserve">
+    <value>{0} didn't get paralyzed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PARALYZE_FAIL_TYPE" xml:space="preserve">
+    <value>{0}'s type doesn't get paralyzed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PARALYZE_START" xml:space="preserve">
+    <value>{0} became paralyzed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PARALYZED" xml:space="preserve">
+    <value>{0} is fully paralyzed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PASS_ATTACK" xml:space="preserve">
+    <value>{0} passed the attack to {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PAUSE" xml:space="preserve">
+    <value>{0} is paused and can't move!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PAUSE_END" xml:space="preserve">
+    <value>{0} is no longer paused!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PAUSE_START" xml:space="preserve">
+    <value>{0} became paused!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PERISH_COUNT" xml:space="preserve">
+    <value>{0}'s perish count fell to {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PERISH_START" xml:space="preserve">
+    <value>{0} heard the Perish Song!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PICKUP" xml:space="preserve">
+    <value>{0} found a {1} from somewhere.</value>
+    <comment></comment>  </data>
+  <data name="MSG_PIERCE_END" xml:space="preserve">
+    <value>{0} lost its Pierce status!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PIERCE_START" xml:space="preserve">
+    <value>{0} took on the Pierce status!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PLEDGE" xml:space="preserve">
+    <value>{0} followed up on {1}'s attack!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PLEDGE_ALREADY" xml:space="preserve">
+    <value>{0} already has a {1}!</value>
+    <comment>Ex. "Charizard already has a Fire Pledge!"</comment>  </data>
+  <data name="MSG_PLEDGE_START" xml:space="preserve">
+    <value>{0} is ready to follow up on its team's attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POISON_ALREADY" xml:space="preserve">
+    <value>{0} is already poisoned!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POISON_END" xml:space="preserve">
+    <value>{0} recovered from poisoning!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POISON_FAIL" xml:space="preserve">
+    <value>{0} didn't get poisoned!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POISON_FAIL_ELEMENT" xml:space="preserve">
+    <value>{0}'s type doesn't get poisoned!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POISON_HEAL" xml:space="preserve">
+    <value>{0} recovered HP with Poison Heal!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POISON_POINT" xml:space="preserve">
+    <value>{0}'s Poison Point poisons on contact!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POISON_START" xml:space="preserve">
+    <value>{0} became poisoned!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POISON_TOUCH" xml:space="preserve">
+    <value>{0}'s Poison Touch added poison to the attack!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POISON_TOXIC_START" xml:space="preserve">
+    <value>{0} became badly poisoned!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POISONED" xml:space="preserve">
+    <value>{0} is hurt by poison!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POWDER" xml:space="preserve">
+    <value>The powder ignited!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POWDER_START" xml:space="preserve">
+    <value>{0} became covered in explosive powder!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POWER_CHARGE_END" xml:space="preserve">
+    <value>{0} is no longer charged with power!</value>
+    <comment></comment>  </data>
+  <data name="MSG_POWER_CHARGE_START" xml:space="preserve">
+    <value>{0} is charged with power!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PP_TO_ONE" xml:space="preserve">
+    <value>The PP of {0}'s moves were set to 1!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PROTECT" xml:space="preserve">
+    <value>{0} protected itself!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PROTECT_ALREADY" xml:space="preserve">
+    <value>{0} is already protecting itself!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PROTECT_STAT_DROP" xml:space="preserve">
+    <value>{0} is protected from stat drops by {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PROTECT_STATUS" xml:space="preserve">
+    <value>{0} was protected from the status by {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_PROTECT_WITH" xml:space="preserve">
+    <value>{0} is protected by {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_QUICK_GUARD_START" xml:space="preserve">
+    <value>{0} is protected from long-range attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RAGE_END" xml:space="preserve">
+    <value>{0} is no longer enraged!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RAGE_POWDER" xml:space="preserve">
+    <value>{0} can't target anyone but {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RAGE_POWDER_ALREADY" xml:space="preserve">
+    <value>{0} is already focused on {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RAGE_POWDER_END" xml:space="preserve">
+    <value>{0} is no longer focused on {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RAGE_POWDER_START" xml:space="preserve">
+    <value>{0} can only attack {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RAGE_START" xml:space="preserve">
+    <value>{0} became enraged!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RAIN_END" xml:space="preserve">
+    <value>The rain stopped.</value>
+    <comment></comment>  </data>
+  <data name="MSG_RAIN_START" xml:space="preserve">
+    <value>It started to rain!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RATTLED" xml:space="preserve">
+    <value>{0}'s Rattled raised its Movement Speed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RAZOR_WIND_CHARGE" xml:space="preserve">
+    <value>{0} whipped up a whirlwind!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RECEIVE_ITEM_CURSED" xml:space="preserve">
+    <value>{0} couldn't accept the item because its held item was sticky!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RECRUIT" xml:space="preserve">
+    <value>{0} joined {1} to go on adventures!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RECRUIT_ANY" xml:space="preserve">
+    <value>{0} joined the party to go on adventures!</value>
+    <comment>The version for when the player doesn't have a team name.</comment>  </data>
+  <data name="MSG_RECRUIT_BOOST_START" xml:space="preserve">
+    <value>{0}'s chances of recruitment was boosted!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RECRUIT_FAIL" xml:space="preserve">
+    <value>{0} seems hesitant to join the team...</value>
+    <comment></comment>  </data>
+  <data name="MSG_RECYCLE" xml:space="preserve">
+    <value>{0}'s {1} was recycled and became a {2}</value>
+    <comment></comment>  </data>
+  <data name="MSG_REDIRECT_ATTACK" xml:space="preserve">
+    <value>{0} redirected the attack!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REFLECT" xml:space="preserve">
+    <value>The damage was reflected back!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REFLECT_ALL" xml:space="preserve">
+    <value>The damage was reflected everywhere!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REFLECT_ALREADY" xml:space="preserve">
+    <value>{0} already has Reflect!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REFLECT_BY" xml:space="preserve">
+    <value>{0}'s {1} reflected the damage back!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REFLECT_HEAL_BY" xml:space="preserve">
+    <value>{0}'s {1} returned the recovered HP!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REFLECT_START" xml:space="preserve">
+    <value>Reflect protected {0} from Physical attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REGEN" xml:space="preserve">
+    <value>{0} is regenerating HP!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REGEN_END" xml:space="preserve">
+    <value>{0} is no longer regenerating HP!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REGEN_START" xml:space="preserve">
+    <value>{0} began regenerating HP!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REST" xml:space="preserve">
+    <value>{0} went to sleep and became healthy!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RETALIATE" xml:space="preserve">
+    <value>{0} retaliated on {1}'s attack!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RETALIATE_ALREADY" xml:space="preserve">
+    <value>{0} is already ready to retaliate!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RETALIATE_END" xml:space="preserve">
+    <value>{0} is no longer ready to retaliate!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RETALIATE_START" xml:space="preserve">
+    <value>{0} is ready to retaliate!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REVIVE" xml:space="preserve">
+    <value>{0} was revived!</value>
+    <comment></comment>  </data>
+  <data name="MSG_REVIVE_NONE" xml:space="preserve">
+    <value>But there was no one to revive!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ROOST_END" xml:space="preserve">
+    <value>{0} is no longer roosting!</value>
+    <comment></comment>  </data>
+  <data name="MSG_ROOST_START" xml:space="preserve">
+    <value>{0} lost its Flying-type match-ups!</value>
+    <comment></comment>  </data>
+  <data name="MSG_RUN_AWAY" xml:space="preserve">
+    <value>{0} can't be immobilized due to Run Away!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SAFEGUARD_END" xml:space="preserve">
+    <value>{0}'s Safeguard disappeared!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SAFEGUARD_START" xml:space="preserve">
+    <value>{0} was protected from status problems!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SAND_END" xml:space="preserve">
+    <value>The sandstorm subsided.</value>
+    <comment></comment>  </data>
+  <data name="MSG_SAND_START" xml:space="preserve">
+    <value>A sandstorm brewed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SAND_STREAM" xml:space="preserve">
+    <value>{0}'s Sand Stream started a sandstorm!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SAND_TOMB_START" xml:space="preserve">
+    <value>{0} was trapped in quicksand!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SHADOW_FORCE_CHARGE" xml:space="preserve">
+    <value>{0} vanished instantly!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SHADOW_FORCE_END" xml:space="preserve">
+    <value>{0} reappeared!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SHADOW_TAG" xml:space="preserve">
+    <value>{0}'s Shadow Tag prevents escape!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SHED_SHELL" xml:space="preserve">
+    <value>{0} can't be immobilized due to its Shed Shell!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKETCH" xml:space="preserve">
+    <value>{0} sketched {1}'s moves!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKETCH_FAIL" xml:space="preserve">
+    <value>{0}'s move wasn't sketched!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKILL_CALL" xml:space="preserve">
+    <value>The move turned into {0}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKILL_FAILED" xml:space="preserve">
+    <value>But it failed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKILL_SEALED" xml:space="preserve">
+    <value>The move is sealed! It can't be used!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKILL_TO_ELEMENT" xml:space="preserve">
+    <value>It turned into the {0}-type!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKILL_UNFINISHED" xml:space="preserve">
+    <value>Oops! This move doesn't work yet!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKILL_USE" xml:space="preserve">
+    <value>{0} used {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKULL_BASH_CHARGE" xml:space="preserve">
+    <value>{0} lowered its head!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SKY_ATTACK_CHARGE" xml:space="preserve">
+    <value>{0} became cloaked in a harsh light!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SLEEP_ALREADY" xml:space="preserve">
+    <value>{0} is already asleep!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SLEEP_END" xml:space="preserve">
+    <value>{0} woke up!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SLEEP_FAIL" xml:space="preserve">
+    <value>{0} didn't fall asleep!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SLEEP_START" xml:space="preserve">
+    <value>{0} fell asleep!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SLEEPLESS" xml:space="preserve">
+    <value>{0} is sleepless!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SLEEPLESS_ALREADY" xml:space="preserve">
+    <value>{0} is already sleepless!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SLEEPLESS_END" xml:space="preserve">
+    <value>{0} is no longer sleepless!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SLEEPLESS_START" xml:space="preserve">
+    <value>{0} became sleepless!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SLIP_END" xml:space="preserve">
+    <value>{0} can no longer travel over water!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SLIP_START" xml:space="preserve">
+    <value>{0} can now travel over water!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SLOW_START" xml:space="preserve">
+    <value>{0} can't get it going with its Slow Start!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SNATCH" xml:space="preserve">
+    <value>{0} snatched the move!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SNATCH_END" xml:space="preserve">
+    <value>{0} is no longer waiting to snatch a move!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SNATCH_START" xml:space="preserve">
+    <value>{0} waits for someone to make a move!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SNOW_WARNING" xml:space="preserve">
+    <value>{0}'s Snow Warning started a hailstorm!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SOLAR_BEAM_CHARGE" xml:space="preserve">
+    <value>{0} took in sunlight!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SOLAR_POWER" xml:space="preserve">
+    <value>{0}'s Solar Power is causing strain!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SPEED_BUFF_NO_LESS" xml:space="preserve">
+    <value>{0} can't go any slower!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SPEED_BUFF_NO_MORE" xml:space="preserve">
+    <value>{0} can't go any faster!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SPEED_DOUBLE" xml:space="preserve">
+    <value>{0} is at double speed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SPEED_FOURTH" xml:space="preserve">
+    <value>{0} is at one-fourth speed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SPEED_HALF" xml:space="preserve">
+    <value>{0} is at half speed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SPEED_NORMAL" xml:space="preserve">
+    <value>{0} is at normal speed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SPEED_QUADRUPLE" xml:space="preserve">
+    <value>{0} is at quadruple speed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SPEED_THIRD" xml:space="preserve">
+    <value>{0} is at one-third speed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SPEED_TRIPLE" xml:space="preserve">
+    <value>{0} is at triple speed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STAIR_SENSOR" xml:space="preserve">
+    <value>The stairs are this way!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STAT_BOOST" xml:space="preserve">
+    <value>{0}'s base {1} was boosted by {2}.</value>
+    <comment></comment>  </data>
+  <data name="MSG_STAT_CHARGE" xml:space="preserve">
+    <value>{0} is protected from stat changes!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STAT_CHARGE_END" xml:space="preserve">
+    <value>{0} is no longer protected from stat changes!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STAT_CHARGE_START" xml:space="preserve">
+    <value>{0} was protected from stat changes!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STAT_DROP_PROTECT" xml:space="preserve">
+    <value>{0}'s {1} prevented its {2} from dropping!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STAT_DROP_TRIGGER" xml:space="preserve">
+    <value>The stat drop triggered {0}'s {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STAT_MAXED" xml:space="preserve">
+    <value>{0}'s base {1} is already maxed out.</value>
+    <comment></comment>  </data>
+  <data name="MSG_STAT_SPLIT" xml:space="preserve">
+    <value>{0} split its {1} with {2}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STAT_SWAP" xml:space="preserve">
+    <value>{0} swapped its {1} with its {2}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STATIC" xml:space="preserve">
+    <value>{0}'s Static paralyzes on contact!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STATUS_END" xml:space="preserve">
+    <value>{0}'s {1} status wore off!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STATUS_PROTECT" xml:space="preserve">
+    <value>{0} was protected from the {1} status!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STATUS_PROTECT_END" xml:space="preserve">
+    <value>{0} is no longer protected from the {1} status!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STEADFAST" xml:space="preserve">
+    <value>{0}'s Steadfast raised its Movement Speed!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STEAL_DRINK" xml:space="preserve">
+    <value>{0} stole and drank the {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STEAL_EAT" xml:space="preserve">
+    <value>{0} stole and ate the {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STEAL_ITEM" xml:space="preserve">
+    <value>{0} stole the {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STEAL_ITEM_CURSED" xml:space="preserve">
+    <value>{0} couldn't steal anything because its item was sticky!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STEAL_ITEM_FAIL" xml:space="preserve">
+    <value>{0} doesn't have an item to steal!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STEAL_OPERATE" xml:space="preserve">
+    <value>{0} stole and booted up the {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STEAL_USE" xml:space="preserve">
+    <value>{0} stole and used the {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STEAL_WITH" xml:space="preserve">
+    <value>{0} stole {2}'s {1} with {3}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STENCH" xml:space="preserve">
+    <value>{0}'s Stench causes cringing on contact!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STICKY_HOLD" xml:space="preserve">
+    <value>{0} held on to its item!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STICKY_HOLD_MONEY" xml:space="preserve">
+    <value>{0} held on to its money!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STOCKPILE" xml:space="preserve">
+    <value>{0} stockpiled {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STOCKPILE_END" xml:space="preserve">
+    <value>{0}'s stockpiled effect wore off!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STOCKPILE_NO_MORE" xml:space="preserve">
+    <value>{0} can't stockpile any more!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STOCKPILE_NONE" xml:space="preserve">
+    <value>But {0} doesn't have anything stockpiled!</value>
+    <comment></comment>  </data>
+  <data name="MSG_STORAGE_TAKE" xml:space="preserve">
+    <value>{0} withdrew the {1} from storage.</value>
+    <comment></comment>  </data>
+  <data name="MSG_STORE_ENERGY" xml:space="preserve">
+    <value>{0} is storing energy!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SUMMON_ALLIES" xml:space="preserve">
+    <value>Pokémon were called to {0}'s side!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SUMMON_FOES" xml:space="preserve">
+    <value>Pokémon were attracted!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SUN_END" xml:space="preserve">
+    <value>The sunlight faded.</value>
+    <comment></comment>  </data>
+  <data name="MSG_SUN_START" xml:space="preserve">
+    <value>The sunlight turned harsh!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SURE_SHOT_END" xml:space="preserve">
+    <value>{0} lost its aim!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SURE_SHOT_START" xml:space="preserve">
+    <value>{0} took aim!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SWEET_VEIL" xml:space="preserve">
+    <value>{0} can't fall asleep due to Sweet Veil!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SWEET_VEIL_DROWSY" xml:space="preserve">
+    <value>{0} can't become drowsy due to Sweet Veil!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SYNCHRO_FAIL" xml:space="preserve">
+    <value>{0} isn't the same type as {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_SYNCHRONIZE" xml:space="preserve">
+    <value>{0}'s {1} shared the status problem!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TAUNT_ALREADY" xml:space="preserve">
+    <value>{0} is already taunted!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TAUNT_START" xml:space="preserve">
+    <value>{0} fell for the taunt!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TELEKINESIS_START" xml:space="preserve">
+    <value>{0} was hurled into the air!</value>
+    <comment></comment>  </data>
+  <data name="MSG_THROW" xml:space="preserve">
+    <value>{0} threw the {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_THROW_CURSED" xml:space="preserve">
+    <value>{0}'s {1} is sticky and can't be thrown!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TILE_CHECK" xml:space="preserve">
+    <value>{0} triggered the {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TIME_UP" xml:space="preserve">
+    <value>It's right nearby! It's gusting hard!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TIME_WARNING_1" xml:space="preserve">
+    <value>Something's stirring...</value>
+    <comment></comment>  </data>
+  <data name="MSG_TIME_WARNING_2" xml:space="preserve">
+    <value>Something's approaching...</value>
+    <comment></comment>  </data>
+  <data name="MSG_TIME_WARNING_3" xml:space="preserve">
+    <value>It's getting closer!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TORMENT_START" xml:space="preserve">
+    <value>{0} was subjected to Torment!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TRACE" xml:space="preserve">
+    <value>{1}'s Trace copied {0}'s ability!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TRANSFORM" xml:space="preserve">
+    <value>{0} transformed into {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TRANSFORM_HELD_ITEM" xml:space="preserve">
+    <value>{0}'s {1} became a {2}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TRANSFORM_ITEM" xml:space="preserve">
+    <value>The {1} in {0}'s bag became a {2}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TRANSFORM_ITEM_FAIL" xml:space="preserve">
+    <value>{0}'s items remained unchanged.</value>
+    <comment></comment>  </data>
+  <data name="MSG_TRAP_ALREADY" xml:space="preserve">
+    <value>{0} is already trapped by {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TRAP_END" xml:space="preserve">
+    <value>{0} was freed from {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TRAWL" xml:space="preserve">
+    <value>All unclaimed items were drawn to {0}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TREASURE" xml:space="preserve">
+    <value>Treasure appeared!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TRICK_ROOM_END" xml:space="preserve">
+    <value>The twisted dimensions returned to normal.</value>
+    <comment></comment>  </data>
+  <data name="MSG_TRICK_ROOM_START" xml:space="preserve">
+    <value>The dimensions were twisted!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TYPE_BOOST_END" xml:space="preserve">
+    <value>{0}'s {1}-type attacks are no longer boosted!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TYPE_BOOST_START" xml:space="preserve">
+    <value>{0}'s {1}-type attacks were boosted!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TYPE_CONVERT_END" xml:space="preserve">
+    <value>{0}'s moves are no longer {1}-type attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TYPE_CONVERT_START" xml:space="preserve">
+    <value>{0}'s moves were converted to the {1}-type!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TYPE_PROTECT_END" xml:space="preserve">
+    <value>{0} is no longer protected from {1}-type attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_TYPE_PROTECT_START" xml:space="preserve">
+    <value>{0} was protected from {1}-type attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_UNNERVE" xml:space="preserve">
+    <value>{0} can't eat anything due to Unnerve!</value>
+    <comment></comment>  </data>
+  <data name="MSG_USE" xml:space="preserve">
+    <value>{0} used the {1}.</value>
+    <comment></comment>  </data>
+  <data name="MSG_USE_CURSED" xml:space="preserve">
+    <value>The {0} is sticky and can't be used!</value>
+    <comment></comment>  </data>
+  <data name="MSG_USE_DRINK" xml:space="preserve">
+    <value>{0} drank the {1}.</value>
+    <comment></comment>  </data>
+  <data name="MSG_USE_EAT" xml:space="preserve">
+    <value>{0} ate the {1}.</value>
+    <comment></comment>  </data>
+  <data name="MSG_USE_OPERATE" xml:space="preserve">
+    <value>{0} booted up the {1}.</value>
+    <comment></comment>  </data>
+  <data name="MSG_VITAL_SPIRIT" xml:space="preserve">
+    <value>{0} can't fall asleep due to Vital Spirit!</value>
+    <comment></comment>  </data>
+  <data name="MSG_VITAL_SPIRIT_DROWSY" xml:space="preserve">
+    <value>{0} can't become drowsy due to Vital Spirit!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WATER_VEIL" xml:space="preserve">
+    <value>{0}'s Water Veil prevented it from being burned!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WEAK_ARMOR" xml:space="preserve">
+    <value>{0}'s Weak Armor broke off!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WEAKNESS_DRAIN_END" xml:space="preserve">
+    <value>{0} will no longer absorb super-effective moves!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WEAKNESS_DRAIN_START" xml:space="preserve">
+    <value>{0} will absorb super-effective moves!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WHIRLPOOL_START" xml:space="preserve">
+    <value>{0} was trapped in a whirlpool!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WIDE_GUARD_START" xml:space="preserve">
+    <value>{0} is protected from wide-range attacks!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WIND_END" xml:space="preserve">
+    <value>The mysterious air current dissipated!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WIND_START" xml:space="preserve">
+    <value>A mysterious air current is protecting Flying-type Pokémon!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WISH_ALREADY" xml:space="preserve">
+    <value>{0} already has a wish!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WISH_ATTACK" xml:space="preserve">
+    <value>{0}'s wish came true!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WISH_START" xml:space="preserve">
+    <value>{0} made a wish!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WONDER_ROOM_END" xml:space="preserve">
+    <value>The Wonder Room wore off!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WONDER_ROOM_START" xml:space="preserve">
+    <value>Special attacks and Physical attacks were swapped!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WRAP" xml:space="preserve">
+    <value>{0} is being wrapped by the foe!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WRAP_ALREADY" xml:space="preserve">
+    <value>{0} is already wrapped!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WRAP_ATTACK" xml:space="preserve">
+    <value>{0}'s attack continues!</value>
+    <comment></comment>  </data>
+  <data name="MSG_WRAP_START" xml:space="preserve">
+    <value>{0} was wrapped by {1}!</value>
+    <comment></comment>  </data>
+  <data name="MSG_YAWN_END" xml:space="preserve">
+    <value>{0} is no longer drowsy!</value>
+    <comment></comment>  </data>
+  <data name="MSG_YAWN_FAIL" xml:space="preserve">
+    <value>{0} didn't yawn!</value>
+    <comment></comment>  </data>
+  <data name="MSG_YAWN_START" xml:space="preserve">
+    <value>{0} became drowsy!</value>
+    <comment></comment>  </data>
+  <data name="SIGN_EXIT" xml:space="preserve">
+    <value>Dungeon Exit</value>
+    <comment></comment>  </data>
+  <data name="SIGN_LV_005" xml:space="preserve">
+    <value>Level 5 Zone</value>
+    <comment></comment>  </data>
+  <data name="SIGN_LV_010" xml:space="preserve">
+    <value>Level 10 Zone</value>
+    <comment></comment>  </data>
+  <data name="SIGN_LV_025" xml:space="preserve">
+    <value>Level 25 Zone</value>
+    <comment></comment>  </data>
+  <data name="SIGN_LV_050" xml:space="preserve">
+    <value>Level 50 Zone</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TITLE_ABILITY" xml:space="preserve">
+    <value>Abilities</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TITLE_CATEGORY" xml:space="preserve">
+    <value>Physical and Special</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TITLE_HIT_RATE" xml:space="preserve">
+    <value>Chance to Hit</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TITLE_MOVEMENT" xml:space="preserve">
+    <value>Movement</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TITLE_MOVEMENT_SPEED" xml:space="preserve">
+    <value>Movement Speed</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TITLE_MOVES" xml:space="preserve">
+    <value>Using Moves</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TITLE_STATUS" xml:space="preserve">
+    <value>Status Ailments</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TITLE_TEAM" xml:space="preserve">
+    <value>Team Management</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TITLE_TRAP" xml:space="preserve">
+    <value>Traps</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TITLE_TURNS" xml:space="preserve">
+    <value>Turns</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TITLE_TYPES" xml:space="preserve">
+    <value>Types</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_1_1" xml:space="preserve">
+    <value>Hold {0}, and press a key to use a move.\nYou must use at least one move on an enemy Pokémon if you want to gain EXP from it.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_1_2" xml:space="preserve">
+    <value>All moves and Pokémon have a type, such as Fire, Water, or Grass. There's 18 in all!\nUse a move that has a type-advantage against the enemy to do more damage.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_1_3" xml:space="preserve">
+    <value>Some Pokémon have two types that can cover each other's weaknesses.\nUse a move that has an advantage against both for exceptional damage!</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_2_1" xml:space="preserve">
+    <value>Physical moves use your Attack and the opponent's Defense, while Special moves use your Special Attack and the opponent's Special Defense.\nThese stats can be temporarily modified: boosted or lowered by up to 6 stages.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_2_2" xml:space="preserve">
+    <value>With a higher Speed stat your attacks are more likely to hit, and foes are less likely to hit you.\nThese chances are also affected by temporary Accuracy and Evasion modifiers: boosted or lowered by up to 6 stages.\nJust remember: if you ever miss an attack, the next one is sure to hit!</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_2_3" xml:space="preserve">
+    <value>Movement Speed differs from the Speed stat! Normally you move once per turn, but being sped up can let you move more than once. If you're slowed down, you will skip a turn each time you move.\nAttack speed is unaffected by all this; your turn always ends if you attack, and you never skip turns if slowed.  Movement Speed can be temporarily boosted or lowered by up to 3 stages.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_3_1" xml:space="preserve">
+    <value>There are 5 major status ailments: Sleep, Poison, Paralysis, Burn, and Freeze.\nIf you're under the effects of one, you cannot be affected by the other.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_3_2" xml:space="preserve">
+    <value>There are many minor status ailments, such as Confusion and Leech Seed.\nThey can all affect a target at the same time.\nCheck your team member's Statuses page if you've lost track of them.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_3_3" xml:space="preserve">
+    <value>Every Pokémon has an ability, which can make it immune to certain status, inflict status on opponents when attacked, or provide other beneficial effects.\nCheck your team member's Info page to read about its ability.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_4_1" xml:space="preserve">
+    <value>Within dungeons, you will find various traps scattered on the floor.\nThey can be triggered by stepping on them, or by targeting them with certain attacks.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_4_2" xml:space="preserve">
+    <value>Use your {0} attack to reveal traps directly in front of you. Traps won't trigger this way, either.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_4_3" xml:space="preserve">
+    <value>Most traps will affect anyone within their range, while some will only target the Pokémon that triggered it! Lead enemies into them while avoiding them yourself.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_5_1" xml:space="preserve">
+    <value>Hold {0} to turn in place, and hold {1} to move diagonally.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_5_2" xml:space="preserve">
+    <value>Press {0}+{1} to skip your turn. You can use this to wait and heal from natural HP regeneration.\nMovement and combat in dungeons is always turn-based. Enemies won't move until you do, so take your time to plan accordingly.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_5_3" xml:space="preserve">
+    <value>Press {0},{1},{2} or {3} to switch the team leader. This can be done without taking any turns.</value>
+    <comment></comment>  </data>
+  <data name="SIGN_TUTORIAL_5_4" xml:space="preserve">
+    <value>Press {0} to switch on Team Mode. With this, you can control the entire team, turn-by-turn.</value>
+    <comment></comment>  </data>
+  <data name="TALK_CANT" xml:space="preserve">
+    <value>[myname] can't talk just now.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0000" xml:space="preserve">
+    <value>Let's do our best!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0001" xml:space="preserve">
+    <value>Let's help each other do well!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0002" xml:space="preserve">
+    <value>Let's take this challenge on nice and steady.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0003" xml:space="preserve">
+    <value>It'd be nice if we found even one [item].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0004" xml:space="preserve">
+    <value>We need to stay on the lookout for any [kind]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0005" xml:space="preserve">
+    <value>I've got you covered, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0006" xml:space="preserve">
+    <value>I'll back you up with my [move], [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0007" xml:space="preserve">
+    <value>I'll follow you, [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0008" xml:space="preserve">
+    <value>Let's find lots of good stuff!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0009" xml:space="preserve">
+    <value>I wonder what's up ahead.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0010" xml:space="preserve">
+    <value>Exploring is fun, isn't it?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0011" xml:space="preserve">
+    <value>I've got a good feeling that we're going to find treasure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0020" xml:space="preserve">
+    <value>I'm happy to be exploring with you, [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0021" xml:space="preserve">
+    <value>I'll show you how I can be useful, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0022" xml:space="preserve">
+    <value>Let's give this one our best, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0023" xml:space="preserve">
+    <value>I'll assist you the best I can with my [move], [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0024" xml:space="preserve">
+    <value>Let's try our very best to find one [item]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0025" xml:space="preserve">
+    <value>I do wonder what discoveries lie ahead of us this time!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0026" xml:space="preserve">
+    <value>I suspect that [kind] will be tough to deal with.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0040" xml:space="preserve">
+    <value>It's a bit scary, but I'll do my best to keep up, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0041" xml:space="preserve">
+    <value>Please don't get us in too deep!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0042" xml:space="preserve">
+    <value>We should leave if it gets too dangerous, right?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0043" xml:space="preserve">
+    <value>Ooh, the [kind] here? So scary!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0044" xml:space="preserve">
+    <value>P-please don't leave me behind!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0045" xml:space="preserve">
+    <value>P-please don't abandon me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0046" xml:space="preserve">
+    <value>I feel a little more secure being with you, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0047" xml:space="preserve">
+    <value>I really hope we'll find at least one [item].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0048" xml:space="preserve">
+    <value>I'm sorry I'm so timid...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0049" xml:space="preserve">
+    <value>I'm not fond of fighting. But for you...I'll do my best!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0060" xml:space="preserve">
+    <value>You know, carelessness can be our own worst enemy...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0061" xml:space="preserve">
+    <value>You know, we should always see with more than just our eyes...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0062" xml:space="preserve">
+    <value>I will support you with my [move], [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0063" xml:space="preserve">
+    <value>We should always look before we leap, don't you think?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0064" xml:space="preserve">
+    <value>You can trust me to watch out for you, [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0065" xml:space="preserve">
+    <value>If you study your enemy closely, you'll always know what to do...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0066" xml:space="preserve">
+    <value>Part of a winning strategy is knowing when to withdraw, you know...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0080" xml:space="preserve">
+    <value>Some wisdom, eh? Haste makes waste, but persistence always pays...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0081" xml:space="preserve">
+    <value>Wisdom, eh? Fools rush in, but winners walk and wonder...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0082" xml:space="preserve">
+    <value>Rest assured. My trusty move, [move], will help you, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0083" xml:space="preserve">
+    <value>We will surely find ourselves one [item]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0084" xml:space="preserve">
+    <value>Keep your eyes open for any [kind]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0085" xml:space="preserve">
+    <value>I'll be sure to keep an eye out to the rear, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0086" xml:space="preserve">
+    <value>I've done this many a time, but it never ceases to be fun...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0100" xml:space="preserve">
+    <value>Anywhere you go, I will follow, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0101" xml:space="preserve">
+    <value>Impossible? [myname] doesn't know the meaning of "impossible"!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0102" xml:space="preserve">
+    <value>You will surely witness the power of my [move]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0103" xml:space="preserve">
+    <value>Bah! I hardly see those [kind] as worthy adversaries!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0104" xml:space="preserve">
+    <value>Keep the goal in mind! Yes, I can envision us finding that [item]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0120" xml:space="preserve">
+    <value>Thrilling... Exploring...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0121" xml:space="preserve">
+    <value>Treasure... Find it... Find it...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0122" xml:space="preserve">
+    <value>My move will help... My [move]...for [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0123" xml:space="preserve">
+    <value>Defeat...any [kind]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0124" xml:space="preserve">
+    <value>Must find [item]... Must find [item]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0125" xml:space="preserve">
+    <value>Fun...fun...fun... So fun... with [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0126" xml:space="preserve">
+    <value>Ahead... Ahead... What is... ahead...?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0140" xml:space="preserve">
+    <value>Got your back, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0141" xml:space="preserve">
+    <value>Let me take on the hard stuff!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0142" xml:space="preserve">
+    <value>Yeah! No one can stand up to a team as good as we are!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0143" xml:space="preserve">
+    <value>Gotta get that [item]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0144" xml:space="preserve">
+    <value>Ha! Those [kind]? Total pushovers!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0145" xml:space="preserve">
+    <value>Don't be surprised if my great [move] move saves the day.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0146" xml:space="preserve">
+    <value>Oh, yeah! Exploring's great! Who could want anything more?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0147" xml:space="preserve">
+    <value>Gotta admit that you're not too shabby yourself!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0160" xml:space="preserve">
+    <value>Let's get the exploration in gear!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0161" xml:space="preserve">
+    <value>This kind of exploring isn't so bad...once in a while!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0162" xml:space="preserve">
+    <value>Now don't mistake me for the enemy, OK?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0163" xml:space="preserve">
+    <value>It'd be awesome if we could get ourselves one [item]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0180" xml:space="preserve">
+    <value>It's nice to go exploring!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0181" xml:space="preserve">
+    <value>Where next? I'll go anywhere with you, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0182" xml:space="preserve">
+    <value>I'll devote my [move] to help you, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0183" xml:space="preserve">
+    <value>Find one [item]? Great!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0184" xml:space="preserve">
+    <value>Ooooh! I wonder what treasures we'll find? I'm so excited!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0200" xml:space="preserve">
+    <value>Now don't hold me back!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0201" xml:space="preserve">
+    <value>Let's keep pushing on! C'mon! Time to show 'em how it's done!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0202" xml:space="preserve">
+    <value>I'll thump anyone who gets in our way, you'd better believe it!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0203" xml:space="preserve">
+    <value>I can just sense it! Somewhere! That [item]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0204" xml:space="preserve">
+    <value>You'd better guess again if you think that I'm leaving without our treasure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0205" xml:space="preserve">
+    <value>No one's better than I am with the [move] move!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0206" xml:space="preserve">
+    <value>Er, what? What do you want?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0220" xml:space="preserve">
+    <value>Say, I've meant to ask! Um... I hope I'm being helpful?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0221" xml:space="preserve">
+    <value>I'll explore the very best I can!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0222" xml:space="preserve">
+    <value>Hey, don't underestimate my [move] move!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0223" xml:space="preserve">
+    <value>We'll have to watch our backs around any [kind] we see!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0224" xml:space="preserve">
+    <value>Hmm? Is that the scent of [item] in the air?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0225" xml:space="preserve">
+    <value>You're really decent, aren't you, [player]?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0226" xml:space="preserve">
+    <value>Let's get us some treasure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0227" xml:space="preserve">
+    <value>Zzzz... Zzzz...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0228" xml:space="preserve">
+    <value>You must be hungry, right?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0240" xml:space="preserve">
+    <value>You'd better BET that I'll hustle!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0241" xml:space="preserve">
+    <value>I'm just RARING to keep going!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0242" xml:space="preserve">
+    <value>I'm not pretty, but I always get the job DONE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0243" xml:space="preserve">
+    <value>Let's scout that OUT! Where's that [item]?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0244" xml:space="preserve">
+    <value>Those [kind]? You gotta watch OUT!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0245" xml:space="preserve">
+    <value>You can always depend on ME, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0246" xml:space="preserve">
+    <value>No GUTS, no GLORY! And my [move] is all about GUTS!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0247" xml:space="preserve">
+    <value>What a BASH exploring with you, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0248" xml:space="preserve">
+    <value>Don't hold it against me! I might SMASH you by accident!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0249" xml:space="preserve">
+    <value>Wake me if I start the ZZZZs!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0250" xml:space="preserve">
+    <value>What DRIVE you have! I'm impressed, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0251" xml:space="preserve">
+    <value>For you, I'll do ANYTHING to help out, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0252" xml:space="preserve">
+    <value>Gah, don't STARE at me like that! You're embarrassing me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0260" xml:space="preserve">
+    <value>No need to worry, my dear [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0261" xml:space="preserve">
+    <value>It doesn't matter how often you've explored before. It's always beneficial!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0262" xml:space="preserve">
+    <value>When I get mad...I can be a real fright! You'd better believe it!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0263" xml:space="preserve">
+    <value>OK! Let's get that [item] to start with!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0264" xml:space="preserve">
+    <value>Oh! Those [kind] are such a rotten nuisance.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0265" xml:space="preserve">
+    <value>I'll keep you nice and safe with my [move], [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0266" xml:space="preserve">
+    <value>We'll leave just stuffed with all sorts of treasure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0267" xml:space="preserve">
+    <value>I do wonder...what might be up ahead?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0268" xml:space="preserve">
+    <value>If we see one [item], I'll...well...I'll...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0280" xml:space="preserve">
+    <value>Let me watch your back, won't you, [player]?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0281" xml:space="preserve">
+    <value>Where are we going next? Gotta make up your mind!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0282" xml:space="preserve">
+    <value>Oh, yeah! Watch out! I'll let fly with my [move] move!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0283" xml:space="preserve">
+    <value>Those [kind]? Easy targets!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0284" xml:space="preserve">
+    <value>It's always a blast exploring, don't you think?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0285" xml:space="preserve">
+    <value>You're really good at this. I'm impressed with you!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0300" xml:space="preserve">
+    <value>Study your enemy before making your move, OK?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0301" xml:space="preserve">
+    <value>Proceed sure and steady, OK?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0302" xml:space="preserve">
+    <value>Trust me. I'll do my best for the team, [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0303" xml:space="preserve">
+    <value>I'll employ my [move] move for the team, [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0304" xml:space="preserve">
+    <value>What lies beyond this point?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0305" xml:space="preserve">
+    <value>I'm just sure that we'll find that [item].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0320" xml:space="preserve">
+    <value>There's just no downside to exploring, that's for sure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0321" xml:space="preserve">
+    <value>May I suggest sweeping the floor for treasure from corner to corner?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0322" xml:space="preserve">
+    <value>I'm here to lend you my best support, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0323" xml:space="preserve">
+    <value>You can count on me to keep finding valuable things!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0324" xml:space="preserve">
+    <value>Mmm-hmm... I'm sure I sense one [item] around here somewhere.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0325" xml:space="preserve">
+    <value>We're splitting up any treasure evenly, aren't we?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0326" xml:space="preserve">
+    <value>To be sure, any [kind] will be big trouble.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0327" xml:space="preserve">
+    <value>There's nothing I won't do to get treasure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0640" xml:space="preserve">
+    <value>Yay for us, [player]! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0641" xml:space="preserve">
+    <value>I'll do my best! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0642" xml:space="preserve">
+    <value>I'm brimming with energy! \u266A I'm good to go! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0643" xml:space="preserve">
+    <value>[kind] is a toughie! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0644" xml:space="preserve">
+    <value>Oh! Which way do we go? \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0645" xml:space="preserve">
+    <value>I'm feeling bubbly! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0646" xml:space="preserve">
+    <value>Let's do our best together! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0647" xml:space="preserve">
+    <value>Yay! Exploring! Exploring! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0648" xml:space="preserve">
+    <value>Exploring's so fun! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0680" xml:space="preserve">
+    <value>We must proceed with caution.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0681" xml:space="preserve">
+    <value>Let us fight complacency! And let us proceed gingerly!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0682" xml:space="preserve">
+    <value>I'm perfectly fine. Thank you nonetheless!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0683" xml:space="preserve">
+    <value>I will provide my best support to the skirmish with my [move]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0684" xml:space="preserve">
+    <value>There may be a trap at hand, so step smartly!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0685" xml:space="preserve">
+    <value>We must remain careful about [kind] as we stay on the move.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0686" xml:space="preserve">
+    <value>Let's do the very best we can for one another, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0687" xml:space="preserve">
+    <value>Let's keep a brave face as we move onward!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0740" xml:space="preserve">
+    <value>We must persevere, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0741" xml:space="preserve">
+    <value>We must tread carefully.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0742" xml:space="preserve">
+    <value>I'll lend my support to the effort with my [move].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0743" xml:space="preserve">
+    <value>We should delve deeper.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0744" xml:space="preserve">
+    <value>I'm fine. There's no need to worry yourself.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0745" xml:space="preserve">
+    <value>I can see it...one [item] lying on the ground...somewhere...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0750" xml:space="preserve">
+    <value>Let's show them!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0751" xml:space="preserve">
+    <value>Now don't get careless, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0752" xml:space="preserve">
+    <value>I'm right behind you! You'll get plenty of support!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0753" xml:space="preserve">
+    <value>Let's speed things up!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0754" xml:space="preserve">
+    <value>[kind]...pretty weak!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0755" xml:space="preserve">
+    <value>There's one [item] on the ground...somewhere...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0760" xml:space="preserve">
+    <value>I've got you covered! Don't worry!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0761" xml:space="preserve">
+    <value>Let's keep moving, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0762" xml:space="preserve">
+    <value>Me? I'm fine!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0763" xml:space="preserve">
+    <value>Watch out for any [kind]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0764" xml:space="preserve">
+    <value>Let's keep going.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0765" xml:space="preserve">
+    <value>I envision one [item]... just lying there...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0770" xml:space="preserve">
+    <value>WE'RE GOING, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0771" xml:space="preserve">
+    <value>SHOW URGENCY!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0772" xml:space="preserve">
+    <value>FOES WILL SCATTER BEFORE THE MIGHT OF MY [move]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0773" xml:space="preserve">
+    <value>GRRR-OOOOOO!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0774" xml:space="preserve">
+    <value>THOSE [kind] ARE HARDLY WORTHY ADVERSARIES FOR ME!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0775" xml:space="preserve">
+    <value>I WILL PROTECT YOU WITH MY POWERS!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0780" xml:space="preserve">
+    <value>MY FULL SUPPORT IS YOURS! HAVE CONFIDENCE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0781" xml:space="preserve">
+    <value>NO ENEMY IS MY EQUAL!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0782" xml:space="preserve">
+    <value>GRRR-OOOOOO!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0783" xml:space="preserve">
+    <value>I WILL DRAW UPON MY MIGHT!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0784" xml:space="preserve">
+    <value>WHAT BEING CAN STOP ME?!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0785" xml:space="preserve">
+    <value>HAVE FAITH IN YOURSELF! AND FIGHT!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0790" xml:space="preserve">
+    <value>ASSISTANCE... WILL GIVE... ASSISTANCE...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0791" xml:space="preserve">
+    <value>MY POWER...IS YOURS... MY POWER...IS YOURS...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0792" xml:space="preserve">
+    <value>RRRRR... RRRRR... RRRRR...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0793" xml:space="preserve">
+    <value>CAUTION... MEET [kind]... WITH CAUTION...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0794" xml:space="preserve">
+    <value>I SEE...I SEE...A SOLE [item]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0795" xml:space="preserve">
+    <value>MOVE...ON... MOVE...ON...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0800" xml:space="preserve">
+    <value>It concerns me not which enemies await us.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0801" xml:space="preserve">
+    <value>The darkness swells within me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0802" xml:space="preserve">
+    <value>So be it! You shall bear witness to my power!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0803" xml:space="preserve">
+    <value>Our progress...is satisfactory.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0804" xml:space="preserve">
+    <value>I see but one [item]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0805" xml:space="preserve">
+    <value>Defeating me? Impossible. That much is absolute.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0810" xml:space="preserve">
+    <value>Treasure! \u266A Treasure! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0811" xml:space="preserve">
+    <value>What a fine love I have! \u266A For items of all shapes and sizes! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0812" xml:space="preserve">
+    <value>As always! I'll do it to the best of my humble abilities! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0813" xml:space="preserve">
+    <value>Be wary! So wary! Of [kind]! So nasty! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0814" xml:space="preserve">
+    <value>I find that exploring is so very uplifting! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0815" xml:space="preserve">
+    <value>Where are we going now? \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0820" xml:space="preserve">
+    <value>I'm counting on you!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0000" xml:space="preserve">
+    <value>It's getting a little rough...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0001" xml:space="preserve">
+    <value>I'm hurt a little... But I'm still good to go!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0002" xml:space="preserve">
+    <value>Thanks for your concern, [player]! You really care!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0005" xml:space="preserve">
+    <value>The going's getting rougher...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0006" xml:space="preserve">
+    <value>I...I'm fine. It takes more than this to slow me down.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0007" xml:space="preserve">
+    <value>I'm fine! I can keep battling! But thanks for your concern!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0010" xml:space="preserve">
+    <value>Maybe...maybe we should go home soon?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0011" xml:space="preserve">
+    <value>Ugh... I'm hurt...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0012" xml:space="preserve">
+    <value>Don't leave me, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0013" xml:space="preserve">
+    <value>Can you please restore my health a little, [player]?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0015" xml:space="preserve">
+    <value>This place is proving harsh...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0016" xml:space="preserve">
+    <value>Let's take it more cautiously.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0017" xml:space="preserve">
+    <value>It's OK! I can keep going!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0020" xml:space="preserve">
+    <value>The truth is that it's harder to make headway like this...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0021" xml:space="preserve">
+    <value>I'd be thankful if you could restore my health...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0022" xml:space="preserve">
+    <value>This exploration has had its share of rough times, wouldn't you say?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0023" xml:space="preserve">
+    <value>Do me the courtesy, [player]! Don't leave me here!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0025" xml:space="preserve">
+    <value>This amount of damage? It's no problem. It's hardly a scratch.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0026" xml:space="preserve">
+    <value>[myname] has only just begun to dominate!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0027" xml:space="preserve">
+    <value>I'm perfectly fine! Focus your concern elsewhere!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0030" xml:space="preserve">
+    <value>Harder... Getting harder...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0031" xml:space="preserve">
+    <value>Going...going... Keep on going...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0032" xml:space="preserve">
+    <value>Not easy... Not easy... All this exploration... Not easy...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0035" xml:space="preserve">
+    <value>Ha! I don't go down so easily!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0036" xml:space="preserve">
+    <value>This is nothing! Bring it on!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0037" xml:space="preserve">
+    <value>I get pumped up in tight spots like this!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0040" xml:space="preserve">
+    <value>Hey, how about healing me?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0041" xml:space="preserve">
+    <value>This kind of stinks, you know?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0042" xml:space="preserve">
+    <value>Hey, how about we hang it up and head home?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0045" xml:space="preserve">
+    <value>Oooh... It's getting hard to keep going...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0046" xml:space="preserve">
+    <value>Hey, I still feel OK! Thanks for thinking about me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0047" xml:space="preserve">
+    <value>It's hard! But I can keep going!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0050" xml:space="preserve">
+    <value>C'mon! I can take it! Bring it on!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0051" xml:space="preserve">
+    <value>Think I'm gonna drop here? Not a chance!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0052" xml:space="preserve">
+    <value>I'm doing OK! You worry about yourself!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0055" xml:space="preserve">
+    <value>Uh-yup! Kinda rough...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0056" xml:space="preserve">
+    <value>Got an Oran Berry or something?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0057" xml:space="preserve">
+    <value>Rough stuff! But I'll keep plugging away!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0060" xml:space="preserve">
+    <value>No problem at ALL! I can take it!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0061" xml:space="preserve">
+    <value>I'll TOUGH it out!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0062" xml:space="preserve">
+    <value>Just gotta smile, the way you WORRY about me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0065" xml:space="preserve">
+    <value>Oh, such hard going!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0066" xml:space="preserve">
+    <value>Oh, I'll be all right. I can take a lot more than this.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0067" xml:space="preserve">
+    <value>Oh, worried about me? Well, isn't that sweet, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0070" xml:space="preserve">
+    <value>You don't seriously think I'll be beaten this easily?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0071" xml:space="preserve">
+    <value>Let's buckle down and go for it!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0072" xml:space="preserve">
+    <value>Ha! We're just getting started!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0075" xml:space="preserve">
+    <value>Whew! Harder to get ahead...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0076" xml:space="preserve">
+    <value>Let's proceed more carefully...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0077" xml:space="preserve">
+    <value>I'm fully capable of continuing! Thanks for watching out for me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0080" xml:space="preserve">
+    <value>Hmm... It's getting tougher...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0081" xml:space="preserve">
+    <value>We won't find treasure unless we can get out of tough scrapes...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0082" xml:space="preserve">
+    <value>Won't some kind soul heal me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0135" xml:space="preserve">
+    <value>It's not so easy!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0136" xml:space="preserve">
+    <value>Huff... Puff...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0137" xml:space="preserve">
+    <value>Ow! I'm feeling worn down!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0138" xml:space="preserve">
+    <value>I feel kind of yucky...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0139" xml:space="preserve">
+    <value>Maybe I'm tired... I feel weak...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0145" xml:space="preserve">
+    <value>I'm perfectly capable of enduring much more!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0146" xml:space="preserve">
+    <value>This place is straining my endurance, but I can take much more.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0147" xml:space="preserve">
+    <value>I've endured some damage, but I'm very much still fit and able!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0148" xml:space="preserve">
+    <value>It hurts a little, but it's really nothing I can't handle.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0149" xml:space="preserve">
+    <value>I can endure this. Please don't fret for my welfare.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0160" xml:space="preserve">
+    <value>I've suffered some hits...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0161" xml:space="preserve">
+    <value>I can absorb more damage...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0162" xml:space="preserve">
+    <value>I'm still ready for more!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0163" xml:space="preserve">
+    <value>You don't have to worry about me.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0165" xml:space="preserve">
+    <value>It seems like it's getting harder.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0166" xml:space="preserve">
+    <value>Don't worry. I can put up with a lot worse.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0167" xml:space="preserve">
+    <value>You don't have to worry about me! I'll be fine!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0168" xml:space="preserve">
+    <value>It's a challenge, but I can continue.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0170" xml:space="preserve">
+    <value>It's tougher, sure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0171" xml:space="preserve">
+    <value>Is my health down a bit?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0172" xml:space="preserve">
+    <value>This is wearing me down, but I'm doing OK!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0173" xml:space="preserve">
+    <value>It's OK. We can ride this out!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0175" xml:space="preserve">
+    <value>IT'S MERELY A SCRATCH. NOTHING WORTH CONCERN!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0176" xml:space="preserve">
+    <value>I HAVE ONLY SLIGHT DAMAGE. IT IS NOTHING.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0177" xml:space="preserve">
+    <value>THIS LEVEL OF DAMAGE? NOT WORTH YOUR ATTENTION!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0178" xml:space="preserve">
+    <value>YOUR WORRY IS NEEDLESS. ABOVE ALL ELSE, WE MUST PUSH ON.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0180" xml:space="preserve">
+    <value>THE WOUND IS SHALLOW. YOUR CONCERN IS UNWARRANTED.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0181" xml:space="preserve">
+    <value>IT IS NO MORE THAN A SCRATCH. LET US CONTINUE.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0182" xml:space="preserve">
+    <value>I SEEM TO HAVE TAKEN DAMAGE. IT'S OF NO CONCERN.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0183" xml:space="preserve">
+    <value>THIS DAMAGE? TRIVIAL. I AM INVINCIBLE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0185" xml:space="preserve">
+    <value>PROGRESS... COMPROMISED...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0186" xml:space="preserve">
+    <value>I AM FINE... WORRY...NOT...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0187" xml:space="preserve">
+    <value>I AM...PAINED... I AM...PAINED...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0188" xml:space="preserve">
+    <value>SUSTAINED...SOME DAMAGE... SUSTAINED...SOME DAMAGE...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0190" xml:space="preserve">
+    <value>It appears that I have sustained some damage...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0191" xml:space="preserve">
+    <value>You didn't seriously imagine that I would be impeded by this?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0192" xml:space="preserve">
+    <value>My wound is merely superficial. There is no need to fear.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0193" xml:space="preserve">
+    <value>I will be fine as long as my damage stays this minimal.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0195" xml:space="preserve">
+    <value>It's now a tad unfriendly here!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0196" xml:space="preserve">
+    <value>Oh no! Oh no! My health has declined!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0197" xml:space="preserve">
+    <value>Oh no! Oh no! I've suffered damage!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0198" xml:space="preserve">
+    <value>Our journey might be spoiled. \u266A But I remain game! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0200" xml:space="preserve">
+    <value>It's gotten even tougher now.</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0000" xml:space="preserve">
+    <value>I'm going down for the count...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0001" xml:space="preserve">
+    <value>Please help me, [player]... I'm about to keel over...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0002" xml:space="preserve">
+    <value>Ugh... I don't want to faint in a place like this...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0005" xml:space="preserve">
+    <value>Ugh... I'm in considerable pain...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0006" xml:space="preserve">
+    <value>Help me, please, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0007" xml:space="preserve">
+    <value>I'm feeling faint...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0010" xml:space="preserve">
+    <value>I can't take any more... I want to go home...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0011" xml:space="preserve">
+    <value>Please... Please, don't leave me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0012" xml:space="preserve">
+    <value>H-h-help...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0015" xml:space="preserve">
+    <value>I might not make it... It'll be all up to you then, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0016" xml:space="preserve">
+    <value>Urk... Help me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0017" xml:space="preserve">
+    <value>Oh, blast... This might be it...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0020" xml:space="preserve">
+    <value>It's gone from bad to worse...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0021" xml:space="preserve">
+    <value>Ugh, no... Not a place like this...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0022" xml:space="preserve">
+    <value>Ugh... Is this to be my...final adventure?</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0025" xml:space="preserve">
+    <value>Never! I won't allow myself to be felled! Not in a place like this!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0026" xml:space="preserve">
+    <value>N-n-no... N-n-never... I won't give up...until my last breath...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0027" xml:space="preserve">
+    <value>Not...yet... No...NOT now... NO!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0030" xml:space="preserve">
+    <value>Major...stress... Major...stress...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0031" xml:space="preserve">
+    <value>Help... Help... Please... Help, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0032" xml:space="preserve">
+    <value>Keeping up... All I can do... keeping up...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0035" xml:space="preserve">
+    <value>Gah! My vision is blurry!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0036" xml:space="preserve">
+    <value>Gah! This shouldn't be happening! Not to me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0037" xml:space="preserve">
+    <value>Ugh... Gah... Go on... Go on without me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0040" xml:space="preserve">
+    <value>Ow-wow-ow! Why's all this pain coming my way?</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0041" xml:space="preserve">
+    <value>Urk... Ack... I'm badly hurt...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0042" xml:space="preserve">
+    <value>Ack... Erk... You gotta heal me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0045" xml:space="preserve">
+    <value>Oooh... [player]... I just can't go on...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0046" xml:space="preserve">
+    <value>If something happens to me... You have to carry on...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0047" xml:space="preserve">
+    <value>Help, [player]... Feel faint...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0050" xml:space="preserve">
+    <value>Ack! Ack! No way! I'm going out in a blaze of glory!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0051" xml:space="preserve">
+    <value>Never! Never! I won't give up until the bitter end!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0052" xml:space="preserve">
+    <value>Ha-ha! Ack! Come on! I'll take it all on!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0055" xml:space="preserve">
+    <value>Uh-uh-yup...I'm...almost done...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0056" xml:space="preserve">
+    <value>Uh-uh-yup...not doing well... Heal me, will you...?</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0057" xml:space="preserve">
+    <value>Just...just wish I could make it back home...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0060" xml:space="preserve">
+    <value>Gotta have guts... Ugh...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0061" xml:space="preserve">
+    <value>You go, [player]... Forget about me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0062" xml:space="preserve">
+    <value>Keep...fighting...until the END...!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0065" xml:space="preserve">
+    <value>I'm pretty run down...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0066" xml:space="preserve">
+    <value>Now if things get much worse, [player], you just go on without me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0067" xml:space="preserve">
+    <value>Gasp... Gasp... I'm not...giving up until the end...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0070" xml:space="preserve">
+    <value>Yeah...yeah...I'm beat up bad...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0071" xml:space="preserve">
+    <value>This lousy place...won't be the last place I ever see...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0072" xml:space="preserve">
+    <value>Ha! No! You're not seriously worried about...me...? What a buddy...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0075" xml:space="preserve">
+    <value>Ooooh... Don't let me slow you...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0076" xml:space="preserve">
+    <value>I'm...just fine...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0077" xml:space="preserve">
+    <value>Oh, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0080" xml:space="preserve">
+    <value>Bah...it's too much...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0081" xml:space="preserve">
+    <value>Heal me. You need to heal me. Please, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0082" xml:space="preserve">
+    <value>Keeping... Keeping... Just keeping up is all...I can manage...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0135" xml:space="preserve">
+    <value>Can't...can't...I can't...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0136" xml:space="preserve">
+    <value>Oh, it h-h-hurts...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0137" xml:space="preserve">
+    <value>Awful...awful...awful!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0138" xml:space="preserve">
+    <value>F-f-fainting...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0139" xml:space="preserve">
+    <value>No...more...no...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0145" xml:space="preserve">
+    <value>Terribly bad... Just terrible...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0146" xml:space="preserve">
+    <value>My spirit is nearly broken... Please restore me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0147" xml:space="preserve">
+    <value>I can b-b-barely stay upright...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0148" xml:space="preserve">
+    <value>I just...won't be able to continue for much...longer...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0149" xml:space="preserve">
+    <value>This is...certainly...the end for me... Do help!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0160" xml:space="preserve">
+    <value>Ha... Ha... It h-h-hurts...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0161" xml:space="preserve">
+    <value>I've been taken down...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0162" xml:space="preserve">
+    <value>It's too hard to go on... Help...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0163" xml:space="preserve">
+    <value>Be so kind as...to heal me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0165" xml:space="preserve">
+    <value>N-n-no... My health...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0166" xml:space="preserve">
+    <value>Took...too...much damage...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0167" xml:space="preserve">
+    <value>I'll drop out if I'm not healed... Someone...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0168" xml:space="preserve">
+    <value>I... I'm going to fall... Hurts...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0170" xml:space="preserve">
+    <value>N-n-no! My health...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0171" xml:space="preserve">
+    <value>I'm fainting... Someone...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0172" xml:space="preserve">
+    <value>I took too much damage... Hurry, I need to heal...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0173" xml:space="preserve">
+    <value>N-n-no more... I'm going down...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0175" xml:space="preserve">
+    <value>NOT GOOD AT ALL...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0176" xml:space="preserve">
+    <value>I WILL NOT...FAIL HERE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0177" xml:space="preserve">
+    <value>I WILL N-N-NOT FALL TO THIS!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0178" xml:space="preserve">
+    <value>GRIEVOUS DAMAGE! BUT I REFUSE TO FALL!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0180" xml:space="preserve">
+    <value>HOW DID I SUSTAIN SO MUCH DAMAGE?!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0181" xml:space="preserve">
+    <value>IT PAINS ME...BUT I CAN TAKE MORE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0182" xml:space="preserve">
+    <value>FALL TO...THIS LEVEL OF DAMAGE? NO!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0183" xml:space="preserve">
+    <value>I HAVE SUFFERED... MASSIVE DAMAGE... BUT I WILL NEVER FALL!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0185" xml:space="preserve">
+    <value>N-N-NO... BARELY... BARELY... CAN STAND...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0186" xml:space="preserve">
+    <value>I PLEAD... HEAL ME... I PLEAD...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0187" xml:space="preserve">
+    <value>A SAVAGE PATH... A SAVAGE PATH...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0188" xml:space="preserve">
+    <value>IS THIS HOW... IS THIS HOW... I FALL...?</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0190" xml:space="preserve">
+    <value>Gah! I've suffered more damage than I bargained for...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0191" xml:space="preserve">
+    <value>I suffer...but there must be something that can be done...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0192" xml:space="preserve">
+    <value>My health flickers and wanes... If left unhealed...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0193" xml:space="preserve">
+    <value>My damage is not slight... Have I underestimated the challenge...?</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0195" xml:space="preserve">
+    <value>Things are looking grim...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0196" xml:space="preserve">
+    <value>I feel awfully faint... Please help me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0197" xml:space="preserve">
+    <value>I'm at my limit...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0198" xml:space="preserve">
+    <value>I am all but collapsing on my feet... Someone heal me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0200" xml:space="preserve">
+    <value>I might be unable to go on...</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_0000" xml:space="preserve">
+    <value>Always delighted to be of service! ~\u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_0001" xml:space="preserve">
+    <value>Look, look! They're all shiny!</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_0002" xml:space="preserve">
+    <value>OUR WARES ARE GUARANTEED PREMIUM QUALITY.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_END_0000" xml:space="preserve">
+    <value>Thank you! Please come again! ~\u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_END_0001" xml:space="preserve">
+    <value>Thank you for coming!</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_END_0002" xml:space="preserve">
+    <value>HAVE A NICE DAY.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_0000" xml:space="preserve">
+    <value>That merchandise is {0}. Want to buy it?</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_0001" xml:space="preserve">
+    <value>One...[pause=10] two...[pause=10] three...[pause=10] That will be {0}!</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_0002" xml:space="preserve">
+    <value>YOUR TOTAL BILL IS {0}.\nCONFIRM YOUR PURCHASE.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_DONE_0000" xml:space="preserve">
+    <value>Thank you! So very much! ~\u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_DONE_0001" xml:space="preserve">
+    <value>Come back soon!</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_DONE_0002" xml:space="preserve">
+    <value>TRANSACTION COMPLETE. ALL SALES FINAL.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_REFUSE_0000" xml:space="preserve">
+    <value>Very disappointing.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_REFUSE_0001" xml:space="preserve">
+    <value>Awwww, not buying?</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_REFUSE_0002" xml:space="preserve">
+    <value>TRANSACTION CANCELLED.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_SHORT_0000" xml:space="preserve">
+    <value>You don't seem to have enough money.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_SHORT_0001" xml:space="preserve">
+    <value>Huh? That's not enough...</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_PAY_SHORT_0002" xml:space="preserve">
+    <value>ERROR. INSUFFICIENT FUNDS.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_SELL_0000" xml:space="preserve">
+    <value>For that, I shall pay {0}! Want to sell it?</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_SELL_0001" xml:space="preserve">
+    <value>I can buy your stuff for,[pause=10] um,[pause=10] {0}![pause=30] Is that okay?</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_SELL_0002" xml:space="preserve">
+    <value>YOU SHALL BE PAID {0} FOR THE SUPPLIES.\nCONFIRM?</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_SELL_DONE_0000" xml:space="preserve">
+    <value>Thank you! I value your patronage! ~\u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_SELL_DONE_0001" xml:space="preserve">
+    <value>Yaay! Thank you!</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_SELL_DONE_0002" xml:space="preserve">
+    <value>EXCHANGE COMPLETE.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_START_0000" xml:space="preserve">
+    <value>Welcome! Welcome! ~\u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_START_0001" xml:space="preserve">
+    <value>Welcome to my very own shop!</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_START_0002" xml:space="preserve">
+    <value>GREETINGS, VALUED CUSTOMER.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_SUSPECT_0000" xml:space="preserve">
+    <value>What sort of fool do you take me for?[pause=0]\nEveryone in the dungeon knows what you did.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_SUSPECT_0001" xml:space="preserve">
+    <value>Hey wait![pause=10] I heard about you![pause=0]\nYou stole from my friends!</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_SUSPECT_0002" xml:space="preserve">
+    <value>PROCESS HALTED.[pause=0]\nSEARCHING DATABASE...[br].[pause=4].[pause=4].[pause=4].[pause=4]CRIMINAL RECORD MATCHED.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_THIEF_0000" xml:space="preserve">
+    <value>My precious merchandise! Catch that thief!</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_THIEF_0001" xml:space="preserve">
+    <value>Waaah! That meanie stole my shinies!</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_THIEF_0002" xml:space="preserve">
+    <value>THEFT WILL NOT BE TOLERATED.</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_THIEF_RETURN_0000" xml:space="preserve">
+    <value>Catch that thief!</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_THIEF_RETURN_0001" xml:space="preserve">
+    <value>Help! The stealer is back!</value>
+    <comment></comment>  </data>
+  <data name="TALK_SHOP_THIEF_RETURN_0002" xml:space="preserve">
+    <value>THEFT WILL NOT BE TOLERATED.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0000" xml:space="preserve">
+    <value>Another exciting adventure! Where are we going?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0001" xml:space="preserve">
+    <value>Let's get going! Let's explore!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0002" xml:space="preserve">
+    <value>OK! Let's go find treasure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0003" xml:space="preserve">
+    <value>What will we find this time?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0005" xml:space="preserve">
+    <value>Let's keep our spirits up on this one!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0006" xml:space="preserve">
+    <value>I'm ready to head out anytime.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0007" xml:space="preserve">
+    <value>I'm ready to head out on another adventure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0010" xml:space="preserve">
+    <value>I'm a bit nervous about this trip!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0011" xml:space="preserve">
+    <value>So where are we going next?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0012" xml:space="preserve">
+    <value>I'll do the best I can!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0015" xml:space="preserve">
+    <value>So where to next?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0016" xml:space="preserve">
+    <value>How long before we leave, do you think?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0017" xml:space="preserve">
+    <value>Oh, finally prepared to leave?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0020" xml:space="preserve">
+    <value>Oho... So warm here. So nice!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0021" xml:space="preserve">
+    <value>Oho... No need to hurry... I'm quite content to wait.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0022" xml:space="preserve">
+    <value>Oho... I wonder...what if we found a treasure...?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0025" xml:space="preserve">
+    <value>Ready, steady, go!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0026" xml:space="preserve">
+    <value>Happy to help out, [hero]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0030" xml:space="preserve">
+    <value>Exploration... Exploration...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0031" xml:space="preserve">
+    <value>Treasure... Find treasure...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0032" xml:space="preserve">
+    <value>Excited... Excited...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0035" xml:space="preserve">
+    <value>Ready for anything!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0036" xml:space="preserve">
+    <value>Time to go! Let's go already!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0037" xml:space="preserve">
+    <value>We gotta go soon, OK? Or I'm gonna get going!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0040" xml:space="preserve">
+    <value>Time to go yet?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0041" xml:space="preserve">
+    <value>Can we go already?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0042" xml:space="preserve">
+    <value>I'm getting tired of waiting!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0045" xml:space="preserve">
+    <value>What do you say? Where next?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0046" xml:space="preserve">
+    <value>Let's go find nice treasures!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0047" xml:space="preserve">
+    <value>I'm a little tired of waiting.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0050" xml:space="preserve">
+    <value>This'll be a good test for me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0051" xml:space="preserve">
+    <value>Come on! Move it! Go get ready!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0052" xml:space="preserve">
+    <value>Come on! Get a move on already!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0055" xml:space="preserve">
+    <value>Uh-yup! Let's go exploring!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0056" xml:space="preserve">
+    <value>Uh-yup! Ready when you are!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0057" xml:space="preserve">
+    <value>Zzzz... Zzzz...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0058" xml:space="preserve">
+    <value>Did ya stock up on food?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0060" xml:space="preserve">
+    <value>An adventure! I want a BIG adventure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0061" xml:space="preserve">
+    <value>Let's go! It's REALLY time to go!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0062" xml:space="preserve">
+    <value>I'm powered up to GO!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0063" xml:space="preserve">
+    <value>Let's show some GUTS on this big adventure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0065" xml:space="preserve">
+    <value>OK, now! Chin up! Let's discover some treasure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0066" xml:space="preserve">
+    <value>Don't you find this so exciting?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0067" xml:space="preserve">
+    <value>Come now! Why dillydally?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0070" xml:space="preserve">
+    <value>Exploration? Leave it to me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0071" xml:space="preserve">
+    <value>Yeah, this is going to be a great trip, all right!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0072" xml:space="preserve">
+    <value>Ready to go whenever you are!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0075" xml:space="preserve">
+    <value>Sure you haven't forgotten anything?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0076" xml:space="preserve">
+    <value>All set for exploration, [hero]?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0077" xml:space="preserve">
+    <value>I'm really looking forward to exploring with you.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0080" xml:space="preserve">
+    <value>I can see it now... A mountain of treasure...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0081" xml:space="preserve">
+    <value>Yes, yes... A mountain of treasure... Sound good to you?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0082" xml:space="preserve">
+    <value>The waiting...the suspense... It's what I live for!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0135" xml:space="preserve">
+    <value>La-la-la! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0136" xml:space="preserve">
+    <value>Fun! \u266A Love to explore! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0137" xml:space="preserve">
+    <value>Soon! \u266A Let's go soon! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0138" xml:space="preserve">
+    <value>Yes, yes! \u266A I'll do my best! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0139" xml:space="preserve">
+    <value>Where, oh, where? \u266A I can't wait to find out where! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0145" xml:space="preserve">
+    <value>I await our trip with delight!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0146" xml:space="preserve">
+    <value>It would be dazzling to discover something new, would it not?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0147" xml:space="preserve">
+    <value>I've been ready for quite some time... Shall we depart?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0148" xml:space="preserve">
+    <value>Let us make this exploration a successful one!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0149" xml:space="preserve">
+    <value>I can depart at your earliest convenience.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0150" xml:space="preserve">
+    <value>I'm ready to go!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0151" xml:space="preserve">
+    <value>How will this turn out? I just can't wait!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0152" xml:space="preserve">
+    <value>Will we be leaving soon?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0153" xml:space="preserve">
+    <value>No need to rush! Just get ready, then we'll go.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0155" xml:space="preserve">
+    <value>Good to go whenever you are!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0156" xml:space="preserve">
+    <value>Let's go soon!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0157" xml:space="preserve">
+    <value>Are we leaving yet? I'm getting tired of waiting...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0158" xml:space="preserve">
+    <value>I can't wait to start exploring!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0160" xml:space="preserve">
+    <value>I'm ready to go!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0161" xml:space="preserve">
+    <value>How this will turn out? I'm so excited!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0162" xml:space="preserve">
+    <value>Let's head out as soon as we're all ready to go!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0163" xml:space="preserve">
+    <value>Will we be leaving soon?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0165" xml:space="preserve">
+    <value>I'M READY! IS IT TIME TO GO?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0166" xml:space="preserve">
+    <value>WE CAN GO AT ANY TIME.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0167" xml:space="preserve">
+    <value>HURRY NOW! THE TIME IS NOW!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0168" xml:space="preserve">
+    <value>ARE YOU SUGGESTING THAT I MUST WAIT?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0170" xml:space="preserve">
+    <value>YOU EXPECT ME TO WAIT?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0171" xml:space="preserve">
+    <value>I'M PREPARED FOR BATTLE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0172" xml:space="preserve">
+    <value>HOW LONG AM I TO WAIT?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0173" xml:space="preserve">
+    <value>LET US BE OFF! MAKE HASTE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0175" xml:space="preserve">
+    <value>SET...TO...GO...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0176" xml:space="preserve">
+    <value>ANY...TIME... ANY...TIME...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0177" xml:space="preserve">
+    <value>WHY... WHY... WHY... WAIT?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0178" xml:space="preserve">
+    <value>FOLLOW... YOU... ANYWHERE...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0180" xml:space="preserve">
+    <value>I am at the ready.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0181" xml:space="preserve">
+    <value>Wherever you go, I shall follow. Let me emphasize it: wherever!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0182" xml:space="preserve">
+    <value>The darkness sleeps inside me... I can still feel it at times...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0183" xml:space="preserve">
+    <value>Are you prepared to leave? Then let us be off.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0185" xml:space="preserve">
+    <value>I'm going exploring! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0186" xml:space="preserve">
+    <value>Are we departing? \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0187" xml:space="preserve">
+    <value>I'm waiting! I'm waiting! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0188" xml:space="preserve">
+    <value>Totally ready! Completely! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0190" xml:space="preserve">
+    <value>Good to see you!</value>
+    <comment></comment>  </data>
+</root>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<StartChars>
+  <StartChar>
+    <Species>1</Species>
+    <Form>0</Form>
+    <Skin>0</Skin>
+    <Gender>Unknown</Gender>
+	<Name/>
+  </StartChar>
+  <StartChar>
+    <Species>4</Species>
+    <Form>0</Form>
+    <Skin>0</Skin>
+    <Gender>Unknown</Gender>
+	<Name/>
+  </StartChar>
+  <StartChar>
+    <Species>7</Species>
+    <Form>0</Form>
+    <Skin>0</Skin>
+    <Gender>Unknown</Gender>
+	<Name/>
+  </StartChar>
+  <StartChar>
+    <Species>25</Species>
+    <Form>0</Form>
+    <Skin>0</Skin>
+    <Gender>Unknown</Gender>
+	<Name/>
+  </StartChar>
+</StartChars>
+<StartTeams>
+  <StartTeam>Team Go-Getters</StartTeam>
+  <StartTeam>Team Poképals</StartTeam>
+  <StartTeam>Team Jungle</StartTeam>
+  <StartTeam>Team Fossil</StartTeam>
+  <StartTeam>Team Rocket</StartTeam>
+  <StartTeam>Team Gym Heroes</StartTeam>
+  <StartTeam>Team Gym Challenge</StartTeam>
+  <StartTeam>Neo Genesis</StartTeam>
+  <StartTeam>Neo Discovery</StartTeam>
+  <StartTeam>Neo Revelation</StartTeam>
+  <StartTeam>Awakening Legends</StartTeam>
+  <StartTeam>Neo Destiny</StartTeam>
+  <StartTeam>Team Legendary</StartTeam>
+  <StartTeam>Team VS</StartTeam>
+  <StartTeam>Team Expedition</StartTeam>
+  <StartTeam>Team Aquapolis</StartTeam>
+  <StartTeam>Team Skyridge</StartTeam>
+  <StartTeam>The Split Earth</StartTeam>
+  <StartTeam>Mysterious Mountains</StartTeam>
+  <StartTeam>Team EX</StartTeam>
+  <StartTeam>Team Ruby</StartTeam>
+  <StartTeam>Team Sapphire</StartTeam>
+  <StartTeam>Team Sandstorm</StartTeam>
+  <StartTeam>The Desert Miracle</StartTeam>
+  <StartTeam>Team Dragon</StartTeam>
+  <StartTeam>Team Heaven Rulers</StartTeam>
+  <StartTeam>Team Magma</StartTeam>
+  <StartTeam>Team Aqua</StartTeam>
+  <StartTeam>The Hidden Legends</StartTeam>
+  <StartTeam>The Undone Seal</StartTeam>
+  <StartTeam>The FireRed</StartTeam>
+  <StartTeam>The LeafGreen</StartTeam>
+  <StartTeam>Flight of Legends</StartTeam>
+  <StartTeam>Team Clash</StartTeam>
+  <StartTeam>Blue Sky</StartTeam>
+  <StartTeam>Team Emerald</StartTeam>
+  <StartTeam>Unseen Forces</StartTeam>
+  <StartTeam>Golden Sky</StartTeam>
+  <StartTeam>Silver Ocean</StartTeam>
+  <StartTeam>Team Delta</StartTeam>
+  <StartTeam>Team Legend Makers</StartTeam>
+  <StartTeam>Mirage Forest</StartTeam>
+  <StartTeam>The Holon Phantoms</StartTeam>
+  <StartTeam>The Crystal Guardians</StartTeam>
+  <StartTeam>The Miracle Crystal</StartTeam>
+  <StartTeam>The Dragon Frontier</StartTeam>
+  <StartTeam>The Power Keepers</StartTeam>
+  <StartTeam>The World Champions</StartTeam>
+  <StartTeam>Team Diamond</StartTeam>
+  <StartTeam>Team Pearl</StartTeam>
+  <StartTeam>Team Space-Time</StartTeam>
+  <StartTeam>Team Creation</StartTeam>
+  <StartTeam>Mysterious Treasures</StartTeam>
+  <StartTeam>The Secret Wonders</StartTeam>
+  <StartTeam>Shining Darkness</StartTeam>
+  <StartTeam>The Great Encounters</StartTeam>
+  <StartTeam>Moonlit Pursuit</StartTeam>
+  <StartTeam>Majestic Dawn</StartTeam>
+  <StartTeam>Dawn Dash</StartTeam>
+  <StartTeam>The Legends Awakened</StartTeam>
+  <StartTeam>Team Stormfront</StartTeam>
+  <StartTeam>Destroyed Sky</StartTeam>
+  <StartTeam>Team Platinum</StartTeam>
+  <StartTeam>Galactic Conquest</StartTeam>
+  <StartTeam>Rising Rivals</StartTeam>
+  <StartTeam>Time's End</StartTeam>
+  <StartTeam>The Supreme Victors</StartTeam>
+  <StartTeam>Team Frontier</StartTeam>
+  <StartTeam>Team HeartGold</StartTeam>
+  <StartTeam>Team SoulSilver</StartTeam>
+  <StartTeam>Team Unleashed</StartTeam>
+  <StartTeam>Team Undaunted</StartTeam>
+  <StartTeam>Team Reviving Legends</StartTeam>
+  <StartTeam>Team Triumphant</StartTeam>
+  <StartTeam>The Call of Legends</StartTeam>
+  <StartTeam>Team Black</StartTeam>
+  <StartTeam>Team White</StartTeam>
+  <StartTeam>The Emerging Powers</StartTeam>
+  <StartTeam>The Noble Victory</StartTeam>
+  <StartTeam>Team Red</StartTeam>
+  <StartTeam>Team Blue</StartTeam>
+  <StartTeam>Team Gold</StartTeam>
+  <StartTeam>Team Silver</StartTeam>
+  <StartTeam>Team Crystal</StartTeam>
+  <StartTeam>Next Destinies</StartTeam>
+  <StartTeam>Psycho Drive</StartTeam>
+  <StartTeam>Hail Blizzard</StartTeam>
+  <StartTeam>Explorers of Time</StartTeam>
+  <StartTeam>Explorers of Darkness</StartTeam>
+  <StartTeam>Explorers of Sky</StartTeam>
+  <StartTeam>Team Magnagate</StartTeam>
+  <StartTeam>Team Infinity</StartTeam>
+  <StartTeam>The Storm Squad</StartTeam>
+  <StartTeam>The Light Squad</StartTeam>
+  <StartTeam>The Blaze Squad</StartTeam>
+  <StartTeam>Red Rescue Team</StartTeam>
+  <StartTeam>Blue Rescue Team</StartTeam>
+  <StartTeam>The Dark Rush</StartTeam>
+  <StartTeam>Dragons Exalted</StartTeam>
+  <StartTeam>Dragon Blast</StartTeam>
+  <StartTeam>Dragon Blade</StartTeam>
+  <StartTeam>Boundaries Crossed</StartTeam>
+  <StartTeam>Freeze Bolt</StartTeam>
+  <StartTeam>Cold Flare</StartTeam>
+  <StartTeam>Plasma Storm</StartTeam>
+  <StartTeam>Plasma Gale</StartTeam>
+  <StartTeam>Plasma Freeze</StartTeam>
+  <StartTeam>Spiral Force</StartTeam>
+  <StartTeam>Thunder Knuckle</StartTeam>
+  <StartTeam>Plasma Blast</StartTeam>
+  <StartTeam>Megalo Cannon</StartTeam>
+  <StartTeam>Legendary Treasures</StartTeam>
+  <StartTeam>Battle Boost</StartTeam>
+  <StartTeam>Team X</StartTeam>
+  <StartTeam>Team Y</StartTeam>
+  <StartTeam>Team Z</StartTeam>
+  <StartTeam>Team XY</StartTeam>
+  <StartTeam>Team XYZ</StartTeam>
+  <StartTeam>Team Flashfire</StartTeam>
+  <StartTeam>Wild Blaze</StartTeam>
+  <StartTeam>Furious Fists</StartTeam>
+  <StartTeam>Rising Fist</StartTeam>
+  <StartTeam>Phantom Forces</StartTeam>
+  <StartTeam>Phantom Gate</StartTeam>
+  <StartTeam>Primal Clash</StartTeam>
+  <StartTeam>Gaia Volcano</StartTeam>
+  <StartTeam>Tidal Storm</StartTeam>
+  <StartTeam>Roaring Skies</StartTeam>
+  <StartTeam>Emerald Break</StartTeam>
+  <StartTeam>Ancient Origins</StartTeam>
+  <StartTeam>Bandit Ring</StartTeam>
+  <StartTeam>BREAKthrough</StartTeam>
+  <StartTeam>Blue Shock</StartTeam>
+  <StartTeam>Red Flash</StartTeam>
+  <StartTeam>BREAKpoint</StartTeam>
+  <StartTeam>Broken Heaven</StartTeam>
+  <StartTeam>Generations</StartTeam>
+  <StartTeam>Fates Collide</StartTeam>
+  <StartTeam>The Psychic Kingdom</StartTeam>
+  <StartTeam>Steam Siege</StartTeam>
+  <StartTeam>Fever-Burst</StartTeam>
+  <StartTeam>Team Epic</StartTeam>
+  <StartTeam>Team Outlaw</StartTeam>
+  <StartTeam>Team Traitor</StartTeam>
+</StartTeams>
+<StartLevel>5</StartLevel>
+<MaxLevel>100</MaxLevel>
+<StartPersonality>5</StartPersonality>
+<StartMap>
+  <Zone>1</Zone>
+  <Segment>-1</Segment>
+  <ID>1</ID>
+  <Entry>0</Entry>
+</StartMap>
+</root>

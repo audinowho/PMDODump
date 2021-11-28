@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Connect_Goodbye" xml:space="preserve">
+    <value>Komm jederzeit wieder!</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Ask" xml:space="preserve">
+    <value>Also, was willst du wissen?</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_File_Rescue_001" xml:space="preserve">
+    <value>Selbst wenn du dich nicht mit deinem Partner verbinden kannst, kannst du mithilfe des Rettungsbriefs die Rettung durchführen.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_File_Rescue_002" xml:space="preserve">
+    <value>When jemand in einem Dungeon besiegt wird, erscheint ein SOS-Brief in RESCUE/OUTBOX/SOS.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_File_Rescue_003" xml:space="preserve">
+    <value>Lass Sie ihn dir zuschicken und platziere ihn in RESCUE/INBOX/SOS.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_File_Rescue_004" xml:space="preserve">
+    <value>Anschliessend kannst du die Rettung wie gewohnt durchführen.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_File_Rescue_005" xml:space="preserve">
+    <value>Nachdem du die Mission beendet hast erscheint ein AOK-Brief in RESCUE/OUTBOX/AOK.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_File_Rescue_006" xml:space="preserve">
+    <value>Sende ihn an deinen Partner zurück und lass Sie ihn in RESCUE/OUTBOX/AOK platzieren.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_File_Rescue_007" xml:space="preserve">
+    <value>Anschliessend können Sie Ihr Abenteuer fortsetzen.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_File_Rescue_008" xml:space="preserve">
+    <value>Du solltest aber im Kopf behalten, dass du über diese Methode keine Belohnungen erhältst.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Friends_001" xml:space="preserve">
+    <value>Um dich mit Freunden zu verbinden, verbinde dich zuerst mit einem Server um zu kommunizieren. </value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Friends_002" xml:space="preserve">
+    <value>Dann tausch deine Team IDs mit deinem Freund um Sie zu deinen Kontakten hinzuzufügen.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Friends_003" xml:space="preserve">
+    <value>Nach dem hinzufügen kannst du eine Rettung oder einen Tausch vereinbaren. </value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Friends_004" xml:space="preserve">
+    <value>Stellt aber sicher das ihr euch beide mit dem gleichen Server verbindet.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_P2P_001" xml:space="preserve">
+    <value>Normalerweise erfordert die kommunikation mit Freunden, dass beide Spieler sich mit dem selben Server verbinden.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_P2P_002" xml:space="preserve">
+    <value>Wenn du keinen Server finden kannst der Online ist, kannst du dich nicht mit deinen Freunden verbinden.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_P2P_003" xml:space="preserve">
+    <value>Aber mit einer Peer-to-Peer-Verbindung brauchst du keinen Server!</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_P2P_004" xml:space="preserve">
+    <value>Zuerst müsst Ihr eure IP-Adressen austauschen. Gib deine IP-Adresse nur an persone weiter denen du vertraust!</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_P2P_005" xml:space="preserve">
+    <value>Dann konfiguriere deine Server-Einstellungen mit der IP-Adresse deines Freunds.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_P2P_006" xml:space="preserve">
+    <value>Du und dein Partner müsst ausserdem den selben Ausgang wählen. Wird dieses Feld leergelassen wird automatisch 1705 ausgewählt.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_P2P_008" xml:space="preserve">
+    <value>Sobald alles eingerichtet ist kannst du dich wie gewohnt mit deinem Partner verbinden.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_P2P_009" xml:space="preserve">
+    <value>Stelle sicher deine Servereinstellungen auf normal zurückzusetzen nachdem du fertig bist.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Rescue_001" xml:space="preserve">
+    <value>Freundesrettungen sind Retungsmissionen zwischen Freunden über das Internet.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Rescue_002" xml:space="preserve">
+    <value>Wenn dein Freund in einem Dungeon besiegt wird kannst du den Helden spielen und zu Ihrer rettung eilen!</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Rescue_003" xml:space="preserve">
+    <value>Verbinde dich mit einem Freund der im Dungeon KO geschlagen wurde und du erhälst einen SOS-Brief.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Rescue_004" xml:space="preserve">
+    <value>Wenn du den Brief erhältst, kannst du die Rettungsmission am Schalter zu deiner Rechten starten.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Rescue_005" xml:space="preserve">
+    <value>Wenn du die Mission abschliesst, verbinde dich erneut mit deinem Freund um Ihm den A-OK Brief zu senden.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Rescue_006" xml:space="preserve">
+    <value>Sobald Sie diesen Brief erhalten, können SIe von dort weitermachen wo Sie im Dungeon besiegt worden sind. </value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Rescue_007" xml:space="preserve">
+    <value>Denk aber dran, du kannst Freunde nur aus Dungeons Retten, zu denen du zugang hast.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Server_Host_001" xml:space="preserve">
+    <value>Dein Spiel sollte bereits eine Kopie des PMDOServers beinhalten.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Server_Host_002" xml:space="preserve">
+    <value>Starte das Programm um einen Server zu hosten. [br]Dieser bleibt online bis du das Programm beendest.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Server_Host_003" xml:space="preserve">
+    <value>Stelle sicher das die Anschlussweiterleitung eingestellt ist,[br] damit andere spieler sich ordentlich verbinden können.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Trade_Item_001" xml:space="preserve">
+    <value>Du kannst Pokemonspezifische Items über das Internet mit deinem Freund teilen.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Trade_Item_002" xml:space="preserve">
+    <value>Items werden aus dem Lager getauscht, es können bis zu 8 auf einmal gesandt werden.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Trade_Mail_001" xml:space="preserve">
+    <value>You kannst jede Mission die du derzeit verfolgst mit deinem Freund über das Internet tauschen.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Trade_Mail_002" xml:space="preserve">
+    <value>Beachte aber, dass du, wenn du die Mission weitergibst, den Kontakt zum Pokemon das die Mission gestellt hat verlierst.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Trade_Team_001" xml:space="preserve">
+    <value>Du kannst Team Mitglieder mit deinem Freund über das Internet tauschen.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Trade_Team_002" xml:space="preserve">
+    <value>Sende sie zum Team deines Freundes und Sie senden dir eins Ihrer Teammitglieder im tausch.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Trade_Team_003" xml:space="preserve">
+    <value>Die getauschten Pokemon werden behandelt wie jedes andere Pokémon das sich deinem Team angeschlossen hat.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Info_Trade_Team_004" xml:space="preserve">
+    <value>Denk einfach nur daran, dass Pokemon die im Team wichtig sind nicht übersandt werden können.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Intro" xml:space="preserve">
+    <value>Halli Hallo, dies ist der Verbindungsschalter.[pause=0] Wie kann ich Ihnen helfen?</value>
+    <comment></comment>  </data>
+  <data name="Connect_Intro_Return" xml:space="preserve">
+    <value>Kann ich sonst noch helfen?</value>
+    <comment></comment>  </data>
+  <data name="Connect_No_Server" xml:space="preserve">
+    <value>Du hast noch keinen Server eingerichtet![pause=0] Konfiguriere bitte zuerst deiner Servereinstellungen.</value>
+    <comment></comment>  </data>
+  <data name="Connect_Option_Advanced" xml:space="preserve">
+    <value>Fortgeschrittenen Themen</value>
+    <comment></comment>  </data>
+  <data name="Connect_Option_Connect" xml:space="preserve">
+    <value>Mit einem Freund Verbinden</value>
+    <comment></comment>  </data>
+  <data name="Connect_Option_File_Rescue" xml:space="preserve">
+    <value>Rettung Beantragen</value>
+    <comment></comment>  </data>
+  <data name="Connect_Option_Friend_Rescue" xml:space="preserve">
+    <value>Freundesrettung</value>
+    <comment></comment>  </data>
+  <data name="Connect_Option_Friends" xml:space="preserve">
+    <value>Mit Freunden verbinden</value>
+    <comment></comment>  </data>
+  <data name="Connect_Option_Host" xml:space="preserve">
+    <value>Einen Server Hosten</value>
+    <comment></comment>  </data>
+  <data name="Connect_Option_P2P" xml:space="preserve">
+    <value>Peer-To-Peer Verbinden</value>
+    <comment></comment>  </data>
+  <data name="Connect_Option_Server" xml:space="preserve">
+    <value>Server Konfigurieren</value>
+    <comment></comment>  </data>
+  <data name="Connect_Option_Teammate" xml:space="preserve">
+    <value>Teammitglieder Tauschen</value>
+    <comment></comment>  </data>
+  <data name="Connect_Option_Treasure" xml:space="preserve">
+    <value>Schätze Tauschen</value>
+    <comment></comment>  </data>
+  <data name="Records_Intro" xml:space="preserve">
+    <value>Hallo, dies ist der Rettungs-Schalter.</value>
+    <comment></comment>  </data>
+  <data name="Rescue_AOK_None" xml:space="preserve">
+    <value>Sie haben derzeit keine A-OK Briefe.</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Begin" xml:space="preserve">
+    <value>Sehr Gut! Ich bringe Sie direkt zur Rettungsstelle!</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Confirm" xml:space="preserve">
+    <value>Willst du zu einer Rettung in {0} aufbrechen?</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Goodbye" xml:space="preserve">
+    <value>Bitte kommen Sie jederzeit wieder.</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Intro" xml:space="preserve">
+    <value>Hallo, Ich kümmere mich um die Post![pause=0] Wie kann ich dienen?</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Intro_Return" xml:space="preserve">
+    <value>Kann ich mit irgendetwas anderem behilflich sein?</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Option_AOK" xml:space="preserve">
+    <value>A-OK Brief</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Option_SOS" xml:space="preserve">
+    <value>SOS Brief</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Return_Fail_001" xml:space="preserve">
+    <value>Willkommen zurück![pause=0] Oh, Dein Rettungseinsatz ist nicht gut verlaufen...</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Return_Fail_002" xml:space="preserve">
+    <value>Aber es gibt keinen grund aufzugeben![pause=0] Du kannst es jederzeit erneut versuchen!</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Return_Miss_001" xml:space="preserve">
+    <value>Hm?[pause=0] Du hast den Dungeon verlassen ohne den Rettungsort zu erreichen?</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Return_Miss_002" xml:space="preserve">
+    <value>Ich fürchte das reicht nicht![pause=0] Du wirst es erneut versuchen müssen.</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Return_Miss_003" xml:space="preserve">
+    <value>Denk immer daran, die Mission ist nicht abgeschlossen bis das Ziel der Rettung erreicht ist.</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Return_Success_001" xml:space="preserve">
+    <value>Willkommen zurück![pause=0] Oh, Dein Rettungseinsatz... war natürlich ein grosser erfolg.</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Return_Success_002" xml:space="preserve">
+    <value>Willst du deinem Freund eine Nachricht mitgeben?</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Return_Success_003" xml:space="preserve">
+    <value>Alles klar![pause=0] Vergiss nicht den A-OK Brief an den Freund den du gerettet hast zu senden!</value>
+    <comment></comment>  </data>
+  <data name="Rescue_Return_Success_004" xml:space="preserve">
+    <value>I hoffe du rettest auch weiterhin Freunde in not!</value>
+    <comment></comment>  </data>
+  <data name="Rescue_SOS_None" xml:space="preserve">
+    <value>Derzeit liegen keine SOS Briefe vor.</value>
+    <comment></comment>  </data>
+</root>

@@ -1,0 +1,17 @@
+Key		EN
+base_camp-0000|data.Name		
+base_camp_2-0000|data.Name		
+canyon_camp-0000|data.Name		
+cliff_camp-0000|data.Name		
+final_stop-0000|data.Name		
+forest_camp-0000|data.Name		Forest Camp
+guild_hut-0000|data.Name		
+guild_path-0000|data.Name		
+guildmaster_summit-0000|data.Name		Guildmaster Summit
+luminous_spring-0000|data.Name		
+post_office-0000|data.Name		
+rest_stop-0000|data.Name		Rest Stop
+test_grounds-0000|data.Name		
+zone_02_end-0000|data.Name		
+zone_36_end-0000|data.Name		
+zone_37_end-0000|data.Name		

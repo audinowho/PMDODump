@@ -1,0 +1,3 @@
+Key	Comment	EN	FR	FR-CA	DE	ES	ES-LA	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU	LT
+Skin-0000|data.Name		Normal	Normal		Normal	Normal		Normal		일반			普通			Normalus
+Skin-0001|data.Name		Shiny	Chromatique		Schillernd	Variocolor		Brilhante		색이 다른			发光			Blizgantis

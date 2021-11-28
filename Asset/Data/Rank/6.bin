@@ -1,0 +1,1 @@
+﻿{"Object":{"$type":"RogueEssence.Data.RankData, RogueEssence","Name":{"DefaultText":"Diamond","LocalTexts":{"fr-ca":"Diamant","de":"Diamant","es":"Diamante","pt":"Diamante","ko":"다이아몬드"}},"Comment":"","BagSize":24,"FameToNext":6400},"Version":"0.5.2.0"}

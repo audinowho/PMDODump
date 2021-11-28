@@ -1,0 +1,1 @@
+﻿{"Object":{"$type":"RogueEssence.Data.ZoneData, RogueEssence","Name":{"DefaultText":"","LocalTexts":{}},"Released":false,"Comment":"","NoEXP":false,"Level":-1,"LevelCap":false,"TeamRestrict":false,"TeamSize":-1,"MoneyRestrict":false,"BagRestrict":-1,"BagSize":-1,"Rescues":0,"Rogue":0,"Segments":[],"GroundMaps":[]},"Version":"0.5.2.0"}

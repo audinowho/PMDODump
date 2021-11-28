@@ -1,0 +1,13 @@
+Key	Comment	EN	FR	FR-CA	DE	ES	ES-LA	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU	LT
+Rank-0000|data.Name		None	Aucun		Keine	Ninguno		Nenhum		분류없음			无			
+Rank-0001|data.Name		Normal		Ordinaire	Normal	Normal		Normal		노말						
+Rank-0002|data.Name		Bronze		Bronze	Bronze	Bronce		Bronze		브론즈						
+Rank-0003|data.Name		Silver		Argent	Silber	Plata		Prata		실버						
+Rank-0004|data.Name		Gold		Or	Gold	Oro		Ouro		골드						
+Rank-0005|data.Name		Platinum		Platin	Platin	Platino		Platina		플래티넘						
+Rank-0006|data.Name		Diamond		Diamant	Diamant	Diamante		Diamante		다이아몬드						
+Rank-0007|data.Name		Super		Formidable	Super	Alto		Super		슈퍼						
+Rank-0008|data.Name		Ultra		Supérieur	Ultra	Superior		Ultra		울트라						
+Rank-0009|data.Name		Hyper		Extraordinaire	Hyper	Avanzado		Hiper		하이퍼						
+Rank-0010|data.Name		Master		Maître	Meister	Experto		Mestre		마스터						
+Rank-0011|data.Name		Grandmaster		Grand Maître	Gildenmeister	Maestro		Grão-Mestre		그레이트 마스터

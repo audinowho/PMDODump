@@ -1,0 +1,95 @@
+EffectType	Description
+0* 000: None	
+1* 001: TypeStatBonus	When kept in the bag, it slightly boosts the {1} of {0}-type members.
+1* 006: NVECrit	When kept in the bag, it raises the critical-hit ratio of not-very-effective hits.
+1* 014: DeepBreather	When kept in the bag, it restores the PP of a move when the Pokémon reaches a new floor.
+1* 015: PracticeSwinger	When kept in the bag, the Pokémon will do increased damage if its previous move missed.
+1* 026: SureHitAttacker	When kept in the bag, the Pokémon's regular attack cannot miss.
+1* 027: SpecialAttacker	When kept in the bag, the category of the Pokémon's regular attack is changed from physical to special.
+1* 050: Anchor	When kept in the bag, the Pokémon is prevented from being forced off its location.
+1* 061: ErraticDefender	When kept in the bag, moves used on the Pokémon are more intensely affected by type match-ups.
+1* 062: FastFriend	When kept in the bag, the Pokémon has a higher chance of recruiting wild Pokémon.
+1* 084: HitAndRun	When kept in the bag, the Pokémon will take reduced damage from counter attacks.
+2* 008: WaterTerrain	When kept in the bag, the Pokémon can traverse water.
+2* 009: LavaTerrain	When kept in the bag, the Pokémon can traverse lava without being burned.
+2* 013: PPBoost	When kept in the bag, the Pokémon gets an extra {0}PP to all of its moves.
+2* 016: MisfortuneMirror	When kept in the bag, the Pokémon will more easily dodge attacks if its previous move missed.
+2* 018: DoubleAttacker	When kept in the bag, it allows the Pokémon's regular attack to strike twice.
+2* 019: MasterHurler	When kept in the bag, items thrown by the Pokémon will pierce through enemies.
+2* 022: PressurePlus	When kept in the bag, the Pokémon will raise the PP usage of opponents that attack it.
+2* 023: StatusOnAttack	When kept in the bag, the Pokémon's regular attacks and thrown items have a chance to inflict the {0} status.
+2* 029: StatDropImmune	When kept in the bag, the Pokémon cannot have its {0} lowered.
+2* 030: SleepWalker	When kept in the bag, the Pokémon will be able to move when asleep.
+2* 033: AcuteSniffer	When kept in the bag, it reveals the number of items laying on the ground the Pokémon reaches a new floor.
+2* 039: WideAttack	When kept in the bag, the Pokémon's regular attack will hit the front and sides.
+2* 051: BarrageGuard	When kept in the bag, the Pokémon takes reduced damage from multiple attacks in a turn.
+2* 052: BetterOdds	When kept in the bag, the Pokémon's attacks never miss, and always land a critical hit if the move is on its last PP.
+2* 053: ClutchPerformer	When kept in the bag, the Pokémon is more likely to evade attacks when at low HP.
+2* 059: StatMirror	When kept in the bag, stat changes inflicted on the Pokémon are passed to the Pokémon that caused it.
+2* 060: ErraticAttacker	When kept in the bag, the Pokémon's moves are more intensely affected by type match-ups.
+2* 083: Gratitude	When kept in the bag, the Pokémon gives back recovered HP when it is healed by another Pokémon.
+2* 088: DoubleDash	When kept in the bag, it changes the Pokémon's lunging moves into two weaker strikes.
+3* 002: TypeSpeedBoost	When kept in the bag, it boosts the Movement Speed of {0}-type members that have no status conditions.
+3* 005: SuperCrit	When kept in the bag, it raises the critical-hit ratio of super-effective hits.
+3* 017: CounterBasher	When kept in the bag, the Pokémon will counter damage from regular attacks and thrown items.
+3* 024: KnockbackOnAttack	When kept in the bag, the Pokémon's regular attack will knock opponents back.
+3* 028: StatusImmune	When kept in the bag, the Pokémon becomes immune to the {0} status.
+3* 031: ChargeWalker	When kept in the bag, the Pokémon will be able to move when charging attacks.
+3* 032: StairSensor	When kept in the bag, it reveals the direction of the staircase whenever the Pokémon reaches a new floor.
+3* 038: LungeAttack	When kept in the bag, it changes the Pokémon's regular attack into a dash.
+3* 042: ExplosionGuard	When kept in the bag, the Pokémon will take reduced damage from explosions and splash damage.
+3* 043: WandMaster	When kept in the bag, the effects of wands will fly in an arc when waved by the Pokémon.
+3* 048: Absorption	When kept in the bag, the Pokémon will regain HP after defeating an enemy.
+3* 049: ExcessiveForce	When kept in the bag, the Pokémon will damage nearby enemies after defeating an enemy.
+3* 054: DistanceDodge	When kept in the bag, the Pokémon is more likely to evade attacks from far away.
+3* 055: CloseDodge	When kept in the bag, the Pokémon is more likely to evade attacks from close up.
+3* 057: SelfCurer	When kept in the bag, the Pokémon recovers faster from status problems.
+3* 058: StatusMirror	When kept in the bag, status problems inflicted on the Pokémon are passed to the Pokémon that caused it.
+3* 063: CoinWatcher	When kept in the bag, the Pokémon will find more \uE024 when exploring in dungeons.
+3* 064: HiddenStairFinder	When kept in the bag, the Pokémon will find more Hidden Stairs when exploring in dungeons.
+3* 065: ChestFinder	When kept in the bag, the Pokémon will find more Treasure Chests when exploring in dungeons.
+3* 066: ShopFinder	When kept in the bag, the Pokémon will find more shops when exploring in dungeons.
+3* 069: GapProber	When kept in the bag, the Pokemon's moves and items that hit in a straight line cannot damage allies.
+3* 071: WeatherProtection	When kept in the bag, the Pokémon is protected from weather damage.
+3* 072: RemoveAbilityAttack	When kept in the bag, it causes the Pokémon's regular attack to remove the target's ability.
+3* 075: HealInLava	When kept in the bag, the Pokémon recovers HP when in lava.
+3* 076: HealOnNewFloor	When kept in the bag, the Pokémon is fully healed upon entering a new floor.
+3* 085: StatusOnCategoryHit	When kept in the bag, the Pokémon's {1} attacks inflict the {0} status.
+3* 089: StatusSplash	When kept in the bag, the Pokémon's stat-changing moves are spread to allies.
+4* 010: AllTerrain	When kept in the bag, the Pokémon can traverse water, lava, and pits.
+4* 025: ThrowOnAttack	When kept in the bag, the Pokémon's regular attack will throw opponents back.
+4* 041: TrapBuster	When kept in the bag, the Pokémon's moves will destroy traps.
+4* 044: WandSpread	When kept in the bag, the effects of wands will spread out like a fan when waved by the Pokémon.
+4* 045: MultiRayShot	When kept in the bag, items thrown by the Pokémon will spread out like a fan.
+4* 046: RoyalVeil	When kept in the bag, the Pokémon will gradually restore the HP of its allies when its own HP is full.
+4* 047: Celebrate	When kept in the bag, the Pokémon will be able to move again after defeating an enemy.
+4* 056: FastHealer	When kept in the bag, the Pokémon's natural HP-recovery speed is boosted.
+4* 068: TypedAttack	When kept in the bag, the Pokémon's regular attacks change to match its type.
+4* 070: PassThroughAttacker	When kept in the bag, the Pokemon's moves and items that hit in a straight line will pass through walls.
+4* 073: CheekPouch	When kept in the bag, the Pokémon's HP is restored when it eats a food item.
+4* 074: HealInWater	When kept in the bag, the Pokémon recovers HP when in water.
+4* 080: NoStatusInWeather	When kept in the bag, the Pokémon is protected from status conditions when the floor has the {0} status.
+4* 081: DeepBreatherPlus	When kept in the bag, it restores the PP of all moves when the Pokémon reaches a new floor.
+4* 086: StatusOnCategoryUse	When kept in the bag, the Pokémon gains the {0} status after using a {1} attack.
+4* 090: DevolveOnAttack	When kept in the bag, the Pokémon's regular attacks and thrown items have a chance to devolve the target.
+4* 091: ProjectileAttack	When kept in the bag, it changes the Pokémon's regular attack into a short projectile.
+4* 093: AttackRangeInWeather	When kept in the bag, the Pokémon's Attack Range is increased when the floor has the {0} status.
+5* 003: TypeGroupWeaknessReduce	When kept in the bag, it reduces damage done to {0}-type members by {1}-type attacks, based on how many are on the team.
+5* 004: TypeBulldozer	When kept in the bag, it allows {0}-type moves to hit {1}-type Pokémon.
+5* 007: Nontraitor	When kept in the bag, the Pokémon cannot damage allies with its moves.
+5* 011: Wallbreaker	When kept in the bag, some of the Pokémon's moves will break walls.
+5* 012: GapFiller	When kept in the bag, some of the Pokémon's moves will fill water, lava, and pits.
+5* 020: AllyReviver	When kept in the bag, the Pokémon will revive a fallen ally when it reaches a new floor.
+5* 021: AllyReviverBattle	When kept in the bag, the Pokémon will revive a fallen ally when it defeats an opponent.
+5* 034: MapSurveyor	When kept in the bag, it partially reveals the floor's layout the Pokémon reaches a new floor.
+5* 035: XRay	When kept in the bag, it allows the Pokémon to see foes and items in heavy darkness.
+5* 036: WeaknessPayback	When kept in the bag, it inflicts the {1} status on the attacker when the Pokémon is hit with a {0}-type move.
+5* 037: WarpPayback	When kept in the bag, it warps the attackers away when the Pokémon is hit with a {0}-type move.
+5* 040: ExplosiveAttack	When kept in the bag, the Pokémon's regular attack explodes outwards with splash damage.
+5* 067: SecondSTAB	When kept in the bag, the Pokémon's {0}-type moves are boosted.
+5* 077: EndureCategory	When kept in the bag, prevents the Pokémon from fainting to {0} moves, leaving it with 1 HP.
+5* 078: EndureType	When kept in the bag, prevents the Pokémon from fainting to {0}-type moves, leaving it with 1 HP.
+5* 079: SpikeDropper	When kept in the bag, the Pokémon scatters Spikes when hit by a {0} attack.
+5* 082: WeaknessReduce	When kept in the bag, it reduces damage done by {0}-type attacks.
+5* 087: MapStatusOnCategoryUse	When kept in the bag, the Pokémon changes the floor to {1} after using a {0} attack.
+5* 092: MetronomePlus	When kept in the bag, it increases the Pokémon's luck when using Metronome.

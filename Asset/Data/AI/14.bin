@@ -1,0 +1,1 @@
+﻿{"Object":{"$type":"RogueEssence.Data.AITactic, RogueEssence","Name":{"DefaultText":"Staged Boss","LocalTexts":{}},"Released":true,"Comment":"","ID":14,"Assignable":false,"Plans":[{"$type":"PMDC.Dungeon.BossPlan, PMDC","targetLoc":null,"AttackPattern":4,"PositionPattern":2,"IQ":253},{"$type":"PMDC.Dungeon.WaitPlan, PMDC","IQ":253}]},"Version":"1.0.0.0"}

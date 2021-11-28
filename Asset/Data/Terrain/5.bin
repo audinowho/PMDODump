@@ -1,0 +1,1 @@
+﻿{"Object":{"$type":"RogueEssence.Data.TerrainData, RogueEssence","Name":{"DefaultText":"Variable-Texture Abyss","LocalTexts":{}},"Comment":"","Element":0,"BlockType":3,"BlockDiagonal":false,"BlockLight":false,"ShadowType":4,"LandedOnTiles":[]},"Version":"1.0.0.0"}

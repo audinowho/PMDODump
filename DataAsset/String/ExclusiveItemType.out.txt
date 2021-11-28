@@ -1,0 +1,79 @@
+Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU	LT
+ExclusiveItemType.Apron	Pokemon name goes into the {0}	{0} Apron		{0} Schürze	Mandil {0}
+ExclusiveItemType.Armlet	Ex. "Pikachu Armlet"	{0} Armlet		{0} Armband	Brazal {0}
+ExclusiveItemType.Armor	"Rhydon Armor"	{0} Armor		{0} Rüstung	Coraza {0}
+ExclusiveItemType.Aroma	"Bellossom Aroma"	{0} Aroma		{0} Aroma	Aroma {0}
+ExclusiveItemType.Band	etc.	{0} Band		{0} Band	Banda {0}
+ExclusiveItemType.Bangle		{0} Bangle		{0} Armreif	Pulsera {0}
+ExclusiveItemType.Beam	Translated from Japanese as "Light".  Ex "Mantyke Beam" means "Mantyke's Light".  It also shows up as a yellow-colored orb sprite in game.	{0} Beam		{0} Strahl	Rayo {0}
+ExclusiveItemType.Belt		{0} Belt		{0} Gürtel	Cinto {0}
+ExclusiveItemType.Blade		{0} Blade		{0} Klinge	Cuchilla {0}
+ExclusiveItemType.Bow		{0} Bow		{0} Bogen	Lazo {0}
+ExclusiveItemType.Branch		{0} Branch		{0} Zweig	Rama {0}
+ExclusiveItemType.Brooch		{0} Brooch		{0} Brosche	Broche {0}
+ExclusiveItemType.Cap		{0} Cap		{0} Mütze	Gorra {0}
+ExclusiveItemType.Cape		{0} Cape		{0} Umhang	Capa {0}
+ExclusiveItemType.Card		{0} Card		{0} Karte	Papiro {0}
+ExclusiveItemType.Charm		{0} Charm		{0} Talisman	Amuleto {0}
+ExclusiveItemType.Choker		{0} Choker		{0} Halsband	Collarín {0}
+ExclusiveItemType.Claw		{0} Claw		{0} Kralle	Garra {0}				{0}のツメ
+ExclusiveItemType.Coat		{0} Coat		{0} Mantel	Abrigo {0}
+ExclusiveItemType.Coin		{0} Coin		{0} Münze	Moneda {0}
+ExclusiveItemType.Collar		{0} Collar		{0} Halskette	Collar {0}
+ExclusiveItemType.Crest		{0} Crest		{0} Wappen	Blasón {0}
+ExclusiveItemType.Crown		{0} Crown		{0} Krone	Corona {0}
+ExclusiveItemType.Dew		{0} Dew		{0} Tau	Rocío {0}
+ExclusiveItemType.Dress		{0} Dress		{0} Kleid	Traje {0}
+ExclusiveItemType.Drill		{0} Drill		{0} Bohrer	Taladro {0}
+ExclusiveItemType.Drool		{0} Drool		{0} Sabber	Baba {0}
+ExclusiveItemType.Dust		{0} Dust		{0} Staub	Polvo {0}
+ExclusiveItemType.Earring		{0} Earring		{0} Ohrring	Pendiente {0}
+ExclusiveItemType.Fang	Specifically refers to the canine tooth, not the inciscors, etc.	{0} Fang		{0} Reißzahn	Colmillo {0}				{0}のキバ
+ExclusiveItemType.Float		{0} Float		{0} Reif	Flotador {0}
+ExclusiveItemType.Foam		{0} Foam		{0} Schaum	Éter {0}
+ExclusiveItemType.Gasp		{0} Gasp		{0} Atemzug	Soplo {0}
+ExclusiveItemType.Glasses		{0} Glasses		{0} Brille	Gafas {0}
+ExclusiveItemType.Guard		{0} Guard		{0} Schild	Guardia {0}
+ExclusiveItemType.Hair		{0} Hair		{0} Haare	Pelo {0}
+ExclusiveItemType.Hat		{0} Hat		{0} Hut	Sombrero {0}
+ExclusiveItemType.Heart		{0} Heart		{0} Herz	Corazón {0}
+ExclusiveItemType.Helmet		{0} Helmet		{0} Helm	Casco {0}
+ExclusiveItemType.Horn		{0} Horn		{0} Horn	Cuerno {0}
+ExclusiveItemType.Jaw		{0} Jaw		{0} Kinn	Fauce {0}
+ExclusiveItemType.Jewel		{0} Jewel		{0} Juwel	Gema {0}
+ExclusiveItemType.Key		{0} Key		{0} Schlüssel	Llave {0}
+ExclusiveItemType.Leaf		{0} Leaf		{0} Blatt	Hoja {0}
+ExclusiveItemType.Mantle		{0} Mantle		{0} Mantel	Manto {0}
+ExclusiveItemType.Mask		{0} Mask		{0} Maske	Máscara {0}
+ExclusiveItemType.Medal		{0} Medal		{0} Medaille	Medalla {0}
+ExclusiveItemType.Mud		{0} Mud		{0} Schlamm	Lodo {0}
+ExclusiveItemType.None		{0} None		{0} Nichts	Ninguno {0}
+ExclusiveItemType.Ore		{0} Ore		{0} Eisen	Pepita {0}
+ExclusiveItemType.Pebble		{0} Pebble		{0} Kieselstein	Guijarro {0}
+ExclusiveItemType.Poncho		{0} Poncho		{0} Poncho	Poncho {0}
+ExclusiveItemType.Ring		{0} Ring		{0} Ring	Anillo {0}
+ExclusiveItemType.Robe		{0} Robe		{0} Robe	Túnica {0}
+ExclusiveItemType.Rock		{0} Rock		{0} Stein	Roca {0}
+ExclusiveItemType.Root		{0} Root		{0} Wurzel	Raíz {0}
+ExclusiveItemType.Ruff		{0} Ruff		{0} Halskrause	Chal {0}
+ExclusiveItemType.Sash		{0} Sash		{0} Schärpe	Banda {0}
+ExclusiveItemType.Scarf		{0} Scarf		{0} Schal	Pañuelo {0}
+ExclusiveItemType.Scope		{0} Scope		{0} Oszilloskop	Periscopio {0}
+ExclusiveItemType.Seal		{0} Seal		{0} Siegel	Cuño {0}
+ExclusiveItemType.Seed		{0} Seed		{0} Samen	Semilla {0}
+ExclusiveItemType.Shard		{0} Shard		{0} Splitter	Trozo {0}
+ExclusiveItemType.Shield		{0} Shield		{0} Schild	Escudo {0}
+ExclusiveItemType.Shoot		{0} Shoot		{0} Spross	Brote {0}
+ExclusiveItemType.Song		{0} Song		{0} Song	Corchea {0}
+ExclusiveItemType.Specs		{0} Specs		{0} Brille	Lentes {0}
+ExclusiveItemType.Sweat		{0} Sweat		{0} Schweiß	Esencia {0}
+ExclusiveItemType.Tag		{0} Tag		{0} Etikett	Nota {0}
+ExclusiveItemType.Tail		{0} Tail		{0} Schweif	Cola {0}
+ExclusiveItemType.Thorn		{0} Thorn		{0} Dorn	Espina {0}
+ExclusiveItemType.Tiara		{0} Tiara		{0} Tiara	Tiara {0}
+ExclusiveItemType.Tie		{0} Tie		{0} Schleife	Fular {0}
+ExclusiveItemType.Tooth	Specifically refers to the incisors.	{0} Tooth		{0} Zahn	Diente {0}
+ExclusiveItemType.Torc		{0} Torc		{0} Reif	Alhaja {0}
+ExclusiveItemType.Twig		{0} Twig		{0} Zweig	Ramita {0}
+ExclusiveItemType.Veil		{0} Veil		{0} Schleier	Velo {0}
+ExclusiveItemType.Wing		{0} Wing		{0} Flügel	Ala {0}

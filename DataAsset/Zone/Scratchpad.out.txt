@@ -1,0 +1,83 @@
+//items
+ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+
+
+
+
+floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+//mobs
+TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+poolSpawn.Priority = PR_RESPAWN_MOB;
+
+
+//275 Shiftry : 124 Pickpocket : 018 Whirlwind : 417 Nasty Plot : 536 Leaf Tornado : 542 Hurricane
+poolSpawn.Spawns.Add(GetTeamMob(275, 124, 018, 417, 536, 542, new RandRange(5)), new IntRange(0, max_floors), 10);
+//131 Lapras : 011 Water Absorb : 058 Ice Beam : 195 Perish Song : 362 Brine
+poolSpawn.Spawns.Add(GetTeamMob(131, 011, 058, 195, 362, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//078 Rapidash : 097 Agility : 517 Inferno
+poolSpawn.Spawns.Add(GetTeamMob(078, -1, 097, 517, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//148 Dragonair : 097 Agility : 239 Twister : 082 Dragon Rage
+poolSpawn.Spawns.Add(GetTeamMob(148, -1, 097, 239, 082, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//149 Dragonite : 136 Multiscale : 349 Dragon Dance : 355 Roost : 407 Dragon Rush : 401 Aqua Tail
+poolSpawn.Spawns.Add(GetTeamMob(149, 136, 349, 355, 407, 401, new RandRange(5)), new IntRange(0, max_floors), 10);
+//327 Spinda : 077 Tangled Feet : 298 Teeter Dance : 037 Thrash
+poolSpawn.Spawns.Add(GetTeamMob(327, 077, 298, 037, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//425 Drifloon : 466 Ominous Wind : 116 Focus Energy : 132 Constrict
+poolSpawn.Spawns.Add(GetTeamMob(425, -1, 466, 116, 132, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//426 Drifblim : 466 Ominous Wind : 226 Baton Pass : 254 Stockpile : 107 Minimize
+poolSpawn.Spawns.Add(GetTeamMob(426, -1, 466, 226, 254, 107, new RandRange(5)), new IntRange(0, max_floors), 10);
+//045 Vileplume : 078 Stun Spore : 080 Petal Dance
+poolSpawn.Spawns.Add(GetTeamMob(045, -1, 078, 080, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//414 Mothim : 110 Tinted Lens : 483 Quiver Dance : 318 Silver Wind : 094 Psychic
+poolSpawn.Spawns.Add(GetTeamMob(414, 110, 483, 318, 094, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//348 Armaldo : 306 Crush Claw : 404 X-Scissor : 479 Smack Down
+poolSpawn.Spawns.Add(GetTeamMob(348, -1, 306, 404, 479, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//346 Cradily : 275 Ingrain : 051 Acid : 378 Wring Out : 362 Brine
+poolSpawn.Spawns.Add(GetTeamMob(346, -1, 275, 051, 378, 362, new RandRange(5)), new IntRange(0, max_floors), 10);
+//279 Pelipper : 254 Stockpile : 255 Spit Up : 256 Swallow : 542 Hurricane
+poolSpawn.Spawns.Add(GetTeamMob(279, -1, 254, 255, 256, 542, new RandRange(5)), new IntRange(0, max_floors), 10);
+//700 Sylveon : 182 Pixilate : 129 Swift : 113 Light Screen : 581 Misty Terrain : 585 Moonblast
+poolSpawn.Spawns.Add(GetTeamMob(700, 182, 129, 113, 581, 585, new RandRange(5)), new IntRange(0, max_floors), 10);
+//134 Vaporeon : 270 Helping Hand : 392 Aqua Ring : 330 Muddy Water
+poolSpawn.Spawns.Add(GetTeamMob(134, -1, 270, 392, 330, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//196 Espeon : 270 Helping Hand : 234 Morning Sun : 248 Future Sight
+poolSpawn.Spawns.Add(GetTeamMob(196, -1, 270, 234, 248, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//227 Skarmory : 005 Sturdy : 319 Metal Sound : 314 Air Cutter : 191 Spikes : 092 Toxic
+poolSpawn.Spawns.Add(GetTeamMob(227, 005, 319, 314, 191, 092, new RandRange(5)), new IntRange(0, max_floors), 10);
+//242 Blissey : 032 Serene Grace : 069 Seismic Toss : 135 Soft-Boiled : 287 Refresh : 196 Icy Wind
+poolSpawn.Spawns.Add(GetTeamMob(242, 032, 069, 135, 287, 196, new RandRange(5)), new IntRange(0, max_floors), 10);
+//080 Slowbro : 012 Oblivious : 505 Heal Pulse : 244 Psych Up : 057 Surf : 094 Psychic
+poolSpawn.Spawns.Add(GetTeamMob(080, 012, 505, 244, 057, 094, new RandRange(5)), new IntRange(0, max_floors), 10);
+//199 Slowking : 012 Oblivious : 376 Trump Card : 347 Calm Mind : 408 Power Gem : 281 Yawn
+poolSpawn.Spawns.Add(GetTeamMob(199, 012, 376, 347, 408, 281, new RandRange(5)), new IntRange(0, max_floors), 10);
+//034 Nidoking : 125 Sheer Force : 398 Poison Jab : 224 Megahorn : 116 Focus Energy : 529 Drill Run
+poolSpawn.Spawns.Add(GetTeamMob(034, 125, 398, 224, 116, 529, new RandRange(5)), new IntRange(0, max_floors), 10);
+//031 Nidoqueen : 079 Rivalry : 270 Helping Hand : 445 Captivate : 414 Earth Power : 482 Sludge Wave
+poolSpawn.Spawns.Add(GetTeamMob(031, 079, 270, 445, 414, 482, new RandRange(5)), new IntRange(0, max_floors), 10);
+//186 Politoed : 002 Drizzle : 195 Perish Song : 095 Hypnosis : 352 Water Pulse : 058 Ice Beam
+poolSpawn.Spawns.Add(GetTeamMob(186, 002, 195, 095, 352, 058, new RandRange(5)), new IntRange(0, max_floors), 10);
+//062 Poliwrath : 033 Swift Swim : 187 Belly Drum : 127 Waterfall : 358 Wake-Up Slap : 509 Circle Throw
+poolSpawn.Spawns.Add(GetTeamMob(062, 033, 187, 127, 358, 509, new RandRange(5)), new IntRange(0, max_floors), 10);
+//414 Mothim : 110 Tinted Lens : 318 Silver Wind : 483 Quiver Dance : 403 Air Slash : 094 Psychic
+poolSpawn.Spawns.Add(GetTeamMob(414, 110, 318, 483, 403, 094, new RandRange(5)), new IntRange(0, max_floors), 10);
+//413 Wormadam : 107 Anticipation : 522 Struggle Bug : 319 Metal Sound : 450 Bug Bite : 527 Electroweb
+poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(413, 2, -1, Gender.Unknown), 107, 522, 319, 450, 527, new RandRange(5)), new IntRange(0, max_floors), 10);
+//128 Tauros : 022 Intimidate : 099 Rage : 037 Thrash : 523 Bulldoze : 371 Payback
+poolSpawn.Spawns.Add(GetTeamMob(128, 022, 099, 037, 523, 371, new RandRange(5)), new IntRange(0, max_floors), 10);
+//241 Miltank : 113 Scrappy : 208 Milk Drink : 215 Heal Bell : 034 Body Slam : 045 Growl
+poolSpawn.Spawns.Add(GetTeamMob(241, 113, 208, 215, 034, 045, new RandRange(5)), new IntRange(0, max_floors), 10);
+//311 Plusle : 057 Plus : 087 Thunder : 129 Swift : 097 Agility : 447 Grass Knot
+poolSpawn.Spawns.Add(GetTeamMob(311, 057, 087, 129, 097, 447, new RandRange(5)), new IntRange(0, max_floors), 10);
+//312 Minun : 058 Minus : 240 Rain Dance : 589 Play Nice : 098 Quick Attack : 376 Trump Card
+poolSpawn.Spawns.Add(GetTeamMob(312, 058, 240, 589, 098, 376, new RandRange(5)), new IntRange(0, max_floors), 10);
+//310 Manectric : 058 Minus : 604 Electric Terrain : 435 Discharge : 053 Flamethrower : 598 Eerie Impulse
+poolSpawn.Spawns.Add(GetTeamMob(310, 058, 604, 435, 053, 598, new RandRange(5)), new IntRange(0, max_floors), 10);
+//181 Ampharos : 057 Plus : 192 Zap Cannon : 406 Dragon Pulse : 324 Signal Beam : 602 Magnetic Flux
+poolSpawn.Spawns.Add(GetTeamMob(181, 057, 192, 406, 324, 602, new RandRange(5)), new IntRange(0, max_floors), 10);
+//196 Espeon : 156 Magic Bounce : 094 Psychic : 247 Shadow Ball : 115 Reflect : 605 Dazzling Gleam
+poolSpawn.Spawns.Add(GetTeamMob(196, 156, 094, 247, 115, 605, new RandRange(5)), new IntRange(0, max_floors), 10);
+//197 Umbreon : 028 Synchronize : 236 Moonlight : 212 Mean Look : 555 Snarl : 399 Dark Pulse
+poolSpawn.Spawns.Add(GetTeamMob(197, 028, 236, 212, 555, 399, new RandRange(5)), new IntRange(0, max_floors), 10);

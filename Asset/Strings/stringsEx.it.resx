@@ -1,0 +1,1566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TALK_FULL_0000" xml:space="preserve">
+    <value>Facciamo del nostro meglio!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0001" xml:space="preserve">
+    <value>Aiutiamoci a vicenda e facciamo del nostro meglio!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0002" xml:space="preserve">
+    <value>Affrontiamo questa sfida  con impegno.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0003" xml:space="preserve">
+    <value>[item]! Non potremmo chiedere di meglio!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0004" xml:space="preserve">
+    <value>Dobbiamo fare attenzione ai Pokémon [kind]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0005" xml:space="preserve">
+    <value>Ti copro le spalle, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0006" xml:space="preserve">
+    <value>Ti darò una mano con [move], [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0007" xml:space="preserve">
+    <value>Ti seguirò, [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0008" xml:space="preserve">
+    <value>Cerchiamo di trovare tante cose belle!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0009" xml:space="preserve">
+    <value>Chissà cosa ci aspetta?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0010" xml:space="preserve">
+    <value>Esplorare è divertente, vero?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0011" xml:space="preserve">
+    <value>Sento che troveremo un tesoro!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0020" xml:space="preserve">
+    <value>Sono felice di esplorare con te, [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0021" xml:space="preserve">
+    <value>Ti dimostrerò cosa sono capace di fare, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0022" xml:space="preserve">
+    <value>Mettiamocela tutta, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0023" xml:space="preserve">
+    <value>Ti aiuterò il più possibile con [move], [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0024" xml:space="preserve">
+    <value>Mettiamocela tutta per trovare 1 [item]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0025" xml:space="preserve">
+    <value>Chissà quali grandi scoperte ci aspettano questa volta!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0026" xml:space="preserve">
+    <value>Temo che sarà dura affrontare [kind].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0040" xml:space="preserve">
+    <value>Ho un po' paura, ma farò del mio meglio per starti dietro, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0041" xml:space="preserve">
+    <value>Ho paura ad andare in profondità!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0042" xml:space="preserve">
+    <value>Se le cose si fanno troppo  pericolose ce la filiamo, giusto?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0043" xml:space="preserve">
+    <value>Ooh... [kind]?  Mi fanno tanta paura!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0044" xml:space="preserve">
+    <value>P-Per favore, non lasciarmi qui!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0045" xml:space="preserve">
+    <value>P-Per favore, non abbandonarmi!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0046" xml:space="preserve">
+    <value>Mi sento meno vulnerabile  insieme a te, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0047" xml:space="preserve">
+    <value>[item]? Dove? Dove?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0048" xml:space="preserve">
+    <value>Spiacente per la mia  insicurezza...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0049" xml:space="preserve">
+    <value>Non mi piace lottare. Ma per te... farò del mio meglio!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0060" xml:space="preserve">
+    <value>L'imprudenza può essere il nostro peggior nemico...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0061" xml:space="preserve">
+    <value>Sai, non dovremmo giudicare basandoci soltanto su ciò che vediamo...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0062" xml:space="preserve">
+    <value>Ti aiuterò con [move], [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0063" xml:space="preserve">
+    <value>Dovremmo sempre riflettere prima di agire, non trovi?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0064" xml:space="preserve">
+    <value>Puoi contare su di  me, [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0065" xml:space="preserve">
+    <value>Studia attentamente il tuo nemico, così saprai sempre cosa fare...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0066" xml:space="preserve">
+    <value>Sapere quando battere in ritirata fa parte di una strategia di successo...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0080" xml:space="preserve">
+    <value>Vuoi una perla di saggezza? Chi va piano va sano e va lontano...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0081" xml:space="preserve">
+    <value>Vuoi una perla di saggezza? Gli stolti vanno di corsa, ma i saggi camminano ed esplorano con attenzione...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0082" xml:space="preserve">
+    <value>Non ti preoccupare. La mia fida  mossa [move] ti aiuterà, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0083" xml:space="preserve">
+    <value>[item]! Cerchiamo di metterci le mani sopra!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0084" xml:space="preserve">
+    <value>Dobbiamo fare attenzione ai Pokémon [kind]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0085" xml:space="preserve">
+    <value>Ti coprirò le  spalle, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0086" xml:space="preserve">
+    <value>L'ho già fatto altre volte, ma non smette mai di divertirmi...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0100" xml:space="preserve">
+    <value>Ti seguirò  ovunque, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0101" xml:space="preserve">
+    <value>Impossibile? No! [myname] non conosce neppure il significato di  quella parola!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0102" xml:space="preserve">
+    <value>Ti farò vedere la potenza di [move]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0103" xml:space="preserve">
+    <value>[kind]? Bah! Non mi fanno per niente paura!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0104" xml:space="preserve">
+    <value>Non dimenticarti l'obiettivo: [item]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0120" xml:space="preserve">
+    <value>Esplorare... Emozionante...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0121" xml:space="preserve">
+    <value>Tesoro... Trovarlo...  Trovarlo...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0122" xml:space="preserve">
+    <value>La mia mossa...  [move] sarà d'aiuto a [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0123" xml:space="preserve">
+    <value>Sconfiggere... Bisogna sconfiggere... ogni... [kind]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0124" xml:space="preserve">
+    <value>Trovare... [item]... Trovare... [item]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0125" xml:space="preserve">
+    <value>Divertente... Divertente...  Divertente... Così divertente... con [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0126" xml:space="preserve">
+    <value>Cosa... Cosa... Cosa c'è... là davanti...?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0140" xml:space="preserve">
+    <value>Ti copro le spalle, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0141" xml:space="preserve">
+    <value>Diamoci da fare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0142" xml:space="preserve">
+    <value>Sì! Nessuno può dare del filo da torcere a una squadra forte come la nostra!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0143" xml:space="preserve">
+    <value>[item]! Dobbiamo assolutamente metterci le mani sopra!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0144" xml:space="preserve">
+    <value>Eh? [kind]? Pfui, non mi spaventano!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0145" xml:space="preserve">
+    <value>Non sorprenderti se [move] ci toglie dai guai.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0146" xml:space="preserve">
+    <value>Oh, sì! Esplorare è grandioso! Cosa si può volere di più?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0147" xml:space="preserve">
+    <value>Devo ammettere che neanche tu sei troppo male!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0160" xml:space="preserve">
+    <value>È ora di darsi da fare con l'esplorazione!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0161" xml:space="preserve">
+    <value>Ogni tanto fare una bella esplorazione non è affatto male, eh?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0162" xml:space="preserve">
+    <value>Non scambiarmi per un  nemico, ok?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0163" xml:space="preserve">
+    <value>[item]! Ecco cosa dovremmo cercare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0180" xml:space="preserve">
+    <value>Esplorare... Esplorare... Che cosa fantastica!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0181" xml:space="preserve">
+    <value>Dove andiamo adesso? Ti  seguirei ovunque, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0182" xml:space="preserve">
+    <value>Userò [move] per  aiutarti, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0183" xml:space="preserve">
+    <value>[item]? La mia passione!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0184" xml:space="preserve">
+    <value>Ooooh! Chissà quali tesori troveremo? È così emozionante!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0200" xml:space="preserve">
+    <value>Nessuno riuscirà a trattenermi!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0201" xml:space="preserve">
+    <value>Andiamo avanti! Dai! Facciamogli vedere come si fa!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0202" xml:space="preserve">
+    <value>Darò una lezione a chiunque si metta in mezzo, vedrai!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0203" xml:space="preserve">
+    <value>[item]... qui vicino, da qualche parte... Me lo sento!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0204" xml:space="preserve">
+    <value>Se pensi che me ne andrò senza il nostro tesoro ti sbagli di grosso!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0205" xml:space="preserve">
+    <value>Nessuno sa usare [move] meglio di me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0206" xml:space="preserve">
+    <value>Ehm, cosa? Cosa vuoi?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0220" xml:space="preserve">
+    <value>Ehi, volevo chiederti una cosa!  Ehm... Ti sto dando una mano, vero?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0221" xml:space="preserve">
+    <value>Farò del mio meglio per  esplorare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0222" xml:space="preserve">
+    <value>Ehi, non sottovalutare la mia mossa [move]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0223" xml:space="preserve">
+    <value>Attenzione! [kind]! Dobbiamo guardarci le spalle da quei Pokémon!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0224" xml:space="preserve">
+    <value>Mmm? Sbaglio o si sente odore di [item]?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0225" xml:space="preserve">
+    <value>Sei davvero un Pokémon  onesto, non è vero, [player]?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0226" xml:space="preserve">
+    <value>Andiamo a trovare dei tesori!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0227" xml:space="preserve">
+    <value>Zzzz... Zzzz...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0228" xml:space="preserve">
+    <value>Devi avere fame, non è così?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0240" xml:space="preserve">
+    <value>Sappi che ce la metterò tutta!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0241" xml:space="preserve">
+    <value>Non vedo l'ora di continuare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0242" xml:space="preserve">
+    <value>Non sarò un bel Pokémon, ma non lascio mai le cose a metà!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0243" xml:space="preserve">
+    <value>[item]! Cerchiamo dappertutto!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0244" xml:space="preserve">
+    <value>[kind]?  Fai attenzione!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0245" xml:space="preserve">
+    <value>Puoi sempre contare su di ME, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0246" xml:space="preserve">
+    <value>Niente FEGATO, niente GLORIA!  E la mia mossa [move] richiede un gran FEGATO!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0247" xml:space="preserve">
+    <value>È FANTASTICO esplorare con te, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0248" xml:space="preserve">
+    <value>Non volermene! Potrei  COLPIRTI per sbaglio!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0249" xml:space="preserve">
+    <value>Svegliami se inizio a russare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0250" xml:space="preserve">
+    <value>Che DETERMINAZIONE! Sono senza parole, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0251" xml:space="preserve">
+    <value>Farò di TUTTO per aiutarti, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0252" xml:space="preserve">
+    <value>Bah, non guardarmi in quel modo! Mi fai arrossire!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0260" xml:space="preserve">
+    <value>Non c'è niente da temere,  [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0261" xml:space="preserve">
+    <value>Non importa quante volte hai già preso parte a un'esplorazione. Fa sempre bene!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0262" xml:space="preserve">
+    <value>Quando mi arrabbio... posso davvero fare paura! Farai meglio a credermi!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0263" xml:space="preserve">
+    <value>[item]! Facciamone il nostro obiettivo principale!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0264" xml:space="preserve">
+    <value>Oh! [kind]... Sono una tale scocciatura...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0265" xml:space="preserve">
+    <value>Ti terrò al sicuro da ogni pericolo con [move], [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0266" xml:space="preserve">
+    <value>Ce ne andremo con le tasche stracolme di tesori!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0267" xml:space="preserve">
+    <value>Mi chiedo... Cosa ci aspetterà più avanti?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0268" xml:space="preserve">
+    <value>Se vedessimo... [item]... non... non so che...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0280" xml:space="preserve">
+    <value>Ti guardo io le spalle! Va bene, [player]?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0281" xml:space="preserve">
+    <value>Qual è la prossima meta? Devi deciderti!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0282" xml:space="preserve">
+    <value>Oh, sì! Fai attenzione! Sto per scatenare [move]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0283" xml:space="preserve">
+    <value>[kind]? Niente paura! Sono facili da sconfiggere.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0284" xml:space="preserve">
+    <value>Esplorare è sempre così emozionante, non è vero?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0285" xml:space="preserve">
+    <value>Vedo che te la cavi alla grande.  Mi hai davvero fatto un'ottima impressione!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0300" xml:space="preserve">
+    <value>Studia bene il tuo nemico prima  di agire, va bene?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0301" xml:space="preserve">
+    <value>Procedi con cautela, capito?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0302" xml:space="preserve">
+    <value>Fidati. Farò del mio meglio per la squadra, [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0303" xml:space="preserve">
+    <value>Userò [move] per il bene della squadra, [player].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0304" xml:space="preserve">
+    <value>Cosa c'è oltre questo punto?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0305" xml:space="preserve">
+    <value>[item]! Sono sicura che riusciremo a metterci le mani sopra!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0320" xml:space="preserve">
+    <value>Esplorare non ha nessun lato  negativo, questo è certo!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0321" xml:space="preserve">
+    <value>Posso suggerire di perlustrare tutto in cerca di tesori?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0322" xml:space="preserve">
+    <value>Sono qui per aiutarti nel miglior modo possibile, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0323" xml:space="preserve">
+    <value>Puoi contare su di me per trovare cose preziose!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0324" xml:space="preserve">
+    <value>Mmm... Mmm... Avverto la  presenza di [item] qui da qualche  parte.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0325" xml:space="preserve">
+    <value>Ci divideremo equamente i tesori, vero?</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0326" xml:space="preserve">
+    <value>[kind]... ci daranno di sicuro del filo da torcere.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0327" xml:space="preserve">
+    <value>Non c'è niente che non farei per mettere le mani su un tesoro!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0640" xml:space="preserve">
+    <value>Urrà per noi, [player]! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0641" xml:space="preserve">
+    <value>Farò del mio meglio! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0642" xml:space="preserve">
+    <value>Trabocco d'energia! \u266A Forza, bando alle ciance! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0643" xml:space="preserve">
+    <value>[kind] è davvero un osso duro! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0644" xml:space="preserve">
+    <value>Oh! Da che parte andiamo? \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0645" xml:space="preserve">
+    <value>Mi sento spumeggiante! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0646" xml:space="preserve">
+    <value>Mettiamocela tutta, tutti insieme! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0647" xml:space="preserve">
+    <value>Sì! Esplorazione!  Esplorazione! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0648" xml:space="preserve">
+    <value>Esplorare è così spassoso! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0680" xml:space="preserve">
+    <value>Dobbiamo agire con prudenza.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0681" xml:space="preserve">
+    <value>Bando alla spavalderia e procediamo con cautela!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0682" xml:space="preserve">
+    <value>Sto benissimo. Grazie comunque!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0683" xml:space="preserve">
+    <value>Vedrai che la mia mossa [move] ti sarà d'aiuto!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0684" xml:space="preserve">
+    <value>Potrebbe esserci una trappola,  quindi occhio a dove metti i piedi!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0685" xml:space="preserve">
+    <value>Dobbiamo fare attenzione ai Pokémon [kind], mentre ci muoviamo.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0686" xml:space="preserve">
+    <value>Aiutiamoci al meglio delle nostre capacità, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0687" xml:space="preserve">
+    <value>Avanziamo con coraggio!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0740" xml:space="preserve">
+    <value>Dobbiamo continuare, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0741" xml:space="preserve">
+    <value>Proseguiamo con prudenza.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0742" xml:space="preserve">
+    <value>Darò il mio contributo con [move].</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0743" xml:space="preserve">
+    <value>Dovremmo scendere più in profondità.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0744" xml:space="preserve">
+    <value>Sto bene. Non preoccuparti.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0745" xml:space="preserve">
+    <value>Ecco, vedo... [item]. Per terra... da qualche parte...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0750" xml:space="preserve">
+    <value>Facciamogli vedere di cosa siamo capaci!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0751" xml:space="preserve">
+    <value>Non abbassare la guardia adesso, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0752" xml:space="preserve">
+    <value>Sono dietro di te! Ti darò tutto il mio aiuto!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0753" xml:space="preserve">
+    <value>Dobbiamo andare più veloci!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0754" xml:space="preserve">
+    <value>[kind]... Un Pokémon deboluccio!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0755" xml:space="preserve">
+    <value>[item]... per  terra... da qualche parte...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0760" xml:space="preserve">
+    <value>Ti copro io le spalle! Non ti  preoccupare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0761" xml:space="preserve">
+    <value>Andiamo avanti, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0762" xml:space="preserve">
+    <value>Io? Sto bene!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0763" xml:space="preserve">
+    <value>[kind]! Fai attenzione a quei Pokémon!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0764" xml:space="preserve">
+    <value>Procediamo.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0765" xml:space="preserve">
+    <value>Mi sembra di vedere... [item]... lì a terra...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0770" xml:space="preserve">
+    <value>ANDIAMO, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0771" xml:space="preserve">
+    <value>SBRIGATI!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0772" xml:space="preserve">
+    <value>I NEMICI CADRANNO COME MOSCHE DAVANTI ALLA POTENZA DI [move]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0773" xml:space="preserve">
+    <value>GRRR-OOOOOO!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0774" xml:space="preserve">
+    <value>[kind]? NON SONO AVVERSARI DEGNI DI ME!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0775" xml:space="preserve">
+    <value>USERÒ I MIEI POTERI PER PROTEGGERTI.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0780" xml:space="preserve">
+    <value>TI DARÒ TUTTO IL MIO AIUTO! ABBI FIDUCIA!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0781" xml:space="preserve">
+    <value>NESSUN NEMICO PUÒ BATTERMI!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0782" xml:space="preserve">
+    <value>GRRR-OOOOOO!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0783" xml:space="preserve">
+    <value>FARÒ RICORSO ALLA MIA  POTENZA!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0784" xml:space="preserve">
+    <value>CHI PUÒ FERMARMI?!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0785" xml:space="preserve">
+    <value>ABBI FIDUCIA NELLE TUE  CAPACITÀ! E COMBATTI!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0790" xml:space="preserve">
+    <value>AIUTO... DARÒ... AIUTO...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0791" xml:space="preserve">
+    <value>LA MIA POTENZA È A TUA  DISPOSIZIONE... LA MIA POTENZA È A TUA DISPOSIZIONE...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0792" xml:space="preserve">
+    <value>RRRRR... RRRRR... RRRRR...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0793" xml:space="preserve">
+    <value>CAUTELA... AFFRONTARE [kind]... CON CAUTELA...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0794" xml:space="preserve">
+    <value>VEDO... VEDO...  [item]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0795" xml:space="preserve">
+    <value>ANDARE... AVANTI... ANDARE...  AVANTI...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0800" xml:space="preserve">
+    <value>Non mi preoccupa quale nemico ci attende.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0801" xml:space="preserve">
+    <value>Le tenebre si spandono dentro di me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0802" xml:space="preserve">
+    <value>Così sia! Sarai testimone della mia potenza!</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0803" xml:space="preserve">
+    <value>Siamo... a buon punto.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0804" xml:space="preserve">
+    <value>[item]... ne avverto la presenza...</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0805" xml:space="preserve">
+    <value>Sconfiggermi? Impossibile.  Poco ma sicuro.</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0810" xml:space="preserve">
+    <value>Te-so-ro! Te-so-ro! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0811" xml:space="preserve">
+    <value>Mi piac-cion! \u266A Mi piac-ciono dav-vero! \u266A Ev-viva gli stru-men-ti! Tral-lal-lero! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0812" xml:space="preserve">
+    <value>Come sem-pre! \u266A Lo farò al meglio delle mie umili ca-pa-cità! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0813" xml:space="preserve">
+    <value>Attenzione! \u266A Attenzione! \u266A  Fai attenzione a [kind]! Una tale  malvagità! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0814" xml:space="preserve">
+    <value>Esplorare mi piace  co-sì tan-to! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0815" xml:space="preserve">
+    <value>Dove an-diamo adesso? \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_FULL_0820" xml:space="preserve">
+    <value>Conto su di te!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0000" xml:space="preserve">
+    <value>Adesso è un po' dura andare avanti...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0001" xml:space="preserve">
+    <value>Ho delle leggere ferite... Ma posso continuare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0002" xml:space="preserve">
+    <value>Grazie per il tuo interesse, [player]! Ci tieni davvero!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0005" xml:space="preserve">
+    <value>È difficile proseguire così...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0006" xml:space="preserve">
+    <value>Sto... Sto bene. Ci vorrà ben  altro per fermarmi.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0007" xml:space="preserve">
+    <value>Sto bene! Posso ancora lottare! Ma grazie per avermelo chiesto!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0010" xml:space="preserve">
+    <value>Forse... Forse sarebbe meglio  tornare a casa tra poco?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0011" xml:space="preserve">
+    <value>Ugh... Le ho prese...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0012" xml:space="preserve">
+    <value>Non lasciarmi, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0013" xml:space="preserve">
+    <value>Potresti curarmi un po', [player]?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0015" xml:space="preserve">
+    <value>Questo posto si sta rivelando duro da affrontare...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0016" xml:space="preserve">
+    <value>Ci vuole più cautela.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0017" xml:space="preserve">
+    <value>Sto bene! Posso continuare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0020" xml:space="preserve">
+    <value>La verità è che è più difficile fare progressi in questo modo...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0021" xml:space="preserve">
+    <value>Se potessi darmi un po' d'energia, te ne sarei riconoscente...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0022" xml:space="preserve">
+    <value>Questa esplorazione ha avuto dei momenti duri, non è vero?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0023" xml:space="preserve">
+    <value>Per favore, [player], non lasciarmi qui!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0025" xml:space="preserve">
+    <value>Questi danni? Non sono un  problema. Solo un graffio.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0026" xml:space="preserve">
+    <value>Non hai ancora visto la vera  potenza di [myname]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0027" xml:space="preserve">
+    <value>Sto benissimo! Preoccupati per  qualcun altro!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0030" xml:space="preserve">
+    <value>Dura... Si fa... più dura...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0031" xml:space="preserve">
+    <value>Avanti... avanti... Bisogna andare... avanti...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0032" xml:space="preserve">
+    <value>Difficile... Difficile... Questa esplorazione... è difficile...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0035" xml:space="preserve">
+    <value>Ah! Non vado al tappeto così facilmente!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0036" xml:space="preserve">
+    <value>Non è niente! Fammi vedere cosa sai fare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0037" xml:space="preserve">
+    <value>Mi esalto in situazioni di questo tipo!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0040" xml:space="preserve">
+    <value>Ehi, cosa ne dici di curarmi?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0041" xml:space="preserve">
+    <value>Questa cosa non va per niente bene, sai?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0042" xml:space="preserve">
+    <value>Ehi, cosa ne dici di lasciar perdere e tornare a casa?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0045" xml:space="preserve">
+    <value>Oooh... Sta diventando difficile andare avanti...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0046" xml:space="preserve">
+    <value>Ehi, mi sento ancora bene! Grazie per aver pensato a me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0047" xml:space="preserve">
+    <value>È dura! Ma posso proseguire!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0050" xml:space="preserve">
+    <value>Posso andare avanti! Non ho paura di niente!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0051" xml:space="preserve">
+    <value>Pensi che andrò KO qui? Te lo puoi scordare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0052" xml:space="preserve">
+    <value>Sto bene! Pensa a te!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0055" xml:space="preserve">
+    <value>Uhia! Abbastanza difficile...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0056" xml:space="preserve">
+    <value>Hai per caso una Baccarancia o qualcosa del genere?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0057" xml:space="preserve">
+    <value>È dura! Ma continuerò a  impegnarmi a fondo!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0060" xml:space="preserve">
+    <value>NESSUN problema!  Ce la posso fare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0061" xml:space="preserve">
+    <value>Ce la FARÒ!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0062" xml:space="preserve">
+    <value>Lasciami STARE! Non preoccuparti per me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0065" xml:space="preserve">
+    <value>Oh, com'è difficile!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0066" xml:space="preserve">
+    <value>Oh, me la caverò. Ci vuole ben altro per fermarmi.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0067" xml:space="preserve">
+    <value>Oh, ti preoccupi per me? Beh, che cosa dolce, [player]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0070" xml:space="preserve">
+    <value>Non penserai davvero che sia così facile battermi?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0071" xml:space="preserve">
+    <value>Facciamoci forza e andiamo!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0072" xml:space="preserve">
+    <value>Ah! Siamo appena all'inizio!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0075" xml:space="preserve">
+    <value>Wow! Si fa dura andare avanti...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0076" xml:space="preserve">
+    <value>Procediamo con maggior cautela...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0077" xml:space="preserve">
+    <value>Posso benissimo andare avanti, grazie! Non preoccuparti!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0080" xml:space="preserve">
+    <value>Mmm... Diventa sempre più difficile...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0081" xml:space="preserve">
+    <value>I tesori li troveremo solo dopo aver affrontato aspre lotte...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0082" xml:space="preserve">
+    <value>Non c'è qualche anima gentile che voglia curarmi?</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0135" xml:space="preserve">
+    <value>Non è così facile!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0136" xml:space="preserve">
+    <value>Uff... Puff...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0137" xml:space="preserve">
+    <value>Ahi! Mi sento a terra!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0138" xml:space="preserve">
+    <value>Mi sento giù...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0139" xml:space="preserve">
+    <value>Forse sarà la stanchezza... Mi sento debole.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0145" xml:space="preserve">
+    <value>Posso tranquillamente andare avanti!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0146" xml:space="preserve">
+    <value>Questo posto sta mettendo a dura prova la mia resistenza, ma posso ancora proseguire.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0147" xml:space="preserve">
+    <value>Ho subito dei danni, ma sono ancora in forma!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0148" xml:space="preserve">
+    <value>Fa un po' male, ma non c'è  davvero motivo di preoccuparsi.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0149" xml:space="preserve">
+    <value>Posso resistere. Non ti  preoccupare per me.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0160" xml:space="preserve">
+    <value>Ho subito dei danni...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0161" xml:space="preserve">
+    <value>Sto ancora bene, non preoccuparti...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0162" xml:space="preserve">
+    <value>Posso continuare senza problemi! Forza!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0163" xml:space="preserve">
+    <value>Non devi preoccuparti per me.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0165" xml:space="preserve">
+    <value>Sembra che la situazione stia diventando difficile.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0166" xml:space="preserve">
+    <value>Non ti preoccupare. Posso  affrontare situazioni peggiori.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0167" xml:space="preserve">
+    <value>Non preoccuparti per me! Me la caverò!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0168" xml:space="preserve">
+    <value>È una vera sfida, ma posso  proseguire.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0170" xml:space="preserve">
+    <value>Non c'è dubbio, diventa sempre più dura!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0171" xml:space="preserve">
+    <value>Non sono più al massimo della forma, forse.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0172" xml:space="preserve">
+    <value>Mi sto indebolendo, ma sto bene!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0173" xml:space="preserve">
+    <value>Va bene. Ce la possiamo fare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0175" xml:space="preserve">
+    <value>È SOLO UN GRAFFIO. NON C'È  BISOGNO DI PREOCCUPARSI!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0176" xml:space="preserve">
+    <value>NON È NIENTE. STO BENE.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0177" xml:space="preserve">
+    <value>POSSO BENISSIMO SOPPORTARE QUALCHE COLPO!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0178" xml:space="preserve">
+    <value>LA TUA PREOCCUPAZIONE È  FUORI LUOGO. LA COSA PIÙ IMPORTANTE È ANDARE AVANTI.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0180" xml:space="preserve">
+    <value>HO SUBITO POCHI DANNI. NIENTE DI CUI PREOCCUPARSI.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0181" xml:space="preserve">
+    <value>È SOLO UN GRAFFIO.  CONTINUIAMO.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0182" xml:space="preserve">
+    <value>SONO STATO COLPITO, MA NON È NIENTE DI PREOCCUPANTE.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0183" xml:space="preserve">
+    <value>QUESTI DANNI? UNA BAZZECOLA. SONO INVINCIBILE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0185" xml:space="preserve">
+    <value>PROGRESSO... COMPROMESSO...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0186" xml:space="preserve">
+    <value>STO BENE... NON TI...  PREOCCUPARE...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0187" xml:space="preserve">
+    <value>DOLORE... DOLORE...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0188" xml:space="preserve">
+    <value>SUBITI... DEI DANNI... SUBITI...  DEI DANNI...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0190" xml:space="preserve">
+    <value>Sembra proprio che io abbia subito dei danni...</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0191" xml:space="preserve">
+    <value>Non avrai veramente pensato che questa sciocchezza mi avrebbe messo in difficoltà?!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0192" xml:space="preserve">
+    <value>È solo un graffio. Non è niente.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0193" xml:space="preserve">
+    <value>Finché i danni rimangono bassi, non avrò problemi.</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0195" xml:space="preserve">
+    <value>La situazione si è fatta un po'  spiacevole!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0196" xml:space="preserve">
+    <value>Oh, no! Oh, no! La mia salute è  calata!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0197" xml:space="preserve">
+    <value>Oh, no! Oh, no! Ho subito  dei danni!</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0198" xml:space="preserve">
+    <value>Il nostro viaggio è stato  rovinato. \u266A Ma io non mollo! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_HALF_0200" xml:space="preserve">
+    <value>Adesso è diventata ancora  più difficile.</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0000" xml:space="preserve">
+    <value>Potrebbe essere la fine...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0001" xml:space="preserve">
+    <value>Per favore, aiutami,  [player]... Sto per cedere...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0002" xml:space="preserve">
+    <value>Ugh... Non voglio andare KO in un posto come questo...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0005" xml:space="preserve">
+    <value>Argh... Che dolore...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0006" xml:space="preserve">
+    <value>[player], per favore,  aiutami...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0007" xml:space="preserve">
+    <value>Sto per andare KO...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0010" xml:space="preserve">
+    <value>Non ce la faccio più... Voglio andare a casa...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0011" xml:space="preserve">
+    <value>Per favore, ti prego,  non lasciarmi...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0012" xml:space="preserve">
+    <value>A-A-Aiuto...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0015" xml:space="preserve">
+    <value>Potrei non farcela... E allora dovresti andare avanti senza di me, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0016" xml:space="preserve">
+    <value>Urk... Aiutami...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0017" xml:space="preserve">
+    <value>Oh, diamine... Mi sa che è la fine...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0020" xml:space="preserve">
+    <value>Dalla padella alla brace...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0021" xml:space="preserve">
+    <value>Ugh, no... Non in un posto del genere...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0022" xml:space="preserve">
+    <value>Ugh... Dunque questa sarà la mia ultima avventura?</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0025" xml:space="preserve">
+    <value>Mai! Non posso cedere! Non in  un posto come questo!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0026" xml:space="preserve">
+    <value>N-No... M-Mai... Non mi arrenderò... finché respiro...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0027" xml:space="preserve">
+    <value>Non... ancora... No... non ora... no!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0030" xml:space="preserve">
+    <value>Che stress... Che stress...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0031" xml:space="preserve">
+    <value>Aiuto... Aiuto... Per favore,  [player], aiutami...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0032" xml:space="preserve">
+    <value>Resistere... Posso solo... resistere...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0035" xml:space="preserve">
+    <value>Gah! Mi si sta annebbiando  la vista!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0036" xml:space="preserve">
+    <value>Gah! Non dovrebbe succedere!  Non a me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0037" xml:space="preserve">
+    <value>Ugh... Gah... Vai avanti...  Vai avanti senza di me...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0040" xml:space="preserve">
+    <value>Ahiahiahi! Perché mi sento così male?</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0041" xml:space="preserve">
+    <value>Argh... non riesco...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0042" xml:space="preserve">
+    <value>Ooh... Gasp... Ho bisogno di cure...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0045" xml:space="preserve">
+    <value>Oooh... [player]... Non ce la faccio...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0046" xml:space="preserve">
+    <value>Se mi dovesse succedere qualcosa... dovrai andare avanti...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0047" xml:space="preserve">
+    <value>Aiuto, [player]... Mi sento debole...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0050" xml:space="preserve">
+    <value>Ack! Ack! No! Non andrò KO senza prima coprirmi di gloria!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0051" xml:space="preserve">
+    <value>Mai! Mai! Non mi arrenderò, costi quel che costi!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0052" xml:space="preserve">
+    <value>Ah ah! Ack! Forza! Vi farò  vedere chi sono!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0055" xml:space="preserve">
+    <value>Ohi ohi... Sto... per  andare KO...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0056" xml:space="preserve">
+    <value>Ohi ohi... Non va affatto bene... Non potresti curarmi?</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0057" xml:space="preserve">
+    <value>Spero solo... di riuscire a tornare a casa...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0060" xml:space="preserve">
+    <value>Devo avere coraggio... Ugh...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0061" xml:space="preserve">
+    <value>Continua senza di me,  [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0062" xml:space="preserve">
+    <value>Devo... lottare...  Lottare fino alla FINE...!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0065" xml:space="preserve">
+    <value>Ho subito molti danni...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0066" xml:space="preserve">
+    <value>Se le cose dovessero peggiorare, dovrai andare avanti senza di me, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0067" xml:space="preserve">
+    <value>Gasp... Gasp... Devo tener duro fino alla fine...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0070" xml:space="preserve">
+    <value>Sì... Sì... Le sto proprio prendendo...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0071" xml:space="preserve">
+    <value>Questo postaccio... Non sarà certo l'ultima cosa che vedo...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0072" xml:space="preserve">
+    <value>Ah! No! Non ti starai davvero preoccupando per... me...? Che bella l'amicizia!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0075" xml:space="preserve">
+    <value>Ooooh... Non voglio esserti d'intralcio...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0076" xml:space="preserve">
+    <value>Sto... bene...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0077" xml:space="preserve">
+    <value>Oh, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0080" xml:space="preserve">
+    <value>Bah... È troppo...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0081" xml:space="preserve">
+    <value>Curami. Devi curarmi. Per favore, [player]...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0082" xml:space="preserve">
+    <value>Stare... stare... stare al passo è tutto quello che posso fare...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0135" xml:space="preserve">
+    <value>Non posso... Non posso...  Non posso...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0136" xml:space="preserve">
+    <value>Oh, che m-m-male...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0137" xml:space="preserve">
+    <value>Terribile... Terribile... Terribile!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0138" xml:space="preserve">
+    <value>Sono quasi KO...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0139" xml:space="preserve">
+    <value>Basta... No... Basta...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0145" xml:space="preserve">
+    <value>Veramente male, terribile...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0146" xml:space="preserve">
+    <value>Il mio spirito è quasi spezzato... Aiutami, per favore...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0147" xml:space="preserve">
+    <value>P-P-Posso a malapena stare in piedi...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0148" xml:space="preserve">
+    <value>Non... Non sarò in grado di  continuare ancora per... molto...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0149" xml:space="preserve">
+    <value>Questa è... sicuramente... la fine per me... Aiutami!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0160" xml:space="preserve">
+    <value>Ahi... Ahi... F-F-Fa male...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0161" xml:space="preserve">
+    <value>Sto per cedere...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0162" xml:space="preserve">
+    <value>È troppo dura continuare...  Aiuto...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0163" xml:space="preserve">
+    <value>Sii gentile... Curami...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0165" xml:space="preserve">
+    <value>N-N-No... La mia salute...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0166" xml:space="preserve">
+    <value>Subiti... troppi... troppi danni...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0167" xml:space="preserve">
+    <value>Andrò KO se non ricevo cure... Qualcuno...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0168" xml:space="preserve">
+    <value>Sto... Sto per andare KO... Fa male...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0170" xml:space="preserve">
+    <value>N-N-No... La mia salute...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0171" xml:space="preserve">
+    <value>Sto per andare KO... Qualcuno...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0172" xml:space="preserve">
+    <value>Ho subito troppi danni... Sbrigati, ho bisogno di cure!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0173" xml:space="preserve">
+    <value>B-B-Basta... Sto andando KO...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0175" xml:space="preserve">
+    <value>NON VA AFFATTO BENE...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0176" xml:space="preserve">
+    <value>NON FALLIRÒ... PROPRIO QUI!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0177" xml:space="preserve">
+    <value>N-N-NON MI FARÒ SCONFIGGERE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0178" xml:space="preserve">
+    <value>HO SUBITO MOLTI DANNI! MA MI RIFIUTO DI CEDERE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0180" xml:space="preserve">
+    <value>COME HO POTUTO SUBIRE COSÌ TANTI DANNI?!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0181" xml:space="preserve">
+    <value>CHE MALE... MA CE LA POSSO  FARE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0182" xml:space="preserve">
+    <value>RAGGIUNGERE QUESTO LIVELLO DI DANNI? NO!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0183" xml:space="preserve">
+    <value>HO SUBITO... DANNI ENORMI... MA NON CEDERÒ MAI!</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0185" xml:space="preserve">
+    <value>N-N-NO... STO A MALAPENA IN PIEDI...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0186" xml:space="preserve">
+    <value>TI PREGO... CURAMI...  TI PREGO...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0187" xml:space="preserve">
+    <value>NON RIESCO... NON RIESCO PIÙ...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0188" xml:space="preserve">
+    <value>È COSÌ... È COSÌ CHE CADRÒ...?</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0190" xml:space="preserve">
+    <value>Gah! Ho subito molti più danni di quanto mi aspettassi...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0191" xml:space="preserve">
+    <value>Soffro... Ma ci deve essere qualcosa che si può fare...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0192" xml:space="preserve">
+    <value>La mia salute sta calando... Se non ricevo delle cure...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0193" xml:space="preserve">
+    <value>Ho subito danni enormi... Forse ho sottovalutato la sfida...?</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0195" xml:space="preserve">
+    <value>Le cose si mettono proprio  male...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0196" xml:space="preserve">
+    <value>Mi sento molto debole...  Per favore, aiutami...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0197" xml:space="preserve">
+    <value>Sono al limite...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0198" xml:space="preserve">
+    <value>Sto per andare KO...  Qualcuno mi curi...</value>
+    <comment></comment>  </data>
+  <data name="TALK_PINCH_0200" xml:space="preserve">
+    <value>Potrebbe essere la fine...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0000" xml:space="preserve">
+    <value>Un'altra eccitante avventura! Dove stiamo andando?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0001" xml:space="preserve">
+    <value>Partiamo! Andiamo a esplorare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0002" xml:space="preserve">
+    <value>Ok! Andiamo a cercare dei  tesori!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0003" xml:space="preserve">
+    <value>Cosa troveremo stavolta?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0005" xml:space="preserve">
+    <value>Su col morale questa volta!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0006" xml:space="preserve">
+    <value>Sono disponibile a partire in qualsiasi momento.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0007" xml:space="preserve">
+    <value>Non vedo l'ora di partire per la prossima avventura!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0010" xml:space="preserve">
+    <value>Questo viaggio mi preoccupa  un po'!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0011" xml:space="preserve">
+    <value>Allora, qual è la nostra prossima meta?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0012" xml:space="preserve">
+    <value>Farò del mio meglio!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0015" xml:space="preserve">
+    <value>Bene, qual è la prossima meta?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0016" xml:space="preserve">
+    <value>Tra quanto partiamo?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0017" xml:space="preserve">
+    <value>Oh, possiamo finalmente partire?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0020" xml:space="preserve">
+    <value>Oooh... Che bel calduccio! Si sta proprio bene qui!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0021" xml:space="preserve">
+    <value>Non c'è fretta... Posso aspettare tranquillamente.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0022" xml:space="preserve">
+    <value>Senti... E se troviamo un tesoro?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0025" xml:space="preserve">
+    <value>Pronti, partenza, via!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0026" xml:space="preserve">
+    <value>Sono felice di poterti essere d'aiuto, [hero]!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0030" xml:space="preserve">
+    <value>Esplorare... Esplorare...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0031" xml:space="preserve">
+    <value>Tesoro... trovare... tesoro...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0032" xml:space="preserve">
+    <value>Evviva... Evviva...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0035" xml:space="preserve">
+    <value>Sono pronto a tutto!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0036" xml:space="preserve">
+    <value>È ora di andare! Muoviamoci!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0037" xml:space="preserve">
+    <value>Vediamo di partire presto, va bene? Altrimenti vado da solo!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0040" xml:space="preserve">
+    <value>È finalmente ora di partire?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0041" xml:space="preserve">
+    <value>Possiamo finalmente partire?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0042" xml:space="preserve">
+    <value>Sono stufo di aspettare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0045" xml:space="preserve">
+    <value>Cosa dici? Dove andiamo adesso?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0046" xml:space="preserve">
+    <value>Andiamo a trovare dei bei  tesori!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0047" xml:space="preserve">
+    <value>Che noia aspettare. Uff...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0050" xml:space="preserve">
+    <value>Sarà una bella prova per me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0051" xml:space="preserve">
+    <value>Dai! Sbrigati! Vai a prepararti!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0052" xml:space="preserve">
+    <value>Dai! Datti una mossa!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0055" xml:space="preserve">
+    <value>Urrà! Andiamo a esplorare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0056" xml:space="preserve">
+    <value>Sì! Io ci sono!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0057" xml:space="preserve">
+    <value>Zzzz... Zzzz...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0058" xml:space="preserve">
+    <value>Hai fatto provvista di cibo?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0060" xml:space="preserve">
+    <value>Un'avventura! Voglio una GRANDE avventura!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0061" xml:space="preserve">
+    <value>Andiamo! È PROPRIO ora!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0062" xml:space="preserve">
+    <value>Sono prontissimo ad ANDARE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0063" xml:space="preserve">
+    <value>Facciamo vedere di che PASTA siamo fatti in quest'avventura!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0065" xml:space="preserve">
+    <value>Ok! Su con la vita! Andiamo a  cercare qualche tesoro!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0066" xml:space="preserve">
+    <value>Non ti pare emozionante tutto questo?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0067" xml:space="preserve">
+    <value>Dai! Perché indugiare?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0070" xml:space="preserve">
+    <value>Esplorare? Lascia fare a me!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0071" xml:space="preserve">
+    <value>Sì, questa sarà proprio una grande avventura!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0072" xml:space="preserve">
+    <value>Partiamo quando vuoi!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0075" xml:space="preserve">
+    <value>Non hai dimenticato niente?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0076" xml:space="preserve">
+    <value>Tutto pronto per l'esplorazione, [hero]?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0077" xml:space="preserve">
+    <value>Non vedo l'ora di esplorare con te.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0080" xml:space="preserve">
+    <value>Posso quasi vederla... Una montagna di tesori...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0081" xml:space="preserve">
+    <value>Sì, sì... Una montagna di tesori... Non male, eh?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0082" xml:space="preserve">
+    <value>L'attesa... La tensione... Sono pane per i miei denti!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0135" xml:space="preserve">
+    <value>La-la-la! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0136" xml:space="preserve">
+    <value>Che bello! \u266A Adoro esplorare! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0137" xml:space="preserve">
+    <value>Presto! \u266A Partiamo al più presto! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0138" xml:space="preserve">
+    <value>Sì, sì! \u266A Farò del mio  meglio! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0139" xml:space="preserve">
+    <value>Dove, dove? \u266A Non vedo l'ora di scoprire dove! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0145" xml:space="preserve">
+    <value>Non vedo l'ora di partire!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0146" xml:space="preserve">
+    <value>Sarebbe fantastico scoprire  qualcosa di nuovo, vero?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0147" xml:space="preserve">
+    <value>È da un po' che aspetto...  Possiamo partire ora?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0148" xml:space="preserve">
+    <value>Facciamo di questa esplorazione un successo!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0149" xml:space="preserve">
+    <value>Posso partire quando vuoi.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0150" xml:space="preserve">
+    <value>Tutto pronto!!!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0151" xml:space="preserve">
+    <value>Come andrà a finire? Non vedo l'ora di scoprirlo!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0152" xml:space="preserve">
+    <value>Partiremo tra poco?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0153" xml:space="preserve">
+    <value>Non c'è fretta! Preparati e poi partiremo.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0155" xml:space="preserve">
+    <value>Posso partire quando vuoi!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0156" xml:space="preserve">
+    <value>Partiamo appena possibile!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0157" xml:space="preserve">
+    <value>Siamo in partenza? L'attesa è stancante...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0158" xml:space="preserve">
+    <value>Non vedo l'ora di iniziare a  esplorare!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0160" xml:space="preserve">
+    <value>Da parte mia, è tutto pronto per la partenza!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0161" xml:space="preserve">
+    <value>Come andrà a finire? Non vedo l'ora di scoprirlo!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0162" xml:space="preserve">
+    <value>Non appena tutto è pronto, direi che possiamo partire!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0163" xml:space="preserve">
+    <value>Partiremo a breve?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0165" xml:space="preserve">
+    <value>ANDIAMO! NON È ORA DI PARTIRE?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0166" xml:space="preserve">
+    <value>POSSIAMO PARTIRE QUANDO  VUOI.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0167" xml:space="preserve">
+    <value>SBRIGATI! DOBBIAMO ANDARE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0168" xml:space="preserve">
+    <value>STAI DICENDO CHE DEVO ASPETTARE?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0170" xml:space="preserve">
+    <value>VUOI CHE ASPETTI?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0171" xml:space="preserve">
+    <value>SONO PRONTO A COMBATTERE!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0172" xml:space="preserve">
+    <value>QUANTO DOVRÒ ASPETTARE ANCORA?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0173" xml:space="preserve">
+    <value>PARTIAMO! SBRIGATI!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0175" xml:space="preserve">
+    <value>ORA... POSSIAMO ANDARE...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0176" xml:space="preserve">
+    <value>QUANDO... VUOI...  QUANDO... VUOI...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0177" xml:space="preserve">
+    <value>PERCHÉ... PERCHÉ... PERCHÉ  ASPETTARE?</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0178" xml:space="preserve">
+    <value>TI... SEGUIRÒ... OVUNQUE...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0180" xml:space="preserve">
+    <value>Tutto pronto.</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0181" xml:space="preserve">
+    <value>Ti seguirò ovunque andrai. Hai capito? Ovunque!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0182" xml:space="preserve">
+    <value>Le tenebre sono dentro di  me... A volte posso ancora sentirle...</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0183" xml:space="preserve">
+    <value>Possiamo partire? Andiamo, allora!</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0185" xml:space="preserve">
+    <value>Si va! Si va! In  e-splo-razione! \u266A Che tre-pi-dazione! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0186" xml:space="preserve">
+    <value>Par-tenza? Par-tenza? \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0187" xml:space="preserve">
+    <value>Aspetto! Aspetto! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0188" xml:space="preserve">
+    <value>Tutto pronto! Tutto pronto! \u266A</value>
+    <comment></comment>  </data>
+  <data name="TALK_WAIT_0190" xml:space="preserve">
+    <value>Che piacere vederti!</value>
+    <comment></comment>  </data>
+</root>

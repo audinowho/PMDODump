@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<Sounds>
+  <Hunger>Battle/DUN_Hunger</Hunger>
+  <NullDmg>Battle/DUN_Miss_2</NullDmg>
+  <Cursed>Battle/DUN_Sticky</Cursed>
+  <Pickup>Battle/DUN_Pick_Up</Pickup>
+  <PickupFoe>Battle/DUN_Pick_Up_Foe</PickupFoe>
+  <Replace>Battle/EVT_CH02_Box_Open</Replace>
+  <Place>Battle/EVT_CH02_Item_Place</Place>
+  <Equip>Battle/DUN_Equip</Equip>
+  <Money>Battle/DUN_Money</Money>
+  <Leader>Battle/DUN_Leader_Change</Leader>
+</Sounds>
+<TitleBG>Sky</TitleBG>
+<TitleBGM>A01. Title.ogg</TitleBGM>
+<MonsterBGM>C03. Monster House.ogg</MonsterBGM>
+</root>

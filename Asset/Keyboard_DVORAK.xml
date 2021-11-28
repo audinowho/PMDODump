@@ -1,0 +1,37 @@
+<Config>
+  <DirKeys>
+    <DirKey>Down</DirKey>
+    <DirKey>Left</DirKey>
+    <DirKey>Up</DirKey>
+    <DirKey>Right</DirKey>
+  </DirKeys>
+  <ActionKeys>
+    <ActionKey>Q</ActionKey>
+    <ActionKey>OemSemicolon</ActionKey>
+    <ActionKey>Q</ActionKey>
+    <ActionKey>OemSemicolon</ActionKey>
+    <ActionKey>A</ActionKey>
+    <ActionKey>O</ActionKey>
+    <ActionKey>E</ActionKey>
+    <ActionKey>J</ActionKey>
+    <ActionKey>Back</ActionKey>
+    <ActionKey>Escape</ActionKey>
+    <ActionKey>Tab</ActionKey>
+    <ActionKey>OemQuotes</ActionKey>
+    <ActionKey>OemComma</ActionKey>
+    <ActionKey>OemPeriod</ActionKey>
+    <ActionKey>P</ActionKey>
+    <ActionKey>D1</ActionKey>
+    <ActionKey>D2</ActionKey>
+    <ActionKey>D3</ActionKey>
+    <ActionKey>D4</ActionKey>
+    <ActionKey>O</ActionKey>
+    <ActionKey>E</ActionKey>
+    <ActionKey>OemSemicolon</ActionKey>
+    <ActionKey>Q</ActionKey>
+    <ActionKey>O</ActionKey>
+    <ActionKey>A</ActionKey>
+  </ActionKeys>
+  <Enter>True</Enter>
+  <NumPad>True</NumPad>
+</Config>

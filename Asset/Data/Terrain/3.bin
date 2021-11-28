@@ -1,0 +1,1 @@
+﻿{"Object":{"$type":"RogueEssence.Data.TerrainData, RogueEssence","Name":{"DefaultText":"Variable-Texture Water","LocalTexts":{}},"Comment":"","Element":0,"BlockType":1,"BlockDiagonal":false,"BlockLight":false,"ShadowType":3,"LandedOnTiles":[{"Key":{"str":[0]},"Value":{"$type":"PMDC.Dungeon.RemoveStatusEvent, PMDC","StatusID":2}}]},"Version":"1.0.0.0"}
