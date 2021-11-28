@@ -1,5 +1,6 @@
 packages/
 bin/
+!Asset/Data/Script/bin/
 obj/
 .vs/
 *.csproj.user
@@ -9,3 +10,9 @@ obj/
 *.manifest
 .vscode
 publish/
+.idea/
+__pycache__/
+Scripts/.credentials/sheets.googleapis.com-localization.json
+Scripts/client_secret.json
+Scripts/sheet_id.txt
+venv/

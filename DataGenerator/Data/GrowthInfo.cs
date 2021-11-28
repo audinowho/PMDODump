@@ -129,7 +129,7 @@ namespace DataGenerator.Data
         public const int MAX_GROUPS = 6;
         public static void AddGrowthGroupData()
         {
-            //DataInfo.DeleteIndexedData(DataManager.DataType.GrowthGroup.ToString());
+            DataInfo.DeleteIndexedData(DataManager.DataType.GrowthGroup.ToString());
             for (int ii = 0; ii < MAX_GROUPS; ii++)
             {
                 List<int> exp = new List<int>();

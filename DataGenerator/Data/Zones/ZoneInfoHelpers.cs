@@ -45,6 +45,8 @@ namespace DataGenerator.Data
         static readonly Priority PR_TILES_BARRIER = new Priority(0, 1);
         //0.2 add extra floor changes ex vault barriers
         static readonly Priority PR_TILES_GEN_EXTRA = new Priority(0, 2);
+        //0.3 add extra floor changes ex tunnels
+        static readonly Priority PR_TILES_GEN_TUNNEL = new Priority(0, 3);
         //1 money respawn
         static readonly Priority PR_RESPAWN_MONEY = new Priority(1);
         //1.1 item respawn
@@ -134,7 +136,7 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
         }
 
-        public static void AddMoneyData<T>(MapGen<T> layout, RandRange divAmount, bool includeHalls=false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.None) where T : ListMapGenContext
+        public static void AddMoneyData<T>(MapGen<T> layout, RandRange divAmount, bool includeHalls = false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.None) where T : ListMapGenContext
         {
             TerminalSpawnStep<T, MoneySpawn> moneyStep = new TerminalSpawnStep<T, MoneySpawn>(new MoneyDivSpawner<T>(divAmount), includeHalls);
             if (connectivity != ConnectivityRoom.Connectivity.None)
@@ -226,10 +228,10 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
         }
 
-        static void AddStairStep<T>(MapGen<T> layout, bool goUp)
+        static void AddStairStep<T>(MapGen<T> layout, bool goDown)
             where T : class, IFloorPlanGenContext, IPlaceableGenContext<MapGenEntrance>, IPlaceableGenContext<MapGenExit>
         {
-            var step = new FloorStairsStep<T, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile(goUp ? 2 : 1, true)));
+            var step = new FloorStairsStep<T, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile(goDown ? 2 : 1, true)));
             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
             step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
             layout.GenSteps.Add(PR_EXITS, step);
@@ -463,7 +465,7 @@ namespace DataGenerator.Data
             return post_mob;
         }
 
-        static MobSpawn GetFOEMob(int species, int ability, int move1, int move2, int move3, int move4, int tactic = 19)
+        static MobSpawn GetFOEMob(int species, int ability, int move1, int move2, int move3, int move4, int baseLv)
         {
             MobSpawn post_mob = new MobSpawn();
             post_mob.BaseForm = new MonsterID(species, 0, -1, Gender.Unknown);
@@ -476,8 +478,8 @@ namespace DataGenerator.Data
                 post_mob.SpecifiedSkills.Add(move3);
             if (move4 > 0)
                 post_mob.SpecifiedSkills.Add(move4);
-            post_mob.Tactic = tactic;
-            post_mob.Level = new RandRange(3);
+            post_mob.Tactic = 19;
+            post_mob.Level = new RandRange(baseLv);
             post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(5, 3));
             post_mob.SpawnFeatures.Add(new MobSpawnMovesOff(post_mob.SpecifiedSkills.Count));
             return post_mob;
@@ -497,8 +499,13 @@ namespace DataGenerator.Data
 
         static MobSpawn GetBossMob(int species, int ability, int move1, int move2, int move3, int move4, int item, Loc loc, int tactic = 20)
         {
+            return GetBossMob(new MonsterID(species, 0, -1, Gender.Unknown), ability, move1, move2, move3, move4, item, loc, tactic);
+        }
+
+        static MobSpawn GetBossMob(MonsterID id, int ability, int move1, int move2, int move3, int move4, int item, Loc loc, int tactic = 20)
+        {
             MobSpawn post_mob = new MobSpawn();
-            post_mob.BaseForm = new MonsterID(species, 0, 0, Gender.Unknown);
+            post_mob.BaseForm = id;
             post_mob.Intrinsic = ability;
             if (move1 > 0)
                 post_mob.SpecifiedSkills.Add(move1);
@@ -515,7 +522,7 @@ namespace DataGenerator.Data
             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
             post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(4, 3));
             MobSpawnScaledBoost boost = new MobSpawnScaledBoost(new IntRange(1, 50));
-            boost.MaxHPBonus = new IntRange(5, MonsterFormData.MAX_STAT_BOOST);
+            boost.MaxHPBonus = new IntRange(15, MonsterFormData.MAX_STAT_BOOST);
             post_mob.SpawnFeatures.Add(boost);
             return post_mob;
         }
@@ -573,5 +580,184 @@ namespace DataGenerator.Data
             return step;
         }
 
+
+        public static void CreateContentLists()
+        {
+            List<string> monsters = new List<string>();
+            List<string> skills = new List<string>();
+            List<string> intrinsics = new List<string>();
+            List<string> statuses = new List<string>();
+            List<string> ai = new List<string>();
+            List<string> items = new List<string>();
+            List<string> roles = new List<string>();
+
+
+
+            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Monster].Count; ii++)
+                monsters.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries[ii].Name.DefaultText);
+
+            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Skill].Count; ii++)
+                skills.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Skill].Entries[ii].Name.DefaultText);
+
+            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Count; ii++)
+                intrinsics.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Entries[ii].Name.DefaultText);
+
+            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Status].Count; ii++)
+            {
+                StatusData data = DataManager.Instance.GetStatus(ii);
+                if (data.MenuName && data.Name.DefaultText != "" && data.StatusStates.Contains<TransferStatusState>())
+                    statuses.Add((ii).ToString("D3") + ": " + data.Name.DefaultText);
+            }
+
+            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.AI].Count; ii++)
+                ai.Add((ii).ToString("D2") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.AI].Entries[ii].Name.DefaultText);
+
+            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Item].Count; ii++)
+                items.Add((ii).ToString("D4") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Item].Entries[ii].Name.DefaultText);
+
+            for (int ii = 0; ii <= (int)TeamMemberSpawn.MemberRole.Loner; ii++)
+                roles.Add(((TeamMemberSpawn.MemberRole)ii).ToString());
+
+
+            string path = GenPath.ZONE_PATH + "PreZone.txt";
+            using (StreamWriter file = new StreamWriter(path))
+            {
+                file.WriteLine("Monster\tSkill\tIntrinsic\tStatus\tAI\tItem\tRole");
+                file.WriteLine("---: NULL\t---: NULL\t---: NULL\t---: NULL\t--: NULL\t----: NULL\t---");
+                int ii = 0;
+                bool completed = false;
+                while (!completed)
+                {
+                    completed = true;
+
+                    List<string> row = new List<string>();
+
+                    if (ii < monsters.Count)
+                    {
+                        row.Add(monsters[ii]);
+                        completed = false;
+                    }
+                    else
+                        row.Add("");
+                    if (ii < skills.Count)
+                    {
+                        row.Add(skills[ii]);
+                        completed = false;
+                    }
+                    else
+                        row.Add("");
+                    if (ii < intrinsics.Count)
+                    {
+                        row.Add(intrinsics[ii]);
+                        completed = false;
+                    }
+                    else
+                        row.Add("");
+                    if (ii < statuses.Count)
+                    {
+                        row.Add(statuses[ii]);
+                        completed = false;
+                    }
+                    else
+                        row.Add("");
+                    if (ii < ai.Count)
+                    {
+                        row.Add(ai[ii]);
+                        completed = false;
+                    }
+                    else
+                        row.Add("");
+                    if (ii < items.Count)
+                    {
+                        row.Add(items[ii]);
+                        completed = ii >= 700;
+                    }
+                    else
+                        row.Add("");
+                    if (ii < roles.Count)
+                    {
+                        row.Add(roles[ii]);
+                        completed = false;
+                    }
+                    else
+                        row.Add("");
+
+                    file.WriteLine(String.Join('\t', row.ToArray()));
+                    ii++;
+                }
+            }
+        }
+
+        static readonly int[][] specific_tms = { new int[] { 0588, 2500 }, //TM Embargo
+                                                new int[] { 0591, 5000 }, //TM Psychic
+                                                new int[] { 0593, 3500 }, //TM Will-O-Wisp
+                                                new int[] { 0594, 5000 }, //TM Dragon Tail
+                                                new int[] { 0595, 5000 }, //TM Flamethrower
+                                                new int[] { 0601, 5000 }, //TM Dive
+                                                new int[] { 0605, 5000 }, //TM Waterfall
+                                                new int[] { 0606, 3500 }, //TM Smack Down
+                                                new int[] { 0607, 5000 }, //TM Flame Charge
+                                                new int[] { 0608, 2500 }, //TM Low Sweep
+                                                new int[] { 0609, 5000 }, //TM Charge Beam
+                                                new int[] { 0611, 5000 }, //TM Blizzard
+                                                new int[] { 0612, 5000 }, //TM Wild Charge
+                                                new int[] { 0613, 5000 }, //TM Hone Claws
+                                                new int[] { 0614, 3500 }, //TM Telekinesis
+                                                new int[] { 0616, 2500 }, //TM Rock Polish
+                                                new int[] { 0618, 3500 }, //TM Gyro Ball
+                                                new int[] { 0619, 5000 }, //TM Rock Slide
+                                                new int[] { 0620, 5000 }, //TM Sludge Wave
+                                                new int[] { 0622, 3500 }, //TM Trick Room
+                                                new int[] { 0625, 3500 }, //TM Venoshock
+                                                new int[] { 0627, 5000 }, //TM Scald
+                                                new int[] { 0628, 5000 }, //TM Energy Ball
+                                                new int[] { 0629, 5000 }, //TM Explosion
+                                                new int[] { 0630, 3500 }, //TM U-turn
+                                                new int[] { 0631, 3500 }, //TM Thunder Wave
+                                                new int[] { 0633, 5000 }, //TM Pluck
+                                                new int[] { 0635, 5000 }, //TM Fire Blast
+                                                new int[] { 0636, 2500 }, //TM Ally Switch
+                                                new int[] { 0639, 5000 }, //TM Acrobatics
+                                                new int[] { 0640, 5000 }, //TM Thunderbolt
+                                                new int[] { 0641, 5000 }, //TM Shadow Ball
+                                                new int[] { 0642, 5000 }, //TM False Swipe
+                                                new int[] { 0645, 5000 }, //TM Roost
+                                                new int[] { 0646, 2500 }, //TM Infestation
+                                                new int[] { 0647, 5000 }, //TM Drain Punch
+                                                new int[] { 0648, 5000 }, //TM Water Pulse
+                                                new int[] { 0649, 5000 }, //TM Dark Pulse
+                                                new int[] { 0650, 3500 }, //TM Giga Drain
+                                                new int[] { 0651, 5000 }, //TM Shock Wave
+                                                new int[] { 0652, 5000 }, //TM Volt Switch
+                                                new int[] { 0653, 5000 }, //TM Steel Wing
+                                                new int[] { 0655, 5000 }, //TM Psyshock
+                                                new int[] { 0656, 3500 }, //TM Bulldoze
+                                                new int[] { 0657, 5000 }, //TM Poison Jab
+                                                new int[] { 0658, 5000 }, //TM Frost Breath
+                                                new int[] { 0659, 3500 }, //TM Dream Eater
+                                                new int[] { 0660, 5000 }, //TM Thunder
+                                                new int[] { 0661, 5000 }, //TM X-Scissor
+                                                new int[] { 0662, 5000 }, //TM Dazzling Gleam
+                                                new int[] { 0663, 3500 }, //TM Retaliate
+                                                new int[] { 0665, 2500 }, //TM Quash
+                                                new int[] { 0666, 2500 }, //TM Snarl
+                                                new int[] { 0668, 2500 }, //TM Aerial Ace
+                                                new int[] { 0669, 5000 }, //TM Focus Blast
+                                                new int[] { 0670, 2500 }, //TM Incinerate
+                                                new int[] { 0671, 2500 }, //TM Struggle Bug
+                                                new int[] { 0672, 5000 }, //TM Overheat
+                                                new int[] { 0673, 3500 }, //TM Dragon Claw
+                                                new int[] { 0676, 5000 }, //TM Sludge Bomb
+                                                new int[] { 0679, 5000 }, //TM Rock Tomb
+                                                new int[] { 0683, 3500 }, //TM Recycle
+                                                new int[] { 0684, 5000 }, //TM Ice Beam
+                                                new int[] { 0685, 5000 }, //TM Flash Cannon
+                                                new int[] { 0687, 5000 }, //TM Stone Edge
+                                                new int[] { 0688, 5000 }, //TM Shadow Claw
+                                                new int[] { 0690, 5000 }, //TM Brick Break
+                                                new int[] { 0691, 5000 }, //TM Calm Mind
+                                                new int[] { 0692, 2500 }, //TM Torment
+                                                new int[] { 0696, 5000 } //TM Bulk Up
+                                              };
     }
 }

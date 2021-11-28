@@ -13,13 +13,29 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Data\AIInfo.cs" />
+    <Compile Include="Data\AutoItemInfo.cs" />
+    <Compile Include="Data\DataInfo.cs" />
+    <Compile Include="Data\ElementInfo.cs" />
+    <Compile Include="Data\EmoteInfo.cs" />
+    <Compile Include="Data\GrowthInfo.cs" />
+    <Compile Include="Data\IntrinsicInfo.cs" />
+    <Compile Include="Data\ItemInfo.cs" />
+    <Compile Include="Data\MapStatusInfo.cs" />
+    <Compile Include="Data\RankInfo.cs" />
+    <Compile Include="Data\SkillGroupInfo.cs" />
+    <Compile Include="Data\SkillInfo.cs" />
+    <Compile Include="Data\MonsterInfo.cs" />
+    <Compile Include="Data\SkinInfo.cs" />
+    <Compile Include="Data\StatusInfo.cs" />
+    <Compile Include="Data\TileInfo.cs" />
+    <Compile Include="Data\Zones\MapInfo.cs" />
     <Compile Include="Data\Zones\ZoneInfoHelpers.cs" />
+    <Compile Include="Data\Zones\ZoneInfoRogue.cs" />
     <Compile Include="Data\Zones\ZoneInfoBase.cs" />
     <Compile Include="Data\Zones\ZoneInfo.cs" />
-    <Compile Include="Data\MonsterInfo.cs" />
-    <Compile Include="Data\GrowthInfo.cs" />
-    <Compile Include="Data\SkillGroupInfo.cs" />
-    <Compile Include="Data\ElementInfo.cs" />
+    <Compile Include="Dev\Localization.cs" />
+    <Compile Include="GenPath.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

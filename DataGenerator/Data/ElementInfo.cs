@@ -40,7 +40,7 @@ namespace DataGenerator.Data
         public const int MAX_ELEMENTS = 19;
         public static void AddElementData()
         {
-            //DataInfo.DeleteIndexedData(DataManager.DataType.Element.ToString());
+            DataInfo.DeleteIndexedData(DataManager.DataType.Element.ToString());
             for (int ii = 0; ii < MAX_ELEMENTS; ii++)
             {
                 ElementData element = new ElementData(new LocalText(((Element)ii).ToString()), (char)(ii + 0xE080));

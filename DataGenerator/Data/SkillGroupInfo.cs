@@ -35,7 +35,7 @@ namespace DataGenerator.Data
         public const int MAX_GROUPS = 15;
         public static void AddSkillGroupData()
         {
-            //DataInfo.DeleteIndexedData(DataManager.DataType.SkillGroup.ToString());
+            DataInfo.DeleteIndexedData(DataManager.DataType.SkillGroup.ToString());
             for (int ii = 0; ii < MAX_GROUPS; ii++)
             {
                 SkillGroupData skillGroup = new SkillGroupData(new LocalText(((EggGroup)ii).ToString()));

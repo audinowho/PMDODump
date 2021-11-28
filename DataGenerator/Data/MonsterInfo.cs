@@ -58,7 +58,7 @@ namespace DataGenerator.Data
         static int[] added = { 4, 12 };
         const int TOTAL_LANG_COLS = 13;
 
-        static string MONSTER_PATH { get => /*GenPath.DATA_GEN_PATH + */"Monster/"; }
+        static string MONSTER_PATH { get => GenPath.DATA_GEN_PATH + "Monster/"; }
         static string DEX_FILE { get => MONSTER_PATH + "pokedex.6.sqlite"; }
         static string DEX_7_FILE { get => MONSTER_PATH + "pokedex.7.sqlite"; }
         static string TL_FILE { get => MONSTER_PATH + "pokedex.8.sqlite"; }
