@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>DataGenerator</RootNamespace>
     <AssemblyName>DataGenerator</AssemblyName>
+    <AssemblyVersion>0.5.2.1</AssemblyVersion>
     <TargetFramework>net5.0</TargetFramework>
     <EnableDefaultItems>false</EnableDefaultItems>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
