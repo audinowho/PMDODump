@@ -1,0 +1,36 @@
+name: deploy
+on: push
+
+jobs:
+  build_deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v1.7.2
+        with:
+          dotnet-version: 5.0.x
+      - name: Restore
+        run: dotnet restore
+      - name: Build Windows App
+        run: dotnet publish -c Release -r win-x64 PMDC/PMDC/PMDC.csproj;mv PMDC/publish/win-x64/PMDC/ PMDC/publish/win-x64/PMDO/;mv PMDC/publish/win-x64/PMDO/PMDC.exe PMDC/publish/win-x64/PMDO/PMDO.exe
+      - name: Build Linux App
+        run: dotnet publish -c Release -r linux-x64 PMDC/PMDC/PMDC.csproj;mv PMDC/publish/linux-x64/PMDC/ PMDC/publish/linux-x64/PMDO/;mv PMDC/publish/linux-x64/PMDO/PMDC PMDC/publish/linux-x64/PMDO/PMDO
+      - name: Build Mac App
+        run: dotnet publish -c Release -r osx-x64 PMDC/PMDC/PMDC.csproj;mv PMDC/publish/osx-x64/PMDC/ PMDC/publish/osx-x64/PMDO/;mv PMDC/publish/osx-x64/PMDO/PMDC PMDC/publish/osx-x64/PMDO/PMDO
+      - name: Build Windows Server
+        run: dotnet publish -c Release -r win-x64 PMDC/RogueEssence/WaypointServer/WaypointServer.csproj;mv PMDC/RogueEssence/publish/win-x64/WaypointServer/ PMDC/publish/win-x64/
+      - name: Build Linux Server
+        run: dotnet publish -c Release -r linux-x64 PMDC/RogueEssence/WaypointServer/WaypointServer.csproj;mv PMDC/RogueEssence/publish/linux-x64/WaypointServer/ PMDC/publish/linux-x64/
+      - name: Build Mac Server
+        run: dotnet publish -c Release -r osx-x64 PMDC/RogueEssence/WaypointServer/WaypointServer.csproj;mv PMDC/RogueEssence/publish/osx-x64/WaypointServer.app/ PMDC/publish/osx-x64/
+      - name: Zip Windows
+        run: cd PMDC/publish/win-x64/;zip -r windows-x64.zip PMDO/ WaypointServer/
+      - name: Zip Linux
+        run: cd PMDC/publish/linux-x64/;zip -r linux-x64.zip PMDO/ WaypointServer/
+      - name: Zip Mac
+        run: cd PMDC/publish/osx-x64/;zip -r osx-x64.zip PMDO/ WaypointServer/
