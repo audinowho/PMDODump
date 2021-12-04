@@ -1,5 +1,8 @@
 name: deploy
-on: push
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   build_deploy:
@@ -39,3 +42,41 @@ jobs:
       - name: Set Version
         run: echo "::set-output name=version::$(sed -En 's,<\AssemblyVersion>(.+)</AssemblyVersion>,\1,p' DataGenerator/DataGenerator.csproj)"
         id: version
+      - name: Create Release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: false
+          prerelease: false
+          release_name: ${{ steps.version.outputs.version }}
+          tag_name: ${{ github.ref }}
+          body_path: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload Windows
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./publish/win-x64/windows-x64.zip
+          asset_name: windows-x64.zip
+          asset_content_type: application/zip
+      - name: Upload Linux
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./publish/linux-x64/linux-x64.zip
+          asset_name: linux-x64.zip
+          asset_content_type: application/zip
+      - name: Upload Mac
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./publish/osx-x64/osx-x64.zip
+          asset_name: osx-x64.zip
+          asset_content_type: application/zip

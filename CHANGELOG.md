@@ -1,3 +1,3 @@
 # Changes #
 
-* Placeholder
+* Initiated package generation on Github.
