@@ -1,6 +1,5 @@
 packages/
 bin/
-!Asset/Data/Script/bin/
 obj/
 .vs/
 *.csproj.user
