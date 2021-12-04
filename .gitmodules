@@ -4,3 +4,6 @@
 [submodule "RawAsset"]
 	path = RawAsset
 	url = https://github.com/PMDCollab/RawAsset.git
+[submodule "DumpAsset"]
+	path = DumpAsset
+	url = https://github.com/audinowho/DumpAsset.git
