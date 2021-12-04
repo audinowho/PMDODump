@@ -5,9 +5,9 @@
     <RootNamespace>DataGenerator</RootNamespace>
     <AssemblyName>DataGenerator</AssemblyName>
     <AssemblyVersion>0.5.2.1</AssemblyVersion>
+    <AssemblyCopyright>Audino 2021</AssemblyCopyright>
     <TargetFramework>net5.0</TargetFramework>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
   <PropertyGroup>
@@ -38,7 +38,6 @@
     <Compile Include="Dev\Localization.cs" />
     <Compile Include="GenPath.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -50,6 +49,9 @@
     <ProjectReference Include="..\PMDC\PMDC\PMDC.csproj" />
     <ProjectReference Include="..\PMDC\RogueEssence\RogueElements\RogueElements\RogueElements.csproj" />
     <ProjectReference Include="..\PMDC\RogueEssence\RogueEssence\RogueEssence.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>TRACE;DEBUG;EDITORS</DefineConstants>
