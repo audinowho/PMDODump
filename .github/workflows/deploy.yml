@@ -14,6 +14,8 @@ jobs:
         uses: actions/setup-dotnet@v1.7.2
         with:
           dotnet-version: 5.0.x
+      - name: Submodules
+        run: git submodule update --init --recursive PMDC/
       - name: Restore
         run: dotnet restore
       - name: Build Windows App
@@ -34,3 +36,6 @@ jobs:
         run: cd PMDC/publish/linux-x64/;zip -r linux-x64.zip PMDO/ WaypointServer/
       - name: Zip Mac
         run: cd PMDC/publish/osx-x64/;zip -r osx-x64.zip PMDO/ WaypointServer/
+      - name: Set Version
+        run: echo "::set-output name=version::$(sed -En 's,<\AssemblyVersion>(.+)</AssemblyVersion>,\1,p' DataGenerator/DataGenerator.csproj)"
+        id: version
