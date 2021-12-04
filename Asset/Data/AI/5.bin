@@ -1,1 +1,0 @@
-﻿{"Object":{"$type":"RogueEssence.Data.AITactic, RogueEssence","Name":{"DefaultText":"Wait There","LocalTexts":{}},"Released":true,"Comment":"","ID":5,"Assignable":true,"Plans":[{"$type":"PMDC.Dungeon.PreparePlan, PMDC","AttackPattern":4,"IQ":413},{"$type":"PMDC.Dungeon.WaitPlan, PMDC","IQ":413}]},"Version":"1.0.0.0"}
