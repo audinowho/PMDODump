@@ -146,11 +146,11 @@ namespace Updater
                     string tempExe = Path.Join("temp", Path.GetFileName(exeFile));
                     string tempAsset = Path.Join("temp", "Asset.zip");
 
-                    //Console.WriteLine("Downloading from {0} to {1}. May take a while...", exeFile, tempExe);
-                    //wc.DownloadFile(exeFile, tempExe);
-                    //Console.WriteLine("Downloading from {0} to {1}. May take a while...", assetFile, tempAsset);
-                    //wc.Headers.Add("user-agent", "Updater/2.0.0");
-                    //wc.DownloadFile(assetFile, tempAsset);
+                    Console.WriteLine("Downloading from {0} to {1}. May take a while...", exeFile, tempExe);
+                    wc.DownloadFile(exeFile, tempExe);
+                    Console.WriteLine("Downloading from {0} to {1}. May take a while...", assetFile, tempAsset);
+                    wc.Headers.Add("user-agent", "Updater/2.0.0");
+                    wc.DownloadFile(assetFile, tempAsset);
 
                     //5: unzip and delete by directory - if you want to save your data be sure to make an exception in the xml (this is done by default)
                     Unzip(tempExe, null, 0);
