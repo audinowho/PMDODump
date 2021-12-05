@@ -1,0 +1,14 @@
+#!/bin/bash
+
+rm -rf publish/win-x64/
+rm -rf publish/linux-x64/
+rm -rf publish/osx-x64/
+dotnet publish -c Release -r win-x64 Updater/Updater.csproj
+dotnet publish -c Release -r linux-x64 Updater/Updater.csproj
+dotnet publish -c Release -r osx-x64 Updater/Updater.csproj
+cd publish/win-x64/Updater
+zip -r updater-win.zip Updater.exe
+cd ../../linux-x64/Updater
+zip -r updater-linux.zip Updater
+cd ../../osx-x64/Updater
+zip -r updater-osx.zip Updater
