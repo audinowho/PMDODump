@@ -1401,11 +1401,11 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("Water Gun");
                 skill.Desc = new LocalText("The target is blasted with a forceful shot of water.");
-                skill.BaseCharges = 16;
+                skill.BaseCharges = 19;
                 skill.Data.Element = 18;
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.SkillStates.Set(new BasePowerState(35));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
@@ -3723,28 +3723,27 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("Bubble");
                 skill.Desc = new LocalText("A spray of countless bubbles is jetted at the target. This may also lower the target's Movement Speed.");
-                skill.BaseCharges = 18;
+                skill.BaseCharges = 16;
                 skill.Data.Element = 18;
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.SkillStates.Set(new BasePowerState(30));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(35));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(9, true, true, -1)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new ProjectileAction();
-                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
-                ((ProjectileAction)skill.HitboxAction).Range = 4;
-                ((ProjectileAction)skill.HitboxAction).Speed = 10;
-                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
-                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
-                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
-                AttachReleaseEmitter emitter = new AttachReleaseEmitter(new AnimData("Bubbles_Blue", 3));
-                emitter.BurstTime = 3;
-                emitter.ParticlesPerBurst = 1;
-                emitter.Speed = 12;
-                emitter.StartDistance = 6;
-                ((ProjectileAction)skill.HitboxAction).Emitter = emitter;
+                skill.HitboxAction = new AreaAction();
+                ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((AreaAction)skill.HitboxAction).HitArea = Hitbox.AreaLimit.Cone;
+                ((AreaAction)skill.HitboxAction).Range = 3;
+                ((AreaAction)skill.HitboxAction).Speed = 6;
+                ((AreaAction)skill.HitboxAction).HitTiles = true;
+                CircleSquareReleaseEmitter emitter = new CircleSquareReleaseEmitter(new AnimData("Bubble_Pop_Blue", 3));
+                emitter.BurstTime = 5;
+                emitter.ParticlesPerBurst = 2;
+                emitter.Bursts = 5;
+                emitter.StartDistance = 4;
+                ((AreaAction)skill.HitboxAction).Emitter = emitter;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
                 skill.HitboxAction.ActionFX.Sound = "DUN_Bubble";
