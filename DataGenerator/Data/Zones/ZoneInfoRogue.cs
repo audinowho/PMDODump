@@ -304,6 +304,7 @@ namespace DataGenerator.Data
             int stickRate = 2;
             range = new IntRange(0, 15);
 
+            heldItems.Spawns.Add(new InvItem(406), range, stickRate);//Weather Rock
             heldItems.Spawns.Add(new InvItem(405), range, stickRate);//Expert Belt
             heldItems.Spawns.Add(new InvItem(320), range, stickRate);//Choice Scarf
             heldItems.Spawns.Add(new InvItem(319), range, stickRate);//Choice Specs
@@ -315,6 +316,7 @@ namespace DataGenerator.Data
             stickRate = 1;
             range = new IntRange(15, 30);
 
+            heldItems.Spawns.Add(new InvItem(406), range, stickRate);//Weather Rock
             heldItems.Spawns.Add(new InvItem(405), range, stickRate);//Expert Belt
             heldItems.Spawns.Add(new InvItem(320), range, stickRate);//Choice Scarf
             heldItems.Spawns.Add(new InvItem(319), range, stickRate);//Choice Specs
@@ -2591,6 +2593,7 @@ namespace DataGenerator.Data
                     {
                         //secret items
                         SpawnList<InvItem> secretItemSpawns = new SpawnList<InvItem>();
+                        secretItemSpawns.Add(new InvItem(406), 3);//Weather Rock
                         secretItemSpawns.Add(new InvItem(405), 3);//Expert Belt
                         secretItemSpawns.Add(new InvItem(320), 3);//Choice Scarf
                         secretItemSpawns.Add(new InvItem(319), 3);//Choice Specs
@@ -3330,6 +3333,8 @@ namespace DataGenerator.Data
             held.Spawns.Add(new InvItem(0328), new IntRange(0, max_floors), 5);//X-Ray Specs
             held.Spawns.Add(new InvItem(0404, true), new IntRange(0, max_floors), 5);//Big Root
             held.Spawns.Add(new InvItem(0404), new IntRange(0, max_floors), 5);//Big Root
+            held.Spawns.Add(new InvItem(0406, true), new IntRange(0, max_floors), 5);//Weather Rock
+            held.Spawns.Add(new InvItem(0406), new IntRange(0, max_floors), 5);//Weather Rock
             held.Spawns.Add(new InvItem(0405, true), new IntRange(0, max_floors), 5);//Expert Belt
             held.Spawns.Add(new InvItem(0405), new IntRange(0, max_floors), 5);//Expert Belt
             held.Spawns.Add(new InvItem(0320), new IntRange(0, max_floors), 10);//Choice Scarf
@@ -3835,6 +3840,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem(0311), new IntRange(0, max_floors), 1);//Shed Shell
                 monsterChanceZoneStep.Items.Add(new MapItem(0328), new IntRange(0, max_floors), 1);//X-Ray Specs
                 monsterChanceZoneStep.Items.Add(new MapItem(0404), new IntRange(0, max_floors), 1);//Big Root
+                monsterChanceZoneStep.Items.Add(new MapItem(0406), new IntRange(0, max_floors), 1);//Weather Rock
                 monsterChanceZoneStep.Items.Add(new MapItem(0405), new IntRange(0, max_floors), 1);//Expert Belt
                 monsterChanceZoneStep.Items.Add(new MapItem(0320), new IntRange(0, max_floors), 1);//Choice Scarf
                 monsterChanceZoneStep.Items.Add(new MapItem(0319), new IntRange(0, max_floors), 1);//Choice Specs
@@ -3901,6 +3907,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem(0311), new IntRange(0, max_floors), 1);//Shed Shell
                 monsterChanceZoneStep.Items.Add(new MapItem(0328), new IntRange(0, max_floors), 1);//X-Ray Specs
                 monsterChanceZoneStep.Items.Add(new MapItem(0404), new IntRange(0, max_floors), 1);//Big Root
+                monsterChanceZoneStep.Items.Add(new MapItem(0406), new IntRange(0, max_floors), 1);//Weather Rock
                 monsterChanceZoneStep.Items.Add(new MapItem(0405), new IntRange(0, max_floors), 1);//Expert Belt
                 monsterChanceZoneStep.Items.Add(new MapItem(0320), new IntRange(0, max_floors), 1);//Choice Scarf
                 monsterChanceZoneStep.Items.Add(new MapItem(0319), new IntRange(0, max_floors), 1);//Choice Specs
@@ -3958,6 +3965,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem(0311), new IntRange(0, max_floors), 1);//Shed Shell
                 monsterChanceZoneStep.Items.Add(new MapItem(0328), new IntRange(0, max_floors), 1);//X-Ray Specs
                 monsterChanceZoneStep.Items.Add(new MapItem(0404), new IntRange(0, max_floors), 1);//Big Root
+                monsterChanceZoneStep.Items.Add(new MapItem(0406), new IntRange(0, max_floors), 1);//Weather Rock
                 monsterChanceZoneStep.Items.Add(new MapItem(0405), new IntRange(0, max_floors), 1);//Expert Belt
                 monsterChanceZoneStep.Items.Add(new MapItem(0320), new IntRange(0, max_floors), 1);//Choice Scarf
                 monsterChanceZoneStep.Items.Add(new MapItem(0319), new IntRange(0, max_floors), 1);//Choice Specs

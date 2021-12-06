@@ -47,7 +47,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Drizzle");
                 ability.Desc = new LocalText("The Pokémon makes it rain when it is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(1, 10, new StringKey("MSG_DRIZZLE"))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(1, 10, new StringKey("MSG_DRIZZLE"), typeof(ExtendWeatherState))));
             }
             else if (ii == 3)
             {
@@ -128,7 +128,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Cloud Nine");
                 ability.Desc = new LocalText("The Pokémon eliminates weather when it is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(0, 10, new StringKey("MSG_CLOUD_NINE"))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(0, 10, new StringKey("MSG_CLOUD_NINE"), typeof(ExtendWeatherState))));
             }
             else if (ii == 14)
             {
@@ -382,7 +382,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Sand Stream");
                 ability.Desc = new LocalText("The Pokémon summons a sandstorm when it is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(3, 10, new StringKey("MSG_SAND_STREAM"))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(3, 10, new StringKey("MSG_SAND_STREAM"), typeof(ExtendWeatherState))));
             }
             else if (ii == 46)
             {
@@ -587,7 +587,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Drought");
                 ability.Desc = new LocalText("Turns the sunlight harsh when the Pokémon is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(2, 10, new StringKey("MSG_DROUGHT"))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(2, 10, new StringKey("MSG_DROUGHT"), typeof(ExtendWeatherState))));
             }
             else if (ii == 71)
             {
@@ -625,7 +625,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Air Lock");
                 ability.Desc = new LocalText("Eliminates the effects of weather when the Pokémon is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(0, 10, new StringKey("MSG_AIR_LOCK"))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(0, 10, new StringKey("MSG_AIR_LOCK"), typeof(ExtendWeatherState))));
             }
             else if (ii == 77)
             {
@@ -921,7 +921,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Snow Warning");
                 ability.Desc = new LocalText("The Pokémon summons a hailstorm when it is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(4, 10, new StringKey("MSG_SNOW_WARNING"))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(4, 10, new StringKey("MSG_SNOW_WARNING"), typeof(ExtendWeatherState))));
             }
             else if (ii == 118)
             {

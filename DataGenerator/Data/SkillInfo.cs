@@ -5118,7 +5118,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = 16;
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(3));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(3, 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -6082,7 +6082,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = 18;
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(1));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(1, 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -6101,7 +6101,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = 07;
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(2));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(2, 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
@@ -6671,7 +6671,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = 12;
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(4));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(4, 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -14555,7 +14555,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = 10;
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(14));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(14, 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -14574,7 +14574,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = 05;
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(15));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(15, 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -15027,7 +15027,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = 04;
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(13));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(13, 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge

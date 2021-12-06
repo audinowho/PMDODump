@@ -2935,6 +2935,14 @@ namespace DataGenerator.Data
             }
             else if (ii == 406)
             {
+                item.Name = new LocalText("Weather Rock");
+                item.Desc = new LocalText("An item that increases the duration of weather moves used by the holder.");
+                item.Sprite = "Ore_White";
+                item.Price = 200;
+                item.OnRefresh.Add(0, new MiscEvent(new ExtendWeatherState()));
+            }
+            else if (ii == 407)
+            {
 
             }
             else if (ii == 444)
