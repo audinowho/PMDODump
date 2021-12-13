@@ -406,7 +406,7 @@ Monster	Skill	Intrinsic	Status	AI	Item	Role
 403: Shinx	403: Air Slash				0403: Zinc Band	
 404: Luxio	404: X-Scissor				0404: Big Root	
 405: Luxray	405: Bug Buzz				0405: Expert Belt	
-406: Budew	406: Dragon Pulse				0406: 	
+406: Budew	406: Dragon Pulse				0406: Weather Rock	
 407: Roserade	407: Dragon Rush				0407: 	
 408: Cranidos	408: Power Gem				0408: 	
 409: Rampardos	409: Drain Punch				0409: 	
@@ -491,7 +491,7 @@ Monster	Skill	Intrinsic	Status	AI	Item	Role
 488: Cresselia	488: Flame Charge				0488: Lustrous Orb	
 489: Phione	489: Coil				0489: Griseous Orb	
 490: Manaphy	490: Low Sweep				0490: Spacetime Globe	
-491: Darkrai	491: Acid Spray				0491: 	
+491: Darkrai	491: Acid Spray				0491: Gracidea	
 492: Shaymin	492: Foul Play				0492: 	
 493: Arceus	493: Simple Beam				0493: 	
 494: Victini	494: Entrainment				0494: 	

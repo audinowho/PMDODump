@@ -1281,7 +1281,7 @@ namespace DataGenerator.Data
                 if (includeEffects)
                 {
                     item.OnRefresh.Add(0, new FamilyRefreshEvent(new SetSightEvent(true, Map.SightRange.Clear)));
-                    item.OnRefresh.Add(0, new FamilyRefreshEvent(new SeeItemsEvent()));
+                    item.OnRefresh.Add(0, new FamilyRefreshEvent(new SeeItemsEvent(true)));
                 }
             }
             else if (type == ExclusiveItemEffect.WeaknessPayback)

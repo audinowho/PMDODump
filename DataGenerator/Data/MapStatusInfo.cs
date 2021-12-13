@@ -616,8 +616,19 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Foe FOV");
                 status.Desc = new LocalText("");
-                status.OnRefresh.Add(-1, new FactionRefreshEvent(Faction.Foe, new SetSightEvent(true, Map.SightRange.Dark)));
                 status.DefaultHidden = true;
+                status.OnRefresh.Add(-1, new FactionRefreshEvent(Faction.Foe, new SetSightEvent(true, Map.SightRange.Dark)));
+            }
+            else if (ii == 41)
+            {
+                status.Name = new LocalText("Scanner");
+                status.Desc = new LocalText("");
+                status.DefaultHidden = true;
+                status.RepeatMethod = new MapStatusReplaceEvent();
+                status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_FLOOR_SCAN"), true));
+                status.OnRefresh.Add(0, new FactionRefreshEvent(Faction.Player, new SetSightEvent(true, Map.SightRange.Clear)));
+                status.OnRefresh.Add(0, new FactionRefreshEvent(Faction.Player, new SeeCharsEvent()));
+                status.OnRefresh.Add(0, new FactionRefreshEvent(Faction.Player, new SeeItemsEvent(false)));
             }
 
 

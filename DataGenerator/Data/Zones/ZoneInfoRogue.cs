@@ -245,6 +245,7 @@ namespace DataGenerator.Data
                 orbs.Spawns.Add(new InvItem(268), range, 5);//All Protect
                 orbs.Spawns.Add(new InvItem(253), range, 9);//Luminous
                 orbs.Spawns.Add(new InvItem(259), range, 9);//Trawl
+                orbs.Spawns.Add(new InvItem(261), range, 9);//Scanner
                 orbs.Spawns.Add(new InvItem(268, true), range, 5);//All Protect
                 orbs.Spawns.Add(new InvItem(253, true), range, 2);//Luminous
                 orbs.Spawns.Add(new InvItem(259, true), range, 2);//Trawl
@@ -3263,6 +3264,7 @@ namespace DataGenerator.Data
             orbs.Spawns.Add(new InvItem(0253), new IntRange(0, max_floors), 7);//Luminous Orb
             orbs.Spawns.Add(new InvItem(0259, true), new IntRange(0, max_floors), 3);//Trawl Orb
             orbs.Spawns.Add(new InvItem(0259), new IntRange(0, max_floors), 7);//Trawl Orb
+            orbs.Spawns.Add(new InvItem(0261), new IntRange(0, max_floors), 10);//Scanner Orb
                                                                                //held
             CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
             held.SpawnRates.SetRange(2, new IntRange(0, 27));

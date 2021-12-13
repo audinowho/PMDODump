@@ -1721,13 +1721,20 @@ namespace DataGenerator.Data
                 item.Sprite = "Orb_Yellow";
                 item.UseEvent.OnHits.Add(0, new ReviveAllEvent());
                 item.UseAction = new SelfAction();
-                //item.UseAction.ShootSound = 75;
                 item.UseAction.TargetAlignments |= Alignment.Self;
                 item.Explosion.TargetAlignments |= Alignment.Self;
             }
             else if (ii == 261)
             {
-                item.Name = new LocalText("**Scanner Orb");
+                item.Name = new LocalText("Scanner Orb");
+                item.Desc = new LocalText("An orb that reveals the location of all items and enemies on the floor.");
+                item.Sprite = "Orb_DarkBlue";
+
+                item.UseEvent.OnHits.Add(0, new GiveMapStatusEvent(41));
+                item.UseAction = new SelfAction();
+                item.UseAction.ActionFX.Sound = "DUN_Identify_2";
+                item.UseAction.TargetAlignments |= Alignment.Self;
+                item.Explosion.TargetAlignments |= Alignment.Self;
             }
             else if (ii == 262)
             {
