@@ -2,6 +2,6 @@
 
 * Fix various attack VFX errors
 * Fix team-wide hunger bug
-* Fix graphical bug with textures on terrain deformation
-* Balance tweaks: Water Gun, Bubble, Fairy Wind, Charge Beam, Brine, Hydro Pump, Ice Beam, Psybeam, Aurora Beam, Dragon Rage, Smokescreen, Bonemarang, Frost Breath, Spike Cannon, Icicle Spear, Rock Blast, Shadow Ball, Energy Ball, Disarming Voice, Weather Orb
+* Fix bug with autotile calculation in editors and on terrain deformation
+* Balance tweaks: Water Gun, Bubble, Fairy Wind, Charge Beam, Brine, Hydro Pump, Ice Beam, Psybeam, Aurora Beam, Dragon Rage, Smokescreen, Bonemarang, Frost Breath, Spike Cannon, Zap Cannon, Charge Beam, Flame Charge, Focus Blast, Icicle Spear, Rock Blast, Shadow Ball, Energy Ball, Disarming Voice, Fell Stinger, Fury Attack, Fury Swipes, Heal Pulse, Weather Orb, Cover Band
 * Added Weather Rock

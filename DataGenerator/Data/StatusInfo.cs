@@ -1774,7 +1774,7 @@ namespace DataGenerator.Data
                 emitter.HeightSpeed = 36;
                 emitter.TotalParticles = 1;
                 emitter.StartHeight = 16;
-                status.OnTurnEnds.Add(0, new NightmareEvent(1, new StringKey("MSG_NIGHTMARE"), new AnimEvent(emitter, "DUN_Curse_2")));
+                status.OnTurnEnds.Add(0, new NightmareEvent(1, 8, new StringKey("MSG_NIGHTMARE"), new AnimEvent(emitter, "DUN_Curse_2")));
                 status.StatusStates.Set(new CountDownState(25));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }

@@ -10,98 +10,98 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 1* Foam	1* 061: ErraticDefender	008: Range	008: Wartortle	008: Flying	009: Movement Speed	008: Blizzard	
 1* Gasp	1* 062: FastFriend	-001: None	009: Blastoise	009: Ghost	010: Attack	009: Trick Room	
 1* Hair	1* 084: HitAndRun		010: Caterpie	010: Grass	011: Defense	010: Gravity	
-1* Horn	2* 008: WaterTerrain		011: Metapod	011: Ground	012: Special Attack	011: Wonder Room	
-1* Leaf	2* 009: LavaTerrain		012: Butterfree	012: Ice	013: Special Defense	012: Magic Room	
-1* Mud	2* 013: PPBoost		013: Weedle	013: Normal	014: Accuracy	013: Electric Terrain	
-1* Root	2* 016: MisfortuneMirror		014: Kakuna	014: Poison	015: Evasion	014: Grassy Terrain	
-1* Seed	2* 018: DoubleAttacker		015: Beedrill	015: Psychic	016: Range	015: Misty Terrain	
-1* Shoot	2* 019: MasterHurler		016: Pidgey	016: Rock	017: Reflect	016: Inverse	
-1* Song	2* 022: PressurePlus		017: Pidgeotto	017: Steel	018: Light Screen	017: Heavy Rain	
-1* Sweat	2* 023: StatusOnAttack		018: Pidgeot	018: Water	021: In Love	018: Harsh Sun	
-1* Tail	2* 029: StatDropImmune		019: Rattata		022: Rage Powder	019: Wind	
-1* Thorn	2* 030: SleepWalker		020: Raticate		023: Destiny Bond	020: Move Ban	
-1* Tooth	2* 033: AcuteSniffer		021: Spearow		024: Chasing	021: Mysterious Force	
-1* Twig	2* 039: WideAttack		022: Fearow		044: Fire Spin	032: Dark	
-1* Wing	2* 051: BarrageGuard		023: Ekans		045: Whirlpool		
-2* Aroma	2* 052: BetterOdds		024: Arbok		046: Sand Tomb		
-2* Brooch	2* 053: ClutchPerformer		025: Pikachu		050: Cursed		
-2* Charm	2* 059: StatMirror		026: Raichu		053: Stockpile		
-2* Coin	2* 060: ErraticAttacker		027: Sandshrew		054: Perish Song		
-2* Crest	2* 083: Gratitude		028: Sandslash		055: Paused		
-2* Dust	2* 088: DoubleDash		029: Nidoran♀		057: Wish		
-2* Earring	3* 002: TypeSpeedBoost		030: Nidorina		058: Telekinesis		
-2* Guard	3* 005: SuperCrit		031: Nidoqueen		059: Charge		
-2* Heart	3* 017: CounterBasher		032: Nidoran♂		060: Disable		
-2* Jaw	3* 024: KnockbackOnAttack		033: Nidorino		061: Yawning		
-2* Jewel	3* 028: StatusImmune		034: Nidoking		062: Exposed		
-2* Key	3* 031: ChargeWalker		035: Clefairy		063: Miracle Eye		
-2* Medal	3* 032: StairSensor		036: Clefable		064: Endure		
-2* Ore	3* 038: LungeAttack		037: Vulpix		065: Ingrain		
-2* Pebble	3* 042: ExplosionGuard		038: Ninetales		066: Mirror Coat		
-2* Ring	3* 043: WandMaster		039: Jigglypuff		067: Counter		
-2* Rock	3* 048: Absorption		040: Wigglytuff		068: Safeguard		
-2* Seal	3* 049: ExcessiveForce		041: Zubat		069: Mist		
-2* Shard	3* 054: DistanceDodge		042: Golbat		070: Sleepless		
-2* Tag	3* 055: CloseDodge		043: Oddish		071: Enraged		
-3* Apron	3* 057: SelfCurer		044: Gloom		072: Taunted		
-3* Armlet	3* 058: StatusMirror		045: Vileplume		073: Encore		
-3* Armor	3* 063: CoinWatcher		046: Paras		074: Torment		
-3* Band	3* 064: HiddenStairFinder		047: Parasect		075: Grudge		
-3* Bangle	3* 065: ChestFinder		048: Venonat		076: Lucky Chant		
-3* Belt	3* 066: ShopFinder		049: Venomoth		077: Aqua Ring		
-3* Blade	3* 069: GapProber		050: Diglett		078: Focus Energy		
-3* Bow	3* 071: WeatherProtection		051: Dugtrio		079: Embargo		
-3* Cap	3* 072: RemoveAbilityAttack		052: Meowth		080: Area Counter		
-3* Cape	3* 075: HealInLava		053: Persian		081: Heal Block		
-3* Choker	3* 076: HealOnNewFloor		054: Psyduck		082: Magic Coat		
-3* Coat	3* 085: StatusOnCategoryHit		055: Golduck		083: Metal Burst		
-3* Collar	3* 089: StatusSplash		056: Mankey		084: Type-Boosted		
-3* Crown	4* 010: AllTerrain		057: Primeape		085: Type-Converted		
-3* Dress	4* 025: ThrowOnAttack		058: Growlithe		086: Status Protection		
-3* Drill	4* 041: TrapBuster		059: Arcanine		087: Wide Guard		
-3* Float	4* 044: WandSpread		060: Poliwag		088: Quick Guard		
-3* Glasses	4* 045: MultiRayShot		061: Poliwhirl		089: Protect		
-3* Hat	4* 046: RoyalVeil		062: Poliwrath		090: Immobilized		
-3* Helmet	4* 047: Celebrate		063: Abra		091: Follow Me		
-3* Mantle	4* 056: FastHealer		064: Kadabra		092: Super Mobile		
-3* Mask	4* 068: TypedAttack		065: Alakazam		093: Slip		
-3* Poncho	4* 070: PassThroughAttacker		066: Machop		094: Snatch		
-3* Robe	4* 073: CheekPouch		067: Machoke		095: Roosting		
-3* Ruff	4* 074: HealInWater		068: Machamp		096: Belch		
-3* Sash	4* 080: NoStatusInWeather		069: Bellsprout		097: Electrified		
-3* Scarf	4* 081: DeepBreatherPlus		070: Weepinbell		098: Sure Shot		
-3* Scope	4* 086: StatusOnCategoryUse		071: Victreebel		099: Power-Charged		
-3* Shield	4* 090: DevolveOnAttack		072: Tentacool		100: Mini-Counter		
-3* Specs	4* 091: ProjectileAttack		073: Tentacruel		101: Leech Seed		
-3* Tiara	4* 093: AttackRangeInWeather		074: Geodude		102: Magnet Rise		
-3* Tie	5* 003: TypeGroupWeaknessReduce		075: Graveler		104: Infestation		
-3* Torc	5* 004: TypeBulldozer		076: Golem		105: Nightmare		
-3* Veil	5* 007: Nontraitor		077: Ponyta		106: Magma Storm		
-	5* 011: Wallbreaker		078: Rapidash		107: Retaliate		
-	5* 012: GapFiller		079: Slowpoke		108: Water Pledge		
-	5* 020: AllyReviver		080: Slowbro		109: Fire Pledge		
-	5* 021: AllyReviverBattle		081: Magnemite		110: Grass Pledge		
-	5* 034: MapSurveyor		082: Magneton		111: Illusion		
-	5* 035: XRay		083: Farfetch'd		112: Decoy		
-	5* 036: WeaknessPayback		084: Doduo		113: Type-Protected		
-	5* 037: WarpPayback		085: Dodrio		114: Blinker		
-	5* 040: ExplosiveAttack		086: Seel		115: Pierce		
-	5* 067: SecondSTAB		087: Dewgong		116: Conversion		
-	5* 077: EndureCategory		088: Grimer		117: Conversion 2		
-	5* 078: EndureType		089: Muk		118: Recruit Boost		
-	5* 079: SpikeDropper		090: Shellder		119: Stat-Charged		
-	5* 082: WeaknessReduce		091: Cloyster		120: Mental-Charged		
-	5* 087: MapStatusOnCategoryUse		092: Gastly		121: Weakness Drain		
-	5* 092: MetronomePlus		093: Haunter		123: Powder		
-			094: Gengar		124: Regeneration		
-			095: Onix		125: Detect		
-			096: Drowzee		129: Invisible		
-			097: Hypno				
-			098: Krabby				
-			099: Kingler				
-			100: Voltorb				
-			101: Electrode				
-			102: Exeggcute				
+1* Horn	1* 094: PPSaver		011: Metapod	011: Ground	012: Special Attack	011: Wonder Room	
+1* Leaf	2* 008: WaterTerrain		012: Butterfree	012: Ice	013: Special Defense	012: Magic Room	
+1* Mud	2* 009: LavaTerrain		013: Weedle	013: Normal	014: Accuracy	013: Electric Terrain	
+1* Root	2* 013: PPBoost		014: Kakuna	014: Poison	015: Evasion	014: Grassy Terrain	
+1* Seed	2* 016: MisfortuneMirror		015: Beedrill	015: Psychic	016: Range	015: Misty Terrain	
+1* Shoot	2* 018: DoubleAttacker		016: Pidgey	016: Rock	017: Reflect	016: Inverse	
+1* Song	2* 019: MasterHurler		017: Pidgeotto	017: Steel	018: Light Screen	017: Heavy Rain	
+1* Sweat	2* 022: PressurePlus		018: Pidgeot	018: Water	021: In Love	018: Harsh Sun	
+1* Tail	2* 023: StatusOnAttack		019: Rattata		022: Rage Powder	019: Wind	
+1* Thorn	2* 029: StatDropImmune		020: Raticate		023: Destiny Bond	020: Move Ban	
+1* Tooth	2* 030: SleepWalker		021: Spearow		024: Chasing	021: Mysterious Force	
+1* Twig	2* 033: AcuteSniffer		022: Fearow		044: Fire Spin	032: Dark	
+1* Wing	2* 039: WideAttack		023: Ekans		045: Whirlpool		
+2* Aroma	2* 051: BarrageGuard		024: Arbok		046: Sand Tomb		
+2* Brooch	2* 052: BetterOdds		025: Pikachu		050: Cursed		
+2* Charm	2* 053: ClutchPerformer		026: Raichu		053: Stockpile		
+2* Coin	2* 059: StatMirror		027: Sandshrew		054: Perish Song		
+2* Crest	2* 060: ErraticAttacker		028: Sandslash		055: Paused		
+2* Dust	2* 083: Gratitude		029: Nidoran♀		057: Wish		
+2* Earring	2* 088: DoubleDash		030: Nidorina		058: Telekinesis		
+2* Guard	3* 002: TypeSpeedBoost		031: Nidoqueen		059: Charge		
+2* Heart	3* 005: SuperCrit		032: Nidoran♂		060: Disable		
+2* Jaw	3* 017: CounterBasher		033: Nidorino		061: Yawning		
+2* Jewel	3* 024: KnockbackOnAttack		034: Nidoking		062: Exposed		
+2* Key	3* 028: StatusImmune		035: Clefairy		063: Miracle Eye		
+2* Medal	3* 031: ChargeWalker		036: Clefable		064: Endure		
+2* Ore	3* 032: StairSensor		037: Vulpix		065: Ingrain		
+2* Pebble	3* 038: LungeAttack		038: Ninetales		066: Mirror Coat		
+2* Ring	3* 042: ExplosionGuard		039: Jigglypuff		067: Counter		
+2* Rock	3* 043: WandMaster		040: Wigglytuff		068: Safeguard		
+2* Seal	3* 048: Absorption		041: Zubat		069: Mist		
+2* Shard	3* 049: ExcessiveForce		042: Golbat		070: Sleepless		
+2* Tag	3* 054: DistanceDodge		043: Oddish		071: Enraged		
+3* Apron	3* 055: CloseDodge		044: Gloom		072: Taunted		
+3* Armlet	3* 057: SelfCurer		045: Vileplume		073: Encore		
+3* Armor	3* 058: StatusMirror		046: Paras		074: Torment		
+3* Band	3* 063: CoinWatcher		047: Parasect		075: Grudge		
+3* Bangle	3* 064: HiddenStairFinder		048: Venonat		076: Lucky Chant		
+3* Belt	3* 065: ChestFinder		049: Venomoth		077: Aqua Ring		
+3* Blade	3* 066: ShopFinder		050: Diglett		078: Focus Energy		
+3* Bow	3* 069: GapProber		051: Dugtrio		079: Embargo		
+3* Cap	3* 071: WeatherProtection		052: Meowth		080: Area Counter		
+3* Cape	3* 072: RemoveAbilityAttack		053: Persian		081: Heal Block		
+3* Choker	3* 075: HealInLava		054: Psyduck		082: Magic Coat		
+3* Coat	3* 076: HealOnNewFloor		055: Golduck		083: Metal Burst		
+3* Collar	3* 085: StatusOnCategoryHit		056: Mankey		084: Type-Boosted		
+3* Crown	3* 089: StatusSplash		057: Primeape		085: Type-Converted		
+3* Dress	3* 096: TypeBodyguard		058: Growlithe		086: Status Protection		
+3* Drill	3* 102: ChanceStatusOnCategoryHit		059: Arcanine		087: Wide Guard		
+3* Float	4* 010: AllTerrain		060: Poliwag		088: Quick Guard		
+3* Glasses	4* 025: ThrowOnAttack		061: Poliwhirl		089: Protect		
+3* Hat	4* 041: TrapBuster		062: Poliwrath		090: Immobilized		
+3* Helmet	4* 044: WandSpread		063: Abra		091: Follow Me		
+3* Mantle	4* 045: MultiRayShot		064: Kadabra		092: Super Mobile		
+3* Mask	4* 046: RoyalVeil		065: Alakazam		093: Slip		
+3* Poncho	4* 047: Celebrate		066: Machop		094: Snatch		
+3* Robe	4* 056: FastHealer		067: Machoke		095: Roosting		
+3* Ruff	4* 068: TypedAttack		068: Machamp		096: Belch		
+3* Sash	4* 070: PassThroughAttacker		069: Bellsprout		097: Electrified		
+3* Scarf	4* 073: CheekPouch		070: Weepinbell		098: Sure Shot		
+3* Scope	4* 074: HealInWater		071: Victreebel		099: Power-Charged		
+3* Shield	4* 080: NoStatusInWeather		072: Tentacool		100: Mini-Counter		
+3* Specs	4* 081: DeepBreatherPlus		073: Tentacruel		101: Leech Seed		
+3* Tiara	4* 086: StatusOnCategoryUse		074: Geodude		102: Magnet Rise		
+3* Tie	4* 090: DevolveOnAttack		075: Graveler		104: Infestation		
+3* Torc	4* 091: ProjectileAttack		076: Golem		105: Nightmare		
+3* Veil	4* 093: AttackRangeInWeather		077: Ponyta		106: Magma Storm		
+	4* 095: CelebrateCure		078: Rapidash		107: Retaliate		
+	4* 097: StatOnCategoryUse		079: Slowpoke		108: Water Pledge		
+	5* 003: TypeGroupWeaknessReduce		080: Slowbro		109: Fire Pledge		
+	5* 004: TypeBulldozer		081: Magnemite		110: Grass Pledge		
+	5* 007: Nontraitor		082: Magneton		111: Illusion		
+	5* 011: Wallbreaker		083: Farfetch'd		112: Decoy		
+	5* 012: GapFiller		084: Doduo		113: Type-Protected		
+	5* 020: AllyReviver		085: Dodrio		114: Blinker		
+	5* 021: AllyReviverBattle		086: Seel		115: Pierce		
+	5* 034: MapSurveyor		087: Dewgong		116: Conversion		
+	5* 035: XRay		088: Grimer		117: Conversion 2		
+	5* 036: WeaknessPayback		089: Muk		118: Recruit Boost		
+	5* 037: WarpPayback		090: Shellder		119: Stat-Charged		
+	5* 040: ExplosiveAttack		091: Cloyster		120: Mental-Charged		
+	5* 067: SecondSTAB		092: Gastly		121: Weakness Drain		
+	5* 077: EndureCategory		093: Haunter		123: Powder		
+	5* 078: EndureType		094: Gengar		124: Regeneration		
+	5* 079: SpikeDropper		095: Onix		125: Detect		
+	5* 082: WeaknessReduce		096: Drowzee		129: Invisible		
+	5* 087: MapStatusOnCategoryUse		097: Hypno				
+	5* 092: MetronomePlus		098: Krabby				
+	5* 098: StatusOnTypeHit		099: Kingler				
+	5* 099: SweetDreams		100: Voltorb				
+	5* 100: ChanceStatusOnTypeHit		101: Electrode				
+	5* 101: ChanceStatOnTypeHit		102: Exeggcute				
 			103: Exeggutor				
 			104: Cubone				
 			105: Marowak				

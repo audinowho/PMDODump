@@ -67,7 +67,7 @@ namespace DataGenerator.Data
         MultiRayShot,//5* turns linear projectiles into multi-ray projectiles at the cost of destroying them
         RoyalVeil,//4* restores others' HP when at full HP
                   //more effects that work on allies...
-        Celebrate,//4* increase stat after defeating an enemy
+        Celebrate,//4* extra turn after defeating an enemy
         Absorption,//3* restore HP after defeating an enemy
         ExcessiveForce,//3* deal AOE damage after defeating an enemy
         Anchor,//1*
@@ -114,6 +114,15 @@ namespace DataGenerator.Data
         ProjectileAttack,//4*
         MetronomePlus,//5*
         AttackRangeInWeather,//4*
+        PPSaver,
+        CelebrateCure,
+        TypeBodyguard,
+        StatOnCategoryUse,
+        StatusOnTypeHit,
+        SweetDreams,
+        ChanceStatusOnTypeHit,
+        ChanceStatOnTypeHit,
+        ChanceStatusOnCategoryHit,
     }
     public class AutoItemInfo
     {
@@ -541,8 +550,6 @@ namespace DataGenerator.Data
                             {
                                 //E+B=A
                                 addSpecificTradeable(specific_tradeables, prev_start, 'A', 'E', 'B');
-                                //C+D+E=B
-                                addSpecificTradeable(specific_tradeables, prev_start, 'B', 'C', 'D', 'E');
                                 //C+D=E
                                 addSpecificTradeable(specific_tradeables, prev_start, 'E', 'C', 'D');
 
@@ -553,9 +560,8 @@ namespace DataGenerator.Data
                                 addSpecificTradeable(specific_tradeables, prev_start, 'A', 'E', 'F', 'B');
                                 //E+F=B
                                 addSpecificTradeable(specific_tradeables, prev_start, 'B', 'E', 'F');
-                                //C+D=E/F
+                                //C+D=E
                                 addSpecificTradeable(specific_tradeables, prev_start, 'E', 'C', 'D');
-                                addSpecificTradeable(specific_tradeables, prev_start, 'F', 'C', 'D');
                             }
                         }
                         else if (running_tradeables[0] == "@")
@@ -599,9 +605,6 @@ namespace DataGenerator.Data
                                 addSpecificTradeable(specific_tradeables, prev_start, 'A', 'G', 'E');
                                 //G+F=B
                                 addSpecificTradeable(specific_tradeables, prev_start, 'B', 'G', 'F');
-                                //C+D+G=E/F
-                                addSpecificTradeable(specific_tradeables, prev_start, 'E', 'C', 'D', 'G');
-                                addSpecificTradeable(specific_tradeables, prev_start, 'F', 'C', 'D', 'G');
                                 //C+D=G
                                 addSpecificTradeable(specific_tradeables, prev_start, 'G', 'C', 'D');
                             }
@@ -867,6 +870,15 @@ namespace DataGenerator.Data
                     item.OnRefresh.Add(0, new FamilyRefreshEvent(new AddChargeEvent((int)args[0])));
                 }
             }
+            else if (type == ExclusiveItemEffect.PPSaver)
+            {
+                item.Rarity = 1;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's PP cannot be lowered by the moves and abilities of opposing Pokémon.");
+                if (includeEffects)
+                {
+                    item.OnRefresh.Add(0, new FamilyRefreshEvent(new PPSaverEvent()));
+                }
+            }
             else if (type == ExclusiveItemEffect.DeepBreather)
             {
                 item.Rarity = 1;
@@ -1064,7 +1076,7 @@ namespace DataGenerator.Data
             else if (type == ExclusiveItemEffect.StatusOnCategoryHit)
             {
                 item.Rarity = 3;
-                item.Desc = new LocalText("When kept in the bag, the Pokémon's {1} attacks inflict the {0} status.");
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's {1} moves inflict the {0} status.");
                 if (includeEffects)
                 {
                     localArgs.Add(DataManager.Instance.GetStatus((int)args[0]).Name);
@@ -1074,10 +1086,65 @@ namespace DataGenerator.Data
                     item.AfterHittings.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new OnHitEvent(false, false, 100, new StatusBattleEvent((int)args[0], true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
                 }
             }
+            else if (type == ExclusiveItemEffect.ChanceStatusOnCategoryHit)
+            {
+                item.Rarity = 3;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's {1} moves may inflict the {0} status.");
+                if (includeEffects)
+                {
+                    localArgs.Add(DataManager.Instance.GetStatus((int)args[0]).Name);
+                    BattleData.SkillCategory category = (BattleData.SkillCategory)args[1];
+                    localArgs.Add(ToLocalText(category, item.Desc, translate));
+                    int chance = (int)args[2];
+
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new OnHitEvent(false, false, chance, new StatusBattleEvent((int)args[0], true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                }
+            }
+            else if (type == ExclusiveItemEffect.StatusOnTypeHit)
+            {
+                item.Rarity = 5;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's {0}-type moves inflict the {1} status.");
+                if (includeEffects)
+                {
+                    int element = (int)args[0];
+                    localArgs.Add(DataManager.Instance.GetElement(element).Name);
+                    localArgs.Add(DataManager.Instance.GetStatus((int)args[1]).Name);
+
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ElementNeededEvent(element, new OnHitEvent(false, false, 100, new StatusBattleEvent((int)args[1], true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                }
+            }
+            else if (type == ExclusiveItemEffect.ChanceStatusOnTypeHit)
+            {
+                item.Rarity = 5;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's {0}-type moves have a chance to inflict the {1} status.");
+                if (includeEffects)
+                {
+                    int element = (int)args[0];
+                    localArgs.Add(DataManager.Instance.GetElement(element).Name);
+                    localArgs.Add(DataManager.Instance.GetStatus((int)args[1]).Name);
+                    int chance = (int)args[2];
+
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ElementNeededEvent(element, new OnHitEvent(false, false, chance, new StatusBattleEvent((int)args[1], true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                }
+            }
+            else if (type == ExclusiveItemEffect.ChanceStatOnTypeHit)
+            {
+                item.Rarity = 5;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's {0}-type moves may lower the target's {1}.");
+                if (includeEffects)
+                {
+                    int element = (int)args[0];
+                    localArgs.Add(DataManager.Instance.GetElement(element).Name);
+                    localArgs.Add(DataManager.Instance.GetStatus((int)args[1]).Name);
+                    int chance = (int)args[2];
+
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ElementNeededEvent(element, new OnHitEvent(false, false, chance, new StatusStackBattleEvent((int)args[1], true, true, false, -1, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                }
+            }
             else if (type == ExclusiveItemEffect.StatusOnCategoryUse)
             {
                 item.Rarity = 4;
-                item.Desc = new LocalText("When kept in the bag, the Pokémon gains the {0} status after using a {1} attack.");
+                item.Desc = new LocalText("When kept in the bag, the Pokémon gains the {0} status after using a {1} move.");
                 if (includeEffects)
                 {
                     localArgs.Add(DataManager.Instance.GetStatus((int)args[0]).Name);
@@ -1087,17 +1154,34 @@ namespace DataGenerator.Data
                     item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new StatusBattleEvent((int)args[0], false, true, false, new StringKey("MSG_EXCL_ITEM_TYPE")))));
                 }
             }
+            else if (type == ExclusiveItemEffect.StatOnCategoryUse)
+            {
+                item.Rarity = 4;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's {0} is raised slightly when it uses a {1} move.");
+                if (includeEffects)
+                {
+                    localArgs.Add(DataManager.Instance.GetStatus((int)args[0]).Name);
+                    BattleData.SkillCategory category = (BattleData.SkillCategory)args[1];
+                    localArgs.Add(ToLocalText(category, item.Desc, translate));
+
+                    item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new StatusStackBattleEvent((int)args[0], false, true, false, 1, new StringKey("MSG_EXCL_ITEM_TYPE")))));
+                }
+            }
             else if (type == ExclusiveItemEffect.MapStatusOnCategoryUse)
             {
                 item.Rarity = 5;
-                item.Desc = new LocalText("When kept in the bag, the Pokémon changes the floor to {1} after using a {0} attack.");
+                item.Desc = new LocalText("When kept in the bag, the Pokémon changes the floor to {1} after using a {0} move.");
                 if (includeEffects)
                 {
                     BattleData.SkillCategory category = (BattleData.SkillCategory)args[0];
                     localArgs.Add(ToLocalText(category, item.Desc, translate));
-                    localArgs.Add(DataManager.Instance.GetMapStatus((int)args[1]).Name);
+                    MapStatusData mapStatus = DataManager.Instance.GetMapStatus((int)args[1]);
+                    localArgs.Add(mapStatus.Name);
 
-                    item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new GiveMapStatusEvent((int)args[1], 10))));
+                    if (mapStatus.StatusStates.Contains<MapWeatherState>())
+                        item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new GiveMapStatusEvent((int)args[1], 10, new StringKey(), typeof(ExtendWeatherState)))));
+                    else
+                        item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new GiveMapStatusEvent((int)args[1], 10))));
                 }
             }
             else if (type == ExclusiveItemEffect.StatusImmune)
@@ -1399,7 +1483,7 @@ namespace DataGenerator.Data
                 if (includeEffects)
                 {
                     SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_White_In", 1));
-                    item.AfterActions.Add(0, new FamilyBattleEvent(new KnockOutNeededEvent(new PreserveTurnEvent(new StringKey("MSG_EXTRA_TURN"), new BattleAnimEvent(emitter, "DUN_Attack_Speed_Up", false, 20)))));
+                    item.AfterActions.Add(1, new FamilyBattleEvent(new KnockOutNeededEvent(new PreserveTurnEvent(new StringKey("MSG_EXTRA_TURN"), new BattleAnimEvent(emitter, "DUN_Attack_Speed_Up", false, 20)))));
                 }
             }
             else if (type == ExclusiveItemEffect.Absorption)
@@ -1408,7 +1492,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon will regain HP after defeating an enemy.");
                 if (includeEffects)
                 {
-                    item.AfterActions.Add(0, new FamilyBattleEvent(new KnockOutNeededEvent(new RestoreHPEvent(1, 8, false))));
+                    item.AfterActions.Add(1, new FamilyBattleEvent(new KnockOutNeededEvent(new RestoreHPEvent(1, 8, false))));
                 }
             }
             else if (type == ExclusiveItemEffect.ExcessiveForce)
@@ -1434,6 +1518,16 @@ namespace DataGenerator.Data
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(6));
 
                     item.AfterHittings.Add(0, new FamilyBattleEvent(new TargetDeadNeededEvent(new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_EXCESSIVE_FORCE")))));
+                }
+            }
+            else if (type == ExclusiveItemEffect.CelebrateCure)
+            {
+                item.Rarity = 4;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon will recover from status effects after defeating an enemy.");
+                if (includeEffects)
+                {
+                    BattleAnimEvent battleAnim = new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Wonder_Tile", false, 10);
+                    item.AfterActions.Add(1, new FamilyBattleEvent(new KnockOutNeededEvent(new RemoveStateStatusBattleEvent(typeof(BadStatusState), false, new StringKey("MSG_CURE_SELF"), battleAnim))));
                 }
             }
             else if (type == ExclusiveItemEffect.Anchor)
@@ -1491,6 +1585,17 @@ namespace DataGenerator.Data
                     item.BeforeBeingHits.Add(0, new FamilyBattleEvent(new EvasiveCloseUpEvent()));
                 }
             }
+            else if (type == ExclusiveItemEffect.SweetDreams)
+            {
+                item.Rarity = 5;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon gradually restores the HP of its teammates while they are asleep.");
+                if (includeEffects)
+                {
+                    item.ProximityEvent.Radius = 3;
+                    item.ProximityEvent.TargetAlignments = Alignment.Friend | Alignment.Self;
+                    item.ProximityEvent.OnTurnEnds.Add(0, new FamilySingleEvent(new NightmareEvent(1, -4, new StringKey("MSG_HEAL_WITH_OTHER"), new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_Out", 2)), "DUN_Healing_Wish_2", 0))));
+                }
+            }
             else if (type == ExclusiveItemEffect.FastHealer)
             {
                 item.Rarity = 4;
@@ -1506,7 +1611,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon recovers faster from status problems.");
                 if (includeEffects)
                 {
-                    item.BeforeStatusAdds.Add(0, new FamilyStatusEvent(new SelfCurerEvent(2, 3)));
+                    item.BeforeStatusAdds.Add(0, new FamilyStatusEvent(new SelfCurerEvent(1, 2)));
                 }
             }
             else if (type == ExclusiveItemEffect.StatusMirror)
@@ -1739,6 +1844,20 @@ namespace DataGenerator.Data
                     altData.OnHits.Add(0, new NeededMoveEvent());
 
                     item.OnActions.Add(-3, new FamilyBattleEvent(new SpecificSkillNeededEvent(new ChangeDataEvent(altData), 118)));
+                }
+            }
+            else if (type == ExclusiveItemEffect.TypeBodyguard)
+            {
+                item.Rarity = 3;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon will step in to take {0}-type attacks for nearby allies.");
+                if (includeEffects)
+                {
+                    int element = (int)args[0];
+                    localArgs.Add(DataManager.Instance.GetElement(element).Name);
+
+                    item.ProximityEvent.Radius = 1;
+                    item.ProximityEvent.TargetAlignments = Alignment.Foe;
+                    item.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent(Alignment.Friend, element, new StringKey("MSG_DRAW_ATTACK")));
                 }
             }
             else

@@ -10,6 +10,7 @@ EffectType	Description
 1* 061: ErraticDefender	When kept in the bag, moves used on the Pokémon are more intensely affected by type match-ups.
 1* 062: FastFriend	When kept in the bag, the Pokémon has a higher chance of recruiting wild Pokémon.
 1* 084: HitAndRun	When kept in the bag, the Pokémon will take reduced damage from counter attacks.
+1* 094: PPSaver	When kept in the bag, the Pokémon's PP cannot be lowered by the moves and abilities of opposing Pokémon.
 2* 008: WaterTerrain	When kept in the bag, the Pokémon can traverse water.
 2* 009: LavaTerrain	When kept in the bag, the Pokémon can traverse lava without being burned.
 2* 013: PPBoost	When kept in the bag, the Pokémon gets an extra {0}PP to all of its moves.
@@ -54,8 +55,10 @@ EffectType	Description
 3* 072: RemoveAbilityAttack	When kept in the bag, it causes the Pokémon's regular attack to remove the target's ability.
 3* 075: HealInLava	When kept in the bag, the Pokémon recovers HP when in lava.
 3* 076: HealOnNewFloor	When kept in the bag, the Pokémon is fully healed upon entering a new floor.
-3* 085: StatusOnCategoryHit	When kept in the bag, the Pokémon's {1} attacks inflict the {0} status.
+3* 085: StatusOnCategoryHit	When kept in the bag, the Pokémon's {1} moves inflict the {0} status.
 3* 089: StatusSplash	When kept in the bag, the Pokémon's stat-changing moves are spread to allies.
+3* 096: TypeBodyguard	When kept in the bag, the Pokémon will step in to take {0}-type attacks for nearby allies.
+3* 102: ChanceStatusOnCategoryHit	When kept in the bag, the Pokémon's {1} moves may inflict the {0} status.
 4* 010: AllTerrain	When kept in the bag, the Pokémon can traverse water, lava, and pits.
 4* 025: ThrowOnAttack	When kept in the bag, the Pokémon's regular attack will throw opponents back.
 4* 041: TrapBuster	When kept in the bag, the Pokémon's moves will destroy traps.
@@ -70,10 +73,12 @@ EffectType	Description
 4* 074: HealInWater	When kept in the bag, the Pokémon recovers HP when in water.
 4* 080: NoStatusInWeather	When kept in the bag, the Pokémon is protected from status conditions when the floor has the {0} status.
 4* 081: DeepBreatherPlus	When kept in the bag, it restores the PP of all moves when the Pokémon reaches a new floor.
-4* 086: StatusOnCategoryUse	When kept in the bag, the Pokémon gains the {0} status after using a {1} attack.
+4* 086: StatusOnCategoryUse	When kept in the bag, the Pokémon gains the {0} status after using a {1} move.
 4* 090: DevolveOnAttack	When kept in the bag, the Pokémon's regular attacks and thrown items have a chance to devolve the target.
 4* 091: ProjectileAttack	When kept in the bag, it changes the Pokémon's regular attack into a short projectile.
 4* 093: AttackRangeInWeather	When kept in the bag, the Pokémon's Attack Range is increased when the floor has the {0} status.
+4* 095: CelebrateCure	When kept in the bag, the Pokémon will recover from status effects after defeating an enemy.
+4* 097: StatOnCategoryUse	When kept in the bag, the Pokémon's {0} is raised slightly when it uses a {1} move.
 5* 003: TypeGroupWeaknessReduce	When kept in the bag, it reduces damage done to {0}-type members by {1}-type attacks, based on how many are on the team.
 5* 004: TypeBulldozer	When kept in the bag, it allows {0}-type moves to hit {1}-type Pokémon.
 5* 007: Nontraitor	When kept in the bag, the Pokémon cannot damage allies with its moves.
@@ -91,5 +96,9 @@ EffectType	Description
 5* 078: EndureType	When kept in the bag, prevents the Pokémon from fainting to {0}-type moves, leaving it with 1 HP.
 5* 079: SpikeDropper	When kept in the bag, the Pokémon scatters Spikes when hit by a {0} attack.
 5* 082: WeaknessReduce	When kept in the bag, it reduces damage done by {0}-type attacks.
-5* 087: MapStatusOnCategoryUse	When kept in the bag, the Pokémon changes the floor to {1} after using a {0} attack.
+5* 087: MapStatusOnCategoryUse	When kept in the bag, the Pokémon changes the floor to {1} after using a {0} move.
 5* 092: MetronomePlus	When kept in the bag, it increases the Pokémon's luck when using Metronome.
+5* 098: StatusOnTypeHit	When kept in the bag, the Pokémon's {0}-type moves inflict the {1} status.
+5* 099: SweetDreams	When kept in the bag, the Pokémon gradually restores the HP of its teammates while they are asleep.
+5* 100: ChanceStatusOnTypeHit	When kept in the bag, the Pokémon's {0}-type moves have a chance to inflict the {1} status.
+5* 101: ChanceStatOnTypeHit	When kept in the bag, the Pokémon's {0}-type moves may lower the target's {1}.

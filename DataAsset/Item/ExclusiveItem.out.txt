@@ -3,7 +3,7 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 0* None	Plant Torc	002: Ivysaur	True				B	*	4*	5* 007: Nontraitor							
 1* Claw		001: Bulbasaur	True				C	*	1-2*	1* 014: DeepBreather							
 1* Fang		001: Bulbasaur	True				D	*	1-2*	2* 051: BarrageGuard							
-0* None	Grass Guard	001: Bulbasaur	True				E	*	2-3*	3* 017: CounterBasher							
+0* None	Grass Guard	001: Bulbasaur	True				E	*	2-3*	3* 058: StatusMirror							
 2* Crest		002: Ivysaur	True				F	*	2-3*	0* 000: None							
 0* None	Flame Bangle	006: Charizard	True				A	*	5*	5* 067: SecondSTAB	003: Dragon						
 0* None	Kindle Scarf	005: Charmeleon	True				B	*	4*	4* 070: PassThroughAttacker							
@@ -11,16 +11,16 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Fang		004: Charmander	True				D	*	1-2*	2* 019: MasterHurler							
 0* None	Fiery Heart	004: Charmander	True				E	*	2-3*	3* 038: LungeAttack							
 2* Crest		005: Charmeleon	True				F	*	2-3*	0* 000: None							
-0* None	Hydro Band	009: Blastoise	True				A	*	5*	5* 078: EndureType	004: Electric						
-0* None	Bubble Bangle	008: Wartortle	True				B	*	4*	0* 000: None							
-1* Foam		007: Squirtle	True				C	*	1-2*	1* 061: ErraticDefender							
-1* Card		007: Squirtle	True				D	*	1-2*	1* 050: Anchor							
-0* None	Water Guard	007: Squirtle	True				E	*	2-3*	3* 058: StatusMirror							
+0* None	Hydro Band	009: Blastoise	True				A	*	5*	5* 082: WeaknessReduce	004: Electric						
+0* None	Bubble Bangle	008: Wartortle	True				B	*	4*	4* 056: FastHealer							
+1* Foam		007: Squirtle	True				C	*	1-2*	1* 014: DeepBreather							
+1* Card		007: Squirtle	True				D	*	1-2*	1* 026: SureHitAttacker							
+0* None	Water Guard	007: Squirtle	True				E	*	2-3*	3* 017: CounterBasher							
 2* Crest		008: Wartortle	True				F	*	2-3*	0* 000: None							
-0* None	Glittery Bow	012: Butterfree	True				A	*	5*	0* 000: None							
-3* Bow		011: Metapod	True				B	*	4*	0* 000: None							
-1* Card		010: Caterpie	True				C	*	1-2*	0* 000: None							
-1* Branch		010: Caterpie	True				D	*	1-2*	0* 000: None							
+0* None	Glittery Bow	012: Butterfree	True				A	*	5*	5* 078: EndureType	016: Rock						
+3* Bow		011: Metapod	True				B	*	4*	4* 047: Celebrate							
+1* Card		010: Caterpie	True				C	*	1-2*	2* 013: PPBoost						2	
+1* Branch		010: Caterpie	True				D	*	1-2*	3* 032: StairSensor							
 0* None		010: Caterpie	True				E	*	2-3*	0* 000: None							
 0* None		011: Metapod	True				F	*	2-3*	0* 000: None							
 0* None	Charge Scarf	015: Beedrill	True				A	*	5*	5* 004: TypeBulldozer	014: Poison			017: Steel			
@@ -29,35 +29,35 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Hair		013: Weedle	True				D	*	1-2*	2* 051: BarrageGuard							
 2* Crest		013: Weedle	True				E	*	2-3*	5* 079: SpikeDropper					002: Magical		
 0* None		014: Kakuna	True				F	*	2-3*	0* 000: None							
-3* Torc		018: Pidgeot	True				A	*	5*	0* 000: None							
-3* Scarf		017: Pidgeotto	True				B	*	4*	0* 000: None							
-1* Card		016: Pidgey	True				C	*	1-2*	0* 000: None							
-1* Branch		016: Pidgey	True				D	*	1-2*	0* 000: None							
-0* None		016: Pidgey	True				E	*	2-3*	0* 000: None							
+3* Torc		018: Pidgeot	True				A	*	5*	5* 082: WeaknessReduce	012: Ice						
+3* Scarf		017: Pidgeotto	True				B	*	4*	3* 071: WeatherProtection							
+1* Card		016: Pidgey	True				C	*	1-2*	2* 053: ClutchPerformer							
+1* Branch		016: Pidgey	True				D	*	1-2*	1* 015: PracticeSwinger							
+2* Charm		016: Pidgey	True				E	*	2-3*	3* 032: StairSensor							
 0* None		017: Pidgeotto	True				F	*	2-3*	0* 000: None							
-0* None	Overcome Bow	020: Raticate	True				A	*	5*	0* 000: None							
-3* Scarf		020: Raticate	True				B	*	4*	0* 000: None							
-1* Hair		019: Rattata	True				C	*	1-2*	0* 000: None							
-1* Tooth		019: Rattata	True				D	*	1-2*	0* 000: None							
-0* None		019: Rattata	True				E	*	2-3*	0* 000: None							
+0* None	Overcome Bow	020: Raticate	True				A	*	5*	3* 072: RemoveAbilityAttack							
+3* Scarf		020: Raticate	True				B	*	4*	3* 071: WeatherProtection							
+1* Hair		019: Rattata	True				C	*	1-2*	1* 084: HitAndRun							
+1* Tooth		019: Rattata	True				D	*	1-2*	2* 013: PPBoost						2	
+2* Key		019: Rattata	True				E	*	2-3*	3* 038: LungeAttack							
 0* None		020: Raticate	True				F	*	2-3*	0* 000: None							
-0* None	Wing Scarf	022: Fearow	True				A	*	5*	0* 000: None							
-3* Collar		022: Fearow	True				B	*	4*	0* 000: None							
-1* Branch		021: Spearow	True				C	*	1-2*	0* 000: None							
-1* Card		021: Spearow	True				D	*	1-2*	0* 000: None							
+0* None	Wing Scarf	022: Fearow	True				A	*	5*	5* 067: SecondSTAB	011: Ground						
+3* Collar		022: Fearow	True				B	*	4*	3* 005: SuperCrit							
+1* Branch		021: Spearow	True				C	*	1-2*	2* 053: ClutchPerformer							
+1* Card		021: Spearow	True				D	*	1-2*	2* 029: StatDropImmune			001: Attack				
 0* None		021: Spearow	True				E	*	2-3*	0* 000: None							
 0* None		022: Fearow	True				F	*	2-3*	0* 000: None							
-0* None	Shock Ruff	024: Arbok	True				A	*	5*	0* 000: None							
-3* Belt		024: Arbok	True				B	*	4*	0* 000: None							
-1* Fang		023: Ekans	True				C	*	1-2*	0* 000: None							
-1* Card		023: Ekans	True				D	*	1-2*	0* 000: None							
-0* None		023: Ekans	True				E	*	2-3*	0* 000: None							
+0* None	Shock Ruff	024: Arbok	True				A	*	5*	3* 085: StatusOnCategoryHit		090: Immobilized			001: Physical		
+3* Belt		024: Arbok	True				B	*	4*	3* 058: StatusMirror							
+1* Fang		023: Ekans	True				C	*	1-2*	2* 053: ClutchPerformer							
+1* Card		023: Ekans	True				D	*	1-2*	2* 051: BarrageGuard							
+2* Crest		023: Ekans	True				E	*	2-3*	3* 069: GapProber							
 0* None		024: Arbok	True				F	*	2-3*	0* 000: None							
 0* None	Zapper Scarf	026: Raichu	True				A	*	5*	5* 034: MapSurveyor							
 0* None	Volt Torc	025: Pikachu	True				B	*	4*	4* 073: CheekPouch							
 1* Hair		172: Pichu	True				C	*	1-2*	2* 013: PPBoost						2	
-1* Card		172: Pichu	True				D	*	1-2*	1* 014: DeepBreather							
-0* None	Express Tag	172: Pichu	True				E	*	2-3*	3* 069: GapProber							
+1* Card		172: Pichu	True				D	*	1-2*	1* 094: PPSaver							
+0* None	Express Tag	172: Pichu	True				E	*	2-3*	2* 088: DoubleDash							
 0* None	Volt Charm	025: Pikachu	True				F	*	2-3*	0* 000: None							
 0* None	Sandy Torc	028: Sandslash	True				A	*	5*	5* 078: EndureType	018: Water						
 3* Scarf		028: Sandslash	True				B	*	4*	5* 079: SpikeDropper					001: Physical		
@@ -65,173 +65,173 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Mud		027: Sandshrew	True				D	*	1-2*	2* 019: MasterHurler							
 0* None		027: Sandshrew	True				E	*	2-3*	0* 000: None							
 0* None		028: Sandslash	True				F	*	2-3*	0* 000: None							
-0* None	Impact Torc	031: Nidoqueen	False	029: Nidoran♀, 030: Nidorina, 031: Nidoqueen			A	EF	5*	0* 000: None							
-0* None	Nido-Crest	033: Nidorino	True	033: Nidorino, 030: Nidorina			B	CD	2-3*	0* 000: None							
-0* None	Nido-Claw	029: Nidoran♀	True	029: Nidoran♀, 032: Nidoran♂			C		1-2*	0* 000: None							
-0* None	Nido-Thorn	032: Nidoran♂	True	029: Nidoran♀, 032: Nidoran♂			D		1-2*	0* 000: None							
-0* None	Nido-Seal	030: Nidorina	True	033: Nidorino, 030: Nidorina			E	CD	2-3*	0* 000: None							
-0* None	Thorny Scarf	031: Nidoqueen	True	031: Nidoqueen, 034: Nidoking			F	BE	4*	0* 000: None							
-0* None	King Sash	034: Nidoking	False	032: Nidoran♂, 033: Nidorino, 034: Nidoking			G	BF	5*	0* 000: None							
+0* None	Impact Torc	031: Nidoqueen	False	029: Nidoran♀, 030: Nidorina, 031: Nidoqueen			A	EF	5*	2* 013: PPBoost						5	
+0* None	Nido-Crest	033: Nidorino	True	033: Nidorino, 030: Nidorina			B	CD	2-3*	3* 017: CounterBasher							
+0* None	Nido-Claw	029: Nidoran♀	True	029: Nidoran♀, 032: Nidoran♂			C		1-2*	1* 015: PracticeSwinger							
+0* None	Nido-Thorn	032: Nidoran♂	True	029: Nidoran♀, 032: Nidoran♂			D		1-2*	2* 019: MasterHurler							
+0* None	Nido-Seal	030: Nidorina	True	033: Nidorino, 030: Nidorina			E	CD	2-3*	3* 048: Absorption							
+0* None	Thorny Scarf	031: Nidoqueen	True	031: Nidoqueen, 034: Nidoking			F		4*	3* 049: ExcessiveForce							
+0* None	King Sash	034: Nidoking	False	032: Nidoran♂, 033: Nidorino, 034: Nidoking			G	BF	5*	4* 095: CelebrateCure							
 0* None	Fairy Bow	036: Clefable	True				A	*	5*	5* 092: MetronomePlus							
 0* None	Moon Scarf	035: Clefairy	True				B	*	4*	5* 067: SecondSTAB	013: Normal						
 1* Dew		173: Cleffa	True				C	*	1-2*	1* 062: FastFriend							
 1* Card		173: Cleffa	True				D	*	1-2*	2* 053: ClutchPerformer							
 0* None	Starry Ore	173: Cleffa	True				E	*	2-3*	3* 043: WandMaster							
-2* Jewel		035: Clefairy	True				F	*	2-3*	0* 000: None							
-0* None	Afire Collar	038: Ninetales	True				A	*	5*	0* 000: None							
-3* Veil		038: Ninetales	True				B	*	4*	0* 000: None							
-1* Card		037: Vulpix	True				C	*	1-2*	0* 000: None							
-1* Tail		037: Vulpix	True				D	*	1-2*	0* 000: None							
-2* Tag		037: Vulpix	True				E	*	2-3*	0* 000: None							
+2* Jewel		035: Clefairy	True				F	*	2-3*	3* 065: ChestFinder							
+0* None	Afire Collar	038: Ninetales	True				A	*	5*	4* 086: StatusOnCategoryUse		018: Light Screen			003: Status		
+3* Veil		038: Ninetales	True				B	*	4*	3* 058: StatusMirror							
+1* Card		037: Vulpix	True				C	*	1-2*	2* 030: SleepWalker							
+1* Tail		037: Vulpix	True				D	*	1-2*	1* 084: HitAndRun							
+2* Tag		037: Vulpix	True				E	*	2-3*	3* 069: GapProber							
 2* Seal		038: Ninetales	True				F	*	2-3*	0* 000: None							
-0* None	Friend Torc	040: Wigglytuff	True				A	*	5*	0* 000: None							
-0* None	Snooze Ring	039: Jigglypuff	True				B	*	4*	0* 000: None							
-1* Song		174: Igglybuff	True				C	*	1-2*	0* 000: None							
-1* Dew		174: Igglybuff	True				D	*	1-2*	0* 000: None							
-0* None	Bouncy Charm	174: Igglybuff	True				E	*	2-3*	0* 000: None							
-0* None	Slumber Rock	039: Jigglypuff	True				F	*	2-3*	0* 000: None							
-0* None	Slash Bow	169: Crobat	True				A	*	5*	0* 000: None							
-0* None	Absorb Scarf	042: Golbat	True				B	*	4*	0* 000: None							
-1* Fang		041: Zubat	True				C	*	1-2*	0* 000: None							
-1* Card		041: Zubat	True				D	*	1-2*	0* 000: None							
-2* Crest		041: Zubat	True				E	*	2-3*	0* 000: None							
+0* None	Friend Torc	040: Wigglytuff	True				A	*	5*	5* 078: EndureType	017: Steel						
+0* None	Snooze Ring	039: Jigglypuff	True				B	*	4*	2* 023: StatusOnAttack		001: Asleep					
+1* Song		174: Igglybuff	True				C	*	1-2*	1* 062: FastFriend							
+1* Dew		174: Igglybuff	True				D	*	1-2*	2* 030: SleepWalker							
+0* None	Bouncy Charm	174: Igglybuff	True				E	*	2-3*	5* 007: Nontraitor							
+0* None	Slumber Rock	039: Jigglypuff	True				F	*	2-3*	3* 064: HiddenStairFinder							
+0* None	Slash Bow	169: Crobat	True				A	*	5*	5* 034: MapSurveyor							
+0* None	Absorb Scarf	042: Golbat	True				B	*	4*	3* 048: Absorption							
+1* Fang		041: Zubat	True				C	*	1-2*	2* 053: ClutchPerformer							
+1* Card		041: Zubat	True				D	*	1-2*	2* 018: DoubleAttacker							
+2* Crest		041: Zubat	True				E	*	2-3*	3* 055: CloseDodge							
 2* Brooch		042: Golbat	True				F	*	2-3*	0* 000: None							
-0* None	Bright Tiara	182: Bellossom	True				A	@	5*	0* 000: None							
-0* None	Aroma Scarf	045: Vileplume	True				B	@	4*	0* 000: None							
-1* Dew		043: Oddish	True				C	@	1-2*	0* 000: None							
-1* Leaf		043: Oddish	True				D	@	1-2*	0* 000: None																							
-2* Crest		044: Gloom	True				E	@	2-3*	0* 000: None							
+0* None	Bright Tiara	182: Bellossom	True				A	@	5*	4* 080: NoStatusInWeather							002: Sunny
+0* None	Aroma Scarf	045: Vileplume	True				B	@	5*	5* 082: WeaknessReduce	008: Flying						
+1* Dew		043: Oddish	True				C	@	1-2*	1* 014: DeepBreather							
+1* Leaf		043: Oddish	True				D	@	1-2*	2* 052: BetterOdds																							
+2* Crest		044: Gloom	True				E	@	2-3*	3* 069: GapProber							
 2* Earring		044: Gloom	True				F	@	2-3*	0* 000: None							
-0* None	Firm Hat	047: Parasect	True				A	*	5*	0* 000: None							
-3* Scarf		047: Parasect	True				B	*	4*	0* 000: None							
-1* Card		046: Paras	True				C	*	1-2*	0* 000: None							
-1* Claw		046: Paras	True				D	*	1-2*	0* 000: None							
+0* None	Firm Hat	047: Parasect	True				A	*	5*	4* 080: NoStatusInWeather							001: Rain
+3* Scarf		047: Parasect	True				B	*	4*	4* 010: AllTerrain							
+1* Card		046: Paras	True				C	*	1-2*	1* 006: NVECrit							
+1* Claw		046: Paras	True				D	*	1-2*	2* 013: PPBoost						2	
 0* None		046: Paras	True				E	*	2-3*	0* 000: None							
 0* None		047: Parasect	True				F	*	2-3*	0* 000: None							
 0* None	Gaze Goggles	049: Venomoth	True				A	*	5*	5* 035: XRay							
 3* Bow		049: Venomoth	True				B	*	4*	4* 010: AllTerrain							
 1* Hair		048: Venonat	True				C	*	1-2*	2* 018: DoubleAttacker							
 1* Card		048: Venonat	True				D	*	1-2*	1* 006: NVECrit							
-0* None		048: Venonat	True				E	*	2-3*	0* 000: None							
+2* Dust		048: Venonat	True				E	*	2-3*	2* 022: PressurePlus							
 0* None		049: Venomoth	True				F	*	2-3*	0* 000: None							
-3* Bow		051: Dugtrio	True				A	*	5*	0* 000: None							
-3* Hat		051: Dugtrio	True				B	*	4*	0* 000: None							
-1* Mud		050: Diglett	True				C	*	1-2*	0* 000: None							
-1* Claw		050: Diglett	True				D	*	1-2*	0* 000: None							
+3* Bow		051: Dugtrio	True				A	*	5*	4* 093: AttackRangeInWeather							003: Sandstorm
+3* Hat		051: Dugtrio	True				B	*	4*	4* 068: TypedAttack							
+1* Mud		050: Diglett	True				C	*	1-2*	1* 094: PPSaver							
+1* Claw		050: Diglett	True				D	*	1-2*	2* 033: AcuteSniffer							
 2* Ore		050: Diglett	True				E	*	2-3*	0* 000: None							
 2* Pebble		051: Dugtrio	True				F	*	2-3*	0* 000: None							
-0* None	Noble Scarf	053: Persian	True				A	*	5*	0* 000: None							
-3* Ruff		053: Persian	True				B	*	4*	0* 000: None							
-1* Claw		052: Meowth	True				C	*	1-2*	0* 000: None							
-1* Fang		052: Meowth	True				D	*	1-2*	0* 000: None							
-0* None	Coin Charm	052: Meowth	True				E	*	2-3*	0* 000: None							
-0* None	Insight Rock	053: Persian	True				F	*	2-3*	0* 000: None							
-0* None	Paddle Scarf	055: Golduck	True				A	*	5*	0* 000: None							
-3* Hat		055: Golduck	True				B	*	4*	0* 000: None							
-1* Card		054: Psyduck	True				C	*	1-2*	0* 000: None							
-1* Hair		054: Psyduck	True				D	*	1-2*	0* 000: None							
+0* None	Noble Scarf	053: Persian	True				A	*	5*	4* 086: StatusOnCategoryUse		078: Focus Energy			001: Physical		
+3* Ruff		053: Persian	True				B	*	4*	3* 055: CloseDodge							
+1* Claw		052: Meowth	True				C	*	1-2*	2* 033: AcuteSniffer							
+1* Fang		052: Meowth	True				D	*	1-2*	1* 084: HitAndRun							
+0* None	Coin Charm	052: Meowth	True				E	*	2-3*	3* 063: CoinWatcher							
+0* None	Insight Rock	053: Persian	True				F	*	2-3*	3* 064: HiddenStairFinder							
+0* None	Paddle Scarf	055: Golduck	True				A	*	5*	5* 037: WarpPayback	004: Electric						
+3* Hat		055: Golduck	True				B	*	4*	3* 057: SelfCurer							
+1* Card		054: Psyduck	True				C	*	1-2*	2* 053: ClutchPerformer							
+1* Hair		054: Psyduck	True				D	*	1-2*	3* 028: StatusImmune		004: Paralyzed					
 0* None		054: Psyduck	True				E	*	2-3*	0* 000: None							
 0* None		055: Golduck	True				F	*	2-3*	0* 000: None							
-0* None	Nullify Belt	057: Primeape	True				A	*	5*	0* 000: None							
-3* Armlet		057: Primeape	True				B	*	4*	0* 000: None							
-1* Hair		056: Mankey	True				C	*	1-2*	0* 000: None							
-1* Card		056: Mankey	True				D	*	1-2*	0* 000: None							
+0* None	Nullify Belt	057: Primeape	True				A	*	5*	3* 072: RemoveAbilityAttack							
+3* Armlet		057: Primeape	True				B	*	4*	3* 028: StatusImmune		002: Burned					
+1* Hair		056: Mankey	True				C	*	1-2*	2* 059: StatMirror							
+1* Card		056: Mankey	True				D	*	1-2*	3* 028: StatusImmune		008: Cringing					
 0* None		056: Mankey	True				E	*	2-3*	0* 000: None							
 0* None		057: Primeape	True				F	*	2-3*	0* 000: None							
-0* None	Legend Bow	059: Arcanine	True				A	*	5*	0* 000: None							
-2* Brooch		059: Arcanine	True				B	*	4*	0* 000: None							
-1* Hair		058: Growlithe	True				C	*	1-2*	0* 000: None							
-1* Claw		058: Growlithe	True				D	*	1-2*	0* 000: None							
-2* Ring		058: Growlithe	True				E	*	2-3*	0* 000: None							
+0* None	Legend Bow	059: Arcanine	True				A	*	5*	5* 082: WeaknessReduce	004: Electric						
+2* Brooch		059: Arcanine	True				B	*	4*	4* 041: TrapBuster							
+1* Hair		058: Growlithe	True				C	*	1-2*	2* 033: AcuteSniffer							
+1* Claw		058: Growlithe	True				D	*	1-2*	2* 029: StatDropImmune			004: MDef				
+2* Ring		058: Growlithe	True				E	*	2-3*	3* 042: ExplosionGuard							
 2* Seal		059: Arcanine	True				F	*	2-3*	0* 000: None							
-0* None	Rain Crown	186: Politoed	True				A	@	5*	0* 000: None							
-0* None	Bold Belt	062: Poliwrath	True				B	@	4*	0* 000: None							
-1* Card		060: Poliwag	True				C	@	1-2*	0* 000: None							
-1* Foam		060: Poliwag	True				D	@	1-2*	0* 000: None							
-2* Ring		061: Poliwhirl	True				E	@	2-3*	0* 000: None							
+0* None	Rain Crown	186: Politoed	True				A	@	5*	5* 036: WeaknessPayback	004: Electric	001: Asleep					
+0* None	Bold Belt	062: Poliwrath	True				B	@	5*	5* 036: WeaknessPayback	008: Flying	007: Confused					
+1* Card		060: Poliwag	True				C	@	1-2*	2* 013: PPBoost						2	
+1* Foam		060: Poliwag	True				D	@	1-2*	2* 052: BetterOdds							
+2* Ring		061: Poliwhirl	True				E	@	2-3*	3* 069: GapProber							
 2* Seal		061: Poliwhirl	True				F	@	2-3*	0* 000: None							
 0* None	Sparkle Ruff	065: Alakazam	True				A	*	5*	5* 004: TypeBulldozer	015: Psychic			002: Dark			
 3* Torc		064: Kadabra	True				B	*	4*	4* 044: WandSpread							
 1* Card		063: Abra	True				C	*	1-2*	2* 013: PPBoost						2	
 1* Beam		063: Abra	True				D	*	1-2*	1* 027: SpecialAttacker							
-0* None		063: Abra	True				E	*	2-3*	4* 010: AllTerrain							
+2* Seal		063: Abra	True				E	*	2-3*	4* 010: AllTerrain							
 0* None		064: Kadabra	True				F	*	2-3*	0* 000: None							
-3* Belt		068: Machamp	True				A	*	5*	0* 000: None							
-3* Mask		067: Machoke	True				B	*	4*	0* 000: None							
-1* Twig		066: Machop	True				C	*	1-2*	0* 000: None							
-1* Card		066: Machop	True				D	*	1-2*	0* 000: None							
+3* Belt		068: Machamp	True				A	*	5*	5* 078: EndureType	015: Psychic						
+3* Mask		067: Machoke	True				B	*	4*	4* 025: ThrowOnAttack							
+1* Twig		066: Machop	True				C	*	1-2*	2* 053: ClutchPerformer							
+1* Card		066: Machop	True				D	*	1-2*	2* 019: MasterHurler							
 0* None		066: Machop	True				E	*	2-3*	0* 000: None							
 0* None		067: Machoke	True				F	*	2-3*	0* 000: None							
-3* Torc		071: Victreebel	True				A	*	5*	4* 073: CheekPouch							
+3* Torc		071: Victreebel	True				A	*	5*	4* 086: StatusOnCategoryUse	008: Flying	090: Immobilized					
 0* None	Digest Scarf	070: Weepinbell	True				B	*	4*	4* 010: AllTerrain							
-1* Leaf		069: Bellsprout	True				C	*	1-2*	2* 030: SleepWalker							
+1* Leaf		069: Bellsprout	True				C	*	1-2*	1* 006: NVECrit							
 1* Branch		069: Bellsprout	True				D	*	1-2*	1* 014: DeepBreather							
-0* None		069: Bellsprout	True				E	*	2-3*	0* 000: None							
+2* Charm		069: Bellsprout	True				E	*	2-3*	4* 073: CheekPouch							
 0* None		070: Weepinbell	True				F	*	2-3*	0* 000: None																							
-3* Cape		073: Tentacruel	True				A	*	5*	0* 000: None																							
-3* Veil		073: Tentacruel	True				B	*	4*	0* 000: None																							
-1* Foam		072: Tentacool	True				C	*	1-2*	0* 000: None							
-1* Card		072: Tentacool	True				D	*	1-2*	0* 000: None							
+3* Cape		073: Tentacruel	True				A	*	5*	5* 037: WarpPayback	011: Ground																						
+3* Veil		073: Tentacruel	True				B	*	4*	3* 028: StatusImmune		004: Paralyzed																					
+1* Foam		072: Tentacool	True				C	*	1-2*	1* 050: Anchor							
+1* Card		072: Tentacool	True				D	*	1-2*	2* 023: StatusOnAttack		005: Poisoned					
 2* Jewel		072: Tentacool	True				E	*	2-3*	0* 000: None							
 0* None		073: Tentacruel	True				F	*	2-3*	0* 000: None							
-0* None	Rugged Sash	076: Golem	True				A	*	5*	5* 078: EndureType	018: Water						
+0* None	Rugged Sash	076: Golem	True				A	*	5*	4* 080: NoStatusInWeather							003: Sandstorm
 3* Drill		075: Graveler	True				B	*	4*	5* 011: Wallbreaker							
 1* Card		074: Geodude	True				C	*	1-2*	1* 015: PracticeSwinger							
 1* Mud		074: Geodude	True				D	*	1-2*	1* 050: Anchor							
 2* Ore		074: Geodude	True				E	*	2-3*	4* 010: AllTerrain							
 2* Ore		075: Graveler	True				F	*	2-3*	3* 042: ExplosionGuard																							
-0* None	Sunlight Bow	078: Rapidash	True				A	*	5*	0* 000: None																							
-3* Scarf		078: Rapidash	True				B	*	4*	0* 000: None																							
-1* Hair		077: Ponyta	True				C	*	1-2*	0* 000: None							
-1* Card		077: Ponyta	True				D	*	1-2*	0* 000: None																							
+0* None	Sunlight Bow	078: Rapidash	True				A	*	5*	5* 007: Nontraitor																							
+3* Scarf		078: Rapidash	True				B	*	4*	3* 054: DistanceDodge																							
+1* Hair		077: Ponyta	True				C	*	1-2*	2* 053: ClutchPerformer							
+1* Card		077: Ponyta	True				D	*	1-2*	2* 018: DoubleAttacker																							
 0* None		077: Ponyta	True				E	*	2-3*	0* 000: None																							
 0* None		078: Rapidash	True				F	*	2-3*	0* 000: None							
 0* None	King Cap	199: Slowking	True				A	@	5*	5* 087: MapStatusOnCategoryUse					003: Status		001: Rain																
-3* Scarf		080: Slowbro	True				B	@	4*	0* 000: None																							
-1* Drool		079: Slowpoke	True				C	@	1-2*	0* 000: None																							
-1* Fang		079: Slowpoke	True				D	@	1-2*	0* 000: None																							
-2* Crest		079: Slowpoke	True				E	@	2-3*	0* 000: None																							
+3* Scarf		080: Slowbro	True				B	@	4*	5* 007: Nontraitor																							
+1* Drool		079: Slowpoke	True				C	@	1-2*	1* 014: DeepBreather																							
+1* Fang		079: Slowpoke	True				D	@	1-2*	2* 016: MisfortuneMirror																							
+2* Crest		079: Slowpoke	True				E	@	2-3*	3* 042: ExplosionGuard																							
 2* Charm		079: Slowpoke	True				F	@	2-3*	0* 000: None																							
 0* None	Builder Sash	462: Magnezone	True				A	*	5*	5* 034: MapSurveyor																							
 3* Specs		082: Magneton	True				B	*	4*	4* 010: AllTerrain							
 1* Beam		081: Magnemite	True				C	*	1-2*	1* 061: ErraticDefender																							
-1* Card		081: Magnemite	True				D	*	1-2*	2* 023: StatusOnAttack		004: Paralyzed																					
+1* Card		081: Magnemite	True				D	*	1-2*	1* 027: SpecialAttacker																							
 0* None		081: Magnemite	True				E	*	2-3*	0* 000: None																							
 0* None		082: Magneton	True				F	*	2-3*	0* 000: None							
-0* None	Bullseye Bow	083: Farfetch'd	False				A	*	5*	0* 000: None							
-3* Poncho		083: Farfetch'd	False				B	*	4*	0* 000: None							
-1* Card		083: Farfetch'd	False				C	*	1-2*	0* 000: None							
-2* Charm		083: Farfetch'd	False				D	*	1-2*	0* 000: None							
-2* Medal		083: Farfetch'd	False				E	*	2-3*	0* 000: None							
+0* None	Bullseye Bow	083: Farfetch'd	False				A	*	5*	4* 093: AttackRangeInWeather							000: Clear
+3* Poncho		083: Farfetch'd	False				B	*	4*	4* 041: TrapBuster							
+1* Card		083: Farfetch'd	False				C	*	1-2*	1* 084: HitAndRun							
+2* Charm		083: Farfetch'd	False				D	*	1-2*	2* 018: DoubleAttacker							
+2* Medal		083: Farfetch'd	False				E	*	2-3*	3* 069: GapProber							
 2* Crest		083: Farfetch'd	False				F	*	2-3*	0* 000: None							
-0* None	Fight Torc	085: Dodrio	True				A	*	5*	0* 000: None							
-3* Hat		085: Dodrio	True				B	*	4*	0* 000: None							
-1* Claw		084: Doduo	True				C	*	1-2*	0* 000: None							
-1* Card		084: Doduo	True				D	*	1-2*	0* 000: None							
-0* None		084: Doduo	True				E	*	2-3*	0* 000: None							
-0* None		085: Dodrio	True				F	*	2-3*	0* 000: None							
-0* None	North Torc	087: Dewgong	True				A	*	5*	0* 000: None							
-3* Float		087: Dewgong	True				B	*	4*	0* 000: None							
-1* Dew		086: Seel	True				C	*	1-2*	0* 000: None							
-1* Fang		086: Seel	True				D	*	1-2*	0* 000: None							
+0* None	Fight Torc	085: Dodrio	True				A	*	5*	4* 086: StatusOnCategoryUse		078: Focus Energy			003: Status		
+3* Hat		085: Dodrio	True				B	*	4*	4* 047: Celebrate							
+1* Claw		084: Doduo	True				C	*	1-2*	2* 018: DoubleAttacker							
+1* Card		084: Doduo	True				D	*	1-2*	2* 088: DoubleDash							
+2* Crest		084: Doduo	True				E	*	2-3*	3* 069: GapProber							
+2* Seal		085: Dodrio	True				F	*	2-3*	3* 005: SuperCrit							
+0* None	North Torc	087: Dewgong	True				A	*	5*	5* 036: WeaknessPayback	016: Rock	003: Frozen					
+3* Float		087: Dewgong	True				B	*	4*	3* 054: DistanceDodge							
+1* Dew		086: Seel	True				C	*	1-2*	1* 014: DeepBreather							
+1* Fang		086: Seel	True				D	*	1-2*	2* 051: BarrageGuard							
 0* None		086: Seel	True				E	*	2-3*	0* 000: None							
 0* None		087: Dewgong	True				F	*	2-3*	0* 000: None							
-0* None	Slimy Bow	089: Muk	True				A	*	5*	0* 000: None							
-3* Scarf		089: Muk	True				B	*	4*	0* 000: None							
-1* Card		088: Grimer	True				C	*	1-2*	0* 000: None							
-1* Mud		088: Grimer	True				D	*	1-2*	0* 000: None							
-2* Jewel		088: Grimer	True				E	*	2-3*	0* 000: None							
+0* None	Slimy Bow	089: Muk	True				A	*	5*	5* 037: WarpPayback	011: Ground						
+3* Scarf		089: Muk	True				B	*	4*	4* 068: TypedAttack							
+1* Card		088: Grimer	True				C	*	1-2*	1* 084: HitAndRun							
+1* Mud		088: Grimer	True				D	*	1-2*	2* 008: WaterTerrain							
+2* Jewel		088: Grimer	True				E	*	2-3*	3* 069: GapProber							
 0* None		089: Muk	True				F	*	2-3*	0* 000: None							
-0* None	Cover Armor	091: Cloyster	True				A	*	5*	0* 000: None							
-3* Band		091: Cloyster	True				B	*	4*	0* 000: None							
-1* Drool		090: Shellder	True				C	*	1-2*	0* 000: None							
-1* Card		090: Shellder	True				D	*	1-2*	0* 000: None							
+0* None	Cover Armor	091: Cloyster	True				A	*	5*	5* 082: WeaknessReduce	013: Normal						
+3* Band		091: Cloyster	True				B	*	4*	4* 041: TrapBuster							
+1* Drool		090: Shellder	True				C	*	1-2*	2* 083: Gratitude							
+1* Card		090: Shellder	True				D	*	1-2*	1* 050: Anchor							
 0* None		090: Shellder	True				E	*	2-3*	0* 000: None							
 0* None		091: Cloyster	True				F	*	2-3*	0* 000: None							
-0* None	Sunglasses	094: Gengar	True				A	*	5*	0* 000: None							
-0* None	Slip Scarf	093: Haunter	True				B	*	4*	0* 000: None							
-1* Fang		092: Gastly	True				C	*	1-2*	0* 000: None							
-1* Drool		092: Gastly	True				D	*	1-2*	0* 000: None							
+0* None	Sunglasses	094: Gengar	True				A	*	5*	4* 086: StatusOnCategoryUse		129: Invisible			003: Status		
+0* None	Slip Scarf	093: Haunter	True				B	*	4*	4* 068: TypedAttack							
+1* Fang		092: Gastly	True				C	*	1-2*	1* 084: HitAndRun							
+1* Drool		092: Gastly	True				D	*	1-2*	2* 033: AcuteSniffer							
 0* None		092: Gastly	True				E	*	2-3*	0* 000: None							
 0* None		093: Haunter	True				F	*	2-3*	0* 000: None							
 0* None	Quartz Torc	208: Steelix	True				A	*	5*	4* 041: TrapBuster							
@@ -240,122 +240,122 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Card		095: Onix	True				D	*	1-2*	2* 033: AcuteSniffer							
 2* Shard		095: Onix	True				E	*	2-3*	3* 028: StatusImmune		002: Burned					
 0* None		208: Steelix	True				F	*	2-3*	0* 000: None							
-0* None	Dream Coin	097: Hypno	True				A	*	5*	0* 000: None							
-3* Tie		097: Hypno	True				B	*	4*	0* 000: None							
-1* Gasp		096: Drowzee	True				C	*	1-2*	0* 000: None							
-1* Beam		096: Drowzee	True				D	*	1-2*	0* 000: None							
+0* None	Dream Coin	097: Hypno	True				A	*	5*	5* 036: WeaknessPayback	013: Normal	001: Asleep					
+3* Tie		097: Hypno	True				B	*	4*	4* 091: ProjectileAttack							
+1* Gasp		096: Drowzee	True				C	*	1-2*	1* 084: HitAndRun							
+1* Beam		096: Drowzee	True				D	*	1-2*	2* 059: StatMirror							
 0* None		096: Drowzee	True				E	*	2-3*	0* 000: None							
 0* None		097: Hypno	True				F	*	2-3*	0* 000: None							
-0* None	Super Sash	099: Kingler	True				A	*	5*	0* 000: None							
-3* Bow		099: Kingler	True				B	*	4*	0* 000: None							
-1* Foam		098: Krabby	True				C	*	1-2*	0* 000: None							
-1* Card		098: Krabby	True				D	*	1-2*	0* 000: None							
-0* None		098: Krabby	True				E	*	2-3*	0* 000: None							
+0* None	Super Sash	099: Kingler	True				A	*	5*	4* 056: FastHealer							
+3* Bow		099: Kingler	True				B	*	4*	3* 049: ExcessiveForce							
+1* Foam		098: Krabby	True				C	*	1-2*	1* 014: DeepBreather							
+1* Card		098: Krabby	True				D	*	1-2*	2* 029: StatDropImmune			002: Defense				
+2* Charm		098: Krabby	True				E	*	2-3*	3* 048: Absorption							
 0* None		099: Kingler	True				F	*	2-3*	0* 000: None							
-3* Bow		101: Electrode	True				A	*	5*	0* 000: None							
-3* Scarf		101: Electrode	True				B	*	4*	0* 000: None							
-1* Beam		100: Voltorb	True				C	*	1-2*	0* 000: None							
-1* Card		100: Voltorb	True				D	*	1-2*	0* 000: None							
-0* None		100: Voltorb	True				E	*	2-3*	0* 000: None							
+3* Bow		101: Electrode	True				A	*	5*	5* 040: ExplosiveAttack							
+3* Scarf		101: Electrode	True				B	*	4*	3* 049: ExcessiveForce							
+1* Beam		100: Voltorb	True				C	*	1-2*	2* 023: StatusOnAttack		004: Paralyzed					
+1* Card		100: Voltorb	True				D	*	1-2*	2* 019: MasterHurler							
+2* Tag		100: Voltorb	True				E	*	2-3*	3* 069: GapProber							
 0* None		101: Electrode	True				F	*	2-3*	0* 000: None							
-3* Hat		103: Exeggutor	True				A	*	5*	0* 000: None							
-3* Sash		103: Exeggutor	True				B	*	4*	0* 000: None							
-1* Beam		102: Exeggcute	True				C	*	1-2*	0* 000: None							
-1* Card		102: Exeggcute	True				D	*	1-2*	0* 000: None							
+3* Hat		103: Exeggutor	True				A	*	5*	5* 087: MapStatusOnCategoryUse					003: Status		011: Wonder Room
+3* Sash		103: Exeggutor	True				B	*	4*	3* 049: ExcessiveForce							
+1* Beam		102: Exeggcute	True				C	*	1-2*	1* 014: DeepBreather							
+1* Card		102: Exeggcute	True				D	*	1-2*	2* 051: BarrageGuard							
 0* None		102: Exeggcute	True				E	*	2-3*	0* 000: None							
 0* None		103: Exeggutor	True				F	*	2-3*	0* 000: None							
-3* Torc		105: Marowak	True				A	*	5*	0* 000: None							
-3* Armor		105: Marowak	True				B	*	4*	0* 000: None							
-1* Claw		104: Cubone	True				C	*	1-2*	0* 000: None							
-1* Mud		104: Cubone	True				D	*	1-2*	0* 000: None							
+3* Torc		105: Marowak	True				A	*	5*	5* 036: WeaknessPayback	018: Water	114: Blinker					
+3* Armor		105: Marowak	True				B	*	4*	3* 048: Absorption							
+1* Claw		104: Cubone	True				C	*	1-2*	2* 013: PPBoost						2	
+1* Mud		104: Cubone	True				D	*	1-2*	2* 019: MasterHurler							
 0* None		104: Cubone	True				E	*	2-3*	0* 000: None							
 0* None		105: Marowak	True				F	*	2-3*	0* 000: None							
-0* None	Victory Ruff	237: Hitmontop	False				A	BG	5*	0* 000: None							
-2* Charm		237: Hitmontop	False	236: Tyrogue, 237: Hitmontop			B	HIG	4*	0* 000: None							
-0* None	Victory Belt	107: Hitmonchan	False				C	DG	5*	0* 000: None							
-2* Guard		107: Hitmonchan	False	236: Tyrogue, 107: Hitmonchan			D	HIG	4*	0* 000: None							
-0* None	Victory Bangle	106: Hitmonlee	False				E	FG	5*	0* 000: None							
-2* Ring		106: Hitmonlee	False	236: Tyrogue, 106: Hitmonlee			F	HIG	4*	0* 000: None							
-0* None	Muscle Charm	236: Tyrogue	True				G	HI	3*	0* 000: None							
-1* Sweat		236: Tyrogue	True				H		1*	0* 000: None							
-1* Card		236: Tyrogue	True				I		2*	0* 000: None							
-0* None	Flabby Belt	463: Lickilicky	True				A	*	5*	0* 000: None							
-3* Scarf		463: Lickilicky	True				B	*	4*	0* 000: None							
-1* Drool		108: Lickitung	True				C	*	1-2*	0* 000: None							
-1* Card		108: Lickitung	True				D	*	1-2*	0* 000: None							
+0* None	Victory Ruff	237: Hitmontop	False				A	BG	5*	5* 004: TypeBulldozer	006: Fighting			009: Ghost			
+2* Charm		237: Hitmontop	False	236: Tyrogue, 237: Hitmontop			B		4*	3* 005: SuperCrit							
+0* None	Victory Belt	107: Hitmonchan	False				C	DG	5*	4* 095: CelebrateCure							
+2* Guard		107: Hitmonchan	False	236: Tyrogue, 107: Hitmonchan			D		4*	3* 048: Absorption							
+0* None	Victory Bangle	106: Hitmonlee	False				E	FG	5*	4* 047: Celebrate							
+2* Ring		106: Hitmonlee	False	236: Tyrogue, 106: Hitmonlee			F		4*	4* 041: TrapBuster							
+0* None	Muscle Charm	236: Tyrogue	True				G	HI	3*	3* 089: StatusSplash							
+1* Sweat		236: Tyrogue	True				H		1*	1* 006: NVECrit							
+1* Card		236: Tyrogue	True				I		2*	2* 053: ClutchPerformer							
+0* None	Flabby Belt	463: Lickilicky	True				A	*	5*	4* 073: CheekPouch							
+3* Scarf		463: Lickilicky	True				B	*	4*	4* 045: MultiRayShot							
+1* Drool		108: Lickitung	True				C	*	1-2*	2* 016: MisfortuneMirror							
+1* Card		108: Lickitung	True				D	*	1-2*	2* 023: StatusOnAttack		004: Paralyzed					
 0* None		108: Lickitung	True				E	*	2-3*	0* 000: None							
 0* None		463: Lickilicky	True				F	*	2-3*	0* 000: None							
-3* Scarf		110: Weezing	True				A	*	5*	0* 000: None							
-3* Hat		110: Weezing	True				B	*	4*	0* 000: None							
-1* Gasp		109: Koffing	True				C	*	1-2*	0* 000: None							
-1* Card		109: Koffing	True				D	*	1-2*	0* 000: None							
+3* Scarf		110: Weezing	True				A	*	5*	4* 086: StatusOnCategoryUse		069: Mist			003: Status		
+3* Hat		110: Weezing	True				B	*	4*	3* 042: ExplosionGuard							
+1* Gasp		109: Koffing	True				C	*	1-2*	2* 016: MisfortuneMirror							
+1* Card		109: Koffing	True				D	*	1-2*	1* 014: DeepBreather							
 0* None		109: Koffing	True				E	*	2-3*	0* 000: None							
 0* None		110: Weezing	True				F	*	2-3*	0* 000: None							
 3* Armor		464: Rhyperior	True				A	*	5*	5* 011: Wallbreaker							
 0* None	Pierce Drill	112: Rhydon	True				B	*	4*	4* 041: TrapBuster							
-1* Fang		111: Rhyhorn	True				C	*	1-2*	2* 019: MasterHurler							
+1* Fang		111: Rhyhorn	True				C	*	1-2*	1* 026: SureHitAttacker							
 1* Horn		111: Rhyhorn	True				D	*	1-2*	2* 009: LavaTerrain							
 2* Crest		111: Rhyhorn	True				E	*	2-3*	3* 017: CounterBasher							
 0* None		112: Rhydon	True				F	*	2-3*	0* 000: None							
-0* None	Faith Ring	242: Blissey	True				A	*	5*	0* 000: None							
-0* None	Lucky Scarf	113: Chansey	True				B	*	4*	0* 000: None							
-1* Dew		440: Happiny	True				C	*	1-2*	0* 000: None							
-1* Card		440: Happiny	True				D	*	1-2*	0* 000: None							
-0* None	Play Tag	440: Happiny	True				E	*	2-3*	0* 000: None							
-2* Charm		113: Chansey	True				F	*	2-3*	0* 000: None							
-0* None	Clinging Bow	465: Tangrowth	True				A	*	5*	0* 000: None							
-3* Coat		465: Tangrowth	True				B	*	4*	0* 000: None							
-1* Card		114: Tangela	True				C	*	1-2*	0* 000: None							
-1* Shoot		114: Tangela	True				D	*	1-2*	0* 000: None							
+0* None	Faith Ring	242: Blissey	True				A	*	5*	5* 082: WeaknessReduce	003: Dragon						
+0* None	Lucky Scarf	113: Chansey	True				B	*	4*	4* 044: WandSpread							
+1* Dew		440: Happiny	True				C	*	1-2*	1* 062: FastFriend							
+1* Card		440: Happiny	True				D	*	1-2*	2* 083: Gratitude							
+0* None	Play Tag	440: Happiny	True				E	*	2-3*	3* 069: GapProber							
+2* Charm		113: Chansey	True				F	*	2-3*	3* 064: HiddenStairFinder							
+0* None	Clinging Bow	465: Tangrowth	True				A	*	5*	5* 036: WeaknessPayback	001: Bug	090: Immobilized					
+3* Coat		465: Tangrowth	True				B	*	4*	4* 056: FastHealer							
+1* Card		114: Tangela	True				C	*	1-2*	2* 051: BarrageGuard							
+1* Shoot		114: Tangela	True				D	*	1-2*	2* 016: MisfortuneMirror							
 0* None		114: Tangela	True				E	*	2-3*	0* 000: None							
 0* None		465: Tangrowth	True				F	*	2-3*	0* 000: None							
-3* Apron		115: Kangaskhan	False				A	*	5*	0* 000: None							
-3* Armlet		115: Kangaskhan	False				B	*	4*	0* 000: None							
-1* Claw		115: Kangaskhan	False				C	*	1-2*	0* 000: None							
-1* Card		115: Kangaskhan	False				D	*	1-2*	0* 000: None							
-2* Brooch		115: Kangaskhan	False				E	*	2-3*	0* 000: None							
+3* Apron		115: Kangaskhan	False				A	*	5*	4* 046: RoyalVeil							
+3* Armlet		115: Kangaskhan	False				B	*	4*	3* 054: DistanceDodge							
+1* Claw		115: Kangaskhan	False				C	*	1-2*	1* 014: DeepBreather							
+1* Card		115: Kangaskhan	False				D	*	1-2*	2* 083: Gratitude							
+2* Brooch		115: Kangaskhan	False				E	*	2-3*	3* 042: ExplosionGuard							
 2* Seal		115: Kangaskhan	False				F	*	2-3*	0* 000: None							
 0* None	Tornado Bow	230: Kingdra	True				A	*	5*	3* 085: StatusOnCategoryHit		045: Whirlpool			003: Status		
-0* None	Swirl Scarf	117: Seadra	True				B	*	4*	0* 000: None							
-1* Card		116: Horsea	True				C	*	1-2*	0* 000: None							
-1* Tail		116: Horsea	True				D	*	1-2*	0* 000: None							
+0* None	Swirl Scarf	117: Seadra	True				B	*	4*	4* 045: MultiRayShot							
+1* Card		116: Horsea	True				C	*	1-2*	2* 053: ClutchPerformer							
+1* Tail		116: Horsea	True				D	*	1-2*	1* 061: ErraticDefender							
 0* None		116: Horsea	True				E	*	2-3*	0* 000: None							
 0* None		117: Seadra	True				F	*	2-3*	0* 000: None							
-3* Bow		119: Seaking	True				A	*	5*	0* 000: None							
-3* Float		119: Seaking	True				B	*	4*	0* 000: None							
-1* Foam		118: Goldeen	True				C	*	1-2*	0* 000: None							
-1* Tail		118: Goldeen	True				D	*	1-2*	0* 000: None							
-0* None		118: Goldeen	True				E	*	2-3*	0* 000: None							
+3* Bow		119: Seaking	True				A	*	5*	4* 086: StatusOnCategoryUse		077: Aqua Ring			003: Status		
+3* Float		119: Seaking	True				B	*	4*	3* 071: WeatherProtection							
+1* Foam		118: Goldeen	True				C	*	1-2*	2* 013: PPBoost						2	
+1* Tail		118: Goldeen	True				D	*	1-2*	2* 023: StatusOnAttack		008: Cringing					
+2* Ring		118: Goldeen	True				E	*	2-3*	3* 069: GapProber							
 0* None		119: Seaking	True				F	*	2-3*	0* 000: None							
-3* Belt		121: Starmie	True				A	*	5*	0* 000: None							
-3* Bow		121: Starmie	True				B	*	4*	0* 000: None							
-1* Card		120: Staryu	True				C	*	1-2*	0* 000: None							
-1* Horn		120: Staryu	True				D	*	1-2*	0* 000: None							
-0* None		120: Staryu	True				E	*	2-3*	0* 000: None							
+3* Belt		121: Starmie	True				A	*	5*	5* 036: WeaknessPayback	004: Electric	007: Confused					
+3* Bow		121: Starmie	True				B	*	4*	4* 044: WandSpread							
+1* Card		120: Staryu	True				C	*	1-2*	2* 060: ErraticAttacker							
+1* Horn		120: Staryu	True				D	*	1-2*	2* 053: ClutchPerformer							
+2* Jewel		120: Staryu	True				E	*	2-3*	3* 069: GapProber							
 0* None		121: Starmie	True				F	*	2-3*	0* 000: None							
-0* None	Barrier Bow	122: Mr. Mime	True				A	*	5*	0* 000: None							
-3* Ruff		122: Mr. Mime	True				B	*	4*	0* 000: None							
-0* None	Junior Beam	439: Mime Jr.	True				C	*	1-2*	0* 000: None							
-0* None	Junior Card	439: Mime Jr.	True				D	*	1-2*	0* 000: None							
-0* None	Mimic Pebble	439: Mime Jr.	True				E	*	2-3*	0* 000: None							
+0* None	Barrier Bow	122: Mr. Mime	True				A	*	5*	5* 082: WeaknessReduce	002: Dark						
+3* Ruff		122: Mr. Mime	True				B	*	4*	3* 055: CloseDodge							
+0* None	Junior Beam	439: Mime Jr.	True				C	*	1-2*	1* 084: HitAndRun							
+0* None	Junior Card	439: Mime Jr.	True				D	*	1-2*	3* 043: WandMaster							
+0* None	Mimic Pebble	439: Mime Jr.	True				E	*	2-3*	1* 027: SpecialAttacker							
 0* None	Bulwark Rock	122: Mr. Mime	True				F	*	2-3*	0* 000: None							
-0* None	Red Armlet	212: Scizor	True				A	*	5*	0* 000: None							
-2* Crest		212: Scizor	True				B	*	4*	0* 000: None							
-1* Fang		123: Scyther	True				C	*	1-2*	0* 000: None							
-1* Card		123: Scyther	True				D	*	1-2*	0* 000: None							
-0* None	Ambush Rock	123: Scyther	True				E	*	2-3*	0* 000: None							
+0* None	Red Armlet	212: Scizor	True				A	*	5*	5* 036: WeaknessPayback	007: Fire	008: Cringing					
+2* Crest		212: Scizor	True				B	*	4*	4* 070: PassThroughAttacker							
+1* Fang		123: Scyther	True				C	*	1-2*	1* 084: HitAndRun							
+1* Card		123: Scyther	True				D	*	1-2*	2* 019: MasterHurler							
+0* None	Ambush Rock	123: Scyther	True				E	*	2-3*	3* 038: LungeAttack							
 0* None	Steel Charm	212: Scizor	True				F	*	2-3*	0* 000: None							
-0* None	Ruin Scarf	124: Jynx	True				A	*	5*	0* 000: None							
-3* Veil		124: Jynx	True				B	*	4*	0* 000: None							
-1* Song		238: Smoochum	True				C	*	1-2*	0* 000: None							
-1* Card		238: Smoochum	True				D	*	1-2*	0* 000: None							
-0* None	Kiss Charm	238: Smoochum	True				E	*	2-3*	0* 000: None							
+0* None	Ruin Scarf	124: Jynx	True				A	*	5*	5* 037: WarpPayback	013: Normal						
+3* Veil		124: Jynx	True				B	*	4*	4* 044: WandSpread							
+1* Song		238: Smoochum	True				C	*	1-2*	2* 051: BarrageGuard							
+1* Card		238: Smoochum	True				D	*	1-2*	2* 023: StatusOnAttack		003: Frozen					
+0* None	Kiss Charm	238: Smoochum	True				E	*	2-3*	3* 032: StairSensor							
 0* None	Frozen Ore	124: Jynx	True				F	*	2-3*	0* 000: None							
 0* None	Voltaic Band	466: Electivire	True				A	*	5*	4* 086: StatusOnCategoryUse		097: Electrified			003: Status		
-3* Bangle		125: Electabuzz	True				B	*	4*	0* 000: None							
-1* Claw		239: Elekid	True				C	*	1-2*	0* 000: None							
-1* Card		239: Elekid	True				D	*	1-2*	0* 000: None							
-0* None	Jolt Charm	239: Elekid	True				E	*	2-3*	0* 000: None							
+3* Bangle		125: Electabuzz	True				B	*	4*	4* 041: TrapBuster							
+1* Claw		239: Elekid	True				C	*	1-2*	1* 050: Anchor							
+1* Card		239: Elekid	True				D	*	1-2*	2* 053: ClutchPerformer							
+0* None	Jolt Charm	239: Elekid	True				E	*	2-3*	3* 042: ExplosionGuard							
 0* None	Charge Seal	125: Electabuzz	True				F	*	2-3*	0* 000: None							
 3* Torc		467: Magmortar	True				A	*	5*	5* 007: Nontraitor							
 3* Scarf		126: Magmar	True				B	*	4*	3* 049: ExcessiveForce							
@@ -363,10 +363,10 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Card		240: Magby	True				D	*	1-2*	2* 019: MasterHurler							
 0* None	Ember Jewel	240: Magby	True				E	*	2-3*	3* 075: HealInLava							
 0* None	Erupt Ore	126: Magmar	True				F	*	2-3*	0* 000: None							
-3* Sash		127: Pinsir	False				A	*	5*	0* 000: None							
-3* Band		127: Pinsir	False				B	*	4*	0* 000: None							
-1* Horn		127: Pinsir	False				C	*	1-2*	0* 000: None							
-1* Card		127: Pinsir	False				D	*	1-2*	0* 000: None							
+3* Sash		127: Pinsir	False				A	*	5*	5* 036: WeaknessPayback	007: Fire	008: Cringing					
+3* Band		127: Pinsir	False				B	*	4*	3* 049: ExcessiveForce							
+1* Horn		127: Pinsir	False				C	*	1-2*	1* 006: NVECrit							
+1* Card		127: Pinsir	False				D	*	1-2*	2* 053: ClutchPerformer							
 0* None		127: Pinsir	False				E	*	2-3*	0* 000: None							
 0* None		127: Pinsir	False				F	*	2-3*	0* 000: None							
 0* None	Rushing Bow	128: Tauros	False				A	/	5*	5* 011: Wallbreaker							
@@ -375,110 +375,110 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Card		241: Miltank	False	128: Tauros, 241: Miltank			D	/	1-2*	1* 015: PracticeSwinger							
 2* Crest		128: Tauros	False	128: Tauros, 241: Miltank			E	/	4*	4* 025: ThrowOnAttack							
 2* Seal		241: Miltank	False	128: Tauros, 241: Miltank			F	/	4*	3* 048: Absorption							
-0* None	Field Crest	128: Tauros	False	128: Tauros, 241: Miltank			G	/	3*	0* 000: None							
+0* None	Field Crest	128: Tauros	False	128: Tauros, 241: Miltank			G	/	3*	4* 056: FastHealer							
 0* None	Tempest Sash	130: Gyarados	True				A	*	5*	5* 067: SecondSTAB	003: Dragon						
 3* Float		130: Gyarados	True				B	*	4*	3* 049: ExcessiveForce							
 1* Foam		129: Magikarp	True				C	*	1-2*	1* 026: SureHitAttacker							
 1* Tail		129: Magikarp	True				D	*	1-2*	1* 015: PracticeSwinger							
 0* None		129: Magikarp	True				E	*	2-3*	0* 000: None							
 0* None		130: Gyarados	True				F	*	2-3*	0* 000: None							
-0* None	Mystic Scarf	131: Lapras	False				A	*	5*	0* 000: None							
-3* Tiara		131: Lapras	False				B	*	4*	0* 000: None							
-1* Song		131: Lapras	False				C	*	1-2*	0* 000: None							
-1* Card		131: Lapras	False				D	*	1-2*	0* 000: None							
+0* None	Mystic Scarf	131: Lapras	False				A	*	5*	5* 082: WeaknessReduce	016: Rock						
+3* Tiara		131: Lapras	False				B	*	4*	4* 070: PassThroughAttacker							
+1* Song		131: Lapras	False				C	*	1-2*	1* 062: FastFriend							
+1* Card		131: Lapras	False				D	*	1-2*	1* 014: DeepBreather							
 0* None	Wavy Charm	131: Lapras	False				E	*	2-3*	0* 000: None							
 0* None		131: Lapras	False				F	*	2-3*	0* 000: None							
-3* Torc		132: Ditto	False				A		3*	0* 000: None							
-3* Mask		132: Ditto	False				B		3*	0* 000: None							
-3* Apron		132: Ditto	False				C		3*	0* 000: None							
-3* Glasses		132: Ditto	False				D		3*	0* 000: None							
-3* Collar		132: Ditto	False				E		3*	0* 000: None							
-3* Mantle		132: Ditto	False				F		3*	0* 000: None							
+3* Torc		132: Ditto	False				A		3*	2* 013: PPBoost						3	
+3* Mask		132: Ditto	False				B		3*	1* 094: PPSaver							
+3* Apron		132: Ditto	False				C		3*	4* 068: TypedAttack							
+3* Glasses		132: Ditto	False				D		3*	4* 041: TrapBuster							
+3* Collar		132: Ditto	False				E		3*	1* 062: FastFriend							
+3* Mantle		132: Ditto	False				F		3*	2* 052: BetterOdds							
 0* None	Fairy Collar	700: Sylveon	False				A	CB	5*	5* 036: WeaknessPayback	017: Steel	021: In Love					
 2* Ring		700: Sylveon	False				B	Z[C	4*	3* 057: SelfCurer							
-2* Charm		700: Sylveon	False	133: Eevee, 700: Sylveon			C	Z[	3*	2* 023: StatusOnAttack		021: In Love					
+2* Charm		700: Sylveon	False	133: Eevee, 700: Sylveon			C		3*	2* 023: StatusOnAttack		021: In Love					
 0* None	Icy Collar	471: Glaceon	False				D	FE	5*	5* 078: EndureType	007: Fire						
 2* Ring		471: Glaceon	False				E	Z[F	4*	3* 055: CloseDodge							
-2* Charm		471: Glaceon	False	133: Eevee, 471: Glaceon			F	Z[	3*	2* 023: StatusOnAttack		003: Frozen					
+2* Charm		471: Glaceon	False	133: Eevee, 471: Glaceon			F		3*	2* 023: StatusOnAttack		003: Frozen					
 0* None	Virid Collar	470: Leafeon	False				G	IH	5*	5* 036: WeaknessPayback	012: Ice	101: Leech Seed					
 2* Ring		470: Leafeon	False				H	Z[I	4*	4* 056: FastHealer							
-2* Charm		470: Leafeon	False	133: Eevee, 470: Leafeon			I	Z[	3*	2* 023: StatusOnAttack		101: Leech Seed					
+2* Charm		470: Leafeon	False	133: Eevee, 470: Leafeon			I		3*	2* 023: StatusOnAttack		101: Leech Seed					
 0* None	Dusk Collar	197: Umbreon	False				J	LK	5*	5* 082: WeaknessReduce	006: Fighting						
 2* Ring		197: Umbreon	False				K	Z[L	4*	4* 041: TrapBuster							
-2* Charm		197: Umbreon	False	133: Eevee, 197: Umbreon			L	Z[	3*	2* 023: StatusOnAttack		008: Cringing					
+2* Charm		197: Umbreon	False	133: Eevee, 197: Umbreon			L		3*	2* 023: StatusOnAttack		008: Cringing					
 0* None	Light Collar	196: Espeon	False				M	ON	5*	5* 036: WeaknessPayback	002: Dark	007: Confused					
 2* Ring		196: Espeon	False				N	Z[O	4*	4* 044: WandSpread							
-2* Charm		196: Espeon	False	133: Eevee, 196: Espeon			O	Z[	3*	2* 023: StatusOnAttack		007: Confused					
-0* None	Fire Collar	136: Flareon	False				P	RQ	5*	5* 040: ExplosiveAttack	000: None						
+2* Charm		196: Espeon	False	133: Eevee, 196: Espeon			O		3*	2* 023: StatusOnAttack		007: Confused					
+0* None	Fire Collar	136: Flareon	False				P	RQ	5*	5* 040: ExplosiveAttack							
 2* Ring		136: Flareon	False				Q	Z[R	4*	3* 072: RemoveAbilityAttack							
-2* Charm		136: Flareon	False	133: Eevee, 136: Flareon			R	Z[	3*	2* 023: StatusOnAttack		002: Burned					
-0* None	Volt Collar	135: Jolteon	False				S	UT	5*	5* 078: EndureType	011: Ground						
+2* Charm		136: Flareon	False	133: Eevee, 136: Flareon			R		3*	2* 023: StatusOnAttack		002: Burned					
+0* None	Volt Collar	135: Jolteon	False				S	UT	5*	4* 047: Celebrate							
 2* Ring		135: Jolteon	False				T	Z[U	4*	4* 070: PassThroughAttacker							
-2* Charm		135: Jolteon	False	133: Eevee, 135: Jolteon			U	Z[	3*	2* 023: StatusOnAttack		004: Paralyzed					
+2* Charm		135: Jolteon	False	133: Eevee, 135: Jolteon			U		3*	2* 023: StatusOnAttack		004: Paralyzed					
 0* None	Aqua Collar	134: Vaporeon	False				V	XW	5*	5* 036: WeaknessPayback	004: Electric	090: Immobilized					
 2* Ring		134: Vaporeon	False				W	Z[X	4*	4* 074: HealInWater							
-2* Charm		134: Vaporeon	False	133: Eevee, 134: Vaporeon			X	Z[	3*	2* 023: StatusOnAttack		090: Immobilized					
+2* Charm		134: Vaporeon	False	133: Eevee, 134: Vaporeon			X		3*	2* 023: StatusOnAttack		090: Immobilized					
 0* None	Prism Ruff	133: Eevee	True				Y	Z[	4*	4* 068: TypedAttack							
 1* Tail		133: Eevee	True				Z		1*	1* 014: DeepBreather							
-1* Card		133: Eevee	True				[		1*	1* 050: Anchor							
+1* Card		133: Eevee	True				[		1*	1* 015: PracticeSwinger							
 0* None	Best Scarf	474: Porygon-Z	True				A	*	5*	5* 067: SecondSTAB	013: Normal						
 0* None	Virtual Bow	233: Porygon2	True				B	*	4*	4* 010: AllTerrain							
 1* Card		137: Porygon	True				C	*	1-2*	2* 059: StatMirror							
 1* Tail		137: Porygon	True				D	*	1-2*	2* 052: BetterOdds							
 0* None	AI Brooch	137: Porygon	True				E	*	2-3*	3* 069: GapProber							
 0* None		233: Porygon2	True				F	*	2-3*	0* 000: None							
-0* None	Aged Scarf	139: Omastar	True				A	*	5*	0* 000: None							
-3* Torc		139: Omastar	True				B	*	4*	0* 000: None							
-1* Foam		138: Omanyte	True				C	*	1-2*	0* 000: None							
-1* Mud		138: Omanyte	True				D	*	1-2*	0* 000: None							
+0* None	Aged Scarf	139: Omastar	True				A	*	5*	5* 082: WeaknessReduce	004: Electric						
+3* Torc		139: Omastar	True				B	*	4*	3* 057: SelfCurer							
+1* Foam		138: Omanyte	True				C	*	1-2*	2* 016: MisfortuneMirror							
+1* Mud		138: Omanyte	True				D	*	1-2*	2* 052: BetterOdds							
 0* None		138: Omanyte	True				E	*	2-3*	0* 000: None							
 0* None		139: Omastar	True				F	*	2-3*	0* 000: None							
-3* Torc		141: Kabutops	True				A	*	5*	0* 000: None							
-3* Blade		141: Kabutops	True				B	*	4*	0* 000: None							
-1* Claw		140: Kabuto	True				C	*	1-2*	0* 000: None							
-1* Foam		140: Kabuto	True				D	*	1-2*	0* 000: None							
+3* Torc		141: Kabutops	True				A	*	5*	5* 037: WarpPayback	004: Electric						
+3* Blade		141: Kabutops	True				B	*	4*	3* 048: Absorption							
+1* Claw		140: Kabuto	True				C	*	1-2*	1* 014: DeepBreather							
+1* Foam		140: Kabuto	True				D	*	1-2*	2* 019: MasterHurler							
 0* None		140: Kabuto	True				E	*	2-3*	0* 000: None							
 0* None		141: Kabutops	True				F	*	2-3*	0* 000: None							
-0* None	Old Brooch	142: Aerodactyl	False				A	*	5*	0* 000: None							
-3* Scarf		142: Aerodactyl	False				B	*	4*	0* 000: None							
-1* Wing		142: Aerodactyl	False				C	*	1-2*	0* 000: None							
-1* Fang		142: Aerodactyl	False				D	*	1-2*	0* 000: None							
-0* None		142: Aerodactyl	False				E	*	2-3*	0* 000: None							
+0* None	Old Brooch	142: Aerodactyl	False				A	*	5*	5* 078: EndureType	012: Ice						
+3* Scarf		142: Aerodactyl	False				B	*	4*	3* 049: ExcessiveForce							
+1* Wing		142: Aerodactyl	False				C	*	1-2*	2* 018: DoubleAttacker							
+1* Fang		142: Aerodactyl	False				D	*	1-2*	2* 022: PressurePlus							
+2* Jaw		142: Aerodactyl	False				E	*	2-3*	3* 069: GapProber							
 0* None		142: Aerodactyl	False				F	*	2-3*	0* 000: None							
-0* None	Glee Scarf	143: Snorlax	True				A	*	5*	0* 000: None							
-3* Shield		143: Snorlax	True				B	*	4*	0* 000: None							
-1* Drool		446: Munchlax	True				C	*	1-2*	0* 000: None							
-1* Claw		446: Munchlax	True				D	*	1-2*	0* 000: None							
-0* None	Tummy Charm	446: Munchlax	True				E	*	2-3*	0* 000: None							
+0* None	Glee Scarf	143: Snorlax	True				A	*	5*	5* 082: WeaknessReduce	002: Dark						
+3* Shield		143: Snorlax	True				B	*	4*	3* 076: HealOnNewFloor							
+1* Drool		446: Munchlax	True				C	*	1-2*	1* 026: SureHitAttacker							
+1* Claw		446: Munchlax	True				D	*	1-2*	1* 050: Anchor							
+0* None	Tummy Charm	446: Munchlax	True				E	*	2-3*	3* 042: ExplosionGuard							
 0* None	Valor Charm	143: Snorlax	True				F	*	2-3*	0* 000: None							
-0* None	Freeze Veil	144: Articuno	False				A		5*	0* 000: None							
-3* Scarf		144: Articuno	False				B		4*	0* 000: None							
-2* Crest		144: Articuno	False				C		3*	0* 000: None							
-0* None	Thunder Veil	145: Zapdos	True				A		5*	0* 000: None							
-3* Crown		145: Zapdos	False				B		4*	0* 000: None							
-2* Crest		145: Zapdos	False				C		3*	0* 000: None							
-0* None	Fire Veil	146: Moltres	False				A		5*	0* 000: None							
-3* Cape		146: Moltres	False				B		4*	0* 000: None							
-2* Crest		146: Moltres	False				C		3*	0* 000: None							
-0* None	Mystery Wing	144: Articuno	False	144: Articuno, 145: Zapdos, 146: Moltres			D		1-2*	0* 000: None							
-0* None	Mystery Card	144: Articuno	False	144: Articuno, 145: Zapdos, 146: Moltres			E		1-2*	0* 000: None							
-0* None	Mystery Seal	144: Articuno	False	144: Articuno, 145: Zapdos, 146: Moltres			F		3*	0* 000: None							
-0* None	Mirage Cape	149: Dragonite	True				A	*	5*	0* 000: None							
-3* Tiara		148: Dragonair	True				B	*	4*	0* 000: None							
-1* Foam		147: Dratini	True				C	*	1-2*	0* 000: None							
-1* Tail		147: Dratini	True				D	*	1-2*	0* 000: None							
-2* Coin		147: Dratini	True				E	*	2-3*	0* 000: None							
+0* None	Freeze Veil	144: Articuno	False				A		5*	5* 100: ChanceStatusOnTypeHit	008: Flying	003: Frozen				35	
+3* Scarf		144: Articuno	False				B		4*	4* 047: Celebrate							
+2* Crest		144: Articuno	False				C		3*	2* 059: StatMirror							
+0* None	Thunder Veil	145: Zapdos	True				A		5*	5* 100: ChanceStatusOnTypeHit	008: Flying	004: Paralyzed				35	
+3* Crown		145: Zapdos	False				B		4*	3* 048: Absorption							
+2* Crest		145: Zapdos	False				C		3*	3* 069: GapProber							
+0* None	Fire Veil	146: Moltres	False				A		5*	5* 100: ChanceStatusOnTypeHit	008: Flying	002: Burned				35	
+3* Cape		146: Moltres	False				B		4*	3* 049: ExcessiveForce							
+2* Crest		146: Moltres	False				C		3*	3* 005: SuperCrit							
+0* None	Mystery Wing	144: Articuno	False	144: Articuno, 145: Zapdos, 146: Moltres			D		1-2*	3* 043: WandMaster							
+0* None	Mystery Card	144: Articuno	False	144: Articuno, 145: Zapdos, 146: Moltres			E		1-2*	2* 052: BetterOdds							
+0* None	Mystery Seal	144: Articuno	False	144: Articuno, 145: Zapdos, 146: Moltres			F		3*	3* 017: CounterBasher							
+0* None	Mirage Cape	149: Dragonite	True				A	*	5*	5* 078: EndureType	012: Ice						
+3* Tiara		148: Dragonair	True				B	*	4*	4* 041: TrapBuster							
+1* Foam		147: Dratini	True				C	*	1-2*	1* 026: SureHitAttacker							
+1* Tail		147: Dratini	True				D	*	1-2*	2* 029: StatDropImmune			004: MDef				
+2* Coin		147: Dratini	True				E	*	2-3*	3* 032: StairSensor							
 2* Jewel		148: Dragonair	True				F	*	2-3*	0* 000: None							
 0* None	Havoc Robe	150: Mewtwo	False				A	CDB	5*	5* 040: ExplosiveAttack							
 3* Torc		150: Mewtwo	False				B	CD	4*	4* 010: AllTerrain							
 1* Beam		150: Mewtwo	False				C		1-2*	2* 022: PressurePlus							
 2* Seal		150: Mewtwo	False				D	HC	2-3*	3* 017: CounterBasher							
 0* None		150: Mewtwo	False				E		2-3*	0* 000: None							
-0* None	Life Ring	151: Mew	False				F	IJG	5*	5* 080: NoStatusInWeather							000: Clear
-3* Scarf		151: Mew	False				G	IJ	4*	4* 010: AllTerrain							
+0* None	Life Ring	151: Mew	False				F	IJG	5*	4* 080: NoStatusInWeather							000: Clear
+3* Scarf		151: Mew	False				G	IJ	4*	4* 090: DevolveOnAttack							
 1* Hair		151: Mew	False	151: Mew, 150: Mewtwo			H		1-2*	4* 091: ProjectileAttack							
 1* Card		151: Mew	False				I		1-2*	1* 062: FastFriend							
-2* Seal		151: Mew	False				J	HI	2-3*	4* 090: DevolveOnAttack						2	
+2* Seal		151: Mew	False				J	HI	2-3*	4* 010: AllTerrain						2	
 0* None		151: Mew	False				K		2-3*	0* 000: None							
 0* None	Bright Veil	154: Meganium	True				A	*	5*	4* 046: RoyalVeil							
 0* None	Spice Bow	153: Bayleef	True				B	*	4*	5* 087: MapStatusOnCategoryUse					003: Status		014: Grassy Terrain
@@ -486,157 +486,157 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Claw		152: Chikorita	True				D	*	1-2*	3* 057: SelfCurer							
 0* None	Dawn Jewel	152: Chikorita	True				E	*	2-3*	4* 056: FastHealer							
 2* Seal		153: Bayleef	True				F	*	2-3*	0* 000: None							
-0* None	Blast Bangle	157: Typhlosion	True				A	*	5*	2* 088: DoubleDash							
-0* None	Volcano Torc	156: Quilava	True				B	*	4*	0* 000: None							
-1* Hair		155: Cyndaquil	True				C	*	1-2*	0* 000: None							
-1* Claw		155: Cyndaquil	True				D	*	1-2*	0* 000: None							
-0* None	Blazing Rock	155: Cyndaquil	True				E	*	2-3*	0* 000: None							
+0* None	Blast Bangle	157: Typhlosion	True				A	*	5*	5* 040: ExplosiveAttack							
+0* None	Volcano Torc	156: Quilava	True				B	*	4*	3* 054: DistanceDodge							
+1* Hair		155: Cyndaquil	True				C	*	1-2*	2* 088: DoubleDash							
+1* Claw		155: Cyndaquil	True				D	*	1-2*	1* 015: PracticeSwinger							
+0* None	Blazing Rock	155: Cyndaquil	True				E	*	2-3*	3* 054: DistanceDodge							
 2* Crest		156: Quilava	True				F	*	2-3*	0* 000: None							
-3* Torc		160: Feraligatr	True				A	*	5*	0* 000: None							
-0* None	Anger Scarf	159: Croconaw	True				B	*	4*	0* 000: None							
-1* Fang		158: Totodile	True				C	*	1-2*	0* 000: None							
-1* Dew		158: Totodile	True				D	*	1-2*	0* 000: None							
-0* None	Water Heart	158: Totodile	True				E	*	2-3*	0* 000: None							
+3* Torc		160: Feraligatr	True				A	*	5*	4* 095: CelebrateCure							
+0* None	Anger Scarf	159: Croconaw	True				B	*	4*	3* 049: ExcessiveForce							
+1* Fang		158: Totodile	True				C	*	1-2*	1* 014: DeepBreather							
+1* Dew		158: Totodile	True				D	*	1-2*	2* 051: BarrageGuard							
+0* None	Water Heart	158: Totodile	True				E	*	2-3*	3* 069: GapProber							
 0* None	Swirl Rock	159: Croconaw	True				F	*	2-3*	0* 000: None							
-0* None	Body Collar	162: Furret	True				A	*	5*	0* 000: None							
-2* Brooch		162: Furret	True				B	*	4*	0* 000: None							
-1* Tail		161: Sentret	True				C	*	1-2*	0* 000: None							
-1* Card		161: Sentret	True				D	*	1-2*	0* 000: None							
+0* None	Body Collar	162: Furret	True				A	*	5*	4* 086: StatusOnCategoryUse		076: Lucky Chant			003: Status		
+2* Brooch		162: Furret	True				B	*	4*	5* 034: MapSurveyor							
+1* Tail		161: Sentret	True				C	*	1-2*	2* 051: BarrageGuard							
+1* Card		161: Sentret	True				D	*	1-2*	2* 018: DoubleAttacker							
 0* None		161: Sentret	True				E	*	2-3*	0* 000: None							
 0* None		162: Furret	True				F	*	2-3*	0* 000: None							
-3* Torc		164: Noctowl	True				A	*	5*	0* 000: None							
-3* Ruff		164: Noctowl	True				B	*	4*	0* 000: None							
-1* Wing		163: Hoothoot	True				C	*	1-2*	0* 000: None							
-1* Claw		163: Hoothoot	True				D	*	1-2*	0* 000: None							
+3* Torc		164: Noctowl	True				A	*	5*	5* 067: SecondSTAB	015: Psychic						
+3* Ruff		164: Noctowl	True				B	*	4*	4* 070: PassThroughAttacker							
+1* Wing		163: Hoothoot	True				C	*	1-2*	2* 013: PPBoost						2	
+1* Claw		163: Hoothoot	True				D	*	1-2*	2* 023: StatusOnAttack		001: Asleep					
 0* None		163: Hoothoot	True				E	*	2-3*	0* 000: None							
 0* None		164: Noctowl	True				F	*	2-3*	0* 000: None							
-3* Bow		166: Ledian	True				A	*	5*	0* 000: None							
-2* Ring		166: Ledian	True				B	*	4*	0* 000: None							
-1* Card		165: Ledyba	True				C	*	1-2*	0* 000: None							
-1* Wing		165: Ledyba	True				D	*	1-2*	0* 000: None							
+3* Bow		166: Ledian	True				A	*	5*	4* 097: StatOnCategoryUse		011: Defense			003: Status		
+2* Ring		166: Ledian	True				B	*	4*	3* 071: WeatherProtection							
+1* Card		165: Ledyba	True				C	*	1-2*	2* 051: BarrageGuard							
+1* Wing		165: Ledyba	True				D	*	1-2*	2* 053: ClutchPerformer							
 0* None		165: Ledyba	True				E	*	2-3*	0* 000: None							
 0* None		166: Ledian	True				F	*	2-3*	0* 000: None							
-3* Bow		168: Ariados	True				A	*	5*	0* 000: None							
-3* Tie		168: Ariados	True				B	*	4*	0* 000: None							
-1* Card		167: Spinarak	True				C	*	1-2*	0* 000: None							
-1* Drool		167: Spinarak	True				D	*	1-2*	0* 000: None							
+3* Bow		168: Ariados	True				A	*	5*	3* 085: StatusOnCategoryHit		008: Cringing			003: Status		
+3* Tie		168: Ariados	True				B	*	4*	4* 070: PassThroughAttacker							
+1* Card		167: Spinarak	True				C	*	1-2*	1* 006: NVECrit							
+1* Drool		167: Spinarak	True				D	*	1-2*	2* 059: StatMirror							
 0* None		167: Spinarak	True				E	*	2-3*	0* 000: None							
 0* None		168: Ariados	True				F	*	2-3*	0* 000: None							
-3* Bow		171: Lanturn	True				A	*	5*	0* 000: None							
-3* Sash		171: Lanturn	True				B	*	4*	0* 000: None							
-1* Dew		170: Chinchou	True				C	*	1-2*	0* 000: None							
-1* Card		170: Chinchou	True				D	*	1-2*	0* 000: None							
+3* Bow		171: Lanturn	True				A	*	5*	5* 082: WeaknessReduce	002: Dark						
+3* Sash		171: Lanturn	True				B	*	4*	3* 005: SuperCrit							
+1* Dew		170: Chinchou	True				C	*	1-2*	1* 094: PPSaver							
+1* Card		170: Chinchou	True				D	*	1-2*	2* 052: BetterOdds							
 0* None		170: Chinchou	True				E	*	2-3*	0* 000: None							
 0* None		171: Lanturn	True				F	*	2-3*	0* 000: None							
 0* None	Glitter Robe	468: Togekiss	True				A	*	5*	5* 092: MetronomePlus							
 0* None	Luck Brooch	176: Togetic	True				B	*	4*	3* 005: SuperCrit							
 1* Dew		175: Togepi	True				C	*	1-2*	1* 006: NVECrit							
-1* Card		175: Togepi	True				D	*	1-2*	1* 026: SureHitAttacker							
+1* Card		175: Togepi	True				D	*	1-2*	1* 027: SpecialAttacker							
 0* None	Pure Heart	175: Togepi	True				E	*	2-3*	2* 016: MisfortuneMirror							
 0* None	Happy Rock	176: Togetic	True				F	*	2-3*	0* 000: None							
-3* Bow		178: Xatu	True				A	*	5*	0* 000: None							
-2* Crest		178: Xatu	True				B	*	4*	0* 000: None							
-1* Card		177: Natu	True				C	*	1-2*	0* 000: None							
-1* Wing		177: Natu	True				D	*	1-2*	0* 000: None							
+3* Bow		178: Xatu	True				A	*	5*	5* 035: XRay							
+2* Crest		178: Xatu	True				B	*	4*	4* 041: TrapBuster							
+1* Card		177: Natu	True				C	*	1-2*	2* 030: SleepWalker							
+1* Wing		177: Natu	True				D	*	1-2*	3* 043: WandMaster							
 0* None		177: Natu	True				E	*	2-3*	0* 000: None							
 0* None		178: Xatu	True				F	*	2-3*	0* 000: None							
-0* None	Sacred Scarf	181: Ampharos	True				A	*	5*	0* 000: None							
-3* Scarf		180: Flaaffy	True				B	*	4*	0* 000: None							
-1* Card		179: Mareep	True				C	*	1-2*	0* 000: None							
-1* Beam		179: Mareep	True				D	*	1-2*	0* 000: None							
-2* Guard		179: Mareep	True				E	*	2-3*	0* 000: None							
+0* None	Sacred Scarf	181: Ampharos	True				A	*	5*	5* 036: WeaknessPayback	010: Grass	097: Electrified					
+3* Scarf		180: Flaaffy	True				B	*	4*	4* 091: ProjectileAttack							
+1* Card		179: Mareep	True				C	*	1-2*	1* 027: SpecialAttacker							
+1* Beam		179: Mareep	True				D	*	1-2*	2* 013: PPBoost						2	
+2* Guard		179: Mareep	True				E	*	2-3*	3* 043: WandMaster							
 2* Jewel		180: Flaaffy	True				F	*	2-3*	0* 000: None							
-0* None	Dotted Scarf	184: Azumarill	True				A	*	5*	0* 000: None							
-3* Hat		183: Marill	True				B	*	4*	0* 000: None							
-1* Dew		298: Azurill	True				C	*	1-2*	0* 000: None							
-1* Card		298: Azurill	True				D	*	1-2*	0* 000: None							
-2* Charm		298: Azurill	True				E	*	2-3*	0* 000: None							
+0* None	Dotted Scarf	184: Azumarill	True				A	*	5*	5* 036: WeaknessPayback	017: Steel	045: Whirlpool					
+3* Hat		183: Marill	True				B	*	4*	3* 071: WeatherProtection							
+1* Dew		298: Azurill	True				C	*	1-2*	2* 053: ClutchPerformer							
+1* Card		298: Azurill	True				D	*	1-2*	1* 026: SureHitAttacker							
+2* Charm		298: Azurill	True				E	*	2-3*	3* 032: StairSensor							
 0* None	Surfer Rock	183: Marill	True				F	*	2-3*	0* 000: None							
-0* None	Fake Torc	185: Sudowoodo	True				A	*	5*	0* 000: None							
-3* Scarf		185: Sudowoodo	True				B	*	4*	0* 000: None							
-1* Dew		438: Bonsly	True				C	*	1-2*	0* 000: None							
-1* Card		438: Bonsly	True				D	*	1-2*	0* 000: None							
-0* None	Arid Tag	438: Bonsly	True				E	*	2-3*	0* 000: None							
+0* None	Fake Torc	185: Sudowoodo	True				A	*	5*	5* 078: EndureType	018: Water						
+3* Scarf		185: Sudowoodo	True				B	*	4*	4* 056: FastHealer							
+1* Dew		438: Bonsly	True				C	*	1-2*	1* 026: SureHitAttacker							
+1* Card		438: Bonsly	True				D	*	1-2*	2* 052: BetterOdds							
+0* None	Arid Tag	438: Bonsly	True				E	*	2-3*	3* 069: GapProber							
 0* None	Drain Rock	185: Sudowoodo	True				F	*	2-3*	0* 000: None							
-0* None	Cotton Torc	189: Jumpluff	True				A	*	5*	0* 000: None							
-3* Bow		188: Skiploom	True				B	*	4*	0* 000: None							
-1* Card		187: Hoppip	True				C	*	1-2*	0* 000: None							
-1* Leaf		187: Hoppip	True				D	*	1-2*	0* 000: None							
-2* Charm		187: Hoppip	True				E	*	2-3*	0* 000: None							
+0* None	Cotton Torc	189: Jumpluff	True				A	*	5*	4* 093: AttackRangeInWeather							002: Sunny
+3* Bow		188: Skiploom	True				B	*	4*	3* 071: WeatherProtection							
+1* Card		187: Hoppip	True				C	*	1-2*	2* 039: WideAttack							
+1* Leaf		187: Hoppip	True				D	*	1-2*	2* 029: StatDropImmune			005: Speed				
+2* Charm		187: Hoppip	True				E	*	2-3*	3* 055: CloseDodge							
 2* Dust		188: Skiploom	True				F	*	2-3*	0* 000: None							
-3* Bow		424: Ambipom	True				A	*	5*	0* 000: None							
-3* Scarf		424: Ambipom	True				B	*	4*	0* 000: None							
-1* Card		190: Aipom	True				C	*	1-2*	0* 000: None							
-1* Claw		190: Aipom	True				D	*	1-2*	0* 000: None							
+3* Bow		424: Ambipom	True				A	*	5*	5* 004: TypeBulldozer	013: Normal			009: Ghost			
+3* Scarf		424: Ambipom	True				B	*	4*	4* 047: Celebrate							
+1* Card		190: Aipom	True				C	*	1-2*	2* 013: PPBoost						2	
+1* Claw		190: Aipom	True				D	*	1-2*	1* 084: HitAndRun							
 0* None		190: Aipom	True				E	*	2-3*	0* 000: None							
 0* None		424: Ambipom	True				F	*	2-3*	0* 000: None							
-0* None	Sun Scarf	192: Sunflora	True				A	*	5*	5* 078: EndureType	012: Ice						
+0* None	Sun Scarf	192: Sunflora	True				A	*	5*	4* 080: NoStatusInWeather							002: Sunny
 3* Ruff		192: Sunflora	True				B	*	4*	4* 010: AllTerrain							
-1* Card		191: Sunkern	True				C	*	1-2*	2* 051: BarrageGuard							
+1* Card		191: Sunkern	True				C	*	1-2*	1* 006: NVECrit							
 1* Leaf		191: Sunkern	True				D	*	1-2*	1* 062: FastFriend							
-0* None		191: Sunkern	True				E	*	2-3*	0* 000: None							
+2* Aroma		191: Sunkern	True				E	*	2-3*	2* 051: BarrageGuard							
 0* None		192: Sunflora	True				F	*	2-3*	0* 000: None							
-3* Bow		469: Yanmega	True				A	*	5*	0* 000: None							
-3* Scope		469: Yanmega	True				B	*	4*	0* 000: None							
-1* Card		193: Yanma	True				C	*	1-2*	0* 000: None							
-1* Wing		193: Yanma	True				D	*	1-2*	0* 000: None							
+3* Bow		469: Yanmega	True				A	*	5*	5* 078: EndureType	016: Rock						
+3* Scope		469: Yanmega	True				B	*	4*	3* 038: LungeAttack							
+1* Card		193: Yanma	True				C	*	1-2*	1* 084: HitAndRun							
+1* Wing		193: Yanma	True				D	*	1-2*	2* 018: DoubleAttacker							
 0* None		193: Yanma	True				E	*	2-3*	0* 000: None							
 0* None		469: Yanmega	True				F	*	2-3*	0* 000: None							
-3* Torc		195: Quagsire	True				A	*	5*	0* 000: None							
-3* Tie		195: Quagsire	True				B	*	4*	0* 000: None							
-1* Card		194: Wooper	True				C	*	1-2*	0* 000: None							
-1* Dew		194: Wooper	True				D	*	1-2*	0* 000: None							
+3* Torc		195: Quagsire	True				A	*	5*	4* 080: NoStatusInWeather							001: Rain
+3* Tie		195: Quagsire	True				B	*	4*	4* 045: MultiRayShot							
+1* Card		194: Wooper	True				C	*	1-2*	2* 016: MisfortuneMirror							
+1* Dew		194: Wooper	True				D	*	1-2*	2* 052: BetterOdds							
 0* None		194: Wooper	True				E	*	2-3*	0* 000: None							
 0* None		195: Quagsire	True				F	*	2-3*	0* 000: None							
 3* Cape		430: Honchkrow	True				A	*	5*	4* 086: StatusOnCategoryUse		075: Grudge			003: Status		
 3* Hat		430: Honchkrow	True				B	*	4*	4* 041: TrapBuster							
 1* Card		198: Murkrow	True				C	*	1-2*	2* 083: Gratitude							
 1* Claw		198: Murkrow	True				D	*	1-2*	3* 017: CounterBasher							
-0* None		198: Murkrow	True				E	*	2-3*	0* 000: None							
+2* Seal		198: Murkrow	True				E	*	2-3*	3* 043: WandMaster							
 0* None		430: Honchkrow	True				F	*	2-3*	0* 000: None							
 0* None	Magic Hat	429: Mismagius	True				A	*	5*	4* 086: StatusOnCategoryUse		082: Magic Coat			003: Status		
-2* Brooch		429: Mismagius	True				B	*	4*	3* 043: WandMaster							
+2* Brooch		429: Mismagius	True				B	*	4*	4* 044: WandSpread							
 1* Card		200: Misdreavus	True				C	*	1-2*	2* 051: BarrageGuard							
 1* Hair		200: Misdreavus	True				D	*	1-2*	2* 016: MisfortuneMirror							
 0* None		200: Misdreavus	True				E	*	2-3*	0* 000: None							
 0* None		429: Mismagius	True				F	*	2-3*	0* 000: None							
-2* Seal	\uE041	201: Unown	False				A		5*	0* 000: None							
-2* Seal	\uE042	201: Unown	False				B		5*	0* 000: None							
-2* Seal	\uE043	201: Unown	False				C		5*	0* 000: None							
-2* Seal	\uE044	201: Unown	False				D		5*	0* 000: None							
-2* Seal	\uE045	201: Unown	False				E		5*	0* 000: None							
-2* Seal	\uE046	201: Unown	False				F		5*	0* 000: None							
-2* Seal	\uE047	201: Unown	False				G		5*	0* 000: None							
-2* Seal	\uE048	201: Unown	False				H		5*	0* 000: None							
-2* Seal	\uE049	201: Unown	False				I		5*	0* 000: None							
-2* Seal	\uE04A	201: Unown	False				J		5*	0* 000: None							
-2* Seal	\uE04B	201: Unown	False				K		5*	0* 000: None							
-2* Seal	\uE04C	201: Unown	False				L		5*	0* 000: None							
-2* Seal	\uE04D	201: Unown	False				M		5*	0* 000: None							
-2* Seal	\uE04E	201: Unown	False				N		5*	0* 000: None							
-2* Seal	\uE04F	201: Unown	False				O		5*	0* 000: None							
-2* Seal	\uE050	201: Unown	False				P		5*	0* 000: None							
-2* Seal	\uE051	201: Unown	False				Q		5*	0* 000: None							
-2* Seal	\uE052	201: Unown	False				R		5*	0* 000: None							
-2* Seal	\uE053	201: Unown	False				S		5*	0* 000: None							
-2* Seal	\uE054	201: Unown	False				T		5*	0* 000: None							
-2* Seal	\uE055	201: Unown	False				U		5*	0* 000: None							
-2* Seal	\uE056	201: Unown	False				V		5*	0* 000: None							
-2* Seal	\uE057	201: Unown	False				W		5*	0* 000: None							
-2* Seal	\uE058	201: Unown	False				X		5*	0* 000: None							
-2* Seal	\uE059	201: Unown	False				Y		5*	0* 000: None							
-2* Seal	\uE05A	201: Unown	False				Z		5*	0* 000: None							
-0* None	Suffer Scarf	202: Wobbuffet	True				A	*	5*	0* 000: None							
-3* Tie		202: Wobbuffet	True				B	*	4*	0* 000: None							
-1* Card		360: Wynaut	True				C	*	1-2*	0* 000: None							
-1* Tail		360: Wynaut	True				D	*	1-2*	0* 000: None							
-0* None	Grin Charm	360: Wynaut	True				E	*	2-3*	0* 000: None							
-0* None	Endure Rock	202: Wobbuffet	True				F	*	2-3*	0* 000: None							
-0* None	Reverse Bow	203: Girafarig	False				A	*	5*	0* 000: None							
-3* Specs		203: Girafarig	False				B	*	4*	0* 000: None							
-1* Card		203: Girafarig	False				C	*	1-2*	0* 000: None							
-1* Horn		203: Girafarig	False				D	*	1-2*	0* 000: None							
-2* Coin		203: Girafarig	False				E	*	2-3*	0* 000: None							
+2* Seal	\uE041	201: Unown	False				A		5*	5* 082: WeaknessReduce	002: Dark						
+2* Seal	\uE042	201: Unown	False				B		5*	5* 040: ExplosiveAttack							
+2* Seal	\uE043	201: Unown	False				C		5*	4* 044: WandSpread							
+2* Seal	\uE044	201: Unown	False				D		5*	4* 045: MultiRayShot							
+2* Seal	\uE045	201: Unown	False				E		5*	4* 095: CelebrateCure							
+2* Seal	\uE046	201: Unown	False				F		5*	4* 047: Celebrate							
+2* Seal	\uE047	201: Unown	False				G		5*	2* 013: PPBoost						5	
+2* Seal	\uE048	201: Unown	False				H		5*	5* 011: Wallbreaker							
+2* Seal	\uE049	201: Unown	False				I		5*	5* 034: MapSurveyor							
+2* Seal	\uE04A	201: Unown	False				J		5*	4* 091: ProjectileAttack							
+2* Seal	\uE04B	201: Unown	False				K		5*	2* 051: BarrageGuard							
+2* Seal	\uE04C	201: Unown	False				L		5*	4* 056: FastHealer							
+2* Seal	\uE04D	201: Unown	False				M		5*	4* 093: AttackRangeInWeather							000: Clear
+2* Seal	\uE04E	201: Unown	False				N		5*	3* 054: DistanceDodge							
+2* Seal	\uE04F	201: Unown	False				O		5*	3* 055: CloseDodge							
+2* Seal	\uE050	201: Unown	False				P		5*	1* 026: SureHitAttacker							
+2* Seal	\uE051	201: Unown	False				Q		5*	2* 033: AcuteSniffer							
+2* Seal	\uE052	201: Unown	False				R		5*	3* 032: StairSensor							
+2* Seal	\uE053	201: Unown	False				S		5*	3* 048: Absorption							
+2* Seal	\uE054	201: Unown	False				T		5*	4* 046: RoyalVeil							
+2* Seal	\uE055	201: Unown	False				U		5*	4* 073: CheekPouch							
+2* Seal	\uE056	201: Unown	False				V		5*	4* 080: NoStatusInWeather							000: Clear
+2* Seal	\uE057	201: Unown	False				W		5*	2* 016: MisfortuneMirror							
+2* Seal	\uE058	201: Unown	False				X		5*	1* 015: PracticeSwinger							
+2* Seal	\uE059	201: Unown	False				Y		5*	2* 053: ClutchPerformer							
+2* Seal	\uE05A	201: Unown	False				Z		5*	2* 059: StatMirror							
+0* None	Suffer Scarf	202: Wobbuffet	True				A	*	5*	5* 078: EndureType	002: Dark						
+3* Tie		202: Wobbuffet	True				B	*	4*	5* 034: MapSurveyor							
+1* Card		360: Wynaut	True				C	*	1-2*	1* 014: DeepBreather							
+1* Tail		360: Wynaut	True				D	*	1-2*	3* 043: WandMaster							
+0* None	Grin Charm	360: Wynaut	True				E	*	2-3*	3* 017: CounterBasher							
+0* None	Endure Rock	202: Wobbuffet	True				F	*	2-3*	3* 065: ChestFinder							
+0* None	Reverse Bow	203: Girafarig	False				A	*	5*	4* 086: StatusOnCategoryUse		082: Magic Coat			003: Status		
+3* Specs		203: Girafarig	False				B	*	4*	5* 067: SecondSTAB	009: Ghost						
+1* Card		203: Girafarig	False				C	*	1-2*	1* 094: PPSaver							
+1* Horn		203: Girafarig	False				D	*	1-2*	2* 018: DoubleAttacker							
+2* Coin		203: Girafarig	False				E	*	2-3*	4* 095: CelebrateCure							
 0* None		203: Girafarig	False				F	*	2-3*	0* 000: None							
 0* None	Dense Poncho	205: Forretress	True				A	*	5*	5* 037: WarpPayback	007: Fire						
 3* Coat		205: Forretress	True				B	*	4*	4* 010: AllTerrain							
@@ -650,22 +650,22 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Tail		206: Dunsparce	False				D	*	1-2*	1* 062: FastFriend							
 2* Medal		206: Dunsparce	False				E	*	2-3*	2* 029: StatDropImmune			001: Attack				
 0* None		206: Dunsparce	False				F	*	2-3*	0* 000: None							
-3* Cap		472: Gliscor	True				A	*	5*	0* 000: None							
-2* Brooch		472: Gliscor	True				B	*	4*	0* 000: None							
-1* Card		207: Gligar	True				C	*	1-2*	0* 000: None							
-1* Claw		207: Gligar	True				D	*	1-2*	0* 000: None							
+3* Cap		472: Gliscor	True				A	*	5*	5* 036: WeaknessPayback	010: Grass	007: Confused					
+2* Brooch		472: Gliscor	True				B	*	4*	4* 070: PassThroughAttacker							
+1* Card		207: Gligar	True				C	*	1-2*	1* 014: DeepBreather							
+1* Claw		207: Gligar	True				D	*	1-2*	2* 023: StatusOnAttack		005: Poisoned					
 0* None		207: Gligar	True				E	*	2-3*	0* 000: None							
 0* None		472: Gliscor	True				F	*	2-3*	0* 000: None							
-0* None	Stern Sash	210: Granbull	True				A	*	5*	0* 000: None							
-3* Cape		210: Granbull	True				B	*	4*	0* 000: None							
-1* Card		209: Snubbull	True				C	*	1-2*	0* 000: None							
-1* Fang		209: Snubbull	True				D	*	1-2*	0* 000: None							
+0* None	Stern Sash	210: Granbull	True				A	*	5*	5* 082: WeaknessReduce	009: Ghost						
+3* Cape		210: Granbull	True				B	*	4*	3* 049: ExcessiveForce							
+1* Card		209: Snubbull	True				C	*	1-2*	2* 016: MisfortuneMirror							
+1* Fang		209: Snubbull	True				D	*	1-2*	2* 052: BetterOdds							
 2* Rock		209: Snubbull	True				E	*	2-3*	0* 000: None							
 0* None		210: Granbull	True				F	*	2-3*	0* 000: None							
-3* Bow		211: Qwilfish	False				A	*	5*	0* 000: None							
-2* Ring		211: Qwilfish	False				B	*	4*	0* 000: None							
-1* Card		211: Qwilfish	False				C	*	1-2*	0* 000: None							
-1* Foam		211: Qwilfish	False				D	*	1-2*	0* 000: None							
+3* Bow		211: Qwilfish	False				A	*	5*	5* 040: ExplosiveAttack							
+2* Ring		211: Qwilfish	False				B	*	4*	5* 079: SpikeDropper					002: Magical		
+1* Card		211: Qwilfish	False				C	*	1-2*	1* 015: PracticeSwinger							
+1* Foam		211: Qwilfish	False				D	*	1-2*	2* 029: StatDropImmune			001: Attack				
 2* Crest		211: Qwilfish	False				E	*	2-3*	0* 000: None							
 0* None		211: Qwilfish	False				F	*	2-3*	0* 000: None							
 3* Bow		213: Shuckle	False				A	*	5*	5* 078: EndureType	018: Water						
@@ -680,20 +680,20 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Horn		214: Heracross	False				D	*	1-2*	2* 052: BetterOdds							
 2* Guard		214: Heracross	False				E	*	2-3*	3* 005: SuperCrit							
 0* None		214: Heracross	False				F	*	2-3*	0* 000: None							
-0* None	Ruin Armlet	461: Weavile	True				A	*	5*	0* 000: None							
-3* Scarf		461: Weavile	True				B	*	4*	0* 000: None							
-1* Card		215: Sneasel	True				C	*	1-2*	0* 000: None							
-1* Claw		215: Sneasel	True				D	*	1-2*	0* 000: None							
+0* None	Ruin Armlet	461: Weavile	True				A	*	5*	5* 078: EndureType	006: Fighting						
+3* Scarf		461: Weavile	True				B	*	4*	2* 022: PressurePlus							
+1* Card		215: Sneasel	True				C	*	1-2*	1* 094: PPSaver							
+1* Claw		215: Sneasel	True				D	*	1-2*	2* 088: DoubleDash							
 0* None	Dusk Jewel	215: Sneasel	True				E	*	2-3*	0* 000: None							
 0* None	Vile Tag	461: Weavile	True				F	*	2-3*	0* 000: None							
-0* None	Hiber Scarf	217: Ursaring	True				A	*	5*	0* 000: None							
-3* Bow		217: Ursaring	True				B	*	4*	0* 000: None							
-1* Card		216: Teddiursa	True				C	*	1-2*	0* 000: None							
-1* Claw		216: Teddiursa	True				D	*	1-2*	0* 000: None							
-0* None	Honey Rock	216: Teddiursa	True				E	*	2-3*	0* 000: None							
+0* None	Hiber Scarf	217: Ursaring	True				A	*	5*	3* 085: StatusOnCategoryHit		061: Yawning			003: Status		
+3* Bow		217: Ursaring	True				B	*	4*	4* 056: FastHealer							
+1* Card		216: Teddiursa	True				C	*	1-2*	2* 033: AcuteSniffer							
+1* Claw		216: Teddiursa	True				D	*	1-2*	1* 015: PracticeSwinger							
+0* None	Honey Rock	216: Teddiursa	True				E	*	2-3*	3* 032: StairSensor							
 0* None	Calming Rock	217: Ursaring	True				F	*	2-3*	0* 000: None							
 0* None	Lava Bow	219: Magcargo	True				A	*	5*	5* 078: EndureType	018: Water						
-3* Torc		219: Magcargo	True				B	*	4*	4* 041: TrapBuster							
+3* Torc		219: Magcargo	True				B	*	4*	3* 048: Absorption							
 1* Card		218: Slugma	True				C	*	1-2*	2* 023: StatusOnAttack		002: Burned					
 1* Beam		218: Slugma	True				D	*	1-2*	1* 015: PracticeSwinger							
 2* Ore		218: Slugma	True				E	*	2-3*	3* 075: HealInLava							
@@ -701,94 +701,94 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 0* None	Glacier Cape	473: Mamoswine	True				A	*	5*	5* 067: SecondSTAB	016: Rock						
 0* None	Frost Torc	221: Piloswine	True				B	*	4*	4* 047: Celebrate							
 1* Card		220: Swinub	True				C	*	1-2*	2* 033: AcuteSniffer							
-1* Hair		220: Swinub	True				D	*	1-2*	2* 051: BarrageGuard							
+1* Hair		220: Swinub	True				D	*	1-2*	2* 060: ErraticAttacker							
 0* None		220: Swinub	True				E	*	2-3*	0* 000: None							
 0* None		221: Piloswine	True				F	*	2-3*	0* 000: None							
-0* None	Eager Brooch	222: Corsola	False				A	*	5*	0* 000: None							
-3* Dress		222: Corsola	False				B	*	4*	0* 000: None							
-1* Card		222: Corsola	False				C	*	1-2*	0* 000: None							
-1* Foam		222: Corsola	False				D	*	1-2*	0* 000: None							
-2* Pebble		222: Corsola	False				E	*	2-3*	0* 000: None							
+0* None	Eager Brooch	222: Corsola	False				A	*	5*	4* 086: StatusOnCategoryUse		017: Reflect			003: Status		
+3* Dress		222: Corsola	False				B	*	4*	4* 056: FastHealer							
+1* Card		222: Corsola	False				C	*	1-2*	1* 014: DeepBreather							
+1* Foam		222: Corsola	False				D	*	1-2*	2* 059: StatMirror							
+2* Pebble		222: Corsola	False				E	*	2-3*	3* 069: GapProber							
 0* None		222: Corsola	False				F	*	2-3*	0* 000: None							
-3* Bow		224: Octillery	True				A	*	5*	0* 000: None							
-3* Armor		224: Octillery	True				B	*	4*	0* 000: None							
-1* Card		223: Remoraid	True				C	*	1-2*	0* 000: None							
-1* Foam		223: Remoraid	True				D	*	1-2*	0* 000: None							
+3* Bow		224: Octillery	True				A	*	5*	5* 036: WeaknessPayback	004: Electric	114: Blinker					
+3* Armor		224: Octillery	True				B	*	4*	4* 041: TrapBuster							
+1* Card		223: Remoraid	True				C	*	1-2*	2* 051: BarrageGuard							
+1* Foam		223: Remoraid	True				D	*	1-2*	2* 060: ErraticAttacker							
 2* Crest		223: Remoraid	True				E	*	2-3*	0* 000: None							
 0* None		224: Octillery	True				F	*	2-3*	0* 000: None							
-0* None	Snow Brooch	225: Delibird	False				A	*	5*	0* 000: None							
-3* Hat		225: Delibird	False				B	*	4*	0* 000: None							
-1* Card		225: Delibird	False				C	*	1-2*	0* 000: None							
-1* Wing		225: Delibird	False				D	*	1-2*	0* 000: None							
-2* Crest		225: Delibird	False				E	*	2-3*	0* 000: None							
+0* None	Snow Brooch	225: Delibird	False				A	*	5*	5* 034: MapSurveyor							
+3* Hat		225: Delibird	False				B	*	4*	4* 056: FastHealer							
+1* Card		225: Delibird	False				C	*	1-2*	2* 083: Gratitude							
+1* Wing		225: Delibird	False				D	*	1-2*	1* 062: FastFriend							
+2* Crest		225: Delibird	False				E	*	2-3*	3* 054: DistanceDodge							
 0* None		225: Delibird	False				F	*	2-3*	0* 000: None							
-0* None	Horizon Bow	226: Mantine	True				A	*	5*	0* 000: None							
-0* None	Ocean Bow	226: Mantine	True				B	*	4*	0* 000: None							
-1* Beam		458: Mantyke	True				C	*	1-2*	0* 000: None							
-1* Card		458: Mantyke	True				D	*	1-2*	0* 000: None							
-0* None	Waft Rock	458: Mantyke	True				E	*	2-3*	0* 000: None							
+0* None	Horizon Bow	226: Mantine	True				A	*	5*	5* 036: WeaknessPayback	012: Ice	045: Whirlpool					
+0* None	Ocean Bow	226: Mantine	True				B	*	4*	4* 041: TrapBuster							
+1* Beam		458: Mantyke	True				C	*	1-2*	1* 014: DeepBreather							
+1* Card		458: Mantyke	True				D	*	1-2*	1* 050: Anchor							
+0* None	Waft Rock	458: Mantyke	True				E	*	2-3*	3* 032: StairSensor							
 0* None	Sunset Rock	226: Mantine	True				F	*	2-3*	0* 000: None							
-3* Cape		227: Skarmory	False				A	*	5*	0* 000: None							
-3* Shield		227: Skarmory	False				B	*	4*	0* 000: None							
-1* Card		227: Skarmory	False				C	*	1-2*	0* 000: None							
-1* Wing		227: Skarmory	False				D	*	1-2*	0* 000: None							
-2* Coin		227: Skarmory	False				E	*	2-3*	0* 000: None							
+3* Cape		227: Skarmory	False				A	*	5*	5* 078: EndureType	007: Fire						
+3* Shield		227: Skarmory	False				B	*	4*	4* 041: TrapBuster							
+1* Card		227: Skarmory	False				C	*	1-2*	1* 026: SureHitAttacker							
+1* Wing		227: Skarmory	False				D	*	1-2*	1* 061: ErraticDefender							
+2* Coin		227: Skarmory	False				E	*	2-3*	3* 069: GapProber							
 0* None		227: Skarmory	False				F	*	2-3*	0* 000: None							
-0* None	Pit Fang	229: Houndoom	True				A	*	5*	0* 000: None							
-3* Collar		229: Houndoom	True				B	*	4*	0* 000: None							
-1* Card		228: Houndour	True				C	*	1-2*	0* 000: None							
-1* Fang		228: Houndour	True				D	*	1-2*	0* 000: None							
+0* None	Pit Fang	229: Houndoom	True				A	*	5*	5* 098: StatusOnTypeHit	007: Fire	081: Heal Block					
+3* Collar		229: Houndoom	True				B	*	4*	3* 049: ExcessiveForce							
+1* Card		228: Houndour	True				C	*	1-2*	2* 033: AcuteSniffer							
+1* Fang		228: Houndour	True				D	*	1-2*	2* 060: ErraticAttacker							
 2* Jaw		228: Houndour	True				E	*	2-3*	0* 000: None							
 0* None		229: Houndoom	True				F	*	2-3*	0* 000: None							
-0* None	Armor Scarf	232: Donphan	True				A	*	5*	0* 000: None							
-3* Armor		232: Donphan	True				B	*	4*	0* 000: None							
-1* Claw		231: Phanpy	True				C	*	1-2*	0* 000: None							
-1* Card		231: Phanpy	True				D	*	1-2*	0* 000: None							
-2* Tag		231: Phanpy	True				E	*	2-3*	0* 000: None							
+0* None	Armor Scarf	232: Donphan	True				A	*	5*	5* 067: SecondSTAB	016: Rock						
+3* Armor		232: Donphan	True				B	*	4*	4* 047: Celebrate							
+1* Claw		231: Phanpy	True				C	*	1-2*	2* 051: BarrageGuard							
+1* Card		231: Phanpy	True				D	*	1-2*	2* 019: MasterHurler							
+2* Tag		231: Phanpy	True				E	*	2-3*	3* 069: GapProber							
 2* Crest		232: Donphan	True				F	*	2-3*	0* 000: None							
-0* None	Delusion Bow	234: Stantler	False				A	*	5*	0* 000: None							
-3* Crown		234: Stantler	False				B	*	4*	0* 000: None							
-1* Beam		234: Stantler	False				C	*	1-2*	0* 000: None							
-1* Card		234: Stantler	False				D	*	1-2*	0* 000: None							
-2* Crest		234: Stantler	False				E	*	2-3*	0* 000: None							
+0* None	Delusion Bow	234: Stantler	False				A	*	5*	3* 085: StatusOnCategoryHit		008: Cringing			003: Status		
+3* Crown		234: Stantler	False				B	*	4*	3* 058: StatusMirror							
+1* Beam		234: Stantler	False				C	*	1-2*	1* 084: HitAndRun							
+1* Card		234: Stantler	False				D	*	1-2*	2* 018: DoubleAttacker							
+2* Crest		234: Stantler	False				E	*	2-3*	3* 069: GapProber							
 0* None		234: Stantler	False				F	*	2-3*	0* 000: None							
-0* None	Paint Scarf	235: Smeargle	False				A	*	5*	0* 000: None							
-3* Hat		235: Smeargle	False				B	*	4*	0* 000: None							
-1* Card		235: Smeargle	False				C	*	1-2*	0* 000: None							
-1* Hair		235: Smeargle	False				D	*	1-2*	0* 000: None							
-2* Seal		235: Smeargle	False				E	*	2-3*	0* 000: None							
-0* None		235: Smeargle	False				F	*	2-3*	0* 000: None							
-0* None	Rainbow Veil	250: Ho-Oh	False				A	EB	5*	0* 000: None							
-0* None	Rainbow Wing	250: Ho-Oh	False				B	IMQF	4*	0* 000: None							
-2* Dust		250: Ho-Oh	False				C		1-2*	0* 000: None							
-2* Tag		250: Ho-Oh	False				D		1-2*	0* 000: None							
-0* None	Rainbow Brooch	250: Ho-Oh	False				E		2-3*	0* 000: None							
-0* None	Clear Wing	250: Ho-Oh	False				F		2*	0* 000: None							
-0* None	Bolt Fang	243: Raikou	False				G	CDB	5*	4* 086: StatusOnCategoryUse		097: Electrified			003: Status		
-2* Ring		243: Raikou	False				H	CD	3*	0* 000: None							
-1* Beam		243: Raikou	False				I		1-2*	0* 000: None							
-1* Card		243: Raikou	False				J		1-2*	0* 000: None							
-0* None	Flare Fang	244: Entei	False				K	GHF	5*	3* 085: StatusOnCategoryHit		106: Magma Storm			003: Status		
-2* Ring		244: Entei	False				L	GH	3*	0* 000: None							
-1* Beam		244: Entei	False				M		1-2*	0* 000: None							
-1* Card		244: Entei	False				N		1-2*	0* 000: None							
-0* None	Aqua Mantle	245: Suicune	False				O	KLJ	5*	4* 086: StatusOnCategoryUse		066: Mirror Coat			003: Status		
-2* Ring		245: Suicune	False				P	KL	3*	0* 000: None							
-1* Beam		245: Suicune	False				Q		1-2*	0* 000: None							
-1* Card		245: Suicune	False				R		1-2*	0* 000: None							
-0* None	Sacred Collar	245: Suicune	False	243: Raikou, 244: Entei, 245: Suicune			S	BFJ	4*	0* 000: None							
+0* None	Paint Scarf	235: Smeargle	False				A	*	5*	2* 013: PPBoost						5	
+3* Hat		235: Smeargle	False				B	*	4*	4* 041: TrapBuster							
+1* Card		235: Smeargle	False				C	*	1-2*	1* 094: PPSaver							
+1* Hair		235: Smeargle	False				D	*	1-2*	1* 062: FastFriend							
+2* Key		235: Smeargle	False				E	*	2-3*	3* 032: StairSensor							
+2* Coin		235: Smeargle	False				F	*	2-3*	3* 066: ShopFinder							
+0* None	Rainbow Veil	250: Ho-Oh	False				A	EB	5*	5* 020: AllyReviver							
+0* None	Rainbow Wing	250: Ho-Oh	False				B	IMQF	4*	4* 044: WandSpread							
+2* Dust		250: Ho-Oh	False				C		1-2*	1* 094: PPSaver							
+2* Tag		250: Ho-Oh	False				D		1-2*	1* 084: HitAndRun							
+0* None	Rainbow Brooch	250: Ho-Oh	False				E	CD	2-3*	2* 053: ClutchPerformer							
+0* None	Clear Wing	250: Ho-Oh	False				F		2*	2* 039: WideAttack							
+0* None	Bolt Fang	243: Raikou	False				G	HS	5*	4* 086: StatusOnCategoryUse		097: Electrified			003: Status		
+2* Ring		243: Raikou	False				H	IJ	3*	3* 038: LungeAttack							
+1* Beam		243: Raikou	False				I		1-2*	1* 026: SureHitAttacker							
+1* Card		243: Raikou	False				J		1-2*	2* 051: BarrageGuard							
+0* None	Flare Fang	244: Entei	False				K	LS	5*	3* 085: StatusOnCategoryHit		106: Magma Storm			003: Status		
+2* Ring		244: Entei	False				L	MN	3*	3* 069: GapProber							
+1* Beam		244: Entei	False				M		1-2*	2* 018: DoubleAttacker							
+1* Card		244: Entei	False				N		1-2*	2* 052: BetterOdds							
+0* None	Aqua Mantle	245: Suicune	False				O	PS	5*	4* 086: StatusOnCategoryUse		066: Mirror Coat			003: Status		
+2* Ring		245: Suicune	False				P	QR	3*	3* 028: StatusImmune		004: Paralyzed					
+1* Beam		245: Suicune	False				Q		1-2*	1* 084: HitAndRun							
+1* Card		245: Suicune	False				R		1-2*	2* 033: AcuteSniffer							
+0* None	Sacred Collar	245: Suicune	False	243: Raikou, 244: Entei, 245: Suicune			S		4*	4* 068: TypedAttack							
 0* None		245: Suicune	False	243: Raikou, 244: Entei, 245: Suicune			T		2-3*	0* 000: None							
-0* None	Crash Claw	248: Tyranitar	True				A	*	5*	0* 000: None							
-3* Scarf		247: Pupitar	True				B	*	4*	0* 000: None							
-1* Mud		246: Larvitar	True				C	*	1-2*	0* 000: None							
-1* Card		246: Larvitar	True				D	*	1-2*	0* 000: None							
-2* Crest		246: Larvitar	True				E	*	2-3*	0* 000: None							
+0* None	Crash Claw	248: Tyranitar	True				A	*	5*	5* 078: EndureType	006: Fighting						
+3* Scarf		247: Pupitar	True				B	*	4*	4* 045: MultiRayShot							
+1* Mud		246: Larvitar	True				C	*	1-2*	1* 094: PPSaver							
+1* Card		246: Larvitar	True				D	*	1-2*	1* 026: SureHitAttacker							
+2* Crest		246: Larvitar	True				E	*	2-3*	2* 060: ErraticAttacker							
 2* Guard		247: Pupitar	True				F	*	2-3*	0* 000: None							
-0* None	Silver Veil	249: Lugia	False				A	*	5*	0* 000: None							
-0* None	Silver Wing	249: Lugia	False				B	*	4*	0* 000: None							
-1* Song		249: Lugia	False				C	*	1-2*	0* 000: None							
-1* Card		249: Lugia	False				D	*	1-2*	0* 000: None							
-0* None	Silver Brooch	249: Lugia	False				E	*	2-3*	0* 000: None							
+0* None	Silver Veil	249: Lugia	False				A	*	5*	4* 086: StatusOnCategoryUse		068: Safeguard			003: Status		
+0* None	Silver Wing	249: Lugia	False				B	*	4*	3* 048: Absorption							
+1* Song		249: Lugia	False				C	*	1-2*	2* 013: PPBoost						2	
+1* Card		249: Lugia	False				D	*	1-2*	3* 043: WandMaster							
+0* None	Silver Brooch	249: Lugia	False				E	*	2-3*	3* 069: GapProber							
 0* None	Deep Sea Jewel	249: Lugia	False				F	*	2-3*	0* 000: None							
 0* None	Chrono Veil	251: Celebi	False				A	*	5*	4* 081: DeepBreatherPlus							
 3* Bow		251: Celebi	False				B	*	4*	4* 010: AllTerrain							
@@ -796,28 +796,28 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Card		251: Celebi	False				D	*	1-2*	3* 032: StairSensor							
 2* Crest		251: Celebi	False				E	*	2-3*	4* 090: DevolveOnAttack							
 0* None		251: Celebi	False				F	*	2-3*	0* 000: None							
-0* None	Drain Bangle	254: Sceptile	True				A	*	5*	0* 000: None							
-3* Blade		253: Grovyle	True				B	*	4*	0* 000: None							
-1* Card		252: Treecko	True				C	*	1-2*	0* 000: None							
-1* Thorn		252: Treecko	True				D	*	1-2*	0* 000: None							
-0* None	Forest Ore	252: Treecko	True				E	*	2-3*	0* 000: None							
+0* None	Drain Bangle	254: Sceptile	True				A	*	5*	4* 056: FastHealer							
+3* Blade		253: Grovyle	True				B	*	4*	3* 057: SelfCurer							
+1* Card		252: Treecko	True				C	*	1-2*	1* 006: NVECrit							
+1* Thorn		252: Treecko	True				D	*	1-2*	3* 048: Absorption							
+0* None	Forest Ore	252: Treecko	True				E	*	2-3*	3* 069: GapProber							
 0* None	Jungle Tag	253: Grovyle	True				F	*	2-3*	0* 000: None							
-3* Torc		257: Blaziken	True				A	*	5*	0* 000: None							
-0* None	Gutsy Band	256: Combusken	True				B	*	4*	0* 000: None							
-1* Card		255: Torchic	True				C	*	1-2*	0* 000: None							
-1* Hair		255: Torchic	True				D	*	1-2*	0* 000: None							
-0* None	Hot Pebble	255: Torchic	True				E	*	2-3*	0* 000: None							
+3* Torc		257: Blaziken	True				A	*	5*	5* 067: SecondSTAB	008: Flying						
+0* None	Gutsy Band	256: Combusken	True				B	*	4*	3* 055: CloseDodge							
+1* Card		255: Torchic	True				C	*	1-2*	2* 033: AcuteSniffer							
+1* Hair		255: Torchic	True				D	*	1-2*	2* 060: ErraticAttacker							
+0* None	Hot Pebble	255: Torchic	True				E	*	2-3*	3* 005: SuperCrit							
 0* None	Charge Tag	256: Combusken	True				F	*	2-3*	0* 000: None							
-3* Bangle		260: Swampert	True				A	*	5*	0* 000: None							
-3* Torc		259: Marshtomp	True				B	*	4*	0* 000: None							
-1* Card		258: Mudkip	True				C	*	1-2*	0* 000: None							
-1* Mud		258: Mudkip	True				D	*	1-2*	0* 000: None							
-2* Jewel		258: Mudkip	True				E	*	2-3*	0* 000: None							
+3* Bangle		260: Swampert	True				A	*	5*	5* 036: WeaknessPayback	018: Water	090: Immobilized					
+3* Torc		259: Marshtomp	True				B	*	4*	3* 054: DistanceDodge							
+1* Card		258: Mudkip	True				C	*	1-2*	2* 013: PPBoost						2	
+1* Mud		258: Mudkip	True				D	*	1-2*	2* 051: BarrageGuard							
+2* Jewel		258: Mudkip	True				E	*	2-3*	3* 069: GapProber							
 2* Crest		259: Marshtomp	True				F	*	2-3*	0* 000: None							
-3* Collar		262: Mightyena	True				A	*	5*	0* 000: None							
-3* Band		262: Mightyena	True				B	*	4*	0* 000: None							
-1* Card		261: Poochyena	True				C	*	1-2*	0* 000: None							
-1* Fang		261: Poochyena	True				D	*	1-2*	0* 000: None							
+3* Collar		262: Mightyena	True				A	*	5*	5* 037: WarpPayback	006: Fighting						
+3* Band		262: Mightyena	True				B	*	4*	3* 028: StatusImmune		060: Disable					
+1* Card		261: Poochyena	True				C	*	1-2*	1* 094: PPSaver							
+1* Fang		261: Poochyena	True				D	*	1-2*	2* 023: StatusOnAttack		062: Exposed					
 0* None		261: Poochyena	True				E	*	2-3*	0* 000: None							
 0* None		262: Mightyena	True				F	*	2-3*	0* 000: None							
 3* Ruff		264: Linoone	True				A	*	5*	5* 012: GapFiller							
@@ -826,41 +826,41 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Hair		263: Zigzagoon	True				D	*	1-2*	2* 088: DoubleDash							
 0* None		263: Zigzagoon	True				E	*	2-3*	0* 000: None							
 0* None		264: Linoone	True				F	*	2-3*	0* 000: None							
-3* Bow		269: Dustox	True				A	EFC	4*	4* 056: FastHealer							
+3* Bow		269: Dustox	True				A	EFC	5*	4* 056: FastHealer							
 0* None	Vivid Silk	267: Beautifly	True				B	EFD	5*	5* 078: EndureType	016: Rock						
 2* Dust		268: Cascoon	True				C	EF	2-3*	3* 028: StatusImmune		002: Burned					
 2* Dust		266: Silcoon	True				D	EF	2-3*	4* 010: AllTerrain							
 1* Horn		265: Wurmple	True				E		1*	2* 039: WideAttack							
 1* Card		265: Wurmple	True				F		1*	1* 006: NVECrit							
-3* Hat		272: Ludicolo	True				A	*	5*	0* 000: None							
-0* None	Jolly Scarf	271: Lombre	True				B	*	4*	0* 000: None							
-1* Card		270: Lotad	True				C	*	1-2*	0* 000: None							
-1* Dew		270: Lotad	True				D	*	1-2*	0* 000: None							
+3* Hat		272: Ludicolo	True				A	*	5*	5* 036: WeaknessPayback	008: Flying	101: Leech Seed					
+0* None	Jolly Scarf	271: Lombre	True				B	*	4*	4* 056: FastHealer							
+1* Card		270: Lotad	True				C	*	1-2*	1* 084: HitAndRun							
+1* Dew		270: Lotad	True				D	*	1-2*	2* 033: AcuteSniffer							
 0* None		270: Lotad	True				E	*	2-3*	0* 000: None							
 0* None		271: Lombre	True				F	*	2-3*	0* 000: None							
-3* Belt		275: Shiftry	True				A	*	5*	0* 000: None							
-3* Bow		274: Nuzleaf	True				B	*	4*	0* 000: None							
-1* Card		273: Seedot	True				C	*	1-2*	0* 000: None							
-1* Leaf		273: Seedot	True				D	*	1-2*	0* 000: None							
-0* None		273: Seedot	True				E	*	2-3*	0* 000: None							
+3* Belt		275: Shiftry	True				A	*	5*	5* 037: WarpPayback	008: Flying						
+3* Bow		274: Nuzleaf	True				B	*	4*	3* 057: SelfCurer							
+1* Card		273: Seedot	True				C	*	1-2*	2* 051: BarrageGuard							
+1* Leaf		273: Seedot	True				D	*	1-2*	3* 043: WandMaster							
+2* Tag		273: Seedot	True				E	*	2-3*	3* 024: KnockbackOnAttack							
 0* None		274: Nuzleaf	True				F	*	2-3*	0* 000: None							
-0* None	Midair Scarf	277: Swellow	True				A	*	5*	0* 000: None							
-3* Bow		277: Swellow	True				B	*	4*	0* 000: None							
-1* Card		276: Taillow	True				C	*	1-2*	0* 000: None							
-1* Wing		276: Taillow	True				D	*	1-2*	0* 000: None							
+0* None	Midair Scarf	277: Swellow	True				A	*	5*	4* 093: AttackRangeInWeather							000: Clear
+3* Bow		277: Swellow	True				B	*	4*	5* 007: Nontraitor							
+1* Card		276: Taillow	True				C	*	1-2*	1* 006: NVECrit							
+1* Wing		276: Taillow	True				D	*	1-2*	2* 088: DoubleDash							
 0* None		276: Taillow	True				E	*	2-3*	0* 000: None							
 0* None		277: Swellow	True				F	*	2-3*	0* 000: None							
-0* None	Stock Scarf	279: Pelipper	True				A	*	5*	0* 000: None							
+0* None	Stock Scarf	279: Pelipper	True				A	*	5*	5* 036: WeaknessPayback	010: Grass	008: Cringing					
 3* Sash		279: Pelipper	True				B	*	4*	5* 087: MapStatusOnCategoryUse					002: Magical		001: Rain
-1* Card		278: Wingull	True				C	*	1-2*	0* 000: None							
-1* Wing		278: Wingull	True				D	*	1-2*	0* 000: None							
+1* Card		278: Wingull	True				C	*	1-2*	1* 015: PracticeSwinger							
+1* Wing		278: Wingull	True				D	*	1-2*	2* 052: BetterOdds							
 0* None		278: Wingull	True				E	*	2-3*	0* 000: None							
 0* None		279: Pelipper	True				F	*	2-3*	0* 000: None							
-0* None	Gallant Torc	475: Gallade	True				A	@	5*	0* 000: None							
-0* None	Caring Scarf	282: Gardevoir	True				B	@	4*	0* 000: None							
-1* Hair		280: Ralts	True				C	@	1-2*	0* 000: None							
-1* Card		280: Ralts	True				D	@	1-2*	0* 000: None							
-2* Charm		281: Kirlia	True				E	@	2-3*	0* 000: None							
+0* None	Gallant Torc	475: Gallade	True				A	@	5*	5* 037: WarpPayback	008: Flying						
+0* None	Caring Scarf	282: Gardevoir	True				B	@	5*	5* 037: WarpPayback	017: Steel						
+1* Hair		280: Ralts	True				C	@	1-2*	2* 013: PPBoost						2	
+1* Card		280: Ralts	True				D	@	1-2*	1* 084: HitAndRun							
+2* Charm		281: Kirlia	True				E	@	2-3*	3* 057: SelfCurer							
 2* Brooch		281: Kirlia	True				F	@	2-3*	0* 000: None							
 3* Bow		284: Masquerain	True				A	*	5*	3* 089: StatusSplash							
 3* Tiara		284: Masquerain	True				B	*	4*	5* 067: SecondSTAB	018: Water						
@@ -868,216 +868,216 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Foam		283: Surskit	True				D	*	1-2*	3* 054: DistanceDodge							
 0* None		283: Surskit	True				E	*	2-3*	0* 000: None							
 0* None		284: Masquerain	True				F	*	2-3*	0* 000: None							
-0* None	Thwart Bow	286: Breloom	True				A	*	5*	0* 000: None							
-3* Collar		286: Breloom	True				B	*	4*	0* 000: None							
-1* Card		285: Shroomish	True				C	*	1-2*	0* 000: None							
-1* Leaf		285: Shroomish	True				D	*	1-2*	0* 000: None							
+0* None	Thwart Bow	286: Breloom	True				A	*	5*	5* 082: WeaknessReduce	012: Ice						
+3* Collar		286: Breloom	True				B	*	4*	3* 048: Absorption							
+1* Card		285: Shroomish	True				C	*	1-2*	1* 006: NVECrit							
+1* Leaf		285: Shroomish	True				D	*	1-2*	2* 053: ClutchPerformer							
 0* None		285: Shroomish	True				E	*	2-3*	0* 000: None							
 0* None		286: Breloom	True				F	*	2-3*	0* 000: None							
-0* None	Lazy Ruff	289: Slaking	True				A	*	5*	0* 000: None							
-3* Sash		288: Vigoroth	True				B	*	4*	0* 000: None							
-1* Card		287: Slakoth	True				C	*	1-2*	0* 000: None							
-1* Claw		287: Slakoth	True				D	*	1-2*	0* 000: None							
+0* None	Lazy Ruff	289: Slaking	True				A	*	5*	5* 036: WeaknessPayback	013: Normal	055: Paused					
+3* Sash		288: Vigoroth	True				B	*	4*	4* 041: TrapBuster							
+1* Card		287: Slakoth	True				C	*	1-2*	1* 050: Anchor							
+1* Claw		287: Slakoth	True				D	*	1-2*	2* 051: BarrageGuard							
 0* None		287: Slakoth	True				E	*	2-3*	0* 000: None							
 0* None		288: Vigoroth	True				F	*	2-3*	0* 000: None							
 0* None	Ninja Ruff	291: Ninjask	False	290: Nincada, 291: Ninjask			A	EB	5*	5* 034: MapSurveyor							
-3* Specs		291: Ninjask	False	290: Nincada, 291: Ninjask			B	CDE	4*	4* 041: TrapBuster							
-1* Claw		290: Nincada	False	290: Nincada, 291: Ninjask, 292: Shedinja			C		1-2*	2* 016: MisfortuneMirror							
+3* Specs		291: Ninjask	False	290: Nincada, 291: Ninjask			B		4*	4* 041: TrapBuster							
+1* Claw		290: Nincada	False	290: Nincada, 291: Ninjask, 292: Shedinja			C		1-2*	1* 084: HitAndRun							
 1* Card		290: Nincada	False	290: Nincada, 291: Ninjask, 292: Shedinja			D		1-2*	2* 053: ClutchPerformer							
 2* Key		290: Nincada	False	290: Nincada, 291: Ninjask, 292: Shedinja			E	CD	2-3*	5* 037: WarpPayback	016: Rock						
-0* None		290: Nincada	False	290: Nincada, 291: Ninjask			F		2-3*	3* 038: LungeAttack							
+2* Dust		290: Nincada	False	290: Nincada, 291: Ninjask			F		2-3*	3* 038: LungeAttack							
 0* None	Awe Mantle	292: Shedinja	False				G	EH	5*	5* 078: EndureType	009: Ghost						
-3* Mask		292: Shedinja	False				H	CDE	4*	4* 010: AllTerrain							
-3* Torc		295: Exploud	True				A	*	5*	0* 000: None							
-3* Bangle		294: Loudred	True				B	*	4*	0* 000: None							
-1* Card		293: Whismur	True				C	*	1-2*	0* 000: None							
-1* Hair		293: Whismur	True				D	*	1-2*	0* 000: None							
+3* Mask		292: Shedinja	False				H		4*	4* 010: AllTerrain							
+3* Torc		295: Exploud	True				A	*	5*	5* 011: Wallbreaker							
+3* Bangle		294: Loudred	True				B	*	4*	3* 049: ExcessiveForce							
+1* Card		293: Whismur	True				C	*	1-2*	2* 030: SleepWalker							
+1* Hair		293: Whismur	True				D	*	1-2*	1* 026: SureHitAttacker							
 0* None		293: Whismur	True				E	*	2-3*	0* 000: None							
 0* None		294: Loudred	True				F	*	2-3*	0* 000: None							
-0* None	Thrust Belt	297: Hariyama	True				A	*	5*	0* 000: None							
-3* Mask		297: Hariyama	True				B	*	4*	0* 000: None							
-1* Card		296: Makuhita	True				C	*	1-2*	0* 000: None							
-1* Sweat		296: Makuhita	True				D	*	1-2*	0* 000: None							
-0* None		296: Makuhita	True				E	*	2-3*	0* 000: None							
+0* None	Thrust Belt	297: Hariyama	True				A	*	5*	5* 082: WeaknessReduce	015: Psychic						
+3* Mask		297: Hariyama	True				B	*	4*	3* 024: KnockbackOnAttack							
+1* Card		296: Makuhita	True				C	*	1-2*	2* 008: WaterTerrain							
+1* Sweat		296: Makuhita	True				D	*	1-2*	1* 014: DeepBreather							
+2* Medal		296: Makuhita	True				E	*	2-3*	3* 005: SuperCrit							
 0* None		297: Hariyama	True				F	*	2-3*	0* 000: None							
-3* Hat		476: Probopass	True				A	*	5*	5* 078: EndureType	011: Ground						
+3* Hat		476: Probopass	True				A	*	5*	5* 087: MapStatusOnCategoryUse					003: Status		013: Electric Terrain
 3* Glasses		476: Probopass	True				B	*	4*	4* 010: AllTerrain							
 1* Card		299: Nosepass	True				C	*	1-2*	1* 026: SureHitAttacker							
 1* Beam		299: Nosepass	True				D	*	1-2*	2* 051: BarrageGuard							
 2* Ore		299: Nosepass	True				E	*	2-3*	3* 032: StairSensor							
 0* None		476: Probopass	True				F	*	2-3*	0* 000: None							
-0* None	Guard Collar	301: Delcatty	True				A	*	5*	0* 000: None							
-3* Choker		301: Delcatty	True				B	*	4*	0* 000: None							
-1* Card		300: Skitty	True				C	*	1-2*	0* 000: None							
-1* Fang		300: Skitty	True				D	*	1-2*	0* 000: None							
-0* None	Smile Pebble	300: Skitty	True				E	*	2-3*	0* 000: None							
+0* None	Guard Collar	301: Delcatty	True				A	*	5*	5* 067: SecondSTAB	013: Normal						
+3* Choker		301: Delcatty	True				B	*	4*	4* 086: StatusOnCategoryUse		076: Lucky Chant			003: Status		
+1* Card		300: Skitty	True				C	*	1-2*	1* 026: SureHitAttacker							
+1* Fang		300: Skitty	True				D	*	1-2*	2* 018: DoubleAttacker							
+0* None	Smile Pebble	300: Skitty	True				E	*	2-3*	3* 055: CloseDodge							
 2* Charm		301: Delcatty	True				F	*	2-3*	0* 000: None							
-3* Scope		302: Sableye	False				A	*	5*	0* 000: None							
-3* Mantle		302: Sableye	False				B	*	4*	0* 000: None							
-1* Card		302: Sableye	False				C	*	1-2*	0* 000: None							
-1* Claw		302: Sableye	False				D	*	1-2*	0* 000: None							
-0* None		302: Sableye	False				E	*	2-3*	0* 000: None							
+3* Scope		302: Sableye	False				A	*	5*	5* 034: MapSurveyor							
+3* Mantle		302: Sableye	False				B	*	4*	3* 085: StatusOnCategoryHit		114: Blinker			001: Physical		
+1* Card		302: Sableye	False				C	*	1-2*	2* 016: MisfortuneMirror							
+1* Claw		302: Sableye	False				D	*	1-2*	2* 052: BetterOdds							
+2* Jewel		302: Sableye	False				E	*	2-3*	3* 032: StairSensor							
 0* None		302: Sableye	False				F	*	2-3*	0* 000: None							
 0* None	Deceit Mask	303: Mawile	False				A	*	5*	5* 067: SecondSTAB	002: Dark						
 3* Veil		303: Mawile	False				B	*	4*	4* 041: TrapBuster							
-1* Card		303: Mawile	False				C	*	1-2*	1* 050: Anchor							
+1* Card		303: Mawile	False				C	*	1-2*	1* 061: ErraticDefender							
 1* Fang		303: Mawile	False				D	*	1-2*	2* 051: BarrageGuard							
 2* Ore		303: Mawile	False				E	*	2-3*	3* 017: CounterBasher							
 0* None		303: Mawile	False				F	*	2-3*	0* 000: None							
-0* None	Iron Helmet	306: Aggron	True				A	*	5*	0* 000: None							
-3* Armor		305: Lairon	True				B	*	4*	0* 000: None							
-1* Card		304: Aron	True				C	*	1-2*	0* 000: None							
-1* Claw		304: Aron	True				D	*	1-2*	0* 000: None							
-0* None		304: Aron	True				E	*	2-3*	0* 000: None							
+0* None	Iron Helmet	306: Aggron	True				A	*	5*	5* 078: EndureType	011: Ground						
+3* Armor		305: Lairon	True				B	*	4*	3* 049: ExcessiveForce							
+1* Card		304: Aron	True				C	*	1-2*	1* 026: SureHitAttacker							
+1* Claw		304: Aron	True				D	*	1-2*	2* 009: LavaTerrain							
+2* Guard		304: Aron	True				E	*	2-3*	3* 096: TypeBodyguard	003: Dragon						
 0* None		305: Lairon	True				F	*	2-3*	0* 000: None							
-0* None	Ponder Sash	308: Medicham	True				A	*	5*	0* 000: None							
-3* Torc		308: Medicham	True				B	*	4*	0* 000: None							
-1* Card		307: Meditite	True				C	*	1-2*	0* 000: None							
-1* Beam		307: Meditite	True				D	*	1-2*	0* 000: None							
+0* None	Ponder Sash	308: Medicham	True				A	*	5*	5* 004: TypeBulldozer	006: Fighting			009: Ghost			
+3* Torc		308: Medicham	True				B	*	4*	4* 056: FastHealer							
+1* Card		307: Meditite	True				C	*	1-2*	1* 050: Anchor							
+1* Beam		307: Meditite	True				D	*	1-2*	2* 029: StatDropImmune			003: MAtk				
 0* None		307: Meditite	True				E	*	2-3*	0* 000: None							
 0* None		308: Medicham	True				F	*	2-3*	0* 000: None							
-3* Mask		310: Manectric	True				A	*	5*	0* 000: None							
-3* Crown		310: Manectric	True				B	*	4*	0* 000: None							
-1* Card		309: Electrike	True				C	*	1-2*	0* 000: None							
-1* Tail		309: Electrike	True				D	*	1-2*	0* 000: None							
+3* Mask		310: Manectric	True				A	*	5*	3* 057: SelfCurer							
+3* Crown		310: Manectric	True				B	*	4*	3* 055: CloseDodge							
+1* Card		309: Electrike	True				C	*	1-2*	2* 013: PPBoost						2	
+1* Tail		309: Electrike	True				D	*	1-2*	1* 027: SpecialAttacker							
 0* None		309: Electrike	True				E	*	2-3*	0* 000: None							
 0* None		310: Manectric	True				F	*	2-3*	0* 000: None							
-0* None	Pulse Bow	311: Plusle	False				A	/	5*	0* 000: None							
-0* None	Spark Tie	312: Minun	False				B	/	5*	0* 000: None							
-1* Tail		311: Plusle	False	311: Plusle, 312: Minun			C	/	1-2*	0* 000: None							
-1* Tail		312: Minun	False	311: Plusle, 312: Minun			D	/	1-2*	0* 000: None							
-3* Scarf		311: Plusle	False	311: Plusle, 312: Minun			E	/	4*	0* 000: None							
-3* Band		312: Minun	False	311: Plusle, 312: Minun			F	/	4*	0* 000: None							
-0* None	Volt Heart	311: Plusle	False	311: Plusle, 312: Minun			G	/	3*	0* 000: None							
-0* None	Neon Scarf	313: Volbeat	False				A	/	5*	5* 067: SecondSTAB	004: Electric						
-0* None	Evening Bow	314: Illumise	False				B	/	5*	5* 037: WarpPayback	007: Fire						
+0* None	Pulse Bow	311: Plusle	False				A	/	5*	5* 004: TypeBulldozer	004: Electric			011: Ground			
+0* None	Spark Tie	312: Minun	False				B	/	5*	5* 034: MapSurveyor							
+1* Tail		311: Plusle	False	311: Plusle, 312: Minun			C	/	1-2*	2* 023: StatusOnAttack		004: Paralyzed					
+1* Tail		312: Minun	False	311: Plusle, 312: Minun			D	/	1-2*	1* 027: SpecialAttacker							
+3* Scarf		311: Plusle	False	311: Plusle, 312: Minun			E	/	4*	3* 054: DistanceDodge							
+3* Band		312: Minun	False	311: Plusle, 312: Minun			F	/	4*	3* 055: CloseDodge							
+0* None	Volt Heart	311: Plusle	False	311: Plusle, 312: Minun			G	/	3*	4* 095: CelebrateCure							
+0* None	Neon Scarf	313: Volbeat	False				A	/	5*	4* 086: StatusOnCategoryUse		059: Charge			002: Magical		
+0* None	Evening Bow	314: Illumise	False				B	/	5*	4* 086: StatusOnCategoryUse		088: Quick Guard			003: Status		
 1* Beam		313: Volbeat	False	313: Volbeat, 314: Illumise			C	/	1-2*	2* 013: PPBoost						2	
 1* Beam		314: Illumise	False	313: Volbeat, 314: Illumise			D	/	1-2*	2* 033: AcuteSniffer							
 3* Hat		313: Volbeat	False	313: Volbeat, 314: Illumise			E	/	4*	4* 010: AllTerrain							
 3* Veil		314: Illumise	False	313: Volbeat, 314: Illumise			F	/	4*	4* 044: WandSpread							
 0* None	Glowing Seal	313: Volbeat	False	313: Volbeat, 314: Illumise			G	/	3*	3* 063: CoinWatcher							
-0* None	Bouquet Cape	407: Roserade	True				A	*	5*	0* 000: None							
-0* None	Thorned Torc	315: Roselia	True				B	*	4*	0* 000: None							
-1* Leaf		406: Budew	True				C	*	1-2*	0* 000: None							
-1* Claw		406: Budew	True				D	*	1-2*	0* 000: None							
+0* None	Bouquet Cape	407: Roserade	True				A	*	5*	5* 037: WarpPayback	008: Flying						
+0* None	Thorned Torc	315: Roselia	True				B	*	4*	4* 056: FastHealer							
+1* Leaf		406: Budew	True				C	*	1-2*	1* 062: FastFriend							
+1* Claw		406: Budew	True				D	*	1-2*	2* 051: BarrageGuard							
 0* None		406: Budew	True				E	*	2-3*	0* 000: None							
 0* None		315: Roselia	True				F	*	2-3*	0* 000: None							
-3* Belt		317: Swalot	True				A	*	5*	0* 000: None							
-3* Bow		317: Swalot	True				B	*	4*	0* 000: None							
-1* Card		316: Gulpin	True				C	*	1-2*	0* 000: None							
-1* Drool		316: Gulpin	True				D	*	1-2*	0* 000: None							
+3* Belt		317: Swalot	True				A	*	5*	5* 004: TypeBulldozer	014: Poison			017: Steel			
+3* Bow		317: Swalot	True				B	*	4*	4* 073: CheekPouch							
+1* Card		316: Gulpin	True				C	*	1-2*	2* 016: MisfortuneMirror							
+1* Drool		316: Gulpin	True				D	*	1-2*	2* 051: BarrageGuard							
 0* None		316: Gulpin	True				E	*	2-3*	0* 000: None							
 0* None		317: Swalot	True				F	*	2-3*	0* 000: None							
-0* None	Vicious Bow	319: Sharpedo	True				A	*	5*	0* 000: None							
-3* Armor		319: Sharpedo	True				B	*	4*	0* 000: None							
-1* Card		318: Carvanha	True				C	*	1-2*	0* 000: None							
-1* Foam		318: Carvanha	True				D	*	1-2*	0* 000: None							
-0* None		318: Carvanha	True				E	*	2-3*	0* 000: None							
+0* None	Vicious Bow	319: Sharpedo	True				A	*	5*	5* 011: Wallbreaker							
+3* Armor		319: Sharpedo	True				B	*	4*	3* 049: ExcessiveForce							
+1* Card		318: Carvanha	True				C	*	1-2*	1* 084: HitAndRun							
+1* Foam		318: Carvanha	True				D	*	1-2*	1* 026: SureHitAttacker							
+2* Jaw		318: Carvanha	True				E	*	2-3*	3* 031: ChargeWalker							
 0* None		319: Sharpedo	True				F	*	2-3*	0* 000: None							
-0* None	Huge Bow	321: Wailord	True				A	*	5*	0* 000: None							
-3* Hat		321: Wailord	True				B	*	4*	0* 000: None							
-1* Card		320: Wailmer	True				C	*	1-2*	0* 000: None							
-1* Foam		320: Wailmer	True				D	*	1-2*	0* 000: None							
-0* None		320: Wailmer	True				E	*	2-3*	0* 000: None							
+0* None	Huge Bow	321: Wailord	True				A	*	5*	4* 086: StatusOnCategoryUse		087: Wide Guard			002: Magical		
+3* Hat		321: Wailord	True				B	*	4*	3* 096: TypeBodyguard	007: Fire						
+1* Card		320: Wailmer	True				C	*	1-2*	2* 083: Gratitude							
+1* Foam		320: Wailmer	True				D	*	1-2*	1* 014: DeepBreather							
+2* Jewel		320: Wailmer	True				E	*	2-3*	4* 073: CheekPouch							
 0* None		321: Wailord	True				F	*	2-3*	0* 000: None							
-0* None	Erupt Scarf	323: Camerupt	True				A	*	5*	0* 000: None							
-3* Bow		323: Camerupt	True				B	*	4*	0* 000: None							
-1* Card		322: Numel	True				C	*	1-2*	0* 000: None							
-1* Hair		322: Numel	True				D	*	1-2*	0* 000: None							
-0* None		322: Numel	True				E	*	2-3*	0* 000: None							
+0* None	Erupt Scarf	323: Camerupt	True				A	*	5*	5* 004: TypeBulldozer	011: Ground			008: Flying			
+3* Bow		323: Camerupt	True				B	*	4*	3* 048: Absorption							
+1* Card		322: Numel	True				C	*	1-2*	2* 060: ErraticAttacker							
+1* Hair		322: Numel	True				D	*	1-2*	1* 014: DeepBreather							
+2* Pebble		322: Numel	True				E	*	2-3*	3* 075: HealInLava							
 0* None		323: Camerupt	True				F	*	2-3*	0* 000: None							
-0* None	Sooty Sash	324: Torkoal	False				A	*	5*	0* 000: None							
+0* None	Sooty Sash	324: Torkoal	False				A	*	5*	5* 036: WeaknessPayback	011: Ground	114: Blinker					
 3* Ruff		324: Torkoal	False				B	*	4*	5* 087: MapStatusOnCategoryUse					002: Magical		002: Sunny
-1* Card		324: Torkoal	False				C	*	1-2*	0* 000: None							
-1* Beam		324: Torkoal	False				D	*	1-2*	0* 000: None							
+1* Card		324: Torkoal	False				C	*	1-2*	2* 016: MisfortuneMirror							
+1* Beam		324: Torkoal	False				D	*	1-2*	1* 050: Anchor							
 0* None		324: Torkoal	False				E	*	2-3*	0* 000: None							
 0* None		324: Torkoal	False				F	*	2-3*	0* 000: None							
-0* None	Scheme Scarf	326: Grumpig	True				A	*	5*	0* 000: None							
-3* Bow		326: Grumpig	True				B	*	4*	0* 000: None							
-1* Card		325: Spoink	True				C	*	1-2*	0* 000: None							
-1* Tail		325: Spoink	True				D	*	1-2*	0* 000: None							
-0* None		325: Spoink	True				E	*	2-3*	0* 000: None							
-0* None		326: Grumpig	True				F	*	2-3*	0* 000: None							
-0* None	Hula Bow	327: Spinda	False				A	*	5*	0* 000: None							
-3* Glasses		327: Spinda	False				B	*	4*	0* 000: None							
-1* Card		327: Spinda	False				C	*	1-2*	0* 000: None							
-1* Hair		327: Spinda	False				D	*	1-2*	0* 000: None							
-0* None		327: Spinda	False				E	*	2-3*	0* 000: None							
-0* None		327: Spinda	False				F	*	2-3*	0* 000: None							
-0* None	Red Glasses	330: Flygon	True				A	*	5*	0* 000: None							
-3* Scarf		329: Vibrava	True				B	*	4*	0* 000: None							
-1* Card		328: Trapinch	True				C	*	1-2*	0* 000: None							
-1* Mud		328: Trapinch	True				D	*	1-2*	0* 000: None							
-0* None		328: Trapinch	True				E	*	2-3*	0* 000: None							
+0* None	Scheme Scarf	326: Grumpig	True				A	*	5*	5* 082: WeaknessReduce	002: Dark						
+3* Bow		326: Grumpig	True				B	*	4*	3* 054: DistanceDodge							
+1* Card		325: Spoink	True				C	*	1-2*	2* 013: PPBoost						2	
+1* Tail		325: Spoink	True				D	*	1-2*	2* 023: StatusOnAttack		007: Confused					
+2* Charm		325: Spoink	True				E	*	2-3*	3* 031: ChargeWalker							
+2* Ring		326: Grumpig	True				F	*	2-3*	3* 063: CoinWatcher							
+0* None	Hula Bow	327: Spinda	False				A	*	5*	5* 078: EndureType	013: Normal						
+3* Glasses		327: Spinda	False				B	*	4*	3* 055: CloseDodge							
+1* Card		327: Spinda	False				C	*	1-2*	1* 084: HitAndRun							
+1* Hair		327: Spinda	False				D	*	1-2*	2* 018: DoubleAttacker							
+2* Seal		327: Spinda	False				E	*	2-3*	2* 023: StatusOnAttack		007: Confused					
+2* Coin		327: Spinda	False				F	*	2-3*	3* 064: HiddenStairFinder							
+0* None	Red Glasses	330: Flygon	True				A	*	5*	4* 095: CelebrateCure							
+3* Scarf		329: Vibrava	True				B	*	4*	4* 041: TrapBuster							
+1* Card		328: Trapinch	True				C	*	1-2*	2* 033: AcuteSniffer							
+1* Mud		328: Trapinch	True				D	*	1-2*	2* 019: MasterHurler							
+0* None		328: Trapinch	True				E	*	2-3*	3* 042: ExplosionGuard							
 0* None		329: Vibrava	True				F	*	2-3*	0* 000: None							
-3* Hat		332: Cacturne	True				A	*	5*	0* 000: None							
-3* Torc		332: Cacturne	True				B	*	4*	0* 000: None							
-1* Card		331: Cacnea	True				C	*	1-2*	0* 000: None							
-1* Thorn		331: Cacnea	True				D	*	1-2*	0* 000: None							
+3* Hat		332: Cacturne	True				A	*	5*	4* 093: AttackRangeInWeather							003: Sandstorm
+3* Torc		332: Cacturne	True				B	*	4*	4* 056: FastHealer							
+1* Card		331: Cacnea	True				C	*	1-2*	2* 023: StatusOnAttack		101: Leech Seed					
+1* Thorn		331: Cacnea	True				D	*	1-2*	2* 019: MasterHurler							
 0* None		331: Cacnea	True				E	*	2-3*	0* 000: None							
 0* None		332: Cacturne	True				F	*	2-3*	0* 000: None							
-0* None	Cloud Ruff	334: Altaria	True				A	*	5*	0* 000: None							
-3* Tiara		334: Altaria	True				B	*	4*	0* 000: None							
-1* Card		333: Swablu	True				C	*	1-2*	0* 000: None							
-1* Wing		333: Swablu	True				D	*	1-2*	0* 000: None							
+0* None	Cloud Ruff	334: Altaria	True				A	*	5*	5* 007: Nontraitor							
+3* Tiara		334: Altaria	True				B	*	4*	3* 054: DistanceDodge							
+1* Card		333: Swablu	True				C	*	1-2*	1* 062: FastFriend							
+1* Wing		333: Swablu	True				D	*	1-2*	1* 014: DeepBreather							
 0* None		333: Swablu	True				E	*	2-3*	0* 000: None							
 0* None		334: Altaria	True				F	*	2-3*	0* 000: None							
-0* None	Strong Sash	335: Zangoose	False				A	*	5*	0* 000: None							
-3* Armlet		335: Zangoose	False				B	*	4*	0* 000: None							
-1* Card		335: Zangoose	False				C	*	1-2*	0* 000: None							
-1* Claw		335: Zangoose	False				D	*	1-2*	0* 000: None							
+0* None	Strong Sash	335: Zangoose	False				A	*	5*	5* 082: WeaknessReduce	014: Poison						
+3* Armlet		335: Zangoose	False				B	*	4*	4* 056: FastHealer							
+1* Card		335: Zangoose	False				C	*	1-2*	2* 052: BetterOdds							
+1* Claw		335: Zangoose	False				D	*	1-2*	1* 015: PracticeSwinger							
 0* None		335: Zangoose	False				E	*	2-3*	0* 000: None							
 0* None		335: Zangoose	False				F	*	2-3*	0* 000: None							
-3* Bow		336: Seviper	False				A	*	5*	0* 000: None							
-3* Blade		336: Seviper	False				B	*	4*	0* 000: None							
-1* Tail		336: Seviper	False				C	*	1-2*	0* 000: None							
-1* Fang		336: Seviper	False				D	*	1-2*	0* 000: None							
+3* Bow		336: Seviper	False				A	*	5*	5* 067: SecondSTAB	014: Poison						
+3* Blade		336: Seviper	False				B	*	4*	3* 055: CloseDodge							
+1* Tail		336: Seviper	False				C	*	1-2*	2* 019: MasterHurler							
+1* Fang		336: Seviper	False				D	*	1-2*	2* 023: StatusOnAttack		006: Badly Poisoned					
 0* None		336: Seviper	False				E	*	2-3*	0* 000: None							
 0* None		336: Seviper	False				F	*	2-3*	0* 000: None							
-3* Torc		337: Lunatone	False				A	*	5*	0* 000: None							
-3* Bow		338: Solrock	False				B	*	5*	0* 000: None							
-1* Beam		337: Lunatone	False				C	*	1-2*	0* 000: None							
-1* Beam		338: Solrock	False				D	*	1-2*	0* 000: None							
-2* Ring		337: Lunatone	False				E	*	4*	0* 000: None							
-2* Brooch		338: Solrock	False				F	*	4*	0* 000: None							
-0* None	Meteor Charm	337: Lunatone	False				G	*	3*	0* 000: None							
-3* Bow		340: Whiscash	True				A	*	5*	0* 000: None							
-3* Glasses		340: Whiscash	True				B	*	4*	0* 000: None							
-1* Mud		339: Barboach	True				C	*	1-2*	0* 000: None							
-1* Card		339: Barboach	True				D	*	1-2*	0* 000: None							
+3* Torc		337: Lunatone	False				A	/	5*	3* 085: StatusOnCategoryHit		074: Torment			003: Status		
+3* Bow		338: Solrock	False				B	/	5*	3* 085: StatusOnCategoryHit		062: Exposed			003: Status		
+1* Beam		337: Lunatone	False	337: Lunatone, 338: Solrock			C	/	1-2*	2* 052: BetterOdds							
+1* Beam		338: Solrock	False	337: Lunatone, 338: Solrock			D	/	1-2*	2* 013: PPBoost						2	
+2* Ring		337: Lunatone	False	337: Lunatone, 338: Solrock			E	/	4*	3* 028: StatusImmune		001: Asleep					
+2* Brooch		338: Solrock	False	337: Lunatone, 338: Solrock			F	/	4*	3* 028: StatusImmune		002: Burned					
+0* None	Meteor Charm	337: Lunatone	False	337: Lunatone, 338: Solrock			G	/	3*	4* 091: ProjectileAttack							
+3* Bow		340: Whiscash	True				A	*	5*	5* 007: Nontraitor							
+3* Glasses		340: Whiscash	True				B	*	4*	3* 055: CloseDodge							
+1* Mud		339: Barboach	True				C	*	1-2*	1* 014: DeepBreather							
+1* Card		339: Barboach	True				D	*	1-2*	2* 052: BetterOdds							
 2* Pebble		339: Barboach	True				E	*	2-3*	0* 000: None							
 0* None		340: Whiscash	True				F	*	2-3*	0* 000: None							
-0* None	Cower Sash	342: Crawdaunt	True				A	*	5*	0* 000: None							
-3* Scarf		342: Crawdaunt	True				B	*	4*	0* 000: None							
-1* Claw		341: Corphish	True				C	*	1-2*	0* 000: None							
-1* Card		341: Corphish	True				D	*	1-2*	0* 000: None							
+0* None	Cower Sash	342: Crawdaunt	True				A	*	5*	5* 037: WarpPayback	006: Fighting						
+3* Scarf		342: Crawdaunt	True				B	*	4*	3* 048: Absorption							
+1* Claw		341: Corphish	True				C	*	1-2*	2* 059: StatMirror							
+1* Card		341: Corphish	True				D	*	1-2*	2* 052: BetterOdds							
 2* Medal		341: Corphish	True				E	*	2-3*	0* 000: None							
 0* None		342: Crawdaunt	True				F	*	2-3*	0* 000: None							
-3* Torc		344: Claydol	True				A	*	5*	0* 000: None							
-3* Specs		344: Claydol	True				B	*	4*	0* 000: None							
-1* Mud		343: Baltoy	True				C	*	1-2*	0* 000: None							
-1* Beam		343: Baltoy	True				D	*	1-2*	0* 000: None							
+3* Torc		344: Claydol	True				A	*	5*	4* 095: CelebrateCure							
+3* Specs		344: Claydol	True				B	*	4*	3* 054: DistanceDodge							
+1* Mud		343: Baltoy	True				C	*	1-2*	2* 083: Gratitude							
+1* Beam		343: Baltoy	True				D	*	1-2*	2* 016: MisfortuneMirror							
 2* Brooch		343: Baltoy	True				E	*	2-3*	0* 000: None							
 0* None		344: Claydol	True				F	*	2-3*	0* 000: None							
-3* Bow		346: Cradily	True				A	*	5*	0* 000: None							
-3* Band		346: Cradily	True				B	*	4*	0* 000: None							
-1* Root		345: Lileep	True				C	*	1-2*	0* 000: None							
-1* Card		345: Lileep	True				D	*	1-2*	0* 000: None							
+3* Bow		346: Cradily	True				A	*	5*	3* 085: StatusOnCategoryHit		101: Leech Seed			003: Status		
+3* Band		346: Cradily	True				B	*	4*	4* 056: FastHealer							
+1* Root		345: Lileep	True				C	*	1-2*	1* 094: PPSaver							
+1* Card		345: Lileep	True				D	*	1-2*	2* 008: WaterTerrain							
 2* Crest		345: Lileep	True				E	*	2-3*	0* 000: None							
 0* None		346: Cradily	True				F	*	2-3*	0* 000: None							
-0* None	Rigid Cape	348: Armaldo	True				A	*	5*	0* 000: None							
-3* Mantle		348: Armaldo	True				B	*	4*	0* 000: None							
-1* Claw		347: Anorith	True				C	*	1-2*	0* 000: None							
-1* Card		347: Anorith	True				D	*	1-2*	0* 000: None							
-2* Crest		347: Anorith	True				E	*	2-3*	0* 000: None							
+0* None	Rigid Cape	348: Armaldo	True				A	*	5*	5* 067: SecondSTAB	001: Bug						
+3* Mantle		348: Armaldo	True				B	*	4*	3* 054: DistanceDodge							
+1* Claw		347: Anorith	True				C	*	1-2*	2* 008: WaterTerrain							
+1* Card		347: Anorith	True				D	*	1-2*	2* 052: BetterOdds							
+2* Crest		347: Anorith	True				E	*	2-3*	3* 069: GapProber							
 0* None		348: Armaldo	True				F	*	2-3*	0* 000: None							
-0* None	Grace Scarf	350: Milotic	True				A	*	5*	0* 000: None							
-3* Robe		350: Milotic	True				B	*	4*	0* 000: None							
-1* Dew		349: Feebas	True				C	*	1-2*	0* 000: None							
-1* Card		349: Feebas	True				D	*	1-2*	0* 000: None							
-2* Charm		349: Feebas	True				E	*	2-3*	0* 000: None							
+0* None	Grace Scarf	350: Milotic	True				A	*	5*	5* 037: WarpPayback	004: Electric						
+3* Robe		350: Milotic	True				B	*	4*	4* 056: FastHealer							
+1* Dew		349: Feebas	True				C	*	1-2*	1* 062: FastFriend							
+1* Card		349: Feebas	True				D	*	1-2*	1* 050: Anchor							
+2* Charm		349: Feebas	True				E	*	2-3*	3* 065: ChestFinder							
 0* None		350: Milotic	True				F	*	2-3*	0* 000: None							
-0* None	Weather Cape	351: Castform	False				A	*	5*	5* 080: NoStatusInWeather							000: Clear
+0* None	Weather Cape	351: Castform	False				A	*	5*	4* 080: NoStatusInWeather							000: Clear
 3* Scarf		351: Castform	False				B	*	4*	4* 068: TypedAttack							
 1* Dew		351: Castform	False				C	*	1-2*	2* 060: ErraticAttacker							
 1* Card		351: Castform	False				D	*	1-2*	2* 019: MasterHurler							
@@ -1087,196 +1087,196 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 3* Belt		352: Kecleon	False				B	*	4*	4* 068: TypedAttack							
 1* Claw		352: Kecleon	False				C	*	1-2*	1* 006: NVECrit							
 1* Card		352: Kecleon	False				D	*	1-2*	2* 033: AcuteSniffer							
-2* Coin		352: Kecleon	False				E	*	2-3*	3* 017: CounterBasher							
-0* None		352: Kecleon	False				F	*	2-3*	3* 066: ShopFinder							
-0* None	Ominous Torc	354: Banette	True				A	*	5*	5* 067: SecondSTAB	002: Dark						
+2* Seal		352: Kecleon	False				E	*	2-3*	3* 017: CounterBasher							
+2* Coin		352: Kecleon	False				F	*	2-3*	3* 066: ShopFinder							
+0* None	Ominous Torc	354: Banette	True				A	*	5*	5* 004: TypeBulldozer	009: Ghost			013: Normal			
 3* Cape		354: Banette	True				B	*	4*	4* 010: AllTerrain							
 1* Horn		353: Shuppet	True				C	*	1-2*	2* 016: MisfortuneMirror							
 1* Card		353: Shuppet	True				D	*	1-2*	2* 023: StatusOnAttack		008: Cringing					
 0* None		353: Shuppet	True				E	*	2-3*	0* 000: None							
 0* None		354: Banette	True				F	*	2-3*	0* 000: None							
-0* None	Unlucky Sash	477: Dusknoir	True				A	*	5*	0* 000: None							
-3* Bow		356: Dusclops	True				B	*	4*	0* 000: None							
-1* Gasp		355: Duskull	True				C	*	1-2*	0* 000: None							
-1* Card		355: Duskull	True				D	*	1-2*	0* 000: None							
+0* None	Unlucky Sash	477: Dusknoir	True				A	*	5*	5* 082: WeaknessReduce	009: Ghost						
+3* Bow		356: Dusclops	True				B	*	4*	4* 041: TrapBuster							
+1* Gasp		355: Duskull	True				C	*	1-2*	1* 094: PPSaver							
+1* Card		355: Duskull	True				D	*	1-2*	1* 084: HitAndRun							
 0* None		355: Duskull	True				E	*	2-3*	0* 000: None							
 0* None		356: Dusclops	True				F	*	2-3*	0* 000: None							
-3* Bow		357: Tropius	False				A	*	5*	0* 000: None							
-3* Hat		357: Tropius	False				B	*	4*	0* 000: None							
-1* Wing		357: Tropius	False				C	*	1-2*	0* 000: None							
-1* Card		357: Tropius	False				D	*	1-2*	0* 000: None							
-2* Aroma		357: Tropius	False				E	*	2-3*	0* 000: None							
+3* Bow		357: Tropius	False				A	*	5*	5* 007: Nontraitor							
+3* Hat		357: Tropius	False				B	*	4*	3* 054: DistanceDodge							
+1* Wing		357: Tropius	False				C	*	1-2*	2* 016: MisfortuneMirror							
+1* Card		357: Tropius	False				D	*	1-2*	1* 014: DeepBreather							
+2* Aroma		357: Tropius	False				E	*	2-3*	3* 057: SelfCurer							
 2* Charm		357: Tropius	False				F	*	2-3*	0* 000: None							
-3* Scarf		358: Chimecho	True				A	*	5*	0* 000: None							
-3* Torc		358: Chimecho	True				B	*	4*	0* 000: None							
-1* Song		433: Chingling	True				C	*	1-2*	0* 000: None							
-1* Card		433: Chingling	True				D	*	1-2*	0* 000: None							
-0* None		433: Chingling	True				E	*	2-3*	0* 000: None							
-0* None		358: Chimecho	True				F	*	2-3*	0* 000: None							
-0* None	Perish Torc	359: Absol	False				A	*	5*	0* 000: None							
-3* Blade		359: Absol	False				B	*	4*	0* 000: None							
-1* Claw		359: Absol	False				C	*	1-2*	0* 000: None							
-1* Fang		359: Absol	False				D	*	1-2*	0* 000: None							
-2* Crest		359: Absol	False				E	*	2-3*	0* 000: None							
+3* Scarf		358: Chimecho	True				A	*	5*	4* 086: StatusOnCategoryUse		068: Safeguard			003: Status		
+3* Torc		358: Chimecho	True				B	*	4*	4* 056: FastHealer							
+1* Song		433: Chingling	True				C	*	1-2*	1* 014: DeepBreather							
+1* Card		433: Chingling	True				D	*	1-2*	2* 013: PPBoost						2	
+2* Tag		433: Chingling	True				E	*	2-3*	3* 069: GapProber							
+2* Ring		358: Chimecho	True				F	*	2-3*	3* 066: ShopFinder							
+0* None	Perish Torc	359: Absol	False				A	*	5*	3* 085: StatusOnCategoryHit		054: Perish Song			003: Status		
+3* Blade		359: Absol	False				B	*	4*	5* 037: WarpPayback	005: Fairy						
+1* Claw		359: Absol	False				C	*	1-2*	2* 033: AcuteSniffer							
+1* Fang		359: Absol	False				D	*	1-2*	2* 023: StatusOnAttack		054: Perish Song					
+2* Crest		359: Absol	False				E	*	2-3*	3* 089: StatusSplash							
 2* Charm		359: Absol	False				F	*	2-3*	0* 000: None							
-3* Bow		478: Froslass	True				A	@	5*	5* 036: WeaknessPayback	007: Fire	003: Frozen					
-3* Scarf		362: Glalie	True				B	@	4*	4* 010: AllTerrain							
-1* Card		361: Snorunt	True				C	@	1-2*	1* 006: NVECrit							
-1* Dew		361: Snorunt	True				D	@	1-2*	2* 052: BetterOdds							
-2* Pebble		361: Snorunt	True				E	@	2-3*	3* 028: StatusImmune		007: Confused					
-2* Guard		361: Snorunt	True				F	@	2-3*	3* 055: CloseDodge							
-3* Torc		365: Walrein	True				A	*	5*	0* 000: None							
-3* Scarf		364: Sealeo	True				B	*	4*	0* 000: None							
-1* Card		363: Spheal	True				C	*	1-2*	0* 000: None							
-1* Foam		363: Spheal	True				D	*	1-2*	0* 000: None							
+3* Bow		478: Froslass	False				A	EF	5*	5* 036: WeaknessPayback	007: Fire	003: Frozen					
+3* Scarf		362: Glalie	False				B	EF	4*	4* 093: AttackRangeInWeather							004: Hail
+1* Card		361: Snorunt	True				C		1-2*	1* 006: NVECrit							
+1* Dew		361: Snorunt	True				D		1-2*	2* 052: BetterOdds							
+2* Pebble		361: Snorunt	True				E	CD	2-3*	3* 028: StatusImmune		007: Confused					
+2* Guard		361: Snorunt	True				F		2-3*	4* 010: AllTerrain							
+3* Torc		365: Walrein	True				A	*	5*	4* 080: NoStatusInWeather							004: Hail
+3* Scarf		364: Sealeo	True				B	*	4*	3* 048: Absorption							
+1* Card		363: Spheal	True				C	*	1-2*	1* 014: DeepBreather							
+1* Foam		363: Spheal	True				D	*	1-2*	2* 023: StatusOnAttack		003: Frozen					
 0* None		363: Spheal	True				E	*	2-3*	0* 000: None							
 0* None		364: Sealeo	True				F	*	2-3*	0* 000: None							
-3* Scarf		368: Gorebyss	True				A	@	5*	0* 000: None							
-0* None	Deep Torc	367: Huntail	True				B	@	4*	0* 000: None							
-1* Card		366: Clamperl	True				C	@	1-2*	0* 000: None							
-1* Foam		366: Clamperl	True				D	@	1-2*	0* 000: None							
-2* Brooch		366: Clamperl	True				E	@	2-3*	0* 000: None							
+3* Scarf		368: Gorebyss	True				A	@	5*	5* 082: WeaknessReduce	006: Fighting						
+0* None	Deep Torc	367: Huntail	True				B	@	5*	5* 082: WeaknessReduce	005: Fairy						
+1* Card		366: Clamperl	True				C	@	1-2*	2* 013: PPBoost						2	
+1* Foam		366: Clamperl	True				D	@	1-2*	2* 051: BarrageGuard							
+2* Brooch		366: Clamperl	True				E	@	2-3*	3* 057: SelfCurer							
 2* Ring		366: Clamperl	True				F	@	2-3*	0* 000: None							
-3* Torc		369: Relicanth	False				A	*	5*	0* 000: None							
-3* Glasses		369: Relicanth	False				B	*	4*	0* 000: None							
-1* Card		369: Relicanth	False				C	*	1-2*	0* 000: None							
-1* Foam		369: Relicanth	False				D	*	1-2*	0* 000: None							
-2* Key		369: Relicanth	False				E	*	2-3*	0* 000: None							
-2* Ore		369: Relicanth	False				F	*	2-3*	0* 000: None							
-3* Torc		370: Luvdisc	False				A	*	5*	0* 000: None							
-3* Cape		370: Luvdisc	False				B	*	4*	0* 000: None							
-1* Foam		370: Luvdisc	False				C	*	1-2*	0* 000: None							
-1* Card		370: Luvdisc	False				D	*	1-2*	0* 000: None							
-2* Earring		370: Luvdisc	False				E	*	2-3*	0* 000: None							
+3* Torc		369: Relicanth	False				A	*	5*	2* 013: PPBoost						5	
+3* Glasses		369: Relicanth	False				B	*	4*	3* 028: StatusImmune		004: Paralyzed					
+1* Card		369: Relicanth	False				C	*	1-2*	1* 094: PPSaver							
+1* Foam		369: Relicanth	False				D	*	1-2*	1* 014: DeepBreather							
+2* Key		369: Relicanth	False				E	*	2-3*	3* 069: GapProber							
+2* Ore		369: Relicanth	False				F	*	2-3*	3* 054: DistanceDodge							
+3* Torc		370: Luvdisc	False				A	*	5*	4* 093: AttackRangeInWeather							001: Rain
+3* Cape		370: Luvdisc	False				B	*	4*	4* 046: RoyalVeil							
+1* Foam		370: Luvdisc	False				C	*	1-2*	1* 062: FastFriend							
+1* Card		370: Luvdisc	False				D	*	1-2*	2* 059: StatMirror							
+2* Earring		370: Luvdisc	False				E	*	2-3*	3* 055: CloseDodge							
 2* Brooch		370: Luvdisc	False				F	*	2-3*	0* 000: None							
-3* Cape		373: Salamence	True				A	*	5*	0* 000: None							
-0* None	Outlast Bow	372: Shelgon	True				B	*	4*	0* 000: None							
-1* Fang		371: Bagon	True				C	*	1-2*	0* 000: None							
-1* Claw		371: Bagon	True				D	*	1-2*	0* 000: None							
+3* Cape		373: Salamence	True				A	*	5*	5* 004: TypeBulldozer	003: Dragon			005: Fairy			
+0* None	Outlast Bow	372: Shelgon	True				B	*	4*	3* 054: DistanceDodge							
+1* Fang		371: Bagon	True				C	*	1-2*	2* 019: MasterHurler							
+1* Claw		371: Bagon	True				D	*	1-2*	2* 052: BetterOdds							
 0* None		371: Bagon	True				E	*	2-3*	0* 000: None							
 0* None		372: Shelgon	True				F	*	2-3*	0* 000: None							
 3* Torc		376: Metagross	True				A	*	5*	5* 036: WeaknessPayback	007: Fire	008: Cringing					
 3* Scarf		375: Metang	True				B	*	4*	4* 010: AllTerrain							
 1* Claw		374: Beldum	True				C	*	1-2*	2* 030: SleepWalker							
-1* Card		374: Beldum	True				D	*	1-2*	2* 019: MasterHurler							
+1* Card		374: Beldum	True				D	*	1-2*	1* 061: ErraticDefender							
 0* None		374: Beldum	True				E	*	2-3*	0* 000: None							
 0* None		375: Metang	True				F	*	2-3*	0* 000: None							
-0* None	Ancient Ring	486: Regigigas	False				A	CDB	5*	0* 000: None																							
-2* Seal		486: Regigigas	False				B	CD	3*	0* 000: None																							
-2* Coin		486: Regigigas	False				C		1-2*	0* 000: None																							
-2* Jewel		486: Regigigas	False				D		1-2*	0* 000: None																							
-0* None	Rock Sash	377: Regirock	False				E	GHF	5*	0* 000: None							
-2* Shard		377: Regirock	False				F	GH	3*	0* 000: None							
-2* Dust		377: Regirock	False				G		1-2*	0* 000: None							
-2* Tag		377: Regirock	False				H		1-2*	0* 000: None							
-0* None	Ice Sash	378: Regice	False				I	KLJ	5*	0* 000: None							
-2* Shard		378: Regice	False				J	KL	3*	0* 000: None							
-2* Dust		378: Regice	False				K		1-2*	0* 000: None							
-2* Tag		378: Regice	False				L		1-2*	0* 000: None							
-0* None	Steel Sash	379: Registeel	False				M	OPN	5*	0* 000: None							
-2* Shard		379: Registeel	False				N	OP	3*	0* 000: None							
-2* Dust		379: Registeel	False				O		1-2*	0* 000: None							
-2* Tag		379: Registeel	False				P		1-2*	0* 000: None							
-0* None	Royal Mantle	486: Regigigas	False	377: Regirock, 378: Regice, 379: Registeel, 486: Regigigas			Q	FJN	4*	0* 000: None							
-0* None		377: Regirock	False	377: Regirock, 378: Regice, 379: Registeel			R	GKO	2-3*	0* 000: None							
-0* None	Heart Brooch	380: Latias	False				A	GB	5*	0* 000: None							
-3* Bow		380: Latias	False				B	EFG	4*	0* 000: None							
-0* None	Eon Veil	381: Latios	False				C	GD	5*	0* 000: None							
-3* Scarf		381: Latios	False				D	EFG	4*	0* 000: None							
-1* Card		381: Latios	False	380: Latias, 381: Latios			E		1*	0* 000: None							
-1* Card		380: Latias	False	380: Latias, 381: Latios			F		1*	0* 000: None							
-0* None	Eon Seal	381: Latios	False	380: Latias, 381: Latios			G	EF	2-3*	0* 000: None							
+0* None	Ancient Ring	486: Regigigas	False				A	CDB	5*	4* 080: NoStatusInWeather							000: Clear																
+2* Seal		486: Regigigas	False				B	CD	3*	2* 083: Gratitude																							
+2* Coin		486: Regigigas	False				C		1-2*	2* 039: WideAttack																							
+2* Jewel		486: Regigigas	False				D		1-2*	2* 051: BarrageGuard																							
+0* None	Rock Sash	377: Regirock	False				E	GHF	5*	5* 036: WeaknessPayback	006: Fighting	046: Sand Tomb					
+2* Shard		377: Regirock	False				F	GH	3*	4* 056: FastHealer							
+2* Dust		377: Regirock	False				G		1-2*	1* 015: PracticeSwinger							
+2* Tag		377: Regirock	False				H		1-2*	2* 016: MisfortuneMirror							
+0* None	Ice Sash	378: Regice	False				I	KLJ	5*	5* 036: WeaknessPayback	006: Fighting	003: Frozen					
+2* Shard		378: Regice	False				J	KL	3*	3* 017: CounterBasher							
+2* Dust		378: Regice	False				K		1-2*	2* 016: MisfortuneMirror							
+2* Tag		378: Regice	False				L		1-2*	2* 009: LavaTerrain							
+0* None	Steel Sash	379: Registeel	False				M	OPN	5*	5* 036: WeaknessPayback	007: Fire	008: Cringing					
+2* Shard		379: Registeel	False				N	OP	3*	3* 069: GapProber							
+2* Dust		379: Registeel	False				O		1-2*	2* 053: ClutchPerformer							
+2* Tag		379: Registeel	False				P		1-2*	1* 061: ErraticDefender							
+0* None	Royal Mantle	486: Regigigas	False	377: Regirock, 378: Regice, 379: Registeel, 486: Regigigas			Q	FJN	4*	4* 068: TypedAttack							
+0* None		377: Regirock	False	377: Regirock, 378: Regice, 379: Registeel			R		2-3*	0* 000: None							
+0* None	Heart Brooch	380: Latias	False				A	GB	5*	4* 086: StatusOnCategoryUse		129: Invisible			003: Status		
+3* Bow		380: Latias	False				B	EFG	4*	4* 056: FastHealer							
+0* None	Eon Veil	381: Latios	False				C	GD	5*	5* 036: WeaknessPayback	005: Fairy	055: Paused					
+3* Scarf		381: Latios	False				D	EFG	4*	4* 041: TrapBuster							
+1* Card		381: Latios	False	380: Latias, 381: Latios			E		1*	1* 094: PPSaver							
+1* Card		380: Latias	False	380: Latias, 381: Latios			F		1*	2* 018: DoubleAttacker							
+0* None	Eon Seal	381: Latios	False	380: Latias, 381: Latios			G	EF	2-3*	3* 069: GapProber							
 0* None	Heart Crest	381: Latios	False	380: Latias, 381: Latios			H		2-3*	0* 000: None							
-0* None	Seabed Veil	382: Kyogre	False				A	*	5*	0* 000: None							
-3* Robe		382: Kyogre	False				B	*	4*	0* 000: None							
-0* None	Seabed Dew	382: Kyogre	False				C	*	1-2*	0* 000: None							
-0* None	Seabed Coin	382: Kyogre	False				D	*	1-2*	0* 000: None							
+0* None	Seabed Veil	382: Kyogre	False				A	*	5*	4* 093: AttackRangeInWeather							001: Rain
+3* Robe		382: Kyogre	False				B	*	4*	4* 041: TrapBuster							
+0* None	Seabed Dew	382: Kyogre	False				C	*	1-2*	1* 094: PPSaver							
+0* None	Seabed Coin	382: Kyogre	False				D	*	1-2*	1* 050: Anchor							
 0* None	Seabed Crest	382: Kyogre	False				E	*	2-3*	0* 000: None							
 0* None		382: Kyogre	False				F	*	2-3*	0* 000: None							
-0* None	Terra Ring	383: Groudon	False				A	*	5*	0* 000: None							
-3* Torc		383: Groudon	False				B	*	4*	0* 000: None							
-0* None	Terra Tag	383: Groudon	False				C	*	1-2*	0* 000: None							
-0* None	Terra Coin	383: Groudon	False				D	*	1-2*	0* 000: None							
+0* None	Terra Ring	383: Groudon	False				A	*	5*	4* 093: AttackRangeInWeather							002: Sunny
+3* Torc		383: Groudon	False				B	*	4*	5* 012: GapFiller							
+0* None	Terra Tag	383: Groudon	False				C	*	1-2*	2* 039: WideAttack							
+0* None	Terra Coin	383: Groudon	False				D	*	1-2*	2* 009: LavaTerrain							
 0* None	Terra Crest	383: Groudon	False				E	*	2-3*	0* 000: None							
 0* None		383: Groudon	False				F	*	2-3*	0* 000: None							
-0* None	SkyHigh Veil	384: Rayquaza	False				A	*	5*	0* 000: None							
-3* Torc		384: Rayquaza	False				B	*	4*	0* 000: None							
-0* None	SkyHigh Tag	384: Rayquaza	False				C	*	1-2*	0* 000: None							
-0* None	SkyHigh Coin	384: Rayquaza	False				D	*	1-2*	0* 000: None							
+0* None	SkyHigh Veil	384: Rayquaza	False				A	*	5*	4* 093: AttackRangeInWeather							000: Clear
+3* Torc		384: Rayquaza	False				B	*	4*	3* 028: StatusImmune		007: Confused					
+0* None	SkyHigh Tag	384: Rayquaza	False				C	*	1-2*	2* 053: ClutchPerformer							
+0* None	SkyHigh Coin	384: Rayquaza	False				D	*	1-2*	1* 094: PPSaver							
 0* None	SkyHigh Crest	384: Rayquaza	False				E	*	2-3*	0* 000: None							
 0* None		384: Rayquaza	False				F	*	2-3*	0* 000: None							
 0* None	Wish Mantle	385: Jirachi	False				A	*	5*	5* 034: MapSurveyor							
 3* Tiara		385: Jirachi	False				B	*	4*	4* 010: AllTerrain							
 0* None	Wish Shard	385: Jirachi	False				C	*	1-2*	2* 033: AcuteSniffer							
 0* None	Wish Dust	385: Jirachi	False				D	*	1-2*	3* 032: StairSensor							
-0* None	Wish Tag	385: Jirachi	False				E	*	2-3*	3* 076: HealOnNewFloor							
+0* None	Wish Tag	385: Jirachi	False				E	*	2-3*	2* 088: DoubleDash							
 0* None		385: Jirachi	False				F	*	2-3*	0* 000: None							
-0* None	Revive Robe	386: Deoxys	False				A	*	5*	5* 020: AllyReviver							
+0* None	Revive Robe	386: Deoxys	False				A	*	5*	4* 081: DeepBreatherPlus							
 3* Scarf		386: Deoxys	False				B	*	4*	4* 010: AllTerrain							
 1* Beam		386: Deoxys	False				C	*	1-2*	3* 043: WandMaster							
 1* Card		386: Deoxys	False				D	*	1-2*	2* 019: MasterHurler							
 2* Jewel		386: Deoxys	False				E	*	2-3*	2* 022: PressurePlus							
 0* None		386: Deoxys	False				F	*	2-3*	0* 000: None							
-0* None	Forest Torc	389: Torterra	True				A	*	5*	0* 000: None							
-0* None	Woody Scarf	388: Grotle	True				B	*	4*	0* 000: None							
-0* None	Lucky Leaf	387: Turtwig	True				C	*	1-2*	0* 000: None							
-1* Card		387: Turtwig	True				D	*	1-2*	0* 000: None							
-0* None	Sprout Rock	387: Turtwig	True				E	*	2-3*	0* 000: None							
+0* None	Forest Torc	389: Torterra	True				A	*	5*	4* 095: CelebrateCure							
+0* None	Woody Scarf	388: Grotle	True				B	*	4*	4* 047: Celebrate							
+0* None	Lucky Leaf	387: Turtwig	True				C	*	1-2*	1* 015: PracticeSwinger							
+1* Card		387: Turtwig	True				D	*	1-2*	2* 051: BarrageGuard							
+0* None	Sprout Rock	387: Turtwig	True				E	*	2-3*	3* 069: GapProber							
 2* Crest		388: Grotle	True				F	*	2-3*	0* 000: None							
-0* None	Blazing Ruff	392: Infernape	True				A	*	5*	0* 000: None							
-0* None	Burst Sash	391: Monferno	True				B	*	4*	0* 000: None							
-1* Hair		390: Chimchar	True				C	*	1-2*	0* 000: None							
-1* Fang		390: Chimchar	True				D	*	1-2*	0* 000: None							
-0* None	Nimble Charm	390: Chimchar	True				E	*	2-3*	0* 000: None							
+0* None	Blazing Ruff	392: Infernape	True				A	*	5*	3* 085: StatusOnCategoryHit		002: Burned			003: Status		
+0* None	Burst Sash	391: Monferno	True				B	*	4*	3* 071: WeatherProtection							
+1* Hair		390: Chimchar	True				C	*	1-2*	2* 029: StatDropImmune			005: Speed				
+1* Fang		390: Chimchar	True				D	*	1-2*	2* 053: ClutchPerformer							
+0* None	Nimble Charm	390: Chimchar	True				E	*	2-3*	3* 055: CloseDodge							
 2* Crest		391: Monferno	True				F	*	2-3*	0* 000: None							
-0* None	Marine Crown	395: Empoleon	True				A	*	5*	0* 000: None							
-3* Blade		394: Prinplup	True				B	*	4*	0* 000: None							
-1* Foam		393: Piplup	True				C	*	1-2*	0* 000: None							
-1* Card		393: Piplup	True				D	*	1-2*	0* 000: None							
-0* None	Sea Ore	393: Piplup	True				E	*	2-3*	0* 000: None							
+0* None	Marine Crown	395: Empoleon	True				A	*	5*	5* 067: SecondSTAB	012: Ice						
+3* Blade		394: Prinplup	True				B	*	4*	4* 047: Celebrate							
+1* Foam		393: Piplup	True				C	*	1-2*	2* 013: PPBoost						2	
+1* Card		393: Piplup	True				D	*	1-2*	2* 051: BarrageGuard							
+0* None	Sea Ore	393: Piplup	True				E	*	2-3*	3* 057: SelfCurer							
 2* Crest		394: Prinplup	True				F	*	2-3*	0* 000: None							
-0* None	Guts Sash	398: Staraptor	True				A	*	5*	0* 000: None							
-0* None	Regret Torc	397: Staravia	True				B	*	4*	0* 000: None							
-1* Wing		396: Starly	True				C	*	1-2*	0* 000: None							
-1* Branch		396: Starly	True				D	*	1-2*	0* 000: None							
+0* None	Guts Sash	398: Staraptor	True				A	*	5*	5* 067: SecondSTAB	006: Fighting						
+0* None	Regret Torc	397: Staravia	True				B	*	4*	3* 071: WeatherProtection							
+1* Wing		396: Starly	True				C	*	1-2*	2* 018: DoubleAttacker							
+1* Branch		396: Starly	True				D	*	1-2*	2* 060: ErraticAttacker							
 0* None		396: Starly	True				E	*	2-3*	0* 000: None							
 0* None		397: Staravia	True				F	*	2-3*	0* 000: None							
-0* None	Dam Scarf	400: Bibarel	True				A	*	5*	0* 000: None							
-3* Band		400: Bibarel	True				B	*	4*	0* 000: None							
-1* Tooth		399: Bidoof	True				C	*	1-2*	0* 000: None							
-1* Card		399: Bidoof	True				D	*	1-2*	0* 000: None							
-0* None	Fall Charm	399: Bidoof	True				E	*	2-3*	0* 000: None							
+0* None	Dam Scarf	400: Bibarel	True				A	*	5*	5* 012: GapFiller							
+3* Band		400: Bibarel	True				B	*	4*	3* 057: SelfCurer							
+1* Tooth		399: Bidoof	True				C	*	1-2*	1* 094: PPSaver						2	
+1* Card		399: Bidoof	True				D	*	1-2*	2* 053: ClutchPerformer							
+0* None	Fall Charm	399: Bidoof	True				E	*	2-3*	3* 032: StairSensor							
 0* None	River Charm	400: Bibarel	True				F	*	2-3*	0* 000: None							
-3* Torc		402: Kricketune	True				A	*	5*	0* 000: None							
-3* Robe		402: Kricketune	True				B	*	4*	0* 000: None							
-1* Song		401: Kricketot	True				C	*	1-2*	0* 000: None							
-1* Card		401: Kricketot	True				D	*	1-2*	0* 000: None							
+3* Torc		402: Kricketune	True				A	*	5*	4* 080: NoStatusInWeather							000: Clear
+3* Robe		402: Kricketune	True				B	*	4*	4* 046: RoyalVeil							
+1* Song		401: Kricketot	True				C	*	1-2*	2* 019: MasterHurler							
+1* Card		401: Kricketot	True				D	*	1-2*	2* 023: StatusOnAttack		007: Confused					
 0* None		401: Kricketot	True				E	*	2-3*	0* 000: None							
 0* None		402: Kricketune	True				F	*	2-3*	0* 000: None							
 0* None	Glare Sash	405: Luxray	True				A	*	5*	5* 035: XRay							
-0* None	Spark Scarf	404: Luxio	True				B	*	4*	5* 034: MapSurveyor							
+0* None	Spark Scarf	404: Luxio	True				B	*	4*	3* 069: GapProber							
 1* Claw		403: Shinx	True				C	*	1-2*	1* 014: DeepBreather							
 1* Fang		403: Shinx	True				D	*	1-2*	2* 053: ClutchPerformer							
 0* None	Flash Tag	403: Shinx	True				E	*	2-3*	3* 038: LungeAttack							
-0* None	Spark Tag	404: Luxio	True				F	*	2-3*	0* 000: None							
-0* None	Skull Helmet	409: Rampardos	True				A	*	5*	0* 000: None							
-3* Band		409: Rampardos	True				B	*	4*	0* 000: None							
-1* Claw		408: Cranidos	True				C	*	1-2*	0* 000: None							
-1* Fang		408: Cranidos	True				D	*	1-2*	0* 000: None							
-0* None		408: Cranidos	True				E	*	2-3*	0* 000: None							
+0* None	Spark Tag	404: Luxio	True				F	*	2-3*	5* 034: MapSurveyor							
+0* None	Skull Helmet	409: Rampardos	True				A	*	5*	4* 086: StatusOnCategoryUse		071: Enraged			003: Status		
+3* Band		409: Rampardos	True				B	*	4*	3* 049: ExcessiveForce							
+1* Claw		408: Cranidos	True				C	*	1-2*	1* 015: PracticeSwinger							
+1* Fang		408: Cranidos	True				D	*	1-2*	2* 023: StatusOnAttack		008: Cringing					
+2* Crest		408: Cranidos	True				E	*	2-3*	3* 069: GapProber							
 0* None		409: Rampardos	True				F	*	2-3*	0* 000: None							
-0* None	Block Brooch	411: Bastiodon	True				A	*	5*	0* 000: None							
-3* Torc		411: Bastiodon	True				B	*	4*	0* 000: None							
-1* Claw		410: Shieldon	True				C	*	1-2*	0* 000: None							
-1* Card		410: Shieldon	True				D	*	1-2*	0* 000: None							
-0* None		410: Shieldon	True				E	*	2-3*	0* 000: None							
+0* None	Block Brooch	411: Bastiodon	True				A	*	5*	4* 086: StatusOnCategoryUse		107: Retaliate			003: Status		
+3* Torc		411: Bastiodon	True				B	*	4*	4* 056: FastHealer							
+1* Claw		410: Shieldon	True				C	*	1-2*	2* 016: MisfortuneMirror							
+1* Card		410: Shieldon	True				D	*	1-2*	2* 059: StatMirror							
+2* Crest		410: Shieldon	True				E	*	2-3*	3* 096: TypeBodyguard	013: Normal						
 0* None		411: Bastiodon	True				F	*	2-3*	0* 000: None							
 3* Bow		414: Mothim	True				A	@	5*	3* 089: StatusSplash							
-3* Bow		413: Wormadam	True				B	@	4*	4* 010: AllTerrain							
+3* Bow		413: Wormadam	True				B	@	5*	4* 086: StatusOnCategoryUse		089: Protect			003: Status		
 1* Branch		412: Burmy	True				C	@	1-2*	1* 006: NVECrit							
 1* Leaf		412: Burmy	True				D	@	1-2*	1* 050: Anchor							
 2* Crest		412: Burmy	True				E	@	2-3*	4* 056: FastHealer							
-2* Charm		412: Burmy	True				F	@	2-3*	0* 000: None							
+2* Charm		412: Burmy	True				F	@	2-3*	4* 010: AllTerrain							
 3* Torc		416: Vespiquen	True				A	*	5*	4* 046: RoyalVeil							
 3* Tiara		416: Vespiquen	True				B	*	4*	3* 085: StatusOnCategoryHit		104: Infestation			003: Status		
 1* Wing		415: Combee	True				C	*	1-2*	2* 016: MisfortuneMirror							
@@ -1286,121 +1286,121 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 0* None	Miracle Bow	417: Pachirisu	False				A	*	5*	4* 086: StatusOnCategoryUse		018: Light Screen			003: Status		
 3* Scarf		417: Pachirisu	False				B	*	4*	3* 042: ExplosionGuard							
 1* Tooth		417: Pachirisu	False				C	*	1-2*	2* 051: BarrageGuard							
-1* Card		417: Pachirisu	False				D	*	1-2*	1* 062: FastFriend							
+1* Card		417: Pachirisu	False				D	*	1-2*	2* 053: ClutchPerformer							
 0* None	Rouse Charm	417: Pachirisu	False				E	*	2-3*	4* 073: CheekPouch							
 0* None		417: Pachirisu	False				F	*	2-3*	0* 000: None							
-0* None	Float Aid	419: Floatzel	True				A	*	5*	0* 000: None							
-3* Torc		419: Floatzel	True				B	*	4*	0* 000: None							
-1* Fang		418: Buizel	True				C	*	1-2*	0* 000: None							
-1* Card		418: Buizel	True				D	*	1-2*	0* 000: None							
-0* None	Swimmer Rock	418: Buizel	True				E	*	2-3*	0* 000: None							
+0* None	Float Aid	419: Floatzel	True				A	*	5*	4* 093: AttackRangeInWeather							001: Rain
+3* Torc		419: Floatzel	True				B	*	4*	4* 047: Celebrate							
+1* Fang		418: Buizel	True				C	*	1-2*	2* 023: StatusOnAttack		045: Whirlpool					
+1* Card		418: Buizel	True				D	*	1-2*	2* 039: WideAttack							
+0* None	Swimmer Rock	418: Buizel	True				E	*	2-3*	3* 032: StairSensor							
 0* None	Rescue Rock	419: Floatzel	True				F	*	2-3*	0* 000: None							
-0* None	Petal Dress	421: Cherrim	True				A	*	5*	0* 000: None							
-3* Bow		421: Cherrim	True				B	*	4*	0* 000: None							
-1* Seed		420: Cherubi	True				C	*	1-2*	0* 000: None							
-1* Card		420: Cherubi	True				D	*	1-2*	0* 000: None							
-0* None	Cute Ore	420: Cherubi	True				E	*	2-3*	0* 000: None							
+0* None	Petal Dress	421: Cherrim	True				A	*	5*	4* 093: AttackRangeInWeather							002: Sunny
+3* Bow		421: Cherrim	True				B	*	4*	3* 054: DistanceDodge							
+1* Seed		420: Cherubi	True				C	*	1-2*	1* 062: FastFriend							
+1* Card		420: Cherubi	True				D	*	1-2*	1* 014: DeepBreather							
+0* None	Cute Ore	420: Cherubi	True				E	*	2-3*	3* 042: ExplosionGuard							
 2* Aroma		421: Cherrim	True				F	*	2-3*	0* 000: None							
-3* Torc		423: Gastrodon	True				A	*	5*	0* 000: None							
-3* Coat		423: Gastrodon	True				B	*	4*	0* 000: None							
-1* Foam		422: Shellos	True				C	*	1-2*	0* 000: None							
-1* Card		422: Shellos	True				D	*	1-2*	0* 000: None							
+3* Torc		423: Gastrodon	True				A	*	5*	4* 056: FastHealer							
+3* Coat		423: Gastrodon	True				B	*	4*	4* 073: CheekPouch							
+1* Foam		422: Shellos	True				C	*	1-2*	2* 016: MisfortuneMirror							
+1* Card		422: Shellos	True				D	*	1-2*	2* 052: BetterOdds							
 0* None		422: Shellos	True				E	*	2-3*	0* 000: None							
 0* None		423: Gastrodon	True				F	*	2-3*	0* 000: None							
-0* None	Breeze Scarf	426: Drifblim	True				A	*	5*	0* 000: None							
-3* Belt		426: Drifblim	True				B	*	4*	0* 000: None							
-1* Gasp		425: Drifloon	True				C	*	1-2*	0* 000: None							
-1* Card		425: Drifloon	True				D	*	1-2*	0* 000: None							
-0* None	Wind Heart	425: Drifloon	True				E	*	2-3*	0* 000: None							
+0* None	Breeze Scarf	426: Drifblim	True				A	*	5*	5* 034: MapSurveyor							
+3* Belt		426: Drifblim	True				B	*	4*	4* 073: CheekPouch							
+1* Gasp		425: Drifloon	True				C	*	1-2*	2* 018: DoubleAttacker							
+1* Card		425: Drifloon	True				D	*	1-2*	2* 052: BetterOdds							
+0* None	Wind Heart	425: Drifloon	True				E	*	2-3*	3* 069: GapProber							
 0* None	Easy Charm	426: Drifblim	True				F	*	2-3*	0* 000: None							
-0* None	Allure Coat	428: Lopunny	True				A	*	5*	0* 000: None							
-3* Ruff		428: Lopunny	True				B	*	4*	0* 000: None							
-1* Hair		427: Buneary	True				C	*	1-2*	0* 000: None							
-1* Card		427: Buneary	True				D	*	1-2*	0* 000: None							
-2* Crest		427: Buneary	True				E	*	2-3*	0* 000: None							
+0* None	Allure Coat	428: Lopunny	True				A	*	5*	5* 067: SecondSTAB	006: Fighting						
+3* Ruff		428: Lopunny	True				B	*	4*	4* 046: RoyalVeil							
+1* Hair		427: Buneary	True				C	*	1-2*	2* 059: StatMirror							
+1* Card		427: Buneary	True				D	*	1-2*	2* 083: Gratitude							
+2* Crest		427: Buneary	True				E	*	2-3*	3* 069: GapProber							
 0* None		428: Lopunny	True				F	*	2-3*	0* 000: None							
-0* None	Scary Belt	432: Purugly	True				A	*	5*	0* 000: None							
-3* Bow		432: Purugly	True				B	*	4*	0* 000: None							
-1* Claw		431: Glameow	True				C	*	1-2*	0* 000: None							
-1* Fang		431: Glameow	True				D	*	1-2*	0* 000: None							
+0* None	Scary Belt	432: Purugly	True				A	*	5*	3* 085: StatusOnCategoryHit		008: Cringing			003: Status		
+3* Bow		432: Purugly	True				B	*	4*	3* 071: WeatherProtection							
+1* Claw		431: Glameow	True				C	*	1-2*	1* 084: HitAndRun							
+1* Fang		431: Glameow	True				D	*	1-2*	2* 023: StatusOnAttack		008: Cringing					
 0* None		431: Glameow	True				E	*	2-3*	0* 000: None							
 0* None		432: Purugly	True				F	*	2-3*	0* 000: None							
-3* Sash		435: Skuntank	True				A	*	5*	0* 000: None							
-3* Scarf		435: Skuntank	True				B	*	4*	0* 000: None							
-1* Claw		434: Stunky	True				C	*	1-2*	0* 000: None							
-1* Fang		434: Stunky	True				D	*	1-2*	0* 000: None							
-0* None		434: Stunky	True				E	*	2-3*	0* 000: None							
+3* Sash		435: Skuntank	True				A	*	5*	5* 036: WeaknessPayback	011: Ground	074: Torment					
+3* Scarf		435: Skuntank	True				B	*	4*	4* 070: PassThroughAttacker							
+1* Claw		434: Stunky	True				C	*	1-2*	1* 084: HitAndRun							
+1* Fang		434: Stunky	True				D	*	1-2*	3* 028: StatusImmune		002: Burned					
+2* Dust		434: Stunky	True				E	*	2-3*	3* 069: GapProber							
 0* None		435: Skuntank	True				F	*	2-3*	0* 000: None							
-0* None	Mirror Torc	437: Bronzong	True				A	*	5*	0* 000: None							
-2* Brooch		437: Bronzong	True				B	*	4*	0* 000: None							
-1* Beam		436: Bronzor	True				C	*	1-2*	0* 000: None							
-1* Card		436: Bronzor	True				D	*	1-2*	0* 000: None							
+0* None	Mirror Torc	437: Bronzong	True				A	*	5*	5* 037: WarpPayback	002: Dark						
+2* Brooch		437: Bronzong	True				B	*	4*	3* 028: StatusImmune		003: Frozen					
+1* Beam		436: Bronzor	True				C	*	1-2*	1* 026: SureHitAttacker							
+1* Card		436: Bronzor	True				D	*	1-2*	1* 050: Anchor							
 0* None		436: Bronzor	True				E	*	2-3*	0* 000: None							
 0* None		437: Bronzong	True				F	*	2-3*	0* 000: None							
-3* Scarf		441: Chatot	False				A	*	5*	0* 000: None							
-2* Ring		441: Chatot	False				B	*	4*	0* 000: None							
-1* Song		441: Chatot	False				C	*	1-2*	0* 000: None							
-1* Card		441: Chatot	False				D	*	1-2*	0* 000: None							
+3* Scarf		441: Chatot	False				A	*	5*	4* 086: StatusOnCategoryUse		100: Mini-Counter			003: Status		
+2* Ring		441: Chatot	False				B	*	4*	3* 058: StatusMirror							
+1* Song		441: Chatot	False				C	*	1-2*	1* 062: FastFriend							
+1* Card		441: Chatot	False				D	*	1-2*	2* 059: StatMirror							
 0* None		441: Chatot	False				E	*	2-3*	0* 000: None							
 0* None		441: Chatot	False				F	*	2-3*	0* 000: None							
-0* None	Shadow Veil	442: Spiritomb	False				A	*	5*	5* 004: TypeBulldozer	009: Ghost			013: Normal			
+0* None	Shadow Veil	442: Spiritomb	False				A	*	5*	3* 085: StatusOnCategoryHit		081: Heal Block			003: Status		
 3* Mask		442: Spiritomb	False				B	*	4*	3* 043: WandMaster							
 1* Card		442: Spiritomb	False				C	*	1-2*	1* 061: ErraticDefender							
 2* Dust		442: Spiritomb	False				D	*	1-2*	1* 050: Anchor							
 2* Seal		442: Spiritomb	False				E	*	2-3*	2* 016: MisfortuneMirror							
 0* None		442: Spiritomb	False				F	*	2-3*	0* 000: None							
-0* None	Mach Scarf	445: Garchomp	True				A	*	5*	0* 000: None							
-0* None	Meteor Torc	444: Gabite	True				B	*	4*	0* 000: None							
-1* Fang		443: Gible	True				C	*	1-2*	0* 000: None							
-1* Card		443: Gible	True				D	*	1-2*	0* 000: None							
-2* Jewel		443: Gible	True				E	*	2-3*	0* 000: None							
+0* None	Mach Scarf	445: Garchomp	True				A	*	5*	5* 036: WeaknessPayback	005: Fairy	008: Cringing					
+0* None	Meteor Torc	444: Gabite	True				B	*	4*	3* 049: ExcessiveForce							
+1* Fang		443: Gible	True				C	*	1-2*	1* 050: Anchor							
+1* Card		443: Gible	True				D	*	1-2*	2* 088: DoubleDash							
+2* Jewel		443: Gible	True				E	*	2-3*	3* 017: CounterBasher							
 2* Rock		444: Gabite	True				F	*	2-3*	0* 000: None							
-0* None	Ravage Ring	448: Lucario	True				A	*	5*	0* 000: None							
-3* Band		448: Lucario	True				B	*	4*	0* 000: None							
-1* Tail		447: Riolu	True				C	*	1-2*	0* 000: None							
-1* Card		447: Riolu	True				D	*	1-2*	0* 000: None							
-0* None	Valiant Rock	447: Riolu	True				E	*	2-3*	0* 000: None							
-0* None	Pledge Rock	448: Lucario	True				F	*	2-3*	0* 000: None							
-0* None	Grit Veil	450: Hippowdon	True				A	*	5*	0* 000: None							
-3* Scarf		450: Hippowdon	True				B	*	4*	0* 000: None							
-1* Mud		449: Hippopotas	True				C	*	1-2*	0* 000: None							
-1* Card		449: Hippopotas	True				D	*	1-2*	0* 000: None							
+0* None	Ravage Ring	448: Lucario	True				A	*	5*	5* 004: TypeBulldozer	006: Fighting			009: Ghost			
+3* Band		448: Lucario	True				B	*	4*	5* 034: MapSurveyor							
+1* Tail		447: Riolu	True				C	*	1-2*	2* 033: AcuteSniffer							
+1* Card		447: Riolu	True				D	*	1-2*	1* 094: PPSaver							
+0* None	Valiant Rock	447: Riolu	True				E	*	2-3*	3* 028: StatusImmune		007: Confused					
+0* None	Pledge Rock	448: Lucario	True				F	*	2-3*	3* 064: HiddenStairFinder							
+0* None	Grit Veil	450: Hippowdon	True				A	*	5*	5* 036: WeaknessPayback	010: Grass	046: Sand Tomb					
+3* Scarf		450: Hippowdon	True				B	*	4*	3* 042: ExplosionGuard							
+1* Mud		449: Hippopotas	True				C	*	1-2*	2* 083: Gratitude							
+1* Card		449: Hippopotas	True				D	*	1-2*	1* 015: PracticeSwinger							
 0* None		449: Hippopotas	True				E	*	2-3*	0* 000: None							
 0* None		450: Hippowdon	True				F	*	2-3*	0* 000: None							
-0* None	Dust Scarf	452: Drapion	True				A	*	5*	0* 000: None							
-3* Bow		452: Drapion	True				B	*	4*	0* 000: None							
-1* Tail		451: Skorupi	True				C	*	1-2*	0* 000: None							
-1* Fang		451: Skorupi	True				D	*	1-2*	0* 000: None							
+0* None	Dust Scarf	452: Drapion	True				A	*	5*	5* 037: WarpPayback	011: Ground						
+3* Bow		452: Drapion	True				B	*	4*	3* 048: Absorption							
+1* Tail		451: Skorupi	True				C	*	1-2*	1* 006: NVECrit							
+1* Fang		451: Skorupi	True				D	*	1-2*	2* 023: StatusOnAttack		006: Badly Poisoned					
 0* None		451: Skorupi	True				E	*	2-3*	0* 000: None							
 0* None		452: Drapion	True				F	*	2-3*	0* 000: None							
-3* Belt		454: Toxicroak	True				A	*	5*	0* 000: None							
-3* Torc		454: Toxicroak	True				B	*	4*	0* 000: None							
-1* Sweat		453: Croagunk	True				C	*	1-2*	0* 000: None							
-1* Card		453: Croagunk	True				D	*	1-2*	0* 000: None							
+3* Belt		454: Toxicroak	True				A	*	5*	5* 004: TypeBulldozer	006: Fighting			009: Ghost			
+3* Torc		454: Toxicroak	True				B	*	4*	3* 005: SuperCrit							
+1* Sweat		453: Croagunk	True				C	*	1-2*	1* 084: HitAndRun							
+1* Card		453: Croagunk	True				D	*	1-2*	2* 029: StatDropImmune			001: Attack				
 0* None		453: Croagunk	True				E	*	2-3*	0* 000: None							
 0* None		454: Toxicroak	True				F	*	2-3*	0* 000: None							
-3* Bow		455: Carnivine	False				A	*	5*	0* 000: None							
-3* Belt		455: Carnivine	False				B	*	4*	0* 000: None							
-1* Fang		455: Carnivine	False				C	*	1-2*	0* 000: None							
-1* Card		455: Carnivine	False				D	*	1-2*	0* 000: None							
-2* Crest		455: Carnivine	False				E	*	2-3*	0* 000: None							
+3* Bow		455: Carnivine	False				A	*	5*	4* 081: DeepBreatherPlus							
+3* Belt		455: Carnivine	False				B	*	4*	2* 013: PPBoost						3	
+1* Fang		455: Carnivine	False				C	*	1-2*	1* 094: PPSaver							
+1* Card		455: Carnivine	False				D	*	1-2*	1* 015: PracticeSwinger							
+2* Crest		455: Carnivine	False				E	*	2-3*	3* 072: RemoveAbilityAttack							
 0* None		455: Carnivine	False				F	*	2-3*	0* 000: None							
 3* Torc		457: Lumineon	True				A	*	5*	5* 067: SecondSTAB	001: Bug						
 3* Bow		457: Lumineon	True				B	*	4*	4* 046: RoyalVeil							
 1* Foam		456: Finneon	True				C	*	1-2*	2* 029: StatDropImmune			003: MAtk				
 1* Card		456: Finneon	True				D	*	1-2*	2* 039: WideAttack							
-2* Seal		456: Finneon	True				E	*	2-3*	0* 000: None							
+2* Seal		456: Finneon	True				E	*	2-3*	3* 032: StairSensor							
 0* None		457: Lumineon	True				F	*	2-3*	0* 000: None							
-0* None	Frozen Cape	460: Abomasnow	True				A	*	5*	0* 000: None							
-3* Torc		460: Abomasnow	True				B	*	4*	0* 000: None							
-1* Branch		459: Snover	True				C	*	1-2*	0* 000: None							
-1* Card		459: Snover	True				D	*	1-2*	0* 000: None							
-0* None		459: Snover	True				E	*	2-3*	0* 000: None							
+0* None	Frozen Cape	460: Abomasnow	True				A	*	5*	4* 080: NoStatusInWeather							004: Hail
+3* Torc		460: Abomasnow	True				B	*	4*	3* 048: Absorption							
+1* Branch		459: Snover	True				C	*	1-2*	1* 014: DeepBreather							
+1* Card		459: Snover	True				D	*	1-2*	2* 052: BetterOdds							
+2* Aroma		459: Snover	True				E	*	2-3*	3* 069: GapProber							
 0* None		460: Abomasnow	True				F	*	2-3*	0* 000: None							
-0* None	Plasma Veil	479: Rotom	False				A	*	5*	0* 000: None							
-2* Ring		479: Rotom	False				B	*	4*	0* 000: None							
-1* Beam		479: Rotom	False				C	*	1-2*	0* 000: None							
-1* Card		479: Rotom	False				D	*	1-2*	0* 000: None							
+0* None	Plasma Veil	479: Rotom	False				A	*	5*	4* 086: StatusOnCategoryUse		097: Electrified			003: Status		
+2* Ring		479: Rotom	False				B	*	4*	4* 041: TrapBuster							
+1* Beam		479: Rotom	False				C	*	1-2*	2* 018: DoubleAttacker							
+1* Card		479: Rotom	False				D	*	1-2*	1* 061: ErraticDefender							
 2* Tag		479: Rotom	False				E	*	2-3*	0* 000: None							
 0* None		479: Rotom	False				F	*	2-3*	0* 000: None							
 0* None	Edify Robe	480: Uxie	False				A	BI	5*	5* 034: MapSurveyor							
@@ -1412,43 +1412,43 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 0* None	Spirit Dust	482: Azelf	False	480: Uxie, 481: Mesprit, 482: Azelf			G		1-2*	1* 027: SpecialAttacker							
 0* None	Spirit Shard	482: Azelf	False	480: Uxie, 481: Mesprit, 482: Azelf			H		1-2*	1* 062: FastFriend							
 0* None	Red Chain	482: Azelf	False	480: Uxie, 481: Mesprit, 482: Azelf			I	BDF	4*	3* 089: StatusSplash							
-0* None	Spirit Crest	482: Azelf	False	480: Uxie, 481: Mesprit, 482: Azelf			J	GH	2-3*	0* 000: None							
-0* None	Time Shield	483: Dialga	False				A	*	5*	0* 000: None							
-3* Torc		483: Dialga	False				B	*	4*	0* 000: None							
-1* Card		483: Dialga	False				C	*	1-2*	0* 000: None							
-2* Shard		483: Dialga	False				D	*	1-2*	0* 000: None							
-0* None	Time Jewel	483: Dialga	False				E	*	2-3*	0* 000: None							
+0* None	Spirit Crest	482: Azelf	False	480: Uxie, 481: Mesprit, 482: Azelf			J	GH	2-3*	2* 053: ClutchPerformer							
+0* None	Time Shield	483: Dialga	False				A	*	5*	5* 087: MapStatusOnCategoryUse					002: Magical		009: Trick Room
+3* Torc		483: Dialga	False				B	*	4*	4* 047: Celebrate							
+1* Card		483: Dialga	False				C	*	1-2*	2* 052: BetterOdds							
+2* Shard		483: Dialga	False				D	*	1-2*	1* 094: PPSaver							
+0* None	Time Jewel	483: Dialga	False				E	*	2-3*	3* 057: SelfCurer							
 0* None		483: Dialga	False				F	*	2-3*	0* 000: None							
-0* None	Space Blade	484: Palkia	False				A	*	5*	0* 000: None							
-3* Torc		484: Palkia	False				B	*	4*	0* 000: None							
-1* Card		484: Palkia	False				C	*	1-2*	0* 000: None							
-2* Shard		484: Palkia	False				D	*	1-2*	0* 000: None							
-0* None	Space Jewel	484: Palkia	False				E	*	2-3*	0* 000: None							
+0* None	Space Blade	484: Palkia	False				A	*	5*	5* 087: MapStatusOnCategoryUse					002: Magical		010: Gravity
+3* Torc		484: Palkia	False				B	*	4*	5* 011: Wallbreaker							
+1* Card		484: Palkia	False				C	*	1-2*	1* 084: HitAndRun							
+2* Shard		484: Palkia	False				D	*	1-2*	2* 033: AcuteSniffer							
+0* None	Space Jewel	484: Palkia	False				E	*	2-3*	4* 041: TrapBuster							
 0* None		484: Palkia	False				F	*	2-3*	0* 000: None							
-0* None	Searing Ring	485: Heatran	False				A	*	5*	0* 000: None							
-3* Torc		485: Heatran	False				B	*	4*	0* 000: None							
-1* Fang		485: Heatran	False				C	*	1-2*	0* 000: None							
-1* Claw		485: Heatran	False				D	*	1-2*	0* 000: None							
-2* Rock		485: Heatran	False				E	*	2-3*	0* 000: None							
+0* None	Searing Ring	485: Heatran	False				A	*	5*	5* 078: EndureType	011: Ground						
+3* Torc		485: Heatran	False				B	*	4*	3* 042: ExplosionGuard							
+1* Fang		485: Heatran	False				C	*	1-2*	2* 052: BetterOdds							
+1* Claw		485: Heatran	False				D	*	1-2*	1* 015: PracticeSwinger							
+2* Rock		485: Heatran	False				E	*	2-3*	3* 076: HealOnNewFloor							
 0* None		485: Heatran	False				F	*	2-3*	0* 000: None							
-0* None	Nether Veil	487: Giratina	False				A	*	5*	0* 000: None							
-3* Torc		487: Giratina	False				B	*	4*	0* 000: None							
-1* Card		487: Giratina	False				C	*	1-2*	0* 000: None							
-2* Shard		487: Giratina	False				D	*	1-2*	0* 000: None							
-2* Jewel		487: Giratina	False				E	*	2-3*	0* 000: None							
+0* None	Nether Veil	487: Giratina	False				A	*	5*	5* 087: MapStatusOnCategoryUse					003: Status		016: Inverse
+3* Torc		487: Giratina	False				B	*	4*	3* 049: ExcessiveForce							
+1* Card		487: Giratina	False				C	*	1-2*	2* 060: ErraticAttacker							
+2* Shard		487: Giratina	False				D	*	1-2*	1* 061: ErraticDefender							
+2* Jewel		487: Giratina	False				E	*	2-3*	3* 017: CounterBasher							
 0* None		487: Giratina	False				F	*	2-3*	0* 000: None							
-0* None	Lunar Veil	488: Cresselia	False				A	*	5*	0* 000: None							
-3* Robe		488: Cresselia	False				B	*	4*	0* 000: None							
-1* Beam		488: Cresselia	False				C	*	1-2*	0* 000: None							
-1* Card		488: Cresselia	False				D	*	1-2*	0* 000: None							
-2* Ring		488: Cresselia	False				E	*	2-3*	0* 000: None							
+0* None	Lunar Veil	488: Cresselia	False				A	*	5*	5* 099: SweetDreams							
+3* Robe		488: Cresselia	False				B	*	4*	4* 056: FastHealer							
+1* Beam		488: Cresselia	False				C	*	1-2*	2* 052: BetterOdds							
+1* Card		488: Cresselia	False				D	*	1-2*	1* 062: FastFriend							
+2* Ring		488: Cresselia	False				E	*	2-3*	3* 069: GapProber							
 0* None		488: Cresselia	False				F	*	2-3*	0* 000: None							
-0* None	Tidal Cape	490: Manaphy	False				A	FC	5*	0* 000: None							
-0* None	Ripple Cape	489: Phione	False				B	FC	5*	0* 000: None							
-0* None	Marine Cache	489: Phione	False	489: Phione, 490: Manaphy			C	DEF	4*	0* 000: None							
-1* Song		489: Phione	False	489: Phione, 490: Manaphy			D		1-2*	0* 000: None							
-1* Card		489: Phione	False	489: Phione, 490: Manaphy			E		1-2*	0* 000: None							
-0* None	Wave Jewel	489: Phione	False	489: Phione, 490: Manaphy			F	DE	2-3*	0* 000: None							
+0* None	Tidal Cape	490: Manaphy	False				A	FC	5*	5* 034: MapSurveyor							
+0* None	Ripple Cape	489: Phione	False				B	FC	5*	4* 086: StatusOnCategoryUse		077: Aqua Ring			003: Status		
+0* None	Marine Cache	489: Phione	False	489: Phione, 490: Manaphy			C	DEF	4*	4* 074: HealInWater							
+1* Song		489: Phione	False	489: Phione, 490: Manaphy			D		1-2*	1* 014: DeepBreather							
+1* Card		489: Phione	False	489: Phione, 490: Manaphy			E		1-2*	1* 062: FastFriend							
+0* None	Wave Jewel	489: Phione	False	489: Phione, 490: Manaphy			F	DE	2-3*	3* 055: CloseDodge							
 2* Brooch		490: Manaphy	False	489: Phione, 490: Manaphy			G		2-3*	0* 000: None							
 0* None	Eclipse Robe	491: Darkrai	False				A	*	5*	5* 036: WeaknessPayback	006: Fighting	001: Asleep					
 3* Veil		491: Darkrai	False				B	*	4*	4* 010: AllTerrain							

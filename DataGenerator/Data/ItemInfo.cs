@@ -2386,7 +2386,7 @@ namespace DataGenerator.Data
             else if (ii == 330)
             {
                 item.Name = new LocalText("Cover Band");
-                item.Desc = new LocalText("An item to be held by a Pokémon. When a Pokémon with low HP is nearby, the holder will take attacks for it.");
+                item.Desc = new LocalText("An item to be held by a Pokémon. While the holder's HP is at half or above, the it will take attacks for nearby allies.");
                 item.Sprite = "Band_Green";
                 item.Price = 200;
                 item.ProximityEvent.Radius = 1;
@@ -4104,6 +4104,8 @@ namespace DataGenerator.Data
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DoubleDash.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DoubleDash, new object[] { }, 1, translate);
                 else if (ii == 889)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusSplash.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusSplash, new object[] { }, 1, translate);
+                else if (ii == 890)
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBodyguard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBodyguard, new object[] { 1 }, 1, translate);
 
                 if (ii >= 800 && ii < 900)
                     item.Comment = "Test item, do not translate";

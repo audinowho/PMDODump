@@ -989,7 +989,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Reduces the HP of opposing Pokémon that are asleep.");
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = Alignment.Foe;
-                ability.ProximityEvent.OnTurnEnds.Add(0, new NightmareEvent(1, new StringKey("MSG_HURT_BY_OTHER"), new AnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", 0)));
+                ability.ProximityEvent.OnTurnEnds.Add(0, new NightmareEvent(1, 8, new StringKey("MSG_HURT_BY_OTHER"), new AnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", 0)));
             }
             else if (ii == 124)
             {
