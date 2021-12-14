@@ -408,9 +408,10 @@ namespace DataGenerator.Data
         public static void WriteExclusiveItems(int init_idx, bool translate)
         {
             int incompleteLeft = 0;
-            List<(int, int[])> specific_tradeables = new List<(int, int[])>();
-            List<(int, int)> random_tradeables = new List<(int, int)>();
-            
+            List<(int item, int[] reqItem)> specific_tradeables = new List<(int, int[])>();
+            List<(int item, int dex, int reqCount)> random_tradeables = new List<(int, int, int)>();
+            Dictionary<int, int> dex_map = new Dictionary<int, int>();
+
             int prev_start = init_idx;
             List<string> running_tradeables = new List<string>();
 
@@ -428,6 +429,7 @@ namespace DataGenerator.Data
                     ExclusiveItemType exclType = (ExclusiveItemType)Enum.Parse(typeof(ExclusiveItemType), row[0].Substring(2));
                     ExclusiveItemEffect exclEffect = (ExclusiveItemEffect)Int32.Parse(row[10].Substring(3, 3));
                     int primaryDex = Int32.Parse(row[2].Substring(0, 3));
+                    dex_map[item_idx] = primaryDex;
 
                     string[] rarityStr = row[9].Substring(0, row[9].Length-1).Split('-');
                     int minRarity = Int32.Parse(rarityStr[0]);
@@ -516,10 +518,8 @@ namespace DataGenerator.Data
 
                     if (item.Released)
                     {
-                        if (item.Rarity <= 2)
-                            random_tradeables.Add((item_idx, item.Rarity));
-
-                        running_tradeables.Add(row[8]);
+                        string trade_in = row[8];
+                        running_tradeables.Add(trade_in);
                     }
 
                     bool reload = false;
@@ -532,6 +532,7 @@ namespace DataGenerator.Data
 
                     if (reload)
                     {
+                        int prev_tradeable_count = specific_tradeables.Count;
                         if (running_tradeables.Count == 0)
                         {
 
@@ -623,11 +624,77 @@ namespace DataGenerator.Data
                             }
                         }
 
+                        //add to random tradeable pool if...
+                        for (int nn = 0; nn < running_tradeables.Count; nn++)
+                        {
+                            int old_idx = prev_start + nn;
+                            bool has_tradeables = false;
+                            for (int kk = prev_tradeable_count; kk < specific_tradeables.Count; kk++)
+                            {
+                                if (specific_tradeables[kk].item == old_idx)
+                                {
+                                    has_tradeables = true;
+                                    break;
+                                }
+                            }
+                            //they are at the bottom of their trade chain
+                            if (!has_tradeables)
+                            {
+                                ItemData old_item = DataManager.LoadData<ItemData>(old_idx, DataManager.DataType.Item.ToString());
+                                //has a rarity of 3 or lower
+                                if (old_item.Rarity <= 3)
+                                {
+                                    int old_dex = dex_map[old_idx];
+
+                                    switch (primaryDex)
+                                    {
+                                        case 144://legendary birds
+                                        case 145:
+                                        case 146:
+                                        case 150://mew/two
+                                        case 151:
+                                        case 201://unown
+                                        case 243://legendary beasts
+                                        case 244:
+                                        case 245:
+                                        case 249://bird duo
+                                        case 250:
+                                        case 251://celebi
+                                        case 486://regis
+                                        case 377:
+                                        case 378:
+                                        case 379:
+                                        case 380://lati
+                                        case 381:
+                                        case 382://weather trio
+                                        case 383:
+                                        case 384:
+                                        case 385://jirachi
+                                        case 386://deoxys
+                                        case 480://spirit trio
+                                        case 481:
+                                        case 482:
+                                        case 483://creation trio
+                                        case 484:
+                                        case 487:
+                                        case 485://heatran
+                                        case 488://dream duo
+                                        case 491:
+                                        case 492://shaymin
+                                        case 493://arceus
+                                            break;
+                                        default:
+                                            random_tradeables.Add((old_idx, old_dex, old_item.Rarity));
+                                            break;
+                                    }
+                                }
+                            }
+                        }
+
                         running_tradeables.Clear();
                         prev_start = item_idx + 1;
                     }
                 }
-
             }
 
             //output trade tables to common_gen.lua
@@ -641,18 +708,18 @@ namespace DataGenerator.Data
                 "COMMON_GEN = {}\n" +
                 "\n" +
                 "COMMON_GEN.TRADES = {\n");
-                foreach ((int, int[]) trade in specific_tradeables)
+                foreach ((int item, int[] reqItem) trade in specific_tradeables)
                 {
-                    file.Write("{ Item=" + trade.Item1 + ", ReqItem={" + String.Join(',',trade.Item2) + "}},\n");
+                    file.Write("{ Item=" + trade.item + ", ReqItem={" + String.Join(',',trade.reqItem) + "}},\n");
                 }
                 file.Write("}\n\n");
                 file.Write("COMMON_GEN.TRADES_RANDOM = {\n");
-                foreach ((int, int) trade in random_tradeables)
+                foreach ((int item, int dex, int reqCount) trade in random_tradeables)
                 {
                     List<int> wildcards = new List<int>();
-                    for (int nn = 0; nn < trade.Item2 * 2; nn++)
+                    for (int nn = 0; nn < trade.reqCount + 1; nn++)
                         wildcards.Add(-1);
-                    file.Write("{ Item=" + trade.Item1 + ", ReqItem={" + String.Join(',', wildcards.ToArray()) + "}},\n");
+                    file.Write("{ Item=" + trade.item + ", Dex="+trade.dex + ", ReqItem={" + String.Join(',', wildcards.ToArray()) + "}},\n");
                 }
                 file.Write("}\n\n");
             }
