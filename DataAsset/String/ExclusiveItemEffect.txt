@@ -84,12 +84,21 @@ ExclusiveItemEffect.DeepBreatherPlus		When kept in the bag, it restores the PP o
 ExclusiveItemEffect.WeaknessReduce		When kept in the bag, it reduces damage done by {0}-type attacks.
 ExclusiveItemEffect.Gratitude		When kept in the bag, the Pokémon gives back recovered HP when it is healed by another Pokémon.
 ExclusiveItemEffect.HitAndRun		When kept in the bag, the Pokémon will take reduced damage from counter attacks.
-ExclusiveItemEffect.StatusOnCategoryHit		When kept in the bag, the Pokémon's {1} attacks inflict the {0} status.
-ExclusiveItemEffect.StatusOnCategoryUse		When kept in the bag, the Pokémon gains the {0} status after using a {1} attack.
-ExclusiveItemEffect.MapStatusOnCategoryUse		When kept in the bag, the Pokémon changes the floor to {1} after using a {0} attack.
+ExclusiveItemEffect.StatusOnCategoryHit		When kept in the bag, the Pokémon's {1} moves inflict the {0} status.
+ExclusiveItemEffect.StatusOnCategoryUse		When kept in the bag, the Pokémon gains the {0} status after using a {1} move.
+ExclusiveItemEffect.MapStatusOnCategoryUse		When kept in the bag, the Pokémon changes the floor to {1} after using a {0} move.
 ExclusiveItemEffect.DoubleDash		When kept in the bag, it changes the Pokémon's lunging moves into two weaker strikes.
 ExclusiveItemEffect.StatusSplash		When kept in the bag, the Pokémon's stat-changing moves are spread to allies.
 ExclusiveItemEffect.DevolveOnAttack		When kept in the bag, the Pokémon's regular attacks and thrown items have a chance to devolve the target.
 ExclusiveItemEffect.ProjectileAttack		When kept in the bag, it changes the Pokémon's regular attack into a short projectile.
 ExclusiveItemEffect.MetronomePlus		When kept in the bag, it increases the Pokémon's luck when using Metronome.
 ExclusiveItemEffect.AttackRangeInWeather		When kept in the bag, the Pokémon's Attack Range is increased when the floor has the {0} status.
+ExclusiveItemEffect.PPSaver		When kept in the bag, the Pokémon's PP cannot be lowered by the moves and abilities of opposing Pokémon.
+ExclusiveItemEffect.CelebrateCure		When kept in the bag, the Pokémon will recover from status effects after defeating an enemy.
+ExclusiveItemEffect.TypeBodyguard		When kept in the bag, the Pokémon will step in to take {0}-type attacks for nearby allies.
+ExclusiveItemEffect.StatOnCategoryUse		When kept in the bag, the Pokémon's {0} is raised slightly when it uses a {1} move.
+ExclusiveItemEffect.StatusOnTypeHit		When kept in the bag, the Pokémon's {0}-type moves inflict the {1} status.
+ExclusiveItemEffect.SweetDreams		When kept in the bag, the Pokémon gradually restores the HP of its teammates while they are asleep.
+ExclusiveItemEffect.ChanceStatusOnTypeHit		When kept in the bag, the Pokémon's {0}-type moves have a chance to inflict the {1} status.
+ExclusiveItemEffect.ChanceStatOnTypeHit		When kept in the bag, the Pokémon's {0}-type moves may lower the target's {1}.
+ExclusiveItemEffect.ChanceStatusOnCategoryHit		When kept in the bag, the Pokémon's {1} moves may inflict the {0} status.

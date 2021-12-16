@@ -1,29 +1,60 @@
 Sheet: Hardcode
+    * Added _ENUM_Keys_OemBackslash
+    * Added _ENUM_Keys_OemCloseBrackets
+    * Added _ENUM_Keys_OemComma
+    * Added _ENUM_Keys_OemMinus
+    * Added _ENUM_Keys_OemOpenBrackets
+    * Added _ENUM_Keys_OemPeriod
+    * Added _ENUM_Keys_OemPipe
+    * Added _ENUM_Keys_OemPlus
+    * Added _ENUM_Keys_OemQuestion
+    * Added _ENUM_Keys_OemQuotes
+    * Added _ENUM_Keys_OemSemicolon
+    * Added _ENUM_Keys_OemTilde
 
 Sheet: Content
+    * Added MSG_FLOOR_SCAN
+    * Added MSG_HEAL_WITH_OTHER
 
 Sheet: Script
+    * Added ground\base_camp_2/Swap_None
 
 Sheet: Abilities
 
 Sheet: Items
+    * Significantly changed 0261-0001|data.Desc from "" to "An orb that reveals the location of all items and enemies on the floor."
+    * Significantly changed 0330-0001|data.Desc from "An item to be held by a Pokémon. When a Pokémon with low HP is nearby, the holder will take attacks for it." to "An item to be held by a Pokémon. While the holder's HP is at half or above, it will take attacks for nearby allies."
+    * Added 0406-0000|data.Name
+    * Added 0406-0001|data.Desc
+    * Added 0890-0000|data.Name
 
 Sheet: MapStatuses
+    * Added 0041-0000|data.Name
+    * Added 0041-0001|data.Desc
 
 Sheet: Moves
 
 Sheet: Statuses
 
 Sheet: Tiles
-    * Added 0048-0000|data.Name
-    * Added 0048-0001|data.Desc
 
 Sheet: Excl Names
 
 Sheet: Excl Effects
+    * Added ExclusiveItemEffect.CelebrateCure
+    * Added ExclusiveItemEffect.ChanceStatOnTypeHit
+    * Added ExclusiveItemEffect.ChanceStatusOnCategoryHit
+    * Added ExclusiveItemEffect.ChanceStatusOnTypeHit
+    * Changed ExclusiveItemEffect.MapStatusOnCategoryUse from "When kept in the bag, the Pokémon changes the floor to {1} after using a {0} attack." to "When kept in the bag, the Pokémon changes the floor to {1} after using a {0} move."
+    * Added ExclusiveItemEffect.PPSaver
+    * Added ExclusiveItemEffect.StatOnCategoryUse
+    * Changed ExclusiveItemEffect.StatusOnCategoryHit from "When kept in the bag, the Pokémon's {1} attacks inflict the {0} status." to "When kept in the bag, the Pokémon's {1} moves inflict the {0} status."
+    * Changed ExclusiveItemEffect.StatusOnCategoryUse from "When kept in the bag, the Pokémon gains the {0} status after using a {1} attack." to "When kept in the bag, the Pokémon gains the {0} status after using a {1} move."
+    * Added ExclusiveItemEffect.StatusOnTypeHit
+    * Added ExclusiveItemEffect.SweetDreams
+    * Added ExclusiveItemEffect.TypeBodyguard
 
 Sheet: Zones
-    * Deleted key 0000-0002|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0000]).Name
 
 Sheet: Maps
 

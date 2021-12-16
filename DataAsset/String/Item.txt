@@ -332,7 +332,7 @@ Key		EN
 0260-0000|data.Name		Revival Orb
 0260-0001|data.Desc		An orb that revives all team members that have fainted.
 0261-0000|data.Name		Scanner Orb
-0261-0001|data.Desc		
+0261-0001|data.Desc		An orb that reveals the location of all items and enemies on the floor.
 0262-0000|data.Name		All-Hit Orb
 0262-0001|data.Desc		
 0263-0000|data.Name		Cleanse Orb
@@ -448,7 +448,7 @@ Key		EN
 0329-0000|data.Name		Reunion Cape
 0329-0001|data.Desc		A held item that warps the Pokémon to its teammate or leader when attacked.
 0330-0000|data.Name		Cover Band
-0330-0001|data.Desc		An item to be held by a Pokémon. When a Pokémon with low HP is nearby, the holder will take attacks for it.
+0330-0001|data.Desc		An item to be held by a Pokémon. While the holder's HP is at half or above, it will take attacks for nearby allies.
 0331-0000|data.Name		Silver Powder
 0331-0001|data.Desc		An item to be held by a Pokémon. It is a shiny, silver powder that will boost the power of Bug-type moves.
 0332-0000|data.Name		Black Glasses
@@ -591,6 +591,8 @@ Key		EN
 0404-0001|data.Desc		A held item that increases HP recovery.
 0405-0000|data.Name		Expert Belt
 0405-0001|data.Desc		A well-worn belt that boosts the power of super-effective moves.
+0406-0000|data.Name		Weather Rock
+0406-0001|data.Desc		An item that increases the duration of weather moves used by the holder.
 0444-0000|data.Name		Light Box
 0444-0001|data.Desc		A box that is somewhat light. Specific Pokémon adore the items inside.
 0445-0000|data.Name		Heavy Box
@@ -803,6 +805,7 @@ Key		EN
 0887-0000|data.Name		MapStatusOnCategoryUse Test
 0888-0000|data.Name		DoubleDash Test
 0889-0000|data.Name		StatusSplash Test
+0890-0000|data.Name		TypeBodyguard Test
 0900-0000|data.Name		Solar Sash
 0901-0000|data.Name		Plant Torc
 0904-0000|data.Name		Grass Guard

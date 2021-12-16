@@ -9,6 +9,10 @@ ExclusiveItemEffect.AttackRangeInWeather		When kept in the bag, the Pokémon's A
 ExclusiveItemEffect.BarrageGuard		When kept in the bag, the Pokémon takes reduced damage from multiple attacks in a turn.		Wenn es innerhalb des Beutels getragen wird, nimmt das Pokémon weniger Schaden von mehreren Attacken innerhalb eines Zuges.									
 ExclusiveItemEffect.BetterOdds		When kept in the bag, the Pokémon's attacks never miss, and always land a critical hit if the move is on its last PP.		Wenn es innerhalb des Beutels getragen wird, kann das Pokémon niemals verfehlen und landet immer einen kritischen Treffer falls die Attacke nur noch 1 AP besetzen hat.									
 ExclusiveItemEffect.Celebrate		When kept in the bag, the Pokémon will be able to move again after defeating an enemy.		Wenn es innerhalb des Beutels getragen wird, erhält das Pokémon einen weiteren Zug nachdem es einen Gegner besiegt.									
+ExclusiveItemEffect.CelebrateCure		When kept in the bag, the Pokémon will recover from status effects after defeating an enemy.											
+ExclusiveItemEffect.ChanceStatOnTypeHit		When kept in the bag, the Pokémon's {0}-type moves may lower the target's {1}.											
+ExclusiveItemEffect.ChanceStatusOnCategoryHit		When kept in the bag, the Pokémon's {1} moves may inflict the {0} status.											
+ExclusiveItemEffect.ChanceStatusOnTypeHit		When kept in the bag, the Pokémon's {0}-type moves have a chance to inflict the {1} status.											
 ExclusiveItemEffect.ChargeWalker		When kept in the bag, the Pokémon will be able to move when charging attacks.		Wenn es innerhalb des Beutels getragen wird, kann das Pokémon sich bei aufladenen Attacken freibewegen.									
 ExclusiveItemEffect.CheekPouch		When kept in the bag, the Pokémon's HP is restored when it eats a food item.		Wenn es innerhalb des Beutels getragen wird, werden die KP des Pokémons geheilt sobald es ein Nahrungsitem isst.									
 ExclusiveItemEffect.ChestFinder		When kept in the bag, the Pokémon will find more Treasure Chests when exploring in dungeons.		Wenn es innerhalb des Beutels getragen wird, kann das Pokémon mehr Schatztruhen in Dungeons finden.									
@@ -42,7 +46,7 @@ ExclusiveItemEffect.HitAndRun		When kept in the bag, the Pokémon will take redu
 ExclusiveItemEffect.KnockbackOnAttack		When kept in the bag, the Pokémon's regular attack will knock opponents back.											
 ExclusiveItemEffect.LavaTerrain		When kept in the bag, the Pokémon can traverse lava without being burned.											
 ExclusiveItemEffect.LungeAttack		When kept in the bag, it changes the Pokémon's regular attack into a dash.											
-ExclusiveItemEffect.MapStatusOnCategoryUse		When kept in the bag, the Pokémon changes the floor to {1} after using a {0} attack.											
+ExclusiveItemEffect.MapStatusOnCategoryUse		When kept in the bag, the Pokémon changes the floor to {1} after using a {0} move.											
 ExclusiveItemEffect.MapSurveyor		When kept in the bag, it partially reveals the floor's layout the Pokémon reaches a new floor.											
 ExclusiveItemEffect.MasterHurler		When kept in the bag, items thrown by the Pokémon will pierce through enemies.											
 ExclusiveItemEffect.MetronomePlus		When kept in the bag, it increases the Pokémon's luck when using Metronome.											
@@ -54,6 +58,7 @@ ExclusiveItemEffect.NoStatusInWeather		When kept in the bag, the Pokémon is pro
 ExclusiveItemEffect.NVECrit		When kept in the bag, it raises the critical-hit ratio of not-very-effective hits.											
 ExclusiveItemEffect.PassThroughAttacker		When kept in the bag, the Pokemon's moves and items that hit in a straight line will pass through walls.											
 ExclusiveItemEffect.PPBoost		When kept in the bag, the Pokémon gets an extra {0}PP to all of its moves.											
+ExclusiveItemEffect.PPSaver		When kept in the bag, the Pokémon's PP cannot be lowered by the moves and abilities of opposing Pokémon.											
 ExclusiveItemEffect.PracticeSwinger		When kept in the bag, the Pokémon will do increased damage if its previous move missed.											
 ExclusiveItemEffect.PressurePlus		When kept in the bag, the Pokémon will raise the PP usage of opponents that attack it.											
 ExclusiveItemEffect.ProjectileAttack		When kept in the bag, it changes the Pokémon's regular attack into a short projectile.											
@@ -68,16 +73,20 @@ ExclusiveItemEffect.SpikeDropper		When kept in the bag, the Pokémon scatters Sp
 ExclusiveItemEffect.StairSensor		When kept in the bag, it reveals the direction of the staircase whenever the Pokémon reaches a new floor.											
 ExclusiveItemEffect.StatDropImmune		When kept in the bag, the Pokémon cannot have its {0} lowered.											
 ExclusiveItemEffect.StatMirror		When kept in the bag, stat changes inflicted on the Pokémon are passed to the Pokémon that caused it.											
+ExclusiveItemEffect.StatOnCategoryUse		When kept in the bag, the Pokémon's {0} is raised slightly when it uses a {1} move.											
 ExclusiveItemEffect.StatusImmune		When kept in the bag, the Pokémon becomes immune to the {0} status.											
 ExclusiveItemEffect.StatusMirror		When kept in the bag, status problems inflicted on the Pokémon are passed to the Pokémon that caused it.											
 ExclusiveItemEffect.StatusOnAttack		When kept in the bag, the Pokémon's regular attacks and thrown items have a chance to inflict the {0} status.											
-ExclusiveItemEffect.StatusOnCategoryHit		When kept in the bag, the Pokémon's {1} attacks inflict the {0} status.											
-ExclusiveItemEffect.StatusOnCategoryUse		When kept in the bag, the Pokémon gains the {0} status after using a {1} attack.											
+ExclusiveItemEffect.StatusOnCategoryHit		When kept in the bag, the Pokémon's {1} moves inflict the {0} status.											
+ExclusiveItemEffect.StatusOnCategoryUse		When kept in the bag, the Pokémon gains the {0} status after using a {1} move.											
+ExclusiveItemEffect.StatusOnTypeHit		When kept in the bag, the Pokémon's {0}-type moves inflict the {1} status.											
 ExclusiveItemEffect.StatusSplash		When kept in the bag, the Pokémon's stat-changing moves are spread to allies.											
 ExclusiveItemEffect.SuperCrit		When kept in the bag, it raises the critical-hit ratio of super-effective hits.											
 ExclusiveItemEffect.SureHitAttacker		When kept in the bag, the Pokémon's regular attack cannot miss.											
+ExclusiveItemEffect.SweetDreams		When kept in the bag, the Pokémon gradually restores the HP of its teammates while they are asleep.											
 ExclusiveItemEffect.ThrowOnAttack		When kept in the bag, the Pokémon's regular attack will throw opponents back.											
 ExclusiveItemEffect.TrapBuster		When kept in the bag, the Pokémon's moves will destroy traps.											
+ExclusiveItemEffect.TypeBodyguard		When kept in the bag, the Pokémon will step in to take {0}-type attacks for nearby allies.											
 ExclusiveItemEffect.TypeBulldozer		When kept in the bag, it allows {0}-type moves to hit {1}-type Pokémon.											
 ExclusiveItemEffect.TypedAttack		When kept in the bag, the Pokémon's regular attacks change to match its type.											
 ExclusiveItemEffect.TypeGroupWeaknessReduce		When kept in the bag, it reduces damage done to {0}-type members by {1}-type attacks, based on how many are on the team.											

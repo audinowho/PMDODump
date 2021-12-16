@@ -72,13 +72,13 @@ def main():
     support = { "en": "EN" }
 
     # Hardcode
-    localize.merge_main_text("Hardcode",os.path.join("..","Asset","Strings","strings"),support)
+    localize.merge_main_text("Hardcode",os.path.join("..","DumpAsset","Strings","strings"),support)
     print("Hardcode merged.")
-    localize.merge_main_text("Content",os.path.join("..","Asset","Strings","stringsEx"),support)
+    localize.merge_main_text("Content",os.path.join("..","DumpAsset","Strings","stringsEx"),support)
     print("Content merged.")
 
     # Script
-    localize.merge_script_text("Script",os.path.join("..","Asset","Data","Script"),support)
+    localize.merge_script_text("Script",os.path.join("..","DumpAsset","Data","Script"),support)
     print("Scripts merged.")
 
     # functions.append(localize.merge_data_text("Dex","MonsterData",support))
@@ -110,7 +110,7 @@ def main():
     localize.load_special_text("Special",support)
     print("Special merged.")
 
-    localize.load_support_text(os.path.join("..", "Asset", "Strings", "Languages.xml"), support)
+    localize.load_support_text(os.path.join("..", "DumpAsset", "Strings", "Languages.xml"), support)
 
     print("Complete.")
 

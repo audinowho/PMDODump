@@ -162,7 +162,7 @@ Generic Name	Custom Name	User	Evos	Custom Group	Name	Item For	Index	Trade	Rarity
 1* Card		066: Machop	True				D	*	2*	2* 019: MasterHurler							
 0* None		066: Machop	True				E	*	3*	0* 000: None							
 0* None		067: Machoke	True				F	*	3*	0* 000: None							
-3* Torc		071: Victreebel	True				A	*	5*	4* 086: StatusOnCategoryUse	008: Flying	090: Immobilized					
+3* Torc		071: Victreebel	True				A	*	5*	5* 036: WeaknessPayback	008: Flying	090: Immobilized					
 0* None	Digest Scarf	070: Weepinbell	True				B	*	4*	4* 010: AllTerrain							
 1* Leaf		069: Bellsprout	True				C	*	1*	1* 006: NVECrit							
 1* Branch		069: Bellsprout	True				D	*	2*	1* 014: DeepBreather							

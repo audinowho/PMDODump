@@ -2393,7 +2393,7 @@ namespace DataGenerator.Data
             else if (ii == 330)
             {
                 item.Name = new LocalText("Cover Band");
-                item.Desc = new LocalText("An item to be held by a Pokémon. While the holder's HP is at half or above, the it will take attacks for nearby allies.");
+                item.Desc = new LocalText("An item to be held by a Pokémon. While the holder's HP is at half or above, it will take attacks for nearby allies.");
                 item.Sprite = "Band_Green";
                 item.Price = 200;
                 item.ProximityEvent.Radius = 1;
