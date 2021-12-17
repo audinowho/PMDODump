@@ -274,6 +274,8 @@ namespace Updater
             {
                 Console.Write(ex.ToString());
                 Console.Write("Continuing with default settings...");
+                DefaultXml();
+                SaveXml();
             }
         }
 
@@ -304,6 +306,7 @@ namespace Updater
 
         static void SaveXml()
         {
+            try
             {
                 XmlDocument xmldoc = new XmlDocument();
 
@@ -333,6 +336,10 @@ namespace Updater
                 docNode.AppendChild(exes);
 
                 xmldoc.Save("Updater.xml");
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.ToString());
             }
         }
 
