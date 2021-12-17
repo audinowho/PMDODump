@@ -38,6 +38,7 @@ namespace DataGenerator.Data
 
             //money
             MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(63, 72), new RandRange(21, 24));
+            moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
             floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
             //items
@@ -1352,6 +1353,7 @@ namespace DataGenerator.Data
 
             {
                 SpreadHouseZoneStep chestChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanQuota(new RandRange(2, 5), new IntRange(6, 30)));
+                chestChanceZoneStep.ModStates.Add(new FlagType(typeof(ChestModGenState)));
                 chestChanceZoneStep.HouseStepSpawns.Add(new ChestStep<ListMapGenContext>(false, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                 for (int ii = 0; ii < 18; ii++)
                     chestChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, 30), 4);//gummis
@@ -1390,6 +1392,7 @@ namespace DataGenerator.Data
 
             {
                 SpreadHouseZoneStep chestChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanQuota(new RandDecay(1, 5, 50), new IntRange(6, 30)));
+                chestChanceZoneStep.ModStates.Add(new FlagType(typeof(ChestModGenState)));
                 chestChanceZoneStep.HouseStepSpawns.Add(new ChestStep<ListMapGenContext>(true, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                 for (int ii = 0; ii < 18; ii++)
                     chestChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, 30), 4);//gummis
@@ -2416,6 +2419,7 @@ namespace DataGenerator.Data
                 shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(15, 30), 10);
             }
             SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(4, 14), new IntRange(2, 28)), shopZoneSpawns);
+            shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
             floorSegment.ZoneSteps.Add(shopZoneStep);
 
 
@@ -3097,6 +3101,7 @@ namespace DataGenerator.Data
 
             //money
             MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(63, 72), new RandRange(21, 24));
+            moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
             floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
             //items
@@ -3986,6 +3991,7 @@ namespace DataGenerator.Data
 
             {
                 SpreadHouseZoneStep chestChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanQuota(new RandRange(2, 5), new IntRange(6, max_floors)));
+                chestChanceZoneStep.ModStates.Add(new FlagType(typeof(ChestModGenState)));
                 chestChanceZoneStep.HouseStepSpawns.Add(new ChestStep<ListMapGenContext>(false, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
                 for (int ii = 0; ii < 18; ii++)
@@ -4766,6 +4772,7 @@ namespace DataGenerator.Data
                 shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(5, max_floors), 10);
             }
             SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(4, 14), new IntRange(2, 38)), shopZoneSpawns);
+            shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
             floorSegment.ZoneSteps.Add(shopZoneStep);
 
             for (int ii = 0; ii < max_floors; ii++)

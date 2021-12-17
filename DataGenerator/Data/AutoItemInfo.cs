@@ -1731,26 +1731,28 @@ namespace DataGenerator.Data
             else if (type == ExclusiveItemEffect.CoinWatcher)
             {
                 item.Rarity = 3;
-                item.Name.DefaultText = "**" + item.Name.DefaultText;
+                item.Name.DefaultText = item.Name.DefaultText;
                 item.Desc = new LocalText("When kept in the bag, the Pokémon will find more \\uE024 when exploring in dungeons.");
+                item.OnRefresh.Add(0, new FamilyRefreshEvent(new MiscEvent(new CoinModGenState(50))));
             }
             else if (type == ExclusiveItemEffect.HiddenStairFinder)
             {
                 item.Rarity = 3;
                 item.Name.DefaultText = "**" + item.Name.DefaultText;
                 item.Desc = new LocalText("When kept in the bag, the Pokémon will find more Hidden Stairs when exploring in dungeons.");
+                item.OnRefresh.Add(0, new FamilyRefreshEvent(new MiscEvent(new StairsModGenState(10))));
             }
             else if (type == ExclusiveItemEffect.ChestFinder)
             {
                 item.Rarity = 3;
-                item.Name.DefaultText = "**" + item.Name.DefaultText;
                 item.Desc = new LocalText("When kept in the bag, the Pokémon will find more Treasure Chests when exploring in dungeons.");
+                item.OnRefresh.Add(0, new FamilyRefreshEvent(new MiscEvent(new ChestModGenState(10))));
             }
             else if (type == ExclusiveItemEffect.ShopFinder)
             {
                 item.Rarity = 3;
-                item.Name.DefaultText = "**" + item.Name.DefaultText;
                 item.Desc = new LocalText("When kept in the bag, the Pokémon will find more shops when exploring in dungeons.");
+                item.OnRefresh.Add(0, new FamilyRefreshEvent(new MiscEvent(new ShopModGenState(10))));
             }
             else if (type == ExclusiveItemEffect.SecondSTAB)
             {

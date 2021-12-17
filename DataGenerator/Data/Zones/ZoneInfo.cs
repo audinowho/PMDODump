@@ -59,6 +59,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(10, 21), new RandRange(10));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items!
@@ -227,6 +228,7 @@ namespace DataGenerator.Data
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(18, 24), new RandRange(9, 12));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                         //items
@@ -480,6 +482,7 @@ namespace DataGenerator.Data
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                         //items
@@ -655,6 +658,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(36, 52), new RandRange(9, 13));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -857,6 +861,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(66, 90), new RandRange(11, 15));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items!
@@ -977,6 +982,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(104, 134), new RandRange(13, 17));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items!
@@ -1088,6 +1094,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(150, 190), new RandRange(15, 19));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items!
@@ -1201,6 +1208,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(63, 72), new RandRange(21, 24));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items!
@@ -1354,6 +1362,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(96, 104), new RandRange(16, 19));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items!
@@ -1463,6 +1472,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(30, 42), new RandRange(10, 14));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -1731,6 +1741,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(48, 60), new RandRange(12, 15));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -1767,6 +1778,7 @@ namespace DataGenerator.Data
 
 
                     SpreadHouseZoneStep chestChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanQuota(new RandDecay(3, 100, 50), new IntRange(5, 13)));
+                    chestChanceZoneStep.ModStates.Add(new FlagType(typeof(ChestModGenState)));
                     chestChanceZoneStep.HouseStepSpawns.Add(new ChestStep<ListMapGenContext>(true, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                     for (int ii = 0; ii < 18; ii++)
                         chestChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, 30), 4);//gummis
@@ -1877,6 +1889,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(15, 19), new RandRange(15, 19));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items!
@@ -1991,6 +2004,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(30, 42), new RandRange(10, 14));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -2115,6 +2129,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items!
@@ -2234,6 +2249,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items!
@@ -2346,6 +2362,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items!
@@ -2471,6 +2488,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -2581,6 +2599,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -2693,6 +2712,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(30, 42), new RandRange(10, 14));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -2841,6 +2861,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -2961,6 +2982,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(120, 144), new RandRange(15, 18));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -3074,6 +3096,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(120, 144), new RandRange(15, 18));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -3179,6 +3202,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(230, 260), new RandRange(23, 26));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -3288,6 +3312,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(54, 63), new RandRange(18, 21));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -3317,6 +3342,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
 
                     SpreadHouseZoneStep chestChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanQuota(new RandRange(2, 5), new IntRange(6, 30)));
+                    chestChanceZoneStep.ModStates.Add(new FlagType(typeof(ChestModGenState)));
                     chestChanceZoneStep.HouseStepSpawns.Add(new ChestStep<ListMapGenContext>(false, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                     floorSegment.ZoneSteps.Add(chestChanceZoneStep);
 
@@ -3453,6 +3479,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(18, 24), new RandRange(9, 12));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -3743,6 +3770,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -3932,6 +3960,7 @@ namespace DataGenerator.Data
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(108, 120), new RandRange(18, 20));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items
@@ -4572,6 +4601,7 @@ namespace DataGenerator.Data
                         shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(2, max_floors), 10);
                     }
                     SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandDecay(0, 4, 35), new IntRange(2, max_floors)), shopZoneSpawns);
+                    shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
                     floorSegment.ZoneSteps.Add(shopZoneStep);
 
 
