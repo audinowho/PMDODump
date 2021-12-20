@@ -528,29 +528,29 @@ namespace DataGenerator.Data
                 map.AddMarker("entrance_west", new Loc(4, 250), Dir8.Right);
                 map.AddMarker("entrance_north", new Loc(244, 4), Dir8.Down);
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_5", 13), new Loc(344, 224)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_5", 13), new Loc(328, 392)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_5", 13, Dir8.Left), new Loc(344, 224)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_5", 13, Dir8.Left), new Loc(328, 392)));
                 map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_5", 13, Dir8.Right), new Loc(88, 344)));
                 map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_5", 13, Dir8.Right), new Loc(272, 72)));
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_4", 13), new Loc(104, 224)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_4", 13, Dir8.Left), new Loc(104, 224)));
                 map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_4", 13, Dir8.Right), new Loc(376, 328)));
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13), new Loc(160, 16)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13), new Loc(352, 64)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13), new Loc(408, 128)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13), new Loc(72, 192)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13), new Loc(384, 200)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13), new Loc(48, 360)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Left), new Loc(160, 16)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Left), new Loc(352, 64)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Left), new Loc(408, 128)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Left), new Loc(72, 192)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Left), new Loc(384, 200)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Left), new Loc(48, 360)));
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13), new Loc(136, 96)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13), new Loc(448, 176)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13), new Loc(40, 288)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13), new Loc(432, 384)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13, Dir8.Left), new Loc(136, 96)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13, Dir8.Left), new Loc(448, 176)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13, Dir8.Left), new Loc(40, 288)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13, Dir8.Left), new Loc(432, 384)));
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13), new Loc(312, 0)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13), new Loc(8, 192)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13), new Loc(440, 288)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13, Dir8.Left), new Loc(312, 0)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13, Dir8.Left), new Loc(8, 192)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13, Dir8.Left), new Loc(440, 288)));
 
 
                 //Reload the map script
@@ -813,115 +813,115 @@ namespace DataGenerator.Data
                 map.AddMarker("entrance_post_office", new Loc(408, 168), Dir8.Down);
 
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(192, 80)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(112, 104)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(72, 144)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(80, 192)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(72, 248)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(216, 248)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(112, 296)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(96, 368)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(176, 376)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(112, 408)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(64, 432)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(184, 584)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(128, 600)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(192, 80)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(112, 104)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(72, 144)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(80, 192)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(72, 248)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(216, 248)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(112, 296)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(96, 368)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(176, 376)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(112, 408)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(64, 432)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(184, 584)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(128, 600)));
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(272, 88)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(504, 96)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(312, 112)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(256, 224)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(344, 248)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(464, 272)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(288, 400)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(512, 400)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(320, 464)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(400, 472)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(496, 472)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(456, 584)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(368, 608)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(272, 88)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(504, 96)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(312, 112)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(256, 224)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(344, 248)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(464, 272)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(288, 400)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(512, 400)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(320, 464)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(400, 472)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(496, 472)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(456, 584)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(368, 608)));
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(560, 72)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(640, 128)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(576, 224)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(792, 264)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(568, 272)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(688, 288)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(616, 312)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(736, 312)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(792, 384)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(696, 544)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(648, 584)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(536, 640)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(688, 640)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(768, 632)));
-
-
-
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0), new Loc(688, 144)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0), new Loc(688, 82)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0), new Loc(720, 112)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0), new Loc(656, 112)));
-
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0), new Loc(760, 224)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0), new Loc(760, 162)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0), new Loc(728, 192)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0), new Loc(792, 192)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(560, 72)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(640, 128)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(576, 224)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(792, 264)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(568, 272)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(688, 288)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(616, 312)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(736, 312)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(792, 384)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(696, 544)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(648, 584)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(536, 640)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(688, 640)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(768, 632)));
 
 
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Stump_Table", 0), new Rect(672, 104, 48, 40), new Loc(0, 8), false, "Stump_Table");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Stump_Table", 0), new Rect(744, 184, 48, 40), new Loc(0, 8), false, "Stump_Table");
-                    map.AddObject(groundObject);
-                }
 
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(0, 0, 4, 768), true, "West_Exit");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(0, 0, 912, 4), true, "North_Exit");
-                    map.AddObject(groundObject);
-                }
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0, Dir8.Left), new Loc(688, 144)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0, Dir8.Left), new Loc(688, 82)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0, Dir8.Left), new Loc(720, 112)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0, Dir8.Left), new Loc(656, 112)));
+
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0, Dir8.Left), new Loc(760, 224)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0, Dir8.Left), new Loc(760, 162)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0, Dir8.Left), new Loc(728, 192)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Stump_Chair", 0, Dir8.Left), new Loc(792, 192)));
 
 
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Mission_Board", 0), new Rect(88, 544, 40, 24), new Loc(16, 32), false, "Mission_Board");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Stump_Table", 0, Dir8.Left), new Rect(672, 104, 48, 40), new Loc(0, 8), false, "Stump_Table");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(240, 512, 16, 16), false, "Shop");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Stump_Table", 0, Dir8.Left), new Rect(744, 184, 48, 40), new Loc(0, 8), false, "Stump_Table");
+                    map.AddObject(groundObject);
+                }
+
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0, Dir8.Left), new Rect(0, 0, 4, 768), true, "West_Exit");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(576, 512, 24, 16), false, "Appraisal");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0, Dir8.Left), new Rect(0, 0, 912, 4), true, "North_Exit");
+                    map.AddObject(groundObject);
+                }
+
+
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Mission_Board", 0, Dir8.Left), new Rect(88, 544, 40, 24), new Loc(16, 32), false, "Mission_Board");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(464, 528, 16, 16), false, "Swap");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0, Dir8.Left), new Rect(240, 512, 16, 16), false, "Shop");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(352, 528, 16, 16), false, "Tutor");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0, Dir8.Left), new Rect(576, 512, 24, 16), false, "Appraisal");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(240, 144, 16, 16), false, "Locator");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0, Dir8.Left), new Rect(464, 528, 16, 16), false, "Swap");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(576, 144, 16, 16), false, "Juice");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0, Dir8.Left), new Rect(352, 528, 16, 16), false, "Tutor");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(240, 144, 16, 16), false, "Music");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0, Dir8.Left), new Rect(240, 144, 16, 16), false, "Locator");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(408, 152, 16, 16), true, "Post_Office_Entrance");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0, Dir8.Left), new Rect(576, 144, 16, 16), false, "Juice");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0, Dir8.Left), new Rect(240, 144, 16, 16), false, "Music");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0, Dir8.Left), new Rect(408, 152, 16, 16), true, "Post_Office_Entrance");
                     map.AddObject(groundObject);
                 }
 
@@ -962,46 +962,32 @@ namespace DataGenerator.Data
                 }
 
 
-                map.AddSpawner(CreateAssemblySpawner(1, new Loc(448, 328), Dir8.DownLeft));
-                map.AddSpawner(CreateAssemblySpawner(2, new Loc(352, 384), Dir8.UpRight));
-                map.AddSpawner(CreateAssemblySpawner(3, new Loc(368, 312), Dir8.DownRight));
-                map.AddSpawner(CreateAssemblySpawner(4, new Loc(448, 408), Dir8.UpLeft));
-                map.AddSpawner(CreateAssemblySpawner(5, new Loc(424, 336), Dir8.UpRight));
-                map.AddSpawner(CreateAssemblySpawner(6, new Loc(200, 240), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(7, new Loc(600, 288), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(8, new Loc(352, 232), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(9, new Loc(192, 328), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(10, new Loc(296, 592), Dir8.UpLeft));
-                map.AddSpawner(CreateAssemblySpawner(11, new Loc(512, 280), Dir8.DownLeft));
-                map.AddSpawner(CreateAssemblySpawner(12, new Loc(704, 536), Dir8.DownLeft));
-                map.AddSpawner(CreateAssemblySpawner(13, new Loc(112, 600), Dir8.Up));
-                map.AddSpawner(CreateAssemblySpawner(14, new Loc(80, 400), Dir8.DownRight));
-                map.AddSpawner(CreateAssemblySpawner(15, new Loc(96, 424), Dir8.UpLeft));
-                map.AddSpawner(CreateAssemblySpawner(16, new Loc(120, 208), Dir8.UpRight));
-                map.AddSpawner(CreateAssemblySpawner(17, new Loc(696, 360), Dir8.Left));
-                map.AddSpawner(CreateAssemblySpawner(18, new Loc(480, 240), Dir8.UpLeft));
-                map.AddSpawner(CreateAssemblySpawner(19, new Loc(232, 280), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(20, new Loc(112, 96), Dir8.Right));
-                map.AddSpawner(CreateAssemblySpawner(21, new Loc(728, 184), Dir8.Right));
-                map.AddSpawner(CreateAssemblySpawner(22, new Loc(472, 640), Dir8.UpRight));
-                map.AddSpawner(CreateAssemblySpawner(23, new Loc(496, 624), Dir8.DownLeft));
-                map.AddSpawner(CreateAssemblySpawner(24, new Loc(688, 80), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(25, new Loc(96, 280), Dir8.DownRight));
-                map.AddSpawner(CreateAssemblySpawner(26, new Loc(560, 248), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(27, new Loc(72, 128), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(28, new Loc(792, 416), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(29, new Loc(760, 160), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(30, new Loc(720, 104), Dir8.Left));
-                map.AddSpawner(CreateAssemblySpawner(31, new Loc(424, 600), Dir8.DownRight));
-                map.AddSpawner(CreateAssemblySpawner(32, new Loc(792, 320), Dir8.Left));
-                map.AddSpawner(CreateAssemblySpawner(33, new Loc(752, 294), Dir8.DownRight));
-                map.AddSpawner(CreateAssemblySpawner(34, new Loc(672, 576), Dir8.UpRight));
-                map.AddSpawner(CreateAssemblySpawner(35, new Loc(760, 368), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(36, new Loc(608, 624), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(37, new Loc(776, 584), Dir8.Down));
-                map.AddSpawner(CreateAssemblySpawner(38, new Loc(728, 624), Dir8.Right));
-                map.AddSpawner(CreateAssemblySpawner(39, new Loc(688, 144), Dir8.Up));
-                map.AddSpawner(CreateAssemblySpawner(40, new Loc(792, 184), Dir8.Left));
+                map.AddSpawner(CreateAssemblySpawner(1, new Loc(352, 384), Dir8.UpRight));
+                map.AddSpawner(CreateAssemblySpawner(2, new Loc(448, 408), Dir8.UpLeft));
+                map.AddSpawner(CreateAssemblySpawner(3, new Loc(200, 240), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(4, new Loc(600, 288), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(5, new Loc(352, 232), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(6, new Loc(296, 592), Dir8.UpLeft));
+                map.AddSpawner(CreateAssemblySpawner(7, new Loc(512, 280), Dir8.DownLeft));
+                map.AddSpawner(CreateAssemblySpawner(8, new Loc(80, 400), Dir8.DownRight));
+                map.AddSpawner(CreateAssemblySpawner(9, new Loc(96, 424), Dir8.UpLeft));
+                map.AddSpawner(CreateAssemblySpawner(10, new Loc(120, 208), Dir8.UpRight));
+                map.AddSpawner(CreateAssemblySpawner(11, new Loc(480, 240), Dir8.UpLeft));
+                map.AddSpawner(CreateAssemblySpawner(12, new Loc(232, 280), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(13, new Loc(688, 80), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(14, new Loc(96, 280), Dir8.DownRight));
+                map.AddSpawner(CreateAssemblySpawner(15, new Loc(560, 248), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(16, new Loc(72, 128), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(17, new Loc(792, 416), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(18, new Loc(760, 160), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(19, new Loc(424, 600), Dir8.DownRight));
+                map.AddSpawner(CreateAssemblySpawner(20, new Loc(792, 320), Dir8.Left));
+                map.AddSpawner(CreateAssemblySpawner(21, new Loc(752, 294), Dir8.DownRight));
+                map.AddSpawner(CreateAssemblySpawner(22, new Loc(760, 368), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(23, new Loc(608, 624), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(24, new Loc(776, 584), Dir8.Down));
+                map.AddSpawner(CreateAssemblySpawner(25, new Loc(728, 624), Dir8.Right));
+                map.AddSpawner(CreateAssemblySpawner(26, new Loc(792, 184), Dir8.Left));
 
 
                 map.Music = "A02. Base Town.ogg";
@@ -1266,20 +1252,20 @@ namespace DataGenerator.Data
                 map.AddMarker("entrance_east", new Loc(772, 268), Dir8.Left);
 
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(56, 216)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(600, 192)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(32, 448)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(160, 400)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(472, 376)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(552, 400)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(712, 392)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7), new Loc(744, 448)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(56, 216)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(600, 192)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(32, 448)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(160, 400)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(472, 376)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(552, 400)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(712, 392)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_2", 7, Dir8.Left), new Loc(744, 448)));
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(144, 184)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(184, 176)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(120, 440)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(320, 384)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7), new Loc(656, 440)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(144, 184)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(184, 176)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(120, 440)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(320, 384)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Town_1", 7, Dir8.Left), new Loc(656, 440)));
 
                 {
                     GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(788, 0, 4, 528), true, "East_Exit");
@@ -1346,12 +1332,12 @@ namespace DataGenerator.Data
 
 
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tent_Plain", 1, Dir8.Left), new Rect(168, 352, 40, 32), new Loc(16, 56), false, "Tent_0");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tent", 1), Dir8.Right, new Rect(168, 352, 40, 32), new Loc(16, 40), false, "Tent_0");
                     map.AddObject(groundObject);
                 }
 
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tent_Plain", 1, Dir8.Right), new Rect(448, 184, 40, 32), new Loc(40, 56), false, "Tent_1");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tent", 1), Dir8.Left, new Rect(448, 184, 40, 32), new Loc(16, 40), false, "Tent_1");
                     map.AddObject(groundObject);
                 }
 
@@ -1620,193 +1606,193 @@ namespace DataGenerator.Data
                 }
 
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1, Dir8.Left), new Rect(512, 504, 16, 16), new Loc(0, 0), false, "Pot_0");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1), Dir8.Left, new Rect(512, 504, 16, 16), new Loc(0, 0), false, "Pot_0");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1, Dir8.Left), new Rect(528, 504, 16, 16), new Loc(0, 0), false, "Pot_1");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1), Dir8.Left, new Rect(528, 504, 16, 16), new Loc(0, 0), false, "Pot_1");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1, Dir8.Left), new Rect(632, 200, 16, 16), new Loc(0, 0), false, "Pot_2");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1), Dir8.Left, new Rect(632, 200, 16, 16), new Loc(0, 0), false, "Pot_2");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1, Dir8.Left), new Rect(656, 200, 16, 16), new Loc(0, 0), false, "Pot_3");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1), Dir8.Left, new Rect(656, 200, 16, 16), new Loc(0, 0), false, "Pot_3");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1, Dir8.Left), new Rect(720, 336, 16, 16), new Loc(0, 0), false, "Pot_4");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1), Dir8.Left, new Rect(720, 336, 16, 16), new Loc(0, 0), false, "Pot_4");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1, Dir8.Left), new Rect(736, 336, 16, 16), new Loc(0, 0), false, "Pot_5");
-                    map.AddObject(groundObject);
-                }
-
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1, Dir8.Left), new Rect(520, 496, 16, 16), new Loc(0, 0), false, "Pot_6");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1, Dir8.Left), new Rect(640, 192, 16, 16), new Loc(0, 0), false, "Pot_7");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1, Dir8.Left), new Rect(728, 328, 16, 16), new Loc(0, 0), false, "Pot_8");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1, Dir8.Left), new Rect(912, 344, 16, 16), new Loc(0, 0), false, "Pot_9");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1, Dir8.Left), new Rect(312, 184, 16, 16), new Loc(32, 56), false, "Tree_Town_8");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1, Dir8.Left), new Rect(264, 456, 16, 16), new Loc(32, 56), false, "Tree_Town_0");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1, Dir8.Left), new Rect(408, 344, 16, 16), new Loc(32, 56), false, "Tree_Town_1");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1, Dir8.Left), new Rect(704, 272, 16, 16), new Loc(32, 56), false, "Tree_Town_2");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1, Dir8.Left), new Rect(728, 160, 16, 16), new Loc(32, 56), false, "Tree_Town_3");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1, Dir8.Left), new Rect(880, 320, 16, 16), new Loc(32, 56), false, "Tree_Town_4");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1, Dir8.Left), new Rect(944, 504, 16, 16), new Loc(32, 56), false, "Tree_Town_5");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1, Dir8.Left), new Rect(952, 248, 16, 16), new Loc(32, 56), false, "Tree_Town_6");
-                    map.AddObject(groundObject);
-                }
-                {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1, Dir8.Left), new Rect(1040, 312, 16, 16), new Loc(32, 56), false, "Tree_Town_7");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1), Dir8.Left, new Rect(736, 336, 16, 16), new Loc(0, 0), false, "Pot_5");
                     map.AddObject(groundObject);
                 }
 
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Campfire", 1, Dir8.Left), new Rect(304, 480, 32, 24), new Loc(0, 8), false, "Campfire_0");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1), Dir8.Left, new Rect(520, 496, 16, 16), new Loc(0, 0), false, "Pot_6");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Campfire", 1, Dir8.Left), new Rect(400, 168, 32, 24), new Loc(0, 8), false, "Campfire_1");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1), Dir8.Left, new Rect(640, 192, 16, 16), new Loc(0, 0), false, "Pot_7");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Campfire", 1, Dir8.Left), new Rect(496, 344, 32, 24), new Loc(0, 8), false, "Campfire_2");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1), Dir8.Left, new Rect(728, 328, 16, 16), new Loc(0, 0), false, "Pot_8");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Campfire", 1, Dir8.Left), new Rect(856, 200, 32, 24), new Loc(0, 8), false, "Campfire_3");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Pot", 1), Dir8.Left, new Rect(912, 344, 16, 16), new Loc(0, 0), false, "Pot_9");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1, Dir8.Left), new Rect(232, 280, 48, 16), new Loc(0, 32), false, "Fence_9");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1), Dir8.Left, new Rect(312, 184, 16, 16), new Loc(32, 56), false, "Tree_Town_8");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1, Dir8.Left), new Rect(0, 424, 48, 16), new Loc(0, 32), false, "Fence_0");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1), Dir8.Left, new Rect(264, 456, 16, 16), new Loc(32, 56), false, "Tree_Town_0");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1, Dir8.Left), new Rect(56, 424, 48, 16), new Loc(0, 32), false, "Fence_1");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1), Dir8.Left, new Rect(408, 344, 16, 16), new Loc(32, 56), false, "Tree_Town_1");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1, Dir8.Left), new Rect(112, 424, 48, 16), new Loc(0, 32), false, "Fence_2");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1), Dir8.Left, new Rect(704, 272, 16, 16), new Loc(32, 56), false, "Tree_Town_2");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1, Dir8.Left), new Rect(360, 512, 48, 16), new Loc(0, 32), false, "Fence_3");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1), Dir8.Left, new Rect(728, 160, 16, 16), new Loc(32, 56), false, "Tree_Town_3");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1, Dir8.Left), new Rect(456, 512, 48, 16), new Loc(0, 32), false, "Fence_4");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1), Dir8.Left, new Rect(880, 320, 16, 16), new Loc(32, 56), false, "Tree_Town_4");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1, Dir8.Left), new Rect(528, 248, 48, 16), new Loc(0, 32), false, "Fence_5");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1), Dir8.Left, new Rect(944, 504, 16, 16), new Loc(32, 56), false, "Tree_Town_5");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1, Dir8.Left), new Rect(672, 200, 48, 16), new Loc(0, 32), false, "Fence_6");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1), Dir8.Left, new Rect(952, 248, 16, 16), new Loc(32, 56), false, "Tree_Town_6");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1, Dir8.Left), new Rect(936, 416, 48, 16), new Loc(0, 32), false, "Fence_7");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tree_Town", 1), Dir8.Left, new Rect(1040, 312, 16, 16), new Loc(32, 56), false, "Tree_Town_7");
+                    map.AddObject(groundObject);
+                }
+
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Campfire", 1), Dir8.Left, new Rect(304, 480, 32, 24), new Loc(0, 8), false, "Campfire_0");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1, Dir8.Left), new Rect(1064, 416, 48, 16), new Loc(0, 32), false, "Fence_8");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Campfire", 1), Dir8.Left, new Rect(400, 168, 32, 24), new Loc(0, 8), false, "Campfire_1");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1, Dir8.Left), new Rect(96, 352, 24, 16), new Loc(0, 8), false, "Logs_Small_0");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Campfire", 1), Dir8.Left, new Rect(496, 344, 32, 24), new Loc(0, 8), false, "Campfire_2");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1, Dir8.Right), new Rect(168, 440, 24, 16), new Loc(0, 8), false, "Logs_Small_1");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Campfire", 1), Dir8.Left, new Rect(856, 200, 32, 24), new Loc(0, 8), false, "Campfire_3");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1, Dir8.Left), new Rect(200, 256, 24, 16), new Loc(0, 8), false, "Logs_Small_2");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1), Dir8.Left, new Rect(232, 280, 48, 16), new Loc(0, 32), false, "Fence_9");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1, Dir8.Right), new Rect(232, 472, 24, 16), new Loc(0, 8), false, "Logs_Small_3");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1), Dir8.Left, new Rect(0, 424, 48, 16), new Loc(0, 32), false, "Fence_0");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1, Dir8.Right), new Rect(432, 512, 24, 16), new Loc(0, 8), false, "Logs_Small_4");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1), Dir8.Left, new Rect(56, 424, 48, 16), new Loc(0, 32), false, "Fence_1");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1, Dir8.Left), new Rect(440, 328, 24, 16), new Loc(0, 8), false, "Logs_Small_5");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1), Dir8.Left, new Rect(112, 424, 48, 16), new Loc(0, 32), false, "Fence_2");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1, Dir8.Left), new Rect(456, 152, 24, 16), new Loc(0, 8), false, "Logs_Small_6");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1), Dir8.Left, new Rect(360, 512, 48, 16), new Loc(0, 32), false, "Fence_3");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1, Dir8.Left), new Rect(576, 336, 24, 16), new Loc(0, 8), false, "Logs_Small_7");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1), Dir8.Left, new Rect(456, 512, 48, 16), new Loc(0, 32), false, "Fence_4");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1, Dir8.Left), new Rect(896, 240, 24, 16), new Loc(0, 8), false, "Logs_Small_8");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1), Dir8.Left, new Rect(528, 248, 48, 16), new Loc(0, 32), false, "Fence_5");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1, Dir8.Left), new Rect(992, 424, 24, 16), new Loc(0, 8), false, "Logs_Small_9");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1), Dir8.Left, new Rect(672, 200, 48, 16), new Loc(0, 32), false, "Fence_6");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Stacked", 1, Dir8.Left), new Rect(592, 440, 48, 32), new Loc(0, 16), false, "Logs_Stacked_0");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1), Dir8.Left, new Rect(936, 416, 48, 16), new Loc(0, 32), false, "Fence_7");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tent", 1, Dir8.Left), new Rect(240, 224, 48, 40), new Loc(16, 40), false, "Tent_2");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Fence", 1), Dir8.Left, new Rect(1064, 416, 48, 16), new Loc(0, 32), false, "Fence_8");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tent", 1, Dir8.Right), new Rect(528, 456, 48, 40), new Loc(16, 40), false, "Tent_0");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1), Dir8.Left, new Rect(96, 352, 24, 16), new Loc(0, 8), false, "Logs_Small_0");
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tent", 1, Dir8.Left), new Rect(752, 304, 48, 40), new Loc(16, 40), false, "Tent_1");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1), Dir8.Right, new Rect(168, 440, 24, 16), new Loc(0, 8), false, "Logs_Small_1");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1), Dir8.Left, new Rect(200, 256, 24, 16), new Loc(0, 8), false, "Logs_Small_2");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1), Dir8.Right, new Rect(232, 472, 24, 16), new Loc(0, 8), false, "Logs_Small_3");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1), Dir8.Right, new Rect(432, 512, 24, 16), new Loc(0, 8), false, "Logs_Small_4");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1), Dir8.Left, new Rect(440, 328, 24, 16), new Loc(0, 8), false, "Logs_Small_5");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1), Dir8.Left, new Rect(456, 152, 24, 16), new Loc(0, 8), false, "Logs_Small_6");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1), Dir8.Left, new Rect(576, 336, 24, 16), new Loc(0, 8), false, "Logs_Small_7");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1), Dir8.Left, new Rect(896, 240, 24, 16), new Loc(0, 8), false, "Logs_Small_8");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Small", 1), Dir8.Left, new Rect(992, 424, 24, 16), new Loc(0, 8), false, "Logs_Small_9");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Logs_Stacked", 1), Dir8.Left, new Rect(592, 440, 48, 32), new Loc(0, 16), false, "Logs_Stacked_0");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tent", 1), Dir8.Left, new Rect(240, 224, 48, 40), new Loc(16, 40), false, "Tent_2");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tent", 1), Dir8.Right, new Rect(528, 456, 48, 40), new Loc(16, 40), false, "Tent_0");
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Tent", 1), Dir8.Left, new Rect(752, 304, 48, 40), new Loc(16, 40), false, "Tent_1");
                     map.AddObject(groundObject);
                 }
 
@@ -2365,28 +2351,28 @@ namespace DataGenerator.Data
                 map.AddMarker("entrance_hut", new Loc(240, 200), Dir8.Down);
 
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_5", 13), new Loc(168, 200)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_5", 13, Dir8.Left), new Loc(168, 200)));
                 map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_5", 13, Dir8.Right), new Loc(296, 200)));
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_4", 13), new Loc(168, 464)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_4", 13, Dir8.Left), new Loc(168, 464)));
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13), new Loc(72, 64)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13), new Loc(120, 200)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Left), new Loc(72, 64)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Left), new Loc(120, 200)));
                 map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Right), new Loc(312, 352)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13), new Loc(144, 376)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13), new Loc(296, 592)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13), new Loc(104, 672)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Left), new Loc(144, 376)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Left), new Loc(296, 592)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_2", 13, Dir8.Left), new Loc(104, 672)));
 
                 map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13, Dir8.Right), new Loc(368, 448)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13), new Loc(360, 224)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13, Dir8.Left), new Loc(360, 224)));
                 map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13, Dir8.Right), new Loc(40, 232)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13), new Loc(40, 480)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13), new Loc(368, 560)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13, Dir8.Left), new Loc(40, 480)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_1", 13, Dir8.Left), new Loc(368, 560)));
 
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13), new Loc(312, 80)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13), new Loc(24, 344)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13), new Loc(312, 408)));
-                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13), new Loc(184, 600)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13, Dir8.Left), new Loc(312, 80)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13, Dir8.Left), new Loc(24, 344)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13, Dir8.Left), new Loc(312, 408)));
+                map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13, Dir8.Left), new Loc(184, 600)));
                 map.Decorations[0].Anims.Add(new GroundAnim(new ObjAnimData("Flowers_Tropical_3", 13, Dir8.Right), new Loc(352, 696)));
 
 

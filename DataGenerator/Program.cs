@@ -353,14 +353,8 @@ namespace DataGenerator
                             //    GraphicsManager.InitStatic();
 
                                 MapInfo.AddMapData();
-                                MapInfo.AddGroundData(MapInfo.MapNames[0]);
-                                MapInfo.AddGroundData(MapInfo.MapNames[5]);
-                                MapInfo.AddGroundData(MapInfo.MapNames[6]);
-                                MapInfo.AddGroundData(MapInfo.MapNames[7]);
-                                MapInfo.AddGroundData(MapInfo.MapNames[8]);
-                                MapInfo.AddGroundData(MapInfo.MapNames[9]);
-                                MapInfo.AddGroundData(MapInfo.MapNames[10]);
-                                ZoneInfo.AddZoneData();
+                            MapInfo.AddGroundData(MapInfo.MapNames[0]);
+                            ZoneInfo.AddZoneData();
                             //}
                         }
 

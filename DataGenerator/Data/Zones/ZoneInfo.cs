@@ -109,6 +109,40 @@ namespace DataGenerator.Data
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
+
+                    RandBag<IGenPriority> npcZoneSpawns = new RandBag<IGenPriority>();
+                    npcZoneSpawns.RemoveOnRoll = true;
+                    //Neutral NPCs
+                    {
+                        PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
+                        MobSpawn post_mob = new MobSpawn();
+                        post_mob.BaseForm = new MonsterID(113, 0, 0, Gender.Female);
+                        post_mob.Tactic = 22;
+                        post_mob.Level = new RandRange(12);
+                        post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_NEUTRAL"))));
+                        SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                        multiTeamSpawner.Spawns.Add(post_team);
+                        PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
+                        randomSpawn.Ally = true;
+                        npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                    }
+                    //EXP On move use only
+                    {
+                        PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
+                        MobSpawn post_mob = new MobSpawn();
+                        post_mob.BaseForm = new MonsterID(27, 0, 0, Gender.Male);
+                        post_mob.Tactic = 21;
+                        post_mob.Level = new RandRange(14);
+                        post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_EXP"))));
+                        SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                        multiTeamSpawner.Spawns.Add(post_team);
+                        PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
+                        randomSpawn.Ally = true;
+                        npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                    }
+                    SpreadStepZoneStep npcZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(2), new IntRange(0, max_floors), true), npcZoneSpawns);
+                    floorSegment.ZoneSteps.Add(npcZoneStep);
+
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
@@ -221,6 +255,7 @@ namespace DataGenerator.Data
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
+                        int max_floors = 7;
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
@@ -330,12 +365,47 @@ namespace DataGenerator.Data
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, 7), 12);
                         floorSegment.ZoneSteps.Add(poolSpawn);
 
-                    TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
-                    tileSpawn.Priority = PR_RESPAWN_TRAP;
-                    floorSegment.ZoneSteps.Add(tileSpawn);
+
+                        RandBag<IGenPriority> npcZoneSpawns = new RandBag<IGenPriority>();
+                        npcZoneSpawns.RemoveOnRoll = true;
+                        //Recruitment System
+                        {
+                            PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
+                            MobSpawn post_mob = new MobSpawn();
+                            post_mob.BaseForm = new MonsterID(182, 0, 0, Gender.Female);
+                            post_mob.Tactic = 22;
+                            post_mob.Level = new RandRange(21);
+                            post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_RECRUIT"))));
+                            SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                            multiTeamSpawner.Spawns.Add(post_team);
+                            PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
+                            randomSpawn.Ally = true;
+                            npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                        }
+                        //Aipom and wonder tiles
+                        {
+                            PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
+                            MobSpawn post_mob = new MobSpawn();
+                            post_mob.BaseForm = new MonsterID(66, 0, 0, Gender.Male);
+                            post_mob.Tactic = 21;
+                            post_mob.Level = new RandRange(14);
+                            post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_STAT_DROP"))));
+                            SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                            multiTeamSpawner.Spawns.Add(post_team);
+                            PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
+                            randomSpawn.Ally = true;
+                            npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                        }
+                        SpreadStepZoneStep npcZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(2), new IntRange(1, 5), true), npcZoneSpawns);
+                        floorSegment.ZoneSteps.Add(npcZoneStep);
 
 
-                        for (int ii = 0; ii < 7; ii++)
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
                         {
                             GridFloorGen layout = new GridFloorGen();
 
@@ -720,6 +790,51 @@ namespace DataGenerator.Data
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, 10), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
+
+                    RandBag<IGenPriority> npcZoneSpawns = new RandBag<IGenPriority>();
+                    npcZoneSpawns.RemoveOnRoll = true;
+                    //Speed stat and missing
+                    {
+                        PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
+                        MobSpawn post_mob = new MobSpawn();
+                        post_mob.BaseForm = new MonsterID(25, 0, 0, Gender.Male);
+                        post_mob.Tactic = 21;
+                        post_mob.Level = new RandRange(28);
+                        post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_MISS"))));
+                        SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                        multiTeamSpawner.Spawns.Add(post_team);
+                        PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
+                        randomSpawn.Ally = true;
+                        npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                    }
+                    //Team Mode
+                    {
+                        PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
+                        SpecificTeamSpawner post_team = new SpecificTeamSpawner();
+                        {
+                            MobSpawn post_mob = new MobSpawn();
+                            post_mob.BaseForm = new MonsterID(311, 0, 0, Gender.Male);
+                            post_mob.Tactic = 21;
+                            post_mob.Level = new RandRange(20);
+                            post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new BattleScriptEvent("PairTalk", "{Pair=0}")));
+                            post_team.Spawns.Add(post_mob);
+                        }
+                        {
+                            MobSpawn post_mob = new MobSpawn();
+                            post_mob.BaseForm = new MonsterID(312, 0, 0, Gender.Male);
+                            post_mob.Tactic = 21;
+                            post_mob.Level = new RandRange(20);
+                            post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new BattleScriptEvent("PairTalk", "{Pair=1}")));
+                            post_team.Spawns.Add(post_mob);
+                        }
+                        multiTeamSpawner.Spawns.Add(post_team);
+                        PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
+                        randomSpawn.Ally = true;
+                        npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                    }
+                    SpreadStepZoneStep npcZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(2), new IntRange(0, 8), true), npcZoneSpawns);
+                    floorSegment.ZoneSteps.Add(npcZoneStep);
+
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
@@ -3574,6 +3689,27 @@ namespace DataGenerator.Data
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, 7), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
+
+
+                    RandBag<IGenPriority> npcZoneSpawns = new RandBag<IGenPriority>();
+                    npcZoneSpawns.RemoveOnRoll = true;
+                    //Supersonic's range
+                    {
+                        PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
+                        MobSpawn post_mob = new MobSpawn();
+                        post_mob.BaseForm = new MonsterID(27, 0, 0, Gender.Male);
+                        post_mob.Tactic = 21;
+                        post_mob.Level = new RandRange(14);
+                        post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_RANGE"))));
+                        SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                        multiTeamSpawner.Spawns.Add(post_team);
+                        PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
+                        randomSpawn.Ally = true;
+                        npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                    }
+                    SpreadStepZoneStep npcZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(2), new IntRange(2, 6), true), npcZoneSpawns);
+                    floorSegment.ZoneSteps.Add(npcZoneStep);
+
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
