@@ -370,6 +370,19 @@ namespace DataGenerator.Data
                     map.AddObject(groundObject);
                 }
                 {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(232, 152, 16, 16), true, "Entrance");
+                    groundObject.SetTriggerType(GroundEntity.EEntityTriggerTypes.TouchOnce);
+                    groundObject.Passable = true;
+                    map.AddObject(groundObject);
+                }
+                {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(248, 168, 16, 16), true, "Activation");
+                    groundObject.Passable = true;
+                    groundObject.SetTriggerType(GroundEntity.EEntityTriggerTypes.TouchOnce);
+                    groundObject.EntEnabled = false;
+                    map.AddObject(groundObject);
+                }
+                {
                     GroundObject groundObject = new GroundObject(new ObjAnimData("Assembly", 1, 0, 0), new Rect(48, 224, 24, 24), new Loc(0, 8), false, "Assembly");
                     map.AddObject(groundObject);
                 }
