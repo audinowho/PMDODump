@@ -157,7 +157,7 @@ namespace DataGenerator.Data
                         AddWaterSteps(layout, 3, new RandRange(30));//water
 
                         //Tilesets
-                        AddTextureData(layout, 150, 151, 152, 13);
+                        AddTextureData(layout, 93, 94, 95, 13);
 
                         //money
                         AddMoneyData(layout, new RandRange(1, 3));
