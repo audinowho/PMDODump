@@ -3672,6 +3672,7 @@ namespace DataGenerator.Data
                 BattleFX itemFX = new BattleFX();
                 itemFX.Sound = "DUN_Move_Start";
                 itemFX.Emitter = new SingleEmitter(new AnimData("Charge_Up", 3));
+                itemFX.Delay = 10;
                 item.UseAction.PreActions.Add(itemFX);
             }
             else if (item.UsageType == ItemData.UseType.Learn || item.ItemStates.Contains<MachineState>())
