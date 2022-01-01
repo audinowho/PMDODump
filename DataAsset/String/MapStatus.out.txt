@@ -77,5 +77,5 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0039-0001|data.Desc				
 0040-0000|data.Name		Foe FOV		
 0040-0001|data.Desc				
-0041-0000|data.Name		Scanner		
+0041-0000|data.Name		Scanner			Escáner
 0041-0001|data.Desc				

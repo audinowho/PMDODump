@@ -1,8 +1,8 @@
 Key		EN	FR	DE	ES
 base_camp-0000|data.Name		Base Camp	Camp de Base	Hauptlager	Campamento Base
-base_camp_2-0000|data.Name		Base Camp	Camp de Base	Hauptlager	Campamento Base
+base_camp_2-0000|data.Name		Base Town			
 canyon_camp-0000|data.Name		Ravine Camp			
-cliff_camp-0000|data.Name		Cliff Camp	Camp de Falaise	Klippen-Lager	Campamento Acantilado
+cliff_camp-0000|data.Name		Cliff Camp			
 final_stop-0000|data.Name		Path to the Summit			
 forest_camp-0000|data.Name		Forest Camp	Camp Fôrestier	Wald-Lager	Campamento Bosque
 garden_end-0000|data.Name		Secret Garden Grove			
