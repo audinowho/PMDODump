@@ -1,4 +1,4 @@
-# 0.5.3.1 Changes #
+# 0.5.4 Changes #
 
 * Add neutral NPCs roaming the early dungeons.
 * Add town and camp NPCs.
