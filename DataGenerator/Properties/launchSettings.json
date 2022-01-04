@@ -2,7 +2,7 @@
   "profiles": {
     "DataGenerator": {
       "commandName": "Project",
-      "commandLineArgs": "-asset ../../../../../DumpAsset/ -raw ../../../../../RawAsset/ -gen ../../../../../DataAsset/ -dump zone"
+      "commandLineArgs": "-asset ../../../../../Asset/ -raw ../../../../../RawAsset/ -gen ../../../../../DataAsset/ -reserialize all"
     }
   }
 }

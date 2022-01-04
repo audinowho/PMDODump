@@ -352,9 +352,8 @@ namespace DataGenerator
                             //    GraphicsManager.InitSystem(game.GraphicsDevice);
                             //    GraphicsManager.InitStatic();
 
-                                MapInfo.AddMapData();
-                            MapInfo.AddGroundData(MapInfo.MapNames[0]);
-                            ZoneInfo.AddZoneData();
+                                MapInfo.AddGroundData(MapInfo.MapNames[3]);
+                                ZoneInfo.AddZoneData();
                             //}
                         }
 
