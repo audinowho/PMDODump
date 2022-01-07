@@ -10,3 +10,5 @@
 * Controls menu accessible in-game.
 * Fix control conflict between menu hotkeys and move hotkeys.
 * General detection and labeling for gamepads (Nintendo, Playstation, XBox).
+* Fix error when speaking to allies that are regional forms.
+* Add editor indicator for invisible tiles.

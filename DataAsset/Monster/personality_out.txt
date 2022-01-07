@@ -1,1077 +1,1076 @@
-Missingno.	0	0							x																					
-Substitute	0	1							x																					
-Bulbasaur	1	0	x	x	x	x					x	x	x	x		x			x	x			x	x					x	
-Ivysaur	2	0	x	x	x	x						x	x	x		x			x				x	x					x	
-Venusaur	3	0		x		x	x						x	x		x	x	x	x		x	x	x	x					x	
-Charmander	4	0	x	x	x	x					x	x	x	x					x	x		x	x	x					x	
-Charmeleon	5	0	x	x		x				x		x	x		x		x		x				x	x					x	
-Charizard	6	0		x			x			x			x		x		x		x			x	x	x					x	
-Squirtle	7	0	x	x	x	x					x	x	x	x		x		x	x	x			x	x					x	
-Wartortle	8	0	x	x		x				x		x	x			x	x		x			x	x	x					x	
-Blastoise	9	0		x		x	x			x			x		x	x	x		x			x	x	x					x	
-Caterpie	10	0	x	x	x	x					x	x		x		x				x				x						
-Metapod	11	0	x	x	x	x					x	x		x		x	x	x						x						
-Butterfree	12	0	x	x	x	x					x	x				x	x	x	x		x	x	x	x					x	
-Weedle	13	0	x	x	x	x					x		x	x	x					x				x						
-Kakuna	14	0	x	x	x	x							x	x	x	x								x						
-Beedrill	15	0		x									x		x	x	x		x			x	x	x					x	
-Pidgey	16	0	x	x	x	x					x	x	x	x		x			x				x	x					x	
-Pidgeotto	17	0	x	x		x	x			x		x	x	x	x	x	x	x	x			x	x	x					x	
-Pidgeot	18	0		x		x	x			x		x	x		x	x	x	x	x		x	x	x	x					x	
-Rattata	19	0	x	x	x	x					x	x	x	x		x			x	x			x	x					x	
-Alolan Rattata	19	1																												
-Raticate	20	0	x	x						x			x		x	x	x		x			x	x	x					x	
-Alolan Raticate	20	1																												
-Spearow	21	0	x	x	x	x					x		x	x		x			x				x	x					x	
-Fearow	22	0		x						x			x		x	x	x		x		x	x	x	x					x	
-Ekans	23	0	x	x	x	x					x	x	x	x		x			x				x	x					x	
-Arbok	24	0		x		x	x			x			x		x	x	x	x	x				x	x					x	
-Pikachu	25	0	x	x	x	x					x	x	x	x	x	x	x	x	x				x	x					x	
-Raichu	26	0	x	x	x	x				x	x	x	x	x	x	x	x	x	x			x	x	x					x	
-Alolan Raichu	26	1																												
-Sandshrew	27	0	x	x	x	x					x	x	x	x	x			x	x				x	x					x	
-Alolan Sandshrew	27	1																												
-Sandslash	28	0		x		x	x			x		x	x		x		x	x	x			x	x	x					x	
-Alolan Sandslash	28	1																												
-Nidoran♀	29	0	x	x	x	x					x	x	x	x		x		x	x	x			x	x					x	
-Nidorina	30	0	x	x	x	x					x	x	x	x		x		x	x		x	x	x	x					x	
-Nidoqueen	31	0	x	x	x	x	x						x		x	x		x	x		x	x	x	x					x	
-Nidoran♂	32	0	x	x	x	x				x	x	x	x	x				x	x	x			x	x					x	
-Nidorino	33	0	x	x		x				x	x	x	x	x			x	x	x		x	x	x	x					x	
-Nidoking	34	0		x		x	x			x			x		x		x	x	x		x	x	x	x					x	
-Clefairy	35	0	x	x	x	x					x	x		x		x		x	x					x					x	
-Clefable	36	0	x	x	x	x	x				x	x		x		x		x	x		x			x					x	
-Vulpix	37	0	x	x	x	x					x	x		x		x		x	x				x	x					x	
-Alolan Vulpix	37	1																												
-Ninetales	38	0		x		x	x									x		x	x		x	x	x	x					x	
-Alolan Ninetales	38	1																												
-Jigglypuff	39	0	x	x	x	x					x	x	x	x		x		x	x	x				x					x	
-Wigglytuff	40	0	x	x	x	x	x				x	x	x	x	x	x		x	x		x			x					x	
-Zubat	41	0	x	x	x	x					x	x	x	x					x				x	x					x	
-Golbat	42	0				x							x	x	x		x		x				x	x					x	
-Oddish	43	0	x	x	x	x					x	x		x					x				x	x					x	
-Gloom	44	0	x		x	x						x		x					x				x	x					x	
-Vileplume	45	0	x	x	x	x	x			x		x		x	x	x	x	x	x		x		x	x					x	
-Paras	46	0	x	x	x	x					x	x		x		x		x	x					x					x	
-Parasect	47	0					x		x								x	x	x			x		x					x	
-Venonat	48	0	x	x	x	x					x	x		x		x	x		x				x	x					x	
-Venomoth	49	0	x	x	x	x						x		x	x	x	x	x	x		x	x	x	x					x	
-Diglett	50	0	x	x	x	x				x	x	x	x	x			x		x				x	x					x	
-Alolan Diglett	50	1																												
-Dugtrio	51	0		x			x			x			x		x		x		x			x	x	x					x	
-Alolan Dugtrio	51	1																												
-Meowth	52	0	x	x	x	x				x	x	x	x	x		x	x	x	x				x	x					x	
-Alolan Meowth	52	1																												
-Galarian Meowth	52	2																												
-Persian	53	0	x	x		x	x			x				x	x	x		x	x		x	x	x	x					x	
-Alolan Persian	53	1																												
-Psyduck	54	0	x	x	x	x					x	x		x										x						
-Golduck	55	0	x	x		x	x			x		x		x	x	x	x	x	x		x	x	x	x					x	
-Mankey	56	0	x	x						x	x		x		x		x						x	x						
-Primeape	57	0								x			x		x		x						x	x						
-Growlithe	58	0	x	x	x	x				x	x	x	x	x			x		x			x	x	x					x	
-Arcanine	59	0	x	x		x	x	x		x		x	x		x	x	x	x	x		x	x	x	x					x	
-Poliwag	60	0	x	x	x	x					x	x		x		x			x	x				x					x	
-Poliwhirl	61	0	x	x	x	x	x			x		x	x	x	x		x	x	x				x	x					x	
-Poliwrath	62	0		x			x			x			x		x		x		x				x	x					x	
-Abra	63	0	x		x	x					x			x				x		x				x						
-Kadabra	64	0				x	x									x		x				x		x						
-Alakazam	65	0				x	x									x		x			x	x		x						
-Machop	66	0	x	x		x				x	x	x	x		x		x		x				x	x					x	
-Machoke	67	0		x			x			x			x		x		x		x			x	x	x					x	
-Machamp	68	0		x			x			x			x		x		x		x			x	x	x					x	
-Bellsprout	69	0	x	x	x	x					x	x		x		x		x	x				x	x					x	
-Weepinbell	70	0	x	x	x	x						x		x		x			x			x	x	x					x	
-Victreebel	71	0		x						x			x	x	x	x	x		x			x	x	x					x	
-Tentacool	72	0	x			x				x				x					x				x	x					x	
-Tentacruel	73	0					x			x			x		x		x		x		x	x	x	x					x	
-Geodude	74	0	x	x		x				x		x	x		x		x		x				x	x					x	
-Alolan Geodude	74	1																												
-Graveler	75	0		x		x	x			x		x	x		x		x		x			x	x	x					x	
-Alolan Graveler	75	1																												
-Golem	76	0		x		x	x			x			x		x		x	x	x			x	x	x					x	
-Alolan Golem	76	1																												
-Ponyta	77	0	x	x	x	x					x	x		x		x		x	x		x	x	x	x					x	
-Galarian Ponyta	77	1																												
-Rapidash	78	0		x		x	x	x		x			x	x	x	x	x	x	x		x	x	x	x					x	
-Galarian Rapidash	78	1																												
-Slowpoke	79	0	x		x	x						x		x																
-Galarian Slowpoke	79	1																												
-Slowbro	80	0	x		x	x				x		x		x				x	x										x	
-Galarian Slowbro	80	2																												
-Magnemite	81	0	x	x		x			x																					
-Magneton	82	0		x		x			x																					
-Farfetch'd	83	0	x	x	x	x	x			x		x	x	x	x		x	x	x			x	x	x					x	
-Galarian Farfetch'd	83	1																												
-Doduo	84	0	x	x	x	x					x	x		x		x			x				x	x					x	
-Dodrio	85	0		x						x			x	x	x	x	x		x			x	x	x					x	
-Seel	86	0	x	x	x	x					x	x		x		x			x				x	x					x	
-Dewgong	87	0	x	x	x	x	x			x		x		x	x	x	x	x	x		x	x	x	x					x	
-Grimer	88	0	x	x	x					x	x		x	x	x				x				x	x					x	
-Alolan Grimer	88	1																												
-Muk	89	0		x						x			x	x	x		x		x				x	x					x	
-Alolan Muk	89	1																												
-Shellder	90	0	x	x	x	x					x	x	x	x					x				x	x					x	
-Cloyster	91	0		x			x			x			x		x		x	x	x				x	x					x	
-Gastly	92	0	x	x							x		x	x					x				x						x	
-Haunter	93	0	x	x						x			x	x	x		x		x				x						x	
-Gengar	94	0		x			x			x			x		x		x	x	x				x						x	
-Onix	95	0		x			x			x			x		x		x					x								
-Drowzee	96	0		x	x	x								x				x	x			x	x	x					x	
-Hypno	97	0		x		x	x							x		x		x	x		x	x	x	x					x	
-Krabby	98	0	x	x	x	x					x	x	x	x		x			x				x	x					x	
-Kingler	99	0		x		x				x		x	x		x	x	x	x	x			x	x	x					x	
-Voltorb	100	0	x	x					x	x			x		x		x							x						
-Electrode	101	0	x	x					x	x			x		x		x							x						
-Exeggcute	102	0	x	x	x	x					x	x		x					x	x			x	x					x	
-Exeggutor	103	0		x		x	x			x		x			x		x		x				x	x					x	
-Alolan Exeggutor	103	1																												
-Cubone	104	0	x	x	x	x				x	x	x		x		x		x	x	x			x	x					x	
-Marowak	105	0		x		x	x			x			x		x	x	x	x	x		x	x	x	x					x	
-Alolan Marowak	105	1																												
-Marowak	105	2																												
-Hitmonlee	106	0		x		x	x			x					x		x	x	x			x	x	x					x	
-Hitmonchan	107	0		x		x	x			x					x		x	x	x			x	x	x					x	
-Lickitung	108	0	x	x	x	x				x	x	x		x	x	x	x		x			x	x	x					x	
-Koffing	109	0	x	x	x								x	x	x		x		x				x	x					x	
-Weezing	110	0		x						x			x	x	x		x		x				x	x					x	
-Galarian Weezing	110	1																												
-Rhyhorn	111	0	x	x	x	x				x		x	x	x	x		x		x				x	x					x	
-Rhydon	112	0		x		x	x			x			x		x		x	x	x			x	x	x					x	
-Chansey	113	0	x	x	x	x					x	x				x		x	x		x	x		x					x	
-Tangela	114	0	x	x	x	x					x	x		x	x	x	x		x		x		x	x					x	
-Kangaskhan	115	0	x	x	x	x	x					x			x	x	x	x	x		x	x	x	x					x	
-Horsea	116	0	x		x	x					x	x		x		x		x	x	x			x	x					x	
-Seadra	117	0		x		x				x			x		x	x	x		x		x	x	x	x					x	
-Goldeen	118	0	x	x	x	x						x		x		x		x	x		x		x	x					x	
-Seaking	119	0		x	x	x	x			x		x	x		x	x	x	x	x		x	x	x	x					x	
-Staryu	120	0		x					x							x		x	x				x	x					x	
-Starmie	121	0		x			x		x							x		x	x		x	x	x	x					x	
-Mr. Mime	122	0	x	x	x	x				x		x		x	x	x	x	x	x					x					x	
-Galarian Mr. Mime	122	1																												
-Scyther	123	0		x		x	x			x		x	x		x		x		x			x	x	x					x	
-Jynx	124	0		x	x	x	x									x	x	x	x		x	x	x	x					x	
-Electabuzz	125	0		x						x		x	x	x	x		x		x			x	x	x					x	
-Magmar	126	0		x		x	x			x		x	x		x		x	x	x			x	x	x					x	
-Pinsir	127	0		x						x			x		x		x		x			x	x	x					x	
-Tauros	128	0		x						x			x	x	x		x	x	x			x	x	x					x	
-Magikarp	129	0	x	x	x	x					x	x		x	x	x		x												
-Gyarados	130	0		x						x			x		x		x					x								
-Lapras	131	0	x	x	x	x	x					x		x		x		x	x		x	x		x					x	
-Ditto	132	0	x	x	x	x	x			x	x	x		x		x	x		x				x	x					x	
-Eevee	133	0	x	x	x	x					x	x		x		x	x		x	x			x	x					x	
-Vaporeon	134	0	x	x	x	x	x					x		x		x		x	x		x	x	x	x					x	
-Jolteon	135	0	x	x	x	x	x			x	x	x	x	x	x		x		x		x	x	x	x					x	
-Flareon	136	0	x	x	x	x	x			x	x	x	x	x	x		x		x		x	x	x	x					x	
-Porygon	137	0	x	x		x			x																					
-Omanyte	138	0	x	x	x	x								x			x		x				x	x					x	
-Omastar	139	0		x						x			x		x		x		x			x	x	x					x	
-Kabuto	140	0	x	x	x	x								x					x				x	x					x	
-Kabutops	141	0		x						x			x		x		x		x			x	x	x					x	
-Aerodactyl	142	0		x						x			x		x		x		x			x	x	x					x	
-Snorlax	143	0				x	x			x		x		x			x	x	x			x		x						
-Articuno	144	0					x	x													x	x								
-Galarian Articuno	144	1																												
-Zapdos	145	0					x	x													x	x								
-Galarian Zapdos	145	1																												
-Moltres	146	0					x	x													x	x								
-Galarian Moltres	146	1																												
-Dratini	147	0	x	x	x						x								x	x									x	
-Dragonair	148	0		x		x	x								x			x	x		x	x		x					x	
-Dragonite	149	0		x		x	x	x					x		x			x	x		x	x		x					x	
-Mewtwo	150	0						x																						
-Mew	151	0	x	x	x	x					x	x					x	x		x			x	x						
-Chikorita	152	0	x	x	x	x					x	x	x	x		x			x	x			x	x					x	
-Bayleef	153	0	x	x	x	x						x		x	x	x	x	x	x				x	x					x	
-Meganium	154	0	x	x	x	x	x			x		x		x	x	x	x	x	x		x	x	x	x					x	
-Cyndaquil	155	0	x	x	x	x					x	x	x	x					x	x			x	x					x	
-Quilava	156	0	x	x	x	x				x		x	x		x		x	x	x				x	x					x	
-Typhlosion	157	0		x			x			x		x	x		x		x	x	x			x	x	x					x	
-Totodile	158	0	x	x		x				x	x	x	x		x		x		x	x			x	x					x	
-Croconaw	159	0	x	x						x	x		x		x		x		x				x	x					x	
-Feraligatr	160	0		x			x			x			x		x		x		x			x	x	x					x	
-Sentret	161	0	x	x	x	x					x	x		x		x			x				x	x					x	
-Furret	162	0	x	x	x	x					x	x	x	x		x	x	x	x		x	x	x	x					x	
-Hoothoot	163	0	x	x	x	x					x	x		x		x						x		x						
-Noctowl	164	0		x		x	x			x				x		x	x	x			x	x		x						
-Ledyba	165	0	x	x	x	x					x	x		x		x			x				x	x					x	
-Ledian	166	0	x	x		x	x			x		x		x	x	x	x	x	x		x	x	x	x					x	
-Spinarak	167	0	x	x	x	x					x	x		x		x			x				x	x					x	
-Ariados	168	0		x		x	x			x			x		x	x	x		x			x	x	x					x	
-Crobat	169	0		x		x	x			x		x			x	x	x	x	x				x	x					x	
-Chinchou	170	0	x	x	x	x					x	x		x		x			x				x	x					x	
-Lanturn	171	0	x	x	x	x				x		x		x	x	x	x	x	x		x	x	x	x					x	
-Pichu	172	0	x	x	x						x	x	x	x	x		x			x										
-Cleffa	173	0	x		x						x	x		x						x										
-Igglybuff	174	0	x		x						x	x		x						x										
-Togepi	175	0	x		x						x	x		x					x	x			x						x	
-Togetic	176	0	x	x	x	x					x	x						x	x		x		x	x					x	
-Natu	177	0	x		x	x					x			x		x		x				x		x						
-Xatu	178	0				x	x									x		x			x	x								
-Mareep	179	0	x	x	x	x					x	x		x		x			x		x		x	x					x	
-Flaaffy	180	0	x	x	x	x					x	x	x	x	x	x	x		x		x	x	x	x					x	
-Ampharos	181	0	x	x	x	x	x			x	x	x	x	x	x	x	x	x	x		x	x	x	x					x	
-Bellossom	182	0	x	x	x	x						x				x		x	x		x	x		x					x	
-Marill	183	0	x	x	x	x					x	x	x	x		x			x				x	x					x	
-Azumarill	184	0	x	x	x	x					x	x	x	x	x	x	x		x		x	x	x	x					x	
-Sudowoodo	185	0	x	x	x	x				x		x		x	x		x		x				x	x					x	
-Politoed	186	0	x	x	x	x				x	x	x	x		x	x	x		x				x	x					x	
-Hoppip	187	0	x	x	x	x					x	x		x		x							x	x						
-Skiploom	188	0	x	x	x	x					x	x		x		x			x		x		x	x					x	
-Jumpluff	189	0	x	x	x	x					x	x		x		x	x	x	x		x	x	x	x					x	
-Aipom	190	0	x	x	x	x				x	x	x	x	x	x		x		x				x	x					x	
-Sunkern	191	0	x		x	x					x	x		x						x				x						
-Sunflora	192	0	x	x	x	x					x	x			x	x	x		x		x	x	x	x					x	
-Yanma	193	0	x		x	x					x	x		x			x		x				x	x					x	
-Wooper	194	0	x	x	x						x	x		x	x		x		x				x	x					x	
-Quagsire	195	0	x	x	x	x	x			x		x		x	x		x		x			x	x	x					x	
-Espeon	196	0	x	x		x	x					x				x		x	x		x	x	x	x					x	
-Umbreon	197	0	x	x		x	x			x		x	x	x			x	x	x		x	x	x	x					x	
-Murkrow	198	0	x	x	x	x					x		x	x		x		x	x				x	x					x	
-Slowking	199	0		x		x	x			x				x			x	x			x	x								
-Galarian Slowking	199	1																												
-Misdreavus	200	0	x	x	x	x					x	x	x			x		x	x		x		x	x					x	
-Unown A	201	0							x																					
-Unown B	201	1							x																					
-Unown C	201	2							x																					
-Unown D	201	3							x																					
-Unown E	201	4							x																					
-Unown F	201	5							x																					
-Unown G	201	6							x																					
-Unown H	201	7							x																					
-Unown I	201	8							x																					
-Unown J	201	9							x																					
-Unown K	201	10							x																					
-Unown L	201	11							x																					
-Unown M	201	12							x																					
-Unown N	201	13							x																					
-Unown O	201	14							x																					
-Unown P	201	15							x																					
-Unown Q	201	16							x																					
-Unown R	201	17							x																					
-Unown S	201	18							x																					
-Unown T	201	19							x																					
-Unown U	201	20							x																					
-Unown V	201	21							x																					
-Unown W	201	22							x																					
-Unown X	201	23							x																					
-Unown Y	201	24							x																					
-Unown Z	201	25							x																					
-Unown !	201	26																							x					
-Unown ?	201	27							x																					
-Wobbuffet	202	0		x		x	x			x		x		x	x	x	x	x	x					x						
-Girafarig	203	0	x	x	x	x				x	x	x	x	x	x	x	x	x	x		x	x	x	x					x	
-Pineco	204	0	x	x	x	x					x	x	x	x					x				x	x					x	
-Forretress	205	0		x		x	x			x			x		x		x		x			x	x	x					x	
-Dunsparce	206	0	x		x	x				x	x	x		x			x	x	x		x		x	x					x	
-Gligar	207	0	x	x	x	x				x	x	x	x	x	x		x		x				x	x					x	
-Steelix	208	0		x			x			x			x		x		x					x								
-Snubbull	209	0	x	x	x	x				x	x	x	x	x	x	x	x	x	x				x	x					x	
-Granbull	210	0		x		x	x			x			x	x	x	x	x	x	x			x	x	x					x	
-Qwilfish	211	0		x		x				x	x		x	x	x		x		x				x	x					x	
-Scizor	212	0		x			x			x			x		x		x		x			x	x	x					x	
-Shuckle	213	0	x	x	x	x				x	x	x		x		x	x	x	x					x					x	
-Heracross	214	0	x	x	x	x	x			x		x	x	x	x		x	x	x			x	x	x					x	
-Sneasel	215	0	x	x		x				x	x		x		x	x	x		x				x	x					x	
-Teddiursa	216	0	x	x	x	x					x	x	x	x					x	x			x	x					x	
-Ursaring	217	0		x			x			x			x		x		x		x			x	x	x					x	
-Slugma	218	0	x	x	x	x					x	x		x	x	x			x				x	x					x	
-Magcargo	219	0		x		x	x			x		x		x	x	x	x	x	x			x	x	x					x	
-Swinub	220	0	x	x	x	x					x	x		x					x				x	x					x	
-Piloswine	221	0		x			x			x			x	x	x		x		x			x	x	x					x	
-Corsola	222	0	x		x	x					x	x		x		x		x	x		x		x	x					x	
-Galarian Corsola	222	1																												
-Remoraid	223	0	x	x	x	x					x	x		x					x				x	x					x	
-Octillery	224	0		x		x	x			x			x	x	x		x		x		x	x	x	x					x	
-Delibird	225	0	x	x	x	x				x	x	x	x	x	x	x	x	x	x		x	x	x	x					x	
-Mantine	226	0	x	x	x	x				x		x		x		x		x	x		x	x	x	x					x	
-Skarmory	227	0		x			x			x			x		x	x	x		x		x	x	x	x					x	
-Houndour	228	0	x	x		x				x	x		x	x	x		x		x				x	x					x	
-Houndoom	229	0		x		x	x			x			x		x		x	x	x			x	x	x					x	
-Kingdra	230	0		x		x	x	x		x					x	x	x	x	x		x	x	x	x					x	
-Phanpy	231	0	x	x	x	x					x	x		x					x	x			x	x					x	
-Donphan	232	0		x		x	x			x			x	x	x		x	x	x			x	x	x					x	
-Porygon2	233	0	x			x			x			x										x								
-Stantler	234	0	x	x	x	x	x			x		x		x	x	x	x	x	x		x	x	x	x					x	
-Smeargle	235	0	x	x	x	x						x		x	x	x			x		x	x	x	x					x	
-Tyrogue	236	0	x	x		x				x	x		x	x	x		x		x				x	x					x	
-Hitmontop	237	0	x	x		x	x			x			x		x		x		x			x	x	x					x	
-Smoochum	238	0	x		x	x					x	x				x				x										
-Elekid	239	0	x	x	x					x	x	x			x		x		x	x			x							
-Magby	240	0	x	x	x	x					x	x		x					x	x			x							
-Miltank	241	0	x	x	x	x						x		x	x			x	x		x		x	x					x	
-Blissey	242	0	x	x	x	x	x					x				x		x	x		x	x		x					x	
-Raikou	243	0					x	x													x	x								
-Entei	244	0					x	x													x	x								
-Suicune	245	0					x	x													x	x								
-Larvitar	246	0	x	x	x	x					x			x	x			x	x	x				x					x	
-Pupitar	247	0		x		x	x							x	x			x	x		x	x		x					x	
-Tyranitar	248	0		x		x	x	x					x	x	x			x	x		x	x		x					x	
-Lugia	249	0						x																						
-Ho-Oh	250	0						x																						
-Celebi	251	0	x	x	x	x					x	x				x	x	x		x				x						
-Treecko	252	0	x	x	x	x				x	x	x	x	x			x		x	x			x	x					x	
-Grovyle	253	0	x	x		x				x		x	x	x	x		x	x	x				x	x					x	
-Sceptile	254	0		x			x			x		x	x	x	x		x	x	x			x	x	x					x	
-Torchic	255	0	x	x	x	x					x	x		x	x				x	x			x	x					x	
-Combusken	256	0	x	x		x				x		x	x		x		x		x				x	x					x	
-Blaziken	257	0		x		x	x			x			x		x		x	x	x			x	x	x					x	
-Mudkip	258	0	x	x	x	x					x	x		x					x	x			x	x					x	
-Marshtomp	259	0	x	x	x	x				x		x		x	x		x		x				x	x					x	
-Swampert	260	0		x		x	x			x			x	x	x		x		x			x	x	x					x	
-Poochyena	261	0	x	x	x					x	x	x	x	x	x	x	x		x				x	x					x	
-Mightyena	262	0		x			x			x			x	x	x	x	x	x	x			x	x	x					x	
-Zigzagoon	263	0	x	x	x	x					x	x		x		x			x				x	x					x	
-Galarian Zigzagoon	263	1																												
-Linoone	264	0	x	x	x	x	x						x	x	x	x	x	x	x			x	x	x					x	
-Galarian Linoone	264	1																												
-Wurmple	265	0	x	x	x	x					x	x		x		x				x				x						
-Silcoon	266	0	x		x	x					x			x		x								x						
-Beautifly	267	0	x	x	x	x					x	x				x	x	x	x		x	x	x	x					x	
-Cascoon	268	0	x		x	x					x		x	x			x							x						
-Dustox	269	0		x	x	x							x	x			x	x	x			x	x	x					x	
-Lotad	270	0	x	x	x	x					x	x		x					x				x	x					x	
-Lombre	271	0		x	x	x				x		x	x	x	x		x	x	x				x	x					x	
-Ludicolo	272	0	x	x			x			x			x		x		x		x			x	x	x					x	
-Seedot	273	0	x	x	x	x					x	x		x					x	x			x	x					x	
-Nuzleaf	274	0	x	x		x	x			x		x	x	x			x		x				x	x					x	
-Shiftry	275	0		x		x	x						x				x		x			x	x	x					x	
-Taillow	276	0	x	x	x	x					x	x		x	x	x			x				x	x					x	
-Swellow	277	0	x	x		x	x			x		x	x	x	x	x	x	x	x		x	x	x	x					x	
-Wingull	278	0	x	x	x	x					x	x		x	x	x			x				x	x					x	
-Pelipper	279	0	x	x	x	x				x		x		x	x	x	x	x	x		x	x	x	x					x	
-Ralts	280	0	x	x	x	x					x	x		x		x				x				x						
-Kirlia	281	0	x	x	x	x	x					x				x		x	x		x	x		x					x	
-Gardevoir	282	0		x		x	x									x		x	x		x	x		x					x	
-Surskit	283	0	x	x	x	x					x	x		x		x			x				x	x					x	
-Masquerain	284	0	x	x	x	x	x				x	x		x		x	x	x	x			x	x	x					x	
-Shroomish	285	0	x	x	x	x					x	x		x	x				x				x	x					x	
-Breloom	286	0	x	x	x	x	x			x	x	x	x		x		x	x	x			x	x	x					x	
-Slakoth	287	0	x		x	x					x	x		x																
-Vigoroth	288	0	x	x						x	x		x		x		x		x				x	x					x	
-Slaking	289	0				x								x				x	x			x							x	
-Nincada	290	0	x	x	x	x				x	x	x		x					x				x	x					x	
-Ninjask	291	0		x		x	x			x			x				x	x	x			x	x	x					x	
-Shedinja	292	0			x	x	x		x			x						x	x			x	x	x					x	
-Whismur	293	0	x		x	x						x		x				x					x	x						
-Loudred	294	0	x	x		x				x	x		x		x		x		x				x	x					x	
-Exploud	295	0		x		x				x	x		x		x		x		x			x	x	x					x	
-Makuhita	296	0	x	x		x				x	x	x	x	x	x		x		x				x	x					x	
-Hariyama	297	0		x		x	x			x		x	x		x		x	x	x			x	x	x					x	
-Azurill	298	0	x		x						x	x		x						x										
-Nosepass	299	0	x			x			x			x				x			x			x		x					x	
-Skitty	300	0	x	x	x						x	x		x	x	x	x		x	x			x	x					x	
-Delcatty	301	0	x	x	x	x	x			x	x	x	x	x		x	x	x	x		x	x	x	x					x	
-Sableye	302	0				x			x		x		x				x		x			x	x	x					x	
-Mawile	303	0	x	x	x	x				x	x	x	x		x	x	x	x	x		x	x	x	x					x	
-Aron	304	0	x	x	x	x					x	x		x	x				x	x			x	x					x	
-Lairon	305	0	x	x		x				x			x		x		x		x			x	x	x					x	
-Aggron	306	0		x						x			x		x		x		x			x	x	x					x	
-Meditite	307	0	x		x	x					x	x		x		x			x		x	x	x	x					x	
-Medicham	308	0		x		x	x			x		x				x		x	x		x	x	x	x					x	
-Electrike	309	0	x	x	x	x				x	x	x	x	x	x	x	x		x				x	x					x	
-Manectric	310	0		x		x	x			x		x	x	x	x	x	x	x	x			x	x	x					x	
-Plusle	311	0	x	x	x						x	x		x	x		x		x			x	x	x					x	
-Minun	312	0	x	x	x						x	x		x	x		x		x			x	x	x					x	
-Volbeat	313	0	x	x	x	x					x	x		x	x		x		x		x	x	x	x					x	
-Illumise	314	0	x	x	x	x					x	x		x		x		x	x		x	x	x	x					x	
-Roselia	315	0	x	x	x	x						x				x		x	x		x	x		x					x	
-Gulpin	316	0	x	x	x	x					x	x		x	x				x					x					x	
-Swalot	317	0		x		x				x		x		x	x		x		x					x					x	
-Carvanha	318	0		x		x				x	x		x	x	x		x		x				x	x					x	
-Sharpedo	319	0		x		x				x			x		x		x		x			x	x	x					x	
-Wailmer	320	0	x	x	x					x	x	x		x	x		x		x			x		x					x	
-Wailord	321	0	x	x	x	x	x			x				x	x			x	x			x				x			x	
-Numel	322	0	x	x	x	x					x	x		x		x			x				x	x					x	
-Camerupt	323	0		x		x	x			x			x	x	x		x	x	x			x	x	x					x	
-Torkoal	324	0	x	x	x	x	x			x		x		x				x	x			x	x	x					x	
-Spoink	325	0	x	x	x	x					x	x				x			x				x	x					x	
-Grumpig	326	0	x	x		x	x			x		x	x	x	x	x	x	x	x			x	x	x					x	
-Spinda	327	0	x	x	x						x	x		x		x	x		x			x	x	x					x	
-Trapinch	328	0	x	x	x	x					x	x	x	x			x			x				x						
-Vibrava	329	0	x	x	x	x					x	x				x	x	x	x			x	x	x					x	
-Flygon	330	0		x		x	x			x			x		x	x	x	x	x		x	x	x	x					x	
-Cacnea	331	0	x	x	x					x	x	x	x	x	x				x				x	x					x	
-Cacturne	332	0		x		x				x			x		x		x	x	x			x	x	x					x	
-Swablu	333	0	x	x	x	x					x	x				x		x	x	x	x	x		x					x	
-Altaria	334	0	x	x	x	x	x			x		x				x	x	x	x		x	x		x					x	
-Zangoose	335	0		x						x			x	x	x		x	x	x			x	x	x					x	
-Seviper	336	0		x						x			x	x			x	x	x			x	x	x					x	
-Lunatone	337	0				x	x		x										x										x	
-Solrock	338	0				x	x		x										x										x	
-Barboach	339	0	x	x	x	x					x	x		x		x			x				x	x					x	
-Whiscash	340	0	x	x	x	x	x			x		x		x	x	x	x	x	x			x	x	x					x	
-Corphish	341	0	x	x	x	x					x	x		x	x	x			x				x	x					x	
-Crawdaunt	342	0		x		x	x			x			x	x	x	x	x	x	x			x	x	x					x	
-Baltoy	343	0	x			x	x		x			x							x			x		x					x	
-Claydol	344	0				x	x		x			x						x	x			x		x					x	
-Lileep	345	0	x	x	x	x					x	x				x			x				x	x					x	
-Cradily	346	0		x		x	x									x		x	x			x	x	x					x	
-Anorith	347	0	x	x	x	x				x	x	x			x		x		x				x	x					x	
-Armaldo	348	0		x		x	x			x			x		x		x	x	x			x	x	x					x	
-Feebas	349	0	x		x	x					x	x				x				x										
-Milotic	350	0		x		x	x			x			x			x	x	x	x		x	x		x					x	
-Castform	351	0	x	x	x	x					x	x					x		x	x	x	x	x	x					x	
-Kecleon	352	0	x	x	x	x	x			x		x	x	x	x	x	x	x	x					x					x	
-Shuppet	353	0	x	x	x	x					x	x	x			x			x				x						x	
-Banette	354	0		x		x				x			x			x	x	x	x				x						x	
-Duskull	355	0	x		x	x												x	x										x	
-Dusclops	356	0		x		x	x			x								x	x										x	
-Tropius	357	0	x	x	x	x	x			x		x	x	x	x	x	x	x	x			x		x					x	
-Chimecho	358	0	x		x	x					x	x							x		x			x					x	
-Absol	359	0		x		x	x	x				x				x		x	x			x		x					x	
-Wynaut	360	0	x	x	x					x	x	x		x	x		x			x				x						
-Snorunt	361	0	x	x	x	x					x	x		x				x	x				x	x					x	
-Glalie	362	0		x		x				x			x	x	x		x	x	x			x	x	x					x	
-Spheal	363	0	x	x	x						x	x		x		x				x				x						
-Sealeo	364	0	x	x	x	x				x		x	x	x	x	x	x		x			x	x	x					x	
-Walrein	365	0		x		x	x			x			x		x		x	x	x			x	x	x					x	
-Clamperl	366	0	x	x	x	x					x	x				x			x		x			x					x	
-Huntail	367	0		x		x				x			x		x		x		x		x	x	x	x					x	
-Gorebyss	368	0	x	x		x	x			x		x	x			x		x	x		x	x	x	x					x	
-Relicanth	369	0				x	x					x						x	x			x		x					x	
-Luvdisc	370	0	x		x	x					x	x				x			x				x	x					x	
-Bagon	371	0	x	x						x	x	x	x		x		x		x	x			x						x	
-Shelgon	372	0		x						x	x		x		x		x		x			x	x						x	
-Salamence	373	0		x			x	x		x			x		x		x		x			x	x						x	
-Beldum	374	0				x			x									x												
-Metang	375	0		x		x			x	x							x	x												
-Metagross	376	0		x		x	x	x	x	x							x	x												
-Regirock	377	0							x																					
-Regice	378	0							x																					
-Registeel	379	0							x																					
-Latias	380	0	x		x						x	x									x			x						
-Latios	381	0	x	x		x						x										x		x						
-Kyogre	382	0						x																						
-Groudon	383	0						x																						
-Rayquaza	384	0						x																						
-Jirachi	385	0	x	x	x	x					x	x				x	x	x		x				x						
-Normal Deoxys	386	0					x	x										x												
-Attack Deoxys	386	1					x	x										x												
-Defense Deoxys	386	2					x	x										x												
-Speed Deoxys	386	3					x	x										x												
-Turtwig	387	0	x	x	x	x					x	x		x					x	x			x	x					x	
-Grotle	388	0	x	x	x	x				x	x	x		x	x				x				x	x					x	
-Torterra	389	0		x		x	x			x			x	x	x		x	x	x			x	x	x					x	
-Chimchar	390	0	x	x	x	x				x	x	x	x	x	x		x		x	x			x	x					x	
-Monferno	391	0	x	x		x				x	x	x	x	x	x		x		x				x	x					x	
-Infernape	392	0		x		x	x			x			x		x		x	x	x			x	x	x					x	
-Piplup	393	0	x	x	x	x					x	x		x		x			x	x			x	x					x	
-Prinplup	394	0	x	x	x	x	x			x	x	x	x	x	x	x	x	x	x				x	x					x	
-Empoleon	395	0		x		x	x			x					x	x	x	x	x		x	x	x	x					x	
-Starly	396	0	x	x	x	x					x	x		x	x	x			x				x	x					x	
-Staravia	397	0	x	x	x	x				x		x	x	x	x	x	x	x	x			x	x	x					x	
-Staraptor	398	0		x		x	x			x			x	x	x	x	x	x	x			x	x	x					x	
-Bidoof	399	0	x	x	x	x					x	x		x	x			x	x				x	x					x	
-Bibarel	400	0	x	x	x	x				x	x	x		x	x		x	x	x				x	x					x	
-Kricketot	401	0	x	x	x	x					x	x		x		x			x				x	x					x	
-Kricketune	402	0		x	x	x	x					x				x		x	x		x	x	x	x					x	
-Shinx	403	0	x	x	x	x					x	x		x	x	x			x	x			x	x					x	
-Luxio	404	0	x	x	x	x				x	x	x	x	x	x	x		x	x			x	x	x					x	
-Luxray	405	0		x		x	x			x			x		x	x	x	x				x	x	x						
-Budew	406	0	x		x	x					x	x		x					x	x									x	
-Roserade	407	0	x	x		x	x			x			x			x	x	x	x		x	x		x					x	
-Cranidos	408	0	x	x						x	x	x	x	x	x		x		x			x	x	x					x	
-Rampardos	409	0		x						x			x		x		x		x			x	x	x					x	
-Shieldon	410	0	x	x	x	x				x	x	x		x	x			x	x			x	x	x					x	
-Bastiodon	411	0		x		x	x			x				x	x		x	x	x			x	x	x					x	
-Plant Burmy	412	0	x	x	x	x					x	x		x					x				x	x					x	
-Sandy Burmy	412	1	x	x	x	x					x	x		x					x				x	x					x	
-Trash Burmy	412	2	x	x	x	x					x	x		x					x				x	x					x	
-Plant Wormadam	413	0	x	x	x	x						x		x				x	x		x	x	x	x					x	
-Sandy Wormadam	413	1	x	x	x	x						x		x				x	x		x	x	x	x					x	
-Trash Wormadam	413	2	x	x	x	x						x		x				x	x		x	x	x	x					x	
-Mothim	414	0	x	x		x				x		x			x	x	x	x	x		x	x	x	x					x	
-Combee	415	0	x		x	x					x	x		x					x	x			x	x					x	
-Vespiquen	416	0		x		x	x			x			x			x	x	x	x		x	x							x	
-Pachirisu	417	0	x	x	x						x	x		x	x		x		x				x	x					x	
-Buizel	418	0	x	x	x	x					x	x		x	x	x	x		x			x	x	x					x	
-Floatzel	419	0	x	x	x	x				x		x	x	x	x	x	x	x	x			x	x	x					x	
-Cherubi	420	0	x		x						x	x							x	x				x					x	
-Overcast Cherrim	421	0	x		x	x						x		x		x		x	x		x			x					x	
-Sunshine Cherrim	421	1	x	x							x	x			x		x		x		x			x					x	
-West Shellos	422	0	x	x	x	x					x	x		x		x			x					x					x	
-East Shellos	422	1	x	x	x	x					x	x		x		x			x					x					x	
-West Gastrodon	423	0		x	x	x	x			x				x	x	x	x	x	x			x		x					x	
-East Gastrodon	423	1		x	x	x	x			x				x	x	x	x	x	x			x		x					x	
-Ambipom	424	0		x	x	x	x			x		x	x	x	x	x	x	x	x		x		x	x					x	
-Drifloon	425	0	x			x					x	x							x				x	x					x	
-Drifblim	426	0				x	x					x						x	x		x	x	x	x					x	
-Buneary	427	0	x		x	x				x	x	x	x	x	x		x		x	x			x	x					x	
-Lopunny	428	0	x	x	x	x	x			x	x	x	x		x	x	x	x	x		x		x	x					x	
-Mismagius	429	0		x		x	x			x			x			x	x	x	x		x	x		x					x	
-Honchkrow	430	0		x		x	x			x			x		x	x	x	x	x		x	x		x					x	
-Glameow	431	0	x	x	x	x						x	x	x		x	x		x		x	x	x	x					x	
-Purugly	432	0		x		x				x			x	x	x	x	x	x	x		x	x	x	x					x	
-Chingling	433	0	x		x						x	x								x										
-Stunky	434	0	x	x	x	x					x	x	x	x					x				x	x					x	
-Skuntank	435	0		x		x				x			x	x	x	x	x	x	x			x	x	x					x	
-Bronzor	436	0		x		x	x		x			x						x	x			x		x					x	
-Bronzong	437	0		x		x	x		x			x						x	x			x		x					x	
-Bonsly	438	0	x		x						x	x		x						x										
-Mime Jr.	439	0	x		x						x	x						x		x										
-Happiny	440	0	x		x						x	x					x			x										
-Chatot	441	0	x		x	x					x	x		x	x		x	x	x					x					x	
-Spiritomb	442	0							x				x						x					x					x	
-Gible	443	0	x	x						x	x	x	x	x	x		x		x	x			x	x					x	
-Gabite	444	0		x						x	x		x		x		x		x			x	x	x					x	
-Garchomp	445	0		x			x	x		x			x		x		x		x			x	x	x					x	
-Munchlax	446	0	x		x						x	x		x					x	x			x						x	
-Riolu	447	0	x	x	x	x				x	x	x		x			x	x	x	x		x	x	x					x	
-Lucario	448	0	x	x		x	x	x		x		x	x		x		x	x	x			x	x	x					x	
-Hippopotas	449	0	x	x	x	x					x	x		x	x	x			x				x	x					x	
-Hippowdon	450	0		x		x	x			x			x	x	x	x	x		x			x	x	x					x	
-Skorupi	451	0	x	x	x						x	x		x					x	x			x	x					x	
-Drapion	452	0		x			x			x			x		x	x	x		x			x	x	x					x	
-Croagunk	453	0	x	x		x				x	x	x	x	x	x		x		x				x	x					x	
-Toxicroak	454	0		x		x				x			x	x	x		x	x	x			x	x	x					x	
-Carnivine	455	0	x	x		x				x		x	x	x	x		x		x			x	x	x					x	
-Finneon	456	0	x	x	x	x					x	x		x		x		x	x	x	x		x	x					x	
-Lumineon	457	0	x	x	x	x	x					x		x		x		x	x		x	x	x	x					x	
-Mantyke	458	0	x		x						x	x								x										
-Snover	459	0	x	x	x	x					x	x		x					x				x	x					x	
-Abomasnow	460	0		x		x	x			x			x	x	x		x	x	x			x	x	x					x	
-Weavile	461	0		x		x	x			x			x	x	x	x	x		x				x						x	
-Magnezone	462	0				x	x		x	x			x		x															
-Lickilicky	463	0	x		x	x				x		x		x		x	x	x	x		x	x		x					x	
-Rhyperior	464	0		x			x			x			x		x		x	x	x			x		x					x	
-Tangrowth	465	0		x		x	x			x			x	x	x	x	x	x	x		x	x		x					x	
-Electivire	466	0		x		x	x			x			x		x		x	x	x			x		x					x	
-Magmortar	467	0		x		x	x			x			x		x		x	x	x			x		x					x	
-Togekiss	468	0	x	x	x	x	x					x				x	x	x	x		x	x		x					x	
-Yanmega	469	0		x		x				x					x		x	x	x			x	x	x					x	
-Leafeon	470	0	x	x	x	x	x			x	x	x	x	x		x	x	x	x		x	x	x	x					x	
-Glaceon	471	0	x	x	x	x	x			x	x	x	x	x	x	x	x	x	x		x	x	x	x					x	
-Gliscor	472	0		x		x	x			x			x		x		x	x	x			x	x	x					x	
-Mamoswine	473	0		x		x	x			x			x	x	x		x	x	x			x		x					x	
-Porygon-Z	474	0				x	x		x						x			x				x								
-Gallade	475	0		x		x	x			x			x		x		x	x	x		x	x	x	x					x	
-Probopass	476	0				x	x		x	x					x		x	x	x			x							x	
-Dusknoir	477	0		x		x	x			x			x				x	x	x			x							x	
-Froslass	478	0		x		x	x			x						x		x	x		x	x							x	
-Rotom	479	0	x	x					x	x	x	x	x		x		x		x	x			x	x					x	
-Heat Rotom	479	1		x					x	x	x	x	x		x		x		x	x			x	x					x	
-Wash Rotom	479	2		x					x	x	x	x	x		x		x		x	x			x	x					x	
-Frost Rotom	479	3		x					x	x	x	x	x		x		x		x	x			x	x					x	
-Fan Rotom	479	4		x					x	x	x	x	x		x		x		x	x			x	x					x	
-Mow Rotom	479	5		x					x	x	x	x	x		x		x		x	x			x	x					x	
-Uxie	480	0					x											x			x									
-Mesprit	481	0										x				x					x									
-Azelf	482	0				x	x															x								
-Dialga	483	0																							x					
-Palkia	484	0																								x				
-Heatran	485	0					x											x												
-Regigigas	486	0																									x			
-Altered Giratina	487	0						x																						
-Origin Giratina	487	1						x																						
-Cresselia	488	0										x									x									
-Phione	489	0			x						x			x						x				x						
-Manaphy	490	0			x						x			x						x				x						
-Darkrai	491	0																										x		
-Land Shaymin	492	0	x	x	x	x					x	x				x	x	x		x	x		x	x						
-Sky Shaymin	492	1	x	x	x	x					x	x				x	x	x		x	x		x	x						
-Normal Arceus	493	0						x																						
-Victini	494	0	x					x																x						
-Snivy	495	0	x																					x						
-Servine	496	0	x																					x						
-Serperior	497	0																						x						
-Tepig	498	0	x																					x						
-Pignite	499	0	x																					x						
-Emboar	500	0																						x						
-Oshawott	501	0	x																					x						
-Dewott	502	0	x																					x						
-Samurott	503	0																						x						
-Patrat	504	0	x																					x						
-Watchog	505	0																						x						
-Lillipup	506	0	x																					x						
-Herdier	507	0	x																					x						
-Stoutland	508	0																						x						
-Purrloin	509	0	x																					x						
-Liepard	510	0																						x						
-Pansage	511	0	x																					x						
-Simisage	512	0																						x						
-Pansear	513	0	x																					x						
-Simisear	514	0																						x						
-Panpour	515	0	x																					x						
-Simipour	516	0																						x						
-Munna	517	0	x																					x						
-Musharna	518	0																						x						
-Pidove	519	0	x																					x						
-Tranquill	520	0	x																					x						
-Unfezant	521	0																						x						
-Blitzle	522	0	x																					x						
-Zebstrika	523	0																						x						
-Roggenrola	524	0	x																					x						
-Boldore	525	0																						x						
-Gigalith	526	0																						x						
-Woobat	527	0	x																					x						
-Swoobat	528	0	x																					x						
-Drilbur	529	0	x																					x						
-Excadrill	530	0																						x						
-Audino	531	0	x																					x						
-Timburr	532	0	x																					x						
-Gurdurr	533	0																						x						
-Conkeldurr	534	0																						x						
-Tympole	535	0	x																					x						
-Palpitoad	536	0																						x						
-Seismitoad	537	0																						x						
-Throh	538	0																						x						
-Sawk	539	0																						x						
-Sewaddle	540	0	x																					x						
-Swadloon	541	0																						x						
-Leavanny	542	0	x																					x						
-Venipede	543	0																						x						
-Whirlipede	544	0																						x						
-Scolipede	545	0																						x						
-Cottonee	546	0	x																					x						
-Whimsicott	547	0	x																					x						
-Petilil	548	0	x																					x						
-Lilligant	549	0																						x						
-Red-Striped Basculin	550	0																						x						
-Blue-Striped Basculin	550	1																						x						
-Sandile	551	0	x																					x						
-Krokorok	552	0	x																					x						
-Krookodile	553	0																						x						
-Darumaka	554	0	x																					x						
-Galarian Darumaka	554	1																												
-Standard Darmanitan	555	0																						x						
-Galarian Darmanitan	555	2																												
-Galarian Zen Darmanitan	555	3																												
-Maractus	556	0	x																					x						
-Dwebble	557	0	x																					x						
-Crustle	558	0																						x						
-Scraggy	559	0	x																					x						
-Scrafty	560	0																						x						
-Sigilyph	561	0							x															x						
-Yamask	562	0																						x						
-Galarian Yamask	562	1																												
-Cofagrigus	563	0																						x						
-Tirtouga	564	0	x																					x						
-Carracosta	565	0																						x						
-Archen	566	0	x																					x						
-Archeops	567	0																						x						
-Trubbish	568	0	x																					x						
-Garbodor	569	0																						x						
-Zorua	570	0	x																					x						
-Zoroark	571	0																						x						
-Minccino	572	0	x																					x						
-Cinccino	573	0	x																					x						
-Gothita	574	0																						x						
-Gothorita	575	0																						x						
-Gothitelle	576	0																						x						
-Solosis	577	0	x																					x						
-Duosion	578	0	x																					x						
-Reuniclus	579	0	x																					x						
-Ducklett	580	0	x																					x						
-Swanna	581	0																						x						
-Vanillite	582	0	x																					x						
-Vanillish	583	0	x																					x						
-Vanilluxe	584	0																						x						
-Spring Deerling	585	0	x																					x						
-Summer Deerling	585	1	x																					x						
-Autumn Deerling	585	2	x																					x						
-Winter Deerling	585	3	x																					x						
-Spring Sawsbuck	586	0																						x						
-Summer Sawsbuck	586	1																						x						
-Autumn Sawsbuck	586	2																						x						
-Winter Sawsbuck	586	3																						x						
-Emolga	587	0	x																					x						
-Karrablast	588	0																						x						
-Escavalier	589	0																						x						
-Foongus	590	0	x																					x						
-Amoonguss	591	0																						x						
-Frillish	592	0	x																					x						
-Jellicent	593	0																						x						
-Alomomola	594	0																						x						
-Joltik	595	0	x																					x						
-Galvantula	596	0																						x						
-Ferroseed	597	0																						x						
-Ferrothorn	598	0																						x						
-Klink	599	0							x															x						
-Klang	600	0							x															x						
-Klinklang	601	0							x															x						
-Tynamo	602	0	x																					x						
-Eelektrik	603	0																						x						
-Eelektross	604	0																						x						
-Elgyem	605	0																						x						
-Beheeyem	606	0																						x						
-Litwick	607	0																						x						
-Lampent	608	0																						x						
-Chandelure	609	0																						x						
-Axew	610	0	x																					x						
-Fraxure	611	0																						x						
-Haxorus	612	0																						x						
-Cubchoo	613	0	x																					x						
-Beartic	614	0																						x						
-Cryogonal	615	0							x															x						
-Shelmet	616	0																						x						
-Accelgor	617	0																						x						
-Stunfisk	618	0	x																					x						
-Galarian Stunfisk	618	1																												
-Mienfoo	619	0	x																					x						
-Mienshao	620	0																						x						
-Druddigon	621	0																						x						
-Golett	622	0							x															x						
-Golurk	623	0							x															x						
-Pawniard	624	0																						x						
-Bisharp	625	0																						x						
-Bouffalant	626	0																						x						
-Rufflet	627	0	x																					x						
-Braviary	628	0																						x						
-Vullaby	629	0	x																	x				x						
-Mandibuzz	630	0																						x						
-Heatmor	631	0																						x						
-Durant	632	0																						x						
-Deino	633	0	x																					x						
-Zweilous	634	0																						x						
-Hydreigon	635	0																						x						
-Larvesta	636	0																						x						
-Volcarona	637	0																						x						
-Cobalion	638	0																						x						
-Terrakion	639	0																						x						
-Virizion	640	0																						x						
-Incarnate Tornadus	641	0																						x						
-Therian Tornadus	641	1																						x						
-Incarnate Thundurus	642	0																						x						
-Therian Thundurus	642	1																						x						
-Reshiram	643	0																						x						
-Zekrom	644	0																						x						
-Incarnate Landorus	645	0																						x						
-Therian Landorus	645	1																						x						
-Kyurem	646	0																						x						
-Black Kyurem	646	1																						x						
-White Kyurem	646	2																						x						
-Ordinary Keldeo	647	0																						x						
-Resolute Keldeo	647	1																						x						
-Aria Meloetta	648	0																						x						
-Genesect	649	0																						x						
-Chespin	650	0	x																					x						
-Quilladin	651	0	x																					x						
-Chesnaught	652	0																						x						
-Fennekin	653	0	x																					x						
-Braixen	654	0	x																					x						
-Delphox	655	0																						x						
-Froakie	656	0	x																					x						
-Frogadier	657	0	x																					x						
-Greninja	658	0																						x						
-Bunnelby	659	0	x																					x						
-Diggersby	660	0																						x						
-Fletchling	661	0	x																					x						
-Fletchinder	662	0	x																					x						
-Talonflame	663	0																						x						
-Scatterbug	664	0	x																					x						
-Spewpa	665	0																						x						
-Icy Snow Vivillon	666	0	x																					x						
-Polar Vivillon	666	1	x																					x						
-Tundra Vivillon	666	2	x																					x						
-Continental Vivillon	666	3	x																					x						
-Garden Vivillon	666	4	x																					x						
-Elegant Vivillon	666	5	x																					x						
-Meadow Vivillon	666	6	x																					x						
-Modern Vivillon	666	7	x																					x						
-Marine Vivillon	666	8	x																					x						
-Archipelago Vivillon	666	9	x																					x						
-High Plains Vivillon	666	10	x																					x						
-Sandstorm Vivillon	666	11	x																					x						
-River Vivillon	666	12	x																					x						
-Monsoon Vivillon	666	13	x																					x						
-Savanna Vivillon	666	14	x																					x						
-Sun Vivillon	666	15	x																					x						
-Ocean Vivillon	666	16	x																					x						
-Jungle Vivillon	666	17	x																					x						
-Fancy Vivillon	666	18	x																					x						
-Poké Ball Vivillon	666	19	x																					x						
-Litleo	667	0	x																					x						
-Pyroar	668	0																						x						
-Red Flabébé	669	0	x																					x						
-Yellow Flabébé	669	1	x																					x						
-Orange Flabébé	669	2	x																					x						
-Blue Flabébé	669	3	x																					x						
-White Flabébé	669	4	x																					x						
-Red Floette	670	0																						x						
-Yellow Floette	670	1																						x						
-Orange Floette	670	2																						x						
-Blue Floette	670	3																						x						
-White Floette	670	4																						x						
-Eternal Floette	670	5																						x						
-Red Florges	671	0																						x						
-Yellow Florges	671	1																						x						
-Orange Florges	671	2																						x						
-Blue Florges	671	3																						x						
-White Florges	671	4																						x						
-Skiddo	672	0	x																					x						
-Gogoat	673	0																						x						
-Pancham	674	0	x																					x						
-Pangoro	675	0																						x						
-Natural Furfrou	676	0	x																					x						
-Heart Furfrou	676	1	x													x								x						
-Star Furfrou	676	2	x													x								x						
-Diamond Furfrou	676	3	x													x								x						
-Debutante Furfrou	676	4	x													x								x						
-Matron Furfrou	676	5	x													x								x						
-Dandy Furfrou	676	6	x													x								x						
-La Reine Furfrou	676	7	x													x								x						
-Kabuki Furfrou	676	8	x													x								x						
-Pharaoh Furfrou	676	9	x													x								x						
-Espurr	677	0	x																					x						
-Male Meowstic	678	0	x																					x						
-Female Meowstic	678	1														x								x						
-Honedge	679	0																						x						
-Doublade	680	0																						x						
-Shield Aegislash	681	0																						x						
-Spritzee	682	0	x																					x						
-Aromatisse	683	0																						x						
-Swirlix	684	0	x																					x						
-Slurpuff	685	0																						x						
-Inkay	686	0	x																					x						
-Malamar	687	0																						x						
-Binacle	688	0																						x						
-Barbaracle	689	0																						x						
-Skrelp	690	0																						x						
-Dragalge	691	0																						x						
-Clauncher	692	0																						x						
-Clawitzer	693	0																						x						
-Helioptile	694	0	x																					x						
-Heliolisk	695	0																						x						
-Tyrunt	696	0	x																					x						
-Tyrantrum	697	0																						x						
-Amaura	698	0	x																					x						
-Aurorus	699	0																						x						
-Sylveon	700	0	x																					x						
-Hawlucha	701	0																						x						
-Dedenne	702	0	x																					x						
-Carbink	703	0	x																					x						
-Goomy	704	0	x																					x						
-Sliggoo	705	0	x																					x						
-Goodra	706	0	x																					x						
-Klefki	707	0	x																					x						
-Phantump	708	0	x																					x						
-Trevenant	709	0																						x						
-Average Pumpkaboo	710	0	x																					x						
-Small Pumpkaboo	710	1	x																					x						
-Large Pumpkaboo	710	2	x																					x						
-Super Pumpkaboo	710	3	x																					x						
-Average Gourgeist	711	0																						x						
-Small Gourgeist	711	1																						x						
-Large Gourgeist	711	2																						x						
-Super Gourgeist	711	3																						x						
-Bergmite	712	0	x																					x						
-Avalugg	713	0																						x						
-Noibat	714	0	x																					x						
-Noivern	715	0																						x						
-Neutral Xerneas	716	0																						x						
-Yveltal	717	0																						x						
-Zygarde	718	0																						x						
-10% Zygarde	718	1																												
-Diancie	719	0																						x						
-Confined Hoopa	720	0																						x						
-Hoopa Unbound	720	1																						x						
-Volcanion	721	0																						x						
-Rowlet	722	0																												
-Dartrix	723	0																												
-Decidueye	724	0																												
-Litten	725	0																												
-Torracat	726	0																												
-Incineroar	727	0																												
-Popplio	728	0																												
-Brionne	729	0																												
-Primarina	730	0																												
-Pikipek	731	0																												
-Trumbeak	732	0																												
-Toucannon	733	0																												
-Yungoos	734	0																												
-Gumshoos	735	0																												
-Grubbin	736	0																												
-Charjabug	737	0																												
-Vikavolt	738	0																												
-Crabrawler	739	0																												
-Crabominable	740	0																												
-Baile Oricorio	741	0																												
-Pom-pom Oricorio	741	1																												
-Pa’u Oricorio	741	2																												
-Sensu Oricorio	741	3																												
-Cutiefly	742	0																												
-Ribombee	743	0																												
-Rockruff	744	0																												
-Midday Lycanroc	745	0																												
-Midnight Lycanroc	745	1																												
-Dusk Lycanroc	745	2																												
-Solo Wishiwashi	746	0																												
-School Wishiwashi	746	1																												
-Mareanie	747	0																												
-Toxapex	748	0																												
-Mudbray	749	0																												
-Mudsdale	750	0																												
-Dewpider	751	0																												
-Araquanid	752	0																												
-Fomantis	753	0																												
-Lurantis	754	0																												
-Morelull	755	0																												
-Shiinotic	756	0																												
-Salandit	757	0																												
-Salazzle	758	0																												
-Stufful	759	0																												
-Bewear	760	0																												
-Bounsweet	761	0																												
-Steenee	762	0																												
-Tsareena	763	0																												
-Comfey	764	0																												
-Oranguru	765	0																												
-Passimian	766	0																												
-Wimpod	767	0																												
-Golisopod	768	0																												
-Sandygast	769	0																												
-Palossand	770	0																												
-Pyukumuku	771	0																												
-Type: Null	772	0																												
-Silvally	773	0																												
-Red Meteor Minior	774	0																												
-Orange Meteor Minior	774	1																												
-Yellow Meteor Minior	774	2																												
-Green Meteor Minior	774	3																												
-Blue Meteor Minior	774	4																												
-Indigo Meteor Minior	774	5																												
-Violent Meteor Minior	774	6																												
-Red Core Minior	774	7																												
-Orange Core Minior	774	8																												
-Yellow Core Minior	774	9																												
-Green Core Minior	774	10																												
-Blue Core Minior	774	11																												
-Indigo Core Minior	774	12																												
-Violet Core Minior	774	13																												
-Komala	775	0																												
-Turtonator	776	0																												
-Togedemaru	777	0																												
-Disguised Mimikyu	778	0																												
-Bruxish	779	0																												
-Drampa	780	0																												
-Dhelmise	781	0																												
-Jangmo-o	782	0																												
-Hakamo-o	783	0																												
-Kommo-o	784	0																												
-Tapu Koko	785	0																												
-Tapu Lele	786	0																												
-Tapu Bulu	787	0																												
-Tapu Fini	788	0																												
-Cosmog	789	0																												
-Cosmoem	790	0																												
-Solgaleo	791	0																												
-Lunala	792	0																												
-Nihilego	793	0																												
-Buzzwole	794	0																												
-Pheromosa	795	0																												
-Xurkitree	796	0																												
-Celesteela	797	0																												
-Kartana	798	0																												
-Guzzlord	799	0																												
-Necrozma	800	0																												
-Dusk Necrozma	800	1																												
-Dawn Necrozma	800	2																												
-Ultra Necrozma	800	3																												
-Magearna	801	0																												
-Original Magearna	801	1																												
-Marshadow	802	0																												
-Poipole	803	0																												
-Naganadel	804	0																												
-Stakataka	805	0																												
-Blacephalon	806	0																												
-Zeraora	807	0																												
-Meltan	808	0																												
-Melmetal	809	0																												
-Grookey	810	0																												
-Thwackey	811	0																												
-Rillaboom	812	0																												
-Scorbunny	813	0																												
-Raboot	814	0																												
-Cinderace	815	0																												
-Sobble	816	0																												
-Drizzile	817	0																												
-Inteleon	818	0																												
-Skwovet	819	0																												
-Greedent	820	0																												
-Rookidee	821	0																												
-Corvisquire	822	0																												
-Corviknight	823	0																												
-Blipbug	824	0																												
-Dottler	825	0																												
-Orbeetle	826	0																												
-Nickit	827	0																												
-Thievul	828	0																												
-Gossifleur	829	0																												
-Eldegoss	830	0																												
-Wooloo	831	0																												
-Dubwool	832	0																												
-Chewtle	833	0																												
-Drednaw	834	0																												
-Yamper	835	0																												
-Boltund	836	0																												
-Rolycoly	837	0																												
-Carkol	838	0																												
-Coalossal	839	0																												
-Applin	840	0																												
-Flapple	841	0																												
-Appletun	842	0																												
-Silicobra	843	0																												
-Sandaconda	844	0																												
-Cramorant	845	0																												
-Arrokuda	846	0																												
-Barraskewda	847	0																												
-Toxel	848	0																												
-Amped Toxtricity	849	0																												
-Low Key Toxtricity	849	1																												
-Sizzlipede	850	0																												
-Centiskorch	851	0																												
-Clobbopus	852	0																												
-Grapploct	853	0																												
-Phony Sinistea	854	0																												
-Antique Sinistea	854	1																												
-Phony Polteageist	855	0																												
-Antique Polteageist	855	1																												
-Hatenna	856	0																												
-Hattrem	857	0																												
-Hatterene	858	0																												
-Impidimp	859	0																												
-Morgrem	860	0																												
-Grimmsnarl	861	0																												
-Obstagoon	862	0																												
-Perrserker	863	0																												
-Cursola	864	0																												
-Sirfetch'd	865	0																												
-Mr. Rime	866	0																												
-Runerigus	867	0																												
-Milcery	868	0																												
-Alcremie	869	0																												
-Falinks	870	0																												
-Pincurchin	871	0																												
-Snom	872	0																												
-Frosmoth	873	0																												
-Stonjourner	874	0																												
-Ice Face Eiscue	875	0																												
-Male Indeedee	876	0																												
-Female Indeedee	876	1																												
-Full Belly Morpeko	877	0																												
-Hangry Morpeko	877	1																												
-Cufant	878	0																												
-Copperajah	879	0																												
-Dracozolt	880	0																												
-Arctozolt	881	0																												
-Dracovish	882	0																												
-Arctovish	883	0																												
-Duraludon	884	0																												
-Dreepy	885	0																												
-Drakloak	886	0																												
-Dragapult	887	0																												
-Hero Zacian	888	0																												
-Hero Zamazenta	889	0																												
-Eternatus	890	0																												
-Kubfu	891	0																												
-Single Strike Urshifu	892	0																												
-Rapid Strike Urshifu	892	1																												
-Zarude	893	0																												
-Regieleki	894	0																												
-Regidrago	895	0																												
-Glastrier	896	0																												
-Spectrier	897	0																												
-Calyrex	898	0																												
-Ice Rider Calyrex	898	1																												
-Shadow Rider Calyrex	898	2																												
+Missingno.	0	0							x																				
+Substitute	0	1							x																				
+Bulbasaur	1	0	x	x	x	x					x	x	x	x		x			x	x			x	x					x
+Ivysaur	2	0	x	x	x	x						x	x	x		x			x				x	x					x
+Venusaur	3	0		x		x	x						x	x		x	x	x	x		x	x	x	x					x
+Charmander	4	0	x	x	x	x					x	x	x	x					x	x		x	x	x					x
+Charmeleon	5	0	x	x		x				x		x	x		x		x		x				x	x					x
+Charizard	6	0		x			x			x			x		x		x		x			x	x	x					x
+Squirtle	7	0	x	x	x	x					x	x	x	x		x		x	x	x			x	x					x
+Wartortle	8	0	x	x		x				x		x	x			x	x		x			x	x	x					x
+Blastoise	9	0		x		x	x			x			x		x	x	x		x			x	x	x					x
+Caterpie	10	0	x	x	x	x					x	x		x		x				x				x					
+Metapod	11	0	x	x	x	x					x	x		x		x	x	x						x					
+Butterfree	12	0	x	x	x	x					x	x				x	x	x	x		x	x	x	x					x
+Weedle	13	0	x	x	x	x					x		x	x	x					x				x					
+Kakuna	14	0	x	x	x	x							x	x	x	x								x					
+Beedrill	15	0		x									x		x	x	x		x			x	x	x					x
+Pidgey	16	0	x	x	x	x					x	x	x	x		x			x				x	x					x
+Pidgeotto	17	0	x	x		x	x			x		x	x	x	x	x	x	x	x			x	x	x					x
+Pidgeot	18	0		x		x	x			x		x	x		x	x	x	x	x		x	x	x	x					x
+Rattata	19	0	x	x	x	x					x	x	x	x		x			x	x			x	x					x
+Alolan Rattata	19	1	x	x	x	x					x	x	x	x		x			x	x			x	x					x
+Raticate	20	0	x	x						x			x		x	x	x		x			x	x	x					x
+Alolan Raticate	20	1	x	x						x			x		x	x	x		x			x	x	x					x
+Spearow	21	0	x	x	x	x					x		x	x		x			x				x	x					x
+Fearow	22	0		x						x			x		x	x	x		x		x	x	x	x					x
+Ekans	23	0	x	x	x	x					x	x	x	x		x			x				x	x					x
+Arbok	24	0		x		x	x			x			x		x	x	x	x	x				x	x					x
+Pikachu	25	0	x	x	x	x					x	x	x	x	x	x	x	x	x				x	x					x
+Raichu	26	0	x	x	x	x				x	x	x	x	x	x	x	x	x	x			x	x	x					x
+Alolan Raichu	26	1	x	x	x	x				x	x	x	x	x	x	x	x	x	x			x	x	x					x
+Sandshrew	27	0	x	x	x	x					x	x	x	x	x			x	x				x	x					x
+Alolan Sandshrew	27	1	x	x	x	x					x	x	x	x	x			x	x				x	x					x
+Sandslash	28	0		x		x	x			x		x	x		x		x	x	x			x	x	x					x
+Alolan Sandslash	28	1		x		x	x			x		x	x		x		x	x	x			x	x	x					x
+Nidoran♀	29	0	x	x	x	x					x	x	x	x		x		x	x	x			x	x					x
+Nidorina	30	0	x	x	x	x					x	x	x	x		x		x	x		x	x	x	x					x
+Nidoqueen	31	0	x	x	x	x	x						x		x	x		x	x		x	x	x	x					x
+Nidoran♂	32	0	x	x	x	x				x	x	x	x	x				x	x	x			x	x					x
+Nidorino	33	0	x	x		x				x	x	x	x	x			x	x	x		x	x	x	x					x
+Nidoking	34	0		x		x	x			x			x		x		x	x	x		x	x	x	x					x
+Clefairy	35	0	x	x	x	x					x	x		x		x		x	x					x					x
+Clefable	36	0	x	x	x	x	x				x	x		x		x		x	x		x			x					x
+Vulpix	37	0	x	x	x	x					x	x		x		x		x	x				x	x					x
+Alolan Vulpix	37	1	x	x	x	x					x	x		x		x		x	x				x	x					x
+Ninetales	38	0		x		x	x									x		x	x		x	x	x	x					x
+Alolan Ninetales	38	1		x		x	x									x		x	x		x	x	x	x					x
+Jigglypuff	39	0	x	x	x	x					x	x	x	x		x		x	x	x				x					x
+Wigglytuff	40	0	x	x	x	x	x				x	x	x	x	x	x		x	x		x			x					x
+Zubat	41	0	x	x	x	x					x	x	x	x					x				x	x					x
+Golbat	42	0				x							x	x	x		x		x				x	x					x
+Oddish	43	0	x	x	x	x					x	x		x					x				x	x					x
+Gloom	44	0	x		x	x						x		x					x				x	x					x
+Vileplume	45	0	x	x	x	x	x			x		x		x	x	x	x	x	x		x		x	x					x
+Paras	46	0	x	x	x	x					x	x		x		x		x	x					x					x
+Parasect	47	0					x		x								x	x	x			x		x					x
+Venonat	48	0	x	x	x	x					x	x		x		x	x		x				x	x					x
+Venomoth	49	0	x	x	x	x						x		x	x	x	x	x	x		x	x	x	x					x
+Diglett	50	0	x	x	x	x				x	x	x	x	x			x		x				x	x					x
+Alolan Diglett	50	1	x	x	x	x				x	x	x	x	x			x		x				x	x					x
+Dugtrio	51	0		x			x			x			x		x		x		x			x	x	x					x
+Alolan Dugtrio	51	1		x			x			x			x		x		x		x			x	x	x					x
+Meowth	52	0	x	x	x	x				x	x	x	x	x		x	x	x	x				x	x					x
+Alolan Meowth	52	1	x	x	x	x				x	x	x	x	x		x	x	x	x				x	x					x
+Galarian Meowth	52	2	x	x	x	x				x	x	x	x	x		x	x	x	x				x	x					x
+Persian	53	0	x	x		x	x			x				x	x	x		x	x		x	x	x	x					x
+Alolan Persian	53	1	x	x		x	x			x				x	x	x		x	x		x	x	x	x					x
+Psyduck	54	0	x	x	x	x					x	x		x										x					
+Golduck	55	0	x	x		x	x			x		x		x	x	x	x	x	x		x	x	x	x					x
+Mankey	56	0	x	x						x	x		x		x		x						x	x					
+Primeape	57	0								x			x		x		x						x	x					
+Growlithe	58	0	x	x	x	x				x	x	x	x	x			x		x			x	x	x					x
+Arcanine	59	0	x	x		x	x	x		x		x	x		x	x	x	x	x		x	x	x	x					x
+Poliwag	60	0	x	x	x	x					x	x		x		x			x	x				x					x
+Poliwhirl	61	0	x	x	x	x	x			x		x	x	x	x		x	x	x				x	x					x
+Poliwrath	62	0		x			x			x			x		x		x		x				x	x					x
+Abra	63	0	x		x	x					x			x				x		x				x					
+Kadabra	64	0				x	x									x		x				x		x					
+Alakazam	65	0				x	x									x		x			x	x		x					
+Machop	66	0	x	x		x				x	x	x	x		x		x		x				x	x					x
+Machoke	67	0		x			x			x			x		x		x		x			x	x	x					x
+Machamp	68	0		x			x			x			x		x		x		x			x	x	x					x
+Bellsprout	69	0	x	x	x	x					x	x		x		x		x	x				x	x					x
+Weepinbell	70	0	x	x	x	x						x		x		x			x			x	x	x					x
+Victreebel	71	0		x						x			x	x	x	x	x		x			x	x	x					x
+Tentacool	72	0	x			x				x				x					x				x	x					x
+Tentacruel	73	0					x			x			x		x		x		x		x	x	x	x					x
+Geodude	74	0	x	x		x				x		x	x		x		x		x				x	x					x
+Alolan Geodude	74	1	x	x		x				x		x	x		x		x		x				x	x					x
+Graveler	75	0		x		x	x			x		x	x		x		x		x			x	x	x					x
+Alolan Graveler	75	1		x		x	x			x		x	x		x		x		x			x	x	x					x
+Golem	76	0		x		x	x			x			x		x		x	x	x			x	x	x					x
+Alolan Golem	76	1		x		x	x			x			x		x		x	x	x			x	x	x					x
+Ponyta	77	0	x	x	x	x					x	x		x		x		x	x		x	x	x	x					x
+Galarian Ponyta	77	1	x	x	x	x					x	x		x		x		x	x		x	x	x	x					x
+Rapidash	78	0		x		x	x	x		x			x	x	x	x	x	x	x		x	x	x	x					x
+Galarian Rapidash	78	1		x		x	x	x		x			x	x	x	x	x	x	x		x	x	x	x					x
+Slowpoke	79	0	x		x	x						x		x															
+Galarian Slowpoke	79	1	x		x	x						x		x															
+Slowbro	80	0	x		x	x				x		x		x				x	x										x
+Galarian Slowbro	80	2	x		x	x				x		x		x				x	x										x
+Magnemite	81	0	x	x		x			x																				
+Magneton	82	0		x		x			x																				
+Farfetch'd	83	0	x	x	x	x	x			x		x	x	x	x		x	x	x			x	x	x					x
+Galarian Farfetch'd	83	1	x	x	x	x	x			x		x	x	x	x		x	x	x			x	x	x					x
+Doduo	84	0	x	x	x	x					x	x		x		x			x				x	x					x
+Dodrio	85	0		x						x			x	x	x	x	x		x			x	x	x					x
+Seel	86	0	x	x	x	x					x	x		x		x			x				x	x					x
+Dewgong	87	0	x	x	x	x	x			x		x		x	x	x	x	x	x		x	x	x	x					x
+Grimer	88	0	x	x	x					x	x		x	x	x				x				x	x					x
+Alolan Grimer	88	1	x	x	x					x	x		x	x	x				x				x	x					x
+Muk	89	0		x						x			x	x	x		x		x				x	x					x
+Alolan Muk	89	1		x						x			x	x	x		x		x				x	x					x
+Shellder	90	0	x	x	x	x					x	x	x	x					x				x	x					x
+Cloyster	91	0		x			x			x			x		x		x	x	x				x	x					x
+Gastly	92	0	x	x							x		x	x					x				x						x
+Haunter	93	0	x	x						x			x	x	x		x		x				x						x
+Gengar	94	0		x			x			x			x		x		x	x	x				x						x
+Onix	95	0		x			x			x			x		x		x					x							
+Drowzee	96	0		x	x	x								x				x	x			x	x	x					x
+Hypno	97	0		x		x	x							x		x		x	x		x	x	x	x					x
+Krabby	98	0	x	x	x	x					x	x	x	x		x			x				x	x					x
+Kingler	99	0		x		x				x		x	x		x	x	x	x	x			x	x	x					x
+Voltorb	100	0	x	x					x	x			x		x		x							x					
+Electrode	101	0	x	x					x	x			x		x		x							x					
+Exeggcute	102	0	x	x	x	x					x	x		x					x	x			x	x					x
+Exeggutor	103	0		x		x	x			x		x			x		x		x				x	x					x
+Alolan Exeggutor	103	1		x		x	x			x		x			x		x		x				x	x					x
+Cubone	104	0	x	x	x	x				x	x	x		x		x		x	x	x			x	x					x
+Marowak	105	0		x		x	x			x			x		x	x	x	x	x		x	x	x	x					x
+Alolan Marowak	105	1		x		x	x			x			x		x	x	x	x	x		x	x	x	x					x
+Hitmonlee	106	0		x		x	x			x					x		x	x	x			x	x	x					x
+Hitmonchan	107	0		x		x	x			x					x		x	x	x			x	x	x					x
+Lickitung	108	0	x	x	x	x				x	x	x		x	x	x	x		x			x	x	x					x
+Koffing	109	0	x	x	x								x	x	x		x		x				x	x					x
+Weezing	110	0		x						x			x	x	x		x		x				x	x					x
+Galarian Weezing	110	1		x						x			x	x	x		x		x				x	x					x
+Rhyhorn	111	0	x	x	x	x				x		x	x	x	x		x		x				x	x					x
+Rhydon	112	0		x		x	x			x			x		x		x	x	x			x	x	x					x
+Chansey	113	0	x	x	x	x					x	x				x		x	x		x	x		x					x
+Tangela	114	0	x	x	x	x					x	x		x	x	x	x		x		x		x	x					x
+Kangaskhan	115	0	x	x	x	x	x					x			x	x	x	x	x		x	x	x	x					x
+Horsea	116	0	x		x	x					x	x		x		x		x	x	x			x	x					x
+Seadra	117	0		x		x				x			x		x	x	x		x		x	x	x	x					x
+Goldeen	118	0	x	x	x	x						x		x		x		x	x		x		x	x					x
+Seaking	119	0		x	x	x	x			x		x	x		x	x	x	x	x		x	x	x	x					x
+Staryu	120	0		x					x							x		x	x				x	x					x
+Starmie	121	0		x			x		x							x		x	x		x	x	x	x					x
+Mr. Mime	122	0	x	x	x	x				x		x		x	x	x	x	x	x					x					x
+Galarian Mr. Mime	122	1	x	x	x	x				x		x		x	x	x	x	x	x					x					x
+Scyther	123	0		x		x	x			x		x	x		x		x		x			x	x	x					x
+Jynx	124	0		x	x	x	x									x	x	x	x		x	x	x	x					x
+Electabuzz	125	0		x						x		x	x	x	x		x		x			x	x	x					x
+Magmar	126	0		x		x	x			x		x	x		x		x	x	x			x	x	x					x
+Pinsir	127	0		x						x			x		x		x		x			x	x	x					x
+Tauros	128	0		x						x			x	x	x		x	x	x			x	x	x					x
+Magikarp	129	0	x	x	x	x					x	x		x	x	x		x											
+Gyarados	130	0		x						x			x		x		x					x							
+Lapras	131	0	x	x	x	x	x					x		x		x		x	x		x	x		x					x
+Ditto	132	0	x	x	x	x	x			x	x	x		x		x	x		x				x	x					x
+Eevee	133	0	x	x	x	x					x	x		x		x	x		x	x			x	x					x
+Vaporeon	134	0	x	x	x	x	x					x		x		x		x	x		x	x	x	x					x
+Jolteon	135	0	x	x	x	x	x			x	x	x	x	x	x		x		x		x	x	x	x					x
+Flareon	136	0	x	x	x	x	x			x	x	x	x	x	x		x		x		x	x	x	x					x
+Porygon	137	0	x	x		x			x																				
+Omanyte	138	0	x	x	x	x								x			x		x				x	x					x
+Omastar	139	0		x						x			x		x		x		x			x	x	x					x
+Kabuto	140	0	x	x	x	x								x					x				x	x					x
+Kabutops	141	0		x						x			x		x		x		x			x	x	x					x
+Aerodactyl	142	0		x						x			x		x		x		x			x	x	x					x
+Snorlax	143	0				x	x			x		x		x			x	x	x			x		x					
+Articuno	144	0					x	x													x	x							
+Galarian Articuno	144	1					x	x													x	x							
+Zapdos	145	0					x	x													x	x							
+Galarian Zapdos	145	1					x	x													x	x							
+Moltres	146	0					x	x													x	x							
+Galarian Moltres	146	1					x	x													x	x							
+Dratini	147	0	x	x	x						x								x	x									x
+Dragonair	148	0		x		x	x								x			x	x		x	x		x					x
+Dragonite	149	0		x		x	x	x					x		x			x	x		x	x		x					x
+Mewtwo	150	0						x																					
+Mew	151	0	x	x	x	x					x	x					x	x		x			x	x					
+Chikorita	152	0	x	x	x	x					x	x	x	x		x			x	x			x	x					x
+Bayleef	153	0	x	x	x	x						x		x	x	x	x	x	x				x	x					x
+Meganium	154	0	x	x	x	x	x			x		x		x	x	x	x	x	x		x	x	x	x					x
+Cyndaquil	155	0	x	x	x	x					x	x	x	x					x	x			x	x					x
+Quilava	156	0	x	x	x	x				x		x	x		x		x	x	x				x	x					x
+Typhlosion	157	0		x			x			x		x	x		x		x	x	x			x	x	x					x
+Totodile	158	0	x	x		x				x	x	x	x		x		x		x	x			x	x					x
+Croconaw	159	0	x	x						x	x		x		x		x		x				x	x					x
+Feraligatr	160	0		x			x			x			x		x		x		x			x	x	x					x
+Sentret	161	0	x	x	x	x					x	x		x		x			x				x	x					x
+Furret	162	0	x	x	x	x					x	x	x	x		x	x	x	x		x	x	x	x					x
+Hoothoot	163	0	x	x	x	x					x	x		x		x						x		x					
+Noctowl	164	0		x		x	x			x				x		x	x	x			x	x		x					
+Ledyba	165	0	x	x	x	x					x	x		x		x			x				x	x					x
+Ledian	166	0	x	x		x	x			x		x		x	x	x	x	x	x		x	x	x	x					x
+Spinarak	167	0	x	x	x	x					x	x		x		x			x				x	x					x
+Ariados	168	0		x		x	x			x			x		x	x	x		x			x	x	x					x
+Crobat	169	0		x		x	x			x		x			x	x	x	x	x				x	x					x
+Chinchou	170	0	x	x	x	x					x	x		x		x			x				x	x					x
+Lanturn	171	0	x	x	x	x				x		x		x	x	x	x	x	x		x	x	x	x					x
+Pichu	172	0	x	x	x						x	x	x	x	x		x			x									
+Cleffa	173	0	x		x						x	x		x						x									
+Igglybuff	174	0	x		x						x	x		x						x									
+Togepi	175	0	x		x						x	x		x					x	x			x						x
+Togetic	176	0	x	x	x	x					x	x						x	x		x		x	x					x
+Natu	177	0	x		x	x					x			x		x		x				x		x					
+Xatu	178	0				x	x									x		x			x	x							
+Mareep	179	0	x	x	x	x					x	x		x		x			x		x		x	x					x
+Flaaffy	180	0	x	x	x	x					x	x	x	x	x	x	x		x		x	x	x	x					x
+Ampharos	181	0	x	x	x	x	x			x	x	x	x	x	x	x	x	x	x		x	x	x	x					x
+Bellossom	182	0	x	x	x	x						x				x		x	x		x	x		x					x
+Marill	183	0	x	x	x	x					x	x	x	x		x			x				x	x					x
+Azumarill	184	0	x	x	x	x					x	x	x	x	x	x	x		x		x	x	x	x					x
+Sudowoodo	185	0	x	x	x	x				x		x		x	x		x		x				x	x					x
+Politoed	186	0	x	x	x	x				x	x	x	x		x	x	x		x				x	x					x
+Hoppip	187	0	x	x	x	x					x	x		x		x							x	x					
+Skiploom	188	0	x	x	x	x					x	x		x		x			x		x		x	x					x
+Jumpluff	189	0	x	x	x	x					x	x		x		x	x	x	x		x	x	x	x					x
+Aipom	190	0	x	x	x	x				x	x	x	x	x	x		x		x				x	x					x
+Sunkern	191	0	x		x	x					x	x		x						x				x					
+Sunflora	192	0	x	x	x	x					x	x			x	x	x		x		x	x	x	x					x
+Yanma	193	0	x		x	x					x	x		x			x		x				x	x					x
+Wooper	194	0	x	x	x						x	x		x	x		x		x				x	x					x
+Quagsire	195	0	x	x	x	x	x			x		x		x	x		x		x			x	x	x					x
+Espeon	196	0	x	x		x	x					x				x		x	x		x	x	x	x					x
+Umbreon	197	0	x	x		x	x			x		x	x	x			x	x	x		x	x	x	x					x
+Murkrow	198	0	x	x	x	x					x		x	x		x		x	x				x	x					x
+Slowking	199	0		x		x	x			x				x			x	x			x	x							
+Galarian Slowking	199	1		x		x	x			x				x			x	x			x	x							
+Misdreavus	200	0	x	x	x	x					x	x	x			x		x	x		x		x	x					x
+Unown A	201	0							x																				
+Unown B	201	1							x																				
+Unown C	201	2							x																				
+Unown D	201	3							x																				
+Unown E	201	4							x																				
+Unown F	201	5							x																				
+Unown G	201	6							x																				
+Unown H	201	7							x																				
+Unown I	201	8							x																				
+Unown J	201	9							x																				
+Unown K	201	10							x																				
+Unown L	201	11							x																				
+Unown M	201	12							x																				
+Unown N	201	13							x																				
+Unown O	201	14							x																				
+Unown P	201	15							x																				
+Unown Q	201	16							x																				
+Unown R	201	17							x																				
+Unown S	201	18							x																				
+Unown T	201	19							x																				
+Unown U	201	20							x																				
+Unown V	201	21							x																				
+Unown W	201	22							x																				
+Unown X	201	23							x																				
+Unown Y	201	24							x																				
+Unown Z	201	25							x																				
+Unown !	201	26																							x				
+Unown ?	201	27							x																				
+Wobbuffet	202	0		x		x	x			x		x		x	x	x	x	x	x					x					
+Girafarig	203	0	x	x	x	x				x	x	x	x	x	x	x	x	x	x		x	x	x	x					x
+Pineco	204	0	x	x	x	x					x	x	x	x					x				x	x					x
+Forretress	205	0		x		x	x			x			x		x		x		x			x	x	x					x
+Dunsparce	206	0	x		x	x				x	x	x		x			x	x	x		x		x	x					x
+Gligar	207	0	x	x	x	x				x	x	x	x	x	x		x		x				x	x					x
+Steelix	208	0		x			x			x			x		x		x					x							
+Snubbull	209	0	x	x	x	x				x	x	x	x	x	x	x	x	x	x				x	x					x
+Granbull	210	0		x		x	x			x			x	x	x	x	x	x	x			x	x	x					x
+Qwilfish	211	0		x		x				x	x		x	x	x		x		x				x	x					x
+Scizor	212	0		x			x			x			x		x		x		x			x	x	x					x
+Shuckle	213	0	x	x	x	x				x	x	x		x		x	x	x	x					x					x
+Heracross	214	0	x	x	x	x	x			x		x	x	x	x		x	x	x			x	x	x					x
+Sneasel	215	0	x	x		x				x	x		x		x	x	x		x				x	x					x
+Teddiursa	216	0	x	x	x	x					x	x	x	x					x	x			x	x					x
+Ursaring	217	0		x			x			x			x		x		x		x			x	x	x					x
+Slugma	218	0	x	x	x	x					x	x		x	x	x			x				x	x					x
+Magcargo	219	0		x		x	x			x		x		x	x	x	x	x	x			x	x	x					x
+Swinub	220	0	x	x	x	x					x	x		x					x				x	x					x
+Piloswine	221	0		x			x			x			x	x	x		x		x			x	x	x					x
+Corsola	222	0	x		x	x					x	x		x		x		x	x		x		x	x					x
+Galarian Corsola	222	1	x		x	x					x	x		x		x		x	x		x		x	x					x
+Remoraid	223	0	x	x	x	x					x	x		x					x				x	x					x
+Octillery	224	0		x		x	x			x			x	x	x		x		x		x	x	x	x					x
+Delibird	225	0	x	x	x	x				x	x	x	x	x	x	x	x	x	x		x	x	x	x					x
+Mantine	226	0	x	x	x	x				x		x		x		x		x	x		x	x	x	x					x
+Skarmory	227	0		x			x			x			x		x	x	x		x		x	x	x	x					x
+Houndour	228	0	x	x		x				x	x		x	x	x		x		x				x	x					x
+Houndoom	229	0		x		x	x			x			x		x		x	x	x			x	x	x					x
+Kingdra	230	0		x		x	x	x		x					x	x	x	x	x		x	x	x	x					x
+Phanpy	231	0	x	x	x	x					x	x		x					x	x			x	x					x
+Donphan	232	0		x		x	x			x			x	x	x		x	x	x			x	x	x					x
+Porygon2	233	0	x			x			x			x										x							
+Stantler	234	0	x	x	x	x	x			x		x		x	x	x	x	x	x		x	x	x	x					x
+Smeargle	235	0	x	x	x	x						x		x	x	x			x		x	x	x	x					x
+Tyrogue	236	0	x	x		x				x	x		x	x	x		x		x				x	x					x
+Hitmontop	237	0	x	x		x	x			x			x		x		x		x			x	x	x					x
+Smoochum	238	0	x		x	x					x	x				x				x									
+Elekid	239	0	x	x	x					x	x	x			x		x		x	x			x						
+Magby	240	0	x	x	x	x					x	x		x					x	x			x						
+Miltank	241	0	x	x	x	x						x		x	x			x	x		x		x	x					x
+Blissey	242	0	x	x	x	x	x					x				x		x	x		x	x		x					x
+Raikou	243	0					x	x													x	x							
+Entei	244	0					x	x													x	x							
+Suicune	245	0					x	x													x	x							
+Larvitar	246	0	x	x	x	x					x			x	x			x	x	x				x					x
+Pupitar	247	0		x		x	x							x	x			x	x		x	x		x					x
+Tyranitar	248	0		x		x	x	x					x	x	x			x	x		x	x		x					x
+Lugia	249	0						x																					
+Ho-Oh	250	0						x																					
+Celebi	251	0	x	x	x	x					x	x				x	x	x		x				x					
+Treecko	252	0	x	x	x	x				x	x	x	x	x			x		x	x			x	x					x
+Grovyle	253	0	x	x		x				x		x	x	x	x		x	x	x				x	x					x
+Sceptile	254	0		x			x			x		x	x	x	x		x	x	x			x	x	x					x
+Torchic	255	0	x	x	x	x					x	x		x	x				x	x			x	x					x
+Combusken	256	0	x	x		x				x		x	x		x		x		x				x	x					x
+Blaziken	257	0		x		x	x			x			x		x		x	x	x			x	x	x					x
+Mudkip	258	0	x	x	x	x					x	x		x					x	x			x	x					x
+Marshtomp	259	0	x	x	x	x				x		x		x	x		x		x				x	x					x
+Swampert	260	0		x		x	x			x			x	x	x		x		x			x	x	x					x
+Poochyena	261	0	x	x	x					x	x	x	x	x	x	x	x		x				x	x					x
+Mightyena	262	0		x			x			x			x	x	x	x	x	x	x			x	x	x					x
+Zigzagoon	263	0	x	x	x	x					x	x		x		x			x				x	x					x
+Galarian Zigzagoon	263	1	x	x	x	x					x	x		x		x			x				x	x					x
+Linoone	264	0	x	x	x	x	x						x	x	x	x	x	x	x			x	x	x					x
+Galarian Linoone	264	1	x	x	x	x	x						x	x	x	x	x	x	x			x	x	x					x
+Wurmple	265	0	x	x	x	x					x	x		x		x				x				x					
+Silcoon	266	0	x		x	x					x			x		x								x					
+Beautifly	267	0	x	x	x	x					x	x				x	x	x	x		x	x	x	x					x
+Cascoon	268	0	x		x	x					x		x	x			x							x					
+Dustox	269	0		x	x	x							x	x			x	x	x			x	x	x					x
+Lotad	270	0	x	x	x	x					x	x		x					x				x	x					x
+Lombre	271	0		x	x	x				x		x	x	x	x		x	x	x				x	x					x
+Ludicolo	272	0	x	x			x			x			x		x		x		x			x	x	x					x
+Seedot	273	0	x	x	x	x					x	x		x					x	x			x	x					x
+Nuzleaf	274	0	x	x		x	x			x		x	x	x			x		x				x	x					x
+Shiftry	275	0		x		x	x						x				x		x			x	x	x					x
+Taillow	276	0	x	x	x	x					x	x		x	x	x			x				x	x					x
+Swellow	277	0	x	x		x	x			x		x	x	x	x	x	x	x	x		x	x	x	x					x
+Wingull	278	0	x	x	x	x					x	x		x	x	x			x				x	x					x
+Pelipper	279	0	x	x	x	x				x		x		x	x	x	x	x	x		x	x	x	x					x
+Ralts	280	0	x	x	x	x					x	x		x		x				x				x					
+Kirlia	281	0	x	x	x	x	x					x				x		x	x		x	x		x					x
+Gardevoir	282	0		x		x	x									x		x	x		x	x		x					x
+Surskit	283	0	x	x	x	x					x	x		x		x			x				x	x					x
+Masquerain	284	0	x	x	x	x	x				x	x		x		x	x	x	x			x	x	x					x
+Shroomish	285	0	x	x	x	x					x	x		x	x				x				x	x					x
+Breloom	286	0	x	x	x	x	x			x	x	x	x		x		x	x	x			x	x	x					x
+Slakoth	287	0	x		x	x					x	x		x															
+Vigoroth	288	0	x	x						x	x		x		x		x		x				x	x					x
+Slaking	289	0				x								x				x	x			x							x
+Nincada	290	0	x	x	x	x				x	x	x		x					x				x	x					x
+Ninjask	291	0		x		x	x			x			x				x	x	x			x	x	x					x
+Shedinja	292	0			x	x	x		x			x						x	x			x	x	x					x
+Whismur	293	0	x		x	x						x		x				x					x	x					
+Loudred	294	0	x	x		x				x	x		x		x		x		x				x	x					x
+Exploud	295	0		x		x				x	x		x		x		x		x			x	x	x					x
+Makuhita	296	0	x	x		x				x	x	x	x	x	x		x		x				x	x					x
+Hariyama	297	0		x		x	x			x		x	x		x		x	x	x			x	x	x					x
+Azurill	298	0	x		x						x	x		x						x									
+Nosepass	299	0	x			x			x			x				x			x			x		x					x
+Skitty	300	0	x	x	x						x	x		x	x	x	x		x	x			x	x					x
+Delcatty	301	0	x	x	x	x	x			x	x	x	x	x		x	x	x	x		x	x	x	x					x
+Sableye	302	0				x			x		x		x				x		x			x	x	x					x
+Mawile	303	0	x	x	x	x				x	x	x	x		x	x	x	x	x		x	x	x	x					x
+Aron	304	0	x	x	x	x					x	x		x	x				x	x			x	x					x
+Lairon	305	0	x	x		x				x			x		x		x		x			x	x	x					x
+Aggron	306	0		x						x			x		x		x		x			x	x	x					x
+Meditite	307	0	x		x	x					x	x		x		x			x		x	x	x	x					x
+Medicham	308	0		x		x	x			x		x				x		x	x		x	x	x	x					x
+Electrike	309	0	x	x	x	x				x	x	x	x	x	x	x	x		x				x	x					x
+Manectric	310	0		x		x	x			x		x	x	x	x	x	x	x	x			x	x	x					x
+Plusle	311	0	x	x	x						x	x		x	x		x		x			x	x	x					x
+Minun	312	0	x	x	x						x	x		x	x		x		x			x	x	x					x
+Volbeat	313	0	x	x	x	x					x	x		x	x		x		x		x	x	x	x					x
+Illumise	314	0	x	x	x	x					x	x		x		x		x	x		x	x	x	x					x
+Roselia	315	0	x	x	x	x						x				x		x	x		x	x		x					x
+Gulpin	316	0	x	x	x	x					x	x		x	x				x					x					x
+Swalot	317	0		x		x				x		x		x	x		x		x					x					x
+Carvanha	318	0		x		x				x	x		x	x	x		x		x				x	x					x
+Sharpedo	319	0		x		x				x			x		x		x		x			x	x	x					x
+Wailmer	320	0	x	x	x					x	x	x		x	x		x		x			x		x					x
+Wailord	321	0	x	x	x	x	x			x				x	x			x	x			x				x			x
+Numel	322	0	x	x	x	x					x	x		x		x			x				x	x					x
+Camerupt	323	0		x		x	x			x			x	x	x		x	x	x			x	x	x					x
+Torkoal	324	0	x	x	x	x	x			x		x		x				x	x			x	x	x					x
+Spoink	325	0	x	x	x	x					x	x				x			x				x	x					x
+Grumpig	326	0	x	x		x	x			x		x	x	x	x	x	x	x	x			x	x	x					x
+Spinda	327	0	x	x	x						x	x		x		x	x		x			x	x	x					x
+Trapinch	328	0	x	x	x	x					x	x	x	x			x			x				x					
+Vibrava	329	0	x	x	x	x					x	x				x	x	x	x			x	x	x					x
+Flygon	330	0		x		x	x			x			x		x	x	x	x	x		x	x	x	x					x
+Cacnea	331	0	x	x	x					x	x	x	x	x	x				x				x	x					x
+Cacturne	332	0		x		x				x			x		x		x	x	x			x	x	x					x
+Swablu	333	0	x	x	x	x					x	x				x		x	x	x	x	x		x					x
+Altaria	334	0	x	x	x	x	x			x		x				x	x	x	x		x	x		x					x
+Zangoose	335	0		x						x			x	x	x		x	x	x			x	x	x					x
+Seviper	336	0		x						x			x	x			x	x	x			x	x	x					x
+Lunatone	337	0				x	x		x										x										x
+Solrock	338	0				x	x		x										x										x
+Barboach	339	0	x	x	x	x					x	x		x		x			x				x	x					x
+Whiscash	340	0	x	x	x	x	x			x		x		x	x	x	x	x	x			x	x	x					x
+Corphish	341	0	x	x	x	x					x	x		x	x	x			x				x	x					x
+Crawdaunt	342	0		x		x	x			x			x	x	x	x	x	x	x			x	x	x					x
+Baltoy	343	0	x			x	x		x			x							x			x		x					x
+Claydol	344	0				x	x		x			x						x	x			x		x					x
+Lileep	345	0	x	x	x	x					x	x				x			x				x	x					x
+Cradily	346	0		x		x	x									x		x	x			x	x	x					x
+Anorith	347	0	x	x	x	x				x	x	x			x		x		x				x	x					x
+Armaldo	348	0		x		x	x			x			x		x		x	x	x			x	x	x					x
+Feebas	349	0	x		x	x					x	x				x				x									
+Milotic	350	0		x		x	x			x			x			x	x	x	x		x	x		x					x
+Castform	351	0	x	x	x	x					x	x					x		x	x	x	x	x	x					x
+Kecleon	352	0	x	x	x	x	x			x		x	x	x	x	x	x	x	x					x					x
+Shuppet	353	0	x	x	x	x					x	x	x			x			x				x						x
+Banette	354	0		x		x				x			x			x	x	x	x				x						x
+Duskull	355	0	x		x	x												x	x										x
+Dusclops	356	0		x		x	x			x								x	x										x
+Tropius	357	0	x	x	x	x	x			x		x	x	x	x	x	x	x	x			x		x					x
+Chimecho	358	0	x		x	x					x	x							x		x			x					x
+Absol	359	0		x		x	x	x				x				x		x	x			x		x					x
+Wynaut	360	0	x	x	x					x	x	x		x	x		x			x				x					
+Snorunt	361	0	x	x	x	x					x	x		x				x	x				x	x					x
+Glalie	362	0		x		x				x			x	x	x		x	x	x			x	x	x					x
+Spheal	363	0	x	x	x						x	x		x		x				x				x					
+Sealeo	364	0	x	x	x	x				x		x	x	x	x	x	x		x			x	x	x					x
+Walrein	365	0		x		x	x			x			x		x		x	x	x			x	x	x					x
+Clamperl	366	0	x	x	x	x					x	x				x			x		x			x					x
+Huntail	367	0		x		x				x			x		x		x		x		x	x	x	x					x
+Gorebyss	368	0	x	x		x	x			x		x	x			x		x	x		x	x	x	x					x
+Relicanth	369	0				x	x					x						x	x			x		x					x
+Luvdisc	370	0	x		x	x					x	x				x			x				x	x					x
+Bagon	371	0	x	x						x	x	x	x		x		x		x	x			x						x
+Shelgon	372	0		x						x	x		x		x		x		x			x	x						x
+Salamence	373	0		x			x	x		x			x		x		x		x			x	x						x
+Beldum	374	0				x			x									x											
+Metang	375	0		x		x			x	x							x	x											
+Metagross	376	0		x		x	x	x	x	x							x	x											
+Regirock	377	0							x																				
+Regice	378	0							x																				
+Registeel	379	0							x																				
+Latias	380	0	x		x						x	x									x			x					
+Latios	381	0	x	x		x						x										x		x					
+Kyogre	382	0						x																					
+Groudon	383	0						x																					
+Rayquaza	384	0						x																					
+Jirachi	385	0	x	x	x	x					x	x				x	x	x		x				x					
+Normal Deoxys	386	0					x	x										x											
+Attack Deoxys	386	1					x	x										x											
+Defense Deoxys	386	2					x	x										x											
+Speed Deoxys	386	3					x	x										x											
+Turtwig	387	0	x	x	x	x					x	x		x					x	x			x	x					x
+Grotle	388	0	x	x	x	x				x	x	x		x	x				x				x	x					x
+Torterra	389	0		x		x	x			x			x	x	x		x	x	x			x	x	x					x
+Chimchar	390	0	x	x	x	x				x	x	x	x	x	x		x		x	x			x	x					x
+Monferno	391	0	x	x		x				x	x	x	x	x	x		x		x				x	x					x
+Infernape	392	0		x		x	x			x			x		x		x	x	x			x	x	x					x
+Piplup	393	0	x	x	x	x					x	x		x		x			x	x			x	x					x
+Prinplup	394	0	x	x	x	x	x			x	x	x	x	x	x	x	x	x	x				x	x					x
+Empoleon	395	0		x		x	x			x					x	x	x	x	x		x	x	x	x					x
+Starly	396	0	x	x	x	x					x	x		x	x	x			x				x	x					x
+Staravia	397	0	x	x	x	x				x		x	x	x	x	x	x	x	x			x	x	x					x
+Staraptor	398	0		x		x	x			x			x	x	x	x	x	x	x			x	x	x					x
+Bidoof	399	0	x	x	x	x					x	x		x	x			x	x				x	x					x
+Bibarel	400	0	x	x	x	x				x	x	x		x	x		x	x	x				x	x					x
+Kricketot	401	0	x	x	x	x					x	x		x		x			x				x	x					x
+Kricketune	402	0		x	x	x	x					x				x		x	x		x	x	x	x					x
+Shinx	403	0	x	x	x	x					x	x		x	x	x			x	x			x	x					x
+Luxio	404	0	x	x	x	x				x	x	x	x	x	x	x		x	x			x	x	x					x
+Luxray	405	0		x		x	x			x			x		x	x	x	x				x	x	x					
+Budew	406	0	x		x	x					x	x		x					x	x									x
+Roserade	407	0	x	x		x	x			x			x			x	x	x	x		x	x		x					x
+Cranidos	408	0	x	x						x	x	x	x	x	x		x		x			x	x	x					x
+Rampardos	409	0		x						x			x		x		x		x			x	x	x					x
+Shieldon	410	0	x	x	x	x				x	x	x		x	x			x	x			x	x	x					x
+Bastiodon	411	0		x		x	x			x				x	x		x	x	x			x	x	x					x
+Plant Burmy	412	0	x	x	x	x					x	x		x					x				x	x					x
+Sandy Burmy	412	1	x	x	x	x					x	x		x					x				x	x					x
+Trash Burmy	412	2	x	x	x	x					x	x		x					x				x	x					x
+Plant Wormadam	413	0	x	x	x	x						x		x				x	x		x	x	x	x					x
+Sandy Wormadam	413	1	x	x	x	x						x		x				x	x		x	x	x	x					x
+Trash Wormadam	413	2	x	x	x	x						x		x				x	x		x	x	x	x					x
+Mothim	414	0	x	x		x				x		x			x	x	x	x	x		x	x	x	x					x
+Combee	415	0	x		x	x					x	x		x					x	x			x	x					x
+Vespiquen	416	0		x		x	x			x			x			x	x	x	x		x	x							x
+Pachirisu	417	0	x	x	x						x	x		x	x		x		x				x	x					x
+Buizel	418	0	x	x	x	x					x	x		x	x	x	x		x			x	x	x					x
+Floatzel	419	0	x	x	x	x				x		x	x	x	x	x	x	x	x			x	x	x					x
+Cherubi	420	0	x		x						x	x							x	x				x					x
+Overcast Cherrim	421	0	x		x	x						x		x		x		x	x		x			x					x
+Sunshine Cherrim	421	1	x	x							x	x			x		x		x		x			x					x
+West Shellos	422	0	x	x	x	x					x	x		x		x			x					x					x
+East Shellos	422	1	x	x	x	x					x	x		x		x			x					x					x
+West Gastrodon	423	0		x	x	x	x			x				x	x	x	x	x	x			x		x					x
+East Gastrodon	423	1		x	x	x	x			x				x	x	x	x	x	x			x		x					x
+Ambipom	424	0		x	x	x	x			x		x	x	x	x	x	x	x	x		x		x	x					x
+Drifloon	425	0	x			x					x	x							x				x	x					x
+Drifblim	426	0				x	x					x						x	x		x	x	x	x					x
+Buneary	427	0	x		x	x				x	x	x	x	x	x		x		x	x			x	x					x
+Lopunny	428	0	x	x	x	x	x			x	x	x	x		x	x	x	x	x		x		x	x					x
+Mismagius	429	0		x		x	x			x			x			x	x	x	x		x	x		x					x
+Honchkrow	430	0		x		x	x			x			x		x	x	x	x	x		x	x		x					x
+Glameow	431	0	x	x	x	x						x	x	x		x	x		x		x	x	x	x					x
+Purugly	432	0		x		x				x			x	x	x	x	x	x	x		x	x	x	x					x
+Chingling	433	0	x		x						x	x								x									
+Stunky	434	0	x	x	x	x					x	x	x	x					x				x	x					x
+Skuntank	435	0		x		x				x			x	x	x	x	x	x	x			x	x	x					x
+Bronzor	436	0		x		x	x		x			x						x	x			x		x					x
+Bronzong	437	0		x		x	x		x			x						x	x			x		x					x
+Bonsly	438	0	x		x						x	x		x						x									
+Mime Jr.	439	0	x		x						x	x						x		x									
+Happiny	440	0	x		x						x	x					x			x									
+Chatot	441	0	x		x	x					x	x		x	x		x	x	x					x					x
+Spiritomb	442	0							x				x						x					x					x
+Gible	443	0	x	x						x	x	x	x	x	x		x		x	x			x	x					x
+Gabite	444	0		x						x	x		x		x		x		x			x	x	x					x
+Garchomp	445	0		x			x	x		x			x		x		x		x			x	x	x					x
+Munchlax	446	0	x		x						x	x		x					x	x			x						x
+Riolu	447	0	x	x	x	x				x	x	x		x			x	x	x	x		x	x	x					x
+Lucario	448	0	x	x		x	x	x		x		x	x		x		x	x	x			x	x	x					x
+Hippopotas	449	0	x	x	x	x					x	x		x	x	x			x				x	x					x
+Hippowdon	450	0		x		x	x			x			x	x	x	x	x		x			x	x	x					x
+Skorupi	451	0	x	x	x						x	x		x					x	x			x	x					x
+Drapion	452	0		x			x			x			x		x	x	x		x			x	x	x					x
+Croagunk	453	0	x	x		x				x	x	x	x	x	x		x		x				x	x					x
+Toxicroak	454	0		x		x				x			x	x	x		x	x	x			x	x	x					x
+Carnivine	455	0	x	x		x				x		x	x	x	x		x		x			x	x	x					x
+Finneon	456	0	x	x	x	x					x	x		x		x		x	x	x	x		x	x					x
+Lumineon	457	0	x	x	x	x	x					x		x		x		x	x		x	x	x	x					x
+Mantyke	458	0	x		x						x	x								x									
+Snover	459	0	x	x	x	x					x	x		x					x				x	x					x
+Abomasnow	460	0		x		x	x			x			x	x	x		x	x	x			x	x	x					x
+Weavile	461	0		x		x	x			x			x	x	x	x	x		x				x						x
+Magnezone	462	0				x	x		x	x			x		x														
+Lickilicky	463	0	x		x	x				x		x		x		x	x	x	x		x	x		x					x
+Rhyperior	464	0		x			x			x			x		x		x	x	x			x		x					x
+Tangrowth	465	0		x		x	x			x			x	x	x	x	x	x	x		x	x		x					x
+Electivire	466	0		x		x	x			x			x		x		x	x	x			x		x					x
+Magmortar	467	0		x		x	x			x			x		x		x	x	x			x		x					x
+Togekiss	468	0	x	x	x	x	x					x				x	x	x	x		x	x		x					x
+Yanmega	469	0		x		x				x					x		x	x	x			x	x	x					x
+Leafeon	470	0	x	x	x	x	x			x	x	x	x	x		x	x	x	x		x	x	x	x					x
+Glaceon	471	0	x	x	x	x	x			x	x	x	x	x	x	x	x	x	x		x	x	x	x					x
+Gliscor	472	0		x		x	x			x			x		x		x	x	x			x	x	x					x
+Mamoswine	473	0		x		x	x			x			x	x	x		x	x	x			x		x					x
+Porygon-Z	474	0				x	x		x						x			x				x							
+Gallade	475	0		x		x	x			x			x		x		x	x	x		x	x	x	x					x
+Probopass	476	0				x	x		x	x					x		x	x	x			x							x
+Dusknoir	477	0		x		x	x			x			x				x	x	x			x							x
+Froslass	478	0		x		x	x			x						x		x	x		x	x							x
+Rotom	479	0	x	x					x	x	x	x	x		x		x		x	x			x	x					x
+Heat Rotom	479	1		x					x	x	x	x	x		x		x		x	x			x	x					x
+Wash Rotom	479	2		x					x	x	x	x	x		x		x		x	x			x	x					x
+Frost Rotom	479	3		x					x	x	x	x	x		x		x		x	x			x	x					x
+Fan Rotom	479	4		x					x	x	x	x	x		x		x		x	x			x	x					x
+Mow Rotom	479	5		x					x	x	x	x	x		x		x		x	x			x	x					x
+Uxie	480	0					x											x			x								
+Mesprit	481	0										x				x					x								
+Azelf	482	0				x	x															x							
+Dialga	483	0																							x				
+Palkia	484	0																								x			
+Heatran	485	0					x											x											
+Regigigas	486	0																									x		
+Altered Giratina	487	0						x																					
+Origin Giratina	487	1						x																					
+Cresselia	488	0										x									x								
+Phione	489	0			x						x			x						x				x					
+Manaphy	490	0			x						x			x						x				x					
+Darkrai	491	0																										x	
+Land Shaymin	492	0	x	x	x	x					x	x				x	x	x		x	x		x	x					
+Sky Shaymin	492	1	x	x	x	x					x	x				x	x	x		x	x		x	x					
+Normal Arceus	493	0						x																					
+Victini	494	0	x					x																x					
+Snivy	495	0	x																					x					
+Servine	496	0	x																					x					
+Serperior	497	0																						x					
+Tepig	498	0	x																					x					
+Pignite	499	0	x																					x					
+Emboar	500	0																						x					
+Oshawott	501	0	x																					x					
+Dewott	502	0	x																					x					
+Samurott	503	0																						x					
+Patrat	504	0	x																					x					
+Watchog	505	0																						x					
+Lillipup	506	0	x																					x					
+Herdier	507	0	x																					x					
+Stoutland	508	0																						x					
+Purrloin	509	0	x																					x					
+Liepard	510	0																						x					
+Pansage	511	0	x																					x					
+Simisage	512	0																						x					
+Pansear	513	0	x																					x					
+Simisear	514	0																						x					
+Panpour	515	0	x																					x					
+Simipour	516	0																						x					
+Munna	517	0	x																					x					
+Musharna	518	0																						x					
+Pidove	519	0	x																					x					
+Tranquill	520	0	x																					x					
+Unfezant	521	0																						x					
+Blitzle	522	0	x																					x					
+Zebstrika	523	0																						x					
+Roggenrola	524	0	x																					x					
+Boldore	525	0																						x					
+Gigalith	526	0																						x					
+Woobat	527	0	x																					x					
+Swoobat	528	0	x																					x					
+Drilbur	529	0	x																					x					
+Excadrill	530	0																						x					
+Audino	531	0	x																					x					
+Timburr	532	0	x																					x					
+Gurdurr	533	0																						x					
+Conkeldurr	534	0																						x					
+Tympole	535	0	x																					x					
+Palpitoad	536	0																						x					
+Seismitoad	537	0																						x					
+Throh	538	0																						x					
+Sawk	539	0																						x					
+Sewaddle	540	0	x																					x					
+Swadloon	541	0																						x					
+Leavanny	542	0	x																					x					
+Venipede	543	0																						x					
+Whirlipede	544	0																						x					
+Scolipede	545	0																						x					
+Cottonee	546	0	x																					x					
+Whimsicott	547	0	x																					x					
+Petilil	548	0	x																					x					
+Lilligant	549	0																						x					
+Red-Striped Basculin	550	0																						x					
+Blue-Striped Basculin	550	1																						x					
+Sandile	551	0	x																					x					
+Krokorok	552	0	x																					x					
+Krookodile	553	0																						x					
+Darumaka	554	0	x																					x					
+Galarian Darumaka	554	1	x																					x					
+Standard Darmanitan	555	0																						x					
+Galarian Darmanitan	555	2																						x					
+Galarian Zen Darmanitan	555	3																						x					
+Maractus	556	0	x																					x					
+Dwebble	557	0	x																					x					
+Crustle	558	0																						x					
+Scraggy	559	0	x																					x					
+Scrafty	560	0																						x					
+Sigilyph	561	0							x															x					
+Yamask	562	0																						x					
+Galarian Yamask	562	1																						x					
+Cofagrigus	563	0																						x					
+Tirtouga	564	0	x																					x					
+Carracosta	565	0																						x					
+Archen	566	0	x																					x					
+Archeops	567	0																						x					
+Trubbish	568	0	x																					x					
+Garbodor	569	0																						x					
+Zorua	570	0	x																					x					
+Zoroark	571	0																						x					
+Minccino	572	0	x																					x					
+Cinccino	573	0	x																					x					
+Gothita	574	0																						x					
+Gothorita	575	0																						x					
+Gothitelle	576	0																						x					
+Solosis	577	0	x																					x					
+Duosion	578	0	x																					x					
+Reuniclus	579	0	x																					x					
+Ducklett	580	0	x																					x					
+Swanna	581	0																						x					
+Vanillite	582	0	x																					x					
+Vanillish	583	0	x																					x					
+Vanilluxe	584	0																						x					
+Spring Deerling	585	0	x																					x					
+Summer Deerling	585	1	x																					x					
+Autumn Deerling	585	2	x																					x					
+Winter Deerling	585	3	x																					x					
+Spring Sawsbuck	586	0																						x					
+Summer Sawsbuck	586	1																						x					
+Autumn Sawsbuck	586	2																						x					
+Winter Sawsbuck	586	3																						x					
+Emolga	587	0	x																					x					
+Karrablast	588	0																						x					
+Escavalier	589	0																						x					
+Foongus	590	0	x																					x					
+Amoonguss	591	0																						x					
+Frillish	592	0	x																					x					
+Jellicent	593	0																						x					
+Alomomola	594	0																						x					
+Joltik	595	0	x																					x					
+Galvantula	596	0																						x					
+Ferroseed	597	0																						x					
+Ferrothorn	598	0																						x					
+Klink	599	0							x															x					
+Klang	600	0							x															x					
+Klinklang	601	0							x															x					
+Tynamo	602	0	x																					x					
+Eelektrik	603	0																						x					
+Eelektross	604	0																						x					
+Elgyem	605	0																						x					
+Beheeyem	606	0																						x					
+Litwick	607	0																						x					
+Lampent	608	0																						x					
+Chandelure	609	0																						x					
+Axew	610	0	x																					x					
+Fraxure	611	0																						x					
+Haxorus	612	0																						x					
+Cubchoo	613	0	x																					x					
+Beartic	614	0																						x					
+Cryogonal	615	0							x															x					
+Shelmet	616	0																						x					
+Accelgor	617	0																						x					
+Stunfisk	618	0	x																					x					
+Galarian Stunfisk	618	1	x																					x					
+Mienfoo	619	0	x																					x					
+Mienshao	620	0																						x					
+Druddigon	621	0																						x					
+Golett	622	0							x															x					
+Golurk	623	0							x															x					
+Pawniard	624	0																						x					
+Bisharp	625	0																						x					
+Bouffalant	626	0																						x					
+Rufflet	627	0	x																					x					
+Braviary	628	0																						x					
+Vullaby	629	0	x																	x				x					
+Mandibuzz	630	0																						x					
+Heatmor	631	0																						x					
+Durant	632	0																						x					
+Deino	633	0	x																					x					
+Zweilous	634	0																						x					
+Hydreigon	635	0																						x					
+Larvesta	636	0																						x					
+Volcarona	637	0																						x					
+Cobalion	638	0																						x					
+Terrakion	639	0																						x					
+Virizion	640	0																						x					
+Incarnate Tornadus	641	0																						x					
+Therian Tornadus	641	1																						x					
+Incarnate Thundurus	642	0																						x					
+Therian Thundurus	642	1																						x					
+Reshiram	643	0																						x					
+Zekrom	644	0																						x					
+Incarnate Landorus	645	0																						x					
+Therian Landorus	645	1																						x					
+Kyurem	646	0																						x					
+Black Kyurem	646	1																						x					
+White Kyurem	646	2																						x					
+Ordinary Keldeo	647	0																						x					
+Resolute Keldeo	647	1																						x					
+Aria Meloetta	648	0																						x					
+Genesect	649	0																						x					
+Chespin	650	0	x																					x					
+Quilladin	651	0	x																					x					
+Chesnaught	652	0																						x					
+Fennekin	653	0	x																					x					
+Braixen	654	0	x																					x					
+Delphox	655	0																						x					
+Froakie	656	0	x																					x					
+Frogadier	657	0	x																					x					
+Greninja	658	0	x																					x					
+Bunnelby	659	0	x																					x					
+Diggersby	660	0																						x					
+Fletchling	661	0	x																					x					
+Fletchinder	662	0	x																					x					
+Talonflame	663	0																						x					
+Scatterbug	664	0																						x					
+Spewpa	665	0																						x					
+Icy Snow Vivillon	666	0	x																					x					
+Polar Vivillon	666	1	x																					x					
+Tundra Vivillon	666	2	x																					x					
+Continental Vivillon	666	3	x																					x					
+Garden Vivillon	666	4	x																					x					
+Elegant Vivillon	666	5	x																					x					
+Meadow Vivillon	666	6	x																					x					
+Modern Vivillon	666	7	x																					x					
+Marine Vivillon	666	8	x																					x					
+Archipelago Vivillon	666	9	x																					x					
+High Plains Vivillon	666	10	x																					x					
+Sandstorm Vivillon	666	11	x																					x					
+River Vivillon	666	12	x																					x					
+Monsoon Vivillon	666	13	x																					x					
+Savanna Vivillon	666	14	x																					x					
+Sun Vivillon	666	15	x																					x					
+Ocean Vivillon	666	16	x																					x					
+Jungle Vivillon	666	17	x																					x					
+Fancy Vivillon	666	18	x																					x					
+Poké Ball Vivillon	666	19	x																					x					
+Litleo	667	0	x																					x					
+Pyroar	668	0																						x					
+Red Flabébé	669	0	x																					x					
+Yellow Flabébé	669	1	x																					x					
+Orange Flabébé	669	2	x																					x					
+Blue Flabébé	669	3	x																					x					
+White Flabébé	669	4	x																					x					
+Red Floette	670	0																						x					
+Yellow Floette	670	1																						x					
+Orange Floette	670	2																						x					
+Blue Floette	670	3																						x					
+White Floette	670	4																						x					
+Eternal Floette	670	5																						x					
+Red Florges	671	0																						x					
+Yellow Florges	671	1																						x					
+Orange Florges	671	2																						x					
+Blue Florges	671	3																						x					
+White Florges	671	4																						x					
+Skiddo	672	0	x																					x					
+Gogoat	673	0																						x					
+Pancham	674	0	x																					x					
+Pangoro	675	0																						x					
+Natural Furfrou	676	0	x																					x					
+Heart Furfrou	676	1	x													x								x					
+Star Furfrou	676	2	x													x								x					
+Diamond Furfrou	676	3	x													x								x					
+Debutante Furfrou	676	4	x													x								x					
+Matron Furfrou	676	5	x													x								x					
+Dandy Furfrou	676	6	x													x								x					
+La Reine Furfrou	676	7	x													x								x					
+Kabuki Furfrou	676	8	x													x								x					
+Pharaoh Furfrou	676	9	x													x								x					
+Espurr	677	0	x																					x					
+Male Meowstic	678	0	x																					x					
+Female Meowstic	678	1														x								x					
+Honedge	679	0																						x					
+Doublade	680	0																						x					
+Shield Aegislash	681	0																						x					
+Spritzee	682	0	x																					x					
+Aromatisse	683	0																						x					
+Swirlix	684	0	x																					x					
+Slurpuff	685	0																						x					
+Inkay	686	0	x																					x					
+Malamar	687	0																						x					
+Binacle	688	0																						x					
+Barbaracle	689	0																						x					
+Skrelp	690	0																						x					
+Dragalge	691	0																						x					
+Clauncher	692	0																						x					
+Clawitzer	693	0																						x					
+Helioptile	694	0	x																					x					
+Heliolisk	695	0																						x					
+Tyrunt	696	0	x																					x					
+Tyrantrum	697	0																						x					
+Amaura	698	0	x																					x					
+Aurorus	699	0																						x					
+Sylveon	700	0	x																					x					
+Hawlucha	701	0																						x					
+Dedenne	702	0	x																					x					
+Carbink	703	0	x																					x					
+Goomy	704	0	x																					x					
+Sliggoo	705	0	x																					x					
+Goodra	706	0	x																					x					
+Klefki	707	0	x																					x					
+Phantump	708	0	x																					x					
+Trevenant	709	0																						x					
+Average Pumpkaboo	710	0	x																					x					
+Small Pumpkaboo	710	1	x																					x					
+Large Pumpkaboo	710	2	x																					x					
+Super Pumpkaboo	710	3	x																					x					
+Average Gourgeist	711	0																						x					
+Small Gourgeist	711	1																						x					
+Large Gourgeist	711	2																						x					
+Super Gourgeist	711	3																						x					
+Bergmite	712	0	x																					x					
+Avalugg	713	0																						x					
+Noibat	714	0	x																					x					
+Noivern	715	0																						x					
+Neutral Xerneas	716	0						x																x					
+Yveltal	717	0						x																x					
+Zygarde	718	0						x																x					
+10% Zygarde	718	1						x																x					
+Diancie	719	0						x																x					
+Confined Hoopa	720	0						x																x					
+Hoopa Unbound	720	1																						x	x				
+Volcanion	721	0						x																x					
+Rowlet	722	0																						x					
+Dartrix	723	0																						x					
+Decidueye	724	0																						x					
+Litten	725	0																						x					
+Torracat	726	0																						x					
+Incineroar	727	0																						x					
+Popplio	728	0																						x					
+Brionne	729	0																						x					
+Primarina	730	0																						x					
+Pikipek	731	0																						x					
+Trumbeak	732	0																						x					
+Toucannon	733	0																						x					
+Yungoos	734	0																						x					
+Gumshoos	735	0																						x					
+Grubbin	736	0																						x					
+Charjabug	737	0																						x					
+Vikavolt	738	0																						x					
+Crabrawler	739	0																						x					
+Crabominable	740	0																						x					
+Baile Oricorio	741	0																						x					
+Pom-pom Oricorio	741	1																						x					
+Pa’u Oricorio	741	2																						x					
+Sensu Oricorio	741	3																						x					
+Cutiefly	742	0																						x					
+Ribombee	743	0																						x					
+Rockruff	744	0																						x					
+Midday Lycanroc	745	0																						x					
+Midnight Lycanroc	745	1																						x					
+Dusk Lycanroc	745	2																						x					
+Solo Wishiwashi	746	0																						x					
+School Wishiwashi	746	1																						x					
+Mareanie	747	0																						x					
+Toxapex	748	0																						x					
+Mudbray	749	0																						x					
+Mudsdale	750	0																						x					
+Dewpider	751	0																						x					
+Araquanid	752	0																						x					
+Fomantis	753	0																						x					
+Lurantis	754	0																						x					
+Morelull	755	0																						x					
+Shiinotic	756	0																						x					
+Salandit	757	0																						x					
+Salazzle	758	0																						x					
+Stufful	759	0																						x					
+Bewear	760	0																						x					
+Bounsweet	761	0																						x					
+Steenee	762	0																						x					
+Tsareena	763	0																						x					
+Comfey	764	0																						x					
+Oranguru	765	0																						x					
+Passimian	766	0																						x					
+Wimpod	767	0																						x					
+Golisopod	768	0																						x					
+Sandygast	769	0																						x					
+Palossand	770	0																						x					
+Pyukumuku	771	0																						x					
+Type: Null	772	0																						x					
+Silvally	773	0																						x					
+Red Meteor Minior	774	0																						x					
+Orange Meteor Minior	774	1																						x					
+Yellow Meteor Minior	774	2																						x					
+Green Meteor Minior	774	3																						x					
+Blue Meteor Minior	774	4																						x					
+Indigo Meteor Minior	774	5																						x					
+Violent Meteor Minior	774	6																						x					
+Red Core Minior	774	7																						x					
+Orange Core Minior	774	8																						x					
+Yellow Core Minior	774	9																						x					
+Green Core Minior	774	10																						x					
+Blue Core Minior	774	11																						x					
+Indigo Core Minior	774	12																						x					
+Violet Core Minior	774	13																						x					
+Komala	775	0																						x					
+Turtonator	776	0																						x					
+Togedemaru	777	0																						x					
+Disguised Mimikyu	778	0																						x					
+Bruxish	779	0																						x					
+Drampa	780	0																						x					
+Dhelmise	781	0																						x					
+Jangmo-o	782	0																						x					
+Hakamo-o	783	0																						x					
+Kommo-o	784	0																						x					
+Tapu Koko	785	0																						x					
+Tapu Lele	786	0																						x					
+Tapu Bulu	787	0																						x					
+Tapu Fini	788	0																						x					
+Cosmog	789	0																		x									
+Cosmoem	790	0																		x									
+Solgaleo	791	0						x																					
+Lunala	792	0							x																				
+Nihilego	793	0							x																				
+Buzzwole	794	0						x																					
+Pheromosa	795	0						x																					
+Xurkitree	796	0							x																				
+Celesteela	797	0						x																					
+Kartana	798	0						x																					
+Guzzlord	799	0						x																					
+Necrozma	800	0						x																x					
+Dusk Necrozma	800	1						x																x					
+Dawn Necrozma	800	2						x																x					
+Ultra Necrozma	800	3						x																x					
+Magearna	801	0							x															x					
+Original Magearna	801	1							x															x					
+Marshadow	802	0					x	x																x					
+Poipole	803	0																		x				x					
+Naganadel	804	0						x																x					
+Stakataka	805	0							x															x					
+Blacephalon	806	0							x															x					
+Zeraora	807	0					x	x																					
+Meltan	808	0							x															x					
+Melmetal	809	0							x															x					
+Grookey	810	0																						x					
+Thwackey	811	0																						x					
+Rillaboom	812	0																						x					
+Scorbunny	813	0																						x					
+Raboot	814	0																						x					
+Cinderace	815	0																						x					
+Sobble	816	0																						x					
+Drizzile	817	0																						x					
+Inteleon	818	0																						x					
+Skwovet	819	0																						x					
+Greedent	820	0																						x					
+Rookidee	821	0																						x					
+Corvisquire	822	0																						x					
+Corviknight	823	0																						x					
+Blipbug	824	0																						x					
+Dottler	825	0																						x					
+Orbeetle	826	0																						x					
+Nickit	827	0																						x					
+Thievul	828	0																						x					
+Gossifleur	829	0																						x					
+Eldegoss	830	0																						x					
+Wooloo	831	0																						x					
+Dubwool	832	0																						x					
+Chewtle	833	0																						x					
+Drednaw	834	0																						x					
+Yamper	835	0																						x					
+Boltund	836	0																						x					
+Rolycoly	837	0																						x					
+Carkol	838	0																						x					
+Coalossal	839	0																						x					
+Applin	840	0																						x					
+Flapple	841	0																						x					
+Appletun	842	0																						x					
+Silicobra	843	0																						x					
+Sandaconda	844	0																						x					
+Cramorant	845	0																						x					
+Arrokuda	846	0																						x					
+Barraskewda	847	0																						x					
+Toxel	848	0																						x					
+Amped Toxtricity	849	0																						x					
+Low Key Toxtricity	849	1																						x					
+Sizzlipede	850	0																						x					
+Centiskorch	851	0																						x					
+Clobbopus	852	0																						x					
+Grapploct	853	0																						x					
+Phony Sinistea	854	0																						x					
+Antique Sinistea	854	1																						x					
+Phony Polteageist	855	0																						x					
+Antique Polteageist	855	1																						x					
+Hatenna	856	0																						x					
+Hattrem	857	0																						x					
+Hatterene	858	0																						x					
+Impidimp	859	0																						x					
+Morgrem	860	0																						x					
+Grimmsnarl	861	0																						x					
+Obstagoon	862	0																						x					
+Perrserker	863	0																						x					
+Cursola	864	0																						x					
+Sirfetch'd	865	0																						x					
+Mr. Rime	866	0																						x					
+Runerigus	867	0																						x					
+Milcery	868	0																						x					
+Alcremie	869	0																						x					
+Falinks	870	0																						x					
+Pincurchin	871	0																						x					
+Snom	872	0																						x					
+Frosmoth	873	0																						x					
+Stonjourner	874	0																						x					
+Ice Face Eiscue	875	0																						x					
+Male Indeedee	876	0																						x					
+Female Indeedee	876	1																						x					
+Full Belly Morpeko	877	0																						x					
+Hangry Morpeko	877	1																						x					
+Cufant	878	0																						x					
+Copperajah	879	0																						x					
+Dracozolt	880	0																						x					
+Arctozolt	881	0																						x					
+Dracovish	882	0																						x					
+Arctovish	883	0																						x					
+Duraludon	884	0																						x					
+Dreepy	885	0																						x					
+Drakloak	886	0																						x					
+Dragapult	887	0																						x					
+Hero Zacian	888	0						x																					
+Hero Zamazenta	889	0						x																					
+Eternatus	890	0																							x	x			
+Kubfu	891	0																						x					
+Single Strike Urshifu	892	0																						x					
+Rapid Strike Urshifu	892	1																						x					
+Zarude	893	0																						x					
+Regieleki	894	0							x																				
+Regidrago	895	0							x																				
+Glastrier	896	0					x																						
+Spectrier	897	0					x																						
+Calyrex	898	0						x																					
+Ice Rider Calyrex	898	1						x																					
+Shadow Rider Calyrex	898	2						x																					
