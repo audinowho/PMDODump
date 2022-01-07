@@ -12,3 +12,4 @@
 * General detection and labeling for gamepads (Nintendo, Playstation, XBox).
 * Fix error when speaking to allies that are regional forms.
 * Add editor indicator for invisible tiles.
+* UI:DungeonChoice and UI:DungeonMenu script calls modified. Refer to the new common.lua for usage.
