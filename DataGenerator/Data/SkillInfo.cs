@@ -14219,7 +14219,7 @@ namespace DataGenerator.Data
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
-                ((ProjectileAction)skill.HitboxAction).Range = 4;
+                ((ProjectileAction)skill.HitboxAction).Range = 2;
                 ((ProjectileAction)skill.HitboxAction).Speed = 10;
                 ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
                 ((ProjectileAction)skill.HitboxAction).StopAtWall = true;

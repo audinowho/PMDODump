@@ -671,7 +671,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A seed that freezes the Pokémon for many turns.");
                 item.Sprite = "Seed_Blue";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
-                statusStates.Set(new CountDownState(20));
+                statusStates.Set(new CountDownState(30));
                 item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(3, true, false, statusStates));
             }
             else if (ii == 116)
@@ -1491,7 +1491,9 @@ namespace DataGenerator.Data
                 item.Sprite = "Wand_Orange";
                 item.Price = 5;
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_Out", 2));
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(8, true, false));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(4));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(8, true, false, statusStates));
             }
             else if (ii == 229)
             {
@@ -1865,7 +1867,9 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Slumber Orb");
                 item.Desc = new LocalText("An orb that puts all enemies to sleep. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_Pink";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(1, true, false));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(15));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(1, true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1884,7 +1888,9 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Totter Orb");
                 item.Desc = new LocalText("An orb that confuses all enemies. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_Tan";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(7, true, false));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(15));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(7, true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1904,7 +1910,9 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Petrify Orb");
                 item.Desc = new LocalText("An orb that paralyzes all enemies. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_Tan";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(4, true, false));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(11));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(4, true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1920,7 +1928,9 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Freeze Orb");
                 item.Desc = new LocalText("An orb that freezes all enemies. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_LightBlue";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(3, true, false));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(20));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(3, true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1980,9 +1990,9 @@ namespace DataGenerator.Data
             else if (ii == 278)
             {
                 item.Name = new LocalText("All-Dodge Orb");
-                item.Desc = new LocalText("An orb that sharply boosts Evasion. It affects team members up to 5 tiles away.");
+                item.Desc = new LocalText("An orb that drastically boosts Evasion. It affects team members up to 5 tiles away.");
                 item.Sprite = "Orb_Yellow";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(15, true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(15, true, false, 6));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
