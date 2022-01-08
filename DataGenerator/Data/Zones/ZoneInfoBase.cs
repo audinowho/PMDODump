@@ -112,8 +112,8 @@ namespace DataGenerator.Data
                     }
                     {
                         List<(MapGenExit, Loc)> exits = new List<(MapGenExit, Loc)>();
-                        EffectTile secretStairs = new EffectTile(35, true);
-                        secretStairs.TileStates.Set(new DestState(new SegLoc(-1, 0)));
+                        EffectTile secretStairs = new EffectTile(46, true);
+                        secretStairs.TileStates.Set(new DestState(SegLoc.Invalid));
                         exits.Add((new MapGenExit(secretStairs), new Loc(31, 2)));
                         AddSpecificSpawn(layout, exits, PR_EXITS);
                     }
@@ -155,7 +155,7 @@ namespace DataGenerator.Data
                         post_mob.Tactic = 6;
                         post_mob.Level = new RandRange(50);
                         post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc((ii % 5) * 2 + 2, ii / 5 * 2 + 2)));
-                        post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1 + ii));
+                        post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
 
                         PlaceNoLocMobsStep<StairsMapGenContext> mobStep = new PlaceNoLocMobsStep<StairsMapGenContext>(new PresetMultiTeamSpawner<StairsMapGenContext>(post_team));
@@ -260,7 +260,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(9), 12);
+                    items.Add(new InvItem(11), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -281,10 +281,10 @@ namespace DataGenerator.Data
                     //monsterhouse
                     {
                         MonsterHouseStep<MapGenContext> monsterHouse = new MonsterHouseStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
-                        for (int ii = 0; ii < 700; ii++)
+                        for (int ii = 250; ii < 290; ii++)
                             monsterHouse.Items.Add(new MapItem(ii), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(5, 10)), 10);
-                        for (int ii = 0; ii < 179; ii++)
+                        for (int ii = 387; ii < 397; ii++)
                             monsterHouse.Mobs.Add(GetGenericMob(ii, -1, -1, -1, -1, -1, new RandRange(10, 20)), 10);
                         monsterHouse.MobThemes.Add(new MobThemeNone(50, new RandRange(6, 11)), 10);
                         layout.GenSteps.Add(PR_HOUSES, monsterHouse);
@@ -293,10 +293,8 @@ namespace DataGenerator.Data
                     // items for the vault
                     {
                         BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
-                        treasures.SpecificSpawns.Add(new InvItem(4));
-                        treasures.SpecificSpawns.Add(new InvItem(4));
-                        treasures.SpecificSpawns.Add(new InvItem(4));
-                        treasures.SpecificSpawns.Add(new InvItem(4));
+                        treasures.SpecificSpawns.Add(new InvItem(51));
+                        treasures.SpecificSpawns.Add(new InvItem(51));
                         RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
                         detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                         layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
@@ -361,7 +359,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(9), 12);
+                    items.Add(new InvItem(11), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -461,10 +459,9 @@ namespace DataGenerator.Data
                     //vault treasures
                     {
                         BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
-                        treasures.SpecificSpawns.Add(new InvItem(4));
-                        treasures.SpecificSpawns.Add(new InvItem(4));
-                        treasures.SpecificSpawns.Add(new InvItem(4));
-                        treasures.SpecificSpawns.Add(new InvItem(4));
+                        treasures.SpecificSpawns.Add(new InvItem(51));
+                        treasures.SpecificSpawns.Add(new InvItem(51));
+                        treasures.SpecificSpawns.Add(new InvItem(51));
                         RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
                         detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                         layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
@@ -499,7 +496,7 @@ namespace DataGenerator.Data
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(382, 0, 0, Gender.Unknown);
                             post_mob.Tactic = 6;
-                            post_mob.Level = new RandRange(30);
+                            post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(1, 4)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
@@ -509,7 +506,7 @@ namespace DataGenerator.Data
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(383, 0, 0, Gender.Unknown);
                             post_mob.Tactic = 6;
-                            post_mob.Level = new RandRange(30);
+                            post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(7, 4)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
@@ -519,7 +516,7 @@ namespace DataGenerator.Data
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(384, 0, 0, Gender.Unknown);
                             post_mob.Tactic = 6;
-                            post_mob.Level = new RandRange(30);
+                            post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(4, 1)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
@@ -554,9 +551,9 @@ namespace DataGenerator.Data
                     //vault treasures
                     {
                         BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
-                        treasures.SpecificSpawns.Add(new InvItem(7));
-                        treasures.SpecificSpawns.Add(new InvItem(7));
-                        treasures.SpecificSpawns.Add(new InvItem(7));
+                        treasures.SpecificSpawns.Add(new InvItem(75));
+                        treasures.SpecificSpawns.Add(new InvItem(75));
+                        treasures.SpecificSpawns.Add(new InvItem(75));
                         RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
                         detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
                         layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
@@ -613,7 +610,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(9), 12);
+                    items.Add(new InvItem(11), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -633,10 +630,10 @@ namespace DataGenerator.Data
 
                     {
                         MonsterHallStep<MapGenContext> monsterHouse = new MonsterHallStep<MapGenContext>(new Loc(12, 9), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
-                        for (int ii = 0; ii < 700; ii++)
+                        for (int ii = 250; ii < 290; ii++)
                             monsterHouse.Items.Add(new MapItem(ii), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(5, 10)), 10);
-                        for (int ii = 0; ii < 179; ii++)
+                        for (int ii = 387; ii < 397; ii++)
                             monsterHouse.Mobs.Add(GetGenericMob(ii, -1, -1, -1, -1, -1, new RandRange(10, 20)), 10);
                         monsterHouse.MobThemes.Add(new MobThemeNone(50, new RandRange(18, 24)), 10);
                         layout.GenSteps.Add(PR_HOUSES, monsterHouse);
@@ -683,7 +680,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(9), 12);
+                    items.Add(new InvItem(11), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -702,10 +699,10 @@ namespace DataGenerator.Data
 
                     {
                         MonsterMansionStep<MapGenContext> monsterHouse = new MonsterMansionStep<MapGenContext>();
-                        for (int ii = 0; ii < 700; ii++)
+                        for (int ii = 250; ii < 290; ii++)
                             monsterHouse.Items.Add(new MapItem(ii), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(12, 16)), 10);
-                        for (int ii = 0; ii < 179; ii++)
+                        for (int ii = 387; ii < 397; ii++)
                             monsterHouse.Mobs.Add(GetGenericMob(ii, -1, -1, -1, -1, -1, new RandRange(10, 20)), 10);
                         monsterHouse.MobThemes.Add(new MobThemeNone(50, new RandRange(25, 32)), 10);
                         layout.GenSteps.Add(PR_HOUSES, monsterHouse);
@@ -773,7 +770,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(9), 12);
+                    items.Add(new InvItem(11), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -793,10 +790,10 @@ namespace DataGenerator.Data
 
                     {
                         MonsterMansionStep<MapGenContext> monsterHouse = new MonsterMansionStep<MapGenContext>();
-                        for (int ii = 0; ii < 700; ii++)
+                        for (int ii = 250; ii < 290; ii++)
                             monsterHouse.Items.Add(new MapItem(ii), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(12, 16)), 10);
-                        for (int ii = 0; ii < 179; ii++)
+                        for (int ii = 387; ii < 397; ii++)
                             monsterHouse.Mobs.Add(GetGenericMob(ii, -1, -1, -1, -1, -1, new RandRange(10, 20)), 10);
                         monsterHouse.MobThemes.Add(new MobThemeNone(50, new RandRange(25, 32)), 10);
                         layout.GenSteps.Add(PR_HOUSES, monsterHouse);
@@ -838,7 +835,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(9), 12);
+                    items.Add(new InvItem(11), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -982,7 +979,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(9), 12);
+                    items.Add(new InvItem(11), 12);
                     itemSpawnStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
 
@@ -1134,7 +1131,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<ListMapGenContext> itemSpawnStep = new ItemSpawnStep<ListMapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(9), 12);
+                    items.Add(new InvItem(11), 12);
                     itemSpawnStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
 
@@ -1287,7 +1284,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(9), 12);
+                    items.Add(new InvItem(11), 12);
                     itemSpawnStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
 
@@ -1688,6 +1685,7 @@ namespace DataGenerator.Data
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(36, 6) + new Loc(1)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawnState.Spawns.Add(post_mob);
                         }
                         {
@@ -1697,6 +1695,7 @@ namespace DataGenerator.Data
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(38, 6) + new Loc(1)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawnState.Spawns.Add(post_mob);
                         }
                         {
@@ -1706,6 +1705,7 @@ namespace DataGenerator.Data
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(40, 6) + new Loc(1)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawnState.Spawns.Add(post_mob);
                         }
 
@@ -1949,14 +1949,14 @@ namespace DataGenerator.Data
                 CategorySpawn<InvItem> category = new CategorySpawn<InvItem>();
                 category.SpawnRates.SetRange(10, new IntRange(0, 5));
                 zoneItemStep.Spawns.Add("uncategorized", category);
-                for (int nn = 1; nn < 4/*700*/; nn++)
+                for (int nn = 1; nn < 4; nn++)
                     category.Spawns.Add(new InvItem(nn), new IntRange(0, 5), (nn % 5 + 1) * 10);//all items
                 floorSegment.ZoneSteps.Add(zoneItemStep);
 
                 //mobs
                 TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
                 poolSpawn.Priority = PR_RESPAWN_MOB;
-                for (int xx = 152; xx < 161/*493*/; xx++)
+                for (int xx = 152; xx < 161; xx++)
                 {
                     int yy = 1;
                     MobSpawn post_mob = new MobSpawn();
@@ -2106,7 +2106,7 @@ namespace DataGenerator.Data
                         RoomGenWaterRing<MapGenContext> waterRing = new RoomGenWaterRing<MapGenContext>(new Tile(3), new RandRange(1, 4), new RandRange(1, 4), 3);
                         waterRing.Treasures.Add(new MapItem(2), 10);
                         waterRing.Treasures.Add(new MapItem(3), 10);
-                        waterRing.Treasures.Add(new MapItem(4), 10);
+                        waterRing.Treasures.Add(new MapItem(6), 10);
                         genericRooms.Add(waterRing, 10);
                     }
                     //Guarded Cave
@@ -2114,9 +2114,9 @@ namespace DataGenerator.Data
                     {
                         RoomGenGuardedCave<MapGenContext> guarded = new RoomGenGuardedCave<MapGenContext>();
                         //treasure
+                        guarded.Treasures.RandomSpawns.Add(new MapItem(100), 10);
                         guarded.Treasures.RandomSpawns.Add(new MapItem(101), 10);
-                        guarded.Treasures.RandomSpawns.Add(new MapItem(102), 10);
-                        guarded.Treasures.RandomSpawns.Add(new MapItem(103), 10);
+                        guarded.Treasures.RandomSpawns.Add(new MapItem(114), 10);
                         guarded.Treasures.SpawnAmount = 6;
                         //guard
                         MobSpawn spawner = new MobSpawn();

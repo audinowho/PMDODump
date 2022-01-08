@@ -1,14 +1,15 @@
-# 0.5.4 Changes #
+# 0.5.5 Changes #
 
-* Add neutral NPCs roaming the early dungeons.
-* Add town and camp NPCs.
-* Fixed issue causing NPC AI to break upon save load.
-* Add option to import/export portrait sheets as single sheets.
-* Map/Ground editors default to the correct folders.
-* Enhancements for decoration/entity placement: show boxes/selection, coordinates, clearer selection boxes, placement preview.
-* Fix issue causing selected entities to be edited when in placement mode.
-* Fix issue preventing assignment of AIEnabled for Ground Chars, and made AIEnabled editable.
-* Prevent TouchOnce objects from firing on frame 1.
-* More user-friendly strings for editors.
-* Additional logging from FNA.
-* Add PlayVFXAnim to GroundScript.
+* Added x86 build.
+* Fix game not starting up in unicode paths.
+* Fix save corruption on rescue request.
+* Fix serialization issue in online interactions.
+* Add a text testing system. Info: https://docs.google.com/document/d/11vmuBHtd7xNWstGOuJHSijO4M0KIhMV6tS5y4sYAe08
+* Fix Pickup inventory overflow.
+* Script text and readme fixes.
+* Controls menu accessible in-game.
+* Fix control conflict between menu hotkeys and move hotkeys.
+* General detection and labeling for gamepads (Nintendo, Playstation, XBox).
+* Fix error when speaking to allies that are regional forms.
+* Add editor indicator for invisible tiles.
+* UI:DungeonChoice and UI:DungeonMenu script calls modified. Refer to the new common.lua for usage.

@@ -112,7 +112,7 @@ namespace Updater
                     foreach (JsonElement assetJson in assetsJson.EnumerateArray())
                     {
                         string assetName = assetJson.GetProperty("name").GetString();
-                        if (assetName == String.Format("{0}-x64.zip", GetCurrentPlatform()))
+                        if (assetName == String.Format("{0}.zip", GetCurrentPlatform()))
                         {
                             exeFile = assetJson.GetProperty("browser_download_url").GetString();
                             break;
@@ -399,7 +399,10 @@ namespace Updater
                 OSPlatform platform = OSPlatform.Create(platformNames[i]);
                 if (RuntimeInformation.IsOSPlatform(platform))
                 {
-                    return platformNames[i].ToLowerInvariant();
+                    if (Environment.Is64BitOperatingSystem)
+                        return platformNames[i].ToLowerInvariant() + "-x64";
+                    else
+                        return platformNames[i].ToLowerInvariant() + "-x86";
                 }
             }
 

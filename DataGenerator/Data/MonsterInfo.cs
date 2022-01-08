@@ -1022,6 +1022,8 @@ namespace DataGenerator.Data
                         break;
                     if (index == 25 && read > 1)//only 1 pikachu form
                         break;
+                    if (index == 105 && read > 2)//only 2 marowak form - somehow the db has a duplicate marowak after alolan????
+                        break;
                     if (index == 172 && read > 1)//only 1 pichu form
                         break;
                     if (index == 414 && read > 1)//only 1 mothim form

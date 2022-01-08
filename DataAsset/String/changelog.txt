@@ -1,116 +1,13 @@
 Sheet: Hardcode
 
 Sheet: Content
-    * Added DLG_RECEIVE_ITEM, transferred from MSG_BESTOW_ITEM
-    * Added DLG_RECEIVE_ITEM_STORAGE
-    * Added TALK_ADVICE_EXP
-    * Added TALK_ADVICE_MISS
-    * Added TALK_ADVICE_NEUTRAL
-    * Added TALK_ADVICE_RANGE
-    * Added TALK_ADVICE_RECRUIT
-    * Added TALK_ADVICE_STAT_CLEAR
-    * Added TALK_ADVICE_STAT_DROP
-    * Added TALK_ADVICE_SWITCH_GAMEPAD
-    * Added TALK_ADVICE_SWITCH_KEYBOARD
-    * Added TALK_ADVICE_TEAM_MODE
 
 Sheet: Script
-    * Added ground\base_camp/Bystander_Line_001
-    * Erased contents of ground\base_camp/Noctowl_Action_Line_001
-    * Erased contents of ground\base_camp/Noctowl_Action_Line_002
-    * Erased contents of ground\base_camp/Noctowl_Action_Line_003
-    * Added ground\base_camp/Outside_Line_001
-    * Added ground\base_camp/Range_Line_001
-    * Added ground\base_camp/Range_Line_002
-    * Significantly changed ground\base_camp/Sign_Action_Text from "North: Dungeon Entrance\nEast: Base Camp" to "North: Dungeon Entrance\nEast: Base Town"
-    * Added ground\base_camp/Warn_Line_001
-    * Added ground\base_camp/Warn_Line_002
-    * Added ground\base_camp/Warn_Line_003
-    * Added ground\base_camp_2/Broke_Line_001
-    * Added ground\base_camp_2/Broke_Line_002
-    * Added ground\base_camp_2/Catch_Line_001
-    * Added ground\base_camp_2/Catch_Line_002
-    * Added ground\base_camp_2/Catch_Line_003
-    * Added ground\base_camp_2/Catch_Line_004
-    * Added ground\base_camp_2/Catch_Line_005
-    * Added ground\base_camp_2/Elder_Line_001
-    * Added ground\base_camp_2/Father_Line_001
-    * Added ground\base_camp_2/Food_Line_001
-    * Added ground\base_camp_2/Food_Line_002
-    * Added ground\base_camp_2/Hesitant_Line_001
-    * Added ground\base_camp_2/History_Line_001
-    * Added ground\base_camp_2/History_Line_002
-    * Added ground\base_camp_2/Interactive_Line_001
-    * Added ground\base_camp_2/Interactive_Phase_001_Line_001
-    * Added ground\base_camp_2/Interactive_Phase_002_Line_001
-    * Added ground\base_camp_2/Interactive_Phase_002_Line_002
-    * Added ground\base_camp_2/Interactive_Phase_003_Line_001
-    * Added ground\base_camp_2/Interactive_Phase_003_Line_002
-    * Added ground\base_camp_2/Interactive_Phase_004_Line_001
-    * Added ground\base_camp_2/Interactive_Phase_004_Line_002
-    * Added ground\base_camp_2/Interactive_Phase_005_Line_001
-    * Added ground\base_camp_2/Interactive_Phase_005_Line_002
-    * Added ground\base_camp_2/Interactive_Trade_Line_001
-    * Added ground\base_camp_2/Mother_Line_001
-    * Added ground\base_camp_2/Nonbeliever_Line_001
-    * Added ground\base_camp_2/Nonbeliever_Line_002
-    * Added ground\base_camp_2/Settling_Line_001
-    * Added ground\base_camp_2/Treasure_Line_001
-    * Added ground\base_camp_2/Treasure_Line_002
-    * Added ground\base_camp_2/Treasure_Line_003
-    * Added ground\canyon_camp/Dragon_Line_001
-    * Added ground\canyon_camp/Dragon_Line_002
-    * Added ground\canyon_camp/Dragon_Line_003
-    * Added ground\canyon_camp/Dragon_Line_004
-    * Added ground\canyon_camp/Hidden_Line_001
-    * Added ground\canyon_camp/Hidden_Line_002
-    * Added ground\canyon_camp/Hidden_Line_003
-    * Added ground\canyon_camp/Seeker_Line_001
-    * Added ground\canyon_camp/Seeker_Line_002
-    * Added ground\canyon_camp/Seeker_Line_003
-    * Added ground\canyon_camp/Shiny_Line_001
-    * Added ground\canyon_camp/Shiny_Line_002
-    * Added ground\canyon_camp/Shiny_Line_003
-    * Added ground\canyon_camp/Shortcut_Line_001
-    * Added ground\canyon_camp/Shortcut_Line_002
-    * Added ground\cliff_camp/Bellsprout_Line_001
-    * Added ground\cliff_camp/Bellsprout_Line_002
-    * Added ground\cliff_camp/Bellsprout_Line_003
-    * Changed ground\cliff_camp/Doduo_Line_001 from "In case you couldn't tell,[pause=20] our specialty is running." to "In case you couldn't tell,[pause=20] our specialty is running.[pause=0] For better or for worse."
-    * Changed ground\cliff_camp/Doduo_Line_003 to ground\cliff_camp/Doduo_Line_002, retaining translations
-    * Changed ground\cliff_camp/Doduo_Line_004 to ground\cliff_camp/Doduo_Line_003, retaining translations
-    * Changed ground\cliff_camp/Doduo_Line_005 to ground\cliff_camp/Doduo_Line_004, retaining translations
-    * Changed ground\cliff_camp/Doduo_Line_006 to ground\cliff_camp/Doduo_Line_005, retaining translations
-    * Erased contents of ground\cliff_camp/Doduo_Line_006
-    * Added ground\cliff_camp/Monk_Line_001
-    * Added ground\cliff_camp/Monk_Line_002
-    * Added ground\cliff_camp/Monk_Line_Curiosity
-    * Added ground\cliff_camp/Monk_Line_Fame
-    * Added ground\cliff_camp/Monk_Line_Fortune
-    * Added ground\cliff_camp/Monk_Line_Strength
-    * Added ground\cliff_camp/Monk_Line_Unknown
-    * Added ground\cliff_camp/Monk_Option_Curiosity
-    * Added ground\cliff_camp/Monk_Option_Fame
-    * Added ground\cliff_camp/Monk_Option_Fortune
-    * Added ground\cliff_camp/Monk_Option_Strength
-    * Added ground\cliff_camp/Monk_Option_Unknown
-    * Erased contents of ground\cliff_camp/Pachirisu_Line_005
-    * Erased contents of ground\cliff_camp/Pachirisu_Line_006
-    * Erased contents of ground\cliff_camp/Pachirisu_Line_007
-    * Added ground\cliff_camp/Rival_Line_001
-    * Added ground\cliff_camp/Rival_Line_002
-    * Added ground\cliff_camp/Rival_Line_003
-    * Added ground\cliff_camp/Shroomish_Line_001
-    * Added ground\cliff_camp/Sightseer_Line_001
-    * Added ground\cliff_camp/Storehouse_Line_001
-    * Added ground\cliff_camp/Undergrowth_Intro_001
-    * Added ground\forest_camp/Camps_Line_001
-    * Added ground\forest_camp/Carry_Line_001
-    * Added ground\forest_camp/Carry_Line_002
-    * Added ground\forest_camp/Deliver_Line_001
-    * Added ground\forest_camp/Parent_Child_Line_001
-    * Added ground\forest_camp/Parent_Child_Line_002
-    * Added ground\forest_camp/Sleeper_Line_001
+    * Changed ground\base_camp/Range_Line_002 from "I didn't stand a chance.[pause=0] Sigh...[pause=30] maybe I'm not cut out to be an explorer..." to "I didn't stand a chance.[pause=0] Sigh..."
+    * Changed ground\base_camp_2/History_Line_001 from "One day,[pause=20] the letters were written from this post office and scattered out to the world.[br]No one knows who exactly wrote them, but they all bore the emblem of the legendary explorer's team.[br]They promised a title of ultimate prestige, and marked the highest point of this island's mountains." to "One day,[pause=20] the letters were written from this post office and scattered out to the world.[br]No one knows who exactly wrote them,[pause=0] but they all bore the emblem of the legendary explorer's team.[br]They promised a title of ultimate prestige,[pause=0] and marked the highest point of this island's mountains."
+    * Significantly changed ground\cliff_camp/Bellsprout_Line_001 from "Bellsprout and I got to this camp no problem,[pause=0] but the dungeon ahead is another story." to "Shroomish and I got to this camp no problem,[pause=0] but the dungeon ahead is another story."
+    * Deleted key ground\test_grounds/Merchant_Greet
+    * Deleted key ground\test_grounds/Mew_Action_Line0
 
 Sheet: Abilities
 
@@ -133,5 +30,4 @@ Sheet: Zones
 Sheet: Maps
 
 Sheet: GroundMaps
-    * Significantly changed base_camp_2-0000|data.Name from "Base Camp" to "Base Town"
 
