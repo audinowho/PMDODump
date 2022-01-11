@@ -2734,7 +2734,7 @@ namespace DataGenerator.Data
                 else if (ii < 20)
                     AddEnemySpawnData(layout, 30, new RandRange(13, 18));
                 else if (ii < 27)
-                    AddEnemySpawnData(layout, 20, new RandRange(18, 27));
+                    AddEnemySpawnData(layout, 20, new RandRange(18, 25));
                 else
                     AddEnemySpawnData(layout, 20, new RandRange(15, 24));
 
@@ -3129,7 +3129,7 @@ namespace DataGenerator.Data
             special.Spawns.Add(new InvItem(0450), new IntRange(0, 27), 25);//Link Box
             special.Spawns.Add(new InvItem(0451), new IntRange(4, 27), 5);//Assembly Box
             special.Spawns.Add(new InvItem(0455, false, 1), new IntRange(0, 24), 10);//Key
-                                                                           //snacks
+                                                                                     //snacks
             CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
             snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("snacks", snacks);
@@ -3185,18 +3185,18 @@ namespace DataGenerator.Data
             itemSpawnZoneStep.Spawns.Add("boosters", boosters);
 
 
-            boosters.Spawns.Add(new InvItem(0151, true), new IntRange(0, max_floors), 5);//Protein
-            boosters.Spawns.Add(new InvItem(0151), new IntRange(0, max_floors), 5);//Protein
-            boosters.Spawns.Add(new InvItem(0152, true), new IntRange(0, max_floors), 5);//Iron
-            boosters.Spawns.Add(new InvItem(0152), new IntRange(0, max_floors), 5);//Iron
-            boosters.Spawns.Add(new InvItem(0153, true), new IntRange(0, max_floors), 5);//Calcium
-            boosters.Spawns.Add(new InvItem(0153), new IntRange(0, max_floors), 5);//Calcium
-            boosters.Spawns.Add(new InvItem(0154, true), new IntRange(0, max_floors), 5);//Zinc
-            boosters.Spawns.Add(new InvItem(0154), new IntRange(0, max_floors), 5);//Zinc
-            boosters.Spawns.Add(new InvItem(0155, true), new IntRange(0, max_floors), 5);//Carbos
-            boosters.Spawns.Add(new InvItem(0155), new IntRange(0, max_floors), 5);//Carbos
-            boosters.Spawns.Add(new InvItem(0156, true), new IntRange(0, max_floors), 5);//HP Up
-            boosters.Spawns.Add(new InvItem(0156), new IntRange(0, max_floors), 5);//HP Up
+            boosters.Spawns.Add(new InvItem(0151, true), new IntRange(0, max_floors), 4);//Protein
+            boosters.Spawns.Add(new InvItem(0151), new IntRange(0, max_floors), 6);//Protein
+            boosters.Spawns.Add(new InvItem(0152, true), new IntRange(0, max_floors), 4);//Iron
+            boosters.Spawns.Add(new InvItem(0152), new IntRange(0, max_floors), 6);//Iron
+            boosters.Spawns.Add(new InvItem(0153, true), new IntRange(0, max_floors), 4);//Calcium
+            boosters.Spawns.Add(new InvItem(0153), new IntRange(0, max_floors), 6);//Calcium
+            boosters.Spawns.Add(new InvItem(0154, true), new IntRange(0, max_floors), 4);//Zinc
+            boosters.Spawns.Add(new InvItem(0154), new IntRange(0, max_floors), 6);//Zinc
+            boosters.Spawns.Add(new InvItem(0155, true), new IntRange(0, max_floors), 4);//Carbos
+            boosters.Spawns.Add(new InvItem(0155), new IntRange(0, max_floors), 6);//Carbos
+            boosters.Spawns.Add(new InvItem(0156, true), new IntRange(0, max_floors), 4);//HP Up
+            boosters.Spawns.Add(new InvItem(0156), new IntRange(0, max_floors), 6);//HP Up
                                                                                    //throwable
             CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
             throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
@@ -3270,7 +3270,7 @@ namespace DataGenerator.Data
             orbs.Spawns.Add(new InvItem(0259, true), new IntRange(0, max_floors), 3);//Trawl Orb
             orbs.Spawns.Add(new InvItem(0259), new IntRange(0, max_floors), 7);//Trawl Orb
             orbs.Spawns.Add(new InvItem(0261), new IntRange(0, max_floors), 10);//Scanner Orb
-                                                                               //held
+                                                                                //held
             CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
             held.SpawnRates.SetRange(2, new IntRange(0, 27));
             itemSpawnZoneStep.Spawns.Add("held", held);
@@ -3463,8 +3463,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(050, 071, 189, 010, -1, -1, new RandRange(10)), new IntRange(3, 7), 10);
             //179 Mareep : 178 Cotton Spore : 084 Thunder Shock
             poolSpawn.Spawns.Add(GetTeamMob(179, -1, 178, 084, -1, -1, new RandRange(10)), new IntRange(3, 7), 10);
-            //187 Hoppip : 235 Synthesis : 584 Fairy Wind
-            poolSpawn.Spawns.Add(GetTeamMob(187, -1, 235, 584, -1, -1, new RandRange(10)), new IntRange(3, 7), 10);
+            //187 Hoppip : 235 Synthesis : 033 Tackle
+            poolSpawn.Spawns.Add(GetTeamMob(187, -1, 235, 033, -1, -1, new RandRange(10)), new IntRange(3, 7), 10);
             //023 Ekans : 040 Poison Sting : 043 Leer
             poolSpawn.Spawns.Add(GetTeamMob(023, -1, 040, 043, -1, -1, new RandRange(10)), new IntRange(5, 9), 10);
             //393 Piplup : 128 Defiant : 064 Peck
@@ -3481,8 +3481,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(438, -1, 313, 067, -1, -1, new RandRange(14), TeamMemberSpawn.MemberRole.Loner, 10), new IntRange(5, 9), 10);
             //077 Ponyta : 172 Flame Wheel : 039 Tail Whip
             poolSpawn.Spawns.Add(GetTeamMob(077, -1, 172, 039, -1, -1, new RandRange(13)), new IntRange(5, 9), 10);
-            //060 Poliwag : 346 Water Sport : 145 Bubble
-            poolSpawn.Spawns.Add(GetTeamMob(060, -1, 346, 145, -1, -1, new RandRange(12)), new IntRange(5, 9), 10);
+            //060 Poliwag : 346 Water Sport : 055 Water Gun
+            poolSpawn.Spawns.Add(GetTeamMob(060, -1, 346, 055, -1, -1, new RandRange(12)), new IntRange(5, 9), 10);
             //193 Yanma : 003 Speed Boost : 049 Sonic Boom
             poolSpawn.Spawns.Add(GetTeamMob(193, 003, 049, -1, -1, -1, new RandRange(16)), new IntRange(7, 11), 10);
             //440 Happiny : 383 Copycat : 204 Charm
@@ -4927,15 +4927,15 @@ namespace DataGenerator.Data
 
                 //enemies
                 if (ii <= 8)
-                    AddRespawnData(layout, 10, 80);
+                    AddRespawnData(layout, 10, 85);
                 else if (ii <= 16)
                     AddRespawnData(layout, 14, 90);
                 else if (ii <= 20)
                     AddRespawnData(layout, 18, 100);
                 else if (ii <= 27)
-                    AddRespawnData(layout, 28, 100);
+                    AddRespawnData(layout, 26, 110);
                 else
-                    AddRespawnData(layout, 22, 120);
+                    AddRespawnData(layout, 22, 130);
 
                 //enemies
                 if (ii <= 8)
@@ -4945,7 +4945,7 @@ namespace DataGenerator.Data
                 else if (ii <= 20)
                     AddEnemySpawnData(layout, 30, new RandRange(12, 16));
                 else if (ii <= 27)
-                    AddEnemySpawnData(layout, 20, new RandRange(17, 25));
+                    AddEnemySpawnData(layout, 20, new RandRange(16, 22));
                 else
                     AddEnemySpawnData(layout, 20, new RandRange(13, 18));
 

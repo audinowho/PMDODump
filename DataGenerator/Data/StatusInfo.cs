@@ -385,7 +385,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameTargetedStatusCheck(new StringKey("MSG_WRAP_ALREADY")));
                 status.OnStatusAdds.Add(0, new TargetedBattleLogEvent(new StringKey("MSG_WRAP_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
-                status.StatusStates.Set(new CountDownState(3));
+                status.StatusStates.Set(new CountDownState(4));
                 status.StatusStates.Set(new HPState());
                 status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
@@ -411,7 +411,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameTargetedStatusCheck(new StringKey("MSG_BIND_ALREADY")));
                 status.OnStatusAdds.Add(0, new TargetedBattleLogEvent(new StringKey("MSG_BIND_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
-                status.StatusStates.Set(new CountDownState(3));
+                status.StatusStates.Set(new CountDownState(4));
                 status.StatusStates.Set(new StackState());
                 status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
@@ -1684,7 +1684,7 @@ namespace DataGenerator.Data
                 SingleEmitter targetEmitter = new SingleEmitter(new AnimData("Hit_Neutral", 3));
                 status.AfterBeingHits.Add(0, new CounterCategoryEvent(BattleData.SkillCategory.None, 1, 1, new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 10), new BattleAnimEvent(targetEmitter, "DUN_Hit_Neutral", false)));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
-                status.StatusStates.Set(new CountDownState(25));
+                status.StatusStates.Set(new CountDownState(50));
             }
             else if (ii == 101)
             {
@@ -1728,7 +1728,7 @@ namespace DataGenerator.Data
                 //status.BeforestatutAdds.Add(0, new SameTargetedStatusCheck("));
                 status.OnStatusAdds.Add(0, new TargetedBattleLogEvent(new StringKey("MSG_CLAMP_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
-                status.StatusStates.Set(new CountDownState(3));
+                status.StatusStates.Set(new CountDownState(4));
                 status.StatusStates.Set(new StackState());
                 status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));

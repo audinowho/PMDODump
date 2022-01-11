@@ -3723,7 +3723,7 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("Bubble");
                 skill.Desc = new LocalText("A spray of countless bubbles is jetted at the target. This may also lower the target's Movement Speed.");
-                skill.BaseCharges = 16;
+                skill.BaseCharges = 18;
                 skill.Data.Element = 18;
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
@@ -3735,7 +3735,7 @@ namespace DataGenerator.Data
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
                 ((AreaAction)skill.HitboxAction).HitArea = Hitbox.AreaLimit.Cone;
-                ((AreaAction)skill.HitboxAction).Range = 3;
+                ((AreaAction)skill.HitboxAction).Range = 2;
                 ((AreaAction)skill.HitboxAction).Speed = 6;
                 ((AreaAction)skill.HitboxAction).HitTiles = true;
                 CircleSquareReleaseEmitter emitter = new CircleSquareReleaseEmitter(new AnimData("Bubble_Pop_Blue", 3));
@@ -5621,11 +5621,11 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("=Magnitude");
                 skill.Desc = new LocalText("The user attacks everything around it with a ground-shaking quake. It does less damage to targets far away.");
-                skill.BaseCharges = 14;
+                skill.BaseCharges = 12;
                 skill.Data.Element = 11;
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(75));
+                skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.BeforeHits.Add(0, new DistanceDropEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
@@ -14623,11 +14623,11 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("-Fairy Wind");
                 skill.Desc = new LocalText("The user stirs up a fairy wind and strikes the target with it.");
-                skill.BaseCharges = 14;
+                skill.BaseCharges = 15;
                 skill.Data.Element = 05;
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(35));
+                skill.Data.SkillStates.Set(new BasePowerState(30));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();

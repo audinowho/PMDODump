@@ -618,7 +618,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Vile Seed");
                 item.Desc = new LocalText("A seed that drastically lowers the Pokémon's Defense and Special Defense.");
                 item.Sprite = "Seed_DarkBlue";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, -3));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, -3));
                 item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(13, true, false, -3));
             }
             else if (ii == 112)
@@ -1127,54 +1127,56 @@ namespace DataGenerator.Data
             else if (ii == 200)
             {
                 item.Name = new LocalText("Stick");
-                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. Critical hits land more easily.");
+                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. It causes the target to flinch.");
                 item.Sprite = "Stick_Brown";
                 item.Icon = 1;
                 item.ThrowAnim = new AnimData("Thorn_Brown", 60);
                 item.Price = 1;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(40));
-                item.UseEvent.OnActions.Add(0, new BoostCriticalEvent(2));
+                item.UseEvent.SkillStates.Set(new BasePowerState(50));
+                item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(8, true, true)));
             }
             else if (ii == 201)
             {
                 item.Name = new LocalText("Cacnea Spike");
-                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage and may lower the Attack of any Pokémon it hits.");
+                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Attack of any Pokémon it hits.");
                 item.Sprite = "Stick_Green";
                 item.Icon = 1;
                 item.ThrowAnim = new AnimData("Thorn_Green", 60);
                 item.Price = 2;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(30));
-                item.UseEvent.SkillStates.Set(new AdditionalEffectState(50));
+                item.UseEvent.SkillStates.Set(new BasePowerState(50));
+                item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
-                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(10, true, true, -1)));
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(10, true, true, -2)));
             }
             else if (ii == 202)
             {
                 item.Name = new LocalText("Corsola Twig");
-                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage and may lower the Sp.Atk of any Pokémon it hits.");
+                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Sp.Atk of any Pokémon it hits.");
                 item.Sprite = "Stick_Pink";
                 item.Icon = 1;
                 item.ThrowAnim = new AnimData("Thorn_Pink", 60);
                 item.Price = 2;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(30));
+                item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
-                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(12, true, true, -1)));
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(12, true, true, -2)));
             }
             else if (ii == 203)
             {
                 item.Name = new LocalText("Iron Thorn");
-                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict heavy damage on any Pokémon it hits.");
+                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. Critical hits land more easily.");
                 item.Sprite = "Stick_DarkBlue";
                 item.Icon = 1;
                 item.ThrowAnim = new AnimData("Thorn_Gray", 60);
                 item.Price = 2;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(60));
+                item.UseEvent.SkillStates.Set(new BasePowerState(70));
+                item.UseEvent.OnActions.Add(0, new BoostCriticalEvent(2));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
             }
             else if (ii == 204)
@@ -1213,7 +1215,7 @@ namespace DataGenerator.Data
                 item.Price = 50;
                 item.ArcThrow = true;
                 item.UseEvent.Category = BattleData.SkillCategory.Magical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(40));
+                item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
 
                 item.Explosion = new ExplosionData();
@@ -1232,14 +1234,16 @@ namespace DataGenerator.Data
             else if (ii == 207)
             {
                 item.Name = new LocalText("Geo Pebble");
-                item.Desc = new LocalText("A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target.");
+                item.Desc = new LocalText("A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target. It causes the target to flinch.");
                 item.Sprite = "Rock_Gray";
                 item.Icon = 0;
                 item.Price = 1;
                 item.ArcThrow = true;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
                 item.UseEvent.SkillStates.Set(new BasePowerState(50));
+                item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(8, true, true)));
                 item.Explosion = new ExplosionData();
                 item.Explosion.TargetAlignments |= Alignment.Foe;
             }
@@ -1252,7 +1256,7 @@ namespace DataGenerator.Data
                 item.Price = 3;
                 item.ArcThrow = true;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(40));
+                item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
 
                 item.Explosion = new ExplosionData();
