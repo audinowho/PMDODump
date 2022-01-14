@@ -4083,7 +4083,7 @@ namespace DataGenerator.Data
                     zone.Rescues = 2;
                     zone.Level = 25;
                     zone.LevelCap = true;
-                    zone.BagRestrict = 8;
+                    zone.BagRestrict = 16;
                     zone.TeamSize = 3;
                     zone.Rogue = RogueStatus.ItemTransfer;
 

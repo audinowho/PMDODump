@@ -3535,8 +3535,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(413, 2, -1, Gender.Unknown), 107, 429, 319, -1, -1, new RandRange(29), TeamMemberSpawn.MemberRole.Leader, 25), new IntRange(15, 19), 5);
             //391 Monferno : 172 Flame Wheel : 259 Torment
             poolSpawn.Spawns.Add(GetTeamMob(391, -1, 172, 259, -1, -1, new RandRange(29)), new IntRange(15, 19), 10);
-            //213 Shuckle : 564 Sticky Web : 227 Encore : 522 Struggle Bug
-            poolSpawn.Spawns.Add(GetTeamMob(213, -1, 564, 227, 522, -1, new RandRange(29)), new IntRange(15, 19), 10);
+            //213 Shuckle : 227 Encore : 522 Struggle Bug
+            poolSpawn.Spawns.Add(GetTeamMob(213, -1, 227, 522, -1, -1, new RandRange(29)), new IntRange(15, 19), 10);
             //067 Machoke : 116 Focus Energy : 490 Low Sweep
             poolSpawn.Spawns.Add(GetTeamMob(067, -1, 116, 490, -1, -1, new RandRange(29)), new IntRange(15, 19), 10);
             //093 Haunter : 212 Mean Look : 101 Night Shade
@@ -3564,11 +3564,11 @@ namespace DataGenerator.Data
             //192 Sunflora : 074 Growth : 076 Solar Beam
             poolSpawn.Spawns.Add(GetTeamMob(192, -1, 074, 076, -1, -1, new RandRange(36)), new IntRange(19, 23), 15);
             //182 Bellossom : 241 Sunny Day : 345 Magical Leaf
-            poolSpawn.Spawns.Add(GetTeamMob(182, -1, 241, 345, -1, -1, new RandRange(36)), new IntRange(19, 23), 20);
+            poolSpawn.Spawns.Add(GetTeamMob(182, -1, 241, 345, -1, -1, new RandRange(36)), new IntRange(19, 23), 15);
             //301 Delcatty : 096 Normalize : 274 Assist : 047 Sing
             poolSpawn.Spawns.Add(GetTeamMob(301, 096, 274, 047, -1, -1, new RandRange(36), TeamMemberSpawn.MemberRole.Support), new IntRange(19, 23), 10);
-            //078 Rapidash : 097 Agility : 517 Inferno
-            poolSpawn.Spawns.Add(GetTeamMob(078, -1, 097, 517, -1, -1, new RandRange(40), TeamMemberSpawn.MemberRole.Loner), new IntRange(19, 23), 10);
+            //078 Rapidash : 083 Fire Spin : 517 Inferno
+            poolSpawn.Spawns.Add(GetTeamMob(078, -1, 083, 517, -1, -1, new RandRange(40), TeamMemberSpawn.MemberRole.Loner), new IntRange(19, 23), 10);
             //389 Torterra : 452 Wood Hammer : 089 Earthquake : 235 Synthesis
             poolSpawn.Spawns.Add(GetTeamMob(389, -1, 452, 089, 235, -1, new RandRange(36)), new IntRange(19, 23), 10);
             //398 Staraptor : 097 Agility : 515 Final Gambit : 370 Close Combat
@@ -3576,7 +3576,7 @@ namespace DataGenerator.Data
             //062 Poliwrath : 358 Wake-Up Slap : 095 Hypnosis
             poolSpawn.Spawns.Add(GetTeamMob(062, -1, 358, 095, -1, -1, new RandRange(39)), new IntRange(21, 25), 10);
             //337 Lunatone : 478 Magic Room : 585 Moonblast : 157 Rock Slide
-            poolSpawn.Spawns.Add(GetTeamMob(337, -1, 478, 585, 157, -1, new RandRange(39)), new IntRange(21, 25), 15);
+            poolSpawn.Spawns.Add(GetTeamMob(337, -1, 478, 585, 157, -1, new RandRange(39)), new IntRange(21, 25), 10);
             //164 Noctowl : 115 Reflect : 138 Dream Eater : 355 Roost
             poolSpawn.Spawns.Add(GetTeamMob(164, -1, 115, 138, 355, -1, new RandRange(39), TeamMemberSpawn.MemberRole.Support), new IntRange(21, 25), 10);
             //094 Gengar : 247 Shadow Ball : 180 Spite : 138 Dream Eater
@@ -3587,8 +3587,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(302, -1, 212, 282, -1, -1, new RandRange(42)), new IntRange(23, 28), 10);
             //186 Politoed : 195 Perish Song : 207 Swagger
             poolSpawn.Spawns.Add(GetTeamMob(186, -1, 195, 207, -1, -1, new RandRange(42), TeamMemberSpawn.MemberRole.Loner), new IntRange(23, 28), 20);
-            //065 Alakazam : 477 Telekinesis : 094 Psychic
-            poolSpawn.Spawns.Add(GetTeamMob(065, -1, 477, 094, -1, -1, new RandRange(42)), new IntRange(23, 28), 10);
+            //065 Alakazam : 105 Recover : 094 Psychic
+            poolSpawn.Spawns.Add(GetTeamMob(065, -1, 105, 094, -1, -1, new RandRange(42)), new IntRange(23, 28), 10);
             //080 Slowbro : 505 Heal Pulse : 133 Amnesia : 352 Water Pulse
             poolSpawn.Spawns.Add(GetTeamMob(080, -1, 505, 133, 352, -1, new RandRange(45)), new IntRange(25, 28), 10);
             //068 Machamp : 099 No Guard : 223 Dynamic Punch : 530 Dual Chop

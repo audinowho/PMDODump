@@ -9,3 +9,5 @@
 * Modified the moves: Magnitude, Psywave, Bubble, Fairy Wind, Fury Swipes, Fury Attack, Sticky Web.
 * Slightly lowered spawn/respawn rate of enemies in high floors of postgame dungeons.
 * Enemy name text fixes.
+* Fix centering issue with single sheets in char sprite importer.
+* 
