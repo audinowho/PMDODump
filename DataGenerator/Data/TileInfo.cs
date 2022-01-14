@@ -347,16 +347,17 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Red;
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
 
-                SelfAction altAction = new SelfAction();
-                altAction.TargetAlignments = Alignment.Self;
+                AreaAction altAction = new AreaAction();
+                altAction.TileEmitter = new SingleEmitter(new AnimData("Puff_Pink", 3));
+                altAction.ActionFX.Sound = "DUN_Trace";
+                altAction.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
 
                 ExplosionData altExplosion = new ExplosionData();
-                altExplosion.TargetAlignments = Alignment.Self;
-                BattleData newData = new BattleData();
-                newData.HitFX.Emitter = new SingleEmitter(new AnimData("Puff_Pink", 3));
-                newData.HitFX.Sound = "DUN_Trace";
+                altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
 
+                BattleData newData = new BattleData();
                 newData.HitRate = -1;
+
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(HeldState)));
                 newData.OnHits.Add(0, new TransformItemEvent(true, false, 116, 1, eligibles));
@@ -702,7 +703,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = Alignment.Self;
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new RestoreBellyEvent(-10, true));
+                newData.OnHits.Add(0, new RestoreBellyEvent(-20, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 26)

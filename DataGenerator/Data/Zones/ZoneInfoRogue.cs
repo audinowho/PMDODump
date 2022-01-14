@@ -31,6 +31,8 @@ namespace DataGenerator.Data
             zone.Rescues = 2;
             zone.Rogue = RogueStatus.AllTransfer;
 
+            int max_floors = 30;
+
             LayeredSegment floorSegment = new LayeredSegment();
             floorSegment.IsRelevant = true;
             floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
@@ -1143,32 +1145,30 @@ namespace DataGenerator.Data
 
             TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
             tileSpawn.Priority = PR_RESPAWN_TRAP;
-            tileSpawn.Spawns.Add(new EffectTile(7, false), new IntRange(0, 30), 10);//mud trap
-            tileSpawn.Spawns.Add(new EffectTile(13, true), new IntRange(0, 15), 10);//warp trap
-            tileSpawn.Spawns.Add(new EffectTile(13, false), new IntRange(15, 30), 10);//warp trap
-            tileSpawn.Spawns.Add(new EffectTile(14, false), new IntRange(0, 30), 10);//gust trap
-            tileSpawn.Spawns.Add(new EffectTile(17, false), new IntRange(0, 30), 10);//chestnut trap
-            tileSpawn.Spawns.Add(new EffectTile(3, false), new IntRange(0, 30), 10);//poison trap
-            tileSpawn.Spawns.Add(new EffectTile(4, false), new IntRange(0, 30), 10);//sleep trap
-            tileSpawn.Spawns.Add(new EffectTile(11, false), new IntRange(0, 30), 10);//sticky trap
-            tileSpawn.Spawns.Add(new EffectTile(8, false), new IntRange(0, 30), 10);//seal trap
-            tileSpawn.Spawns.Add(new EffectTile(18, false), new IntRange(0, 30), 10);//selfdestruct trap
-            tileSpawn.Spawns.Add(new EffectTile(23, false), new IntRange(0, 30), 10);//trip trap
-            tileSpawn.Spawns.Add(new EffectTile(25, true), new IntRange(0, 15), 10);//hunger trap
-            tileSpawn.Spawns.Add(new EffectTile(25, false), new IntRange(15, 30), 10);//hunger trap
+            tileSpawn.Spawns.Add(new EffectTile(7, false), new IntRange(0, max_floors), 10);//mud trap
+            tileSpawn.Spawns.Add(new EffectTile(13, true), new IntRange(0, max_floors), 10);//warp trap
+            tileSpawn.Spawns.Add(new EffectTile(14, false), new IntRange(0, max_floors), 10);//gust trap
+            tileSpawn.Spawns.Add(new EffectTile(17, false), new IntRange(0, max_floors), 10);//chestnut trap
+            tileSpawn.Spawns.Add(new EffectTile(3, false), new IntRange(0, max_floors), 10);//poison trap
+            tileSpawn.Spawns.Add(new EffectTile(4, false), new IntRange(0, max_floors), 10);//sleep trap
+            tileSpawn.Spawns.Add(new EffectTile(11, false), new IntRange(0, max_floors), 10);//sticky trap
+            tileSpawn.Spawns.Add(new EffectTile(8, false), new IntRange(0, max_floors), 10);//seal trap
+            tileSpawn.Spawns.Add(new EffectTile(18, false), new IntRange(0, max_floors), 10);//selfdestruct trap
+            tileSpawn.Spawns.Add(new EffectTile(23, true), new IntRange(0, 15), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile(23, false), new IntRange(15, max_floors), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile(25, true), new IntRange(0, max_floors), 10);//hunger trap
             tileSpawn.Spawns.Add(new EffectTile(12, true), new IntRange(0, 15), 3);//apple trap
-            tileSpawn.Spawns.Add(new EffectTile(12, false), new IntRange(15, 30), 3);//apple trap
-            tileSpawn.Spawns.Add(new EffectTile(9, false), new IntRange(0, 30), 10);//pp-leech trap
-            tileSpawn.Spawns.Add(new EffectTile(15, false), new IntRange(0, 30), 10);//summon trap
-            tileSpawn.Spawns.Add(new EffectTile(19, false), new IntRange(0, 30), 10);//explosion trap
-            tileSpawn.Spawns.Add(new EffectTile(6, false), new IntRange(0, 30), 10);//slow trap
-            tileSpawn.Spawns.Add(new EffectTile(5, false), new IntRange(0, 30), 10);//spin trap
-            tileSpawn.Spawns.Add(new EffectTile(10, false), new IntRange(0, 30), 10);//grimy trap
-            tileSpawn.Spawns.Add(new EffectTile(28, true), new IntRange(0, 15), 20);//trigger trap
-            tileSpawn.Spawns.Add(new EffectTile(28, false), new IntRange(15, 30), 20);//trigger trap
-                                                                                      //pokemon trap
-            tileSpawn.Spawns.Add(new EffectTile(24, false), new IntRange(15, 30), 10);//grudge trap
-                                                                                      //training switch
+            tileSpawn.Spawns.Add(new EffectTile(12, false), new IntRange(15, max_floors), 3);//apple trap
+            tileSpawn.Spawns.Add(new EffectTile(9, true), new IntRange(0, max_floors), 10);//pp-leech trap
+            tileSpawn.Spawns.Add(new EffectTile(15, false), new IntRange(0, max_floors), 10);//summon trap
+            tileSpawn.Spawns.Add(new EffectTile(19, false), new IntRange(0, max_floors), 10);//explosion trap
+            tileSpawn.Spawns.Add(new EffectTile(6, false), new IntRange(0, max_floors), 10);//slow trap
+            tileSpawn.Spawns.Add(new EffectTile(5, false), new IntRange(0, max_floors), 10);//spin trap
+            tileSpawn.Spawns.Add(new EffectTile(10, false), new IntRange(0, max_floors), 10);//grimy trap
+            tileSpawn.Spawns.Add(new EffectTile(28, true), new IntRange(0, max_floors), 20);//trigger trap
+                                                                                            //pokemon trap
+            tileSpawn.Spawns.Add(new EffectTile(24, true), new IntRange(15, max_floors), 10);//grudge trap
+                                                                                             //training switch
             floorSegment.ZoneSteps.Add(tileSpawn);
 
 
@@ -3703,8 +3703,7 @@ namespace DataGenerator.Data
             TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
             tileSpawn.Priority = PR_RESPAWN_TRAP;
             tileSpawn.Spawns.Add(new EffectTile(7, false), new IntRange(0, max_floors), 10);//mud trap
-            tileSpawn.Spawns.Add(new EffectTile(13, true), new IntRange(0, 15), 10);//warp trap
-            tileSpawn.Spawns.Add(new EffectTile(13, false), new IntRange(15, max_floors), 10);//warp trap
+            tileSpawn.Spawns.Add(new EffectTile(13, true), new IntRange(0, max_floors), 10);//warp trap
             tileSpawn.Spawns.Add(new EffectTile(14, false), new IntRange(0, max_floors), 10);//gust trap
             tileSpawn.Spawns.Add(new EffectTile(17, false), new IntRange(0, max_floors), 10);//chestnut trap
             tileSpawn.Spawns.Add(new EffectTile(3, false), new IntRange(0, max_floors), 10);//poison trap
@@ -3712,21 +3711,21 @@ namespace DataGenerator.Data
             tileSpawn.Spawns.Add(new EffectTile(11, false), new IntRange(0, max_floors), 10);//sticky trap
             tileSpawn.Spawns.Add(new EffectTile(8, false), new IntRange(0, max_floors), 10);//seal trap
             tileSpawn.Spawns.Add(new EffectTile(18, false), new IntRange(0, max_floors), 10);//selfdestruct trap
-            tileSpawn.Spawns.Add(new EffectTile(23, false), new IntRange(0, max_floors), 10);//trip trap
-            tileSpawn.Spawns.Add(new EffectTile(25, true), new IntRange(0, 15), 10);//hunger trap
-            tileSpawn.Spawns.Add(new EffectTile(25, false), new IntRange(15, max_floors), 10);//hunger trap
+            tileSpawn.Spawns.Add(new EffectTile(23, true), new IntRange(0, 15), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile(23, false), new IntRange(15, max_floors), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile(25, true), new IntRange(0, max_floors), 10);//hunger trap
             tileSpawn.Spawns.Add(new EffectTile(12, true), new IntRange(0, 15), 3);//apple trap
             tileSpawn.Spawns.Add(new EffectTile(12, false), new IntRange(15, max_floors), 3);//apple trap
-            tileSpawn.Spawns.Add(new EffectTile(9, false), new IntRange(0, max_floors), 10);//pp-leech trap
+            tileSpawn.Spawns.Add(new EffectTile(9, true), new IntRange(0, max_floors), 10);//pp-leech trap
+            tileSpawn.Spawns.Add(new EffectTile(15, false), new IntRange(0, max_floors), 10);//summon trap
             tileSpawn.Spawns.Add(new EffectTile(19, false), new IntRange(0, max_floors), 10);//explosion trap
             tileSpawn.Spawns.Add(new EffectTile(6, false), new IntRange(0, max_floors), 10);//slow trap
             tileSpawn.Spawns.Add(new EffectTile(5, false), new IntRange(0, max_floors), 10);//spin trap
             tileSpawn.Spawns.Add(new EffectTile(10, false), new IntRange(0, max_floors), 10);//grimy trap
-            tileSpawn.Spawns.Add(new EffectTile(28, true), new IntRange(0, 15), 20);//trigger trap
-            tileSpawn.Spawns.Add(new EffectTile(28, false), new IntRange(15, max_floors), 20);//trigger trap
-                                                                                              //pokemon trap
-            tileSpawn.Spawns.Add(new EffectTile(24, false), new IntRange(15, max_floors), 10);//grudge trap
-                                                                                              //training switch
+            tileSpawn.Spawns.Add(new EffectTile(28, true), new IntRange(0, max_floors), 20);//trigger trap
+                                                                                      //pokemon trap
+            tileSpawn.Spawns.Add(new EffectTile(24, true), new IntRange(15, max_floors), 10);//grudge trap
+                                                                                      //training switch
             floorSegment.ZoneSteps.Add(tileSpawn);
 
 
@@ -4945,7 +4944,7 @@ namespace DataGenerator.Data
                 else if (ii <= 20)
                     AddEnemySpawnData(layout, 30, new RandRange(12, 16));
                 else if (ii <= 27)
-                    AddEnemySpawnData(layout, 20, new RandRange(16, 22));
+                    AddEnemySpawnData(layout, 20, new RandRange(17, 22));
                 else
                     AddEnemySpawnData(layout, 20, new RandRange(13, 18));
 

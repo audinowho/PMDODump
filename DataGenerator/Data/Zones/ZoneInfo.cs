@@ -4427,8 +4427,8 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob(37, -1, 506, 261, -1, -1, new RandRange(30)), new IntRange(5, 10), 10);
                     // 15 Beedrill : 390 Toxic Spikes : 41 Twineedle
                     poolSpawn.Spawns.Add(GetTeamMob(15, -1, 390, 41, -1, -1, new RandRange(35)), new IntRange(10, max_floors), 10);
-                    // 12 Butterfree : 14 Compound Eyes : 78 Stun Spore : 79 Sleep powder : 77 Poison powder : 318 Silver Wind
-                    poolSpawn.Spawns.Add(GetTeamMob(12, 14, 78, 79, 77, 318, new RandRange(25)), new IntRange(0, 5), 10);
+                    // 12 Butterfree : 14 Compound Eyes : 78 Stun Spore : 79 Sleep powder : 77 Poison powder : 093 Confusion
+                    poolSpawn.Spawns.Add(GetTeamMob(12, 14, 78, 79, 77, 93, new RandRange(25)), new IntRange(0, 5), 10);
                     // 198 Murkrow : 228 Pursuit : 372 Assurance
                     poolSpawn.Spawns.Add(GetTeamMob(198, -1, 228, 372, -1, -1, new RandRange(25)), new IntRange(0, 5), 10);
                     poolSpawn.Spawns.Add(GetTeamMob(198, -1, 228, 372, -1, -1, new RandRange(30)), new IntRange(5, 10), 10);

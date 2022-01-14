@@ -8,8 +8,11 @@
 * Increased power of Evasion Orb.
 * Increased power of all ammo items.
 * Modified the moves: Magnitude, Psywave, Bubble, Fairy Wind, Fury Swipes, Fury Attack, Sticky Web.
+* Modified movesets of various enemies to be more focused in strength/weakness.
 * Slightly lowered spawn/respawn rate of enemies in high floors of postgame dungeons.
-* Enemy name text fixes.
 * Fix centering issue with single sheets in char sprite importer.
 * Poison, Bad Poison, and Solar Power no longer trigger on item throw.
 * Abilities such as Shadow Tag no longer trigger on item use/throw.
+* Traps trigger when attacked, including when throw items pass over them. Watch where you aim!
+* Traps that affect the triggerer instead of entities in the vicinity (PP-Leech, Hunger, etc) have been made default-revealed.
+* Enemy name text fixes.
