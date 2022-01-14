@@ -1439,7 +1439,7 @@ namespace DataGenerator.Data
                 item.UseAction.PreActions.Add(itemFX);
                 item.UseAction.ActionFX.Sound = "DUN_Blowback_Orb";
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_Out", 2));
-                item.UseEvent.OnHitTiles.Add(0, new PounceEvent());
+                item.UseEvent.OnHitTiles.Add(0, new PounceEvent(1));
             }
             else if (ii == 222)
             {
