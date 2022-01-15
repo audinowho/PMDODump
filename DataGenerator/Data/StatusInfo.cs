@@ -1542,6 +1542,9 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MOBILE_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MOBILE_END")));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Block));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Water));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Lava));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Abyss));
             }
             else if (ii == 93)
             {

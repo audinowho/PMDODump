@@ -23,7 +23,7 @@ namespace DataGenerator.Data
             tactic.Name = new LocalText("Stick Together");//0
             tactic.ID = 0;
             AIFlags iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner | AIFlags.PlayerSense;
-            tactic.Plans.Add(new PreparePlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.SmartAttack));
+            tactic.Plans.Add(new PrepareWithLeaderPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.SmartAttack));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new AttackFoesPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.SmartAttack, AIPlan.PositionChoice.Avoid));
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
