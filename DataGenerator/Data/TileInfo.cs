@@ -405,11 +405,9 @@ namespace DataGenerator.Data
                 emitter.Range = 24;
                 emitter.TotalParticles = 3;
                 emitter.LocHeight = 24;
-                BattleFX altFX = new BattleFX();
-                altFX.Emitter = emitter;
-                altFX.Delay = 40;
-                altFX.Sound = "DUN_Gust_Trap";
-                altAction.PreActions.Add(altFX);
+                altAction.ActionFX.Emitter = emitter;
+                altAction.ActionFX.Sound = "DUN_Gust_Trap";
+                altAction.LagBehindTime = 40;
                 altAction.HitTiles = true;
 
                 ExplosionData altExplosion = new ExplosionData();
@@ -430,18 +428,16 @@ namespace DataGenerator.Data
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
 
                 AreaAction altAction = new AreaAction();
-                FiniteAreaEmitter emitter = new FiniteAreaEmitter(new AnimData("Puff_Pink", 3));
-                emitter.Speed = 24;
-                emitter.Range = 12;
-                emitter.TotalParticles = 6;
-                BattleFX altFX = new BattleFX();
-                altFX.Emitter = emitter;
-                altFX.Sound = "DUN_Pitfall_Trap";
-                altFX.Delay = 20;
-                altAction.PreActions.Add(altFX);
+                altAction.ActionFX.Sound = "DUN_Pitfall_Trap";
+                altAction.ActionFX.Delay = 20;
+                CircleSquareAreaEmitter emitter = new CircleSquareAreaEmitter(new AnimData("Puff_Pink", 3));
+                emitter.ParticlesPerTile = 3;
+                emitter.RangeDiff = 8;
+                altAction.Emitter = emitter;
                 altAction.HitTiles = true;
 
                 ExplosionData altExplosion = new ExplosionData();
+
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
                 newData.OnHitTiles.Add(0, new WarpFoesToTileEvent(4));
