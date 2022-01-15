@@ -13798,7 +13798,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 70;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
-                skill.Data.SkillStates.Set(new AdditionalEffectState(50));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
                 skill.Data.OnActions.Add(0, new WeatherNeededEvent(1, new SetAccuracyEvent(-1)));
                 skill.Data.OnActions.Add(0, new WeatherNeededEvent(2, new SetAccuracyEvent(50)));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
