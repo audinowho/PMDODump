@@ -683,9 +683,9 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 85;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.SkillStates.Set(new BasePowerState(85));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new CrashLandEvent(4));
+                skill.Data.AfterActions.Add(0, new CrashLandEvent(6));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 21;//Kick
@@ -3491,9 +3491,9 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
-                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.SkillStates.Set(new BasePowerState(95));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new CrashLandEvent(2));
+                skill.Data.AfterActions.Add(0, new CrashLandEvent(4));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 21;//Kick

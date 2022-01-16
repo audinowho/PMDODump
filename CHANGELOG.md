@@ -13,7 +13,7 @@
 * Increased the power of Hunger Seed.
 * Modified enemy AI to stop using moves or walk when at 0 Belly.
 * Stick Together AI prioritizes sticking together over attacking.
-* Modified the moves: Magnitude, Psywave, Bubble, Fairy Wind, Fury Swipes, Fury Attack, Sticky Web, Hurricane.
+* Modified the moves: Magnitude, Psywave, Bubble, Fairy Wind, Fury Swipes, Fury Attack, Sticky Web, Hurricane, Earth Power, Jump Kick, High Jump Kick, Rock Smash.
 * Modified the traps: Hunger Trap, Apple Trap.
 * Poison, Bad Poison, and Solar Power no longer trigger on item throw.
 * Abilities such as Shadow Tag no longer trigger on item use/throw.
