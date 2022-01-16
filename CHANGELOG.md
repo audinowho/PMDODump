@@ -21,5 +21,5 @@
 * Traps that affect the triggerer instead of entities in the vicinity (PP-Leech, Hunger, etc) have been made default-revealed.
 * Fix centering issue with single sheets in char sprite importer.
 * Enemy name text fixes.
-* Fix save compatibility with mods that have larger dungeon lists.
+* Fix save compatibility with mods that have larger dungeon lists. Developers will need to check for references to _DATA:Save.Dex, RogueStarters, and DungeonUnlocks.
 * Fix an issue with map generation where clamping map size resulted in out-of-bounds rooms.

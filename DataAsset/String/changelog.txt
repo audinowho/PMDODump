@@ -3,15 +3,21 @@ Sheet: Hardcode
 Sheet: Content
 
 Sheet: Script
-    * Changed ground\base_camp/Range_Line_002 from "I didn't stand a chance.[pause=0] Sigh...[pause=30] maybe I'm not cut out to be an explorer..." to "I didn't stand a chance.[pause=0] Sigh..."
-    * Changed ground\base_camp_2/History_Line_001 from "One day,[pause=20] the letters were written from this post office and scattered out to the world.[br]No one knows who exactly wrote them, but they all bore the emblem of the legendary explorer's team.[br]They promised a title of ultimate prestige, and marked the highest point of this island's mountains." to "One day,[pause=20] the letters were written from this post office and scattered out to the world.[br]No one knows who exactly wrote them,[pause=0] but they all bore the emblem of the legendary explorer's team.[br]They promised a title of ultimate prestige,[pause=0] and marked the highest point of this island's mountains."
-    * Significantly changed ground\cliff_camp/Bellsprout_Line_001 from "Bellsprout and I got to this camp no problem,[pause=0] but the dungeon ahead is another story." to "Shroomish and I got to this camp no problem,[pause=0] but the dungeon ahead is another story."
-    * Deleted key ground\test_grounds/Merchant_Greet
-    * Deleted key ground\test_grounds/Mew_Action_Line0
+    * Changed ground\base_camp_2/History_Line_001 from "One day,[pause=20] the letters were written from this post office and scattered out to the world.[br]No one knows who exactly wrote them,[pause=0] but they all bore the emblem of the legendary explorer's team.[br]They promised a title of ultimate prestige,[pause=0] and marked the highest point of this island's mountains." to "One day,[pause=20] the letters were written from this post office and scattered out to the world.[br]No one knows exactly who wrote them,[pause=0] but they all bore the emblem of the legendary explorer's team.[br]They promised a title of ultimate prestige,[pause=0] and marked the highest point of this island's mountains."
+    * Deleted key ground\cliff_camp/Doduo_Line_006
+    * Deleted key ground\cliff_camp/Pachirisu_Line_005
+    * Deleted key ground\cliff_camp/Pachirisu_Line_006
+    * Deleted key ground\cliff_camp/Pachirisu_Line_007
 
 Sheet: Abilities
 
 Sheet: Items
+    * Significantly changed 0200-0001|data.Desc from "A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. Critical hits land more easily." to "A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. It causes the target to flinch."
+    * Significantly changed 0201-0001|data.Desc from "A weapon to be hurled. It flies in a straight line to inflict damage and may lower the Attack of any Pokémon it hits." to "A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Attack of any Pokémon it hits."
+    * Significantly changed 0202-0001|data.Desc from "A weapon to be hurled. It flies in a straight line to inflict damage and may lower the Sp.Atk of any Pokémon it hits." to "A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Sp.Atk of any Pokémon it hits."
+    * Changed 0200-0001|data.Desc to 0203-0001|data.Desc, retaining translations
+    * Significantly changed 0207-0001|data.Desc from "A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target." to "A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target. It causes the target to flinch."
+    * Significantly changed 0278-0001|data.Desc from "An orb that sharply boosts Evasion. It affects team members up to 5 tiles away." to "An orb that drastically boosts Evasion. It affects team members up to 5 tiles away."
 
 Sheet: MapStatuses
 
