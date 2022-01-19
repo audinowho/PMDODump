@@ -4912,18 +4912,6 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
                 }
 
-
-
-                if (ii >= 13 && ii < 17)
-                {
-                    SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                    specificTeam.Spawns.Add(GetGenericMob(147, -1, 35, 43, -1, -1, new RandRange(15)));
-
-                    MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
-                    spawnStep.Spawns.Add(specificTeam, 10);
-                    layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
-                }
-
                 //enemies
                 if (ii <= 8)
                     AddRespawnData(layout, 10, 85);

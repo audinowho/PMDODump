@@ -2253,6 +2253,14 @@ namespace DataGenerator.Data
                 item.Sprite = "Box_Tan";
                 item.Price = 200;
                 item.BeforeStatusAdds.Add(0, new PreventStatusCheck(90, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(19, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(20, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(44, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(45, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(46, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(58, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(103, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(104, new StringKey("MSG_SHED_SHELL")));
             }
             else if (ii == 312)
             {

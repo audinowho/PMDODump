@@ -12317,7 +12317,7 @@ namespace DataGenerator.Data
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
                 ((ThrowAction)skill.HitboxAction).Coverage = ThrowAction.ArcCoverage.WideAngle;
-                ((ThrowAction)skill.HitboxAction).Range = 4;
+                ((ThrowAction)skill.HitboxAction).Range = 3;
                 skill.HitboxAction.ActionFX.Emitter = new SingleEmitter(new AnimData("Leer", 2));
                 skill.HitboxAction.ActionFX.Sound = "DUN_Leer_2";
                 skill.HitboxAction.TargetAlignments = (Alignment.Friend | Alignment.Foe);

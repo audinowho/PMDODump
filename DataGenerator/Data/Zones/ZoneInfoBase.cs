@@ -3028,7 +3028,7 @@ namespace DataGenerator.Data
                 presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(19, 5), 155, -1, 52, -1, -1, -1, floor_level));// Cyndaquil : Ember
                 presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(22, 5), 158, -1, 55, -1, -1, -1, floor_level));// Totodile : Water Gun
                 presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(25, 5), 25, 50, 84, -1, -1, -1, floor_level));// Pachirisu : Thunder Shock
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(14, 2), 27, -1, 91, -1, -1, -1, floor_level));// Sandshrew : Dig
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(14, 2), 27, -1, 328, -1, -1, -1, floor_level));// Sandshrew : Sand Tomb
                 presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(17, 2), 438, 69, 88, -1, -1, -1, floor_level));// Bonsly : Rock Throw
                 presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(21, 2), 276, -1, 17, -1, -1, -1, floor_level));// Taillow : Wing Attack
                 presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(24, 2), 23, 61, 40, -1, -1, -1, floor_level));// Ekans : Poison Sting
