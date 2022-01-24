@@ -8,3 +8,5 @@
 * Change the item Shed Shell.
 * Allies will only attack Tit for Tat AI on turns where the player attacks.
 * Fixed an issue that caused Dratini to spawn in unintended areas.
+* Added support for 8bitdo controllers.
+* Minor fixes in rescue info text.
