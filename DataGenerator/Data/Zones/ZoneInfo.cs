@@ -382,6 +382,20 @@ namespace DataGenerator.Data
                             randomSpawn.Ally = true;
                             npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
                         }
+                        //Song
+                        {
+                            PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
+                            MobSpawn post_mob = new MobSpawn();
+                            post_mob.BaseForm = new MonsterID(294, 0, 0, Gender.Male);
+                            post_mob.Tactic = 22;
+                            post_mob.Level = new RandRange(21);
+                            post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_FADED"))));
+                            SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                            multiTeamSpawner.Spawns.Add(post_team);
+                            PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
+                            randomSpawn.Ally = true;
+                            npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                        }
                         //Aipom and wonder tiles
                         {
                             PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();

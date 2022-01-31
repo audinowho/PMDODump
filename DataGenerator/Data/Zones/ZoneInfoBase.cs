@@ -145,6 +145,13 @@ namespace DataGenerator.Data
                         exits.Add((new MapGenExit(secretStairs), new Loc(35, 2)));
                         AddSpecificSpawn(layout, exits, PR_EXITS);
                     }
+                    //{
+                    //    List<(MapGenExit, Loc)> exits = new List<(MapGenExit, Loc)>();
+                    //    EffectTile secretStairs = new EffectTile(48, true);
+                    //    secretStairs.TileStates.Set(new TileScriptState("Test", "{}"));
+                    //    exits.Add((new MapGenExit(secretStairs), new Loc(36, 2)));
+                    //    AddSpecificSpawn(layout, exits, PR_EXITS);
+                    //}
 
                     layout.GenSteps.Add(PR_EXITS, new StairsStep<StairsMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile(1, true))));
 
