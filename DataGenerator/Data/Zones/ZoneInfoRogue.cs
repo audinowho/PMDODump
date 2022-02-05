@@ -2699,7 +2699,7 @@ namespace DataGenerator.Data
                 {
                     //142 Aerodactyl : 17 Wing Attack : 246 Ancient Power : 48 Supersonic : 97 Agility
                     SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                    MobSpawn mob = GetGenericMob(142, -1, 17, 246, 48, 97, new RandRange(50), 17);
+                    MobSpawn mob = GetGenericMob(142, -1, 17, 246, 48, 97, new RandRange(48), 17);
                     mob.SpawnFeatures.Add(new MobSpawnItem(true, 477));
                     specificTeam.Spawns.Add(mob);
 
