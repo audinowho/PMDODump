@@ -1127,8 +1127,8 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0562-0001|data.Desc		The user readies a belch. Eating a food item will unleash the move.	Der Anwender macht sich zum Rülpsen bereit. Diese Attacke wird nach dem Konsum eines essbaren Items ausgeführt.						상대에게 트림할 준비를 한다. 음식류를 먹으면 공격한다.			
 0563-0000|data.Name		Rototiller	Pflüger		耕地	Fertilisation	Fertilizante	Aracampo	일구기	たがやす	たがやす	耕地
 0563-0001|data.Desc		The user overturns the soil, destroying traps and making it easier for plants to grow. This raises the Attack and Sp. Atk stats of Grass-type Pokémon.	Der Anwender pflügt den Boden und macht die Erde fruchtbarer, dabei werden Fallen zerstört. Erhöht den Angriff und den Spezial-Angriff von Pflanzen-Pokémon.						땅을 일구어 함정을 파괴하고 초목이 자라기 쉽게 한다. 풀타입의 공격과 특수공격이 오른다.			
-0564-0000|data.Name		Sticky Web										
-0564-0001|data.Desc		The user shoots a sticky net at the target, causing its item to become sticky.										
+0564-0000|data.Name		Sticky Web	Klebenetz		黏黏网	Toile Gluante	Red Viscosa	Rete Vischiosa	끈적끈적네트	ねばねばネット	ねばねばネット	黏黏網
+0564-0001|data.Desc		The user shoots a sticky net at the target, causing its item to become sticky.	Der Anwender schleudert ein klebriges Netz auf das Ziel und macht dadurch getragene Items klebrig.						상대에게 끈적끈적한 네트를 둘러 지닌 도구를 끈적끈적하게 만들어버린다.			
 0565-0000|data.Name		Fell Stinger	Stachelfinale		致命针刺	Dard Mortel	Aguijón Letal	Pungiglione	마지막일침	とどめばり	とどめばり	致命針刺
 0565-0001|data.Desc		When the user knocks out a target with this move, the user’s Attack stat rises drastically.	Gelingt es dem Anwender, das Ziel mit dieser Attacke zu besiegen, steigt sein Angriffs-Wert drastisch.		如果使用此招式打倒对手， 攻击会巨幅提高。	Augmente beaucoup l’Attaque du lanceur si un ennemi est mis K.O. avec cette capacité.	Si se derrota al objetivo utilizando este movimiento, aumenta muchísimo el Ataque del usuario.	L’Attacco di chi la usa aumenta moltissimo se grazie alla mossa il bersaglio va KO.	이 기술을 사용하여 상대를 쓰러뜨리면 공격이 매우 크게 오른다.	この　わざを　つかって あいてを　たおすと こうげきが　ぐぐーんと　あがる。	この　技を　使って 相手を　倒すと 攻撃が　ぐぐーんと　あがる。	使用此招式打倒對手時， 自己的攻擊會極大幅提高。
 0566-0000|data.Name		Phantom Force	Phantomkraft		潜灵奇袭	Hantise	Golpe Fantasma	Spettrotuffo	고스트다이브	ゴーストダイブ	ゴーストダイブ	潛靈奇襲

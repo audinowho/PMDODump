@@ -65,7 +65,7 @@ ExclusiveItemEffect.ProjectileAttack		When kept in the bag, it changes the Poké
 ExclusiveItemEffect.RemoveAbilityAttack		When kept in the bag, it causes the Pokémon's regular attack to remove the target's ability.			Al llevarlo en la bolsa causa que los ataques normales del Pokémon  eliminen la habilidad del objetivo.								
 ExclusiveItemEffect.RoyalVeil		When kept in the bag, the Pokémon will gradually restore the HP of its allies when its own HP is full.			Al llevarlo en la bolsa, el Pokémon recuperará gradualmente los PS de sus aliados cuando sus PS estén al máximo.								
 ExclusiveItemEffect.SecondSTAB		When kept in the bag, the Pokémon's {0}-type moves are boosted.			Al llevarlo en la bolsa se potencia los movimientos de tipo {0} del Pokémon.								
-ExclusiveItemEffect.SelfCurer		When kept in the bag, the Pokémon recovers faster from status problems.											
+ExclusiveItemEffect.SelfCurer		When kept in the bag, the Pokémon recovers faster from status problems.			Al llevarlo en la bolsa, el Pokémon se recupera más rápido de los problemas de estado.								
 ExclusiveItemEffect.ShopFinder		When kept in the bag, the Pokémon will find more shops when exploring in dungeons.											
 ExclusiveItemEffect.SleepWalker		When kept in the bag, the Pokémon will be able to move when asleep.											
 ExclusiveItemEffect.SpecialAttacker		When kept in the bag, the category of the Pokémon's regular attack is changed from physical to special.											
