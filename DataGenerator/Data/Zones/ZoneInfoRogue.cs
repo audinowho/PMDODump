@@ -4665,7 +4665,7 @@ namespace DataGenerator.Data
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
                 shop.ItemThemes.Add(new ItemThemeRange(new IntRange(331, 349), false, true, new RandRange(3, 5)), 10);//type items
                 shop.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
-                    new ItemThemeRange(new IntRange(450, 454), true, true, new RandRange(0, 3))), 10);//TMs + machines
+                    new ItemThemeRange(new IntRange(450, 454), false, true, new RandRange(0, 3))), 10);//TMs + machines
 
                 // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
                 shop.StartMob = GetShopMob(352, 16, 485, 20, 103, 86, new int[] { 1984, 1985, 1988 }, 0);
