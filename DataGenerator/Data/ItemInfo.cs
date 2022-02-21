@@ -1765,7 +1765,7 @@ namespace DataGenerator.Data
             {
                 item.Name = new LocalText("One-Shot Orb");
                 item.Desc = new LocalText("An orb that causes the target to instantly faint, if it hits. It affects all enemies up to 5 tiles away.");
-                item.UseEvent.HitRate = 30;
+                item.UseEvent.HitRate = 0;
                 item.Sprite = "Orb_Purple";
                 item.UseEvent.OnHits.Add(-1, new OHKODamageEvent());
                 item.UseAction = new AreaAction();
