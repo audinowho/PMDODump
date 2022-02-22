@@ -2114,7 +2114,7 @@ namespace DataGenerator.Data
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                    newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                    newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                     status.OnActions.Add(0, new ElementNeededEvent(07, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
@@ -2137,7 +2137,7 @@ namespace DataGenerator.Data
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                    newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                    newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                     status.OnActions.Add(0, new ElementNeededEvent(04, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
@@ -2162,7 +2162,7 @@ namespace DataGenerator.Data
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                    newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                    newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                     status.AfterBeingHits.Add(0, new ElementNeededEvent(07, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
@@ -2186,7 +2186,7 @@ namespace DataGenerator.Data
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                    newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                    newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                     status.AfterBeingHits.Add(0, new ElementNeededEvent(04, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }

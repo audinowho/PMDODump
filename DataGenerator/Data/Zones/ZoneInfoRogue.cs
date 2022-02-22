@@ -4960,6 +4960,34 @@ namespace DataGenerator.Data
                 layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
 
 
+                SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                wallSpawns.Add(new MapItem(10), 50);//oran berry
+                wallSpawns.Add(new MapItem(481, 1), 50);//heart scale
+                wallSpawns.Add(new MapItem(201, 2), 20);//cacnea spike
+                wallSpawns.Add(new MapItem(200, 2), 20);//stick
+                wallSpawns.Add(new MapItem(37), 10);//jaboca berry
+                wallSpawns.Add(new MapItem(38), 10);//rowap berry
+                wallSpawns.Add(new MapItem(220, 1), 10);//path wand
+                wallSpawns.Add(new MapItem(228, 3), 10);//fear wand
+                wallSpawns.Add(new MapItem(235, 2), 10);//transfer wand
+                wallSpawns.Add(new MapItem(236, 4), 10);//vanish wand
+
+                wallSpawns.Add(new MapItem(43), 10);//apicot berry
+                wallSpawns.Add(new MapItem(44), 10);//liechi berry
+                wallSpawns.Add(new MapItem(45), 10);//ganlon berry
+                wallSpawns.Add(new MapItem(46), 10);//salac berry
+                wallSpawns.Add(new MapItem(47), 10);//petaya berry
+                wallSpawns.Add(new MapItem(48), 10);//starf berry
+                wallSpawns.Add(new MapItem(49), 10);//micle berry
+                wallSpawns.Add(new MapItem(51), 10);//enigma berry
+
+                for (int nn = 0; nn < 18; nn++)//Type Berry
+                    wallSpawns.Add(new MapItem(19 + nn), 1);
+
+                TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile(2));
+                wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
+
                 //construct paths
                 if (ii <= 4)
                 {

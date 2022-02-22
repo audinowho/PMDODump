@@ -854,7 +854,7 @@ namespace DataGenerator.Data
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 ability.OnDeaths.Add(-1, new InvokeAttackEvent(altAction, altExplosion, newData, new StringKey("MSG_EXPLODE")));
             }

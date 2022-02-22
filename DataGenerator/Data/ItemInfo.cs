@@ -646,7 +646,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new LevelDamageEvent(false, 2, 1));
-                newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 item.UseEvent.OnHits.Add(0, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey()));

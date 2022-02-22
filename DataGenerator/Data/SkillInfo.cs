@@ -3075,7 +3075,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
@@ -3102,7 +3102,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
@@ -3921,7 +3921,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
@@ -7937,7 +7937,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new StatusBattleEvent(55, false, true));
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2, 4));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
@@ -10342,7 +10342,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
@@ -10596,7 +10596,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(35));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(13, true, true, -1)));
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
@@ -11203,7 +11203,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new StatusStackBattleEvent(12, false, true, -2));
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
@@ -11370,7 +11370,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new StatusBattleEvent(55, false, true));
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
@@ -11481,7 +11481,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;

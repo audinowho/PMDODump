@@ -521,7 +521,7 @@ namespace DataGenerator.Data
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
@@ -554,7 +554,7 @@ namespace DataGenerator.Data
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
