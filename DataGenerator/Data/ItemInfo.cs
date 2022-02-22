@@ -2867,7 +2867,12 @@ namespace DataGenerator.Data
             }
             else if (ii == 392)
             {
-
+                item.Name = new LocalText("Blank Plate");
+                item.Desc = new LocalText("An item to be held by a Pokémon. It's a stone tablet that halves the damage of Normal-type moves.");
+                item.Sprite = "Slab_Gray";
+                item.Price = 250;
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(13, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 393)
             {

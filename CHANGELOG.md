@@ -1,5 +1,6 @@
 # 0.5.8 Changes #
 
+* New Item: Blank Plate
 * Outdated replays will no longer outright fail on load
 * Fix shopkeepers asking twice to pay for sold items
 * Fix free items appearing in shops

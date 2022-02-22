@@ -262,10 +262,7 @@ namespace DataGenerator.Data
             for (int nn = 0; nn < 18; nn++)//Type booster
                 heldItems.Spawns.Add(new InvItem(331 + nn), new IntRange(0, 30), 1);
             for (int nn = 0; nn < 18; nn++)//Type Plate
-            {
-                if (380 + nn != 392)//** Plate
-                    heldItems.Spawns.Add(new InvItem(380 + nn), new IntRange(0, 30), 1);
-            }
+                heldItems.Spawns.Add(new InvItem(380 + nn), new IntRange(0, 30), 1);
 
             heldItems.Spawns.Add(new InvItem(303), new IntRange(0, 20), 2);//Mobile Scarf
             heldItems.Spawns.Add(new InvItem(304), new IntRange(0, 20), 2);//Pass Scarf
@@ -2558,10 +2555,8 @@ namespace DataGenerator.Data
                 wallSpawns.Add(new MapItem(267), 10);//Stayaway
                 wallSpawns.Add(new MapItem(266), 10);//Pierce
                 for (int nn = 0; nn < 18; nn++)//Type Plate
-                {
-                    if (380 + nn != 392)//** Plate
-                        wallSpawns.Add(new MapItem(380 + nn), 1);
-                }
+                    wallSpawns.Add(new MapItem(380 + nn), 1);
+
                 TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile(2));
                 wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
                 layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
