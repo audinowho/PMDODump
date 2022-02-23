@@ -2,6 +2,7 @@
 
 * New Item: Blank Plate
 * Outdated replays will no longer outright fail on load
+* Replays show version data
 * Fix shopkeepers asking twice to pay for sold items
 * Fix free items appearing in shops
 * Explosions that destroy walls will not destroy items inside walls.
