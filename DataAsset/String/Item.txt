@@ -569,6 +569,8 @@ Key		EN
 0390-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ground-type moves.
 0391-0000|data.Name		Icicle Plate
 0391-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ice-type moves.
+0392-0000|data.Name		Blank Plate
+0392-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Normal-type moves.
 0393-0000|data.Name		Toxic Plate
 0393-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Poison-type moves.
 0394-0000|data.Name		Mind Plate

@@ -1,47 +1,17 @@
 Sheet: Hardcode
-    * Erased contents of MENU_MODS_EXIT
-    * Significantly changed MENU_MODS_TITLE from "Special Episodes" to "Mods"
-    * Added MENU_QUESTS_EXIT, transferred from MENU_MODS_EXIT
-    * Added MENU_QUESTS_TITLE, transferred from MENU_MODS_TITLE
+    * Added DLG_ASK_LOAD_UPGRADE
+    * Added MENU_MODS_MISSING
+    * Added MENU_RESULTS_VERSION_TITLE
 
 Sheet: Content
-    * Added TALK_ADVICE_FADED
 
 Sheet: Script
-    * Erased contents of ground\post_office/Connect_Info_File_Rescue_001
-    * Erased contents of ground\post_office/Connect_Info_File_Rescue_002
-    * Erased contents of ground\post_office/Connect_Info_File_Rescue_003
-    * Erased contents of ground\post_office/Connect_Info_File_Rescue_004
-    * Erased contents of ground\post_office/Connect_Info_File_Rescue_005
-    * Erased contents of ground\post_office/Connect_Info_File_Rescue_006
-    * Erased contents of ground\post_office/Connect_Info_File_Rescue_007
-    * Erased contents of ground\post_office/Connect_Info_File_Rescue_008
-    * Erased contents of ground\post_office/Connect_Info_Rescue_001
-    * Erased contents of ground\post_office/Connect_Info_Rescue_002
-    * Erased contents of ground\post_office/Connect_Info_Rescue_003
-    * Erased contents of ground\post_office/Connect_Info_Rescue_004
-    * Erased contents of ground\post_office/Connect_Info_Rescue_005
-    * Erased contents of ground\post_office/Connect_Info_Rescue_006
-    * Erased contents of ground\post_office/Connect_Info_Rescue_007
-    * Added ground\post_office/Rescue_Info_File_Rescue_001, transferred from ground\post_office/Connect_Info_File_Rescue_001
-    * Added ground\post_office/Rescue_Info_File_Rescue_002, transferred from ground\post_office/Connect_Info_File_Rescue_002
-    * Added ground\post_office/Rescue_Info_File_Rescue_003, transferred from ground\post_office/Connect_Info_File_Rescue_003
-    * Added ground\post_office/Rescue_Info_File_Rescue_004, transferred from ground\post_office/Connect_Info_File_Rescue_004
-    * Added ground\post_office/Rescue_Info_File_Rescue_005, transferred from ground\post_office/Connect_Info_File_Rescue_005
-    * Added ground\post_office/Rescue_Info_File_Rescue_006
-    * Added ground\post_office/Rescue_Info_File_Rescue_007, transferred from ground\post_office/Connect_Info_File_Rescue_007
-    * Added ground\post_office/Rescue_Info_File_Rescue_008, transferred from ground\post_office/Connect_Info_File_Rescue_008
-    * Added ground\post_office/Rescue_Info_Rescue_001, transferred from ground\post_office/Connect_Info_Rescue_001
-    * Added ground\post_office/Rescue_Info_Rescue_002, transferred from ground\post_office/Connect_Info_Rescue_002
-    * Added ground\post_office/Rescue_Info_Rescue_003
-    * Added ground\post_office/Rescue_Info_Rescue_004
-    * Added ground\post_office/Rescue_Info_Rescue_005, transferred from ground\post_office/Connect_Info_Rescue_005
-    * Added ground\post_office/Rescue_Info_Rescue_006, transferred from ground\post_office/Connect_Info_Rescue_006
-    * Added ground\post_office/Rescue_Info_Rescue_007, transferred from ground\post_office/Connect_Info_Rescue_007
 
 Sheet: Abilities
 
 Sheet: Items
+    * Added 0392-0000|data.Name
+    * Added 0392-0001|data.Desc
 
 Sheet: MapStatuses
 
