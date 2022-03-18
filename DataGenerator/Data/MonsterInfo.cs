@@ -313,23 +313,23 @@ namespace DataGenerator.Data
                 }
             }
 
-            foreach (int key in langIDs.Keys)
-            {
-                sql = "SELECT * FROM pokemon_v2_pokemonspeciesname WHERE pokemon_species_id = " + index + " AND language_id = " + key;
-                command = new SQLiteCommand(sql, m_dbTLConnection);
-                using (SQLiteDataReader reader = command.ExecuteReader())
-                {
-                    int read = 0;
-                    while (reader.Read())
-                    {
-                        if (read > 0)
-                            throw new Exception("#" + index + ": More than 1 Index result!?");
-                        entry.Name.LocalTexts[langIDs[key]] = reader["name"].ToString();
-                        entry.Title.LocalTexts[langIDs[key]] = reader["genus"].ToString();
-                        read++;
-                    }
-                }
-            }
+            //foreach (int key in langIDs.Keys)
+            //{
+            //    sql = "SELECT * FROM pokemon_v2_pokemonspeciesname WHERE pokemon_species_id = " + index + " AND language_id = " + key;
+            //    command = new SQLiteCommand(sql, m_dbTLConnection);
+            //    using (SQLiteDataReader reader = command.ExecuteReader())
+            //    {
+            //        int read = 0;
+            //        while (reader.Read())
+            //        {
+            //            if (read > 0)
+            //                throw new Exception("#" + index + ": More than 1 Index result!?");
+            //            entry.Name.LocalTexts[langIDs[key]] = reader["name"].ToString();
+            //            entry.Title.LocalTexts[langIDs[key]] = reader["genus"].ToString();
+            //            read++;
+            //        }
+            //    }
+            //}
 
             //color
             //shape
@@ -337,677 +337,677 @@ namespace DataGenerator.Data
             int Ratio = -1;
             //catch rate
             //growth
-            sql = "SELECT * FROM pokemon_v2_pokemonspecies WHERE id = " + index;
-            command = new SQLiteCommand(sql, m_dbTLConnection);
-            using (SQLiteDataReader reader = command.ExecuteReader())
-            {
-                int read = 0;
-                while (reader.Read())
-                {
-                    if (read > 0)
-                        throw new Exception(entry.Name + ": More than 1 Species result!?");
-                    //entry.Color = MapColorStyle(Convert.ToInt32(reader["color_id"].ToString()));
-                    //entry.BodyStyle = MapBodyStyle(Convert.ToInt32(reader["shape_id"].ToString()));
-                    Ratio = Convert.ToInt32(reader["gender_rate"].ToString());
-                    entry.JoinRate = Convert.ToInt32(reader["capture_rate"].ToString());
-                    entry.EXPTable = (int)MapGrowthGroup(Convert.ToInt32(reader["growth_rate_id"].ToString()));
-                    string prevo = reader["evolves_from_species_id"].ToString();
-                    if (!String.IsNullOrEmpty(prevo))
-                        entry.PromoteFrom = Convert.ToInt32(prevo);
-                    read++;
-                }
-            }
+            //sql = "SELECT * FROM pokemon_v2_pokemonspecies WHERE id = " + index;
+            //command = new SQLiteCommand(sql, m_dbTLConnection);
+            //using (SQLiteDataReader reader = command.ExecuteReader())
+            //{
+            //    int read = 0;
+            //    while (reader.Read())
+            //    {
+            //        if (read > 0)
+            //            throw new Exception(entry.Name + ": More than 1 Species result!?");
+            //        //entry.Color = MapColorStyle(Convert.ToInt32(reader["color_id"].ToString()));
+            //        //entry.BodyStyle = MapBodyStyle(Convert.ToInt32(reader["shape_id"].ToString()));
+            //        Ratio = Convert.ToInt32(reader["gender_rate"].ToString());
+            //        entry.JoinRate = Convert.ToInt32(reader["capture_rate"].ToString());
+            //        entry.EXPTable = (int)MapGrowthGroup(Convert.ToInt32(reader["growth_rate_id"].ToString()));
+            //        string prevo = reader["evolves_from_species_id"].ToString();
+            //        if (!String.IsNullOrEmpty(prevo))
+            //            entry.PromoteFrom = Convert.ToInt32(prevo);
+            //        read++;
+            //    }
+            //}
 
             //egg groups
-            sql = "SELECT * FROM pokemon_v2_pokemonegggroup WHERE pokemon_species_id = " + index;
-            command = new SQLiteCommand(sql, m_dbTLConnection);
-            using (SQLiteDataReader reader = command.ExecuteReader())
-            {
-                int read = 0;
-                while (reader.Read())
-                {
-                    if (read > 1)
-                        throw new Exception(entry.Name + ": More than 2 Egg Group results!?");
-                    else if (read == 0)
-                        entry.SkillGroup1 = (int)MapEggGroup(Convert.ToInt32(reader["egg_group_id"].ToString()));
-                    else if (read == 1)
-                        entry.SkillGroup2 = (int)MapEggGroup(Convert.ToInt32(reader["egg_group_id"].ToString()));
-                    read++;
-                }
-            }
+            //sql = "SELECT * FROM pokemon_v2_pokemonegggroup WHERE pokemon_species_id = " + index;
+            //command = new SQLiteCommand(sql, m_dbTLConnection);
+            //using (SQLiteDataReader reader = command.ExecuteReader())
+            //{
+            //    int read = 0;
+            //    while (reader.Read())
+            //    {
+            //        if (read > 1)
+            //            throw new Exception(entry.Name + ": More than 2 Egg Group results!?");
+            //        else if (read == 0)
+            //            entry.SkillGroup1 = (int)MapEggGroup(Convert.ToInt32(reader["egg_group_id"].ToString()));
+            //        else if (read == 1)
+            //            entry.SkillGroup2 = (int)MapEggGroup(Convert.ToInt32(reader["egg_group_id"].ToString()));
+            //        read++;
+            //    }
+            //}
 
             //evo/devo data
-            sql = "SELECT * FROM pokemon_v2_pokemonspecies a, pokemon_v2_pokemonevolution b WHERE b.evolved_species_id = a.id AND a.evolves_from_species_id = " + index;
-            command = new SQLiteCommand(sql, m_dbTLConnection);
-            using (SQLiteDataReader reader = command.ExecuteReader())
-            {
-                int read = 0;
-                while (reader.Read())
-                {
-                    int evoSpecies = Convert.ToInt32(reader["id"].ToString());
+            //sql = "SELECT * FROM pokemon_v2_pokemonspecies a, pokemon_v2_pokemonevolution b WHERE b.evolved_species_id = a.id AND a.evolves_from_species_id = " + index;
+            //command = new SQLiteCommand(sql, m_dbTLConnection);
+            //using (SQLiteDataReader reader = command.ExecuteReader())
+            //{
+            //    int read = 0;
+            //    while (reader.Read())
+            //    {
+            //        int evoSpecies = Convert.ToInt32(reader["id"].ToString());
 
-                    if (evoSpecies == 292)//manually account for shedinja
-                        continue;
+            //        if (evoSpecies == 292)//manually account for shedinja
+            //            continue;
 
-                    bool hasEvo = false;
-                    foreach (PromoteBranch currentBranch in entry.Promotions)
-                    {
-                        if (currentBranch.Result == evoSpecies)
-                            hasEvo = true;
-                    }
-                    if (hasEvo)
-                        continue;
+            //        bool hasEvo = false;
+            //        foreach (PromoteBranch currentBranch in entry.Promotions)
+            //        {
+            //            if (currentBranch.Result == evoSpecies)
+            //                hasEvo = true;
+            //        }
+            //        if (hasEvo)
+            //            continue;
 
-                    PromoteBranch branch = new PromoteBranch();
-                    branch.Result = evoSpecies;
-                    int evoMethod = Convert.ToInt32(reader["evolution_trigger_id"].ToString());//level/trade/useitem/shed
+            //        PromoteBranch branch = new PromoteBranch();
+            //        branch.Result = evoSpecies;
+            //        int evoMethod = Convert.ToInt32(reader["evolution_trigger_id"].ToString());//level/trade/useitem/shed
 
-                    string itemNum = reader["evolution_item_id"].ToString();
-                    string level = reader["min_level"].ToString();
-                    string gender = reader["gender_id"].ToString();
-                    string location = reader["location_id"].ToString();
-                    string heldItem = reader["held_item_id"].ToString();
-                    string time = reader["time_of_day"].ToString();
-                    string move = reader["known_move_id"].ToString();
-                    string moveType = reader["known_move_type_id"].ToString();
-                    string friendship = reader["min_happiness"].ToString();
-                    string beauty = reader["min_beauty"].ToString();
-                    string affection = reader["min_affection"].ToString();
-                    string stats = reader["relative_physical_stats"].ToString();
-                    string allySpecies = reader["party_species_id"].ToString();
-                    string allyType = reader["party_type_id"].ToString();
-                    string tradeSpecies = reader["trade_species_id"].ToString();
-                    bool rain = (bool)reader["needs_overworld_rain"];
-                    bool flip = (bool)reader["turn_upside_down"];
+            //        string itemNum = reader["evolution_item_id"].ToString();
+            //        string level = reader["min_level"].ToString();
+            //        string gender = reader["gender_id"].ToString();
+            //        string location = reader["location_id"].ToString();
+            //        string heldItem = reader["held_item_id"].ToString();
+            //        string time = reader["time_of_day"].ToString();
+            //        string move = reader["known_move_id"].ToString();
+            //        string moveType = reader["known_move_type_id"].ToString();
+            //        string friendship = reader["min_happiness"].ToString();
+            //        string beauty = reader["min_beauty"].ToString();
+            //        string affection = reader["min_affection"].ToString();
+            //        string stats = reader["relative_physical_stats"].ToString();
+            //        string allySpecies = reader["party_species_id"].ToString();
+            //        string allyType = reader["party_type_id"].ToString();
+            //        string tradeSpecies = reader["trade_species_id"].ToString();
+            //        bool rain = (bool)reader["needs_overworld_rain"];
+            //        bool flip = (bool)reader["turn_upside_down"];
 
-                    try
-                    {
-                        if (evoSpecies == 367)//huntail
-                        {
-                            EvoStatBoost evoDetail = new EvoStatBoost();
-                            evoDetail.StatBoostStatus = 12;
-                            branch.Details.Add(evoDetail);
-                        }
-                        else if (evoSpecies == 368)//gorebyss
-                        {
-                            EvoStatBoost evoDetail = new EvoStatBoost();
-                            evoDetail.StatBoostStatus = 13;
-                            branch.Details.Add(evoDetail);
-                        }
-                        else if (evoSpecies == 738)//vikavolt
-                        {
-                            //FIXME
-                            EvoLocation evoDetail = new EvoLocation();
-                            evoDetail.TileElement = (int)ElementInfo.Element.Electric;
-                            branch.Details.Add(evoDetail);
-                        }
-                        else if (evoSpecies == 740)//crabominable
-                        {
-                            //FIXME
-                            EvoLocation evoDetail = new EvoLocation();
-                            evoDetail.TileElement = (int)ElementInfo.Element.Ice;
-                            branch.Details.Add(evoDetail);
-                        }
-                        else if (evoSpecies == 745)//lycanroc
-                        {
-                            EvoLevel evoDetail = new EvoLevel();
-                            evoDetail.Level = Convert.ToInt32(level);
-                            branch.Details.Add(evoDetail);
+            //        try
+            //        {
+            //            if (evoSpecies == 367)//huntail
+            //            {
+            //                EvoStatBoost evoDetail = new EvoStatBoost();
+            //                evoDetail.StatBoostStatus = 12;
+            //                branch.Details.Add(evoDetail);
+            //            }
+            //            else if (evoSpecies == 368)//gorebyss
+            //            {
+            //                EvoStatBoost evoDetail = new EvoStatBoost();
+            //                evoDetail.StatBoostStatus = 13;
+            //                branch.Details.Add(evoDetail);
+            //            }
+            //            else if (evoSpecies == 738)//vikavolt
+            //            {
+            //                //FIXME
+            //                EvoLocation evoDetail = new EvoLocation();
+            //                evoDetail.TileElement = (int)ElementInfo.Element.Electric;
+            //                branch.Details.Add(evoDetail);
+            //            }
+            //            else if (evoSpecies == 740)//crabominable
+            //            {
+            //                //FIXME
+            //                EvoLocation evoDetail = new EvoLocation();
+            //                evoDetail.TileElement = (int)ElementInfo.Element.Ice;
+            //                branch.Details.Add(evoDetail);
+            //            }
+            //            else if (evoSpecies == 745)//lycanroc
+            //            {
+            //                EvoLevel evoDetail = new EvoLevel();
+            //                evoDetail.Level = Convert.ToInt32(level);
+            //                branch.Details.Add(evoDetail);
 
-                            branch.Details.Add(new EvoFormDusk());
-                        }
-                        else if (evoSpecies == 841)//flapple
-                        {
-                            EvoItem evoDetail = new EvoItem();
-                            evoDetail.ItemNum = 2;//Big Apple
-                            branch.Details.Add(evoDetail);
+            //                branch.Details.Add(new EvoFormDusk());
+            //            }
+            //            else if (evoSpecies == 841)//flapple
+            //            {
+            //                EvoItem evoDetail = new EvoItem();
+            //                evoDetail.ItemNum = 2;//Big Apple
+            //                branch.Details.Add(evoDetail);
 
-                            EvoHunger hungerDetail = new EvoHunger();
-                            hungerDetail.Hungry = true;
-                            branch.Details.Add(hungerDetail);
-                        }
-                        else if (evoSpecies == 842)//appletun
-                        {
-                            EvoItem evoDetail = new EvoItem();
-                            evoDetail.ItemNum = 1;//Apple
-                            branch.Details.Add(evoDetail);
+            //                EvoHunger hungerDetail = new EvoHunger();
+            //                hungerDetail.Hungry = true;
+            //                branch.Details.Add(hungerDetail);
+            //            }
+            //            else if (evoSpecies == 842)//appletun
+            //            {
+            //                EvoItem evoDetail = new EvoItem();
+            //                evoDetail.ItemNum = 1;//Apple
+            //                branch.Details.Add(evoDetail);
 
-                            EvoHunger hungerDetail = new EvoHunger();
-                            branch.Details.Add(hungerDetail);
-                        }
-                        else if (evoSpecies == 853)//grapploct
-                        {
-                            //FIXME
-                            EvoMove evoDetail = new EvoMove();
-                            evoDetail.MoveNum = 269;//taunt
-                            branch.Details.Add(evoDetail);
-                        }
-                        else if (evoSpecies == 855)//polteageist
-                        {
-                            EvoItem evoDetail = new EvoItem();
-                            evoDetail.ItemNum = 360;//Cracked Pot
-                            branch.Details.Add(evoDetail);
-                        }
-                        else if (evoSpecies == 862)//obstagoon
-                        {
-                            //FIXME
-                            EvoLevel evoDetail = new EvoLevel();
-                            evoDetail.Level = Convert.ToInt32(35);
-                            branch.Details.Add(evoDetail);
+            //                EvoHunger hungerDetail = new EvoHunger();
+            //                branch.Details.Add(hungerDetail);
+            //            }
+            //            else if (evoSpecies == 853)//grapploct
+            //            {
+            //                //FIXME
+            //                EvoMove evoDetail = new EvoMove();
+            //                evoDetail.MoveNum = 269;//taunt
+            //                branch.Details.Add(evoDetail);
+            //            }
+            //            else if (evoSpecies == 855)//polteageist
+            //            {
+            //                EvoItem evoDetail = new EvoItem();
+            //                evoDetail.ItemNum = 360;//Cracked Pot
+            //                branch.Details.Add(evoDetail);
+            //            }
+            //            else if (evoSpecies == 862)//obstagoon
+            //            {
+            //                //FIXME
+            //                EvoLevel evoDetail = new EvoLevel();
+            //                evoDetail.Level = Convert.ToInt32(35);
+            //                branch.Details.Add(evoDetail);
 
-                            EvoItem evoDetail2 = new EvoItem();
-                            evoDetail2.ItemNum = 378;//moon ribbon
-                            branch.Details.Add(evoDetail2);
-                        }
-                        else if (evoSpecies == 865)//sirfetch'd
-                        {
-                            //FIXME
-                            EvoCrits evoDetail = new EvoCrits();
-                            evoDetail.CritStatus = 127;
-                            evoDetail.Stack = 10;
-                            branch.Details.Add(evoDetail);
-                        }
-                        else if (evoSpecies == 867)//runerigus
-                        {
-                            //FIXME
-                            EvoWeather evoDetail = new EvoWeather();
-                            evoDetail.Weather = 3;//sandstorm
-                            branch.Details.Add(evoDetail);
-                        }
-                        else if (evoSpecies == 869)//alcremie
-                            branch.Details.Add(new EvoFormCream());
-                        else if (evoSpecies == 892)//urshifu
-                            branch.Details.Add(new EvoFormScroll());
-                        else if (evoMethod == 1)
-                        {
-                            //all evolution classes need to be made, however they don't all need to be mapped to
-                            if (CheckEvoConditions(reader, "min_level"))
-                            {
-                                EvoLevel evoDetail = new EvoLevel();
-                                evoDetail.Level = Convert.ToInt32(level);
-                                branch.Details.Add(evoDetail);
-                            }
-                            else if (CheckEvoConditions(reader, "min_level", "gender_id"))
-                            {
-                                EvoLevel evoDetail = new EvoLevel();
-                                evoDetail.Level = Convert.ToInt32(level);
-                                branch.Details.Add(evoDetail);
+            //                EvoItem evoDetail2 = new EvoItem();
+            //                evoDetail2.ItemNum = 378;//moon ribbon
+            //                branch.Details.Add(evoDetail2);
+            //            }
+            //            else if (evoSpecies == 865)//sirfetch'd
+            //            {
+            //                //FIXME
+            //                EvoCrits evoDetail = new EvoCrits();
+            //                evoDetail.CritStatus = 127;
+            //                evoDetail.Stack = 10;
+            //                branch.Details.Add(evoDetail);
+            //            }
+            //            else if (evoSpecies == 867)//runerigus
+            //            {
+            //                //FIXME
+            //                EvoWeather evoDetail = new EvoWeather();
+            //                evoDetail.Weather = 3;//sandstorm
+            //                branch.Details.Add(evoDetail);
+            //            }
+            //            else if (evoSpecies == 869)//alcremie
+            //                branch.Details.Add(new EvoFormCream());
+            //            else if (evoSpecies == 892)//urshifu
+            //                branch.Details.Add(new EvoFormScroll());
+            //            else if (evoMethod == 1)
+            //            {
+            //                //all evolution classes need to be made, however they don't all need to be mapped to
+            //                if (CheckEvoConditions(reader, "min_level"))
+            //                {
+            //                    EvoLevel evoDetail = new EvoLevel();
+            //                    evoDetail.Level = Convert.ToInt32(level);
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                else if (CheckEvoConditions(reader, "min_level", "gender_id"))
+            //                {
+            //                    EvoLevel evoDetail = new EvoLevel();
+            //                    evoDetail.Level = Convert.ToInt32(level);
+            //                    branch.Details.Add(evoDetail);
 
-                                EvoGender evoDetail2 = new EvoGender();
-                                evoDetail2.ReqGender = MapGender(Convert.ToInt32(gender));
-                                branch.Details.Add(evoDetail2);
-                            }
-                            else if (CheckEvoConditions(reader, "location_id"))
-                            {
-                                if (Convert.ToInt32(location) == 10 || Convert.ToInt32(location) == 379 || Convert.ToInt32(location) == 629)
-                                {
-                                    EvoLocation evoDetail = new EvoLocation();
-                                    evoDetail.TileElement = (int)ElementInfo.Element.Steel;
-                                    branch.Details.Add(evoDetail);
-                                }
-                                else if (Convert.ToInt32(location) == 8 || Convert.ToInt32(location) == 375 || Convert.ToInt32(location) == 650)
-                                {
-                                    EvoItem evoDetail = new EvoItem();
-                                    evoDetail.ItemNum = 354;//Leaf Stone
-                                    branch.Details.Add(evoDetail);
-                                }
-                                else if (Convert.ToInt32(location) == 48 || Convert.ToInt32(location) == 380 || Convert.ToInt32(location) == 640)
-                                {
-                                    EvoItem evoDetail = new EvoItem();
-                                    evoDetail.ItemNum = 379;//Ice Stone
-                                    branch.Details.Add(evoDetail);
-                                }
-                                else
-                                    throw new Exception(entry.Name + ": Unknown Loc Evo method");
+            //                    EvoGender evoDetail2 = new EvoGender();
+            //                    evoDetail2.ReqGender = MapGender(Convert.ToInt32(gender));
+            //                    branch.Details.Add(evoDetail2);
+            //                }
+            //                else if (CheckEvoConditions(reader, "location_id"))
+            //                {
+            //                    if (Convert.ToInt32(location) == 10 || Convert.ToInt32(location) == 379 || Convert.ToInt32(location) == 629)
+            //                    {
+            //                        EvoLocation evoDetail = new EvoLocation();
+            //                        evoDetail.TileElement = (int)ElementInfo.Element.Steel;
+            //                        branch.Details.Add(evoDetail);
+            //                    }
+            //                    else if (Convert.ToInt32(location) == 8 || Convert.ToInt32(location) == 375 || Convert.ToInt32(location) == 650)
+            //                    {
+            //                        EvoItem evoDetail = new EvoItem();
+            //                        evoDetail.ItemNum = 354;//Leaf Stone
+            //                        branch.Details.Add(evoDetail);
+            //                    }
+            //                    else if (Convert.ToInt32(location) == 48 || Convert.ToInt32(location) == 380 || Convert.ToInt32(location) == 640)
+            //                    {
+            //                        EvoItem evoDetail = new EvoItem();
+            //                        evoDetail.ItemNum = 379;//Ice Stone
+            //                        branch.Details.Add(evoDetail);
+            //                    }
+            //                    else
+            //                        throw new Exception(entry.Name + ": Unknown Loc Evo method");
 
-                            }
-                            else if (CheckEvoConditions(reader, "min_happiness"))
-                            {
-                                EvoFriendship evoDetail = new EvoFriendship();
-                                branch.Details.Add(evoDetail);
-                            }
-                            else if (CheckEvoConditions(reader, "min_level", "time_of_day"))
-                            {
-                                EvoLevel evoDetail = new EvoLevel();
-                                evoDetail.Level = Convert.ToInt32(level);
-                                branch.Details.Add(evoDetail);
+            //                }
+            //                else if (CheckEvoConditions(reader, "min_happiness"))
+            //                {
+            //                    EvoFriendship evoDetail = new EvoFriendship();
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                else if (CheckEvoConditions(reader, "min_level", "time_of_day"))
+            //                {
+            //                    EvoLevel evoDetail = new EvoLevel();
+            //                    evoDetail.Level = Convert.ToInt32(level);
+            //                    branch.Details.Add(evoDetail);
 
-                                EvoItem evoDetail2 = new EvoItem();
-                                evoDetail2.ItemNum = (time == "night") ? 378 : 377;
-                                //EvoTime evoDetail2 = new EvoTime();
-                                //evoDetail2.Time = (time == "night") ? Maps.ZoneManager.TimeOfDay.Night : Maps.ZoneManager.TimeOfDay.Day;
-                                branch.Details.Add(evoDetail2);
-                            }
-                            else if (CheckEvoConditions(reader, "min_happiness", "time_of_day"))
-                            {
-                                EvoFriendship evoDetail = new EvoFriendship();
-                                branch.Details.Add(evoDetail);
+            //                    EvoItem evoDetail2 = new EvoItem();
+            //                    evoDetail2.ItemNum = (time == "night") ? 378 : 377;
+            //                    //EvoTime evoDetail2 = new EvoTime();
+            //                    //evoDetail2.Time = (time == "night") ? Maps.ZoneManager.TimeOfDay.Night : Maps.ZoneManager.TimeOfDay.Day;
+            //                    branch.Details.Add(evoDetail2);
+            //                }
+            //                else if (CheckEvoConditions(reader, "min_happiness", "time_of_day"))
+            //                {
+            //                    EvoFriendship evoDetail = new EvoFriendship();
+            //                    branch.Details.Add(evoDetail);
 
-                                EvoItem evoDetail2 = new EvoItem();
-                                evoDetail2.ItemNum = (time == "night") ? 378 : 377;
-                                //EvoTime evoDetail2 = new EvoTime();
-                                //evoDetail2.Time = (time == "night") ? Maps.ZoneManager.TimeOfDay.Night : Maps.ZoneManager.TimeOfDay.Day;
-                                branch.Details.Add(evoDetail2);
-                            }
-                            else if (CheckEvoConditions(reader, "held_item_id", "time_of_day"))
-                            {
-                                //EvoItem evoDetail = new EvoItem();
-                                //evoDetail.ItemNum = MapItem(Convert.ToInt32(heldItem));
-                                //branch.Details.Add(evoDetail);
+            //                    EvoItem evoDetail2 = new EvoItem();
+            //                    evoDetail2.ItemNum = (time == "night") ? 378 : 377;
+            //                    //EvoTime evoDetail2 = new EvoTime();
+            //                    //evoDetail2.Time = (time == "night") ? Maps.ZoneManager.TimeOfDay.Night : Maps.ZoneManager.TimeOfDay.Day;
+            //                    branch.Details.Add(evoDetail2);
+            //                }
+            //                else if (CheckEvoConditions(reader, "held_item_id", "time_of_day"))
+            //                {
+            //                    //EvoItem evoDetail = new EvoItem();
+            //                    //evoDetail.ItemNum = MapItem(Convert.ToInt32(heldItem));
+            //                    //branch.Details.Add(evoDetail);
 
-                                //EvoTime evoDetail2 = new EvoTime();
-                                //evoDetail2.Time = (time == "night") ? Maps.ZoneManager.TimeOfDay.Night : Maps.ZoneManager.TimeOfDay.Day;
-                                EvoItem evoDetail2 = new EvoItem();
-                                evoDetail2.ItemNum = (time == "night") ? 378 : 377;
-                                branch.Details.Add(evoDetail2);
-                            }
-                            else if (CheckEvoConditions(reader, "known_move_id"))
-                            {
-                                EvoMove evoDetail = new EvoMove();
-                                evoDetail.MoveNum = Convert.ToInt32(move);
-                                branch.Details.Add(evoDetail);
-                            }
-                            else if (CheckEvoConditions(reader, "min_affection", "known_move_type_id"))
-                            {
-                                //EvoItem evoDetail = new EvoItem();
-                                //evoDetail.ItemNum = 335;//Pink Bow
-                                //branch.Details.Add(evoDetail);
+            //                    //EvoTime evoDetail2 = new EvoTime();
+            //                    //evoDetail2.Time = (time == "night") ? Maps.ZoneManager.TimeOfDay.Night : Maps.ZoneManager.TimeOfDay.Day;
+            //                    EvoItem evoDetail2 = new EvoItem();
+            //                    evoDetail2.ItemNum = (time == "night") ? 378 : 377;
+            //                    branch.Details.Add(evoDetail2);
+            //                }
+            //                else if (CheckEvoConditions(reader, "known_move_id"))
+            //                {
+            //                    EvoMove evoDetail = new EvoMove();
+            //                    evoDetail.MoveNum = Convert.ToInt32(move);
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                else if (CheckEvoConditions(reader, "min_affection", "known_move_type_id"))
+            //                {
+            //                    //EvoItem evoDetail = new EvoItem();
+            //                    //evoDetail.ItemNum = 335;//Pink Bow
+            //                    //branch.Details.Add(evoDetail);
 
-                                EvoMoveElement evoDetail2 = new EvoMoveElement();
-                                evoDetail2.MoveElement = (int)MapElement(Convert.ToInt32(moveType));
-                                branch.Details.Add(evoDetail2);
-                            }
-                            else if (CheckEvoConditions(reader, "min_beauty"))
-                            {
-                                EvoItem evoDetail = new EvoItem();
-                                evoDetail.ItemNum = 373;//prism scale
-                                branch.Details.Add(evoDetail);
-                            }
-                            else if (CheckEvoConditions(reader, "min_level", "relative_physical_stats"))
-                            {
-                                EvoLevel evoDetail = new EvoLevel();
-                                evoDetail.Level = Convert.ToInt32(level);
-                                branch.Details.Add(evoDetail);
+            //                    EvoMoveElement evoDetail2 = new EvoMoveElement();
+            //                    evoDetail2.MoveElement = (int)MapElement(Convert.ToInt32(moveType));
+            //                    branch.Details.Add(evoDetail2);
+            //                }
+            //                else if (CheckEvoConditions(reader, "min_beauty"))
+            //                {
+            //                    EvoItem evoDetail = new EvoItem();
+            //                    evoDetail.ItemNum = 373;//prism scale
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                else if (CheckEvoConditions(reader, "min_level", "relative_physical_stats"))
+            //                {
+            //                    EvoLevel evoDetail = new EvoLevel();
+            //                    evoDetail.Level = Convert.ToInt32(level);
+            //                    branch.Details.Add(evoDetail);
 
-                                EvoStats evoDetail2 = new EvoStats();
-                                evoDetail2.AtkDefComparison = Convert.ToInt32(stats);
-                                branch.Details.Add(evoDetail2);
-                            }
-                            else if (CheckEvoConditions(reader, "party_species_id"))
-                            {
-                                EvoPartner evoDetail = new EvoPartner();
-                                evoDetail.Species = Convert.ToInt32(allySpecies);
-                                branch.Details.Add(evoDetail);
-                            }
-                            else if (CheckEvoConditions(reader, "min_level", "party_type_id"))
-                            {
-                                EvoPartnerElement evoDetail = new EvoPartnerElement();
-                                evoDetail.PartnerElement = (int)MapElement(Convert.ToInt32(allyType));
-                                branch.Details.Add(evoDetail);
-                            }
-                            else if (CheckEvoConditions(reader, "min_level", "needs_overworld_rain"))
-                            {
-                                EvoWeather evoDetail = new EvoWeather();
-                                evoDetail.Weather = 1;//rain
-                                branch.Details.Add(evoDetail);
-                            }
-                            else if (CheckEvoConditions(reader, "min_level", "turn_upside_down"))
-                            {
-                                EvoWeather evoDetail = new EvoWeather();
-                                evoDetail.Weather = 9;//Trick Room
-                                branch.Details.Add(evoDetail);
-                            }
-                            else
-                                throw new Exception(entry.Name + ": Unknown Level Evo method");
-                        }
-                        else if (evoMethod == 2)
-                        {
-                            if (CheckEvoConditions(reader))
-                            {
-                                EvoItem evoDetail = new EvoItem();
-                                evoDetail.ItemNum = 365;//Link Cable
-                                branch.Details.Add(evoDetail);
-                            }
-                            else if (CheckEvoConditions(reader, "held_item_id"))
-                            {
-                                EvoItem evoDetail = new EvoItem();
-                                evoDetail.ItemNum = MapItem(Convert.ToInt32(heldItem));
-                                if (evoDetail.ItemNum == 0)
-                                {
-                                    evoDetail = new EvoItem();
-                                    evoDetail.ItemNum = 365;//Link Cable
-                                    branch.Details.Add(evoDetail);
-                                }
-                                else
-                                    branch.Details.Add(evoDetail);
-                            }
-                            else if (CheckEvoConditions(reader, "trade_species_id"))
-                            {
-                                EvoPartner evoDetail = new EvoPartner();
-                                evoDetail.Species = Convert.ToInt32(tradeSpecies);
-                                branch.Details.Add(evoDetail);
-                            }
-                            else
-                                throw new Exception(entry.Name + ": Unknown Trade Evo method");
-                        }
-                        else if (evoMethod == 3)
-                        {
-                            if (CheckEvoConditions(reader, "evolution_item_id"))
-                            {
-                                EvoItem evoDetail = new EvoItem();
-                                evoDetail.ItemNum = MapItem(Convert.ToInt32(itemNum));
-                                if (evoDetail.ItemNum == 0)
-                                    throw new Exception(entry.Name + ": Unknown Item Evo");
-                                branch.Details.Add(evoDetail);
-                            }
-                            else if (CheckEvoConditions(reader, "evolution_item_id", "gender_id"))
-                            {
-                                EvoItem evoDetail = new EvoItem();
-                                evoDetail.ItemNum = MapItem(Convert.ToInt32(itemNum));
-                                if (evoDetail.ItemNum == 0)
-                                    throw new Exception(entry.Name + ": Unknown Item Evo");
-                                branch.Details.Add(evoDetail);
+            //                    EvoStats evoDetail2 = new EvoStats();
+            //                    evoDetail2.AtkDefComparison = Convert.ToInt32(stats);
+            //                    branch.Details.Add(evoDetail2);
+            //                }
+            //                else if (CheckEvoConditions(reader, "party_species_id"))
+            //                {
+            //                    EvoPartner evoDetail = new EvoPartner();
+            //                    evoDetail.Species = Convert.ToInt32(allySpecies);
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                else if (CheckEvoConditions(reader, "min_level", "party_type_id"))
+            //                {
+            //                    EvoPartnerElement evoDetail = new EvoPartnerElement();
+            //                    evoDetail.PartnerElement = (int)MapElement(Convert.ToInt32(allyType));
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                else if (CheckEvoConditions(reader, "min_level", "needs_overworld_rain"))
+            //                {
+            //                    EvoWeather evoDetail = new EvoWeather();
+            //                    evoDetail.Weather = 1;//rain
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                else if (CheckEvoConditions(reader, "min_level", "turn_upside_down"))
+            //                {
+            //                    EvoWeather evoDetail = new EvoWeather();
+            //                    evoDetail.Weather = 9;//Trick Room
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                else
+            //                    throw new Exception(entry.Name + ": Unknown Level Evo method");
+            //            }
+            //            else if (evoMethod == 2)
+            //            {
+            //                if (CheckEvoConditions(reader))
+            //                {
+            //                    EvoItem evoDetail = new EvoItem();
+            //                    evoDetail.ItemNum = 365;//Link Cable
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                else if (CheckEvoConditions(reader, "held_item_id"))
+            //                {
+            //                    EvoItem evoDetail = new EvoItem();
+            //                    evoDetail.ItemNum = MapItem(Convert.ToInt32(heldItem));
+            //                    if (evoDetail.ItemNum == 0)
+            //                    {
+            //                        evoDetail = new EvoItem();
+            //                        evoDetail.ItemNum = 365;//Link Cable
+            //                        branch.Details.Add(evoDetail);
+            //                    }
+            //                    else
+            //                        branch.Details.Add(evoDetail);
+            //                }
+            //                else if (CheckEvoConditions(reader, "trade_species_id"))
+            //                {
+            //                    EvoPartner evoDetail = new EvoPartner();
+            //                    evoDetail.Species = Convert.ToInt32(tradeSpecies);
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                else
+            //                    throw new Exception(entry.Name + ": Unknown Trade Evo method");
+            //            }
+            //            else if (evoMethod == 3)
+            //            {
+            //                if (CheckEvoConditions(reader, "evolution_item_id"))
+            //                {
+            //                    EvoItem evoDetail = new EvoItem();
+            //                    evoDetail.ItemNum = MapItem(Convert.ToInt32(itemNum));
+            //                    if (evoDetail.ItemNum == 0)
+            //                        throw new Exception(entry.Name + ": Unknown Item Evo");
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                else if (CheckEvoConditions(reader, "evolution_item_id", "gender_id"))
+            //                {
+            //                    EvoItem evoDetail = new EvoItem();
+            //                    evoDetail.ItemNum = MapItem(Convert.ToInt32(itemNum));
+            //                    if (evoDetail.ItemNum == 0)
+            //                        throw new Exception(entry.Name + ": Unknown Item Evo");
+            //                    branch.Details.Add(evoDetail);
 
-                                EvoGender evoDetail2 = new EvoGender();
-                                evoDetail2.ReqGender = MapGender(Convert.ToInt32(gender));
-                                branch.Details.Add(evoDetail2);
-                            }
-                            else
-                                throw new Exception(entry.Name + ": Unknown Item Evo method");
-                        }
-                        else
-                        {
-                            throw new Exception(entry.Name + ": Unknown Evo method");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
+            //                    EvoGender evoDetail2 = new EvoGender();
+            //                    evoDetail2.ReqGender = MapGender(Convert.ToInt32(gender));
+            //                    branch.Details.Add(evoDetail2);
+            //                }
+            //                else
+            //                    throw new Exception(entry.Name + ": Unknown Item Evo method");
+            //            }
+            //            else
+            //            {
+            //                throw new Exception(entry.Name + ": Unknown Evo method");
+            //            }
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            Console.WriteLine(ex.Message);
+            //        }
 
-                    //manually account for evo formes
-                    if (evoSpecies == 291)//ninjask
-                    {
-                        EvoShed evoDetail = new EvoShed();
-                        evoDetail.ShedSpecies = 292;
-                        branch.Details.Add(evoDetail);
-                    }
-                    else if (evoSpecies == 666)//vivillon
-                        branch.Details.Add(new EvoFormLocOrigin());
-                    else if (evoSpecies == 678)//meowstic
-                    {
-                        EvoSetForm evoDetail = new EvoSetForm(1);
-                        evoDetail.Conditions.Add(new EvoGender(Gender.Female));
-                        branch.Details.Add(evoDetail);
-                    }
-                    else if (evoSpecies == 849)//toxtricity
-                    {
-                        EvoSetForm evoDetail = new EvoSetForm(1);
-                        EvoPersonality personality = new EvoPersonality();
-                        personality.Divisor = 2;
-                        evoDetail.Conditions.Add(personality);
-                        branch.Details.Add(evoDetail);
-                    }
+            //        //manually account for evo formes
+            //        if (evoSpecies == 291)//ninjask
+            //        {
+            //            EvoShed evoDetail = new EvoShed();
+            //            evoDetail.ShedSpecies = 292;
+            //            branch.Details.Add(evoDetail);
+            //        }
+            //        else if (evoSpecies == 666)//vivillon
+            //            branch.Details.Add(new EvoFormLocOrigin());
+            //        else if (evoSpecies == 678)//meowstic
+            //        {
+            //            EvoSetForm evoDetail = new EvoSetForm(1);
+            //            evoDetail.Conditions.Add(new EvoGender(Gender.Female));
+            //            branch.Details.Add(evoDetail);
+            //        }
+            //        else if (evoSpecies == 849)//toxtricity
+            //        {
+            //            EvoSetForm evoDetail = new EvoSetForm(1);
+            //            EvoPersonality personality = new EvoPersonality();
+            //            personality.Divisor = 2;
+            //            evoDetail.Conditions.Add(personality);
+            //            branch.Details.Add(evoDetail);
+            //        }
 
-                    //FIXME
-                    //manually account for regional requirements (regional -> new)
-                    switch (evoSpecies)
-                    {
-                        case 863://perrserker
-                            {
-                                //second alt form required
-                                branch.Details.Insert(0, new EvoForm(2));
-                            }
-                            break;
-                        case 862://obstagoon
-                        case 864://cursola
-                        case 865://sirfetch'd
-                        case 866://Mr. Rime
-                        case 867://Runerigus
-                            {
-                                //first alt form required
-                                branch.Details.Insert(0, new EvoForm(1));
-                            }
-                            break;
-                        case 563://cofagrigus
-                            {
-                                //original form required due to having a regional -> new that requires a different form
-                                branch.Details.Insert(0, new EvoForm(0));
-                            }
-                            break;
-                    }
-
-
-                    //FIXME
-                    //manually add regional forms (normal -> regional)
-                    switch (evoSpecies)
-                    {
-                        //alola
-                        case 26://raichu
-                        case 103://exeggutor
-                        case 105://marowak
-                            {
-                                EvoSetForm evoDetail = new EvoSetForm(1);
-                                evoDetail.Conditions.Add(new EvoLocation((int)ElementInfo.Element.Water));
-                                branch.Details.Add(evoDetail);
-                            }
-                            break;
-                        //galar
-                        case 110://weezing
-                        case 122://mr. mime
-                            {
-                                EvoSetForm evoDetail = new EvoSetForm(1);
-                                evoDetail.Conditions.Add(new EvoLocation((int)ElementInfo.Element.Fairy));
-                                branch.Details.Add(evoDetail);
-                            }
-                            break;
-                    }
-
-                    entry.Promotions.Add(branch);
-
-                    //FIXME
-                    //manually add regional forms (regional -> regional)
-                    if (evoSpecies == 20)//raticate
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoLevel evoDetail = new EvoLevel();
-                        evoDetail.Level = Convert.ToInt32(20);
-                        altBranch.Details.Add(evoDetail);
-
-                        EvoItem evoDetail2 = new EvoItem();
-                        evoDetail2.ItemNum = 378;//moon ribbon
-                        altBranch.Details.Add(evoDetail2);
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 28)//sandslash
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoItem evoDetail = new EvoItem();
-                        evoDetail.ItemNum = 379;//ice stone
-                        altBranch.Details.Add(evoDetail);
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 38)//ninetales
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoItem evoDetail = new EvoItem();
-                        evoDetail.ItemNum = 379;//ice stone
-                        altBranch.Details.Add(evoDetail);
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 51)//dugtrio
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoLevel evoDetail = new EvoLevel();
-                        evoDetail.Level = Convert.ToInt32(26);
-                        altBranch.Details.Add(evoDetail);
-
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 53)//persian
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoFriendship evoDetail = new EvoFriendship();
-                        altBranch.Details.Add(evoDetail);
-
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 75)//graveler
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoLevel evoDetail = new EvoLevel();
-                        evoDetail.Level = Convert.ToInt32(25);
-                        altBranch.Details.Add(evoDetail);
-
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 76)//golem
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoItem evoDetail = new EvoItem();
-                        evoDetail.ItemNum = 365;//Link Cable
-                        altBranch.Details.Add(evoDetail);
-
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 78)//rapidash
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoLevel evoDetail = new EvoLevel();
-                        evoDetail.Level = Convert.ToInt32(40);
-                        altBranch.Details.Add(evoDetail);
-
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 80)//slowbro
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoLevel evoDetail = new EvoLevel();
-                        evoDetail.Level = Convert.ToInt32(38);
-                        altBranch.Details.Add(evoDetail);
-
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 89)//muk
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoLevel evoDetail = new EvoLevel();
-                        evoDetail.Level = Convert.ToInt32(38);
-                        altBranch.Details.Add(evoDetail);
-
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 199)//slowking
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoItem evoDetail = new EvoItem();
-                        evoDetail.ItemNum = 374;//king's rock
-                        altBranch.Details.Add(evoDetail);
-
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 264)//linoone
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoLevel evoDetail = new EvoLevel();
-                        evoDetail.Level = Convert.ToInt32(20);
-                        altBranch.Details.Add(evoDetail);
-
-                        entry.Promotions.Add(altBranch);
-                    }
-                    else if (evoSpecies == 555)//darmanitan
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoLevel evoDetail = new EvoLevel();
-                        evoDetail.Level = Convert.ToInt32(35);
-                        altBranch.Details.Add(evoDetail);
-
-                        entry.Promotions.Add(altBranch);
-                    }
-
-                    //and polteageist...
-                    if (evoSpecies == 855)
-                    {
-                        branch.Details.Insert(0, new EvoForm(0));
-                        PromoteBranch altBranch = new PromoteBranch();
-                        altBranch.Result = branch.Result;
-                        altBranch.Details.Add(new EvoForm(1));
-
-                        EvoItem evoDetail = new EvoItem();
-                        evoDetail.ItemNum = 361;//Chipped Pot
-                        altBranch.Details.Add(evoDetail);
-
-                        entry.Promotions.Add(altBranch);
-                    }
-
-                    read++;
-                }
-            }
+            //        //FIXME
+            //        //manually account for regional requirements (regional -> new)
+            //        switch (evoSpecies)
+            //        {
+            //            case 863://perrserker
+            //                {
+            //                    //second alt form required
+            //                    branch.Details.Insert(0, new EvoForm(2));
+            //                }
+            //                break;
+            //            case 862://obstagoon
+            //            case 864://cursola
+            //            case 865://sirfetch'd
+            //            case 866://Mr. Rime
+            //            case 867://Runerigus
+            //                {
+            //                    //first alt form required
+            //                    branch.Details.Insert(0, new EvoForm(1));
+            //                }
+            //                break;
+            //            case 563://cofagrigus
+            //                {
+            //                    //original form required due to having a regional -> new that requires a different form
+            //                    branch.Details.Insert(0, new EvoForm(0));
+            //                }
+            //                break;
+            //        }
 
 
-            if (index == 808)//meltan -> melmetal
-            {
-                //FIXME
-                PromoteBranch branch = new PromoteBranch();
-                branch.Result = 809;
+            //        //FIXME
+            //        //manually add regional forms (normal -> regional)
+            //        switch (evoSpecies)
+            //        {
+            //            //alola
+            //            case 26://raichu
+            //            case 103://exeggutor
+            //            case 105://marowak
+            //                {
+            //                    EvoSetForm evoDetail = new EvoSetForm(1);
+            //                    evoDetail.Conditions.Add(new EvoLocation((int)ElementInfo.Element.Water));
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                break;
+            //            //galar
+            //            case 110://weezing
+            //            case 122://mr. mime
+            //                {
+            //                    EvoSetForm evoDetail = new EvoSetForm(1);
+            //                    evoDetail.Conditions.Add(new EvoLocation((int)ElementInfo.Element.Fairy));
+            //                    branch.Details.Add(evoDetail);
+            //                }
+            //                break;
+            //        }
 
-                EvoItem evoDetail = new EvoItem();
-                evoDetail.ItemNum = 365;//Link Cable
-                branch.Details.Add(evoDetail);
-                entry.Promotions.Add(branch);
-            }
+            //        entry.Promotions.Add(branch);
+
+            //        //FIXME
+            //        //manually add regional forms (regional -> regional)
+            //        if (evoSpecies == 20)//raticate
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoLevel evoDetail = new EvoLevel();
+            //            evoDetail.Level = Convert.ToInt32(20);
+            //            altBranch.Details.Add(evoDetail);
+
+            //            EvoItem evoDetail2 = new EvoItem();
+            //            evoDetail2.ItemNum = 378;//moon ribbon
+            //            altBranch.Details.Add(evoDetail2);
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 28)//sandslash
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoItem evoDetail = new EvoItem();
+            //            evoDetail.ItemNum = 379;//ice stone
+            //            altBranch.Details.Add(evoDetail);
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 38)//ninetales
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoItem evoDetail = new EvoItem();
+            //            evoDetail.ItemNum = 379;//ice stone
+            //            altBranch.Details.Add(evoDetail);
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 51)//dugtrio
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoLevel evoDetail = new EvoLevel();
+            //            evoDetail.Level = Convert.ToInt32(26);
+            //            altBranch.Details.Add(evoDetail);
+
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 53)//persian
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoFriendship evoDetail = new EvoFriendship();
+            //            altBranch.Details.Add(evoDetail);
+
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 75)//graveler
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoLevel evoDetail = new EvoLevel();
+            //            evoDetail.Level = Convert.ToInt32(25);
+            //            altBranch.Details.Add(evoDetail);
+
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 76)//golem
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoItem evoDetail = new EvoItem();
+            //            evoDetail.ItemNum = 365;//Link Cable
+            //            altBranch.Details.Add(evoDetail);
+
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 78)//rapidash
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoLevel evoDetail = new EvoLevel();
+            //            evoDetail.Level = Convert.ToInt32(40);
+            //            altBranch.Details.Add(evoDetail);
+
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 80)//slowbro
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoLevel evoDetail = new EvoLevel();
+            //            evoDetail.Level = Convert.ToInt32(38);
+            //            altBranch.Details.Add(evoDetail);
+
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 89)//muk
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoLevel evoDetail = new EvoLevel();
+            //            evoDetail.Level = Convert.ToInt32(38);
+            //            altBranch.Details.Add(evoDetail);
+
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 199)//slowking
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoItem evoDetail = new EvoItem();
+            //            evoDetail.ItemNum = 374;//king's rock
+            //            altBranch.Details.Add(evoDetail);
+
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 264)//linoone
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoLevel evoDetail = new EvoLevel();
+            //            evoDetail.Level = Convert.ToInt32(20);
+            //            altBranch.Details.Add(evoDetail);
+
+            //            entry.Promotions.Add(altBranch);
+            //        }
+            //        else if (evoSpecies == 555)//darmanitan
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoLevel evoDetail = new EvoLevel();
+            //            evoDetail.Level = Convert.ToInt32(35);
+            //            altBranch.Details.Add(evoDetail);
+
+            //            entry.Promotions.Add(altBranch);
+            //        }
+
+            //        //and polteageist...
+            //        if (evoSpecies == 855)
+            //        {
+            //            branch.Details.Insert(0, new EvoForm(0));
+            //            PromoteBranch altBranch = new PromoteBranch();
+            //            altBranch.Result = branch.Result;
+            //            altBranch.Details.Add(new EvoForm(1));
+
+            //            EvoItem evoDetail = new EvoItem();
+            //            evoDetail.ItemNum = 361;//Chipped Pot
+            //            altBranch.Details.Add(evoDetail);
+
+            //            entry.Promotions.Add(altBranch);
+            //        }
+
+            //        read++;
+            //    }
+            //}
+
+
+            //if (index == 808)//meltan -> melmetal
+            //{
+            //    //FIXME
+            //    PromoteBranch branch = new PromoteBranch();
+            //    branch.Result = 809;
+
+            //    EvoItem evoDetail = new EvoItem();
+            //    evoDetail.ItemNum = 365;//Link Cable
+            //    branch.Details.Add(evoDetail);
+            //    entry.Promotions.Add(branch);
+            //}
 
             //form data
             sql = "SELECT a.id AS formId, b.id AS dexId, a.version_group_id, a.is_battle_only FROM pokemon_v2_pokemonform a, pokemon_v2_pokemon b WHERE a.pokemon_id = b.id AND b.pokemon_species_id = " + index + " ORDER BY a.pokemon_id, a.form_order, a.id";
@@ -1134,156 +1134,157 @@ namespace DataGenerator.Data
                 }
             }
 
-            foreach (int key in langIDs.Keys)
-            {
-                sql = "SELECT * FROM pokemon_v2_pokemonformname WHERE pokemon_form_id = " + formId + " AND language_id = " + key;
-                command = new SQLiteCommand(sql, m_dbTLConnection);
-                using (SQLiteDataReader reader = command.ExecuteReader())
-                {
-                    int read = 0;
-                    while (reader.Read())
-                    {
-                        if (read > 0)
-                            throw new Exception("#" + index + ": More than 1 Form result!?");
-                        entry.FormName.LocalTexts[langIDs[key]] = reader["pokemon_name"].ToString();
-                        read++;
-                    }
-                }
-            }
+            //foreach (int key in langIDs.Keys)
+            //{
+            //    sql = "SELECT * FROM pokemon_v2_pokemonformname WHERE pokemon_form_id = " + formId + " AND language_id = " + key;
+            //    command = new SQLiteCommand(sql, m_dbTLConnection);
+            //    using (SQLiteDataReader reader = command.ExecuteReader())
+            //    {
+            //        int read = 0;
+            //        while (reader.Read())
+            //        {
+            //            if (read > 0)
+            //                throw new Exception("#" + index + ": More than 1 Form result!?");
+            //            entry.FormName.LocalTexts[langIDs[key]] = reader["pokemon_name"].ToString();
+            //            read++;
+            //        }
+            //    }
+            //}
 
             if (entry.FormName.DefaultText == "")
                 entry.FormName = new LocalText(dexName);
 
-            sql = "SELECT * FROM pokemon_v2_pokemontype WHERE pokemon_id = " + dexId;
-            command = new SQLiteCommand(sql, m_dbTLConnection);
-            using (SQLiteDataReader reader = command.ExecuteReader())
-            {
-                int read = 0;
-                while (reader.Read())
-                {
-                    if (read > 1)
-                        throw new Exception(entry.FormName + ": More than 2 type results!?");
-                    int slot = Convert.ToInt32(reader["slot"].ToString());
-                    if (slot == 1)
-                        entry.Element1 = (int)MapElement(Convert.ToInt32(reader["type_id"].ToString()));
-                    else if (slot == 2)
-                        entry.Element2 = (int)MapElement(Convert.ToInt32(reader["type_id"].ToString()));
-                    read++;
-                }
-            }
+            //sql = "SELECT * FROM pokemon_v2_pokemontype WHERE pokemon_id = " + dexId;
+            //command = new SQLiteCommand(sql, m_dbTLConnection);
+            //using (SQLiteDataReader reader = command.ExecuteReader())
+            //{
+            //    int read = 0;
+            //    while (reader.Read())
+            //    {
+            //        if (read > 1)
+            //            throw new Exception(entry.FormName + ": More than 2 type results!?");
+            //        int slot = Convert.ToInt32(reader["slot"].ToString());
+            //        if (slot == 1)
+            //            entry.Element1 = (int)MapElement(Convert.ToInt32(reader["type_id"].ToString()));
+            //        else if (slot == 2)
+            //            entry.Element2 = (int)MapElement(Convert.ToInt32(reader["type_id"].ToString()));
+            //        read++;
+            //    }
+            //}
 
-            sql = "SELECT * FROM pokemon_v2_pokemonability WHERE pokemon_id = " + dexId;
-            command = new SQLiteCommand(sql, m_dbTLConnection);
-            using (SQLiteDataReader reader = command.ExecuteReader())
-            {
-                int read = 0;
-                while (reader.Read())
-                {
-                    if (read > 2)
-                        throw new Exception(entry.FormName + ": More than 3 ability results!?");
-                    int slot = Convert.ToInt32(reader["slot"].ToString());
-                    if (slot == 1)
-                        entry.Intrinsic1 = Convert.ToInt32(reader["ability_id"].ToString());
-                    else if (slot == 2)
-                        entry.Intrinsic2 = Convert.ToInt32(reader["ability_id"].ToString());
-                    else if (slot == 3)
-                        entry.Intrinsic3 = Convert.ToInt32(reader["ability_id"].ToString());
-                    read++;
-                }
-            }
+            //sql = "SELECT * FROM pokemon_v2_pokemonability WHERE pokemon_id = " + dexId;
+            //command = new SQLiteCommand(sql, m_dbTLConnection);
+            //using (SQLiteDataReader reader = command.ExecuteReader())
+            //{
+            //    int read = 0;
+            //    while (reader.Read())
+            //    {
+            //        if (read > 2)
+            //            throw new Exception(entry.FormName + ": More than 3 ability results!?");
+            //        int slot = Convert.ToInt32(reader["slot"].ToString());
+            //        if (slot == 1)
+            //            entry.Intrinsic1 = Convert.ToInt32(reader["ability_id"].ToString());
+            //        else if (slot == 2)
+            //            entry.Intrinsic2 = Convert.ToInt32(reader["ability_id"].ToString());
+            //        else if (slot == 3)
+            //            entry.Intrinsic3 = Convert.ToInt32(reader["ability_id"].ToString());
+            //        read++;
+            //    }
+            //}
 
             //height
             //weight
             //exp
-            sql = "SELECT * FROM pokemon_v2_pokemon WHERE id = " + dexId;
-            command = new SQLiteCommand(sql, m_dbTLConnection);
-            using (SQLiteDataReader reader = command.ExecuteReader())
-            {
-                int read = 0;
-                while (reader.Read())
-                {
-                    if (read > 0)
-                        throw new Exception(entry.FormName + ": More than 1 statistic result!?");
-                    entry.Height = Convert.ToDouble(reader["height"].ToString()) / 10;
-                    entry.Weight = Convert.ToDouble(reader["weight"].ToString()) / 10;
-                    entry.ExpYield = Convert.ToInt32(reader["base_experience"].ToString());
-                    read++;
-                }
-            }
+            //sql = "SELECT * FROM pokemon_v2_pokemon WHERE id = " + dexId;
+            //command = new SQLiteCommand(sql, m_dbTLConnection);
+            //using (SQLiteDataReader reader = command.ExecuteReader())
+            //{
+            //    int read = 0;
+            //    while (reader.Read())
+            //    {
+            //        if (read > 0)
+            //            throw new Exception(entry.FormName + ": More than 1 statistic result!?");
+            //        entry.Height = Convert.ToDouble(reader["height"].ToString()) / 10;
+            //        entry.Weight = Convert.ToDouble(reader["weight"].ToString()) / 10;
+            //        entry.ExpYield = Convert.ToInt32(reader["base_experience"].ToString());
+            //        read++;
+            //    }
+            //}
 
             //stats
-            sql = "SELECT * FROM pokemon_v2_pokemonstat WHERE pokemon_id = " + dexId;
-            command = new SQLiteCommand(sql, m_dbTLConnection);
-            using (SQLiteDataReader reader = command.ExecuteReader())
-            {
-                int read = 0;
-                while (reader.Read())
-                {
-                    if (read > 5)
-                        throw new Exception(entry.FormName + ": More than 6 stat results!?");
-                    int slot = Convert.ToInt32(reader["stat_id"].ToString());
-                    if (slot == 1)
-                        entry.BaseHP = Convert.ToInt32(reader["base_stat"].ToString());
-                    else if (slot == 2)
-                        entry.BaseAtk = Convert.ToInt32(reader["base_stat"].ToString());
-                    else if (slot == 3)
-                        entry.BaseDef = Convert.ToInt32(reader["base_stat"].ToString());
-                    else if (slot == 4)
-                        entry.BaseMAtk = Convert.ToInt32(reader["base_stat"].ToString());
-                    else if (slot == 5)
-                        entry.BaseMDef = Convert.ToInt32(reader["base_stat"].ToString());
-                    else if (slot == 6)
-                        entry.BaseSpeed = Convert.ToInt32(reader["base_stat"].ToString());
-                    read++;
-                }
-            }
+            //sql = "SELECT * FROM pokemon_v2_pokemonstat WHERE pokemon_id = " + dexId;
+            //command = new SQLiteCommand(sql, m_dbTLConnection);
+            //using (SQLiteDataReader reader = command.ExecuteReader())
+            //{
+            //    int read = 0;
+            //    while (reader.Read())
+            //    {
+            //        if (read > 5)
+            //            throw new Exception(entry.FormName + ": More than 6 stat results!?");
+            //        int slot = Convert.ToInt32(reader["stat_id"].ToString());
+            //        if (slot == 1)
+            //            entry.BaseHP = Convert.ToInt32(reader["base_stat"].ToString());
+            //        else if (slot == 2)
+            //            entry.BaseAtk = Convert.ToInt32(reader["base_stat"].ToString());
+            //        else if (slot == 3)
+            //            entry.BaseDef = Convert.ToInt32(reader["base_stat"].ToString());
+            //        else if (slot == 4)
+            //            entry.BaseMAtk = Convert.ToInt32(reader["base_stat"].ToString());
+            //        else if (slot == 5)
+            //            entry.BaseMDef = Convert.ToInt32(reader["base_stat"].ToString());
+            //        else if (slot == 6)
+            //            entry.BaseSpeed = Convert.ToInt32(reader["base_stat"].ToString());
+            //        read++;
+            //    }
+            //}
 
             //level moves
-            sql = "SELECT * FROM pokemon_v2_pokemonmove WHERE pokemon_id = " + dexId + " AND version_group_id = "+ version + " AND move_learn_method_id = 1 ORDER BY [level], [order]";
-            command = new SQLiteCommand(sql, m_dbTLConnection);
-            using (SQLiteDataReader reader = command.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    LevelUpSkill levelMove = new LevelUpSkill();
-                    levelMove.Level = Convert.ToInt32(reader["level"].ToString());
-                    levelMove.Skill = Convert.ToInt32(reader["move_id"].ToString());
-                    entry.LevelSkills.Add(levelMove);
-                }
-            }
+            //sql = "SELECT * FROM pokemon_v2_pokemonmove WHERE pokemon_id = " + dexId + " AND version_group_id = "+ version + " AND move_learn_method_id = 1 ORDER BY [level], [order]";
+            //command = new SQLiteCommand(sql, m_dbTLConnection);
+            //using (SQLiteDataReader reader = command.ExecuteReader())
+            //{
+            //    while (reader.Read())
+            //    {
+            //        LevelUpSkill levelMove = new LevelUpSkill();
+            //        levelMove.Level = Convert.ToInt32(reader["level"].ToString());
+            //        levelMove.Skill = Convert.ToInt32(reader["move_id"].ToString());
+            //        entry.LevelSkills.Add(levelMove);
+            //    }
+            //}
+            entry.LevelSkills.Add(new LevelUpSkill(1, 1));
 
 
             //other moves
-            sql = "SELECT * FROM pokemon_v2_pokemonmove WHERE pokemon_id = " + dexId + " AND version_group_id > 4 AND version_group_id <= "+ version + " AND move_learn_method_id > 1";
-            command = new SQLiteCommand(sql, m_dbTLConnection);
-            using (SQLiteDataReader reader = command.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    int method = Convert.ToInt32(reader["move_learn_method_id"].ToString());
-                    int move = Convert.ToInt32(reader["move_id"].ToString());
-                    if (method == 2)//egg
-                    {
-                        if (!entry.SharedSkills.Contains(new LearnableSkill(move)))
-                            entry.SharedSkills.Add(new LearnableSkill(move));
-                    }
-                    else if (method == 3)//tutor
-                    {
-                        if (!entry.SecretSkills.Contains(new LearnableSkill(move)))
-                            entry.SecretSkills.Add(new LearnableSkill(move));
-                    }
-                    else if (method == 4)//TM
-                    {
-                        if (!entry.TeachSkills.Contains(new LearnableSkill(move)))
-                            entry.TeachSkills.Add(new LearnableSkill(move));
-                    }
-                    else//event
-                    {
-                        if (!entry.SecretSkills.Contains(new LearnableSkill(move)))
-                            entry.SecretSkills.Add(new LearnableSkill(move));
-                    }
-                }
-            }
+            //sql = "SELECT * FROM pokemon_v2_pokemonmove WHERE pokemon_id = " + dexId + " AND version_group_id > 4 AND version_group_id <= "+ version + " AND move_learn_method_id > 1";
+            //command = new SQLiteCommand(sql, m_dbTLConnection);
+            //using (SQLiteDataReader reader = command.ExecuteReader())
+            //{
+            //    while (reader.Read())
+            //    {
+            //        int method = Convert.ToInt32(reader["move_learn_method_id"].ToString());
+            //        int move = Convert.ToInt32(reader["move_id"].ToString());
+            //        if (method == 2)//egg
+            //        {
+            //            if (!entry.SharedSkills.Contains(new LearnableSkill(move)))
+            //                entry.SharedSkills.Add(new LearnableSkill(move));
+            //        }
+            //        else if (method == 3)//tutor
+            //        {
+            //            if (!entry.SecretSkills.Contains(new LearnableSkill(move)))
+            //                entry.SecretSkills.Add(new LearnableSkill(move));
+            //        }
+            //        else if (method == 4)//TM
+            //        {
+            //            if (!entry.TeachSkills.Contains(new LearnableSkill(move)))
+            //                entry.TeachSkills.Add(new LearnableSkill(move));
+            //        }
+            //        else//event
+            //        {
+            //            if (!entry.SecretSkills.Contains(new LearnableSkill(move)))
+            //                entry.SecretSkills.Add(new LearnableSkill(move));
+            //        }
+            //    }
+            //}
 
 
             return entry;

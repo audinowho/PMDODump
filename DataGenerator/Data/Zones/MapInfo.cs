@@ -1159,9 +1159,8 @@ namespace DataGenerator.Data
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(143, 0, 0, Gender.Male), new Loc(244, 100), Dir8.Down, "Snorlax");
-                    groundChar.CharDir = Dir8.Down;
-                    map.AddMapChar(groundChar);
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Sign", 1), new Rect(240, 244, 24, 24), new Loc(8, 0), false, "Sign");
+                    map.AddObject(groundObject);
                 }
 
                 map.AddSpawner(CreateTeamSpawner(1, new Loc(144, 96), Dir8.DownRight));

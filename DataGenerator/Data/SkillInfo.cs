@@ -13,7 +13,7 @@ namespace DataGenerator.Data
 {
     public class SkillInfo
     {
-        public const int MAX_SKILLS = 827;
+        public const int MAX_SKILLS = 2;
 
 
         public static void AddUnreleasedMoveData()

@@ -12,7 +12,7 @@ namespace DataGenerator.Data
 {
     public static class IntrinsicInfo
     {
-        public const int MAX_INTRINSICS = 268;
+        public const int MAX_INTRINSICS = 1;
 
         public static void AddIntrinsicData()
         {

@@ -208,7 +208,7 @@ namespace DataGenerator.Data
                     }
 
                     MapEffectStep<StairsMapGenContext> checkPostProc = new MapEffectStep<StairsMapGenContext>();
-                    checkPostProc.Effect.OnMapStarts.Add(0, new BattleLogEvent(new StringKey("MSG_GREETING")));
+                    checkPostProc.Effect.OnMapStarts.Add(0, new NullCharEvent(new BattleLogEvent(new StringKey("MSG_GREETING"))));
                     layout.GenSteps.Add(PR_HOUSES, checkPostProc);
 
                     MapTextureStep<StairsMapGenContext> texturePostProc = new MapTextureStep<StairsMapGenContext>();

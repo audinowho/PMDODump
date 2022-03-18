@@ -12,9 +12,9 @@ namespace DataGenerator.Data
 {
     public class ItemInfo
     {
-        public const int MAX_NORMAL_ITEMS = 700;
-        public const int MAX_INIT_EXCL_ITEMS = 900;
-        public const int MAX_ITEMS = 2500;
+        public const int MAX_NORMAL_ITEMS = 13;
+        public const int MAX_INIT_EXCL_ITEMS = 13;
+        public const int MAX_ITEMS = 0;
 
         /// <summary>
         /// Computes all items with just english translation.
@@ -27,7 +27,7 @@ namespace DataGenerator.Data
                 ItemData item = GetItemData(ii);
                 DataManager.SaveData(ii, DataManager.DataType.Item.ToString(), item);
             }
-            AddExclItemData(false);
+            //AddExclItemData(false);
         }
         /// <summary>
         /// Recomputes all exclusive items with full string translations

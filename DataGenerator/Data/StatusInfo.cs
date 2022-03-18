@@ -12,7 +12,7 @@ namespace DataGenerator.Data
 {
     public static class StatusInfo
     {
-        public const int MAX_STATUSES = 150;
+        public const int MAX_STATUSES = 8;
 
         public static void AddStatusData()
         {

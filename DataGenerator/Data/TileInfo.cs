@@ -17,7 +17,7 @@ namespace DataGenerator.Data
 {
     public static class TileInfo
     {
-        public const int MAX_TILES = 50;
+        public const int MAX_TILES = 4;
 
         public static void AddTileData()
         {
@@ -75,33 +75,14 @@ namespace DataGenerator.Data
             }
             else if (ii == 3)
             {
-                tile.Name = new LocalText("Poison Trap");
-                tile.Desc = new LocalText("Triggering this trap will shoot poison spikes in all directions. Pokémon hit will become poisoned.");
+                tile.Name = new LocalText("Sign");
+                tile.ObjectLayer = true;
                 tile.BlockItem = true;
-                tile.StepType = TileData.TriggerType.Trap;
-                tile.Anim = new ObjAnimData("Trap_Poison", 1);
-                tile.MinimapIcon = new Loc(2, 1);
-                tile.MinimapColor = Color.Red;
-                tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
-
-                //SE 121
-
-                ProjectileAction altAction = new ProjectileAction();
-                altAction.Range = 8;
-                altAction.Speed = 10;
-                altAction.Rays = ProjectileAction.RayCount.FourCross;
-                altAction.StopAtWall = true;
-                altAction.StopAtHit = true;
-                altAction.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
-                altAction.Anim = new AnimData("Pin_Missile", 3);
-
-                altAction.ActionFX.Sound = "DUN_Throw_Spike";
-                ExplosionData altExplosion = new ExplosionData();
-                altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
-                BattleData newData = new BattleData();
-                newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusBattleEvent(5, true, false, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.StepType = TileData.TriggerType.Blocker;
+                tile.Anim = new ObjAnimData("Sign", 1);
+                tile.MinimapIcon = new Loc(4, 1);
+                tile.MinimapColor = Color.Yellow;
+                tile.LandedOnTiles.Add(0, new NoticeEvent());
             }
             else if (ii == 4)
             {
