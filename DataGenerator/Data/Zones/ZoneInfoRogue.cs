@@ -31,6 +31,8 @@ namespace DataGenerator.Data
             zone.Rescues = 2;
             zone.Rogue = RogueStatus.AllTransfer;
 
+            int max_floors = 30;
+
             LayeredSegment floorSegment = new LayeredSegment();
             floorSegment.IsRelevant = true;
             floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
@@ -260,10 +262,7 @@ namespace DataGenerator.Data
             for (int nn = 0; nn < 18; nn++)//Type booster
                 heldItems.Spawns.Add(new InvItem(331 + nn), new IntRange(0, 30), 1);
             for (int nn = 0; nn < 18; nn++)//Type Plate
-            {
-                if (380 + nn != 392)//** Plate
-                    heldItems.Spawns.Add(new InvItem(380 + nn), new IntRange(0, 30), 1);
-            }
+                heldItems.Spawns.Add(new InvItem(380 + nn), new IntRange(0, 30), 1);
 
             heldItems.Spawns.Add(new InvItem(303), new IntRange(0, 20), 2);//Mobile Scarf
             heldItems.Spawns.Add(new InvItem(304), new IntRange(0, 20), 2);//Pass Scarf
@@ -1143,32 +1142,30 @@ namespace DataGenerator.Data
 
             TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
             tileSpawn.Priority = PR_RESPAWN_TRAP;
-            tileSpawn.Spawns.Add(new EffectTile(7, false), new IntRange(0, 30), 10);//mud trap
-            tileSpawn.Spawns.Add(new EffectTile(13, true), new IntRange(0, 15), 10);//warp trap
-            tileSpawn.Spawns.Add(new EffectTile(13, false), new IntRange(15, 30), 10);//warp trap
-            tileSpawn.Spawns.Add(new EffectTile(14, false), new IntRange(0, 30), 10);//gust trap
-            tileSpawn.Spawns.Add(new EffectTile(17, false), new IntRange(0, 30), 10);//chestnut trap
-            tileSpawn.Spawns.Add(new EffectTile(3, false), new IntRange(0, 30), 10);//poison trap
-            tileSpawn.Spawns.Add(new EffectTile(4, false), new IntRange(0, 30), 10);//sleep trap
-            tileSpawn.Spawns.Add(new EffectTile(11, false), new IntRange(0, 30), 10);//sticky trap
-            tileSpawn.Spawns.Add(new EffectTile(8, false), new IntRange(0, 30), 10);//seal trap
-            tileSpawn.Spawns.Add(new EffectTile(18, false), new IntRange(0, 30), 10);//selfdestruct trap
-            tileSpawn.Spawns.Add(new EffectTile(23, false), new IntRange(0, 30), 10);//trip trap
-            tileSpawn.Spawns.Add(new EffectTile(25, true), new IntRange(0, 15), 10);//hunger trap
-            tileSpawn.Spawns.Add(new EffectTile(25, false), new IntRange(15, 30), 10);//hunger trap
+            tileSpawn.Spawns.Add(new EffectTile(7, false), new IntRange(0, max_floors), 10);//mud trap
+            tileSpawn.Spawns.Add(new EffectTile(13, true), new IntRange(0, max_floors), 10);//warp trap
+            tileSpawn.Spawns.Add(new EffectTile(14, false), new IntRange(0, max_floors), 10);//gust trap
+            tileSpawn.Spawns.Add(new EffectTile(17, false), new IntRange(0, max_floors), 10);//chestnut trap
+            tileSpawn.Spawns.Add(new EffectTile(3, false), new IntRange(0, max_floors), 10);//poison trap
+            tileSpawn.Spawns.Add(new EffectTile(4, false), new IntRange(0, max_floors), 10);//sleep trap
+            tileSpawn.Spawns.Add(new EffectTile(11, false), new IntRange(0, max_floors), 10);//sticky trap
+            tileSpawn.Spawns.Add(new EffectTile(8, false), new IntRange(0, max_floors), 10);//seal trap
+            tileSpawn.Spawns.Add(new EffectTile(18, false), new IntRange(0, max_floors), 10);//selfdestruct trap
+            tileSpawn.Spawns.Add(new EffectTile(23, true), new IntRange(0, 15), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile(23, false), new IntRange(15, max_floors), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile(25, true), new IntRange(0, max_floors), 10);//hunger trap
             tileSpawn.Spawns.Add(new EffectTile(12, true), new IntRange(0, 15), 3);//apple trap
-            tileSpawn.Spawns.Add(new EffectTile(12, false), new IntRange(15, 30), 3);//apple trap
-            tileSpawn.Spawns.Add(new EffectTile(9, false), new IntRange(0, 30), 10);//pp-leech trap
-            tileSpawn.Spawns.Add(new EffectTile(15, false), new IntRange(0, 30), 10);//summon trap
-            tileSpawn.Spawns.Add(new EffectTile(19, false), new IntRange(0, 30), 10);//explosion trap
-            tileSpawn.Spawns.Add(new EffectTile(6, false), new IntRange(0, 30), 10);//slow trap
-            tileSpawn.Spawns.Add(new EffectTile(5, false), new IntRange(0, 30), 10);//spin trap
-            tileSpawn.Spawns.Add(new EffectTile(10, false), new IntRange(0, 30), 10);//grimy trap
-            tileSpawn.Spawns.Add(new EffectTile(28, true), new IntRange(0, 15), 20);//trigger trap
-            tileSpawn.Spawns.Add(new EffectTile(28, false), new IntRange(15, 30), 20);//trigger trap
-                                                                                      //pokemon trap
-            tileSpawn.Spawns.Add(new EffectTile(24, false), new IntRange(15, 30), 10);//grudge trap
-                                                                                      //training switch
+            tileSpawn.Spawns.Add(new EffectTile(12, false), new IntRange(15, max_floors), 3);//apple trap
+            tileSpawn.Spawns.Add(new EffectTile(9, true), new IntRange(0, max_floors), 10);//pp-leech trap
+            tileSpawn.Spawns.Add(new EffectTile(15, false), new IntRange(0, max_floors), 10);//summon trap
+            tileSpawn.Spawns.Add(new EffectTile(19, false), new IntRange(0, max_floors), 10);//explosion trap
+            tileSpawn.Spawns.Add(new EffectTile(6, false), new IntRange(0, max_floors), 10);//slow trap
+            tileSpawn.Spawns.Add(new EffectTile(5, false), new IntRange(0, max_floors), 10);//spin trap
+            tileSpawn.Spawns.Add(new EffectTile(10, false), new IntRange(0, max_floors), 10);//grimy trap
+            tileSpawn.Spawns.Add(new EffectTile(28, true), new IntRange(0, max_floors), 20);//trigger trap
+                                                                                            //pokemon trap
+            tileSpawn.Spawns.Add(new EffectTile(24, true), new IntRange(15, max_floors), 10);//grudge trap
+                                                                                             //training switch
             floorSegment.ZoneSteps.Add(tileSpawn);
 
 
@@ -1462,7 +1459,7 @@ namespace DataGenerator.Data
                     vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, vaultStep));
                 }
                 {
-                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54), Dir8.DownRight, Dir8.UpLeft);
+                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
                     vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, vaultStep));
                 }
 
@@ -1706,7 +1703,7 @@ namespace DataGenerator.Data
                     bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, resizeStep));
                 }
                 {
-                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54), Dir8.DownRight, Dir8.UpLeft);
+                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
                     bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, vaultStep));
                 }
 
@@ -2558,10 +2555,8 @@ namespace DataGenerator.Data
                 wallSpawns.Add(new MapItem(267), 10);//Stayaway
                 wallSpawns.Add(new MapItem(266), 10);//Pierce
                 for (int nn = 0; nn < 18; nn++)//Type Plate
-                {
-                    if (380 + nn != 392)//** Plate
-                        wallSpawns.Add(new MapItem(380 + nn), 1);
-                }
+                    wallSpawns.Add(new MapItem(380 + nn), 1);
+
                 TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile(2));
                 wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
                 layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
@@ -2699,7 +2694,7 @@ namespace DataGenerator.Data
                 {
                     //142 Aerodactyl : 17 Wing Attack : 246 Ancient Power : 48 Supersonic : 97 Agility
                     SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                    MobSpawn mob = GetGenericMob(142, -1, 17, 246, 48, 97, new RandRange(50), 17);
+                    MobSpawn mob = GetGenericMob(142, -1, 17, 246, 48, 97, new RandRange(48), 17);
                     mob.SpawnFeatures.Add(new MobSpawnItem(true, 477));
                     specificTeam.Spawns.Add(mob);
 
@@ -2734,7 +2729,7 @@ namespace DataGenerator.Data
                 else if (ii < 20)
                     AddEnemySpawnData(layout, 30, new RandRange(13, 18));
                 else if (ii < 27)
-                    AddEnemySpawnData(layout, 20, new RandRange(18, 27));
+                    AddEnemySpawnData(layout, 20, new RandRange(18, 25));
                 else
                     AddEnemySpawnData(layout, 20, new RandRange(15, 24));
 
@@ -3129,7 +3124,7 @@ namespace DataGenerator.Data
             special.Spawns.Add(new InvItem(0450), new IntRange(0, 27), 25);//Link Box
             special.Spawns.Add(new InvItem(0451), new IntRange(4, 27), 5);//Assembly Box
             special.Spawns.Add(new InvItem(0455, false, 1), new IntRange(0, 24), 10);//Key
-                                                                           //snacks
+                                                                                     //snacks
             CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
             snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("snacks", snacks);
@@ -3185,18 +3180,18 @@ namespace DataGenerator.Data
             itemSpawnZoneStep.Spawns.Add("boosters", boosters);
 
 
-            boosters.Spawns.Add(new InvItem(0151, true), new IntRange(0, max_floors), 5);//Protein
-            boosters.Spawns.Add(new InvItem(0151), new IntRange(0, max_floors), 5);//Protein
-            boosters.Spawns.Add(new InvItem(0152, true), new IntRange(0, max_floors), 5);//Iron
-            boosters.Spawns.Add(new InvItem(0152), new IntRange(0, max_floors), 5);//Iron
-            boosters.Spawns.Add(new InvItem(0153, true), new IntRange(0, max_floors), 5);//Calcium
-            boosters.Spawns.Add(new InvItem(0153), new IntRange(0, max_floors), 5);//Calcium
-            boosters.Spawns.Add(new InvItem(0154, true), new IntRange(0, max_floors), 5);//Zinc
-            boosters.Spawns.Add(new InvItem(0154), new IntRange(0, max_floors), 5);//Zinc
-            boosters.Spawns.Add(new InvItem(0155, true), new IntRange(0, max_floors), 5);//Carbos
-            boosters.Spawns.Add(new InvItem(0155), new IntRange(0, max_floors), 5);//Carbos
-            boosters.Spawns.Add(new InvItem(0156, true), new IntRange(0, max_floors), 5);//HP Up
-            boosters.Spawns.Add(new InvItem(0156), new IntRange(0, max_floors), 5);//HP Up
+            boosters.Spawns.Add(new InvItem(0151, true), new IntRange(0, max_floors), 4);//Protein
+            boosters.Spawns.Add(new InvItem(0151), new IntRange(0, max_floors), 6);//Protein
+            boosters.Spawns.Add(new InvItem(0152, true), new IntRange(0, max_floors), 4);//Iron
+            boosters.Spawns.Add(new InvItem(0152), new IntRange(0, max_floors), 6);//Iron
+            boosters.Spawns.Add(new InvItem(0153, true), new IntRange(0, max_floors), 4);//Calcium
+            boosters.Spawns.Add(new InvItem(0153), new IntRange(0, max_floors), 6);//Calcium
+            boosters.Spawns.Add(new InvItem(0154, true), new IntRange(0, max_floors), 4);//Zinc
+            boosters.Spawns.Add(new InvItem(0154), new IntRange(0, max_floors), 6);//Zinc
+            boosters.Spawns.Add(new InvItem(0155, true), new IntRange(0, max_floors), 4);//Carbos
+            boosters.Spawns.Add(new InvItem(0155), new IntRange(0, max_floors), 6);//Carbos
+            boosters.Spawns.Add(new InvItem(0156, true), new IntRange(0, max_floors), 4);//HP Up
+            boosters.Spawns.Add(new InvItem(0156), new IntRange(0, max_floors), 6);//HP Up
                                                                                    //throwable
             CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
             throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
@@ -3270,7 +3265,7 @@ namespace DataGenerator.Data
             orbs.Spawns.Add(new InvItem(0259, true), new IntRange(0, max_floors), 3);//Trawl Orb
             orbs.Spawns.Add(new InvItem(0259), new IntRange(0, max_floors), 7);//Trawl Orb
             orbs.Spawns.Add(new InvItem(0261), new IntRange(0, max_floors), 10);//Scanner Orb
-                                                                               //held
+                                                                                //held
             CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
             held.SpawnRates.SetRange(2, new IntRange(0, 27));
             itemSpawnZoneStep.Spawns.Add("held", held);
@@ -3463,8 +3458,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(050, 071, 189, 010, -1, -1, new RandRange(10)), new IntRange(3, 7), 10);
             //179 Mareep : 178 Cotton Spore : 084 Thunder Shock
             poolSpawn.Spawns.Add(GetTeamMob(179, -1, 178, 084, -1, -1, new RandRange(10)), new IntRange(3, 7), 10);
-            //187 Hoppip : 235 Synthesis : 584 Fairy Wind
-            poolSpawn.Spawns.Add(GetTeamMob(187, -1, 235, 584, -1, -1, new RandRange(10)), new IntRange(3, 7), 10);
+            //187 Hoppip : 235 Synthesis : 033 Tackle
+            poolSpawn.Spawns.Add(GetTeamMob(187, -1, 235, 033, -1, -1, new RandRange(10)), new IntRange(3, 7), 10);
             //023 Ekans : 040 Poison Sting : 043 Leer
             poolSpawn.Spawns.Add(GetTeamMob(023, -1, 040, 043, -1, -1, new RandRange(10)), new IntRange(5, 9), 10);
             //393 Piplup : 128 Defiant : 064 Peck
@@ -3481,8 +3476,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(438, -1, 313, 067, -1, -1, new RandRange(14), TeamMemberSpawn.MemberRole.Loner, 10), new IntRange(5, 9), 10);
             //077 Ponyta : 172 Flame Wheel : 039 Tail Whip
             poolSpawn.Spawns.Add(GetTeamMob(077, -1, 172, 039, -1, -1, new RandRange(13)), new IntRange(5, 9), 10);
-            //060 Poliwag : 346 Water Sport : 145 Bubble
-            poolSpawn.Spawns.Add(GetTeamMob(060, -1, 346, 145, -1, -1, new RandRange(12)), new IntRange(5, 9), 10);
+            //060 Poliwag : 346 Water Sport : 055 Water Gun
+            poolSpawn.Spawns.Add(GetTeamMob(060, -1, 346, 055, -1, -1, new RandRange(12)), new IntRange(5, 9), 10);
             //193 Yanma : 003 Speed Boost : 049 Sonic Boom
             poolSpawn.Spawns.Add(GetTeamMob(193, 003, 049, -1, -1, -1, new RandRange(16)), new IntRange(7, 11), 10);
             //440 Happiny : 383 Copycat : 204 Charm
@@ -3535,8 +3530,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(413, 2, -1, Gender.Unknown), 107, 429, 319, -1, -1, new RandRange(29), TeamMemberSpawn.MemberRole.Leader, 25), new IntRange(15, 19), 5);
             //391 Monferno : 172 Flame Wheel : 259 Torment
             poolSpawn.Spawns.Add(GetTeamMob(391, -1, 172, 259, -1, -1, new RandRange(29)), new IntRange(15, 19), 10);
-            //213 Shuckle : 564 Sticky Web : 227 Encore : 522 Struggle Bug
-            poolSpawn.Spawns.Add(GetTeamMob(213, -1, 564, 227, 522, -1, new RandRange(29)), new IntRange(15, 19), 10);
+            //213 Shuckle : 227 Encore : 522 Struggle Bug
+            poolSpawn.Spawns.Add(GetTeamMob(213, -1, 227, 522, -1, -1, new RandRange(29)), new IntRange(15, 19), 10);
             //067 Machoke : 116 Focus Energy : 490 Low Sweep
             poolSpawn.Spawns.Add(GetTeamMob(067, -1, 116, 490, -1, -1, new RandRange(29)), new IntRange(15, 19), 10);
             //093 Haunter : 212 Mean Look : 101 Night Shade
@@ -3564,11 +3559,11 @@ namespace DataGenerator.Data
             //192 Sunflora : 074 Growth : 076 Solar Beam
             poolSpawn.Spawns.Add(GetTeamMob(192, -1, 074, 076, -1, -1, new RandRange(36)), new IntRange(19, 23), 15);
             //182 Bellossom : 241 Sunny Day : 345 Magical Leaf
-            poolSpawn.Spawns.Add(GetTeamMob(182, -1, 241, 345, -1, -1, new RandRange(36)), new IntRange(19, 23), 20);
+            poolSpawn.Spawns.Add(GetTeamMob(182, -1, 241, 345, -1, -1, new RandRange(36)), new IntRange(19, 23), 15);
             //301 Delcatty : 096 Normalize : 274 Assist : 047 Sing
             poolSpawn.Spawns.Add(GetTeamMob(301, 096, 274, 047, -1, -1, new RandRange(36), TeamMemberSpawn.MemberRole.Support), new IntRange(19, 23), 10);
-            //078 Rapidash : 097 Agility : 517 Inferno
-            poolSpawn.Spawns.Add(GetTeamMob(078, -1, 097, 517, -1, -1, new RandRange(40), TeamMemberSpawn.MemberRole.Loner), new IntRange(19, 23), 10);
+            //078 Rapidash : 083 Fire Spin : 517 Inferno
+            poolSpawn.Spawns.Add(GetTeamMob(078, -1, 083, 517, -1, -1, new RandRange(40), TeamMemberSpawn.MemberRole.Loner), new IntRange(19, 23), 10);
             //389 Torterra : 452 Wood Hammer : 089 Earthquake : 235 Synthesis
             poolSpawn.Spawns.Add(GetTeamMob(389, -1, 452, 089, 235, -1, new RandRange(36)), new IntRange(19, 23), 10);
             //398 Staraptor : 097 Agility : 515 Final Gambit : 370 Close Combat
@@ -3576,7 +3571,7 @@ namespace DataGenerator.Data
             //062 Poliwrath : 358 Wake-Up Slap : 095 Hypnosis
             poolSpawn.Spawns.Add(GetTeamMob(062, -1, 358, 095, -1, -1, new RandRange(39)), new IntRange(21, 25), 10);
             //337 Lunatone : 478 Magic Room : 585 Moonblast : 157 Rock Slide
-            poolSpawn.Spawns.Add(GetTeamMob(337, -1, 478, 585, 157, -1, new RandRange(39)), new IntRange(21, 25), 15);
+            poolSpawn.Spawns.Add(GetTeamMob(337, -1, 478, 585, 157, -1, new RandRange(39)), new IntRange(21, 25), 10);
             //164 Noctowl : 115 Reflect : 138 Dream Eater : 355 Roost
             poolSpawn.Spawns.Add(GetTeamMob(164, -1, 115, 138, 355, -1, new RandRange(39), TeamMemberSpawn.MemberRole.Support), new IntRange(21, 25), 10);
             //094 Gengar : 247 Shadow Ball : 180 Spite : 138 Dream Eater
@@ -3587,8 +3582,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(302, -1, 212, 282, -1, -1, new RandRange(42)), new IntRange(23, 28), 10);
             //186 Politoed : 195 Perish Song : 207 Swagger
             poolSpawn.Spawns.Add(GetTeamMob(186, -1, 195, 207, -1, -1, new RandRange(42), TeamMemberSpawn.MemberRole.Loner), new IntRange(23, 28), 20);
-            //065 Alakazam : 477 Telekinesis : 094 Psychic
-            poolSpawn.Spawns.Add(GetTeamMob(065, -1, 477, 094, -1, -1, new RandRange(42)), new IntRange(23, 28), 10);
+            //065 Alakazam : 105 Recover : 094 Psychic
+            poolSpawn.Spawns.Add(GetTeamMob(065, -1, 105, 094, -1, -1, new RandRange(42)), new IntRange(23, 28), 10);
             //080 Slowbro : 505 Heal Pulse : 133 Amnesia : 352 Water Pulse
             poolSpawn.Spawns.Add(GetTeamMob(080, -1, 505, 133, 352, -1, new RandRange(45)), new IntRange(25, 28), 10);
             //068 Machamp : 099 No Guard : 223 Dynamic Punch : 530 Dual Chop
@@ -3703,8 +3698,7 @@ namespace DataGenerator.Data
             TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
             tileSpawn.Priority = PR_RESPAWN_TRAP;
             tileSpawn.Spawns.Add(new EffectTile(7, false), new IntRange(0, max_floors), 10);//mud trap
-            tileSpawn.Spawns.Add(new EffectTile(13, true), new IntRange(0, 15), 10);//warp trap
-            tileSpawn.Spawns.Add(new EffectTile(13, false), new IntRange(15, max_floors), 10);//warp trap
+            tileSpawn.Spawns.Add(new EffectTile(13, true), new IntRange(0, max_floors), 10);//warp trap
             tileSpawn.Spawns.Add(new EffectTile(14, false), new IntRange(0, max_floors), 10);//gust trap
             tileSpawn.Spawns.Add(new EffectTile(17, false), new IntRange(0, max_floors), 10);//chestnut trap
             tileSpawn.Spawns.Add(new EffectTile(3, false), new IntRange(0, max_floors), 10);//poison trap
@@ -3712,21 +3706,21 @@ namespace DataGenerator.Data
             tileSpawn.Spawns.Add(new EffectTile(11, false), new IntRange(0, max_floors), 10);//sticky trap
             tileSpawn.Spawns.Add(new EffectTile(8, false), new IntRange(0, max_floors), 10);//seal trap
             tileSpawn.Spawns.Add(new EffectTile(18, false), new IntRange(0, max_floors), 10);//selfdestruct trap
-            tileSpawn.Spawns.Add(new EffectTile(23, false), new IntRange(0, max_floors), 10);//trip trap
-            tileSpawn.Spawns.Add(new EffectTile(25, true), new IntRange(0, 15), 10);//hunger trap
-            tileSpawn.Spawns.Add(new EffectTile(25, false), new IntRange(15, max_floors), 10);//hunger trap
+            tileSpawn.Spawns.Add(new EffectTile(23, true), new IntRange(0, 15), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile(23, false), new IntRange(15, max_floors), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile(25, true), new IntRange(0, max_floors), 10);//hunger trap
             tileSpawn.Spawns.Add(new EffectTile(12, true), new IntRange(0, 15), 3);//apple trap
             tileSpawn.Spawns.Add(new EffectTile(12, false), new IntRange(15, max_floors), 3);//apple trap
-            tileSpawn.Spawns.Add(new EffectTile(9, false), new IntRange(0, max_floors), 10);//pp-leech trap
+            tileSpawn.Spawns.Add(new EffectTile(9, true), new IntRange(0, max_floors), 10);//pp-leech trap
+            tileSpawn.Spawns.Add(new EffectTile(15, false), new IntRange(0, max_floors), 10);//summon trap
             tileSpawn.Spawns.Add(new EffectTile(19, false), new IntRange(0, max_floors), 10);//explosion trap
             tileSpawn.Spawns.Add(new EffectTile(6, false), new IntRange(0, max_floors), 10);//slow trap
             tileSpawn.Spawns.Add(new EffectTile(5, false), new IntRange(0, max_floors), 10);//spin trap
             tileSpawn.Spawns.Add(new EffectTile(10, false), new IntRange(0, max_floors), 10);//grimy trap
-            tileSpawn.Spawns.Add(new EffectTile(28, true), new IntRange(0, 15), 20);//trigger trap
-            tileSpawn.Spawns.Add(new EffectTile(28, false), new IntRange(15, max_floors), 20);//trigger trap
-                                                                                              //pokemon trap
-            tileSpawn.Spawns.Add(new EffectTile(24, false), new IntRange(15, max_floors), 10);//grudge trap
-                                                                                              //training switch
+            tileSpawn.Spawns.Add(new EffectTile(28, true), new IntRange(0, max_floors), 20);//trigger trap
+                                                                                      //pokemon trap
+            tileSpawn.Spawns.Add(new EffectTile(24, true), new IntRange(15, max_floors), 10);//grudge trap
+                                                                                      //training switch
             floorSegment.ZoneSteps.Add(tileSpawn);
 
 
@@ -4038,7 +4032,7 @@ namespace DataGenerator.Data
                     vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, vaultStep));
                 }
                 {
-                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54), Dir8.DownRight, Dir8.UpLeft);
+                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
                     vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, vaultStep));
                 }
 
@@ -4233,7 +4227,7 @@ namespace DataGenerator.Data
                     bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, resizeStep));
                 }
                 {
-                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54), Dir8.DownRight, Dir8.UpLeft);
+                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
                     bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, vaultStep));
                 }
 
@@ -4666,7 +4660,7 @@ namespace DataGenerator.Data
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
                 shop.ItemThemes.Add(new ItemThemeRange(new IntRange(331, 349), false, true, new RandRange(3, 5)), 10);//type items
                 shop.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
-                    new ItemThemeRange(new IntRange(450, 454), true, true, new RandRange(0, 3))), 10);//TMs + machines
+                    new ItemThemeRange(new IntRange(450, 454), false, true, new RandRange(0, 3))), 10);//TMs + machines
 
                 // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
                 shop.StartMob = GetShopMob(352, 16, 485, 20, 103, 86, new int[] { 1984, 1985, 1988 }, 0);
@@ -4913,29 +4907,17 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
                 }
 
-
-
-                if (ii >= 13 && ii < 17)
-                {
-                    SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                    specificTeam.Spawns.Add(GetGenericMob(147, -1, 35, 43, -1, -1, new RandRange(15)));
-
-                    MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
-                    spawnStep.Spawns.Add(specificTeam, 10);
-                    layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
-                }
-
                 //enemies
                 if (ii <= 8)
-                    AddRespawnData(layout, 10, 80);
+                    AddRespawnData(layout, 10, 85);
                 else if (ii <= 16)
                     AddRespawnData(layout, 14, 90);
                 else if (ii <= 20)
                     AddRespawnData(layout, 18, 100);
                 else if (ii <= 27)
-                    AddRespawnData(layout, 28, 100);
+                    AddRespawnData(layout, 26, 110);
                 else
-                    AddRespawnData(layout, 22, 120);
+                    AddRespawnData(layout, 22, 130);
 
                 //enemies
                 if (ii <= 8)
@@ -4945,7 +4927,7 @@ namespace DataGenerator.Data
                 else if (ii <= 20)
                     AddEnemySpawnData(layout, 30, new RandRange(12, 16));
                 else if (ii <= 27)
-                    AddEnemySpawnData(layout, 20, new RandRange(17, 25));
+                    AddEnemySpawnData(layout, 20, new RandRange(17, 22));
                 else
                     AddEnemySpawnData(layout, 20, new RandRange(13, 18));
 
@@ -4972,6 +4954,34 @@ namespace DataGenerator.Data
                 RandomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(specificSpawns)));
                 layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
 
+
+                SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                wallSpawns.Add(new MapItem(10), 50);//oran berry
+                wallSpawns.Add(new MapItem(481, 1), 50);//heart scale
+                wallSpawns.Add(new MapItem(201, 2), 20);//cacnea spike
+                wallSpawns.Add(new MapItem(200, 2), 20);//stick
+                wallSpawns.Add(new MapItem(37), 10);//jaboca berry
+                wallSpawns.Add(new MapItem(38), 10);//rowap berry
+                wallSpawns.Add(new MapItem(220, 1), 10);//path wand
+                wallSpawns.Add(new MapItem(228, 3), 10);//fear wand
+                wallSpawns.Add(new MapItem(235, 2), 10);//transfer wand
+                wallSpawns.Add(new MapItem(236, 4), 10);//vanish wand
+
+                wallSpawns.Add(new MapItem(43), 10);//apicot berry
+                wallSpawns.Add(new MapItem(44), 10);//liechi berry
+                wallSpawns.Add(new MapItem(45), 10);//ganlon berry
+                wallSpawns.Add(new MapItem(46), 10);//salac berry
+                wallSpawns.Add(new MapItem(47), 10);//petaya berry
+                wallSpawns.Add(new MapItem(48), 10);//starf berry
+                wallSpawns.Add(new MapItem(49), 10);//micle berry
+                wallSpawns.Add(new MapItem(51), 10);//enigma berry
+
+                for (int nn = 0; nn < 18; nn++)//Type Berry
+                    wallSpawns.Add(new MapItem(19 + nn), 1);
+
+                TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile(2));
+                wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
 
                 //construct paths
                 if (ii <= 4)

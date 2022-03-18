@@ -347,16 +347,17 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Red;
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
 
-                SelfAction altAction = new SelfAction();
-                altAction.TargetAlignments = Alignment.Self;
+                AreaAction altAction = new AreaAction();
+                altAction.TileEmitter = new SingleEmitter(new AnimData("Puff_Pink", 3));
+                altAction.ActionFX.Sound = "DUN_Trace";
+                altAction.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
 
                 ExplosionData altExplosion = new ExplosionData();
-                altExplosion.TargetAlignments = Alignment.Self;
-                BattleData newData = new BattleData();
-                newData.HitFX.Emitter = new SingleEmitter(new AnimData("Puff_Pink", 3));
-                newData.HitFX.Sound = "DUN_Trace";
+                altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
 
+                BattleData newData = new BattleData();
                 newData.HitRate = -1;
+
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(HeldState)));
                 newData.OnHits.Add(0, new TransformItemEvent(true, false, 116, 1, eligibles));
@@ -404,11 +405,9 @@ namespace DataGenerator.Data
                 emitter.Range = 24;
                 emitter.TotalParticles = 3;
                 emitter.LocHeight = 24;
-                BattleFX altFX = new BattleFX();
-                altFX.Emitter = emitter;
-                altFX.Delay = 40;
-                altFX.Sound = "DUN_Gust_Trap";
-                altAction.PreActions.Add(altFX);
+                altAction.ActionFX.Emitter = emitter;
+                altAction.ActionFX.Sound = "DUN_Gust_Trap";
+                altAction.LagBehindTime = 40;
                 altAction.HitTiles = true;
 
                 ExplosionData altExplosion = new ExplosionData();
@@ -429,18 +428,16 @@ namespace DataGenerator.Data
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
 
                 AreaAction altAction = new AreaAction();
-                FiniteAreaEmitter emitter = new FiniteAreaEmitter(new AnimData("Puff_Pink", 3));
-                emitter.Speed = 24;
-                emitter.Range = 12;
-                emitter.TotalParticles = 6;
-                BattleFX altFX = new BattleFX();
-                altFX.Emitter = emitter;
-                altFX.Sound = "DUN_Pitfall_Trap";
-                altFX.Delay = 20;
-                altAction.PreActions.Add(altFX);
+                altAction.ActionFX.Sound = "DUN_Pitfall_Trap";
+                altAction.ActionFX.Delay = 20;
+                CircleSquareAreaEmitter emitter = new CircleSquareAreaEmitter(new AnimData("Puff_Pink", 3));
+                emitter.ParticlesPerTile = 3;
+                emitter.RangeDiff = 8;
+                altAction.Emitter = emitter;
                 altAction.HitTiles = true;
 
                 ExplosionData altExplosion = new ExplosionData();
+
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
                 newData.OnHitTiles.Add(0, new WarpFoesToTileEvent(4));
@@ -524,7 +521,7 @@ namespace DataGenerator.Data
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
@@ -557,7 +554,7 @@ namespace DataGenerator.Data
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
@@ -702,7 +699,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = Alignment.Self;
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new RestoreBellyEvent(-10, true));
+                newData.OnHits.Add(0, new RestoreBellyEvent(-20, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 26)

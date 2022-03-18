@@ -236,13 +236,13 @@ Key		EN
 0185-0000|data.Name		White Herb
 0185-0001|data.Desc		An herb that removes all stat changes, and prevents them from changing.
 0200-0000|data.Name		Stick
-0200-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. Critical hits land more easily.
+0200-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. It causes the target to flinch.
 0201-0000|data.Name		Cacnea Spike
-0201-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage and may lower the Attack of any Pokémon it hits.
+0201-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Attack of any Pokémon it hits.
 0202-0000|data.Name		Corsola Twig
-0202-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage and may lower the Sp.Atk of any Pokémon it hits.
+0202-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Sp.Atk of any Pokémon it hits.
 0203-0000|data.Name		Iron Thorn
-0203-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict heavy damage on any Pokémon it hits.
+0203-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. Critical hits land more easily.
 0204-0000|data.Name		Silver Spike
 0204-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage to any Pokémon it hits, passing through walls.
 0205-0000|data.Name		Golden Thorn
@@ -250,7 +250,7 @@ Key		EN
 0206-0000|data.Name		Rare Fossil
 0206-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target's area. It deals Special damage.
 0207-0000|data.Name		Geo Pebble
-0207-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target.
+0207-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target. It causes the target to flinch.
 0208-0000|data.Name		Gravelerock
 0208-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target's area.
 0209-0000|data.Name		Big Apricorn
@@ -366,7 +366,7 @@ Key		EN
 0277-0000|data.Name		Nullify Orb
 0277-0001|data.Desc		An orb that nullifies the Abilities of all enemies up to 5 tiles away.
 0278-0000|data.Name		All-Dodge Orb
-0278-0001|data.Desc		An orb that sharply boosts Evasion. It affects team members up to 5 tiles away.
+0278-0001|data.Desc		An orb that drastically boosts Evasion. It affects team members up to 5 tiles away.
 0279-0000|data.Name		Health Orb
 0279-0001|data.Desc		
 0280-0000|data.Name		All Power-Up Orb
@@ -569,6 +569,8 @@ Key		EN
 0390-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ground-type moves.
 0391-0000|data.Name		Icicle Plate
 0391-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ice-type moves.
+0392-0000|data.Name		Blank Plate
+0392-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Normal-type moves.
 0393-0000|data.Name		Toxic Plate
 0393-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Poison-type moves.
 0394-0000|data.Name		Mind Plate

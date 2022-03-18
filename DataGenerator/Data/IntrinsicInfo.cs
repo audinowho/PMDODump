@@ -430,6 +430,14 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Run Away");
                 ability.Desc = new LocalText("Prevents the Pokémon from being Immobilized.");
                 ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(90, new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(19, new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(20, new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(44, new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(45, new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(46, new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(58, new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(103, new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(104, new StringKey("MSG_RUN_AWAY")));
             }
             else if (ii == 51)
             {
@@ -846,7 +854,7 @@ namespace DataGenerator.Data
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 ability.OnDeaths.Add(-1, new InvokeAttackEvent(altAction, altExplosion, newData, new StringKey("MSG_EXPLODE")));
             }

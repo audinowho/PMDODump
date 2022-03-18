@@ -321,7 +321,7 @@ namespace DataGenerator
                         if ((dump & DataManager.DataType.Skill) != DataManager.DataType.None)
                         {
                             //SkillInfo.AddUnreleasedMoveData();
-                            //SkillInfo.AddMoveData(213);
+                            //SkillInfo.AddMoveData(564);
                         }
 
                         if ((dump & DataManager.DataType.Intrinsic) != DataManager.DataType.None)

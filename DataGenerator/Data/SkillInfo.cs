@@ -683,9 +683,9 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 85;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.SkillStates.Set(new BasePowerState(85));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new CrashLandEvent(4));
+                skill.Data.AfterActions.Add(0, new CrashLandEvent(6));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 21;//Kick
@@ -3075,7 +3075,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
@@ -3102,7 +3102,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
@@ -3491,9 +3491,9 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
-                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.SkillStates.Set(new BasePowerState(95));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new CrashLandEvent(2));
+                skill.Data.AfterActions.Add(0, new CrashLandEvent(4));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 21;//Kick
@@ -3723,7 +3723,7 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("Bubble");
                 skill.Desc = new LocalText("A spray of countless bubbles is jetted at the target. This may also lower the target's Movement Speed.");
-                skill.BaseCharges = 16;
+                skill.BaseCharges = 18;
                 skill.Data.Element = 18;
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
@@ -3735,7 +3735,7 @@ namespace DataGenerator.Data
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
                 ((AreaAction)skill.HitboxAction).HitArea = Hitbox.AreaLimit.Cone;
-                ((AreaAction)skill.HitboxAction).Range = 3;
+                ((AreaAction)skill.HitboxAction).Range = 2;
                 ((AreaAction)skill.HitboxAction).Speed = 6;
                 ((AreaAction)skill.HitboxAction).HitTiles = true;
                 CircleSquareReleaseEmitter emitter = new CircleSquareReleaseEmitter(new AnimData("Bubble_Pop_Blue", 3));
@@ -3921,7 +3921,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
@@ -5621,11 +5621,11 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("=Magnitude");
                 skill.Desc = new LocalText("The user attacks everything around it with a ground-shaking quake. It does less damage to targets far away.");
-                skill.BaseCharges = 14;
+                skill.BaseCharges = 12;
                 skill.Data.Element = 11;
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(75));
+                skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.BeforeHits.Add(0, new DistanceDropEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
@@ -7937,7 +7937,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new StatusBattleEvent(55, false, true));
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2, 4));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
@@ -10342,7 +10342,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
@@ -10596,7 +10596,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(35));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(13, true, true, -1)));
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
@@ -11203,7 +11203,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new StatusStackBattleEvent(12, false, true, -2));
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
@@ -11370,7 +11370,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new StatusBattleEvent(55, false, true));
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
@@ -11481,7 +11481,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 skill.Strikes = 1;
@@ -12317,7 +12317,7 @@ namespace DataGenerator.Data
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
                 ((ThrowAction)skill.HitboxAction).Coverage = ThrowAction.ArcCoverage.WideAngle;
-                ((ThrowAction)skill.HitboxAction).Range = 4;
+                ((ThrowAction)skill.HitboxAction).Range = 3;
                 skill.HitboxAction.ActionFX.Emitter = new SingleEmitter(new AnimData("Leer", 2));
                 skill.HitboxAction.ActionFX.Sound = "DUN_Leer_2";
                 skill.HitboxAction.TargetAlignments = (Alignment.Friend | Alignment.Foe);
@@ -13798,7 +13798,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 70;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
-                skill.Data.SkillStates.Set(new AdditionalEffectState(50));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
                 skill.Data.OnActions.Add(0, new WeatherNeededEvent(1, new SetAccuracyEvent(-1)));
                 skill.Data.OnActions.Add(0, new WeatherNeededEvent(2, new SetAccuracyEvent(50)));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -14219,7 +14219,7 @@ namespace DataGenerator.Data
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
-                ((ProjectileAction)skill.HitboxAction).Range = 4;
+                ((ProjectileAction)skill.HitboxAction).Range = 2;
                 ((ProjectileAction)skill.HitboxAction).Speed = 10;
                 ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
                 ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
@@ -14623,11 +14623,11 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("-Fairy Wind");
                 skill.Desc = new LocalText("The user stirs up a fairy wind and strikes the target with it.");
-                skill.BaseCharges = 14;
+                skill.BaseCharges = 15;
                 skill.Data.Element = 05;
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(35));
+                skill.Data.SkillStates.Set(new BasePowerState(30));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();

@@ -182,13 +182,13 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0090-0000|data.Name		Fissure	Geofissur	Fissura	地裂	Abîme	Fisura	Abisso	땅가르기	じわれ	じわれ	地裂
 0090-0001|data.Desc		The user opens up a fissure in the ground and drops foes in. The target faints instantly if it hits.	Das Ziel wird in eine Erdspalte geworfen. Ist die Attacke erfolgreich, führt sie zu einem K.O.	O usuário abre uma fissura no chão, derrubando oponentes nela. Causa nocaute instantâneo, caso acerte.	让对手掉落于地裂的 裂缝中进行攻击。 只要命中就会一击濒死。	Le lanceur fait tomber l’ennemi dans une crevasse. Si cette attaque réussit, elle met K.O. sur le coup.	Abre una grieta en el suelo y mete al objetivo en ella.  Fulmina en un golpe.	Chi la usa crea una spaccatura nel terreno e cerca di gettarvici dentro il bersaglio. Se va a segno, il Pokémon colpito va KO.	땅이 갈라진 곳에 상대를 떨어뜨려 공격한다. 맞으면 일격에 기절한다.	じわれの　さけめに あいてを　おとして　こうげきする。 あたれば　いちげきで　ひんしに　する。	地割れの　裂け目に 相手を　落として　攻撃する。 当たれば　一撃で　ひんしに　する。	讓對手掉進地面的 裂縫中進行攻擊。 只要命中就會一擊瀕死。
 0091-0000|data.Name		Dig	Schaufler	Cavar	挖洞	Tunnel	Excavar	Fossa	구멍파기	あなをほる	あなをほる	挖洞
-0091-0001|data.Desc		The user burrows, then attacks any time in the next 5 turns.	Der Anwender gräbt sich ein und greift in den nächsten fünf Runden an.						땅에 파고든 뒤, 5턴 내에 공격한다.			
-0092-0000|data.Name		Toxic	Toxin		剧毒	Toxik	Tóxico	Tossina	맹독	どくどく	どくどく	劇毒
-0092-0001|data.Desc		A move that leaves the target badly poisoned. Its poison damage worsens every turn.	Vergiftet das Ziel mit einem potenten Toxin schwer. Vergiftung wird von Runde zu Runde stärker.		让对手陷入剧毒状态。 随着回合的推进， 中毒伤害会增加。	Empoisonne gravement l’ennemi. Les dégâts dus au poison augmentent à chaque tour.	Envenena gravemente al objetivo y causa un daño  mayor en cada turno.	Iperavvelena il bersaglio con una potente tossina. Il danno peggiora a ogni turno.	상대를 맹독의 상태로 만든다. 턴이 진행될수록 독의 데미지가 증가한다.	あいてを　もうどくの じょうたいに　する。ターンが　すすむほど どくの　ダメージが　ふえていく。	相手を　猛毒の　状態に　する。 ターンが　すすむほど 毒の　ダメージが　増えていく。	讓對手陷入劇毒狀態。 中毒傷害會隨著 回合的進行而增加。
-0093-0000|data.Name		Confusion	Konfusion		念力	Choc Mental	Confusión	Confusione	염동력	ねんりき	ねんりき	念力
-0093-0001|data.Desc		The target is hit by a weak telekinetic force. This may also confuse the target.	Das Ziel wird von schwacher telekinetischer Energie getroffen und eventuell verwirrt.		向对手发送 微弱的念力进行攻击。 有时会使对手混乱。	Une faible vague télékinétique frappe l’ennemi. Peut aussi le plonger dans la confusion.	Débil ataque telequinético que puede causar  confusión.	Colpisce il bersaglio con una leggera forza telecinetica e può anche confonderlo.	약한 염동력을 상대에게 보내어 공격한다. 상대를 혼란시킬 때가 있다.	よわい　ねんりきを あいてに　おくって　こうげきする。 あいてを　こんらん　させることが　ある。	弱い　念力を 相手に　送って　攻撃する。 相手を　混乱させることが　ある。	向對手發送 微弱的念力進行攻擊。 有時會使對手混亂。
-0094-0000|data.Name		Psychic	Psychokinese		精神强念	Psyko	Psíquico	Psichico	사이코키네시스	サイコキネシス	サイコキネシス	精神強念
-0094-0001|data.Desc		The target is hit by a strong telekinetic force. This may also lower the target's Sp. Def stat.	Starke Psycho-Attacke, welche eventuell die Spezial-Verteidigung des Zieles senkt.		向对手发送 强大的念力进行攻击。 有时会降低对手的特防。	Une puissante force télékinétique frappe l’ennemi. Peut aussi faire baisser sa Défense Spéciale.	Fuerte ataque telequinético que puede bajar la  Defensa Especial del objetivo.	Il bersaglio viene colpito da una potente forza telecinetica che può anche ridurne la Difesa Speciale.	강한 염동력을 상대에게 보내어 공격한다. 상대의 특수방어를 떨어뜨릴 때가 있다.	つよい　ねんりきを　あいてに　おくって こうげきする。あいての　とくぼうを さげることが　ある。	強い　念力を　相手に　送って 攻撃する。相手の　特防を さげることが　ある。	向對手發送 強大的念力進行攻擊。 有時會降低對手的特防。
+0091-0001|data.Desc		The user burrows, then attacks any time in the next 5 turns.	Der Anwender gräbt sich ein und greift in den nächsten fünf Runden an.	O usuário se esconde debaixo do solo, atacando a qualquer momento dentro dos próximos 5 turnos.					땅에 파고든 뒤, 5턴 내에 공격한다.			
+0092-0000|data.Name		Toxic	Toxin	Tóxico	剧毒	Toxik	Tóxico	Tossina	맹독	どくどく	どくどく	劇毒
+0092-0001|data.Desc		A move that leaves the target badly poisoned. Its poison damage worsens every turn.	Vergiftet das Ziel mit einem potenten Toxin schwer. Vergiftung wird von Runde zu Runde stärker.	Um golpe que deixa o alvo gravemente envenenado. O dano de veneno aumenta a cada turno.	让对手陷入剧毒状态。 随着回合的推进， 中毒伤害会增加。	Empoisonne gravement l’ennemi. Les dégâts dus au poison augmentent à chaque tour.	Envenena gravemente al objetivo y causa un daño  mayor en cada turno.	Iperavvelena il bersaglio con una potente tossina. Il danno peggiora a ogni turno.	상대를 맹독의 상태로 만든다. 턴이 진행될수록 독의 데미지가 증가한다.	あいてを　もうどくの じょうたいに　する。ターンが　すすむほど どくの　ダメージが　ふえていく。	相手を　猛毒の　状態に　する。 ターンが　すすむほど 毒の　ダメージが　増えていく。	讓對手陷入劇毒狀態。 中毒傷害會隨著 回合的進行而增加。
+0093-0000|data.Name		Confusion	Konfusion	Confusão	念力	Choc Mental	Confusión	Confusione	염동력	ねんりき	ねんりき	念力
+0093-0001|data.Desc		The target is hit by a weak telekinetic force. This may also confuse the target.	Das Ziel wird von schwacher telekinetischer Energie getroffen und eventuell verwirrt.	O alvo é atingido por uma onda telecinética fraca, que pode causar confusão.	向对手发送 微弱的念力进行攻击。 有时会使对手混乱。	Une faible vague télékinétique frappe l’ennemi. Peut aussi le plonger dans la confusion.	Débil ataque telequinético que puede causar  confusión.	Colpisce il bersaglio con una leggera forza telecinetica e può anche confonderlo.	약한 염동력을 상대에게 보내어 공격한다. 상대를 혼란시킬 때가 있다.	よわい　ねんりきを あいてに　おくって　こうげきする。 あいてを　こんらん　させることが　ある。	弱い　念力を 相手に　送って　攻撃する。 相手を　混乱させることが　ある。	向對手發送 微弱的念力進行攻擊。 有時會使對手混亂。
+0094-0000|data.Name		Psychic	Psychokinese	Psíquico	精神强念	Psyko	Psíquico	Psichico	사이코키네시스	サイコキネシス	サイコキネシス	精神強念
+0094-0001|data.Desc		The target is hit by a strong telekinetic force. This may also lower the target's Sp. Def stat.	Starke Psycho-Attacke, welche eventuell die Spezial-Verteidigung des Zieles senkt.	O alvo é atingido por uma onda telecinética forte, que pode reduzir a Defesa Especial do alvo.	向对手发送 强大的念力进行攻击。 有时会降低对手的特防。	Une puissante force télékinétique frappe l’ennemi. Peut aussi faire baisser sa Défense Spéciale.	Fuerte ataque telequinético que puede bajar la  Defensa Especial del objetivo.	Il bersaglio viene colpito da una potente forza telecinetica che può anche ridurne la Difesa Speciale.	강한 염동력을 상대에게 보내어 공격한다. 상대의 특수방어를 떨어뜨릴 때가 있다.	つよい　ねんりきを　あいてに　おくって こうげきする。あいての　とくぼうを さげることが　ある。	強い　念力を　相手に　送って 攻撃する。相手の　特防を さげることが　ある。	向對手發送 強大的念力進行攻擊。 有時會降低對手的特防。
 0095-0000|data.Name		Hypnosis	Hypnose		催眠术	Hypnose	Hipnosis	Ipnosi	최면술	さいみんじゅつ	さいみんじゅつ	催眠術
 0095-0001|data.Desc		The user employs hypnotic suggestion to make the target fall into a deep sleep.	Hypnose-Attacke, die das Ziel in Schlaf versetzt.		施以诱导睡意的暗示， 让对手陷入睡眠状态。	Le lanceur hypnotise l’ennemi pour le plonger dans un profond sommeil.	Ataque hipnótico que hace dormir profundamente al  objetivo.	Chi la usa si avvale della suggestione ipnotica per far addormentare il bersaglio.	졸음을 유도하는 암시를 걸어서 상대를 잠듦 상태로 만든다.	ねむけを　さそう　あんじを　かけて あいてを　ねむり　じょうたいに　する。	眠気を　誘う　暗示を　かけて 相手を　眠り状態に　する。	施加引發睡意的暗示， 讓對手陷入睡眠狀態。
 0096-0000|data.Name		Meditate	Meditation		瑜伽姿势	Yoga	Meditación	Meditazione	요가포즈	ヨガのポーズ	ヨガのポーズ	瑜伽姿勢
@@ -312,7 +312,7 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0155-0000|data.Name		Bonemerang	Knochmerang		骨头回力镖	Osmerang	Huesomerang	Ossomerang	뼈다귀부메랑	ホネブーメラン	ホネブーメラン	骨頭回力鏢
 0155-0001|data.Desc		The user throws the bone it holds. The bone loops to hit the target twice, coming and going.	Ein Bumerang aus Knochen, der zweimal trifft.		用手中的骨头投掷对手， 来回连续２次给予伤害。	Le lanceur projette son os comme un boomerang. Cette attaque frappe à l’aller et au retour.	Lanza un hueso a modo de bumerán que golpea dos  veces.	Chi la usa lancia l’osso che ha con sé. L’osso colpisce due volte e ritorna come un vero e proprio boomerang.	손에 들고 있는 뼈를 상대에게 날려서 날아갈 때와 돌아올 때 2회 연속 데미지를 준다.	てに　もった　ホネを　あいてに　なげつけ いきと　かえりで　２かい　れんぞくで ダメージを　あたえる。	手に　持った　ホネを　相手に　投げつけ 行きと　帰りの　２回連続で ダメージを　与える。	向對手投擲手中的骨頭， 來回連續２次給予傷害。
 0156-0000|data.Name		Rest	Erholung		睡觉	Repos	Descanso	Riposo	잠자기	ねむる	ねむる	睡覺
-0156-0001|data.Desc		The user goes to sleep for several turns. This fully restores the user's HP and heals any status conditions.										
+0156-0001|data.Desc		The user goes to sleep for several turns. This fully restores the user's HP and heals any status conditions.	Der Anwender schläft für mehrere Runden ein. Die KP werden vollständig wiederhergestellt und Statuseffekte werden aufgehoben.									
 0157-0000|data.Name		Rock Slide	Steinhagel		岩崩	Éboulement	Avalancha	Frana	스톤샤워	いわなだれ	いわなだれ	岩崩
 0157-0001|data.Desc		Large boulders are hurled at the opposing Pokémon to inflict damage. This may also make the target flinch.	Schleudert riesige Felsen auf Ziele in der Umgebung, die eventuell zurückschrecken.		将大岩石 猛烈地撞向对手进行攻击。 有时会使对手畏缩。	Envoie de gros rochers sur l’ennemi pour infliger des dégâts. Peut aussi l’apeurer.	Lanza grandes pedruscos. Puede hacer retroceder a  los rivales.	I nemici intorno a chi la usa vengono colpiti da grandi massi che possono anche farli tentennare.	큰 바위를 세차게 부딪쳐서 공격한다. 상대를 풀죽게 만들 때가 있다.	おおきな　いわを はげしく　ぶつけて　こうげきする。 あいてを　ひるませる　ことが　ある。	大きな　岩を 激しく　ぶつけて　攻撃する。 相手を　ひるませることが　ある。	將大岩石 猛烈地砸向對手進行攻擊。 有時會讓對手畏縮。
 0158-0000|data.Name		Hyper Fang	Hyperzahn		必杀门牙	Croc de Mort	Hipercolmillo	Iperzanna	필살앞니	ひっさつまえば	ひっさつまえば	必殺門牙
@@ -430,7 +430,7 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0214-0000|data.Name		Sleep Talk	Schlafrede		梦话	Blabla Dodo	Sonámbulo	Sonnolalia	잠꼬대	ねごと	ねごと	夢話
 0214-0001|data.Desc		While it is asleep, the user performs the strongest move it knows.	Anwender setzt die stärkste, ihm bekannte, Attacke im Schlaf ein.						자신이 배운 기술 중 가장 강한 하나를 날린다. 자신이 잠들어 있을 때만 쓸 수 있다.			
 0215-0000|data.Name		Heal Bell	Vitalglocke		治愈铃声	Glas de Soin	Campana Cura	Rintoccasana	치료방울	いやしのすず	いやしのすず	治癒鈴聲
-0215-0001|data.Desc		The user makes a soothing bell chime to heal the status conditions of all Pokémon.										
+0215-0001|data.Desc		The user makes a soothing bell chime to heal the status conditions of all Pokémon.	Läutet beruhigend und heilt alle Statusprobleme von nahen Verbündeten.									
 0216-0000|data.Name		Return	Rückkehr		报恩	Retour	Retribución	Ritorno	은혜갚기	おんがえし	おんがえし	報恩
 0216-0001|data.Desc		A full-power attack that grows more powerful the more allies there are nearby.	Angriff, dessen Kraft größer wird, je mehr Verbündete in der Nähe sind.						동료를 위해 전력으로 상대를 공격한다. 근처에 동료가 많을수록 위력이 올라간다.			
 0217-0000|data.Name		Present	Geschenk		礼物	Cadeau	Presente	Regalino	프레젠트	プレゼント	プレゼント	禮物
@@ -1041,7 +1041,7 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0519-0001|data.Desc		Whenever an enemy is attacked, the user follows up by striking the target with a column of fire.	Jedes Mal wenn ein Gegner angegriffen wird, schließt sich der Anwender dem Angriff mit einer Säule aus lodernden Flammen an.						상대가 공격받을 때마다 자신은 불의 기둥으로 연이어 공격한다.			
 0520-0000|data.Name		Grass Pledge	Pflanzsäulen		草之誓约	Aire d'Herbe	Voto Planta	Erbapatto	풀의맹세	くさのちかい	くさのちかい	草之誓約
 0520-0001|data.Desc		Whenever an enemy is attacked, the user follows up by striking the target with a column of grass.	Jedes Mal wenn ein Gegner angegriffen wird, schließt sich der Anwender dem Angriff mit einer Säule aus umherschlagenden Ranken an.						상대가 공격받을 때마다 자신은 풀의 기둥으로 연이어 공격한다.			
-0521-0000|data.Name		Volt Switch			伏特替换	Change Éclair	Voltiocambio	Invertivolt	볼트체인지	ボルトチェンジ	ボルトチェンジ	伏特替換
+0521-0000|data.Name		Volt Switch	Voltwechsel		伏特替换	Change Éclair	Voltiocambio	Invertivolt	볼트체인지	ボルトチェンジ	ボルトチェンジ	伏特替換
 0521-0001|data.Desc		After making its attack, the user rushes back several steps.	Nachdem der Anwender seine Attacke durchgeführt hat, springt er mehrere Schritte zurück.						공격한 뒤 빠르게 뒷걸음질친다.			
 0522-0000|data.Name		Struggle Bug	Käfertrutz		虫之抵抗	Survinsecte	Estoicismo	Entomoblocco	벌레의저항	むしのていこう	むしのていこう	蟲之抵抗
 0522-0001|data.Desc		While resisting, the user attacks the opposing Pokémon. This lowers the Sp. Atk stat of those hit.	Anwender leistet Widerstand und greift an. Der Spezial-Angriff der Ziele sinkt.		抵抗并攻击对手。 降低对手的特攻。	Le lanceur se débat de toutes ses forces, et baisse l’Attaque Spéciale de l’ennemi.	El usuario opone resistencia y ataca a los oponentes.  También reduce su Ataque Especial.	Colpisce i nemici intorno opponendo resistenza e riducendo il loro Attacco Speciale.	저항해서 상대를 공격한다. 맞은 상대의 특수공격을 떨어뜨린다.	ていこう　して　あいてを　こうげきする。 あいての　とくこうを　さげる。	抵抗して　相手を　攻撃する。 相手の　特攻を　さげる。	抵抗對手進行攻擊。 可降低對手的特攻。
@@ -1092,7 +1092,7 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0545-0000|data.Name		Searing Shot	Flammenball		火焰弹	Incendie	Bomba Ígnea	Sparafuoco	화염탄	かえんだん	かえんだん	火焰彈
 0545-0001|data.Desc		The user torches everything around it with an inferno of scarlet flames. This may also leave those hit with a burn.	Greift alles in seiner Umgebung mit tiefroten Flammen an. Ziel kann Verbrennungen erleiden.		用熊熊烈火 攻击自己周围所有的宝可梦。 有时会陷入灼伤状态。	Des boules de feu s’abattent sur tous les Pokémon  autour du lanceur. Peut aussi les brûler.	Un infierno de llamas daña a los Pokémon adyacentes  en combate. Puede quemar.	Chi la usa lancia fiamme scarlatte su tutti i Pokémon  nelle vicinanze, danneggiandoli. Può anche scottarli.	새빨간 불꽃으로 자신의 주위에 있는 포켓몬을 공격한다. 화상 상태로 만들 때가 있다.	まっかな　ほのおで　じぶんの まわりに　いるものを　こうげきする。 やけど　じょうたいに　することが　ある。	真っ赤な　炎で　自分の 周りに　いるものを　攻撃する。 やけど状態に　することが　ある。	用熊熊烈火 攻擊自己周圍所有的寶可夢。 有時會讓對手陷入灼傷狀態。
 0546-0000|data.Name		Techno Blast	Techblaster		高科技光炮	TechnoBuster	Tecno Shock	Tecnobotto	테크노버스터	テクノバスター	テクノバスター	高科技光炮
-0546-0001|data.Desc		The user fires a beam of light at its target. The move's type changes depending on the form the user is in.										
+0546-0001|data.Desc		The user fires a beam of light at its target. The move's type changes depending on the form the user is in.	Der Anwender feuert einen Lichtstrahl auf das Ziel. Der Typ des Angriffs ändert sich je nach Form des Anwenders.									
 0547-0000|data.Name		Relic Song	Urgesang		古老之歌	Chant Antique	Canto Arcaico	Cantoantico	옛노래	いにしえのうた	いにしえのうた	古老之歌
 0547-0001|data.Desc		The user sings an ancient song and attacks by appealing to the hearts of the listening opposing Pokémon. This may also induce sleep.	Anwender greift mit Urgesang an, der Ziele in der Nähe im tiefsten Inneren anspricht. Diese schlafen eventuell ein.		让对手听古老之歌， 打动对手的内心进行攻击。 有时会让对手陷入睡眠状态。	Le lanceur attaque l’ennemi en lui chantant une chanson d’un autre temps. Peut l’endormir.	Ataca conmoviendo a los rivales de alrededor con  un antiguo canto. Puede dormirlos.	Chi la usa attacca i nemici intorno a sé intonando un’antica melodia che colpisce il loro spirito. Può anche farli addormentare.	옛 노래를 상대에게 들려주고 마음에 호소하여 공격한다. 잠듦 상태로 만들 때가 있다.	いにしえのうたを　あいてに　きかせて こころに　うったえて　こうげきする。 ねむり　じょうたいに　することが　ある。	いにしえのうたを　相手に　聞かせて 心に　うったえて　攻撃する。 眠り状態に　することが　ある。	唱出古老之歌， 打動對手的心進行攻擊。 有時會讓對手陷入睡眠狀態。
 0548-0000|data.Name		Secret Sword	Mystoschwert		神秘之剑	Lame Ointe	Sable Místico	Spadamistica	신비의칼	しんぴのつるぎ	しんぴのつるぎ	神秘之劍
@@ -1174,11 +1174,11 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0586-0000|data.Name		Boomburst	Überschallknall		爆音波	Bang Sonique	Estruendo	Ondaboato	폭음파	ばくおんぱ	ばくおんぱ	爆音波
 0586-0001|data.Desc		The user attacks everything around it with the destructive power of a terrible, explosive sound.	Der Anwender greift alle Pokémon in der Umgebung mit einem gewaltigen Knall an.		通过震耳欲聋的爆炸声 产生的破坏力， 攻击自己周围所有的宝可梦。	Attaque les Pokémon alentour grâce à une onde sonore assourdissante qui détruit tout sur son passage.	Ataca a todos los Pokémon a su alrededor con una  potentísima onda sonora.	Colpisce i Pokémon che ha intorno con la forza di un boato distruttivo.	무시무시한 폭음의 파괴력으로 주위에 있는 포켓몬을 공격한다.	すさまじい　ばくおんの はかいりょくに　よって まわりに　いるものを　こうげきする。	すさまじい　爆音の 破壊力に　よって 周りに　いるものを　攻撃する。	利用震耳欲聾的爆炸聲 所產生的破壞力， 攻擊自己周圍所有的寶可夢。
 0587-0000|data.Name		Fairy Lock	Feenschloss		妖精之锁	Verrou Enchanté	Cerrojo Feérico	Blocco Fatato	페어리록	フェアリーロック	フェアリーロック	妖精之鎖
-0587-0001|data.Desc		By locking down the battlefield, the user immobilizes all other Pokémon in the area.										
+0587-0001|data.Desc		By locking down the battlefield, the user immobilizes all other Pokémon in the area.	Der Anwender sperrt alle Pokémon in der Nähe ein und immobilisiert sie.									
 0588-0000|data.Name		King's Shield	Königsschild		王者盾牌	Bouclier Royal	Escudo Real	Scudo Reale	킹실드	キングシールド	キングシールド	王者盾牌
 0588-0001|data.Desc		The user takes a defensive stance while it protects itself from damage. It also harshly lowers the Attack stat of any attacker who makes direct contact.	Der Anwender geht in die Defensive und wird vor Angriffen geschützt. Berührt ihn nun ein Pokémon, sinkt dessen Angriffs-Wert stark.		防住对手攻击的同时， 自己变为防御姿态。 大幅降低所接触到的对手的攻击。	Prend une posture défensive pour bloquer les dégâts. Diminue fortement l’Attaque de tout Pokémon qui entre en contact avec le lanceur.	Asume una estrategia defensiva a la par que se  protege de cualquier daño. Disminuye mucho  el Ataque de cualquier Pokémon que lo toque.	Chi la usa si protegge, assumendo una posizione di difesa e riducendo di molto l’Attacco di nemici o alleati con cui entra in contatto.	상대의 공격을 막음과 동시에 방어 태세를 갖춘다. 접촉한 상대의 공격을 크게 떨어뜨린다.	あいての　こうげきを　ふせぐと　どうじに ぼうぎょたいせいになる。　ふれた あいての　こうげきを　がくっと　さげる。	相手の　攻撃を　防ぐと　同時に 防御態勢になる。　触れた 相手の　攻撃を　がくっと　さげる。	防禦來自對手的攻擊， 同時讓自己變形成盾牌型態。 讓接觸到自己的對手攻擊大幅降低。
 0589-0000|data.Name		Play Nice	Kameradschaft		和睦相处	Camaraderie	Camaradería	Simpatia	친해지기	なかよくする	なかよくする	和睦相處
-0589-0001|data.Desc		The user and the target become friends, and the target loses its will to fight. This lowers the target's Sp. Atk stat.										
+0589-0001|data.Desc		The user and the target become friends, and the target loses its will to fight. This lowers the target's Sp. Atk stat.	Der Anwender und das Ziel werdem Freunde und nimmt ihm seine Angriffslust. Der Spezial-Angriff des Zieles sinkt.									
 0590-0000|data.Name		Confide	Vertrauenssache		密语	Confidence	Confidencia	Confidenza	비밀이야기	ないしょばなし	ないしょばなし	密語
 0590-0001|data.Desc		The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.	Der Anwender vertraut dem Ziel ein Geheimnis an und stört auf diese Weise seine Konzentration. Der Spezial-Angriff des Zieles sinkt.		和对手进行密语， 使其失去集中力， 从而降低对手的特攻。	Dévoile des secrets à l’ennemi qui perd sa concentration et voit son Attaque Spéciale diminuer.	Hace que el objetivo pierda la concentración  contándole un secreto. Disminuye el Ataque Especial del oponente.	Chi la usa svela dei segreti al bersaglio, distraendolo e riducendone l’Attacco Speciale.	비밀 이야기를 하면서 상대의 집중력을 잃게 하여 상대의 특수공격을 떨어뜨린다.	ないしょばなしを　することで　あいての しゅうちゅうりょくを　うしなわせ あいての　とくこうを　さげる。	ないしょばなしを　することで　相手の 集中力を　失わせ 相手の　特攻を　さげる。	向對手低聲密語， 使對手失去集中力， 降低對手的特攻。
 0591-0000|data.Name		Diamond Storm	Diamantsturm		钻石风暴	Orage Adamantin	Torm. Diamantes	Diamantempesta	다이아스톰	ダイヤストーム	ダイヤストーム	鑽石風暴
@@ -1569,7 +1569,7 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0783-0001|data.Desc												
 0784-0000|data.Name		Breaking Swipe	Breitseite		廣域破壞	Abattage	Vasto Impacto	Vastoimpatto	와이드브레이커	ワイドブレイカー	ワイドブレイカー	廣域破壞
 0784-0001|data.Desc												
-0785-0000|data.Name		Branch Poke										
+0785-0000|data.Name		Branch Poke	Zweigstoß									
 0785-0001|data.Desc												
 0786-0000|data.Name		Overdrive	Overdrive		破音	Overdrive	Amplificador	Overdrive	오버드라이브	オーバードライブ	オーバードライブ	破音
 0786-0001|data.Desc												
@@ -1593,63 +1593,63 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0795-0001|data.Desc												
 0796-0000|data.Name		Steel Beam	Stahlstrahl		鐵蹄光線	Métalaser	Metaláser	Raggio d'Acciaio	철제광선	てっていこうせん	てっていこうせん	鐵蹄光線
 0796-0001|data.Desc												
-0797-0000|data.Name		Expanding Force				Vaste Pouvoir	Vasta Fuerza		와이드포스			
+0797-0000|data.Name		Expanding Force	Flächenmacht			Vaste Pouvoir	Vasta Fuerza		와이드포스			
 0797-0001|data.Desc												
-0798-0000|data.Name		Steel Roller				Métalliroue	Allanador Férreo		아이언롤러			
+0798-0000|data.Name		Steel Roller	Eisenwalze			Métalliroue	Allanador Férreo		아이언롤러			
 0798-0001|data.Desc												
-0799-0000|data.Name		Scale Shot				Rafale Écailles	Ráfaga Escamas		스케일샷			
+0799-0000|data.Name		Scale Shot	Schuppenschuss			Rafale Écailles	Ráfaga Escamas		스케일샷			
 0799-0001|data.Desc												
-0800-0000|data.Name		Meteor Beam				Laser Météore	Rayo Meteórico		메테오빔			
+0800-0000|data.Name		Meteor Beam	Meteorstrahl			Laser Météore	Rayo Meteórico		메테오빔			
 0800-0001|data.Desc												
-0801-0000|data.Name		Shell Side Arm				Kokiyarme	Moluscañón		셸암즈			
+0801-0000|data.Name		Shell Side Arm	Muschelwaffe			Kokiyarme	Moluscañón		셸암즈			
 0801-0001|data.Desc												
-0802-0000|data.Name		Misty Explosion				Explo-Brume	Bruma Explosiva		미스트버스트			
+0802-0000|data.Name		Misty Explosion	Nebelexplosion			Explo-Brume	Bruma Explosiva		미스트버스트			
 0802-0001|data.Desc												
-0803-0000|data.Name		Grassy Glide				Gliss'Herbe	Fitoimpulso		﻿그래스슬라이더			
+0803-0000|data.Name		Grassy Glide	Graßrutsche			Gliss'Herbe	Fitoimpulso		﻿그래스슬라이더			
 0803-0001|data.Desc												
-0804-0000|data.Name		Rising Voltage				Monte-Tension	Alto Voltaje		라이징볼트			
+0804-0000|data.Name		Rising Voltage	Hochspannung			Monte-Tension	Alto Voltaje		라이징볼트			
 0804-0001|data.Desc												
-0805-0000|data.Name		Terrain Pulse				Champlification	Pulso de Campo		대지의파동			
+0805-0000|data.Name		Terrain Pulse	Feldimpuls			Champlification	Pulso de Campo		대지의파동			
 0805-0001|data.Desc												
-0806-0000|data.Name		Skitter Smack				Ravage Rampant	Golpe Rastrero		엄습하는일격			
+0806-0000|data.Name		Skitter Smack	Krabbelkracher			Ravage Rampant	Golpe Rastrero		엄습하는일격			
 0806-0001|data.Desc												
-0807-0000|data.Name		Burning Jealousy				Feu Envieux	Envidia Ardiente		질투의불꽃			
+0807-0000|data.Name		Burning Jealousy	Neidflammen			Feu Envieux	Envidia Ardiente		질투의불꽃			
 0807-0001|data.Desc												
-0808-0000|data.Name		Lash Out				Cent Rancunes	Desahogo		분풀이			
+0808-0000|data.Name		Lash Out	Frustventil			Cent Rancunes	Desahogo		분풀이			
 0808-0001|data.Desc												
-0809-0000|data.Name		Poltergeist				Esprit Frappeur	Poltergeist		폴터가이스트			
+0809-0000|data.Name		Poltergeist	Poltergeist			Esprit Frappeur	Poltergeist		폴터가이스트			
 0809-0001|data.Desc												
-0810-0000|data.Name		Corrosive Gas				Gaz Corrosif	Gas Corrosivo		부식가스			
+0810-0000|data.Name		Corrosive Gas	Korrosionsgas			Gaz Corrosif	Gas Corrosivo		부식가스			
 0810-0001|data.Desc												
-0811-0000|data.Name		Coaching				Coaching	Motivación		코칭			
+0811-0000|data.Name		Coaching	Coaching			Coaching	Motivación		코칭			
 0811-0001|data.Desc												
-0812-0000|data.Name		Flip Turn				Eau Revoir	Viraje		퀵턴			
+0812-0000|data.Name		Flip Turn	Rollwende			Eau Revoir	Viraje		퀵턴			
 0812-0001|data.Desc												
-0813-0000|data.Name		Triple Axel				Triple Axel	Triple Axel		트리플악셀			
+0813-0000|data.Name		Triple Axel	Dreifach-Axel			Triple Axel	Triple Axel		트리플악셀			
 0813-0001|data.Desc												
-0814-0000|data.Name		Dual Wingbeat				Double Volée	Ala Bis		더블윙			
+0814-0000|data.Name		Dual Wingbeat	Doppelflügel			Double Volée	Ala Bis		더블윙			
 0814-0001|data.Desc												
-0815-0000|data.Name		Scorching Sands				Sable Ardent	Arenas Ardientes		열사의대지t			
+0815-0000|data.Name		Scorching Sands	Brandsand			Sable Ardent	Arenas Ardientes		열사의대지t			
 0815-0001|data.Desc												
-0816-0000|data.Name		Jungle Healing				Selve Salvatrice	Cura Selvática		정글힐			
+0816-0000|data.Name		Jungle Healing	Dschungelheilung			Selve Salvatrice	Cura Selvática		정글힐			
 0816-0001|data.Desc												
-0817-0000|data.Name		Wicked Blow				Poing Obscur	Golpe Oscuro		암흑강타			
+0817-0000|data.Name		Wicked Blow	Finstertreffer			Poing Obscur	Golpe Oscuro		암흑강타			
 0817-0001|data.Desc												
-0818-0000|data.Name		Surging Strikes				Torrent de Coups	Azote Torrencial		수류연타			
+0818-0000|data.Name		Surging Strikes	Trefferschwall			Torrent de Coups	Azote Torrencial		수류연타			
 0818-0001|data.Desc												
-0819-0000|data.Name		Thunder Cage				Voltageôle	Electrojaula		썬더프리즌			
+0819-0000|data.Name		Thunder Cage	Blitzgefängnis			Voltageôle	Electrojaula		썬더프리즌			
 0819-0001|data.Desc												
-0820-0000|data.Name		Dragon Energy				Draco-Énergie	Dracoenergía		드래곤에너지			
+0820-0000|data.Name		Dragon Energy	Drachenkräfte			Draco-Énergie	Dracoenergía		드래곤에너지			
 0820-0001|data.Desc												
-0821-0000|data.Name		Freezing Glare				Regard Glaçant	Mirada Heladora		얼어붙는시선			
+0821-0000|data.Name		Freezing Glare	Eisiger Blick			Regard Glaçant	Mirada Heladora		얼어붙는시선			
 0821-0001|data.Desc												
-0822-0000|data.Name		Fiery Wrath				Fureur Ardente	Furia Candente		타오르는분노			
+0822-0000|data.Name		Fiery Wrath	Brennender Zorn			Fureur Ardente	Furia Candente		타오르는분노			
 0822-0001|data.Desc												
-0823-0000|data.Name		Thunderous Kick				Coup Fulgurant	Patada Relámpago		천둥차기			
+0823-0000|data.Name		Thunderous Kick	Donnernder Tritt			Coup Fulgurant	Patada Relámpago		천둥차기			
 0823-0001|data.Desc												
-0824-0000|data.Name		Glacial Lance				Lance de Glace	Lanza Glacial		블리자드랜스			
+0824-0000|data.Name		Glacial Lance	Blizzardlanze			Lance de Glace	Lanza Glacial		블리자드랜스			
 0824-0001|data.Desc												
-0825-0000|data.Name		Astral Barrage				Éclat Spectral	Orbes Espectro		아스트랄비트			
+0825-0000|data.Name		Astral Barrage	Astralfragmente			Éclat Spectral	Orbes Espectro		아스트랄비트			
 0825-0001|data.Desc												
-0826-0000|data.Name		Eerie Spell				Sort Sinistre	Conjuro Funesto		섬뜩한주문			
+0826-0000|data.Name		Eerie Spell	Schauderspruch			Sort Sinistre	Conjuro Funesto		섬뜩한주문			
 0826-0001|data.Desc												

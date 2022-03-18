@@ -618,7 +618,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Vile Seed");
                 item.Desc = new LocalText("A seed that drastically lowers the Pokémon's Defense and Special Defense.");
                 item.Sprite = "Seed_DarkBlue";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, -3));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, -3));
                 item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(13, true, false, -3));
             }
             else if (ii == 112)
@@ -646,7 +646,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new LevelDamageEvent(false, 2, 1));
-                newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                 item.UseEvent.OnHits.Add(0, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey()));
@@ -671,7 +671,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A seed that freezes the Pokémon for many turns.");
                 item.Sprite = "Seed_Blue";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
-                statusStates.Set(new CountDownState(20));
+                statusStates.Set(new CountDownState(30));
                 item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(3, true, false, statusStates));
             }
             else if (ii == 116)
@@ -1127,54 +1127,56 @@ namespace DataGenerator.Data
             else if (ii == 200)
             {
                 item.Name = new LocalText("Stick");
-                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. Critical hits land more easily.");
+                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. It causes the target to flinch.");
                 item.Sprite = "Stick_Brown";
                 item.Icon = 1;
                 item.ThrowAnim = new AnimData("Thorn_Brown", 60);
                 item.Price = 1;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(40));
-                item.UseEvent.OnActions.Add(0, new BoostCriticalEvent(2));
+                item.UseEvent.SkillStates.Set(new BasePowerState(50));
+                item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(8, true, true)));
             }
             else if (ii == 201)
             {
                 item.Name = new LocalText("Cacnea Spike");
-                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage and may lower the Attack of any Pokémon it hits.");
+                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Attack of any Pokémon it hits.");
                 item.Sprite = "Stick_Green";
                 item.Icon = 1;
                 item.ThrowAnim = new AnimData("Thorn_Green", 60);
                 item.Price = 2;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(30));
-                item.UseEvent.SkillStates.Set(new AdditionalEffectState(50));
+                item.UseEvent.SkillStates.Set(new BasePowerState(50));
+                item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
-                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(10, true, true, -1)));
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(10, true, true, -2)));
             }
             else if (ii == 202)
             {
                 item.Name = new LocalText("Corsola Twig");
-                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage and may lower the Sp.Atk of any Pokémon it hits.");
+                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Sp.Atk of any Pokémon it hits.");
                 item.Sprite = "Stick_Pink";
                 item.Icon = 1;
                 item.ThrowAnim = new AnimData("Thorn_Pink", 60);
                 item.Price = 2;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(30));
+                item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
-                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(12, true, true, -1)));
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(12, true, true, -2)));
             }
             else if (ii == 203)
             {
                 item.Name = new LocalText("Iron Thorn");
-                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict heavy damage on any Pokémon it hits.");
+                item.Desc = new LocalText("A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. Critical hits land more easily.");
                 item.Sprite = "Stick_DarkBlue";
                 item.Icon = 1;
                 item.ThrowAnim = new AnimData("Thorn_Gray", 60);
                 item.Price = 2;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(60));
+                item.UseEvent.SkillStates.Set(new BasePowerState(70));
+                item.UseEvent.OnActions.Add(0, new BoostCriticalEvent(2));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
             }
             else if (ii == 204)
@@ -1213,7 +1215,7 @@ namespace DataGenerator.Data
                 item.Price = 50;
                 item.ArcThrow = true;
                 item.UseEvent.Category = BattleData.SkillCategory.Magical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(40));
+                item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
 
                 item.Explosion = new ExplosionData();
@@ -1232,14 +1234,16 @@ namespace DataGenerator.Data
             else if (ii == 207)
             {
                 item.Name = new LocalText("Geo Pebble");
-                item.Desc = new LocalText("A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target.");
+                item.Desc = new LocalText("A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target. It causes the target to flinch.");
                 item.Sprite = "Rock_Gray";
                 item.Icon = 0;
                 item.Price = 1;
                 item.ArcThrow = true;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
                 item.UseEvent.SkillStates.Set(new BasePowerState(50));
+                item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(8, true, true)));
                 item.Explosion = new ExplosionData();
                 item.Explosion.TargetAlignments |= Alignment.Foe;
             }
@@ -1252,7 +1256,7 @@ namespace DataGenerator.Data
                 item.Price = 3;
                 item.ArcThrow = true;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(40));
+                item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
 
                 item.Explosion = new ExplosionData();
@@ -1435,7 +1439,7 @@ namespace DataGenerator.Data
                 item.UseAction.PreActions.Add(itemFX);
                 item.UseAction.ActionFX.Sound = "DUN_Blowback_Orb";
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_Out", 2));
-                item.UseEvent.OnHitTiles.Add(0, new PounceEvent());
+                item.UseEvent.OnHitTiles.Add(0, new PounceEvent(1));
             }
             else if (ii == 222)
             {
@@ -1491,7 +1495,9 @@ namespace DataGenerator.Data
                 item.Sprite = "Wand_Orange";
                 item.Price = 5;
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_Out", 2));
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(8, true, false));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(4));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(8, true, false, statusStates));
             }
             else if (ii == 229)
             {
@@ -1759,7 +1765,7 @@ namespace DataGenerator.Data
             {
                 item.Name = new LocalText("One-Shot Orb");
                 item.Desc = new LocalText("An orb that causes the target to instantly faint, if it hits. It affects all enemies up to 5 tiles away.");
-                item.UseEvent.HitRate = 30;
+                item.UseEvent.HitRate = 0;
                 item.Sprite = "Orb_Purple";
                 item.UseEvent.OnHits.Add(-1, new OHKODamageEvent());
                 item.UseAction = new AreaAction();
@@ -1865,7 +1871,9 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Slumber Orb");
                 item.Desc = new LocalText("An orb that puts all enemies to sleep. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_Pink";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(1, true, false));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(15));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(1, true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1884,7 +1892,9 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Totter Orb");
                 item.Desc = new LocalText("An orb that confuses all enemies. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_Tan";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(7, true, false));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(15));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(7, true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1904,7 +1914,9 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Petrify Orb");
                 item.Desc = new LocalText("An orb that paralyzes all enemies. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_Tan";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(4, true, false));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(11));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(4, true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1920,7 +1932,9 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Freeze Orb");
                 item.Desc = new LocalText("An orb that freezes all enemies. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_LightBlue";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(3, true, false));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(20));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(3, true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1980,9 +1994,9 @@ namespace DataGenerator.Data
             else if (ii == 278)
             {
                 item.Name = new LocalText("All-Dodge Orb");
-                item.Desc = new LocalText("An orb that sharply boosts Evasion. It affects team members up to 5 tiles away.");
+                item.Desc = new LocalText("An orb that drastically boosts Evasion. It affects team members up to 5 tiles away.");
                 item.Sprite = "Orb_Yellow";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(15, true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(15, true, false, 6));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -2239,6 +2253,14 @@ namespace DataGenerator.Data
                 item.Sprite = "Box_Tan";
                 item.Price = 200;
                 item.BeforeStatusAdds.Add(0, new PreventStatusCheck(90, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(19, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(20, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(44, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(45, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(46, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(58, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(103, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(104, new StringKey("MSG_SHED_SHELL")));
             }
             else if (ii == 312)
             {
@@ -2845,7 +2867,12 @@ namespace DataGenerator.Data
             }
             else if (ii == 392)
             {
-
+                item.Name = new LocalText("Blank Plate");
+                item.Desc = new LocalText("An item to be held by a Pokémon. It's a stone tablet that halves the damage of Normal-type moves.");
+                item.Sprite = "Slab_Gray";
+                item.Price = 250;
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(13, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 393)
             {

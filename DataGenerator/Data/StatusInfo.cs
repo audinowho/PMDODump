@@ -1542,6 +1542,9 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MOBILE_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MOBILE_END")));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Block));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Water));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Lava));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Abyss));
             }
             else if (ii == 93)
             {
@@ -1684,7 +1687,7 @@ namespace DataGenerator.Data
                 SingleEmitter targetEmitter = new SingleEmitter(new AnimData("Hit_Neutral", 3));
                 status.AfterBeingHits.Add(0, new CounterCategoryEvent(BattleData.SkillCategory.None, 1, 1, new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 10), new BattleAnimEvent(targetEmitter, "DUN_Hit_Neutral", false)));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
-                status.StatusStates.Set(new CountDownState(25));
+                status.StatusStates.Set(new CountDownState(50));
             }
             else if (ii == 101)
             {
@@ -2111,7 +2114,7 @@ namespace DataGenerator.Data
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                    newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                    newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                     status.OnActions.Add(0, new ElementNeededEvent(07, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
@@ -2134,7 +2137,7 @@ namespace DataGenerator.Data
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                    newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                    newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                     status.OnActions.Add(0, new ElementNeededEvent(04, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
@@ -2159,7 +2162,7 @@ namespace DataGenerator.Data
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                    newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                    newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                     status.AfterBeingHits.Add(0, new ElementNeededEvent(07, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
@@ -2183,7 +2186,7 @@ namespace DataGenerator.Data
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                    newData.OnHitTiles.Add(0, new RemoveItemEvent());
+                    newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
                     status.AfterBeingHits.Add(0, new ElementNeededEvent(04, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }

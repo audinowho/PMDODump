@@ -382,6 +382,20 @@ namespace DataGenerator.Data
                             randomSpawn.Ally = true;
                             npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
                         }
+                        //Song
+                        {
+                            PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
+                            MobSpawn post_mob = new MobSpawn();
+                            post_mob.BaseForm = new MonsterID(294, 0, 0, Gender.Male);
+                            post_mob.Tactic = 22;
+                            post_mob.Level = new RandRange(21);
+                            post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_FADED"))));
+                            SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                            multiTeamSpawner.Spawns.Add(post_team);
+                            PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
+                            randomSpawn.Ally = true;
+                            npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                        }
                         //Aipom and wonder tiles
                         {
                             PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
@@ -4083,7 +4097,7 @@ namespace DataGenerator.Data
                     zone.Rescues = 2;
                     zone.Level = 25;
                     zone.LevelCap = true;
-                    zone.BagRestrict = 8;
+                    zone.BagRestrict = 16;
                     zone.TeamSize = 3;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -4427,8 +4441,8 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob(37, -1, 506, 261, -1, -1, new RandRange(30)), new IntRange(5, 10), 10);
                     // 15 Beedrill : 390 Toxic Spikes : 41 Twineedle
                     poolSpawn.Spawns.Add(GetTeamMob(15, -1, 390, 41, -1, -1, new RandRange(35)), new IntRange(10, max_floors), 10);
-                    // 12 Butterfree : 14 Compound Eyes : 78 Stun Spore : 79 Sleep powder : 77 Poison powder : 318 Silver Wind
-                    poolSpawn.Spawns.Add(GetTeamMob(12, 14, 78, 79, 77, 318, new RandRange(25)), new IntRange(0, 5), 10);
+                    // 12 Butterfree : 14 Compound Eyes : 78 Stun Spore : 79 Sleep powder : 77 Poison powder : 093 Confusion
+                    poolSpawn.Spawns.Add(GetTeamMob(12, 14, 78, 79, 77, 93, new RandRange(25)), new IntRange(0, 5), 10);
                     // 198 Murkrow : 228 Pursuit : 372 Assurance
                     poolSpawn.Spawns.Add(GetTeamMob(198, -1, 228, 372, -1, -1, new RandRange(25)), new IntRange(0, 5), 10);
                     poolSpawn.Spawns.Add(GetTeamMob(198, -1, 228, 372, -1, -1, new RandRange(30)), new IntRange(5, 10), 10);

@@ -1,24 +1,33 @@
 #!/bin/bash
 
 rm -rf PMDC/RogueEssence/publish/win-x64/
+rm -rf PMDC/RogueEssence/publish/win-x86/
 rm -rf PMDC/RogueEssence/publish/linux-x64/
 rm -rf PMDC/RogueEssence/publish/osx-x64/
 rm -rf PMDC/publish/win-x64/
+rm -rf PMDC/publish/win-x86/
 rm -rf PMDC/publish/linux-x64/
 rm -rf PMDC/publish/osx-x64/
 dotnet publish -c Release -r win-x64 PMDC/PMDC/PMDC.csproj
+dotnet publish -c Release -r win-x86 PMDC/PMDC/PMDC.csproj
 dotnet publish -c Release -r linux-x64 PMDC/PMDC/PMDC.csproj
 dotnet publish -c Release -r osx-x64 PMDC/PMDC/PMDC.csproj
 dotnet publish -c Release -r win-x64 PMDC/RogueEssence/WaypointServer/WaypointServer.csproj
+dotnet publish -c Release -r win-x86 PMDC/RogueEssence/WaypointServer/WaypointServer.csproj
 dotnet publish -c Release -r linux-x64 PMDC/RogueEssence/WaypointServer/WaypointServer.csproj
 dotnet publish -c Release -r osx-x64 PMDC/RogueEssence/WaypointServer/WaypointServer.csproj
 mv PMDC/RogueEssence/publish/win-x64/WaypointServer/ PMDC/publish/win-x64/
+mv PMDC/RogueEssence/publish/win-x86/WaypointServer/ PMDC/publish/win-x86/
 mv PMDC/RogueEssence/publish/linux-x64/WaypointServer/ PMDC/publish/linux-x64/
 mv PMDC/RogueEssence/publish/osx-x64/WaypointServer.app/ PMDC/publish/osx-x64/
 cd PMDC/publish/win-x64/
 mv PMDC/PMDC.exe PMDC/PMDO.exe
 mv PMDC/ PMDO/
 zip -r windows-x64.zip PMDO/ WaypointServer/
+cd ../win-x86/
+mv PMDC/PMDC.exe PMDC/PMDO.exe
+mv PMDC/ PMDO/
+zip -r windows-x86.zip PMDO/ WaypointServer/
 cd ../linux-x64/
 mv PMDC/PMDC PMDC/PMDO
 mv PMDC/ PMDO/
