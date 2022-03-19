@@ -45,7 +45,7 @@ namespace DataGenerator.Data
             tactic.ID = 2;
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner | AIFlags.PlayerSense;
             tactic.Plans.Add(new AttackFoesPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.SmartAttack, AIPlan.PositionChoice.Avoid));
-            tactic.Plans.Add(new AvoidAlliesPlan(iq | AIFlags.TrapAvoider));//if cornered, don't do anything
+            //tactic.Plans.Add(new AvoidAlliesPlan(iq | AIFlags.TrapAvoider));//if cornered, don't do anything
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
