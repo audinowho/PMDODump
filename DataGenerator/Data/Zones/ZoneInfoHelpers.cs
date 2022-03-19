@@ -546,7 +546,6 @@ namespace DataGenerator.Data
             spawnBoost.SpDefBonus = MonsterFormData.MAX_STAT_BOOST;
             spawnBoost.SpeedBonus = MonsterFormData.MAX_STAT_BOOST;
             spawnBoost.MaxHPBonus = MonsterFormData.MAX_STAT_BOOST;
-            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
             post_mob.SpawnFeatures.Add(new MobSpawnInv(false, items));
             post_mob.SpawnFeatures.Add(spawnBoost);
             if (keeperId > -1)

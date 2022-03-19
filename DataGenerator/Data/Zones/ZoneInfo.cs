@@ -119,9 +119,9 @@ namespace DataGenerator.Data
                         post_mob.BaseForm = new MonsterID(113, 0, 0, Gender.Female);
                         post_mob.Tactic = 22;
                         post_mob.Level = new RandRange(12);
-                        post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_NEUTRAL"))));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                        post_team.Explorer = true;
                         multiTeamSpawner.Spawns.Add(post_team);
                         PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
                         randomSpawn.Ally = true;
@@ -134,9 +134,9 @@ namespace DataGenerator.Data
                         post_mob.BaseForm = new MonsterID(27, 0, 0, Gender.Male);
                         post_mob.Tactic = 21;
                         post_mob.Level = new RandRange(14);
-                        post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_EXP"))));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                        post_team.Explorer = true;
                         multiTeamSpawner.Spawns.Add(post_team);
                         PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
                         randomSpawn.Ally = true;
@@ -377,9 +377,9 @@ namespace DataGenerator.Data
                             post_mob.BaseForm = new MonsterID(182, 0, 0, Gender.Female);
                             post_mob.Tactic = 22;
                             post_mob.Level = new RandRange(21);
-                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_RECRUIT"))));
                             SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                            post_team.Explorer = true;
                             multiTeamSpawner.Spawns.Add(post_team);
                             PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
                             randomSpawn.Ally = true;
@@ -392,9 +392,9 @@ namespace DataGenerator.Data
                             post_mob.BaseForm = new MonsterID(294, 0, 0, Gender.Male);
                             post_mob.Tactic = 22;
                             post_mob.Level = new RandRange(21);
-                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_FADED"))));
                             SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                            post_team.Explorer = true;
                             multiTeamSpawner.Spawns.Add(post_team);
                             PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
                             randomSpawn.Ally = true;
@@ -407,9 +407,9 @@ namespace DataGenerator.Data
                             post_mob.BaseForm = new MonsterID(66, 0, 0, Gender.Male);
                             post_mob.Tactic = 21;
                             post_mob.Level = new RandRange(14);
-                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_STAT_DROP"))));
                             SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                            post_team.Explorer = true;
                             multiTeamSpawner.Spawns.Add(post_team);
                             PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
                             randomSpawn.Ally = true;
@@ -819,9 +819,9 @@ namespace DataGenerator.Data
                         post_mob.BaseForm = new MonsterID(25, 0, 0, Gender.Male);
                         post_mob.Tactic = 21;
                         post_mob.Level = new RandRange(28);
-                        post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_MISS"))));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                        post_team.Explorer = true;
                         multiTeamSpawner.Spawns.Add(post_team);
                         PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
                         randomSpawn.Ally = true;
@@ -831,12 +831,12 @@ namespace DataGenerator.Data
                     {
                         PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner();
+                        post_team.Explorer = true;
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(311, 0, 0, Gender.Male);
                             post_mob.Tactic = 21;
                             post_mob.Level = new RandRange(20);
-                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new BattleScriptEvent("PairTalk", "{Pair=0}")));
                             post_team.Spawns.Add(post_mob);
                         }
@@ -845,7 +845,6 @@ namespace DataGenerator.Data
                             post_mob.BaseForm = new MonsterID(312, 0, 0, Gender.Male);
                             post_mob.Tactic = 21;
                             post_mob.Level = new RandRange(20);
-                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new BattleScriptEvent("PairTalk", "{Pair=1}")));
                             post_team.Spawns.Add(post_mob);
                         }
@@ -3722,9 +3721,9 @@ namespace DataGenerator.Data
                         post_mob.BaseForm = new MonsterID(27, 0, 0, Gender.Male);
                         post_mob.Tactic = 21;
                         post_mob.Level = new RandRange(14);
-                        post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_RANGE"))));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                        post_team.Explorer = true;
                         multiTeamSpawner.Spawns.Add(post_team);
                         PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
                         randomSpawn.Ally = true;
