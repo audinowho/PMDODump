@@ -1,17 +1,13 @@
-# 0.5.8 Changes #
+# 0.5.9 Changes #
 
-* New Item: Blank Plate
-* Outdated replays will no longer outright fail on load
-* Replays show version data
-* Fix shopkeepers asking twice to pay for sold items
-* Fix free items appearing in shops
-* Explosions that destroy walls will not destroy items inside walls.
-* Moves that cannot miss will hit through abilities/status that cause automatic miss
-* Fix error with switching starters when selecting alternate forms
-* If a save file is loaded with missing mods, the player will be warned
-* When save files are upgraded, they will trigger the UpgradeSave callback
-* Fix issue with certain tilesets not displaying/exporting
-* Tilesets are now exported with the correct .png extension
-* Errors occurring in mass texture exports no longer cause the entire operation to fail (only that specific texture)
-* Fix issue with script generation when saving a newly created ground map.
-* Added script calls: DUNGEON:CharStartAnim, CharEndAnim, PlayVFX, etc.
+* Fixed an exploit that allowed neutral NPCs to be recruited
+* Split Up AI will no longer corner itself
+* Fix issue with Shuckle shopkeepers entering thief mode instead of warping to request payment
+* Changed the calculation of recoil to work off user's Max HP
+* Fullscreen is properly letterboxed
+* Fixed issues with teaching TMs in hub maps
+* Fix editor crash when attempting to test VFX outside of a dungeon
+* Notices from signs can be paged using [br], like dialogue boxes
+* Dev-Traveling will clear Cutscene mode
+* Add parallax scrolling and offset options in map BG editor
+* CSV guides can be output by running PMDO with flag -csv
