@@ -920,7 +920,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new RecoilEvent(5));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(5, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 4;
@@ -971,7 +971,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new RecoilEvent(4));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -1757,7 +1757,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new RecoilEvent(5));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(5, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(40);//Swing
@@ -8865,7 +8865,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(4, true, true)));
-                skill.Data.AfterActions.Add(0, new RecoilEvent(4));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -10136,7 +10136,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(2, true, true)));
-                skill.Data.AfterActions.Add(0, new RecoilEvent(4));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -10653,7 +10653,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new RecoilEvent(4));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -11726,7 +11726,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new RecoilEvent(4));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 23;//Slam
@@ -11843,7 +11843,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new RecoilEvent(3));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(3, false));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, 2));
                 skill.Strikes = 1;
@@ -13502,7 +13502,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new RecoilEvent(5));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(5, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 4;
