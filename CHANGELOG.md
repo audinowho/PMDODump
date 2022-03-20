@@ -7,6 +7,8 @@
 * Fullscreen is properly letterboxed
 * Fixed issues with teaching TMs in hub maps
 * Fix editor crash when attempting to test VFX outside of a dungeon
+* Sound effects can be looped using SOUND:LoopSE, SOUND:StopSE, SOUND:LoopBattleSE, SOUND:StopBattleSE
+* Fixed control issues with the Script tab
 * Notices from signs can be paged using [br], like dialogue boxes
 * Dev-Traveling will clear Cutscene mode
 * Add parallax scrolling and offset options in map BG editor
