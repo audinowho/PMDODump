@@ -1,7 +1,4 @@
 Sheet: Hardcode
-    * Added DLG_ASK_LOAD_UPGRADE
-    * Added MENU_MODS_MISSING
-    * Added MENU_RESULTS_VERSION_TITLE
 
 Sheet: Content
 
@@ -10,8 +7,6 @@ Sheet: Script
 Sheet: Abilities
 
 Sheet: Items
-    * Added 0392-0000|data.Name
-    * Added 0392-0001|data.Desc
 
 Sheet: MapStatuses
 
