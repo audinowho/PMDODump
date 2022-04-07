@@ -251,7 +251,7 @@ namespace DataGenerator.Data
 
             MonsterFormData formEntry = new MonsterFormData();
             formEntry.FormName = new LocalText("Missingno.");
-            formEntry.Ratio = -1;
+            formEntry.GenderlessWeight = 1;
             formEntry.Height = 1;
             formEntry.Weight = 1;
             formEntry.ExpYield = 1;
@@ -266,7 +266,7 @@ namespace DataGenerator.Data
 
             MonsterFormData formEntry2 = new MonsterFormData();
             formEntry2.FormName = new LocalText("Substitute");
-            formEntry.Ratio = -1;
+            formEntry.GenderlessWeight = 1;
             formEntry2.Height = 1;
             formEntry2.Weight = 1;
             formEntry2.ExpYield = 1;
@@ -1064,15 +1064,29 @@ namespace DataGenerator.Data
                         version = 16;
                     MonsterFormData formEntry = LoadForme(m_dbTLConnection, version, index, dexId, formId, entry.Name);
                     formEntry.Generation = genVersion(version);
-                    formEntry.Ratio = Ratio;
+                    if (Ratio == -1)
+                        formEntry.GenderlessWeight = 1;
+                    else
+                    {
+                        formEntry.MaleWeight = 8 - Ratio;
+                        formEntry.FemaleWeight = Ratio;
+                    }
                     formEntry.Temporary = battle_only;
 
                     if (index == 678)//meowstic; forme has fixed gender ratio
                     {
                         if (entry.Forms.Count == 0)//male
-                            formEntry.Ratio = 0;
+                        {
+                            formEntry.MaleWeight = 8;
+                            formEntry.FemaleWeight = 0;
+                            formEntry.GenderlessWeight = 0;
+                        }
                         else
-                            formEntry.Ratio = 8;
+                        {
+                            formEntry.MaleWeight = 0;
+                            formEntry.FemaleWeight = 8;
+                            formEntry.GenderlessWeight = 0;
+                        }
                     }
                     //special-case in-battle only formes
                     //arceus
