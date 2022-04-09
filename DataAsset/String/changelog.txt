@@ -1,6 +1,4 @@
 Sheet: Hardcode
-    * Changed DLG_ASK_GENDER from "Play as a boy, or a girl?" to "Do you want to play as a boy, or a girl?"
-    * Added MENU_GENDERLESS
 
 Sheet: Content
 
