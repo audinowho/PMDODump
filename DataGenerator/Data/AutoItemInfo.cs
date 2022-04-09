@@ -136,11 +136,11 @@ namespace DataGenerator.Data
         public static void InitStringsAll()
         {
             stringsAll = new Dictionary<string, Dictionary<string, string>>();
-            stringsAll[""] = Text.LoadXmlDoc(PathMod.ModPath("Strings/strings.resx"));
+            stringsAll[""] = Text.LoadStringResx(PathMod.ModPath("Strings/strings.resx"));
             foreach (string code in Text.SupportedLangs)
             {
                 if (code != "en")
-                    stringsAll[code] = Text.LoadXmlDoc(PathMod.ModPath("Strings/strings." + code + ".resx"));
+                    stringsAll[code] = Text.LoadStringResx(PathMod.ModPath("Strings/strings." + code + ".resx"));
             }
 
             specialRows = Localization.readLocalizationRows(GenPath.TL_PATH  + "Special.out.txt");

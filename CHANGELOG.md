@@ -9,3 +9,4 @@
 * Add cam coordinates to debug UI even if not in freecam mode
 * Add script methods GAME:GetCameraCenter and IsCameraOnChar
 * Add the option to toggle repetition for map backgrounds
+* Fixed the -build flag for mods
