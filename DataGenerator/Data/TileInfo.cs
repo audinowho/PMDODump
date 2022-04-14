@@ -1089,6 +1089,36 @@ namespace DataGenerator.Data
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
                 tile.InteractWithTiles.Add(0, new SingleCharStateScriptEvent());
             }
+            else if (ii == 49)
+            {
+                tile.Name = new LocalText("Stairs");
+                tile.Desc = new LocalText("Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.");
+                tile.Comment = "Back Up";
+                tile.BlockItem = true;
+                tile.StepType = TileData.TriggerType.Passage;
+                tile.Anim = new ObjAnimData("Stairs_Up", 1);
+                tile.MinimapIcon = new Loc(4, 0);
+                tile.MinimapColor = Color.Cyan;
+                tile.LandedOnTiles.Add(0, new RevealSecretEvent());
+                tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new NextFloorEvent());
+                tile.InteractWithTiles.Add(0, new SwitchMapEvent());
+            }
+            else if (ii == 50)
+            {
+                tile.Name = new LocalText("Stairs");
+                tile.Desc = new LocalText("Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.");
+                tile.Comment = "Back Down";
+                tile.BlockItem = true;
+                tile.StepType = TileData.TriggerType.Passage;
+                tile.Anim = new ObjAnimData("Stairs_Down", 1);
+                tile.MinimapIcon = new Loc(4, 0);
+                tile.MinimapColor = Color.Cyan;
+                tile.LandedOnTiles.Add(0, new RevealSecretEvent());
+                tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new NextFloorEvent());
+                tile.InteractWithTiles.Add(0, new SwitchMapEvent());
+            }
 
             if (tile.Name.DefaultText.StartsWith("**"))
                 tile.Name.DefaultText = tile.Name.DefaultText.Replace("*", "");

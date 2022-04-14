@@ -2017,6 +2017,9 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("**Shimmer Bay");
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
+                    //zone.Persistent = true;
+
+                    int max_floors = 6;
 
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
@@ -2031,6 +2034,15 @@ namespace DataGenerator.Data
                     //items!
                     ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
                     itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+
+
+                    CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
+                    necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
+                    itemSpawnZoneStep.Spawns.Add("necessities", necessities);
+
+                    necessities.Spawns.Add(new InvItem(10), new IntRange(0, max_floors), 12);//Oran
+
+
                     //keys
                     floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
 
@@ -2039,10 +2051,12 @@ namespace DataGenerator.Data
                     poolSpawn.Priority = PR_RESPAWN_MOB;
 
                     //1//366 Clamperl : 128 Clamp : 250 Whirlpool
+                    poolSpawn.Spawns.Add(GetTeamMob(366, -1, 128, 250, -1, -1, new RandRange(18), 16), new IntRange(0, 5), 10);
 
                     //17//116 Horsea : 055 Water Gun : 239 Twister
+                    poolSpawn.Spawns.Add(GetTeamMob(116, -1, 239, -1, -1, -1, new RandRange(18), 16), new IntRange(0, 5), 10);
 
-                    poolSpawn.TeamSizes.Add(1, new IntRange(0, 6), 12);
+                    poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -2051,7 +2065,7 @@ namespace DataGenerator.Data
 
 
 
-                    for (int ii = 0; ii < 6; ii++)
+                    for (int ii = 0; ii < max_floors; ii++)
                     {
                         GridFloorGen layout = new GridFloorGen();
 
@@ -2113,7 +2127,20 @@ namespace DataGenerator.Data
 
                         AddDrawGridSteps(layout);
 
-                        AddStairStep(layout, false);
+                        {
+                            EffectTile exitTile = new EffectTile(49, true);
+                            exitTile.TileStates.Set(new DestState(new SegLoc(0, -1), true));
+                            var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
+                            step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
+                            layout.GenSteps.Add(PR_EXITS, step);
+                        }
+                        if (ii < max_floors - 1)
+                        {
+                            EffectTile secretTile = new EffectTile(2, true);
+                            RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+                        }
 
                         AddWaterSteps(layout, 3, new RandRange(30));//water
 
