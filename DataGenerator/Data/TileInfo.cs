@@ -1099,7 +1099,7 @@ namespace DataGenerator.Data
             return tile;
         }
 
-        public const int MAX_TERRAIN = 7;
+        public const int MAX_TERRAIN = 8;
 
         public static void AddTerrainData()
         {
@@ -1171,6 +1171,11 @@ namespace DataGenerator.Data
                 emitter.HeightSpeed = 12;
                 emitter.SpeedDiff = 4;
                 tile.LandedOnTiles.Add(0, new SingleExceptEvent(typeof(PoisonState), new GiveStatusEvent(5, new StateCollection<StatusState>(), true, new StringKey(), "DUN_Toxic", emitter)));
+            }
+            else if (ii == 7)
+            {
+                tile.Name = new LocalText("Variable-Texture Foliage");
+                tile.BlockLight = true;
             }
 
             return tile;

@@ -1129,6 +1129,19 @@ namespace DataGenerator.Data
                     //Tilesets
                     AddTextureData(layout, 084, 085, 086, 08);
 
+                    MapDictTextureStep<ListMapGenContext> textureStep = new MapDictTextureStep<ListMapGenContext>();
+                    {
+                        textureStep.TextureMap[0] = 85;
+                        textureStep.TextureMap[1] = 84;
+                        textureStep.TextureMap[2] = 84;
+                        textureStep.TextureMap[3] = 86;
+                        textureStep.TextureMap[6] = 86;
+                        textureStep.TextureMap[5] = 86;
+                        textureStep.TextureMap[6] = 86;
+                        textureStep.TextureMap[7] = 24;
+                    }
+                    layout.GenSteps.Add(PR_TEXTURES, textureStep);
+
                     //traps
                     AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
                     AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
@@ -1261,6 +1274,10 @@ namespace DataGenerator.Data
                     //Remove walls where diagonals of water exist and replace with water
                     layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<ListMapGenContext>(new Tile(terrain)));
 
+                    //grass
+                    int coverTerrain = 7;
+                    IntrudingBlobWaterStep<ListMapGenContext> coverStep = new IntrudingBlobWaterStep<ListMapGenContext>(new RandRange(10), new Tile(coverTerrain), 0, new RandRange(20));
+                    layout.GenSteps.Add(PR_WATER, coverStep);
 
 
 

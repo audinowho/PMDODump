@@ -2977,6 +2977,14 @@ namespace DataGenerator.Data
             }
             else if (ii == 407)
             {
+                item.Name = new LocalText("Goggle Specs");
+                item.Desc = new LocalText("A held item that enables the Pokémon to identify traps on the floor.");
+                item.Sprite = "Specs_Red";
+                item.Price = 200;
+                item.OnRefresh.Add(0, new SeeTrapsEvent());
+            }
+            else if (ii == 407)
+            {
 
             }
             else if (ii == 444)
@@ -3120,6 +3128,21 @@ namespace DataGenerator.Data
                 item.UsageType = ItemData.UseType.Use;
                 item.ItemStates.Set(new UtilityState());
                 item.Price = 1000;
+            }
+            else if (ii == 458)
+            {
+                item.Name = new LocalText("Grimy Food");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.");
+                item.Sprite = "Rock_Purple";
+                item.Icon = 16;
+                item.UsageType = ItemData.UseType.Eat;
+                item.ItemStates.Set(new FoodState());
+                item.Price = 1000;
+                item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(30, false));
+                item.UseEvent.OnHits.Add(0, new LevelChangeEvent(-1));
+                item.UseAction = new SelfAction();
+                item.UseAction.TargetAlignments |= Alignment.Self;
+                item.Explosion.TargetAlignments |= Alignment.Self;
             }
             else if (ii == 477)
             {

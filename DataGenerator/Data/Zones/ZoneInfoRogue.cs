@@ -299,6 +299,9 @@ namespace DataGenerator.Data
             heldItems.Spawns.Add(new InvItem(328), new IntRange(0, 30), 2);//X-Ray Specs
             heldItems.Spawns.Add(new InvItem(328, true), new IntRange(0, 30), 1);//X-Ray Specs
 
+            heldItems.Spawns.Add(new InvItem(407), new IntRange(0, 30), 2);//Goggle Specs
+            heldItems.Spawns.Add(new InvItem(407, true), new IntRange(0, 30), 1);//Goggle Specs
+
             heldItems.Spawns.Add(new InvItem(404), new IntRange(0, 15), 2);//Big Root
             heldItems.Spawns.Add(new InvItem(404, true), new IntRange(0, 15), 1);//Big Root
 
