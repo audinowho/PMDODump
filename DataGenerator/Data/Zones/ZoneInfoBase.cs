@@ -1129,19 +1129,6 @@ namespace DataGenerator.Data
                     //Tilesets
                     AddTextureData(layout, 084, 085, 086, 08);
 
-                    MapDictTextureStep<ListMapGenContext> textureStep = new MapDictTextureStep<ListMapGenContext>();
-                    {
-                        textureStep.TextureMap[0] = 85;
-                        textureStep.TextureMap[1] = 84;
-                        textureStep.TextureMap[2] = 84;
-                        textureStep.TextureMap[3] = 86;
-                        textureStep.TextureMap[6] = 86;
-                        textureStep.TextureMap[5] = 86;
-                        textureStep.TextureMap[6] = 86;
-                        textureStep.TextureMap[7] = 24;
-                    }
-                    layout.GenSteps.Add(PR_TEXTURES, textureStep);
-
                     //traps
                     AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
                     AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
@@ -1257,7 +1244,7 @@ namespace DataGenerator.Data
 
                     //Generate water (specified by user as Terrain 2) with a frequency of 99%, using Perlin Noise in an order of 2.
                     int terrain = 5;
-                    PerlinWaterStep<ListMapGenContext> waterStep = new PerlinWaterStep<ListMapGenContext>(new RandRange(99), 3, new Tile(terrain), 2, true);
+                    PerlinWaterStep<ListMapGenContext> waterStep = new PerlinWaterStep<ListMapGenContext>(new RandRange(99), 3, new Tile(terrain), new MapTerrainStencil<ListMapGenContext>(false, true, false), 2);
                     layout.GenSteps.Add(PR_WATER, waterStep);
 
                     //lay down more floor
@@ -1268,17 +1255,11 @@ namespace DataGenerator.Data
 
                     //put the walls back in via "water" algorithm
                     int wallTerrain = 2;
-                    IntrudingBlobWaterStep<ListMapGenContext> wallStep = new IntrudingBlobWaterStep<ListMapGenContext>(new RandRange(10), new Tile(wallTerrain), 0, new RandRange(20));
+                    IntrudingBlobWaterStep<ListMapGenContext> wallStep = new IntrudingBlobWaterStep<ListMapGenContext>(new RandRange(10), new Tile(wallTerrain), new DefaultTerrainStencil<ListMapGenContext>(), 0, new RandRange(20));
                     layout.GenSteps.Add(PR_WATER, wallStep);
 
                     //Remove walls where diagonals of water exist and replace with water
                     layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<ListMapGenContext>(new Tile(terrain)));
-
-                    //grass
-                    int coverTerrain = 7;
-                    IntrudingBlobWaterStep<ListMapGenContext> coverStep = new IntrudingBlobWaterStep<ListMapGenContext>(new RandRange(10), new Tile(coverTerrain), 0, new RandRange(20));
-                    layout.GenSteps.Add(PR_WATER, coverStep);
-
 
 
                     layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
@@ -1294,10 +1275,25 @@ namespace DataGenerator.Data
                     GridFloorGen layout = new GridFloorGen();
 
                     //Floor settings
-                    AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Clear, Map.SightRange.Dark);
+                    AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     //Tilesets
-                    AddTextureData(layout, 433, 434, 435, 13);
+                    //AddTextureData(layout, 433, 434, 435, 13);
+
+                    MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
+                    {
+                        textureStep.BlankBG = 433;
+                        textureStep.TextureMap[0] = 434;
+                        textureStep.TextureMap[1] = 433;
+                        textureStep.TextureMap[2] = 433;
+                        textureStep.TextureMap[3] = 435;
+                        textureStep.TextureMap[6] = 435;
+                        textureStep.TextureMap[5] = 435;
+                        textureStep.TextureMap[6] = 435;
+                        textureStep.TextureMap[7] = 24;
+                    }
+                    textureStep.GroundElement = 13;
+                    layout.GenSteps.Add(PR_TEXTURES, textureStep);
 
                     //traps
                     AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
@@ -1366,11 +1362,11 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
 
                     {
-                        CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(4), GetImmutableFilterList());
+                        CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(8), GetImmutableFilterList());
                         step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                         step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                         step.RoomComponents.Set(new NoEventRoom());
-                        step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), new RoomGenRound<MapGenContext>(new RandRange(13), new RandRange(13))), 5);
+                        step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), new RoomGenRound<MapGenContext>(new RandRange(13), new RandRange(13))), 10);
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenRound<MapGenContext>(new RandRange(7), new RandRange(13))), 10);
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenRound<MapGenContext>(new RandRange(13), new RandRange(7))), 10);
                         layout.GenSteps.Add(PR_GRID_GEN, step);
@@ -1383,9 +1379,13 @@ namespace DataGenerator.Data
                     AddStairStep(layout, false);
 
 
+                    //grass
+                    int coverTerrain = 7;
+                    PerlinWaterStep<MapGenContext> coverStep = new PerlinWaterStep<MapGenContext>(new RandRange(25), 3, new Tile(coverTerrain), new MapTerrainStencil<MapGenContext>(true, false, false), 1);
+                    layout.GenSteps.Add(PR_WATER, coverStep);
 
 
-                    layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+                    //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
 
                     structure.Floors.Add(layout);

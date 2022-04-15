@@ -193,7 +193,7 @@ namespace DataGenerator.Data
 
         public static void AddWaterSteps<T>(MapGen<T> layout, int terrain, RandRange percent, bool eraseIsolated = true) where T : BaseMapGenContext
         {
-            PerlinWaterStep<T> waterStep = new PerlinWaterStep<T>(new RandRange(), 3, new Tile(terrain), 1, true);
+            PerlinWaterStep<T> waterStep = new PerlinWaterStep<T>(new RandRange(), 3, new Tile(terrain), new MapTerrainStencil<T>(false, true, false), 1);
             waterStep.WaterPercent = percent;
             layout.GenSteps.Add(PR_WATER, waterStep);
             layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<T>(new Tile(terrain)));

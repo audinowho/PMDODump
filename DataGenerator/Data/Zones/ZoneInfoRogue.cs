@@ -3021,7 +3021,7 @@ namespace DataGenerator.Data
                     terrain = 5;//abyss
 
                 //water
-                PerlinWaterStep<MapGenContext> waterZoneStep = new PerlinWaterStep<MapGenContext>(new RandRange(), 3, new Tile(terrain), 1, true);
+                PerlinWaterStep<MapGenContext> waterZoneStep = new PerlinWaterStep<MapGenContext>(new RandRange(), 3, new Tile(terrain), new MapTerrainStencil<MapGenContext>(false, true, false), 1);
                 if (ii < 4)
                     AddWaterSteps(layout, 3, new RandRange(35));//water
                 else if (ii < 8)
