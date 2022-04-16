@@ -287,10 +287,7 @@ namespace Updater
             excludedFiles = new List<string>();
             executableFiles = new List<string>();
             excludedFiles.Clear();
-            excludedFiles.Add("PMDO/Config.xml");
-            excludedFiles.Add("PMDO/Keyboard.xml");
-            excludedFiles.Add("PMDO/Gamepad.xml");
-            excludedFiles.Add("PMDO/Contacts.xml");
+            excludedFiles.Add("PMDO/CONFIG/");
             excludedFiles.Add("PMDO/LOG/");
             excludedFiles.Add("PMDO/MODS/");
             excludedFiles.Add("PMDO/REPLAY/");

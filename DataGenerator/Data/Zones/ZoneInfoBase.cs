@@ -1381,7 +1381,7 @@ namespace DataGenerator.Data
 
                     //grass
                     int coverTerrain = 7;
-                    PerlinWaterStep<MapGenContext> coverStep = new PerlinWaterStep<MapGenContext>(new RandRange(25), 3, new Tile(coverTerrain), new MapTerrainStencil<MapGenContext>(true, false, false), 1);
+                    PerlinWaterStep<MapGenContext> coverStep = new PerlinWaterStep<MapGenContext>(new RandRange(20), 3, new Tile(coverTerrain), new MapTerrainStencil<MapGenContext>(true, false, false), 1);
                     layout.GenSteps.Add(PR_WATER, coverStep);
 
 

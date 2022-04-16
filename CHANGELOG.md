@@ -1,5 +1,6 @@
-# 0.5.10.1 Changes #
+# 0.5.11 Changes #
 
-* Fixed an issue that forced a single gender
-* Fixed GAME:AddToPlayerMoneyBank and RemoveFromPlayerMoneyBank
-* Fixed debug game speed to work on all game operations
+* Packaged several mods with base game
+* Refactored the way dungeons generate maps
+* Added item: Goggle Specs
+* Added a Reload Map button
