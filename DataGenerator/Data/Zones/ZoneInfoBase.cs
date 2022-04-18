@@ -1283,16 +1283,17 @@ namespace DataGenerator.Data
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
                         textureStep.BlankBG = 433;
-                        textureStep.TextureMap[0] = 434;
-                        textureStep.TextureMap[1] = 433;
-                        textureStep.TextureMap[2] = 433;
-                        textureStep.TextureMap[3] = 435;
-                        textureStep.TextureMap[6] = 435;
-                        textureStep.TextureMap[5] = 435;
-                        textureStep.TextureMap[6] = 435;
-                        textureStep.TextureMap[7] = 24;
+                        textureStep.TextureMap[0] = 100;
+                        textureStep.TextureMap[1] = 99;
+                        textureStep.TextureMap[2] = 99;
+                        textureStep.TextureMap[3] = 101;
+                        textureStep.TextureMap[6] = 101;
+                        textureStep.TextureMap[5] = 101;
+                        textureStep.TextureMap[6] = 101;
+                        textureStep.TextureMap[7] = 457;
                     }
                     textureStep.GroundElement = 13;
+                    textureStep.LayeredGround = true;
                     layout.GenSteps.Add(PR_TEXTURES, textureStep);
 
                     //traps

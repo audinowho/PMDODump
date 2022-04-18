@@ -523,6 +523,7 @@ namespace DataGenerator.Data
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 7));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 19)
@@ -556,6 +557,7 @@ namespace DataGenerator.Data
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 7));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 20)
@@ -1154,6 +1156,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Variable-Texture Impassable");
                 tile.BlockType = TerrainData.Mobility.Impassable;
+                tile.MinimapColor = Color.White;
                 tile.BlockDiagonal = true;
                 tile.BlockLight = true;
             }
@@ -1161,6 +1164,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Variable-Texture Blocked");
                 tile.BlockType = TerrainData.Mobility.Block;
+                tile.MinimapColor = Color.White;
                 tile.BlockDiagonal = true;
                 tile.BlockLight = true;
                 tile.LandedOnTiles.Add(0, new TeamHungerEvent(800));
@@ -1169,6 +1173,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Variable-Texture Water");
                 tile.BlockType = TerrainData.Mobility.Water;
+                tile.MinimapColor = Color.Blue;
                 tile.ShadowType = 3;
                 tile.LandedOnTiles.Add(0, new RemoveStatusEvent(2));
             }
@@ -1176,6 +1181,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Variable-Texture Lava");
                 tile.BlockType = TerrainData.Mobility.Lava;
+                tile.MinimapColor = Color.DarkOrange;
                 tile.ShadowType = 4;
                 SingleEmitter endAnim = new SingleEmitter(new AnimData("Burned", 3));
                 endAnim.LocHeight = 18;
@@ -1185,12 +1191,14 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Variable-Texture Abyss");
                 tile.BlockType = TerrainData.Mobility.Abyss;
+                tile.MinimapColor = Color.Gray;
                 tile.ShadowType = 4;
             }
             else if (ii == 6)
             {
                 tile.Name = new LocalText("Variable-Texture Poison");
                 tile.BlockType = TerrainData.Mobility.Water;
+                tile.MinimapColor = Color.Blue;
                 tile.ShadowType = 3;
                 SqueezedAreaEmitter emitter = new SqueezedAreaEmitter(new AnimData("Bubbles_Purple", 3));
                 emitter.BurstTime = 3;
@@ -1205,6 +1213,7 @@ namespace DataGenerator.Data
             else if (ii == 7)
             {
                 tile.Name = new LocalText("Variable-Texture Foliage");
+                tile.MinimapColor = Color.Teal;
                 tile.BlockLight = true;
             }
 
