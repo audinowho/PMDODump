@@ -1,4 +1,9 @@
 Sheet: Hardcode
+    * Added _ENUM_SkillDefault_All
+    * Added _ENUM_SkillDefault_Attacks
+    * Added _ENUM_SkillDefault_None
+    * Added MENU_SETTINGS_MINIMAP_VISIBILITY
+    * Added MENU_SETTINGS_SKILL_DEFAULT
 
 Sheet: Content
 
@@ -7,6 +12,10 @@ Sheet: Script
 Sheet: Abilities
 
 Sheet: Items
+    * Added 0407-0000|data.Name
+    * Added 0407-0001|data.Desc
+    * Added 0458-0000|data.Name, transferred from 0454-0000|data.Name
+    * Added 0458-0001|data.Desc
 
 Sheet: MapStatuses
 
@@ -15,6 +24,8 @@ Sheet: Moves
 Sheet: Statuses
 
 Sheet: Tiles
+    * Added 0049-0000|data.Name, transferred from 0001-0000|data.Name
+    * Added 0049-0001|data.Desc
 
 Sheet: Excl Names
 

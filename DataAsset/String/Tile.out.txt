@@ -97,3 +97,5 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0047-0001|data.Desc		Stairs leading to the dungeon's exit.																										
 0048-0000|data.Name		Script Trigger																										
 0048-0001|data.Desc																												
+0049-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단																				
+0049-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.																										

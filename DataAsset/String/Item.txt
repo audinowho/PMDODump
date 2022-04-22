@@ -595,6 +595,8 @@ Key		EN
 0405-0001|data.Desc		A well-worn belt that boosts the power of super-effective moves.
 0406-0000|data.Name		Weather Rock
 0406-0001|data.Desc		An item that increases the duration of weather moves used by the holder.
+0407-0000|data.Name		Goggle Specs
+0407-0001|data.Desc		A held item that enables the Pokémon to identify traps on the floor.
 0444-0000|data.Name		Light Box
 0444-0001|data.Desc		A box that is somewhat light. Specific Pokémon adore the items inside.
 0445-0000|data.Name		Heavy Box
@@ -621,6 +623,8 @@ Key		EN
 0455-0001|data.Desc		A key that unlocks a chest or door inside a dungeon.
 0456-0000|data.Name		Ancient Key
 0456-0001|data.Desc		A key that unlocks an ancient door inside a dungeon.
+0458-0000|data.Name		Grimy Food
+0458-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.
 0477-0000|data.Name		Nugget
 0477-0001|data.Desc		A nugget of pure gold. It sells for a very high price.
 0478-0000|data.Name		Mystery Part
