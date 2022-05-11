@@ -2526,11 +2526,12 @@ namespace DataGenerator.Data
 
                 List<MapItem> specificSpawns = new List<MapItem>();
                 if (ii == 0)
-                    specificSpawns.Add(new MapItem(210));//Apricorn
+                    specificSpawns.Add(new MapItem(210));//Plain Apricorn
                 if (ii == 29)
                     specificSpawns.Add(new MapItem(101));//Reviver Seed
 
-                RandomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(specificSpawns)));
+                RandomRoomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(specificSpawns)));
+                specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                 layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
 
 
@@ -3757,7 +3758,7 @@ namespace DataGenerator.Data
             }
 
             int max_apricorn = 20;
-            for (int jj = 0; jj < 4; jj++)
+            for (int jj = 0; jj < 3; jj++)
             {
                 SpawnList<IGenPriority> apricornZoneSpawns = new SpawnList<IGenPriority>();
                 apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(211))))), 10);//blue apricorns
@@ -3768,7 +3769,7 @@ namespace DataGenerator.Data
                 apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(216))))), 10);//white apricorns
                 apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(217))))), 10);//yellow apricorns
                 apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(218))))), 10);//black apricorns
-                SpreadStepZoneStep apricornZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_apricorn)), apricornZoneSpawns);//apricorn (variety)
+                SpreadStepZoneStep apricornZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(1, max_apricorn)), apricornZoneSpawns);//apricorn (variety)
                 floorSegment.ZoneSteps.Add(apricornZoneStep);
                 max_apricorn /= 2;
             }
@@ -4940,23 +4941,44 @@ namespace DataGenerator.Data
                 else
                     AddItemData(layout, new RandRange(3, 5), 25);
 
-                List<MapItem> specificSpawns = new List<MapItem>();
-                if (ii > 20 && ii <= 27)
                 {
-                    //2 pearls scattered in the maze, 3 pearls in the later floors
-                    if (ii > 24)
+                    List<MapItem> specificSpawns = new List<MapItem>();
+
+                    if (ii > 20 && ii <= 27)
+                    {
+                        //2 pearls scattered in the maze, 3 pearls in the later floors
+                        if (ii > 24)
+                            specificSpawns.Add(new MapItem(480, 1));//Pearl
                         specificSpawns.Add(new MapItem(480, 1));//Pearl
-                    specificSpawns.Add(new MapItem(480, 1));//Pearl
-                    specificSpawns.Add(new MapItem(480, 1));//Pearl
+                        specificSpawns.Add(new MapItem(480, 1));//Pearl
+                    }
+                    if (ii == 29)
+                        specificSpawns.Add(new MapItem(11));//Leppa Berry
+                    if (ii == 39)
+                        specificSpawns.Add(new MapItem(491));//Gracidea
+
+                    RandomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(specificSpawns)));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
                 }
-                if (ii == 29)
-                    specificSpawns.Add(new MapItem(11));//Leppa Berry
-                if (ii == 39)
-                    specificSpawns.Add(new MapItem(491));//Gracidea
+                {
+                    List<MapItem> specificSpawns = new List<MapItem>();
 
-                RandomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(specificSpawns)));
-                layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
+                    if (ii == 0)
+                    {
+                        specificSpawns.Add(new MapItem(211));//blue apricorns
+                        specificSpawns.Add(new MapItem(212));//green apricorns
+                        specificSpawns.Add(new MapItem(213));//brown apricorns
+                        specificSpawns.Add(new MapItem(214));//purple apricorns
+                        specificSpawns.Add(new MapItem(215));//red apricorns
+                        specificSpawns.Add(new MapItem(216));//white apricorns
+                        specificSpawns.Add(new MapItem(217));//yellow apricorns
+                        specificSpawns.Add(new MapItem(218));//black apricorns
+                    }
 
+                    RandomRoomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(new RandBag<MapItem>(specificSpawns), new RandRange(1))));
+                    specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
+                }
 
                 SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
                 wallSpawns.Add(new MapItem(10), 50);//oran berry
