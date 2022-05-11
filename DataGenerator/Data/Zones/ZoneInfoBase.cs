@@ -1269,7 +1269,6 @@ namespace DataGenerator.Data
                 }
                 #endregion
 
-
                 #region Merged Maze
                 {
                     GridFloorGen layout = new GridFloorGen();
@@ -1387,6 +1386,194 @@ namespace DataGenerator.Data
 
 
                     //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+
+                    structure.Floors.Add(layout);
+                }
+                #endregion
+
+
+                #region CHASM CAVE
+                {
+                    GridFloorGen layout = new GridFloorGen();
+
+                    //Floor settings
+                    AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 2000, Map.SightRange.Clear, Map.SightRange.Dark);
+
+                    //Tilesets
+                    MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
+                    {
+                        textureStep.BlankBG = 258;
+                        textureStep.TextureMap[0] = 259;
+                        textureStep.TextureMap[1] = 343;
+                        textureStep.TextureMap[2] = 343;
+                        textureStep.TextureMap[3] = 258;
+                        textureStep.TextureMap[6] = 258;
+                        textureStep.TextureMap[5] = 258;
+                        textureStep.TextureMap[6] = 258;
+                    }
+                    textureStep.GroundElement = 13;
+                    textureStep.LayeredGround = true;
+                    layout.GenSteps.Add(PR_TEXTURES, textureStep);
+
+                    //traps
+                    AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
+
+                    //money - 1,000P
+                    MoneySpawnStep<MapGenContext> moneySpawnStep = new MoneySpawnStep<MapGenContext>(new RandRange(1000));
+                    layout.GenSteps.Add(PR_RESPAWN_MONEY, moneySpawnStep);
+                    AddMoneyData(layout, new RandRange(2, 4));
+
+                    //items
+                    ItemSpawnStep<MapGenContext> itemSpawnStep = new ItemSpawnStep<MapGenContext>();
+                    SpawnList<InvItem> items = new SpawnList<InvItem>();
+                    items.Add(new InvItem(11), 12);
+                    itemSpawnStep.Spawns.Add("uncategorized", items, 10);
+                    layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
+
+                    //enemies!
+                    AddRespawnData(layout, 3, 80);
+
+                    //enemies
+                    AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                    MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
+                    PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
+                    poolSpawn.Spawns.Add(GetTeamMob(441, -1, 497, 297, -1, -1, new RandRange(18)), 10);
+                    poolSpawn.TeamSizes.Add(1, 12);
+                    spawnStep.Spawns.Add(poolSpawn, 100);
+                    layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
+
+                    //items
+                    AddItemData(layout, new RandRange(3, 6), 25);
+
+                    AddInitGridStep(layout, 6, 4, 10, 10);
+
+                    {
+                        GridPathGrid<MapGenContext> path = new GridPathGrid<MapGenContext>();
+                        path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                        path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                        path.RoomRatio = 80;
+                        path.HallRatio = 30;
+
+                        SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                        //square
+                        genericRooms.Add(new RoomGenBump<MapGenContext>(new RandRange(4, 9), new RandRange(4, 9), new RandRange(0, 81)), 10);
+                        path.GenericRooms = genericRooms;
+
+                        SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                        genericHalls.Add(new RoomGenAngledHall<MapGenContext>(20), 10);
+                        path.GenericHalls = genericHalls;
+
+                        layout.GenSteps.Add(PR_GRID_GEN, path);
+                    }
+
+                    //init from floor plan
+                    layout.GenSteps.Add(PR_ROOMS_INIT, new DrawGridToFloorStep<MapGenContext>());
+                    //draw paths
+                    layout.GenSteps.Add(PR_TILES_INIT, new DrawFloorToTileStep<MapGenContext>(2));
+
+                    //add invisible unbreakable border
+                    Tile invisBarrier = new Tile(1, true);
+                    invisBarrier.Data.TileTex = new AutoTile(258);
+                    layout.GenSteps.Add(PR_TILES_BARRIER, new TileBorderStep<MapGenContext>(1, invisBarrier));
+
+                    AddStairStep(layout, false);
+
+
+                    //Generate water (specified by user as Terrain 2) with a frequency of 100%, using Perlin Noise in an order of 2.
+                    int terrain = 5;
+                    PerlinWaterStep<MapGenContext> waterStep = new PerlinWaterStep<MapGenContext>(new RandRange(100), 3, new Tile(terrain), new MapTerrainStencil<MapGenContext>(false, true, false), 2);
+                    layout.GenSteps.Add(PR_WATER, waterStep);
+                    
+                    //Remove walls where diagonals of water exist and replace with water
+                    layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<MapGenContext>(new Tile(terrain)));
+
+
+
+                    //boss rooms
+                    {
+                        SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
+                        string[] custom = new string[] {  "~~~...~~~",
+                                                              "~~~...~~~",
+                                                              "~~X...X~~",
+                                                              ".........",
+                                                              ".........",
+                                                              ".........",
+                                                              "~~X...X~~",
+                                                              "~~~...~~~",
+                                                              "~~~...~~~"};
+                        List<MobSpawn> mobSpawns = new List<MobSpawn>();
+                        {
+                            MobSpawn post_mob = new MobSpawn();
+                            post_mob.BaseForm = new MonsterID(382, 0, 0, Gender.Unknown);
+                            post_mob.Tactic = 6;
+                            post_mob.Level = new RandRange(50);
+                            post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(1, 4)));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
+                            mobSpawns.Add(post_mob);
+                        }
+                        {
+                            MobSpawn post_mob = new MobSpawn();
+                            post_mob.BaseForm = new MonsterID(383, 0, 0, Gender.Unknown);
+                            post_mob.Tactic = 6;
+                            post_mob.Level = new RandRange(50);
+                            post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(7, 4)));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
+                            mobSpawns.Add(post_mob);
+                        }
+                        {
+                            MobSpawn post_mob = new MobSpawn();
+                            post_mob.BaseForm = new MonsterID(384, 0, 0, Gender.Unknown);
+                            post_mob.Tactic = 6;
+                            post_mob.Level = new RandRange(50);
+                            post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(4, 1)));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
+                            mobSpawns.Add(post_mob);
+                        }
+                        bossRooms.Add(CreateRoomGenSpecificBoss<MapGenContext>(custom, new Loc(4, 4), mobSpawns, true), 10);
+                        SpawnList<RoomGen<MapGenContext>> treasureRooms = new SpawnList<RoomGen<MapGenContext>>();
+                        treasureRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
+                        SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                        detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                        AddBossRoomStep<MapGenContext> detours = new AddBossRoomStep<MapGenContext>(bossRooms, treasureRooms, detourHalls);
+                        detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom()));
+                        detours.BossComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                        detours.BossComponents.Set(new NoEventRoom());
+                        detours.BossComponents.Set(new BossRoom());
+                        detours.BossHallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                        detours.VaultComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BossLocked));
+                        detours.VaultComponents.Set(new NoConnectRoom());
+                        detours.VaultComponents.Set(new NoEventRoom());
+                        detours.VaultHallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BossLocked));
+                        detours.VaultHallComponents.Set(new NoConnectRoom());
+
+                        layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                    }
+                    //sealing the boss room and treasure room
+                    {
+                        BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>(40, 38);
+                        vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                        vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
+                        layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                    }
+                    //vault treasures
+                    {
+                        BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
+                        treasures.SpecificSpawns.Add(new InvItem(75));
+                        treasures.SpecificSpawns.Add(new InvItem(75));
+                        treasures.SpecificSpawns.Add(new InvItem(75));
+                        RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
+                        detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                    }
+
+
+                    layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
 
                     structure.Floors.Add(layout);
