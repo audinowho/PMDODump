@@ -14,17 +14,20 @@ namespace Updater
 {
     class Program
     {
+        static string updaterPath;
         static string exeRepo;
         static string assetSubmodule;
         static List<string> excludedFiles;
         static List<string> executableFiles;
         static Version lastVersion;
         static int argNum;
-        static void Main(string[] args)
+        static void Main()
         {
+            string[] args = Environment.GetCommandLineArgs();
+            updaterPath = Path.GetDirectoryName(args[0]) + "/";
             argNum = -1;
-            if (args.Length > 0)
-                Int32.TryParse(args[0], out argNum);
+            if (args.Length > 1)
+                Int32.TryParse(args[1], out argNum);
             //1: detect platform and load defaults
             exeRepo = "audinowho/PMDODump";
             assetSubmodule = "DumpAsset";
@@ -66,9 +69,9 @@ namespace Updater
                 else if (choice == ConsoleKey.D2)
                 {
                     Console.WriteLine("Uninstalling...");
-                    DeleteWithExclusions("PMDO");
-                    DeleteWithExclusions("WaypointServer");
-                    DeleteWithExclusions("temp");
+                    DeleteWithExclusions(Path.Join(updaterPath, "PMDO"));
+                    DeleteWithExclusions(Path.Join(updaterPath, "WaypointServer"));
+                    DeleteWithExclusions(Path.Join(updaterPath, "temp"));
                     Console.WriteLine("Done.");
                     ReadKey();
                     return;
@@ -141,10 +144,10 @@ namespace Updater
                     ReadKey();
 
                     //4: download the respective zip from specified location
-                    if (!Directory.Exists("temp"))
-                        Directory.CreateDirectory("temp");
-                    string tempExe = Path.Join("temp", Path.GetFileName(exeFile));
-                    string tempAsset = Path.Join("temp", "Asset.zip");
+                    if (!Directory.Exists(Path.Join(updaterPath, "temp")))
+                        Directory.CreateDirectory(Path.Join(updaterPath, "temp"));
+                    string tempExe = Path.Join(updaterPath, "temp", Path.GetFileName(exeFile));
+                    string tempAsset = Path.Join(updaterPath, "temp", "Asset.zip");
 
                     Console.WriteLine("Downloading from {0} to {1}. May take a while...", exeFile, tempExe);
                     wc.DownloadFile(exeFile, tempExe);
@@ -208,7 +211,7 @@ namespace Updater
                     if (!exempt)
                     {
                         bool setPerms = executableFiles.Contains(destName);
-                        string destPath = Path.GetFullPath(Path.Combine(".", destName));
+                        string destPath = Path.GetFullPath(Path.Join(updaterPath, Path.Combine(".", destName)));
 
                         string folderPath = Path.GetDirectoryName(destPath);
                         if (!Directory.Exists(folderPath))
@@ -244,7 +247,7 @@ namespace Updater
         {
             try
             {
-                string path = Path.GetFullPath("Updater.xml");
+                string path = Path.GetFullPath(Path.Join(updaterPath, "Updater.xml"));
                 if (File.Exists(path))
                 {
                     XmlDocument xmldoc = new XmlDocument();
@@ -332,7 +335,7 @@ namespace Updater
                 }
                 docNode.AppendChild(exes);
 
-                xmldoc.Save("Updater.xml");
+                xmldoc.Save(Path.Join(updaterPath, "Updater.xml"));
             }
             catch (Exception ex)
             {
