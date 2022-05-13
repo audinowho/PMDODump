@@ -33,6 +33,7 @@ namespace DataGenerator.Data
             universalEvent.InitActionData.Add(-10, new PreSkillEvent());
             universalEvent.InitActionData.Add(-10, new PreItemEvent());
             universalEvent.InitActionData.Add(-10, new PreThrowEvent());
+            universalEvent.OnEquips.Add(0, new CurseWarningEvent());
             universalEvent.BeforeHits.Add(-10, new PreHitEvent());
             universalEvent.BeforeHits.Add(10, new AttemptHitEvent());
             universalEvent.ElementEffects.Add(-10, new PreTypeEvent());

@@ -4,9 +4,11 @@
 * Fix repeated FOV errors occurring when the team is split up
 * Fix graphical bug with Cliff Camp's background
 * Non-quicksave/replay folders are no longer counted in their respective menus
+* Pickup can pick up sticky items, beware!
 * Normal mob AI will not decide to use Counter and Mirror Coat in combination. It can still be used by smart AI and players.
 * Fix text display errors with color tags and excessive spaces
 * Fixed an issue causing mods to conflict with each other even if they didnt overlap
+* Events for picking up and equipping items available for modders
 * Introduced TileBorderStep, useful for creating dungeon maps like Chasm Cave
 * Better error message when importing textures that don't fit to convention
 * Better error message when scripts are loaded improperly

@@ -3622,7 +3622,9 @@ namespace DataGenerator.Data
                     item.UsageType = ItemData.UseType.None;
                     item.ItemStates.Set(new HeldState());
                     if (ii >= 315 && ii <= 327)//negative effect
-                        item.Cursed = true;
+                    {
+                        item.OnEquips.Add(1, new AutoCurseItemEvent());
+                    }
                     else if (ii > 350)
                         item.Price = 1000;
                 }
