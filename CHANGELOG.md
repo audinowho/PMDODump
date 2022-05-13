@@ -3,6 +3,7 @@
 * Fix Pass Scarf not passing damage in certain conditions
 * Fix repeated FOV errors occurring when the team is split up
 * Fix graphical bug with Cliff Camp's background
+* Complimentary apricorn spawn will not appear in vaults
 * Non-quicksave/replay folders are no longer counted in their respective menus
 * Pickup can pick up sticky items, beware!
 * Normal mob AI will not decide to use Counter and Mirror Coat in combination. It can still be used by smart AI and players.
