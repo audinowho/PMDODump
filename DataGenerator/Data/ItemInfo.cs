@@ -2586,38 +2586,44 @@ namespace DataGenerator.Data
             else if (ii == 351)
             {
                 item.Name = new LocalText("Fire Stone");
-                item.Desc = new LocalText("A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve.");
+                item.Desc = new LocalText("A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fire-type.");
                 item.Sprite = "Stone_Red";
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 07)));
             }
             else if (ii == 352)
             {
                 item.Name = new LocalText("Thunder Stone");
-                item.Desc = new LocalText("A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve.");
+                item.Desc = new LocalText("A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Electric-type.");
                 item.Sprite = "Stone_Gold";
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 04)));
             }
             else if (ii == 353)
             {
                 item.Name = new LocalText("Water Stone");
-                item.Desc = new LocalText("A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve.");
+                item.Desc = new LocalText("A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Water-type.");
                 item.Sprite = "Stone_Blue";
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 18)));
             }
             else if (ii == 354)
             {
                 item.Name = new LocalText("Leaf Stone");
-                item.Desc = new LocalText("A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve.");
+                item.Desc = new LocalText("A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Grass-type.");
                 item.Sprite = "Stone_Green";
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 10)));
             }
             else if (ii == 355)
             {
                 item.Name = new LocalText("Moon Stone");
-                item.Desc = new LocalText("An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve.");
+                item.Desc = new LocalText("An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fairy-type.");
                 item.Sprite = "Stone_Black";
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 05)));
             }
             else if (ii == 356)
             {
                 item.Name = new LocalText("Sun Stone");
-                item.Desc = new LocalText("An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve.");
+                item.Desc = new LocalText("An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Psychic-type.");
                 item.Sprite = "Stone_Orange";
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 15)));
             }
             else if (ii == 357)
             {
@@ -2756,8 +2762,9 @@ namespace DataGenerator.Data
             else if (ii == 379)
             {
                 item.Name = new LocalText("Ice Stone");
-                item.Desc = new LocalText("A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern.");
+                item.Desc = new LocalText("A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks to Ice-type.");
                 item.Sprite = "Stone_LightBlue";
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 12)));
             }
             else if (ii == 380)
             {

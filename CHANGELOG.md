@@ -1,6 +1,5 @@
-# 0.5.12.1 Changes #
+# 0.5.13 Changes #
 
-* Fix error with leveling to 100, including EXP gained from exiting a fixed level dungeon
-* Fix error with equipping autostick items
-* Fix error with entering dungeons with any item
-* Fix first-try clear not unlocking Tropical Path
+* Remove time-of-day requirement from Chingling and Budew
+* Gave evolution stones a held item effect
+* 

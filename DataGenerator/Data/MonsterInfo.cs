@@ -583,11 +583,14 @@ namespace DataGenerator.Data
                                 EvoFriendship evoDetail = new EvoFriendship();
                                 branch.Details.Add(evoDetail);
 
-                                EvoItem evoDetail2 = new EvoItem();
-                                evoDetail2.ItemNum = (time == "night") ? 378 : 377;
-                                //EvoTime evoDetail2 = new EvoTime();
-                                //evoDetail2.Time = (time == "night") ? Maps.ZoneManager.TimeOfDay.Night : Maps.ZoneManager.TimeOfDay.Day;
-                                branch.Details.Add(evoDetail2);
+                                if (index < branch.Result) //pre-evos are excluded from time of day req
+                                {
+                                    EvoItem evoDetail2 = new EvoItem();
+                                    evoDetail2.ItemNum = (time == "night") ? 378 : 377;
+                                    //EvoTime evoDetail2 = new EvoTime();
+                                    //evoDetail2.Time = (time == "night") ? Maps.ZoneManager.TimeOfDay.Night : Maps.ZoneManager.TimeOfDay.Day;
+                                    branch.Details.Add(evoDetail2);
+                                }
                             }
                             else if (CheckEvoConditions(reader, "held_item_id", "time_of_day"))
                             {
