@@ -438,7 +438,7 @@ Key		EN
 0324-0000|data.Name		Flame Orb
 0324-0001|data.Desc		A bizarre orb that will afflict the holder with a burn. This item sticks when held.
 0325-0000|data.Name		Iron Ball
-0325-0001|data.Desc		A held item that anchors the Pokémon to the ground, and allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.
+0325-0001|data.Desc		A held item that weighs the Pokémon down, and allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.
 0326-0000|data.Name		Ring Target
 0326-0001|data.Desc		A held item that removes the Pokémon's type immunities. This item sticks when held.
 0327-0000|data.Name		Black Sludge
