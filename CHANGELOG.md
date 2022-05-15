@@ -6,7 +6,11 @@
 * Complimentary apricorn spawn will not appear in vaults
 * Non-quicksave/replay folders are no longer counted in their respective menus
 * Pickup can pick up sticky items, beware!
+* Iron Ball lowers Movement Speed
+* Slightly reduced BP of Draco Meteor
+* Increased recruitment boost of colored Apricorns, made it possible to recruit off-type targets if stacked with Amber Tear
 * Normal mob AI will not decide to use Counter and Mirror Coat in combination. It can still be used by smart AI and players.
+* Mob AI is less trigger-happy with Teleport
 * Fix text display errors with color tags and excessive spaces
 * Fixed an issue causing mods to conflict with each other even if they didnt overlap
 * Events for picking up and equipping items available for modders

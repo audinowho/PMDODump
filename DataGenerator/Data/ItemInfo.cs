@@ -1279,7 +1279,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An apricorn with a pleasant scent. It can tossed at wild Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_White";
                 item.Price = 500;
-                item.UseEvent.OnHits.Add(0, new FlatRecruitmentEvent(15));
+                item.UseEvent.OnHits.Add(0, new FlatRecruitmentEvent(30));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
             else if (ii == 210)
@@ -2374,9 +2374,10 @@ namespace DataGenerator.Data
             else if (ii == 325)
             {
                 item.Name = new LocalText("Iron Ball");
-                item.Desc = new LocalText("A held item that anchors the Pokémon to the ground, and allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.");
+                item.Desc = new LocalText("A held item that weighs the Pokémon down, and allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.");
                 item.Sprite = "Iron_Ball";
                 item.Price = 300;
+                item.OnRefresh.Add(0, new AddSpeedEvent(1));
                 item.OnRefresh.Add(0, new MiscEvent(new AnchorState()));
                 item.TargetElementEffects.Add(1, new TypeVulnerableEvent(11));
             }

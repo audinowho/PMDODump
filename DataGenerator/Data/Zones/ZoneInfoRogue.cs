@@ -999,8 +999,8 @@ namespace DataGenerator.Data
             //34//Sunflora : Solar Power : Sunny Day : Solar Beam
 
             //170 Mind Reader, 154 Fury Swipes, 405 Bug Buzz
-            //291 Ninjask : 14 Swords Dance : 210 Fury Cutter
-            poolSpawn.Spawns.Add(GetTeamMob(291, -1, 14, 210, -1, -1, new RandRange(38), 13), new IntRange(21, 23), 10);
+            //291 Ninjask : 14 Swords Dance : 163 Slash
+            poolSpawn.Spawns.Add(GetTeamMob(291, -1, 14, 163, -1, -1, new RandRange(38), 13), new IntRange(21, 23), 10);
 
             //197 Umbreon : 212 Mean Look : 185 Feint Attack
             poolSpawn.Spawns.Add(GetTeamMob(197, -1, 212, 185, -1, -1, new RandRange(36), TeamMemberSpawn.MemberRole.Support), new IntRange(22, 24), 10);
@@ -2429,7 +2429,7 @@ namespace DataGenerator.Data
 
                 //Floor settings
                 MapDataStep<MapGenContext> floorData = new MapDataStep<MapGenContext>();
-                floorData.TimeLimit = 3000;
+                floorData.TimeLimit = 1500;
                 if (ii < 5)
                     floorData.Music = "B01. Demonstration.ogg";
                 else if (ii < 9)
