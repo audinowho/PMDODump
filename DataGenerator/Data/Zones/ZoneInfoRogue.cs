@@ -966,7 +966,7 @@ namespace DataGenerator.Data
             //053 Persian : 415 Switcheroo : 185 Feint Attack : 129 Swift
             {
                 TeamMemberSpawn mob = GetTeamMob(53, -1, 415, 185, 129, -1, new RandRange(33), 11);
-                mob.Spawn.SpawnFeatures.Add(new MobSpawnItem(true, 323, 324, 325, 326));
+                mob.Spawn.SpawnFeatures.Add(new MobSpawnItem(true, 323, 324, 325, 326, 320));
                 poolSpawn.Spawns.Add(mob, new IntRange(20, 22), 10);
             }
 
@@ -1078,8 +1078,8 @@ namespace DataGenerator.Data
 
             //036 Clefable : 98 Magic Guard : 309 Meteor Mash : 236 Moonlight : 227 Encore
 
-            //9//437 Bronzong : 241 Sunny Day : 240 Rain Dance : 286 Imprison
-            poolSpawn.Spawns.Add(GetTeamMob(437, -1, 241, 240, 286, -1, new RandRange(42), 13), new IntRange(24, 28), 10);
+            //9//437 Bronzong : 241 Sunny Day : 240 Rain Dance : 286 Imprison : 360 Gyro Ball
+            poolSpawn.Spawns.Add(GetTeamMob(437, -1, 241, 240, 286, 360, new RandRange(42), 13), new IntRange(24, 28), 10);
 
             //13//358 Chimecho : 361 Healing Wish : 281 Yawn : 35 Wrap
             poolSpawn.Spawns.Add(GetTeamMob(358, -1, 361, 281, 35, -1, new RandRange(40), TeamMemberSpawn.MemberRole.Support), new IntRange(24, 27), 10);
