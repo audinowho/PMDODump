@@ -83,7 +83,8 @@ class TransferNode:
 
 
 def generateMap(transfer_dict, dict, name_stack, added_nodes):
-    if len(name_stack) == 2 and dict.name != "" and transfer_dict.name != dict.name:
+    if len(name_stack) <= 2 and transfer_dict.portrait_dest is None and transfer_dict.sprite_dest is None \
+            and dict.name != "" and transfer_dict.name != dict.name:
         result_str = " ".join(name_stack)
         if not dict.canon:
             result_str = "*" + result_str
@@ -116,10 +117,13 @@ def importFiles(orig_path, out_path, file_diff):
         full_path = os.path.join(orig_path, in_file)
         dest_path = os.path.join(out_path, in_file)
         if not os.path.isdir(full_path):
-            if full_path.endswith(".png") and os.path.exists(dest_path):
-                new_img = Image.open(full_path).convert("RGBA")
-                old_img = Image.open(dest_path).convert("RGBA")
-                if not exUtils.imgsEqual(new_img, old_img, False):
+            if full_path.endswith(".png"):
+                if os.path.exists(dest_path):
+                    new_img = Image.open(full_path).convert("RGBA")
+                    old_img = Image.open(dest_path).convert("RGBA")
+                    if not exUtils.imgsEqual(new_img, old_img, False):
+                        file_diff.append(in_file)
+                else:
                     file_diff.append(in_file)
             shutil.copy(full_path, dest_path)
 
@@ -138,6 +142,8 @@ def importFolders(prefix, base_path, transfer_dict, out_path, dict_path, diff):
             if len(redirected_dict) < 2:
                 redirected_dict.append("0000")
             redirected_dict[1] = "{:04d}".format(transfer_dest)
+            while redirected_dict[-1] == "0000":
+                redirected_dict.pop()
 
         dest_path = os.path.join(out_path, prefix, *redirected_dict)
         os.makedirs(dest_path, exist_ok=True)
