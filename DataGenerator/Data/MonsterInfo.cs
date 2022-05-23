@@ -1023,8 +1023,8 @@ namespace DataGenerator.Data
                     read++;
                     if (index == 20 && read > 2)//only 2 raticate form
                         break;
-                    if (index == 25 && read > 1)//only 1 pikachu form
-                        break;
+                    if (index == 25 && read > 1 && read < 17)//only 2 pikachu forms: normal and gigantamax
+                        continue;
                     if (index == 105 && read > 2)//only 2 marowak form - somehow the db has a duplicate marowak after alolan????
                         break;
                     if (index == 172 && read > 1)//only 1 pichu form

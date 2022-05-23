@@ -18,7 +18,7 @@ They will appear in the /temp/ folder, one directory level above this script.
 
 All of the files we've generated so far are in the .ignore file so don't worry about them showing up in source control.
 
-Finally, you can run the script.
+Finally, you can run the script string_sync.py
 It will read the state of the google sheets, and the state of the strings in the Project, merging them together and writing back to both.
 This means that both the Project strings and the strings in the google doc are affected in one step.
 
