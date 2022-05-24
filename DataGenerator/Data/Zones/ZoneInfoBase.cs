@@ -259,7 +259,7 @@ namespace DataGenerator.Data
 
                     //sealing the vault
                     {
-                        KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>(40, 39);
+                        KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>(40, 39, 455);
                         vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                         layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
                     }
@@ -1789,6 +1789,7 @@ namespace DataGenerator.Data
                     {
                         EffectTile effect = new EffectTile(37, true, new Loc(4, 4));
                         effect.Danger = true;
+                        effect.TileStates.Set(new UnlockState(455));
                         effect.TileStates.Set(new BoundsState(new Rect(0, 0, 10, 10)));
                         ItemSpawnState itemSpawn = new ItemSpawnState();
                         for (int ii = 0; ii < 10; ii++)
@@ -1810,6 +1811,7 @@ namespace DataGenerator.Data
                     {
                         EffectTile effect = new EffectTile(37, true, new Loc(5, 5));
                         effect.Danger = true;
+                        effect.TileStates.Set(new UnlockState(455));
                         effect.TileStates.Set(new BoundsState(new Rect(3, 3, 13, 13)));
                         ItemSpawnState itemSpawn = new ItemSpawnState();
                         for (int ii = 0; ii < 10; ii++)
@@ -1943,6 +1945,7 @@ namespace DataGenerator.Data
                         for (int mm = 1; mm < howMany; mm++)
                             state.Tiles.Add(new Loc(40 + patternDiff * mm + 1, 2 + 1));
                         effect2.TileStates.Set(state);
+                        effect2.TileStates.Set(new UnlockState(455));
                         ((Tile)drawStep.Tiles[40][2]).Effect = effect2;
                     }
                     for (int nn = 1; nn < howMany; nn++)

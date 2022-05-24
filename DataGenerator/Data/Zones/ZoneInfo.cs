@@ -3880,7 +3880,7 @@ namespace DataGenerator.Data
                             }
                             //sealing the vault
                             {
-                                KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>(40, 39);
+                                KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>(40, 39, 455);
                                 vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                                 layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
                             }
@@ -4580,7 +4580,7 @@ namespace DataGenerator.Data
 
                         //sealing the vault
                         {
-                            KeySealStep<ListMapGenContext> vaultStep = new KeySealStep<ListMapGenContext>(40, 39);
+                            KeySealStep<ListMapGenContext> vaultStep = new KeySealStep<ListMapGenContext>(40, 39, 455);
                             vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                             vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_TILES_GEN_EXTRA, vaultStep));
                         }

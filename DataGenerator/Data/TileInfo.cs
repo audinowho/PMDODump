@@ -923,7 +923,7 @@ namespace DataGenerator.Data
                 tile.Anim = new ObjAnimData("Chest", 1);
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
-                tile.LandedOnTiles.Add(0, new AskUnlockEvent(455));//for doors/chests, this will be triggered when "talked to"
+                tile.LandedOnTiles.Add(0, new AskUnlockEvent());//for doors/chests, this will be triggered when "talked to"
                 tile.InteractWithTiles.Add(0, new ChestEvent());//for doors/chests, this will be triggered when the key is used
             }
             else if (ii == 38)
@@ -949,7 +949,7 @@ namespace DataGenerator.Data
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
                 //tile.BlockLight = true;
-                tile.LandedOnTiles.Add(0, new AskUnlockEvent(455));//for doors/chests, this will be triggered when "talked to"
+                tile.LandedOnTiles.Add(0, new AskUnlockEvent());//for doors/chests, this will be triggered when "talked to"
                 tile.InteractWithTiles.Add(0, new OpenSelfEvent());
 
                 WindEmitter overlay = new WindEmitter(new AnimData("Wind_Leaves", 4), new AnimData("Wind_Leaves_Small", 3));
