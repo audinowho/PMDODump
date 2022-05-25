@@ -119,7 +119,7 @@ namespace DataGenerator.Data
                     mobData.BaseSkills[2] = new SlotSkill(34);
                     mobData.BaseSkills[3] = new SlotSkill(156);
                     mobData.BaseIntrinsics[0] = 82;
-                    Character newMob = new Character(mobData, team);
+                    Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
                     AITactic tactic = DataManager.Instance.GetAITactic(14);
                     newMob.Tactic = new AITactic(tactic);
@@ -185,7 +185,7 @@ namespace DataGenerator.Data
                     mobData.BaseSkills[2] = new SlotSkill(403);
                     mobData.BaseSkills[3] = new SlotSkill(466);
                     mobData.BaseIntrinsics[0] = 156;
-                    Character newMob = new Character(mobData, team);
+                    Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
                     AITactic tactic = DataManager.Instance.GetAITactic(14);
                     newMob.Tactic = new AITactic(tactic);
@@ -209,7 +209,7 @@ namespace DataGenerator.Data
                     mobData.BaseSkills[2] = new SlotSkill(198);
                     mobData.BaseSkills[3] = new SlotSkill(409);
                     mobData.BaseIntrinsics[0] = 80;
-                    Character newMob = new Character(mobData, team);
+                    Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
                     AITactic tactic = DataManager.Instance.GetAITactic(14);
                     newMob.Tactic = new AITactic(tactic);
@@ -233,7 +233,7 @@ namespace DataGenerator.Data
                     mobData.BaseSkills[2] = new SlotSkill(50);
                     mobData.BaseSkills[3] = new SlotSkill(304);
                     mobData.BaseIntrinsics[0] = 172;
-                    Character newMob = new Character(mobData, team);
+                    Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
                     AITactic tactic = DataManager.Instance.GetAITactic(14);
                     newMob.Tactic = new AITactic(tactic);
