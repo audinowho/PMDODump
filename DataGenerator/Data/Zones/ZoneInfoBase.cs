@@ -274,7 +274,7 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
                     //enemies!
-                    AddRespawnData(layout, 10000, 1);
+                    AddRespawnData(layout, 200, 1);
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
@@ -283,6 +283,7 @@ namespace DataGenerator.Data
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
 
+                    AddEnemySpawnData(layout, 20, new RandRange(200));
 
                     //Tilesets
                     AddTextureData(layout, 0, 1, 2, 0);
