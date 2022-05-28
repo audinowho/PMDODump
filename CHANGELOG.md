@@ -7,6 +7,6 @@
 * Adjusted the PP of various boosting moves
 * Optimized performance for larger amounts of enemies
 * Added a Save-All button to editors to save the contents of all open windows without closing them
-* Added tooltips for editors
+* Added tooltips for editors- hover over labels or dropdowns to see them.
 * Fixed a dev bug where creating a tile or terrain and immediately trying to use it resulted in an error
 * Changed lock tiles to work based on specified key items instead of one-item-unlock-all
