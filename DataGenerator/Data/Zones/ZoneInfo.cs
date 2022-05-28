@@ -966,7 +966,7 @@ namespace DataGenerator.Data
 
                         if (ii == 4)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
                             EffectTile secretStairs = new EffectTile(34, true);
@@ -1086,7 +1086,7 @@ namespace DataGenerator.Data
 
                         if (ii == 3)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
                             EffectTile secretStairs = new EffectTile(34, true);
@@ -1457,7 +1457,7 @@ namespace DataGenerator.Data
 
                         if (ii == 1)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
                             EffectTile secretStairs = new EffectTile(34, true);
@@ -1467,7 +1467,7 @@ namespace DataGenerator.Data
                         }
                         else if (ii == 11)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
                             EffectTile secretStairs = new EffectTile(34, true);
@@ -1994,7 +1994,7 @@ namespace DataGenerator.Data
 
                         if (ii == 7)
                         {
-                            KeyDetourStep<ListMapGenContext> sealedDetour = new KeyDetourStep<ListMapGenContext>(39);
+                            KeyDetourStep<ListMapGenContext> sealedDetour = new KeyDetourStep<ListMapGenContext>(39, 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<ListMapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
                             EffectTile secretStairs = new EffectTile(34, true);
@@ -2261,7 +2261,7 @@ namespace DataGenerator.Data
 
                         if (ii == 7)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
                             EffectTile secretStairs = new EffectTile(34, true);
@@ -2620,7 +2620,7 @@ namespace DataGenerator.Data
 
                         if (ii == 5)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
                             EffectTile secretStairs = new EffectTile(34, true);
@@ -2973,7 +2973,7 @@ namespace DataGenerator.Data
 
                         if (ii == 2)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
                             EffectTile secretStairs = new EffectTile(34, true);
@@ -2983,7 +2983,7 @@ namespace DataGenerator.Data
                         }
                         else if (ii == 5)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
                             EffectTile secretStairs = new EffectTile(34, true);
@@ -2993,7 +2993,7 @@ namespace DataGenerator.Data
                         }
                         else if (ii == 9)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
                             EffectTile secretStairs = new EffectTile(34, true);
