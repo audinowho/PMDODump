@@ -15,8 +15,9 @@ namespace Updater
     class Program
     {
         static string updaterPath;
-        static string exeRepo;
+        static string curVerRepo;
         static string assetSubmodule;
+        static string exeSubmodule;
         static List<string> excludedFiles;
         static List<string> executableFiles;
         static Version lastVersion;
@@ -29,8 +30,9 @@ namespace Updater
             if (args.Length > 1)
                 Int32.TryParse(args[1], out argNum);
             //1: detect platform and load defaults
-            exeRepo = "audinowho/PMDODump";
+            curVerRepo = "audinowho/PMDODump";
             assetSubmodule = "DumpAsset";
+            exeSubmodule = "PMDC";
             lastVersion = new Version(0, 0, 0, 0);
             excludedFiles = new List<string>();
             executableFiles = new List<string>();
@@ -90,18 +92,17 @@ namespace Updater
                 using (var wc = new WebClient())
                 {
                     wc.Headers.Add("user-agent", "Updater/2.0.0");
-                    string latestStr = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/latest", exeRepo));
-                    JsonElement latestJson = JsonDocument.Parse(latestStr).RootElement;
+                    string latestResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/latest", curVerRepo));
+                    JsonElement latestJson = JsonDocument.Parse(latestResponse).RootElement;
 
                     string uploadedVersionStr = latestJson.GetProperty("name").GetString();
+                    string changelog = latestJson.GetProperty("body").GetString();
                     Version nextVersion = new Version(uploadedVersionStr);
 
                     if (lastVersion >= nextVersion)
                     {
                         if (force)
-                        {
                             Console.WriteLine("Update will be forced. {0} >= {1}", lastVersion, nextVersion);
-                        }
                         else
                         {
                             Console.WriteLine("You are up to date. {0} >= {1}", lastVersion, nextVersion);
@@ -109,36 +110,81 @@ namespace Updater
                             return;
                         }
                     }
+                    else
+                        Console.WriteLine("Update available. {0} < {1}", lastVersion, nextVersion);
 
-                    JsonElement assetsJson = latestJson.GetProperty("assets");
+                    Console.WriteLine();
+                    Console.WriteLine(changelog);
+                    Console.WriteLine();
+                    Console.WriteLine();
+
+                    string tagStr = latestJson.GetProperty("tag_name").GetString();
+                    Regex pattern = new Regex(@"https://github\.com/(?<repo>\w+/\w+).git");
+
                     string exeFile = null;
-                    foreach (JsonElement assetJson in assetsJson.EnumerateArray())
                     {
-                        string assetName = assetJson.GetProperty("name").GetString();
-                        if (assetName == String.Format("{0}.zip", GetCurrentPlatform()))
+                        //Get the exe submodule's version (commit) at this tag
+                        wc.Headers.Add("user-agent", "Updater/2.0.0");
+                        string exeSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, exeSubmodule, tagStr));
+                        JsonElement exeSubmoduleJson = JsonDocument.Parse(exeSubmoduleResponse).RootElement;
+
+                        string exeUrl = exeSubmoduleJson.GetProperty("submodule_git_url").GetString();
+                        Match match = pattern.Match(exeUrl);
+                        string exeRepo = match.Groups["repo"].Value;
+
+                        string refStr = exeSubmoduleJson.GetProperty("sha").GetString();
+
+                        //Get the tag associated with the commit (there'd better be one)
+                        wc.Headers.Add("user-agent", "Updater/2.0.0");
+                        string exeTagsResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/tags", exeRepo));
+                        JsonElement exeTagsJson = JsonDocument.Parse(exeTagsResponse).RootElement;
+                        //TODO: the above request only gets the first 30 results in a paginated whole.  We technically want to iterate all tags to properly search for the one we want.
+                        //https://docs.github.com/en/rest/guides/traversing-with-pagination
+                        foreach (JsonElement tagJson in exeTagsJson.EnumerateArray())
                         {
-                            exeFile = assetJson.GetProperty("browser_download_url").GetString();
-                            break;
+                            string tagSha = tagJson.GetProperty("commit").GetProperty("sha").GetString();
+                            string tagName = tagJson.GetProperty("name").GetString();
+                            if (tagSha == refStr)
+                            {
+                                wc.Headers.Add("user-agent", "Updater/2.0.0");
+                                string tagReleasesResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/tags/{1}", exeRepo, tagName));
+                                JsonElement tagReleasesJson = JsonDocument.Parse(tagReleasesResponse).RootElement;
+
+                                JsonElement exeJson = tagReleasesJson.GetProperty("assets");
+                                foreach (JsonElement assetJson in exeJson.EnumerateArray())
+                                {
+                                    string assetName = assetJson.GetProperty("name").GetString();
+                                    if (assetName == String.Format("{0}.zip", GetCurrentPlatform()))
+                                    {
+                                        exeFile = assetJson.GetProperty("browser_download_url").GetString();
+                                        break;
+                                    }
+                                }
+
+                                break;
+                            }
                         }
                     }
 
                     if (exeFile == null)
-                        throw new Exception(String.Format("Could not find download for {0}.", GetCurrentPlatform()));
+                        throw new Exception(String.Format("Could not find exe download for {0}.", GetCurrentPlatform()));
 
-                    string tagStr = latestJson.GetProperty("tag_name").GetString();
-                    wc.Headers.Add("user-agent", "Updater/2.0.0");
-                    string submoduleStr = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", exeRepo, assetSubmodule, tagStr));
-                    JsonElement submoduleJson = JsonDocument.Parse(submoduleStr).RootElement;
+                    string assetFile;
+                    {
+                        //Get the asset submodule's version at this tag
+                        wc.Headers.Add("user-agent", "Updater/2.0.0");
+                        string assetSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, assetSubmodule, tagStr));
+                        JsonElement assetSubmoduleJson = JsonDocument.Parse(assetSubmoduleResponse).RootElement;
 
-                    string assetUrl = submoduleJson.GetProperty("submodule_git_url").GetString();
-                    Regex pattern = new Regex(@"https://github\.com/(?<repo>\w+/\w+).git");
-                    Match match = pattern.Match(assetUrl);
-                    string assetRepo = match.Groups["repo"].Value;
+                        string assetUrl = assetSubmoduleJson.GetProperty("submodule_git_url").GetString();
+                        Match match = pattern.Match(assetUrl);
+                        string assetRepo = match.Groups["repo"].Value;
 
-                    string refStr = submoduleJson.GetProperty("sha").GetString();
+                        string refStr = assetSubmoduleJson.GetProperty("sha").GetString();
 
-                    string assetFile = String.Format("https://api.github.com/repos/{0}/zipball/{1}", assetRepo, refStr);
-
+                        //get the download link for it
+                        assetFile = String.Format("https://api.github.com/repos/{0}/zipball/{1}", assetRepo, refStr);
+                    }
 
                     Console.WriteLine("Version {0} will be downloaded from {1} and {2}.\nPress any key to continue.", nextVersion, exeFile, assetFile);
                     ReadKey();
@@ -150,10 +196,15 @@ namespace Updater
                     string tempAsset = Path.Join(updaterPath, "temp", "Asset.zip");
 
                     Console.WriteLine("Downloading from {0} to {1}. May take a while...", exeFile, tempExe);
+                    wc.Headers.Add("user-agent", "Updater/2.0.0");
                     wc.DownloadFile(exeFile, tempExe);
                     Console.WriteLine("Downloading from {0} to {1}. May take a while...", assetFile, tempAsset);
                     wc.Headers.Add("user-agent", "Updater/2.0.0");
                     wc.DownloadFile(assetFile, tempAsset);
+
+                    Console.WriteLine("Adjusting filenames...");
+                    //unzip the exe, rename, then rezip just to rename the file... ugh
+                    RenameRezip(tempExe);
 
                     //5: unzip and delete by directory - if you want to save your data be sure to make an exception in the xml (this is done by default)
                     Unzip(tempExe, null, 0);
@@ -237,6 +288,54 @@ namespace Updater
             }
         }
 
+
+        static void RenameRezip(string tempExe)
+        {
+            using (ZipArchive archive = ZipFile.OpenRead(tempExe))
+            {
+                foreach (ZipArchiveEntry entry in archive.Entries)
+                {
+                    // Gets the full path to ensure that relative segments are removed.
+                    string destinationPath = Path.GetFullPath(Path.Join(updaterPath, "temp", entry.FullName));
+                    if (!destinationPath.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
+                        entry.ExtractToFile(destinationPath);
+                    else
+                    {
+                        if (!Directory.Exists(destinationPath))
+                            Directory.CreateDirectory(destinationPath);
+                    }
+                }
+            }
+
+            File.Delete(tempExe);
+
+            if (Directory.Exists(Path.Join(updaterPath, "temp", "PMDC")))
+                Directory.Move(Path.Join(updaterPath, "temp", "PMDC"), Path.Join(updaterPath, "temp", "PMDO"));
+
+            if (File.Exists(Path.Join(updaterPath, "temp", "PMDO", "PMDC.exe")))
+                File.Move(Path.Join(updaterPath, "temp", "PMDO", "PMDC.exe"), Path.Join(updaterPath, "temp", "PMDO", "PMDO.exe"));
+
+            if (File.Exists(Path.Join(updaterPath, "temp", "PMDO", "PMDC")))
+                File.Move(Path.Join(updaterPath, "temp", "PMDO", "PMDC"), Path.Join(updaterPath, "temp", "PMDO", "PMDO"));
+
+            using (ZipArchive archive = ZipFile.Open(tempExe, ZipArchiveMode.Create))
+            {
+                foreach (string path in Directory.GetFiles(Path.Join(updaterPath, "temp", "PMDO")))
+                {
+                    string file = Path.GetFileName(path);
+                    archive.CreateEntryFromFile(Path.Join(updaterPath, "temp", "PMDO", file), Path.Join("PMDO", file));
+                }
+                foreach (string path in Directory.GetFiles(Path.Join(updaterPath, "temp", "WaypointServer")))
+                {
+                    string file = Path.GetFileName(path);
+                    archive.CreateEntryFromFile(Path.Join(updaterPath, "temp", "WaypointServer", file), Path.Join("WaypointServer", file));
+                }
+            }
+
+            Directory.Delete(Path.Join(updaterPath, "temp", "PMDO"), true);
+            Directory.Delete(Path.Join(updaterPath, "temp", "WaypointServer"), true);
+        }
+
         static void ReadKey()
         {
             if (argNum == -1)
@@ -253,7 +352,7 @@ namespace Updater
                     XmlDocument xmldoc = new XmlDocument();
                     xmldoc.Load(path);
 
-                    exeRepo = xmldoc.SelectSingleNode("Config/ExeRepo").InnerText;
+                    curVerRepo = xmldoc.SelectSingleNode("Config/ExeRepo").InnerText;
                     assetSubmodule = xmldoc.SelectSingleNode("Config/Asset").InnerText;
                     lastVersion = new Version(xmldoc.SelectSingleNode("Config/LastVersion").InnerText);
 
@@ -284,7 +383,7 @@ namespace Updater
 
         static void DefaultXml()
         {
-            exeRepo = "audinowho/PMDODump";
+            curVerRepo = "audinowho/PMDODump";
             assetSubmodule = "DumpAsset";
             lastVersion = new Version(0, 0, 0, 0);
             excludedFiles = new List<string>();
@@ -313,7 +412,7 @@ namespace Updater
                 XmlNode docNode = xmldoc.CreateElement("Config");
                 xmldoc.AppendChild(docNode);
 
-                appendConfigNode(xmldoc, docNode, "ExeRepo", exeRepo);
+                appendConfigNode(xmldoc, docNode, "ExeRepo", curVerRepo);
                 appendConfigNode(xmldoc, docNode, "Asset", assetSubmodule);
                 appendConfigNode(xmldoc, docNode, "LastVersion", lastVersion.ToString());
 
