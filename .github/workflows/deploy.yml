@@ -21,6 +21,30 @@ jobs:
         run: git submodule update --init --recursive PMDC/
       - name: Restore
         run: dotnet restore
+      - name: Build Windows App x86
+        run: dotnet publish -c Release -r win-x86 PMDC/PMDC/PMDC.csproj;mv PMDC/publish/win-x86/PMDC/ PMDC/publish/win-x86/PMDO/;mv PMDC/publish/win-x86/PMDO/PMDC.exe PMDC/publish/win-x86/PMDO/PMDO.exe
+      - name: Build Windows App
+        run: dotnet publish -c Release -r win-x64 PMDC/PMDC/PMDC.csproj;mv PMDC/publish/win-x64/PMDC/ PMDC/publish/win-x64/PMDO/;mv PMDC/publish/win-x64/PMDO/PMDC.exe PMDC/publish/win-x64/PMDO/PMDO.exe
+      - name: Build Linux App
+        run: dotnet publish -c Release -r linux-x64 PMDC/PMDC/PMDC.csproj;mv PMDC/publish/linux-x64/PMDC/ PMDC/publish/linux-x64/PMDO/;mv PMDC/publish/linux-x64/PMDO/PMDC PMDC/publish/linux-x64/PMDO/PMDO
+      - name: Build Mac App
+        run: dotnet publish -c Release -r osx-x64 PMDC/PMDC/PMDC.csproj;mv PMDC/publish/osx-x64/PMDC/ PMDC/publish/osx-x64/PMDO/;mv PMDC/publish/osx-x64/PMDO/PMDC PMDC/publish/osx-x64/PMDO/PMDO
+      - name: Build Windows Server x86
+        run: dotnet publish -c Release -r win-x86 PMDC/RogueEssence/WaypointServer/WaypointServer.csproj;mv PMDC/RogueEssence/publish/win-x86/WaypointServer/ PMDC/publish/win-x86/
+      - name: Build Windows Server
+        run: dotnet publish -c Release -r win-x64 PMDC/RogueEssence/WaypointServer/WaypointServer.csproj;mv PMDC/RogueEssence/publish/win-x64/WaypointServer/ PMDC/publish/win-x64/
+      - name: Build Linux Server
+        run: dotnet publish -c Release -r linux-x64 PMDC/RogueEssence/WaypointServer/WaypointServer.csproj;mv PMDC/RogueEssence/publish/linux-x64/WaypointServer/ PMDC/publish/linux-x64/
+      - name: Build Mac Server
+        run: dotnet publish -c Release -r osx-x64 PMDC/RogueEssence/WaypointServer/WaypointServer.csproj;mv PMDC/RogueEssence/publish/osx-x64/WaypointServer.app/ PMDC/publish/osx-x64/
+      - name: Zip Windows x86
+        run: cd PMDC/publish/win-x86/;zip -r windows-x86.zip PMDO/ WaypointServer/
+      - name: Zip Windows
+        run: cd PMDC/publish/win-x64/;zip -r windows-x64.zip PMDO/ WaypointServer/
+      - name: Zip Linux
+        run: cd PMDC/publish/linux-x64/;zip -r linux-x64.zip PMDO/ WaypointServer/
+      - name: Zip Mac
+        run: cd PMDC/publish/osx-x64/;zip -r osx-x64.zip PMDO/ WaypointServer/
       - name: Build Windows Updater x86
         run: dotnet publish -c Release -r win-x86 Updater/Updater.csproj
       - name: Build Windows Updater
@@ -51,6 +75,42 @@ jobs:
           body_path: CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload Windows x86
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./PMDC/publish/win-x86/windows-x86.zip
+          asset_name: windows-x86.zip
+          asset_content_type: application/zip
+      - name: Upload Windows
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./PMDC/publish/win-x64/windows-x64.zip
+          asset_name: windows-x64.zip
+          asset_content_type: application/zip
+      - name: Upload Linux
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./PMDC/publish/linux-x64/linux-x64.zip
+          asset_name: linux-x64.zip
+          asset_content_type: application/zip
+      - name: Upload Mac
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./PMDC/publish/osx-x64/osx-x64.zip
+          asset_name: osx-x64.zip
+          asset_content_type: application/zip
       - name: Upload Windows x86 Updater
         uses: actions/upload-release-asset@v1
         env:
