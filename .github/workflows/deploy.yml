@@ -45,6 +45,22 @@ jobs:
         run: cd PMDC/publish/linux-x64/;zip -r linux-x64.zip PMDO/ WaypointServer/
       - name: Zip Mac
         run: cd PMDC/publish/osx-x64/;zip -r osx-x64.zip PMDO/ WaypointServer/
+      - name: Build Windows Updater x86
+        run: dotnet publish -c Release -r win-x86 Updater/Updater.csproj
+      - name: Build Windows Updater
+        run: dotnet publish -c Release -r win-x64 Updater/Updater.csproj
+      - name: Build Linux Updater
+        run: dotnet publish -c Release -r linux-x64 Updater/Updater.csproj
+      - name: Build Mac Updater
+        run: dotnet publish -c Release -r osx-x64 Updater/Updater.csproj
+      - name: Zip Windows Updater x86
+        run: cd publish/win-x86/;zip -r updater-windows-x86.zip Updater/
+      - name: Zip Windows Updater
+        run: cd publish/win-x64/;zip -r updater-windows-x64.zip Updater/
+      - name: Zip Linux Updater
+        run: cd publish/linux-x64/;zip -r updater-linux-x64.zip Updater/
+      - name: Zip Mac Updater
+        run: cd publish/osx-x64/;zip -r updater-osx-x64.zip Updater/
       - name: Set Version
         run: echo "::set-output name=version::$(sed -En 's,<\AssemblyVersion>(.+)</AssemblyVersion>,\1,p' DataGenerator/DataGenerator.csproj)"
         id: version
@@ -94,4 +110,40 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./PMDC/publish/osx-x64/osx-x64.zip
           asset_name: osx-x64.zip
+          asset_content_type: application/zip
+      - name: Upload Windows x86 Updater
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./publish/win-x86/updater-windows-x86.zip
+          asset_name: updater-windows-x86.zip
+          asset_content_type: application/zip
+      - name: Upload Windows Updater
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./publish/win-x64/updater-windows-x64.zip
+          asset_name: updater-windows-x64.zip
+          asset_content_type: application/zip
+      - name: Upload Linux Updater
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./publish/linux-x64/updater-linux-x64.zip
+          asset_name: updater-linux-x64.zip
+          asset_content_type: application/zip
+      - name: Upload Mac Updater
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./publish/osx-x64/updater-osx-x64.zip
+          asset_name: updater-osx-x64.zip
           asset_content_type: application/zip
