@@ -490,17 +490,17 @@ Key		EN
 0350-0000|data.Name		Everstone
 0350-0001|data.Desc		
 0351-0000|data.Name		Fire Stone
-0351-0001|data.Desc		A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve.
+0351-0001|data.Desc		A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fire-type.
 0352-0000|data.Name		Thunder Stone
-0352-0001|data.Desc		A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve.
+0352-0001|data.Desc		A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Electric-type.
 0353-0000|data.Name		Water Stone
-0353-0001|data.Desc		A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve.
+0353-0001|data.Desc		A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Water-type.
 0354-0000|data.Name		Leaf Stone
-0354-0001|data.Desc		A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve.
+0354-0001|data.Desc		A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Grass-type.
 0355-0000|data.Name		Moon Stone
-0355-0001|data.Desc		An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve.
+0355-0001|data.Desc		An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fairy-type.
 0356-0000|data.Name		Sun Stone
-0356-0001|data.Desc		An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve.
+0356-0001|data.Desc		An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Psychic-type.
 0357-0000|data.Name		Magmarizer
 0357-0001|data.Desc		A box brimming with a huge amount of magma energy. It allows a certain kind of Pokémon to evolve.
 0358-0000|data.Name		Electirizer
@@ -544,7 +544,7 @@ Key		EN
 0378-0000|data.Name		Lunar Ribbon
 0378-0001|data.Desc		A ribbon infused with moonlight. It allows a certain kind of Pokémon to evolve.
 0379-0000|data.Name		Ice Stone
-0379-0001|data.Desc		A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern.
+0379-0001|data.Desc		A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks to Ice-type.
 0380-0000|data.Name		Insect Plate
 0380-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Bug-type moves.
 0381-0000|data.Name		Dread Plate
