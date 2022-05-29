@@ -1,5 +1,4 @@
 Sheet: Hardcode
-    * Changed DLG_RESCUE_INFO_1 from "如果要请求救援，请在“等待救援”中选择“寻求帮助”。" to "To request a rescue, select Get Help within Awaiting Rescue."
 
 Sheet: Content
 
@@ -8,13 +7,6 @@ Sheet: Script
 Sheet: Abilities
 
 Sheet: Items
-    * Significantly changed 0351-0001|data.Desc from "A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve." to "A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fire-type."
-    * Significantly changed 0352-0001|data.Desc from "A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve." to "A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Electric-type."
-    * Significantly changed 0353-0001|data.Desc from "A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve." to "A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Water-type."
-    * Significantly changed 0354-0001|data.Desc from "A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve." to "A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Grass-type."
-    * Significantly changed 0355-0001|data.Desc from "An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve." to "An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fairy-type."
-    * Significantly changed 0356-0001|data.Desc from "An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve." to "An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Psychic-type."
-    * Significantly changed 0379-0001|data.Desc from "A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern." to "A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks to Ice-type."
 
 Sheet: MapStatuses
 
