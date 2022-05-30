@@ -41,27 +41,35 @@ namespace PMDOSetup
 
             try
             {
-                Console.WriteLine("Updater Options:");
-                Console.WriteLine("1: Force Update");
-                Console.WriteLine("2: Uninstall (Retain Save Data)");
-                Console.WriteLine("3: Reset Updater XML");
-                Console.WriteLine("Press any other key to check for updates.");
-                ConsoleKey choice;
-                if (argNum > -1)
+                ConsoleKey choice = ConsoleKey.Enter;
+
+                if (lastVersion == new Version(0, 0, 0, 0))
                 {
-                    if (argNum == 1)
-                        choice = ConsoleKey.D1;
-                    else if (argNum == 2)
-                        choice = ConsoleKey.D2;
-                    else if (argNum == 3)
-                        choice = ConsoleKey.D3;
-                    else
-                        choice = ConsoleKey.Enter;
+                    Console.WriteLine("Preparing PMDO installation...");
                 }
                 else
                 {
-                    ConsoleKeyInfo keyInfo = Console.ReadKey();
-                    choice = keyInfo.Key;
+                    Console.WriteLine("Updater Options:");
+                    Console.WriteLine("1: Force Update");
+                    Console.WriteLine("2: Uninstall (Retain Save Data)");
+                    Console.WriteLine("3: Reset Updater XML");
+                    Console.WriteLine("Press any other key to check for updates.");
+                    if (argNum > -1)
+                    {
+                        if (argNum == 1)
+                            choice = ConsoleKey.D1;
+                        else if (argNum == 2)
+                            choice = ConsoleKey.D2;
+                        else if (argNum == 3)
+                            choice = ConsoleKey.D3;
+                        else
+                            choice = ConsoleKey.Enter;
+                    }
+                    else
+                    {
+                        ConsoleKeyInfo keyInfo = Console.ReadKey();
+                        choice = keyInfo.Key;
+                    }
                 }
 
                 Console.WriteLine();
@@ -186,7 +194,7 @@ namespace PMDOSetup
                         assetFile = String.Format("https://api.github.com/repos/{0}/zipball/{1}", assetRepo, refStr);
                     }
 
-                    Console.WriteLine("Version {0} will be downloaded from {1} and {2}.\nPress any key to continue.", nextVersion, exeFile, assetFile);
+                    Console.WriteLine("Version {0} will be downloaded from the endpoints:\n  {1}\n  {2}.\n\nPress any key to continue.", nextVersion, exeFile, assetFile);
                     ReadKey();
 
                     //4: download the respective zip from specified location
