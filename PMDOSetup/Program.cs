@@ -10,7 +10,7 @@ using Mono.Unix;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-namespace Updater
+namespace PMDOSetup
 {
     class Program
     {
@@ -91,7 +91,7 @@ namespace Updater
                 //3: read from site what version is uploaded. if greater than the current version, upgrade
                 using (var wc = new WebClient())
                 {
-                    wc.Headers.Add("user-agent", "Updater/2.0.0");
+                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
                     string latestResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/latest", curVerRepo));
                     JsonElement latestJson = JsonDocument.Parse(latestResponse).RootElement;
 
@@ -124,7 +124,7 @@ namespace Updater
                     string exeFile = null;
                     {
                         //Get the exe submodule's version (commit) at this tag
-                        wc.Headers.Add("user-agent", "Updater/2.0.0");
+                        wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
                         string exeSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, exeSubmodule, tagStr));
                         JsonElement exeSubmoduleJson = JsonDocument.Parse(exeSubmoduleResponse).RootElement;
 
@@ -135,7 +135,7 @@ namespace Updater
                         string refStr = exeSubmoduleJson.GetProperty("sha").GetString();
 
                         //Get the tag associated with the commit (there'd better be one)
-                        wc.Headers.Add("user-agent", "Updater/2.0.0");
+                        wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
                         string exeTagsResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/tags", exeRepo));
                         JsonElement exeTagsJson = JsonDocument.Parse(exeTagsResponse).RootElement;
                         //TODO: the above request only gets the first 30 results in a paginated whole.  We technically want to iterate all tags to properly search for the one we want.
@@ -146,7 +146,7 @@ namespace Updater
                             string tagName = tagJson.GetProperty("name").GetString();
                             if (tagSha == refStr)
                             {
-                                wc.Headers.Add("user-agent", "Updater/2.0.0");
+                                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
                                 string tagReleasesResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/tags/{1}", exeRepo, tagName));
                                 JsonElement tagReleasesJson = JsonDocument.Parse(tagReleasesResponse).RootElement;
 
@@ -172,7 +172,7 @@ namespace Updater
                     string assetFile;
                     {
                         //Get the asset submodule's version at this tag
-                        wc.Headers.Add("user-agent", "Updater/2.0.0");
+                        wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
                         string assetSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, assetSubmodule, tagStr));
                         JsonElement assetSubmoduleJson = JsonDocument.Parse(assetSubmoduleResponse).RootElement;
 
@@ -196,10 +196,10 @@ namespace Updater
                     string tempAsset = Path.Join(updaterPath, "temp", "Asset.zip");
 
                     Console.WriteLine("Downloading from {0} to {1}. May take a while...", exeFile, tempExe);
-                    wc.Headers.Add("user-agent", "Updater/2.0.0");
+                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
                     wc.DownloadFile(exeFile, tempExe);
                     Console.WriteLine("Downloading from {0} to {1}. May take a while...", assetFile, tempAsset);
-                    wc.Headers.Add("user-agent", "Updater/2.0.0");
+                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
                     wc.DownloadFile(assetFile, tempAsset);
 
                     Console.WriteLine("Adjusting filenames...");

@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaypointServer", "PMDC\Rogu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RogueEssence.Editor.Avalonia", "PMDC\RogueEssence\RogueEssence.Editor.Avalonia\RogueEssence.Editor.Avalonia.csproj", "{19EA5DE7-8AB7-400F-BFCA-29759D758963}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Updater", "Updater\Updater.csproj", "{6945B52D-ACED-4350-859A-8AD4C8571E04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMDOSetup", "PMDOSetup\PMDOSetup.csproj", "{6945B52D-ACED-4350-859A-8AD4C8571E04}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGenerator", "DataGenerator\DataGenerator.csproj", "{92BFCDA9-3AF8-4370-906A-4F3AB0B1246C}"
 EndProject
