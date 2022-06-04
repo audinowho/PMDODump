@@ -6232,7 +6232,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
-                ((DashAction)skill.HitboxAction).Range = 8;
+                ((DashAction)skill.HitboxAction).Range = 6;
                 ((DashAction)skill.HitboxAction).StopAtWall = true;
                 ((DashAction)skill.HitboxAction).HitTiles = true;
                 AfterImageEmitter emitter = new AfterImageEmitter();
@@ -6408,7 +6408,7 @@ namespace DataGenerator.Data
             else if (ii == 252)
             {
                 skill.Name = new LocalText("-Fake Out");
-                skill.Desc = new LocalText("An attack that hits from a distance and makes the target flinch. It only works from the move's maximum range.");
+                skill.Desc = new LocalText("An attack that hits from a distance and makes the target flinch. It fails on targets directly in front.");
                 skill.BaseCharges = 20;
                 skill.Data.Element = 13;
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -6416,12 +6416,12 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(100));
-                skill.Data.BeforeHits.Add(0, new TipOnlyEvent());
+                skill.Data.BeforeHits.Add(0, new DistanceOnlyEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(8, true, true)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
-                ((DashAction)skill.HitboxAction).Range = 3;
+                ((DashAction)skill.HitboxAction).Range = 4;
                 ((DashAction)skill.HitboxAction).StopAtWall = true;
                 ((DashAction)skill.HitboxAction).StopAtHit = true;
                 ((DashAction)skill.HitboxAction).WideAngle = LineCoverage.FrontAndCorners;
@@ -10061,19 +10061,20 @@ namespace DataGenerator.Data
             else if (ii == 389)
             {
                 skill.Name = new LocalText("Sucker Punch");
-                skill.Desc = new LocalText("This attacks foes from a distance. It only works from the move's maximum range.");
+                skill.Desc = new LocalText("This attacks foes from a distance. It fails on targets directly in front.");
                 skill.BaseCharges = 16;
                 skill.Data.Element = 02;
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(75));
-                skill.Data.BeforeHits.Add(0, new TipOnlyEvent());
+                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.BeforeHits.Add(0, new DistanceOnlyEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
-                ((DashAction)skill.HitboxAction).Range = 3;
+                ((DashAction)skill.HitboxAction).Range = 4;
                 ((DashAction)skill.HitboxAction).StopAtWall = true;
+                ((DashAction)skill.HitboxAction).StopAtHit = true;
                 ((DashAction)skill.HitboxAction).WideAngle = LineCoverage.FrontAndCorners;
                 ((DashAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
