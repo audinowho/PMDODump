@@ -1,6 +1,8 @@
 Sheet: Hardcode
 
 Sheet: Content
+    * Significantly changed DLG_LOCK from "It's locked..." to "It needs a {0} to unlock..."
+    * Significantly changed DLG_LOCK_KEY from "Will you use a key?" to "Will you unlock it with the {0}?"
 
 Sheet: Script
 
@@ -11,6 +13,8 @@ Sheet: Items
 Sheet: MapStatuses
 
 Sheet: Moves
+    * Significantly changed 0252-0001|data.Desc from "An attack that hits from a distance and makes the target flinch. It only works from the move's maximum range." to "An attack that hits from a distance and makes the target flinch. It fails on targets directly in front."
+    * Significantly changed 0389-0001|data.Desc from "This attacks foes from a distance. It only works from the move's maximum range." to "This attacks foes from a distance. It fails on targets directly in front."
 
 Sheet: Statuses
 

@@ -504,7 +504,7 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0251-0000|data.Name		Beat Up	Prügler		围攻	Baston	Paliza	Picchiaduro	집단구타	ふくろだたき	ふくろだたき	圍攻
 0251-0001|data.Desc		The user calls over ally Pokémon to it.	Es werden Verbündete Pokémon zum Anwender gerufen.						동료를 가까이 불러온다.			
 0252-0000|data.Name		Fake Out	Mogelhieb		击掌奇袭	Bluff	Sorpresa	Bruciapelo	속이다	ねこだまし	ねこだまし	擊掌奇襲
-0252-0001|data.Desc		An attack that hits from a distance and makes the target flinch. It only works from the move's maximum range.	Diese Attacke trifft von der Ferne und lässt das Ziel zurückschrecken. Gelingt nur bei maximaler Reichweite.						멀리서 공격해 상대를 풀죽게 한다. 3칸 앞의 상대가 아니면 통하지 않는다.			
+0252-0001|data.Desc		An attack that hits from a distance and makes the target flinch. It fails on targets directly in front.	Diese Attacke trifft von der Ferne und lässt das Ziel zurückschrecken. Gelingt nur bei maximaler Reichweite.						멀리서 공격해 상대를 풀죽게 한다. 3칸 앞의 상대가 아니면 통하지 않는다.			
 0253-0000|data.Name		Uproar	Aufruhr		吵闹	Brouhaha	Alboroto	Baraonda	소란피기	さわぐ	さわぐ	吵鬧
 0253-0001|data.Desc		The user attacks in an uproar, preventing everyone from falling asleep.	Anwender greift an, indem er einen Aufruhr erzeugt. Verhindert Schlaf bei allen in der Nähe.						소란을 피워 공격한다. 그동안은 주변의 누구도 잠들지 않게 된다.			
 0254-0000|data.Name		Stockpile	Horter		蓄力	Stockage	Reserva	Accumulo	비축하기	たくわえる	たくわえる	蓄力
@@ -778,7 +778,7 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0388-0000|data.Name		Worry Seed	Sorgensamen		烦恼种子	Soucigraine	Abatidoras	Affannoseme	고민씨	なやみのタネ	なやみのタネ	煩惱種子
 0388-0001|data.Desc		A seed that causes worry is planted on the target. It prevents sleep by making the target's Ability Insomnia.	Ziel wird bepflanzt. Wandelt Fähigkeit in Insomnia um. Verhindert so Schlaf.		种植心神不宁的种子。 使对手不能入眠， 并将特性变成不眠。	Plante sur la cible une graine qui la rend soucieuse et remplace son talent par Insomnia, l’empêchant ainsi de dormir.	Se planta una semilla en el objetivo que le causa  pesar. Evita el sueño gracias a la habilidad Insomnio.	Un seme che causa ansia viene piantato sul bersaglio. Ne muta l’abilità in Insonnia e ne previene o rimuove il sonno.	마음을 괴롭히는 씨앗을 심는다. 상대를 잠잘 수 없게 해서 특성을 불면으로 만든다.	こころを　なやませる　タネを うえつける。あいてを　ねむれなく　して とくせいを　ふ んに　する。	心を　なやませる　タネを 植えつける。相手を　眠れなくして 特性を　ふ んに　する。	埋下令人心煩意亂的種子， 讓對手睡不著， 將對手的特性變成不眠。
 0389-0000|data.Name		Sucker Punch	Tiefschlag		突袭	Coup Bas	Golpe Bajo	Sbigoattacco	기습	ふいうち	ふいうち	突襲
-0389-0001|data.Desc		This attacks foes from a distance. It only works from the move's maximum range.	Dies greift Gegner aus der Entfernung an. Es funktioniert nur bei Gegnern in maximaler Reichweite.						멀리 있는 상대를 공격한다. 3칸 앞의 상대가 아니면 실패한다.			
+0389-0001|data.Desc		This attacks foes from a distance. It fails on targets directly in front.	Dies greift Gegner aus der Entfernung an. Es funktioniert nur bei Gegnern in maximaler Reichweite.						멀리 있는 상대를 공격한다. 3칸 앞의 상대가 아니면 실패한다.			
 0390-0000|data.Name		Toxic Spikes	Giftspitzen		毒菱	Pics Toxik	Púas Tóxicas	Fielepunte	독압정	どくびし	どくびし	毒菱
 0390-0001|data.Desc		The user lays a trap of poison spikes around itself. They badly poison opposing Pokémon that step on it.	Anwender legt eine Falle aus Giftdornen um sich herum. Sie verursachen starke Vergiftungen, falls gegnerische Pokémon auf sie treten.						자신의 주위에 독압정을 뿌린다. 밟는 상대는 맹독에 걸린다.			
 0391-0000|data.Name		Heart Swap	Statustausch		心灵互换	Permucœur	Cambia Almas	Cuorbaratto	하트스웹	ハートスワップ	ハートスワップ	心靈互換
