@@ -299,12 +299,14 @@ namespace PMDOSetup
 
         static void RenameRezip(string tempExe)
         {
+            string unzipPath = Path.Join(updaterPath, "temp", "unzip");
+            Directory.CreateDirectory(unzipPath);
             using (ZipArchive archive = ZipFile.OpenRead(tempExe))
             {
                 foreach (ZipArchiveEntry entry in archive.Entries)
                 {
                     // Gets the full path to ensure that relative segments are removed.
-                    string destinationPath = Path.GetFullPath(Path.Join(updaterPath, "temp", entry.FullName));
+                    string destinationPath = Path.GetFullPath(Path.Join(unzipPath, entry.FullName));
                     if (!destinationPath.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
                         entry.ExtractToFile(destinationPath);
                     else
@@ -317,31 +319,35 @@ namespace PMDOSetup
 
             File.Delete(tempExe);
 
-            if (Directory.Exists(Path.Join(updaterPath, "temp", "PMDC")))
-                Directory.Move(Path.Join(updaterPath, "temp", "PMDC"), Path.Join(updaterPath, "temp", "PMDO"));
+            if (Directory.Exists(Path.Join(unzipPath, "PMDC")))
+                Directory.Move(Path.Join(unzipPath, "PMDC"), Path.Join(unzipPath, "PMDO"));
 
-            if (File.Exists(Path.Join(updaterPath, "temp", "PMDO", "PMDC.exe")))
-                File.Move(Path.Join(updaterPath, "temp", "PMDO", "PMDC.exe"), Path.Join(updaterPath, "temp", "PMDO", "PMDO.exe"));
+            if (File.Exists(Path.Join(unzipPath, "PMDO", "PMDC.exe")))
+                File.Move(Path.Join(unzipPath, "PMDO", "PMDC.exe"), Path.Join(unzipPath, "PMDO", "PMDO.exe"));
 
-            if (File.Exists(Path.Join(updaterPath, "temp", "PMDO", "PMDC")))
-                File.Move(Path.Join(updaterPath, "temp", "PMDO", "PMDC"), Path.Join(updaterPath, "temp", "PMDO", "PMDO"));
+            if (File.Exists(Path.Join(unzipPath, "PMDO", "PMDC")))
+                File.Move(Path.Join(unzipPath, "PMDO", "PMDC"), Path.Join(unzipPath, "PMDO", "PMDO"));
 
             using (ZipArchive archive = ZipFile.Open(tempExe, ZipArchiveMode.Create))
-            {
-                foreach (string path in Directory.GetFiles(Path.Join(updaterPath, "temp", "PMDO")))
-                {
-                    string file = Path.GetFileName(path);
-                    archive.CreateEntryFromFile(Path.Join(updaterPath, "temp", "PMDO", file), Path.Join("PMDO", file));
-                }
-                foreach (string path in Directory.GetFiles(Path.Join(updaterPath, "temp", "WaypointServer")))
-                {
-                    string file = Path.GetFileName(path);
-                    archive.CreateEntryFromFile(Path.Join(updaterPath, "temp", "WaypointServer", file), Path.Join("WaypointServer", file));
-                }
-            }
+                zipRecursive(archive, unzipPath, "");
 
-            Directory.Delete(Path.Join(updaterPath, "temp", "PMDO"), true);
-            Directory.Delete(Path.Join(updaterPath, "temp", "WaypointServer"), true);
+            Directory.Delete(unzipPath, true);
+        }
+
+        private static void zipRecursive(ZipArchive archive, string unzipPath, string destPath)
+        {
+            foreach (string path in Directory.GetFiles(unzipPath))
+            {
+                string file = Path.GetFileName(path);
+                string destFile = Path.Join(destPath, file);
+                archive.CreateEntryFromFile(path, destFile);
+            }
+            foreach (string dir in Directory.GetDirectories(unzipPath))
+            {
+                string file = Path.GetFileName(dir);
+                string destFile = Path.Join(destPath, file);
+                zipRecursive(archive, Path.Join(unzipPath, file), destFile);
+            }
         }
 
         static void ReadKey()
