@@ -1,5 +1,4 @@
-# 0.5.14.1 Changes #
+# 0.5.15 Changes #
 
-* Fixed a save corruption bug occurring when ending a dungeon run while allies are targeting an enemy
-* Added safeguards against corrupted save saving
-* Fix error with setup/update on macOS
+* Modified the moves Protect, Detect, Sucker Punch, Wake-up Slap, Earth Power, Muddy Water
+* Sleep wears off on the afflicted's turn

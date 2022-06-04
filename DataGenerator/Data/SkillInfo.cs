@@ -5048,7 +5048,7 @@ namespace DataGenerator.Data
             else if (ii == 197)
             {
                 skill.Name = new LocalText("Detect");
-                skill.Desc = new LocalText("It enables the user to evade all attacks for one turn.");
+                skill.Desc = new LocalText("It enables the user to evade all attacks.");
                 skill.BaseCharges = 16;
                 skill.Data.Element = 06;
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -9267,12 +9267,12 @@ namespace DataGenerator.Data
                 newData.Element = 06;
                 newData.Category = BattleData.SkillCategory.Status;
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new RemoveStatusBattleEvent(1, true));
+                newData.OnHits.Add(0, new StatusBattleEvent(70, true, false));
                 skill.Data.BeforeHits.Add(-5, new AllyDifferentEvent(newData));
 
                 skill.Data.BeforeHits.Add(0, new StatusPowerEvent(1, true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new RemoveStatusBattleEvent(1, true)));
+                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new StatusBattleEvent(70, true, true)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(12);//Slap

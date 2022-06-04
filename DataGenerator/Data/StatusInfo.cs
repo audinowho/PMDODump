@@ -615,7 +615,7 @@ namespace DataGenerator.Data
                 anim.LocHeight = 16;
                 status.OnStatusRemoves.Add(0, new StatusAnimEvent(anim, "DUN_Dig", 0, true));
 
-                status.StatusStates.Set(new CountDownState(5));
+                status.StatusStates.Set(new CountDownState(6));
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
                 effects.Add(new RemoveLocTrapEvent());
@@ -637,7 +637,7 @@ namespace DataGenerator.Data
                 status.DrawEffect = DrawEffect.Absent;
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FLY_CHARGE")));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FLY_END")));
-                status.StatusStates.Set(new CountDownState(5));
+                status.StatusStates.Set(new CountDownState(6));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(19));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
@@ -662,7 +662,7 @@ namespace DataGenerator.Data
                 anim.LocHeight = 16;
                 status.OnStatusRemoves.Add(0, new StatusAnimEvent(anim, "DUN_Dive", 0, true));
 
-                status.StatusStates.Set(new CountDownState(5));
+                status.StatusStates.Set(new CountDownState(6));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(291));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
@@ -698,7 +698,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SHADOW_FORCE_END")));
                 status.OnStatusRemoves.Add(0, new StatusAnimEvent(new SingleEmitter(new AnimData("Dark_Void_Sparkle", 1)), "DUN_Snadow_Sneak_2", 0, true));
 
-                status.StatusStates.Set(new CountDownState(5));
+                status.StatusStates.Set(new CountDownState(6));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(566));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
@@ -716,7 +716,7 @@ namespace DataGenerator.Data
                 status.DrawEffect = DrawEffect.Absent;
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SHADOW_FORCE_CHARGE")));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SHADOW_FORCE_END")));
-                status.StatusStates.Set(new CountDownState(10));
+                status.StatusStates.Set(new CountDownState(11));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(467));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
@@ -1488,7 +1488,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Protect");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon is protected from all moves. This status wears off on the next turn.");
+                status.Desc = new LocalText("The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.");
                 status.Emoticon = "Shield_Green";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_PROTECT_ALREADY")));
@@ -1496,8 +1496,11 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Protect", 2));
                 status.BeforeBeingHits.Add(0, new ProtectEvent(new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
-                status.StatusStates.Set(new CountDownState(2));
+                status.StatusStates.Set(new RecentState());
+                status.StatusStates.Set(new CountDownState(4));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
+                status.BeforeActions.Add(0, new RemoveRecentEvent());
+                status.AfterActions.Add(0, new ExceptionStatusEvent(typeof(RecentState), new RemoveOnActionEvent(true)));
             }
             else if (ii == 90)
             {
@@ -2209,7 +2212,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Detect");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon is protected from all moves. This status wears off on the next turn.");
+                status.Desc = new LocalText("The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.");
                 status.Emoticon = "Shield_Brown";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_PROTECT_ALREADY")));
@@ -2217,8 +2220,11 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Leer", 1));
                 status.BeforeBeingHits.Add(0, new ProtectEvent(new BattleAnimEvent(emitter, "DUN_Mind_Reader", true, 10)));
-                status.StatusStates.Set(new CountDownState(2));
+                status.StatusStates.Set(new RecentState());
+                status.StatusStates.Set(new CountDownState(4));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
+                status.BeforeActions.Add(0, new RemoveRecentEvent());
+                status.AfterActions.Add(0, new ExceptionStatusEvent(typeof(RecentState), new RemoveOnActionEvent(true)));
             }
             else if (ii == 126)
             {
