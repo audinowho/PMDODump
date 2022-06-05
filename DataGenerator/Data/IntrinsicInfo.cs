@@ -1193,7 +1193,7 @@ namespace DataGenerator.Data
             else if (ii == 149)
             {
                 ability.Name = new LocalText("Illusion");
-                ability.Desc = new LocalText("Disguises itself as another Pokémon.");
+                ability.Desc = new LocalText("Disguises itself as another Pokémon, fooling wild Pokémon of the same species.");
                 ability.OnMapStarts.Add(0, new GiveIllusionEvent(111));
             }
             else if (ii == 150)
@@ -1540,8 +1540,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 206)
             {
-                ability.Name = new LocalText("**Galvanize");
-                ability.Desc = new LocalText("Normal-type moves become Electric-type moves. The power of those moves is boosted a little.");
+                ability.Name = new LocalText("Galvanize");
+                ability.Desc = new LocalText("Normal-type moves become Electric-type moves.");
+                ability.OnActions.Add(-1, new ChangeMoveElementEvent(13, 04));
             }
             else if (ii == 207)
             {

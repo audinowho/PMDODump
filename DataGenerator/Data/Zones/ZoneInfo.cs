@@ -1019,7 +1019,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-                    for (int ii = 0; ii < 12; ii++)
+                    for (int ii = 0; ii < 13; ii++)
                     {
                         GridFloorGen layout = new GridFloorGen();
 
@@ -2546,7 +2546,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
 
-                    for (int ii = 0; ii < 20; ii++)
+                    for (int ii = 0; ii < 4; ii++)
                     {
                         GridFloorGen layout = new GridFloorGen();
 
@@ -2585,7 +2585,7 @@ namespace DataGenerator.Data
 
                         //construct paths
                         {
-                            AddInitGridStep(layout, 4, 4, 10, 10);
+                            AddInitGridStep(layout, 40, 40, 10, 10);
 
                             GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
@@ -2618,7 +2618,7 @@ namespace DataGenerator.Data
 
 
 
-                        if (ii == 5)
+                        if (ii == 2)
                         {
                             KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
@@ -2640,14 +2640,14 @@ namespace DataGenerator.Data
             {
                 #region WAYWARD SNOW PATH
                 {
-                    zone.Name = new LocalText("**Wayward Snow Path");
+                    zone.Name = new LocalText("**Snowbound Path");
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Wayward Snow Path\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Snowbound Path\n{0}F")));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
@@ -2671,7 +2671,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
 
-                    for (int ii = 0; ii < 15; ii++)
+                    for (int ii = 0; ii < 16; ii++)
                     {
                         GridFloorGen layout = new GridFloorGen();
 

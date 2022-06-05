@@ -1874,9 +1874,8 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Illusion");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon has disguised itself as a different Pokémon. This status wears off when the Pokémon is damaged by an attack.");
+                status.Desc = new LocalText("The Pokémon has disguised itself as a different Pokémon. Wild Pokémon of the same species will not attack it.");
                 status.StatusStates.Set(new TransferStatusState());
-                status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_ILLUSION_START"), true));
 
                 FiniteReleaseEmitter emitter = new FiniteReleaseEmitter(new AnimData("Puff_Green", 3), new AnimData("Puff_Yellow", 3), new AnimData("Puff_Blue", 3), new AnimData("Puff_Red", 3));
                 emitter.BurstTime = 4;
@@ -1888,7 +1887,8 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 status.StatusStates.Set(new MonsterIDState());
                 status.OnRefresh.Add(0, new IllusionEvent());
-                status.AfterBeingHits.Add(0, new RemoveOnDamageEvent());
+                status.OnDeaths.Add(0, new RemoveEvent(true));
+                //status.AfterBeingHits.Add(0, new RemoveOnDamageEvent());
             }
             else if (ii == 112)
             {
