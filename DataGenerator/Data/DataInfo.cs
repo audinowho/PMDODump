@@ -37,6 +37,8 @@ namespace DataGenerator.Data
             universalEvent.BeforeHits.Add(-10, new PreHitEvent());
             universalEvent.BeforeHits.Add(10, new AttemptHitEvent());
             universalEvent.ElementEffects.Add(-10, new PreTypeEvent());
+            universalEvent.OnDeaths.Add(-10, new PreDeathEvent());
+            universalEvent.OnDeaths.Add(-10, new SetDeathEvent());
             universalEvent.OnDeaths.Add(0, new ImpostorReviveEvent(150));
             universalEvent.OnDeaths.Add(10, new HandoutRelativeExpEvent(1, 5, 10));
             universalEvent.OnMapStarts.Add(-10, new FadeInEvent());

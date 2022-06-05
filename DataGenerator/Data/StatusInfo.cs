@@ -1887,7 +1887,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 status.StatusStates.Set(new MonsterIDState());
                 status.OnRefresh.Add(0, new IllusionEvent());
-                status.OnDeaths.Add(0, new RemoveEvent(true));
+                status.OnDeaths.Add(-11, new RemoveEvent(true));
                 //status.AfterBeingHits.Add(0, new RemoveOnDamageEvent());
             }
             else if (ii == 112)
