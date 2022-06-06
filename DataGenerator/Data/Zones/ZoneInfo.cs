@@ -1669,7 +1669,7 @@ namespace DataGenerator.Data
                     heldItems.Spawns.Add(new InvItem(336), new IntRange(0, 10), 1);//Black Belt
                     heldItems.Spawns.Add(new InvItem(346), new IntRange(0, 10), 1);//Hard Stone
                     heldItems.Spawns.Add(new InvItem(313), new IntRange(0, 10), 2);//Scope Lens
-                    heldItems.Spawns.Add(new InvItem(314), new IntRange(0, 10), 2);//Wide Lens
+                    heldItems.Spawns.Add(new InvItem(310), new IntRange(0, 10), 2);//Metronome
 
                     //special
                     CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();

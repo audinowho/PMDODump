@@ -14509,8 +14509,8 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 12;
                 skill.Data.Element = 12;
                 skill.Data.Category = BattleData.SkillCategory.Magical;
-                skill.Data.HitRate = 90;
-                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.HitRate = 80;
+                skill.Data.SkillStates.Set(new BasePowerState(40));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.ElementEffects.Add(0, new TypeSuperEvent(18));
                 skill.Strikes = 1;

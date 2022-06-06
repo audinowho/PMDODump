@@ -1117,7 +1117,7 @@ namespace DataGenerator.Data
                 RepeatEmitter emitter = new RepeatEmitter(new AnimData("Circle_Green_Out", 2));
                 emitter.Bursts = 3;
                 emitter.BurstTime = 8;
-                ability.OnActions.Add(-3, new BerryAoEEvent(new StringKey("MSG_HARVEST"),emitter, "DUN_Me_First_2"));
+                ability.OnActions.Add(-3, new BerryAoEEvent(new StringKey("MSG_HARVEST"), emitter, "DUN_Me_First_2"));
             }
             else if (ii == 140)
             {
@@ -1309,10 +1309,10 @@ namespace DataGenerator.Data
             else if (ii == 166)
             {
                 ability.Name = new LocalText("Flower Veil");
-                ability.Desc = new LocalText("Ally Grass-type Pokémon are protected from status conditions and the lowering of their stats.");
-                ability.ProximityEvent.Radius = 3;
-                ability.ProximityEvent.TargetAlignments = (Alignment.Self | Alignment.Friend);
-                ability.ProximityEvent.BeforeStatusAdds.Add(0, new StateStatusCheck(typeof(BadStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
+                ability.Desc = new LocalText("Prevents lowering of ally Pokémon's stats.");
+                ability.ProximityEvent.Radius = 1;
+                ability.ProximityEvent.TargetAlignments = Alignment.Friend;
+                //ability.ProximityEvent.BeforeStatusAdds.Add(0, new StateStatusCheck(typeof(BadStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
                 ability.ProximityEvent.BeforeStatusAdds.Add(0, new StatChangeCheck(new List<Stat>(), new StringKey("MSG_FLOWER_VEIL_STATS"), true, false, false, new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
             }
             else if (ii == 167)
@@ -1404,7 +1404,36 @@ namespace DataGenerator.Data
             else if (ii == 180)
             {
                 ability.Name = new LocalText("**Symbiosis");
-                ability.Desc = new LocalText("");
+                ability.Desc = new LocalText("Passes the effect of its held item to ally Pokémon.");
+                ability.ProximityEvent.Radius = 1;
+                ability.ProximityEvent.TargetAlignments = Alignment.Friend;
+                //ability.ProximityEvent.AfterActions.Add(0, new PassEquipBattleEvent());
+                //ability.ProximityEvent.AfterBeingHits.Add(0, new PassEquipBattleEvent());
+                //ability.ProximityEvent.AfterHittings.Add(0, new PassEquipBattleEvent());
+                //ability.ProximityEvent.BeforeActions.Add(0, new PassEquipBattleEvent());
+                //ability.ProximityEvent.BeforeBeingHits.Add(0, new PassEquipBattleEvent());
+                //ability.ProximityEvent.BeforeHittings.Add(0, new PassEquipBattleEvent());
+                //ability.ProximityEvent.BeforeStatusAdds.Add(0, new PassEquipStatusEvent());
+                //ability.ProximityEvent.BeforeTryActions.Add(0, new PassEquipBattleEvent());
+                //ability.ProximityEvent.ModifyHPs.Add(0, new PassEquipHPChangeEvent());
+                //ability.ProximityEvent.OnActions.Add(0, new PassEquipBattleEvent());
+                //ability.ProximityEvent.OnDeaths.Add(0, new PassEquipEvent());
+                //ability.ProximityEvent.OnEquips.Add(0, new PassEquipItemEvent());
+                //ability.ProximityEvent.OnHitTiles.Add(0, new PassEquipBattleEvent());
+                //ability.ProximityEvent.OnMapStarts.Add(0, new PassEquipEvent());
+                //ability.ProximityEvent.OnMapStatusAdds.Add(0, new PassEquipMapStatusEvent());
+                //ability.ProximityEvent.OnMapStatusRemoves.Add(0, new PassEquipMapStatusEvent());
+                //ability.ProximityEvent.OnMapTurnEnds.Add(0, new PassEquipEvent());
+                //ability.ProximityEvent.OnPickups.Add(0, new PassEquipItemEvent());
+                //ability.ProximityEvent.OnStatusAdds.Add(0, new PassEquipStatusEvent());
+                //ability.ProximityEvent.OnStatusRemoves.Add(0, new PassEquipStatusEvent());
+                //ability.ProximityEvent.OnTurnEnds.Add(0, new PassEquipEvent());
+                //ability.ProximityEvent.OnTurnStarts.Add(0, new PassEquipEvent());
+                //ability.ProximityEvent.RestoreHPs.Add(0, new PassEquipHPChangeEvent());
+                //ability.ProximityEvent.TargetElementEffects.Add(0, new PassEquipElementEvent());
+                //ability.ProximityEvent.UserElementEffects.Add(0, new PassEquipElementEvent());
+                ////ability.ProximityEvent.OnRefresh.Add(0, new PassEquipRefreshEvent());
+                ability.OnRefresh.Add(-5, new NoHeldItemEvent());
             }
             else if (ii == 181)
             {
@@ -1501,7 +1530,7 @@ namespace DataGenerator.Data
             else if (ii == 198)
             {
                 ability.Name = new LocalText("**Stakeout");
-                ability.Desc = new LocalText("Doubles the damage dealt to the target's replacement if the target switches out.");
+                ability.Desc = new LocalText("The Pokémon's first attack deals increased damage.");
             }
             else if (ii == 199)
             {
@@ -1517,6 +1546,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("**Berserk");
                 ability.Desc = new LocalText("Boosts the Pokémon's Sp. Atk stat when it takes a hit that causes its HP to become half or less.");
+                //ability.AfterBeingHits.Add(0, new HPDropRequiredEvent(1, 2, new StatusStackBattleEvent(12, true, true, false, 1, new StringKey("MSG_BERSERK"))));
             }
             else if (ii == 202)
             {
@@ -1527,6 +1557,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("**Long Reach");
                 ability.Desc = new LocalText("The Pokémon uses its moves without making contact with the target.");
+                //ability.OnActions.Add(, new RemoveContactEvent());
             }
             else if (ii == 204)
             {
@@ -1628,11 +1659,15 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("**Power of Alchemy");
                 ability.Desc = new LocalText("The Pokémon copies the Ability of a defeated ally.");
+                ability.ProximityEvent.Radius = 5;
+                ability.ProximityEvent.TargetAlignments = Alignment.Friend;
+                //ability.ProximityEvent.OnDeaths.Add(0, new ProximityReflectAbilityEvent());
             }
             else if (ii == 224)
             {
                 ability.Name = new LocalText("**Beast Boost");
                 ability.Desc = new LocalText("The Pokémon boosts its most proficient stat each time it knocks out a Pokémon.");
+                //ability.AfterActions.Add(0, new KnockOutNeededEvent(new AffectHighestStatBattleEvent(10, 11, 12, 13, false, 1)));
             }
             else if (ii == 225)
             {
@@ -1691,8 +1726,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 236)
             {
-                ability.Name = new LocalText("**Libero");
-                ability.Desc = new LocalText("Changes the Pokémon's type to the type of the move it's about to use.");
+                ability.Name = new LocalText("Libero");
+                ability.Desc = new LocalText("Changes the Pokémon's type to the type of the move it last used.");
+                ability.AfterActions.Add(-1, new ConversionEvent(false));
             }
             else if (ii == 237)
             {
@@ -1747,7 +1783,8 @@ namespace DataGenerator.Data
             else if (ii == 247)
             {
                 ability.Name = new LocalText("**Ripen");
-                ability.Desc = new LocalText("Ripens Berries and doubles their effect.");
+                ability.Desc = new LocalText("Raises a stat when it eats a berry.");
+                //ability.AfterBeingHits.Add(0, new BerryBoostEvent(10, 11, 12, 13, 14, 15));
             }
             else if (ii == 248)
             {
