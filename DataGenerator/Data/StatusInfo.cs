@@ -1497,7 +1497,7 @@ namespace DataGenerator.Data
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Protect", 2));
                 status.BeforeBeingHits.Add(0, new ProtectEvent(new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
                 status.StatusStates.Set(new RecentState());
-                status.StatusStates.Set(new CountDownState(4));
+                status.StatusStates.Set(new CountDownState(3));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeActions.Add(0, new RemoveRecentEvent());
                 status.AfterActions.Add(0, new ExceptionStatusEvent(typeof(RecentState), new RemoveOnActionEvent(true)));
@@ -2221,7 +2221,7 @@ namespace DataGenerator.Data
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Leer", 1));
                 status.BeforeBeingHits.Add(0, new ProtectEvent(new BattleAnimEvent(emitter, "DUN_Mind_Reader", true, 10)));
                 status.StatusStates.Set(new RecentState());
-                status.StatusStates.Set(new CountDownState(4));
+                status.StatusStates.Set(new CountDownState(3));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeActions.Add(0, new RemoveRecentEvent());
                 status.AfterActions.Add(0, new ExceptionStatusEvent(typeof(RecentState), new RemoveOnActionEvent(true)));
