@@ -17,7 +17,7 @@ namespace DataGenerator.Data
 {
     public static class TileInfo
     {
-        public const int MAX_TILES = 50;
+        public const int MAX_TILES = 80;
 
         public static void AddTileData()
         {
@@ -1120,6 +1120,18 @@ namespace DataGenerator.Data
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
+            }
+            else if (ii == 51)
+            {
+                tile.Name = new LocalText("Compass Tile");
+                tile.Desc = new LocalText("A tile that shows the way to important locations on the floor.");
+                tile.BlockItem = true;
+                tile.StepType = TileData.TriggerType.Switch;
+                tile.Anim = new ObjAnimData("Tile_Reset", 1);
+                tile.MinimapIcon = new Loc(2, 1);
+                tile.MinimapColor = Color.Cyan;
+                tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new CompassEvent());
             }
 
             if (tile.Name.DefaultText.StartsWith("**"))

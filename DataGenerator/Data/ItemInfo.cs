@@ -3040,7 +3040,7 @@ namespace DataGenerator.Data
             }
             else if (ii == 450)
             {
-                item.Name = new LocalText("Link Box");
+                item.Name = new LocalText("Recall Box");
                 item.Desc = new LocalText("A marvelous box that lets the user recall any move they've learned in the past.");
                 item.Sprite = "Machine_Blue";
                 item.Icon = 12;

@@ -2,6 +2,7 @@
 
 * Modified the moves Protect, Detect, Sucker Punch, Wake-up Slap, Earth Power, Muddy Water
 * Sleep wears off on the afflicted's turn
+* Renamed Link Box to Recall Box to reduce confusion
 * Fixed autotiling issue with StableTiles
 * Add developer option to make ground maps wrap around.  Dungeon map wrapping is WIP.
 * Added documentation for move VFX and map editor
