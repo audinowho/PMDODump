@@ -3483,7 +3483,7 @@ namespace DataGenerator.Data
             //060 Poliwag : 346 Water Sport : 055 Water Gun
             poolSpawn.Spawns.Add(GetTeamMob(060, -1, 346, 055, -1, -1, new RandRange(12)), new IntRange(5, 9), 10);
             //193 Yanma : 003 Speed Boost : 049 Sonic Boom
-            poolSpawn.Spawns.Add(GetTeamMob(193, 003, 049, -1, -1, -1, new RandRange(16)), new IntRange(7, 11), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(193, 003, 049, -1, -1, -1, new RandRange(14)), new IntRange(7, 11), 10);
             //440 Happiny : 383 Copycat : 204 Charm
             poolSpawn.Spawns.Add(GetTeamMob(440, -1, 383, 204, -1, -1, new RandRange(16), TeamMemberSpawn.MemberRole.Support), new IntRange(7, 11), 5);
             //215 Sneasel : 196 Icy Wind : 269 Taunt
@@ -3567,7 +3567,7 @@ namespace DataGenerator.Data
             //301 Delcatty : 096 Normalize : 274 Assist : 047 Sing
             poolSpawn.Spawns.Add(GetTeamMob(301, 096, 274, 047, -1, -1, new RandRange(36), TeamMemberSpawn.MemberRole.Support), new IntRange(19, 23), 10);
             //078 Rapidash : 083 Fire Spin : 517 Inferno
-            poolSpawn.Spawns.Add(GetTeamMob(078, -1, 083, 517, -1, -1, new RandRange(40), TeamMemberSpawn.MemberRole.Loner), new IntRange(19, 23), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(078, -1, 083, 517, -1, -1, new RandRange(37), TeamMemberSpawn.MemberRole.Loner), new IntRange(19, 23), 10);
             //389 Torterra : 452 Wood Hammer : 089 Earthquake : 235 Synthesis
             poolSpawn.Spawns.Add(GetTeamMob(389, -1, 452, 089, 235, -1, new RandRange(36)), new IntRange(19, 23), 10);
             //398 Staraptor : 097 Agility : 515 Final Gambit : 370 Close Combat
@@ -4890,7 +4890,7 @@ namespace DataGenerator.Data
 
                     LoopedTeamSpawner<MapGenContext> spawner = new LoopedTeamSpawner<MapGenContext>(specificTeam);
                     {
-                        spawner.AmountSpawner = new RandDecay(0, 4, 70);
+                        spawner.AmountSpawner = new RandDecay(0, 4, 50);
                     }
                     PlaceRandomMobsStep<MapGenContext> secretMobPlacement = new PlaceRandomMobsStep<MapGenContext>(spawner);
                     layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
