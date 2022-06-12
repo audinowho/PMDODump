@@ -806,6 +806,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Technician");
                 ability.Desc = new LocalText("Powers up the Pokémon's weaker moves.");
                 ability.OnActions.Add(0, new TechnicianEvent());
+                //ability.OnActions.Add(0, new OnMoveUseEvent(new TechnicianEvent()));
             }
             else if (ii == 102)
             {
