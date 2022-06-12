@@ -1386,15 +1386,6 @@ namespace DataGenerator.Data
                         RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
                         loadRoom.MapID = "test_room";
                         loadRoom.RoomTerrain = new Tile(0);
-                        int width = 8;
-                        int height = 8;
-                        loadRoom.Borders = new Dictionary<Dir4, bool[]>
-                        {
-                            [Dir4.Down] = new bool[width],
-                            [Dir4.Up] = new bool[width],
-                            [Dir4.Left] = new bool[height],
-                            [Dir4.Right] = new bool[height],
-                        };
                         SetGridSpecialRoomStep<MapGenContext> specialStep = new SetGridSpecialRoomStep<MapGenContext>();
                         specialStep.Rooms = new PresetPicker<RoomGen<MapGenContext>>(loadRoom);
                         specialStep.RoomComponents.Set(new ImmutableRoom());

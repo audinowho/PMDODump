@@ -271,7 +271,7 @@ namespace DataGenerator.Data
 
         public static RoomGenSpecific<T> CreateRoomGenSpecific<T>(string[] level) where T : class, ITiledGenContext
         {
-            RoomGenSpecific<T> roomGen = new RoomGenSpecific<T>(level[0].Length, level.Length, new Tile(0), false);
+            RoomGenSpecific<T> roomGen = new RoomGenSpecific<T>(level[0].Length, level.Length, new Tile(0));
             roomGen.Tiles = new Tile[level[0].Length][];
             for (int xx = 0; xx < level[0].Length; xx++)
             {
@@ -316,7 +316,7 @@ namespace DataGenerator.Data
 
         public static RoomGenSpecific<T> CreateRoomGenSpecificBoss<T>(string[] level, Loc trigger, List<MobSpawn> mobs, bool severe) where T : ListMapGenContext
         {
-            RoomGenSpecificBoss<T> roomGen = new RoomGenSpecificBoss<T>(level[0].Length, level.Length, new Tile(0), false, 38, trigger, severe ? "C02. Boss Battle 2.ogg" : "C01. Boss Battle.ogg");
+            RoomGenSpecificBoss<T> roomGen = new RoomGenSpecificBoss<T>(level[0].Length, level.Length, new Tile(0), 38, trigger, severe ? "C02. Boss Battle 2.ogg" : "C01. Boss Battle.ogg");
             roomGen.Bosses = mobs;
             roomGen.Tiles = new Tile[level[0].Length][];
             for (int xx = 0; xx < level[0].Length; xx++)
@@ -343,7 +343,7 @@ namespace DataGenerator.Data
 
         public static RoomGenPostProcSpecific<MapGenContext> CreateRoomGenPostProcSpecific(string[] level)
         {
-            RoomGenPostProcSpecific<MapGenContext> roomGen = new RoomGenPostProcSpecific<MapGenContext>(level[0].Length, level.Length, new Tile(0), false);
+            RoomGenPostProcSpecific<MapGenContext> roomGen = new RoomGenPostProcSpecific<MapGenContext>(level[0].Length, level.Length, new Tile(0));
             roomGen.Tiles = new Tile[level[0].Length][];
             roomGen.PostProcMask = new PostProcTile[level[0].Length][];
             for (int xx = 0; xx < level[0].Length; xx++)
