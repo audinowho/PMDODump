@@ -1,10 +1,11 @@
 # 0.5.15 Changes #
 
+* Sleep wears off on the afflicted's turn
 * Modified the moves Protect, Detect, Sucker Punch, Wake-up Slap, Earth Power, Muddy Water
 * Fixed AI targeting of moves such as Fake Out
-* Sleep wears off on the afflicted's turn
 * Renamed Link Box to Recall Box to reduce confusion
 * Minor tweaks to encounters in Secret Garden
+* Fixed an issue with Trawl Orb pulling items from walls
 * Fixed autotiling issue with StableTiles
 * Add developer option to make ground maps wrap around.  Dungeon map wrapping is WIP.
 * Added documentation for move VFX and map editor
