@@ -609,7 +609,7 @@ Key		EN
 0448-0001|data.Desc		A box that glitters with dazzling light. Whatever's inside is sure to sell for a high price!
 0449-0000|data.Name		Deluxe Box
 0449-0001|data.Desc		A box that is extravagant and opulent. It looks like something is inside.
-0450-0000|data.Name		Link Box
+0450-0000|data.Name		Recall Box
 0450-0001|data.Desc		A marvelous box that lets the user recall any move they've learned in the past.
 0451-0000|data.Name		Assembly Box
 0451-0001|data.Desc		A marvelous box that lets the user add any Pokémon from the assembly to the team.

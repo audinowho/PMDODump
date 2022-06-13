@@ -1,6 +1,5 @@
 Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-0000|data.Name		Debug		Debug	Debug
-0000-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0000]).Name		Debug Dungeon\n{0}F		Debug-Verlies\n{0}.OG	Mazmorra Debug\nP{0}				
 0001-0000|data.Name		Guildmaster Island	Île du Maître de la Guilde	Gildenmeister-Insel	Isla Maestro
 0002-0000|data.Name		Tropical Path		Tropischer Pfad	Paso Tropical
 0002-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tropical Path\n{0}F		Tropischer Pfad\n{0}.OG	Paso Tropical\nP{0}				
@@ -34,8 +33,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0015-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Treacherous Mountain\n{0}F		Tückisches Gebirge\n{0}.OG	Montaña Traicionera\nP{0}				
 0016-0000|data.Name		Forsaken Desert		Verlassene Wüste	Desierto Abandonado
 0016-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Forsaken Desert\n{0}F		Verlassene Wüste\n{0}.OG	Desierto Abandonado\nP{0}				
-0017-0000|data.Name		Wayward Snow Path			Paso Helado Errático		
-0017-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wayward Snow Path\n{0}F			Paso Helado Errático\nP{0}							
+0017-0000|data.Name		Snowbound Path			Paso Helado Errático		
+0017-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Snowbound Path\n{0}F			Paso Helado Errático\nP{0}							
 0018-0000|data.Name		Relic Tower		Reliktenturm	Torre Reliquia
 0018-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Relic Tower\n{0}F		Reliktenturm\n{0}.OG	Torre Reliquia\nP{0}				
 0019-0000|data.Name		Guildmaster Trail		Gildenmeister-Pfad	Sendero del Maestro

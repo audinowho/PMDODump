@@ -1,6 +1,5 @@
 Key		EN
 0000-0000|data.Name		Debug
-0000-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0000]).Name		Debug Dungeon\n{0}F
 0001-0000|data.Name		Guildmaster Island
 0002-0000|data.Name		Tropical Path
 0002-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tropical Path\n{0}F
@@ -34,8 +33,8 @@ Key		EN
 0015-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Treacherous Mountain\n{0}F
 0016-0000|data.Name		Forsaken Desert
 0016-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Forsaken Desert\n{0}F
-0017-0000|data.Name		Wayward Snow Path
-0017-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wayward Snow Path\n{0}F
+0017-0000|data.Name		Snowbound Path
+0017-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Snowbound Path\n{0}F
 0018-0000|data.Name		Relic Tower
 0018-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Relic Tower\n{0}F
 0019-0000|data.Name		Guildmaster Trail

@@ -1,32 +1,49 @@
 Sheet: Hardcode
 
 Sheet: Content
-    * Significantly changed DLG_LOCK from "It's locked..." to "It needs a {0} to unlock..."
-    * Significantly changed DLG_LOCK_KEY from "Will you use a key?" to "Will you unlock it with the {0}?"
+    * Significantly changed MSG_HARVEST from "{0}'s Harvest shared the effect!" to "{0}'s {1} shared the effect!"
 
 Sheet: Script
 
 Sheet: Abilities
+    * Significantly changed 0149-0001|data.Desc from "Disguises itself as another Pokémon." to "Disguises itself as another Pokémon, fooling wild Pokémon of the same species."
+    * Significantly changed 0166-0001|data.Desc from "Ally Grass-type Pokémon are protected from status conditions and the lowering of their stats." to "Prevents lowering of ally Pokémon's stats."
+    * Significantly changed 0180-0001|data.Desc from "" to "Passes the effect of its held item to ally Pokémon."
+    * Significantly changed 0198-0001|data.Desc from "Doubles the damage dealt to the target's replacement if the target switches out." to "The Pokémon's first attack deals increased damage."
+    * Significantly changed 0206-0001|data.Desc from "Normal-type moves become Electric-type moves. The power of those moves is boosted a little." to "Normal-type moves become Electric-type moves."
+    * Changed 0168-0001|data.Desc to 0236-0001|data.Desc, retaining translations
+    * Significantly changed 0247-0001|data.Desc from "Ripens Berries and doubles their effect." to "Raises a stat when it eats a berry."
 
 Sheet: Items
+    * Significantly changed 0450-0000|data.Name from "Link Box" to "Recall Box"
 
 Sheet: MapStatuses
 
 Sheet: Moves
-    * Significantly changed 0252-0001|data.Desc from "An attack that hits from a distance and makes the target flinch. It only works from the move's maximum range." to "An attack that hits from a distance and makes the target flinch. It fails on targets directly in front."
-    * Significantly changed 0389-0001|data.Desc from "This attacks foes from a distance. It only works from the move's maximum range." to "This attacks foes from a distance. It fails on targets directly in front."
+    * Changed 0182-0001|data.Desc to 0197-0001|data.Desc, retaining translations
 
 Sheet: Statuses
+    * Significantly changed 0089-0001|data.Desc from "The Pokémon is protected from all moves. This status wears off on the next turn." to "The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks."
+    * Significantly changed 0111-0001|data.Desc from "The Pokémon has disguised itself as a different Pokémon. This status wears off when the Pokémon is damaged by an attack." to "The Pokémon has disguised itself as a different Pokémon. Wild Pokémon of the same species will not attack it."
+    * Significantly changed 0125-0001|data.Desc from "The Pokémon is protected from all moves. This status wears off on the next turn." to "The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks."
 
 Sheet: Tiles
+    * Added 0050-0000|data.Name, transferred from 0001-0000|data.Name
+    * Added 0050-0001|data.Desc, transferred from 0049-0001|data.Desc
+    * Added 0051-0000|data.Name
+    * Added 0051-0001|data.Desc
 
 Sheet: Excl Names
 
 Sheet: Excl Effects
 
 Sheet: Zones
+    * Deleted key 0000-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0000]).Name
+    * Changed 0017-0000|data.Name from "Wayward Snow Path" to "Snowbound Path"
+    * Changed 0017-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name from "Wayward Snow Path\n{0}F" to "Snowbound Path\n{0}F"
 
 Sheet: Maps
+    * Added test_room-0000|data.Name
 
 Sheet: GroundMaps
 

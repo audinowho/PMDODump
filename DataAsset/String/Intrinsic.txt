@@ -298,7 +298,7 @@ Key		EN
 0148-0000|data.Name		Analytic
 0148-0001|data.Desc		Boosts move power if the Pokémon was last hit by the target.
 0149-0000|data.Name		Illusion
-0149-0001|data.Desc		Disguises itself as another Pokémon.
+0149-0001|data.Desc		Disguises itself as another Pokémon, fooling wild Pokémon of the same species.
 0150-0000|data.Name		Imposter
 0150-0001|data.Desc		If defeated while transformed, the Pokémon reverts to its original form instead of fainting.
 0151-0000|data.Name		Infiltrator
@@ -332,7 +332,7 @@ Key		EN
 0165-0000|data.Name		Aroma Veil
 0165-0001|data.Desc		Protects itself and its allies from attacks that limit their move choices.
 0166-0000|data.Name		Flower Veil
-0166-0001|data.Desc		Ally Grass-type Pokémon are protected from status conditions and the lowering of their stats.
+0166-0001|data.Desc		Prevents lowering of ally Pokémon's stats.
 0167-0000|data.Name		Cheek Pouch
 0167-0001|data.Desc		Restores HP when the Pokémon eats a food item.
 0168-0000|data.Name		Protean
@@ -360,7 +360,7 @@ Key		EN
 0179-0000|data.Name		Grass Pelt
 0179-0001|data.Desc		Boosts the Defense stat in Grassy Terrain.
 0180-0000|data.Name		Symbiosis
-0180-0001|data.Desc		
+0180-0001|data.Desc		Passes the effect of its held item to ally Pokémon.
 0181-0000|data.Name		Tough Claws
 0181-0001|data.Desc		Powers up moves that make direct contact.
 0182-0000|data.Name		Pixilate
@@ -396,7 +396,7 @@ Key		EN
 0197-0000|data.Name		Shields Down
 0197-0001|data.Desc		When its HP becomes half or less, the Pokémon's shell breaks and it becomes aggressive.
 0198-0000|data.Name		Stakeout
-0198-0001|data.Desc		Doubles the damage dealt to the target's replacement if the target switches out.
+0198-0001|data.Desc		The Pokémon's first attack deals increased damage.
 0199-0000|data.Name		Water Bubble
 0199-0001|data.Desc		Lowers the power of Fire-type moves done to the Pokémon and prevents the Pokémon from getting a burn.
 0200-0000|data.Name		Steelworker
@@ -412,7 +412,7 @@ Key		EN
 0205-0000|data.Name		Triage
 0205-0001|data.Desc		Gives priority to a healing move.
 0206-0000|data.Name		Galvanize
-0206-0001|data.Desc		Normal-type moves become Electric-type moves. The power of those moves is boosted a little.
+0206-0001|data.Desc		Normal-type moves become Electric-type moves.
 0207-0000|data.Name		Surge Surfer
 0207-0001|data.Desc		Doubles the Pokémon's Speed stat on Electric Terrain.
 0208-0000|data.Name		Schooling
@@ -472,7 +472,7 @@ Key		EN
 0235-0000|data.Name		Dauntless Shield
 0235-0001|data.Desc		Boosts the Pokémon's Defense stat when the Pokémon enters a battle.
 0236-0000|data.Name		Libero
-0236-0001|data.Desc		Changes the Pokémon's type to the type of the move it's about to use.
+0236-0001|data.Desc		Changes the Pokémon's type to the type of the move it last used.
 0237-0000|data.Name		Ball Fetch
 0237-0001|data.Desc		If the Pokémon is not holding an item, it will fetch the Poké Ball from the first failed throw of the battle.
 0238-0000|data.Name		Cotton Down
@@ -494,7 +494,7 @@ Key		EN
 0246-0000|data.Name		Ice Scales
 0246-0001|data.Desc		The Pokémon is protected by ice scales, which halve the damage taken from special moves.
 0247-0000|data.Name		Ripen
-0247-0001|data.Desc		Ripens Berries and doubles their effect.
+0247-0001|data.Desc		Raises a stat when it eats a berry.
 0248-0000|data.Name		Ice Face
 0248-0001|data.Desc		The Pokémon's ice head can take a physical attack as a substitute, but the attack also changes the Pokémon's appearance. The ice will be restored when it hails.
 0249-0000|data.Name		Power Spot

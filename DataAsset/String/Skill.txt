@@ -394,7 +394,7 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0196-0000|data.Name		Icy Wind	Eissturm		冰冻之风	Vent Glace	Viento Hielo	Ventogelato	얼다바람	こごえるかぜ	こごえるかぜ	冰凍之風
 0196-0001|data.Desc		The user attacks with a gust of chilled air. This also lowers the opposing Pokémon's Movement Speed.	Eis-Attacke, die dem Ziel Schaden zufügt und seine Bewegungsgeschwindigkeit senkt.						차가운 냉기를 상대에게 내뿜어 공격한다. 상대의 행동속도를 떨어뜨린다.			
 0197-0000|data.Name		Detect	Scanner		看穿	Détection	Detección	Individua	판별	みきり	みきり	看穿
-0197-0001|data.Desc		It enables the user to evade all attacks for one turn.	Anwender weicht eine Runde lang jedem Angriff aus.						한 턴동안 상대의 공격을 전혀 받지 않는다.			
+0197-0001|data.Desc		It enables the user to evade all attacks.	Anwender weicht eine Runde lang jedem Angriff aus.						한 턴동안 상대의 공격을 전혀 받지 않는다.			
 0198-0000|data.Name		Bone Rush	Knochenhatz		骨棒乱打	Charge-Os	Ataque Óseo	Ossoraffica	본러쉬	ボーンラッシュ	ボーンラッシュ	骨棒亂打
 0198-0001|data.Desc		The user strikes the target with a hard bone five times in a row.	Greift Ziel fünfmal in Folge mit einem harten Knochen an.						단단한 뼈로 상대를 세게 때려서 공격한다. 5회 동안 연속으로 쓴다.			
 0199-0000|data.Name		Lock-On	Zielschuss		锁定	Verrouillage	Fijar Blanco	Localizza	록온	ロックオン	ロックオン	鎖定
@@ -504,7 +504,7 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0251-0000|data.Name		Beat Up	Prügler		围攻	Baston	Paliza	Picchiaduro	집단구타	ふくろだたき	ふくろだたき	圍攻
 0251-0001|data.Desc		The user calls over ally Pokémon to it.	Es werden Verbündete Pokémon zum Anwender gerufen.						동료를 가까이 불러온다.			
 0252-0000|data.Name		Fake Out	Mogelhieb		击掌奇袭	Bluff	Sorpresa	Bruciapelo	속이다	ねこだまし	ねこだまし	擊掌奇襲
-0252-0001|data.Desc		An attack that hits from a distance and makes the target flinch. It fails on targets directly in front.	Diese Attacke trifft von der Ferne und lässt das Ziel zurückschrecken. Gelingt nur bei maximaler Reichweite.						멀리서 공격해 상대를 풀죽게 한다. 3칸 앞의 상대가 아니면 통하지 않는다.			
+0252-0001|data.Desc		An attack that hits from a distance and makes the target flinch. It fails on targets directly in front.										
 0253-0000|data.Name		Uproar	Aufruhr		吵闹	Brouhaha	Alboroto	Baraonda	소란피기	さわぐ	さわぐ	吵鬧
 0253-0001|data.Desc		The user attacks in an uproar, preventing everyone from falling asleep.	Anwender greift an, indem er einen Aufruhr erzeugt. Verhindert Schlaf bei allen in der Nähe.						소란을 피워 공격한다. 그동안은 주변의 누구도 잠들지 않게 된다.			
 0254-0000|data.Name		Stockpile	Horter		蓄力	Stockage	Reserva	Accumulo	비축하기	たくわえる	たくわえる	蓄力
@@ -715,8 +715,8 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0356-0001|data.Desc		Gravity is intensified for the entire floor, making moves involving flying unusable and negating Levitate.	Die Gravitation für die gesamte Ebene wird stärker, wodurch Attacken, welche Fliegen beinhalten, unbenutzbar werden und verhindert Schwebe.						사용한 층에 머무는 동안 중력을 강하게 해서 부유나 하늘을 나는 기술을 사용할 수 없게 한다.			
 0357-0000|data.Name		Miracle Eye	Wunderauge		奇迹之眼	Œil Miracle	Gran Ojo	Miracolvista	미라클아이	ミラクルアイ	ミラクルアイ	奇跡之眼
 0357-0001|data.Desc		The user takes on the Miracle Eye status, allowing it to ignore resistances and immunities. This also enables it to hit evasive targets.	Der Anwender erhält den Wunderauge-Status, wodurch es ihm erlaubt ist, Resistenzen und Immunitäten zu ignorieren. Dieser erlaubt außerdem das Treffen von ausweichenden Zielen.						효과가 지속되는 동안 효과가 없거나 별로인 기술이나 회피율이 높은 상대라 할지라도 공격이 정상적으로 맞게 된다.			
-0358-0000|data.Name		Wake-Up Slap	Weckruf		唤醒巴掌	Réveil Forcé	Espabila	Svegliopacca	잠깨움뺨치기	めざましビンタ	めざましビンタ	喚醒巴掌
-0358-0001|data.Desc		This attack inflicts big damage on a sleeping target, immediately waking it up. Allies targeted by this move will not take damage.	Richtet großen Schaden bei einem schlafenden Ziel an, wodurch es sofort aufwacht. Partner, die von dieser Attacke als Ziel gewählt werden, nehmen dabei keinen Schaden.						잠듦 상태의 상대에게 큰 데미지를 준다. 대신 상대는 잠에서 깬다. 아군에게는 데미지를 입히지 않으나, 잠듦을 해제할 수 있다.			
+0358-0000|data.Name		Wake-Up Slap										
+0358-0001|data.Desc		This attack inflicts big damage on a sleeping target, immediately waking it up. Allies targeted by this move will not take damage.										
 0359-0000|data.Name		Hammer Arm	Hammerarm		臂锤	Marto-Poing	Machada	Martelpugno	암해머	アームハンマー	アームハンマー	臂錘
 0359-0001|data.Desc		The user swings and hits with its strong and heavy fist. It lowers the user’s Movement Speed, however.	Anwender schwingt und trifft mit einer starken, schweren Faust, senkt aber das Tempo des Anwenders.						강하고 무거운 주먹을 휘둘러 데미지를 준다. 자신의 행동속도가 떨어진다.			
 0360-0000|data.Name		Gyro Ball	Gyroball		陀螺球	Gyroballe	Giro Bola	Vortexpalla	자이로볼	ジャイロボール	ジャイロボール	陀螺球
@@ -778,7 +778,7 @@ Key		EN	DE	PT	ZH-HANS	FR	ES	IT	KO	JA	JA-JP	ZH-HANT
 0388-0000|data.Name		Worry Seed	Sorgensamen		烦恼种子	Soucigraine	Abatidoras	Affannoseme	고민씨	なやみのタネ	なやみのタネ	煩惱種子
 0388-0001|data.Desc		A seed that causes worry is planted on the target. It prevents sleep by making the target's Ability Insomnia.	Ziel wird bepflanzt. Wandelt Fähigkeit in Insomnia um. Verhindert so Schlaf.		种植心神不宁的种子。 使对手不能入眠， 并将特性变成不眠。	Plante sur la cible une graine qui la rend soucieuse et remplace son talent par Insomnia, l’empêchant ainsi de dormir.	Se planta una semilla en el objetivo que le causa  pesar. Evita el sueño gracias a la habilidad Insomnio.	Un seme che causa ansia viene piantato sul bersaglio. Ne muta l’abilità in Insonnia e ne previene o rimuove il sonno.	마음을 괴롭히는 씨앗을 심는다. 상대를 잠잘 수 없게 해서 특성을 불면으로 만든다.	こころを　なやませる　タネを うえつける。あいてを　ねむれなく　して とくせいを　ふ んに　する。	心を　なやませる　タネを 植えつける。相手を　眠れなくして 特性を　ふ んに　する。	埋下令人心煩意亂的種子， 讓對手睡不著， 將對手的特性變成不眠。
 0389-0000|data.Name		Sucker Punch	Tiefschlag		突袭	Coup Bas	Golpe Bajo	Sbigoattacco	기습	ふいうち	ふいうち	突襲
-0389-0001|data.Desc		This attacks foes from a distance. It fails on targets directly in front.	Dies greift Gegner aus der Entfernung an. Es funktioniert nur bei Gegnern in maximaler Reichweite.						멀리 있는 상대를 공격한다. 3칸 앞의 상대가 아니면 실패한다.			
+0389-0001|data.Desc		This attacks foes from a distance. It fails on targets directly in front.										
 0390-0000|data.Name		Toxic Spikes	Giftspitzen		毒菱	Pics Toxik	Púas Tóxicas	Fielepunte	독압정	どくびし	どくびし	毒菱
 0390-0001|data.Desc		The user lays a trap of poison spikes around itself. They badly poison opposing Pokémon that step on it.	Anwender legt eine Falle aus Giftdornen um sich herum. Sie verursachen starke Vergiftungen, falls gegnerische Pokémon auf sie treten.						자신의 주위에 독압정을 뿌린다. 밟는 상대는 맹독에 걸린다.			
 0391-0000|data.Name		Heart Swap	Statustausch		心灵互换	Permucœur	Cambia Almas	Cuorbaratto	하트스웹	ハートスワップ	ハートスワップ	心靈互換

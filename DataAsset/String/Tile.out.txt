@@ -99,3 +99,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0048-0001|data.Desc																												
 0049-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단																				
 0049-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.																										
+0050-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단																				
+0050-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.																										
+0051-0000|data.Name		Compass Tile																										
+0051-0001|data.Desc		A tile that shows the way to important locations on the floor.																										

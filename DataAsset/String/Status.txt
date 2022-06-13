@@ -178,7 +178,7 @@ Key		EN
 0088-0000|data.Name		Quick Guard
 0088-0001|data.Desc		The Pokémon is protected from moves that have a long range. This status wears off after a few turns.
 0089-0000|data.Name		Protect
-0089-0001|data.Desc		The Pokémon is protected from all moves. This status wears off on the next turn.
+0089-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.
 0090-0000|data.Name		Immobilized
 0090-0001|data.Desc		The Pokémon is immobilized and cannot move. This status wears off after a few turns.
 0091-0000|data.Name		Follow Me
@@ -222,7 +222,7 @@ Key		EN
 0110-0000|data.Name		Grass Pledge
 0110-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
 0111-0000|data.Name		Illusion
-0111-0001|data.Desc		The Pokémon has disguised itself as a different Pokémon. This status wears off when the Pokémon is damaged by an attack.
+0111-0001|data.Desc		The Pokémon has disguised itself as a different Pokémon. Wild Pokémon of the same species will not attack it.
 0112-0000|data.Name		Decoy
 0112-0001|data.Desc		The Pokémon is made into a Decoy, making it a target of everyone's attacks. This status wears off after many turns have passed.
 0113-0000|data.Name		Type-Protected
@@ -250,7 +250,7 @@ Key		EN
 0124-0000|data.Name		Regeneration
 0124-0001|data.Desc		The Pokémon gradually regains HP each turn. This status wears off after a few turns.
 0125-0000|data.Name		Detect
-0125-0001|data.Desc		The Pokémon is protected from all moves. This status wears off on the next turn.
+0125-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.
 0126-0000|data.Name		Missed All Last Turn
 0126-0001|data.Desc		
 0127-0000|data.Name		Crits Landed
