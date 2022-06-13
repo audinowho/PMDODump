@@ -11,3 +11,4 @@
 * Maps can be loaded as custom rooms into a floor generator.  Use RoomGenLoadMap
 * Temprary Object support with GroundMap:AddTempObject, GroundMap:RemoveTempObject, GroundMap:GetTempObj, etc.
 * Death is now processed in Universal, with PreDeath and SetDeath events.  Mods that modify Universal.bin will need to update OnDeath with these events.
+* Editor windows remember their size after being resized
