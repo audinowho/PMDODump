@@ -15,6 +15,7 @@ namespace PMDOSetup
     class Program
     {
         static string updaterPath;
+        static string updaterExe;
         static string curVerRepo;
         static string assetSubmodule;
         static string exeSubmodule;
@@ -26,6 +27,7 @@ namespace PMDOSetup
         {
             string[] args = Environment.GetCommandLineArgs();
             updaterPath = Path.GetDirectoryName(args[0]) + "/";
+            updaterExe = Path.GetFileName(args[0]);
             argNum = -1;
             if (args.Length > 1)
                 Int32.TryParse(args[1], out argNum);
@@ -51,9 +53,10 @@ namespace PMDOSetup
                 {
                     Console.WriteLine("Updater Options:");
                     Console.WriteLine("1: Force Update");
-                    Console.WriteLine("2: Uninstall (Retain Save Data)");
+                    Console.WriteLine("2: Update the Updater");
                     Console.WriteLine("3: Reset Updater XML");
-                    Console.WriteLine("Press any other key to check for updates.");
+                    Console.WriteLine("4: Uninstall (Retain Save Data)");
+                    Console.WriteLine("Press any other key to check for game updates.");
                     if (argNum > -1)
                     {
                         if (argNum == 1)
@@ -62,6 +65,8 @@ namespace PMDOSetup
                             choice = ConsoleKey.D2;
                         else if (argNum == 3)
                             choice = ConsoleKey.D3;
+                        else if (argNum == 4)
+                            choice = ConsoleKey.D4;
                         else
                             choice = ConsoleKey.Enter;
                     }
@@ -78,12 +83,7 @@ namespace PMDOSetup
                     force = true;
                 else if (choice == ConsoleKey.D2)
                 {
-                    Console.WriteLine("Uninstalling...");
-                    DeleteWithExclusions(Path.Join(updaterPath, "PMDO"));
-                    DeleteWithExclusions(Path.Join(updaterPath, "WaypointServer"));
-                    DeleteWithExclusions(Path.Join(updaterPath, "temp"));
-                    Console.WriteLine("Done.");
-                    ReadKey();
+                    UpdateUpdater();
                     return;
                 }
                 else if (choice == ConsoleKey.D3)
@@ -95,148 +95,246 @@ namespace PMDOSetup
                     ReadKey();
                     return;
                 }
-
-                //3: read from site what version is uploaded. if greater than the current version, upgrade
-                using (var wc = new WebClient())
+                else if (choice == ConsoleKey.D4)
                 {
-                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                    string latestResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/latest", curVerRepo));
-                    JsonElement latestJson = JsonDocument.Parse(latestResponse).RootElement;
-
-                    string uploadedVersionStr = latestJson.GetProperty("name").GetString();
-                    string changelog = latestJson.GetProperty("body").GetString();
-                    Version nextVersion = new Version(uploadedVersionStr);
-
-                    if (lastVersion >= nextVersion)
-                    {
-                        if (force)
-                            Console.WriteLine("Update will be forced. {0} >= {1}", lastVersion, nextVersion);
-                        else
-                        {
-                            Console.WriteLine("You are up to date. {0} >= {1}", lastVersion, nextVersion);
-                            ReadKey();
-                            return;
-                        }
-                    }
-                    else
-                        Console.WriteLine("Update available. {0} < {1}", lastVersion, nextVersion);
-
-                    Console.WriteLine();
-                    Console.WriteLine(changelog);
-                    Console.WriteLine();
-                    Console.WriteLine();
-
-                    string tagStr = latestJson.GetProperty("tag_name").GetString();
-                    Regex pattern = new Regex(@"https://github\.com/(?<repo>\w+/\w+).git");
-
-                    string exeFile = null;
-                    {
-                        //Get the exe submodule's version (commit) at this tag
-                        wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                        string exeSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, exeSubmodule, tagStr));
-                        JsonElement exeSubmoduleJson = JsonDocument.Parse(exeSubmoduleResponse).RootElement;
-
-                        string exeUrl = exeSubmoduleJson.GetProperty("submodule_git_url").GetString();
-                        Match match = pattern.Match(exeUrl);
-                        string exeRepo = match.Groups["repo"].Value;
-
-                        string refStr = exeSubmoduleJson.GetProperty("sha").GetString();
-
-                        //Get the tag associated with the commit (there'd better be one)
-                        wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                        string exeTagsResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/tags", exeRepo));
-                        JsonElement exeTagsJson = JsonDocument.Parse(exeTagsResponse).RootElement;
-                        //TODO: the above request only gets the first 30 results in a paginated whole.  We technically want to iterate all tags to properly search for the one we want.
-                        //https://docs.github.com/en/rest/guides/traversing-with-pagination
-                        foreach (JsonElement tagJson in exeTagsJson.EnumerateArray())
-                        {
-                            string tagSha = tagJson.GetProperty("commit").GetProperty("sha").GetString();
-                            string tagName = tagJson.GetProperty("name").GetString();
-                            if (tagSha == refStr)
-                            {
-                                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                                string tagReleasesResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/tags/{1}", exeRepo, tagName));
-                                JsonElement tagReleasesJson = JsonDocument.Parse(tagReleasesResponse).RootElement;
-
-                                JsonElement exeJson = tagReleasesJson.GetProperty("assets");
-                                foreach (JsonElement assetJson in exeJson.EnumerateArray())
-                                {
-                                    string assetName = assetJson.GetProperty("name").GetString();
-                                    if (assetName == String.Format("{0}.zip", GetCurrentPlatform()))
-                                    {
-                                        exeFile = assetJson.GetProperty("browser_download_url").GetString();
-                                        break;
-                                    }
-                                }
-
-                                break;
-                            }
-                        }
-                    }
-
-                    if (exeFile == null)
-                        throw new Exception(String.Format("Could not find exe download for {0}.", GetCurrentPlatform()));
-
-                    string assetFile;
-                    {
-                        //Get the asset submodule's version at this tag
-                        wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                        string assetSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, assetSubmodule, tagStr));
-                        JsonElement assetSubmoduleJson = JsonDocument.Parse(assetSubmoduleResponse).RootElement;
-
-                        string assetUrl = assetSubmoduleJson.GetProperty("submodule_git_url").GetString();
-                        Match match = pattern.Match(assetUrl);
-                        string assetRepo = match.Groups["repo"].Value;
-
-                        string refStr = assetSubmoduleJson.GetProperty("sha").GetString();
-
-                        //get the download link for it
-                        assetFile = String.Format("https://api.github.com/repos/{0}/zipball/{1}", assetRepo, refStr);
-                    }
-
-                    Console.WriteLine("Version {0} will be downloaded from the endpoints:\n  {1}\n  {2}.\n\nPress any key to continue.", nextVersion, exeFile, assetFile);
+                    Console.WriteLine("Uninstalling...");
+                    DeleteWithExclusions(Path.Join(updaterPath, "PMDO"));
+                    DeleteWithExclusions(Path.Join(updaterPath, "WaypointServer"));
+                    DeleteWithExclusions(Path.Join(updaterPath, "temp"));
+                    Console.WriteLine("Done.");
                     ReadKey();
-
-                    //4: download the respective zip from specified location
-                    if (!Directory.Exists(Path.Join(updaterPath, "temp")))
-                        Directory.CreateDirectory(Path.Join(updaterPath, "temp"));
-                    string tempExe = Path.Join(updaterPath, "temp", Path.GetFileName(exeFile));
-                    string tempAsset = Path.Join(updaterPath, "temp", "Asset.zip");
-
-                    Console.WriteLine("Downloading from {0} to {1}. May take a while...", exeFile, tempExe);
-                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                    wc.DownloadFile(exeFile, tempExe);
-                    Console.WriteLine("Downloading from {0} to {1}. May take a while...", assetFile, tempAsset);
-                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                    wc.DownloadFile(assetFile, tempAsset);
-
-                    Console.WriteLine("Adjusting filenames...");
-                    //unzip the exe, rename, then rezip just to rename the file... ugh
-                    RenameRezip(tempExe);
-
-                    //5: unzip and delete by directory - if you want to save your data be sure to make an exception in the xml (this is done by default)
-                    Unzip(tempExe, null, 0);
-                    Unzip(tempAsset, "PMDO", 1);
-
-
-                    Console.WriteLine("Cleaning up {0}...", exeFile);
-                    File.Delete(tempExe);
-                    File.Delete(tempAsset);
-
-                    Console.WriteLine("Incrementing version,", exeFile);
-                    lastVersion = nextVersion;
-
-                    //6: create a new xml and save
-                    SaveXml();
-                    Console.WriteLine("Done.", exeFile);
-                    ReadKey();
+                    return;
                 }
+
+                Update(force);
             }
             catch (Exception ex)
             {
                 Console.Write(ex.ToString());
                 ReadKey();
             }
+        }
+
+        static void UpdateUpdater()
+        {
+            string tempUpdater;
+            //3: read from site what version is uploaded. if greater than the current version, upgrade
+            using (var wc = new WebClient())
+            {
+                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                string latestResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/latest", curVerRepo));
+                JsonElement latestJson = JsonDocument.Parse(latestResponse).RootElement;
+
+                string uploadedVersionStr = latestJson.GetProperty("name").GetString();
+                string changelog = latestJson.GetProperty("body").GetString();
+                Version nextVersion = new Version(uploadedVersionStr);
+
+                string tagStr = latestJson.GetProperty("tag_name").GetString();
+                Regex pattern = new Regex(@"https://github\.com/(?<repo>\w+/\w+).git");
+
+                string updaterFile = null;
+                {
+                    JsonElement assetsJson = latestJson.GetProperty("assets");
+                    foreach (JsonElement assetJson in assetsJson.EnumerateArray())
+                    {
+                        string assetName = assetJson.GetProperty("name").GetString();
+                        if (assetName == String.Format("setup-{0}.zip", GetCurrentPlatform()))
+                        {
+                            updaterFile = assetJson.GetProperty("browser_download_url").GetString();
+                            break;
+                        }
+                    }
+                }
+
+                Console.WriteLine("Version {0} will be downloaded from the endpoints:\n  {1}.\n\nPress any key to continue.", nextVersion, updaterFile);
+                ReadKey();
+
+                File.Move(Path.Join(updaterPath, updaterExe), Path.Join(updaterPath, updaterExe + ".bak"));
+                File.Copy(Path.Join(updaterPath, updaterExe + ".bak"), Path.Join(updaterPath, updaterExe));
+
+                //4: download the respective zip from specified location
+                if (!Directory.Exists(Path.Join(updaterPath, "temp")))
+                    Directory.CreateDirectory(Path.Join(updaterPath, "temp"));
+
+                tempUpdater = Path.Join(updaterPath, "temp", "setup-" + Path.GetFileName(updaterFile));
+
+                Console.WriteLine("Downloading from {0} to {1}. May take a while...", updaterFile, tempUpdater);
+                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                wc.DownloadFile(updaterFile, tempUpdater);
+
+            }
+
+            Console.WriteLine("Unzipping...");
+
+            using (ZipArchive archive = ZipFile.OpenRead(tempUpdater))
+            {
+                foreach (ZipArchiveEntry entry in archive.Entries)
+                {
+                    bool setPerms = Path.GetFileName(entry.FullName) == updaterExe;
+                    string currentPlatform = GetCurrentPlatform();
+                    if (currentPlatform == "windows-x64" || currentPlatform == "windows-x86")
+                        setPerms = false;
+                    string destPath = Path.GetFullPath(Path.Join(updaterPath, Path.GetFileName(entry.FullName)));
+                    if (!destPath.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
+                    {
+                        entry.ExtractToFile(destPath, true);
+
+                        if (setPerms)
+                        {
+                            var info = new UnixFileInfo(destPath);
+                            info.FileAccessPermissions = FileAccessPermissions.AllPermissions;
+                            info.Refresh();
+                        }
+                    }
+                }
+            }
+
+            Console.WriteLine("Cleaning up {0}...", tempUpdater);
+            File.Delete(tempUpdater);
+
+            Console.WriteLine("Done.");
+            ReadKey();
+        }
+
+        static void Update(bool force)
+        {
+            Version nextVersion;
+            string exeFile = null;
+            string tempExe, tempAsset;
+
+            //3: read from site what version is uploaded. if greater than the current version, upgrade
+            using (var wc = new WebClient())
+            {
+                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                string latestResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/latest", curVerRepo));
+                JsonElement latestJson = JsonDocument.Parse(latestResponse).RootElement;
+
+                string uploadedVersionStr = latestJson.GetProperty("name").GetString();
+                string changelog = latestJson.GetProperty("body").GetString();
+                nextVersion = new Version(uploadedVersionStr);
+
+                if (lastVersion >= nextVersion)
+                {
+                    if (force)
+                        Console.WriteLine("Update will be forced. {0} >= {1}", lastVersion, nextVersion);
+                    else
+                    {
+                        Console.WriteLine("You are up to date. {0} >= {1}", lastVersion, nextVersion);
+                        ReadKey();
+                        return;
+                    }
+                }
+                else
+                    Console.WriteLine("Update available. {0} < {1}", lastVersion, nextVersion);
+
+                Console.WriteLine();
+                Console.WriteLine(changelog);
+                Console.WriteLine();
+                Console.WriteLine();
+
+                string tagStr = latestJson.GetProperty("tag_name").GetString();
+                Regex pattern = new Regex(@"https://github\.com/(?<repo>\w+/\w+).git");
+
+                {
+                    //Get the exe submodule's version (commit) at this tag
+                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                    string exeSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, exeSubmodule, tagStr));
+                    JsonElement exeSubmoduleJson = JsonDocument.Parse(exeSubmoduleResponse).RootElement;
+
+                    string exeUrl = exeSubmoduleJson.GetProperty("submodule_git_url").GetString();
+                    Match match = pattern.Match(exeUrl);
+                    string exeRepo = match.Groups["repo"].Value;
+
+                    string refStr = exeSubmoduleJson.GetProperty("sha").GetString();
+
+                    //Get the tag associated with the commit (there'd better be one)
+                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                    string exeTagsResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/tags", exeRepo));
+                    JsonElement exeTagsJson = JsonDocument.Parse(exeTagsResponse).RootElement;
+                    //TODO: the above request only gets the first 30 results in a paginated whole.  We technically want to iterate all tags to properly search for the one we want.
+                    //https://docs.github.com/en/rest/guides/traversing-with-pagination
+                    foreach (JsonElement tagJson in exeTagsJson.EnumerateArray())
+                    {
+                        string tagSha = tagJson.GetProperty("commit").GetProperty("sha").GetString();
+                        string tagName = tagJson.GetProperty("name").GetString();
+                        if (tagSha == refStr)
+                        {
+                            wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                            string tagReleasesResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/tags/{1}", exeRepo, tagName));
+                            JsonElement tagReleasesJson = JsonDocument.Parse(tagReleasesResponse).RootElement;
+
+                            JsonElement exeJson = tagReleasesJson.GetProperty("assets");
+                            foreach (JsonElement assetJson in exeJson.EnumerateArray())
+                            {
+                                string assetName = assetJson.GetProperty("name").GetString();
+                                if (assetName == String.Format("{0}.zip", GetCurrentPlatform()))
+                                {
+                                    exeFile = assetJson.GetProperty("browser_download_url").GetString();
+                                    break;
+                                }
+                            }
+
+                            break;
+                        }
+                    }
+                }
+
+                if (exeFile == null)
+                    throw new Exception(String.Format("Could not find exe download for {0}.", GetCurrentPlatform()));
+
+                string assetFile;
+                {
+                    //Get the asset submodule's version at this tag
+                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                    string assetSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, assetSubmodule, tagStr));
+                    JsonElement assetSubmoduleJson = JsonDocument.Parse(assetSubmoduleResponse).RootElement;
+
+                    string assetUrl = assetSubmoduleJson.GetProperty("submodule_git_url").GetString();
+                    Match match = pattern.Match(assetUrl);
+                    string assetRepo = match.Groups["repo"].Value;
+
+                    string refStr = assetSubmoduleJson.GetProperty("sha").GetString();
+
+                    //get the download link for it
+                    assetFile = String.Format("https://api.github.com/repos/{0}/zipball/{1}", assetRepo, refStr);
+                }
+
+                Console.WriteLine("Version {0} will be downloaded from the endpoints:\n  {1}\n  {2}.\n\nPress any key to continue.", nextVersion, exeFile, assetFile);
+                ReadKey();
+
+                //4: download the respective zip from specified location
+                if (!Directory.Exists(Path.Join(updaterPath, "temp")))
+                    Directory.CreateDirectory(Path.Join(updaterPath, "temp"));
+                tempExe = Path.Join(updaterPath, "temp", Path.GetFileName(exeFile));
+                tempAsset = Path.Join(updaterPath, "temp", "Asset.zip");
+
+                Console.WriteLine("Downloading from {0} to {1}. May take a while...", exeFile, tempExe);
+                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                wc.DownloadFile(exeFile, tempExe);
+                Console.WriteLine("Downloading from {0} to {1}. May take a while...", assetFile, tempAsset);
+                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                wc.DownloadFile(assetFile, tempAsset);
+            }
+
+            Console.WriteLine("Adjusting filenames...");
+            //unzip the exe, rename, then rezip just to rename the file... ugh
+            RenameRezip(tempExe);
+
+            //5: unzip and delete by directory - if you want to save your data be sure to make an exception in the xml (this is done by default)
+            Unzip(tempExe, null, 0);
+            Unzip(tempAsset, "PMDO", 1);
+
+            Console.WriteLine("Cleaning up {0}...", exeFile);
+            File.Delete(tempExe);
+            File.Delete(tempAsset);
+
+            Console.WriteLine("Incrementing version,", exeFile);
+            lastVersion = nextVersion;
+
+            //6: create a new xml and save
+            SaveXml();
+            Console.WriteLine("Done.");
+            ReadKey();
         }
 
         static void Unzip(string tempExe, string destRoot, int sourceDepth)
