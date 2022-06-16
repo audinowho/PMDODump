@@ -299,7 +299,7 @@ namespace PMDOSetup
                     assetFile = String.Format("https://api.github.com/repos/{0}/zipball/{1}", assetRepo, refStr);
                 }
 
-                Console.WriteLine("Version {0} will be downloaded from the endpoints:\n  {1}\n  {2}.\n\nPress any key to continue.", nextVersion, exeFile, assetFile);
+                Console.WriteLine("Version {0} will be downloaded from the endpoints:\n  {1}\n  {2}.\n\nUpdates will invalidate existing quicksaves.  Be sure to finish them first!\nPress any key to continue.", nextVersion, exeFile, assetFile);
                 ReadKey();
 
                 //4: download the respective zip from specified location
