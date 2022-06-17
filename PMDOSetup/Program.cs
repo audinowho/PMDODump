@@ -317,9 +317,9 @@ namespace PMDOSetup
                 wc.DownloadFile(assetFile, tempAsset);
             }
 
-            Console.WriteLine("Adjusting filenames...");
+            //Console.WriteLine("Adjusting filenames...");
             //unzip the exe, rename, then rezip just to rename the file... ugh
-            RenameRezip(tempExe);
+            //RenameRezip(tempExe);
 
             //5: unzip and delete by directory - if you want to save your data be sure to make an exception in the xml (this is done by default)
             Unzip(tempExe, null, 0);
