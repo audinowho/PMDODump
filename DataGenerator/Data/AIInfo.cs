@@ -103,7 +103,7 @@ namespace DataGenerator.Data
             tactic = new AITactic();
             tactic.Name = new LocalText("Normal Wander");//7
             tactic.ID = 7;
-            iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.AttackToEscape | AIFlags.WontDisturb;
+            iq = AIFlags.ItemGrabber | AIFlags.AttackToEscape | AIFlags.WontDisturb;
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
