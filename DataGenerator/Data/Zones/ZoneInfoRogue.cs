@@ -1885,14 +1885,14 @@ namespace DataGenerator.Data
                                                                       ".XX...XX.",
                                                                       ".XX...XX.",
                                                                       "........."};
-                //   All ditto impostor
+                //   All ditto, no impostor
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob(132, 150, -1, -1, -1, -1, -1, new Loc(4, 1)));
-                    mobSpawns.Add(GetBossMob(132, 150, -1, -1, -1, -1, -1, new Loc(4, 7)));
-                    mobSpawns.Add(GetBossMob(132, 150, -1, -1, -1, -1, -1, new Loc(1, 4)));
-                    mobSpawns.Add(GetBossMob(132, 150, -1, -1, -1, -1, -1, new Loc(7, 4)));
+                    mobSpawns.Add(GetBossMob(132, -1, -1, -1, -1, -1, -1, new Loc(4, 1)));
+                    mobSpawns.Add(GetBossMob(132, -1, -1, -1, -1, -1, -1, new Loc(4, 7)));
+                    mobSpawns.Add(GetBossMob(132, -1, -1, -1, -1, -1, -1, new Loc(1, 4)));
+                    mobSpawns.Add(GetBossMob(132, -1, -1, -1, -1, -1, -1, new Loc(7, 4)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customPillarCross, new Loc(4, 4), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -3567,7 +3567,7 @@ namespace DataGenerator.Data
             //301 Delcatty : 096 Normalize : 274 Assist : 047 Sing
             poolSpawn.Spawns.Add(GetTeamMob(301, 096, 274, 047, -1, -1, new RandRange(36), TeamMemberSpawn.MemberRole.Support), new IntRange(19, 23), 10);
             //078 Rapidash : 083 Fire Spin : 517 Inferno
-            poolSpawn.Spawns.Add(GetTeamMob(078, -1, 083, 517, -1, -1, new RandRange(37), TeamMemberSpawn.MemberRole.Loner), new IntRange(19, 23), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(078, -1, 083, 517, -1, -1, new RandRange(38), TeamMemberSpawn.MemberRole.Loner), new IntRange(19, 23), 10);
             //389 Torterra : 452 Wood Hammer : 089 Earthquake : 235 Synthesis
             poolSpawn.Spawns.Add(GetTeamMob(389, -1, 452, 089, 235, -1, new RandRange(36)), new IntRange(19, 23), 10);
             //398 Staraptor : 097 Agility : 515 Final Gambit : 370 Close Combat

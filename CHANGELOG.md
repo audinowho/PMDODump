@@ -1,5 +1,7 @@
 # 0.5.17 Changes #
 
+* Modified moves Inferno, Air Slash, Confusion
+* Fixed AI with Future Sight
 * Fixed an issue causing games to desync if closed during a UI prompt
 * Fixed a graphical offset issue with certain objects in dungeons
 * Fixed an editor bug with Status DrawEffect
