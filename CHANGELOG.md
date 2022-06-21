@@ -1,4 +1,6 @@
-# 0.5.16 Changes #
+# 0.5.17 Changes #
 
-* Self-updating updater
-* Add compatibility messages for outdated replays/rescues
+* Fixed a graphical offset issue with certain objects in dungeons
+* Fixed an editor bug with Status DrawEffect
+* Fixed an issue causing games to desync if closed during a UI prompt
+* Wrapped maps for dungeon map editor is out of WIP
