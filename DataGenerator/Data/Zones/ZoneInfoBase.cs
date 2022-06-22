@@ -335,7 +335,7 @@ namespace DataGenerator.Data
                 }
                 #endregion
 
-                //Contains a switch-activated vault, and a boss vault
+                //Contains a switch-activated vault, chest, and a boss vault
                 #region DEBUG FLOOR 3
                 {
                     GridFloorGen layout = new GridFloorGen();
@@ -439,6 +439,18 @@ namespace DataGenerator.Data
                             shop.Mobs.Add(GetShopMob(233, 36, 176, 277, 161, 97, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                         }
                         layout.GenSteps.Add(PR_SHOPS, shop);
+                    }
+
+                    //chest
+                    {
+                        ChestStep<MapGenContext> monsterHouse = new ChestStep<MapGenContext>(false, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
+                        for (int ii = 250; ii < 251; ii++)
+                            monsterHouse.Items.Add(new MapItem(ii), 10);
+                        monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(5, 10)), 10);
+                        for (int ii = 387; ii < 397; ii++)
+                            monsterHouse.Mobs.Add(GetGenericMob(ii, -1, -1, -1, -1, -1, new RandRange(10, 20)), 10);
+                        monsterHouse.MobThemes.Add(new MobThemeNone(50, new RandRange(6, 11)), 10);
+                        layout.GenSteps.Add(PR_HOUSES, monsterHouse);
                     }
 
                     //vault rooms

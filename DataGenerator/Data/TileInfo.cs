@@ -1127,11 +1127,13 @@ namespace DataGenerator.Data
                 tile.Desc = new LocalText("A tile that shows the way to important locations on the floor.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Switch;
-                tile.Anim = new ObjAnimData("Tile_Reset", 1);
+                tile.Anim = new ObjAnimData("Tile_Compass", 1);
                 tile.MinimapIcon = new Loc(2, 1);
                 tile.MinimapColor = Color.Cyan;
-                tile.LandedOnTiles.Add(0, new AskLeaderEvent());
-                tile.InteractWithTiles.Add(0, new CompassEvent());
+                tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Stair_Sensor_Arrow", 6), 6);
+                emitter.Layer = DrawLayer.Top;
+                tile.InteractWithTiles.Add(0, new CompassEvent(emitter, 1, 2, 34, 35, 37, 38, 39, 44, 46, 47, 49, 50));
             }
 
             if (tile.Name.DefaultText.StartsWith("**"))

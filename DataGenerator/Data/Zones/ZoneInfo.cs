@@ -2553,14 +2553,14 @@ namespace DataGenerator.Data
 
                         //Floor settings
                         {
-                            AddFloorData(layout, "B08. Forsaken Desert.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "B08. Forsaken Desert.ogg", 30000, Map.SightRange.Clear, Map.SightRange.Dark);
                             //we need something else here.  quicksand cave?  quicksand pit?  something suspicious...
                         }
 
                         //Tilesets
-                        if (ii < 6)
+                        if (ii < 2)
                             AddTextureData(layout, 231, 232, 233, 11);
-                        else if (ii < 12)
+                        else if (ii < 3)
                             AddTextureData(layout, 234, 235, 236, 11);
                         else
                             AddTextureData(layout, 42, 43, 44, 11);
@@ -2569,6 +2569,19 @@ namespace DataGenerator.Data
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
+
+                        if (ii == 0)
+                            AddSingleTrapStep(layout, new RandRange(35), 51);//compass tile
+                        else
+                            AddSingleTrapStep(layout, new RandRange(60), 51);//compass tile
+
+                        if (ii < 2)
+                        {
+                            EffectTile secretTile = new EffectTile(51, true);
+                            NearSpawnableSpawnStep<MapGenContext, EffectTile, MapGenEntrance> trapStep = new NearSpawnableSpawnStep<MapGenContext, EffectTile, MapGenEntrance>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)), 100);
+                            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+                        }
+
                         //money - Ballpark 25K
                         AddMoneyData(layout, new RandRange(2, 4));
 
@@ -2576,7 +2589,7 @@ namespace DataGenerator.Data
                         AddRespawnData(layout, 3, 80);
 
                         //enemies
-                        AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                        AddEnemySpawnData(layout, 20, new RandRange(200, 250));
 
 
                         //items
@@ -2585,13 +2598,16 @@ namespace DataGenerator.Data
 
                         //construct paths
                         {
-                            AddInitGridStep(layout, 40, 40, 10, 10);
+                            if (ii == 0)
+                                AddInitGridStep(layout, 30, 30, 8, 8);
+                            else
+                                AddInitGridStep(layout, 50, 50, 8, 8);
 
                             GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                             path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                             path.RoomRatio = new RandRange(90);
-                            path.BranchRatio = new RandRange(0, 25);
+                            path.BranchRatio = new RandRange(0, 35);
 
                             SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
                             //cross
@@ -2606,7 +2622,7 @@ namespace DataGenerator.Data
 
                             layout.GenSteps.Add(PR_GRID_GEN, path);
 
-                            layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+                            layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(85, 50));
 
                         }
 
@@ -2617,6 +2633,23 @@ namespace DataGenerator.Data
                         AddWaterSteps(layout, 3, new RandRange(30));//water
 
 
+                        //chest
+                        int chest_amount = 0;
+                        if (ii == 1)
+                            chest_amount = 1;
+                        else if (ii == 2)
+                            chest_amount = 2;
+                        else if (ii == 3)
+                            chest_amount = 6;
+
+                        for(int kk = 0; kk < chest_amount; kk++)
+                        {
+                            ChestStep<MapGenContext> chestStep = new ChestStep<MapGenContext>(false, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
+                            for (int nn = 250; nn < 251; nn++)
+                                chestStep.Items.Add(new MapItem(nn), 10);
+                            chestStep.ItemThemes.Add(new ItemThemeNone(50, new RandRange(5, 10)), 10);
+                            layout.GenSteps.Add(PR_HOUSES, chestStep);
+                        }
 
                         if (ii == 2)
                         {
@@ -2627,6 +2660,11 @@ namespace DataGenerator.Data
                             //secretStairs.TileStates.Set(new DestState(18, new SegLoc(0, 0)));//To Relic Tower 1F
                             sealedDetour.TileTreasures.SpecificSpawns.Add(secretStairs);
                             layout.GenSteps.Add(PR_EXITS_DETOUR, sealedDetour);
+                        }
+
+                        {
+                            SetCompassStep<MapGenContext> trapStep = new SetCompassStep<MapGenContext>(51);
+                            layout.GenSteps.Add(new Priority(6, 1), trapStep);
                         }
 
                         floorSegment.Floors.Add(layout);
