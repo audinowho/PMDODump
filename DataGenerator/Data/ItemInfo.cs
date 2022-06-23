@@ -2377,7 +2377,9 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A held item that weighs the Pokémon down, and allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.");
                 item.Sprite = "Iron_Ball";
                 item.Price = 300;
-                item.OnRefresh.Add(0, new AddSpeedEvent(-1));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(2));
+                item.AfterActions.Add(0, new OnMoveUseEvent(new StatusStateBattleEvent(55, false, true, statusStates)));
                 item.OnRefresh.Add(0, new MiscEvent(new AnchorState()));
                 item.TargetElementEffects.Add(1, new TypeVulnerableEvent(11));
             }
