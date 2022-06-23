@@ -3578,8 +3578,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(337, -1, 478, 585, 157, -1, new RandRange(39)), new IntRange(21, 25), 10);
             //164 Noctowl : 115 Reflect : 138 Dream Eater : 355 Roost
             poolSpawn.Spawns.Add(GetTeamMob(164, -1, 115, 138, 355, -1, new RandRange(39), TeamMemberSpawn.MemberRole.Support), new IntRange(21, 25), 10);
-            //094 Gengar : 247 Shadow Ball : 180 Spite : 138 Dream Eater
-            poolSpawn.Spawns.Add(GetTeamMob(094, -1, 247, 180, 138, -1, new RandRange(39)), new IntRange(21, 25), 10);
+            //094 Gengar : 247 Shadow Ball : 095 Hypnosis : 138 Dream Eater
+            poolSpawn.Spawns.Add(GetTeamMob(094, -1, 247, 95, 138, -1, new RandRange(39)), new IntRange(21, 25), 10);
             //057 Primeape : 386 Punishment : 238 Cross Chop
             poolSpawn.Spawns.Add(GetTeamMob(057, -1, 386, 238, -1, -1, new RandRange(42)), new IntRange(21, 25), 10);
             //302 Sableye : 212 Mean Look : 282 Knock Off
@@ -3627,6 +3627,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(414, 110, 483, 318, -1, -1, new RandRange(51)), new IntRange(31, 35), 10);
             //395 Empoleon : 128 Defiant : 065 Drill Peck : 453 Aqua Jet : 014 Swords Dance
             poolSpawn.Spawns.Add(GetTeamMob(395, 128, 065, 453, 014, -1, new RandRange(51)), new IntRange(31, 35), 10);
+            //062 Poliwrath : 187 Belly Drum : 358 Wake-Up Slap : 095 Hypnosis
+            poolSpawn.Spawns.Add(GetTeamMob(062, -1, 187, 358, 095, -1, new RandRange(51)), new IntRange(31, 35), 10);
             //076 Golem : 089 Earthquake : 300 Mud Sport : 484 Heavy Slam : 205 Rollout
             poolSpawn.Spawns.Add(GetTeamMob(076, -1, 089, 300, 484, 205, new RandRange(51)), new IntRange(31, 35), 10);
             //162 Furret : 226 Baton Pass : 133 Amnesia : 156 Rest : 266 Follow Me
@@ -3641,8 +3643,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(189, -1, 079, 262, 235, -1, new RandRange(57), TeamMemberSpawn.MemberRole.Support), new IntRange(35, 40), 10);
             //302 Sableye : 158 Prankster : 511 Quash : 109 Confuse Ray : 492 Foul Play : 193 Foresight
             poolSpawn.Spawns.Add(GetTeamMob(302, 158, 511, 109, 492, 193, new RandRange(57)), new IntRange(35, 40), 10);
-            //062 Poliwrath : 187 Belly Drum : 358 Wake-Up Slap : 095 Hypnosis
-            poolSpawn.Spawns.Add(GetTeamMob(062, -1, 187, 358, 095, -1, new RandRange(57)), new IntRange(35, 40), 10);
+            //078 Rapidash : 097 Agility : 517 Inferno
+            poolSpawn.Spawns.Add(GetTeamMob(078, -1, 097, 517, -1, -1, new RandRange(57), TeamMemberSpawn.MemberRole.Loner), new IntRange(35, 40), 10);
             //310 Manectric : 604 Electric Terrain : 435 Discharge : 424 Fire Fang
             poolSpawn.Spawns.Add(GetTeamMob(310, -1, 604, 435, 424, -1, new RandRange(57)), new IntRange(35, 40), 10);
 
