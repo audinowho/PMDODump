@@ -2194,7 +2194,7 @@ namespace DataGenerator.Data
                 item.Price = 200;
                 item.ProximityEvent.Radius = 0;
                 item.ProximityEvent.TargetAlignments = Alignment.Foe;
-                item.ProximityEvent.BeforeExplosions.Add(0, new PassAttackEvent());
+                item.ProximityEvent.BeforeExplosions.Add(0, new PassAttackEvent(5));
             }
             else if (ii == 305)
             {

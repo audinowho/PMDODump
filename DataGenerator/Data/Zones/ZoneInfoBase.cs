@@ -1178,6 +1178,20 @@ namespace DataGenerator.Data
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
 
+                    //sky-only mobs
+                    {
+                        SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
+                        specificTeam.Spawns.Add(GetGenericMob(149, -1, 35, 43, -1, -1, new RandRange(15), 9));
+
+                        LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(specificTeam);
+                        {
+                            spawner.AmountSpawner = new RandRange(10, 13);
+                        }
+                        PlaceTerrainMobsStep<ListMapGenContext> secretMobPlacement = new PlaceTerrainMobsStep<ListMapGenContext>(spawner);
+                        secretMobPlacement.AcceptedTiles.Add(new Tile(5));
+                        layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
+                    }
+
                     //items
                     AddItemData(layout, new RandRange(3, 6), 25);
 
@@ -1185,26 +1199,27 @@ namespace DataGenerator.Data
                     SpawnList<InvItem> secretItemSpawns = new SpawnList<InvItem>();
                     secretItemSpawns.Add(new InvItem(101), 10);
 
-
-                    //secret enemies
-                    SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                    specificTeam.Spawns.Add(GetGenericMob(442, -1, 497, 297, -1, -1, new RandRange(18)));
-
-
                     //DisconnectedSpawnStep<ListMapGenContext, InvItem, MapGenEntrance> secretPlacement = new DisconnectedSpawnStep<ListMapGenContext, InvItem, MapGenEntrance>(new PickerSpawner<ListMapGenContext, InvItem>(new LoopedRand<InvItem>(secretItemSpawns, new RandRange(1, 2))));
                     RandomRoomSpawnStep<ListMapGenContext, InvItem> secretPlacement = new RandomRoomSpawnStep<ListMapGenContext, InvItem>(new PickerSpawner<ListMapGenContext, InvItem>(new LoopedRand<InvItem>(secretItemSpawns, new RandRange(1, 2))));
                     secretPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Disconnected));
                     layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, secretPlacement);
 
-
-                    //secret enemies
-                    //PlaceDisconnectedMobsStep<ListMapGenContext> secretMobPlacement = new PlaceDisconnectedMobsStep<ListMapGenContext>(new TeamPickerSpawner<ListMapGenContext>(specificTeam), new RandRange(2,5));
-                    PlaceRandomMobsStep<ListMapGenContext> secretMobPlacement = new PlaceRandomMobsStep<ListMapGenContext>(new LoopedTeamSpawner<ListMapGenContext>(specificTeam, new RandRange(2, 4)));
-                    secretMobPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Disconnected));
                     {
-                        secretMobPlacement.ClumpFactor = 20;
+                        //secret enemies
+                        SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
+                        specificTeam.Spawns.Add(GetGenericMob(442, -1, 497, 297, -1, -1, new RandRange(18)));
+
+
+                        //secret enemies
+                        //PlaceDisconnectedMobsStep<ListMapGenContext> secretMobPlacement = new PlaceDisconnectedMobsStep<ListMapGenContext>(new TeamPickerSpawner<ListMapGenContext>(specificTeam), new RandRange(2,5));
+                        PlaceRandomMobsStep<ListMapGenContext> secretMobPlacement = new PlaceRandomMobsStep<ListMapGenContext>(new LoopedTeamSpawner<ListMapGenContext>(specificTeam, new RandRange(2, 4)));
+                        secretMobPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Disconnected));
+                        {
+                            secretMobPlacement.ClumpFactor = 20;
+                        }
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, secretMobPlacement);
                     }
-                    layout.GenSteps.Add(PR_SPAWN_ITEMS, secretMobPlacement);
+
 
 
 
