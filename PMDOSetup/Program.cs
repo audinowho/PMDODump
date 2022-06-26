@@ -21,6 +21,10 @@ namespace PMDOSetup
         static string exeSubmodule;
         static List<string> excludedFiles;
         static List<string> executableFiles;
+
+        static string saveDir;
+        static string saveBackupDir;
+
         static Version lastVersion;
         static int argNum;
         static void Main()
@@ -35,6 +39,8 @@ namespace PMDOSetup
             curVerRepo = "audinowho/PMDODump";
             assetSubmodule = "DumpAsset";
             exeSubmodule = "PMDC";
+            saveDir = "PMDO/SAVE";
+            saveBackupDir = "SAVE.bak/";
             lastVersion = new Version(0, 0, 0, 0);
             excludedFiles = new List<string>();
             executableFiles = new List<string>();
@@ -202,7 +208,10 @@ namespace PMDOSetup
             string exeFile = null;
             string tempExe, tempAsset;
 
-            Console.WriteLine("WARNING: Updates will invalidate existing quicksaves.  Be sure to finish them first!");
+            bool firstInstall = lastVersion == new Version(0, 0, 0, 0);
+            if (!firstInstall)
+                Console.WriteLine("WARNING: Updates will invalidate existing quicksaves.  Be sure to finish them first!");
+            
             //3: read from site what version is uploaded. if greater than the current version, upgrade
             using (var wc = new WebClient())
             {
@@ -225,6 +234,8 @@ namespace PMDOSetup
                         return;
                     }
                 }
+                else if (firstInstall)
+                    Console.WriteLine("Installing {0}", nextVersion);
                 else
                     Console.WriteLine("Update available. {0} < {1}", lastVersion, nextVersion);
 
@@ -317,6 +328,13 @@ namespace PMDOSetup
                 wc.DownloadFile(assetFile, tempAsset);
             }
 
+            if (!firstInstall)
+            {
+                Console.WriteLine("Backing up {0} to {1}...", saveDir, saveBackupDir);
+
+                copyFilesRecursively(new DirectoryInfo(saveDir), new DirectoryInfo(saveBackupDir));
+            }
+
             //Console.WriteLine("Adjusting filenames...");
             //unzip the exe, rename, then rezip just to rename the file... ugh
             //RenameRezip(tempExe);
@@ -335,6 +353,9 @@ namespace PMDOSetup
             //6: create a new xml and save
             SaveXml();
             Console.WriteLine("Done.");
+            if (firstInstall)
+                Console.WriteLine("Future runs of this file will check for updates.");
+
             ReadKey();
         }
 
@@ -447,6 +468,13 @@ namespace PMDOSetup
                 string destFile = Path.Join(destPath, file);
                 zipRecursive(archive, Path.Join(unzipPath, file), destFile);
             }
+        }
+        private static void copyFilesRecursively(DirectoryInfo source, DirectoryInfo target)
+        {
+            foreach (DirectoryInfo dir in source.GetDirectories())
+                copyFilesRecursively(dir, target.CreateSubdirectory(dir.Name));
+            foreach (FileInfo file in source.GetFiles())
+                file.CopyTo(Path.Combine(target.FullName, file.Name), true);
         }
 
         static void ReadKey()
