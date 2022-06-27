@@ -1369,11 +1369,10 @@ namespace DataGenerator.Data
                     AddItemData(layout, new RandRange(3, 7), 25);
 
 
-                    //Initialize a 6x4 grid of 10x10 cells.
-                    AddInitGridStep(layout, 13, 11, 2, 2);
+                    //Initialize a 13x11 grid of 2x2 cells.
+                    //AddInitGridStep(layout, 13, 11, 2, 2);
 
-
-                    AddInitGridStep(layout, 8, 6, 8, 8);
+                    AddInitGridStep(layout, 8, 6, 8, 8, 1, true);
 
                     GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                     path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
@@ -1413,13 +1412,15 @@ namespace DataGenerator.Data
                         RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
                         loadRoom.MapID = "test_room";
                         loadRoom.RoomTerrain = new Tile(0);
+                        loadRoom.PreventChanges = PostProcType.Terrain;
                         SetGridSpecialRoomStep<MapGenContext> specialStep = new SetGridSpecialRoomStep<MapGenContext>();
                         specialStep.Rooms = new PresetPicker<RoomGen<MapGenContext>>(loadRoom);
                         specialStep.RoomComponents.Set(new ImmutableRoom());
                         layout.GenSteps.Add(PR_GRID_GEN_EXTRA, specialStep);
                     }
 
-                    AddDrawGridSteps(layout);
+                    layout.GenSteps.Add(PR_ROOMS_INIT, new DrawGridToFloorStep<MapGenContext>());
+                    layout.GenSteps.Add(PR_TILES_INIT, new DrawFloorToTileStep<MapGenContext>());
 
 
                     //Add the stairs up and down

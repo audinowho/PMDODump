@@ -153,7 +153,7 @@ namespace DataGenerator.Data
         }
 
 
-        public static void AddInitGridStep<T>(MapGen<T> layout, int cellX, int cellY, int cellWidth, int cellHeight, int thickness = 1) where T : MapGenContext
+        public static void AddInitGridStep<T>(MapGen<T> layout, int cellX, int cellY, int cellWidth, int cellHeight, int thickness = 1, bool wrap = false) where T : MapGenContext
         {
             InitGridPlanStep<T> startGen = new InitGridPlanStep<T>(thickness);
             {
@@ -162,15 +162,17 @@ namespace DataGenerator.Data
 
                 startGen.CellWidth = cellWidth;
                 startGen.CellHeight = cellHeight;
+                startGen.Wrap = wrap;
             }
             layout.GenSteps.Add(PR_GRID_INIT, startGen);
         }
 
-        public static void AddInitListStep<T>(MapGen<T> layout, int width, int height) where T : ListMapGenContext
+        public static void AddInitListStep<T>(MapGen<T> layout, int width, int height, bool wrap = false) where T : ListMapGenContext
         {
             InitFloorPlanStep<T> startGen = new InitFloorPlanStep<T>();
             startGen.Width = width;
             startGen.Height = height;
+            startGen.Wrap = wrap;
             layout.GenSteps.Add(PR_ROOMS_INIT, startGen);
         }
 
