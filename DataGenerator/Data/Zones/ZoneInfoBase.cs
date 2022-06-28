@@ -1348,19 +1348,46 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
 
                     //enemies
-                    AddRespawnData(layout, 3, 80);
+                    AddRespawnData(layout, 3, 5);
 
                     //enemies
-                    AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                    AddEnemySpawnData(layout, 20, new RandRange(8, 12));
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), 16), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(25), 16), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
 
+                    {
+                        //UB Stalks the grounds
+                        MobSpawn mob = new MobSpawn();
+                        mob.BaseForm = new MonsterID(793, 0, -1, Gender.Unknown);
+                        mob.SpecifiedSkills.Add(491);
+                        mob.SpecifiedSkills.Add(390);
+                        mob.SpecifiedSkills.Add(408);
+                        mob.Intrinsic = -1;
+                        mob.Level = new RandRange(40);
+                        mob.Tactic = 7;
+                        mob.SpawnFeatures.Add(new MobSpawnMovesOff(mob.SpecifiedSkills.Count));
+                        MobSpawnStatus keySpawn = new MobSpawnStatus();
+                        keySpawn.Statuses.Add(new StatusEffect(130), 10);
+                        mob.SpawnFeatures.Add(keySpawn);
+                        keySpawn = new MobSpawnStatus();
+                        keySpawn.Statuses.Add(new StatusEffect(131), 10);
+                        mob.SpawnFeatures.Add(keySpawn);
+                        SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
+                        specificTeam.Spawns.Add(mob);
+
+                        LoopedTeamSpawner<MapGenContext> spawner = new LoopedTeamSpawner<MapGenContext>(specificTeam);
+                        {
+                            spawner.AmountSpawner = new RandRange(1);
+                        }
+                        PlaceRandomMobsStep<MapGenContext> secretMobPlacement = new PlaceRandomMobsStep<MapGenContext>(spawner);
+                        layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
+                    }
 
                     //items
                     RandomSpawnStep<MapGenContext, InvItem> freeItemStep = new RandomSpawnStep<MapGenContext, InvItem>(new ContextSpawner<MapGenContext, InvItem>(new RandRange(2, 4)));

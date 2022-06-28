@@ -218,7 +218,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new AffectHighestStatBattleEvent(10, 11, 12, 13, true, -2));
+                newData.OnHits.Add(0, new AffectHighestStatBattleEvent(true, 10, 11, 12, 13, true, -2));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 8)

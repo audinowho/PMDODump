@@ -2255,6 +2255,16 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new CountDownState(30));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
+            else if (ii == 130)
+            {
+                status.Name = new LocalText("Veiled");
+                status.OnRefresh.Add(0, new NoNameEvent());
+            }
+            else if (ii == 131)
+            {
+                status.Name = new LocalText("Friendly Fire");
+                status.OnRefresh.Add(0, new FriendlyFireToEvent());
+            }
 
             if (status.Name.DefaultText.StartsWith("**"))
                 status.Name.DefaultText = status.Name.DefaultText.Replace("*", "");

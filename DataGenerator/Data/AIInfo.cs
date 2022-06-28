@@ -151,6 +151,7 @@ namespace DataGenerator.Data
             tactic = new AITactic();
             tactic.Name = new LocalText("Cannibal");//12
             tactic.ID = 12;
+            tactic.Comment = "Deprecated.  Use any other AI and just give them the Friendly Fire status";
             iq = AIFlags.Cannibal | AIFlags.AttackToEscape;
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));

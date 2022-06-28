@@ -9535,7 +9535,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = 13;
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new AffectHighestStatBattleEvent(10, 11, 12, 13, true, 2));
+                skill.Data.OnHits.Add(0, new AffectHighestStatBattleEvent(true, 10, 11, 12, 13, true, 2));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 20;//Jab
