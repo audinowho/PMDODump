@@ -390,6 +390,7 @@ namespace DataGenerator.Data
                 status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeActions.Add(0, new BoundEvent(new StringKey("MSG_WRAP")));
+                status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 BetweenEmitter emitter = new BetweenEmitter(new AnimData("Wrap_White_Back", 3), new AnimData("Wrap_White_Front", 3));
@@ -416,6 +417,7 @@ namespace DataGenerator.Data
                 status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeActions.Add(0, new BoundEvent(new StringKey("MSG_BIND")));
+                status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
 
@@ -756,6 +758,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey()));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FIRE_SPIN_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
+                status.OnActions.Add(-1, new SnapDashBackEvent());
 
                 BetweenEmitter emitter = new BetweenEmitter(new AnimData("Fire_Spin_Back", 1), new AnimData("Fire_Spin_Front", 1));
                 emitter.HeightBack = 32;
@@ -778,6 +781,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState)));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey()));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_WHIRLPOOL_START"), true));
+                status.OnActions.Add(-1, new SnapDashBackEvent());
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Gust_Blue", 1));
                 emitter.LocHeight = 24;
                 status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Whirlpool", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
@@ -799,6 +803,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState)));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey()));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SAND_TOMB_START"), true));
+                status.OnActions.Add(-1, new SnapDashBackEvent());
 
                 BetweenEmitter emitter = new BetweenEmitter(new AnimData("Sand_Tomb_Back", 1), new AnimData("Sand_Tomb_Front", 1));
                 emitter.HeightBack = 32;
@@ -987,6 +992,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 //status.AfterActions.Add(0, new CountDownOnActionEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
+                status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.BeforeBeingHits.Add(0, new SureShotEvent());
                 status.TargetElementEffects.Add(0, new TypeImmuneEvent(11));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Water));
@@ -1106,6 +1112,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new FractionHealEvent(6, new StringKey("MSG_HEAL_WITH")));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new AnchorState()));
+                status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.TargetElementEffects.Add(1, new TypeVulnerableEvent(11));
                 status.StatusStates.Set(new CountDownState(10));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
@@ -1516,6 +1523,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_IMMOBILIZE_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_IMMOBILIZE_END")));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
+                status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.StatusStates.Set(new CountDownState(5));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1739,6 +1747,7 @@ namespace DataGenerator.Data
                 status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeActions.Add(0, new BoundEvent(new StringKey("MSG_CLAMP")));
+                status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.TargetPassive.BeforeActions.Add(0, new WrapTrapEvent(new StringKey("MSG_WRAP_ATTACK"), 06, new AnimEvent(new SingleEmitter(new AnimData("Clamp", 2)), "DUN_Clamp", 10), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
@@ -1757,6 +1766,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState)));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_TRAP_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_INFESTATION_START"), true));
+                status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(new SingleEmitter(new AnimData("Attack_Order", 2)), "DUN_Gunk_Shot_2", 35), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
                 status.StatusStates.Set(new CountDownState(6));
@@ -1797,6 +1807,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey()));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MAGMA_STORM_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
+                status.OnActions.Add(-1, new SnapDashBackEvent());
                 BetweenEmitter emitter = new BetweenEmitter(new AnimData("Magma_Storm_Back", 1), new AnimData("Magma_Storm_Front", 1));
                 emitter.HeightBack = 32;
                 emitter.HeightFront = 32;
@@ -1940,7 +1951,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_BLINKER_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_BLINKER_END")));
                 status.OnActions.Add(-1, new AddRangeEvent(-6));
-                status.StatusStates.Set(new CountDownState(15));
+                status.StatusStates.Set(new CountDownState(50));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
             else if (ii == 115)

@@ -1310,11 +1310,11 @@ namespace DataGenerator.Data
             else if (ii == 166)
             {
                 ability.Name = new LocalText("Flower Veil");
-                ability.Desc = new LocalText("Prevents lowering of ally Pokémon's stats.");
+                ability.Desc = new LocalText("Protects ally Pokémon from major status conditions.");
                 ability.ProximityEvent.Radius = 1;
                 ability.ProximityEvent.TargetAlignments = Alignment.Friend;
-                //ability.ProximityEvent.BeforeStatusAdds.Add(0, new StateStatusCheck(typeof(BadStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
-                ability.ProximityEvent.BeforeStatusAdds.Add(0, new StatChangeCheck(new List<Stat>(), new StringKey("MSG_FLOWER_VEIL_STATS"), true, false, false, new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
+                ability.ProximityEvent.BeforeStatusAdds.Add(0, new StateStatusCheck(typeof(MajorStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
+                //ability.ProximityEvent.BeforeStatusAdds.Add(0, new StatChangeCheck(new List<Stat>(), new StringKey("MSG_FLOWER_VEIL_STATS"), true, false, false, new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
             }
             else if (ii == 167)
             {
@@ -1404,36 +1404,38 @@ namespace DataGenerator.Data
             }
             else if (ii == 180)
             {
-                ability.Name = new LocalText("**Symbiosis");
-                ability.Desc = new LocalText("Passes the effect of its held item to ally Pokémon.");
+                ability.Name = new LocalText("Symbiosis");
+                ability.Desc = new LocalText("Passes the effect of certain held items to ally Pokémon. It won't use the item itself.");
                 ability.ProximityEvent.Radius = 1;
                 ability.ProximityEvent.TargetAlignments = Alignment.Friend;
-                //ability.ProximityEvent.AfterActions.Add(0, new PassEquipBattleEvent());
-                //ability.ProximityEvent.AfterBeingHits.Add(0, new PassEquipBattleEvent());
-                //ability.ProximityEvent.AfterHittings.Add(0, new PassEquipBattleEvent());
-                //ability.ProximityEvent.BeforeActions.Add(0, new PassEquipBattleEvent());
-                //ability.ProximityEvent.BeforeBeingHits.Add(0, new PassEquipBattleEvent());
-                //ability.ProximityEvent.BeforeHittings.Add(0, new PassEquipBattleEvent());
-                //ability.ProximityEvent.BeforeStatusAdds.Add(0, new PassEquipStatusEvent());
-                //ability.ProximityEvent.BeforeTryActions.Add(0, new PassEquipBattleEvent());
-                //ability.ProximityEvent.ModifyHPs.Add(0, new PassEquipHPChangeEvent());
-                //ability.ProximityEvent.OnActions.Add(0, new PassEquipBattleEvent());
-                //ability.ProximityEvent.OnDeaths.Add(0, new PassEquipEvent());
-                //ability.ProximityEvent.OnEquips.Add(0, new PassEquipItemEvent());
-                //ability.ProximityEvent.OnHitTiles.Add(0, new PassEquipBattleEvent());
-                //ability.ProximityEvent.OnMapStarts.Add(0, new PassEquipEvent());
-                //ability.ProximityEvent.OnMapStatusAdds.Add(0, new PassEquipMapStatusEvent());
-                //ability.ProximityEvent.OnMapStatusRemoves.Add(0, new PassEquipMapStatusEvent());
-                //ability.ProximityEvent.OnMapTurnEnds.Add(0, new PassEquipEvent());
-                //ability.ProximityEvent.OnPickups.Add(0, new PassEquipItemEvent());
-                //ability.ProximityEvent.OnStatusAdds.Add(0, new PassEquipStatusEvent());
-                //ability.ProximityEvent.OnStatusRemoves.Add(0, new PassEquipStatusEvent());
-                //ability.ProximityEvent.OnTurnEnds.Add(0, new PassEquipEvent());
-                //ability.ProximityEvent.OnTurnStarts.Add(0, new PassEquipEvent());
-                //ability.ProximityEvent.RestoreHPs.Add(0, new PassEquipHPChangeEvent());
-                //ability.ProximityEvent.TargetElementEffects.Add(0, new PassEquipElementEvent());
-                //ability.ProximityEvent.UserElementEffects.Add(0, new PassEquipElementEvent());
-                ////ability.ProximityEvent.OnRefresh.Add(0, new PassEquipRefreshEvent());
+                ability.ProximityEvent.AfterActions.Add(0, new ShareAfterActionsEvent());
+                ability.ProximityEvent.AfterBeingHits.Add(0, new ShareAfterBeingHitsEvent());
+                ability.ProximityEvent.AfterHittings.Add(0, new ShareAfterHittingsEvent());
+                ability.ProximityEvent.BeforeActions.Add(0, new ShareBeforeActionsEvent());
+                ability.ProximityEvent.BeforeBeingHits.Add(0, new ShareBeforeBeingHitsEvent());
+                ability.ProximityEvent.BeforeHittings.Add(0, new ShareBeforeHittingsEvent());
+                ability.ProximityEvent.BeforeTryActions.Add(0, new ShareBeforeTryActionsEvent());
+                ability.ProximityEvent.OnActions.Add(0, new ShareOnActionsEvent());
+                ability.ProximityEvent.OnHitTiles.Add(0, new ShareOnHitTilesEvent());
+                ability.ProximityEvent.OnTurnEnds.Add(0, new ShareOnTurnEndsEvent());
+                ability.ProximityEvent.OnTurnStarts.Add(0, new ShareOnTurnStartsEvent());
+                ability.ProximityEvent.OnDeaths.Add(0, new ShareOnDeathsEvent());
+                ability.ProximityEvent.OnWalks.Add(0, new ShareOnWalksEvent());
+                ability.ProximityEvent.OnMapTurnEnds.Add(0, new ShareOnMapTurnEndsEvent());
+                ability.ProximityEvent.OnMapStarts.Add(0, new ShareOnMapStartsEvent());
+                ability.ProximityEvent.BeforeStatusAdds.Add(0, new ShareBeforeStatusAddsEvent());
+                ability.ProximityEvent.OnStatusAdds.Add(0, new ShareOnStatusAddsEvent());
+                ability.ProximityEvent.OnStatusRemoves.Add(0, new ShareOnStatusRemovesEvent());
+                ability.ProximityEvent.OnMapStatusAdds.Add(0, new ShareOnMapStatusAddsEvent());
+                ability.ProximityEvent.OnMapStatusRemoves.Add(0, new ShareOnMapStatusRemovesEvent());
+                ability.ProximityEvent.ModifyHPs.Add(0, new ShareModifyHPsEvent());
+                ability.ProximityEvent.RestoreHPs.Add(0, new ShareRestoreHPsEvent());
+                ability.ProximityEvent.TargetElementEffects.Add(0, new ShareTargetElementEvent());
+                ability.ProximityEvent.UserElementEffects.Add(0, new ShareUserElementEvent());
+                //ability.ProximityEvent.OnPickups.Add(0, new ShareEquipItemEvent());
+                //ability.ProximityEvent.OnEquips.Add(0, new ShareEquipItemEvent());
+                ////ability.ProximityEvent.OnRefresh.Add(0, new ShareEquipRefreshEvent());
+                ability.OnEquips.Add(0, new CheckEquipPassValidityEvent());
                 ability.OnRefresh.Add(-5, new NoHeldItemEvent());
             }
             else if (ii == 181)
@@ -1452,7 +1454,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Gooey");
                 ability.Desc = new LocalText("Contact with the Pokémon lowers the attacker's Movement Speed.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100, new StatusStackBattleEvent(9, false, true, -1)));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 50, new StatusStackBattleEvent(9, false, true, -1)));
             }
             else if (ii == 184)
             {
@@ -1467,13 +1469,19 @@ namespace DataGenerator.Data
             }
             else if (ii == 186)
             {
-                ability.Name = new LocalText("**Dark Aura");
+                ability.Name = new LocalText("Dark Aura");
                 ability.Desc = new LocalText("Powers up all Dark-type moves.");
+                ability.ProximityEvent.Radius = 3;
+                ability.ProximityEvent.TargetAlignments = (Alignment.Self | Alignment.Friend);
+                ability.ProximityEvent.OnActions.Add(0, new MultiplyElementEvent(02, 6, 5, false));
             }
             else if (ii == 187)
             {
-                ability.Name = new LocalText("**Fairy Aura");
+                ability.Name = new LocalText("Fairy Aura");
                 ability.Desc = new LocalText("Powers up all Fairy-type moves.");
+                ability.ProximityEvent.Radius = 3;
+                ability.ProximityEvent.TargetAlignments = (Alignment.Self | Alignment.Friend);
+                ability.ProximityEvent.OnActions.Add(0, new MultiplyElementEvent(05, 6, 5, false));
             }
             else if (ii == 188)
             {
@@ -1530,8 +1538,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 198)
             {
-                ability.Name = new LocalText("**Stakeout");
+                ability.Name = new LocalText("Stakeout");
                 ability.Desc = new LocalText("The Pokémon's first attack deals increased damage.");
+                ability.OnActions.Add(0, new MultiplyCategoryWithoutStatusEvent(27, BattleData.SkillCategory.None, 2, 1, false));
             }
             else if (ii == 199)
             {
@@ -1556,9 +1565,10 @@ namespace DataGenerator.Data
             }
             else if (ii == 203)
             {
-                ability.Name = new LocalText("**Long Reach");
+                ability.Name = new LocalText("Long Reach");
                 ability.Desc = new LocalText("The Pokémon uses its moves without making contact with the target.");
-                //ability.OnActions.Add(, new RemoveContactEvent());
+                ability.OnActions.Add(-1, new RemoveMoveStateEvent(typeof(ContactState)));
+                ability.OnActions.Add(-1, new SnapDashBackEvent());
             }
             else if (ii == 204)
             {
@@ -1648,21 +1658,21 @@ namespace DataGenerator.Data
             }
             else if (ii == 221)
             {
-                ability.Name = new LocalText("**Tangling Hair");
+                ability.Name = new LocalText("Tangling Hair");
                 ability.Desc = new LocalText("Contact with the Pokémon lowers the attacker's Speed stat.");
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 50, new StatusStackBattleEvent(9, false, true, -1)));
             }
             else if (ii == 222)
             {
-                ability.Name = new LocalText("**Receiver");
-                ability.Desc = new LocalText("The Pokémon copies the Ability of a defeated ally.");
+                ability.Name = new LocalText("Receiver");
+                ability.Desc = new LocalText("The Pokémon copies the Ability of an ally.");
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend), false, false, true, 100, new ReflectAbilityEvent(true, new StringKey("MSG_TRACE"))));
             }
             else if (ii == 223)
             {
-                ability.Name = new LocalText("**Power of Alchemy");
-                ability.Desc = new LocalText("The Pokémon copies the Ability of a defeated ally.");
-                ability.ProximityEvent.Radius = 5;
-                ability.ProximityEvent.TargetAlignments = Alignment.Friend;
-                //ability.ProximityEvent.OnDeaths.Add(0, new ProximityReflectAbilityEvent());
+                ability.Name = new LocalText("Power of Alchemy");
+                ability.Desc = new LocalText("The Pokémon copies the Ability of an ally.");
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend), false, false, true, 100, new ReflectAbilityEvent(true, new StringKey("MSG_TRACE"))));
             }
             else if (ii == 224)
             {
@@ -1783,9 +1793,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 247)
             {
-                ability.Name = new LocalText("**Ripen");
+                ability.Name = new LocalText("Ripen");
                 ability.Desc = new LocalText("Raises a stat when it eats a berry.");
-                //ability.AfterBeingHits.Add(0, new BerryBoostEvent(10, 11, 12, 13, 14, 15));
+                ability.AfterBeingHits.Add(0, new BerryBoostEvent(9, 10, 11, 12, 13, 14, 15));
             }
             else if (ii == 248)
             {

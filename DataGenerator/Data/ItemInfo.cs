@@ -2389,8 +2389,8 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A held item that removes the Pokémon's type immunities. This item sticks when held.");
                 item.Sprite = "Ring_Target";
                 item.Price = 250;
-                item.TargetElementEffects.Add(0, new NoImmunityEvent());
-                item.TargetElementEffects.Add(0, new NoResistanceEvent());
+                item.TargetElementEffects.Add(1, new NoImmunityEvent());
+                item.TargetElementEffects.Add(1, new NoResistanceEvent());
             }
             else if (ii == 327)
             {

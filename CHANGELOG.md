@@ -1,5 +1,6 @@
 # 0.5.18 Changes #
 
+* Modified the move Petal Dance, Outrage, Thrash
 * Iron Ball lowers attack speed, not movement speed
 * Pass Scarf costs hunger on activation
 * Moxie activates half of the time, requiring moves
