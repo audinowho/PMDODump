@@ -125,7 +125,8 @@ def importFiles(orig_path, out_path, file_diff):
                         file_diff.append(in_file)
                 else:
                     file_diff.append(in_file)
-            shutil.copy(full_path, dest_path)
+            if not full_path.endswith(".txt"):
+                shutil.copy(full_path, dest_path)
 
 def importFolders(prefix, base_path, transfer_dict, out_path, dict_path, diff):
 
@@ -203,7 +204,7 @@ def transferWithMap(base_path, out_path, over_transfer):
         for diff in portrait_diffs:
             txt.write(",".join(diff) + "\n")
 
-
+    shutil.copy(os.path.join(base_path, "credit_name.txt"), os.path.join(out_path, "spritebot_credits.txt"))
 
 def main():
     """
