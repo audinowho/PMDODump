@@ -1534,7 +1534,11 @@ namespace DataGenerator.Data
 
                     //444      ***    Light Box - 1* items
                     {
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(1), new RandRange(1))), 10);
+                        SpawnList<MapItem> silks = new SpawnList<MapItem>();
+                        for (int ss = 0; ss < 18; ss++)
+                            silks.Add(new MapItem(700 + 4 * ss), 10);
+
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
 
                     //445      ***    Heavy Box - 2* items
@@ -2101,7 +2105,11 @@ namespace DataGenerator.Data
 
                     //444      ***    Light Box - 1* items
                     {
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(1), new RandRange(1))), 10);
+                        SpawnList<MapItem> silks = new SpawnList<MapItem>();
+                        for (int ss = 0; ss < 18; ss++)
+                            silks.Add(new MapItem(700 + 4 * ss), 10);
+
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
 
                     //445      ***    Heavy Box - 2* items
@@ -2628,7 +2636,11 @@ namespace DataGenerator.Data
 
                         //444      ***    Light Box - 1* items
                         {
-                            boxSpawn.Add(new BoxSpawner<MapGenContext>(444, new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1), new RandRange(1))), 10);
+                            SpawnList<MapItem> silks = new SpawnList<MapItem>();
+                            for (int ss = 0; ss < 18; ss++)
+                                silks.Add(new MapItem(700 + 4 * ss), 10);
+
+                            boxSpawn.Add(new BoxSpawner<MapGenContext>(444, new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                         }
 
                         //445      ***    Heavy Box - 2* items
@@ -4110,7 +4122,11 @@ namespace DataGenerator.Data
 
                     //444      ***    Light Box - 1* items
                     {
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(1), new RandRange(1))), 10);
+                        SpawnList<MapItem> silks = new SpawnList<MapItem>();
+                        for(int ss = 0; ss < 18; ss++)
+                            silks.Add(new MapItem(700 + 4 * ss), 10);
+
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
 
                     //445      ***    Heavy Box - 2* items
@@ -4527,7 +4543,11 @@ namespace DataGenerator.Data
 
                     //444      ***    Light Box - 1* items
                     {
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(1), new RandRange(1))), 10);
+                        SpawnList<MapItem> silks = new SpawnList<MapItem>();
+                        for (int ss = 0; ss < 18; ss++)
+                            silks.Add(new MapItem(700 + 4 * ss), 10);
+
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
 
                     //445      ***    Heavy Box - 2* items
