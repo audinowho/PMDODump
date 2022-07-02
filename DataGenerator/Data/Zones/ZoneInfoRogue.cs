@@ -93,8 +93,7 @@ namespace DataGenerator.Data
             snacks.Spawns.Add(new InvItem(115), new IntRange(0, 30), 10);//ice seed
             snacks.Spawns.Add(new InvItem(111), new IntRange(0, 30), 10);//vile seed
 
-            snacks.Spawns.Add(new InvItem(184), new IntRange(0, 30), 5);//power herb
-            snacks.Spawns.Add(new InvItem(184, true), new IntRange(0, 30), 5);//power herb
+            snacks.Spawns.Add(new InvItem(184), new IntRange(0, 30), 10);//power herb
             snacks.Spawns.Add(new InvItem(183), new IntRange(0, 30), 5);//mental herb
             snacks.Spawns.Add(new InvItem(185), new IntRange(0, 30), 50);//white herb
 
@@ -3174,8 +3173,7 @@ namespace DataGenerator.Data
             snacks.Spawns.Add(new InvItem(0114), new IntRange(0, max_floors), 3);//Pure Seed
             snacks.Spawns.Add(new InvItem(0115), new IntRange(0, max_floors), 10);//Ice Seed
             snacks.Spawns.Add(new InvItem(0111), new IntRange(0, max_floors), 10);//Vile Seed
-            snacks.Spawns.Add(new InvItem(0184, true), new IntRange(0, max_floors), 5);//Power Herb
-            snacks.Spawns.Add(new InvItem(0184), new IntRange(0, max_floors), 5);//Power Herb
+            snacks.Spawns.Add(new InvItem(0184), new IntRange(0, max_floors), 10);//Power Herb
             snacks.Spawns.Add(new InvItem(0183), new IntRange(0, max_floors), 10);//Mental Herb
             snacks.Spawns.Add(new InvItem(0185), new IntRange(0, max_floors), 50);//White Herb
                                                                                   //boosters

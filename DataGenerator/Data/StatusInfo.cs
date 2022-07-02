@@ -1696,7 +1696,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Power-Charged");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon is able to use 2-turn moves in one turn, and its PP is prevented from dropping. This status wears off after a few turns.");
+                status.Desc = new LocalText("The Pokémon is able to use moves without charging or recharging, and its PP is prevented from dropping. This status wears off after many turns have passed.");
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_NOTHING_HAPPENED")));
 
@@ -1709,10 +1709,11 @@ namespace DataGenerator.Data
                 emitter.HeightSpeed = 240;
                 status.OnStatusAdds.Add(0, new StatusAnimEvent(emitter, "DUN_Focus_Blast_3", 20, true));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POWER_CHARGE_START"), true));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(55, new StringKey()));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POWER_CHARGE_END")));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.OnRefresh.Add(0, new PPSaverEvent());
-                status.StatusStates.Set(new CountDownState(10));
+                status.StatusStates.Set(new CountDownState(50));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
             else if (ii == 100)
@@ -2064,7 +2065,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Mental-Charged");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon is protected against move-binding effects. This status wears off after a few turns.");
+                status.Desc = new LocalText("The Pokémon is protected against move-binding effects. This status wears off after many turns have passed.");
                 status.Emoticon = "Cycle_Red";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_NOTHING_HAPPENED")));
@@ -2084,7 +2085,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MENTAL_CHARGE_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MENTAL_CHARGE_END")));
                 status.OnRefresh.Add(1, new FreeMoveEvent());
-                status.StatusStates.Set(new CountDownState(10));
+                status.StatusStates.Set(new CountDownState(50));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
             else if (ii == 121)
