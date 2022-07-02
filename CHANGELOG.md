@@ -3,6 +3,7 @@
 * Modified the move Petal Dance, Outrage, Thrash to always move the user
 * Modified the move Hidden Power to be random every new floor, but the same within that floor
 * Modified the item Power Herb to only prevent forced PP drops, and also prevent recharging
+* Moved around some Secret Garden mobs
 * Lum Berry can be used on targets with statuses that prevent them from using items
 * Edible items thrown at allies will not be caught and always used
 * Fixed inventory overflow issues with gifted items and Honey Gather

@@ -1,0 +1,23 @@
+//items
+ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+
+
+
+
+floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+//mobs
+TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+poolSpawn.Priority = PR_RESPAWN_MOB;
+
+
+//331 Cacnea
+poolSpawn.Spawns.Add(GetTeamMob(331, -1, -1, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//451 Skorupi
+poolSpawn.Spawns.Add(GetTeamMob(451, -1, -1, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//324 Torkoal : 108 Smokescreen
+poolSpawn.Spawns.Add(GetTeamMob(324, -1, 108, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//095 Onix
+poolSpawn.Spawns.Add(GetTeamMob(095, -1, -1, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);

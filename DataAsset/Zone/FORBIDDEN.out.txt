@@ -131,3 +131,9 @@ poolSpawn.Spawns.Add(GetTeamMob(318, -1, 044, 453, 103, -1, new RandRange(11)), 
 poolSpawn.Spawns.Add(GetTeamMob(079, -1, 428, 055, 174, -1, new RandRange(32)), new IntRange(0, max_floors), 10);
 //313 Volbeat : 294 Tail Glow : 324 Signal Beam
 poolSpawn.Spawns.Add(GetTeamMob(313, -1, 294, 324, -1, -1, new RandRange(26)), new IntRange(0, max_floors), 10);
+//229 Houndoom : 251 Beat Up : 336 Howl
+poolSpawn.Spawns.Add(GetTeamMob(229, -1, 251, 336, -1, -1, new RandRange(26)), new IntRange(0, max_floors), 10);
+//107 Hitmonchan : 228 Pursuit : 370 Close Combat
+poolSpawn.Spawns.Add(GetTeamMob(107, -1, 228, 370, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+//082 Magneton : 199 Lock-On : 192 Zap Cannon : 604 Electric Terrain
+poolSpawn.Spawns.Add(GetTeamMob(082, -1, 199, 192, 604, -1, new RandRange(5)), new IntRange(0, max_floors), 10);

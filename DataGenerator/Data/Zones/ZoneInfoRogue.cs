@@ -3438,16 +3438,18 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(161, -1, 010, 111, -1, -1, new RandRange(5)), new IntRange(1, 5), 10);
             //013 Weedle : 040 Poison Sting : 081 String Shot
             poolSpawn.Spawns.Add(GetTeamMob(013, -1, 040, 081, -1, -1, new RandRange(5)), new IntRange(1, 5), 10);
+            //050 Diglett : 071 Arena Trap : 310 Astonish : 010 Scratch
+            poolSpawn.Spawns.Add(GetTeamMob(050, 071, 310, 010, -1, -1, new RandRange(6)), new IntRange(1, 5), 10);
             //333 Swablu : 030 Natural Cure : 047 Sing : 064 Peck
             poolSpawn.Spawns.Add(GetTeamMob(333, 030, 047, 064, -1, -1, new RandRange(6)), new IntRange(1, 5), 10);
             //309 Electrike : 336 Howl : 033 Tackle
             poolSpawn.Spawns.Add(GetTeamMob(309, -1, 336, 033, -1, -1, new RandRange(6)), new IntRange(1, 5), 10);
-            //412 Burmy : 182 Protect
-            poolSpawn.Spawns.Add(GetTeamMob(412, -1, 182, -1, -1, -1, new RandRange(7), 25), new IntRange(1, 5), 5);
-            //412 Burmy : 182 Protect
-            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(412, 1, -1, Gender.Unknown), -1, 182, -1, -1, -1, new RandRange(7), 25), new IntRange(1, 5), 5);
-            //412 Burmy : 182 Protect
-            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(412, 2, -1, Gender.Unknown), -1, 182, -1, -1, -1, new RandRange(7), 25), new IntRange(1, 5), 5);
+            //412 Burmy : 033 Tackle
+            poolSpawn.Spawns.Add(GetTeamMob(412, -1, 033, -1, -1, -1, new RandRange(10), 25), new IntRange(3, 7), 5);
+            //412 Burmy : 033 Tackle
+            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(412, 1, -1, Gender.Unknown), -1, 033, -1, -1, -1, new RandRange(10), 25), new IntRange(3, 7), 5);
+            //412 Burmy : 033 Tackle
+            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(412, 2, -1, Gender.Unknown), -1, 033, -1, -1, -1, new RandRange(10), 25), new IntRange(3, 7), 5);
             //066 Machop : 067 Low Kick : 116 Focus Energy
             poolSpawn.Spawns.Add(GetTeamMob(066, -1, 067, 116, -1, -1, new RandRange(8)), new IntRange(3, 7), 10);
             //043 Oddish : 230 Sweet Scent : 051 Acid
@@ -3456,8 +3458,6 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(300, 056, 252, -1, -1, -1, new RandRange(10)), new IntRange(3, 7), 10);
             //209 Snubbull : 044 Bite : 204 Charm
             poolSpawn.Spawns.Add(GetTeamMob(209, -1, 044, 204, -1, -1, new RandRange(9)), new IntRange(3, 7), 10);
-            //050 Diglett : 071 Arena Trap : 189 Mud-Slap : 010 Scratch
-            poolSpawn.Spawns.Add(GetTeamMob(050, 071, 189, 010, -1, -1, new RandRange(10)), new IntRange(3, 7), 10);
             //179 Mareep : 178 Cotton Spore : 084 Thunder Shock
             poolSpawn.Spawns.Add(GetTeamMob(179, -1, 178, 084, -1, -1, new RandRange(10)), new IntRange(3, 7), 10);
             //187 Hoppip : 235 Synthesis : 033 Tackle
