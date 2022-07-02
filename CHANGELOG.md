@@ -5,7 +5,8 @@
 * Iron Ball lowers attack speed, not movement speed
 * Pass Scarf costs hunger on activation
 * Moxie activates half of the time, requiring moves
-* Fix AI for Mime Jr., Delcatty, and similar enemies
+* Fix AI erroring for Mime Jr., Delcatty, and similar enemies
+* Fix AI for projectile attackers that find themselves blocked by an opponent with an immunity, ex. Yamna vs. ghosts
 * Fix an issue with Nicknames not showing on enemies
 * The updater now backs up the PMDO/SAVE/ directory to SAVE.bak/
 * Fixed an issue with reserialization that nullified mod data on error
