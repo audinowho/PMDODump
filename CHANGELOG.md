@@ -12,6 +12,7 @@
 * Fix AI erroring for Mime Jr., Delcatty, and similar enemies
 * Fix AI for projectile attackers that find themselves blocked by an opponent with an immunity, ex. Yamna vs. ghosts
 * Moved Mute Music key to F8, and made Pause, Frame Advance, Speed Down and Speed Up keys available out of dev mode
+* Prevent Ditto from photobombing team pictures
 * Fixed an issue where PP-saving exclusive items prevented PP from dropping altogether
 * Fix an issue with Nicknames not showing on enemies
 * The updater now backs up the PMDO/SAVE/ directory to SAVE.bak/
