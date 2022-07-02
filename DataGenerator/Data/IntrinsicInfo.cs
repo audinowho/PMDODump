@@ -1025,12 +1025,8 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Unnerves opposing Pokémon and makes them unable to eat food items.");
                 ability.ProximityEvent.Radius = 5;
                 ability.ProximityEvent.TargetAlignments = Alignment.Foe;
-                HashSet<FlagType> foods = new HashSet<FlagType>();
-                foods.Add(new FlagType(typeof(EdibleState)));
-                ability.ProximityEvent.BeforeTryActions.Add(0, new PreventItemUseEvent(new StringKey("MSG_UNNERVE"), foods));
-                foods = new HashSet<FlagType>();
-                foods.Add(new FlagType(typeof(EdibleState)));
-                ability.ProximityEvent.BeforeActions.Add(0, new PreventItemUseEvent(new StringKey("MSG_UNNERVE"), foods));
+                ability.ProximityEvent.BeforeTryActions.Add(0, new PreventItemUseEvent(new StringKey("MSG_UNNERVE"), new FlagType(typeof(EdibleState))));
+                ability.ProximityEvent.BeforeActions.Add(0, new PreventItemUseEvent(new StringKey("MSG_UNNERVE"), new FlagType(typeof(EdibleState))));
                 ability.ProximityEvent.BeforeBeingHits.Add(0, new DodgeFoodEvent(new StringKey("MSG_UNNERVE")));
             }
             else if (ii == 128)

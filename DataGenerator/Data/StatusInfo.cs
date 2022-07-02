@@ -49,6 +49,8 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SLEEP_END")));
                 status.StatusStates.Set(new CountDownState(5));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Throw));
+                status.BeforeTryActions.Add(0, new PreventItemActionEvent(new StringKey("MSG_CANT_USE_ITEM"), new FlagType(typeof(CurerState))));
                 status.BeforeActions.Add(0, new SleepEvent());
                 status.StatusStates.Set(new RecentState());
                 status.BeforeBeingHits.Add(0, new RemoveRecentEvent());
@@ -104,6 +106,8 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FREEZE_END")));
                 status.StatusStates.Set(new CountDownState(10));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Throw));
+                status.BeforeTryActions.Add(0, new PreventItemActionEvent(new StringKey("MSG_CANT_USE_ITEM"), new FlagType(typeof(CurerState))));
                 status.BeforeActions.Add(0, new FreezeEvent());
                 status.BeforeBeingHits.Add(0, new ThawEvent());
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
@@ -127,6 +131,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_PARALYZE_END")));
                 status.StatusStates.Set(new CountDownState(7));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
+                status.BeforeTryActions.Add(0, new PreventItemParalysisEvent(new StringKey("MSG_CANT_USE_ITEM"), new FlagType(typeof(CurerState))));
                 status.BeforeActions.Add(0, new ParalysisEvent(new BattleAnimEvent(new SingleEmitter(new AnimData("Spark", 3)), "DUN_Paralyzed", false)));
                 status.OnTurnEnds.Add(0, new AlternateParalysisEvent());
                 status.OnRefresh.Add(0, new ParaPauseEvent());
@@ -202,7 +207,10 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_CRINGE_END")));
                 status.StatusStates.Set(new CountDownState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
-                status.BeforeActions.Add(0, new PreventActionEvent(new StringKey("MSG_CRINGE")));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Throw));
+                status.BeforeTryActions.Add(0, new PreventItemActionEvent(new StringKey("MSG_CANT_USE_ITEM"), new FlagType(typeof(CurerState))));
+                status.BeforeActions.Add(0, new PreventActionEvent(new StringKey("MSG_CRINGE"), BattleActionType.Throw, BattleActionType.Skill));
+                status.BeforeActions.Add(0, new PreventItemActionEvent(new StringKey("MSG_CRINGE"), new FlagType(typeof(CurerState))));
             }
             else if (ii == 9)
             {
@@ -389,6 +397,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new HPState());
                 status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new BoundEvent(new StringKey("MSG_WRAP")));
                 status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
@@ -396,6 +405,7 @@ namespace DataGenerator.Data
                 BetweenEmitter emitter = new BetweenEmitter(new AnimData("Wrap_White_Back", 3), new AnimData("Wrap_White_Front", 3));
                 emitter.HeightBack = 16;
                 emitter.HeightFront = 16;
+                status.TargetPassive.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.TargetPassive.BeforeActions.Add(0, new WrapTrapEvent(new StringKey("MSG_WRAP_ATTACK"), 06, new AnimEvent(emitter, "DUN_Wrap", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
                 status.TargetPassive.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.TargetPassive.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -416,6 +426,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new StackState());
                 status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new BoundEvent(new StringKey("MSG_BIND")));
                 status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
@@ -424,6 +435,7 @@ namespace DataGenerator.Data
                 BetweenEmitter emitter = new BetweenEmitter(new AnimData("Wrap_White_Back", 3), new AnimData("Wrap_White_Front", 3));
                 emitter.HeightBack = 16;
                 emitter.HeightFront = 16;
+                status.TargetPassive.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.TargetPassive.BeforeActions.Add(0, new WrapTrapEvent(new StringKey("MSG_WRAP_ATTACK"), 06, new AnimEvent(emitter, "DUN_Wrap", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
                 status.TargetPassive.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.TargetPassive.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -547,6 +559,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SOLAR_BEAM_CHARGE")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(76));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.OnRefresh.Add(0, new ImmobilizationEvent(typeof(ChargeWalkerState)));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -560,6 +573,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SKULL_BASH_CHARGE")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(130));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.OnRefresh.Add(0, new ImmobilizationEvent(typeof(ChargeWalkerState)));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -574,6 +588,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_RAZOR_WIND_CHARGE")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(13));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.OnRefresh.Add(0, new ImmobilizationEvent(typeof(ChargeWalkerState)));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -587,6 +602,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SKY_ATTACK_CHARGE")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(143));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.OnRefresh.Add(0, new ImmobilizationEvent(typeof(ChargeWalkerState)));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -601,6 +617,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FOCUS_PUNCH_END")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(264));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.AfterBeingHits.Add(0, new RemoveOnDamageEvent());
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -625,6 +642,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownEvent(effects));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(91));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new OnActionEvent(new BattlelessEvent(false, new RemoveLocTrapEvent()), new BattlelessEvent(false, new RemoveLocTerrainEvent(2)), new RemoveBattleEvent(false)));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[3] { 89, 90, 222 }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -643,6 +661,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(19));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[8] { 16, 18, 87, 239, 327, 479, 542, 614 }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -668,6 +687,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(291));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[2] { 57, 250 }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -684,6 +704,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_BOUNCE_END")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(340));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[8] { 16, 18, 87, 239, 327, 479, 542, 614 }));
@@ -704,6 +725,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(566));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[0] { }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -722,6 +744,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(467));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[0] { }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -739,6 +762,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new HPState());
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(117));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveBide()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.StatusStates.Set(new CountDownState(2));
                 status.BeforeActions.Add(0, new UnleashEvent());
                 status.AfterBeingHits.Add(0, new BideEvent());
@@ -823,6 +847,7 @@ namespace DataGenerator.Data
                 status.DrawEffect = DrawEffect.Spinning;
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck());
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(80));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
                 status.StatusStates.Set(new CountDownState(4));
@@ -840,6 +865,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("The Pokémon will use Thrash repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.");
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck());
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(37));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
                 status.StatusStates.Set(new CountDownState(4));
@@ -857,6 +883,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("The Pokémon will use Outrage repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.");
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck());
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(200));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
                 status.StatusStates.Set(new CountDownState(4));
@@ -936,7 +963,10 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new TransferStatusState());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_PAUSE_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_PAUSE_END")));
-                status.BeforeActions.Add(0, new PreventActionEvent(new StringKey("MSG_PAUSE")));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Throw));
+                status.BeforeTryActions.Add(0, new PreventItemActionEvent(new StringKey("MSG_CANT_USE_ITEM"), new FlagType(typeof(CurerState))));
+                status.BeforeActions.Add(0, new PreventActionEvent(new StringKey("MSG_PAUSE"), BattleActionType.Throw, BattleActionType.Skill));
+                status.BeforeActions.Add(0, new PreventItemActionEvent(new StringKey("MSG_PAUSE"), new FlagType(typeof(CurerState))));
                 status.StatusStates.Set(new CountDownState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
@@ -1336,9 +1366,11 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_EMBARGO_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_EMBARGO_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_EMBARGO_END")));
-                status.BeforeTryActions.Add(0, new PreventItemActionEvent(new StringKey("MSG_EMBARGO")));
-                status.BeforeActions.Add(0, new PreventItemActionEvent(new StringKey("MSG_EMBARGO")));
-                status.StatusStates.Set(new CountDownState(30));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_EMBARGO"), BattleActionType.Throw));
+                status.BeforeTryActions.Add(0, new PreventItemActionEvent(new StringKey("MSG_EMBARGO"), new FlagType(typeof(CurerState))));
+                status.BeforeActions.Add(0, new PreventActionEvent(new StringKey("MSG_EMBARGO"), BattleActionType.Throw));
+                status.BeforeActions.Add(0, new PreventItemActionEvent(new StringKey("MSG_EMBARGO"), new FlagType(typeof(CurerState))));
+                status.StatusStates.Set(new CountDownState(50));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(-5, new NoHeldItemEvent());
             }
@@ -1746,10 +1778,12 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new StackState());
                 status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new BoundEvent(new StringKey("MSG_CLAMP")));
                 status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
+                status.TargetPassive.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.TargetPassive.BeforeActions.Add(0, new WrapTrapEvent(new StringKey("MSG_WRAP_ATTACK"), 06, new AnimEvent(new SingleEmitter(new AnimData("Clamp", 2)), "DUN_Clamp", 10), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
                 status.TargetPassive.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.TargetPassive.OnRefresh.Add(0, new AttackOnlyEvent());

@@ -132,6 +132,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Lum Berry");
                 item.Desc = new LocalText("A berry that matures slowly, storing nutrients beneficial to Pokémon health. It cures many status problems.");
                 item.Sprite = "Berry_Lum";
+                item.ItemStates.Set(new CurerState());
                 item.UseEvent.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
             }
             else if (ii == 13)

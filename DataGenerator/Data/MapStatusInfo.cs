@@ -423,16 +423,8 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Mysterious Force");
                 status.Desc = new LocalText("A mysterious force prevents Orbs, Machines, and special items from working.");
                 status.RepeatMethod = new MapStatusReplaceEvent();
-                HashSet<FlagType> orbs = new HashSet<FlagType>();
-                orbs.Add(new FlagType(typeof(UtilityState)));
-                orbs.Add(new FlagType(typeof(OrbState)));
-                orbs.Add(new FlagType(typeof(MachineState)));
-                status.BeforeTryActions.Add(0, new PreventItemUseEvent(new StringKey("MSG_ITEM_BAN"), orbs));
-                orbs = new HashSet<FlagType>();
-                orbs.Add(new FlagType(typeof(UtilityState)));
-                orbs.Add(new FlagType(typeof(OrbState)));
-                orbs.Add(new FlagType(typeof(MachineState)));
-                status.BeforeActions.Add(0, new PreventItemUseEvent(new StringKey("MSG_ITEM_BAN"), orbs));
+                status.BeforeTryActions.Add(0, new PreventItemUseEvent(new StringKey("MSG_ITEM_BAN"), new FlagType(typeof(UtilityState)), new FlagType(typeof(OrbState)), new FlagType(typeof(MachineState))));
+                status.BeforeActions.Add(0, new PreventItemUseEvent(new StringKey("MSG_ITEM_BAN"), new FlagType(typeof(UtilityState)), new FlagType(typeof(OrbState)), new FlagType(typeof(MachineState))));
             }
             else if (ii == 22)
             {

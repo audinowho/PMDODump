@@ -1,6 +1,8 @@
 # 0.5.18 Changes #
 
 * Modified the move Petal Dance, Outrage, Thrash, Hidden Power
+* Lum Berry can be used on targets with statuses that prevent them from using items
+* Edible items thrown at allies will not be caught and always used
 * Fixed inventory overflow issues with gifted items and Honey Gather
 * Iron Ball lowers attack speed, not movement speed
 * Pass Scarf costs hunger on activation
