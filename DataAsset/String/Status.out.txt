@@ -198,7 +198,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0098-0000|data.Name		Sure Shot	Coup Sûr	Scharfschuss																								
 0098-0001|data.Desc		The Pokémon's attacks cannot miss. This status wears off after many turns have passed.	Les attaques du Pokémon ne peuvent pas échouer. Ce statut disparaît après plusieurs tours.	Die Attacken des Pokémon können nicht verfehlen. Dieser Status lässt nach vielen Zügen nach.																								
 0099-0000|data.Name		Power-Charged	Surchargé	Energiegeladen																								
-0099-0001|data.Desc		The Pokémon is able to use 2-turn moves in one turn, and its PP is prevented from dropping. This status wears off after a few turns.	Le Pokémon est capable d'utiliser en 1 tour des capacités en necessitant 2, ses PP ne peuvent pas baisser. Ce statut disparaît après quelques tours.	Das Pokémon ist nun in der Lage Attacken, die normalerweise 2 Züge benötigen, direkt in einem Zug zu nutzen. Des Weiteren können die AP des Pokémon nicht fallen. Dieser Status lässt nach einigen Zügen nach.																								
+0099-0001|data.Desc		The Pokémon is able to use moves without charging or recharging, and its PP is prevented from dropping. This status wears off after many turns have passed.																										
 0100-0000|data.Name		Mini-Counter	Mini-Riposte	Mini-Konter	Mini-Contra																							
 0100-0001|data.Desc		The Pokémon will return damage from all attacks back at the user. This status wears off after many turns have passed.	Le Pokémon reflette tout les dégâts qui lui sont infligés. Ce statut disparaît après plusieurs tours.	Das Pokémon wirft jeden Schaden, den ein Gegner an ihm verursacht, an dessen Nutzer zurück. Dieser Status lässt nach vielen Zügen nach.	El Pokémon devolverá el daño de todos los ataques al usuario. Este estado desaparece tras pasar varios turnos.																							
 0101-0000|data.Name		Leech Seed	Vampigraine	Egelsamen	Drenadoras																							
@@ -240,7 +240,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0119-0000|data.Name		Stat-Charged		Statuswert-Schutz																								
 0119-0001|data.Desc		The Pokémon is protected from all stat changes, including its own.		Das Pokémon ist gegen jegliche Statuswertsenkungen geschützt. Eigene Statuswertsenkungen sind somit auch eingeschlossen.																								
 0120-0000|data.Name		Mental-Charged		Geistig gestärkt																								
-0120-0001|data.Desc		The Pokémon is protected against move-binding effects. This status wears off after a few turns.		Das Pokémon ist gegen attackengebundene Effekte geschützt. Dieser Status lässt nach einigen Zügen nach.																								
+0120-0001|data.Desc		The Pokémon is protected against move-binding effects. This status wears off after many turns have passed.																										
 0121-0000|data.Name		Weakness Drain		Schwäche aufzehren																								
 0121-0001|data.Desc		The Pokémon will have its HP restored if hit by a super-effective move. This status wears off after many turns have passed.		Das Pokémon regeneriert KP, sobald es von einer sehr effektiven Attacke getroffen wurde. Dieser Status lässt nach vielen Zügen nach.																								
 0122-0000|data.Name		Doom Desire		Kismetwunsch	Deseo Oculto																							
@@ -259,3 +259,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0128-0001|data.Desc																												
 0129-0000|data.Name		Invisible	Invisible								透明																	
 0129-0001|data.Desc		The Pokémon is invisible and cannot be seen by other Pokémon. This status wears off after a few turns.									这只宝可梦隐身了，无法被其它宝可梦看见。该状态在几回合后解除。																	
+0130-0000|data.Name		Veiled																										
+0130-0001|data.Desc																												
+0131-0000|data.Name		Friendly Fire																										
+0131-0001|data.Desc																												

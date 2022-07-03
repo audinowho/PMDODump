@@ -3450,8 +3450,8 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(161, -1, 010, 111, -1, -1, new RandRange(5)), new IntRange(1, 5), 10);
             //013 Weedle : 040 Poison Sting : 081 String Shot
             poolSpawn.Spawns.Add(GetTeamMob(013, -1, 040, 081, -1, -1, new RandRange(5)), new IntRange(1, 5), 10);
-            //050 Diglett : 071 Arena Trap : 310 Astonish : 010 Scratch
-            poolSpawn.Spawns.Add(GetTeamMob(050, 071, 310, 010, -1, -1, new RandRange(6)), new IntRange(1, 5), 10);
+            //050 Diglett : 071 Arena Trap : 310 Astonish : 028 Sand Attack
+            poolSpawn.Spawns.Add(GetTeamMob(050, 071, 310, 028, -1, -1, new RandRange(6)), new IntRange(1, 5), 10);
             //333 Swablu : 030 Natural Cure : 047 Sing : 064 Peck
             poolSpawn.Spawns.Add(GetTeamMob(333, 030, 047, 064, -1, -1, new RandRange(6)), new IntRange(1, 5), 10);
             //309 Electrike : 336 Howl : 033 Tackle
@@ -4817,7 +4817,7 @@ namespace DataGenerator.Data
 
                 if (ii <= 8)
                     floorData.CharSight = Map.SightRange.Dark;
-                else if (ii <= 16)
+                else if (ii <= 12)
                     floorData.CharSight = Map.SightRange.Clear;
                 else
                     floorData.CharSight = Map.SightRange.Dark;

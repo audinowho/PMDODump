@@ -1215,7 +1215,7 @@ namespace DataGenerator.Data
             else if (ii == 153)
             {
                 ability.Name = new LocalText("Moxie");
-                ability.Desc = new LocalText("The Pokémon shows moxie, and that boosts the Attack stat after knocking out any Pokémon with a move.");
+                ability.Desc = new LocalText("The Pokémon shows moxie, which may boost the Attack stat after knocking out any Pokémon with a move.");
                 ability.AfterActions.Add(0, new KnockOutNeededEvent(new OnMoveUseEvent(new OnHitAnyEvent(true, 50, new StatusStackBattleEvent(10, false, true, false, 1, new StringKey("MSG_MOXIE"))))));
             }
             else if (ii == 154)
@@ -1673,7 +1673,7 @@ namespace DataGenerator.Data
             else if (ii == 224)
             {
                 ability.Name = new LocalText("Beast Boost");
-                ability.Desc = new LocalText("The Pokémon boosts its most proficient stat each time it knocks out a Pokémon with a move.");
+                ability.Desc = new LocalText("The Pokémon may boost its most proficient stat each time it knocks out a Pokémon with a move.");
                 ability.AfterActions.Add(0, new KnockOutNeededEvent(new OnMoveUseEvent(new OnHitAnyEvent(true, 50, new AffectHighestStatBattleEvent(false, 10, 11, 12, 13, false, 1)))));
             }
             else if (ii == 225)

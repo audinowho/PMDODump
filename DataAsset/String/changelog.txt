@@ -1,13 +1,24 @@
 Sheet: Hardcode
-    * Added DLG_FILE_VERSION_DIFF
-    * Added MENU_MAIL_INCOMPATIBLE
+    * Deleted key MENU_RESULTS_VERSION_TITLE
+    * Added MENU_VERSION_INFO
+    * Added MENU_VERSION_TITLE, transferred from MENU_RESULTS_VERSION_TITLE
+    * Deleted key MSG_CANT_USE_ITEM
+    * Added MSG_CANT_USE_ITEM_OTHER
 
 Sheet: Content
-    * Added MSG_TREASURE_SENSOR
+    * Added MSG_CANT_USE_ITEM
+    * Added MSG_EQUIP_SHARE
+    * Significantly changed MSG_TRACE from "{1}'s Trace copied {0}'s ability!" to "{1}'s {2} copied {0}'s ability!"
 
 Sheet: Script
 
 Sheet: Abilities
+    * Changed 0153-0001|data.Desc from "The Pokémon shows moxie, and that boosts the Attack stat after knocking out any Pokémon." to "The Pokémon shows moxie, and that boosts the Attack stat after knocking out any Pokémon with a move."
+    * Significantly changed 0166-0001|data.Desc from "Prevents lowering of ally Pokémon's stats." to "Protects ally Pokémon from major status conditions."
+    * Changed 0180-0001|data.Desc from "Passes the effect of its held item to ally Pokémon." to "Passes the effect of certain held items to ally Pokémon. It won't use the item itself."
+    * Significantly changed 0222-0001|data.Desc from "The Pokémon copies the Ability of a defeated ally." to "The Pokémon copies the Ability of an ally."
+    * Significantly changed 0223-0001|data.Desc from "The Pokémon copies the Ability of a defeated ally." to "The Pokémon copies the Ability of an ally."
+    * Changed 0224-0001|data.Desc from "The Pokémon boosts its most proficient stat each time it knocks out a Pokémon." to "The Pokémon boosts its most proficient stat each time it knocks out a Pokémon with a move."
 
 Sheet: Items
 
@@ -16,6 +27,12 @@ Sheet: MapStatuses
 Sheet: Moves
 
 Sheet: Statuses
+    * Significantly changed 0099-0001|data.Desc from "The Pokémon is able to use 2-turn moves in one turn, and its PP is prevented from dropping. This status wears off after a few turns." to "The Pokémon is able to use moves without charging or recharging, and its PP is prevented from dropping. This status wears off after many turns have passed."
+    * Significantly changed 0120-0001|data.Desc from "The Pokémon is protected against move-binding effects. This status wears off after a few turns." to "The Pokémon is protected against move-binding effects. This status wears off after many turns have passed."
+    * Added 0130-0000|data.Name
+    * Added 0130-0001|data.Desc
+    * Added 0131-0000|data.Name
+    * Added 0131-0001|data.Desc
 
 Sheet: Tiles
 

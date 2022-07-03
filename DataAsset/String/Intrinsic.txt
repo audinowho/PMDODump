@@ -306,7 +306,7 @@ Key		EN
 0152-0000|data.Name		Mummy
 0152-0001|data.Desc		Contact with the Pokémon spreads this Ability.
 0153-0000|data.Name		Moxie
-0153-0001|data.Desc		The Pokémon shows moxie, and that boosts the Attack stat after knocking out any Pokémon.
+0153-0001|data.Desc		The Pokémon shows moxie, and that boosts the Attack stat after knocking out any Pokémon with a move.
 0154-0000|data.Name		Justified
 0154-0001|data.Desc		Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.
 0155-0000|data.Name		Rattled
@@ -332,7 +332,7 @@ Key		EN
 0165-0000|data.Name		Aroma Veil
 0165-0001|data.Desc		Protects itself and its allies from attacks that limit their move choices.
 0166-0000|data.Name		Flower Veil
-0166-0001|data.Desc		Prevents lowering of ally Pokémon's stats.
+0166-0001|data.Desc		Protects ally Pokémon from major status conditions.
 0167-0000|data.Name		Cheek Pouch
 0167-0001|data.Desc		Restores HP when the Pokémon eats a food item.
 0168-0000|data.Name		Protean
@@ -360,7 +360,7 @@ Key		EN
 0179-0000|data.Name		Grass Pelt
 0179-0001|data.Desc		Boosts the Defense stat in Grassy Terrain.
 0180-0000|data.Name		Symbiosis
-0180-0001|data.Desc		Passes the effect of its held item to ally Pokémon.
+0180-0001|data.Desc		Passes the effect of certain held items to ally Pokémon. It won't use the item itself.
 0181-0000|data.Name		Tough Claws
 0181-0001|data.Desc		Powers up moves that make direct contact.
 0182-0000|data.Name		Pixilate
@@ -444,11 +444,11 @@ Key		EN
 0221-0000|data.Name		Tangling Hair
 0221-0001|data.Desc		Contact with the Pokémon lowers the attacker's Speed stat.
 0222-0000|data.Name		Receiver
-0222-0001|data.Desc		The Pokémon copies the Ability of a defeated ally.
+0222-0001|data.Desc		The Pokémon copies the Ability of an ally.
 0223-0000|data.Name		Power of Alchemy
-0223-0001|data.Desc		The Pokémon copies the Ability of a defeated ally.
+0223-0001|data.Desc		The Pokémon copies the Ability of an ally.
 0224-0000|data.Name		Beast Boost
-0224-0001|data.Desc		The Pokémon boosts its most proficient stat each time it knocks out a Pokémon.
+0224-0001|data.Desc		The Pokémon boosts its most proficient stat each time it knocks out a Pokémon with a move.
 0225-0000|data.Name		RKS System
 0225-0001|data.Desc		Changes the Pokémon's type to match the memory disc it holds.
 0226-0000|data.Name		Electric Surge

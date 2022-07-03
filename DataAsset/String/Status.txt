@@ -198,7 +198,7 @@ Key		EN
 0098-0000|data.Name		Sure Shot
 0098-0001|data.Desc		The Pokémon's attacks cannot miss. This status wears off after many turns have passed.
 0099-0000|data.Name		Power-Charged
-0099-0001|data.Desc		The Pokémon is able to use 2-turn moves in one turn, and its PP is prevented from dropping. This status wears off after a few turns.
+0099-0001|data.Desc		The Pokémon is able to use moves without charging or recharging, and its PP is prevented from dropping. This status wears off after many turns have passed.
 0100-0000|data.Name		Mini-Counter
 0100-0001|data.Desc		The Pokémon will return damage from all attacks back at the user. This status wears off after many turns have passed.
 0101-0000|data.Name		Leech Seed
@@ -240,7 +240,7 @@ Key		EN
 0119-0000|data.Name		Stat-Charged
 0119-0001|data.Desc		The Pokémon is protected from all stat changes, including its own.
 0120-0000|data.Name		Mental-Charged
-0120-0001|data.Desc		The Pokémon is protected against move-binding effects. This status wears off after a few turns.
+0120-0001|data.Desc		The Pokémon is protected against move-binding effects. This status wears off after many turns have passed.
 0121-0000|data.Name		Weakness Drain
 0121-0001|data.Desc		The Pokémon will have its HP restored if hit by a super-effective move. This status wears off after many turns have passed.
 0122-0000|data.Name		Doom Desire
@@ -259,3 +259,7 @@ Key		EN
 0128-0001|data.Desc		
 0129-0000|data.Name		Invisible
 0129-0001|data.Desc		The Pokémon is invisible and cannot be seen by other Pokémon. This status wears off after a few turns.
+0130-0000|data.Name		Veiled
+0130-0001|data.Desc		
+0131-0000|data.Name		Friendly Fire
+0131-0001|data.Desc		
