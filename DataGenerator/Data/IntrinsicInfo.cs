@@ -460,7 +460,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Pickup");
                 ability.Desc = new LocalText("The Pokémon may find an item when it enters a new floor.");
-                ability.OnMapStarts.Add(0, new PickupEvent(new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), "")));
+                ability.OnMapStarts.Add(0, new PickupEvent(50, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), "")));
             }
             else if (ii == 54)
             {
@@ -937,7 +937,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Honey Gather");
                 ability.Desc = new LocalText("The Pokémon may gather Nectar when it enters a new floor.");
-                ability.OnMapStarts.Add(0, new GatherEvent(150, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), "")));
+                ability.OnMapStarts.Add(0, new GatherEvent(150, 50, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), "")));
             }
             else if (ii == 119)
             {
