@@ -20,7 +20,7 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_INTRINSICS; ii++)
             {
                 IntrinsicData ability = GetIntrinsicData(ii);
-                DataManager.SaveData(ii, DataManager.DataType.Intrinsic.ToString(), ability);
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.Intrinsic.ToString(), ability);
             }
         }
         public static IntrinsicData GetIntrinsicData(int ii)

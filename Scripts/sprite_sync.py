@@ -204,7 +204,7 @@ def transferWithMap(base_path, out_path, over_transfer):
         for diff in portrait_diffs:
             txt.write(",".join(diff) + "\n")
 
-    shutil.copy(os.path.join(base_path, "credit_name.txt"), os.path.join(out_path, "spritebot_credits.txt"))
+    shutil.copy(os.path.join(base_path, "credit_names.txt"), os.path.join(out_path, "spritebot_credits.txt"))
 
 def main():
     """
