@@ -67,7 +67,8 @@ namespace DataGenerator.Data
                         }
                         break;
                 }
-                DataManager.SaveData(ii, DataManager.DataType.Skin.ToString(), data);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.Skin.ToString(), data);
             }
         }
 

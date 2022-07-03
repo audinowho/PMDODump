@@ -20,7 +20,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_MAP_STATUSES; ii++)
             {
                 MapStatusData status = GetMapStatusData(ii);
-                DataManager.SaveData(ii, DataManager.DataType.MapStatus.ToString(), status);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.MapStatus.ToString(), status);
             }
         }
         public static MapStatusData GetMapStatusData(int ii)

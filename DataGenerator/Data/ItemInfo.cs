@@ -25,7 +25,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_NORMAL_ITEMS; ii++)
             {
                 ItemData item = GetItemData(ii);
-                DataManager.SaveData(ii, DataManager.DataType.Item.ToString(), item);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.Item.ToString(), item);
             }
             AddExclItemData(false);
         }
@@ -4004,180 +4005,180 @@ namespace DataGenerator.Data
                 else if (ii == 771)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Aqua Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { 10 }, ((ii - 700) / 4 + 1), translate);
-                else if (ii == 804)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBulldozer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBulldozer, new object[] { 11, 8 }, 1, translate);
+                else if (ii == 804)//TODO: String Assets
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBulldozer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBulldozer, new object[] { 11, 8 }, 1.ToString(), translate);
                 else if (ii == 805)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SuperCrit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SuperCrit, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SuperCrit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SuperCrit, new object[] { }, 1.ToString(), translate);
                 else if (ii == 806)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.NVECrit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.NVECrit, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.NVECrit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.NVECrit, new object[] { }, 1.ToString(), translate);
                 else if (ii == 807)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Nontraitor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Nontraitor, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Nontraitor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Nontraitor, new object[] { }, 1.ToString(), translate);
                 else if (ii == 808)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WaterTerrain.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WaterTerrain, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WaterTerrain.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WaterTerrain, new object[] { }, 1.ToString(), translate);
                 else if (ii == 809)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.LavaTerrain.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.LavaTerrain, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.LavaTerrain.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.LavaTerrain, new object[] { }, 1.ToString(), translate);
                 else if (ii == 810)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AllTerrain.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AllTerrain, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AllTerrain.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AllTerrain, new object[] { }, 1.ToString(), translate);
                 else if (ii == 811)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Wallbreaker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Wallbreaker, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Wallbreaker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Wallbreaker, new object[] { }, 1.ToString(), translate);
                 else if (ii == 812)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.GapFiller.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.GapFiller, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.GapFiller.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.GapFiller, new object[] { }, 1.ToString(), translate);
                 else if (ii == 813)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PPBoost.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PPBoost, new object[] { 2 }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PPBoost.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PPBoost, new object[] { 2 }, 1.ToString(), translate);
                 else if (ii == 814)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DeepBreather.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DeepBreather, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DeepBreather.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DeepBreather, new object[] { }, 1.ToString(), translate);
                 else if (ii == 815)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PracticeSwinger.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PracticeSwinger, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PracticeSwinger.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PracticeSwinger, new object[] { }, 1.ToString(), translate);
                 else if (ii == 816)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MisfortuneMirror.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MisfortuneMirror, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MisfortuneMirror.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MisfortuneMirror, new object[] { }, 1.ToString(), translate);
                 else if (ii == 817)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CounterBasher.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CounterBasher, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CounterBasher.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CounterBasher, new object[] { }, 1.ToString(), translate);
                 else if (ii == 818)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DoubleAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DoubleAttacker, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DoubleAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DoubleAttacker, new object[] { }, 1.ToString(), translate);
                 else if (ii == 819)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MasterHurler.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MasterHurler, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MasterHurler.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MasterHurler, new object[] { }, 1.ToString(), translate);
                 else if (ii == 820)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AllyReviver.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AllyReviver, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AllyReviver.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AllyReviver, new object[] { }, 1.ToString(), translate);
                 else if (ii == 821)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AllyReviverBattle.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AllyReviverBattle, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AllyReviverBattle.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AllyReviverBattle, new object[] { }, 1.ToString(), translate);
                 else if (ii == 822)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PressurePlus.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PressurePlus, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PressurePlus.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PressurePlus, new object[] { }, 1.ToString(), translate);
                 else if (ii == 823)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnAttack, new object[] { 5 }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnAttack, new object[] { 5 }, 1.ToString(), translate);
                 else if (ii == 824)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.KnockbackOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.KnockbackOnAttack, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.KnockbackOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.KnockbackOnAttack, new object[] { }, 1.ToString(), translate);
                 else if (ii == 825)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ThrowOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ThrowOnAttack, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ThrowOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ThrowOnAttack, new object[] { }, 1.ToString(), translate);
                 else if (ii == 826)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SureHitAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SureHitAttacker, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SureHitAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SureHitAttacker, new object[] { }, 1.ToString(), translate);
                 else if (ii == 827)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SpecialAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SpecialAttacker, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SpecialAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SpecialAttacker, new object[] { }, 1.ToString(), translate);
                 else if (ii == 828)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusImmune.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusImmune, new object[] { 1 }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusImmune.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusImmune, new object[] { 1 }, 1.ToString(), translate);
                 else if (ii == 829)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatDropImmune.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatDropImmune, new object[] { new Stat[] { Stat.Attack } }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatDropImmune.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatDropImmune, new object[] { new Stat[] { Stat.Attack } }, 1.ToString(), translate);
                 else if (ii == 830)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SleepWalker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SleepWalker, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SleepWalker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SleepWalker, new object[] { }, 1.ToString(), translate);
                 else if (ii == 831)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ChargeWalker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ChargeWalker, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ChargeWalker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ChargeWalker, new object[] { }, 1.ToString(), translate);
                 else if (ii == 832)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StairSensor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StairSensor, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StairSensor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StairSensor, new object[] { }, 1.ToString(), translate);
                 else if (ii == 833)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AcuteSniffer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AcuteSniffer, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AcuteSniffer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AcuteSniffer, new object[] { }, 1.ToString(), translate);
                 else if (ii == 834)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MapSurveyor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MapSurveyor, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MapSurveyor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MapSurveyor, new object[] { }, 1.ToString(), translate);
                 else if (ii == 835)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.XRay.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.XRay, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.XRay.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.XRay, new object[] { }, 1.ToString(), translate);
                 else if (ii == 836)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessPayback, new object[] { 7, 5 }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessPayback, new object[] { 7, 5 }, 1.ToString(), translate);
                 else if (ii == 837)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WarpPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WarpPayback, new object[] { 8 }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WarpPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WarpPayback, new object[] { 8 }, 1.ToString(), translate);
                 else if (ii == 838)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.LungeAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.LungeAttack, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.LungeAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.LungeAttack, new object[] { }, 1.ToString(), translate);
                 else if (ii == 839)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WideAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WideAttack, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WideAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WideAttack, new object[] { }, 1.ToString(), translate);
                 else if (ii == 840)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ExplosiveAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ExplosiveAttack, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ExplosiveAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ExplosiveAttack, new object[] { }, 1.ToString(), translate);
                 else if (ii == 841)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TrapBuster.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TrapBuster, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TrapBuster.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TrapBuster, new object[] { }, 1.ToString(), translate);
                 else if (ii == 842)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ExplosionGuard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ExplosionGuard, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ExplosionGuard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ExplosionGuard, new object[] { }, 1.ToString(), translate);
                 else if (ii == 843)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WandMaster.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WandMaster, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WandMaster.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WandMaster, new object[] { }, 1.ToString(), translate);
                 else if (ii == 844)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WandSpread.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WandSpread, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WandSpread.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WandSpread, new object[] { }, 1.ToString(), translate);
                 else if (ii == 845)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MultiRayShot.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MultiRayShot, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MultiRayShot.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MultiRayShot, new object[] { }, 1.ToString(), translate);
                 else if (ii == 846)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.RoyalVeil.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.RoyalVeil, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.RoyalVeil.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.RoyalVeil, new object[] { }, 1.ToString(), translate);
                 else if (ii == 847)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Celebrate.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Celebrate, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Celebrate.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Celebrate, new object[] { }, 1.ToString(), translate);
                 else if (ii == 848)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Absorption.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Absorption, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Absorption.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Absorption, new object[] { }, 1.ToString(), translate);
                 else if (ii == 849)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ExcessiveForce.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ExcessiveForce, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ExcessiveForce.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ExcessiveForce, new object[] { }, 1.ToString(), translate);
                 else if (ii == 850)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Anchor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Anchor, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Anchor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Anchor, new object[] { }, 1.ToString(), translate);
                 else if (ii == 851)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.BarrageGuard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.BarrageGuard, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.BarrageGuard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.BarrageGuard, new object[] { }, 1.ToString(), translate);
                 else if (ii == 852)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.BetterOdds.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.BetterOdds, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.BetterOdds.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.BetterOdds, new object[] { }, 1.ToString(), translate);
                 else if (ii == 853)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ClutchPerformer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ClutchPerformer, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ClutchPerformer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ClutchPerformer, new object[] { }, 1.ToString(), translate);
                 else if (ii == 854)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DistanceDodge.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DistanceDodge, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DistanceDodge.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DistanceDodge, new object[] { }, 1.ToString(), translate);
                 else if (ii == 855)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CloseDodge.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CloseDodge, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CloseDodge.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CloseDodge, new object[] { }, 1.ToString(), translate);
                 else if (ii == 856)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.FastHealer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.FastHealer, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.FastHealer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.FastHealer, new object[] { }, 1.ToString(), translate);
                 else if (ii == 857)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SelfCurer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SelfCurer, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SelfCurer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SelfCurer, new object[] { }, 1.ToString(), translate);
                 else if (ii == 858)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusMirror.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusMirror, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusMirror.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusMirror, new object[] { }, 1.ToString(), translate);
                 else if (ii == 859)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatMirror.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatMirror, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatMirror.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatMirror, new object[] { }, 1.ToString(), translate);
                 else if (ii == 860)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ErraticAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ErraticAttacker, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ErraticAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ErraticAttacker, new object[] { }, 1.ToString(), translate);
                 else if (ii == 861)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ErraticDefender.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ErraticDefender, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ErraticDefender.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ErraticDefender, new object[] { }, 1.ToString(), translate);
                 else if (ii == 862)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.FastFriend.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.FastFriend, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.FastFriend.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.FastFriend, new object[] { }, 1.ToString(), translate);
                 else if (ii == 863)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CoinWatcher.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CoinWatcher, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CoinWatcher.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CoinWatcher, new object[] { }, 1.ToString(), translate);
                 else if (ii == 864)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HiddenStairFinder.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HiddenStairFinder, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HiddenStairFinder.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HiddenStairFinder, new object[] { }, 1.ToString(), translate);
                 else if (ii == 865)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ChestFinder.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ChestFinder, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ChestFinder.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ChestFinder, new object[] { }, 1.ToString(), translate);
                 else if (ii == 866)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ShopFinder.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ShopFinder, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ShopFinder.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ShopFinder, new object[] { }, 1.ToString(), translate);
                 else if (ii == 867)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SecondSTAB.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SecondSTAB, new object[] { 7 }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SecondSTAB.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SecondSTAB, new object[] { 7 }, 1.ToString(), translate);
                 else if (ii == 868)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypedAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypedAttack, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypedAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypedAttack, new object[] { }, 1.ToString(), translate);
                 else if (ii == 869)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.GapProber.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.GapProber, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.GapProber.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.GapProber, new object[] { }, 1.ToString(), translate);
                 else if (ii == 870)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PassThroughAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PassThroughAttacker, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PassThroughAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PassThroughAttacker, new object[] { }, 1.ToString(), translate);
                 else if (ii == 871)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeatherProtection.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeatherProtection, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeatherProtection.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeatherProtection, new object[] { }, 1.ToString(), translate);
                 else if (ii == 872)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.RemoveAbilityAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.RemoveAbilityAttack, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.RemoveAbilityAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.RemoveAbilityAttack, new object[] { }, 1.ToString(), translate);
                 else if (ii == 873)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CheekPouch.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CheekPouch, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CheekPouch.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CheekPouch, new object[] { }, 1.ToString(), translate);
                 else if (ii == 874)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HealInWater.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HealInWater, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HealInWater.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HealInWater, new object[] { }, 1.ToString(), translate);
                 else if (ii == 875)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HealInLava.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HealInLava, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HealInLava.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HealInLava, new object[] { }, 1.ToString(), translate);
                 else if (ii == 876)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HealOnNewFloor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HealOnNewFloor, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HealOnNewFloor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HealOnNewFloor, new object[] { }, 1.ToString(), translate);
                 else if (ii == 877)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.EndureCategory.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.EndureCategory, new object[] { BattleData.SkillCategory.Physical }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.EndureCategory.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.EndureCategory, new object[] { BattleData.SkillCategory.Physical }, 1.ToString(), translate);
                 else if (ii == 878)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.EndureType.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.EndureType, new object[] { 12 }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.EndureType.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.EndureType, new object[] { 12 }, 1.ToString(), translate);
                 else if (ii == 879)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SpikeDropper.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SpikeDropper, new object[] { BattleData.SkillCategory.Physical }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SpikeDropper.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SpikeDropper, new object[] { BattleData.SkillCategory.Physical }, 1.ToString(), translate);
                 else if (ii == 880)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.NoStatusInWeather.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.NoStatusInWeather, new object[] { 2 }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.NoStatusInWeather.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.NoStatusInWeather, new object[] { 2 }, 1.ToString(), translate);
                 else if (ii == 881)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DeepBreatherPlus.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DeepBreatherPlus, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DeepBreatherPlus.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DeepBreatherPlus, new object[] { }, 1.ToString(), translate);
                 else if (ii == 882)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessReduce.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessReduce, new object[] { 15 }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessReduce.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessReduce, new object[] { 15 }, 1.ToString(), translate);
                 else if (ii == 883)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Gratitude.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Gratitude, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Gratitude.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Gratitude, new object[] { }, 1.ToString(), translate);
                 else if (ii == 884)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HitAndRun.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HitAndRun, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HitAndRun.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HitAndRun, new object[] { }, 1.ToString(), translate);
                 else if (ii == 885)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnCategoryHit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnCategoryHit, new object[] { 45, BattleData.SkillCategory.Status }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnCategoryHit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnCategoryHit, new object[] { 45, BattleData.SkillCategory.Status }, 1.ToString(), translate);
                 else if (ii == 886)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnCategoryUse, new object[] { 97, BattleData.SkillCategory.Status }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnCategoryUse, new object[] { 97, BattleData.SkillCategory.Status }, 1.ToString(), translate);
                 else if (ii == 887)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MapStatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MapStatusOnCategoryUse, new object[] { BattleData.SkillCategory.Status, 14 }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MapStatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MapStatusOnCategoryUse, new object[] { BattleData.SkillCategory.Status, 14 }, 1.ToString(), translate);
                 else if (ii == 888)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DoubleDash.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DoubleDash, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DoubleDash.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DoubleDash, new object[] { }, 1.ToString(), translate);
                 else if (ii == 889)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusSplash.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusSplash, new object[] { }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusSplash.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusSplash, new object[] { }, 1.ToString(), translate);
                 else if (ii == 890)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBodyguard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBodyguard, new object[] { 1 }, 1, translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBodyguard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBodyguard, new object[] { 1 }, 1.ToString(), translate);
 
                 if (ii >= 800 && ii < 900)
                     item.Comment = "Test item, do not translate";
@@ -4197,7 +4198,8 @@ namespace DataGenerator.Data
                 else if (item.Name.DefaultText != "")
                     item.Released = true;
 
-                DataManager.SaveData(ii, DataManager.DataType.Item.ToString(), item);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.Item.ToString(), item);
             }
 
             AutoItemInfo.WriteExclusiveItems(MAX_INIT_EXCL_ITEMS, translate);

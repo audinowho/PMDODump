@@ -22,8 +22,8 @@ namespace DataGenerator.Data
             {
 
                 SkillData move = GetSkillData(ii);
-                if (!move.Released)
-                    DataManager.SaveData(ii, DataManager.DataType.Skill.ToString(), move);
+                if (!move.Released)//TODO: String Assets
+                    DataManager.SaveData(ii.ToString(), DataManager.DataType.Skill.ToString(), move);
             }
         }
 
@@ -35,7 +35,8 @@ namespace DataGenerator.Data
                 {
 
                     SkillData move = GetSkillData(movesToAdd[ii]);
-                    DataManager.SaveData(movesToAdd[ii], DataManager.DataType.Skill.ToString(), move);
+                    //TODO: String Assets
+                    DataManager.SaveData(movesToAdd[ii].ToString(), DataManager.DataType.Skill.ToString(), move);
                 }
             }
             else
@@ -44,7 +45,8 @@ namespace DataGenerator.Data
                 {
 
                     SkillData move = GetSkillData(ii);
-                    DataManager.SaveData(ii, DataManager.DataType.Skill.ToString(), move);
+                    //TODO: String Assets
+                    DataManager.SaveData(ii.ToString(), DataManager.DataType.Skill.ToString(), move);
                 }
             }
         }

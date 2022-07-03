@@ -148,7 +148,8 @@ namespace DataGenerator.Data
 
             for (int ii = 0; ii < TOTAL_DEX; ii++)
             {
-                DataManager.SaveData(ii, DataManager.DataType.Monster.ToString(), totalEntries[ii]);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.Monster.ToString(), totalEntries[ii]);
                 //TotalEntries[ii].SaveXml("Dex\\" + ii + ".xml");
                 Console.WriteLine("#" + ii + " " + totalEntries[ii].Name + " Written");
             }

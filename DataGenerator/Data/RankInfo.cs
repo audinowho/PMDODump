@@ -50,7 +50,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_GROUPS; ii++)
             {
                 RankData data = new RankData(new LocalText(((TeamRank)ii).ToString()), 24, RANK_NEXT[ii]);
-                DataManager.SaveData(ii, DataManager.DataType.Rank.ToString(), data);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.Rank.ToString(), data);
             }
         }
 

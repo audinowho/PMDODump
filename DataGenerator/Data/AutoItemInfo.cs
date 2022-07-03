@@ -220,10 +220,10 @@ namespace DataGenerator.Data
 
 
             for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Monster].Count; ii++)
-                monsters.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries[ii].Name.DefaultText);
+                monsters.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries[ii.ToString()].Name.DefaultText);
 
             for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Element].Count; ii++)
-                elements.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Element].Entries[ii].Name.DefaultText);
+                elements.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Element].Entries[ii.ToString()].Name.DefaultText);
 
             for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Status].Count; ii++)
             {
@@ -337,13 +337,16 @@ namespace DataGenerator.Data
                     data = DataManager.Instance.GetMonster(firstStage);
                     prevo = data.PromoteFrom;
                 }
-                List<int> dexNums = new List<int>();
-                dexNums.Add(firstStage);
+                List<string> dexNums = new List<string>();
+                dexNums.Add(firstStage.ToString());
                 bool branched = FindEvos(dexNums, data);
-                evoTrees.Add(dexNums);
+                List<int> dexNumInt = new List<int>();
+                foreach (string dexNum in dexNums)
+                    dexNumInt.Add(Int32.Parse(dexNum));
+                evoTrees.Add(dexNumInt);
                 branchedEvo.Add(branched);
-                foreach (int dexNum in dexNums)
-                    traversed.Add(dexNum);
+                foreach (string dexNum in dexNums)
+                    traversed.Add(Int32.Parse(dexNum));
             }
 
             path = GenPath.ITEM_PATH  + "EvoTreeRef.txt";
@@ -468,17 +471,17 @@ namespace DataGenerator.Data
                         familyStarts.Add(primaryDex);
 
                     bool includeFamily = row[3] == "True";
-                    List<int> dexNums = new List<int>();
+                    List<string> dexNums = new List<string>();
                     foreach (int dex in familyStarts)
                     {
                         if (includeFamily)
                         {
-                            int firstStage = dex;
+                            string firstStage = dex.ToString();
                             MonsterData data = DataManager.Instance.GetMonster(firstStage);
                             int prevo = data.PromoteFrom;
                             while (prevo > -1)
                             {
-                                firstStage = prevo;
+                                firstStage = prevo.ToString();
                                 data = DataManager.Instance.GetMonster(firstStage);
                                 prevo = data.PromoteFrom;
                             }
@@ -486,7 +489,7 @@ namespace DataGenerator.Data
                             AutoItemInfo.FindEvos(dexNums, data);
                         }
                         else
-                            dexNums.Add(dex);
+                            dexNums.Add(dex.ToString());
                     }
 
                     ItemData item = new ItemData();
@@ -494,7 +497,7 @@ namespace DataGenerator.Data
                     if (exclType != ExclusiveItemType.None && customName != "")
                         Console.WriteLine(String.Format("Item {0} found with both name \"{1}\" and type {2}.", item_idx, customName, exclType));
 
-                    AutoItemInfo.FillExclusiveData(item_idx, item, "", customName, exclType, exclEffect, args.ToArray(), primaryDex, dexNums, translate, includeFamily);
+                    AutoItemInfo.FillExclusiveData(item_idx, item, "", customName, exclType, exclEffect, args.ToArray(), primaryDex.ToString(), dexNums, translate, includeFamily);
 
                     item.Rarity = Math.Clamp(item.Rarity, minRarity, maxRarity);
                     item.Sprite = "Box_Yellow";
@@ -514,7 +517,7 @@ namespace DataGenerator.Data
                     if (item.Name.DefaultText != "" && !item.Released)
                         incompleteLeft++;
 
-                    DataManager.SaveData(item_idx, DataManager.DataType.Item.ToString(), item);
+                    DataManager.SaveData(item_idx.ToString(), DataManager.DataType.Item.ToString(), item);
 
                     if (item.Released)
                     {
@@ -640,7 +643,7 @@ namespace DataGenerator.Data
                             //they are at the bottom of their trade chain
                             if (!has_tradeables)
                             {
-                                ItemData old_item = DataManager.LoadData<ItemData>(old_idx, DataManager.DataType.Item.ToString());
+                                ItemData old_item = DataManager.LoadData<ItemData>(old_idx.ToString(), DataManager.DataType.Item.ToString());
                                 //has a rarity of 3 or lower
                                 if (old_item.Rarity <= 3)
                                 {
@@ -1941,18 +1944,18 @@ namespace DataGenerator.Data
         }
 
 
-        public static void FillExclusiveData(int item_idx, ItemData item, string sprite, string name, ExclusiveItemType type, ExclusiveItemEffect effect, object[] effectArgs, int dexFamily, bool translate)
+        public static void FillExclusiveData(int item_idx, ItemData item, string sprite, string name, ExclusiveItemType type, ExclusiveItemEffect effect, object[] effectArgs, string dexFamily, bool translate)
         {
-            int firstStage = dexFamily;
+            string firstStage = dexFamily;
             MonsterData data = DataManager.Instance.GetMonster(firstStage);
             int prevo = data.PromoteFrom;
             while (prevo > -1)
             {
-                firstStage = prevo;
+                firstStage = prevo.ToString();
                 data = DataManager.Instance.GetMonster(firstStage);
                 prevo = data.PromoteFrom;
             }
-            List<int> dexNums = new List<int>();
+            List<string> dexNums = new List<string>();
             dexNums.Add(firstStage);
             FindEvos(dexNums, data);
 
@@ -1960,19 +1963,19 @@ namespace DataGenerator.Data
             FillExclusiveData(item_idx, item, sprite, name, type, effect, effectArgs, dexFamily, dexNums, translate, true);
         }
 
-        public static bool FindEvos(List<int> dexNums, MonsterData data)
+        public static bool FindEvos(List<string> dexNums, MonsterData data)
         {
             bool branched = data.Promotions.Count > 1;
             foreach (PromoteBranch evo in data.Promotions)
             {
-                dexNums.Add(evo.Result);
+                dexNums.Add(evo.Result.ToString());
                 MonsterData evoData = DataManager.Instance.GetMonster(evo.Result);
                 branched |= FindEvos(dexNums, evoData);
             }
             return branched;
         }
 
-        public static void FillExclusiveData(int item_idx, ItemData item, string sprite, string name, ExclusiveItemType type, ExclusiveItemEffect effect, object[] effectArgs, int primaryDexNum, List<int> dexNums, bool translate, bool family)
+        public static void FillExclusiveData(int item_idx, ItemData item, string sprite, string name, ExclusiveItemType type, ExclusiveItemEffect effect, object[] effectArgs, string primaryDexNum, List<string> dexNums, bool translate, bool family)
         {
             item.Sprite = sprite;
 
@@ -2012,7 +2015,7 @@ namespace DataGenerator.Data
             else
             {
                 List<LocalText> nameList = new List<LocalText>();
-                foreach (int dexNum in dexNums)
+                foreach (string dexNum in dexNums)
                 {
                     MonsterData data = DataManager.Instance.GetMonster(dexNum);
                     nameList.Add(data.Name);

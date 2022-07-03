@@ -44,7 +44,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_ELEMENTS; ii++)
             {
                 ElementData element = new ElementData(new LocalText(((Element)ii).ToString()), (char)(ii + 0xE080));
-                DataManager.SaveData(ii, DataManager.DataType.Element.ToString(), element);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.Element.ToString(), element);
             }
         }
 

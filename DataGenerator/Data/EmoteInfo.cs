@@ -19,7 +19,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_EMOTES; ii++)
             {
                 EmoteData emote = GetEmoteData(ii);
-                DataManager.SaveData(ii, DataManager.DataType.Emote.ToString(), emote);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.Emote.ToString(), emote);
             }
         }
 

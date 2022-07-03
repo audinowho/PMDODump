@@ -138,7 +138,8 @@ namespace DataGenerator.Data
                     exp.Add(EXP_CURVES[jj,ii]);
                 }
                 GrowthData skillGroup = new GrowthData(new LocalText(((GrowthGroup)ii).ToString()), exp.ToArray());
-                DataManager.SaveData(ii, DataManager.DataType.GrowthGroup.ToString(), skillGroup);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.GrowthGroup.ToString(), skillGroup);
             }
         }
 

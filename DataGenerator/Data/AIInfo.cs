@@ -309,7 +309,8 @@ namespace DataGenerator.Data
                 if (ii < 6)
                     Tactics[ii].Assignable = true;
                 Tactics[ii].Released = true;
-                DataManager.SaveData(ii, DataManager.DataType.AI.ToString(), Tactics[ii]);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.AI.ToString(), Tactics[ii]);
             }
         }
 

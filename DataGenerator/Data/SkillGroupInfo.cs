@@ -39,7 +39,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_GROUPS; ii++)
             {
                 SkillGroupData skillGroup = new SkillGroupData(new LocalText(((EggGroup)ii).ToString()));
-                DataManager.SaveData(ii, DataManager.DataType.SkillGroup.ToString(), skillGroup);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.SkillGroup.ToString(), skillGroup);
             }
         }
 

@@ -25,7 +25,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_TILES; ii++)
             {
                 TileData tile = GetTileData(ii);
-                DataManager.SaveData(ii, DataManager.DataType.Tile.ToString(), tile);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.Tile.ToString(), tile);
             }
         }
 
@@ -1153,7 +1154,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_TERRAIN; ii++)
             {
                 TerrainData entry = GetTerrainData(ii);
-                DataManager.SaveData(ii, DataManager.DataType.Terrain.ToString(), entry);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.Terrain.ToString(), entry);
             }
         }
 

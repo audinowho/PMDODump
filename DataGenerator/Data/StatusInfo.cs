@@ -20,7 +20,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_STATUSES; ii++)
             {
                 StatusData status = GetStatusData(ii);
-                DataManager.SaveData(ii, DataManager.DataType.Status.ToString(), status);
+                //TODO: String Assets
+                DataManager.SaveData(ii.ToString(), DataManager.DataType.Status.ToString(), status);
             }
         }
         public static StatusData GetStatusData(int ii)

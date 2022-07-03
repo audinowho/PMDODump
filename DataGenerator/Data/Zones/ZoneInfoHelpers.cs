@@ -595,27 +595,23 @@ namespace DataGenerator.Data
 
 
 
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Monster].Count; ii++)
-                monsters.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries[ii].Name.DefaultText);
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries.Keys)
+                monsters.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries[key].Name.DefaultText);
+            
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Skill].Entries.Keys)
+                skills.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Skill].Entries[key].Name.DefaultText);
+            
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Entries.Keys)
+                intrinsics.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Entries[key].Name.DefaultText);
 
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Skill].Count; ii++)
-                skills.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Skill].Entries[ii].Name.DefaultText);
+            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Status].Entries.Keys)
+                statuses.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Status].Entries[key].Name.DefaultText);
+            
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Entries.Keys)
+                ai.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.AI].Entries[key].Name.DefaultText);
 
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Count; ii++)
-                intrinsics.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Entries[ii].Name.DefaultText);
-
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Status].Count; ii++)
-            {
-                StatusData data = DataManager.Instance.GetStatus(ii);
-                if (data.MenuName && data.Name.DefaultText != "" && data.StatusStates.Contains<TransferStatusState>())
-                    statuses.Add((ii).ToString("D3") + ": " + data.Name.DefaultText);
-            }
-
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.AI].Count; ii++)
-                ai.Add((ii).ToString("D2") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.AI].Entries[ii].Name.DefaultText);
-
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Item].Count; ii++)
-                items.Add((ii).ToString("D4") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Item].Entries[ii].Name.DefaultText);
+            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Entries.Keys)
+                items.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Item].Entries[key].Name.DefaultText);
 
             for (int ii = 0; ii <= (int)TeamMemberSpawn.MemberRole.Loner; ii++)
                 roles.Add(((TeamMemberSpawn.MemberRole)ii).ToString());
