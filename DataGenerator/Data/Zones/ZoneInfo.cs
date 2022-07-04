@@ -4646,11 +4646,11 @@ namespace DataGenerator.Data
                         {
                             //add a PickerSpawner <- PresetMultiRand <- coins
                             List<MapItem> treasures = new List<MapItem>();
-                            treasures.Add(new MapItem(true, 150));
-                            treasures.Add(new MapItem(true, 150));
-                            treasures.Add(new MapItem(true, 150));
-                            treasures.Add(new MapItem(true, 150));
-                            treasures.Add(new MapItem(true, 150));
+                            treasures.Add(MapItem.CreateMoney(150));
+                            treasures.Add(MapItem.CreateMoney(150));
+                            treasures.Add(MapItem.CreateMoney(150));
+                            treasures.Add(MapItem.CreateMoney(150));
+                            treasures.Add(MapItem.CreateMoney(150));
                             PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
                             SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
