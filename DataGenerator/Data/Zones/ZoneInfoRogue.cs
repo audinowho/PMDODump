@@ -1520,13 +1520,13 @@ namespace DataGenerator.Data
                 {
                     //add a PickerSpawner <- PresetMultiRand <- coins
                     List<MapItem> treasures = new List<MapItem>();
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(false, 152));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(new MapItem(152));
                     PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
 
@@ -2092,13 +2092,13 @@ namespace DataGenerator.Data
                 {
                     //add a PickerSpawner <- PresetMultiRand <- coins
                     List<MapItem> treasures = new List<MapItem>();
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(false, 477));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(new MapItem(477));
                     PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
                     SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
@@ -2623,9 +2623,9 @@ namespace DataGenerator.Data
                     {
                         //secret money
                         List<MapItem> secretItemSpawns = new List<MapItem>();
-                        secretItemSpawns.Add(new MapItem(true, 200));
-                        secretItemSpawns.Add(new MapItem(true, 200));
-                        secretItemSpawns.Add(new MapItem(true, 200));
+                        secretItemSpawns.Add(MapItem.CreateMoney(200));
+                        secretItemSpawns.Add(MapItem.CreateMoney(200));
+                        secretItemSpawns.Add(MapItem.CreateMoney(200));
                         RandomRoomSpawnStep<MapGenContext, MapItem> secretPlacement = new RandomRoomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(secretItemSpawns)));
                         secretPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Disconnected));
                         layout.GenSteps.Add(PR_SPAWN_ITEMS, secretPlacement);
@@ -4108,13 +4108,13 @@ namespace DataGenerator.Data
                 {
                     //add a PickerSpawner <- PresetMultiRand <- coins
                     List<MapItem> treasures = new List<MapItem>();
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(false, 152));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(new MapItem(152));
                     PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
 
@@ -4530,13 +4530,13 @@ namespace DataGenerator.Data
                 {
                     //add a PickerSpawner <- PresetMultiRand <- coins
                     List<MapItem> treasures = new List<MapItem>();
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(true, 200));
-                    treasures.Add(new MapItem(false, 477));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(MapItem.CreateMoney(200));
+                    treasures.Add(new MapItem(477));
                     PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
                     SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
