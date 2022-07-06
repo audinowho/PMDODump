@@ -243,6 +243,7 @@ namespace DataGenerator
                     DataManager.InitInstance();
 
                     DataManager.InitDataDirs(PathMod.ModPath(""));
+                    RogueEssence.Dev.DevHelper.ConvertAssetNames();
                     RogueEssence.Dev.DevHelper.ReserializeBase();
                     DiagManager.Instance.LogInfo("Reserializing main data");
                     RogueEssence.Dev.DevHelper.Reserialize(reserializeIndices);
@@ -321,7 +322,7 @@ namespace DataGenerator
                         if ((dump & DataManager.DataType.Skill) != DataManager.DataType.None)
                         {
                             //SkillInfo.AddUnreleasedMoveData();
-                            SkillInfo.AddMoveData(367);
+                            //SkillInfo.AddMoveData(367);
                         }
 
                         if ((dump & DataManager.DataType.Intrinsic) != DataManager.DataType.None)

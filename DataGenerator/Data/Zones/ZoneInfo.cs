@@ -29,8 +29,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_ZONES; ii++)
             {
                 ZoneData zone = GetZoneData(ii);
-                //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.Zone.ToString(), zone);
+                if (zone.Name.DefaultText != "")
+                    DataManager.SaveData(Text.Sanitize(zone.Name.DefaultText.Replace("'", "")).ToLower(), DataManager.DataType.Zone.ToString(), zone);
             }
         }
 
