@@ -2677,7 +2677,7 @@ namespace DataGenerator.Data
             }
             else if (index == 17)
             {
-                #region WAYWARD SNOW PATH
+                #region SNOWBOUND PATH
                 {
                     zone.Name = new LocalText("**Snowbound Path");
                     zone.Rescues = 2;

@@ -212,16 +212,15 @@ namespace DataGenerator.Dev
         public static void PrintZoneStringTable()
         {
             string path = GenPath.TL_PATH + "Zone.txt";
-            int total = DataManager.Instance.DataIndices[DataManager.DataType.Zone].Count;
             Dictionary<string, (string, LocalText)> rows = new Dictionary<string, (string, LocalText)>();
             List<string> orderedKeys = new List<string>();
             HashSet<string> languages = new HashSet<string>();
-            for (int ii = 0; ii < total; ii++)
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Zone].Entries.Keys)
             {
-                ZoneData data = DataManager.Instance.GetZone(ii);
+                ZoneData data = DataManager.Instance.GetZone(key);
 
                 int nn = 0;
-                updateWorkingLists(rows, orderedKeys, languages, ii.ToString("D4") + "-" + nn.ToString("D4") + "|data.Name", data.Comment, data.Name);
+                updateWorkingLists(rows, orderedKeys, languages, key + "-" + nn.ToString("D4") + "|data.Name", data.Comment, data.Name);
                 for (int jj = 0; jj < data.Segments.Count; jj++)
                 {
                     LayeredSegment structure = data.Segments[jj] as LayeredSegment;
@@ -235,7 +234,7 @@ namespace DataGenerator.Dev
                                 //TODO: get these type names via reflection
                                 nn++;
                                 updateWorkingLists(rows, orderedKeys, languages,
-                                    ii.ToString("D4") + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name", "", postProc.Name);
+                                    key + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name", "", postProc.Name);
                             }
                         }
                     }
