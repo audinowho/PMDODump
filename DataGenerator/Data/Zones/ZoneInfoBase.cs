@@ -1318,15 +1318,15 @@ namespace DataGenerator.Data
 
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
-                        textureStep.BlankBG = 433;
-                        textureStep.TextureMap[0] = 100;
-                        textureStep.TextureMap[1] = 99;
-                        textureStep.TextureMap[2] = 99;
-                        textureStep.TextureMap[3] = 101;
-                        textureStep.TextureMap[6] = 101;
-                        textureStep.TextureMap[5] = 101;
-                        textureStep.TextureMap[6] = 101;
-                        textureStep.TextureMap[7] = 457;
+                        textureStep.BlankBG = "wyvern_hill_wall";
+                        textureStep.TextureMap[0] = "wyvern_hill_floor";
+                        textureStep.TextureMap[1] = "wyvern_hill_wall";
+                        textureStep.TextureMap[2] = "wyvern_hill_wall";
+                        textureStep.TextureMap[3] = "wyvern_hill_secondary";
+                        textureStep.TextureMap[6] = "wyvern_hill_secondary";
+                        textureStep.TextureMap[5] = "wyvern_hill_secondary";
+                        textureStep.TextureMap[6] = "wyvern_hill_secondary";
+                        textureStep.TextureMap[7] = "tall_grass";
                     }
                     textureStep.GroundElement = 13;
                     textureStep.LayeredGround = true;
@@ -1481,14 +1481,14 @@ namespace DataGenerator.Data
                     //Tilesets
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
-                        textureStep.BlankBG = 258;
-                        textureStep.TextureMap[0] = 259;
-                        textureStep.TextureMap[1] = 343;
-                        textureStep.TextureMap[2] = 343;
-                        textureStep.TextureMap[3] = 258;
-                        textureStep.TextureMap[6] = 258;
-                        textureStep.TextureMap[5] = 258;
-                        textureStep.TextureMap[6] = 258;
+                        textureStep.BlankBG = "chasm_cave_1_wall";
+                        textureStep.TextureMap[0] = "chasm_cave_1_floor";
+                        textureStep.TextureMap[1] = "spacial_rift_1_wall";
+                        textureStep.TextureMap[2] = "spacial_rift_1_wall";
+                        textureStep.TextureMap[3] = "chasm_cave_1_wall";
+                        textureStep.TextureMap[6] = "chasm_cave_1_wall";
+                        textureStep.TextureMap[5] = "chasm_cave_1_wall";
+                        textureStep.TextureMap[6] = "chasm_cave_1_wall";
                     }
                     textureStep.GroundElement = 13;
                     textureStep.LayeredGround = true;
@@ -1554,7 +1554,7 @@ namespace DataGenerator.Data
 
                     //add invisible unbreakable border
                     Tile invisBarrier = new Tile(1, true);
-                    invisBarrier.Data.TileTex = new AutoTile(258);
+                    invisBarrier.Data.TileTex = new AutoTile("chasm_cave_1_wall");
                     layout.GenSteps.Add(PR_TILES_BARRIER, new TileBorderStep<MapGenContext>(1, invisBarrier));
 
                     AddStairStep(layout, false);
@@ -1770,15 +1770,15 @@ namespace DataGenerator.Data
 
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
-                        textureStep.BlankBG = 433;
-                        textureStep.TextureMap[0] = 100;
-                        textureStep.TextureMap[1] = 99;
-                        textureStep.TextureMap[2] = 99;
-                        textureStep.TextureMap[3] = 101;
-                        textureStep.TextureMap[6] = 62;
-                        textureStep.TextureMap[5] = 258;
-                        textureStep.TextureMap[6] = 29;
-                        textureStep.TextureMap[7] = 457;
+                        textureStep.BlankBG = "wyvern_hill_wall";
+                        textureStep.TextureMap[0] = "wyvern_hill_floor";
+                        textureStep.TextureMap[1] = "wyvern_hill_wall";
+                        textureStep.TextureMap[2] = "wyvern_hill_wall";
+                        textureStep.TextureMap[3] = "wyvern_hill_secondary";
+                        textureStep.TextureMap[6] = "mt_blaze_secondary";
+                        textureStep.TextureMap[5] = "chasm_cave_1_wall";
+                        textureStep.TextureMap[6] = "poison_maze_secondary";
+                        textureStep.TextureMap[7] = "tall_grass";
                     }
                     textureStep.GroundElement = 13;
                     textureStep.LayeredGround = true;
@@ -1872,15 +1872,15 @@ namespace DataGenerator.Data
 
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
-                        textureStep.BlankBG = 433;
-                        textureStep.TextureMap[0] = 100;
-                        textureStep.TextureMap[1] = 99;
-                        textureStep.TextureMap[2] = 99;
-                        textureStep.TextureMap[3] = 101;
-                        textureStep.TextureMap[6] = 62;
-                        textureStep.TextureMap[5] = 258;
-                        textureStep.TextureMap[6] = 29;
-                        textureStep.TextureMap[7] = 457;
+                        textureStep.BlankBG = "wyvern_hill_wall";
+                        textureStep.TextureMap[0] = "wyvern_hill_floor";
+                        textureStep.TextureMap[1] = "wyvern_hill_wall";
+                        textureStep.TextureMap[2] = "wyvern_hill_wall";
+                        textureStep.TextureMap[3] = "wyvern_hill_secondary";
+                        textureStep.TextureMap[6] = "mt_blaze_secondary";
+                        textureStep.TextureMap[5] = "chasm_cave_1_wall";
+                        textureStep.TextureMap[6] = "poison_maze_secondary";
+                        textureStep.TextureMap[7] = "tall_grass";
                     }
                     textureStep.GroundElement = 13;
                     textureStep.LayeredGround = true;
@@ -2045,7 +2045,7 @@ namespace DataGenerator.Data
                 //Tests Tilesets, and unlockables
                 #region TILESET TESTS
                 int curTileIndex = 0;
-                for (int kk = 0; kk < 5; kk++)
+                for (int kk = 0; kk < 5/*151*/; kk++)
                 {
                     string[] level = {
                             "...........................................",
@@ -2117,12 +2117,12 @@ namespace DataGenerator.Data
                         AddSpecificSpawn(layout, items, PR_EXITS);
                     }
 
-                    AddTextureData(layout, curTileIndex, curTileIndex + 1, curTileIndex + 2, 13);
-                    //chasm cave
-                    if (curTileIndex != 258 && curTileIndex != 260)
-                        curTileIndex += 3;
-                    else
-                        curTileIndex += 2;
+                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", 13);
+                    ////chasm cave
+                    //if (curTileIndex != 258 && curTileIndex != 260)
+                    //    curTileIndex += 3;
+                    //else
+                    //    curTileIndex += 2;
 
                     structure.Floors.Add(layout);
                 }
@@ -2356,7 +2356,7 @@ namespace DataGenerator.Data
 
                     layout.GenSteps.Add(PR_EXITS, new StairsStep<StairsMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile(1, true))));
 
-                    AddTextureData(layout, curTileIndex, curTileIndex+1, curTileIndex+2, 13);
+                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", 13);
                     curTileIndex += 3;
 
                     structure.Floors.Add(layout);
