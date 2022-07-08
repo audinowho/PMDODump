@@ -2117,18 +2117,12 @@ namespace DataGenerator.Data
                         AddSpecificSpawn(layout, items, PR_EXITS);
                     }
 
-                    MapTextureStep<StairsMapGenContext> textureStep = new MapTextureStep<StairsMapGenContext>();
-                    textureStep.BlockTileset = curTileIndex;
-                    curTileIndex++;
-                    textureStep.GroundTileset = curTileIndex;
-                    curTileIndex++;
+                    AddTextureData(layout, curTileIndex, curTileIndex + 1, curTileIndex + 2, 13);
                     //chasm cave
-                    if (curTileIndex != 260 && curTileIndex != 262)
-                    {
-                        textureStep.WaterTileset = curTileIndex;
-                        curTileIndex++;
-                    }
-                    layout.GenSteps.Add(PR_TEXTURES, textureStep);
+                    if (curTileIndex != 258 && curTileIndex != 260)
+                        curTileIndex += 3;
+                    else
+                        curTileIndex += 2;
 
                     structure.Floors.Add(layout);
                 }
@@ -2362,14 +2356,8 @@ namespace DataGenerator.Data
 
                     layout.GenSteps.Add(PR_EXITS, new StairsStep<StairsMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile(1, true))));
 
-                    MapTextureStep<StairsMapGenContext> textureStep = new MapTextureStep<StairsMapGenContext>();
-                    textureStep.BlockTileset = curTileIndex;
-                    curTileIndex++;
-                    textureStep.GroundTileset = curTileIndex;
-                    curTileIndex++;
-                    textureStep.WaterTileset = curTileIndex;
-                    curTileIndex++;
-                    layout.GenSteps.Add(PR_TEXTURES, textureStep);
+                    AddTextureData(layout, curTileIndex, curTileIndex+1, curTileIndex+2, 13);
+                    curTileIndex += 3;
 
                     structure.Floors.Add(layout);
                 }
