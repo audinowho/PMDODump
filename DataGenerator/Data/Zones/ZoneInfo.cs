@@ -160,7 +160,7 @@ namespace DataGenerator.Data
                         AddWaterSteps(layout, 3, new RandRange(30));//water
 
                         //Tilesets
-                        AddTextureData(layout, 93, 94, 95, 13);
+                        AddTextureData(layout, "howling_forest_1_wall", "howling_forest_1_floor", "howling_forest_1_secondary", 13);
 
                         //money
                         AddMoneyData(layout, new RandRange(1, 3));
@@ -440,7 +440,7 @@ namespace DataGenerator.Data
 
 
                             //Tilesets
-                            AddTextureData(layout, 373, 374, 375, 13);
+                            AddTextureData(layout, "tiny_meadow_wall", "tiny_meadow_floor", "tiny_meadow_secondary", 13);
 
                             //money
                             AddMoneyData(layout, new RandRange(1, 4));
@@ -676,7 +676,7 @@ namespace DataGenerator.Data
 
 
                             //Tilesets
-                            AddTextureData(layout, 99, 100, 101, 13);
+                            AddTextureData(layout, "wyvern_hill_wall", "wyvern_hill_floor", "wyvern_hill_secondary", 13);
 
                             //money
                             AddMoneyData(layout, new RandRange(1, 4));
@@ -912,9 +912,9 @@ namespace DataGenerator.Data
                         //Tilesets
                         //Mt. Horn -> hidden Land -> hidden land 2 -> mt. horn?
                         if (ii < 5)
-                            AddTextureData(layout, 304, 305, 306, 08);
+                            AddTextureData(layout, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary", 08);
                         else
-                            AddTextureData(layout, 307, 308, 309, 08);
+                            AddTextureData(layout, "hidden_highland_wall", "hidden_highland_floor", "hidden_highland_secondary", 08);
 
                         //money - 765P to 3,315P
                         AddMoneyData(layout, new RandRange(1, 4));
@@ -1029,11 +1029,11 @@ namespace DataGenerator.Data
                         
                         //Tilesets
                         if (ii < 4)
-                            AddTextureData(layout, 39, 40, 41, 04);
+                            AddTextureData(layout, "mt_thunder_peak_wall", "mt_thunder_peak_floor", "mt_thunder_peak_secondary", 04);
                         else if (ii < 7)
-                            AddTextureData(layout, 189, 190, 191, 04);
+                            AddTextureData(layout, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary", 04);
                         else
-                            AddTextureData(layout, 337, 338, 339, 04);
+                            AddTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", 04);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -1151,11 +1151,11 @@ namespace DataGenerator.Data
                         
                         //Tilesets
                         if (ii < 4)
-                            AddTextureData(layout, 66, 67, 68, 02);
+                            AddTextureData(layout, "frosty_forest_wall", "frosty_forest_floor", "frosty_forest_secondary", 02);
                         else if (ii < 8)
-                            AddTextureData(layout, 388, 389, 390, 02);
+                            AddTextureData(layout, "steel_aegis_cave_wall", "steel_aegis_cave_floor", "steel_aegis_cave_secondary", 02);
                         else
-                            AddTextureData(layout, 274, 275, 276, 02);
+                            AddTextureData(layout, "sky_peak_summit_pass_wall", "sky_peak_summit_pass_floor", "sky_peak_summit_pass_secondary", 02);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -1263,12 +1263,12 @@ namespace DataGenerator.Data
                         if (ii < 8)
                         {
                             if (ii < 6)
-                                AddTextureData(layout, 129, 443, 444, 12);
+                                AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", 12);
                             else
-                                AddTextureData(layout, 129, 443, 444, 17);
+                                AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", 17);
                         }
                         else
-                            AddTextureData(layout, 445, 130, 131, 17, true);
+                            AddTextureData(layout, "sky_ruins_area_wall", "northwind_field_floor", "northwind_field_secondary", 17, true);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -1380,19 +1380,19 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 2)
-                            AddTextureData(layout, 105, 106, 107, 16);
+                            AddTextureData(layout, "waterfall_pond_wall", "waterfall_pond_floor", "waterfall_pond_secondary", 16);
                         else if (ii < 4)
-                            AddTextureData(layout, 379, 380, 381, 16);
+                            AddTextureData(layout, "unused_waterfall_pond_wall", "unused_waterfall_pond_floor", "unused_waterfall_pond_secondary", 16);
                         else if (ii < 6)
-                            AddTextureData(layout, 246, 247, 248, 16);
+                            AddTextureData(layout, "crystal_cave_1_wall", "crystal_cave_1_floor", "crystal_cave_1_secondary", 16);
                         else if (ii < 8)
-                            AddTextureData(layout, 249, 250, 251, 16);
+                            AddTextureData(layout, "crystal_cave_2_wall", "crystal_cave_2_floor", "crystal_cave_2_secondary", 16);
                         else if (ii < 10)
-                            AddTextureData(layout, 45, 46, 47, 16);
+                            AddTextureData(layout, "lapis_cave_wall", "lapis_cave_floor", "lapis_cave_secondary", 16);
                         else if (ii < 12)
-                            AddTextureData(layout, 48, 49, 50, 16);
+                            AddTextureData(layout, "southern_cavern_2_wall", "southern_cavern_2_floor", "southern_cavern_2_secondary", 16);
                         else
-                            AddTextureData(layout, 51, 52, 53, 16);
+                            AddTextureData(layout, "wish_cave_2_wall", "wish_cave_2_floor", "wish_cave_2_secondary", 16);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -1529,11 +1529,11 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 4)
-                            AddTextureData(layout, 397, 398, 399, 05);
+                            AddTextureData(layout, "limestone_cavern_wall", "limestone_cavern_floor", "limestone_cavern_secondary", 05);
                         else if (ii < 8)
-                            AddTextureData(layout, 367, 368, 369, 05);
+                            AddTextureData(layout, "zero_isle_east_3_wall", "zero_isle_east_3_floor", "zero_isle_east_3_secondary", 05);
                         else
-                            AddTextureData(layout, 370, 371, 372, 05);
+                            AddTextureData(layout, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary", 05);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -1728,9 +1728,9 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 6)
-                            AddTextureData(layout, 204, 205, 206, 16);
+                            AddTextureData(layout, "mt_horn_wall", "mt_horn_floor", "mt_horn_secondary", 16);
                         else
-                            AddTextureData(layout, 222, 223, 224, 16);
+                            AddTextureData(layout, "amp_plains_wall", "amp_plains_floor", "amp_plains_secondary", 16);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -1934,9 +1934,9 @@ namespace DataGenerator.Data
                         
                         //Tilesets
                         if (ii < 5)
-                            AddTextureData(layout, 60, 61, 62, 07);
+                            AddTextureData(layout, "mt_blaze_wall", "mt_blaze_floor", "mt_blaze_secondary", 07);
                         else
-                            AddTextureData(layout, 75, 76, 77, 07);
+                            AddTextureData(layout, "magma_cavern_2_wall", "magma_cavern_2_floor", "magma_cavern_2_secondary", 07);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -2075,11 +2075,11 @@ namespace DataGenerator.Data
                         
                         //Tilesets
                         if (ii < 3)
-                            AddTextureData(layout, 334, 335, 336, 18);
+                            AddTextureData(layout, "miracle_sea_wall", "miracle_sea_floor", "miracle_sea_secondary", 18);
                         else if (ii < 5)
-                            AddTextureData(layout, 108, 109, 110, 18);
+                            AddTextureData(layout, "stormy_sea_1_wall", "stormy_sea_1_floor", "stormy_sea_1_secondary", 18);
                         else
-                            AddTextureData(layout, 150, 151, 152, 18);
+                            AddTextureData(layout, "purity_forest_4_wall", "purity_forest_4_floor", "purity_forest_4_secondary", 18);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -2201,11 +2201,11 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 4)
-                            AddTextureData(layout, 240, 241, 242, 08);
+                            AddTextureData(layout, "quicksand_pit_wall", "quicksand_pit_floor", "quicksand_pit_secondary", 08);
                         else if (ii < 8)
-                            AddTextureData(layout, 243, 244, 245, 08);
+                            AddTextureData(layout, "quicksand_unused_wall", "quicksand_unused_floor", "quicksand_unused_secondary", 08);
                         else
-                            AddTextureData(layout, 237, 238, 239, 11);
+                            AddTextureData(layout, "quicksand_cave_wall", "quicksand_cave_floor", "quicksand_cave_secondary", 11);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -2327,17 +2327,17 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 4)
-                            AddTextureData(layout, 277, 278, 279, 01);
+                            AddTextureData(layout, "dusk_forest_1_wall", "dusk_forest_1_floor", "dusk_forest_1_secondary", 01);
                         else if (ii < 9)
-                            AddTextureData(layout, 280, 281, 282, 01);
+                            AddTextureData(layout, "dusk_forest_2_wall", "dusk_forest_2_floor", "dusk_forest_2_secondary", 01);
                         else if (ii < 13)
-                            AddTextureData(layout, 283, 284, 285, 01);
+                            AddTextureData(layout, "deep_dusk_forest_1_wall", "deep_dusk_forest_1_floor", "deep_dusk_forest_1_secondary", 01);
                         else if (ii < 18)
-                            AddTextureData(layout, 391, 392, 393, 01);
+                            AddTextureData(layout, "murky_forest_wall", "murky_forest_floor", "murky_forest_secondary", 01);
                         else if (ii < 21)
-                            AddTextureData(layout, 087, 088, 089, 01);
+                            AddTextureData(layout, "darknight_relic_wall", "darknight_relic_floor", "darknight_relic_secondary", 01);
                         else
-                            AddTextureData(layout, 180, 181, 182, 01);
+                            AddTextureData(layout, "rescue_team_maze_wall", "rescue_team_maze_floor", "rescue_team_maze_secondary", 01);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -2449,9 +2449,9 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 9)
-                            AddTextureData(layout, 096, 097, 098, 03);
+                            AddTextureData(layout, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary", 03);
                         else
-                            AddTextureData(layout, 319, 320, 321, 03);
+                            AddTextureData(layout, "temporal_unused_wall", "temporal_unused_floor", "temporal_unused_secondary", 03);
                         //should we add dark crater here or?...
 
                         //traps
@@ -2560,11 +2560,11 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 2)
-                            AddTextureData(layout, 231, 232, 233, 11);
+                            AddTextureData(layout, "northern_desert_1_wall", "northern_desert_1_floor", "northern_desert_1_secondary", 11);
                         else if (ii < 3)
-                            AddTextureData(layout, 234, 235, 236, 11);
+                            AddTextureData(layout, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary", 11);
                         else
-                            AddTextureData(layout, 42, 43, 44, 11);
+                            AddTextureData(layout, "great_canyon_wall", "great_canyon_floor", "great_canyon_secondary", 11);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -2722,11 +2722,11 @@ namespace DataGenerator.Data
                         
                         //Tilesets
                         if (ii < 5)
-                            AddTextureData(layout, 24, 25, 26, 12);
+                            AddTextureData(layout, "water_maze_wall", "water_maze_floor", "water_maze_secondary", 12);
                         else if (ii < 9)
-                            AddTextureData(layout, 27, 28, 29, 12);
+                            AddTextureData(layout, "poison_maze_wall", "poison_maze_floor", "poison_maze_secondary", 12);
                         else
-                            AddTextureData(layout, 322, 323, 324, 12);
+                            AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", 12);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -2833,9 +2833,9 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 5)
-                            AddTextureData(layout, 165, 166, 167, 15);
+                            AddTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary", 15);
                         else
-                            AddTextureData(layout, 144, 145, 146, 15);
+                            AddTextureData(layout, "joyous_tower_wall", "joyous_tower_floor", "joyous_tower_secondary", 15);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -2954,9 +2954,9 @@ namespace DataGenerator.Data
                         
                         //Tilesets
                         if (ii < 5)
-                            AddTextureData(layout, 382, 383, 384, 10);
+                            AddTextureData(layout, "lush_prairie_wall", "lush_prairie_floor", "lush_prairie_secondary", 10);
                         else
-                            AddTextureData(layout, 364, 365, 366, 10);
+                            AddTextureData(layout, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", 10);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -3097,11 +3097,11 @@ namespace DataGenerator.Data
                         
                         //Tilesets
                         if (ii < 5)
-                            AddTextureData(layout, 24, 25, 26, 14);
+                            AddTextureData(layout, "water_maze_wall", "water_maze_floor", "water_maze_secondary", 14);
                         else if (ii < 9)
-                            AddTextureData(layout, 27, 28, 29, 14);
+                            AddTextureData(layout, "poison_maze_wall", "poison_maze_floor", "poison_maze_secondary", 14);
                         else
-                            AddTextureData(layout, 322, 323, 324, 14);
+                            AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", 14);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -3218,11 +3218,11 @@ namespace DataGenerator.Data
                         
                         //Tilesets
                         if (ii < 8)
-                            AddTextureData(layout, 081, 082, 083, 15);
+                            AddTextureData(layout, "howling_forest_2_wall", "howling_forest_2_floor", "howling_forest_2_secondary", 15);
                         else if (ii < 16)
-                            AddTextureData(layout, 343, 344, 345, 15);
+                            AddTextureData(layout, "spacial_rift_1_wall", "spacial_rift_1_floor", "spacial_rift_1_secondary", 15);
                         else
-                            AddTextureData(layout, 346, 347, 348, 15);
+                            AddTextureData(layout, "spacial_rift_2_wall", "spacial_rift_2_floor", "spacial_rift_2_secondary", 15);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -3326,7 +3326,7 @@ namespace DataGenerator.Data
                         AddFloorData(layout, "Fortune Ravine.ogg", 1000, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         //Tilesets
-                        AddTextureData(layout, 358, 359, 360, 13);
+                        AddTextureData(layout, "golden_chamber_wall", "golden_chamber_floor", "golden_chamber_secondary", 13);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -3434,7 +3434,7 @@ namespace DataGenerator.Data
 
 
                         //Tilesets
-                        AddTextureData(layout, 084, 085, 086, 08);
+                        AddTextureData(layout, "sky_tower_wall", "sky_tower_floor", "sky_tower_secondary", 08);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
@@ -3583,27 +3583,27 @@ namespace DataGenerator.Data
                         
                         //Tilesets
                         if (ii % 10 == 9)
-                            AddTextureData(layout, 355, 356, 357, 09);
+                            AddTextureData(layout, "world_abyss_2_wall", "world_abyss_2_floor", "world_abyss_2_secondary", 09);
                         else if (ii < 10)
-                            AddTextureData(layout, 147, 148, 149, 13);
+                            AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", 13);
                         else if (ii < 20)
-                            AddTextureData(layout, 147, 148, 149, 13);
+                            AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", 13);
                         else if (ii < 30)
-                            AddTextureData(layout, 147, 148, 149, 13);
+                            AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", 13);
                         else if (ii < 40)
-                            AddTextureData(layout, 147, 148, 149, 13);
+                            AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", 13);
                         else if (ii < 50)
-                            AddTextureData(layout, 147, 148, 149, 13);
+                            AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", 13);
                         else if (ii < 60)
-                            AddTextureData(layout, 147, 148, 149, 13);
+                            AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", 13);
                         else if (ii < 70)
-                            AddTextureData(layout, 147, 148, 149, 13);
+                            AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", 13);
                         else if (ii < 80)
-                            AddTextureData(layout, 147, 148, 149, 13);
+                            AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", 13);
                         else if (ii < 90)
-                            AddTextureData(layout, 147, 148, 149, 13);
+                            AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", 13);
                         else
-                            AddTextureData(layout, 135, 136, 137, 13);
+                            AddTextureData(layout, "mt_faraway_4_wall", "mt_faraway_4_floor", "mt_faraway_4_secondary", 13);
 
 
                         //traps
@@ -3815,7 +3815,7 @@ namespace DataGenerator.Data
                             AddFloorData(layout, "B06. Bramble Woods.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         //Tilesets
-                        AddTextureData(layout, 322, 323, 324, 1);
+                        AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", 1);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(5, 7), 27);//wonder tile
@@ -4106,7 +4106,7 @@ namespace DataGenerator.Data
                         AddFloorData(layout, "B19. Bramble Thicket.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                         //Tilesets
-                        AddTextureData(layout, 322, 323, 324, 1);
+                        AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", 1);
 
                         //money - 315P to 1,260P
                         AddMoneyData(layout, new RandRange(1, 4));
@@ -4841,9 +4841,9 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 10)
-                            AddTextureData(layout, 081, 082, 083, 14);
+                            AddTextureData(layout, "howling_forest_2_wall", "howling_forest_2_floor", "howling_forest_2_secondary", 14);
                         else
-                            AddTextureData(layout, 361, 362, 363, 14);
+                            AddTextureData(layout, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary", 14);
 
                         if (ii < 3)
                         {
