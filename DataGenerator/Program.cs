@@ -241,6 +241,7 @@ namespace DataGenerator
                     //TODO: remove when data is no longer hardcoded
                     LuaEngine.InitInstance();
                     DataManager.InitInstance();
+                    DataManager.Instance.LoadConversions();
 
                     DataManager.InitDataDirs(PathMod.ModPath(""));
                     RogueEssence.Dev.DevHelper.ConvertAssetNames();
