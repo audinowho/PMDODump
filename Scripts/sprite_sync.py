@@ -220,8 +220,6 @@ def transferWithMap(base_path, out_path, over_transfer):
         for diff in portrait_diffs:
             txt.write(",".join(diff) + "\n")
 
-    shutil.copy(os.path.join(base_path, "credit_names.txt"), os.path.join(out_path, "spritebot_credits.txt"))
-
 def main():
     """
     Synchronizes sprites from spritecollab (and a custom folder).
@@ -244,6 +242,8 @@ def main():
 
     print("Transferring Main")
     transferWithMap(base_path, out_path, main_transfer)
+
+    shutil.copy(os.path.join(base_path, "credit_names.txt"), os.path.join(out_path, "spritebot_credits.txt"))
 
     custom_path = os.path.join("..","..","Spritebot","Custom")
     # same list, but for custom sprites not in spritebot
