@@ -389,3 +389,4 @@ def ConvertAllTilesets(inDir, outDir):
     for file in os.listdir(inDir):
         totalIndex = ConvertTileset(os.path.join(inDir, file), outDir, file, totalIndex)
 
+

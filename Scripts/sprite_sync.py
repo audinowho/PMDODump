@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import shutil
 from PIL import Image
@@ -33,6 +34,7 @@ def initTransferNode():
     sub_dict["name"] = ""
     sub_dict["portrait_dest"] = None
     sub_dict["sprite_dest"] = None
+    sub_dict["idle"] = False
     sub_dict["subgroups"] = {}
     return TransferNode(sub_dict)
 
@@ -112,7 +114,7 @@ def generateMap(transfer_dict, dict, name_stack, added_nodes):
             transfer_dict.subgroups[subgroup] = initTransferNode()
         generateMap(transfer_dict.subgroups[subgroup], sub_node, name_stack + [sub_node.name], added_nodes)
 
-def importFiles(orig_path, out_path, file_diff):
+def importFiles(orig_path, out_path, file_diff, add_idle):
     for in_file in os.listdir(orig_path):
         full_path = os.path.join(orig_path, in_file)
         dest_path = os.path.join(out_path, in_file)
@@ -125,7 +127,17 @@ def importFiles(orig_path, out_path, file_diff):
                         file_diff.append(in_file)
                 else:
                     file_diff.append(in_file)
-            if not full_path.endswith(".txt"):
+            if full_path.endswith(".xml"):
+                if add_idle:
+                    with open(full_path, 'r') as txt:
+                        file_str = txt.read()
+                    file_str = re.sub("(\s+)<ShadowSize>", "\\1<CutsceneIdle/>\\1<ShadowSize>", file_str)
+
+                    with open(dest_path, 'w') as txt:
+                        txt.write(file_str)
+                else:
+                    shutil.copy(full_path, dest_path)
+            elif not full_path.endswith(".txt"):
                 shutil.copy(full_path, dest_path)
 
 def importFolders(prefix, base_path, transfer_dict, out_path, dict_path, diff):
@@ -149,13 +161,14 @@ def importFolders(prefix, base_path, transfer_dict, out_path, dict_path, diff):
         dest_path = os.path.join(out_path, prefix, *redirected_dict)
         os.makedirs(dest_path, exist_ok=True)
 
-        importFiles(src_path, dest_path, file_diff)
+        importFiles(src_path, dest_path, file_diff, transfer_dict.idle)
 
-    row_diff = dict_path.copy()
-    while len(row_diff) < 4:
-        row_diff.append('0000')
-    row_diff.append(",".join(file_diff))
-    diff.append(row_diff)
+    if len(file_diff) > 0:
+        row_diff = dict_path.copy()
+        while len(row_diff) < 4:
+            row_diff.append('0000')
+        row_diff.append(",".join(file_diff))
+        diff.append(row_diff)
 
     for subgroup in transfer_dict.subgroups:
         sub_node = transfer_dict.subgroups[subgroup]
@@ -194,7 +207,10 @@ def updateTransfers(base_path, out_path):
 def transferWithMap(base_path, out_path, over_transfer):
     sprite_diffs = []
     portrait_diffs = []
+    print("Importing Sprites")
     importFolders("sprite", base_path, over_transfer, out_path, [], sprite_diffs)
+
+    print("Importing Portraits")
     importFolders("portrait", base_path, over_transfer, out_path, [], portrait_diffs)
 
     with open(os.path.join(out_path, "sprite_diffs.csv"), 'a', encoding='utf-8') as txt:
@@ -203,8 +219,6 @@ def transferWithMap(base_path, out_path, over_transfer):
     with open(os.path.join(out_path, "portrait_diffs.csv"), 'a', encoding='utf-8') as txt:
         for diff in portrait_diffs:
             txt.write(",".join(diff) + "\n")
-
-    shutil.copy(os.path.join(base_path, "credit_names.txt"), os.path.join(out_path, "spritebot_credits.txt"))
 
 def main():
     """
@@ -219,15 +233,23 @@ def main():
     if os.path.exists(os.path.join(out_path, "portrait_diffs.csv")):
         os.remove(os.path.join(out_path, "portrait_diffs.csv"))
 
+    print("Updating Transfer Map")
     updateTransfers(base_path, out_path)
 
+    print("Reloading Transfer Map")
     # list denoting which sprites/portrait to transfer and to where
     main_transfer = loadTransferMap(os.path.join(out_path, "transfer.json"))
+
+    print("Transferring Main")
     transferWithMap(base_path, out_path, main_transfer)
+
+    shutil.copy(os.path.join(base_path, "credit_names.txt"), os.path.join(out_path, "spritebot_credits.txt"))
 
     custom_path = os.path.join("..","..","Spritebot","Custom")
     # same list, but for custom sprites not in spritebot
     custom_transfer = loadTransferMap(os.path.join(out_path, "custom_transfer.json"))
+
+    print("Transferring Custom")
     transferWithMap(custom_path, out_path, custom_transfer)
 
     print("Complete.")
