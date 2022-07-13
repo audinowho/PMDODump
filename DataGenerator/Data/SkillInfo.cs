@@ -347,7 +347,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new OHKODamageEvent());
                 //Other sounds: _UNK_DUN_Rustle_2 _UNK_DUN_Spray_Soft
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -381,7 +381,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -431,7 +431,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -839,7 +839,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(0, new ExplorerImmuneEvent());
                 skill.Data.OnHits.Add(-1, new OHKODamageEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 20;//Jab
@@ -1364,7 +1364,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(2, true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -1453,7 +1453,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, 4));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -1489,7 +1489,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, 4));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -1694,9 +1694,9 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", terrainEmitter, 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", terrainEmitter, "wall"));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
                 skill.Data.AfterActions.Add(0, new StatusStateBattleEvent(55, false, true, statusStates));
@@ -1973,7 +1973,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -2011,7 +2011,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new WeatherNeededEvent(4, new MultiplyDamageEvent(2, 3)));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", terrainEmitter, 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", terrainEmitter, "wall"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new WaveMotionAction();
                 ((WaveMotionAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -2205,7 +2205,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new StatusBattleEvent(44, true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -2422,7 +2422,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeTryActions.Add(0, new ChargeOrReleaseEvent(37, altAction));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
@@ -3094,9 +3094,9 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -3123,9 +3123,9 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -3257,7 +3257,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(2, true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -3946,9 +3946,9 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 2;
                 skill.Explosion.HitTiles = true;
@@ -3976,7 +3976,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(15));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
                 skill.Strikes = 5;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(14);//MultiScratch
@@ -4388,7 +4388,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(2, true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 2;
@@ -4536,7 +4536,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -5273,7 +5273,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(0, new AddContextStateEvent(new AttackEndure()));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -5372,7 +5372,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(0, new RepeatHitEvent(27, 28, 10, 1, false));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -5634,7 +5634,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(2, true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -5690,7 +5690,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(7, true, true)));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -5898,7 +5898,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(11, true, true, -1)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(40);//Swing
@@ -5923,10 +5923,10 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
                 skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent(10, false, true, 1)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(10);//Scratch
@@ -6343,7 +6343,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(11, true, true, -1)));
-                skill.Data.OnHitTiles.Add(0, new ShatterTerrainEvent(2));
+                skill.Data.OnHitTiles.Add(0, new ShatterTerrainEvent("wall"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(11);//Punch
@@ -6369,7 +6369,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new StatusBattleEvent(45, true, true)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, 4));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -7166,7 +7166,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
                 skill.Data.AfterActions.Add(0, new StatusStackBattleEvent(10, false, true, -1));
                 skill.Data.AfterActions.Add(0, new StatusStackBattleEvent(11, false, true, -1));
                 skill.Strikes = 1;
@@ -7279,7 +7279,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent(18, true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(09);//Chop
@@ -7929,9 +7929,9 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(11, true, true, -1)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(10);//Scratch
@@ -7953,7 +7953,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(130));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Data.AfterActions.Add(0, new StatusBattleEvent(55, false, true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
@@ -7981,7 +7981,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new StatusBattleEvent(55, false, true));
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2, 4));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall", "lava"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -8175,7 +8175,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -8212,7 +8212,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Data.AfterActions.Add(0, new StatusStackBattleEvent(12, false, true, -2));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
@@ -8407,7 +8407,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new HPBasePowerEvent(100, false, false));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, 4));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Water_Spout_Up", 1));
@@ -8592,7 +8592,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(14, true, true, -1)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, 4));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new WaveMotionAction();
                 ((WaveMotionAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -8649,7 +8649,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 13;//Slice
@@ -8748,7 +8748,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(90));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(10);//Scratch
@@ -9022,7 +9022,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -9379,7 +9379,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(0, new BrineEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, 4));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new WaveMotionAction();
                 skill.HitboxAction.PreActions.Add(new BattleFX(new SingleEmitter(new AnimData("Charge_Up", 3)), "DUN_Move_Start", 0));
@@ -10191,7 +10191,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(2, true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
@@ -10346,7 +10346,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 13;//Slice
@@ -10402,7 +10402,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -10434,7 +10434,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(8, true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -10469,7 +10469,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(75));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -10659,7 +10659,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(13, true, true, -1)));
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -10791,7 +10791,7 @@ namespace DataGenerator.Data
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
                 skill.Data.AfterActions.Add(0, new StatusStateBattleEvent(55, false, true, statusStates));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -10924,7 +10924,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(10);//Scratch
@@ -11084,7 +11084,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -11271,9 +11271,9 @@ namespace DataGenerator.Data
                 skill.Data.AfterActions.Add(0, new StatusStackBattleEvent(12, false, true, -2));
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 SingleEmitter preEmitter = new SingleEmitter(new AnimData("Draco_Meteor", 2));
                 preEmitter.LocHeight = 96;
@@ -11341,7 +11341,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(2, true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(35);//Emit
@@ -11441,7 +11441,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new StatusBattleEvent(55, false, true));
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -11475,7 +11475,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(5, true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -11555,7 +11555,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -11917,7 +11917,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new HPRecoilEvent(3, false));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 05;//Attack
@@ -12471,7 +12471,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -12634,7 +12634,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new ChangeToElementEvent(18));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, 4));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -12658,7 +12658,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent(9, false, true, 1)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
@@ -13170,7 +13170,7 @@ namespace DataGenerator.Data
                 eligibles.Add(new FlagType(typeof(EdibleState)));
                 skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new DestroyItemEvent(false, false, 116, eligibles)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -13320,7 +13320,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(2, true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -13372,7 +13372,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeTryActions.Add(0, new WatchOrStrikeEvent(109, altAnim, "DUN_Move_Start"));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -13607,7 +13607,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 20;//Jab
@@ -13632,7 +13632,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(45));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 2;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(09);//Chop
@@ -13697,7 +13697,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(4, new IgnoreStatsEvent(true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -13722,7 +13722,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(11, true, true, -1)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -14001,7 +14001,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(4, new FlipCategoryEvent(true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -14933,7 +14933,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 3;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -14958,7 +14958,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(12, true, true, -1)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, 7));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot

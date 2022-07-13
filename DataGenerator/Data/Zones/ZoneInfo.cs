@@ -157,7 +157,7 @@ namespace DataGenerator.Data
                         //Floor settings
                         AddFloorData(layout, "B04. Tropical Path.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
                         //Tilesets
                         AddTextureData(layout, "howling_forest_1_wall", "howling_forest_1_floor", "howling_forest_1_secondary", 13);
@@ -434,9 +434,9 @@ namespace DataGenerator.Data
 
 
                             if (ii > 4)
-                                AddWaterSteps(layout, 3, new RandRange(30));//water
+                                AddWaterSteps(layout, "water", new RandRange(30));//water
                             else
-                                AddWaterSteps(layout, 3, new RandRange(40));//water
+                                AddWaterSteps(layout, "water", new RandRange(40));//water
 
 
                             //Tilesets
@@ -672,7 +672,7 @@ namespace DataGenerator.Data
                             //Floor settings
                             AddFloorData(layout, "B02. Demonstration 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
-                            AddWaterSteps(layout, 0, new RandRange(20));//empty
+                            AddWaterSteps(layout, "floor", new RandRange(20));//empty
 
 
                             //Tilesets
@@ -902,11 +902,11 @@ namespace DataGenerator.Data
                         AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
 
                         if (ii < 2)
-                            AddWaterSteps(layout, 5, new RandRange(20));//abyss
+                            AddWaterSteps(layout, "abyss", new RandRange(20));//abyss
                         else if (ii < 5)
-                            AddWaterSteps(layout, 5, new RandRange(60));//abyss
+                            AddWaterSteps(layout, "abyss", new RandRange(60));//abyss
                         else
-                            AddWaterSteps(layout, 5, new RandRange(40));//abyss
+                            AddWaterSteps(layout, "abyss", new RandRange(40));//abyss
 
 
                         //Tilesets
@@ -1082,7 +1082,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         if (ii == 3)
@@ -1205,7 +1205,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         floorSegment.Floors.Add(layout);
@@ -1319,7 +1319,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         floorSegment.Floors.Add(layout);
@@ -1453,7 +1453,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         if (ii == 1)
@@ -1584,7 +1584,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -1724,7 +1724,7 @@ namespace DataGenerator.Data
                             AddFloorData(layout, "B18. Faulted Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         if (ii < 6)
-                            AddWaterSteps(layout, 3, new RandRange(30));//water
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
 
                         //Tilesets
                         if (ii < 6)
@@ -1851,7 +1851,7 @@ namespace DataGenerator.Data
                                     spawner.AmountSpawner = new RandRange(1, 4);
                                 }
                                 PlaceDisconnectedMobsStep<MapGenContext> secretMobPlacement = new PlaceDisconnectedMobsStep<MapGenContext>(spawner);
-                                secretMobPlacement.AcceptedTiles.Add(new Tile(0));
+                                secretMobPlacement.AcceptedTiles.Add(new Tile("floor"));
                                 layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
                             }
                         }
@@ -1990,7 +1990,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 4, new RandRange(30));//lava
+                        AddWaterSteps(layout, "lava", new RandRange(30));//lava
 
 
                         if (ii == 7)
@@ -2143,7 +2143,7 @@ namespace DataGenerator.Data
                             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                         }
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         floorSegment.Floors.Add(layout);
@@ -2256,7 +2256,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
 
@@ -2388,7 +2388,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         floorSegment.Floors.Add(layout);
@@ -2501,7 +2501,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         floorSegment.Floors.Add(layout);
@@ -2631,7 +2631,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         //chest
@@ -2776,7 +2776,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         floorSegment.Floors.Add(layout);
@@ -2886,7 +2886,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
 
@@ -3006,7 +3006,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
 
@@ -3152,7 +3152,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         floorSegment.Floors.Add(layout);
@@ -3272,7 +3272,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         floorSegment.Floors.Add(layout);
@@ -3377,7 +3377,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         floorSegment.Floors.Add(layout);
@@ -3484,7 +3484,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         floorSegment.Floors.Add(layout);
@@ -3653,7 +3653,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        AddWaterSteps(layout, 3, new RandRange(30));//water
+                        AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
                         floorSegment.Floors.Add(layout);
@@ -3892,7 +3892,7 @@ namespace DataGenerator.Data
                         AddStairStep(layout, false);
 
                         if (ii > 4)
-                            AddWaterSteps(layout, 3, new RandRange(30));//water
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
 
 
 
@@ -4135,7 +4135,7 @@ namespace DataGenerator.Data
 
                             SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
                             //blocked
-                            genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile(2), new RandRange(3, 6), new RandRange(3, 6), new RandRange(1, 3), new RandRange(1, 3)), 5);
+                            genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(3, 6), new RandRange(3, 6), new RandRange(1, 3), new RandRange(1, 3)), 5);
                             //round
                             genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(3, 6), new RandRange(3, 6)), 10);
                             path.GenericRooms = genericRooms;
@@ -4850,9 +4850,9 @@ namespace DataGenerator.Data
 
                         }
                         else if (ii < 10)
-                            AddWaterSteps(layout, 6, new RandRange(20));//poison
+                            AddWaterSteps(layout, "poison_water", new RandRange(20));//poison
                         else
-                            AddWaterSteps(layout, 5, new RandRange(20), false);//abyss
+                            AddWaterSteps(layout, "abyss", new RandRange(20), false);//abyss
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), 27, false);//wonder tile
@@ -4887,7 +4887,7 @@ namespace DataGenerator.Data
 
                             SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
                             //blocked
-                            genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile(2), new RandRange(5, 9), new RandRange(5, 9), new RandRange(1, 3), new RandRange(1, 3)), 10);
+                            genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(5, 9), new RandRange(5, 9), new RandRange(1, 3), new RandRange(1, 3)), 10);
                             //cave
                             genericRooms.Add(new RoomGenCave<MapGenContext>(new RandRange(4, 9), new RandRange(4, 9)), 50);
                             path.GenericRooms = genericRooms;
@@ -4912,7 +4912,7 @@ namespace DataGenerator.Data
 
                             SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
                             //blocked
-                            genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile(2), new RandRange(5, 9), new RandRange(5, 9), new RandRange(2, 5), new RandRange(2, 5)), 10);
+                            genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(5, 9), new RandRange(5, 9), new RandRange(2, 5), new RandRange(2, 5)), 10);
                             //cave
                             genericRooms.Add(new RoomGenCave<MapGenContext>(new RandRange(4, 9), new RandRange(4, 9)), 50);
                             path.GenericRooms = genericRooms;
@@ -4937,7 +4937,7 @@ namespace DataGenerator.Data
 
                             SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
                             //blocked
-                            genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile(2), new RandRange(5, 9), new RandRange(5, 9), new RandRange(2, 5), new RandRange(2, 5)), 10);
+                            genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(5, 9), new RandRange(5, 9), new RandRange(2, 5), new RandRange(2, 5)), 10);
                             //cave
                             genericRooms.Add(new RoomGenCave<MapGenContext>(new RandRange(4, 9), new RandRange(4, 9)), 50);
                             path.GenericRooms = genericRooms;

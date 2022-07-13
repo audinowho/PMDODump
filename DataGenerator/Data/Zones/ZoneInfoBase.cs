@@ -82,13 +82,13 @@ namespace DataGenerator.Data
                         for (int jj = 0; jj < height; jj++)
                         {
                             if (jj < height - 25)
-                                drawStep.Tiles[ii][jj] = new Tile(0);
+                                drawStep.Tiles[ii][jj] = new Tile("floor");
                             else
                             {
                                 if (level[jj - (height - 25)][ii] == '#')
-                                    drawStep.Tiles[ii][jj] = new Tile(2);
+                                    drawStep.Tiles[ii][jj] = new Tile("wall");
                                 else
-                                    drawStep.Tiles[ii][jj] = new Tile(0);
+                                    drawStep.Tiles[ii][jj] = new Tile("floor");
                             }
                         }
                     }
@@ -610,7 +610,7 @@ namespace DataGenerator.Data
                     genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
                     path.GenericRooms = genericRooms;
                     //blocked
-                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile(2), new RandRange(6, 10), new RandRange(6, 10), new RandRange(2, 4), new RandRange(2, 4)), 10);
+                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(6, 10), new RandRange(6, 10), new RandRange(2, 4), new RandRange(2, 4)), 10);
 
                     SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
                     genericHalls.Add(new RoomGenAngledHall<MapGenContext>(0), 10);
@@ -1188,7 +1188,7 @@ namespace DataGenerator.Data
                             spawner.AmountSpawner = new RandRange(10, 13);
                         }
                         PlaceTerrainMobsStep<ListMapGenContext> secretMobPlacement = new PlaceTerrainMobsStep<ListMapGenContext>(spawner);
-                        secretMobPlacement.AcceptedTiles.Add(new Tile(5));
+                        secretMobPlacement.AcceptedTiles.Add(new Tile("abyss"));
                         layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
                     }
 
@@ -1279,7 +1279,7 @@ namespace DataGenerator.Data
 
 
                     //Generate water (specified by user as Terrain 2) with a frequency of 99%, using Perlin Noise in an order of 2.
-                    int terrain = 5;
+                    string terrain = "abyss";
                     PerlinWaterStep<ListMapGenContext> waterStep = new PerlinWaterStep<ListMapGenContext>(new RandRange(80), 3, new Tile(terrain), new MapTerrainStencil<ListMapGenContext>(false, true, false), 2, false);
                     layout.GenSteps.Add(PR_WATER, waterStep);
 
@@ -1290,7 +1290,7 @@ namespace DataGenerator.Data
                     //layout.GenSteps.Add(PR_WATER, floorStep);
 
                     //put the walls back in via "water" algorithm
-                    int wallTerrain = 2;
+                    string wallTerrain = "wall";
                     IntrudingBlobWaterStep<ListMapGenContext> wallStep = new IntrudingBlobWaterStep<ListMapGenContext>(new RandRange(10), new Tile(wallTerrain), new DefaultTerrainStencil<ListMapGenContext>(), 0, new RandRange(20));
                     layout.GenSteps.Add(PR_WATER, wallStep);
 
@@ -1319,14 +1319,14 @@ namespace DataGenerator.Data
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
                         textureStep.BlankBG = "wyvern_hill_wall";
-                        textureStep.TextureMap[0] = "wyvern_hill_floor";
-                        textureStep.TextureMap[1] = "wyvern_hill_wall";
-                        textureStep.TextureMap[2] = "wyvern_hill_wall";
-                        textureStep.TextureMap[3] = "wyvern_hill_secondary";
-                        textureStep.TextureMap[6] = "wyvern_hill_secondary";
-                        textureStep.TextureMap[5] = "wyvern_hill_secondary";
-                        textureStep.TextureMap[6] = "wyvern_hill_secondary";
-                        textureStep.TextureMap[7] = "tall_grass";
+                        textureStep.TextureMap["floor"] = "wyvern_hill_floor";
+                        textureStep.TextureMap["unbreakable"] = "wyvern_hill_wall";
+                        textureStep.TextureMap["wall"] = "wyvern_hill_wall";
+                        textureStep.TextureMap["water"] = "wyvern_hill_secondary";
+                        textureStep.TextureMap["poison_water"] = "wyvern_hill_secondary";
+                        textureStep.TextureMap["abyss"] = "wyvern_hill_secondary";
+                        textureStep.TextureMap["poison_water"] = "wyvern_hill_secondary";
+                        textureStep.TextureMap["grass"] = "tall_grass";
                     }
                     textureStep.GroundElement = 13;
                     textureStep.LayeredGround = true;
@@ -1412,8 +1412,8 @@ namespace DataGenerator.Data
                     //square
                     genericRooms.Add(new RoomGenBump<MapGenContext>(new RandRange(4, 8), new RandRange(4, 8), new RandRange(0, 30)), 10);
                     //blocked
-                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile(2), new RandRange(5, 9), new RandRange(5, 9), new RandRange(8, 9), new RandRange(1, 2)), 4);
-                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile(2), new RandRange(5, 9), new RandRange(5, 9), new RandRange(1, 2), new RandRange(8, 9)), 4);
+                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(5, 9), new RandRange(5, 9), new RandRange(8, 9), new RandRange(1, 2)), 4);
+                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(5, 9), new RandRange(5, 9), new RandRange(1, 2), new RandRange(8, 9)), 4);
                     path.GenericRooms = genericRooms;
 
                     SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
@@ -1439,7 +1439,7 @@ namespace DataGenerator.Data
                     {
                         RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
                         loadRoom.MapID = "test_room";
-                        loadRoom.RoomTerrain = new Tile(0);
+                        loadRoom.RoomTerrain = new Tile("floor");
                         loadRoom.PreventChanges = PostProcType.Terrain;
                         SetGridSpecialRoomStep<MapGenContext> specialStep = new SetGridSpecialRoomStep<MapGenContext>();
                         specialStep.Rooms = new PresetPicker<RoomGen<MapGenContext>>(loadRoom);
@@ -1458,7 +1458,7 @@ namespace DataGenerator.Data
 
 
                     //grass
-                    int coverTerrain = 7;
+                    string coverTerrain = "grass";
                     PerlinWaterStep<MapGenContext> coverStep = new PerlinWaterStep<MapGenContext>(new RandRange(20), 3, new Tile(coverTerrain), new MapTerrainStencil<MapGenContext>(true, false, false), 1);
                     layout.GenSteps.Add(PR_WATER, coverStep);
 
@@ -1482,13 +1482,13 @@ namespace DataGenerator.Data
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
                         textureStep.BlankBG = "chasm_cave_1_wall";
-                        textureStep.TextureMap[0] = "chasm_cave_1_floor";
-                        textureStep.TextureMap[1] = "spacial_rift_1_wall";
-                        textureStep.TextureMap[2] = "spacial_rift_1_wall";
-                        textureStep.TextureMap[3] = "chasm_cave_1_wall";
-                        textureStep.TextureMap[6] = "chasm_cave_1_wall";
-                        textureStep.TextureMap[5] = "chasm_cave_1_wall";
-                        textureStep.TextureMap[6] = "chasm_cave_1_wall";
+                        textureStep.TextureMap["floor"] = "chasm_cave_1_floor";
+                        textureStep.TextureMap["unbreakable"] = "spacial_rift_1_wall";
+                        textureStep.TextureMap["wall"] = "spacial_rift_1_wall";
+                        textureStep.TextureMap["water"] = "chasm_cave_1_wall";
+                        textureStep.TextureMap["poison_water"] = "chasm_cave_1_wall";
+                        textureStep.TextureMap["abyss"] = "chasm_cave_1_wall";
+                        textureStep.TextureMap["poison_water"] = "chasm_cave_1_wall";
                     }
                     textureStep.GroundElement = 13;
                     textureStep.LayeredGround = true;
@@ -1553,7 +1553,7 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_TILES_INIT, new DrawFloorToTileStep<MapGenContext>(2));
 
                     //add invisible unbreakable border
-                    Tile invisBarrier = new Tile(1, true);
+                    Tile invisBarrier = new Tile("unbreakable", true);
                     invisBarrier.Data.TileTex = new AutoTile("chasm_cave_1_wall");
                     layout.GenSteps.Add(PR_TILES_BARRIER, new TileBorderStep<MapGenContext>(1, invisBarrier));
 
@@ -1561,7 +1561,7 @@ namespace DataGenerator.Data
 
 
                     //Generate water (specified by user as Terrain 2) with a frequency of 100%, using Perlin Noise in an order of 2.
-                    int terrain = 5;
+                    string terrain = "abyss";
                     PerlinWaterStep<MapGenContext> waterStep = new PerlinWaterStep<MapGenContext>(new RandRange(100), 3, new Tile(terrain), new MapTerrainStencil<MapGenContext>(false, true, false), 2);
                     layout.GenSteps.Add(PR_WATER, waterStep);
                     
@@ -1721,8 +1721,8 @@ namespace DataGenerator.Data
                     //square
                     genericRooms.Add(new RoomGenBump<MapGenContext>(new RandRange(3, 7), new RandRange(3, 7), new RandRange(0, 30)), 10);
                     //blocked
-                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile(2), new RandRange(4, 7), new RandRange(4, 7), new RandRange(8, 9), new RandRange(1, 2)), 4);
-                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile(2), new RandRange(4, 7), new RandRange(4, 7), new RandRange(1, 2), new RandRange(8, 9)), 4);
+                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(4, 7), new RandRange(4, 7), new RandRange(8, 9), new RandRange(1, 2)), 4);
+                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(4, 7), new RandRange(4, 7), new RandRange(1, 2), new RandRange(8, 9)), 4);
                     path.GenericRooms = genericRooms;
 
                     SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
@@ -1771,14 +1771,14 @@ namespace DataGenerator.Data
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
                         textureStep.BlankBG = "wyvern_hill_wall";
-                        textureStep.TextureMap[0] = "wyvern_hill_floor";
-                        textureStep.TextureMap[1] = "wyvern_hill_wall";
-                        textureStep.TextureMap[2] = "wyvern_hill_wall";
-                        textureStep.TextureMap[3] = "wyvern_hill_secondary";
-                        textureStep.TextureMap[6] = "mt_blaze_secondary";
-                        textureStep.TextureMap[5] = "chasm_cave_1_wall";
-                        textureStep.TextureMap[6] = "poison_maze_secondary";
-                        textureStep.TextureMap[7] = "tall_grass";
+                        textureStep.TextureMap["floor"] = "wyvern_hill_floor";
+                        textureStep.TextureMap["unbreakable"] = "wyvern_hill_wall";
+                        textureStep.TextureMap["wall"] = "wyvern_hill_wall";
+                        textureStep.TextureMap["water"] = "wyvern_hill_secondary";
+                        textureStep.TextureMap["poison_water"] = "mt_blaze_secondary";
+                        textureStep.TextureMap["abyss"] = "chasm_cave_1_wall";
+                        textureStep.TextureMap["poison_water"] = "poison_maze_secondary";
+                        textureStep.TextureMap["grass"] = "tall_grass";
                     }
                     textureStep.GroundElement = 13;
                     textureStep.LayeredGround = true;
@@ -1873,14 +1873,14 @@ namespace DataGenerator.Data
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
                         textureStep.BlankBG = "wyvern_hill_wall";
-                        textureStep.TextureMap[0] = "wyvern_hill_floor";
-                        textureStep.TextureMap[1] = "wyvern_hill_wall";
-                        textureStep.TextureMap[2] = "wyvern_hill_wall";
-                        textureStep.TextureMap[3] = "wyvern_hill_secondary";
-                        textureStep.TextureMap[6] = "mt_blaze_secondary";
-                        textureStep.TextureMap[5] = "chasm_cave_1_wall";
-                        textureStep.TextureMap[6] = "poison_maze_secondary";
-                        textureStep.TextureMap[7] = "tall_grass";
+                        textureStep.TextureMap["floor"] = "wyvern_hill_floor";
+                        textureStep.TextureMap["unbreakable"] = "wyvern_hill_wall";
+                        textureStep.TextureMap["wall"] = "wyvern_hill_wall";
+                        textureStep.TextureMap["water"] = "wyvern_hill_secondary";
+                        textureStep.TextureMap["poison_water"] = "mt_blaze_secondary";
+                        textureStep.TextureMap["abyss"] = "chasm_cave_1_wall";
+                        textureStep.TextureMap["poison_water"] = "poison_maze_secondary";
+                        textureStep.TextureMap["grass"] = "tall_grass";
                     }
                     textureStep.GroundElement = 13;
                     textureStep.LayeredGround = true;
@@ -2010,11 +2010,11 @@ namespace DataGenerator.Data
                     for (int jj = 0; jj < height; jj++)
                     {
                         if (level[jj][ii] == '#')
-                            drawStep.Tiles[ii][jj] = new Tile(2);
+                            drawStep.Tiles[ii][jj] = new Tile("wall");
                         else if (level[jj][ii] == '~')
-                            drawStep.Tiles[ii][jj] = new Tile(3);
+                            drawStep.Tiles[ii][jj] = new Tile("water");
                         else
-                            drawStep.Tiles[ii][jj] = new Tile(0);
+                            drawStep.Tiles[ii][jj] = new Tile("floor");
                     }
                 }
 
@@ -2093,11 +2093,11 @@ namespace DataGenerator.Data
                         for (int jj = 0; jj < height; jj++)
                         {
                             if (level[jj][ii] == '#')
-                                drawStep.Tiles[ii][jj] = new Tile(2);
+                                drawStep.Tiles[ii][jj] = new Tile("wall");
                             else if (level[jj][ii] == '~')
-                                drawStep.Tiles[ii][jj] = new Tile(3);
+                                drawStep.Tiles[ii][jj] = new Tile("water");
                             else
-                                drawStep.Tiles[ii][jj] = new Tile(0);
+                                drawStep.Tiles[ii][jj] = new Tile("floor");
                         }
                     }
 
@@ -2159,7 +2159,7 @@ namespace DataGenerator.Data
                     {
                         drawStep.Tiles[ii] = new Tile[height];
                         for (int jj = 0; jj < height; jj++)
-                            drawStep.Tiles[ii][jj] = new Tile(0);
+                            drawStep.Tiles[ii][jj] = new Tile("floor");
                     }
 
                     //monster house
@@ -2178,12 +2178,12 @@ namespace DataGenerator.Data
                         effect.TileStates.Set(mobSpawn);
                         ((Tile)drawStep.Tiles[4][4]).Effect = effect;
 
-                        drawStep.Tiles[1][7] = new Tile(2);
-                        drawStep.Tiles[1][8] = new Tile(2);
-                        drawStep.Tiles[1][9] = new Tile(2);
-                        drawStep.Tiles[2][7] = new Tile(2);
-                        drawStep.Tiles[2][8] = new Tile(2);
-                        drawStep.Tiles[2][9] = new Tile(2);
+                        drawStep.Tiles[1][7] = new Tile("wall");
+                        drawStep.Tiles[1][8] = new Tile("wall");
+                        drawStep.Tiles[1][9] = new Tile("wall");
+                        drawStep.Tiles[2][7] = new Tile("wall");
+                        drawStep.Tiles[2][8] = new Tile("wall");
+                        drawStep.Tiles[2][9] = new Tile("wall");
                     }
                     {
                         EffectTile effect = new EffectTile(37, true, new Loc(5, 5));
@@ -2262,7 +2262,7 @@ namespace DataGenerator.Data
                                 else if (xx == bossArea.X || xx == bossArea.End.X - 1 ||
                                     yy == bossArea.Y || yy == bossArea.End.Y - 1)
                                 {
-                                    drawStep.Tiles[xx][yy] = new Tile(1);
+                                    drawStep.Tiles[xx][yy] = new Tile("unbreakable");
                                 }
                             }
                         }
@@ -2691,11 +2691,11 @@ namespace DataGenerator.Data
                     //evo
                     genericRooms.Add(new RoomGenEvo<MapGenContext>(), 10);
                     //blocked
-                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile(2), new RandRange(6, 9), new RandRange(6, 9), new RandRange(2, 3), new RandRange(2, 3)), 10);
+                    genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(6, 9), new RandRange(6, 9), new RandRange(2, 3), new RandRange(2, 3)), 10);
                     //water ring
                     if (ii < 5)
                     {
-                        RoomGenWaterRing<MapGenContext> waterRing = new RoomGenWaterRing<MapGenContext>(new Tile(3), new RandRange(1, 4), new RandRange(1, 4), 3);
+                        RoomGenWaterRing<MapGenContext> waterRing = new RoomGenWaterRing<MapGenContext>(new Tile("water"), new RandRange(1, 4), new RandRange(1, 4), 3);
                         waterRing.Treasures.Add(new MapItem(2), 10);
                         waterRing.Treasures.Add(new MapItem(3), 10);
                         waterRing.Treasures.Add(new MapItem(6), 10);
@@ -2737,7 +2737,7 @@ namespace DataGenerator.Data
 
                     AddStairStep(layout, false);
 
-                    AddWaterSteps(layout, 5, new RandRange(ii * 25), false);//abyss
+                    AddWaterSteps(layout, "abyss", new RandRange(ii * 25), false);
 
                     //Tilesets
                     AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", 09);
@@ -3325,9 +3325,9 @@ namespace DataGenerator.Data
                     for (int jj = 0; jj < height; jj++)
                     {
                         if (level[jj][ii] == '#')
-                            drawStep.Tiles[ii][jj] = new Tile(2);
+                            drawStep.Tiles[ii][jj] = new Tile("wall");
                         else if (level[jj][ii] == '~')
-                            drawStep.Tiles[ii][jj] = new Tile(3);
+                            drawStep.Tiles[ii][jj] = new Tile("water");
                         else
                         {
                             EffectTile effect = new EffectTile();
@@ -3487,7 +3487,7 @@ namespace DataGenerator.Data
                                 effect = new EffectTile(43, true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_EXIT")));
                             }
-                            Tile tile = new Tile(0);
+                            Tile tile = new Tile("floor");
                             tile.Effect = effect;
                             drawStep.Tiles[ii][jj] = tile;
                         }

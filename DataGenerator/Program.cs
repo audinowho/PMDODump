@@ -268,6 +268,7 @@ namespace DataGenerator
                     //TODO: remove when data is no longer hardcoded
                     LuaEngine.InitInstance();
                     DataManager.InitInstance();
+                    DataManager.Instance.LoadConversions();
                     DataManager.InitDataDirs(PathMod.ModPath(""));
                     RogueEssence.Dev.DevHelper.RunIndexing(convertIndices);
 
@@ -293,6 +294,7 @@ namespace DataGenerator
 
                     {
                         DataManager.InitInstance();
+                        DataManager.Instance.LoadConversions();
                         DataInfo.AddEditorOps();
                         DataInfo.AddSystemFX();
                         DataInfo.AddUniversalEvent();
@@ -341,6 +343,7 @@ namespace DataGenerator
 
                     {
                         DataManager.InitInstance();
+                        DataManager.Instance.LoadConversions();
                         DataManager.Instance.InitData();
 
                         if ((dump & DataManager.DataType.Item) != DataManager.DataType.None)
