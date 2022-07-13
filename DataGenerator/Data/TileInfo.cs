@@ -523,8 +523,8 @@ namespace DataGenerator.Data
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 7));
+                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 19)
@@ -557,8 +557,8 @@ namespace DataGenerator.Data
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 7));
+                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 20)
@@ -1153,24 +1153,27 @@ namespace DataGenerator.Data
             DataInfo.DeleteIndexedData(DataManager.DataType.Terrain.ToString());
             for (int ii = 0; ii < MAX_TERRAIN; ii++)
             {
-                TerrainData entry = GetTerrainData(ii);
+                (string, TerrainData) entry = GetTerrainData(ii);
                 //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.Terrain.ToString(), entry);
+                DataManager.SaveData(entry.Item1, DataManager.DataType.Terrain.ToString(), entry.Item2);
             }
         }
 
         //TODO: we need one class specifically for ground, and one class specifically for wall
         //Also make the ground and wall instance classes hold the textures, and make those modifiable on runtime (for generation)
-        public static TerrainData GetTerrainData(int ii)
+        public static (string, TerrainData) GetTerrainData(int ii)
         {
+            string asset = "";
             TerrainData tile = new TerrainData();
             if (ii == 0)
             {
                 tile.Name = new LocalText("Variable-Texture Normal");
+                asset = "floor";
             }
             else if (ii == 1)
             {
                 tile.Name = new LocalText("Variable-Texture Impassable");
+                asset = "unbreakable";
                 tile.BlockType = TerrainData.Mobility.Impassable;
                 tile.MinimapColor = Color.White;
                 tile.BlockDiagonal = true;
@@ -1179,6 +1182,7 @@ namespace DataGenerator.Data
             else if (ii == 2)
             {
                 tile.Name = new LocalText("Variable-Texture Blocked");
+                asset = "wall";
                 tile.BlockType = TerrainData.Mobility.Block;
                 tile.MinimapColor = Color.White;
                 tile.BlockDiagonal = true;
@@ -1188,6 +1192,7 @@ namespace DataGenerator.Data
             else if (ii == 3)
             {
                 tile.Name = new LocalText("Variable-Texture Water");
+                asset = "water";
                 tile.BlockType = TerrainData.Mobility.Water;
                 tile.MinimapColor = Color.Blue;
                 tile.ShadowType = 3;
@@ -1196,6 +1201,7 @@ namespace DataGenerator.Data
             else if (ii == 4)
             {
                 tile.Name = new LocalText("Variable-Texture Lava");
+                asset = "lava";
                 tile.BlockType = TerrainData.Mobility.Lava;
                 tile.MinimapColor = Color.DarkOrange;
                 tile.ShadowType = 4;
@@ -1206,6 +1212,7 @@ namespace DataGenerator.Data
             else if (ii == 5)
             {
                 tile.Name = new LocalText("Variable-Texture Abyss");
+                asset = "abyss";
                 tile.BlockType = TerrainData.Mobility.Abyss;
                 tile.MinimapColor = Color.Gray;
                 tile.ShadowType = 4;
@@ -1213,6 +1220,7 @@ namespace DataGenerator.Data
             else if (ii == 6)
             {
                 tile.Name = new LocalText("Variable-Texture Poison");
+                asset = "water_poison";
                 tile.BlockType = TerrainData.Mobility.Water;
                 tile.MinimapColor = Color.Blue;
                 tile.ShadowType = 3;
@@ -1229,11 +1237,12 @@ namespace DataGenerator.Data
             else if (ii == 7)
             {
                 tile.Name = new LocalText("Variable-Texture Foliage");
+                asset = "grass";
                 tile.MinimapColor = Color.Teal;
                 tile.BlockLight = true;
             }
 
-            return tile;
+            return (asset, tile);
         }
 
 

@@ -35,7 +35,7 @@ namespace DataGenerator.Data
             }
         }
 
-        private static void SetObstacle(Map map, int xx, int yy, int val)
+        private static void SetObstacle(Map map, int xx, int yy, string val)
         {
             map.Tiles[xx][yy] = new Tile(val, new Loc(xx, yy));
         }
@@ -64,43 +64,43 @@ namespace DataGenerator.Data
                     for (int yy = 0; yy < height; yy++)
                     {
                         if (yy <= 2)
-                            SetObstacle(map, xx, yy, 1);
+                            SetObstacle(map, xx, yy, DataManager.Instance.GenUnbreakable);
                         else if (yy == 3)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 10 || xx >= 11 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 10 || xx >= 11 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 4)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 9 || xx >= 12 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 9 || xx >= 12 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 5)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 6)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 5 || xx >= 16 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 5 || xx >= 16 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 7)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 8)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 9)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 5 || xx >= 16 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 5 || xx >= 16 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 10)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 11)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 12)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 5 || xx >= 16 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 5 || xx >= 16 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 13)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 5 || xx >= 16 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 5 || xx >= 16 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 14)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 15)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 16)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 5 || xx >= 16 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 5 || xx >= 16 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 17)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 15 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 18)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 9 || xx >= 12 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 9 || xx >= 12 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy == 19)
-                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 10 || xx >= 11 && xx < 21) ? 1 : 0);
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 10 || xx >= 11 && xx < 21) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
                         else if (yy >= 20)
-                            SetObstacle(map, xx, yy, 1);
+                            SetObstacle(map, xx, yy, DataManager.Instance.GenUnbreakable);
                         map.Layers[0].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "ForestCamp"));
                     }
                 }
@@ -162,10 +162,10 @@ namespace DataGenerator.Data
                             (yy == 6 || yy == 10) && xx >= 5 && xx <= 11 ||
                             yy > 6 && yy < 10 && xx >= 4 && xx <= 12)
                         {
-                            map.Tiles[xx][yy] = new Tile(0, new Loc(xx, yy));
+                            map.Tiles[xx][yy] = new Tile(DataManager.Instance.GenFloor, new Loc(xx, yy));
                         }
                         else
-                            map.Tiles[xx][yy] = new Tile(1, new Loc(xx, yy));
+                            map.Tiles[xx][yy] = new Tile(DataManager.Instance.GenUnbreakable, new Loc(xx, yy));
                         map.Layers[0].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "Summit"));
                     }
                 }

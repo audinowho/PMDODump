@@ -639,12 +639,12 @@ namespace DataGenerator.Data
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
                 effects.Add(new RemoveLocTrapEvent());
-                effects.Add(new RemoveLocTerrainEvent(2));
+                effects.Add(new RemoveLocTerrainEvent("wall"));
                 status.OnTurnEnds.Add(0, new CountDownEvent(effects));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent(91));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
-                status.BeforeActions.Add(0, new OnActionEvent(new BattlelessEvent(false, new RemoveLocTrapEvent()), new BattlelessEvent(false, new RemoveLocTerrainEvent(2)), new RemoveBattleEvent(false)));
+                status.BeforeActions.Add(0, new OnActionEvent(new BattlelessEvent(false, new RemoveLocTrapEvent()), new BattlelessEvent(false, new RemoveLocTerrainEvent("wall")), new RemoveBattleEvent(false)));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[3] { 89, 90, 222 }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
@@ -2165,7 +2165,8 @@ namespace DataGenerator.Data
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
                     status.OnActions.Add(0, new ElementNeededEvent(07, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
 
@@ -2188,7 +2189,8 @@ namespace DataGenerator.Data
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
                     status.OnActions.Add(0, new ElementNeededEvent(04, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
                 status.AfterBeingHits.Add(0, new ElementNeededEvent(07, new RemoveBattleEvent(false)));
@@ -2213,7 +2215,8 @@ namespace DataGenerator.Data
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
                     status.AfterBeingHits.Add(0, new ElementNeededEvent(07, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
 
@@ -2237,7 +2240,8 @@ namespace DataGenerator.Data
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 2));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
                     status.AfterBeingHits.Add(0, new ElementNeededEvent(04, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
             }

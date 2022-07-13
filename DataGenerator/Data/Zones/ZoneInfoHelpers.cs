@@ -193,7 +193,7 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_TILES_BARRIER, new UnbreakableBorderStep<T>(1));
         }
 
-        public static void AddWaterSteps<T>(MapGen<T> layout, int terrain, RandRange percent, bool eraseIsolated = true) where T : BaseMapGenContext
+        public static void AddWaterSteps<T>(MapGen<T> layout, string terrain, RandRange percent, bool eraseIsolated = true) where T : BaseMapGenContext
         {
             PerlinWaterStep<T> waterStep = new PerlinWaterStep<T>(new RandRange(), 3, new Tile(terrain), new MapTerrainStencil<T>(false, true, false), 1);
             waterStep.WaterPercent = percent;
@@ -273,23 +273,25 @@ namespace DataGenerator.Data
 
         public static RoomGenSpecific<T> CreateRoomGenSpecific<T>(string[] level) where T : class, ITiledGenContext
         {
-            RoomGenSpecific<T> roomGen = new RoomGenSpecific<T>(level[0].Length, level.Length, new Tile(0));
+            RoomGenSpecific<T> roomGen = new RoomGenSpecific<T>(level[0].Length, level.Length, new Tile(DataManager.Instance.GenFloor));
             roomGen.Tiles = new Tile[level[0].Length][];
             for (int xx = 0; xx < level[0].Length; xx++)
             {
                 roomGen.Tiles[xx] = new Tile[level.Length];
                 for (int yy = 0; yy < level.Length; yy++)
                 {
-                    if (level[yy][xx] == '#')
-                        roomGen.Tiles[xx][yy] = new Tile(2);
+                    if (level[yy][xx] == 'X')
+                        roomGen.Tiles[xx][yy] = new Tile("unbreakable");
+                    else if (level[yy][xx] == '#')
+                        roomGen.Tiles[xx][yy] = new Tile("wall");
                     else if (level[yy][xx] == '~')
-                        roomGen.Tiles[xx][yy] = new Tile(3);
+                        roomGen.Tiles[xx][yy] = new Tile("water");
                     else if (level[yy][xx] == '^')
-                        roomGen.Tiles[xx][yy] = new Tile(4);
+                        roomGen.Tiles[xx][yy] = new Tile("lava");
                     else if (level[yy][xx] == '_')
-                        roomGen.Tiles[xx][yy] = new Tile(5);
+                        roomGen.Tiles[xx][yy] = new Tile("abyss");
                     else
-                        roomGen.Tiles[xx][yy] = new Tile(0);
+                        roomGen.Tiles[xx][yy] = new Tile(DataManager.Instance.GenFloor);
                 }
             }
             return roomGen;
@@ -318,7 +320,7 @@ namespace DataGenerator.Data
 
         public static RoomGenSpecific<T> CreateRoomGenSpecificBoss<T>(string[] level, Loc trigger, List<MobSpawn> mobs, bool severe) where T : ListMapGenContext
         {
-            RoomGenSpecificBoss<T> roomGen = new RoomGenSpecificBoss<T>(level[0].Length, level.Length, new Tile(0), 38, trigger, severe ? "C02. Boss Battle 2.ogg" : "C01. Boss Battle.ogg");
+            RoomGenSpecificBoss<T> roomGen = new RoomGenSpecificBoss<T>(level[0].Length, level.Length, new Tile(DataManager.Instance.GenFloor), 38, trigger, severe ? "C02. Boss Battle 2.ogg" : "C01. Boss Battle.ogg");
             roomGen.Bosses = mobs;
             roomGen.Tiles = new Tile[level[0].Length][];
             for (int xx = 0; xx < level[0].Length; xx++)
@@ -327,17 +329,17 @@ namespace DataGenerator.Data
                 for (int yy = 0; yy < level.Length; yy++)
                 {
                     if (level[yy][xx] == 'X')
-                        roomGen.Tiles[xx][yy] = new Tile(1);
+                        roomGen.Tiles[xx][yy] = new Tile("unbreakable");
                     else if (level[yy][xx] == '#')
-                        roomGen.Tiles[xx][yy] = new Tile(2);
+                        roomGen.Tiles[xx][yy] = new Tile("wall");
                     else if (level[yy][xx] == '~')
-                        roomGen.Tiles[xx][yy] = new Tile(3);
+                        roomGen.Tiles[xx][yy] = new Tile("water");
                     else if (level[yy][xx] == '^')
-                        roomGen.Tiles[xx][yy] = new Tile(4);
+                        roomGen.Tiles[xx][yy] = new Tile("lava");
                     else if (level[yy][xx] == '_')
-                        roomGen.Tiles[xx][yy] = new Tile(5);
+                        roomGen.Tiles[xx][yy] = new Tile("abyss");
                     else
-                        roomGen.Tiles[xx][yy] = new Tile(0);
+                        roomGen.Tiles[xx][yy] = new Tile(DataManager.Instance.GenFloor);
                 }
             }
             return roomGen;
@@ -345,7 +347,7 @@ namespace DataGenerator.Data
 
         public static RoomGenPostProcSpecific<MapGenContext> CreateRoomGenPostProcSpecific(string[] level)
         {
-            RoomGenPostProcSpecific<MapGenContext> roomGen = new RoomGenPostProcSpecific<MapGenContext>(level[0].Length, level.Length, new Tile(0));
+            RoomGenPostProcSpecific<MapGenContext> roomGen = new RoomGenPostProcSpecific<MapGenContext>(level[0].Length, level.Length, new Tile(DataManager.Instance.GenFloor));
             roomGen.Tiles = new Tile[level[0].Length][];
             roomGen.PostProcMask = new PostProcTile[level[0].Length][];
             for (int xx = 0; xx < level[0].Length; xx++)
@@ -355,17 +357,17 @@ namespace DataGenerator.Data
                 for (int yy = 0; yy < level.Length; yy++)
                 {
                     if (level[yy][xx] == 'X')
-                        roomGen.Tiles[xx][yy] = new Tile(1);
+                        roomGen.Tiles[xx][yy] = new Tile("unbreakable");
                     else if (level[yy][xx] == '#')
-                        roomGen.Tiles[xx][yy] = new Tile(2);
+                        roomGen.Tiles[xx][yy] = new Tile("wall");
                     else if (level[yy][xx] == '~')
-                        roomGen.Tiles[xx][yy] = new Tile(3);
+                        roomGen.Tiles[xx][yy] = new Tile("water");
                     else if (level[yy][xx] == '^')
-                        roomGen.Tiles[xx][yy] = new Tile(4);
+                        roomGen.Tiles[xx][yy] = new Tile("lava");
                     else if (level[yy][xx] == '_')
-                        roomGen.Tiles[xx][yy] = new Tile(5);
+                        roomGen.Tiles[xx][yy] = new Tile("abyss");
                     else
-                        roomGen.Tiles[xx][yy] = new Tile(0);
+                        roomGen.Tiles[xx][yy] = new Tile(DataManager.Instance.GenFloor);
                     roomGen.PostProcMask[xx][yy] = new PostProcTile();
                 }
             }

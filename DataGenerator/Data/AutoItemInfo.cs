@@ -917,7 +917,7 @@ namespace DataGenerator.Data
                 {
                     item.OnActions.Add(1, new FamilyBattleEvent(new MeleeHitTilesEvent(TileAlignment.Wall)));
                     SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                    item.OnHitTiles.Add(0, new FamilyBattleEvent(new OnMoveUseEvent(new OnMeleeActionEvent(false, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, 2)))));
+                    item.OnHitTiles.Add(0, new FamilyBattleEvent(new OnMoveUseEvent(new OnMeleeActionEvent(false, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall")))));
                 }
             }
             else if (type == ExclusiveItemEffect.GapFiller)
@@ -926,7 +926,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, some of the Pokémon's moves will fill water, lava, and pits.");
                 if (includeEffects)
                 {
-                    item.OnHitTiles.Add(0, new FamilyBattleEvent(new OnMoveUseEvent(new OnMeleeActionEvent(true, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), 3, 4, 5)))));
+                    item.OnHitTiles.Add(0, new FamilyBattleEvent(new OnMoveUseEvent(new OnMeleeActionEvent(true, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "water", "lava", "abyss")))));
                 }
             }
             else if (type == ExclusiveItemEffect.PPBoost)
@@ -1812,7 +1812,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon recovers HP when in water.");
                 if (includeEffects)
                 {
-                    item.OnTurnEnds.Add(0, new FamilySingleEvent(new TerrainNeededEvent(3, new FractionHealEvent(8, new StringKey("MSG_HEAL_WITH")))));
+                    item.OnTurnEnds.Add(0, new FamilySingleEvent(new TerrainNeededEvent("water", new FractionHealEvent(8, new StringKey("MSG_HEAL_WITH")))));
                 }
             }
             else if (type == ExclusiveItemEffect.HealInLava)
@@ -1821,7 +1821,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon recovers HP when in lava.");
                 if (includeEffects)
                 {
-                    item.OnTurnEnds.Add(0, new FamilySingleEvent(new TerrainNeededEvent(4, new FractionHealEvent(8, new StringKey("MSG_HEAL_WITH")))));
+                    item.OnTurnEnds.Add(0, new FamilySingleEvent(new TerrainNeededEvent("lava", new FractionHealEvent(8, new StringKey("MSG_HEAL_WITH")))));
                 }
             }
             else if (type == ExclusiveItemEffect.HealOnNewFloor)
