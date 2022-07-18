@@ -38,9 +38,8 @@ namespace DataGenerator.Data
             DataInfo.DeleteIndexedData(DataManager.DataType.SkillGroup.ToString());
             for (int ii = 0; ii < MAX_GROUPS; ii++)
             {
-                SkillGroupData skillGroup = new SkillGroupData(new LocalText(((EggGroup)ii).ToString()));
-                //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.SkillGroup.ToString(), skillGroup);
+                SkillGroupData skillGroup = new SkillGroupData(new LocalText(Text.GetMemberTitle(((EggGroup)ii).ToString())));
+                DataManager.SaveData(Text.Sanitize(skillGroup.Name.DefaultText.Replace("'", "")).ToLower(), DataManager.DataType.SkillGroup.ToString(), skillGroup);
             }
         }
 

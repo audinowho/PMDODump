@@ -246,8 +246,8 @@ namespace DataGenerator.Data
             //entry.BodyStyle = BodyShape.HeadAndBase;
             entry.JoinRate = 0;
             entry.EXPTable = Text.Sanitize(Text.GetMemberTitle(GrowthInfo.GrowthGroup.MediumSlow.ToString())).ToLower();
-            entry.SkillGroup1 = (int)SkillGroupInfo.EggGroup.Undiscovered;
-            entry.SkillGroup2 = (int)SkillGroupInfo.EggGroup.Undiscovered;
+            entry.SkillGroup1 = Text.Sanitize(Text.GetMemberTitle(SkillGroupInfo.EggGroup.Undiscovered.ToString())).ToLower();
+            entry.SkillGroup2 = Text.Sanitize(Text.GetMemberTitle(SkillGroupInfo.EggGroup.Undiscovered.ToString())).ToLower();
 
 
             MonsterFormData formEntry = new MonsterFormData();
@@ -370,9 +370,9 @@ namespace DataGenerator.Data
                     if (read > 1)
                         throw new Exception(entry.Name + ": More than 2 Egg Group results!?");
                     else if (read == 0)
-                        entry.SkillGroup1 = (int)MapEggGroup(Convert.ToInt32(reader["egg_group_id"].ToString()));
+                        entry.SkillGroup1 = Text.Sanitize(Text.GetMemberTitle(MapEggGroup(Convert.ToInt32(reader["egg_group_id"].ToString())).ToString())).ToLower();
                     else if (read == 1)
-                        entry.SkillGroup2 = (int)MapEggGroup(Convert.ToInt32(reader["egg_group_id"].ToString()));
+                        entry.SkillGroup2 = Text.Sanitize(Text.GetMemberTitle(MapEggGroup(Convert.ToInt32(reader["egg_group_id"].ToString())).ToString())).ToLower();
                     read++;
                 }
             }
