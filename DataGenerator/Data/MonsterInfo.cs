@@ -245,7 +245,7 @@ namespace DataGenerator.Data
             //entry.Color = DexColor.Gray;
             //entry.BodyStyle = BodyShape.HeadAndBase;
             entry.JoinRate = 0;
-            entry.EXPTable = (int)GrowthInfo.GrowthGroup.MediumSlow;
+            entry.EXPTable = Text.Sanitize(Text.GetMemberTitle(GrowthInfo.GrowthGroup.MediumSlow.ToString())).ToLower();
             entry.SkillGroup1 = (int)SkillGroupInfo.EggGroup.Undiscovered;
             entry.SkillGroup2 = (int)SkillGroupInfo.EggGroup.Undiscovered;
 
@@ -351,7 +351,7 @@ namespace DataGenerator.Data
                     //entry.BodyStyle = MapBodyStyle(Convert.ToInt32(reader["shape_id"].ToString()));
                     Ratio = Convert.ToInt32(reader["gender_rate"].ToString());
                     entry.JoinRate = Convert.ToInt32(reader["capture_rate"].ToString());
-                    entry.EXPTable = (int)MapGrowthGroup(Convert.ToInt32(reader["growth_rate_id"].ToString()));
+                    entry.EXPTable = Text.Sanitize(Text.GetMemberTitle(MapGrowthGroup(Convert.ToInt32(reader["growth_rate_id"].ToString())).ToString())).ToLower();
                     string prevo = reader["evolves_from_species_id"].ToString();
                     if (!String.IsNullOrEmpty(prevo))
                         entry.PromoteFrom = Convert.ToInt32(prevo);
