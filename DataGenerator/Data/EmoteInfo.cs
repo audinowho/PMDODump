@@ -16,11 +16,10 @@ namespace DataGenerator.Data
         public static void AddEmoteData()
         {
             DataInfo.DeleteIndexedData(DataManager.DataType.Emote.ToString());
-            for (int ii = 0; ii < MAX_EMOTES; ii++)
+            for (int ii = 1; ii < MAX_EMOTES; ii++)
             {
                 EmoteData emote = GetEmoteData(ii);
-                //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.Emote.ToString(), emote);
+                DataManager.SaveData(Text.Sanitize(emote.Name.DefaultText.Replace("'", "")).ToLower(), DataManager.DataType.Emote.ToString(), emote);
             }
         }
 
