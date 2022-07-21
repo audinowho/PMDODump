@@ -49,9 +49,11 @@ namespace DataGenerator.Data
             DataInfo.DeleteIndexedData(DataManager.DataType.Rank.ToString());
             for (int ii = 0; ii < MAX_GROUPS; ii++)
             {
-                RankData data = new RankData(new LocalText(((TeamRank)ii).ToString()), 24, RANK_NEXT[ii]);
-                //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.Rank.ToString(), data);
+                string next = "";
+                if (ii < MAX_GROUPS - 1)
+                    next = Text.Sanitize(Text.GetMemberTitle(((TeamRank)ii + 1).ToString()).Replace("'", "")).ToLower();
+                RankData data = new RankData(new LocalText(Text.GetMemberTitle(((TeamRank)ii).ToString())), 24, RANK_NEXT[ii], next);
+                DataManager.SaveData(Text.Sanitize(data.Name.DefaultText.Replace("'", "")).ToLower(), DataManager.DataType.Rank.ToString(), data);
             }
         }
 

@@ -108,7 +108,7 @@ namespace DataGenerator.Data
 
 
                 ExplorerTeam team = new ExplorerTeam();
-                team.SetRank(1);
+                team.SetRank("normal");
                 {
                     //Snorlax
                     CharData mobData = new CharData();
@@ -173,7 +173,7 @@ namespace DataGenerator.Data
 
 
                 ExplorerTeam team = new ExplorerTeam();
-                team.SetRank(10);
+                team.SetRank("master");
                 //Summit
                 {
                     //Xatu : 156 Magic Bounce : 248 Future Sight : 273 Wish : 403 Air Slash : 466 Ominous Wind
@@ -434,7 +434,7 @@ namespace DataGenerator.Data
 
                 {
                     ExplorerTeam team = new ExplorerTeam();
-                    team.SetRank(1);
+                    team.SetRank("normal");
                     CharData mobData = new CharData();
                     mobData.BaseForm = new MonsterID(178, 0, 0, Gender.Male);
                     mobData.Level = 60;
