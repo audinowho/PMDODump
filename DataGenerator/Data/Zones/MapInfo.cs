@@ -121,7 +121,7 @@ namespace DataGenerator.Data
                     mobData.BaseIntrinsics[0] = 82;
                     Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
-                    AITactic tactic = DataManager.Instance.GetAITactic(14);
+                    AITactic tactic = DataManager.Instance.GetAITactic("staged_boss");
                     newMob.Tactic = new AITactic(tactic);
                     newMob.CharLoc = new Loc(10, 4);
                     newMob.CharDir = Dir8.Down;
@@ -187,7 +187,7 @@ namespace DataGenerator.Data
                     mobData.BaseIntrinsics[0] = 156;
                     Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
-                    AITactic tactic = DataManager.Instance.GetAITactic(14);
+                    AITactic tactic = DataManager.Instance.GetAITactic("staged_boss");
                     newMob.Tactic = new AITactic(tactic);
                     newMob.CharLoc = new Loc(8, 5);
                     newMob.CharDir = Dir8.Down;
@@ -211,7 +211,7 @@ namespace DataGenerator.Data
                     mobData.BaseIntrinsics[0] = 80;
                     Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
-                    AITactic tactic = DataManager.Instance.GetAITactic(14);
+                    AITactic tactic = DataManager.Instance.GetAITactic("staged_boss");
                     newMob.Tactic = new AITactic(tactic);
                     newMob.CharLoc = new Loc(6, 6);
                     newMob.CharDir = Dir8.Down;
@@ -235,7 +235,7 @@ namespace DataGenerator.Data
                     mobData.BaseIntrinsics[0] = 172;
                     Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
-                    AITactic tactic = DataManager.Instance.GetAITactic(14);
+                    AITactic tactic = DataManager.Instance.GetAITactic("staged_boss");
                     newMob.Tactic = new AITactic(tactic);
                     newMob.CharLoc = new Loc(10, 6);
                     newMob.CharDir = Dir8.Down;

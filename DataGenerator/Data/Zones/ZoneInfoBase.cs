@@ -158,7 +158,7 @@ namespace DataGenerator.Data
                     {
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID(ii + 1, 0, 0, Gender.Unknown);
-                        post_mob.Tactic = 6;
+                        post_mob.Tactic = "wait_only";
                         post_mob.Level = new RandRange(50);
                         post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc((ii % 5) * 2 + 2, ii / 5 * 2 + 2)));
                         post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
@@ -171,7 +171,7 @@ namespace DataGenerator.Data
                     {
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID(132, 0, 0, Gender.Unknown);
-                        post_mob.Tactic = 6;
+                        post_mob.Tactic = "wait_only";
                         post_mob.Level = new RandRange(50);
                         post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                         post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(24, 2)));
@@ -393,7 +393,7 @@ namespace DataGenerator.Data
                         specificTeam.Explorer = true;
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID(235, 0, 0, Gender.Unknown);
-                        post_mob.Tactic = 21;
+                        post_mob.Tactic = "slow_wander";
                         post_mob.Level = new RandRange(50);
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_WAIT_0190"))));
                         specificTeam.Spawns.Add(post_mob);
@@ -519,7 +519,7 @@ namespace DataGenerator.Data
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(382, 0, 0, Gender.Unknown);
-                            post_mob.Tactic = 6;
+                            post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(1, 4)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
@@ -529,7 +529,7 @@ namespace DataGenerator.Data
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(383, 0, 0, Gender.Unknown);
-                            post_mob.Tactic = 6;
+                            post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(7, 4)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
@@ -539,7 +539,7 @@ namespace DataGenerator.Data
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(384, 0, 0, Gender.Unknown);
-                            post_mob.Tactic = 6;
+                            post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(4, 1)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
@@ -1371,7 +1371,7 @@ namespace DataGenerator.Data
                         mob.SpecifiedSkills.Add(408);
                         mob.Intrinsic = -1;
                         mob.Level = new RandRange(40);
-                        mob.Tactic = 7;
+                        mob.Tactic = "normal_wander";
                         mob.SpawnFeatures.Add(new MobSpawnMovesOff(mob.SpecifiedSkills.Count));
                         MobSpawnStatus keySpawn = new MobSpawnStatus();
                         keySpawn.Statuses.Add(new StatusEffect(130), 10);
@@ -1586,7 +1586,7 @@ namespace DataGenerator.Data
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(382, 0, 0, Gender.Unknown);
-                            post_mob.Tactic = 6;
+                            post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(1, 4)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
@@ -1596,7 +1596,7 @@ namespace DataGenerator.Data
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(383, 0, 0, Gender.Unknown);
-                            post_mob.Tactic = 6;
+                            post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(7, 4)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
@@ -1606,7 +1606,7 @@ namespace DataGenerator.Data
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(384, 0, 0, Gender.Unknown);
-                            post_mob.Tactic = 6;
+                            post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(4, 1)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
@@ -2275,7 +2275,7 @@ namespace DataGenerator.Data
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(382, 0, 0, Gender.Unknown);
-                            post_mob.Tactic = 6;
+                            post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(36, 6) + new Loc(1)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
@@ -2285,7 +2285,7 @@ namespace DataGenerator.Data
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(383, 0, 0, Gender.Unknown);
-                            post_mob.Tactic = 6;
+                            post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(38, 6) + new Loc(1)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
@@ -2295,7 +2295,7 @@ namespace DataGenerator.Data
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(384, 0, 0, Gender.Unknown);
-                            post_mob.Tactic = 6;
+                            post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(40, 6) + new Loc(1)));
                             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
@@ -2414,7 +2414,7 @@ namespace DataGenerator.Data
                     {
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID(173, 0, 0, Gender.Unknown);
-                        post_mob.Tactic = 23;
+                        post_mob.Tactic = "shopkeeper";
                         post_mob.Level = new RandRange(5);
                         post_mob.Intrinsic = 98;
                         post_mob.SpecifiedSkills.Add(118);
@@ -2552,7 +2552,7 @@ namespace DataGenerator.Data
                     post_mob.BaseForm = new MonsterID(xx, 0, -1, Gender.Unknown);
                     post_mob.Intrinsic = -1;
                     post_mob.Level = new RandRange(10);
-                    post_mob.Tactic = 7;
+                    post_mob.Tactic = "normal_wander";
                     post_mob.SpawnFeatures.Add(new MobSpawnWeak());
                     if (yy == 0)
                     {
@@ -2582,7 +2582,7 @@ namespace DataGenerator.Data
                     PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                     MobSpawn post_mob = new MobSpawn();
                     post_mob.BaseForm = new MonsterID(200, 0, 0, Gender.Unknown);
-                    post_mob.Tactic = 21;
+                    post_mob.Tactic = "slow_wander";
                     post_mob.Level = new RandRange(50);
                     post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_WAIT_0190"))));
                     SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
@@ -2597,7 +2597,7 @@ namespace DataGenerator.Data
                     PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                     MobSpawn post_mob = new MobSpawn();
                     post_mob.BaseForm = new MonsterID(225, 0, 0, Gender.Male);
-                    post_mob.Tactic = 21;
+                    post_mob.Tactic = "slow_wander";
                     post_mob.Level = new RandRange(50);
                     post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new BattleScriptEvent("CountTalkTest")));
                     SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
@@ -2615,7 +2615,7 @@ namespace DataGenerator.Data
                     {
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID(483, 0, 0, Gender.Unknown);
-                        post_mob.Tactic = 0;
+                        post_mob.Tactic = "stick_together";
                         post_mob.Level = new RandRange(10);
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_FULL_0773"))));
                         post_mob.SpawnFeatures.Add(new MobSpawnFoeConflict());
@@ -2624,7 +2624,7 @@ namespace DataGenerator.Data
                     {
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID(484, 0, 0, Gender.Unknown);
-                        post_mob.Tactic = 0;
+                        post_mob.Tactic = "stick_together";
                         post_mob.Level = new RandRange(10);
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_FULL_0781"))));
                         post_team.Spawns.Add(post_mob);
@@ -2632,7 +2632,7 @@ namespace DataGenerator.Data
                     {
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID(487, 0, 0, Gender.Unknown);
-                        post_mob.Tactic = 0;
+                        post_mob.Tactic = "stick_together";
                         post_mob.Level = new RandRange(10);
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_FULL_0783"))));
                         post_team.Spawns.Add(post_mob);

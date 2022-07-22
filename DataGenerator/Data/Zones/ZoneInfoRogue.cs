@@ -2255,11 +2255,11 @@ namespace DataGenerator.Data
                     // 213 Shuckle : 126 Contrary : 564 Sticky Web : 611 Infestation : 189 Mud-Slap : 522 Struggle Bug
                     shop.Mobs.Add(GetShopMob(213, 126, 564, 611, 189, 522, new int[] { 1569, 1570, 1571, 1572 }, -1), 5);
                     // 213 Shuckle : 126 Contrary : 201 Sandstorm : 564 Sticky Web : 446 Stealth Rock : 88 Rock Throw
-                    shop.Mobs.Add(GetShopMob(213, 5, 201, 564, 446, 88, new int[] { 1569, 1570, 1571, 1572 }, -1, 24), 10);
+                    shop.Mobs.Add(GetShopMob(213, 5, 201, 564, 446, 88, new int[] { 1569, 1570, 1571, 1572 }, -1, "shuckle"), 10);
                     // 213 Shuckle : 5 Sturdy : 379 Power Trick : 504 Shell Smash : 205 Rollout : 360 Gyro Ball
-                    shop.Mobs.Add(GetShopMob(213, 5, 379, 504, 205, 360, new int[] { 1569, 1570, 1571, 1572 }, -1, 24), 10);
+                    shop.Mobs.Add(GetShopMob(213, 5, 379, 504, 205, 360, new int[] { 1569, 1570, 1571, 1572 }, -1, "shuckle"), 10);
                     // 213 Shuckle : 5 Sturdy : 379 Power Trick : 450 Bug Bite : 444 Stone Edge : 523 Bulldoze
-                    shop.Mobs.Add(GetShopMob(213, 5, 379, 450, 444, 523, new int[] { 1569, 1570, 1571, 1572 }, -1, 24), 5);
+                    shop.Mobs.Add(GetShopMob(213, 5, 379, 450, 444, 523, new int[] { 1569, 1570, 1571, 1572 }, -1, "shuckle"), 5);
                 }
 
                 shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(2, 25), 10);
@@ -2323,9 +2323,9 @@ namespace DataGenerator.Data
                     // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 50 disable : 374 fling
                     shop.Mobs.Add(GetShopMob(352, 16, 485, 20, 50, 374, new int[] { 1984, 1985, 1988 }, -1), 10);
                     // 352 Kecleon : 168 protean : 425 shadow sneak : 246 ancient power : 510 incinerate : 168 thief
-                    shop.Mobs.Add(GetShopMob(352, 168, 425, 246, 510, 168, new int[] { 1984, 1985, 1988 }, -1, 24), 10);
+                    shop.Mobs.Add(GetShopMob(352, 168, 425, 246, 510, 168, new int[] { 1984, 1985, 1988 }, -1, "shuckle"), 10);
                     // 352 Kecleon : 168 protean : 332 aerial ace : 421 shadow claw : 60 psybeam : 364 feint
-                    shop.Mobs.Add(GetShopMob(352, 168, 332, 421, 60, 364, new int[] { 1984, 1985, 1988 }, -1, 24), 10);
+                    shop.Mobs.Add(GetShopMob(352, 168, 332, 421, 60, 364, new int[] { 1984, 1985, 1988 }, -1, "shuckle"), 10);
                 }
 
                 shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(25, 30), 10);
@@ -2402,7 +2402,7 @@ namespace DataGenerator.Data
                 {
                     MobSpawn post_mob = new MobSpawn();
                     post_mob.BaseForm = new MonsterID(173, 0, 0, Gender.Unknown);
-                    post_mob.Tactic = 23;
+                    post_mob.Tactic = "shopkeeper";
                     post_mob.Level = new RandRange(5);
                     post_mob.Intrinsic = 98;
                     post_mob.SpecifiedSkills.Add(118);
@@ -4683,9 +4683,9 @@ namespace DataGenerator.Data
                     // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 50 disable : 374 fling
                     shop.Mobs.Add(GetShopMob(352, 16, 485, 20, 50, 374, new int[] { 1984, 1985, 1988 }, -1), 10);
                     // 352 Kecleon : 168 protean : 425 shadow sneak : 246 ancient power : 510 incinerate : 168 thief
-                    shop.Mobs.Add(GetShopMob(352, 168, 425, 246, 510, 168, new int[] { 1984, 1985, 1988 }, -1, 24), 10);
+                    shop.Mobs.Add(GetShopMob(352, 168, 425, 246, 510, 168, new int[] { 1984, 1985, 1988 }, -1, "shuckle"), 10);
                     // 352 Kecleon : 168 protean : 332 aerial ace : 421 shadow claw : 60 psybeam : 364 feint
-                    shop.Mobs.Add(GetShopMob(352, 168, 332, 421, 60, 364, new int[] { 1984, 1985, 1988 }, -1, 24), 10);
+                    shop.Mobs.Add(GetShopMob(352, 168, 332, 421, 60, 364, new int[] { 1984, 1985, 1988 }, -1, "shuckle"), 10);
                 }
 
                 shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(5, max_floors), 10);
@@ -4755,7 +4755,7 @@ namespace DataGenerator.Data
                 {
                     MobSpawn post_mob = new MobSpawn();
                     post_mob.BaseForm = new MonsterID(173, 0, 0, Gender.Unknown);
-                    post_mob.Tactic = 23;
+                    post_mob.Tactic = "shopkeeper";
                     post_mob.Level = new RandRange(5);
                     post_mob.Intrinsic = 98;
                     post_mob.SpecifiedSkills.Add(118);

@@ -118,7 +118,7 @@ namespace DataGenerator.Data
                         PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID(113, 0, 0, Gender.Female);
-                        post_mob.Tactic = 22;
+                        post_mob.Tactic = "slow_patrol";
                         post_mob.Level = new RandRange(12);
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_NEUTRAL"))));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
@@ -133,7 +133,7 @@ namespace DataGenerator.Data
                         PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID(27, 0, 0, Gender.Male);
-                        post_mob.Tactic = 21;
+                        post_mob.Tactic = "slow_wander";
                         post_mob.Level = new RandRange(14);
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_EXP"))));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
@@ -376,7 +376,7 @@ namespace DataGenerator.Data
                             PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(182, 0, 0, Gender.Female);
-                            post_mob.Tactic = 22;
+                            post_mob.Tactic = "slow_patrol";
                             post_mob.Level = new RandRange(21);
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_RECRUIT"))));
                             SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
@@ -391,7 +391,7 @@ namespace DataGenerator.Data
                             PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(294, 0, 0, Gender.Male);
-                            post_mob.Tactic = 22;
+                            post_mob.Tactic = "slow_patrol";
                             post_mob.Level = new RandRange(21);
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_FADED"))));
                             SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
@@ -406,7 +406,7 @@ namespace DataGenerator.Data
                             PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(66, 0, 0, Gender.Male);
-                            post_mob.Tactic = 21;
+                            post_mob.Tactic = "slow_wander";
                             post_mob.Level = new RandRange(14);
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_STAT_DROP"))));
                             SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
@@ -818,7 +818,7 @@ namespace DataGenerator.Data
                         PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID(25, 0, 0, Gender.Male);
-                        post_mob.Tactic = 21;
+                        post_mob.Tactic = "slow_wander";
                         post_mob.Level = new RandRange(28);
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_MISS"))));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
@@ -836,7 +836,7 @@ namespace DataGenerator.Data
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(311, 0, 0, Gender.Male);
-                            post_mob.Tactic = 21;
+                            post_mob.Tactic = "slow_wander";
                             post_mob.Level = new RandRange(20);
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new BattleScriptEvent("PairTalk", "{Pair=0}")));
                             post_team.Spawns.Add(post_mob);
@@ -844,7 +844,7 @@ namespace DataGenerator.Data
                         {
                             MobSpawn post_mob = new MobSpawn();
                             post_mob.BaseForm = new MonsterID(312, 0, 0, Gender.Male);
-                            post_mob.Tactic = 21;
+                            post_mob.Tactic = "slow_wander";
                             post_mob.Level = new RandRange(20);
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new BattleScriptEvent("PairTalk", "{Pair=1}")));
                             post_team.Spawns.Add(post_mob);
@@ -3785,7 +3785,7 @@ namespace DataGenerator.Data
                         PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID(27, 0, 0, Gender.Male);
-                        post_mob.Tactic = 21;
+                        post_mob.Tactic = "slow_wander";
                         post_mob.Level = new RandRange(14);
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_RANGE"))));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
@@ -4817,9 +4817,9 @@ namespace DataGenerator.Data
                             // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 50 disable : 374 fling
                             shop.Mobs.Add(GetShopMob(352, 16, 485, 20, 50, 374, new int[] { 1984, 1985, 1988 }, -1), 10);
                             // 352 Kecleon : 168 protean : 425 shadow sneak : 246 ancient power : 510 incinerate : 168 thief
-                            shop.Mobs.Add(GetShopMob(352, 168, 425, 246, 510, 168, new int[] { 1984, 1985, 1988 }, -1, 24), 10);
+                            shop.Mobs.Add(GetShopMob(352, 168, 425, 246, 510, 168, new int[] { 1984, 1985, 1988 }, -1, "shuckle"), 10);
                             // 352 Kecleon : 168 protean : 332 aerial ace : 421 shadow claw : 60 psybeam : 364 feint
-                            shop.Mobs.Add(GetShopMob(352, 168, 332, 421, 60, 364, new int[] { 1984, 1985, 1988 }, -1, 24), 10);
+                            shop.Mobs.Add(GetShopMob(352, 168, 332, 421, 60, 364, new int[] { 1984, 1985, 1988 }, -1, "shuckle"), 10);
                         }
 
                         shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(2, max_floors), 10);
