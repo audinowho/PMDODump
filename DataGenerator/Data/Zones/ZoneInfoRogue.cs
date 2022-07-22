@@ -555,13 +555,13 @@ namespace DataGenerator.Data
 
             {
                 //155 Cyndaquil : 43 Leer : 52 Ember
-                poolSpawn.Spawns.Add(GetTeamMob(155, -1, 43, 52, -1, -1, new RandRange(10), "normal_wander", true), new IntRange(3, 5), 10);
+                poolSpawn.Spawns.Add(GetTeamMob(155, -1, 43, 52, -1, -1, new RandRange(10), "wander_normal", true), new IntRange(3, 5), 10);
 
                 //152 Chikorita : 77 Poison Powder : 075 Razor Leaf
-                poolSpawn.Spawns.Add(GetTeamMob(152, -1, 77, 22, -1, -1, new RandRange(10), "normal_wander", true), new IntRange(3, 5), 10);
+                poolSpawn.Spawns.Add(GetTeamMob(152, -1, 77, 22, -1, -1, new RandRange(10), "wander_normal", true), new IntRange(3, 5), 10);
 
                 //158 Totodile : 44 Bite : 55 Water Gun
-                poolSpawn.Spawns.Add(GetTeamMob(158, -1, 44, 55, -1, -1, new RandRange(10), "normal_wander", true), new IntRange(3, 5), 10);
+                poolSpawn.Spawns.Add(GetTeamMob(158, -1, 44, 55, -1, -1, new RandRange(10), "wander_normal", true), new IntRange(3, 5), 10);
             }
 
 
@@ -667,7 +667,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(328, 71, 328, 91, -1, -1, new RandRange(18), TeamMemberSpawn.MemberRole.Leader), new IntRange(9, 11), 10);
 
             //17//446 Munchlax : 033 Tackle : 133 Amnesia : 498 Chip Away
-            poolSpawn.Spawns.Add(GetTeamMob(446, -1, 33, 133, 498, -1, new RandRange(20), "normal_wander", true), new IntRange(9, 11), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(446, -1, 33, 133, 498, -1, new RandRange(20), "wander_normal", true), new IntRange(9, 11), 10);
 
             //246 Larvitar : 103 Screech : 157 Rock Slide
             poolSpawn.Spawns.Add(GetTeamMob(246, -1, 103, 157, -1, -1, new RandRange(18)), new IntRange(9, 11), 10);
@@ -829,7 +829,7 @@ namespace DataGenerator.Data
 
             //006 Charizard : 126 Fire Blast : 403 Air Slash
             {
-                TeamMemberSpawn mob = GetTeamMob(6, -1, 126, 17, -1, -1, new RandRange(45), TeamMemberSpawn.MemberRole.Loner, "normal_wander", true);
+                TeamMemberSpawn mob = GetTeamMob(6, -1, 126, 17, -1, -1, new RandRange(45), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
                 mob.Spawn.SpawnFeatures.Add(new MobSpawnItem(true, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93));
                 poolSpawn.Spawns.Add(mob, new IntRange(17, 19), 10);
             }
@@ -1038,7 +1038,7 @@ namespace DataGenerator.Data
 
             //110 Weezing : 194 Destiny Bond : 153 Explosion : 188 Sludge Bomb
             {
-                TeamMemberSpawn mob = GetTeamMob(110, 256, 194, 153, -1, -1, new RandRange(50), TeamMemberSpawn.MemberRole.Loner, "normal_wander", true);
+                TeamMemberSpawn mob = GetTeamMob(110, 256, 194, 153, -1, -1, new RandRange(50), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
                 mob.Spawn.SpawnFeatures.Add(new MobSpawnItem(true, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93));
                 poolSpawn.Spawns.Add(mob, new IntRange(22, 25), 10);
             }
@@ -1292,7 +1292,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
                 for (int ii = 0; ii < dexMap.Length; ii++)
-                    monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "smart_wander"), new IntRange(0, 30), 10);//all monsters in the game
+                    monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, 30), 10);//all monsters in the game
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, 30), 10);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo, new RandRange(7, 13)), new IntRange(0, 10), 10);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo | EvoFlag.MidEvo, new RandRange(7, 13)), new IntRange(10, 20), 10);
@@ -1341,7 +1341,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
                 for (int ii = 0; ii < dexMap.Length; ii++)
-                    monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "smart_wander"), new IntRange(0, 30), 10);//all monsters in the game
+                    monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, 30), 10);//all monsters in the game
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, 30), 10);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo, new RandRange(7, 13)), new IntRange(0, 10), 10);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo | EvoFlag.MidEvo, new RandRange(7, 13)), new IntRange(10, 20), 10);
@@ -1432,7 +1432,7 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(3, 7))), new IntRange(0, 30), 10);//apricorns
 
                 for (int ii = 0; ii < dexMap.Length; ii++)
-                    chestChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "smart_wander"), new IntRange(0, 30), 10);//all monsters in the game
+                    chestChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, 30), 10);//all monsters in the game
                 chestChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo, new RandRange(7, 13)), new IntRange(0, 10), 10);
                 chestChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo | EvoFlag.MidEvo, new RandRange(7, 13)), new IntRange(10, 20), 10);
                 chestChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.All, new RandRange(7, 13)), new IntRange(12, 22), 10);
@@ -2709,7 +2709,7 @@ namespace DataGenerator.Data
                 {
                     //142 Aerodactyl : 17 Wing Attack : 246 Ancient Power : 48 Supersonic : 97 Agility
                     SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                    MobSpawn mob = GetGenericMob(142, -1, 17, 246, 48, 97, new RandRange(48), "smart_wander");
+                    MobSpawn mob = GetGenericMob(142, -1, 17, 246, 48, 97, new RandRange(48), "wander_smart");
                     mob.SpawnFeatures.Add(new MobSpawnItem(true, 477));
                     specificTeam.Spawns.Add(mob);
 

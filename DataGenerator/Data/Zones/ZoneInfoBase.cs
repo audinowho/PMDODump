@@ -278,7 +278,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(351, -1, -1, -1, -1, -1, new RandRange(18), "normal_wander", true), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(351, -1, -1, -1, -1, -1, new RandRange(18), "wander_normal", true), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -876,7 +876,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "dumb_wander"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1021,7 +1021,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "dumb_wander"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1357,7 +1357,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(25), "dumb_wander"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(25), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1371,7 +1371,7 @@ namespace DataGenerator.Data
                         mob.SpecifiedSkills.Add(408);
                         mob.Intrinsic = -1;
                         mob.Level = new RandRange(40);
-                        mob.Tactic = "normal_wander";
+                        mob.Tactic = "wander_normal";
                         mob.SpawnFeatures.Add(new MobSpawnMovesOff(mob.SpecifiedSkills.Count));
                         MobSpawnStatus keySpawn = new MobSpawnStatus();
                         keySpawn.Statuses.Add(new StatusEffect(130), 10);
@@ -1694,7 +1694,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(25), "dumb_wander"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(25), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1809,7 +1809,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "dumb_wander"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1911,7 +1911,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "dumb_wander"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -2552,7 +2552,7 @@ namespace DataGenerator.Data
                     post_mob.BaseForm = new MonsterID(xx, 0, -1, Gender.Unknown);
                     post_mob.Intrinsic = -1;
                     post_mob.Level = new RandRange(10);
-                    post_mob.Tactic = "normal_wander";
+                    post_mob.Tactic = "wander_normal";
                     post_mob.SpawnFeatures.Add(new MobSpawnWeak());
                     if (yy == 0)
                     {

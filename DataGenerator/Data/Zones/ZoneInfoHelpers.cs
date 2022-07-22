@@ -415,33 +415,33 @@ namespace DataGenerator.Data
 
 
         static TeamMemberSpawn GetTeamMob(int species, int ability, int move1, int move2, int move3, int move4, RandRange level,
-            string tactic = "normal_wander", bool sleeping = false)
+            string tactic = "wander_normal", bool sleeping = false)
         {
             return GetTeamMob(new MonsterID(species, 0, -1, Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping);
         }
         static TeamMemberSpawn GetTeamMob(MonsterID id, int ability, int move1, int move2, int move3, int move4, RandRange level,
-            string tactic = "normal_wander", bool sleeping = false)
+            string tactic = "wander_normal", bool sleeping = false)
         {
             return GetTeamMob(id, ability, move1, move2, move3, move4, level, TeamMemberSpawn.MemberRole.Normal, tactic, sleeping);
         }
         static TeamMemberSpawn GetTeamMob(int species, int ability, int move1, int move2, int move3, int move4, RandRange level,
-            TeamMemberSpawn.MemberRole role, string tactic = "normal_wander", bool sleeping = false)
+            TeamMemberSpawn.MemberRole role, string tactic = "wander_normal", bool sleeping = false)
         {
             return GetTeamMob(new MonsterID(species, 0, -1, Gender.Unknown), ability, move1, move2, move3, move4, level, role, tactic, sleeping);
         }
         static TeamMemberSpawn GetTeamMob(MonsterID id, int ability, int move1, int move2, int move3, int move4, RandRange level,
-            TeamMemberSpawn.MemberRole role, string tactic = "normal_wander", bool sleeping = false)
+            TeamMemberSpawn.MemberRole role, string tactic = "wander_normal", bool sleeping = false)
         {
             return new TeamMemberSpawn(GetGenericMob(id, ability, move1, move2, move3, move4, level, tactic, sleeping), role);
         }
 
         static MobSpawn GetGenericMob(int species, int ability, int move1, int move2, int move3, int move4, RandRange level,
-            string tactic = "normal_wander", bool sleeping = false)
+            string tactic = "wander_normal", bool sleeping = false)
         {
             return GetGenericMob(new MonsterID(species, 0, -1, Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping);
         }
         static MobSpawn GetGenericMob(MonsterID id, int ability, int move1, int move2, int move3, int move4, RandRange level,
-            string tactic = "normal_wander", bool sleeping = false)
+            string tactic = "wander_normal", bool sleeping = false)
         {
             MobSpawn post_mob = new MobSpawn();
             post_mob.BaseForm = id;

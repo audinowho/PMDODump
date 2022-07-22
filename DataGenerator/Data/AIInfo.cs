@@ -102,7 +102,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Normal Wander");//7
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = "wander_normal";
             iq = AIFlags.ItemGrabber | AIFlags.AttackToEscape | AIFlags.WontDisturb;
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
@@ -190,7 +190,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Dumb Wander");//16
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = "wander_dumb";
             iq = AIFlags.ItemGrabber | AIFlags.AttackToEscape;
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.DumbAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
@@ -203,7 +203,7 @@ namespace DataGenerator.Data
             //
             tactic = new AITactic();
             tactic.Name = new LocalText("Smart Wander");//17
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = "wander_smart";
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.AttackToEscape | AIFlags.WontDisturb;
             tactic.Plans.Add(new PreBuffPlan(iq, 26));
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.SmartAttack, AIPlan.PositionChoice.Avoid));

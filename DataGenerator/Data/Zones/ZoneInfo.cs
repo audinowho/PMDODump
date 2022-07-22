@@ -95,18 +95,18 @@ namespace DataGenerator.Data
                     TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
                     poolSpawn.Priority = PR_RESPAWN_MOB;
                     //161 Sentret : 10 Scratch
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "dumb_wander"), new IntRange(0, 2), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(5), "dumb_wander"), new IntRange(2, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "wander_dumb"), new IntRange(0, 2), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(5), "wander_dumb"), new IntRange(2, max_floors), 10);
                     //191 Sunkern : 71 Absorb
-                    poolSpawn.Spawns.Add(GetTeamMob(191, -1, 71, -1, -1, -1, new RandRange(3), "dumb_wander"), new IntRange(0, 2), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob(191, -1, 71, -1, -1, -1, new RandRange(5), "dumb_wander"), new IntRange(1, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(191, -1, 71, -1, -1, -1, new RandRange(3), "wander_dumb"), new IntRange(0, 2), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(191, -1, 71, -1, -1, -1, new RandRange(5), "wander_dumb"), new IntRange(1, max_floors), 10);
                     //396 Starly : 33 Tackle
-                    poolSpawn.Spawns.Add(GetTeamMob(396, -1, 33, -1, -1, -1, new RandRange(2), "dumb_wander"), new IntRange(0, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob(396, -1, 33, -1, -1, -1, new RandRange(4), "dumb_wander"), new IntRange(2, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(396, -1, 33, -1, -1, -1, new RandRange(2), "wander_dumb"), new IntRange(0, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(396, -1, 33, -1, -1, -1, new RandRange(4), "wander_dumb"), new IntRange(2, max_floors), 10);
                     //10 Caterpie : 33 Tackle : 81 String Shot
-                    poolSpawn.Spawns.Add(GetTeamMob(10, -1, 33, 81, -1, -1, new RandRange(4), "dumb_wander"), new IntRange(2, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(10, -1, 33, 81, -1, -1, new RandRange(4), "wander_dumb"), new IntRange(2, max_floors), 10);
                     //120 Staryu : 55 Water Gun
-                    poolSpawn.Spawns.Add(GetTeamMob(120, 30, 55, -1, -1, -1, new RandRange(4), "dumb_wander"), new IntRange(2, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(120, 30, 55, -1, -1, -1, new RandRange(4), "wander_dumb"), new IntRange(2, max_floors), 10);
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
@@ -349,21 +349,21 @@ namespace DataGenerator.Data
 
                         //need one super-effective for each possible starter
                         //037 Vulpix : 52 Ember
-                        poolSpawn.Spawns.Add(GetTeamMob(37, -1, 52, -1, -1, -1, new RandRange(10), "dumb_wander"), new IntRange(4, 7), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob(37, -1, 52, -1, -1, -1, new RandRange(10), "wander_dumb"), new IntRange(4, 7), 10);
                         //114 Tangela : 022 Vine Whip
-                        poolSpawn.Spawns.Add(GetTeamMob(114, -1, -1, 22, -1, -1, new RandRange(10), "dumb_wander"), new IntRange(4, 7), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob(114, -1, -1, 22, -1, -1, new RandRange(10), "wander_dumb"), new IntRange(4, 7), 10);
                         //403 Shinx : 033 Tackle : 43 Leer
-                        poolSpawn.Spawns.Add(GetTeamMob(403, -1, 33, 43, -1, -1, new RandRange(5), "dumb_wander"), new IntRange(0, 4), 10);
-                        poolSpawn.Spawns.Add(GetTeamMob(403, -1, 33, 43, -1, -1, new RandRange(7), "dumb_wander"), new IntRange(4, 7), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob(403, -1, 33, 43, -1, -1, new RandRange(5), "wander_dumb"), new IntRange(0, 4), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob(403, -1, 33, 43, -1, -1, new RandRange(7), "wander_dumb"), new IntRange(4, 7), 10);
                         //190 Aipom : 010 Scratch : Sand Attack
-                        poolSpawn.Spawns.Add(GetTeamMob(190, -1, 10, 28, -1, -1, new RandRange(8), "dumb_wander"), new IntRange(0, 7), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob(190, -1, 10, 28, -1, -1, new RandRange(8), "wander_dumb"), new IntRange(0, 7), 10);
                         //161 Sentret : 10 Scratch : 111 Defense Curl
-                        poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, 111, -1, -1, new RandRange(5), "dumb_wander"), new IntRange(0, 4), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, 111, -1, -1, new RandRange(5), "wander_dumb"), new IntRange(0, 4), 10);
                         //060 Poliwag : 55 Water Gun
-                        poolSpawn.Spawns.Add(GetTeamMob(60, -1, 55, -1, -1, -1, new RandRange(8), "dumb_wander"), new IntRange(4, 7), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob(60, -1, 55, -1, -1, -1, new RandRange(8), "wander_dumb"), new IntRange(4, 7), 10);
                         //396 Starly : 33 Tackle : 45 Growl - later pairs
-                        poolSpawn.Spawns.Add(GetTeamMob(396, -1, 33, 45, -1, -1, new RandRange(6), "dumb_wander"), new IntRange(0, 4), 10);
-                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(396, -1, 33, 45, -1, -1, new RandRange(7), "dumb_wander"), GetGenericMob(396, -1, 33, 45, -1, -1, new RandRange(7), "dumb_wander")), new IntRange(4, 7), 20);
+                        poolSpawn.Spawns.Add(GetTeamMob(396, -1, 33, 45, -1, -1, new RandRange(6), "wander_dumb"), new IntRange(0, 4), 10);
+                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(396, -1, 33, 45, -1, -1, new RandRange(7), "wander_dumb"), GetGenericMob(396, -1, 33, 45, -1, -1, new RandRange(7), "wander_dumb")), new IntRange(4, 7), 20);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, 7), 12);
                         floorSegment.ZoneSteps.Add(poolSpawn);
@@ -647,13 +647,13 @@ namespace DataGenerator.Data
 
                         //need one super-effective for each possible starter
                         //403 Shinx : 033 Tackle : 43 Leer
-                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(403, -1, 33, 43, -1, -1, new RandRange(8), "dumb_wander"), GetGenericMob(403, -1, 33, 43, -1, -1, new RandRange(6), "dumb_wander")), new IntRange(0, 3), 10);
+                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(403, -1, 33, 43, -1, -1, new RandRange(8), "wander_dumb"), GetGenericMob(403, -1, 33, 43, -1, -1, new RandRange(6), "wander_dumb")), new IntRange(0, 3), 10);
                         //190 Aipom : 010 Scratch : Sand Attack
-                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(190, -1, 10, 28, -1, -1, new RandRange(8), "dumb_wander"), GetGenericMob(190, -1, 10, 28, -1, -1, new RandRange(8), "dumb_wander")), new IntRange(0, 3), 10);
+                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(190, -1, 10, 28, -1, -1, new RandRange(8), "wander_dumb"), GetGenericMob(190, -1, 10, 28, -1, -1, new RandRange(8), "wander_dumb")), new IntRange(0, 3), 10);
                         //161 Sentret : 10 Scratch : 111 Defense Curl
-                        poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, 111, -1, -1, new RandRange(10), "dumb_wander"), new IntRange(0, 3), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, 111, -1, -1, new RandRange(10), "wander_dumb"), new IntRange(0, 3), 10);
                         //396 Starly : 33 Tackle : 45 Growl - later pairs
-                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(396, -1, 33, 45, -1, -1, new RandRange(7), "dumb_wander"), GetGenericMob(396, -1, 33, 45, -1, -1, new RandRange(7), "dumb_wander")), new IntRange(0, 3), 20);
+                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(396, -1, 33, 45, -1, -1, new RandRange(7), "wander_dumb"), GetGenericMob(396, -1, 33, 45, -1, -1, new RandRange(7), "wander_dumb")), new IntRange(0, 3), 20);
                         //438 Bonsly : 88 Rock Throw
                         poolSpawn.Spawns.Add(GetTeamMob(438, -1, 88, -1, -1, -1, new RandRange(9), "weird_tree"), new IntRange(0, 3), 8);
 
@@ -1689,18 +1689,18 @@ namespace DataGenerator.Data
                     poolSpawn.Priority = PR_RESPAWN_MOB;
 
                     // 74 Geodude : 222 Magnitude : 479 Smack Down
-                    poolSpawn.Spawns.Add(GetTeamMob(74, -1, 222, 479, -1, -1, new RandRange(12), "dumb_wander"), new IntRange(0, 3), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob(74, -1, 222, 479, -1, -1, new RandRange(16), "dumb_wander"), new IntRange(3, 10), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(74, -1, 222, 479, -1, -1, new RandRange(12), "wander_dumb"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(74, -1, 222, 479, -1, -1, new RandRange(16), "wander_dumb"), new IntRange(3, 10), 10);
                     // 299 Nosepass : 88 Rock Throw : 86 Thunder Wave
-                    poolSpawn.Spawns.Add(GetTeamMob(299, -1, 88, 86, -1, -1, new RandRange(15), "dumb_wander"), new IntRange(6, 10), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(299, -1, 88, 86, -1, -1, new RandRange(15), "wander_dumb"), new IntRange(6, 10), 10);
                     // 231 Phanpy : 205 Rollout : 175 Flail
-                    poolSpawn.Spawns.Add(GetTeamMob(231, -1, 205, 175, -1, -1, new RandRange(12), "dumb_wander"), new IntRange(0, 10), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(231, -1, 205, 175, -1, -1, new RandRange(12), "wander_dumb"), new IntRange(0, 10), 10);
                     // 447 Riolu : 203 Endure : 98 Quick Attack 
-                    poolSpawn.Spawns.Add(GetTeamMob(447, -1, 203, 98, -1, -1, new RandRange(14), "dumb_wander"), new IntRange(3, 6), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(447, -1, 203, 98, -1, -1, new RandRange(14), "wander_dumb"), new IntRange(3, 6), 10);
                     //296  Makuhita : 292 Arm Thrust : 252 Fake Out 
-                    poolSpawn.Spawns.Add(GetTeamMob(296, -1, 292, 252, -1, -1, new RandRange(12), "dumb_wander"), new IntRange(0, 6), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(296, -1, 292, 252, -1, -1, new RandRange(12), "wander_dumb"), new IntRange(0, 6), 10);
                     // 207 Gligar : 98 Quick Attack : 282 Knock Off
-                    poolSpawn.Spawns.Add(GetTeamMob(207, -1, 98, 282, -1, -1, new RandRange(14), "dumb_wander"), new IntRange(0, 6), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(207, -1, 98, 282, -1, -1, new RandRange(14), "wander_dumb"), new IntRange(0, 6), 10);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, 10), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
@@ -1841,7 +1841,7 @@ namespace DataGenerator.Data
                             {
                                 // 213 Shuckle : 522 Struggle Bug : 110 Withdraw : 117 Bide
                                 SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                                MobSpawn mob = GetGenericMob(213, -1, 522, 110, 117, -1, new RandRange(12), "dumb_wander");
+                                MobSpawn mob = GetGenericMob(213, -1, 522, 110, 117, -1, new RandRange(12), "wander_dumb");
                                 mob.SpawnFeatures.Add(new MobSpawnItem(true, 10, 10, 72, 80));
                                 specificTeam.Spawns.Add(mob);
 
@@ -2052,10 +2052,10 @@ namespace DataGenerator.Data
                     poolSpawn.Priority = PR_RESPAWN_MOB;
 
                     //1//366 Clamperl : 128 Clamp : 250 Whirlpool
-                    poolSpawn.Spawns.Add(GetTeamMob(366, -1, 128, 250, -1, -1, new RandRange(18), "dumb_wander"), new IntRange(0, 5), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(366, -1, 128, 250, -1, -1, new RandRange(18), "wander_dumb"), new IntRange(0, 5), 10);
 
                     //17//116 Horsea : 055 Water Gun : 239 Twister
-                    poolSpawn.Spawns.Add(GetTeamMob(116, -1, 239, -1, -1, -1, new RandRange(18), "dumb_wander"), new IntRange(0, 5), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(116, -1, 239, -1, -1, -1, new RandRange(18), "wander_dumb"), new IntRange(0, 5), 10);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
@@ -3756,18 +3756,18 @@ namespace DataGenerator.Data
                     TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
                     poolSpawn.Priority = PR_RESPAWN_MOB;
                     // 32 Nidoran M : 38 Poison Point : 64 Peck
-                    poolSpawn.Spawns.Add(GetTeamMob(32, 38, 64, -1, -1, -1, new RandRange(5), "dumb_wander"), new IntRange(0, 3), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob(32, 38, 64, -1, -1, -1, new RandRange(8), "dumb_wander"), new IntRange(3, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(32, 38, 64, -1, -1, -1, new RandRange(5), "wander_dumb"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(32, 38, 64, -1, -1, -1, new RandRange(8), "wander_dumb"), new IntRange(3, 7), 10);
                     // 13 Weedle : 40 Poison Sting
-                    poolSpawn.Spawns.Add(GetTeamMob(13, -1, 40, -1, -1, -1, new RandRange(5), "dumb_wander"), new IntRange(0, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(13, -1, 40, -1, -1, -1, new RandRange(5), "wander_dumb"), new IntRange(0, 7), 10);
                     // 10 Caterpie : 81 String Shot : 33 Tackle
-                    poolSpawn.Spawns.Add(GetTeamMob(10, -1, 81, 33, -1, -1, new RandRange(5), "dumb_wander"), new IntRange(0, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(10, -1, 81, 33, -1, -1, new RandRange(5), "wander_dumb"), new IntRange(0, 7), 10);
                     // 406 Budew : 30 Natural Cure : 71 Absorb : 78 Stun Spore
-                    poolSpawn.Spawns.Add(GetTeamMob(406, 30, 71, 78, -1, -1, new RandRange(7), "dumb_wander"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(406, 30, 71, 78, -1, -1, new RandRange(7), "wander_dumb"), new IntRange(0, 3), 10);
                     // 285 Shroomish : 90 Poison Heal : 73 Leech Seed : 33 Tackle
-                    poolSpawn.Spawns.Add(GetTeamMob(285, 90, 73, 33, -1, -1, new RandRange(8), "dumb_wander"), new IntRange(3, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(285, 90, 73, 33, -1, -1, new RandRange(8), "wander_dumb"), new IntRange(3, 7), 10);
                     // 165 Ledyba : 48 Supersonic : 4 Comet Punch
-                    poolSpawn.Spawns.Add(GetTeamMob(165, -1, 48, 4, -1, -1, new RandRange(7), "dumb_wander"), new IntRange(3, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(165, -1, 48, 4, -1, -1, new RandRange(7), "wander_dumb"), new IntRange(3, 7), 10);
 
                     // 14 Kakuna : 106 Harden
                     poolSpawn.Spawns.Add(GetTeamMob(14, -1, 106, -1, -1, -1, new RandRange(8), "wait_attack"), new IntRange(3, 7), 10);
@@ -4072,11 +4072,11 @@ namespace DataGenerator.Data
                     poolSpawn.Priority = PR_RESPAWN_MOB;
 
                     // 406 Budew : 30 Natural Cure : 71 Absorb : 78 Stun Spore
-                    poolSpawn.Spawns.Add(GetTeamMob(406, 30, 71, 78, -1, -1, new RandRange(9), "dumb_wander"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(406, 30, 71, 78, -1, -1, new RandRange(9), "wander_dumb"), new IntRange(0, 3), 10);
                     // 285 Shroomish : 90 Poison Heal : 73 Leech Seed : 33 Tackle
-                    poolSpawn.Spawns.Add(GetTeamMob(285, 90, 73, 33, -1, -1, new RandRange(10), "dumb_wander"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(285, 90, 73, 33, -1, -1, new RandRange(10), "wander_dumb"), new IntRange(0, 3), 10);
                     // 165 Ledyba : 48 Supersonic : 4 Comet Punch
-                    poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(165, -1, 48, 4, -1, -1, new RandRange(10), "dumb_wander"), GetGenericMob(165, -1, 48, 4, -1, -1, new RandRange(10), "dumb_wander")), new IntRange(0, 3), 10);
+                    poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(165, -1, 48, 4, -1, -1, new RandRange(10), "wander_dumb"), GetGenericMob(165, -1, 48, 4, -1, -1, new RandRange(10), "wander_dumb")), new IntRange(0, 3), 10);
 
                     // 14 Kakuna : 106 Harden
                     poolSpawn.Spawns.Add(GetTeamMob(14, -1, 106, -1, -1, -1, new RandRange(9), "wait_attack"), new IntRange(0, 3), 10);
@@ -4084,11 +4084,11 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob(11, -1, 106, -1, -1, -1, new RandRange(9), "wait_attack"), new IntRange(0, 3), 10);
 
                     // 15 Beedrill : 41 Twineedle
-                    poolSpawn.Spawns.Add(GetTeamMob(15, -1, 41, -1, -1, -1, new RandRange(14), "dumb_wander"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(15, -1, 41, -1, -1, -1, new RandRange(14), "wander_dumb"), new IntRange(0, 3), 10);
                     // 12 Butterfree : 14 Compound Eyes : 78 Stun Spore : 79 Sleep powder : 77 Poison powder : 93 Confusion
-                    poolSpawn.Spawns.Add(GetTeamMob(12, 14, 78, 79, 77, 93, new RandRange(14), "dumb_wander"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(12, 14, 78, 79, 77, 93, new RandRange(14), "wander_dumb"), new IntRange(0, 3), 10);
                     // 33 Nidoran M : 38 Poison Point : 64 Peck
-                    poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(32, 38, 24, -1, -1, -1, new RandRange(10), "dumb_wander"), GetGenericMob(29, 38, 24, -1, -1, -1, new RandRange(10), "dumb_wander")), new IntRange(0, 3), 16);
+                    poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob(32, 38, 24, -1, -1, -1, new RandRange(10), "wander_dumb"), GetGenericMob(29, 38, 24, -1, -1, -1, new RandRange(10), "wander_dumb")), new IntRange(0, 3), 16);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, 3), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
