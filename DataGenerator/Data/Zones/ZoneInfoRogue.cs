@@ -555,21 +555,21 @@ namespace DataGenerator.Data
 
             {
                 //155 Cyndaquil : 43 Leer : 52 Ember
-                poolSpawn.Spawns.Add(GetTeamMob(155, -1, 43, 52, -1, -1, new RandRange(10), 7, true), new IntRange(3, 5), 10);
+                poolSpawn.Spawns.Add(GetTeamMob(155, -1, 43, 52, -1, -1, new RandRange(10), "normal_wander", true), new IntRange(3, 5), 10);
 
                 //152 Chikorita : 77 Poison Powder : 075 Razor Leaf
-                poolSpawn.Spawns.Add(GetTeamMob(152, -1, 77, 22, -1, -1, new RandRange(10), 7, true), new IntRange(3, 5), 10);
+                poolSpawn.Spawns.Add(GetTeamMob(152, -1, 77, 22, -1, -1, new RandRange(10), "normal_wander", true), new IntRange(3, 5), 10);
 
                 //158 Totodile : 44 Bite : 55 Water Gun
-                poolSpawn.Spawns.Add(GetTeamMob(158, -1, 44, 55, -1, -1, new RandRange(10), 7, true), new IntRange(3, 5), 10);
+                poolSpawn.Spawns.Add(GetTeamMob(158, -1, 44, 55, -1, -1, new RandRange(10), "normal_wander", true), new IntRange(3, 5), 10);
             }
 
 
             {
                 //266 Silcoon : 106 Harden : 450 Bug Bite
-                poolSpawn.Spawns.Add(GetTeamMob(266, -1, 106, 450, -1, -1, new RandRange(8), TeamMemberSpawn.MemberRole.Leader, 8), new IntRange(4, 6), 10);
+                poolSpawn.Spawns.Add(GetTeamMob(266, -1, 106, 450, -1, -1, new RandRange(8), TeamMemberSpawn.MemberRole.Leader, "wait_attack"), new IntRange(4, 6), 10);
                 //268 Cascoon : 106 Harden : 450 Bug Bite
-                poolSpawn.Spawns.Add(GetTeamMob(268, -1, 106, 450, -1, -1, new RandRange(8), TeamMemberSpawn.MemberRole.Leader, 8), new IntRange(4, 6), 10);
+                poolSpawn.Spawns.Add(GetTeamMob(268, -1, 106, 450, -1, -1, new RandRange(8), TeamMemberSpawn.MemberRole.Leader, "wait_attack"), new IntRange(4, 6), 10);
             }
 
             //if (ii >= 9 && ii < 10)
@@ -615,7 +615,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(108, -1, 35, 122, -1, -1, new RandRange(14), TeamMemberSpawn.MemberRole.Leader), new IntRange(6, 8), 10);
 
             //352 Kecleon : 168 Thief
-            poolSpawn.Spawns.Add(GetTeamMob(352, -1, 168, -1, -1, -1, new RandRange(11), TeamMemberSpawn.MemberRole.Loner, 11), new IntRange(6, 8), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(352, -1, 168, -1, -1, -1, new RandRange(11), TeamMemberSpawn.MemberRole.Loner, "thief"), new IntRange(6, 8), 10);
 
             //417 Pachirisu : 609 Nuzzle : 098 Quick Attack
             poolSpawn.Spawns.Add(GetTeamMob(417, -1, 609, 98, -1, -1, new RandRange(13)), new IntRange(6, 8), 10);
@@ -630,7 +630,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(316, -1, 124, 281, -1, -1, new RandRange(14)), new IntRange(7, 9), 10);
 
             //035 Clefairy : 56 Cute Charm : 516 Bestow : 1 Pound
-            poolSpawn.Spawns.Add(GetTeamMob(35, 56, 516, 1, -1, -1, new RandRange(15), 15), new IntRange(7, 9), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(35, 56, 516, 1, -1, -1, new RandRange(15), "item_finder"), new IntRange(7, 9), 10);
 
             //455 Carnivine : 275 Ingrain : 230 Sweet Scent : 44 Bite
             poolSpawn.Spawns.Add(GetTeamMob(455, -1, 275, 230, 44, -1, new RandRange(16)), new IntRange(7, 9), 10);
@@ -649,7 +649,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(96, -1, 95, 50, 96, -1, new RandRange(16)), new IntRange(8, 10), 10);
 
             //438 Bonsly : 102 Mimic? : 67 Low Kick : 88 Rock Throw
-            poolSpawn.Spawns.Add(GetTeamMob(438, -1, 102, 67, 88, -1, new RandRange(15), 10), new IntRange(8, 10), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(438, -1, 102, 67, 88, -1, new RandRange(15), "weird_tree"), new IntRange(8, 10), 10);
 
             //441 Chatot : 497 Echoed Voice : 297 Feather Dance
             poolSpawn.Spawns.Add(GetTeamMob(441, -1, 497, 297, -1, -1, new RandRange(18), TeamMemberSpawn.MemberRole.Loner), new IntRange(8, 10), 10);
@@ -667,7 +667,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(328, 71, 328, 91, -1, -1, new RandRange(18), TeamMemberSpawn.MemberRole.Leader), new IntRange(9, 11), 10);
 
             //17//446 Munchlax : 033 Tackle : 133 Amnesia : 498 Chip Away
-            poolSpawn.Spawns.Add(GetTeamMob(446, -1, 33, 133, 498, -1, new RandRange(20), 7, true), new IntRange(9, 11), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(446, -1, 33, 133, 498, -1, new RandRange(20), "normal_wander", true), new IntRange(9, 11), 10);
 
             //246 Larvitar : 103 Screech : 157 Rock Slide
             poolSpawn.Spawns.Add(GetTeamMob(246, -1, 103, 157, -1, -1, new RandRange(18)), new IntRange(9, 11), 10);
@@ -714,7 +714,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(194, -1, 341, 21, 133, -1, new RandRange(24)), new IntRange(11, 13), 10);
 
             //185 Sudowoodo : 335 Block : 157 Rock Slide : 102 Mimic
-            poolSpawn.Spawns.Add(GetTeamMob(185, -1, 335, 157, 102, -1, new RandRange(24), 10), new IntRange(11, 13), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(185, -1, 335, 157, 102, -1, new RandRange(24), "weird_tree"), new IntRange(11, 13), 10);
 
             //29//167 Spinarak : 169 Spider Web : 101 Night Shade
             poolSpawn.Spawns.Add(GetTeamMob(167, -1, 101, 169, -1, -1, new RandRange(25), TeamMemberSpawn.MemberRole.Support), new IntRange(12, 14), 10);
@@ -735,7 +735,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(238, -1, 186, 181, -1, -1, new RandRange(23)), new IntRange(12, 14), 10);
 
             //352 Kecleon : 168 Thief : 425 Shadow Sneak
-            poolSpawn.Spawns.Add(GetTeamMob(352, -1, 168, 425, -1, -1, new RandRange(25), TeamMemberSpawn.MemberRole.Support, 11), new IntRange(13, 15), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(352, -1, 168, 425, -1, -1, new RandRange(25), TeamMemberSpawn.MemberRole.Support, "thief"), new IntRange(13, 15), 10);
 
             //1//132 Ditto : 144 Transform
             poolSpawn.Spawns.Add(GetTeamMob(132, -1, 144, -1, -1, -1, new RandRange(20), TeamMemberSpawn.MemberRole.Loner), new IntRange(13, 15), 10);
@@ -768,7 +768,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(476, -1, 443, 393, 414, -1, new RandRange(26), TeamMemberSpawn.MemberRole.Loner), new IntRange(15, 17), 10);
 
             //353 Shuppet : 271 Trick : 180 Spite
-            poolSpawn.Spawns.Add(GetTeamMob(353, -1, 271, 180, -1, -1, new RandRange(25), 11), new IntRange(15, 17), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(353, -1, 271, 180, -1, -1, new RandRange(25), "thief"), new IntRange(15, 17), 10);
 
             //136 Flareon : 83 Fire Spin : 387 Last Resort
             poolSpawn.Spawns.Add(GetTeamMob(136, -1, 83, 387, -1, -1, new RandRange(26)), new IntRange(15, 17), 10);
@@ -789,7 +789,7 @@ namespace DataGenerator.Data
             //29//176 Togetic : 273 Wish : 227 Encore : 584 Fairy Wind
 
             //344 Claydol : 60 Psybeam : 246 Ancient Power : 100 Teleport
-            poolSpawn.Spawns.Add(GetTeamMob(344, -1, 60, 246, 100, -1, new RandRange(28), 13), new IntRange(15, 17), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(344, -1, 60, 246, 100, -1, new RandRange(28), "retreater"), new IntRange(15, 17), 10);
 
             //23//226 Mantine : 469 Wide Guard : 017 Wing Attack
 
@@ -829,7 +829,7 @@ namespace DataGenerator.Data
 
             //006 Charizard : 126 Fire Blast : 403 Air Slash
             {
-                TeamMemberSpawn mob = GetTeamMob(6, -1, 126, 17, -1, -1, new RandRange(45), TeamMemberSpawn.MemberRole.Loner, 7, true);
+                TeamMemberSpawn mob = GetTeamMob(6, -1, 126, 17, -1, -1, new RandRange(45), TeamMemberSpawn.MemberRole.Loner, "normal_wander", true);
                 mob.Spawn.SpawnFeatures.Add(new MobSpawnItem(true, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93));
                 poolSpawn.Spawns.Add(mob, new IntRange(17, 19), 10);
             }
@@ -893,7 +893,7 @@ namespace DataGenerator.Data
             //31//308 Medicham : 364 Feint : 244 Psych Up : 136 High Jump Kick
 
             //1//097 Hypno : 171 Nightmare : 093 Confusion : 415 Switcheroo
-            poolSpawn.Spawns.Add(GetTeamMob(97, -1, 171, 93, 415, -1, new RandRange(33), TeamMemberSpawn.MemberRole.Support, 11), new IntRange(19, 24), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(97, -1, 171, 93, 415, -1, new RandRange(33), TeamMemberSpawn.MemberRole.Support, "thief"), new IntRange(19, 24), 10);
 
             //43//411 Bastiodon : 368 Metal Burst : 269 Taunt
 
@@ -953,7 +953,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(429, -1, 595, 381, -1, -1, new RandRange(33), TeamMemberSpawn.MemberRole.Support), new IntRange(19, 21), 10);
 
             //352 Kecleon : 168 Thief : 425 Shadow Sneak : 485 Synchronoise
-            poolSpawn.Spawns.Add(GetTeamMob(352, -1, 168, 425, 485, -1, new RandRange(33), TeamMemberSpawn.MemberRole.Support, 11), new IntRange(19, 21), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(352, -1, 168, 425, 485, -1, new RandRange(33), TeamMemberSpawn.MemberRole.Support, "thief"), new IntRange(19, 21), 10);
 
 
             //29//122 Mr. Mime : 164 Substitute : 112 Barrier : 501 Quick Guard
@@ -964,7 +964,7 @@ namespace DataGenerator.Data
 
             //053 Persian : 415 Switcheroo : 185 Feint Attack : 129 Swift
             {
-                TeamMemberSpawn mob = GetTeamMob(53, -1, 415, 185, 129, -1, new RandRange(33), 11);
+                TeamMemberSpawn mob = GetTeamMob(53, -1, 415, 185, 129, -1, new RandRange(33), "thief");
                 mob.Spawn.SpawnFeatures.Add(new MobSpawnItem(true, 323, 324, 325, 326, 320));
                 poolSpawn.Spawns.Add(mob, new IntRange(20, 22), 10);
             }
@@ -999,13 +999,13 @@ namespace DataGenerator.Data
 
             //170 Mind Reader, 154 Fury Swipes, 405 Bug Buzz
             //291 Ninjask : 14 Swords Dance : 163 Slash
-            poolSpawn.Spawns.Add(GetTeamMob(291, -1, 14, 163, -1, -1, new RandRange(38), 13), new IntRange(21, 23), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(291, -1, 14, 163, -1, -1, new RandRange(38), "retreater"), new IntRange(21, 23), 10);
 
             //197 Umbreon : 212 Mean Look : 185 Feint Attack
             poolSpawn.Spawns.Add(GetTeamMob(197, -1, 212, 185, -1, -1, new RandRange(36), TeamMemberSpawn.MemberRole.Support), new IntRange(22, 24), 10);
 
             //32//262 Mightyena : 046 Roar : 168 Thief : 373 Embargo //run away when low on HP
-            poolSpawn.Spawns.Add(GetTeamMob(262, -1, 46, 168, 373, -1, new RandRange(37), TeamMemberSpawn.MemberRole.Support, 13), new IntRange(22, 24), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(262, -1, 46, 168, 373, -1, new RandRange(37), TeamMemberSpawn.MemberRole.Support, "retreater"), new IntRange(22, 24), 10);
 
             //221 Piloswine : 423 Ice Fang : 31 Fury Attack : 36 Take Down
             poolSpawn.Spawns.Add(GetTeamMob(221, -1, 423, 31, 36, -1, new RandRange(38)), new IntRange(22, 24), 10);
@@ -1038,7 +1038,7 @@ namespace DataGenerator.Data
 
             //110 Weezing : 194 Destiny Bond : 153 Explosion : 188 Sludge Bomb
             {
-                TeamMemberSpawn mob = GetTeamMob(110, 256, 194, 153, -1, -1, new RandRange(50), TeamMemberSpawn.MemberRole.Loner, 17, true);
+                TeamMemberSpawn mob = GetTeamMob(110, 256, 194, 153, -1, -1, new RandRange(50), TeamMemberSpawn.MemberRole.Loner, "normal_wander", true);
                 mob.Spawn.SpawnFeatures.Add(new MobSpawnItem(true, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93));
                 poolSpawn.Spawns.Add(mob, new IntRange(22, 25), 10);
             }
@@ -1071,14 +1071,14 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob(9, -1, 56, -1, -1, -1, new RandRange(40), TeamMemberSpawn.MemberRole.Loner), new IntRange(24, 27), 10);
 
             //31//475 Gallade : 469 Wide Guard : 427 Psycho Cut : 100 Teleport : 14 Swords Dance
-            poolSpawn.Spawns.Add(GetTeamMob(475, -1, 469, 427, 100, 14, new RandRange(40), TeamMemberSpawn.MemberRole.Leader, 13), new IntRange(24, 27), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(475, -1, 469, 427, 100, 14, new RandRange(40), TeamMemberSpawn.MemberRole.Leader, "retreater"), new IntRange(24, 27), 10);
             //282 Gardevoir : 94 Psychic : Wish : Moonblast
             poolSpawn.Spawns.Add(GetTeamMob(282, -1, 94, 273, 585, -1, new RandRange(40), TeamMemberSpawn.MemberRole.Support), new IntRange(24, 27), 10);
 
             //036 Clefable : 98 Magic Guard : 309 Meteor Mash : 236 Moonlight : 227 Encore
 
             //9//437 Bronzong : 241 Sunny Day : 240 Rain Dance : 286 Imprison : 360 Gyro Ball
-            poolSpawn.Spawns.Add(GetTeamMob(437, -1, 241, 240, 286, 360, new RandRange(42), 13), new IntRange(24, 28), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(437, -1, 241, 240, 286, 360, new RandRange(42), "retreater"), new IntRange(24, 28), 10);
 
             //13//358 Chimecho : 361 Healing Wish : 281 Yawn : 35 Wrap
             poolSpawn.Spawns.Add(GetTeamMob(358, -1, 361, 281, 35, -1, new RandRange(40), TeamMemberSpawn.MemberRole.Support), new IntRange(24, 27), 10);
@@ -1292,7 +1292,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
                 for (int ii = 0; ii < dexMap.Length; ii++)
-                    monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], 17), new IntRange(0, 30), 10);//all monsters in the game
+                    monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "smart_wander"), new IntRange(0, 30), 10);//all monsters in the game
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, 30), 10);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo, new RandRange(7, 13)), new IntRange(0, 10), 10);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo | EvoFlag.MidEvo, new RandRange(7, 13)), new IntRange(10, 20), 10);
@@ -1341,7 +1341,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
                 for (int ii = 0; ii < dexMap.Length; ii++)
-                    monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], 17), new IntRange(0, 30), 10);//all monsters in the game
+                    monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "smart_wander"), new IntRange(0, 30), 10);//all monsters in the game
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, 30), 10);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo, new RandRange(7, 13)), new IntRange(0, 10), 10);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo | EvoFlag.MidEvo, new RandRange(7, 13)), new IntRange(10, 20), 10);
@@ -1432,7 +1432,7 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(3, 7))), new IntRange(0, 30), 10);//apricorns
 
                 for (int ii = 0; ii < dexMap.Length; ii++)
-                    chestChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], 17), new IntRange(0, 30), 10);//all monsters in the game
+                    chestChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "smart_wander"), new IntRange(0, 30), 10);//all monsters in the game
                 chestChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo, new RandRange(7, 13)), new IntRange(0, 10), 10);
                 chestChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo | EvoFlag.MidEvo, new RandRange(7, 13)), new IntRange(10, 20), 10);
                 chestChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.All, new RandRange(7, 13)), new IntRange(12, 22), 10);
@@ -2658,7 +2658,7 @@ namespace DataGenerator.Data
                     //secret enemies
                     SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
                     // 218 Slugma : 510 Incinerate : 106 Harden
-                    specificTeam.Spawns.Add(GetGenericMob(218, -1, 510, 106, -1, -1, new RandRange(23), 9));
+                    specificTeam.Spawns.Add(GetGenericMob(218, -1, 510, 106, -1, -1, new RandRange(23), "patrol"));
 
                     //secret enemies
                     PlaceRandomMobsStep<MapGenContext> secretMobPlacement = new PlaceRandomMobsStep<MapGenContext>(new LoopedTeamSpawner<MapGenContext>(specificTeam, new RandRange(3, 6)));
@@ -2709,7 +2709,7 @@ namespace DataGenerator.Data
                 {
                     //142 Aerodactyl : 17 Wing Attack : 246 Ancient Power : 48 Supersonic : 97 Agility
                     SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                    MobSpawn mob = GetGenericMob(142, -1, 17, 246, 48, 97, new RandRange(48), 17);
+                    MobSpawn mob = GetGenericMob(142, -1, 17, 246, 48, 97, new RandRange(48), "smart_wander");
                     mob.SpawnFeatures.Add(new MobSpawnItem(true, 477));
                     specificTeam.Spawns.Add(mob);
 
@@ -3446,11 +3446,11 @@ namespace DataGenerator.Data
             //309 Electrike : 336 Howl : 033 Tackle
             poolSpawn.Spawns.Add(GetTeamMob(309, -1, 336, 033, -1, -1, new RandRange(6)), new IntRange(1, 5), 10);
             //412 Burmy : 033 Tackle
-            poolSpawn.Spawns.Add(GetTeamMob(412, -1, 033, -1, -1, -1, new RandRange(10), 25), new IntRange(3, 7), 5);
+            poolSpawn.Spawns.Add(GetTeamMob(412, -1, 033, -1, -1, -1, new RandRange(10), "turret"), new IntRange(3, 7), 5);
             //412 Burmy : 033 Tackle
-            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(412, 1, -1, Gender.Unknown), -1, 033, -1, -1, -1, new RandRange(10), 25), new IntRange(3, 7), 5);
+            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(412, 1, -1, Gender.Unknown), -1, 033, -1, -1, -1, new RandRange(10), "turret"), new IntRange(3, 7), 5);
             //412 Burmy : 033 Tackle
-            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(412, 2, -1, Gender.Unknown), -1, 033, -1, -1, -1, new RandRange(10), 25), new IntRange(3, 7), 5);
+            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(412, 2, -1, Gender.Unknown), -1, 033, -1, -1, -1, new RandRange(10), "turret"), new IntRange(3, 7), 5);
             //066 Machop : 067 Low Kick : 116 Focus Energy
             poolSpawn.Spawns.Add(GetTeamMob(066, -1, 067, 116, -1, -1, new RandRange(8)), new IntRange(3, 7), 10);
             //043 Oddish : 230 Sweet Scent : 051 Acid
@@ -3476,7 +3476,7 @@ namespace DataGenerator.Data
             //325 Spoink : 149 Psywave
             poolSpawn.Spawns.Add(GetTeamMob(325, -1, 149, -1, -1, -1, new RandRange(14)), new IntRange(5, 9), 10);
             //438 Bonsly : 313 Fake Tears : 067 Low Kick
-            poolSpawn.Spawns.Add(GetTeamMob(438, -1, 313, 067, -1, -1, new RandRange(14), TeamMemberSpawn.MemberRole.Loner, 10), new IntRange(5, 9), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(438, -1, 313, 067, -1, -1, new RandRange(14), TeamMemberSpawn.MemberRole.Loner, "weird_tree"), new IntRange(5, 9), 10);
             //077 Ponyta : 172 Flame Wheel : 039 Tail Whip
             poolSpawn.Spawns.Add(GetTeamMob(077, -1, 172, 039, -1, -1, new RandRange(13)), new IntRange(5, 9), 10);
             //060 Poliwag : 346 Water Sport : 055 Water Gun
@@ -3526,11 +3526,11 @@ namespace DataGenerator.Data
             //015 Beedrill : 390 Toxic Spikes : 228 Pursuit : 041 Twineedle
             poolSpawn.Spawns.Add(GetTeamMob(015, -1, 390, 228, 041, -1, new RandRange(25)), new IntRange(13, 17), 10);
             //413 Wormadam : 107 Anticipation : 075 Razor Leaf : 074 Growth
-            poolSpawn.Spawns.Add(GetTeamMob(413, 107, 075, 074, -1, -1, new RandRange(29), TeamMemberSpawn.MemberRole.Leader, 25), new IntRange(15, 19), 5);
+            poolSpawn.Spawns.Add(GetTeamMob(413, 107, 075, 074, -1, -1, new RandRange(29), TeamMemberSpawn.MemberRole.Leader, "turret"), new IntRange(15, 19), 5);
             //413 Wormadam : 107 Anticipation : 350 Rock Blast : 106 Harden
-            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(413, 1, -1, Gender.Unknown), 107, 350, 106, -1, -1, new RandRange(29), TeamMemberSpawn.MemberRole.Leader, 25), new IntRange(15, 19), 5);
+            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(413, 1, -1, Gender.Unknown), 107, 350, 106, -1, -1, new RandRange(29), TeamMemberSpawn.MemberRole.Leader, "turret"), new IntRange(15, 19), 5);
             //413 Wormadam : 107 Anticipation : 429 Mirror Shot : 319 Metal Sound
-            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(413, 2, -1, Gender.Unknown), 107, 429, 319, -1, -1, new RandRange(29), TeamMemberSpawn.MemberRole.Leader, 25), new IntRange(15, 19), 5);
+            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(413, 2, -1, Gender.Unknown), 107, 429, 319, -1, -1, new RandRange(29), TeamMemberSpawn.MemberRole.Leader, "turret"), new IntRange(15, 19), 5);
             //391 Monferno : 172 Flame Wheel : 259 Torment
             poolSpawn.Spawns.Add(GetTeamMob(391, -1, 172, 259, -1, -1, new RandRange(29)), new IntRange(15, 19), 10);
             //213 Shuckle : 227 Encore : 522 Struggle Bug
@@ -3604,16 +3604,16 @@ namespace DataGenerator.Data
             //392 Infernape : 370 Close Combat : 394 Flare Blitz
             poolSpawn.Spawns.Add(GetTeamMob(392, -1, 370, 394, -1, -1, new RandRange(47)), new IntRange(26, 31), 10);
             //413 Wormadam : 107 Anticipation : 319 Metal Sound : 445 Captivate : 213 Attract
-            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(413, 2, -1, Gender.Unknown), 107, 319, 445, 213, -1, new RandRange(48), TeamMemberSpawn.MemberRole.Loner, 25), new IntRange(28, 35), 5);
+            poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(413, 2, -1, Gender.Unknown), 107, 319, 445, 213, -1, new RandRange(48), TeamMemberSpawn.MemberRole.Loner, "turret"), new IntRange(28, 35), 5);
             //413 Wormadam : 107 Anticipation : 437 Leaf Storm : 445 Captivate : 213 Attract
-            poolSpawn.Spawns.Add(GetTeamMob(413, 107, 437, 445, 213, -1, new RandRange(48), TeamMemberSpawn.MemberRole.Loner, 25), new IntRange(28, 35), 5);
+            poolSpawn.Spawns.Add(GetTeamMob(413, 107, 437, 445, 213, -1, new RandRange(48), TeamMemberSpawn.MemberRole.Loner, "turret"), new IntRange(28, 35), 5);
             //217 Ursaring : 095 Quick Feet : 359 Hammer Arm : 230 Sweet Scent
             poolSpawn.Spawns.Add(GetTeamMob(217, 095, 359, 230, -1, -1, new RandRange(48)), new IntRange(26, 31), 10);
             //024 Arbok : 114 Haze : 380 Gastro Acid : 254 Stockpile : 242 Crunch
             poolSpawn.Spawns.Add(GetTeamMob(024, -1, 114, 380, 254, 242, new RandRange(48), TeamMemberSpawn.MemberRole.Support), new IntRange(28, 31), 20);
             //185 Sudowoodo : 068 Counter : 452 Wood Hammer
             //make this spawn at doorsteps
-            poolSpawn.Spawns.Add(GetTeamMob(185, -1, 068, 452, -1, -1, new RandRange(48), TeamMemberSpawn.MemberRole.Loner, 10), new IntRange(28, 31), 10);
+            poolSpawn.Spawns.Add(GetTeamMob(185, -1, 068, 452, -1, -1, new RandRange(48), TeamMemberSpawn.MemberRole.Loner, "weird_tree"), new IntRange(28, 31), 10);
             //469 Yanmega : 003 Speed Boost : 048 Supersonic : 246 Ancient Power
             poolSpawn.Spawns.Add(GetTeamMob(469, 003, 048, 246, -1, -1, new RandRange(48)), new IntRange(31, 35), 10);
             //334 Altaria : 434 Draco Meteor : 219 Safeguard : 363 Natural Gift

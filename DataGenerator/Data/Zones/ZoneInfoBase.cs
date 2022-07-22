@@ -278,7 +278,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(351, -1, -1, -1, -1, -1, new RandRange(18), 7, true), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(351, -1, -1, -1, -1, -1, new RandRange(18), "normal_wander", true), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -876,7 +876,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), 16), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "dumb_wander"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1021,7 +1021,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), 16), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "dumb_wander"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1181,7 +1181,7 @@ namespace DataGenerator.Data
                     //sky-only mobs
                     {
                         SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                        specificTeam.Spawns.Add(GetGenericMob(149, -1, 35, 43, -1, -1, new RandRange(15), 9));
+                        specificTeam.Spawns.Add(GetGenericMob(149, -1, 35, 43, -1, -1, new RandRange(15), "patrol"));
 
                         LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(specificTeam);
                         {
@@ -1357,7 +1357,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(25), 16), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(25), "dumb_wander"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1694,7 +1694,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(25), 16), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(25), "dumb_wander"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1809,7 +1809,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), 16), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "dumb_wander"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1911,7 +1911,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), 16), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, -1, 10, -1, -1, -1, new RandRange(2), "dumb_wander"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -2174,7 +2174,7 @@ namespace DataGenerator.Data
                         effect.TileStates.Set(itemSpawn);
                         MobSpawnState mobSpawn = new MobSpawnState();
                         for (int ii = 0; ii < 16; ii++)
-                            mobSpawn.Spawns.Add(GetGenericMob(260 + ii, -1, -1, -1, -1, -1, new RandRange(10), 7));
+                            mobSpawn.Spawns.Add(GetGenericMob(260 + ii, -1, -1, -1, -1, -1, new RandRange(10)));
                         effect.TileStates.Set(mobSpawn);
                         ((Tile)drawStep.Tiles[4][4]).Effect = effect;
 
@@ -2196,7 +2196,7 @@ namespace DataGenerator.Data
                         effect.TileStates.Set(itemSpawn);
                         MobSpawnState mobSpawn = new MobSpawnState();
                         for (int ii = 0; ii < 16; ii++)
-                            mobSpawn.Spawns.Add(GetGenericMob(260 + ii, -1, -1, -1, -1, -1, new RandRange(10), 7));
+                            mobSpawn.Spawns.Add(GetGenericMob(260 + ii, -1, -1, -1, -1, -1, new RandRange(10)));
                         effect.TileStates.Set(mobSpawn);
                         ((Tile)drawStep.Tiles[5][5]).Effect = effect;
                     }
