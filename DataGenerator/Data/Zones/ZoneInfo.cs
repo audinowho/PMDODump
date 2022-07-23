@@ -175,7 +175,7 @@ namespace DataGenerator.Data
                         AddEnemySpawnData(layout, 20, new RandRange(2, 4));
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //construct paths
@@ -211,7 +211,7 @@ namespace DataGenerator.Data
 
                         if (ii == 3)
                         {
-                            EffectTile secretTile = new EffectTile(35, false);
+                            EffectTile secretTile = new EffectTile("stairs_secret_down", false);
                             secretTile.TileStates.Set(new DestState(new SegLoc(1, 0)));
                             RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
@@ -453,7 +453,7 @@ namespace DataGenerator.Data
                             AddEnemySpawnData(layout, 20, new RandRange(2, 5));
 
                             //traps
-                            AddSingleTrapStep(layout, new RandRange(5, 7), 27);//wonder tile
+                            AddSingleTrapStep(layout, new RandRange(5, 7), "tile_wonder");//wonder tile
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
 
@@ -538,7 +538,7 @@ namespace DataGenerator.Data
                                 }
                                 //sealing the vault
                                 {
-                                    SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>(40, 41, false);
+                                    SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch", false);
                                     vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                                     vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                                     vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -548,7 +548,7 @@ namespace DataGenerator.Data
                                 {
                                     BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
 
-                                    EffectTile secretStairs = new EffectTile(34, true);
+                                    EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                                     secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
                                     treasures.SpecificSpawns.Add(secretStairs);
 
@@ -689,7 +689,7 @@ namespace DataGenerator.Data
                             AddEnemySpawnData(layout, 20, new RandRange(2, 4));
 
                             //traps
-                            AddSingleTrapStep(layout, new RandRange(5, 8), 27);//wonder tile
+                            AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
                             //construct paths
@@ -929,7 +929,7 @@ namespace DataGenerator.Data
                         AddEnemySpawnData(layout, 20, new RandRange(2, 4));
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //construct paths
@@ -967,10 +967,10 @@ namespace DataGenerator.Data
 
                         if (ii == 4)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>("sealed_door", 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
-                            EffectTile secretStairs = new EffectTile(34, true);
+                            EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                             //secretStairs.TileStates.Set(new DestState(15, new SegLoc(0, 0)));//To Treacherous Mountain 1F
                             sealedDetour.TileTreasures.SpecificSpawns.Add(secretStairs);
                             layout.GenSteps.Add(PR_EXITS_DETOUR, sealedDetour);
@@ -1036,7 +1036,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", 04);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - 3,036P to 6,210P
@@ -1087,10 +1087,10 @@ namespace DataGenerator.Data
 
                         if (ii == 3)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>("sealed_door", 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
-                            EffectTile secretStairs = new EffectTile(34, true);
+                            EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                             //secretStairs.TileStates.Set(new DestState(11, new SegLoc(0, 8)));//To Igneous Tunnel 9F
                             sealedDetour.TileTreasures.SpecificSpawns.Add(secretStairs);
                             layout.GenSteps.Add(PR_EXITS_DETOUR, sealedDetour);
@@ -1158,7 +1158,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "sky_peak_summit_pass_wall", "sky_peak_summit_pass_floor", "sky_peak_summit_pass_secondary", 02);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - 5,278P to 10,353P
@@ -1271,7 +1271,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "sky_ruins_area_wall", "northwind_field_floor", "northwind_field_secondary", 17, true);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - 7,650P to 19,380P
@@ -1395,7 +1395,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "wish_cave_2_wall", "wish_cave_2_floor", "wish_cave_2_secondary", 16);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - 9,280P to 25,536P
@@ -1458,20 +1458,20 @@ namespace DataGenerator.Data
 
                         if (ii == 1)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>("sealed_door", 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
-                            EffectTile secretStairs = new EffectTile(34, true);
+                            EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                             //secretStairs.TileStates.Set(new DestState(12, new SegLoc(0, 2)));//To Shimmer Bay 3F
                             sealedDetour.TileTreasures.SpecificSpawns.Add(secretStairs);
                             layout.GenSteps.Add(PR_EXITS_DETOUR, sealedDetour);
                         }
                         else if (ii == 11)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>("sealed_door", 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
-                            EffectTile secretStairs = new EffectTile(34, true);
+                            EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                             //secretStairs.TileStates.Set(new DestState(11, new SegLoc(0, 0)));//To Igneous Tunnel 1F
                             sealedDetour.TileTreasures.SpecificSpawns.Add(secretStairs);
                             layout.GenSteps.Add(PR_EXITS_DETOUR, sealedDetour);
@@ -1536,7 +1536,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary", 05);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - 4,416P to 7,866P
@@ -1708,8 +1708,8 @@ namespace DataGenerator.Data
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
-                    tileSpawn.Spawns.Add(new EffectTile(17, false), new IntRange(0, 10), 10);//chestnut trap
-                    tileSpawn.Spawns.Add(new EffectTile(23, false), new IntRange(0, 10), 10);//trip trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_chestnut", false), new IntRange(0, 10), 10);//chestnut trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_trip", false), new IntRange(0, 10), 10);//trip trap
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
 
@@ -1733,7 +1733,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "amp_plains_wall", "amp_plains_floor", "amp_plains_secondary", 16);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         if (ii < 6)
                             AddTrapsSteps(layout, new RandRange(12, 16));
                         else
@@ -1939,7 +1939,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "magma_cavern_2_wall", "magma_cavern_2_floor", "magma_cavern_2_secondary", 07);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - 1,560P to 5,850P
@@ -1995,10 +1995,10 @@ namespace DataGenerator.Data
 
                         if (ii == 7)
                         {
-                            KeyDetourStep<ListMapGenContext> sealedDetour = new KeyDetourStep<ListMapGenContext>(39, 455);
+                            KeyDetourStep<ListMapGenContext> sealedDetour = new KeyDetourStep<ListMapGenContext>("sealed_door", 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<ListMapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
-                            EffectTile secretStairs = new EffectTile(34, true);
+                            EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                             //secretStairs.TileStates.Set(new DestState(9, new SegLoc(0, 0)));//To Lunar Range 1F
                             sealedDetour.TileTreasures.SpecificSpawns.Add(secretStairs);
                             layout.GenSteps.Add(PR_EXITS_DETOUR, sealedDetour);
@@ -2082,7 +2082,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "purity_forest_4_wall", "purity_forest_4_floor", "purity_forest_4_secondary", 18);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - 630P to 1,197P
@@ -2129,7 +2129,7 @@ namespace DataGenerator.Data
                         AddDrawGridSteps(layout);
 
                         {
-                            EffectTile exitTile = new EffectTile(49, true);
+                            EffectTile exitTile = new EffectTile("stairs_back_down", true);
                             exitTile.TileStates.Set(new DestState(new SegLoc(0, -1), true));
                             var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
                             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
@@ -2138,7 +2138,7 @@ namespace DataGenerator.Data
                         }
                         if (ii < max_floors - 1)
                         {
-                            EffectTile secretTile = new EffectTile(2, true);
+                            EffectTile secretTile = new EffectTile("stairs_go_down", true);
                             RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                         }
@@ -2208,7 +2208,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "quicksand_cave_wall", "quicksand_cave_floor", "quicksand_cave_secondary", 11);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - 1,020P to 4,284P
@@ -2262,10 +2262,10 @@ namespace DataGenerator.Data
 
                         if (ii == 7)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>("sealed_door", 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
-                            EffectTile secretStairs = new EffectTile(34, true);
+                            EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                             //secretStairs.TileStates.Set(new DestState(14, new SegLoc(0, 0)));//To Ambush Forest 1F
                             sealedDetour.TileTreasures.SpecificSpawns.Add(secretStairs);
                             layout.GenSteps.Add(PR_EXITS_DETOUR, sealedDetour);
@@ -2340,7 +2340,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "rescue_team_maze_wall", "rescue_team_maze_floor", "rescue_team_maze_secondary", 01);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - Ballpark 35K
@@ -2455,7 +2455,7 @@ namespace DataGenerator.Data
                         //should we add dark crater here or?...
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - Ballpark 30K
@@ -2567,18 +2567,18 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "great_canyon_wall", "great_canyon_floor", "great_canyon_secondary", 11);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
 
                         if (ii == 0)
-                            AddSingleTrapStep(layout, new RandRange(35), 51);//compass tile
+                            AddSingleTrapStep(layout, new RandRange(35), "tile_compass");//compass tile
                         else
-                            AddSingleTrapStep(layout, new RandRange(60), 51);//compass tile
+                            AddSingleTrapStep(layout, new RandRange(60), "tile_compass");//compass tile
 
                         if (ii < 2)
                         {
-                            EffectTile secretTile = new EffectTile(51, true);
+                            EffectTile secretTile = new EffectTile("tile_compass", true);
                             NearSpawnableSpawnStep<MapGenContext, EffectTile, MapGenEntrance> trapStep = new NearSpawnableSpawnStep<MapGenContext, EffectTile, MapGenEntrance>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)), 100);
                             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                         }
@@ -2654,17 +2654,17 @@ namespace DataGenerator.Data
 
                         if (ii == 2)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>("sealed_door", 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
-                            EffectTile secretStairs = new EffectTile(34, true);
+                            EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                             //secretStairs.TileStates.Set(new DestState(18, new SegLoc(0, 0)));//To Relic Tower 1F
                             sealedDetour.TileTreasures.SpecificSpawns.Add(secretStairs);
                             layout.GenSteps.Add(PR_EXITS_DETOUR, sealedDetour);
                         }
 
                         {
-                            SetCompassStep<MapGenContext> trapStep = new SetCompassStep<MapGenContext>(51);
+                            SetCompassStep<MapGenContext> trapStep = new SetCompassStep<MapGenContext>("tile_compass");
                             layout.GenSteps.Add(new Priority(6, 1), trapStep);
                         }
 
@@ -2729,7 +2729,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", 12);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - Ballpark 25K
@@ -2838,7 +2838,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "joyous_tower_wall", "joyous_tower_floor", "joyous_tower_secondary", 15);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - Ballpark 25K
@@ -2959,7 +2959,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", 10);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - 750P to 3,150P
@@ -3012,30 +3012,30 @@ namespace DataGenerator.Data
 
                         if (ii == 2)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>("sealed_door", 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
-                            EffectTile secretStairs = new EffectTile(34, true);
+                            EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                             //secretStairs.TileStates.Set(new DestState(8, new SegLoc(0, 3)));//To Cave of Whispers 4F
                             sealedDetour.TileTreasures.SpecificSpawns.Add(secretStairs);
                             layout.GenSteps.Add(PR_EXITS_DETOUR, sealedDetour);
                         }
                         else if (ii == 5)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>("sealed_door", 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
-                            EffectTile secretStairs = new EffectTile(34, true);
+                            EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                             //secretStairs.TileStates.Set(new DestState(13, new SegLoc(0, 0)));//To Windy Valley 1F
                             sealedDetour.TileTreasures.SpecificSpawns.Add(secretStairs);
                             layout.GenSteps.Add(PR_EXITS_DETOUR, sealedDetour);
                         }
                         else if (ii == 9)
                         {
-                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>(39, 455);
+                            KeyDetourStep<MapGenContext> sealedDetour = new KeyDetourStep<MapGenContext>("sealed_door", 455);
                             sealedDetour.HallLength = new RandRange(2, 5);
                             sealedDetour.GenericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
-                            EffectTile secretStairs = new EffectTile(34, true);
+                            EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                             //secretStairs.TileStates.Set(new DestState(17, new SegLoc(0, 0)));//To Wayward Snow Path 1F
                             sealedDetour.TileTreasures.SpecificSpawns.Add(secretStairs);
                             layout.GenSteps.Add(PR_EXITS_DETOUR, sealedDetour);
@@ -3104,7 +3104,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", 14);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - Ballpark 25K
@@ -3225,7 +3225,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "spacial_rift_2_wall", "spacial_rift_2_floor", "spacial_rift_2_secondary", 15);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - Ballpark 20K
@@ -3329,7 +3329,7 @@ namespace DataGenerator.Data
                         AddTextureData(layout, "golden_chamber_wall", "golden_chamber_floor", "golden_chamber_secondary", 13);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - Ballpark 40K
@@ -3437,7 +3437,7 @@ namespace DataGenerator.Data
                         AddTextureData(layout, "sky_tower_wall", "sky_tower_floor", "sky_tower_secondary", 08);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - Ballpark 30K
@@ -3607,7 +3607,7 @@ namespace DataGenerator.Data
 
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
                         //money - Ballpark 90K
@@ -3818,7 +3818,7 @@ namespace DataGenerator.Data
                         AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", 1);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(5, 7), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(5, 7), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(5, 7));
 
                         //money - 315P to 1,260P
@@ -3919,7 +3919,7 @@ namespace DataGenerator.Data
                             }
                             //sealing the vault
                             {
-                                KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>(40, 39, 455);
+                                KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>("sealed_block", "sealed_door", 455);
                                 vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                                 layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
                             }
@@ -3947,7 +3947,7 @@ namespace DataGenerator.Data
                             {
                                 BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
 
-                                EffectTile secretStairs = new EffectTile(34, true);
+                                EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                                 secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
                                 treasures.SpecificSpawns.Add(secretStairs);
 
@@ -4119,7 +4119,7 @@ namespace DataGenerator.Data
                         AddEnemySpawnData(layout, 20, new RandRange(2, 4));
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(5, 7), 27);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(5, 7), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(5, 7));
 
 
@@ -4545,16 +4545,16 @@ namespace DataGenerator.Data
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
-                    tileSpawn.Spawns.Add(new EffectTile(7, false), new IntRange(0, max_floors), 10);//mud trap
-                    tileSpawn.Spawns.Add(new EffectTile(3, true), new IntRange(0, max_floors), 10);//poison trap
-                    tileSpawn.Spawns.Add(new EffectTile(4, true), new IntRange(0, max_floors), 10);//sleep trap
-                    tileSpawn.Spawns.Add(new EffectTile(11, false), new IntRange(0, max_floors), 10);//sticky trap
-                    tileSpawn.Spawns.Add(new EffectTile(8, true), new IntRange(0, max_floors), 10);//seal trap
-                    tileSpawn.Spawns.Add(new EffectTile(15, true), new IntRange(0, max_floors), 10);//summon trap
-                    tileSpawn.Spawns.Add(new EffectTile(6, true), new IntRange(0, max_floors), 10);//slow trap
-                    tileSpawn.Spawns.Add(new EffectTile(5, true), new IntRange(0, max_floors), 10);//spin trap
-                    tileSpawn.Spawns.Add(new EffectTile(10, true), new IntRange(0, max_floors), 10);//grimy trap
-                    tileSpawn.Spawns.Add(new EffectTile(28, true), new IntRange(0, max_floors), 20);//trigger trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_mud", false), new IntRange(0, max_floors), 10);//mud trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_poison", true), new IntRange(0, max_floors), 10);//poison trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_slumber", true), new IntRange(0, max_floors), 10);//sleep trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_sticky", false), new IntRange(0, max_floors), 10);//sticky trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_seal", true), new IntRange(0, max_floors), 10);//seal trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_summon", true), new IntRange(0, max_floors), 10);//summon trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_slow", true), new IntRange(0, max_floors), 10);//slow trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_spin", true), new IntRange(0, max_floors), 10);//spin trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_grimy", true), new IntRange(0, max_floors), 10);//grimy trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_trigger", true), new IntRange(0, max_floors), 20);//trigger trap
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
 
@@ -4619,7 +4619,7 @@ namespace DataGenerator.Data
 
                         //sealing the vault
                         {
-                            KeySealStep<ListMapGenContext> vaultStep = new KeySealStep<ListMapGenContext>(40, 39, 455);
+                            KeySealStep<ListMapGenContext> vaultStep = new KeySealStep<ListMapGenContext>("sealed_block", "sealed_door", 455);
                             vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                             vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_TILES_GEN_EXTRA, vaultStep));
                         }
@@ -4855,7 +4855,7 @@ namespace DataGenerator.Data
                             AddWaterSteps(layout, "abyss", new RandRange(20), false);//abyss
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), 27, false);//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder", false);//wonder tile
                         AddTrapsSteps(layout, new RandRange(12, 16));
 
                         //money

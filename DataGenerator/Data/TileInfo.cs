@@ -25,8 +25,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_TILES; ii++)
             {
                 (string, TileData) tile = GetTileData(ii);
-                System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{1}", ii, tile.Item1));
-                DataManager.SaveData(tile.Item1, DataManager.DataType.Tile.ToString(), tile.Item2);
+                if (tile.Item1 != "")
+                    DataManager.SaveData(tile.Item1, DataManager.DataType.Tile.ToString(), tile.Item2);
             }
         }
 

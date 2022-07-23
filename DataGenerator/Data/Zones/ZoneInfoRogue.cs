@@ -1144,29 +1144,29 @@ namespace DataGenerator.Data
 
             TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
             tileSpawn.Priority = PR_RESPAWN_TRAP;
-            tileSpawn.Spawns.Add(new EffectTile(7, false), new IntRange(0, max_floors), 10);//mud trap
-            tileSpawn.Spawns.Add(new EffectTile(13, true), new IntRange(0, max_floors), 10);//warp trap
-            tileSpawn.Spawns.Add(new EffectTile(14, false), new IntRange(0, max_floors), 10);//gust trap
-            tileSpawn.Spawns.Add(new EffectTile(17, false), new IntRange(0, max_floors), 10);//chestnut trap
-            tileSpawn.Spawns.Add(new EffectTile(3, false), new IntRange(0, max_floors), 10);//poison trap
-            tileSpawn.Spawns.Add(new EffectTile(4, false), new IntRange(0, max_floors), 10);//sleep trap
-            tileSpawn.Spawns.Add(new EffectTile(11, false), new IntRange(0, max_floors), 10);//sticky trap
-            tileSpawn.Spawns.Add(new EffectTile(8, false), new IntRange(0, max_floors), 10);//seal trap
-            tileSpawn.Spawns.Add(new EffectTile(18, false), new IntRange(0, max_floors), 10);//selfdestruct trap
-            tileSpawn.Spawns.Add(new EffectTile(23, true), new IntRange(0, 15), 10);//trip trap
-            tileSpawn.Spawns.Add(new EffectTile(23, false), new IntRange(15, max_floors), 10);//trip trap
-            tileSpawn.Spawns.Add(new EffectTile(25, true), new IntRange(0, max_floors), 10);//hunger trap
-            tileSpawn.Spawns.Add(new EffectTile(12, true), new IntRange(0, 15), 3);//apple trap
-            tileSpawn.Spawns.Add(new EffectTile(12, false), new IntRange(15, max_floors), 3);//apple trap
-            tileSpawn.Spawns.Add(new EffectTile(9, true), new IntRange(0, max_floors), 10);//pp-leech trap
-            tileSpawn.Spawns.Add(new EffectTile(15, false), new IntRange(0, max_floors), 10);//summon trap
-            tileSpawn.Spawns.Add(new EffectTile(19, false), new IntRange(0, max_floors), 10);//explosion trap
-            tileSpawn.Spawns.Add(new EffectTile(6, false), new IntRange(0, max_floors), 10);//slow trap
-            tileSpawn.Spawns.Add(new EffectTile(5, false), new IntRange(0, max_floors), 10);//spin trap
-            tileSpawn.Spawns.Add(new EffectTile(10, false), new IntRange(0, max_floors), 10);//grimy trap
-            tileSpawn.Spawns.Add(new EffectTile(28, true), new IntRange(0, max_floors), 20);//trigger trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_mud", false), new IntRange(0, max_floors), 10);//mud trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_warp", true), new IntRange(0, max_floors), 10);//warp trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_gust", false), new IntRange(0, max_floors), 10);//gust trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_chestnut", false), new IntRange(0, max_floors), 10);//chestnut trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_poison", false), new IntRange(0, max_floors), 10);//poison trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_slumber", false), new IntRange(0, max_floors), 10);//sleep trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_sticky", false), new IntRange(0, max_floors), 10);//sticky trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_seal", false), new IntRange(0, max_floors), 10);//seal trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_self_destruct", false), new IntRange(0, max_floors), 10);//selfdestruct trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_trip", true), new IntRange(0, 15), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_trip", false), new IntRange(15, max_floors), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_hunger", true), new IntRange(0, max_floors), 10);//hunger trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_apple", true), new IntRange(0, 15), 3);//apple trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_apple", false), new IntRange(15, max_floors), 3);//apple trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_pp_leech", true), new IntRange(0, max_floors), 10);//pp-leech trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_summon", false), new IntRange(0, max_floors), 10);//summon trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_explosion", false), new IntRange(0, max_floors), 10);//explosion trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_slow", false), new IntRange(0, max_floors), 10);//slow trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_spin", false), new IntRange(0, max_floors), 10);//spin trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_grimy", false), new IntRange(0, max_floors), 10);//grimy trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_trigger", true), new IntRange(0, max_floors), 20);//trigger trap
                                                                                             //pokemon trap
-            tileSpawn.Spawns.Add(new EffectTile(24, true), new IntRange(15, max_floors), 10);//grudge trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_grudge", true), new IntRange(15, max_floors), 10);//grudge trap
                                                                                              //training switch
             floorSegment.ZoneSteps.Add(tileSpawn);
 
@@ -1487,7 +1487,7 @@ namespace DataGenerator.Data
 
                 //sealing the vault
                 {
-                    SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>(40, 41, true);
+                    SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", true);
                     vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                     vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                     vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -2010,7 +2010,7 @@ namespace DataGenerator.Data
 
                 //sealing the boss room and treasure room
                 {
-                    BossSealStep<ListMapGenContext> vaultStep = new BossSealStep<ListMapGenContext>(40, 38);
+                    BossSealStep<ListMapGenContext> vaultStep = new BossSealStep<ListMapGenContext>("sealed_block", "tile_boss");
                     vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
                     vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
                     bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_TILES_GEN_EXTRA, vaultStep));
@@ -2494,9 +2494,9 @@ namespace DataGenerator.Data
                     wonderTileRange = new RandRange(4);
 
                 if (ii < 18)
-                    AddSingleTrapStep(layout, wonderTileRange, 27, true);
+                    AddSingleTrapStep(layout, wonderTileRange, "tile_wonder", true);
                 else
-                    AddSingleTrapStep(layout, wonderTileRange, 27, false);
+                    AddSingleTrapStep(layout, wonderTileRange, "tile_wonder", false);
 
                 //traps
                 RandRange trapRange = new RandRange(0);
@@ -3702,29 +3702,29 @@ namespace DataGenerator.Data
 
             TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
             tileSpawn.Priority = PR_RESPAWN_TRAP;
-            tileSpawn.Spawns.Add(new EffectTile(7, false), new IntRange(0, max_floors), 10);//mud trap
-            tileSpawn.Spawns.Add(new EffectTile(13, true), new IntRange(0, max_floors), 10);//warp trap
-            tileSpawn.Spawns.Add(new EffectTile(14, false), new IntRange(0, max_floors), 10);//gust trap
-            tileSpawn.Spawns.Add(new EffectTile(17, false), new IntRange(0, max_floors), 10);//chestnut trap
-            tileSpawn.Spawns.Add(new EffectTile(3, false), new IntRange(0, max_floors), 10);//poison trap
-            tileSpawn.Spawns.Add(new EffectTile(4, false), new IntRange(0, max_floors), 10);//sleep trap
-            tileSpawn.Spawns.Add(new EffectTile(11, false), new IntRange(0, max_floors), 10);//sticky trap
-            tileSpawn.Spawns.Add(new EffectTile(8, false), new IntRange(0, max_floors), 10);//seal trap
-            tileSpawn.Spawns.Add(new EffectTile(18, false), new IntRange(0, max_floors), 10);//selfdestruct trap
-            tileSpawn.Spawns.Add(new EffectTile(23, true), new IntRange(0, 15), 10);//trip trap
-            tileSpawn.Spawns.Add(new EffectTile(23, false), new IntRange(15, max_floors), 10);//trip trap
-            tileSpawn.Spawns.Add(new EffectTile(25, true), new IntRange(0, max_floors), 10);//hunger trap
-            tileSpawn.Spawns.Add(new EffectTile(12, true), new IntRange(0, 15), 3);//apple trap
-            tileSpawn.Spawns.Add(new EffectTile(12, false), new IntRange(15, max_floors), 3);//apple trap
-            tileSpawn.Spawns.Add(new EffectTile(9, true), new IntRange(0, max_floors), 10);//pp-leech trap
-            tileSpawn.Spawns.Add(new EffectTile(15, false), new IntRange(0, max_floors), 10);//summon trap
-            tileSpawn.Spawns.Add(new EffectTile(19, false), new IntRange(0, max_floors), 10);//explosion trap
-            tileSpawn.Spawns.Add(new EffectTile(6, false), new IntRange(0, max_floors), 10);//slow trap
-            tileSpawn.Spawns.Add(new EffectTile(5, false), new IntRange(0, max_floors), 10);//spin trap
-            tileSpawn.Spawns.Add(new EffectTile(10, false), new IntRange(0, max_floors), 10);//grimy trap
-            tileSpawn.Spawns.Add(new EffectTile(28, true), new IntRange(0, max_floors), 20);//trigger trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_mud", false), new IntRange(0, max_floors), 10);//mud trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_warp", true), new IntRange(0, max_floors), 10);//warp trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_gust", false), new IntRange(0, max_floors), 10);//gust trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_chestnut", false), new IntRange(0, max_floors), 10);//chestnut trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_poison", false), new IntRange(0, max_floors), 10);//poison trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_slumber", false), new IntRange(0, max_floors), 10);//sleep trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_sticky", false), new IntRange(0, max_floors), 10);//sticky trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_seal", false), new IntRange(0, max_floors), 10);//seal trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_self_destruct", false), new IntRange(0, max_floors), 10);//selfdestruct trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_trip", true), new IntRange(0, 15), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_trip", false), new IntRange(15, max_floors), 10);//trip trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_hunger", true), new IntRange(0, max_floors), 10);//hunger trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_apple", true), new IntRange(0, 15), 3);//apple trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_apple", false), new IntRange(15, max_floors), 3);//apple trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_pp_leech", true), new IntRange(0, max_floors), 10);//pp-leech trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_summon", false), new IntRange(0, max_floors), 10);//summon trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_explosion", false), new IntRange(0, max_floors), 10);//explosion trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_slow", false), new IntRange(0, max_floors), 10);//slow trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_spin", false), new IntRange(0, max_floors), 10);//spin trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_grimy", false), new IntRange(0, max_floors), 10);//grimy trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_trigger", true), new IntRange(0, max_floors), 20);//trigger trap
                                                                                       //pokemon trap
-            tileSpawn.Spawns.Add(new EffectTile(24, true), new IntRange(15, max_floors), 10);//grudge trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_grudge", true), new IntRange(15, max_floors), 10);//grudge trap
                                                                                       //training switch
             floorSegment.ZoneSteps.Add(tileSpawn);
 
@@ -4063,7 +4063,7 @@ namespace DataGenerator.Data
 
                 //sealing the vault
                 {
-                    SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>(40, 41, true);
+                    SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", true);
                     vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                     vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                     vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -4438,7 +4438,7 @@ namespace DataGenerator.Data
 
                 //sealing the boss room and treasure room
                 {
-                    BossSealStep<ListMapGenContext> vaultStep = new BossSealStep<ListMapGenContext>(40, 38);
+                    BossSealStep<ListMapGenContext> vaultStep = new BossSealStep<ListMapGenContext>("sealed_block", "tile_boss");
                     vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
                     vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
                     bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_TILES_GEN_EXTRA, vaultStep));
@@ -4850,9 +4850,9 @@ namespace DataGenerator.Data
                     wonderTileRange = new RandRange(0);
 
                 if (ii <= 16)
-                    AddSingleTrapStep(layout, wonderTileRange, 27, true);
+                    AddSingleTrapStep(layout, wonderTileRange, "tile_wonder", true);
                 else
-                    AddSingleTrapStep(layout, wonderTileRange, 27, false);
+                    AddSingleTrapStep(layout, wonderTileRange, "tile_wonder", false);
 
                 //traps
                 RandRange trapRange;
@@ -5394,7 +5394,7 @@ namespace DataGenerator.Data
                 else
                 {
                     //the main stairs becomes the exit stairs
-                    EffectTile exitTile = new EffectTile(46, true);
+                    EffectTile exitTile = new EffectTile("stairs_exit_up", true);
                     exitTile.TileStates.Set(new DestState(SegLoc.Invalid));
                     var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
                     step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
@@ -5405,21 +5405,21 @@ namespace DataGenerator.Data
                     {
                         //the next floor is all in visible tiles, as a secret stairs.
                         //It will always be in the same room as the exit stairs if possible
-                        EffectTile secretTile = new EffectTile(2, true);
+                        EffectTile secretTile = new EffectTile("stairs_go_down", true);
                         NearSpawnableSpawnStep<MapGenContext, EffectTile, MapGenExit> trapStep = new NearSpawnableSpawnStep<MapGenContext, EffectTile, MapGenExit>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)), 100);
                         layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                     }
                     else if (ii <= 34)
                     {
                         //the next floor is in whatever room, but exposed
-                        EffectTile secretTile = new EffectTile(2, true);
+                        EffectTile secretTile = new EffectTile("stairs_go_down", true);
                         RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                         layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                     }
                     else if (ii < 39)
                     {
                         //the next floor will be in whatever room, hidden
-                        EffectTile secretTile = new EffectTile(2, false);
+                        EffectTile secretTile = new EffectTile("stairs_go_down", false);
                         RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                         layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                     }

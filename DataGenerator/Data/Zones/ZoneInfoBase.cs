@@ -106,53 +106,53 @@ namespace DataGenerator.Data
                     }
                     {
                         List<(MapGenExit, Loc)> exits = new List<(MapGenExit, Loc)>();
-                        exits.Add((new MapGenExit(new EffectTile(1, true)), new Loc(30, 2)));
+                        exits.Add((new MapGenExit(new EffectTile("stairs_go_up", true)), new Loc(30, 2)));
                         AddSpecificSpawn(layout, exits, PR_EXITS);
                     }
                     {
                         List<(MapGenExit, Loc)> exits = new List<(MapGenExit, Loc)>();
-                        EffectTile secretStairs = new EffectTile(46, true);
+                        EffectTile secretStairs = new EffectTile("stairs_exit_up", true);
                         secretStairs.TileStates.Set(new DestState(SegLoc.Invalid));
                         exits.Add((new MapGenExit(secretStairs), new Loc(31, 2)));
                         AddSpecificSpawn(layout, exits, PR_EXITS);
                     }
                     {
                         List<(MapGenExit, Loc)> exits = new List<(MapGenExit, Loc)>();
-                        EffectTile secretStairs = new EffectTile(34, true);
+                        EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                         secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0), true));
                         exits.Add((new MapGenExit(secretStairs), new Loc(32, 2)));
                         AddSpecificSpawn(layout, exits, PR_EXITS);
                     }
                     {
                         List<(MapGenExit, Loc)> exits = new List<(MapGenExit, Loc)>();
-                        EffectTile secretStairs = new EffectTile(34, true);
+                        EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                         secretStairs.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                         exits.Add((new MapGenExit(secretStairs), new Loc(33, 2)));
                         AddSpecificSpawn(layout, exits, PR_EXITS);
                     }
                     {
                         List<(MapGenExit, Loc)> exits = new List<(MapGenExit, Loc)>();
-                        EffectTile secretStairs = new EffectTile(34, true);
+                        EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                         secretStairs.TileStates.Set(new DestState(new SegLoc(3, 0), true));
                         exits.Add((new MapGenExit(secretStairs), new Loc(34, 2)));
                         AddSpecificSpawn(layout, exits, PR_EXITS);
                     }
                     {
                         List<(MapGenExit, Loc)> exits = new List<(MapGenExit, Loc)>();
-                        EffectTile secretStairs = new EffectTile(34, true);
+                        EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                         secretStairs.TileStates.Set(new DestState(new SegLoc(4, 0), true));
                         exits.Add((new MapGenExit(secretStairs), new Loc(35, 2)));
                         AddSpecificSpawn(layout, exits, PR_EXITS);
                     }
                     //{
                     //    List<(MapGenExit, Loc)> exits = new List<(MapGenExit, Loc)>();
-                    //    EffectTile secretStairs = new EffectTile(48, true);
+                    //    EffectTile secretStairs = new EffectTile("area_script", true);
                     //    secretStairs.TileStates.Set(new TileScriptState("Test", "{}"));
                     //    exits.Add((new MapGenExit(secretStairs), new Loc(36, 2)));
                     //    AddSpecificSpawn(layout, exits, PR_EXITS);
                     //}
 
-                    layout.GenSteps.Add(PR_EXITS, new StairsStep<StairsMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile(1, true))));
+                    layout.GenSteps.Add(PR_EXITS, new StairsStep<StairsMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile("stairs_go_up", true))));
 
                     for (int ii = 0; ii < 20; ii++)
                     {
@@ -185,8 +185,28 @@ namespace DataGenerator.Data
                     }
 
                     SpawnList<EffectTile> effectTileSpawns = new SpawnList<EffectTile>();
-                    for (int ii = 3; ii <= 31; ii++)
-                        effectTileSpawns.Add(new EffectTile(ii, true), 10);
+                    effectTileSpawns.Add(new EffectTile("trap_mud", true), 10);//mud trap
+                    effectTileSpawns.Add(new EffectTile("trap_warp", true), 10);//warp trap
+                    effectTileSpawns.Add(new EffectTile("trap_gust", true), 10);//gust trap
+                    effectTileSpawns.Add(new EffectTile("trap_chestnut", true), 10);//chestnut trap
+                    effectTileSpawns.Add(new EffectTile("trap_poison", true), 10);//poison trap
+                    effectTileSpawns.Add(new EffectTile("trap_slumber", true), 10);//sleep trap
+                    effectTileSpawns.Add(new EffectTile("trap_sticky", true), 10);//sticky trap
+                    effectTileSpawns.Add(new EffectTile("trap_seal", true), 10);//seal trap
+                    effectTileSpawns.Add(new EffectTile("trap_self_destruct", true), 10);//selfdestruct trap
+                    effectTileSpawns.Add(new EffectTile("trap_trip", true), 10);//trip trap
+                    effectTileSpawns.Add(new EffectTile("trap_trip", true), 10);//trip trap
+                    effectTileSpawns.Add(new EffectTile("trap_hunger", true), 10);//hunger trap
+                    effectTileSpawns.Add(new EffectTile("trap_apple", true), 3);//apple trap
+                    effectTileSpawns.Add(new EffectTile("trap_apple", true), 3);//apple trap
+                    effectTileSpawns.Add(new EffectTile("trap_pp_leech", true), 10);//pp-leech trap
+                    effectTileSpawns.Add(new EffectTile("trap_summon", true), 10);//summon trap
+                    effectTileSpawns.Add(new EffectTile("trap_explosion", true), 10);//explosion trap
+                    effectTileSpawns.Add(new EffectTile("trap_slow", true), 10);//slow trap
+                    effectTileSpawns.Add(new EffectTile("trap_spin", true), 10);//spin trap
+                    effectTileSpawns.Add(new EffectTile("trap_grimy", true), 10);//grimy trap
+                    effectTileSpawns.Add(new EffectTile("trap_trigger", true), 20);//trigger trap
+                    effectTileSpawns.Add(new EffectTile("trap_grudge", true), 10);//grudge trap
 
                     RandomSpawnStep<StairsMapGenContext, EffectTile> trapStep = new RandomSpawnStep<StairsMapGenContext, EffectTile>(new PickerSpawner<StairsMapGenContext, EffectTile>(new LoopedRand<EffectTile>(effectTileSpawns, new RandRange(300))));
                     layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
@@ -259,7 +279,7 @@ namespace DataGenerator.Data
 
                     //sealing the vault
                     {
-                        KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>(40, 39, 455);
+                        KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>("sealed_block", "sealed_door", 455);
                         vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                         layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
                     }
@@ -323,7 +343,7 @@ namespace DataGenerator.Data
 
                     {
                         BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
-                        EffectTile secretStairs = new EffectTile(34, true);
+                        EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                         secretStairs.TileStates.Set(new DestState(new SegLoc(0, 0)));
                         treasures.SpecificSpawns.Add(secretStairs);
                         RandomRoomSpawnStep<MapGenContext, EffectTile> detourTiles = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
@@ -474,7 +494,7 @@ namespace DataGenerator.Data
                     }
                     //sealing the vault
                     {
-                        SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>(40, 41, true);
+                        SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch", true);
                         vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                         vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                         vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -567,7 +587,7 @@ namespace DataGenerator.Data
                     }
                     //sealing the boss room and treasure room
                     {
-                        BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>(40, 38);
+                        BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>("sealed_block", "tile_boss");
                         vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
                         vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
                         layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
@@ -700,8 +720,8 @@ namespace DataGenerator.Data
 
 
                     //traps
-                    AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
-                    AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
+                    AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(16, 19), "trap_poison", false);//poison trap
 
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
@@ -791,8 +811,8 @@ namespace DataGenerator.Data
                     AddStairStep(layout, false);
 
                     //traps
-                    AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
-                    AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
+                    AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(16, 19), "trap_poison", false);//poison trap
 
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
@@ -843,13 +863,13 @@ namespace DataGenerator.Data
                     AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 13);
 
                     //traps
-                    AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
-                    AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
+                    AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(16, 19), "trap_poison", false);//poison trap
 
                     SpawnList<EffectTile> trapTileSpawns = new SpawnList<EffectTile>();
-                    trapTileSpawns.Add(new EffectTile(3, false), 10);
+                    trapTileSpawns.Add(new EffectTile("trap_poison", false), 10);
                     {
-                        EffectTile secretStairs = new EffectTile(34, true);
+                        EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                         secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0), true));
                         trapTileSpawns.Add(secretStairs, 10);
                     }
@@ -997,8 +1017,8 @@ namespace DataGenerator.Data
                     AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 13);
 
                     //traps
-                    AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
-                    AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
+                    AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(16, 19), "trap_poison", false);//poison trap
 
                     //money
                     MoneySpawnStep<MapGenContext> moneySpawnStep = new MoneySpawnStep<MapGenContext>(new RandRange(90, 130));
@@ -1150,8 +1170,8 @@ namespace DataGenerator.Data
                     AddTextureData(layout, "sky_tower_wall", "sky_tower_floor", "sky_tower_secondary", 08);
 
                     //traps
-                    AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
-                    AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
+                    AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(16, 19), "trap_poison", false);//poison trap
 
                     //money - 1,000P
                     MoneySpawnStep<ListMapGenContext> moneySpawnStep = new MoneySpawnStep<ListMapGenContext>(new RandRange(1000));
@@ -1333,8 +1353,8 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_TEXTURES, textureStep);
 
                     //traps
-                    AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
-                    AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
+                    AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(16, 19), "trap_poison", false);//poison trap
 
                     //money
                     MoneySpawnStep<MapGenContext> moneySpawnStep = new MoneySpawnStep<MapGenContext>(new RandRange(90, 130));
@@ -1495,8 +1515,8 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_TEXTURES, textureStep);
 
                     //traps
-                    AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
-                    AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
+                    AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(16, 19), "trap_poison", false);//poison trap
 
                     //money - 1,000P
                     MoneySpawnStep<MapGenContext> moneySpawnStep = new MoneySpawnStep<MapGenContext>(new RandRange(1000));
@@ -1634,7 +1654,7 @@ namespace DataGenerator.Data
                     }
                     //sealing the boss room and treasure room
                     {
-                        BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>(40, 38);
+                        BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>("sealed_block", "tile_boss");
                         vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
                         vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
                         layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
@@ -1670,8 +1690,8 @@ namespace DataGenerator.Data
                     AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 13);
 
                     //traps
-                    AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
-                    AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
+                    AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(16, 19), "trap_poison", false);//poison trap
 
                     //money
                     MoneySpawnStep<MapGenContext> moneySpawnStep = new MoneySpawnStep<MapGenContext>(new RandRange(90, 130));
@@ -1785,8 +1805,8 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_TEXTURES, textureStep);
 
                     //traps
-                    AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
-                    AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
+                    AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(16, 19), "trap_poison", false);//poison trap
 
                     //money
                     MoneySpawnStep<MapGenContext> moneySpawnStep = new MoneySpawnStep<MapGenContext>(new RandRange(90, 130));
@@ -1887,8 +1907,8 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_TEXTURES, textureStep);
 
                     //traps
-                    AddSingleTrapStep(layout, new RandRange(2, 5), 27, true);//wonder tile
-                    AddSingleTrapStep(layout, new RandRange(16, 19), 3, false);//poison trap
+                    AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(16, 19), "trap_poison", false);//poison trap
 
                     //money
                     MoneySpawnStep<MapGenContext> moneySpawnStep = new MoneySpawnStep<MapGenContext>(new RandRange(90, 130));
@@ -2027,7 +2047,7 @@ namespace DataGenerator.Data
                 //TODO: secret rooms can't scale NPC levels this way; figure it out if you ever want to scale level
                 layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<StairsMapGenContext>(0, new LocalText("Secret Room")));
                 
-                EffectTile secretStairs = new EffectTile(1, true);
+                EffectTile secretStairs = new EffectTile("stairs_go_up", true);
                 secretStairs.TileStates.Set(new DestState(new SegLoc(-1, 1), true));
                 layout.GenSteps.Add(PR_EXITS, new StairsStep<StairsMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(secretStairs)));
 
@@ -2113,7 +2133,7 @@ namespace DataGenerator.Data
                     }
                     {
                         List<(MapGenExit, Loc)> items = new List<(MapGenExit, Loc)>();
-                        items.Add((new MapGenExit(new EffectTile(1, true)), new Loc(22, 12)));
+                        items.Add((new MapGenExit(new EffectTile("stairs_go_up", true)), new Loc(22, 12)));
                         AddSpecificSpawn(layout, items, PR_EXITS);
                     }
 
@@ -2164,7 +2184,7 @@ namespace DataGenerator.Data
 
                     //monster house
                     {
-                        EffectTile effect = new EffectTile(37, true, new Loc(4, 4));
+                        EffectTile effect = new EffectTile("chest_full", true, new Loc(4, 4));
                         effect.Danger = true;
                         effect.TileStates.Set(new UnlockState(455));
                         effect.TileStates.Set(new BoundsState(new Rect(0, 0, 10, 10)));
@@ -2186,7 +2206,7 @@ namespace DataGenerator.Data
                         drawStep.Tiles[2][9] = new Tile("wall");
                     }
                     {
-                        EffectTile effect = new EffectTile(37, true, new Loc(5, 5));
+                        EffectTile effect = new EffectTile("chest_full", true, new Loc(5, 5));
                         effect.Danger = true;
                         effect.TileStates.Set(new UnlockState(455));
                         effect.TileStates.Set(new BoundsState(new Rect(3, 3, 13, 13)));
@@ -2208,7 +2228,7 @@ namespace DataGenerator.Data
                         {
                             for (int yy = 0; yy < 3; yy++)
                             {
-                                EffectTile effect = new EffectTile(45, true, new Loc(20+xx, yy));
+                                EffectTile effect = new EffectTile("area_shop", true, new Loc(20+xx, yy));
                                 ((Tile)drawStep.Tiles[20+xx][yy]).Effect = effect;
                             }
                         }
@@ -2267,7 +2287,7 @@ namespace DataGenerator.Data
                             }
                         }
 
-                        EffectTile effect2 = new EffectTile(40, true, lockedTile);
+                        EffectTile effect2 = new EffectTile("sealed_block", true, lockedTile);
                         ((Tile)drawStep.Tiles[lockedTile.X][lockedTile.Y]).Effect = effect2;
 
                         //specifically planned enemies
@@ -2303,7 +2323,7 @@ namespace DataGenerator.Data
                             mobSpawnState.Spawns.Add(post_mob);
                         }
 
-                        EffectTile newEffect = new EffectTile(38, true, bossTriggerArea + new Loc(1));
+                        EffectTile newEffect = new EffectTile("tile_boss", true, bossTriggerArea + new Loc(1));
                         newEffect.TileStates.Set(mobSpawnState);
                         newEffect.TileStates.Set(new BoundsState(new Rect(bossArea.Start + new Loc(1), bossArea.Size)));
                         ((Tile)drawStep.Tiles[bossTriggerArea.X][bossTriggerArea.Y]).Effect = newEffect;
@@ -2317,7 +2337,7 @@ namespace DataGenerator.Data
                     int patternDiff = 2;
                     int howMany = 5;
                     {
-                        EffectTile effect2 = new EffectTile(39, true, new Loc(40 + 1, 2 + 1));
+                        EffectTile effect2 = new EffectTile("sealed_door", true, new Loc(40 + 1, 2 + 1));
                         TileListState state = new TileListState();
                         for (int mm = 1; mm < howMany; mm++)
                             state.Tiles.Add(new Loc(40 + patternDiff * mm + 1, 2 + 1));
@@ -2327,7 +2347,7 @@ namespace DataGenerator.Data
                     }
                     for (int nn = 1; nn < howMany; nn++)
                     {
-                        EffectTile effect2 = new EffectTile(40, true, new Loc(40 + patternDiff * nn + 1, 2 + 1));
+                        EffectTile effect2 = new EffectTile("sealed_block", true, new Loc(40 + patternDiff * nn + 1, 2 + 1));
                         ((Tile)drawStep.Tiles[40 + patternDiff * nn][2]).Effect = effect2;
                     }
 
@@ -2335,7 +2355,7 @@ namespace DataGenerator.Data
                     patternDiff = 2;
                     howMany = 3;
                     {
-                        EffectTile effect2 = new EffectTile(41, true, new Loc(50, 4));
+                        EffectTile effect2 = new EffectTile("tile_switch", true, new Loc(50, 4));
                         TileListState state = new TileListState();
                         for (int mm = 1; mm < howMany; mm++)
                             state.Tiles.Add(new Loc(50 + patternDiff * mm + 1, 4 + 1));
@@ -2344,7 +2364,7 @@ namespace DataGenerator.Data
                     }
                     for (int nn = 1; nn < howMany; nn++)
                     {
-                        EffectTile effect2 = new EffectTile(40, true, new Loc(50 + patternDiff * nn, 4));
+                        EffectTile effect2 = new EffectTile("sealed_block", true, new Loc(50 + patternDiff * nn, 4));
                         ((Tile)drawStep.Tiles[50 + patternDiff * nn][4]).Effect = effect2;
                     }
 
@@ -2354,7 +2374,7 @@ namespace DataGenerator.Data
                     //add border
                     layout.GenSteps.Add(PR_TILES_BARRIER, new UnbreakableBorderStep<StairsMapGenContext>(1));
 
-                    layout.GenSteps.Add(PR_EXITS, new StairsStep<StairsMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile(1, true))));
+                    layout.GenSteps.Add(PR_EXITS, new StairsStep<StairsMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile("stairs_go_up", true))));
 
                     AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", 13);
                     curTileIndex += 3;
@@ -2647,8 +2667,7 @@ namespace DataGenerator.Data
 
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                 tileSpawn.Priority = PR_RESPAWN_TRAP;
-                for (int jj = 2; jj <= 31; jj++)
-                    tileSpawn.Spawns.Add(new EffectTile(jj, true), new IntRange(0, 5), 10);
+                tileSpawn.Spawns.Add(new EffectTile("trap_explosion", true), new IntRange(0, 5), 10);
                 floorSegment.ZoneSteps.Add(tileSpawn);
 
                 SpawnList<IGenPriority> apricornZoneSpawns = new SpawnList<IGenPriority>();
@@ -2743,7 +2762,7 @@ namespace DataGenerator.Data
                     AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", 09);
 
                     //traps
-                    AddSingleTrapStep(layout, new RandRange(2, 4), 27, false);//wonder tile
+                    AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder", false);//wonder tile
                     AddTrapsSteps(layout, new RandRange(20));
 
                     //money
@@ -3332,159 +3351,159 @@ namespace DataGenerator.Data
                         {
                             EffectTile effect = new EffectTile();
                             if (level[jj][ii] == '=') //Reset Tile
-                                effect = new EffectTile(42, true);
+                                effect = new EffectTile("tile_reset", true);
                             else if (level[jj][ii] == '+') //Wonder Tile
-                                effect = new EffectTile(27, true);
+                                effect = new EffectTile("tile_wonder", true);
                             else if (level[jj][ii] == '%') //Chestnut
-                                effect = new EffectTile(17, true);
+                                effect = new EffectTile("trap_chestnut", true);
                             else if (level[jj][ii] == '&') //Poison
-                                effect = new EffectTile(3, true);
+                                effect = new EffectTile("trap_poison", true);
                             else if (level[jj][ii] == '/') //Mud
-                                effect = new EffectTile(7, true);
+                                effect = new EffectTile("trap_mud", true);
                             else if (level[jj][ii] == '(') //Sticky Trap
-                                effect = new EffectTile(11, true);
+                                effect = new EffectTile("trap_sticky", true);
                             else if (level[jj][ii] == ')') //PP-Leech Trap
-                                effect = new EffectTile(9, true);
+                                effect = new EffectTile("trap_pp_leech", true);
                             else if (level[jj][ii] == '|') //Gust Trap
-                                effect = new EffectTile(14, true);
+                                effect = new EffectTile("trap_gust", true);
                             else if (level[jj][ii] == '!') //Self Destruct
-                                effect = new EffectTile(18, true);
+                                effect = new EffectTile("trap_self_destruct", true);
                             else if (level[jj][ii] == '?') //Hidden Sticky
-                                effect = new EffectTile(11, false);
+                                effect = new EffectTile("trap_sticky", false);
                             else if (level[jj][ii] == '$') //Hidden Mud
-                                effect = new EffectTile(7, false);
+                                effect = new EffectTile("trap_mud", false);
                             else if (level[jj][ii] == '`') //Hidden Chestnut
-                                effect = new EffectTile(17, false);
+                                effect = new EffectTile("trap_chestnut", false);
                             else if (level[jj][ii] == ':') //Trigger
-                                effect = new EffectTile(28, true);
+                                effect = new EffectTile("trap_trigger", true);
                             else if (level[jj][ii] == '0') //Lv5
                             {
-                                effect = new EffectTile(2, true);
+                                effect = new EffectTile("stairs_go_down", true);
                                 effect.TileStates.Set(new DestState(new SegLoc(0, 5 - 1), false));
                             }
                             else if (level[jj][ii] == '1') //Lv10
                             {
-                                effect = new EffectTile(2, true);
+                                effect = new EffectTile("stairs_go_down", true);
                                 effect.TileStates.Set(new DestState(new SegLoc(0, 10 - 1), false));
                             }
                             else if (level[jj][ii] == '2') //Lv25
                             {
-                                effect = new EffectTile(2, true);
+                                effect = new EffectTile("stairs_go_down", true);
                                 effect.TileStates.Set(new DestState(new SegLoc(0, 25 - 1), false));
                             }
                             else if (level[jj][ii] == '3') //Lv50
                             {
-                                effect = new EffectTile(2, true);
+                                effect = new EffectTile("stairs_go_down", true);
                                 effect.TileStates.Set(new DestState(new SegLoc(0, 50 - 1), false));
                             }
                             else if (level[jj][ii] == '4') //Exit
                             {
-                                effect = new EffectTile(1, true);
+                                effect = new EffectTile("stairs_go_up", true);
                                 effect.TileStates.Set(new DestState(SegLoc.Invalid, false));
                             }
                             else if (level[jj][ii] == 'A') //Sign: Level 5
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_LV_005")));
                             }
                             else if (level[jj][ii] == 'B') //Sign: Level 10
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_LV_010")));
                             }
                             else if (level[jj][ii] == 'C') //Sign: Level 25
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_LV_025")));
                             }
                             else if (level[jj][ii] == 'D') //Sign: Level 50
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_LV_050")));
                             }
                             else if (level[jj][ii] == 'E') //Sign: 1.1
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_MOVES"), new LocalFormatControls("SIGN_TUTORIAL_1_1", FrameInput.InputType.Skills)));
                             }
                             else if (level[jj][ii] == 'F') //Sign: 1.2
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_TYPES"), new LocalFormatControls("SIGN_TUTORIAL_1_2")));
                             }
                             else if (level[jj][ii] == 'G') //Sign: 1.3
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_TYPES"), new LocalFormatControls("SIGN_TUTORIAL_1_3")));
                             }
                             else if (level[jj][ii] == 'H') //Sign: 2.1
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_CATEGORY"), new LocalFormatControls("SIGN_TUTORIAL_2_1")));
                             }
                             else if (level[jj][ii] == 'I') //Sign: 2.2
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_HIT_RATE"), new LocalFormatControls("SIGN_TUTORIAL_2_2")));
                             }
                             else if (level[jj][ii] == 'J') //Sign: 2.3
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_MOVEMENT_SPEED"), new LocalFormatControls("SIGN_TUTORIAL_2_3")));
                             }
                             else if (level[jj][ii] == 'K') //Sign: 3.1
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_STATUS"), new LocalFormatControls("SIGN_TUTORIAL_3_1")));
                             }
                             else if (level[jj][ii] == 'L') //Sign: 3.2
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_STATUS"), new LocalFormatControls("SIGN_TUTORIAL_3_2")));
                             }
                             else if (level[jj][ii] == 'M') //Sign: 3.3
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_ABILITY"), new LocalFormatControls("SIGN_TUTORIAL_3_3")));
                             }
                             else if (level[jj][ii] == 'N') //Sign: 4.1
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_TRAP"), new LocalFormatControls("SIGN_TUTORIAL_4_1")));
                             }
                             else if (level[jj][ii] == 'O') //Sign: 4.2
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_TRAP"), new LocalFormatControls("SIGN_TUTORIAL_4_2", FrameInput.InputType.Attack)));
                             }
                             else if (level[jj][ii] == 'P') //Sign: 4.3
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_TRAP"), new LocalFormatControls("SIGN_TUTORIAL_4_3")));
                             }
                             else if (level[jj][ii] == 'Q') //Sign: 5.1
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_MOVEMENT"), new LocalFormatControls("SIGN_TUTORIAL_5_1", FrameInput.InputType.Turn, FrameInput.InputType.Diagonal)));
                             }
                             else if (level[jj][ii] == 'R') //Sign: 5.2
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_TURNS"), new LocalFormatControls("SIGN_TUTORIAL_5_2", FrameInput.InputType.Run, FrameInput.InputType.Attack)));
                             }
                             else if (level[jj][ii] == 'S') //Sign: 5.3
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_TEAM"), new LocalFormatControls("SIGN_TUTORIAL_5_3", FrameInput.InputType.LeaderSwap1, FrameInput.InputType.LeaderSwap2, FrameInput.InputType.LeaderSwap3, FrameInput.InputType.LeaderSwap4)));
                             }
                             else if (level[jj][ii] == 'T') //Sign: 5.4
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_TITLE_TEAM"), new LocalFormatControls("SIGN_TUTORIAL_5_4", FrameInput.InputType.TeamMode)));
                             }
                             else if (level[jj][ii] == 'U') //Sign: Exit
                             {
-                                effect = new EffectTile(43, true);
+                                effect = new EffectTile("sign", true);
                                 effect.TileStates.Set(new NoticeState(new LocalFormatSimple("SIGN_EXIT")));
                             }
                             Tile tile = new Tile("floor");

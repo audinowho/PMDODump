@@ -204,7 +204,7 @@ namespace DataGenerator.Data
         }
 
 
-        public static void AddSingleTrapStep<T>(MapGen<T> layout, RandRange amount, int id, bool revealed = true, bool includeHalls = false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext
+        public static void AddSingleTrapStep<T>(MapGen<T> layout, RandRange amount, string id, bool revealed = true, bool includeHalls = false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext
         {
             SpawnList<EffectTile> effectTileSpawns = new SpawnList<EffectTile>();
             effectTileSpawns.Add(new EffectTile(id, revealed), 10);
@@ -233,7 +233,7 @@ namespace DataGenerator.Data
         static void AddStairStep<T>(MapGen<T> layout, bool goDown)
             where T : class, IFloorPlanGenContext, IPlaceableGenContext<MapGenEntrance>, IPlaceableGenContext<MapGenExit>
         {
-            var step = new FloorStairsStep<T, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile(goDown ? 2 : 1, true)));
+            var step = new FloorStairsStep<T, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile(goDown ? "stairs_go_down" : "stairs_go_up", true)));
             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
             step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
             layout.GenSteps.Add(PR_EXITS, step);
@@ -320,7 +320,7 @@ namespace DataGenerator.Data
 
         public static RoomGenSpecific<T> CreateRoomGenSpecificBoss<T>(string[] level, Loc trigger, List<MobSpawn> mobs, bool severe) where T : ListMapGenContext
         {
-            RoomGenSpecificBoss<T> roomGen = new RoomGenSpecificBoss<T>(level[0].Length, level.Length, new Tile(DataManager.Instance.GenFloor), 38, trigger, severe ? "C02. Boss Battle 2.ogg" : "C01. Boss Battle.ogg");
+            RoomGenSpecificBoss<T> roomGen = new RoomGenSpecificBoss<T>(level[0].Length, level.Length, new Tile(DataManager.Instance.GenFloor), "tile_boss", trigger, severe ? "C02. Boss Battle 2.ogg" : "C01. Boss Battle.ogg");
             roomGen.Bosses = mobs;
             roomGen.Tiles = new Tile[level[0].Length][];
             for (int xx = 0; xx < level[0].Length; xx++)
