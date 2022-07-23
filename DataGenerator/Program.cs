@@ -335,7 +335,7 @@ namespace DataGenerator
                         if ((dump & DataManager.DataType.MapStatus) != DataManager.DataType.None)
                             MapStatusInfo.AddMapStatusData();
 
-                        DataManager.DataType reserializeType = DataManager.DataType.All;
+                        DataManager.DataType reserializeType = dump;
                         reserializeType ^= DataManager.DataType.Zone;
                         reserializeType ^= DataManager.DataType.Item;
                         RogueEssence.Dev.DevHelper.RunIndexing(reserializeType);
@@ -357,7 +357,7 @@ namespace DataGenerator
                             //    GraphicsManager.InitSystem(game.GraphicsDevice);
                             //    GraphicsManager.InitStatic();
 
-                                MapInfo.AddMapData();
+                            MapInfo.AddMapData();
                             MapInfo.AddGroundData(MapInfo.MapNames[0]);
                             ZoneInfo.AddZoneData();
                             //}
@@ -366,7 +366,7 @@ namespace DataGenerator
                         DataManager.DataType reserializeType = DataManager.DataType.None;
                         reserializeType |= DataManager.DataType.Zone;
                         reserializeType |= DataManager.DataType.Item;
-                        RogueEssence.Dev.DevHelper.RunIndexing(reserializeType);
+                        RogueEssence.Dev.DevHelper.RunIndexing(reserializeType & dump);
 
                         RogueEssence.Dev.DevHelper.RunExtraIndexing(dump);
                     }
