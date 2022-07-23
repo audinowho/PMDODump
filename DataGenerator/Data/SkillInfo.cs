@@ -4893,7 +4893,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = 11;
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHitTiles.Add(0, new SetTrapEvent(20));
+                skill.Data.OnHitTiles.Add(0, new SetTrapEvent("trap_spikes"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -10092,7 +10092,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = 14;
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHitTiles.Add(0, new SetTrapEvent(21));
+                skill.Data.OnHitTiles.Add(0, new SetTrapEvent("trap_toxic_spikes"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -11632,7 +11632,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = 16;
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHitTiles.Add(0, new SetTrapEvent(22));
+                skill.Data.OnHitTiles.Add(0, new SetTrapEvent("trap_stealth_rock"));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;

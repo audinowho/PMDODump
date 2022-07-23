@@ -1866,7 +1866,7 @@ namespace DataGenerator.Data
                     BattleData.SkillCategory category = (BattleData.SkillCategory)args[0];
                     localArgs.Add(ToLocalText(category, item.Desc, translate));
 
-                    item.AfterBeingHits.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new CounterTrapEvent(20))));
+                    item.AfterBeingHits.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new CounterTrapEvent("trap_spikes"))));
                 }
             }
             else if (type == ExclusiveItemEffect.NoStatusInWeather)

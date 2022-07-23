@@ -120,9 +120,9 @@ namespace DataGenerator.Dev
         }
 
 
-        public delegate IEntryData GetNamedData(int index);
+        public delegate IEntryData GetNamedData(string index);
 
-        public delegate IDescribedData GetDescribedData(int index);
+        public delegate IDescribedData GetDescribedData(string index);
 
 
         private static void printNamedDataTable(string path, int total, GetNamedData method)
@@ -132,7 +132,7 @@ namespace DataGenerator.Dev
             HashSet<string> languages = new HashSet<string>();
             for (int ii = 0; ii < total; ii++)
             {
-                IEntryData data = method(ii);
+                IEntryData data = method(ii.ToString());
 
                 //skip blank entries
                 if (data.Name.DefaultText == "")
@@ -158,7 +158,7 @@ namespace DataGenerator.Dev
             HashSet<string> languages = new HashSet<string>();
             for (int ii = 0; ii < total; ii++)
             {
-                IDescribedData data = method(ii);
+                IDescribedData data = method(ii.ToString());
 
                 //skip blank entries
                 if (data.Name.DefaultText == "")

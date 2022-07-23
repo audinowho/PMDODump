@@ -578,9 +578,9 @@ namespace DataGenerator.Data
                 status.OnMapRefresh.Add(0, new MapNoSwitchEvent());
                 status.OnMapStatusAdds.Add(0, new MapStatusBGMEvent("A11. Shop.ogg"));
                 status.OnMapStatusAdds.Add(0, new MapStatusScriptEvent("ShopGreeting"));
-                status.OnTurnEnds.Add(0, new EndShopEvent(45));
+                status.OnTurnEnds.Add(0, new EndShopEvent("area_shop"));
                 status.OnTurnEnds.Add(0, new SingleCharScriptEvent("ShopCheckout"));
-                status.OnMapTurnEnds.Add(0, new NullCharEvent(new EndShopEvent(45)));
+                status.OnMapTurnEnds.Add(0, new NullCharEvent(new EndShopEvent("area_shop")));
                 status.OnMapTurnEnds.Add(0, new NullCharEvent(new SingleCharScriptEvent("ShopCheckout")));
             }
             else if (ii == 38)
@@ -592,7 +592,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new ShopPriceState());
                 status.StatusStates.Set(new ShopSecurityState());
                 status.StatusStates.Set(new MapIndexState());
-                status.OnMapStarts.Add(-10, new InitShopPriceEvent(45));
+                status.OnMapStarts.Add(-10, new InitShopPriceEvent("area_shop"));
                 status.OnTurnEnds.Add(10, new SingleCharScriptEvent("ThiefCheck"));
                 status.OnMapTurnEnds.Add(10, new NullCharEvent(new SingleCharScriptEvent("ThiefCheck")));
             }

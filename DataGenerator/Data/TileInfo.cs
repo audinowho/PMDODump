@@ -24,17 +24,18 @@ namespace DataGenerator.Data
             DataInfo.DeleteIndexedData(DataManager.DataType.Tile.ToString());
             for (int ii = 0; ii < MAX_TILES; ii++)
             {
-                TileData tile = GetTileData(ii);
-                //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.Tile.ToString(), tile);
+                (string, TileData) tile = GetTileData(ii);
+                System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{1}", ii, tile.Item1));
+                DataManager.SaveData(tile.Item1, DataManager.DataType.Tile.ToString(), tile.Item2);
             }
         }
 
 
 
 
-        public static TileData GetTileData(int ii)
+        public static (string, TileData) GetTileData(int ii)
         {
+            string fileName = "";
             TileData tile = new TileData();
             if (ii == 0)
             {
@@ -47,6 +48,7 @@ namespace DataGenerator.Data
             else if (ii == 1)
             {
                 tile.Name = new LocalText("Stairs");
+                fileName = "stairs_go_up";
                 tile.Desc = new LocalText("Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.");
                 tile.Comment = "Up";
                 tile.BlockItem = true;
@@ -62,6 +64,7 @@ namespace DataGenerator.Data
             else if (ii == 2)
             {
                 tile.Name = new LocalText("Stairs");
+                fileName = "stairs_go_down";
                 tile.Desc = new LocalText("Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.");
                 tile.Comment = "Down";
                 tile.BlockItem = true;
@@ -77,6 +80,7 @@ namespace DataGenerator.Data
             else if (ii == 3)
             {
                 tile.Name = new LocalText("Poison Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap will shoot poison spikes in all directions. Pokémon hit will become poisoned.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -107,6 +111,7 @@ namespace DataGenerator.Data
             else if (ii == 4)
             {
                 tile.Name = new LocalText("Slumber Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap releases a sleeping gas that puts all nearby Pokémon to sleep.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -135,6 +140,7 @@ namespace DataGenerator.Data
             else if (ii == 5)
             {
                 tile.Name = new LocalText("Spin Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap spins all nearby Pokémon around dizzyingly, making them confused.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -167,6 +173,7 @@ namespace DataGenerator.Data
             else if (ii == 6)
             {
                 tile.Name = new LocalText("Slow Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap lowers the Movement Speed of nearby Pokémon by one level.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -196,6 +203,7 @@ namespace DataGenerator.Data
             else if (ii == 7)
             {
                 tile.Name = new LocalText("Mud Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap makes it blow mud that sharply lowers the highest base stat of all nearby Pokémon.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -225,6 +233,7 @@ namespace DataGenerator.Data
             else if (ii == 8)
             {
                 tile.Name = new LocalText("Seal Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap disables the last-used move of all nearby Pokémon.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -252,6 +261,7 @@ namespace DataGenerator.Data
             else if (ii == 9)
             {
                 tile.Name = new LocalText("PP-Leech Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap completely drains the PP of the Pokémon's last-used move.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -275,6 +285,7 @@ namespace DataGenerator.Data
             else if (ii == 10)
             {
                 tile.Name = new LocalText("Grimy Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap makes it spew a muck that gums up food and removes abilities.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -308,6 +319,7 @@ namespace DataGenerator.Data
             else if (ii == 11)
             {
                 tile.Name = new LocalText("Sticky Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap makes all nearby Pokémon immobilized. It will also cause items to become sticky.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -340,6 +352,7 @@ namespace DataGenerator.Data
             else if (ii == 12)
             {
                 tile.Name = new LocalText("Apple Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap turns a held-effect item into an apple.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -367,6 +380,7 @@ namespace DataGenerator.Data
             else if (ii == 13)
             {
                 tile.Name = new LocalText("Warp Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap instantly warps the Pokémon to another spot on the floor.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -392,6 +406,7 @@ namespace DataGenerator.Data
             else if (ii == 14)
             {
                 tile.Name = new LocalText("Gust Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Activating this trap triggers a gust of wind that sends nearby Pokémon flying.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -420,6 +435,7 @@ namespace DataGenerator.Data
             else if (ii == 15)
             {
                 tile.Name = new LocalText("Summon Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap releases a sweet aroma that attracts Pokémon from afar.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -447,6 +463,7 @@ namespace DataGenerator.Data
             else if (ii == 16)
             {
                 tile.Name = new LocalText("**Pokémon Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap transforms all items in the area into hostile Pokémon.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -467,6 +484,7 @@ namespace DataGenerator.Data
             else if (ii == 17)
             {
                 tile.Name = new LocalText("Chestnut Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap makes spiky unshelled Chestnuts drop, inflicting damage on nearby Pokémon.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -496,6 +514,7 @@ namespace DataGenerator.Data
             else if (ii == 18)
             {
                 tile.Name = new LocalText("Self-Destruct Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap makes it explode. Its damage extends to everything near the trap.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -530,6 +549,7 @@ namespace DataGenerator.Data
             else if (ii == 19)
             {
                 tile.Name = new LocalText("Explosion Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Activating this trap triggers a huge explosion. Its damage extends to everything up to 2 steps away from it.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -564,6 +584,7 @@ namespace DataGenerator.Data
             else if (ii == 20)
             {
                 tile.Name = new LocalText("Spikes");
+                fileName = "trap_spikes";
                 tile.Desc = new LocalText("Stepping on this trap damages the Pokémon standing on it.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -585,6 +606,7 @@ namespace DataGenerator.Data
             else if (ii == 21)
             {
                 tile.Name = new LocalText("Toxic Spikes");
+                fileName = "trap_toxic_spikes";
                 tile.Desc = new LocalText("Stepping on this trap badly poisons the Pokémon standing on it.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -607,6 +629,7 @@ namespace DataGenerator.Data
             else if (ii == 22)
             {
                 tile.Name = new LocalText("Stealth Rock");
+                fileName = "trap_stealth_rock";
                 tile.Desc = new LocalText("Stepping on this trap damages the Pokémon standing on it with a Rock-type attack.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -629,6 +652,7 @@ namespace DataGenerator.Data
             else if (ii == 23)
             {
                 tile.Name = new LocalText("Trip Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap causes nearby Pokémon to trip and drop their items.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -660,6 +684,7 @@ namespace DataGenerator.Data
             else if (ii == 24)
             {
                 tile.Name = new LocalText("Grudge Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap gives the Grudge status to all opposing Pokémon in the area.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -687,6 +712,7 @@ namespace DataGenerator.Data
             else if (ii == 25)
             {
                 tile.Name = new LocalText("Hunger Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap causes the Pokémon to become hungry.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -708,6 +734,7 @@ namespace DataGenerator.Data
             else if (ii == 26)
             {
                 tile.Name = new LocalText("**Training Switch");
+                fileName = "tile_training";
                 tile.Desc = new LocalText("Stepping on this tile gives the Trained status to the party.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Switch;
@@ -727,6 +754,7 @@ namespace DataGenerator.Data
             else if (ii == 27)
             {
                 tile.Name = new LocalText("Wonder Tile");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("An odd floor tile seen in many dungeons. Triggering it resets nearby Pokémon's stats if they are boosted or reduced.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -759,6 +787,7 @@ namespace DataGenerator.Data
             else if (ii == 28)
             {
                 tile.Name = new LocalText("Trigger Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap sets off all other traps in the area.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -783,6 +812,7 @@ namespace DataGenerator.Data
             else if (ii == 29)
             {
                 tile.Name = new LocalText("**Pitfall Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Stepping on this trap drops the Pokémon to the floor below, inflicting damage.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -803,6 +833,7 @@ namespace DataGenerator.Data
             else if (ii == 30)
             {
                 tile.Name = new LocalText("**Discord Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap creates a discord among the party.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -824,6 +855,7 @@ namespace DataGenerator.Data
             else if (ii == 31)
             {
                 tile.Name = new LocalText("**Emera-Swap Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap swaps an emera on a looplet for another emera.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -845,6 +877,7 @@ namespace DataGenerator.Data
             else if (ii == 32)
             {
                 tile.Name = new LocalText("**Emera-Crush Trap");
+                fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("'", "").Replace("*", "")).ToLower();
                 tile.Desc = new LocalText("Triggering this trap causes an emera on a looplet to come off and disappear.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
@@ -866,6 +899,7 @@ namespace DataGenerator.Data
             else if (ii == 33)
             {
                 tile.Name = new LocalText("Luminous Area");
+                fileName = "tile_evo";
                 tile.Desc = new LocalText("A mysterious area that allows Pokémon to evolve.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Site;
@@ -878,6 +912,7 @@ namespace DataGenerator.Data
             else if (ii == 34)
             {
                 tile.Name = new LocalText("Secret Stairs");
+                fileName = "stairs_secret_up";
                 tile.Desc = new LocalText("Stairs leading to an unknown location.");
                 tile.Comment = "Up";
                 tile.BlockItem = true;
@@ -893,6 +928,7 @@ namespace DataGenerator.Data
             else if (ii == 35)
             {
                 tile.Name = new LocalText("Secret Stairs");
+                fileName = "stairs_secret_down";
                 tile.Desc = new LocalText("Stairs leading to an unknown location.");
                 tile.Comment = "Down";
                 tile.BlockItem = true;
@@ -908,6 +944,7 @@ namespace DataGenerator.Data
             else if (ii == 36)
             {
                 tile.Name = new LocalText("Empty Chest");
+                fileName = "chest_empty";
                 tile.ObjectLayer = true;
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Blocker;
@@ -918,6 +955,7 @@ namespace DataGenerator.Data
             else if (ii == 37)
             {
                 tile.Name = new LocalText("Treasure Chest");
+                fileName = "chest_full";
                 tile.ObjectLayer = true;
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Unlockable;
@@ -930,6 +968,7 @@ namespace DataGenerator.Data
             else if (ii == 38)
             {
                 tile.Name = new LocalText("Signal Area");
+                fileName = "tile_boss";
                 tile.Desc = new LocalText("A mysterious signal that calls Pokémon to the area.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Site;
@@ -943,6 +982,7 @@ namespace DataGenerator.Data
             else if (ii == 39)
             {
                 tile.Name = new LocalText("Sealed Door");
+                fileName = "sealed_door";
                 tile.ObjectLayer = true;
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Unlockable;
@@ -973,6 +1013,7 @@ namespace DataGenerator.Data
             else if (ii == 40)
             {
                 tile.Name = new LocalText("Sealed Block");
+                fileName = "sealed_block";
                 tile.ObjectLayer = true;
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Blocker;
@@ -984,6 +1025,7 @@ namespace DataGenerator.Data
             else if (ii == 41)
             {
                 tile.Name = new LocalText("Switch Tile");
+                fileName = "tile_switch";
                 tile.Desc = new LocalText("A switch that opens various blocked passageways found on the floor.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Switch;
@@ -1014,6 +1056,7 @@ namespace DataGenerator.Data
             else if (ii == 42)
             {
                 tile.Name = new LocalText("Reset Tile");
+                fileName = "tile_reset";
                 tile.Desc = new LocalText("A switch that resets the floor, returning all items, traps, and wild Pokémon to their original positions.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Switch;
@@ -1026,6 +1069,7 @@ namespace DataGenerator.Data
             else if (ii == 43)
             {
                 tile.Name = new LocalText("Sign");
+                fileName = "sign";
                 tile.ObjectLayer = true;
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Blocker;
@@ -1037,6 +1081,7 @@ namespace DataGenerator.Data
             else if (ii == 44)
             {
                 tile.Name = new LocalText("Rescue Point");
+                fileName = "tile_rescue";
                 tile.Desc = new LocalText("It's the rescue spot where your friend's team went down! Send an A-OK mail to rescue the defeated team.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Passage;
@@ -1049,6 +1094,7 @@ namespace DataGenerator.Data
             else if (ii == 45)
             {
                 tile.Name = new LocalText("Shop Tile");
+                fileName = "area_shop";
                 tile.Desc = new LocalText("");
                 tile.StepType = TileData.TriggerType.None;
                 tile.Anim = new ObjAnimData("Tile_Shop", 1);
@@ -1056,6 +1102,7 @@ namespace DataGenerator.Data
             else if (ii == 46)
             {
                 tile.Name = new LocalText("Exit Stairs");
+                fileName = "stairs_exit_up";
                 tile.Desc = new LocalText("Stairs leading to the dungeon's exit.");
                 tile.Comment = "Up";
                 tile.BlockItem = true;
@@ -1071,6 +1118,7 @@ namespace DataGenerator.Data
             else if (ii == 47)
             {
                 tile.Name = new LocalText("Exit Stairs");
+                fileName = "stairs_exit_down";
                 tile.Desc = new LocalText("Stairs leading to the dungeon's exit.");
                 tile.Comment = "Down";
                 tile.BlockItem = true;
@@ -1086,6 +1134,7 @@ namespace DataGenerator.Data
             else if (ii == 48)
             {
                 tile.Name = new LocalText("Script Trigger");
+                fileName = "area_script";
                 tile.Desc = new LocalText("");
                 tile.StepType = TileData.TriggerType.None;
                 tile.Anim = new ObjAnimData();
@@ -1095,6 +1144,7 @@ namespace DataGenerator.Data
             else if (ii == 49)
             {
                 tile.Name = new LocalText("Stairs");
+                fileName = "stairs_back_down";
                 tile.Desc = new LocalText("Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.");
                 tile.Comment = "Back Up";
                 tile.BlockItem = true;
@@ -1110,6 +1160,7 @@ namespace DataGenerator.Data
             else if (ii == 50)
             {
                 tile.Name = new LocalText("Stairs");
+                fileName = "stairs_back_up";
                 tile.Desc = new LocalText("Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.");
                 tile.Comment = "Back Down";
                 tile.BlockItem = true;
@@ -1125,6 +1176,7 @@ namespace DataGenerator.Data
             else if (ii == 51)
             {
                 tile.Name = new LocalText("Compass Tile");
+                fileName = "tile_compass";
                 tile.Desc = new LocalText("A tile that shows the way to important locations on the floor.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Switch;
@@ -1134,16 +1186,18 @@ namespace DataGenerator.Data
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Stair_Sensor_Arrow", 6), 6);
                 emitter.Layer = DrawLayer.Top;
-                tile.InteractWithTiles.Add(0, new CompassEvent(emitter, 1, 2, 34, 35, 37, 38, 39, 44, 46, 47, 49, 50));
+                tile.InteractWithTiles.Add(0, new CompassEvent(emitter, "stairs_go_up", "stairs_go_down", "stairs_secret_up", "stairs_secret_down", "rescue_point",
+                    "chest_treasure", "tile_boss", "sealed_door", "stairs_exit_up", "stairs_exit_down", "stairs_back_up", "stairs_back_down"));
             }
 
             if (tile.Name.DefaultText.StartsWith("**"))
                 tile.Name.DefaultText = tile.Name.DefaultText.Replace("*", "");
             else if (tile.Name.DefaultText != "")
                 tile.Released = true;
+            if (fileName == "")
+                fileName = Text.Sanitize(tile.Name.DefaultText.Replace("'", "")).ToLower();
 
-
-            return tile;
+            return (fileName, tile);
         }
 
         public const int MAX_TERRAIN = 8;
@@ -1154,7 +1208,6 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_TERRAIN; ii++)
             {
                 (string, TerrainData) entry = GetTerrainData(ii);
-                //TODO: String Assets
                 DataManager.SaveData(entry.Item1, DataManager.DataType.Terrain.ToString(), entry.Item2);
             }
         }
