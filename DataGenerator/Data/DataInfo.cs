@@ -80,6 +80,10 @@ namespace DataGenerator.Data
             elementTable.TypeMatchup[18] = new int[19] { NRM,NRM,NRM,NVE,NRM,NRM,NRM,S_E,NRM,NRM,NVE,S_E,NRM,NRM,NRM,NRM,S_E,NRM,NVE};
 
             elementTable.Effectiveness = new int[11] { 0, 0, 0, 0, 0, 0, 1, 2, 4, 6, 8 };
+
+            foreach (ElementInfo.Element type in Enum.GetValues(typeof(ElementInfo.Element)))
+                elementTable.TypeMap[Text.Sanitize(type.ToString()).ToLower()] = (int)type;
+
             universalEvent.UniversalStates.Set(elementTable);
             universalEvent.UniversalStates.Set(new SkinTableState(1024));
 
