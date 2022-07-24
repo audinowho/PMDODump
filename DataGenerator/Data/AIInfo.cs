@@ -21,7 +21,7 @@ namespace DataGenerator.Data
             List<AITactic> Tactics = new List<AITactic>();
             AITactic tactic = new AITactic();
             tactic.Name = new LocalText("Stick Together");//0
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             AIFlags iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner | AIFlags.PlayerSense;
             tactic.Plans.Add(new PrepareWithLeaderPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.SmartAttack));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
@@ -32,7 +32,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Go After Foes");//1
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner | AIFlags.PlayerSense;
             tactic.Plans.Add(new AttackFoesPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.SmartAttack, AIPlan.PositionChoice.Avoid));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
@@ -42,7 +42,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Split Up");//2
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner | AIFlags.PlayerSense;
             tactic.Plans.Add(new AttackFoesPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.SmartAttack, AIPlan.PositionChoice.Avoid));
             //tactic.Plans.Add(new AvoidAlliesPlan(iq | AIFlags.TrapAvoider));//if cornered, don't do anything
@@ -52,7 +52,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Avoid Trouble");//3
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner | AIFlags.PlayerSense;
             tactic.Plans.Add(new AvoidFoesPlan(iq | AIFlags.TrapAvoider));//if cornered, don't do anything
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
@@ -62,7 +62,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Get Away");//4
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner | AIFlags.PlayerSense;
             tactic.Plans.Add(new AvoidAllPlan(iq | AIFlags.TrapAvoider));//if cornered, don't do anything
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
@@ -71,7 +71,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Wait There");//5
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner | AIFlags.PlayerSense;
             tactic.Plans.Add(new PreparePlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.SmartAttack));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
@@ -79,7 +79,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Wait Only");//6
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None | AIFlags.KnowsMatchups | AIFlags.PlayerSense;
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
@@ -112,7 +112,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Wait Attack");//8
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
             tactic.Plans.Add(new PreparePlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.RandomAttack));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
@@ -120,7 +120,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Patrol");//9
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new StayInRangePlan(iq | AIFlags.TrapAvoider));
@@ -130,7 +130,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Weird Tree");//10
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
             tactic.Plans.Add(new ExploreIfUnseenPlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitUntilAttackedPlan(iq | AIFlags.TrapAvoider, 25));
@@ -140,7 +140,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Thief");//11
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.AttackToEscape;
             tactic.Plans.Add(new ThiefPlan(iq));
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
@@ -150,7 +150,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Cannibal");//12
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             tactic.Comment = "Deprecated.  Use any other AI and just give them the Friendly Fire status";
             iq = AIFlags.Cannibal | AIFlags.AttackToEscape;
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
@@ -161,7 +161,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Retreater");//13
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.WontDisturb;
             tactic.Plans.Add(new RetreaterPlan(AIFlags.AttackToEscape | AIFlags.TrapAvoider, 3));
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
@@ -172,7 +172,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Staged Boss");//14
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.AttackToEscape | AIFlags.WontDisturb | AIFlags.TeamPartner;
             tactic.Plans.Add(new BossPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.SmartAttack, AIPlan.PositionChoice.Avoid));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
@@ -180,7 +180,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Item Finder");//15
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.AttackToEscape;
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
@@ -214,7 +214,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Tit for Tat");//18
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.AttackToEscape | AIFlags.WontDisturb;
             tactic.Plans.Add(new WaitUntilAttackedPlan(iq | AIFlags.TrapAvoider, 31));
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
@@ -225,7 +225,7 @@ namespace DataGenerator.Data
             //does not pick up or use items
             tactic = new AITactic();
             tactic.Name = new LocalText("Loot Guard");//19
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.AttackToEscape | AIFlags.WontDisturb;
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
@@ -235,7 +235,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Boss");//20
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.AttackToEscape | AIFlags.WontDisturb | AIFlags.TeamPartner;
             tactic.Plans.Add(new AttackFoesPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.SmartAttack, AIPlan.PositionChoice.Avoid));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
@@ -245,7 +245,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Slow Wander");//21
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
             tactic.Plans.Add(new WaitPeriodPlan(iq | AIFlags.TrapAvoider, 2));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
@@ -255,7 +255,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Slow Patrol");//22
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
             tactic.Plans.Add(new WaitPeriodPlan(iq | AIFlags.TrapAvoider, 2));
             tactic.Plans.Add(new StayInRangePlan(iq | AIFlags.TrapAvoider));
@@ -265,7 +265,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Shopkeeper");//23
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner;
             tactic.Plans.Add(new WaitUntilMapStatusPlan(iq | AIFlags.TrapAvoider, 31));
             tactic.Plans.Add(new PreBuffPlan(iq | AIFlags.TrapAvoider, 26));
@@ -277,7 +277,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Shuckle");//24
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner;
             tactic.Plans.Add(new WaitUntilMapStatusPlan(iq | AIFlags.TrapAvoider, 31));
             tactic.Plans.Add(new LeadSkillPlan(iq | AIFlags.TrapAvoider, 26));
@@ -289,7 +289,7 @@ namespace DataGenerator.Data
 
             tactic = new AITactic();
             tactic.Name = new LocalText("Turret");//25
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText.Replace("'", "")).ToLower();
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
             tactic.Plans.Add(new PreparePlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.RandomAttack));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));

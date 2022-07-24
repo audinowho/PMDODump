@@ -30,7 +30,7 @@ namespace DataGenerator.Data
             {
                 ZoneData zone = GetZoneData(ii);
                 if (zone.Name.DefaultText != "")
-                    DataManager.SaveData(Text.Sanitize(zone.Name.DefaultText.Replace("'", "")).ToLower(), DataManager.DataType.Zone.ToString(), zone);
+                    DataManager.SaveData(Text.Sanitize(zone.Name.DefaultText).ToLower(), DataManager.DataType.Zone.ToString(), zone);
             }
         }
 

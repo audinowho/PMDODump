@@ -19,7 +19,7 @@ namespace DataGenerator.Data
             for (int ii = 1; ii < MAX_EMOTES; ii++)
             {
                 EmoteData emote = GetEmoteData(ii);
-                DataManager.SaveData(Text.Sanitize(emote.Name.DefaultText.Replace("'", "")).ToLower(), DataManager.DataType.Emote.ToString(), emote);
+                DataManager.SaveData(Text.Sanitize(emote.Name.DefaultText).ToLower(), DataManager.DataType.Emote.ToString(), emote);
             }
         }
 

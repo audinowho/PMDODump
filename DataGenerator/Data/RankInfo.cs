@@ -51,9 +51,9 @@ namespace DataGenerator.Data
             {
                 string next = "";
                 if (ii < MAX_GROUPS - 1)
-                    next = Text.Sanitize(Text.GetMemberTitle(((TeamRank)ii + 1).ToString()).Replace("'", "")).ToLower();
+                    next = Text.Sanitize(Text.GetMemberTitle(((TeamRank)ii + 1).ToString())).ToLower();
                 RankData data = new RankData(new LocalText(Text.GetMemberTitle(((TeamRank)ii).ToString())), 24, RANK_NEXT[ii], next);
-                DataManager.SaveData(Text.Sanitize(data.Name.DefaultText.Replace("'", "")).ToLower(), DataManager.DataType.Rank.ToString(), data);
+                DataManager.SaveData(Text.Sanitize(data.Name.DefaultText).ToLower(), DataManager.DataType.Rank.ToString(), data);
             }
         }
 
