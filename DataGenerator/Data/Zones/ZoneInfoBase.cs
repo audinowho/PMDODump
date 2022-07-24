@@ -217,7 +217,7 @@ namespace DataGenerator.Data
                     AddSpecificSpawn(layout, items, PR_SPAWN_ITEMS);
 
                     //Tilesets
-                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", 0);
+                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "none");
 
                     structure.Floors.Add(layout);
                 }
@@ -306,7 +306,7 @@ namespace DataGenerator.Data
                     AddEnemySpawnData(layout, 20, new RandRange(200));
 
                     //Tilesets
-                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", 0);
+                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "none");
 
                     //monsterhouse
                     {
@@ -405,7 +405,7 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
 
                     //Tilesets
-                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 13);
+                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
 
                     // neutral NPC
                     {
@@ -671,7 +671,7 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
 
                     //Tilesets
-                    AddTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", 11);
+                    AddTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", "ground");
 
                     {
                         MonsterHallStep<MapGenContext> monsterHouse = new MonsterHallStep<MapGenContext>(new Loc(12, 9), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
@@ -741,7 +741,7 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
 
                     //Tilesets
-                    AddTextureData(layout, "magma_cavern_2_wall", "magma_cavern_2_floor", "magma_cavern_2_secondary", 07);
+                    AddTextureData(layout, "magma_cavern_2_wall", "magma_cavern_2_floor", "magma_cavern_2_secondary", "fire");
 
                     {
                         MonsterMansionStep<MapGenContext> monsterHouse = new MonsterMansionStep<MapGenContext>();
@@ -833,7 +833,7 @@ namespace DataGenerator.Data
 
 
                     //Tilesets
-                    AddTextureData(layout, "crystal_cave_2_wall", "crystal_cave_2_floor", "crystal_cave_2_secondary", 16);
+                    AddTextureData(layout, "crystal_cave_2_wall", "crystal_cave_2_floor", "crystal_cave_2_secondary", "rock");
 
                     {
                         MonsterMansionStep<MapGenContext> monsterHouse = new MonsterMansionStep<MapGenContext>();
@@ -860,7 +860,7 @@ namespace DataGenerator.Data
                     AddDefaultMapStatus(layout, 24, 3);
 
                     //Tilesets
-                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 13);
+                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
 
                     //traps
                     AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
@@ -1014,7 +1014,7 @@ namespace DataGenerator.Data
                     AddDefaultMapStatus(layout, 25, 10);
 
                     //Tilesets
-                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 13);
+                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
 
                     //traps
                     AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
@@ -1167,7 +1167,7 @@ namespace DataGenerator.Data
                     AddDefaultMapStatus(layout, 25, 16);
 
                     //Tilesets
-                    AddTextureData(layout, "sky_tower_wall", "sky_tower_floor", "sky_tower_secondary", 08);
+                    AddTextureData(layout, "sky_tower_wall", "sky_tower_floor", "sky_tower_secondary", "flying");
 
                     //traps
                     AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
@@ -1334,7 +1334,7 @@ namespace DataGenerator.Data
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     //Tilesets
-                    //AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 13);
+                    //AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
 
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
@@ -1687,7 +1687,7 @@ namespace DataGenerator.Data
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     //Tilesets
-                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 13);
+                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
 
                     //traps
                     AddSingleTrapStep(layout, new RandRange(2, 5), "tile_wonder", true);//wonder tile
@@ -1786,7 +1786,7 @@ namespace DataGenerator.Data
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     //Tilesets
-                    //AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 13);
+                    //AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
 
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
@@ -1888,7 +1888,7 @@ namespace DataGenerator.Data
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     //Tilesets
-                    //AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 13);
+                    //AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
 
                     MapDictTextureStep<MapGenContext> textureStep = new MapDictTextureStep<MapGenContext>();
                     {
@@ -2052,7 +2052,7 @@ namespace DataGenerator.Data
                 layout.GenSteps.Add(PR_EXITS, new StairsStep<StairsMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(secretStairs)));
 
                 //Tilesets
-                AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 13);
+                AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
 
                 structure.BaseFloor = layout;
 
@@ -2137,7 +2137,7 @@ namespace DataGenerator.Data
                         AddSpecificSpawn(layout, items, PR_EXITS);
                     }
 
-                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", 13);
+                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
                     ////chasm cave
                     //if (curTileIndex != 258 && curTileIndex != 260)
                     //    curTileIndex += 3;
@@ -2376,7 +2376,7 @@ namespace DataGenerator.Data
 
                     layout.GenSteps.Add(PR_EXITS, new StairsStep<StairsMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile("stairs_go_up", true))));
 
-                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", 13);
+                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
                     curTileIndex += 3;
 
                     structure.Floors.Add(layout);
@@ -2759,7 +2759,7 @@ namespace DataGenerator.Data
                     AddWaterSteps(layout, "abyss", new RandRange(ii * 25), false);
 
                     //Tilesets
-                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", 09);
+                    AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "ghost");
 
                     //traps
                     AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder", false);//wonder tile
@@ -3694,7 +3694,7 @@ namespace DataGenerator.Data
                 layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
 
                 //Tilesets
-                AddTextureData(layout, "darknight_relic_wall", "darknight_relic_floor", "darknight_relic_secondary", 13);
+                AddTextureData(layout, "darknight_relic_wall", "darknight_relic_floor", "darknight_relic_secondary", "normal");
 
                 structure.Floors[floor_level - 1] = layout;
 

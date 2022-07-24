@@ -2461,28 +2461,28 @@ namespace DataGenerator.Data
 
                 //Tilesets
                 if (ii < 5)
-                    AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", 13);
+                    AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", "normal");
                 else if (ii < 9)
-                    AddTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary", 18);
+                    AddTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary", "water");
                 else if (ii < 11)
-                    AddTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", 11);
+                    AddTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", "ground");
                 else if (ii < 14)
-                    AddTextureData(layout, "quicksand_unused_wall", "quicksand_unused_floor", "quicksand_unused_secondary", 05);
+                    AddTextureData(layout, "quicksand_unused_wall", "quicksand_unused_floor", "quicksand_unused_secondary", "fairy");
                 else if (ii < 17)
-                    AddTextureData(layout, "mt_blaze_wall", "mt_blaze_floor", "mt_blaze_secondary", 07);
+                    AddTextureData(layout, "mt_blaze_wall", "mt_blaze_floor", "mt_blaze_secondary", "fire");
                 else if (ii < 19)
-                    AddTextureData(layout, "magma_cavern_2_wall", "magma_cavern_2_floor", "magma_cavern_2_secondary", 07);
+                    AddTextureData(layout, "magma_cavern_2_wall", "magma_cavern_2_floor", "magma_cavern_2_secondary", "fire");
                 else if (ii < 21)
-                    AddTextureData(layout, "high_cave_area_wall", "high_cave_area_floor", "high_cave_area_secondary", 17);
+                    AddTextureData(layout, "high_cave_area_wall", "high_cave_area_floor", "high_cave_area_secondary", "steel");
                 else if (ii < 24)
                 {
                     if (ii < 23)
-                        AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", 12);
+                        AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", "ice");
                     else
-                        AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", 12);
+                        AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", "ice");
                 }
                 else
-                    AddTextureData(layout, "buried_relic_2_sky_wall", "buried_relic_2_sky_floor", "buried_relic_2_sky_secondary", 17, true);
+                    AddTextureData(layout, "buried_relic_2_sky_wall", "buried_relic_2_sky_floor", "buried_relic_2_sky_secondary", "steel", true);
 
                 //wonder tiles
                 RandRange wonderTileRange;
@@ -4822,21 +4822,21 @@ namespace DataGenerator.Data
 
                 //Tilesets
                 if (ii <= 4)
-                    AddTextureData(layout, "purity_forest_9_wall", "purity_forest_9_floor", "purity_forest_9_secondary", 13);
+                    AddTextureData(layout, "purity_forest_9_wall", "purity_forest_9_floor", "purity_forest_9_secondary", "normal");
                 else if (ii <= 12)
-                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", 01);
+                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "bug");
                 else if (ii <= 16)
-                    AddTextureData(layout, "forest_area_wall", "forest_area_floor", "forest_area_secondary", 08);
+                    AddTextureData(layout, "forest_area_wall", "forest_area_floor", "forest_area_secondary", "flying");
                 else if (ii <= 20)
-                    AddTextureData(layout, "forest_path_wall", "forest_path_floor", "forest_path_secondary", 10);
+                    AddTextureData(layout, "forest_path_wall", "forest_path_floor", "forest_path_secondary", "grass");
                 else if (ii <= 24)
-                    AddTextureData(layout, "western_cave_1_wall", "western_cave_1_floor", "western_cave_1_secondary", 16);
+                    AddTextureData(layout, "western_cave_1_wall", "western_cave_1_floor", "western_cave_1_secondary", "rock");
                 else if (ii <= 27)
-                    AddTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary", 15);
+                    AddTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary", "psychic");
                 else if (ii <= 34)
-                    AddTextureData(layout, "treeshroud_forest_2_wall", "treeshroud_forest_2_floor", "treeshroud_forest_2_secondary", 13);
+                    AddTextureData(layout, "treeshroud_forest_2_wall", "treeshroud_forest_2_floor", "treeshroud_forest_2_secondary", "normal");
                 else
-                    AddTextureData(layout, "foggy_forest_wall", "foggy_forest_floor", "foggy_forest_secondary", 05);
+                    AddTextureData(layout, "foggy_forest_wall", "foggy_forest_floor", "foggy_forest_secondary", "fairy");
 
                 //wonder tiles
                 RandRange wonderTileRange;
