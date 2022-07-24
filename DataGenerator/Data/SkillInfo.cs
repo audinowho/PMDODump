@@ -1558,8 +1558,8 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 70;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(50));
-                skill.Data.OnActions.Add(0, new WeatherNeededEvent(4, new SetAccuracyEvent(-1)));
-                skill.Data.OnActions.Add(0, new WeatherNeededEvent(2, new SetAccuracyEvent(50)));
+                skill.Data.OnActions.Add(0, new WeatherNeededEvent("hail", new SetAccuracyEvent(-1)));
+                skill.Data.OnActions.Add(0, new WeatherNeededEvent("sunny", new SetAccuracyEvent(50)));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(3, true, true)));
                 skill.Strikes = 1;
@@ -1948,8 +1948,8 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new WeatherStackEvent(10, true, false, 2));
-                skill.Data.OnHits.Add(0, new WeatherStackEvent(12, true, false, 2));
+                skill.Data.OnHits.Add(0, new WeatherStackEvent(10, true, false, "sunny"));
+                skill.Data.OnHits.Add(0, new WeatherStackEvent(12, true, false, "sunny"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
@@ -1999,16 +1999,16 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
-                skill.Data.BeforeTryActions.Add(-1, new WeatherNeededEvent(2, new AddContextStateEvent(new MoveCharge())));
+                skill.Data.BeforeTryActions.Add(-1, new WeatherNeededEvent("sunny", new AddContextStateEvent(new MoveCharge())));
                 SelfAction altAction = new SelfAction();
                 altAction.CharAnimData = new CharAnimFrameType(06);//Charge
                 altAction.TargetAlignments |= Alignment.Self;
                 altAction.ActionFX.Emitter = new SingleEmitter(new AnimData("Solar_Beam_Charge", 1));
                 altAction.ActionFX.Sound = "DUN_HP_Drain_2";
                 skill.Data.BeforeTryActions.Add(0, new ChargeOrReleaseEvent(32, altAction));
-                skill.Data.OnActions.Add(0, new WeatherNeededEvent(1, new MultiplyDamageEvent(2, 3)));
-                skill.Data.OnActions.Add(0, new WeatherNeededEvent(3, new MultiplyDamageEvent(2, 3)));
-                skill.Data.OnActions.Add(0, new WeatherNeededEvent(4, new MultiplyDamageEvent(2, 3)));
+                skill.Data.OnActions.Add(0, new WeatherNeededEvent("rain", new MultiplyDamageEvent(2, 3)));
+                skill.Data.OnActions.Add(0, new WeatherNeededEvent("sandstorm", new MultiplyDamageEvent(2, 3)));
+                skill.Data.OnActions.Add(0, new WeatherNeededEvent("hail", new MultiplyDamageEvent(2, 3)));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", terrainEmitter, "wall"));
@@ -2316,8 +2316,8 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 70;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(35));
-                skill.Data.OnActions.Add(0, new WeatherNeededEvent(1, new SetAccuracyEvent(-1)));
-                skill.Data.OnActions.Add(0, new WeatherNeededEvent(2, new SetAccuracyEvent(50)));
+                skill.Data.OnActions.Add(0, new WeatherNeededEvent("rain", new SetAccuracyEvent(-1)));
+                skill.Data.OnActions.Add(0, new WeatherNeededEvent("sunny", new SetAccuracyEvent(50)));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(4, true, true)));
                 skill.Strikes = 1;
@@ -5149,7 +5149,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(3, 0, new StringKey(), typeof(ExtendWeatherState)));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("sandstorm", 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -5963,11 +5963,11 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                Dictionary<int, bool> weather = new Dictionary<int, bool>();
-                weather.Add(2, true);
-                weather.Add(1, false);
-                weather.Add(3, false);
-                weather.Add(4, false);
+                Dictionary<string, bool> weather = new Dictionary<string, bool>();
+                weather.Add("sunny", true);
+                weather.Add("rain", false);
+                weather.Add("sandstorm", false);
+                weather.Add("hail", false);
                 skill.Data.OnHits.Add(0, new WeatherHPEvent(3, weather));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
@@ -5987,11 +5987,11 @@ namespace DataGenerator.Data
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                Dictionary<int, bool> weather = new Dictionary<int, bool>();
-                weather.Add(2, true);
-                weather.Add(1, false);
-                weather.Add(3, false);
-                weather.Add(4, false);
+                Dictionary<string, bool> weather = new Dictionary<string, bool>();
+                weather.Add("sunny", true);
+                weather.Add("rain", false);
+                weather.Add("sandstorm", false);
+                weather.Add("hail", false);
                 skill.Data.OnHits.Add(0, new WeatherHPEvent(6, weather));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
@@ -6018,11 +6018,11 @@ namespace DataGenerator.Data
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                Dictionary<int, bool> weather = new Dictionary<int, bool>();
-                weather.Add(2, true);
-                weather.Add(1, false);
-                weather.Add(3, false);
-                weather.Add(4, false);
+                Dictionary<string, bool> weather = new Dictionary<string, bool>();
+                weather.Add("sunny", true);
+                weather.Add("rain", false);
+                weather.Add("sandstorm", false);
+                weather.Add("hail", false);
                 skill.Data.OnHits.Add(0, new WeatherHPEvent(4, weather));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
@@ -6121,7 +6121,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(1, 0, new StringKey(), typeof(ExtendWeatherState)));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("rain", 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -6140,7 +6140,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(2, 0, new StringKey(), typeof(ExtendWeatherState)));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("sunny", 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
@@ -6710,7 +6710,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(4, 0, new StringKey(), typeof(ExtendWeatherState)));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("hail", 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -6940,10 +6940,10 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                Dictionary<int, int> terrain = new Dictionary<int, int>();
-                terrain.Add(13, 85);
-                terrain.Add(14, 412);
-                terrain.Add(15, 585);
+                Dictionary<string, int> terrain = new Dictionary<string, int>();
+                terrain.Add("electric_terrain", 85);
+                terrain.Add("grassy_terrain", 412);
+                terrain.Add("misty_terrain", 585);
 
                 Dictionary<string, int> types = new Dictionary<string, int>();
                 types.Add(Text.Sanitize(((ElementInfo.Element)01).ToString()).ToLower(), 405);
@@ -7517,10 +7517,10 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
 
-                Dictionary<int, BattleEvent> terrain = new Dictionary<int, BattleEvent>();
-                terrain.Add(13, new StatusBattleEvent(4, true, true));
-                terrain.Add(14, new StatusBattleEvent(1, true, true));
-                terrain.Add(15, new StatusStackBattleEvent(10, true, true, -1));
+                Dictionary<string, BattleEvent> terrain = new Dictionary<string, BattleEvent>();
+                terrain.Add("electric_terrain", new StatusBattleEvent(4, true, true));
+                terrain.Add("grassy_terrain", new StatusBattleEvent(1, true, true));
+                terrain.Add("misty_terrain", new StatusStackBattleEvent(10, true, true, -1));
 
                 Dictionary<string, BattleEvent> types = new Dictionary<string, BattleEvent>();
                 types.Add(Text.Sanitize(((ElementInfo.Element)01).ToString()).ToLower(), new StatusStackBattleEvent(14, false, true, 1));
@@ -7614,10 +7614,10 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                Dictionary<int, string> terrain = new Dictionary<int, string>();
-                terrain.Add(13, "electric");
-                terrain.Add(14, "grass");
-                terrain.Add(15, "fairy");
+                Dictionary<string, string> terrain = new Dictionary<string, string>();
+                terrain.Add("electric_terrain", "electric");
+                terrain.Add("grassy_terrain", "grass");
+                terrain.Add("misty_terrain", "fairy");
                 skill.Data.OnHits.Add(0, new NatureElementEvent(terrain));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
@@ -8057,7 +8057,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                Dictionary<int, BattleData> weather = new Dictionary<int, BattleData>();
+                Dictionary<string, BattleData> weather = new Dictionary<string, BattleData>();
                 {
                     BattleData newData = new BattleData();
                     newData.Element = "water";
@@ -8067,7 +8067,7 @@ namespace DataGenerator.Data
                     newData.OnHits.Add(-1, new DamageFormulaEvent());
                     newData.HitFX.Sound = "DUN_Weather_Ball_Water";
                     newData.HitFX.Emitter = new SingleEmitter(new AnimData("Weather_Ball_Water", 3));
-                    weather.Add(1, newData);
+                    weather.Add("rain", newData);
                 }
                 {
                     BattleData newData = new BattleData();
@@ -8079,7 +8079,7 @@ namespace DataGenerator.Data
                     newData.HitFX.Sound = "DUN_Weather_Ball_Fire";
                     newData.HitFX.Emitter = new SingleEmitter(new AnimData("Weather_Ball_Fire", 3));
                     newData.HitFX.Emitter.LocHeight = 16;
-                    weather.Add(2, newData);
+                    weather.Add("sunny", newData);
                 }
                 {
                     BattleData newData = new BattleData();
@@ -8090,7 +8090,7 @@ namespace DataGenerator.Data
                     newData.OnHits.Add(-1, new DamageFormulaEvent());
                     newData.HitFX.Sound = "DUN_Weather_Ball_Rock";
                     newData.HitFX.Emitter = new SingleEmitter(new AnimData("Rock_Smash", 2));
-                    weather.Add(3, newData);
+                    weather.Add("sandstorm", newData);
                 }
                 {
                     BattleData newData = new BattleData();
@@ -8109,7 +8109,7 @@ namespace DataGenerator.Data
                     endAnim.Speed = 60;
                     newData.HitFX.Emitter = endAnim;
 
-                    weather.Add(4, newData);
+                    weather.Add("hail", newData);
                 }
                 skill.Data.BeforeHits.Add(-5, new WeatherDifferentEvent(weather));
 
@@ -13887,8 +13887,8 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 70;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(35));
-                skill.Data.OnActions.Add(0, new WeatherNeededEvent(1, new SetAccuracyEvent(-1)));
-                skill.Data.OnActions.Add(0, new WeatherNeededEvent(2, new SetAccuracyEvent(50)));
+                skill.Data.OnActions.Add(0, new WeatherNeededEvent("rain", new SetAccuracyEvent(-1)));
+                skill.Data.OnActions.Add(0, new WeatherNeededEvent("sunny", new SetAccuracyEvent(50)));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(7, true, true)));
                 skill.Strikes = 1;
@@ -14645,7 +14645,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(14, 0, new StringKey(), typeof(ExtendWeatherState)));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("grassy_terrain", 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -14664,7 +14664,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(15, 0, new StringKey(), typeof(ExtendWeatherState)));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("misty_terrain", 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -15126,7 +15126,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(13, 0, new StringKey(), typeof(ExtendWeatherState)));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("electric_terrain", 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge

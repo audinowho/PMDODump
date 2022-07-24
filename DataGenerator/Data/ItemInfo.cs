@@ -1597,17 +1597,17 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A climate-control orb that changes the dungeon floor's condition depending on the user's type.");
                 item.Sprite = "Orb_LightBlue";
 
-                Dictionary<string, int> weatherPair = new Dictionary<string, int>();
-                weatherPair.Add("water", 1);
-                weatherPair.Add("fire", 2);
-                weatherPair.Add("grass", 14);
-                weatherPair.Add("electric", 13);
-                weatherPair.Add("fairy", 15);
-                weatherPair.Add("ice", 4);
-                weatherPair.Add("rock", 3);
-                weatherPair.Add("ground", 3);
-                weatherPair.Add("steel", 3);
-                weatherPair.Add("flying", 19);
+                Dictionary<string, string> weatherPair = new Dictionary<string, string>();
+                weatherPair.Add("water", "rain");
+                weatherPair.Add("fire", "sunny");
+                weatherPair.Add("grass", "grassy_terrain");
+                weatherPair.Add("electric", "electric_terrain");
+                weatherPair.Add("fairy", "misty_terrain");
+                weatherPair.Add("ice", "hail");
+                weatherPair.Add("rock", "sandstorm");
+                weatherPair.Add("ground", "sandstorm");
+                weatherPair.Add("steel", "sandstorm");
+                weatherPair.Add("flying", "wind");
                 item.UseEvent.OnHits.Add(0, new TypeWeatherEvent(weatherPair));
                 item.UseAction = new SelfAction();
                 item.UseAction.TargetAlignments |= Alignment.Self;

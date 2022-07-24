@@ -102,7 +102,7 @@ namespace DataGenerator.Data
         /// <param name="layout"></param>
         /// <param name="setterID">Different families of mapstatus have different setter ID</param>
         /// <param name="defaultStatus">Must all be in the same family (weather, nonweather)</param>
-        public static void AddDefaultMapStatus<T>(MapGen<T> layout, int setterID, params int[] defaultStatus) where T : BaseMapGenContext
+        public static void AddDefaultMapStatus<T>(MapGen<T> layout, string setterID, params string[] defaultStatus) where T : BaseMapGenContext
         {
             DefaultMapStatusStep<T> statusData = new DefaultMapStatusStep<T>(setterID, defaultStatus);
             layout.GenSteps.Add(PR_FLOOR_DATA, statusData);

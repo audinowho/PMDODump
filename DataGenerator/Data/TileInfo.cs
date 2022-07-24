@@ -976,7 +976,7 @@ namespace DataGenerator.Data
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
-                tile.InteractWithTiles.Add(0, new LockdownTileEvent(34));
+                tile.InteractWithTiles.Add(0, new LockdownTileEvent("map_clear_check"));
                 tile.InteractWithTiles.Add(0, new BossSpawnEvent());
             }
             else if (ii == 39)
@@ -1003,7 +1003,7 @@ namespace DataGenerator.Data
                 overlay.Layer = DrawLayer.Front;
 
                 OpenOtherPassageEvent openEvent = new OpenOtherPassageEvent();
-                openEvent.TimeLimitStatus = 22;
+                openEvent.TimeLimitStatus = "somethings_stirring";
                 openEvent.Emitter = overlay;
                 openEvent.Warning = new StringKey("MSG_TIME_WARNING_1");
                 openEvent.WarningSE = "DUN_Wind";
@@ -1046,7 +1046,7 @@ namespace DataGenerator.Data
                 overlay.Layer = DrawLayer.Front;
 
                 OpenOtherPassageEvent openEvent = new OpenOtherPassageEvent();
-                openEvent.TimeLimitStatus = 22;
+                openEvent.TimeLimitStatus = "somethings_stirring";
                 openEvent.Emitter = overlay;
                 openEvent.Warning = new StringKey("MSG_TIME_WARNING_1");
                 openEvent.WarningSE = "DUN_Wind";

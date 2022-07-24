@@ -231,7 +231,7 @@ namespace DataGenerator.Data
 
                     layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Enemies")));
                     AddFloorData(layout, "A07. Summit.ogg", 500, Map.SightRange.Clear, Map.SightRange.Clear);
-                    AddDefaultMapStatus(layout, 24, 1);
+                    AddDefaultMapStatus(layout, "default_weather", "rain");
 
                     AddInitGridStep(layout, 4, 4, 9, 9);
 
@@ -857,7 +857,7 @@ namespace DataGenerator.Data
                     //Floor settings
                     layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Hedge Maze")));
                     AddFloorData(layout,"B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Clear, Map.SightRange.Dark);
-                    AddDefaultMapStatus(layout, 24, 3);
+                    AddDefaultMapStatus(layout, "default_weather", "sandstorm");
 
                     //Tilesets
                     AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
@@ -1011,7 +1011,7 @@ namespace DataGenerator.Data
                     //Floor settings
                     layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Hedge Maze 2")));
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Clear, Map.SightRange.Dark);
-                    AddDefaultMapStatus(layout, 25, 10);
+                    AddDefaultMapStatus(layout, "default_mapstatus", "gravity");
 
                     //Tilesets
                     AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
@@ -1164,7 +1164,7 @@ namespace DataGenerator.Data
                     //Floor settings
                     layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<ListMapGenContext>(structure.Floors.Count, new LocalText("Test: Floating Islands")));
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 2000, Map.SightRange.Clear, Map.SightRange.Dark);
-                    AddDefaultMapStatus(layout, 25, 16);
+                    AddDefaultMapStatus(layout, "default_mapstatus", "inverse");
 
                     //Tilesets
                     AddTextureData(layout, "sky_tower_wall", "sky_tower_floor", "sky_tower_secondary", "flying");
@@ -2250,7 +2250,7 @@ namespace DataGenerator.Data
                         {
                             ShopSecurityState state = new ShopSecurityState();
                             state.Security.Add(GetShopMob(352, 168, 264, 425, 510, 168, new int[] { 1984, 1985, 1988 }, -1), 10);
-                            StateMapStatusStep<StairsMapGenContext> statusData = new StateMapStatusStep<StairsMapGenContext>(38, state);
+                            StateMapStatusStep<StairsMapGenContext> statusData = new StateMapStatusStep<StairsMapGenContext>("shop_security", state);
                             layout.GenSteps.Add(PR_FLOOR_DATA, statusData);
                         }
 

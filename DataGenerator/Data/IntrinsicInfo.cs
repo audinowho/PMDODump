@@ -47,7 +47,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Drizzle");
                 ability.Desc = new LocalText("The Pokémon makes it rain when it is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(1, 10, new StringKey("MSG_DRIZZLE"), typeof(ExtendWeatherState))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("rain", 10, new StringKey("MSG_DRIZZLE"), typeof(ExtendWeatherState))));
             }
             else if (ii == 3)
             {
@@ -86,7 +86,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Sand Veil");
                 ability.Desc = new LocalText("Avoids attacks from a distance when in a sandstorm.");
                 ability.OnRefresh.Add(0, new MiscEvent(new SandState()));
-                ability.BeforeBeingHits.Add(0, new WeatherNeededEvent(3, new EvadeDistanceEvent()));
+                ability.BeforeBeingHits.Add(0, new WeatherNeededEvent("sandstorm", new EvadeDistanceEvent()));
             }
             else if (ii == 9)
             {
@@ -128,7 +128,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Cloud Nine");
                 ability.Desc = new LocalText("The Pokémon eliminates weather when it is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(0, 10, new StringKey("MSG_CLOUD_NINE"), typeof(ExtendWeatherState))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("clear", 10, new StringKey("MSG_CLOUD_NINE"), typeof(ExtendWeatherState))));
             }
             else if (ii == 14)
             {
@@ -289,13 +289,13 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Swift Swim");
                 ability.Desc = new LocalText("Boosts the Pokémon's Movement Speed in rain.");
-                ability.OnRefresh.Add(0, new WeatherSpeedEvent(1));
+                ability.OnRefresh.Add(0, new WeatherSpeedEvent("rain"));
             }
             else if (ii == 34)
             {
                 ability.Name = new LocalText("Chlorophyll");
                 ability.Desc = new LocalText("Boosts the Pokémon's Movement Speed in sunshine.");
-                ability.OnRefresh.Add(0, new WeatherSpeedEvent(2));
+                ability.OnRefresh.Add(0, new WeatherSpeedEvent("sunny"));
             }
             else if (ii == 35)
             {
@@ -376,13 +376,13 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Rain Dish");
                 ability.Desc = new LocalText("The Pokémon gradually regains HP when battling in rain.");
-                ability.AfterActions.Add(0, new WeatherNeededEvent(1, new OnMoveUseEvent(new RestoreHPEvent(1, 8, false))));
+                ability.AfterActions.Add(0, new WeatherNeededEvent("rain", new OnMoveUseEvent(new RestoreHPEvent(1, 8, false))));
             }
             else if (ii == 45)
             {
                 ability.Name = new LocalText("Sand Stream");
                 ability.Desc = new LocalText("The Pokémon summons a sandstorm when it is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(3, 10, new StringKey("MSG_SAND_STREAM"), typeof(ExtendWeatherState))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("sandstorm", 10, new StringKey("MSG_SAND_STREAM"), typeof(ExtendWeatherState))));
             }
             else if (ii == 46)
             {
@@ -507,24 +507,24 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Forecast");
                 ability.Desc = new LocalText("The Pokémon transforms with the weather to change its type to Water, Fire, or Ice.");
                 {
-                    Dictionary<int, int> weather = new Dictionary<int, int>();
-                    weather.Add(1, 2);
-                    weather.Add(2, 1);
-                    weather.Add(4, 3);
+                    Dictionary<string, int> weather = new Dictionary<string, int>();
+                    weather.Add("rain", 2);
+                    weather.Add("sunny", 1);
+                    weather.Add("hail", 3);
                     ability.OnMapStatusAdds.Add(0, new WeatherFormeChangeEvent(351, 0, weather));
                 }
                 {
-                    Dictionary<int, int> weather = new Dictionary<int, int>();
-                    weather.Add(1, 2);
-                    weather.Add(2, 1);
-                    weather.Add(4, 3);
+                    Dictionary<string, int> weather = new Dictionary<string, int>();
+                    weather.Add("rain", 2);
+                    weather.Add("sunny", 1);
+                    weather.Add("hail", 3);
                     ability.OnMapStatusRemoves.Add(0, new WeatherFormeChangeEvent(351, 0, weather));
                 }
                 {
-                    Dictionary<int, int> weather = new Dictionary<int, int>();
-                    weather.Add(1, 2);
-                    weather.Add(2, 1);
-                    weather.Add(4, 3);
+                    Dictionary<string, int> weather = new Dictionary<string, int>();
+                    weather.Add("rain", 2);
+                    weather.Add("sunny", 1);
+                    weather.Add("hail", 3);
                     ability.OnMapStarts.Add(-11, new WeatherFormeEvent(351, 0, weather));
                 }
             }
@@ -595,7 +595,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Drought");
                 ability.Desc = new LocalText("Turns the sunlight harsh when the Pokémon is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(2, 10, new StringKey("MSG_DROUGHT"), typeof(ExtendWeatherState))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("sunny", 10, new StringKey("MSG_DROUGHT"), typeof(ExtendWeatherState))));
             }
             else if (ii == 71)
             {
@@ -633,7 +633,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Air Lock");
                 ability.Desc = new LocalText("Eliminates the effects of weather when the Pokémon is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(0, 10, new StringKey("MSG_AIR_LOCK"), typeof(ExtendWeatherState))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("clear", 10, new StringKey("MSG_AIR_LOCK"), typeof(ExtendWeatherState))));
             }
             else if (ii == 77)
             {
@@ -673,7 +673,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Snow Cloak");
                 ability.Desc = new LocalText("Avoids attacks from a distance when in a hailstorm.");
                 ability.OnRefresh.Add(0, new MiscEvent(new HailState()));
-                ability.BeforeBeingHits.Add(0, new WeatherNeededEvent(4, new EvadeDistanceEvent()));
+                ability.BeforeBeingHits.Add(0, new WeatherNeededEvent("hail", new EvadeDistanceEvent()));
             }
             else if (ii == 82)
             {
@@ -719,7 +719,7 @@ namespace DataGenerator.Data
                 ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("water", false, true,
                     new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink", new RestoreHPEvent(1, 4, true)));
                 ability.BeforeBeingHits.Add(0, new MultiplyElementEvent("fire", 3, 2, false));
-                ability.OnMapTurnEnds.Add(0, new WeatherAlignedEvent(2, 1));
+                ability.OnMapTurnEnds.Add(0, new WeatherAlignedEvent("sunny", "rain"));
             }
             else if (ii == 88)
             {
@@ -755,14 +755,14 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Hydration");
                 ability.Desc = new LocalText("Heals status conditions if it's raining.");
-                ability.OnTurnEnds.Add(0, new WeatherNeededSingleEvent(1, new CureAllEvent(new StringKey("MSG_CURE_SELF"), new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Wonder_Tile", 10))));
+                ability.OnTurnEnds.Add(0, new WeatherNeededSingleEvent("rain", new CureAllEvent(new StringKey("MSG_CURE_SELF"), new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Wonder_Tile", 10))));
             }
             else if (ii == 94)
             {
                 ability.Name = new LocalText("Solar Power");
                 ability.Desc = new LocalText("Boosts the Sp. Atk stat in sunny weather, but HP decreases.");
-                ability.OnActions.Add(0, new WeatherNeededEvent(2, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 3, 2)));
-                ability.AfterActions.Add(0, new WeatherNeededEvent(2, new OnAggressionEvent(new ChipDamageEvent(12, new StringKey(), true, true))));
+                ability.OnActions.Add(0, new WeatherNeededEvent("sunny", new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 3, 2)));
+                ability.AfterActions.Add(0, new WeatherNeededEvent("sunny", new OnAggressionEvent(new ChipDamageEvent(12, new StringKey(), true, true))));
             }
             else if (ii == 95)
             {
@@ -812,7 +812,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Leaf Guard");
                 ability.Desc = new LocalText("Avoids enemy status moves in sunny weather.");
-                ability.BeforeBeingHits.Add(0, new WeatherNeededEvent(2, new EvadeCategoryEvent(Alignment.Foe, BattleData.SkillCategory.Status)));
+                ability.BeforeBeingHits.Add(0, new WeatherNeededEvent("sunny", new EvadeCategoryEvent(Alignment.Foe, BattleData.SkillCategory.Status)));
             }
             else if (ii == 103)
             {
@@ -919,7 +919,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Ice Body");
                 ability.Desc = new LocalText("The Pokémon gradually regains HP when battling in a hailstorm.");
                 ability.OnRefresh.Add(0, new MiscEvent(new HailState()));
-                ability.AfterActions.Add(0, new WeatherNeededEvent(4, new OnMoveUseEvent(new RestoreHPEvent(1, 8, false))));
+                ability.AfterActions.Add(0, new WeatherNeededEvent("hail", new OnMoveUseEvent(new RestoreHPEvent(1, 8, false))));
             }
             else if (ii == 116)
             {
@@ -931,7 +931,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Snow Warning");
                 ability.Desc = new LocalText("The Pokémon summons a hailstorm when it is battling.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(4, 10, new StringKey("MSG_SNOW_WARNING"), typeof(ExtendWeatherState))));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("hail", 10, new StringKey("MSG_SNOW_WARNING"), typeof(ExtendWeatherState))));
             }
             else if (ii == 118)
             {
@@ -974,24 +974,24 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Flower Gift");
                 ability.Desc = new LocalText("Boosts the Attack and Sp. Def stats of itself and allies in harsh sunlight.");
                 {
-                    Dictionary<int, int> weather = new Dictionary<int, int>();
-                    weather.Add(2, 1);
+                    Dictionary<string, int> weather = new Dictionary<string, int>();
+                    weather.Add("sunny", 1);
                     ability.OnMapStatusAdds.Add(0, new WeatherFormeChangeEvent(421, 0, weather));
                 }
                 {
-                    Dictionary<int, int> weather = new Dictionary<int, int>();
-                    weather.Add(2, 1);
+                    Dictionary<string, int> weather = new Dictionary<string, int>();
+                    weather.Add("sunny", 1);
                     ability.OnMapStatusRemoves.Add(0, new WeatherFormeChangeEvent(421, 0, weather));
                 }
                 {
-                    Dictionary<int, int> weather = new Dictionary<int, int>();
-                    weather.Add(2, 1);
+                    Dictionary<string, int> weather = new Dictionary<string, int>();
+                    weather.Add("sunny", 1);
                     ability.OnMapStarts.Add(-11, new WeatherFormeEvent(421, 0, weather));
                 }
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Self | Alignment.Friend);
-                ability.ProximityEvent.OnActions.Add(0, new MultiplyCategoryInWeatherEvent(2, BattleData.SkillCategory.Physical, 5, 4));
-                ability.ProximityEvent.BeforeBeingHits.Add(0, new MultiplyCategoryInWeatherEvent(2, BattleData.SkillCategory.Magical, 4, 5));
+                ability.ProximityEvent.OnActions.Add(0, new MultiplyCategoryInWeatherEvent("sunny", BattleData.SkillCategory.Physical, 5, 4));
+                ability.ProximityEvent.BeforeBeingHits.Add(0, new MultiplyCategoryInWeatherEvent("sunny", BattleData.SkillCategory.Magical, 4, 5));
             }
             else if (ii == 123)
             {
@@ -1173,7 +1173,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Sand Rush");
                 ability.Desc = new LocalText("Boosts the Pokémon's Movement Speed in a sandstorm.");
                 ability.OnRefresh.Add(0, new MiscEvent(new SandState()));
-                ability.OnRefresh.Add(0, new WeatherSpeedEvent(3));
+                ability.OnRefresh.Add(0, new WeatherSpeedEvent("sandstorm"));
             }
             else if (ii == 147)
             {
@@ -1260,7 +1260,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Sand Force");
                 ability.Desc = new LocalText("Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.");
                 ability.OnRefresh.Add(0, new MiscEvent(new SandState()));
-                ability.OnActions.Add(0, new WeatherNeededEvent(3, new MultiplyElementEvent("rock", 4, 3, false),
+                ability.OnActions.Add(0, new WeatherNeededEvent("sandstorm", new MultiplyElementEvent("rock", 4, 3, false),
                     new MultiplyElementEvent("ground", 4, 3, false), new MultiplyElementEvent("steel", 4, 3, false)));
             }
             else if (ii == 160)
@@ -1396,7 +1396,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Grass Pelt");
                 ability.Desc = new LocalText("Boosts the Defense stat in Grassy Terrain.");
-                ability.BeforeBeingHits.Add(0, new WeatherNeededEvent(14, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 1, 2, new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", true, 10))));
+                ability.BeforeBeingHits.Add(0, new WeatherNeededEvent("grassy_terrain", new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 1, 2, new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", true, 10))));
             }
             else if (ii == 180)
             {

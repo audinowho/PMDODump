@@ -267,7 +267,7 @@ namespace DataGenerator.Data
             tactic.Name = new LocalText("Shopkeeper");//23
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner;
-            tactic.Plans.Add(new WaitUntilMapStatusPlan(iq | AIFlags.TrapAvoider, 31));
+            tactic.Plans.Add(new WaitUntilMapStatusPlan(iq | AIFlags.TrapAvoider, "thief"));
             tactic.Plans.Add(new PreBuffPlan(iq | AIFlags.TrapAvoider, 26));
             tactic.Plans.Add(new AttackFoesPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new AvoidAlliesPlan(iq | AIFlags.TrapAvoider));//if cornered, don't do anything
@@ -279,7 +279,7 @@ namespace DataGenerator.Data
             tactic.Name = new LocalText("Shuckle");//24
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner;
-            tactic.Plans.Add(new WaitUntilMapStatusPlan(iq | AIFlags.TrapAvoider, 31));
+            tactic.Plans.Add(new WaitUntilMapStatusPlan(iq | AIFlags.TrapAvoider, "thief"));
             tactic.Plans.Add(new LeadSkillPlan(iq | AIFlags.TrapAvoider, 26));
             tactic.Plans.Add(new AttackFoesPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Avoid));
             tactic.Plans.Add(new AvoidAlliesPlan(iq | AIFlags.TrapAvoider));//if cornered, don't do anything

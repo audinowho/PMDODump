@@ -516,7 +516,7 @@ namespace DataGenerator.Data
                         {
                             //FIXME
                             EvoWeather evoDetail = new EvoWeather();
-                            evoDetail.Weather = 3;//sandstorm
+                            evoDetail.Weather = "sandstorm";//sandstorm
                             branch.Details.Add(evoDetail);
                         }
                         else if (evoSpecies == 869)//alcremie
@@ -656,13 +656,13 @@ namespace DataGenerator.Data
                             else if (CheckEvoConditions(reader, "min_level", "needs_overworld_rain"))
                             {
                                 EvoWeather evoDetail = new EvoWeather();
-                                evoDetail.Weather = 1;//rain
+                                evoDetail.Weather = "rain";//rain
                                 branch.Details.Add(evoDetail);
                             }
                             else if (CheckEvoConditions(reader, "min_level", "turn_upside_down"))
                             {
                                 EvoWeather evoDetail = new EvoWeather();
-                                evoDetail.Weather = 9;//Trick Room
+                                evoDetail.Weather = "trick_room";//Trick Room
                                 branch.Details.Add(evoDetail);
                             }
                             else
