@@ -60,7 +60,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Attack");
                 skill.Desc = new LocalText("A regular attack.");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 00;
+                skill.Data.Element = "none";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
@@ -81,7 +81,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Pound");
                 skill.Desc = new LocalText("The target is physically pounded with a long tail, a foreleg, or the like.");
                 skill.BaseCharges = 25;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -102,7 +102,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Karate Chop");
                 skill.Desc = new LocalText("The target is attacked with a sharp chop. Critical hits land more easily.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -121,7 +121,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Double Slap");
                 skill.Desc = new LocalText("The target is slapped repeatedly, back and forth, four times in a row.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 50;
@@ -139,7 +139,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Comet Punch");
                 skill.Desc = new LocalText("The target is hit with a flurry of punches that strike four times in a row.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -160,7 +160,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Mega Punch");
                 skill.Desc = new LocalText("The target is slugged by a punch thrown with muscle-packed power.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -184,7 +184,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Pay Day");
                 skill.Desc = new LocalText("Numerous coins are hurled at the target to inflict damage. It causes the target to drop a portion of its money.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -208,7 +208,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Fire Punch");
                 skill.Desc = new LocalText("The target is punched with a fiery fist. This may also leave the target with a burn.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -236,7 +236,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Ice Punch");
                 skill.Desc = new LocalText("The target is punched with an icy fist. This may also leave the target frozen.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -268,7 +268,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Thunder Punch");
                 skill.Desc = new LocalText("The target is punched with an electrified fist. This may also leave the target with paralysis.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -294,7 +294,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Scratch");
                 skill.Desc = new LocalText("Hard, pointed, sharp claws rake the target to inflict damage.");
                 skill.BaseCharges = 24;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -318,7 +318,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Vice Grip");
                 skill.Desc = new LocalText("The target is gripped and squeezed from both sides to inflict damage. The target becomes immobilized.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -339,7 +339,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Guillotine");
                 skill.Desc = new LocalText("A vicious, tearing attack with big pincers. The target faints instantly if it hits.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 50;
@@ -366,7 +366,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Razor Wind");
                 skill.Desc = new LocalText("A two-turn attack. Blades of wind hit opposing Pokémon on the second turn. Critical hits land more easily.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -404,7 +404,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Swords Dance");
                 skill.Desc = new LocalText("A frenetic dance to uplift the fighting spirit. This sharply raises the Attack stat.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 2));
@@ -424,7 +424,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Cut");
                 skill.Desc = new LocalText("The target is cut with a scythe or claw.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
@@ -447,7 +447,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Gust");
                 skill.Desc = new LocalText("A gust of wind is whipped up by wings and launched at the target to inflict damage.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(45));
@@ -470,7 +470,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Wing Attack");
                 skill.Desc = new LocalText("The target is struck with large, imposing wings spread wide to inflict damage.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -496,7 +496,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Whirlwind");
                 skill.Desc = new LocalText("The user generates a powerful wind that blows away other Pokémon.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new KnockBackEvent(8));
@@ -521,7 +521,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Fly");
                 skill.Desc = new LocalText("The user soars and then strikes its target any time in the next 5 turns.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
@@ -554,7 +554,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bind");
                 skill.Desc = new LocalText("Things such as long bodies or tentacles are used to bind and squeeze the target for three turns.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 70;
@@ -579,7 +579,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Slam");
                 skill.Desc = new LocalText("The target is slammed with a long tail, vines, or the like to inflict damage.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 80;
@@ -601,7 +601,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Vine Whip");
                 skill.Desc = new LocalText("The target is struck with slender, whiplike vines to inflict damage.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -623,7 +623,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Stomp");
                 skill.Desc = new LocalText("The target is stomped with a big foot. This may also make the target flinch.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -645,7 +645,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Double Kick");
                 skill.Desc = new LocalText("The target is quickly kicked twice in succession using both feet.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
@@ -665,7 +665,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Mega Kick");
                 skill.Desc = new LocalText("The target is attacked by a kick launched with muscle-packed power.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 70;
@@ -688,7 +688,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Jump Kick");
                 skill.Desc = new LocalText("The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 85;
@@ -713,7 +713,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Rolling Kick");
                 skill.Desc = new LocalText("The user lashes out with a quick, spinning kick. This may also make the target flinch.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
@@ -736,7 +736,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sand Attack");
                 skill.Desc = new LocalText("Sand is hurled in the target's face, reducing the target's Accuracy.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(14, true, false, -1));
@@ -762,7 +762,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Headbutt");
                 skill.Desc = new LocalText("The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -785,7 +785,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Horn Attack");
                 skill.Desc = new LocalText("The target is jabbed with a sharply pointed horn to inflict damage. Critical hits land more easily.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 85;
@@ -809,7 +809,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Fury Attack");
                 skill.Desc = new LocalText("The target is jabbed repeatedly with a horn or beak five times in a row.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 50;
@@ -832,7 +832,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Horn Drill");
                 skill.Desc = new LocalText("The user stabs the target with a horn that rotates like a drill. The target faints instantly if it hits.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 50;
@@ -857,7 +857,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Tackle");
                 skill.Desc = new LocalText("A physical attack in which the user charges and slams into the target with its whole body.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -878,7 +878,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Body Slam");
                 skill.Desc = new LocalText("The user drops onto the target with its full body weight. This may also leave the target with paralysis.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -898,7 +898,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Wrap");
                 skill.Desc = new LocalText("A long body or vines are used to wrap and squeeze the target for three turns.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 85;
@@ -923,7 +923,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Take Down");
                 skill.Desc = new LocalText("A reckless, full-body charge attack for slamming into the target. This also damages the user a little.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 80;
@@ -945,7 +945,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Thrash");
                 skill.Desc = new LocalText("The user rampages and attacks for three turns. The user then becomes confused.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -974,7 +974,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Double-Edge");
                 skill.Desc = new LocalText("A reckless, life-risking tackle. This also damages the user quite a lot.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -995,7 +995,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Tail Whip");
                 skill.Desc = new LocalText("The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stat.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, -1));
@@ -1016,7 +1016,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Poison Sting");
                 skill.Desc = new LocalText("The user stabs the target with a poisonous stinger. This may also poison the target.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -1050,7 +1050,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Twineedle");
                 skill.Desc = new LocalText("The user damages the target twice in succession by jabbing it with two spikes. This may also poison the target.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -1075,7 +1075,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Pin Missile");
                 skill.Desc = new LocalText("Sharp spikes are shot at the target in rapid succession. They hit four times in a row.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 50;
                 skill.Data.SkillStates.Set(new BasePowerState(25));
@@ -1099,7 +1099,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Leer");
                 skill.Desc = new LocalText("The user gives opposing Pokémon an intimidating leer that lowers the Defense stat.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, -1));
@@ -1121,7 +1121,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bite");
                 skill.Desc = new LocalText("The target is bitten with viciously sharp fangs. This may also make the target flinch.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new JawState());
@@ -1147,7 +1147,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Growl");
                 skill.Desc = new LocalText("The user growls in an endearing way, making opposing Pokémon less wary. This lowers their Attack stats.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -1171,7 +1171,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Roar");
                 skill.Desc = new LocalText("The user makes a terrifying roar that blows back opposing Pokémon.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -1195,7 +1195,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Sing");
                 skill.Desc = new LocalText("A soothing lullaby is sung in a calming voice that puts the target into a deep slumber.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 85;
@@ -1221,7 +1221,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Supersonic");
                 skill.Desc = new LocalText("The user generates odd sound waves from its body that confuse the target.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 50;
@@ -1246,7 +1246,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sonic Boom");
                 skill.Desc = new LocalText("The target is hit with a destructive shock wave that always inflicts 1/4 of the target's max HP.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(-1, new MaxHPDamageEvent(4));
@@ -1272,7 +1272,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Disable");
                 skill.Desc = new LocalText("This move prevents the target from using the move it last used.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new DisableBattleEvent(60, 26));
@@ -1293,7 +1293,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Acid");
                 skill.Desc = new LocalText("The opposing Pokémon are attacked with a spray of harsh acid. This may also lower their Sp. Def stats.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -1323,7 +1323,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Ember");
                 skill.Desc = new LocalText("The target is attacked with small flames. This may also leave the target with a burn.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -1356,7 +1356,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Flamethrower");
                 skill.Desc = new LocalText("The target is scorched with an intense blast of fire. This may also leave the target with a burn.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -1389,7 +1389,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Mist");
                 skill.Desc = new LocalText("The user cloaks itself and its allies in a white mist that prevents any of their stats from being lowered for ten turns.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(69, true, false));
@@ -1413,7 +1413,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Water Gun");
                 skill.Desc = new LocalText("The target is blasted with a forceful shot of water.");
                 skill.BaseCharges = 19;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(35));
@@ -1447,7 +1447,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Hydro Pump");
                 skill.Desc = new LocalText("The target is blasted by a huge volume of water launched under great pressure.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -1482,7 +1482,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Surf");
                 skill.Desc = new LocalText("The user attacks everything around it by swamping its surroundings with a giant wave.");
                 skill.BaseCharges = 9;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -1516,7 +1516,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Ice Beam");
                 skill.Desc = new LocalText("The target is struck with an icy-cold beam of energy. This may also leave the target frozen.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -1553,7 +1553,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Blizzard");
                 skill.Desc = new LocalText("A howling blizzard is summoned to strike opposing Pokémon. This may also leave the opposing Pokémon frozen.");
                 skill.BaseCharges = 6;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 70;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
@@ -1591,7 +1591,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Psybeam");
                 skill.Desc = new LocalText("The target is attacked with a peculiar ray. This may also leave the target confused.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -1620,7 +1620,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bubble Beam");
                 skill.Desc = new LocalText("A spray of bubbles is forcefully ejected at the target. This may also lower its Movement Speed.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -1656,7 +1656,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Aurora Beam");
                 skill.Desc = new LocalText("The target is hit with a rainbow-colored beam. This may also lower the target's Attack stat.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -1688,7 +1688,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Hyper Beam");
                 skill.Desc = new LocalText("The user attacks with a destructive beam. The user can't move on the next three turns.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -1719,7 +1719,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Peck");
                 skill.Desc = new LocalText("The target is jabbed with a sharply pointed beak or horn.");
                 skill.BaseCharges = 24;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -1740,7 +1740,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Drill Peck");
                 skill.Desc = new LocalText("A corkscrewing attack with a sharp beak acting as a drill.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -1764,7 +1764,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Submission");
                 skill.Desc = new LocalText("The user grabs the target and recklessly dives for the ground. This also damages the user a little.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
@@ -1783,7 +1783,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Low Kick");
                 skill.Desc = new LocalText("A powerful low kick that makes the target fall over. The heavier the target, the greater the move's power.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -1809,7 +1809,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Counter");
                 skill.Desc = new LocalText("A retaliation move that counters any physical attack, inflicting double the damage taken.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(67, true, false));
@@ -1828,7 +1828,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Seismic Toss");
                 skill.Desc = new LocalText("The target is thrown using the power of gravity. It inflicts damage equal to the user's level.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -1845,7 +1845,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Strength");
                 skill.Desc = new LocalText("The target is slugged with a punch thrown at maximum power, pushing them back.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -1864,7 +1864,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Absorb");
                 skill.Desc = new LocalText("A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -1890,7 +1890,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Mega Drain");
                 skill.Desc = new LocalText("A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -1917,7 +1917,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Leech Seed");
                 skill.Desc = new LocalText("A seed is planted on the target. It steals some HP from the target every turn.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 85;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(101, true, false));
@@ -1945,7 +1945,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Growth");
                 skill.Desc = new LocalText("The user's body grows all at once, raising the Attack and Sp. Atk stats.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new WeatherStackEvent(10, true, false, 2));
@@ -1966,7 +1966,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Razor Leaf");
                 skill.Desc = new LocalText("Sharp-edged leaves are launched to slash at the opposing Pokémon. Critical hits land more easily.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
@@ -1995,7 +1995,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Solar Beam");
                 skill.Desc = new LocalText("A two-turn attack. The user gathers light, then blasts a bundled beam on the next turn.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -2031,7 +2031,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Poison Powder");
                 skill.Desc = new LocalText("The user scatters a cloud of poisonous dust that poisons the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 50;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(5, true, false));
@@ -2058,7 +2058,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Stun Spore");
                 skill.Desc = new LocalText("The user scatters a cloud of numbing powder that paralyzes the target.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 50;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(4, true, false));
@@ -2085,7 +2085,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sleep Powder");
                 skill.Desc = new LocalText("The user scatters a big cloud of sleep-inducing dust around the target.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 50;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(1, true, false));
@@ -2112,7 +2112,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Petal Dance");
                 skill.Desc = new LocalText("The user attacks the target by scattering petals for three turns. The user then becomes confused.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -2140,7 +2140,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("String Shot");
                 skill.Desc = new LocalText("The opposing Pokémon are bound with silk blown from the user's mouth that lowers Movement Speed.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, -1));
@@ -2168,7 +2168,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Dragon Rage");
                 skill.Desc = new LocalText("This attack hits the target with a shock wave of pure rage. This attack inflicts damage equal to the amount of HP the user is missing.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(-1, new UserHPDamageEvent(true));
@@ -2198,7 +2198,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Fire Spin");
                 skill.Desc = new LocalText("The target becomes trapped within a fierce vortex of fire that rages for three turns.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(35));
@@ -2226,7 +2226,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Thunder Shock");
                 skill.Desc = new LocalText("A jolt of electricity crashes down on the target to inflict damage. This may also leave the target with paralysis.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -2254,7 +2254,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Thunderbolt");
                 skill.Desc = new LocalText("A strong electric blast crashes down on the target. This may also leave the target with paralysis.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
@@ -2284,7 +2284,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Thunder Wave");
                 skill.Desc = new LocalText("The user launches a weak jolt of electricity that paralyzes the target.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(4, true, false));
@@ -2311,7 +2311,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Thunder");
                 skill.Desc = new LocalText("A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 70;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -2335,7 +2335,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Rock Throw");
                 skill.Desc = new LocalText("The user picks up and throws a small rock at the target to attack.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 85;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
@@ -2357,7 +2357,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Earthquake");
                 skill.Desc = new LocalText("The user sets off an earthquake that strikes every Pokémon around it.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -2381,7 +2381,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Fissure");
                 skill.Desc = new LocalText("The user opens up a fissure in the ground and drops foes in. The target faints instantly if it hits.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 50;
                 skill.Data.BeforeHits.Add(0, new ExplorerImmuneEvent());
@@ -2407,7 +2407,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Dig");
                 skill.Desc = new LocalText("The user burrows, then attacks any time in the next 5 turns.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -2442,7 +2442,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Toxic");
                 skill.Desc = new LocalText("A move that leaves the target badly poisoned. Its poison damage worsens every turn.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 85;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(6, true, false));
@@ -2465,7 +2465,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Confusion");
                 skill.Desc = new LocalText("The target is hit by a weak telekinetic force. This may also confuse the target.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -2496,7 +2496,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Psychic");
                 skill.Desc = new LocalText("The target is hit by a strong telekinetic force. This may also lower the target's Sp. Def stat.");
                 skill.BaseCharges = 9;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -2533,7 +2533,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Hypnosis");
                 skill.Desc = new LocalText("The user employs hypnotic suggestion to make the target fall into a deep sleep.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 50;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(1, true, false));
@@ -2571,7 +2571,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Meditate");
                 skill.Desc = new LocalText("The user meditates to awaken the power deep within its body and raise its Attack stat.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 1));
@@ -2596,7 +2596,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Agility");
                 skill.Desc = new LocalText("The user relaxes and lightens the body to raise Movement Speed.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, 1));
@@ -2617,7 +2617,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Quick Attack");
                 skill.Desc = new LocalText("The user lunges at the target at a speed that makes it almost invisible.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -2645,7 +2645,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Rage");
                 skill.Desc = new LocalText("As long as this move is in use, the power of rage raises the Attack stat each time the user is hit in battle.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(71, true, false));
@@ -2665,7 +2665,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Teleport");
                 skill.Desc = new LocalText("The user warps itself and nearby allies to a random location on the floor.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RandomGroupWarpEvent(50, true));
@@ -2685,7 +2685,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Night Shade");
                 skill.Desc = new LocalText("The user makes the target see a frightening mirage. It inflicts damage equal to the user's level.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(-1, new LevelDamageEvent(false, 1, 1));
@@ -2704,7 +2704,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Mimic");
                 skill.Desc = new LocalText("The user copies the target's last move. The move can be used during battle until the next floor is reached.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new MimicBattleEvent(27));
@@ -2722,7 +2722,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Screech");
                 skill.Desc = new LocalText("An earsplitting screech harshly lowers the target's Defense stat.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 85;
@@ -2743,7 +2743,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Double Team");
                 skill.Desc = new LocalText("By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(15, true, false, 1));
@@ -2761,7 +2761,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Recover");
                 skill.Desc = new LocalText("Restoring its own cells, the user restores its own HP by half of its max HP.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
@@ -2787,7 +2787,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Harden");
                 skill.Desc = new LocalText("The user stiffens all the muscles in its body to raise its Defense stat.");
                 skill.BaseCharges = 21;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 1));
@@ -2806,7 +2806,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Minimize");
                 skill.Desc = new LocalText("The user compresses its body to make itself look smaller, which sharply raises its evasiveness.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(15, true, false, 2));
@@ -2826,7 +2826,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Smokescreen");
                 skill.Desc = new LocalText("The user releases an obscuring cloud of smoke or ink. This lowers the target's Accuracy.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(14, true, false, -1));
@@ -2852,7 +2852,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Confuse Ray");
                 skill.Desc = new LocalText("The target is exposed to a sinister ray that triggers confusion.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(7, true, false));
@@ -2882,7 +2882,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Withdraw");
                 skill.Desc = new LocalText("The user withdraws its body into its hard shell, raising its Defense stat.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 1));
@@ -2907,7 +2907,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Defense Curl");
                 skill.Desc = new LocalText("The user curls up to conceal weak spots and raise its Defense stat.");
                 skill.BaseCharges = 21;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 1));
@@ -2928,7 +2928,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Barrier");
                 skill.Desc = new LocalText("The user throws up a sturdy wall that sharply raises the party's Defense stat.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 2));
@@ -2947,7 +2947,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Light Screen");
                 skill.Desc = new LocalText("A wondrous wall of light is put up to reduce damage from special attacks for ten turns.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(18, true, false));
@@ -2966,7 +2966,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Haze");
                 skill.Desc = new LocalText("The user creates a haze that eliminates every stat change.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(StatChangeState), true, new StringKey("MSG_BUFF_REMOVE")));
@@ -2991,7 +2991,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Reflect");
                 skill.Desc = new LocalText("A wondrous wall of light is put up to reduce damage from physical attacks for ten turns.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(17, true, false));
@@ -3010,7 +3010,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Focus Energy");
                 skill.Desc = new LocalText("The user takes a deep breath and focuses so that critical hits land more easily.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(78, true, false));
@@ -3028,7 +3028,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bide");
                 skill.Desc = new LocalText("The user endures attacks for two turns, then strikes back to cause double the damage taken.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new BasePowerState());
                 skill.Data.SkillStates.Set(new ContactState());
@@ -3050,7 +3050,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Metronome");
                 skill.Desc = new LocalText("The user waggles a finger and stimulates its brain into randomly using nearly any move.");
                 skill.BaseCharges = 25;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RandomMoveEvent());
@@ -3072,7 +3072,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Mirror Move");
                 skill.Desc = new LocalText("The user counters the target by mimicking the last move used on it.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new MirrorMoveEvent(30));
@@ -3088,7 +3088,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Self-Destruct");
                 skill.Desc = new LocalText("The user attacks everything around it by causing an explosion. The user takes some damage too.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
@@ -3116,7 +3116,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Egg Bomb");
                 skill.Desc = new LocalText("A large egg is hurled at the target with maximum force to inflict damage.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -3149,7 +3149,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Lick");
                 skill.Desc = new LocalText("The target is licked with a long tongue. This may also leave the target with paralysis.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -3173,7 +3173,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Smog");
                 skill.Desc = new LocalText("The target is attacked with a discharge of filthy gases. This may also poison the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 85;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -3202,7 +3202,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Sludge");
                 skill.Desc = new LocalText("Unsanitary sludge is hurled at the target. This may also poison the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
@@ -3225,7 +3225,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bone Club");
                 skill.Desc = new LocalText("The user clubs the target with a bone. This may also make the target flinch.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(65));
@@ -3249,7 +3249,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Fire Blast");
                 skill.Desc = new LocalText("The target is attacked with an intense blast of all-consuming fire. This may also leave the target with a burn.");
                 skill.BaseCharges = 9;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 85;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -3284,7 +3284,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Waterfall");
                 skill.Desc = new LocalText("The user charges at the target with enough force to climb a waterfall. This may also make the target flinch.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -3314,7 +3314,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Clamp");
                 skill.Desc = new LocalText("The target is clamped and squeezed by the user's very thick and sturdy shell for three turns.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 80;
@@ -3336,7 +3336,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Swift");
                 skill.Desc = new LocalText("Star-shaped rays are shot at the opposing Pokémon. This attack never misses.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -3371,7 +3371,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Skull Bash");
                 skill.Desc = new LocalText("The user tucks in its head to raise its Defense in the first turn, then rams the target on the next turn.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -3399,7 +3399,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Spike Cannon");
                 skill.Desc = new LocalText("Sharp spikes are shot at the target in rapid succession. They hit five times in a row.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(25));
@@ -3422,7 +3422,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Constrict");
                 skill.Desc = new LocalText("The target is attacked with long, creeping tentacles or vines. This will also lower the target's Movement Speed.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -3448,7 +3448,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Amnesia");
                 skill.Desc = new LocalText("The user temporarily empties its mind to forget its concerns. This sharply raises the user's Sp. Def stat.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(13, true, false, 2));
@@ -3470,7 +3470,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Kinesis");
                 skill.Desc = new LocalText("The user distracts the target by bending a spoon. This lowers the target's Accuracy.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 75;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(14, true, false, -1));
@@ -3489,7 +3489,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Soft-Boiled");
                 skill.Desc = new LocalText("The user restores an ally's HP by up to half of its max HP.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
@@ -3510,7 +3510,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=High Jump Kick");
                 skill.Desc = new LocalText("The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
@@ -3534,7 +3534,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Glare");
                 skill.Desc = new LocalText("The user intimidates the target with a snake glare to cause paralysis.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(4, true, false));
@@ -3560,7 +3560,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Dream Eater");
                 skill.Desc = new LocalText("The user eats the dreams of a target, doing more damage if it is sleeping. It absorbs half the damage caused to heal its own HP.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(35));
@@ -3588,7 +3588,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Poison Gas");
                 skill.Desc = new LocalText("A cloud of poison gas is sprayed in the face of opposing Pokémon, poisoning those hit.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 85;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(5, true, false));
@@ -3614,7 +3614,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Barrage");
                 skill.Desc = new LocalText("Round objects are hurled at the target to strike five times in a row.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 85;
                 skill.Data.SkillStates.Set(new BasePowerState(15));
@@ -3638,7 +3638,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Leech Life");
                 skill.Desc = new LocalText("The user drains the target's blood. The user's HP is restored by the damage taken by the target.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -3667,7 +3667,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Lovely Kiss");
                 skill.Desc = new LocalText("With a scary face, the user tries to force a kiss on the target. If it succeeds, the target falls asleep.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(1, true, false));
@@ -3693,7 +3693,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sky Attack");
                 skill.Desc = new LocalText("A two-turn attack. This may also make the target flinch.");
                 skill.BaseCharges = 6;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -3724,7 +3724,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Transform");
                 skill.Desc = new LocalText("The user transforms into a copy of the target right down to having the same move set.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new TransformEvent());
@@ -3747,7 +3747,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bubble");
                 skill.Desc = new LocalText("A spray of countless bubbles is jetted at the target. This may also lower the target's Movement Speed.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -3777,7 +3777,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Dizzy Punch");
                 skill.Desc = new LocalText("The target is hit with rhythmically launched punches. This may also leave the target confused.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -3801,7 +3801,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Spore");
                 skill.Desc = new LocalText("The user scatters bursts of spores that induce sleep.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(1, true, false));
@@ -3829,7 +3829,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Flash");
                 skill.Desc = new LocalText("The user flashes a bright light that cuts the target's accuracy.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 90;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(14, true, false, -1));
@@ -3850,7 +3850,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Psywave");
                 skill.Desc = new LocalText("The target is attacked with an odd psychic wave. The attack varies in intensity.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(-1, new PsywaveDamageEvent());
@@ -3875,7 +3875,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Splash");
                 skill.Desc = new LocalText("The user flops over the target to get behind it.");
                 skill.BaseCharges = 25;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new HopEvent(2, false));
@@ -3893,7 +3893,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Acid Armor");
                 skill.Desc = new LocalText("The user alters its cellular structure to liquefy itself, sharply raising its Defense stat.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 2));
@@ -3921,7 +3921,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Crabhammer");
                 skill.Desc = new LocalText("The target is hammered with a large pincer. Critical hits land more easily.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 80;
@@ -3940,7 +3940,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Explosion");
                 skill.Desc = new LocalText("The user attacks everything around it by causing a tremendous explosion. The user takes damage as well.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
@@ -3969,7 +3969,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Fury Swipes");
                 skill.Desc = new LocalText("The target is raked with sharp claws or scythes quickly five times in a row.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 70;
@@ -3991,7 +3991,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bonemerang");
                 skill.Desc = new LocalText("The user throws the bone it holds. The bone loops to hit the target twice, coming and going.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -4020,7 +4020,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Rest");
                 skill.Desc = new LocalText("The user goes to sleep for several turns. This fully restores the user's HP and heals any status conditions.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestEvent(1));
@@ -4035,7 +4035,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Rock Slide");
                 skill.Desc = new LocalText("Large boulders are hurled at the opposing Pokémon to inflict damage. This may also make the target flinch.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
@@ -4065,7 +4065,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Hyper Fang");
                 skill.Desc = new LocalText("The user bites hard on the target with its sharp front fangs. This may also make the target flinch.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -4091,7 +4091,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sharpen");
                 skill.Desc = new LocalText("The user lowers its polygon count to make itself more jagged, sharply raising the Attack stat.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 2));
@@ -4111,7 +4111,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Conversion");
                 skill.Desc = new LocalText("The user gives itself the Conversion status, which changes its type to match its moves.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(116, true, false));
@@ -4134,7 +4134,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Tri Attack");
                 skill.Desc = new LocalText("The user strikes with a simultaneous three-beam attack. May also burn, freeze, or paralyze the target.");
                 skill.BaseCharges = 9;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -4165,7 +4165,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Super Fang");
                 skill.Desc = new LocalText("The user chomps hard on the target with its sharp front fangs. This cuts the target's HP in half.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -4188,7 +4188,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Slash");
                 skill.Desc = new LocalText("The target is attacked with a slash of claws or blades. Critical hits land more easily.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -4211,7 +4211,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Substitute");
                 skill.Desc = new LocalText("The user turns the target into a decoy, making it a target for other Pokémon.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 //skill.SkillEffect.OnActions.Add(-1, new HPActionCheckEffect(4));
@@ -4236,7 +4236,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Struggle");
                 skill.Desc = new LocalText("An attack that is used in desperation only if the user has no PP. This also damages the user a little.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 00;
+                skill.Data.Element = "none";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = -1;
@@ -4256,7 +4256,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Sketch");
                 skill.Desc = new LocalText("It enables the user to permanently learn the move last used by the target. Once used, Sketch disappears.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new SketchBattleEvent(27));
@@ -4272,7 +4272,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Triple Kick");
                 skill.Desc = new LocalText("A consecutive three-kick attack that becomes more powerful with each successive hit.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 50;
@@ -4294,7 +4294,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Thief");
                 skill.Desc = new LocalText("The user attacks and steals the target's held item simultaneously.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -4318,7 +4318,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Spider Web");
                 skill.Desc = new LocalText("The user ensnares the target with thin, gooey silk, immobilizing it.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(90, true, false));
@@ -4337,7 +4337,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Mind Reader");
                 skill.Desc = new LocalText("The user senses the target's movements with its mind to ensure its next attack does not miss the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(98, true, false));
@@ -4354,7 +4354,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Nightmare");
                 skill.Desc = new LocalText("Sleeping targets see a nightmare that inflicts some damage every turn.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(105, true, false));
@@ -4379,7 +4379,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Flame Wheel");
                 skill.Desc = new LocalText("The user cloaks itself in fire and charges at the target. This may also leave the target with a burn.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -4408,7 +4408,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Snore");
                 skill.Desc = new LocalText("An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -4433,7 +4433,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Curse");
                 skill.Desc = new LocalText("A move that works differently for the Ghost type than for all other types.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 00;
+                skill.Data.Element = "none";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 1));
@@ -4485,7 +4485,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Flail");
                 skill.Desc = new LocalText("The user flails about aimlessly to attack. The less HP the user has, the greater the move's power.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -4506,7 +4506,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Conversion 2");
                 skill.Desc = new LocalText("The user gives itself the Conversion 2 status, which changes its type to resist the opponent's moves.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(117, true, false));
@@ -4529,7 +4529,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Aeroblast");
                 skill.Desc = new LocalText("A vortex of air is shot at the target to inflict damage. Critical hits land more easily.");
                 skill.BaseCharges = 6;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -4553,7 +4553,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Cotton Spore");
                 skill.Desc = new LocalText("The user releases cotton-like spores that cling to the opposing Pokémon, which lowers their Movement Speeds.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 85;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, -1));
@@ -4580,7 +4580,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Reversal");
                 skill.Desc = new LocalText("An all-out attack that becomes more powerful the less HP the user has.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -4604,7 +4604,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Spite");
                 skill.Desc = new LocalText("The user unleashes its grudge on the move last used by the target, reducing its PP.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new SpiteEvent(26, 5));
@@ -4627,7 +4627,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Powder Snow");
                 skill.Desc = new LocalText("The user attacks with a chilling gust of powdery snow. This may also freeze the opposing Pokémon.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(35));
@@ -4654,7 +4654,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Protect");
                 skill.Desc = new LocalText("It enables the user to evade all attacks.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(89, true, false));
@@ -4671,7 +4671,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Mach Punch");
                 skill.Desc = new LocalText("The user throws a punch at blinding speed.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -4699,7 +4699,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Scary Face");
                 skill.Desc = new LocalText("The user frightens the target with a scary face to harshly lower its Movement Speed.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 70;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, -2));
@@ -4725,7 +4725,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Feint Attack");
                 skill.Desc = new LocalText("The user approaches the target disarmingly, then throws a sucker punch. This attack never misses.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = -1;
@@ -4749,7 +4749,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sweet Kiss");
                 skill.Desc = new LocalText("The user kisses the target with a sweet, angelic cuteness that causes confusion.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(7, true, false));
@@ -4771,7 +4771,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Belly Drum");
                 skill.Desc = new LocalText("The user maximizes its Attack stat in exchange for half its max HP.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnActions.Add(-1, new HPActionCheckEvent(2));
@@ -4794,7 +4794,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sludge Bomb");
                 skill.Desc = new LocalText("Unsanitary sludge is hurled at the target. This may also poison the target.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -4829,7 +4829,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Mud-Slap");
                 skill.Desc = new LocalText("The user hurls mud in the target's face to inflict damage and lower its Accuracy.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(25));
@@ -4858,7 +4858,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Octazooka");
                 skill.Desc = new LocalText("The user attacks by spraying ink at the target's face or eyes. This may also lower the target's Accuracy.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -4890,7 +4890,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Spikes");
                 skill.Desc = new LocalText("The user lays a down trap of spikes in front of itself. The trap hurts Pokémon that step on it.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHitTiles.Add(0, new SetTrapEvent("trap_spikes"));
@@ -4909,7 +4909,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Zap Cannon");
                 skill.Desc = new LocalText("The user fires an electric blast like a cannon to inflict damage and cause paralysis.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 50;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -4935,7 +4935,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Foresight");
                 skill.Desc = new LocalText("The user identifies the target, removing its resistances and immunities. This also enables an evasive target to be hit.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(62, true, false));
@@ -4961,7 +4961,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Destiny Bond");
                 skill.Desc = new LocalText("When the user takes damage, the target takes the same amount of damage.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(23, false, false));
@@ -4997,7 +4997,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Perish Song");
                 skill.Desc = new LocalText("Any Pokémon that hears this song will faint when its countdown reaches 0.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -5022,7 +5022,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Icy Wind");
                 skill.Desc = new LocalText("The user attacks with a gust of chilled air. This also lowers the opposing Pokémon's Movement Speed.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -5052,7 +5052,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Detect");
                 skill.Desc = new LocalText("It enables the user to evade all attacks.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(125, true, false));
@@ -5069,7 +5069,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bone Rush");
                 skill.Desc = new LocalText("The user strikes the target with a hard bone five times in a row.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 50;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
@@ -5092,7 +5092,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Lock-On");
                 skill.Desc = new LocalText("The user takes aim, and ensures the next attack does not miss the target.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(98, true, false));
@@ -5112,7 +5112,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Outrage");
                 skill.Desc = new LocalText("The user rampages and attacks for three turns. It then becomes confused, however.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -5146,7 +5146,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sandstorm");
                 skill.Desc = new LocalText("A sandstorm is summoned to hurt all combatants except the Rock, Ground, and Steel types.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new GiveMapStatusEvent(3, 0, new StringKey(), typeof(ExtendWeatherState)));
@@ -5165,7 +5165,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Giga Drain");
                 skill.Desc = new LocalText("A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
@@ -5193,7 +5193,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Endure");
                 skill.Desc = new LocalText("The user endures any attack with at least 1 HP.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(64, true, false));
@@ -5222,7 +5222,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Charm");
                 skill.Desc = new LocalText("The user gazes at the target rather charmingly, making it less wary. This harshly lowers its Attack stat.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 80;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, -2));
@@ -5242,7 +5242,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Rollout");
                 skill.Desc = new LocalText("The user rolls into the target from a distance. It becomes more powerful the farther the target is.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
@@ -5265,7 +5265,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("False Swipe");
                 skill.Desc = new LocalText("A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.");
                 skill.BaseCharges = 24;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -5289,7 +5289,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Swagger");
                 skill.Desc = new LocalText("The user enrages and confuses the target. However, this also sharply raises the target's Attack stat.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 90;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 2));
@@ -5314,7 +5314,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Milk Drink");
                 skill.Desc = new LocalText("The user restores the party's HP by up to a half of its max HP");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
@@ -5336,7 +5336,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Spark");
                 skill.Desc = new LocalText("The user throws an electrically charged tackle at the target. This may also leave the target with paralysis.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -5364,7 +5364,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Fury Cutter");
                 skill.Desc = new LocalText("The target is slashed with scythes or claws. This attack becomes more powerful if it hits in succession.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
@@ -5389,7 +5389,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Steel Wing");
                 skill.Desc = new LocalText("The target is hit with wings of steel. This may also raise the user's Defense stat.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -5422,7 +5422,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Mean Look");
                 skill.Desc = new LocalText("The user pins the target with a dark, arresting look. The target becomes immobilized.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(90, true, false));
@@ -5448,7 +5448,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Attract");
                 skill.Desc = new LocalText("The user infatuates the target, making it unable to hurt the user.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(21, true, false));
@@ -5472,7 +5472,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sleep Talk");
                 skill.Desc = new LocalText("While it is asleep, the user performs the strongest move it knows.");
                 skill.BaseCharges = 25;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.BeforeActions.Add(-1, new AddContextStateEvent(new SleepAttack()));
@@ -5490,7 +5490,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Heal Bell");
                 skill.Desc = new LocalText("The user makes a soothing bell chime to heal the status conditions of all Pokémon.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = -1;
@@ -5517,7 +5517,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Return");
                 skill.Desc = new LocalText("A full-power attack that grows more powerful the more allies there are nearby.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -5536,7 +5536,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Present");
                 skill.Desc = new LocalText("The user attacks by giving the target a gift with a hidden trap. It restores HP if used on an ally.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -5564,7 +5564,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Frustration");
                 skill.Desc = new LocalText("A full-power attack that grows more powerful if the user has no allies near it.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -5583,7 +5583,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Safeguard");
                 skill.Desc = new LocalText("The user creates a protective field that prevents status conditions for ten turns.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(68, true, false));
@@ -5605,7 +5605,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Pain Split");
                 skill.Desc = new LocalText("The user adds its HP to the target's HP, then equally shares the combined HP with the target.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new PainSplitEvent());
@@ -5625,7 +5625,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Sacred Fire");
                 skill.Desc = new LocalText("The target is razed with a mystical fire of great intensity. This may also leave the target with a burn.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -5659,7 +5659,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Magnitude");
                 skill.Desc = new LocalText("The user attacks everything around it with a ground-shaking quake. It does less damage to targets far away.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -5681,7 +5681,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Dynamic Punch");
                 skill.Desc = new LocalText("The user punches the target with full, concentrated power. This confuses the target if it hits.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -5713,7 +5713,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Megahorn");
                 skill.Desc = new LocalText("Using its tough and impressive horn, the user rams into the target with no letup.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
@@ -5736,7 +5736,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Dragon Breath");
                 skill.Desc = new LocalText("The user exhales a mighty gust that inflicts damage. This may also leave the target with paralysis.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -5767,7 +5767,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Baton Pass");
                 skill.Desc = new LocalText("The user passes along its stat changes and minor status conditions to the target.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new TransferStatusEvent(false, false, true, true, true));
@@ -5782,7 +5782,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Encore");
                 skill.Desc = new LocalText("The user compels the target to keep using only the move it last used for five turns.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(73, true, false));
@@ -5812,7 +5812,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Pursuit");
                 skill.Desc = new LocalText("The user chases down the target, preventing it from getting away.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(24, false, false));
@@ -5829,7 +5829,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Rapid Spin");
                 skill.Desc = new LocalText("A spin attack that can eliminate moves such as Wrap or Leech Seed. It also destroys traps.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -5863,7 +5863,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sweet Scent");
                 skill.Desc = new LocalText("A sweet scent that lowers the evasiveness of opposing Pokémon.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 //skill.SkillEffect.HitEffects.Add(0, new WarpHereEffect());
@@ -5889,7 +5889,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Iron Tail");
                 skill.Desc = new LocalText("The target is slammed with a steel-hard tail. This may also lower the target's Defense stat. It can break walls.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
@@ -5915,7 +5915,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Metal Claw");
                 skill.Desc = new LocalText("The target is raked with steel claws. This may also raise the user's Attack stat. It can break walls.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -5942,7 +5942,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Vital Throw");
                 skill.Desc = new LocalText("The user attacks with a throw move that never misses.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = -1;
@@ -5960,7 +5960,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Morning Sun");
                 skill.Desc = new LocalText("The user restores the party's HP. The amount of HP regained varies with the weather.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 Dictionary<int, bool> weather = new Dictionary<int, bool>();
@@ -5984,7 +5984,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Synthesis");
                 skill.Desc = new LocalText("The user restores its own HP. The amount of HP regained varies with the weather.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 Dictionary<int, bool> weather = new Dictionary<int, bool>();
@@ -6015,7 +6015,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Moonlight");
                 skill.Desc = new LocalText("The user restores the party's HP. The amount of HP regained varies with the weather.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 Dictionary<int, bool> weather = new Dictionary<int, bool>();
@@ -6044,7 +6044,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Hidden Power");
                 skill.Desc = new LocalText("A unique attack that varies in type each time it is used.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -6069,7 +6069,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Cross Chop");
                 skill.Desc = new LocalText("The user delivers a double chop with its forearms crossed. Critical hits land more easily.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 80;
@@ -6091,7 +6091,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Twister");
                 skill.Desc = new LocalText("The user whips up a vicious tornado to tear at the opposing Pokémon. This may also make them flinch.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -6118,7 +6118,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Rain Dance");
                 skill.Desc = new LocalText("The user summons a heavy rain on the floor, powering up Water-type moves.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new GiveMapStatusEvent(1, 0, new StringKey(), typeof(ExtendWeatherState)));
@@ -6137,7 +6137,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sunny Day");
                 skill.Desc = new LocalText("The user intensifies the sunlight for the entire floor, powering up Fire-type moves.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new GiveMapStatusEvent(2, 0, new StringKey(), typeof(ExtendWeatherState)));
@@ -6156,7 +6156,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Crunch");
                 skill.Desc = new LocalText("The user crunches up the target with sharp fangs. This may also lower the target's Defense stat.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new JawState());
@@ -6183,7 +6183,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Mirror Coat");
                 skill.Desc = new LocalText("A retaliation move that counters any special attack, inflicting double the damage taken.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(66, true, false));
@@ -6200,7 +6200,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Psych Up");
                 skill.Desc = new LocalText("The user hypnotizes itself into copying any stat change made by the target.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 HashSet<int> statChanges = new HashSet<int>();
@@ -6226,7 +6226,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Extreme Speed");
                 skill.Desc = new LocalText("The user charges the target at blinding speed.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -6251,7 +6251,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Ancient Power");
                 skill.Desc = new LocalText("The user attacks with a prehistoric power. It may also raise all the user's stats at once.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
@@ -6284,7 +6284,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Shadow Ball");
                 skill.Desc = new LocalText("The user hurls a shadowy blob at the target. This may also lower the target's Sp. Def stat.");
                 skill.BaseCharges = 9;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -6308,7 +6308,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Future Sight");
                 skill.Desc = new LocalText("Two turns after this move is used, a hunk of psychic energy attacks the target's area.");
                 skill.BaseCharges = 13;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -6335,7 +6335,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Rock Smash");
                 skill.Desc = new LocalText("The user attacks with a punch. This may also lower the target's Defense stat. This move will shatter walls.");
                 skill.BaseCharges = 25;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -6362,7 +6362,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Whirlpool");
                 skill.Desc = new LocalText("The user traps the target in a violent swirling whirlpool for three turns.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(35));
@@ -6390,7 +6390,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Beat Up");
                 skill.Desc = new LocalText("The user calls over ally Pokémon to it.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new WarpAlliesInEvent(3, false, new StringKey("MSG_SUMMON_ALLIES"), false));
@@ -6412,7 +6412,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Fake Out");
                 skill.Desc = new LocalText("An attack that hits from a distance and makes the target flinch. It fails on targets directly in front.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -6437,7 +6437,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Uproar");
                 skill.Desc = new LocalText("The user attacks in an uproar, preventing everyone from falling asleep.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -6470,7 +6470,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Stockpile");
                 skill.Desc = new LocalText("The user charges up power and raises both its Defense and Sp. Def. stats. The move can be used three times.");
                 skill.BaseCharges = 24;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(53, true, false, 1));
@@ -6485,7 +6485,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Spit Up");
                 skill.Desc = new LocalText("The power stored using the move Stockpile is released at once in an attack. The more power is stored, the more powerful the attack.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
 
@@ -6595,7 +6595,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Swallow");
                 skill.Desc = new LocalText("The power stored using the move Stockpile is absorbed by the user to heal itself. Storing more power increases its effectiveness.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
 
@@ -6677,7 +6677,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Heat Wave");
                 skill.Desc = new LocalText("The user attacks by exhaling hot breath on the opposing Pokémon.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(65));
@@ -6707,7 +6707,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Hail");
                 skill.Desc = new LocalText("The user summons a hailstorm on the floor. It damages all Pokémon except the Ice type.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new GiveMapStatusEvent(4, 0, new StringKey(), typeof(ExtendWeatherState)));
@@ -6726,7 +6726,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Torment");
                 skill.Desc = new LocalText("The user torments and enrages the target, making it incapable of using the same move twice in a row.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(74, true, false));
@@ -6751,7 +6751,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Flatter");
                 skill.Desc = new LocalText("Flattery is used to confuse the target. However, this also raises the target's Sp. Atk stat.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 90;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, 2));
@@ -6775,7 +6775,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Will-O-Wisp");
                 skill.Desc = new LocalText("The user shoots a sinister, bluish-white flame at the target to inflict a burn.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 75;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(2, true, false));
@@ -6805,7 +6805,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Memento");
                 skill.Desc = new LocalText("This move harshly lowers the target's Attack and Sp. Atk stats. The user then drops to 1 HP, and warps away.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, -2));
@@ -6832,7 +6832,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Façade");
                 skill.Desc = new LocalText("An attack move that increases in power if the user is suffering a major status condition.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -6852,7 +6852,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Focus Punch");
                 skill.Desc = new LocalText("The user focuses its mind before launching a punch. This move fails if the user is hit before it is used.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -6881,7 +6881,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Smelling Salts");
                 skill.Desc = new LocalText("This attack inflicts double damage on a target with paralysis, and cures its condition. Allies targeted by this move will not take damage.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -6918,7 +6918,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Follow Me");
                 skill.Desc = new LocalText("The user draws attention to itself, redirecting all enemy attacks to the user.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(91, true, false));
@@ -6937,7 +6937,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Nature Power");
                 skill.Desc = new LocalText("An attack that makes use of nature's power. Its effects vary depending on the user's environment.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 Dictionary<int, int> terrain = new Dictionary<int, int>();
@@ -6977,7 +6977,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Charge");
                 skill.Desc = new LocalText("The user boosts the power of the Electric move it uses on the next turn. The user takes less damage from special attacks while charged.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(59, true, false));
@@ -6993,7 +6993,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Taunt");
                 skill.Desc = new LocalText("The target is taunted into a rage that allows it to use only attack moves.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(72, true, false));
@@ -7017,7 +7017,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Helping Hand");
                 skill.Desc = new LocalText("The user assists its allies, boosting their Attack and Sp. Atk.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 1));
@@ -7038,7 +7038,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Trick");
                 skill.Desc = new LocalText("The user catches the target off guard and swaps places with it.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new SwitcherEvent());
@@ -7056,7 +7056,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Role Play");
                 skill.Desc = new LocalText("The user mimics the target completely, copying the target's natural Ability.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new ReflectAbilityEvent(false));
@@ -7076,7 +7076,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Wish");
                 skill.Desc = new LocalText("Three turns after this move is used, the target's HP is restored by half the user's max HP.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusHPBattleEvent(57, true, false, false, 2));
@@ -7116,7 +7116,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Assist");
                 skill.Desc = new LocalText("The user hurriedly uses the last move it saw an ally use.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new MirrorMoveEvent(29));
@@ -7141,7 +7141,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Ingrain");
                 skill.Desc = new LocalText("The user lays roots that restore its HP on every turn. Because it is rooted, it can't move around or be forced off its position.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(65, true, false));
@@ -7159,7 +7159,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Superpower");
                 skill.Desc = new LocalText("The user attacks the target with great power. However, this also lowers the user's Attack and Defense stats.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -7192,7 +7192,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Magic Coat");
                 skill.Desc = new LocalText("The user puts up a barrier that reflects status moves back to the user.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(82, true, false));
@@ -7211,7 +7211,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Recycle");
                 skill.Desc = new LocalText("The user recycles Plain Seeds and Grimy Food held by the team.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 List<int> foodTypes = new List<int>();
@@ -7248,7 +7248,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Revenge");
                 skill.Desc = new LocalText("An attack move that inflicts double the damage if the user was last hit by the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -7270,7 +7270,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Brick Break");
                 skill.Desc = new LocalText("The user attacks with a swift chop. It can also break walls, as well as barriers, such as Light Screen and Reflect.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -7296,7 +7296,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Yawn");
                 skill.Desc = new LocalText("The user lets loose a huge yawn that lulls the target into falling asleep in a few turns.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(61, true, false));
@@ -7316,7 +7316,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Knock Off");
                 skill.Desc = new LocalText("The user slaps off the target's held item, making it fly off from the target.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -7340,7 +7340,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Endeavor");
                 skill.Desc = new LocalText("An attack move that cuts down the target's HP to equal the user's HP.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -7358,7 +7358,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Eruption");
                 skill.Desc = new LocalText("The user attacks opposing Pokémon with explosive fury. The lower the user's HP, the lower the move's power.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState());
@@ -7393,7 +7393,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Skill Swap");
                 skill.Desc = new LocalText("The user employs its psychic power to exchange Abilities with the target.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new SwapAbilityEvent());
@@ -7423,7 +7423,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Imprison");
                 skill.Desc = new LocalText("This move prevents the target from using the move it last used.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new DisableBattleEvent(60, 26));
@@ -7441,7 +7441,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Refresh");
                 skill.Desc = new LocalText("The user cures the party of major status conditions.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(MajorStatusState), true, new StringKey("MSG_CURE_MAJOR")));
@@ -7470,7 +7470,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Grudge");
                 skill.Desc = new LocalText("If the user is damaged, the user's grudge depletes the PP of every move the opponent knows.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(75, true, false));
@@ -7491,7 +7491,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Snatch");
                 skill.Desc = new LocalText("The user steals the effects of any attempts to use a healing or stat-changing move.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(94, true, false));
@@ -7510,7 +7510,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Secret Power");
                 skill.Desc = new LocalText("An attack whose additional effects depend on the condition of the floor.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -7556,7 +7556,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Dive");
                 skill.Desc = new LocalText("Diving at first, the user floats up and attacks any time in the next five turns.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -7588,7 +7588,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Arm Thrust");
                 skill.Desc = new LocalText("The user lets loose a flurry of open-palmed arm thrusts that hit five times in a row.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 50;
@@ -7611,7 +7611,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Camouflage");
                 skill.Desc = new LocalText("The user's type is changed depending on its environment.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 Dictionary<int, int> terrain = new Dictionary<int, int>();
@@ -7634,7 +7634,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Tail Glow");
                 skill.Desc = new LocalText("The user stares at flashing lights to focus its mind, drastically raising its Sp. Atk stat.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, 3));
@@ -7649,7 +7649,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Luster Purge");
                 skill.Desc = new LocalText("The user lets loose a damaging burst of light. This will also lower the target's Sp. Def stat.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -7670,7 +7670,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Mist Ball");
                 skill.Desc = new LocalText("A mist-like flurry of down envelops and damages the target. This will also lower the target's Sp. Atk stat.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -7698,7 +7698,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Feather Dance");
                 skill.Desc = new LocalText("The user covers the target's body with a mass of down that harshly lowers its Attack stat.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 85;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, -2));
@@ -7726,7 +7726,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Teeter Dance");
                 skill.Desc = new LocalText("The user performs a wobbly dance that confuses the Pokémon around it.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(7, true, false));
@@ -7744,7 +7744,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Blaze Kick");
                 skill.Desc = new LocalText("The user launches a kick that lands a critical hit more easily. This may also leave the target with a burn.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -7772,7 +7772,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Mud Sport");
                 skill.Desc = new LocalText("The user covers everyone with mud. This adds the Ground-type to their typing.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new AddElementEvent(11));
@@ -7801,7 +7801,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Ice Ball");
                 skill.Desc = new LocalText("The user rolls into the target from a distance. It becomes more powerful the farther the target is.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
@@ -7824,7 +7824,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Needle Arm");
                 skill.Desc = new LocalText("The user attacks by wildly swinging its thorny arms. This may also make the target flinch.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -7849,7 +7849,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Slack Off");
                 skill.Desc = new LocalText("The user slacks off, restoring its own HP by up to half of its max HP.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
@@ -7864,7 +7864,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Hyper Voice");
                 skill.Desc = new LocalText("The user lets loose a horribly echoing shout with the power to inflict damage.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -7888,7 +7888,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Poison Fang");
                 skill.Desc = new LocalText("The user bites the target with toxic fangs. This may also leave the target badly poisoned.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new JawState());
@@ -7920,7 +7920,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Crush Claw");
                 skill.Desc = new LocalText("The user slashes the target with hard and sharp claws. This will also lower the target's Defense.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -7947,7 +7947,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Blast Burn");
                 skill.Desc = new LocalText("The target is razed by a fiery explosion. The user can't move on the next turn.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(130));
@@ -7974,7 +7974,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Hydro Cannon");
                 skill.Desc = new LocalText("The target is hit by a watery blast. The user can't move on the next turn.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
@@ -8006,7 +8006,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Meteor Mash");
                 skill.Desc = new LocalText("The target is hit with a hard punch fired like a meteor. This may also raise the user's Attack stat.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -8031,7 +8031,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Astonish");
                 skill.Desc = new LocalText("The user attacks the target while shouting in a startling fashion. This may also make the target flinch.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -8052,7 +8052,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Weather Ball");
                 skill.Desc = new LocalText("A move that varies in type depending on the weather.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -8129,7 +8129,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Aromatherapy");
                 skill.Desc = new LocalText("The user releases a soothing scent that heals all of the target's bad status conditions.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
@@ -8149,7 +8149,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Fake Tears");
                 skill.Desc = new LocalText("The user feigns crying to fluster the target, harshly lowering its Sp. Def stat.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 80;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(13, true, false, -2));
@@ -8168,7 +8168,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Air Cutter");
                 skill.Desc = new LocalText("The user launches razor-like wind to slash the opposing Pokémon. Critical hits land more easily.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -8206,7 +8206,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Overheat");
                 skill.Desc = new LocalText("The user attacks the target at full power. The attack's recoil harshly lowers the user's Sp. Atk stat.");
                 skill.BaseCharges = 6;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
@@ -8234,7 +8234,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Odor Sleuth");
                 skill.Desc = new LocalText("The user identifies the target, removing its resistances and immunities. This also enables an evasive target to be hit.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(62, true, false));
@@ -8252,7 +8252,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Rock Tomb");
                 skill.Desc = new LocalText("Boulders are hurled at the target. This also lowers the target's Speed stat.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -8280,7 +8280,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Silver Wind");
                 skill.Desc = new LocalText("The target is attacked with powdery scales blown by wind. This may also raise all the user's stats.");
                 skill.BaseCharges = 9;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -8314,7 +8314,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Metal Sound");
                 skill.Desc = new LocalText("A horrible sound like scraping metal harshly lowers the target's Sp. Def stat.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 75;
@@ -8335,7 +8335,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Grass Whistle");
                 skill.Desc = new LocalText("The user plays a pleasant melody that lulls the target into a deep sleep.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 65;
@@ -8356,7 +8356,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Tickle");
                 skill.Desc = new LocalText("The user tickles the target into laughing, reducing its Attack and Defense stats.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, -1));
@@ -8374,7 +8374,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Cosmic Power");
                 skill.Desc = new LocalText("The user absorbs a mystical power from space to raise the party's Defense and Sp. Def stats.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 1));
@@ -8400,7 +8400,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Water Spout");
                 skill.Desc = new LocalText("The user spouts water to damage opposing Pokémon. The lower the user's HP, the lower the move's power.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState());
@@ -8432,7 +8432,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Signal Beam");
                 skill.Desc = new LocalText("The user attacks with a sinister beam of light. This may also confuse the target.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -8461,7 +8461,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Shadow Punch");
                 skill.Desc = new LocalText("The user throws a punch from the shadows. This attack never misses.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -8492,7 +8492,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Extrasensory");
                 skill.Desc = new LocalText("The user attacks with an odd, unseeable power. This may also make the target flinch.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -8512,7 +8512,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Sky Uppercut");
                 skill.Desc = new LocalText("The user attacks the target with an uppercut thrown skyward with force.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -8531,7 +8531,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sand Tomb");
                 skill.Desc = new LocalText("The user traps the target inside a harshly raging sandstorm for three turns.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 85;
@@ -8560,7 +8560,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Sheer Cold");
                 skill.Desc = new LocalText("The user attacks with a blast of absolute-zero cold. The target faints instantly if it hits.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 50;
                 skill.Data.BeforeHits.Add(0, new ExplorerImmuneEvent());
@@ -8584,7 +8584,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Muddy Water");
                 skill.Desc = new LocalText("The user attacks by shooting muddy water at the opposing Pokémon. This may also lower their Accuracy.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -8614,7 +8614,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bullet Seed");
                 skill.Desc = new LocalText("The user forcefully shoots seeds at the target five times in a row.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
@@ -8642,7 +8642,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Aerial Ace");
                 skill.Desc = new LocalText("The user confounds the target with speed, then slashes. This attack never misses.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = -1;
@@ -8667,7 +8667,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Icicle Spear");
                 skill.Desc = new LocalText("The user launches sharp icicles at the target five times in a row.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 70;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
@@ -8689,7 +8689,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Iron Defense");
                 skill.Desc = new LocalText("The user hardens its body's surface like iron, sharply raising its Defense stat.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 2));
@@ -8705,7 +8705,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Block");
                 skill.Desc = new LocalText("The user continually blocks the target's way with arms spread wide to prevent escape.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -8723,7 +8723,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Howl");
                 skill.Desc = new LocalText("The user howls loudly to raise the party's spirit, which raises the Attack stat.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 1));
@@ -8741,7 +8741,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Dragon Claw");
                 skill.Desc = new LocalText("The user slashes the target with huge, sharp claws.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -8771,7 +8771,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Frenzy Plant");
                 skill.Desc = new LocalText("The user slams the target with an enormous tree. The user can't move on the next turn.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(130));
@@ -8793,7 +8793,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Bulk Up");
                 skill.Desc = new LocalText("The user tenses its muscles to bulk up its body, raising both its Attack and Defense stats.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 1));
@@ -8809,7 +8809,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bounce");
                 skill.Desc = new LocalText("The user bounces up high, then drops on the target on the second turn. This may also leave the target with paralysis.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -8839,7 +8839,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Mud Shot");
                 skill.Desc = new LocalText("The user attacks by hurling a blob of mud at the target. This also lowers the target's Movement Speed.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -8863,7 +8863,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Poison Tail");
                 skill.Desc = new LocalText("The user hits the target with its tail. This may also poison the target. Critical hits land more easily.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -8886,7 +8886,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Covet");
                 skill.Desc = new LocalText("The user cutely begs to obtain an item from the foe.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 80;
                 skill.Data.OnHits.Add(0, new BegItemEvent(true, false, 116, new HashSet<FlagType>()));
@@ -8908,7 +8908,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Volt Tackle");
                 skill.Desc = new LocalText("The user electrifies itself, then charges. This also damages the user quite a lot. This may leave the target with paralysis.");
                 skill.BaseCharges = 9;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -8931,7 +8931,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Magical Leaf");
                 skill.Desc = new LocalText("The user scatters curious leaves that chase the target. This attack never misses.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
@@ -8957,7 +8957,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Water Sport");
                 skill.Desc = new LocalText("The user soaks everyone with water. This adds the Water-type to their typing.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new AddElementEvent(18));
@@ -8986,7 +8986,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Calm Mind");
                 skill.Desc = new LocalText("The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, 1));
@@ -9014,7 +9014,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Leaf Blade");
                 skill.Desc = new LocalText("The user handles a sharp leaf like a sword and attacks by cutting its target. Critical hits land more easily.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -9035,7 +9035,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Dragon Dance");
                 skill.Desc = new LocalText("The user vigorously performs a mystic, powerful dance that boosts its Attack and Movement Speed.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 1));
@@ -9055,7 +9055,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Rock Blast");
                 skill.Desc = new LocalText("The user hurls hard rocks at the target. Five rocks are launched in a row.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 50;
                 skill.Data.SkillStates.Set(new BasePowerState(25));
@@ -9077,7 +9077,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Shock Wave");
                 skill.Desc = new LocalText("The user strikes the target with a quick jolt of electricity. This attack never misses.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -9104,7 +9104,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Water Pulse");
                 skill.Desc = new LocalText("The user attacks the target with a pulsing blast of water. This may also confuse the target.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new PulseState());
                 skill.Data.HitRate = 100;
@@ -9129,7 +9129,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Doom Desire");
                 skill.Desc = new LocalText("Five turns after this move is used, the user blasts the target's area with a concentrated bundle of light.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(130));
@@ -9160,7 +9160,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Psycho Boost");
                 skill.Desc = new LocalText("The user attacks the target at full power. The attack's recoil harshly lowers the user's Sp. Atk stat.");
                 skill.BaseCharges = 6;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
@@ -9200,7 +9200,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Roost");
                 skill.Desc = new LocalText("The user lands and rests its body. It restores the user's HP by up to half of its max HP.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
@@ -9222,7 +9222,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Gravity");
                 skill.Desc = new LocalText("Gravity is intensified for the entire floor, making moves involving flying unusable and negating Levitate.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new GiveMapStatusEvent(10));
@@ -9240,7 +9240,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Miracle Eye");
                 skill.Desc = new LocalText("The user takes on the Miracle Eye status, allowing it to ignore resistances and immunities. This also enables it to hit evasive targets.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(63, true, false));
@@ -9259,7 +9259,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Wake-Up Slap");
                 skill.Desc = new LocalText("This attack inflicts big damage on a sleeping target, immediately waking it up. Allies targeted by this move will not take damage.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -9292,7 +9292,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Hammer Arm");
                 skill.Desc = new LocalText("The user swings and hits with its strong and heavy fist. It lowers the user's Movement Speed, however.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -9317,7 +9317,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Gyro Ball");
                 skill.Desc = new LocalText("The user tackles the target with a high-speed spin. The slower the user compared to the target, the greater the move's power.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -9345,7 +9345,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Healing Wish");
                 skill.Desc = new LocalText("The user's HP drops to 1. In return, the rest of the party will have its HP restored and status conditions cured.");
                 skill.BaseCharges = 6;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 1, true));
@@ -9372,7 +9372,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Brine");
                 skill.Desc = new LocalText("If the target's HP is half or less, this attack will hit with double the power.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -9403,7 +9403,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Natural Gift");
                 skill.Desc = new LocalText("The user draws power to attack by using its held Berry. The Berry determines the move's type.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -9463,7 +9463,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Feint");
                 skill.Desc = new LocalText("An attack that hits a target trying to protect itself. This also lifts the effects of those moves.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -9489,7 +9489,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Pluck");
                 skill.Desc = new LocalText("The user pecks the target. If the target is holding a Berry, the user eats it and gains its effect.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -9515,7 +9515,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Tailwind");
                 skill.Desc = new LocalText("The user whips up a turbulent whirlwind that sharply raises the Movement Speed of the user and its allies.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, 2));
@@ -9534,7 +9534,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Acupressure");
                 skill.Desc = new LocalText("The user applies pressure to an ally's stress points, sharply boosting its highest stat.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new AffectHighestStatBattleEvent(true, 10, 11, 12, 13, true, 2));
@@ -9560,7 +9560,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Metal Burst");
                 skill.Desc = new LocalText("When damaged, the user retaliates with much greater power against nearby opponents.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(83, true, false));
@@ -9577,7 +9577,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("U-turn");
                 skill.Desc = new LocalText("After making its attack, the user jumps back several steps.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -9607,7 +9607,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Close Combat");
                 skill.Desc = new LocalText("The user fights the target up close without guarding itself. This also lowers the user's Defense and Sp. Def stats.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -9629,7 +9629,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Payback");
                 skill.Desc = new LocalText("The user stores power, then attacks. If the user was last hit by the target, this attack's power will be doubled.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -9650,7 +9650,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Assurance");
                 skill.Desc = new LocalText("If the target was last attacked by the user, this attack's power is doubled.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -9672,7 +9672,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Embargo");
                 skill.Desc = new LocalText("This move prevents foes from using any items.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(79, true, false));
@@ -9693,7 +9693,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Fling");
                 skill.Desc = new LocalText("The user flings the target into the distance. The target takes damage unless it lands on another Pokémon.");
                 skill.BaseCharges = 17;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new ThrowBackEvent(6, new MaxHPDamageEvent(8)));
@@ -9713,7 +9713,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Psycho Shift");
                 skill.Desc = new LocalText("Using its psychic power of suggestion, the user transfers its bad status conditions to the target.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new TransferStatusEvent(true, true, true, true, false));
@@ -9737,7 +9737,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Trump Card");
                 skill.Desc = new LocalText("The more PP this move has, the greater its power.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = -1;
@@ -9771,7 +9771,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Heal Block");
                 skill.Desc = new LocalText("The user prevents the opposing team from recovering HP.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(81, true, false));
@@ -9796,7 +9796,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Wring Out");
                 skill.Desc = new LocalText("The user powerfully wrings the target. The more HP the target has, the greater the move's power.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -9818,7 +9818,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Power Trick");
                 skill.Desc = new LocalText("The user employs its psychic power to switch its Attack with its Defense stat.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new PowerTrickEvent());
@@ -9834,7 +9834,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Gastro Acid");
                 skill.Desc = new LocalText("The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new ChangeToAbilityEvent(0, true));
@@ -9856,7 +9856,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Lucky Chant");
                 skill.Desc = new LocalText("The user chants an incantation toward the sky, preventing opposing Pokémon from landing critical hits or additional effects.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(76, true, false));
@@ -9879,7 +9879,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Me First");
                 skill.Desc = new LocalText("The user cuts ahead of the target to steal and use the target's strongest move. It fails if the target has no attacking moves.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StrongestMoveEvent());
@@ -9901,7 +9901,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Copycat");
                 skill.Desc = new LocalText("The user mimics the move last used by the target. The move fails if the target hasn't used a move yet.");
                 skill.BaseCharges = 25;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new MirrorMoveEvent(27));
@@ -9925,7 +9925,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Power Swap");
                 skill.Desc = new LocalText("The user employs its psychic power to switch changes to its Attack and Sp. Atk stats with the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 HashSet<int> statChanges = new HashSet<int>();
@@ -9951,7 +9951,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Guard Swap");
                 skill.Desc = new LocalText("The user employs its psychic power to switch changes to its Defense and Sp. Def stats with the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 HashSet<int> statChanges = new HashSet<int>();
@@ -9977,7 +9977,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Punishment");
                 skill.Desc = new LocalText("The more the target has powered up with stat changes, the greater the move's power.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10011,7 +10011,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Last Resort");
                 skill.Desc = new LocalText("The less total PP the user has, the greater the move's power.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10041,7 +10041,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Worry Seed");
                 skill.Desc = new LocalText("A seed that causes worry is planted on the target. It prevents sleep by making the target's Ability Insomnia.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new ChangeToAbilityEvent(15, true));
@@ -10065,7 +10065,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sucker Punch");
                 skill.Desc = new LocalText("This attacks foes from a distance. It fails on targets directly in front.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10089,7 +10089,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Toxic Spikes");
                 skill.Desc = new LocalText("The user lays a trap of poison spikes around itself. They badly poison opposing Pokémon that step on it.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHitTiles.Add(0, new SetTrapEvent("trap_toxic_spikes"));
@@ -10107,7 +10107,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Heart Swap");
                 skill.Desc = new LocalText("The user employs its psychic power to switch stat changes with the target.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 HashSet<int> statChanges = new HashSet<int>();
@@ -10136,7 +10136,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Aqua Ring");
                 skill.Desc = new LocalText("The user envelops the party in a veil made of water. It restores some HP every turn.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(77, true, false));
@@ -10155,7 +10155,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Magnet Rise");
                 skill.Desc = new LocalText("The user levitates itself and allies using electrically generated magnetism.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(102, true, false));
@@ -10182,7 +10182,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Flare Blitz");
                 skill.Desc = new LocalText("The user cloaks itself in fire and charges the target. This also damages the user quite a lot. This may leave the target with a burn.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10213,7 +10213,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Force Palm");
                 skill.Desc = new LocalText("The target is attacked with a shock wave. This may also leave the target with paralysis.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10239,7 +10239,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Aura Sphere");
                 skill.Desc = new LocalText("The user lets loose a blast of aura power from deep within its body at the target. This attack never misses.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new PulseState());
                 skill.Data.HitRate = -1;
@@ -10266,7 +10266,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Rock Polish");
                 skill.Desc = new LocalText("The user polishes its body to reduce drag. This can sharply raise its Movement Speed.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, 2));
@@ -10284,7 +10284,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Poison Jab");
                 skill.Desc = new LocalText("The target is stabbed with a tentacle or arm steeped in poison. This may also poison the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10309,7 +10309,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Dark Pulse");
                 skill.Desc = new LocalText("The user releases a horrible aura imbued with dark thoughts. This may also make the target flinch.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new PulseState());
                 skill.Data.HitRate = 100;
@@ -10338,7 +10338,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Night Slash");
                 skill.Desc = new LocalText("The user slashes the target the instant an opportunity arises. Critical hits land more easily.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10366,7 +10366,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Aqua Tail");
                 skill.Desc = new LocalText("The user attacks by swinging its tail as if it were a vicious wave in a raging storm.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
@@ -10395,7 +10395,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Seed Bomb");
                 skill.Desc = new LocalText("The user slams a barrage of hard-shelled seeds on the target from above.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -10426,7 +10426,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Air Slash");
                 skill.Desc = new LocalText("The user attacks with a blade of air that slices even the sky. This may also make the target flinch.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
@@ -10462,7 +10462,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=X-Scissor");
                 skill.Desc = new LocalText("The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10485,7 +10485,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bug Buzz");
                 skill.Desc = new LocalText("The user vibrates its wings to generate a damaging sound wave. This may also lower the target's Sp. Def stat.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -10512,7 +10512,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Dragon Pulse");
                 skill.Desc = new LocalText("The target is attacked with a shock wave generated by the user's gaping mouth.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new PulseState());
                 skill.Data.HitRate = 100;
@@ -10543,7 +10543,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Dragon Rush");
                 skill.Desc = new LocalText("The user tackles the target while exhibiting overwhelming menace. This may also make the target flinch.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
@@ -10569,7 +10569,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Power Gem");
                 skill.Desc = new LocalText("The user attacks with rays of light that sparkle as if they were made of gemstones.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -10601,7 +10601,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Drain Punch");
                 skill.Desc = new LocalText("An energy-draining punch. The user's HP is restored by half the damage taken by the target.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -10630,7 +10630,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Vacuum Wave");
                 skill.Desc = new LocalText("The user whirls its fists to send a wave of pure vacuum at the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -10651,7 +10651,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Focus Blast");
                 skill.Desc = new LocalText("The user heightens its mental focus and unleashes its power. This may also lower the target's Sp. Def.");
                 skill.BaseCharges = 9;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
@@ -10682,7 +10682,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Energy Ball");
                 skill.Desc = new LocalText("The user draws power from nature and fires it at the target. This may also lower the target's Sp. Def.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -10709,7 +10709,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Brave Bird");
                 skill.Desc = new LocalText("The user tucks in its wings and charges from a low altitude. This also damages the user quite a lot.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10733,7 +10733,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Earth Power");
                 skill.Desc = new LocalText("The user makes the ground under the target erupt with power. This may also lower the target's Sp. Def.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(65));
@@ -10763,7 +10763,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Switcheroo");
                 skill.Desc = new LocalText("The user trades items with the target faster than the eye can follow.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new SwitchHeldItemEvent());
@@ -10782,7 +10782,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Giga Impact");
                 skill.Desc = new LocalText("The user charges at the target using every bit of its power. The user can't move for the next three turns.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10812,7 +10812,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Nasty Plot");
                 skill.Desc = new LocalText("The user stimulates its brain by thinking bad thoughts. This sharply raises the user's Sp. Atk.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, 2));
@@ -10834,7 +10834,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bullet Punch");
                 skill.Desc = new LocalText("The user strikes the target with tough punches as fast as bullets.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -10861,7 +10861,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Avalanche");
                 skill.Desc = new LocalText("An attack move that inflicts double the damage if the user was attacked in its previous turn.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10892,7 +10892,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Ice Shard");
                 skill.Desc = new LocalText("The user flash-freezes chunks of ice and hurls them at the target.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -10916,7 +10916,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Shadow Claw");
                 skill.Desc = new LocalText("The user slashes with a sharp claw made from shadows. Critical hits land more easily.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -10941,7 +10941,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Thunder Fang");
                 skill.Desc = new LocalText("The user bites with electrified fangs. This may also make the target flinch or leave it with paralysis.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new JawState());
@@ -10966,7 +10966,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Ice Fang");
                 skill.Desc = new LocalText("The user bites with cold-infused fangs. This may also make the target flinch or leave it frozen.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new JawState());
@@ -10991,7 +10991,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Fire Fang");
                 skill.Desc = new LocalText("The user bites with flame-cloaked fangs. This may also make the target flinch or leave it with a burn.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new JawState());
@@ -11015,7 +11015,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Shadow Sneak");
                 skill.Desc = new LocalText("The user extends its shadow and attacks the target from behind.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -11044,7 +11044,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Mud Bomb");
                 skill.Desc = new LocalText("The user launches a hard-packed mud ball to attack. This may also lower the target's Accuracy.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(45));
@@ -11077,7 +11077,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Psycho Cut");
                 skill.Desc = new LocalText("The user tears at the target with blades formed by psychic power. Critical hits land more easily.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -11102,7 +11102,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Zen Headbutt");
                 skill.Desc = new LocalText("The user focuses its willpower to its head and attacks the target. This may also make the target flinch.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -11133,7 +11133,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Mirror Shot");
                 skill.Desc = new LocalText("The user lets loose a flash of energy at the target from its polished body. This may also lower the target's Accuracy.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -11170,7 +11170,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Flash Cannon");
                 skill.Desc = new LocalText("The user gathers all its light energy and releases it at once. This may also lower the target's Sp. Def stat.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -11197,7 +11197,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Rock Climb");
                 skill.Desc = new LocalText("The user attacks the target by smashing into it with incredible force. This may also confuse the target.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
@@ -11220,7 +11220,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Defog");
                 skill.Desc = new LocalText("A strong wind blows away the target's barriers such as Reflect or Light Screen. This also lowers the target's evasiveness.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(15, true, false, -1));
@@ -11244,7 +11244,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Trick Room");
                 skill.Desc = new LocalText("The user creates a bizarre area in which slowed Pokémon move faster.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new GiveMapStatusEvent(9));
@@ -11263,7 +11263,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Draco Meteor");
                 skill.Desc = new LocalText("Comets are summoned down from the sky onto the target. The attack's recoil harshly lowers the user's Special Attack stat.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -11308,7 +11308,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Discharge");
                 skill.Desc = new LocalText("The user strikes everything around it by letting loose a flare of electricity. This may also cause paralysis.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -11333,7 +11333,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Lava Plume");
                 skill.Desc = new LocalText("The user torches everything around it with an inferno of scarlet flames. This may also leave those hit with a burn.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
@@ -11365,7 +11365,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Leaf Storm");
                 skill.Desc = new LocalText("The user whips up a storm of leaves around the target. The attack's recoil harshly lowers the user's Sp. Atk stat.");
                 skill.BaseCharges = 6;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
@@ -11403,7 +11403,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Power Whip");
                 skill.Desc = new LocalText("The user violently whirls its vines or tentacles to harshly lash the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
@@ -11433,7 +11433,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Rock Wrecker");
                 skill.Desc = new LocalText("The user launches a huge boulder at the target to attack. The user can't move on the next turn.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
@@ -11465,7 +11465,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Cross Poison");
                 skill.Desc = new LocalText("A slashing attack with a poisonous blade that may also poison the target. Critical hits land more easily.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -11491,7 +11491,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Gunk Shot");
                 skill.Desc = new LocalText("The user shoots filthy garbage at the target to attack. This may also poison the target.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(95));
@@ -11524,7 +11524,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Iron Head");
                 skill.Desc = new LocalText("The user slams the target with its steel-hard head. This may also make the target flinch.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -11548,7 +11548,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Magnet Bomb");
                 skill.Desc = new LocalText("The user launches steel bombs that stick to the target. This attack never misses.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -11578,7 +11578,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Stone Edge");
                 skill.Desc = new LocalText("The user stabs the target with sharpened stones from below. Critical hits land more easily.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -11603,7 +11603,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Captivate");
                 skill.Desc = new LocalText("The opposing Pokémon is charmed, which harshly lowers its Sp. Atk stat.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, -2));
@@ -11629,7 +11629,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Stealth Rock");
                 skill.Desc = new LocalText("The user lays a trap of levitating stones around the target. The trap hurts opposing Pokémon that walk into it with a Rock-type attack.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHitTiles.Add(0, new SetTrapEvent("trap_stealth_rock"));
@@ -11653,7 +11653,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Grass Knot");
                 skill.Desc = new LocalText("The user snares the target with grass and trips it. The heavier the target, the greater the move's power.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -11681,7 +11681,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Chatter");
                 skill.Desc = new LocalText("The user attacks the target with sound waves of deafening chatter. This confuses the target.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -11706,7 +11706,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Judgment");
                 skill.Desc = new LocalText("The user draws from the power of its plates and releases countless shots of light at the target.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
@@ -11739,7 +11739,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bug Bite");
                 skill.Desc = new LocalText("The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -11765,7 +11765,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Charge Beam");
                 skill.Desc = new LocalText("The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -11792,7 +11792,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Wood Hammer");
                 skill.Desc = new LocalText("The user slams its rugged body into the target to attack. This also damages the user quite a lot.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -11819,7 +11819,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Aqua Jet");
                 skill.Desc = new LocalText("The user lunges at the target at a speed that makes it almost invisible.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -11842,7 +11842,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Attack Order");
                 skill.Desc = new LocalText("The user calls out its underlings to pummel the target. Critical hits land more easily.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -11868,7 +11868,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Defend Order");
                 skill.Desc = new LocalText("The user calls out its underlings to shield the party, raising their Defense and Sp. Def stats.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 1));
@@ -11889,7 +11889,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Heal Order");
                 skill.Desc = new LocalText("The user calls out its underlings to heal the party. Targets regain up to half of their max HP.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
@@ -11909,7 +11909,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Head Smash");
                 skill.Desc = new LocalText("The user attacks the target with a hazardous, full-power headbutt. This also damages the user terribly.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 75;
@@ -11940,7 +11940,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Double Hit");
                 skill.Desc = new LocalText("The user slams the target with a long tail, vines, or a tentacle. The target is hit twice in a row.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
@@ -11961,7 +11961,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Roar of Time");
                 skill.Desc = new LocalText("The user blasts the target with power that distorts even time. The user and targets can't move on the next turn.");
                 skill.BaseCharges = 4;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -11985,7 +11985,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Spacial Rend");
                 skill.Desc = new LocalText("The user tears the target along with the space around it. Critical hits land more easily.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -12004,7 +12004,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Lunar Dance");
                 skill.Desc = new LocalText("The user's HP drops to 1. In return, the party Pokémon will have their status and HP fully restored.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 1, true));
@@ -12035,7 +12035,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Crush Grip");
                 skill.Desc = new LocalText("The target is crushed with great force. The more HP the target has left, the greater this move's power.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -12059,7 +12059,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Magma Storm");
                 skill.Desc = new LocalText("The target becomes trapped within a maelstrom of fire that rages for three turns.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -12088,7 +12088,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Dark Void");
                 skill.Desc = new LocalText("Opposing Pokémon are dragged into a world of total darkness that makes them sleep.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 85;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(1, true, false));
@@ -12110,7 +12110,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Seed Flare");
                 skill.Desc = new LocalText("The user emits a shock wave from its body to attack its target. This may harshly lower the target's Sp. Def.");
                 skill.BaseCharges = 9;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 85;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -12133,7 +12133,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Ominous Wind");
                 skill.Desc = new LocalText("The user blasts the target with a gust of repulsive wind. This may also raise all the user's stats at once.");
                 skill.BaseCharges = 9;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -12167,7 +12167,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Shadow Force");
                 skill.Desc = new LocalText("The user disappears, then strikes the target any time in the next 5 turns. This move hits even if the target protects itself.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -12196,7 +12196,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Hone Claws");
                 skill.Desc = new LocalText("The user sharpens its claws to boost its Attack stat and Accuracy.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 1));
@@ -12213,7 +12213,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Wide Guard");
                 skill.Desc = new LocalText("The user and its allies are protected from wide-ranging attacks for five turns.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(87, true, false));
@@ -12232,7 +12232,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Guard Split");
                 skill.Desc = new LocalText("The user employs its psychic powers to average its Defense and Sp. Def stats with those of the target.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatSplitEvent(false));
@@ -12254,7 +12254,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Power Split");
                 skill.Desc = new LocalText("The user employs its psychic power to average its Attack and Sp. Atk stats with those of the target.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatSplitEvent(true));
@@ -12276,7 +12276,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Wonder Room");
                 skill.Desc = new LocalText("The user creates a bizarre area in which Physical attacks and Special attacks are swapped.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new GiveMapStatusEvent(11));
@@ -12295,7 +12295,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Psyshock");
                 skill.Desc = new LocalText("The user materializes an odd psychic wave to attack the target. This attack does physical damage.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -12316,7 +12316,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Venoshock");
                 skill.Desc = new LocalText("The user drenches the target in a special poisonous liquid. This move's power is doubled if the target is poisoned.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -12339,7 +12339,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Autotomize");
                 skill.Desc = new LocalText("The user sheds part of its body to make itself lighter and sharply raise its Movement Speed.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, 2));
@@ -12354,7 +12354,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Rage Powder");
                 skill.Desc = new LocalText("The user scatters a cloud of irritating powder to draw attention to itself. Opponents aim only at the user.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(22, true, false));
@@ -12381,7 +12381,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Telekinesis");
                 skill.Desc = new LocalText("The user makes the target float with its psychic power. The target is easier to hit for three turns.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(58, true, false));
@@ -12401,7 +12401,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Magic Room");
                 skill.Desc = new LocalText("The user creates a bizarre area in which Pokémon's held items lose their effects.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new GiveMapStatusEvent(12));
@@ -12420,7 +12420,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Smack Down");
                 skill.Desc = new LocalText("The user throws a stone or similar projectile to attack an opponent. A flying Pokémon will fall to the ground when it's hit.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -12445,7 +12445,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Storm Throw");
                 skill.Desc = new LocalText("The user strikes the target with a fierce blow. This attack always results in a critical hit.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -12465,7 +12465,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Flame Burst");
                 skill.Desc = new LocalText("The user attacks the target with a bursting flame. The bursting flame damages opposing Pokémon next to the target as well.");
                 skill.BaseCharges = 11;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -12501,7 +12501,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sludge Wave");
                 skill.Desc = new LocalText("The user strikes everything around it by swamping the area with a giant sludge wave. This may also poison those hit.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(65));
@@ -12532,7 +12532,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Quiver Dance");
                 skill.Desc = new LocalText("The user lightly performs a beautiful, mystic dance. This boosts the user's Sp. Atk, Sp. Def, and Movement Speed.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, 1));
@@ -12559,7 +12559,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Heavy Slam");
                 skill.Desc = new LocalText("The user slams into the target with its heavy body. The more the user outweighs the target, the greater the move's power.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -12579,7 +12579,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Synchronoise");
                 skill.Desc = new LocalText("Using an odd shock wave, the user inflicts massive damage on any Pokémon of the same type in the area around it.");
                 skill.BaseCharges = 13;
-                skill.Data.Element = 00;
+                skill.Data.Element = "none";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -12603,7 +12603,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Electro Ball");
                 skill.Desc = new LocalText("The user hurls an electric orb at the target. The faster the user is than the target, the greater the move's power.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -12629,7 +12629,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Soak");
                 skill.Desc = new LocalText("The user shoots a torrent of water at the target and changes the target's type to Water.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new ChangeToElementEvent(18));
@@ -12650,7 +12650,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Flame Charge");
                 skill.Desc = new LocalText("Cloaking itself in flame, the user attacks. Then, building up more power, the user raises its Movement Speed.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -12675,7 +12675,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Coil");
                 skill.Desc = new LocalText("The user coils up and concentrates. This raises its Attack and Defense stats as well as its Accuracy.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 1));
@@ -12693,7 +12693,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Low Sweep");
                 skill.Desc = new LocalText("The user makes a swift attack on the target's legs, which lowers the target's Movement Speed.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -12715,7 +12715,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Acid Spray");
                 skill.Desc = new LocalText("The user spits fluid that works to melt the target. This harshly lowers the target's Sp. Def stat.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -12747,7 +12747,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Foul Play");
                 skill.Desc = new LocalText("The user turns the target's power against it. The higher the target's Attack stat, the greater the move's power.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -12767,7 +12767,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Simple Beam");
                 skill.Desc = new LocalText("The user's mysterious psychic wave changes the target's Ability to Simple.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new ChangeToAbilityEvent(86, true));
@@ -12792,7 +12792,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Entrainment");
                 skill.Desc = new LocalText("The user dances with an odd rhythm that compels the target to mimic it, making the target's Ability the same as the user's.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new ReflectAbilityEvent(true));
@@ -12820,7 +12820,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-After You");
                 skill.Desc = new LocalText("The user helps the target and raises its Movement Speed to the highest level.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, 6));
@@ -12836,7 +12836,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Round");
                 skill.Desc = new LocalText("The user attacks the target with a song. Nearby allies will join in the Round and do extra damage.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -12869,7 +12869,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Echoed Voice");
                 skill.Desc = new LocalText("The user attacks the target with an echoing voice. If this move is used every turn, it does greater damage.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -12897,7 +12897,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Chip Away");
                 skill.Desc = new LocalText("Looking for an opening, the user strikes consistently. The target's stat changes don't affect this attack's damage.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -12918,7 +12918,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Clear Smog");
                 skill.Desc = new LocalText("The user attacks by throwing a clump of special mud. All stat changes are returned to normal.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -12945,7 +12945,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Stored Power");
                 skill.Desc = new LocalText("The user attacks the target with stored power. The more the user's stats are raised, the greater the move's power.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
@@ -12979,7 +12979,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Quick Guard");
                 skill.Desc = new LocalText("The user protects itself and its allies from long-range moves for five turns.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(88, true, false));
@@ -12998,7 +12998,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Ally Switch");
                 skill.Desc = new LocalText("The user teleports all allies using a strange power, switching their places.");
                 skill.BaseCharges = 22;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new SwitcherEvent());
@@ -13016,7 +13016,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Scald");
                 skill.Desc = new LocalText("The user shoots boiling hot water at its target. This may also leave the target with a burn.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
@@ -13041,7 +13041,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Shell Smash");
                 skill.Desc = new LocalText("The user breaks its shell, which lowers Defense and Sp. Def stats but sharply raises its Attack, Sp. Atk, and Movement Speed.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 2));
@@ -13060,7 +13060,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Heal Pulse");
                 skill.Desc = new LocalText("The user emits a healing pulse which restores the target's HP by up to half of its max HP.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new PulseState());
                 skill.Data.HitRate = -1;
@@ -13085,7 +13085,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Hex");
                 skill.Desc = new LocalText("This relentless attack does massive damage to a target affected by major status conditions.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(45));
@@ -13108,7 +13108,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Sky Drop");
                 skill.Desc = new LocalText("The user takes the target into the sky, then drops it during the next turn. The target cannot attack while in the sky.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13126,7 +13126,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Shift Gear");
                 skill.Desc = new LocalText("The user rotates its gears, raising its Attack and sharply raising its Movement Speed.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 1));
@@ -13143,7 +13143,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Circle Throw");
                 skill.Desc = new LocalText("The target is thrown into the distance by the user.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13161,7 +13161,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Incinerate");
                 skill.Desc = new LocalText("The user attacks opposing Pokémon with fire. If a Pokémon has a food item, the item becomes burned up and unusable.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(45));
@@ -13191,7 +13191,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Quash");
                 skill.Desc = new LocalText("The user suppresses the target and makes it flinch.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(8, true, false));
@@ -13207,7 +13207,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Acrobatics");
                 skill.Desc = new LocalText("The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13228,7 +13228,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Reflect Type");
                 skill.Desc = new LocalText("The user reflects the target's type, making it the same type as the target.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new ReflectElementEvent());
@@ -13245,7 +13245,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Retaliate");
                 skill.Desc = new LocalText("The user gets ready to retaliate, attacking whenever nearby foes deal damage to its allies.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = -1;
@@ -13267,7 +13267,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Final Gambit");
                 skill.Desc = new LocalText("The user risks everything to attack its target. The user's HP drops to 1, and does damage equal to the amount it lost.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(-1, new UserHPDamageEvent());
@@ -13287,7 +13287,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Bestow");
                 skill.Desc = new LocalText("The user passes its held item to the target, replacing the target's held item.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnActions.Add(0, new HeldItemMoveEvent());
@@ -13312,7 +13312,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Inferno");
                 skill.Desc = new LocalText("The user attacks by engulfing the target in an intense fire. This leaves the target with a burn.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 50;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -13340,7 +13340,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Water Pledge");
                 skill.Desc = new LocalText("Whenever an enemy is attacked, the user follows up by striking the target with a column of water.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -13364,7 +13364,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Fire Pledge");
                 skill.Desc = new LocalText("Whenever an enemy is attacked, the user follows up by striking the target with a column of fire.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -13390,7 +13390,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Grass Pledge");
                 skill.Desc = new LocalText("Whenever an enemy is attacked, the user follows up by striking the target with a column of grass.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -13419,7 +13419,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Volt Switch");
                 skill.Desc = new LocalText("After making its attack, the user rushes back several steps.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -13441,7 +13441,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Struggle Bug");
                 skill.Desc = new LocalText("While resisting, the user attacks the opposing Pokémon. This lowers the Sp. Atk stat of those hit.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(25));
@@ -13464,7 +13464,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Bulldoze");
                 skill.Desc = new LocalText("The user strikes everything around it and flattens the ground. This lowers the Movement Speed of those hit.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -13490,7 +13490,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Frost Breath");
                 skill.Desc = new LocalText("The user blows its cold breath on the target. This attack always results in a critical hit.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 85;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -13517,7 +13517,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Dragon Tail");
                 skill.Desc = new LocalText("The target is struck with the violent whip of a tail, knocking it away.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13538,7 +13538,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Work Up");
                 skill.Desc = new LocalText("The user is roused, and its Attack and Sp. Atk stats increase.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 1));
@@ -13555,7 +13555,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Electroweb");
                 skill.Desc = new LocalText("The user attacks and captures opposing Pokémon by using an electric net. This lowers their Movement Speed.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -13578,7 +13578,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Wild Charge");
                 skill.Desc = new LocalText("The user shrouds itself in electricity and smashes into its target. This also damages the user a little.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 80;
@@ -13599,7 +13599,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Drill Run");
                 skill.Desc = new LocalText("The user crashes into its target while rotating its body like a drill. Critical hits land more easily.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13625,7 +13625,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Dual Chop");
                 skill.Desc = new LocalText("The user attacks its target by hitting it with brutal strikes. The target is hit twice in a row.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
@@ -13646,7 +13646,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Heart Stamp");
                 skill.Desc = new LocalText("The user unleashes a vicious blow after its cute act makes the target less wary. This may also make the target flinch.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13666,7 +13666,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Horn Leech");
                 skill.Desc = new LocalText("The user drains the target's energy with its horns. The user's HP is restored by half the damage taken by the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13688,7 +13688,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Sacred Sword");
                 skill.Desc = new LocalText("The user attacks by slicing with a long horn. The target's stat changes don't affect this attack's damage.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13713,7 +13713,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Razor Shell");
                 skill.Desc = new LocalText("The user cuts its target with sharp shells. This may also lower the target's Defense stat.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13737,7 +13737,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Heat Crash");
                 skill.Desc = new LocalText("The user slams its target with its flame-covered body. The more the user outweighs the target, the greater the move's power.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13757,7 +13757,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Leaf Tornado");
                 skill.Desc = new LocalText("The user attacks its target by encircling it in sharp leaves. This attack may also lower the target's Accuracy.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -13778,7 +13778,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Steamroller");
                 skill.Desc = new LocalText("The user crushes its targets by rolling over them with its rolled-up body. This attack may make the target flinch.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13800,7 +13800,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Cotton Guard");
                 skill.Desc = new LocalText("The user protects itself by wrapping its body in soft cotton, which drastically raises the user's Defense stat.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 3));
@@ -13816,7 +13816,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Night Daze");
                 skill.Desc = new LocalText("The user lets loose a pitch-black shock wave at its target. This may also lower the target's Accuracy.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -13839,7 +13839,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Psystrike");
                 skill.Desc = new LocalText("The user materializes an odd psychic wave to attack everything around it. This attack does physical damage.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -13860,7 +13860,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Tail Slap");
                 skill.Desc = new LocalText("The user attacks by striking the target with its hard tail. It hits the target five times in a row.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 70;
@@ -13882,7 +13882,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Hurricane");
                 skill.Desc = new LocalText("The user attacks by wrapping its opponent in a fierce wind that flies up into the sky. This may also confuse the target.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 70;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -13911,7 +13911,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Head Charge");
                 skill.Desc = new LocalText("The user charges its head into its target, using its powerful guard hair. This also damages the user a little.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -13928,7 +13928,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Gear Grind");
                 skill.Desc = new LocalText("The user attacks by throwing steel gears at its target twice.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 85;
@@ -13945,7 +13945,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Searing Shot");
                 skill.Desc = new LocalText("The user torches everything around it with an inferno of scarlet flames. This may also leave those hit with a burn.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -13961,7 +13961,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Techno Blast");
                 skill.Desc = new LocalText("The user fires a beam of light at its target. The move's type changes depending on the form the user is in.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
@@ -13977,7 +13977,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Relic Song");
                 skill.Desc = new LocalText("The user sings an ancient song and attacks by appealing to the hearts of the listening opposing Pokémon. This may also induce sleep.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -13994,7 +13994,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Secret Sword");
                 skill.Desc = new LocalText("The user cuts with its long horn. The odd power contained in the horn does physical damage to the target.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
@@ -14016,7 +14016,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Glaciate");
                 skill.Desc = new LocalText("The user attacks by blowing freezing cold air at opposing Pokémon. This lowers their Movement Speed.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -14038,7 +14038,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Bolt Strike");
                 skill.Desc = new LocalText("The user surrounds itself with a great amount of electricity and charges its target. This may also leave the target with paralysis.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 85;
@@ -14055,7 +14055,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Blue Flare");
                 skill.Desc = new LocalText("The user attacks by engulfing the target in an intense, yet beautiful, blue flame. This may also leave the target with a burn.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 85;
                 skill.Data.SkillStates.Set(new BasePowerState(130));
@@ -14071,7 +14071,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Fiery Dance");
                 skill.Desc = new LocalText("Cloaked in flames, the user dances and flaps its wings. This may also raise the user's Sp. Atk stat.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -14093,7 +14093,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Freeze Shock");
                 skill.Desc = new LocalText("On the second turn, the user hits the target with electrically charged ice. This may also leave the target with paralysis.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(140));
@@ -14109,7 +14109,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Ice Burn");
                 skill.Desc = new LocalText("On the second turn, an ultracold, freezing wind surrounds the target. This may leave the target with a burn.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(140));
@@ -14125,7 +14125,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Snarl");
                 skill.Desc = new LocalText("The user yells as if it's ranting about something, which lowers the Sp. Atk stat of opposing Pokémon.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -14148,7 +14148,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Icicle Crash");
                 skill.Desc = new LocalText("The user attacks by harshly dropping large icicles onto the target. This may also make the target flinch.");
                 skill.BaseCharges = 9;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(65));
@@ -14186,7 +14186,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**V-create");
                 skill.Desc = new LocalText("With a hot flame on its forehead, the user hurls itself at its target. This lowers the user's Defense, Sp. Def, and Movement Speed.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 95;
@@ -14203,7 +14203,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Fusion Flare");
                 skill.Desc = new LocalText("The user brings down a giant flame. This attack is more powerful when influenced by an enormous thunderbolt.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -14219,7 +14219,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Fusion Bolt");
                 skill.Desc = new LocalText("The user throws down a giant thunderbolt. This move is more powerful when influenced by an enormous flame.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -14235,7 +14235,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Flying Press");
                 skill.Desc = new LocalText("The user dives down onto the target from the sky. This move is Fighting and Flying type simultaneously.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 95;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -14251,7 +14251,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Mat Block");
                 skill.Desc = new LocalText("Using a pulled-up mat as a shield, the user protects itself and its allies from damaging moves. This does not stop status moves.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -14265,7 +14265,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Belch");
                 skill.Desc = new LocalText("The user readies a belch. Eating a food item will unleash the move.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(96, true, false));
@@ -14284,7 +14284,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Rototiller");
                 skill.Desc = new LocalText("The user overturns the soil, destroying traps and making it easier for plants to grow. This raises the Attack and Sp. Atk stats of Grass-type Pokémon.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new CharElementNeededEvent(10, new StatusStackBattleEvent(10, true, false, 1), new StatusStackBattleEvent(12, true, false, 1)));
@@ -14302,7 +14302,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Sticky Web");
                 skill.Desc = new LocalText("The user shoots a sticky net at the target, causing its item to become sticky.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new SetItemStickyEvent(true, false, 116, true, new HashSet<FlagType>()));
@@ -14329,7 +14329,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Fell Stinger");
                 skill.Desc = new LocalText("When the user knocks out a target with this move, the user's Attack stat rises drastically.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -14352,7 +14352,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Phantom Force");
                 skill.Desc = new LocalText("The user vanishes somewhere, then strikes the target any time in the next 5 turns. This move hits even if the target protects itself.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -14386,7 +14386,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Trick-or-Treat");
                 skill.Desc = new LocalText("The user takes the target trick-or-treating. This adds Ghost type to the target's type.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new AddElementEvent(09));
@@ -14406,7 +14406,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Noble Roar");
                 skill.Desc = new LocalText("Letting out a noble roar, the user intimidates the target and lowers its Attack and Sp. Atk stats.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -14430,7 +14430,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Ion Deluge");
                 skill.Desc = new LocalText("The user disperses electrically charged particles, which changes all moves by those affected to the Electric type.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(97, true, false));
@@ -14448,7 +14448,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Parabolic Charge");
                 skill.Desc = new LocalText("The user attacks everything around it. The user's HP is restored by half the damage taken by those hit.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
@@ -14463,7 +14463,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Forest's Curse");
                 skill.Desc = new LocalText("The user puts a forest curse on the target. Afflicted targets are now Grass type as well.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new AddElementEvent(10));
@@ -14482,7 +14482,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Petal Blizzard");
                 skill.Desc = new LocalText("The user stirs up a violent petal blizzard and attacks everything around it.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -14509,7 +14509,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Freeze-Dry");
                 skill.Desc = new LocalText("The user rapidly cools the target. This move is super effective on Water types.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -14530,7 +14530,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Disarming Voice");
                 skill.Desc = new LocalText("Letting out a charming cry, the user does emotional damage to opposing Pokémon. This attack never misses.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = -1;
@@ -14553,7 +14553,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Parting Shot");
                 skill.Desc = new LocalText("With a parting threat, the user lowers the target's Attack and Sp. Atk stats. Then it warps away.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = -1;
@@ -14578,7 +14578,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Topsy-Turvy");
                 skill.Desc = new LocalText("All stat changes affecting the targets turn topsy-turvy and become the opposite of what they were.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -14592,7 +14592,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Draining Kiss");
                 skill.Desc = new LocalText("The user steals the target's energy with a kiss. The user's HP is restored by the damage taken by the target.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -14611,7 +14611,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Crafty Shield");
                 skill.Desc = new LocalText("The user protects itself and its allies from status moves with a mysterious power. This does not stop moves that do damage.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -14625,7 +14625,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Flower Shield");
                 skill.Desc = new LocalText("The user raises the Defense stat of all Pokémon in the party with a mysterious power.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 1));
@@ -14642,7 +14642,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Grassy Terrain");
                 skill.Desc = new LocalText("The user covers the entire floor with grass. This restores the HP of all Pokémon except Flying types.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new GiveMapStatusEvent(14, 0, new StringKey(), typeof(ExtendWeatherState)));
@@ -14661,7 +14661,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Misty Terrain");
                 skill.Desc = new LocalText("The user covers the entire floor with mist. This protects Pokémon from status conditions.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new GiveMapStatusEvent(15, 0, new StringKey(), typeof(ExtendWeatherState)));
@@ -14680,7 +14680,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Electrify");
                 skill.Desc = new LocalText("The target is electrified, converting all of its moves to the Electric type.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -14694,7 +14694,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Play Rough");
                 skill.Desc = new LocalText("The user plays rough with the target and attacks it. This may also lower the target's Attack stat.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -14714,7 +14714,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Fairy Wind");
                 skill.Desc = new LocalText("The user stirs up a fairy wind and strikes the target with it.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -14735,7 +14735,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("=Moonblast");
                 skill.Desc = new LocalText("Borrowing the power of the moon, the user attacks the target. This may also lower the target's Sp. Atk stat.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -14767,7 +14767,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Boomburst");
                 skill.Desc = new LocalText("The user attacks everything around it with the destructive power of a terrible, explosive sound.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
@@ -14787,7 +14787,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Fairy Lock");
                 skill.Desc = new LocalText("By locking down the battlefield, the user immobilizes all other Pokémon in the area.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
@@ -14806,7 +14806,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**King's Shield");
                 skill.Desc = new LocalText("The user takes a defensive stance while it protects itself from damage. It also harshly lowers the Attack stat of any attacker who makes direct contact.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -14820,7 +14820,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Play Nice");
                 skill.Desc = new LocalText("The user and the target become friends, and the target loses its will to fight. This lowers the target's Sp. Atk stat.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, -1));
@@ -14853,7 +14853,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Confide");
                 skill.Desc = new LocalText("The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = -1;
@@ -14880,7 +14880,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Diamond Storm");
                 skill.Desc = new LocalText("The user whips up a storm of diamonds to damage opposing Pokémon. This may also sharply raise the user's Defense stat.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 95;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -14896,7 +14896,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Steam Eruption");
                 skill.Desc = new LocalText("The user immerses the target in superheated steam. This may also leave the target with a burn.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 95;
                 skill.Data.SkillStates.Set(new BasePowerState(110));
@@ -14912,7 +14912,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Hyperspace Hole");
                 skill.Desc = new LocalText("Using a hyperspace hole, the user appears right next to the target and strikes. This also hits a target using Protect or Detect.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -14928,7 +14928,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Water Shuriken");
                 skill.Desc = new LocalText("The user hits the target with throwing stars three times in a row.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
@@ -14950,7 +14950,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Mystical Fire");
                 skill.Desc = new LocalText("The user attacks by breathing a special, hot fire. This also lowers the target's Sp. Atk stat.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -14975,7 +14975,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Spiky Shield");
                 skill.Desc = new LocalText("In addition to protecting the user from attacks, this move also damages any attacker who makes direct contact.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -14989,7 +14989,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Aromatic Mist");
                 skill.Desc = new LocalText("The user sharply raises the Sp. Def stat of ally Pokémon with a mysterious aroma.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(13, true, false, 2));
@@ -15012,7 +15012,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Eerie Impulse");
                 skill.Desc = new LocalText("The user's body generates an eerie impulse. Exposing the target to it harshly lowers the target's Sp. Atk stat.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, -2));
@@ -15029,7 +15029,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Venom Drench");
                 skill.Desc = new LocalText("Opposing Pokémon are drenched in an odd poisonous liquid. This lowers their Attack, Sp. Atk, and Movement Speed.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, -1));
@@ -15050,7 +15050,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Powder");
                 skill.Desc = new LocalText("The user covers opponents in a powder that causes an explosion when exposed to fire or electricity.");
                 skill.BaseCharges = 12;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(123, true, false));
@@ -15076,7 +15076,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Geomancy");
                 skill.Desc = new LocalText("The user absorbs energy and sharply raises its Sp. Atk, Sp. Def, and Speed stats on the next turn.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -15090,7 +15090,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Magnetic Flux");
                 skill.Desc = new LocalText("The user manipulates magnetic fields which raises the Defense and Sp. Def stats of ally Pokémon.");
                 skill.BaseCharges = 14;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 1));
@@ -15109,7 +15109,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Happy Hour");
                 skill.Desc = new LocalText("Using Happy Hour doubles the amount of prize money received after battle.");
                 skill.BaseCharges = 30;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -15123,7 +15123,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Electric Terrain");
                 skill.Desc = new LocalText("The user electrifies the entire floor. Pokémon can no longer fall asleep.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new GiveMapStatusEvent(13, 0, new StringKey(), typeof(ExtendWeatherState)));
@@ -15142,7 +15142,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Dazzling Gleam");
                 skill.Desc = new LocalText("The user damages opposing Pokémon by emitting a powerful flash.");
                 skill.BaseCharges = 16;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(65));
@@ -15162,7 +15162,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Celebrate");
                 skill.Desc = new LocalText("The Pokémon congratulates you on your special day!");
                 skill.BaseCharges = 40;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -15176,7 +15176,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Hold Hands");
                 skill.Desc = new LocalText("The user and an ally hold hands. This makes them very happy.");
                 skill.BaseCharges = 40;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -15190,7 +15190,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Baby-Doll Eyes");
                 skill.Desc = new LocalText("The user stares at the target with its baby-doll eyes, which lowers its Attack stat.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, -1));
@@ -15212,7 +15212,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Nuzzle");
                 skill.Desc = new LocalText("The user attacks by nuzzling its electrified cheeks against the target. This also leaves the target with paralysis.");
                 skill.BaseCharges = 18;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -15237,7 +15237,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("-Hold Back");
                 skill.Desc = new LocalText("The user holds back when it attacks and the target is left with at least 1 HP.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -15256,7 +15256,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Infestation");
                 skill.Desc = new LocalText("The target is infested and trapped for three turns.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
@@ -15278,7 +15278,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Power-Up Punch");
                 skill.Desc = new LocalText("Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
@@ -15301,7 +15301,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Oblivion Wing");
                 skill.Desc = new LocalText("The user absorbs its target's HP. The user's HP is restored by the damage taken by the target.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -15317,7 +15317,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Thousand Arrows");
                 skill.Desc = new LocalText("This move also hits opposing Pokémon that are in the air. Those Pokémon are knocked down to the ground.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -15333,7 +15333,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Thousand Waves");
                 skill.Desc = new LocalText("The user attacks with a wave that crawls along the ground. Those hit can't flee from battle.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -15349,7 +15349,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Land's Wrath");
                 skill.Desc = new LocalText("The user gathers the energy of the land and focuses that power on opposing Pokémon to damage them.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -15365,7 +15365,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Light of Ruin");
                 skill.Desc = new LocalText("Drawing power from the Eternal Flower, the user fires a powerful beam of light. This also damages the user quite a lot.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(140));
@@ -15381,7 +15381,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Origin Pulse");
                 skill.Desc = new LocalText("The user attacks opposing Pokémon with countless beams of light that glow a deep and brilliant blue.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 85;
                 skill.Data.SkillStates.Set(new BasePowerState(110));
@@ -15397,7 +15397,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Precipice Blades");
                 skill.Desc = new LocalText("The user attacks opposing Pokémon by manifesting the power of the land in fearsome blades of stone.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 85;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
@@ -15413,7 +15413,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Dragon Ascent");
                 skill.Desc = new LocalText("After soaring upward, the user attacks its target by dropping out of the sky at high speeds, although it lowers its own Defense and Sp. Def in the process.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
@@ -15432,7 +15432,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Hyperspace Fury");
                 skill.Desc = new LocalText("Using its many arms, the user unleashes a barrage of attacks that ignore the effects of moves like Protect and Detect. This attack lowers the user's Defense.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -15448,7 +15448,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Breakneck Blitz");
                 skill.Desc = new LocalText("The user builds up its momentum using its Z-Power and crashes into the target at full speed. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15464,7 +15464,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Breakneck Blitz");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15480,7 +15480,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**All-Out Pummeling");
                 skill.Desc = new LocalText("The user rams an energy orb created by its Z-Power into the target with full force. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15496,7 +15496,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**All-Out Pummeling");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15512,7 +15512,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Supersonic Skystrike");
                 skill.Desc = new LocalText("The user soars up with its Z-Power and plummets toward the target at full speed. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15528,7 +15528,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Supersonic Skystrike");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15544,7 +15544,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Acid Downpour");
                 skill.Desc = new LocalText("The user creates a poisonous swamp using its Z-Power and sinks the target into it at full force. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15560,7 +15560,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Acid Downpour");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15576,7 +15576,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Tectonic Rage");
                 skill.Desc = new LocalText("The user burrows deep into the ground and slams into the target with the full force of its Z-Power. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15592,7 +15592,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Tectonic Rage");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15608,7 +15608,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Continental Crush");
                 skill.Desc = new LocalText("The user summons a huge rock mountain using its Z-Power and drops it onto the target with full force. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15624,7 +15624,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Continental Crush");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15640,7 +15640,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Savage Spin-Out");
                 skill.Desc = new LocalText("The user binds the target with full force with threads of silk that the user spits using its Z-Power. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15656,7 +15656,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Savage Spin-Out");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15672,7 +15672,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Never-Ending Nightmare");
                 skill.Desc = new LocalText("Deep-seated grudges summoned by the user's Z-Power trap the target. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15688,7 +15688,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Never-Ending Nightmare");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15704,7 +15704,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Corkscrew Crash");
                 skill.Desc = new LocalText("The user spins very fast and rams into the target with the full force of its Z-Power. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15720,7 +15720,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Corkscrew Crash");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15736,7 +15736,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Inferno Overdrive");
                 skill.Desc = new LocalText("The user breathes a stream of intense fire toward the target with the full force of its Z-Power. The power varies depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15752,7 +15752,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Inferno Overdrive");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15768,7 +15768,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Hydro Vortex");
                 skill.Desc = new LocalText("The user creates a huge whirling current using its Z-Power to swallow the target with full force. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15784,7 +15784,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Hydro Vortex");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15800,7 +15800,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Bloom Doom");
                 skill.Desc = new LocalText("The user collects energy from plants using its Z-Power and attacks the target with full force. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15816,7 +15816,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Bloom Doom");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15832,7 +15832,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Gigavolt Havoc");
                 skill.Desc = new LocalText("The user hits the target with a powerful electric current collected by its Z-Power. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15848,7 +15848,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Gigavolt Havoc");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15864,7 +15864,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Shattered Psyche");
                 skill.Desc = new LocalText("The user controls the target with its Z-Power and hurts the target with full force. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15880,7 +15880,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Shattered Psyche");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15896,7 +15896,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Subzero Slammer");
                 skill.Desc = new LocalText("The user dramatically drops the temperature using its Z-Power and freezes the target with full force. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15912,7 +15912,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Subzero Slammer");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15928,7 +15928,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Devastating Drake");
                 skill.Desc = new LocalText("The user materializes its aura using its Z-Power and attacks the target with full force. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15944,7 +15944,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Devastating Drake");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15960,7 +15960,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Black Hole Eclipse");
                 skill.Desc = new LocalText("The user gathers dark energy using its Z-Power and sucks the target into it. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15976,7 +15976,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Black Hole Eclipse");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -15992,7 +15992,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Twinkle Tackle");
                 skill.Desc = new LocalText("The user creates a very charming space using its Z-Power and totally toys with the target. The power varies, depending on the original move.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -16008,7 +16008,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Twinkle Tackle");
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -16024,7 +16024,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Catastropika");
                 skill.Desc = new LocalText("The user, Pikachu, surrounds itself with the maximum amount of electricity using its Z-Power and pounces on its target with full force.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(210));
@@ -16040,7 +16040,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Shore Up");
                 skill.Desc = new LocalText("The user regains up to half of its max HP. It restores more HP in a sandstorm.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16054,7 +16054,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**First Impression");
                 skill.Desc = new LocalText("Although this move has great power, it only works the first turn the user is in battle.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -16070,7 +16070,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Baneful Bunker");
                 skill.Desc = new LocalText("In addition to protecting the user from attacks, this move also poisons any attacker that makes direct contact.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16084,7 +16084,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Spirit Shackle");
                 skill.Desc = new LocalText("The user attacks while simultaneously stitching the target's shadow to the ground to prevent the target from escaping.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -16100,7 +16100,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Darkest Lariat");
                 skill.Desc = new LocalText("The user swings both arms and hits the target. The target's stat changes don't affect this attack's damage.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
@@ -16116,7 +16116,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Sparkling Aria");
                 skill.Desc = new LocalText("The user bursts into song, emitting many bubbles. Any Pokémon suffering from a burn will be healed by the touch of these bubbles.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -16132,7 +16132,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Ice Hammer");
                 skill.Desc = new LocalText("The user swings and hits with its strong, heavy fist. It lowers the user's Speed, however.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -16148,7 +16148,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Floral Healing");
                 skill.Desc = new LocalText("The user restores the target's HP by up to half of its max HP. It restores more HP when the terrain is grass.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16162,7 +16162,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**High Horsepower");
                 skill.Desc = new LocalText("The user fiercely attacks the target using its entire body.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 95;
                 skill.Data.SkillStates.Set(new BasePowerState(95));
@@ -16178,7 +16178,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Strength Sap");
                 skill.Desc = new LocalText("The user restores its HP by the same amount as the target's Attack stat. It also lowers the target's Attack stat.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
@@ -16192,7 +16192,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Solar Blade");
                 skill.Desc = new LocalText("In this two-turn attack, the user gathers light and fills a blade with the light's energy, attacking the target on the next turn.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(125));
@@ -16208,7 +16208,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Leafage");
                 skill.Desc = new LocalText("The user attacks by pelting the target with leaves.");
                 skill.BaseCharges = 40;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -16224,7 +16224,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Spotlight");
                 skill.Desc = new LocalText("The user shines a spotlight on the target so that only the target will be attacked during the turn.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16238,7 +16238,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Toxic Thread");
                 skill.Desc = new LocalText("The user shoots poisonous threads to poison the target and lower the target's Speed stat.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
@@ -16252,7 +16252,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Laser Focus");
                 skill.Desc = new LocalText("The user concentrates intensely. The attack on the next turn always results in a critical hit.");
                 skill.BaseCharges = 30;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16266,7 +16266,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Gear Up");
                 skill.Desc = new LocalText("The user engages its gears to raise the Attack and Sp. Atk stats of ally Pokémon with the Plus or Minus Ability.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16280,7 +16280,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Throat Chop");
                 skill.Desc = new LocalText("The user attacks the target's throat, and the resultant suffering prevents the target from using moves that emit sound for two turns.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -16296,7 +16296,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Pollen Puff");
                 skill.Desc = new LocalText("The user attacks the enemy with a pollen puff that explodes. If the target is an ally, it gives the ally a pollen puff that restores its HP instead.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -16312,7 +16312,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Anchor Shot");
                 skill.Desc = new LocalText("The user entangles the target with its anchor chain while attacking. The target becomes unable to flee.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -16328,7 +16328,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Psychic Terrain");
                 skill.Desc = new LocalText("This protects Pokémon on the ground from priority moves and powers up Psychic-type moves for five turns.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16342,7 +16342,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Lunge");
                 skill.Desc = new LocalText("The user makes a lunge at the target, attacking with full force. This also lowers the target's Attack stat.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -16358,7 +16358,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Fire Lash");
                 skill.Desc = new LocalText("The user strikes the target with a burning lash. This also lowers the target's Defense stat.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -16374,7 +16374,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Power Trip");
                 skill.Desc = new LocalText("The user boasts its strength and attacks the target. The more the user's stats are raised, the greater the move's power.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
@@ -16390,7 +16390,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Burn Up");
                 skill.Desc = new LocalText("To inflict massive damage, the user burns itself out. After using this move, the user will no longer be Fire type.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(130));
@@ -16406,7 +16406,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Speed Swap");
                 skill.Desc = new LocalText("The user exchanges Speed stats with the target.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16420,7 +16420,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Smart Strike");
                 skill.Desc = new LocalText("The user stabs the target with a sharp horn. This attack never misses.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -16436,7 +16436,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Purify");
                 skill.Desc = new LocalText("The user heals the target's status condition. If the move succeeds, it also restores the user's own HP.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16450,7 +16450,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Revelation Dance");
                 skill.Desc = new LocalText("The user attacks the target by dancing very hard. The user's type determines the type of this move.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -16466,7 +16466,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Core Enforcer");
                 skill.Desc = new LocalText("If the Pokémon the user has inflicted damage on have already used their moves, this move eliminates the effect of the target's Ability.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -16482,7 +16482,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Trop Kick");
                 skill.Desc = new LocalText("The user lands an intense kick of tropical origins on the target. This also lowers the target's Attack stat.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -16498,7 +16498,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Instruct");
                 skill.Desc = new LocalText("The user instructs the target to use the target's last move again.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16512,7 +16512,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Beak Blast");
                 skill.Desc = new LocalText("The user first heats up its beak, and then it attacks the target. Making direct contact with the Pokémon while it's heating up its beak results in a burn.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -16528,7 +16528,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Clanging Scales");
                 skill.Desc = new LocalText("The user rubs the scales on its entire body and makes a huge noise to attack the opposing Pokémon. The user's Defense stat goes down after the attack.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(110));
@@ -16544,7 +16544,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Dragon Hammer");
                 skill.Desc = new LocalText("The user uses its body like a hammer to attack the target and inflict damage.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -16560,7 +16560,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Brutal Swing");
                 skill.Desc = new LocalText("The user swings its body around violently to inflict damage on everything in its vicinity.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -16576,7 +16576,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Aurora Veil");
                 skill.Desc = new LocalText("This move reduces damage from physical and special moves for five turns. This can be used only in a hailstorm.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16590,7 +16590,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Sinister Arrow Raid");
                 skill.Desc = new LocalText("The user, Decidueye, creates countless arrows using its Z-Power and shoots the target with full force.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(180));
@@ -16606,7 +16606,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Malicious Moonsault");
                 skill.Desc = new LocalText("The user, Incineroar, strengthens its body using its Z-Power and crashes into the target with full force.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(180));
@@ -16622,7 +16622,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Oceanic Operetta");
                 skill.Desc = new LocalText("The user, Primarina, summons a massive amount of water using its Z-Power and attacks the target with full force.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(195));
@@ -16638,7 +16638,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Guardian of Alola");
                 skill.Desc = new LocalText("The user, the Land Spirit Pokémon, obtains Alola's energy using its Z-Power and attacks the target with full force. This reduces the target's HP greatly.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -16654,7 +16654,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Soul-Stealing 7-Star Strike");
                 skill.Desc = new LocalText("After obtaining Z-Power, the user, Marshadow, punches and kicks the target consecutively with full force.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(195));
@@ -16670,7 +16670,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Stoked Sparksurfer");
                 skill.Desc = new LocalText("After obtaining Z-Power, the user, Alolan Raichu, attacks the target with full force. This move leaves the target with paralysis.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(175));
@@ -16686,7 +16686,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Pulverizing Pancake");
                 skill.Desc = new LocalText("Z-Power brings out the true capabilities of the user, Snorlax. The Pokémon moves its enormous body energetically and attacks the target with full force.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(210));
@@ -16702,7 +16702,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Extreme Evoboost");
                 skill.Desc = new LocalText("After obtaining Z-Power, the user, Eevee, gets energy from its evolved friends and boosts its stats sharply.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16716,7 +16716,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Genesis Supernova");
                 skill.Desc = new LocalText("After obtaining Z-Power, the user, Mew, attacks the target with full force. The terrain will be charged with psychic energy.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(185));
@@ -16732,7 +16732,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Shell Trap");
                 skill.Desc = new LocalText("The user sets a shell trap. If the user is hit by a physical move, the trap will explode and inflict damage on the opposing Pokémon.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(150));
@@ -16748,7 +16748,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Fleur Cannon");
                 skill.Desc = new LocalText("The user unleashes a strong beam. The attack's recoil harshly lowers the user's Sp. Atk stat.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(130));
@@ -16764,7 +16764,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Psychic Fangs");
                 skill.Desc = new LocalText("The user bites the target with its psychic capabilities. This can also destroy Light Screen and Reflect.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
@@ -16780,7 +16780,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Stomping Tantrum");
                 skill.Desc = new LocalText("Driven by frustration, the user attacks the target. If the user's previous move has failed, the power of this move doubles.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
@@ -16796,7 +16796,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Shadow Bone");
                 skill.Desc = new LocalText("The user attacks by beating the target with a bone that contains a spirit. This may also lower the target's Defense stat.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
@@ -16812,7 +16812,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Accelerock");
                 skill.Desc = new LocalText("The user smashes into the target at high speed. This move always goes first.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -16828,7 +16828,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Liquidation");
                 skill.Desc = new LocalText("The user slams into the target using a full-force blast of water. This may also lower the target's Defense stat.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
@@ -16844,7 +16844,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("Prismatic Laser");
                 skill.Desc = new LocalText("The user shoots powerful lasers using the power of a prism. The user can't move on the next turn.");
                 skill.BaseCharges = 8;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(160));
@@ -16873,7 +16873,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Spectral Thief");
                 skill.Desc = new LocalText("The user hides in the target's shadow, steals the target's stat boosts, and then attacks.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -16889,7 +16889,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Sunsteel Strike");
                 skill.Desc = new LocalText("The user slams into the target with the force of a meteor. This move can be used on the target regardless of its Abilities.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -16905,7 +16905,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Moongeist Beam");
                 skill.Desc = new LocalText("The user emits a sinister ray to attack the target. This move can be used on the target regardless of its Abilities.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -16921,7 +16921,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Tearful Look");
                 skill.Desc = new LocalText("The user gets teary eyed to make the target lose its combative spirit. This lowers the target's Attack and Sp. Atk stats.");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -16935,7 +16935,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Zing Zap");
                 skill.Desc = new LocalText("A strong electric blast crashes down on the target, giving it an electric shock. This may also make the target flinch.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -16951,7 +16951,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Nature's Madness");
                 skill.Desc = new LocalText("The user hits the target with the force of nature. It halves the target's HP.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -16967,7 +16967,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Multi-Attack");
                 skill.Desc = new LocalText("Cloaking itself in high energy, the user slams into the target. The move's type changes depending on the form the user is in.");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -16983,7 +16983,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**10,000,000 Volt Thunderbolt");
                 skill.Desc = new LocalText("The user, Pikachu wearing a cap, powers up a jolt of electricity using its Z-Power and unleashes it. Critical hits land more easily.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(195));
@@ -16999,7 +16999,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Mind Blown");
                 skill.Desc = new LocalText("The user attacks everything around it by causing its own head to explode. This also damages the user.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(150));
@@ -17015,7 +17015,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Plasma Fists");
                 skill.Desc = new LocalText("The user attacks with electrically charged fists. This move changes Normal-type moves to Electric-type moves.");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -17031,7 +17031,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Photon Geyser");
                 skill.Desc = new LocalText("The user attacks a target with a pillar of light. This move inflicts Attack or Sp. Atk damage—whichever stat is higher for the user.");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -17047,7 +17047,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Light That Burns the Sky");
                 skill.Desc = new LocalText("This attack inflicts Attack or Sp. Atk damage— whichever stat is higher for the user, Necrozma. This move ignores the target's Ability.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(200));
@@ -17063,7 +17063,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Searing Sunraze Smash");
                 skill.Desc = new LocalText("After obtaining Z-Power, the user, Solgaleo, attacks the target with full force. This move can ignore the effect of the target's Ability.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(200));
@@ -17079,7 +17079,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Menacing Moonraze Maelstrom");
                 skill.Desc = new LocalText("After obtaining Z-Power, the user, Lunala, attacks the target with full force. This move can ignore the effect of the target's Ability.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(200));
@@ -17095,7 +17095,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Let's Snuggle Forever");
                 skill.Desc = new LocalText("After obtaining Z-Power, the user, Mimikyu, punches the target with full force.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(190));
@@ -17111,7 +17111,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Splintered Stormshards");
                 skill.Desc = new LocalText("After obtaining Z-Power, the user, Lycanroc, attacks the target with full force. This move negates the effect on the battlefield.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(190));
@@ -17127,7 +17127,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Clangorous Soulblaze");
                 skill.Desc = new LocalText("After obtaining Z-Power, the user, Kommo-o, attacks the opposing Pokémon with full force. This move boosts the user's stats.");
                 skill.BaseCharges = 1;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(185));
@@ -17143,7 +17143,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Zippy Zap");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -17159,7 +17159,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Splishy Splash");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -17175,7 +17175,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Floaty Fall");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 95;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -17191,7 +17191,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Pika Papow");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17207,7 +17207,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Bouncy Bubble");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -17223,7 +17223,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Buzzy Buzz");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -17239,7 +17239,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Sizzly Slide");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -17255,7 +17255,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Glitzy Glow");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -17271,7 +17271,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Baddy Bad");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -17287,7 +17287,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Sappy Seed");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -17303,7 +17303,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Freezy Frost");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -17319,7 +17319,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Sparkly Swirl");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -17335,7 +17335,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Veevee Volley");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17351,7 +17351,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Double Iron Bash");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -17367,7 +17367,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Guard");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -17381,7 +17381,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Dynamax Cannon");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -17397,7 +17397,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Snipe Shot");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -17413,7 +17413,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Jaw Lock");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -17429,7 +17429,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Stuff Cheeks");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -17443,7 +17443,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**No Retreat");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -17457,7 +17457,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Tar Shot");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
@@ -17471,7 +17471,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Magic Powder");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
@@ -17485,7 +17485,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Dragon Darts");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -17501,7 +17501,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Teatime");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -17515,7 +17515,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Octolock");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
@@ -17529,7 +17529,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Bolt Beak");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
@@ -17545,7 +17545,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Fishious Rend");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
@@ -17561,7 +17561,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Court Change");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
@@ -17575,7 +17575,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Flare");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17591,7 +17591,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Flutterby");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17607,7 +17607,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Lightning");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17623,7 +17623,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Strike");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17639,7 +17639,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Knuckle");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17655,7 +17655,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Phantasm");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17671,7 +17671,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Hailstorm");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17687,7 +17687,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Ooze");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17703,7 +17703,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Geyser");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17719,7 +17719,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Airstream");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17735,7 +17735,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Starfall");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17751,7 +17751,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Wyrmwind");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17767,7 +17767,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Mindstorm");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17783,7 +17783,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Rockfall");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17799,7 +17799,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Quake");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17815,7 +17815,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Darkness");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17831,7 +17831,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Overgrowth");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17847,7 +17847,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Max Steelspike");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 0;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.None;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(0));
@@ -17863,7 +17863,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Clangorous Soul");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
@@ -17877,7 +17877,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Body Press");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -17893,7 +17893,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Decorate");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -17907,7 +17907,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Drum Beating");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -17923,7 +17923,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Snap Trap");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(35));
@@ -17939,7 +17939,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Pyro Ball");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
@@ -17955,7 +17955,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Behemoth Blade");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -17971,7 +17971,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Behemoth Bash");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -17987,7 +17987,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Aura Wheel");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(110));
@@ -18003,7 +18003,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Breaking Swipe");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -18019,7 +18019,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Branch Poke");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 40;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -18035,7 +18035,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Overdrive");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -18051,7 +18051,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Apple Acid");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -18067,7 +18067,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Grav Apple");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -18083,7 +18083,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Spirit Break");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
@@ -18099,7 +18099,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Strange Steam");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 95;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -18115,7 +18115,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Life Dew");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -18129,7 +18129,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Obstruct");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
@@ -18143,7 +18143,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**False Surrender");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -18159,7 +18159,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Meteor Assault");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(150));
@@ -18175,7 +18175,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Eternabeam");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(160));
@@ -18191,7 +18191,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Steel Beam");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 95;
                 skill.Data.SkillStates.Set(new BasePowerState(140));
@@ -18207,7 +18207,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Expanding Force");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -18223,7 +18223,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Steel Roller");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 17;
+                skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(130));
@@ -18239,7 +18239,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Scale Shot");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(25));
@@ -18255,7 +18255,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Meteor Beam");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 16;
+                skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
@@ -18271,7 +18271,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Shell Side Arm");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -18287,7 +18287,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Misty Explosion");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 05;
+                skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
@@ -18303,7 +18303,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Grassy Glide");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -18319,7 +18319,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Rising Voltage");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -18335,7 +18335,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Terrain Pulse");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 13;
+                skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
@@ -18351,7 +18351,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Skitter Smack");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 01;
+                skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -18367,7 +18367,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Burning Jealousy");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 07;
+                skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -18383,7 +18383,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Lash Out");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
@@ -18399,7 +18399,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Poltergeist");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(110));
@@ -18415,7 +18415,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Corrosive Gas");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 40;
-                skill.Data.Element = 14;
+                skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
@@ -18429,7 +18429,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Coaching");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -18443,7 +18443,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Flip Turn");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 20;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
@@ -18459,7 +18459,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Triple Axel");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
@@ -18475,7 +18475,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Dual Wingbeat");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 08;
+                skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
@@ -18491,7 +18491,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Scorching Sands");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 11;
+                skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
@@ -18507,7 +18507,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Jungle Healing");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 10;
+                skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
@@ -18521,7 +18521,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Wicked Blow");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -18537,7 +18537,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Surging Strikes");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 18;
+                skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(25));
@@ -18553,7 +18553,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Thunder Cage");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 15;
-                skill.Data.Element = 04;
+                skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
@@ -18569,7 +18569,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Dragon Energy");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 03;
+                skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(150));
@@ -18585,7 +18585,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Freezing Glare");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -18601,7 +18601,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Fiery Wrath");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 02;
+                skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -18617,7 +18617,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Thunderous Kick");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 10;
-                skill.Data.Element = 06;
+                skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
@@ -18633,7 +18633,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Glacial Lance");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 12;
+                skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(130));
@@ -18649,7 +18649,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Astral Barrage");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 09;
+                skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
@@ -18665,7 +18665,7 @@ namespace DataGenerator.Data
                 skill.Name = new LocalText("**Eerie Spell");
                 skill.Desc = new LocalText("");
                 skill.BaseCharges = 5;
-                skill.Data.Element = 15;
+                skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));

@@ -1482,7 +1482,7 @@ namespace DataGenerator.Data
             else if (ii == 188)
             {
                 ability.Name = new LocalText("**Aura Break");
-                ability.Desc = new LocalText("The effects of “Aura” Abilities are reversed to lower the power of affected moves.");
+                ability.Desc = new LocalText("The effects of aura abilities are reversed to lower the power of affected moves.");
             }
             else if (ii == 189)
             {

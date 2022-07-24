@@ -70,7 +70,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_BURN_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_BURN_FAIL")));
-                status.BeforeStatusAdds.Add(0, new TypeCheck(07, new StringKey("MSG_BURN_FAIL_ELEMENT")));
+                status.BeforeStatusAdds.Add(0, new TypeCheck("fire", new StringKey("MSG_BURN_FAIL_ELEMENT")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_BURN_START"), true));
                 status.OnStatusAdds.Add(-5, new ReplaceMajorStatusEvent());
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_BURN_END")));
@@ -93,7 +93,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_FREEZE_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_FREEZE_FAIL")));
-                status.BeforeStatusAdds.Add(0, new TypeCheck(12, new StringKey("MSG_FREEZE_FAIL_ELEMENT")));
+                status.BeforeStatusAdds.Add(0, new TypeCheck("ice", new StringKey("MSG_FREEZE_FAIL_ELEMENT")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FREEZE_START"), true));
                 status.OnStatusAdds.Add(-5, new ReplaceMajorStatusEvent());
                 FiniteReleaseEmitter endAnim = new FiniteReleaseEmitter(new AnimData("Ice_Pieces", 6, 0, 0), new AnimData("Ice_Pieces", 12, 1, 1), new AnimData("Ice_Pieces", 12, 1, 1));
@@ -126,7 +126,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new ParalyzeState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_PARALYZE_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_PARALYZE_FAIL")));
-                status.BeforeStatusAdds.Add(0, new TypeCheck(04, new StringKey("MSG_PARALYZE_FAIL_TYPE")));
+                status.BeforeStatusAdds.Add(0, new TypeCheck("electric", new StringKey("MSG_PARALYZE_FAIL_TYPE")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_PARALYZE_START"), true));
                 status.OnStatusAdds.Add(-5, new ReplaceMajorStatusEvent());
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_PARALYZE_END")));
@@ -150,8 +150,8 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck(6, new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_POISON_FAIL")));
-                status.BeforeStatusAdds.Add(0, new TypeCheck(14, new StringKey("MSG_POISON_FAIL_ELEMENT")));
-                status.BeforeStatusAdds.Add(0, new TypeCheck(17, new StringKey("MSG_POISON_FAIL_ELEMENT")));
+                status.BeforeStatusAdds.Add(0, new TypeCheck("poison", new StringKey("MSG_POISON_FAIL_ELEMENT")));
+                status.BeforeStatusAdds.Add(0, new TypeCheck("steel", new StringKey("MSG_POISON_FAIL_ELEMENT")));
                 status.OnStatusAdds.Add(-5, new ReplaceMajorStatusEvent());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
@@ -171,8 +171,8 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck(5, new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_POISON_FAIL")));
-                status.BeforeStatusAdds.Add(0, new TypeCheck(14, new StringKey("MSG_POISON_FAIL_ELEMENT")));
-                status.BeforeStatusAdds.Add(0, new TypeCheck(17, new StringKey("MSG_POISON_FAIL_ELEMENT")));
+                status.BeforeStatusAdds.Add(0, new TypeCheck("poison", new StringKey("MSG_POISON_FAIL_ELEMENT")));
+                status.BeforeStatusAdds.Add(0, new TypeCheck("steel", new StringKey("MSG_POISON_FAIL_ELEMENT")));
                 status.OnStatusAdds.Add(-5, new ReplaceMajorStatusEvent());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_TOXIC_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
@@ -1551,7 +1551,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(-1, new CountDownBoostMod(typeof(GripState), 3, 2));
-                status.BeforeStatusAdds.Add(0, new TypeCheck(09, new StringKey("MSG_IMMOBILIZE_FAIL_ELEMENT")));
+                status.BeforeStatusAdds.Add(0, new TypeCheck("ghost", new StringKey("MSG_IMMOBILIZE_FAIL_ELEMENT")));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_IMMOBILIZE_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_IMMOBILIZE_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_IMMOBILIZE_END")));
@@ -1741,7 +1741,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("The Pokémon's HP is sapped and given to a foe every turn. This status wears off if there are no foes around.");
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
-                status.BeforeStatusAdds.Add(0, new TypeCheck(10, new StringKey("MSG_LEECH_SEED_FAIL_ELEMENT")));
+                status.BeforeStatusAdds.Add(0, new TypeCheck("grass", new StringKey("MSG_LEECH_SEED_FAIL_ELEMENT")));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_LEECH_SEED_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_LEECH_SEED_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_LEECH_SEED_END")));
