@@ -1649,7 +1649,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An orb that temporarily reverses all type matchups.");
                 item.Sprite = "Orb_White";
 
-                item.UseEvent.OnHits.Add(0, new GiveMapStatusEvent(16));
+                item.UseEvent.OnHits.Add(0, new GiveMapStatusEvent("inverse"));
                 item.UseAction = new SelfAction();
                 item.UseAction.TargetAlignments |= Alignment.Self;
                 item.Explosion.TargetAlignments |= Alignment.Self;
@@ -1739,7 +1739,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An orb that reveals the location of all items and enemies on the floor.");
                 item.Sprite = "Orb_DarkBlue";
 
-                item.UseEvent.OnHits.Add(0, new GiveMapStatusEvent(41));
+                item.UseEvent.OnHits.Add(0, new GiveMapStatusEvent("scanner"));
                 item.UseAction = new SelfAction();
                 item.UseAction.ActionFX.Sound = "DUN_Identify_2";
                 item.UseAction.TargetAlignments |= Alignment.Self;

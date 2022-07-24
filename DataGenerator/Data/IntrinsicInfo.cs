@@ -1488,19 +1488,19 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Primordial Sea");
                 ability.Desc = new LocalText("Affects weather and nullifies any Fire-type attacks.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(17)));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("heavy_rain")));
             }
             else if (ii == 190)
             {
                 ability.Name = new LocalText("Desolate Land");
                 ability.Desc = new LocalText("Affects weather and nullifies any Water-type attacks.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(18)));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("harsh_sun")));
             }
             else if (ii == 191)
             {
                 ability.Name = new LocalText("Delta Stream");
                 ability.Desc = new LocalText("Affects weather and eliminates all of the Flying type's weaknesses.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent(19)));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("wind")));
             }
             else if (ii == 192)
             {

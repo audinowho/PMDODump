@@ -2217,7 +2217,7 @@ namespace DataGenerator.Data
             {
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 0;
-                shop.SecurityStatus = 38;
+                shop.SecurityStatus = "shop_security";
                 shop.Items.Add(new MapItem(10, 0, 100), 20);//oran
                 shop.Items.Add(new MapItem(11, 0, 150), 20);//leppa
                 shop.Items.Add(new MapItem(12, 0, 100), 20);//lum
@@ -2267,7 +2267,7 @@ namespace DataGenerator.Data
             {
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 0;
-                shop.SecurityStatus = 38;
+                shop.SecurityStatus = "shop_security";
                 shop.Items.Add(new MapItem(10, 0, 100), 20);//oran
                 shop.Items.Add(new MapItem(11, 0, 150), 20);//leppa
                 shop.Items.Add(new MapItem(12, 0, 100), 20);//lum
@@ -2333,7 +2333,7 @@ namespace DataGenerator.Data
             {
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 1;
-                shop.SecurityStatus = 38;
+                shop.SecurityStatus = "shop_security";
                 shop.Items.Add(new MapItem(251, 0, 300), 20);//weather orb
                 shop.Items.Add(new MapItem(252, 0, 600), 20);//mobile orb
                 shop.Items.Add(new MapItem(253, 0, 600), 20);//luminous orb
@@ -4645,7 +4645,7 @@ namespace DataGenerator.Data
             {
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 0;
-                shop.SecurityStatus = 38;
+                shop.SecurityStatus = "shop_security";
                 shop.Items.Add(new MapItem(10, 0, 100), 20);//oran
                 shop.Items.Add(new MapItem(11, 0, 150), 20);//leppa
                 shop.Items.Add(new MapItem(12, 0, 100), 20);//lum
@@ -4693,7 +4693,7 @@ namespace DataGenerator.Data
             {
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 1;
-                shop.SecurityStatus = 38;
+                shop.SecurityStatus = "shop_security";
                 shop.Items.Add(new MapItem(251, 0, 300), 20);//weather orb
                 shop.Items.Add(new MapItem(252, 0, 600), 20);//mobile orb
                 shop.Items.Add(new MapItem(253, 0, 600), 20);//luminous orb

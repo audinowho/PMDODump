@@ -430,7 +430,7 @@ namespace DataGenerator.Data
                     {
                         ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                         shop.Personality = 2;
-                        shop.SecurityStatus = 38;
+                        shop.SecurityStatus = "shop_security";
                         shop.Items.Add(new MapItem(101, 0, 800), 10);//reviver seed
                         shop.Items.Add(new MapItem(112, 0, 500), 10);//blast seed
                         shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
@@ -2398,7 +2398,7 @@ namespace DataGenerator.Data
                 {
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 0;
-                    shop.SecurityStatus = 38;
+                    shop.SecurityStatus = "shop_security";
                     shop.Items.Add(new MapItem(101, 0, 800), 10);//reviver seed
                     shop.Items.Add(new MapItem(112, 0, 500), 10);//blast seed
                     shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
@@ -2425,7 +2425,7 @@ namespace DataGenerator.Data
                 {
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 1;
-                    shop.SecurityStatus = 38;
+                    shop.SecurityStatus = "shop_security";
                     shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
                     shop.Items.Add(new MapItem(352, 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
@@ -2461,7 +2461,7 @@ namespace DataGenerator.Data
                 {
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 2;
-                    shop.SecurityStatus = 38;
+                    shop.SecurityStatus = "shop_security";
                     shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
                     shop.Items.Add(new MapItem(352, 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
@@ -2493,7 +2493,7 @@ namespace DataGenerator.Data
                 {
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 0;
-                    shop.SecurityStatus = 38;
+                    shop.SecurityStatus = "shop_security";
                     shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
                     shop.Items.Add(new MapItem(352, 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
@@ -2520,7 +2520,7 @@ namespace DataGenerator.Data
                 {
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 0;
-                    shop.SecurityStatus = 38;
+                    shop.SecurityStatus = "shop_security";
                     shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
                     shop.Items.Add(new MapItem(352, 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
@@ -3519,7 +3519,7 @@ namespace DataGenerator.Data
                 //add border
                 layout.GenSteps.Add(PR_TILES_BARRIER, new UnbreakableBorderStep<StairsMapGenContext>(1));
 
-                layout.GenSteps.Add(PR_FLOOR_DATA, new MapExtraStatusStep<StairsMapGenContext>(27));
+                layout.GenSteps.Add(PR_FLOOR_DATA, new MapExtraStatusStep<StairsMapGenContext>("mercy_revive"));
 
                 ActiveEffect activeEffect = new ActiveEffect();
                 activeEffect.OnMapStarts.Add(-15, new PrepareLevelEvent(floor_level));

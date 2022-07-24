@@ -9225,7 +9225,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(10));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("gravity"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -11247,7 +11247,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(9));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("trick_room"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -12279,7 +12279,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(11));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("wonder_room"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -12404,7 +12404,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new GiveMapStatusEvent(12));
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("magic_room"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
