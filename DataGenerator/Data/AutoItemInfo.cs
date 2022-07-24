@@ -232,11 +232,11 @@ namespace DataGenerator.Data
                     statuses.Add((ii).ToString("D3") + ": " + data.Name.DefaultText);
             }
 
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.MapStatus].Count; ii++)
+            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.MapStatus].Entries.Keys)
             {
-                MapStatusData data = DataManager.Instance.GetMapStatus(ii);
-                if (!data.DefaultHidden && data.Name.DefaultText != "" || ii == 0)
-                    mapStatuses.Add((ii).ToString("D3") + ": " + data.Name.DefaultText);
+                MapStatusData data = DataManager.Instance.GetMapStatus(key);
+                if (!data.DefaultHidden && data.Name.DefaultText != "")
+                    mapStatuses.Add(key + ": " + data.Name.DefaultText);
             }
 
             foreach (BattleData.SkillCategory statType in Enum.GetValues(typeof(BattleData.SkillCategory)).Cast<BattleData.SkillCategory>())
@@ -1245,13 +1245,13 @@ namespace DataGenerator.Data
                 {
                     BattleData.SkillCategory category = (BattleData.SkillCategory)args[0];
                     localArgs.Add(ToLocalText(category, item.Desc, translate));
-                    MapStatusData mapStatus = DataManager.Instance.GetMapStatus((int)args[1]);
+                    MapStatusData mapStatus = DataManager.Instance.GetMapStatus((string)args[1]);
                     localArgs.Add(mapStatus.Name);
 
                     if (mapStatus.StatusStates.Contains<MapWeatherState>())
-                        item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new GiveMapStatusEvent((int)args[1], 10, new StringKey(), typeof(ExtendWeatherState)))));
+                        item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new GiveMapStatusEvent((string)args[1], 10, new StringKey(), typeof(ExtendWeatherState)))));
                     else
-                        item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new GiveMapStatusEvent((int)args[1], 10))));
+                        item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new GiveMapStatusEvent((string)args[1], 10))));
                 }
             }
             else if (type == ExclusiveItemEffect.StatusImmune)
@@ -1323,7 +1323,7 @@ namespace DataGenerator.Data
                 {
                     SingleEmitter emitter = new SingleEmitter(new AnimData("Stair_Sensor_Arrow", 6), 6);
                     emitter.Layer = DrawLayer.Top;
-                    item.OnMapStarts.Add(0, new FamilySingleEvent(new StairSensorEvent(28, emitter)));
+                    item.OnMapStarts.Add(0, new FamilySingleEvent(new StairSensorEvent("stairs_sensed", emitter)));
                 }
             }
             else if (type == ExclusiveItemEffect.AcuteSniffer)
@@ -1332,7 +1332,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, it reveals the number of items laying on the ground the Pokémon reaches a new floor.");
                 if (includeEffects)
                 {
-                    item.OnMapStarts.Add(0, new FamilySingleEvent(new AcuteSnifferEvent(23, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), ""))));
+                    item.OnMapStarts.Add(0, new FamilySingleEvent(new AcuteSnifferEvent("items_sniffed", new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), ""))));
                 }
             }
             else if (type == ExclusiveItemEffect.MapSurveyor)
@@ -1341,7 +1341,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, it partially reveals the floor's layout the Pokémon reaches a new floor.");
                 if (includeEffects)
                 {
-                    item.OnMapStarts.Add(0, new FamilySingleEvent(new MapSurveyorEvent(29, 22)));
+                    item.OnMapStarts.Add(0, new FamilySingleEvent(new MapSurveyorEvent("map_surveyed", 22)));
                 }
             }
             else if (type == ExclusiveItemEffect.XRay)
@@ -1875,7 +1875,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon is protected from status conditions when the floor has the {0} status.");
                 if (includeEffects)
                 {
-                    int mapStatus = (int)args[0];
+                    string mapStatus = (string)args[0];
                     localArgs.Add(DataManager.Instance.GetMapStatus(mapStatus).Name);
 
                     SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
@@ -1888,7 +1888,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon's Attack Range is increased when the floor has the {0} status.");
                 if (includeEffects)
                 {
-                    int mapStatus = (int)args[0];
+                    string mapStatus = (string)args[0];
                     localArgs.Add(DataManager.Instance.GetMapStatus(mapStatus).Name);
 
                     item.OnActions.Add(-1, new FamilyBattleEvent(new WeatherAddRangeEvent(mapStatus, 1)));

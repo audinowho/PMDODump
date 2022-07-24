@@ -699,7 +699,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Ban Seed");
                 item.Desc = new LocalText("A seed that bans the last move used by the Pokémon, preventing anyone in the dungeon from using it.");
                 item.Sprite = "Seed_Blue";
-                item.UseEvent.OnHits.Add(0, new BanMoveEvent(20, 27));
+                item.UseEvent.OnHits.Add(0, new BanMoveEvent("move_ban", 27));
             }
             else if (ii == 119)
             {

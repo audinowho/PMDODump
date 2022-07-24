@@ -20,8 +20,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_MAP_STATUSES; ii++)
             {
                 MapStatusData status = GetMapStatusData(ii);
-                //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.MapStatus.ToString(), status);
+                if (status.Name.DefaultText != "")
+                    DataManager.SaveData(Text.Sanitize(status.Name.DefaultText).ToLower(), DataManager.DataType.MapStatus.ToString(), status);
             }
         }
         public static MapStatusData GetMapStatusData(int ii)
@@ -467,7 +467,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("");
                 status.DefaultHidden = true;
                 status.RepeatMethod = new MapStatusReplaceEvent();
-                status.StatusStates.Set(new MapIndexState());
+                status.StatusStates.Set(new MapIDState());
                 status.OnMapStarts.Add(0, new WeatherFillEvent());
                 status.OnMapTurnEnds.Add(6, new WeatherFillEvent());
             }
@@ -477,7 +477,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("");
                 status.DefaultHidden = true;
                 status.RepeatMethod = new MapStatusReplaceEvent();
-                status.StatusStates.Set(new MapIndexState());
+                status.StatusStates.Set(new MapIDState());
                 status.OnMapStarts.Add(0, new MapStatusFillEvent());
                 status.OnMapTurnEnds.Add(6, new MapStatusFillEvent());
             }
