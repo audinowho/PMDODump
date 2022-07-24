@@ -222,8 +222,8 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Monster].Count; ii++)
                 monsters.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries[ii.ToString()].Name.DefaultText);
 
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Element].Count; ii++)
-                elements.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Element].Entries[ii.ToString()].Name.DefaultText);
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Element].Entries.Keys)
+                elements.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Element].Entries[key].Name.DefaultText);
 
             for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Status].Count; ii++)
             {
@@ -417,6 +417,9 @@ namespace DataGenerator.Data
 
             int prev_start = init_idx;
             List<string> running_tradeables = new List<string>();
+
+            //TODO: String Assets
+            return;
 
             //load from generated csv
             if (File.Exists(GenPath.ITEM_PATH  + "ExclusiveItem.out.txt"))
@@ -757,7 +760,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, it slightly boosts the {1} of {0}-type members.");
                 if (includeEffects)
                 {
-                    localArgs.Add(DataManager.Instance.GetElement((int)args[0]).Name);
+                    localArgs.Add(DataManager.Instance.GetElement((string)args[0]).Name);
                     Stat[] boostedStats = (Stat[])args[1];
                     List<LocalText> nameList = new List<LocalText>();
                     foreach (Stat stat in boostedStats)
@@ -768,13 +771,13 @@ namespace DataGenerator.Data
                     foreach (Stat stat in boostedStats)
                     {
                         if (stat == Stat.Attack)
-                            item.OnActions.Add(0, new TypeSpecificMultCategoryEvent((int)args[0], new DustState(), BattleData.SkillCategory.Physical, 20, 1));
+                            item.OnActions.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new DustState(), BattleData.SkillCategory.Physical, 20, 1));
                         else if (stat == Stat.MAtk)
-                            item.OnActions.Add(0, new TypeSpecificMultCategoryEvent((int)args[0], new DustState(), BattleData.SkillCategory.Magical, 20, 1));
+                            item.OnActions.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new DustState(), BattleData.SkillCategory.Magical, 20, 1));
                         else if (stat == Stat.Defense)
-                            item.BeforeBeingHits.Add(0, new TypeSpecificMultCategoryEvent((int)args[0], new SilkState(), BattleData.SkillCategory.Physical, 20, 1));
+                            item.BeforeBeingHits.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new SilkState(), BattleData.SkillCategory.Physical, 20, 1));
                         else if (stat == Stat.MDef)
-                            item.BeforeBeingHits.Add(0, new TypeSpecificMultCategoryEvent((int)args[0], new SilkState(), BattleData.SkillCategory.Magical, 20, 1));
+                            item.BeforeBeingHits.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new SilkState(), BattleData.SkillCategory.Magical, 20, 1));
                     }
                 }
             }
@@ -784,9 +787,9 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, it boosts the Movement Speed of {0}-type members that have no status conditions.");
                 if (includeEffects)
                 {
-                    localArgs.Add(DataManager.Instance.GetElement((int)args[0]).Name);
+                    localArgs.Add(DataManager.Instance.GetElement((string)args[0]).Name);
 
-                    item.OnRefresh.Add(0, new AddTypeSpeedEvent((int)args[0], 1, new GemBoostState()));
+                    item.OnRefresh.Add(0, new AddTypeSpeedEvent((string)args[0], 1, new GemBoostState()));
                 }
             }
             else if (type == ExclusiveItemEffect.TypeGroupWeaknessReduce)
@@ -795,8 +798,8 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, it reduces damage done to {0}-type members by {1}-type attacks, based on how many are on the team.");
                 if (includeEffects)
                 {
-                    int defendType = (int)args[1];
-                    int holderType = (int)args[0];
+                    string defendType = (string)args[1];
+                    string holderType = (string)args[0];
                     localArgs.Add(DataManager.Instance.GetElement(holderType).Name);
                     localArgs.Add(DataManager.Instance.GetElement(defendType).Name);
 
@@ -826,8 +829,8 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, it allows {0}-type moves to hit {1}-type Pokémon.");
                 if (includeEffects)
                 {
-                    int attackType = (int)args[0];
-                    int defendType = (int)args[1];
+                    string attackType = (string)args[0];
+                    string defendType = (string)args[1];
                     localArgs.Add(DataManager.Instance.GetElement(attackType).Name);
                     localArgs.Add(DataManager.Instance.GetElement(defendType).Name);
 
@@ -1115,7 +1118,7 @@ namespace DataGenerator.Data
                 if (includeEffects)
                 {
                     BattleData altData = new BattleData();
-                    altData.Element = 00;
+                    altData.Element = "none";
                     altData.Category = BattleData.SkillCategory.Physical;
                     altData.SkillStates.Set(new ContactState());
                     altData.HitRate = 90;
@@ -1176,7 +1179,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon's {0}-type moves inflict the {1} status.");
                 if (includeEffects)
                 {
-                    int element = (int)args[0];
+                    string element = (string)args[0];
                     localArgs.Add(DataManager.Instance.GetElement(element).Name);
                     localArgs.Add(DataManager.Instance.GetStatus((int)args[1]).Name);
 
@@ -1189,7 +1192,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon's {0}-type moves have a chance to inflict the {1} status.");
                 if (includeEffects)
                 {
-                    int element = (int)args[0];
+                    string element = (string)args[0];
                     localArgs.Add(DataManager.Instance.GetElement(element).Name);
                     localArgs.Add(DataManager.Instance.GetStatus((int)args[1]).Name);
                     int chance = (int)args[2];
@@ -1203,7 +1206,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon's {0}-type moves may lower the target's {1}.");
                 if (includeEffects)
                 {
-                    int element = (int)args[0];
+                    string element = (string)args[0];
                     localArgs.Add(DataManager.Instance.GetElement(element).Name);
                     localArgs.Add(DataManager.Instance.GetStatus((int)args[1]).Name);
                     int chance = (int)args[2];
@@ -1360,7 +1363,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, it inflicts the {1} status on the attacker when the Pokémon is hit with a {0}-type move.");
                 if (includeEffects)
                 {
-                    int counterElement = (int)args[0];
+                    string counterElement = (string)args[0];
                     int counterStatus = (int)args[1];
                     localArgs.Add(DataManager.Instance.GetElement(counterElement).Name);
                     localArgs.Add(DataManager.Instance.GetStatus(counterStatus).Name);
@@ -1375,7 +1378,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, it reduces damage done by {0}-type attacks.");
                 if (includeEffects)
                 {
-                    int counterElement = (int)args[0];
+                    string counterElement = (string)args[0];
                     localArgs.Add(DataManager.Instance.GetElement(counterElement).Name);
 
                     SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
@@ -1388,7 +1391,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, it warps the attackers away when the Pokémon is hit with a {0}-type move.");
                 if (includeEffects)
                 {
-                    int counterElement = (int)args[0];
+                    string counterElement = (string)args[0];
                     localArgs.Add(DataManager.Instance.GetElement(counterElement).Name);
 
                     item.AfterBeingHits.Add(0, new FamilyBattleEvent(new ElementNeededEvent(counterElement, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new RandomWarpEvent(50, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
@@ -1763,7 +1766,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon's {0}-type moves are boosted.");
                 if (includeEffects)
                 {
-                    int element = (int)args[0];
+                    string element = (string)args[0];
                     localArgs.Add(DataManager.Instance.GetElement(element).Name);
 
                     item.OnActions.Add(0, new FamilyBattleEvent(new MultiplyElementEvent(element, 4, 3, false)));
@@ -1851,7 +1854,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, prevents the Pokémon from fainting to {0}-type moves, leaving it with 1 HP.");
                 if (includeEffects)
                 {
-                    int element = (int)args[0];
+                    string element = (string)args[0];
                     localArgs.Add(DataManager.Instance.GetElement(element).Name);
 
                     item.BeforeBeingHits.Add(0, new FamilyBattleEvent(new OnMoveUseEvent(new EndureElementEvent(element))));
@@ -1910,7 +1913,7 @@ namespace DataGenerator.Data
                 if (includeEffects)
                 {
                     BattleData altData = new BattleData();
-                    altData.Element = 13;
+                    altData.Element = "normal";
                     altData.Category = BattleData.SkillCategory.Status;
                     altData.HitRate = -1;
                     altData.OnHits.Add(0, new NeededMoveEvent());
@@ -1924,7 +1927,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon will step in to take {0}-type attacks for nearby allies.");
                 if (includeEffects)
                 {
-                    int element = (int)args[0];
+                    string element = (string)args[0];
                     localArgs.Add(DataManager.Instance.GetElement(element).Name);
 
                     item.ProximityEvent.Radius = 1;
@@ -2033,7 +2036,7 @@ namespace DataGenerator.Data
         }
 
 
-        public static void FillExclusiveTypeData(int item_idx, ItemData item, string name, ExclusiveItemEffect effect, object[] effectArgs, int element, bool translate)
+        public static void FillExclusiveTypeData(int item_idx, ItemData item, string name, ExclusiveItemEffect effect, object[] effectArgs, string element, bool translate)
         {
             //set name
             if (translate)

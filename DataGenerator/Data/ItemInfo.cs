@@ -165,126 +165,126 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Tanga Berry");
                 item.Desc = new LocalText("The flower grows at the tip of this berry. It attracts Bug Pokémon by letting its stringy petals stream out. It changes the Pokémon to the Bug-type.");
                 item.Sprite = "Berry_Tanga";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(01));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("bug"));
             }
             else if (ii == 20)
             {
                 item.Name = new LocalText("Colbur Berry");
                 item.Desc = new LocalText("Tiny hooks grow on the surface of this berry. It latches on to Pokémon so it can be carried to far-off places. It changes the Pokémon to the Dark-type.");
                 item.Sprite = "Berry_Colbur";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(02));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("dark"));
             }
             else if (ii == 21)
             {
                 item.Name = new LocalText("Haban Berry");
                 item.Desc = new LocalText("If a large enough volume of this berry is boiled down, its bitterness fades away. It makes a good jam. It changes the Pokémon to the Dragon-type.");
                 item.Sprite = "Berry_Haban";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(03));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("dragon"));
             }
             else if (ii == 22)
             {
                 item.Name = new LocalText("Wacan Berry");
                 item.Desc = new LocalText("Energy from lightning strikes is drawn into the plant, making the berries grow big and rich. It changes the Pokémon to the Electric-type.");
                 item.Sprite = "Berry_Wacan";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(04));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("electric"));
             }
             else if (ii == 23)
             {
                 item.Name = new LocalText("Chople Berry");
                 item.Desc = new LocalText("This berry contains a substance that generates heat. It can even heat up a chilly heart. It changes the Pokémon to the Fighting-type.");
                 item.Sprite = "Berry_Chople";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(06));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("fighting"));
             }
             else if (ii == 24)
             {
                 item.Name = new LocalText("Occa Berry");
                 item.Desc = new LocalText("This berry is said to have grown plentiful in the tropics of the past. It boasts an intensely hot spiciness. It changes the Pokémon to the Fire-type.");
                 item.Sprite = "Berry_Occa";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(07));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("fire"));
             }
             else if (ii == 25)
             {
                 item.Name = new LocalText("Coba Berry");
                 item.Desc = new LocalText("This berry is said to be a new kind that is a cross of two berries brought together by winds from far away. It changes the Pokémon to the Flying-type.");
                 item.Sprite = "Berry_Coba";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(08));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("flying"));
             }
             else if (ii == 26)
             {
                 item.Name = new LocalText("Kasib Berry");
                 item.Desc = new LocalText("Considered to have a special power from the olden days, this berry is sometimes dried and used as a good-luck charm. It changes the Pokémon to the Ghost-type.");
                 item.Sprite = "Berry_Kasib";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(09));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("ghost"));
             }
             else if (ii == 27)
             {
                 item.Name = new LocalText("Rindo Berry");
                 item.Desc = new LocalText("This berry has a disagreeable \"green\" flavor and scent typical of vegetables. It is rich in health-promoting fiber. It changes the Pokémon to the Grass-type.");
                 item.Sprite = "Berry_Rindo";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(10));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("grass"));
             }
             else if (ii == 28)
             {
                 item.Name = new LocalText("Shuca Berry");
                 item.Desc = new LocalText("The sweetness-laden pulp has just the hint of a hard-edged and fragrant bite to it. It changes the Pokémon to the Ground-type.");
                 item.Sprite = "Berry_Shuca";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(11));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("ground"));
             }
             else if (ii == 29)
             {
                 item.Name = new LocalText("Yache Berry");
                 item.Desc = new LocalText("This berry has a refreshing flavor that strikes a good balance of dryness and sourness. It tastes better chilled. It changes the Pokémon to the Ice-type.");
                 item.Sprite = "Berry_Yache";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(12));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("ice"));
             }
             else if (ii == 30)
             {
                 item.Name = new LocalText("Chilan Berry");
                 item.Desc = new LocalText("This berry can be cored out and dried to make a whistle. Blowing through its hole makes an indescribable sound. It changes the Pokémon to the Normal-type.");
                 item.Sprite = "Berry_Chilan";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(13));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("normal"));
             }
             else if (ii == 31)
             {
                 item.Name = new LocalText("Kebia Berry");
                 item.Desc = new LocalText("This berry is a brilliant green on the outside. Inside, it is packed with a dry-flavored, black-colored flesh. It changes the Pokémon to the Poison-type.");
                 item.Sprite = "Berry_Kebia";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(14));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("poison"));
             }
             else if (ii == 32)
             {
                 item.Name = new LocalText("Payapa Berry");
                 item.Desc = new LocalText("This berry is said to sense emotions for the way it swells roundly when anything approaches. It changes the Pokémon to the Psychic-type.");
                 item.Sprite = "Berry_Payapa";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(15));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("psychic"));
             }
             else if (ii == 33)
             {
                 item.Name = new LocalText("Charti Berry");
                 item.Desc = new LocalText("It is often used for pickles because of its very dry flavor. It can also be eaten raw for its provocative taste. It changes the Pokémon to the Rock-type.");
                 item.Sprite = "Berry_Charti";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(16));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("rock"));
             }
             else if (ii == 34)
             {
                 item.Name = new LocalText("Babiri Berry");
                 item.Desc = new LocalText("This berry is very tough with a strong flavor. It was used to make medicine in the past. It changes the Pokémon to the Steel-type.");
                 item.Sprite = "Berry_Babiri";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(17));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("steel"));
             }
             else if (ii == 35)
             {
                 item.Name = new LocalText("Passho Berry");
                 item.Desc = new LocalText("This berry's flesh is dotted with tiny bubbles of air that keep it afloat in water. It changes the Pokémon to the Water-type.");
                 item.Sprite = "Berry_Passho";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(18));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("water"));
             }
             else if (ii == 36)
             {
                 item.Name = new LocalText("Roseli Berry");
                 item.Desc = new LocalText("A mysterious berry. It changes the Pokémon to the Fairy-type.");
                 item.Sprite = "Berry_Roseli";
-                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent(05));
+                item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("fairy"));
             }
             else if (ii == 37)
             {
@@ -417,126 +417,126 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Blue Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Water-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Blue";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(18));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("water"));
             }
             else if (ii == 77)
             {
                 item.Name = new LocalText("Black Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Dark-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Black";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(02));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("dark"));
             }
             else if (ii == 78)
             {
                 item.Name = new LocalText("Clear Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ice-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Clear";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(12));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("ice"));
             }
             else if (ii == 79)
             {
                 item.Name = new LocalText("Grass Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Grass-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Grass";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(10));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("grass"));
             }
             else if (ii == 80)
             {
                 item.Name = new LocalText("Green Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Bug-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Green";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(01));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("bug"));
             }
             else if (ii == 81)
             {
                 item.Name = new LocalText("Brown Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ground-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Brown";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(11));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("ground"));
             }
             else if (ii == 82)
             {
                 item.Name = new LocalText("Orange Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fighting-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Orange";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(06));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("fighting"));
             }
             else if (ii == 83)
             {
                 item.Name = new LocalText("Gold Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Psychic-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Gold";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(15));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("psychic"));
             }
             else if (ii == 84)
             {
                 item.Name = new LocalText("Pink Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Poison-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Pink";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(14));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("poison"));
             }
             else if (ii == 85)
             {
                 item.Name = new LocalText("Purple Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ghost-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Purple";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(09));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("ghost"));
             }
             else if (ii == 86)
             {
                 item.Name = new LocalText("Red Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fire-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Red";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(07));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("fire"));
             }
             else if (ii == 87)
             {
                 item.Name = new LocalText("Royal Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Dragon-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Royal";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(03));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("dragon"));
             }
             else if (ii == 88)
             {
                 item.Name = new LocalText("Silver Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Steel-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Silver";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(17));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("steel"));
             }
             else if (ii == 89)
             {
                 item.Name = new LocalText("White Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Normal-type Pokémon like it the most.");
                 item.Sprite = "Gummi_White";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(13));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("normal"));
             }
             else if (ii == 90)
             {
                 item.Name = new LocalText("Yellow Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Electric-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Yellow";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(04));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("electric"));
             }
             else if (ii == 91)
             {
                 item.Name = new LocalText("Sky Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Flying-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Sky";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(08));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("flying"));
             }
             else if (ii == 92)
             {
                 item.Name = new LocalText("Gray Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Rock-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Gray";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(16));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("rock"));
             }
             else if (ii == 93)
             {
                 item.Name = new LocalText("Magenta Gummi");
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fairy-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Magenta";
-                item.UseEvent.OnHits.Add(0, new GummiEvent(05));
+                item.UseEvent.OnHits.Add(0, new GummiEvent("fairy"));
             }
             else if (ii == 94)
             {
@@ -1299,9 +1299,9 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An apricorn that can be tossed at Water- or Ice-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Blue";
                 item.Price = 300;
-                HashSet<int> elements = new HashSet<int>();
-                elements.Add(18);
-                elements.Add(12);
+                HashSet<string> elements = new HashSet<string>();
+                elements.Add("water");
+                elements.Add("ice");
                 item.UseEvent.OnHits.Add(0, new TypeRecruitmentEvent(elements));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
@@ -1311,9 +1311,9 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An apricorn that can be tossed at Grass- or Bug-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Green";
                 item.Price = 300;
-                HashSet<int> elements = new HashSet<int>();
-                elements.Add(10);
-                elements.Add(01);
+                HashSet<string> elements = new HashSet<string>();
+                elements.Add("grass");
+                elements.Add("bug");
                 item.UseEvent.OnHits.Add(0, new TypeRecruitmentEvent(elements));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
@@ -1323,10 +1323,10 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An apricorn that can be tossed at Fighting-, Rock-, or Ground-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Brown";
                 item.Price = 300;
-                HashSet<int> elements = new HashSet<int>();
-                elements.Add(06);
-                elements.Add(16);
-                elements.Add(11);
+                HashSet<string> elements = new HashSet<string>();
+                elements.Add("fighting");
+                elements.Add("rock");
+                elements.Add("ground");
                 item.UseEvent.OnHits.Add(0, new TypeRecruitmentEvent(elements));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
@@ -1336,9 +1336,9 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An apricorn that can be tossed at Poison- or Psychic-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Purple";
                 item.Price = 300;
-                HashSet<int> elements = new HashSet<int>();
-                elements.Add(14);
-                elements.Add(15);
+                HashSet<string> elements = new HashSet<string>();
+                elements.Add("poison");
+                elements.Add("psychic");
                 item.UseEvent.OnHits.Add(0, new TypeRecruitmentEvent(elements));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
@@ -1348,9 +1348,9 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An apricorn that can be tossed at Fire- or Dragon-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Red";
                 item.Price = 300;
-                HashSet<int> elements = new HashSet<int>();
-                elements.Add(07);
-                elements.Add(03);
+                HashSet<string> elements = new HashSet<string>();
+                elements.Add("fire");
+                elements.Add("dragon");
                 item.UseEvent.OnHits.Add(0, new TypeRecruitmentEvent(elements));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
@@ -1360,10 +1360,10 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An apricorn that can be tossed at Normal-, Flying-, or Fairy-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_White";
                 item.Price = 300;
-                HashSet<int> elements = new HashSet<int>();
-                elements.Add(13);
-                elements.Add(08);
-                elements.Add(05);
+                HashSet<string> elements = new HashSet<string>();
+                elements.Add("normal");
+                elements.Add("flying");
+                elements.Add("fairy");
                 item.UseEvent.OnHits.Add(0, new TypeRecruitmentEvent(elements));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
@@ -1373,9 +1373,9 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An apricorn that can be tossed at Electric- or Steel-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Yellow";
                 item.Price = 300;
-                HashSet<int> elements = new HashSet<int>();
-                elements.Add(04);
-                elements.Add(17);
+                HashSet<string> elements = new HashSet<string>();
+                elements.Add("electric");
+                elements.Add("steel");
                 item.UseEvent.OnHits.Add(0, new TypeRecruitmentEvent(elements));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
@@ -1385,9 +1385,9 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An apricorn that can be tossed at Ghost- or Dark-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Black";
                 item.Price = 300;
-                HashSet<int> elements = new HashSet<int>();
-                elements.Add(09);
-                elements.Add(02);
+                HashSet<string> elements = new HashSet<string>();
+                elements.Add("ghost");
+                elements.Add("dark");
                 item.UseEvent.OnHits.Add(0, new TypeRecruitmentEvent(elements));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
@@ -1597,17 +1597,17 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A climate-control orb that changes the dungeon floor's condition depending on the user's type.");
                 item.Sprite = "Orb_LightBlue";
 
-                Dictionary<int, int> weatherPair = new Dictionary<int, int>();
-                weatherPair.Add(18, 1);
-                weatherPair.Add(07, 2);
-                weatherPair.Add(10, 14);
-                weatherPair.Add(04, 13);
-                weatherPair.Add(05, 15);
-                weatherPair.Add(12, 4);
-                weatherPair.Add(16, 3);
-                weatherPair.Add(11, 3);
-                weatherPair.Add(17, 3);
-                weatherPair.Add(08, 19);
+                Dictionary<string, int> weatherPair = new Dictionary<string, int>();
+                weatherPair.Add("water", 1);
+                weatherPair.Add("fire", 2);
+                weatherPair.Add("grass", 14);
+                weatherPair.Add("electric", 13);
+                weatherPair.Add("fairy", 15);
+                weatherPair.Add("ice", 4);
+                weatherPair.Add("rock", 3);
+                weatherPair.Add("ground", 3);
+                weatherPair.Add("steel", 3);
+                weatherPair.Add("flying", 19);
                 item.UseEvent.OnHits.Add(0, new TypeWeatherEvent(weatherPair));
                 item.UseAction = new SelfAction();
                 item.UseAction.TargetAlignments |= Alignment.Self;
@@ -3788,223 +3788,224 @@ namespace DataGenerator.Data
         {
             for (int ii = MAX_NORMAL_ITEMS; ii < MAX_ITEMS; ii++)
             {
+                string exclElement = Text.Sanitize(((ElementInfo.Element)((ii - 700) / 4 + 1)).ToString()).ToLower();
                 ItemData item = new ItemData();
                 if (ii == 700)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Green Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 701)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Wonder Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 702)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Guard Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 703)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Defend Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 08 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 08 }, exclElement, translate);
                 else if (ii == 704)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Black Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 705)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Dark Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 706)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Dark Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 707)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Dusk Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 01 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 01 }, exclElement, translate);
                 else if (ii == 708)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Royal Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 709)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Dragon Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 710)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Dragon Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 711)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Dragon Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 03 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 03 }, exclElement, translate);
                 else if (ii == 712)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Yellow Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 713)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Thunder Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 714)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Thunder Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 715)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Volt Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 11 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 11 }, exclElement, translate);
                 else if (ii == 716)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Magenta Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 717)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Fairy Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 718)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Fairy Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 719)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Fairy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 14 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 14 }, exclElement, translate);
                 else if (ii == 720)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Orange Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 721)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Courage Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 722)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Fight Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 723)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Power Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 05 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 05 }, exclElement, translate);
                 else if (ii == 724)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Red Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 725)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Fire Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 726)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Fiery Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 727)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Fiery Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 18 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 18 }, exclElement, translate);
                 else if (ii == 728)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Sky Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 729)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Sky Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 730)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Sky Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 731)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Sky Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 04 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 04 }, exclElement, translate);
                 else if (ii == 732)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Purple Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 733)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Shady Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 734)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Shadow Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 735)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Nether Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 02 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 02 }, exclElement, translate);
                 else if (ii == 736)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Grass Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 737)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Grass Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 738)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Grass Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 739)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Soothe Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 07 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 07 }, exclElement, translate);
                 else if (ii == 740)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Brown Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 741)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Ground Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 742)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Earth Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 743)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Terra Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 12 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 12 }, exclElement, translate);
                 else if (ii == 744)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Clear Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 745)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Icy Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 746)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Icy Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 747)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Icy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 16 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 16 }, exclElement, translate);
                 else if (ii == 748)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "White Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 749)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Normal Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 750)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "White Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 751)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Joy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 06 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 06 }, exclElement, translate);
                 else if (ii == 752)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Pink Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 753)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Poison Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 754)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Poison Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 755)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Poison Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 15 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 15 }, exclElement, translate);
                 else if (ii == 756)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Gold Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 757)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Psyche Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 758)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Psyche Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 759)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Psyche Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 09 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 09 }, exclElement, translate);
                 else if (ii == 760)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Gray Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 761)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Rock Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 762)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Stone Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 763)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Rock Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 17 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 17 }, exclElement, translate);
                 else if (ii == 764)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Iron Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 765)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Steel Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 766)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Metal Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 767)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Steel Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 06 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 06 }, exclElement, translate);
                 else if (ii == 768)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Blue Silk", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 769)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Water Dust", ExclusiveItemEffect.TypeStatBonus,
-                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 770)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Aqua Gem", ExclusiveItemEffect.TypeSpeedBoost,
-                        new object[] { }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { }, exclElement, translate);
                 else if (ii == 771)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Aqua Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 10 }, ((ii - 700) / 4 + 1), translate);
+                        new object[] { 10 }, exclElement, translate);
                 else if (ii == 804)//TODO: String Assets
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBulldozer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBulldozer, new object[] { 11, 8 }, 1.ToString(), translate);
                 else if (ii == 805)

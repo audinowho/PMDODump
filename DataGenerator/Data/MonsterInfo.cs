@@ -439,14 +439,14 @@ namespace DataGenerator.Data
                         {
                             //FIXME
                             EvoLocation evoDetail = new EvoLocation();
-                            evoDetail.TileElement = (int)ElementInfo.Element.Electric;
+                            evoDetail.TileElement = Text.Sanitize(ElementInfo.Element.Electric.ToString()).ToLower();
                             branch.Details.Add(evoDetail);
                         }
                         else if (evoSpecies == 740)//crabominable
                         {
                             //FIXME
                             EvoLocation evoDetail = new EvoLocation();
-                            evoDetail.TileElement = (int)ElementInfo.Element.Ice;
+                            evoDetail.TileElement = Text.Sanitize(ElementInfo.Element.Ice.ToString()).ToLower();
                             branch.Details.Add(evoDetail);
                         }
                         else if (evoSpecies == 745)//lycanroc
@@ -543,7 +543,7 @@ namespace DataGenerator.Data
                                 if (Convert.ToInt32(location) == 10 || Convert.ToInt32(location) == 379 || Convert.ToInt32(location) == 629)
                                 {
                                     EvoLocation evoDetail = new EvoLocation();
-                                    evoDetail.TileElement = (int)ElementInfo.Element.Steel;
+                                    evoDetail.TileElement = Text.Sanitize(ElementInfo.Element.Steel.ToString()).ToLower();
                                     branch.Details.Add(evoDetail);
                                 }
                                 else if (Convert.ToInt32(location) == 8 || Convert.ToInt32(location) == 375 || Convert.ToInt32(location) == 650)
@@ -618,7 +618,7 @@ namespace DataGenerator.Data
                                 //branch.Details.Add(evoDetail);
 
                                 EvoMoveElement evoDetail2 = new EvoMoveElement();
-                                evoDetail2.MoveElement = (int)MapElement(Convert.ToInt32(moveType));
+                                evoDetail2.MoveElement = MapElement(Convert.ToInt32(moveType));
                                 branch.Details.Add(evoDetail2);
                             }
                             else if (CheckEvoConditions(reader, "min_beauty"))
@@ -646,7 +646,7 @@ namespace DataGenerator.Data
                             else if (CheckEvoConditions(reader, "min_level", "party_type_id"))
                             {
                                 EvoPartnerElement evoDetail = new EvoPartnerElement();
-                                evoDetail.PartnerElement = (int)MapElement(Convert.ToInt32(allyType));
+                                evoDetail.PartnerElement = MapElement(Convert.ToInt32(allyType));
                                 branch.Details.Add(evoDetail);
                             }
                             else if (CheckEvoConditions(reader, "min_level", "needs_overworld_rain"))
@@ -792,7 +792,7 @@ namespace DataGenerator.Data
                         case 105://marowak
                             {
                                 EvoSetForm evoDetail = new EvoSetForm(1);
-                                evoDetail.Conditions.Add(new EvoLocation((int)ElementInfo.Element.Water));
+                                evoDetail.Conditions.Add(new EvoLocation(Text.Sanitize(ElementInfo.Element.Water.ToString()).ToLower()));
                                 branch.Details.Add(evoDetail);
                             }
                             break;
@@ -801,7 +801,7 @@ namespace DataGenerator.Data
                         case 122://mr. mime
                             {
                                 EvoSetForm evoDetail = new EvoSetForm(1);
-                                evoDetail.Conditions.Add(new EvoLocation((int)ElementInfo.Element.Fairy));
+                                evoDetail.Conditions.Add(new EvoLocation(Text.Sanitize(ElementInfo.Element.Fairy.ToString()).ToLower()));
                                 branch.Details.Add(evoDetail);
                             }
                             break;
@@ -1183,9 +1183,9 @@ namespace DataGenerator.Data
                         throw new Exception(entry.FormName + ": More than 2 type results!?");
                     int slot = Convert.ToInt32(reader["slot"].ToString());
                     if (slot == 1)
-                        entry.Element1 = (int)MapElement(Convert.ToInt32(reader["type_id"].ToString()));
+                        entry.Element1 = MapElement(Convert.ToInt32(reader["type_id"].ToString()));
                     else if (slot == 2)
-                        entry.Element2 = (int)MapElement(Convert.ToInt32(reader["type_id"].ToString()));
+                        entry.Element2 = MapElement(Convert.ToInt32(reader["type_id"].ToString()));
                     read++;
                 }
             }
@@ -1454,30 +1454,34 @@ namespace DataGenerator.Data
             throw new Exception("No Type mappable");
         }
 
-        public static ElementInfo.Element MapElement(int element)
+        public static string MapElement(int element)
         {
+            ElementInfo.Element elementEnum;
             switch (element)
             {
-                case 1: return ElementInfo.Element.Normal;
-                case 2: return ElementInfo.Element.Fighting;
-                case 3: return ElementInfo.Element.Flying;
-                case 4: return ElementInfo.Element.Poison;
-                case 5: return ElementInfo.Element.Ground;
-                case 6: return ElementInfo.Element.Rock;
-                case 7: return ElementInfo.Element.Bug;
-                case 8: return ElementInfo.Element.Ghost;
-                case 9: return ElementInfo.Element.Steel;
-                case 10: return ElementInfo.Element.Fire;
-                case 11: return ElementInfo.Element.Water;
-                case 12: return ElementInfo.Element.Grass;
-                case 13: return ElementInfo.Element.Electric;
-                case 14: return ElementInfo.Element.Psychic;
-                case 15: return ElementInfo.Element.Ice;
-                case 16: return ElementInfo.Element.Dragon;
-                case 17: return ElementInfo.Element.Dark;
-                case 18: return ElementInfo.Element.Fairy;
+                case 1: elementEnum = ElementInfo.Element.Normal; break;
+                case 2: elementEnum = ElementInfo.Element.Fighting; break;
+                case 3: elementEnum = ElementInfo.Element.Flying; break;
+                case 4: elementEnum = ElementInfo.Element.Poison; break;
+                case 5: elementEnum = ElementInfo.Element.Ground; break;
+                case 6: elementEnum = ElementInfo.Element.Rock; break;
+                case 7: elementEnum = ElementInfo.Element.Bug; break;
+                case 8: elementEnum = ElementInfo.Element.Ghost; break;
+                case 9: elementEnum = ElementInfo.Element.Steel; break;
+                case 10: elementEnum = ElementInfo.Element.Fire; break;
+                case 11: elementEnum = ElementInfo.Element.Water; break;
+                case 12: elementEnum = ElementInfo.Element.Grass; break;
+                case 13: elementEnum = ElementInfo.Element.Electric; break;
+                case 14: elementEnum = ElementInfo.Element.Psychic; break;
+                case 15: elementEnum = ElementInfo.Element.Ice; break;
+                case 16: elementEnum = ElementInfo.Element.Dragon; break;
+                case 17: elementEnum = ElementInfo.Element.Dark; break;
+                case 18: elementEnum = ElementInfo.Element.Fairy; break;
+                default:
+                    throw new Exception("No Type mappable");
             }
-            throw new Exception("No Type mappable");
+
+            return Text.Sanitize(elementEnum.ToString()).ToLower();
         }
 
         public static int MapJoinRate(int dexIndex, MonsterData[] totalEntries)
@@ -1739,7 +1743,7 @@ namespace DataGenerator.Data
                     int power = 0;
                     int pp = 0;
                     int accuracy = -1;
-                    ElementInfo.Element typing = ElementInfo.Element.None;
+                    string typing = "none";
                     BattleData.SkillCategory category = BattleData.SkillCategory.None;
 
                     string sql = "SELECT * FROM pokemon_v2_move WHERE id = " + ii;
@@ -1771,7 +1775,7 @@ namespace DataGenerator.Data
                     file.WriteLine("	skill.Name = new LocalText(\"**" + name.Replace('’', '\'') + "\");");
                     file.WriteLine("	skill.Desc = new LocalText(\"" + description + "\");");
                     file.WriteLine("	skill.BaseCharges = " + pp + ";");
-                    file.WriteLine("	skill.Data.Element = " + ((int)typing).ToString("D2") + ";");
+                    file.WriteLine("	skill.Data.Element = \"" + typing + "\";");
                     file.WriteLine("	skill.Data.Category = BattleData.SkillCategory." + category.ToString() + ";");
                     file.WriteLine("	skill.Data.HitRate = " + accuracy + ";");
                     if (category != BattleData.SkillCategory.Status)

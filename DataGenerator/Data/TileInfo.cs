@@ -646,7 +646,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(-1, new IndirectElementDamageEvent(16, 8));
+                newData.OnHits.Add(-1, new IndirectElementDamageEvent("rock", 8));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 23)
