@@ -4159,7 +4159,7 @@ namespace DataGenerator.Data
                 else if (ii == 879)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SpikeDropper.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SpikeDropper, new object[] { BattleData.SkillCategory.Physical }, 1.ToString(), translate);
                 else if (ii == 880)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.NoStatusInWeather.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.NoStatusInWeather, new object[] { 2 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.NoStatusInWeather.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.NoStatusInWeather, new object[] { "sunny" }, 1.ToString(), translate);
                 else if (ii == 881)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DeepBreatherPlus.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DeepBreatherPlus, new object[] { }, 1.ToString(), translate);
                 else if (ii == 882)
@@ -4173,7 +4173,7 @@ namespace DataGenerator.Data
                 else if (ii == 886)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnCategoryUse, new object[] { 97, BattleData.SkillCategory.Status }, 1.ToString(), translate);
                 else if (ii == 887)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MapStatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MapStatusOnCategoryUse, new object[] { BattleData.SkillCategory.Status, 14 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MapStatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MapStatusOnCategoryUse, new object[] { BattleData.SkillCategory.Status, "grassy_terrain" }, 1.ToString(), translate);
                 else if (ii == 888)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DoubleDash.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DoubleDash, new object[] { }, 1.ToString(), translate);
                 else if (ii == 889)
