@@ -59,8 +59,8 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_RAIN_START"), true));
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_RAIN_END"), true));
-                status.OnActions.Add(0, new MultiplyElementEvent(18, 3, 2, false));
-                status.OnActions.Add(0, new MultiplyElementEvent(07, 1, 2, false));
+                status.OnActions.Add(0, new MultiplyElementEvent("water", 3, 2, false));
+                status.OnActions.Add(0, new MultiplyElementEvent("fire", 1, 2, false));
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
                 status.OnMapTurnEnds.Add(5, new MapTickEvent());
@@ -81,8 +81,8 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SUN_START"), true));
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SUN_END"), true));
-                status.OnActions.Add(0, new MultiplyElementEvent(07, 3, 2, false));
-                status.OnActions.Add(0, new MultiplyElementEvent(18, 1, 2, false));
+                status.OnActions.Add(0, new MultiplyElementEvent("fire", 3, 2, false));
+                status.OnActions.Add(0, new MultiplyElementEvent("water", 1, 2, false));
                 status.OnTurnStarts.Add(0, new RemoveStatusEvent(3));//insta-freeze thaw
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
@@ -105,7 +105,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SAND_END"), true));
                 status.BeforeBeingHits.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 2, 3));
-                status.OnMapTurnEnds.Add(0, new WeatherDamageEvent(new System.Type[] { typeof(MagicGuardState), typeof(SandState) }, 16, 11, 17));
+                status.OnMapTurnEnds.Add(0, new WeatherDamageEvent(new System.Type[] { typeof(MagicGuardState), typeof(SandState) }, "rock", "ground", "steel"));
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
                 status.OnMapTurnEnds.Add(5, new MapTickEvent());
@@ -129,7 +129,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_HAIL_START"), true));
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_HAIL_END"), true));
-                status.OnMapTurnEnds.Add(0, new WeatherDamageEvent(new System.Type[] { typeof(MagicGuardState), typeof(HailState) }, 12));
+                status.OnMapTurnEnds.Add(0, new WeatherDamageEvent(new System.Type[] { typeof(MagicGuardState), typeof(HailState) }, "ice"));
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
                 status.OnMapTurnEnds.Add(5, new MapTickEvent());
@@ -219,7 +219,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent(58)));
                 status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent(102)));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_GRAVITY_END"), true));
-                status.TargetElementEffects.Add(1, new TypeVulnerableEvent(11));
+                status.TargetElementEffects.Add(1, new TypeVulnerableEvent("ground"));
                 //prevent telekinesis, magnet rise, bounce and fly status effects
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck(38, new StringKey("MSG_GRAVITY_NO_FLY")));
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck(40, new StringKey("MSG_GRAVITY_NO_BOUNCE")));
@@ -294,7 +294,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_ELECTRIC_TERRAIN_END"), true));
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck(1, new StringKey("MSG_ELECTRIC_TERRAIN_NO_SLEEP")));
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck(61, new StringKey("MSG_ELECTRIC_TERRAIN_NO_DROWSY")));
-                status.OnActions.Add(0, new MultiplyElementEvent(04, 3, 2, false));
+                status.OnActions.Add(0, new MultiplyElementEvent("electric", 3, 2, false));
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
                 status.OnMapTurnEnds.Add(5, new MapTickEvent());
@@ -315,9 +315,9 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_GRASSY_TERRAIN_START"), true));
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_GRASSY_TERRAIN_END"), true));
-                status.OnActions.Add(0, new MultiplyElementEvent(10, 3, 2, false));
-                status.OnActions.Add(0, new MultiplyElementEvent(11, 1, 2, false));
-                status.OnMapTurnEnds.Add(0, new WeatherHealEvent(08));
+                status.OnActions.Add(0, new MultiplyElementEvent("grass", 3, 2, false));
+                status.OnActions.Add(0, new MultiplyElementEvent("ground", 1, 2, false));
+                status.OnMapTurnEnds.Add(0, new WeatherHealEvent("flying"));
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
                 status.OnMapTurnEnds.Add(5, new MapTickEvent());
@@ -339,7 +339,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_MISTY_TERRAIN_END"), true));
                 status.BeforeStatusAdds.Add(0, new StateStatusCheck(typeof(MajorStatusState), new StringKey("MSG_MISTY_TERRAIN_NO_STATUS")));
-                status.OnActions.Add(0, new MultiplyElementEvent(03, 1, 2, false));
+                status.OnActions.Add(0, new MultiplyElementEvent("dragon", 1, 2, false));
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
                 status.OnMapTurnEnds.Add(5, new MapTickEvent());
@@ -401,7 +401,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_WIND_START"), true));
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_WIND_END"), true));
-                status.TargetElementEffects.Add(0, new RemoveTypeWeaknessEvent(08));
+                status.TargetElementEffects.Add(0, new RemoveTypeWeaknessEvent("flying"));
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
                 status.OnMapTurnEnds.Add(5, new MapTickEvent());

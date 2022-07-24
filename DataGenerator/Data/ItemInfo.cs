@@ -2383,7 +2383,7 @@ namespace DataGenerator.Data
                 statusStates.Set(new CountDownState(2));
                 item.AfterActions.Add(0, new OnMoveUseEvent(new StatusStateBattleEvent(55, false, true, statusStates)));
                 item.OnRefresh.Add(0, new MiscEvent(new AnchorState()));
-                item.TargetElementEffects.Add(1, new TypeVulnerableEvent(11));
+                item.TargetElementEffects.Add(1, new TypeVulnerableEvent("ground"));
             }
             else if (ii == 326)
             {
@@ -2434,7 +2434,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It is a shiny, silver powder that will boost the power of Bug-type moves.");
                 item.Sprite = "Sack_Gray";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(01, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("bug", 6, 5, false));
             }
             else if (ii == 332)
             {
@@ -2442,7 +2442,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. A pair of shady-looking glasses that boost the power of Dark-type moves.");
                 item.Sprite = "Specs_DarkBlue";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(02, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("dark", 6, 5, false));
             }
             else if (ii == 333)
             {
@@ -2450,7 +2450,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. This thick, tough scale boosts the power of Dragon-type moves.");
                 item.Sprite = "Scale_Green";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(03, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("dragon", 6, 5, false));
             }
             else if (ii == 334)
             {
@@ -2458,7 +2458,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It is a powerful magnet that boosts the power of Electric-type moves.");
                 item.Sprite = "Box_Yellow";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(04, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("electric", 6, 5, false));
             }
             else if (ii == 335)
             {
@@ -2466,7 +2466,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It's a cute bow that boosts the power of Fairy-type moves.");
                 item.Sprite = "Bow_Pink";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(05, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("fairy", 6, 5, false));
             }
             else if (ii == 336)
             {
@@ -2474,7 +2474,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. This belt helps the wearer to focus and boosts the power of Fighting-type moves.");
                 item.Sprite = "Belt_Black";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(06, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("fighting", 6, 5, false));
             }
             else if (ii == 337)
             {
@@ -2482,7 +2482,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It is a combustible fuel that boosts the power of Fire-type moves.");
                 item.Sprite = "Box_DarkBlue";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(07, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("fire", 6, 5, false));
             }
             else if (ii == 338)
             {
@@ -2490,7 +2490,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It's a long, sharp beak that boosts the power of Flying-type moves.");
                 item.Sprite = "Stick_Yellow";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(08, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("flying", 6, 5, false));
             }
             else if (ii == 339)
             {
@@ -2498,7 +2498,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It is a sinister, eerie tag that boosts the power of Ghost-type moves.");
                 item.Sprite = "Tag_Purple";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(09, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("ghost", 6, 5, false));
             }
             else if (ii == 340)
             {
@@ -2506,7 +2506,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It is a seed imbued with life force that boosts the power of Grass-type moves.");
                 item.Sprite = "Seed_Yellow";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(10, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("grass", 6, 5, false));
             }
             else if (ii == 341)
             {
@@ -2514,7 +2514,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It is a loose, silky sand that boosts the power of Ground-type moves.");
                 item.Sprite = "Sack_LightBlue";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(11, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("ground", 6, 5, false));
             }
             else if (ii == 342)
             {
@@ -2522,7 +2522,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It's a piece of ice that repels heat effects and boosts Ice-type moves.");
                 item.Sprite = "Ore_Blue";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(12, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("ice", 6, 5, false));
             }
             else if (ii == 343)
             {
@@ -2530,7 +2530,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It's a sumptuous scarf that boosts the power of Normal-type moves.");
                 item.Sprite = "Scarf_2_White";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(13, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("normal", 6, 5, false));
             }
             else if (ii == 344)
             {
@@ -2538,7 +2538,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. This small, poisonous barb boosts the power of Poison-type moves.");
                 item.Sprite = "Stick_Pink";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(14, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("poison", 6, 5, false));
             }
             else if (ii == 345)
             {
@@ -2546,7 +2546,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. This spoon is imbued with telekinetic power and boosts Psychic-type moves.");
                 item.Sprite = "Box_Pink";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(15, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("psychic", 6, 5, false));
             }
             else if (ii == 346)
             {
@@ -2554,7 +2554,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It is a durable stone that boosts the power of Rock-type moves.");
                 item.Sprite = "Stone_Black";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(16, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("rock", 6, 5, false));
             }
             else if (ii == 347)
             {
@@ -2562,7 +2562,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It is a special metallic film that can boost the power of Steel-type moves.");
                 item.Sprite = "Box_White";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(17, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("steel", 6, 5, false));
             }
             else if (ii == 348)
             {
@@ -2570,7 +2570,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. This teardrop-shaped gem boosts the power of Water-type moves.");
                 item.Sprite = "Bottle_LightBlue";
                 item.Price = 500;
-                item.OnActions.Add(0, new MultiplyElementEvent(18, 6, 5, false));
+                item.OnActions.Add(0, new MultiplyElementEvent("water", 6, 5, false));
             }
             else if (ii == 349)
             {
@@ -2592,42 +2592,42 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Fire Stone");
                 item.Desc = new LocalText("A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fire-type.");
                 item.Sprite = "Stone_Red";
-                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 07)));
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "fire")));
             }
             else if (ii == 352)
             {
                 item.Name = new LocalText("Thunder Stone");
                 item.Desc = new LocalText("A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Electric-type.");
                 item.Sprite = "Stone_Gold";
-                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 04)));
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "electric")));
             }
             else if (ii == 353)
             {
                 item.Name = new LocalText("Water Stone");
                 item.Desc = new LocalText("A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Water-type.");
                 item.Sprite = "Stone_Blue";
-                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 18)));
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "water")));
             }
             else if (ii == 354)
             {
                 item.Name = new LocalText("Leaf Stone");
                 item.Desc = new LocalText("A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Grass-type.");
                 item.Sprite = "Stone_Green";
-                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 10)));
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "grass")));
             }
             else if (ii == 355)
             {
                 item.Name = new LocalText("Moon Stone");
                 item.Desc = new LocalText("An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fairy-type.");
                 item.Sprite = "Stone_Black";
-                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 05)));
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "fairy")));
             }
             else if (ii == 356)
             {
                 item.Name = new LocalText("Sun Stone");
                 item.Desc = new LocalText("An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Psychic-type.");
                 item.Sprite = "Stone_Orange";
-                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 15)));
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "psychic")));
             }
             else if (ii == 357)
             {
@@ -2768,7 +2768,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Ice Stone");
                 item.Desc = new LocalText("A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks to Ice-type.");
                 item.Sprite = "Stone_LightBlue";
-                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent(00, 12)));
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "ice")));
             }
             else if (ii == 380)
             {
@@ -2777,7 +2777,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(01, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("bug", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 381)
             {
@@ -2786,7 +2786,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(02, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("dark", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 382)
             {
@@ -2795,7 +2795,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(03, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("dragon", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 383)
             {
@@ -2804,7 +2804,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(04, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("electric", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 384)
             {
@@ -2813,7 +2813,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(05, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("fairy", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 385)
             {
@@ -2822,7 +2822,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(06, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("fighting", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 386)
             {
@@ -2831,7 +2831,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(07, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("fire", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 387)
             {
@@ -2840,7 +2840,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(08, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("flying", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 388)
             {
@@ -2849,7 +2849,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(09, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("ghost", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 389)
             {
@@ -2858,7 +2858,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(10, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("grass", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 390)
             {
@@ -2867,7 +2867,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(11, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("ground", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 391)
             {
@@ -2876,7 +2876,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(12, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("ice", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 392)
             {
@@ -2885,7 +2885,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(13, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("normal", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 393)
             {
@@ -2894,7 +2894,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(14, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("poison", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 394)
             {
@@ -2903,7 +2903,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(15, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("psychic", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 395)
             {
@@ -2912,7 +2912,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(16, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("rock", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 396)
             {
@@ -2921,7 +2921,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(17, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("steel", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 397)
             {
@@ -2930,7 +2930,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Slab_Gray";
                 item.Price = 250;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Gray", 1, -1, -1, 192));
-                item.BeforeBeingHits.Add(0, new MultiplyElementEvent(18, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                item.BeforeBeingHits.Add(0, new MultiplyElementEvent("water", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 400)
             {

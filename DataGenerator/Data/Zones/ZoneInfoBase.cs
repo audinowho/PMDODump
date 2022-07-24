@@ -1348,7 +1348,7 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["poison_water"] = "wyvern_hill_secondary";
                         textureStep.TextureMap["grass"] = "tall_grass";
                     }
-                    textureStep.GroundElement = 13;
+                    textureStep.GroundElement = "normal";
                     textureStep.LayeredGround = true;
                     layout.GenSteps.Add(PR_TEXTURES, textureStep);
 
@@ -1510,7 +1510,7 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["abyss"] = "chasm_cave_1_wall";
                         textureStep.TextureMap["poison_water"] = "chasm_cave_1_wall";
                     }
-                    textureStep.GroundElement = 13;
+                    textureStep.GroundElement = "normal";
                     textureStep.LayeredGround = true;
                     layout.GenSteps.Add(PR_TEXTURES, textureStep);
 
@@ -1800,7 +1800,7 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["poison_water"] = "poison_maze_secondary";
                         textureStep.TextureMap["grass"] = "tall_grass";
                     }
-                    textureStep.GroundElement = 13;
+                    textureStep.GroundElement = "normal";
                     textureStep.LayeredGround = true;
                     layout.GenSteps.Add(PR_TEXTURES, textureStep);
 
@@ -1902,7 +1902,7 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["poison_water"] = "poison_maze_secondary";
                         textureStep.TextureMap["grass"] = "tall_grass";
                     }
-                    textureStep.GroundElement = 13;
+                    textureStep.GroundElement = "normal";
                     textureStep.LayeredGround = true;
                     layout.GenSteps.Add(PR_TEXTURES, textureStep);
 

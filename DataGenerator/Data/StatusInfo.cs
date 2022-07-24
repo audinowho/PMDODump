@@ -1025,7 +1025,7 @@ namespace DataGenerator.Data
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.BeforeBeingHits.Add(0, new SureShotEvent());
-                status.TargetElementEffects.Add(0, new TypeImmuneEvent(11));
+                status.TargetElementEffects.Add(0, new TypeImmuneEvent("ground"));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Water));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Abyss));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Lava));
@@ -1040,7 +1040,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_CHARGE_END")));
                 status.StatusStates.Set(new RecentState());
                 status.BeforeActions.Add(0, new RemoveRecentEvent());
-                status.OnActions.Add(0, new MultiplyElementEvent(04, 2, 1, false));
+                status.OnActions.Add(0, new MultiplyElementEvent("electric", 2, 1, false));
                 status.StatusStates.Set(new CountDownState(6));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 //status.AfterActions.Add(0, new CountDownOnActionEffect(true));
@@ -1144,7 +1144,7 @@ namespace DataGenerator.Data
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new AnchorState()));
                 status.OnActions.Add(-1, new SnapDashBackEvent());
-                status.TargetElementEffects.Add(1, new TypeVulnerableEvent(11));
+                status.TargetElementEffects.Add(1, new TypeVulnerableEvent("ground"));
                 status.StatusStates.Set(new CountDownState(10));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1572,7 +1572,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FOLLOW_ME_END")));
                 status.ProximityEvent.Radius = 3;
                 status.ProximityEvent.TargetAlignments = Alignment.Foe;
-                status.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent(Alignment.Friend, 00, new StringKey("MSG_REDIRECT_ATTACK")));
+                status.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent(Alignment.Friend, "none", new StringKey("MSG_REDIRECT_ATTACK")));
                 status.StatusStates.Set(new CountDownState(3));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1628,7 +1628,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_ROOST_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_ROOST_END")));
-                status.TargetElementEffects.Add(0, new RemoveTypeMatchupEvent(08));
+                status.TargetElementEffects.Add(0, new RemoveTypeMatchupEvent("flying"));
                 status.OnWalks.Add(0, new RemoveEvent(true));
             }
             else if (ii == 96)
@@ -1657,7 +1657,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments |= Alignment.Foe;
                 BattleData newData = new BattleData();
                 newData.Category = BattleData.SkillCategory.Magical;
-                newData.Element = 14;
+                newData.Element = "poison";
                 newData.HitRate = 100;
                 newData.SkillStates.Set(new BasePowerState(100));
                 newData.OnHits.Add(-1, new DamageFormulaEvent());
@@ -1675,7 +1675,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_NOTHING_HAPPENED")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_ELECTRIFY_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_ELECTRIFY_END")));
-                status.OnActions.Add(-1, new ChangeMoveElementEvent(00, 04));
+                status.OnActions.Add(-1, new ChangeMoveElementEvent("none", "electric"));
                 status.StatusStates.Set(new CountDownState(3));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1758,7 +1758,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 status.StatusStates.Set(new CountDownState(25));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
-                status.TargetElementEffects.Add(0, new TypeImmuneEvent(11));
+                status.TargetElementEffects.Add(0, new TypeImmuneEvent("ground"));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Water));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Abyss));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Lava));
@@ -1956,7 +1956,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_DECOY_END")));
                 status.ProximityEvent.Radius = 1;
                 status.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
-                status.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent((Alignment.Friend | Alignment.Foe), 00, new StringKey("MSG_REDIRECT_ATTACK")));
+                status.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent((Alignment.Friend | Alignment.Foe), "none", new StringKey("MSG_REDIRECT_ATTACK")));
                 status.StatusStates.Set(new CountDownState(15));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new FriendlyFiredEvent());
@@ -2141,10 +2141,10 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new TransferStatusState());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POWDER_START"), true));
 
-                status.OnActions.Add(0, new ElementNeededEvent(07, new RemoveBattleEvent(false)));
-                status.OnActions.Add(0, new ElementNeededEvent(04, new RemoveBattleEvent(false)));
-                status.OnActions.Add(0, new ElementNeededEvent(07, new PreventActionEvent(new StringKey())));
-                status.OnActions.Add(0, new ElementNeededEvent(04, new PreventActionEvent(new StringKey())));
+                status.OnActions.Add(0, new ElementNeededEvent("fire", new RemoveBattleEvent(false)));
+                status.OnActions.Add(0, new ElementNeededEvent("electric", new RemoveBattleEvent(false)));
+                status.OnActions.Add(0, new ElementNeededEvent("fire", new PreventActionEvent(new StringKey())));
+                status.OnActions.Add(0, new ElementNeededEvent("electric", new PreventActionEvent(new StringKey())));
 
                 {
                     AreaAction altAction = new AreaAction();
@@ -2167,7 +2167,7 @@ namespace DataGenerator.Data
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
-                    status.OnActions.Add(0, new ElementNeededEvent(07, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
+                    status.OnActions.Add(0, new ElementNeededEvent("fire", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
 
                 {
@@ -2191,10 +2191,10 @@ namespace DataGenerator.Data
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
-                    status.OnActions.Add(0, new ElementNeededEvent(04, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
+                    status.OnActions.Add(0, new ElementNeededEvent("electric", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
-                status.AfterBeingHits.Add(0, new ElementNeededEvent(07, new RemoveBattleEvent(false)));
-                status.AfterBeingHits.Add(0, new ElementNeededEvent(04, new RemoveBattleEvent(false)));
+                status.AfterBeingHits.Add(0, new ElementNeededEvent("fire", new RemoveBattleEvent(false)));
+                status.AfterBeingHits.Add(0, new ElementNeededEvent("electric", new RemoveBattleEvent(false)));
 
                 {
                     AreaAction altAction = new AreaAction();
@@ -2217,7 +2217,7 @@ namespace DataGenerator.Data
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
-                    status.AfterBeingHits.Add(0, new ElementNeededEvent(07, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
+                    status.AfterBeingHits.Add(0, new ElementNeededEvent("fire", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
 
 
@@ -2242,7 +2242,7 @@ namespace DataGenerator.Data
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
-                    status.AfterBeingHits.Add(0, new ElementNeededEvent(04, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
+                    status.AfterBeingHits.Add(0, new ElementNeededEvent("electric", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
                 }
             }
             else if (ii == 124)

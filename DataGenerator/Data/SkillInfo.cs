@@ -4456,7 +4456,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = Alignment.Foe;
 
                 BattleData newData = new BattleData();
-                newData.Element = 09;
+                newData.Element = "ghost";
                 newData.Category = BattleData.SkillCategory.Status;
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new ChipDamageEvent(5));
@@ -4468,7 +4468,7 @@ namespace DataGenerator.Data
                 newData.HitFX.Emitter = emitter;
                 newData.HitFX.Sound = "DUN_Curse_2";
 
-                skill.Data.OnActions.Add(-3, new ElementDifferentUseEvent(09, altAction, altExplosion, newData));
+                skill.Data.OnActions.Add(-3, new ElementDifferentUseEvent("ghost", altAction, altExplosion, newData));
 
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
@@ -5543,7 +5543,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
 
                 BattleData newData = new BattleData();
-                newData.Element = 13;
+                newData.Element = "normal";
                 newData.Category = BattleData.SkillCategory.Status;
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new RestoreHPEvent(1, 3, true));
@@ -6446,7 +6446,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(0, new StatusBattleEvent(70, true, false));
 
                 BattleData newData = new BattleData();
-                newData.Element = 13;
+                newData.Element = "normal";
                 newData.Category = BattleData.SkillCategory.Status;
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new StatusBattleEvent(70, true, true));
@@ -6511,7 +6511,7 @@ namespace DataGenerator.Data
                     altExplosion.TargetAlignments = Alignment.Foe;
 
                     BattleData newData = new BattleData();
-                    newData.Element = 13;
+                    newData.Element = "normal";
                     newData.Category = BattleData.SkillCategory.Magical;
                     newData.HitRate = 100;
                     newData.SkillStates.Set(new BasePowerState(80));
@@ -6541,7 +6541,7 @@ namespace DataGenerator.Data
                     altExplosion.TargetAlignments = Alignment.Foe;
 
                     BattleData newData = new BattleData();
-                    newData.Element = 13;
+                    newData.Element = "normal";
                     newData.Category = BattleData.SkillCategory.Magical;
                     newData.HitRate = 100;
                     newData.SkillStates.Set(new BasePowerState(80));
@@ -6571,7 +6571,7 @@ namespace DataGenerator.Data
                     altExplosion.TargetAlignments = Alignment.Foe;
 
                     BattleData newData = new BattleData();
-                    newData.Element = 13;
+                    newData.Element = "normal";
                     newData.Category = BattleData.SkillCategory.Magical;
                     newData.HitRate = 100;
                     newData.SkillStates.Set(new BasePowerState(80));
@@ -6609,7 +6609,7 @@ namespace DataGenerator.Data
                     altExplosion.TargetAlignments = Alignment.Self;
 
                     BattleData newData = new BattleData();
-                    newData.Element = 13;
+                    newData.Element = "normal";
                     newData.Category = BattleData.SkillCategory.Status;
                     newData.HitRate = -1;
                     newData.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
@@ -6630,7 +6630,7 @@ namespace DataGenerator.Data
                     altExplosion.TargetAlignments = Alignment.Self;
 
                     BattleData newData = new BattleData();
-                    newData.Element = 13;
+                    newData.Element = "normal";
                     newData.Category = BattleData.SkillCategory.Status;
                     newData.HitRate = -1;
                     newData.OnHits.Add(0, new RestoreHPEvent(1, 1, true));
@@ -6651,7 +6651,7 @@ namespace DataGenerator.Data
                     altExplosion.TargetAlignments = Alignment.Self;
 
                     BattleData newData = new BattleData();
-                    newData.Element = 13;
+                    newData.Element = "normal";
                     newData.Category = BattleData.SkillCategory.Status;
                     newData.HitRate = -1;
                     newData.OnHits.Add(0, new RestoreHPEvent(1, 1, true));
@@ -6888,7 +6888,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(60));
 
                 BattleData newData = new BattleData();
-                newData.Element = 13;
+                newData.Element = "normal";
                 newData.Category = BattleData.SkillCategory.Status;
                 newData.HitRate = -1;
                 newData.HitFX.Delay = 20;
@@ -6945,25 +6945,25 @@ namespace DataGenerator.Data
                 terrain.Add(14, 412);
                 terrain.Add(15, 585);
 
-                Dictionary<int, int> types = new Dictionary<int, int>();
-                types.Add(01, 405);
-                types.Add(02, 399);
-                types.Add(03, 434);
-                types.Add(04, 85);
-                types.Add(05, 585);
-                types.Add(06, 396);
-                types.Add(07, 53);
-                types.Add(08, 403);
-                types.Add(09, 247);
-                types.Add(10, 412);
-                types.Add(11, 414);
-                types.Add(12, 524);
-                types.Add(13, 161);
-                types.Add(14, 188);
-                types.Add(15, 326);
-                types.Add(16, 408);
-                types.Add(17, 430);
-                types.Add(18, 56);
+                Dictionary<string, int> types = new Dictionary<string, int>();
+                types.Add(Text.Sanitize(((ElementInfo.Element)01).ToString()).ToLower(), 405);
+                types.Add(Text.Sanitize(((ElementInfo.Element)02).ToString()).ToLower(), 399);
+                types.Add(Text.Sanitize(((ElementInfo.Element)03).ToString()).ToLower(), 434);
+                types.Add(Text.Sanitize(((ElementInfo.Element)04).ToString()).ToLower(), 85);
+                types.Add(Text.Sanitize(((ElementInfo.Element)05).ToString()).ToLower(), 585);
+                types.Add(Text.Sanitize(((ElementInfo.Element)06).ToString()).ToLower(), 396);
+                types.Add(Text.Sanitize(((ElementInfo.Element)07).ToString()).ToLower(), 53);
+                types.Add(Text.Sanitize(((ElementInfo.Element)08).ToString()).ToLower(), 403);
+                types.Add(Text.Sanitize(((ElementInfo.Element)09).ToString()).ToLower(), 247);
+                types.Add(Text.Sanitize(((ElementInfo.Element)10).ToString()).ToLower(), 412);
+                types.Add(Text.Sanitize(((ElementInfo.Element)11).ToString()).ToLower(), 414);
+                types.Add(Text.Sanitize(((ElementInfo.Element)12).ToString()).ToLower(), 524);
+                types.Add(Text.Sanitize(((ElementInfo.Element)13).ToString()).ToLower(), 161);
+                types.Add(Text.Sanitize(((ElementInfo.Element)14).ToString()).ToLower(), 188);
+                types.Add(Text.Sanitize(((ElementInfo.Element)15).ToString()).ToLower(), 326);
+                types.Add(Text.Sanitize(((ElementInfo.Element)16).ToString()).ToLower(), 408);
+                types.Add(Text.Sanitize(((ElementInfo.Element)17).ToString()).ToLower(), 430);
+                types.Add(Text.Sanitize(((ElementInfo.Element)18).ToString()).ToLower(), 56);
                 skill.Data.OnHits.Add(0, new NatureMoveEvent(terrain, types));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
@@ -7522,25 +7522,25 @@ namespace DataGenerator.Data
                 terrain.Add(14, new StatusBattleEvent(1, true, true));
                 terrain.Add(15, new StatusStackBattleEvent(10, true, true, -1));
 
-                Dictionary<int, BattleEvent> types = new Dictionary<int, BattleEvent>();
-                types.Add(01, new StatusStackBattleEvent(14, false, true, 1));
-                types.Add(02, new StatusBattleEvent(8, true, true));
-                types.Add(03, new StatusStackBattleEvent(13, false, true, 1));
-                types.Add(04, new StatusBattleEvent(4, true, true));
-                types.Add(05, new StatusStackBattleEvent(10, true, true, -1));
-                types.Add(06, new StatusStackBattleEvent(10, false, true, 1));
-                types.Add(07, new StatusBattleEvent(2, true, true));
-                types.Add(08, new StatusStackBattleEvent(9, false, true, 1));
-                types.Add(09, new StatusBattleEvent(7, true, true));
-                types.Add(10, new StatusBattleEvent(1, true, true));
-                types.Add(11, new StatusBattleEvent(90, true, false));
-                types.Add(12, new StatusBattleEvent(3, true, true));
-                types.Add(13, new StatusStackBattleEvent(15, true, true, -1));
-                types.Add(14, new StatusBattleEvent(6, true, true));
-                types.Add(15, new StatusStackBattleEvent(13, true, true, -1));
-                types.Add(16, new StatusStackBattleEvent(11, true, true, -1));
-                types.Add(17, new StatusStackBattleEvent(11, false, true, 1));
-                types.Add(18, new StatusStackBattleEvent(9, true, true, -1));
+                Dictionary<string, BattleEvent> types = new Dictionary<string, BattleEvent>();
+                types.Add(Text.Sanitize(((ElementInfo.Element)01).ToString()).ToLower(), new StatusStackBattleEvent(14, false, true, 1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)02).ToString()).ToLower(), new StatusBattleEvent(8, true, true));
+                types.Add(Text.Sanitize(((ElementInfo.Element)03).ToString()).ToLower(), new StatusStackBattleEvent(13, false, true, 1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)04).ToString()).ToLower(), new StatusBattleEvent(4, true, true));
+                types.Add(Text.Sanitize(((ElementInfo.Element)05).ToString()).ToLower(), new StatusStackBattleEvent(10, true, true, -1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)06).ToString()).ToLower(), new StatusStackBattleEvent(10, false, true, 1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)07).ToString()).ToLower(), new StatusBattleEvent(2, true, true));
+                types.Add(Text.Sanitize(((ElementInfo.Element)08).ToString()).ToLower(), new StatusStackBattleEvent(9, false, true, 1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)09).ToString()).ToLower(), new StatusBattleEvent(7, true, true));
+                types.Add(Text.Sanitize(((ElementInfo.Element)10).ToString()).ToLower(), new StatusBattleEvent(1, true, true));
+                types.Add(Text.Sanitize(((ElementInfo.Element)11).ToString()).ToLower(), new StatusBattleEvent(90, true, false));
+                types.Add(Text.Sanitize(((ElementInfo.Element)12).ToString()).ToLower(), new StatusBattleEvent(3, true, true));
+                types.Add(Text.Sanitize(((ElementInfo.Element)13).ToString()).ToLower(), new StatusStackBattleEvent(15, true, true, -1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)14).ToString()).ToLower(), new StatusBattleEvent(6, true, true));
+                types.Add(Text.Sanitize(((ElementInfo.Element)15).ToString()).ToLower(), new StatusStackBattleEvent(13, true, true, -1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)16).ToString()).ToLower(), new StatusStackBattleEvent(11, true, true, -1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)17).ToString()).ToLower(), new StatusStackBattleEvent(11, false, true, 1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)18).ToString()).ToLower(), new StatusStackBattleEvent(9, true, true, -1));
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new NatureSpecialEvent(terrain, types)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -7614,10 +7614,10 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                Dictionary<int, int> terrain = new Dictionary<int, int>();
-                terrain.Add(13, 04);
-                terrain.Add(14, 10);
-                terrain.Add(15, 05);
+                Dictionary<int, string> terrain = new Dictionary<int, string>();
+                terrain.Add(13, "electric");
+                terrain.Add(14, "grass");
+                terrain.Add(15, "fairy");
                 skill.Data.OnHits.Add(0, new NatureElementEvent(terrain));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
@@ -7775,7 +7775,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
-                skill.Data.OnHits.Add(0, new AddElementEvent(11));
+                skill.Data.OnHits.Add(0, new AddElementEvent("ground"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(26);//Dance
@@ -8060,7 +8060,7 @@ namespace DataGenerator.Data
                 Dictionary<int, BattleData> weather = new Dictionary<int, BattleData>();
                 {
                     BattleData newData = new BattleData();
-                    newData.Element = 18;
+                    newData.Element = "water";
                     newData.Category = BattleData.SkillCategory.Magical;
                     newData.HitRate = 100;
                     newData.SkillStates.Set(new BasePowerState(60));
@@ -8071,7 +8071,7 @@ namespace DataGenerator.Data
                 }
                 {
                     BattleData newData = new BattleData();
-                    newData.Element = 07;
+                    newData.Element = "fire";
                     newData.Category = BattleData.SkillCategory.Magical;
                     newData.HitRate = 100;
                     newData.SkillStates.Set(new BasePowerState(60));
@@ -8083,7 +8083,7 @@ namespace DataGenerator.Data
                 }
                 {
                     BattleData newData = new BattleData();
-                    newData.Element = 16;
+                    newData.Element = "rock";
                     newData.Category = BattleData.SkillCategory.Magical;
                     newData.HitRate = 100;
                     newData.SkillStates.Set(new BasePowerState(60));
@@ -8094,7 +8094,7 @@ namespace DataGenerator.Data
                 }
                 {
                     BattleData newData = new BattleData();
-                    newData.Element = 12;
+                    newData.Element = "ice";
                     newData.Category = BattleData.SkillCategory.Magical;
                     newData.HitRate = 100;
                     newData.SkillStates.Set(new BasePowerState(60));
@@ -8960,7 +8960,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
-                skill.Data.OnHits.Add(0, new AddElementEvent(18));
+                skill.Data.OnHits.Add(0, new AddElementEvent("water"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -9266,7 +9266,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(60));
 
                 BattleData newData = new BattleData();
-                newData.Element = 06;
+                newData.Element = "fighting";
                 newData.Category = BattleData.SkillCategory.Status;
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent(70, true, false));
@@ -9408,39 +9408,39 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
 
-                Dictionary<int, int> itemPair = new Dictionary<int, int>();
-                itemPair.Add(9, 14);
-                itemPair.Add(11, 06);
-                itemPair.Add(12, 08);
+                Dictionary<int, string> itemPair = new Dictionary<int, string>();
+                itemPair.Add(9, "poison");
+                itemPair.Add(11, "fighting");
+                itemPair.Add(12, "flying");
 
-                itemPair.Add(19, 01);
-                itemPair.Add(20, 02);
-                itemPair.Add(21, 03);
-                itemPair.Add(22, 04);
-                itemPair.Add(23, 06);
-                itemPair.Add(24, 07);
-                itemPair.Add(25, 08);
-                itemPair.Add(26, 09);
-                itemPair.Add(27, 10);
-                itemPair.Add(28, 11);
-                itemPair.Add(29, 12);
-                itemPair.Add(30, 13);
-                itemPair.Add(31, 14);
-                itemPair.Add(32, 15);
-                itemPair.Add(33, 16);
-                itemPair.Add(34, 17);
-                itemPair.Add(35, 18);
-                itemPair.Add(36, 05);
+                itemPair.Add(19, "bug");
+                itemPair.Add(20, "dark");
+                itemPair.Add(21, "dragon");
+                itemPair.Add(22, "electric");
+                itemPair.Add(23, "fighting");
+                itemPair.Add(24, "fire");
+                itemPair.Add(25, "flying");
+                itemPair.Add(26, "ghost");
+                itemPair.Add(27, "grass");
+                itemPair.Add(28, "ground");
+                itemPair.Add(29, "ice");
+                itemPair.Add(30, "normal");
+                itemPair.Add(31, "poison");
+                itemPair.Add(32, "psychic");
+                itemPair.Add(33, "rock");
+                itemPair.Add(34, "steel");
+                itemPair.Add(35, "water");
+                itemPair.Add(36, "fairy");
 
-                itemPair.Add(37, 03);
-                itemPair.Add(44, 10);
-                itemPair.Add(45, 12);
-                itemPair.Add(46, 06);
-                itemPair.Add(47, 14);
-                itemPair.Add(43, 11);
-                itemPair.Add(48, 15);
-                itemPair.Add(49, 16);
-                itemPair.Add(51, 1);
+                itemPair.Add(37, "dragon");
+                itemPair.Add(44, "grass");
+                itemPair.Add(45, "ice");
+                itemPair.Add(46, "fighting");
+                itemPair.Add(47, "poison");
+                itemPair.Add(43, "ground");
+                itemPair.Add(48, "psychic");
+                itemPair.Add(49, "rock");
+                itemPair.Add(51, "bug");
 
                 skill.Data.OnActions.Add(-1, new ItemPowerEvent(itemPair));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -11710,9 +11710,9 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
-                Dictionary<int, int> plate = new Dictionary<int, int>();
+                Dictionary<int, string> plate = new Dictionary<int, string>();
                 for (int nn = 0; nn < 18; nn++)
-                    plate[380 + nn] = nn + 1;
+                    plate[380 + nn] = Text.Sanitize(((ElementInfo.Element)nn + 1).ToString()).ToLower();
                 skill.Data.BeforeActions.Add(-1, new PrepareJudgmentEvent(plate));
                 skill.Data.OnActions.Add(-1, new PassJudgmentEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -12426,7 +12426,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new GroupEvent(new RemoveAbilityEvent(26),
-                    new RemoveElementEvent(08), new RemoveStatusBattleEvent(38, true), new RemoveStatusBattleEvent(40, true),
+                    new RemoveElementEvent("flying"), new RemoveStatusBattleEvent(38, true), new RemoveStatusBattleEvent(40, true),
                     new RemoveStatusBattleEvent(58, true), new RemoveStatusBattleEvent(102, true))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
@@ -12632,7 +12632,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new ChangeToElementEvent(18));
+                skill.Data.OnHits.Add(0, new ChangeToElementEvent("water"));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
                 skill.Strikes = 1;
@@ -14287,7 +14287,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new CharElementNeededEvent(10, new StatusStackBattleEvent(10, true, false, 1), new StatusStackBattleEvent(12, true, false, 1)));
+                skill.Data.OnHits.Add(0, new CharElementNeededEvent("grass", new StatusStackBattleEvent(10, true, false, 1), new StatusStackBattleEvent(12, true, false, 1)));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
@@ -14389,7 +14389,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
-                skill.Data.OnHits.Add(0, new AddElementEvent(09));
+                skill.Data.OnHits.Add(0, new AddElementEvent("ghost"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -14466,7 +14466,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
-                skill.Data.OnHits.Add(0, new AddElementEvent(10));
+                skill.Data.OnHits.Add(0, new AddElementEvent("grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new WaveMotionAction();
                 ((WaveMotionAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -14514,7 +14514,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.ElementEffects.Add(0, new TypeSuperEvent(18));
+                skill.Data.ElementEffects.Add(0, new TypeSuperEvent("water"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot

@@ -101,8 +101,8 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Restores HP if hit by an Electric-type move.");
                 ability.ProximityEvent.Radius = 0;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
-                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent(04));
-                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent(04, false, true,
+                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent("electric"));
+                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("electric", false, true,
                     new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink",
                     new RestoreHPEvent(1, 4, true)));
             }
@@ -112,8 +112,8 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Restores HP if hit by a Water-type move.");
                 ability.ProximityEvent.Radius = 0;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
-                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent(18));
-                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent(18, false, true,
+                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent("water"));
+                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("water", false, true,
                     new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink",
                     new RestoreHPEvent(1, 4, true)));
             }
@@ -162,10 +162,10 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Powers up the Pokémon's Fire-type moves if it's hit by one.");
                 ability.ProximityEvent.Radius = 0;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
-                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent(07));
-                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent(07, false, true,
+                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent("fire"));
+                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("fire", false, true,
                     new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink",
-                    new StatusElementBattleEvent(84, true, false, 07)));
+                    new StatusElementBattleEvent(84, true, false, "fire")));
             }
             else if (ii == 19)
             {
@@ -213,13 +213,13 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Wonder Guard");
                 ability.Desc = new LocalText("Its mysterious power only lets super effective moves hit the Pokémon.");
                 ability.BeforeBeingHits.Add(0, new WonderGuardEvent(new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", true, 10)));
-                ability.BeforeBeingHits.Add(6, new ElementNeededEvent(0, new RegularAttackNeededEvent(new SetDamageEvent(new SpecificDamageEvent(1), new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", true, 10)))));
+                ability.BeforeBeingHits.Add(6, new ElementNeededEvent("none", new RegularAttackNeededEvent(new SetDamageEvent(new SpecificDamageEvent(1), new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", true, 10)))));
             }
             else if (ii == 26)
             {
                 ability.Name = new LocalText("Levitate");
                 ability.Desc = new LocalText("By floating in the air, the Pokémon receives full immunity to all Ground-type moves.");
-                ability.TargetElementEffects.Add(0, new TypeImmuneEvent(11));
+                ability.TargetElementEffects.Add(0, new TypeImmuneEvent("ground"));
                 ability.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Water));
                 ability.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Abyss));
                 ability.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Lava));
@@ -275,8 +275,8 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("The Pokémon draws in all Electric-type moves. Instead of being hit by Electric-type moves, it boosts its Sp. Atk.");
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = Alignment.Foe;
-                ability.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent(Alignment.Friend, 04, new StringKey("MSG_DRAW_ATTACK")));
-                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent(04, true, new StatusStackBattleEvent(12, true, false, 1)));
+                ability.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent(Alignment.Friend, "electric", new StringKey("MSG_DRAW_ATTACK")));
+                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("electric", true, new StatusStackBattleEvent(12, true, false, 1)));
                 ability.BeforeBeingHits.Add(5, new AddContextStateEvent(new SingleDrawAbsorb(), true));
             }
             else if (ii == 32)
@@ -363,8 +363,8 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Magnet Pull");
                 ability.Desc = new LocalText("Pulls Steel-type targets to this Pokémon.");
-                //ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe | Alignment.Friend, false, false, true, 100, new CharElementNeededEvent(17, new WarpHereEvent(new StringKey("MSG_MAGNET_PULL"), false))));
-                ability.AfterHittings.Add(5, new OnHitEvent(false, false, 100, new CharElementNeededEvent(17, new WarpHereEvent(new StringKey("MSG_MAGNET_PULL"), true))));
+                //ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe | Alignment.Friend, false, false, true, 100, new CharElementNeededEvent("steel", new WarpHereEvent(new StringKey("MSG_MAGNET_PULL"), false))));
+                ability.AfterHittings.Add(5, new OnHitEvent(false, false, 100, new CharElementNeededEvent("steel", new WarpHereEvent(new StringKey("MSG_MAGNET_PULL"), true))));
             }
             else if (ii == 43)
             {
@@ -395,9 +395,9 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Thick Fat");
                 ability.Desc = new LocalText("Boosts resistance to Fire- and Ice-type moves.");
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
-                ability.BeforeBeingHits.Add(0, new MultiplyElementEvent(07, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                ability.BeforeBeingHits.Add(0, new MultiplyElementEvent("fire", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
                 emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
-                ability.BeforeBeingHits.Add(0, new MultiplyElementEvent(12, 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                ability.BeforeBeingHits.Add(0, new MultiplyElementEvent("ice", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 48)
             {
@@ -565,25 +565,25 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Overgrow");
                 ability.Desc = new LocalText("Powers up Grass-type moves when the Pokémon's HP is low.");
-                ability.OnActions.Add(0, new PinchEvent(10));
+                ability.OnActions.Add(0, new PinchEvent("grass"));
             }
             else if (ii == 66)
             {
                 ability.Name = new LocalText("Blaze");
                 ability.Desc = new LocalText("Powers up Fire-type moves when the Pokémon's HP is low.");
-                ability.OnActions.Add(0, new PinchEvent(07));
+                ability.OnActions.Add(0, new PinchEvent("fire"));
             }
             else if (ii == 67)
             {
                 ability.Name = new LocalText("Torrent");
                 ability.Desc = new LocalText("Powers up Water-type moves when the Pokémon's HP is low.");
-                ability.OnActions.Add(0, new PinchEvent(18));
+                ability.OnActions.Add(0, new PinchEvent("water"));
             }
             else if (ii == 68)
             {
                 ability.Name = new LocalText("Swarm");
                 ability.Desc = new LocalText("Powers up Bug-type moves when the Pokémon's HP is low.");
-                ability.OnActions.Add(0, new PinchEvent(01));
+                ability.OnActions.Add(0, new PinchEvent("bug"));
             }
             else if (ii == 69)
             {
@@ -601,8 +601,8 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Arena Trap");
                 ability.Desc = new LocalText("Prevents grounded opposing Pokémon from fleeing.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new CheckImmunityBattleEvent(11, false, new StatusBattleEvent(90, false, true, false, new StringKey("MSG_ARENA_TRAP")))));
-                //ability.AfterHittings.Add(0, new OnHitEvent(false, false, 100, new CheckImmunityBattleEvent(11, true, new StatusBattleEvent(90, true, true, false, new StringKey("MSG_ARENA_TRAP")))));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new CheckImmunityBattleEvent("ground", false, new StatusBattleEvent(90, false, true, false, new StringKey("MSG_ARENA_TRAP")))));
+                //ability.AfterHittings.Add(0, new OnHitEvent(false, false, 100, new CheckImmunityBattleEvent("ground", true, new StatusBattleEvent(90, true, true, false, new StringKey("MSG_ARENA_TRAP")))));
             }
             else if (ii == 72)
             {
@@ -647,8 +647,8 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Boosts the Pokémon's Movement Speed when it's hit by an Electric-type move.");
                 ability.ProximityEvent.Radius = 0;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
-                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent(04));
-                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent(04, false, true,
+                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent("electric"));
+                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("electric", false, true,
                     new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink",
                     new StatusStackBattleEvent(9, true, false, 1)));
             }
@@ -700,7 +700,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Heatproof");
                 ability.Desc = new LocalText("Weakens the power of Fire-type moves.");
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
-                ability.BeforeBeingHits.Add(0, new MultiplyElementEvent(07, 1, 4, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                ability.BeforeBeingHits.Add(0, new MultiplyElementEvent("fire", 1, 4, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
                 ability.OnRefresh.Add(0, new MiscEvent(new HeatproofState()));
             }
             else if (ii == 86)
@@ -715,10 +715,10 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Restores HP in rain or when hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves.");
                 ability.ProximityEvent.Radius = 0;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
-                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent(18));
-                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent(18, false, true,
+                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent("water"));
+                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("water", false, true,
                     new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink", new RestoreHPEvent(1, 4, true)));
-                ability.BeforeBeingHits.Add(0, new MultiplyElementEvent(07, 3, 2, false));
+                ability.BeforeBeingHits.Add(0, new MultiplyElementEvent("fire", 3, 2, false));
                 ability.OnMapTurnEnds.Add(0, new WeatherAlignedEvent(2, 1));
             }
             else if (ii == 88)
@@ -774,7 +774,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Normalize");
                 ability.Desc = new LocalText("All the Pokémon’s moves become Normal type.");
-                ability.OnActions.Add(-1, new ChangeMoveElementEvent(0, 13));
+                ability.OnActions.Add(-1, new ChangeMoveElementEvent("none", "normal"));
             }
             else if (ii == 97)
             {
@@ -902,7 +902,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Scrappy");
                 ability.Desc = new LocalText("The Pokémon can hit Ghost-type Pokémon with Normal- and Fighting-type moves.");
-                ability.UserElementEffects.Add(0, new ScrappyEvent(13, 06));
+                ability.UserElementEffects.Add(0, new ScrappyEvent("normal", "fighting"));
             }
             else if (ii == 114)
             {
@@ -910,8 +910,8 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Draws in all Water-type moves. Instead of being hit by Water-type moves, it boosts its Sp. Atk.");
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = Alignment.Foe;
-                ability.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent(Alignment.Friend, 18, new StringKey("MSG_DRAW_ATTACK")));
-                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent(18, true, new StatusStackBattleEvent(12, true, false, 1)));
+                ability.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent(Alignment.Friend, "water", new StringKey("MSG_DRAW_ATTACK")));
+                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("water", true, new StatusStackBattleEvent(12, true, false, 1)));
                 ability.BeforeBeingHits.Add(5, new AddContextStateEvent(new SingleDrawAbsorb(), true));
             }
             else if (ii == 115)
@@ -956,17 +956,17 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Multitype");
                 ability.Desc = new LocalText("Changes the Pokémon's type to match its held Plate. The Pokémon can also utilize the protection of Plates in its Bag.");
                 //ability.OnActions.Add(0, new ConversionEffect(false));
-                Dictionary<int, int> plate = new Dictionary<int, int>();
+                Dictionary<int, string> plate = new Dictionary<int, string>();
                 for (int nn = 0; nn < 18; nn++)
-                    plate[380 + nn] = nn + 1;
+                    plate[380 + nn] = Text.Sanitize(((ElementInfo.Element)nn + 1).ToString()).ToLower();
                 ability.OnTurnStarts.Add(0, new PlateElementEvent(plate));
-                plate = new Dictionary<int, int>();
+                plate = new Dictionary<int, string>();
                 for (int nn = 0; nn < 18; nn++)
-                    plate[380 + nn] = nn + 1;
+                    plate[380 + nn] = Text.Sanitize(((ElementInfo.Element)nn + 1).ToString()).ToLower();
                 ability.OnTurnEnds.Add(0, new PlateElementEvent(plate));
-                Dictionary<int, int> element = new Dictionary<int, int>();
+                Dictionary<string, int> element = new Dictionary<string, int>();
                 for (int nn = 0; nn < 18; nn++)
-                    element[nn + 1] = 380 + nn;
+                    element[Text.Sanitize(((ElementInfo.Element)nn + 1).ToString()).ToLower()] = 380 + nn;
                 ability.BeforeBeingHits.Add(-1, new PlateProtectEvent(element));
             }
             else if (ii == 122)
@@ -1222,15 +1222,15 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Justified");
                 ability.Desc = new LocalText("Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.");
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent(02, new StatusStackBattleEvent(10, true, true, false, 1, new StringKey("MSG_JUSTIFIED"))));
+                ability.AfterBeingHits.Add(0, new ElementNeededEvent("dark", new StatusStackBattleEvent(10, true, true, false, 1, new StringKey("MSG_JUSTIFIED"))));
             }
             else if (ii == 155)
             {
                 ability.Name = new LocalText("Rattled");
                 ability.Desc = new LocalText("Dark-, Ghost-, and Bug-type moves scare the Pokémon and boost its Movement Speed.");
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent(02, new StatusStackBattleEvent(9, true, true, false, 1, new StringKey("MSG_RATTLED"))));
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent(09, new StatusStackBattleEvent(9, true, true, false, 1, new StringKey("MSG_RATTLED"))));
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent(01, new StatusStackBattleEvent(9, true, true, false, 1, new StringKey("MSG_RATTLED"))));
+                ability.AfterBeingHits.Add(0, new ElementNeededEvent("dark", new StatusStackBattleEvent(9, true, true, false, 1, new StringKey("MSG_RATTLED"))));
+                ability.AfterBeingHits.Add(0, new ElementNeededEvent("ghost", new StatusStackBattleEvent(9, true, true, false, 1, new StringKey("MSG_RATTLED"))));
+                ability.AfterBeingHits.Add(0, new ElementNeededEvent("bug", new StatusStackBattleEvent(9, true, true, false, 1, new StringKey("MSG_RATTLED"))));
             }
             else if (ii == 156)
             {
@@ -1245,8 +1245,8 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Boosts the Attack stat if hit by a Grass-type move, instead of taking damage.");
                 ability.ProximityEvent.Radius = 0;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
-                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent(10));
-                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent(10, false, true,
+                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent("grass"));
+                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("grass", false, true,
                     new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink", new StatusStackBattleEvent(10, true, false, 1)));
             }
             else if (ii == 158)
@@ -1260,8 +1260,8 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Sand Force");
                 ability.Desc = new LocalText("Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.");
                 ability.OnRefresh.Add(0, new MiscEvent(new SandState()));
-                ability.OnActions.Add(0, new WeatherNeededEvent(3, new MultiplyElementEvent(16, 4, 3, false),
-                    new MultiplyElementEvent(11, 4, 3, false), new MultiplyElementEvent(17, 4, 3, false)));
+                ability.OnActions.Add(0, new WeatherNeededEvent(3, new MultiplyElementEvent("rock", 4, 3, false),
+                    new MultiplyElementEvent("ground", 4, 3, false), new MultiplyElementEvent("steel", 4, 3, false)));
             }
             else if (ii == 160)
             {
@@ -1365,7 +1365,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Refrigerate");
                 ability.Desc = new LocalText("Normal-type moves become Ice-type moves.");
-                ability.OnActions.Add(-1, new ChangeMoveElementEvent(13, 12));
+                ability.OnActions.Add(-1, new ChangeMoveElementEvent("normal", "ice"));
             }
             else if (ii == 175)
             {
@@ -1444,7 +1444,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Pixilate");
                 ability.Desc = new LocalText("Normal-type moves become Fairy-type moves.");
-                ability.OnActions.Add(-1, new ChangeMoveElementEvent(13, 05));
+                ability.OnActions.Add(-1, new ChangeMoveElementEvent("normal", "fairy"));
             }
             else if (ii == 183)
             {
@@ -1456,7 +1456,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Aerilate");
                 ability.Desc = new LocalText("Normal-type moves become Flying-type moves.");
-                ability.OnActions.Add(-1, new ChangeMoveElementEvent(13, 08));
+                ability.OnActions.Add(-1, new ChangeMoveElementEvent("normal", "flying"));
             }
             else if (ii == 185)
             {
@@ -1469,7 +1469,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Powers up all Dark-type moves.");
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Self | Alignment.Friend);
-                ability.ProximityEvent.OnActions.Add(0, new MultiplyElementEvent(02, 6, 5, false));
+                ability.ProximityEvent.OnActions.Add(0, new MultiplyElementEvent("dark", 6, 5, false));
             }
             else if (ii == 187)
             {
@@ -1477,7 +1477,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Powers up all Fairy-type moves.");
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Self | Alignment.Friend);
-                ability.ProximityEvent.OnActions.Add(0, new MultiplyElementEvent(05, 6, 5, false));
+                ability.ProximityEvent.OnActions.Add(0, new MultiplyElementEvent("fairy", 6, 5, false));
             }
             else if (ii == 188)
             {
@@ -1580,7 +1580,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Galvanize");
                 ability.Desc = new LocalText("Normal-type moves become Electric-type moves.");
-                ability.OnActions.Add(-1, new ChangeMoveElementEvent(13, 04));
+                ability.OnActions.Add(-1, new ChangeMoveElementEvent("normal", "electric"));
             }
             else if (ii == 207)
             {
