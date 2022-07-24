@@ -335,10 +335,10 @@ namespace DataGenerator
                         if ((dump & DataManager.DataType.MapStatus) != DataManager.DataType.None)
                             MapStatusInfo.AddMapStatusData();
 
-                        DataManager.DataType reserializeType = dump;
+                        DataManager.DataType reserializeType = DataManager.DataType.All;
                         reserializeType ^= DataManager.DataType.Zone;
                         reserializeType ^= DataManager.DataType.Item;
-                        RogueEssence.Dev.DevHelper.RunIndexing(reserializeType);
+                        RogueEssence.Dev.DevHelper.RunIndexing(reserializeType & dump);
                     }
 
                     {

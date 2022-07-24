@@ -262,6 +262,8 @@ namespace DataGenerator.Data
             formEntry.BaseMAtk = 1;
             formEntry.BaseMDef = 1;
             formEntry.BaseSpeed = 1;
+            formEntry.Element1 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
+            formEntry.Element2 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
             formEntry.LevelSkills.Add(new LevelUpSkill());
             entry.Forms.Add(formEntry);
 
@@ -277,6 +279,8 @@ namespace DataGenerator.Data
             formEntry2.BaseMAtk = 1;
             formEntry2.BaseMDef = 1;
             formEntry2.BaseSpeed = 1;
+            formEntry.Element1 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
+            formEntry.Element2 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
             formEntry.LevelSkills.Add(new LevelUpSkill());
             entry.Forms.Add(formEntry2);
 
@@ -1176,6 +1180,8 @@ namespace DataGenerator.Data
             command = new SQLiteCommand(sql, m_dbTLConnection);
             using (SQLiteDataReader reader = command.ExecuteReader())
             {
+                entry.Element1 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
+                entry.Element2 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
                 int read = 0;
                 while (reader.Read())
                 {

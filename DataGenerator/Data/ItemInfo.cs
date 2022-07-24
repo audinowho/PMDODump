@@ -3801,7 +3801,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 703)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Defend Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 08 }, exclElement, translate);
+                        new object[] { "flying" }, exclElement, translate);
                 else if (ii == 704)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Black Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3813,7 +3813,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 707)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Dusk Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 01 }, exclElement, translate);
+                        new object[] { "bug" }, exclElement, translate);
                 else if (ii == 708)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Royal Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3825,7 +3825,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 711)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Dragon Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 03 }, exclElement, translate);
+                        new object[] { "dragon" }, exclElement, translate);
                 else if (ii == 712)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Yellow Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3837,7 +3837,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 715)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Volt Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 11 }, exclElement, translate);
+                        new object[] { "ground" }, exclElement, translate);
                 else if (ii == 716)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Magenta Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3849,7 +3849,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 719)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Fairy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 14 }, exclElement, translate);
+                        new object[] { "poison" }, exclElement, translate);
                 else if (ii == 720)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Orange Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3861,7 +3861,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 723)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Power Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 05 }, exclElement, translate);
+                        new object[] { "fairy" }, exclElement, translate);
                 else if (ii == 724)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Red Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3873,7 +3873,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 727)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Fiery Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 18 }, exclElement, translate);
+                        new object[] { "water" }, exclElement, translate);
                 else if (ii == 728)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Sky Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3885,7 +3885,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 731)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Sky Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 04 }, exclElement, translate);
+                        new object[] { "electric" }, exclElement, translate);
                 else if (ii == 732)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Purple Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3897,7 +3897,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 735)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Nether Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 02 }, exclElement, translate);
+                        new object[] { "dark" }, exclElement, translate);
                 else if (ii == 736)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Grass Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3909,7 +3909,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 739)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Soothe Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 07 }, exclElement, translate);
+                        new object[] { "fire" }, exclElement, translate);
                 else if (ii == 740)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Brown Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3921,7 +3921,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 743)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Terra Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 12 }, exclElement, translate);
+                        new object[] { "ice" }, exclElement, translate);
                 else if (ii == 744)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Clear Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3933,7 +3933,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 747)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Icy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 16 }, exclElement, translate);
+                        new object[] { "rock" }, exclElement, translate);
                 else if (ii == 748)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "White Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3945,7 +3945,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 751)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Joy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 06 }, exclElement, translate);
+                        new object[] { "fighting" }, exclElement, translate);
                 else if (ii == 752)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Pink Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3957,7 +3957,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 755)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Poison Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 15 }, exclElement, translate);
+                        new object[] { "psychic" }, exclElement, translate);
                 else if (ii == 756)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Gold Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3969,7 +3969,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 759)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Psyche Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 09 }, exclElement, translate);
+                        new object[] { "ghost" }, exclElement, translate);
                 else if (ii == 760)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Gray Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3981,7 +3981,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 763)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Rock Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 17 }, exclElement, translate);
+                        new object[] { "steel" }, exclElement, translate);
                 else if (ii == 764)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Iron Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -3993,7 +3993,7 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 767)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Steel Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 06 }, exclElement, translate);
+                        new object[] { "fighting" }, exclElement, translate);
                 else if (ii == 768)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Blue Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
@@ -4005,9 +4005,9 @@ namespace DataGenerator.Data
                         new object[] { }, exclElement, translate);
                 else if (ii == 771)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Aqua Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
-                        new object[] { 10 }, exclElement, translate);
+                        new object[] { "grass" }, exclElement, translate);
                 else if (ii == 804)//TODO: String Assets
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBulldozer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBulldozer, new object[] { 11, 8 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBulldozer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBulldozer, new object[] { "ground", "flying" }, 1.ToString(), translate);
                 else if (ii == 805)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SuperCrit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SuperCrit, new object[] { }, 1.ToString(), translate);
                 else if (ii == 806)
@@ -4071,9 +4071,9 @@ namespace DataGenerator.Data
                 else if (ii == 835)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.XRay.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.XRay, new object[] { }, 1.ToString(), translate);
                 else if (ii == 836)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessPayback, new object[] { 7, 5 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessPayback, new object[] { "fire", 5 }, 1.ToString(), translate);
                 else if (ii == 837)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WarpPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WarpPayback, new object[] { 8 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WarpPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WarpPayback, new object[] { "flying" }, 1.ToString(), translate);
                 else if (ii == 838)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.LungeAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.LungeAttack, new object[] { }, 1.ToString(), translate);
                 else if (ii == 839)
@@ -4133,7 +4133,7 @@ namespace DataGenerator.Data
                 else if (ii == 866)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ShopFinder.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ShopFinder, new object[] { }, 1.ToString(), translate);
                 else if (ii == 867)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SecondSTAB.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SecondSTAB, new object[] { 7 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SecondSTAB.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SecondSTAB, new object[] { "fire" }, 1.ToString(), translate);
                 else if (ii == 868)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypedAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypedAttack, new object[] { }, 1.ToString(), translate);
                 else if (ii == 869)
@@ -4155,7 +4155,7 @@ namespace DataGenerator.Data
                 else if (ii == 877)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.EndureCategory.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.EndureCategory, new object[] { BattleData.SkillCategory.Physical }, 1.ToString(), translate);
                 else if (ii == 878)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.EndureType.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.EndureType, new object[] { 12 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.EndureType.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.EndureType, new object[] { "ice" }, 1.ToString(), translate);
                 else if (ii == 879)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SpikeDropper.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SpikeDropper, new object[] { BattleData.SkillCategory.Physical }, 1.ToString(), translate);
                 else if (ii == 880)
@@ -4163,7 +4163,7 @@ namespace DataGenerator.Data
                 else if (ii == 881)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DeepBreatherPlus.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DeepBreatherPlus, new object[] { }, 1.ToString(), translate);
                 else if (ii == 882)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessReduce.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessReduce, new object[] { 15 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessReduce.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessReduce, new object[] { "psychic" }, 1.ToString(), translate);
                 else if (ii == 883)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Gratitude.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Gratitude, new object[] { }, 1.ToString(), translate);
                 else if (ii == 884)
@@ -4179,7 +4179,7 @@ namespace DataGenerator.Data
                 else if (ii == 889)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusSplash.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusSplash, new object[] { }, 1.ToString(), translate);
                 else if (ii == 890)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBodyguard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBodyguard, new object[] { 1 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBodyguard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBodyguard, new object[] { "bug" }, 1.ToString(), translate);
 
                 if (ii >= 800 && ii < 900)
                     item.Comment = "Test item, do not translate";
@@ -4203,7 +4203,8 @@ namespace DataGenerator.Data
                 DataManager.SaveData(ii.ToString(), DataManager.DataType.Item.ToString(), item);
             }
 
-            AutoItemInfo.WriteExclusiveItems(MAX_INIT_EXCL_ITEMS, translate);
+            //TODO: String Assets
+            //AutoItemInfo.WriteExclusiveItems(MAX_INIT_EXCL_ITEMS, translate);
         }
 
     }

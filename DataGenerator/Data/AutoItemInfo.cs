@@ -418,9 +418,6 @@ namespace DataGenerator.Data
             int prev_start = init_idx;
             List<string> running_tradeables = new List<string>();
 
-            //TODO: String Assets
-            return;
-
             //load from generated csv
             if (File.Exists(GenPath.ITEM_PATH  + "ExclusiveItem.out.txt"))
             {
