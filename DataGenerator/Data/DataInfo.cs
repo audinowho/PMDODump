@@ -39,7 +39,7 @@ namespace DataGenerator.Data
             universalEvent.ElementEffects.Add(-10, new PreTypeEvent());
             universalEvent.OnDeaths.Add(-10, new PreDeathEvent());
             universalEvent.OnDeaths.Add(-10, new SetDeathEvent());
-            universalEvent.OnDeaths.Add(0, new ImpostorReviveEvent(150));
+            universalEvent.OnDeaths.Add(0, new ImpostorReviveEvent("imposter"));
             universalEvent.OnDeaths.Add(10, new HandoutRelativeExpEvent(1, 5, 10));
             universalEvent.OnMapStarts.Add(-10, new FadeInEvent());
             universalEvent.OnMapStarts.Add(-5, new SpecialIntroEvent());

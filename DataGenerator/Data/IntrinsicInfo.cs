@@ -19,12 +19,14 @@ namespace DataGenerator.Data
             DataInfo.DeleteIndexedData(DataManager.DataType.Intrinsic.ToString());
             for (int ii = 0; ii < MAX_INTRINSICS; ii++)
             {
-                IntrinsicData ability = GetIntrinsicData(ii);
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.Intrinsic.ToString(), ability);
+                (string, IntrinsicData) ability = GetIntrinsicData(ii);
+                if (ability.Item1 != "")
+                    DataManager.SaveData(ability.Item1, DataManager.DataType.Intrinsic.ToString(), ability.Item2);
             }
         }
-        public static IntrinsicData GetIntrinsicData(int ii)
+        public static (string, IntrinsicData) GetIntrinsicData(int ii)
         {
+            string fileName = "";
             IntrinsicData ability = new IntrinsicData();
             if (ii == 0)
             {
@@ -1887,11 +1889,13 @@ namespace DataGenerator.Data
             else if (ii == 266)
             {
                 ability.Name = new LocalText("**As One");
+                fileName = "as_one_chill";
                 ability.Desc = new LocalText("This Ability combines the effects of both Calyrex's Unnerve Ability and Glastrier's Chilling Neigh Ability.");
             }
             else if (ii == 267)
             {
                 ability.Name = new LocalText("**As One");
+                fileName = "as_one_grim";
                 ability.Desc = new LocalText("This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.");
             }
 
@@ -1900,7 +1904,10 @@ namespace DataGenerator.Data
             else if (ability.Name.DefaultText != "")
                 ability.Released = true;
 
-            return ability;
+            if (fileName == "")
+                fileName = Text.Sanitize(ability.Name.DefaultText).ToLower();
+
+            return (fileName, ability);
         }
 
 

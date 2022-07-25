@@ -1983,7 +1983,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Nullify Orb");
                 item.Desc = new LocalText("An orb that nullifies the Abilities of all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_Green";
-                item.UseEvent.OnHits.Add(0, new ChangeToAbilityEvent(0, true));
+                item.UseEvent.OnHits.Add(0, new ChangeToAbilityEvent(DataManager.Instance.DefaultIntrinsic, true));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;

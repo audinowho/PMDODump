@@ -1794,7 +1794,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, it causes the Pokémon's regular attack to remove the target's ability.");
                 if (includeEffects)
                 {
-                    item.AfterHittings.Add(0, new FamilyBattleEvent(new RegularAttackNeededEvent(new ChangeToAbilityEvent(0, true, true))));
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new RegularAttackNeededEvent(new ChangeToAbilityEvent(DataManager.Instance.DefaultIntrinsic, true, true))));
                 }
             }
             else if (type == ExclusiveItemEffect.CheekPouch)

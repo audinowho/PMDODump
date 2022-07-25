@@ -313,7 +313,7 @@ namespace DataGenerator.Data
                 eligibles.Add(new FlagType(typeof(FoodState)));
                 eligibles.Add(new FlagType(typeof(GummiState)));
                 newData.OnHits.Add(0, new TransformItemEvent(true, false, 116, 454, eligibles));
-                newData.OnHits.Add(0, new ChangeToAbilityEvent(0, true));
+                newData.OnHits.Add(0, new ChangeToAbilityEvent(DataManager.Instance.DefaultIntrinsic, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 11)
