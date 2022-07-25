@@ -1200,6 +1200,10 @@ namespace DataGenerator.Data
             command = new SQLiteCommand(sql, m_dbTLConnection);
             using (SQLiteDataReader reader = command.ExecuteReader())
             {
+                entry.Intrinsic1 = "none";
+                entry.Intrinsic2 = "none";
+                entry.Intrinsic3 = "none";
+
                 int read = 0;
                 while (reader.Read())
                 {
