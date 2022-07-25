@@ -1206,12 +1206,14 @@ namespace DataGenerator.Data
                     if (read > 2)
                         throw new Exception(entry.FormName + ": More than 3 ability results!?");
                     int slot = Convert.ToInt32(reader["slot"].ToString());
+                    int ability_idx = Convert.ToInt32(reader["ability_id"].ToString());
+                    (string, IntrinsicData) intrinsic = IntrinsicInfo.GetIntrinsicData(ability_idx);
                     if (slot == 1)
-                        entry.Intrinsic1 = Convert.ToInt32(reader["ability_id"].ToString());
+                        entry.Intrinsic1 = intrinsic.Item1;
                     else if (slot == 2)
-                        entry.Intrinsic2 = Convert.ToInt32(reader["ability_id"].ToString());
+                        entry.Intrinsic2 = intrinsic.Item1;
                     else if (slot == 3)
-                        entry.Intrinsic3 = Convert.ToInt32(reader["ability_id"].ToString());
+                        entry.Intrinsic3 = intrinsic.Item1;
                     read++;
                 }
             }

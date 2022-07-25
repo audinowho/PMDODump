@@ -9837,7 +9837,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
-                skill.Data.OnHits.Add(0, new ChangeToAbilityEvent(0, true));
+                skill.Data.OnHits.Add(0, new ChangeToAbilityEvent("none", true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -10044,7 +10044,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
-                skill.Data.OnHits.Add(0, new ChangeToAbilityEvent(15, true));
+                skill.Data.OnHits.Add(0, new ChangeToAbilityEvent("insomnia", true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -12425,7 +12425,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new GroupEvent(new RemoveAbilityEvent(26),
+                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new GroupEvent(new RemoveAbilityEvent("levitate"),
                     new RemoveElementEvent("flying"), new RemoveStatusBattleEvent(38, true), new RemoveStatusBattleEvent(40, true),
                     new RemoveStatusBattleEvent(58, true), new RemoveStatusBattleEvent(102, true))));
                 skill.Strikes = 1;
@@ -12770,7 +12770,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new ChangeToAbilityEvent(86, true));
+                skill.Data.OnHits.Add(0, new ChangeToAbilityEvent("simple", true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot

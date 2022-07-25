@@ -494,7 +494,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Boosts the Sp. Atk stat if another Pokémon has Minus.");
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = Alignment.Friend;
-                ability.ProximityEvent.OnActions.Add(0, new SupportAbilityEvent(58));
+                ability.ProximityEvent.OnActions.Add(0, new SupportAbilityEvent("minus"));
             }
             else if (ii == 58)
             {
@@ -502,7 +502,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Boosts the Sp. Atk stat if another Pokémon has Plus.");
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = Alignment.Friend;
-                ability.ProximityEvent.OnActions.Add(0, new SupportAbilityEvent(57));
+                ability.ProximityEvent.OnActions.Add(0, new SupportAbilityEvent("plus"));
             }
             else if (ii == 59)
             {
@@ -827,7 +827,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Mold Breaker");
                 ability.Desc = new LocalText("Damaging moves will remove the abilities of opposing Pokémon.");
-                ability.BeforeHittings.Add(0, new AttackingMoveNeededEvent(new TargetNeededEvent(Alignment.Friend | Alignment.Foe, new ChangeToAbilityEvent(0, true, true))));
+                ability.BeforeHittings.Add(0, new AttackingMoveNeededEvent(new TargetNeededEvent(Alignment.Friend | Alignment.Foe, new ChangeToAbilityEvent("none", true, true))));
             }
             else if (ii == 105)
             {
@@ -1211,8 +1211,8 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Mummy");
                 ability.Desc = new LocalText("Contact with the Pokémon spreads this Ability.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100, new ChangeToAbilityEvent(152, false, true)));
-                ability.AfterHittings.Add(0, new OnHitEvent(true, true, 100, new ChangeToAbilityEvent(152, true, true)));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100, new ChangeToAbilityEvent("mummy", false, true)));
+                ability.AfterHittings.Add(0, new OnHitEvent(true, true, 100, new ChangeToAbilityEvent("mummy", true, true)));
             }
             else if (ii == 153)
             {
@@ -1839,7 +1839,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Neutralizing Gas");
                 ability.Desc = new LocalText("The Pokémon neutralizes abilities when attacked.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100, new ChangeToAbilityEvent(0, true, true)));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100, new ChangeToAbilityEvent("none", true, true)));
             }
             else if (ii == 257)
             {

@@ -118,7 +118,7 @@ namespace DataGenerator.Data
                     mobData.BaseSkills[1] = new SlotSkill(44);
                     mobData.BaseSkills[2] = new SlotSkill(34);
                     mobData.BaseSkills[3] = new SlotSkill(156);
-                    mobData.BaseIntrinsics[0] = 82;
+                    mobData.BaseIntrinsics[0] = "gluttony";
                     Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
                     AITactic tactic = DataManager.Instance.GetAITactic("staged_boss");
@@ -184,7 +184,7 @@ namespace DataGenerator.Data
                     mobData.BaseSkills[1] = new SlotSkill(273);
                     mobData.BaseSkills[2] = new SlotSkill(403);
                     mobData.BaseSkills[3] = new SlotSkill(466);
-                    mobData.BaseIntrinsics[0] = 156;
+                    mobData.BaseIntrinsics[0] = "magic_bounce";
                     Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
                     AITactic tactic = DataManager.Instance.GetAITactic("staged_boss");
@@ -208,7 +208,7 @@ namespace DataGenerator.Data
                     mobData.BaseSkills[1] = new SlotSkill(406);
                     mobData.BaseSkills[2] = new SlotSkill(198);
                     mobData.BaseSkills[3] = new SlotSkill(409);
-                    mobData.BaseIntrinsics[0] = 80;
+                    mobData.BaseIntrinsics[0] = "steadfast";
                     Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
                     AITactic tactic = DataManager.Instance.GetAITactic("staged_boss");
@@ -232,7 +232,7 @@ namespace DataGenerator.Data
                     mobData.BaseSkills[1] = new SlotSkill(605);
                     mobData.BaseSkills[2] = new SlotSkill(50);
                     mobData.BaseSkills[3] = new SlotSkill(304);
-                    mobData.BaseIntrinsics[0] = 172;
+                    mobData.BaseIntrinsics[0] = "competitive";
                     Character newMob = new Character(mobData);
                     team.Players.Add(newMob);
                     AITactic tactic = DataManager.Instance.GetAITactic("staged_boss");
@@ -442,7 +442,7 @@ namespace DataGenerator.Data
                     mobData.BaseSkills[1] = new SlotSkill(273);
                     mobData.BaseSkills[2] = new SlotSkill(403);
                     mobData.BaseSkills[3] = new SlotSkill(466);
-                    mobData.BaseIntrinsics[0] = 156;
+                    mobData.BaseIntrinsics[0] = "magic_bounce";
 
                     GroundSpawner merchspawner = new GroundSpawner("MerchantSpawner", "Merchant", mobData);
                     merchspawner.Position = new Loc(285, 238);
