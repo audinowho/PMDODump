@@ -21,9 +21,9 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_SKILLS; ii++)
             {
 
-                SkillData move = GetSkillData(ii);
-                if (!move.Released)//TODO: String Assets
-                    DataManager.SaveData(ii.ToString(), DataManager.DataType.Skill.ToString(), move);
+                (string, SkillData) move = GetSkillData(ii);
+                if (!move.Item2.Released)
+                    DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
             }
         }
 
@@ -34,27 +34,25 @@ namespace DataGenerator.Data
                 for (int ii = 0; ii < movesToAdd.Length; ii++)
                 {
 
-                    SkillData move = GetSkillData(movesToAdd[ii]);
-                    //TODO: String Assets
-                    DataManager.SaveData(movesToAdd[ii].ToString(), DataManager.DataType.Skill.ToString(), move);
+                    (string, SkillData) move = GetSkillData(movesToAdd[ii]);
+                    DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
                 }
             }
             else
             {
                 for (int ii = 0; ii < MAX_SKILLS; ii++)
                 {
-
-                    SkillData move = GetSkillData(ii);
-                    //TODO: String Assets
-                    DataManager.SaveData(ii.ToString(), DataManager.DataType.Skill.ToString(), move);
+                    (string, SkillData) move = GetSkillData(ii);
+                    DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
                 }
             }
         }
 
 
-        public static SkillData GetSkillData(int ii)
+        public static (string, SkillData) GetSkillData(int ii)
         {
             SkillData skill = new SkillData();
+            string fileName = "";
             if (ii == 0)
             {
                 skill.Name = new LocalText("Attack");
@@ -16985,6 +16983,7 @@ namespace DataGenerator.Data
             else if (ii == 719)
             {
                 skill.Name = new LocalText("**10,000,000 Volt Thunderbolt");
+                fileName = "ten_million_volt_thunderbolt";
                 skill.Desc = new LocalText("The user, Pikachu wearing a cap, powers up a jolt of electricity using its Z-Power and unleashes it. Critical hits land more easily.");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "electric";
@@ -18699,7 +18698,10 @@ namespace DataGenerator.Data
                 skill.Released = true;
             }
 
-            return skill;
+            if (fileName == "")
+                fileName = Text.Sanitize(skill.Name.DefaultText).ToLower();
+
+            return (fileName, skill);
         }
         //fix punch/kick gfx
         //fix charge gfx
