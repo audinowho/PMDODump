@@ -514,7 +514,7 @@ namespace DataGenerator.Data
                     {
                         //secret enemies
                         SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                        specificTeam.Spawns.Add(GetGenericMob(234, "", -1, -1, -1, -1, new RandRange(23)));
+                        specificTeam.Spawns.Add(GetGenericMob(234, "", -1, -1, -1, -1, new RandRange(23), "loot_guard"));
 
                         PlaceRandomMobsStep<MapGenContext> secretMobPlacement = new PlaceRandomMobsStep<MapGenContext>(new LoopedTeamSpawner<MapGenContext>(specificTeam, new RandRange(12, 18)));
                         secretMobPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));

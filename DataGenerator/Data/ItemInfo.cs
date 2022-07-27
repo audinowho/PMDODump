@@ -4046,7 +4046,7 @@ namespace DataGenerator.Data
                 else if (ii == 822)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PressurePlus.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PressurePlus, new object[] { }, 1.ToString(), translate);
                 else if (ii == 823)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnAttack, new object[] { 5 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnAttack, new object[] { "poison" }, 1.ToString(), translate);
                 else if (ii == 824)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.KnockbackOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.KnockbackOnAttack, new object[] { }, 1.ToString(), translate);
                 else if (ii == 825)
@@ -4056,7 +4056,7 @@ namespace DataGenerator.Data
                 else if (ii == 827)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SpecialAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SpecialAttacker, new object[] { }, 1.ToString(), translate);
                 else if (ii == 828)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusImmune.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusImmune, new object[] { 1 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusImmune.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusImmune, new object[] { "sleep" }, 1.ToString(), translate);
                 else if (ii == 829)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatDropImmune.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatDropImmune, new object[] { new Stat[] { Stat.Attack } }, 1.ToString(), translate);
                 else if (ii == 830)
@@ -4072,7 +4072,7 @@ namespace DataGenerator.Data
                 else if (ii == 835)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.XRay.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.XRay, new object[] { }, 1.ToString(), translate);
                 else if (ii == 836)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessPayback, new object[] { "fire", 5 }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessPayback, new object[] { "fire", "poison" }, 1.ToString(), translate);
                 else if (ii == 837)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WarpPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WarpPayback, new object[] { "flying" }, 1.ToString(), translate);
                 else if (ii == 838)
@@ -4170,9 +4170,9 @@ namespace DataGenerator.Data
                 else if (ii == 884)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HitAndRun.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HitAndRun, new object[] { }, 1.ToString(), translate);
                 else if (ii == 885)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnCategoryHit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnCategoryHit, new object[] { 45, BattleData.SkillCategory.Status }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnCategoryHit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnCategoryHit, new object[] { "whirlpool", BattleData.SkillCategory.Status }, 1.ToString(), translate);
                 else if (ii == 886)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnCategoryUse, new object[] { 97, BattleData.SkillCategory.Status }, 1.ToString(), translate);
+                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnCategoryUse, new object[] { "electrified", BattleData.SkillCategory.Status }, 1.ToString(), translate);
                 else if (ii == 887)
                     AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MapStatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MapStatusOnCategoryUse, new object[] { BattleData.SkillCategory.Status, "grassy_terrain" }, 1.ToString(), translate);
                 else if (ii == 888)
