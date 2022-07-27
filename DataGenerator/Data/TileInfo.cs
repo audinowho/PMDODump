@@ -105,7 +105,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusBattleEvent(5, true, false, true));
+                newData.OnHits.Add(0, new StatusBattleEvent("poison", true, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 4)
@@ -134,7 +134,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusBattleEvent(1, true, false, true));
+                newData.OnHits.Add(0, new StatusBattleEvent("sleep", true, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 5)
@@ -167,7 +167,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusBattleEvent(7, true, false, true));
+                newData.OnHits.Add(0, new StatusBattleEvent("confuse", true, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 6)
@@ -197,7 +197,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, true, -1));
+                newData.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, true, -1));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 7)
@@ -227,7 +227,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new AffectHighestStatBattleEvent(true, 10, 11, 12, 13, true, -2));
+                newData.OnHits.Add(0, new AffectHighestStatBattleEvent(true, "mod_attack", "mod_defense", "mod_special_attack", "mod_special_defense", true, -2));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 8)
@@ -255,7 +255,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.HitFX.Emitter = new SingleEmitter(new AnimData("X_RSE", 15), 3);
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new DisableBattleEvent(60, 26, true));
+                newData.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot", true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 9)
@@ -279,7 +279,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = Alignment.Self;
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new SpiteEvent(26, 100));
+                newData.OnHits.Add(0, new SpiteEvent("last_used_move_slot", 100));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 10)
@@ -346,7 +346,7 @@ namespace DataGenerator.Data
                 newData.OnHits.Add(0, new SetItemStickyEvent(true, false, 116, true, new HashSet<FlagType>()));
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
-                newData.OnHits.Add(0, new StatusStateBattleEvent(90, true, false, true, statusStates));
+                newData.OnHits.Add(0, new StatusStateBattleEvent("immobilized", true, false, true, statusStates));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 12)
@@ -623,7 +623,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusBattleEvent(6, true, false, true));
+                newData.OnHits.Add(0, new StatusBattleEvent("poison_toxic", true, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 22)
@@ -706,7 +706,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = Alignment.Foe;
                 BattleData newData = new BattleData();
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusBattleEvent(75, true, false, true));
+                newData.OnHits.Add(0, new StatusBattleEvent("grudge", true, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 25)
@@ -1249,7 +1249,7 @@ namespace DataGenerator.Data
                 tile.BlockType = TerrainData.Mobility.Water;
                 tile.MinimapColor = Color.Blue;
                 tile.ShadowType = 3;
-                tile.LandedOnTiles.Add(0, new RemoveStatusEvent(2));
+                tile.LandedOnTiles.Add(0, new RemoveStatusEvent("burn"));
             }
             else if (ii == 4)
             {
@@ -1260,7 +1260,7 @@ namespace DataGenerator.Data
                 tile.ShadowType = 4;
                 SingleEmitter endAnim = new SingleEmitter(new AnimData("Burned", 3));
                 endAnim.LocHeight = 18;
-                tile.LandedOnTiles.Add(0, new SingleExceptEvent(typeof(LavaState), new GiveStatusEvent(2, new StateCollection<StatusState>(), true, new StringKey(), "DUN_Flamethrower_3", endAnim)));
+                tile.LandedOnTiles.Add(0, new SingleExceptEvent(typeof(LavaState), new GiveStatusEvent("burn", new StateCollection<StatusState>(), true, new StringKey(), "DUN_Flamethrower_3", endAnim)));
             }
             else if (ii == 5)
             {
@@ -1285,7 +1285,7 @@ namespace DataGenerator.Data
                 emitter.StartHeight = -4;
                 emitter.HeightSpeed = 12;
                 emitter.SpeedDiff = 4;
-                tile.LandedOnTiles.Add(0, new SingleExceptEvent(typeof(PoisonState), new GiveStatusEvent(5, new StateCollection<StatusState>(), true, new StringKey(), "DUN_Toxic", emitter)));
+                tile.LandedOnTiles.Add(0, new SingleExceptEvent(typeof(PoisonState), new GiveStatusEvent("poison", new StateCollection<StatusState>(), true, new StringKey(), "DUN_Toxic", emitter)));
             }
             else if (ii == 7)
             {

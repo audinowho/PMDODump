@@ -293,7 +293,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Berry_Jaboca";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CategoryState(BattleData.SkillCategory.Physical));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(80, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("area_counter", true, false, statusStates));
             }
             else if (ii == 38)
             {
@@ -302,7 +302,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Berry_Rowap";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CategoryState(BattleData.SkillCategory.Magical));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(80, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("area_counter", true, false, statusStates));
             }
             else if (ii == 39)
             {
@@ -325,53 +325,53 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Apicot Berry");
                 item.Desc = new LocalText("A very mystifying Berry. There is no telling how it can be used, or what may happen if it is used. It maximizes Special Defense.");
                 item.Sprite = "Berry_Apicot";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(13, true, false, 6));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_defense", true, false, 6));
             }
             else if (ii == 44)
             {
                 item.Name = new LocalText("Liechi Berry");
                 item.Desc = new LocalText("A mysterious Berry, rumored to contain the power of the sea. It maximizes Attack.");
                 item.Sprite = "Berry_Liechi";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 6));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_attack", true, false, 6));
             }
             else if (ii == 45)
             {
                 item.Name = new LocalText("Ganlon Berry");
                 item.Desc = new LocalText("A Berry surrounded by mystery, rumored to be imbued with the power of the land. It maximizes Defense.");
                 item.Sprite = "Berry_Ganlon";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 6));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_defense", true, false, 6));
             }
             else if (ii == 46)
             {
                 item.Name = new LocalText("Salac Berry");
                 item.Desc = new LocalText("A Berry surrounded by mystery, rumored to be imbued with the power of the sky. It maximizes Movement Speed.");
                 item.Sprite = "Berry_Salac";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, 3));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, 3));
             }
             else if (ii == 47)
             {
                 item.Name = new LocalText("Petaya Berry");
                 item.Desc = new LocalText("A mysterious Berry rumored to contain the power of all living things. It maximizes Special Attack.");
                 item.Sprite = "Berry_Petaya";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, 6));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_attack", true, false, 6));
             }
             else if (ii == 48)
             {
                 item.Name = new LocalText("Starf Berry");
                 item.Desc = new LocalText("So strong, it was abandoned at the world's edge. It is still considered a mirage to this very day. It sharply raises all stats.");
                 item.Sprite = "Berry_Starf";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, 2));
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 2));
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 2));
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, 2));
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(13, true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_attack", true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_defense", true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_attack", true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_defense", true, false, 2));
             }
             else if (ii == 49)
             {
                 item.Name = new LocalText("Micle Berry");
                 item.Desc = new LocalText("This berry has a very dry flavor. It has the effect of making other food eaten at the same time taste sweet. It maximizes Accuracy.");
                 item.Sprite = "Berry_Micle";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(14, true, false, 6));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_accuracy", true, false, 6));
             }
             else if (ii == 50)
             {
@@ -382,7 +382,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Enigma Berry");
                 item.Desc = new LocalText("A completely enigmatic Berry that appears to have the power of stars. It restores HP when hit by a super-effective move.");
                 item.Sprite = "Berry_Enigma";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(121, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("weakness_drain", true, false));
             }
             else if (ii == 52)
             {
@@ -397,7 +397,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Sitrus Berry");
                 item.Desc = new LocalText("A large berry with a well-rounded flavor. It gradually restores HP for a few turns.");
                 item.Sprite = "Berry_Sitrus";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(124, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("regeneration", true, false));
             }
             else if (ii == 73)
             {
@@ -613,15 +613,15 @@ namespace DataGenerator.Data
                 item.Sprite = "Seed_DarkBlue";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(20));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(1, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("sleep", true, false, statusStates));
             }
             else if (ii == 111)
             {
                 item.Name = new LocalText("Vile Seed");
                 item.Desc = new LocalText("A seed that drastically lowers the Pokémon's Defense and Special Defense.");
                 item.Sprite = "Seed_DarkBlue";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, -3));
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(13, true, false, -3));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_defense", true, false, -3));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_defense", true, false, -3));
             }
             else if (ii == 112)
             {
@@ -659,7 +659,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Blinker Seed");
                 item.Desc = new LocalText("A seed that gives the Blinker status, reducing the Pokémon's Attack Range to its lowest level.");
                 item.Sprite = "Seed_DarkBlue";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(114, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("blinker", true, false));
             }
             else if (ii == 114)
             {
@@ -675,14 +675,14 @@ namespace DataGenerator.Data
                 item.Sprite = "Seed_Blue";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(30));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(3, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("freeze", true, false, statusStates));
             }
             else if (ii == 116)
             {
                 item.Name = new LocalText("Decoy Seed");
                 item.Desc = new LocalText("A seed that gives the Pokémon the Decoy status, making it a target of everyone's attacks. Moves that target the team's inventory will always pick this item first.");
                 item.Sprite = "Seed_Yellow";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(112, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("decoy", true, false));
             }
             else if (ii == 117)
             {
@@ -690,16 +690,16 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A seed that sets the PP of the Pokémon's moves to 1, and drastically raises its Attack, Special Attack, and Speed.");
                 item.Sprite = "Seed_Red";
                 item.UseEvent.OnHits.Add(0, new PPTo1Event(true));
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, 3));
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 3));
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, 3));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, 3));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_attack", true, false, 3));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_attack", true, false, 3));
             }
             else if (ii == 118)
             {
                 item.Name = new LocalText("Ban Seed");
                 item.Desc = new LocalText("A seed that bans the last move used by the Pokémon, preventing anyone in the dungeon from using it.");
                 item.Sprite = "Seed_Blue";
-                item.UseEvent.OnHits.Add(0, new BanMoveEvent("move_ban", 27));
+                item.UseEvent.OnHits.Add(0, new BanMoveEvent("move_ban", "last_used_move"));
             }
             else if (ii == 119)
             {
@@ -765,7 +765,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Bottle_Gold";
                 item.Price = 2500;
                 item.MaxStack = 3;
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(118, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("recruit_boost", true, false));
             }
             else if (ii == 159)
             {
@@ -930,7 +930,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("X Attack");
                 item.Desc = new LocalText("An item that sharply raises Attack. It affects all team members up to 3 tiles away.");
                 item.Sprite = "Medicine_Red";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(10, true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_attack", true, false, 2));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 3;
                 ((AreaAction)item.UseAction).Speed = 6;
@@ -953,7 +953,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("X Defense");
                 item.Desc = new LocalText("An item that sharply raises Defense. It affects all team members up to 3 tiles away.");
                 item.Sprite = "Medicine_Yellow";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(11, true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_defense", true, false, 2));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 3;
                 ((AreaAction)item.UseAction).Speed = 6;
@@ -976,7 +976,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("X Sp. Atk");
                 item.Desc = new LocalText("An item that sharply raises Special Attack. It affects all team members up to 3 tiles away.");
                 item.Sprite = "Medicine_Red";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(12, true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_attack", true, false, 2));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 3;
                 ((AreaAction)item.UseAction).Speed = 6;
@@ -999,7 +999,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("X Sp. Def");
                 item.Desc = new LocalText("An item that sharply raises Special Defense. It affects all team members up to 3 tiles away.");
                 item.Sprite = "Medicine_Yellow";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(13, true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_defense", true, false, 2));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 3;
                 ((AreaAction)item.UseAction).Speed = 6;
@@ -1022,7 +1022,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("X Speed");
                 item.Desc = new LocalText("An item that boosts Movement Speed by 1 stage. It affects all team members up to 3 tiles away.");
                 item.Sprite = "Medicine_Orange";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, 2));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 3;
                 ((AreaAction)item.UseAction).Speed = 6;
@@ -1045,7 +1045,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("X Accuracy");
                 item.Desc = new LocalText("An item that sharply raises Accuracy. It affects all team members up to 3 tiles away.");
                 item.Sprite = "Medicine_Orange";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(14, true, false, 2));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_accuracy", true, false, 2));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 3;
                 ((AreaAction)item.UseAction).Speed = 6;
@@ -1068,7 +1068,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Dire Hit");
                 item.Desc = new LocalText("An item that raises critical-hit ratio. It affects all team members up to 3 tiles away.");
                 item.Sprite = "Medicine_Orange";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(78, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("focus_energy", true, false));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 3;
                 ((AreaAction)item.UseAction).Speed = 6;
@@ -1096,11 +1096,11 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An herb that removes all move-binding effects, and prevents moves from being sealed.");
                 item.Sprite = "Herb_Blue";
                 item.Price = 100;
-                item.UseEvent.OnHits.Add(0, new RemoveStatusBattleEvent(72, true));
-                item.UseEvent.OnHits.Add(0, new RemoveStatusBattleEvent(73, true));
-                item.UseEvent.OnHits.Add(0, new RemoveStatusBattleEvent(74, true));
-                item.UseEvent.OnHits.Add(0, new RemoveStatusBattleEvent(60, true));
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(120, true, false));
+                item.UseEvent.OnHits.Add(0, new RemoveStatusBattleEvent("taunted", true));
+                item.UseEvent.OnHits.Add(0, new RemoveStatusBattleEvent("encore", true));
+                item.UseEvent.OnHits.Add(0, new RemoveStatusBattleEvent("torment", true));
+                item.UseEvent.OnHits.Add(0, new RemoveStatusBattleEvent("disable", true));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("mental_charged", true, false));
             }
             else if (ii == 184)
             {
@@ -1108,7 +1108,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An herb that allows the use of two-turn attacks in one turn, and prevents PP from dropping.");
                 item.Sprite = "Herb_Red";
                 item.Price = 100;
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(99, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("power_charged", true, false));
             }
             else if (ii == 185)
             {
@@ -1116,13 +1116,14 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An herb that removes all stat changes, and prevents them from changing.");
                 item.Sprite = "Herb_White";
                 item.Price = 50;
-                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent(9, true, true, true));
-                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent(10, true, true, true));
-                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent(11, true, true, true));
-                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent(12, true, true, true));
-                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent(13, true, true, true));
-                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent(14, true, true, true));
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(119, true, false));
+                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent("mod_speed", true, true, true));
+                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent("mod_attack", true, true, true));
+                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent("mod_defense", true, true, true));
+                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent("mod_special_attack", true, true, true));
+                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent("mod_special_defense", true, true, true));
+                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent("mod_accuracy", true, true, true));
+                item.UseEvent.OnHits.Add(0, new RemoveStatusStackBattleEvent("mod_evasion", true, true, true));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("stat_charged", true, false));
             }
             else if (ii == 186)
             {
@@ -1139,7 +1140,7 @@ namespace DataGenerator.Data
                 item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
-                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(8, true, true)));
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("flinch", true, true)));
             }
             else if (ii == 201)
             {
@@ -1153,7 +1154,7 @@ namespace DataGenerator.Data
                 item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
-                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(10, true, true, -2)));
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_attack", true, true, -2)));
             }
             else if (ii == 202)
             {
@@ -1167,7 +1168,7 @@ namespace DataGenerator.Data
                 item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
-                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent(12, true, true, -2)));
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_special_attack", true, true, -2)));
             }
             else if (ii == 203)
             {
@@ -1246,7 +1247,7 @@ namespace DataGenerator.Data
                 item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.SkillStates.Set(new AdditionalEffectState(100));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
-                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent(8, true, true)));
+                item.UseEvent.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("flinch", true, true)));
                 item.Explosion = new ExplosionData();
                 item.Explosion.TargetAlignments |= Alignment.Foe;
             }
@@ -1484,7 +1485,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Wand_Blue";
                 item.Price = 5;
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_Out", 2));
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, -1));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, -1));
             }
             else if (ii == 227)
             {
@@ -1500,7 +1501,7 @@ namespace DataGenerator.Data
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_Out", 2));
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(8, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("flinch", true, false, statusStates));
             }
             else if (ii == 229)
             {
@@ -1577,7 +1578,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A wand to be waved at a Pokémon. It temporarily makes the target invisible.");
                 item.Sprite = "Wand_Purple";
                 item.Price = 5;
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(129, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("invisible", true, false));
                 item.UseEvent.HitFX.Sound = "DUN_Invisible";
             }
             else if (ii == 250)
@@ -1618,7 +1619,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Mobile Orb");
                 item.Desc = new LocalText("An orb that allows the user's team to move through walls.");
                 item.Sprite = "Orb_White";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(92, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("super_mobile", true, false));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1659,7 +1660,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Invisify Orb");
                 item.Desc = new LocalText("An orb that temporarily makes the user's team invisible.");
                 item.Sprite = "Orb_Purple";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(129, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("invisible", true, false));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1702,7 +1703,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("All-Aim Orb");
                 item.Desc = new LocalText("An orb that ensures that all of the team's attacks hit.");
                 item.Sprite = "Orb_Red";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(98, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("sure_shot", true, false));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1784,7 +1785,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Orb_Green";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(6));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(64, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("endure", true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1799,7 +1800,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Pierce Orb");
                 item.Desc = new LocalText("An orb that allows the team's attacks and items to pierce through multiple targets.");
                 item.Sprite = "Orb_White";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(115, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("pierce", true, false));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1816,7 +1817,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Orb_Purple";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(-1));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(1, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("sleep", true, false, statusStates));
                 item.UseEvent.OnHits.Add(0, new WarpToEndEvent(80, 0, true));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
@@ -1832,7 +1833,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Orb_Green";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(89, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("protect", true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1876,7 +1877,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Orb_Pink";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(15));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(1, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("sleep", true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1897,7 +1898,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Orb_Tan";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(15));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(7, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("confuse", true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1919,7 +1920,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Orb_Tan";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(11));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(4, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("paralyze", true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1937,7 +1938,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Orb_LightBlue";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(20));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(3, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("freeze", true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1967,7 +1968,7 @@ namespace DataGenerator.Data
 
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(20));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(90, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("immobilized", true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1999,7 +2000,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("All-Dodge Orb");
                 item.Desc = new LocalText("An orb that drastically boosts Evasion. It affects team members up to 5 tiles away.");
                 item.Sprite = "Orb_Yellow";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(15, true, false, 6));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_evasion", true, false, 6));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -2036,7 +2037,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Slow Orb");
                 item.Desc = new LocalText("An orb that reduces the Movement Speed of all enemies by 1 level. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_Purple";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent(9, true, false, -1));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, -1));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -2050,7 +2051,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Rebound Orb");
                 item.Desc = new LocalText("An orb that gives the team the Mini-Counter status. If an attack hits any member of the team, the damage will be reflected back at the user.");
                 item.Sprite = "Orb_Red";
-                item.UseEvent.OnHits.Add(0, new StatusBattleEvent(100, true, false));
+                item.UseEvent.OnHits.Add(0, new StatusBattleEvent("mini_counter", true, false));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -2068,7 +2069,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Orb_Green";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(30));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent(82, true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("magic_coat", true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -2104,7 +2105,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Foe-Seal Orb");
                 item.Desc = new LocalText("An orb that seals the last-used move of all enemies. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_DarkBlue";
-                item.UseEvent.OnHits.Add(0, new DisableBattleEvent(60, 26));
+                item.UseEvent.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot"));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -2247,7 +2248,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An item to be held by a Pokémon. It boosts moves used consecutively, but only until a different move is used.");
                 item.Sprite = "Box_White";
                 item.Price = 200;
-                item.BeforeHittings.Add(0, new RepeatHitEvent(27, 28, 20, 10, false));
+                item.BeforeHittings.Add(0, new RepeatHitEvent("last_used_move", "times_move_used", 20, 10, false));
             }
             else if (ii == 311)
             {
@@ -2255,15 +2256,15 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A tough, discarded carapace that prevents the holder from being immobilized.");
                 item.Sprite = "Box_Tan";
                 item.Price = 200;
-                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(90, new StringKey("MSG_SHED_SHELL")));
-                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(19, new StringKey("MSG_SHED_SHELL")));
-                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(20, new StringKey("MSG_SHED_SHELL")));
-                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(44, new StringKey("MSG_SHED_SHELL")));
-                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(45, new StringKey("MSG_SHED_SHELL")));
-                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(46, new StringKey("MSG_SHED_SHELL")));
-                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(58, new StringKey("MSG_SHED_SHELL")));
-                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(103, new StringKey("MSG_SHED_SHELL")));
-                item.BeforeStatusAdds.Add(0, new PreventStatusCheck(104, new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck("immobilized", new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck("wrap", new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck("bind", new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck("fire_spin", new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck("whirlpool", new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck("sand_tomb", new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck("telekinesis", new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck("clamp", new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck("infestation", new StringKey("MSG_SHED_SHELL")));
             }
             else if (ii == 312)
             {
@@ -2319,7 +2320,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Band_Gray";
                 item.Price = 500;
                 item.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 3, 2));
-                item.OnRefresh.Add(0, new MoveLockEvent(26, true));
+                item.OnRefresh.Add(0, new MoveLockEvent("last_used_move_slot", true));
             }
             else if (ii == 319)
             {
@@ -2328,7 +2329,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Specs_Yellow";
                 item.Price = 500;
                 item.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 3, 2));
-                item.OnRefresh.Add(0, new MoveLockEvent(26, true));
+                item.OnRefresh.Add(0, new MoveLockEvent("last_used_move_slot", true));
             }
             else if (ii == 320)
             {
@@ -2337,7 +2338,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Scarf_2_LightBlue";
                 item.Price = 500;
                 item.OnRefresh.Add(0, new AddSpeedEvent(1));
-                item.OnRefresh.Add(0, new MoveLockEvent(26, true));
+                item.OnRefresh.Add(0, new MoveLockEvent("last_used_move_slot", true));
             }
             else if (ii == 321)
             {
@@ -2363,7 +2364,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A bizarre orb that will badly poison the holder. This item sticks when held.");
                 item.Sprite = "Toxic_Orb";
                 item.Price = 300;
-                item.AfterActions.Add(0, new OnAggressionEvent(new StatusBattleEvent(6, false, true)));
+                item.AfterActions.Add(0, new OnAggressionEvent(new StatusBattleEvent("poison_toxic", false, true)));
             }
             else if (ii == 324)
             {
@@ -2371,7 +2372,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A bizarre orb that will afflict the holder with a burn. This item sticks when held.");
                 item.Sprite = "Flame_Orb";
                 item.Price = 300;
-                item.AfterActions.Add(0, new OnAggressionEvent(new StatusBattleEvent(2, false, true)));
+                item.AfterActions.Add(0, new OnAggressionEvent(new StatusBattleEvent("burn", false, true)));
             }
             else if (ii == 325)
             {
@@ -2381,7 +2382,7 @@ namespace DataGenerator.Data
                 item.Price = 300;
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(2));
-                item.AfterActions.Add(0, new OnMoveUseEvent(new StatusStateBattleEvent(55, false, true, statusStates)));
+                item.AfterActions.Add(0, new OnMoveUseEvent(new StatusStateBattleEvent("paused", false, true, statusStates)));
                 item.OnRefresh.Add(0, new MiscEvent(new AnchorState()));
                 item.TargetElementEffects.Add(1, new TypeVulnerableEvent("ground"));
             }
@@ -2700,7 +2701,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Razor Fang");
                 item.Desc = new LocalText("A savagely sharp, piercing fang. When the holder successfully inflicts damage, the target may also flinch.");
                 item.Sprite = "Fang_White";
-                item.AfterHittings.Add(0, new OnMoveUseEvent(new OnHitEvent(true, false, 25, new StatusBattleEvent(8, true, true))));
+                item.AfterHittings.Add(0, new OnMoveUseEvent(new OnHitEvent(true, false, 25, new StatusBattleEvent("flinch", true, true))));
             }
             else if (ii == 369)
             {
@@ -2736,8 +2737,8 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("King's Rock");
                 item.Desc = new LocalText("An impressive icon that conveys a kingly nobility. When the holder successfully inflicts damage, the target may also flinch.");
                 item.Sprite = "Crown_Yellow";
-                //item.AfterHittings.Add(0, new OnHitEvent(true, false, 25, new StatusBattleEvent(8, true, true)));
-                item.AfterHittings.Add(0, new OnMoveUseEvent(new OnHitEvent(true, false, 25, new StatusBattleEvent(8, true, true))));
+                //item.AfterHittings.Add(0, new OnHitEvent(true, false, 25, new StatusBattleEvent("flinch", true, true)));
+                item.AfterHittings.Add(0, new OnMoveUseEvent(new OnHitEvent(true, false, 25, new StatusBattleEvent("flinch", true, true))));
             }
             else if (ii == 375)
             {
@@ -3108,7 +3109,7 @@ namespace DataGenerator.Data
                 item.ItemStates.Set(new FoodState());
                 item.Price = 1;
                 item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(30, false));
-                item.UseEvent.OnHits.Add(0, new ChooseOneEvent(new StatusBattleEvent(1, true, false), new StatusBattleEvent(2, true, false), new StatusBattleEvent(4, true, false), new StatusBattleEvent(6, true, false)));
+                item.UseEvent.OnHits.Add(0, new ChooseOneEvent(new StatusBattleEvent("sleep", true, false), new StatusBattleEvent("burn", true, false), new StatusBattleEvent("paralyze", true, false), new StatusBattleEvent("poison_toxic", true, false)));
                 item.UseAction = new SelfAction();
                 item.UseAction.TargetAlignments |= Alignment.Self;
                 item.Explosion.TargetAlignments |= Alignment.Self;

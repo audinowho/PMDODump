@@ -83,7 +83,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SUN_END"), true));
                 status.OnActions.Add(0, new MultiplyElementEvent("fire", 3, 2, false));
                 status.OnActions.Add(0, new MultiplyElementEvent("water", 1, 2, false));
-                status.OnTurnStarts.Add(0, new RemoveStatusEvent(3));//insta-freeze thaw
+                status.OnTurnStarts.Add(0, new RemoveStatusEvent("freeze"));//insta-freeze thaw
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
                 status.OnMapTurnEnds.Add(5, new MapTickEvent());
@@ -214,17 +214,17 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusSoundEvent("DUN_Cloudy"));
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_GRAVITY_START"), true));
                 //remove statuses when gravity intensifies
-                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent(38)));
-                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent(40)));
-                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent(58)));
-                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent(102)));
+                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent("flying")));
+                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent("bouncing")));
+                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent("telekinesis")));
+                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent("magnet_rise")));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_GRAVITY_END"), true));
                 status.TargetElementEffects.Add(1, new TypeVulnerableEvent("ground"));
                 //prevent telekinesis, magnet rise, bounce and fly status effects
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(38, new StringKey("MSG_GRAVITY_NO_FLY")));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(40, new StringKey("MSG_GRAVITY_NO_BOUNCE")));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(58, new StringKey("MSG_GRAVITY_NO_LEVITATE")));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(102, new StringKey("MSG_GRAVITY_NO_LEVITATE")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("flying", new StringKey("MSG_GRAVITY_NO_FLY")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("bouncing", new StringKey("MSG_GRAVITY_NO_BOUNCE")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("telekinesis", new StringKey("MSG_GRAVITY_NO_LEVITATE")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("magnet_rise", new StringKey("MSG_GRAVITY_NO_LEVITATE")));
                 //prevent the specific moves banned by gravity... or not
                 //drop everyone's evasion by 2 stages
                 status.BeforeBeingHits.Add(-5, new TargetStatAddEvent(Stat.DodgeRate, -2));
@@ -289,11 +289,11 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_ELECTRIC_TERRAIN_START"), true));
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
                 //remove statuses when electric terrain occurs
-                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent(1)));
-                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent(61)));
+                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent("sleep")));
+                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent("yawning")));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_ELECTRIC_TERRAIN_END"), true));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(1, new StringKey("MSG_ELECTRIC_TERRAIN_NO_SLEEP")));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(61, new StringKey("MSG_ELECTRIC_TERRAIN_NO_DROWSY")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("sleep", new StringKey("MSG_ELECTRIC_TERRAIN_NO_SLEEP")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("yawning", new StringKey("MSG_ELECTRIC_TERRAIN_NO_DROWSY")));
                 status.OnActions.Add(0, new MultiplyElementEvent("electric", 3, 2, false));
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
@@ -526,8 +526,8 @@ namespace DataGenerator.Data
                 //constantly spawn a mon near the exit
                 status.OnMapStatusAdds.Add(0, new MapStatusBGMEvent("C07. Outlaw.ogg"));
                 status.OnMapStatusAdds.Add(0, new MapStatusScriptEvent("SetShopkeeperHostile"));
-                status.OnMapStatusAdds.Add(0, new MapStatusSpawnStartGuardsEvent(128));
-                status.OnMapTurnEnds.Add(10, new PeriodicSpawnEntranceGuards(10, 40, 128));
+                status.OnMapStatusAdds.Add(0, new MapStatusSpawnStartGuardsEvent("shopkeeper"));
+                status.OnMapTurnEnds.Add(10, new PeriodicSpawnEntranceGuards(10, 40, "shopkeeper"));
             }
             else if (ii == 32)
             {

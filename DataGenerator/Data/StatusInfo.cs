@@ -154,7 +154,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new TransferStatusState());
                 status.StatusStates.Set(new CountState(2));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_POISON_ALREADY")));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(6, new StringKey("MSG_POISON_ALREADY")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison_toxic", new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_POISON_FAIL")));
                 status.BeforeStatusAdds.Add(0, new TypeCheck("poison", new StringKey("MSG_POISON_FAIL_ELEMENT")));
                 status.BeforeStatusAdds.Add(0, new TypeCheck("steel", new StringKey("MSG_POISON_FAIL_ELEMENT")));
@@ -175,7 +175,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
                 status.StatusStates.Set(new CountState(0));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(5, new StringKey("MSG_POISON_ALREADY")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison", new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_POISON_FAIL")));
                 status.BeforeStatusAdds.Add(0, new TypeCheck("poison", new StringKey("MSG_POISON_FAIL_ELEMENT")));
@@ -871,7 +871,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new CountDownState(4));
                 StateCollection<StatusState> states = new StateCollection<StatusState>();
                 states.Set(new CountDownState(10));
-                effects.Add(new GiveStatusEvent(7, states));
+                effects.Add(new GiveStatusEvent("confuse", states));
                 status.OnTurnEnds.Add(0, new CountDownEvent(effects));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -889,7 +889,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new CountDownState(4));
                 StateCollection<StatusState> states = new StateCollection<StatusState>();
                 states.Set(new CountDownState(10));
-                effects.Add(new GiveStatusEvent(7, states));
+                effects.Add(new GiveStatusEvent("confuse", states));
                 status.OnTurnEnds.Add(0, new CountDownEvent(effects));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -907,7 +907,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new CountDownState(4));
                 StateCollection<StatusState> states = new StateCollection<StatusState>();
                 states.Set(new CountDownState(10));
-                effects.Add(new GiveStatusEvent(7, states));
+                effects.Add(new GiveStatusEvent("confuse", states));
                 status.OnTurnEnds.Add(0, new CountDownEvent(effects));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -1095,7 +1095,7 @@ namespace DataGenerator.Data
                 effects.Add(new RemoveEvent(false));
                 StateCollection<StatusState> states = new StateCollection<StatusState>();
                 states.Set(new CountDownState(10));
-                effects.Add(new GiveStatusEvent(1, states));
+                effects.Add(new GiveStatusEvent("sleep", states));
                 status.StatusStates.Set(new CountDownState(3));
                 status.OnTurnEnds.Add(0, new CountDownEvent(effects));
             }
@@ -1242,11 +1242,11 @@ namespace DataGenerator.Data
                 status.Emoticon = "Exposed_Red";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_SLEEPLESS_ALREADY")));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(1, new StringKey("MSG_SLEEPLESS")));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(61, new StringKey("MSG_SLEEPLESS")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("sleep", new StringKey("MSG_SLEEPLESS")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("yawning", new StringKey("MSG_SLEEPLESS")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SLEEPLESS_START"), true));
-                status.OnStatusAdds.Add(0, new ThisStatusGivenEvent(new StatusCharEvent(new RemoveStatusEvent(1), true)));
-                status.OnStatusAdds.Add(0, new ThisStatusGivenEvent(new StatusCharEvent(new RemoveStatusEvent(61), true)));
+                status.OnStatusAdds.Add(0, new ThisStatusGivenEvent(new StatusCharEvent(new RemoveStatusEvent("sleep"), true)));
+                status.OnStatusAdds.Add(0, new ThisStatusGivenEvent(new StatusCharEvent(new RemoveStatusEvent("yawning"), true)));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SLEEPLESS_END")));
                 status.StatusStates.Set(new CountDownState(50));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
@@ -1260,7 +1260,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new TransferStatusState());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_RAGE_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_RAGE_END")));
-                status.AfterBeingHits.Add(0, new OnHitEvent(true, false, 100, new StatusStackBattleEvent(10, true, true, 1)));
+                status.AfterBeingHits.Add(0, new OnHitEvent(true, false, 100, new StatusStackBattleEvent("mod_attack", true, true, 1)));
                 status.StatusStates.Set(new CountDownState(10));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1290,7 +1290,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_ENCORE_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_ENCORE_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_ENCORE_END")));
-                status.OnRefresh.Add(0, new MoveLockEvent(26, true));
+                status.OnRefresh.Add(0, new MoveLockEvent("last_used_move_slot", true));
                 status.StatusStates.Set(new CountDownState(5));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1305,7 +1305,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_NOTHING_HAPPENED")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TORMENT_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
-                status.OnRefresh.Add(0, new MoveLockEvent(26, false));
+                status.OnRefresh.Add(0, new MoveLockEvent("last_used_move_slot", false));
                 status.StatusStates.Set(new CountDownState(25));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1727,7 +1727,7 @@ namespace DataGenerator.Data
                 emitter.HeightSpeed = 240;
                 status.OnStatusAdds.Add(0, new StatusAnimEvent(emitter, "DUN_Focus_Blast_3", 20, true));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POWER_CHARGE_START"), true));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(55, new StringKey()));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("paused", new StringKey()));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POWER_CHARGE_END")));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.OnRefresh.Add(0, new PPSaverEvent());
@@ -1843,7 +1843,7 @@ namespace DataGenerator.Data
                 emitter.HeightSpeed = 36;
                 emitter.TotalParticles = 1;
                 emitter.StartHeight = 16;
-                status.OnTurnEnds.Add(0, new NightmareEvent(1, 8, new StringKey("MSG_NIGHTMARE"), new AnimEvent(emitter, "DUN_Curse_2")));
+                status.OnTurnEnds.Add(0, new NightmareEvent("sleep", 8, new StringKey("MSG_NIGHTMARE"), new AnimEvent(emitter, "DUN_Curse_2")));
                 status.StatusStates.Set(new CountDownState(25));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
@@ -2087,10 +2087,10 @@ namespace DataGenerator.Data
                 status.Emoticon = "Cycle_Red";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_NOTHING_HAPPENED")));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(72, new StringKey("MSG_MENTAL_CHARGE")));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(73, new StringKey("MSG_MENTAL_CHARGE")));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(74, new StringKey("MSG_MENTAL_CHARGE")));
-                status.BeforeStatusAdds.Add(0, new PreventStatusCheck(60, new StringKey("MSG_MENTAL_CHARGE")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("taunted", new StringKey("MSG_MENTAL_CHARGE")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("encore", new StringKey("MSG_MENTAL_CHARGE")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("torment", new StringKey("MSG_MENTAL_CHARGE")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("disable", new StringKey("MSG_MENTAL_CHARGE")));
 
                 SqueezedAreaEmitter emitter = new SqueezedAreaEmitter(new AnimData("Focus_Energy", 4));
                 emitter.Bursts = 4;

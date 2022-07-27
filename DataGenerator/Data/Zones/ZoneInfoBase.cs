@@ -1394,10 +1394,10 @@ namespace DataGenerator.Data
                         mob.Tactic = "wander_normal";
                         mob.SpawnFeatures.Add(new MobSpawnMovesOff(mob.SpecifiedSkills.Count));
                         MobSpawnStatus keySpawn = new MobSpawnStatus();
-                        keySpawn.Statuses.Add(new StatusEffect(130), 10);
+                        keySpawn.Statuses.Add(new StatusEffect("veiled"), 10);
                         mob.SpawnFeatures.Add(keySpawn);
                         keySpawn = new MobSpawnStatus();
-                        keySpawn.Statuses.Add(new StatusEffect(131), 10);
+                        keySpawn.Statuses.Add(new StatusEffect("friendly_fire"), 10);
                         mob.SpawnFeatures.Add(keySpawn);
                         SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
                         specificTeam.Spawns.Add(mob);
@@ -2576,7 +2576,7 @@ namespace DataGenerator.Data
                     post_mob.SpawnFeatures.Add(new MobSpawnWeak());
                     if (yy == 0)
                     {
-                        StatusEffect sleep = new StatusEffect(1);
+                        StatusEffect sleep = new StatusEffect("sleep");
                         sleep.StatusStates.Set(new CountDownState(-1));
                         MobSpawnStatus status = new MobSpawnStatus();
                         status.Statuses.Add(sleep, 10);
@@ -2734,7 +2734,7 @@ namespace DataGenerator.Data
                         spawner.BaseForm = new MonsterID(149, 0, -1, Gender.Unknown);
                         spawner.Level = new RandRange(80);
                         //status sleep
-                        StatusEffect sleep = new StatusEffect(1);
+                        StatusEffect sleep = new StatusEffect("sleep");
                         sleep.StatusStates.Set(new CountDownState(-1));
                         MobSpawnStatus status = new MobSpawnStatus();
                         status.Statuses.Add(sleep, 10);

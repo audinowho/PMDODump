@@ -42,7 +42,7 @@ namespace DataGenerator.Data
                 emitter.Bursts = 3;
                 emitter.Speed = 48;
                 emitter.StartDistance = 4;
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent(8, false, true, false, new StringKey("MSG_STENCH"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("flinch", false, true, false, new StringKey("MSG_STENCH"),
                     new BattleAnimEvent(emitter, "DUN_Smokescreen", false, 30))));
             }
             else if (ii == 2)
@@ -81,7 +81,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Limber");
                 ability.Desc = new LocalText("Its limber body protects the Pokémon from paralysis.");
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(4, new StringKey("MSG_LIMBER")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("paralyze", new StringKey("MSG_LIMBER")));
             }
             else if (ii == 8)
             {
@@ -94,7 +94,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Static");
                 ability.Desc = new LocalText("The Pokémon is charged with static electricity, so contact with it may cause paralysis.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent(4, false, true, false, new StringKey("MSG_STATIC"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("paralyze", false, true, false, new StringKey("MSG_STATIC"),
                     new BattleAnimEvent(new SingleEmitter(new AnimData("Spark", 3)), "DUN_Paralyzed", false, 0))));
             }
             else if (ii == 10)
@@ -123,8 +123,8 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Oblivious");
                 ability.Desc = new LocalText("Protects the Pokémon from Attract or Rage Powder.");
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(21, new StringKey("MSG_OBLIVIOUS")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(22, new StringKey("MSG_OBLIVIOUS")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("in_love", new StringKey("MSG_OBLIVIOUS")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("rage_powder", new StringKey("MSG_OBLIVIOUS")));
             }
             else if (ii == 13)
             {
@@ -142,8 +142,8 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Insomnia");
                 ability.Desc = new LocalText("The Pokémon is suffering from insomnia and cannot fall asleep.");
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(1, new StringKey("MSG_INSOMNIA")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(61, new StringKey("MSG_INSOMNIA_DROWSY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("sleep", new StringKey("MSG_INSOMNIA")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("yawning", new StringKey("MSG_INSOMNIA_DROWSY")));
             }
             else if (ii == 16)
             {
@@ -155,8 +155,8 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Immunity");
                 ability.Desc = new LocalText("The immune system of the Pokémon prevents it from getting poisoned.");
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(5, new StringKey("MSG_IMMUNITY")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(6, new StringKey("MSG_IMMUNITY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison", new StringKey("MSG_IMMUNITY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison_toxic", new StringKey("MSG_IMMUNITY")));
             }
             else if (ii == 18)
             {
@@ -167,7 +167,7 @@ namespace DataGenerator.Data
                 ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent("fire"));
                 ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("fire", false, true,
                     new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink",
-                    new StatusElementBattleEvent(84, true, false, "fire")));
+                    new StatusElementBattleEvent("type_boosted", true, false, "fire")));
             }
             else if (ii == 19)
             {
@@ -179,7 +179,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Own Tempo");
                 ability.Desc = new LocalText("This Pokémon has its own tempo, and that prevents it from becoming confused.");
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(7, new StringKey("MSG_OWN_TEMPO")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("confuse", new StringKey("MSG_OWN_TEMPO")));
             }
             else if (ii == 21)
             {
@@ -199,9 +199,9 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Shadow Tag");
                 ability.Desc = new LocalText("This Pokémon steps on the opposing Pokémon's shadow to prevent it from escaping.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new StatusBattleEvent(90, false, true, false, new StringKey("MSG_SHADOW_TAG"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new StatusBattleEvent("immobilized", false, true, false, new StringKey("MSG_SHADOW_TAG"),
                     new BattleAnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", false, 0))));
-                //ability.AfterHittings.Add(0, new OnHitEvent(false, false, 100, new StatusBattleEvent(90, true, true, false, new StringKey("MSG_SHADOW_TAG"),
+                //ability.AfterHittings.Add(0, new OnHitEvent(false, false, 100, new StatusBattleEvent("immobilized", true, true, false, new StringKey("MSG_SHADOW_TAG"),
                 //    new BattleAnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", true, 0))));
             }
             else if (ii == 24)
@@ -249,9 +249,9 @@ namespace DataGenerator.Data
                 emitter3.Speed = 48;
                 emitter3.StartDistance = 4;
                 ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100,
-                    new StatusBattleEvent(1, false, true, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter1, "DUN_Substitute", false, 20)),
-                    new StatusBattleEvent(4, false, true, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter2, "DUN_Substitute", false, 20)),
-                    new StatusBattleEvent(5, false, true, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter3, "DUN_Substitute", false, 20))));
+                    new StatusBattleEvent("sleep", false, true, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter1, "DUN_Substitute", false, 20)),
+                    new StatusBattleEvent("paralyze", false, true, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter2, "DUN_Substitute", false, 20)),
+                    new StatusBattleEvent("poison", false, true, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter3, "DUN_Substitute", false, 20))));
             }
             else if (ii == 28)
             {
@@ -278,7 +278,7 @@ namespace DataGenerator.Data
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = Alignment.Foe;
                 ability.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent(Alignment.Friend, "electric", new StringKey("MSG_DRAW_ATTACK")));
-                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("electric", true, new StatusStackBattleEvent(12, true, false, 1)));
+                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("electric", true, new StatusStackBattleEvent("mod_special_attack", true, false, 1)));
                 ability.BeforeBeingHits.Add(5, new AddContextStateEvent(new SingleDrawAbsorb(), true));
             }
             else if (ii == 32)
@@ -329,20 +329,20 @@ namespace DataGenerator.Data
                 emitter.StartHeight = -4;
                 emitter.HeightSpeed = 12;
                 emitter.SpeedDiff = 4;
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent(5, false, true, false, new StringKey("MSG_POISON_POINT"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("poison", false, true, false, new StringKey("MSG_POISON_POINT"),
                     new BattleAnimEvent(emitter, "DUN_Toxic", false, 30))));
             }
             else if (ii == 39)
             {
                 ability.Name = new LocalText("Inner Focus");
                 ability.Desc = new LocalText("The Pokémon's intensely focused, and that protects the Pokémon from flinching.");
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(8, new StringKey("MSG_INNER_FOCUS")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("flinch", new StringKey("MSG_INNER_FOCUS")));
             }
             else if (ii == 40)
             {
                 ability.Name = new LocalText("Magma Armor");
                 ability.Desc = new LocalText("The Pokémon is covered with hot magma, which prevents the Pokémon from becoming frozen. Thrown items will also burn up on contact.");
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(3, new StringKey("MSG_MAGMA_ARMOR")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("freeze", new StringKey("MSG_MAGMA_ARMOR")));
                 ability.ProximityEvent.Radius = 0;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
                 ability.ProximityEvent.BeforeExplosions.Add(0, new DampItemEvent());
@@ -359,7 +359,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Water Veil");
                 ability.Desc = new LocalText("The Pokémon is covered with a water veil, which prevents the Pokémon from getting a burn.");
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(2, new StringKey("MSG_WATER_VEIL")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("burn", new StringKey("MSG_WATER_VEIL")));
             }
             else if (ii == 42)
             {
@@ -405,7 +405,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Early Bird");
                 ability.Desc = new LocalText("The Pokémon awakens quickly from sleep.");
-                ability.OnTurnEnds.Add(0, new EarlyBirdEvent(1));
+                ability.OnTurnEnds.Add(0, new EarlyBirdEvent("sleep"));
             }
             else if (ii == 49)
             {
@@ -413,7 +413,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Contact with the Pokémon may burn the attacker. Thrown items will also burn up on contact.");
                 SingleEmitter endEmitter = new SingleEmitter(new AnimData("Burned", 3));
                 endEmitter.LocHeight = 8;
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent(2, false, true, false, new StringKey("MSG_FLAME_BODY"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("burn", false, true, false, new StringKey("MSG_FLAME_BODY"),
                     new BattleAnimEvent(endEmitter, "DUN_Flamethrower_3", false, 0))));
                 ability.ProximityEvent.Radius = 0;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
@@ -431,15 +431,15 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Run Away");
                 ability.Desc = new LocalText("Prevents the Pokémon from being Immobilized.");
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(90, new StringKey("MSG_RUN_AWAY")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(19, new StringKey("MSG_RUN_AWAY")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(20, new StringKey("MSG_RUN_AWAY")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(44, new StringKey("MSG_RUN_AWAY")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(45, new StringKey("MSG_RUN_AWAY")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(46, new StringKey("MSG_RUN_AWAY")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(58, new StringKey("MSG_RUN_AWAY")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(103, new StringKey("MSG_RUN_AWAY")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(104, new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("immobilized", new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("wrap", new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("bind", new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("fire_spin", new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("whirlpool", new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("sand_tomb", new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("telekinesis", new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("clamp", new StringKey("MSG_RUN_AWAY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("infestation", new StringKey("MSG_RUN_AWAY")));
             }
             else if (ii == 51)
             {
@@ -470,7 +470,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("The Pokémon can't attack on consecutive turns.");
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(2));
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new StatusStateBattleEvent(55, false, true, statusStates)));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new StatusStateBattleEvent("paused", false, true, statusStates)));
             }
             else if (ii == 55)
             {
@@ -485,7 +485,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Contact with the Pokémon may cause infatuation.");
                 SingleEmitter endAnim = new SingleEmitter(new AnimData("Charm", 1));
                 endAnim.LocHeight = 16;
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent(21, false, true, false, new StringKey("MSG_CUTE_CHARM"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("in_love", false, true, false, new StringKey("MSG_CUTE_CHARM"),
                     new BattleAnimEvent(endAnim, "DUN_Charm", false, 20))));
             }
             else if (ii == 57)
@@ -548,7 +548,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Guts");
                 ability.Desc = new LocalText("It's so gutsy that having a major status condition boosts the Pokémon's Attack stat.");
                 ability.OnActions.Add(0, new MultiplyCategoryInMajorStatusEvent(BattleData.SkillCategory.Physical, 3, 2, false));
-                ability.OnActions.Add(0, new MultiplyCategoryInStatusEvent(2, BattleData.SkillCategory.Physical, 3, 2, false));
+                ability.OnActions.Add(0, new MultiplyCategoryInStatusEvent("burn", BattleData.SkillCategory.Physical, 3, 2, false));
             }
             else if (ii == 63)
             {
@@ -603,15 +603,15 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Arena Trap");
                 ability.Desc = new LocalText("Prevents grounded opposing Pokémon from fleeing.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new CheckImmunityBattleEvent("ground", false, new StatusBattleEvent(90, false, true, false, new StringKey("MSG_ARENA_TRAP")))));
-                //ability.AfterHittings.Add(0, new OnHitEvent(false, false, 100, new CheckImmunityBattleEvent("ground", true, new StatusBattleEvent(90, true, true, false, new StringKey("MSG_ARENA_TRAP")))));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new CheckImmunityBattleEvent("ground", false, new StatusBattleEvent("immobilized", false, true, false, new StringKey("MSG_ARENA_TRAP")))));
+                //ability.AfterHittings.Add(0, new OnHitEvent(false, false, 100, new CheckImmunityBattleEvent("ground", true, new StatusBattleEvent("immobilized", true, true, false, new StringKey("MSG_ARENA_TRAP")))));
             }
             else if (ii == 72)
             {
                 ability.Name = new LocalText("Vital Spirit");
                 ability.Desc = new LocalText("The Pokémon is full of vitality, and that prevents it from falling asleep.");
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(1, new StringKey("MSG_VITAL_SPIRIT")));
-                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck(61, new StringKey("MSG_VITAL_SPIRIT_DROWSY")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("sleep", new StringKey("MSG_VITAL_SPIRIT")));
+                ability.BeforeStatusAdds.Add(0, new PreventStatusCheck("yawning", new StringKey("MSG_VITAL_SPIRIT_DROWSY")));
             }
             else if (ii == 73)
             {
@@ -641,7 +641,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Tangled Feet");
                 ability.Desc = new LocalText("If the Pokémon is confused, it will avoid attacks from a distance.");
-                ability.BeforeBeingHits.Add(0, new EvadeInStatusEvent(7));
+                ability.BeforeBeingHits.Add(0, new EvadeInStatusEvent("confuse"));
             }
             else if (ii == 78)
             {
@@ -652,7 +652,7 @@ namespace DataGenerator.Data
                 ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent("electric"));
                 ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("electric", false, true,
                     new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink",
-                    new StatusStackBattleEvent(9, true, false, 1)));
+                    new StatusStackBattleEvent("mod_speed", true, false, 1)));
             }
             else if (ii == 79)
             {
@@ -668,7 +668,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Boosts the Pokémon's Movement Speed each time the it flinches.");
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new StackState(1));
-                ability.OnStatusAdds.Add(0, new StatusResponseEvent(8, new GiveStatusEvent(9, statusStates, false, new StringKey("MSG_STEADFAST"))));
+                ability.OnStatusAdds.Add(0, new StatusResponseEvent("flinch", new GiveStatusEvent("mod_speed", statusStates, false, new StringKey("MSG_STEADFAST"))));
             }
             else if (ii == 81)
             {
@@ -689,7 +689,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Anger Point");
                 ability.Desc = new LocalText("The Pokémon is angered when it takes a critical hit, and that maxes its Attack stat.");
-                ability.AfterBeingHits.Add(0, new CritNeededEvent(new StatusStackBattleEvent(10, true, true, false, 12, new StringKey("MSG_ANGER_POINT"))));
+                ability.AfterBeingHits.Add(0, new CritNeededEvent(new StatusStackBattleEvent("mod_attack", true, true, false, 12, new StringKey("MSG_ANGER_POINT"))));
             }
             else if (ii == 84)
             {
@@ -727,7 +727,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Download");
                 ability.Desc = new LocalText("Compares an opposing Pokémon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat— whichever will be more effective.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, false, true, 100, new DownloadEvent(10, 12)));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, false, true, 100, new DownloadEvent("mod_attack", "mod_special_attack")));
             }
             else if (ii == 89)
             {
@@ -801,7 +801,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Stall");
                 ability.Desc = new LocalText("Boosts move power if the Pokémon was last hit by the target.");
-                ability.BeforeHittings.Add(0, new RevengeEvent(25, 5, 4, false, false));
+                ability.BeforeHittings.Add(0, new RevengeEvent("last_targeted_by", 5, 4, false, false));
             }
             else if (ii == 101)
             {
@@ -898,7 +898,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Temporarily lowers the Pokémon's Movement Speed.");
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new StackState(-1));
-                ability.OnMapStarts.Add(0, new GiveStatusEvent(9, statusStates, false, new StringKey("MSG_SLOW_START")));
+                ability.OnMapStarts.Add(0, new GiveStatusEvent("mod_speed", statusStates, false, new StringKey("MSG_SLOW_START")));
             }
             else if (ii == 113)
             {
@@ -913,7 +913,7 @@ namespace DataGenerator.Data
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = Alignment.Foe;
                 ability.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent(Alignment.Friend, "water", new StringKey("MSG_DRAW_ATTACK")));
-                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("water", true, new StatusStackBattleEvent(12, true, false, 1)));
+                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("water", true, new StatusStackBattleEvent("mod_special_attack", true, false, 1)));
                 ability.BeforeBeingHits.Add(5, new AddContextStateEvent(new SingleDrawAbsorb(), true));
             }
             else if (ii == 115)
@@ -1001,7 +1001,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Reduces the HP of opposing Pokémon that are asleep.");
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = Alignment.Foe;
-                ability.ProximityEvent.OnTurnEnds.Add(0, new NightmareEvent(1, 8, new StringKey("MSG_HURT_BY_OTHER"), new AnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", 0)));
+                ability.ProximityEvent.OnTurnEnds.Add(0, new NightmareEvent("sleep", 8, new StringKey("MSG_HURT_BY_OTHER"), new AnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", 0)));
             }
             else if (ii == 124)
             {
@@ -1037,7 +1037,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Boosts the Pokémon's Attack stat sharply when its stats are lowered.");
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new StackState(2));
-                ability.OnStatusAdds.Add(0, new StatDropResponseEvent(new GiveStatusEvent(10, statusStates, false)));
+                ability.OnStatusAdds.Add(0, new StatDropResponseEvent(new GiveStatusEvent("mod_attack", statusStates, false)));
             }
             else if (ii == 129)
             {
@@ -1051,7 +1051,7 @@ namespace DataGenerator.Data
                 SingleEmitter endAnim = new SingleEmitter(new AnimData("Spite", 3));
                 endAnim.Layer = DrawLayer.Back;
                 endAnim.LocHeight = 24;
-                CounterDisableBattleEvent counterDisable = new CounterDisableBattleEvent(60, new StringKey("MSG_CURSED_BODY"));
+                CounterDisableBattleEvent counterDisable = new CounterDisableBattleEvent("disable", new StringKey("MSG_CURSED_BODY"));
                 counterDisable.Anims.Add(new BattleAnimEvent(endAnim, "DUN_Spite", false, 30));
                 ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), true, false, false, 35, counterDisable));
             }
@@ -1075,7 +1075,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Weak Armor");
                 ability.Desc = new LocalText("Physical attacks lower its Defense stat and raise its Movement Speed.");
                 CategoryNeededEvent reqEffect = new CategoryNeededEvent(BattleData.SkillCategory.Physical);
-                reqEffect.BaseEvents.Add(new RaiseOneLowerOneEvent(9, 11, new StringKey("MSG_WEAK_ARMOR")));
+                reqEffect.BaseEvents.Add(new RaiseOneLowerOneEvent("mod_speed", "mod_defense", new StringKey("MSG_WEAK_ARMOR")));
                 ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe | Alignment.Friend, true, false, true, 100, reqEffect));
             }
             else if (ii == 134)
@@ -1100,14 +1100,14 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Toxic Boost");
                 ability.Desc = new LocalText("Powers up physical attacks when the Pokémon is poisoned.");
-                ability.OnActions.Add(0, new MultiplyCategoryInStatusEvent(5, BattleData.SkillCategory.Physical, 3, 2, false));
-                ability.OnActions.Add(0, new MultiplyCategoryInStatusEvent(6, BattleData.SkillCategory.Physical, 3, 2, false));
+                ability.OnActions.Add(0, new MultiplyCategoryInStatusEvent("poison", BattleData.SkillCategory.Physical, 3, 2, false));
+                ability.OnActions.Add(0, new MultiplyCategoryInStatusEvent("poison_toxic", BattleData.SkillCategory.Physical, 3, 2, false));
             }
             else if (ii == 138)
             {
                 ability.Name = new LocalText("Flare Boost");
                 ability.Desc = new LocalText("Powers up special attacks when the Pokémon is burned.");
-                ability.OnActions.Add(0, new MultiplyCategoryInStatusEvent(2, BattleData.SkillCategory.Magical, 3, 2, false));
+                ability.OnActions.Add(0, new MultiplyCategoryInStatusEvent("burn", BattleData.SkillCategory.Magical, 3, 2, false));
             }
             else if (ii == 139)
             {
@@ -1128,8 +1128,8 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Moody");
                 ability.Desc = new LocalText("Raises one stat and lowers another.");
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new MoodyEvent(10, 12)));
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe | Alignment.Friend, true, false, true, 100, new MoodyEvent(11, 13)));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new MoodyEvent("mod_attack", "mod_special_attack")));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe | Alignment.Friend, true, false, true, 100, new MoodyEvent("mod_defense", "mod_special_defense")));
             }
             else if (ii == 142)
             {
@@ -1153,7 +1153,7 @@ namespace DataGenerator.Data
                 emitter.StartHeight = -4;
                 emitter.HeightSpeed = 12;
                 emitter.SpeedDiff = 4;
-                ability.AfterHittings.Add(0, new OnHitEvent(true, true, 25, new StatusBattleEvent(5, true, true, false, new StringKey("MSG_POISON_TOUCH"),
+                ability.AfterHittings.Add(0, new OnHitEvent(true, true, 25, new StatusBattleEvent("poison", true, true, false, new StringKey("MSG_POISON_TOUCH"),
                     new BattleAnimEvent(emitter, "DUN_Toxic", true, 30))));
             }
             else if (ii == 144)
@@ -1187,13 +1187,13 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Analytic");
                 ability.Desc = new LocalText("Boosts move power if the Pokémon was last hit by the target.");
-                ability.BeforeHittings.Add(0, new RevengeEvent(25, 5, 4, false, false));
+                ability.BeforeHittings.Add(0, new RevengeEvent("last_targeted_by", 5, 4, false, false));
             }
             else if (ii == 149)
             {
                 ability.Name = new LocalText("Illusion");
                 ability.Desc = new LocalText("Disguises itself as another Pokémon, fooling wild Pokémon of the same species.");
-                ability.OnMapStarts.Add(0, new GiveIllusionEvent(111));
+                ability.OnMapStarts.Add(0, new GiveIllusionEvent("illusion"));
             }
             else if (ii == 150)
             {
@@ -1218,21 +1218,21 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Moxie");
                 ability.Desc = new LocalText("The Pokémon shows moxie, which may boost the Attack stat after knocking out any Pokémon with a move.");
-                ability.AfterActions.Add(0, new KnockOutNeededEvent(new OnMoveUseEvent(new OnHitAnyEvent(true, 50, new StatusStackBattleEvent(10, false, true, false, 1, new StringKey("MSG_MOXIE"))))));
+                ability.AfterActions.Add(0, new KnockOutNeededEvent(new OnMoveUseEvent(new OnHitAnyEvent(true, 50, new StatusStackBattleEvent("mod_attack", false, true, false, 1, new StringKey("MSG_MOXIE"))))));
             }
             else if (ii == 154)
             {
                 ability.Name = new LocalText("Justified");
                 ability.Desc = new LocalText("Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.");
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("dark", new StatusStackBattleEvent(10, true, true, false, 1, new StringKey("MSG_JUSTIFIED"))));
+                ability.AfterBeingHits.Add(0, new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_attack", true, true, false, 1, new StringKey("MSG_JUSTIFIED"))));
             }
             else if (ii == 155)
             {
                 ability.Name = new LocalText("Rattled");
                 ability.Desc = new LocalText("Dark-, Ghost-, and Bug-type moves scare the Pokémon and boost its Movement Speed.");
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("dark", new StatusStackBattleEvent(9, true, true, false, 1, new StringKey("MSG_RATTLED"))));
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("ghost", new StatusStackBattleEvent(9, true, true, false, 1, new StringKey("MSG_RATTLED"))));
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("bug", new StatusStackBattleEvent(9, true, true, false, 1, new StringKey("MSG_RATTLED"))));
+                ability.AfterBeingHits.Add(0, new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_speed", true, true, false, 1, new StringKey("MSG_RATTLED"))));
+                ability.AfterBeingHits.Add(0, new ElementNeededEvent("ghost", new StatusStackBattleEvent("mod_speed", true, true, false, 1, new StringKey("MSG_RATTLED"))));
+                ability.AfterBeingHits.Add(0, new ElementNeededEvent("bug", new StatusStackBattleEvent("mod_speed", true, true, false, 1, new StringKey("MSG_RATTLED"))));
             }
             else if (ii == 156)
             {
@@ -1249,7 +1249,7 @@ namespace DataGenerator.Data
                 ability.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
                 ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent("grass"));
                 ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("grass", false, true,
-                    new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink", new StatusStackBattleEvent(10, true, false, 1)));
+                    new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink", new StatusStackBattleEvent("mod_attack", true, false, 1)));
             }
             else if (ii == 158)
             {
@@ -1300,10 +1300,10 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Protects itself and its allies from attacks that limit their move choices.");
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Self | Alignment.Friend);
-                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck(72, new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
-                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck(73, new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
-                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck(74, new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
-                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck(60, new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
+                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck("taunted", new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
+                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck("encore", new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
+                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck("torment", new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
+                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck("disable", new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
             }
             else if (ii == 166)
             {
@@ -1355,7 +1355,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Boosts the Sp. Atk stat sharply when a stat is lowered.");
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new StackState(2));
-                ability.OnStatusAdds.Add(0, new StatDropResponseEvent(new GiveStatusEvent(12, statusStates, false)));
+                ability.OnStatusAdds.Add(0, new StatDropResponseEvent(new GiveStatusEvent("mod_special_attack", statusStates, false)));
             }
             else if (ii == 173)
             {
@@ -1375,8 +1375,8 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Prevents party Pokémon from falling asleep.");
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Self | Alignment.Friend);
-                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck(1, new StringKey("MSG_SWEET_VEIL"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
-                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck(61, new StringKey("MSG_SWEET_VEIL_DROWSY"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
+                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck("sleep", new StringKey("MSG_SWEET_VEIL"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
+                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck("yawning", new StringKey("MSG_SWEET_VEIL_DROWSY"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
             }
             else if (ii == 176)
             {
@@ -1452,7 +1452,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Gooey");
                 ability.Desc = new LocalText("Contact with the Pokémon lowers the attacker's Movement Speed.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 50, new StatusStackBattleEvent(9, false, true, -1)));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 50, new StatusStackBattleEvent("mod_speed", false, true, -1)));
             }
             else if (ii == 184)
             {
@@ -1538,7 +1538,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Stakeout");
                 ability.Desc = new LocalText("The Pokémon's first attack deals increased damage.");
-                ability.OnActions.Add(0, new MultiplyCategoryWithoutStatusEvent(27, BattleData.SkillCategory.None, 2, 1, false));
+                ability.OnActions.Add(0, new MultiplyCategoryWithoutStatusEvent("last_used_move", BattleData.SkillCategory.None, 2, 1, false));
             }
             else if (ii == 199)
             {
@@ -1554,7 +1554,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("**Berserk");
                 ability.Desc = new LocalText("Boosts the Pokémon's Sp. Atk stat when it takes a hit that causes its HP to become half or less.");
-                //ability.AfterBeingHits.Add(0, new HPDropRequiredEvent(1, 2, new StatusStackBattleEvent(12, true, true, false, 1, new StringKey("MSG_BERSERK"))));
+                //ability.AfterBeingHits.Add(0, new HPDropRequiredEvent(1, 2, new StatusStackBattleEvent("mod_special_attack", true, true, false, 1, new StringKey("MSG_BERSERK"))));
             }
             else if (ii == 202)
             {
@@ -1658,7 +1658,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Tangling Hair");
                 ability.Desc = new LocalText("Contact with the Pokémon lowers the attacker's Speed stat.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 50, new StatusStackBattleEvent(9, false, true, -1)));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 50, new StatusStackBattleEvent("mod_speed", false, true, -1)));
             }
             else if (ii == 222)
             {
@@ -1676,7 +1676,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Beast Boost");
                 ability.Desc = new LocalText("The Pokémon may boost its most proficient stat each time it knocks out a Pokémon with a move.");
-                ability.AfterActions.Add(0, new KnockOutNeededEvent(new OnMoveUseEvent(new OnHitAnyEvent(true, 50, new AffectHighestStatBattleEvent(false, 10, 11, 12, 13, false, 1)))));
+                ability.AfterActions.Add(0, new KnockOutNeededEvent(new OnMoveUseEvent(new OnHitAnyEvent(true, 50, new AffectHighestStatBattleEvent(false, "mod_attack", "mod_defense", "mod_special_attack", "mod_special_defense", false, 1)))));
             }
             else if (ii == 225)
             {
@@ -1793,7 +1793,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Ripen");
                 ability.Desc = new LocalText("Raises a stat when it eats a berry.");
-                ability.AfterBeingHits.Add(0, new BerryBoostEvent(9, 10, 11, 12, 13, 14, 15));
+                ability.AfterBeingHits.Add(0, new BerryBoostEvent("mod_speed", "mod_attack", "mod_defense", "mod_special_attack", "mod_special_defense", "mod_accuracy", "mod_evasion"));
             }
             else if (ii == 248)
             {
