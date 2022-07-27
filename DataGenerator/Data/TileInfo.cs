@@ -104,6 +104,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("poison", true, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
@@ -133,6 +134,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("sleep", true, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
@@ -166,6 +168,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("confuse", true, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
@@ -196,6 +199,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, true, -1));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
@@ -226,6 +230,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new AffectHighestStatBattleEvent(true, "mod_attack", "mod_defense", "mod_special_attack", "mod_special_defense", true, -2));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
@@ -253,6 +258,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitFX.Emitter = new SingleEmitter(new AnimData("X_RSE", 15), 3);
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot", true));
@@ -278,6 +284,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = Alignment.Self;
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new SpiteEvent("last_used_move_slot", 100));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
@@ -308,6 +315,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(FoodState)));
@@ -342,6 +350,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new SetItemStickyEvent(true, false, 116, true, new HashSet<FlagType>()));
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
@@ -370,6 +379,7 @@ namespace DataGenerator.Data
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
 
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
 
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
@@ -397,6 +407,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = Alignment.Self;
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitFX.Sound = "DUN_Eyedrop";
 
                 newData.HitRate = -1;
@@ -428,6 +439,7 @@ namespace DataGenerator.Data
 
                 ExplosionData altExplosion = new ExplosionData();
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHitTiles.Add(0, new LaunchAllEvent(8));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
@@ -456,6 +468,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
 
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHitTiles.Add(0, new WarpFoesToTileEvent(4));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
@@ -478,6 +491,7 @@ namespace DataGenerator.Data
 
                 ExplosionData altExplosion = new ExplosionData();
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
@@ -506,6 +520,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.HitCharAction = new CharAnimFrameType(04);//Hurt
                 newData.OnHits.Add(0, new IndirectDamageEvent(6));
@@ -538,6 +553,7 @@ namespace DataGenerator.Data
                 emitter.ParticlesPerTile = 0.7;
                 altExplosion.Emitter = emitter;
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
@@ -573,6 +589,7 @@ namespace DataGenerator.Data
                 emitter.ParticlesPerTile = 0.5;
                 altExplosion.Emitter = emitter;
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
@@ -599,6 +616,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new IndirectDamageEvent(8));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
@@ -622,6 +640,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("poison_toxic", true, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
@@ -645,6 +664,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new IndirectElementDamageEvent("rock", 8));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
@@ -673,6 +693,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 //newData.SkillStates.Add(typeof(BasePowerState).FullName, new BasePowerState());
                 //newData.BeforeHits.Add(0, new WeightBasePowerEffect());
@@ -705,6 +726,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = Alignment.Foe;
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("grudge", true, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
@@ -727,6 +749,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = Alignment.Self;
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new RestoreBellyEvent(-20, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
@@ -748,6 +771,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
@@ -777,6 +801,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.HitFX.Sound = "DUN_Wonder_Tile";
                 newData.HitFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
@@ -805,6 +830,7 @@ namespace DataGenerator.Data
                 altAction.ActionFX.ScreenMovement = new ScreenMover(0, 6, 30);
                 ExplosionData altExplosion = new ExplosionData();
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHitTiles.Add(0, new TriggerTrapEvent());
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
@@ -827,6 +853,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
@@ -849,6 +876,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
@@ -871,6 +899,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
@@ -893,6 +922,7 @@ namespace DataGenerator.Data
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }

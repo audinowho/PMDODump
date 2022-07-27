@@ -42,6 +42,8 @@ namespace DataGenerator.Data
         public static ItemData GetItemData(int ii)
         {
             ItemData item = new ItemData();
+            item.UseEvent.Element = "none";
+
             if (ii == 0)
             {
                 item.Name = new LocalText("Empty");
@@ -646,6 +648,7 @@ namespace DataGenerator.Data
                 altExplosion.Emitter = emitter;
 
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new LevelDamageEvent(false, 2, 1));
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
@@ -3791,6 +3794,7 @@ namespace DataGenerator.Data
             {
                 string exclElement = Text.Sanitize(((ElementInfo.Element)((ii - 700) / 4 + 1)).ToString()).ToLower();
                 ItemData item = new ItemData();
+                item.UseEvent.Element = "none";
                 if (ii == 700)
                     AutoItemInfo.FillExclusiveTypeData(ii, item, "Green Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);

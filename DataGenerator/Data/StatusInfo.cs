@@ -2178,6 +2178,7 @@ namespace DataGenerator.Data
                     emitter.ParticlesPerTile = 0.5;
                     altExplosion.Emitter = emitter;
                     BattleData newData = new BattleData();
+                    newData.Element = "none";
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
@@ -2202,6 +2203,7 @@ namespace DataGenerator.Data
                     emitter.ParticlesPerTile = 0.5;
                     altExplosion.Emitter = emitter;
                     BattleData newData = new BattleData();
+                    newData.Element = "none";
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
@@ -2228,6 +2230,7 @@ namespace DataGenerator.Data
                     emitter.ParticlesPerTile = 0.5;
                     altExplosion.Emitter = emitter;
                     BattleData newData = new BattleData();
+                    newData.Element = "none";
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
@@ -2253,6 +2256,7 @@ namespace DataGenerator.Data
                     emitter.ParticlesPerTile = 0.5;
                     altExplosion.Emitter = emitter;
                     BattleData newData = new BattleData();
+                    newData.Element = "none";
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());

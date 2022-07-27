@@ -207,6 +207,7 @@ namespace DataGenerator.Data
 
 
                 ItemData item = new ItemData();
+                item.UseEvent.Element = "none";
                 AutoItemInfo.FillExclusiveEffects(item, new List<LocalText>(), false, descType, new object[0], false);
 
 
@@ -493,6 +494,7 @@ namespace DataGenerator.Data
                     }
 
                     ItemData item = new ItemData();
+                    item.UseEvent.Element = "none";
 
                     if (exclType != ExclusiveItemType.None && customName != "")
                         Console.WriteLine(String.Format("Item {0} found with both name \"{1}\" and type {2}.", item_idx, customName, exclType));
@@ -1584,6 +1586,7 @@ namespace DataGenerator.Data
                     emitter.ParticlesPerTile = 0.8;
                     altExplosion.Emitter = emitter;
                     BattleData newData = new BattleData();
+                    newData.Element = "none";
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(6));
 

@@ -348,6 +348,7 @@ namespace DataGenerator.Data
                 ability.ProximityEvent.BeforeExplosions.Add(0, new DampItemEvent());
 
                 BattleData catchData = new BattleData();
+                catchData.Element = "none";
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Ember", 3));
                 emitter.LocHeight = 8;
                 catchData.HitFX.Emitter = emitter;
@@ -420,6 +421,7 @@ namespace DataGenerator.Data
                 ability.ProximityEvent.BeforeExplosions.Add(0, new DampItemEvent());
 
                 BattleData catchData = new BattleData();
+                catchData.Element = "none";
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Ember", 3));
                 emitter.LocHeight = 8;
                 catchData.HitFX.Emitter = emitter;
@@ -854,6 +856,7 @@ namespace DataGenerator.Data
                 emitter.ParticlesPerTile = 0.7;
                 altExplosion.Emitter = emitter;
                 BattleData newData = new BattleData();
+                newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
