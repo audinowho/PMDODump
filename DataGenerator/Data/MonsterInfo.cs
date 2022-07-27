@@ -430,13 +430,13 @@ namespace DataGenerator.Data
                         if (evoSpecies == 367)//huntail
                         {
                             EvoStatBoost evoDetail = new EvoStatBoost();
-                            evoDetail.StatBoostStatus = 12;
+                            evoDetail.StatBoostStatus = "mod_special_attack";
                             branch.Details.Add(evoDetail);
                         }
                         else if (evoSpecies == 368)//gorebyss
                         {
                             EvoStatBoost evoDetail = new EvoStatBoost();
-                            evoDetail.StatBoostStatus = 13;
+                            evoDetail.StatBoostStatus = "mod_special_defense";
                             branch.Details.Add(evoDetail);
                         }
                         else if (evoSpecies == 738)//vikavolt
@@ -508,7 +508,7 @@ namespace DataGenerator.Data
                         {
                             //FIXME
                             EvoCrits evoDetail = new EvoCrits();
-                            evoDetail.CritStatus = 127;
+                            evoDetail.CritStatus = "crits_landed";
                             evoDetail.Stack = 10;
                             branch.Details.Add(evoDetail);
                         }

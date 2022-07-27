@@ -19,13 +19,14 @@ namespace DataGenerator.Data
             DataInfo.DeleteIndexedData(DataManager.DataType.Status.ToString());
             for (int ii = 0; ii < MAX_STATUSES; ii++)
             {
-                StatusData status = GetStatusData(ii);
-                //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.Status.ToString(), status);
+                (string, StatusData) status = GetStatusData(ii);
+                if (status.Item1 != "")
+                    DataManager.SaveData(status.Item1, DataManager.DataType.Status.ToString(), status.Item2);
             }
         }
-        public static StatusData GetStatusData(int ii)
+        public static (string, StatusData) GetStatusData(int ii)
         {
+            string fileName = "";
             StatusData status = new StatusData();
             if (ii == 0)
             {
@@ -36,6 +37,7 @@ namespace DataGenerator.Data
             else if (ii == 1)
             {
                 status.Name = new LocalText("Asleep");
+                fileName = "sleep";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon is asleep and incapable of any action until it wakes up. This status wears off after a few turns, or if the Pokémon is attacked.");
                 status.Emoticon = "Sleep";
@@ -62,6 +64,7 @@ namespace DataGenerator.Data
             else if (ii == 2)
             {
                 status.Name = new LocalText("Burned");
+                fileName = "burn";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon will take some damage every turn, and its Attack will be lowered. This status wears off after a few turns.");
                 status.Emoticon = "Burn";
@@ -84,6 +87,7 @@ namespace DataGenerator.Data
             else if (ii == 3)
             {
                 status.Name = new LocalText("Frozen");
+                fileName = "freeze";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon is frozen and incapable of acting or being affected by moves. This status wears off after a few turns, or if the Pokémon is hit by a Fire-type attack.");
                 status.FreeEmote = "Freeze";
@@ -117,6 +121,7 @@ namespace DataGenerator.Data
             else if (ii == 4)
             {
                 status.Name = new LocalText("Paralyzed");
+                fileName = "paralyze";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon is paralyzed and cannot attack in consecutive turns. This status wears off after a few turns.");
                 status.DrawEffect = DrawEffect.Shaking;
@@ -140,6 +145,7 @@ namespace DataGenerator.Data
             else if (ii == 5)
             {
                 status.Name = new LocalText("Poisoned");
+                fileName = "poison";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon gradually takes damage every time it attacks. Its natural HP recovery is also stopped.");
                 status.Emoticon = "Skull_White";
@@ -161,6 +167,7 @@ namespace DataGenerator.Data
             else if (ii == 6)
             {
                 status.Name = new LocalText("Badly Poisoned");
+                fileName = "poison_toxic";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon takes gradually worsening damage every time it attacks. Its natural HP recovery is also stopped.");
                 status.Emoticon = "Skull_Purple";
@@ -182,6 +189,7 @@ namespace DataGenerator.Data
             else if (ii == 7)
             {
                 status.Name = new LocalText("Confused");
+                fileName = "confuse";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon is confused, causing its movements and attacks to vary wildly. Attacks that target foes can also target friends, and vice versa.");
                 status.Emoticon = "Confuse";
@@ -198,6 +206,7 @@ namespace DataGenerator.Data
             else if (ii == 8)
             {
                 status.Name = new LocalText("Cringing");
+                fileName = "flinch";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon is cringing and cannot attack or use items. This status wears off on the next turn.");
                 status.StatusStates.Set(new BadStatusState());
@@ -216,6 +225,7 @@ namespace DataGenerator.Data
             else if (ii == 9)
             {
                 status.Name = new LocalText("Movement Speed");
+                fileName = "mod_speed";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon's Movement Speed has been modified to move faster or slower than usual.");
                 status.StatusStates.Set(new StackState());
@@ -233,6 +243,7 @@ namespace DataGenerator.Data
             else if (ii == 10)
             {
                 status.Name = new LocalText("Attack");
+                fileName = "mod_attack";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon's Attack has been modified, doing more or less damage with Physical attacks.");
                 status.Emoticon = "Arrow_Up_Red";
@@ -251,6 +262,7 @@ namespace DataGenerator.Data
             else if (ii == 11)
             {
                 status.Name = new LocalText("Defense");
+                fileName = "mod_defense";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon's Defense has been modified, causing it to take more or less damage from Physical attacks.");
                 status.Emoticon = "Arrow_Up_Green";
@@ -269,6 +281,7 @@ namespace DataGenerator.Data
             else if (ii == 12)
             {
                 status.Name = new LocalText("Special Attack");
+                fileName = "mod_special_attack";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon's Special Attack has been modified, doing more or less damage with Special attacks.");
                 status.Emoticon = "Arrow_Up_Purple";
@@ -287,6 +300,7 @@ namespace DataGenerator.Data
             else if (ii == 13)
             {
                 status.Name = new LocalText("Special Defense");
+                fileName = "mod_special_defense";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon's Special Defense has been modified, causing it to take more or less damage from Special attacks.");
                 status.Emoticon = "Arrow_Up_White";
@@ -305,6 +319,7 @@ namespace DataGenerator.Data
             else if (ii == 14)
             {
                 status.Name = new LocalText("Accuracy");
+                fileName = "mod_accuracy";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon's Accuracy has been modified, allowing its attacks to hit more or less often.");
                 status.Emoticon = "Arrow_Up_Pink";
@@ -322,6 +337,7 @@ namespace DataGenerator.Data
             else if (ii == 15)
             {
                 status.Name = new LocalText("Evasion");
+                fileName = "mod_evasion";
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon's Evasion has been modified, allowing it to dodge attacks more or less often.");
                 status.Emoticon = "Arrow_Up_Yellow";
@@ -339,6 +355,7 @@ namespace DataGenerator.Data
             else if (ii == 16)
             {
                 status.Name = new LocalText("Range");
+                fileName = "mod_range";
                 status.MenuName = true;
                 status.StatusStates.Set(new StackState());
                 status.StatusStates.Set(new StatChangeState(Stat.Range));
@@ -541,7 +558,7 @@ namespace DataGenerator.Data
             }
             else if (ii == 30)
             {
-                status.Name = new LocalText("Last Move Hit By Someone Else");
+                status.Name = new LocalText("Last Move Hit By Other");
                 status.StatusStates.Set(new IndexState());
                 //status.StatusStates.Set(new CountState());//turns passed since it was initially hit by the move
             }
@@ -1486,7 +1503,7 @@ namespace DataGenerator.Data
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon is protected from a certain status effect. This status wears off after many turns have passed.");
                 status.Emoticon = "Shield_Brown";
-                status.StatusStates.Set(new IndexState());
+                status.StatusStates.Set(new IDState());
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new PreventAnyStatusCheck(new StringKey("MSG_STATUS_PROTECT"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
                 status.OnStatusAdds.Add(0, new StatusLogStatusEvent(new StringKey("MSG_STATUS_PROTECT"), true));
@@ -2322,7 +2339,10 @@ namespace DataGenerator.Data
             else if (status.Name.DefaultText != "")
                 status.Released = true;
 
-            return status;
+            if (fileName == "")
+                fileName = Text.Sanitize(status.Name.DefaultText).ToLower();
+
+            return (fileName, status);
         }
 
 

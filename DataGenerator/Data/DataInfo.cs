@@ -25,10 +25,10 @@ namespace DataGenerator.Data
             File.Delete(PathMod.ModPath(DataManager.DATA_PATH + "Universal.bin"));
             ActiveEffect universalEvent = new ActiveEffect();
 
-            universalEvent.OnHits.Add(5, new HitPostEvent(31, 30, 25, 127));
+            universalEvent.OnHits.Add(5, new HitPostEvent("was_hurt_last_turn", "last_move_hit_by_other", "last_targeted_by", "crits_landed"));
             universalEvent.OnHitTiles.Add(5, new TilePostEvent());
             universalEvent.OnActions.Add(-10, new PreActionEvent());
-            universalEvent.AfterActions.Add(5, new UsePostEvent(26, 27, 28, 29, 126));
+            universalEvent.AfterActions.Add(5, new UsePostEvent("last_used_move_slot", "last_used_move", "times_move_used", "last_ally_move", "missed_all_last_turn"));
             universalEvent.OnRefresh.Add(-5, new RefreshPreEvent());
             universalEvent.InitActionData.Add(-10, new PreSkillEvent());
             universalEvent.InitActionData.Add(-10, new PreItemEvent());

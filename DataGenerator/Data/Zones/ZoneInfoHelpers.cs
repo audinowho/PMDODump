@@ -460,7 +460,7 @@ namespace DataGenerator.Data
             post_mob.SpawnFeatures.Add(new MobSpawnMovesOff(post_mob.SpecifiedSkills.Count));
             if (sleeping)
             {
-                StatusEffect sleep = new StatusEffect(1);
+                StatusEffect sleep = new StatusEffect("sleep");
                 sleep.StatusStates.Set(new CountDownState(-1));
                 MobSpawnStatus status = new MobSpawnStatus();
                 status.Statuses.Add(sleep, 10);

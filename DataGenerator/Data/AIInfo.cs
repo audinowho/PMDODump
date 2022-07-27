@@ -133,7 +133,7 @@ namespace DataGenerator.Data
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
             tactic.Plans.Add(new ExploreIfUnseenPlan(iq | AIFlags.TrapAvoider));
-            tactic.Plans.Add(new WaitUntilAttackedPlan(iq | AIFlags.TrapAvoider, 25));
+            tactic.Plans.Add(new WaitUntilAttackedPlan(iq | AIFlags.TrapAvoider, "last_targeted_by"));
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
@@ -205,7 +205,7 @@ namespace DataGenerator.Data
             tactic.Name = new LocalText("Smart Wander");//17
             tactic.ID = "wander_smart";
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.AttackToEscape | AIFlags.WontDisturb;
-            tactic.Plans.Add(new PreBuffPlan(iq, 26));
+            tactic.Plans.Add(new PreBuffPlan(iq, "last_used_move_slot"));
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.SmartAttack, AIPlan.PositionChoice.Avoid));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
@@ -216,7 +216,7 @@ namespace DataGenerator.Data
             tactic.Name = new LocalText("Tit for Tat");//18
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.AttackToEscape | AIFlags.WontDisturb;
-            tactic.Plans.Add(new WaitUntilAttackedPlan(iq | AIFlags.TrapAvoider, 31));
+            tactic.Plans.Add(new WaitUntilAttackedPlan(iq | AIFlags.TrapAvoider, "was_hurt_last_turn"));
             tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
@@ -268,7 +268,7 @@ namespace DataGenerator.Data
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner;
             tactic.Plans.Add(new WaitUntilMapStatusPlan(iq | AIFlags.TrapAvoider, "thief"));
-            tactic.Plans.Add(new PreBuffPlan(iq | AIFlags.TrapAvoider, 26));
+            tactic.Plans.Add(new PreBuffPlan(iq | AIFlags.TrapAvoider, "last_used_move_slot"));
             tactic.Plans.Add(new AttackFoesPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new AvoidAlliesPlan(iq | AIFlags.TrapAvoider));//if cornered, don't do anything
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
@@ -280,7 +280,7 @@ namespace DataGenerator.Data
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner;
             tactic.Plans.Add(new WaitUntilMapStatusPlan(iq | AIFlags.TrapAvoider, "thief"));
-            tactic.Plans.Add(new LeadSkillPlan(iq | AIFlags.TrapAvoider, 26));
+            tactic.Plans.Add(new LeadSkillPlan(iq | AIFlags.TrapAvoider, "last_used_move_slot"));
             tactic.Plans.Add(new AttackFoesPlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Avoid));
             tactic.Plans.Add(new AvoidAlliesPlan(iq | AIFlags.TrapAvoider));//if cornered, don't do anything
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
