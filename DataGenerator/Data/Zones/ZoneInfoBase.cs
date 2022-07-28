@@ -315,7 +315,7 @@ namespace DataGenerator.Data
                             monsterHouse.Items.Add(new MapItem(ii), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(5, 10)), 10);
                         for (int ii = 387; ii < 397; ii++)
-                            monsterHouse.Mobs.Add(GetGenericMob(ii, "", -1, -1, -1, -1, new RandRange(10, 20)), 10);
+                            monsterHouse.Mobs.Add(GetGenericMob(ii, "", "", "", "", "", new RandRange(10, 20)), 10);
                         monsterHouse.MobThemes.Add(new MobThemeNone(50, new RandRange(6, 11)), 10);
                         layout.GenSteps.Add(PR_HOUSES, monsterHouse);
                     }
@@ -468,7 +468,7 @@ namespace DataGenerator.Data
                             monsterHouse.Items.Add(new MapItem(ii), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(5, 10)), 10);
                         for (int ii = 387; ii < 397; ii++)
-                            monsterHouse.Mobs.Add(GetGenericMob(ii, "", -1, -1, -1, -1, new RandRange(10, 20)), 10);
+                            monsterHouse.Mobs.Add(GetGenericMob(ii, "", "", "", "", "", new RandRange(10, 20)), 10);
                         monsterHouse.MobThemes.Add(new MobThemeNone(50, new RandRange(6, 11)), 10);
                         layout.GenSteps.Add(PR_HOUSES, monsterHouse);
                     }
@@ -679,7 +679,7 @@ namespace DataGenerator.Data
                             monsterHouse.Items.Add(new MapItem(ii), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(5, 10)), 10);
                         for (int ii = 387; ii < 397; ii++)
-                            monsterHouse.Mobs.Add(GetGenericMob(ii, "", -1, -1, -1, -1, new RandRange(10, 20)), 10);
+                            monsterHouse.Mobs.Add(GetGenericMob(ii, "", "", "", "", "", new RandRange(10, 20)), 10);
                         monsterHouse.MobThemes.Add(new MobThemeNone(50, new RandRange(18, 24)), 10);
                         layout.GenSteps.Add(PR_HOUSES, monsterHouse);
                     }
@@ -749,7 +749,7 @@ namespace DataGenerator.Data
                             monsterHouse.Items.Add(new MapItem(ii), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(12, 16)), 10);
                         for (int ii = 387; ii < 397; ii++)
-                            monsterHouse.Mobs.Add(GetGenericMob(ii, "", -1, -1, -1, -1, new RandRange(10, 20)), 10);
+                            monsterHouse.Mobs.Add(GetGenericMob(ii, "", "", "", "", "", new RandRange(10, 20)), 10);
                         monsterHouse.MobThemes.Add(new MobThemeNone(50, new RandRange(25, 32)), 10);
                         layout.GenSteps.Add(PR_HOUSES, monsterHouse);
                     }
@@ -841,7 +841,7 @@ namespace DataGenerator.Data
                             monsterHouse.Items.Add(new MapItem(ii), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(12, 16)), 10);
                         for (int ii = 387; ii < 397; ii++)
-                            monsterHouse.Mobs.Add(GetGenericMob(ii, "", -1, -1, -1, -1, new RandRange(10, 20)), 10);
+                            monsterHouse.Mobs.Add(GetGenericMob(ii, "", "", "", "", "", new RandRange(10, 20)), 10);
                         monsterHouse.MobThemes.Add(new MobThemeNone(50, new RandRange(25, 32)), 10);
                         layout.GenSteps.Add(PR_HOUSES, monsterHouse);
                     }
@@ -1386,9 +1386,9 @@ namespace DataGenerator.Data
                         //UB Stalks the grounds
                         MobSpawn mob = new MobSpawn();
                         mob.BaseForm = new MonsterID(793, 0, -1, Gender.Unknown);
-                        mob.SpecifiedSkills.Add(491);
-                        mob.SpecifiedSkills.Add(390);
-                        mob.SpecifiedSkills.Add(408);
+                        mob.SpecifiedSkills.Add("acid_spray");
+                        mob.SpecifiedSkills.Add("toxic_spikes");
+                        mob.SpecifiedSkills.Add("power_gem");
                         mob.Intrinsic = "";
                         mob.Level = new RandRange(40);
                         mob.Tactic = "wander_normal";
@@ -2194,7 +2194,7 @@ namespace DataGenerator.Data
                         effect.TileStates.Set(itemSpawn);
                         MobSpawnState mobSpawn = new MobSpawnState();
                         for (int ii = 0; ii < 16; ii++)
-                            mobSpawn.Spawns.Add(GetGenericMob(260 + ii, "", -1, -1, -1, -1, new RandRange(10)));
+                            mobSpawn.Spawns.Add(GetGenericMob(260 + ii, "", "", "", "", "", new RandRange(10)));
                         effect.TileStates.Set(mobSpawn);
                         ((Tile)drawStep.Tiles[4][4]).Effect = effect;
 
@@ -2216,7 +2216,7 @@ namespace DataGenerator.Data
                         effect.TileStates.Set(itemSpawn);
                         MobSpawnState mobSpawn = new MobSpawnState();
                         for (int ii = 0; ii < 16; ii++)
-                            mobSpawn.Spawns.Add(GetGenericMob(260 + ii, "", -1, -1, -1, -1, new RandRange(10)));
+                            mobSpawn.Spawns.Add(GetGenericMob(260 + ii, "", "", "", "", "", new RandRange(10)));
                         effect.TileStates.Set(mobSpawn);
                         ((Tile)drawStep.Tiles[5][5]).Effect = effect;
                     }
@@ -3634,62 +3634,62 @@ namespace DataGenerator.Data
                 //enemies
 
                 PresetMultiTeamSpawner<StairsMapGenContext> presetMultiSpawner = new PresetMultiTeamSpawner<StairsMapGenContext>();
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(13, 5), 161, "keen_eye", 33, -1, -1, -1, floor_level));// Sentret : Tackle
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(16, 5), 152, "", 75, -1, -1, -1, floor_level));// Chikorita : Razor Leaf
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(19, 5), 155, "", 52, -1, -1, -1, floor_level));// Cyndaquil : Ember
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(22, 5), 158, "", 55, -1, -1, -1, floor_level));// Totodile : Water Gun
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(25, 5), 25, "run_away", 84, -1, -1, -1, floor_level));// Pachirisu : Thunder Shock
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(14, 2), 27, "", 328, -1, -1, -1, floor_level));// Sandshrew : Sand Tomb
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(17, 2), 438, "rock_head", 88, -1, -1, -1, floor_level));// Bonsly : Rock Throw
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(21, 2), 276, "", 17, -1, -1, -1, floor_level));// Taillow : Wing Attack
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(24, 2), 23, "shed_skin", 40, -1, -1, -1, floor_level));// Ekans : Poison Sting
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(13, 5), 161, "keen_eye", "tackle", "", "", "", floor_level));// Sentret : Tackle
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(16, 5), 152, "", "razor_leaf", "", "", "", floor_level));// Chikorita : Razor Leaf
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(19, 5), 155, "", "ember", "", "", "", floor_level));// Cyndaquil : Ember
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(22, 5), 158, "", "water_gun", "", "", "", floor_level));// Totodile : Water Gun
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(25, 5), 25, "run_away", "thunder_shock", "", "", "", floor_level));// Pachirisu : Thunder Shock
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(14, 2), 27, "", "sand_tomb", "", "", "", floor_level));// Sandshrew : Sand Tomb
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(17, 2), 438, "rock_head", "rock_throw", "", "", "", floor_level));// Bonsly : Rock Throw
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(21, 2), 276, "", "wing_attack", "", "", "", floor_level));// Taillow : Wing Attack
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(24, 2), 23, "shed_skin", "poison_sting", "", "", "", floor_level));// Ekans : Poison Sting
 
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(30, 5), 188, "chlorophyll", 71, -1, -1, -1, floor_level));// Skiploom : Absorb
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(33, 5), 259, "", 55, -1, -1, -1, floor_level));// Marshtomp : Water Gun
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(36, 5), 75, "rock_head", 88, -1, -1, -1, floor_level));// Graveler : Rock Throw
-
-
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(46, 2), 175, "serene_grace", 204, -1, -1, -1, floor_level));// Togepi : Charm
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(48, 2), 441, "keen_eye", 590, -1, -1, -1, floor_level));// Chatot : Confide
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(50, 2), 90, "", 334, -1, -1, -1, floor_level));// Shellder : Iron Defense
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(52, 2), 446, "", 133, -1, -1, -1, floor_level));// Munchlax : Amnesia
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(46, 5), 52, "technician", 45, -1, -1, -1, floor_level));// Meowth : Growl
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(48, 5), 401, "", 522, -1, -1, -1, floor_level));// Kricketot : Struggle Bug
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(50, 5), 11, "", 106, -1, -1, -1, floor_level));// Metapod : Harden
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(52, 5), 35, "", 322, -1, -1, -1, floor_level));// Clefairy : Cosmic Power
-
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(58, 2), 280, "synchronize", 104, -1, -1, -1, floor_level));// Ralts : Double Team
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(58, 5), 27, "", 28, -1, -1, -1, floor_level));// Sandshrew : Sand Attack
-
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(67, 2), 158, "", 184, -1, -1, -1, floor_level));// Totodile : Scary Face
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(67, 5), 10, "", 81, -1, -1, -1, floor_level));// Caterpie : String Shot
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(30, 5), 188, "chlorophyll", "absorb", "", "", "", floor_level));// Skiploom : Absorb
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(33, 5), 259, "", "water_gun", "", "", "", floor_level));// Marshtomp : Water Gun
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(36, 5), 75, "rock_head", "rock_throw", "", "", "", floor_level));// Graveler : Rock Throw
 
 
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(81, 2), 37, "", 261, -1, -1, -1, floor_level));// Vulpix : Will-o-Wisp
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(85, 2), 163, "", 95, -1, -1, -1, floor_level));// Hoothoot : Hypnosis
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(81, 5), 109, "", 139, -1, -1, -1, floor_level));// Koffing : Poison Gas
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(85, 5), 25, "run_away", 86, -1, -1, -1, floor_level));// Pachirisu : Thunder Wave
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(46, 2), 175, "serene_grace", "charm", "", "", "", floor_level));// Togepi : Charm
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(48, 2), 441, "keen_eye", "confide", "", "", "", floor_level));// Chatot : Confide
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(50, 2), 90, "", "iron_defense", "", "", "", floor_level));// Shellder : Iron Defense
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(52, 2), 446, "", "amnesia", "", "", "", floor_level));// Munchlax : Amnesia
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(46, 5), 52, "technician", "growl", "", "", "", floor_level));// Meowth : Growl
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(48, 5), 401, "", "struggle_bug", "", "", "", floor_level));// Kricketot : Struggle Bug
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(50, 5), 11, "", "harden", "", "", "", floor_level));// Metapod : Harden
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(52, 5), 35, "", "cosmic_power", "", "", "", floor_level));// Clefairy : Cosmic Power
 
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(90, 2), 42, "", 212, -1, -1, -1, floor_level));// Golbat : Mean Look
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(94, 2), 431, "", 213, -1, -1, -1, floor_level));// Glameow : Attract
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(90, 5), 313, "", 109, -1, -1, -1, floor_level));// Volbeat : Confuse Ray
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(94, 5), 187, "", 73, -1, -1, -1, floor_level));// Hoppip : Leech Seed
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(58, 2), 280, "synchronize", "double_team", "", "", "", floor_level));// Ralts : Double Team
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(58, 5), 27, "", "sand_attack", "", "", "", floor_level));// Sandshrew : Sand Attack
 
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(99, 5), 218, "flame_body", -1, -1, -1, -1, floor_level));// Slugma : Flame Body
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(101, 5), 434, "aftermath", -1, -1, -1, -1, floor_level));// Stunky : Aftermath
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(103, 5), 271, "rain_dish", 240, -1, -1, -1, floor_level));// Lombre : Rain Dish : Rain Dance
-
-
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(134, 3), 161, "keen_eye", -1, -1, -1, -1, floor_level));// Sentret
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(136, 3), 161, "keen_eye", -1, -1, -1, -1, floor_level));// Sentret
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(134, 5), 161, "keen_eye", -1, -1, -1, -1, floor_level));// Sentret
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(136, 5), 161, "keen_eye", -1, -1, -1, -1, floor_level));// Sentret
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(67, 2), 158, "", "scary_face", "", "", "", floor_level));// Totodile : Scary Face
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(67, 5), 10, "", "string_shot", "", "", "", floor_level));// Caterpie : String Shot
 
 
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(156, 2), 132, "", 144, -1, -1, -1, floor_level));// Ditto : Transform
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(158, 2), 132, "", 144, -1, -1, -1, floor_level));// ''
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(161, 2), 132, "", 144, -1, -1, -1, floor_level));// ''
-                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(163, 2), 132, "", 144, -1, -1, -1, floor_level));// ''
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(81, 2), 37, "", "will_o_wisp", "", "", "", floor_level));// Vulpix : Will-o-Wisp
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(85, 2), 163, "", "hypnosis", "", "", "", floor_level));// Hoothoot : Hypnosis
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(81, 5), 109, "", "poison_gas", "", "", "", floor_level));// Koffing : Poison Gas
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(85, 5), 25, "run_away", "thunder_wave", "", "", "", floor_level));// Pachirisu : Thunder Wave
+
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(90, 2), 42, "", "mean_look", "", "", "", floor_level));// Golbat : Mean Look
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(94, 2), 431, "", "attract", "", "", "", floor_level));// Glameow : Attract
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(90, 5), 313, "", "confuse_ray", "", "", "", floor_level));// Volbeat : Confuse Ray
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(94, 5), 187, "", "leech_seed", "", "", "", floor_level));// Hoppip : Leech Seed
+
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(99, 5), 218, "flame_body", "", "", "", "", floor_level));// Slugma : Flame Body
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(101, 5), 434, "aftermath", "", "", "", "", floor_level));// Stunky : Aftermath
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(103, 5), 271, "rain_dish", "rain_dance", "", "", "", floor_level));// Lombre : Rain Dish : Rain Dance
+
+
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(134, 3), 161, "keen_eye", "", "", "", "", floor_level));// Sentret
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(136, 3), 161, "keen_eye", "", "", "", "", floor_level));// Sentret
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(134, 5), 161, "keen_eye", "", "", "", "", floor_level));// Sentret
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(136, 5), 161, "keen_eye", "", "", "", "", floor_level));// Sentret
+
+
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(156, 2), 132, "", "transform", "", "", "", floor_level));// Ditto : Transform
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(158, 2), 132, "", "transform", "", "", "", floor_level));// ''
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(161, 2), 132, "", "transform", "", "", "", floor_level));// ''
+                presetMultiSpawner.Spawns.Add(CreateSetMobTeam(new Loc(163, 2), 132, "", "transform", "", "", "", floor_level));// ''
                 PlaceNoLocMobsStep<StairsMapGenContext> mobStep = new PlaceNoLocMobsStep<StairsMapGenContext>(presetMultiSpawner);
                 layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
 

@@ -575,7 +575,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("The Pokémon is charging Solar Beam. It will unleash the move on its next turn.");
                 status.DrawEffect = DrawEffect.Charging;
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SOLAR_BEAM_CHARGE")));
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(76));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("solar_beam"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
@@ -589,7 +589,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("The Pokémon is charging Skull Bash. It will unleash the move on its next turn.");
                 status.DrawEffect = DrawEffect.Charging;
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SKULL_BASH_CHARGE")));
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(130));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("skull_bash"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
@@ -604,7 +604,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("The Pokémon is charging Razor Wind. It will unleash the move on its next turn.");
                 status.DrawEffect = DrawEffect.Charging;
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_RAZOR_WIND_CHARGE")));
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(13));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("razor_wind"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
@@ -618,7 +618,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("The Pokémon is charging Sky Attack. It will unleash the move on its next turn.");
                 status.DrawEffect = DrawEffect.Charging;
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SKY_ATTACK_CHARGE")));
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(143));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("sky_attack"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
@@ -633,7 +633,7 @@ namespace DataGenerator.Data
                 status.DrawEffect = DrawEffect.Charging;
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FOCUS_PUNCH_CHARGE")));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FOCUS_PUNCH_END")));
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(264));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("focus_punch"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
@@ -658,7 +658,7 @@ namespace DataGenerator.Data
                 effects.Add(new RemoveLocTrapEvent());
                 effects.Add(new RemoveLocTerrainEvent("wall"));
                 status.OnTurnEnds.Add(0, new CountDownEvent(effects));
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(91));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("dig"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new OnActionEvent(new BattlelessEvent(false, new RemoveLocTrapEvent()), new BattlelessEvent(false, new RemoveLocTerrainEvent("wall")), new RemoveBattleEvent(false)));
@@ -677,7 +677,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FLY_END")));
                 status.StatusStates.Set(new CountDownState(6));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(19));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("fly"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
@@ -703,7 +703,7 @@ namespace DataGenerator.Data
 
                 status.StatusStates.Set(new CountDownState(6));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(291));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("dive"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
@@ -720,7 +720,7 @@ namespace DataGenerator.Data
                 status.DrawEffect = DrawEffect.Absent;
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_BOUNCE_CHARGE")));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_BOUNCE_END")));
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(340));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("bounce"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
@@ -741,7 +741,7 @@ namespace DataGenerator.Data
 
                 status.StatusStates.Set(new CountDownState(6));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(566));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("phantom_force"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
@@ -760,7 +760,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SHADOW_FORCE_END")));
                 status.StatusStates.Set(new CountDownState(11));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(467));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("shadow_force"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
@@ -778,7 +778,7 @@ namespace DataGenerator.Data
                 status.DrawEffect = DrawEffect.Charging;
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_BIDE_CHARGE")));
                 status.StatusStates.Set(new HPState());
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(117));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("bide"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveBide()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.StatusStates.Set(new CountDownState(2));
@@ -864,7 +864,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("The Pokémon will use Petal Dance repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.");
                 status.DrawEffect = DrawEffect.Spinning;
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck());
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(80));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("petal_dance"));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
@@ -882,7 +882,7 @@ namespace DataGenerator.Data
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon will use Thrash repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.");
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck());
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(37));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("thrash"));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
@@ -900,7 +900,7 @@ namespace DataGenerator.Data
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon will use Outrage repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.");
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck());
-                status.BeforeTryActions.Add(-1, new ForceMoveEvent(200));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("outrage"));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
@@ -1882,7 +1882,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_RETALIATE_END")));
                 status.ProximityEvent.Radius = 1;
                 status.ProximityEvent.TargetAlignments = Alignment.Foe;
-                status.ProximityEvent.AfterHittings.Add(0, new FollowUpEvent(514, false, 1, new StringKey("MSG_RETALIATE")));
+                status.ProximityEvent.AfterHittings.Add(0, new FollowUpEvent("retaliate", false, 1, new StringKey("MSG_RETALIATE")));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.StatusStates.Set(new CountDownState(6));
             }
@@ -1898,7 +1898,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 status.ProximityEvent.Radius = 3;
                 status.ProximityEvent.TargetAlignments = Alignment.Foe;
-                status.ProximityEvent.AfterBeingHits.Add(0, new FollowUpEvent(518, true, 0, new StringKey("MSG_PLEDGE")));
+                status.ProximityEvent.AfterBeingHits.Add(0, new FollowUpEvent("water_pledge", true, 0, new StringKey("MSG_PLEDGE")));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.StatusStates.Set(new CountDownState(4));
             }
@@ -1914,7 +1914,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 status.ProximityEvent.Radius = 3;
                 status.ProximityEvent.TargetAlignments = Alignment.Foe;
-                status.ProximityEvent.AfterBeingHits.Add(0, new FollowUpEvent(519, true, 0, new StringKey("MSG_PLEDGE")));
+                status.ProximityEvent.AfterBeingHits.Add(0, new FollowUpEvent("fire_pledge", true, 0, new StringKey("MSG_PLEDGE")));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.StatusStates.Set(new CountDownState(4));
             }
@@ -1930,7 +1930,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 status.ProximityEvent.Radius = 3;
                 status.ProximityEvent.TargetAlignments = Alignment.Foe;
-                status.ProximityEvent.AfterBeingHits.Add(0, new FollowUpEvent(520, true, 0, new StringKey("MSG_PLEDGE")));
+                status.ProximityEvent.AfterBeingHits.Add(0, new FollowUpEvent("grass_pledge", true, 0, new StringKey("MSG_PLEDGE")));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.StatusStates.Set(new CountDownState(4));
             }

@@ -4487,7 +4487,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob(200, "", "confuse_ray", "mean_look", "hex", "", new RandRange(25)), new IntRange(0, 5), 10);
                     poolSpawn.Spawns.Add(GetTeamMob(200, "", "confuse_ray", "mean_look", "hex", "", new RandRange(30)), new IntRange(5, 10), 10);
                     // 429 Mismagius : 174 Curse : 220 Pain Split : 595 Mystical Fire
-                    poolSpawn.Spawns.Add(GetTeamMob(429, "", 174, 220 , 595, -1, new RandRange(35)), new IntRange(10, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(429, "", "curse", "pain_split", "mystical_fire", "", new RandRange(35)), new IntRange(10, max_floors), 10);
                     // 53 Persian : 127 Unnerve : 415 Switcheroo : 269 Taunt
                     {
                         TeamMemberSpawn mob = GetTeamMob(53, "unnerve", "switcheroo", "taunt", "", "", new RandRange(30), "thief");
