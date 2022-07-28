@@ -1918,7 +1918,7 @@ namespace DataGenerator.Data
                     altData.HitRate = -1;
                     altData.OnHits.Add(0, new NeededMoveEvent());
 
-                    item.OnActions.Add(-3, new FamilyBattleEvent(new SpecificSkillNeededEvent(new ChangeDataEvent(altData), 118)));
+                    item.OnActions.Add(-3, new FamilyBattleEvent(new SpecificSkillNeededEvent(new ChangeDataEvent(altData), "metronome")));
                 }
             }
             else if (type == ExclusiveItemEffect.TypeBodyguard)

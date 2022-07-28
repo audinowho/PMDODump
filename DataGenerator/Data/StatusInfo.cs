@@ -662,7 +662,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new OnActionEvent(new BattlelessEvent(false, new RemoveLocTrapEvent()), new BattlelessEvent(false, new RemoveLocTerrainEvent("wall")), new RemoveBattleEvent(false)));
-                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[3] { 89, 90, 222 }));
+                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[3] { "earthquake", "fissure", "magnitude" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Block));
@@ -681,7 +681,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
-                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[8] { 16, 18, 87, 239, 327, 479, 542, 614 }));
+                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Block));
@@ -707,7 +707,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
-                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[2] { 57, 250 }));
+                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[2] { "surf", "whirlpool" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Water));
@@ -725,7 +725,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
-                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[8] { 16, 18, 87, 239, 327, 479, 542, 614 }));
+                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
             }
@@ -745,7 +745,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
-                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[0] { }));
+                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[0] { }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Block));
@@ -764,7 +764,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
-                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new int[0] { }));
+                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[0] { }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Block));
