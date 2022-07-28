@@ -43,6 +43,7 @@ namespace DataGenerator.Data
                 for (int ii = 0; ii < MAX_SKILLS; ii++)
                 {
                     (string, SkillData) move = GetSkillData(ii);
+                    //System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{1}", ii, move.Item1));
                     DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
                 }
             }
@@ -15464,6 +15465,7 @@ namespace DataGenerator.Data
             else if (ii == 623)
             {
                 skill.Name = new LocalText("**Breakneck Blitz");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "normal";
@@ -15496,6 +15498,7 @@ namespace DataGenerator.Data
             else if (ii == 625)
             {
                 skill.Name = new LocalText("**All-Out Pummeling");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "fighting";
@@ -15528,6 +15531,7 @@ namespace DataGenerator.Data
             else if (ii == 627)
             {
                 skill.Name = new LocalText("**Supersonic Skystrike");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "flying";
@@ -15560,6 +15564,7 @@ namespace DataGenerator.Data
             else if (ii == 629)
             {
                 skill.Name = new LocalText("**Acid Downpour");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "poison";
@@ -15592,6 +15597,7 @@ namespace DataGenerator.Data
             else if (ii == 631)
             {
                 skill.Name = new LocalText("**Tectonic Rage");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "ground";
@@ -15624,6 +15630,7 @@ namespace DataGenerator.Data
             else if (ii == 633)
             {
                 skill.Name = new LocalText("**Continental Crush");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "rock";
@@ -15656,6 +15663,7 @@ namespace DataGenerator.Data
             else if (ii == 635)
             {
                 skill.Name = new LocalText("**Savage Spin-Out");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "bug";
@@ -15688,6 +15696,7 @@ namespace DataGenerator.Data
             else if (ii == 637)
             {
                 skill.Name = new LocalText("**Never-Ending Nightmare");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "ghost";
@@ -15720,6 +15729,7 @@ namespace DataGenerator.Data
             else if (ii == 639)
             {
                 skill.Name = new LocalText("**Corkscrew Crash");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "steel";
@@ -15752,6 +15762,7 @@ namespace DataGenerator.Data
             else if (ii == 641)
             {
                 skill.Name = new LocalText("**Inferno Overdrive");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "fire";
@@ -15784,6 +15795,7 @@ namespace DataGenerator.Data
             else if (ii == 643)
             {
                 skill.Name = new LocalText("**Hydro Vortex");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "water";
@@ -15816,6 +15828,7 @@ namespace DataGenerator.Data
             else if (ii == 645)
             {
                 skill.Name = new LocalText("**Bloom Doom");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "grass";
@@ -15848,6 +15861,7 @@ namespace DataGenerator.Data
             else if (ii == 647)
             {
                 skill.Name = new LocalText("**Gigavolt Havoc");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "electric";
@@ -15880,6 +15894,7 @@ namespace DataGenerator.Data
             else if (ii == 649)
             {
                 skill.Name = new LocalText("**Shattered Psyche");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "psychic";
@@ -15912,6 +15927,7 @@ namespace DataGenerator.Data
             else if (ii == 651)
             {
                 skill.Name = new LocalText("**Subzero Slammer");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "ice";
@@ -15944,6 +15960,7 @@ namespace DataGenerator.Data
             else if (ii == 653)
             {
                 skill.Name = new LocalText("**Devastating Drake");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "dragon";
@@ -15976,6 +15993,7 @@ namespace DataGenerator.Data
             else if (ii == 655)
             {
                 skill.Name = new LocalText("**Black Hole Eclipse");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "dark";
@@ -16008,6 +16026,7 @@ namespace DataGenerator.Data
             else if (ii == 657)
             {
                 skill.Name = new LocalText("**Twinkle Tackle");
+                fileName = ii.ToString();
                 skill.Desc = new LocalText("Dummy Data");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "fairy";

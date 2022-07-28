@@ -264,7 +264,10 @@ namespace DataGenerator.Data
             formEntry.BaseSpeed = 1;
             formEntry.Element1 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
             formEntry.Element2 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
-            formEntry.LevelSkills.Add(new LevelUpSkill());
+            formEntry.Intrinsic1 = "none";
+            formEntry.Intrinsic2 = "none";
+            formEntry.Intrinsic3 = "none";
+            formEntry.LevelSkills.Add(new LevelUpSkill("attack", 0));
             entry.Forms.Add(formEntry);
 
             MonsterFormData formEntry2 = new MonsterFormData();
@@ -281,7 +284,10 @@ namespace DataGenerator.Data
             formEntry2.BaseSpeed = 1;
             formEntry.Element1 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
             formEntry.Element2 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
-            formEntry.LevelSkills.Add(new LevelUpSkill());
+            formEntry.Intrinsic1 = "none";
+            formEntry.Intrinsic2 = "none";
+            formEntry.Intrinsic3 = "none";
+            formEntry.LevelSkills.Add(new LevelUpSkill("attack", 0));
             entry.Forms.Add(formEntry2);
 
 
