@@ -541,7 +541,7 @@ namespace DataGenerator.Data
             else if (ii == 27)
             {
                 status.Name = new LocalText("Last Used Move");
-                status.StatusStates.Set(new IndexState());
+                status.StatusStates.Set(new IDState());
             }
             else if (ii == 28)
             {
@@ -554,12 +554,12 @@ namespace DataGenerator.Data
             else if (ii == 29)
             {
                 status.Name = new LocalText("Last Ally Move");
-                status.StatusStates.Set(new IndexState());
+                status.StatusStates.Set(new IDState());
             }
             else if (ii == 30)
             {
                 status.Name = new LocalText("Last Move Hit By Other");
-                status.StatusStates.Set(new IndexState());
+                status.StatusStates.Set(new IDState());
                 //status.StatusStates.Set(new CountState());//turns passed since it was initially hit by the move
             }
             else if (ii == 31)

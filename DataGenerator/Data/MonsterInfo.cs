@@ -484,7 +484,7 @@ namespace DataGenerator.Data
                         {
                             //FIXME
                             EvoMove evoDetail = new EvoMove();
-                            evoDetail.MoveNum = 269;//taunt
+                            evoDetail.MoveNum = "taunt";//taunt
                             branch.Details.Add(evoDetail);
                         }
                         else if (evoSpecies == 855)//polteageist
@@ -612,7 +612,8 @@ namespace DataGenerator.Data
                             else if (CheckEvoConditions(reader, "known_move_id"))
                             {
                                 EvoMove evoDetail = new EvoMove();
-                                evoDetail.MoveNum = Convert.ToInt32(move);
+                                (string, SkillData) skill = SkillInfo.GetSkillData(Convert.ToInt32(move));
+                                evoDetail.MoveNum = skill.Item1;
                                 branch.Details.Add(evoDetail);
                             }
                             else if (CheckEvoConditions(reader, "min_affection", "known_move_type_id"))
@@ -1277,7 +1278,10 @@ namespace DataGenerator.Data
                 {
                     LevelUpSkill levelMove = new LevelUpSkill();
                     levelMove.Level = Convert.ToInt32(reader["level"].ToString());
-                    levelMove.Skill = Convert.ToInt32(reader["move_id"].ToString());
+                    
+                    (string, SkillData) skill = SkillInfo.GetSkillData(Convert.ToInt32(reader["move_id"].ToString()));
+                    levelMove.Skill = skill.Item1;
+
                     entry.LevelSkills.Add(levelMove);
                 }
             }
@@ -1292,25 +1296,26 @@ namespace DataGenerator.Data
                 {
                     int method = Convert.ToInt32(reader["move_learn_method_id"].ToString());
                     int move = Convert.ToInt32(reader["move_id"].ToString());
+                    (string, SkillData) skill = SkillInfo.GetSkillData(move);
                     if (method == 2)//egg
                     {
-                        if (!entry.SharedSkills.Contains(new LearnableSkill(move)))
-                            entry.SharedSkills.Add(new LearnableSkill(move));
+                        if (!entry.SharedSkills.Contains(new LearnableSkill(skill.Item1)))
+                            entry.SharedSkills.Add(new LearnableSkill(skill.Item1));
                     }
                     else if (method == 3)//tutor
                     {
-                        if (!entry.SecretSkills.Contains(new LearnableSkill(move)))
-                            entry.SecretSkills.Add(new LearnableSkill(move));
+                        if (!entry.SecretSkills.Contains(new LearnableSkill(skill.Item1)))
+                            entry.SecretSkills.Add(new LearnableSkill(skill.Item1));
                     }
                     else if (method == 4)//TM
                     {
-                        if (!entry.TeachSkills.Contains(new LearnableSkill(move)))
-                            entry.TeachSkills.Add(new LearnableSkill(move));
+                        if (!entry.TeachSkills.Contains(new LearnableSkill(skill.Item1)))
+                            entry.TeachSkills.Add(new LearnableSkill(skill.Item1));
                     }
                     else//event
                     {
-                        if (!entry.SecretSkills.Contains(new LearnableSkill(move)))
-                            entry.SecretSkills.Add(new LearnableSkill(move));
+                        if (!entry.SecretSkills.Contains(new LearnableSkill(skill.Item1)))
+                            entry.SecretSkills.Add(new LearnableSkill(skill.Item1));
                     }
                 }
             }

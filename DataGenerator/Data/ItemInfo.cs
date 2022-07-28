@@ -3775,14 +3775,14 @@ namespace DataGenerator.Data
         }
 
 
-        public static void FillTMData(ItemData item, int moveIndex)
+        public static void FillTMData(ItemData item, string moveIndex)
         {
             SkillData move = DataManager.Instance.GetSkill(moveIndex);
             LocalText tmFormatName = new LocalText("TM {0}");
             LocalText tmFormatDesc = new LocalText("Teaches the move {0} to a Pokémon.");
             item.Name = LocalText.FormatLocalText(tmFormatName, move.Name);
             item.Desc = LocalText.FormatLocalText(tmFormatDesc, move.Name);
-            item.ItemStates.Set(new ItemIndexState(moveIndex));
+            item.ItemStates.Set(new ItemIDState(moveIndex));
             item.UseEvent.BeforeTryActions.Add(1, new TMEvent());
             item.UseEvent.OnHits.Add(0, new MoveLearnEvent());
         }

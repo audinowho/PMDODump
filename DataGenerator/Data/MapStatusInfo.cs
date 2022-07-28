@@ -416,7 +416,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusSoundEvent("DUN_Invisible_2"));
                 status.OnMapStatusAdds.Add(0, new MapStatusMoveLogEvent(new StringKey("MSG_MOVE_BAN_START")));
                 status.OnMapStatusRemoves.Add(0, new MapStatusMoveLogEvent(new StringKey("MSG_MOVE_BAN_END")));
-                status.StatusStates.Set(new MapIndexState());
+                status.StatusStates.Set(new MapIDState());
                 status.OnRefresh.Add(0, new MoveBanEvent());
             }
             else if (ii == 21)
