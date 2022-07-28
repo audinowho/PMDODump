@@ -298,7 +298,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(351, "", -1, -1, -1, -1, new RandRange(18), "wander_normal", true), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(351, "", "", "", "", "", new RandRange(18), "wander_normal", true), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -399,7 +399,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(441, "", 497, 297, -1, -1, new RandRange(18)), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(441, "", "echoed_voice", "feather_dance", "", "", new RandRange(18)), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -439,24 +439,24 @@ namespace DataGenerator.Data
                         shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
                         // 137 Porygon : 36 Trace : 97 Agility : 59 Blizzard : 435 Discharge : 94 Psychic
-                        shop.StartMob = GetShopMob(137, "trace", 97, 59, 435, 94, new int[] { 1322, 1323, 1324, 1325 }, 2);
+                        shop.StartMob = GetShopMob(137, "trace", "agility", "blizzard", "discharge", "psychic", new int[] { 1322, 1323, 1324, 1325 }, 2);
                         {
                             // 474 Porygon-Z : 91 Adaptability : 247 Shadow Ball : 63 Hyper Beam : 435 Discharge : 373 Embargo
-                            shop.Mobs.Add(GetShopMob(474, "adaptability", 247, 63, 435, 373, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob(474, "adaptability", "shadow_ball", "hyper_beam", "discharge", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                             // 474 Porygon-Z : 91 Adaptability : 160 Conversion : 59 Blizzard : 435 Discharge : 473 Psyshock
-                            shop.Mobs.Add(GetShopMob(474, "adaptability", 160, 59, 435, 473, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob(474, "adaptability", "conversion", "blizzard", "discharge", "psyshock", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                             // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 63 Hyper Beam : 435 Discharge : 373 Embargo
-                            shop.Mobs.Add(GetShopMob(474, "adaptability", 417, 63, 435, 373, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob(474, "adaptability", "nasty_plot", "hyper_beam", "discharge", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                             // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 161 Tri Attack : 247 Shadow Ball : 373 Embargo
-                            shop.Mobs.Add(GetShopMob(474, "adaptability", 417, 161, 247, 373, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob(474, "adaptability", "nasty_plot", "tri_attack", "shadow_ball", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                             // 474 Porygon-Z : 88 Download : 97 Agility : 473 Psyshock : 324 Signal Beam : 373 Embargo
-                            shop.Mobs.Add(GetShopMob(474, "download", 97, 473, 324, 373, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob(474, "download", "agility", "psyshock", "signal_beam", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                             // 233 Porygon2 : 36 Trace : 176 Conversion2 : 105 Recover : 60 Psybeam : 324 Signal Beam
-                            shop.Mobs.Add(GetShopMob(233, "trace", 176, 105, 60, 324, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob(233, "trace", "conversion_2", "recover", "psybeam", "signal_beam", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                             // 233 Porygon2 : 36 Trace : 176 Conversion2 : 105 Recover : 60 Psybeam : 435 Discharge
-                            shop.Mobs.Add(GetShopMob(233, "trace", 176, 105, 60, 435, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob(233, "trace", "conversion_2", "recover", "psybeam", "discharge", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                             // 233 Porygon2 : 36 Trace : 176 Conversion2 : 277 Magic Coat : 161 Tri Attack : 97 Agility
-                            shop.Mobs.Add(GetShopMob(233, "trace", 176, 277, 161, 97, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob(233, "trace", "conversion_2", "magic_coat", "tri_attack", "agility", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                         }
                         layout.GenSteps.Add(PR_SHOPS, shop);
                     }
@@ -514,7 +514,7 @@ namespace DataGenerator.Data
                     {
                         //secret enemies
                         SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                        specificTeam.Spawns.Add(GetGenericMob(234, "", -1, -1, -1, -1, new RandRange(23), "loot_guard"));
+                        specificTeam.Spawns.Add(GetGenericMob(234, "", "", "", "", "", new RandRange(23), "loot_guard"));
 
                         PlaceRandomMobsStep<MapGenContext> secretMobPlacement = new PlaceRandomMobsStep<MapGenContext>(new LoopedTeamSpawner<MapGenContext>(specificTeam, new RandRange(12, 18)));
                         secretMobPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
@@ -665,7 +665,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(441, "", 497, 297, -1, -1, new RandRange(18)), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(441, "", "echoed_voice", "feather_dance", "", "", new RandRange(18)), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -735,7 +735,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(441, "", 497, 297, -1, -1, new RandRange(18)), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(441, "", "echoed_voice", "feather_dance", "", "", new RandRange(18)), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -826,7 +826,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(441, "", 497, 297, -1, -1, new RandRange(18)), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(441, "", "echoed_voice", "feather_dance", "", "", new RandRange(18)), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -896,7 +896,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(161, "", 10, -1, -1, -1, new RandRange(2), "wander_dumb"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, "", "scratch", "", "", "", new RandRange(2), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1041,7 +1041,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, "", 10, -1, -1, -1, new RandRange(2), "wander_dumb"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, "", "scratch", "", "", "", new RandRange(2), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1193,7 +1193,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<ListMapGenContext> spawnStep = new MobSpawnStep<ListMapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(441, "", 497, 297, -1, -1, new RandRange(18)), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(441, "", "echoed_voice", "feather_dance", "", "", new RandRange(18)), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1201,7 +1201,7 @@ namespace DataGenerator.Data
                     //sky-only mobs
                     {
                         SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                        specificTeam.Spawns.Add(GetGenericMob(149, "", 35, 43, -1, -1, new RandRange(15), "patrol"));
+                        specificTeam.Spawns.Add(GetGenericMob(149, "", "wrap", "leer", "", "", new RandRange(15), "patrol"));
 
                         LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(specificTeam);
                         {
@@ -1227,7 +1227,7 @@ namespace DataGenerator.Data
                     {
                         //secret enemies
                         SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                        specificTeam.Spawns.Add(GetGenericMob(442, "", 497, 297, -1, -1, new RandRange(18)));
+                        specificTeam.Spawns.Add(GetGenericMob(442, "", "echoed_voice", "feather_dance", "", "", new RandRange(18)));
 
 
                         //secret enemies
@@ -1377,7 +1377,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, "", 10, -1, -1, -1, new RandRange(25), "wander_dumb"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, "", "scratch", "", "", "", new RandRange(25), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1538,7 +1538,7 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob(441, "", 497, 297, -1, -1, new RandRange(18)), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(441, "", "echoed_voice", "feather_dance", "", "", new RandRange(18)), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1714,7 +1714,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, "", 10, -1, -1, -1, new RandRange(25), "wander_dumb"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, "", "scratch", "", "", "", new RandRange(25), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1829,7 +1829,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, "", 10, -1, -1, -1, new RandRange(2), "wander_dumb"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, "", "scratch", "", "", "", new RandRange(2), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -1931,7 +1931,7 @@ namespace DataGenerator.Data
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
                     //sentret
-                    poolSpawn.Spawns.Add(GetTeamMob(161, "", 10, -1, -1, -1, new RandRange(2), "wander_dumb"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(161, "", "scratch", "", "", "", new RandRange(2), "wander_dumb"), 10);
                     poolSpawn.TeamSizes.Add(1, 12);
                     spawnStep.Spawns.Add(poolSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
@@ -2249,14 +2249,14 @@ namespace DataGenerator.Data
                         // place the map status
                         {
                             ShopSecurityState state = new ShopSecurityState();
-                            state.Security.Add(GetShopMob(352, "protean", 264, 425, 510, 168, new int[] { 1984, 1985, 1988 }, -1), 10);
+                            state.Security.Add(GetShopMob(352, "protean", "focus_punch", "shadow_sneak", "incinerate", "thief", new int[] { 1984, 1985, 1988 }, -1), 10);
                             StateMapStatusStep<StairsMapGenContext> statusData = new StateMapStatusStep<StairsMapGenContext>("shop_security", state);
                             layout.GenSteps.Add(PR_FLOOR_DATA, statusData);
                         }
 
                         // place the mob running the shop
                         {
-                            MobSpawn post_mob = GetShopMob(352, "color_change", 485, 20, 103, 86, new int[] { 1984, 1985, 1988 }, 0);
+                            MobSpawn post_mob = GetShopMob(352, "color_change", "synchronoise", "bind", "screech", "thunder_wave", new int[] { 1984, 1985, 1988 }, 0);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(21, 1)));
                             SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
 
@@ -2407,16 +2407,16 @@ namespace DataGenerator.Data
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
                     // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
-                    shop.StartMob = GetShopMob(352, "color_change", 485, 20, 103, 86, new int[] { 1984, 1985, 1988 }, 0);
+                    shop.StartMob = GetShopMob(352, "color_change", "synchronoise", "bind", "screech", "thunder_wave", new int[] { 1984, 1985, 1988 }, 0);
                     {
                         // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
-                        shop.Mobs.Add(GetShopMob(352, "color_change", 485, 20, 103, 86, new int[] { 1984, 1985, 1988 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(352, "color_change", "synchronoise", "bind", "screech", "thunder_wave", new int[] { 1984, 1985, 1988 }, -1), 10);
                         // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 50 disable : 374 fling
-                        shop.Mobs.Add(GetShopMob(352, "color_change", 485, 20, 50, 374, new int[] { 1984, 1985, 1988 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(352, "color_change", "synchronoise", "bind", "disable", "fling", new int[] { 1984, 1985, 1988 }, -1), 10);
                         // 352 Kecleon : 168 protean : 246 ancient power : 425 shadow sneak : 510 incinerate : 168 thief
-                        shop.Mobs.Add(GetShopMob(352, "protean", 246, 425, 510, 168, new int[] { 1984, 1985, 1988 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(352, "protean", "ancient_power", "shadow_sneak", "incinerate", "thief", new int[] { 1984, 1985, 1988 }, -1), 10);
                         // 352 Kecleon : 168 protean : 332 aerial ace : 421 shadow claw : 60 psybeam : 364 feint
-                        shop.Mobs.Add(GetShopMob(352, "protean", 332, 421, 60, 364, new int[] { 1984, 1985, 1988 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(352, "protean", "aerial_ace", "shadow_claw", "psybeam", "feint", new int[] { 1984, 1985, 1988 }, -1), 10);
                     }
                     shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
                 }
@@ -2437,10 +2437,10 @@ namespace DataGenerator.Data
                         post_mob.Tactic = "shopkeeper";
                         post_mob.Level = new RandRange(5);
                         post_mob.Intrinsic = "magic_guard";
-                        post_mob.SpecifiedSkills.Add(118);
-                        post_mob.SpecifiedSkills.Add(47);
-                        post_mob.SpecifiedSkills.Add(204);
-                        post_mob.SpecifiedSkills.Add(313);
+                        post_mob.SpecifiedSkills.Add("metronome");
+                        post_mob.SpecifiedSkills.Add("sing");
+                        post_mob.SpecifiedSkills.Add("charm");
+                        post_mob.SpecifiedSkills.Add("fake_tears");
                         post_mob.SpawnFeatures.Add(new MobSpawnDiscriminator(1));
                         post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new BattleScriptEvent("ShopkeeperInteract")));
                         post_mob.SpawnFeatures.Add(new MobSpawnLuaTable("{ Role = \"Shopkeeper\" }"));
@@ -2448,11 +2448,11 @@ namespace DataGenerator.Data
                     }
                     {
                         // 35 Clefairy : 132 Friend Guard : 282 Knock Off : 107 Minimize : 236 Moonlight : 277 Magic Coat
-                        shop.Mobs.Add(GetShopMob(35, "friend_guard", 282, 107, 236, 277, new int[] { 973, 976 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(35, "friend_guard", "knock_off", "minimize", "moonlight", "magic_coat", new int[] { 973, 976 }, -1), 10);
                         // 36 Clefable : 109 Unaware : 118 Metronome : 500 Stored Power : 343 Covet : 271 Trick
-                        shop.Mobs.Add(GetShopMob(36, "unaware", 118, 500, 343, 271, new int[] { 973, 976 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(36, "unaware", "metronome", "stored_power", "covet", "trick", new int[] { 973, 976 }, -1), 10);
                         // 36 Clefable : 98 Magic Guard : 118 Metronome : 213 Attract : 282 Knock Off : 266 Follow Me
-                        shop.Mobs.Add(GetShopMob(36, "magic_guard", 118, 213, 282, 266, new int[] { 973, 976 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(36, "magic_guard", "metronome", "attract", "knock_off", "follow_me", new int[] { 973, 976 }, -1), 10);
                     }
                     shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
                 }
@@ -2467,24 +2467,24 @@ namespace DataGenerator.Data
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
                     // 137 Porygon : 36 Trace : 97 Agility : 59 Blizzard : 435 Discharge : 94 Psychic
-                    shop.StartMob = GetShopMob(137, "trace", 97, 59, 435, 94, new int[] { 1322, 1323, 1324, 1325 }, 2);
+                    shop.StartMob = GetShopMob(137, "trace", "agility", "blizzard", "discharge", "psychic", new int[] { 1322, 1323, 1324, 1325 }, 2);
                     {
                         // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 63 Hyper Beam : 435 Discharge : 373 Embargo
-                        shop.Mobs.Add(GetShopMob(474, "adaptability", 417, 63, 435, 373, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(474, "adaptability", "nasty_plot", "hyper_beam", "discharge", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                         // 474 Porygon-Z : 91 Adaptability : 160 Conversion : 59 Blizzard : 435 Discharge : 473 Psyshock
-                        shop.Mobs.Add(GetShopMob(474, "adaptability", 160, 59, 435, 473, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(474, "adaptability", "conversion", "blizzard", "discharge", "psyshock", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                         // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 63 Hyper Beam : 435 Discharge : 373 Embargo
-                        shop.Mobs.Add(GetShopMob(474, "adaptability", 417, 63, 435, 373, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(474, "adaptability", "nasty_plot", "hyper_beam", "discharge", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                         // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 161 Tri Attack : 247 Shadow Ball : 373 Embargo
-                        shop.Mobs.Add(GetShopMob(474, "adaptability", 417, 161, 247, 373, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(474, "adaptability", "nasty_plot", "tri_attack", "shadow_ball", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                         // 474 Porygon-Z : 88 Download : 97 Agility : 473 Psyshock : 324 Signal Beam : 373 Embargo
-                        shop.Mobs.Add(GetShopMob(474, "download", 97, 473, 324, 373, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(474, "download", "agility", "psyshock", "signal_beam", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                         // 233 Porygon2 : 36 Trace : 176 Conversion2 : 105 Recover : 60 Psybeam : 324 Signal Beam
-                        shop.Mobs.Add(GetShopMob(233, "trace", 176, 105, 60, 324, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(233, "trace", "conversion_2", "recover", "psybeam", "signal_beam", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                         // 233 Porygon2 : 36 Trace : 176 Conversion2 : 105 Recover : 60 Psybeam : 435 Discharge
-                        shop.Mobs.Add(GetShopMob(233, "trace", 176, 105, 60, 435, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(233, "trace", "conversion_2", "recover", "psybeam", "discharge", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                         // 233 Porygon2 : 36 Trace : 176 Conversion2 : 277 Magic Coat : 161 Tri Attack : 97 Agility
-                        shop.Mobs.Add(GetShopMob(233, "trace", 176, 277, 161, 97, new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(233, "trace", "conversion_2", "magic_coat", "tri_attack", "agility", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
                     }
                     shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
                 }
@@ -2499,18 +2499,18 @@ namespace DataGenerator.Data
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
                     // 213 Shuckle : 126 Contrary : 380 Gastro Acid : 564 Sticky Web : 450 Bug Bite : 92 Toxic
-                    shop.StartMob = GetShopMob(213, "contrary", 380, 564, 450, 92, new int[] { 1569, 1570, 1571, 1572 }, 0);
+                    shop.StartMob = GetShopMob(213, "contrary", "gastro_acid", "sticky_web", "bug_bite", "toxic", new int[] { 1569, 1570, 1571, 1572 }, 0);
                     {
                         // 213 Shuckle : 126 Contrary : 380 Gastro Acid : 564 Sticky Web : 450 Bug Bite : 92 Toxic
-                        shop.Mobs.Add(GetShopMob(213, "contrary", 380, 564, 450, 92, new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(213, "contrary", "gastro_acid", "sticky_web", "bug_bite", "toxic", new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
                         // 213 Shuckle : 126 Contrary : 230 Sweet Scent : 611 Infestation : 189 Mud-Slap : 522 Struggle Bug
-                        shop.Mobs.Add(GetShopMob(213, "contrary", 230, 611, 189, 522, new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(213, "contrary", "sweet_scent", "infestation", "mud_slap", "struggle_bug", new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
                         // 213 Shuckle : 126 Contrary : 230 Sweet Scent : 219 Safeguard : 446 Stealth Rock : 249 Rock Smash
-                        shop.Mobs.Add(GetShopMob(213, "sturdy", 230, 219, 446, 249, new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(213, "sturdy", "sweet_scent", "safeguard", "stealth_rock", "rock_smash", new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
                         // 213 Shuckle : 5 Sturdy : 379 Power Trick : 504 Shell Smash : 205 Rollout : 360 Gyro Ball
-                        shop.Mobs.Add(GetShopMob(213, "sturdy", 379, 504, 205, 360, new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(213, "sturdy", "power_trick", "shell_smash", "rollout", "gyro_ball", new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
                         // 213 Shuckle : 5 Sturdy : 379 Power Trick : 450 Bug Bite : 444 Stone Edge : 91 Dig
-                        shop.Mobs.Add(GetShopMob(213, "sturdy", 379, 450, 444, 91, new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(213, "sturdy", "power_trick", "bug_bite", "stone_edge", "dig", new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
                     }
 
                     shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
@@ -2526,20 +2526,20 @@ namespace DataGenerator.Data
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
                     // 206 Dunsparce : 32 Serene Grace : 228 Pursuit : 103 Screech : 44 Bite : Secret Power
-                    shop.StartMob = GetShopMob(206, "serene_grace", 228, 103, 44, 290, new int[] { 1545, 1546, 1549 }, 0);
+                    shop.StartMob = GetShopMob(206, "serene_grace", "pursuit", "screech", "bite", "secret_power", new int[] { 1545, 1546, 1549 }, 0);
                     {
                         // 206 Dunsparce : 32 Serene Grace : 228 Pursuit : 99 Rage : 428 Zen Headbutt : Secret Power
-                        shop.Mobs.Add(GetShopMob(206, "serene_grace", 228, 99, 428, 290, new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(206, "serene_grace", "pursuit", "rage", "zen_headbutt", "secret_power", new int[] { 1545, 1546, 1549 }, -1), 10);
                         // 206 Dunsparce : 32 Serene Grace : 58 Ice Beam : 352 Water Pulse : Secret Power : Ancient Power
-                        shop.Mobs.Add(GetShopMob(206, "serene_grace", 58, 352, 290, 246, new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(206, "serene_grace", "ice_beam", "water_pulse", "secret_power", "ancient_power", new int[] { 1545, 1546, 1549 }, -1), 10);
                         // 206 Dunsparce : 32 Serene Grace : 228 Pursuit : 44 Bite : Secret Power : Ancient Power
-                        shop.Mobs.Add(GetShopMob(206, "serene_grace", 228, 44, 290, 246, new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(206, "serene_grace", "pursuit", "bite", "secret_power", "ancient_power", new int[] { 1545, 1546, 1549 }, -1), 10);
                         // 206 Dunsparce : 32 Serene Grace : 228 Pursuit : 355 Roost : Secret Power : Ancient Power
-                        shop.Mobs.Add(GetShopMob(206, "serene_grace", 228, 355, 290, 246, new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(206, "serene_grace", "pursuit", "roost", "secret_power", "ancient_power", new int[] { 1545, 1546, 1549 }, -1), 10);
                         // 206 Dunsparce : 155 Rattled : 228 Pursuit : 180 Spite : 20 Bind : 281 Yawn
-                        shop.Mobs.Add(GetShopMob(206, "rattled", 228, 180, 20, 281, new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(206, "rattled", "pursuit", "spite", "bind", "yawn", new int[] { 1545, 1546, 1549 }, -1), 10);
                         // 206 Dunsparce : 155 Rattled : 137 Glare : 180 Spite : 20 Bind : 506 Hex
-                        shop.Mobs.Add(GetShopMob(206, "rattled", 137, 180, 20, 506, new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob(206, "rattled", "glare", "spite", "bind", "hex", new int[] { 1545, 1546, 1549 }, -1), 10);
                     }
                     shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
                 }
