@@ -515,21 +515,21 @@ namespace DataGenerator.Data
                     weather.Add("rain", 2);
                     weather.Add("sunny", 1);
                     weather.Add("hail", 3);
-                    ability.OnMapStatusAdds.Add(0, new WeatherFormeChangeEvent(351, 0, weather));
+                    ability.OnMapStatusAdds.Add(0, new WeatherFormeChangeEvent("castform", 0, weather));
                 }
                 {
                     Dictionary<string, int> weather = new Dictionary<string, int>();
                     weather.Add("rain", 2);
                     weather.Add("sunny", 1);
                     weather.Add("hail", 3);
-                    ability.OnMapStatusRemoves.Add(0, new WeatherFormeChangeEvent(351, 0, weather));
+                    ability.OnMapStatusRemoves.Add(0, new WeatherFormeChangeEvent("castform", 0, weather));
                 }
                 {
                     Dictionary<string, int> weather = new Dictionary<string, int>();
                     weather.Add("rain", 2);
                     weather.Add("sunny", 1);
                     weather.Add("hail", 3);
-                    ability.OnMapStarts.Add(-11, new WeatherFormeEvent(351, 0, weather));
+                    ability.OnMapStarts.Add(-11, new WeatherFormeEvent("castform", 0, weather));
                 }
             }
             else if (ii == 60)
@@ -981,17 +981,17 @@ namespace DataGenerator.Data
                 {
                     Dictionary<string, int> weather = new Dictionary<string, int>();
                     weather.Add("sunny", 1);
-                    ability.OnMapStatusAdds.Add(0, new WeatherFormeChangeEvent(421, 0, weather));
+                    ability.OnMapStatusAdds.Add(0, new WeatherFormeChangeEvent("cherrim", 0, weather));
                 }
                 {
                     Dictionary<string, int> weather = new Dictionary<string, int>();
                     weather.Add("sunny", 1);
-                    ability.OnMapStatusRemoves.Add(0, new WeatherFormeChangeEvent(421, 0, weather));
+                    ability.OnMapStatusRemoves.Add(0, new WeatherFormeChangeEvent("cherrim", 0, weather));
                 }
                 {
                     Dictionary<string, int> weather = new Dictionary<string, int>();
                     weather.Add("sunny", 1);
-                    ability.OnMapStarts.Add(-11, new WeatherFormeEvent(421, 0, weather));
+                    ability.OnMapStarts.Add(-11, new WeatherFormeEvent("cherrim", 0, weather));
                 }
                 ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Self | Alignment.Friend);

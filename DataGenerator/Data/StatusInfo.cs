@@ -1977,7 +1977,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new CountDownState(15));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new FriendlyFiredEvent());
-                status.OnRefresh.Add(0, new AppearanceEvent(new MonsterID(0, 1, 0, Gender.Genderless)));
+                status.OnRefresh.Add(0, new AppearanceEvent(new MonsterID("missingno", 1, "normal", Gender.Genderless)));
             }
             else if (ii == 113)
             {

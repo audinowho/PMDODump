@@ -85,7 +85,7 @@ namespace DataGenerator.Data
                 elementTable.TypeMap[Text.Sanitize(type.ToString()).ToLower()] = (int)type;
 
             universalEvent.UniversalStates.Set(elementTable);
-            universalEvent.UniversalStates.Set(new SkinTableState(1024));
+            universalEvent.UniversalStates.Set(new SkinTableState(1024, "shiny", "shiny_square"));
 
 
             DataManager.SaveData(PathMod.ModPath(DataManager.DATA_PATH + "Universal.bin"), universalEvent);

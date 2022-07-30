@@ -382,10 +382,10 @@ namespace DataGenerator.Data
             path.SpecificRooms.Add(specificPlan);
         }
 
-        static SpecificTeamSpawner CreateSetMobTeam(Loc loc, int species, string ability, string move1, string move2, string move3, string move4, int level, string tactic = "tit_for_tat")
+        static SpecificTeamSpawner CreateSetMobTeam(Loc loc, string species, string ability, string move1, string move2, string move3, string move4, int level, string tactic = "tit_for_tat")
         {
             MobSpawn post_mob = new MobSpawn();
-            post_mob.BaseForm = new MonsterID(species, 0, 0, Gender.Unknown);
+            post_mob.BaseForm = new MonsterID(species, 0, DataManager.Instance.DefaultSkin, Gender.Unknown);
             post_mob.Intrinsic = ability;
             if (!String.IsNullOrEmpty(move1))
                 post_mob.SpecifiedSkills.Add(move1);
@@ -414,20 +414,20 @@ namespace DataGenerator.Data
 
 
 
-        static TeamMemberSpawn GetTeamMob(int species, string ability, string move1, string move2, string move3, string move4, RandRange level,
+        static TeamMemberSpawn GetTeamMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level,
             string tactic = "wander_normal", bool sleeping = false)
         {
-            return GetTeamMob(new MonsterID(species, 0, -1, Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping);
+            return GetTeamMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping);
         }
         static TeamMemberSpawn GetTeamMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, RandRange level,
             string tactic = "wander_normal", bool sleeping = false)
         {
             return GetTeamMob(id, ability, move1, move2, move3, move4, level, TeamMemberSpawn.MemberRole.Normal, tactic, sleeping);
         }
-        static TeamMemberSpawn GetTeamMob(int species, string ability, string move1, string move2, string move3, string move4, RandRange level,
+        static TeamMemberSpawn GetTeamMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level,
             TeamMemberSpawn.MemberRole role, string tactic = "wander_normal", bool sleeping = false)
         {
-            return GetTeamMob(new MonsterID(species, 0, -1, Gender.Unknown), ability, move1, move2, move3, move4, level, role, tactic, sleeping);
+            return GetTeamMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, role, tactic, sleeping);
         }
         static TeamMemberSpawn GetTeamMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, RandRange level,
             TeamMemberSpawn.MemberRole role, string tactic = "wander_normal", bool sleeping = false)
@@ -435,10 +435,10 @@ namespace DataGenerator.Data
             return new TeamMemberSpawn(GetGenericMob(id, ability, move1, move2, move3, move4, level, tactic, sleeping), role);
         }
 
-        static MobSpawn GetGenericMob(int species, string ability, string move1, string move2, string move3, string move4, RandRange level,
+        static MobSpawn GetGenericMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level,
             string tactic = "wander_normal", bool sleeping = false)
         {
-            return GetGenericMob(new MonsterID(species, 0, -1, Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping);
+            return GetGenericMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping);
         }
         static MobSpawn GetGenericMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, RandRange level,
             string tactic = "wander_normal", bool sleeping = false)
@@ -469,10 +469,10 @@ namespace DataGenerator.Data
             return post_mob;
         }
 
-        static MobSpawn GetFOEMob(int species, string ability, string move1, string move2, string move3, string move4, int baseLv)
+        static MobSpawn GetFOEMob(string species, string ability, string move1, string move2, string move3, string move4, int baseLv)
         {
             MobSpawn post_mob = new MobSpawn();
-            post_mob.BaseForm = new MonsterID(species, 0, -1, Gender.Unknown);
+            post_mob.BaseForm = new MonsterID(species, 0, "", Gender.Unknown);
             post_mob.Intrinsic = ability;
             if (!String.IsNullOrEmpty(move1))
                 post_mob.SpecifiedSkills.Add(move1);
@@ -489,10 +489,10 @@ namespace DataGenerator.Data
             return post_mob;
         }
 
-        static MobSpawn GetHouseMob(int species, string tactic)
+        static MobSpawn GetHouseMob(string species, string tactic)
         {
             MobSpawn post_mob = new MobSpawn();
-            post_mob.BaseForm = new MonsterID(species, 0, -1, Gender.Unknown);
+            post_mob.BaseForm = new MonsterID(species, 0, "", Gender.Unknown);
             post_mob.Level = new RandRange(1);
             post_mob.Tactic = tactic;
             post_mob.Level = new RandRange(1);
@@ -501,9 +501,9 @@ namespace DataGenerator.Data
             return post_mob;
         }
 
-        static MobSpawn GetBossMob(int species, string ability, string move1, string move2, string move3, string move4, int item, Loc loc, string tactic = "boss")
+        static MobSpawn GetBossMob(string species, string ability, string move1, string move2, string move3, string move4, int item, Loc loc, string tactic = "boss")
         {
-            return GetBossMob(new MonsterID(species, 0, -1, Gender.Unknown), ability, move1, move2, move3, move4, item, loc, tactic);
+            return GetBossMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, item, loc, tactic);
         }
 
         static MobSpawn GetBossMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, int item, Loc loc, string tactic = "boss")
@@ -532,10 +532,10 @@ namespace DataGenerator.Data
         }
 
 
-        static MobSpawn GetShopMob(int species, string ability, string move1, string move2, string move3, string move4, int[] items, int keeperId, string tactic = "shopkeeper")
+        static MobSpawn GetShopMob(string species, string ability, string move1, string move2, string move3, string move4, int[] items, int keeperId, string tactic = "shopkeeper")
         {
             MobSpawn post_mob = new MobSpawn();
-            post_mob.BaseForm = new MonsterID(species, 0, 0, Gender.Unknown);
+            post_mob.BaseForm = new MonsterID(species, 0, DataManager.Instance.DefaultSkin, Gender.Unknown);
             post_mob.Tactic = tactic;
             post_mob.Level = new RandRange(100);
             post_mob.Intrinsic = ability;

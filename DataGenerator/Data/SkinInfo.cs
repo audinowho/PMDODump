@@ -31,15 +31,19 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_GROUPS; ii++)
             {
                 SkinData data = new SkinData(new LocalText(ii > 0 ? "Shiny" : "Normal"), ii > 0 ? '\uE10C' : '\0');
+                data.IndexNum = ii;
+                string fileName = "";
                 switch (ii)
                 {
                     case 0:
                         {
+                            fileName = "normal";
                             data.MinimapColor = Color.Red;
                         }
                         break;
                     case 1:
                         {
+                            fileName = "shiny";
                             FiniteAreaEmitter emitter = new FiniteAreaEmitter(new AnimData("Screen_Sparkle_RSE", 5));
                             emitter.Range = GraphicsManager.TileSize;
                             emitter.Speed = GraphicsManager.TileSize * 2;
@@ -53,6 +57,7 @@ namespace DataGenerator.Data
                         break;
                     case 2:
                         {
+                            fileName = "shiny_square";
                             FiniteAreaEmitter emitter = new FiniteAreaEmitter(new AnimData("Captivate_Sparkle", 2));
                             emitter.Range = GraphicsManager.TileSize;
                             emitter.Speed = GraphicsManager.TileSize * 2;
@@ -67,8 +72,7 @@ namespace DataGenerator.Data
                         }
                         break;
                 }
-                //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.Skin.ToString(), data);
+                DataManager.SaveData(fileName, DataManager.DataType.Skin.ToString(), data);
             }
         }
 

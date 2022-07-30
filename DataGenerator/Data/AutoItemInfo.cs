@@ -220,8 +220,8 @@ namespace DataGenerator.Data
                 stats.Add(((int)statType).ToString("D3") + ": " + statType.ToString());
 
 
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Monster].Count; ii++)
-                monsters.Add((ii).ToString("D3") + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries[ii.ToString()].Name.DefaultText);
+            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries.Keys)
+                monsters.Add(key);
 
             foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Element].Entries.Keys)
                 elements.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Element].Entries[key].Name.DefaultText);
@@ -321,18 +321,20 @@ namespace DataGenerator.Data
                 }
             }
 
-            List<List<int>> evoTrees = new List<List<int>>();
+            List<List<string>> evoTrees = new List<List<string>>();
             List<bool> branchedEvo = new List<bool>();
-            HashSet<int> traversed = new HashSet<int>();
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[DataManager.DataType.Monster].Count; ii++)
+            HashSet<string> traversed = new HashSet<string>();
+
+            List<string> monsterKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
+            for (int ii = 0; ii < monsterKeys.Count; ii++)
             {
-                if (traversed.Contains(ii))
+                if (traversed.Contains(monsterKeys[ii]))
                     continue;
 
-                int firstStage = ii;
+                string firstStage = monsterKeys[ii];
                 MonsterData data = DataManager.Instance.GetMonster(firstStage);
-                int prevo = data.PromoteFrom;
-                while (prevo > -1)
+                string prevo = data.PromoteFrom;
+                while (!String.IsNullOrEmpty(prevo))
                 {
                     firstStage = prevo;
                     data = DataManager.Instance.GetMonster(firstStage);
@@ -341,13 +343,10 @@ namespace DataGenerator.Data
                 List<string> dexNums = new List<string>();
                 dexNums.Add(firstStage.ToString());
                 bool branched = FindEvos(dexNums, data);
-                List<int> dexNumInt = new List<int>();
-                foreach (string dexNum in dexNums)
-                    dexNumInt.Add(Int32.Parse(dexNum));
-                evoTrees.Add(dexNumInt);
+                evoTrees.Add(dexNums);
                 branchedEvo.Add(branched);
                 foreach (string dexNum in dexNums)
-                    traversed.Add(Int32.Parse(dexNum));
+                    traversed.Add(dexNum);
             }
 
             path = GenPath.ITEM_PATH  + "EvoTreeRef.txt";
@@ -356,38 +355,38 @@ namespace DataGenerator.Data
                 file.WriteLine("User\tEvo\tIndex\tRarity");
                 for (int ii = 0; ii < evoTrees.Count; ii++)
                 {
-                    List<int> evoTree = evoTrees[ii];
+                    List<string> evoTree = evoTrees[ii];
                     if (branchedEvo[ii])
                     {
                         for (int jj = evoTree.Count - 1; jj >= 0; jj--)
-                            file.WriteLine(monsters[evoTree[jj]] + "\tFALSE\t"+(char)('A'+ (evoTree.Count - 1 - jj)) +"\t5*");
+                            file.WriteLine(evoTree[jj] + "\tFALSE\t"+(char)('A'+ (evoTree.Count - 1 - jj)) +"\t5*");
                     }
                     else if (evoTree.Count == 3)
                     {
-                        file.WriteLine(monsters[evoTree[2]] + "\tTRUE\tA\t5*");
-                        file.WriteLine(monsters[evoTree[1]] + "\tTRUE\tB\t4*");
-                        file.WriteLine(monsters[evoTree[0]] + "\tTRUE\tC\t1-2*");
-                        file.WriteLine(monsters[evoTree[0]] + "\tTRUE\tD\t1-2*");
-                        file.WriteLine(monsters[evoTree[0]] + "\tTRUE\tE\t2-3*");
-                        file.WriteLine(monsters[evoTree[1]] + "\tTRUE\tF\t2-3*");
+                        file.WriteLine(evoTree[2] + "\tTRUE\tA\t5*");
+                        file.WriteLine(evoTree[1] + "\tTRUE\tB\t4*");
+                        file.WriteLine(evoTree[0] + "\tTRUE\tC\t1-2*");
+                        file.WriteLine(evoTree[0] + "\tTRUE\tD\t1-2*");
+                        file.WriteLine(evoTree[0] + "\tTRUE\tE\t2-3*");
+                        file.WriteLine(evoTree[1] + "\tTRUE\tF\t2-3*");
                     }
                     else if (evoTree.Count == 2)
                     {
-                        file.WriteLine(monsters[evoTree[1]] + "\tTRUE\tA\t5*");
-                        file.WriteLine(monsters[evoTree[1]] + "\tTRUE\tB\t4*");
-                        file.WriteLine(monsters[evoTree[0]] + "\tTRUE\tC\t1-2*");
-                        file.WriteLine(monsters[evoTree[0]] + "\tTRUE\tD\t1-2*");
-                        file.WriteLine(monsters[evoTree[0]] + "\tTRUE\tE\t2-3*");
-                        file.WriteLine(monsters[evoTree[1]] + "\tTRUE\tF\t2-3*");
+                        file.WriteLine(evoTree[1] + "\tTRUE\tA\t5*");
+                        file.WriteLine(evoTree[1] + "\tTRUE\tB\t4*");
+                        file.WriteLine(evoTree[0] + "\tTRUE\tC\t1-2*");
+                        file.WriteLine(evoTree[0] + "\tTRUE\tD\t1-2*");
+                        file.WriteLine(evoTree[0] + "\tTRUE\tE\t2-3*");
+                        file.WriteLine(evoTree[1] + "\tTRUE\tF\t2-3*");
                     }
                     else if (evoTree.Count == 1)
                     {
-                        file.WriteLine(monsters[evoTree[0]] + "\tFALSE\tA\t5*");
-                        file.WriteLine(monsters[evoTree[0]] + "\tFALSE\tB\t4*");
-                        file.WriteLine(monsters[evoTree[0]] + "\tFALSE\tC\t1-2*");
-                        file.WriteLine(monsters[evoTree[0]] + "\tFALSE\tD\t1-2*");
-                        file.WriteLine(monsters[evoTree[0]] + "\tFALSE\tE\t2-3*");
-                        file.WriteLine(monsters[evoTree[0]] + "\tFALSE\tF\t2-3*");
+                        file.WriteLine(evoTree[0] + "\tFALSE\tA\t5*");
+                        file.WriteLine(evoTree[0] + "\tFALSE\tB\t4*");
+                        file.WriteLine(evoTree[0] + "\tFALSE\tC\t1-2*");
+                        file.WriteLine(evoTree[0] + "\tFALSE\tD\t1-2*");
+                        file.WriteLine(evoTree[0] + "\tFALSE\tE\t2-3*");
+                        file.WriteLine(evoTree[0] + "\tFALSE\tF\t2-3*");
                     }
                 }
             }
@@ -413,8 +412,8 @@ namespace DataGenerator.Data
         {
             int incompleteLeft = 0;
             List<(int item, int[] reqItem)> specific_tradeables = new List<(int, int[])>();
-            List<(int item, int dex, int reqCount)> random_tradeables = new List<(int, int, int)>();
-            Dictionary<int, int> dex_map = new Dictionary<int, int>();
+            List<(int item, string dex, int reqCount)> random_tradeables = new List<(int, string, int)>();
+            Dictionary<int, string> dex_map = new Dictionary<int, string>();
 
             int prev_start = init_idx;
             List<string> running_tradeables = new List<string>();
@@ -432,7 +431,7 @@ namespace DataGenerator.Data
                     string customName = row[1].Trim();
                     ExclusiveItemType exclType = (ExclusiveItemType)Enum.Parse(typeof(ExclusiveItemType), row[0].Substring(2));
                     ExclusiveItemEffect exclEffect = (ExclusiveItemEffect)Int32.Parse(row[10].Substring(3, 3));
-                    int primaryDex = Int32.Parse(row[2].Substring(0, 3));
+                    string primaryDex = row[2];
                     dex_map[item_idx] = primaryDex;
 
                     string[] rarityStr = row[9].Substring(0, row[9].Length-1).Split('-');
@@ -458,14 +457,14 @@ namespace DataGenerator.Data
                     if (row[17] != "")
                         args.Add(Int32.Parse(row[17].Substring(0, 3)));
 
-                    List<int> familyStarts = new List<int>();
+                    List<string> familyStarts = new List<string>();
                     if (row[4] != "")
                     {
                         string[] startDexes = row[4].Split(',');
                         foreach (string startDex in startDexes)
                         {
-                            string cutoff = startDex.Trim().Substring(0, 3);
-                            familyStarts.Add(Int32.Parse(cutoff));
+                            string cutoff = startDex.Trim();
+                            familyStarts.Add(cutoff);
                         }
                     }
                     else
@@ -473,16 +472,16 @@ namespace DataGenerator.Data
 
                     bool includeFamily = row[3] == "True";
                     List<string> dexNums = new List<string>();
-                    foreach (int dex in familyStarts)
+                    foreach (string dex in familyStarts)
                     {
                         if (includeFamily)
                         {
-                            string firstStage = dex.ToString();
+                            string firstStage = dex;
                             MonsterData data = DataManager.Instance.GetMonster(firstStage);
-                            int prevo = data.PromoteFrom;
-                            while (prevo > -1)
+                            string prevo = data.PromoteFrom;
+                            while (!String.IsNullOrEmpty(prevo))
                             {
-                                firstStage = prevo.ToString();
+                                firstStage = prevo;
                                 data = DataManager.Instance.GetMonster(firstStage);
                                 prevo = data.PromoteFrom;
                             }
@@ -490,7 +489,7 @@ namespace DataGenerator.Data
                             AutoItemInfo.FindEvos(dexNums, data);
                         }
                         else
-                            dexNums.Add(dex.ToString());
+                            dexNums.Add(dex);
                     }
 
                     ItemData item = new ItemData();
@@ -649,44 +648,44 @@ namespace DataGenerator.Data
                                 //has a rarity of 3 or lower
                                 if (old_item.Rarity <= 3)
                                 {
-                                    int old_dex = dex_map[old_idx];
+                                    string old_dex = dex_map[old_idx];
 
                                     switch (primaryDex)
                                     {
-                                        case 144://legendary birds
-                                        case 145:
-                                        case 146:
-                                        case 150://mew/two
-                                        case 151:
-                                        case 201://unown
-                                        case 243://legendary beasts
-                                        case 244:
-                                        case 245:
-                                        case 249://bird duo
-                                        case 250:
-                                        case 251://celebi
-                                        case 486://regis
-                                        case 377:
-                                        case 378:
-                                        case 379:
-                                        case 380://lati
-                                        case 381:
-                                        case 382://weather trio
-                                        case 383:
-                                        case 384:
-                                        case 385://jirachi
-                                        case 386://deoxys
-                                        case 480://spirit trio
-                                        case 481:
-                                        case 482:
-                                        case 483://creation trio
-                                        case 484:
-                                        case 487:
-                                        case 485://heatran
-                                        case 488://dream duo
-                                        case 491:
-                                        case 492://shaymin
-                                        case 493://arceus
+                                        case "articuno"://legendary birds
+                                        case "zapdos":
+                                        case "moltres":
+                                        case "mewtwo"://mew/two
+                                        case "mew":
+                                        case "unown"://unown
+                                        case "raikou"://legendary beasts
+                                        case "entei":
+                                        case "suicune":
+                                        case "lugia"://bird duo
+                                        case "ho_oh":
+                                        case "celebi"://celebi
+                                        case "regigigas"://regis
+                                        case "regirock":
+                                        case "regice":
+                                        case "registeel":
+                                        case "latias"://lati
+                                        case "latios":
+                                        case "kyogre"://weather trio
+                                        case "groudon":
+                                        case "rayquaza":
+                                        case "jirachi"://jirachi
+                                        case "deoxys"://deoxys
+                                        case "uxie"://spirit trio
+                                        case "mesprit":
+                                        case "azelf":
+                                        case "dialga"://creation trio
+                                        case "palkia":
+                                        case "giratina":
+                                        case "heatran"://heatran
+                                        case "cresselia"://dream duo
+                                        case "darkrai":
+                                        case "shaymin"://shaymin
+                                        case "arceus"://arceus
                                             break;
                                         default:
                                             random_tradeables.Add((old_idx, old_dex, old_item.Rarity));
@@ -719,12 +718,12 @@ namespace DataGenerator.Data
                 }
                 file.Write("}\n\n");
                 file.Write("COMMON_GEN.TRADES_RANDOM = {\n");
-                foreach ((int item, int dex, int reqCount) trade in random_tradeables)
+                foreach ((int item, string dex, int reqCount) trade in random_tradeables)
                 {
                     List<int> wildcards = new List<int>();
                     for (int nn = 0; nn < trade.reqCount + 1; nn++)
                         wildcards.Add(-1);
-                    file.Write("{ Item=" + trade.item + ", Dex="+trade.dex + ", ReqItem={" + String.Join(',', wildcards.ToArray()) + "}},\n");
+                    file.Write("{ Item=" + trade.item + ", Dex=\""+trade.dex + "\", ReqItem={" + String.Join(',', wildcards.ToArray()) + "}},\n");
                 }
                 file.Write("}\n\n");
             }
@@ -1951,8 +1950,8 @@ namespace DataGenerator.Data
         {
             string firstStage = dexFamily;
             MonsterData data = DataManager.Instance.GetMonster(firstStage);
-            int prevo = data.PromoteFrom;
-            while (prevo > -1)
+            string prevo = data.PromoteFrom;
+            while (!String.IsNullOrEmpty(prevo))
             {
                 firstStage = prevo.ToString();
                 data = DataManager.Instance.GetMonster(firstStage);

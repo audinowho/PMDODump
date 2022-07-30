@@ -3224,7 +3224,7 @@ namespace DataGenerator.Data
                 item.Price = 400000;
                 item.MaxStack = -1;
                 item.UseEvent.BeforeTryActions.Add(0, new CheckItemActiveEvent());
-                item.UseEvent.BeforeTryActions.Add(1, new FormChoiceEvent(386));
+                item.UseEvent.BeforeTryActions.Add(1, new FormChoiceEvent("deoxys"));
                 item.UseEvent.OnHits.Add(0, new SwitchFormEvent());
                 item.UseEvent.OnHits.Add(0, new DeactivateItemEvent());
                 item.UseAction = new SelfAction();
@@ -3260,7 +3260,7 @@ namespace DataGenerator.Data
                 item.Price = 800000;
                 item.MaxStack = -1;
                 item.UseEvent.BeforeTryActions.Add(0, new CheckItemActiveEvent());
-                item.UseEvent.BeforeTryActions.Add(1, new FormChoiceEvent(487));
+                item.UseEvent.BeforeTryActions.Add(1, new FormChoiceEvent("giratina"));
                 item.UseEvent.OnHits.Add(0, new SwitchFormEvent());
                 item.UseEvent.OnHits.Add(0, new DeactivateItemEvent());
                 item.UseAction = new SelfAction();
@@ -3291,7 +3291,7 @@ namespace DataGenerator.Data
                 item.Price = 100000;
                 item.MaxStack = -1;
                 item.UseEvent.BeforeTryActions.Add(0, new CheckItemActiveEvent());
-                item.UseEvent.BeforeTryActions.Add(1, new FormChoiceEvent(492));
+                item.UseEvent.BeforeTryActions.Add(1, new FormChoiceEvent("shaymin"));
                 item.UseEvent.OnHits.Add(0, new SwitchFormEvent());
                 item.UseEvent.OnHits.Add(0, new DeactivateItemEvent());
                 item.UseAction = new SelfAction();

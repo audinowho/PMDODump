@@ -63,6 +63,8 @@ namespace DataGenerator.Data
         static string DEX_7_FILE { get => MONSTER_PATH + "pokedex.7.sqlite"; }
         static string TL_FILE { get => MONSTER_PATH + "pokedex.8.sqlite"; }
 
+        static List<string> monsterKeys;
+
         public static void AddMonsterData()
         {
             //DataInfo.DeleteIndexedData(DataManager.DataType.Monster.ToString());
@@ -115,6 +117,11 @@ namespace DataGenerator.Data
             MonsterData[] totalEntries = new MonsterData[TOTAL_DEX];
 
             Dictionary<string, List<byte>> personalities = GetPersonalityChecklist();
+            monsterKeys = new List<string>();
+            for (int ii = 0; ii < TOTAL_DEX; ii++)
+            {
+                monsterKeys.Add(LoadDexAssetName(m_dbTLConnection, ii));
+            }
 
             for (int ii = 0; ii < TOTAL_DEX; ii++)
             {
@@ -148,8 +155,8 @@ namespace DataGenerator.Data
 
             for (int ii = 0; ii < TOTAL_DEX; ii++)
             {
-                //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.Monster.ToString(), totalEntries[ii]);
+                string fileName = getAssetName(totalEntries[ii].Name.DefaultText);
+                DataManager.SaveData(fileName, DataManager.DataType.Monster.ToString(), totalEntries[ii]);
                 //TotalEntries[ii].SaveXml("Dex\\" + ii + ".xml");
                 Console.WriteLine("#" + ii + " " + totalEntries[ii].Name + " Written");
             }
@@ -240,6 +247,7 @@ namespace DataGenerator.Data
         public static MonsterData LoadZero()
         {
             MonsterData entry = new MonsterData();
+            entry.IndexNum = 0;
             entry.Name = new LocalText("Missingno.");
             entry.Title = new LocalText("???");
             //entry.Color = DexColor.Gray;
@@ -295,11 +303,37 @@ namespace DataGenerator.Data
             return entry;
         }
 
+        public static string LoadDexAssetName(SQLiteConnection m_dbTLConnection, int index)
+        {
+            if (index == 0)
+                return getAssetName("Missingno.");
+
+            //name
+            string name = "";
+            string sql = "SELECT * FROM pokemon_v2_pokemonspeciesname WHERE pokemon_species_id = " + index + " AND language_id = 9";
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbTLConnection);
+            using (SQLiteDataReader reader = command.ExecuteReader())
+            {
+                int read = 0;
+                while (reader.Read())
+                {
+                    if (read > 0)
+                        throw new Exception("#" + index + ": More than 1 Index result!?");
+                    name = reader["name"].ToString();
+                    if (name.Contains('’'))
+                        name = name.Replace('’', '\'');
+                    read++;
+                }
+            }
+            return getAssetName(name);
+        }
+
         public static MonsterData LoadDex(SQLiteConnection m_dbTLConnection, int index)
         {
             if (index == 0)
                 return LoadZero();
             MonsterData entry = new MonsterData();
+            entry.IndexNum = index; 
 
             //name
             //species name
@@ -364,7 +398,7 @@ namespace DataGenerator.Data
                     entry.EXPTable = Text.Sanitize(Text.GetMemberTitle(MapGrowthGroup(Convert.ToInt32(reader["growth_rate_id"].ToString())).ToString())).ToLower();
                     string prevo = reader["evolves_from_species_id"].ToString();
                     if (!String.IsNullOrEmpty(prevo))
-                        entry.PromoteFrom = Convert.ToInt32(prevo);
+                        entry.PromoteFrom = monsterKeys[Convert.ToInt32(prevo)];
                     read++;
                 }
             }
@@ -403,14 +437,14 @@ namespace DataGenerator.Data
                     bool hasEvo = false;
                     foreach (PromoteBranch currentBranch in entry.Promotions)
                     {
-                        if (currentBranch.Result == evoSpecies)
+                        if (currentBranch.Result == monsterKeys[evoSpecies])
                             hasEvo = true;
                     }
                     if (hasEvo)
                         continue;
 
                     PromoteBranch branch = new PromoteBranch();
-                    branch.Result = evoSpecies;
+                    branch.Result = monsterKeys[evoSpecies];
                     int evoMethod = Convert.ToInt32(reader["evolution_trigger_id"].ToString());//level/trade/useitem/shed
 
                     string itemNum = reader["evolution_item_id"].ToString();
@@ -594,7 +628,7 @@ namespace DataGenerator.Data
                                 EvoFriendship evoDetail = new EvoFriendship();
                                 branch.Details.Add(evoDetail);
 
-                                if (index < branch.Result) //pre-evos are excluded from time of day req
+                                if (index < monsterKeys.IndexOf(branch.Result)) //pre-evos are excluded from time of day req
                                 {
                                     EvoItem evoDetail2 = new EvoItem();
                                     evoDetail2.ItemNum = (time == "night") ? 378 : 377;
@@ -651,7 +685,7 @@ namespace DataGenerator.Data
                             else if (CheckEvoConditions(reader, "party_species_id"))
                             {
                                 EvoPartner evoDetail = new EvoPartner();
-                                evoDetail.Species = Convert.ToInt32(allySpecies);
+                                evoDetail.Species = monsterKeys[Convert.ToInt32(allySpecies)];
                                 branch.Details.Add(evoDetail);
                             }
                             else if (CheckEvoConditions(reader, "min_level", "party_type_id"))
@@ -699,7 +733,7 @@ namespace DataGenerator.Data
                             else if (CheckEvoConditions(reader, "trade_species_id"))
                             {
                                 EvoPartner evoDetail = new EvoPartner();
-                                evoDetail.Species = Convert.ToInt32(tradeSpecies);
+                                evoDetail.Species = monsterKeys[Convert.ToInt32(tradeSpecies)];
                                 branch.Details.Add(evoDetail);
                             }
                             else
@@ -744,7 +778,7 @@ namespace DataGenerator.Data
                     if (evoSpecies == 291)//ninjask
                     {
                         EvoShed evoDetail = new EvoShed();
-                        evoDetail.ShedSpecies = 292;
+                        evoDetail.ShedSpecies = monsterKeys[292];
                         branch.Details.Add(evoDetail);
                     }
                     else if (evoSpecies == 666)//vivillon
@@ -1016,7 +1050,7 @@ namespace DataGenerator.Data
             {
                 //FIXME
                 PromoteBranch branch = new PromoteBranch();
-                branch.Result = 809;
+                branch.Result = monsterKeys[809];
 
                 EvoItem evoDetail = new EvoItem();
                 evoDetail.ItemNum = 365;//Link Cable
@@ -1513,21 +1547,21 @@ namespace DataGenerator.Data
             int evoCount = 0;
             foreach (PromoteBranch evo in entry.Promotions)
             {
-                if (evo.Result < GetGenBoundary(dexIndex))
+                if (monsterKeys.IndexOf(evo.Result) < GetGenBoundary(dexIndex))
                     evoCount++;
             }
             int newRate = 0;
             if (evoCount == 0)//...if it doesn't have any evos (don't count future gens)
             {
                 //cannot evolve further
-                if (entry.PromoteFrom == -1)//single stager -25% to 65%
+                if (String.IsNullOrEmpty(entry.PromoteFrom))//single stager -25% to 65%
                     newRate = entry.JoinRate * 90 / 255 - 25;
-                else if (totalEntries[entry.PromoteFrom].PromoteFrom == -1)//second stage -40% to 20%
+                else if (String.IsNullOrEmpty(totalEntries[monsterKeys.IndexOf(entry.PromoteFrom)].PromoteFrom))//second stage -40% to 20%
                     newRate = entry.JoinRate * 60 / 255 - 40;
                 else//third stage: -65% to -15%
                     newRate = entry.JoinRate * 50 / 255 - 65;
             }
-            else if (entry.PromoteFrom == -1)//first stage evolvable: 10% to 80%
+            else if (String.IsNullOrEmpty(entry.PromoteFrom))//first stage evolvable: 10% to 80%
             {
                 //newRate = entry.JoinRate * 70 / 255 + 10;
                 if (entry.JoinRate <= 200)//0-200 -> 10% to 50%
@@ -1558,7 +1592,7 @@ namespace DataGenerator.Data
 
             foreach (PromoteBranch branch in entry.Promotions)
             {
-                int evoSpecies = branch.Result;
+                int evoSpecies = monsterKeys.IndexOf(branch.Result);
                 EvoFriendship friendship = null;
                 //bool hasTime = false;
                 foreach (PromoteDetail detail in branch.Details)
@@ -1572,7 +1606,7 @@ namespace DataGenerator.Data
                 if (friendship == null)
                     continue;
 
-                if (entry.PromoteFrom != -1)
+                if (!String.IsNullOrEmpty(entry.PromoteFrom))
                 {
                     //this is an evo to the final stage of 3
                     friendship.Allies = 3;
@@ -1596,11 +1630,11 @@ namespace DataGenerator.Data
             if (entry.Promotions.Count == 0)//...if it doesn't have any evos (don't count future gens)
             {
                 //cannot evolve further
-                if (entry.PromoteFrom == -1)
+                if (String.IsNullOrEmpty(entry.PromoteFrom))
                 {
                     //impossible
                 }
-                else if (totalEntries[entry.PromoteFrom].PromoteFrom == -1)//second stage
+                else if (String.IsNullOrEmpty(totalEntries[monsterKeys.IndexOf(entry.PromoteFrom)].PromoteFrom))//second stage
                 {
 
                 }
@@ -1609,7 +1643,7 @@ namespace DataGenerator.Data
 
                 }
             }
-            else if (entry.PromoteFrom == -1)//first stage evolvable: 10% to 80%
+            else if (String.IsNullOrEmpty(entry.PromoteFrom))//first stage evolvable: 10% to 80%
             {
 
             }
@@ -1652,8 +1686,16 @@ namespace DataGenerator.Data
 
             if (form == 0)
                 form = -1;
-            MonsterID id = new MonsterID(species, form, -1, Gender.Unknown);
+            CharID id = new CharID(species, form, -1, -1);
             return GraphicsManager.GetFallbackForm(charaIndex, id) == id;
+        }
+
+        private static string getAssetName(string fileName)
+        {
+            //nido special case
+            fileName = fileName.Replace("♂", "_m").Replace("♀", "_f");
+            fileName = Text.Sanitize(fileName).ToLower();
+            return fileName;
         }
 
         const int TOTAL_MOVES = 826;
