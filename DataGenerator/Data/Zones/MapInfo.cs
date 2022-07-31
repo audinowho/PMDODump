@@ -112,7 +112,7 @@ namespace DataGenerator.Data
                 {
                     //Snorlax
                     CharData mobData = new CharData();
-                    mobData.BaseForm = new MonsterID(143, 0, 0, Gender.Male);
+                    mobData.BaseForm = new MonsterID("snorlax", 0, "normal", Gender.Male);
                     mobData.Level = 20;
                     mobData.BaseSkills[0] = new SlotSkill("tackle");
                     mobData.BaseSkills[1] = new SlotSkill("bite");
@@ -178,7 +178,7 @@ namespace DataGenerator.Data
                 {
                     //Xatu : 156 Magic Bounce : 248 Future Sight : 273 Wish : 403 Air Slash : 466 Ominous Wind
                     CharData mobData = new CharData();
-                    mobData.BaseForm = new MonsterID(178, 0, 0, Gender.Male);
+                    mobData.BaseForm = new MonsterID("xatu", 0, "normal", Gender.Male);
                     mobData.Level = 60;
                     mobData.BaseSkills[0] = new SlotSkill("future_sight");
                     mobData.BaseSkills[1] = new SlotSkill("wish");
@@ -202,7 +202,7 @@ namespace DataGenerator.Data
                 {
                     //Lucario : 80 Steadfast : 396 Aura Sphere : 406 Dragon Pulse : 198 Bone Rush : 409 Drain Punch
                     CharData mobData = new CharData();
-                    mobData.BaseForm = new MonsterID(448, 0, 0, Gender.Male);
+                    mobData.BaseForm = new MonsterID("lucario", 0, "normal", Gender.Male);
                     mobData.Level = 60;
                     mobData.BaseSkills[0] = new SlotSkill("aura_sphere");
                     mobData.BaseSkills[1] = new SlotSkill("dragon_pulse");
@@ -226,7 +226,7 @@ namespace DataGenerator.Data
                 {
                     //Wigglytuff : 172 Competitive : 47 Sing : 605 Dazzling Gleam : 304 Hyper Voice : 50 Disable
                     CharData mobData = new CharData();
-                    mobData.BaseForm = new MonsterID(40, 0, 0, Gender.Male);
+                    mobData.BaseForm = new MonsterID("wigglytuff", 0, "normal", Gender.Male);
                     mobData.Level = 60;
                     mobData.BaseSkills[0] = new SlotSkill("sing");
                     mobData.BaseSkills[1] = new SlotSkill("dazzling_gleam");
@@ -389,35 +389,35 @@ namespace DataGenerator.Data
 
                 //add NPCs
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(151, 0, 0, Gender.Genderless), new Loc(180, 360), Dir8.DownLeft, "Mew");
+                    GroundChar groundChar = new GroundChar(new MonsterID("mew", 0, "normal", Gender.Genderless), new Loc(180, 360), Dir8.DownLeft, "Mew");
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(10, 0, 0, Gender.Female), new Loc(220, 360), Dir8.DownRight, "Caterpie");
+                    GroundChar groundChar = new GroundChar(new MonsterID("caterpie", 0, "normal", Gender.Female), new Loc(220, 360), Dir8.DownRight, "Caterpie");
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(12, 0, 0, Gender.Female), new Loc(240, 360), Dir8.DownRight, "Butterfree");
+                    GroundChar groundChar = new GroundChar(new MonsterID("butterfree", 0, "normal", Gender.Female), new Loc(240, 360), Dir8.DownRight, "Butterfree");
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(314, 0, 0, Gender.Female), new Loc(220, 390), Dir8.DownRight, "Illumise");
+                    GroundChar groundChar = new GroundChar(new MonsterID("illumise", 0, "normal", Gender.Female), new Loc(220, 390), Dir8.DownRight, "Illumise");
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(313, 0, 0, Gender.Male), new Loc(240, 390), Dir8.DownRight, "Volbeat");
+                    GroundChar groundChar = new GroundChar(new MonsterID("volbeat", 0, "normal", Gender.Male), new Loc(240, 390), Dir8.DownRight, "Volbeat");
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(462, 0, 0, Gender.Genderless), new Loc(240, 420), Dir8.DownRight, "Magnezone");
+                    GroundChar groundChar = new GroundChar(new MonsterID("magnezone", 0, "normal", Gender.Genderless), new Loc(240, 420), Dir8.DownRight, "Magnezone");
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(39, 0, 0, Gender.Male), new Loc(280, 360), Dir8.DownRight, "Hungrybox", "Hungrybox");
+                    GroundChar groundChar = new GroundChar(new MonsterID("jigglypuff", 0, "normal", Gender.Male), new Loc(280, 360), Dir8.DownRight, "Hungrybox", "Hungrybox");
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(261, 0, 0, Gender.Male), new Loc(285, 208), Dir8.DownLeft, "Poochy", "Poochy");
+                    GroundChar groundChar = new GroundChar(new MonsterID("poochyena", 0, "normal", Gender.Male), new Loc(285, 208), Dir8.DownLeft, "Poochy", "Poochy");
                     map.AddMapChar(groundChar);
                 }
 
@@ -436,7 +436,7 @@ namespace DataGenerator.Data
                     ExplorerTeam team = new ExplorerTeam();
                     team.SetRank("normal");
                     CharData mobData = new CharData();
-                    mobData.BaseForm = new MonsterID(178, 0, 0, Gender.Male);
+                    mobData.BaseForm = new MonsterID("xatu", 0, "normal", Gender.Male);
                     mobData.Level = 60;
                     mobData.BaseSkills[0] = new SlotSkill("future_sight");
                     mobData.BaseSkills[1] = new SlotSkill("wish");
@@ -616,7 +616,7 @@ namespace DataGenerator.Data
                 map.AddSpawner(CreateTeamSpawner(3, new Loc(244, 382), Dir8.Down));
 
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(164, 0, 0, Gender.Male), new Loc(8, 252), Dir8.Down, "Noctowl");
+                    GroundChar groundChar = new GroundChar(new MonsterID("noctowl", 0, "normal", Gender.Male), new Loc(8, 252), Dir8.Down, "Noctowl");
                     groundChar.CharDir = Dir8.Right;
                     map.AddMapChar(groundChar);
                 }
@@ -939,37 +939,37 @@ namespace DataGenerator.Data
                 }
 
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(352, 0, 0, Gender.Male), new Loc(240, 496), Dir8.Down, "Shop_Owner");
+                    GroundChar groundChar = new GroundChar(new MonsterID("kecleon", 0, "normal", Gender.Male), new Loc(240, 496), Dir8.Down, "Shop_Owner");
                     groundChar.CharDir = Dir8.Down;
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(257, 0, 0, Gender.Genderless), new Loc(352, 512), Dir8.Down, "Tutor_Owner");
+                    GroundChar groundChar = new GroundChar(new MonsterID("blaziken", 0, "normal", Gender.Genderless), new Loc(352, 512), Dir8.Down, "Tutor_Owner");
                     groundChar.CharDir = Dir8.Down;
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(302, 0, 0, Gender.Male), new Loc(464, 512), Dir8.Down, "Swap_Owner");
+                    GroundChar groundChar = new GroundChar(new MonsterID("sableye", 0, "normal", Gender.Male), new Loc(464, 512), Dir8.Down, "Swap_Owner");
                     groundChar.CharDir = Dir8.Down;
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(100, 0, 0, Gender.Male), new Loc(580, 496), Dir8.Down, "Appraisal_Owner");
+                    GroundChar groundChar = new GroundChar(new MonsterID("voltorb", 0, "normal", Gender.Male), new Loc(580, 496), Dir8.Down, "Appraisal_Owner");
                     groundChar.CharDir = Dir8.Down;
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(299, 0, 0, Gender.Male), new Loc(240, 128), Dir8.Down, "Locator_Owner");
+                    GroundChar groundChar = new GroundChar(new MonsterID("nosepass", 0, "normal", Gender.Male), new Loc(240, 128), Dir8.Down, "Locator_Owner");
                     groundChar.CharDir = Dir8.Down;
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(402, 0, 0, Gender.Male), new Loc(240, 128), Dir8.Down, "Music_Owner");
+                    GroundChar groundChar = new GroundChar(new MonsterID("kricketune", 0, "normal", Gender.Male), new Loc(240, 128), Dir8.Down, "Music_Owner");
                     groundChar.CharDir = Dir8.Down;
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(213, 0, 0, Gender.Male), new Loc(576, 126), Dir8.Down, "Juice_Owner");
+                    GroundChar groundChar = new GroundChar(new MonsterID("shuckle", 0, "normal", Gender.Male), new Loc(576, 126), Dir8.Down, "Juice_Owner");
                     groundChar.CharDir = Dir8.Down;
                     map.AddMapChar(groundChar);
                 }
@@ -1159,7 +1159,7 @@ namespace DataGenerator.Data
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(143, 0, 0, Gender.Male), new Loc(244, 100), Dir8.Down, "Snorlax");
+                    GroundChar groundChar = new GroundChar(new MonsterID("snorlax", 0, "normal", Gender.Male), new Loc(244, 100), Dir8.Down, "Snorlax");
                     groundChar.CharDir = Dir8.Down;
                     map.AddMapChar(groundChar);
                 }
@@ -2193,17 +2193,17 @@ namespace DataGenerator.Data
 
 
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(178, 0, 0, Gender.Male), new Loc(196, 120), Dir8.Down, "Xatu");
+                    GroundChar groundChar = new GroundChar(new MonsterID("xatu", 0, "normal", Gender.Male), new Loc(196, 120), Dir8.Down, "Xatu");
                     groundChar.CharDir = Dir8.Up;
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(448, 0, 0, Gender.Male), new Loc(172, 120), Dir8.Up, "Lucario");
+                    GroundChar groundChar = new GroundChar(new MonsterID("lucario", 0, "normal", Gender.Male), new Loc(172, 120), Dir8.Up, "Lucario");
                     groundChar.CharDir = Dir8.Up;
                     map.AddMapChar(groundChar);
                 }
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(40, 0, 0, Gender.Male), new Loc(220, 120), Dir8.Up, "Wigglytuff");
+                    GroundChar groundChar = new GroundChar(new MonsterID("wigglytuff", 0, "normal", Gender.Male), new Loc(220, 120), Dir8.Up, "Wigglytuff");
                     groundChar.CharDir = Dir8.Up;
                     map.AddMapChar(groundChar);
                 }
@@ -2783,13 +2783,13 @@ namespace DataGenerator.Data
                 }
 
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(279, 0, 0, Gender.Male), new Loc(168, 158), Dir8.Down, "Connect_Owner");
+                    GroundChar groundChar = new GroundChar(new MonsterID("pelipper", 0, "normal", Gender.Male), new Loc(168, 158), Dir8.Down, "Connect_Owner");
                     groundChar.CharDir = Dir8.Down;
                     map.AddMapChar(groundChar);
                 }
 
                 {
-                    GroundChar groundChar = new GroundChar(new MonsterID(279, 0, 0, Gender.Male), new Loc(224, 158), Dir8.Down, "Rescue_Owner");
+                    GroundChar groundChar = new GroundChar(new MonsterID("pelipper", 0, "normal", Gender.Male), new Loc(224, 158), Dir8.Down, "Rescue_Owner");
                     groundChar.CharDir = Dir8.Down;
                     map.AddMapChar(groundChar);
                 }
