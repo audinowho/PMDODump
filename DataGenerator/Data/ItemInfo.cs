@@ -22,11 +22,12 @@ namespace DataGenerator.Data
         public static void AddItemData()
         {
             DataInfo.DeleteIndexedData(DataManager.DataType.Item.ToString());
+
             for (int ii = 0; ii < MAX_NORMAL_ITEMS; ii++)
             {
-                ItemData item = GetItemData(ii);
-                //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.Item.ToString(), item);
+                (string, ItemData) item = GetItemData(ii);
+                if (item.Item1 != "")
+                    DataManager.SaveData(item.Item1, DataManager.DataType.Item.ToString(), item.Item2);
             }
             AddExclItemData(false);
         }
@@ -39,14 +40,16 @@ namespace DataGenerator.Data
             AddExclItemData(true);
         }
 
-        public static ItemData GetItemData(int ii)
+        public static (string, ItemData) GetItemData(int ii)
         {
+            string fileName = "";
             ItemData item = new ItemData();
             item.UseEvent.Element = "none";
 
             if (ii == 0)
             {
                 item.Name = new LocalText("Empty");
+                fileName = "empty";
             }
             else if (ii == 1)
             {
@@ -764,6 +767,7 @@ namespace DataGenerator.Data
             else if (ii == 158)
             {
                 item.Name = new LocalText("Amber Tear");
+                fileName = "medicine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
                 item.Desc = new LocalText("An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises the Pokémon's chances of recruitment on the floor it's used.");
                 item.Sprite = "Bottle_Gold";
                 item.Price = 2500;
@@ -3105,6 +3109,7 @@ namespace DataGenerator.Data
             else if (ii == 454)
             {
                 item.Name = new LocalText("Grimy Food");
+                fileName = "food_grimy";
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly. However, it will also inflict a variety of status problems because it's covered in filthy grime. Be careful of what you eat!");
                 item.Sprite = "Rock_Purple";
                 item.Icon = 16;
@@ -3120,6 +3125,7 @@ namespace DataGenerator.Data
             else if (ii == 455)
             {
                 item.Name = new LocalText("Key");
+                fileName = "key";
                 item.Desc = new LocalText("A key that unlocks a chest or door inside a dungeon.");
                 item.Sprite = "Key_White";
                 item.Icon = 18;
@@ -3139,6 +3145,7 @@ namespace DataGenerator.Data
             else if (ii == 456)
             {
                 item.Name = new LocalText("**Ancient Key");
+                fileName = "key_ancient";
                 item.Desc = new LocalText("A key that unlocks an ancient door inside a dungeon.");
                 item.Sprite = "Key_Brown";
                 item.Icon = 18;
@@ -3149,6 +3156,7 @@ namespace DataGenerator.Data
             else if (ii == 458)
             {
                 item.Name = new LocalText("Grimy Food");
+                fileName = "food_grimy_2";
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.");
                 item.Sprite = "Rock_Purple";
                 item.Icon = 16;
@@ -3538,7 +3546,14 @@ namespace DataGenerator.Data
                 FillTMData(item, "rest");
             else if (ii == 699)
                 FillTMData(item, "psych_up");
-            
+
+
+
+
+            if (item.Name.DefaultText.StartsWith("**"))
+                item.Name.DefaultText = item.Name.DefaultText.Replace("*", "");
+            else if (item.Name.DefaultText != "")
+                item.Released = true;
 
             if (!String.IsNullOrWhiteSpace(item.Name.DefaultText))
             {
@@ -3546,6 +3561,9 @@ namespace DataGenerator.Data
                     item.UsageType = ItemData.UseType.None;
                 if (ii < 10)
                 {
+                    if (fileName == "")
+                        fileName = "food_" + Text.Sanitize(ReverseWords(item.Name.DefaultText)).ToLower();
+                    item.SortCategory = 1;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new FoodState());
@@ -3553,6 +3571,9 @@ namespace DataGenerator.Data
                 }
                 else if (ii < 75)
                 {
+                    if (fileName == "")
+                        fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
+                    item.SortCategory = 2;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new BerryState());
@@ -3562,6 +3583,9 @@ namespace DataGenerator.Data
                 }
                 else if (ii < 100)
                 {
+                    if (fileName == "")
+                        fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
+                    item.SortCategory = 2;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new GummiState());
@@ -3570,6 +3594,9 @@ namespace DataGenerator.Data
                 }
                 else if (ii < 150)
                 {
+                    if (fileName == "")
+                        fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
+                    item.SortCategory = 4;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new SeedState());
@@ -3580,8 +3607,11 @@ namespace DataGenerator.Data
                 }
                 else if (ii < 200)
                 {
-                    if (ii >= 150 && ii <= 159)//drinkables
+                    if (ii >= 150 && ii < 160)//drinkables
                     {
+                        if (fileName == "")
+                            fileName = "boost_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                        item.SortCategory = 6;
                         item.UsageType = ItemData.UseType.Drink;
                         item.ItemStates.Set(new EdibleState());
                         item.ItemStates.Set(new DrinkState());
@@ -3591,12 +3621,18 @@ namespace DataGenerator.Data
                     }
                     else if (ii >= 160 && ii < 183)//manmade items
                     {
+                        if (fileName == "")
+                            fileName = "medicine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                        item.SortCategory = 7;
                         item.UsageType = ItemData.UseType.Use;
                         item.ItemStates.Set(new UtilityState());
                         item.Icon = 7;
                     }
                     else if (ii >= 183 && ii <= 185)//herbs
                     {
+                        if (fileName == "")
+                            fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
+                        item.SortCategory = 5;
                         item.UsageType = ItemData.UseType.Eat;
                         item.ItemStates.Set(new EdibleState());
                         item.ItemStates.Set(new HerbState());
@@ -3606,12 +3642,18 @@ namespace DataGenerator.Data
                 }
                 else if (ii < 209)//throwables
                 {
+                    if (fileName == "")
+                        fileName = "ammo_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                    item.SortCategory = 9;
                     item.UsageType = ItemData.UseType.Throw;
                     item.ItemStates.Set(new AmmoState());
                     item.MaxStack = 9;
                 }
                 else if (ii < 220)//apricorn
                 {
+                    if (fileName == "")
+                        fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
+                    item.SortCategory = 8;
                     item.UsageType = ItemData.UseType.Throw;
                     item.ItemStates.Set(new RecruitState());
                     item.Icon = 11;
@@ -3621,6 +3663,9 @@ namespace DataGenerator.Data
                 }
                 else if (ii < 250)//wands
                 {
+                    if (fileName == "")
+                        fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
+                    item.SortCategory = 11;
                     item.UsageType = ItemData.UseType.Use;
                     item.ItemStates.Set(new WandState());
                     item.Icon = 8;
@@ -3628,6 +3673,9 @@ namespace DataGenerator.Data
                 }
                 else if (ii < 300)//orbs
                 {
+                    if (fileName == "")
+                        fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
+                    item.SortCategory = 12;
                     item.UsageType = ItemData.UseType.Use;
                     item.ItemStates.Set(new OrbState());
                     item.Icon = 9;
@@ -3635,6 +3683,32 @@ namespace DataGenerator.Data
                 }
                 else if (ii < 440)//held items
                 {
+                    //if (ii >= 331 && ii <= 348)
+                    //{
+                    //    //type boost
+                    //    if (fileName == "")
+                    //        fileName = "held_boost_" + Text.Sanitize(((ElementInfo.Element)ii-330).ToString()).ToLower();
+                    //}
+                    //else 
+                    if (ii >= 349 && ii < 380)
+                    {
+                        //evo
+                        if (fileName == "")
+                            fileName = "evo_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                    }
+                    //else if (ii >= 380 && ii <= 397)
+                    //{
+                    //    if (fileName == "")
+                    //        fileName = "held_plate_" + Text.Sanitize(((ElementInfo.Element)ii - 379).ToString()).ToLower();
+                    //}
+                    else
+                    {
+                        //ordinary held
+                        if (fileName == "")
+                            fileName = "held_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                    }
+                    item.SortCategory = 10;
+
                     item.UsageType = ItemData.UseType.None;
                     item.ItemStates.Set(new HeldState());
                     if (ii >= 315 && ii <= 327)//negative effect
@@ -3646,16 +3720,32 @@ namespace DataGenerator.Data
                 }
                 else if (ii < 450)//box
                 {
+                    if (fileName == "")
+                        fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
+                    item.SortCategory = 14;
                     item.Icon = 17;
                     item.UsageType = ItemData.UseType.Box;
                     item.Price = 1000;
                 }
                 else if (ii < 500)//special
                 {
-
+                    if (ii < 454)
+                    {
+                        if (fileName == "")
+                            fileName = "machine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                    }
+                    else if (ii >= 477)
+                    {
+                        if (fileName == "")
+                            fileName = "loot_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                    }
+                    item.SortCategory = 13;
                 }
                 else if (ii < 700)//TM
                 {
+                    if (fileName == "")
+                        fileName = Text.Sanitize(item.Name.DefaultText).ToLower();
+                    item.SortCategory = 15;
                     item.Sprite = "Disc_Blue";
                     item.Icon = 13;
                     item.Price = 500;
@@ -3765,15 +3855,26 @@ namespace DataGenerator.Data
                 }
             }
 
-
-            if (item.Name.DefaultText.StartsWith("**"))
-                item.Name.DefaultText = item.Name.DefaultText.Replace("*", "");
-            else if (item.Name.DefaultText != "")
-                item.Released = true;
-
-            return item;
+            return (fileName, item);
         }
 
+        private static string ShiftNameWords(string name)
+        {
+            string[] args = name.Split();
+            List<string> result = new List<string>();
+            result.Add(args[args.Length - 1]);
+            for (int ii = 0; ii < args.Length - 1; ii++)
+                result.Add(args[ii]);
+
+            return String.Join(' ', result.ToArray());
+        }
+
+        private static string ReverseWords(string name)
+        {
+            string[] args = name.Split();
+            Array.Reverse(args);
+            return String.Join(' ', args);
+        }
 
         public static void FillTMData(ItemData item, string moveIndex)
         {
@@ -3790,401 +3891,418 @@ namespace DataGenerator.Data
 
         public static void AddExclItemData(bool translate)
         {
-            for (int ii = MAX_NORMAL_ITEMS; ii < MAX_ITEMS; ii++)
+            for (int ii = MAX_NORMAL_ITEMS; ii < MAX_INIT_EXCL_ITEMS; ii++)
             {
                 string exclElement = Text.Sanitize(((ElementInfo.Element)((ii - 700) / 4 + 1)).ToString()).ToLower();
                 ItemData item = new ItemData();
+                item.SortCategory = 16;
                 item.UseEvent.Element = "none";
+
+
+                string fileName = "";
+
+                if (ii >= 700 && ii <= 771)
+                {
+                    string itemType = "globe";
+                    if ((ii - 700) % 4 == 0)
+                        itemType = "silk";
+                    else if ((ii - 700) % 4 == 1)
+                        itemType = "dust";
+                    else if ((ii - 700) % 4 == 2)
+                        itemType = "gem";
+                    fileName = String.Format("xcl_element_{0}_{1}", exclElement, itemType);
+                }
+
                 if (ii == 700)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Green Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Green Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 701)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Wonder Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Wonder Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 702)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Guard Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Guard Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 703)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Defend Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Defend Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "flying" }, exclElement, translate);
                 else if (ii == 704)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Black Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Black Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 705)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Dark Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Dark Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 706)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Dark Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Dark Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 707)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Dusk Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Dusk Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "bug" }, exclElement, translate);
                 else if (ii == 708)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Royal Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Royal Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 709)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Dragon Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Dragon Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 710)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Dragon Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Dragon Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 711)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Dragon Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Dragon Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "dragon" }, exclElement, translate);
                 else if (ii == 712)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Yellow Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Yellow Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 713)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Thunder Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Thunder Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 714)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Thunder Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Thunder Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 715)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Volt Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Volt Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "ground" }, exclElement, translate);
                 else if (ii == 716)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Magenta Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Magenta Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 717)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Fairy Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Fairy Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 718)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Fairy Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Fairy Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 719)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Fairy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Fairy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "poison" }, exclElement, translate);
                 else if (ii == 720)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Orange Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Orange Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 721)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Courage Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Courage Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 722)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Fight Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Fight Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 723)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Power Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Power Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "fairy" }, exclElement, translate);
                 else if (ii == 724)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Red Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Red Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 725)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Fire Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Fire Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 726)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Fiery Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Fiery Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 727)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Fiery Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Fiery Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "water" }, exclElement, translate);
                 else if (ii == 728)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Sky Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Sky Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 729)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Sky Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Sky Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 730)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Sky Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Sky Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 731)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Sky Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Sky Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "electric" }, exclElement, translate);
                 else if (ii == 732)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Purple Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Purple Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 733)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Shady Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Shady Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 734)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Shadow Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Shadow Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 735)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Nether Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Nether Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "dark" }, exclElement, translate);
                 else if (ii == 736)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Grass Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Grass Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 737)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Grass Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Grass Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 738)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Grass Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Grass Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 739)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Soothe Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Soothe Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "fire" }, exclElement, translate);
                 else if (ii == 740)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Brown Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Brown Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 741)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Ground Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Ground Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 742)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Earth Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Earth Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 743)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Terra Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Terra Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "ice" }, exclElement, translate);
                 else if (ii == 744)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Clear Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Clear Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 745)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Icy Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Icy Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 746)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Icy Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Icy Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 747)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Icy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Icy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "rock" }, exclElement, translate);
                 else if (ii == 748)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "White Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "White Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 749)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Normal Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Normal Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 750)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "White Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "White Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 751)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Joy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Joy Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "fighting" }, exclElement, translate);
                 else if (ii == 752)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Pink Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Pink Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 753)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Poison Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Poison Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 754)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Poison Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Poison Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 755)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Poison Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Poison Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "psychic" }, exclElement, translate);
                 else if (ii == 756)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Gold Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Gold Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 757)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Psyche Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Psyche Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 758)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Psyche Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Psyche Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 759)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Psyche Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Psyche Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "ghost" }, exclElement, translate);
                 else if (ii == 760)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Gray Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Gray Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 761)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Rock Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Rock Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 762)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Stone Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Stone Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 763)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Rock Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Rock Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "steel" }, exclElement, translate);
                 else if (ii == 764)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Iron Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Iron Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 765)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Steel Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Steel Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 766)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Metal Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Metal Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 767)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Steel Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Steel Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "fighting" }, exclElement, translate);
                 else if (ii == 768)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Blue Silk", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Blue Silk", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Defense, Stat.MDef } }, exclElement, translate);
                 else if (ii == 769)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Water Dust", ExclusiveItemEffect.TypeStatBonus,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Water Dust", ExclusiveItemEffect.TypeStatBonus,
                         new object[] { new Stat[] { Stat.Attack, Stat.MAtk } }, exclElement, translate);
                 else if (ii == 770)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Aqua Gem", ExclusiveItemEffect.TypeSpeedBoost,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Aqua Gem", ExclusiveItemEffect.TypeSpeedBoost,
                         new object[] { }, exclElement, translate);
                 else if (ii == 771)
-                    AutoItemInfo.FillExclusiveTypeData(ii, item, "Aqua Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
+                    AutoItemInfo.FillExclusiveTypeData(fileName, item, "Aqua Globe", ExclusiveItemEffect.TypeGroupWeaknessReduce,
                         new object[] { "grass" }, exclElement, translate);
-                else if (ii == 804)//TODO: String Assets
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBulldozer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBulldozer, new object[] { "ground", "flying" }, "bulbasaur", translate);
+                else if (ii == 804)
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.TypeBulldozer, new object[] { "ground", "flying" }, translate);
                 else if (ii == 805)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SuperCrit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SuperCrit, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.SuperCrit, new object[] { }, translate);
                 else if (ii == 806)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.NVECrit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.NVECrit, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.NVECrit, new object[] { }, translate);
                 else if (ii == 807)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Nontraitor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Nontraitor, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.Nontraitor, new object[] { }, translate);
                 else if (ii == 808)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WaterTerrain.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WaterTerrain, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.WaterTerrain, new object[] { }, translate);
                 else if (ii == 809)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.LavaTerrain.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.LavaTerrain, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.LavaTerrain, new object[] { }, translate);
                 else if (ii == 810)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AllTerrain.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AllTerrain, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.AllTerrain, new object[] { }, translate);
                 else if (ii == 811)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Wallbreaker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Wallbreaker, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.Wallbreaker, new object[] { }, translate);
                 else if (ii == 812)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.GapFiller.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.GapFiller, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.GapFiller, new object[] { }, translate);
                 else if (ii == 813)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PPBoost.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PPBoost, new object[] { 2 }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.PPBoost, new object[] { 2 }, translate);
                 else if (ii == 814)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DeepBreather.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DeepBreather, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.DeepBreather, new object[] { }, translate);
                 else if (ii == 815)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PracticeSwinger.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PracticeSwinger, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.PracticeSwinger, new object[] { }, translate);
                 else if (ii == 816)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MisfortuneMirror.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MisfortuneMirror, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.MisfortuneMirror, new object[] { }, translate);
                 else if (ii == 817)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CounterBasher.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CounterBasher, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.CounterBasher, new object[] { }, translate);
                 else if (ii == 818)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DoubleAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DoubleAttacker, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.DoubleAttacker, new object[] { }, translate);
                 else if (ii == 819)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MasterHurler.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MasterHurler, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.MasterHurler, new object[] { }, translate);
                 else if (ii == 820)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AllyReviver.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AllyReviver, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.AllyReviver, new object[] { }, translate);
                 else if (ii == 821)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AllyReviverBattle.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AllyReviverBattle, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.AllyReviverBattle, new object[] { }, translate);
                 else if (ii == 822)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PressurePlus.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PressurePlus, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.PressurePlus, new object[] { }, translate);
                 else if (ii == 823)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnAttack, new object[] { "poison" }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.StatusOnAttack, new object[] { "poison" }, translate);
                 else if (ii == 824)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.KnockbackOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.KnockbackOnAttack, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.KnockbackOnAttack, new object[] { }, translate);
                 else if (ii == 825)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ThrowOnAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ThrowOnAttack, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.ThrowOnAttack, new object[] { }, translate);
                 else if (ii == 826)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SureHitAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SureHitAttacker, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.SureHitAttacker, new object[] { }, translate);
                 else if (ii == 827)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SpecialAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SpecialAttacker, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.SpecialAttacker, new object[] { }, translate);
                 else if (ii == 828)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusImmune.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusImmune, new object[] { "sleep" }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.StatusImmune, new object[] { "sleep" }, translate);
                 else if (ii == 829)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatDropImmune.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatDropImmune, new object[] { new Stat[] { Stat.Attack } }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.StatDropImmune, new object[] { new Stat[] { Stat.Attack } }, translate);
                 else if (ii == 830)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SleepWalker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SleepWalker, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.SleepWalker, new object[] { }, translate);
                 else if (ii == 831)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ChargeWalker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ChargeWalker, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.ChargeWalker, new object[] { }, translate);
                 else if (ii == 832)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StairSensor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StairSensor, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.StairSensor, new object[] { }, translate);
                 else if (ii == 833)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.AcuteSniffer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.AcuteSniffer, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.AcuteSniffer, new object[] { }, translate);
                 else if (ii == 834)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MapSurveyor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MapSurveyor, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.MapSurveyor, new object[] { }, translate);
                 else if (ii == 835)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.XRay.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.XRay, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.XRay, new object[] { }, translate);
                 else if (ii == 836)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessPayback, new object[] { "fire", "poison" }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.WeaknessPayback, new object[] { "fire", "poison" }, translate);
                 else if (ii == 837)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WarpPayback.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WarpPayback, new object[] { "flying" }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.WarpPayback, new object[] { "flying" }, translate);
                 else if (ii == 838)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.LungeAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.LungeAttack, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.LungeAttack, new object[] { }, translate);
                 else if (ii == 839)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WideAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WideAttack, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.WideAttack, new object[] { }, translate);
                 else if (ii == 840)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ExplosiveAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ExplosiveAttack, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.ExplosiveAttack, new object[] { }, translate);
                 else if (ii == 841)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TrapBuster.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TrapBuster, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.TrapBuster, new object[] { }, translate);
                 else if (ii == 842)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ExplosionGuard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ExplosionGuard, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.ExplosionGuard, new object[] { }, translate);
                 else if (ii == 843)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WandMaster.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WandMaster, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.WandMaster, new object[] { }, translate);
                 else if (ii == 844)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WandSpread.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WandSpread, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.WandSpread, new object[] { }, translate);
                 else if (ii == 845)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MultiRayShot.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MultiRayShot, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.MultiRayShot, new object[] { }, translate);
                 else if (ii == 846)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.RoyalVeil.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.RoyalVeil, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.RoyalVeil, new object[] { }, translate);
                 else if (ii == 847)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Celebrate.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Celebrate, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.Celebrate, new object[] { }, translate);
                 else if (ii == 848)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Absorption.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Absorption, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.Absorption, new object[] { }, translate);
                 else if (ii == 849)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ExcessiveForce.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ExcessiveForce, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.ExcessiveForce, new object[] { }, translate);
                 else if (ii == 850)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Anchor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Anchor, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.Anchor, new object[] { }, translate);
                 else if (ii == 851)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.BarrageGuard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.BarrageGuard, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.BarrageGuard, new object[] { }, translate);
                 else if (ii == 852)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.BetterOdds.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.BetterOdds, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.BetterOdds, new object[] { }, translate);
                 else if (ii == 853)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ClutchPerformer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ClutchPerformer, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.ClutchPerformer, new object[] { }, translate);
                 else if (ii == 854)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DistanceDodge.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DistanceDodge, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.DistanceDodge, new object[] { }, translate);
                 else if (ii == 855)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CloseDodge.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CloseDodge, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.CloseDodge, new object[] { }, translate);
                 else if (ii == 856)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.FastHealer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.FastHealer, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.FastHealer, new object[] { }, translate);
                 else if (ii == 857)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SelfCurer.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SelfCurer, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.SelfCurer, new object[] { }, translate);
                 else if (ii == 858)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusMirror.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusMirror, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.StatusMirror, new object[] { }, translate);
                 else if (ii == 859)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatMirror.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatMirror, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.StatMirror, new object[] { }, translate);
                 else if (ii == 860)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ErraticAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ErraticAttacker, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.ErraticAttacker, new object[] { }, translate);
                 else if (ii == 861)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ErraticDefender.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ErraticDefender, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.ErraticDefender, new object[] { }, translate);
                 else if (ii == 862)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.FastFriend.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.FastFriend, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.FastFriend, new object[] { }, translate);
                 else if (ii == 863)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CoinWatcher.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CoinWatcher, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.CoinWatcher, new object[] { }, translate);
                 else if (ii == 864)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HiddenStairFinder.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HiddenStairFinder, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.HiddenStairFinder, new object[] { }, translate);
                 else if (ii == 865)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ChestFinder.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ChestFinder, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.ChestFinder, new object[] { }, translate);
                 else if (ii == 866)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.ShopFinder.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.ShopFinder, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.ShopFinder, new object[] { }, translate);
                 else if (ii == 867)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SecondSTAB.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SecondSTAB, new object[] { "fire" }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.SecondSTAB, new object[] { "fire" }, translate);
                 else if (ii == 868)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypedAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypedAttack, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.TypedAttack, new object[] { }, translate);
                 else if (ii == 869)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.GapProber.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.GapProber, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.GapProber, new object[] { }, translate);
                 else if (ii == 870)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.PassThroughAttacker.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.PassThroughAttacker, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.PassThroughAttacker, new object[] { }, translate);
                 else if (ii == 871)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeatherProtection.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeatherProtection, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.WeatherProtection, new object[] { }, translate);
                 else if (ii == 872)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.RemoveAbilityAttack.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.RemoveAbilityAttack, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.RemoveAbilityAttack, new object[] { }, translate);
                 else if (ii == 873)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.CheekPouch.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.CheekPouch, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.CheekPouch, new object[] { }, translate);
                 else if (ii == 874)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HealInWater.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HealInWater, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.HealInWater, new object[] { }, translate);
                 else if (ii == 875)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HealInLava.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HealInLava, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.HealInLava, new object[] { }, translate);
                 else if (ii == 876)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HealOnNewFloor.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HealOnNewFloor, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.HealOnNewFloor, new object[] { }, translate);
                 else if (ii == 877)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.EndureCategory.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.EndureCategory, new object[] { BattleData.SkillCategory.Physical }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.EndureCategory, new object[] { BattleData.SkillCategory.Physical }, translate);
                 else if (ii == 878)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.EndureType.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.EndureType, new object[] { "ice" }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.EndureType, new object[] { "ice" }, translate);
                 else if (ii == 879)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.SpikeDropper.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.SpikeDropper, new object[] { BattleData.SkillCategory.Physical }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.SpikeDropper, new object[] { BattleData.SkillCategory.Physical }, translate);
                 else if (ii == 880)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.NoStatusInWeather.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.NoStatusInWeather, new object[] { "sunny" }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.NoStatusInWeather, new object[] { "sunny" }, translate);
                 else if (ii == 881)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DeepBreatherPlus.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DeepBreatherPlus, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.DeepBreatherPlus, new object[] { }, translate);
                 else if (ii == 882)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.WeaknessReduce.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.WeaknessReduce, new object[] { "psychic" }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.WeaknessReduce, new object[] { "psychic" }, translate);
                 else if (ii == 883)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.Gratitude.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.Gratitude, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.Gratitude, new object[] { }, translate);
                 else if (ii == 884)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.HitAndRun.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.HitAndRun, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.HitAndRun, new object[] { }, translate);
                 else if (ii == 885)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnCategoryHit.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnCategoryHit, new object[] { "whirlpool", BattleData.SkillCategory.Status }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.StatusOnCategoryHit, new object[] { "whirlpool", BattleData.SkillCategory.Status }, translate);
                 else if (ii == 886)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusOnCategoryUse, new object[] { "electrified", BattleData.SkillCategory.Status }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.StatusOnCategoryUse, new object[] { "electrified", BattleData.SkillCategory.Status }, translate);
                 else if (ii == 887)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.MapStatusOnCategoryUse.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.MapStatusOnCategoryUse, new object[] { BattleData.SkillCategory.Status, "grassy_terrain" }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.MapStatusOnCategoryUse, new object[] { BattleData.SkillCategory.Status, "grassy_terrain" }, translate);
                 else if (ii == 888)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.DoubleDash.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.DoubleDash, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.DoubleDash, new object[] { }, translate);
                 else if (ii == 889)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.StatusSplash.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.StatusSplash, new object[] { }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.StatusSplash, new object[] { }, translate);
                 else if (ii == 890)
-                    AutoItemInfo.FillExclusiveData(ii, item, "", "**" + ExclusiveItemEffect.TypeBodyguard.ToString() + " Test", ExclusiveItemType.None, ExclusiveItemEffect.TypeBodyguard, new object[] { "bug" }, "bulbasaur", translate);
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.TypeBodyguard, new object[] { "bug" }, translate);
 
                 if (ii >= 800 && ii < 900)
                     item.Comment = "Test item, do not translate";
@@ -4204,13 +4322,13 @@ namespace DataGenerator.Data
                 else if (item.Name.DefaultText != "")
                     item.Released = true;
 
-                //TODO: String Assets
-                DataManager.SaveData(ii.ToString(), DataManager.DataType.Item.ToString(), item);
+                if (item.Name.DefaultText != "")
+                    DataManager.SaveData(fileName, DataManager.DataType.Item.ToString(), item);
             }
 
-            //TODO: String Assets
-            //AutoItemInfo.WriteExclusiveItems(MAX_INIT_EXCL_ITEMS, translate);
+            AutoItemInfo.WriteExclusiveItems(MAX_INIT_EXCL_ITEMS, translate);
         }
+
 
     }
 }
