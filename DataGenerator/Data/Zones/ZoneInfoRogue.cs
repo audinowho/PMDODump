@@ -52,17 +52,17 @@ namespace DataGenerator.Data
             necessities.SpawnRates.SetRange(14, new IntRange(0, 30));
             itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
-            necessities.Spawns.Add(new InvItem(11), new IntRange(0, 30), 30);//Leppa
-            necessities.Spawns.Add(new InvItem(10), new IntRange(0, 10), 70);//Oran
-            necessities.Spawns.Add(new InvItem(10), new IntRange(10, 30), 40);//Oran
-            necessities.Spawns.Add(new InvItem(72), new IntRange(10, 30), 30);//Sitrus
-            necessities.Spawns.Add(new InvItem(1), new IntRange(0, 15), 40);//Apple
-            necessities.Spawns.Add(new InvItem(454), new IntRange(5, 30), 30);//Grimy Food
-            necessities.Spawns.Add(new InvItem(12), new IntRange(2, 30), 50);//Lum berry
+            necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, 30), 30);//Leppa
+            necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, 10), 70);//Oran
+            necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(10, 30), 40);//Oran
+            necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(10, 30), 30);//Sitrus
+            necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, 15), 40);//Apple
+            necessities.Spawns.Add(new InvItem("food_grimy"), new IntRange(5, 30), 30);//Grimy Food
+            necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(2, 30), 50);//Lum berry
 
-            necessities.Spawns.Add(new InvItem(101), new IntRange(0, 30), 30);//reviver seed
-            necessities.Spawns.Add(new InvItem(101, true), new IntRange(0, 30), 15);//reviver seed
-            necessities.Spawns.Add(new InvItem(450), new IntRange(4, 30), 30);//Link Box
+            necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, 30), 30);//reviver seed
+            necessities.Spawns.Add(new InvItem("seed_reviver", true), new IntRange(0, 30), 15);//reviver seed
+            necessities.Spawns.Add(new InvItem("machine_recall_box"), new IntRange(4, 30), 30);//Link Box
 
 
             //snacks
@@ -70,32 +70,32 @@ namespace DataGenerator.Data
             snacks.SpawnRates.SetRange(10, new IntRange(0, 30));
             itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
-            for (int nn = 0; nn < 7; nn++)//Pinch Berries
-                snacks.Spawns.Add(new InvItem(43 + nn), new IntRange(0, 30), 3);
-            snacks.Spawns.Add(new InvItem(51), new IntRange(0, 30), 4);//enigma berry
+            foreach(string key in IteratePinchBerries())
+                snacks.Spawns.Add(new InvItem(key), new IntRange(0, 30), 3);
+            snacks.Spawns.Add(new InvItem("berry_enigma"), new IntRange(0, 30), 4);//enigma berry
 
-            snacks.Spawns.Add(new InvItem(37), new IntRange(0, 30), 5);//Jaboca
-            snacks.Spawns.Add(new InvItem(38), new IntRange(0, 30), 5);//Rowap
+            snacks.Spawns.Add(new InvItem("berry_jaboca"), new IntRange(0, 30), 5);//Jaboca
+            snacks.Spawns.Add(new InvItem("berry_rowap"), new IntRange(0, 30), 5);//Rowap
 
-            for (int nn = 0; nn < 18; nn++)//Type berry
-                snacks.Spawns.Add(new InvItem(19 + nn), new IntRange(6, 30), 1);
+            foreach (string key in IterateTypeBerries())
+                snacks.Spawns.Add(new InvItem(key), new IntRange(6, 30), 1);
 
-            snacks.Spawns.Add(new InvItem(112), new IntRange(0, 30), 20);//blast seed
-            snacks.Spawns.Add(new InvItem(108), new IntRange(0, 30), 10);//warp seed
-            snacks.Spawns.Add(new InvItem(116), new IntRange(0, 30), 10);//decoy seed
-            snacks.Spawns.Add(new InvItem(110), new IntRange(0, 30), 10);//sleep seed
-            snacks.Spawns.Add(new InvItem(113), new IntRange(0, 30), 10);//blinker seed
-            snacks.Spawns.Add(new InvItem(117), new IntRange(0, 30), 5);//last-chance seed
-            snacks.Spawns.Add(new InvItem(104), new IntRange(0, 30), 5);//doom seed
-            snacks.Spawns.Add(new InvItem(118), new IntRange(0, 30), 10);//ban seed
-            snacks.Spawns.Add(new InvItem(114), new IntRange(0, 30), 4);//pure seed
-            snacks.Spawns.Add(new InvItem(114, true), new IntRange(0, 30), 4);//pure seed
-            snacks.Spawns.Add(new InvItem(115), new IntRange(0, 30), 10);//ice seed
-            snacks.Spawns.Add(new InvItem(111), new IntRange(0, 30), 10);//vile seed
+            snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, 30), 20);//blast seed
+            snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, 30), 10);//warp seed
+            snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, 30), 10);//decoy seed
+            snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, 30), 10);//sleep seed
+            snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, 30), 10);//blinker seed
+            snacks.Spawns.Add(new InvItem("seed_last_chance"), new IntRange(0, 30), 5);//last-chance seed
+            snacks.Spawns.Add(new InvItem("seed_doom"), new IntRange(0, 30), 5);//doom seed
+            snacks.Spawns.Add(new InvItem("seed_ban"), new IntRange(0, 30), 10);//ban seed
+            snacks.Spawns.Add(new InvItem("seed_pure"), new IntRange(0, 30), 4);//pure seed
+            snacks.Spawns.Add(new InvItem("seed_pure", true), new IntRange(0, 30), 4);//pure seed
+            snacks.Spawns.Add(new InvItem("seed_ice"), new IntRange(0, 30), 10);//ice seed
+            snacks.Spawns.Add(new InvItem("seed_vile"), new IntRange(0, 30), 10);//vile seed
 
-            snacks.Spawns.Add(new InvItem(184), new IntRange(0, 30), 10);//power herb
-            snacks.Spawns.Add(new InvItem(183), new IntRange(0, 30), 5);//mental herb
-            snacks.Spawns.Add(new InvItem(185), new IntRange(0, 30), 50);//white herb
+            snacks.Spawns.Add(new InvItem("herb_power"), new IntRange(0, 30), 10);//power herb
+            snacks.Spawns.Add(new InvItem("herb_mental"), new IntRange(0, 30), 5);//mental herb
+            snacks.Spawns.Add(new InvItem("herb_white"), new IntRange(0, 30), 50);//white herb
 
 
             //boosters
@@ -103,17 +103,17 @@ namespace DataGenerator.Data
             boosters.SpawnRates.SetRange(7, new IntRange(0, 30));
             itemSpawnZoneStep.Spawns.Add("boosters", boosters);
 
-            for (int nn = 0; nn < 18; nn++)//Gummi
-                boosters.Spawns.Add(new InvItem(76 + nn), new IntRange(0, 30), 1);
+            foreach (string key in IterateGummis())
+                boosters.Spawns.Add(new InvItem(key), new IntRange(0, 30), 1);
 
             IntRange range = new IntRange(3, 30);
 
-            boosters.Spawns.Add(new InvItem(151), range, 2);//protein
-            boosters.Spawns.Add(new InvItem(152), range, 2);//iron
-            boosters.Spawns.Add(new InvItem(153), range, 2);//calcium
-            boosters.Spawns.Add(new InvItem(154), range, 2);//zinc
-            boosters.Spawns.Add(new InvItem(155), range, 2);//carbos
-            boosters.Spawns.Add(new InvItem(156), range, 2);//hp up
+            boosters.Spawns.Add(new InvItem("boost_protein"), range, 2);//protein
+            boosters.Spawns.Add(new InvItem("boost_iron"), range, 2);//iron
+            boosters.Spawns.Add(new InvItem("boost_calcium"), range, 2);//calcium
+            boosters.Spawns.Add(new InvItem("boost_zinc"), range, 2);//zinc
+            boosters.Spawns.Add(new InvItem("boost_carbos"), range, 2);//carbos
+            boosters.Spawns.Add(new InvItem("boost_hp_up"), range, 2);//hp up
 
             //throwable
             CategorySpawn<InvItem> ammo = new CategorySpawn<InvItem>();
@@ -122,28 +122,28 @@ namespace DataGenerator.Data
 
             range = new IntRange(0, 30);
             {
-                ammo.Spawns.Add(new InvItem(200, false, 4), range, 10);//stick
-                ammo.Spawns.Add(new InvItem(201, false, 3), range, 10);//cacnea spike
-                ammo.Spawns.Add(new InvItem(220, false, 2), range, 10);//path wand
-                ammo.Spawns.Add(new InvItem(228, false, 4), range, 10);//fear wand
-                ammo.Spawns.Add(new InvItem(223, false, 4), range, 10);//switcher wand
-                ammo.Spawns.Add(new InvItem(222, false, 4), range, 10);//whirlwind wand
-                ammo.Spawns.Add(new InvItem(225, false, 4), range, 10);//lure wand
-                ammo.Spawns.Add(new InvItem(226, false, 4), range, 10);//slow wand
-                ammo.Spawns.Add(new InvItem(221, false, 4), range, 10);//pounce wand
-                ammo.Spawns.Add(new InvItem(232, false, 2), range, 10);//warp wand
-                ammo.Spawns.Add(new InvItem(231, false, 4), range, 10);//topsy-turvy wand
-                ammo.Spawns.Add(new InvItem(234, false, 4), range, 10);//lob wand
-                ammo.Spawns.Add(new InvItem(233, false, 4), range, 10);//purge wand
+                ammo.Spawns.Add(new InvItem("ammo_stick", false, 4), range, 10);//stick
+                ammo.Spawns.Add(new InvItem("ammo_cacnea_spike", false, 3), range, 10);//cacnea spike
+                ammo.Spawns.Add(new InvItem("wand_path", false, 2), range, 10);//path wand
+                ammo.Spawns.Add(new InvItem("wand_fear", false, 4), range, 10);//fear wand
+                ammo.Spawns.Add(new InvItem("wand_switcher", false, 4), range, 10);//switcher wand
+                ammo.Spawns.Add(new InvItem("wand_whirlwind", false, 4), range, 10);//whirlwind wand
+                ammo.Spawns.Add(new InvItem("wand_lure", false, 4), range, 10);//lure wand
+                ammo.Spawns.Add(new InvItem("wand_slow", false, 4), range, 10);//slow wand
+                ammo.Spawns.Add(new InvItem("wand_pounce", false, 4), range, 10);//pounce wand
+                ammo.Spawns.Add(new InvItem("wand_warp", false, 2), range, 10);//warp wand
+                ammo.Spawns.Add(new InvItem("wand_topsy_turvy", false, 4), range, 10);//topsy-turvy wand
+                ammo.Spawns.Add(new InvItem("wand_lob", false, 4), range, 10);//lob wand
+                ammo.Spawns.Add(new InvItem("wand_purge", false, 4), range, 10);//purge wand
 
-                ammo.Spawns.Add(new InvItem(203, false, 3), range, 10);//iron thorn
-                ammo.Spawns.Add(new InvItem(204, false, 3), range, 10);//silver spike
-                ammo.Spawns.Add(new InvItem(208, false, 3), range, 10);//Gravelerock
+                ammo.Spawns.Add(new InvItem("ammo_iron_thorn", false, 3), range, 10);//iron thorn
+                ammo.Spawns.Add(new InvItem("ammo_silver_spike", false, 3), range, 10);//silver spike
+                ammo.Spawns.Add(new InvItem("ammo_gravelerock", false, 3), range, 10);//Gravelerock
 
-                ammo.Spawns.Add(new InvItem(202, false, 3), range, 10);//corsola spike
-                ammo.Spawns.Add(new InvItem(206, false, 3), range, 10);//Rare fossil
+                ammo.Spawns.Add(new InvItem("ammo_corsola_twig", false, 3), range, 10);//corsola spike
+                ammo.Spawns.Add(new InvItem("ammo_rare_fossil", false, 3), range, 10);//Rare fossil
 
-                ammo.Spawns.Add(new InvItem(207, false, 3), range, 10);//Geo Pebble
+                ammo.Spawns.Add(new InvItem("ammo_geo_pebble", false, 3), range, 10);//Geo Pebble
             }
 
 
@@ -156,34 +156,34 @@ namespace DataGenerator.Data
                 range = new IntRange(0, 15);
                 int rate = 2;
 
-                special.Spawns.Add(new InvItem(211), range, rate);//blue apricorns
-                special.Spawns.Add(new InvItem(212), range, rate);//green apricorns
-                special.Spawns.Add(new InvItem(213), range, rate);//brown apricorns
-                special.Spawns.Add(new InvItem(214), range, rate);//purple apricorns
-                special.Spawns.Add(new InvItem(215), range, rate);//red apricorns
-                special.Spawns.Add(new InvItem(216), range, rate);//white apricorns
-                special.Spawns.Add(new InvItem(217), range, rate);//yellow apricorns
-                special.Spawns.Add(new InvItem(218), range, rate);//black apricorns
+                special.Spawns.Add(new InvItem("apricorn_blue"), range, rate);//blue apricorns
+                special.Spawns.Add(new InvItem("apricorn_green"), range, rate);//green apricorns
+                special.Spawns.Add(new InvItem("apricorn_brown"), range, rate);//brown apricorns
+                special.Spawns.Add(new InvItem("apricorn_purple"), range, rate);//purple apricorns
+                special.Spawns.Add(new InvItem("apricorn_red"), range, rate);//red apricorns
+                special.Spawns.Add(new InvItem("apricorn_white"), range, rate);//white apricorns
+                special.Spawns.Add(new InvItem("apricorn_yellow"), range, rate);//yellow apricorns
+                special.Spawns.Add(new InvItem("apricorn_black"), range, rate);//black apricorns
 
                 range = new IntRange(15, 25);
                 rate = 1;
 
-                special.Spawns.Add(new InvItem(210, true), range, rate);//Plain Apricorn
-                special.Spawns.Add(new InvItem(211, true), range, rate);//blue apricorns
-                special.Spawns.Add(new InvItem(212, true), range, rate);//green apricorns
-                special.Spawns.Add(new InvItem(213, true), range, rate);//brown apricorns
-                special.Spawns.Add(new InvItem(214, true), range, rate);//purple apricorns
-                special.Spawns.Add(new InvItem(215, true), range, rate);//red apricorns
-                special.Spawns.Add(new InvItem(216, true), range, rate);//white apricorns
-                special.Spawns.Add(new InvItem(217, true), range, rate);//yellow apricorns
-                special.Spawns.Add(new InvItem(218, true), range, rate);//black apricorns
+                special.Spawns.Add(new InvItem("apricorn_plain", true), range, rate);//Plain Apricorn
+                special.Spawns.Add(new InvItem("apricorn_blue", true), range, rate);//blue apricorns
+                special.Spawns.Add(new InvItem("apricorn_green", true), range, rate);//green apricorns
+                special.Spawns.Add(new InvItem("apricorn_brown", true), range, rate);//brown apricorns
+                special.Spawns.Add(new InvItem("apricorn_purple", true), range, rate);//purple apricorns
+                special.Spawns.Add(new InvItem("apricorn_red", true), range, rate);//red apricorns
+                special.Spawns.Add(new InvItem("apricorn_white", true), range, rate);//white apricorns
+                special.Spawns.Add(new InvItem("apricorn_yellow", true), range, rate);//yellow apricorns
+                special.Spawns.Add(new InvItem("apricorn_black", true), range, rate);//black apricorns
 
             }
 
-            special.Spawns.Add(new InvItem(455, false, 1), new IntRange(0, 25), 40);//Key
-            special.Spawns.Add(new InvItem(451), new IntRange(9, 30), 35);//Assembly Box
-                                                                          //special.Spawns.Add(new InvItem(452), 10);//Storage Box
-            special.Spawns.Add(new InvItem(453), new IntRange(13, 30), 15); // Ability Capsule
+            special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, 25), 40);//Key
+            special.Spawns.Add(new InvItem("machine_assembly_box"), new IntRange(9, 30), 35);//Assembly Box
+                                                                          //special.Spawns.Add(new InvItem("machine_storage_box"), 10);//Storage Box
+            special.Spawns.Add(new InvItem("machine_ability_capsule"), new IntRange(13, 30), 15); // Ability Capsule
 
 
 
@@ -194,63 +194,63 @@ namespace DataGenerator.Data
 
             {
                 range = new IntRange(3, 30);
-                orbs.Spawns.Add(new InvItem(281), range, 7);//One-Room Orb
-                orbs.Spawns.Add(new InvItem(256), range, 7);//Fill-In Orb
-                orbs.Spawns.Add(new InvItem(281, true), range, 3);//One-Room Orb
-                orbs.Spawns.Add(new InvItem(256, true), range, 3);//Fill-In Orb
+                orbs.Spawns.Add(new InvItem("orb_one_room"), range, 7);//One-Room Orb
+                orbs.Spawns.Add(new InvItem("orb_fill_in"), range, 7);//Fill-In Orb
+                orbs.Spawns.Add(new InvItem("orb_one_room", true), range, 3);//One-Room Orb
+                orbs.Spawns.Add(new InvItem("orb_fill_in", true), range, 3);//Fill-In Orb
             }
 
             {
                 range = new IntRange(0, 25);
-                orbs.Spawns.Add(new InvItem(273), range, 10);//Petrify
-                orbs.Spawns.Add(new InvItem(287), range, 10);//Halving
-                orbs.Spawns.Add(new InvItem(271), range, 8);//Slumber Orb
-                orbs.Spawns.Add(new InvItem(282), range, 8);//Slow
-                orbs.Spawns.Add(new InvItem(272), range, 8);//Totter
-                orbs.Spawns.Add(new InvItem(275), range, 5);//Spurn
-                orbs.Spawns.Add(new InvItem(267), range, 3);//Stayaway
-                orbs.Spawns.Add(new InvItem(266), range, 8);//Pierce
-                orbs.Spawns.Add(new InvItem(271, true), range, 3);//Slumber Orb
-                orbs.Spawns.Add(new InvItem(282, true), range, 3);//Slow
-                orbs.Spawns.Add(new InvItem(272, true), range, 3);//Totter
-                orbs.Spawns.Add(new InvItem(275, true), range, 2);//Spurn
-                orbs.Spawns.Add(new InvItem(267, true), range, 3);//Stayaway
-                orbs.Spawns.Add(new InvItem(266, true), range, 3);//Pierce
+                orbs.Spawns.Add(new InvItem("orb_petrify"), range, 10);//Petrify
+                orbs.Spawns.Add(new InvItem("orb_halving"), range, 10);//Halving
+                orbs.Spawns.Add(new InvItem("orb_slumber"), range, 8);//Slumber Orb
+                orbs.Spawns.Add(new InvItem("orb_slow"), range, 8);//Slow
+                orbs.Spawns.Add(new InvItem("orb_totter"), range, 8);//Totter
+                orbs.Spawns.Add(new InvItem("orb_spurn"), range, 5);//Spurn
+                orbs.Spawns.Add(new InvItem("orb_stayaway"), range, 3);//Stayaway
+                orbs.Spawns.Add(new InvItem("orb_pierce"), range, 8);//Pierce
+                orbs.Spawns.Add(new InvItem("orb_slumber", true), range, 3);//Slumber Orb
+                orbs.Spawns.Add(new InvItem("orb_slow", true), range, 3);//Slow
+                orbs.Spawns.Add(new InvItem("orb_totter", true), range, 3);//Totter
+                orbs.Spawns.Add(new InvItem("orb_spurn", true), range, 2);//Spurn
+                orbs.Spawns.Add(new InvItem("orb_stayaway", true), range, 3);//Stayaway
+                orbs.Spawns.Add(new InvItem("orb_pierce", true), range, 3);//Pierce
             }
 
-            orbs.Spawns.Add(new InvItem(263), new IntRange(2, 25), 7);//Cleanse
+            orbs.Spawns.Add(new InvItem("orb_cleanse"), new IntRange(2, 25), 7);//Cleanse
 
             {
                 range = new IntRange(6, 25);
-                orbs.Spawns.Add(new InvItem(258), range, 10);//All-Aim Orb
-                orbs.Spawns.Add(new InvItem(269), range, 10);//Trap-See
-                orbs.Spawns.Add(new InvItem(270), range, 10);//Trapbust
-                orbs.Spawns.Add(new InvItem(276), range, 10);//Foe-Hold
-                orbs.Spawns.Add(new InvItem(252), range, 10);//Mobile
-                orbs.Spawns.Add(new InvItem(288), range, 10);//Roll Call
-                orbs.Spawns.Add(new InvItem(289), range, 10);//Mug
-                orbs.Spawns.Add(new InvItem(284), range, 10);//Mirror
+                orbs.Spawns.Add(new InvItem("orb_all_aim"), range, 10);//All-Aim Orb
+                orbs.Spawns.Add(new InvItem("orb_trap_see"), range, 10);//Trap-See
+                orbs.Spawns.Add(new InvItem("orb_trapbust"), range, 10);//Trapbust
+                orbs.Spawns.Add(new InvItem("orb_foe_hold"), range, 10);//Foe-Hold
+                orbs.Spawns.Add(new InvItem("orb_mobile"), range, 10);//Mobile
+                orbs.Spawns.Add(new InvItem("orb_rollcall"), range, 10);//Roll Call
+                orbs.Spawns.Add(new InvItem("orb_mug"), range, 10);//Mug
+                orbs.Spawns.Add(new InvItem("orb_mirror"), range, 10);//Mirror
             }
 
             {
                 range = new IntRange(10, 25);
-                orbs.Spawns.Add(new InvItem(251), range, 10);//Weather Orb
-                orbs.Spawns.Add(new InvItem(286), range, 10);//Foe-Seal
-                orbs.Spawns.Add(new InvItem(274), range, 10);//Freeze
-                orbs.Spawns.Add(new InvItem(257), range, 10);//Devolve
-                orbs.Spawns.Add(new InvItem(277), range, 10);//Nullify
+                orbs.Spawns.Add(new InvItem("orb_weather"), range, 10);//Weather Orb
+                orbs.Spawns.Add(new InvItem("orb_foe_seal"), range, 10);//Foe-Seal
+                orbs.Spawns.Add(new InvItem("orb_freeze"), range, 10);//Freeze
+                orbs.Spawns.Add(new InvItem("orb_devolve"), range, 10);//Devolve
+                orbs.Spawns.Add(new InvItem("orb_nullify"), range, 10);//Nullify
             }
 
             {
                 range = new IntRange(0, 20);
-                orbs.Spawns.Add(new InvItem(283), range, 10);//Rebound
-                orbs.Spawns.Add(new InvItem(268), range, 5);//All Protect
-                orbs.Spawns.Add(new InvItem(253), range, 9);//Luminous
-                orbs.Spawns.Add(new InvItem(259), range, 9);//Trawl
-                orbs.Spawns.Add(new InvItem(261), range, 9);//Scanner
-                orbs.Spawns.Add(new InvItem(268, true), range, 5);//All Protect
-                orbs.Spawns.Add(new InvItem(253, true), range, 2);//Luminous
-                orbs.Spawns.Add(new InvItem(259, true), range, 2);//Trawl
+                orbs.Spawns.Add(new InvItem("orb_rebound"), range, 10);//Rebound
+                orbs.Spawns.Add(new InvItem("orb_all_protect"), range, 5);//All Protect
+                orbs.Spawns.Add(new InvItem("orb_luminous"), range, 9);//Luminous
+                orbs.Spawns.Add(new InvItem("orb_trawl"), range, 9);//Trawl
+                orbs.Spawns.Add(new InvItem("orb_scanner"), range, 9);//Scanner
+                orbs.Spawns.Add(new InvItem("orb_all_protect", true), range, 5);//All Protect
+                orbs.Spawns.Add(new InvItem("orb_luminous", true), range, 2);//Luminous
+                orbs.Spawns.Add(new InvItem("orb_trawl", true), range, 2);//Trawl
             }
 
             //held items
@@ -258,86 +258,86 @@ namespace DataGenerator.Data
             heldItems.SpawnRates.SetRange(2, new IntRange(0, 30));
             itemSpawnZoneStep.Spawns.Add("held", heldItems);
 
-            for (int nn = 0; nn < 18; nn++)//Type booster
-                heldItems.Spawns.Add(new InvItem(331 + nn), new IntRange(0, 30), 1);
-            for (int nn = 0; nn < 18; nn++)//Type Plate
-                heldItems.Spawns.Add(new InvItem(380 + nn), new IntRange(0, 30), 1);
+            foreach (string key in IterateTypeBoosters())
+                heldItems.Spawns.Add(new InvItem(key), new IntRange(0, 30), 1);
+            foreach (string key in IterateTypePlates())
+                heldItems.Spawns.Add(new InvItem(key), new IntRange(0, 30), 1);
 
-            heldItems.Spawns.Add(new InvItem(303), new IntRange(0, 20), 2);//Mobile Scarf
-            heldItems.Spawns.Add(new InvItem(304), new IntRange(0, 20), 2);//Pass Scarf
+            heldItems.Spawns.Add(new InvItem("held_mobile_scarf"), new IntRange(0, 20), 2);//Mobile Scarf
+            heldItems.Spawns.Add(new InvItem("held_pass_scarf"), new IntRange(0, 20), 2);//Pass Scarf
 
 
-            heldItems.Spawns.Add(new InvItem(330), new IntRange(0, 25), 2);//Cover Band
-            heldItems.Spawns.Add(new InvItem(329), new IntRange(0, 25), 1);//Reunion Cape
-            heldItems.Spawns.Add(new InvItem(329, true), new IntRange(0, 25), 1);//Reunion Cape
+            heldItems.Spawns.Add(new InvItem("held_cover_band"), new IntRange(0, 25), 2);//Cover Band
+            heldItems.Spawns.Add(new InvItem("held_reunion_cape"), new IntRange(0, 25), 1);//Reunion Cape
+            heldItems.Spawns.Add(new InvItem("held_reunion_cape", true), new IntRange(0, 25), 1);//Reunion Cape
 
-            heldItems.Spawns.Add(new InvItem(306), new IntRange(0, 15), 2);//Trap Scarf
-            heldItems.Spawns.Add(new InvItem(306, true), new IntRange(0, 15), 1);//Trap Scarf
+            heldItems.Spawns.Add(new InvItem("held_trap_scarf"), new IntRange(0, 15), 2);//Trap Scarf
+            heldItems.Spawns.Add(new InvItem("held_trap_scarf", true), new IntRange(0, 15), 1);//Trap Scarf
 
-            heldItems.Spawns.Add(new InvItem(307), new IntRange(0, 30), 2);//Grip Claw
+            heldItems.Spawns.Add(new InvItem("held_grip_claw"), new IntRange(0, 30), 2);//Grip Claw
 
             range = new IntRange(0, 20);
-            heldItems.Spawns.Add(new InvItem(309), range, 2);//Twist Band
-            heldItems.Spawns.Add(new InvItem(310), range, 1);//Metronome
-            heldItems.Spawns.Add(new InvItem(309, true), range, 1);//Twist Band
-            heldItems.Spawns.Add(new InvItem(310, true), range, 1);//Metronome
-            heldItems.Spawns.Add(new InvItem(312), range, 1);//Shell Bell
-            heldItems.Spawns.Add(new InvItem(313), range, 1);//Scope Lens
-            heldItems.Spawns.Add(new InvItem(400), range, 2);//Power Band
-            heldItems.Spawns.Add(new InvItem(401), range, 2);//Special Band
-            heldItems.Spawns.Add(new InvItem(402), range, 2);//Defense Scarf
-            heldItems.Spawns.Add(new InvItem(403), range, 2);//Zinc Band
-            heldItems.Spawns.Add(new InvItem(314, true), range, 2);//Wide Lens
-            heldItems.Spawns.Add(new InvItem(301, true), range, 2);//Pierce Band
-            heldItems.Spawns.Add(new InvItem(312, true), range, 1);//Shell Bell
-            heldItems.Spawns.Add(new InvItem(313, true), range, 1);//Scope Lens
+            heldItems.Spawns.Add(new InvItem("held_twist_band"), range, 2);//Twist Band
+            heldItems.Spawns.Add(new InvItem("held_metronome"), range, 1);//Metronome
+            heldItems.Spawns.Add(new InvItem("held_twist_band", true), range, 1);//Twist Band
+            heldItems.Spawns.Add(new InvItem("held_metronome", true), range, 1);//Metronome
+            heldItems.Spawns.Add(new InvItem("held_shell_bell"), range, 1);//Shell Bell
+            heldItems.Spawns.Add(new InvItem("held_scope_lens"), range, 1);//Scope Lens
+            heldItems.Spawns.Add(new InvItem("held_power_band"), range, 2);//Power Band
+            heldItems.Spawns.Add(new InvItem("held_special_band"), range, 2);//Special Band
+            heldItems.Spawns.Add(new InvItem("held_defense_scarf"), range, 2);//Defense Scarf
+            heldItems.Spawns.Add(new InvItem("held_zinc_band"), range, 2);//Zinc Band
+            heldItems.Spawns.Add(new InvItem("held_wide_lens", true), range, 2);//Wide Lens
+            heldItems.Spawns.Add(new InvItem("held_pierce_band", true), range, 2);//Pierce Band
+            heldItems.Spawns.Add(new InvItem("held_shell_bell", true), range, 1);//Shell Bell
+            heldItems.Spawns.Add(new InvItem("held_scope_lens", true), range, 1);//Scope Lens
 
-            heldItems.Spawns.Add(new InvItem(311), new IntRange(0, 20), 2);//Shed Shell
-            heldItems.Spawns.Add(new InvItem(311, true), new IntRange(0, 20), 1);//Shed Shell
+            heldItems.Spawns.Add(new InvItem("held_shed_shell"), new IntRange(0, 20), 2);//Shed Shell
+            heldItems.Spawns.Add(new InvItem("held_shed_shell", true), new IntRange(0, 20), 1);//Shed Shell
 
-            heldItems.Spawns.Add(new InvItem(328), new IntRange(0, 30), 2);//X-Ray Specs
-            heldItems.Spawns.Add(new InvItem(328, true), new IntRange(0, 30), 1);//X-Ray Specs
+            heldItems.Spawns.Add(new InvItem("held_x_ray_specs"), new IntRange(0, 30), 2);//X-Ray Specs
+            heldItems.Spawns.Add(new InvItem("held_x_ray_specs", true), new IntRange(0, 30), 1);//X-Ray Specs
 
-            heldItems.Spawns.Add(new InvItem(407), new IntRange(0, 30), 2);//Goggle Specs
-            heldItems.Spawns.Add(new InvItem(407, true), new IntRange(0, 30), 1);//Goggle Specs
+            heldItems.Spawns.Add(new InvItem("held_goggle_specs"), new IntRange(0, 30), 2);//Goggle Specs
+            heldItems.Spawns.Add(new InvItem("held_goggle_specs", true), new IntRange(0, 30), 1);//Goggle Specs
 
-            heldItems.Spawns.Add(new InvItem(404), new IntRange(0, 15), 2);//Big Root
-            heldItems.Spawns.Add(new InvItem(404, true), new IntRange(0, 15), 1);//Big Root
+            heldItems.Spawns.Add(new InvItem("held_big_root"), new IntRange(0, 15), 2);//Big Root
+            heldItems.Spawns.Add(new InvItem("held_big_root", true), new IntRange(0, 15), 1);//Big Root
 
             int stickRate = 2;
             range = new IntRange(0, 15);
 
-            heldItems.Spawns.Add(new InvItem(406), range, stickRate);//Weather Rock
-            heldItems.Spawns.Add(new InvItem(405), range, stickRate);//Expert Belt
-            heldItems.Spawns.Add(new InvItem(320), range, stickRate);//Choice Scarf
-            heldItems.Spawns.Add(new InvItem(319), range, stickRate);//Choice Specs
-            heldItems.Spawns.Add(new InvItem(318), range, stickRate);//Choice Band
-            heldItems.Spawns.Add(new InvItem(321), range, stickRate);//Assault Vest
-            heldItems.Spawns.Add(new InvItem(322), range, stickRate);//Life Orb
-            heldItems.Spawns.Add(new InvItem(315), range, stickRate);//Heal Ribbon
+            heldItems.Spawns.Add(new InvItem("held_weather_rock"), range, stickRate);//Weather Rock
+            heldItems.Spawns.Add(new InvItem("held_expert_belt"), range, stickRate);//Expert Belt
+            heldItems.Spawns.Add(new InvItem("held_choice_scarf"), range, stickRate);//Choice Scarf
+            heldItems.Spawns.Add(new InvItem("held_choice_specs"), range, stickRate);//Choice Specs
+            heldItems.Spawns.Add(new InvItem("held_choice_band"), range, stickRate);//Choice Band
+            heldItems.Spawns.Add(new InvItem("held_assault_vest"), range, stickRate);//Assault Vest
+            heldItems.Spawns.Add(new InvItem("held_life_orb"), range, stickRate);//Life Orb
+            heldItems.Spawns.Add(new InvItem("held_heal_ribbon"), range, stickRate);//Heal Ribbon
 
             stickRate = 1;
             range = new IntRange(15, 30);
 
-            heldItems.Spawns.Add(new InvItem(406), range, stickRate);//Weather Rock
-            heldItems.Spawns.Add(new InvItem(405), range, stickRate);//Expert Belt
-            heldItems.Spawns.Add(new InvItem(320), range, stickRate);//Choice Scarf
-            heldItems.Spawns.Add(new InvItem(319), range, stickRate);//Choice Specs
-            heldItems.Spawns.Add(new InvItem(318), range, stickRate);//Choice Band
-            heldItems.Spawns.Add(new InvItem(321), range, stickRate);//Assault Vest
-            heldItems.Spawns.Add(new InvItem(322), range, stickRate);//Life Orb
-            heldItems.Spawns.Add(new InvItem(315), range, stickRate);//Heal Ribbon
+            heldItems.Spawns.Add(new InvItem("held_weather_rock"), range, stickRate);//Weather Rock
+            heldItems.Spawns.Add(new InvItem("held_expert_belt"), range, stickRate);//Expert Belt
+            heldItems.Spawns.Add(new InvItem("held_choice_scarf"), range, stickRate);//Choice Scarf
+            heldItems.Spawns.Add(new InvItem("held_choice_specs"), range, stickRate);//Choice Specs
+            heldItems.Spawns.Add(new InvItem("held_choice_band"), range, stickRate);//Choice Band
+            heldItems.Spawns.Add(new InvItem("held_assault_vest"), range, stickRate);//Assault Vest
+            heldItems.Spawns.Add(new InvItem("held_life_orb"), range, stickRate);//Life Orb
+            heldItems.Spawns.Add(new InvItem("held_heal_ribbon"), range, stickRate);//Heal Ribbon
 
 
-            heldItems.Spawns.Add(new InvItem(305), new IntRange(0, 30), 1);//Warp Scarf
-            heldItems.Spawns.Add(new InvItem(305, true), new IntRange(0, 30), 1);//Warp Scarf
+            heldItems.Spawns.Add(new InvItem("held_warp_scarf"), new IntRange(0, 30), 1);//Warp Scarf
+            heldItems.Spawns.Add(new InvItem("held_warp_scarf", true), new IntRange(0, 30), 1);//Warp Scarf
 
 
             range = new IntRange(8, 30);
-            heldItems.Spawns.Add(new InvItem(323), range, 1);//Toxic Orb
-            heldItems.Spawns.Add(new InvItem(324), range, 1);//Flame Orb
-            heldItems.Spawns.Add(new InvItem(317), range, 10);//Sticky Barb
-            heldItems.Spawns.Add(new InvItem(326), range, 1);//Ring Target
+            heldItems.Spawns.Add(new InvItem("held_toxic_orb"), range, 1);//Toxic Orb
+            heldItems.Spawns.Add(new InvItem("held_flame_orb"), range, 1);//Flame Orb
+            heldItems.Spawns.Add(new InvItem("held_sticky_barb"), range, 10);//Sticky Barb
+            heldItems.Spawns.Add(new InvItem("held_ring_target"), range, 1);//Ring Target
 
             //machines
             CategorySpawn<InvItem> machines = new CategorySpawn<InvItem>();
@@ -345,141 +345,141 @@ namespace DataGenerator.Data
             itemSpawnZoneStep.Spawns.Add("tms", machines);
 
             range = new IntRange(0, 30);
-            machines.Spawns.Add(new InvItem(589), range, 2);//TM Echoed Voice
-            machines.Spawns.Add(new InvItem(590), range, 2);//TM Double Team
-            machines.Spawns.Add(new InvItem(592), range, 2);//TM Toxic
-            machines.Spawns.Add(new InvItem(593), range, 2);//TM Will-o-Wisp
-            machines.Spawns.Add(new InvItem(594), range, 2);//TM Dragon Tail
-            machines.Spawns.Add(new InvItem(596), range, 2);//TM Protect
-            machines.Spawns.Add(new InvItem(597), range, 2);//TM Defog
-            machines.Spawns.Add(new InvItem(598), range, 2);//TM Roar
-            machines.Spawns.Add(new InvItem(600), range, 2);//TM Swagger
-            machines.Spawns.Add(new InvItem(601), range, 2);//TM Dive
-            machines.Spawns.Add(new InvItem(602), range, 2);//TM Fly
-            machines.Spawns.Add(new InvItem(603), range, 2);//TM Facade
-            machines.Spawns.Add(new InvItem(604), range, 2);//TM Rock Climb
-            machines.Spawns.Add(new InvItem(605), range, 2);//TM Waterfall
-            machines.Spawns.Add(new InvItem(606), range, 2);//TM Smack Down
-            machines.Spawns.Add(new InvItem(607), range, 2);//TM Flame Charge
-            machines.Spawns.Add(new InvItem(608), range, 2);//TM Low Sweep
-            machines.Spawns.Add(new InvItem(609), range, 2);//TM Charge Beam
-            machines.Spawns.Add(new InvItem(610), range, 2);//TM Payback
-            machines.Spawns.Add(new InvItem(612), range, 2);//TM Wild Charge
-            machines.Spawns.Add(new InvItem(613), range, 2);//TM Hone Claws
-            machines.Spawns.Add(new InvItem(614), range, 2);//TM Telekinesis
-            machines.Spawns.Add(new InvItem(615), range, 2);//TM Giga Impact
-            machines.Spawns.Add(new InvItem(616), range, 2);//TM Rock Polish
-            machines.Spawns.Add(new InvItem(617), range, 2);//TM Dig
-            machines.Spawns.Add(new InvItem(618), range, 2);//TM Gyro Ball
-            machines.Spawns.Add(new InvItem(621), range, 2);//TM Substitute
-            machines.Spawns.Add(new InvItem(622), range, 2);//TM Trick Room
-            machines.Spawns.Add(new InvItem(623), range, 2);//TM Safeguard
-            machines.Spawns.Add(new InvItem(625), range, 2);//TM Venoshock
-            machines.Spawns.Add(new InvItem(626), range, 2);//TM Work Up
-            machines.Spawns.Add(new InvItem(627), range, 2);//TM Scald
-            machines.Spawns.Add(new InvItem(629), range, 2);//TM Explosion
-            machines.Spawns.Add(new InvItem(630), range, 2);//TM U-turn
-            machines.Spawns.Add(new InvItem(631), range, 2);//TM Thunder Wave
-            machines.Spawns.Add(new InvItem(632), range, 2);//TM Return
-            machines.Spawns.Add(new InvItem(633), range, 2);//TM Pluck
-            machines.Spawns.Add(new InvItem(634), range, 2);//TM Frustration
-            machines.Spawns.Add(new InvItem(638), range, 2);//TM Thief
-            machines.Spawns.Add(new InvItem(639), range, 2);//TM Acrobatics
-            machines.Spawns.Add(new InvItem(642), range, 2);//TM False Swipe
-            machines.Spawns.Add(new InvItem(643), range, 2);//TM Fling
-            machines.Spawns.Add(new InvItem(644), range, 2);//TM Captivate
-            machines.Spawns.Add(new InvItem(645), range, 2);//TM Roost
-            machines.Spawns.Add(new InvItem(646), range, 2);//TM Infestation
-            machines.Spawns.Add(new InvItem(647), range, 2);//TM Drain Punch
-            machines.Spawns.Add(new InvItem(648), range, 2);//TM Water Pulse
-            machines.Spawns.Add(new InvItem(650), range, 2);//TM Giga Drain
-            machines.Spawns.Add(new InvItem(651), range, 2);//TM Shock Wave
-            machines.Spawns.Add(new InvItem(652), range, 2);//TM Volt Switch
-            machines.Spawns.Add(new InvItem(653), range, 2);//TM Steel Wing
-            machines.Spawns.Add(new InvItem(655), range, 2);//TM Psyshock
-            machines.Spawns.Add(new InvItem(656), range, 2);//TM Bulldoze
-            machines.Spawns.Add(new InvItem(657), range, 2);//TM Poison Jab
-            machines.Spawns.Add(new InvItem(659), range, 2);//TM Dream Eater
-            machines.Spawns.Add(new InvItem(660), range, 2);//TM Thunder
-            machines.Spawns.Add(new InvItem(661), range, 2);//TM X-Scissor
-            machines.Spawns.Add(new InvItem(663), range, 2);//TM Retaliate
-            machines.Spawns.Add(new InvItem(664), range, 2);//TM Reflect
-            machines.Spawns.Add(new InvItem(665), range, 2);//TM Quash
-            machines.Spawns.Add(new InvItem(667), range, 2);//TM Round
-            machines.Spawns.Add(new InvItem(668), range, 2);//TM Aerial Ace
-            machines.Spawns.Add(new InvItem(670), range, 2);//TM Incinerate
-            machines.Spawns.Add(new InvItem(671), range, 2);//TM Struggle Bug
-            machines.Spawns.Add(new InvItem(673), range, 2);//TM Dragon Claw
-            machines.Spawns.Add(new InvItem(674), range, 2);//TM Rain Dance
-            machines.Spawns.Add(new InvItem(675), range, 2);//TM Sunny Day
-            machines.Spawns.Add(new InvItem(677), range, 2);//TM Sandstorm
-            machines.Spawns.Add(new InvItem(678), range, 2);//TM Hail
-            machines.Spawns.Add(new InvItem(679), range, 2);//TM Rock Tomb
-            machines.Spawns.Add(new InvItem(680), range, 2);//TM Attract
-            machines.Spawns.Add(new InvItem(681), range, 2);//TM Hidden Power
-            machines.Spawns.Add(new InvItem(682), range, 2);//TM Taunt
-            machines.Spawns.Add(new InvItem(684), range, 2);//TM Ice Beam
-            machines.Spawns.Add(new InvItem(686), range, 2);//TM Light Screen
-            machines.Spawns.Add(new InvItem(687), range, 2);//TM Stone Edge
-            machines.Spawns.Add(new InvItem(688), range, 2);//TM Shadow Claw
-            machines.Spawns.Add(new InvItem(689), range, 2);//TM Grass Knot
-            machines.Spawns.Add(new InvItem(690), range, 2);//TM Brick Break
-            machines.Spawns.Add(new InvItem(691), range, 2);//TM Calm Mind
-            machines.Spawns.Add(new InvItem(692), range, 2);//TM Torment
-            machines.Spawns.Add(new InvItem(693), range, 2);//TM Strength
-            machines.Spawns.Add(new InvItem(694), range, 2);//TM Cut
-            machines.Spawns.Add(new InvItem(695), range, 2);//TM Rock Smash
-            machines.Spawns.Add(new InvItem(696), range, 2);//TM Bulk Up
-            machines.Spawns.Add(new InvItem(698), range, 2);//TM Rest
-            machines.Spawns.Add(new InvItem(699), range, 2);//TM Psych Up
+            machines.Spawns.Add(new InvItem("tm_echoed_voice"), range, 2);//TM Echoed Voice
+            machines.Spawns.Add(new InvItem("tm_double_team"), range, 2);//TM Double Team
+            machines.Spawns.Add(new InvItem("tm_toxic"), range, 2);//TM Toxic
+            machines.Spawns.Add(new InvItem("tm_will_o_wisp"), range, 2);//TM Will-o-Wisp
+            machines.Spawns.Add(new InvItem("tm_dragon_tail"), range, 2);//TM Dragon Tail
+            machines.Spawns.Add(new InvItem("tm_protect"), range, 2);//TM Protect
+            machines.Spawns.Add(new InvItem("tm_defog"), range, 2);//TM Defog
+            machines.Spawns.Add(new InvItem("tm_roar"), range, 2);//TM Roar
+            machines.Spawns.Add(new InvItem("tm_swagger"), range, 2);//TM Swagger
+            machines.Spawns.Add(new InvItem("tm_dive"), range, 2);//TM Dive
+            machines.Spawns.Add(new InvItem("tm_fly"), range, 2);//TM Fly
+            machines.Spawns.Add(new InvItem("tm_facade"), range, 2);//TM Facade
+            machines.Spawns.Add(new InvItem("tm_rock_climb"), range, 2);//TM Rock Climb
+            machines.Spawns.Add(new InvItem("tm_waterfall"), range, 2);//TM Waterfall
+            machines.Spawns.Add(new InvItem("tm_smack_down"), range, 2);//TM Smack Down
+            machines.Spawns.Add(new InvItem("tm_flame_charge"), range, 2);//TM Flame Charge
+            machines.Spawns.Add(new InvItem("tm_low_sweep"), range, 2);//TM Low Sweep
+            machines.Spawns.Add(new InvItem("tm_charge_beam"), range, 2);//TM Charge Beam
+            machines.Spawns.Add(new InvItem("tm_payback"), range, 2);//TM Payback
+            machines.Spawns.Add(new InvItem("tm_wild_charge"), range, 2);//TM Wild Charge
+            machines.Spawns.Add(new InvItem("tm_hone_claws"), range, 2);//TM Hone Claws
+            machines.Spawns.Add(new InvItem("tm_telekinesis"), range, 2);//TM Telekinesis
+            machines.Spawns.Add(new InvItem("tm_giga_impact"), range, 2);//TM Giga Impact
+            machines.Spawns.Add(new InvItem("tm_rock_polish"), range, 2);//TM Rock Polish
+            machines.Spawns.Add(new InvItem("tm_dig"), range, 2);//TM Dig
+            machines.Spawns.Add(new InvItem("tm_gyro_ball"), range, 2);//TM Gyro Ball
+            machines.Spawns.Add(new InvItem("tm_substitute"), range, 2);//TM Substitute
+            machines.Spawns.Add(new InvItem("tm_trick_room"), range, 2);//TM Trick Room
+            machines.Spawns.Add(new InvItem("tm_safeguard"), range, 2);//TM Safeguard
+            machines.Spawns.Add(new InvItem("tm_venoshock"), range, 2);//TM Venoshock
+            machines.Spawns.Add(new InvItem("tm_work_up"), range, 2);//TM Work Up
+            machines.Spawns.Add(new InvItem("tm_scald"), range, 2);//TM Scald
+            machines.Spawns.Add(new InvItem("tm_explosion"), range, 2);//TM Explosion
+            machines.Spawns.Add(new InvItem("tm_u_turn"), range, 2);//TM U-turn
+            machines.Spawns.Add(new InvItem("tm_thunder_wave"), range, 2);//TM Thunder Wave
+            machines.Spawns.Add(new InvItem("tm_return"), range, 2);//TM Return
+            machines.Spawns.Add(new InvItem("tm_pluck"), range, 2);//TM Pluck
+            machines.Spawns.Add(new InvItem("tm_frustration"), range, 2);//TM Frustration
+            machines.Spawns.Add(new InvItem("tm_thief"), range, 2);//TM Thief
+            machines.Spawns.Add(new InvItem("tm_acrobatics"), range, 2);//TM Acrobatics
+            machines.Spawns.Add(new InvItem("tm_false_swipe"), range, 2);//TM False Swipe
+            machines.Spawns.Add(new InvItem("tm_fling"), range, 2);//TM Fling
+            machines.Spawns.Add(new InvItem("tm_captivate"), range, 2);//TM Captivate
+            machines.Spawns.Add(new InvItem("tm_roost"), range, 2);//TM Roost
+            machines.Spawns.Add(new InvItem("tm_infestation"), range, 2);//TM Infestation
+            machines.Spawns.Add(new InvItem("tm_drain_punch"), range, 2);//TM Drain Punch
+            machines.Spawns.Add(new InvItem("tm_water_pulse"), range, 2);//TM Water Pulse
+            machines.Spawns.Add(new InvItem("tm_giga_drain"), range, 2);//TM Giga Drain
+            machines.Spawns.Add(new InvItem("tm_shock_wave"), range, 2);//TM Shock Wave
+            machines.Spawns.Add(new InvItem("tm_volt_switch"), range, 2);//TM Volt Switch
+            machines.Spawns.Add(new InvItem("tm_steel_wing"), range, 2);//TM Steel Wing
+            machines.Spawns.Add(new InvItem("tm_psyshock"), range, 2);//TM Psyshock
+            machines.Spawns.Add(new InvItem("tm_bulldoze"), range, 2);//TM Bulldoze
+            machines.Spawns.Add(new InvItem("tm_poison_jab"), range, 2);//TM Poison Jab
+            machines.Spawns.Add(new InvItem("tm_dream_eater"), range, 2);//TM Dream Eater
+            machines.Spawns.Add(new InvItem("tm_thunder"), range, 2);//TM Thunder
+            machines.Spawns.Add(new InvItem("tm_x_scissor"), range, 2);//TM X-Scissor
+            machines.Spawns.Add(new InvItem("tm_retaliate"), range, 2);//TM Retaliate
+            machines.Spawns.Add(new InvItem("tm_reflect"), range, 2);//TM Reflect
+            machines.Spawns.Add(new InvItem("tm_quash"), range, 2);//TM Quash
+            machines.Spawns.Add(new InvItem("tm_round"), range, 2);//TM Round
+            machines.Spawns.Add(new InvItem("tm_aerial_ace"), range, 2);//TM Aerial Ace
+            machines.Spawns.Add(new InvItem("tm_incinerate"), range, 2);//TM Incinerate
+            machines.Spawns.Add(new InvItem("tm_struggle_bug"), range, 2);//TM Struggle Bug
+            machines.Spawns.Add(new InvItem("tm_dragon_claw"), range, 2);//TM Dragon Claw
+            machines.Spawns.Add(new InvItem("tm_rain_dance"), range, 2);//TM Rain Dance
+            machines.Spawns.Add(new InvItem("tm_sunny_day"), range, 2);//TM Sunny Day
+            machines.Spawns.Add(new InvItem("tm_sandstorm"), range, 2);//TM Sandstorm
+            machines.Spawns.Add(new InvItem("tm_hail"), range, 2);//TM Hail
+            machines.Spawns.Add(new InvItem("tm_rock_tomb"), range, 2);//TM Rock Tomb
+            machines.Spawns.Add(new InvItem("tm_attract"), range, 2);//TM Attract
+            machines.Spawns.Add(new InvItem("tm_hidden_power"), range, 2);//TM Hidden Power
+            machines.Spawns.Add(new InvItem("tm_taunt"), range, 2);//TM Taunt
+            machines.Spawns.Add(new InvItem("tm_ice_beam"), range, 2);//TM Ice Beam
+            machines.Spawns.Add(new InvItem("tm_light_screen"), range, 2);//TM Light Screen
+            machines.Spawns.Add(new InvItem("tm_stone_edge"), range, 2);//TM Stone Edge
+            machines.Spawns.Add(new InvItem("tm_shadow_claw"), range, 2);//TM Shadow Claw
+            machines.Spawns.Add(new InvItem("tm_grass_knot"), range, 2);//TM Grass Knot
+            machines.Spawns.Add(new InvItem("tm_brick_break"), range, 2);//TM Brick Break
+            machines.Spawns.Add(new InvItem("tm_calm_mind"), range, 2);//TM Calm Mind
+            machines.Spawns.Add(new InvItem("tm_torment"), range, 2);//TM Torment
+            machines.Spawns.Add(new InvItem("tm_strength"), range, 2);//TM Strength
+            machines.Spawns.Add(new InvItem("tm_cut"), range, 2);//TM Cut
+            machines.Spawns.Add(new InvItem("tm_rock_smash"), range, 2);//TM Rock Smash
+            machines.Spawns.Add(new InvItem("tm_bulk_up"), range, 2);//TM Bulk Up
+            machines.Spawns.Add(new InvItem("tm_rest"), range, 2);//TM Rest
+            machines.Spawns.Add(new InvItem("tm_psych_up"), range, 2);//TM Psych Up
 
             range = new IntRange(10, 30);
 
-            machines.Spawns.Add(new InvItem(591), range, 1);//TM Psychic
-            machines.Spawns.Add(new InvItem(595), range, 1);//TM Flamethrower
-            machines.Spawns.Add(new InvItem(599), range, 1);//TM Hyper Beam
-            machines.Spawns.Add(new InvItem(611), range, 1);//TM Blizzard
-            machines.Spawns.Add(new InvItem(619), range, 1);//TM Rock Slide
-            machines.Spawns.Add(new InvItem(620), range, 1);//TM Sludge Wave
-            machines.Spawns.Add(new InvItem(624), range, 1);//TM Swords Dance
-            machines.Spawns.Add(new InvItem(628), range, 1);//TM Energy Ball
-            machines.Spawns.Add(new InvItem(635), range, 1);//TM Fire Blast
-            machines.Spawns.Add(new InvItem(640), range, 1);//TM Thunderbolt
-            machines.Spawns.Add(new InvItem(641), range, 1);//TM Shadow Ball
-            machines.Spawns.Add(new InvItem(649), range, 1);//TM Dark Pulse
-            machines.Spawns.Add(new InvItem(654), range, 1);//TM Earthquake
-            machines.Spawns.Add(new InvItem(658), range, 1);//TM Frost Breath
-            machines.Spawns.Add(new InvItem(662), range, 1);//TM Dazzling Gleam
-            machines.Spawns.Add(new InvItem(666), range, 1);//TM Snarl
-            machines.Spawns.Add(new InvItem(669), range, 1);//TM Focus Blast
-            machines.Spawns.Add(new InvItem(672), range, 1);//TM Overheat
-            machines.Spawns.Add(new InvItem(676), range, 1);//TM Sludge Bomb
-            machines.Spawns.Add(new InvItem(683), range, 1);//TM Solar Beam
-            machines.Spawns.Add(new InvItem(685), range, 1);//TM Flash Cannon
-            machines.Spawns.Add(new InvItem(697), range, 1);//TM Surf
+            machines.Spawns.Add(new InvItem("tm_psychic"), range, 1);//TM Psychic
+            machines.Spawns.Add(new InvItem("tm_flamethrower"), range, 1);//TM Flamethrower
+            machines.Spawns.Add(new InvItem("tm_hyper_beam"), range, 1);//TM Hyper Beam
+            machines.Spawns.Add(new InvItem("tm_blizzard"), range, 1);//TM Blizzard
+            machines.Spawns.Add(new InvItem("tm_rock_slide"), range, 1);//TM Rock Slide
+            machines.Spawns.Add(new InvItem("tm_sludge_wave"), range, 1);//TM Sludge Wave
+            machines.Spawns.Add(new InvItem("tm_swords_dance"), range, 1);//TM Swords Dance
+            machines.Spawns.Add(new InvItem("tm_energy_ball"), range, 1);//TM Energy Ball
+            machines.Spawns.Add(new InvItem("tm_fire_blast"), range, 1);//TM Fire Blast
+            machines.Spawns.Add(new InvItem("tm_thunderbolt"), range, 1);//TM Thunderbolt
+            machines.Spawns.Add(new InvItem("tm_shadow_ball"), range, 1);//TM Shadow Ball
+            machines.Spawns.Add(new InvItem("tm_dark_pulse"), range, 1);//TM Dark Pulse
+            machines.Spawns.Add(new InvItem("tm_earthquake"), range, 1);//TM Earthquake
+            machines.Spawns.Add(new InvItem("tm_frost_breath"), range, 1);//TM Frost Breath
+            machines.Spawns.Add(new InvItem("tm_dazzling_gleam"), range, 1);//TM Dazzling Gleam
+            machines.Spawns.Add(new InvItem("tm_snarl"), range, 1);//TM Snarl
+            machines.Spawns.Add(new InvItem("tm_focus_blast"), range, 1);//TM Focus Blast
+            machines.Spawns.Add(new InvItem("tm_overheat"), range, 1);//TM Overheat
+            machines.Spawns.Add(new InvItem("tm_sludge_bomb"), range, 1);//TM Sludge Bomb
+            machines.Spawns.Add(new InvItem("tm_recycle"), range, 1);//TM Solar Beam
+            machines.Spawns.Add(new InvItem("tm_flash_cannon"), range, 1);//TM Flash Cannon
+            machines.Spawns.Add(new InvItem("tm_surf"), range, 1);//TM Surf
 
-            machines.Spawns.Add(new InvItem(591, true), range, 1);//TM Psychic
-            machines.Spawns.Add(new InvItem(595, true), range, 1);//TM Flamethrower
-            machines.Spawns.Add(new InvItem(599, true), range, 1);//TM Hyper Beam
-            machines.Spawns.Add(new InvItem(611, true), range, 1);//TM Blizzard
-            machines.Spawns.Add(new InvItem(619, true), range, 1);//TM Rock Slide
-            machines.Spawns.Add(new InvItem(620, true), range, 1);//TM Sludge Wave
-            machines.Spawns.Add(new InvItem(624, true), range, 1);//TM Swords Dance
-            machines.Spawns.Add(new InvItem(628, true), range, 1);//TM Energy Ball
-            machines.Spawns.Add(new InvItem(635, true), range, 1);//TM Fire Blast
-            machines.Spawns.Add(new InvItem(640, true), range, 1);//TM Thunderbolt
-            machines.Spawns.Add(new InvItem(641, true), range, 1);//TM Shadow Ball
-            machines.Spawns.Add(new InvItem(649, true), range, 1);//TM Dark Pulse
-            machines.Spawns.Add(new InvItem(654, true), range, 1);//TM Earthquake
-            machines.Spawns.Add(new InvItem(658, true), range, 1);//TM Frost Breath
-            machines.Spawns.Add(new InvItem(662, true), range, 1);//TM Dazzling Gleam
-            machines.Spawns.Add(new InvItem(666, true), range, 1);//TM Snarl
-            machines.Spawns.Add(new InvItem(669, true), range, 1);//TM Focus Blast
-            machines.Spawns.Add(new InvItem(672, true), range, 1);//TM Overheat
-            machines.Spawns.Add(new InvItem(676, true), range, 1);//TM Sludge Bomb
-            machines.Spawns.Add(new InvItem(683, true), range, 1);//TM Solar Beam
-            machines.Spawns.Add(new InvItem(685, true), range, 1);//TM Flash Cannon
-            machines.Spawns.Add(new InvItem(697, true), range, 1);//TM Surf
+            machines.Spawns.Add(new InvItem("tm_psychic", true), range, 1);//TM Psychic
+            machines.Spawns.Add(new InvItem("tm_flamethrower", true), range, 1);//TM Flamethrower
+            machines.Spawns.Add(new InvItem("tm_hyper_beam", true), range, 1);//TM Hyper Beam
+            machines.Spawns.Add(new InvItem("tm_blizzard", true), range, 1);//TM Blizzard
+            machines.Spawns.Add(new InvItem("tm_rock_slide", true), range, 1);//TM Rock Slide
+            machines.Spawns.Add(new InvItem("tm_sludge_wave", true), range, 1);//TM Sludge Wave
+            machines.Spawns.Add(new InvItem("tm_swords_dance", true), range, 1);//TM Swords Dance
+            machines.Spawns.Add(new InvItem("tm_energy_ball", true), range, 1);//TM Energy Ball
+            machines.Spawns.Add(new InvItem("tm_fire_blast", true), range, 1);//TM Fire Blast
+            machines.Spawns.Add(new InvItem("tm_thunderbolt", true), range, 1);//TM Thunderbolt
+            machines.Spawns.Add(new InvItem("tm_shadow_ball", true), range, 1);//TM Shadow Ball
+            machines.Spawns.Add(new InvItem("tm_dark_pulse", true), range, 1);//TM Dark Pulse
+            machines.Spawns.Add(new InvItem("tm_earthquake", true), range, 1);//TM Earthquake
+            machines.Spawns.Add(new InvItem("tm_frost_breath", true), range, 1);//TM Frost Breath
+            machines.Spawns.Add(new InvItem("tm_dazzling_gleam", true), range, 1);//TM Dazzling Gleam
+            machines.Spawns.Add(new InvItem("tm_snarl", true), range, 1);//TM Snarl
+            machines.Spawns.Add(new InvItem("tm_focus_blast", true), range, 1);//TM Focus Blast
+            machines.Spawns.Add(new InvItem("tm_overheat", true), range, 1);//TM Overheat
+            machines.Spawns.Add(new InvItem("tm_sludge_bomb", true), range, 1);//TM Sludge Bomb
+            machines.Spawns.Add(new InvItem("tm_recycle", true), range, 1);//TM Solar Beam
+            machines.Spawns.Add(new InvItem("tm_flash_cannon", true), range, 1);//TM Flash Cannon
+            machines.Spawns.Add(new InvItem("tm_surf", true), range, 1);//TM Surf
 
             //evo items
             CategorySpawn<InvItem> evoItems = new CategorySpawn<InvItem>();
@@ -487,18 +487,18 @@ namespace DataGenerator.Data
             itemSpawnZoneStep.Spawns.Add("evo", evoItems);
 
             range = new IntRange(0, 25);
-            evoItems.Spawns.Add(new InvItem(351), range, 10);//Fire Stone
-            evoItems.Spawns.Add(new InvItem(352), range, 10);//Thunder Stone
-            evoItems.Spawns.Add(new InvItem(353), range, 10);//Water Stone
-            evoItems.Spawns.Add(new InvItem(355), range, 10);//Moon Stone
-            evoItems.Spawns.Add(new InvItem(363), range, 10);//Dusk Stone
-            evoItems.Spawns.Add(new InvItem(364), range, 10);//Dawn Stone
-            evoItems.Spawns.Add(new InvItem(362), range, 10);//Shiny Stone
-            evoItems.Spawns.Add(new InvItem(354), range, 10);//Leaf Stone
-            evoItems.Spawns.Add(new InvItem(379), range, 10);//Ice Stone
-            evoItems.Spawns.Add(new InvItem(377), range, 10);//Sun Ribbon
-            evoItems.Spawns.Add(new InvItem(378), range, 10);//Moon Ribbon
-            evoItems.Spawns.Add(new InvItem(347), range, 10);//Metal Coat
+            evoItems.Spawns.Add(new InvItem("evo_fire_stone"), range, 10);//Fire Stone
+            evoItems.Spawns.Add(new InvItem("evo_thunder_stone"), range, 10);//Thunder Stone
+            evoItems.Spawns.Add(new InvItem("evo_water_stone"), range, 10);//Water Stone
+            evoItems.Spawns.Add(new InvItem("evo_moon_stone"), range, 10);//Moon Stone
+            evoItems.Spawns.Add(new InvItem("evo_dusk_stone"), range, 10);//Dusk Stone
+            evoItems.Spawns.Add(new InvItem("evo_dawn_stone"), range, 10);//Dawn Stone
+            evoItems.Spawns.Add(new InvItem("evo_shiny_stone"), range, 10);//Shiny Stone
+            evoItems.Spawns.Add(new InvItem("evo_leaf_stone"), range, 10);//Leaf Stone
+            evoItems.Spawns.Add(new InvItem("evo_ice_stone"), range, 10);//Ice Stone
+            evoItems.Spawns.Add(new InvItem("evo_sun_ribbon"), range, 10);//Sun Ribbon
+            evoItems.Spawns.Add(new InvItem("evo_lunar_ribbon"), range, 10);//Moon Ribbon
+            evoItems.Spawns.Add(new InvItem("held_metal_coat"), range, 10);//Metal Coat
             floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
 
 
@@ -830,7 +830,10 @@ namespace DataGenerator.Data
             //006 Charizard : 126 Fire Blast : 403 Air Slash
             {
                 TeamMemberSpawn mob = GetTeamMob("charizard", "", "fire_blast", "wing_attack", "", "", new RandRange(45), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
-                mob.Spawn.SpawnFeatures.Add(new MobSpawnItem(true, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93));
+                MobSpawnItem itemSpawn = new MobSpawnItem(true);
+                foreach(string item_name in IterateGummis())
+                    itemSpawn.Items.Add(new InvItem(item_name), 100);
+                mob.Spawn.SpawnFeatures.Add(itemSpawn);
                 poolSpawn.Spawns.Add(mob, new IntRange(17, 19), 10);
             }
 
@@ -965,7 +968,7 @@ namespace DataGenerator.Data
             //053 Persian : 415 Switcheroo : 185 Feint Attack : 129 Swift
             {
                 TeamMemberSpawn mob = GetTeamMob("persian", "", "switcheroo", "feint_attack", "swift", "", new RandRange(33), "thief");
-                mob.Spawn.SpawnFeatures.Add(new MobSpawnItem(true, 323, 324, 325, 326, 320));
+                mob.Spawn.SpawnFeatures.Add(new MobSpawnItem(true, "held_toxic_orb", "held_flame_orb", "held_iron_ball", "held_ring_target", "held_choice_scarf"));
                 poolSpawn.Spawns.Add(mob, new IntRange(20, 22), 10);
             }
 
@@ -1039,7 +1042,10 @@ namespace DataGenerator.Data
             //110 Weezing : 194 Destiny Bond : 153 Explosion : 188 Sludge Bomb
             {
                 TeamMemberSpawn mob = GetTeamMob("weezing", "neutralizing_gas", "destiny_bond", "explosion", "", "", new RandRange(50), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
-                mob.Spawn.SpawnFeatures.Add(new MobSpawnItem(true, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93));
+                MobSpawnItem itemSpawn = new MobSpawnItem(true);
+                foreach (string item_name in IterateGummis())
+                    itemSpawn.Items.Add(new InvItem(item_name), 100);
+                mob.Spawn.SpawnFeatures.Add(itemSpawn);
                 poolSpawn.Spawns.Add(mob, new IntRange(22, 25), 10);
             }
 
@@ -1172,58 +1178,58 @@ namespace DataGenerator.Data
 
 
             SpawnList<IGenPriority> appleZoneSpawns = new SpawnList<IGenPriority>();
-            appleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(1))))), 10);
+            appleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("food_apple"))))), 10);
             SpreadStepZoneStep appleZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, 30)), appleZoneSpawns);//apple
             floorSegment.ZoneSteps.Add(appleZoneStep);
             SpawnList<IGenPriority> bigAppleZoneSpawns = new SpawnList<IGenPriority>();
-            bigAppleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(2))))), 10);
+            bigAppleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("food_apple_big"))))), 10);
             SpreadStepZoneStep bigAppleZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(13, 15), new IntRange(0, 30)), bigAppleZoneSpawns);//big apple
             floorSegment.ZoneSteps.Add(bigAppleZoneStep);
             SpawnList<IGenPriority> leppaZoneSpawns = new SpawnList<IGenPriority>();
-            leppaZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(11))))), 10);
+            leppaZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("berry_leppa"))))), 10);
             SpreadStepZoneStep leppaZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, 30)), leppaZoneSpawns);//leppa
             floorSegment.ZoneSteps.Add(leppaZoneStep);
             SpawnList<IGenPriority> joySeedZoneSpawns = new SpawnList<IGenPriority>();
-            joySeedZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(102))))), 10);
+            joySeedZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("seed_joy"))))), 10);
             SpreadStepZoneStep joySeedZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(12, 30), new IntRange(0, 30)), joySeedZoneSpawns);//joy seed
             floorSegment.ZoneSteps.Add(joySeedZoneStep);
             SpawnList<IGenPriority> keyZoneSpawns = new SpawnList<IGenPriority>();
-            keyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(455, 1))))), 10);
+            keyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("key", 1))))), 10);
             SpreadStepZoneStep keyZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, 5)), keyZoneSpawns);//key
             floorSegment.ZoneSteps.Add(keyZoneStep);
             SpawnList<IGenPriority> assemblyZoneSpawns = new SpawnList<IGenPriority>();
-            assemblyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(451))))), 10);
+            assemblyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("machine_assembly_box"))))), 10);
             SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(4, 30)), assemblyZoneSpawns);//assembly box
             floorSegment.ZoneSteps.Add(assemblyZoneStep);
             SpawnList<IGenPriority> apricornZoneSpawns = new SpawnList<IGenPriority>();
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(211))))), 10);//blue apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(212))))), 10);//green apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(213))))), 10);//brown apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(214))))), 10);//purple apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(215))))), 10);//red apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(216))))), 10);//white apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(217))))), 10);//yellow apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(218))))), 10);//black apricorns
+            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_blue"))))), 10);//blue apricorns
+            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_green"))))), 10);//green apricorns
+            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_brown"))))), 10);//brown apricorns
+            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_purple"))))), 10);//purple apricorns
+            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_red"))))), 10);//red apricorns
+            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_white"))))), 10);//white apricorns
+            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_yellow"))))), 10);//yellow apricorns
+            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_black"))))), 10);//black apricorns
             SpreadStepZoneStep apricornZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(1, 21)), apricornZoneSpawns);//apricorn (variety)
             floorSegment.ZoneSteps.Add(apricornZoneStep);
 
             SpawnList<IGenPriority> cleanseZoneSpawns = new SpawnList<IGenPriority>();
-            cleanseZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(263))))), 10);
+            cleanseZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("orb_cleanse"))))), 10);
             SpreadStepZoneStep cleanseZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandDecay(1, 10, 50), new IntRange(3, 30)), cleanseZoneSpawns);//cleanse orb
             floorSegment.ZoneSteps.Add(cleanseZoneStep);
 
             SpawnList<IGenPriority> evoZoneSpawns = new SpawnList<IGenPriority>();
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(351))))), 10);//Fire Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(352))))), 10);//Thunder Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(353))))), 10);//Water Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(355))))), 10);//Moon Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(363))))), 10);//Dusk Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(364))))), 10);//Dawn Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(362))))), 10);//Shiny Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(354))))), 10);//Leaf Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(379))))), 10);//Ice Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(377))))), 10);//Sun Ribbon
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(378))))), 10);//Moon Ribbon
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_fire_stone"))))), 10);//Fire Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_thunder_stone"))))), 10);//Thunder Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_water_stone"))))), 10);//Water Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_moon_stone"))))), 10);//Moon Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_dusk_stone"))))), 10);//Dusk Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_dawn_stone"))))), 10);//Dawn Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_shiny_stone"))))), 10);//Shiny Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_leaf_stone"))))), 10);//Leaf Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_ice_stone"))))), 10);//Ice Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_sun_ribbon"))))), 10);//Sun Ribbon
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_lunar_ribbon"))))), 10);//Moon Ribbon
             SpreadStepZoneStep evoItemZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(2, 4), new IntRange(0, 15)), evoZoneSpawns);//evo items
             floorSegment.ZoneSteps.Add(evoItemZoneStep);
 
@@ -1256,41 +1262,44 @@ namespace DataGenerator.Data
                 //monster houses
                 SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(10, new IntRange(4, 15)));
                 monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
-                for (int ii = 0; ii < 18; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, 30), 4);//gummis
-                for (int ii = 0; ii < 8; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(210 + ii), new IntRange(0, 30), 4);//apricorns
-                monsterChanceZoneStep.Items.Add(new MapItem(351), new IntRange(0, 30), 4);//Fire Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(352), new IntRange(0, 30), 4);//Thunder Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(353), new IntRange(0, 30), 4);//Water Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(355), new IntRange(0, 30), 4);//Moon Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(363), new IntRange(0, 30), 4);//Dusk Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(364), new IntRange(0, 30), 4);//Dawn Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(362), new IntRange(0, 30), 4);//Shiny Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(354), new IntRange(0, 30), 4);//Leaf Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(379), new IntRange(0, 30), 4);//Ice Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(377), new IntRange(0, 30), 4);//Sun Ribbon
-                monsterChanceZoneStep.Items.Add(new MapItem(378), new IntRange(0, 30), 4);//Moon Ribbon
-                monsterChanceZoneStep.Items.Add(new MapItem(6), new IntRange(0, 30), 25);//banana
-                for (int ii = 587; ii < 700; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(ii), new IntRange(0, 30), 2);//TMs
-                monsterChanceZoneStep.Items.Add(new MapItem(477), new IntRange(0, 30), 10);//nugget
-                monsterChanceZoneStep.Items.Add(new MapItem(480, 1), new IntRange(0, 30), 10);//pearl
-                monsterChanceZoneStep.Items.Add(new MapItem(481, 2), new IntRange(0, 30), 10);//heart scale
-                monsterChanceZoneStep.Items.Add(new MapItem(455, 1), new IntRange(0, 30), 10);//key
-                monsterChanceZoneStep.Items.Add(new MapItem(450), new IntRange(0, 30), 10);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem(451), new IntRange(0, 30), 10);//assembly box
-                monsterChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, 30), 10);//ability capsule
-                monsterChanceZoneStep.Items.Add(new MapItem(300), new IntRange(0, 30), 10);//friend bow
+                foreach (string key in IterateGummis())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 4);//gummis
+                foreach (string key in IterateApricorns())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 4);//apricorns
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_fire_stone"), new IntRange(0, 30), 4);//Fire Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_thunder_stone"), new IntRange(0, 30), 4);//Thunder Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_water_stone"), new IntRange(0, 30), 4);//Water Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_moon_stone"), new IntRange(0, 30), 4);//Moon Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_dusk_stone"), new IntRange(0, 30), 4);//Dusk Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_dawn_stone"), new IntRange(0, 30), 4);//Dawn Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_shiny_stone"), new IntRange(0, 30), 4);//Shiny Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_leaf_stone"), new IntRange(0, 30), 4);//Leaf Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_ice_stone"), new IntRange(0, 30), 4);//Ice Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_ribbon"), new IntRange(0, 30), 4);//Sun Ribbon
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_lunar_ribbon"), new IntRange(0, 30), 4);//Moon Ribbon
+                monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, 30), 25);//banana
+                foreach (string key in IterateTMs())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 10);//nugget
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, 30), 10);//pearl
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, 30), 10);//heart scale
+                monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 10);//key
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, 30), 10);//assembly box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 10);//ability capsule
+                monsterChanceZoneStep.Items.Add(new MapItem("held_friend_bow"), new IntRange(0, 30), 10);//friend bow
 
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, 30), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 20);//no theme
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 20);//no theme
                                                                                                                                                                                                                          //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMoney(500, new ParamRange(5, 11)), new ParamRange(0, 30));
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 5)), new IntRange(0, 30), 10);//TMs
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 6)), new IntRange(0, 30), 10);//apricorns
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
+                List<string> heldRange = new List<string>();
+                foreach (string heldItem in IterateEvoItems())
+                    heldRange.Add(heldItem);
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), heldRange.ToArray())), new IntRange(0, 10), 40);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), heldRange.ToArray())), new IntRange(10, 20), 20);//evo items
                 for (int ii = 0; ii < dexMap.Length; ii++)
                     monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, 30), 10);//all monsters in the game
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, 30), 10);
@@ -1305,41 +1314,44 @@ namespace DataGenerator.Data
                 //monster halls
                 SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(10, new IntRange(15, 30)));
                 monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(11, 9), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
-                for (int ii = 0; ii < 18; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, 30), 4);//gummis
-                for (int ii = 0; ii < 8; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(210 + ii), new IntRange(0, 30), 4);//apricorns
-                monsterChanceZoneStep.Items.Add(new MapItem(351), new IntRange(0, 30), 4);//Fire Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(352), new IntRange(0, 30), 4);//Thunder Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(353), new IntRange(0, 30), 4);//Water Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(355), new IntRange(0, 30), 4);//Moon Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(363), new IntRange(0, 30), 4);//Dusk Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(364), new IntRange(0, 30), 4);//Dawn Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(362), new IntRange(0, 30), 4);//Shiny Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(354), new IntRange(0, 30), 4);//Leaf Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(379), new IntRange(0, 30), 4);//Ice Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(377), new IntRange(0, 30), 4);//Sun Ribbon
-                monsterChanceZoneStep.Items.Add(new MapItem(378), new IntRange(0, 30), 4);//Moon Ribbon
-                monsterChanceZoneStep.Items.Add(new MapItem(6), new IntRange(0, 30), 25);//banana
-                for (int ii = 587; ii < 700; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(ii), new IntRange(0, 30), 2);//TMs
-                monsterChanceZoneStep.Items.Add(new MapItem(477), new IntRange(0, 30), 10);//nugget
-                monsterChanceZoneStep.Items.Add(new MapItem(480, 1), new IntRange(0, 30), 10);//pearl
-                monsterChanceZoneStep.Items.Add(new MapItem(481, 2), new IntRange(0, 30), 10);//heart scale
-                monsterChanceZoneStep.Items.Add(new MapItem(455, 1), new IntRange(0, 30), 10);//key
-                monsterChanceZoneStep.Items.Add(new MapItem(450), new IntRange(0, 30), 10);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem(451), new IntRange(0, 30), 10);//assembly box
-                monsterChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, 30), 10);//ability capsule
-                monsterChanceZoneStep.Items.Add(new MapItem(300), new IntRange(0, 30), 10);//friend bow
+                foreach (string key in IterateGummis())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 4);//gummis
+                foreach (string key in IterateApricorns())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 4);//apricorns
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_fire_stone"), new IntRange(0, 30), 4);//Fire Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_thunder_stone"), new IntRange(0, 30), 4);//Thunder Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_water_stone"), new IntRange(0, 30), 4);//Water Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_moon_stone"), new IntRange(0, 30), 4);//Moon Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_dusk_stone"), new IntRange(0, 30), 4);//Dusk Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_dawn_stone"), new IntRange(0, 30), 4);//Dawn Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_shiny_stone"), new IntRange(0, 30), 4);//Shiny Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_leaf_stone"), new IntRange(0, 30), 4);//Leaf Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_ice_stone"), new IntRange(0, 30), 4);//Ice Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_ribbon"), new IntRange(0, 30), 4);//Sun Ribbon
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_lunar_ribbon"), new IntRange(0, 30), 4);//Moon Ribbon
+                monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, 30), 25);//banana
+                foreach (string key in IterateTMs())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 10);//nugget
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, 30), 10);//pearl
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, 30), 10);//heart scale
+                monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 10);//key
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, 30), 10);//assembly box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 10);//ability capsule
+                monsterChanceZoneStep.Items.Add(new MapItem("held_friend_bow"), new IntRange(0, 30), 10);//friend bow
 
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, 30), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 20);//no theme
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 20);//no theme
                                                                                                                                                                                                                          //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMoney(500, new ParamRange(5, 11)), new ParamRange(0, 30));
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 5)), new IntRange(0, 30), 10);//TMs
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 6)), new IntRange(0, 30), 10);//apricorns
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
+                List<string> heldRange = new List<string>();
+                foreach (string heldItem in IterateEvoItems())
+                    heldRange.Add(heldItem);
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), heldRange.ToArray())), new IntRange(0, 10), 40);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), heldRange.ToArray())), new IntRange(10, 20), 20);//evo items
                 for (int ii = 0; ii < dexMap.Length; ii++)
                     monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, 30), 10);//all monsters in the game
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, 30), 10);
@@ -1354,33 +1366,33 @@ namespace DataGenerator.Data
                 SpreadHouseZoneStep chestChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanQuota(new RandRange(2, 5), new IntRange(6, 30)));
                 chestChanceZoneStep.ModStates.Add(new FlagType(typeof(ChestModGenState)));
                 chestChanceZoneStep.HouseStepSpawns.Add(new ChestStep<ListMapGenContext>(false, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
-                for (int ii = 0; ii < 18; ii++)
-                    chestChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, 30), 4);//gummis
-                chestChanceZoneStep.Items.Add(new MapItem(209), new IntRange(0, 30), 20);//big apricorn
-                chestChanceZoneStep.Items.Add(new MapItem(164), new IntRange(0, 30), 80);//elixir
-                chestChanceZoneStep.Items.Add(new MapItem(166), new IntRange(0, 30), 20);//max elixir
-                chestChanceZoneStep.Items.Add(new MapItem(160), new IntRange(0, 30), 20);//potion
-                chestChanceZoneStep.Items.Add(new MapItem(161), new IntRange(0, 30), 20);//max potion
-                chestChanceZoneStep.Items.Add(new MapItem(173), new IntRange(0, 30), 20);//full heal
-                for (int ii = 175; ii <= 181; ii++)
-                    chestChanceZoneStep.Items.Add(new MapItem(ii), new IntRange(0, 30), 15);//X-Items
-                for (int ii = 587; ii < 700; ii++)
-                    chestChanceZoneStep.Items.Add(new MapItem(ii), new IntRange(0, 30), 2);//TMs
-                chestChanceZoneStep.Items.Add(new MapItem(477), new IntRange(0, 30), 20);//nugget
-                chestChanceZoneStep.Items.Add(new MapItem(481, 3), new IntRange(0, 30), 10);//heart scale
-                chestChanceZoneStep.Items.Add(new MapItem(158, 1), new IntRange(0, 30), 20);//amber tear
-                chestChanceZoneStep.Items.Add(new MapItem(206, 3), new IntRange(0, 30), 20);//rare fossil
-                chestChanceZoneStep.Items.Add(new MapItem(101), new IntRange(0, 30), 20);//reviver seed
-                chestChanceZoneStep.Items.Add(new MapItem(102), new IntRange(0, 30), 20);//joy seed
-                chestChanceZoneStep.Items.Add(new MapItem(450), new IntRange(0, 30), 10);//link box
-                chestChanceZoneStep.Items.Add(new MapItem(451), new IntRange(0, 30), 10);//assembly box
-                chestChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, 30), 10);//ability capsule
+                foreach (string key in IterateGummis())
+                    chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 4);//gummis
+                chestChanceZoneStep.Items.Add(new MapItem("apricorn_big"), new IntRange(0, 30), 20);//big apricorn
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, 30), 80);//elixir
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_max_elixir"), new IntRange(0, 30), 20);//max elixir
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, 30), 20);//potion
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, 30), 20);//max potion
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, 30), 20);//full heal
+                foreach (string key in IterateXItems())
+                    chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 15);//X-Items
+                foreach (string key in IterateTMs())
+                    chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
+                chestChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 20);//nugget
+                chestChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 3), new IntRange(0, 30), 10);//heart scale
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, 30), 20);//amber tear
+                chestChanceZoneStep.Items.Add(new MapItem("ammo_rare_fossil", 3), new IntRange(0, 30), 20);//rare fossil
+                chestChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, 30), 20);//reviver seed
+                chestChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, 30), 20);//joy seed
+                chestChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
+                chestChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, 30), 10);//assembly box
+                chestChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 10);//ability capsule
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(2, 5)), new IntRange(0, 30), 30);
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(new IntRange(101), true, true, new RandRange(2, 4)), new IntRange(0, 30), 10);//reviver seed
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(new IntRange(102), true, true, new RandRange(1, 4)), new IntRange(0, 30), 10);//joy seed
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(new IntRange(158, 182), true, true, new RandRange(1, 3)), new IntRange(0, 30), 100);//manmade items
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(new IntRange(300, 349), true, true, new RandRange(1, 3)), new IntRange(0, 30), 20);//equip
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(new IntRange(380, 398), true, true, new RandRange(1, 3)), new IntRange(0, 30), 10);//plates
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(2, 4), "seed_reviver"), new IntRange(0, 30), 10);//reviver seed
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 4), "seed_joy"), new IntRange(0, 30), 10);//joy seed
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(158, 182)), new IntRange(0, 30), 100);//manmade items
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(300, 349)), new IntRange(0, 30), 20);//equip
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(380, 398)), new IntRange(0, 30), 10);//plates
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(1, 3)), new IntRange(0, 30), 10);//TMs
                 chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(2, 5)), new IntRange(0, 30), 20);
                 chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(1)), new IntRange(0, 30), 10);
@@ -1393,43 +1405,43 @@ namespace DataGenerator.Data
                 SpreadHouseZoneStep chestChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanQuota(new RandDecay(1, 5, 50), new IntRange(6, 30)));
                 chestChanceZoneStep.ModStates.Add(new FlagType(typeof(ChestModGenState)));
                 chestChanceZoneStep.HouseStepSpawns.Add(new ChestStep<ListMapGenContext>(true, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
-                for (int ii = 0; ii < 18; ii++)
-                    chestChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, 30), 4);//gummis
-                for (int ii = 0; ii < 8; ii++)
-                    chestChanceZoneStep.Items.Add(new MapItem(210 + ii), new IntRange(0, 30), 4);//apricorns
-                chestChanceZoneStep.Items.Add(new MapItem(209), new IntRange(0, 30), 10);//big apricorn
-                chestChanceZoneStep.Items.Add(new MapItem(164), new IntRange(0, 30), 80);//elixir
-                chestChanceZoneStep.Items.Add(new MapItem(166), new IntRange(0, 30), 20);//max elixir
-                chestChanceZoneStep.Items.Add(new MapItem(160), new IntRange(0, 30), 20);//potion
-                chestChanceZoneStep.Items.Add(new MapItem(161), new IntRange(0, 30), 20);//max potion
-                chestChanceZoneStep.Items.Add(new MapItem(173), new IntRange(0, 30), 20);//full heal
-                for (int ii = 175; ii <= 181; ii++)
-                    chestChanceZoneStep.Items.Add(new MapItem(ii), new IntRange(0, 30), 15);//X-Items
-                for (int ii = 587; ii < 700; ii++)
-                    chestChanceZoneStep.Items.Add(new MapItem(ii), new IntRange(0, 30), 2);//TMs
-                chestChanceZoneStep.Items.Add(new MapItem(477), new IntRange(0, 30), 20);//nugget
-                chestChanceZoneStep.Items.Add(new MapItem(480, 3), new IntRange(0, 30), 5);//pearl
-                chestChanceZoneStep.Items.Add(new MapItem(481, 3), new IntRange(0, 30), 10);//heart scale
-                chestChanceZoneStep.Items.Add(new MapItem(158, 1), new IntRange(0, 30), 200);//amber tear
-                chestChanceZoneStep.Items.Add(new MapItem(206, 3), new IntRange(0, 30), 20);//rare fossil
-                chestChanceZoneStep.Items.Add(new MapItem(101), new IntRange(0, 30), 20);//reviver seed
-                chestChanceZoneStep.Items.Add(new MapItem(102), new IntRange(0, 30), 20);//joy seed
-                chestChanceZoneStep.Items.Add(new MapItem(103), new IntRange(0, 30), 20);//golden seed
-                chestChanceZoneStep.Items.Add(new MapItem(450), new IntRange(0, 30), 10);//link box
-                chestChanceZoneStep.Items.Add(new MapItem(451), new IntRange(0, 30), 10);//assembly box
-                chestChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, 30), 10);//ability capsule
-                chestChanceZoneStep.Items.Add(new MapItem(349), new IntRange(0, 30), 10);//harmony scarf
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemThemeNone(50, new RandRange(4, 7))), new IntRange(0, 30), 30);
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemThemeRange(new IntRange(101), true, true, new RandRange(3, 5))), new IntRange(0, 30), 10);//reviver seed
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemThemeRange(new IntRange(102), true, true, new RandRange(2, 5))), new IntRange(0, 30), 10);//joy seed
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemThemeRange(new IntRange(103), true, true, new RandRange(1))), new IntRange(0, 30), 10);//golden seed
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemThemeRange(new IntRange(349), true, true, new RandRange(1))), new IntRange(20, 30), 20);//Harmony Scarf
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemThemeRange(new IntRange(158, 182), true, true, new RandRange(3, 6))), new IntRange(0, 30), 20);//manmade items
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemThemeRange(new IntRange(300, 349), true, true, new RandRange(3, 6))), new IntRange(0, 30), 20);//equip
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemThemeRange(new IntRange(380, 398), true, true, new RandRange(3, 6))), new IntRange(0, 30), 10);//plates
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 6))), new IntRange(0, 30), 20);//TMs
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(4, 9))), new IntRange(0, 30), 10);//gummis
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(2, 5)), new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(3, 7))), new IntRange(0, 30), 10);//apricorns
+                foreach (string key in IterateGummis())
+                    chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 4);//gummis
+                foreach (string key in IterateApricorns())
+                    chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 4);//apricorns
+                chestChanceZoneStep.Items.Add(new MapItem("apricorn_big"), new IntRange(0, 30), 10);//big apricorn
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, 30), 80);//elixir
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_max_elixir"), new IntRange(0, 30), 20);//max elixir
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, 30), 20);//potion
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, 30), 20);//max potion
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, 30), 20);//full heal
+                foreach (string key in IterateXItems())
+                    chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 15);//X-Items
+                foreach (string key in IterateTMs())
+                    chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
+                chestChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 20);//nugget
+                chestChanceZoneStep.Items.Add(new MapItem("loot_pearl", 3), new IntRange(0, 30), 5);//pearl
+                chestChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 3), new IntRange(0, 30), 10);//heart scale
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, 30), 200);//amber tear
+                chestChanceZoneStep.Items.Add(new MapItem("ammo_rare_fossil", 3), new IntRange(0, 30), 20);//rare fossil
+                chestChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, 30), 20);//reviver seed
+                chestChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, 30), 20);//joy seed
+                chestChanceZoneStep.Items.Add(new MapItem("seed_golden"), new IntRange(0, 30), 20);//golden seed
+                chestChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
+                chestChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, 30), 10);//assembly box
+                chestChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 10);//ability capsule
+                chestChanceZoneStep.Items.Add(new MapItem("evo_harmony_scarf"), new IntRange(0, 30), 10);//harmony scarf
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeNone(50, new RandRange(4, 7))), new IntRange(0, 30), 30);
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 5), "seed_reviver")), new IntRange(0, 30), 10);//reviver seed
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 5), "seed_joy")), new IntRange(0, 30), 10);//joy seed
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(1), "seed_golden")), new IntRange(0, 30), 10);//golden seed
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(1), "evo_harmony_scarf")), new IntRange(20, 30), 20);//Harmony Scarf
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 6), new IntRange(158, 182))), new IntRange(0, 30), 20);//manmade items
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 6), new IntRange(300, 349))), new IntRange(0, 30), 20);//equip
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 6), new IntRange(380, 398))), new IntRange(0, 30), 10);//plates
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 6))), new IntRange(0, 30), 20);//TMs
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(4, 9))), new IntRange(0, 30), 10);//gummis
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(3, 7))), new IntRange(0, 30), 10);//apricorns
 
                 for (int ii = 0; ii < dexMap.Length; ii++)
                     chestChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, 30), 10);//all monsters in the game
@@ -1496,23 +1508,23 @@ namespace DataGenerator.Data
 
                 //items for the vault
                 {
-                    vaultChanceZoneStep.Items.Add(new MapItem(164), new IntRange(0, 30), 800);//elixir
-                    vaultChanceZoneStep.Items.Add(new MapItem(166), new IntRange(0, 30), 100);//max elixir
-                    vaultChanceZoneStep.Items.Add(new MapItem(160), new IntRange(0, 30), 200);//potion
-                    vaultChanceZoneStep.Items.Add(new MapItem(161), new IntRange(0, 30), 100);//max potion
-                    vaultChanceZoneStep.Items.Add(new MapItem(173), new IntRange(0, 30), 200);//full heal
-                    for (int ii = 175; ii <= 181; ii++)
-                        vaultChanceZoneStep.Items.Add(new MapItem(ii), new IntRange(0, 30), 50);//X-Items
-                    for (int ii = 0; ii < 18; ii++)
-                        vaultChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, 30), 200);//gummis
-                    vaultChanceZoneStep.Items.Add(new MapItem(158, 1), new IntRange(0, 30), 2000);//amber tear
-                    vaultChanceZoneStep.Items.Add(new MapItem(101), new IntRange(0, 30), 200);//reviver seed
-                    vaultChanceZoneStep.Items.Add(new MapItem(102), new IntRange(0, 30), 200);//joy seed
-                    vaultChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, 30), 200);//ability capsule
-                    vaultChanceZoneStep.Items.Add(new MapItem(349), new IntRange(0, 30), 100);//harmony scarf
-                    vaultChanceZoneStep.Items.Add(new MapItem(285), new IntRange(15, 30), 50);//itemizer orb
-                    vaultChanceZoneStep.Items.Add(new MapItem(235, 3), new IntRange(15, 30), 50);//transfer wand
-                    vaultChanceZoneStep.Items.Add(new MapItem(455, 1), new IntRange(0, 30), 1000);//key
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, 30), 800);//elixir
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_max_elixir"), new IntRange(0, 30), 100);//max elixir
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, 30), 200);//potion
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, 30), 100);//max potion
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, 30), 200);//full heal
+                    foreach (string key in IterateXItems())
+                        vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 50);//X-Items
+                    foreach (string key in IterateGummis())
+                        vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 200);//gummis
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, 30), 2000);//amber tear
+                    vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, 30), 200);//reviver seed
+                    vaultChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, 30), 200);//joy seed
+                    vaultChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 200);//ability capsule
+                    vaultChanceZoneStep.Items.Add(new MapItem("evo_harmony_scarf"), new IntRange(0, 30), 100);//harmony scarf
+                    vaultChanceZoneStep.Items.Add(new MapItem("orb_itemizer"), new IntRange(15, 30), 50);//itemizer orb
+                    vaultChanceZoneStep.Items.Add(new MapItem("wand_transfer", 3), new IntRange(15, 30), 50);//transfer wand
+                    vaultChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 1000);//key
                 }
 
                 // item spawnings for the vault
@@ -1526,7 +1538,6 @@ namespace DataGenerator.Data
                     treasures.Add(MapItem.CreateMoney(200));
                     treasures.Add(MapItem.CreateMoney(200));
                     treasures.Add(MapItem.CreateMoney(200));
-                    treasures.Add(new MapItem(152));
                     PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
 
@@ -1538,12 +1549,12 @@ namespace DataGenerator.Data
                         for (int ss = 0; ss < 18; ss++)
                             silks.Add(new MapItem(700 + 4 * ss), 10);
 
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
 
                     //445      ***    Heavy Box - 2* items
                     {
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(445, new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_heavy", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
                     }
 
                     ////446      ***    Nifty Box - all high tier TMs, ability capsule, heart scale 9, max potion, full heal, max elixir
@@ -1552,46 +1563,46 @@ namespace DataGenerator.Data
 
                     //    for (int nn = 588; nn < 700; nn++)
                     //        boxTreasure.Add(new MapItem(nn), 1);//TMs
-                    //    boxTreasure.Add(new MapItem(453), 100);//ability capsule
-                    //    boxTreasure.Add(new MapItem(481), 100);//heart scale
-                    //    boxTreasure.Add(new MapItem(160), 60);//potion
-                    //    boxTreasure.Add(new MapItem(161), 30);//max potion
-                    //    boxTreasure.Add(new MapItem(173), 100);//full heal
-                    //    boxTreasure.Add(new MapItem(164), 60);//elixir
-                    //    boxTreasure.Add(new MapItem(166), 30);//max elixir
-                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>(446, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
+                    //    boxTreasure.Add(new MapItem("machine_ability_capsule"), 100);//ability capsule
+                    //    boxTreasure.Add(new MapItem("loot_heart_scale"), 100);//heart scale
+                    //    boxTreasure.Add(new MapItem("medicine_potion"), 60);//potion
+                    //    boxTreasure.Add(new MapItem("medicine_max_potion"), 30);//max potion
+                    //    boxTreasure.Add(new MapItem("medicine_full_heal"), 100);//full heal
+                    //    boxTreasure.Add(new MapItem("medicine_elixir"), 60);//elixir
+                    //    boxTreasure.Add(new MapItem("medicine_max_elixir"), 30);//max elixir
+                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_nifty", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
                     //}
 
                     //447      ***    Dainty Box - Stat ups, wonder gummi, nectar, golden apple, golden banana
                     {
                         SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
 
-                        for (int nn = 0; nn < 18; nn++)//Gummi
-                            boxTreasure.Add(new MapItem(76 + nn), 1);
+                        foreach (string key in IterateGummis())
+                            boxTreasure.Add(new MapItem(key), 1);
 
-                        boxTreasure.Add(new MapItem(151), 2);//protein
-                        boxTreasure.Add(new MapItem(152), 2);//iron
-                        boxTreasure.Add(new MapItem(153), 2);//calcium
-                        boxTreasure.Add(new MapItem(154), 2);//zinc
-                        boxTreasure.Add(new MapItem(155), 2);//carbos
-                        boxTreasure.Add(new MapItem(156), 2);//hp up
-                        boxTreasure.Add(new MapItem(150), 2);//nectar
+                        boxTreasure.Add(new MapItem("boost_protein"), 2);//protein
+                        boxTreasure.Add(new MapItem("boost_iron"), 2);//iron
+                        boxTreasure.Add(new MapItem("boost_calcium"), 2);//calcium
+                        boxTreasure.Add(new MapItem("boost_zinc"), 2);//zinc
+                        boxTreasure.Add(new MapItem("boost_carbos"), 2);//carbos
+                        boxTreasure.Add(new MapItem("boost_hp_up"), 2);//hp up
+                        boxTreasure.Add(new MapItem("boost_nectar"), 2);//nectar
 
-                        boxTreasure.Add(new MapItem(5), 10);//perfect apple
-                        boxTreasure.Add(new MapItem(7), 10);//big banana
-                        boxTreasure.Add(new MapItem(75), 4);//wonder gummi
-                        boxTreasure.Add(new MapItem(102), 10);//joy seed
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(447, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 3);
+                        boxTreasure.Add(new MapItem("food_apple_perfect"), 10);//perfect apple
+                        boxTreasure.Add(new MapItem("food_banana_big"), 10);//big banana
+                        boxTreasure.Add(new MapItem("gummi_wonder"), 4);//wonder gummi
+                        boxTreasure.Add(new MapItem("seed_joy"), 10);//joy seed
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_dainty", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 3);
                     }
 
                     //448    Glittery Box - golden apple, amber tear, golden banana, nugget, golden thorn 9
                     {
                         SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
-                        boxTreasure.Add(new MapItem(205), 10);//golden thorn
-                        boxTreasure.Add(new MapItem(158), 10);//Amber Tear
-                        boxTreasure.Add(new MapItem(477), 10);//nugget
-                        boxTreasure.Add(new MapItem(103), 10);//golden seed
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(448, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);
+                        boxTreasure.Add(new MapItem("ammo_golden_thorn"), 10);//golden thorn
+                        boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
+                        boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
+                        boxTreasure.Add(new MapItem("seed_golden"), 10);//golden seed
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_glittery", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);
                     }
 
                     //449      ***    Deluxe Box - Legendary exclusive items, harmony scarf, golden items, stat ups, wonder gummi, perfect apricorn, max potion/full heal/max elixir
@@ -1601,7 +1612,7 @@ namespace DataGenerator.Data
                     //    legendSpawner.Species.Add(145);
                     //    legendSpawner.Species.Add(146);
                     //    legendSpawner.Species.Add(150);
-                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>(449, legendSpawner), 5);
+                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_deluxe", legendSpawner), 5);
                     //}
                     //{
                     //    SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
@@ -1609,18 +1620,18 @@ namespace DataGenerator.Data
                     //    for (int nn = 0; nn < 18; nn++)//Gummi
                     //        boxTreasure.Add(new MapItem(76 + nn), 1);
 
-                    //    boxTreasure.Add(new MapItem(4), 10);//golden apple
-                    //    boxTreasure.Add(new MapItem(8), 10);//gold banana
-                    //    boxTreasure.Add(new MapItem(158), 10);//Amber Tear
-                    //    boxTreasure.Add(new MapItem(477), 10);//nugget
-                    //    boxTreasure.Add(new MapItem(103), 10);//golden seed
-                    //    boxTreasure.Add(new MapItem(161), 30);//max potion
-                    //    boxTreasure.Add(new MapItem(173), 100);//full heal
-                    //    boxTreasure.Add(new MapItem(166), 30);//max elixir
-                    //    boxTreasure.Add(new MapItem(75), 4);//wonder gummi
-                    //    boxTreasure.Add(new MapItem(349), 1);//harmony scarf
-                    //    boxTreasure.Add(new MapItem(219), 1);//perfect apricorn
-                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>(449, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
+                    //    boxTreasure.Add(new MapItem("food_apple_golden"), 10);//golden apple
+                    //    boxTreasure.Add(new MapItem("food_banana_golden"), 10);//gold banana
+                    //    boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
+                    //    boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
+                    //    boxTreasure.Add(new MapItem("seed_golden"), 10);//golden seed
+                    //    boxTreasure.Add(new MapItem("medicine_max_potion"), 30);//max potion
+                    //    boxTreasure.Add(new MapItem("medicine_full_heal"), 100);//full heal
+                    //    boxTreasure.Add(new MapItem("medicine_max_elixir"), 30);//max elixir
+                    //    boxTreasure.Add(new MapItem("gummi_wonder"), 4);//wonder gummi
+                    //    boxTreasure.Add(new MapItem("evo_harmony_scarf"), 1);//harmony scarf
+                    //    boxTreasure.Add(new MapItem("apricorn_perfect"), 1);//perfect apricorn
+                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_deluxe", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
                     //}
 
                     MultiStepSpawner<ListMapGenContext, MapItem> boxPicker = new MultiStepSpawner<ListMapGenContext, MapItem>(new LoopedRand<IStepSpawner<ListMapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
@@ -1731,10 +1742,10 @@ namespace DataGenerator.Data
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob("vespiquen", "", "attack_order", "defend_order", "heal_order", "power_gem", -1, new Loc(4, 1)));
-                    mobSpawns.Add(GetBossMob("combee", "", "sweet_scent", "tailwind", "bug_bite", "endeavor", -1, new Loc(4, 2)));
-                    mobSpawns.Add(GetBossMob("combee", "", "sweet_scent", "tailwind", "bug_bite", "endeavor", -1, new Loc(1, 4)));
-                    mobSpawns.Add(GetBossMob("combee", "", "sweet_scent", "tailwind", "bug_bite", "endeavor", -1, new Loc(7, 4)));
+                    mobSpawns.Add(GetBossMob("vespiquen", "", "attack_order", "defend_order", "heal_order", "power_gem", "", new Loc(4, 1)));
+                    mobSpawns.Add(GetBossMob("combee", "", "sweet_scent", "tailwind", "bug_bite", "endeavor", "", new Loc(4, 2)));
+                    mobSpawns.Add(GetBossMob("combee", "", "sweet_scent", "tailwind", "bug_bite", "endeavor", "", new Loc(1, 4)));
+                    mobSpawns.Add(GetBossMob("combee", "", "sweet_scent", "tailwind", "bug_bite", "endeavor", "", new Loc(7, 4)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customWaterCross, new Loc(4, 4), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -1759,10 +1770,10 @@ namespace DataGenerator.Data
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob("camerupt", "solid_rock", "eruption", "earth_power", "lava_plume", "yawn", -1, new Loc(4, 2)));
-                    mobSpawns.Add(GetBossMob("houndoom", "flash_fire", "flamethrower", "roar", "foul_play", "inferno", -1, new Loc(2, 4)));
-                    mobSpawns.Add(GetBossMob("flareon", "flash_fire", "fire_spin", "flare_blitz", "quick_attack", "lava_plume", -1, new Loc(4, 6)));
-                    mobSpawns.Add(GetBossMob("arcanine", "flash_fire", "heat_wave", "snarl", "extreme_speed", "fire_blast", -1, new Loc(6, 4)));
+                    mobSpawns.Add(GetBossMob("camerupt", "solid_rock", "eruption", "earth_power", "lava_plume", "yawn", "", new Loc(4, 2)));
+                    mobSpawns.Add(GetBossMob("houndoom", "flash_fire", "flamethrower", "roar", "foul_play", "inferno", "", new Loc(2, 4)));
+                    mobSpawns.Add(GetBossMob("flareon", "flash_fire", "fire_spin", "flare_blitz", "quick_attack", "lava_plume", "", new Loc(4, 6)));
+                    mobSpawns.Add(GetBossMob("arcanine", "flash_fire", "heat_wave", "snarl", "extreme_speed", "fire_blast", "", new Loc(6, 4)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customLavaLake, new Loc(4, 4), mobSpawns, true), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -1787,10 +1798,10 @@ namespace DataGenerator.Data
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob("tyranitar", "", "stone_edge", "crunch", "screech", "taunt", -1, new Loc(3, 1)));
-                    mobSpawns.Add(GetBossMob("steelix", "", "stealth_rock", "iron_tail", "dig", "bind", -1, new Loc(7, 1)));
-                    mobSpawns.Add(GetBossMob("sudowoodo", "", "hammer_arm", "counter", "block", "wood_hammer", -1, new Loc(2, 3)));
-                    mobSpawns.Add(GetBossMob("donphan", "", "heavy_slam", "bulldoze", "knock_off", "rollout", -1, new Loc(8, 3)));
+                    mobSpawns.Add(GetBossMob("tyranitar", "", "stone_edge", "crunch", "screech", "taunt", "", new Loc(3, 1)));
+                    mobSpawns.Add(GetBossMob("steelix", "", "stealth_rock", "iron_tail", "dig", "bind", "", new Loc(7, 1)));
+                    mobSpawns.Add(GetBossMob("sudowoodo", "", "hammer_arm", "counter", "block", "wood_hammer", "", new Loc(2, 3)));
+                    mobSpawns.Add(GetBossMob("donphan", "", "heavy_slam", "bulldoze", "knock_off", "rollout", "", new Loc(8, 3)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customJigsaw, new Loc(5, 3), mobSpawns, true), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -1813,10 +1824,10 @@ namespace DataGenerator.Data
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob("dragonite", "", "hyper_beam", "dragon_tail", "outrage", "roost", -1, new Loc(0, 0)));
-                    mobSpawns.Add(GetBossMob("gyarados", "", "earthquake", "waterfall", "dragon_dance", "ice_fang", -1, new Loc(6, 0)));
-                    mobSpawns.Add(GetBossMob("aerodactyl", "", "stealth_rock", "agility", "rock_slide", "wide_guard", -1, new Loc(0, 6)));
-                    mobSpawns.Add(GetBossMob("charizard", "", "fire_pledge", "dragon_rage", "air_cutter", "heat_wave", -1, new Loc(6, 6)));
+                    mobSpawns.Add(GetBossMob("dragonite", "", "hyper_beam", "dragon_tail", "outrage", "roost", "", new Loc(0, 0)));
+                    mobSpawns.Add(GetBossMob("gyarados", "", "earthquake", "waterfall", "dragon_dance", "ice_fang", "", new Loc(6, 0)));
+                    mobSpawns.Add(GetBossMob("aerodactyl", "", "stealth_rock", "agility", "rock_slide", "wide_guard", "", new Loc(0, 6)));
+                    mobSpawns.Add(GetBossMob("charizard", "", "fire_pledge", "dragon_rage", "air_cutter", "heat_wave", "", new Loc(6, 6)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customSkyChex, new Loc(3, 3), mobSpawns, true), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -1840,10 +1851,10 @@ namespace DataGenerator.Data
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob("salamence", "", "draco_meteor", "endure", "dragon_rage", "flamethrower", -1, new Loc(4, 3)));
-                    mobSpawns.Add(GetBossMob("feraligatr", "", "superpower", "aqua_tail", "ice_fang", "crunch", -1, new Loc(2, 3)));
-                    mobSpawns.Add(GetBossMob("gallade", "", "close_combat", "leaf_blade", "psycho_cut", "feint", -1, new Loc(6, 3)));
-                    mobSpawns.Add(GetBossMob("honchkrow", "", "haze", "roost", "quash", "dark_pulse", -1, new Loc(4, 1)));
+                    mobSpawns.Add(GetBossMob("salamence", "", "draco_meteor", "endure", "dragon_rage", "flamethrower", "", new Loc(4, 3)));
+                    mobSpawns.Add(GetBossMob("feraligatr", "", "superpower", "aqua_tail", "ice_fang", "crunch", "", new Loc(2, 3)));
+                    mobSpawns.Add(GetBossMob("gallade", "", "close_combat", "leaf_blade", "psycho_cut", "feint", "", new Loc(6, 3)));
+                    mobSpawns.Add(GetBossMob("honchkrow", "", "haze", "roost", "quash", "dark_pulse", "", new Loc(4, 1)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customPillarHalls, new Loc(4, 5), mobSpawns, true), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -1867,10 +1878,10 @@ namespace DataGenerator.Data
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob("lunatone", "", "magic_room", "psychic", "cosmic_power", "moonblast", -1, new Loc(2, 2)));
-                    mobSpawns.Add(GetBossMob("solrock", "", "heal_block", "morning_sun", "cosmic_power", "solar_beam", -1, new Loc(6, 2)));
-                    mobSpawns.Add(GetBossMob("claydol", "", "imprison", "power_split", "explosion", "extrasensory", -1, new Loc(2, 6)));
-                    mobSpawns.Add(GetBossMob("bronzong", "", "safeguard", "metal_sound", "future_sight", "flash_cannon", -1, new Loc(6, 6)));
+                    mobSpawns.Add(GetBossMob("lunatone", "", "magic_room", "psychic", "cosmic_power", "moonblast", "", new Loc(2, 2)));
+                    mobSpawns.Add(GetBossMob("solrock", "", "heal_block", "morning_sun", "cosmic_power", "solar_beam", "", new Loc(6, 2)));
+                    mobSpawns.Add(GetBossMob("claydol", "", "imprison", "power_split", "explosion", "extrasensory", "", new Loc(2, 6)));
+                    mobSpawns.Add(GetBossMob("bronzong", "", "safeguard", "metal_sound", "future_sight", "flash_cannon", "", new Loc(6, 6)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customSkyDiamond, new Loc(4, 4), mobSpawns, true), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -1892,10 +1903,10 @@ namespace DataGenerator.Data
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", -1, new Loc(4, 1)));
-                    mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", -1, new Loc(4, 7)));
-                    mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", -1, new Loc(1, 4)));
-                    mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", -1, new Loc(7, 4)));
+                    mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(4, 1)));
+                    mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(4, 7)));
+                    mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(1, 4)));
+                    mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(7, 4)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customPillarCross, new Loc(4, 4), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -1919,10 +1930,10 @@ namespace DataGenerator.Data
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob("clefable", "magic_guard", "follow_me", "minimize", "dream_eater", "metronome", -1, new Loc(4, 3)));
-                    mobSpawns.Add(GetBossMob("clefairy", "friend_guard", "moonlight", "cosmic_power", "lucky_chant", "stored_power", -1, new Loc(4, 2)));
-                    mobSpawns.Add(GetBossMob("jigglypuff", "friend_guard", "sing", "disable", "captivate", "round", -1, new Loc(3, 3)));
-                    mobSpawns.Add(GetBossMob("happiny", "friend_guard", "charm", "refresh", "sweet_kiss", "substitute", -1, new Loc(5, 3)));
+                    mobSpawns.Add(GetBossMob("clefable", "magic_guard", "follow_me", "minimize", "dream_eater", "metronome", "", new Loc(4, 3)));
+                    mobSpawns.Add(GetBossMob("clefairy", "friend_guard", "moonlight", "cosmic_power", "lucky_chant", "stored_power", "", new Loc(4, 2)));
+                    mobSpawns.Add(GetBossMob("jigglypuff", "friend_guard", "sing", "disable", "captivate", "round", "", new Loc(3, 3)));
+                    mobSpawns.Add(GetBossMob("happiny", "friend_guard", "charm", "refresh", "sweet_kiss", "substitute", "", new Loc(5, 3)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customSideWalls, new Loc(4, 4), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -1944,10 +1955,10 @@ namespace DataGenerator.Data
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob("vaporeon", "", "muddy_water", "aqua_ring", "aurora_beam", "helping_hand", -1, new Loc(4, 1)));
-                    mobSpawns.Add(GetBossMob("jolteon", "", "thunderbolt", "agility", "signal_beam", "stored_power", -1, new Loc(3, 1)));
-                    mobSpawns.Add(GetBossMob("flareon", "", "flare_blitz", "will_o_wisp", "smog", "helping_hand", -1, new Loc(5, 1)));
-                    mobSpawns.Add(GetBossMob("sylveon", "", "moonblast", "safeguard", "shadow_ball", "stored_power", -1, new Loc(4, 0)));
+                    mobSpawns.Add(GetBossMob("vaporeon", "", "muddy_water", "aqua_ring", "aurora_beam", "helping_hand", "", new Loc(4, 1)));
+                    mobSpawns.Add(GetBossMob("jolteon", "", "thunderbolt", "agility", "signal_beam", "stored_power", "", new Loc(3, 1)));
+                    mobSpawns.Add(GetBossMob("flareon", "", "flare_blitz", "will_o_wisp", "smog", "helping_hand", "", new Loc(5, 1)));
+                    mobSpawns.Add(GetBossMob("sylveon", "", "moonblast", "safeguard", "shadow_ball", "stored_power", "", new Loc(4, 0)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customSemiCovered, new Loc(4, 3), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -1961,10 +1972,10 @@ namespace DataGenerator.Data
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob("espeon", "", "psyshock", "morning_sun", "dazzling_gleam", "stored_power", -1, new Loc(4, 1)));
-                    mobSpawns.Add(GetBossMob("leafeon", "", "leaf_blade", "grass_whistle", "x_scissor", "helping_hand", -1, new Loc(3, 1)));
-                    mobSpawns.Add(GetBossMob("glaceon", "", "frost_breath", "barrier", "water_pulse", "stored_power", -1, new Loc(5, 1)));
-                    mobSpawns.Add(GetBossMob("umbreon", "", "snarl", "moonlight", "shadow_ball", "helping_hand", -1, new Loc(4, 0)));
+                    mobSpawns.Add(GetBossMob("espeon", "", "psyshock", "morning_sun", "dazzling_gleam", "stored_power", "", new Loc(4, 1)));
+                    mobSpawns.Add(GetBossMob("leafeon", "", "leaf_blade", "grass_whistle", "x_scissor", "helping_hand", "", new Loc(3, 1)));
+                    mobSpawns.Add(GetBossMob("glaceon", "", "frost_breath", "barrier", "water_pulse", "stored_power", "", new Loc(5, 1)));
+                    mobSpawns.Add(GetBossMob("umbreon", "", "snarl", "moonlight", "shadow_ball", "helping_hand", "", new Loc(4, 0)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customSemiCovered, new Loc(4, 3), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -1985,10 +1996,10 @@ namespace DataGenerator.Data
                 {
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                    mobSpawns.Add(GetBossMob("jolteon", "volt_absorb", "discharge", "agility", "light_screen", "signal_beam", -1, new Loc(4, 1)));
-                    mobSpawns.Add(GetBossMob("pachirisu", "volt_absorb", "follow_me", "super_fang", "discharge", "ion_deluge", -1, new Loc(6, 1)));
-                    mobSpawns.Add(GetBossMob("raichu", "lightning_rod", "grass_knot", "thunderbolt", "focus_blast", "iron_tail", -1, new Loc(2, 3)));
-                    mobSpawns.Add(GetBossMob("electrode", "aftermath", "discharge", "eerie_impulse", "sonic_boom", "charge", -1, new Loc(8, 3)));
+                    mobSpawns.Add(GetBossMob("jolteon", "volt_absorb", "discharge", "agility", "light_screen", "signal_beam", "", new Loc(4, 1)));
+                    mobSpawns.Add(GetBossMob("pachirisu", "volt_absorb", "follow_me", "super_fang", "discharge", "ion_deluge", "", new Loc(6, 1)));
+                    mobSpawns.Add(GetBossMob("raichu", "lightning_rod", "grass_knot", "thunderbolt", "focus_blast", "iron_tail", "", new Loc(2, 3)));
+                    mobSpawns.Add(GetBossMob("electrode", "aftermath", "discharge", "eerie_impulse", "sonic_boom", "charge", "", new Loc(8, 3)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customTwoPillars, new Loc(5, 3), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
 
@@ -2019,71 +2030,71 @@ namespace DataGenerator.Data
 
                 //items for the vault
                 {
-                    bossChanceZoneStep.Items.Add(new MapItem(164), new IntRange(0, 30), 800);//elixir
-                    bossChanceZoneStep.Items.Add(new MapItem(166), new IntRange(0, 30), 100);//max elixir
-                    bossChanceZoneStep.Items.Add(new MapItem(160), new IntRange(0, 30), 200);//potion
-                    bossChanceZoneStep.Items.Add(new MapItem(161), new IntRange(0, 30), 100);//max potion
-                    bossChanceZoneStep.Items.Add(new MapItem(173), new IntRange(0, 30), 200);//full heal
-                    for (int ii = 175; ii <= 181; ii++)
-                        bossChanceZoneStep.Items.Add(new MapItem(ii), new IntRange(0, 30), 50);//X-Items
-                    for (int ii = 0; ii < 18; ii++)
-                        bossChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, 30), 200);//gummis
-                    bossChanceZoneStep.Items.Add(new MapItem(158, 1), new IntRange(0, 30), 200);//amber tear
-                    bossChanceZoneStep.Items.Add(new MapItem(101), new IntRange(0, 30), 200);//reviver seed
-                    bossChanceZoneStep.Items.Add(new MapItem(102), new IntRange(0, 30), 200);//joy seed
-                    bossChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, 30), 200);//ability capsule
-                    bossChanceZoneStep.Items.Add(new MapItem(349), new IntRange(0, 30), 100);//harmony scarf
-                    bossChanceZoneStep.Items.Add(new MapItem(455, 1), new IntRange(0, 30), 1000);//key
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, 30), 800);//elixir
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_max_elixir"), new IntRange(0, 30), 100);//max elixir
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, 30), 200);//potion
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, 30), 100);//max potion
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, 30), 200);//full heal
+                    foreach (string key in IterateXItems())
+                        bossChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 50);//X-Items
+                    foreach (string key in IterateGummis())
+                        bossChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 200);//gummis
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, 30), 200);//amber tear
+                    bossChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, 30), 200);//reviver seed
+                    bossChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, 30), 200);//joy seed
+                    bossChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 200);//ability capsule
+                    bossChanceZoneStep.Items.Add(new MapItem("evo_harmony_scarf"), new IntRange(0, 30), 100);//harmony scarf
+                    bossChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 1000);//key
 
-                    bossChanceZoneStep.Items.Add(new MapItem(592), new IntRange(0, 30), 5);//TM Toxic
-                    bossChanceZoneStep.Items.Add(new MapItem(604), new IntRange(0, 30), 5);//TM Rock Climb
-                    bossChanceZoneStep.Items.Add(new MapItem(605), new IntRange(0, 30), 5);//TM Waterfall
-                    bossChanceZoneStep.Items.Add(new MapItem(609), new IntRange(0, 30), 5);//TM Charge Beam
-                    bossChanceZoneStep.Items.Add(new MapItem(613), new IntRange(0, 30), 5);//TM Hone Claws
-                    bossChanceZoneStep.Items.Add(new MapItem(615), new IntRange(0, 30), 5);//TM Giga Impact
-                    bossChanceZoneStep.Items.Add(new MapItem(617), new IntRange(0, 30), 5);//TM Dig
-                    bossChanceZoneStep.Items.Add(new MapItem(623), new IntRange(0, 30), 5);//TM Safeguard
-                    bossChanceZoneStep.Items.Add(new MapItem(626), new IntRange(0, 30), 5);//TM Work Up
-                    bossChanceZoneStep.Items.Add(new MapItem(627), new IntRange(0, 30), 5);//TM Scald
-                    bossChanceZoneStep.Items.Add(new MapItem(630), new IntRange(0, 30), 5);//TM U-turn
-                    bossChanceZoneStep.Items.Add(new MapItem(631), new IntRange(0, 30), 5);//TM Thunder Wave
-                    bossChanceZoneStep.Items.Add(new MapItem(645), new IntRange(0, 30), 5);//TM Roost
-                    bossChanceZoneStep.Items.Add(new MapItem(655), new IntRange(0, 30), 5);//TM Psyshock
-                    bossChanceZoneStep.Items.Add(new MapItem(660), new IntRange(0, 30), 5);//TM Thunder
-                    bossChanceZoneStep.Items.Add(new MapItem(661), new IntRange(0, 30), 5);//TM X-Scissor
-                    bossChanceZoneStep.Items.Add(new MapItem(682), new IntRange(0, 30), 5);//TM Taunt
-                    bossChanceZoneStep.Items.Add(new MapItem(684), new IntRange(0, 30), 5);//TM Ice Beam
-                    bossChanceZoneStep.Items.Add(new MapItem(686), new IntRange(0, 30), 5);//TM Light Screen
-                    bossChanceZoneStep.Items.Add(new MapItem(691), new IntRange(0, 30), 5);//TM Calm Mind
-                    bossChanceZoneStep.Items.Add(new MapItem(692), new IntRange(0, 30), 5);//TM Torment
-                    bossChanceZoneStep.Items.Add(new MapItem(693), new IntRange(0, 30), 5);//TM Strength
-                    bossChanceZoneStep.Items.Add(new MapItem(694), new IntRange(0, 30), 5);//TM Cut
-                    bossChanceZoneStep.Items.Add(new MapItem(695), new IntRange(0, 30), 5);//TM Rock Smash
-                    bossChanceZoneStep.Items.Add(new MapItem(696), new IntRange(0, 30), 5);//TM Bulk Up
-                    bossChanceZoneStep.Items.Add(new MapItem(698), new IntRange(0, 30), 5);//TM Rest
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_toxic"), new IntRange(0, 30), 5);//TM Toxic
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_climb"), new IntRange(0, 30), 5);//TM Rock Climb
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_waterfall"), new IntRange(0, 30), 5);//TM Waterfall
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_charge_beam"), new IntRange(0, 30), 5);//TM Charge Beam
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_hone_claws"), new IntRange(0, 30), 5);//TM Hone Claws
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_giga_impact"), new IntRange(0, 30), 5);//TM Giga Impact
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_dig"), new IntRange(0, 30), 5);//TM Dig
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_safeguard"), new IntRange(0, 30), 5);//TM Safeguard
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_work_up"), new IntRange(0, 30), 5);//TM Work Up
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_scald"), new IntRange(0, 30), 5);//TM Scald
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_u_turn"), new IntRange(0, 30), 5);//TM U-turn
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunder_wave"), new IntRange(0, 30), 5);//TM Thunder Wave
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_roost"), new IntRange(0, 30), 5);//TM Roost
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_psyshock"), new IntRange(0, 30), 5);//TM Psyshock
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunder"), new IntRange(0, 30), 5);//TM Thunder
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_x_scissor"), new IntRange(0, 30), 5);//TM X-Scissor
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_taunt"), new IntRange(0, 30), 5);//TM Taunt
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_ice_beam"), new IntRange(0, 30), 5);//TM Ice Beam
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_light_screen"), new IntRange(0, 30), 5);//TM Light Screen
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_calm_mind"), new IntRange(0, 30), 5);//TM Calm Mind
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_torment"), new IntRange(0, 30), 5);//TM Torment
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_strength"), new IntRange(0, 30), 5);//TM Strength
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_cut"), new IntRange(0, 30), 5);//TM Cut
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_smash"), new IntRange(0, 30), 5);//TM Rock Smash
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_bulk_up"), new IntRange(0, 30), 5);//TM Bulk Up
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_rest"), new IntRange(0, 30), 5);//TM Rest
 
-                    bossChanceZoneStep.Items.Add(new MapItem(591), new IntRange(0, 30), 5);//TM Psychic
-                    bossChanceZoneStep.Items.Add(new MapItem(595), new IntRange(0, 30), 5);//TM Flamethrower
-                    bossChanceZoneStep.Items.Add(new MapItem(599), new IntRange(0, 30), 5);//TM Hyper Beam
-                    bossChanceZoneStep.Items.Add(new MapItem(611), new IntRange(0, 30), 5);//TM Blizzard
-                    bossChanceZoneStep.Items.Add(new MapItem(619), new IntRange(0, 30), 5);//TM Rock Slide
-                    bossChanceZoneStep.Items.Add(new MapItem(620), new IntRange(0, 30), 5);//TM Sludge Wave
-                    bossChanceZoneStep.Items.Add(new MapItem(624), new IntRange(0, 30), 5);//TM Swords Dance
-                    bossChanceZoneStep.Items.Add(new MapItem(628), new IntRange(0, 30), 5);//TM Energy Ball
-                    bossChanceZoneStep.Items.Add(new MapItem(635), new IntRange(0, 30), 5);//TM Fire Blast
-                    bossChanceZoneStep.Items.Add(new MapItem(640), new IntRange(0, 30), 5);//TM Thunderbolt
-                    bossChanceZoneStep.Items.Add(new MapItem(641), new IntRange(0, 30), 5);//TM Shadow Ball
-                    bossChanceZoneStep.Items.Add(new MapItem(649), new IntRange(0, 30), 5);//TM Dark Pulse
-                    bossChanceZoneStep.Items.Add(new MapItem(654), new IntRange(0, 30), 5);//TM Earthquake
-                    bossChanceZoneStep.Items.Add(new MapItem(658), new IntRange(0, 30), 5);//TM Frost Breath
-                    bossChanceZoneStep.Items.Add(new MapItem(662), new IntRange(0, 30), 5);//TM Dazzling Gleam
-                    bossChanceZoneStep.Items.Add(new MapItem(666), new IntRange(0, 30), 5);//TM Snarl
-                    bossChanceZoneStep.Items.Add(new MapItem(669), new IntRange(0, 30), 5);//TM Focus Blast
-                    bossChanceZoneStep.Items.Add(new MapItem(672), new IntRange(0, 30), 5);//TM Overheat
-                    bossChanceZoneStep.Items.Add(new MapItem(676), new IntRange(0, 30), 5);//TM Sludge Bomb
-                    bossChanceZoneStep.Items.Add(new MapItem(683), new IntRange(0, 30), 5);//TM Solar Beam
-                    bossChanceZoneStep.Items.Add(new MapItem(685), new IntRange(0, 30), 5);//TM Flash Cannon
-                    bossChanceZoneStep.Items.Add(new MapItem(697), new IntRange(0, 30), 5);//TM Surf
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_psychic"), new IntRange(0, 30), 5);//TM Psychic
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_flamethrower"), new IntRange(0, 30), 5);//TM Flamethrower
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_hyper_beam"), new IntRange(0, 30), 5);//TM Hyper Beam
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_blizzard"), new IntRange(0, 30), 5);//TM Blizzard
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_slide"), new IntRange(0, 30), 5);//TM Rock Slide
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_sludge_wave"), new IntRange(0, 30), 5);//TM Sludge Wave
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_swords_dance"), new IntRange(0, 30), 5);//TM Swords Dance
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_energy_ball"), new IntRange(0, 30), 5);//TM Energy Ball
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_fire_blast"), new IntRange(0, 30), 5);//TM Fire Blast
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunderbolt"), new IntRange(0, 30), 5);//TM Thunderbolt
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_shadow_ball"), new IntRange(0, 30), 5);//TM Shadow Ball
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_dark_pulse"), new IntRange(0, 30), 5);//TM Dark Pulse
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_earthquake"), new IntRange(0, 30), 5);//TM Earthquake
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_frost_breath"), new IntRange(0, 30), 5);//TM Frost Breath
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_dazzling_gleam"), new IntRange(0, 30), 5);//TM Dazzling Gleam
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_snarl"), new IntRange(0, 30), 5);//TM Snarl
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_focus_blast"), new IntRange(0, 30), 5);//TM Focus Blast
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_overheat"), new IntRange(0, 30), 5);//TM Overheat
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_sludge_bomb"), new IntRange(0, 30), 5);//TM Sludge Bomb
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_recycle"), new IntRange(0, 30), 5);//TM Solar Beam
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_flash_cannon"), new IntRange(0, 30), 5);//TM Flash Cannon
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_surf"), new IntRange(0, 30), 5);//TM Surf
 
                 }
 
@@ -2098,7 +2109,7 @@ namespace DataGenerator.Data
                     treasures.Add(MapItem.CreateMoney(200));
                     treasures.Add(MapItem.CreateMoney(200));
                     treasures.Add(MapItem.CreateMoney(200));
-                    treasures.Add(new MapItem(477));
+                    treasures.Add(new MapItem("loot_nugget"));
                     PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
                     SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
@@ -2109,12 +2120,12 @@ namespace DataGenerator.Data
                         for (int ss = 0; ss < 18; ss++)
                             silks.Add(new MapItem(700 + 4 * ss), 10);
 
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
 
                     //445      ***    Heavy Box - 2* items
                     {
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(445, new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_heavy", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
                     }
 
                     ////446      ***    Nifty Box - all high tier TMs, ability capsule, heart scale 9, max potion, full heal, max elixir
@@ -2123,46 +2134,46 @@ namespace DataGenerator.Data
 
                     //    for (int nn = 588; nn < 700; nn++)
                     //        boxTreasure.Add(new MapItem(nn), 1);//TMs
-                    //    boxTreasure.Add(new MapItem(453), 100);//ability capsule
-                    //    boxTreasure.Add(new MapItem(481), 100);//heart scale
-                    //    boxTreasure.Add(new MapItem(160), 60);//potion
-                    //    boxTreasure.Add(new MapItem(161), 30);//max potion
-                    //    boxTreasure.Add(new MapItem(173), 100);//full heal
-                    //    boxTreasure.Add(new MapItem(164), 60);//elixir
-                    //    boxTreasure.Add(new MapItem(166), 30);//max elixir
-                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>(446, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
+                    //    boxTreasure.Add(new MapItem("machine_ability_capsule"), 100);//ability capsule
+                    //    boxTreasure.Add(new MapItem("loot_heart_scale"), 100);//heart scale
+                    //    boxTreasure.Add(new MapItem("medicine_potion"), 60);//potion
+                    //    boxTreasure.Add(new MapItem("medicine_max_potion"), 30);//max potion
+                    //    boxTreasure.Add(new MapItem("medicine_full_heal"), 100);//full heal
+                    //    boxTreasure.Add(new MapItem("medicine_elixir"), 60);//elixir
+                    //    boxTreasure.Add(new MapItem("medicine_max_elixir"), 30);//max elixir
+                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_nifty", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
                     //}
 
                     //447      ***    Dainty Box - Stat ups, wonder gummi, nectar, golden apple, golden banana
                     {
                         SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
 
-                        for (int nn = 0; nn < 18; nn++)//Gummi
-                            boxTreasure.Add(new MapItem(76 + nn), 1);
+                        foreach (string key in IterateGummis())
+                            boxTreasure.Add(new MapItem(key), 1);
 
-                        boxTreasure.Add(new MapItem(151), 2);//protein
-                        boxTreasure.Add(new MapItem(152), 2);//iron
-                        boxTreasure.Add(new MapItem(153), 2);//calcium
-                        boxTreasure.Add(new MapItem(154), 2);//zinc
-                        boxTreasure.Add(new MapItem(155), 2);//carbos
-                        boxTreasure.Add(new MapItem(156), 2);//hp up
-                        boxTreasure.Add(new MapItem(150), 2);//nectar
+                        boxTreasure.Add(new MapItem("boost_protein"), 2);//protein
+                        boxTreasure.Add(new MapItem("boost_iron"), 2);//iron
+                        boxTreasure.Add(new MapItem("boost_calcium"), 2);//calcium
+                        boxTreasure.Add(new MapItem("boost_zinc"), 2);//zinc
+                        boxTreasure.Add(new MapItem("boost_carbos"), 2);//carbos
+                        boxTreasure.Add(new MapItem("boost_hp_up"), 2);//hp up
+                        boxTreasure.Add(new MapItem("boost_nectar"), 2);//nectar
 
-                        boxTreasure.Add(new MapItem(5), 10);//perfect apple
-                        boxTreasure.Add(new MapItem(7), 10);//big banana
-                        boxTreasure.Add(new MapItem(75), 4);//wonder gummi
-                        boxTreasure.Add(new MapItem(102), 10);//joy seed
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(447, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 3);
+                        boxTreasure.Add(new MapItem("food_apple_perfect"), 10);//perfect apple
+                        boxTreasure.Add(new MapItem("food_banana_big"), 10);//big banana
+                        boxTreasure.Add(new MapItem("gummi_wonder"), 4);//wonder gummi
+                        boxTreasure.Add(new MapItem("seed_joy"), 10);//joy seed
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_dainty", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 3);
                     }
 
                     //448    Glittery Box - golden apple, amber tear, golden banana, nugget, golden thorn 9
                     {
                         SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
-                        boxTreasure.Add(new MapItem(205), 10);//golden thorn
-                        boxTreasure.Add(new MapItem(158), 10);//Amber Tear
-                        boxTreasure.Add(new MapItem(477), 10);//nugget
-                        boxTreasure.Add(new MapItem(103), 10);//golden seed
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(448, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);
+                        boxTreasure.Add(new MapItem("ammo_golden_thorn"), 10);//golden thorn
+                        boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
+                        boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
+                        boxTreasure.Add(new MapItem("seed_golden"), 10);//golden seed
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_glittery", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);
                     }
 
                     //449      ***    Deluxe Box - Legendary exclusive items, harmony scarf, golden items, stat ups, wonder gummi, perfect apricorn, max potion/full heal/max elixir
@@ -2172,7 +2183,7 @@ namespace DataGenerator.Data
                     //    legendSpawner.Species.Add(145);
                     //    legendSpawner.Species.Add(146);
                     //    legendSpawner.Species.Add(150);
-                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>(449, legendSpawner), 5);
+                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_deluxe", legendSpawner), 5);
                     //}
                     //{
                     //    SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
@@ -2180,18 +2191,18 @@ namespace DataGenerator.Data
                     //    for (int nn = 0; nn < 18; nn++)//Gummi
                     //        boxTreasure.Add(new MapItem(76 + nn), 1);
 
-                    //    boxTreasure.Add(new MapItem(4), 10);//golden apple
-                    //    boxTreasure.Add(new MapItem(8), 10);//gold banana
-                    //    boxTreasure.Add(new MapItem(158), 10);//Amber Tear
-                    //    boxTreasure.Add(new MapItem(477), 10);//nugget
-                    //    boxTreasure.Add(new MapItem(103), 10);//golden seed
-                    //    boxTreasure.Add(new MapItem(161), 30);//max potion
-                    //    boxTreasure.Add(new MapItem(173), 100);//full heal
-                    //    boxTreasure.Add(new MapItem(166), 30);//max elixir
-                    //    boxTreasure.Add(new MapItem(75), 4);//wonder gummi
-                    //    boxTreasure.Add(new MapItem(349), 1);//harmony scarf
-                    //    boxTreasure.Add(new MapItem(219), 1);//perfect apricorn
-                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>(449, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
+                    //    boxTreasure.Add(new MapItem("food_apple_golden"), 10);//golden apple
+                    //    boxTreasure.Add(new MapItem("food_banana_golden"), 10);//gold banana
+                    //    boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
+                    //    boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
+                    //    boxTreasure.Add(new MapItem("seed_golden"), 10);//golden seed
+                    //    boxTreasure.Add(new MapItem("medicine_max_potion"), 30);//max potion
+                    //    boxTreasure.Add(new MapItem("medicine_full_heal"), 100);//full heal
+                    //    boxTreasure.Add(new MapItem("medicine_max_elixir"), 30);//max elixir
+                    //    boxTreasure.Add(new MapItem("gummi_wonder"), 4);//wonder gummi
+                    //    boxTreasure.Add(new MapItem("evo_harmony_scarf"), 1);//harmony scarf
+                    //    boxTreasure.Add(new MapItem("apricorn_perfect"), 1);//perfect apricorn
+                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_deluxe", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
                     //}
 
                     MultiStepSpawner<ListMapGenContext, MapItem> boxPicker = new MultiStepSpawner<ListMapGenContext, MapItem>(new LoopedRand<IStepSpawner<ListMapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
@@ -2218,48 +2229,51 @@ namespace DataGenerator.Data
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 0;
                 shop.SecurityStatus = "shop_security";
-                shop.Items.Add(new MapItem(10, 0, 100), 20);//oran
-                shop.Items.Add(new MapItem(11, 0, 150), 20);//leppa
-                shop.Items.Add(new MapItem(12, 0, 100), 20);//lum
-                shop.Items.Add(new MapItem(72, 0, 100), 20);//sitrus
-                shop.Items.Add(new MapItem(101, 0, 800), 15);//reviver
-                shop.Items.Add(new MapItem(118, 0, 500), 15);//ban
-                for (int nn = 211; nn <= 218; nn++)
-                    shop.Items.Add(new MapItem(nn, 0, 600), 2);//apricorns
-                shop.Items.Add(new MapItem(210, 0, 800), 5);//plain apricorn
-                for (int nn = 0; nn < 7; nn++)
-                    shop.Items.Add(new MapItem(43 + nn, 0, 600), 3);//pinch berries
-                for (int nn = 0; nn <= 18; nn++)
-                    shop.Items.Add(new MapItem(19 + nn, 0, 100), 1);//type berries
-                shop.Items.Add(new MapItem(112, 0, 350), 20);//blast seed
-                shop.Items.Add(new MapItem(102, 0, 2000), 5);//joy seed
+                shop.Items.Add(new MapItem("berry_oran", 0, 100), 20);//oran
+                shop.Items.Add(new MapItem("berry_leppa", 0, 150), 20);//leppa
+                shop.Items.Add(new MapItem("berry_lum", 0, 100), 20);//lum
+                shop.Items.Add(new MapItem("berry_sitrus", 0, 100), 20);//sitrus
+                shop.Items.Add(new MapItem("seed_reviver", 0, 800), 15);//reviver
+                shop.Items.Add(new MapItem("seed_ban", 0, 500), 15);//ban
+                foreach (string key in IterateApricorns())
+                    shop.Items.Add(new MapItem(key, 0, 600), 2);//apricorns
+                shop.Items.Add(new MapItem("apricorn_plain", 0, 800), 5);//plain apricorn
+                foreach (string key in IteratePinchBerries())
+                    shop.Items.Add(new MapItem(key, 0, 600), 3);//pinch berries
+                foreach (string key in IterateTypeBerries())
+                    shop.Items.Add(new MapItem(key, 0, 100), 1);//type berries
+                shop.Items.Add(new MapItem("seed_blast", 0, 350), 20);//blast seed
+                shop.Items.Add(new MapItem("seed_joy", 0, 2000), 5);//joy seed
 
-                shop.Items.Add(new MapItem(351, 0, 2500), 10);//Fire Stone
-                shop.Items.Add(new MapItem(352, 0, 2500), 10);//Thunder Stone
-                shop.Items.Add(new MapItem(353, 0, 2500), 10);//Water Stone
-                shop.Items.Add(new MapItem(355, 0, 3500), 10);//Moon Stone
-                shop.Items.Add(new MapItem(363, 0, 3500), 10);//Dusk Stone
-                shop.Items.Add(new MapItem(364, 0, 2500), 10);//Dawn Stone
-                shop.Items.Add(new MapItem(362, 0, 3500), 10);//Shiny Stone
-                shop.Items.Add(new MapItem(354, 0, 2500), 10);//Leaf Stone
-                shop.Items.Add(new MapItem(379, 0, 2500), 10);//Ice Stone
+                shop.Items.Add(new MapItem("evo_fire_stone", 0, 2500), 10);//Fire Stone
+                shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2500), 10);//Thunder Stone
+                shop.Items.Add(new MapItem("evo_water_stone", 0, 2500), 10);//Water Stone
+                shop.Items.Add(new MapItem("evo_moon_stone", 0, 3500), 10);//Moon Stone
+                shop.Items.Add(new MapItem("evo_dusk_stone", 0, 3500), 10);//Dusk Stone
+                shop.Items.Add(new MapItem("evo_dawn_stone", 0, 2500), 10);//Dawn Stone
+                shop.Items.Add(new MapItem("evo_shiny_stone", 0, 3500), 10);//Shiny Stone
+                shop.Items.Add(new MapItem("evo_leaf_stone", 0, 2500), 10);//Leaf Stone
+                shop.Items.Add(new MapItem("evo_ice_stone", 0, 2500), 10);//Ice Stone
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
-                shop.ItemThemes.Add(new ItemThemeRange(new IntRange(351, 380), false, true, new RandRange(3, 5)), 10);//evo items
+                List<string> heldRange = new List<string>();
+                foreach (string heldItem in IterateEvoItems())
+                    heldRange.Add(heldItem);
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), heldRange.ToArray()), 10);//evo items
 
                 // 213 Shuckle : 126 Contrary : 380 Gastro Acid : 230 Sweet Scent : 450 Bug Bite : 92 Toxic
-                shop.StartMob = GetShopMob("shuckle", "contrary", "gastro_acid", "sweet_scent", "bug_bite", "toxic", new int[] { 1569, 1570, 1571, 1572 }, 0);
+                shop.StartMob = GetShopMob("shuckle", "contrary", "gastro_acid", "sweet_scent", "bug_bite", "toxic", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, 0);
                 {
                     // 213 Shuckle : 126 Contrary : 380 Gastro Acid : 230 Sweet Scent : 450 Bug Bite : 92 Toxic
-                    shop.Mobs.Add(GetShopMob("shuckle", "contrary", "gastro_acid", "sweet_scent", "bug_bite", "toxic", new int[] { 1569, 1570, 1571, 1572 }, -1), 5);
+                    shop.Mobs.Add(GetShopMob("shuckle", "contrary", "gastro_acid", "sweet_scent", "bug_bite", "toxic", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1), 5);
                     // 213 Shuckle : 126 Contrary : 564 Sticky Web : 611 Infestation : 189 Mud-Slap : 522 Struggle Bug
-                    shop.Mobs.Add(GetShopMob("shuckle", "contrary", "sticky_web", "infestation", "mud_slap", "struggle_bug", new int[] { 1569, 1570, 1571, 1572 }, -1), 5);
+                    shop.Mobs.Add(GetShopMob("shuckle", "contrary", "sticky_web", "infestation", "mud_slap", "struggle_bug", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1), 5);
                     // 213 Shuckle : 126 Contrary : 201 Sandstorm : 564 Sticky Web : 446 Stealth Rock : 88 Rock Throw
-                    shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "sandstorm", "sticky_web", "stealth_rock", "rock_throw", new int[] { 1569, 1570, 1571, 1572 }, -1, "shuckle"), 10);
+                    shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "sandstorm", "sticky_web", "stealth_rock", "rock_throw", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1, "shuckle"), 10);
                     // 213 Shuckle : 5 Sturdy : 379 Power Trick : 504 Shell Smash : 205 Rollout : 360 Gyro Ball
-                    shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "power_trick", "shell_smash", "rollout", "gyro_ball", new int[] { 1569, 1570, 1571, 1572 }, -1, "shuckle"), 10);
+                    shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "power_trick", "shell_smash", "rollout", "gyro_ball", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1, "shuckle"), 10);
                     // 213 Shuckle : 5 Sturdy : 379 Power Trick : 450 Bug Bite : 444 Stone Edge : 523 Bulldoze
-                    shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "power_trick", "bug_bite", "stone_edge", "bulldoze", new int[] { 1569, 1570, 1571, 1572 }, -1, "shuckle"), 5);
+                    shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "power_trick", "bug_bite", "stone_edge", "bulldoze", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1, "shuckle"), 5);
                 }
 
                 shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(2, 25), 10);
@@ -2268,64 +2282,64 @@ namespace DataGenerator.Data
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 0;
                 shop.SecurityStatus = "shop_security";
-                shop.Items.Add(new MapItem(10, 0, 100), 20);//oran
-                shop.Items.Add(new MapItem(11, 0, 150), 20);//leppa
-                shop.Items.Add(new MapItem(12, 0, 100), 20);//lum
-                shop.Items.Add(new MapItem(72, 0, 100), 20);//sitrus
-                shop.Items.Add(new MapItem(101, 0, 800), 15);//reviver
-                shop.Items.Add(new MapItem(118, 0, 500), 15);//ban
-                for (int nn = 211; nn <= 218; nn++)
-                    shop.Items.Add(new MapItem(nn, 0, 600), 2);//apricorns
-                shop.Items.Add(new MapItem(210, 0, 800), 5);//plain apricorn
-                for (int nn = 0; nn < 7; nn++)
-                    shop.Items.Add(new MapItem(43 + nn, 0, 600), 3);//pinch berries
-                for (int nn = 0; nn <= 18; nn++)
-                    shop.Items.Add(new MapItem(19 + nn, 0, 100), 1);//type berries
-                shop.Items.Add(new MapItem(112, 0, 350), 20);//blast seed
-                shop.Items.Add(new MapItem(102, 0, 2000), 5);//joy seed
+                shop.Items.Add(new MapItem("berry_oran", 0, 100), 20);//oran
+                shop.Items.Add(new MapItem("berry_leppa", 0, 150), 20);//leppa
+                shop.Items.Add(new MapItem("berry_lum", 0, 100), 20);//lum
+                shop.Items.Add(new MapItem("berry_sitrus", 0, 100), 20);//sitrus
+                shop.Items.Add(new MapItem("seed_reviver", 0, 800), 15);//reviver
+                shop.Items.Add(new MapItem("seed_ban", 0, 500), 15);//ban
+                foreach (string key in IterateApricorns())
+                    shop.Items.Add(new MapItem(key, 0, 600), 2);//apricorns
+                shop.Items.Add(new MapItem("apricorn_plain", 0, 800), 5);//plain apricorn
+                foreach (string key in IteratePinchBerries())
+                    shop.Items.Add(new MapItem(key, 0, 600), 3);//pinch berries
+                foreach (string key in IterateTypeBerries())
+                    shop.Items.Add(new MapItem(key, 0, 100), 1);//type berries
+                shop.Items.Add(new MapItem("seed_blast", 0, 350), 20);//blast seed
+                shop.Items.Add(new MapItem("seed_joy", 0, 2000), 5);//joy seed
 
 
-                shop.Items.Add(new MapItem(591, 0, 5000), 2);//TM Psychic
-                shop.Items.Add(new MapItem(595, 0, 5000), 2);//TM Flamethrower
-                shop.Items.Add(new MapItem(599, 0, 5000), 2);//TM Hyper Beam
-                shop.Items.Add(new MapItem(611, 0, 5000), 2);//TM Blizzard
-                shop.Items.Add(new MapItem(619, 0, 5000), 2);//TM Rock Slide
-                shop.Items.Add(new MapItem(620, 0, 5000), 2);//TM Sludge Wave
-                shop.Items.Add(new MapItem(624, 0, 4000), 2);//TM Swords Dance
-                shop.Items.Add(new MapItem(628, 0, 5000), 2);//TM Energy Ball
-                shop.Items.Add(new MapItem(635, 0, 5000), 2);//TM Fire Blast
-                shop.Items.Add(new MapItem(640, 0, 5000), 2);//TM Thunderbolt
-                shop.Items.Add(new MapItem(641, 0, 5000), 2);//TM Shadow Ball
-                shop.Items.Add(new MapItem(649, 0, 5000), 2);//TM Dark Pulse
-                shop.Items.Add(new MapItem(654, 0, 4000), 2);//TM Earthquake
-                shop.Items.Add(new MapItem(658, 0, 4000), 2);//TM Frost Breath
-                shop.Items.Add(new MapItem(662, 0, 5000), 2);//TM Dazzling Gleam
-                shop.Items.Add(new MapItem(666, 0, 4000), 2);//TM Snarl
-                shop.Items.Add(new MapItem(669, 0, 5000), 2);//TM Focus Blast
-                shop.Items.Add(new MapItem(672, 0, 5000), 2);//TM Overheat
-                shop.Items.Add(new MapItem(676, 0, 5000), 2);//TM Sludge Bomb
-                shop.Items.Add(new MapItem(683, 0, 5000), 2);//TM Solar Beam
-                shop.Items.Add(new MapItem(685, 0, 5000), 2);//TM Flash Cannon
-                shop.Items.Add(new MapItem(697, 0, 5000), 2);//TM Surf
+                shop.Items.Add(new MapItem("tm_psychic", 0, 5000), 2);//TM Psychic
+                shop.Items.Add(new MapItem("tm_flamethrower", 0, 5000), 2);//TM Flamethrower
+                shop.Items.Add(new MapItem("tm_hyper_beam", 0, 5000), 2);//TM Hyper Beam
+                shop.Items.Add(new MapItem("tm_blizzard", 0, 5000), 2);//TM Blizzard
+                shop.Items.Add(new MapItem("tm_rock_slide", 0, 5000), 2);//TM Rock Slide
+                shop.Items.Add(new MapItem("tm_sludge_wave", 0, 5000), 2);//TM Sludge Wave
+                shop.Items.Add(new MapItem("tm_swords_dance", 0, 4000), 2);//TM Swords Dance
+                shop.Items.Add(new MapItem("tm_energy_ball", 0, 5000), 2);//TM Energy Ball
+                shop.Items.Add(new MapItem("tm_fire_blast", 0, 5000), 2);//TM Fire Blast
+                shop.Items.Add(new MapItem("tm_thunderbolt", 0, 5000), 2);//TM Thunderbolt
+                shop.Items.Add(new MapItem("tm_shadow_ball", 0, 5000), 2);//TM Shadow Ball
+                shop.Items.Add(new MapItem("tm_dark_pulse", 0, 5000), 2);//TM Dark Pulse
+                shop.Items.Add(new MapItem("tm_earthquake", 0, 4000), 2);//TM Earthquake
+                shop.Items.Add(new MapItem("tm_frost_breath", 0, 4000), 2);//TM Frost Breath
+                shop.Items.Add(new MapItem("tm_dazzling_gleam", 0, 5000), 2);//TM Dazzling Gleam
+                shop.Items.Add(new MapItem("tm_snarl", 0, 4000), 2);//TM Snarl
+                shop.Items.Add(new MapItem("tm_focus_blast", 0, 5000), 2);//TM Focus Blast
+                shop.Items.Add(new MapItem("tm_overheat", 0, 5000), 2);//TM Overheat
+                shop.Items.Add(new MapItem("tm_sludge_bomb", 0, 5000), 2);//TM Sludge Bomb
+                shop.Items.Add(new MapItem("tm_recycle", 0, 5000), 2);//TM Solar Beam
+                shop.Items.Add(new MapItem("tm_flash_cannon", 0, 5000), 2);//TM Flash Cannon
+                shop.Items.Add(new MapItem("tm_surf", 0, 5000), 2);//TM Surf
 
-                for (int ii = 0; ii < 18; ii++)
-                    shop.Items.Add(new MapItem(331 + ii, 0, 2000), 5);//type items
+                foreach (string key in IterateTypeBoosters())
+                    shop.Items.Add(new MapItem(key, 0, 2000), 5);//type items
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
-                shop.ItemThemes.Add(new ItemThemeRange(new IntRange(331, 349), false, true, new RandRange(3, 5)), 10);//type items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(331, 349)), 10);//type items
                 shop.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 6)), 10);//TMs
 
                 // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
-                shop.StartMob = GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new int[] { 1984, 1985, 1988 }, 0);
+                shop.StartMob = GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, 0);
                 {
                     // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
-                    shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new int[] { 1984, 1985, 1988 }, -1), 10);
+                    shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1), 10);
                     // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 50 disable : 374 fling
-                    shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "disable", "fling", new int[] { 1984, 1985, 1988 }, -1), 10);
+                    shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "disable", "fling", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1), 10);
                     // 352 Kecleon : 168 protean : 425 shadow sneak : 246 ancient power : 510 incinerate : 168 thief
-                    shop.Mobs.Add(GetShopMob("kecleon", "protean", "shadow_sneak", "ancient_power", "incinerate", "thief", new int[] { 1984, 1985, 1988 }, -1, "shuckle"), 10);
+                    shop.Mobs.Add(GetShopMob("kecleon", "protean", "shadow_sneak", "ancient_power", "incinerate", "thief", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1, "shuckle"), 10);
                     // 352 Kecleon : 168 protean : 332 aerial ace : 421 shadow claw : 60 psybeam : 364 feint
-                    shop.Mobs.Add(GetShopMob("kecleon", "protean", "aerial_ace", "shadow_claw", "psybeam", "feint", new int[] { 1984, 1985, 1988 }, -1, "shuckle"), 10);
+                    shop.Mobs.Add(GetShopMob("kecleon", "protean", "aerial_ace", "shadow_claw", "psybeam", "feint", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1, "shuckle"), 10);
                 }
 
                 shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(25, 30), 10);
@@ -2334,69 +2348,67 @@ namespace DataGenerator.Data
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 1;
                 shop.SecurityStatus = "shop_security";
-                shop.Items.Add(new MapItem(251, 0, 300), 20);//weather orb
-                shop.Items.Add(new MapItem(252, 0, 600), 20);//mobile orb
-                shop.Items.Add(new MapItem(253, 0, 600), 20);//luminous orb
-                shop.Items.Add(new MapItem(256, 0, 400), 20);//fill-in orb
-                shop.Items.Add(new MapItem(258, 0, 300), 20);//all-aim orb
-                shop.Items.Add(new MapItem(263, 0, 300), 20);//cleanse orb
-                shop.Items.Add(new MapItem(264, 0, 600), 20);//one-shot orb
-                shop.Items.Add(new MapItem(265, 0, 500), 20);//endure orb
-                shop.Items.Add(new MapItem(266, 0, 400), 20);//pierce orb
-                shop.Items.Add(new MapItem(267, 0, 600), 20);//stayaway orb
-                shop.Items.Add(new MapItem(268, 0, 600), 20);//all protect orb
-                shop.Items.Add(new MapItem(269, 0, 300), 20);//trap-see orb
-                shop.Items.Add(new MapItem(270, 0, 300), 20);//trapbust orb
-                shop.Items.Add(new MapItem(271, 0, 500), 20);//slumber orb
-                shop.Items.Add(new MapItem(272, 0, 400), 20);//totter orb
-                shop.Items.Add(new MapItem(273, 0, 400), 20);//petrify orb
-                shop.Items.Add(new MapItem(274, 0, 400), 20);//freeze orb
-                shop.Items.Add(new MapItem(275, 0, 500), 20);//spurn orb
-                shop.Items.Add(new MapItem(276, 0, 500), 20);//foe-hold orb
-                shop.Items.Add(new MapItem(277, 0, 400), 20);//nullify orb
-                shop.Items.Add(new MapItem(278, 0, 300), 20);//all-dodge orb
-                shop.Items.Add(new MapItem(281, 0, 500), 20);//one-room orb
-                shop.Items.Add(new MapItem(282, 0, 400), 20);//slow orb
-                shop.Items.Add(new MapItem(283, 0, 400), 20);//rebound orb
-                shop.Items.Add(new MapItem(284, 0, 400), 20);//mirror orb
-                shop.Items.Add(new MapItem(286, 0, 400), 20);//foe-seal orb
-                shop.Items.Add(new MapItem(287, 0, 600), 20);//halving orb
-                shop.Items.Add(new MapItem(288, 0, 300), 20);//rollcall orb
-                shop.Items.Add(new MapItem(289, 0, 300), 20);//mug orb
+                shop.Items.Add(new MapItem("orb_weather", 0, 300), 20);//weather orb
+                shop.Items.Add(new MapItem("orb_mobile", 0, 600), 20);//mobile orb
+                shop.Items.Add(new MapItem("orb_luminous", 0, 600), 20);//luminous orb
+                shop.Items.Add(new MapItem("orb_fill_in", 0, 400), 20);//fill-in orb
+                shop.Items.Add(new MapItem("orb_all_aim", 0, 300), 20);//all-aim orb
+                shop.Items.Add(new MapItem("orb_cleanse", 0, 300), 20);//cleanse orb
+                shop.Items.Add(new MapItem("orb_one_shot", 0, 600), 20);//one-shot orb
+                shop.Items.Add(new MapItem("orb_endure", 0, 500), 20);//endure orb
+                shop.Items.Add(new MapItem("orb_pierce", 0, 400), 20);//pierce orb
+                shop.Items.Add(new MapItem("orb_stayaway", 0, 600), 20);//stayaway orb
+                shop.Items.Add(new MapItem("orb_all_protect", 0, 600), 20);//all protect orb
+                shop.Items.Add(new MapItem("orb_trap_see", 0, 300), 20);//trap-see orb
+                shop.Items.Add(new MapItem("orb_trapbust", 0, 300), 20);//trapbust orb
+                shop.Items.Add(new MapItem("orb_slumber", 0, 500), 20);//slumber orb
+                shop.Items.Add(new MapItem("orb_totter", 0, 400), 20);//totter orb
+                shop.Items.Add(new MapItem("orb_petrify", 0, 400), 20);//petrify orb
+                shop.Items.Add(new MapItem("orb_freeze", 0, 400), 20);//freeze orb
+                shop.Items.Add(new MapItem("orb_spurn", 0, 500), 20);//spurn orb
+                shop.Items.Add(new MapItem("orb_foe_hold", 0, 500), 20);//foe-hold orb
+                shop.Items.Add(new MapItem("orb_nullify", 0, 400), 20);//nullify orb
+                shop.Items.Add(new MapItem("orb_all_dodge", 0, 300), 20);//all-dodge orb
+                shop.Items.Add(new MapItem("orb_one_room", 0, 500), 20);//one-room orb
+                shop.Items.Add(new MapItem("orb_slow", 0, 400), 20);//slow orb
+                shop.Items.Add(new MapItem("orb_rebound", 0, 400), 20);//rebound orb
+                shop.Items.Add(new MapItem("orb_mirror", 0, 400), 20);//mirror orb
+                shop.Items.Add(new MapItem("orb_foe_seal", 0, 400), 20);//foe-seal orb
+                shop.Items.Add(new MapItem("orb_halving", 0, 600), 20);//halving orb
+                shop.Items.Add(new MapItem("orb_rollcall", 0, 300), 20);//rollcall orb
+                shop.Items.Add(new MapItem("orb_mug", 0, 300), 20);//mug orb
 
-                shop.Items.Add(new MapItem(220, 3, 180), 40);//path wand
-                shop.Items.Add(new MapItem(221, 3, 150), 40);//pounce wand
-                shop.Items.Add(new MapItem(222, 3, 150), 40);//whirlwind wand
-                shop.Items.Add(new MapItem(223, 3, 150), 40);//switcher wand
-                shop.Items.Add(new MapItem(225, 3, 120), 40);//lure wand
-                shop.Items.Add(new MapItem(228, 3, 150), 40);//slow wand
-                shop.Items.Add(new MapItem(231, 3, 150), 40);//topsy-turvy wand
-                shop.Items.Add(new MapItem(232, 3, 150), 40);//warp wand
-                shop.Items.Add(new MapItem(233, 3, 120), 40);//purge wand
-                shop.Items.Add(new MapItem(234, 3, 120), 40);//lob wand
+                shop.Items.Add(new MapItem("wand_path", 3, 180), 40);//path wand
+                shop.Items.Add(new MapItem("wand_pounce", 3, 150), 40);//pounce wand
+                shop.Items.Add(new MapItem("wand_whirlwind", 3, 150), 40);//whirlwind wand
+                shop.Items.Add(new MapItem("wand_switcher", 3, 150), 40);//switcher wand
+                shop.Items.Add(new MapItem("wand_lure", 3, 120), 40);//lure wand
+                shop.Items.Add(new MapItem("wand_fear", 3, 150), 40);//slow wand
+                shop.Items.Add(new MapItem("wand_topsy_turvy", 3, 150), 40);//topsy-turvy wand
+                shop.Items.Add(new MapItem("wand_warp", 3, 150), 40);//warp wand
+                shop.Items.Add(new MapItem("wand_purge", 3, 120), 40);//purge wand
+                shop.Items.Add(new MapItem("wand_lob", 3, 120), 40);//lob wand
 
-                shop.Items.Add(new MapItem(351, 0, 2500), 50);//Fire Stone
-                shop.Items.Add(new MapItem(352, 0, 2500), 50);//Thunder Stone
-                shop.Items.Add(new MapItem(353, 0, 2500), 50);//Water Stone
-                shop.Items.Add(new MapItem(355, 0, 3500), 50);//Moon Stone
-                shop.Items.Add(new MapItem(363, 0, 3500), 50);//Dusk Stone
-                shop.Items.Add(new MapItem(364, 0, 2500), 50);//Dawn Stone
-                shop.Items.Add(new MapItem(362, 0, 3500), 50);//Shiny Stone
-                shop.Items.Add(new MapItem(354, 0, 2500), 50);//Leaf Stone
-                shop.Items.Add(new MapItem(379, 0, 2500), 50);//Ice Stone
-                shop.Items.Add(new MapItem(377, 0, 3500), 50);//Sun Ribbon
-                shop.Items.Add(new MapItem(378, 0, 3500), 50);//Moon Ribbon
+                shop.Items.Add(new MapItem("evo_fire_stone", 0, 2500), 50);//Fire Stone
+                shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2500), 50);//Thunder Stone
+                shop.Items.Add(new MapItem("evo_water_stone", 0, 2500), 50);//Water Stone
+                shop.Items.Add(new MapItem("evo_moon_stone", 0, 3500), 50);//Moon Stone
+                shop.Items.Add(new MapItem("evo_dusk_stone", 0, 3500), 50);//Dusk Stone
+                shop.Items.Add(new MapItem("evo_dawn_stone", 0, 2500), 50);//Dawn Stone
+                shop.Items.Add(new MapItem("evo_shiny_stone", 0, 3500), 50);//Shiny Stone
+                shop.Items.Add(new MapItem("evo_leaf_stone", 0, 2500), 50);//Leaf Stone
+                shop.Items.Add(new MapItem("evo_ice_stone", 0, 2500), 50);//Ice Stone
+                shop.Items.Add(new MapItem("evo_sun_ribbon", 0, 3500), 50);//Sun Ribbon
+                shop.Items.Add(new MapItem("evo_lunar_ribbon", 0, 3500), 50);//Moon Ribbon
 
-                shop.Items.Add(new MapItem(347, 0, 3500), 40);//Metal Coat
-                for (int ii = 0; ii < 18; ii++)
-                {
-                    shop.Items.Add(new MapItem(331 + ii, 0, 2000), 10);//type items
-                }
+                shop.Items.Add(new MapItem("held_metal_coat", 0, 3500), 40);//Metal Coat
+                foreach (string key in IterateTypeBoosters())
+                    shop.Items.Add(new MapItem(key, 0, 2000), 10);//type items
 
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
-                shop.ItemThemes.Add(new ItemThemeRange(new IntRange(351, 380), false, true, new RandRange(3, 5)), 10);//evo items
-                shop.ItemThemes.Add(new ItemThemeRange(new IntRange(331, 349), false, true, new RandRange(3, 5)), 10);//type items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(351, 380)), 10);//evo items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(331, 349)), 10);//type items
 
                 // Cleffa : 98 Magic Guard : 118 Metronome : 47 Sing : 204 Charm : 313 Fake Tears
                 {
@@ -2416,11 +2428,11 @@ namespace DataGenerator.Data
                 }
                 {
                     // 35 Clefairy : 132 Friend Guard : 282 Knock Off : 107 Minimize : 236 Moonlight : 277 Magic Coat
-                    shop.Mobs.Add(GetShopMob("clefairy", "friend_guard", "knock_off", "minimize", "moonlight", "magic_coat", new int[] { 973, 976 }, -1), 10);
+                    shop.Mobs.Add(GetShopMob("clefairy", "friend_guard", "knock_off", "minimize", "moonlight", "magic_coat", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_03" }, -1), 10);
                     // 36 Clefable : 109 Unaware : 118 Metronome : 500 Stored Power : 343 Covet : 271 Trick
-                    shop.Mobs.Add(GetShopMob("clefable", "unaware", "metronome", "stored_power", "covet", "trick", new int[] { 973, 976 }, -1), 5);
+                    shop.Mobs.Add(GetShopMob("clefable", "unaware", "metronome", "stored_power", "covet", "trick", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_03" }, -1), 5);
                     // 36 Clefable : 98 Magic Guard : 118 Metronome : 213 Attract : 282 Knock Off : 266 Follow Me
-                    shop.Mobs.Add(GetShopMob("clefable", "magic_guard", "metronome", "attract", "knock_off", "follow_me", new int[] { 973, 976 }, -1), 5);
+                    shop.Mobs.Add(GetShopMob("clefable", "magic_guard", "metronome", "attract", "knock_off", "follow_me", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_03" }, -1), 5);
                 }
 
                 shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(15, 30), 10);
@@ -2533,9 +2545,9 @@ namespace DataGenerator.Data
 
                 List<MapItem> specificSpawns = new List<MapItem>();
                 if (ii == 0)
-                    specificSpawns.Add(new MapItem(210));//Plain Apricorn
+                    specificSpawns.Add(new MapItem("apricorn_plain"));//Plain Apricorn
                 if (ii == 29)
-                    specificSpawns.Add(new MapItem(101));//Reviver Seed
+                    specificSpawns.Add(new MapItem("seed_reviver"));//Reviver Seed
 
                 RandomRoomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(specificSpawns)));
                 specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
@@ -2548,25 +2560,25 @@ namespace DataGenerator.Data
                 // No valuable items, no chests, no distinct TMs.  maybe held items...
 
                 SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
-                wallSpawns.Add(new MapItem(481, 1), 50);//heart scale
-                wallSpawns.Add(new MapItem(204, 3), 20);//silver spike
-                wallSpawns.Add(new MapItem(206, 3), 20);//rare fossil
-                wallSpawns.Add(new MapItem(202, 2), 20);//corsola spike
-                wallSpawns.Add(new MapItem(37), 10);//jaboca berry
-                wallSpawns.Add(new MapItem(38), 10);//rowap berry
-                wallSpawns.Add(new MapItem(220, 1), 10);//path wand
-                wallSpawns.Add(new MapItem(228, 3), 10);//fear wand
-                wallSpawns.Add(new MapItem(223, 2), 10);//switcher wand
-                wallSpawns.Add(new MapItem(222, 2), 10);//whirlwind wand
+                wallSpawns.Add(new MapItem("loot_heart_scale", 1), 50);//heart scale
+                wallSpawns.Add(new MapItem("ammo_silver_spike", 3), 20);//silver spike
+                wallSpawns.Add(new MapItem("ammo_rare_fossil", 3), 20);//rare fossil
+                wallSpawns.Add(new MapItem("ammo_corsola_twig", 2), 20);//corsola spike
+                wallSpawns.Add(new MapItem("berry_jaboca"), 10);//jaboca berry
+                wallSpawns.Add(new MapItem("berry_rowap"), 10);//rowap berry
+                wallSpawns.Add(new MapItem("wand_path", 1), 10);//path wand
+                wallSpawns.Add(new MapItem("wand_fear", 3), 10);//fear wand
+                wallSpawns.Add(new MapItem("wand_switcher", 2), 10);//switcher wand
+                wallSpawns.Add(new MapItem("wand_whirlwind", 2), 10);//whirlwind wand
 
-                wallSpawns.Add(new MapItem(271), 10);//Slumber Orb
-                wallSpawns.Add(new MapItem(282), 10);//Slow
-                wallSpawns.Add(new MapItem(272), 10);//Totter
-                wallSpawns.Add(new MapItem(275), 10);//Spurn
-                wallSpawns.Add(new MapItem(267), 10);//Stayaway
-                wallSpawns.Add(new MapItem(266), 10);//Pierce
-                for (int nn = 0; nn < 18; nn++)//Type Plate
-                    wallSpawns.Add(new MapItem(380 + nn), 1);
+                wallSpawns.Add(new MapItem("orb_slumber"), 10);//Slumber Orb
+                wallSpawns.Add(new MapItem("orb_slow"), 10);//Slow
+                wallSpawns.Add(new MapItem("orb_totter"), 10);//Totter
+                wallSpawns.Add(new MapItem("orb_spurn"), 10);//Spurn
+                wallSpawns.Add(new MapItem("orb_stayaway"), 10);//Stayaway
+                wallSpawns.Add(new MapItem("orb_pierce"), 10);//Pierce
+                foreach (string key in IterateTypePlates())
+                    wallSpawns.Add(new MapItem(key), 1);
 
                 TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile("wall"));
                 wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
@@ -2576,7 +2588,7 @@ namespace DataGenerator.Data
                 {
                     //pearls in the water
                     SpawnList<MapItem> waterSpawns = new SpawnList<MapItem>();
-                    waterSpawns.Add(new MapItem(480, 1), 50);//pearl
+                    waterSpawns.Add(new MapItem("loot_pearl", 1), 50);//pearl
                     TerrainSpawnStep<MapGenContext, MapItem> waterItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile("water"));
                     waterItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(waterSpawns, new RandRange(0, 4)));
                     layout.GenSteps.Add(PR_SPAWN_ITEMS, waterItemZoneStep);
@@ -2604,17 +2616,17 @@ namespace DataGenerator.Data
                     {
                         //secret items
                         SpawnList<InvItem> secretItemSpawns = new SpawnList<InvItem>();
-                        secretItemSpawns.Add(new InvItem(406), 3);//Weather Rock
-                        secretItemSpawns.Add(new InvItem(405), 3);//Expert Belt
-                        secretItemSpawns.Add(new InvItem(320), 3);//Choice Scarf
-                        secretItemSpawns.Add(new InvItem(319), 3);//Choice Specs
-                        secretItemSpawns.Add(new InvItem(318), 3);//Choice Band
-                        secretItemSpawns.Add(new InvItem(321), 3);//Assault Vest
-                        secretItemSpawns.Add(new InvItem(322), 3);//Life Orb
-                        secretItemSpawns.Add(new InvItem(315), 3);//Heal Ribbon
-                        secretItemSpawns.Add(new InvItem(455, false, 1), 35);//Key
-                        for (int nn = 0; nn < 18; nn++)//Gummi
-                            secretItemSpawns.Add(new InvItem(76 + nn), 2);
+                        secretItemSpawns.Add(new InvItem("held_weather_rock"), 3);//Weather Rock
+                        secretItemSpawns.Add(new InvItem("held_expert_belt"), 3);//Expert Belt
+                        secretItemSpawns.Add(new InvItem("held_choice_scarf"), 3);//Choice Scarf
+                        secretItemSpawns.Add(new InvItem("held_choice_specs"), 3);//Choice Specs
+                        secretItemSpawns.Add(new InvItem("held_choice_band"), 3);//Choice Band
+                        secretItemSpawns.Add(new InvItem("held_assault_vest"), 3);//Assault Vest
+                        secretItemSpawns.Add(new InvItem("held_life_orb"), 3);//Life Orb
+                        secretItemSpawns.Add(new InvItem("held_heal_ribbon"), 3);//Heal Ribbon
+                        secretItemSpawns.Add(new InvItem("key", false, 1), 35);//Key
+                        foreach (string key in IterateGummis())
+                            secretItemSpawns.Add(new InvItem(key), 2);
 
                         RandomRoomSpawnStep<MapGenContext, InvItem> secretPlacement = new RandomRoomSpawnStep<MapGenContext, InvItem>(new PickerSpawner<MapGenContext, InvItem>(new LoopedRand<InvItem>(secretItemSpawns, new RandRange(1, 3))));
                         secretPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Disconnected));
@@ -2640,12 +2652,12 @@ namespace DataGenerator.Data
                             for (int ss = 0; ss < 18; ss++)
                                 silks.Add(new MapItem(700 + 4 * ss), 10);
 
-                            boxSpawn.Add(new BoxSpawner<MapGenContext>(444, new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
+                            boxSpawn.Add(new BoxSpawner<MapGenContext>("box_light", new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                         }
 
                         //445      ***    Heavy Box - 2* items
                         {
-                            boxSpawn.Add(new BoxSpawner<MapGenContext>(445, new SpeciesItemContextSpawner<MapGenContext>(new IntRange(2), new RandRange(1))), 10);
+                            boxSpawn.Add(new BoxSpawner<MapGenContext>("box_heavy", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(2), new RandRange(1))), 10);
                         }
 
                         MultiStepSpawner<MapGenContext, MapItem> boxPicker = new MultiStepSpawner<MapGenContext, MapItem>(new LoopedRand<IStepSpawner<MapGenContext, MapItem>>(boxSpawn, new RandRange(0, 2)));
@@ -2676,7 +2688,7 @@ namespace DataGenerator.Data
                     //always holds a key
                     MobSpawn mob = GetGenericMob("ralts", "", "teleport", "growl", "", "", new RandRange(10));
                     MobSpawnItem keySpawn = new MobSpawnItem(true);
-                    keySpawn.Items.Add(new InvItem(455, false, 1), 10);
+                    keySpawn.Items.Add(new InvItem("key", false, 1), 10);
                     mob.SpawnFeatures.Add(keySpawn);
 
                     SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
@@ -2710,7 +2722,7 @@ namespace DataGenerator.Data
                     //142 Aerodactyl : 17 Wing Attack : 246 Ancient Power : 48 Supersonic : 97 Agility
                     SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
                     MobSpawn mob = GetGenericMob("aerodactyl", "", "wing_attack", "ancient_power", "supersonic", "agility", new RandRange(48), "wander_smart");
-                    mob.SpawnFeatures.Add(new MobSpawnItem(true, 477));
+                    mob.SpawnFeatures.Add(new MobSpawnItem(true, "loot_nugget"));
                     specificTeam.Spawns.Add(mob);
 
                     LoopedTeamSpawner<MapGenContext> spawner = new LoopedTeamSpawner<MapGenContext>(specificTeam);
@@ -3114,309 +3126,309 @@ namespace DataGenerator.Data
             itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
 
-            necessities.Spawns.Add(new InvItem(0072), new IntRange(0, max_floors), 45);//Sitrus Berry
-            necessities.Spawns.Add(new InvItem(0011), new IntRange(0, 31), 70);//Leppa Berry
-            necessities.Spawns.Add(new InvItem(0001), new IntRange(0, 31), 15);//Apple
-            necessities.Spawns.Add(new InvItem(0012), new IntRange(0, max_floors), 50);//Lum Berry
-            necessities.Spawns.Add(new InvItem(0101), new IntRange(0, 27), 10);//Reviver Seed
+            necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(0, max_floors), 45);//Sitrus Berry
+            necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, 31), 70);//Leppa Berry
+            necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, 31), 15);//Apple
+            necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 50);//Lum Berry
+            necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, 27), 10);//Reviver Seed
                                                                                //special
             CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
             special.SpawnRates.SetRange(4, new IntRange(0, 27));
             itemSpawnZoneStep.Spawns.Add("special", special);
 
 
-            special.Spawns.Add(new InvItem(0450), new IntRange(0, 27), 25);//Link Box
-            special.Spawns.Add(new InvItem(0451), new IntRange(4, 27), 5);//Assembly Box
-            special.Spawns.Add(new InvItem(0455, false, 1), new IntRange(0, 24), 10);//Key
+            special.Spawns.Add(new InvItem("machine_recall_box"), new IntRange(0, 27), 25);//Link Box
+            special.Spawns.Add(new InvItem("machine_assembly_box"), new IntRange(4, 27), 5);//Assembly Box
+            special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, 24), 10);//Key
                                                                                      //snacks
             CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
             snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
 
-            snacks.Spawns.Add(new InvItem(0043), new IntRange(0, 27), 3);//Apicot Berry
-            snacks.Spawns.Add(new InvItem(0044), new IntRange(0, 27), 3);//Liechi Berry
-            snacks.Spawns.Add(new InvItem(0045), new IntRange(0, 27), 3);//Ganlon Berry
-            snacks.Spawns.Add(new InvItem(0046), new IntRange(0, 27), 3);//Salac Berry
-            snacks.Spawns.Add(new InvItem(0047), new IntRange(0, 27), 3);//Petaya Berry
-            snacks.Spawns.Add(new InvItem(0048), new IntRange(0, 27), 3);//Starf Berry
-            snacks.Spawns.Add(new InvItem(0049), new IntRange(0, 27), 3);//Micle Berry
-            snacks.Spawns.Add(new InvItem(0051), new IntRange(0, 27), 4);//Enigma Berry
-            snacks.Spawns.Add(new InvItem(0037), new IntRange(0, max_floors), 1);//Jaboca Berry
-            snacks.Spawns.Add(new InvItem(0038), new IntRange(0, max_floors), 1);//Rowap Berry
-            snacks.Spawns.Add(new InvItem(0019), new IntRange(0, 27), 1);//Tanga Berry
-            snacks.Spawns.Add(new InvItem(0020), new IntRange(0, 27), 1);//Colbur Berry
-            snacks.Spawns.Add(new InvItem(0021), new IntRange(0, 27), 1);//Haban Berry
-            snacks.Spawns.Add(new InvItem(0022), new IntRange(0, 27), 1);//Wacan Berry
-            snacks.Spawns.Add(new InvItem(0023), new IntRange(0, 27), 1);//Chople Berry
-            snacks.Spawns.Add(new InvItem(0024), new IntRange(0, 27), 1);//Occa Berry
-            snacks.Spawns.Add(new InvItem(0025), new IntRange(0, 27), 1);//Coba Berry
-            snacks.Spawns.Add(new InvItem(0026), new IntRange(0, 27), 1);//Kasib Berry
-            snacks.Spawns.Add(new InvItem(0027), new IntRange(0, 27), 1);//Rindo Berry
-            snacks.Spawns.Add(new InvItem(0028), new IntRange(0, 27), 1);//Shuca Berry
-            snacks.Spawns.Add(new InvItem(0029), new IntRange(0, 27), 1);//Yache Berry
-            snacks.Spawns.Add(new InvItem(0030), new IntRange(0, 27), 1);//Chilan Berry
-            snacks.Spawns.Add(new InvItem(0031), new IntRange(0, 27), 1);//Kebia Berry
-            snacks.Spawns.Add(new InvItem(0032), new IntRange(0, 27), 1);//Payapa Berry
-            snacks.Spawns.Add(new InvItem(0033), new IntRange(0, 27), 1);//Charti Berry
-            snacks.Spawns.Add(new InvItem(0034), new IntRange(0, 27), 1);//Babiri Berry
-            snacks.Spawns.Add(new InvItem(0035), new IntRange(0, 27), 1);//Passho Berry
-            snacks.Spawns.Add(new InvItem(0036), new IntRange(0, 27), 1);//Roseli Berry
-            snacks.Spawns.Add(new InvItem(0112), new IntRange(0, max_floors), 20);//Blast Seed
-            snacks.Spawns.Add(new InvItem(0108), new IntRange(0, max_floors), 10);//Warp Seed
-            snacks.Spawns.Add(new InvItem(0116), new IntRange(0, max_floors), 10);//Decoy Seed
-            snacks.Spawns.Add(new InvItem(0110), new IntRange(0, max_floors), 10);//Sleep Seed
-            snacks.Spawns.Add(new InvItem(0113), new IntRange(0, max_floors), 10);//Blinker Seed
-            snacks.Spawns.Add(new InvItem(0117), new IntRange(0, max_floors), 5);//Last-Chance Seed
-            snacks.Spawns.Add(new InvItem(0104), new IntRange(0, max_floors), 5);//Doom Seed
-            snacks.Spawns.Add(new InvItem(0118), new IntRange(0, max_floors), 10);//Ban Seed
-            snacks.Spawns.Add(new InvItem(0114, true), new IntRange(0, max_floors), 3);//Pure Seed
-            snacks.Spawns.Add(new InvItem(0114), new IntRange(0, max_floors), 3);//Pure Seed
-            snacks.Spawns.Add(new InvItem(0115), new IntRange(0, max_floors), 10);//Ice Seed
-            snacks.Spawns.Add(new InvItem(0111), new IntRange(0, max_floors), 10);//Vile Seed
-            snacks.Spawns.Add(new InvItem(0184), new IntRange(0, max_floors), 10);//Power Herb
-            snacks.Spawns.Add(new InvItem(0183), new IntRange(0, max_floors), 10);//Mental Herb
-            snacks.Spawns.Add(new InvItem(0185), new IntRange(0, max_floors), 50);//White Herb
+            snacks.Spawns.Add(new InvItem("berry_apicot"), new IntRange(0, 27), 3);//Apicot Berry
+            snacks.Spawns.Add(new InvItem("berry_liechi"), new IntRange(0, 27), 3);//Liechi Berry
+            snacks.Spawns.Add(new InvItem("berry_ganlon"), new IntRange(0, 27), 3);//Ganlon Berry
+            snacks.Spawns.Add(new InvItem("berry_salac"), new IntRange(0, 27), 3);//Salac Berry
+            snacks.Spawns.Add(new InvItem("berry_petaya"), new IntRange(0, 27), 3);//Petaya Berry
+            snacks.Spawns.Add(new InvItem("berry_starf"), new IntRange(0, 27), 3);//Starf Berry
+            snacks.Spawns.Add(new InvItem("berry_micle"), new IntRange(0, 27), 3);//Micle Berry
+            snacks.Spawns.Add(new InvItem("berry_enigma"), new IntRange(0, 27), 4);//Enigma Berry
+            snacks.Spawns.Add(new InvItem("berry_jaboca"), new IntRange(0, max_floors), 1);//Jaboca Berry
+            snacks.Spawns.Add(new InvItem("berry_rowap"), new IntRange(0, max_floors), 1);//Rowap Berry
+            snacks.Spawns.Add(new InvItem("berry_tanga"), new IntRange(0, 27), 1);//Tanga Berry
+            snacks.Spawns.Add(new InvItem("berry_colbur"), new IntRange(0, 27), 1);//Colbur Berry
+            snacks.Spawns.Add(new InvItem("berry_haban"), new IntRange(0, 27), 1);//Haban Berry
+            snacks.Spawns.Add(new InvItem("berry_wacan"), new IntRange(0, 27), 1);//Wacan Berry
+            snacks.Spawns.Add(new InvItem("berry_chople"), new IntRange(0, 27), 1);//Chople Berry
+            snacks.Spawns.Add(new InvItem("berry_occa"), new IntRange(0, 27), 1);//Occa Berry
+            snacks.Spawns.Add(new InvItem("berry_coba"), new IntRange(0, 27), 1);//Coba Berry
+            snacks.Spawns.Add(new InvItem("berry_kasib"), new IntRange(0, 27), 1);//Kasib Berry
+            snacks.Spawns.Add(new InvItem("berry_rindo"), new IntRange(0, 27), 1);//Rindo Berry
+            snacks.Spawns.Add(new InvItem("berry_shuca"), new IntRange(0, 27), 1);//Shuca Berry
+            snacks.Spawns.Add(new InvItem("berry_yache"), new IntRange(0, 27), 1);//Yache Berry
+            snacks.Spawns.Add(new InvItem("berry_chilan"), new IntRange(0, 27), 1);//Chilan Berry
+            snacks.Spawns.Add(new InvItem("berry_kebia"), new IntRange(0, 27), 1);//Kebia Berry
+            snacks.Spawns.Add(new InvItem("berry_payapa"), new IntRange(0, 27), 1);//Payapa Berry
+            snacks.Spawns.Add(new InvItem("berry_charti"), new IntRange(0, 27), 1);//Charti Berry
+            snacks.Spawns.Add(new InvItem("berry_babiri"), new IntRange(0, 27), 1);//Babiri Berry
+            snacks.Spawns.Add(new InvItem("berry_passho"), new IntRange(0, 27), 1);//Passho Berry
+            snacks.Spawns.Add(new InvItem("berry_roseli"), new IntRange(0, 27), 1);//Roseli Berry
+            snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 20);//Blast Seed
+            snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, max_floors), 10);//Warp Seed
+            snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, max_floors), 10);//Decoy Seed
+            snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, max_floors), 10);//Sleep Seed
+            snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, max_floors), 10);//Blinker Seed
+            snacks.Spawns.Add(new InvItem("seed_last_chance"), new IntRange(0, max_floors), 5);//Last-Chance Seed
+            snacks.Spawns.Add(new InvItem("seed_doom"), new IntRange(0, max_floors), 5);//Doom Seed
+            snacks.Spawns.Add(new InvItem("seed_ban"), new IntRange(0, max_floors), 10);//Ban Seed
+            snacks.Spawns.Add(new InvItem("seed_pure", true), new IntRange(0, max_floors), 3);//Pure Seed
+            snacks.Spawns.Add(new InvItem("seed_pure"), new IntRange(0, max_floors), 3);//Pure Seed
+            snacks.Spawns.Add(new InvItem("seed_ice"), new IntRange(0, max_floors), 10);//Ice Seed
+            snacks.Spawns.Add(new InvItem("seed_vile"), new IntRange(0, max_floors), 10);//Vile Seed
+            snacks.Spawns.Add(new InvItem("herb_power"), new IntRange(0, max_floors), 10);//Power Herb
+            snacks.Spawns.Add(new InvItem("herb_mental"), new IntRange(0, max_floors), 10);//Mental Herb
+            snacks.Spawns.Add(new InvItem("herb_white"), new IntRange(0, max_floors), 50);//White Herb
                                                                                   //boosters
             CategorySpawn<InvItem> boosters = new CategorySpawn<InvItem>();
             boosters.SpawnRates.SetRange(7, new IntRange(0, 27));
             itemSpawnZoneStep.Spawns.Add("boosters", boosters);
 
 
-            boosters.Spawns.Add(new InvItem(0151, true), new IntRange(0, max_floors), 4);//Protein
-            boosters.Spawns.Add(new InvItem(0151), new IntRange(0, max_floors), 6);//Protein
-            boosters.Spawns.Add(new InvItem(0152, true), new IntRange(0, max_floors), 4);//Iron
-            boosters.Spawns.Add(new InvItem(0152), new IntRange(0, max_floors), 6);//Iron
-            boosters.Spawns.Add(new InvItem(0153, true), new IntRange(0, max_floors), 4);//Calcium
-            boosters.Spawns.Add(new InvItem(0153), new IntRange(0, max_floors), 6);//Calcium
-            boosters.Spawns.Add(new InvItem(0154, true), new IntRange(0, max_floors), 4);//Zinc
-            boosters.Spawns.Add(new InvItem(0154), new IntRange(0, max_floors), 6);//Zinc
-            boosters.Spawns.Add(new InvItem(0155, true), new IntRange(0, max_floors), 4);//Carbos
-            boosters.Spawns.Add(new InvItem(0155), new IntRange(0, max_floors), 6);//Carbos
-            boosters.Spawns.Add(new InvItem(0156, true), new IntRange(0, max_floors), 4);//HP Up
-            boosters.Spawns.Add(new InvItem(0156), new IntRange(0, max_floors), 6);//HP Up
+            boosters.Spawns.Add(new InvItem("boost_protein", true), new IntRange(0, max_floors), 4);//Protein
+            boosters.Spawns.Add(new InvItem("boost_protein"), new IntRange(0, max_floors), 6);//Protein
+            boosters.Spawns.Add(new InvItem("boost_iron", true), new IntRange(0, max_floors), 4);//Iron
+            boosters.Spawns.Add(new InvItem("boost_iron"), new IntRange(0, max_floors), 6);//Iron
+            boosters.Spawns.Add(new InvItem("boost_calcium", true), new IntRange(0, max_floors), 4);//Calcium
+            boosters.Spawns.Add(new InvItem("boost_calcium"), new IntRange(0, max_floors), 6);//Calcium
+            boosters.Spawns.Add(new InvItem("boost_zinc", true), new IntRange(0, max_floors), 4);//Zinc
+            boosters.Spawns.Add(new InvItem("boost_zinc"), new IntRange(0, max_floors), 6);//Zinc
+            boosters.Spawns.Add(new InvItem("boost_carbos", true), new IntRange(0, max_floors), 4);//Carbos
+            boosters.Spawns.Add(new InvItem("boost_carbos"), new IntRange(0, max_floors), 6);//Carbos
+            boosters.Spawns.Add(new InvItem("boost_hp_up", true), new IntRange(0, max_floors), 4);//HP Up
+            boosters.Spawns.Add(new InvItem("boost_hp_up"), new IntRange(0, max_floors), 6);//HP Up
                                                                                    //throwable
             CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
             throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("throwable", throwable);
 
 
-            throwable.Spawns.Add(new InvItem(0200, false, 4), new IntRange(0, max_floors), 10);//Stick
-            throwable.Spawns.Add(new InvItem(0201, false, 3), new IntRange(0, max_floors), 10);//Cacnea Spike
-            throwable.Spawns.Add(new InvItem(0220, false, 2), new IntRange(0, max_floors), 10);//Path Wand
-            throwable.Spawns.Add(new InvItem(0228, false, 4), new IntRange(0, max_floors), 10);//Fear Wand
-            throwable.Spawns.Add(new InvItem(0223, false, 4), new IntRange(0, max_floors), 10);//Switcher Wand
-            throwable.Spawns.Add(new InvItem(0222, false, 4), new IntRange(0, max_floors), 10);//Whirlwind Wand
-            throwable.Spawns.Add(new InvItem(0225, false, 4), new IntRange(0, max_floors), 10);//Lure Wand
-            throwable.Spawns.Add(new InvItem(0226, false, 4), new IntRange(0, max_floors), 10);//Slow Wand
-            throwable.Spawns.Add(new InvItem(0221, false, 4), new IntRange(0, max_floors), 10);//Pounce Wand
-            throwable.Spawns.Add(new InvItem(0232, false, 2), new IntRange(0, max_floors), 10);//Warp Wand
-            throwable.Spawns.Add(new InvItem(0231, false, 3), new IntRange(0, max_floors), 10);//Topsy-Turvy Wand
-            throwable.Spawns.Add(new InvItem(0234, false, 4), new IntRange(0, max_floors), 10);//Lob Wand
-            throwable.Spawns.Add(new InvItem(0233, false, 4), new IntRange(0, max_floors), 10);//Purge Wand
-            throwable.Spawns.Add(new InvItem(0203, false, 3), new IntRange(0, max_floors), 10);//Iron Thorn
-            throwable.Spawns.Add(new InvItem(0204, false, 3), new IntRange(0, max_floors), 10);//Silver Spike
-            throwable.Spawns.Add(new InvItem(0208, false, 3), new IntRange(0, max_floors), 10);//Gravelerock
-            throwable.Spawns.Add(new InvItem(0202, false, 3), new IntRange(0, max_floors), 10);//Corsola Twig
-            throwable.Spawns.Add(new InvItem(0206, false, 3), new IntRange(0, max_floors), 10);//Rare Fossil
-            throwable.Spawns.Add(new InvItem(0207, false, 3), new IntRange(0, max_floors), 10);//Geo Pebble
+            throwable.Spawns.Add(new InvItem("ammo_stick", false, 4), new IntRange(0, max_floors), 10);//Stick
+            throwable.Spawns.Add(new InvItem("ammo_cacnea_spike", false, 3), new IntRange(0, max_floors), 10);//Cacnea Spike
+            throwable.Spawns.Add(new InvItem("wand_path", false, 2), new IntRange(0, max_floors), 10);//Path Wand
+            throwable.Spawns.Add(new InvItem("wand_fear", false, 4), new IntRange(0, max_floors), 10);//Fear Wand
+            throwable.Spawns.Add(new InvItem("wand_switcher", false, 4), new IntRange(0, max_floors), 10);//Switcher Wand
+            throwable.Spawns.Add(new InvItem("wand_whirlwind", false, 4), new IntRange(0, max_floors), 10);//Whirlwind Wand
+            throwable.Spawns.Add(new InvItem("wand_lure", false, 4), new IntRange(0, max_floors), 10);//Lure Wand
+            throwable.Spawns.Add(new InvItem("wand_slow", false, 4), new IntRange(0, max_floors), 10);//Slow Wand
+            throwable.Spawns.Add(new InvItem("wand_pounce", false, 4), new IntRange(0, max_floors), 10);//Pounce Wand
+            throwable.Spawns.Add(new InvItem("wand_warp", false, 2), new IntRange(0, max_floors), 10);//Warp Wand
+            throwable.Spawns.Add(new InvItem("wand_topsy_turvy", false, 3), new IntRange(0, max_floors), 10);//Topsy-Turvy Wand
+            throwable.Spawns.Add(new InvItem("wand_lob", false, 4), new IntRange(0, max_floors), 10);//Lob Wand
+            throwable.Spawns.Add(new InvItem("wand_purge", false, 4), new IntRange(0, max_floors), 10);//Purge Wand
+            throwable.Spawns.Add(new InvItem("ammo_iron_thorn", false, 3), new IntRange(0, max_floors), 10);//Iron Thorn
+            throwable.Spawns.Add(new InvItem("ammo_silver_spike", false, 3), new IntRange(0, max_floors), 10);//Silver Spike
+            throwable.Spawns.Add(new InvItem("ammo_gravelerock", false, 3), new IntRange(0, max_floors), 10);//Gravelerock
+            throwable.Spawns.Add(new InvItem("ammo_corsola_twig", false, 3), new IntRange(0, max_floors), 10);//Corsola Twig
+            throwable.Spawns.Add(new InvItem("ammo_rare_fossil", false, 3), new IntRange(0, max_floors), 10);//Rare Fossil
+            throwable.Spawns.Add(new InvItem("ammo_geo_pebble", false, 3), new IntRange(0, max_floors), 10);//Geo Pebble
                                                                                                //orbs
             CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
             orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("orbs", orbs);
 
 
-            orbs.Spawns.Add(new InvItem(0281, true), new IntRange(0, max_floors), 3);//One-Room Orb
-            orbs.Spawns.Add(new InvItem(0281), new IntRange(0, max_floors), 7);//One-Room Orb
-            orbs.Spawns.Add(new InvItem(0256, true), new IntRange(0, max_floors), 3);//Fill-In Orb
-            orbs.Spawns.Add(new InvItem(0256), new IntRange(0, max_floors), 7);//Fill-In Orb
-            orbs.Spawns.Add(new InvItem(0273, true), new IntRange(0, max_floors), 3);//Petrify Orb
-            orbs.Spawns.Add(new InvItem(0273), new IntRange(0, max_floors), 7);//Petrify Orb
-            orbs.Spawns.Add(new InvItem(0287, true), new IntRange(0, max_floors), 3);//Halving Orb
-            orbs.Spawns.Add(new InvItem(0287), new IntRange(0, max_floors), 7);//Halving Orb
-            orbs.Spawns.Add(new InvItem(0271, true), new IntRange(0, max_floors), 2);//Slumber Orb
-            orbs.Spawns.Add(new InvItem(0271), new IntRange(0, max_floors), 6);//Slumber Orb
-            orbs.Spawns.Add(new InvItem(0282, true), new IntRange(0, max_floors), 2);//Slow Orb
-            orbs.Spawns.Add(new InvItem(0282), new IntRange(0, max_floors), 6);//Slow Orb
-            orbs.Spawns.Add(new InvItem(0272, true), new IntRange(0, max_floors), 2);//Totter Orb
-            orbs.Spawns.Add(new InvItem(0272), new IntRange(0, max_floors), 6);//Totter Orb
-            orbs.Spawns.Add(new InvItem(0275, true), new IntRange(0, max_floors), 2);//Spurn Orb
-            orbs.Spawns.Add(new InvItem(0275), new IntRange(0, max_floors), 6);//Spurn Orb
-            orbs.Spawns.Add(new InvItem(0267, true), new IntRange(0, max_floors), 2);//Stayaway Orb
-            orbs.Spawns.Add(new InvItem(0267), new IntRange(0, max_floors), 2);//Stayaway Orb
-            orbs.Spawns.Add(new InvItem(0266, true), new IntRange(0, max_floors), 3);//Pierce Orb
-            orbs.Spawns.Add(new InvItem(0266), new IntRange(0, max_floors), 7);//Pierce Orb
-            orbs.Spawns.Add(new InvItem(0263), new IntRange(0, max_floors), 7);//Cleanse Orb
-            orbs.Spawns.Add(new InvItem(0258), new IntRange(0, max_floors), 10);//All-Aim Orb
-            orbs.Spawns.Add(new InvItem(0269), new IntRange(0, max_floors), 10);//Trap-See Orb
-            orbs.Spawns.Add(new InvItem(0270), new IntRange(0, max_floors), 10);//Trapbust Orb
-            orbs.Spawns.Add(new InvItem(0276), new IntRange(0, max_floors), 10);//Foe-Hold Orb
-            orbs.Spawns.Add(new InvItem(0252), new IntRange(0, max_floors), 10);//Mobile Orb
-            orbs.Spawns.Add(new InvItem(0288), new IntRange(0, max_floors), 10);//Rollcall Orb
-            orbs.Spawns.Add(new InvItem(0289), new IntRange(0, max_floors), 10);//Mug Orb
-            orbs.Spawns.Add(new InvItem(0284), new IntRange(0, max_floors), 10);//Mirror Orb
-            orbs.Spawns.Add(new InvItem(0251), new IntRange(0, max_floors), 10);//Weather Orb
-            orbs.Spawns.Add(new InvItem(0286), new IntRange(0, max_floors), 10);//Foe-Seal Orb
-            orbs.Spawns.Add(new InvItem(0274), new IntRange(0, max_floors), 10);//Freeze Orb
-            orbs.Spawns.Add(new InvItem(0257), new IntRange(0, max_floors), 10);//Devolve Orb
-            orbs.Spawns.Add(new InvItem(0277), new IntRange(0, max_floors), 10);//Nullify Orb
-            orbs.Spawns.Add(new InvItem(0283), new IntRange(0, max_floors), 10);//Rebound Orb
-            orbs.Spawns.Add(new InvItem(0268, true), new IntRange(0, max_floors), 3);//All Protect Orb
-            orbs.Spawns.Add(new InvItem(0268), new IntRange(0, max_floors), 7);//All Protect Orb
-            orbs.Spawns.Add(new InvItem(0253, true), new IntRange(0, max_floors), 3);//Luminous Orb
-            orbs.Spawns.Add(new InvItem(0253), new IntRange(0, max_floors), 7);//Luminous Orb
-            orbs.Spawns.Add(new InvItem(0259, true), new IntRange(0, max_floors), 3);//Trawl Orb
-            orbs.Spawns.Add(new InvItem(0259), new IntRange(0, max_floors), 7);//Trawl Orb
-            orbs.Spawns.Add(new InvItem(0261), new IntRange(0, max_floors), 10);//Scanner Orb
+            orbs.Spawns.Add(new InvItem("orb_one_room", true), new IntRange(0, max_floors), 3);//One-Room Orb
+            orbs.Spawns.Add(new InvItem("orb_one_room"), new IntRange(0, max_floors), 7);//One-Room Orb
+            orbs.Spawns.Add(new InvItem("orb_fill_in", true), new IntRange(0, max_floors), 3);//Fill-In Orb
+            orbs.Spawns.Add(new InvItem("orb_fill_in"), new IntRange(0, max_floors), 7);//Fill-In Orb
+            orbs.Spawns.Add(new InvItem("orb_petrify", true), new IntRange(0, max_floors), 3);//Petrify Orb
+            orbs.Spawns.Add(new InvItem("orb_petrify"), new IntRange(0, max_floors), 7);//Petrify Orb
+            orbs.Spawns.Add(new InvItem("orb_halving", true), new IntRange(0, max_floors), 3);//Halving Orb
+            orbs.Spawns.Add(new InvItem("orb_halving"), new IntRange(0, max_floors), 7);//Halving Orb
+            orbs.Spawns.Add(new InvItem("orb_slumber", true), new IntRange(0, max_floors), 2);//Slumber Orb
+            orbs.Spawns.Add(new InvItem("orb_slumber"), new IntRange(0, max_floors), 6);//Slumber Orb
+            orbs.Spawns.Add(new InvItem("orb_slow", true), new IntRange(0, max_floors), 2);//Slow Orb
+            orbs.Spawns.Add(new InvItem("orb_slow"), new IntRange(0, max_floors), 6);//Slow Orb
+            orbs.Spawns.Add(new InvItem("orb_totter", true), new IntRange(0, max_floors), 2);//Totter Orb
+            orbs.Spawns.Add(new InvItem("orb_totter"), new IntRange(0, max_floors), 6);//Totter Orb
+            orbs.Spawns.Add(new InvItem("orb_spurn", true), new IntRange(0, max_floors), 2);//Spurn Orb
+            orbs.Spawns.Add(new InvItem("orb_spurn"), new IntRange(0, max_floors), 6);//Spurn Orb
+            orbs.Spawns.Add(new InvItem("orb_stayaway", true), new IntRange(0, max_floors), 2);//Stayaway Orb
+            orbs.Spawns.Add(new InvItem("orb_stayaway"), new IntRange(0, max_floors), 2);//Stayaway Orb
+            orbs.Spawns.Add(new InvItem("orb_pierce", true), new IntRange(0, max_floors), 3);//Pierce Orb
+            orbs.Spawns.Add(new InvItem("orb_pierce"), new IntRange(0, max_floors), 7);//Pierce Orb
+            orbs.Spawns.Add(new InvItem("orb_cleanse"), new IntRange(0, max_floors), 7);//Cleanse Orb
+            orbs.Spawns.Add(new InvItem("orb_all_aim"), new IntRange(0, max_floors), 10);//All-Aim Orb
+            orbs.Spawns.Add(new InvItem("orb_trap_see"), new IntRange(0, max_floors), 10);//Trap-See Orb
+            orbs.Spawns.Add(new InvItem("orb_trapbust"), new IntRange(0, max_floors), 10);//Trapbust Orb
+            orbs.Spawns.Add(new InvItem("orb_foe_hold"), new IntRange(0, max_floors), 10);//Foe-Hold Orb
+            orbs.Spawns.Add(new InvItem("orb_mobile"), new IntRange(0, max_floors), 10);//Mobile Orb
+            orbs.Spawns.Add(new InvItem("orb_rollcall"), new IntRange(0, max_floors), 10);//Rollcall Orb
+            orbs.Spawns.Add(new InvItem("orb_mug"), new IntRange(0, max_floors), 10);//Mug Orb
+            orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, max_floors), 10);//Mirror Orb
+            orbs.Spawns.Add(new InvItem("orb_weather"), new IntRange(0, max_floors), 10);//Weather Orb
+            orbs.Spawns.Add(new InvItem("orb_foe_seal"), new IntRange(0, max_floors), 10);//Foe-Seal Orb
+            orbs.Spawns.Add(new InvItem("orb_freeze"), new IntRange(0, max_floors), 10);//Freeze Orb
+            orbs.Spawns.Add(new InvItem("orb_devolve"), new IntRange(0, max_floors), 10);//Devolve Orb
+            orbs.Spawns.Add(new InvItem("orb_nullify"), new IntRange(0, max_floors), 10);//Nullify Orb
+            orbs.Spawns.Add(new InvItem("orb_rebound"), new IntRange(0, max_floors), 10);//Rebound Orb
+            orbs.Spawns.Add(new InvItem("orb_all_protect", true), new IntRange(0, max_floors), 3);//All Protect Orb
+            orbs.Spawns.Add(new InvItem("orb_all_protect"), new IntRange(0, max_floors), 7);//All Protect Orb
+            orbs.Spawns.Add(new InvItem("orb_luminous", true), new IntRange(0, max_floors), 3);//Luminous Orb
+            orbs.Spawns.Add(new InvItem("orb_luminous"), new IntRange(0, max_floors), 7);//Luminous Orb
+            orbs.Spawns.Add(new InvItem("orb_trawl", true), new IntRange(0, max_floors), 3);//Trawl Orb
+            orbs.Spawns.Add(new InvItem("orb_trawl"), new IntRange(0, max_floors), 7);//Trawl Orb
+            orbs.Spawns.Add(new InvItem("orb_scanner"), new IntRange(0, max_floors), 10);//Scanner Orb
                                                                                 //held
             CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
             held.SpawnRates.SetRange(2, new IntRange(0, 27));
             itemSpawnZoneStep.Spawns.Add("held", held);
 
 
-            held.Spawns.Add(new InvItem(0331), new IntRange(0, max_floors), 5);//Silver Powder
-            held.Spawns.Add(new InvItem(0332), new IntRange(0, max_floors), 5);//Black Glasses
-            held.Spawns.Add(new InvItem(0333), new IntRange(0, max_floors), 5);//Dragon Scale
-            held.Spawns.Add(new InvItem(0334), new IntRange(0, max_floors), 5);//Magnet
-            held.Spawns.Add(new InvItem(0335), new IntRange(0, max_floors), 5);//Pink Bow
-            held.Spawns.Add(new InvItem(0336), new IntRange(0, max_floors), 5);//Black Belt
-            held.Spawns.Add(new InvItem(0337), new IntRange(0, max_floors), 5);//Charcoal
-            held.Spawns.Add(new InvItem(0338), new IntRange(0, max_floors), 5);//Sharp Beak
-            held.Spawns.Add(new InvItem(0339), new IntRange(0, max_floors), 5);//Spell Tag
-            held.Spawns.Add(new InvItem(0340), new IntRange(0, max_floors), 5);//Miracle Seed
-            held.Spawns.Add(new InvItem(0341), new IntRange(0, max_floors), 5);//Soft Sand
-            held.Spawns.Add(new InvItem(0342), new IntRange(0, max_floors), 5);//Never-Melt Ice
-            held.Spawns.Add(new InvItem(0343), new IntRange(0, max_floors), 5);//Silk Scarf
-            held.Spawns.Add(new InvItem(0344), new IntRange(0, max_floors), 5);//Poison Barb
-            held.Spawns.Add(new InvItem(0345), new IntRange(0, max_floors), 5);//Twisted Spoon
-            held.Spawns.Add(new InvItem(0346), new IntRange(0, max_floors), 5);//Hard Stone
-            held.Spawns.Add(new InvItem(0347), new IntRange(0, max_floors), 5);//Metal Coat
-            held.Spawns.Add(new InvItem(0348), new IntRange(0, max_floors), 5);//Mystic Water
-            held.Spawns.Add(new InvItem(0380), new IntRange(0, max_floors), 5);//Insect Plate
-            held.Spawns.Add(new InvItem(0381), new IntRange(0, max_floors), 5);//Dread Plate
-            held.Spawns.Add(new InvItem(0382), new IntRange(0, max_floors), 5);//Draco Plate
-            held.Spawns.Add(new InvItem(0383), new IntRange(0, max_floors), 5);//Zap Plate
-            held.Spawns.Add(new InvItem(0384), new IntRange(0, max_floors), 5);//Pixie Plate
-            held.Spawns.Add(new InvItem(0385), new IntRange(0, max_floors), 5);//Fist Plate
-            held.Spawns.Add(new InvItem(0386), new IntRange(0, max_floors), 5);//Flame Plate
-            held.Spawns.Add(new InvItem(0387), new IntRange(0, max_floors), 5);//Sky Plate
-            held.Spawns.Add(new InvItem(0388), new IntRange(0, max_floors), 5);//Spooky Plate
-            held.Spawns.Add(new InvItem(0389), new IntRange(0, max_floors), 5);//Meadow Plate
-            held.Spawns.Add(new InvItem(0390), new IntRange(0, max_floors), 5);//Earth Plate
-            held.Spawns.Add(new InvItem(0391), new IntRange(0, max_floors), 5);//Icicle Plate
-            held.Spawns.Add(new InvItem(0393), new IntRange(0, max_floors), 5);//Toxic Plate
-            held.Spawns.Add(new InvItem(0394), new IntRange(0, max_floors), 5);//Mind Plate
-            held.Spawns.Add(new InvItem(0395), new IntRange(0, max_floors), 5);//Stone Plate
-            held.Spawns.Add(new InvItem(0396), new IntRange(0, max_floors), 5);//Iron Plate
-            held.Spawns.Add(new InvItem(0397), new IntRange(0, max_floors), 5);//Splash Plate
-            held.Spawns.Add(new InvItem(0303), new IntRange(0, max_floors), 10);//Mobile Scarf
-            held.Spawns.Add(new InvItem(0304), new IntRange(0, max_floors), 10);//Pass Scarf
-            held.Spawns.Add(new InvItem(0330), new IntRange(0, max_floors), 10);//Cover Band
-            held.Spawns.Add(new InvItem(0329, true), new IntRange(0, max_floors), 5);//Reunion Cape
-            held.Spawns.Add(new InvItem(0329), new IntRange(0, max_floors), 5);//Reunion Cape
-            held.Spawns.Add(new InvItem(0306, true), new IntRange(0, max_floors), 5);//Trap Scarf
-            held.Spawns.Add(new InvItem(0306), new IntRange(0, max_floors), 5);//Trap Scarf
-            held.Spawns.Add(new InvItem(0307), new IntRange(0, max_floors), 10);//Grip Claw
-            held.Spawns.Add(new InvItem(0309, true), new IntRange(0, max_floors), 5);//Twist Band
-            held.Spawns.Add(new InvItem(0309), new IntRange(0, max_floors), 5);//Twist Band
-            held.Spawns.Add(new InvItem(0310, true), new IntRange(0, max_floors), 5);//Metronome
-            held.Spawns.Add(new InvItem(0310), new IntRange(0, max_floors), 5);//Metronome
-            held.Spawns.Add(new InvItem(0312, true), new IntRange(0, max_floors), 5);//Shell Bell
-            held.Spawns.Add(new InvItem(0312), new IntRange(0, max_floors), 5);//Shell Bell
-            held.Spawns.Add(new InvItem(0313, true), new IntRange(0, max_floors), 5);//Scope Lens
-            held.Spawns.Add(new InvItem(0313), new IntRange(0, max_floors), 5);//Scope Lens
-            held.Spawns.Add(new InvItem(0400), new IntRange(0, max_floors), 10);//Power Band
-            held.Spawns.Add(new InvItem(0401), new IntRange(0, max_floors), 10);//Special Band
-            held.Spawns.Add(new InvItem(0402), new IntRange(0, max_floors), 10);//Defense Scarf
-            held.Spawns.Add(new InvItem(0403), new IntRange(0, max_floors), 10);//Zinc Band
-            held.Spawns.Add(new InvItem(0314, true), new IntRange(0, max_floors), 10);//Wide Lens
-            held.Spawns.Add(new InvItem(0301, true), new IntRange(0, max_floors), 5);//Pierce Band
-            held.Spawns.Add(new InvItem(0301), new IntRange(0, max_floors), 5);//Pierce Band
-            held.Spawns.Add(new InvItem(0311, true), new IntRange(0, max_floors), 5);//Shed Shell
-            held.Spawns.Add(new InvItem(0311), new IntRange(0, max_floors), 5);//Shed Shell
-            held.Spawns.Add(new InvItem(0328, true), new IntRange(0, max_floors), 5);//X-Ray Specs
-            held.Spawns.Add(new InvItem(0328), new IntRange(0, max_floors), 5);//X-Ray Specs
-            held.Spawns.Add(new InvItem(0404, true), new IntRange(0, max_floors), 5);//Big Root
-            held.Spawns.Add(new InvItem(0404), new IntRange(0, max_floors), 5);//Big Root
-            held.Spawns.Add(new InvItem(0406, true), new IntRange(0, max_floors), 5);//Weather Rock
-            held.Spawns.Add(new InvItem(0406), new IntRange(0, max_floors), 5);//Weather Rock
-            held.Spawns.Add(new InvItem(0405, true), new IntRange(0, max_floors), 5);//Expert Belt
-            held.Spawns.Add(new InvItem(0405), new IntRange(0, max_floors), 5);//Expert Belt
-            held.Spawns.Add(new InvItem(0320), new IntRange(0, max_floors), 10);//Choice Scarf
-            held.Spawns.Add(new InvItem(0319), new IntRange(0, max_floors), 10);//Choice Specs
-            held.Spawns.Add(new InvItem(0318), new IntRange(0, max_floors), 10);//Choice Band
-            held.Spawns.Add(new InvItem(0321), new IntRange(0, max_floors), 10);//Assault Vest
-            held.Spawns.Add(new InvItem(0322), new IntRange(0, max_floors), 10);//Life Orb
-            held.Spawns.Add(new InvItem(0315, true), new IntRange(0, max_floors), 5);//Heal Ribbon
-            held.Spawns.Add(new InvItem(0315), new IntRange(0, max_floors), 5);//Heal Ribbon
-            held.Spawns.Add(new InvItem(0305, true), new IntRange(0, max_floors), 5);//Warp Scarf
-            held.Spawns.Add(new InvItem(0305), new IntRange(0, max_floors), 5);//Warp Scarf
-            held.Spawns.Add(new InvItem(0323), new IntRange(0, max_floors), 10);//Toxic Orb
-            held.Spawns.Add(new InvItem(0324), new IntRange(0, max_floors), 10);//Flame Orb
-            held.Spawns.Add(new InvItem(0317), new IntRange(0, max_floors), 10);//Sticky Barb
-            held.Spawns.Add(new InvItem(0326), new IntRange(0, max_floors), 10);//Ring Target
+            held.Spawns.Add(new InvItem("held_silver_powder"), new IntRange(0, max_floors), 5);//Silver Powder
+            held.Spawns.Add(new InvItem("held_black_glasses"), new IntRange(0, max_floors), 5);//Black Glasses
+            held.Spawns.Add(new InvItem("held_dragon_scale"), new IntRange(0, max_floors), 5);//Dragon Scale
+            held.Spawns.Add(new InvItem("held_magnet"), new IntRange(0, max_floors), 5);//Magnet
+            held.Spawns.Add(new InvItem("held_pink_bow"), new IntRange(0, max_floors), 5);//Pink Bow
+            held.Spawns.Add(new InvItem("held_black_belt"), new IntRange(0, max_floors), 5);//Black Belt
+            held.Spawns.Add(new InvItem("held_charcoal"), new IntRange(0, max_floors), 5);//Charcoal
+            held.Spawns.Add(new InvItem("held_sharp_beak"), new IntRange(0, max_floors), 5);//Sharp Beak
+            held.Spawns.Add(new InvItem("held_spell_tag"), new IntRange(0, max_floors), 5);//Spell Tag
+            held.Spawns.Add(new InvItem("held_miracle_seed"), new IntRange(0, max_floors), 5);//Miracle Seed
+            held.Spawns.Add(new InvItem("held_soft_sand"), new IntRange(0, max_floors), 5);//Soft Sand
+            held.Spawns.Add(new InvItem("held_never_melt_ice"), new IntRange(0, max_floors), 5);//Never-Melt Ice
+            held.Spawns.Add(new InvItem("held_silk_scarf"), new IntRange(0, max_floors), 5);//Silk Scarf
+            held.Spawns.Add(new InvItem("held_poison_barb"), new IntRange(0, max_floors), 5);//Poison Barb
+            held.Spawns.Add(new InvItem("held_twisted_spoon"), new IntRange(0, max_floors), 5);//Twisted Spoon
+            held.Spawns.Add(new InvItem("held_hard_stone"), new IntRange(0, max_floors), 5);//Hard Stone
+            held.Spawns.Add(new InvItem("held_metal_coat"), new IntRange(0, max_floors), 5);//Metal Coat
+            held.Spawns.Add(new InvItem("held_mystic_water"), new IntRange(0, max_floors), 5);//Mystic Water
+            held.Spawns.Add(new InvItem("held_insect_plate"), new IntRange(0, max_floors), 5);//Insect Plate
+            held.Spawns.Add(new InvItem("held_dread_plate"), new IntRange(0, max_floors), 5);//Dread Plate
+            held.Spawns.Add(new InvItem("held_draco_plate"), new IntRange(0, max_floors), 5);//Draco Plate
+            held.Spawns.Add(new InvItem("held_zap_plate"), new IntRange(0, max_floors), 5);//Zap Plate
+            held.Spawns.Add(new InvItem("held_pixie_plate"), new IntRange(0, max_floors), 5);//Pixie Plate
+            held.Spawns.Add(new InvItem("held_fist_plate"), new IntRange(0, max_floors), 5);//Fist Plate
+            held.Spawns.Add(new InvItem("held_flame_plate"), new IntRange(0, max_floors), 5);//Flame Plate
+            held.Spawns.Add(new InvItem("held_sky_plate"), new IntRange(0, max_floors), 5);//Sky Plate
+            held.Spawns.Add(new InvItem("held_spooky_plate"), new IntRange(0, max_floors), 5);//Spooky Plate
+            held.Spawns.Add(new InvItem("held_meadow_plate"), new IntRange(0, max_floors), 5);//Meadow Plate
+            held.Spawns.Add(new InvItem("held_earth_plate"), new IntRange(0, max_floors), 5);//Earth Plate
+            held.Spawns.Add(new InvItem("held_icicle_plate"), new IntRange(0, max_floors), 5);//Icicle Plate
+            held.Spawns.Add(new InvItem("held_toxic_plate"), new IntRange(0, max_floors), 5);//Toxic Plate
+            held.Spawns.Add(new InvItem("held_mind_plate"), new IntRange(0, max_floors), 5);//Mind Plate
+            held.Spawns.Add(new InvItem("held_stone_plate"), new IntRange(0, max_floors), 5);//Stone Plate
+            held.Spawns.Add(new InvItem("held_iron_plate"), new IntRange(0, max_floors), 5);//Iron Plate
+            held.Spawns.Add(new InvItem("held_splash_plate"), new IntRange(0, max_floors), 5);//Splash Plate
+            held.Spawns.Add(new InvItem("held_mobile_scarf"), new IntRange(0, max_floors), 10);//Mobile Scarf
+            held.Spawns.Add(new InvItem("held_pass_scarf"), new IntRange(0, max_floors), 10);//Pass Scarf
+            held.Spawns.Add(new InvItem("held_cover_band"), new IntRange(0, max_floors), 10);//Cover Band
+            held.Spawns.Add(new InvItem("held_reunion_cape", true), new IntRange(0, max_floors), 5);//Reunion Cape
+            held.Spawns.Add(new InvItem("held_reunion_cape"), new IntRange(0, max_floors), 5);//Reunion Cape
+            held.Spawns.Add(new InvItem("held_trap_scarf", true), new IntRange(0, max_floors), 5);//Trap Scarf
+            held.Spawns.Add(new InvItem("held_trap_scarf"), new IntRange(0, max_floors), 5);//Trap Scarf
+            held.Spawns.Add(new InvItem("held_grip_claw"), new IntRange(0, max_floors), 10);//Grip Claw
+            held.Spawns.Add(new InvItem("held_twist_band", true), new IntRange(0, max_floors), 5);//Twist Band
+            held.Spawns.Add(new InvItem("held_twist_band"), new IntRange(0, max_floors), 5);//Twist Band
+            held.Spawns.Add(new InvItem("held_metronome", true), new IntRange(0, max_floors), 5);//Metronome
+            held.Spawns.Add(new InvItem("held_metronome"), new IntRange(0, max_floors), 5);//Metronome
+            held.Spawns.Add(new InvItem("held_shell_bell", true), new IntRange(0, max_floors), 5);//Shell Bell
+            held.Spawns.Add(new InvItem("held_shell_bell"), new IntRange(0, max_floors), 5);//Shell Bell
+            held.Spawns.Add(new InvItem("held_scope_lens", true), new IntRange(0, max_floors), 5);//Scope Lens
+            held.Spawns.Add(new InvItem("held_scope_lens"), new IntRange(0, max_floors), 5);//Scope Lens
+            held.Spawns.Add(new InvItem("held_power_band"), new IntRange(0, max_floors), 10);//Power Band
+            held.Spawns.Add(new InvItem("held_special_band"), new IntRange(0, max_floors), 10);//Special Band
+            held.Spawns.Add(new InvItem("held_defense_scarf"), new IntRange(0, max_floors), 10);//Defense Scarf
+            held.Spawns.Add(new InvItem("held_zinc_band"), new IntRange(0, max_floors), 10);//Zinc Band
+            held.Spawns.Add(new InvItem("held_wide_lens", true), new IntRange(0, max_floors), 10);//Wide Lens
+            held.Spawns.Add(new InvItem("held_pierce_band", true), new IntRange(0, max_floors), 5);//Pierce Band
+            held.Spawns.Add(new InvItem("held_pierce_band"), new IntRange(0, max_floors), 5);//Pierce Band
+            held.Spawns.Add(new InvItem("held_shed_shell", true), new IntRange(0, max_floors), 5);//Shed Shell
+            held.Spawns.Add(new InvItem("held_shed_shell"), new IntRange(0, max_floors), 5);//Shed Shell
+            held.Spawns.Add(new InvItem("held_x_ray_specs", true), new IntRange(0, max_floors), 5);//X-Ray Specs
+            held.Spawns.Add(new InvItem("held_x_ray_specs"), new IntRange(0, max_floors), 5);//X-Ray Specs
+            held.Spawns.Add(new InvItem("held_big_root", true), new IntRange(0, max_floors), 5);//Big Root
+            held.Spawns.Add(new InvItem("held_big_root"), new IntRange(0, max_floors), 5);//Big Root
+            held.Spawns.Add(new InvItem("held_weather_rock", true), new IntRange(0, max_floors), 5);//Weather Rock
+            held.Spawns.Add(new InvItem("held_weather_rock"), new IntRange(0, max_floors), 5);//Weather Rock
+            held.Spawns.Add(new InvItem("held_expert_belt", true), new IntRange(0, max_floors), 5);//Expert Belt
+            held.Spawns.Add(new InvItem("held_expert_belt"), new IntRange(0, max_floors), 5);//Expert Belt
+            held.Spawns.Add(new InvItem("held_choice_scarf"), new IntRange(0, max_floors), 10);//Choice Scarf
+            held.Spawns.Add(new InvItem("held_choice_specs"), new IntRange(0, max_floors), 10);//Choice Specs
+            held.Spawns.Add(new InvItem("held_choice_band"), new IntRange(0, max_floors), 10);//Choice Band
+            held.Spawns.Add(new InvItem("held_assault_vest"), new IntRange(0, max_floors), 10);//Assault Vest
+            held.Spawns.Add(new InvItem("held_life_orb"), new IntRange(0, max_floors), 10);//Life Orb
+            held.Spawns.Add(new InvItem("held_heal_ribbon", true), new IntRange(0, max_floors), 5);//Heal Ribbon
+            held.Spawns.Add(new InvItem("held_heal_ribbon"), new IntRange(0, max_floors), 5);//Heal Ribbon
+            held.Spawns.Add(new InvItem("held_warp_scarf", true), new IntRange(0, max_floors), 5);//Warp Scarf
+            held.Spawns.Add(new InvItem("held_warp_scarf"), new IntRange(0, max_floors), 5);//Warp Scarf
+            held.Spawns.Add(new InvItem("held_toxic_orb"), new IntRange(0, max_floors), 10);//Toxic Orb
+            held.Spawns.Add(new InvItem("held_flame_orb"), new IntRange(0, max_floors), 10);//Flame Orb
+            held.Spawns.Add(new InvItem("held_sticky_barb"), new IntRange(0, max_floors), 10);//Sticky Barb
+            held.Spawns.Add(new InvItem("held_ring_target"), new IntRange(0, max_floors), 10);//Ring Target
                                                                                 //evo
             CategorySpawn<InvItem> evo = new CategorySpawn<InvItem>();
             evo.SpawnRates.SetRange(1, new IntRange(0, 27));
             itemSpawnZoneStep.Spawns.Add("evo", evo);
 
 
-            evo.Spawns.Add(new InvItem(0354), new IntRange(0, max_floors), 10);//Leaf Stone
-            evo.Spawns.Add(new InvItem(0356), new IntRange(0, max_floors), 10);//Sun Stone
-            evo.Spawns.Add(new InvItem(0351), new IntRange(0, max_floors), 10);//Fire Stone
-            evo.Spawns.Add(new InvItem(0374), new IntRange(0, max_floors), 10);//King's Rock
-            evo.Spawns.Add(new InvItem(0365), new IntRange(0, max_floors), 10);//Link Cable
-            evo.Spawns.Add(new InvItem(0355), new IntRange(0, max_floors), 10);//Moon Stone
-            evo.Spawns.Add(new InvItem(0353), new IntRange(0, max_floors), 10);//Water Stone
+            evo.Spawns.Add(new InvItem("evo_leaf_stone"), new IntRange(0, max_floors), 10);//Leaf Stone
+            evo.Spawns.Add(new InvItem("evo_sun_stone"), new IntRange(0, max_floors), 10);//Sun Stone
+            evo.Spawns.Add(new InvItem("evo_fire_stone"), new IntRange(0, max_floors), 10);//Fire Stone
+            evo.Spawns.Add(new InvItem("evo_kings_rock"), new IntRange(0, max_floors), 10);//King's Rock
+            evo.Spawns.Add(new InvItem("evo_link_cable"), new IntRange(0, max_floors), 10);//Link Cable
+            evo.Spawns.Add(new InvItem("evo_moon_stone"), new IntRange(0, max_floors), 10);//Moon Stone
+            evo.Spawns.Add(new InvItem("evo_water_stone"), new IntRange(0, max_floors), 10);//Water Stone
                                                                                //tms
             CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
             tms.SpawnRates.SetRange(5, new IntRange(0, 27));
             itemSpawnZoneStep.Spawns.Add("tms", tms);
 
 
-            tms.Spawns.Add(new InvItem(0587), new IntRange(0, max_floors), 10);//TM Secret Power
-            tms.Spawns.Add(new InvItem(0589), new IntRange(0, max_floors), 10);//TM Echoed Voice
-            tms.Spawns.Add(new InvItem(0590), new IntRange(0, max_floors), 10);//TM Double Team
-            tms.Spawns.Add(new InvItem(0592), new IntRange(0, max_floors), 10);//TM Toxic
-            tms.Spawns.Add(new InvItem(0596), new IntRange(0, max_floors), 10);//TM Protect
-            tms.Spawns.Add(new InvItem(0597), new IntRange(0, max_floors), 10);//TM Defog
-            tms.Spawns.Add(new InvItem(0598), new IntRange(0, max_floors), 10);//TM Roar
-            tms.Spawns.Add(new InvItem(0599), new IntRange(0, max_floors), 5);//TM Hyper Beam
-            tms.Spawns.Add(new InvItem(0600), new IntRange(0, max_floors), 10);//TM Swagger
-            tms.Spawns.Add(new InvItem(0602), new IntRange(0, max_floors), 10);//TM Fly
-            tms.Spawns.Add(new InvItem(0603), new IntRange(0, max_floors), 10);//TM Façade
-            tms.Spawns.Add(new InvItem(0604), new IntRange(0, max_floors), 10);//TM Rock Climb
-            tms.Spawns.Add(new InvItem(0610), new IntRange(0, max_floors), 10);//TM Payback
-            tms.Spawns.Add(new InvItem(0615), new IntRange(0, max_floors), 5);//TM Giga Impact
-            tms.Spawns.Add(new InvItem(0617), new IntRange(0, max_floors), 10);//TM Dig
-            tms.Spawns.Add(new InvItem(0621), new IntRange(0, max_floors), 10);//TM Substitute
-            tms.Spawns.Add(new InvItem(0623), new IntRange(0, max_floors), 10);//TM Safeguard
-            tms.Spawns.Add(new InvItem(0624), new IntRange(0, max_floors), 5);//TM Swords Dance
-            tms.Spawns.Add(new InvItem(0626), new IntRange(0, max_floors), 10);//TM Work Up
-            tms.Spawns.Add(new InvItem(0632), new IntRange(0, max_floors), 10);//TM Return
-            tms.Spawns.Add(new InvItem(0634), new IntRange(0, max_floors), 10);//TM Frustration
-            tms.Spawns.Add(new InvItem(0637), new IntRange(0, max_floors), 10);//TM Flash
-            tms.Spawns.Add(new InvItem(0638), new IntRange(0, max_floors), 10);//TM Thief
-            tms.Spawns.Add(new InvItem(0643), new IntRange(0, max_floors), 10);//TM Fling
-            tms.Spawns.Add(new InvItem(0644), new IntRange(0, max_floors), 10);//TM Captivate
-            tms.Spawns.Add(new InvItem(0654), new IntRange(0, max_floors), 10);//TM Earthquake
-            tms.Spawns.Add(new InvItem(0664), new IntRange(0, max_floors), 10);//TM Reflect
-            tms.Spawns.Add(new InvItem(0667), new IntRange(0, max_floors), 10);//TM Round
-            tms.Spawns.Add(new InvItem(0674), new IntRange(0, max_floors), 10);//TM Rain Dance
-            tms.Spawns.Add(new InvItem(0675), new IntRange(0, max_floors), 10);//TM Sunny Day
-            tms.Spawns.Add(new InvItem(0677), new IntRange(0, max_floors), 10);//TM Sandstorm
-            tms.Spawns.Add(new InvItem(0678), new IntRange(0, max_floors), 10);//TM Hail
-            tms.Spawns.Add(new InvItem(0680), new IntRange(0, max_floors), 10);//TM Attract
-            tms.Spawns.Add(new InvItem(0681), new IntRange(0, max_floors), 10);//TM Hidden Power
-            tms.Spawns.Add(new InvItem(0682), new IntRange(0, max_floors), 10);//TM Taunt
-            tms.Spawns.Add(new InvItem(0686), new IntRange(0, max_floors), 10);//TM Light Screen
-            tms.Spawns.Add(new InvItem(0689), new IntRange(0, max_floors), 10);//TM Grass Knot
-            tms.Spawns.Add(new InvItem(0693), new IntRange(0, max_floors), 10);//TM Strength
-            tms.Spawns.Add(new InvItem(0694), new IntRange(0, max_floors), 10);//TM Cut
-            tms.Spawns.Add(new InvItem(0695), new IntRange(0, max_floors), 10);//TM Rock Smash
-            tms.Spawns.Add(new InvItem(0697), new IntRange(0, max_floors), 10);//TM Surf
-            tms.Spawns.Add(new InvItem(0698), new IntRange(0, max_floors), 10);//TM Rest
-            tms.Spawns.Add(new InvItem(0699), new IntRange(0, max_floors), 10);//TM Psych Up
+            tms.Spawns.Add(new InvItem("tm_secret_power"), new IntRange(0, max_floors), 10);//TM Secret Power
+            tms.Spawns.Add(new InvItem("tm_echoed_voice"), new IntRange(0, max_floors), 10);//TM Echoed Voice
+            tms.Spawns.Add(new InvItem("tm_double_team"), new IntRange(0, max_floors), 10);//TM Double Team
+            tms.Spawns.Add(new InvItem("tm_toxic"), new IntRange(0, max_floors), 10);//TM Toxic
+            tms.Spawns.Add(new InvItem("tm_protect"), new IntRange(0, max_floors), 10);//TM Protect
+            tms.Spawns.Add(new InvItem("tm_defog"), new IntRange(0, max_floors), 10);//TM Defog
+            tms.Spawns.Add(new InvItem("tm_roar"), new IntRange(0, max_floors), 10);//TM Roar
+            tms.Spawns.Add(new InvItem("tm_hyper_beam"), new IntRange(0, max_floors), 5);//TM Hyper Beam
+            tms.Spawns.Add(new InvItem("tm_swagger"), new IntRange(0, max_floors), 10);//TM Swagger
+            tms.Spawns.Add(new InvItem("tm_fly"), new IntRange(0, max_floors), 10);//TM Fly
+            tms.Spawns.Add(new InvItem("tm_facade"), new IntRange(0, max_floors), 10);//TM Façade
+            tms.Spawns.Add(new InvItem("tm_rock_climb"), new IntRange(0, max_floors), 10);//TM Rock Climb
+            tms.Spawns.Add(new InvItem("tm_payback"), new IntRange(0, max_floors), 10);//TM Payback
+            tms.Spawns.Add(new InvItem("tm_giga_impact"), new IntRange(0, max_floors), 5);//TM Giga Impact
+            tms.Spawns.Add(new InvItem("tm_dig"), new IntRange(0, max_floors), 10);//TM Dig
+            tms.Spawns.Add(new InvItem("tm_substitute"), new IntRange(0, max_floors), 10);//TM Substitute
+            tms.Spawns.Add(new InvItem("tm_safeguard"), new IntRange(0, max_floors), 10);//TM Safeguard
+            tms.Spawns.Add(new InvItem("tm_swords_dance"), new IntRange(0, max_floors), 5);//TM Swords Dance
+            tms.Spawns.Add(new InvItem("tm_work_up"), new IntRange(0, max_floors), 10);//TM Work Up
+            tms.Spawns.Add(new InvItem("tm_return"), new IntRange(0, max_floors), 10);//TM Return
+            tms.Spawns.Add(new InvItem("tm_frustration"), new IntRange(0, max_floors), 10);//TM Frustration
+            tms.Spawns.Add(new InvItem("tm_flash"), new IntRange(0, max_floors), 10);//TM Flash
+            tms.Spawns.Add(new InvItem("tm_thief"), new IntRange(0, max_floors), 10);//TM Thief
+            tms.Spawns.Add(new InvItem("tm_fling"), new IntRange(0, max_floors), 10);//TM Fling
+            tms.Spawns.Add(new InvItem("tm_captivate"), new IntRange(0, max_floors), 10);//TM Captivate
+            tms.Spawns.Add(new InvItem("tm_earthquake"), new IntRange(0, max_floors), 10);//TM Earthquake
+            tms.Spawns.Add(new InvItem("tm_reflect"), new IntRange(0, max_floors), 10);//TM Reflect
+            tms.Spawns.Add(new InvItem("tm_round"), new IntRange(0, max_floors), 10);//TM Round
+            tms.Spawns.Add(new InvItem("tm_rain_dance"), new IntRange(0, max_floors), 10);//TM Rain Dance
+            tms.Spawns.Add(new InvItem("tm_sunny_day"), new IntRange(0, max_floors), 10);//TM Sunny Day
+            tms.Spawns.Add(new InvItem("tm_sandstorm"), new IntRange(0, max_floors), 10);//TM Sandstorm
+            tms.Spawns.Add(new InvItem("tm_hail"), new IntRange(0, max_floors), 10);//TM Hail
+            tms.Spawns.Add(new InvItem("tm_attract"), new IntRange(0, max_floors), 10);//TM Attract
+            tms.Spawns.Add(new InvItem("tm_hidden_power"), new IntRange(0, max_floors), 10);//TM Hidden Power
+            tms.Spawns.Add(new InvItem("tm_taunt"), new IntRange(0, max_floors), 10);//TM Taunt
+            tms.Spawns.Add(new InvItem("tm_light_screen"), new IntRange(0, max_floors), 10);//TM Light Screen
+            tms.Spawns.Add(new InvItem("tm_grass_knot"), new IntRange(0, max_floors), 10);//TM Grass Knot
+            tms.Spawns.Add(new InvItem("tm_strength"), new IntRange(0, max_floors), 10);//TM Strength
+            tms.Spawns.Add(new InvItem("tm_cut"), new IntRange(0, max_floors), 10);//TM Cut
+            tms.Spawns.Add(new InvItem("tm_rock_smash"), new IntRange(0, max_floors), 10);//TM Rock Smash
+            tms.Spawns.Add(new InvItem("tm_surf"), new IntRange(0, max_floors), 10);//TM Surf
+            tms.Spawns.Add(new InvItem("tm_rest"), new IntRange(0, max_floors), 10);//TM Rest
+            tms.Spawns.Add(new InvItem("tm_psych_up"), new IntRange(0, max_floors), 10);//TM Psych Up
 
 
             floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
@@ -3730,30 +3742,30 @@ namespace DataGenerator.Data
 
 
             SpawnList<IGenPriority> appleZoneSpawns = new SpawnList<IGenPriority>();
-            appleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(1))))), 10);
+            appleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("food_apple"))))), 10);
             SpreadStepZoneStep appleZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, max_floors)), appleZoneSpawns);//apple
             floorSegment.ZoneSteps.Add(appleZoneStep);
 
             SpawnList<IGenPriority> leppaZoneSpawns = new SpawnList<IGenPriority>();
-            leppaZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(11))))), 10);
+            leppaZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("berry_leppa"))))), 10);
             SpreadStepZoneStep leppaZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(0, max_floors)), appleZoneSpawns);//leppa
             floorSegment.ZoneSteps.Add(leppaZoneStep);
 
             SpawnList<IGenPriority> assemblyZoneSpawns = new SpawnList<IGenPriority>();
-            assemblyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(451))))), 10);
+            assemblyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("machine_assembly_box"))))), 10);
             SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(4, max_floors)), appleZoneSpawns);//assembly box
             floorSegment.ZoneSteps.Add(assemblyZoneStep);
 
             {
                 SpawnList<IGenPriority> apricornZoneSpawns = new SpawnList<IGenPriority>();
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(211))))), 10);//blue apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(212))))), 10);//green apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(213))))), 10);//brown apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(214))))), 10);//purple apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(215))))), 10);//red apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(216))))), 10);//white apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(217))))), 10);//yellow apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(218))))), 10);//black apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_blue"))))), 10);//blue apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_green"))))), 10);//green apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_brown"))))), 10);//brown apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_purple"))))), 10);//purple apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_red"))))), 10);//red apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_white"))))), 10);//white apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_yellow"))))), 10);//yellow apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_black"))))), 10);//black apricorns
                 SpreadStepZoneStep apricornZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, 21)), apricornZoneSpawns);//apricorn (variety)
                 floorSegment.ZoneSteps.Add(apricornZoneStep);
             }
@@ -3762,33 +3774,33 @@ namespace DataGenerator.Data
             for (int jj = 0; jj < 3; jj++)
             {
                 SpawnList<IGenPriority> apricornZoneSpawns = new SpawnList<IGenPriority>();
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(211))))), 10);//blue apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(212))))), 10);//green apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(213))))), 10);//brown apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(214))))), 10);//purple apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(215))))), 10);//red apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(216))))), 10);//white apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(217))))), 10);//yellow apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(218))))), 10);//black apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_blue"))))), 10);//blue apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_green"))))), 10);//green apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_brown"))))), 10);//brown apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_purple"))))), 10);//purple apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_red"))))), 10);//red apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_white"))))), 10);//white apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_yellow"))))), 10);//yellow apricorns
+                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_black"))))), 10);//black apricorns
                 SpreadStepZoneStep apricornZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(1, max_apricorn)), apricornZoneSpawns);//apricorn (variety)
                 floorSegment.ZoneSteps.Add(apricornZoneStep);
                 max_apricorn /= 2;
             }
 
             SpawnList<IGenPriority> cleanseZoneSpawns = new SpawnList<IGenPriority>();
-            cleanseZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(263))))), 10);
+            cleanseZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("orb_cleanse"))))), 10);
             SpreadStepZoneStep cleanseZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandDecay(2, 10, 60), new IntRange(3, max_floors)), cleanseZoneSpawns);//cleanse orb
             floorSegment.ZoneSteps.Add(cleanseZoneStep);
 
             SpawnList<IGenPriority> evoZoneSpawns = new SpawnList<IGenPriority>();
             SpreadStepZoneStep evoItemZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(1, 4), new IntRange(0, 15)), evoZoneSpawns);//evo items
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(351))))), 10);//Fire Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(354))))), 10);//Leaf Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(353))))), 10);//Water Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(355))))), 10);//Moon Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(356))))), 10);//Sun Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(374))))), 10);//King's Rock
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(365))))), 10);//Link Cable
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_fire_stone"))))), 10);//Fire Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_leaf_stone"))))), 10);//Leaf Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_water_stone"))))), 10);//Water Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_moon_stone"))))), 10);//Moon Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_sun_stone"))))), 10);//Sun Stone
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_kings_rock"))))), 10);//King's Rock
+            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_link_cable"))))), 10);//Link Cable
             floorSegment.ZoneSteps.Add(evoItemZoneStep);
 
 
@@ -3804,64 +3816,64 @@ namespace DataGenerator.Data
                 //monster houses
                 SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(10, new IntRange(3, 30)));
                 monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
-                for (int ii = 0; ii < 18; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, max_floors), 4);//gummis
-                for (int ii = 0; ii < 8; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(210 + ii), new IntRange(0, max_floors), 4);//apricorns
-                monsterChanceZoneStep.Items.Add(new MapItem(351), new IntRange(0, max_floors), 4);//Fire Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(353), new IntRange(0, max_floors), 4);//Water Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(355), new IntRange(0, max_floors), 4);//Moon Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(354), new IntRange(0, max_floors), 4);//Leaf Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(374), new IntRange(0, max_floors), 4);//King's Rock
-                monsterChanceZoneStep.Items.Add(new MapItem(365), new IntRange(0, max_floors), 4);//Link Cable
-                monsterChanceZoneStep.Items.Add(new MapItem(356), new IntRange(0, max_floors), 4);//Sun Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(6), new IntRange(0, max_floors), 25);//banana
+                foreach (string key in IterateGummis())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
+                foreach (string key in IterateApricorns())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_fire_stone"), new IntRange(0, max_floors), 4);//Fire Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_water_stone"), new IntRange(0, max_floors), 4);//Water Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_moon_stone"), new IntRange(0, max_floors), 4);//Moon Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_leaf_stone"), new IntRange(0, max_floors), 4);//Leaf Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_kings_rock"), new IntRange(0, max_floors), 4);//King's Rock
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_link_cable"), new IntRange(0, max_floors), 4);//Link Cable
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_stone"), new IntRange(0, max_floors), 4);//Sun Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
                 for (int ii = 0; ii < specific_tms.Length; ii++)
                     monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii][0]), new IntRange(0, max_floors), 2);//TMs
-                monsterChanceZoneStep.Items.Add(new MapItem(477), new IntRange(0, max_floors), 10);//nugget
-                monsterChanceZoneStep.Items.Add(new MapItem(480, 1), new IntRange(0, max_floors), 10);//pearl
-                monsterChanceZoneStep.Items.Add(new MapItem(481, 2), new IntRange(0, max_floors), 10);//heart scale
-                monsterChanceZoneStep.Items.Add(new MapItem(455, 1), new IntRange(0, max_floors), 10);//key
-                monsterChanceZoneStep.Items.Add(new MapItem(450), new IntRange(0, max_floors), 30);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem(451), new IntRange(0, max_floors), 30);//assembly box
-                monsterChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, max_floors), 10);//ability capsule
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 10);//nugget
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
+                monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, max_floors), 10);//key
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, max_floors), 30);//assembly box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 10);//ability capsule
 
 
-                monsterChanceZoneStep.Items.Add(new MapItem(0303), new IntRange(0, max_floors), 1);//Mobile Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0304), new IntRange(0, max_floors), 1);//Pass Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0330), new IntRange(0, max_floors), 1);//Cover Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0329), new IntRange(0, max_floors), 1);//Reunion Cape
-                monsterChanceZoneStep.Items.Add(new MapItem(0306), new IntRange(0, max_floors), 1);//Trap Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0307), new IntRange(0, max_floors), 1);//Grip Claw
-                monsterChanceZoneStep.Items.Add(new MapItem(0309), new IntRange(0, max_floors), 1);//Twist Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0310), new IntRange(0, max_floors), 1);//Metronome
-                monsterChanceZoneStep.Items.Add(new MapItem(0312), new IntRange(0, max_floors), 1);//Shell Bell
-                monsterChanceZoneStep.Items.Add(new MapItem(0313), new IntRange(0, max_floors), 1);//Scope Lens
-                monsterChanceZoneStep.Items.Add(new MapItem(0400), new IntRange(0, max_floors), 1);//Power Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0401), new IntRange(0, max_floors), 1);//Special Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0402), new IntRange(0, max_floors), 1);//Defense Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0403), new IntRange(0, max_floors), 1);//Zinc Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0314), new IntRange(0, max_floors), 1);//Wide Lens
-                monsterChanceZoneStep.Items.Add(new MapItem(0301), new IntRange(0, max_floors), 1);//Pierce Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0311), new IntRange(0, max_floors), 1);//Shed Shell
-                monsterChanceZoneStep.Items.Add(new MapItem(0328), new IntRange(0, max_floors), 1);//X-Ray Specs
-                monsterChanceZoneStep.Items.Add(new MapItem(0404), new IntRange(0, max_floors), 1);//Big Root
-                monsterChanceZoneStep.Items.Add(new MapItem(0406), new IntRange(0, max_floors), 1);//Weather Rock
-                monsterChanceZoneStep.Items.Add(new MapItem(0405), new IntRange(0, max_floors), 1);//Expert Belt
-                monsterChanceZoneStep.Items.Add(new MapItem(0320), new IntRange(0, max_floors), 1);//Choice Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0319), new IntRange(0, max_floors), 1);//Choice Specs
-                monsterChanceZoneStep.Items.Add(new MapItem(0318), new IntRange(0, max_floors), 1);//Choice Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0321), new IntRange(0, max_floors), 1);//Assault Vest
-                monsterChanceZoneStep.Items.Add(new MapItem(0322), new IntRange(0, max_floors), 1);//Life Orb
-                monsterChanceZoneStep.Items.Add(new MapItem(0315), new IntRange(0, max_floors), 1);//Heal Ribbon
+                monsterChanceZoneStep.Items.Add(new MapItem("held_mobile_scarf"), new IntRange(0, max_floors), 1);//Mobile Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_pass_scarf"), new IntRange(0, max_floors), 1);//Pass Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_cover_band"), new IntRange(0, max_floors), 1);//Cover Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_reunion_cape"), new IntRange(0, max_floors), 1);//Reunion Cape
+                monsterChanceZoneStep.Items.Add(new MapItem("held_trap_scarf"), new IntRange(0, max_floors), 1);//Trap Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_grip_claw"), new IntRange(0, max_floors), 1);//Grip Claw
+                monsterChanceZoneStep.Items.Add(new MapItem("held_twist_band"), new IntRange(0, max_floors), 1);//Twist Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_metronome"), new IntRange(0, max_floors), 1);//Metronome
+                monsterChanceZoneStep.Items.Add(new MapItem("held_shell_bell"), new IntRange(0, max_floors), 1);//Shell Bell
+                monsterChanceZoneStep.Items.Add(new MapItem("held_scope_lens"), new IntRange(0, max_floors), 1);//Scope Lens
+                monsterChanceZoneStep.Items.Add(new MapItem("held_power_band"), new IntRange(0, max_floors), 1);//Power Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_special_band"), new IntRange(0, max_floors), 1);//Special Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_defense_scarf"), new IntRange(0, max_floors), 1);//Defense Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_zinc_band"), new IntRange(0, max_floors), 1);//Zinc Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_wide_lens"), new IntRange(0, max_floors), 1);//Wide Lens
+                monsterChanceZoneStep.Items.Add(new MapItem("held_pierce_band"), new IntRange(0, max_floors), 1);//Pierce Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_shed_shell"), new IntRange(0, max_floors), 1);//Shed Shell
+                monsterChanceZoneStep.Items.Add(new MapItem("held_x_ray_specs"), new IntRange(0, max_floors), 1);//X-Ray Specs
+                monsterChanceZoneStep.Items.Add(new MapItem("held_big_root"), new IntRange(0, max_floors), 1);//Big Root
+                monsterChanceZoneStep.Items.Add(new MapItem("held_weather_rock"), new IntRange(0, max_floors), 1);//Weather Rock
+                monsterChanceZoneStep.Items.Add(new MapItem("held_expert_belt"), new IntRange(0, max_floors), 1);//Expert Belt
+                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_scarf"), new IntRange(0, max_floors), 1);//Choice Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_specs"), new IntRange(0, max_floors), 1);//Choice Specs
+                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_band"), new IntRange(0, max_floors), 1);//Choice Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_assault_vest"), new IntRange(0, max_floors), 1);//Assault Vest
+                monsterChanceZoneStep.Items.Add(new MapItem("held_life_orb"), new IntRange(0, max_floors), 1);//Life Orb
+                monsterChanceZoneStep.Items.Add(new MapItem("held_heal_ribbon"), new IntRange(0, max_floors), 1);//Heal Ribbon
 
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, max_floors), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, max_floors), 30);//no theme
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, max_floors), 30);//no theme
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
-                    new ItemThemeRange(new IntRange(450, 454), true, true, new RandRange(0, 2))), new IntRange(0, 30), 10);//TMs + machines
+                    new ItemThemeRange(true, true, new RandRange(0, 2), new IntRange(450, 454))), new IntRange(0, 30), 10);//TMs + machines
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, max_floors), 30);//gummis
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), new IntRange(351, 380))), new IntRange(0, 10), 20);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), new IntRange(351, 380))), new IntRange(10, 20), 10);//evo items
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
                 floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
             }
@@ -3871,65 +3883,65 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(11, 9), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                 monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(15, 13), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                for (int ii = 0; ii < 18; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, max_floors), 4);//gummis
-                for (int ii = 0; ii < 8; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(210 + ii), new IntRange(0, max_floors), 4);//apricorns
-                monsterChanceZoneStep.Items.Add(new MapItem(351), new IntRange(0, max_floors), 4);//Fire Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(353), new IntRange(0, max_floors), 4);//Water Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(355), new IntRange(0, max_floors), 4);//Moon Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(354), new IntRange(0, max_floors), 4);//Leaf Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(374), new IntRange(0, max_floors), 4);//King's Rock
-                monsterChanceZoneStep.Items.Add(new MapItem(365), new IntRange(0, max_floors), 4);//Link Cable
-                monsterChanceZoneStep.Items.Add(new MapItem(356), new IntRange(0, max_floors), 4);//Sun Stone
-                monsterChanceZoneStep.Items.Add(new MapItem(6), new IntRange(0, max_floors), 25);//banana
+                foreach (string key in IterateGummis())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
+                foreach (string key in IterateApricorns())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_fire_stone"), new IntRange(0, max_floors), 4);//Fire Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_water_stone"), new IntRange(0, max_floors), 4);//Water Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_moon_stone"), new IntRange(0, max_floors), 4);//Moon Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_leaf_stone"), new IntRange(0, max_floors), 4);//Leaf Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_kings_rock"), new IntRange(0, max_floors), 4);//King's Rock
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_link_cable"), new IntRange(0, max_floors), 4);//Link Cable
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_stone"), new IntRange(0, max_floors), 4);//Sun Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
                 for (int ii = 0; ii < specific_tms.Length; ii++)
                     monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii][0]), new IntRange(0, max_floors), 2);//TMs
-                monsterChanceZoneStep.Items.Add(new MapItem(477), new IntRange(0, max_floors), 10);//nugget
-                monsterChanceZoneStep.Items.Add(new MapItem(480, 1), new IntRange(0, max_floors), 10);//pearl
-                monsterChanceZoneStep.Items.Add(new MapItem(481, 2), new IntRange(0, max_floors), 10);//heart scale
-                monsterChanceZoneStep.Items.Add(new MapItem(455, 1), new IntRange(0, max_floors), 10);//key
-                monsterChanceZoneStep.Items.Add(new MapItem(450), new IntRange(0, max_floors), 30);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem(451), new IntRange(0, max_floors), 30);//assembly box
-                monsterChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, max_floors), 10);//ability capsule
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 10);//nugget
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
+                monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, max_floors), 10);//key
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, max_floors), 30);//assembly box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 10);//ability capsule
 
 
-                monsterChanceZoneStep.Items.Add(new MapItem(0303), new IntRange(0, max_floors), 1);//Mobile Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0304), new IntRange(0, max_floors), 1);//Pass Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0330), new IntRange(0, max_floors), 1);//Cover Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0329), new IntRange(0, max_floors), 1);//Reunion Cape
-                monsterChanceZoneStep.Items.Add(new MapItem(0306), new IntRange(0, max_floors), 1);//Trap Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0307), new IntRange(0, max_floors), 1);//Grip Claw
-                monsterChanceZoneStep.Items.Add(new MapItem(0309), new IntRange(0, max_floors), 1);//Twist Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0310), new IntRange(0, max_floors), 1);//Metronome
-                monsterChanceZoneStep.Items.Add(new MapItem(0312), new IntRange(0, max_floors), 1);//Shell Bell
-                monsterChanceZoneStep.Items.Add(new MapItem(0313), new IntRange(0, max_floors), 1);//Scope Lens
-                monsterChanceZoneStep.Items.Add(new MapItem(0400), new IntRange(0, max_floors), 1);//Power Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0401), new IntRange(0, max_floors), 1);//Special Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0402), new IntRange(0, max_floors), 1);//Defense Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0403), new IntRange(0, max_floors), 1);//Zinc Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0314), new IntRange(0, max_floors), 1);//Wide Lens
-                monsterChanceZoneStep.Items.Add(new MapItem(0301), new IntRange(0, max_floors), 1);//Pierce Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0311), new IntRange(0, max_floors), 1);//Shed Shell
-                monsterChanceZoneStep.Items.Add(new MapItem(0328), new IntRange(0, max_floors), 1);//X-Ray Specs
-                monsterChanceZoneStep.Items.Add(new MapItem(0404), new IntRange(0, max_floors), 1);//Big Root
-                monsterChanceZoneStep.Items.Add(new MapItem(0406), new IntRange(0, max_floors), 1);//Weather Rock
-                monsterChanceZoneStep.Items.Add(new MapItem(0405), new IntRange(0, max_floors), 1);//Expert Belt
-                monsterChanceZoneStep.Items.Add(new MapItem(0320), new IntRange(0, max_floors), 1);//Choice Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0319), new IntRange(0, max_floors), 1);//Choice Specs
-                monsterChanceZoneStep.Items.Add(new MapItem(0318), new IntRange(0, max_floors), 1);//Choice Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0321), new IntRange(0, max_floors), 1);//Assault Vest
-                monsterChanceZoneStep.Items.Add(new MapItem(0322), new IntRange(0, max_floors), 1);//Life Orb
-                monsterChanceZoneStep.Items.Add(new MapItem(0315), new IntRange(0, max_floors), 1);//Heal Ribbon
+                monsterChanceZoneStep.Items.Add(new MapItem("held_mobile_scarf"), new IntRange(0, max_floors), 1);//Mobile Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_pass_scarf"), new IntRange(0, max_floors), 1);//Pass Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_cover_band"), new IntRange(0, max_floors), 1);//Cover Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_reunion_cape"), new IntRange(0, max_floors), 1);//Reunion Cape
+                monsterChanceZoneStep.Items.Add(new MapItem("held_trap_scarf"), new IntRange(0, max_floors), 1);//Trap Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_grip_claw"), new IntRange(0, max_floors), 1);//Grip Claw
+                monsterChanceZoneStep.Items.Add(new MapItem("held_twist_band"), new IntRange(0, max_floors), 1);//Twist Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_metronome"), new IntRange(0, max_floors), 1);//Metronome
+                monsterChanceZoneStep.Items.Add(new MapItem("held_shell_bell"), new IntRange(0, max_floors), 1);//Shell Bell
+                monsterChanceZoneStep.Items.Add(new MapItem("held_scope_lens"), new IntRange(0, max_floors), 1);//Scope Lens
+                monsterChanceZoneStep.Items.Add(new MapItem("held_power_band"), new IntRange(0, max_floors), 1);//Power Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_special_band"), new IntRange(0, max_floors), 1);//Special Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_defense_scarf"), new IntRange(0, max_floors), 1);//Defense Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_zinc_band"), new IntRange(0, max_floors), 1);//Zinc Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_wide_lens"), new IntRange(0, max_floors), 1);//Wide Lens
+                monsterChanceZoneStep.Items.Add(new MapItem("held_pierce_band"), new IntRange(0, max_floors), 1);//Pierce Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_shed_shell"), new IntRange(0, max_floors), 1);//Shed Shell
+                monsterChanceZoneStep.Items.Add(new MapItem("held_x_ray_specs"), new IntRange(0, max_floors), 1);//X-Ray Specs
+                monsterChanceZoneStep.Items.Add(new MapItem("held_big_root"), new IntRange(0, max_floors), 1);//Big Root
+                monsterChanceZoneStep.Items.Add(new MapItem("held_weather_rock"), new IntRange(0, max_floors), 1);//Weather Rock
+                monsterChanceZoneStep.Items.Add(new MapItem("held_expert_belt"), new IntRange(0, max_floors), 1);//Expert Belt
+                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_scarf"), new IntRange(0, max_floors), 1);//Choice Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_specs"), new IntRange(0, max_floors), 1);//Choice Specs
+                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_band"), new IntRange(0, max_floors), 1);//Choice Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_assault_vest"), new IntRange(0, max_floors), 1);//Assault Vest
+                monsterChanceZoneStep.Items.Add(new MapItem("held_life_orb"), new IntRange(0, max_floors), 1);//Life Orb
+                monsterChanceZoneStep.Items.Add(new MapItem("held_heal_ribbon"), new IntRange(0, max_floors), 1);//Heal Ribbon
 
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, 30), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
-                    new ItemThemeRange(new IntRange(450, 454), true, true, new RandRange(0, 2))), new IntRange(0, 30), 10);//TMs + machines
+                    new ItemThemeRange(true, true, new RandRange(0, 2), new IntRange(450, 454))), new IntRange(0, 30), 10);//TMs + machines
 
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeRange(new IntRange(351, 380), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), new IntRange(351, 380))), new IntRange(0, 10), 20);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), new IntRange(351, 380))), new IntRange(10, 20), 10);//evo items
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
 
                 floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
@@ -3940,48 +3952,48 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(11, 9), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                 monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(15, 13), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                for (int ii = 0; ii < 18; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, max_floors), 4);//gummis
-                monsterChanceZoneStep.Items.Add(new MapItem(6), new IntRange(0, max_floors), 25);//banana
+                foreach (string key in IterateGummis())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
+                monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
                 for (int ii = 0; ii < specific_tms.Length; ii++)
                     monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii][0]), new IntRange(0, max_floors), 2);//TMs
-                monsterChanceZoneStep.Items.Add(new MapItem(480, 1), new IntRange(0, max_floors), 10);//pearl
-                monsterChanceZoneStep.Items.Add(new MapItem(481, 2), new IntRange(0, max_floors), 10);//heart scale
-                monsterChanceZoneStep.Items.Add(new MapItem(450), new IntRange(0, max_floors), 30);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem(451), new IntRange(0, max_floors), 30);//assembly box
-                monsterChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, max_floors), 10);//ability capsule
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, max_floors), 30);//assembly box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 10);//ability capsule
 
 
-                monsterChanceZoneStep.Items.Add(new MapItem(0303), new IntRange(0, max_floors), 1);//Mobile Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0304), new IntRange(0, max_floors), 1);//Pass Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0330), new IntRange(0, max_floors), 1);//Cover Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0329), new IntRange(0, max_floors), 1);//Reunion Cape
-                monsterChanceZoneStep.Items.Add(new MapItem(0306), new IntRange(0, max_floors), 1);//Trap Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0307), new IntRange(0, max_floors), 1);//Grip Claw
-                monsterChanceZoneStep.Items.Add(new MapItem(0309), new IntRange(0, max_floors), 1);//Twist Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0310), new IntRange(0, max_floors), 1);//Metronome
-                monsterChanceZoneStep.Items.Add(new MapItem(0312), new IntRange(0, max_floors), 1);//Shell Bell
-                monsterChanceZoneStep.Items.Add(new MapItem(0313), new IntRange(0, max_floors), 1);//Scope Lens
-                monsterChanceZoneStep.Items.Add(new MapItem(0400), new IntRange(0, max_floors), 1);//Power Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0401), new IntRange(0, max_floors), 1);//Special Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0402), new IntRange(0, max_floors), 1);//Defense Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0403), new IntRange(0, max_floors), 1);//Zinc Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0314), new IntRange(0, max_floors), 1);//Wide Lens
-                monsterChanceZoneStep.Items.Add(new MapItem(0301), new IntRange(0, max_floors), 1);//Pierce Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0311), new IntRange(0, max_floors), 1);//Shed Shell
-                monsterChanceZoneStep.Items.Add(new MapItem(0328), new IntRange(0, max_floors), 1);//X-Ray Specs
-                monsterChanceZoneStep.Items.Add(new MapItem(0404), new IntRange(0, max_floors), 1);//Big Root
-                monsterChanceZoneStep.Items.Add(new MapItem(0406), new IntRange(0, max_floors), 1);//Weather Rock
-                monsterChanceZoneStep.Items.Add(new MapItem(0405), new IntRange(0, max_floors), 1);//Expert Belt
-                monsterChanceZoneStep.Items.Add(new MapItem(0320), new IntRange(0, max_floors), 1);//Choice Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem(0319), new IntRange(0, max_floors), 1);//Choice Specs
-                monsterChanceZoneStep.Items.Add(new MapItem(0318), new IntRange(0, max_floors), 1);//Choice Band
-                monsterChanceZoneStep.Items.Add(new MapItem(0321), new IntRange(0, max_floors), 1);//Assault Vest
-                monsterChanceZoneStep.Items.Add(new MapItem(0322), new IntRange(0, max_floors), 1);//Life Orb
-                monsterChanceZoneStep.Items.Add(new MapItem(0315), new IntRange(0, max_floors), 1);//Heal Ribbon
+                monsterChanceZoneStep.Items.Add(new MapItem("held_mobile_scarf"), new IntRange(0, max_floors), 1);//Mobile Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_pass_scarf"), new IntRange(0, max_floors), 1);//Pass Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_cover_band"), new IntRange(0, max_floors), 1);//Cover Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_reunion_cape"), new IntRange(0, max_floors), 1);//Reunion Cape
+                monsterChanceZoneStep.Items.Add(new MapItem("held_trap_scarf"), new IntRange(0, max_floors), 1);//Trap Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_grip_claw"), new IntRange(0, max_floors), 1);//Grip Claw
+                monsterChanceZoneStep.Items.Add(new MapItem("held_twist_band"), new IntRange(0, max_floors), 1);//Twist Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_metronome"), new IntRange(0, max_floors), 1);//Metronome
+                monsterChanceZoneStep.Items.Add(new MapItem("held_shell_bell"), new IntRange(0, max_floors), 1);//Shell Bell
+                monsterChanceZoneStep.Items.Add(new MapItem("held_scope_lens"), new IntRange(0, max_floors), 1);//Scope Lens
+                monsterChanceZoneStep.Items.Add(new MapItem("held_power_band"), new IntRange(0, max_floors), 1);//Power Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_special_band"), new IntRange(0, max_floors), 1);//Special Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_defense_scarf"), new IntRange(0, max_floors), 1);//Defense Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_zinc_band"), new IntRange(0, max_floors), 1);//Zinc Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_wide_lens"), new IntRange(0, max_floors), 1);//Wide Lens
+                monsterChanceZoneStep.Items.Add(new MapItem("held_pierce_band"), new IntRange(0, max_floors), 1);//Pierce Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_shed_shell"), new IntRange(0, max_floors), 1);//Shed Shell
+                monsterChanceZoneStep.Items.Add(new MapItem("held_x_ray_specs"), new IntRange(0, max_floors), 1);//X-Ray Specs
+                monsterChanceZoneStep.Items.Add(new MapItem("held_big_root"), new IntRange(0, max_floors), 1);//Big Root
+                monsterChanceZoneStep.Items.Add(new MapItem("held_weather_rock"), new IntRange(0, max_floors), 1);//Weather Rock
+                monsterChanceZoneStep.Items.Add(new MapItem("held_expert_belt"), new IntRange(0, max_floors), 1);//Expert Belt
+                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_scarf"), new IntRange(0, max_floors), 1);//Choice Scarf
+                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_specs"), new IntRange(0, max_floors), 1);//Choice Specs
+                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_band"), new IntRange(0, max_floors), 1);//Choice Band
+                monsterChanceZoneStep.Items.Add(new MapItem("held_assault_vest"), new IntRange(0, max_floors), 1);//Assault Vest
+                monsterChanceZoneStep.Items.Add(new MapItem("held_life_orb"), new IntRange(0, max_floors), 1);//Life Orb
+                monsterChanceZoneStep.Items.Add(new MapItem("held_heal_ribbon"), new IntRange(0, max_floors), 1);//Heal Ribbon
 
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, 30), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(new IntRange(480), true, true, new RandRange(1, 4)), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 20);//no theme
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 20);//no theme
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMoney(200, new RandRange(4, 7)), new IntRange(0, max_floors), 20);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
 
@@ -3993,33 +4005,33 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.ModStates.Add(new FlagType(typeof(ChestModGenState)));
                 chestChanceZoneStep.HouseStepSpawns.Add(new ChestStep<ListMapGenContext>(false, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                for (int ii = 0; ii < 18; ii++)
-                    chestChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, max_floors), 4);//gummis
-                chestChanceZoneStep.Items.Add(new MapItem(209), new IntRange(0, max_floors), 20);//big apricorn
-                chestChanceZoneStep.Items.Add(new MapItem(164), new IntRange(0, max_floors), 80);//elixir
-                chestChanceZoneStep.Items.Add(new MapItem(166), new IntRange(0, max_floors), 20);//max elixir
-                chestChanceZoneStep.Items.Add(new MapItem(160), new IntRange(0, max_floors), 20);//potion
-                chestChanceZoneStep.Items.Add(new MapItem(161), new IntRange(0, max_floors), 20);//max potion
-                chestChanceZoneStep.Items.Add(new MapItem(173), new IntRange(0, max_floors), 20);//full heal
-                for (int ii = 175; ii <= 181; ii++)
-                    chestChanceZoneStep.Items.Add(new MapItem(ii), new IntRange(0, max_floors), 15);//X-Items
+                foreach (string key in IterateGummis())
+                    chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
+                chestChanceZoneStep.Items.Add(new MapItem("apricorn_big"), new IntRange(0, max_floors), 20);//big apricorn
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, max_floors), 80);//elixir
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_max_elixir"), new IntRange(0, max_floors), 20);//max elixir
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, max_floors), 20);//potion
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, max_floors), 20);//max potion
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, max_floors), 20);//full heal
+                foreach (string key in IterateXItems())
+                    chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 15);//X-Items
                 for (int ii = 0; ii < specific_tms.Length; ii++)
                     chestChanceZoneStep.Items.Add(new MapItem(specific_tms[ii][0]), new IntRange(0, max_floors), 2);//TMs
-                chestChanceZoneStep.Items.Add(new MapItem(477), new IntRange(0, max_floors), 20);//nugget
-                chestChanceZoneStep.Items.Add(new MapItem(481, 3), new IntRange(0, max_floors), 10);//heart scale
-                chestChanceZoneStep.Items.Add(new MapItem(158, 1), new IntRange(0, max_floors), 20);//amber tear
-                chestChanceZoneStep.Items.Add(new MapItem(206, 3), new IntRange(0, max_floors), 20);//rare fossil
-                chestChanceZoneStep.Items.Add(new MapItem(101), new IntRange(0, max_floors), 20);//reviver seed
-                chestChanceZoneStep.Items.Add(new MapItem(102), new IntRange(0, max_floors), 20);//joy seed
-                chestChanceZoneStep.Items.Add(new MapItem(450), new IntRange(0, max_floors), 30);//link box
-                chestChanceZoneStep.Items.Add(new MapItem(451), new IntRange(0, max_floors), 30);//assembly box
-                chestChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, max_floors), 10);//ability capsule
+                chestChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 20);//nugget
+                chestChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 3), new IntRange(0, max_floors), 10);//heart scale
+                chestChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 20);//amber tear
+                chestChanceZoneStep.Items.Add(new MapItem("ammo_rare_fossil", 3), new IntRange(0, max_floors), 20);//rare fossil
+                chestChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 20);//reviver seed
+                chestChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, max_floors), 20);//joy seed
+                chestChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
+                chestChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, max_floors), 30);//assembly box
+                chestChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 10);//ability capsule
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(2, 5)), new IntRange(0, max_floors), 30);
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(new IntRange(101), true, true, new RandRange(2, 4)), new IntRange(0, max_floors), 10);//reviver seed
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(new IntRange(102), true, true, new RandRange(1, 4)), new IntRange(0, max_floors), 10);//joy seed
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(new IntRange(158, 182), true, true, new RandRange(1, 3)), new IntRange(0, max_floors), 100);//manmade items
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(new IntRange(300, 349), true, true, new RandRange(1, 3)), new IntRange(0, max_floors), 20);//equip
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(new IntRange(380, 398), true, true, new RandRange(1, 3)), new IntRange(0, max_floors), 10);//plates
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(2, 4), "seed_reviver"), new IntRange(0, max_floors), 10);//reviver seed
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 4), "seed_joy"), new IntRange(0, max_floors), 10);//joy seed
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(158, 182)), new IntRange(0, max_floors), 100);//manmade items
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(300, 349)), new IntRange(0, max_floors), 20);//equip
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(380, 398)), new IntRange(0, max_floors), 10);//plates
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(1, 3)), new IntRange(0, max_floors), 10);//TMs
                 chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(2, 5)), new IntRange(0, max_floors), 20);
                 chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(1)), new IntRange(0, max_floors), 10);
@@ -4072,25 +4084,25 @@ namespace DataGenerator.Data
 
                 //items for the vault
                 {
-                    vaultChanceZoneStep.Items.Add(new MapItem(164), new IntRange(0, 30), 800);//elixir
-                    vaultChanceZoneStep.Items.Add(new MapItem(166), new IntRange(0, 30), 100);//max elixir
-                    vaultChanceZoneStep.Items.Add(new MapItem(160), new IntRange(0, 30), 200);//potion
-                    vaultChanceZoneStep.Items.Add(new MapItem(161), new IntRange(0, 30), 100);//max potion
-                    vaultChanceZoneStep.Items.Add(new MapItem(173), new IntRange(0, 30), 200);//full heal
-                    for (int ii = 175; ii <= 181; ii++)
-                        vaultChanceZoneStep.Items.Add(new MapItem(ii), new IntRange(0, 30), 50);//X-Items
-                    for (int ii = 0; ii < 18; ii++)
-                        vaultChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, 30), 200);//gummis
-                    vaultChanceZoneStep.Items.Add(new MapItem(158, 1), new IntRange(0, 30), 2000);//amber tear
-                    vaultChanceZoneStep.Items.Add(new MapItem(101), new IntRange(0, 30), 200);//reviver seed
-                    vaultChanceZoneStep.Items.Add(new MapItem(102), new IntRange(0, 30), 200);//joy seed
-                    vaultChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, 30), 200);//ability capsule
-                    vaultChanceZoneStep.Items.Add(new MapItem(451), new IntRange(0, 30), 500);//link box
-                    vaultChanceZoneStep.Items.Add(new MapItem(450), new IntRange(0, 30), 500);//assembly box
-                    vaultChanceZoneStep.Items.Add(new MapItem(349), new IntRange(0, 30), 100);//harmony scarf
-                    vaultChanceZoneStep.Items.Add(new MapItem(285), new IntRange(15, 30), 50);//itemizer orb
-                    vaultChanceZoneStep.Items.Add(new MapItem(235, 3), new IntRange(15, 30), 50);//transfer wand
-                    vaultChanceZoneStep.Items.Add(new MapItem(455, 1), new IntRange(0, 30), 1000);//key
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, 30), 800);//elixir
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_max_elixir"), new IntRange(0, 30), 100);//max elixir
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, 30), 200);//potion
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, 30), 100);//max potion
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, 30), 200);//full heal
+                    foreach (string key in IterateXItems())
+                        vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 50);//X-Items
+                    foreach (string key in IterateGummis())
+                        vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 200);//gummis
+                    vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, 30), 2000);//amber tear
+                    vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, 30), 200);//reviver seed
+                    vaultChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, 30), 200);//joy seed
+                    vaultChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 200);//ability capsule
+                    vaultChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, 30), 500);//link box
+                    vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 500);//assembly box
+                    vaultChanceZoneStep.Items.Add(new MapItem("evo_harmony_scarf"), new IntRange(0, 30), 100);//harmony scarf
+                    vaultChanceZoneStep.Items.Add(new MapItem("orb_itemizer"), new IntRange(15, 30), 50);//itemizer orb
+                    vaultChanceZoneStep.Items.Add(new MapItem("wand_transfer", 3), new IntRange(15, 30), 50);//transfer wand
+                    vaultChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 1000);//key
                 }
 
                 // item spawnings for the vault
@@ -4103,7 +4115,7 @@ namespace DataGenerator.Data
                     treasures.Add(MapItem.CreateMoney(200));
                     treasures.Add(MapItem.CreateMoney(200));
                     treasures.Add(MapItem.CreateMoney(200));
-                    treasures.Add(new MapItem(152));
+                    treasures.Add(new MapItem("boost_iron"));
                     PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
 
@@ -4115,44 +4127,44 @@ namespace DataGenerator.Data
                         for(int ss = 0; ss < 18; ss++)
                             silks.Add(new MapItem(700 + 4 * ss), 10);
 
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
 
                     //445      ***    Heavy Box - 2* items
                     {
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(445, new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_heavy", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
                     }
 
                     //447      ***    Dainty Box - Stat ups, wonder gummi, nectar, golden apple, golden banana
                     {
                         SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
 
-                        for (int nn = 0; nn < 18; nn++)//Gummi
-                            boxTreasure.Add(new MapItem(76 + nn), 1);
+                        foreach (string key in IterateGummis())
+                            boxTreasure.Add(new MapItem(key), 1);
 
-                        boxTreasure.Add(new MapItem(151), 2);//protein
-                        boxTreasure.Add(new MapItem(152), 2);//iron
-                        boxTreasure.Add(new MapItem(153), 2);//calcium
-                        boxTreasure.Add(new MapItem(154), 2);//zinc
-                        boxTreasure.Add(new MapItem(155), 2);//carbos
-                        boxTreasure.Add(new MapItem(156), 2);//hp up
-                        boxTreasure.Add(new MapItem(150), 2);//nectar
+                        boxTreasure.Add(new MapItem("boost_protein"), 2);//protein
+                        boxTreasure.Add(new MapItem("boost_iron"), 2);//iron
+                        boxTreasure.Add(new MapItem("boost_calcium"), 2);//calcium
+                        boxTreasure.Add(new MapItem("boost_zinc"), 2);//zinc
+                        boxTreasure.Add(new MapItem("boost_carbos"), 2);//carbos
+                        boxTreasure.Add(new MapItem("boost_hp_up"), 2);//hp up
+                        boxTreasure.Add(new MapItem("boost_nectar"), 2);//nectar
 
-                        boxTreasure.Add(new MapItem(5), 10);//perfect apple
-                        boxTreasure.Add(new MapItem(7), 10);//big banana
-                        boxTreasure.Add(new MapItem(75), 4);//wonder gummi
-                        boxTreasure.Add(new MapItem(102), 10);//joy seed
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(447, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 3);
+                        boxTreasure.Add(new MapItem("food_apple_perfect"), 10);//perfect apple
+                        boxTreasure.Add(new MapItem("food_banana_big"), 10);//big banana
+                        boxTreasure.Add(new MapItem("gummi_wonder"), 4);//wonder gummi
+                        boxTreasure.Add(new MapItem("seed_joy"), 10);//joy seed
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_dainty", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 3);
                     }
 
                     //448    Glittery Box - golden apple, amber tear, golden banana, nugget, golden thorn 9
                     {
                         SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
-                        boxTreasure.Add(new MapItem(205), 10);//golden thorn
-                        boxTreasure.Add(new MapItem(158), 10);//Amber Tear
-                        boxTreasure.Add(new MapItem(477), 10);//nugget
-                        boxTreasure.Add(new MapItem(103), 10);//golden seed
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(448, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);
+                        boxTreasure.Add(new MapItem("ammo_golden_thorn"), 10);//golden thorn
+                        boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
+                        boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
+                        boxTreasure.Add(new MapItem("seed_golden"), 10);//golden seed
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_glittery", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);
                     }
 
                     MultiStepSpawner<ListMapGenContext, MapItem> boxPicker = new MultiStepSpawner<ListMapGenContext, MapItem>(new LoopedRand<IStepSpawner<ListMapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
@@ -4256,8 +4268,8 @@ namespace DataGenerator.Data
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
                     //227 Skarmory : 005 Sturdy : 319 Metal Sound : 314 Air Cutter : 191 Spikes : 092 Toxic
                     //242 Blissey : 032 Serene Grace : 069 Seismic Toss : 135 Soft-Boiled : 287 Refresh : 196 Icy Wind
-                    mobSpawns.Add(GetBossMob("skarmory", "sturdy", "metal_sound", "air_cutter", "spikes", "toxic", -1, new Loc(3, 2)));
-                    mobSpawns.Add(GetBossMob("blissey", "serene_grace", "seismic_toss", "soft_boiled", "refresh", "icy_wind", -1, new Loc(5, 2)));
+                    mobSpawns.Add(GetBossMob("skarmory", "sturdy", "metal_sound", "air_cutter", "spikes", "toxic", "", new Loc(3, 2)));
+                    mobSpawns.Add(GetBossMob("blissey", "serene_grace", "seismic_toss", "soft_boiled", "refresh", "icy_wind", "", new Loc(5, 2)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customShield, new Loc(4, 4), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
                     bossChanceZoneStep.BossSteps.Add(detours, new IntRange(0, 30), 10);
@@ -4276,9 +4288,9 @@ namespace DataGenerator.Data
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
                     //196 Espeon : 156 Magic Bounce : 094 Psychic : 247 Shadow Ball : 115 Reflect : 605 Dazzling Gleam
-                    mobSpawns.Add(GetBossMob("espeon", "magic_bounce", "psychic", "shadow_ball", "reflect", "dazzling_gleam", -1, new Loc(3, 2)));
+                    mobSpawns.Add(GetBossMob("espeon", "magic_bounce", "psychic", "shadow_ball", "reflect", "dazzling_gleam", "", new Loc(3, 2)));
                     //197 Umbreon : 028 Synchronize : 236 Moonlight : 212 Mean Look : 555 Snarl : 399 Dark Pulse
-                    mobSpawns.Add(GetBossMob("umbreon", "synchronize", "moonlight", "mean_look", "snarl", "dark_pulse", -1, new Loc(5, 2)));
+                    mobSpawns.Add(GetBossMob("umbreon", "synchronize", "moonlight", "mean_look", "snarl", "dark_pulse", "", new Loc(5, 2)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customEclipse, new Loc(4, 4), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
                     bossChanceZoneStep.BossSteps.Add(detours, new IntRange(0, 30), 10);
@@ -4299,9 +4311,9 @@ namespace DataGenerator.Data
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
                     //310 Manectric : 058 Minus : 604 Electric Terrain : 435 Discharge : 053 Flamethrower : 598 Eerie Impulse
-                    mobSpawns.Add(GetBossMob("manectric", "minus", "electric_terrain", "discharge", "flamethrower", "eerie_impulse", -1, new Loc(3, 5)));
+                    mobSpawns.Add(GetBossMob("manectric", "minus", "electric_terrain", "discharge", "flamethrower", "eerie_impulse", "", new Loc(3, 5)));
                     //181 Ampharos : 057 Plus : 192 Zap Cannon : 406 Dragon Pulse : 324 Signal Beam : 602 Magnetic Flux
-                    mobSpawns.Add(GetBossMob("ampharos", "plus", "zap_cannon", "dragon_pulse", "signal_beam", "magnetic_flux", -1, new Loc(5, 5)));
+                    mobSpawns.Add(GetBossMob("ampharos", "plus", "zap_cannon", "dragon_pulse", "signal_beam", "magnetic_flux", "", new Loc(5, 5)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customBatteryReverse, new Loc(4, 3), mobSpawns, true), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
                     bossChanceZoneStep.BossSteps.Add(detours, new IntRange(0, 30), 10);
@@ -4322,9 +4334,9 @@ namespace DataGenerator.Data
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
                     //311 Plusle : 057 Plus : 087 Thunder : 129 Swift : 417 Nasty Plot : 447 Grass Knot
-                    mobSpawns.Add(GetBossMob("plusle", "plus", "thunder", "swift", "nasty_plot", "grass_knot", -1, new Loc(3, 5)));
+                    mobSpawns.Add(GetBossMob("plusle", "plus", "thunder", "swift", "nasty_plot", "grass_knot", "", new Loc(3, 5)));
                     //312 Minun : 058 Minus : 240 Rain Dance : 097 Agility : 435 Discharge : 376 Trump Card
-                    mobSpawns.Add(GetBossMob("minun", "minus", "rain_dance", "agility", "discharge", "trump_card", -1, new Loc(5, 5)));
+                    mobSpawns.Add(GetBossMob("minun", "minus", "rain_dance", "agility", "discharge", "trump_card", "", new Loc(5, 5)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customBattery, new Loc(4, 7), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
                     bossChanceZoneStep.BossSteps.Add(detours, new IntRange(0, 30), 10);
@@ -4344,9 +4356,9 @@ namespace DataGenerator.Data
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
                     //128 Tauros : 022 Intimidate : 099 Rage : 037 Thrash : 523 Bulldoze : 371 Payback
-                    mobSpawns.Add(GetBossMob("tauros", "intimidate", "rage", "thrash", "bulldoze", "payback", -1, new Loc(4, 3)));
+                    mobSpawns.Add(GetBossMob("tauros", "intimidate", "rage", "thrash", "bulldoze", "payback", "", new Loc(4, 3)));
                     //241 Miltank : 113 Scrappy : 208 Milk Drink : 215 Heal Bell : 034 Body Slam : 045 Growl
-                    mobSpawns.Add(GetBossMob("miltank", "scrappy", "milk_drink", "heal_bell", "body_slam", "growl", -1, new Loc(4, 2)));
+                    mobSpawns.Add(GetBossMob("miltank", "scrappy", "milk_drink", "heal_bell", "body_slam", "growl", "", new Loc(4, 2)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customRailway, new Loc(4, 5), mobSpawns, true), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
                     bossChanceZoneStep.BossSteps.Add(detours, new IntRange(0, 30), 10);
@@ -4366,9 +4378,9 @@ namespace DataGenerator.Data
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
                     //414 Mothim : 110 Tinted Lens : 318 Silver Wind : 483 Quiver Dance : 403 Air Slash : 094 Psychic
-                    mobSpawns.Add(GetBossMob("mothim", "tinted_lens", "silver_wind", "quiver_dance", "air_slash", "psychic", -1, new Loc(3, 2)));
+                    mobSpawns.Add(GetBossMob("mothim", "tinted_lens", "silver_wind", "quiver_dance", "air_slash", "psychic", "", new Loc(3, 2)));
                     //413 Wormadam : 107 Anticipation : 522 Struggle Bug : 319 Metal Sound : 450 Bug Bite : 527 Electroweb
-                    mobSpawns.Add(GetBossMob(new MonsterID("wormadam", 2, "", Gender.Unknown), "anticipation", "struggle_bug", "metal_sound", "bug_bite", "electroweb", -1, new Loc(5, 2)));
+                    mobSpawns.Add(GetBossMob(new MonsterID("wormadam", 2, "", Gender.Unknown), "anticipation", "struggle_bug", "metal_sound", "bug_bite", "electroweb", "", new Loc(5, 2)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customButterfly, new Loc(4, 4), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
                     bossChanceZoneStep.BossSteps.Add(detours, new IntRange(0, 30), 10);
@@ -4388,9 +4400,9 @@ namespace DataGenerator.Data
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
                     //186 Politoed : 002 Drizzle : 054 Mist : 095 Hypnosis : 352 Water Pulse : 058 Ice Beam
-                    mobSpawns.Add(GetBossMob("politoed", "drizzle", "mist", "hypnosis", "water_pulse", "ice_beam", -1, new Loc(2, 2)));
+                    mobSpawns.Add(GetBossMob("politoed", "drizzle", "mist", "hypnosis", "water_pulse", "ice_beam", "", new Loc(2, 2)));
                     //062 Poliwrath : 033 Swift Swim : 187 Belly Drum : 127 Waterfall : 358 Wake-Up Slap : 509 Circle Throw
-                    mobSpawns.Add(GetBossMob("poliwrath", "swift_swim", "belly_drum", "waterfall", "wake_up_slap", "circle_throw", -1, new Loc(6, 2)));
+                    mobSpawns.Add(GetBossMob("poliwrath", "swift_swim", "belly_drum", "waterfall", "wake_up_slap", "circle_throw", "", new Loc(6, 2)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customWaterSwirl, new Loc(4, 4), mobSpawns, true), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
                     bossChanceZoneStep.BossSteps.Add(detours, new IntRange(0, 30), 10);
@@ -4408,9 +4420,9 @@ namespace DataGenerator.Data
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
                     //080 Slowbro : 012 Oblivious : 505 Heal Pulse : 244 Psych Up : 352 Water Pulse : 094 Psychic
-                    mobSpawns.Add(GetBossMob("slowbro", "oblivious", "heal_pulse", "psych_up", "water_pulse", "psychic", -1, new Loc(3, 3)));
+                    mobSpawns.Add(GetBossMob("slowbro", "oblivious", "heal_pulse", "psych_up", "water_pulse", "psychic", "", new Loc(3, 3)));
                     //199 Slowking : 012 Oblivious : 376 Trump Card : 347 Calm Mind : 408 Power Gem : 281 Yawn
-                    mobSpawns.Add(GetBossMob("slowking", "oblivious", "trump_card", "calm_mind", "power_gem", "yawn", -1, new Loc(5, 3)));
+                    mobSpawns.Add(GetBossMob("slowking", "oblivious", "trump_card", "calm_mind", "power_gem", "yawn", "", new Loc(5, 3)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customCrownWater, new Loc(4, 5), mobSpawns, false), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
                     bossChanceZoneStep.BossSteps.Add(detours, new IntRange(0, 30), 10);
@@ -4428,9 +4440,9 @@ namespace DataGenerator.Data
                     SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                     List<MobSpawn> mobSpawns = new List<MobSpawn>();
                     //034 Nidoking : 125 Sheer Force : 398 Poison Jab : 224 Megahorn : 116 Focus Energy : 529 Drill Run
-                    mobSpawns.Add(GetBossMob("nidoking", "sheer_force", "poison_jab", "megahorn", "focus_energy", "drill_run", -1, new Loc(3, 3)));
+                    mobSpawns.Add(GetBossMob("nidoking", "sheer_force", "poison_jab", "megahorn", "focus_energy", "drill_run", "", new Loc(3, 3)));
                     //031 Nidoqueen : 079 Rivalry : 270 Helping Hand : 445 Captivate : 414 Earth Power : 482 Sludge Wave
-                    mobSpawns.Add(GetBossMob("nidoqueen", "rivalry", "helping_hand", "captivate", "earth_power", "sludge_wave", -1, new Loc(5, 3)));
+                    mobSpawns.Add(GetBossMob("nidoqueen", "rivalry", "helping_hand", "captivate", "earth_power", "sludge_wave", "", new Loc(5, 3)));
                     bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customCrown, new Loc(4, 5), mobSpawns, true), 10);
                     AddBossRoomStep<ListMapGenContext> detours = CreateGenericBossRoomStep(bossRooms);
                     bossChanceZoneStep.BossSteps.Add(detours, new IntRange(0, 30), 10);
@@ -4447,71 +4459,71 @@ namespace DataGenerator.Data
 
                 //items for the vault
                 {
-                    bossChanceZoneStep.Items.Add(new MapItem(164), new IntRange(0, max_floors), 800);//elixir
-                    bossChanceZoneStep.Items.Add(new MapItem(166), new IntRange(0, max_floors), 100);//max elixir
-                    bossChanceZoneStep.Items.Add(new MapItem(160), new IntRange(0, max_floors), 200);//potion
-                    bossChanceZoneStep.Items.Add(new MapItem(161), new IntRange(0, max_floors), 100);//max potion
-                    bossChanceZoneStep.Items.Add(new MapItem(173), new IntRange(0, max_floors), 200);//full heal
-                    for (int ii = 175; ii <= 181; ii++)
-                        bossChanceZoneStep.Items.Add(new MapItem(ii), new IntRange(0, max_floors), 50);//X-Items
-                    for (int ii = 0; ii < 18; ii++)
-                        bossChanceZoneStep.Items.Add(new MapItem(76 + ii), new IntRange(0, max_floors), 200);//gummis
-                    bossChanceZoneStep.Items.Add(new MapItem(158, 1), new IntRange(0, max_floors), 200);//amber tear
-                    bossChanceZoneStep.Items.Add(new MapItem(101), new IntRange(0, max_floors), 200);//reviver seed
-                    bossChanceZoneStep.Items.Add(new MapItem(102), new IntRange(0, max_floors), 200);//joy seed
-                    bossChanceZoneStep.Items.Add(new MapItem(453), new IntRange(0, max_floors), 200);//ability capsule
-                    bossChanceZoneStep.Items.Add(new MapItem(349), new IntRange(0, max_floors), 100);//harmony scarf
-                    bossChanceZoneStep.Items.Add(new MapItem(455, 1), new IntRange(0, 30), 1000);//key
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, max_floors), 800);//elixir
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_max_elixir"), new IntRange(0, max_floors), 100);//max elixir
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, max_floors), 200);//potion
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, max_floors), 100);//max potion
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, max_floors), 200);//full heal
+                    foreach (string key in IterateXItems())
+                        bossChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 50);//X-Items
+                    foreach (string key in IterateGummis())
+                        bossChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 200);//gummis
+                    bossChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 200);//amber tear
+                    bossChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
+                    bossChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, max_floors), 200);//joy seed
+                    bossChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 200);//ability capsule
+                    bossChanceZoneStep.Items.Add(new MapItem("evo_harmony_scarf"), new IntRange(0, max_floors), 100);//harmony scarf
+                    bossChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 1000);//key
 
-                    bossChanceZoneStep.Items.Add(new MapItem(592), new IntRange(0, 30), 5);//TM Toxic
-                    bossChanceZoneStep.Items.Add(new MapItem(604), new IntRange(0, 30), 5);//TM Rock Climb
-                    bossChanceZoneStep.Items.Add(new MapItem(605), new IntRange(0, 30), 5);//TM Waterfall
-                    bossChanceZoneStep.Items.Add(new MapItem(609), new IntRange(0, 30), 5);//TM Charge Beam
-                    bossChanceZoneStep.Items.Add(new MapItem(613), new IntRange(0, 30), 5);//TM Hone Claws
-                    bossChanceZoneStep.Items.Add(new MapItem(615), new IntRange(0, 30), 5);//TM Giga Impact
-                    bossChanceZoneStep.Items.Add(new MapItem(617), new IntRange(0, 30), 5);//TM Dig
-                    bossChanceZoneStep.Items.Add(new MapItem(623), new IntRange(0, 30), 5);//TM Safeguard
-                    bossChanceZoneStep.Items.Add(new MapItem(626), new IntRange(0, 30), 5);//TM Work Up
-                    bossChanceZoneStep.Items.Add(new MapItem(627), new IntRange(0, 30), 5);//TM Scald
-                    bossChanceZoneStep.Items.Add(new MapItem(630), new IntRange(0, 30), 5);//TM U-turn
-                    bossChanceZoneStep.Items.Add(new MapItem(631), new IntRange(0, 30), 5);//TM Thunder Wave
-                    bossChanceZoneStep.Items.Add(new MapItem(645), new IntRange(0, 30), 5);//TM Roost
-                    bossChanceZoneStep.Items.Add(new MapItem(655), new IntRange(0, 30), 5);//TM Psyshock
-                    bossChanceZoneStep.Items.Add(new MapItem(660), new IntRange(0, 30), 5);//TM Thunder
-                    bossChanceZoneStep.Items.Add(new MapItem(661), new IntRange(0, 30), 5);//TM X-Scissor
-                    bossChanceZoneStep.Items.Add(new MapItem(682), new IntRange(0, 30), 5);//TM Taunt
-                    bossChanceZoneStep.Items.Add(new MapItem(684), new IntRange(0, 30), 5);//TM Ice Beam
-                    bossChanceZoneStep.Items.Add(new MapItem(686), new IntRange(0, 30), 5);//TM Light Screen
-                    bossChanceZoneStep.Items.Add(new MapItem(691), new IntRange(0, 30), 5);//TM Calm Mind
-                    bossChanceZoneStep.Items.Add(new MapItem(692), new IntRange(0, 30), 5);//TM Torment
-                    bossChanceZoneStep.Items.Add(new MapItem(693), new IntRange(0, 30), 5);//TM Strength
-                    bossChanceZoneStep.Items.Add(new MapItem(694), new IntRange(0, 30), 5);//TM Cut
-                    bossChanceZoneStep.Items.Add(new MapItem(695), new IntRange(0, 30), 5);//TM Rock Smash
-                    bossChanceZoneStep.Items.Add(new MapItem(696), new IntRange(0, 30), 5);//TM Bulk Up
-                    bossChanceZoneStep.Items.Add(new MapItem(698), new IntRange(0, 30), 5);//TM Rest
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_toxic"), new IntRange(0, 30), 5);//TM Toxic
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_climb"), new IntRange(0, 30), 5);//TM Rock Climb
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_waterfall"), new IntRange(0, 30), 5);//TM Waterfall
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_charge_beam"), new IntRange(0, 30), 5);//TM Charge Beam
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_hone_claws"), new IntRange(0, 30), 5);//TM Hone Claws
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_giga_impact"), new IntRange(0, 30), 5);//TM Giga Impact
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_dig"), new IntRange(0, 30), 5);//TM Dig
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_safeguard"), new IntRange(0, 30), 5);//TM Safeguard
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_work_up"), new IntRange(0, 30), 5);//TM Work Up
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_scald"), new IntRange(0, 30), 5);//TM Scald
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_u_turn"), new IntRange(0, 30), 5);//TM U-turn
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunder_wave"), new IntRange(0, 30), 5);//TM Thunder Wave
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_roost"), new IntRange(0, 30), 5);//TM Roost
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_psyshock"), new IntRange(0, 30), 5);//TM Psyshock
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunder"), new IntRange(0, 30), 5);//TM Thunder
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_x_scissor"), new IntRange(0, 30), 5);//TM X-Scissor
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_taunt"), new IntRange(0, 30), 5);//TM Taunt
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_ice_beam"), new IntRange(0, 30), 5);//TM Ice Beam
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_light_screen"), new IntRange(0, 30), 5);//TM Light Screen
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_calm_mind"), new IntRange(0, 30), 5);//TM Calm Mind
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_torment"), new IntRange(0, 30), 5);//TM Torment
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_strength"), new IntRange(0, 30), 5);//TM Strength
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_cut"), new IntRange(0, 30), 5);//TM Cut
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_smash"), new IntRange(0, 30), 5);//TM Rock Smash
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_bulk_up"), new IntRange(0, 30), 5);//TM Bulk Up
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_rest"), new IntRange(0, 30), 5);//TM Rest
 
-                    bossChanceZoneStep.Items.Add(new MapItem(591), new IntRange(0, 30), 5);//TM Psychic
-                    bossChanceZoneStep.Items.Add(new MapItem(595), new IntRange(0, 30), 5);//TM Flamethrower
-                    bossChanceZoneStep.Items.Add(new MapItem(599), new IntRange(0, 30), 5);//TM Hyper Beam
-                    bossChanceZoneStep.Items.Add(new MapItem(611), new IntRange(0, 30), 5);//TM Blizzard
-                    bossChanceZoneStep.Items.Add(new MapItem(619), new IntRange(0, 30), 5);//TM Rock Slide
-                    bossChanceZoneStep.Items.Add(new MapItem(620), new IntRange(0, 30), 5);//TM Sludge Wave
-                    bossChanceZoneStep.Items.Add(new MapItem(624), new IntRange(0, 30), 5);//TM Swords Dance
-                    bossChanceZoneStep.Items.Add(new MapItem(628), new IntRange(0, 30), 5);//TM Energy Ball
-                    bossChanceZoneStep.Items.Add(new MapItem(635), new IntRange(0, 30), 5);//TM Fire Blast
-                    bossChanceZoneStep.Items.Add(new MapItem(640), new IntRange(0, 30), 5);//TM Thunderbolt
-                    bossChanceZoneStep.Items.Add(new MapItem(641), new IntRange(0, 30), 5);//TM Shadow Ball
-                    bossChanceZoneStep.Items.Add(new MapItem(649), new IntRange(0, 30), 5);//TM Dark Pulse
-                    bossChanceZoneStep.Items.Add(new MapItem(654), new IntRange(0, 30), 5);//TM Earthquake
-                    bossChanceZoneStep.Items.Add(new MapItem(658), new IntRange(0, 30), 5);//TM Frost Breath
-                    bossChanceZoneStep.Items.Add(new MapItem(662), new IntRange(0, 30), 5);//TM Dazzling Gleam
-                    bossChanceZoneStep.Items.Add(new MapItem(666), new IntRange(0, 30), 5);//TM Snarl
-                    bossChanceZoneStep.Items.Add(new MapItem(669), new IntRange(0, 30), 5);//TM Focus Blast
-                    bossChanceZoneStep.Items.Add(new MapItem(672), new IntRange(0, 30), 5);//TM Overheat
-                    bossChanceZoneStep.Items.Add(new MapItem(676), new IntRange(0, 30), 5);//TM Sludge Bomb
-                    bossChanceZoneStep.Items.Add(new MapItem(683), new IntRange(0, 30), 5);//TM Solar Beam
-                    bossChanceZoneStep.Items.Add(new MapItem(685), new IntRange(0, 30), 5);//TM Flash Cannon
-                    bossChanceZoneStep.Items.Add(new MapItem(697), new IntRange(0, 30), 5);//TM Surf
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_psychic"), new IntRange(0, 30), 5);//TM Psychic
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_flamethrower"), new IntRange(0, 30), 5);//TM Flamethrower
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_hyper_beam"), new IntRange(0, 30), 5);//TM Hyper Beam
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_blizzard"), new IntRange(0, 30), 5);//TM Blizzard
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_slide"), new IntRange(0, 30), 5);//TM Rock Slide
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_sludge_wave"), new IntRange(0, 30), 5);//TM Sludge Wave
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_swords_dance"), new IntRange(0, 30), 5);//TM Swords Dance
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_energy_ball"), new IntRange(0, 30), 5);//TM Energy Ball
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_fire_blast"), new IntRange(0, 30), 5);//TM Fire Blast
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunderbolt"), new IntRange(0, 30), 5);//TM Thunderbolt
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_shadow_ball"), new IntRange(0, 30), 5);//TM Shadow Ball
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_dark_pulse"), new IntRange(0, 30), 5);//TM Dark Pulse
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_earthquake"), new IntRange(0, 30), 5);//TM Earthquake
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_frost_breath"), new IntRange(0, 30), 5);//TM Frost Breath
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_dazzling_gleam"), new IntRange(0, 30), 5);//TM Dazzling Gleam
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_snarl"), new IntRange(0, 30), 5);//TM Snarl
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_focus_blast"), new IntRange(0, 30), 5);//TM Focus Blast
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_overheat"), new IntRange(0, 30), 5);//TM Overheat
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_sludge_bomb"), new IntRange(0, 30), 5);//TM Sludge Bomb
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_recycle"), new IntRange(0, 30), 5);//TM Solar Beam
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_flash_cannon"), new IntRange(0, 30), 5);//TM Flash Cannon
+                    bossChanceZoneStep.Items.Add(new MapItem("tm_surf"), new IntRange(0, 30), 5);//TM Surf
 
                 }
 
@@ -4525,7 +4537,7 @@ namespace DataGenerator.Data
                     treasures.Add(MapItem.CreateMoney(200));
                     treasures.Add(MapItem.CreateMoney(200));
                     treasures.Add(MapItem.CreateMoney(200));
-                    treasures.Add(new MapItem(477));
+                    treasures.Add(new MapItem("loot_nugget"));
                     PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
                     SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
@@ -4536,12 +4548,12 @@ namespace DataGenerator.Data
                         for (int ss = 0; ss < 18; ss++)
                             silks.Add(new MapItem(700 + 4 * ss), 10);
 
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(444, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
 
                     //445      ***    Heavy Box - 2* items
                     {
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(445, new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_heavy", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
                     }
 
                     ////446      ***    Nifty Box - all high tier TMs, ability capsule, heart scale 9, max potion, full heal, max elixir
@@ -4550,46 +4562,46 @@ namespace DataGenerator.Data
 
                     //    for (int nn = 588; nn < 700; nn++)
                     //        boxTreasure.Add(new MapItem(nn), 1);//TMs
-                    //    boxTreasure.Add(new MapItem(453), 100);//ability capsule
-                    //    boxTreasure.Add(new MapItem(481), 100);//heart scale
-                    //    boxTreasure.Add(new MapItem(160), 60);//potion
-                    //    boxTreasure.Add(new MapItem(161), 30);//max potion
-                    //    boxTreasure.Add(new MapItem(173), 100);//full heal
-                    //    boxTreasure.Add(new MapItem(164), 60);//elixir
-                    //    boxTreasure.Add(new MapItem(166), 30);//max elixir
-                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>(446, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
+                    //    boxTreasure.Add(new MapItem("machine_ability_capsule"), 100);//ability capsule
+                    //    boxTreasure.Add(new MapItem("loot_heart_scale"), 100);//heart scale
+                    //    boxTreasure.Add(new MapItem("medicine_potion"), 60);//potion
+                    //    boxTreasure.Add(new MapItem("medicine_max_potion"), 30);//max potion
+                    //    boxTreasure.Add(new MapItem("medicine_full_heal"), 100);//full heal
+                    //    boxTreasure.Add(new MapItem("medicine_elixir"), 60);//elixir
+                    //    boxTreasure.Add(new MapItem("medicine_max_elixir"), 30);//max elixir
+                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_nifty", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
                     //}
 
                     //447      ***    Dainty Box - Stat ups, wonder gummi, nectar, golden apple, golden banana
                     {
                         SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
 
-                        for (int nn = 0; nn < 18; nn++)//Gummi
-                            boxTreasure.Add(new MapItem(76 + nn), 1);
+                        foreach (string key in IterateGummis())
+                            boxTreasure.Add(new MapItem(key), 1);
 
-                        boxTreasure.Add(new MapItem(151), 2);//protein
-                        boxTreasure.Add(new MapItem(152), 2);//iron
-                        boxTreasure.Add(new MapItem(153), 2);//calcium
-                        boxTreasure.Add(new MapItem(154), 2);//zinc
-                        boxTreasure.Add(new MapItem(155), 2);//carbos
-                        boxTreasure.Add(new MapItem(156), 2);//hp up
-                        boxTreasure.Add(new MapItem(150), 2);//nectar
+                        boxTreasure.Add(new MapItem("boost_protein"), 2);//protein
+                        boxTreasure.Add(new MapItem("boost_iron"), 2);//iron
+                        boxTreasure.Add(new MapItem("boost_calcium"), 2);//calcium
+                        boxTreasure.Add(new MapItem("boost_zinc"), 2);//zinc
+                        boxTreasure.Add(new MapItem("boost_carbos"), 2);//carbos
+                        boxTreasure.Add(new MapItem("boost_hp_up"), 2);//hp up
+                        boxTreasure.Add(new MapItem("boost_nectar"), 2);//nectar
 
-                        boxTreasure.Add(new MapItem(5), 10);//perfect apple
-                        boxTreasure.Add(new MapItem(7), 10);//big banana
-                        boxTreasure.Add(new MapItem(75), 4);//wonder gummi
-                        boxTreasure.Add(new MapItem(102), 10);//joy seed
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(447, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 3);
+                        boxTreasure.Add(new MapItem("food_apple_perfect"), 10);//perfect apple
+                        boxTreasure.Add(new MapItem("food_banana_big"), 10);//big banana
+                        boxTreasure.Add(new MapItem("gummi_wonder"), 4);//wonder gummi
+                        boxTreasure.Add(new MapItem("seed_joy"), 10);//joy seed
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_dainty", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 3);
                     }
 
                     //448    Glittery Box - golden apple, amber tear, golden banana, nugget, golden thorn 9
                     {
                         SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
-                        boxTreasure.Add(new MapItem(205), 10);//golden thorn
-                        boxTreasure.Add(new MapItem(158), 10);//Amber Tear
-                        boxTreasure.Add(new MapItem(477), 10);//nugget
-                        boxTreasure.Add(new MapItem(103), 10);//golden seed
-                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>(448, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);
+                        boxTreasure.Add(new MapItem("ammo_golden_thorn"), 10);//golden thorn
+                        boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
+                        boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
+                        boxTreasure.Add(new MapItem("seed_golden"), 10);//golden seed
+                        boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_glittery", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);
                     }
 
                     //449      ***    Deluxe Box - Legendary exclusive items, harmony scarf, golden items, stat ups, wonder gummi, perfect apricorn, max potion/full heal/max elixir
@@ -4599,7 +4611,7 @@ namespace DataGenerator.Data
                     //    legendSpawner.Species.Add(145);
                     //    legendSpawner.Species.Add(146);
                     //    legendSpawner.Species.Add(150);
-                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>(449, legendSpawner), 5);
+                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_deluxe", legendSpawner), 5);
                     //}
                     //{
                     //    SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
@@ -4607,18 +4619,18 @@ namespace DataGenerator.Data
                     //    for (int nn = 0; nn < 18; nn++)//Gummi
                     //        boxTreasure.Add(new MapItem(76 + nn), 1);
 
-                    //    boxTreasure.Add(new MapItem(4), 10);//golden apple
-                    //    boxTreasure.Add(new MapItem(8), 10);//gold banana
-                    //    boxTreasure.Add(new MapItem(158), 10);//Amber Tear
-                    //    boxTreasure.Add(new MapItem(477), 10);//nugget
-                    //    boxTreasure.Add(new MapItem(103), 10);//golden seed
-                    //    boxTreasure.Add(new MapItem(161), 30);//max potion
-                    //    boxTreasure.Add(new MapItem(173), 100);//full heal
-                    //    boxTreasure.Add(new MapItem(166), 30);//max elixir
-                    //    boxTreasure.Add(new MapItem(75), 4);//wonder gummi
-                    //    boxTreasure.Add(new MapItem(349), 1);//harmony scarf
-                    //    boxTreasure.Add(new MapItem(219), 1);//perfect apricorn
-                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>(449, new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
+                    //    boxTreasure.Add(new MapItem("food_apple_golden"), 10);//golden apple
+                    //    boxTreasure.Add(new MapItem("food_banana_golden"), 10);//gold banana
+                    //    boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
+                    //    boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
+                    //    boxTreasure.Add(new MapItem("seed_golden"), 10);//golden seed
+                    //    boxTreasure.Add(new MapItem("medicine_max_potion"), 30);//max potion
+                    //    boxTreasure.Add(new MapItem("medicine_full_heal"), 100);//full heal
+                    //    boxTreasure.Add(new MapItem("medicine_max_elixir"), 30);//max elixir
+                    //    boxTreasure.Add(new MapItem("gummi_wonder"), 4);//wonder gummi
+                    //    boxTreasure.Add(new MapItem("evo_harmony_scarf"), 1);//harmony scarf
+                    //    boxTreasure.Add(new MapItem("apricorn_perfect"), 1);//perfect apricorn
+                    //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_deluxe", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
                     //}
 
                     MultiStepSpawner<ListMapGenContext, MapItem> boxPicker = new MultiStepSpawner<ListMapGenContext, MapItem>(new LoopedRand<IStepSpawner<ListMapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
@@ -4646,46 +4658,46 @@ namespace DataGenerator.Data
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 0;
                 shop.SecurityStatus = "shop_security";
-                shop.Items.Add(new MapItem(10, 0, 100), 20);//oran
-                shop.Items.Add(new MapItem(11, 0, 150), 20);//leppa
-                shop.Items.Add(new MapItem(12, 0, 100), 20);//lum
-                shop.Items.Add(new MapItem(72, 0, 100), 20);//sitrus
-                shop.Items.Add(new MapItem(101, 0, 800), 15);//reviver
-                shop.Items.Add(new MapItem(118, 0, 500), 15);//ban
-                shop.Items.Add(new MapItem(450, 0, 1200), 20);//Link Box
-                shop.Items.Add(new MapItem(451, 0, 1200), 20);//Assembly Box
-                for (int nn = 211; nn <= 218; nn++)
-                    shop.Items.Add(new MapItem(nn, 0, 600), 2);//apricorns
-                shop.Items.Add(new MapItem(210, 0, 800), 5);//plain apricorn
-                for (int nn = 0; nn < 7; nn++)
-                    shop.Items.Add(new MapItem(43 + nn, 0, 600), 3);//pinch berries
-                for (int nn = 0; nn <= 18; nn++)
-                    shop.Items.Add(new MapItem(19 + nn, 0, 100), 1);//type berries
-                shop.Items.Add(new MapItem(112, 0, 350), 20);//blast seed
-                shop.Items.Add(new MapItem(102, 0, 2000), 5);//joy seed
+                shop.Items.Add(new MapItem("berry_oran", 0, 100), 20);//oran
+                shop.Items.Add(new MapItem("berry_leppa", 0, 150), 20);//leppa
+                shop.Items.Add(new MapItem("berry_lum", 0, 100), 20);//lum
+                shop.Items.Add(new MapItem("berry_sitrus", 0, 100), 20);//sitrus
+                shop.Items.Add(new MapItem("seed_reviver", 0, 800), 15);//reviver
+                shop.Items.Add(new MapItem("seed_ban", 0, 500), 15);//ban
+                shop.Items.Add(new MapItem("machine_recall_box", 0, 1200), 20);//Link Box
+                shop.Items.Add(new MapItem("machine_assembly_box", 0, 1200), 20);//Assembly Box
+                foreach (string key in IterateApricorns())
+                    shop.Items.Add(new MapItem(key, 0, 600), 2);//apricorns
+                shop.Items.Add(new MapItem("apricorn_plain", 0, 800), 5);//plain apricorn
+                foreach (string key in IteratePinchBerries())
+                    shop.Items.Add(new MapItem(key, 0, 600), 3);//pinch berries
+                foreach (string key in IterateTypeBerries())
+                    shop.Items.Add(new MapItem(key, 0, 100), 1);//type berries
+                shop.Items.Add(new MapItem("seed_blast", 0, 350), 20);//blast seed
+                shop.Items.Add(new MapItem("seed_joy", 0, 2000), 5);//joy seed
 
                 for(int nn = 0; nn < specific_tms.Length; nn++)
                     shop.Items.Add(new MapItem(specific_tms[nn][0], 0, specific_tms[nn][1]), 2);//TMs
 
-                for (int ii = 0; ii < 18; ii++)
-                    shop.Items.Add(new MapItem(331 + ii, 0, 2000), 5);//type items
+                foreach (string key in IterateTypeBoosters())
+                    shop.Items.Add(new MapItem(key, 0, 2000), 5);//type items
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
-                shop.ItemThemes.Add(new ItemThemeRange(new IntRange(331, 349), false, true, new RandRange(3, 5)), 10);//type items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(331, 349)), 10);//type items
                 shop.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
-                    new ItemThemeRange(new IntRange(450, 454), false, true, new RandRange(0, 3))), 10);//TMs + machines
+                    new ItemThemeRange(false, true, new RandRange(0, 3), new IntRange(450, 454))), 10);//TMs + machines
 
                 // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
-                shop.StartMob = GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new int[] { 1984, 1985, 1988 }, 0);
+                shop.StartMob = GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, 0);
                 {
                     // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
-                    shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new int[] { 1984, 1985, 1988 }, -1), 10);
+                    shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1), 10);
                     // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 50 disable : 374 fling
-                    shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "disable", "fling", new int[] { 1984, 1985, 1988 }, -1), 10);
+                    shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "disable", "fling", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1), 10);
                     // 352 Kecleon : 168 protean : 425 shadow sneak : 246 ancient power : 510 incinerate : 168 thief
-                    shop.Mobs.Add(GetShopMob("kecleon", "protean", "shadow_sneak", "ancient_power", "incinerate", "thief", new int[] { 1984, 1985, 1988 }, -1, "shuckle"), 10);
+                    shop.Mobs.Add(GetShopMob("kecleon", "protean", "shadow_sneak", "ancient_power", "incinerate", "thief", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1, "shuckle"), 10);
                     // 352 Kecleon : 168 protean : 332 aerial ace : 421 shadow claw : 60 psybeam : 364 feint
-                    shop.Mobs.Add(GetShopMob("kecleon", "protean", "aerial_ace", "shadow_claw", "psybeam", "feint", new int[] { 1984, 1985, 1988 }, -1, "shuckle"), 10);
+                    shop.Mobs.Add(GetShopMob("kecleon", "protean", "aerial_ace", "shadow_claw", "psybeam", "feint", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1, "shuckle"), 10);
                 }
 
                 shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(5, max_floors), 10);
@@ -4694,62 +4706,62 @@ namespace DataGenerator.Data
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 1;
                 shop.SecurityStatus = "shop_security";
-                shop.Items.Add(new MapItem(251, 0, 300), 20);//weather orb
-                shop.Items.Add(new MapItem(252, 0, 600), 20);//mobile orb
-                shop.Items.Add(new MapItem(253, 0, 600), 20);//luminous orb
-                shop.Items.Add(new MapItem(256, 0, 400), 20);//fill-in orb
-                shop.Items.Add(new MapItem(258, 0, 300), 20);//all-aim orb
-                shop.Items.Add(new MapItem(263, 0, 300), 20);//cleanse orb
-                shop.Items.Add(new MapItem(264, 0, 600), 20);//one-shot orb
-                shop.Items.Add(new MapItem(265, 0, 500), 20);//endure orb
-                shop.Items.Add(new MapItem(266, 0, 400), 20);//pierce orb
-                shop.Items.Add(new MapItem(267, 0, 600), 20);//stayaway orb
-                shop.Items.Add(new MapItem(268, 0, 600), 20);//all protect orb
-                shop.Items.Add(new MapItem(269, 0, 300), 20);//trap-see orb
-                shop.Items.Add(new MapItem(270, 0, 300), 20);//trapbust orb
-                shop.Items.Add(new MapItem(271, 0, 500), 20);//slumber orb
-                shop.Items.Add(new MapItem(272, 0, 400), 20);//totter orb
-                shop.Items.Add(new MapItem(273, 0, 400), 20);//petrify orb
-                shop.Items.Add(new MapItem(274, 0, 400), 20);//freeze orb
-                shop.Items.Add(new MapItem(275, 0, 500), 20);//spurn orb
-                shop.Items.Add(new MapItem(276, 0, 500), 20);//foe-hold orb
-                shop.Items.Add(new MapItem(277, 0, 400), 20);//nullify orb
-                shop.Items.Add(new MapItem(278, 0, 300), 20);//all-dodge orb
-                shop.Items.Add(new MapItem(281, 0, 500), 20);//one-room orb
-                shop.Items.Add(new MapItem(282, 0, 400), 20);//slow orb
-                shop.Items.Add(new MapItem(283, 0, 400), 20);//rebound orb
-                shop.Items.Add(new MapItem(284, 0, 400), 20);//mirror orb
-                shop.Items.Add(new MapItem(286, 0, 400), 20);//foe-seal orb
-                shop.Items.Add(new MapItem(287, 0, 600), 20);//halving orb
-                shop.Items.Add(new MapItem(288, 0, 300), 20);//rollcall orb
-                shop.Items.Add(new MapItem(289, 0, 300), 20);//mug orb
+                shop.Items.Add(new MapItem("orb_weather", 0, 300), 20);//weather orb
+                shop.Items.Add(new MapItem("orb_mobile", 0, 600), 20);//mobile orb
+                shop.Items.Add(new MapItem("orb_luminous", 0, 600), 20);//luminous orb
+                shop.Items.Add(new MapItem("orb_fill_in", 0, 400), 20);//fill-in orb
+                shop.Items.Add(new MapItem("orb_all_aim", 0, 300), 20);//all-aim orb
+                shop.Items.Add(new MapItem("orb_cleanse", 0, 300), 20);//cleanse orb
+                shop.Items.Add(new MapItem("orb_one_shot", 0, 600), 20);//one-shot orb
+                shop.Items.Add(new MapItem("orb_endure", 0, 500), 20);//endure orb
+                shop.Items.Add(new MapItem("orb_pierce", 0, 400), 20);//pierce orb
+                shop.Items.Add(new MapItem("orb_stayaway", 0, 600), 20);//stayaway orb
+                shop.Items.Add(new MapItem("orb_all_protect", 0, 600), 20);//all protect orb
+                shop.Items.Add(new MapItem("orb_trap_see", 0, 300), 20);//trap-see orb
+                shop.Items.Add(new MapItem("orb_trapbust", 0, 300), 20);//trapbust orb
+                shop.Items.Add(new MapItem("orb_slumber", 0, 500), 20);//slumber orb
+                shop.Items.Add(new MapItem("orb_totter", 0, 400), 20);//totter orb
+                shop.Items.Add(new MapItem("orb_petrify", 0, 400), 20);//petrify orb
+                shop.Items.Add(new MapItem("orb_freeze", 0, 400), 20);//freeze orb
+                shop.Items.Add(new MapItem("orb_spurn", 0, 500), 20);//spurn orb
+                shop.Items.Add(new MapItem("orb_foe_hold", 0, 500), 20);//foe-hold orb
+                shop.Items.Add(new MapItem("orb_nullify", 0, 400), 20);//nullify orb
+                shop.Items.Add(new MapItem("orb_all_dodge", 0, 300), 20);//all-dodge orb
+                shop.Items.Add(new MapItem("orb_one_room", 0, 500), 20);//one-room orb
+                shop.Items.Add(new MapItem("orb_slow", 0, 400), 20);//slow orb
+                shop.Items.Add(new MapItem("orb_rebound", 0, 400), 20);//rebound orb
+                shop.Items.Add(new MapItem("orb_mirror", 0, 400), 20);//mirror orb
+                shop.Items.Add(new MapItem("orb_foe_seal", 0, 400), 20);//foe-seal orb
+                shop.Items.Add(new MapItem("orb_halving", 0, 600), 20);//halving orb
+                shop.Items.Add(new MapItem("orb_rollcall", 0, 300), 20);//rollcall orb
+                shop.Items.Add(new MapItem("orb_mug", 0, 300), 20);//mug orb
 
-                shop.Items.Add(new MapItem(220, 3, 180), 40);//path wand
-                shop.Items.Add(new MapItem(221, 3, 150), 40);//pounce wand
-                shop.Items.Add(new MapItem(222, 3, 150), 40);//whirlwind wand
-                shop.Items.Add(new MapItem(223, 3, 150), 40);//switcher wand
-                shop.Items.Add(new MapItem(225, 3, 120), 40);//lure wand
-                shop.Items.Add(new MapItem(228, 3, 150), 40);//slow wand
-                shop.Items.Add(new MapItem(231, 3, 150), 40);//topsy-turvy wand
-                shop.Items.Add(new MapItem(232, 3, 150), 40);//warp wand
-                shop.Items.Add(new MapItem(233, 3, 120), 40);//purge wand
-                shop.Items.Add(new MapItem(234, 3, 120), 40);//lob wand
+                shop.Items.Add(new MapItem("wand_path", 3, 180), 40);//path wand
+                shop.Items.Add(new MapItem("wand_pounce", 3, 150), 40);//pounce wand
+                shop.Items.Add(new MapItem("wand_whirlwind", 3, 150), 40);//whirlwind wand
+                shop.Items.Add(new MapItem("wand_switcher", 3, 150), 40);//switcher wand
+                shop.Items.Add(new MapItem("wand_lure", 3, 120), 40);//lure wand
+                shop.Items.Add(new MapItem("wand_fear", 3, 150), 40);//slow wand
+                shop.Items.Add(new MapItem("wand_topsy_turvy", 3, 150), 40);//topsy-turvy wand
+                shop.Items.Add(new MapItem("wand_warp", 3, 150), 40);//warp wand
+                shop.Items.Add(new MapItem("wand_purge", 3, 120), 40);//purge wand
+                shop.Items.Add(new MapItem("wand_lob", 3, 120), 40);//lob wand
 
-                shop.Items.Add(new MapItem(351, 0, 2500), 50);//Fire Stone
-                shop.Items.Add(new MapItem(353, 0, 2500), 50);//Water Stone
-                shop.Items.Add(new MapItem(354, 0, 2500), 50);//Leaf Stone
-                shop.Items.Add(new MapItem(355, 0, 3500), 50);//Moon Stone
-                shop.Items.Add(new MapItem(356, 0, 3500), 50);//Sun Stone
-                shop.Items.Add(new MapItem(374, 0, 3500), 50);//King's Rock
-                shop.Items.Add(new MapItem(365, 0, 3500), 50);//Link Cable
+                shop.Items.Add(new MapItem("evo_fire_stone", 0, 2500), 50);//Fire Stone
+                shop.Items.Add(new MapItem("evo_water_stone", 0, 2500), 50);//Water Stone
+                shop.Items.Add(new MapItem("evo_leaf_stone", 0, 2500), 50);//Leaf Stone
+                shop.Items.Add(new MapItem("evo_moon_stone", 0, 3500), 50);//Moon Stone
+                shop.Items.Add(new MapItem("evo_sun_stone", 0, 3500), 50);//Sun Stone
+                shop.Items.Add(new MapItem("evo_kings_rock", 0, 3500), 50);//King's Rock
+                shop.Items.Add(new MapItem("evo_link_cable", 0, 3500), 50);//Link Cable
 
-                for (int ii = 0; ii < 18; ii++)
-                    shop.Items.Add(new MapItem(331 + ii, 0, 2000), 10);//type items
+                foreach (string key in IterateTypeBoosters())
+                    shop.Items.Add(new MapItem(key, 0, 2000), 10);//type items
 
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
-                shop.ItemThemes.Add(new ItemThemeRange(new IntRange(351, 380), false, true, new RandRange(3, 5)), 10);//evo items
-                shop.ItemThemes.Add(new ItemThemeRange(new IntRange(331, 349), false, true, new RandRange(3, 5)), 10);//type items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(351, 380)), 10);//evo items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(331, 349)), 10);//type items
 
                 // Cleffa : 98 Magic Guard : 118 Metronome : 47 Sing : 204 Charm : 313 Fake Tears
                 {
@@ -4769,11 +4781,11 @@ namespace DataGenerator.Data
                 }
                 {
                     // 35 Clefairy : 132 Friend Guard : 282 Knock Off : 107 Minimize : 236 Moonlight : 277 Magic Coat
-                    shop.Mobs.Add(GetShopMob("clefairy", "friend_guard", "knock_off", "minimize", "moonlight", "magic_coat", new int[] { 973, 976 }, -1), 10);
+                    shop.Mobs.Add(GetShopMob("clefairy", "friend_guard", "knock_off", "minimize", "moonlight", "magic_coat", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_03" }, -1), 10);
                     // 36 Clefable : 109 Unaware : 118 Metronome : 500 Stored Power : 343 Covet : 271 Trick
-                    shop.Mobs.Add(GetShopMob("clefable", "unaware", "metronome", "stored_power", "covet", "trick", new int[] { 973, 976 }, -1), 5);
+                    shop.Mobs.Add(GetShopMob("clefable", "unaware", "metronome", "stored_power", "covet", "trick", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_03" }, -1), 5);
                     // 36 Clefable : 98 Magic Guard : 118 Metronome : 213 Attract : 282 Knock Off : 266 Follow Me
-                    shop.Mobs.Add(GetShopMob("clefable", "magic_guard", "metronome", "attract", "knock_off", "follow_me", new int[] { 973, 976 }, -1), 5);
+                    shop.Mobs.Add(GetShopMob("clefable", "magic_guard", "metronome", "attract", "knock_off", "follow_me", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_03" }, -1), 5);
                 }
 
                 shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(5, max_floors), 10);
@@ -4885,14 +4897,14 @@ namespace DataGenerator.Data
                     //always holds a TM
                     MobSpawn mob = GetGenericMob("abra", "", "teleport", "", "", "", new RandRange(10));
                     MobSpawnItem keySpawn = new MobSpawnItem(true);
-                    keySpawn.Items.Add(new InvItem(587), 10);//TM Secret Power
-                    keySpawn.Items.Add(new InvItem(681), 10);//TM Hidden Power
-                    keySpawn.Items.Add(new InvItem(596), 10);//TM Protect
-                    keySpawn.Items.Add(new InvItem(590), 10);//TM Double Team
-                    keySpawn.Items.Add(new InvItem(680), 10);//TM Attract
-                    keySpawn.Items.Add(new InvItem(644), 10);//TM Captivate
-                    keySpawn.Items.Add(new InvItem(643), 10);//TM Fling
-                    keySpawn.Items.Add(new InvItem(682), 10);//TM Taunt
+                    keySpawn.Items.Add(new InvItem("tm_secret_power"), 10);//TM Secret Power
+                    keySpawn.Items.Add(new InvItem("tm_hidden_power"), 10);//TM Hidden Power
+                    keySpawn.Items.Add(new InvItem("tm_protect"), 10);//TM Protect
+                    keySpawn.Items.Add(new InvItem("tm_double_team"), 10);//TM Double Team
+                    keySpawn.Items.Add(new InvItem("tm_attract"), 10);//TM Attract
+                    keySpawn.Items.Add(new InvItem("tm_captivate"), 10);//TM Captivate
+                    keySpawn.Items.Add(new InvItem("tm_fling"), 10);//TM Fling
+                    keySpawn.Items.Add(new InvItem("tm_taunt"), 10);//TM Taunt
                     mob.SpawnFeatures.Add(keySpawn);
                     SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
                     specificTeam.Spawns.Add(mob);
@@ -4957,14 +4969,14 @@ namespace DataGenerator.Data
                     {
                         //2 pearls scattered in the maze, 3 pearls in the later floors
                         if (ii > 24)
-                            specificSpawns.Add(new MapItem(480, 1));//Pearl
-                        specificSpawns.Add(new MapItem(480, 1));//Pearl
-                        specificSpawns.Add(new MapItem(480, 1));//Pearl
+                            specificSpawns.Add(new MapItem("loot_pearl", 1));//Pearl
+                        specificSpawns.Add(new MapItem("loot_pearl", 1));//Pearl
+                        specificSpawns.Add(new MapItem("loot_pearl", 1));//Pearl
                     }
                     if (ii == 29)
-                        specificSpawns.Add(new MapItem(11));//Leppa Berry
+                        specificSpawns.Add(new MapItem("berry_leppa"));//Leppa Berry
                     if (ii == 39)
-                        specificSpawns.Add(new MapItem(491));//Gracidea
+                        specificSpawns.Add(new MapItem("loot_gracidea"));//Gracidea
 
                     RandomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(specificSpawns)));
                     layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
@@ -4974,14 +4986,14 @@ namespace DataGenerator.Data
 
                     if (ii == 0)
                     {
-                        specificSpawns.Add(new MapItem(211));//blue apricorns
-                        specificSpawns.Add(new MapItem(212));//green apricorns
-                        specificSpawns.Add(new MapItem(213));//brown apricorns
-                        specificSpawns.Add(new MapItem(214));//purple apricorns
-                        specificSpawns.Add(new MapItem(215));//red apricorns
-                        specificSpawns.Add(new MapItem(216));//white apricorns
-                        specificSpawns.Add(new MapItem(217));//yellow apricorns
-                        specificSpawns.Add(new MapItem(218));//black apricorns
+                        specificSpawns.Add(new MapItem("apricorn_blue"));//blue apricorns
+                        specificSpawns.Add(new MapItem("apricorn_green"));//green apricorns
+                        specificSpawns.Add(new MapItem("apricorn_brown"));//brown apricorns
+                        specificSpawns.Add(new MapItem("apricorn_purple"));//purple apricorns
+                        specificSpawns.Add(new MapItem("apricorn_red"));//red apricorns
+                        specificSpawns.Add(new MapItem("apricorn_white"));//white apricorns
+                        specificSpawns.Add(new MapItem("apricorn_yellow"));//yellow apricorns
+                        specificSpawns.Add(new MapItem("apricorn_black"));//black apricorns
                     }
 
                     RandomRoomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(new RandBag<MapItem>(specificSpawns), new RandRange(1))));
@@ -4990,28 +5002,28 @@ namespace DataGenerator.Data
                 }
 
                 SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
-                wallSpawns.Add(new MapItem(10), 50);//oran berry
-                wallSpawns.Add(new MapItem(481, 1), 50);//heart scale
-                wallSpawns.Add(new MapItem(201, 2), 20);//cacnea spike
-                wallSpawns.Add(new MapItem(200, 2), 20);//stick
-                wallSpawns.Add(new MapItem(37), 10);//jaboca berry
-                wallSpawns.Add(new MapItem(38), 10);//rowap berry
-                wallSpawns.Add(new MapItem(220, 1), 10);//path wand
-                wallSpawns.Add(new MapItem(228, 3), 10);//fear wand
-                wallSpawns.Add(new MapItem(235, 2), 10);//transfer wand
-                wallSpawns.Add(new MapItem(236, 4), 10);//vanish wand
+                wallSpawns.Add(new MapItem("berry_oran"), 50);//oran berry
+                wallSpawns.Add(new MapItem("loot_heart_scale", 1), 50);//heart scale
+                wallSpawns.Add(new MapItem("ammo_cacnea_spike", 2), 20);//cacnea spike
+                wallSpawns.Add(new MapItem("ammo_stick", 2), 20);//stick
+                wallSpawns.Add(new MapItem("berry_jaboca"), 10);//jaboca berry
+                wallSpawns.Add(new MapItem("berry_rowap"), 10);//rowap berry
+                wallSpawns.Add(new MapItem("wand_path", 1), 10);//path wand
+                wallSpawns.Add(new MapItem("wand_fear", 3), 10);//fear wand
+                wallSpawns.Add(new MapItem("wand_transfer", 2), 10);//transfer wand
+                wallSpawns.Add(new MapItem("wand_vanish", 4), 10);//vanish wand
 
-                wallSpawns.Add(new MapItem(43), 10);//apicot berry
-                wallSpawns.Add(new MapItem(44), 10);//liechi berry
-                wallSpawns.Add(new MapItem(45), 10);//ganlon berry
-                wallSpawns.Add(new MapItem(46), 10);//salac berry
-                wallSpawns.Add(new MapItem(47), 10);//petaya berry
-                wallSpawns.Add(new MapItem(48), 10);//starf berry
-                wallSpawns.Add(new MapItem(49), 10);//micle berry
-                wallSpawns.Add(new MapItem(51), 10);//enigma berry
+                wallSpawns.Add(new MapItem("berry_apicot"), 10);//apicot berry
+                wallSpawns.Add(new MapItem("berry_liechi"), 10);//liechi berry
+                wallSpawns.Add(new MapItem("berry_ganlon"), 10);//ganlon berry
+                wallSpawns.Add(new MapItem("berry_salac"), 10);//salac berry
+                wallSpawns.Add(new MapItem("berry_petaya"), 10);//petaya berry
+                wallSpawns.Add(new MapItem("berry_starf"), 10);//starf berry
+                wallSpawns.Add(new MapItem("berry_micle"), 10);//micle berry
+                wallSpawns.Add(new MapItem("berry_enigma"), 10);//enigma berry
 
-                for (int nn = 0; nn < 18; nn++)//Type Berry
-                    wallSpawns.Add(new MapItem(19 + nn), 1);
+                foreach (string key in IterateTypeBerries())
+                    wallSpawns.Add(new MapItem(key), 1);
 
                 TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile("wall"));
                 wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));

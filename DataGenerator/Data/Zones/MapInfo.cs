@@ -130,7 +130,7 @@ namespace DataGenerator.Data
                     //newMob.SpDefBonus = MonsterFormData.MAX_STAT_BOOST;
                     //newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 4;
                     newMob.HP = newMob.MaxHP;
-                    //newMob.HeldItem = new InvItem(101);
+                    //newMob.HeldItem = new InvItem("seed_reviver");
                     //newMob.Skills[3].Element.Allowed = false;
                 }
                 map.MapTeams.Add(team);
@@ -196,7 +196,7 @@ namespace DataGenerator.Data
                     newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST;
                     newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 4;
                     newMob.HP = newMob.MaxHP;
-                    newMob.EquippedItem = new InvItem(101);
+                    newMob.EquippedItem = new InvItem("seed_reviver");
                     newMob.Skills[3].Element.Enabled = false;
                 }
                 {
@@ -220,7 +220,7 @@ namespace DataGenerator.Data
                     newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST;
                     newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 4;
                     newMob.HP = newMob.MaxHP;
-                    newMob.EquippedItem = new InvItem(321);
+                    newMob.EquippedItem = new InvItem("held_assault_vest");
                     newMob.Skills[3].Element.Enabled = false;
                 }
                 {
@@ -244,7 +244,7 @@ namespace DataGenerator.Data
                     newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST;
                     newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 4;
                     newMob.HP = newMob.MaxHP;
-                    newMob.EquippedItem = new InvItem(12);
+                    newMob.EquippedItem = new InvItem("berry_lum");
                     newMob.Skills[3].Element.Enabled = false;
                 }
                 map.MapTeams.Add(team);

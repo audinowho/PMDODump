@@ -162,7 +162,7 @@ namespace DataGenerator.Data
                         post_mob.Tactic = "wait_only";
                         post_mob.Level = new RandRange(50);
                         post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc((ii % 5) * 2 + 2, ii / 5 * 2 + 2)));
-                        post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                        post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "apple"));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
 
                         PlaceNoLocMobsStep<StairsMapGenContext> mobStep = new PlaceNoLocMobsStep<StairsMapGenContext>(new PresetMultiTeamSpawner<StairsMapGenContext>(post_team));
@@ -213,8 +213,8 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
 
                     List<(InvItem, Loc)> items = new List<(InvItem, Loc)>();
-                    items.Add((new InvItem(12), new Loc(7, 32)));//Lum Berry
-                    items.Add((new InvItem(12), new Loc(8, 33)));//Lum Berry
+                    items.Add((new InvItem("berry_lum"), new Loc(7, 32)));//Lum Berry
+                    items.Add((new InvItem("berry_lum"), new Loc(8, 33)));//Lum Berry
                     AddSpecificSpawn(layout, items, PR_SPAWN_ITEMS);
 
                     //Tilesets
@@ -280,7 +280,7 @@ namespace DataGenerator.Data
 
                     //sealing the vault
                     {
-                        KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>("sealed_block", "sealed_door", 455);
+                        KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>("sealed_block", "sealed_door", "key");
                         vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                         layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
                     }
@@ -290,7 +290,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -312,8 +312,7 @@ namespace DataGenerator.Data
                     //monsterhouse
                     {
                         MonsterHouseStep<MapGenContext> monsterHouse = new MonsterHouseStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
-                        for (int ii = 250; ii < 290; ii++)
-                            monsterHouse.Items.Add(new MapItem(ii), 10);
+                        monsterHouse.Items.Add(new MapItem("orb_escape"), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(5, 10)), 10);
                         List<string> monsterKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
                         for (int ii = 387; ii < 397; ii++)
@@ -325,8 +324,8 @@ namespace DataGenerator.Data
                     // items for the vault
                     {
                         BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
-                        treasures.SpecificSpawns.Add(new InvItem(51));
-                        treasures.SpecificSpawns.Add(new InvItem(51));
+                        treasures.SpecificSpawns.Add(new InvItem("berry_enigma"));
+                        treasures.SpecificSpawns.Add(new InvItem("berry_enigma"));
                         RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
                         detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                         layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
@@ -392,7 +391,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -433,32 +432,32 @@ namespace DataGenerator.Data
                         ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                         shop.Personality = 2;
                         shop.SecurityStatus = "shop_security";
-                        shop.Items.Add(new MapItem(101, 0, 800), 10);//reviver seed
-                        shop.Items.Add(new MapItem(112, 0, 500), 10);//blast seed
-                        shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
-                        shop.Items.Add(new MapItem(234, 9, 180), 10);//Lob Wand
-                        shop.Items.Add(new MapItem(352, 0, 2000), 10);//thunder stone
+                        shop.Items.Add(new MapItem("seed_reviver", 0, 800), 10);//reviver seed
+                        shop.Items.Add(new MapItem("seed_blast", 0, 500), 10);//blast seed
+                        shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                        shop.Items.Add(new MapItem("wand_lob", 9, 180), 10);//Lob Wand
+                        shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                         shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
                         // 137 Porygon : 36 Trace : 97 Agility : 59 Blizzard : 435 Discharge : 94 Psychic
-                        shop.StartMob = GetShopMob("porygon", "trace", "agility", "blizzard", "discharge", "psychic", new int[] { 1322, 1323, 1324, 1325 }, 2);
+                        shop.StartMob = GetShopMob("porygon", "trace", "agility", "blizzard", "discharge", "psychic", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, 2);
                         {
                             // 474 Porygon-Z : 91 Adaptability : 247 Shadow Ball : 63 Hyper Beam : 435 Discharge : 373 Embargo
-                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "shadow_ball", "hyper_beam", "discharge", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "shadow_ball", "hyper_beam", "discharge", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                             // 474 Porygon-Z : 91 Adaptability : 160 Conversion : 59 Blizzard : 435 Discharge : 473 Psyshock
-                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "conversion", "blizzard", "discharge", "psyshock", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "conversion", "blizzard", "discharge", "psyshock", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                             // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 63 Hyper Beam : 435 Discharge : 373 Embargo
-                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "hyper_beam", "discharge", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "hyper_beam", "discharge", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                             // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 161 Tri Attack : 247 Shadow Ball : 373 Embargo
-                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "tri_attack", "shadow_ball", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "tri_attack", "shadow_ball", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                             // 474 Porygon-Z : 88 Download : 97 Agility : 473 Psyshock : 324 Signal Beam : 373 Embargo
-                            shop.Mobs.Add(GetShopMob("porygon_z", "download", "agility", "psyshock", "signal_beam", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob("porygon_z", "download", "agility", "psyshock", "signal_beam", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                             // 233 Porygon2 : 36 Trace : 176 Conversion2 : 105 Recover : 60 Psybeam : 324 Signal Beam
-                            shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "recover", "psybeam", "signal_beam", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "recover", "psybeam", "signal_beam", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                             // 233 Porygon2 : 36 Trace : 176 Conversion2 : 105 Recover : 60 Psybeam : 435 Discharge
-                            shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "recover", "psybeam", "discharge", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "recover", "psybeam", "discharge", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                             // 233 Porygon2 : 36 Trace : 176 Conversion2 : 277 Magic Coat : 161 Tri Attack : 97 Agility
-                            shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "magic_coat", "tri_attack", "agility", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                            shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "magic_coat", "tri_attack", "agility", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                         }
                         layout.GenSteps.Add(PR_SHOPS, shop);
                     }
@@ -466,8 +465,7 @@ namespace DataGenerator.Data
                     //chest
                     {
                         ChestStep<MapGenContext> monsterHouse = new ChestStep<MapGenContext>(false, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
-                        for (int ii = 250; ii < 251; ii++)
-                            monsterHouse.Items.Add(new MapItem(ii), 10);
+                        monsterHouse.Items.Add(new MapItem("orb_escape"), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(5, 10)), 10);
                         List<string> monsterKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
                         for (int ii = 387; ii < 397; ii++)
@@ -506,9 +504,9 @@ namespace DataGenerator.Data
                     //vault treasures
                     {
                         BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
-                        treasures.SpecificSpawns.Add(new InvItem(51));
-                        treasures.SpecificSpawns.Add(new InvItem(51));
-                        treasures.SpecificSpawns.Add(new InvItem(51));
+                        treasures.SpecificSpawns.Add(new InvItem("berry_enigma"));
+                        treasures.SpecificSpawns.Add(new InvItem("berry_enigma"));
+                        treasures.SpecificSpawns.Add(new InvItem("berry_enigma"));
                         RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
                         detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                         layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
@@ -545,7 +543,7 @@ namespace DataGenerator.Data
                             post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(1, 4)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawns.Add(post_mob);
                         }
@@ -555,7 +553,7 @@ namespace DataGenerator.Data
                             post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(7, 4)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawns.Add(post_mob);
                         }
@@ -565,7 +563,7 @@ namespace DataGenerator.Data
                             post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(4, 1)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawns.Add(post_mob);
                         }
@@ -598,9 +596,9 @@ namespace DataGenerator.Data
                     //vault treasures
                     {
                         BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
-                        treasures.SpecificSpawns.Add(new InvItem(75));
-                        treasures.SpecificSpawns.Add(new InvItem(75));
-                        treasures.SpecificSpawns.Add(new InvItem(75));
+                        treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
+                        treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
+                        treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
                         RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
                         detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
                         layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
@@ -658,7 +656,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -678,8 +676,7 @@ namespace DataGenerator.Data
 
                     {
                         MonsterHallStep<MapGenContext> monsterHouse = new MonsterHallStep<MapGenContext>(new Loc(12, 9), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
-                        for (int ii = 250; ii < 290; ii++)
-                            monsterHouse.Items.Add(new MapItem(ii), 10);
+                        monsterHouse.Items.Add(new MapItem("orb_escape"), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(5, 10)), 10);
                         List<string> monsterKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
                         for (int ii = 387; ii < 397; ii++)
@@ -730,7 +727,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -749,8 +746,7 @@ namespace DataGenerator.Data
 
                     {
                         MonsterMansionStep<MapGenContext> monsterHouse = new MonsterMansionStep<MapGenContext>();
-                        for (int ii = 250; ii < 290; ii++)
-                            monsterHouse.Items.Add(new MapItem(ii), 10);
+                        monsterHouse.Items.Add(new MapItem("orb_escape"), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(12, 16)), 10);
                         List<string> monsterKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
                         for (int ii = 387; ii < 397; ii++)
@@ -822,7 +818,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -842,8 +838,7 @@ namespace DataGenerator.Data
 
                     {
                         MonsterMansionStep<MapGenContext> monsterHouse = new MonsterMansionStep<MapGenContext>();
-                        for (int ii = 250; ii < 290; ii++)
-                            monsterHouse.Items.Add(new MapItem(ii), 10);
+                        monsterHouse.Items.Add(new MapItem("orb_escape"), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(12, 16)), 10);
                         List<string> monsterKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
                         for (int ii = 387; ii < 397; ii++)
@@ -889,7 +884,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
 
@@ -1034,7 +1029,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
 
@@ -1187,7 +1182,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<ListMapGenContext> itemSpawnStep = new ItemSpawnStep<ListMapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
 
@@ -1223,7 +1218,7 @@ namespace DataGenerator.Data
 
                     //secret items
                     SpawnList<InvItem> secretItemSpawns = new SpawnList<InvItem>();
-                    secretItemSpawns.Add(new InvItem(101), 10);
+                    secretItemSpawns.Add(new InvItem("seed_reviver"), 10);
 
                     //DisconnectedSpawnStep<ListMapGenContext, InvItem, MapGenEntrance> secretPlacement = new DisconnectedSpawnStep<ListMapGenContext, InvItem, MapGenEntrance>(new PickerSpawner<ListMapGenContext, InvItem>(new LoopedRand<InvItem>(secretItemSpawns, new RandRange(1, 2))));
                     RandomRoomSpawnStep<ListMapGenContext, InvItem> secretPlacement = new RandomRoomSpawnStep<ListMapGenContext, InvItem>(new PickerSpawner<ListMapGenContext, InvItem>(new LoopedRand<InvItem>(secretItemSpawns, new RandRange(1, 2))));
@@ -1370,7 +1365,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
 
@@ -1532,7 +1527,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
 
@@ -1615,7 +1610,7 @@ namespace DataGenerator.Data
                             post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(1, 4)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawns.Add(post_mob);
                         }
@@ -1625,7 +1620,7 @@ namespace DataGenerator.Data
                             post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(7, 4)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawns.Add(post_mob);
                         }
@@ -1635,7 +1630,7 @@ namespace DataGenerator.Data
                             post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(4, 1)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawns.Add(post_mob);
                         }
@@ -1668,9 +1663,9 @@ namespace DataGenerator.Data
                     //vault treasures
                     {
                         BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
-                        treasures.SpecificSpawns.Add(new InvItem(75));
-                        treasures.SpecificSpawns.Add(new InvItem(75));
-                        treasures.SpecificSpawns.Add(new InvItem(75));
+                        treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
+                        treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
+                        treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
                         RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
                         detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
                         layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
@@ -1707,7 +1702,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
 
@@ -1822,7 +1817,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
 
@@ -1924,7 +1919,7 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem(11), 12);
+                    items.Add(new InvItem("berry_leppa"), 12);
                     itemSpawnStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnStep);
 
@@ -2192,11 +2187,11 @@ namespace DataGenerator.Data
                     {
                         EffectTile effect = new EffectTile("chest_full", true, new Loc(4, 4));
                         effect.Danger = true;
-                        effect.TileStates.Set(new UnlockState(455));
+                        effect.TileStates.Set(new UnlockState("key"));
                         effect.TileStates.Set(new BoundsState(new Rect(0, 0, 10, 10)));
                         ItemSpawnState itemSpawn = new ItemSpawnState();
-                        for (int ii = 0; ii < 10; ii++)
-                            itemSpawn.Spawns.Add(new MapItem(100 + ii));
+                        foreach(string key in IterateEvoItems())
+                            itemSpawn.Spawns.Add(new MapItem(key));
                         effect.TileStates.Set(itemSpawn);
                         MobSpawnState mobSpawn = new MobSpawnState();
                         List<string> monsterKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
@@ -2215,11 +2210,11 @@ namespace DataGenerator.Data
                     {
                         EffectTile effect = new EffectTile("chest_full", true, new Loc(5, 5));
                         effect.Danger = true;
-                        effect.TileStates.Set(new UnlockState(455));
+                        effect.TileStates.Set(new UnlockState("key"));
                         effect.TileStates.Set(new BoundsState(new Rect(3, 3, 13, 13)));
                         ItemSpawnState itemSpawn = new ItemSpawnState();
-                        for (int ii = 0; ii < 10; ii++)
-                            itemSpawn.Spawns.Add(new MapItem(100 + ii));
+                        foreach (string key in IterateEvoItems())
+                            itemSpawn.Spawns.Add(new MapItem(key));
                         effect.TileStates.Set(itemSpawn);
                         MobSpawnState mobSpawn = new MobSpawnState();
                         List<string> monsterKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
@@ -2243,12 +2238,12 @@ namespace DataGenerator.Data
 
                         // place the items of the shop
                         List<InvItem> treasure1 = new List<InvItem>();
-                        treasure1.Add(new InvItem(1, false, 0, 50));//Apple
+                        treasure1.Add(new InvItem("food_apple", false, 0, 50));//Apple
                         List<InvItem> treasure2 = new List<InvItem>();
-                        treasure2.Add(new InvItem(444, false, 753, 8000));//Poison Dust
+                        treasure2.Add(new InvItem("box_light", false, 753, 8000));//Poison Dust
                         List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
                         List<InvItem> treasure3 = new List<InvItem>();
-                        treasure3.Add(new InvItem(234, false, 9, 180));//Lob Wand
+                        treasure3.Add(new InvItem("wand_lob", false, 9, 180));//Lob Wand
                         items.Add((treasure1, new Loc(22, 1)));
                         items.Add((treasure2, new Loc(22, 2)));
                         items.Add((treasure3, new Loc(23, 2)));
@@ -2257,14 +2252,14 @@ namespace DataGenerator.Data
                         // place the map status
                         {
                             ShopSecurityState state = new ShopSecurityState();
-                            state.Security.Add(GetShopMob("kecleon", "protean", "focus_punch", "shadow_sneak", "incinerate", "thief", new int[] { 1984, 1985, 1988 }, -1), 10);
+                            state.Security.Add(GetShopMob("kecleon", "protean", "focus_punch", "shadow_sneak", "incinerate", "thief", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1), 10);
                             StateMapStatusStep<StairsMapGenContext> statusData = new StateMapStatusStep<StairsMapGenContext>("shop_security", state);
                             layout.GenSteps.Add(PR_FLOOR_DATA, statusData);
                         }
 
                         // place the mob running the shop
                         {
-                            MobSpawn post_mob = GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new int[] { 1984, 1985, 1988 }, 0);
+                            MobSpawn post_mob = GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, 0);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(21, 1)));
                             SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
 
@@ -2306,7 +2301,7 @@ namespace DataGenerator.Data
                             post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(36, 6) + new Loc(1)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawnState.Spawns.Add(post_mob);
                         }
@@ -2316,7 +2311,7 @@ namespace DataGenerator.Data
                             post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(38, 6) + new Loc(1)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawnState.Spawns.Add(post_mob);
                         }
@@ -2326,7 +2321,7 @@ namespace DataGenerator.Data
                             post_mob.Tactic = "wait_only";
                             post_mob.Level = new RandRange(50);
                             post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(40, 6) + new Loc(1)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, 1));
+                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
                             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
                             mobSpawnState.Spawns.Add(post_mob);
                         }
@@ -2350,7 +2345,7 @@ namespace DataGenerator.Data
                         for (int mm = 1; mm < howMany; mm++)
                             state.Tiles.Add(new Loc(40 + patternDiff * mm + 1, 2 + 1));
                         effect2.TileStates.Set(state);
-                        effect2.TileStates.Set(new UnlockState(455));
+                        effect2.TileStates.Set(new UnlockState("key"));
                         ((Tile)drawStep.Tiles[40][2]).Effect = effect2;
                     }
                     for (int nn = 1; nn < howMany; nn++)
@@ -2407,24 +2402,24 @@ namespace DataGenerator.Data
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 0;
                     shop.SecurityStatus = "shop_security";
-                    shop.Items.Add(new MapItem(101, 0, 800), 10);//reviver seed
-                    shop.Items.Add(new MapItem(112, 0, 500), 10);//blast seed
-                    shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
-                    shop.Items.Add(new MapItem(234, 9, 180), 10);//Lob Wand
-                    shop.Items.Add(new MapItem(352, 0, 2000), 10);//thunder stone
+                    shop.Items.Add(new MapItem("seed_reviver", 0, 800), 10);//reviver seed
+                    shop.Items.Add(new MapItem("seed_blast", 0, 500), 10);//blast seed
+                    shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                    shop.Items.Add(new MapItem("wand_lob", 9, 180), 10);//Lob Wand
+                    shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
                     // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
-                    shop.StartMob = GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new int[] { 1984, 1985, 1988 }, 0);
+                    shop.StartMob = GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, 0);
                     {
                         // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
-                        shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new int[] { 1984, 1985, 1988 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1), 10);
                         // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 50 disable : 374 fling
-                        shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "disable", "fling", new int[] { 1984, 1985, 1988 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("kecleon", "color_change", "synchronoise", "bind", "disable", "fling", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1), 10);
                         // 352 Kecleon : 168 protean : 246 ancient power : 425 shadow sneak : 510 incinerate : 168 thief
-                        shop.Mobs.Add(GetShopMob("kecleon", "protean", "ancient_power", "shadow_sneak", "incinerate", "thief", new int[] { 1984, 1985, 1988 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("kecleon", "protean", "ancient_power", "shadow_sneak", "incinerate", "thief", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1), 10);
                         // 352 Kecleon : 168 protean : 332 aerial ace : 421 shadow claw : 60 psybeam : 364 feint
-                        shop.Mobs.Add(GetShopMob("kecleon", "protean", "aerial_ace", "shadow_claw", "psybeam", "feint", new int[] { 1984, 1985, 1988 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("kecleon", "protean", "aerial_ace", "shadow_claw", "psybeam", "feint", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1), 10);
                     }
                     shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
                 }
@@ -2434,8 +2429,8 @@ namespace DataGenerator.Data
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 1;
                     shop.SecurityStatus = "shop_security";
-                    shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
-                    shop.Items.Add(new MapItem(352, 0, 2000), 10);//thunder stone
+                    shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                    shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
                     // Cleffa : 98 Magic Guard : 118 Metronome : 47 Sing : 204 Charm : 313 Fake Tears
@@ -2456,11 +2451,11 @@ namespace DataGenerator.Data
                     }
                     {
                         // 35 Clefairy : 132 Friend Guard : 282 Knock Off : 107 Minimize : 236 Moonlight : 277 Magic Coat
-                        shop.Mobs.Add(GetShopMob("clefairy", "friend_guard", "knock_off", "minimize", "moonlight", "magic_coat", new int[] { 973, 976 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("clefairy", "friend_guard", "knock_off", "minimize", "moonlight", "magic_coat", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_02" }, -1), 10);
                         // 36 Clefable : 109 Unaware : 118 Metronome : 500 Stored Power : 343 Covet : 271 Trick
-                        shop.Mobs.Add(GetShopMob("clefable", "unaware", "metronome", "stored_power", "covet", "trick", new int[] { 973, 976 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("clefable", "unaware", "metronome", "stored_power", "covet", "trick", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_02" }, -1), 10);
                         // 36 Clefable : 98 Magic Guard : 118 Metronome : 213 Attract : 282 Knock Off : 266 Follow Me
-                        shop.Mobs.Add(GetShopMob("clefable", "magic_guard", "metronome", "attract", "knock_off", "follow_me", new int[] { 973, 976 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("clefable", "magic_guard", "metronome", "attract", "knock_off", "follow_me", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_02" }, -1), 10);
                     }
                     shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
                 }
@@ -2470,29 +2465,29 @@ namespace DataGenerator.Data
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 2;
                     shop.SecurityStatus = "shop_security";
-                    shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
-                    shop.Items.Add(new MapItem(352, 0, 2000), 10);//thunder stone
+                    shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                    shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
                     // 137 Porygon : 36 Trace : 97 Agility : 59 Blizzard : 435 Discharge : 94 Psychic
-                    shop.StartMob = GetShopMob("porygon", "trace", "agility", "blizzard", "discharge", "psychic", new int[] { 1322, 1323, 1324, 1325 }, 2);
+                    shop.StartMob = GetShopMob("porygon", "trace", "agility", "blizzard", "discharge", "psychic", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, 2);
                     {
                         // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 63 Hyper Beam : 435 Discharge : 373 Embargo
-                        shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "hyper_beam", "discharge", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "hyper_beam", "discharge", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                         // 474 Porygon-Z : 91 Adaptability : 160 Conversion : 59 Blizzard : 435 Discharge : 473 Psyshock
-                        shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "conversion", "blizzard", "discharge", "psyshock", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "conversion", "blizzard", "discharge", "psyshock", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                         // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 63 Hyper Beam : 435 Discharge : 373 Embargo
-                        shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "hyper_beam", "discharge", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "hyper_beam", "discharge", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                         // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 161 Tri Attack : 247 Shadow Ball : 373 Embargo
-                        shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "tri_attack", "shadow_ball", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "tri_attack", "shadow_ball", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                         // 474 Porygon-Z : 88 Download : 97 Agility : 473 Psyshock : 324 Signal Beam : 373 Embargo
-                        shop.Mobs.Add(GetShopMob("porygon_z", "download", "agility", "psyshock", "signal_beam", "embargo", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("porygon_z", "download", "agility", "psyshock", "signal_beam", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                         // 233 Porygon2 : 36 Trace : 176 Conversion2 : 105 Recover : 60 Psybeam : 324 Signal Beam
-                        shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "recover", "psybeam", "signal_beam", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "recover", "psybeam", "signal_beam", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                         // 233 Porygon2 : 36 Trace : 176 Conversion2 : 105 Recover : 60 Psybeam : 435 Discharge
-                        shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "recover", "psybeam", "discharge", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "recover", "psybeam", "discharge", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                         // 233 Porygon2 : 36 Trace : 176 Conversion2 : 277 Magic Coat : 161 Tri Attack : 97 Agility
-                        shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "magic_coat", "tri_attack", "agility", new int[] { 1322, 1323, 1324, 1325 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "magic_coat", "tri_attack", "agility", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                     }
                     shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
                 }
@@ -2502,23 +2497,23 @@ namespace DataGenerator.Data
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 0;
                     shop.SecurityStatus = "shop_security";
-                    shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
-                    shop.Items.Add(new MapItem(352, 0, 2000), 10);//thunder stone
+                    shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                    shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
                     // 213 Shuckle : 126 Contrary : 380 Gastro Acid : 564 Sticky Web : 450 Bug Bite : 92 Toxic
-                    shop.StartMob = GetShopMob("shuckle", "contrary", "gastro_acid", "sticky_web", "bug_bite", "toxic", new int[] { 1569, 1570, 1571, 1572 }, 0);
+                    shop.StartMob = GetShopMob("shuckle", "contrary", "gastro_acid", "sticky_web", "bug_bite", "toxic", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, 0);
                     {
                         // 213 Shuckle : 126 Contrary : 380 Gastro Acid : 564 Sticky Web : 450 Bug Bite : 92 Toxic
-                        shop.Mobs.Add(GetShopMob("shuckle", "contrary", "gastro_acid", "sticky_web", "bug_bite", "toxic", new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("shuckle", "contrary", "gastro_acid", "sticky_web", "bug_bite", "toxic", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1), 10);
                         // 213 Shuckle : 126 Contrary : 230 Sweet Scent : 611 Infestation : 189 Mud-Slap : 522 Struggle Bug
-                        shop.Mobs.Add(GetShopMob("shuckle", "contrary", "sweet_scent", "infestation", "mud_slap", "struggle_bug", new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("shuckle", "contrary", "sweet_scent", "infestation", "mud_slap", "struggle_bug", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1), 10);
                         // 213 Shuckle : 126 Contrary : 230 Sweet Scent : 219 Safeguard : 446 Stealth Rock : 249 Rock Smash
-                        shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "sweet_scent", "safeguard", "stealth_rock", "rock_smash", new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "sweet_scent", "safeguard", "stealth_rock", "rock_smash", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1), 10);
                         // 213 Shuckle : 5 Sturdy : 379 Power Trick : 504 Shell Smash : 205 Rollout : 360 Gyro Ball
-                        shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "power_trick", "shell_smash", "rollout", "gyro_ball", new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "power_trick", "shell_smash", "rollout", "gyro_ball", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1), 10);
                         // 213 Shuckle : 5 Sturdy : 379 Power Trick : 450 Bug Bite : 444 Stone Edge : 91 Dig
-                        shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "power_trick", "bug_bite", "stone_edge", "dig", new int[] { 1569, 1570, 1571, 1572 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "power_trick", "bug_bite", "stone_edge", "dig", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1), 10);
                     }
 
                     shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
@@ -2529,25 +2524,25 @@ namespace DataGenerator.Data
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 0;
                     shop.SecurityStatus = "shop_security";
-                    shop.Items.Add(new MapItem(444, 753, 8000), 10);//poison dust
-                    shop.Items.Add(new MapItem(352, 0, 2000), 10);//thunder stone
+                    shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                    shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
                     // 206 Dunsparce : 32 Serene Grace : 228 Pursuit : 103 Screech : 44 Bite : Secret Power
-                    shop.StartMob = GetShopMob("dunsparce", "serene_grace", "pursuit", "screech", "bite", "secret_power", new int[] { 1545, 1546, 1549 }, 0);
+                    shop.StartMob = GetShopMob("dunsparce", "serene_grace", "pursuit", "screech", "bite", "secret_power", new string[] { "xcl_family_dunsparce_00", "xcl_family_dunsparce_01", "xcl_family_dunsparce_04" }, 0);
                     {
                         // 206 Dunsparce : 32 Serene Grace : 228 Pursuit : 99 Rage : 428 Zen Headbutt : Secret Power
-                        shop.Mobs.Add(GetShopMob("dunsparce", "serene_grace", "pursuit", "rage", "zen_headbutt", "secret_power", new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("dunsparce", "serene_grace", "pursuit", "rage", "zen_headbutt", "secret_power", new string[] { "xcl_family_dunsparce_00", "xcl_family_dunsparce_01", "xcl_family_dunsparce_04" }, -1), 10);
                         // 206 Dunsparce : 32 Serene Grace : 58 Ice Beam : 352 Water Pulse : Secret Power : Ancient Power
-                        shop.Mobs.Add(GetShopMob("dunsparce", "serene_grace", "ice_beam", "water_pulse", "secret_power", "ancient_power", new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("dunsparce", "serene_grace", "ice_beam", "water_pulse", "secret_power", "ancient_power", new string[] { "xcl_family_dunsparce_00", "xcl_family_dunsparce_01", "xcl_family_dunsparce_04" }, -1), 10);
                         // 206 Dunsparce : 32 Serene Grace : 228 Pursuit : 44 Bite : Secret Power : Ancient Power
-                        shop.Mobs.Add(GetShopMob("dunsparce", "serene_grace", "pursuit", "bite", "secret_power", "ancient_power", new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("dunsparce", "serene_grace", "pursuit", "bite", "secret_power", "ancient_power", new string[] { "xcl_family_dunsparce_00", "xcl_family_dunsparce_01", "xcl_family_dunsparce_04" }, -1), 10);
                         // 206 Dunsparce : 32 Serene Grace : 228 Pursuit : 355 Roost : Secret Power : Ancient Power
-                        shop.Mobs.Add(GetShopMob("dunsparce", "serene_grace", "pursuit", "roost", "secret_power", "ancient_power", new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("dunsparce", "serene_grace", "pursuit", "roost", "secret_power", "ancient_power", new string[] { "xcl_family_dunsparce_00", "xcl_family_dunsparce_01", "xcl_family_dunsparce_04" }, -1), 10);
                         // 206 Dunsparce : 155 Rattled : 228 Pursuit : 180 Spite : 20 Bind : 281 Yawn
-                        shop.Mobs.Add(GetShopMob("dunsparce", "rattled", "pursuit", "spite", "bind", "yawn", new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("dunsparce", "rattled", "pursuit", "spite", "bind", "yawn", new string[] { "xcl_family_dunsparce_00", "xcl_family_dunsparce_01", "xcl_family_dunsparce_04" }, -1), 10);
                         // 206 Dunsparce : 155 Rattled : 137 Glare : 180 Spite : 20 Bind : 506 Hex
-                        shop.Mobs.Add(GetShopMob("dunsparce", "rattled", "glare", "spite", "bind", "hex", new int[] { 1545, 1546, 1549 }, -1), 10);
+                        shop.Mobs.Add(GetShopMob("dunsparce", "rattled", "glare", "spite", "bind", "hex", new string[] { "xcl_family_dunsparce_00", "xcl_family_dunsparce_01", "xcl_family_dunsparce_04" }, -1), 10);
                     }
                     shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
                 }
@@ -2566,8 +2561,7 @@ namespace DataGenerator.Data
                 CategorySpawn<InvItem> category = new CategorySpawn<InvItem>();
                 category.SpawnRates.SetRange(10, new IntRange(0, 5));
                 zoneItemStep.Spawns.Add("uncategorized", category);
-                for (int nn = 1; nn < 4; nn++)
-                    category.Spawns.Add(new InvItem(nn), new IntRange(0, 5), (nn % 5 + 1) * 10);//all items
+                category.Spawns.Add(new InvItem("apple"), new IntRange(0, 5), 10);
                 floorSegment.ZoneSteps.Add(zoneItemStep);
 
                 //mobs
@@ -2680,7 +2674,7 @@ namespace DataGenerator.Data
                 floorSegment.ZoneSteps.Add(tileSpawn);
 
                 SpawnList<IGenPriority> apricornZoneSpawns = new SpawnList<IGenPriority>();
-                apricornZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem(210))))), 10);//plain
+                apricornZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_plain"))))), 10);//plain
                 SpreadStepZoneStep apricornStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(3, 25)), apricornZoneSpawns);//apricorn (variety)
                 floorSegment.ZoneSteps.Add(apricornStep);
 
@@ -2724,9 +2718,9 @@ namespace DataGenerator.Data
                     if (ii < 5)
                     {
                         RoomGenWaterRing<MapGenContext> waterRing = new RoomGenWaterRing<MapGenContext>(new Tile("water"), new RandRange(1, 4), new RandRange(1, 4), 3);
-                        waterRing.Treasures.Add(new MapItem(2), 10);
-                        waterRing.Treasures.Add(new MapItem(3), 10);
-                        waterRing.Treasures.Add(new MapItem(6), 10);
+                        waterRing.Treasures.Add(new MapItem("food_apple_big"), 10);
+                        waterRing.Treasures.Add(new MapItem("food_apple_huge"), 10);
+                        waterRing.Treasures.Add(new MapItem("food_banana"), 10);
                         genericRooms.Add(waterRing, 10);
                     }
                     //Guarded Cave
@@ -2734,9 +2728,9 @@ namespace DataGenerator.Data
                     {
                         RoomGenGuardedCave<MapGenContext> guarded = new RoomGenGuardedCave<MapGenContext>();
                         //treasure
-                        guarded.Treasures.RandomSpawns.Add(new MapItem(100), 10);
-                        guarded.Treasures.RandomSpawns.Add(new MapItem(101), 10);
-                        guarded.Treasures.RandomSpawns.Add(new MapItem(114), 10);
+                        guarded.Treasures.RandomSpawns.Add(new MapItem("seed_plain"), 10);
+                        guarded.Treasures.RandomSpawns.Add(new MapItem("seed_reviver"), 10);
+                        guarded.Treasures.RandomSpawns.Add(new MapItem("seed_pure"), 10);
                         guarded.Treasures.SpawnAmount = 6;
                         //guard
                         MobSpawn spawner = new MobSpawn();
@@ -3547,96 +3541,96 @@ namespace DataGenerator.Data
                 //items
                 List<(InvItem, Loc)> items = new List<(InvItem, Loc)>();
 
-                items.Add((new InvItem(210), new Loc(13, 10)));//Plain Apricorn
-                items.Add((new InvItem(210), new Loc(14, 10)));//Plain Apricorn
-                items.Add((new InvItem(210), new Loc(15, 10)));//Plain Apricorn
-                items.Add((new InvItem(210), new Loc(16, 10)));//Plain Apricorn
-                items.Add((new InvItem(210), new Loc(17, 10)));//Plain Apricorn
+                items.Add((new InvItem("apricorn_plain"), new Loc(13, 10)));//Plain Apricorn
+                items.Add((new InvItem("apricorn_plain"), new Loc(14, 10)));//Plain Apricorn
+                items.Add((new InvItem("apricorn_plain"), new Loc(15, 10)));//Plain Apricorn
+                items.Add((new InvItem("apricorn_plain"), new Loc(16, 10)));//Plain Apricorn
+                items.Add((new InvItem("apricorn_plain"), new Loc(17, 10)));//Plain Apricorn
 
-                items.Add((new InvItem(216), new Loc(24, 11)));//White Apricorn
-                items.Add((new InvItem(215), new Loc(22, 10)));//Red Apricorn
-                items.Add((new InvItem(211), new Loc(23, 10)));//Blue Apricorn
-                items.Add((new InvItem(212), new Loc(24, 10)));//Green Apricorn
-                items.Add((new InvItem(217), new Loc(25, 10)));//Yellow Apricorn
-                items.Add((new InvItem(213), new Loc(26, 10)));//Brown Apricorn
+                items.Add((new InvItem("apricorn_white"), new Loc(24, 11)));//White Apricorn
+                items.Add((new InvItem("apricorn_red"), new Loc(22, 10)));//Red Apricorn
+                items.Add((new InvItem("apricorn_blue"), new Loc(23, 10)));//Blue Apricorn
+                items.Add((new InvItem("apricorn_green"), new Loc(24, 10)));//Green Apricorn
+                items.Add((new InvItem("apricorn_yellow"), new Loc(25, 10)));//Yellow Apricorn
+                items.Add((new InvItem("apricorn_brown"), new Loc(26, 10)));//Brown Apricorn
 
-                items.Add((new InvItem(451), new Loc(31, 10)));//Assembly Box
-                items.Add((new InvItem(451), new Loc(32, 10)));//Assembly Box
-                items.Add((new InvItem(451), new Loc(33, 10)));//Assembly Box
-                items.Add((new InvItem(451), new Loc(34, 10)));//Assembly Box
-                items.Add((new InvItem(451), new Loc(35, 10)));//Assembly Box
-                items.Add((new InvItem(450), new Loc(31, 11)));//Link Box
-                items.Add((new InvItem(450), new Loc(32, 11)));//Link Box
-                items.Add((new InvItem(450), new Loc(33, 11)));//Link Box
-                items.Add((new InvItem(450), new Loc(34, 11)));//Link Box
-                items.Add((new InvItem(450), new Loc(35, 11)));//Link Box
+                items.Add((new InvItem("machine_assembly_box"), new Loc(31, 10)));//Assembly Box
+                items.Add((new InvItem("machine_assembly_box"), new Loc(32, 10)));//Assembly Box
+                items.Add((new InvItem("machine_assembly_box"), new Loc(33, 10)));//Assembly Box
+                items.Add((new InvItem("machine_assembly_box"), new Loc(34, 10)));//Assembly Box
+                items.Add((new InvItem("machine_assembly_box"), new Loc(35, 10)));//Assembly Box
+                items.Add((new InvItem("machine_recall_box"), new Loc(31, 11)));//Link Box
+                items.Add((new InvItem("machine_recall_box"), new Loc(32, 11)));//Link Box
+                items.Add((new InvItem("machine_recall_box"), new Loc(33, 11)));//Link Box
+                items.Add((new InvItem("machine_recall_box"), new Loc(34, 11)));//Link Box
+                items.Add((new InvItem("machine_recall_box"), new Loc(35, 11)));//Link Box
 
 
 
-                items.Add((new InvItem(175), new Loc(45, 10)));//X Attack
-                items.Add((new InvItem(175), new Loc(46, 10)));//X Attack
-                items.Add((new InvItem(175), new Loc(45, 11)));//X Attack
-                items.Add((new InvItem(175), new Loc(46, 11)));//X Attack
+                items.Add((new InvItem("medicine_x_attack"), new Loc(45, 10)));//X Attack
+                items.Add((new InvItem("medicine_x_attack"), new Loc(46, 10)));//X Attack
+                items.Add((new InvItem("medicine_x_attack"), new Loc(45, 11)));//X Attack
+                items.Add((new InvItem("medicine_x_attack"), new Loc(46, 11)));//X Attack
 
-                items.Add((new InvItem(176), new Loc(47, 10)));//X Defense
-                items.Add((new InvItem(176), new Loc(48, 10)));//X Defense
-                items.Add((new InvItem(176), new Loc(47, 11)));//X Defense
-                items.Add((new InvItem(176), new Loc(48, 11)));//X Defense
+                items.Add((new InvItem("medicine_x_defense"), new Loc(47, 10)));//X Defense
+                items.Add((new InvItem("medicine_x_defense"), new Loc(48, 10)));//X Defense
+                items.Add((new InvItem("medicine_x_defense"), new Loc(47, 11)));//X Defense
+                items.Add((new InvItem("medicine_x_defense"), new Loc(48, 11)));//X Defense
 
-                items.Add((new InvItem(177), new Loc(50, 10)));//X Sp. Atk
-                items.Add((new InvItem(177), new Loc(51, 10)));//X Sp. Atk
-                items.Add((new InvItem(177), new Loc(50, 11)));//X Sp. Atk
-                items.Add((new InvItem(177), new Loc(51, 11)));//X Sp. Atk
+                items.Add((new InvItem("medicine_x_sp_atk"), new Loc(50, 10)));//X Sp. Atk
+                items.Add((new InvItem("medicine_x_sp_atk"), new Loc(51, 10)));//X Sp. Atk
+                items.Add((new InvItem("medicine_x_sp_atk"), new Loc(50, 11)));//X Sp. Atk
+                items.Add((new InvItem("medicine_x_sp_atk"), new Loc(51, 11)));//X Sp. Atk
 
-                items.Add((new InvItem(178), new Loc(52, 10)));//X Sp. Def
-                items.Add((new InvItem(178), new Loc(53, 10)));//X Sp. Def
-                items.Add((new InvItem(178), new Loc(52, 11)));//X Sp. Def
-                items.Add((new InvItem(178), new Loc(53, 11)));//X Sp. Def
+                items.Add((new InvItem("medicine_x_sp_def"), new Loc(52, 10)));//X Sp. Def
+                items.Add((new InvItem("medicine_x_sp_def"), new Loc(53, 10)));//X Sp. Def
+                items.Add((new InvItem("medicine_x_sp_def"), new Loc(52, 11)));//X Sp. Def
+                items.Add((new InvItem("medicine_x_sp_def"), new Loc(53, 11)));//X Sp. Def
 
-                items.Add((new InvItem(180), new Loc(56, 10)));//X Accuracy
-                items.Add((new InvItem(180), new Loc(57, 10)));//X Accuracy
-                items.Add((new InvItem(180), new Loc(56, 11)));//X Accuracy
-                items.Add((new InvItem(180), new Loc(57, 11)));//X Accuracy
+                items.Add((new InvItem("medicine_x_accuracy"), new Loc(56, 10)));//X Accuracy
+                items.Add((new InvItem("medicine_x_accuracy"), new Loc(57, 10)));//X Accuracy
+                items.Add((new InvItem("medicine_x_accuracy"), new Loc(56, 11)));//X Accuracy
+                items.Add((new InvItem("medicine_x_accuracy"), new Loc(57, 11)));//X Accuracy
 
-                items.Add((new InvItem(278), new Loc(59, 10)));//All-Dodge Orb
-                items.Add((new InvItem(278), new Loc(60, 10)));//All-Dodge Orb
-                items.Add((new InvItem(278), new Loc(59, 11)));//All-Dodge Orb
-                items.Add((new InvItem(278), new Loc(60, 11)));//All-Dodge Orb
+                items.Add((new InvItem("orb_all_dodge"), new Loc(59, 10)));//All-Dodge Orb
+                items.Add((new InvItem("orb_all_dodge"), new Loc(60, 10)));//All-Dodge Orb
+                items.Add((new InvItem("orb_all_dodge"), new Loc(59, 11)));//All-Dodge Orb
+                items.Add((new InvItem("orb_all_dodge"), new Loc(60, 11)));//All-Dodge Orb
 
-                items.Add((new InvItem(179), new Loc(66, 10)));//X Speed
-                items.Add((new InvItem(179), new Loc(67, 10)));//X Speed
-                items.Add((new InvItem(179), new Loc(68, 10)));//X Speed
-                items.Add((new InvItem(179), new Loc(66, 11)));//X Speed
-                items.Add((new InvItem(179), new Loc(67, 11)));//X Speed
-                items.Add((new InvItem(179), new Loc(68, 11)));//X Speed
+                items.Add((new InvItem("medicine_x_speed"), new Loc(66, 10)));//X Speed
+                items.Add((new InvItem("medicine_x_speed"), new Loc(67, 10)));//X Speed
+                items.Add((new InvItem("medicine_x_speed"), new Loc(68, 10)));//X Speed
+                items.Add((new InvItem("medicine_x_speed"), new Loc(66, 11)));//X Speed
+                items.Add((new InvItem("medicine_x_speed"), new Loc(67, 11)));//X Speed
+                items.Add((new InvItem("medicine_x_speed"), new Loc(68, 11)));//X Speed
 
-                items.Add((new InvItem(12), new Loc(80, 10)));//Lum Berry
-                items.Add((new InvItem(12), new Loc(83, 10)));//Lum Berry
-                items.Add((new InvItem(12), new Loc(86, 10)));//Lum Berry
-                items.Add((new InvItem(12), new Loc(89, 10)));//Lum Berry
-                items.Add((new InvItem(12), new Loc(92, 10)));//Lum Berry
-                items.Add((new InvItem(12), new Loc(95, 10)));//Lum Berry
-                items.Add((new InvItem(12), new Loc(98, 10)));//Lum Berry
-                items.Add((new InvItem(12), new Loc(101, 10)));//Lum Berry
-                items.Add((new InvItem(12), new Loc(104, 10)));//Lum Berry
+                items.Add((new InvItem("berry_lum"), new Loc(80, 10)));//Lum Berry
+                items.Add((new InvItem("berry_lum"), new Loc(83, 10)));//Lum Berry
+                items.Add((new InvItem("berry_lum"), new Loc(86, 10)));//Lum Berry
+                items.Add((new InvItem("berry_lum"), new Loc(89, 10)));//Lum Berry
+                items.Add((new InvItem("berry_lum"), new Loc(92, 10)));//Lum Berry
+                items.Add((new InvItem("berry_lum"), new Loc(95, 10)));//Lum Berry
+                items.Add((new InvItem("berry_lum"), new Loc(98, 10)));//Lum Berry
+                items.Add((new InvItem("berry_lum"), new Loc(101, 10)));//Lum Berry
+                items.Add((new InvItem("berry_lum"), new Loc(104, 10)));//Lum Berry
 
-                items.Add((new InvItem(10), new Loc(114, 10)));//Oran Berry
-                items.Add((new InvItem(10), new Loc(116, 10)));//Oran Berry
-                items.Add((new InvItem(11), new Loc(118, 10)));//Leppa Berry
-                items.Add((new InvItem(11), new Loc(120, 10)));//Leppa Berry
-                items.Add((new InvItem(263), new Loc(122, 10)));//Cleanse Orb
-                items.Add((new InvItem(263), new Loc(124, 10)));//Cleanse Orb
-                items.Add((new InvItem(260), new Loc(126, 11)));//Revival Orb
-                items.Add((new InvItem(263), new Loc(128, 10)));//Cleanse Orb
-                items.Add((new InvItem(263), new Loc(130, 10)));//Cleanse Orb
-                items.Add((new InvItem(11), new Loc(132, 10)));//Leppa Berry
-                items.Add((new InvItem(11), new Loc(134, 10)));//Leppa Berry
-                items.Add((new InvItem(10), new Loc(136, 10)));//Oran Berry
-                items.Add((new InvItem(10), new Loc(138, 10)));//Oran Berry
+                items.Add((new InvItem("berry_oran"), new Loc(114, 10)));//Oran Berry
+                items.Add((new InvItem("berry_oran"), new Loc(116, 10)));//Oran Berry
+                items.Add((new InvItem("berry_leppa"), new Loc(118, 10)));//Leppa Berry
+                items.Add((new InvItem("berry_leppa"), new Loc(120, 10)));//Leppa Berry
+                items.Add((new InvItem("orb_cleanse"), new Loc(122, 10)));//Cleanse Orb
+                items.Add((new InvItem("orb_cleanse"), new Loc(124, 10)));//Cleanse Orb
+                items.Add((new InvItem("orb_revival"), new Loc(126, 11)));//Revival Orb
+                items.Add((new InvItem("orb_cleanse"), new Loc(128, 10)));//Cleanse Orb
+                items.Add((new InvItem("orb_cleanse"), new Loc(130, 10)));//Cleanse Orb
+                items.Add((new InvItem("berry_leppa"), new Loc(132, 10)));//Leppa Berry
+                items.Add((new InvItem("berry_leppa"), new Loc(134, 10)));//Leppa Berry
+                items.Add((new InvItem("berry_oran"), new Loc(136, 10)));//Oran Berry
+                items.Add((new InvItem("berry_oran"), new Loc(138, 10)));//Oran Berry
 
-                items.Add((new InvItem(303), new Loc(166, 11)));//Mobile Scarf
-                items.Add((new InvItem(312), new Loc(167, 11)));//Shell Bell
-                items.Add((new InvItem(318), new Loc(168, 11)));//Choice Band
+                items.Add((new InvItem("held_mobile_scarf"), new Loc(166, 11)));//Mobile Scarf
+                items.Add((new InvItem("held_shell_bell"), new Loc(167, 11)));//Shell Bell
+                items.Add((new InvItem("held_choice_band"), new Loc(168, 11)));//Choice Band
 
                 AddSpecificSpawn(layout, items, PR_SPAWN_ITEMS);
 

@@ -501,12 +501,12 @@ namespace DataGenerator.Data
             return post_mob;
         }
 
-        static MobSpawn GetBossMob(string species, string ability, string move1, string move2, string move3, string move4, int item, Loc loc, string tactic = "boss")
+        static MobSpawn GetBossMob(string species, string ability, string move1, string move2, string move3, string move4, string item, Loc loc, string tactic = "boss")
         {
             return GetBossMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, item, loc, tactic);
         }
 
-        static MobSpawn GetBossMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, int item, Loc loc, string tactic = "boss")
+        static MobSpawn GetBossMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, string item, Loc loc, string tactic = "boss")
         {
             MobSpawn post_mob = new MobSpawn();
             post_mob.BaseForm = id;
@@ -532,7 +532,7 @@ namespace DataGenerator.Data
         }
 
 
-        static MobSpawn GetShopMob(string species, string ability, string move1, string move2, string move3, string move4, int[] items, int keeperId, string tactic = "shopkeeper")
+        static MobSpawn GetShopMob(string species, string ability, string move1, string move2, string move3, string move4, string[] items, int keeperId, string tactic = "shopkeeper")
         {
             MobSpawn post_mob = new MobSpawn();
             post_mob.BaseForm = new MonsterID(species, 0, DataManager.Instance.DefaultSkin, Gender.Unknown);
@@ -584,6 +584,51 @@ namespace DataGenerator.Data
             return step;
         }
 
+        static IEnumerable<string> IterateGummis()
+        {
+            yield break;
+        }
+
+        static IEnumerable<string> IterateTMs()
+        {
+            yield break;
+        }
+
+        static IEnumerable<string> IterateXItems()
+        {
+            yield break;
+        }
+
+        static IEnumerable<string> IteratePinchBerries()
+        {
+            yield break;
+        }
+
+        static IEnumerable<string> IterateTypeBerries()
+        {
+            yield break;
+        }
+
+        static IEnumerable<string> IterateTypeBoosters()
+        {
+            yield break;
+        }
+
+        static IEnumerable<string> IterateTypePlates()
+        {
+            yield break;
+        }
+
+        static IEnumerable<string> IterateEvoItems()
+        {
+            //351-380 excl
+            yield break;
+        }
+
+        static IEnumerable<string> IterateApricorns()
+        {
+            yield break;
+        }
 
         public static void CreateContentLists()
         {
