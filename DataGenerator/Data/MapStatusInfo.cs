@@ -518,7 +518,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new ShopSecurityState());
                 status.StatusStates.Set(new MapTickState(0));
                 //prevent escape orbs
-                status.BeforeTryActions.Add(0, new PreventItemIndexEvent(new StringKey("MSG_ITEM_BAN"), 250));
+                status.BeforeTryActions.Add(0, new PreventItemIndexEvent(new StringKey("MSG_ITEM_BAN"), "orb_escape"));
                 //prevent leaderswitch
                 status.OnMapRefresh.Add(0, new MapNoSwitchEvent());
                 //prevent rescue

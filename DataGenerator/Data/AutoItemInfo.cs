@@ -541,7 +541,14 @@ namespace DataGenerator.Data
                         incompleteLeft++;
 
                     if (item.Name.DefaultText != "")
+                    {
+                        System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{1}", item_idx, fileName));
                         DataManager.SaveData(fileName, DataManager.DataType.Item.ToString(), item);
+                    }
+                    else
+                    {
+                        System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{0}", item_idx));
+                    }
 
                     if (item.Released)
                     {
@@ -1550,7 +1557,7 @@ namespace DataGenerator.Data
                     altAction.PreActions.Add(itemFX);
                     altAction.ActionFX.Sound = "DUN_Blowback_Orb";
 
-                    item.OnActions.Add(-3, new FamilyBattleEvent(new WandAttackNeededEvent(new List<int> { 220, 221 }, new ChangeActionEvent(altAction))));
+                    item.OnActions.Add(-3, new FamilyBattleEvent(new WandAttackNeededEvent(new List<string> { "wand_path", "wand_pounce" }, new ChangeActionEvent(altAction))));
                 }
             }
             else if (type == ExclusiveItemEffect.WandSpread)
@@ -1559,7 +1566,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the effects of wands will spread out like a fan when waved by the Pokémon.");
                 if (includeEffects)
                 {
-                    item.OnActions.Add(-3, new FamilyBattleEvent(new WandAttackNeededEvent(new List<int> { 221 }, new SpreadProjectileEvent(ProjectileAction.RayCount.Three))));
+                    item.OnActions.Add(-3, new FamilyBattleEvent(new WandAttackNeededEvent(new List<string> { "wand_pounce" }, new SpreadProjectileEvent(ProjectileAction.RayCount.Three))));
                 }
             }
             else if (type == ExclusiveItemEffect.MultiRayShot)

@@ -961,15 +961,15 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Multitype");
                 ability.Desc = new LocalText("Changes the Pokémon's type to match its held Plate. The Pokémon can also utilize the protection of Plates in its Bag.");
                 //ability.OnActions.Add(0, new ConversionEffect(false));
-                Dictionary<int, string> plate = new Dictionary<int, string>();
+                Dictionary<string, string> plate = new Dictionary<string, string>();
                 for (int nn = 0; nn < 18; nn++)
                     plate[380 + nn] = Text.Sanitize(((ElementInfo.Element)nn + 1).ToString()).ToLower();
                 ability.OnTurnStarts.Add(0, new PlateElementEvent(plate));
-                plate = new Dictionary<int, string>();
+                plate = new Dictionary<string, string>();
                 for (int nn = 0; nn < 18; nn++)
                     plate[380 + nn] = Text.Sanitize(((ElementInfo.Element)nn + 1).ToString()).ToLower();
                 ability.OnTurnEnds.Add(0, new PlateElementEvent(plate));
-                Dictionary<string, int> element = new Dictionary<string, int>();
+                Dictionary<string, string> element = new Dictionary<string, string>();
                 for (int nn = 0; nn < 18; nn++)
                     element[Text.Sanitize(((ElementInfo.Element)nn + 1).ToString()).ToLower()] = 380 + nn;
                 ability.BeforeBeingHits.Add(-1, new PlateProtectEvent(element));

@@ -86,21 +86,21 @@ namespace DataGenerator.Dev
             DataManager.DataType dataType = DataManager.DataType.Item;
             string path = GenPath.TL_PATH + dataType.ToString() + ".txt";
 
-            Dictionary<string, int> repeatCheck = new Dictionary<string, int>();
+            Dictionary<string, string> repeatCheck = new Dictionary<string, string>();
 
             Dictionary<string, (string, LocalText)> rows = new Dictionary<string, (string, LocalText)>();
             List<string> orderedKeys = new List<string>();
             HashSet<string> languages = new HashSet<string>();
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[dataType].Count; ii++)
+            foreach(string key in DataManager.Instance.DataIndices[dataType].Entries.Keys)
             {
-                ItemData data = DataManager.Instance.GetItem(ii);
+                ItemData data = DataManager.Instance.GetItem(key);
 
                 //skip blank entries
                 if (data.Name.DefaultText == "")
                     continue;
                 if (repeatCheck.ContainsKey(data.Name.DefaultText))
-                    Console.WriteLine("Item name \"{0}\" repeated between {1} and {2}", data.Name.DefaultText, repeatCheck[data.Name.DefaultText], ii);
-                repeatCheck[data.Name.DefaultText] = ii;
+                    Console.WriteLine("Item name \"{0}\" repeated between {1} and {2}", data.Name.DefaultText, repeatCheck[data.Name.DefaultText], key);
+                repeatCheck[data.Name.DefaultText] = key;
 
                 //skip TMs
                 if (data.UsageType == ItemData.UseType.Learn)
@@ -109,12 +109,12 @@ namespace DataGenerator.Dev
                 if (data.ItemStates.Contains<MaterialState>() && data.ItemStates.GetWithDefault<ExclusiveState>().ItemType != ExclusiveItemType.None)
                     continue;
                 //TODO: get these type names via reflection
-                updateWorkingLists(rows, orderedKeys, languages, ii.ToString("D4") + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
+                updateWorkingLists(rows, orderedKeys, languages, key + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
 
                 //skip ALL exclusive item DESCRIPTIONS because they are guaranteed autocalculated
                 if (data.ItemStates.Contains<MaterialState>())
                     continue;
-                updateWorkingLists(rows, orderedKeys, languages, ii.ToString("D4") + "-" + 1.ToString("D4") + "|data.Desc", "", data.Desc);
+                updateWorkingLists(rows, orderedKeys, languages, key + "-" + 1.ToString("D4") + "|data.Desc", "", data.Desc);
             }
 
             printLocalizationRows(path, languages, orderedKeys, rows);
