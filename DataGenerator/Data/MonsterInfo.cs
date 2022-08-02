@@ -504,7 +504,7 @@ namespace DataGenerator.Data
                         else if (evoSpecies == 841)//flapple
                         {
                             EvoItem evoDetail = new EvoItem();
-                            evoDetail.ItemNum = 2;//Big Apple
+                            evoDetail.ItemNum = "food_apple_big";//Big Apple
                             branch.Details.Add(evoDetail);
 
                             EvoHunger hungerDetail = new EvoHunger();
@@ -514,7 +514,7 @@ namespace DataGenerator.Data
                         else if (evoSpecies == 842)//appletun
                         {
                             EvoItem evoDetail = new EvoItem();
-                            evoDetail.ItemNum = 1;//Apple
+                            evoDetail.ItemNum = "food_apple";//Apple
                             branch.Details.Add(evoDetail);
 
                             EvoHunger hungerDetail = new EvoHunger();
@@ -530,7 +530,7 @@ namespace DataGenerator.Data
                         else if (evoSpecies == 855)//polteageist
                         {
                             EvoItem evoDetail = new EvoItem();
-                            evoDetail.ItemNum = 360;//Cracked Pot
+                            evoDetail.ItemNum = "evo_cracked_pot";//Cracked Pot
                             branch.Details.Add(evoDetail);
                         }
                         else if (evoSpecies == 862)//obstagoon
@@ -541,7 +541,7 @@ namespace DataGenerator.Data
                             branch.Details.Add(evoDetail);
 
                             EvoItem evoDetail2 = new EvoItem();
-                            evoDetail2.ItemNum = 378;//moon ribbon
+                            evoDetail2.ItemNum = "evo_lunar_ribbon";//moon ribbon
                             branch.Details.Add(evoDetail2);
                         }
                         else if (evoSpecies == 865)//sirfetch'd
@@ -593,13 +593,13 @@ namespace DataGenerator.Data
                                 else if (Convert.ToInt32(location) == 8 || Convert.ToInt32(location) == 375 || Convert.ToInt32(location) == 650)
                                 {
                                     EvoItem evoDetail = new EvoItem();
-                                    evoDetail.ItemNum = 354;//Leaf Stone
+                                    evoDetail.ItemNum = "evo_leaf_stone";//Leaf Stone
                                     branch.Details.Add(evoDetail);
                                 }
                                 else if (Convert.ToInt32(location) == 48 || Convert.ToInt32(location) == 380 || Convert.ToInt32(location) == 640)
                                 {
                                     EvoItem evoDetail = new EvoItem();
-                                    evoDetail.ItemNum = 379;//Ice Stone
+                                    evoDetail.ItemNum = "evo_ice_stone";//Ice Stone
                                     branch.Details.Add(evoDetail);
                                 }
                                 else
@@ -618,7 +618,7 @@ namespace DataGenerator.Data
                                 branch.Details.Add(evoDetail);
 
                                 EvoItem evoDetail2 = new EvoItem();
-                                evoDetail2.ItemNum = (time == "night") ? 378 : 377;
+                                evoDetail2.ItemNum = (time == "night") ? "evo_lunar_ribbon" : "evo_sun_ribbon";
                                 //EvoTime evoDetail2 = new EvoTime();
                                 //evoDetail2.Time = (time == "night") ? Maps.ZoneManager.TimeOfDay.Night : Maps.ZoneManager.TimeOfDay.Day;
                                 branch.Details.Add(evoDetail2);
@@ -631,7 +631,7 @@ namespace DataGenerator.Data
                                 if (index < monsterKeys.IndexOf(branch.Result)) //pre-evos are excluded from time of day req
                                 {
                                     EvoItem evoDetail2 = new EvoItem();
-                                    evoDetail2.ItemNum = (time == "night") ? 378 : 377;
+                                    evoDetail2.ItemNum = (time == "night") ? "evo_lunar_ribbon" : "evo_sun_ribbon";
                                     //EvoTime evoDetail2 = new EvoTime();
                                     //evoDetail2.Time = (time == "night") ? Maps.ZoneManager.TimeOfDay.Night : Maps.ZoneManager.TimeOfDay.Day;
                                     branch.Details.Add(evoDetail2);
@@ -646,7 +646,7 @@ namespace DataGenerator.Data
                                 //EvoTime evoDetail2 = new EvoTime();
                                 //evoDetail2.Time = (time == "night") ? Maps.ZoneManager.TimeOfDay.Night : Maps.ZoneManager.TimeOfDay.Day;
                                 EvoItem evoDetail2 = new EvoItem();
-                                evoDetail2.ItemNum = (time == "night") ? 378 : 377;
+                                evoDetail2.ItemNum = (time == "night") ? "evo_lunar_ribbon" : "evo_sun_ribbon";
                                 branch.Details.Add(evoDetail2);
                             }
                             else if (CheckEvoConditions(reader, "known_move_id"))
@@ -659,7 +659,7 @@ namespace DataGenerator.Data
                             else if (CheckEvoConditions(reader, "min_affection", "known_move_type_id"))
                             {
                                 //EvoItem evoDetail = new EvoItem();
-                                //evoDetail.ItemNum = 335;//Pink Bow
+                                //evoDetail.ItemNum = "held_pink_bow";//Pink Bow
                                 //branch.Details.Add(evoDetail);
 
                                 EvoMoveElement evoDetail2 = new EvoMoveElement();
@@ -669,7 +669,7 @@ namespace DataGenerator.Data
                             else if (CheckEvoConditions(reader, "min_beauty"))
                             {
                                 EvoItem evoDetail = new EvoItem();
-                                evoDetail.ItemNum = 373;//prism scale
+                                evoDetail.ItemNum = "evo_prism_scale";//prism scale
                                 branch.Details.Add(evoDetail);
                             }
                             else if (CheckEvoConditions(reader, "min_level", "relative_physical_stats"))
@@ -714,17 +714,17 @@ namespace DataGenerator.Data
                             if (CheckEvoConditions(reader))
                             {
                                 EvoItem evoDetail = new EvoItem();
-                                evoDetail.ItemNum = 365;//Link Cable
+                                evoDetail.ItemNum = "evo_link_cable";//Link Cable
                                 branch.Details.Add(evoDetail);
                             }
                             else if (CheckEvoConditions(reader, "held_item_id"))
                             {
                                 EvoItem evoDetail = new EvoItem();
                                 evoDetail.ItemNum = MapItem(Convert.ToInt32(heldItem));
-                                if (evoDetail.ItemNum == 0)
+                                if (String.IsNullOrEmpty(evoDetail.ItemNum))
                                 {
                                     evoDetail = new EvoItem();
-                                    evoDetail.ItemNum = 365;//Link Cable
+                                    evoDetail.ItemNum = "evo_link_cable";//Link Cable
                                     branch.Details.Add(evoDetail);
                                 }
                                 else
@@ -745,7 +745,7 @@ namespace DataGenerator.Data
                             {
                                 EvoItem evoDetail = new EvoItem();
                                 evoDetail.ItemNum = MapItem(Convert.ToInt32(itemNum));
-                                if (evoDetail.ItemNum == 0)
+                                if (String.IsNullOrEmpty(evoDetail.ItemNum))
                                     throw new Exception(entry.Name + ": Unknown Item Evo");
                                 branch.Details.Add(evoDetail);
                             }
@@ -753,7 +753,7 @@ namespace DataGenerator.Data
                             {
                                 EvoItem evoDetail = new EvoItem();
                                 evoDetail.ItemNum = MapItem(Convert.ToInt32(itemNum));
-                                if (evoDetail.ItemNum == 0)
+                                if (String.IsNullOrEmpty(evoDetail.ItemNum))
                                     throw new Exception(entry.Name + ": Unknown Item Evo");
                                 branch.Details.Add(evoDetail);
 
@@ -868,7 +868,7 @@ namespace DataGenerator.Data
                         altBranch.Details.Add(evoDetail);
 
                         EvoItem evoDetail2 = new EvoItem();
-                        evoDetail2.ItemNum = 378;//moon ribbon
+                        evoDetail2.ItemNum = "evo_lunar_ribbon";//moon ribbon
                         altBranch.Details.Add(evoDetail2);
                         entry.Promotions.Add(altBranch);
                     }
@@ -880,7 +880,7 @@ namespace DataGenerator.Data
                         altBranch.Details.Add(new EvoForm(1));
 
                         EvoItem evoDetail = new EvoItem();
-                        evoDetail.ItemNum = 379;//ice stone
+                        evoDetail.ItemNum = "evo_ice_stone";//ice stone
                         altBranch.Details.Add(evoDetail);
                         entry.Promotions.Add(altBranch);
                     }
@@ -892,7 +892,7 @@ namespace DataGenerator.Data
                         altBranch.Details.Add(new EvoForm(1));
 
                         EvoItem evoDetail = new EvoItem();
-                        evoDetail.ItemNum = 379;//ice stone
+                        evoDetail.ItemNum = "evo_ice_stone";//ice stone
                         altBranch.Details.Add(evoDetail);
                         entry.Promotions.Add(altBranch);
                     }
@@ -942,7 +942,7 @@ namespace DataGenerator.Data
                         altBranch.Details.Add(new EvoForm(1));
 
                         EvoItem evoDetail = new EvoItem();
-                        evoDetail.ItemNum = 365;//Link Cable
+                        evoDetail.ItemNum = "evo_link_cable";//Link Cable
                         altBranch.Details.Add(evoDetail);
 
                         entry.Promotions.Add(altBranch);
@@ -994,7 +994,7 @@ namespace DataGenerator.Data
                         altBranch.Details.Add(new EvoForm(1));
 
                         EvoItem evoDetail = new EvoItem();
-                        evoDetail.ItemNum = 374;//king's rock
+                        evoDetail.ItemNum = "evo_kings_rock";//king's rock
                         altBranch.Details.Add(evoDetail);
 
                         entry.Promotions.Add(altBranch);
@@ -1035,7 +1035,7 @@ namespace DataGenerator.Data
                         altBranch.Details.Add(new EvoForm(1));
 
                         EvoItem evoDetail = new EvoItem();
-                        evoDetail.ItemNum = 361;//Chipped Pot
+                        evoDetail.ItemNum = "evo_chipped_pot";//Chipped Pot
                         altBranch.Details.Add(evoDetail);
 
                         entry.Promotions.Add(altBranch);
@@ -1053,7 +1053,7 @@ namespace DataGenerator.Data
                 branch.Result = monsterKeys[809];
 
                 EvoItem evoDetail = new EvoItem();
-                evoDetail.ItemNum = 365;//Link Cable
+                evoDetail.ItemNum = "evo_link_cable";//Link Cable
                 branch.Details.Add(evoDetail);
                 entry.Promotions.Add(branch);
             }
@@ -1395,28 +1395,28 @@ namespace DataGenerator.Data
                 return (String.IsNullOrEmpty(reader[col].ToString()) != args.Contains(col));
         }
 
-        public static int MapItem(int itemNum)
+        public static string MapItem(int itemNum)
         {
             switch (itemNum)
             {
-                case 80: return 356;//sun-stone
-                case 81: return 355;//moon-stone
-                case 82: return 351;//fire-stone
-                case 83: return 352;//thunder-stone
-                case 84: return 353;//water-stone
-                case 85: return 354;//leaf-stone
-                case 107: return 362;//shiny-stone
-                case 108: return 363;//dusk-stone
-                case 109: return 364;//dawn-stone
-                case 198: return 374;//kings-rock
-                case 210: return 347;//metal-coat
-                case 212: return 333;//dragon-scale
-                case 298: return 371;//protector
-                case 299: return 358;//electirizer
-                case 300: return 357;//magmarizer
-                case 302: return 359;//reaper-cloth
-                case 580: return 373;//prism-scale
-                case 885: return 379;//ice stone
+                case 80: return "evo_sun_stone";//sun-stone
+                case 81: return "evo_moon_stone";//moon-stone
+                case 82: return "evo_fire_stone";//fire-stone
+                case 83: return "evo_thunder_stone";//thunder-stone
+                case 84: return "evo_water_stone";//water-stone
+                case 85: return "evo_leaf_stone";//leaf-stone
+                case 107: return "evo_shiny_stone";//shiny-stone
+                case 108: return "evo_dusk_stone";//dusk-stone
+                case 109: return "evo_dawn_stone";//dawn-stone
+                case 198: return "evo_kings_rock";//kings-rock
+                case 210: return "held_metal_coat";//metal-coat
+                case 212: return "held_dragon_scale";//dragon-scale
+                case 298: return "evo_protector";//protector
+                case 299: return "evo_electirizer";//electirizer
+                case 300: return "evo_magmarizer";//magmarizer
+                case 302: return "evo_reaper_cloth";//reaper-cloth
+                case 580: return "evo_prism_scale";//prism-scale
+                case 885: return "evo_ice_stone";//ice stone
                 case 301: //dubious-disc
                 case 110: //oval-stone
                 case 203: //deep-sea-tooth
@@ -1426,7 +1426,7 @@ namespace DataGenerator.Data
                 case 304: //razor-fang
                 case 686: //whipped-dream
                 case 687: //sachet
-                    return 0;
+                    return "";
             }
             throw new Exception("No item mappable");
         }

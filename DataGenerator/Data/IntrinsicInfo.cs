@@ -685,7 +685,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Steals and eats a food item from an attacker that made direct contact.");
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(EdibleState)));
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, true, true, 100, new UseFoeItemEvent(true, false, 116, eligibles, false, true)));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, true, true, 100, new UseFoeItemEvent(true, false, "seed_decoy", eligibles, false, true)));
             }
             else if (ii == 83)
             {
@@ -942,13 +942,13 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Honey Gather");
                 ability.Desc = new LocalText("The Pokémon may gather Nectar when it enters a new floor.");
-                ability.OnMapStarts.Add(0, new GatherEvent(150, 50, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), "")));
+                ability.OnMapStarts.Add(0, new GatherEvent("boost_nectar", 50, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), "")));
             }
             else if (ii == 119)
             {
                 ability.Name = new LocalText("Frisk");
                 ability.Desc = new LocalText("Attacking an opposing Pokémon removes its held item.");
-                ability.AfterHittings.Add(0, new OnHitEvent(true, false, 100, new DropItemEvent(false, true, -1, new HashSet<FlagType>(), new StringKey("MSG_FRISK"), true)));
+                ability.AfterHittings.Add(0, new OnHitEvent(true, false, 100, new DropItemEvent(false, true, "", new HashSet<FlagType>(), new StringKey("MSG_FRISK"), true)));
             }
             else if (ii == 120)
             {
@@ -962,16 +962,34 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Changes the Pokémon's type to match its held Plate. The Pokémon can also utilize the protection of Plates in its Bag.");
                 //ability.OnActions.Add(0, new ConversionEffect(false));
                 Dictionary<string, string> plate = new Dictionary<string, string>();
-                for (int nn = 0; nn < 18; nn++)
-                    plate[380 + nn] = Text.Sanitize(((ElementInfo.Element)nn + 1).ToString()).ToLower();
+                {
+                    plate["held_insect_plate"] = "bug";
+                    plate["held_dread_plate"] = "dark";
+                    plate["held_draco_plate"] = "dragon";
+                    plate["held_zap_plate"] = "electric";
+                    plate["held_pixie_plate"] = "fairy";
+                    plate["held_fist_plate"] = "fighting";
+                    plate["held_flame_plate"] = "fire";
+                    plate["held_sky_plate"] = "flying";
+                    plate["held_spooky_plate"] = "ghost";
+                    plate["held_meadow_plate"] = "grass";
+                    plate["held_earth_plate"] = "ground";
+                    plate["held_icicle_plate"] = "ice";
+                    plate["held_blank_plate"] = "normal";
+                    plate["held_toxic_plate"] = "poison";
+                    plate["held_mind_plate"] = "psychic";
+                    plate["held_stone_plate"] = "rock";
+                    plate["held_iron_plate"] = "steel";
+                    plate["held_splash_plate"] = "water";
+                }
                 ability.OnTurnStarts.Add(0, new PlateElementEvent(plate));
-                plate = new Dictionary<string, string>();
-                for (int nn = 0; nn < 18; nn++)
-                    plate[380 + nn] = Text.Sanitize(((ElementInfo.Element)nn + 1).ToString()).ToLower();
-                ability.OnTurnEnds.Add(0, new PlateElementEvent(plate));
+                Dictionary<string, string> plate2 = new Dictionary<string, string>();
+                foreach (string key in plate.Keys)
+                    plate2[key] = plate[key];
+                ability.OnTurnEnds.Add(0, new PlateElementEvent(plate2));
                 Dictionary<string, string> element = new Dictionary<string, string>();
-                for (int nn = 0; nn < 18; nn++)
-                    element[Text.Sanitize(((ElementInfo.Element)nn + 1).ToString()).ToLower()] = 380 + nn;
+                foreach (string key in plate.Keys)
+                    element[plate[key]] = key;
                 ability.BeforeBeingHits.Add(-1, new PlateProtectEvent(element));
             }
             else if (ii == 122)
@@ -1010,7 +1028,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Pickpocket");
                 ability.Desc = new LocalText("Steals an item from an attacker that made direct contact.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, true, true, 100, new StealItemEvent(true, false, 116, new HashSet<FlagType>(), new StringKey("MSG_STEAL_WITH"), false, true)));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, true, true, 100, new StealItemEvent(true, false, "seed_decoy", new HashSet<FlagType>(), new StringKey("MSG_STEAL_WITH"), false, true)));
             }
             else if (ii == 125)
             {
@@ -1339,7 +1357,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Magician");
                 ability.Desc = new LocalText("The Pokémon steals the item of a Pokémon it hits with a move.");
-                ability.AfterHittings.Add(0, new OnHitEvent(true, false, 100, new StealItemEvent(true, false, 116, new HashSet<FlagType>(), new StringKey("MSG_STEAL_WITH"), true, true)));
+                ability.AfterHittings.Add(0, new OnHitEvent(true, false, 100, new StealItemEvent(true, false, "seed_decoy", new HashSet<FlagType>(), new StringKey("MSG_STEAL_WITH"), true, true)));
             }
             else if (ii == 171)
             {

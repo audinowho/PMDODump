@@ -320,7 +320,7 @@ namespace DataGenerator.Data
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(FoodState)));
                 eligibles.Add(new FlagType(typeof(GummiState)));
-                newData.OnHits.Add(0, new TransformItemEvent(true, false, 116, 454, eligibles));
+                newData.OnHits.Add(0, new TransformItemEvent(true, false, "seed_decoy", "food_grimy", eligibles));
                 newData.OnHits.Add(0, new ChangeToAbilityEvent(DataManager.Instance.DefaultIntrinsic, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
@@ -352,7 +352,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new SetItemStickyEvent(true, false, 116, true, new HashSet<FlagType>()));
+                newData.OnHits.Add(0, new SetItemStickyEvent(true, false, "seed_decoy", true, new HashSet<FlagType>()));
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
                 newData.OnHits.Add(0, new StatusStateBattleEvent("immobilized", true, false, true, statusStates));
@@ -384,7 +384,7 @@ namespace DataGenerator.Data
 
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(HeldState)));
-                newData.OnHits.Add(0, new TransformItemEvent(true, false, 116, 1, eligibles));
+                newData.OnHits.Add(0, new TransformItemEvent(true, false, "seed_decoy", "food_apple", eligibles));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 13)
@@ -699,7 +699,7 @@ namespace DataGenerator.Data
                 //newData.BeforeHits.Add(0, new WeightBasePowerEffect());
                 //newData.HitEffects.Add(-1, new DamageFormulaEffect());
                 newData.HitCharAction = new CharAnimFrameType(04);//Hurt
-                newData.OnHits.Add(0, new DropItemEvent(false, false, 116, new HashSet<FlagType>(), new StringKey(), false));
+                newData.OnHits.Add(0, new DropItemEvent(false, false, "seed_decoy", new HashSet<FlagType>(), new StringKey(), false));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 24)
@@ -937,7 +937,7 @@ namespace DataGenerator.Data
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
-                tile.InteractWithTiles.Add(0, new AskEvoEvent(349));
+                tile.InteractWithTiles.Add(0, new AskEvoEvent("evo_harmony_scarf"));
             }
             else if (ii == 34)
             {

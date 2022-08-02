@@ -1789,7 +1789,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState());
                 skill.Data.BeforeHits.Add(0, new WeightBasePowerEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new DropItemEvent(false, true, -1, new HashSet<FlagType>(), new StringKey(), false)));
+                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new DropItemEvent(false, true, "", new HashSet<FlagType>(), new StringKey(), false)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(21);//Kick
@@ -4299,7 +4299,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new StealItemEvent(true, false, 116, new HashSet<FlagType>(), new StringKey("MSG_STEAL_ITEM"), true, false)));
+                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new StealItemEvent(true, false, "seed_decoy", new HashSet<FlagType>(), new StringKey("MSG_STEAL_ITEM"), true, false)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 08;//Strike
@@ -7214,25 +7214,25 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                List<int> foodTypes = new List<int>();
-                foodTypes.Add(1);
-                foodTypes.Add(2);
-                skill.Data.OnHits.Add(0, new ItemRestoreEvent(true, 454, foodTypes, new StringKey("MSG_RECYCLE")));
-                List<int> seedTypes = new List<int>();
-                seedTypes.Add(101);
-                seedTypes.Add(102);
-                seedTypes.Add(104);
-                seedTypes.Add(107);
-                seedTypes.Add(108);
-                seedTypes.Add(110);
-                seedTypes.Add(112);
-                seedTypes.Add(113);
-                seedTypes.Add(114);
-                seedTypes.Add(115);
-                seedTypes.Add(116);
-                seedTypes.Add(117);
-                seedTypes.Add(118);
-                skill.Data.OnHits.Add(0, new ItemRestoreEvent(true, 100, seedTypes, new StringKey("MSG_RECYCLE")));
+                List<string> foodTypes = new List<string>();
+                foodTypes.Add("food_apple");
+                foodTypes.Add("food_apple_big");
+                skill.Data.OnHits.Add(0, new ItemRestoreEvent(true, "food_grimy", foodTypes, new StringKey("MSG_RECYCLE")));
+                List<string> seedTypes = new List<string>();
+                seedTypes.Add("seed_reviver");
+                seedTypes.Add("seed_joy");
+                seedTypes.Add("seed_doom");
+                seedTypes.Add("seed_hunger");
+                seedTypes.Add("seed_warp");
+                seedTypes.Add("seed_sleep");
+                seedTypes.Add("seed_blast");
+                seedTypes.Add("seed_blinker");
+                seedTypes.Add("seed_pure");
+                seedTypes.Add("seed_ice");
+                seedTypes.Add("seed_decoy");
+                seedTypes.Add("seed_last_chance");
+                seedTypes.Add("seed_ban");
+                skill.Data.OnHits.Add(0, new ItemRestoreEvent(true, "seed_plain", seedTypes, new StringKey("MSG_RECYCLE")));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -7322,7 +7322,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new KnockItemEvent(false, true, -1, new HashSet<FlagType>())));
+                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new KnockItemEvent(false, true, "", new HashSet<FlagType>())));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(12);//Slap
@@ -8889,7 +8889,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 80;
-                skill.Data.OnHits.Add(0, new BegItemEvent(true, false, 116, new HashSet<FlagType>()));
+                skill.Data.OnHits.Add(0, new BegItemEvent(true, false, "seed_decoy", new HashSet<FlagType>()));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(25);//Appeal
@@ -9408,39 +9408,40 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
 
-                Dictionary<int, string> itemPair = new Dictionary<int, string>();
-                itemPair.Add(9, "poison");
-                itemPair.Add(11, "fighting");
-                itemPair.Add(12, "flying");
+                Dictionary<string, string> itemPair = new Dictionary<string, string>();
+                itemPair.Add("berry_oran", "poison");
+                itemPair.Add("berry_leppa", "fighting");
+                itemPair.Add("berry_lum", "flying");
+                itemPair.Add("berry_sitrus", "psychic");
 
-                itemPair.Add(19, "bug");
-                itemPair.Add(20, "dark");
-                itemPair.Add(21, "dragon");
-                itemPair.Add(22, "electric");
-                itemPair.Add(23, "fighting");
-                itemPair.Add(24, "fire");
-                itemPair.Add(25, "flying");
-                itemPair.Add(26, "ghost");
-                itemPair.Add(27, "grass");
-                itemPair.Add(28, "ground");
-                itemPair.Add(29, "ice");
-                itemPair.Add(30, "normal");
-                itemPair.Add(31, "poison");
-                itemPair.Add(32, "psychic");
-                itemPair.Add(33, "rock");
-                itemPair.Add(34, "steel");
-                itemPair.Add(35, "water");
-                itemPair.Add(36, "fairy");
+                itemPair.Add("berry_tanga", "bug");
+                itemPair.Add("berry_colbur", "dark");
+                itemPair.Add("berry_haban", "dragon");
+                itemPair.Add("berry_wacan", "electric");
+                itemPair.Add("berry_chople", "fighting");
+                itemPair.Add("berry_occa", "fire");
+                itemPair.Add("berry_coba", "flying");
+                itemPair.Add("berry_kasib", "ghost");
+                itemPair.Add("berry_rindo", "grass");
+                itemPair.Add("berry_shuca", "ground");
+                itemPair.Add("berry_yache", "ice");
+                itemPair.Add("berry_chilan", "normal");
+                itemPair.Add("berry_kebia", "poison");
+                itemPair.Add("berry_payapa", "psychic");
+                itemPair.Add("berry_charti", "rock");
+                itemPair.Add("berry_babiri", "steel");
+                itemPair.Add("berry_passho", "water");
+                itemPair.Add("berry_roseli", "fairy");
 
-                itemPair.Add(37, "dragon");
-                itemPair.Add(44, "grass");
-                itemPair.Add(45, "ice");
-                itemPair.Add(46, "fighting");
-                itemPair.Add(47, "poison");
-                itemPair.Add(43, "ground");
-                itemPair.Add(48, "psychic");
-                itemPair.Add(49, "rock");
-                itemPair.Add(51, "bug");
+                itemPair.Add("berry_jaboca", "dragon");
+                itemPair.Add("berry_liechi", "grass");
+                itemPair.Add("berry_ganlon", "ice");
+                itemPair.Add("berry_salac", "fighting");
+                itemPair.Add("berry_petaya", "poison");
+                itemPair.Add("berry_apicot", "ground");
+                itemPair.Add("berry_starf", "psychic");
+                itemPair.Add("berry_micle", "rock");
+                itemPair.Add("berry_enigma", "bug");
 
                 skill.Data.OnActions.Add(-1, new ItemPowerEvent(itemPair));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -9497,7 +9498,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(EdibleState)));
-                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new UseFoeItemEvent(false, false, 116, eligibles, true, false)));
+                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new UseFoeItemEvent(false, false, "seed_decoy", eligibles, true, false)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(20);//Jab
@@ -11662,7 +11663,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState());
                 skill.Data.BeforeHits.Add(0, new WeightBasePowerEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new DropItemEvent(false, true, -1, new HashSet<FlagType>(), new StringKey(), false)));
+                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new DropItemEvent(false, true, "", new HashSet<FlagType>(), new StringKey(), false)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -11712,9 +11713,27 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
-                Dictionary<int, string> plate = new Dictionary<int, string>();
-                for (int nn = 0; nn < 18; nn++)
-                    plate[380 + nn] = Text.Sanitize(((ElementInfo.Element)nn + 1).ToString()).ToLower();
+                Dictionary<string, string> plate = new Dictionary<string, string>();
+                {
+                    plate["held_insect_plate"] = "bug";
+                    plate["held_dread_plate"] = "dark";
+                    plate["held_draco_plate"] = "dragon";
+                    plate["held_zap_plate"] = "electric";
+                    plate["held_pixie_plate"] = "fairy";
+                    plate["held_fist_plate"] = "fighting";
+                    plate["held_flame_plate"] = "fire";
+                    plate["held_sky_plate"] = "flying";
+                    plate["held_spooky_plate"] = "ghost";
+                    plate["held_meadow_plate"] = "grass";
+                    plate["held_earth_plate"] = "ground";
+                    plate["held_icicle_plate"] = "ice";
+                    plate["held_blank_plate"] = "normal";
+                    plate["held_toxic_plate"] = "poison";
+                    plate["held_mind_plate"] = "psychic";
+                    plate["held_stone_plate"] = "rock";
+                    plate["held_iron_plate"] = "steel";
+                    plate["held_splash_plate"] = "water";
+                }
                 skill.Data.BeforeActions.Add(-1, new PrepareJudgmentEvent(plate));
                 skill.Data.OnActions.Add(-1, new PassJudgmentEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -11749,7 +11768,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(EdibleState)));
-                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new UseFoeItemEvent(false, false, 116, eligibles, true, false)));
+                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new UseFoeItemEvent(false, false, "seed_decoy", eligibles, true, false)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(18);//Bite
@@ -13171,7 +13190,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(EdibleState)));
-                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new DestroyItemEvent(false, false, 116, eligibles)));
+                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new DestroyItemEvent(false, false, "seed_decoy", eligibles)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
@@ -14308,7 +14327,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 100;
-                skill.Data.OnHits.Add(0, new SetItemStickyEvent(true, false, 116, true, new HashSet<FlagType>()));
+                skill.Data.OnHits.Add(0, new SetItemStickyEvent(true, false, "seed_decoy", true, new HashSet<FlagType>()));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
