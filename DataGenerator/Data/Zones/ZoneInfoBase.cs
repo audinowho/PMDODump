@@ -434,7 +434,7 @@ namespace DataGenerator.Data
                         shop.SecurityStatus = "shop_security";
                         shop.Items.Add(new MapItem("seed_reviver", 0, 800), 10);//reviver seed
                         shop.Items.Add(new MapItem("seed_blast", 0, 500), 10);//blast seed
-                        shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                        shop.Items.Add(MapItem.CreateBox("box_light", "xcl_element_poison_dust", 8000), 10);//poison dust
                         shop.Items.Add(new MapItem("wand_lob", 9, 180), 10);//Lob Wand
                         shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                         shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
@@ -2240,7 +2240,7 @@ namespace DataGenerator.Data
                         List<InvItem> treasure1 = new List<InvItem>();
                         treasure1.Add(new InvItem("food_apple", false, 0, 50));//Apple
                         List<InvItem> treasure2 = new List<InvItem>();
-                        treasure2.Add(new InvItem("box_light", false, 753, 8000));//Poison Dust
+                        treasure2.Add(InvItem.CreateBox("box_light", "xcl_element_poison_dust", 8000));//Poison Dust
                         List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
                         List<InvItem> treasure3 = new List<InvItem>();
                         treasure3.Add(new InvItem("wand_lob", false, 9, 180));//Lob Wand
@@ -2404,7 +2404,7 @@ namespace DataGenerator.Data
                     shop.SecurityStatus = "shop_security";
                     shop.Items.Add(new MapItem("seed_reviver", 0, 800), 10);//reviver seed
                     shop.Items.Add(new MapItem("seed_blast", 0, 500), 10);//blast seed
-                    shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                    shop.Items.Add(MapItem.CreateBox("box_light", "xcl_element_poison_dust", 8000), 10);//poison dust
                     shop.Items.Add(new MapItem("wand_lob", 9, 180), 10);//Lob Wand
                     shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
@@ -2429,7 +2429,7 @@ namespace DataGenerator.Data
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 1;
                     shop.SecurityStatus = "shop_security";
-                    shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                    shop.Items.Add(MapItem.CreateBox("box_light", "xcl_element_poison_dust", 8000), 10);//poison dust
                     shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
@@ -2465,7 +2465,7 @@ namespace DataGenerator.Data
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 2;
                     shop.SecurityStatus = "shop_security";
-                    shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                    shop.Items.Add(MapItem.CreateBox("box_light", "xcl_element_poison_dust", 8000), 10);//poison dust
                     shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
@@ -2497,7 +2497,7 @@ namespace DataGenerator.Data
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 0;
                     shop.SecurityStatus = "shop_security";
-                    shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                    shop.Items.Add(MapItem.CreateBox("box_light", "xcl_element_poison_dust", 8000), 10);//poison dust
                     shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 
@@ -2524,7 +2524,7 @@ namespace DataGenerator.Data
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                     shop.Personality = 0;
                     shop.SecurityStatus = "shop_security";
-                    shop.Items.Add(new MapItem("box_light", 753, 8000), 10);//poison dust
+                    shop.Items.Add(MapItem.CreateBox("box_light", "xcl_element_poison_dust", 8000), 10);//poison dust
                     shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 10);//thunder stone
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
 

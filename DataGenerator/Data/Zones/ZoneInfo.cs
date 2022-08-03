@@ -232,12 +232,12 @@ namespace DataGenerator.Data
                         //add a chest
 
                         List<InvItem> treasure = new List<InvItem>();
-                        treasure.Add(new InvItem("box_dainty", false, 101));//Reviver Seed
-                        treasure.Add(new InvItem("box_dainty", false, 101));//Reviver Seed
-                        treasure.Add(new InvItem("box_dainty", false, 49));//Micle Berry
-                        treasure.Add(new InvItem("box_dainty", false, 37));//Rowap Berry
-                        treasure.Add(new InvItem("box_dainty", false, 38));//Jaboca Berry
-                        treasure.Add(new InvItem("box_dainty", false, 2));//Big Apple
+                        treasure.Add(InvItem.CreateBox("box_dainty", "seed_reviver"));//Reviver Seed
+                        treasure.Add(InvItem.CreateBox("box_dainty", "seed_reviver"));//Reviver Seed
+                        treasure.Add(InvItem.CreateBox("box_dainty", "berry_micle"));//Micle Berry
+                        treasure.Add(InvItem.CreateBox("box_dainty", "berry_jaboca"));//Rowap Berry
+                        treasure.Add(InvItem.CreateBox("box_dainty", "berry_rowap"));//Jaboca Berry
+                        treasure.Add(InvItem.CreateBox("box_dainty", "food_apple_big"));//Big Apple
                         List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
                         items.Add((treasure, new Loc(4, 5)));
                         AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
@@ -3972,10 +3972,10 @@ namespace DataGenerator.Data
                         //layout.GenSteps.Add(PR_SPAWN_ITEMS, new SpecificSpawnStep<MapLoadContext, InvItem>(items));
 
                         List<InvItem> treasure = new List<InvItem>();
-                        treasure.Add(new InvItem("box_light", false, 902));//Bulbasaur
-                        treasure.Add(new InvItem("box_light", false, 908));//Charmander
-                        treasure.Add(new InvItem("box_light", false, 914));//Squirtle
-                        treasure.Add(new InvItem("box_light", false, 956));//Pikachu
+                        treasure.Add(InvItem.CreateBox("box_light", "xcl_family_bulbasaur_02"));//Bulbasaur
+                        treasure.Add(InvItem.CreateBox("box_light", "xcl_family_charmander_02"));//Charmander
+                        treasure.Add(InvItem.CreateBox("box_light", "xcl_family_squirtle_02"));//Squirtle
+                        treasure.Add(InvItem.CreateBox("box_light", "xcl_family_pikachu_02"));//Pikachu
                         List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
                         items.Add((treasure, new Loc(4, 4)));
                         AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
@@ -4971,12 +4971,12 @@ namespace DataGenerator.Data
 
                         List<InvItem> treasure1 = new List<InvItem>();
                         //TODO: a specific item from anyone in the dex
-                        treasure1.Add(new InvItem("box_glittery", false, 158));//Amber Tear
-                        treasure1.Add(new InvItem("box_glittery", false, 205));//Golden Thorn
-                        treasure1.Add(new InvItem("box_glittery", false, 477));//Nugget
+                        treasure1.Add(InvItem.CreateBox("box_glittery", "medicine_amber_tear"));//Amber Tear
+                        treasure1.Add(InvItem.CreateBox("box_glittery", "ammo_golden_thorn"));//Golden Thorn
+                        treasure1.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
 
                         List<InvItem> treasure2 = new List<InvItem>();
-                        treasure2.Add(new InvItem("box_light", false, 753));//Poison Dust
+                        treasure2.Add(InvItem.CreateBox("box_light", "xcl_element_poison_dust"));//Poison Dust
                         List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
                         items.Add((treasure1, new Loc(7, 7)));
                         items.Add((treasure2, new Loc(7, 13)));
