@@ -4586,10 +4586,7 @@ namespace DataGenerator.Data
              
                         monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, max_floors), 30);//gummis
                         monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 6)), new IntRange(0, 10), 10);//apricorns
-                        List<string> heldRange = new List<string>();
-                        foreach (string heldItem in IterateEvoItems())
-                            heldRange.Add(heldItem);
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), heldRange.ToArray())), new IntRange(0, 10), 10);//evo items
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 10);//evo items
                         //mobs
                         monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
                         floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
@@ -4633,10 +4630,10 @@ namespace DataGenerator.Data
                             vaultChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, 30), 200);//potion
                             vaultChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, 30), 100);//max potion
                             vaultChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, 30), 300);//full heal
-                            foreach(string x_item in IterateXItems())
-                                vaultChanceZoneStep.Items.Add(new MapItem(x_item), new IntRange(0, 30), 50);//X-Items
-                            foreach (string tm in IterateTMs())
-                                vaultChanceZoneStep.Items.Add(new MapItem(tm), new IntRange(0, 30), 5);//TMs
+                            foreach(string key in IterateXItems())
+                                vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 50);//X-Items
+                            foreach (string key in IterateTMs())
+                                vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 5);//TMs
                             vaultChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 200);//nugget
                             vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear"), new IntRange(0, 30), 100);//amber tear
                             vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, 30), 200);//reviver seed

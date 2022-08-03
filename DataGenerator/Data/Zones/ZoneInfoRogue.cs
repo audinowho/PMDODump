@@ -1295,11 +1295,8 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 5)), new IntRange(0, 30), 10);//TMs
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 6)), new IntRange(0, 30), 10);//apricorns
-                List<string> heldRange = new List<string>();
-                foreach (string heldItem in IterateEvoItems())
-                    heldRange.Add(heldItem);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), heldRange.ToArray())), new IntRange(0, 10), 40);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), heldRange.ToArray())), new IntRange(10, 20), 20);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
                 for (int ii = 0; ii < dexMap.Length; ii++)
                     monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, 30), 10);//all monsters in the game
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, 30), 10);
@@ -1347,11 +1344,9 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 5)), new IntRange(0, 30), 10);//TMs
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 6)), new IntRange(0, 30), 10);//apricorns
-                List<string> heldRange = new List<string>();
-                foreach (string heldItem in IterateEvoItems())
-                    heldRange.Add(heldItem);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), heldRange.ToArray())), new IntRange(0, 10), 40);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), heldRange.ToArray())), new IntRange(10, 20), 20);//evo items
+
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
                 for (int ii = 0; ii < dexMap.Length; ii++)
                     monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, 30), 10);//all monsters in the game
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, 30), 10);
@@ -1390,9 +1385,9 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(2, 5)), new IntRange(0, 30), 30);
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(2, 4), "seed_reviver"), new IntRange(0, 30), 10);//reviver seed
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 4), "seed_joy"), new IntRange(0, 30), 10);//joy seed
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(158, 182)), new IntRange(0, 30), 100);//manmade items
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(300, 349)), new IntRange(0, 30), 20);//equip
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(380, 398)), new IntRange(0, 30), 10);//plates
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), ItemArray(IterateManmades())), new IntRange(0, 30), 100);//manmade items
+                chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(EquipState)), true, true, new RandRange(1, 3)), new IntRange(0, 30), 20);//equip
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), ItemArray(IterateTypePlates())), new IntRange(0, 30), 10);//plates
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(1, 3)), new IntRange(0, 30), 10);//TMs
                 chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(2, 5)), new IntRange(0, 30), 20);
                 chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(1)), new IntRange(0, 30), 10);
@@ -1436,9 +1431,9 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 5), "seed_joy")), new IntRange(0, 30), 10);//joy seed
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(1), "seed_golden")), new IntRange(0, 30), 10);//golden seed
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(1), "evo_harmony_scarf")), new IntRange(20, 30), 20);//Harmony Scarf
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 6), new IntRange(158, 182))), new IntRange(0, 30), 20);//manmade items
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 6), new IntRange(300, 349))), new IntRange(0, 30), 20);//equip
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 6), new IntRange(380, 398))), new IntRange(0, 30), 10);//plates
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 6), ItemArray(IterateManmades()))), new IntRange(0, 30), 20);//manmade items
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemStateType(new FlagType(typeof(EquipState)), true, true, new RandRange(3, 6))), new IntRange(0, 30), 20);//equip
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 6), ItemArray(IterateTypePlates()))), new IntRange(0, 30), 10);//plates
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 6))), new IntRange(0, 30), 20);//TMs
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(4, 9))), new IntRange(0, 30), 10);//gummis
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(3, 7))), new IntRange(0, 30), 10);//apricorns
@@ -1546,8 +1541,8 @@ namespace DataGenerator.Data
                     //444      ***    Light Box - 1* items
                     {
                         SpawnList<MapItem> silks = new SpawnList<MapItem>();
-                        for (int ss = 0; ss < 18; ss++)
-                            silks.Add(new MapItem(700 + 4 * ss), 10);
+                        foreach (string key in IterateSilks())
+                            silks.Add(new MapItem(key), 10);
 
                         boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
@@ -2117,8 +2112,8 @@ namespace DataGenerator.Data
                     //444      ***    Light Box - 1* items
                     {
                         SpawnList<MapItem> silks = new SpawnList<MapItem>();
-                        for (int ss = 0; ss < 18; ss++)
-                            silks.Add(new MapItem(700 + 4 * ss), 10);
+                        foreach (string key in IterateSilks())
+                            silks.Add(new MapItem(key), 10);
 
                         boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
@@ -2256,10 +2251,7 @@ namespace DataGenerator.Data
                 shop.Items.Add(new MapItem("evo_ice_stone", 0, 2500), 10);//Ice Stone
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
-                List<string> heldRange = new List<string>();
-                foreach (string heldItem in IterateEvoItems())
-                    heldRange.Add(heldItem);
-                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), heldRange.ToArray()), 10);//evo items
+                shop.ItemThemes.Add(new ItemStateType(new FlagType(typeof(EvoState)), false, true, new RandRange(3, 5)), 10);//evo items
 
                 // 213 Shuckle : 126 Contrary : 380 Gastro Acid : 230 Sweet Scent : 450 Bug Bite : 92 Toxic
                 shop.StartMob = GetShopMob("shuckle", "contrary", "gastro_acid", "sweet_scent", "bug_bite", "toxic", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, 0);
@@ -2326,7 +2318,7 @@ namespace DataGenerator.Data
                     shop.Items.Add(new MapItem(key, 0, 2000), 5);//type items
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
-                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(331, 349)), 10);//type items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), ItemArray(IterateTypeBoosters())), 10);//type items
                 shop.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 6)), 10);//TMs
 
                 // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
@@ -2407,8 +2399,8 @@ namespace DataGenerator.Data
 
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
-                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(351, 380)), 10);//evo items
-                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(331, 349)), 10);//type items
+                shop.ItemThemes.Add(new ItemStateType(new FlagType(typeof(EvoState)), false, true, new RandRange(3, 5)), 10);//evo items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), ItemArray(IterateTypePlates())), 10);//type items
 
                 // Cleffa : 98 Magic Guard : 118 Metronome : 47 Sing : 204 Charm : 313 Fake Tears
                 {
@@ -2649,8 +2641,8 @@ namespace DataGenerator.Data
                         //444      ***    Light Box - 1* items
                         {
                             SpawnList<MapItem> silks = new SpawnList<MapItem>();
-                            for (int ss = 0; ss < 18; ss++)
-                                silks.Add(new MapItem(700 + 4 * ss), 10);
+                            foreach (string key in IterateSilks())
+                                silks.Add(new MapItem(key), 10);
 
                             boxSpawn.Add(new BoxSpawner<MapGenContext>("box_light", new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                         }
@@ -3829,7 +3821,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_stone"), new IntRange(0, max_floors), 4);//Sun Stone
                 monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
                 for (int ii = 0; ii < specific_tms.Length; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii][0]), new IntRange(0, max_floors), 2);//TMs
+                    monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii].Item1), new IntRange(0, max_floors), 2);//TMs
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 10);//nugget
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
@@ -3870,10 +3862,10 @@ namespace DataGenerator.Data
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, max_floors), 20);
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, max_floors), 30);//no theme
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
-                    new ItemThemeRange(true, true, new RandRange(0, 2), new IntRange(450, 454))), new IntRange(0, 30), 10);//TMs + machines
+                    new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(0, 30), 10);//TMs + machines
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, max_floors), 30);//gummis
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), new IntRange(351, 380))), new IntRange(0, 10), 20);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), new IntRange(351, 380))), new IntRange(10, 20), 10);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
                 floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
             }
@@ -3896,7 +3888,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_stone"), new IntRange(0, max_floors), 4);//Sun Stone
                 monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
                 for (int ii = 0; ii < specific_tms.Length; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii][0]), new IntRange(0, max_floors), 2);//TMs
+                    monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii].Item1), new IntRange(0, max_floors), 2);//TMs
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 10);//nugget
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
@@ -3937,11 +3929,11 @@ namespace DataGenerator.Data
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, 30), 20);
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
-                    new ItemThemeRange(true, true, new RandRange(0, 2), new IntRange(450, 454))), new IntRange(0, 30), 10);//TMs + machines
+                    new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(0, 30), 10);//TMs + machines
 
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), new IntRange(351, 380))), new IntRange(0, 10), 20);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 4), new IntRange(351, 380))), new IntRange(10, 20), 10);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
 
                 floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
@@ -3956,7 +3948,7 @@ namespace DataGenerator.Data
                     monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
                 monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
                 for (int ii = 0; ii < specific_tms.Length; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii][0]), new IntRange(0, max_floors), 2);//TMs
+                    monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii].Item1), new IntRange(0, max_floors), 2);//TMs
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
@@ -4016,7 +4008,7 @@ namespace DataGenerator.Data
                 foreach (string key in IterateXItems())
                     chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 15);//X-Items
                 for (int ii = 0; ii < specific_tms.Length; ii++)
-                    chestChanceZoneStep.Items.Add(new MapItem(specific_tms[ii][0]), new IntRange(0, max_floors), 2);//TMs
+                    chestChanceZoneStep.Items.Add(new MapItem(specific_tms[ii].Item1), new IntRange(0, max_floors), 2);//TMs
                 chestChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 20);//nugget
                 chestChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 3), new IntRange(0, max_floors), 10);//heart scale
                 chestChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 20);//amber tear
@@ -4029,9 +4021,9 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(2, 5)), new IntRange(0, max_floors), 30);
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(2, 4), "seed_reviver"), new IntRange(0, max_floors), 10);//reviver seed
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 4), "seed_joy"), new IntRange(0, max_floors), 10);//joy seed
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(158, 182)), new IntRange(0, max_floors), 100);//manmade items
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(300, 349)), new IntRange(0, max_floors), 20);//equip
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), new IntRange(380, 398)), new IntRange(0, max_floors), 10);//plates
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), ItemArray(IterateManmades())), new IntRange(0, max_floors), 100);//manmade items
+                chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(EquipState)), true, true, new RandRange(1, 3)), new IntRange(0, max_floors), 20);//equip
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), ItemArray(IterateTypePlates())), new IntRange(0, max_floors), 10);//plates
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(1, 3)), new IntRange(0, max_floors), 10);//TMs
                 chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(2, 5)), new IntRange(0, max_floors), 20);
                 chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(1)), new IntRange(0, max_floors), 10);
@@ -4124,8 +4116,8 @@ namespace DataGenerator.Data
                     //444      ***    Light Box - 1* items
                     {
                         SpawnList<MapItem> silks = new SpawnList<MapItem>();
-                        for(int ss = 0; ss < 18; ss++)
-                            silks.Add(new MapItem(700 + 4 * ss), 10);
+                        foreach (string key in IterateSilks())
+                            silks.Add(new MapItem(key), 10);
 
                         boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
@@ -4545,8 +4537,8 @@ namespace DataGenerator.Data
                     //444      ***    Light Box - 1* items
                     {
                         SpawnList<MapItem> silks = new SpawnList<MapItem>();
-                        for (int ss = 0; ss < 18; ss++)
-                            silks.Add(new MapItem(700 + 4 * ss), 10);
+                        foreach(string key in IterateSilks())
+                            silks.Add(new MapItem(key), 10);
 
                         boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(silks, new RandRange(1)))), 10);
                     }
@@ -4677,15 +4669,15 @@ namespace DataGenerator.Data
                 shop.Items.Add(new MapItem("seed_joy", 0, 2000), 5);//joy seed
 
                 for(int nn = 0; nn < specific_tms.Length; nn++)
-                    shop.Items.Add(new MapItem(specific_tms[nn][0], 0, specific_tms[nn][1]), 2);//TMs
+                    shop.Items.Add(new MapItem(specific_tms[nn].Item1, 0, specific_tms[nn].Item2), 2);//TMs
 
                 foreach (string key in IterateTypeBoosters())
                     shop.Items.Add(new MapItem(key, 0, 2000), 5);//type items
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
-                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(331, 349)), 10);//type items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), ItemArray(IterateTypeBoosters())), 10);//type items
                 shop.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
-                    new ItemThemeRange(false, true, new RandRange(0, 3), new IntRange(450, 454))), 10);//TMs + machines
+                    new ItemThemeRange(false, true, new RandRange(0, 3), ItemArray(IterateMachines()))), 10);//TMs + machines
 
                 // 352 Kecleon : 16 color change : 485 synchronoise : 20 bind : 103 screech : 86 thunder wave
                 shop.StartMob = GetShopMob("kecleon", "color_change", "synchronoise", "bind", "screech", "thunder_wave", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, 0);
@@ -4760,8 +4752,8 @@ namespace DataGenerator.Data
 
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
-                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(351, 380)), 10);//evo items
-                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), new IntRange(331, 349)), 10);//type items
+                shop.ItemThemes.Add(new ItemStateType(new FlagType(typeof(EvoState)), false, true, new RandRange(3, 5)), 10);//evo items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), ItemArray(IterateTypeBoosters())), 10);//type items
 
                 // Cleffa : 98 Magic Guard : 118 Metronome : 47 Sing : 204 Charm : 313 Fake Tears
                 {

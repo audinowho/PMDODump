@@ -3702,6 +3702,7 @@ namespace DataGenerator.Data
                         //evo
                         if (fileName == "")
                             fileName = "evo_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                        item.ItemStates.Set(new EvoState());
                     }
                     //else if (ii >= 380 && ii <= 397)
                     //{
@@ -3713,6 +3714,7 @@ namespace DataGenerator.Data
                         //ordinary held
                         if (fileName == "")
                             fileName = "held_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                        item.ItemStates.Set(new EquipState());
                     }
                     item.SortCategory = 10;
 
