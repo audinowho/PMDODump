@@ -1,703 +1,703 @@
 Monster	Skill	Intrinsic	Status	AI	Item	Role
----: NULL	---: NULL	---: NULL	---: NULL	--: NULL	----: NULL	---
-000: Missingno.	000: Attack	000: None	001: Asleep	00: Stick Together	0000: Empty	Normal
-001: Bulbasaur	001: Pound	001: Stench	002: Burned	01: Go After Foes	0001: Apple	Support
-002: Ivysaur	002: Karate Chop	002: Drizzle	003: Frozen	02: Split Up	0002: Big Apple	Leader
-003: Venusaur	003: Double Slap	003: Speed Boost	004: Paralyzed	03: Avoid Trouble	0003: Huge Apple	Loner
-004: Charmander	004: Comet Punch	004: Battle Armor	005: Poisoned	04: Get Away	0004: Golden Apple	
-005: Charmeleon	005: Mega Punch	005: Sturdy	006: Badly Poisoned	05: Wait There	0005: Perfect Apple	
-006: Charizard	006: Pay Day	006: Damp	007: Confused	06: Wait Only	0006: Banana	
-007: Squirtle	007: Fire Punch	007: Limber	008: Cringing	07: Normal Wander	0007: Big Banana	
-008: Wartortle	008: Ice Punch	008: Sand Veil	009: Movement Speed	08: Wait Attack	0008: Golden Banana	
-009: Blastoise	009: Thunder Punch	009: Static	010: Attack	09: Patrol	0009: Chestnut	
-010: Caterpie	010: Scratch	010: Volt Absorb	011: Defense	10: Weird Tree	0010: Oran Berry	
-011: Metapod	011: Vice Grip	011: Water Absorb	012: Special Attack	11: Thief	0011: Leppa Berry	
-012: Butterfree	012: Guillotine	012: Oblivious	013: Special Defense	12: Cannibal	0012: Lum Berry	
-013: Weedle	013: Razor Wind	013: Cloud Nine	014: Accuracy	13: Retreater	0013: Cheri Berry	
-014: Kakuna	014: Swords Dance	014: Compound Eyes	015: Evasion	14: Staged Boss	0014: Chesto Berry	
-015: Beedrill	015: Cut	015: Insomnia	016: Range	15: Item Finder	0015: Pecha Berry	
-016: Pidgey	016: Gust	016: Color Change	017: Reflect	16: Dumb Wander	0016: Aspear Berry	
-017: Pidgeotto	017: Wing Attack	017: Immunity	018: Light Screen	17: Smart Wander	0017: Rawst Berry	
-018: Pidgeot	018: Whirlwind	018: Flash Fire	021: In Love	18: Tit for Tat	0018: Persim Berry	
-019: Rattata	019: Fly	019: Shield Dust	022: Rage Powder	19: Loot Guard	0019: Tanga Berry	
-020: Raticate	020: Bind	020: Own Tempo	023: Destiny Bond	20: Boss	0020: Colbur Berry	
-021: Spearow	021: Slam	021: Suction Cups	024: Chasing	21: Slow Wander	0021: Haban Berry	
-022: Fearow	022: Vine Whip	022: Intimidate	044: Fire Spin	22: Slow Patrol	0022: Wacan Berry	
-023: Ekans	023: Stomp	023: Shadow Tag	045: Whirlpool	23: Shopkeeper	0023: Chople Berry	
-024: Arbok	024: Double Kick	024: Rough Skin	046: Sand Tomb	24: Shuckle	0024: Occa Berry	
-025: Pikachu	025: Mega Kick	025: Wonder Guard	050: Cursed	25: Turret	0025: Coba Berry	
-026: Raichu	026: Jump Kick	026: Levitate	053: Stockpile		0026: Kasib Berry	
-027: Sandshrew	027: Rolling Kick	027: Effect Spore	054: Perish Song		0027: Rindo Berry	
-028: Sandslash	028: Sand Attack	028: Synchronize	055: Paused		0028: Shuca Berry	
-029: Nidoran♀	029: Headbutt	029: Clear Body	057: Wish		0029: Yache Berry	
-030: Nidorina	030: Horn Attack	030: Natural Cure	058: Telekinesis		0030: Chilan Berry	
-031: Nidoqueen	031: Fury Attack	031: Lightning Rod	059: Charge		0031: Kebia Berry	
-032: Nidoran♂	032: Horn Drill	032: Serene Grace	060: Disable		0032: Payapa Berry	
-033: Nidorino	033: Tackle	033: Swift Swim	061: Yawning		0033: Charti Berry	
-034: Nidoking	034: Body Slam	034: Chlorophyll	062: Exposed		0034: Babiri Berry	
-035: Clefairy	035: Wrap	035: Illuminate	063: Miracle Eye		0035: Passho Berry	
-036: Clefable	036: Take Down	036: Trace	064: Endure		0036: Roseli Berry	
-037: Vulpix	037: Thrash	037: Huge Power	065: Ingrain		0037: Jaboca Berry	
-038: Ninetales	038: Double-Edge	038: Poison Point	066: Mirror Coat		0038: Rowap Berry	
-039: Jigglypuff	039: Tail Whip	039: Inner Focus	067: Counter		0039: Kelpsy Berry	
-040: Wigglytuff	040: Poison Sting	040: Magma Armor	068: Safeguard		0040: Qualot Berry	
-041: Zubat	041: Twineedle	041: Water Veil	069: Mist		0041: Tamato Berry	
-042: Golbat	042: Pin Missile	042: Magnet Pull	070: Sleepless		0042: Hondew Berry	
-043: Oddish	043: Leer	043: Soundproof	071: Enraged		0043: Apicot Berry	
-044: Gloom	044: Bite	044: Rain Dish	072: Taunted		0044: Liechi Berry	
-045: Vileplume	045: Growl	045: Sand Stream	073: Encore		0045: Ganlon Berry	
-046: Paras	046: Roar	046: Pressure	074: Torment		0046: Salac Berry	
-047: Parasect	047: Sing	047: Thick Fat	075: Grudge		0047: Petaya Berry	
-048: Venonat	048: Supersonic	048: Early Bird	076: Lucky Chant		0048: Starf Berry	
-049: Venomoth	049: Sonic Boom	049: Flame Body	077: Aqua Ring		0049: Micle Berry	
-050: Diglett	050: Disable	050: Run Away	078: Focus Energy		0050: Custap Berry	
-051: Dugtrio	051: Acid	051: Keen Eye	079: Embargo		0051: Enigma Berry	
-052: Meowth	052: Ember	052: Hyper Cutter	080: Area Counter		0052: Kee Berry	
-053: Persian	053: Flamethrower	053: Pickup	081: Heal Block		0053: Maranga Berry	
-054: Psyduck	054: Mist	054: Truant	082: Magic Coat		0054: 	
-055: Golduck	055: Water Gun	055: Hustle	083: Metal Burst		0055: 	
-056: Mankey	056: Hydro Pump	056: Cute Charm	084: Type-Boosted		0056: 	
-057: Primeape	057: Surf	057: Plus	085: Type-Converted		0057: 	
-058: Growlithe	058: Ice Beam	058: Minus	086: Status Protection		0058: 	
-059: Arcanine	059: Blizzard	059: Forecast	087: Wide Guard		0059: 	
-060: Poliwag	060: Psybeam	060: Sticky Hold	088: Quick Guard		0060: 	
-061: Poliwhirl	061: Bubble Beam	061: Shed Skin	089: Protect		0061: 	
-062: Poliwrath	062: Aurora Beam	062: Guts	090: Immobilized		0062: 	
-063: Abra	063: Hyper Beam	063: Marvel Scale	091: Follow Me		0063: 	
-064: Kadabra	064: Peck	064: Liquid Ooze	092: Super Mobile		0064: 	
-065: Alakazam	065: Drill Peck	065: Overgrow	093: Slip		0065: 	
-066: Machop	066: Submission	066: Blaze	094: Snatch		0066: 	
-067: Machoke	067: Low Kick	067: Torrent	095: Roosting		0067: 	
-068: Machamp	068: Counter	068: Swarm	096: Belch		0068: 	
-069: Bellsprout	069: Seismic Toss	069: Rock Head	097: Electrified		0069: 	
-070: Weepinbell	070: Strength	070: Drought	098: Sure Shot		0070: 	
-071: Victreebel	071: Absorb	071: Arena Trap	099: Power-Charged		0071: 	
-072: Tentacool	072: Mega Drain	072: Vital Spirit	100: Mini-Counter		0072: Sitrus Berry	
-073: Tentacruel	073: Leech Seed	073: White Smoke	101: Leech Seed		0073: 	
-074: Geodude	074: Growth	074: Pure Power	102: Magnet Rise		0074: 	
-075: Graveler	075: Razor Leaf	075: Shell Armor	104: Infestation		0075: Wonder Gummi	
-076: Golem	076: Solar Beam	076: Air Lock	105: Nightmare		0076: Blue Gummi	
-077: Ponyta	077: Poison Powder	077: Tangled Feet	106: Magma Storm		0077: Black Gummi	
-078: Rapidash	078: Stun Spore	078: Motor Drive	107: Retaliate		0078: Clear Gummi	
-079: Slowpoke	079: Sleep Powder	079: Rivalry	108: Water Pledge		0079: Grass Gummi	
-080: Slowbro	080: Petal Dance	080: Steadfast	109: Fire Pledge		0080: Green Gummi	
-081: Magnemite	081: String Shot	081: Snow Cloak	110: Grass Pledge		0081: Brown Gummi	
-082: Magneton	082: Dragon Rage	082: Gluttony	111: Illusion		0082: Orange Gummi	
-083: Farfetch'd	083: Fire Spin	083: Anger Point	112: Decoy		0083: Gold Gummi	
-084: Doduo	084: Thunder Shock	084: Unburden	113: Type-Protected		0084: Pink Gummi	
-085: Dodrio	085: Thunderbolt	085: Heatproof	114: Blinker		0085: Purple Gummi	
-086: Seel	086: Thunder Wave	086: Simple	115: Pierce		0086: Red Gummi	
-087: Dewgong	087: Thunder	087: Dry Skin	116: Conversion		0087: Royal Gummi	
-088: Grimer	088: Rock Throw	088: Download	117: Conversion 2		0088: Silver Gummi	
-089: Muk	089: Earthquake	089: Iron Fist	118: Recruit Boost		0089: White Gummi	
-090: Shellder	090: Fissure	090: Poison Heal	119: Stat-Charged		0090: Yellow Gummi	
-091: Cloyster	091: Dig	091: Adaptability	120: Mental-Charged		0091: Sky Gummi	
-092: Gastly	092: Toxic	092: Skill Link	121: Weakness Drain		0092: Gray Gummi	
-093: Haunter	093: Confusion	093: Hydration	123: Powder		0093: Magenta Gummi	
-094: Gengar	094: Psychic	094: Solar Power	124: Regeneration		0094: 	
-095: Onix	095: Hypnosis	095: Quick Feet	125: Detect		0095: 	
-096: Drowzee	096: Meditate	096: Normalize	129: Invisible		0096: 	
-097: Hypno	097: Agility	097: Sniper			0097: 	
-098: Krabby	098: Quick Attack	098: Magic Guard			0098: 	
-099: Kingler	099: Rage	099: No Guard			0099: 	
-100: Voltorb	100: Teleport	100: Stall			0100: Plain Seed	
-101: Electrode	101: Night Shade	101: Technician			0101: Reviver Seed	
-102: Exeggcute	102: Mimic	102: Leaf Guard			0102: Joy Seed	
-103: Exeggutor	103: Screech	103: Klutz			0103: Golden Seed	
-104: Cubone	104: Double Team	104: Mold Breaker			0104: Doom Seed	
-105: Marowak	105: Recover	105: Super Luck			0105: Spreader Seed	
-106: Hitmonlee	106: Harden	106: Aftermath			0106: Training Seed	
-107: Hitmonchan	107: Minimize	107: Anticipation			0107: Hunger Seed	
-108: Lickitung	108: Smokescreen	108: Forewarn			0108: Warp Seed	
-109: Koffing	109: Confuse Ray	109: Unaware			0109: Vanish Seed	
-110: Weezing	110: Withdraw	110: Tinted Lens			0110: Sleep Seed	
-111: Rhyhorn	111: Defense Curl	111: Filter			0111: Vile Seed	
-112: Rhydon	112: Barrier	112: Slow Start			0112: Blast Seed	
-113: Chansey	113: Light Screen	113: Scrappy			0113: Blinker Seed	
-114: Tangela	114: Haze	114: Storm Drain			0114: Pure Seed	
-115: Kangaskhan	115: Reflect	115: Ice Body			0115: Ice Seed	
-116: Horsea	116: Focus Energy	116: Solid Rock			0116: Decoy Seed	
-117: Seadra	117: Bide	117: Snow Warning			0117: Last-Chance Seed	
-118: Goldeen	118: Metronome	118: Honey Gather			0118: Ban Seed	
-119: Seaking	119: Mirror Move	119: Frisk			0119: 	
-120: Staryu	120: Self-Destruct	120: Reckless			0120: 	
-121: Starmie	121: Egg Bomb	121: Multitype			0121: 	
-122: Mr. Mime	122: Lick	122: Flower Gift			0122: 	
-123: Scyther	123: Smog	123: Bad Dreams			0123: 	
-124: Jynx	124: Sludge	124: Pickpocket			0124: 	
-125: Electabuzz	125: Bone Club	125: Sheer Force			0125: 	
-126: Magmar	126: Fire Blast	126: Contrary			0126: 	
-127: Pinsir	127: Waterfall	127: Unnerve			0127: 	
-128: Tauros	128: Clamp	128: Defiant			0128: 	
-129: Magikarp	129: Swift	129: Defeatist			0129: 	
-130: Gyarados	130: Skull Bash	130: Cursed Body			0130: 	
-131: Lapras	131: Spike Cannon	131: Healer			0131: 	
-132: Ditto	132: Constrict	132: Friend Guard			0132: 	
-133: Eevee	133: Amnesia	133: Weak Armor			0133: 	
-134: Vaporeon	134: Kinesis	134: Heavy Metal			0134: 	
-135: Jolteon	135: Soft-Boiled	135: Light Metal			0135: 	
-136: Flareon	136: High Jump Kick	136: Multiscale			0136: 	
-137: Porygon	137: Glare	137: Toxic Boost			0137: 	
-138: Omanyte	138: Dream Eater	138: Flare Boost			0138: 	
-139: Omastar	139: Poison Gas	139: Harvest			0139: 	
-140: Kabuto	140: Barrage	140: Telepathy			0140: 	
-141: Kabutops	141: Leech Life	141: Moody			0141: 	
-142: Aerodactyl	142: Lovely Kiss	142: Overcoat			0142: 	
-143: Snorlax	143: Sky Attack	143: Poison Touch			0143: 	
-144: Articuno	144: Transform	144: Regenerator			0144: 	
-145: Zapdos	145: Bubble	145: Big Pecks			0145: 	
-146: Moltres	146: Dizzy Punch	146: Sand Rush			0146: 	
-147: Dratini	147: Spore	147: Wonder Skin			0147: 	
-148: Dragonair	148: Flash	148: Analytic			0148: 	
-149: Dragonite	149: Psywave	149: Illusion			0149: 	
-150: Mewtwo	150: Splash	150: Imposter			0150: Nectar	
-151: Mew	151: Acid Armor	151: Infiltrator			0151: Protein	
-152: Chikorita	152: Crabhammer	152: Mummy			0152: Iron	
-153: Bayleef	153: Explosion	153: Moxie			0153: Calcium	
-154: Meganium	154: Fury Swipes	154: Justified			0154: Zinc	
-155: Cyndaquil	155: Bonemerang	155: Rattled			0155: Carbos	
-156: Quilava	156: Rest	156: Magic Bounce			0156: HP Up	
-157: Typhlosion	157: Rock Slide	157: Sap Sipper			0157: 	
-158: Totodile	158: Hyper Fang	158: Prankster			0158: Amber Tear	
-159: Croconaw	159: Sharpen	159: Sand Force			0159: 	
-160: Feraligatr	160: Conversion	160: Iron Barbs			0160: Potion	
-161: Sentret	161: Tri Attack	161: Zen Mode			0161: Max Potion	
-162: Furret	162: Super Fang	162: Victory Star			0162: 	
-163: Hoothoot	163: Slash	163: Turboblaze			0163: 	
-164: Noctowl	164: Substitute	164: Teravolt			0164: Elixir	
-165: Ledyba	165: Struggle	165: Aroma Veil			0165: 	
-166: Ledian	166: Sketch	166: Flower Veil			0166: Max Elixir	
-167: Spinarak	167: Triple Kick	167: Cheek Pouch			0167: 	
-168: Ariados	168: Thief	168: Protean			0168: 	
-169: Crobat	169: Spider Web	169: Fur Coat			0169: 	
-170: Chinchou	170: Mind Reader	170: Magician			0170: 	
-171: Lanturn	171: Nightmare	171: Bulletproof			0171: 	
-172: Pichu	172: Flame Wheel	172: Competitive			0172: 	
-173: Cleffa	173: Snore	173: Strong Jaw			0173: Full Heal	
-174: Igglybuff	174: Curse	174: Refrigerate			0174: Full Restore	
-175: Togepi	175: Flail	175: Sweet Veil			0175: X Attack	
-176: Togetic	176: Conversion 2	176: Stance Change			0176: X Defense	
-177: Natu	177: Aeroblast	177: Gale Wings			0177: X Sp. Atk	
-178: Xatu	178: Cotton Spore	178: Mega Launcher			0178: X Sp. Def	
-179: Mareep	179: Reversal	179: Grass Pelt			0179: X Speed	
-180: Flaaffy	180: Spite	180: Symbiosis			0180: X Accuracy	
-181: Ampharos	181: Powder Snow	181: Tough Claws			0181: Dire Hit	
-182: Bellossom	182: Protect	182: Pixilate			0182: Guard Spec.	
-183: Marill	183: Mach Punch	183: Gooey			0183: Mental Herb	
-184: Azumarill	184: Scary Face	184: Aerilate			0184: Power Herb	
-185: Sudowoodo	185: Feint Attack	185: Parental Bond			0185: White Herb	
-186: Politoed	186: Sweet Kiss	186: Dark Aura			0186: 	
-187: Hoppip	187: Belly Drum	187: Fairy Aura			0187: 	
-188: Skiploom	188: Sludge Bomb	188: Aura Break			0188: 	
-189: Jumpluff	189: Mud-Slap	189: Primordial Sea			0189: 	
-190: Aipom	190: Octazooka	190: Desolate Land			0190: 	
-191: Sunkern	191: Spikes	191: Delta Stream			0191: 	
-192: Sunflora	192: Zap Cannon	192: Stamina			0192: 	
-193: Yanma	193: Foresight	193: Wimp Out			0193: 	
-194: Wooper	194: Destiny Bond	194: Emergency Exit			0194: 	
-195: Quagsire	195: Perish Song	195: Water Compaction			0195: 	
-196: Espeon	196: Icy Wind	196: Merciless			0196: 	
-197: Umbreon	197: Detect	197: Shields Down			0197: 	
-198: Murkrow	198: Bone Rush	198: Stakeout			0198: 	
-199: Slowking	199: Lock-On	199: Water Bubble			0199: 	
-200: Misdreavus	200: Outrage	200: Steelworker			0200: Stick	
-201: Unown	201: Sandstorm	201: Berserk			0201: Cacnea Spike	
-202: Wobbuffet	202: Giga Drain	202: Slush Rush			0202: Corsola Twig	
-203: Girafarig	203: Endure	203: Long Reach			0203: Iron Thorn	
-204: Pineco	204: Charm	204: Liquid Voice			0204: Silver Spike	
-205: Forretress	205: Rollout	205: Triage			0205: Golden Thorn	
-206: Dunsparce	206: False Swipe	206: Galvanize			0206: Rare Fossil	
-207: Gligar	207: Swagger	207: Surge Surfer			0207: Geo Pebble	
-208: Steelix	208: Milk Drink	208: Schooling			0208: Gravelerock	
-209: Snubbull	209: Spark	209: Disguise			0209: Big Apricorn	
-210: Granbull	210: Fury Cutter	210: Battle Bond			0210: Plain Apricorn	
-211: Qwilfish	211: Steel Wing	211: Power Construct			0211: Blue Apricorn	
-212: Scizor	212: Mean Look	212: Corrosion			0212: Green Apricorn	
-213: Shuckle	213: Attract	213: Comatose			0213: Brown Apricorn	
-214: Heracross	214: Sleep Talk	214: Queenly Majesty			0214: Purple Apricorn	
-215: Sneasel	215: Heal Bell	215: Innards Out			0215: Red Apricorn	
-216: Teddiursa	216: Return	216: Dancer			0216: White Apricorn	
-217: Ursaring	217: Present	217: Battery			0217: Yellow Apricorn	
-218: Slugma	218: Frustration	218: Fluffy			0218: Black Apricorn	
-219: Magcargo	219: Safeguard	219: Dazzling			0219: Perfect Apricorn	
-220: Swinub	220: Pain Split	220: Soul-Heart			0220: Path Wand	
-221: Piloswine	221: Sacred Fire	221: Tangling Hair			0221: Pounce Wand	
-222: Corsola	222: Magnitude	222: Receiver			0222: Whirlwind Wand	
-223: Remoraid	223: Dynamic Punch	223: Power of Alchemy			0223: Switcher Wand	
-224: Octillery	224: Megahorn	224: Beast Boost			0224: Surround Wand	
-225: Delibird	225: Dragon Breath	225: RKS System			0225: Lure Wand	
-226: Mantine	226: Baton Pass	226: Electric Surge			0226: Slow Wand	
-227: Skarmory	227: Encore	227: Psychic Surge			0227: Stayaway Wand	
-228: Houndour	228: Pursuit	228: Misty Surge			0228: Fear Wand	
-229: Houndoom	229: Rapid Spin	229: Grassy Surge			0229: Totter Wand	
-230: Kingdra	230: Sweet Scent	230: Full Metal Body			0230: Infatuation Wand	
-231: Phanpy	231: Iron Tail	231: Shadow Shield			0231: Topsy-Turvy Wand	
-232: Donphan	232: Metal Claw	232: Prism Armor			0232: Warp Wand	
-233: Porygon2	233: Vital Throw	233: Neuroforce			0233: Purge Wand	
-234: Stantler	234: Morning Sun	234: Intrepid Sword			0234: Lob Wand	
-235: Smeargle	235: Synthesis	235: Dauntless Shield			0235: Transfer Wand	
-236: Tyrogue	236: Moonlight	236: Libero			0236: Vanish Wand	
-237: Hitmontop	237: Hidden Power	237: Ball Fetch			0237: 	
-238: Smoochum	238: Cross Chop	238: Cotton Down			0238: 	
-239: Elekid	239: Twister	239: Propeller Tail			0239: 	
-240: Magby	240: Rain Dance	240: Mirror Armor			0240: 	
-241: Miltank	241: Sunny Day	241: Gulp Missile			0241: 	
-242: Blissey	242: Crunch	242: Stalwart			0242: 	
-243: Raikou	243: Mirror Coat	243: Steam Engine			0243: 	
-244: Entei	244: Psych Up	244: Punk Rock			0244: 	
-245: Suicune	245: Extreme Speed	245: Sand Spit			0245: 	
-246: Larvitar	246: Ancient Power	246: Ice Scales			0246: 	
-247: Pupitar	247: Shadow Ball	247: Ripen			0247: 	
-248: Tyranitar	248: Future Sight	248: Ice Face			0248: 	
-249: Lugia	249: Rock Smash	249: Power Spot			0249: 	
-250: Ho-Oh	250: Whirlpool	250: Mimicry			0250: Escape Orb	
-251: Celebi	251: Beat Up	251: Screen Cleaner			0251: Weather Orb	
-252: Treecko	252: Fake Out	252: Steely Spirit			0252: Mobile Orb	
-253: Grovyle	253: Uproar	253: Perish Body			0253: Luminous Orb	
-254: Sceptile	254: Stockpile	254: Wandering Spirit			0254: Invert Orb	
-255: Torchic	255: Spit Up	255: Gorilla Tactics			0255: Invisify Orb	
-256: Combusken	256: Swallow	256: Neutralizing Gas			0256: Fill-In Orb	
-257: Blaziken	257: Heat Wave	257: Pastel Veil			0257: Devolve Orb	
-258: Mudkip	258: Hail	258: Hunger Switch			0258: All-Aim Orb	
-259: Marshtomp	259: Torment	259: Quick Draw			0259: Trawl Orb	
-260: Swampert	260: Flatter	260: Unseen Fist			0260: Revival Orb	
-261: Poochyena	261: Will-O-Wisp	261: Curious Medicine			0261: Scanner Orb	
-262: Mightyena	262: Memento	262: Transistor			0262: All-Hit Orb	
-263: Zigzagoon	263: Façade	263: Dragon's Maw			0263: Cleanse Orb	
-264: Linoone	264: Focus Punch	264: Chilling Neigh			0264: One-Shot Orb	
-265: Wurmple	265: Smelling Salts	265: Grim Neigh			0265: Endure Orb	
-266: Silcoon	266: Follow Me	266: As One			0266: Pierce Orb	
-267: Beautifly	267: Nature Power	267: As One			0267: Stayaway Orb	
-268: Cascoon	268: Charge				0268: All Protect Orb	
-269: Dustox	269: Taunt				0269: Trap-See Orb	
-270: Lotad	270: Helping Hand				0270: Trapbust Orb	
-271: Lombre	271: Trick				0271: Slumber Orb	
-272: Ludicolo	272: Role Play				0272: Totter Orb	
-273: Seedot	273: Wish				0273: Petrify Orb	
-274: Nuzleaf	274: Assist				0274: Freeze Orb	
-275: Shiftry	275: Ingrain				0275: Spurn Orb	
-276: Taillow	276: Superpower				0276: Foe-Hold Orb	
-277: Swellow	277: Magic Coat				0277: Nullify Orb	
-278: Wingull	278: Recycle				0278: All-Dodge Orb	
-279: Pelipper	279: Revenge				0279: Health Orb	
-280: Ralts	280: Brick Break				0280: All Power-Up Orb	
-281: Kirlia	281: Yawn				0281: One-Room Orb	
-282: Gardevoir	282: Knock Off				0282: Slow Orb	
-283: Surskit	283: Endeavor				0283: Rebound Orb	
-284: Masquerain	284: Eruption				0284: Mirror Orb	
-285: Shroomish	285: Skill Swap				0285: Itemizer Orb	
-286: Breloom	286: Imprison				0286: Foe-Seal Orb	
-287: Slakoth	287: Refresh				0287: Halving Orb	
-288: Vigoroth	288: Grudge				0288: Rollcall Orb	
-289: Slaking	289: Snatch				0289: Mug Orb	
-290: Nincada	290: Secret Power				0290: 	
-291: Ninjask	291: Dive				0291: 	
-292: Shedinja	292: Arm Thrust				0292: 	
-293: Whismur	293: Camouflage				0293: 	
-294: Loudred	294: Tail Glow				0294: 	
-295: Exploud	295: Luster Purge				0295: 	
-296: Makuhita	296: Mist Ball				0296: 	
-297: Hariyama	297: Feather Dance				0297: 	
-298: Azurill	298: Teeter Dance				0298: 	
-299: Nosepass	299: Blaze Kick				0299: 	
-300: Skitty	300: Mud Sport				0300: Friend Bow	
-301: Delcatty	301: Ice Ball				0301: Pierce Band	
-302: Sableye	302: Needle Arm				0302: Golden Mask	
-303: Mawile	303: Slack Off				0303: Mobile Scarf	
-304: Aron	304: Hyper Voice				0304: Pass Scarf	
-305: Lairon	305: Poison Fang				0305: Warp Scarf	
-306: Aggron	306: Crush Claw				0306: Trap Scarf	
-307: Meditite	307: Blast Burn				0307: Grip Claw	
-308: Medicham	308: Hydro Cannon				0308: Binding Band	
-309: Electrike	309: Meteor Mash				0309: Twist Band	
-310: Manectric	310: Astonish				0310: Metronome	
-311: Plusle	311: Weather Ball				0311: Shed Shell	
-312: Minun	312: Aromatherapy				0312: Shell Bell	
-313: Volbeat	313: Fake Tears				0313: Scope Lens	
-314: Illumise	314: Air Cutter				0314: Wide Lens	
-315: Roselia	315: Overheat				0315: Heal Ribbon	
-316: Gulpin	316: Odor Sleuth				0316: 	
-317: Swalot	317: Rock Tomb				0317: Sticky Barb	
-318: Carvanha	318: Silver Wind				0318: Choice Band	
-319: Sharpedo	319: Metal Sound				0319: Choice Specs	
-320: Wailmer	320: Grass Whistle				0320: Choice Scarf	
-321: Wailord	321: Tickle				0321: Assault Vest	
-322: Numel	322: Cosmic Power				0322: Life Orb	
-323: Camerupt	323: Water Spout				0323: Toxic Orb	
-324: Torkoal	324: Signal Beam				0324: Flame Orb	
-325: Spoink	325: Shadow Punch				0325: Iron Ball	
-326: Grumpig	326: Extrasensory				0326: Ring Target	
-327: Spinda	327: Sky Uppercut				0327: Black Sludge	
-328: Trapinch	328: Sand Tomb				0328: X-Ray Specs	
-329: Vibrava	329: Sheer Cold				0329: Reunion Cape	
-330: Flygon	330: Muddy Water				0330: Cover Band	
-331: Cacnea	331: Bullet Seed				0331: Silver Powder	
-332: Cacturne	332: Aerial Ace				0332: Black Glasses	
-333: Swablu	333: Icicle Spear				0333: Dragon Scale	
-334: Altaria	334: Iron Defense				0334: Magnet	
-335: Zangoose	335: Block				0335: Pink Bow	
-336: Seviper	336: Howl				0336: Black Belt	
-337: Lunatone	337: Dragon Claw				0337: Charcoal	
-338: Solrock	338: Frenzy Plant				0338: Sharp Beak	
-339: Barboach	339: Bulk Up				0339: Spell Tag	
-340: Whiscash	340: Bounce				0340: Miracle Seed	
-341: Corphish	341: Mud Shot				0341: Soft Sand	
-342: Crawdaunt	342: Poison Tail				0342: Never-Melt Ice	
-343: Baltoy	343: Covet				0343: Silk Scarf	
-344: Claydol	344: Volt Tackle				0344: Poison Barb	
-345: Lileep	345: Magical Leaf				0345: Twisted Spoon	
-346: Cradily	346: Water Sport				0346: Hard Stone	
-347: Anorith	347: Calm Mind				0347: Metal Coat	
-348: Armaldo	348: Leaf Blade				0348: Mystic Water	
-349: Feebas	349: Dragon Dance				0349: Harmony Scarf	
-350: Milotic	350: Rock Blast				0350: Everstone	
-351: Castform	351: Shock Wave				0351: Fire Stone	
-352: Kecleon	352: Water Pulse				0352: Thunder Stone	
-353: Shuppet	353: Doom Desire				0353: Water Stone	
-354: Banette	354: Psycho Boost				0354: Leaf Stone	
-355: Duskull	355: Roost				0355: Moon Stone	
-356: Dusclops	356: Gravity				0356: Sun Stone	
-357: Tropius	357: Miracle Eye				0357: Magmarizer	
-358: Chimecho	358: Wake-Up Slap				0358: Electirizer	
-359: Absol	359: Hammer Arm				0359: Reaper Cloth	
-360: Wynaut	360: Gyro Ball				0360: Cracked Pot	
-361: Snorunt	361: Healing Wish				0361: Chipped Pot	
-362: Glalie	362: Brine				0362: Shiny Stone	
-363: Spheal	363: Natural Gift				0363: Dusk Stone	
-364: Sealeo	364: Feint				0364: Dawn Stone	
-365: Walrein	365: Pluck				0365: Link Cable	
-366: Clamperl	366: Tailwind				0366: Up-Grade	
-367: Huntail	367: Acupressure				0367: Dubious Disc	
-368: Gorebyss	368: Metal Burst				0368: Razor Fang	
-369: Relicanth	369: U-turn				0369: Razor Claw	
-370: Luvdisc	370: Close Combat				0370: 	
-371: Bagon	371: Payback				0371: Protector	
-372: Shelgon	372: Assurance				0372: Oval Stone	
-373: Salamence	373: Embargo				0373: Prism Scale	
-374: Beldum	374: Fling				0374: King's Rock	
-375: Metang	375: Psycho Shift				0375: Deep Sea Tooth	
-376: Metagross	376: Trump Card				0376: Deep Sea Scale	
-377: Regirock	377: Heal Block				0377: Sun Ribbon	
-378: Regice	378: Wring Out				0378: Lunar Ribbon	
-379: Registeel	379: Power Trick				0379: Ice Stone	
-380: Latias	380: Gastro Acid				0380: Insect Plate	
-381: Latios	381: Lucky Chant				0381: Dread Plate	
-382: Kyogre	382: Me First				0382: Draco Plate	
-383: Groudon	383: Copycat				0383: Zap Plate	
-384: Rayquaza	384: Power Swap				0384: Pixie Plate	
-385: Jirachi	385: Guard Swap				0385: Fist Plate	
-386: Deoxys	386: Punishment				0386: Flame Plate	
-387: Turtwig	387: Last Resort				0387: Sky Plate	
-388: Grotle	388: Worry Seed				0388: Spooky Plate	
-389: Torterra	389: Sucker Punch				0389: Meadow Plate	
-390: Chimchar	390: Toxic Spikes				0390: Earth Plate	
-391: Monferno	391: Heart Swap				0391: Icicle Plate	
-392: Infernape	392: Aqua Ring				0392: 	
-393: Piplup	393: Magnet Rise				0393: Toxic Plate	
-394: Prinplup	394: Flare Blitz				0394: Mind Plate	
-395: Empoleon	395: Force Palm				0395: Stone Plate	
-396: Starly	396: Aura Sphere				0396: Iron Plate	
-397: Staravia	397: Rock Polish				0397: Splash Plate	
-398: Staraptor	398: Poison Jab				0398: 	
-399: Bidoof	399: Dark Pulse				0399: 	
-400: Bibarel	400: Night Slash				0400: Power Band	
-401: Kricketot	401: Aqua Tail				0401: Special Band	
-402: Kricketune	402: Seed Bomb				0402: Defense Scarf	
-403: Shinx	403: Air Slash				0403: Zinc Band	
-404: Luxio	404: X-Scissor				0404: Big Root	
-405: Luxray	405: Bug Buzz				0405: Expert Belt	
-406: Budew	406: Dragon Pulse				0406: Weather Rock	
-407: Roserade	407: Dragon Rush				0407: 	
-408: Cranidos	408: Power Gem				0408: 	
-409: Rampardos	409: Drain Punch				0409: 	
-410: Shieldon	410: Vacuum Wave				0410: 	
-411: Bastiodon	411: Focus Blast				0411: 	
-412: Burmy	412: Energy Ball				0412: 	
-413: Wormadam	413: Brave Bird				0413: 	
-414: Mothim	414: Earth Power				0414: 	
-415: Combee	415: Switcheroo				0415: 	
-416: Vespiquen	416: Giga Impact				0416: 	
-417: Pachirisu	417: Nasty Plot				0417: 	
-418: Buizel	418: Bullet Punch				0418: 	
-419: Floatzel	419: Avalanche				0419: 	
-420: Cherubi	420: Ice Shard				0420: 	
-421: Cherrim	421: Shadow Claw				0421: 	
-422: Shellos	422: Thunder Fang				0422: 	
-423: Gastrodon	423: Ice Fang				0423: 	
-424: Ambipom	424: Fire Fang				0424: 	
-425: Drifloon	425: Shadow Sneak				0425: 	
-426: Drifblim	426: Mud Bomb				0426: 	
-427: Buneary	427: Psycho Cut				0427: 	
-428: Lopunny	428: Zen Headbutt				0428: 	
-429: Mismagius	429: Mirror Shot				0429: 	
-430: Honchkrow	430: Flash Cannon				0430: 	
-431: Glameow	431: Rock Climb				0431: 	
-432: Purugly	432: Defog				0432: 	
-433: Chingling	433: Trick Room				0433: 	
-434: Stunky	434: Draco Meteor				0434: 	
-435: Skuntank	435: Discharge				0435: 	
-436: Bronzor	436: Lava Plume				0436: 	
-437: Bronzong	437: Leaf Storm				0437: 	
-438: Bonsly	438: Power Whip				0438: 	
-439: Mime Jr.	439: Rock Wrecker				0439: 	
-440: Happiny	440: Cross Poison				0440: 	
-441: Chatot	441: Gunk Shot				0441: 	
-442: Spiritomb	442: Iron Head				0442: 	
-443: Gible	443: Magnet Bomb				0443: 	
-444: Gabite	444: Stone Edge				0444: Light Box	
-445: Garchomp	445: Captivate				0445: Heavy Box	
-446: Munchlax	446: Stealth Rock				0446: Nifty Box	
-447: Riolu	447: Grass Knot				0447: Dainty Box	
-448: Lucario	448: Chatter				0448: Glittery Box	
-449: Hippopotas	449: Judgment				0449: Deluxe Box	
-450: Hippowdon	450: Bug Bite				0450: Link Box	
-451: Skorupi	451: Charge Beam				0451: Assembly Box	
-452: Drapion	452: Wood Hammer				0452: Storage Box	
-453: Croagunk	453: Aqua Jet				0453: Ability Capsule	
-454: Toxicroak	454: Attack Order				0454: Grimy Food	
-455: Carnivine	455: Defend Order				0455: Key	
-456: Finneon	456: Heal Order				0456: Ancient Key	
-457: Lumineon	457: Head Smash				0457: 	
-458: Mantyke	458: Double Hit				0458: 	
-459: Snover	459: Roar of Time				0459: 	
-460: Abomasnow	460: Spacial Rend				0460: 	
-461: Weavile	461: Lunar Dance				0461: 	
-462: Magnezone	462: Crush Grip				0462: 	
-463: Lickilicky	463: Magma Storm				0463: 	
-464: Rhyperior	464: Dark Void				0464: 	
-465: Tangrowth	465: Seed Flare				0465: 	
-466: Electivire	466: Ominous Wind				0466: 	
-467: Magmortar	467: Shadow Force				0467: 	
-468: Togekiss	468: Hone Claws				0468: 	
-469: Yanmega	469: Wide Guard				0469: 	
-470: Leafeon	470: Guard Split				0470: 	
-471: Glaceon	471: Power Split				0471: 	
-472: Gliscor	472: Wonder Room				0472: 	
-473: Mamoswine	473: Psyshock				0473: 	
-474: Porygon-Z	474: Venoshock				0474: 	
-475: Gallade	475: Autotomize				0475: 	
-476: Probopass	476: Rage Powder				0476: 	
-477: Dusknoir	477: Telekinesis				0477: Nugget	
-478: Froslass	478: Magic Room				0478: Mystery Part	
-479: Rotom	479: Smack Down				0479: Berserk Gene	
-480: Uxie	480: Storm Throw				0480: Pearl	
-481: Mesprit	481: Flame Burst				0481: Heart Scale	
-482: Azelf	482: Sludge Wave				0482: Red Orb	
-483: Dialga	483: Quiver Dance				0483: Blue Orb	
-484: Palkia	484: Heavy Slam				0484: Green Orb	
-485: Heatran	485: Synchronoise				0485: 	
-486: Regigigas	486: Electro Ball				0486: Meteorite	
-487: Giratina	487: Soak				0487: Adamant Orb	
-488: Cresselia	488: Flame Charge				0488: Lustrous Orb	
-489: Phione	489: Coil				0489: Griseous Orb	
-490: Manaphy	490: Low Sweep				0490: Spacetime Globe	
-491: Darkrai	491: Acid Spray				0491: Gracidea	
-492: Shaymin	492: Foul Play				0492: 	
-493: Arceus	493: Simple Beam				0493: 	
-494: Victini	494: Entrainment				0494: 	
-495: Snivy	495: After You				0495: 	
-496: Servine	496: Round				0496: 	
-497: Serperior	497: Echoed Voice				0497: 	
-498: Tepig	498: Chip Away				0498: 	
-499: Pignite	499: Clear Smog				0499: 	
-500: Emboar	500: Stored Power				0500: 	
-501: Oshawott	501: Quick Guard				0501: 	
-502: Dewott	502: Ally Switch				0502: 	
-503: Samurott	503: Scald				0503: 	
-504: Patrat	504: Shell Smash				0504: 	
-505: Watchog	505: Heal Pulse				0505: 	
-506: Lillipup	506: Hex				0506: 	
-507: Herdier	507: Sky Drop				0507: 	
-508: Stoutland	508: Shift Gear				0508: 	
-509: Purrloin	509: Circle Throw				0509: 	
-510: Liepard	510: Incinerate				0510: 	
-511: Pansage	511: Quash				0511: 	
-512: Simisage	512: Acrobatics				0512: 	
-513: Pansear	513: Reflect Type				0513: 	
-514: Simisear	514: Retaliate				0514: 	
-515: Panpour	515: Final Gambit				0515: 	
-516: Simipour	516: Bestow				0516: 	
-517: Munna	517: Inferno				0517: 	
-518: Musharna	518: Water Pledge				0518: 	
-519: Pidove	519: Fire Pledge				0519: 	
-520: Tranquill	520: Grass Pledge				0520: 	
-521: Unfezant	521: Volt Switch				0521: 	
-522: Blitzle	522: Struggle Bug				0522: 	
-523: Zebstrika	523: Bulldoze				0523: 	
-524: Roggenrola	524: Frost Breath				0524: 	
-525: Boldore	525: Dragon Tail				0525: 	
-526: Gigalith	526: Work Up				0526: 	
-527: Woobat	527: Electroweb				0527: 	
-528: Swoobat	528: Wild Charge				0528: 	
-529: Drilbur	529: Drill Run				0529: 	
-530: Excadrill	530: Dual Chop				0530: 	
-531: Audino	531: Heart Stamp				0531: 	
-532: Timburr	532: Horn Leech				0532: 	
-533: Gurdurr	533: Sacred Sword				0533: 	
-534: Conkeldurr	534: Razor Shell				0534: 	
-535: Tympole	535: Heat Crash				0535: 	
-536: Palpitoad	536: Leaf Tornado				0536: 	
-537: Seismitoad	537: Steamroller				0537: 	
-538: Throh	538: Cotton Guard				0538: 	
-539: Sawk	539: Night Daze				0539: 	
-540: Sewaddle	540: Psystrike				0540: 	
-541: Swadloon	541: Tail Slap				0541: 	
-542: Leavanny	542: Hurricane				0542: 	
-543: Venipede	543: Head Charge				0543: 	
-544: Whirlipede	544: Gear Grind				0544: 	
-545: Scolipede	545: Searing Shot				0545: 	
-546: Cottonee	546: Techno Blast				0546: 	
-547: Whimsicott	547: Relic Song				0547: 	
-548: Petilil	548: Secret Sword				0548: 	
-549: Lilligant	549: Glaciate				0549: 	
-550: Basculin	550: Bolt Strike				0550: 	
-551: Sandile	551: Blue Flare				0551: 	
-552: Krokorok	552: Fiery Dance				0552: 	
-553: Krookodile	553: Freeze Shock				0553: 	
-554: Darumaka	554: Ice Burn				0554: 	
-555: Darmanitan	555: Snarl				0555: 	
-556: Maractus	556: Icicle Crash				0556: 	
-557: Dwebble	557: V-create				0557: 	
-558: Crustle	558: Fusion Flare				0558: 	
-559: Scraggy	559: Fusion Bolt				0559: 	
-560: Scrafty	560: Flying Press				0560: 	
-561: Sigilyph	561: Mat Block				0561: 	
-562: Yamask	562: Belch				0562: 	
-563: Cofagrigus	563: Rototiller				0563: 	
-564: Tirtouga	564: Sticky Web				0564: 	
-565: Carracosta	565: Fell Stinger				0565: 	
-566: Archen	566: Phantom Force				0566: 	
-567: Archeops	567: Trick-or-Treat				0567: 	
-568: Trubbish	568: Noble Roar				0568: 	
-569: Garbodor	569: Ion Deluge				0569: 	
-570: Zorua	570: Parabolic Charge				0570: 	
-571: Zoroark	571: Forest's Curse				0571: 	
-572: Minccino	572: Petal Blizzard				0572: 	
-573: Cinccino	573: Freeze-Dry				0573: 	
-574: Gothita	574: Disarming Voice				0574: 	
-575: Gothorita	575: Parting Shot				0575: 	
-576: Gothitelle	576: Topsy-Turvy				0576: 	
-577: Solosis	577: Draining Kiss				0577: 	
-578: Duosion	578: Crafty Shield				0578: 	
-579: Reuniclus	579: Flower Shield				0579: 	
-580: Ducklett	580: Grassy Terrain				0580: 	
-581: Swanna	581: Misty Terrain				0581: 	
-582: Vanillite	582: Electrify				0582: 	
-583: Vanillish	583: Play Rough				0583: 	
-584: Vanilluxe	584: Fairy Wind				0584: 	
-585: Deerling	585: Moonblast				0585: 	
-586: Sawsbuck	586: Boomburst				0586: 	
-587: Emolga	587: Fairy Lock				0587: TM Secret Power	
-588: Karrablast	588: King's Shield				0588: TM Embargo	
-589: Escavalier	589: Play Nice				0589: TM Echoed Voice	
-590: Foongus	590: Confide				0590: TM Double Team	
-591: Amoonguss	591: Diamond Storm				0591: TM Psychic	
-592: Frillish	592: Steam Eruption				0592: TM Toxic	
-593: Jellicent	593: Hyperspace Hole				0593: TM Will-O-Wisp	
-594: Alomomola	594: Water Shuriken				0594: TM Dragon Tail	
-595: Joltik	595: Mystical Fire				0595: TM Flamethrower	
-596: Galvantula	596: Spiky Shield				0596: TM Protect	
-597: Ferroseed	597: Aromatic Mist				0597: TM Defog	
-598: Ferrothorn	598: Eerie Impulse				0598: TM Roar	
-599: Klink	599: Venom Drench				0599: TM Hyper Beam	
-600: Klang	600: Powder				0600: TM Swagger	
-601: Klinklang	601: Geomancy				0601: TM Dive	
-602: Tynamo	602: Magnetic Flux				0602: TM Fly	
-603: Eelektrik	603: Happy Hour				0603: TM Façade	
-604: Eelektross	604: Electric Terrain				0604: TM Rock Climb	
-605: Elgyem	605: Dazzling Gleam				0605: TM Waterfall	
-606: Beheeyem	606: Celebrate				0606: TM Smack Down	
-607: Litwick	607: Hold Hands				0607: TM Flame Charge	
-608: Lampent	608: Baby-Doll Eyes				0608: TM Low Sweep	
-609: Chandelure	609: Nuzzle				0609: TM Charge Beam	
-610: Axew	610: Hold Back				0610: TM Payback	
-611: Fraxure	611: Infestation				0611: TM Blizzard	
-612: Haxorus	612: Power-Up Punch				0612: TM Wild Charge	
-613: Cubchoo	613: Oblivion Wing				0613: TM Hone Claws	
-614: Beartic	614: Thousand Arrows				0614: TM Telekinesis	
-615: Cryogonal	615: Thousand Waves				0615: TM Giga Impact	
-616: Shelmet	616: Land's Wrath				0616: TM Rock Polish	
-617: Accelgor	617: Light of Ruin				0617: TM Dig	
-618: Stunfisk	618: Origin Pulse				0618: TM Gyro Ball	
-619: Mienfoo	619: Precipice Blades				0619: TM Rock Slide	
-620: Mienshao	620: Dragon Ascent				0620: TM Sludge Wave	
-621: Druddigon	621: Hyperspace Fury				0621: TM Substitute	
-622: Golett	622: Breakneck Blitz				0622: TM Trick Room	
-623: Golurk	623: Breakneck Blitz				0623: TM Safeguard	
-624: Pawniard	624: All-Out Pummeling				0624: TM Swords Dance	
-625: Bisharp	625: All-Out Pummeling				0625: TM Venoshock	
-626: Bouffalant	626: Supersonic Skystrike				0626: TM Work Up	
-627: Rufflet	627: Supersonic Skystrike				0627: TM Scald	
-628: Braviary	628: Acid Downpour				0628: TM Energy Ball	
-629: Vullaby	629: Acid Downpour				0629: TM Explosion	
-630: Mandibuzz	630: Tectonic Rage				0630: TM U-turn	
-631: Heatmor	631: Tectonic Rage				0631: TM Thunder Wave	
-632: Durant	632: Continental Crush				0632: TM Return	
-633: Deino	633: Continental Crush				0633: TM Pluck	
-634: Zweilous	634: Savage Spin-Out				0634: TM Frustration	
-635: Hydreigon	635: Savage Spin-Out				0635: TM Fire Blast	
-636: Larvesta	636: Never-Ending Nightmare				0636: TM Ally Switch	
-637: Volcarona	637: Never-Ending Nightmare				0637: TM Flash	
-638: Cobalion	638: Corkscrew Crash				0638: TM Thief	
-639: Terrakion	639: Corkscrew Crash				0639: TM Acrobatics	
-640: Virizion	640: Inferno Overdrive				0640: TM Thunderbolt	
-641: Tornadus	641: Inferno Overdrive				0641: TM Shadow Ball	
-642: Thundurus	642: Hydro Vortex				0642: TM False Swipe	
-643: Reshiram	643: Hydro Vortex				0643: TM Fling	
-644: Zekrom	644: Bloom Doom				0644: TM Captivate	
-645: Landorus	645: Bloom Doom				0645: TM Roost	
-646: Kyurem	646: Gigavolt Havoc				0646: TM Infestation	
-647: Keldeo	647: Gigavolt Havoc				0647: TM Drain Punch	
-648: Meloetta	648: Shattered Psyche				0648: TM Water Pulse	
-649: Genesect	649: Shattered Psyche				0649: TM Dark Pulse	
-650: Chespin	650: Subzero Slammer				0650: TM Giga Drain	
-651: Quilladin	651: Subzero Slammer				0651: TM Shock Wave	
-652: Chesnaught	652: Devastating Drake				0652: TM Volt Switch	
-653: Fennekin	653: Devastating Drake				0653: TM Steel Wing	
-654: Braixen	654: Black Hole Eclipse				0654: TM Earthquake	
-655: Delphox	655: Black Hole Eclipse				0655: TM Psyshock	
-656: Froakie	656: Twinkle Tackle				0656: TM Bulldoze	
-657: Frogadier	657: Twinkle Tackle				0657: TM Poison Jab	
-658: Greninja	658: Catastropika				0658: TM Frost Breath	
-659: Bunnelby	659: Shore Up				0659: TM Dream Eater	
-660: Diggersby	660: First Impression				0660: TM Thunder	
-661: Fletchling	661: Baneful Bunker				0661: TM X-Scissor	
-662: Fletchinder	662: Spirit Shackle				0662: TM Dazzling Gleam	
-663: Talonflame	663: Darkest Lariat				0663: TM Retaliate	
-664: Scatterbug	664: Sparkling Aria				0664: TM Reflect	
-665: Spewpa	665: Ice Hammer				0665: TM Quash	
-666: Vivillon	666: Floral Healing				0666: TM Snarl	
-667: Litleo	667: High Horsepower				0667: TM Round	
-668: Pyroar	668: Strength Sap				0668: TM Aerial Ace	
-669: Flabébé	669: Solar Blade				0669: TM Focus Blast	
-670: Floette	670: Leafage				0670: TM Incinerate	
-671: Florges	671: Spotlight				0671: TM Struggle Bug	
-672: Skiddo	672: Toxic Thread				0672: TM Overheat	
-673: Gogoat	673: Laser Focus				0673: TM Dragon Claw	
-674: Pancham	674: Gear Up				0674: TM Rain Dance	
-675: Pangoro	675: Throat Chop				0675: TM Sunny Day	
-676: Furfrou	676: Pollen Puff				0676: TM Sludge Bomb	
-677: Espurr	677: Anchor Shot				0677: TM Sandstorm	
-678: Meowstic	678: Psychic Terrain				0678: TM Hail	
-679: Honedge	679: Lunge				0679: TM Rock Tomb	
-680: Doublade	680: Fire Lash				0680: TM Attract	
-681: Aegislash	681: Power Trip				0681: TM Hidden Power	
-682: Spritzee	682: Burn Up				0682: TM Taunt	
-683: Aromatisse	683: Speed Swap				0683: TM Recycle	
-684: Swirlix	684: Smart Strike				0684: TM Ice Beam	
-685: Slurpuff	685: Purify				0685: TM Flash Cannon	
-686: Inkay	686: Revelation Dance				0686: TM Light Screen	
-687: Malamar	687: Core Enforcer				0687: TM Stone Edge	
-688: Binacle	688: Trop Kick				0688: TM Shadow Claw	
-689: Barbaracle	689: Instruct				0689: TM Grass Knot	
-690: Skrelp	690: Beak Blast				0690: TM Brick Break	
-691: Dragalge	691: Clanging Scales				0691: TM Calm Mind	
-692: Clauncher	692: Dragon Hammer				0692: TM Torment	
-693: Clawitzer	693: Brutal Swing				0693: TM Strength	
-694: Helioptile	694: Aurora Veil				0694: TM Cut	
-695: Heliolisk	695: Sinister Arrow Raid				0695: TM Rock Smash	
-696: Tyrunt	696: Malicious Moonsault				0696: TM Bulk Up	
-697: Tyrantrum	697: Oceanic Operetta				0697: TM Surf	
-698: Amaura	698: Guardian of Alola				0698: TM Rest	
-699: Aurorus	699: Soul-Stealing 7-Star Strike				0699: TM Psych Up	
-700: Sylveon	700: Stoked Sparksurfer				0700: Green Silk	
+---	---	---	---	--	----	---
+abomasnow	absorb	adaptability	aqua_ring	avoid_trouble	ammo_cacnea_spike	Normal
+abra	accelerock	aerilate	area_counter	boss	ammo_corsola_twig	Support
+absol	acid	aftermath	belch	cannibal	ammo_geo_pebble	Leader
+accelgor	acid_armor	air_lock	biding	get_away	ammo_golden_thorn	Loner
+aegislash	acid_downpour	analytic	bind	go_after_foes	ammo_gravelerock	
+aerodactyl	acid_spray	anger_point	blinker	item_finder	ammo_iron_thorn	
+aggron	acrobatics	anticipation	bouncing	loot_guard	ammo_rare_fossil	
+aipom	acupressure	arena_trap	burn	patrol	ammo_silver_spike	
+alakazam	aerial_ace	aroma_veil	charge	retreater	ammo_stick	
+alcremie	aeroblast	as_one_chill	charging_focus_punch	shopkeeper	apricorn_big	
+alomomola	after_you	as_one_grim	charging_razor_wind	shuckle	apricorn_black	
+altaria	agility	aura_break	charging_skull_bash	slow_patrol	apricorn_blue	
+amaura	air_cutter	bad_dreams	charging_sky_attack	slow_wander	apricorn_brown	
+ambipom	air_slash	ball_fetch	charging_solar_beam	split_up	apricorn_green	
+amoonguss	ally_switch	battery	chasing	staged_boss	apricorn_perfect	
+ampharos	all_out_pummeling	battle_armor	clamp	stick_together	apricorn_plain	
+anorith	amnesia	battle_bond	confuse	thief	apricorn_purple	
+appletun	anchor_shot	beast_boost	conversion	tit_for_tat	apricorn_red	
+applin	ancient_power	berserk	conversion_2	turret	apricorn_white	
+araquanid	apple_acid	big_pecks	counter	wait_attack	apricorn_yellow	
+arbok	aqua_jet	blaze	crits_landed	wait_only	berry_apicot	
+arcanine	aqua_ring	bulletproof	cursed	wait_there	berry_aspear	
+arceus	aqua_tail	cheek_pouch	decoy	wander_dumb	berry_babiri	
+archen	arm_thrust	chilling_neigh	defense_curl	wander_normal	berry_charti	
+archeops	aromatherapy	chlorophyll	destiny_bond	wander_smart	berry_cheri	
+arctovish	aromatic_mist	clear_body	detect	weird_tree	berry_chesto	
+arctozolt	assist	cloud_nine	digging		berry_chilan	
+ariados	assurance	color_change	disable		berry_chople	
+armaldo	astonish	comatose	diving		berry_coba	
+aromatisse	astral_barrage	competitive	doom_desire		berry_colbur	
+aron	attack	compound_eyes	electrified		berry_custap	
+arrokuda	attack_order	contrary	embargo		berry_enigma	
+articuno	attract	corrosion	encore		berry_ganlon	
+audino	aura_sphere	cotton_down	endure		berry_haban	
+aurorus	aura_wheel	curious_medicine	enraged		berry_hondew	
+avalugg	aurora_beam	cursed_body	exposed		berry_jaboca	
+axew	aurora_veil	cute_charm	fire_pledge		berry_kasib	
+azelf	autotomize	damp	fire_spin		berry_kebia	
+azumarill	avalanche	dancer	flinch		berry_kee	
+azurill	baby_doll_eyes	dark_aura	flying		berry_kelpsy	
+bagon	baddy_bad	dauntless_shield	focus_energy		berry_leppa	
+baltoy	baneful_bunker	dazzling	follow_me		berry_liechi	
+banette	barrage	defeatist	freeze		berry_lum	
+barbaracle	barrier	defiant	friendly_fire		berry_maranga	
+barboach	baton_pass	delta_stream	future_sight		berry_micle	
+barraskewda	beak_blast	desolate_land	grass_pledge		berry_occa	
+basculin	beat_up	disguise	grudge		berry_oran	
+bastiodon	behemoth_bash	download	heal_block		berry_passho	
+bayleef	behemoth_blade	dragons_maw	illusion		berry_payapa	
+beartic	belch	drizzle	immobilized		berry_pecha	
+beautifly	belly_drum	drought	infestation		berry_persim	
+beedrill	bestow	dry_skin	ingrain		berry_petaya	
+beheeyem	bide	early_bird	invisible		berry_qualot	
+beldum	bind	effect_spore	in_love		berry_rawst	
+bellossom	bite	electric_surge	last_ally_move		berry_rindo	
+bellsprout	black_hole_eclipse	emergency_exit	last_move_hit_by_other		berry_roseli	
+bergmite	blast_burn	fairy_aura	last_targeted_by		berry_rowap	
+bewear	blaze_kick	filter	last_used_move		berry_salac	
+bibarel	blizzard	flame_body	last_used_move_slot		berry_shuca	
+bidoof	block	flare_boost	leech_seed		berry_sitrus	
+binacle	bloom_doom	flash_fire	light_screen		berry_starf	
+bisharp	blue_flare	flower_gift	lucky_chant		berry_tamato	
+blacephalon	body_press	flower_veil	magic_coat		berry_tanga	
+blastoise	body_slam	fluffy	magma_storm		berry_wacan	
+blaziken	bolt_beak	forecast	magnet_rise		berry_yache	
+blipbug	bolt_strike	forewarn	mental_charged		boost_calcium	
+blissey	bonemerang	friend_guard	metal_burst		boost_carbos	
+blitzle	bone_club	frisk	minimized		boost_hp_up	
+boldore	bone_rush	full_metal_body	mini_counter		boost_iron	
+boltund	boomburst	fur_coat	miracle_eye		boost_nectar	
+bonsly	bounce	gale_wings	mirror_coat		boost_protein	
+bouffalant	bouncy_bubble	galvanize	missed_all_last_turn		boost_zinc	
+bounsweet	branch_poke	gluttony	mist		box_dainty	
+braixen	brave_bird	gooey	mod_accuracy		box_deluxe	
+braviary	breaking_swipe	gorilla_tactics	mod_attack		box_glittery	
+breloom	breakneck_blitz	grassy_surge	mod_defense		box_heavy	
+brionne	brick_break	grass_pelt	mod_evasion		box_light	
+bronzong	brine	grim_neigh	mod_range		box_nifty	
+bronzor	brutal_swing	gulp_missile	mod_special_attack		empty	
+bruxish	bubble	guts	mod_special_defense		evo_chipped_pot	
+budew	bubble_beam	harvest	mod_speed		evo_cracked_pot	
+buizel	bug_bite	healer	nightmare		evo_dawn_stone	
+bulbasaur	bug_buzz	heatproof	none		evo_deep_sea_scale	
+buneary	bulk_up	heavy_metal	outrage		evo_deep_sea_tooth	
+bunnelby	bulldoze	honey_gather	paralyze		evo_dubious_disc	
+burmy	bullet_punch	huge_power	paused		evo_dusk_stone	
+butterfree	bullet_seed	hunger_switch	perish_song		evo_electirizer	
+buzzwole	burning_jealousy	hustle	petal_dance		evo_everstone	
+cacnea	burn_up	hydration	phantom_force		evo_fire_stone	
+cacturne	buzzy_buzz	hyper_cutter	pierce		evo_harmony_scarf	
+calyrex	calm_mind	ice_body	poison		evo_ice_stone	
+camerupt	camouflage	ice_face	poison_toxic		evo_kings_rock	
+carbink	captivate	ice_scales	powder		evo_leaf_stone	
+carkol	catastropika	illuminate	power_charged		evo_link_cable	
+carnivine	celebrate	illusion	protect		evo_lunar_ribbon	
+carracosta	charge	immunity	quick_guard		evo_magmarizer	
+carvanha	charge_beam	imposter	rage_powder		evo_moon_stone	
+cascoon	charm	infiltrator	recruit_boost		evo_oval_stone	
+castform	chatter	innards_out	reflect		evo_prism_scale	
+caterpie	chip_away	inner_focus	regeneration		evo_protector	
+celebi	circle_throw	insomnia	retaliate		evo_razor_claw	
+celesteela	clamp	intimidate	roosting		evo_razor_fang	
+centiskorch	clanging_scales	intrepid_sword	safeguard		evo_reaper_cloth	
+chandelure	clangorous_soul	iron_barbs	sand_tomb		evo_shiny_stone	
+chansey	clangorous_soulblaze	iron_fist	shadow_force		evo_sun_ribbon	
+charizard	clear_smog	justified	shopkeeper		evo_sun_stone	
+charjabug	close_combat	keen_eye	sleep		evo_thunder_stone	
+charmander	coaching	klutz	sleepless		evo_up_grade	
+charmeleon	coil	leaf_guard	slip		evo_water_stone	
+chatot	comet_punch	levitate	snatch		food_apple	
+cherrim	confide	libero	status_protection		food_apple_big	
+cherubi	confuse_ray	lightning_rod	stat_charged		food_apple_golden	
+chesnaught	confusion	light_metal	stockpile		food_apple_huge	
+chespin	constrict	limber	super_mobile		food_apple_perfect	
+chewtle	continental_crush	liquid_ooze	sure_shot		food_banana	
+chikorita	conversion	liquid_voice	taunted		food_banana_big	
+chimchar	conversion_2	long_reach	telekinesis		food_banana_golden	
+chimecho	copycat	magician	thrash		food_chestnut	
+chinchou	core_enforcer	magic_bounce	times_move_used		food_grimy	
+chingling	corkscrew_crash	magic_guard	torment		food_grimy_2	
+cinccino	corrosive_gas	magma_armor	type_boosted		gummi_black	
+cinderace	cosmic_power	magnet_pull	type_converted		gummi_blue	
+clamperl	cotton_guard	marvel_scale	type_protected		gummi_brown	
+clauncher	cotton_spore	mega_launcher	veiled		gummi_clear	
+clawitzer	counter	merciless	was_hurt_last_turn		gummi_gold	
+claydol	court_change	mimicry	water_pledge		gummi_grass	
+clefable	covet	minus	weakness_drain		gummi_gray	
+clefairy	crabhammer	mirror_armor	whirlpool		gummi_green	
+cleffa	crafty_shield	misty_surge	wide_guard		gummi_magenta	
+clobbopus	cross_chop	mold_breaker	wish		gummi_orange	
+cloyster	cross_poison	moody	wrap		gummi_pink	
+coalossal	crunch	motor_drive	yawning		gummi_purple	
+cobalion	crush_claw	moxie			gummi_red	
+cofagrigus	crush_grip	multiscale			gummi_royal	
+combee	curse	multitype			gummi_silver	
+combusken	cut	mummy			gummi_sky	
+comfey	darkest_lariat	natural_cure			gummi_white	
+conkeldurr	dark_pulse	neuroforce			gummi_wonder	
+copperajah	dark_void	neutralizing_gas			gummi_yellow	
+corphish	dazzling_gleam	none			held_assault_vest	
+corsola	decorate	normalize			held_big_root	
+corviknight	defend_order	no_guard			held_binding_band	
+corvisquire	defense_curl	oblivious			held_black_belt	
+cosmoem	defog	overcoat			held_black_glasses	
+cosmog	destiny_bond	overgrow			held_black_sludge	
+cottonee	detect	own_tempo			held_blank_plate	
+crabominable	devastating_drake	parental_bond			held_charcoal	
+crabrawler	diamond_storm	pastel_veil			held_choice_band	
+cradily	dig	perish_body			held_choice_scarf	
+cramorant	disable	pickpocket			held_choice_specs	
+cranidos	disarming_voice	pickup			held_cover_band	
+crawdaunt	discharge	pixilate			held_defense_scarf	
+cresselia	dive	plus			held_draco_plate	
+croagunk	dizzy_punch	poison_heal			held_dragon_scale	
+crobat	doom_desire	poison_point			held_dread_plate	
+croconaw	double_edge	poison_touch			held_earth_plate	
+crustle	double_hit	power_construct			held_expert_belt	
+cryogonal	double_iron_bash	power_of_alchemy			held_fist_plate	
+cubchoo	double_kick	power_spot			held_flame_orb	
+cubone	double_slap	prankster			held_flame_plate	
+cufant	double_team	pressure			held_friend_bow	
+cursola	draco_meteor	primordial_sea			held_goggle_specs	
+cutiefly	dragon_ascent	prism_armor			held_golden_mask	
+cyndaquil	dragon_breath	propeller_tail			held_grip_claw	
+darkrai	dragon_claw	protean			held_hard_stone	
+darmanitan	dragon_dance	psychic_surge			held_heal_ribbon	
+dartrix	dragon_darts	punk_rock			held_icicle_plate	
+darumaka	dragon_energy	pure_power			held_insect_plate	
+decidueye	dragon_hammer	queenly_majesty			held_iron_ball	
+dedenne	dragon_pulse	quick_draw			held_iron_plate	
+deerling	dragon_rage	quick_feet			held_life_orb	
+deino	dragon_rush	rain_dish			held_magnet	
+delcatty	dragon_tail	rattled			held_meadow_plate	
+delibird	draining_kiss	receiver			held_metal_coat	
+delphox	drain_punch	reckless			held_metronome	
+deoxys	dream_eater	refrigerate			held_mind_plate	
+dewgong	drill_peck	regenerator			held_miracle_seed	
+dewott	drill_run	ripen			held_mobile_scarf	
+dewpider	drum_beating	rivalry			held_mystic_water	
+dhelmise	dual_chop	rks_system			held_never_melt_ice	
+dialga	dual_wingbeat	rock_head			held_pass_scarf	
+diancie	dynamax_cannon	rough_skin			held_pierce_band	
+diggersby	dynamic_punch	run_away			held_pink_bow	
+diglett	earthquake	sand_force			held_pixie_plate	
+ditto	earth_power	sand_rush			held_poison_barb	
+dodrio	echoed_voice	sand_spit			held_power_band	
+doduo	eerie_impulse	sand_stream			held_reunion_cape	
+donphan	eerie_spell	sand_veil			held_ring_target	
+dottler	egg_bomb	sap_sipper			held_scope_lens	
+doublade	electric_terrain	schooling			held_sharp_beak	
+dracovish	electrify	scrappy			held_shed_shell	
+dracozolt	electroweb	screen_cleaner			held_shell_bell	
+dragalge	electro_ball	serene_grace			held_silk_scarf	
+dragapult	embargo	shadow_shield			held_silver_powder	
+dragonair	ember	shadow_tag			held_sky_plate	
+dragonite	encore	shed_skin			held_soft_sand	
+drakloak	endeavor	sheer_force			held_special_band	
+drampa	endure	shell_armor			held_spell_tag	
+drapion	energy_ball	shields_down			held_splash_plate	
+dratini	entrainment	shield_dust			held_spooky_plate	
+drednaw	eruption	simple			held_sticky_barb	
+dreepy	eternabeam	skill_link			held_stone_plate	
+drifblim	expanding_force	slow_start			held_toxic_orb	
+drifloon	explosion	slush_rush			held_toxic_plate	
+drilbur	extrasensory	sniper			held_trap_scarf	
+drizzile	extreme_evoboost	snow_cloak			held_twisted_spoon	
+drowzee	extreme_speed	snow_warning			held_twist_band	
+druddigon	facade	solar_power			held_warp_scarf	
+dubwool	fairy_lock	solid_rock			held_weather_rock	
+ducklett	fairy_wind	soul_heart			held_wide_lens	
+dugtrio	fake_out	soundproof			held_x_ray_specs	
+dunsparce	fake_tears	speed_boost			held_zap_plate	
+duosion	false_surrender	stakeout			held_zinc_band	
+duraludon	false_swipe	stall			herb_mental	
+durant	feather_dance	stalwart			herb_power	
+dusclops	feint	stamina			herb_white	
+dusknoir	feint_attack	stance_change			key	
+duskull	fell_stinger	static			key_ancient	
+dustox	fiery_dance	steadfast			loot_adamant_orb	
+dwebble	fiery_wrath	steam_engine			loot_berserk_gene	
+eelektrik	final_gambit	steelworker			loot_blue_orb	
+eelektross	fire_blast	steely_spirit			loot_gracidea	
+eevee	fire_fang	stench			loot_green_orb	
+eiscue	fire_lash	sticky_hold			loot_griseous_orb	
+ekans	fire_pledge	storm_drain			loot_heart_scale	
+eldegoss	fire_punch	strong_jaw			loot_lustrous_orb	
+electabuzz	fire_spin	sturdy			loot_meteorite	
+electivire	first_impression	suction_cups			loot_mystery_part	
+electrike	fishious_rend	super_luck			loot_nugget	
+electrode	fissure	surge_surfer			loot_pearl	
+elekid	flail	swarm			loot_red_orb	
+elgyem	flamethrower	sweet_veil			loot_spacetime_globe	
+emboar	flame_burst	swift_swim			machine_ability_capsule	
+emolga	flame_charge	symbiosis			machine_assembly_box	
+empoleon	flame_wheel	synchronize			machine_recall_box	
+entei	flare_blitz	tangled_feet			machine_storage_box	
+escavalier	flash	tangling_hair			medicine_amber_tear	
+espeon	flash_cannon	technician			medicine_dire_hit	
+espurr	flatter	telepathy			medicine_elixir	
+eternatus	fleur_cannon	teravolt			medicine_full_heal	
+excadrill	fling	thick_fat			medicine_full_restore	
+exeggcute	flip_turn	tinted_lens			medicine_guard_spec	
+exeggutor	floaty_fall	torrent			medicine_max_elixir	
+exploud	floral_healing	tough_claws			medicine_max_potion	
+falinks	flower_shield	toxic_boost			medicine_potion	
+farfetchd	fly	trace			medicine_x_accuracy	
+fearow	flying_press	transistor			medicine_x_attack	
+feebas	focus_blast	triage			medicine_x_defense	
+fennekin	focus_energy	truant			medicine_x_speed	
+feraligatr	focus_punch	turboblaze			medicine_x_sp_atk	
+ferroseed	follow_me	unaware			medicine_x_sp_def	
+ferrothorn	force_palm	unburden			orb_all_aim	
+finneon	foresight	unnerve			orb_all_dodge	
+flaaffy	forests_curse	unseen_fist			orb_all_hit	
+flabebe	foul_play	victory_star			orb_all_power_up	
+flapple	freeze_dry	vital_spirit			orb_all_protect	
+flareon	freeze_shock	volt_absorb			orb_cleanse	
+fletchinder	freezing_glare	wandering_spirit			orb_devolve	
+fletchling	freezy_frost	water_absorb			orb_endure	
+floatzel	frenzy_plant	water_bubble			orb_escape	
+floette	frost_breath	water_compaction			orb_fill_in	
+florges	frustration	water_veil			orb_foe_hold	
+flygon	fury_attack	weak_armor			orb_foe_seal	
+fomantis	fury_cutter	white_smoke			orb_freeze	
+foongus	fury_swipes	wimp_out			orb_halving	
+forretress	fusion_bolt	wonder_guard			orb_health	
+fraxure	fusion_flare	wonder_skin			orb_invert	
+frillish	future_sight	zen_mode			orb_invisify	
+froakie	gastro_acid				orb_itemizer	
+frogadier	gear_grind				orb_luminous	
+froslass	gear_up				orb_mirror	
+frosmoth	genesis_supernova				orb_mobile	
+furfrou	geomancy				orb_mug	
+furret	gigavolt_havoc				orb_nullify	
+gabite	giga_drain				orb_one_room	
+gallade	giga_impact				orb_one_shot	
+galvantula	glacial_lance				orb_petrify	
+garbodor	glaciate				orb_pierce	
+garchomp	glare				orb_rebound	
+gardevoir	glitzy_glow				orb_revival	
+gastly	grassy_glide				orb_rollcall	
+gastrodon	grassy_terrain				orb_scanner	
+genesect	grass_knot				orb_slow	
+gengar	grass_pledge				orb_slumber	
+geodude	grass_whistle				orb_spurn	
+gible	gravity				orb_stayaway	
+gigalith	grav_apple				orb_totter	
+girafarig	growl				orb_trapbust	
+giratina	growth				orb_trap_see	
+glaceon	grudge				orb_trawl	
+glalie	guardian_of_alola				orb_weather	
+glameow	guard_split				seed_ban	
+glastrier	guard_swap				seed_blast	
+gligar	guillotine				seed_blinker	
+gliscor	gunk_shot				seed_decoy	
+gloom	gust				seed_doom	
+gogoat	gyro_ball				seed_golden	
+golbat	hail				seed_hunger	
+goldeen	hammer_arm				seed_ice	
+golduck	happy_hour				seed_joy	
+golem	harden				seed_last_chance	
+golett	haze				seed_plain	
+golisopod	headbutt				seed_pure	
+golurk	head_charge				seed_reviver	
+goodra	head_smash				seed_sleep	
+goomy	healing_wish				seed_spreader	
+gorebyss	heal_bell				seed_training	
+gossifleur	heal_block				seed_vanish	
+gothita	heal_order				seed_vile	
+gothitelle	heal_pulse				seed_warp	
+gothorita	heart_stamp				tm_acrobatics	
+gourgeist	heart_swap				tm_aerial_ace	
+granbull	heat_crash				tm_ally_switch	
+grapploct	heat_wave				tm_attract	
+graveler	heavy_slam				tm_blizzard	
+greedent	helping_hand				tm_brick_break	
+greninja	hex				tm_bulk_up	
+grimer	hidden_power				tm_bulldoze	
+grimmsnarl	high_horsepower				tm_calm_mind	
+grookey	high_jump_kick				tm_captivate	
+grotle	hold_back				tm_charge_beam	
+groudon	hold_hands				tm_cut	
+grovyle	hone_claws				tm_dark_pulse	
+growlithe	horn_attack				tm_dazzling_gleam	
+grubbin	horn_drill				tm_defog	
+grumpig	horn_leech				tm_dig	
+gulpin	howl				tm_dive	
+gumshoos	hurricane				tm_double_team	
+gurdurr	hydro_cannon				tm_dragon_claw	
+guzzlord	hydro_pump				tm_dragon_tail	
+gyarados	hydro_vortex				tm_drain_punch	
+hakamo_o	hyperspace_fury				tm_dream_eater	
+happiny	hyperspace_hole				tm_earthquake	
+hariyama	hyper_beam				tm_echoed_voice	
+hatenna	hyper_fang				tm_embargo	
+hatterene	hyper_voice				tm_energy_ball	
+hattrem	hypnosis				tm_explosion	
+haunter	ice_ball				tm_facade	
+hawlucha	ice_beam				tm_false_swipe	
+haxorus	ice_burn				tm_fire_blast	
+heatmor	ice_fang				tm_flamethrower	
+heatran	ice_hammer				tm_flame_charge	
+heliolisk	ice_punch				tm_flash	
+helioptile	ice_shard				tm_flash_cannon	
+heracross	icicle_crash				tm_fling	
+herdier	icicle_spear				tm_fly	
+hippopotas	icy_wind				tm_focus_blast	
+hippowdon	imprison				tm_frost_breath	
+hitmonchan	incinerate				tm_frustration	
+hitmonlee	inferno				tm_giga_drain	
+hitmontop	inferno_overdrive				tm_giga_impact	
+honchkrow	infestation				tm_grass_knot	
+honedge	ingrain				tm_gyro_ball	
+hoopa	instruct				tm_hail	
+hoothoot	ion_deluge				tm_hidden_power	
+hoppip	iron_defense				tm_hone_claws	
+horsea	iron_head				tm_hyper_beam	
+houndoom	iron_tail				tm_ice_beam	
+houndour	jaw_lock				tm_incinerate	
+ho_oh	judgment				tm_infestation	
+huntail	jump_kick				tm_light_screen	
+hydreigon	jungle_healing				tm_low_sweep	
+hypno	karate_chop				tm_overheat	
+igglybuff	kinesis				tm_payback	
+illumise	kings_shield				tm_pluck	
+impidimp	knock_off				tm_poison_jab	
+incineroar	lands_wrath				tm_protect	
+indeedee	laser_focus				tm_psychic	
+infernape	lash_out				tm_psych_up	
+inkay	last_resort				tm_psyshock	
+inteleon	lava_plume				tm_quash	
+ivysaur	leafage				tm_rain_dance	
+jangmo_o	leaf_blade				tm_recycle	
+jellicent	leaf_storm				tm_reflect	
+jigglypuff	leaf_tornado				tm_rest	
+jirachi	leech_life				tm_retaliate	
+jolteon	leech_seed				tm_return	
+joltik	leer				tm_roar	
+jumpluff	lets_snuggle_forever				tm_rock_climb	
+jynx	lick				tm_rock_polish	
+kabuto	life_dew				tm_rock_slide	
+kabutops	light_of_ruin				tm_rock_smash	
+kadabra	light_screen				tm_rock_tomb	
+kakuna	light_that_burns_the_sky				tm_roost	
+kangaskhan	liquidation				tm_round	
+karrablast	lock_on				tm_safeguard	
+kartana	lovely_kiss				tm_sandstorm	
+kecleon	low_kick				tm_scald	
+keldeo	low_sweep				tm_secret_power	
+kingdra	lucky_chant				tm_shadow_ball	
+kingler	lunar_dance				tm_shadow_claw	
+kirlia	lunge				tm_shock_wave	
+klang	luster_purge				tm_sludge_bomb	
+klefki	mach_punch				tm_sludge_wave	
+klink	magical_leaf				tm_smack_down	
+klinklang	magic_coat				tm_snarl	
+koffing	magic_powder				tm_steel_wing	
+komala	magic_room				tm_stone_edge	
+kommo_o	magma_storm				tm_strength	
+krabby	magnetic_flux				tm_struggle_bug	
+kricketot	magnet_bomb				tm_substitute	
+kricketune	magnet_rise				tm_sunny_day	
+krokorok	magnitude				tm_surf	
+krookodile	malicious_moonsault				tm_swagger	
+kubfu	mat_block				tm_swords_dance	
+kyogre	max_airstream				tm_taunt	
+kyurem	max_darkness				tm_telekinesis	
+lairon	max_flare				tm_thief	
+lampent	max_flutterby				tm_thunder	
+landorus	max_geyser				tm_thunderbolt	
+lanturn	max_guard				tm_thunder_wave	
+lapras	max_hailstorm				tm_torment	
+larvesta	max_knuckle				tm_toxic	
+larvitar	max_lightning				tm_trick_room	
+latias	max_mindstorm				tm_u_turn	
+latios	max_ooze				tm_venoshock	
+leafeon	max_overgrowth				tm_volt_switch	
+leavanny	max_phantasm				tm_waterfall	
+ledian	max_quake				tm_water_pulse	
+ledyba	max_rockfall				tm_wild_charge	
+lickilicky	max_starfall				tm_will_o_wisp	
+lickitung	max_steelspike				tm_work_up	
+liepard	max_strike				tm_x_scissor	
+lileep	max_wyrmwind				wand_fear	
+lilligant	mean_look				wand_infatuation	
+lillipup	meditate				wand_lob	
+linoone	megahorn				wand_lure	
+litleo	mega_drain				wand_path	
+litten	mega_kick				wand_pounce	
+litwick	mega_punch				wand_purge	
+lombre	memento				wand_slow	
+lopunny	menacing_moonraze_maelstrom				wand_stayaway	
+lotad	metal_burst				wand_surround	
+loudred	metal_claw				wand_switcher	
+lucario	metal_sound				wand_topsy_turvy	
+ludicolo	meteor_assault				wand_totter	
+lugia	meteor_beam				wand_transfer	
+lumineon	meteor_mash				wand_vanish	
+lunala	metronome				wand_warp	
+lunatone	me_first				wand_whirlwind	
+lurantis	milk_drink				xcl_element_bug_dust	
+luvdisc	mimic				xcl_element_bug_gem	
+luxio	mind_blown				xcl_element_bug_globe	
+luxray	mind_reader				xcl_element_bug_silk	
+lycanroc	minimize				xcl_element_dark_dust	
+machamp	miracle_eye				xcl_element_dark_gem	
+machoke	mirror_coat				xcl_element_dark_globe	
+machop	mirror_move				xcl_element_dark_silk	
+magby	mirror_shot				xcl_element_dragon_dust	
+magcargo	mist				xcl_element_dragon_gem	
+magearna	misty_explosion				xcl_element_dragon_globe	
+magikarp	misty_terrain				xcl_element_dragon_silk	
+magmar	mist_ball				xcl_element_electric_dust	
+magmortar	moonblast				xcl_element_electric_gem	
+magnemite	moongeist_beam				xcl_element_electric_globe	
+magneton	moonlight				xcl_element_electric_silk	
+magnezone	morning_sun				xcl_element_fairy_dust	
+makuhita	muddy_water				xcl_element_fairy_gem	
+malamar	mud_bomb				xcl_element_fairy_globe	
+mamoswine	mud_shot				xcl_element_fairy_silk	
+manaphy	mud_slap				xcl_element_fighting_dust	
+mandibuzz	mud_sport				xcl_element_fighting_gem	
+manectric	multi_attack				xcl_element_fighting_globe	
+mankey	mystical_fire				xcl_element_fighting_silk	
+mantine	nasty_plot				xcl_element_fire_dust	
+mantyke	natural_gift				xcl_element_fire_gem	
+maractus	natures_madness				xcl_element_fire_globe	
+mareanie	nature_power				xcl_element_fire_silk	
+mareep	needle_arm				xcl_element_flying_dust	
+marill	never_ending_nightmare				xcl_element_flying_gem	
+marowak	nightmare				xcl_element_flying_globe	
+marshadow	night_daze				xcl_element_flying_silk	
+marshtomp	night_shade				xcl_element_ghost_dust	
+masquerain	night_slash				xcl_element_ghost_gem	
+mawile	noble_roar				xcl_element_ghost_globe	
+medicham	no_retreat				xcl_element_ghost_silk	
+meditite	nuzzle				xcl_element_grass_dust	
+meganium	oblivion_wing				xcl_element_grass_gem	
+melmetal	obstruct				xcl_element_grass_globe	
+meloetta	oceanic_operetta				xcl_element_grass_silk	
+meltan	octazooka				xcl_element_ground_dust	
+meowstic	octolock				xcl_element_ground_gem	
+meowth	odor_sleuth				xcl_element_ground_globe	
+mesprit	ominous_wind				xcl_element_ground_silk	
+metagross	origin_pulse				xcl_element_ice_dust	
+metang	outrage				xcl_element_ice_gem	
+metapod	overdrive				xcl_element_ice_globe	
+mew	overheat				xcl_element_ice_silk	
+mewtwo	pain_split				xcl_element_normal_dust	
+mienfoo	parabolic_charge				xcl_element_normal_gem	
+mienshao	parting_shot				xcl_element_normal_globe	
+mightyena	payback				xcl_element_normal_silk	
+milcery	pay_day				xcl_element_poison_dust	
+milotic	peck				xcl_element_poison_gem	
+miltank	perish_song				xcl_element_poison_globe	
+mime_jr	petal_blizzard				xcl_element_poison_silk	
+mimikyu	petal_dance				xcl_element_psychic_dust	
+minccino	phantom_force				xcl_element_psychic_gem	
+minior	photon_geyser				xcl_element_psychic_globe	
+minun	pika_papow				xcl_element_psychic_silk	
+misdreavus	pin_missile				xcl_element_rock_dust	
+mismagius	plasma_fists				xcl_element_rock_gem	
+missingno	play_nice				xcl_element_rock_globe	
+moltres	play_rough				xcl_element_rock_silk	
+monferno	pluck				xcl_element_steel_dust	
+morelull	poison_fang				xcl_element_steel_gem	
+morgrem	poison_gas				xcl_element_steel_globe	
+morpeko	poison_jab				xcl_element_steel_silk	
+mothim	poison_powder				xcl_element_water_dust	
+mr_mime	poison_sting				xcl_element_water_gem	
+mr_rime	poison_tail				xcl_element_water_globe	
+mudbray	pollen_puff				xcl_element_water_silk	
+mudkip	poltergeist				xcl_family_abra_00	
+mudsdale	pound				xcl_family_abra_01	
+muk	powder				xcl_family_abra_02	
+munchlax	powder_snow				xcl_family_abra_03	
+munna	power_gem				xcl_family_abra_04	
+murkrow	power_split				xcl_family_absol_00	
+musharna	power_swap				xcl_family_absol_01	
+naganadel	power_trick				xcl_family_absol_02	
+natu	power_trip				xcl_family_absol_03	
+necrozma	power_up_punch				xcl_family_absol_04	
+nickit	power_whip				xcl_family_absol_05	
+nidoking	precipice_blades				xcl_family_aerodactyl_00	
+nidoqueen	present				xcl_family_aerodactyl_01	
+nidoran_f	prismatic_laser				xcl_family_aerodactyl_02	
+nidoran_m	protect				xcl_family_aerodactyl_03	
+nidorina	psybeam				xcl_family_aerodactyl_04	
+nidorino	psychic				xcl_family_aipom_00	
+nihilego	psychic_fangs				xcl_family_aipom_01	
+nincada	psychic_terrain				xcl_family_aipom_02	
+ninetales	psycho_boost				xcl_family_aipom_03	
+ninjask	psycho_cut				xcl_family_anorith_00	
+noctowl	psycho_shift				xcl_family_anorith_01	
+noibat	psych_up				xcl_family_anorith_02	
+noivern	psyshock				xcl_family_anorith_03	
+nosepass	psystrike				xcl_family_anorith_04	
+numel	psywave				xcl_family_aron_00	
+nuzleaf	pulverizing_pancake				xcl_family_aron_01	
+obstagoon	punishment				xcl_family_aron_02	
+octillery	purify				xcl_family_aron_03	
+oddish	pursuit				xcl_family_aron_04	
+omanyte	pyro_ball				xcl_family_bagon_00	
+omastar	quash				xcl_family_bagon_01	
+onix	quick_attack				xcl_family_bagon_02	
+oranguru	quick_guard				xcl_family_bagon_03	
+orbeetle	quiver_dance				xcl_family_baltoy_00	
+oricorio	rage				xcl_family_baltoy_01	
+oshawott	rage_powder				xcl_family_baltoy_02	
+pachirisu	rain_dance				xcl_family_baltoy_03	
+palkia	rapid_spin				xcl_family_baltoy_04	
+palossand	razor_leaf				xcl_family_barboach_00	
+palpitoad	razor_shell				xcl_family_barboach_01	
+pancham	razor_wind				xcl_family_barboach_02	
+pangoro	recover				xcl_family_barboach_03	
+panpour	recycle				xcl_family_barboach_04	
+pansage	reflect				xcl_family_beldum_00	
+pansear	reflect_type				xcl_family_beldum_01	
+paras	refresh				xcl_family_beldum_02	
+parasect	relic_song				xcl_family_beldum_03	
+passimian	rest				xcl_family_bellsprout_00	
+patrat	retaliate				xcl_family_bellsprout_01	
+pawniard	return				xcl_family_bellsprout_02	
+pelipper	revelation_dance				xcl_family_bellsprout_03	
+perrserker	revenge				xcl_family_bellsprout_04	
+persian	reversal				xcl_family_bidoof_00	
+petilil	rising_voltage				xcl_family_bidoof_01	
+phanpy	roar				xcl_family_bidoof_02	
+phantump	roar_of_time				xcl_family_bidoof_03	
+pheromosa	rock_blast				xcl_family_bidoof_04	
+phione	rock_climb				xcl_family_bidoof_05	
+pichu	rock_polish				xcl_family_bird_trio_00	
+pidgeot	rock_slide				xcl_family_bird_trio_01	
+pidgeotto	rock_smash				xcl_family_bird_trio_02	
+pidgey	rock_throw				xcl_family_bird_trio_03	
+pidove	rock_tomb				xcl_family_bird_trio_04	
+pignite	rock_wrecker				xcl_family_bird_trio_05	
+pikachu	role_play				xcl_family_bronzor_00	
+pikipek	rolling_kick				xcl_family_bronzor_01	
+piloswine	rollout				xcl_family_bronzor_02	
+pincurchin	roost				xcl_family_bronzor_03	
+pineco	rototiller				xcl_family_buizel_00	
+pinsir	round				xcl_family_buizel_01	
+piplup	sacred_fire				xcl_family_buizel_02	
+plusle	sacred_sword				xcl_family_buizel_03	
+poipole	safeguard				xcl_family_buizel_04	
+politoed	sandstorm				xcl_family_buizel_05	
+poliwag	sand_attack				xcl_family_bulbasaur_00	
+poliwhirl	sand_tomb				xcl_family_bulbasaur_01	
+poliwrath	sappy_seed				xcl_family_bulbasaur_02	
+polteageist	savage_spin_out				xcl_family_bulbasaur_03	
+ponyta	scald				xcl_family_bulbasaur_04	
+poochyena	scale_shot				xcl_family_bulbasaur_05	
+popplio	scary_face				xcl_family_buneary_00	
+porygon	scorching_sands				xcl_family_buneary_01	
+porygon2	scratch				xcl_family_buneary_02	
+porygon_z	screech				xcl_family_buneary_03	
+primarina	searing_shot				xcl_family_buneary_04	
+primeape	searing_sunraze_smash				xcl_family_burmy_00	
+prinplup	secret_power				xcl_family_burmy_01	
+probopass	secret_sword				xcl_family_burmy_02	
+psyduck	seed_bomb				xcl_family_burmy_03	
+pumpkaboo	seed_flare				xcl_family_burmy_04	
+pupitar	seismic_toss				xcl_family_burmy_05	
+purrloin	self_destruct				xcl_family_cacnea_00	
+purugly	shadow_ball				xcl_family_cacnea_01	
+pyroar	shadow_bone				xcl_family_cacnea_02	
+pyukumuku	shadow_claw				xcl_family_cacnea_03	
+quagsire	shadow_force				xcl_family_carnivine_00	
+quilava	shadow_punch				xcl_family_carnivine_01	
+quilladin	shadow_sneak				xcl_family_carnivine_02	
+qwilfish	sharpen				xcl_family_carnivine_03	
+raboot	shattered_psyche				xcl_family_carnivine_04	
+raichu	sheer_cold				xcl_family_carvanha_00	
+raikou	shell_side_arm				xcl_family_carvanha_01	
+ralts	shell_smash				xcl_family_carvanha_02	
+rampardos	shell_trap				xcl_family_carvanha_03	
+rapidash	shift_gear				xcl_family_carvanha_04	
+raticate	shock_wave				xcl_family_castform_00	
+rattata	shore_up				xcl_family_castform_01	
+rayquaza	signal_beam				xcl_family_castform_02	
+regice	silver_wind				xcl_family_castform_03	
+regidrago	simple_beam				xcl_family_castform_04	
+regieleki	sing				xcl_family_caterpie_00	
+regigigas	sinister_arrow_raid				xcl_family_caterpie_01	
+regirock	sizzly_slide				xcl_family_caterpie_02	
+registeel	sketch				xcl_family_caterpie_03	
+relicanth	skill_swap				xcl_family_celebi_00	
+remoraid	skitter_smack				xcl_family_celebi_01	
+reshiram	skull_bash				xcl_family_celebi_02	
+reuniclus	sky_attack				xcl_family_celebi_03	
+rhydon	sky_drop				xcl_family_celebi_04	
+rhyhorn	sky_uppercut				xcl_family_chansey_00	
+rhyperior	slack_off				xcl_family_chansey_01	
+ribombee	slam				xcl_family_chansey_02	
+rillaboom	slash				xcl_family_chansey_03	
+riolu	sleep_powder				xcl_family_chansey_04	
+rockruff	sleep_talk				xcl_family_chansey_05	
+roggenrola	sludge				xcl_family_charmander_00	
+rolycoly	sludge_bomb				xcl_family_charmander_01	
+rookidee	sludge_wave				xcl_family_charmander_02	
+roselia	smack_down				xcl_family_charmander_03	
+roserade	smart_strike				xcl_family_charmander_04	
+rotom	smelling_salts				xcl_family_charmander_05	
+rowlet	smog				xcl_family_chatot_00	
+rufflet	smokescreen				xcl_family_chatot_01	
+runerigus	snap_trap				xcl_family_chatot_02	
+sableye	snarl				xcl_family_chatot_03	
+salamence	snatch				xcl_family_cherubi_00	
+salandit	snipe_shot				xcl_family_cherubi_01	
+salazzle	snore				xcl_family_cherubi_02	
+samurott	soak				xcl_family_cherubi_03	
+sandaconda	soft_boiled				xcl_family_cherubi_04	
+sandile	solar_beam				xcl_family_cherubi_05	
+sandshrew	solar_blade				xcl_family_chikorita_00	
+sandslash	sonic_boom				xcl_family_chikorita_01	
+sandygast	soul_stealing_7_star_strike				xcl_family_chikorita_02	
+sawk	spacial_rend				xcl_family_chikorita_03	
+sawsbuck	spark				xcl_family_chikorita_04	
+scatterbug	sparkling_aria				xcl_family_chikorita_05	
+sceptile	sparkly_swirl				xcl_family_chimchar_00	
+scizor	spectral_thief				xcl_family_chimchar_01	
+scolipede	speed_swap				xcl_family_chimchar_02	
+scorbunny	spider_web				xcl_family_chimchar_03	
+scrafty	spikes				xcl_family_chimchar_04	
+scraggy	spike_cannon				xcl_family_chimchar_05	
+scyther	spiky_shield				xcl_family_chimecho_00	
+seadra	spirit_break				xcl_family_chimecho_01	
+seaking	spirit_shackle				xcl_family_chimecho_02	
+sealeo	spite				xcl_family_chimecho_03	
+seedot	spit_up				xcl_family_chimecho_04	
+seel	splash				xcl_family_chimecho_05	
+seismitoad	splintered_stormshards				xcl_family_chinchou_00	
+sentret	splishy_splash				xcl_family_chinchou_01	
+serperior	spore				xcl_family_chinchou_02	
+servine	spotlight				xcl_family_chinchou_03	
+seviper	stealth_rock				xcl_family_clamperl_00	
+sewaddle	steamroller				xcl_family_clamperl_01	
+sharpedo	steam_eruption				xcl_family_clamperl_02	
+shaymin	steel_beam				xcl_family_clamperl_03	
+shedinja	steel_roller				xcl_family_clamperl_04	
+shelgon	steel_wing				xcl_family_clamperl_05	
+shellder	sticky_web				xcl_family_clefairy_00	
+shellos	stockpile				xcl_family_clefairy_01	
+shelmet	stoked_sparksurfer				xcl_family_clefairy_02	
+shieldon	stomp				xcl_family_clefairy_03	
+shiftry	stomping_tantrum				xcl_family_clefairy_04	
+shiinotic	stone_edge				xcl_family_clefairy_05	
+shinx	stored_power				xcl_family_combee_00	
+shroomish	storm_throw				xcl_family_combee_01	
+shuckle	strange_steam				xcl_family_combee_02	
+shuppet	strength				xcl_family_combee_03	
+sigilyph	strength_sap				xcl_family_combee_04	
+silcoon	string_shot				xcl_family_corphish_00	
+silicobra	struggle				xcl_family_corphish_01	
+silvally	struggle_bug				xcl_family_corphish_02	
+simipour	stuff_cheeks				xcl_family_corphish_03	
+simisage	stun_spore				xcl_family_corphish_04	
+simisear	submission				xcl_family_corsola_00	
+sinistea	substitute				xcl_family_corsola_01	
+sirfetchd	subzero_slammer				xcl_family_corsola_02	

@@ -9,74 +9,74 @@ necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
 
-necessities.Spawns.Add(new InvItem(0011), new IntRange(0, max_floors), 9);//Leppa Berry
-necessities.Spawns.Add(new InvItem(0010), new IntRange(0, max_floors), 12);//Oran Berry
-necessities.Spawns.Add(new InvItem(0001), new IntRange(0, max_floors), 10);//Apple
-necessities.Spawns.Add(new InvItem(0012), new IntRange(0, max_floors), 10);//Lum Berry
-necessities.Spawns.Add(new InvItem(0101), new IntRange(0, max_floors), 5);//Reviver Seed
-necessities.Spawns.Add(new InvItem(0002), new IntRange(0, max_floors), 3);//Big Apple
+necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 9);
+necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 12);
+necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, max_floors), 10);
+necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
+necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 5);
+necessities.Spawns.Add(new InvItem("food_apple_big"), new IntRange(0, max_floors), 3);
 //snacks
 CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
 snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
 
-snacks.Spawns.Add(new InvItem(0112), new IntRange(0, max_floors), 10);//Blast Seed
-snacks.Spawns.Add(new InvItem(0108), new IntRange(0, max_floors), 10);//Warp Seed
-snacks.Spawns.Add(new InvItem(0110), new IntRange(0, max_floors), 10);//Sleep Seed
-snacks.Spawns.Add(new InvItem(0113), new IntRange(0, max_floors), 10);//Blinker Seed
-snacks.Spawns.Add(new InvItem(0185), new IntRange(0, max_floors), 10);//White Herb
+snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("herb_white"), new IntRange(0, max_floors), 10);
 //special
 CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
 special.SpawnRates.SetRange(3, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("special", special);
 
 
-special.Spawns.Add(new InvItem(0210), new IntRange(0, max_floors), 5);//Plain Apricorn
-special.Spawns.Add(new InvItem(0212), new IntRange(0, max_floors), 5);//Green Apricorn
-special.Spawns.Add(new InvItem(0214), new IntRange(0, max_floors), 5);//Purple Apricorn
-special.Spawns.Add(new InvItem(0213), new IntRange(0, max_floors), 5);//Brown Apricorn
-special.Spawns.Add(new InvItem(0218), new IntRange(0, max_floors), 5);//Black Apricorn
+special.Spawns.Add(new InvItem("apricorn_plain"), new IntRange(0, max_floors), 5);
+special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, max_floors), 5);
+special.Spawns.Add(new InvItem("apricorn_purple"), new IntRange(0, max_floors), 5);
+special.Spawns.Add(new InvItem("apricorn_brown"), new IntRange(0, max_floors), 5);
+special.Spawns.Add(new InvItem("apricorn_black"), new IntRange(0, max_floors), 5);
 //throwable
 CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
 throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("throwable", throwable);
 
 
-throwable.Spawns.Add(new InvItem(0201), new IntRange(0, max_floors), 10);//Cacnea Spike
-throwable.Spawns.Add(new InvItem(0221), new IntRange(0, max_floors), 10);//Pounce Wand
-throwable.Spawns.Add(new InvItem(0222), new IntRange(0, max_floors), 10);//Whirlwind Wand
-throwable.Spawns.Add(new InvItem(0223), new IntRange(0, max_floors), 10);//Switcher Wand
-throwable.Spawns.Add(new InvItem(0226), new IntRange(0, max_floors), 10);//Slow Wand
-throwable.Spawns.Add(new InvItem(0200), new IntRange(0, max_floors), 10);//Stick
-throwable.Spawns.Add(new InvItem(0207), new IntRange(0, max_floors), 10);//Geo Pebble
+throwable.Spawns.Add(new InvItem("ammo_cacnea_spike"), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_pounce"), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_whirlwind"), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_switcher"), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_slow"), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("ammo_stick"), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("ammo_geo_pebble"), new IntRange(0, max_floors), 10);
 //orbs
 CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
 orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("orbs", orbs);
 
 
-orbs.Spawns.Add(new InvItem(0258), new IntRange(0, max_floors), 10);//All-Aim Orb
-orbs.Spawns.Add(new InvItem(0269), new IntRange(0, max_floors), 10);//Trap-See Orb
-orbs.Spawns.Add(new InvItem(0270), new IntRange(0, max_floors), 10);//Trapbust Orb
-orbs.Spawns.Add(new InvItem(0273), new IntRange(0, max_floors), 10);//Petrify Orb
-orbs.Spawns.Add(new InvItem(0271), new IntRange(0, max_floors), 10);//Slumber Orb
-orbs.Spawns.Add(new InvItem(0276), new IntRange(0, max_floors), 10);//Foe-Hold Orb
-orbs.Spawns.Add(new InvItem(0284), new IntRange(0, max_floors), 10);//Mirror Orb
+orbs.Spawns.Add(new InvItem("orb_all_aim"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_trap_see"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_trapbust"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_petrify"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_slumber"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_foe_hold"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, max_floors), 10);
 //held
 CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
 held.SpawnRates.SetRange(2, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("held", held);
 
 
-held.Spawns.Add(new InvItem(0400), new IntRange(0, max_floors), 10);//Power Band
-held.Spawns.Add(new InvItem(0401), new IntRange(0, max_floors), 10);//Special Band
-held.Spawns.Add(new InvItem(0402), new IntRange(0, max_floors), 10);//Defense Scarf
-held.Spawns.Add(new InvItem(0403), new IntRange(0, max_floors), 10);//Zinc Band
-held.Spawns.Add(new InvItem(0309), new IntRange(0, max_floors), 10);//Twist Band
-held.Spawns.Add(new InvItem(0341), new IntRange(0, max_floors), 10);//Soft Sand
-held.Spawns.Add(new InvItem(0344), new IntRange(0, max_floors), 10);//Poison Barb
-held.Spawns.Add(new InvItem(0340), new IntRange(0, max_floors), 10);//Miracle Seed
+held.Spawns.Add(new InvItem("held_power_band"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_special_band"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_defense_scarf"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_zinc_band"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_twist_band"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_soft_sand"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_poison_barb"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_miracle_seed"), new IntRange(0, max_floors), 10);
 
 
 floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
@@ -87,5 +87,4 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-//261 Poochyena : 044 Bite
-poolSpawn.Spawns.Add(GetTeamMob(261, -1, 044, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("poochyena", "", "bite", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

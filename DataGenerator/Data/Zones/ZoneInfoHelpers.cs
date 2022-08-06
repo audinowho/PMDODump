@@ -895,22 +895,22 @@ namespace DataGenerator.Data
 
 
             foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries.Keys)
-                monsters.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries[key].Name.DefaultText);
+                monsters.Add(key);
             
             foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Skill].Entries.Keys)
-                skills.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Skill].Entries[key].Name.DefaultText);
+                skills.Add(key);
             
             foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Entries.Keys)
-                intrinsics.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Entries[key].Name.DefaultText);
+                intrinsics.Add(key);
 
             foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Status].Entries.Keys)
-                statuses.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Status].Entries[key].Name.DefaultText);
+                statuses.Add(key);
             
-            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Entries.Keys)
-                ai.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.AI].Entries[key].Name.DefaultText);
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.AI].Entries.Keys)
+                ai.Add(key);
 
-            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Entries.Keys)
-                items.Add(key + ": " + DataManager.Instance.DataIndices[DataManager.DataType.Item].Entries[key].Name.DefaultText);
+            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Item].Entries.Keys)
+                items.Add(key);
 
             for (int ii = 0; ii <= (int)TeamMemberSpawn.MemberRole.Loner; ii++)
                 roles.Add(((TeamMemberSpawn.MemberRole)ii).ToString());
@@ -920,7 +920,7 @@ namespace DataGenerator.Data
             using (StreamWriter file = new StreamWriter(path))
             {
                 file.WriteLine("Monster\tSkill\tIntrinsic\tStatus\tAI\tItem\tRole");
-                file.WriteLine("---: NULL\t---: NULL\t---: NULL\t---: NULL\t--: NULL\t----: NULL\t---");
+                file.WriteLine("---\t---\t---\t---\t--\t----\t---");
                 int ii = 0;
                 bool completed = false;
                 while (!completed)

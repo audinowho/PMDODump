@@ -13,22 +13,13 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-//125 Electabuzz : 009 Thunder Punch : 113 Light Screen
-poolSpawn.Spawns.Add(GetTeamMob(125, -1, 009, 113, -1, -1, new RandRange(29)), new IntRange(0, max_floors), 10);
-//082 Magneton : 604 Electric Terrain : 086 Thunder Wave
-poolSpawn.Spawns.Add(GetTeamMob(082, -1, 604, 086, -1, -1, new RandRange(28)), new IntRange(0, max_floors), 10);
-//587 Emolga : 104 Double Team : 609 Nuzzle
-poolSpawn.Spawns.Add(GetTeamMob(587, -1, 104, 609, -1, -1, new RandRange(26)), new IntRange(0, max_floors), 10);
-//311 Plusle : 435 Discharge
-poolSpawn.Spawns.Add(GetTeamMob(311, -1, 435, -1, -1, -1, new RandRange(30)), new IntRange(0, max_floors), 10);
-//312 Minun : 435 Discharge
-poolSpawn.Spawns.Add(GetTeamMob(312, -1, 435, -1, -1, -1, new RandRange(30)), new IntRange(0, max_floors), 10);
-//310 Manectric : 031 Lightning Rod : 087 Thunder
+poolSpawn.Spawns.Add(GetTeamMob("electabuzz", "", "thunder_punch", "light_screen", "", "", new RandRange(29)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("magneton", "", "electric_terrain", "thunder_wave", "", "", new RandRange(28)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("emolga", "", "double_team", "nuzzle", "", "", new RandRange(26)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("plusle", "", "discharge", "", "", "", new RandRange(30)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("minun", "", "discharge", "", "", "", new RandRange(30)), new IntRange(0, max_floors), 10);
 //Sleeping
-poolSpawn.Spawns.Add(GetTeamMob(310, 031, 087, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//022 Fearow : 365 Pluck : 097 Agility
-poolSpawn.Spawns.Add(GetTeamMob(022, -1, 365, 097, -1, -1, new RandRange(26)), new IntRange(0, max_floors), 10);
-//074 Geodude : 209 Spark : 111 Defense Curl
-poolSpawn.Spawns.Add(GetTeamMob(new MonsterID(074, 1, -1, Gender.Unknown), -1, 209, 111, -1, -1, new RandRange(24)), new IntRange(0, max_floors), 10);
-//042 Golbat : 103 Screech : 141 Leech Life
-poolSpawn.Spawns.Add(GetTeamMob(042, -1, 103, 141, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("manectric", "lightning_rod", "thunder", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("fearow", "", "pluck", "agility", "", "", new RandRange(26)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("geodude", 1, "", Gender.Unknown), "", "spark", "defense_curl", "", "", new RandRange(24)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("golbat", "", "screech", "leech_life", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

@@ -89,7 +89,7 @@ class ZoneGen:
                 commands.append('itemSpawnZoneStep.Spawns.Add("{0}", {0});'.format(category))
                 commands.append('\n')
 
-            num, name = row[4].split(': ')
+            num = row[4]
             val = ''
             if row[6] != '0':
                 val = ', {0}'.format(row[6])
@@ -99,21 +99,21 @@ class ZoneGen:
                 if row[5] == '0':
                     if val != '':
                         val = ', false{0}'.format(val)
-                    commands.append('{0}.Spawns.Add(new InvItem({1}{2}), {3}, {4});//{5}'.format(
-                            category, num, val, frange, rate, name))
+                    commands.append('{0}.Spawns.Add(new InvItem("{1}"{2}), {3}, {4});'.format(
+                            category, num, val, frange, rate))
                 elif row[5] == '100':
-                    commands.append('{0}.Spawns.Add(new InvItem({1}, true{2}), {3}, {4});//{5}'.format(
-                        category, num, val, frange, rate, name))
+                    commands.append('{0}.Spawns.Add(new InvItem("{1}", true{2}), {3}, {4});'.format(
+                        category, num, val, frange, rate))
                 else:
                     chance = int(row[5])
                     sticky = chance * rate / 100
                     nonstick = rate - sticky
-                    commands.append('{0}.Spawns.Add(new InvItem({1}, true{2}), {3}, {4});//{5}'.format(
-                        category, num, val, frange, round(sticky), name))
+                    commands.append('{0}.Spawns.Add(new InvItem("{1}", true{2}), {3}, {4});'.format(
+                        category, num, val, frange, round(sticky)))
                     if val != '':
                         val = ', false{0}'.format(val)
-                    commands.append('{0}.Spawns.Add(new InvItem({1}{2}), {3}, {4});//{5}'.format(
-                            category, num, val, frange, round(nonstick), name))
+                    commands.append('{0}.Spawns.Add(new InvItem("{1}"{2}), {3}, {4});'.format(
+                            category, num, val, frange, round(nonstick)))
         commands.append('\n')
         commands.append('floorSegment.ZoneSteps.Add(itemSpawnZoneStep);')
 
@@ -138,32 +138,30 @@ class ZoneGen:
         commands.append('\n')
 
         for row in mons:
-            num, name = row[0].split(': ')
+            num = row[0]
             frange = self.parseRange(row[9], row[10])
             if num != '---':
-                attr_nums = ['-1', '-1', '-1', '-1', '-1']
-                attributes = ''
+                attr_nums = ['""', '""', '""', '""', '""']
                 for idx in range(2, 7):
-                    inum, iname = row[idx].split(': ')
+                    inum = row[idx]
                     if inum != '---':
-                        attributes += ' : {0} {1}'.format(inum, iname)
-                        attr_nums[idx - 2] = inum
+                        attr_nums[idx - 2] = '"{0}"'.format(inum)
 
                 level = "new RandRange({0})".format(row[7])
-                anum, aname = row[8].split(': ')
+                anum = row[8]
                 if row[12] != '---':
                     level += ", TeamMemberSpawn.MemberRole." + row[12]
                 if anum != '--':
-                    level += ", {0}".format(anum)
-                commands.append('//{0} {1}{2}'.format(num, name, attributes))
-                # add coment if exists
+                    level += ', "{0}"'.format(anum)
+
+                # add comment if exists
                 if len(row) > 13 and row[13] != "":
                    commands.append('//{0}'.format(row[13]))
                 rate = row[11]
-                mon_id = num
+                mon_id = '"{0}"'.format(num)
                 form = int(row[1])
                 if form > 0:
-                    mon_id = 'new MonsterID({0}, {1}, -1, Gender.Unknown)'.format(num, form)
+                    mon_id = 'new MonsterID("{0}", {1}, "", Gender.Unknown)'.format(num, form)
                 commands.append('poolSpawn.Spawns.Add(GetTeamMob({0}, {1}, {2}), {3}, {4});'.format(
                     mon_id, ", ".join(attr_nums), level, frange, rate))
 

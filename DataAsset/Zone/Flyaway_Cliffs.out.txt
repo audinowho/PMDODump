@@ -9,89 +9,89 @@ necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
 
-necessities.Spawns.Add(new InvItem(0011), new IntRange(0, max_floors), 9);//Leppa Berry
-necessities.Spawns.Add(new InvItem(0010), new IntRange(0, max_floors), 12);//Oran Berry
-necessities.Spawns.Add(new InvItem(0001), new IntRange(0, max_floors), 10);//Apple
-necessities.Spawns.Add(new InvItem(0012), new IntRange(0, max_floors), 10);//Lum Berry
-necessities.Spawns.Add(new InvItem(0101), new IntRange(0, max_floors), 5);//Reviver Seed
-necessities.Spawns.Add(new InvItem(0002), new IntRange(0, max_floors), 3);//Big Apple
+necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 9);
+necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 12);
+necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, max_floors), 10);
+necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
+necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 5);
+necessities.Spawns.Add(new InvItem("food_apple_big"), new IntRange(0, max_floors), 3);
 //snacks
 CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
 snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
 
-snacks.Spawns.Add(new InvItem(0112), new IntRange(0, max_floors), 20);//Blast Seed
-snacks.Spawns.Add(new InvItem(0108), new IntRange(0, max_floors), 10);//Warp Seed
-snacks.Spawns.Add(new InvItem(0110), new IntRange(0, max_floors), 10);//Sleep Seed
+snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 20);
+snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, max_floors), 10);
 //boosters
 CategorySpawn<InvItem> boosters = new CategorySpawn<InvItem>();
 boosters.SpawnRates.SetRange(3, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("boosters", boosters);
 
 
-boosters.Spawns.Add(new InvItem(0076), new IntRange(0, max_floors), 1);//Blue Gummi
-boosters.Spawns.Add(new InvItem(0077), new IntRange(0, max_floors), 1);//Black Gummi
-boosters.Spawns.Add(new InvItem(0078), new IntRange(0, max_floors), 1);//Clear Gummi
-boosters.Spawns.Add(new InvItem(0079), new IntRange(0, max_floors), 1);//Grass Gummi
-boosters.Spawns.Add(new InvItem(0080), new IntRange(0, max_floors), 1);//Green Gummi
-boosters.Spawns.Add(new InvItem(0081), new IntRange(0, max_floors), 1);//Brown Gummi
-boosters.Spawns.Add(new InvItem(0082), new IntRange(0, max_floors), 1);//Orange Gummi
-boosters.Spawns.Add(new InvItem(0083), new IntRange(0, max_floors), 1);//Gold Gummi
-boosters.Spawns.Add(new InvItem(0084), new IntRange(0, max_floors), 1);//Pink Gummi
-boosters.Spawns.Add(new InvItem(0085), new IntRange(0, max_floors), 1);//Purple Gummi
-boosters.Spawns.Add(new InvItem(0086), new IntRange(0, max_floors), 1);//Red Gummi
-boosters.Spawns.Add(new InvItem(0087), new IntRange(0, max_floors), 1);//Royal Gummi
-boosters.Spawns.Add(new InvItem(0088), new IntRange(0, max_floors), 1);//Silver Gummi
-boosters.Spawns.Add(new InvItem(0089), new IntRange(0, max_floors), 2);//White Gummi
-boosters.Spawns.Add(new InvItem(0090), new IntRange(0, max_floors), 1);//Yellow Gummi
-boosters.Spawns.Add(new InvItem(0091), new IntRange(0, max_floors), 5);//Sky Gummi
-boosters.Spawns.Add(new InvItem(0092), new IntRange(0, max_floors), 1);//Gray Gummi
-boosters.Spawns.Add(new InvItem(0093), new IntRange(0, max_floors), 1);//Magenta Gummi
+boosters.Spawns.Add(new InvItem("gummi_blue"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_black"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_clear"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_grass"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_green"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_brown"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_orange"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_gold"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_pink"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_purple"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_red"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_royal"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_silver"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_white"), new IntRange(0, max_floors), 2);
+boosters.Spawns.Add(new InvItem("gummi_yellow"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_sky"), new IntRange(0, max_floors), 5);
+boosters.Spawns.Add(new InvItem("gummi_gray"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_magenta"), new IntRange(0, max_floors), 1);
 //special
 CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
 special.SpawnRates.SetRange(5, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("special", special);
 
 
-special.Spawns.Add(new InvItem(0450), new IntRange(0, max_floors), 25);//Link Box
-special.Spawns.Add(new InvItem(0451), new IntRange(0, max_floors), 5);//Assembly Box
-special.Spawns.Add(new InvItem(0216), new IntRange(0, max_floors), 5);//White Apricorn
-special.Spawns.Add(new InvItem(0210), new IntRange(0, max_floors), 5);//Plain Apricorn
+special.Spawns.Add(new InvItem("machine_recall_box"), new IntRange(0, max_floors), 25);
+special.Spawns.Add(new InvItem("machine_assembly_box"), new IntRange(0, max_floors), 5);
+special.Spawns.Add(new InvItem("apricorn_white"), new IntRange(0, max_floors), 5);
+special.Spawns.Add(new InvItem("apricorn_plain"), new IntRange(0, max_floors), 5);
 //throwable
 CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
 throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("throwable", throwable);
 
 
-throwable.Spawns.Add(new InvItem(0220, false, 2), new IntRange(0, max_floors), 10);//Path Wand
-throwable.Spawns.Add(new InvItem(0228, false, 3), new IntRange(0, max_floors), 10);//Fear Wand
-throwable.Spawns.Add(new InvItem(0223, false, 3), new IntRange(0, max_floors), 10);//Switcher Wand
-throwable.Spawns.Add(new InvItem(0226, false, 3), new IntRange(0, max_floors), 10);//Slow Wand
-throwable.Spawns.Add(new InvItem(0200, false, 3), new IntRange(0, max_floors), 10);//Stick
-throwable.Spawns.Add(new InvItem(0207, false, 2), new IntRange(0, max_floors), 10);//Geo Pebble
+throwable.Spawns.Add(new InvItem("wand_path", false, 2), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_fear", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_switcher", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_slow", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("ammo_stick", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("ammo_geo_pebble", false, 2), new IntRange(0, max_floors), 10);
 //orbs
 CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
 orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("orbs", orbs);
 
 
-orbs.Spawns.Add(new InvItem(0258), new IntRange(0, max_floors), 10);//All-Aim Orb
-orbs.Spawns.Add(new InvItem(0269), new IntRange(0, max_floors), 10);//Trap-See Orb
-orbs.Spawns.Add(new InvItem(0270), new IntRange(0, max_floors), 10);//Trapbust Orb
-orbs.Spawns.Add(new InvItem(0273), new IntRange(0, max_floors), 10);//Petrify Orb
-orbs.Spawns.Add(new InvItem(0271), new IntRange(0, max_floors), 10);//Slumber Orb
-orbs.Spawns.Add(new InvItem(0276), new IntRange(0, max_floors), 10);//Foe-Hold Orb
+orbs.Spawns.Add(new InvItem("orb_all_aim"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_trap_see"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_trapbust"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_petrify"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_slumber"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_foe_hold"), new IntRange(0, max_floors), 10);
 //held
 CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
 held.SpawnRates.SetRange(2, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("held", held);
 
 
-held.Spawns.Add(new InvItem(0313), new IntRange(0, max_floors), 10);//Scope Lens
-held.Spawns.Add(new InvItem(0305), new IntRange(0, max_floors), 10);//Warp Scarf
-held.Spawns.Add(new InvItem(0310), new IntRange(0, max_floors), 10);//Metronome
-held.Spawns.Add(new InvItem(0314), new IntRange(0, max_floors), 10);//Wide Lens
+held.Spawns.Add(new InvItem("held_scope_lens"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_warp_scarf"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_metronome"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_wide_lens"), new IntRange(0, max_floors), 10);
 
 
 floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
@@ -102,26 +102,15 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-//012 Butterfree : 014 Compound Eyes : 016 Gust
-poolSpawn.Spawns.Add(GetTeamMob(012, 014, 016, -1, -1, -1, new RandRange(16)), new IntRange(0, 6), 10);
-//399 Bidoof : 111 Defense Curl : 033 Tackle
-poolSpawn.Spawns.Add(GetTeamMob(399, -1, 111, 033, -1, -1, new RandRange(16), 16), new IntRange(0, 6), 10);
-//441 Chatot : 496 Round
-poolSpawn.Spawns.Add(GetTeamMob(441, -1, 496, -1, -1, -1, new RandRange(16), 16), new IntRange(0, 6), 10);
-//188 Skiploom : 073 Leech Seed : 033 Tackle
-poolSpawn.Spawns.Add(GetTeamMob(188, -1, 073, 033, -1, -1, new RandRange(18), 16), new IntRange(0, max_floors), 10);
-//108 Lickitung : 035 Wrap
-poolSpawn.Spawns.Add(GetTeamMob(108, -1, 035, -1, -1, -1, new RandRange(17), 16), new IntRange(2, max_floors), 10);
-//163 Hoothoot : 193 Foresight : 064 Peck
-poolSpawn.Spawns.Add(GetTeamMob(163, -1, 193, 064, -1, -1, new RandRange(16), 16), new IntRange(2, max_floors), 10);
-//278 Wingull : 017 Wing Attack
-poolSpawn.Spawns.Add(GetTeamMob(278, -1, 017, -1, -1, -1, new RandRange(18), 16), new IntRange(2, max_floors), 10);
-//327 Spinda : 146 Dizzy Punch
-poolSpawn.Spawns.Add(GetTeamMob(327, -1, 146, -1, -1, -1, new RandRange(18), 16), new IntRange(6, max_floors), 10);
-//083 Farfetch'd : 128 Defiant : 332 Aerial Ace : 282 Knock Off
-poolSpawn.Spawns.Add(GetTeamMob(083, 128, 332, 282, -1, -1, new RandRange(20), TeamMemberSpawn.MemberRole.Loner, 16), new IntRange(6, max_floors), 10);
-//227 Skarmory : 232 Metal Claw : 314 Air Cutter
-poolSpawn.Spawns.Add(GetTeamMob(227, -1, 232, 314, -1, -1, new RandRange(20), 16), new IntRange(6, max_floors), 5);
-//441 Chatot : 496 Round
+poolSpawn.Spawns.Add(GetTeamMob("butterfree", "compound_eyes", "gust", "", "", "", new RandRange(16)), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("bidoof", "", "defense_curl", "tackle", "", "", new RandRange(16), "wander_dumb"), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("chatot", "", "round", "", "", "", new RandRange(16), "wander_dumb"), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("skiploom", "", "leech_seed", "tackle", "", "", new RandRange(18), "wander_dumb"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("lickitung", "", "wrap", "", "", "", new RandRange(17), "wander_dumb"), new IntRange(2, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("hoothoot", "", "foresight", "peck", "", "", new RandRange(16), "wander_dumb"), new IntRange(2, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("wingull", "", "wing_attack", "", "", "", new RandRange(18), "wander_dumb"), new IntRange(2, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("spinda", "", "dizzy_punch", "", "", "", new RandRange(18), "wander_dumb"), new IntRange(6, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("farfetchd", "defiant", "aerial_ace", "knock_off", "", "", new RandRange(20), TeamMemberSpawn.MemberRole.Loner, "wander_dumb"), new IntRange(6, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("skarmory", "", "metal_claw", "air_cutter", "", "", new RandRange(20), "wander_dumb"), new IntRange(6, max_floors), 5);
 //Increase the team size to 2
-poolSpawn.Spawns.Add(GetTeamMob(441, -1, 496, -1, -1, -1, new RandRange(16), TeamMemberSpawn.MemberRole.Support, 16), new IntRange(6, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("chatot", "", "round", "", "", "", new RandRange(16), TeamMemberSpawn.MemberRole.Support, "wander_dumb"), new IntRange(6, max_floors), 10);

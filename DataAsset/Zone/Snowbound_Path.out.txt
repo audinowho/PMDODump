@@ -13,18 +13,11 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-//220 Swinub : 181 Powder Snow : 426 Mud Bomb
 //packs
-poolSpawn.Spawns.Add(GetTeamMob(220, -1, 181, 426, -1, -1, new RandRange(30)), new IntRange(0, max_floors), 10);
-//221 Piloswine : 181 Powder Snow : 089 Earthquake
-poolSpawn.Spawns.Add(GetTeamMob(221, -1, 181, 089, -1, -1, new RandRange(38)), new IntRange(0, max_floors), 10);
-//124 Jynx : 531 Heart Stamp : 577 Draining Kiss : 008 Ice Punch
-poolSpawn.Spawns.Add(GetTeamMob(124, -1, 531, 577, 008, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//000 Missingno.
-poolSpawn.Spawns.Add(GetTeamMob(000, -1, -1, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//000 Missingno.
-poolSpawn.Spawns.Add(GetTeamMob(000, -1, -1, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//000 Missingno.
-poolSpawn.Spawns.Add(GetTeamMob(000, -1, -1, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//000 Missingno.
-poolSpawn.Spawns.Add(GetTeamMob(000, -1, -1, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("swinub", "", "powder_snow", "mud_bomb", "", "", new RandRange(30)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("piloswine", "", "powder_snow", "earthquake", "", "", new RandRange(38)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("jynx", "", "heart_stamp", "draining_kiss", "ice_punch", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

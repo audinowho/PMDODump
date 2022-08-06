@@ -13,27 +13,15 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-//570 Zorua : 492 Foul Play
-poolSpawn.Spawns.Add(GetTeamMob(570, -1, 492, -1, -1, -1, new RandRange(29)), new IntRange(0, max_floors), 10);
-//571 Zoroark : 539 Night Daze
-poolSpawn.Spawns.Add(GetTeamMob(571, -1, 539, -1, -1, -1, new RandRange(57)), new IntRange(0, max_floors), 10);
-//109 Koffing : 026 Levitate : 120 Self-Destruct : 139 Poison Gas
-poolSpawn.Spawns.Add(GetTeamMob(109, 026, 120, 139, -1, -1, new RandRange(28)), new IntRange(0, max_floors), 10);
-//297 Hariyama : 047 Thick Fat : 252 Fake Out : 395 Force Palm
-poolSpawn.Spawns.Add(GetTeamMob(297, 047, 252, 395, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//359 Absol : 248 Future Sight : 098 Quick Attack
-poolSpawn.Spawns.Add(GetTeamMob(359, -1, 248, 098, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//229 Houndoom : 251 Beat Up : 044 Bite
-poolSpawn.Spawns.Add(GetTeamMob(229, -1, 251, 044, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//215 Sneasel : 124 Pickpocket : 097 Agility : 098 Quick Attack
-poolSpawn.Spawns.Add(GetTeamMob(215, 124, 097, 098, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//262 Mightyena : 168 Thief : 184 Scary Face
-poolSpawn.Spawns.Add(GetTeamMob(262, -1, 168, 184, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//000 Missingno.
-poolSpawn.Spawns.Add(GetTeamMob(000, -1, -1, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//000 Missingno.
-poolSpawn.Spawns.Add(GetTeamMob(000, -1, -1, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//000 Missingno.
-poolSpawn.Spawns.Add(GetTeamMob(000, -1, -1, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
-//000 Missingno.
-poolSpawn.Spawns.Add(GetTeamMob(000, -1, -1, -1, -1, -1, new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("zorua", "", "foul_play", "", "", "", new RandRange(29)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("zoroark", "", "night_daze", "", "", "", new RandRange(57)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("koffing", "levitate", "self_destruct", "poison_gas", "", "", new RandRange(28)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("hariyama", "thick_fat", "fake_out", "force_palm", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("absol", "", "future_sight", "quick_attack", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("houndoom", "", "beat_up", "bite", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("sneasel", "pickpocket", "agility", "quick_attack", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("mightyena", "", "thief", "scary_face", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
