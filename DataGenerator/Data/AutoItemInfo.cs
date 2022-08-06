@@ -968,7 +968,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, some of the Pokémon's moves will fill water, lava, and pits.");
                 if (includeEffects)
                 {
-                    item.OnHitTiles.Add(0, new FamilyBattleEvent(new OnMoveUseEvent(new OnMeleeActionEvent(true, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "water", "lava", "abyss")))));
+                    item.OnHitTiles.Add(0, new FamilyBattleEvent(new OnMoveUseEvent(new OnMeleeActionEvent(true, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "water", "lava", "pit")))));
                 }
             }
             else if (type == ExclusiveItemEffect.PPBoost)

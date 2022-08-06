@@ -1434,7 +1434,7 @@ namespace DataGenerator.Data
                 item.UseAction.PreActions.Add(itemFX);
                 item.UseAction.ActionFX.Sound = "DUN_Blowback_Orb";
                 item.UseEvent.OnHitTiles.Add(0, new RemoveTrapEvent());
-                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", new SingleEmitter(new AnimData("Puff_Brown", 3)), "wall", "water", "lava", "abyss"));
+                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", new SingleEmitter(new AnimData("Puff_Brown", 3)), "wall", "water", "lava", "pit"));
             }
             else if (ii == 221)
             {
@@ -1694,7 +1694,7 @@ namespace DataGenerator.Data
                 ((AreaAction)item.UseAction).Speed = 36;
                 ((AreaAction)item.UseAction).HitTiles = true;
                 item.UseAction.ActionFX.Sound = "_UNK_DUN_Seismic";
-                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("", new SingleEmitter(new AnimData("Puff_Brown", 3)), "water", "lava", "abyss"));
+                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("", new SingleEmitter(new AnimData("Puff_Brown", 3)), "water", "lava", "pit"));
                 item.UseEvent.AfterActions.Add(0, new BattleLogBattleEvent(new StringKey("MSG_FLOOR_FILL")));
             }
             else if (ii == 257)

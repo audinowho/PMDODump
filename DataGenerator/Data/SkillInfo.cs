@@ -4042,7 +4042,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("flinch", true, true)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "water", "lava", "abyss"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "water", "lava", "pit"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -8260,7 +8260,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_speed", true, true, -1)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "water", "lava", "abyss"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "water", "lava", "pit"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(31);//Rumble
@@ -10743,7 +10743,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_special_defense", true, true, -1)));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "water", "lava", "abyss"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "water", "lava", "pit"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new WaveMotionAction();
                 ((WaveMotionAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(31);//Rumble
@@ -13495,7 +13495,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_speed", true, true, -1)));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", terrainEmitter, "wall", "water", "lava", "abyss"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", terrainEmitter, "wall", "water", "lava", "pit"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(31);//Rumble

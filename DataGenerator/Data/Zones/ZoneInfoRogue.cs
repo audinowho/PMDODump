@@ -2722,7 +2722,7 @@ namespace DataGenerator.Data
                         spawner.AmountSpawner = new RandRange(1);
                     }
                     PlaceDisconnectedMobsStep<MapGenContext> secretMobPlacement = new PlaceDisconnectedMobsStep<MapGenContext>(spawner);
-                    secretMobPlacement.AcceptedTiles.Add(new Tile("abyss"));
+                    secretMobPlacement.AcceptedTiles.Add(new Tile("pit"));
                     layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
                 }
 
@@ -3048,19 +3048,19 @@ namespace DataGenerator.Data
                 else if (ii < 20)
                 { }
                 else if (ii < 23)
-                    AddWaterSteps(layout, "abyss", new RandRange(30), false);//abyss
+                    AddWaterSteps(layout, "pit", new RandRange(30), false);//abyss
                 else if (ii < 24)
                 { }
                 else if (ii < 26)
-                    AddWaterSteps(layout, "abyss", new RandRange(35));//abyss
+                    AddWaterSteps(layout, "pit", new RandRange(35));//abyss
                 else if (ii < 27)
-                    AddWaterSteps(layout, "abyss", new RandRange(55));//abyss
+                    AddWaterSteps(layout, "pit", new RandRange(55));//abyss
                 else if (ii < 28)
-                    AddWaterSteps(layout, "abyss", new RandRange(75));//abyss
+                    AddWaterSteps(layout, "pit", new RandRange(75));//abyss
                 else if (ii < 29)
-                    AddWaterSteps(layout, "abyss", new RandRange(45));//abyss
+                    AddWaterSteps(layout, "pit", new RandRange(45));//abyss
                 else
-                    AddWaterSteps(layout, "abyss", new RandRange(25));//abyss
+                    AddWaterSteps(layout, "pit", new RandRange(25));//abyss
 
                 layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 

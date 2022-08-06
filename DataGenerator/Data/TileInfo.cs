@@ -1295,7 +1295,7 @@ namespace DataGenerator.Data
             else if (ii == 5)
             {
                 tile.Name = new LocalText("Variable-Texture Abyss");
-                asset = "abyss";
+                asset = "pit";
                 tile.BlockType = TerrainData.Mobility.Abyss;
                 tile.MinimapColor = Color.Gray;
                 tile.ShadowType = 4;

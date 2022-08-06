@@ -1209,7 +1209,7 @@ namespace DataGenerator.Data
                             spawner.AmountSpawner = new RandRange(10, 13);
                         }
                         PlaceTerrainMobsStep<ListMapGenContext> secretMobPlacement = new PlaceTerrainMobsStep<ListMapGenContext>(spawner);
-                        secretMobPlacement.AcceptedTiles.Add(new Tile("abyss"));
+                        secretMobPlacement.AcceptedTiles.Add(new Tile("pit"));
                         layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
                     }
 
@@ -1300,7 +1300,7 @@ namespace DataGenerator.Data
 
 
                     //Generate water (specified by user as Terrain 2) with a frequency of 99%, using Perlin Noise in an order of 2.
-                    string terrain = "abyss";
+                    string terrain = "pit";
                     PerlinWaterStep<ListMapGenContext> waterStep = new PerlinWaterStep<ListMapGenContext>(new RandRange(80), 3, new Tile(terrain), new MapTerrainStencil<ListMapGenContext>(false, true, false), 2, false);
                     layout.GenSteps.Add(PR_WATER, waterStep);
 
@@ -1345,7 +1345,7 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["wall"] = "wyvern_hill_wall";
                         textureStep.TextureMap["water"] = "wyvern_hill_secondary";
                         textureStep.TextureMap["poison_water"] = "wyvern_hill_secondary";
-                        textureStep.TextureMap["abyss"] = "wyvern_hill_secondary";
+                        textureStep.TextureMap["pit"] = "wyvern_hill_secondary";
                         textureStep.TextureMap["poison_water"] = "wyvern_hill_secondary";
                         textureStep.TextureMap["grass"] = "tall_grass";
                     }
@@ -1508,7 +1508,7 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["wall"] = "spacial_rift_1_wall";
                         textureStep.TextureMap["water"] = "chasm_cave_1_wall";
                         textureStep.TextureMap["poison_water"] = "chasm_cave_1_wall";
-                        textureStep.TextureMap["abyss"] = "chasm_cave_1_wall";
+                        textureStep.TextureMap["pit"] = "chasm_cave_1_wall";
                         textureStep.TextureMap["poison_water"] = "chasm_cave_1_wall";
                     }
                     textureStep.GroundElement = "normal";
@@ -1582,7 +1582,7 @@ namespace DataGenerator.Data
 
 
                     //Generate water (specified by user as Terrain 2) with a frequency of 100%, using Perlin Noise in an order of 2.
-                    string terrain = "abyss";
+                    string terrain = "pit";
                     PerlinWaterStep<MapGenContext> waterStep = new PerlinWaterStep<MapGenContext>(new RandRange(100), 3, new Tile(terrain), new MapTerrainStencil<MapGenContext>(false, true, false), 2);
                     layout.GenSteps.Add(PR_WATER, waterStep);
                     
@@ -1797,7 +1797,7 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["wall"] = "wyvern_hill_wall";
                         textureStep.TextureMap["water"] = "wyvern_hill_secondary";
                         textureStep.TextureMap["poison_water"] = "mt_blaze_secondary";
-                        textureStep.TextureMap["abyss"] = "chasm_cave_1_wall";
+                        textureStep.TextureMap["pit"] = "chasm_cave_1_wall";
                         textureStep.TextureMap["poison_water"] = "poison_maze_secondary";
                         textureStep.TextureMap["grass"] = "tall_grass";
                     }
@@ -1899,7 +1899,7 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["wall"] = "wyvern_hill_wall";
                         textureStep.TextureMap["water"] = "wyvern_hill_secondary";
                         textureStep.TextureMap["poison_water"] = "mt_blaze_secondary";
-                        textureStep.TextureMap["abyss"] = "chasm_cave_1_wall";
+                        textureStep.TextureMap["pit"] = "chasm_cave_1_wall";
                         textureStep.TextureMap["poison_water"] = "poison_maze_secondary";
                         textureStep.TextureMap["grass"] = "tall_grass";
                     }
@@ -2760,7 +2760,7 @@ namespace DataGenerator.Data
 
                     AddStairStep(layout, false);
 
-                    AddWaterSteps(layout, "abyss", new RandRange(ii * 25), false);
+                    AddWaterSteps(layout, "pit", new RandRange(ii * 25), false);
 
                     //Tilesets
                     AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "ghost");

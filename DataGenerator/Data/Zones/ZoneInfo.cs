@@ -902,11 +902,11 @@ namespace DataGenerator.Data
                         AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
 
                         if (ii < 2)
-                            AddWaterSteps(layout, "abyss", new RandRange(20));//abyss
+                            AddWaterSteps(layout, "pit", new RandRange(20));//abyss
                         else if (ii < 5)
-                            AddWaterSteps(layout, "abyss", new RandRange(60));//abyss
+                            AddWaterSteps(layout, "pit", new RandRange(60));//abyss
                         else
-                            AddWaterSteps(layout, "abyss", new RandRange(40));//abyss
+                            AddWaterSteps(layout, "pit", new RandRange(40));//abyss
 
 
                         //Tilesets
@@ -4851,7 +4851,7 @@ namespace DataGenerator.Data
                         else if (ii < 10)
                             AddWaterSteps(layout, "poison_water", new RandRange(20));//poison
                         else
-                            AddWaterSteps(layout, "abyss", new RandRange(20), false);//abyss
+                            AddWaterSteps(layout, "pit", new RandRange(20), false);//abyss
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder", false);//wonder tile

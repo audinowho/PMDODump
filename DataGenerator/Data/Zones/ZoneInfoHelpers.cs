@@ -289,7 +289,7 @@ namespace DataGenerator.Data
                     else if (level[yy][xx] == '^')
                         roomGen.Tiles[xx][yy] = new Tile("lava");
                     else if (level[yy][xx] == '_')
-                        roomGen.Tiles[xx][yy] = new Tile("abyss");
+                        roomGen.Tiles[xx][yy] = new Tile("pit");
                     else
                         roomGen.Tiles[xx][yy] = new Tile(DataManager.Instance.GenFloor);
                 }
@@ -337,7 +337,7 @@ namespace DataGenerator.Data
                     else if (level[yy][xx] == '^')
                         roomGen.Tiles[xx][yy] = new Tile("lava");
                     else if (level[yy][xx] == '_')
-                        roomGen.Tiles[xx][yy] = new Tile("abyss");
+                        roomGen.Tiles[xx][yy] = new Tile("pit");
                     else
                         roomGen.Tiles[xx][yy] = new Tile(DataManager.Instance.GenFloor);
                 }
@@ -365,7 +365,7 @@ namespace DataGenerator.Data
                     else if (level[yy][xx] == '^')
                         roomGen.Tiles[xx][yy] = new Tile("lava");
                     else if (level[yy][xx] == '_')
-                        roomGen.Tiles[xx][yy] = new Tile("abyss");
+                        roomGen.Tiles[xx][yy] = new Tile("pit");
                     else
                         roomGen.Tiles[xx][yy] = new Tile(DataManager.Instance.GenFloor);
                     roomGen.PostProcMask[xx][yy] = new PostProcTile();
