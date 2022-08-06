@@ -162,7 +162,7 @@ namespace DataGenerator.Data
                         post_mob.Tactic = "wait_only";
                         post_mob.Level = new RandRange(50);
                         post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc((ii % 5) * 2 + 2, ii / 5 * 2 + 2)));
-                        post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "apple"));
+                        post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
 
                         PlaceNoLocMobsStep<StairsMapGenContext> mobStep = new PlaceNoLocMobsStep<StairsMapGenContext>(new PresetMultiTeamSpawner<StairsMapGenContext>(post_team));
@@ -2561,7 +2561,7 @@ namespace DataGenerator.Data
                 CategorySpawn<InvItem> category = new CategorySpawn<InvItem>();
                 category.SpawnRates.SetRange(10, new IntRange(0, 5));
                 zoneItemStep.Spawns.Add("uncategorized", category);
-                category.Spawns.Add(new InvItem("apple"), new IntRange(0, 5), 10);
+                category.Spawns.Add(new InvItem("food_apple"), new IntRange(0, 5), 10);
                 floorSegment.ZoneSteps.Add(zoneItemStep);
 
                 //mobs
