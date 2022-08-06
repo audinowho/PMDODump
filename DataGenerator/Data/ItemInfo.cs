@@ -27,14 +27,7 @@ namespace DataGenerator.Data
             {
                 (string, ItemData) item = GetItemData(ii);
                 if (item.Item1 != "")
-                {
-                    System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{1}", ii, item.Item1));
                     DataManager.SaveData(item.Item1, DataManager.DataType.Item.ToString(), item.Item2);
-                }
-                else
-                {
-                    System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{0}", ii));
-                }
             }
             AddExclItemData(false);
         }
@@ -4332,12 +4325,7 @@ namespace DataGenerator.Data
                     item.Released = true;
 
                 if (item.Name.DefaultText != "")
-                {
-                    System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{1}", ii, fileName));
                     DataManager.SaveData(fileName, DataManager.DataType.Item.ToString(), item);
-                }
-                else
-                    System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{0}", ii));
             }
 
             AutoItemInfo.WriteExclusiveItems(MAX_INIT_EXCL_ITEMS, translate);

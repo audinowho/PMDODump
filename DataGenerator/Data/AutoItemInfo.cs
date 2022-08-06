@@ -541,14 +541,7 @@ namespace DataGenerator.Data
                         incompleteLeft++;
 
                     if (item.Name.DefaultText != "")
-                    {
-                        System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{1}", item_idx, fileName));
                         DataManager.SaveData(fileName, DataManager.DataType.Item.ToString(), item);
-                    }
-                    else
-                    {
-                        System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{0}", item_idx));
-                    }
 
                     if (item.Released)
                     {
