@@ -13,7 +13,7 @@ https://drive.google.com/drive/folders/1Oq0AhABTGbTIVsnYsZaAtTO5C2TH7bH_?ths=tru
 This repository contains only code that builds the data used in PMDO, its updater, and scripts that are run to deploy it.  It does not contain the base engine of the game!  The submodules supply those things:
 
 Submodules
-* PMDC: Contains the code for the PMD engine that PMDO runs on.
+* PMDC: Contains battle system code roguelike engine that PMDO runs on.
 * DumpAsset: Contains the full asset data for PMDO.
 * RawAsset: Contains unconverted graphics.
 

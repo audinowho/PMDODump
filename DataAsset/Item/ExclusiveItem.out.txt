@@ -369,8 +369,8 @@ Generic Name	Custom Name	User	Evos	Custom Group	Group Name	Name	Item For	Index	T
 1* Card		pinsir	False					D	*	2*	2* 053: ClutchPerformer							
 0* None		pinsir	False					E	*	3*	0* 000: None							
 0* None		pinsir	False					F	*	3*	0* 000: None							
-0* None	Rushing Bow	tauros	False					A	/	5*	5* 011: Wallbreaker							
-0* None	Milky Scarf	miltank	False					B	/	5*	5* 037: WarpPayback	fighting						
+0* None	Rushing Bow	tauros	False		tauros_miltank			A	/	5*	5* 011: Wallbreaker							
+0* None	Milky Scarf	miltank	False		tauros_miltank			B	/	5*	5* 037: WarpPayback	fighting						
 1* Tail		tauros	False	tauros, miltank	tauros_miltank			C	/	1*	3* 038: LungeAttack							
 1* Card		miltank	False	tauros, miltank	tauros_miltank			D	/	1*	1* 015: PracticeSwinger							
 2* Crest		tauros	False	tauros, miltank	tauros_miltank			E	/	4*	4* 025: ThrowOnAttack							
