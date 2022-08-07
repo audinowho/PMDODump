@@ -28,6 +28,7 @@ namespace DataGenerator.Data
         {
             string fileName = "";
             IntrinsicData ability = new IntrinsicData();
+            ability.IndexNum = ii;
             if (ii == 0)
             {
                 ability.Name = new LocalText("None");

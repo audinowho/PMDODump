@@ -1,537 +1,537 @@
 Key		EN
-0000-0000|data.Name		None
-0000-0001|data.Desc		
-0001-0000|data.Name		Stench
-0001-0001|data.Desc		Contact with the Pokémon may cause flinching.
-0002-0000|data.Name		Drizzle
-0002-0001|data.Desc		The Pokémon makes it rain when it is battling.
-0003-0000|data.Name		Speed Boost
-0003-0001|data.Desc		The Pokémon's Movement Speed is increased.
-0004-0000|data.Name		Battle Armor
-0004-0001|data.Desc		Hard armor protects the Pokémon from critical hits.
-0005-0000|data.Name		Sturdy
-0005-0001|data.Desc		The Pokémon cannot be knocked out with one hit.
-0006-0000|data.Name		Damp
-0006-0001|data.Desc		Prevents explosions and other forms of splash damage.
-0007-0000|data.Name		Limber
-0007-0001|data.Desc		Its limber body protects the Pokémon from paralysis.
-0008-0000|data.Name		Sand Veil
-0008-0001|data.Desc		Avoids attacks from a distance when in a sandstorm.
-0009-0000|data.Name		Static
-0009-0001|data.Desc		The Pokémon is charged with static electricity, so contact with it may cause paralysis.
-0010-0000|data.Name		Volt Absorb
-0010-0001|data.Desc		Restores HP if hit by an Electric-type move.
-0011-0000|data.Name		Water Absorb
-0011-0001|data.Desc		Restores HP if hit by a Water-type move.
-0012-0000|data.Name		Oblivious
-0012-0001|data.Desc		Protects the Pokémon from Attract or Rage Powder.
-0013-0000|data.Name		Cloud Nine
-0013-0001|data.Desc		The Pokémon eliminates weather when it is battling.
-0014-0000|data.Name		Compound Eyes
-0014-0001|data.Desc		Boosts the Pokémon's Attack Range.
-0015-0000|data.Name		Insomnia
-0015-0001|data.Desc		The Pokémon is suffering from insomnia and cannot fall asleep.
-0016-0000|data.Name		Color Change
-0016-0001|data.Desc		The Pokémon's type becomes the type of the move used on it.
-0017-0000|data.Name		Immunity
-0017-0001|data.Desc		The immune system of the Pokémon prevents it from getting poisoned.
-0018-0000|data.Name		Flash Fire
-0018-0001|data.Desc		Powers up the Pokémon's Fire-type moves if it's hit by one.
-0019-0000|data.Name		Shield Dust
-0019-0001|data.Desc		This Pokémon's dust blocks the additional effects of attacks taken.
-0020-0000|data.Name		Own Tempo
-0020-0001|data.Desc		This Pokémon has its own tempo, and that prevents it from becoming confused.
-0021-0000|data.Name		Suction Cups
-0021-0001|data.Desc		Prevents the Pokémon from being forced off its location.
-0022-0000|data.Name		Intimidate
-0022-0001|data.Desc		Lowers the Attack stat of opposing Pokémon nearby.
-0023-0000|data.Name		Shadow Tag
-0023-0001|data.Desc		This Pokémon steps on the opposing Pokémon's shadow to prevent it from escaping.
-0024-0000|data.Name		Rough Skin
-0024-0001|data.Desc		This Pokémon inflicts damage with its rough skin to the attacker on contact.
-0025-0000|data.Name		Wonder Guard
-0025-0001|data.Desc		Its mysterious power only lets super effective moves hit the Pokémon.
-0026-0000|data.Name		Levitate
-0026-0001|data.Desc		By floating in the air, the Pokémon receives full immunity to all Ground-type moves.
-0027-0000|data.Name		Effect Spore
-0027-0001|data.Desc		Contact with the Pokémon may inflict poison, sleep, or paralysis on its attacker.
-0028-0000|data.Name		Synchronize
-0028-0001|data.Desc		Passes major status problems to opposing Pokémon.
-0029-0000|data.Name		Clear Body
-0029-0001|data.Desc		Prevents other Pokémon from lowering its stats.
-0030-0000|data.Name		Natural Cure
-0030-0001|data.Desc		Cures all status problems on the Pokémon when it is at full HP.
-0031-0000|data.Name		Lightning Rod
-0031-0001|data.Desc		The Pokémon draws in all Electric-type moves. Instead of being hit by Electric-type moves, it boosts its Sp. Atk.
-0032-0000|data.Name		Serene Grace
-0032-0001|data.Desc		Boosts the likelihood of additional effects occurring when attacking.
-0033-0000|data.Name		Swift Swim
-0033-0001|data.Desc		Boosts the Pokémon's Movement Speed in rain.
-0034-0000|data.Name		Chlorophyll
-0034-0001|data.Desc		Boosts the Pokémon's Movement Speed in sunshine.
-0035-0000|data.Name		Illuminate
-0035-0001|data.Desc		It may warp an ally to the Pokémon when it is hurt.
-0036-0000|data.Name		Trace
-0036-0001|data.Desc		The Pokémon copies the Ability of the Pokémon that attacks it.
-0037-0000|data.Name		Huge Power
-0037-0001|data.Desc		Boosts the Pokémon's Attack stat.
-0038-0000|data.Name		Poison Point
-0038-0001|data.Desc		Contact with the Pokémon may poison the attacker.
-0039-0000|data.Name		Inner Focus
-0039-0001|data.Desc		The Pokémon's intensely focused, and that protects the Pokémon from flinching.
-0040-0000|data.Name		Magma Armor
-0040-0001|data.Desc		The Pokémon is covered with hot magma, which prevents the Pokémon from becoming frozen. Thrown items will also burn up on contact.
-0041-0000|data.Name		Water Veil
-0041-0001|data.Desc		The Pokémon is covered with a water veil, which prevents the Pokémon from getting a burn.
-0042-0000|data.Name		Magnet Pull
-0042-0001|data.Desc		Pulls Steel-type targets to this Pokémon.
-0043-0000|data.Name		Soundproof
-0043-0001|data.Desc		Soundproofing of the Pokémon itself gives full immunity to all sound-based moves.
-0044-0000|data.Name		Rain Dish
-0044-0001|data.Desc		The Pokémon gradually regains HP when battling in rain.
-0045-0000|data.Name		Sand Stream
-0045-0001|data.Desc		The Pokémon summons a sandstorm when it is battling.
-0046-0000|data.Name		Pressure
-0046-0001|data.Desc		By putting pressure on the opposing Pokémon, it raises their PP usage.
-0047-0000|data.Name		Thick Fat
-0047-0001|data.Desc		Boosts resistance to Fire- and Ice-type moves.
-0048-0000|data.Name		Early Bird
-0048-0001|data.Desc		The Pokémon awakens quickly from sleep.
-0049-0000|data.Name		Flame Body
-0049-0001|data.Desc		Contact with the Pokémon may burn the attacker. Thrown items will also burn up on contact.
-0050-0000|data.Name		Run Away
-0050-0001|data.Desc		Prevents the Pokémon from being Immobilized.
-0051-0000|data.Name		Keen Eye
-0051-0001|data.Desc		Prevents other Pokémon from lowering its Accuracy.
-0052-0000|data.Name		Hyper Cutter
-0052-0001|data.Desc		The Pokémon's proud of its powerful pincers. They prevent other Pokémon from lowering its Attack stat.
-0053-0000|data.Name		Pickup
-0053-0001|data.Desc		The Pokémon may find an item when it enters a new floor.
-0054-0000|data.Name		Truant
-0054-0001|data.Desc		The Pokémon can't attack on consecutive turns.
-0055-0000|data.Name		Hustle
-0055-0001|data.Desc		Boosts the Attack stat, but lowers Attack Range.
-0056-0000|data.Name		Cute Charm
-0056-0001|data.Desc		Contact with the Pokémon may cause infatuation.
-0057-0000|data.Name		Plus
-0057-0001|data.Desc		Boosts the Sp. Atk stat if another Pokémon has Minus.
-0058-0000|data.Name		Minus
-0058-0001|data.Desc		Boosts the Sp. Atk stat if another Pokémon has Plus.
-0059-0000|data.Name		Forecast
-0059-0001|data.Desc		The Pokémon transforms with the weather to change its type to Water, Fire, or Ice.
-0060-0000|data.Name		Sticky Hold
-0060-0001|data.Desc		Protects the Pokémon from item theft. Also allows the Pokémon to handle Sticky items.
-0061-0000|data.Name		Shed Skin
-0061-0001|data.Desc		The Pokémon may heal its own status conditions by shedding its skin.
-0062-0000|data.Name		Guts
-0062-0001|data.Desc		It's so gutsy that having a major status condition boosts the Pokémon's Attack stat.
-0063-0000|data.Name		Marvel Scale
-0063-0001|data.Desc		The Pokémon's marvelous scales boost the Defense stat if it has a major status condition.
-0064-0000|data.Name		Liquid Ooze
-0064-0001|data.Desc		Oozed liquid has strong stench, which damages attackers using any draining move.
-0065-0000|data.Name		Overgrow
-0065-0001|data.Desc		Powers up Grass-type moves when the Pokémon's HP is low.
-0066-0000|data.Name		Blaze
-0066-0001|data.Desc		Powers up Fire-type moves when the Pokémon's HP is low.
-0067-0000|data.Name		Torrent
-0067-0001|data.Desc		Powers up Water-type moves when the Pokémon's HP is low.
-0068-0000|data.Name		Swarm
-0068-0001|data.Desc		Powers up Bug-type moves when the Pokémon's HP is low.
-0069-0000|data.Name		Rock Head
-0069-0001|data.Desc		Protects the Pokémon from recoil damage.
-0070-0000|data.Name		Drought
-0070-0001|data.Desc		Turns the sunlight harsh when the Pokémon is battling.
-0071-0000|data.Name		Arena Trap
-0071-0001|data.Desc		Prevents grounded opposing Pokémon from fleeing.
-0072-0000|data.Name		Vital Spirit
-0072-0001|data.Desc		The Pokémon is full of vitality, and that prevents it from falling asleep.
-0073-0000|data.Name		White Smoke
-0073-0001|data.Desc		The Pokémon is protected by its white smoke, which prevents other Pokémon from lowering its stats.
-0074-0000|data.Name		Pure Power
-0074-0001|data.Desc		Boosts the Pokémon's Attack stat.
-0075-0000|data.Name		Shell Armor
-0075-0001|data.Desc		A hard shell protects the Pokémon from critical hits.
-0076-0000|data.Name		Air Lock
-0076-0001|data.Desc		Eliminates the effects of weather when the Pokémon is battling.
-0077-0000|data.Name		Tangled Feet
-0077-0001|data.Desc		If the Pokémon is confused, it will avoid attacks from a distance.
-0078-0000|data.Name		Motor Drive
-0078-0001|data.Desc		Boosts the Pokémon's Movement Speed when it's hit by an Electric-type move.
-0079-0000|data.Name		Rivalry
-0079-0001|data.Desc		Deals more damage to Pokémon of the same gender.
-0080-0000|data.Name		Steadfast
-0080-0001|data.Desc		Boosts the Pokémon's Movement Speed each time the it flinches.
-0081-0000|data.Name		Snow Cloak
-0081-0001|data.Desc		Avoids attacks from a distance when in a hailstorm.
-0082-0000|data.Name		Gluttony
-0082-0001|data.Desc		Steals and eats a food item from an attacker that made direct contact.
-0083-0000|data.Name		Anger Point
-0083-0001|data.Desc		The Pokémon is angered when it takes a critical hit, and that maxes its Attack stat.
-0084-0000|data.Name		Unburden
-0084-0001|data.Desc		Boosts Movement Speed the Pokémon has no held item.
-0085-0000|data.Name		Heatproof
-0085-0001|data.Desc		Weakens the power of Fire-type moves.
-0086-0000|data.Name		Simple
-0086-0001|data.Desc		The stat changes the Pokémon receives are doubled.
-0087-0000|data.Name		Dry Skin
-0087-0001|data.Desc		Restores HP in rain or when hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves.
-0088-0000|data.Name		Download
-0088-0001|data.Desc		Compares an opposing Pokémon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat— whichever will be more effective.
-0089-0000|data.Name		Iron Fist
-0089-0001|data.Desc		Powers up punching moves.
-0090-0000|data.Name		Poison Heal
-0090-0001|data.Desc		Restores HP if the Pokémon is poisoned, instead of losing HP.
-0091-0000|data.Name		Adaptability
-0091-0001|data.Desc		Powers up moves of the same type as the Pokémon.
-0092-0000|data.Name		Skill Link
-0092-0001|data.Desc		Ensures that all multi-strike moves hit.
-0093-0000|data.Name		Hydration
-0093-0001|data.Desc		Heals status conditions if it's raining.
-0094-0000|data.Name		Solar Power
-0094-0001|data.Desc		Boosts the Sp. Atk stat in sunny weather, but HP decreases.
-0095-0000|data.Name		Quick Feet
-0095-0001|data.Desc		Boosts Movement Speed if the Pokémon has a status condition.
-0096-0000|data.Name		Normalize
-0096-0001|data.Desc		All the Pokémon’s moves become Normal type.
-0097-0000|data.Name		Sniper
-0097-0001|data.Desc		Powers up moves if they become critical hits when attacking.
-0098-0000|data.Name		Magic Guard
-0098-0001|data.Desc		The Pokémon only takes damage from attacks.
-0099-0000|data.Name		No Guard
-0099-0001|data.Desc		The Pokémon employs no-guard tactics to ensure incoming and outgoing attacks always land.
-0100-0000|data.Name		Stall
-0100-0001|data.Desc		Boosts move power if the Pokémon was last hit by the target.
-0101-0000|data.Name		Technician
-0101-0001|data.Desc		Powers up the Pokémon's weaker moves.
-0102-0000|data.Name		Leaf Guard
-0102-0001|data.Desc		Avoids enemy status moves in sunny weather.
-0103-0000|data.Name		Klutz
-0103-0001|data.Desc		Items held by the Pokémon have no effect. They also can't stick to the Pokémon.
-0104-0000|data.Name		Mold Breaker
-0104-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.
-0105-0000|data.Name		Super Luck
-0105-0001|data.Desc		The Pokémon is so lucky that the critical-hit ratios of its moves are boosted.
-0106-0000|data.Name		Aftermath
-0106-0001|data.Desc		The Pokémon explodes when fainted.
-0107-0000|data.Name		Anticipation
-0107-0001|data.Desc		Avoids the strongest super-effective move that the opposing Pokémon has.
-0108-0000|data.Name		Forewarn
-0108-0001|data.Desc		Avoids the strongest move that the opposing Pokémon has.
-0109-0000|data.Name		Unaware
-0109-0001|data.Desc		Ignores the opposing Pokémon's stat changes.
-0110-0000|data.Name		Tinted Lens
-0110-0001|data.Desc		Powers up "not very effective" moves.
-0111-0000|data.Name		Filter
-0111-0001|data.Desc		Reduces damage from super-effective attacks.
-0112-0000|data.Name		Slow Start
-0112-0001|data.Desc		Temporarily lowers the Pokémon's Movement Speed.
-0113-0000|data.Name		Scrappy
-0113-0001|data.Desc		The Pokémon can hit Ghost-type Pokémon with Normal- and Fighting-type moves.
-0114-0000|data.Name		Storm Drain
-0114-0001|data.Desc		Draws in all Water-type moves. Instead of being hit by Water-type moves, it boosts its Sp. Atk.
-0115-0000|data.Name		Ice Body
-0115-0001|data.Desc		The Pokémon gradually regains HP when battling in a hailstorm.
-0116-0000|data.Name		Solid Rock
-0116-0001|data.Desc		Reduces damage from super-effective attacks.
-0117-0000|data.Name		Snow Warning
-0117-0001|data.Desc		The Pokémon summons a hailstorm when it is battling.
-0118-0000|data.Name		Honey Gather
-0118-0001|data.Desc		The Pokémon may gather Nectar when it enters a new floor.
-0119-0000|data.Name		Frisk
-0119-0001|data.Desc		Attacking an opposing Pokémon removes its held item.
-0120-0000|data.Name		Reckless
-0120-0001|data.Desc		Powers up moves that have recoil damage.
-0121-0000|data.Name		Multitype
-0121-0001|data.Desc		Changes the Pokémon's type to match its held Plate. The Pokémon can also utilize the protection of Plates in its Bag.
-0122-0000|data.Name		Flower Gift
-0122-0001|data.Desc		Boosts the Attack and Sp. Def stats of itself and allies in harsh sunlight.
-0123-0000|data.Name		Bad Dreams
-0123-0001|data.Desc		Reduces the HP of opposing Pokémon that are asleep.
-0124-0000|data.Name		Pickpocket
-0124-0001|data.Desc		Steals an item from an attacker that made direct contact.
-0125-0000|data.Name		Sheer Force
-0125-0001|data.Desc		Removes additional effects to increase the power of moves when attacking.
-0126-0000|data.Name		Contrary
-0126-0001|data.Desc		Makes stat changes have an opposite effect.
-0127-0000|data.Name		Unnerve
-0127-0001|data.Desc		Unnerves opposing Pokémon and makes them unable to eat food items.
-0128-0000|data.Name		Defiant
-0128-0001|data.Desc		Boosts the Pokémon's Attack stat sharply when its stats are lowered.
-0129-0000|data.Name		Defeatist
-0129-0001|data.Desc		Halves the Pokémon's Attack and Sp. Atk stats when its HP becomes half or less.
-0130-0000|data.Name		Cursed Body
-0130-0001|data.Desc		May disable a move used on the Pokémon.
-0131-0000|data.Name		Healer
-0131-0001|data.Desc		Heals the status conditions of nearby Pokémon when battling.
-0132-0000|data.Name		Friend Guard
-0132-0001|data.Desc		Reduces damage done to nearby allies.
-0133-0000|data.Name		Weak Armor
-0133-0001|data.Desc		Physical attacks lower its Defense stat and raise its Movement Speed.
-0134-0000|data.Name		Heavy Metal
-0134-0001|data.Desc		Doubles the Pokémon's weight.
-0135-0000|data.Name		Light Metal
-0135-0001|data.Desc		Halves the Pokémon's weight.
-0136-0000|data.Name		Multiscale
-0136-0001|data.Desc		Reduces damage the Pokémon takes when its HP is full.
-0137-0000|data.Name		Toxic Boost
-0137-0001|data.Desc		Powers up physical attacks when the Pokémon is poisoned.
-0138-0000|data.Name		Flare Boost
-0138-0001|data.Desc		Powers up special attacks when the Pokémon is burned.
-0139-0000|data.Name		Harvest
-0139-0001|data.Desc		Passes the effect of Berries to nearby allies.
-0140-0000|data.Name		Telepathy
-0140-0001|data.Desc		Anticipates an ally's attack and dodges it.
-0141-0000|data.Name		Moody
-0141-0001|data.Desc		Raises one stat and lowers another.
-0142-0000|data.Name		Overcoat
-0142-0001|data.Desc		Protects the Pokémon from the weather and splash damage.
-0143-0000|data.Name		Poison Touch
-0143-0001|data.Desc		May poison a target when the Pokémon makes contact.
-0144-0000|data.Name		Regenerator
-0144-0001|data.Desc		Restores HP when there are no threats nearby.
-0145-0000|data.Name		Big Pecks
-0145-0001|data.Desc		Protects the Pokémon from Defense-lowering effects.
-0146-0000|data.Name		Sand Rush
-0146-0001|data.Desc		Boosts the Pokémon's Movement Speed in a sandstorm.
-0147-0000|data.Name		Wonder Skin
-0147-0001|data.Desc		Avoids all status moves targeting the Pokémon.
-0148-0000|data.Name		Analytic
-0148-0001|data.Desc		Boosts move power if the Pokémon was last hit by the target.
-0149-0000|data.Name		Illusion
-0149-0001|data.Desc		Disguises itself as another Pokémon, fooling wild Pokémon of the same species.
-0150-0000|data.Name		Imposter
-0150-0001|data.Desc		If defeated while transformed, the Pokémon reverts to its original form instead of fainting.
-0151-0000|data.Name		Infiltrator
-0151-0001|data.Desc		Passes through the opposing Pokémon's barrier and strikes.
-0152-0000|data.Name		Mummy
-0152-0001|data.Desc		Contact with the Pokémon spreads this Ability.
-0153-0000|data.Name		Moxie
-0153-0001|data.Desc		The Pokémon shows moxie, and that boosts the Attack stat after knocking out any Pokémon with a move.
-0154-0000|data.Name		Justified
-0154-0001|data.Desc		Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.
-0155-0000|data.Name		Rattled
-0155-0001|data.Desc		Dark-, Ghost-, and Bug-type moves scare the Pokémon and boost its Movement Speed.
-0156-0000|data.Name		Magic Bounce
-0156-0001|data.Desc		Reflects moves that cause status conditions.
-0157-0000|data.Name		Sap Sipper
-0157-0001|data.Desc		Boosts the Attack stat if hit by a Grass-type move, instead of taking damage.
-0158-0000|data.Name		Prankster
-0158-0001|data.Desc		Increases the Attack Range of status moves.
-0159-0000|data.Name		Sand Force
-0159-0001|data.Desc		Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.
-0160-0000|data.Name		Iron Barbs
-0160-0001|data.Desc		Inflicts damage to the attacker on contact with iron barbs.
-0161-0000|data.Name		Zen Mode
-0161-0001|data.Desc		Changes the Pokémon's shape when HP is half or less.
-0162-0000|data.Name		Victory Star
-0162-0001|data.Desc		Boosts the Attack Range of party Pokémon.
-0163-0000|data.Name		Turboblaze
-0163-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.
-0164-0000|data.Name		Teravolt
-0164-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.
-0165-0000|data.Name		Aroma Veil
-0165-0001|data.Desc		Protects itself and its allies from attacks that limit their move choices.
-0166-0000|data.Name		Flower Veil
-0166-0001|data.Desc		Protects ally Pokémon from major status conditions.
-0167-0000|data.Name		Cheek Pouch
-0167-0001|data.Desc		Restores HP when the Pokémon eats a food item.
-0168-0000|data.Name		Protean
-0168-0001|data.Desc		Changes the Pokémon's type to the type of the move it last used.
-0169-0000|data.Name		Fur Coat
-0169-0001|data.Desc		Halves damage from physical moves.
-0170-0000|data.Name		Magician
-0170-0001|data.Desc		The Pokémon steals the item of a Pokémon it hits with a move.
-0171-0000|data.Name		Bulletproof
-0171-0001|data.Desc		Protects the Pokémon from explosions.
-0172-0000|data.Name		Competitive
-0172-0001|data.Desc		Boosts the Sp. Atk stat sharply when a stat is lowered.
-0173-0000|data.Name		Strong Jaw
-0173-0001|data.Desc		The Pokémon's strong jaw boosts the power of its biting moves.
-0174-0000|data.Name		Refrigerate
-0174-0001|data.Desc		Normal-type moves become Ice-type moves.
-0175-0000|data.Name		Sweet Veil
-0175-0001|data.Desc		Prevents party Pokémon from falling asleep.
-0176-0000|data.Name		Stance Change
-0176-0001|data.Desc		The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King's Shield.
-0177-0000|data.Name		Gale Wings
-0177-0001|data.Desc		Increases the Attack Range of Flying-type moves.
-0178-0000|data.Name		Mega Launcher
-0178-0001|data.Desc		Powers up aura and pulse moves.
-0179-0000|data.Name		Grass Pelt
-0179-0001|data.Desc		Boosts the Defense stat in Grassy Terrain.
-0180-0000|data.Name		Symbiosis
-0180-0001|data.Desc		Passes the effect of certain held items to ally Pokémon. It won't use the item itself.
-0181-0000|data.Name		Tough Claws
-0181-0001|data.Desc		Powers up moves that make direct contact.
-0182-0000|data.Name		Pixilate
-0182-0001|data.Desc		Normal-type moves become Fairy-type moves.
-0183-0000|data.Name		Gooey
-0183-0001|data.Desc		Contact with the Pokémon lowers the attacker's Movement Speed.
-0184-0000|data.Name		Aerilate
-0184-0001|data.Desc		Normal-type moves become Flying-type moves.
-0185-0000|data.Name		Parental Bond
-0185-0001|data.Desc		Parent and child attack together.
-0186-0000|data.Name		Dark Aura
-0186-0001|data.Desc		Powers up all Dark-type moves.
-0187-0000|data.Name		Fairy Aura
-0187-0001|data.Desc		Powers up all Fairy-type moves.
-0188-0000|data.Name		Aura Break
-0188-0001|data.Desc		The effects of “Aura” Abilities are reversed to lower the power of affected moves.
-0189-0000|data.Name		Primordial Sea
-0189-0001|data.Desc		Affects weather and nullifies any Fire-type attacks.
-0190-0000|data.Name		Desolate Land
-0190-0001|data.Desc		Affects weather and nullifies any Water-type attacks.
-0191-0000|data.Name		Delta Stream
-0191-0001|data.Desc		Affects weather and eliminates all of the Flying type's weaknesses.
-0192-0000|data.Name		Stamina
-0192-0001|data.Desc		Boosts the Defense stat when hit by an attack.
-0193-0000|data.Name		Wimp Out
-0193-0001|data.Desc		The Pokémon cowardly switches out when its HP becomes half or less.
-0194-0000|data.Name		Emergency Exit
-0194-0001|data.Desc		The Pokémon, sensing danger, switches out when its HP becomes half or less.
-0195-0000|data.Name		Water Compaction
-0195-0001|data.Desc		Boosts the Pokémon's Defense stat sharply when hit by a Water-type move.
-0196-0000|data.Name		Merciless
-0196-0001|data.Desc		The Pokémon's attacks become critical hits if the target is poisoned.
-0197-0000|data.Name		Shields Down
-0197-0001|data.Desc		When its HP becomes half or less, the Pokémon's shell breaks and it becomes aggressive.
-0198-0000|data.Name		Stakeout
-0198-0001|data.Desc		The Pokémon's first attack deals increased damage.
-0199-0000|data.Name		Water Bubble
-0199-0001|data.Desc		Lowers the power of Fire-type moves done to the Pokémon and prevents the Pokémon from getting a burn.
-0200-0000|data.Name		Steelworker
-0200-0001|data.Desc		Powers up Steel-type moves.
-0201-0000|data.Name		Berserk
-0201-0001|data.Desc		Boosts the Pokémon's Sp. Atk stat when it takes a hit that causes its HP to become half or less.
-0202-0000|data.Name		Slush Rush
-0202-0001|data.Desc		Boosts the Pokémon's Speed stat in a hailstorm.
-0203-0000|data.Name		Long Reach
-0203-0001|data.Desc		The Pokémon uses its moves without making contact with the target.
-0204-0000|data.Name		Liquid Voice
-0204-0001|data.Desc		All sound-based moves become Water-type moves.
-0205-0000|data.Name		Triage
-0205-0001|data.Desc		Gives priority to a healing move.
-0206-0000|data.Name		Galvanize
-0206-0001|data.Desc		Normal-type moves become Electric-type moves.
-0207-0000|data.Name		Surge Surfer
-0207-0001|data.Desc		Doubles the Pokémon's Speed stat on Electric Terrain.
-0208-0000|data.Name		Schooling
-0208-0001|data.Desc		When it has a lot of HP, the Pokémon forms a powerful school. It stops schooling when its HP is low.
-0209-0000|data.Name		Disguise
-0209-0001|data.Desc		Once per battle, the shroud that covers the Pokémon can protect it from an attack.
-0210-0000|data.Name		Battle Bond
-0210-0001|data.Desc		Defeating an opposing Pokémon strengthens the Pokémon's bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful.
-0211-0000|data.Name		Power Construct
-0211-0001|data.Desc		Other Cells gather to aid when its HP becomes half or less. Then the Pokémon changes its form to Complete Forme.
-0212-0000|data.Name		Corrosion
-0212-0001|data.Desc		The Pokémon can poison the target even if it's a Steel or Poison type.
-0213-0000|data.Name		Comatose
-0213-0001|data.Desc		It's always drowsing and will never wake up. It can attack without waking up.
-0214-0000|data.Name		Queenly Majesty
-0214-0001|data.Desc		Its majesty pressures the opposing Pokémon, making it unable to attack using priority moves.
-0215-0000|data.Name		Innards Out
-0215-0001|data.Desc		Damages the attacker landing the finishing hit by the amount equal to its last HP.
-0216-0000|data.Name		Dancer
-0216-0001|data.Desc		When another Pokémon uses a dance move, it can use a dance move following it regardless of its Speed.
-0217-0000|data.Name		Battery
-0217-0001|data.Desc		Powers up ally Pokémon's special moves.
-0218-0000|data.Name		Fluffy
-0218-0001|data.Desc		Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.
-0219-0000|data.Name		Dazzling
-0219-0001|data.Desc		Surprises the opposing Pokémon, making it unable to attack using priority moves.
-0220-0000|data.Name		Soul-Heart
-0220-0001|data.Desc		Boosts its Sp. Atk stat every time a Pokémon faints.
-0221-0000|data.Name		Tangling Hair
-0221-0001|data.Desc		Contact with the Pokémon lowers the attacker's Speed stat.
-0222-0000|data.Name		Receiver
-0222-0001|data.Desc		The Pokémon copies the Ability of an ally.
-0223-0000|data.Name		Power of Alchemy
-0223-0001|data.Desc		The Pokémon copies the Ability of an ally.
-0224-0000|data.Name		Beast Boost
-0224-0001|data.Desc		The Pokémon boosts its most proficient stat each time it knocks out a Pokémon with a move.
-0225-0000|data.Name		RKS System
-0225-0001|data.Desc		Changes the Pokémon's type to match the memory disc it holds.
-0226-0000|data.Name		Electric Surge
-0226-0001|data.Desc		Turns the ground into Electric Terrain when the Pokémon enters a battle.
-0227-0000|data.Name		Psychic Surge
-0227-0001|data.Desc		Turns the ground into Psychic Terrain when the Pokémon enters a battle.
-0228-0000|data.Name		Misty Surge
-0228-0001|data.Desc		Turns the ground into Misty Terrain when the Pokémon enters a battle.
-0229-0000|data.Name		Grassy Surge
-0229-0001|data.Desc		Turns the ground into Grassy Terrain when the Pokémon enters a battle.
-0230-0000|data.Name		Full Metal Body
-0230-0001|data.Desc		Prevents other Pokémon's moves or Abilities from lowering the Pokémon's stats.
-0231-0000|data.Name		Shadow Shield
-0231-0001|data.Desc		Reduces the amount of damage the Pokémon takes while its HP is full.
-0232-0000|data.Name		Prism Armor
-0232-0001|data.Desc		Reduces the power of supereffective attacks taken.
-0233-0000|data.Name		Neuroforce
-0233-0001|data.Desc		Powers up moves that are super effective.
-0234-0000|data.Name		Intrepid Sword
-0234-0001|data.Desc		Boosts the Pokémon's Attack stat when the Pokémon enters a battle.
-0235-0000|data.Name		Dauntless Shield
-0235-0001|data.Desc		Boosts the Pokémon's Defense stat when the Pokémon enters a battle.
-0236-0000|data.Name		Libero
-0236-0001|data.Desc		Changes the Pokémon's type to the type of the move it last used.
-0237-0000|data.Name		Ball Fetch
-0237-0001|data.Desc		If the Pokémon is not holding an item, it will fetch the Poké Ball from the first failed throw of the battle.
-0238-0000|data.Name		Cotton Down
-0238-0001|data.Desc		When the Pokémon is hit by an attack, it scatters cotton fluff around and lowers the Speed stat of all Pokémon except itself.
-0239-0000|data.Name		Propeller Tail
-0239-0001|data.Desc		Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.
-0240-0000|data.Name		Mirror Armor
-0240-0001|data.Desc		Bounces back only the stat-lowering effects that the Pokémon receives.
-0241-0000|data.Name		Gulp Missile
-0241-0001|data.Desc		When the Pokémon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack.
-0242-0000|data.Name		Stalwart
-0242-0001|data.Desc		Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.
-0243-0000|data.Name		Steam Engine
-0243-0001|data.Desc		Boosts the Pokémon's Speed stat drastically if hit by a Fire- or Water-type move.
-0244-0000|data.Name		Punk Rock
-0244-0001|data.Desc		Boosts the power of sound-based moves. The Pokémon also takes half the damage from these kinds of moves.
-0245-0000|data.Name		Sand Spit
-0245-0001|data.Desc		The Pokémon creates a sandstorm when it's hit by an attack.
-0246-0000|data.Name		Ice Scales
-0246-0001|data.Desc		The Pokémon is protected by ice scales, which halve the damage taken from special moves.
-0247-0000|data.Name		Ripen
-0247-0001|data.Desc		Raises a stat when it eats a berry.
-0248-0000|data.Name		Ice Face
-0248-0001|data.Desc		The Pokémon's ice head can take a physical attack as a substitute, but the attack also changes the Pokémon's appearance. The ice will be restored when it hails.
-0249-0000|data.Name		Power Spot
-0249-0001|data.Desc		Just being next to the Pokémon powers up moves.
-0250-0000|data.Name		Mimicry
-0250-0001|data.Desc		Changes the Pokémon's type depending on the terrain.
-0251-0000|data.Name		Screen Cleaner
-0251-0001|data.Desc		When the Pokémon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pokémon.
-0252-0000|data.Name		Steely Spirit
-0252-0001|data.Desc		Powers up ally Pokémon's Steel-type moves.
-0253-0000|data.Name		Perish Body
-0253-0001|data.Desc		When hit by a move that makes direct contact, the Pokémon and the attacker will faint after three turns unless they switch out of battle.
-0254-0000|data.Name		Wandering Spirit
-0254-0001|data.Desc		The Pokémon exchanges Abilities with a Pokémon that hits it with a move that makes direct contact.
-0255-0000|data.Name		Gorilla Tactics
-0255-0001|data.Desc		Boosts the Pokémon's Attack stat but only allows the use of the first selected move.
-0256-0000|data.Name		Neutralizing Gas
-0256-0001|data.Desc		The Pokémon neutralizes abilities when attacked.
-0257-0000|data.Name		Pastel Veil
-0257-0001|data.Desc		Protects the Pokémon and its ally Pokémon from being poisoned.
-0258-0000|data.Name		Hunger Switch
-0258-0001|data.Desc		The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of each turn.
-0259-0000|data.Name		Quick Draw
-0259-0001|data.Desc		Enables the Pokémon to move first occasionally.
-0260-0000|data.Name		Unseen Fist
-0260-0001|data.Desc		If the Pokémon uses moves that make direct contact, it can attack the target even if the target protects itself.
-0261-0000|data.Name		Curious Medicine
-0261-0001|data.Desc		When the Pokémon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies.
-0262-0000|data.Name		Transistor
-0262-0001|data.Desc		Powers up Electric-type moves.
-0263-0000|data.Name		Dragon's Maw
-0263-0001|data.Desc		Powers up Dragon-type moves.
-0264-0000|data.Name		Chilling Neigh
-0264-0001|data.Desc		When the Pokémon knocks out a target, it utters a chilling neigh, which boosts its Attack stat.
-0265-0000|data.Name		Grim Neigh
-0265-0001|data.Desc		When the Pokémon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat.
-0266-0000|data.Name		As One
-0266-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Glastrier's Chilling Neigh Ability.
-0267-0000|data.Name		As One
-0267-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.
+0000-none-0000|data.Name		None
+0000-none-0001|data.Desc		
+0001-stench-0000|data.Name		Stench
+0001-stench-0001|data.Desc		Contact with the Pokémon may cause flinching.
+0002-drizzle-0000|data.Name		Drizzle
+0002-drizzle-0001|data.Desc		The Pokémon makes it rain when it is battling.
+0003-speed_boost-0000|data.Name		Speed Boost
+0003-speed_boost-0001|data.Desc		The Pokémon's Movement Speed is increased.
+0004-battle_armor-0000|data.Name		Battle Armor
+0004-battle_armor-0001|data.Desc		Hard armor protects the Pokémon from critical hits.
+0005-sturdy-0000|data.Name		Sturdy
+0005-sturdy-0001|data.Desc		The Pokémon cannot be knocked out with one hit.
+0006-damp-0000|data.Name		Damp
+0006-damp-0001|data.Desc		Prevents explosions and other forms of splash damage.
+0007-limber-0000|data.Name		Limber
+0007-limber-0001|data.Desc		Its limber body protects the Pokémon from paralysis.
+0008-sand_veil-0000|data.Name		Sand Veil
+0008-sand_veil-0001|data.Desc		Avoids attacks from a distance when in a sandstorm.
+0009-static-0000|data.Name		Static
+0009-static-0001|data.Desc		The Pokémon is charged with static electricity, so contact with it may cause paralysis.
+0010-volt_absorb-0000|data.Name		Volt Absorb
+0010-volt_absorb-0001|data.Desc		Restores HP if hit by an Electric-type move.
+0011-water_absorb-0000|data.Name		Water Absorb
+0011-water_absorb-0001|data.Desc		Restores HP if hit by a Water-type move.
+0012-oblivious-0000|data.Name		Oblivious
+0012-oblivious-0001|data.Desc		Protects the Pokémon from Attract or Rage Powder.
+0013-cloud_nine-0000|data.Name		Cloud Nine
+0013-cloud_nine-0001|data.Desc		The Pokémon eliminates weather when it is battling.
+0014-compound_eyes-0000|data.Name		Compound Eyes
+0014-compound_eyes-0001|data.Desc		Boosts the Pokémon's Attack Range.
+0015-insomnia-0000|data.Name		Insomnia
+0015-insomnia-0001|data.Desc		The Pokémon is suffering from insomnia and cannot fall asleep.
+0016-color_change-0000|data.Name		Color Change
+0016-color_change-0001|data.Desc		The Pokémon's type becomes the type of the move used on it.
+0017-immunity-0000|data.Name		Immunity
+0017-immunity-0001|data.Desc		The immune system of the Pokémon prevents it from getting poisoned.
+0018-flash_fire-0000|data.Name		Flash Fire
+0018-flash_fire-0001|data.Desc		Powers up the Pokémon's Fire-type moves if it's hit by one.
+0019-shield_dust-0000|data.Name		Shield Dust
+0019-shield_dust-0001|data.Desc		This Pokémon's dust blocks the additional effects of attacks taken.
+0020-own_tempo-0000|data.Name		Own Tempo
+0020-own_tempo-0001|data.Desc		This Pokémon has its own tempo, and that prevents it from becoming confused.
+0021-suction_cups-0000|data.Name		Suction Cups
+0021-suction_cups-0001|data.Desc		Prevents the Pokémon from being forced off its location.
+0022-intimidate-0000|data.Name		Intimidate
+0022-intimidate-0001|data.Desc		Lowers the Attack stat of opposing Pokémon nearby.
+0023-shadow_tag-0000|data.Name		Shadow Tag
+0023-shadow_tag-0001|data.Desc		This Pokémon steps on the opposing Pokémon's shadow to prevent it from escaping.
+0024-rough_skin-0000|data.Name		Rough Skin
+0024-rough_skin-0001|data.Desc		This Pokémon inflicts damage with its rough skin to the attacker on contact.
+0025-wonder_guard-0000|data.Name		Wonder Guard
+0025-wonder_guard-0001|data.Desc		Its mysterious power only lets super effective moves hit the Pokémon.
+0026-levitate-0000|data.Name		Levitate
+0026-levitate-0001|data.Desc		By floating in the air, the Pokémon receives full immunity to all Ground-type moves.
+0027-effect_spore-0000|data.Name		Effect Spore
+0027-effect_spore-0001|data.Desc		Contact with the Pokémon may inflict poison, sleep, or paralysis on its attacker.
+0028-synchronize-0000|data.Name		Synchronize
+0028-synchronize-0001|data.Desc		Passes major status problems to opposing Pokémon.
+0029-clear_body-0000|data.Name		Clear Body
+0029-clear_body-0001|data.Desc		Prevents other Pokémon from lowering its stats.
+0030-natural_cure-0000|data.Name		Natural Cure
+0030-natural_cure-0001|data.Desc		Cures all status problems on the Pokémon when it is at full HP.
+0031-lightning_rod-0000|data.Name		Lightning Rod
+0031-lightning_rod-0001|data.Desc		The Pokémon draws in all Electric-type moves. Instead of being hit by Electric-type moves, it boosts its Sp. Atk.
+0032-serene_grace-0000|data.Name		Serene Grace
+0032-serene_grace-0001|data.Desc		Boosts the likelihood of additional effects occurring when attacking.
+0033-swift_swim-0000|data.Name		Swift Swim
+0033-swift_swim-0001|data.Desc		Boosts the Pokémon's Movement Speed in rain.
+0034-chlorophyll-0000|data.Name		Chlorophyll
+0034-chlorophyll-0001|data.Desc		Boosts the Pokémon's Movement Speed in sunshine.
+0035-illuminate-0000|data.Name		Illuminate
+0035-illuminate-0001|data.Desc		It may warp an ally to the Pokémon when it is hurt.
+0036-trace-0000|data.Name		Trace
+0036-trace-0001|data.Desc		The Pokémon copies the Ability of the Pokémon that attacks it.
+0037-huge_power-0000|data.Name		Huge Power
+0037-huge_power-0001|data.Desc		Boosts the Pokémon's Attack stat.
+0038-poison_point-0000|data.Name		Poison Point
+0038-poison_point-0001|data.Desc		Contact with the Pokémon may poison the attacker.
+0039-inner_focus-0000|data.Name		Inner Focus
+0039-inner_focus-0001|data.Desc		The Pokémon's intensely focused, and that protects the Pokémon from flinching.
+0040-magma_armor-0000|data.Name		Magma Armor
+0040-magma_armor-0001|data.Desc		The Pokémon is covered with hot magma, which prevents the Pokémon from becoming frozen. Thrown items will also burn up on contact.
+0041-water_veil-0000|data.Name		Water Veil
+0041-water_veil-0001|data.Desc		The Pokémon is covered with a water veil, which prevents the Pokémon from getting a burn.
+0042-magnet_pull-0000|data.Name		Magnet Pull
+0042-magnet_pull-0001|data.Desc		Pulls Steel-type targets to this Pokémon.
+0043-soundproof-0000|data.Name		Soundproof
+0043-soundproof-0001|data.Desc		Soundproofing of the Pokémon itself gives full immunity to all sound-based moves.
+0044-rain_dish-0000|data.Name		Rain Dish
+0044-rain_dish-0001|data.Desc		The Pokémon gradually regains HP when battling in rain.
+0045-sand_stream-0000|data.Name		Sand Stream
+0045-sand_stream-0001|data.Desc		The Pokémon summons a sandstorm when it is battling.
+0046-pressure-0000|data.Name		Pressure
+0046-pressure-0001|data.Desc		By putting pressure on the opposing Pokémon, it raises their PP usage.
+0047-thick_fat-0000|data.Name		Thick Fat
+0047-thick_fat-0001|data.Desc		Boosts resistance to Fire- and Ice-type moves.
+0048-early_bird-0000|data.Name		Early Bird
+0048-early_bird-0001|data.Desc		The Pokémon awakens quickly from sleep.
+0049-flame_body-0000|data.Name		Flame Body
+0049-flame_body-0001|data.Desc		Contact with the Pokémon may burn the attacker. Thrown items will also burn up on contact.
+0050-run_away-0000|data.Name		Run Away
+0050-run_away-0001|data.Desc		Prevents the Pokémon from being Immobilized.
+0051-keen_eye-0000|data.Name		Keen Eye
+0051-keen_eye-0001|data.Desc		Prevents other Pokémon from lowering its Accuracy.
+0052-hyper_cutter-0000|data.Name		Hyper Cutter
+0052-hyper_cutter-0001|data.Desc		The Pokémon's proud of its powerful pincers. They prevent other Pokémon from lowering its Attack stat.
+0053-pickup-0000|data.Name		Pickup
+0053-pickup-0001|data.Desc		The Pokémon may find an item when it enters a new floor.
+0054-truant-0000|data.Name		Truant
+0054-truant-0001|data.Desc		The Pokémon can't attack on consecutive turns.
+0055-hustle-0000|data.Name		Hustle
+0055-hustle-0001|data.Desc		Boosts the Attack stat, but lowers Attack Range.
+0056-cute_charm-0000|data.Name		Cute Charm
+0056-cute_charm-0001|data.Desc		Contact with the Pokémon may cause infatuation.
+0057-plus-0000|data.Name		Plus
+0057-plus-0001|data.Desc		Boosts the Sp. Atk stat if another Pokémon has Minus.
+0058-minus-0000|data.Name		Minus
+0058-minus-0001|data.Desc		Boosts the Sp. Atk stat if another Pokémon has Plus.
+0059-forecast-0000|data.Name		Forecast
+0059-forecast-0001|data.Desc		The Pokémon transforms with the weather to change its type to Water, Fire, or Ice.
+0060-sticky_hold-0000|data.Name		Sticky Hold
+0060-sticky_hold-0001|data.Desc		Protects the Pokémon from item theft. Also allows the Pokémon to handle Sticky items.
+0061-shed_skin-0000|data.Name		Shed Skin
+0061-shed_skin-0001|data.Desc		The Pokémon may heal its own status conditions by shedding its skin.
+0062-guts-0000|data.Name		Guts
+0062-guts-0001|data.Desc		It's so gutsy that having a major status condition boosts the Pokémon's Attack stat.
+0063-marvel_scale-0000|data.Name		Marvel Scale
+0063-marvel_scale-0001|data.Desc		The Pokémon's marvelous scales boost the Defense stat if it has a major status condition.
+0064-liquid_ooze-0000|data.Name		Liquid Ooze
+0064-liquid_ooze-0001|data.Desc		Oozed liquid has strong stench, which damages attackers using any draining move.
+0065-overgrow-0000|data.Name		Overgrow
+0065-overgrow-0001|data.Desc		Powers up Grass-type moves when the Pokémon's HP is low.
+0066-blaze-0000|data.Name		Blaze
+0066-blaze-0001|data.Desc		Powers up Fire-type moves when the Pokémon's HP is low.
+0067-torrent-0000|data.Name		Torrent
+0067-torrent-0001|data.Desc		Powers up Water-type moves when the Pokémon's HP is low.
+0068-swarm-0000|data.Name		Swarm
+0068-swarm-0001|data.Desc		Powers up Bug-type moves when the Pokémon's HP is low.
+0069-rock_head-0000|data.Name		Rock Head
+0069-rock_head-0001|data.Desc		Protects the Pokémon from recoil damage.
+0070-drought-0000|data.Name		Drought
+0070-drought-0001|data.Desc		Turns the sunlight harsh when the Pokémon is battling.
+0071-arena_trap-0000|data.Name		Arena Trap
+0071-arena_trap-0001|data.Desc		Prevents grounded opposing Pokémon from fleeing.
+0072-vital_spirit-0000|data.Name		Vital Spirit
+0072-vital_spirit-0001|data.Desc		The Pokémon is full of vitality, and that prevents it from falling asleep.
+0073-white_smoke-0000|data.Name		White Smoke
+0073-white_smoke-0001|data.Desc		The Pokémon is protected by its white smoke, which prevents other Pokémon from lowering its stats.
+0074-pure_power-0000|data.Name		Pure Power
+0074-pure_power-0001|data.Desc		Boosts the Pokémon's Attack stat.
+0075-shell_armor-0000|data.Name		Shell Armor
+0075-shell_armor-0001|data.Desc		A hard shell protects the Pokémon from critical hits.
+0076-air_lock-0000|data.Name		Air Lock
+0076-air_lock-0001|data.Desc		Eliminates the effects of weather when the Pokémon is battling.
+0077-tangled_feet-0000|data.Name		Tangled Feet
+0077-tangled_feet-0001|data.Desc		If the Pokémon is confused, it will avoid attacks from a distance.
+0078-motor_drive-0000|data.Name		Motor Drive
+0078-motor_drive-0001|data.Desc		Boosts the Pokémon's Movement Speed when it's hit by an Electric-type move.
+0079-rivalry-0000|data.Name		Rivalry
+0079-rivalry-0001|data.Desc		Deals more damage to Pokémon of the same gender.
+0080-steadfast-0000|data.Name		Steadfast
+0080-steadfast-0001|data.Desc		Boosts the Pokémon's Movement Speed each time the it flinches.
+0081-snow_cloak-0000|data.Name		Snow Cloak
+0081-snow_cloak-0001|data.Desc		Avoids attacks from a distance when in a hailstorm.
+0082-gluttony-0000|data.Name		Gluttony
+0082-gluttony-0001|data.Desc		Steals and eats a food item from an attacker that made direct contact.
+0083-anger_point-0000|data.Name		Anger Point
+0083-anger_point-0001|data.Desc		The Pokémon is angered when it takes a critical hit, and that maxes its Attack stat.
+0084-unburden-0000|data.Name		Unburden
+0084-unburden-0001|data.Desc		Boosts Movement Speed the Pokémon has no held item.
+0085-heatproof-0000|data.Name		Heatproof
+0085-heatproof-0001|data.Desc		Weakens the power of Fire-type moves.
+0086-simple-0000|data.Name		Simple
+0086-simple-0001|data.Desc		The stat changes the Pokémon receives are doubled.
+0087-dry_skin-0000|data.Name		Dry Skin
+0087-dry_skin-0001|data.Desc		Restores HP in rain or when hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves.
+0088-download-0000|data.Name		Download
+0088-download-0001|data.Desc		Compares an opposing Pokémon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat— whichever will be more effective.
+0089-iron_fist-0000|data.Name		Iron Fist
+0089-iron_fist-0001|data.Desc		Powers up punching moves.
+0090-poison_heal-0000|data.Name		Poison Heal
+0090-poison_heal-0001|data.Desc		Restores HP if the Pokémon is poisoned, instead of losing HP.
+0091-adaptability-0000|data.Name		Adaptability
+0091-adaptability-0001|data.Desc		Powers up moves of the same type as the Pokémon.
+0092-skill_link-0000|data.Name		Skill Link
+0092-skill_link-0001|data.Desc		Ensures that all multi-strike moves hit.
+0093-hydration-0000|data.Name		Hydration
+0093-hydration-0001|data.Desc		Heals status conditions if it's raining.
+0094-solar_power-0000|data.Name		Solar Power
+0094-solar_power-0001|data.Desc		Boosts the Sp. Atk stat in sunny weather, but HP decreases.
+0095-quick_feet-0000|data.Name		Quick Feet
+0095-quick_feet-0001|data.Desc		Boosts Movement Speed if the Pokémon has a status condition.
+0096-normalize-0000|data.Name		Normalize
+0096-normalize-0001|data.Desc		All the Pokémon’s moves become Normal type.
+0097-sniper-0000|data.Name		Sniper
+0097-sniper-0001|data.Desc		Powers up moves if they become critical hits when attacking.
+0098-magic_guard-0000|data.Name		Magic Guard
+0098-magic_guard-0001|data.Desc		The Pokémon only takes damage from attacks.
+0099-no_guard-0000|data.Name		No Guard
+0099-no_guard-0001|data.Desc		The Pokémon employs no-guard tactics to ensure incoming and outgoing attacks always land.
+0100-stall-0000|data.Name		Stall
+0100-stall-0001|data.Desc		Boosts move power if the Pokémon was last hit by the target.
+0101-technician-0000|data.Name		Technician
+0101-technician-0001|data.Desc		Powers up the Pokémon's weaker moves.
+0102-leaf_guard-0000|data.Name		Leaf Guard
+0102-leaf_guard-0001|data.Desc		Avoids enemy status moves in sunny weather.
+0103-klutz-0000|data.Name		Klutz
+0103-klutz-0001|data.Desc		Items held by the Pokémon have no effect. They also can't stick to the Pokémon.
+0104-mold_breaker-0000|data.Name		Mold Breaker
+0104-mold_breaker-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.
+0105-super_luck-0000|data.Name		Super Luck
+0105-super_luck-0001|data.Desc		The Pokémon is so lucky that the critical-hit ratios of its moves are boosted.
+0106-aftermath-0000|data.Name		Aftermath
+0106-aftermath-0001|data.Desc		The Pokémon explodes when fainted.
+0107-anticipation-0000|data.Name		Anticipation
+0107-anticipation-0001|data.Desc		Avoids the strongest super-effective move that the opposing Pokémon has.
+0108-forewarn-0000|data.Name		Forewarn
+0108-forewarn-0001|data.Desc		Avoids the strongest move that the opposing Pokémon has.
+0109-unaware-0000|data.Name		Unaware
+0109-unaware-0001|data.Desc		Ignores the opposing Pokémon's stat changes.
+0110-tinted_lens-0000|data.Name		Tinted Lens
+0110-tinted_lens-0001|data.Desc		Powers up "not very effective" moves.
+0111-filter-0000|data.Name		Filter
+0111-filter-0001|data.Desc		Reduces damage from super-effective attacks.
+0112-slow_start-0000|data.Name		Slow Start
+0112-slow_start-0001|data.Desc		Temporarily lowers the Pokémon's Movement Speed.
+0113-scrappy-0000|data.Name		Scrappy
+0113-scrappy-0001|data.Desc		The Pokémon can hit Ghost-type Pokémon with Normal- and Fighting-type moves.
+0114-storm_drain-0000|data.Name		Storm Drain
+0114-storm_drain-0001|data.Desc		Draws in all Water-type moves. Instead of being hit by Water-type moves, it boosts its Sp. Atk.
+0115-ice_body-0000|data.Name		Ice Body
+0115-ice_body-0001|data.Desc		The Pokémon gradually regains HP when battling in a hailstorm.
+0116-solid_rock-0000|data.Name		Solid Rock
+0116-solid_rock-0001|data.Desc		Reduces damage from super-effective attacks.
+0117-snow_warning-0000|data.Name		Snow Warning
+0117-snow_warning-0001|data.Desc		The Pokémon summons a hailstorm when it is battling.
+0118-honey_gather-0000|data.Name		Honey Gather
+0118-honey_gather-0001|data.Desc		The Pokémon may gather Nectar when it enters a new floor.
+0119-frisk-0000|data.Name		Frisk
+0119-frisk-0001|data.Desc		Attacking an opposing Pokémon removes its held item.
+0120-reckless-0000|data.Name		Reckless
+0120-reckless-0001|data.Desc		Powers up moves that have recoil damage.
+0121-multitype-0000|data.Name		Multitype
+0121-multitype-0001|data.Desc		Changes the Pokémon's type to match its held Plate. The Pokémon can also utilize the protection of Plates in its Bag.
+0122-flower_gift-0000|data.Name		Flower Gift
+0122-flower_gift-0001|data.Desc		Boosts the Attack and Sp. Def stats of itself and allies in harsh sunlight.
+0123-bad_dreams-0000|data.Name		Bad Dreams
+0123-bad_dreams-0001|data.Desc		Reduces the HP of opposing Pokémon that are asleep.
+0124-pickpocket-0000|data.Name		Pickpocket
+0124-pickpocket-0001|data.Desc		Steals an item from an attacker that made direct contact.
+0125-sheer_force-0000|data.Name		Sheer Force
+0125-sheer_force-0001|data.Desc		Removes additional effects to increase the power of moves when attacking.
+0126-contrary-0000|data.Name		Contrary
+0126-contrary-0001|data.Desc		Makes stat changes have an opposite effect.
+0127-unnerve-0000|data.Name		Unnerve
+0127-unnerve-0001|data.Desc		Unnerves opposing Pokémon and makes them unable to eat food items.
+0128-defiant-0000|data.Name		Defiant
+0128-defiant-0001|data.Desc		Boosts the Pokémon's Attack stat sharply when its stats are lowered.
+0129-defeatist-0000|data.Name		Defeatist
+0129-defeatist-0001|data.Desc		Halves the Pokémon's Attack and Sp. Atk stats when its HP becomes half or less.
+0130-cursed_body-0000|data.Name		Cursed Body
+0130-cursed_body-0001|data.Desc		May disable a move used on the Pokémon.
+0131-healer-0000|data.Name		Healer
+0131-healer-0001|data.Desc		Heals the status conditions of nearby Pokémon when battling.
+0132-friend_guard-0000|data.Name		Friend Guard
+0132-friend_guard-0001|data.Desc		Reduces damage done to nearby allies.
+0133-weak_armor-0000|data.Name		Weak Armor
+0133-weak_armor-0001|data.Desc		Physical attacks lower its Defense stat and raise its Movement Speed.
+0134-heavy_metal-0000|data.Name		Heavy Metal
+0134-heavy_metal-0001|data.Desc		Doubles the Pokémon's weight.
+0135-light_metal-0000|data.Name		Light Metal
+0135-light_metal-0001|data.Desc		Halves the Pokémon's weight.
+0136-multiscale-0000|data.Name		Multiscale
+0136-multiscale-0001|data.Desc		Reduces damage the Pokémon takes when its HP is full.
+0137-toxic_boost-0000|data.Name		Toxic Boost
+0137-toxic_boost-0001|data.Desc		Powers up physical attacks when the Pokémon is poisoned.
+0138-flare_boost-0000|data.Name		Flare Boost
+0138-flare_boost-0001|data.Desc		Powers up special attacks when the Pokémon is burned.
+0139-harvest-0000|data.Name		Harvest
+0139-harvest-0001|data.Desc		Passes the effect of Berries to nearby allies.
+0140-telepathy-0000|data.Name		Telepathy
+0140-telepathy-0001|data.Desc		Anticipates an ally's attack and dodges it.
+0141-moody-0000|data.Name		Moody
+0141-moody-0001|data.Desc		Raises one stat and lowers another.
+0142-overcoat-0000|data.Name		Overcoat
+0142-overcoat-0001|data.Desc		Protects the Pokémon from the weather and splash damage.
+0143-poison_touch-0000|data.Name		Poison Touch
+0143-poison_touch-0001|data.Desc		May poison a target when the Pokémon makes contact.
+0144-regenerator-0000|data.Name		Regenerator
+0144-regenerator-0001|data.Desc		Restores HP when there are no threats nearby.
+0145-big_pecks-0000|data.Name		Big Pecks
+0145-big_pecks-0001|data.Desc		Protects the Pokémon from Defense-lowering effects.
+0146-sand_rush-0000|data.Name		Sand Rush
+0146-sand_rush-0001|data.Desc		Boosts the Pokémon's Movement Speed in a sandstorm.
+0147-wonder_skin-0000|data.Name		Wonder Skin
+0147-wonder_skin-0001|data.Desc		Avoids all status moves targeting the Pokémon.
+0148-analytic-0000|data.Name		Analytic
+0148-analytic-0001|data.Desc		Boosts move power if the Pokémon was last hit by the target.
+0149-illusion-0000|data.Name		Illusion
+0149-illusion-0001|data.Desc		Disguises itself as another Pokémon, fooling wild Pokémon of the same species.
+0150-imposter-0000|data.Name		Imposter
+0150-imposter-0001|data.Desc		If defeated while transformed, the Pokémon reverts to its original form instead of fainting.
+0151-infiltrator-0000|data.Name		Infiltrator
+0151-infiltrator-0001|data.Desc		Passes through the opposing Pokémon's barrier and strikes.
+0152-mummy-0000|data.Name		Mummy
+0152-mummy-0001|data.Desc		Contact with the Pokémon spreads this Ability.
+0153-moxie-0000|data.Name		Moxie
+0153-moxie-0001|data.Desc		The Pokémon shows moxie, which may boost the Attack stat after knocking out any Pokémon with a move.
+0154-justified-0000|data.Name		Justified
+0154-justified-0001|data.Desc		Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.
+0155-rattled-0000|data.Name		Rattled
+0155-rattled-0001|data.Desc		Dark-, Ghost-, and Bug-type moves scare the Pokémon and boost its Movement Speed.
+0156-magic_bounce-0000|data.Name		Magic Bounce
+0156-magic_bounce-0001|data.Desc		Reflects moves that cause status conditions.
+0157-sap_sipper-0000|data.Name		Sap Sipper
+0157-sap_sipper-0001|data.Desc		Boosts the Attack stat if hit by a Grass-type move, instead of taking damage.
+0158-prankster-0000|data.Name		Prankster
+0158-prankster-0001|data.Desc		Increases the Attack Range of status moves.
+0159-sand_force-0000|data.Name		Sand Force
+0159-sand_force-0001|data.Desc		Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.
+0160-iron_barbs-0000|data.Name		Iron Barbs
+0160-iron_barbs-0001|data.Desc		Inflicts damage to the attacker on contact with iron barbs.
+0161-zen_mode-0000|data.Name		Zen Mode
+0161-zen_mode-0001|data.Desc		Changes the Pokémon's shape when HP is half or less.
+0162-victory_star-0000|data.Name		Victory Star
+0162-victory_star-0001|data.Desc		Boosts the Attack Range of party Pokémon.
+0163-turboblaze-0000|data.Name		Turboblaze
+0163-turboblaze-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.
+0164-teravolt-0000|data.Name		Teravolt
+0164-teravolt-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.
+0165-aroma_veil-0000|data.Name		Aroma Veil
+0165-aroma_veil-0001|data.Desc		Protects itself and its allies from attacks that limit their move choices.
+0166-flower_veil-0000|data.Name		Flower Veil
+0166-flower_veil-0001|data.Desc		Protects ally Pokémon from major status conditions.
+0167-cheek_pouch-0000|data.Name		Cheek Pouch
+0167-cheek_pouch-0001|data.Desc		Restores HP when the Pokémon eats a food item.
+0168-protean-0000|data.Name		Protean
+0168-protean-0001|data.Desc		Changes the Pokémon's type to the type of the move it last used.
+0169-fur_coat-0000|data.Name		Fur Coat
+0169-fur_coat-0001|data.Desc		Halves damage from physical moves.
+0170-magician-0000|data.Name		Magician
+0170-magician-0001|data.Desc		The Pokémon steals the item of a Pokémon it hits with a move.
+0171-bulletproof-0000|data.Name		Bulletproof
+0171-bulletproof-0001|data.Desc		Protects the Pokémon from explosions.
+0172-competitive-0000|data.Name		Competitive
+0172-competitive-0001|data.Desc		Boosts the Sp. Atk stat sharply when a stat is lowered.
+0173-strong_jaw-0000|data.Name		Strong Jaw
+0173-strong_jaw-0001|data.Desc		The Pokémon's strong jaw boosts the power of its biting moves.
+0174-refrigerate-0000|data.Name		Refrigerate
+0174-refrigerate-0001|data.Desc		Normal-type moves become Ice-type moves.
+0175-sweet_veil-0000|data.Name		Sweet Veil
+0175-sweet_veil-0001|data.Desc		Prevents party Pokémon from falling asleep.
+0176-stance_change-0000|data.Name		Stance Change
+0176-stance_change-0001|data.Desc		The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King's Shield.
+0177-gale_wings-0000|data.Name		Gale Wings
+0177-gale_wings-0001|data.Desc		Increases the Attack Range of Flying-type moves.
+0178-mega_launcher-0000|data.Name		Mega Launcher
+0178-mega_launcher-0001|data.Desc		Powers up aura and pulse moves.
+0179-grass_pelt-0000|data.Name		Grass Pelt
+0179-grass_pelt-0001|data.Desc		Boosts the Defense stat in Grassy Terrain.
+0180-symbiosis-0000|data.Name		Symbiosis
+0180-symbiosis-0001|data.Desc		Passes the effect of certain held items to ally Pokémon. It won't use the item itself.
+0181-tough_claws-0000|data.Name		Tough Claws
+0181-tough_claws-0001|data.Desc		Powers up moves that make direct contact.
+0182-pixilate-0000|data.Name		Pixilate
+0182-pixilate-0001|data.Desc		Normal-type moves become Fairy-type moves.
+0183-gooey-0000|data.Name		Gooey
+0183-gooey-0001|data.Desc		Contact with the Pokémon lowers the attacker's Movement Speed.
+0184-aerilate-0000|data.Name		Aerilate
+0184-aerilate-0001|data.Desc		Normal-type moves become Flying-type moves.
+0185-parental_bond-0000|data.Name		Parental Bond
+0185-parental_bond-0001|data.Desc		Parent and child attack together.
+0186-dark_aura-0000|data.Name		Dark Aura
+0186-dark_aura-0001|data.Desc		Powers up all Dark-type moves.
+0187-fairy_aura-0000|data.Name		Fairy Aura
+0187-fairy_aura-0001|data.Desc		Powers up all Fairy-type moves.
+0188-aura_break-0000|data.Name		Aura Break
+0188-aura_break-0001|data.Desc		The effects of aura abilities are reversed to lower the power of affected moves.
+0189-primordial_sea-0000|data.Name		Primordial Sea
+0189-primordial_sea-0001|data.Desc		Affects weather and nullifies any Fire-type attacks.
+0190-desolate_land-0000|data.Name		Desolate Land
+0190-desolate_land-0001|data.Desc		Affects weather and nullifies any Water-type attacks.
+0191-delta_stream-0000|data.Name		Delta Stream
+0191-delta_stream-0001|data.Desc		Affects weather and eliminates all of the Flying type's weaknesses.
+0192-stamina-0000|data.Name		Stamina
+0192-stamina-0001|data.Desc		Boosts the Defense stat when hit by an attack.
+0193-wimp_out-0000|data.Name		Wimp Out
+0193-wimp_out-0001|data.Desc		The Pokémon cowardly switches out when its HP becomes half or less.
+0194-emergency_exit-0000|data.Name		Emergency Exit
+0194-emergency_exit-0001|data.Desc		The Pokémon, sensing danger, switches out when its HP becomes half or less.
+0195-water_compaction-0000|data.Name		Water Compaction
+0195-water_compaction-0001|data.Desc		Boosts the Pokémon's Defense stat sharply when hit by a Water-type move.
+0196-merciless-0000|data.Name		Merciless
+0196-merciless-0001|data.Desc		The Pokémon's attacks become critical hits if the target is poisoned.
+0197-shields_down-0000|data.Name		Shields Down
+0197-shields_down-0001|data.Desc		When its HP becomes half or less, the Pokémon's shell breaks and it becomes aggressive.
+0198-stakeout-0000|data.Name		Stakeout
+0198-stakeout-0001|data.Desc		The Pokémon's first attack deals increased damage.
+0199-water_bubble-0000|data.Name		Water Bubble
+0199-water_bubble-0001|data.Desc		Lowers the power of Fire-type moves done to the Pokémon and prevents the Pokémon from getting a burn.
+0200-steelworker-0000|data.Name		Steelworker
+0200-steelworker-0001|data.Desc		Powers up Steel-type moves.
+0201-berserk-0000|data.Name		Berserk
+0201-berserk-0001|data.Desc		Boosts the Pokémon's Sp. Atk stat when it takes a hit that causes its HP to become half or less.
+0202-slush_rush-0000|data.Name		Slush Rush
+0202-slush_rush-0001|data.Desc		Boosts the Pokémon's Speed stat in a hailstorm.
+0203-long_reach-0000|data.Name		Long Reach
+0203-long_reach-0001|data.Desc		The Pokémon uses its moves without making contact with the target.
+0204-liquid_voice-0000|data.Name		Liquid Voice
+0204-liquid_voice-0001|data.Desc		All sound-based moves become Water-type moves.
+0205-triage-0000|data.Name		Triage
+0205-triage-0001|data.Desc		Gives priority to a healing move.
+0206-galvanize-0000|data.Name		Galvanize
+0206-galvanize-0001|data.Desc		Normal-type moves become Electric-type moves.
+0207-surge_surfer-0000|data.Name		Surge Surfer
+0207-surge_surfer-0001|data.Desc		Doubles the Pokémon's Speed stat on Electric Terrain.
+0208-schooling-0000|data.Name		Schooling
+0208-schooling-0001|data.Desc		When it has a lot of HP, the Pokémon forms a powerful school. It stops schooling when its HP is low.
+0209-disguise-0000|data.Name		Disguise
+0209-disguise-0001|data.Desc		Once per battle, the shroud that covers the Pokémon can protect it from an attack.
+0210-battle_bond-0000|data.Name		Battle Bond
+0210-battle_bond-0001|data.Desc		Defeating an opposing Pokémon strengthens the Pokémon's bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful.
+0211-power_construct-0000|data.Name		Power Construct
+0211-power_construct-0001|data.Desc		Other Cells gather to aid when its HP becomes half or less. Then the Pokémon changes its form to Complete Forme.
+0212-corrosion-0000|data.Name		Corrosion
+0212-corrosion-0001|data.Desc		The Pokémon can poison the target even if it's a Steel or Poison type.
+0213-comatose-0000|data.Name		Comatose
+0213-comatose-0001|data.Desc		It's always drowsing and will never wake up. It can attack without waking up.
+0214-queenly_majesty-0000|data.Name		Queenly Majesty
+0214-queenly_majesty-0001|data.Desc		Its majesty pressures the opposing Pokémon, making it unable to attack using priority moves.
+0215-innards_out-0000|data.Name		Innards Out
+0215-innards_out-0001|data.Desc		Damages the attacker landing the finishing hit by the amount equal to its last HP.
+0216-dancer-0000|data.Name		Dancer
+0216-dancer-0001|data.Desc		When another Pokémon uses a dance move, it can use a dance move following it regardless of its Speed.
+0217-battery-0000|data.Name		Battery
+0217-battery-0001|data.Desc		Powers up ally Pokémon's special moves.
+0218-fluffy-0000|data.Name		Fluffy
+0218-fluffy-0001|data.Desc		Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.
+0219-dazzling-0000|data.Name		Dazzling
+0219-dazzling-0001|data.Desc		Surprises the opposing Pokémon, making it unable to attack using priority moves.
+0220-soul_heart-0000|data.Name		Soul-Heart
+0220-soul_heart-0001|data.Desc		Boosts its Sp. Atk stat every time a Pokémon faints.
+0221-tangling_hair-0000|data.Name		Tangling Hair
+0221-tangling_hair-0001|data.Desc		Contact with the Pokémon lowers the attacker's Speed stat.
+0222-receiver-0000|data.Name		Receiver
+0222-receiver-0001|data.Desc		The Pokémon copies the Ability of an ally.
+0223-power_of_alchemy-0000|data.Name		Power of Alchemy
+0223-power_of_alchemy-0001|data.Desc		The Pokémon copies the Ability of an ally.
+0224-beast_boost-0000|data.Name		Beast Boost
+0224-beast_boost-0001|data.Desc		The Pokémon may boost its most proficient stat each time it knocks out a Pokémon with a move.
+0225-rks_system-0000|data.Name		RKS System
+0225-rks_system-0001|data.Desc		Changes the Pokémon's type to match the memory disc it holds.
+0226-electric_surge-0000|data.Name		Electric Surge
+0226-electric_surge-0001|data.Desc		Turns the ground into Electric Terrain when the Pokémon enters a battle.
+0227-psychic_surge-0000|data.Name		Psychic Surge
+0227-psychic_surge-0001|data.Desc		Turns the ground into Psychic Terrain when the Pokémon enters a battle.
+0228-misty_surge-0000|data.Name		Misty Surge
+0228-misty_surge-0001|data.Desc		Turns the ground into Misty Terrain when the Pokémon enters a battle.
+0229-grassy_surge-0000|data.Name		Grassy Surge
+0229-grassy_surge-0001|data.Desc		Turns the ground into Grassy Terrain when the Pokémon enters a battle.
+0230-full_metal_body-0000|data.Name		Full Metal Body
+0230-full_metal_body-0001|data.Desc		Prevents other Pokémon's moves or Abilities from lowering the Pokémon's stats.
+0231-shadow_shield-0000|data.Name		Shadow Shield
+0231-shadow_shield-0001|data.Desc		Reduces the amount of damage the Pokémon takes while its HP is full.
+0232-prism_armor-0000|data.Name		Prism Armor
+0232-prism_armor-0001|data.Desc		Reduces the power of supereffective attacks taken.
+0233-neuroforce-0000|data.Name		Neuroforce
+0233-neuroforce-0001|data.Desc		Powers up moves that are super effective.
+0234-intrepid_sword-0000|data.Name		Intrepid Sword
+0234-intrepid_sword-0001|data.Desc		Boosts the Pokémon's Attack stat when the Pokémon enters a battle.
+0235-dauntless_shield-0000|data.Name		Dauntless Shield
+0235-dauntless_shield-0001|data.Desc		Boosts the Pokémon's Defense stat when the Pokémon enters a battle.
+0236-libero-0000|data.Name		Libero
+0236-libero-0001|data.Desc		Changes the Pokémon's type to the type of the move it last used.
+0237-ball_fetch-0000|data.Name		Ball Fetch
+0237-ball_fetch-0001|data.Desc		If the Pokémon is not holding an item, it will fetch the Poké Ball from the first failed throw of the battle.
+0238-cotton_down-0000|data.Name		Cotton Down
+0238-cotton_down-0001|data.Desc		When the Pokémon is hit by an attack, it scatters cotton fluff around and lowers the Speed stat of all Pokémon except itself.
+0239-propeller_tail-0000|data.Name		Propeller Tail
+0239-propeller_tail-0001|data.Desc		Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.
+0240-mirror_armor-0000|data.Name		Mirror Armor
+0240-mirror_armor-0001|data.Desc		Bounces back only the stat-lowering effects that the Pokémon receives.
+0241-gulp_missile-0000|data.Name		Gulp Missile
+0241-gulp_missile-0001|data.Desc		When the Pokémon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack.
+0242-stalwart-0000|data.Name		Stalwart
+0242-stalwart-0001|data.Desc		Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.
+0243-steam_engine-0000|data.Name		Steam Engine
+0243-steam_engine-0001|data.Desc		Boosts the Pokémon's Speed stat drastically if hit by a Fire- or Water-type move.
+0244-punk_rock-0000|data.Name		Punk Rock
+0244-punk_rock-0001|data.Desc		Boosts the power of sound-based moves. The Pokémon also takes half the damage from these kinds of moves.
+0245-sand_spit-0000|data.Name		Sand Spit
+0245-sand_spit-0001|data.Desc		The Pokémon creates a sandstorm when it's hit by an attack.
+0246-ice_scales-0000|data.Name		Ice Scales
+0246-ice_scales-0001|data.Desc		The Pokémon is protected by ice scales, which halve the damage taken from special moves.
+0247-ripen-0000|data.Name		Ripen
+0247-ripen-0001|data.Desc		Raises a stat when it eats a berry.
+0248-ice_face-0000|data.Name		Ice Face
+0248-ice_face-0001|data.Desc		The Pokémon's ice head can take a physical attack as a substitute, but the attack also changes the Pokémon's appearance. The ice will be restored when it hails.
+0249-power_spot-0000|data.Name		Power Spot
+0249-power_spot-0001|data.Desc		Just being next to the Pokémon powers up moves.
+0250-mimicry-0000|data.Name		Mimicry
+0250-mimicry-0001|data.Desc		Changes the Pokémon's type depending on the terrain.
+0251-screen_cleaner-0000|data.Name		Screen Cleaner
+0251-screen_cleaner-0001|data.Desc		When the Pokémon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pokémon.
+0252-steely_spirit-0000|data.Name		Steely Spirit
+0252-steely_spirit-0001|data.Desc		Powers up ally Pokémon's Steel-type moves.
+0253-perish_body-0000|data.Name		Perish Body
+0253-perish_body-0001|data.Desc		When hit by a move that makes direct contact, the Pokémon and the attacker will faint after three turns unless they switch out of battle.
+0254-wandering_spirit-0000|data.Name		Wandering Spirit
+0254-wandering_spirit-0001|data.Desc		The Pokémon exchanges Abilities with a Pokémon that hits it with a move that makes direct contact.
+0255-gorilla_tactics-0000|data.Name		Gorilla Tactics
+0255-gorilla_tactics-0001|data.Desc		Boosts the Pokémon's Attack stat but only allows the use of the first selected move.
+0256-neutralizing_gas-0000|data.Name		Neutralizing Gas
+0256-neutralizing_gas-0001|data.Desc		The Pokémon neutralizes abilities when attacked.
+0257-pastel_veil-0000|data.Name		Pastel Veil
+0257-pastel_veil-0001|data.Desc		Protects the Pokémon and its ally Pokémon from being poisoned.
+0258-hunger_switch-0000|data.Name		Hunger Switch
+0258-hunger_switch-0001|data.Desc		The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of each turn.
+0259-quick_draw-0000|data.Name		Quick Draw
+0259-quick_draw-0001|data.Desc		Enables the Pokémon to move first occasionally.
+0260-unseen_fist-0000|data.Name		Unseen Fist
+0260-unseen_fist-0001|data.Desc		If the Pokémon uses moves that make direct contact, it can attack the target even if the target protects itself.
+0261-curious_medicine-0000|data.Name		Curious Medicine
+0261-curious_medicine-0001|data.Desc		When the Pokémon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies.
+0262-transistor-0000|data.Name		Transistor
+0262-transistor-0001|data.Desc		Powers up Electric-type moves.
+0263-dragons_maw-0000|data.Name		Dragon's Maw
+0263-dragons_maw-0001|data.Desc		Powers up Dragon-type moves.
+0264-chilling_neigh-0000|data.Name		Chilling Neigh
+0264-chilling_neigh-0001|data.Desc		When the Pokémon knocks out a target, it utters a chilling neigh, which boosts its Attack stat.
+0265-grim_neigh-0000|data.Name		Grim Neigh
+0265-grim_neigh-0001|data.Desc		When the Pokémon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat.
+0266-as_one_chill-0000|data.Name		As One
+0266-as_one_chill-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Glastrier's Chilling Neigh Ability.
+0267-as_one_grim-0000|data.Name		As One
+0267-as_one_grim-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.

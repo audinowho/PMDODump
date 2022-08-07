@@ -54,6 +54,7 @@ namespace DataGenerator.Data
         {
             SkillData skill = new SkillData();
             string fileName = "";
+            skill.IndexNum = ii;
             if (ii == 0)
             {
                 skill.Name = new LocalText("Attack");

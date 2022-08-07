@@ -72,12 +72,12 @@ namespace DataGenerator.Dev
 
         public static void PrintNamedStringTable(DataManager.DataType dataType, GetNamedData getData)
         {
-            printNamedDataTable(GenPath.TL_PATH + dataType.ToString() + ".txt", DataManager.Instance.DataIndices[dataType].Count, getData);
+            printNamedDataTable(GenPath.TL_PATH + dataType.ToString() + ".txt", DataManager.Instance.DataIndices[dataType], getData);
         }
 
         public static void PrintDescribedStringTable(DataManager.DataType dataType, GetDescribedData getData)
         {
-            printDescribedDataTable(GenPath.TL_PATH + dataType.ToString() + ".txt", DataManager.Instance.DataIndices[dataType].Count, getData);
+            printDescribedDataTable(GenPath.TL_PATH + dataType.ToString() + ".txt", DataManager.Instance.DataIndices[dataType], getData);
         }
 
         
@@ -91,7 +91,10 @@ namespace DataGenerator.Dev
             Dictionary<string, (string, LocalText)> rows = new Dictionary<string, (string, LocalText)>();
             List<string> orderedKeys = new List<string>();
             HashSet<string> languages = new HashSet<string>();
-            foreach(string key in DataManager.Instance.DataIndices[dataType].Entries.Keys)
+
+            EntryDataIndex index = DataManager.Instance.DataIndices[dataType];
+            List<string> dataKeys = index.GetOrderedKeys(true);
+            foreach (string key in dataKeys)
             {
                 ItemData data = DataManager.Instance.GetItem(key);
 
@@ -109,12 +112,12 @@ namespace DataGenerator.Dev
                 if (data.ItemStates.Contains<MaterialState>() && data.ItemStates.GetWithDefault<ExclusiveState>().ItemType != ExclusiveItemType.None)
                     continue;
                 //TODO: get these type names via reflection
-                updateWorkingLists(rows, orderedKeys, languages, key + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
+                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
 
                 //skip ALL exclusive item DESCRIPTIONS because they are guaranteed autocalculated
                 if (data.ItemStates.Contains<MaterialState>())
                     continue;
-                updateWorkingLists(rows, orderedKeys, languages, key + "-" + 1.ToString("D4") + "|data.Desc", "", data.Desc);
+                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc", "", data.Desc);
             }
 
             printLocalizationRows(path, languages, orderedKeys, rows);
@@ -126,21 +129,23 @@ namespace DataGenerator.Dev
         public delegate IDescribedData GetDescribedData(string index);
 
 
-        private static void printNamedDataTable(string path, int total, GetNamedData method)
+        private static void printNamedDataTable(string path, EntryDataIndex index, GetNamedData method)
         {
             Dictionary<string, (string, LocalText)> rows = new Dictionary<string, (string, LocalText)>();
             List<string> orderedKeys = new List<string>();
             HashSet<string> languages = new HashSet<string>();
-            for (int ii = 0; ii < total; ii++)
+
+            List<string> dataKeys = index.GetOrderedKeys(true);
+            foreach (string key in dataKeys)
             {
-                IEntryData data = method(ii.ToString());
+                IEntryData data = method(key);
 
                 //skip blank entries
                 if (data.Name.DefaultText == "")
                     continue;
 
                 //TODO: get these type names via reflection
-                updateWorkingLists(rows, orderedKeys, languages, ii.ToString("D4") + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
+                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
             }
 
             printLocalizationRows(path, languages, orderedKeys, rows);
@@ -152,22 +157,24 @@ namespace DataGenerator.Dev
         /// <param name="path"></param>
         /// <param name="total"></param>
         /// <param name="method"></param>
-        private static void printDescribedDataTable(string path, int total, GetDescribedData method)
+        private static void printDescribedDataTable(string path, EntryDataIndex index, GetDescribedData method)
         {
             Dictionary<string, (string, LocalText)> rows = new Dictionary<string, (string, LocalText)>();
             List<string> orderedKeys = new List<string>();
             HashSet<string> languages = new HashSet<string>();
-            for (int ii = 0; ii < total; ii++)
+
+            List<string> dataKeys = index.GetOrderedKeys(true);
+            foreach(string key in dataKeys)
             {
-                IDescribedData data = method(ii.ToString());
+                IDescribedData data = method(key);
 
                 //skip blank entries
                 if (data.Name.DefaultText == "")
                     continue;
 
                 //TODO: get these type names via reflection
-                updateWorkingLists(rows, orderedKeys, languages, ii.ToString("D4") + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
-                updateWorkingLists(rows, orderedKeys, languages, ii.ToString("D4") + "-" + 1.ToString("D4") + "|data.Desc", "", data.Desc);
+                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
+                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc", "", data.Desc);
             }
 
             printLocalizationRows(path, languages, orderedKeys, rows);
@@ -216,12 +223,15 @@ namespace DataGenerator.Dev
             Dictionary<string, (string, LocalText)> rows = new Dictionary<string, (string, LocalText)>();
             List<string> orderedKeys = new List<string>();
             HashSet<string> languages = new HashSet<string>();
-            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Zone].Entries.Keys)
+
+            EntryDataIndex index = DataManager.Instance.DataIndices[DataManager.DataType.Zone];
+            List<string> dataKeys = index.GetOrderedKeys(true);
+            foreach (string key in dataKeys)
             {
                 ZoneData data = DataManager.Instance.GetZone(key);
 
                 int nn = 0;
-                updateWorkingLists(rows, orderedKeys, languages, key + "-" + nn.ToString("D4") + "|data.Name", data.Comment, data.Name);
+                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|data.Name", data.Comment, data.Name);
                 for (int jj = 0; jj < data.Segments.Count; jj++)
                 {
                     LayeredSegment structure = data.Segments[jj] as LayeredSegment;
@@ -235,7 +245,7 @@ namespace DataGenerator.Dev
                                 //TODO: get these type names via reflection
                                 nn++;
                                 updateWorkingLists(rows, orderedKeys, languages,
-                                    key + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name", "", postProc.Name);
+                                    index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name", "", postProc.Name);
                             }
                         }
                     }

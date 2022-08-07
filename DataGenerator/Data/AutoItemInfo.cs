@@ -506,7 +506,7 @@ namespace DataGenerator.Data
                             string dexNum = rows[nn + prev_start - init_idx][2].Trim();
 
                             MonsterEntrySummary newSummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries[dexNum];
-                            if (newSummary.IndexNum < earliestSummary.IndexNum)
+                            if (newSummary.SortOrder < earliestSummary.SortOrder)
                                 earliestFamily = dexNum;
                         }
                         familyName = earliestFamily;

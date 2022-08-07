@@ -1,1141 +1,1139 @@
 Key		EN
-0000-0000|data.Name		Empty
-0000-0001|data.Desc		
-0001-0000|data.Name		Apple
-0001-0001|data.Desc		A food item that somewhat fills the Pokémon's belly.
-0002-0000|data.Name		Big Apple
-0002-0001|data.Desc		A food item that amply fills the Pokémon's belly.
-0003-0000|data.Name		Huge Apple
-0003-0001|data.Desc		A food item that completely fills and slightly enlarges the Pokémon's belly.
-0004-0000|data.Name		Golden Apple
-0004-0001|data.Desc		A miraculous apple that glows with an alluring golden aura. It's far too precious and beautiful to even consider eating! If eaten, however, it would completely fill and greatly enlarge the Pokémon's belly.
-0005-0000|data.Name		Perfect Apple
-0005-0001|data.Desc		A food item that completely fills and somewhat enlarges the Pokémon's belly.
-0006-0000|data.Name		Banana
-0006-0001|data.Desc		A rare food item that somewhat fills the entire team's belly.
-0007-0000|data.Name		Big Banana
-0007-0001|data.Desc		A rare food item that amply fills the entire team's belly.
-0008-0000|data.Name		Golden Banana
-0008-0001|data.Desc		An alluring banana that gives off a golden glow. It's valued far more as a treasure than as a food. If eaten, however, it would completely fill and enlarge the entire team's belly.
-0009-0000|data.Name		Chestnut
-0009-0001|data.Desc		
-0010-0000|data.Name		Oran Berry
-0010-0001|data.Desc		A peculiar berry with a mix of flavors. It fully restores HP.
-0011-0000|data.Name		Leppa Berry
-0011-0001|data.Desc		A berry that takes a long time to grow. It fully restores PP.
-0012-0000|data.Name		Lum Berry
-0012-0001|data.Desc		A berry that matures slowly, storing nutrients beneficial to Pokémon health. It cures many status problems.
-0013-0000|data.Name		Cheri Berry
-0013-0001|data.Desc		
-0014-0000|data.Name		Chesto Berry
-0014-0001|data.Desc		
-0015-0000|data.Name		Pecha Berry
-0015-0001|data.Desc		
-0016-0000|data.Name		Aspear Berry
-0016-0001|data.Desc		
-0017-0000|data.Name		Rawst Berry
-0017-0001|data.Desc		
-0018-0000|data.Name		Persim Berry
-0018-0001|data.Desc		
-0019-0000|data.Name		Tanga Berry
-0019-0001|data.Desc		The flower grows at the tip of this berry. It attracts Bug Pokémon by letting its stringy petals stream out. It changes the Pokémon to the Bug-type.
-0020-0000|data.Name		Colbur Berry
-0020-0001|data.Desc		Tiny hooks grow on the surface of this berry. It latches on to Pokémon so it can be carried to far-off places. It changes the Pokémon to the Dark-type.
-0021-0000|data.Name		Haban Berry
-0021-0001|data.Desc		If a large enough volume of this berry is boiled down, its bitterness fades away. It makes a good jam. It changes the Pokémon to the Dragon-type.
-0022-0000|data.Name		Wacan Berry
-0022-0001|data.Desc		Energy from lightning strikes is drawn into the plant, making the berries grow big and rich. It changes the Pokémon to the Electric-type.
-0023-0000|data.Name		Chople Berry
-0023-0001|data.Desc		This berry contains a substance that generates heat. It can even heat up a chilly heart. It changes the Pokémon to the Fighting-type.
-0024-0000|data.Name		Occa Berry
-0024-0001|data.Desc		This berry is said to have grown plentiful in the tropics of the past. It boasts an intensely hot spiciness. It changes the Pokémon to the Fire-type.
-0025-0000|data.Name		Coba Berry
-0025-0001|data.Desc		This berry is said to be a new kind that is a cross of two berries brought together by winds from far away. It changes the Pokémon to the Flying-type.
-0026-0000|data.Name		Kasib Berry
-0026-0001|data.Desc		Considered to have a special power from the olden days, this berry is sometimes dried and used as a good-luck charm. It changes the Pokémon to the Ghost-type.
-0027-0000|data.Name		Rindo Berry
-0027-0001|data.Desc		This berry has a disagreeable "green" flavor and scent typical of vegetables. It is rich in health-promoting fiber. It changes the Pokémon to the Grass-type.
-0028-0000|data.Name		Shuca Berry
-0028-0001|data.Desc		The sweetness-laden pulp has just the hint of a hard-edged and fragrant bite to it. It changes the Pokémon to the Ground-type.
-0029-0000|data.Name		Yache Berry
-0029-0001|data.Desc		This berry has a refreshing flavor that strikes a good balance of dryness and sourness. It tastes better chilled. It changes the Pokémon to the Ice-type.
-0030-0000|data.Name		Chilan Berry
-0030-0001|data.Desc		This berry can be cored out and dried to make a whistle. Blowing through its hole makes an indescribable sound. It changes the Pokémon to the Normal-type.
-0031-0000|data.Name		Kebia Berry
-0031-0001|data.Desc		This berry is a brilliant green on the outside. Inside, it is packed with a dry-flavored, black-colored flesh. It changes the Pokémon to the Poison-type.
-0032-0000|data.Name		Payapa Berry
-0032-0001|data.Desc		This berry is said to sense emotions for the way it swells roundly when anything approaches. It changes the Pokémon to the Psychic-type.
-0033-0000|data.Name		Charti Berry
-0033-0001|data.Desc		It is often used for pickles because of its very dry flavor. It can also be eaten raw for its provocative taste. It changes the Pokémon to the Rock-type.
-0034-0000|data.Name		Babiri Berry
-0034-0001|data.Desc		This berry is very tough with a strong flavor. It was used to make medicine in the past. It changes the Pokémon to the Steel-type.
-0035-0000|data.Name		Passho Berry
-0035-0001|data.Desc		This berry's flesh is dotted with tiny bubbles of air that keep it afloat in water. It changes the Pokémon to the Water-type.
-0036-0000|data.Name		Roseli Berry
-0036-0001|data.Desc		A mysterious berry. It changes the Pokémon to the Fairy-type.
-0037-0000|data.Name		Jaboca Berry
-0037-0001|data.Desc		The cluster of drupelets that make up this berry pop rhythmically if the berry is handled roughly. If a physical attack hits the Pokémon, the damage will be reflected to all enemies nearby.
-0038-0000|data.Name		Rowap Berry
-0038-0001|data.Desc		In days of old, people worked the top-shaped pieces of this berry free and used them as toys. If a special attack hits the Pokémon, the damage will be reflected to all enemies nearby.
-0039-0000|data.Name		Kelpsy Berry
-0039-0001|data.Desc		
-0040-0000|data.Name		Qualot Berry
-0040-0001|data.Desc		
-0041-0000|data.Name		Tamato Berry
-0041-0001|data.Desc		
-0042-0000|data.Name		Hondew Berry
-0042-0001|data.Desc		
-0043-0000|data.Name		Apicot Berry
-0043-0001|data.Desc		A very mystifying Berry. There is no telling how it can be used, or what may happen if it is used. It maximizes Special Defense.
-0044-0000|data.Name		Liechi Berry
-0044-0001|data.Desc		A mysterious Berry, rumored to contain the power of the sea. It maximizes Attack.
-0045-0000|data.Name		Ganlon Berry
-0045-0001|data.Desc		A Berry surrounded by mystery, rumored to be imbued with the power of the land. It maximizes Defense.
-0046-0000|data.Name		Salac Berry
-0046-0001|data.Desc		A Berry surrounded by mystery, rumored to be imbued with the power of the sky. It maximizes Movement Speed.
-0047-0000|data.Name		Petaya Berry
-0047-0001|data.Desc		A mysterious Berry rumored to contain the power of all living things. It maximizes Special Attack.
-0048-0000|data.Name		Starf Berry
-0048-0001|data.Desc		So strong, it was abandoned at the world's edge. It is still considered a mirage to this very day. It sharply raises all stats.
-0049-0000|data.Name		Micle Berry
-0049-0001|data.Desc		This berry has a very dry flavor. It has the effect of making other food eaten at the same time taste sweet. It maximizes Accuracy.
-0050-0000|data.Name		Custap Berry
-0050-0001|data.Desc		
-0051-0000|data.Name		Enigma Berry
-0051-0001|data.Desc		A completely enigmatic Berry that appears to have the power of stars. It restores HP when hit by a super-effective move.
-0052-0000|data.Name		Kee Berry
-0052-0001|data.Desc		
-0053-0000|data.Name		Maranga Berry
-0053-0001|data.Desc		
-0072-0000|data.Name		Sitrus Berry
-0072-0001|data.Desc		A large berry with a well-rounded flavor. It gradually restores HP for a few turns.
-0075-0000|data.Name		Wonder Gummi
-0075-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats.
-0076-0000|data.Name		Blue Gummi
-0076-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Water-type Pokémon like it the most.
-0077-0000|data.Name		Black Gummi
-0077-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Dark-type Pokémon like it the most.
-0078-0000|data.Name		Clear Gummi
-0078-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ice-type Pokémon like it the most.
-0079-0000|data.Name		Grass Gummi
-0079-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Grass-type Pokémon like it the most.
-0080-0000|data.Name		Green Gummi
-0080-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Bug-type Pokémon like it the most.
-0081-0000|data.Name		Brown Gummi
-0081-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ground-type Pokémon like it the most.
-0082-0000|data.Name		Orange Gummi
-0082-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fighting-type Pokémon like it the most.
-0083-0000|data.Name		Gold Gummi
-0083-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Psychic-type Pokémon like it the most.
-0084-0000|data.Name		Pink Gummi
-0084-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Poison-type Pokémon like it the most.
-0085-0000|data.Name		Purple Gummi
-0085-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ghost-type Pokémon like it the most.
-0086-0000|data.Name		Red Gummi
-0086-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fire-type Pokémon like it the most.
-0087-0000|data.Name		Royal Gummi
-0087-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Dragon-type Pokémon like it the most.
-0088-0000|data.Name		Silver Gummi
-0088-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Steel-type Pokémon like it the most.
-0089-0000|data.Name		White Gummi
-0089-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Normal-type Pokémon like it the most.
-0090-0000|data.Name		Yellow Gummi
-0090-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Electric-type Pokémon like it the most.
-0091-0000|data.Name		Sky Gummi
-0091-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Flying-type Pokémon like it the most.
-0092-0000|data.Name		Gray Gummi
-0092-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Rock-type Pokémon like it the most.
-0093-0000|data.Name		Magenta Gummi
-0093-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fairy-type Pokémon like it the most.
-0100-0000|data.Name		Plain Seed
-0100-0001|data.Desc		A seed that has no special effect.
-0101-0000|data.Name		Reviver Seed
-0101-0001|data.Desc		A seed that revives a fainted Pokémon, then becomes a Plain Seed after use.
-0102-0000|data.Name		Joy Seed
-0102-0001|data.Desc		A seed that raises the Pokémon's level by 1.
-0103-0000|data.Name		Golden Seed
-0103-0001|data.Desc		A seed that raises the Pokémon's level by 3.
-0104-0000|data.Name		Doom Seed
-0104-0001|data.Desc		A seed that reduces the Pokémon's level by 5.
-0105-0000|data.Name		Spreader Seed
-0105-0001|data.Desc		A seed that causes the Pokémon to share the effects of moves used on it.
-0106-0000|data.Name		Training Seed
-0106-0001|data.Desc		
-0107-0000|data.Name		Hunger Seed
-0107-0001|data.Desc		A seed that makes the Pokémon's belly somewhat emptier.
-0108-0000|data.Name		Warp Seed
-0108-0001|data.Desc		A seed that warps the Pokémon and its nearby allies to a different place on the floor.
-0109-0000|data.Name		Vanish Seed
-0109-0001|data.Desc		
-0110-0000|data.Name		Sleep Seed
-0110-0001|data.Desc		A seed that puts the Pokémon to sleep for many turns.
-0111-0000|data.Name		Vile Seed
-0111-0001|data.Desc		A seed that drastically lowers the Pokémon's Defense and Special Defense.
-0112-0000|data.Name		Blast Seed
-0112-0001|data.Desc		A seed that causes the Pokémon to release a blast on the tile in front of it, causing damage.
-0113-0000|data.Name		Blinker Seed
-0113-0001|data.Desc		A seed that gives the Blinker status, reducing the Pokémon's Attack Range to its lowest level.
-0114-0000|data.Name		Pure Seed
-0114-0001|data.Desc		A seed that warps the Pokémon close to the stairs.
-0115-0000|data.Name		Ice Seed
-0115-0001|data.Desc		A seed that freezes the Pokémon for many turns.
-0116-0000|data.Name		Decoy Seed
-0116-0001|data.Desc		A seed that gives the Pokémon the Decoy status, making it a target of everyone's attacks. Moves that target the team's inventory will always pick this item first.
-0117-0000|data.Name		Last-Chance Seed
-0117-0001|data.Desc		A seed that sets the PP of the Pokémon's moves to 1, and drastically raises its Attack, Special Attack, and Speed.
-0118-0000|data.Name		Ban Seed
-0118-0001|data.Desc		A seed that bans the last move used by the Pokémon, preventing anyone in the dungeon from using it.
-0150-0000|data.Name		Nectar
-0150-0001|data.Desc		A drink that permanently raises the Pokémon's stats.
-0151-0000|data.Name		Protein
-0151-0001|data.Desc		A drink that permanently raises the Pokémon's Attack.
-0152-0000|data.Name		Iron
-0152-0001|data.Desc		A drink that permanently raises the Pokémon's Defense.
-0153-0000|data.Name		Calcium
-0153-0001|data.Desc		A drink that permanently raises the Pokémon's Special Attack.
-0154-0000|data.Name		Zinc
-0154-0001|data.Desc		A drink that permanently raises the Pokémon's Special Defense.
-0155-0000|data.Name		Carbos
-0155-0001|data.Desc		A drink that permanently raises the Pokémon's Speed.
-0156-0000|data.Name		HP Up
-0156-0001|data.Desc		A drink that permanently raises the Pokémon's Maximum HP.
-0158-0000|data.Name		Amber Tear
-0158-0001|data.Desc		An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises the Pokémon's chances of recruitment on the floor it's used.
-0160-0000|data.Name		Potion
-0160-0001|data.Desc		A spray-type medicine that somewhat restores HP. It affects all team members up to 5 tiles away.
-0161-0000|data.Name		Max Potion
-0161-0001|data.Desc		A spray-type medicine that fully restores HP. It affects all team members up to 3 tiles away.
-0164-0000|data.Name		Elixir
-0164-0001|data.Desc		A spray-type medicine that somewhat restores PP. It affects all team members up to 5 tiles away.
-0166-0000|data.Name		Max Elixir
-0166-0001|data.Desc		A spray-type medicine that completely restores PP. It affects all team members up to 3 tiles away.
-0173-0000|data.Name		Full Heal
-0173-0001|data.Desc		A spray-type medicine that cures status problems. It affects all team members up to 3 tiles away.
-0174-0000|data.Name		Full Restore
-0174-0001|data.Desc		
-0175-0000|data.Name		X Attack
-0175-0001|data.Desc		An item that sharply raises Attack. It affects all team members up to 3 tiles away.
-0176-0000|data.Name		X Defense
-0176-0001|data.Desc		An item that sharply raises Defense. It affects all team members up to 3 tiles away.
-0177-0000|data.Name		X Sp. Atk
-0177-0001|data.Desc		An item that sharply raises Special Attack. It affects all team members up to 3 tiles away.
-0178-0000|data.Name		X Sp. Def
-0178-0001|data.Desc		An item that sharply raises Special Defense. It affects all team members up to 3 tiles away.
-0179-0000|data.Name		X Speed
-0179-0001|data.Desc		An item that boosts Movement Speed by 1 stage. It affects all team members up to 3 tiles away.
-0180-0000|data.Name		X Accuracy
-0180-0001|data.Desc		An item that sharply raises Accuracy. It affects all team members up to 3 tiles away.
-0181-0000|data.Name		Dire Hit
-0181-0001|data.Desc		An item that raises critical-hit ratio. It affects all team members up to 3 tiles away.
-0182-0000|data.Name		Guard Spec.
-0182-0001|data.Desc		
-0183-0000|data.Name		Mental Herb
-0183-0001|data.Desc		An herb that removes all move-binding effects, and prevents moves from being sealed.
-0184-0000|data.Name		Power Herb
-0184-0001|data.Desc		An herb that allows the use of two-turn attacks in one turn, and prevents PP from dropping.
-0185-0000|data.Name		White Herb
-0185-0001|data.Desc		An herb that removes all stat changes, and prevents them from changing.
-0200-0000|data.Name		Stick
-0200-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. It causes the target to flinch.
-0201-0000|data.Name		Cacnea Spike
-0201-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Attack of any Pokémon it hits.
-0202-0000|data.Name		Corsola Twig
-0202-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Sp.Atk of any Pokémon it hits.
-0203-0000|data.Name		Iron Thorn
-0203-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. Critical hits land more easily.
-0204-0000|data.Name		Silver Spike
-0204-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage to any Pokémon it hits, passing through walls.
-0205-0000|data.Name		Golden Thorn
-0205-0001|data.Desc		A brilliantly shining thorn crafted from solid gold. It is a fantastically precious item that gives its owner serious bragging rights. When hurled, it flies in a straight line to inflict damage on any Pokémon it hits, scattering coins everywhere.
-0206-0000|data.Name		Rare Fossil
-0206-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target's area. It deals Special damage.
-0207-0000|data.Name		Geo Pebble
-0207-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target. It causes the target to flinch.
-0208-0000|data.Name		Gravelerock
-0208-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target's area.
-0209-0000|data.Name		Big Apricorn
-0209-0001|data.Desc		An apricorn with a pleasant scent. It can tossed at wild Pokémon as a gift for a high chance to recruit them into the team.
-0210-0000|data.Name		Plain Apricorn
-0210-0001|data.Desc		An apricorn with a pleasant scent. It can tossed at wild Pokémon of any type, as a gift to recruit them into the team.
-0211-0000|data.Name		Blue Apricorn
-0211-0001|data.Desc		An apricorn that can be tossed at Water- or Ice-type Pokémon as a gift for a high chance to recruit them into the team.
-0212-0000|data.Name		Green Apricorn
-0212-0001|data.Desc		An apricorn that can be tossed at Grass- or Bug-type Pokémon as a gift for a high chance to recruit them into the team.
-0213-0000|data.Name		Brown Apricorn
-0213-0001|data.Desc		An apricorn that can be tossed at Fighting-, Rock-, or Ground-type Pokémon as a gift for a high chance to recruit them into the team.
-0214-0000|data.Name		Purple Apricorn
-0214-0001|data.Desc		An apricorn that can be tossed at Poison- or Psychic-type Pokémon as a gift for a high chance to recruit them into the team.
-0215-0000|data.Name		Red Apricorn
-0215-0001|data.Desc		An apricorn that can be tossed at Fire- or Dragon-type Pokémon as a gift for a high chance to recruit them into the team.
-0216-0000|data.Name		White Apricorn
-0216-0001|data.Desc		An apricorn that can be tossed at Normal-, Flying-, or Fairy-type Pokémon as a gift for a high chance to recruit them into the team.
-0217-0000|data.Name		Yellow Apricorn
-0217-0001|data.Desc		An apricorn that can be tossed at Electric- or Steel-type Pokémon as a gift for a high chance to recruit them into the team.
-0218-0000|data.Name		Black Apricorn
-0218-0001|data.Desc		An apricorn that can be tossed at Ghost- or Dark-type Pokémon as a gift for a high chance to recruit them into the team.
-0219-0000|data.Name		Perfect Apricorn
-0219-0001|data.Desc		A beautiful apricorn with an indescribable scent. It can be tossed at wild Pokémon as a gift to recruit them into the team without any hesitation.
-0220-0000|data.Name		Path Wand
-0220-0001|data.Desc		A wand to be waved at terrain features. It clears obstacles to form a path directly in front of the user.
-0221-0000|data.Name		Pounce Wand
-0221-0001|data.Desc		A wand to be waved at a Pokémon or wall. It causes the user to jump to that location.
-0222-0000|data.Name		Whirlwind Wand
-0222-0001|data.Desc		A wand to be waved at a Pokémon. It knocks the target back.
-0223-0000|data.Name		Switcher Wand
-0223-0001|data.Desc		A wand to be waved at a Pokémon. It causes the user to switch places with the target.
-0224-0000|data.Name		Surround Wand
-0224-0001|data.Desc		A wand to be waved at a Pokémon. It causes the user's allies to warp to the target.
-0225-0000|data.Name		Lure Wand
-0225-0001|data.Desc		A wand to be waved at a Pokémon. It causes the target to warp in front of the user.
-0226-0000|data.Name		Slow Wand
-0226-0001|data.Desc		A wand to be waved at a Pokémon. It reduces the Movement Speed of the target by 1 level.
-0227-0000|data.Name		Stayaway Wand
-0227-0001|data.Desc		A wand to be waved at enemy Pokémon. It warps the target to the nearest stairway, and puts it into a deep sleep.
-0228-0000|data.Name		Fear Wand
-0228-0001|data.Desc		A wand to be waved at a Pokémon. It causes the target to flinch.
-0229-0000|data.Name		Totter Wand
-0229-0001|data.Desc		A wand to be waved at a Pokémon. It causes the target to become briefly confused.
-0230-0000|data.Name		Infatuation Wand
-0230-0001|data.Desc		A wand to be waved at Pokémon of the opposite gender. It causes the target to become attracted to the user.
-0231-0000|data.Name		Topsy-Turvy Wand
-0231-0001|data.Desc		A wand to be waved at a Pokémon. It reverses all stat changes on the target.
-0232-0000|data.Name		Warp Wand
-0232-0001|data.Desc		A wand to be waved at a Pokémon. It warps the target to a different place on the floor.
-0233-0000|data.Name		Purge Wand
-0233-0001|data.Desc		A wand to be waved at a Pokémon. It removes all stat boosts and damages the target for each stat boosted. Stat drops will heal the target instead.
-0234-0000|data.Name		Lob Wand
-0234-0001|data.Desc		A wand to be waved at a Pokémon. It inflicts damage on any Pokémon in a straight line, passing through walls.
-0235-0000|data.Name		Transfer Wand
-0235-0001|data.Desc		A wand to be waved at a Pokémon. It transforms the target into the same Pokémon as the user.
-0236-0000|data.Name		Vanish Wand
-0236-0001|data.Desc		A wand to be waved at a Pokémon. It temporarily makes the target invisible.
-0250-0000|data.Name		Escape Orb
-0250-0001|data.Desc		An orb that allows the team to instantly warp out of the dungeon.
-0251-0000|data.Name		Weather Orb
-0251-0001|data.Desc		A climate-control orb that changes the dungeon floor's condition depending on the user's type.
-0252-0000|data.Name		Mobile Orb
-0252-0001|data.Desc		An orb that allows the user's team to move through walls.
-0253-0000|data.Name		Luminous Orb
-0253-0001|data.Desc		A mapping orb that reveals the entire floor.
-0254-0000|data.Name		Invert Orb
-0254-0001|data.Desc		An orb that temporarily reverses all type matchups.
-0255-0000|data.Name		Invisify Orb
-0255-0001|data.Desc		An orb that temporarily makes the user's team invisible.
-0256-0000|data.Name		Fill-In Orb
-0256-0001|data.Desc		An orb that fills in all holes on the floor, removing all gullies, water, or lava.
-0257-0000|data.Name		Devolve Orb
-0257-0001|data.Desc		An orb that devolves all enemies up to 5 tiles away.
-0258-0000|data.Name		All-Aim Orb
-0258-0001|data.Desc		An orb that ensures that all of the team's attacks hit.
-0259-0000|data.Name		Trawl Orb
-0259-0001|data.Desc		An orb that pulls unclaimed items on the floor to the user.
-0260-0000|data.Name		Revival Orb
-0260-0001|data.Desc		An orb that revives all team members that have fainted.
-0261-0000|data.Name		Scanner Orb
-0261-0001|data.Desc		An orb that reveals the location of all items and enemies on the floor.
-0262-0000|data.Name		All-Hit Orb
-0262-0001|data.Desc		
-0263-0000|data.Name		Cleanse Orb
-0263-0001|data.Desc		An orb that un-sticks the team's items, allowing them to be removed.
-0264-0000|data.Name		One-Shot Orb
-0264-0001|data.Desc		An orb that causes the target to instantly faint, if it hits. It affects all enemies up to 5 tiles away.
-0265-0000|data.Name		Endure Orb
-0265-0001|data.Desc		An orb that allows the team to endure any attack with at least 1 HP.
-0266-0000|data.Name		Pierce Orb
-0266-0001|data.Desc		An orb that allows the team's attacks and items to pierce through multiple targets.
-0267-0000|data.Name		Stayaway Orb
-0267-0001|data.Desc		An orb that warps enemies to the nearest stairway, and puts them all into a deep sleep. It affects all enemies up to 5 tiles away.
-0268-0000|data.Name		All Protect Orb
-0268-0001|data.Desc		An orb that protects the team from all attacks for several turns.
-0269-0000|data.Name		Trap-See Orb
-0269-0001|data.Desc		An orb that reveals all traps on the floor.
-0270-0000|data.Name		Trapbust Orb
-0270-0001|data.Desc		An orb that destroys all traps on the floor.
-0271-0000|data.Name		Slumber Orb
-0271-0001|data.Desc		An orb that puts all enemies to sleep. It affects all enemies up to 5 tiles away.
-0272-0000|data.Name		Totter Orb
-0272-0001|data.Desc		An orb that confuses all enemies. It affects all enemies up to 5 tiles away.
-0273-0000|data.Name		Petrify Orb
-0273-0001|data.Desc		An orb that paralyzes all enemies. It affects all enemies up to 5 tiles away.
-0274-0000|data.Name		Freeze Orb
-0274-0001|data.Desc		An orb that freezes all enemies. It affects all enemies up to 5 tiles away.
-0275-0000|data.Name		Spurn Orb
-0275-0001|data.Desc		An orb that warps all enemies to random locations on the floor. It affects all enemies up to 5 tiles away.
-0276-0000|data.Name		Foe-Hold Orb
-0276-0001|data.Desc		An orb that immobilizes all enemies for many turns. It affects all enemies up to 5 tiles away.
-0277-0000|data.Name		Nullify Orb
-0277-0001|data.Desc		An orb that nullifies the Abilities of all enemies up to 5 tiles away.
-0278-0000|data.Name		All-Dodge Orb
-0278-0001|data.Desc		An orb that drastically boosts Evasion. It affects team members up to 5 tiles away.
-0279-0000|data.Name		Health Orb
-0279-0001|data.Desc		
-0280-0000|data.Name		All Power-Up Orb
-0280-0001|data.Desc		
-0281-0000|data.Name		One-Room Orb
-0281-0001|data.Desc		A destructive orb that tears down all walls on the floor, turning the floor into one vast, open room.
-0282-0000|data.Name		Slow Orb
-0282-0001|data.Desc		An orb that reduces the Movement Speed of all enemies by 1 level. It affects all enemies up to 5 tiles away.
-0283-0000|data.Name		Rebound Orb
-0283-0001|data.Desc		An orb that gives the team the Mini-Counter status. If an attack hits any member of the team, the damage will be reflected back at the user.
-0284-0000|data.Name		Mirror Orb
-0284-0001|data.Desc		An orb that protects the team with a barrier that reflects status moves.
-0285-0000|data.Name		Itemizer Orb
-0285-0001|data.Desc		An orb that transforms the target into an item. It affects the enemy in front.
-0286-0000|data.Name		Foe-Seal Orb
-0286-0001|data.Desc		An orb that seals the last-used move of all enemies. It affects all enemies up to 5 tiles away.
-0287-0000|data.Name		Halving Orb
-0287-0001|data.Desc		An orb that halves the HP of all enemies. It affects all enemies up to 5 tiles away.
-0288-0000|data.Name		Rollcall Orb
-0288-0001|data.Desc		A warping orb that draws all teammates to the user.
-0289-0000|data.Name		Mug Orb
-0289-0001|data.Desc		An orb that pulls all items held by enemy Pokémon to the user.
-0300-0000|data.Name		Friend Bow
-0300-0001|data.Desc		A held item that makes it easier for team members to recruit lower-leveled wild Pokémon.
-0301-0000|data.Name		Pierce Band
-0301-0001|data.Desc		A headband that allows the Pokémon's moves and items to hit through multiple targets.
-0302-0000|data.Name		Golden Mask
-0302-0001|data.Desc		A held item that makes it easier for team members to recruit wild Pokémon.
-0303-0000|data.Name		Mobile Scarf
-0303-0001|data.Desc		A held item that enables the Pokémon to move through walls.
-0304-0000|data.Name		Pass Scarf
-0304-0001|data.Desc		A held item that causes the Pokémon to shrug off any damaging moves and pass them on to an adjacent Pokémon.
-0305-0000|data.Name		Warp Scarf
-0305-0001|data.Desc		A held item that warps the Pokémon to another place on the floor after being attacked.
-0306-0000|data.Name		Trap Scarf
-0306-0001|data.Desc		A held item that prevents the Pokémon from setting off traps.
-0307-0000|data.Name		Grip Claw
-0307-0001|data.Desc		An item that increases the duration of binding moves used by the holder.
-0308-0000|data.Name		Binding Band
-0308-0001|data.Desc		A band that increases the power of binding moves used by the holder.
-0309-0000|data.Name		Twist Band
-0309-0001|data.Desc		A held item that prevents the Pokémon's Attack and Special Attack from being reduced.
-0310-0000|data.Name		Metronome
-0310-0001|data.Desc		An item to be held by a Pokémon. It boosts moves used consecutively, but only until a different move is used.
-0311-0000|data.Name		Shed Shell
-0311-0001|data.Desc		A tough, discarded carapace that prevents the holder from being immobilized.
-0312-0000|data.Name		Shell Bell
-0312-0001|data.Desc		A held item that restores a little HP to the holder every time it inflicts damage on others.
-0313-0000|data.Name		Scope Lens
-0313-0001|data.Desc		A lens used for scoping out weak points. It boosts the holder’s critical-hit ratio.
-0314-0000|data.Name		Wide Lens
-0314-0001|data.Desc		A magnifying lens that boosts the Pokémon's Attack Range.
-0315-0000|data.Name		Heal Ribbon
-0315-0001|data.Desc		A held item that speeds up the Pokémon's natural HP recovery. This item sticks when held.
-0317-0000|data.Name		Sticky Barb
-0317-0001|data.Desc		A held item that damages the holder and sticks when held. It may latch on to Pokémon that make contact with the holder.
-0318-0000|data.Name		Choice Band
-0318-0001|data.Desc		A curious headband that boosts Attack, but only allows the use of one move. This item sticks when held.
-0319-0000|data.Name		Choice Specs
-0319-0001|data.Desc		Distinctive glasses that boost Special Attack, but only allows the use of one move. This item sticks when held.
-0320-0000|data.Name		Choice Scarf
-0320-0001|data.Desc		A curious scarf that boosts Movement Speed, but only allows the use of one move. This item sticks when held.
-0321-0000|data.Name		Assault Vest
-0321-0001|data.Desc		An offensive vest that raises Special Defense, but prevents the use of status moves. This item sticks when held.
-0322-0000|data.Name		Life Orb
-0322-0001|data.Desc		A held item that boosts the power of moves, but at the cost of some HP on each use. This item sticks when held.
-0323-0000|data.Name		Toxic Orb
-0323-0001|data.Desc		A bizarre orb that will badly poison the holder. This item sticks when held.
-0324-0000|data.Name		Flame Orb
-0324-0001|data.Desc		A bizarre orb that will afflict the holder with a burn. This item sticks when held.
-0325-0000|data.Name		Iron Ball
-0325-0001|data.Desc		A held item that weighs the Pokémon down, and allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.
-0326-0000|data.Name		Ring Target
-0326-0001|data.Desc		A held item that removes the Pokémon's type immunities. This item sticks when held.
-0327-0000|data.Name		Black Sludge
-0327-0001|data.Desc		A held item that increases the HP regeneration of Poison-types, but prevents it for any other type. This item sticks when held.
-0328-0000|data.Name		X-Ray Specs
-0328-0001|data.Desc		A held item that enables the Pokémon to see enemies through heavy darkness.
-0329-0000|data.Name		Reunion Cape
-0329-0001|data.Desc		A held item that warps the Pokémon to its teammate or leader when attacked.
-0330-0000|data.Name		Cover Band
-0330-0001|data.Desc		An item to be held by a Pokémon. While the holder's HP is at half or above, it will take attacks for nearby allies.
-0331-0000|data.Name		Silver Powder
-0331-0001|data.Desc		An item to be held by a Pokémon. It is a shiny, silver powder that will boost the power of Bug-type moves.
-0332-0000|data.Name		Black Glasses
-0332-0001|data.Desc		An item to be held by a Pokémon. A pair of shady-looking glasses that boost the power of Dark-type moves.
-0333-0000|data.Name		Dragon Scale
-0333-0001|data.Desc		An item to be held by a Pokémon. This thick, tough scale boosts the power of Dragon-type moves.
-0334-0000|data.Name		Magnet
-0334-0001|data.Desc		An item to be held by a Pokémon. It is a powerful magnet that boosts the power of Electric-type moves.
-0335-0000|data.Name		Pink Bow
-0335-0001|data.Desc		An item to be held by a Pokémon. It's a cute bow that boosts the power of Fairy-type moves.
-0336-0000|data.Name		Black Belt
-0336-0001|data.Desc		An item to be held by a Pokémon. This belt helps the wearer to focus and boosts the power of Fighting-type moves.
-0337-0000|data.Name		Charcoal
-0337-0001|data.Desc		An item to be held by a Pokémon. It is a combustible fuel that boosts the power of Fire-type moves.
-0338-0000|data.Name		Sharp Beak
-0338-0001|data.Desc		An item to be held by a Pokémon. It's a long, sharp beak that boosts the power of Flying-type moves.
-0339-0000|data.Name		Spell Tag
-0339-0001|data.Desc		An item to be held by a Pokémon. It is a sinister, eerie tag that boosts the power of Ghost-type moves.
-0340-0000|data.Name		Miracle Seed
-0340-0001|data.Desc		An item to be held by a Pokémon. It is a seed imbued with life force that boosts the power of Grass-type moves.
-0341-0000|data.Name		Soft Sand
-0341-0001|data.Desc		An item to be held by a Pokémon. It is a loose, silky sand that boosts the power of Ground-type moves.
-0342-0000|data.Name		Never-Melt Ice
-0342-0001|data.Desc		An item to be held by a Pokémon. It's a piece of ice that repels heat effects and boosts Ice-type moves.
-0343-0000|data.Name		Silk Scarf
-0343-0001|data.Desc		An item to be held by a Pokémon. It's a sumptuous scarf that boosts the power of Normal-type moves.
-0344-0000|data.Name		Poison Barb
-0344-0001|data.Desc		An item to be held by a Pokémon. This small, poisonous barb boosts the power of Poison-type moves.
-0345-0000|data.Name		Twisted Spoon
-0345-0001|data.Desc		An item to be held by a Pokémon. This spoon is imbued with telekinetic power and boosts Psychic-type moves.
-0346-0000|data.Name		Hard Stone
-0346-0001|data.Desc		An item to be held by a Pokémon. It is a durable stone that boosts the power of Rock-type moves.
-0347-0000|data.Name		Metal Coat
-0347-0001|data.Desc		An item to be held by a Pokémon. It is a special metallic film that can boost the power of Steel-type moves.
-0348-0000|data.Name		Mystic Water
-0348-0001|data.Desc		An item to be held by a Pokémon. This teardrop-shaped gem boosts the power of Water-type moves.
-0349-0000|data.Name		Harmony Scarf
-0349-0001|data.Desc		A scarf woven from the fibers of a legendary tree. It allows the Pokémon to evolve, regardless of its requirements.
-0350-0000|data.Name		Everstone
-0350-0001|data.Desc		
-0351-0000|data.Name		Fire Stone
-0351-0001|data.Desc		A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fire-type.
-0352-0000|data.Name		Thunder Stone
-0352-0001|data.Desc		A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Electric-type.
-0353-0000|data.Name		Water Stone
-0353-0001|data.Desc		A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Water-type.
-0354-0000|data.Name		Leaf Stone
-0354-0001|data.Desc		A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Grass-type.
-0355-0000|data.Name		Moon Stone
-0355-0001|data.Desc		An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fairy-type.
-0356-0000|data.Name		Sun Stone
-0356-0001|data.Desc		An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Psychic-type.
-0357-0000|data.Name		Magmarizer
-0357-0001|data.Desc		A box brimming with a huge amount of magma energy. It allows a certain kind of Pokémon to evolve.
-0358-0000|data.Name		Electirizer
-0358-0001|data.Desc		A box full of a massive amount of electric energy. It allows a certain kind of Pokémon to evolve.
-0359-0000|data.Name		Reaper Cloth
-0359-0001|data.Desc		An eerie cloth imbued with horrifyingly strong spiritual energy. It allows a certain kind of Pokémon to evolve.
-0360-0000|data.Name		Cracked Pot
-0360-0001|data.Desc		A peculiar teapot that can make a certain species of Pokémon evolve. It may be cracked, but tea poured from it is delicious.
-0361-0000|data.Name		Chipped Pot
-0361-0001|data.Desc		A peculiar teapot that can make a certain species of Pokémon evolve. It may be chipped, but tea poured from it is delicious.
-0362-0000|data.Name		Shiny Stone
-0362-0001|data.Desc		An odd stone that shines with dazzling light. It allows certain kinds of Pokémon to evolve.
-0363-0000|data.Name		Dusk Stone
-0363-0001|data.Desc		An odd stone with a mesmerizing darkness. It allows certain kinds of Pokémon to evolve.
-0364-0000|data.Name		Dawn Stone
-0364-0001|data.Desc		An odd stone that glints like an eye. It allows certain kinds of Pokémon to evolve.
-0365-0000|data.Name		Link Cable
-0365-0001|data.Desc		An intriguing cable used for linking unknown devices. It allows a certain kind of Pokémon to evolve.
-0366-0000|data.Name		Up-Grade
-0366-0001|data.Desc		A mysterious device filled with all sorts of data. It allows a certain kind of Pokémon to evolve.
-0367-0000|data.Name		Dubious Disc
-0367-0001|data.Desc		An enigmatic disc that overflows with dubious data. It allows a certain kind of Pokémon to evolve.
-0368-0000|data.Name		Razor Fang
-0368-0001|data.Desc		A savagely sharp, piercing fang. When the holder successfully inflicts damage, the target may also flinch.
-0369-0000|data.Name		Razor Claw
-0369-0001|data.Desc		A wickedly sharp claw perfect for raking enemies. It increases the holder’s critical-hit ratio.
-0371-0000|data.Name		Protector
-0371-0001|data.Desc		A heavy, durable piece of protective equipment. It allows a certain kind of Pokémon to evolve.
-0372-0000|data.Name		Oval Stone
-0372-0001|data.Desc		A surprisingly smooth, rounded stone. It allows a certain kind of Pokémon to evolve.
-0373-0000|data.Name		Prism Scale
-0373-0001|data.Desc		A mysterious scale that shines in rainbow colors. It allows a certain kind of Pokémon to evolve.
-0374-0000|data.Name		King's Rock
-0374-0001|data.Desc		An impressive icon that conveys a kingly nobility. When the holder successfully inflicts damage, the target may also flinch.
-0375-0000|data.Name		Deep Sea Tooth
-0375-0001|data.Desc		A supersharp fang with a subtle gleam. It allows a certain kind of Pokémon to evolve.
-0376-0000|data.Name		Deep Sea Scale
-0376-0001|data.Desc		A pretty scale that shines faintly. It allows a certain kind of Pokémon to evolve.
-0377-0000|data.Name		Sun Ribbon
-0377-0001|data.Desc		A ribbon infused with sunshine. It allows a certain kind of Pokémon to evolve.
-0378-0000|data.Name		Lunar Ribbon
-0378-0001|data.Desc		A ribbon infused with moonlight. It allows a certain kind of Pokémon to evolve.
-0379-0000|data.Name		Ice Stone
-0379-0001|data.Desc		A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks to Ice-type.
-0380-0000|data.Name		Insect Plate
-0380-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Bug-type moves.
-0381-0000|data.Name		Dread Plate
-0381-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Dark-type moves.
-0382-0000|data.Name		Draco Plate
-0382-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Dragon-type moves.
-0383-0000|data.Name		Zap Plate
-0383-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Electric-type moves.
-0384-0000|data.Name		Pixie Plate
-0384-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Fairy-type moves.
-0385-0000|data.Name		Fist Plate
-0385-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Fighting-type moves.
-0386-0000|data.Name		Flame Plate
-0386-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Fire-type moves.
-0387-0000|data.Name		Sky Plate
-0387-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Flying-type moves.
-0388-0000|data.Name		Spooky Plate
-0388-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ghost-type moves.
-0389-0000|data.Name		Meadow Plate
-0389-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Grass-type moves.
-0390-0000|data.Name		Earth Plate
-0390-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ground-type moves.
-0391-0000|data.Name		Icicle Plate
-0391-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ice-type moves.
-0392-0000|data.Name		Blank Plate
-0392-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Normal-type moves.
-0393-0000|data.Name		Toxic Plate
-0393-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Poison-type moves.
-0394-0000|data.Name		Mind Plate
-0394-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Psychic-type moves.
-0395-0000|data.Name		Stone Plate
-0395-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Rock-type moves.
-0396-0000|data.Name		Iron Plate
-0396-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Steel-type moves.
-0397-0000|data.Name		Splash Plate
-0397-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Water-type moves.
-0400-0000|data.Name		Power Band
-0400-0001|data.Desc		A hold item that slightly boosts the Pokémon's Attack.
-0401-0000|data.Name		Special Band
-0401-0001|data.Desc		A hold item that slightly boosts the Pokémon's Special Attack.
-0402-0000|data.Name		Defense Scarf
-0402-0001|data.Desc		A hold item that slightly boosts the Pokémon's Defense.
-0403-0000|data.Name		Zinc Band
-0403-0001|data.Desc		A hold item that slightly boosts the Pokémon's Special Defense.
-0404-0000|data.Name		Big Root
-0404-0001|data.Desc		A held item that increases HP recovery.
-0405-0000|data.Name		Expert Belt
-0405-0001|data.Desc		A well-worn belt that boosts the power of super-effective moves.
-0406-0000|data.Name		Weather Rock
-0406-0001|data.Desc		An item that increases the duration of weather moves used by the holder.
-0407-0000|data.Name		Goggle Specs
-0407-0001|data.Desc		A held item that enables the Pokémon to identify traps on the floor.
-0444-0000|data.Name		Light Box
-0444-0001|data.Desc		A box that is somewhat light. Specific Pokémon adore the items inside.
-0445-0000|data.Name		Heavy Box
-0445-0001|data.Desc		A box that is unbelievably heavy. Specific Pokémon adore the items inside.
-0446-0000|data.Name		Nifty Box
-0446-0001|data.Desc		A box that is completely impressive. There is something mysterious inside.
-0447-0000|data.Name		Dainty Box
-0447-0001|data.Desc		A box that is dainty and fashionable. There is something tasty inside!
-0448-0000|data.Name		Glittery Box
-0448-0001|data.Desc		A box that glitters with dazzling light. Whatever's inside is sure to sell for a high price!
-0449-0000|data.Name		Deluxe Box
-0449-0001|data.Desc		A box that is extravagant and opulent. It looks like something is inside.
-0450-0000|data.Name		Recall Box
-0450-0001|data.Desc		A marvelous box that lets the user recall any move they've learned in the past.
-0451-0000|data.Name		Assembly Box
-0451-0001|data.Desc		A marvelous box that lets the user add any Pokémon from the assembly to the team.
-0452-0000|data.Name		Storage Box
-0452-0001|data.Desc		A marvelous box that lets the user add any item from storage into the Treasure Bag.
-0453-0000|data.Name		Ability Capsule
-0453-0001|data.Desc		A capsule that allows a Pokémon to change its Abilities when used.
-0454-0000|data.Name		Grimy Food
-0454-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also inflict a variety of status problems because it's covered in filthy grime. Be careful of what you eat!
-0455-0000|data.Name		Key
-0455-0001|data.Desc		A key that unlocks a chest or door inside a dungeon.
-0456-0000|data.Name		Ancient Key
-0456-0001|data.Desc		A key that unlocks an ancient door inside a dungeon.
-0458-0000|data.Name		Grimy Food
-0458-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.
-0477-0000|data.Name		Nugget
-0477-0001|data.Desc		A nugget of pure gold. It sells for a very high price.
-0478-0000|data.Name		Mystery Part
-0478-0001|data.Desc		
-0479-0000|data.Name		Berserk Gene
-0479-0001|data.Desc		
-0480-0000|data.Name		Pearl
-0480-0001|data.Desc		A rather small pearl that has a very nice silvery sheen to it. It sells for a moderately high price.
-0481-0000|data.Name		Heart Scale
-0481-0001|data.Desc		A pretty, heart-shaped scale that is extremely rare. It glows faintly with all of the colors of the rainbow.
-0482-0000|data.Name		Red Orb
-0482-0001|data.Desc		
-0483-0000|data.Name		Blue Orb
-0483-0001|data.Desc		
-0484-0000|data.Name		Green Orb
-0484-0001|data.Desc		
-0486-0000|data.Name		Meteorite
-0486-0001|data.Desc		A meteorite that fell from space long ago. It can be used on Deoxys once per floor to cause a Forme change.
-0487-0000|data.Name		Adamant Orb
-0487-0001|data.Desc		
-0488-0000|data.Name		Lustrous Orb
-0488-0001|data.Desc		
-0489-0000|data.Name		Griseous Orb
-0489-0001|data.Desc		A glowing orb can be used on Giratina once per floor to cause a Forme change.
-0490-0000|data.Name		Spacetime Globe
-0490-0001|data.Desc		
-0491-0000|data.Name		Gracidea
-0491-0001|data.Desc		A beautiful flower that blooms in the Secret Garden. It can be used on Shaymin once per floor to cause a Forme change.
-0700-0000|data.Name		Green Silk
-0701-0000|data.Name		Wonder Dust
-0702-0000|data.Name		Guard Gem
-0703-0000|data.Name		Defend Globe
-0704-0000|data.Name		Black Silk
-0705-0000|data.Name		Dark Dust
-0706-0000|data.Name		Dark Gem
-0707-0000|data.Name		Dusk Globe
-0708-0000|data.Name		Royal Silk
-0709-0000|data.Name		Dragon Dust
-0710-0000|data.Name		Dragon Gem
-0711-0000|data.Name		Dragon Globe
-0712-0000|data.Name		Yellow Silk
-0713-0000|data.Name		Thunder Dust
-0714-0000|data.Name		Thunder Gem
-0715-0000|data.Name		Volt Globe
-0716-0000|data.Name		Magenta Silk
-0717-0000|data.Name		Fairy Dust
-0718-0000|data.Name		Fairy Gem
-0719-0000|data.Name		Fairy Globe
-0720-0000|data.Name		Orange Silk
-0721-0000|data.Name		Courage Dust
-0722-0000|data.Name		Fight Gem
-0723-0000|data.Name		Power Globe
-0724-0000|data.Name		Red Silk
-0725-0000|data.Name		Fire Dust
-0726-0000|data.Name		Fiery Gem
-0727-0000|data.Name		Fiery Globe
-0728-0000|data.Name		Sky Silk
-0729-0000|data.Name		Sky Dust
-0730-0000|data.Name		Sky Gem
-0731-0000|data.Name		Sky Globe
-0732-0000|data.Name		Purple Silk
-0733-0000|data.Name		Shady Dust
-0734-0000|data.Name		Shadow Gem
-0735-0000|data.Name		Nether Globe
-0736-0000|data.Name		Grass Silk
-0737-0000|data.Name		Grass Dust
-0738-0000|data.Name		Grass Gem
-0739-0000|data.Name		Soothe Globe
-0740-0000|data.Name		Brown Silk
-0741-0000|data.Name		Ground Dust
-0742-0000|data.Name		Earth Gem
-0743-0000|data.Name		Terra Globe
-0744-0000|data.Name		Clear Silk
-0745-0000|data.Name		Icy Dust
-0746-0000|data.Name		Icy Gem
-0747-0000|data.Name		Icy Globe
-0748-0000|data.Name		White Silk
-0749-0000|data.Name		Normal Dust
-0750-0000|data.Name		White Gem
-0751-0000|data.Name		Joy Globe
-0752-0000|data.Name		Pink Silk
-0753-0000|data.Name		Poison Dust
-0754-0000|data.Name		Poison Gem
-0755-0000|data.Name		Poison Globe
-0756-0000|data.Name		Gold Silk
-0757-0000|data.Name		Psyche Dust
-0758-0000|data.Name		Psyche Gem
-0759-0000|data.Name		Psyche Globe
-0760-0000|data.Name		Gray Silk
-0761-0000|data.Name		Rock Dust
-0762-0000|data.Name		Stone Gem
-0763-0000|data.Name		Rock Globe
-0764-0000|data.Name		Iron Silk
-0765-0000|data.Name		Steel Dust
-0766-0000|data.Name		Metal Gem
-0767-0000|data.Name		Steel Globe
-0768-0000|data.Name		Blue Silk
-0769-0000|data.Name		Water Dust
-0770-0000|data.Name		Aqua Gem
-0771-0000|data.Name		Aqua Globe
-0804-0000|data.Name		TypeBulldozer Test
-0805-0000|data.Name		SuperCrit Test
-0806-0000|data.Name		NVECrit Test
-0807-0000|data.Name		Nontraitor Test
-0808-0000|data.Name		WaterTerrain Test
-0809-0000|data.Name		LavaTerrain Test
-0810-0000|data.Name		AllTerrain Test
-0811-0000|data.Name		Wallbreaker Test
-0812-0000|data.Name		GapFiller Test
-0813-0000|data.Name		PPBoost Test
-0814-0000|data.Name		DeepBreather Test
-0815-0000|data.Name		PracticeSwinger Test
-0816-0000|data.Name		MisfortuneMirror Test
-0817-0000|data.Name		CounterBasher Test
-0818-0000|data.Name		DoubleAttacker Test
-0819-0000|data.Name		MasterHurler Test
-0820-0000|data.Name		AllyReviver Test
-0821-0000|data.Name		AllyReviverBattle Test
-0822-0000|data.Name		PressurePlus Test
-0823-0000|data.Name		StatusOnAttack Test
-0824-0000|data.Name		KnockbackOnAttack Test
-0825-0000|data.Name		ThrowOnAttack Test
-0826-0000|data.Name		SureHitAttacker Test
-0827-0000|data.Name		SpecialAttacker Test
-0828-0000|data.Name		StatusImmune Test
-0829-0000|data.Name		StatDropImmune Test
-0830-0000|data.Name		SleepWalker Test
-0831-0000|data.Name		ChargeWalker Test
-0832-0000|data.Name		StairSensor Test
-0833-0000|data.Name		AcuteSniffer Test
-0834-0000|data.Name		MapSurveyor Test
-0835-0000|data.Name		XRay Test
-0836-0000|data.Name		WeaknessPayback Test
-0837-0000|data.Name		WarpPayback Test
-0838-0000|data.Name		LungeAttack Test
-0839-0000|data.Name		WideAttack Test
-0840-0000|data.Name		ExplosiveAttack Test
-0841-0000|data.Name		TrapBuster Test
-0842-0000|data.Name		ExplosionGuard Test
-0843-0000|data.Name		WandMaster Test
-0844-0000|data.Name		WandSpread Test
-0845-0000|data.Name		MultiRayShot Test
-0846-0000|data.Name		RoyalVeil Test
-0847-0000|data.Name		Celebrate Test
-0848-0000|data.Name		Absorption Test
-0849-0000|data.Name		ExcessiveForce Test
-0850-0000|data.Name		Anchor Test
-0851-0000|data.Name		BarrageGuard Test
-0852-0000|data.Name		BetterOdds Test
-0853-0000|data.Name		ClutchPerformer Test
-0854-0000|data.Name		DistanceDodge Test
-0855-0000|data.Name		CloseDodge Test
-0856-0000|data.Name		FastHealer Test
-0857-0000|data.Name		SelfCurer Test
-0858-0000|data.Name		StatusMirror Test
-0859-0000|data.Name		StatMirror Test
-0860-0000|data.Name		ErraticAttacker Test
-0861-0000|data.Name		ErraticDefender Test
-0862-0000|data.Name		FastFriend Test
-0863-0000|data.Name		CoinWatcher Test
-0864-0000|data.Name		HiddenStairFinder Test
-0865-0000|data.Name		ChestFinder Test
-0866-0000|data.Name		ShopFinder Test
-0867-0000|data.Name		SecondSTAB Test
-0868-0000|data.Name		TypedAttack Test
-0869-0000|data.Name		GapProber Test
-0870-0000|data.Name		PassThroughAttacker Test
-0871-0000|data.Name		WeatherProtection Test
-0872-0000|data.Name		RemoveAbilityAttack Test
-0873-0000|data.Name		CheekPouch Test
-0874-0000|data.Name		HealInWater Test
-0875-0000|data.Name		HealInLava Test
-0876-0000|data.Name		HealOnNewFloor Test
-0877-0000|data.Name		EndureCategory Test
-0878-0000|data.Name		EndureType Test
-0879-0000|data.Name		SpikeDropper Test
-0880-0000|data.Name		NoStatusInWeather Test
-0881-0000|data.Name		DeepBreatherPlus Test
-0882-0000|data.Name		WeaknessReduce Test
-0883-0000|data.Name		Gratitude Test
-0884-0000|data.Name		HitAndRun Test
-0885-0000|data.Name		StatusOnCategoryHit Test
-0886-0000|data.Name		StatusOnCategoryUse Test
-0887-0000|data.Name		MapStatusOnCategoryUse Test
-0888-0000|data.Name		DoubleDash Test
-0889-0000|data.Name		StatusSplash Test
-0890-0000|data.Name		TypeBodyguard Test
-0900-0000|data.Name		Solar Sash
-0901-0000|data.Name		Plant Torc
-0904-0000|data.Name		Grass Guard
-0906-0000|data.Name		Flame Bangle
-0907-0000|data.Name		Kindle Scarf
-0910-0000|data.Name		Fiery Heart
-0912-0000|data.Name		Hydro Band
-0913-0000|data.Name		Bubble Bangle
-0916-0000|data.Name		Water Guard
-0918-0000|data.Name		Glittery Bow
-0924-0000|data.Name		Charge Scarf
-0936-0000|data.Name		Overcome Bow
-0942-0000|data.Name		Wing Scarf
-0948-0000|data.Name		Shock Ruff
-0954-0000|data.Name		Zapper Scarf
-0955-0000|data.Name		Volt Torc
-0958-0000|data.Name		Express Tag
-0959-0000|data.Name		Volt Charm
-0960-0000|data.Name		Sandy Torc
-0966-0000|data.Name		Impact Torc
-0967-0000|data.Name		Nido-Crest
-0968-0000|data.Name		Nido-Claw
-0969-0000|data.Name		Nido-Thorn
-0970-0000|data.Name		Nido-Seal
-0971-0000|data.Name		Thorny Scarf
-0972-0000|data.Name		King Sash
-0973-0000|data.Name		Fairy Bow
-0974-0000|data.Name		Moon Scarf
-0977-0000|data.Name		Starry Ore
-0979-0000|data.Name		Afire Collar
-0985-0000|data.Name		Friend Torc
-0986-0000|data.Name		Snooze Ring
-0989-0000|data.Name		Bouncy Charm
-0990-0000|data.Name		Slumber Rock
-0991-0000|data.Name		Slash Bow
-0992-0000|data.Name		Absorb Scarf
-0997-0000|data.Name		Bright Tiara
-0998-0000|data.Name		Aroma Scarf
-1003-0000|data.Name		Firm Hat
-1009-0000|data.Name		Gaze Goggles
-1021-0000|data.Name		Noble Scarf
-1025-0000|data.Name		Coin Charm
-1026-0000|data.Name		Insight Rock
-1027-0000|data.Name		Paddle Scarf
-1033-0000|data.Name		Nullify Belt
-1039-0000|data.Name		Legend Bow
-1045-0000|data.Name		Rain Crown
-1046-0000|data.Name		Bold Belt
-1051-0000|data.Name		Sparkle Ruff
-1064-0000|data.Name		Digest Scarf
-1075-0000|data.Name		Rugged Sash
-1081-0000|data.Name		Sunlight Bow
-1087-0000|data.Name		King Cap
-1093-0000|data.Name		Builder Sash
-1099-0000|data.Name		Bullseye Bow
-1105-0000|data.Name		Fight Torc
-1111-0000|data.Name		North Torc
-1117-0000|data.Name		Slimy Bow
-1123-0000|data.Name		Cover Armor
-1129-0000|data.Name		Sunglasses
-1130-0000|data.Name		Slip Scarf
-1135-0000|data.Name		Quartz Torc
-1141-0000|data.Name		Dream Coin
-1147-0000|data.Name		Super Sash
-1171-0000|data.Name		Victory Ruff
-1173-0000|data.Name		Victory Belt
-1175-0000|data.Name		Victory Bangle
-1177-0000|data.Name		Muscle Charm
-1180-0000|data.Name		Flabby Belt
-1193-0000|data.Name		Pierce Drill
-1198-0000|data.Name		Faith Ring
-1199-0000|data.Name		Lucky Scarf
-1202-0000|data.Name		Play Tag
-1204-0000|data.Name		Clinging Bow
-1216-0000|data.Name		Tornado Bow
-1217-0000|data.Name		Swirl Scarf
-1234-0000|data.Name		Barrier Bow
-1236-0000|data.Name		Junior Beam
-1237-0000|data.Name		Junior Card
-1238-0000|data.Name		Mimic Pebble
-1239-0000|data.Name		Bulwark Rock
-1240-0000|data.Name		Red Armlet
-1244-0000|data.Name		Ambush Rock
-1245-0000|data.Name		Steel Charm
-1246-0000|data.Name		Ruin Scarf
-1250-0000|data.Name		Kiss Charm
-1251-0000|data.Name		Frozen Ore
-1252-0000|data.Name		Voltaic Band
-1256-0000|data.Name		Jolt Charm
-1257-0000|data.Name		Charge Seal
-1262-0000|data.Name		Ember Jewel
-1263-0000|data.Name		Erupt Ore
-1270-0000|data.Name		Rushing Bow
-1271-0000|data.Name		Milky Scarf
-1276-0000|data.Name		Field Crest
-1277-0000|data.Name		Tempest Sash
-1283-0000|data.Name		Mystic Scarf
-1287-0000|data.Name		Wavy Charm
-1295-0000|data.Name		Fairy Collar
-1298-0000|data.Name		Icy Collar
-1301-0000|data.Name		Virid Collar
-1304-0000|data.Name		Dusk Collar
-1307-0000|data.Name		Light Collar
-1310-0000|data.Name		Fire Collar
-1313-0000|data.Name		Volt Collar
-1316-0000|data.Name		Aqua Collar
-1319-0000|data.Name		Prism Ruff
-1322-0000|data.Name		Best Scarf
-1323-0000|data.Name		Virtual Bow
-1326-0000|data.Name		AI Brooch
-1328-0000|data.Name		Aged Scarf
-1340-0000|data.Name		Old Brooch
-1346-0000|data.Name		Glee Scarf
-1350-0000|data.Name		Tummy Charm
-1351-0000|data.Name		Valor Charm
-1352-0000|data.Name		Freeze Veil
-1355-0000|data.Name		Thunder Veil
-1358-0000|data.Name		Fire Veil
-1361-0000|data.Name		Mystery Wing
-1362-0000|data.Name		Mystery Card
-1363-0000|data.Name		Mystery Seal
-1364-0000|data.Name		Mirage Cape
-1370-0000|data.Name		Havoc Robe
-1375-0000|data.Name		Life Ring
-1381-0000|data.Name		Bright Veil
-1382-0000|data.Name		Spice Bow
-1385-0000|data.Name		Dawn Jewel
-1387-0000|data.Name		Blast Bangle
-1388-0000|data.Name		Volcano Torc
-1391-0000|data.Name		Blazing Rock
-1394-0000|data.Name		Anger Scarf
-1397-0000|data.Name		Water Heart
-1398-0000|data.Name		Swirl Rock
-1399-0000|data.Name		Body Collar
-1429-0000|data.Name		Glitter Robe
-1430-0000|data.Name		Luck Brooch
-1433-0000|data.Name		Pure Heart
-1434-0000|data.Name		Happy Rock
-1441-0000|data.Name		Sacred Scarf
-1447-0000|data.Name		Dotted Scarf
-1452-0000|data.Name		Surfer Rock
-1453-0000|data.Name		Fake Torc
-1457-0000|data.Name		Arid Tag
-1458-0000|data.Name		Drain Rock
-1459-0000|data.Name		Cotton Torc
-1471-0000|data.Name		Sun Scarf
-1495-0000|data.Name		Magic Hat
-1527-0000|data.Name		Suffer Scarf
-1531-0000|data.Name		Grin Charm
-1532-0000|data.Name		Endure Rock
-1533-0000|data.Name		Reverse Bow
-1539-0000|data.Name		Dense Poncho
-1545-0000|data.Name		Escape Scarf
-1557-0000|data.Name		Stern Sash
-1575-0000|data.Name		Horn Torc
-1581-0000|data.Name		Ruin Armlet
-1585-0000|data.Name		Dusk Jewel
-1586-0000|data.Name		Vile Tag
-1587-0000|data.Name		Hiber Scarf
-1591-0000|data.Name		Honey Rock
-1592-0000|data.Name		Calming Rock
-1593-0000|data.Name		Lava Bow
-1599-0000|data.Name		Glacier Cape
-1600-0000|data.Name		Frost Torc
-1605-0000|data.Name		Eager Brooch
-1617-0000|data.Name		Snow Brooch
-1623-0000|data.Name		Horizon Bow
-1624-0000|data.Name		Ocean Bow
-1627-0000|data.Name		Waft Rock
-1628-0000|data.Name		Sunset Rock
-1635-0000|data.Name		Pit Fang
-1641-0000|data.Name		Armor Scarf
-1647-0000|data.Name		Delusion Bow
-1653-0000|data.Name		Paint Scarf
-1659-0000|data.Name		Rainbow Veil
-1660-0000|data.Name		Rainbow Wing
-1663-0000|data.Name		Rainbow Brooch
-1664-0000|data.Name		Clear Wing
-1665-0000|data.Name		Bolt Fang
-1669-0000|data.Name		Flare Fang
-1673-0000|data.Name		Aqua Mantle
-1677-0000|data.Name		Sacred Collar
-1679-0000|data.Name		Crash Claw
-1685-0000|data.Name		Silver Veil
-1686-0000|data.Name		Silver Wing
-1689-0000|data.Name		Silver Brooch
-1690-0000|data.Name		Deep Sea Jewel
-1691-0000|data.Name		Chrono Veil
-1697-0000|data.Name		Drain Bangle
-1701-0000|data.Name		Forest Ore
-1702-0000|data.Name		Jungle Tag
-1704-0000|data.Name		Gutsy Band
-1707-0000|data.Name		Hot Pebble
-1708-0000|data.Name		Charge Tag
-1728-0000|data.Name		Vivid Silk
-1734-0000|data.Name		Jolly Scarf
-1745-0000|data.Name		Midair Scarf
-1751-0000|data.Name		Stock Scarf
-1757-0000|data.Name		Gallant Torc
-1758-0000|data.Name		Caring Scarf
-1769-0000|data.Name		Thwart Bow
-1775-0000|data.Name		Lazy Ruff
-1781-0000|data.Name		Ninja Ruff
-1787-0000|data.Name		Awe Mantle
-1795-0000|data.Name		Thrust Belt
-1807-0000|data.Name		Guard Collar
-1811-0000|data.Name		Smile Pebble
-1819-0000|data.Name		Deceit Mask
-1825-0000|data.Name		Iron Helmet
-1831-0000|data.Name		Ponder Sash
-1843-0000|data.Name		Pulse Bow
-1844-0000|data.Name		Spark Tie
-1849-0000|data.Name		Volt Heart
-1850-0000|data.Name		Neon Scarf
-1851-0000|data.Name		Evening Bow
-1856-0000|data.Name		Glowing Seal
-1857-0000|data.Name		Bouquet Cape
-1858-0000|data.Name		Thorned Torc
-1869-0000|data.Name		Vicious Bow
-1875-0000|data.Name		Huge Bow
-1881-0000|data.Name		Erupt Scarf
-1887-0000|data.Name		Sooty Sash
-1893-0000|data.Name		Scheme Scarf
-1899-0000|data.Name		Hula Bow
-1905-0000|data.Name		Red Glasses
-1917-0000|data.Name		Cloud Ruff
-1923-0000|data.Name		Strong Sash
-1941-0000|data.Name		Meteor Charm
-1948-0000|data.Name		Cower Sash
-1966-0000|data.Name		Rigid Cape
-1972-0000|data.Name		Grace Scarf
-1978-0000|data.Name		Weather Cape
-1982-0000|data.Name		Cloud Rock
-1990-0000|data.Name		Ominous Torc
-1996-0000|data.Name		Unlucky Sash
-2014-0000|data.Name		Perish Torc
-2033-0000|data.Name		Deep Torc
-2051-0000|data.Name		Outlast Bow
-2062-0000|data.Name		Ancient Ring
-2066-0000|data.Name		Rock Sash
-2070-0000|data.Name		Ice Sash
-2074-0000|data.Name		Steel Sash
-2078-0000|data.Name		Royal Mantle
-2080-0000|data.Name		Heart Brooch
-2082-0000|data.Name		Eon Veil
-2086-0000|data.Name		Eon Seal
-2087-0000|data.Name		Heart Crest
-2088-0000|data.Name		Seabed Veil
-2090-0000|data.Name		Seabed Dew
-2091-0000|data.Name		Seabed Coin
-2092-0000|data.Name		Seabed Crest
-2094-0000|data.Name		Terra Ring
-2096-0000|data.Name		Terra Tag
-2097-0000|data.Name		Terra Coin
-2098-0000|data.Name		Terra Crest
-2100-0000|data.Name		SkyHigh Veil
-2102-0000|data.Name		SkyHigh Tag
-2103-0000|data.Name		SkyHigh Coin
-2104-0000|data.Name		SkyHigh Crest
-2106-0000|data.Name		Wish Mantle
-2108-0000|data.Name		Wish Shard
-2109-0000|data.Name		Wish Dust
-2110-0000|data.Name		Wish Tag
-2112-0000|data.Name		Revive Robe
-2118-0000|data.Name		Forest Torc
-2119-0000|data.Name		Woody Scarf
-2120-0000|data.Name		Lucky Leaf
-2122-0000|data.Name		Sprout Rock
-2124-0000|data.Name		Blazing Ruff
-2125-0000|data.Name		Burst Sash
-2128-0000|data.Name		Nimble Charm
-2130-0000|data.Name		Marine Crown
-2134-0000|data.Name		Sea Ore
-2136-0000|data.Name		Guts Sash
-2137-0000|data.Name		Regret Torc
-2142-0000|data.Name		Dam Scarf
-2146-0000|data.Name		Fall Charm
-2147-0000|data.Name		River Charm
-2154-0000|data.Name		Glare Sash
-2155-0000|data.Name		Spark Scarf
-2158-0000|data.Name		Flash Tag
-2159-0000|data.Name		Spark Tag
-2160-0000|data.Name		Skull Helmet
-2166-0000|data.Name		Block Brooch
-2184-0000|data.Name		Miracle Bow
-2188-0000|data.Name		Rouse Charm
-2190-0000|data.Name		Float Aid
-2194-0000|data.Name		Swimmer Rock
-2195-0000|data.Name		Rescue Rock
-2196-0000|data.Name		Petal Dress
-2200-0000|data.Name		Cute Ore
-2208-0000|data.Name		Breeze Scarf
-2212-0000|data.Name		Wind Heart
-2213-0000|data.Name		Easy Charm
-2214-0000|data.Name		Allure Coat
-2220-0000|data.Name		Scary Belt
-2232-0000|data.Name		Mirror Torc
-2244-0000|data.Name		Shadow Veil
-2250-0000|data.Name		Mach Scarf
-2251-0000|data.Name		Meteor Torc
-2256-0000|data.Name		Ravage Ring
-2260-0000|data.Name		Valiant Rock
-2261-0000|data.Name		Pledge Rock
-2262-0000|data.Name		Grit Veil
-2268-0000|data.Name		Dust Scarf
-2292-0000|data.Name		Frozen Cape
-2298-0000|data.Name		Plasma Veil
-2304-0000|data.Name		Edify Robe
-2306-0000|data.Name		Charity Robe
-2308-0000|data.Name		Hope Robe
-2310-0000|data.Name		Spirit Dust
-2311-0000|data.Name		Spirit Shard
-2312-0000|data.Name		Red Chain
-2313-0000|data.Name		Spirit Crest
-2314-0000|data.Name		Time Shield
-2318-0000|data.Name		Time Jewel
-2320-0000|data.Name		Space Blade
-2324-0000|data.Name		Space Jewel
-2326-0000|data.Name		Searing Ring
-2332-0000|data.Name		Nether Veil
-2338-0000|data.Name		Lunar Veil
-2344-0000|data.Name		Tidal Cape
-2345-0000|data.Name		Ripple Cape
-2346-0000|data.Name		Marine Cache
-2349-0000|data.Name		Wave Jewel
-2351-0000|data.Name		Eclipse Robe
-2357-0000|data.Name		Purify Veil
+0001-empty-0000|data.Name		Empty
+0001-empty-0001|data.Desc		
+0001-food_apple-0000|data.Name		Apple
+0001-food_apple-0001|data.Desc		A food item that somewhat fills the Pokémon's belly.
+0001-food_apple_big-0000|data.Name		Big Apple
+0001-food_apple_big-0001|data.Desc		A food item that amply fills the Pokémon's belly.
+0001-food_apple_golden-0000|data.Name		Golden Apple
+0001-food_apple_golden-0001|data.Desc		A miraculous apple that glows with an alluring golden aura. It's far too precious and beautiful to even consider eating! If eaten, however, it would completely fill and greatly enlarge the Pokémon's belly.
+0001-food_apple_huge-0000|data.Name		Huge Apple
+0001-food_apple_huge-0001|data.Desc		A food item that completely fills and slightly enlarges the Pokémon's belly.
+0001-food_apple_perfect-0000|data.Name		Perfect Apple
+0001-food_apple_perfect-0001|data.Desc		A food item that completely fills and somewhat enlarges the Pokémon's belly.
+0001-food_banana-0000|data.Name		Banana
+0001-food_banana-0001|data.Desc		A rare food item that somewhat fills the entire team's belly.
+0001-food_banana_big-0000|data.Name		Big Banana
+0001-food_banana_big-0001|data.Desc		A rare food item that amply fills the entire team's belly.
+0001-food_banana_golden-0000|data.Name		Golden Banana
+0001-food_banana_golden-0001|data.Desc		An alluring banana that gives off a golden glow. It's valued far more as a treasure than as a food. If eaten, however, it would completely fill and enlarge the entire team's belly.
+0001-food_chestnut-0000|data.Name		Chestnut
+0001-food_chestnut-0001|data.Desc		
+0002-berry_apicot-0000|data.Name		Apicot Berry
+0002-berry_apicot-0001|data.Desc		A very mystifying Berry. There is no telling how it can be used, or what may happen if it is used. It maximizes Special Defense.
+0002-berry_aspear-0000|data.Name		Aspear Berry
+0002-berry_aspear-0001|data.Desc		
+0002-berry_babiri-0000|data.Name		Babiri Berry
+0002-berry_babiri-0001|data.Desc		This berry is very tough with a strong flavor. It was used to make medicine in the past. It changes the Pokémon to the Steel-type.
+0002-berry_charti-0000|data.Name		Charti Berry
+0002-berry_charti-0001|data.Desc		It is often used for pickles because of its very dry flavor. It can also be eaten raw for its provocative taste. It changes the Pokémon to the Rock-type.
+0002-berry_cheri-0000|data.Name		Cheri Berry
+0002-berry_cheri-0001|data.Desc		
+0002-berry_chesto-0000|data.Name		Chesto Berry
+0002-berry_chesto-0001|data.Desc		
+0002-berry_chilan-0000|data.Name		Chilan Berry
+0002-berry_chilan-0001|data.Desc		This berry can be cored out and dried to make a whistle. Blowing through its hole makes an indescribable sound. It changes the Pokémon to the Normal-type.
+0002-berry_chople-0000|data.Name		Chople Berry
+0002-berry_chople-0001|data.Desc		This berry contains a substance that generates heat. It can even heat up a chilly heart. It changes the Pokémon to the Fighting-type.
+0002-berry_coba-0000|data.Name		Coba Berry
+0002-berry_coba-0001|data.Desc		This berry is said to be a new kind that is a cross of two berries brought together by winds from far away. It changes the Pokémon to the Flying-type.
+0002-berry_colbur-0000|data.Name		Colbur Berry
+0002-berry_colbur-0001|data.Desc		Tiny hooks grow on the surface of this berry. It latches on to Pokémon so it can be carried to far-off places. It changes the Pokémon to the Dark-type.
+0002-berry_custap-0000|data.Name		Custap Berry
+0002-berry_custap-0001|data.Desc		
+0002-berry_enigma-0000|data.Name		Enigma Berry
+0002-berry_enigma-0001|data.Desc		A completely enigmatic Berry that appears to have the power of stars. It restores HP when hit by a super-effective move.
+0002-berry_ganlon-0000|data.Name		Ganlon Berry
+0002-berry_ganlon-0001|data.Desc		A Berry surrounded by mystery, rumored to be imbued with the power of the land. It maximizes Defense.
+0002-berry_haban-0000|data.Name		Haban Berry
+0002-berry_haban-0001|data.Desc		If a large enough volume of this berry is boiled down, its bitterness fades away. It makes a good jam. It changes the Pokémon to the Dragon-type.
+0002-berry_hondew-0000|data.Name		Hondew Berry
+0002-berry_hondew-0001|data.Desc		
+0002-berry_jaboca-0000|data.Name		Jaboca Berry
+0002-berry_jaboca-0001|data.Desc		The cluster of drupelets that make up this berry pop rhythmically if the berry is handled roughly. If a physical attack hits the Pokémon, the damage will be reflected to all enemies nearby.
+0002-berry_kasib-0000|data.Name		Kasib Berry
+0002-berry_kasib-0001|data.Desc		Considered to have a special power from the olden days, this berry is sometimes dried and used as a good-luck charm. It changes the Pokémon to the Ghost-type.
+0002-berry_kebia-0000|data.Name		Kebia Berry
+0002-berry_kebia-0001|data.Desc		This berry is a brilliant green on the outside. Inside, it is packed with a dry-flavored, black-colored flesh. It changes the Pokémon to the Poison-type.
+0002-berry_kee-0000|data.Name		Kee Berry
+0002-berry_kee-0001|data.Desc		
+0002-berry_kelpsy-0000|data.Name		Kelpsy Berry
+0002-berry_kelpsy-0001|data.Desc		
+0002-berry_leppa-0000|data.Name		Leppa Berry
+0002-berry_leppa-0001|data.Desc		A berry that takes a long time to grow. It fully restores PP.
+0002-berry_liechi-0000|data.Name		Liechi Berry
+0002-berry_liechi-0001|data.Desc		A mysterious Berry, rumored to contain the power of the sea. It maximizes Attack.
+0002-berry_lum-0000|data.Name		Lum Berry
+0002-berry_lum-0001|data.Desc		A berry that matures slowly, storing nutrients beneficial to Pokémon health. It cures many status problems.
+0002-berry_maranga-0000|data.Name		Maranga Berry
+0002-berry_maranga-0001|data.Desc		
+0002-berry_micle-0000|data.Name		Micle Berry
+0002-berry_micle-0001|data.Desc		This berry has a very dry flavor. It has the effect of making other food eaten at the same time taste sweet. It maximizes Accuracy.
+0002-berry_occa-0000|data.Name		Occa Berry
+0002-berry_occa-0001|data.Desc		This berry is said to have grown plentiful in the tropics of the past. It boasts an intensely hot spiciness. It changes the Pokémon to the Fire-type.
+0002-berry_oran-0000|data.Name		Oran Berry
+0002-berry_oran-0001|data.Desc		A peculiar berry with a mix of flavors. It fully restores HP.
+0002-berry_passho-0000|data.Name		Passho Berry
+0002-berry_passho-0001|data.Desc		This berry's flesh is dotted with tiny bubbles of air that keep it afloat in water. It changes the Pokémon to the Water-type.
+0002-berry_payapa-0000|data.Name		Payapa Berry
+0002-berry_payapa-0001|data.Desc		This berry is said to sense emotions for the way it swells roundly when anything approaches. It changes the Pokémon to the Psychic-type.
+0002-berry_pecha-0000|data.Name		Pecha Berry
+0002-berry_pecha-0001|data.Desc		
+0002-berry_persim-0000|data.Name		Persim Berry
+0002-berry_persim-0001|data.Desc		
+0002-berry_petaya-0000|data.Name		Petaya Berry
+0002-berry_petaya-0001|data.Desc		A mysterious Berry rumored to contain the power of all living things. It maximizes Special Attack.
+0002-berry_qualot-0000|data.Name		Qualot Berry
+0002-berry_qualot-0001|data.Desc		
+0002-berry_rawst-0000|data.Name		Rawst Berry
+0002-berry_rawst-0001|data.Desc		
+0002-berry_rindo-0000|data.Name		Rindo Berry
+0002-berry_rindo-0001|data.Desc		This berry has a disagreeable "green" flavor and scent typical of vegetables. It is rich in health-promoting fiber. It changes the Pokémon to the Grass-type.
+0002-berry_roseli-0000|data.Name		Roseli Berry
+0002-berry_roseli-0001|data.Desc		A mysterious berry. It changes the Pokémon to the Fairy-type.
+0002-berry_rowap-0000|data.Name		Rowap Berry
+0002-berry_rowap-0001|data.Desc		In days of old, people worked the top-shaped pieces of this berry free and used them as toys. If a special attack hits the Pokémon, the damage will be reflected to all enemies nearby.
+0002-berry_salac-0000|data.Name		Salac Berry
+0002-berry_salac-0001|data.Desc		A Berry surrounded by mystery, rumored to be imbued with the power of the sky. It maximizes Movement Speed.
+0002-berry_shuca-0000|data.Name		Shuca Berry
+0002-berry_shuca-0001|data.Desc		The sweetness-laden pulp has just the hint of a hard-edged and fragrant bite to it. It changes the Pokémon to the Ground-type.
+0002-berry_sitrus-0000|data.Name		Sitrus Berry
+0002-berry_sitrus-0001|data.Desc		A large berry with a well-rounded flavor. It gradually restores HP for a few turns.
+0002-berry_starf-0000|data.Name		Starf Berry
+0002-berry_starf-0001|data.Desc		So strong, it was abandoned at the world's edge. It is still considered a mirage to this very day. It sharply raises all stats.
+0002-berry_tamato-0000|data.Name		Tamato Berry
+0002-berry_tamato-0001|data.Desc		
+0002-berry_tanga-0000|data.Name		Tanga Berry
+0002-berry_tanga-0001|data.Desc		The flower grows at the tip of this berry. It attracts Bug Pokémon by letting its stringy petals stream out. It changes the Pokémon to the Bug-type.
+0002-berry_wacan-0000|data.Name		Wacan Berry
+0002-berry_wacan-0001|data.Desc		Energy from lightning strikes is drawn into the plant, making the berries grow big and rich. It changes the Pokémon to the Electric-type.
+0002-berry_yache-0000|data.Name		Yache Berry
+0002-berry_yache-0001|data.Desc		This berry has a refreshing flavor that strikes a good balance of dryness and sourness. It tastes better chilled. It changes the Pokémon to the Ice-type.
+0002-gummi_black-0000|data.Name		Black Gummi
+0002-gummi_black-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Dark-type Pokémon like it the most.
+0002-gummi_blue-0000|data.Name		Blue Gummi
+0002-gummi_blue-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Water-type Pokémon like it the most.
+0002-gummi_brown-0000|data.Name		Brown Gummi
+0002-gummi_brown-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ground-type Pokémon like it the most.
+0002-gummi_clear-0000|data.Name		Clear Gummi
+0002-gummi_clear-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ice-type Pokémon like it the most.
+0002-gummi_gold-0000|data.Name		Gold Gummi
+0002-gummi_gold-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Psychic-type Pokémon like it the most.
+0002-gummi_grass-0000|data.Name		Grass Gummi
+0002-gummi_grass-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Grass-type Pokémon like it the most.
+0002-gummi_gray-0000|data.Name		Gray Gummi
+0002-gummi_gray-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Rock-type Pokémon like it the most.
+0002-gummi_green-0000|data.Name		Green Gummi
+0002-gummi_green-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Bug-type Pokémon like it the most.
+0002-gummi_magenta-0000|data.Name		Magenta Gummi
+0002-gummi_magenta-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fairy-type Pokémon like it the most.
+0002-gummi_orange-0000|data.Name		Orange Gummi
+0002-gummi_orange-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fighting-type Pokémon like it the most.
+0002-gummi_pink-0000|data.Name		Pink Gummi
+0002-gummi_pink-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Poison-type Pokémon like it the most.
+0002-gummi_purple-0000|data.Name		Purple Gummi
+0002-gummi_purple-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ghost-type Pokémon like it the most.
+0002-gummi_red-0000|data.Name		Red Gummi
+0002-gummi_red-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fire-type Pokémon like it the most.
+0002-gummi_royal-0000|data.Name		Royal Gummi
+0002-gummi_royal-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Dragon-type Pokémon like it the most.
+0002-gummi_silver-0000|data.Name		Silver Gummi
+0002-gummi_silver-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Steel-type Pokémon like it the most.
+0002-gummi_sky-0000|data.Name		Sky Gummi
+0002-gummi_sky-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Flying-type Pokémon like it the most.
+0002-gummi_white-0000|data.Name		White Gummi
+0002-gummi_white-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Normal-type Pokémon like it the most.
+0002-gummi_wonder-0000|data.Name		Wonder Gummi
+0002-gummi_wonder-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats.
+0002-gummi_yellow-0000|data.Name		Yellow Gummi
+0002-gummi_yellow-0001|data.Desc		A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Electric-type Pokémon like it the most.
+0004-seed_ban-0000|data.Name		Ban Seed
+0004-seed_ban-0001|data.Desc		A seed that bans the last move used by the Pokémon, preventing anyone in the dungeon from using it.
+0004-seed_blast-0000|data.Name		Blast Seed
+0004-seed_blast-0001|data.Desc		A seed that causes the Pokémon to release a blast on the tile in front of it, causing damage.
+0004-seed_blinker-0000|data.Name		Blinker Seed
+0004-seed_blinker-0001|data.Desc		A seed that gives the Blinker status, reducing the Pokémon's Attack Range to its lowest level.
+0004-seed_decoy-0000|data.Name		Decoy Seed
+0004-seed_decoy-0001|data.Desc		A seed that gives the Pokémon the Decoy status, making it a target of everyone's attacks. Moves that target the team's inventory will always pick this item first.
+0004-seed_doom-0000|data.Name		Doom Seed
+0004-seed_doom-0001|data.Desc		A seed that reduces the Pokémon's level by 5.
+0004-seed_golden-0000|data.Name		Golden Seed
+0004-seed_golden-0001|data.Desc		A seed that raises the Pokémon's level by 3.
+0004-seed_hunger-0000|data.Name		Hunger Seed
+0004-seed_hunger-0001|data.Desc		A seed that makes the Pokémon's belly somewhat emptier.
+0004-seed_ice-0000|data.Name		Ice Seed
+0004-seed_ice-0001|data.Desc		A seed that freezes the Pokémon for many turns.
+0004-seed_joy-0000|data.Name		Joy Seed
+0004-seed_joy-0001|data.Desc		A seed that raises the Pokémon's level by 1.
+0004-seed_last_chance-0000|data.Name		Last-Chance Seed
+0004-seed_last_chance-0001|data.Desc		A seed that sets the PP of the Pokémon's moves to 1, and drastically raises its Attack, Special Attack, and Speed.
+0004-seed_plain-0000|data.Name		Plain Seed
+0004-seed_plain-0001|data.Desc		A seed that has no special effect.
+0004-seed_pure-0000|data.Name		Pure Seed
+0004-seed_pure-0001|data.Desc		A seed that warps the Pokémon close to the stairs.
+0004-seed_reviver-0000|data.Name		Reviver Seed
+0004-seed_reviver-0001|data.Desc		A seed that revives a fainted Pokémon, then becomes a Plain Seed after use.
+0004-seed_sleep-0000|data.Name		Sleep Seed
+0004-seed_sleep-0001|data.Desc		A seed that puts the Pokémon to sleep for many turns.
+0004-seed_spreader-0000|data.Name		Spreader Seed
+0004-seed_spreader-0001|data.Desc		A seed that causes the Pokémon to share the effects of moves used on it.
+0004-seed_training-0000|data.Name		Training Seed
+0004-seed_training-0001|data.Desc		
+0004-seed_vanish-0000|data.Name		Vanish Seed
+0004-seed_vanish-0001|data.Desc		
+0004-seed_vile-0000|data.Name		Vile Seed
+0004-seed_vile-0001|data.Desc		A seed that drastically lowers the Pokémon's Defense and Special Defense.
+0004-seed_warp-0000|data.Name		Warp Seed
+0004-seed_warp-0001|data.Desc		A seed that warps the Pokémon and its nearby allies to a different place on the floor.
+0005-herb_mental-0000|data.Name		Mental Herb
+0005-herb_mental-0001|data.Desc		An herb that removes all move-binding effects, and prevents moves from being sealed.
+0005-herb_power-0000|data.Name		Power Herb
+0005-herb_power-0001|data.Desc		An herb that allows the use of two-turn attacks in one turn, and prevents PP from dropping.
+0005-herb_white-0000|data.Name		White Herb
+0005-herb_white-0001|data.Desc		An herb that removes all stat changes, and prevents them from changing.
+0006-boost_calcium-0000|data.Name		Calcium
+0006-boost_calcium-0001|data.Desc		A drink that permanently raises the Pokémon's Special Attack.
+0006-boost_carbos-0000|data.Name		Carbos
+0006-boost_carbos-0001|data.Desc		A drink that permanently raises the Pokémon's Speed.
+0006-boost_hp_up-0000|data.Name		HP Up
+0006-boost_hp_up-0001|data.Desc		A drink that permanently raises the Pokémon's Maximum HP.
+0006-boost_iron-0000|data.Name		Iron
+0006-boost_iron-0001|data.Desc		A drink that permanently raises the Pokémon's Defense.
+0006-boost_nectar-0000|data.Name		Nectar
+0006-boost_nectar-0001|data.Desc		A drink that permanently raises the Pokémon's stats.
+0006-boost_protein-0000|data.Name		Protein
+0006-boost_protein-0001|data.Desc		A drink that permanently raises the Pokémon's Attack.
+0006-boost_zinc-0000|data.Name		Zinc
+0006-boost_zinc-0001|data.Desc		A drink that permanently raises the Pokémon's Special Defense.
+0006-medicine_amber_tear-0000|data.Name		Amber Tear
+0006-medicine_amber_tear-0001|data.Desc		An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises the Pokémon's chances of recruitment on the floor it's used.
+0007-medicine_dire_hit-0000|data.Name		Dire Hit
+0007-medicine_dire_hit-0001|data.Desc		An item that raises critical-hit ratio. It affects all team members up to 3 tiles away.
+0007-medicine_elixir-0000|data.Name		Elixir
+0007-medicine_elixir-0001|data.Desc		A spray-type medicine that somewhat restores PP. It affects all team members up to 5 tiles away.
+0007-medicine_full_heal-0000|data.Name		Full Heal
+0007-medicine_full_heal-0001|data.Desc		A spray-type medicine that cures status problems. It affects all team members up to 3 tiles away.
+0007-medicine_full_restore-0000|data.Name		Full Restore
+0007-medicine_full_restore-0001|data.Desc		
+0007-medicine_guard_spec-0000|data.Name		Guard Spec.
+0007-medicine_guard_spec-0001|data.Desc		
+0007-medicine_max_elixir-0000|data.Name		Max Elixir
+0007-medicine_max_elixir-0001|data.Desc		A spray-type medicine that completely restores PP. It affects all team members up to 3 tiles away.
+0007-medicine_max_potion-0000|data.Name		Max Potion
+0007-medicine_max_potion-0001|data.Desc		A spray-type medicine that fully restores HP. It affects all team members up to 3 tiles away.
+0007-medicine_potion-0000|data.Name		Potion
+0007-medicine_potion-0001|data.Desc		A spray-type medicine that somewhat restores HP. It affects all team members up to 5 tiles away.
+0007-medicine_x_accuracy-0000|data.Name		X Accuracy
+0007-medicine_x_accuracy-0001|data.Desc		An item that sharply raises Accuracy. It affects all team members up to 3 tiles away.
+0007-medicine_x_attack-0000|data.Name		X Attack
+0007-medicine_x_attack-0001|data.Desc		An item that sharply raises Attack. It affects all team members up to 3 tiles away.
+0007-medicine_x_defense-0000|data.Name		X Defense
+0007-medicine_x_defense-0001|data.Desc		An item that sharply raises Defense. It affects all team members up to 3 tiles away.
+0007-medicine_x_sp_atk-0000|data.Name		X Sp. Atk
+0007-medicine_x_sp_atk-0001|data.Desc		An item that sharply raises Special Attack. It affects all team members up to 3 tiles away.
+0007-medicine_x_sp_def-0000|data.Name		X Sp. Def
+0007-medicine_x_sp_def-0001|data.Desc		An item that sharply raises Special Defense. It affects all team members up to 3 tiles away.
+0007-medicine_x_speed-0000|data.Name		X Speed
+0007-medicine_x_speed-0001|data.Desc		An item that boosts Movement Speed by 1 stage. It affects all team members up to 3 tiles away.
+0008-apricorn_big-0000|data.Name		Big Apricorn
+0008-apricorn_big-0001|data.Desc		An apricorn with a pleasant scent. It can tossed at wild Pokémon as a gift for a high chance to recruit them into the team.
+0008-apricorn_black-0000|data.Name		Black Apricorn
+0008-apricorn_black-0001|data.Desc		An apricorn that can be tossed at Ghost- or Dark-type Pokémon as a gift for a high chance to recruit them into the team.
+0008-apricorn_blue-0000|data.Name		Blue Apricorn
+0008-apricorn_blue-0001|data.Desc		An apricorn that can be tossed at Water- or Ice-type Pokémon as a gift for a high chance to recruit them into the team.
+0008-apricorn_brown-0000|data.Name		Brown Apricorn
+0008-apricorn_brown-0001|data.Desc		An apricorn that can be tossed at Fighting-, Rock-, or Ground-type Pokémon as a gift for a high chance to recruit them into the team.
+0008-apricorn_green-0000|data.Name		Green Apricorn
+0008-apricorn_green-0001|data.Desc		An apricorn that can be tossed at Grass- or Bug-type Pokémon as a gift for a high chance to recruit them into the team.
+0008-apricorn_perfect-0000|data.Name		Perfect Apricorn
+0008-apricorn_perfect-0001|data.Desc		A beautiful apricorn with an indescribable scent. It can be tossed at wild Pokémon as a gift to recruit them into the team without any hesitation.
+0008-apricorn_plain-0000|data.Name		Plain Apricorn
+0008-apricorn_plain-0001|data.Desc		An apricorn with a pleasant scent. It can tossed at wild Pokémon of any type, as a gift to recruit them into the team.
+0008-apricorn_purple-0000|data.Name		Purple Apricorn
+0008-apricorn_purple-0001|data.Desc		An apricorn that can be tossed at Poison- or Psychic-type Pokémon as a gift for a high chance to recruit them into the team.
+0008-apricorn_red-0000|data.Name		Red Apricorn
+0008-apricorn_red-0001|data.Desc		An apricorn that can be tossed at Fire- or Dragon-type Pokémon as a gift for a high chance to recruit them into the team.
+0008-apricorn_white-0000|data.Name		White Apricorn
+0008-apricorn_white-0001|data.Desc		An apricorn that can be tossed at Normal-, Flying-, or Fairy-type Pokémon as a gift for a high chance to recruit them into the team.
+0008-apricorn_yellow-0000|data.Name		Yellow Apricorn
+0008-apricorn_yellow-0001|data.Desc		An apricorn that can be tossed at Electric- or Steel-type Pokémon as a gift for a high chance to recruit them into the team.
+0009-ammo_cacnea_spike-0000|data.Name		Cacnea Spike
+0009-ammo_cacnea_spike-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Attack of any Pokémon it hits.
+0009-ammo_corsola_twig-0000|data.Name		Corsola Twig
+0009-ammo_corsola_twig-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage and sharply lowers the Sp.Atk of any Pokémon it hits.
+0009-ammo_geo_pebble-0000|data.Name		Geo Pebble
+0009-ammo_geo_pebble-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target. It causes the target to flinch.
+0009-ammo_golden_thorn-0000|data.Name		Golden Thorn
+0009-ammo_golden_thorn-0001|data.Desc		A brilliantly shining thorn crafted from solid gold. It is a fantastically precious item that gives its owner serious bragging rights. When hurled, it flies in a straight line to inflict damage on any Pokémon it hits, scattering coins everywhere.
+0009-ammo_gravelerock-0000|data.Name		Gravelerock
+0009-ammo_gravelerock-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target's area.
+0009-ammo_iron_thorn-0000|data.Name		Iron Thorn
+0009-ammo_iron_thorn-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. Critical hits land more easily.
+0009-ammo_rare_fossil-0000|data.Name		Rare Fossil
+0009-ammo_rare_fossil-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target's area. It deals Special damage.
+0009-ammo_silver_spike-0000|data.Name		Silver Spike
+0009-ammo_silver_spike-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage to any Pokémon it hits, passing through walls.
+0009-ammo_stick-0000|data.Name		Stick
+0009-ammo_stick-0001|data.Desc		A weapon to be hurled. It flies in a straight line to inflict damage on any Pokémon it hits. It causes the target to flinch.
+0010-evo_chipped_pot-0000|data.Name		Chipped Pot
+0010-evo_chipped_pot-0001|data.Desc		A peculiar teapot that can make a certain species of Pokémon evolve. It may be chipped, but tea poured from it is delicious.
+0010-evo_cracked_pot-0000|data.Name		Cracked Pot
+0010-evo_cracked_pot-0001|data.Desc		A peculiar teapot that can make a certain species of Pokémon evolve. It may be cracked, but tea poured from it is delicious.
+0010-evo_dawn_stone-0000|data.Name		Dawn Stone
+0010-evo_dawn_stone-0001|data.Desc		An odd stone that glints like an eye. It allows certain kinds of Pokémon to evolve.
+0010-evo_deep_sea_scale-0000|data.Name		Deep Sea Scale
+0010-evo_deep_sea_scale-0001|data.Desc		A pretty scale that shines faintly. It allows a certain kind of Pokémon to evolve.
+0010-evo_deep_sea_tooth-0000|data.Name		Deep Sea Tooth
+0010-evo_deep_sea_tooth-0001|data.Desc		A supersharp fang with a subtle gleam. It allows a certain kind of Pokémon to evolve.
+0010-evo_dubious_disc-0000|data.Name		Dubious Disc
+0010-evo_dubious_disc-0001|data.Desc		An enigmatic disc that overflows with dubious data. It allows a certain kind of Pokémon to evolve.
+0010-evo_dusk_stone-0000|data.Name		Dusk Stone
+0010-evo_dusk_stone-0001|data.Desc		An odd stone with a mesmerizing darkness. It allows certain kinds of Pokémon to evolve.
+0010-evo_electirizer-0000|data.Name		Electirizer
+0010-evo_electirizer-0001|data.Desc		A box full of a massive amount of electric energy. It allows a certain kind of Pokémon to evolve.
+0010-evo_everstone-0000|data.Name		Everstone
+0010-evo_everstone-0001|data.Desc		
+0010-evo_fire_stone-0000|data.Name		Fire Stone
+0010-evo_fire_stone-0001|data.Desc		A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fire-type.
+0010-evo_harmony_scarf-0000|data.Name		Harmony Scarf
+0010-evo_harmony_scarf-0001|data.Desc		A scarf woven from the fibers of a legendary tree. It allows the Pokémon to evolve, regardless of its requirements.
+0010-evo_ice_stone-0000|data.Name		Ice Stone
+0010-evo_ice_stone-0001|data.Desc		A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks to Ice-type.
+0010-evo_kings_rock-0000|data.Name		King's Rock
+0010-evo_kings_rock-0001|data.Desc		An impressive icon that conveys a kingly nobility. When the holder successfully inflicts damage, the target may also flinch.
+0010-evo_leaf_stone-0000|data.Name		Leaf Stone
+0010-evo_leaf_stone-0001|data.Desc		A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Grass-type.
+0010-evo_link_cable-0000|data.Name		Link Cable
+0010-evo_link_cable-0001|data.Desc		An intriguing cable used for linking unknown devices. It allows a certain kind of Pokémon to evolve.
+0010-evo_lunar_ribbon-0000|data.Name		Lunar Ribbon
+0010-evo_lunar_ribbon-0001|data.Desc		A ribbon infused with moonlight. It allows a certain kind of Pokémon to evolve.
+0010-evo_magmarizer-0000|data.Name		Magmarizer
+0010-evo_magmarizer-0001|data.Desc		A box brimming with a huge amount of magma energy. It allows a certain kind of Pokémon to evolve.
+0010-evo_moon_stone-0000|data.Name		Moon Stone
+0010-evo_moon_stone-0001|data.Desc		An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fairy-type.
+0010-evo_oval_stone-0000|data.Name		Oval Stone
+0010-evo_oval_stone-0001|data.Desc		A surprisingly smooth, rounded stone. It allows a certain kind of Pokémon to evolve.
+0010-evo_prism_scale-0000|data.Name		Prism Scale
+0010-evo_prism_scale-0001|data.Desc		A mysterious scale that shines in rainbow colors. It allows a certain kind of Pokémon to evolve.
+0010-evo_protector-0000|data.Name		Protector
+0010-evo_protector-0001|data.Desc		A heavy, durable piece of protective equipment. It allows a certain kind of Pokémon to evolve.
+0010-evo_razor_claw-0000|data.Name		Razor Claw
+0010-evo_razor_claw-0001|data.Desc		A wickedly sharp claw perfect for raking enemies. It increases the holder’s critical-hit ratio.
+0010-evo_razor_fang-0000|data.Name		Razor Fang
+0010-evo_razor_fang-0001|data.Desc		A savagely sharp, piercing fang. When the holder successfully inflicts damage, the target may also flinch.
+0010-evo_reaper_cloth-0000|data.Name		Reaper Cloth
+0010-evo_reaper_cloth-0001|data.Desc		An eerie cloth imbued with horrifyingly strong spiritual energy. It allows a certain kind of Pokémon to evolve.
+0010-evo_shiny_stone-0000|data.Name		Shiny Stone
+0010-evo_shiny_stone-0001|data.Desc		An odd stone that shines with dazzling light. It allows certain kinds of Pokémon to evolve.
+0010-evo_sun_ribbon-0000|data.Name		Sun Ribbon
+0010-evo_sun_ribbon-0001|data.Desc		A ribbon infused with sunshine. It allows a certain kind of Pokémon to evolve.
+0010-evo_sun_stone-0000|data.Name		Sun Stone
+0010-evo_sun_stone-0001|data.Desc		An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Psychic-type.
+0010-evo_thunder_stone-0000|data.Name		Thunder Stone
+0010-evo_thunder_stone-0001|data.Desc		A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Electric-type.
+0010-evo_up_grade-0000|data.Name		Up-Grade
+0010-evo_up_grade-0001|data.Desc		A mysterious device filled with all sorts of data. It allows a certain kind of Pokémon to evolve.
+0010-evo_water_stone-0000|data.Name		Water Stone
+0010-evo_water_stone-0001|data.Desc		A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Water-type.
+0010-held_assault_vest-0000|data.Name		Assault Vest
+0010-held_assault_vest-0001|data.Desc		An offensive vest that raises Special Defense, but prevents the use of status moves. This item sticks when held.
+0010-held_big_root-0000|data.Name		Big Root
+0010-held_big_root-0001|data.Desc		A held item that increases HP recovery.
+0010-held_binding_band-0000|data.Name		Binding Band
+0010-held_binding_band-0001|data.Desc		A band that increases the power of binding moves used by the holder.
+0010-held_black_belt-0000|data.Name		Black Belt
+0010-held_black_belt-0001|data.Desc		An item to be held by a Pokémon. This belt helps the wearer to focus and boosts the power of Fighting-type moves.
+0010-held_black_glasses-0000|data.Name		Black Glasses
+0010-held_black_glasses-0001|data.Desc		An item to be held by a Pokémon. A pair of shady-looking glasses that boost the power of Dark-type moves.
+0010-held_black_sludge-0000|data.Name		Black Sludge
+0010-held_black_sludge-0001|data.Desc		A held item that increases the HP regeneration of Poison-types, but prevents it for any other type. This item sticks when held.
+0010-held_blank_plate-0000|data.Name		Blank Plate
+0010-held_blank_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Normal-type moves.
+0010-held_charcoal-0000|data.Name		Charcoal
+0010-held_charcoal-0001|data.Desc		An item to be held by a Pokémon. It is a combustible fuel that boosts the power of Fire-type moves.
+0010-held_choice_band-0000|data.Name		Choice Band
+0010-held_choice_band-0001|data.Desc		A curious headband that boosts Attack, but only allows the use of one move. This item sticks when held.
+0010-held_choice_scarf-0000|data.Name		Choice Scarf
+0010-held_choice_scarf-0001|data.Desc		A curious scarf that boosts Movement Speed, but only allows the use of one move. This item sticks when held.
+0010-held_choice_specs-0000|data.Name		Choice Specs
+0010-held_choice_specs-0001|data.Desc		Distinctive glasses that boost Special Attack, but only allows the use of one move. This item sticks when held.
+0010-held_cover_band-0000|data.Name		Cover Band
+0010-held_cover_band-0001|data.Desc		An item to be held by a Pokémon. While the holder's HP is at half or above, it will take attacks for nearby allies.
+0010-held_defense_scarf-0000|data.Name		Defense Scarf
+0010-held_defense_scarf-0001|data.Desc		A hold item that slightly boosts the Pokémon's Defense.
+0010-held_draco_plate-0000|data.Name		Draco Plate
+0010-held_draco_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Dragon-type moves.
+0010-held_dragon_scale-0000|data.Name		Dragon Scale
+0010-held_dragon_scale-0001|data.Desc		An item to be held by a Pokémon. This thick, tough scale boosts the power of Dragon-type moves.
+0010-held_dread_plate-0000|data.Name		Dread Plate
+0010-held_dread_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Dark-type moves.
+0010-held_earth_plate-0000|data.Name		Earth Plate
+0010-held_earth_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ground-type moves.
+0010-held_expert_belt-0000|data.Name		Expert Belt
+0010-held_expert_belt-0001|data.Desc		A well-worn belt that boosts the power of super-effective moves.
+0010-held_fist_plate-0000|data.Name		Fist Plate
+0010-held_fist_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Fighting-type moves.
+0010-held_flame_orb-0000|data.Name		Flame Orb
+0010-held_flame_orb-0001|data.Desc		A bizarre orb that will afflict the holder with a burn. This item sticks when held.
+0010-held_flame_plate-0000|data.Name		Flame Plate
+0010-held_flame_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Fire-type moves.
+0010-held_friend_bow-0000|data.Name		Friend Bow
+0010-held_friend_bow-0001|data.Desc		A held item that makes it easier for team members to recruit lower-leveled wild Pokémon.
+0010-held_goggle_specs-0000|data.Name		Goggle Specs
+0010-held_goggle_specs-0001|data.Desc		A held item that enables the Pokémon to identify traps on the floor.
+0010-held_golden_mask-0000|data.Name		Golden Mask
+0010-held_golden_mask-0001|data.Desc		A held item that makes it easier for team members to recruit wild Pokémon.
+0010-held_grip_claw-0000|data.Name		Grip Claw
+0010-held_grip_claw-0001|data.Desc		An item that increases the duration of binding moves used by the holder.
+0010-held_hard_stone-0000|data.Name		Hard Stone
+0010-held_hard_stone-0001|data.Desc		An item to be held by a Pokémon. It is a durable stone that boosts the power of Rock-type moves.
+0010-held_heal_ribbon-0000|data.Name		Heal Ribbon
+0010-held_heal_ribbon-0001|data.Desc		A held item that speeds up the Pokémon's natural HP recovery. This item sticks when held.
+0010-held_icicle_plate-0000|data.Name		Icicle Plate
+0010-held_icicle_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ice-type moves.
+0010-held_insect_plate-0000|data.Name		Insect Plate
+0010-held_insect_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Bug-type moves.
+0010-held_iron_ball-0000|data.Name		Iron Ball
+0010-held_iron_ball-0001|data.Desc		A held item that weighs the Pokémon down, and allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.
+0010-held_iron_plate-0000|data.Name		Iron Plate
+0010-held_iron_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Steel-type moves.
+0010-held_life_orb-0000|data.Name		Life Orb
+0010-held_life_orb-0001|data.Desc		A held item that boosts the power of moves, but at the cost of some HP on each use. This item sticks when held.
+0010-held_magnet-0000|data.Name		Magnet
+0010-held_magnet-0001|data.Desc		An item to be held by a Pokémon. It is a powerful magnet that boosts the power of Electric-type moves.
+0010-held_meadow_plate-0000|data.Name		Meadow Plate
+0010-held_meadow_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Grass-type moves.
+0010-held_metal_coat-0000|data.Name		Metal Coat
+0010-held_metal_coat-0001|data.Desc		An item to be held by a Pokémon. It is a special metallic film that can boost the power of Steel-type moves.
+0010-held_metronome-0000|data.Name		Metronome
+0010-held_metronome-0001|data.Desc		An item to be held by a Pokémon. It boosts moves used consecutively, but only until a different move is used.
+0010-held_mind_plate-0000|data.Name		Mind Plate
+0010-held_mind_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Psychic-type moves.
+0010-held_miracle_seed-0000|data.Name		Miracle Seed
+0010-held_miracle_seed-0001|data.Desc		An item to be held by a Pokémon. It is a seed imbued with life force that boosts the power of Grass-type moves.
+0010-held_mobile_scarf-0000|data.Name		Mobile Scarf
+0010-held_mobile_scarf-0001|data.Desc		A held item that enables the Pokémon to move through walls.
+0010-held_mystic_water-0000|data.Name		Mystic Water
+0010-held_mystic_water-0001|data.Desc		An item to be held by a Pokémon. This teardrop-shaped gem boosts the power of Water-type moves.
+0010-held_never_melt_ice-0000|data.Name		Never-Melt Ice
+0010-held_never_melt_ice-0001|data.Desc		An item to be held by a Pokémon. It's a piece of ice that repels heat effects and boosts Ice-type moves.
+0010-held_pass_scarf-0000|data.Name		Pass Scarf
+0010-held_pass_scarf-0001|data.Desc		A held item that causes the Pokémon to shrug off any damaging moves and pass them on to an adjacent Pokémon.
+0010-held_pierce_band-0000|data.Name		Pierce Band
+0010-held_pierce_band-0001|data.Desc		A headband that allows the Pokémon's moves and items to hit through multiple targets.
+0010-held_pink_bow-0000|data.Name		Pink Bow
+0010-held_pink_bow-0001|data.Desc		An item to be held by a Pokémon. It's a cute bow that boosts the power of Fairy-type moves.
+0010-held_pixie_plate-0000|data.Name		Pixie Plate
+0010-held_pixie_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Fairy-type moves.
+0010-held_poison_barb-0000|data.Name		Poison Barb
+0010-held_poison_barb-0001|data.Desc		An item to be held by a Pokémon. This small, poisonous barb boosts the power of Poison-type moves.
+0010-held_power_band-0000|data.Name		Power Band
+0010-held_power_band-0001|data.Desc		A hold item that slightly boosts the Pokémon's Attack.
+0010-held_reunion_cape-0000|data.Name		Reunion Cape
+0010-held_reunion_cape-0001|data.Desc		A held item that warps the Pokémon to its teammate or leader when attacked.
+0010-held_ring_target-0000|data.Name		Ring Target
+0010-held_ring_target-0001|data.Desc		A held item that removes the Pokémon's type immunities. This item sticks when held.
+0010-held_scope_lens-0000|data.Name		Scope Lens
+0010-held_scope_lens-0001|data.Desc		A lens used for scoping out weak points. It boosts the holder’s critical-hit ratio.
+0010-held_sharp_beak-0000|data.Name		Sharp Beak
+0010-held_sharp_beak-0001|data.Desc		An item to be held by a Pokémon. It's a long, sharp beak that boosts the power of Flying-type moves.
+0010-held_shed_shell-0000|data.Name		Shed Shell
+0010-held_shed_shell-0001|data.Desc		A tough, discarded carapace that prevents the holder from being immobilized.
+0010-held_shell_bell-0000|data.Name		Shell Bell
+0010-held_shell_bell-0001|data.Desc		A held item that restores a little HP to the holder every time it inflicts damage on others.
+0010-held_silk_scarf-0000|data.Name		Silk Scarf
+0010-held_silk_scarf-0001|data.Desc		An item to be held by a Pokémon. It's a sumptuous scarf that boosts the power of Normal-type moves.
+0010-held_silver_powder-0000|data.Name		Silver Powder
+0010-held_silver_powder-0001|data.Desc		An item to be held by a Pokémon. It is a shiny, silver powder that will boost the power of Bug-type moves.
+0010-held_sky_plate-0000|data.Name		Sky Plate
+0010-held_sky_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Flying-type moves.
+0010-held_soft_sand-0000|data.Name		Soft Sand
+0010-held_soft_sand-0001|data.Desc		An item to be held by a Pokémon. It is a loose, silky sand that boosts the power of Ground-type moves.
+0010-held_special_band-0000|data.Name		Special Band
+0010-held_special_band-0001|data.Desc		A hold item that slightly boosts the Pokémon's Special Attack.
+0010-held_spell_tag-0000|data.Name		Spell Tag
+0010-held_spell_tag-0001|data.Desc		An item to be held by a Pokémon. It is a sinister, eerie tag that boosts the power of Ghost-type moves.
+0010-held_splash_plate-0000|data.Name		Splash Plate
+0010-held_splash_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Water-type moves.
+0010-held_spooky_plate-0000|data.Name		Spooky Plate
+0010-held_spooky_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ghost-type moves.
+0010-held_sticky_barb-0000|data.Name		Sticky Barb
+0010-held_sticky_barb-0001|data.Desc		A held item that damages the holder and sticks when held. It may latch on to Pokémon that make contact with the holder.
+0010-held_stone_plate-0000|data.Name		Stone Plate
+0010-held_stone_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Rock-type moves.
+0010-held_toxic_orb-0000|data.Name		Toxic Orb
+0010-held_toxic_orb-0001|data.Desc		A bizarre orb that will badly poison the holder. This item sticks when held.
+0010-held_toxic_plate-0000|data.Name		Toxic Plate
+0010-held_toxic_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Poison-type moves.
+0010-held_trap_scarf-0000|data.Name		Trap Scarf
+0010-held_trap_scarf-0001|data.Desc		A held item that prevents the Pokémon from setting off traps.
+0010-held_twist_band-0000|data.Name		Twist Band
+0010-held_twist_band-0001|data.Desc		A held item that prevents the Pokémon's Attack and Special Attack from being reduced.
+0010-held_twisted_spoon-0000|data.Name		Twisted Spoon
+0010-held_twisted_spoon-0001|data.Desc		An item to be held by a Pokémon. This spoon is imbued with telekinetic power and boosts Psychic-type moves.
+0010-held_warp_scarf-0000|data.Name		Warp Scarf
+0010-held_warp_scarf-0001|data.Desc		A held item that warps the Pokémon to another place on the floor after being attacked.
+0010-held_weather_rock-0000|data.Name		Weather Rock
+0010-held_weather_rock-0001|data.Desc		An item that increases the duration of weather moves used by the holder.
+0010-held_wide_lens-0000|data.Name		Wide Lens
+0010-held_wide_lens-0001|data.Desc		A magnifying lens that boosts the Pokémon's Attack Range.
+0010-held_x_ray_specs-0000|data.Name		X-Ray Specs
+0010-held_x_ray_specs-0001|data.Desc		A held item that enables the Pokémon to see enemies through heavy darkness.
+0010-held_zap_plate-0000|data.Name		Zap Plate
+0010-held_zap_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Electric-type moves.
+0010-held_zinc_band-0000|data.Name		Zinc Band
+0010-held_zinc_band-0001|data.Desc		A hold item that slightly boosts the Pokémon's Special Defense.
+0011-wand_fear-0000|data.Name		Fear Wand
+0011-wand_fear-0001|data.Desc		A wand to be waved at a Pokémon. It causes the target to flinch.
+0011-wand_infatuation-0000|data.Name		Infatuation Wand
+0011-wand_infatuation-0001|data.Desc		A wand to be waved at Pokémon of the opposite gender. It causes the target to become attracted to the user.
+0011-wand_lob-0000|data.Name		Lob Wand
+0011-wand_lob-0001|data.Desc		A wand to be waved at a Pokémon. It inflicts damage on any Pokémon in a straight line, passing through walls.
+0011-wand_lure-0000|data.Name		Lure Wand
+0011-wand_lure-0001|data.Desc		A wand to be waved at a Pokémon. It causes the target to warp in front of the user.
+0011-wand_path-0000|data.Name		Path Wand
+0011-wand_path-0001|data.Desc		A wand to be waved at terrain features. It clears obstacles to form a path directly in front of the user.
+0011-wand_pounce-0000|data.Name		Pounce Wand
+0011-wand_pounce-0001|data.Desc		A wand to be waved at a Pokémon or wall. It causes the user to jump to that location.
+0011-wand_purge-0000|data.Name		Purge Wand
+0011-wand_purge-0001|data.Desc		A wand to be waved at a Pokémon. It removes all stat boosts and damages the target for each stat boosted. Stat drops will heal the target instead.
+0011-wand_slow-0000|data.Name		Slow Wand
+0011-wand_slow-0001|data.Desc		A wand to be waved at a Pokémon. It reduces the Movement Speed of the target by 1 level.
+0011-wand_stayaway-0000|data.Name		Stayaway Wand
+0011-wand_stayaway-0001|data.Desc		A wand to be waved at enemy Pokémon. It warps the target to the nearest stairway, and puts it into a deep sleep.
+0011-wand_surround-0000|data.Name		Surround Wand
+0011-wand_surround-0001|data.Desc		A wand to be waved at a Pokémon. It causes the user's allies to warp to the target.
+0011-wand_switcher-0000|data.Name		Switcher Wand
+0011-wand_switcher-0001|data.Desc		A wand to be waved at a Pokémon. It causes the user to switch places with the target.
+0011-wand_topsy_turvy-0000|data.Name		Topsy-Turvy Wand
+0011-wand_topsy_turvy-0001|data.Desc		A wand to be waved at a Pokémon. It reverses all stat changes on the target.
+0011-wand_totter-0000|data.Name		Totter Wand
+0011-wand_totter-0001|data.Desc		A wand to be waved at a Pokémon. It causes the target to become briefly confused.
+0011-wand_transfer-0000|data.Name		Transfer Wand
+0011-wand_transfer-0001|data.Desc		A wand to be waved at a Pokémon. It transforms the target into the same Pokémon as the user.
+0011-wand_vanish-0000|data.Name		Vanish Wand
+0011-wand_vanish-0001|data.Desc		A wand to be waved at a Pokémon. It temporarily makes the target invisible.
+0011-wand_warp-0000|data.Name		Warp Wand
+0011-wand_warp-0001|data.Desc		A wand to be waved at a Pokémon. It warps the target to a different place on the floor.
+0011-wand_whirlwind-0000|data.Name		Whirlwind Wand
+0011-wand_whirlwind-0001|data.Desc		A wand to be waved at a Pokémon. It knocks the target back.
+0012-orb_all_aim-0000|data.Name		All-Aim Orb
+0012-orb_all_aim-0001|data.Desc		An orb that ensures that all of the team's attacks hit.
+0012-orb_all_dodge-0000|data.Name		All-Dodge Orb
+0012-orb_all_dodge-0001|data.Desc		An orb that drastically boosts Evasion. It affects team members up to 5 tiles away.
+0012-orb_all_hit-0000|data.Name		All-Hit Orb
+0012-orb_all_hit-0001|data.Desc		
+0012-orb_all_power_up-0000|data.Name		All Power-Up Orb
+0012-orb_all_power_up-0001|data.Desc		
+0012-orb_all_protect-0000|data.Name		All Protect Orb
+0012-orb_all_protect-0001|data.Desc		An orb that protects the team from all attacks for several turns.
+0012-orb_cleanse-0000|data.Name		Cleanse Orb
+0012-orb_cleanse-0001|data.Desc		An orb that un-sticks the team's items, allowing them to be removed.
+0012-orb_devolve-0000|data.Name		Devolve Orb
+0012-orb_devolve-0001|data.Desc		An orb that devolves all enemies up to 5 tiles away.
+0012-orb_endure-0000|data.Name		Endure Orb
+0012-orb_endure-0001|data.Desc		An orb that allows the team to endure any attack with at least 1 HP.
+0012-orb_escape-0000|data.Name		Escape Orb
+0012-orb_escape-0001|data.Desc		An orb that allows the team to instantly warp out of the dungeon.
+0012-orb_fill_in-0000|data.Name		Fill-In Orb
+0012-orb_fill_in-0001|data.Desc		An orb that fills in all holes on the floor, removing all gullies, water, or lava.
+0012-orb_foe_hold-0000|data.Name		Foe-Hold Orb
+0012-orb_foe_hold-0001|data.Desc		An orb that immobilizes all enemies for many turns. It affects all enemies up to 5 tiles away.
+0012-orb_foe_seal-0000|data.Name		Foe-Seal Orb
+0012-orb_foe_seal-0001|data.Desc		An orb that seals the last-used move of all enemies. It affects all enemies up to 5 tiles away.
+0012-orb_freeze-0000|data.Name		Freeze Orb
+0012-orb_freeze-0001|data.Desc		An orb that freezes all enemies. It affects all enemies up to 5 tiles away.
+0012-orb_halving-0000|data.Name		Halving Orb
+0012-orb_halving-0001|data.Desc		An orb that halves the HP of all enemies. It affects all enemies up to 5 tiles away.
+0012-orb_health-0000|data.Name		Health Orb
+0012-orb_health-0001|data.Desc		
+0012-orb_invert-0000|data.Name		Invert Orb
+0012-orb_invert-0001|data.Desc		An orb that temporarily reverses all type matchups.
+0012-orb_invisify-0000|data.Name		Invisify Orb
+0012-orb_invisify-0001|data.Desc		An orb that temporarily makes the user's team invisible.
+0012-orb_itemizer-0000|data.Name		Itemizer Orb
+0012-orb_itemizer-0001|data.Desc		An orb that transforms the target into an item. It affects the enemy in front.
+0012-orb_luminous-0000|data.Name		Luminous Orb
+0012-orb_luminous-0001|data.Desc		A mapping orb that reveals the entire floor.
+0012-orb_mirror-0000|data.Name		Mirror Orb
+0012-orb_mirror-0001|data.Desc		An orb that protects the team with a barrier that reflects status moves.
+0012-orb_mobile-0000|data.Name		Mobile Orb
+0012-orb_mobile-0001|data.Desc		An orb that allows the user's team to move through walls.
+0012-orb_mug-0000|data.Name		Mug Orb
+0012-orb_mug-0001|data.Desc		An orb that pulls all items held by enemy Pokémon to the user.
+0012-orb_nullify-0000|data.Name		Nullify Orb
+0012-orb_nullify-0001|data.Desc		An orb that nullifies the Abilities of all enemies up to 5 tiles away.
+0012-orb_one_room-0000|data.Name		One-Room Orb
+0012-orb_one_room-0001|data.Desc		A destructive orb that tears down all walls on the floor, turning the floor into one vast, open room.
+0012-orb_one_shot-0000|data.Name		One-Shot Orb
+0012-orb_one_shot-0001|data.Desc		An orb that causes the target to instantly faint, if it hits. It affects all enemies up to 5 tiles away.
+0012-orb_petrify-0000|data.Name		Petrify Orb
+0012-orb_petrify-0001|data.Desc		An orb that paralyzes all enemies. It affects all enemies up to 5 tiles away.
+0012-orb_pierce-0000|data.Name		Pierce Orb
+0012-orb_pierce-0001|data.Desc		An orb that allows the team's attacks and items to pierce through multiple targets.
+0012-orb_rebound-0000|data.Name		Rebound Orb
+0012-orb_rebound-0001|data.Desc		An orb that gives the team the Mini-Counter status. If an attack hits any member of the team, the damage will be reflected back at the user.
+0012-orb_revival-0000|data.Name		Revival Orb
+0012-orb_revival-0001|data.Desc		An orb that revives all team members that have fainted.
+0012-orb_rollcall-0000|data.Name		Rollcall Orb
+0012-orb_rollcall-0001|data.Desc		A warping orb that draws all teammates to the user.
+0012-orb_scanner-0000|data.Name		Scanner Orb
+0012-orb_scanner-0001|data.Desc		An orb that reveals the location of all items and enemies on the floor.
+0012-orb_slow-0000|data.Name		Slow Orb
+0012-orb_slow-0001|data.Desc		An orb that reduces the Movement Speed of all enemies by 1 level. It affects all enemies up to 5 tiles away.
+0012-orb_slumber-0000|data.Name		Slumber Orb
+0012-orb_slumber-0001|data.Desc		An orb that puts all enemies to sleep. It affects all enemies up to 5 tiles away.
+0012-orb_spurn-0000|data.Name		Spurn Orb
+0012-orb_spurn-0001|data.Desc		An orb that warps all enemies to random locations on the floor. It affects all enemies up to 5 tiles away.
+0012-orb_stayaway-0000|data.Name		Stayaway Orb
+0012-orb_stayaway-0001|data.Desc		An orb that warps enemies to the nearest stairway, and puts them all into a deep sleep. It affects all enemies up to 5 tiles away.
+0012-orb_totter-0000|data.Name		Totter Orb
+0012-orb_totter-0001|data.Desc		An orb that confuses all enemies. It affects all enemies up to 5 tiles away.
+0012-orb_trap_see-0000|data.Name		Trap-See Orb
+0012-orb_trap_see-0001|data.Desc		An orb that reveals all traps on the floor.
+0012-orb_trapbust-0000|data.Name		Trapbust Orb
+0012-orb_trapbust-0001|data.Desc		An orb that destroys all traps on the floor.
+0012-orb_trawl-0000|data.Name		Trawl Orb
+0012-orb_trawl-0001|data.Desc		An orb that pulls unclaimed items on the floor to the user.
+0012-orb_weather-0000|data.Name		Weather Orb
+0012-orb_weather-0001|data.Desc		A climate-control orb that changes the dungeon floor's condition depending on the user's type.
+0013-food_grimy-0000|data.Name		Grimy Food
+0013-food_grimy-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also inflict a variety of status problems because it's covered in filthy grime. Be careful of what you eat!
+0013-food_grimy_2-0000|data.Name		Grimy Food
+0013-food_grimy_2-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.
+0013-key-0000|data.Name		Key
+0013-key-0001|data.Desc		A key that unlocks a chest or door inside a dungeon.
+0013-key_ancient-0000|data.Name		Ancient Key
+0013-key_ancient-0001|data.Desc		A key that unlocks an ancient door inside a dungeon.
+0013-loot_adamant_orb-0000|data.Name		Adamant Orb
+0013-loot_adamant_orb-0001|data.Desc		
+0013-loot_berserk_gene-0000|data.Name		Berserk Gene
+0013-loot_berserk_gene-0001|data.Desc		
+0013-loot_blue_orb-0000|data.Name		Blue Orb
+0013-loot_blue_orb-0001|data.Desc		
+0013-loot_gracidea-0000|data.Name		Gracidea
+0013-loot_gracidea-0001|data.Desc		A beautiful flower that blooms in the Secret Garden. It can be used on Shaymin once per floor to cause a Forme change.
+0013-loot_green_orb-0000|data.Name		Green Orb
+0013-loot_green_orb-0001|data.Desc		
+0013-loot_griseous_orb-0000|data.Name		Griseous Orb
+0013-loot_griseous_orb-0001|data.Desc		A glowing orb can be used on Giratina once per floor to cause a Forme change.
+0013-loot_heart_scale-0000|data.Name		Heart Scale
+0013-loot_heart_scale-0001|data.Desc		A pretty, heart-shaped scale that is extremely rare. It glows faintly with all of the colors of the rainbow.
+0013-loot_lustrous_orb-0000|data.Name		Lustrous Orb
+0013-loot_lustrous_orb-0001|data.Desc		
+0013-loot_meteorite-0000|data.Name		Meteorite
+0013-loot_meteorite-0001|data.Desc		A meteorite that fell from space long ago. It can be used on Deoxys once per floor to cause a Forme change.
+0013-loot_mystery_part-0000|data.Name		Mystery Part
+0013-loot_mystery_part-0001|data.Desc		
+0013-loot_nugget-0000|data.Name		Nugget
+0013-loot_nugget-0001|data.Desc		A nugget of pure gold. It sells for a very high price.
+0013-loot_pearl-0000|data.Name		Pearl
+0013-loot_pearl-0001|data.Desc		A rather small pearl that has a very nice silvery sheen to it. It sells for a moderately high price.
+0013-loot_red_orb-0000|data.Name		Red Orb
+0013-loot_red_orb-0001|data.Desc		
+0013-loot_spacetime_globe-0000|data.Name		Spacetime Globe
+0013-loot_spacetime_globe-0001|data.Desc		
+0013-machine_ability_capsule-0000|data.Name		Ability Capsule
+0013-machine_ability_capsule-0001|data.Desc		A capsule that allows a Pokémon to change its Abilities when used.
+0013-machine_assembly_box-0000|data.Name		Assembly Box
+0013-machine_assembly_box-0001|data.Desc		A marvelous box that lets the user add any Pokémon from the assembly to the team.
+0013-machine_recall_box-0000|data.Name		Recall Box
+0013-machine_recall_box-0001|data.Desc		A marvelous box that lets the user recall any move they've learned in the past.
+0013-machine_storage_box-0000|data.Name		Storage Box
+0013-machine_storage_box-0001|data.Desc		A marvelous box that lets the user add any item from storage into the Treasure Bag.
+0014-box_dainty-0000|data.Name		Dainty Box
+0014-box_dainty-0001|data.Desc		A box that is dainty and fashionable. There is something tasty inside!
+0014-box_deluxe-0000|data.Name		Deluxe Box
+0014-box_deluxe-0001|data.Desc		A box that is extravagant and opulent. It looks like something is inside.
+0014-box_glittery-0000|data.Name		Glittery Box
+0014-box_glittery-0001|data.Desc		A box that glitters with dazzling light. Whatever's inside is sure to sell for a high price!
+0014-box_heavy-0000|data.Name		Heavy Box
+0014-box_heavy-0001|data.Desc		A box that is unbelievably heavy. Specific Pokémon adore the items inside.
+0014-box_light-0000|data.Name		Light Box
+0014-box_light-0001|data.Desc		A box that is somewhat light. Specific Pokémon adore the items inside.
+0014-box_nifty-0000|data.Name		Nifty Box
+0014-box_nifty-0001|data.Desc		A box that is completely impressive. There is something mysterious inside.
+0016-xcl_element_bug_dust-0000|data.Name		Wonder Dust
+0016-xcl_element_bug_gem-0000|data.Name		Guard Gem
+0016-xcl_element_bug_globe-0000|data.Name		Defend Globe
+0016-xcl_element_bug_silk-0000|data.Name		Green Silk
+0016-xcl_element_dark_dust-0000|data.Name		Dark Dust
+0016-xcl_element_dark_gem-0000|data.Name		Dark Gem
+0016-xcl_element_dark_globe-0000|data.Name		Dusk Globe
+0016-xcl_element_dark_silk-0000|data.Name		Black Silk
+0016-xcl_element_dragon_dust-0000|data.Name		Dragon Dust
+0016-xcl_element_dragon_gem-0000|data.Name		Dragon Gem
+0016-xcl_element_dragon_globe-0000|data.Name		Dragon Globe
+0016-xcl_element_dragon_silk-0000|data.Name		Royal Silk
+0016-xcl_element_electric_dust-0000|data.Name		Thunder Dust
+0016-xcl_element_electric_gem-0000|data.Name		Thunder Gem
+0016-xcl_element_electric_globe-0000|data.Name		Volt Globe
+0016-xcl_element_electric_silk-0000|data.Name		Yellow Silk
+0016-xcl_element_fairy_dust-0000|data.Name		Fairy Dust
+0016-xcl_element_fairy_gem-0000|data.Name		Fairy Gem
+0016-xcl_element_fairy_globe-0000|data.Name		Fairy Globe
+0016-xcl_element_fairy_silk-0000|data.Name		Magenta Silk
+0016-xcl_element_fighting_dust-0000|data.Name		Courage Dust
+0016-xcl_element_fighting_gem-0000|data.Name		Fight Gem
+0016-xcl_element_fighting_globe-0000|data.Name		Power Globe
+0016-xcl_element_fighting_silk-0000|data.Name		Orange Silk
+0016-xcl_element_fire_dust-0000|data.Name		Fire Dust
+0016-xcl_element_fire_gem-0000|data.Name		Fiery Gem
+0016-xcl_element_fire_globe-0000|data.Name		Fiery Globe
+0016-xcl_element_fire_silk-0000|data.Name		Red Silk
+0016-xcl_element_flying_dust-0000|data.Name		Sky Dust
+0016-xcl_element_flying_gem-0000|data.Name		Sky Gem
+0016-xcl_element_flying_globe-0000|data.Name		Sky Globe
+0016-xcl_element_flying_silk-0000|data.Name		Sky Silk
+0016-xcl_element_ghost_dust-0000|data.Name		Shady Dust
+0016-xcl_element_ghost_gem-0000|data.Name		Shadow Gem
+0016-xcl_element_ghost_globe-0000|data.Name		Nether Globe
+0016-xcl_element_ghost_silk-0000|data.Name		Purple Silk
+0016-xcl_element_grass_dust-0000|data.Name		Grass Dust
+0016-xcl_element_grass_gem-0000|data.Name		Grass Gem
+0016-xcl_element_grass_globe-0000|data.Name		Soothe Globe
+0016-xcl_element_grass_silk-0000|data.Name		Grass Silk
+0016-xcl_element_ground_dust-0000|data.Name		Ground Dust
+0016-xcl_element_ground_gem-0000|data.Name		Earth Gem
+0016-xcl_element_ground_globe-0000|data.Name		Terra Globe
+0016-xcl_element_ground_silk-0000|data.Name		Brown Silk
+0016-xcl_element_ice_dust-0000|data.Name		Icy Dust
+0016-xcl_element_ice_gem-0000|data.Name		Icy Gem
+0016-xcl_element_ice_globe-0000|data.Name		Icy Globe
+0016-xcl_element_ice_silk-0000|data.Name		Clear Silk
+0016-xcl_element_normal_dust-0000|data.Name		Normal Dust
+0016-xcl_element_normal_gem-0000|data.Name		White Gem
+0016-xcl_element_normal_globe-0000|data.Name		Joy Globe
+0016-xcl_element_normal_silk-0000|data.Name		White Silk
+0016-xcl_element_poison_dust-0000|data.Name		Poison Dust
+0016-xcl_element_poison_gem-0000|data.Name		Poison Gem
+0016-xcl_element_poison_globe-0000|data.Name		Poison Globe
+0016-xcl_element_poison_silk-0000|data.Name		Pink Silk
+0016-xcl_element_psychic_dust-0000|data.Name		Psyche Dust
+0016-xcl_element_psychic_gem-0000|data.Name		Psyche Gem
+0016-xcl_element_psychic_globe-0000|data.Name		Psyche Globe
+0016-xcl_element_psychic_silk-0000|data.Name		Gold Silk
+0016-xcl_element_rock_dust-0000|data.Name		Rock Dust
+0016-xcl_element_rock_gem-0000|data.Name		Stone Gem
+0016-xcl_element_rock_globe-0000|data.Name		Rock Globe
+0016-xcl_element_rock_silk-0000|data.Name		Gray Silk
+0016-xcl_element_steel_dust-0000|data.Name		Steel Dust
+0016-xcl_element_steel_gem-0000|data.Name		Metal Gem
+0016-xcl_element_steel_globe-0000|data.Name		Steel Globe
+0016-xcl_element_steel_silk-0000|data.Name		Iron Silk
+0016-xcl_element_water_dust-0000|data.Name		Water Dust
+0016-xcl_element_water_gem-0000|data.Name		Aqua Gem
+0016-xcl_element_water_globe-0000|data.Name		Aqua Globe
+0016-xcl_element_water_silk-0000|data.Name		Blue Silk
+0016-xcl_family_abra_00-0000|data.Name		Sparkle Ruff
+0016-xcl_family_absol_00-0000|data.Name		Perish Torc
+0016-xcl_family_aerodactyl_00-0000|data.Name		Old Brooch
+0016-xcl_family_anorith_00-0000|data.Name		Rigid Cape
+0016-xcl_family_aron_00-0000|data.Name		Iron Helmet
+0016-xcl_family_bagon_01-0000|data.Name		Outlast Bow
+0016-xcl_family_bellsprout_01-0000|data.Name		Digest Scarf
+0016-xcl_family_bidoof_00-0000|data.Name		Dam Scarf
+0016-xcl_family_bidoof_04-0000|data.Name		Fall Charm
+0016-xcl_family_bidoof_05-0000|data.Name		River Charm
+0016-xcl_family_bird_trio_00-0000|data.Name		Fire Veil
+0016-xcl_family_bird_trio_03-0000|data.Name		Mystery Wing
+0016-xcl_family_bird_trio_04-0000|data.Name		Mystery Card
+0016-xcl_family_bird_trio_05-0000|data.Name		Mystery Seal
+0016-xcl_family_bronzor_00-0000|data.Name		Mirror Torc
+0016-xcl_family_buizel_00-0000|data.Name		Float Aid
+0016-xcl_family_buizel_04-0000|data.Name		Swimmer Rock
+0016-xcl_family_buizel_05-0000|data.Name		Rescue Rock
+0016-xcl_family_bulbasaur_00-0000|data.Name		Solar Sash
+0016-xcl_family_bulbasaur_01-0000|data.Name		Plant Torc
+0016-xcl_family_bulbasaur_04-0000|data.Name		Grass Guard
+0016-xcl_family_buneary_00-0000|data.Name		Allure Coat
+0016-xcl_family_carvanha_00-0000|data.Name		Vicious Bow
+0016-xcl_family_castform_00-0000|data.Name		Weather Cape
+0016-xcl_family_castform_04-0000|data.Name		Cloud Rock
+0016-xcl_family_caterpie_00-0000|data.Name		Glittery Bow
+0016-xcl_family_celebi_00-0000|data.Name		Chrono Veil
+0016-xcl_family_chansey_00-0000|data.Name		Faith Ring
+0016-xcl_family_chansey_01-0000|data.Name		Lucky Scarf
+0016-xcl_family_chansey_04-0000|data.Name		Play Tag
+0016-xcl_family_charmander_00-0000|data.Name		Flame Bangle
+0016-xcl_family_charmander_01-0000|data.Name		Kindle Scarf
+0016-xcl_family_charmander_04-0000|data.Name		Fiery Heart
+0016-xcl_family_cherubi_00-0000|data.Name		Petal Dress
+0016-xcl_family_cherubi_04-0000|data.Name		Cute Ore
+0016-xcl_family_chikorita_00-0000|data.Name		Bright Veil
+0016-xcl_family_chikorita_01-0000|data.Name		Spice Bow
+0016-xcl_family_chikorita_04-0000|data.Name		Dawn Jewel
+0016-xcl_family_chimchar_00-0000|data.Name		Blazing Ruff
+0016-xcl_family_chimchar_01-0000|data.Name		Burst Sash
+0016-xcl_family_chimchar_04-0000|data.Name		Nimble Charm
+0016-xcl_family_clamperl_01-0000|data.Name		Deep Torc
+0016-xcl_family_clefairy_00-0000|data.Name		Fairy Bow
+0016-xcl_family_clefairy_01-0000|data.Name		Moon Scarf
+0016-xcl_family_clefairy_04-0000|data.Name		Starry Ore
+0016-xcl_family_corphish_00-0000|data.Name		Cower Sash
+0016-xcl_family_corsola_00-0000|data.Name		Eager Brooch
+0016-xcl_family_cranidos_00-0000|data.Name		Skull Helmet
+0016-xcl_family_cresselia_00-0000|data.Name		Lunar Veil
+0016-xcl_family_cyndaquil_00-0000|data.Name		Blast Bangle
+0016-xcl_family_cyndaquil_01-0000|data.Name		Volcano Torc
+0016-xcl_family_cyndaquil_04-0000|data.Name		Blazing Rock
+0016-xcl_family_darkrai_00-0000|data.Name		Eclipse Robe
+0016-xcl_family_delibird_00-0000|data.Name		Snow Brooch
+0016-xcl_family_deoxys_00-0000|data.Name		Revive Robe
+0016-xcl_family_dialga_00-0000|data.Name		Time Shield
+0016-xcl_family_dialga_04-0000|data.Name		Time Jewel
+0016-xcl_family_doduo_00-0000|data.Name		Fight Torc
+0016-xcl_family_dratini_00-0000|data.Name		Mirage Cape
+0016-xcl_family_drifloon_00-0000|data.Name		Breeze Scarf
+0016-xcl_family_drifloon_04-0000|data.Name		Wind Heart
+0016-xcl_family_drifloon_05-0000|data.Name		Easy Charm
+0016-xcl_family_drowzee_00-0000|data.Name		Dream Coin
+0016-xcl_family_dunsparce_00-0000|data.Name		Escape Scarf
+0016-xcl_family_duskull_00-0000|data.Name		Unlucky Sash
+0016-xcl_family_eevee_00-0000|data.Name		Fairy Collar
+0016-xcl_family_eevee_03-0000|data.Name		Icy Collar
+0016-xcl_family_eevee_06-0000|data.Name		Virid Collar
+0016-xcl_family_eevee_09-0000|data.Name		Dusk Collar
+0016-xcl_family_eevee_12-0000|data.Name		Light Collar
+0016-xcl_family_eevee_15-0000|data.Name		Fire Collar
+0016-xcl_family_eevee_18-0000|data.Name		Volt Collar
+0016-xcl_family_eevee_21-0000|data.Name		Aqua Collar
+0016-xcl_family_eevee_24-0000|data.Name		Prism Ruff
+0016-xcl_family_ekans_00-0000|data.Name		Shock Ruff
+0016-xcl_family_electabuzz_00-0000|data.Name		Voltaic Band
+0016-xcl_family_electabuzz_04-0000|data.Name		Jolt Charm
+0016-xcl_family_electabuzz_05-0000|data.Name		Charge Seal
+0016-xcl_family_farfetchd_00-0000|data.Name		Bullseye Bow
+0016-xcl_family_feebas_00-0000|data.Name		Grace Scarf
+0016-xcl_family_gastly_00-0000|data.Name		Sunglasses
+0016-xcl_family_gastly_01-0000|data.Name		Slip Scarf
+0016-xcl_family_geodude_00-0000|data.Name		Rugged Sash
+0016-xcl_family_gible_00-0000|data.Name		Mach Scarf
+0016-xcl_family_gible_01-0000|data.Name		Meteor Torc
+0016-xcl_family_girafarig_00-0000|data.Name		Reverse Bow
+0016-xcl_family_giratina_00-0000|data.Name		Nether Veil
+0016-xcl_family_glameow_00-0000|data.Name		Scary Belt
+0016-xcl_family_grimer_00-0000|data.Name		Slimy Bow
+0016-xcl_family_groudon_00-0000|data.Name		Terra Ring
+0016-xcl_family_groudon_02-0000|data.Name		Terra Tag
+0016-xcl_family_groudon_03-0000|data.Name		Terra Coin
+0016-xcl_family_groudon_04-0000|data.Name		Terra Crest
+0016-xcl_family_growlithe_00-0000|data.Name		Legend Bow
+0016-xcl_family_heatran_00-0000|data.Name		Searing Ring
+0016-xcl_family_heracross_00-0000|data.Name		Horn Torc
+0016-xcl_family_hippopotas_00-0000|data.Name		Grit Veil
+0016-xcl_family_ho_oh_beasts_00-0000|data.Name		Rainbow Veil
+0016-xcl_family_ho_oh_beasts_01-0000|data.Name		Rainbow Wing
+0016-xcl_family_ho_oh_beasts_04-0000|data.Name		Rainbow Brooch
+0016-xcl_family_ho_oh_beasts_05-0000|data.Name		Clear Wing
+0016-xcl_family_ho_oh_beasts_06-0000|data.Name		Bolt Fang
+0016-xcl_family_ho_oh_beasts_10-0000|data.Name		Flare Fang
+0016-xcl_family_ho_oh_beasts_14-0000|data.Name		Aqua Mantle
+0016-xcl_family_ho_oh_beasts_18-0000|data.Name		Sacred Collar
+0016-xcl_family_hoppip_00-0000|data.Name		Cotton Torc
+0016-xcl_family_horsea_00-0000|data.Name		Tornado Bow
+0016-xcl_family_horsea_01-0000|data.Name		Swirl Scarf
+0016-xcl_family_houndour_00-0000|data.Name		Pit Fang
+0016-xcl_family_jigglypuff_00-0000|data.Name		Friend Torc
+0016-xcl_family_jigglypuff_01-0000|data.Name		Snooze Ring
+0016-xcl_family_jigglypuff_04-0000|data.Name		Bouncy Charm
+0016-xcl_family_jigglypuff_05-0000|data.Name		Slumber Rock
+0016-xcl_family_jirachi_00-0000|data.Name		Wish Mantle
+0016-xcl_family_jirachi_02-0000|data.Name		Wish Shard
+0016-xcl_family_jirachi_03-0000|data.Name		Wish Dust
+0016-xcl_family_jirachi_04-0000|data.Name		Wish Tag
+0016-xcl_family_jynx_00-0000|data.Name		Ruin Scarf
+0016-xcl_family_jynx_04-0000|data.Name		Kiss Charm
+0016-xcl_family_jynx_05-0000|data.Name		Frozen Ore
+0016-xcl_family_krabby_00-0000|data.Name		Super Sash
+0016-xcl_family_kyogre_00-0000|data.Name		Seabed Veil
+0016-xcl_family_kyogre_02-0000|data.Name		Seabed Dew
+0016-xcl_family_kyogre_03-0000|data.Name		Seabed Coin
+0016-xcl_family_kyogre_04-0000|data.Name		Seabed Crest
+0016-xcl_family_lake_trio_00-0000|data.Name		Edify Robe
+0016-xcl_family_lake_trio_02-0000|data.Name		Charity Robe
+0016-xcl_family_lake_trio_04-0000|data.Name		Hope Robe
+0016-xcl_family_lake_trio_06-0000|data.Name		Spirit Dust
+0016-xcl_family_lake_trio_07-0000|data.Name		Spirit Shard
+0016-xcl_family_lake_trio_08-0000|data.Name		Red Chain
+0016-xcl_family_lake_trio_09-0000|data.Name		Spirit Crest
+0016-xcl_family_lapras_00-0000|data.Name		Mystic Scarf
+0016-xcl_family_lapras_04-0000|data.Name		Wavy Charm
+0016-xcl_family_larvitar_00-0000|data.Name		Crash Claw
+0016-xcl_family_lati_duo_00-0000|data.Name		Heart Brooch
+0016-xcl_family_lati_duo_02-0000|data.Name		Eon Veil
+0016-xcl_family_lati_duo_06-0000|data.Name		Eon Seal
+0016-xcl_family_lati_duo_07-0000|data.Name		Heart Crest
+0016-xcl_family_lickitung_00-0000|data.Name		Flabby Belt
+0016-xcl_family_lotad_01-0000|data.Name		Jolly Scarf
+0016-xcl_family_lugia_00-0000|data.Name		Silver Veil
+0016-xcl_family_lugia_01-0000|data.Name		Silver Wing
+0016-xcl_family_lugia_04-0000|data.Name		Silver Brooch
+0016-xcl_family_lugia_05-0000|data.Name		Deep Sea Jewel
+0016-xcl_family_lunatone_solrock_06-0000|data.Name		Meteor Charm
+0016-xcl_family_magikarp_00-0000|data.Name		Tempest Sash
+0016-xcl_family_magmar_04-0000|data.Name		Ember Jewel
+0016-xcl_family_magmar_05-0000|data.Name		Erupt Ore
+0016-xcl_family_magnemite_00-0000|data.Name		Builder Sash
+0016-xcl_family_makuhita_00-0000|data.Name		Thrust Belt
+0016-xcl_family_manaphy_phione_00-0000|data.Name		Tidal Cape
+0016-xcl_family_manaphy_phione_01-0000|data.Name		Ripple Cape
+0016-xcl_family_manaphy_phione_02-0000|data.Name		Marine Cache
+0016-xcl_family_manaphy_phione_05-0000|data.Name		Wave Jewel
+0016-xcl_family_mankey_00-0000|data.Name		Nullify Belt
+0016-xcl_family_mantine_00-0000|data.Name		Horizon Bow
+0016-xcl_family_mantine_01-0000|data.Name		Ocean Bow
+0016-xcl_family_mantine_04-0000|data.Name		Waft Rock
+0016-xcl_family_mantine_05-0000|data.Name		Sunset Rock
+0016-xcl_family_mareep_00-0000|data.Name		Sacred Scarf
+0016-xcl_family_marill_00-0000|data.Name		Dotted Scarf
+0016-xcl_family_marill_05-0000|data.Name		Surfer Rock
+0016-xcl_family_mawile_00-0000|data.Name		Deceit Mask
+0016-xcl_family_meditite_00-0000|data.Name		Ponder Sash
+0016-xcl_family_meowth_00-0000|data.Name		Noble Scarf
+0016-xcl_family_meowth_04-0000|data.Name		Coin Charm
+0016-xcl_family_meowth_05-0000|data.Name		Insight Rock
+0016-xcl_family_mew_duo_00-0000|data.Name		Havoc Robe
+0016-xcl_family_mew_duo_05-0000|data.Name		Life Ring
+0016-xcl_family_misdreavus_00-0000|data.Name		Magic Hat
+0016-xcl_family_mr_mime_00-0000|data.Name		Barrier Bow
+0016-xcl_family_mr_mime_02-0000|data.Name		Junior Beam
+0016-xcl_family_mr_mime_03-0000|data.Name		Junior Card
+0016-xcl_family_mr_mime_04-0000|data.Name		Mimic Pebble
+0016-xcl_family_mr_mime_05-0000|data.Name		Bulwark Rock
+0016-xcl_family_nidoran_00-0000|data.Name		Impact Torc
+0016-xcl_family_nidoran_01-0000|data.Name		Nido-Crest
+0016-xcl_family_nidoran_02-0000|data.Name		Nido-Claw
+0016-xcl_family_nidoran_03-0000|data.Name		Nido-Thorn
+0016-xcl_family_nidoran_04-0000|data.Name		Nido-Seal
+0016-xcl_family_nidoran_05-0000|data.Name		Thorny Scarf
+0016-xcl_family_nidoran_06-0000|data.Name		King Sash
+0016-xcl_family_nincada_00-0000|data.Name		Ninja Ruff
+0016-xcl_family_nincada_06-0000|data.Name		Awe Mantle
+0016-xcl_family_numel_00-0000|data.Name		Erupt Scarf
+0016-xcl_family_oddish_00-0000|data.Name		Bright Tiara
+0016-xcl_family_oddish_01-0000|data.Name		Aroma Scarf
+0016-xcl_family_omanyte_00-0000|data.Name		Aged Scarf
+0016-xcl_family_onix_00-0000|data.Name		Quartz Torc
+0016-xcl_family_pachirisu_00-0000|data.Name		Miracle Bow
+0016-xcl_family_pachirisu_04-0000|data.Name		Rouse Charm
+0016-xcl_family_palkia_00-0000|data.Name		Space Blade
+0016-xcl_family_palkia_04-0000|data.Name		Space Jewel
+0016-xcl_family_paras_00-0000|data.Name		Firm Hat
+0016-xcl_family_phanpy_00-0000|data.Name		Armor Scarf
+0016-xcl_family_pikachu_00-0000|data.Name		Zapper Scarf
+0016-xcl_family_pikachu_01-0000|data.Name		Volt Torc
+0016-xcl_family_pikachu_04-0000|data.Name		Express Tag
+0016-xcl_family_pikachu_05-0000|data.Name		Volt Charm
+0016-xcl_family_pineco_00-0000|data.Name		Dense Poncho
+0016-xcl_family_piplup_00-0000|data.Name		Marine Crown
+0016-xcl_family_piplup_04-0000|data.Name		Sea Ore
+0016-xcl_family_plusle_minun_00-0000|data.Name		Pulse Bow
+0016-xcl_family_plusle_minun_01-0000|data.Name		Spark Tie
+0016-xcl_family_plusle_minun_06-0000|data.Name		Volt Heart
+0016-xcl_family_poliwag_00-0000|data.Name		Rain Crown
+0016-xcl_family_poliwag_01-0000|data.Name		Bold Belt
+0016-xcl_family_ponyta_00-0000|data.Name		Sunlight Bow
+0016-xcl_family_porygon_00-0000|data.Name		Best Scarf
+0016-xcl_family_porygon_01-0000|data.Name		Virtual Bow
+0016-xcl_family_porygon_04-0000|data.Name		AI Brooch
+0016-xcl_family_psyduck_00-0000|data.Name		Paddle Scarf
+0016-xcl_family_ralts_00-0000|data.Name		Gallant Torc
+0016-xcl_family_ralts_01-0000|data.Name		Caring Scarf
+0016-xcl_family_rattata_00-0000|data.Name		Overcome Bow
+0016-xcl_family_rayquaza_00-0000|data.Name		SkyHigh Veil
+0016-xcl_family_rayquaza_02-0000|data.Name		SkyHigh Tag
+0016-xcl_family_rayquaza_03-0000|data.Name		SkyHigh Coin
+0016-xcl_family_rayquaza_04-0000|data.Name		SkyHigh Crest
+0016-xcl_family_regi_trio_00-0000|data.Name		Ancient Ring
+0016-xcl_family_regi_trio_04-0000|data.Name		Rock Sash
+0016-xcl_family_regi_trio_08-0000|data.Name		Ice Sash
+0016-xcl_family_regi_trio_12-0000|data.Name		Steel Sash
+0016-xcl_family_regi_trio_16-0000|data.Name		Royal Mantle
+0016-xcl_family_rhyhorn_01-0000|data.Name		Pierce Drill
+0016-xcl_family_riolu_00-0000|data.Name		Ravage Ring
+0016-xcl_family_riolu_04-0000|data.Name		Valiant Rock
+0016-xcl_family_riolu_05-0000|data.Name		Pledge Rock
+0016-xcl_family_roselia_00-0000|data.Name		Bouquet Cape
+0016-xcl_family_roselia_01-0000|data.Name		Thorned Torc
+0016-xcl_family_rotom_00-0000|data.Name		Plasma Veil
+0016-xcl_family_sandshrew_00-0000|data.Name		Sandy Torc
+0016-xcl_family_scyther_00-0000|data.Name		Red Armlet
+0016-xcl_family_scyther_04-0000|data.Name		Ambush Rock
+0016-xcl_family_scyther_05-0000|data.Name		Steel Charm
+0016-xcl_family_seel_00-0000|data.Name		North Torc
+0016-xcl_family_sentret_00-0000|data.Name		Body Collar
+0016-xcl_family_shaymin_00-0000|data.Name		Purify Veil
+0016-xcl_family_shellder_00-0000|data.Name		Cover Armor
+0016-xcl_family_shieldon_00-0000|data.Name		Block Brooch
+0016-xcl_family_shinx_00-0000|data.Name		Glare Sash
+0016-xcl_family_shinx_01-0000|data.Name		Spark Scarf
+0016-xcl_family_shinx_04-0000|data.Name		Flash Tag
+0016-xcl_family_shinx_05-0000|data.Name		Spark Tag
+0016-xcl_family_shroomish_00-0000|data.Name		Thwart Bow
+0016-xcl_family_shuppet_00-0000|data.Name		Ominous Torc
+0016-xcl_family_skitty_00-0000|data.Name		Guard Collar
+0016-xcl_family_skitty_04-0000|data.Name		Smile Pebble
+0016-xcl_family_skorupi_00-0000|data.Name		Dust Scarf
+0016-xcl_family_slakoth_00-0000|data.Name		Lazy Ruff
+0016-xcl_family_slowpoke_00-0000|data.Name		King Cap
+0016-xcl_family_slugma_00-0000|data.Name		Lava Bow
+0016-xcl_family_smeargle_00-0000|data.Name		Paint Scarf
+0016-xcl_family_sneasel_00-0000|data.Name		Ruin Armlet
+0016-xcl_family_sneasel_04-0000|data.Name		Dusk Jewel
+0016-xcl_family_sneasel_05-0000|data.Name		Vile Tag
+0016-xcl_family_snorlax_00-0000|data.Name		Glee Scarf
+0016-xcl_family_snorlax_04-0000|data.Name		Tummy Charm
+0016-xcl_family_snorlax_05-0000|data.Name		Valor Charm
+0016-xcl_family_snover_00-0000|data.Name		Frozen Cape
+0016-xcl_family_snubbull_00-0000|data.Name		Stern Sash
+0016-xcl_family_spearow_00-0000|data.Name		Wing Scarf
+0016-xcl_family_spinda_00-0000|data.Name		Hula Bow
+0016-xcl_family_spiritomb_00-0000|data.Name		Shadow Veil
+0016-xcl_family_spoink_00-0000|data.Name		Scheme Scarf
+0016-xcl_family_squirtle_00-0000|data.Name		Hydro Band
+0016-xcl_family_squirtle_01-0000|data.Name		Bubble Bangle
+0016-xcl_family_squirtle_04-0000|data.Name		Water Guard
+0016-xcl_family_stantler_00-0000|data.Name		Delusion Bow
+0016-xcl_family_starly_00-0000|data.Name		Guts Sash
+0016-xcl_family_starly_01-0000|data.Name		Regret Torc
+0016-xcl_family_sudowoodo_00-0000|data.Name		Fake Torc
+0016-xcl_family_sudowoodo_04-0000|data.Name		Arid Tag
+0016-xcl_family_sudowoodo_05-0000|data.Name		Drain Rock
+0016-xcl_family_sunkern_00-0000|data.Name		Sun Scarf
+0016-xcl_family_swablu_00-0000|data.Name		Cloud Ruff
+0016-xcl_family_swinub_00-0000|data.Name		Glacier Cape
+0016-xcl_family_swinub_01-0000|data.Name		Frost Torc
+0016-xcl_family_taillow_00-0000|data.Name		Midair Scarf
+0016-xcl_family_tangela_00-0000|data.Name		Clinging Bow
+0016-xcl_family_tauros_miltank_00-0000|data.Name		Rushing Bow
+0016-xcl_family_tauros_miltank_01-0000|data.Name		Milky Scarf
+0016-xcl_family_tauros_miltank_06-0000|data.Name		Field Crest
+0016-xcl_family_teddiursa_00-0000|data.Name		Hiber Scarf
+0016-xcl_family_teddiursa_04-0000|data.Name		Honey Rock
+0016-xcl_family_teddiursa_05-0000|data.Name		Calming Rock
+0016-xcl_family_togepi_00-0000|data.Name		Glitter Robe
+0016-xcl_family_togepi_01-0000|data.Name		Luck Brooch
+0016-xcl_family_togepi_04-0000|data.Name		Pure Heart
+0016-xcl_family_togepi_05-0000|data.Name		Happy Rock
+0016-xcl_family_torchic_01-0000|data.Name		Gutsy Band
+0016-xcl_family_torchic_04-0000|data.Name		Hot Pebble
+0016-xcl_family_torchic_05-0000|data.Name		Charge Tag
+0016-xcl_family_torkoal_00-0000|data.Name		Sooty Sash
+0016-xcl_family_totodile_01-0000|data.Name		Anger Scarf
+0016-xcl_family_totodile_04-0000|data.Name		Water Heart
+0016-xcl_family_totodile_05-0000|data.Name		Swirl Rock
+0016-xcl_family_trapinch_00-0000|data.Name		Red Glasses
+0016-xcl_family_treecko_00-0000|data.Name		Drain Bangle
+0016-xcl_family_treecko_04-0000|data.Name		Forest Ore
+0016-xcl_family_treecko_05-0000|data.Name		Jungle Tag
+0016-xcl_family_turtwig_00-0000|data.Name		Forest Torc
+0016-xcl_family_turtwig_01-0000|data.Name		Woody Scarf
+0016-xcl_family_turtwig_02-0000|data.Name		Lucky Leaf
+0016-xcl_family_turtwig_04-0000|data.Name		Sprout Rock
+0016-xcl_family_tyrogue_00-0000|data.Name		Victory Ruff
+0016-xcl_family_tyrogue_02-0000|data.Name		Victory Belt
+0016-xcl_family_tyrogue_04-0000|data.Name		Victory Bangle
+0016-xcl_family_tyrogue_06-0000|data.Name		Muscle Charm
+0016-xcl_family_venonat_00-0000|data.Name		Gaze Goggles
+0016-xcl_family_volbeat_illumise_00-0000|data.Name		Neon Scarf
+0016-xcl_family_volbeat_illumise_01-0000|data.Name		Evening Bow
+0016-xcl_family_volbeat_illumise_06-0000|data.Name		Glowing Seal
+0016-xcl_family_vulpix_00-0000|data.Name		Afire Collar
+0016-xcl_family_wailmer_00-0000|data.Name		Huge Bow
+0016-xcl_family_weedle_00-0000|data.Name		Charge Scarf
+0016-xcl_family_wingull_00-0000|data.Name		Stock Scarf
+0016-xcl_family_wobbuffet_00-0000|data.Name		Suffer Scarf
+0016-xcl_family_wobbuffet_04-0000|data.Name		Grin Charm
+0016-xcl_family_wobbuffet_05-0000|data.Name		Endure Rock
+0016-xcl_family_wurmple_01-0000|data.Name		Vivid Silk
+0016-xcl_family_zangoose_00-0000|data.Name		Strong Sash
+0016-xcl_family_zubat_00-0000|data.Name		Slash Bow
+0016-xcl_family_zubat_01-0000|data.Name		Absorb Scarf
+0016-xcl_test_absorption-0000|data.Name		Absorption Test
+0016-xcl_test_acutesniffer-0000|data.Name		AcuteSniffer Test
+0016-xcl_test_allterrain-0000|data.Name		AllTerrain Test
+0016-xcl_test_allyreviver-0000|data.Name		AllyReviver Test
+0016-xcl_test_allyreviverbattle-0000|data.Name		AllyReviverBattle Test
+0016-xcl_test_anchor-0000|data.Name		Anchor Test
+0016-xcl_test_barrageguard-0000|data.Name		BarrageGuard Test
+0016-xcl_test_betterodds-0000|data.Name		BetterOdds Test
+0016-xcl_test_celebrate-0000|data.Name		Celebrate Test
+0016-xcl_test_chargewalker-0000|data.Name		ChargeWalker Test
+0016-xcl_test_cheekpouch-0000|data.Name		CheekPouch Test
+0016-xcl_test_chestfinder-0000|data.Name		ChestFinder Test
+0016-xcl_test_closedodge-0000|data.Name		CloseDodge Test
+0016-xcl_test_clutchperformer-0000|data.Name		ClutchPerformer Test
+0016-xcl_test_coinwatcher-0000|data.Name		CoinWatcher Test
+0016-xcl_test_counterbasher-0000|data.Name		CounterBasher Test
+0016-xcl_test_deepbreather-0000|data.Name		DeepBreather Test
+0016-xcl_test_deepbreatherplus-0000|data.Name		DeepBreatherPlus Test
+0016-xcl_test_distancedodge-0000|data.Name		DistanceDodge Test
+0016-xcl_test_doubleattacker-0000|data.Name		DoubleAttacker Test
+0016-xcl_test_doubledash-0000|data.Name		DoubleDash Test
+0016-xcl_test_endurecategory-0000|data.Name		EndureCategory Test
+0016-xcl_test_enduretype-0000|data.Name		EndureType Test
+0016-xcl_test_erraticattacker-0000|data.Name		ErraticAttacker Test
+0016-xcl_test_erraticdefender-0000|data.Name		ErraticDefender Test
+0016-xcl_test_excessiveforce-0000|data.Name		ExcessiveForce Test
+0016-xcl_test_explosionguard-0000|data.Name		ExplosionGuard Test
+0016-xcl_test_explosiveattack-0000|data.Name		ExplosiveAttack Test
+0016-xcl_test_fastfriend-0000|data.Name		FastFriend Test
+0016-xcl_test_fasthealer-0000|data.Name		FastHealer Test
+0016-xcl_test_gapfiller-0000|data.Name		GapFiller Test
+0016-xcl_test_gapprober-0000|data.Name		GapProber Test
+0016-xcl_test_gratitude-0000|data.Name		Gratitude Test
+0016-xcl_test_healinlava-0000|data.Name		HealInLava Test
+0016-xcl_test_healinwater-0000|data.Name		HealInWater Test
+0016-xcl_test_healonnewfloor-0000|data.Name		HealOnNewFloor Test
+0016-xcl_test_hiddenstairfinder-0000|data.Name		HiddenStairFinder Test
+0016-xcl_test_hitandrun-0000|data.Name		HitAndRun Test
+0016-xcl_test_knockbackonattack-0000|data.Name		KnockbackOnAttack Test
+0016-xcl_test_lavaterrain-0000|data.Name		LavaTerrain Test
+0016-xcl_test_lungeattack-0000|data.Name		LungeAttack Test
+0016-xcl_test_mapstatusoncategoryuse-0000|data.Name		MapStatusOnCategoryUse Test
+0016-xcl_test_mapsurveyor-0000|data.Name		MapSurveyor Test
+0016-xcl_test_masterhurler-0000|data.Name		MasterHurler Test
+0016-xcl_test_misfortunemirror-0000|data.Name		MisfortuneMirror Test
+0016-xcl_test_multirayshot-0000|data.Name		MultiRayShot Test
+0016-xcl_test_nontraitor-0000|data.Name		Nontraitor Test
+0016-xcl_test_nostatusinweather-0000|data.Name		NoStatusInWeather Test
+0016-xcl_test_nvecrit-0000|data.Name		NVECrit Test
+0016-xcl_test_passthroughattacker-0000|data.Name		PassThroughAttacker Test
+0016-xcl_test_ppboost-0000|data.Name		PPBoost Test
+0016-xcl_test_practiceswinger-0000|data.Name		PracticeSwinger Test
+0016-xcl_test_pressureplus-0000|data.Name		PressurePlus Test
+0016-xcl_test_removeabilityattack-0000|data.Name		RemoveAbilityAttack Test
+0016-xcl_test_royalveil-0000|data.Name		RoyalVeil Test
+0016-xcl_test_secondstab-0000|data.Name		SecondSTAB Test
+0016-xcl_test_selfcurer-0000|data.Name		SelfCurer Test
+0016-xcl_test_shopfinder-0000|data.Name		ShopFinder Test
+0016-xcl_test_sleepwalker-0000|data.Name		SleepWalker Test
+0016-xcl_test_specialattacker-0000|data.Name		SpecialAttacker Test
+0016-xcl_test_spikedropper-0000|data.Name		SpikeDropper Test
+0016-xcl_test_stairsensor-0000|data.Name		StairSensor Test
+0016-xcl_test_statdropimmune-0000|data.Name		StatDropImmune Test
+0016-xcl_test_statmirror-0000|data.Name		StatMirror Test
+0016-xcl_test_statusimmune-0000|data.Name		StatusImmune Test
+0016-xcl_test_statusmirror-0000|data.Name		StatusMirror Test
+0016-xcl_test_statusonattack-0000|data.Name		StatusOnAttack Test
+0016-xcl_test_statusoncategoryhit-0000|data.Name		StatusOnCategoryHit Test
+0016-xcl_test_statusoncategoryuse-0000|data.Name		StatusOnCategoryUse Test
+0016-xcl_test_statussplash-0000|data.Name		StatusSplash Test
+0016-xcl_test_supercrit-0000|data.Name		SuperCrit Test
+0016-xcl_test_surehitattacker-0000|data.Name		SureHitAttacker Test
+0016-xcl_test_throwonattack-0000|data.Name		ThrowOnAttack Test
+0016-xcl_test_trapbuster-0000|data.Name		TrapBuster Test
+0016-xcl_test_typebodyguard-0000|data.Name		TypeBodyguard Test
+0016-xcl_test_typebulldozer-0000|data.Name		TypeBulldozer Test
+0016-xcl_test_typedattack-0000|data.Name		TypedAttack Test
+0016-xcl_test_wallbreaker-0000|data.Name		Wallbreaker Test
+0016-xcl_test_wandmaster-0000|data.Name		WandMaster Test
+0016-xcl_test_wandspread-0000|data.Name		WandSpread Test
+0016-xcl_test_warppayback-0000|data.Name		WarpPayback Test
+0016-xcl_test_waterterrain-0000|data.Name		WaterTerrain Test
+0016-xcl_test_weaknesspayback-0000|data.Name		WeaknessPayback Test
+0016-xcl_test_weaknessreduce-0000|data.Name		WeaknessReduce Test
+0016-xcl_test_weatherprotection-0000|data.Name		WeatherProtection Test
+0016-xcl_test_wideattack-0000|data.Name		WideAttack Test
+0016-xcl_test_xray-0000|data.Name		XRay Test

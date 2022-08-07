@@ -1,265 +1,265 @@
 Key		EN
-0000-0000|data.Name		None
-0000-0001|data.Desc		
-0001-0000|data.Name		Asleep
-0001-0001|data.Desc		The Pokémon is asleep and incapable of any action until it wakes up. This status wears off after a few turns, or if the Pokémon is attacked.
-0002-0000|data.Name		Burned
-0002-0001|data.Desc		The Pokémon will take some damage every turn, and its Attack will be lowered. This status wears off after a few turns.
-0003-0000|data.Name		Frozen
-0003-0001|data.Desc		The Pokémon is frozen and incapable of acting or being affected by moves. This status wears off after a few turns, or if the Pokémon is hit by a Fire-type attack.
-0004-0000|data.Name		Paralyzed
-0004-0001|data.Desc		The Pokémon is paralyzed and cannot attack in consecutive turns. This status wears off after a few turns.
-0005-0000|data.Name		Poisoned
-0005-0001|data.Desc		The Pokémon gradually takes damage every time it attacks. Its natural HP recovery is also stopped.
-0006-0000|data.Name		Badly Poisoned
-0006-0001|data.Desc		The Pokémon takes gradually worsening damage every time it attacks. Its natural HP recovery is also stopped.
-0007-0000|data.Name		Confused
-0007-0001|data.Desc		The Pokémon is confused, causing its movements and attacks to vary wildly. Attacks that target foes can also target friends, and vice versa.
-0008-0000|data.Name		Cringing
-0008-0001|data.Desc		The Pokémon is cringing and cannot attack or use items. This status wears off on the next turn.
-0009-0000|data.Name		Movement Speed
-0009-0001|data.Desc		The Pokémon's Movement Speed has been modified to move faster or slower than usual.
-0010-0000|data.Name		Attack
-0010-0001|data.Desc		The Pokémon's Attack has been modified, doing more or less damage with Physical attacks.
-0011-0000|data.Name		Defense
-0011-0001|data.Desc		The Pokémon's Defense has been modified, causing it to take more or less damage from Physical attacks.
-0012-0000|data.Name		Special Attack
-0012-0001|data.Desc		The Pokémon's Special Attack has been modified, doing more or less damage with Special attacks.
-0013-0000|data.Name		Special Defense
-0013-0001|data.Desc		The Pokémon's Special Defense has been modified, causing it to take more or less damage from Special attacks.
-0014-0000|data.Name		Accuracy
-0014-0001|data.Desc		The Pokémon's Accuracy has been modified, allowing its attacks to hit more or less often.
-0015-0000|data.Name		Evasion
-0015-0001|data.Desc		The Pokémon's Evasion has been modified, allowing it to dodge attacks more or less often.
-0016-0000|data.Name		Range
-0016-0001|data.Desc		
-0017-0000|data.Name		Reflect
-0017-0001|data.Desc		The Pokémon takes half damage from physical attacks. This status wears off after a few turns.
-0018-0000|data.Name		Light Screen
-0018-0001|data.Desc		The Pokémon takes half damage from special attacks. This status wears off after a few turns.
-0019-0000|data.Name		Wrap
-0019-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.
-0020-0000|data.Name		Bind
-0020-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.
-0021-0000|data.Name		In Love
-0021-0001|data.Desc		The Pokémon is infatuated with the enemy and cannot target it with any moves or items. This status wears off after a few turns.
-0022-0000|data.Name		Rage Powder
-0022-0001|data.Desc		The Pokémon is enraged by the enemy and cannot target anyone else with any moves or items. This status wears off after a few turns.
-0023-0000|data.Name		Destiny Bond
-0023-0001|data.Desc		Any damage done to this Pokémon from direct attacks is also done to the target of the Destiny Bond. This status wears off after a few turns, or if the Pokémon moves.
-0024-0000|data.Name		Chasing
-0024-0001|data.Desc		Every time the target makes a move, this Pokémon will automatically warp to it. This status wears off after a few turns.
-0025-0000|data.Name		Last Targeted By
-0025-0001|data.Desc		
-0026-0000|data.Name		Last Used Move Slot
-0026-0001|data.Desc		
-0027-0000|data.Name		Last Used Move
-0027-0001|data.Desc		
-0028-0000|data.Name		Times Move Used
-0028-0001|data.Desc		
-0029-0000|data.Name		Last Ally Move
-0029-0001|data.Desc		
-0030-0000|data.Name		Last Move Hit By Someone Else
-0030-0001|data.Desc		
-0031-0000|data.Name		Was Hurt Last Turn
-0031-0001|data.Desc		
-0032-0000|data.Name		Charging Solar Beam
-0032-0001|data.Desc		The Pokémon is charging Solar Beam. It will unleash the move on its next turn.
-0033-0000|data.Name		Charging Skull Bash
-0033-0001|data.Desc		The Pokémon is charging Skull Bash. It will unleash the move on its next turn.
-0034-0000|data.Name		Charging Razor Wind
-0034-0001|data.Desc		The Pokémon is charging Razor Wind. It will unleash the move on its next turn.
-0035-0000|data.Name		Charging Sky Attack
-0035-0001|data.Desc		The Pokémon is charging Sky Attack. It will unleash the move on its next turn.
-0036-0000|data.Name		Charging Focus Punch
-0036-0001|data.Desc		The Pokémon is charging Focus Punch. It will unleash the move on its next attack.
-0037-0000|data.Name		Digging
-0037-0001|data.Desc		The Pokémon is digging underground and can avoid most moves and obstacles. It will resurface in a few turns, or when it chooses to attack.
-0038-0000|data.Name		Flying
-0038-0001|data.Desc		The Pokémon is flying and can avoid most moves and obstacles. It will drop back down in a few turns, or when it chooses to attack.
-0039-0000|data.Name		Diving
-0039-0001|data.Desc		The Pokémon is hiding underwater and can avoid most moves. It will resurface in a few turns, or when it chooses to attack.
-0040-0000|data.Name		Bouncing
-0040-0001|data.Desc		The Pokémon is in mid-air from a bounce and can avoid most moves. It will unleash the move on its next turn.
-0041-0000|data.Name		Phantom Force
-0041-0001|data.Desc		The Pokémon vanished completely and can avoid moves and obstacles. It will reappear in a few turns, or when it chooses to attack.
-0042-0000|data.Name		Shadow Force
-0042-0001|data.Desc		The Pokémon vanished completely and can avoid moves and obstacles. Its Movement Speed is also boosted. It will reappear in a few turns, or when it chooses to attack.
-0043-0000|data.Name		Biding
-0043-0001|data.Desc		The Pokémon is storing energy for an attack. In a few turns, it will unleash the energy, doing double the amount of damage it took while biding.
-0044-0000|data.Name		Fire Spin
-0044-0001|data.Desc		The Pokémon is trapped in a vortex of fire, taking gradual damage and preventing it from moving. This status wears off after a few turns.
-0045-0000|data.Name		Whirlpool
-0045-0001|data.Desc		The Pokémon is trapped in a whirlpool, taking gradual damage and preventing it from moving. This status wears off after a few turns.
-0046-0000|data.Name		Sand Tomb
-0046-0001|data.Desc		The Pokémon is trapped in quicksand, taking gradual damage and preventing it from moving. This status wears off after a few turns.
-0047-0000|data.Name		Petal Dance
-0047-0001|data.Desc		The Pokémon will use Petal Dance repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.
-0048-0000|data.Name		Thrash
-0048-0001|data.Desc		The Pokémon will use Thrash repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.
-0049-0000|data.Name		Outrage
-0049-0001|data.Desc		The Pokémon will use Outrage repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.
-0050-0000|data.Name		Cursed
-0050-0001|data.Desc		The Pokémon is cursed and will take damage each time it attacks a foe. This status wears off after a few turns.
-0051-0000|data.Name		Defense Curl
-0051-0001|data.Desc		
-0052-0000|data.Name		Minimized
-0052-0001|data.Desc		
-0053-0000|data.Name		Stockpile
-0053-0001|data.Desc		The Pokémon has stockpiled energy, to use in the moves Swallow or Spit Up. It also increases its Defense and Special Defense. This status wears off after many turns have passed.
-0054-0000|data.Name		Perish Song
-0054-0001|data.Desc		The Pokémon has heard Perish Song, and will faint when its countdown reaches zero.
-0055-0000|data.Name		Paused
-0055-0001|data.Desc		The Pokémon is rendered incapable of taking any action. This status wears off after a few turns.
-0056-0000|data.Name		Future Sight
-0056-0001|data.Desc		The Pokémon will be attacked a few turns in the future. Nearby allies will also take splash damage when the attack hits.
-0057-0000|data.Name		Wish
-0057-0001|data.Desc		The Pokémon will have its HP restored a few turns in the future. The amount of HP restored depends on the Maximum HP of the user.
-0058-0000|data.Name		Telekinesis
-0058-0001|data.Desc		The Pokémon is floating from telekinesis, preventing it from moving or avoiding attacks. This status wears off after a few turns.
-0059-0000|data.Name		Charge
-0059-0001|data.Desc		The Pokémon is charging electrical energy, boosting the power of an Electric-type attack. This status wears off after a few turns.
-0060-0000|data.Name		Disable
-0060-0001|data.Desc		The Pokémon has one of its moves disabled and cannot use it.
-0061-0000|data.Name		Yawning
-0061-0001|data.Desc		The Pokémon is yawning and will fall asleep in a few turns.
-0062-0000|data.Name		Exposed
-0062-0001|data.Desc		All attacks made on the Pokémon will ignore its resistances, immunities, and evasion changes.
-0063-0000|data.Name		Miracle Eye
-0063-0001|data.Desc		All attacks made by the Pokémon will ignore the target's resistances, immunities, and evasion changes.
-0064-0000|data.Name		Endure
-0064-0001|data.Desc		The Pokémon is bracing itself, preventing it from fainting from a direct attack. This status wears off after a few turns, or if the Pokémon moves.
-0065-0000|data.Name		Ingrain
-0065-0001|data.Desc		The Pokémon's roots are planted in the ground, gradually restoring its HP and preventing it from moving. This status wears off after a few turns.
-0066-0000|data.Name		Mirror Coat
-0066-0001|data.Desc		The Pokémon will return damage from special attacks back at the user with double the power. This status wears off after a few turns.
-0067-0000|data.Name		Counter
-0067-0001|data.Desc		The Pokémon will return damage from physical attacks back at the user with double the power. This status wears off after a few turns.
-0068-0000|data.Name		Safeguard
-0068-0001|data.Desc		The Pokémon is protected from bad status effects with a veil. This status wears off after many turns have passed.
-0069-0000|data.Name		Mist
-0069-0001|data.Desc		The Pokémon is surrounded in mist, preventing others from dropping its stats. This status wears off after many turns have passed.
-0070-0000|data.Name		Sleepless
-0070-0001|data.Desc		The Pokémon is prevented from becoming drowsy or sleeping. This status wears off after many turns have passed.
-0071-0000|data.Name		Enraged
-0071-0001|data.Desc		The Pokémon will gain a boost to its Attack each time it takes damage from an attack. This status wears off after a few turns.
-0072-0000|data.Name		Taunted
-0072-0001|data.Desc		The Pokémon is taunted into only using attacking moves. This status wears off after many turns have passed.
-0073-0000|data.Name		Encore
-0073-0001|data.Desc		The Pokémon is given an encore, forcing it to repeat the last move it used. This status wears off after a few turns.
-0074-0000|data.Name		Torment
-0074-0001|data.Desc		The Pokémon is prevented from using the same move twice in a row. This status wears off after many turns have passed.
-0075-0000|data.Name		Grudge
-0075-0001|data.Desc		Enemies that damage this Pokémon with attacks will have all their moves lose PP. This status wears off after many turns have passed.
-0076-0000|data.Name		Lucky Chant
-0076-0001|data.Desc		The Pokémon is protected from critical hits and the additional effects of attacking moves. This status wears off after many turns have passed.
-0077-0000|data.Name		Aqua Ring
-0077-0001|data.Desc		The Pokémon is surrounded by a veil of water that gradually restores its HP. This status wears off after a few turns.
-0078-0000|data.Name		Focus Energy
-0078-0001|data.Desc		The Pokémon is focused and can land critical hits more easily. This status wears off after many turns have passed.
-0079-0000|data.Name		Embargo
-0079-0001|data.Desc		The Pokémon is rendered incapable of using any items, and its held item item loses its effect. This status wears off after many turns have passed.
-0080-0000|data.Name		Area Counter
-0080-0001|data.Desc		All damage done to this Pokémon of a certain category of moves will be reflected on all foes within 3 tiles. This status wears off after many turns have passed.
-0081-0000|data.Name		Heal Block
-0081-0001|data.Desc		The Pokémon is prevented from restoring its HP. This status wears off after many turns have passed.
-0082-0000|data.Name		Magic Coat
-0082-0001|data.Desc		The Pokémon will reflect any moves that inflict status back at the user. This status wears off after a few turns.
-0083-0000|data.Name		Metal Burst
-0083-0001|data.Desc		All damage done to this Pokémon will be reflected on all nearby foes. This status wears off after a few turns, or if the Pokémon moves.
-0084-0000|data.Name		Type-Boosted
-0084-0001|data.Desc		The Pokémon has moves of a certain type boosted. This status wears off after many turns have passed.
-0085-0000|data.Name		Type-Converted
-0085-0001|data.Desc		The Pokémon has all of its moves converted to a single type.
-0086-0000|data.Name		Status Protection
-0086-0001|data.Desc		The Pokémon is protected from a certain status effect. This status wears off after many turns have passed.
-0087-0000|data.Name		Wide Guard
-0087-0001|data.Desc		The Pokémon is protected from moves that hit in a wide range. This status wears off after a few turns.
-0088-0000|data.Name		Quick Guard
-0088-0001|data.Desc		The Pokémon is protected from moves that have a long range. This status wears off after a few turns.
-0089-0000|data.Name		Protect
-0089-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.
-0090-0000|data.Name		Immobilized
-0090-0001|data.Desc		The Pokémon is immobilized and cannot move. This status wears off after a few turns.
-0091-0000|data.Name		Follow Me
-0091-0001|data.Desc		The Pokémon is the center of attention and will redirect any attack targetting its allies. This status wears off after a few turns.
-0092-0000|data.Name		Super Mobile
-0092-0001|data.Desc		The Pokémon is given the ability to traverse walls.
-0093-0000|data.Name		Slip
-0093-0001|data.Desc		The Pokémon is given the ability to traverse water.
-0094-0000|data.Name		Snatch
-0094-0001|data.Desc		The Pokémon is ready to snatch any stat-boosting move that foes use on themselves. This status wears off after a few turns.
-0095-0000|data.Name		Roosting
-0095-0001|data.Desc		The Pokémon is roosting, eliminating its Flying-type matchups. This status wears off when the Pokémon moves.
-0096-0000|data.Name		Belch
-0096-0001|data.Desc		The Pokémon is ready to belch, unleashing the attack whenever it eats a food item. This status wears off after a few turns.
-0097-0000|data.Name		Electrified
-0097-0001|data.Desc		The Pokémon has all of its moves converted to the Electric-type. This status wears off after a few turns.
-0098-0000|data.Name		Sure Shot
-0098-0001|data.Desc		The Pokémon's attacks cannot miss. This status wears off after many turns have passed.
-0099-0000|data.Name		Power-Charged
-0099-0001|data.Desc		The Pokémon is able to use moves without charging or recharging, and its PP is prevented from dropping. This status wears off after many turns have passed.
-0100-0000|data.Name		Mini-Counter
-0100-0001|data.Desc		The Pokémon will return damage from all attacks back at the user. This status wears off after many turns have passed.
-0101-0000|data.Name		Leech Seed
-0101-0001|data.Desc		The Pokémon's HP is sapped and given to a foe every turn. This status wears off if there are no foes around.
-0102-0000|data.Name		Magnet Rise
-0102-0001|data.Desc		The Pokémon is levitating with electromagnetism, allowing it to avoid Ground-type attacks. This status wears off after many turns have passed.
-0103-0000|data.Name		Clamp
-0103-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.
-0104-0000|data.Name		Infestation
-0104-0001|data.Desc		The Pokémon is trapped by an infestation, taking gradual damage and preventing it from moving. This status wears off after a few turns.
-0105-0000|data.Name		Nightmare
-0105-0001|data.Desc		The Pokémon takes gradual damage every turn when it is sleeping. This status wears off after many turns have passed.
-0106-0000|data.Name		Magma Storm
-0106-0001|data.Desc		The Pokémon is trapped by a vortex of magma, taking gradual damage and preventing it from moving. This status wears off after a few turns.
-0107-0000|data.Name		Retaliate
-0107-0001|data.Desc		The Pokémon is ready to retaliate, unleashing the move whenever a nearby foe attacks an ally. This status wears off after a few turns.
-0108-0000|data.Name		Water Pledge
-0108-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
-0109-0000|data.Name		Fire Pledge
-0109-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
-0110-0000|data.Name		Grass Pledge
-0110-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
-0111-0000|data.Name		Illusion
-0111-0001|data.Desc		The Pokémon has disguised itself as a different Pokémon. Wild Pokémon of the same species will not attack it.
-0112-0000|data.Name		Decoy
-0112-0001|data.Desc		The Pokémon is made into a Decoy, making it a target of everyone's attacks. This status wears off after many turns have passed.
-0113-0000|data.Name		Type-Protected
-0113-0001|data.Desc		The Pokémon is protected from moves of a certain type. This status wears off after many turns have passed.
-0114-0000|data.Name		Blinker
-0114-0001|data.Desc		The Pokémon has its Attack Range limited, allowing it to hit only targets in front. This status wears off after many turns have passed.
-0115-0000|data.Name		Pierce
-0115-0001|data.Desc		The Pokémon's attacks and items can hit through multiple targets and walls.
-0116-0000|data.Name		Conversion
-0116-0001|data.Desc		The Pokémon will change its type to match its moves. This status wears off after a few turns.
-0117-0000|data.Name		Conversion 2
-0117-0001|data.Desc		The Pokémon will change its type to resist incoming moves. This status wears off after a few turns.
-0118-0000|data.Name		Recruit Boost
-0118-0001|data.Desc		The Pokémon's chances of recruiting other members is temporarily increased.
-0119-0000|data.Name		Stat-Charged
-0119-0001|data.Desc		The Pokémon is protected from all stat changes, including its own.
-0120-0000|data.Name		Mental-Charged
-0120-0001|data.Desc		The Pokémon is protected against move-binding effects. This status wears off after many turns have passed.
-0121-0000|data.Name		Weakness Drain
-0121-0001|data.Desc		The Pokémon will have its HP restored if hit by a super-effective move. This status wears off after many turns have passed.
-0122-0000|data.Name		Doom Desire
-0122-0001|data.Desc		The Pokémon will be attacked at a few turns in the future. Nearby allies will also take splash damage when the attack hits.
-0123-0000|data.Name		Powder
-0123-0001|data.Desc		The Pokémon is covered in a powder that causes an explosion when exposed to fire or electricity.
-0124-0000|data.Name		Regeneration
-0124-0001|data.Desc		The Pokémon gradually regains HP each turn. This status wears off after a few turns.
-0125-0000|data.Name		Detect
-0125-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.
-0126-0000|data.Name		Missed All Last Turn
-0126-0001|data.Desc		
-0127-0000|data.Name		Crits Landed
-0127-0001|data.Desc		
-0128-0000|data.Name		Shopkeeper
-0128-0001|data.Desc		
-0129-0000|data.Name		Invisible
-0129-0001|data.Desc		The Pokémon is invisible and cannot be seen by other Pokémon. This status wears off after a few turns.
-0130-0000|data.Name		Veiled
-0130-0001|data.Desc		
-0131-0000|data.Name		Friendly Fire
-0131-0001|data.Desc		
+0000-aqua_ring-0000|data.Name		Aqua Ring
+0000-aqua_ring-0001|data.Desc		The Pokémon is surrounded by a veil of water that gradually restores its HP. This status wears off after a few turns.
+0000-area_counter-0000|data.Name		Area Counter
+0000-area_counter-0001|data.Desc		All damage done to this Pokémon of a certain category of moves will be reflected on all foes within 3 tiles. This status wears off after many turns have passed.
+0000-belch-0000|data.Name		Belch
+0000-belch-0001|data.Desc		The Pokémon is ready to belch, unleashing the attack whenever it eats a food item. This status wears off after a few turns.
+0000-biding-0000|data.Name		Biding
+0000-biding-0001|data.Desc		The Pokémon is storing energy for an attack. In a few turns, it will unleash the energy, doing double the amount of damage it took while biding.
+0000-bind-0000|data.Name		Bind
+0000-bind-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.
+0000-blinker-0000|data.Name		Blinker
+0000-blinker-0001|data.Desc		The Pokémon has its Attack Range limited, allowing it to hit only targets in front. This status wears off after many turns have passed.
+0000-bouncing-0000|data.Name		Bouncing
+0000-bouncing-0001|data.Desc		The Pokémon is in mid-air from a bounce and can avoid most moves. It will unleash the move on its next turn.
+0000-burn-0000|data.Name		Burned
+0000-burn-0001|data.Desc		The Pokémon will take some damage every turn, and its Attack will be lowered. This status wears off after a few turns.
+0000-charge-0000|data.Name		Charge
+0000-charge-0001|data.Desc		The Pokémon is charging electrical energy, boosting the power of an Electric-type attack. This status wears off after a few turns.
+0000-charging_focus_punch-0000|data.Name		Charging Focus Punch
+0000-charging_focus_punch-0001|data.Desc		The Pokémon is charging Focus Punch. It will unleash the move on its next attack.
+0000-charging_razor_wind-0000|data.Name		Charging Razor Wind
+0000-charging_razor_wind-0001|data.Desc		The Pokémon is charging Razor Wind. It will unleash the move on its next turn.
+0000-charging_skull_bash-0000|data.Name		Charging Skull Bash
+0000-charging_skull_bash-0001|data.Desc		The Pokémon is charging Skull Bash. It will unleash the move on its next turn.
+0000-charging_sky_attack-0000|data.Name		Charging Sky Attack
+0000-charging_sky_attack-0001|data.Desc		The Pokémon is charging Sky Attack. It will unleash the move on its next turn.
+0000-charging_solar_beam-0000|data.Name		Charging Solar Beam
+0000-charging_solar_beam-0001|data.Desc		The Pokémon is charging Solar Beam. It will unleash the move on its next turn.
+0000-chasing-0000|data.Name		Chasing
+0000-chasing-0001|data.Desc		Every time the target makes a move, this Pokémon will automatically warp to it. This status wears off after a few turns.
+0000-clamp-0000|data.Name		Clamp
+0000-clamp-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.
+0000-confuse-0000|data.Name		Confused
+0000-confuse-0001|data.Desc		The Pokémon is confused, causing its movements and attacks to vary wildly. Attacks that target foes can also target friends, and vice versa.
+0000-conversion-0000|data.Name		Conversion
+0000-conversion-0001|data.Desc		The Pokémon will change its type to match its moves. This status wears off after a few turns.
+0000-conversion_2-0000|data.Name		Conversion 2
+0000-conversion_2-0001|data.Desc		The Pokémon will change its type to resist incoming moves. This status wears off after a few turns.
+0000-counter-0000|data.Name		Counter
+0000-counter-0001|data.Desc		The Pokémon will return damage from physical attacks back at the user with double the power. This status wears off after a few turns.
+0000-crits_landed-0000|data.Name		Crits Landed
+0000-crits_landed-0001|data.Desc		
+0000-cursed-0000|data.Name		Cursed
+0000-cursed-0001|data.Desc		The Pokémon is cursed and will take damage each time it attacks a foe. This status wears off after a few turns.
+0000-decoy-0000|data.Name		Decoy
+0000-decoy-0001|data.Desc		The Pokémon is made into a Decoy, making it a target of everyone's attacks. This status wears off after many turns have passed.
+0000-defense_curl-0000|data.Name		Defense Curl
+0000-defense_curl-0001|data.Desc		
+0000-destiny_bond-0000|data.Name		Destiny Bond
+0000-destiny_bond-0001|data.Desc		Any damage done to this Pokémon from direct attacks is also done to the target of the Destiny Bond. This status wears off after a few turns, or if the Pokémon moves.
+0000-detect-0000|data.Name		Detect
+0000-detect-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.
+0000-digging-0000|data.Name		Digging
+0000-digging-0001|data.Desc		The Pokémon is digging underground and can avoid most moves and obstacles. It will resurface in a few turns, or when it chooses to attack.
+0000-disable-0000|data.Name		Disable
+0000-disable-0001|data.Desc		The Pokémon has one of its moves disabled and cannot use it.
+0000-diving-0000|data.Name		Diving
+0000-diving-0001|data.Desc		The Pokémon is hiding underwater and can avoid most moves. It will resurface in a few turns, or when it chooses to attack.
+0000-doom_desire-0000|data.Name		Doom Desire
+0000-doom_desire-0001|data.Desc		The Pokémon will be attacked at a few turns in the future. Nearby allies will also take splash damage when the attack hits.
+0000-electrified-0000|data.Name		Electrified
+0000-electrified-0001|data.Desc		The Pokémon has all of its moves converted to the Electric-type. This status wears off after a few turns.
+0000-embargo-0000|data.Name		Embargo
+0000-embargo-0001|data.Desc		The Pokémon is rendered incapable of using any items, and its held item item loses its effect. This status wears off after many turns have passed.
+0000-encore-0000|data.Name		Encore
+0000-encore-0001|data.Desc		The Pokémon is given an encore, forcing it to repeat the last move it used. This status wears off after a few turns.
+0000-endure-0000|data.Name		Endure
+0000-endure-0001|data.Desc		The Pokémon is bracing itself, preventing it from fainting from a direct attack. This status wears off after a few turns, or if the Pokémon moves.
+0000-enraged-0000|data.Name		Enraged
+0000-enraged-0001|data.Desc		The Pokémon will gain a boost to its Attack each time it takes damage from an attack. This status wears off after a few turns.
+0000-exposed-0000|data.Name		Exposed
+0000-exposed-0001|data.Desc		All attacks made on the Pokémon will ignore its resistances, immunities, and evasion changes.
+0000-fire_pledge-0000|data.Name		Fire Pledge
+0000-fire_pledge-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
+0000-fire_spin-0000|data.Name		Fire Spin
+0000-fire_spin-0001|data.Desc		The Pokémon is trapped in a vortex of fire, taking gradual damage and preventing it from moving. This status wears off after a few turns.
+0000-flinch-0000|data.Name		Cringing
+0000-flinch-0001|data.Desc		The Pokémon is cringing and cannot attack or use items. This status wears off on the next turn.
+0000-flying-0000|data.Name		Flying
+0000-flying-0001|data.Desc		The Pokémon is flying and can avoid most moves and obstacles. It will drop back down in a few turns, or when it chooses to attack.
+0000-focus_energy-0000|data.Name		Focus Energy
+0000-focus_energy-0001|data.Desc		The Pokémon is focused and can land critical hits more easily. This status wears off after many turns have passed.
+0000-follow_me-0000|data.Name		Follow Me
+0000-follow_me-0001|data.Desc		The Pokémon is the center of attention and will redirect any attack targetting its allies. This status wears off after a few turns.
+0000-freeze-0000|data.Name		Frozen
+0000-freeze-0001|data.Desc		The Pokémon is frozen and incapable of acting or being affected by moves. This status wears off after a few turns, or if the Pokémon is hit by a Fire-type attack.
+0000-friendly_fire-0000|data.Name		Friendly Fire
+0000-friendly_fire-0001|data.Desc		
+0000-future_sight-0000|data.Name		Future Sight
+0000-future_sight-0001|data.Desc		The Pokémon will be attacked a few turns in the future. Nearby allies will also take splash damage when the attack hits.
+0000-grass_pledge-0000|data.Name		Grass Pledge
+0000-grass_pledge-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
+0000-grudge-0000|data.Name		Grudge
+0000-grudge-0001|data.Desc		Enemies that damage this Pokémon with attacks will have all their moves lose PP. This status wears off after many turns have passed.
+0000-heal_block-0000|data.Name		Heal Block
+0000-heal_block-0001|data.Desc		The Pokémon is prevented from restoring its HP. This status wears off after many turns have passed.
+0000-illusion-0000|data.Name		Illusion
+0000-illusion-0001|data.Desc		The Pokémon has disguised itself as a different Pokémon. Wild Pokémon of the same species will not attack it.
+0000-immobilized-0000|data.Name		Immobilized
+0000-immobilized-0001|data.Desc		The Pokémon is immobilized and cannot move. This status wears off after a few turns.
+0000-in_love-0000|data.Name		In Love
+0000-in_love-0001|data.Desc		The Pokémon is infatuated with the enemy and cannot target it with any moves or items. This status wears off after a few turns.
+0000-infestation-0000|data.Name		Infestation
+0000-infestation-0001|data.Desc		The Pokémon is trapped by an infestation, taking gradual damage and preventing it from moving. This status wears off after a few turns.
+0000-ingrain-0000|data.Name		Ingrain
+0000-ingrain-0001|data.Desc		The Pokémon's roots are planted in the ground, gradually restoring its HP and preventing it from moving. This status wears off after a few turns.
+0000-invisible-0000|data.Name		Invisible
+0000-invisible-0001|data.Desc		The Pokémon is invisible and cannot be seen by other Pokémon. This status wears off after a few turns.
+0000-last_ally_move-0000|data.Name		Last Ally Move
+0000-last_ally_move-0001|data.Desc		
+0000-last_move_hit_by_other-0000|data.Name		Last Move Hit By Other
+0000-last_move_hit_by_other-0001|data.Desc		
+0000-last_targeted_by-0000|data.Name		Last Targeted By
+0000-last_targeted_by-0001|data.Desc		
+0000-last_used_move-0000|data.Name		Last Used Move
+0000-last_used_move-0001|data.Desc		
+0000-last_used_move_slot-0000|data.Name		Last Used Move Slot
+0000-last_used_move_slot-0001|data.Desc		
+0000-leech_seed-0000|data.Name		Leech Seed
+0000-leech_seed-0001|data.Desc		The Pokémon's HP is sapped and given to a foe every turn. This status wears off if there are no foes around.
+0000-light_screen-0000|data.Name		Light Screen
+0000-light_screen-0001|data.Desc		The Pokémon takes half damage from special attacks. This status wears off after a few turns.
+0000-lucky_chant-0000|data.Name		Lucky Chant
+0000-lucky_chant-0001|data.Desc		The Pokémon is protected from critical hits and the additional effects of attacking moves. This status wears off after many turns have passed.
+0000-magic_coat-0000|data.Name		Magic Coat
+0000-magic_coat-0001|data.Desc		The Pokémon will reflect any moves that inflict status back at the user. This status wears off after a few turns.
+0000-magma_storm-0000|data.Name		Magma Storm
+0000-magma_storm-0001|data.Desc		The Pokémon is trapped by a vortex of magma, taking gradual damage and preventing it from moving. This status wears off after a few turns.
+0000-magnet_rise-0000|data.Name		Magnet Rise
+0000-magnet_rise-0001|data.Desc		The Pokémon is levitating with electromagnetism, allowing it to avoid Ground-type attacks. This status wears off after many turns have passed.
+0000-mental_charged-0000|data.Name		Mental-Charged
+0000-mental_charged-0001|data.Desc		The Pokémon is protected against move-binding effects. This status wears off after many turns have passed.
+0000-metal_burst-0000|data.Name		Metal Burst
+0000-metal_burst-0001|data.Desc		All damage done to this Pokémon will be reflected on all nearby foes. This status wears off after a few turns, or if the Pokémon moves.
+0000-mini_counter-0000|data.Name		Mini-Counter
+0000-mini_counter-0001|data.Desc		The Pokémon will return damage from all attacks back at the user. This status wears off after many turns have passed.
+0000-minimized-0000|data.Name		Minimized
+0000-minimized-0001|data.Desc		
+0000-miracle_eye-0000|data.Name		Miracle Eye
+0000-miracle_eye-0001|data.Desc		All attacks made by the Pokémon will ignore the target's resistances, immunities, and evasion changes.
+0000-mirror_coat-0000|data.Name		Mirror Coat
+0000-mirror_coat-0001|data.Desc		The Pokémon will return damage from special attacks back at the user with double the power. This status wears off after a few turns.
+0000-missed_all_last_turn-0000|data.Name		Missed All Last Turn
+0000-missed_all_last_turn-0001|data.Desc		
+0000-mist-0000|data.Name		Mist
+0000-mist-0001|data.Desc		The Pokémon is surrounded in mist, preventing others from dropping its stats. This status wears off after many turns have passed.
+0000-mod_accuracy-0000|data.Name		Accuracy
+0000-mod_accuracy-0001|data.Desc		The Pokémon's Accuracy has been modified, allowing its attacks to hit more or less often.
+0000-mod_attack-0000|data.Name		Attack
+0000-mod_attack-0001|data.Desc		The Pokémon's Attack has been modified, doing more or less damage with Physical attacks.
+0000-mod_defense-0000|data.Name		Defense
+0000-mod_defense-0001|data.Desc		The Pokémon's Defense has been modified, causing it to take more or less damage from Physical attacks.
+0000-mod_evasion-0000|data.Name		Evasion
+0000-mod_evasion-0001|data.Desc		The Pokémon's Evasion has been modified, allowing it to dodge attacks more or less often.
+0000-mod_range-0000|data.Name		Range
+0000-mod_range-0001|data.Desc		
+0000-mod_special_attack-0000|data.Name		Special Attack
+0000-mod_special_attack-0001|data.Desc		The Pokémon's Special Attack has been modified, doing more or less damage with Special attacks.
+0000-mod_special_defense-0000|data.Name		Special Defense
+0000-mod_special_defense-0001|data.Desc		The Pokémon's Special Defense has been modified, causing it to take more or less damage from Special attacks.
+0000-mod_speed-0000|data.Name		Movement Speed
+0000-mod_speed-0001|data.Desc		The Pokémon's Movement Speed has been modified to move faster or slower than usual.
+0000-nightmare-0000|data.Name		Nightmare
+0000-nightmare-0001|data.Desc		The Pokémon takes gradual damage every turn when it is sleeping. This status wears off after many turns have passed.
+0000-none-0000|data.Name		None
+0000-none-0001|data.Desc		
+0000-outrage-0000|data.Name		Outrage
+0000-outrage-0001|data.Desc		The Pokémon will use Outrage repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.
+0000-paralyze-0000|data.Name		Paralyzed
+0000-paralyze-0001|data.Desc		The Pokémon is paralyzed and cannot attack in consecutive turns. This status wears off after a few turns.
+0000-paused-0000|data.Name		Paused
+0000-paused-0001|data.Desc		The Pokémon is rendered incapable of taking any action. This status wears off after a few turns.
+0000-perish_song-0000|data.Name		Perish Song
+0000-perish_song-0001|data.Desc		The Pokémon has heard Perish Song, and will faint when its countdown reaches zero.
+0000-petal_dance-0000|data.Name		Petal Dance
+0000-petal_dance-0001|data.Desc		The Pokémon will use Petal Dance repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.
+0000-phantom_force-0000|data.Name		Phantom Force
+0000-phantom_force-0001|data.Desc		The Pokémon vanished completely and can avoid moves and obstacles. It will reappear in a few turns, or when it chooses to attack.
+0000-pierce-0000|data.Name		Pierce
+0000-pierce-0001|data.Desc		The Pokémon's attacks and items can hit through multiple targets and walls.
+0000-poison-0000|data.Name		Poisoned
+0000-poison-0001|data.Desc		The Pokémon gradually takes damage every time it attacks. Its natural HP recovery is also stopped.
+0000-poison_toxic-0000|data.Name		Badly Poisoned
+0000-poison_toxic-0001|data.Desc		The Pokémon takes gradually worsening damage every time it attacks. Its natural HP recovery is also stopped.
+0000-powder-0000|data.Name		Powder
+0000-powder-0001|data.Desc		The Pokémon is covered in a powder that causes an explosion when exposed to fire or electricity.
+0000-power_charged-0000|data.Name		Power-Charged
+0000-power_charged-0001|data.Desc		The Pokémon is able to use moves without charging or recharging, and its PP is prevented from dropping. This status wears off after many turns have passed.
+0000-protect-0000|data.Name		Protect
+0000-protect-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.
+0000-quick_guard-0000|data.Name		Quick Guard
+0000-quick_guard-0001|data.Desc		The Pokémon is protected from moves that have a long range. This status wears off after a few turns.
+0000-rage_powder-0000|data.Name		Rage Powder
+0000-rage_powder-0001|data.Desc		The Pokémon is enraged by the enemy and cannot target anyone else with any moves or items. This status wears off after a few turns.
+0000-recruit_boost-0000|data.Name		Recruit Boost
+0000-recruit_boost-0001|data.Desc		The Pokémon's chances of recruiting other members is temporarily increased.
+0000-reflect-0000|data.Name		Reflect
+0000-reflect-0001|data.Desc		The Pokémon takes half damage from physical attacks. This status wears off after a few turns.
+0000-regeneration-0000|data.Name		Regeneration
+0000-regeneration-0001|data.Desc		The Pokémon gradually regains HP each turn. This status wears off after a few turns.
+0000-retaliate-0000|data.Name		Retaliate
+0000-retaliate-0001|data.Desc		The Pokémon is ready to retaliate, unleashing the move whenever a nearby foe attacks an ally. This status wears off after a few turns.
+0000-roosting-0000|data.Name		Roosting
+0000-roosting-0001|data.Desc		The Pokémon is roosting, eliminating its Flying-type matchups. This status wears off when the Pokémon moves.
+0000-safeguard-0000|data.Name		Safeguard
+0000-safeguard-0001|data.Desc		The Pokémon is protected from bad status effects with a veil. This status wears off after many turns have passed.
+0000-sand_tomb-0000|data.Name		Sand Tomb
+0000-sand_tomb-0001|data.Desc		The Pokémon is trapped in quicksand, taking gradual damage and preventing it from moving. This status wears off after a few turns.
+0000-shadow_force-0000|data.Name		Shadow Force
+0000-shadow_force-0001|data.Desc		The Pokémon vanished completely and can avoid moves and obstacles. Its Movement Speed is also boosted. It will reappear in a few turns, or when it chooses to attack.
+0000-shopkeeper-0000|data.Name		Shopkeeper
+0000-shopkeeper-0001|data.Desc		
+0000-sleep-0000|data.Name		Asleep
+0000-sleep-0001|data.Desc		The Pokémon is asleep and incapable of any action until it wakes up. This status wears off after a few turns, or if the Pokémon is attacked.
+0000-sleepless-0000|data.Name		Sleepless
+0000-sleepless-0001|data.Desc		The Pokémon is prevented from becoming drowsy or sleeping. This status wears off after many turns have passed.
+0000-slip-0000|data.Name		Slip
+0000-slip-0001|data.Desc		The Pokémon is given the ability to traverse water.
+0000-snatch-0000|data.Name		Snatch
+0000-snatch-0001|data.Desc		The Pokémon is ready to snatch any stat-boosting move that foes use on themselves. This status wears off after a few turns.
+0000-stat_charged-0000|data.Name		Stat-Charged
+0000-stat_charged-0001|data.Desc		The Pokémon is protected from all stat changes, including its own.
+0000-status_protection-0000|data.Name		Status Protection
+0000-status_protection-0001|data.Desc		The Pokémon is protected from a certain status effect. This status wears off after many turns have passed.
+0000-stockpile-0000|data.Name		Stockpile
+0000-stockpile-0001|data.Desc		The Pokémon has stockpiled energy, to use in the moves Swallow or Spit Up. It also increases its Defense and Special Defense. This status wears off after many turns have passed.
+0000-super_mobile-0000|data.Name		Super Mobile
+0000-super_mobile-0001|data.Desc		The Pokémon is given the ability to traverse walls.
+0000-sure_shot-0000|data.Name		Sure Shot
+0000-sure_shot-0001|data.Desc		The Pokémon's attacks cannot miss. This status wears off after many turns have passed.
+0000-taunted-0000|data.Name		Taunted
+0000-taunted-0001|data.Desc		The Pokémon is taunted into only using attacking moves. This status wears off after many turns have passed.
+0000-telekinesis-0000|data.Name		Telekinesis
+0000-telekinesis-0001|data.Desc		The Pokémon is floating from telekinesis, preventing it from moving or avoiding attacks. This status wears off after a few turns.
+0000-thrash-0000|data.Name		Thrash
+0000-thrash-0001|data.Desc		The Pokémon will use Thrash repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.
+0000-times_move_used-0000|data.Name		Times Move Used
+0000-times_move_used-0001|data.Desc		
+0000-torment-0000|data.Name		Torment
+0000-torment-0001|data.Desc		The Pokémon is prevented from using the same move twice in a row. This status wears off after many turns have passed.
+0000-type_boosted-0000|data.Name		Type-Boosted
+0000-type_boosted-0001|data.Desc		The Pokémon has moves of a certain type boosted. This status wears off after many turns have passed.
+0000-type_converted-0000|data.Name		Type-Converted
+0000-type_converted-0001|data.Desc		The Pokémon has all of its moves converted to a single type.
+0000-type_protected-0000|data.Name		Type-Protected
+0000-type_protected-0001|data.Desc		The Pokémon is protected from moves of a certain type. This status wears off after many turns have passed.
+0000-veiled-0000|data.Name		Veiled
+0000-veiled-0001|data.Desc		
+0000-was_hurt_last_turn-0000|data.Name		Was Hurt Last Turn
+0000-was_hurt_last_turn-0001|data.Desc		
+0000-water_pledge-0000|data.Name		Water Pledge
+0000-water_pledge-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
+0000-weakness_drain-0000|data.Name		Weakness Drain
+0000-weakness_drain-0001|data.Desc		The Pokémon will have its HP restored if hit by a super-effective move. This status wears off after many turns have passed.
+0000-whirlpool-0000|data.Name		Whirlpool
+0000-whirlpool-0001|data.Desc		The Pokémon is trapped in a whirlpool, taking gradual damage and preventing it from moving. This status wears off after a few turns.
+0000-wide_guard-0000|data.Name		Wide Guard
+0000-wide_guard-0001|data.Desc		The Pokémon is protected from moves that hit in a wide range. This status wears off after a few turns.
+0000-wish-0000|data.Name		Wish
+0000-wish-0001|data.Desc		The Pokémon will have its HP restored a few turns in the future. The amount of HP restored depends on the Maximum HP of the user.
+0000-wrap-0000|data.Name		Wrap
+0000-wrap-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.
+0000-yawning-0000|data.Name		Yawning
+0000-yawning-0001|data.Desc		The Pokémon is yawning and will fall asleep in a few turns.
