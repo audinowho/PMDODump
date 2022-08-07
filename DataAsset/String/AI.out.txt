@@ -1,7 +1,7 @@
 Key	Comment	EN	FR	FR-CA	DE	ES	ES-LA	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU	LT
-AI-0000|data.Name		Stick Together	Suivre le meneur	Rester ensemble	Zusammen bleiben	Vayamos juntos		Fiquem Juntos		함께 가자			一起走
-AI-0001|data.Name		Go After Foes	A l'attaque		Gegner angreifen	Ve a por ellos		Persigam inimigos		적을 알아서 쫓아라			追逐敌人
-AI-0002|data.Name		Split Up	Initiative	Explorez tout seul	Aufteilen	Separémonos		Se separem		흩어지자			分开
-AI-0003|data.Name		Avoid Trouble		Évitez les ennemis	Ärger vermeiden	Evita Problemas		Evite Problemas		선제공격 피하기			避免
-AI-0004|data.Name		Get Away		Fuir!	Flüchten	Escapa		Fuja		여기서 도망쳐			逃离
-AI-0005|data.Name		Wait There		Reste ici	Warten	Espera ahí		Fique aqui		거기서 대기			等住
+AI-stick_together|data.Name		Stick Together	Suivre le meneur	Rester ensemble	Zusammen bleiben	Vayamos juntos		Fiquem Juntos		함께 가자			一起走
+AI-go_after_foes|data.Name		Go After Foes	A l'attaque		Gegner angreifen	Ve a por ellos		Persigam inimigos		적을 알아서 쫓아라			追逐敌人
+AI-split_up|data.Name		Split Up	Initiative	Explorez tout seul	Aufteilen	Separémonos		Se separem		흩어지자			分开
+AI-avoid_trouble|data.Name		Avoid Trouble		Évitez les ennemis	Ärger vermeiden	Evita Problemas		Evite Problemas		선제공격 피하기			避免
+AI-get_away|data.Name		Get Away		Fuir!	Flüchten	Escapa		Fuja		여기서 도망쳐			逃离
+AI-wait_there|data.Name		Wait There		Reste ici	Warten	Espera ahí		Fique aqui		거기서 대기			等住
