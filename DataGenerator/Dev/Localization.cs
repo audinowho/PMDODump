@@ -321,26 +321,29 @@ namespace DataGenerator.Dev
             }
         }
 
-        public static void WriteNamedDataTable(DataManager.DataType dataType, int limit)
+        public static void WriteNamedDataTable(DataManager.DataType dataType)
         {
 
             Dictionary<string, LocalText> rows = readLocalizationRows(GenPath.TL_PATH + dataType.ToString() + ".out.txt");
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[dataType].Count && (limit == 0 || ii < limit); ii++)
+            foreach (string key in DataManager.Instance.DataIndices[dataType].Entries.Keys)
             {
-                string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + ii + DataManager.DATA_EXT);
-
-                IEntryData describedData = DataManager.LoadData<IEntryData>(dir);
-
-                if (describedData.Name.DefaultText != "")
+                string tlKey = dataType.ToString() + "-" + key + "|data.Name";
+                if (rows.ContainsKey(tlKey))
                 {
-                    describedData.Name = rows[dataType.ToString() +"-" + ii.ToString("D4") + "|data.Name"];
+                    string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
 
-                    DataManager.SaveData(dir, describedData);
+                    IEntryData describedData = DataManager.LoadData<IEntryData>(dir);
+
+                    if (describedData.Name.DefaultText != "")
+                    {
+                        describedData.Name = rows[tlKey];
+                        DataManager.SaveData(dir, describedData);
+                    }
                 }
             }
         }
 
-        public static void CopyNamedData(DataManager.DataType dataType, int from, int to)
+        public static void CopyNamedData(DataManager.DataType dataType, string from, string to)
         {
             string fromDir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + from + DataManager.DATA_EXT);
             string toDir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + to + DataManager.DATA_EXT);
@@ -356,16 +359,17 @@ namespace DataGenerator.Dev
         {
 
             Dictionary<string, LocalText> rows = readLocalizationRows(GenPath.TL_PATH + dataType.ToString() + ".out.txt");
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[dataType].Count; ii++)
+            foreach(string key in DataManager.Instance.DataIndices[dataType].Entries.Keys)
             {
-                string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + ii + DataManager.DATA_EXT);
+                string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
 
                 IDescribedData describedData = DataManager.LoadData<IDescribedData>(dir);
 
                 if (describedData.Name.DefaultText != "")
                 {
-                    describedData.Name = rows[ii.ToString("D4") + "-" + 0.ToString("D4") + "|data.Name"];
-                    describedData.Desc = rows[ii.ToString("D4") + "-" + 1.ToString("D4") + "|data.Desc"];
+                    int sort = DataManager.Instance.DataIndices[dataType].Entries[key].SortOrder;
+                    describedData.Name = rows[sort.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name"];
+                    describedData.Desc = rows[sort.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc"];
 
                     DataManager.SaveData(dir, describedData);
                 }
@@ -378,9 +382,12 @@ namespace DataGenerator.Dev
             Dictionary<string, LocalText> rows = readLocalizationRows(GenPath.TL_PATH + dataType.ToString() + ".out.txt");
             Dictionary<string, LocalText> skillRows = readLocalizationRows(GenPath.TL_PATH + DataManager.DataType.Skill.ToString() + ".out.txt");
             Dictionary<string, LocalText> specialRows = readLocalizationRows(GenPath.TL_PATH + "Special.out.txt");
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[dataType].Count; ii++)
+
+            EntryDataIndex itemIndex = DataManager.Instance.DataIndices[dataType];
+            EntryDataIndex skillIndex = DataManager.Instance.DataIndices[DataManager.DataType.Skill];
+            foreach (string key in itemIndex.Entries.Keys)
             {
-                string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + ii + DataManager.DATA_EXT);
+                string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
 
                 ItemData data = DataManager.LoadData<ItemData>(dir);
 
@@ -393,8 +400,8 @@ namespace DataGenerator.Dev
                     //autocalculate TM name and descriptions
                     LocalText tmFormatName = specialRows["tmFormatName"];
                     LocalText tmFormatDesc = specialRows["tmFormatDesc"];
-                    int moveIndex = data.ItemStates.GetWithDefault<ItemIndexState>().Index;
-                    LocalText moveName = skillRows[moveIndex.ToString("D4") + "-" + 0.ToString("D4") + "|data.Name"];
+                    string moveIndex = data.ItemStates.GetWithDefault<ItemIDState>().ID;
+                    LocalText moveName = skillRows[skillIndex.Entries[moveIndex].SortOrder.ToString("D4") + "-" + moveIndex + "-" + 0.ToString("D4") + "|data.Name"];
                     data.Name = LocalText.FormatLocalText(tmFormatName, moveName);
                     data.Desc = LocalText.FormatLocalText(tmFormatDesc, moveName);
                 }
@@ -434,8 +441,8 @@ namespace DataGenerator.Dev
                 else
                 {
                     //TODO: get these type names via reflection
-                    data.Name = rows[ii.ToString("D4") + "-" + 0.ToString("D4") + "|data.Name"];
-                    data.Desc = rows[ii.ToString("D4") + "-" + 1.ToString("D4") + "|data.Desc"];
+                    data.Name = rows[itemIndex.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name"];
+                    data.Desc = rows[itemIndex.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc"];
                 }
 
                 DataManager.SaveData(dir, data);
@@ -446,14 +453,15 @@ namespace DataGenerator.Dev
         {
             DataManager.DataType dataType = DataManager.DataType.Zone;
             Dictionary<string, LocalText> rows = readLocalizationRows(GenPath.TL_PATH + dataType.ToString() + ".out.txt");
-            for (int ii = 0; ii < DataManager.Instance.DataIndices[dataType].Count; ii++)
+            foreach (string key in DataManager.Instance.DataIndices[dataType].Entries.Keys)
             {
-                string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + ii + DataManager.DATA_EXT);
+                string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
 
                 ZoneData data = DataManager.LoadData<ZoneData>(dir);
 
                 int nn = 0;
-                data.Name = rows[ii.ToString("D4") + "-" + 0.ToString("D4") + "|data.Name"];
+                int sort = DataManager.Instance.DataIndices[dataType].Entries[key].SortOrder;
+                data.Name = rows[sort.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name"];
                 for (int jj = 0; jj < data.Segments.Count; jj++)
                 {
                     LayeredSegment structure = data.Segments[jj] as LayeredSegment;
@@ -466,7 +474,7 @@ namespace DataGenerator.Dev
                             {
                                 //TODO: get these type names via reflection
                                 nn++;
-                                postProc.Name = rows[ii.ToString("D4") + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name"];
+                                postProc.Name = rows[sort.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name"];
                             }
                         }
                     }

@@ -211,11 +211,11 @@ namespace DataGenerator
 
 
 
-                    Localization.WriteNamedDataTable(DataManager.DataType.Skin, 2);
-                    Localization.CopyNamedData(DataManager.DataType.Skin, 1, 2);
-                    Localization.WriteNamedDataTable(DataManager.DataType.Element, 0);
-                    Localization.WriteNamedDataTable(DataManager.DataType.Rank, 0);
-                    Localization.WriteNamedDataTable(DataManager.DataType.AI, 5);
+                    Localization.WriteNamedDataTable(DataManager.DataType.Skin);
+                    Localization.CopyNamedData(DataManager.DataType.Skin, "shiny", "shiny_square");
+                    Localization.WriteNamedDataTable(DataManager.DataType.Element);
+                    Localization.WriteNamedDataTable(DataManager.DataType.Rank);
+                    Localization.WriteNamedDataTable(DataManager.DataType.AI);
                     Localization.WriteDescribedDataTable(DataManager.DataType.Skill);
                     Localization.WriteDescribedDataTable(DataManager.DataType.Intrinsic);
                     Localization.WriteDescribedDataTable(DataManager.DataType.Status);

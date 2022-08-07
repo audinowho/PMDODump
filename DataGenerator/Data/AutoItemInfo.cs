@@ -2046,7 +2046,7 @@ namespace DataGenerator.Data
 
                 //if translating, draw from translation list (should contain the original name as the default text)
                 if (translate && name != "")
-                    localName = specificItemRows[item_idx + "-" + 0.ToString("D4") + "|data.Name"];
+                    localName = specificItemRows[item.SortCategory.ToString("D4") + "-" + item_idx + "-" + 0.ToString("D4") + "|data.Name"];
                 else
                     localName = new LocalText(name);
             }
@@ -2082,7 +2082,7 @@ namespace DataGenerator.Data
         {
             //set name
             if (translate)
-                item.Name = specificItemRows[item_idx + "-" + 0.ToString("D4") + "|data.Name"];
+                item.Name = specificItemRows[item.SortCategory.ToString("D4") + "-" + item_idx + "-" + 0.ToString("D4") + "|data.Name"];
             else
                 item.Name = new LocalText(name);
             

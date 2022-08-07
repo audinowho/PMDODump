@@ -9,6 +9,22 @@ SHEET_CONTENT_START = 4
 KEY_INDEX = 0
 COMMENT_INDEX = 1
 WAIT_TIME = 3
+DEFAULT_COLOR = {'red' : 1.0, 'green' : 1.0, 'blue' : 1.0 }
+
+def create_color_req(sheet_id, row_range, col_range, color):
+    return {
+        "repeatCell": {
+            "range": {
+                "sheetId": sheet_id,
+                "startRowIndex": row_range[0],
+                "endRowIndex": row_range[1],
+                "startColumnIndex": col_range[0],
+                "endColumnIndex": col_range[1]
+            },
+            "cell": { "userEnteredFormat": { "backgroundColor": color } },
+            "fields": "userEnteredFormat(backgroundColor)"
+        }
+    }
 
 class Localization:
     """
@@ -31,11 +47,11 @@ class Localization:
         Writes back to both of them.
         """
         # load data from google sheets
-        header, sheet = self._query_sheet(sheet_name)
+        header, colored_sheet = self._query_sheet_colored(sheet_name)
         # load data from resx file
         resource = self._query_resx(resx_path)
         # merge the data together, back into the google sheets
-        self._merge_sheet_table(sheet_name, sheet, resource)
+        self._merge_sheet_table(sheet_name, colored_sheet, resource)
         # read the google sheets again
         header, sheet = self._query_sheet(sheet_name)
         # update support
@@ -49,7 +65,7 @@ class Localization:
         Writes back to both of them.
         """
         # load data from google sheets
-        header, sheet = self._query_sheet(sheet_name)
+        header, colored_sheet = self._query_sheet_colored(sheet_name)
         # load data from all findable translation resx
         # maps *sub* folder to list of translation rows
         resource_keys = {}
@@ -62,7 +78,7 @@ class Localization:
                 string_key = key + "/" + row[0]
                 resource.append([string_key]+row[1:])
         # merge the data together, back into the google sheets
-        self._merge_sheet_table(sheet_name, sheet, resource)
+        self._merge_sheet_table(sheet_name, colored_sheet, resource)
         # read the google sheets again
         header, sheet = self._query_sheet(sheet_name)
         # update support
@@ -108,11 +124,11 @@ class Localization:
         # keys will be generated as num_name, num_desc, etc.
         # Take note that these keys will be parsed back into the type names, so they must use type names!
         # load data from google sheets
-        header, sheet = self._query_sheet(sheet_name)
+        header, colored_sheet = self._query_sheet_colored(sheet_name)
         # load data from translation table file
         table = self._query_txt(os.path.join("..", "DataAsset", "String", txt_name+".txt"))
         # merge the data together, back into the google sheets
-        self._merge_sheet_table(sheet_name, sheet, table)
+        self._merge_sheet_table(sheet_name, colored_sheet, table)
         # read the google sheets again
         header, sheet = self._query_sheet(sheet_name)
         # write to output txt
@@ -132,11 +148,11 @@ class Localization:
         # the resulting file is type_name.txt, which this function will read in.
         # keys will be generated as the enum name.
         # load data from google sheets
-        header, sheet = self._query_sheet(sheet_name)
+        header, colored_sheet = self._query_sheet_colored(sheet_name)
         # load data from translation table file
         table = self._query_txt(os.path.join("..", "DataAsset", "String", type_name+".txt"))
         # merge the data together, back into the google sheets
-        self._merge_sheet_table(sheet_name, sheet, table)
+        self._merge_sheet_table(sheet_name, colored_sheet, table)
         # read the google sheets again
         header, sheet = self._query_sheet(sheet_name)
         # write to output txt
@@ -197,7 +213,43 @@ class Localization:
 
         return self._query_sheet_range(sheet_name, sheet_name + "!"+str(SHEET_CONTENT_START)+":"+str(SHEET_CONTENT_START+total_rows-1))
 
+    def _query_sheet_colored(self, sheet_name):
+        """
+        Gets all translations from a given google sheet, automatically figuring out height/width.
+        Includes header row for language key.
+        """
+        check_range = sheet_name + "!A"+str(SHEET_CONTENT_START)+":A"
+        check_result = self._service.spreadsheets().values().get(spreadsheetId=self._id, range=check_range).execute()
+        total_rows = len(check_result.get('values', []))
+
+        return self._query_sheet_range_colored(sheet_name, sheet_name + "!"+str(SHEET_CONTENT_START)+":"+str(SHEET_CONTENT_START+total_rows-1))
+
+
     def _query_sheet_range(self, sheet_name, range_name):
+
+        header_row, content_rows = self._query_sheet_range_colored(sheet_name, range_name)
+
+        uncolored_rows = []
+        for idx in range(len(content_rows)):
+            content_row = content_rows[idx]
+            uncolored_row = []
+            for idx2 in range(len(content_row)):
+                cell = content_row[idx2]
+                content_str = cell[0]
+                color = cell[1]
+
+                if color['red'] == 0.91764706 and color['green'] == 0.6 and color['blue'] == 0.6:
+                    content_str = ''
+
+                if '\n' in content_str:
+                    print('Newline found in ' + sheet_name + ': ' + content_str)
+
+                uncolored_row.append(content_str)
+            uncolored_rows.append(uncolored_row)
+
+        return header_row, uncolored_rows
+
+    def _query_sheet_range_colored(self, sheet_name, range_name):
         """
         Gets all translations from a given google sheet, automatically figuring out height/width.
         Includes header row for language key.
@@ -214,22 +266,18 @@ class Localization:
         for row in result['sheets'][0]['data'][0]['rowData']:
             content_row = []
             for cell in row['values']:
-                color = {'red':1.0, 'green':1.0, 'blue':1.0}
+                color = DEFAULT_COLOR
                 if 'userEnteredFormat' in cell and 'backgroundColor' in cell['userEnteredFormat']:
                     color = cell['userEnteredFormat']['backgroundColor']
 
-                if color['red'] == 0.91764706 and color['green'] == 0.6 and color['blue'] == 0.6:
-                    content_str = ''
-                elif 'userEnteredValue' in cell and 'stringValue' in cell['userEnteredValue']:
+                if 'userEnteredValue' in cell and 'stringValue' in cell['userEnteredValue']:
                     content_str = cell['userEnteredValue']['stringValue']
                 else:
                     content_str = ''
-                if '\n' in content_str:
-                    print('Newline found in ' + sheet_name + ': ' + content_str)
-                content_row.append(content_str)
+
+                content_row.append((content_str, color))
 
             content_rows.append(content_row)
-
 
         return header_row, content_rows
 
@@ -303,7 +351,8 @@ class Localization:
                     support[lang] = lang.upper()
                     break
 
-    def _merge_sheet_table(self, sheet_name, sheet, table):
+
+    def _merge_sheet_table(self, sheet_name, colored_sheet, table):
         """
         Takes the array of localization strings from google sheets,
         and merges it with the array of localization strings from the local copy.
@@ -314,20 +363,21 @@ class Localization:
         # maps key to english table translation, google sheet translation, and google sheet alt translations
         cmb_dict = {}
 
-        cols = len(sheet[0])
+        cols = len(colored_sheet[0])
 
-        self.changelogger.write("Sheet: "+sheet_name+"\n")
+        self.changelogger.write("Sheet: " + sheet_name + "\n")
         # adds the sheet translations
-        for row in sheet:
-            key = row[0]
-            en = row[2]
+        for row in colored_sheet:
+            key = row[0][0]
+            comment = row[1][0]
+            en = row[2][0]
             cmb_keys.append(key)
-            cmb_dict[key] = [None, en,row[3:]]
+            cmb_dict[key] = [None, en, comment, row[3:]]
 
         test_keys = sorted(cmb_keys, key=str.lower)
         for ii in range(len(test_keys)):
             if test_keys[ii] != cmb_keys[ii]:
-                raise ValueError("Sheet " + sheet_name + " ordered incorrectly! At "+test_keys[ii] +" vs. "+ cmb_keys[ii])
+                raise ValueError("Sheet " + sheet_name + " ordered incorrectly! At "+test_keys[ii] + " vs. " + cmb_keys[ii])
 
         # maps the key of a new table entry to the key of a list of missing table entries
         possible_renames = {}
@@ -341,9 +391,9 @@ class Localization:
                 cmb_dict[key][0] = en
             else:
                 cmb_keys.append(key)
-                cmb_dict[key] = [en,None,[]]
+                cmb_dict[key] = [en, None, "", []]
             if en not in possible_renames:
-                possible_renames[en] = [[],[]]
+                possible_renames[en] = [[], []]
             possible_renames[en][0].append(key)
 
         # find all old keys that have new keys' english strings
@@ -387,7 +437,8 @@ class Localization:
                     sheet_ind -= 1
                 elif remote_str is None:
                     # Entries missing in the google sheet will be written directly to the google sheet.
-                    moved_strings = []
+                    moved_comment = ""
+                    moved_color_strings = []
                     rename_options = possible_renames[local_str][1]
                     if len(rename_options) > 0 and local_str != "":
                         # Give the option for the user to detect renames, if a deleted entry matches a newly added entry
@@ -399,15 +450,25 @@ class Localization:
                         try:
                             chosen_move = int(overwrite)
                             chosen_key = rename_options[chosen_move]
-                            moved_strings = cmb_dict[chosen_key][2]
+                            moved_comment = cmb_dict[chosen_key][2]
+                            moved_color_strings = cmb_dict[chosen_key][3]
                         except:
                             pass
                     body = { "insertDimension": { "range": { "sheetId": sheet_id, "dimension": "ROWS", "startIndex": sheet_ind-1, "endIndex": sheet_ind } } }
                     self._service.spreadsheets().batchUpdate(spreadsheetId=self._id, body={'requests': [body]}).execute()
 
+                    requests = []
+                    moved_strings = []
+                    for cell_ind, color_string in enumerate(moved_color_strings):
+                        moved_strings.append(color_string[0])
+                        requests.append(create_color_req(sheet_id, (sheet_ind-1, sheet_ind), (cell_ind+3, cell_ind+4), color_string[1]))
+                    body = { 'values': [[cmb_key, moved_comment, local_str] + moved_strings] }
+
                     range_name = sheet_name + "!"+str(sheet_ind)+":"+str(sheet_ind)
-                    body = { 'values': [[cmb_key,"",local_str] + moved_strings] }
                     self._service.spreadsheets().values().update(spreadsheetId=self._id, range=range_name, valueInputOption="RAW", body=body).execute()
+                    # set the colors too
+                    if len(requests) > 0:
+                        self._service.spreadsheets().batchUpdate(spreadsheetId=self._id, body={'requests': requests}).execute()
 
                     if len(moved_strings) == 0:
                         self.changelogger.write("    * Added " + cmb_key + "\n")
@@ -425,7 +486,8 @@ class Localization:
                     else:
                         # check against renames
                         renaming = False
-                        moved_strings = []
+                        moved_comment = ""
+                        moved_color_strings = []
                         rename_options = possible_renames[local_str][1]
                         if len(rename_options) > 0:
                             renaming = True
@@ -442,12 +504,24 @@ class Localization:
 
                             if renaming:
                                 chosen_key = rename_options[chosen_move]
-                                moved_strings = cmb_dict[chosen_key][2]
+                                moved_comment = cmb_dict[chosen_key][2]
+                                moved_color_strings = cmb_dict[chosen_key][3]
 
                         if renaming:
+                            requests = []
+                            moved_strings = []
+                            for cell_ind, color_string in enumerate(moved_color_strings):
+                                moved_strings.append(color_string[0])
+                                requests.append(create_color_req(sheet_id, (sheet_ind-1, sheet_ind), (cell_ind+3, cell_ind+4), color_string[1]))
+
+                            body = { 'values': [[cmb_key, moved_comment, local_str] + moved_strings + ([""] * cols)] }
+
                             range_name = sheet_name + "!"+str(sheet_ind)+":"+str(sheet_ind)
-                            body = { 'values': [[cmb_key,"",local_str] + moved_strings + ([""] * cols)] }
                             self._service.spreadsheets().values().update(spreadsheetId=self._id, range=range_name, valueInputOption="RAW", body=body).execute()
+                            # set the colors too
+                            if len(requests) > 0:
+                                self._service.spreadsheets().batchUpdate(spreadsheetId=self._id, body={'requests': requests}).execute()
+
                             self.changelogger.write("    * Changed " + chosen_key + " to "+ cmb_key+ ", retaining translations\n")
                         else:
                             # If english translation has changed in the table, update it and mark the other translations red.
@@ -471,21 +545,10 @@ class Localization:
 
                                 if overwrite.lower() == 'y':
                                     requests = []
-                                    for cell_ind in range(len(pair[2])):
-                                        if pair[2][cell_ind] != "":
-                                            requests.append({
-                                                "repeatCell": {
-                                                        "range": {
-                                                            "sheetId": sheet_id,
-                                                            "startRowIndex": sheet_ind-1,
-                                                            "endRowIndex": sheet_ind,
-                                                            "startColumnIndex": cell_ind+3,
-                                                            "endColumnIndex": cell_ind+4
-                                                        },
-                                                        "cell": { "userEnteredFormat": { "backgroundColor": { "red": 234 / 255, "green": 153 / 255, "blue": 153 / 255 } } },
-                                                        "fields": "userEnteredFormat(backgroundColor)"
-                                                    }
-                                                })
+                                    for cell_ind in range(len(pair[3])):
+                                        if pair[2][cell_ind][0] != "":
+                                            requests.append(create_color_req(sheet_id, (sheet_ind-1, sheet_ind), (cell_ind+3, cell_ind+4),
+                                                                             { "red": 234 / 255, "green": 153 / 255, "blue": 153 / 255 }))
                                     if len(requests) > 0:
                                         self._service.spreadsheets().batchUpdate(spreadsheetId=self._id, body={'requests': requests}).execute()
                                     self.changelogger.write("    * Significantly changed " + cmb_key +" from \""+ remote_str +"\" to \""+ local_str +"\"\n")
