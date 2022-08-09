@@ -47,6 +47,7 @@ namespace DataGenerator
                 DataManager.DataType convertIndices = DataManager.DataType.None;
                 DataManager.DataType reserializeIndices = DataManager.DataType.None;
                 DataManager.DataType dump = DataManager.DataType.None;
+                bool preConvert = false;
                 for (int ii = 1; ii < args.Length; ii++)
                 {
                     if (args[ii] == "-asset")
@@ -152,6 +153,11 @@ namespace DataGenerator
                     {
                         demo = true;
                     }
+                    else if (args[ii] == "-preconvert")
+                    {
+                        preConvert = true;
+                        ii++;
+                    }
                 }
 
 
@@ -232,6 +238,21 @@ namespace DataGenerator
 
                     DataManager.Instance.UniversalData = DataManager.LoadData<TypeDict<BaseData>>(PathMod.ModPath(DataManager.MISC_PATH + "Index" + DataManager.DATA_EXT));
                     RogueEssence.Dev.DevHelper.RunExtraIndexing(DataManager.DataType.All);
+                    return;
+                }
+
+                if (preConvert)
+                {
+                    using (GameBase game = new GameBase())
+                    {
+                        GraphicsManager.InitSystem(game.GraphicsDevice);
+                        GraphicsManager.RebuildIndices(GraphicsManager.AssetType.All);
+                    }
+
+                    LuaEngine.InitInstance();
+                    DataManager.InitInstance();
+                    DataManager.Instance.LoadConversions();
+                    RogueEssence.Dev.DevHelper.PrepareAssetConversion();
                     return;
                 }
 
