@@ -1,3 +1,4 @@
-# 0.5.21 Changes #
+# 0.6.0 Changes #
 
-* Fixed an issue with reloading a game when exiting a dungeon
+* Fixed an issue that prevented ground editor from loading in linux builds
+* All editor assets are stored as strings now
