@@ -6,3 +6,6 @@
 * Mod paths no longer malfunction when running the game from a different directory
 * Ground editor no longer crashes on linux
 * Mod switching no longer hangs on linux
+* File open for ground and zone script works (mostly) in multiplatform
+* Remove hitbox and animation point view outside of dev mode
+* Neutral NPCs respect player team members better
