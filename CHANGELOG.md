@@ -9,3 +9,6 @@
 * File open for ground and zone script works (mostly) in multiplatform
 * Remove hitbox and animation point view outside of dev mode
 * Neutral NPCs respect player team members better
+
+Developers will need to convert mods over by following the steps detailed in this guide:
+https://docs.google.com/document/d/1BG85drl3BeBVwwhHpEHI8q0Y9tEnUt1BLOal6zoNnkA/edit
