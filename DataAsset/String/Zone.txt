@@ -10,7 +10,7 @@ Key		EN
 0000-cave_of_whispers-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Cave of Whispers\nB{0}F
 0000-champions_road-0000|data.Name		Champion's Road
 0000-champions_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Champion's Road\n{0}F
-0000-debug-0000|data.Name		Debug
+0000-debug_zone-0000|data.Name		Debug Zone
 0000-faded_trail-0000|data.Name		Faded Trail
 0000-faded_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faded Trail\n{0}F
 0000-faded_trail-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Hidden Trail\nB{0}F

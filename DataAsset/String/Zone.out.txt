@@ -10,7 +10,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-cave_of_whispers-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Cave of Whispers\nB{0}F		Höhle des Geflüsters\n{0}.KG	Cueva de los Susurros\nP-{0}				
 0000-champions_road-0000|data.Name		Champion's Road		Pfad des Champions	Ruta del Campeón
 0000-champions_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Champion's Road\n{0}F		Pfad des Champions\n{0}.OG	Ruta del Campeón\nP{0}				
-0000-debug-0000|data.Name		Debug		Debug	Debug
+0000-debug_zone-0000|data.Name		Debug Zone			
 0000-faded_trail-0000|data.Name		Faded Trail		Verbleichender Pfad	Sendero Desvanecido 
 0000-faded_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faded Trail\n{0}F		Verbleichender Pfad\n{0}.OG	Sendero Desvanecido\nP{0}				
 0000-faded_trail-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Hidden Trail\nB{0}F			
