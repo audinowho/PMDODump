@@ -26,7 +26,7 @@ namespace DataGenerator
             Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
 
             string[] args = System.Environment.GetCommandLineArgs();
-            PathMod.InitExePath(args[0]);
+            PathMod.InitPathMod(args[0], "origin");
             DiagManager.InitInstance();
             //DiagManager.Instance.CurSettings = DiagManager.Instance.LoadSettings();
             DiagManager.Instance.UpgradeBinder = new UpgradeBinder();
