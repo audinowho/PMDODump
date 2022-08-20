@@ -407,8 +407,9 @@ namespace PMDOSetup
                         }
                         else
                         {
-                            if (!Directory.Exists(destPath))
-                                Directory.CreateDirectory(destPath);
+                            if (Directory.Exists(destPath))
+                                Directory.Delete(destPath, true);
+                            Directory.CreateDirectory(destPath);
                             Console.WriteLine("Unzipping {0}", entry.FullName);
                         }
                     }
