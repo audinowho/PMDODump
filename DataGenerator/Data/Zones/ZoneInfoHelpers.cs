@@ -894,22 +894,22 @@ namespace DataGenerator.Data
 
 
 
-            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries.Keys)
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(false))
                 monsters.Add(key);
             
-            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Skill].Entries.Keys)
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Skill].GetOrderedKeys(false))
                 skills.Add(key);
             
-            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Entries.Keys)
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].GetOrderedKeys(false))
                 intrinsics.Add(key);
 
-            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Status].Entries.Keys)
+            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Status].GetOrderedKeys(false))
                 statuses.Add(key);
             
-            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.AI].Entries.Keys)
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.AI].GetOrderedKeys(false))
                 ai.Add(key);
 
-            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Item].Entries.Keys)
+            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Item].GetOrderedKeys(false))
                 items.Add(key);
 
             for (int ii = 0; ii <= (int)TeamMemberSpawn.MemberRole.Loner; ii++)

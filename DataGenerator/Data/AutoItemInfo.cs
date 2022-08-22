@@ -224,20 +224,20 @@ namespace DataGenerator.Data
             }
 
 
-            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries.Keys)
+            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(false))
                 monsters.Add(key);
 
-            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Element].Entries.Keys)
+            foreach(string key in DataManager.Instance.DataIndices[DataManager.DataType.Element].GetOrderedKeys(false))
                 elements.Add(key);
 
-            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Status].Entries.Keys)
+            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Status].GetOrderedKeys(false))
             {
                 StatusData data = DataManager.Instance.GetStatus(key);
                 if (data.MenuName && data.Name.DefaultText != "" && data.StatusStates.Contains<TransferStatusState>())
                     statuses.Add(key);
             }
 
-            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.MapStatus].Entries.Keys)
+            foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.MapStatus].GetOrderedKeys(false))
             {
                 MapStatusData data = DataManager.Instance.GetMapStatus(key);
                 if (!data.DefaultHidden && data.Name.DefaultText != "")
@@ -502,10 +502,10 @@ namespace DataGenerator.Data
                         string earliestFamily = rows[prev_start-init_idx][2].Trim();
                         for (int nn = 1; (nn + prev_start - init_idx < rows.Count) && (rows[nn + prev_start - init_idx][8] != "A"); nn++)
                         {
-                            MonsterEntrySummary earliestSummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries[earliestFamily];
+                            MonsterEntrySummary earliestSummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Get(earliestFamily);
                             string dexNum = rows[nn + prev_start - init_idx][2].Trim();
 
-                            MonsterEntrySummary newSummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Entries[dexNum];
+                            MonsterEntrySummary newSummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Get(dexNum);
                             if (newSummary.SortOrder < earliestSummary.SortOrder)
                                 earliestFamily = dexNum;
                         }

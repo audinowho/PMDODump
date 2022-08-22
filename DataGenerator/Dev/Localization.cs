@@ -112,12 +112,12 @@ namespace DataGenerator.Dev
                 if (data.ItemStates.Contains<MaterialState>() && data.ItemStates.GetWithDefault<ExclusiveState>().ItemType != ExclusiveItemType.None)
                     continue;
                 //TODO: get these type names via reflection
-                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
+                updateWorkingLists(rows, orderedKeys, languages, index.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
 
                 //skip ALL exclusive item DESCRIPTIONS because they are guaranteed autocalculated
                 if (data.ItemStates.Contains<MaterialState>())
                     continue;
-                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc", "", data.Desc);
+                updateWorkingLists(rows, orderedKeys, languages, index.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc", "", data.Desc);
             }
 
             printLocalizationRows(path, languages, orderedKeys, rows);
@@ -145,7 +145,7 @@ namespace DataGenerator.Dev
                     continue;
 
                 //TODO: get these type names via reflection
-                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
+                updateWorkingLists(rows, orderedKeys, languages, index.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
             }
 
             printLocalizationRows(path, languages, orderedKeys, rows);
@@ -173,8 +173,8 @@ namespace DataGenerator.Dev
                     continue;
 
                 //TODO: get these type names via reflection
-                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
-                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc", "", data.Desc);
+                updateWorkingLists(rows, orderedKeys, languages, index.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name", data.Comment, data.Name);
+                updateWorkingLists(rows, orderedKeys, languages, index.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc", "", data.Desc);
             }
 
             printLocalizationRows(path, languages, orderedKeys, rows);
@@ -231,7 +231,7 @@ namespace DataGenerator.Dev
                 ZoneData data = DataManager.Instance.GetZone(key);
 
                 int nn = 0;
-                updateWorkingLists(rows, orderedKeys, languages, index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|data.Name", data.Comment, data.Name);
+                updateWorkingLists(rows, orderedKeys, languages, index.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|data.Name", data.Comment, data.Name);
                 for (int jj = 0; jj < data.Segments.Count; jj++)
                 {
                     LayeredSegment structure = data.Segments[jj] as LayeredSegment;
@@ -245,7 +245,7 @@ namespace DataGenerator.Dev
                                 //TODO: get these type names via reflection
                                 nn++;
                                 updateWorkingLists(rows, orderedKeys, languages,
-                                    index.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name", "", postProc.Name);
+                                    index.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name", "", postProc.Name);
                             }
                         }
                     }
@@ -325,7 +325,7 @@ namespace DataGenerator.Dev
         {
 
             Dictionary<string, LocalText> rows = readLocalizationRows(GenPath.TL_PATH + dataType.ToString() + ".out.txt");
-            foreach (string key in DataManager.Instance.DataIndices[dataType].Entries.Keys)
+            foreach (string key in DataManager.Instance.DataIndices[dataType].GetOrderedKeys(true))
             {
                 string tlKey = dataType.ToString() + "-" + key + "|data.Name";
                 if (rows.ContainsKey(tlKey))
@@ -359,7 +359,7 @@ namespace DataGenerator.Dev
         {
 
             Dictionary<string, LocalText> rows = readLocalizationRows(GenPath.TL_PATH + dataType.ToString() + ".out.txt");
-            foreach(string key in DataManager.Instance.DataIndices[dataType].Entries.Keys)
+            foreach(string key in DataManager.Instance.DataIndices[dataType].GetOrderedKeys(true))
             {
                 string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
 
@@ -367,7 +367,7 @@ namespace DataGenerator.Dev
 
                 if (describedData.Name.DefaultText != "")
                 {
-                    int sort = DataManager.Instance.DataIndices[dataType].Entries[key].SortOrder;
+                    int sort = DataManager.Instance.DataIndices[dataType].Get(key).SortOrder;
                     describedData.Name = rows[sort.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name"];
                     describedData.Desc = rows[sort.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc"];
 
@@ -385,7 +385,7 @@ namespace DataGenerator.Dev
 
             EntryDataIndex itemIndex = DataManager.Instance.DataIndices[dataType];
             EntryDataIndex skillIndex = DataManager.Instance.DataIndices[DataManager.DataType.Skill];
-            foreach (string key in itemIndex.Entries.Keys)
+            foreach (string key in itemIndex.GetOrderedKeys(true))
             {
                 string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
 
@@ -401,7 +401,7 @@ namespace DataGenerator.Dev
                     LocalText tmFormatName = specialRows["tmFormatName"];
                     LocalText tmFormatDesc = specialRows["tmFormatDesc"];
                     string moveIndex = data.ItemStates.GetWithDefault<ItemIDState>().ID;
-                    LocalText moveName = skillRows[skillIndex.Entries[moveIndex].SortOrder.ToString("D4") + "-" + moveIndex + "-" + 0.ToString("D4") + "|data.Name"];
+                    LocalText moveName = skillRows[skillIndex.Get(moveIndex).SortOrder.ToString("D4") + "-" + moveIndex + "-" + 0.ToString("D4") + "|data.Name"];
                     data.Name = LocalText.FormatLocalText(tmFormatName, moveName);
                     data.Desc = LocalText.FormatLocalText(tmFormatDesc, moveName);
                 }
@@ -441,8 +441,8 @@ namespace DataGenerator.Dev
                 else
                 {
                     //TODO: get these type names via reflection
-                    data.Name = rows[itemIndex.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name"];
-                    data.Desc = rows[itemIndex.Entries[key].SortOrder.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc"];
+                    data.Name = rows[itemIndex.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name"];
+                    data.Desc = rows[itemIndex.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc"];
                 }
 
                 DataManager.SaveData(dir, data);
@@ -453,14 +453,14 @@ namespace DataGenerator.Dev
         {
             DataManager.DataType dataType = DataManager.DataType.Zone;
             Dictionary<string, LocalText> rows = readLocalizationRows(GenPath.TL_PATH + dataType.ToString() + ".out.txt");
-            foreach (string key in DataManager.Instance.DataIndices[dataType].Entries.Keys)
+            foreach (string key in DataManager.Instance.DataIndices[dataType].GetOrderedKeys(false))
             {
                 string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
 
                 ZoneData data = DataManager.LoadData<ZoneData>(dir);
 
                 int nn = 0;
-                int sort = DataManager.Instance.DataIndices[dataType].Entries[key].SortOrder;
+                int sort = DataManager.Instance.DataIndices[dataType].Get(key).SortOrder;
                 data.Name = rows[sort.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name"];
                 for (int jj = 0; jj < data.Segments.Count; jj++)
                 {
