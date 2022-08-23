@@ -280,7 +280,7 @@ namespace DataGenerator.Data
 
             MonsterFormData formEntry2 = new MonsterFormData();
             formEntry2.FormName = new LocalText("Substitute");
-            formEntry.GenderlessWeight = 1;
+            formEntry2.GenderlessWeight = 1;
             formEntry2.Height = 1;
             formEntry2.Weight = 1;
             formEntry2.ExpYield = 1;
@@ -290,12 +290,12 @@ namespace DataGenerator.Data
             formEntry2.BaseMAtk = 1;
             formEntry2.BaseMDef = 1;
             formEntry2.BaseSpeed = 1;
-            formEntry.Element1 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
-            formEntry.Element2 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
-            formEntry.Intrinsic1 = "none";
-            formEntry.Intrinsic2 = "none";
-            formEntry.Intrinsic3 = "none";
-            formEntry.LevelSkills.Add(new LevelUpSkill("attack", 0));
+            formEntry2.Element1 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
+            formEntry2.Element2 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
+            formEntry2.Intrinsic1 = "none";
+            formEntry2.Intrinsic2 = "none";
+            formEntry2.Intrinsic3 = "none";
+            formEntry2.LevelSkills.Add(new LevelUpSkill("attack", 0));
             entry.Forms.Add(formEntry2);
 
 
