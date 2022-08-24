@@ -6,5 +6,7 @@
 * Fix type mismatch issue with editors
 * Fix behavior of shiny spawns with MobSpawnAltColor
 * Fix off-by-one issue with zone segment editor
+* Fix type mismatch issue with editors
+* Added ground action FrameGroundAction, deprecated CharPoseAnim and CharHopAnim
 * Developers will need to reserialize on this version.  Additionally, all script calls to _DATA.DataIndices[<datatype>].Entries[<entry name>] must be replaced with _DATA.DataIndices[<datatype>]:Get(<entry name>)
 * Modified the moves Fake Out and Punishment
