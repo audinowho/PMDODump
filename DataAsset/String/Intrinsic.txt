@@ -1,537 +1,537 @@
-Key		EN
-0000-none-0000|data.Name		None
-0000-none-0001|data.Desc		
-0001-stench-0000|data.Name		Stench
-0001-stench-0001|data.Desc		Contact with the Pokémon may cause flinching.
-0002-drizzle-0000|data.Name		Drizzle
-0002-drizzle-0001|data.Desc		The Pokémon makes it rain when it is battling.
-0003-speed_boost-0000|data.Name		Speed Boost
-0003-speed_boost-0001|data.Desc		The Pokémon's Movement Speed is increased.
-0004-battle_armor-0000|data.Name		Battle Armor
-0004-battle_armor-0001|data.Desc		Hard armor protects the Pokémon from critical hits.
-0005-sturdy-0000|data.Name		Sturdy
-0005-sturdy-0001|data.Desc		The Pokémon cannot be knocked out with one hit.
-0006-damp-0000|data.Name		Damp
-0006-damp-0001|data.Desc		Prevents explosions and other forms of splash damage.
-0007-limber-0000|data.Name		Limber
-0007-limber-0001|data.Desc		Its limber body protects the Pokémon from paralysis.
-0008-sand_veil-0000|data.Name		Sand Veil
-0008-sand_veil-0001|data.Desc		Avoids attacks from a distance when in a sandstorm.
-0009-static-0000|data.Name		Static
-0009-static-0001|data.Desc		The Pokémon is charged with static electricity, so contact with it may cause paralysis.
-0010-volt_absorb-0000|data.Name		Volt Absorb
-0010-volt_absorb-0001|data.Desc		Restores HP if hit by an Electric-type move.
-0011-water_absorb-0000|data.Name		Water Absorb
-0011-water_absorb-0001|data.Desc		Restores HP if hit by a Water-type move.
-0012-oblivious-0000|data.Name		Oblivious
-0012-oblivious-0001|data.Desc		Protects the Pokémon from Attract or Rage Powder.
-0013-cloud_nine-0000|data.Name		Cloud Nine
-0013-cloud_nine-0001|data.Desc		The Pokémon eliminates weather when it is battling.
-0014-compound_eyes-0000|data.Name		Compound Eyes
-0014-compound_eyes-0001|data.Desc		Boosts the Pokémon's Attack Range.
-0015-insomnia-0000|data.Name		Insomnia
-0015-insomnia-0001|data.Desc		The Pokémon is suffering from insomnia and cannot fall asleep.
-0016-color_change-0000|data.Name		Color Change
-0016-color_change-0001|data.Desc		The Pokémon's type becomes the type of the move used on it.
-0017-immunity-0000|data.Name		Immunity
-0017-immunity-0001|data.Desc		The immune system of the Pokémon prevents it from getting poisoned.
-0018-flash_fire-0000|data.Name		Flash Fire
-0018-flash_fire-0001|data.Desc		Powers up the Pokémon's Fire-type moves if it's hit by one.
-0019-shield_dust-0000|data.Name		Shield Dust
-0019-shield_dust-0001|data.Desc		This Pokémon's dust blocks the additional effects of attacks taken.
-0020-own_tempo-0000|data.Name		Own Tempo
-0020-own_tempo-0001|data.Desc		This Pokémon has its own tempo, and that prevents it from becoming confused.
-0021-suction_cups-0000|data.Name		Suction Cups
-0021-suction_cups-0001|data.Desc		Prevents the Pokémon from being forced off its location.
-0022-intimidate-0000|data.Name		Intimidate
-0022-intimidate-0001|data.Desc		Lowers the Attack stat of opposing Pokémon nearby.
-0023-shadow_tag-0000|data.Name		Shadow Tag
-0023-shadow_tag-0001|data.Desc		This Pokémon steps on the opposing Pokémon's shadow to prevent it from escaping.
-0024-rough_skin-0000|data.Name		Rough Skin
-0024-rough_skin-0001|data.Desc		This Pokémon inflicts damage with its rough skin to the attacker on contact.
-0025-wonder_guard-0000|data.Name		Wonder Guard
-0025-wonder_guard-0001|data.Desc		Its mysterious power only lets super effective moves hit the Pokémon.
-0026-levitate-0000|data.Name		Levitate
-0026-levitate-0001|data.Desc		By floating in the air, the Pokémon receives full immunity to all Ground-type moves.
-0027-effect_spore-0000|data.Name		Effect Spore
-0027-effect_spore-0001|data.Desc		Contact with the Pokémon may inflict poison, sleep, or paralysis on its attacker.
-0028-synchronize-0000|data.Name		Synchronize
-0028-synchronize-0001|data.Desc		Passes major status problems to opposing Pokémon.
-0029-clear_body-0000|data.Name		Clear Body
-0029-clear_body-0001|data.Desc		Prevents other Pokémon from lowering its stats.
-0030-natural_cure-0000|data.Name		Natural Cure
-0030-natural_cure-0001|data.Desc		Cures all status problems on the Pokémon when it is at full HP.
-0031-lightning_rod-0000|data.Name		Lightning Rod
-0031-lightning_rod-0001|data.Desc		The Pokémon draws in all Electric-type moves. Instead of being hit by Electric-type moves, it boosts its Sp. Atk.
-0032-serene_grace-0000|data.Name		Serene Grace
-0032-serene_grace-0001|data.Desc		Boosts the likelihood of additional effects occurring when attacking.
-0033-swift_swim-0000|data.Name		Swift Swim
-0033-swift_swim-0001|data.Desc		Boosts the Pokémon's Movement Speed in rain.
-0034-chlorophyll-0000|data.Name		Chlorophyll
-0034-chlorophyll-0001|data.Desc		Boosts the Pokémon's Movement Speed in sunshine.
-0035-illuminate-0000|data.Name		Illuminate
-0035-illuminate-0001|data.Desc		It may warp an ally to the Pokémon when it is hurt.
-0036-trace-0000|data.Name		Trace
-0036-trace-0001|data.Desc		The Pokémon copies the Ability of the Pokémon that attacks it.
-0037-huge_power-0000|data.Name		Huge Power
-0037-huge_power-0001|data.Desc		Boosts the Pokémon's Attack stat.
-0038-poison_point-0000|data.Name		Poison Point
-0038-poison_point-0001|data.Desc		Contact with the Pokémon may poison the attacker.
-0039-inner_focus-0000|data.Name		Inner Focus
-0039-inner_focus-0001|data.Desc		The Pokémon's intensely focused, and that protects the Pokémon from flinching.
-0040-magma_armor-0000|data.Name		Magma Armor
-0040-magma_armor-0001|data.Desc		The Pokémon is covered with hot magma, which prevents the Pokémon from becoming frozen. Thrown items will also burn up on contact.
-0041-water_veil-0000|data.Name		Water Veil
-0041-water_veil-0001|data.Desc		The Pokémon is covered with a water veil, which prevents the Pokémon from getting a burn.
-0042-magnet_pull-0000|data.Name		Magnet Pull
-0042-magnet_pull-0001|data.Desc		Pulls Steel-type targets to this Pokémon.
-0043-soundproof-0000|data.Name		Soundproof
-0043-soundproof-0001|data.Desc		Soundproofing of the Pokémon itself gives full immunity to all sound-based moves.
-0044-rain_dish-0000|data.Name		Rain Dish
-0044-rain_dish-0001|data.Desc		The Pokémon gradually regains HP when battling in rain.
-0045-sand_stream-0000|data.Name		Sand Stream
-0045-sand_stream-0001|data.Desc		The Pokémon summons a sandstorm when it is battling.
-0046-pressure-0000|data.Name		Pressure
-0046-pressure-0001|data.Desc		By putting pressure on the opposing Pokémon, it raises their PP usage.
-0047-thick_fat-0000|data.Name		Thick Fat
-0047-thick_fat-0001|data.Desc		Boosts resistance to Fire- and Ice-type moves.
-0048-early_bird-0000|data.Name		Early Bird
-0048-early_bird-0001|data.Desc		The Pokémon awakens quickly from sleep.
-0049-flame_body-0000|data.Name		Flame Body
-0049-flame_body-0001|data.Desc		Contact with the Pokémon may burn the attacker. Thrown items will also burn up on contact.
-0050-run_away-0000|data.Name		Run Away
-0050-run_away-0001|data.Desc		Prevents the Pokémon from being Immobilized.
-0051-keen_eye-0000|data.Name		Keen Eye
-0051-keen_eye-0001|data.Desc		Prevents other Pokémon from lowering its Accuracy.
-0052-hyper_cutter-0000|data.Name		Hyper Cutter
-0052-hyper_cutter-0001|data.Desc		The Pokémon's proud of its powerful pincers. They prevent other Pokémon from lowering its Attack stat.
-0053-pickup-0000|data.Name		Pickup
-0053-pickup-0001|data.Desc		The Pokémon may find an item when it enters a new floor.
-0054-truant-0000|data.Name		Truant
-0054-truant-0001|data.Desc		The Pokémon can't attack on consecutive turns.
-0055-hustle-0000|data.Name		Hustle
-0055-hustle-0001|data.Desc		Boosts the Attack stat, but lowers Attack Range.
-0056-cute_charm-0000|data.Name		Cute Charm
-0056-cute_charm-0001|data.Desc		Contact with the Pokémon may cause infatuation.
-0057-plus-0000|data.Name		Plus
-0057-plus-0001|data.Desc		Boosts the Sp. Atk stat if another Pokémon has Minus.
-0058-minus-0000|data.Name		Minus
-0058-minus-0001|data.Desc		Boosts the Sp. Atk stat if another Pokémon has Plus.
-0059-forecast-0000|data.Name		Forecast
-0059-forecast-0001|data.Desc		The Pokémon transforms with the weather to change its type to Water, Fire, or Ice.
-0060-sticky_hold-0000|data.Name		Sticky Hold
-0060-sticky_hold-0001|data.Desc		Protects the Pokémon from item theft. Also allows the Pokémon to handle Sticky items.
-0061-shed_skin-0000|data.Name		Shed Skin
-0061-shed_skin-0001|data.Desc		The Pokémon may heal its own status conditions by shedding its skin.
-0062-guts-0000|data.Name		Guts
-0062-guts-0001|data.Desc		It's so gutsy that having a major status condition boosts the Pokémon's Attack stat.
-0063-marvel_scale-0000|data.Name		Marvel Scale
-0063-marvel_scale-0001|data.Desc		The Pokémon's marvelous scales boost the Defense stat if it has a major status condition.
-0064-liquid_ooze-0000|data.Name		Liquid Ooze
-0064-liquid_ooze-0001|data.Desc		Oozed liquid has strong stench, which damages attackers using any draining move.
-0065-overgrow-0000|data.Name		Overgrow
-0065-overgrow-0001|data.Desc		Powers up Grass-type moves when the Pokémon's HP is low.
-0066-blaze-0000|data.Name		Blaze
-0066-blaze-0001|data.Desc		Powers up Fire-type moves when the Pokémon's HP is low.
-0067-torrent-0000|data.Name		Torrent
-0067-torrent-0001|data.Desc		Powers up Water-type moves when the Pokémon's HP is low.
-0068-swarm-0000|data.Name		Swarm
-0068-swarm-0001|data.Desc		Powers up Bug-type moves when the Pokémon's HP is low.
-0069-rock_head-0000|data.Name		Rock Head
-0069-rock_head-0001|data.Desc		Protects the Pokémon from recoil damage.
-0070-drought-0000|data.Name		Drought
-0070-drought-0001|data.Desc		Turns the sunlight harsh when the Pokémon is battling.
-0071-arena_trap-0000|data.Name		Arena Trap
-0071-arena_trap-0001|data.Desc		Prevents grounded opposing Pokémon from fleeing.
-0072-vital_spirit-0000|data.Name		Vital Spirit
-0072-vital_spirit-0001|data.Desc		The Pokémon is full of vitality, and that prevents it from falling asleep.
-0073-white_smoke-0000|data.Name		White Smoke
-0073-white_smoke-0001|data.Desc		The Pokémon is protected by its white smoke, which prevents other Pokémon from lowering its stats.
-0074-pure_power-0000|data.Name		Pure Power
-0074-pure_power-0001|data.Desc		Boosts the Pokémon's Attack stat.
-0075-shell_armor-0000|data.Name		Shell Armor
-0075-shell_armor-0001|data.Desc		A hard shell protects the Pokémon from critical hits.
-0076-air_lock-0000|data.Name		Air Lock
-0076-air_lock-0001|data.Desc		Eliminates the effects of weather when the Pokémon is battling.
-0077-tangled_feet-0000|data.Name		Tangled Feet
-0077-tangled_feet-0001|data.Desc		If the Pokémon is confused, it will avoid attacks from a distance.
-0078-motor_drive-0000|data.Name		Motor Drive
-0078-motor_drive-0001|data.Desc		Boosts the Pokémon's Movement Speed when it's hit by an Electric-type move.
-0079-rivalry-0000|data.Name		Rivalry
-0079-rivalry-0001|data.Desc		Deals more damage to Pokémon of the same gender.
-0080-steadfast-0000|data.Name		Steadfast
-0080-steadfast-0001|data.Desc		Boosts the Pokémon's Movement Speed each time the it flinches.
-0081-snow_cloak-0000|data.Name		Snow Cloak
-0081-snow_cloak-0001|data.Desc		Avoids attacks from a distance when in a hailstorm.
-0082-gluttony-0000|data.Name		Gluttony
-0082-gluttony-0001|data.Desc		Steals and eats a food item from an attacker that made direct contact.
-0083-anger_point-0000|data.Name		Anger Point
-0083-anger_point-0001|data.Desc		The Pokémon is angered when it takes a critical hit, and that maxes its Attack stat.
-0084-unburden-0000|data.Name		Unburden
-0084-unburden-0001|data.Desc		Boosts Movement Speed the Pokémon has no held item.
-0085-heatproof-0000|data.Name		Heatproof
-0085-heatproof-0001|data.Desc		Weakens the power of Fire-type moves.
-0086-simple-0000|data.Name		Simple
-0086-simple-0001|data.Desc		The stat changes the Pokémon receives are doubled.
-0087-dry_skin-0000|data.Name		Dry Skin
-0087-dry_skin-0001|data.Desc		Restores HP in rain or when hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves.
-0088-download-0000|data.Name		Download
-0088-download-0001|data.Desc		Compares an opposing Pokémon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat— whichever will be more effective.
-0089-iron_fist-0000|data.Name		Iron Fist
-0089-iron_fist-0001|data.Desc		Powers up punching moves.
-0090-poison_heal-0000|data.Name		Poison Heal
-0090-poison_heal-0001|data.Desc		Restores HP if the Pokémon is poisoned, instead of losing HP.
-0091-adaptability-0000|data.Name		Adaptability
-0091-adaptability-0001|data.Desc		Powers up moves of the same type as the Pokémon.
-0092-skill_link-0000|data.Name		Skill Link
-0092-skill_link-0001|data.Desc		Ensures that all multi-strike moves hit.
-0093-hydration-0000|data.Name		Hydration
-0093-hydration-0001|data.Desc		Heals status conditions if it's raining.
-0094-solar_power-0000|data.Name		Solar Power
-0094-solar_power-0001|data.Desc		Boosts the Sp. Atk stat in sunny weather, but HP decreases.
-0095-quick_feet-0000|data.Name		Quick Feet
-0095-quick_feet-0001|data.Desc		Boosts Movement Speed if the Pokémon has a status condition.
-0096-normalize-0000|data.Name		Normalize
-0096-normalize-0001|data.Desc		All the Pokémon’s moves become Normal type.
-0097-sniper-0000|data.Name		Sniper
-0097-sniper-0001|data.Desc		Powers up moves if they become critical hits when attacking.
-0098-magic_guard-0000|data.Name		Magic Guard
-0098-magic_guard-0001|data.Desc		The Pokémon only takes damage from attacks.
-0099-no_guard-0000|data.Name		No Guard
-0099-no_guard-0001|data.Desc		The Pokémon employs no-guard tactics to ensure incoming and outgoing attacks always land.
-0100-stall-0000|data.Name		Stall
-0100-stall-0001|data.Desc		Boosts move power if the Pokémon was last hit by the target.
-0101-technician-0000|data.Name		Technician
-0101-technician-0001|data.Desc		Powers up the Pokémon's weaker moves.
-0102-leaf_guard-0000|data.Name		Leaf Guard
-0102-leaf_guard-0001|data.Desc		Avoids enemy status moves in sunny weather.
-0103-klutz-0000|data.Name		Klutz
-0103-klutz-0001|data.Desc		Items held by the Pokémon have no effect. They also can't stick to the Pokémon.
-0104-mold_breaker-0000|data.Name		Mold Breaker
-0104-mold_breaker-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.
-0105-super_luck-0000|data.Name		Super Luck
-0105-super_luck-0001|data.Desc		The Pokémon is so lucky that the critical-hit ratios of its moves are boosted.
-0106-aftermath-0000|data.Name		Aftermath
-0106-aftermath-0001|data.Desc		The Pokémon explodes when fainted.
-0107-anticipation-0000|data.Name		Anticipation
-0107-anticipation-0001|data.Desc		Avoids the strongest super-effective move that the opposing Pokémon has.
-0108-forewarn-0000|data.Name		Forewarn
-0108-forewarn-0001|data.Desc		Avoids the strongest move that the opposing Pokémon has.
-0109-unaware-0000|data.Name		Unaware
-0109-unaware-0001|data.Desc		Ignores the opposing Pokémon's stat changes.
-0110-tinted_lens-0000|data.Name		Tinted Lens
-0110-tinted_lens-0001|data.Desc		Powers up "not very effective" moves.
-0111-filter-0000|data.Name		Filter
-0111-filter-0001|data.Desc		Reduces damage from super-effective attacks.
-0112-slow_start-0000|data.Name		Slow Start
-0112-slow_start-0001|data.Desc		Temporarily lowers the Pokémon's Movement Speed.
-0113-scrappy-0000|data.Name		Scrappy
-0113-scrappy-0001|data.Desc		The Pokémon can hit Ghost-type Pokémon with Normal- and Fighting-type moves.
-0114-storm_drain-0000|data.Name		Storm Drain
-0114-storm_drain-0001|data.Desc		Draws in all Water-type moves. Instead of being hit by Water-type moves, it boosts its Sp. Atk.
-0115-ice_body-0000|data.Name		Ice Body
-0115-ice_body-0001|data.Desc		The Pokémon gradually regains HP when battling in a hailstorm.
-0116-solid_rock-0000|data.Name		Solid Rock
-0116-solid_rock-0001|data.Desc		Reduces damage from super-effective attacks.
-0117-snow_warning-0000|data.Name		Snow Warning
-0117-snow_warning-0001|data.Desc		The Pokémon summons a hailstorm when it is battling.
-0118-honey_gather-0000|data.Name		Honey Gather
-0118-honey_gather-0001|data.Desc		The Pokémon may gather Nectar when it enters a new floor.
-0119-frisk-0000|data.Name		Frisk
-0119-frisk-0001|data.Desc		Attacking an opposing Pokémon removes its held item.
-0120-reckless-0000|data.Name		Reckless
-0120-reckless-0001|data.Desc		Powers up moves that have recoil damage.
-0121-multitype-0000|data.Name		Multitype
-0121-multitype-0001|data.Desc		Changes the Pokémon's type to match its held Plate. The Pokémon can also utilize the protection of Plates in its Bag.
-0122-flower_gift-0000|data.Name		Flower Gift
-0122-flower_gift-0001|data.Desc		Boosts the Attack and Sp. Def stats of itself and allies in harsh sunlight.
-0123-bad_dreams-0000|data.Name		Bad Dreams
-0123-bad_dreams-0001|data.Desc		Reduces the HP of opposing Pokémon that are asleep.
-0124-pickpocket-0000|data.Name		Pickpocket
-0124-pickpocket-0001|data.Desc		Steals an item from an attacker that made direct contact.
-0125-sheer_force-0000|data.Name		Sheer Force
-0125-sheer_force-0001|data.Desc		Removes additional effects to increase the power of moves when attacking.
-0126-contrary-0000|data.Name		Contrary
-0126-contrary-0001|data.Desc		Makes stat changes have an opposite effect.
-0127-unnerve-0000|data.Name		Unnerve
-0127-unnerve-0001|data.Desc		Unnerves opposing Pokémon and makes them unable to eat food items.
-0128-defiant-0000|data.Name		Defiant
-0128-defiant-0001|data.Desc		Boosts the Pokémon's Attack stat sharply when its stats are lowered.
-0129-defeatist-0000|data.Name		Defeatist
-0129-defeatist-0001|data.Desc		Halves the Pokémon's Attack and Sp. Atk stats when its HP becomes half or less.
-0130-cursed_body-0000|data.Name		Cursed Body
-0130-cursed_body-0001|data.Desc		May disable a move used on the Pokémon.
-0131-healer-0000|data.Name		Healer
-0131-healer-0001|data.Desc		Heals the status conditions of nearby Pokémon when battling.
-0132-friend_guard-0000|data.Name		Friend Guard
-0132-friend_guard-0001|data.Desc		Reduces damage done to nearby allies.
-0133-weak_armor-0000|data.Name		Weak Armor
-0133-weak_armor-0001|data.Desc		Physical attacks lower its Defense stat and raise its Movement Speed.
-0134-heavy_metal-0000|data.Name		Heavy Metal
-0134-heavy_metal-0001|data.Desc		Doubles the Pokémon's weight.
-0135-light_metal-0000|data.Name		Light Metal
-0135-light_metal-0001|data.Desc		Halves the Pokémon's weight.
-0136-multiscale-0000|data.Name		Multiscale
-0136-multiscale-0001|data.Desc		Reduces damage the Pokémon takes when its HP is full.
-0137-toxic_boost-0000|data.Name		Toxic Boost
-0137-toxic_boost-0001|data.Desc		Powers up physical attacks when the Pokémon is poisoned.
-0138-flare_boost-0000|data.Name		Flare Boost
-0138-flare_boost-0001|data.Desc		Powers up special attacks when the Pokémon is burned.
-0139-harvest-0000|data.Name		Harvest
-0139-harvest-0001|data.Desc		Passes the effect of Berries to nearby allies.
-0140-telepathy-0000|data.Name		Telepathy
-0140-telepathy-0001|data.Desc		Anticipates an ally's attack and dodges it.
-0141-moody-0000|data.Name		Moody
-0141-moody-0001|data.Desc		Raises one stat and lowers another.
-0142-overcoat-0000|data.Name		Overcoat
-0142-overcoat-0001|data.Desc		Protects the Pokémon from the weather and splash damage.
-0143-poison_touch-0000|data.Name		Poison Touch
-0143-poison_touch-0001|data.Desc		May poison a target when the Pokémon makes contact.
-0144-regenerator-0000|data.Name		Regenerator
-0144-regenerator-0001|data.Desc		Restores HP when there are no threats nearby.
-0145-big_pecks-0000|data.Name		Big Pecks
-0145-big_pecks-0001|data.Desc		Protects the Pokémon from Defense-lowering effects.
-0146-sand_rush-0000|data.Name		Sand Rush
-0146-sand_rush-0001|data.Desc		Boosts the Pokémon's Movement Speed in a sandstorm.
-0147-wonder_skin-0000|data.Name		Wonder Skin
-0147-wonder_skin-0001|data.Desc		Avoids all status moves targeting the Pokémon.
-0148-analytic-0000|data.Name		Analytic
-0148-analytic-0001|data.Desc		Boosts move power if the Pokémon was last hit by the target.
-0149-illusion-0000|data.Name		Illusion
-0149-illusion-0001|data.Desc		Disguises itself as another Pokémon, fooling wild Pokémon of the same species.
-0150-imposter-0000|data.Name		Imposter
-0150-imposter-0001|data.Desc		If defeated while transformed, the Pokémon reverts to its original form instead of fainting.
-0151-infiltrator-0000|data.Name		Infiltrator
-0151-infiltrator-0001|data.Desc		Passes through the opposing Pokémon's barrier and strikes.
-0152-mummy-0000|data.Name		Mummy
-0152-mummy-0001|data.Desc		Contact with the Pokémon spreads this Ability.
-0153-moxie-0000|data.Name		Moxie
-0153-moxie-0001|data.Desc		The Pokémon shows moxie, which may boost the Attack stat after knocking out any Pokémon with a move.
-0154-justified-0000|data.Name		Justified
-0154-justified-0001|data.Desc		Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.
-0155-rattled-0000|data.Name		Rattled
-0155-rattled-0001|data.Desc		Dark-, Ghost-, and Bug-type moves scare the Pokémon and boost its Movement Speed.
-0156-magic_bounce-0000|data.Name		Magic Bounce
-0156-magic_bounce-0001|data.Desc		Reflects moves that cause status conditions.
-0157-sap_sipper-0000|data.Name		Sap Sipper
-0157-sap_sipper-0001|data.Desc		Boosts the Attack stat if hit by a Grass-type move, instead of taking damage.
-0158-prankster-0000|data.Name		Prankster
-0158-prankster-0001|data.Desc		Increases the Attack Range of status moves.
-0159-sand_force-0000|data.Name		Sand Force
-0159-sand_force-0001|data.Desc		Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.
-0160-iron_barbs-0000|data.Name		Iron Barbs
-0160-iron_barbs-0001|data.Desc		Inflicts damage to the attacker on contact with iron barbs.
-0161-zen_mode-0000|data.Name		Zen Mode
-0161-zen_mode-0001|data.Desc		Changes the Pokémon's shape when HP is half or less.
-0162-victory_star-0000|data.Name		Victory Star
-0162-victory_star-0001|data.Desc		Boosts the Attack Range of party Pokémon.
-0163-turboblaze-0000|data.Name		Turboblaze
-0163-turboblaze-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.
-0164-teravolt-0000|data.Name		Teravolt
-0164-teravolt-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.
-0165-aroma_veil-0000|data.Name		Aroma Veil
-0165-aroma_veil-0001|data.Desc		Protects itself and its allies from attacks that limit their move choices.
-0166-flower_veil-0000|data.Name		Flower Veil
-0166-flower_veil-0001|data.Desc		Protects ally Pokémon from major status conditions.
-0167-cheek_pouch-0000|data.Name		Cheek Pouch
-0167-cheek_pouch-0001|data.Desc		Restores HP when the Pokémon eats a food item.
-0168-protean-0000|data.Name		Protean
-0168-protean-0001|data.Desc		Changes the Pokémon's type to the type of the move it last used.
-0169-fur_coat-0000|data.Name		Fur Coat
-0169-fur_coat-0001|data.Desc		Halves damage from physical moves.
-0170-magician-0000|data.Name		Magician
-0170-magician-0001|data.Desc		The Pokémon steals the item of a Pokémon it hits with a move.
-0171-bulletproof-0000|data.Name		Bulletproof
-0171-bulletproof-0001|data.Desc		Protects the Pokémon from explosions.
-0172-competitive-0000|data.Name		Competitive
-0172-competitive-0001|data.Desc		Boosts the Sp. Atk stat sharply when a stat is lowered.
-0173-strong_jaw-0000|data.Name		Strong Jaw
-0173-strong_jaw-0001|data.Desc		The Pokémon's strong jaw boosts the power of its biting moves.
-0174-refrigerate-0000|data.Name		Refrigerate
-0174-refrigerate-0001|data.Desc		Normal-type moves become Ice-type moves.
-0175-sweet_veil-0000|data.Name		Sweet Veil
-0175-sweet_veil-0001|data.Desc		Prevents party Pokémon from falling asleep.
-0176-stance_change-0000|data.Name		Stance Change
-0176-stance_change-0001|data.Desc		The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King's Shield.
-0177-gale_wings-0000|data.Name		Gale Wings
-0177-gale_wings-0001|data.Desc		Increases the Attack Range of Flying-type moves.
-0178-mega_launcher-0000|data.Name		Mega Launcher
-0178-mega_launcher-0001|data.Desc		Powers up aura and pulse moves.
-0179-grass_pelt-0000|data.Name		Grass Pelt
-0179-grass_pelt-0001|data.Desc		Boosts the Defense stat in Grassy Terrain.
-0180-symbiosis-0000|data.Name		Symbiosis
-0180-symbiosis-0001|data.Desc		Passes the effect of certain held items to ally Pokémon. It won't use the item itself.
-0181-tough_claws-0000|data.Name		Tough Claws
-0181-tough_claws-0001|data.Desc		Powers up moves that make direct contact.
-0182-pixilate-0000|data.Name		Pixilate
-0182-pixilate-0001|data.Desc		Normal-type moves become Fairy-type moves.
-0183-gooey-0000|data.Name		Gooey
-0183-gooey-0001|data.Desc		Contact with the Pokémon lowers the attacker's Movement Speed.
-0184-aerilate-0000|data.Name		Aerilate
-0184-aerilate-0001|data.Desc		Normal-type moves become Flying-type moves.
-0185-parental_bond-0000|data.Name		Parental Bond
-0185-parental_bond-0001|data.Desc		Parent and child attack together.
-0186-dark_aura-0000|data.Name		Dark Aura
-0186-dark_aura-0001|data.Desc		Powers up all Dark-type moves.
-0187-fairy_aura-0000|data.Name		Fairy Aura
-0187-fairy_aura-0001|data.Desc		Powers up all Fairy-type moves.
-0188-aura_break-0000|data.Name		Aura Break
-0188-aura_break-0001|data.Desc		The effects of aura abilities are reversed to lower the power of affected moves.
-0189-primordial_sea-0000|data.Name		Primordial Sea
-0189-primordial_sea-0001|data.Desc		Affects weather and nullifies any Fire-type attacks.
-0190-desolate_land-0000|data.Name		Desolate Land
-0190-desolate_land-0001|data.Desc		Affects weather and nullifies any Water-type attacks.
-0191-delta_stream-0000|data.Name		Delta Stream
-0191-delta_stream-0001|data.Desc		Affects weather and eliminates all of the Flying type's weaknesses.
-0192-stamina-0000|data.Name		Stamina
-0192-stamina-0001|data.Desc		Boosts the Defense stat when hit by an attack.
-0193-wimp_out-0000|data.Name		Wimp Out
-0193-wimp_out-0001|data.Desc		The Pokémon cowardly switches out when its HP becomes half or less.
-0194-emergency_exit-0000|data.Name		Emergency Exit
-0194-emergency_exit-0001|data.Desc		The Pokémon, sensing danger, switches out when its HP becomes half or less.
-0195-water_compaction-0000|data.Name		Water Compaction
-0195-water_compaction-0001|data.Desc		Boosts the Pokémon's Defense stat sharply when hit by a Water-type move.
-0196-merciless-0000|data.Name		Merciless
-0196-merciless-0001|data.Desc		The Pokémon's attacks become critical hits if the target is poisoned.
-0197-shields_down-0000|data.Name		Shields Down
-0197-shields_down-0001|data.Desc		When its HP becomes half or less, the Pokémon's shell breaks and it becomes aggressive.
-0198-stakeout-0000|data.Name		Stakeout
-0198-stakeout-0001|data.Desc		The Pokémon's first attack deals increased damage.
-0199-water_bubble-0000|data.Name		Water Bubble
-0199-water_bubble-0001|data.Desc		Lowers the power of Fire-type moves done to the Pokémon and prevents the Pokémon from getting a burn.
-0200-steelworker-0000|data.Name		Steelworker
-0200-steelworker-0001|data.Desc		Powers up Steel-type moves.
-0201-berserk-0000|data.Name		Berserk
-0201-berserk-0001|data.Desc		Boosts the Pokémon's Sp. Atk stat when it takes a hit that causes its HP to become half or less.
-0202-slush_rush-0000|data.Name		Slush Rush
-0202-slush_rush-0001|data.Desc		Boosts the Pokémon's Speed stat in a hailstorm.
-0203-long_reach-0000|data.Name		Long Reach
-0203-long_reach-0001|data.Desc		The Pokémon uses its moves without making contact with the target.
-0204-liquid_voice-0000|data.Name		Liquid Voice
-0204-liquid_voice-0001|data.Desc		All sound-based moves become Water-type moves.
-0205-triage-0000|data.Name		Triage
-0205-triage-0001|data.Desc		Gives priority to a healing move.
-0206-galvanize-0000|data.Name		Galvanize
-0206-galvanize-0001|data.Desc		Normal-type moves become Electric-type moves.
-0207-surge_surfer-0000|data.Name		Surge Surfer
-0207-surge_surfer-0001|data.Desc		Doubles the Pokémon's Speed stat on Electric Terrain.
-0208-schooling-0000|data.Name		Schooling
-0208-schooling-0001|data.Desc		When it has a lot of HP, the Pokémon forms a powerful school. It stops schooling when its HP is low.
-0209-disguise-0000|data.Name		Disguise
-0209-disguise-0001|data.Desc		Once per battle, the shroud that covers the Pokémon can protect it from an attack.
-0210-battle_bond-0000|data.Name		Battle Bond
-0210-battle_bond-0001|data.Desc		Defeating an opposing Pokémon strengthens the Pokémon's bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful.
-0211-power_construct-0000|data.Name		Power Construct
-0211-power_construct-0001|data.Desc		Other Cells gather to aid when its HP becomes half or less. Then the Pokémon changes its form to Complete Forme.
-0212-corrosion-0000|data.Name		Corrosion
-0212-corrosion-0001|data.Desc		The Pokémon can poison the target even if it's a Steel or Poison type.
-0213-comatose-0000|data.Name		Comatose
-0213-comatose-0001|data.Desc		It's always drowsing and will never wake up. It can attack without waking up.
-0214-queenly_majesty-0000|data.Name		Queenly Majesty
-0214-queenly_majesty-0001|data.Desc		Its majesty pressures the opposing Pokémon, making it unable to attack using priority moves.
-0215-innards_out-0000|data.Name		Innards Out
-0215-innards_out-0001|data.Desc		Damages the attacker landing the finishing hit by the amount equal to its last HP.
-0216-dancer-0000|data.Name		Dancer
-0216-dancer-0001|data.Desc		When another Pokémon uses a dance move, it can use a dance move following it regardless of its Speed.
-0217-battery-0000|data.Name		Battery
-0217-battery-0001|data.Desc		Powers up ally Pokémon's special moves.
-0218-fluffy-0000|data.Name		Fluffy
-0218-fluffy-0001|data.Desc		Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.
-0219-dazzling-0000|data.Name		Dazzling
-0219-dazzling-0001|data.Desc		Surprises the opposing Pokémon, making it unable to attack using priority moves.
-0220-soul_heart-0000|data.Name		Soul-Heart
-0220-soul_heart-0001|data.Desc		Boosts its Sp. Atk stat every time a Pokémon faints.
-0221-tangling_hair-0000|data.Name		Tangling Hair
-0221-tangling_hair-0001|data.Desc		Contact with the Pokémon lowers the attacker's Speed stat.
-0222-receiver-0000|data.Name		Receiver
-0222-receiver-0001|data.Desc		The Pokémon copies the Ability of an ally.
-0223-power_of_alchemy-0000|data.Name		Power of Alchemy
-0223-power_of_alchemy-0001|data.Desc		The Pokémon copies the Ability of an ally.
-0224-beast_boost-0000|data.Name		Beast Boost
-0224-beast_boost-0001|data.Desc		The Pokémon may boost its most proficient stat each time it knocks out a Pokémon with a move.
-0225-rks_system-0000|data.Name		RKS System
-0225-rks_system-0001|data.Desc		Changes the Pokémon's type to match the memory disc it holds.
-0226-electric_surge-0000|data.Name		Electric Surge
-0226-electric_surge-0001|data.Desc		Turns the ground into Electric Terrain when the Pokémon enters a battle.
-0227-psychic_surge-0000|data.Name		Psychic Surge
-0227-psychic_surge-0001|data.Desc		Turns the ground into Psychic Terrain when the Pokémon enters a battle.
-0228-misty_surge-0000|data.Name		Misty Surge
-0228-misty_surge-0001|data.Desc		Turns the ground into Misty Terrain when the Pokémon enters a battle.
-0229-grassy_surge-0000|data.Name		Grassy Surge
-0229-grassy_surge-0001|data.Desc		Turns the ground into Grassy Terrain when the Pokémon enters a battle.
-0230-full_metal_body-0000|data.Name		Full Metal Body
-0230-full_metal_body-0001|data.Desc		Prevents other Pokémon's moves or Abilities from lowering the Pokémon's stats.
-0231-shadow_shield-0000|data.Name		Shadow Shield
-0231-shadow_shield-0001|data.Desc		Reduces the amount of damage the Pokémon takes while its HP is full.
-0232-prism_armor-0000|data.Name		Prism Armor
-0232-prism_armor-0001|data.Desc		Reduces the power of supereffective attacks taken.
-0233-neuroforce-0000|data.Name		Neuroforce
-0233-neuroforce-0001|data.Desc		Powers up moves that are super effective.
-0234-intrepid_sword-0000|data.Name		Intrepid Sword
-0234-intrepid_sword-0001|data.Desc		Boosts the Pokémon's Attack stat when the Pokémon enters a battle.
-0235-dauntless_shield-0000|data.Name		Dauntless Shield
-0235-dauntless_shield-0001|data.Desc		Boosts the Pokémon's Defense stat when the Pokémon enters a battle.
-0236-libero-0000|data.Name		Libero
-0236-libero-0001|data.Desc		Changes the Pokémon's type to the type of the move it last used.
-0237-ball_fetch-0000|data.Name		Ball Fetch
-0237-ball_fetch-0001|data.Desc		If the Pokémon is not holding an item, it will fetch the Poké Ball from the first failed throw of the battle.
-0238-cotton_down-0000|data.Name		Cotton Down
-0238-cotton_down-0001|data.Desc		When the Pokémon is hit by an attack, it scatters cotton fluff around and lowers the Speed stat of all Pokémon except itself.
-0239-propeller_tail-0000|data.Name		Propeller Tail
-0239-propeller_tail-0001|data.Desc		Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.
-0240-mirror_armor-0000|data.Name		Mirror Armor
-0240-mirror_armor-0001|data.Desc		Bounces back only the stat-lowering effects that the Pokémon receives.
-0241-gulp_missile-0000|data.Name		Gulp Missile
-0241-gulp_missile-0001|data.Desc		When the Pokémon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack.
-0242-stalwart-0000|data.Name		Stalwart
-0242-stalwart-0001|data.Desc		Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.
-0243-steam_engine-0000|data.Name		Steam Engine
-0243-steam_engine-0001|data.Desc		Boosts the Pokémon's Speed stat drastically if hit by a Fire- or Water-type move.
-0244-punk_rock-0000|data.Name		Punk Rock
-0244-punk_rock-0001|data.Desc		Boosts the power of sound-based moves. The Pokémon also takes half the damage from these kinds of moves.
-0245-sand_spit-0000|data.Name		Sand Spit
-0245-sand_spit-0001|data.Desc		The Pokémon creates a sandstorm when it's hit by an attack.
-0246-ice_scales-0000|data.Name		Ice Scales
-0246-ice_scales-0001|data.Desc		The Pokémon is protected by ice scales, which halve the damage taken from special moves.
-0247-ripen-0000|data.Name		Ripen
-0247-ripen-0001|data.Desc		Raises a stat when it eats a berry.
-0248-ice_face-0000|data.Name		Ice Face
-0248-ice_face-0001|data.Desc		The Pokémon's ice head can take a physical attack as a substitute, but the attack also changes the Pokémon's appearance. The ice will be restored when it hails.
-0249-power_spot-0000|data.Name		Power Spot
-0249-power_spot-0001|data.Desc		Just being next to the Pokémon powers up moves.
-0250-mimicry-0000|data.Name		Mimicry
-0250-mimicry-0001|data.Desc		Changes the Pokémon's type depending on the terrain.
-0251-screen_cleaner-0000|data.Name		Screen Cleaner
-0251-screen_cleaner-0001|data.Desc		When the Pokémon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pokémon.
-0252-steely_spirit-0000|data.Name		Steely Spirit
-0252-steely_spirit-0001|data.Desc		Powers up ally Pokémon's Steel-type moves.
-0253-perish_body-0000|data.Name		Perish Body
-0253-perish_body-0001|data.Desc		When hit by a move that makes direct contact, the Pokémon and the attacker will faint after three turns unless they switch out of battle.
-0254-wandering_spirit-0000|data.Name		Wandering Spirit
-0254-wandering_spirit-0001|data.Desc		The Pokémon exchanges Abilities with a Pokémon that hits it with a move that makes direct contact.
-0255-gorilla_tactics-0000|data.Name		Gorilla Tactics
-0255-gorilla_tactics-0001|data.Desc		Boosts the Pokémon's Attack stat but only allows the use of the first selected move.
-0256-neutralizing_gas-0000|data.Name		Neutralizing Gas
-0256-neutralizing_gas-0001|data.Desc		The Pokémon neutralizes abilities when attacked.
-0257-pastel_veil-0000|data.Name		Pastel Veil
-0257-pastel_veil-0001|data.Desc		Protects the Pokémon and its ally Pokémon from being poisoned.
-0258-hunger_switch-0000|data.Name		Hunger Switch
-0258-hunger_switch-0001|data.Desc		The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of each turn.
-0259-quick_draw-0000|data.Name		Quick Draw
-0259-quick_draw-0001|data.Desc		Enables the Pokémon to move first occasionally.
-0260-unseen_fist-0000|data.Name		Unseen Fist
-0260-unseen_fist-0001|data.Desc		If the Pokémon uses moves that make direct contact, it can attack the target even if the target protects itself.
-0261-curious_medicine-0000|data.Name		Curious Medicine
-0261-curious_medicine-0001|data.Desc		When the Pokémon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies.
-0262-transistor-0000|data.Name		Transistor
-0262-transistor-0001|data.Desc		Powers up Electric-type moves.
-0263-dragons_maw-0000|data.Name		Dragon's Maw
-0263-dragons_maw-0001|data.Desc		Powers up Dragon-type moves.
-0264-chilling_neigh-0000|data.Name		Chilling Neigh
-0264-chilling_neigh-0001|data.Desc		When the Pokémon knocks out a target, it utters a chilling neigh, which boosts its Attack stat.
-0265-grim_neigh-0000|data.Name		Grim Neigh
-0265-grim_neigh-0001|data.Desc		When the Pokémon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat.
-0266-as_one_chill-0000|data.Name		As One
-0266-as_one_chill-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Glastrier's Chilling Neigh Ability.
-0267-as_one_grim-0000|data.Name		As One
-0267-as_one_grim-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.
+Key		EN	DE	ES	ZH-HANS	FR	IT	KO	JA	JA-JP	ZH-HANT
+0000-none-0000|data.Name		None	Keine	Ninguno	无						
+0000-none-0001|data.Desc											
+0001-stench-0000|data.Name		Stench	Duftnote	Hedor	恶臭	Puanteur	Tanfo	악취	あくしゅう	あくしゅう	惡臭
+0001-stench-0001|data.Desc		Contact with the Pokémon may cause flinching.	Lässt den Gegner bei Berührung eventuell zurückschrecken.					악취 때문에 접촉한 상대가 풀죽을 때가 있다.			
+0002-drizzle-0000|data.Name		Drizzle	Niesel	Llovizna	降雨	Crachin	Piovischio	잔비	あめふらし	あめふらし	降雨
+0002-drizzle-0001|data.Desc		The Pokémon makes it rain when it is battling.	Das Pokémon lässt es regnen, sobald es sich im Kampf befindet.					포켓몬이 싸우는 동안 비를 내린다.			
+0003-speed_boost-0000|data.Name		Speed Boost	Temposchub	Impulso	加速	Turbo	Acceleratore	가속	かそく	かそく	加速
+0003-speed_boost-0001|data.Desc		The Pokémon's Movement Speed is increased.	Das Tempo des Pokémons ist erhöht.					포켓몬의 행동속도가 증가한다,			
+0004-battle_armor-0000|data.Name		Battle Armor	Kampfpanzer	Armadura Batalla	战斗盔甲	Armurbaston	Lottascudo	전투무장	カブトアーマー	カブトアーマー	戰鬥盔甲
+0004-battle_armor-0001|data.Desc		Hard armor protects the Pokémon from critical hits.	Wehrt gegnerische Volltreffer mit einem harten Panzer ab.	La robusta coraza que lo protege bloquea los golpes críticos.	被坚硬的甲壳守护着， 不会被对手的攻击击中要害。	Le Pokémon est protégé des coups critiques par une solide carapace.	Il Pokémon è protetto da una dura corazza che gli evita di subire brutti colpi.	단단한 껍질에 보호받아 상대의 공격이 급소에 맞지 않는다.	かたい　こうらに　まもられて あいての　こうげきが きゅうしょに　あたらない。	硬い　甲羅に　守られて 相手の　攻撃が 急所に　当たらない。	被堅硬的甲殼守護著， 不會被對手的攻擊擊中要害。
+0005-sturdy-0000|data.Name		Sturdy	Robustheit	Robustez	结实	Fermeté	Vigore	옹골참	がんじょう	がんじょう	結實
+0005-sturdy-0001|data.Desc		The Pokémon cannot be knocked out with one hit.	Bietet Schutz gegen K.O.-Treffer.	Evita que el rival pueda debilitarle de un solo golpe.		Protège des capacités mettant K.O. en un coup.	Evita che il Pokémon vada KO in un sol colpo.	일격으로 쓰러지지 않는다.	いちげきで たおされない。	一撃で　倒されない。 	
+0006-damp-0000|data.Name		Damp	Feuchtigkeit	Humedad	湿气	Moiteur	Umidità	습기	しめりけ	しめりけ	濕氣
+0006-damp-0001|data.Desc		Prevents explosions and other forms of splash damage.	Verhindert Explosionen und ähnliche Formen von Bereichsschaden.					폭발이나 비슷한 범위 공격을 상쇄한다.			
+0007-limber-0000|data.Name		Limber	Flexibilität	Flexibilidad	柔软	Échauffement	Scioltezza	유연	じゅうなん	じゅうなん	柔軟
+0007-limber-0001|data.Desc		Its limber body protects the Pokémon from paralysis.	Der flexible Körper des Pokémon schützt es vor Paralyse.	Evita ser paralizado gracias a la flexibilidad de su cuerpo.	因为身体柔软， 不会变为麻痹状态。	Le Pokémon s’est suffisamment échauffé, ce qui l’immunise contre la paralysie.	Il corpo flessibile del Pokémon gli impedisce di subire gli effetti della paralisi.	유연한 몸으로 인해 마비 상태가 되지 않는다.	じゅうなんな　からだによって まひ　じょうたいに　ならない。	柔軟な　体によって まひ状態に　ならない。	因為身體柔軟， 不會陷入麻痺狀態。
+0008-sand_veil-0000|data.Name		Sand Veil	Sandschleier	Velo Arena	沙隐	Voile Sable	Sabbiavelo	모래숨기	すながくれ	すながくれ	沙隱
+0008-sand_veil-0001|data.Desc		Avoids attacks from a distance when in a sandstorm.	Weicht allen Angriffen aus der Entfernung aus, wenn ein Sandstorm wütet.					모래바람이 불 때는 원거리 공격을 회피할 수 있다.			
+0009-static-0000|data.Name		Static	Statik	Elec. Estática	静电	Statik	Statico	정전기	せいでんき	せいでんき	靜電
+0009-static-0001|data.Desc		The Pokémon is charged with static electricity, so contact with it may cause paralysis.	Kann bei Berührung durch statisch aufgeladenen Körper paralysieren.	La electricidad estática que lo envuelve puede paralizar al mínimo contacto.	身上带有静电， 有时会让接触到的对手麻痹。	Le Pokémon charge son corps en électricité statique, et tout contact avec lui peut paralyser.	Il contatto fisico con il corpo percorso dall’elettricità statica del Pokémon può causare paralisi.	정전기를 몸에 둘러 접촉한 상대를 마비시킬 때가 있다.	せいでんきを　からだに　まとい さわった　あいてを まひさせる　ことがある。	静電気を　体に　まとい 触った　相手を まひさせる　ことがある。	身上帶有靜電， 有時會令接觸到的對手麻痺。
+0010-volt_absorb-0000|data.Name		Volt Absorb	Voltabsorber	Absorbe Elec	蓄电	Absorb Volt	Assorbivolt	축전	ちくでん	ちくでん	蓄電
+0010-volt_absorb-0001|data.Desc		Restores HP if hit by an Electric-type move.	Treffer durch Elektro-Attacken regenerieren KP.	Recupera PS al recibir ataques de tipo Eléctrico.	受到电属性的招式攻击时， 不会受到伤害，而是会回复。	Récupère des PV si touché par une capacité Électrik.	Ridà PS se il Pokémon subisce una mossa di tipo Elettro.	전기를 받으면 회복한다.	でんきを　うけると かいふくする。	でんきを　受けると 回復する。	受到電屬性的招式攻擊時， 不會受到傷害，而是會回復。
+0011-water_absorb-0000|data.Name		Water Absorb	H2O-Absorber	Absorbe Agua	储水	Absorb Eau	Assorbacqua	저수	ちょすい	ちょすい	儲水
+0011-water_absorb-0001|data.Desc		Restores HP if hit by a Water-type move.	Treffer durch Wasser-Attacken regenerieren KP.	Recupera PS al recibir ataques de tipo Agua.	受到水属性的招式攻击时， 不会受到伤害，而是会回复。	Récupère des PV si touché par une capacité Eau.	Ridà PS se il Pokémon subisce una mossa di tipo Acqua.	물을 받으면 회복한다.	 ずを　うけると かいふくする。	 ずを　受けると 回復する。	受到水屬性的招式攻擊時， 不會受到傷害，而是會回復。
+0012-oblivious-0000|data.Name		Oblivious	Dösigkeit	Despiste	迟钝	Benêt	Indifferenza	둔감	どんかん	どんかん	遲鈍
+0012-oblivious-0001|data.Desc		Protects the Pokémon from Attract or Rage Powder.	Schützt das Pokémon vor Anziehung und Wutpulver.					헤롱헤롱이나 분노파우더에 면역을 가진다.			
+0013-cloud_nine-0000|data.Name		Cloud Nine	Wolke Sieben	Aclimatación	无关天气	Ciel Gris	Antimeteo	날씨부정	ノーてんき	ノーてんき	無關天氣
+0013-cloud_nine-0001|data.Desc		The Pokémon eliminates weather when it is battling.	Das Pokémon hebt Wettereffekte auf, wenn es sich im Kampf befindet.					포켓몬이 싸우는 동안 날씨의 영향을 받지 않는다.			
+0014-compound_eyes-0000|data.Name		Compound Eyes	Facettenauge	Ojo Compuesto	复眼	Œil Composé	Insettocchi	복안	ふくがん	ふくがん	複眼
+0014-compound_eyes-0001|data.Desc		Boosts the Pokémon's Attack Range.	Erhöht die Reichweite von Angriffen des Pokémons.					기술의 공격 범위가 올라간다.			
+0015-insomnia-0000|data.Name		Insomnia	Insomnia	Insomnio	不眠	Insomnia	Insonnia	불면	ふみん	ふみん	不眠
+0015-insomnia-0001|data.Desc		The Pokémon is suffering from insomnia and cannot fall asleep.	Verhindert Einschlafen.	Su resistencia al sueño le impide quedarse dormido.	因为是不会睡觉的体质， 所以不会变为睡眠状态。	Le Pokémon est incapable de dormir.	Il Pokémon soffre d’insonnia e non può finire addormentato.	잠들지 못하는 체질이라 잠듦 상태가 되지 않는다.	ねむれない　たいしつ　なので ねむり　じょうたいに　ならない。	眠れない　体質　なので ねむり状態に　ならない。	因為擁有不會睡覺的體質， 所以不會陷入睡眠狀態。
+0016-color_change-0000|data.Name		Color Change	Farbwechsel	Cambio Color	变色	Déguisement	Cambiacolore	변색	へんしょく	へんしょく	變色
+0016-color_change-0001|data.Desc		The Pokémon's type becomes the type of the move used on it.	Ändert seinen Typ zu dem der Attacke des Angreifers.	Adopta el tipo del último movimiento del que se es blanco.	自己的属性会变为 从对手处所受招式的属性。	Le Pokémon adopte le type de la capacité ennemie.	Il Pokémon acquisisce il tipo della mossa subita.	당한 기술의 타입으로 변화한다.	うけた　わざの　タイプに へんかする。	受けた　技の　タイプに 変化する。	自己的屬性會變為 從對手所受招式的屬性。
+0017-immunity-0000|data.Name		Immunity	Immunität	Inmunidad	免疫	Vaccin	Immunità	면역	めんえき	めんえき	免疫
+0017-immunity-0001|data.Desc		The immune system of the Pokémon prevents it from getting poisoned.	Das starke Immunsystem des Pokémon verhindert Vergiftungen.	Su sistema inmunitario evita el envenenamiento.	因为体内拥有免疫能力， 不会变为中毒状态。	Le Pokémon est naturellement immunisé contre toute forme de poison.	L’immunità naturale del Pokémon gli impedisce di essere avvelenato.	체내에 면역을 가지고 있어 독 상태가 되지 않는다.	たいないに　めんえきを　もっているため どく　じょうたいに　ならない。	体内に　免疫を　持っているため どく状態に　ならない。	因為體內擁有免疫能力， 不會陷入中毒狀態。
+0018-flash_fire-0000|data.Name		Flash Fire	Feuerfänger	Absorbe Fuego	引火	Torche	Fuocardore	타오르는불꽃	もらいび	もらいび	引火
+0018-flash_fire-0001|data.Desc		Powers up the Pokémon's Fire-type moves if it's hit by one.	Verstärkt Feuer-Attacken, wenn von Feuer-Attacken getroffen.	Potencia movimientos de tipo Fuego si ha sufrido antes alguno.	受到火属性的招式攻击时， 吸收火焰，自己使出的 火属性招式会变强。	Booste les capacités Feu si touché par attaque Feu.	Potenzia le proprie mosse Fuoco se se ne subisce una.	불꽃을 받으면 불꽃 기술이 강해진다.	ほのおを　うけると ほのおわざが　つよくなる。	ほのおを　受けると ほのお技が　強くなる。	受到火屬性的招式攻擊時， 吸收火焰，讓自己使出的 火屬性招式變強。
+0019-shield_dust-0000|data.Name		Shield Dust	Puderabwehr	Polvo Escudo	鳞粉	Écran Poudre	Polvoscudo	인분	りんぷん	りんぷん	鱗粉
+0019-shield_dust-0001|data.Desc		This Pokémon's dust blocks the additional effects of attacks taken.	Blockiert durch Puder die Zusatzeffekte gegnerischer Angriffe.	El polvo de escamas que lo envuelve lo protege de los efectos secundarios de los ataques recibidos.	被鳞粉守护着， 不会受到招式的追加效果影响。	Le Pokémon dispose d’un écran naturel qui le protège des effets additionnels des attaques ennemies.	Il Pokémon è protetto da uno strato di scaglie che annulla gli effetti secondari delle mosse subite.	인분에 보호받아 기술의 추가 효과를 받지 않게 된다.	りんぷんに　まもられて わざの　ついかこうかを　うけなくなる。	りんぷんに　守られて 技の　追加効果を　受けなくなる。	被鱗粉守護著， 不會受到招式的追加效果影響。
+0020-own_tempo-0000|data.Name		Own Tempo	Tempomacher	Ritmo Propio	我行我素	Tempo Perso	Mente Locale	마이페이스	マイペース	マイペース	我行我素
+0020-own_tempo-0001|data.Desc		This Pokémon has its own tempo, and that prevents it from becoming confused.	Das Pokémon lässt sich nicht aus der Ruhe bringen und verhindert so Verwirrung.	Como le gusta hacer las cosas a su manera, los rivales no logran confundirlo.	因为我行我素， 不会变为混乱状态。	Le Pokémon vit sa vie à son propre rythme, ce qui l’immunise contre la confusion.	Il Pokémon affronta la vita al proprio ritmo e per questo non può essere colpito dalla confusione.	마이페이스라서 혼란 상태가 되지 않는다.	マイペースなので こんらん　じょうたいに　ならない。	マイペースなので こんらん状態に　ならない。	因為我行我素， 不會陷入混亂狀態。
+0021-suction_cups-0000|data.Name		Suction Cups	Saugnapf	Ventosas	吸盘	Ventouse	Ventose	흡반	きゅうばん	きゅうばん	吸盤
+0021-suction_cups-0001|data.Desc		Prevents the Pokémon from being forced off its location.	Verhindert, dass das Pokémon von seinem Platz weggeschlagen wird.					끈적한 흡반을 이용해 위치를 이동시키는 효과를 무시한다.			
+0022-intimidate-0000|data.Name		Intimidate	Bedroher	Intimidación	威吓	Intimidation	Prepotenza	위협	いかく	いかく	威嚇
+0022-intimidate-0001|data.Desc		Lowers the Attack stat of opposing Pokémon nearby.	Senkt den Angriffswert von gegnerischen Pokémon in der Nähe. 					근처 적 포켓몬의 공격 스탯을 낮춘다.			
+0023-shadow_tag-0000|data.Name		Shadow Tag	Wegsperre	Sombra Trampa	踩影	Marque Ombre	Pedinombra	그림자밟기	かげふみ	かげふみ	踩影
+0023-shadow_tag-0001|data.Desc		This Pokémon steps on the opposing Pokémon's shadow to prevent it from escaping.	Hindert den Gegner an der Flucht beziehungsweise am Auswechseln, indem es ihm den Weg versperrt.	Evita que el enemigo huya o sea cambiado por otro.	踩住对手的影子 使其无法逃走或替换。	Empêche le Pokémon ennemi de quitter le combat.	Calpesta l’ombra del nemico impedendogli la fuga o la sostituzione.	상대의 그림자를 밟아 도망치거나 교체할 수 없게 한다.	あいての　かげを　ふみ にげたり　こうたい　できなくする。	相手の　影を　踏み 逃げたり　交代　できなくする。	踩住對手的影子 使其無法逃走或替換。
+0024-rough_skin-0000|data.Name		Rough Skin	Rauhaut	Piel Tosca	粗糙皮肤	Peau Dure	Cartavetro	까칠한피부	さめはだ	さめはだ	粗糙皮膚
+0024-rough_skin-0001|data.Desc		This Pokémon inflicts damage with its rough skin to the attacker on contact.	Angreifer werden durch die raue Haut des Pokémon bei direkten Attacken verletzt.	Hiere con su piel áspera al rival que lo ataque con un movimiento de contacto.	受到攻击时， 用粗糙的皮肤弄伤 接触到自己的对手。	Blesse l’attaquant lorsque le Pokémon subit une attaque directe.	Se il Pokémon è colpito da un attacco diretto, grazie alla sua pelle ruvida infligge danni a sua volta.	공격을 받았을 때 자신에게 접촉한 상대를 까칠까칠한 피부로 상처를 입힌다.	こうげきを　うけたとき じぶんに　ふれた　あいてを ざらざらの　はだで　キズつける。	攻撃を　受けたとき 自分に　触れた　相手を ざらざらの　肌で　キズつける。	受到攻擊時， 用粗糙的皮膚弄傷 接觸到自己的對手。
+0025-wonder_guard-0000|data.Name		Wonder Guard	Wunderwache	Superguarda	神奇守护	Garde Mystik	Magidifesa	불가사의부적	ふしぎなまもり	ふしぎなまもり	神奇守護
+0025-wonder_guard-0001|data.Desc		Its mysterious power only lets super effective moves hit the Pokémon.	Wundersame Kräfte bewirken, dass nur sehr effektive Treffer bei ihm Schaden anrichten.	Gracias a un poder misterioso, solo le hacen daño los movimientos supereficaces.	不可思议的力量， 只有效果绝佳的招式才能击中。	Une puissance mystérieuse protège le Pokémon contre toutes les capacités, sauf celles « super efficaces ».	Un potere misterioso protegge il Pokémon e lo rende vulnerabile solo alle mosse superefficaci.	효과가 굉장한 기술만 맞는 불가사의한 힘.	こうかばつぐんの　わざしか あたらない　ふしぎな　ちから。	効果バツグンの　技しか 当たらない　不思議な　力。	不可思議的力量， 只有效果絕佳的招式才會擊中自己。
+0026-levitate-0000|data.Name		Levitate	Schwebe	Levitación	飘浮	Lévitation	Levitazione	부유	ふゆう	ふゆう	飄浮
+0026-levitate-0001|data.Desc		By floating in the air, the Pokémon receives full immunity to all Ground-type moves.	Verleiht volle Immunität gegen alle Boden-Attacken durch Schwebezustand.	Su capacidad de flotar sobre el suelo le proporciona inmunidad frente a los movimientos de tipo Tierra.	从地面浮起， 从而不会受到地面属性招式的攻击。	Le Pokémon flotte, ce qui l’immunise contre les capacités de type Sol.	La capacità di levitare senza toccare il suolo conferisce immunità agli attacchi di tipo Terra.	땅에서 뜨는 것으로 땅타입의 기술을 받지 않는다.	じめんから　うくことによって じめんタイプの　わざを　うけない。	地面から　浮くことによって じめんタイプの　技を　受けない。	從地面浮起， 從而不會受到地面屬性招式的攻擊。
+0027-effect_spore-0000|data.Name		Effect Spore	Sporenwirt	Efecto Espora	孢子	Pose Spore	Spargispora	포자	ほうし	ほうし	孢子
+0027-effect_spore-0001|data.Desc		Contact with the Pokémon may inflict poison, sleep, or paralysis on its attacker.	Wird dieses Pokémon durch eine direkte Attacke angegriffen, kann das beim Gegner Paralyse, Vergiftung oder Schlaf auslösen.	Puede dormir, envenenar o paralizar al Pokémon con el que entre en contacto al recibir un ataque.	受到攻击时， 有时会把接触到自己的对手 变为中毒、麻痹或睡眠状态。	Peut paralyser, empoisonner ou endormir l’attaquant lorsque le Pokémon subit une attaque directe.	Può causare avvelenamento, paralisi o sonno a chi manda a segno un attacco diretto.	공격으로 자신에게 접촉한 상대를 독이나 마비, 잠듦 상태로 만들 때가 있다.	こうげきで　じぶんに　ふれた　あいてを どくや　まひや　ねむり　じょうたいに する　ことがある。	攻撃で　自分に　触れた　相手を どくや　まひや　ねむり状態に する　ことがある。	透過攻擊有時會使接觸到自己的對手， 陷入中毒、麻痺或睡眠狀態。
+0028-synchronize-0000|data.Name		Synchronize	Synchro	Sincronía	同步	Synchro	Sincronismo	싱크로	シンクロ	シンクロ	同步
+0028-synchronize-0001|data.Desc		Passes major status problems to opposing Pokémon.	Gibt Statusprobleme an gegnerische Pokémon weiter.					대부분의 상태이상을 적 포켓몬에게 넘긴다.			
+0029-clear_body-0000|data.Name		Clear Body	Neutraltorso	Cuerpo Puro	恒净之躯	Corps Sain	Corpochiaro	클리어바디	クリアボディ	クリアボディ	恆淨之軀
+0029-clear_body-0001|data.Desc		Prevents other Pokémon from lowering its stats.	Hindert Angreifer daran, Statuswerte zu senken.	Evita que bajen las características.	不会因为对手的招式或特性 而被降低能力。	Empêche les stats du Pokémon de baisser.	Le statistiche del Pokémon non possono essere ridotte.	상대가 능력을 떨어뜨릴 수 없다.	あいてに　のうりょくを さげられない。	相手に　能力を さげられない。	不會因對手的招式或特性 而被降低能力。
+0030-natural_cure-0000|data.Name		Natural Cure	Innere Kraft	Cura Natural	自然回复	Médic Nature	Alternacura	자연회복	しぜんかいふく	しぜんかいふく	自然回復
+0030-natural_cure-0001|data.Desc		Cures all status problems on the Pokémon when it is at full HP.	Heilt alle Statusprobleme des Pokémons, wenn es volle KP besitzt.					포켓몬의 HP가 최대일때 모든 상태이상을 치유한다.			
+0031-lightning_rod-0000|data.Name		Lightning Rod	Blitzfänger	Pararrayos	避雷针	Paratonnerre	Parafulmine	피뢰침	ひらいしん	ひらいしん	避雷針
+0031-lightning_rod-0001|data.Desc		The Pokémon draws in all Electric-type moves. Instead of being hit by Electric-type moves, it boosts its Sp. Atk.	Zieht Elektro-Attacken an. Statt durch diese Schaden zu nehmen, erhöht es den eigenen Spezial-Angriff.	Además de atraer y neutralizar los movimientos de tipo Eléctrico, sube el Ataque Especial.	将电属性的招式吸引到自己身上， 不会受到伤害，而是会提高特攻。	Le Pokémon détourne sur lui les capacités de type Électrik et les neutralise, tout en montant son Attaque Spéciale.	Attira e neutralizza mosse di tipo Elettro e aumenta l’Attacco Speciale.	전기타입의 기술을 자신에게 끌어모아 데미지를 받지 않고 특수공격을 올린다.	でんきタイプの　わざを　じぶんに よせつけ　ダメージを　うけずに とくこうが　あがる。	でんきタイプの　技を　自分に 寄せつけ　ダメージを　受けずに 特攻が　上がる。	將電屬性的招式吸引到自己身上， 不但不會受到傷害，反而會提高特攻。
+0032-serene_grace-0000|data.Name		Serene Grace	Edelmut	Dicha	天恩	Sérénité	Leggiadro	하늘의은총	てんのめぐみ	てんのめぐみ	天恩
+0032-serene_grace-0001|data.Desc		Boosts the likelihood of additional effects occurring when attacking.	Erhöht die Wahrscheinlichkeit, dass Zusatzeffekte von Attacken auftreten.	Aumenta la probabilidad de que los movimientos causen efectos secundarios.	托天恩的福， 招式的追加效果容易出现。	Augmente les chances d’infliger des effets additionnels.	Gli effetti secondari delle mosse sono più probabili.	하늘의 은총 덕분에 기술의 추가 효과가 나오기 쉽다.	てんのめぐみの　おかげで わざの　ついかこうかが　でやすい。	天の恵みの　おかげで 技の　追加効果が　でやすい。	受到上天保佑， 容易出現招式的追加效果。
+0033-swift_swim-0000|data.Name		Swift Swim	Wassertempo	Nado Rápido	悠游自如	Glissade	Nuotovelox	쓱쓱	すいすい	すいすい	悠游自如
+0033-swift_swim-0001|data.Desc		Boosts the Pokémon's Movement Speed in rain.	Steigert bei Regen das Tempo des Pokémons.					비가 올 때 행동속도가 올라간다.			
+0034-chlorophyll-0000|data.Name		Chlorophyll	Chlorophyll	Clorofila	叶绿素	Chlorophylle	Clorofilla	엽록소	ようりょくそ	ようりょくそ	葉綠素
+0034-chlorophyll-0001|data.Desc		Boosts the Pokémon's Movement Speed in sunshine.	Steigert bei Sonnenschein das Tempo des Pokémons.					날씨가 쾌청할 때 행동속도가 올라간다.			
+0035-illuminate-0000|data.Name		Illuminate	Erleuchtung	Iluminación	发光	Lumiattirance	Risplendi	발광	はっこう	はっこう	發光
+0035-illuminate-0001|data.Desc		It may warp an ally to the Pokémon when it is hurt.	Eventuell teleportiert das Pokémon einen Verbündeten zu sich, wenn es verletzt wurde.					아군이 피해를 입었을 때 이 포켓몬의 근처로 순간이동시킬 수도 있다.			
+0036-trace-0000|data.Name		Trace	Fährte	Rastro	复制	Calque	Traccia	트레이스	トレース	トレース	複製
+0036-trace-0001|data.Desc		The Pokémon copies the Ability of the Pokémon that attacks it.	Das Pokémon kopiert die Fähigkeit von angreifenden Gegnern.					공격한 상대의 특성을 복사한다.			
+0037-huge_power-0000|data.Name		Huge Power	Kraftkoloss	Potencia	大力士	Coloforce	Macroforza	천하장사	ちからもち	ちからもち	大力士
+0037-huge_power-0001|data.Desc		Boosts the Pokémon's Attack stat.	Stärkt physische Attacken.	Aumenta el Ataque.		Augmente l’Attaque du Pokémon.	Migliora la statistica Attacco del Pokémon.	물리공격의 위력이 올라간다.	ぶつり　こうげきの いりょくが　あがる。	物理攻撃の 威力が　あがる。	
+0038-poison_point-0000|data.Name		Poison Point	Giftdorn	Punto Tóxico	毒刺	Point Poison	Velenopunto	독가시	どくのトゲ	どくのトゲ	毒刺
+0038-poison_point-0001|data.Desc		Contact with the Pokémon may poison the attacker.	Vergiftet den Angreifer eventuell bei Berührung.	Puede envenenar al mínimo contacto.	有时会让接触到自己的 对手变为中毒状态。	Peut empoisonner l’attaquant s’il y a contact.	Può avvelenare chi manda a segno una mossa fisica.	접촉한 상대를 중독시킬 때가 있다.	ふれた　あいてに　どくを おわせる　ことがある。	触れた　相手に　どくを おわせる　ことがある。	有時會讓接觸到自己的 對手陷入中毒狀態。
+0039-inner_focus-0000|data.Name		Inner Focus	Konzentrator	Foco Interno	精神力	Attention	Fuocodentro	정신력	せいしんりょく	せいしんりょく	精神力
+0039-inner_focus-0001|data.Desc		The Pokémon's intensely focused, and that protects the Pokémon from flinching.	Verhindert durch erhöhte Konzentrationsfähigkeit Zurückschrecken.	Gracias a su profunda concentración, no retrocede ante los ataques del rival.	通过锻炼精神， 不会因对手的攻击而畏缩。	Le Pokémon a un mental à toute épreuve qui empêche les capacités ennemies de lui faire peur.	La capacità di concentrazione del Pokémon evita che tentenni per gli attacchi del nemico.	단련한 정신으로 인하여 상대의 공격에 풀죽지 않는다.	きたえられた　せいしんに　よって あいての　こうげきに　ひるまない。	鍛えられた　精神に　よって 相手の　攻撃に　ひるまない。	靠著經過鍛鍊精神， 不會因對手的攻擊而畏縮。
+0040-magma_armor-0000|data.Name		Magma Armor	Magmapanzer	Escudo Magma	熔岩铠甲	Armumagma	Magmascudo	마그마의무장	マグマのよろい	マグマのよろい	熔岩鎧甲
+0040-magma_armor-0001|data.Desc		The Pokémon is covered with hot magma, which prevents the Pokémon from becoming frozen. Thrown items will also burn up on contact.	Dank eines Panzers aus Magma kann dieses Pokémon nicht eingefroren werden. Geworfene Items verbrennen bei Berührung.					뜨거운 마그마를 몸에 둘러서 얼음 상태가 되지 않는다. 던지는 아이템은 접촉 시 불타버린다.			
+0041-water_veil-0000|data.Name		Water Veil	Aquahülle	Velo Agua	水幕	Ignifu-Voile	Idrovelo	수의베일	みずのベール	みずのベール	水幕
+0041-water_veil-0001|data.Desc		The Pokémon is covered with a water veil, which prevents the Pokémon from getting a burn.	Verhindert durch eine Hülle aus Wasser Verbrennungen.	Evita las quemaduras gracias a la capa de agua que lo envuelve.	将水幕裹在身上， 不会变为灼伤状态。	Le voile qui recouvre le Pokémon le protège des brûlures.	Un velo d’acqua riveste il corpo del Pokémon impedendogli di venire scottato.	물의 베일을 몸에 둘러서 화상 상태가 되지 않는다.	みずのベールを　みにまとい やけど　じょうたいに　ならない。	水のベールを　身にまとい やけど状態に　ならない。	將水幕裹在身上， 不會陷入灼傷狀態。
+0042-magnet_pull-0000|data.Name		Magnet Pull	Magnetfalle	Imán	磁力	Magnépiège	Magnetismo	자력	じりょく	じりょく	磁力
+0042-magnet_pull-0001|data.Desc		Pulls Steel-type targets to this Pokémon.	Zieht Pokémon des Typen Stahls an dieses Pokémon heran.					강철타입 포켓몬을 끌어당긴다.			
+0043-soundproof-0000|data.Name		Soundproof	Lärmschutz	Insonorizar	隔音	Anti-Bruit	Antisuono	방음	ぼうおん	ぼうおん	隔音
+0043-soundproof-0001|data.Desc		Soundproofing of the Pokémon itself gives full immunity to all sound-based moves.	Bietet durch Schalldämmung volle Immunität gegen alle Lärm-Attacken.	Su aislamiento acústico lo protege de movimientos que usan sonido.	通过屏蔽声音， 不受到声音招式的攻击。	Protège le Pokémon de toutes les capacités sonores.	Il Pokémon è dotato di una sorta di isolamento acustico che lo rende immune alle mosse basate sul suono.	소리를 차단하는 것으로 소리 공격을 받지 않는다.	おとを　しゃだん　することに　よって おとの　こうげきを　うけない。	音を　遮断　することに　よって 音の　攻撃を　受けない。	透過遮蔽聲音， 不受到聲音招式的攻擊。
+0044-rain_dish-0000|data.Name		Rain Dish	Regengenuss	Cura Lluvia	雨盘	Cuvette	Copripioggia	젖은접시	あめうけざら	あめうけざら	雨盤
+0044-rain_dish-0001|data.Desc		The Pokémon gradually regains HP when battling in rain.	Stellt bei Regen langsam und stetig KP wieder her.	Recupera PS de forma gradual cuando llueve.	下雨天气时， 会缓缓回复ＨＰ。	Récupère progressivement des PV par temps de pluie.	Il Pokémon recupera PS quando piove.	비가 올 때 조금씩 HP를 회복한다.	あめのとき　すこしずつ ＨＰを　かいふくする。	雨のとき　少しずつ ＨＰを　回復する。	天氣為下雨時， 會漸漸回復ＨＰ。
+0045-sand_stream-0000|data.Name		Sand Stream	Sandsturm	Chorro Arena	扬沙	Sable Volant	Sabbiafiume	모래날림	すなおこし	すなおこし	揚沙
+0045-sand_stream-0001|data.Desc		The Pokémon summons a sandstorm when it is battling.	Das Pokémon löst einen Sandsturm aus, sobald es sich im Kampf befindet.					싸우는 동안 모래바람을 일으킨다.			
+0046-pressure-0000|data.Name		Pressure	Erzwinger	Presión	压迫感	Pression	Pressione	프레셔	プレッシャー	プレッシャー	壓迫感
+0046-pressure-0001|data.Desc		By putting pressure on the opposing Pokémon, it raises their PP usage.	Zwingt den Gegner dazu, beim Einsatz von Attacken mehr AP zu verbrauchen.	Presiona al rival para que sus PP se acaben antes.	给予对手压迫感， 大量减少其使用招式的ＰＰ。	Force l’ennemi à dépenser plus de PP.	Mette pressione al nemico, facendogli consumare più PP.	프레셔를 줘서 상대가 쓰는 기술의 PP를 많이 줄인다.	プレッシャーを　あたえて あいての　つかう　わざの　ＰＰを おおく　へらす。	プレッシャーを　あたえて 相手の　使う　技の　ＰＰを 多く　減らす。	給予對手壓迫感， 大量減少其使用招式的ＰＰ。
+0047-thick_fat-0000|data.Name		Thick Fat	Speckschicht	Sebo	厚脂肪	Isograisse	Grassospesso	두꺼운지방	あついしぼう	あついしぼう	厚脂肪
+0047-thick_fat-0001|data.Desc		Boosts resistance to Fire- and Ice-type moves.	Stärkt Resistenzen gegen Feuer- und Eis-Typ Attacken.					불꽃과 얼음타입의 기술에 저항을 갖게 된다.			
+0048-early_bird-0000|data.Name		Early Bird	Frühwecker	Madrugar	早起	Matinal	Sveglialampo	일찍기상	はやおき	はやおき	早起
+0048-early_bird-0001|data.Desc		The Pokémon awakens quickly from sleep.	Bewirkt, dass das Pokémon schneller wieder aufwacht.	El Pokémon se despierta rápidamente.		Le Pokémon se réveille plus rapidement.	Il Pokémon si risveglia rapidamente dal sonno.	잠듦 상태에서 빨리 깨어난다.	おきるのが　はやくなる。	起きるのが　早くなる。 	
+0049-flame_body-0000|data.Name		Flame Body	Flammkörper	Cuerpo Llama	火焰之躯	Corps Ardent	Corpodifuoco	불꽃몸	ほのおのからだ	ほのおのからだ	火焰之軀
+0049-flame_body-0001|data.Desc		Contact with the Pokémon may burn the attacker. Thrown items will also burn up on contact.	Fügt dem Angreifer bei Berührung eventuell Verbrennungen zu. Items, die auf das Pokémon geworfen wurden, verbrennen außerdem.					접촉한 상대에게 화상을 입힐 때가 있다. 던지는 아이템은 접촉 시 불타버린다.			
+0050-run_away-0000|data.Name		Run Away	Angsthase	Fuga	逃跑	Fuite	Fugafacile	도주	にげあし	にげあし	逃跑
+0050-run_away-0001|data.Desc		Prevents the Pokémon from being Immobilized.	Verhindert, dass das Pokémon bewegungsunfähig werden kann.					경직 상태에 걸리는 걸 방지한다.			
+0051-keen_eye-0000|data.Name		Keen Eye	Adlerauge	Vista Lince	锐利目光	Regard Vif	Sguardofermo	날카로운눈	するどいめ	するどいめ	銳利目光
+0051-keen_eye-0001|data.Desc		Prevents other Pokémon from lowering its Accuracy.	Hindert Angreifer daran, die Genauigkeit zu senken.	Evita que disminuya la Precisión.	多亏了锐利的目光， 命中率不会被降低。	Empêche le Pokémon de perdre en Précision.	Evita che la precisione diminuisca.	명중률이 떨어지지 않는다.	めいちゅうりつを さげられない。	命中率を さげられない。	靠著銳利的目光， 命中率不會被降低。
+0052-hyper_cutter-0000|data.Name		Hyper Cutter	Scherenmacht	Corte Fuerte	怪力钳	Hyper Cutter	Ipertaglio	괴력집게	かいりきバサミ	かいりきバサミ	怪力鉗
+0052-hyper_cutter-0001|data.Desc		The Pokémon's proud of its powerful pincers. They prevent other Pokémon from lowering its Attack stat.	Hindert Angreifer durch mächtige Scheren daran, den Angriffs-Wert zu senken.	Evita que el rival le baje el Ataque.	因为拥有以力量自豪的钳子， 不会被对手降低攻击。	Le Pokémon est armé de lames tranchantes qui font sa fierté et empêchent son Attaque de baisser.	L’Attacco del Pokémon non può diminuire grazie alla morsa micidiale in cui è in grado di stringere i nemici.	힘이 자랑인 집게를 가지고 있어 상대가 공격을 떨어뜨리지 못한다.	ちからじまんの　ハサミを　もっているので あいてに　こうげきを　さげられない。	力自慢の　ハサミを　持っているので 相手に　攻撃を　下げられない。	因為擁有以力量為傲的鉗子， 不會被對手降低攻擊。
+0053-pickup-0000|data.Name		Pickup	Mitnahme	Recogida	捡拾	Ramassage	Raccolta	픽업	ものひろい	ものひろい	撿拾
+0053-pickup-0001|data.Desc		The Pokémon may find an item when it enters a new floor.	Das Pokémon findet eventuell ein Item, wenn es eine neue Ebene betritt.					다음 층으로 넘어갈 때 도구를 주워올 때가 있다.			
+0054-truant-0000|data.Name		Truant	Schnarchnase	Ausente	懒惰	Absentéisme	Pigrone	게으름	なまけ	なまけ	懶惰
+0054-truant-0001|data.Desc		The Pokémon can't attack on consecutive turns.	Greift nur alle zwei Runden an.	El Pokémon no atacará en turnos consecutivos.	如果使出招式， 下一回合就会休息。	Le Pokémon n’agit qu’un tour sur deux.	Il Pokémon attacca un turno sì e uno no.	연속으로 공격할 수 없다.	こうげきが　れんぞくで だせない。	攻撃が　連続で だせない。	如果使出招式， 下一回合就需要休息。
+0055-hustle-0000|data.Name		Hustle	Übereifer	Entusiasmo	活力	Agitation	Tuttafretta	의욕	はりきり	はりきり	活力
+0055-hustle-0001|data.Desc		Boosts the Attack stat, but lowers Attack Range.	Erhöht den Angriffs-Wert, aber senkt die Reichweite von Angriffen.					공격을 높이는 대신 공격범위가 낮아진다.			
+0056-cute_charm-0000|data.Name		Cute Charm	Charmebolzen	Gran Encanto	迷人之躯	Joli Sourire	Incantevole	헤롱헤롱바디	メロメロボディ	メロメロボディ	迷人之軀
+0056-cute_charm-0001|data.Desc		Contact with the Pokémon may cause infatuation.	Kann bei Kontakt betörend wirken.	Tocar al Pokémon puede causar enamoramiento.	有时会让接触到自己的对手着迷。	Séduit parfois l’attaquant au contact.	Al contatto subito, chi sferra l’attacco può infatuarsi.	접촉하면 헤롱헤롱 상태가 될 때가 있다.	ふれると　メロメロに することがある。	触れると　メロメロに することがある。	有時會讓接觸到自己的對手 陷入著迷狀態。
+0057-plus-0000|data.Name		Plus	Plus	Más	正电	Plus	Più	플러스	プラス	プラス	正電
+0057-plus-0001|data.Desc		Boosts the Sp. Atk stat if another Pokémon has Minus.	Erhöht den Spezial-Angriff, wenn ein anderes Pokémon Minus besitzt.					마이너스 특성의 포켓몬이 있으면 특수공격을 올린다.			
+0058-minus-0000|data.Name		Minus	Minus	Menos	负电	Minus	Meno	마이너스	マイナス	マイナス	負電
+0058-minus-0001|data.Desc		Boosts the Sp. Atk stat if another Pokémon has Plus.	Erhöht den Spezial-Angriff, wenn ein anderes Pokémon Plus besitzt.					플러스 특성의 포켓몬이 있으면 특수공격을 올린다.			
+0059-forecast-0000|data.Name		Forecast	Prognose	Predicción	阴晴不定	Météo	Previsioni	기분파	てんきや	てんきや	陰晴不定
+0059-forecast-0001|data.Desc		The Pokémon transforms with the weather to change its type to Water, Fire, or Ice.	Nimmt je nach Wetter entweder den Typ Wasser, Feuer oder Eis an.	Cambia a tipo Agua, Fuego o Hielo en función del tiempo atmosférico.	受天气的影响， 会变为水属性、火属性 或冰属性中的某一个。	Le Pokémon prend le type Eau, Feu ou Glace en fonction de la météo.	Cambia il tipo del Pokémon in Acqua, Fuoco o Ghiaccio in base alle condizioni atmosferiche.	날씨의 영향을 받아 물타입, 불꽃타입, 얼음타입 중 하나로 변화한다.	てんきの　えいきょうを　うけて みずタイプ　ほのおタイプ　こおりタイプの どれかに　へんかする。	天気の　影響を　受けて みずタイプ　ほのおタイプ　こおりタイプの どれかに　変化する。	在天氣的影響下， 會變成水屬性、火屬性 或冰屬性之中的一種。
+0060-sticky_hold-0000|data.Name		Sticky Hold	Wertehalter	Viscosidad	黏着	Glue	Antifurto	점착	ねんちゃく	ねんちゃく	黏著
+0060-sticky_hold-0001|data.Desc		Protects the Pokémon from item theft. Also allows the Pokémon to handle Sticky items.	Schützt das Pokémon vor Item Diebstähle. Außerdem kann es mit klebrigen Items umgehen.					아이템을 도둑맞지 않게 된다. 또한 끈적이는 아이템도 사용할 수 있다.			
+0061-shed_skin-0000|data.Name		Shed Skin	Expidermis	Mudar	蜕皮	Mue	Muta	탈피	だっぴ	だっぴ	蛻皮
+0061-shed_skin-0001|data.Desc		The Pokémon may heal its own status conditions by shedding its skin.	Das Pokémon befreit sich eventuell von Statusproblemen, indem es seine Haut abstreift.	El Pokémon puede curar sus problemas de estado al mudar la piel.	通过蜕去身上的皮， 有时会治愈异常状态。	Le Pokémon soigne parfois ses altérations de statut en muant.	Il Pokémon può guarire dai problemi di stato facendo la muta completa della pelle.	탈피하여 상태 이상을 회복할 때가 있다.	からだの　かわを　ぬぎすてることで じょうたい　いじょうを なおすことが　ある。	体の　皮を　脱ぎ捨てることで 状態異常を 治すことが　ある。	透過蛻去身上的皮， 有時會治癒異常狀態。
+0062-guts-0000|data.Name		Guts	Adrenalin	Agallas	毅力	Cran	Dentistretti	근성	こんじょう	こんじょう	毅力
+0062-guts-0001|data.Desc		It's so gutsy that having a major status condition boosts the Pokémon's Attack stat.	Bei Statusproblemen setzt es Adrenalin frei und erhöht so seinen Angriffs-Wert.					상태 이상이 되면 근성을 보여서 공격이 올라간다.			
+0063-marvel_scale-0000|data.Name		Marvel Scale	Notschutz	Escama Especial	神奇鳞片	Écaille Spéciale	Pelledura	이상한비늘	ふしぎなうろこ	ふしぎなうろこ	神奇鱗片
+0063-marvel_scale-0001|data.Desc		The Pokémon's marvelous scales boost the Defense stat if it has a major status condition.	Bei Statusproblemen schützt es sich mit mysteriösen Schuppen und erhöht so seine Verteidigung.					상태 이상이 되면 이상한 비늘이 반응해서 방어가 올라간다.			
+0064-liquid_ooze-0000|data.Name		Liquid Ooze	Kloakensoße	Lodo Líquido	污泥浆	Suintement	Melma	해감액	ヘドロえき	ヘドロえき	污泥漿
+0064-liquid_ooze-0001|data.Desc		Oozed liquid has strong stench, which damages attackers using any draining move.	Angreifer, die durch Saug-Attacken Kloakensoße in sich aufgenommen haben, nehmen durch deren widerwärtigen Gestank Schaden.	Debido a su intenso hedor, hiere a los Pokémon que intentan drenarle los PS.	吸收了污泥浆的对手 会因强烈的恶臭 而受到伤害，减少ＨＰ。	Le Pokémon suinte un liquide toxique qui blesse tous ceux qui tentent de voler ses PV.	Il Pokémon secerne delle sostanze tossiche. Se un nemico manda a segno una mossa che assorbe i PS, subisce dei danni.	해감액을 흡수한 상대는 강렬한 악취로 데미지를 받아 HP가 줄어든다.	ヘドロえきを　すいとった　あいては きょうれつな　あくしゅうで ダメージを　うけて　ＨＰを　へらす。	ヘドロ液を　吸い取った　相手は 強烈な　悪臭で ダメージを　受けて　ＨＰを　減らす。	吸收了污泥漿的對手 會因為強烈的惡臭而 使得ＨＰ減少。
+0065-overgrow-0000|data.Name		Overgrow	Notdünger	Espesura	茂盛	Engrais	Erbaiuto	심록	しんりょく	しんりょく	茂盛
+0065-overgrow-0001|data.Desc		Powers up Grass-type moves when the Pokémon's HP is low.	Erhöht die Stärke von Pflanzen-Attacken, wenn die KP auf einen gewissen Wert fallen.	Potencia los movimientos de tipo Planta del Pokémon cuando le quedan pocos PS.	ＨＰ减少的时候， 草属性的招式威力会提高。	Augmente la puissance des capacités de type Plante du Pokémon quand il a perdu une certaine quantité de PV.	Quando il Pokémon ha pochi PS, la potenza delle sue mosse di tipo Erba aumenta.	HP가 줄었을 때 풀타입 기술의 위력이 올라간다.	ＨＰが　へったとき くさタイプの　わざの いりょくが　あがる。	ＨＰが　減ったとき くさタイプの　技の 威力が　上がる。	ＨＰ減少的時候， 草屬性的招式威力會提高。
+0066-blaze-0000|data.Name		Blaze	Großbrand	Mar Llamas	猛火	Brasier	Aiutofuoco	맹화	もうか	もうか	猛火
+0066-blaze-0001|data.Desc		Powers up Fire-type moves when the Pokémon's HP is low.	Erhöht die Stärke von Feuer-Attacken, wenn die KP auf einen gewissen Wert fallen.	Potencia los movimientos de tipo Fuego del Pokémon cuando le quedan pocos PS.	ＨＰ减少的时候， 火属性的招式威力会提高。	Augmente la puissance des capacités de type Feu du Pokémon quand il a perdu une certaine quantité de PV.	Quando il Pokémon ha pochi PS, la potenza delle sue mosse di tipo Fuoco aumenta.	HP가 줄었을 때 불꽃타입 기술의 위력이 올라간다.	ＨＰが　へったとき ほのおタイプの　わざの いりょくが　あがる。	ＨＰが　減ったとき ほのおタイプの　技の 威力が　上がる。	ＨＰ減少的時候， 火屬性的招式威力會提高。
+0067-torrent-0000|data.Name		Torrent	Sturzbach	Torrente	激流	Torrent	Acquaiuto	급류	げきりゅう	げきりゅう	激流
+0067-torrent-0001|data.Desc		Powers up Water-type moves when the Pokémon's HP is low.	Erhöht die Stärke von Wasser-Attacken, wenn die KP auf einen gewissen Wert fallen.	Potencia los movimientos de tipo Agua del Pokémon cuando le quedan pocos PS.	ＨＰ减少的时候， 水属性的招式威力会提高。	Augmente la puissance des capacités de type Eau du Pokémon quand il a perdu une certaine quantité de PV.	Quando il Pokémon ha pochi PS, la potenza delle sue mosse di tipo Acqua aumenta.	HP가 줄었을 때 물타입 기술의 위력이 올라간다.	ＨＰが　へったとき みずタイプの　わざの いりょくが　あがる。	ＨＰが　減ったとき みずタイプの　技の 威力が　上がる。	ＨＰ減少的時候， 水屬性的招式威力會提高。
+0068-swarm-0000|data.Name		Swarm	Hexaplaga	Enjambre	虫之预感	Essaim	Aiutinsetto	벌레의알림	むしのしらせ	むしのしらせ	蟲之預感
+0068-swarm-0001|data.Desc		Powers up Bug-type moves when the Pokémon's HP is low.	Erhöht die Stärke von Käfer-Attacken, wenn die KP auf einen gewissen Wert fallen.	Potencia los movimientos de tipo Bicho del Pokémon cuando le quedan pocos PS.	ＨＰ减少的时候， 虫属性的招式威力会提高。	Augmente la puissance des capacités de type Insecte du Pokémon quand il a perdu une certaine quantité de PV.	Quando il Pokémon ha pochi PS, la potenza delle sue mosse di tipo Coleottero aumenta.	HP가 줄었을 때 벌레타입 기술의 위력이 올라간다.	ＨＰが　へったとき むしタイプの　わざの いりょくが　あがる。	ＨＰが　減ったとき むしタイプの　技の 威力が　上がる。	ＨＰ減少的時候， 蟲屬性的招式威力會提高。
+0069-rock_head-0000|data.Name		Rock Head	Steinhaupt	Cabeza Roca	坚硬脑袋	Tête de Roc	Testadura	돌머리	いしあたま	いしあたま	堅硬腦袋
+0069-rock_head-0001|data.Desc		Protects the Pokémon from recoil damage.	Verhindert Schaden, der durch Rückstoß entstehen würde.	Impide que el Pokémon se dañe con sus movimientos.	即使使出会受反作用力伤害的招式， ＨＰ也不会减少。	Protège le Pokémon des dégâts de contrecoups.	Protegge il Pokémon dai contraccolpi.	부딪쳐도 반동을 받지 않는다.	ぶつかっても はんどうを　うけない。	ぶつかっても 反動を　受けない。	即使使出會受反作用力傷害的招式， ＨＰ也不會減少。
+0070-drought-0000|data.Name		Drought	Dürre	Sequía	日照	Sécheresse	Siccità	가뭄	ひでり	ひでり	日照
+0070-drought-0001|data.Desc		Turns the sunlight harsh when the Pokémon is battling.	Lässt den Sonnenschein stärker scheinen, wenn das Pokémon sich im Kampf befindet.					싸우는 동안 햇살이 강해진다.			
+0071-arena_trap-0000|data.Name		Arena Trap	Ausweglos	Trampa Arena	沙穴	Piège	Trappoarena	개미지옥	ありじごく	ありじごく	沙穴
+0071-arena_trap-0001|data.Desc		Prevents grounded opposing Pokémon from fleeing.	Hindert den Gegner im Kampf an der Flucht.	Evita que el rival huya.	在战斗中让对手无法逃走。	Empêche l’ennemi de s’enfuir.	Impedisce la fuga al nemico.	땅에 있는 적 포켓몬이 도망칠 수 없게 한다.	せんとうで　あいてを にげられなくする。	戦闘で　相手を 逃げられなくする。	在戰鬥中讓對手無法逃走。
+0072-vital_spirit-0000|data.Name		Vital Spirit	Munterkeit	Espíritu Vital	干劲	Esprit Vital	Spiritovivo	의기양양	やるき	やるき	幹勁
+0072-vital_spirit-0001|data.Desc		The Pokémon is full of vitality, and that prevents it from falling asleep.	Das Pokémon ist so munter, dass es nicht einschlafen kann.	Su determinación le impide quedarse dormido.	通过激发出干劲， 不会变为睡眠状态。	Empêche le Pokémon de s’endormir.	Il Pokémon è talmente vivace che non può addormentarsi.	의기양양해져서 잠듦 상태가 되지 않는다.	やるきを　だすことに　よって ねむり　じょうたいに　ならない。	やる気を　だすことに　よって ねむり状態に　ならない。	透過激發出幹勁， 不會陷入睡眠狀態。
+0073-white_smoke-0000|data.Name		White Smoke	Pulverrauch	Humo Blanco	白色烟雾	Écran Fumée	Fumochiaro	하얀연기	しろいけむり	しろいけむり	白色煙霧
+0073-white_smoke-0001|data.Desc		The Pokémon is protected by its white smoke, which prevents other Pokémon from lowering its stats.	Indem es sich mit pulvrigem Rauch umhüllt, hindert es Angreifer daran, seine Statuswerte zu senken.	El humo blanco que lo protege evita que otro Pokémon le baje las características.	被白色烟雾保护着， 不会被对手降低能力。	Un écran de fumée empêche l’ennemi de baisser les stats du Pokémon.	Il Pokémon è protetto da un fumo chiaro che impedisce ai nemici di diminuire le sue statistiche.	하얀 연기의 보호를 받아 상대가 능력을 떨어뜨릴 수 없다.	しろいけむりに　まもられて あいてに　のうりょくを　さげられない。	白い煙に　守られて 相手に　能力を　下げられない。	被白色煙霧保護著， 不會被對手降低能力。
+0074-pure_power-0000|data.Name		Pure Power	Mentalkraft	Energía Pura	瑜伽之力	Force Pure	Forzapura	순수한힘	ヨガパワー	ヨガパワー	瑜伽之力
+0074-pure_power-0001|data.Desc		Boosts the Pokémon's Attack stat.	Stärkt physische Attacken.	Aumenta el Ataque.		Augmente l’Attaque du Pokémon.	Migliora la statistica Attacco del Pokémon.	물리공격의 위력이 올라간다.	ぶつり　こうげきの いりょくが　あがる。	物理攻撃の 威力が　あがる。	
+0075-shell_armor-0000|data.Name		Shell Armor	Panzerhaut	Caparazón	硬壳盔甲	Coque Armure	Guscioscudo	조가비갑옷	シェルアーマー	シェルアーマー	硬殼盔甲
+0075-shell_armor-0001|data.Desc		A hard shell protects the Pokémon from critical hits.	Wehrt gegnerische Volltreffer mit einem harten Panzer ab.	La robusta coraza que lo protege bloquea los golpes críticos.	被坚硬的壳保护着， 对手的攻击不会击中要害。	Le Pokémon est protégé des coups critiques par sa carapace.	Il Pokémon è protetto da un guscio robusto che gli evita di subire brutti colpi.	단단한 껍질의 보호를 받아 상대의 공격이 급소에 맞지 않는다.	かたい　からに　まもられ あいての　こうげきが きゅうしょに　あたらない。	硬い　殻に　守られ 相手の　攻撃が 急所に　当たらない。	被堅硬的殼保護著， 對手的攻擊不會擊中要害。
+0076-air_lock-0000|data.Name		Air Lock	Klimaschutz	Bucle Aire	气闸	Air Lock	Riparo	에어록	エアロック	エアロック	氣閘
+0076-air_lock-0001|data.Desc		Eliminates the effects of weather when the Pokémon is battling.	Hebt Wetter-Effekte auf, wenn sich das Pokémon im Kampf befindet.								
+0077-tangled_feet-0000|data.Name		Tangled Feet	Fußangel	Tumbos	蹒跚	Pieds Confus	Intricopiedi	갈지자걸음	ちどりあし	ちどりあし	蹣跚
+0077-tangled_feet-0001|data.Desc		If the Pokémon is confused, it will avoid attacks from a distance.	Wenn das Pokémon verwirrt ist, wird es allen Attacken aus der Distanz ausweichen.								
+0078-motor_drive-0000|data.Name		Motor Drive	Starthilfe	Electromotor	电气引擎	Motorisé	Elettrorapid	전기엔진	でんきエンジン	でんきエンジン	電氣引擎
+0078-motor_drive-0001|data.Desc		Boosts the Pokémon's Movement Speed when it's hit by an Electric-type move.	Erhöht nach einem Treffer durch eine Elektro-Attacke das Tempo des Pokémons.								
+0079-rivalry-0000|data.Name		Rivalry	Rivalität	Rivalidad	斗争心	Rivalité	Antagonismo	투쟁심	とうそうしん	とうそうしん	鬥爭心
+0079-rivalry-0001|data.Desc		Deals more damage to Pokémon of the same gender.	Verursacht mehr Schaden, wenn das Ziel dasselbe Geschlecht hat.								
+0080-steadfast-0000|data.Name		Steadfast	Felsenfest	Impasible	不屈之心	Impassible	Cuordeciso	불굴의마음	ふくつのこころ	ふくつのこころ	不屈之心
+0080-steadfast-0001|data.Desc		Boosts the Pokémon's Movement Speed each time the it flinches.	Erhöht das Tempo des Pokémon jedes Mal, wenn es zurückschreckt.								
+0081-snow_cloak-0000|data.Name		Snow Cloak	Schneemantel	Manto Níveo	雪隐	Rideau Neige	Mantelneve	눈숨기	ゆきがくれ	ゆきがくれ	雪隱
+0081-snow_cloak-0001|data.Desc		Avoids attacks from a distance when in a hailstorm.	Weicht allen Angriffen aus der Entfernung aus, wenn es hagelt.								
+0082-gluttony-0000|data.Name		Gluttony	Völlerei	Gula	贪吃鬼	Gloutonnerie	Voracità	먹보	くいしんぼう	くいしんぼう	貪吃鬼
+0082-gluttony-0001|data.Desc		Steals and eats a food item from an attacker that made direct contact.	Stehlt und konsumiert ein essbares Item von einem Angreifer, welcher direkten Kontakt hatte.								
+0083-anger_point-0000|data.Name		Anger Point	Kurzschluss	Irascible	愤怒穴位	Colérique	Grancollera	분노의경혈	いかりのつぼ	いかりのつぼ	憤怒穴位
+0083-anger_point-0001|data.Desc		The Pokémon is angered when it takes a critical hit, and that maxes its Attack stat.	Wird nach Einstecken eines Volltreffers wütend und maximiert dabei seinen Angriffs-Wert.	Si recibe un golpe crítico, monta en cólera y sube su Ataque hasta el máximo.	要害被击中时， 会大发雷霆， 攻击力变为最大。	Si le Pokémon subit un coup critique, il entre dans une colère noire qui augmente son Attaque au maximum.	Se il Pokémon subisce un brutto colpo, monta su tutte le furie e il suo Attacco aumenta al massimo.	급소에 공격이 맞으면 크게 분노해 공격력이 최대가 된다.	きゅうしょに　こうげきが　あたると いかりくるって　こうげきりょくが さいだいに　なる。	急所に　攻撃が　当たると 怒りくるって　攻撃力が 最大に　なる。	要害被擊中時會大發雷霆。 攻擊力會提高到最大。
+0084-unburden-0000|data.Name		Unburden	Entlastung	Liviano	轻装	Délestage	Agiltecnica	곡예	かるわざ	かるわざ	輕裝
+0084-unburden-0001|data.Desc		Boosts Movement Speed the Pokémon has no held item.	Erhöht das Tempo des Pokémon, wenn es kein Item trägt.								
+0085-heatproof-0000|data.Name		Heatproof	Hitzeschutz	Ignífugo	耐热	Ignifugé	Antifuoco	내열	たいねつ	たいねつ	耐熱
+0085-heatproof-0001|data.Desc		Weakens the power of Fire-type moves.	Senkt die Stärke von Feuer-Attacken.	Disminuye la potencia de los ataques de tipo Fuego.		Réduit la puissance des attaques de type Feu.	Indebolisce l’effetto di mosse di tipo Fuoco.	불꽃타입 공격의 위력을 약하게 한다.	ほのおタイプの　こうげきの いりょくを　よわめる。	ほのおタイプの　攻撃の 威力を　弱める。	
+0086-simple-0000|data.Name		Simple	Wankelmut	Simple	单纯	Simple	Disinvoltura	단순	たんじゅん	たんじゅん	單純
+0086-simple-0001|data.Desc		The stat changes the Pokémon receives are doubled.	Verdoppelt die Wirkung eigener Statusveränderungen.	Duplica los cambios en las características.	能力变化会变为平时的２倍。	Les variations de stats sont deux fois plus importantes pour le Pokémon.	Raddoppia le modifiche alle statistiche.	능력 변화가 평소의 2배가 된다.	のうりょく　へんかが いつもの　２ばいに　なる。	能力　変化が いつもの　２倍に　なる。	能力變化會變為平時的２倍。
+0087-dry_skin-0000|data.Name		Dry Skin	Trockenheit	Piel Seca	干燥皮肤	Peau Sèche	Pellearsa	건조피부	かんそうはだ	かんそうはだ	乾燥皮膚
+0087-dry_skin-0001|data.Desc		Restores HP in rain or when hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves.	Bei Sonnenschein verliert das Pokémon KP und der Schaden durch Feuer-Attacken steigt. Bei Regen und Treffern durch Wasser-Attacken regeneriert es KP.	Pierde PS si hace sol y los recupera si llueve o recibe un movimiento de tipo Agua. Los movimientos de tipo Fuego, por su parte, le hacen más daño de lo normal.	下雨天气时和受到水属性的招式时， ＨＰ会回复。晴朗天气时和受到火属性的 招式时，ＨＰ会减少。	Le Pokémon regagne des PV sous la pluie ou s’il est touché par une capacité Eau, mais il déteste les capacités Feu ou quand le soleil brille.	Il Pokémon recupera PS se piove o se subisce mosse di tipo Acqua, ma con la luce solare intensa perde PS. Subisce più danni da mosse di tipo Fuoco.	비가 오는 날씨나 물타입의 기술로 HP가 회복되고 맑을 때나 불꽃타입의 기술로는 줄어든다.	てんきが　あめのときや　みずタイプの わざで　ＨＰが　かいふくし　はれのときや ほのおタイプの　わざで　へってしまう。	天気が　雨の時や　みずタイプの 技で　ＨＰが　回復し　はれの時や ほのおタイプの　技で　減ってしまう。	下雨天氣時和受到水屬性的招式攻擊時， HP會回復。晴朗天氣時和受到火屬性的 招式攻擊時，ＨＰ會減少。
+0088-download-0000|data.Name		Download	Download	Descarga	下载	Télécharge	Download	다운로드	ダウンロード	ダウンロード	下載
+0088-download-0001|data.Desc		Compares an opposing Pokémon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat— whichever will be more effective.	Ist die Spezial-Verteidigung des Gegners höher als seine Verteidigung, wird der eigene Spezial-Angriff erhöht. Ist die Verteidigung höher, steigt der Angriff.	Compara la Defensa y la Defensa Especial del rival para ver cuál es inferior y aumenta su propio Ataque o Ataque Especial, según corresponda.	比较对手的防御和特防， 根据较低的那项能力 相应地提高自己的攻击或特攻。	Le Pokémon compare la Défense et la Défense Spéciale de l’adversaire et augmente son Attaque ou son Attaque Spéciale en conséquence.	Analizza Difesa e Difesa Speciale del nemico e, a seconda di qual è più bassa, aumenta il proprio Attacco o Attacco Speciale.	상대의 방어와 특수방어를 비교해서 낮은 쪽 능력에 맞춰서 자신의 공격이나 특수공격을 올린다.	あいての　ぼうぎょと　とくぼうを　くらべて ひくい　ほうの　のうりょくに　あわせて じぶんの　こうげきか　とくこうを　あげる。	相手の　防御と　特防を　くらべて 低い　ほうの　能力に　あわせて 自分の　攻撃か　特攻を　上げる。	比較對手的防禦和特防， 根據較低的那項能力 相應地提高自己的攻擊或特攻。
+0089-iron_fist-0000|data.Name		Iron Fist	Eisenfaust	Puño Férreo	铁拳	Poing de Fer	Ferropugno	철주먹	てつのこぶし	てつのこぶし	鐵拳
+0089-iron_fist-0001|data.Desc		Powers up punching moves.	Steigert die Effektivität von Box- und Hieb-Attacken.	Aumenta la fuerza de los puñetazos.	使用拳类招式的威力会提高。	Augmente la puissance des capacités coups de poing.	Potenzia le mosse che utilizzano pugni.	펀치를 사용하는 기술의 위력이 올라간다.	パンチを　つかう　わざの いりょくが　あがる。	パンチを　使う　技の 威力が　あがる。	使用到拳頭的招式 威力會提高。
+0090-poison_heal-0000|data.Name		Poison Heal	Aufheber	Antídoto	毒疗	Soin Poison	Velencura	포이즌힐	ポイズンヒール	ポイズンヒール	毒療
+0090-poison_heal-0001|data.Desc		Restores HP if the Pokémon is poisoned, instead of losing HP.	Das Pokémon erleidet keinen Schaden durch Vergiftung, sondern regeneriert KP.	Si el Pokémon resulta envenenado, recupera PS en vez de perderlos.	变为中毒状态时， ＨＰ不会减少，反而会增加起来。	Quand le Pokémon est empoisonné, il regagne des PV au lieu d’en perdre.	Il Pokémon recupera PS anziché perderli se è avvelenato.	독 상태가 되면 HP가 줄지 않고 증가한다.	どくじょうたいに　なると ＨＰが　へらずに　ふえていく。	どく状態に　なると ＨＰが　減らずに　増えていく。	陷入中毒狀態時， ＨＰ不會減少，反而會漸漸增加。
+0091-adaptability-0000|data.Name		Adaptability	Anpassung	Adaptable	适应力	Adaptabilité	Adattabilità	적응력	てきおうりょく	てきおうりょく	適應力
+0091-adaptability-0001|data.Desc		Powers up moves of the same type as the Pokémon.	Erhöht die Stärke von Attacken desselben Typs.	Potencia los movimientos del mismo tipo del Pokémon.	与自身同属性的招式 威力会提高。	Augmente la puissance des capacités de même type.	Potenzia le mosse dello stesso tipo del Pokémon.	타입이 같은 기술의 위력이 올라간다.	タイプが　おなじ　わざの いりょくが　あがる。	タイプが　同じ　技の 威力が　あがる。	與自身同屬性的招式 威力會提高。
+0092-skill_link-0000|data.Name		Skill Link	Wertelink	Encadenado	连续攻击	Multi-Coups	Abillegame	스킬링크	スキルリンク	スキルリンク	連續攻擊
+0092-skill_link-0001|data.Desc		Ensures that all multi-strike moves hit.	Ermöglicht, dass alle Serien-Attacken treffen.								
+0093-hydration-0000|data.Name		Hydration	Hydration	Hidratación	湿润之躯	Hydratation	Idratazione	촉촉바디	うるおいボディ	うるおいボディ	濕潤之軀
+0093-hydration-0001|data.Desc		Heals status conditions if it's raining.	Heilt bei Regen Statusprobleme.	Cura los problemas de estado si está lloviendo.	下雨天气时， 异常状态会治愈。	Soigne les problèmes de statut s’il pleut.	Cura i problemi di stato se piove.	비가 오면 상태 이상이 회복된다.	じょうたい　いじょうが あめの　とき　なおる。	状態異常が 雨の　とき　治る。	天氣為下雨時， 會治癒異常狀態。
+0094-solar_power-0000|data.Name		Solar Power	Solarkraft	Poder Solar	太阳之力	Force Soleil	Solarpotere	선파워	サンパワー	サンパワー	太陽之力
+0094-solar_power-0001|data.Desc		Boosts the Sp. Atk stat in sunny weather, but HP decreases.	Führt bei Sonne zu KP-Verlusten, erhöht aber den Spezial-Angriff.	Si hace sol, baja los PS, pero potencia el At. Esp.		Augmente l’Attaque Spéciale mais baisse les PV au soleil.	Se c’è il sole aumenta l’Attacco Speciale, ma riduce i PS.	맑으면 HP가 줄지만 특수공격이 올라간다.	はれると　ＨＰが　へるが とくこうが　あがる。	晴れると　ＨＰが　減るが 特攻が　あがる。	
+0095-quick_feet-0000|data.Name		Quick Feet	Rasanz	Pies Rápidos	飞毛腿	Pied Véloce	Piedisvelti	속보	はやあし	はやあし	飛毛腿
+0095-quick_feet-0001|data.Desc		Boosts Movement Speed if the Pokémon has a status condition.	Erhöht bei Statusproblemen das Tempo des Pokémons.								
+0096-normalize-0000|data.Name		Normalize	Regulierung	Normalidad	一般皮肤	Normalise	Normalità	노말스킨	ノーマルスキン	ノーマルスキン	一般皮膚
+0096-normalize-0001|data.Desc		All the Pokémon’s moves become Normal type.	Alle Attacken des Pokémon werden zu Normal-Attacken.	Todos los movimientos se vuelven de tipo Normal.		Toutes les capacités sont de type Normal.	Le mosse del Pokémon diventano di tipo Normale.	쓴 기술이 모두 노말타입이 된다.	だしたわざが　すべて ノーマルタイプに　なる。	だした技が　すべて ノーマルタイプに　なる。	
+0097-sniper-0000|data.Name		Sniper	Superschütze	Francotirador	狙击手	Sniper	Cecchino	스나이퍼	スナイパー	スナイパー	狙擊手
+0097-sniper-0001|data.Desc		Powers up moves if they become critical hits when attacking.	Erhöht bei Volltreffern die Stärke der Attacke noch weiter.	Potencia los golpes críticos aún más de lo normal.	击中要害时， 威力会变得更强。	Lorsque le Pokémon porte un coup critique, les dégâts infligés augmentent encore plus que d’habitude.	Aumenta ulteriormente i danni inflitti dai brutti colpi.	공격을 급소에 맞혔을 때 위력이 더욱 올라간다.	こうげきを　きゅうしょに　あてると いりょくが　さらに　あがる。	攻撃を　急所に　当てると 威力が　さらに　上がる。	擊中要害時， 威力會進一步提高。
+0098-magic_guard-0000|data.Name		Magic Guard	Magieschild	Muro Mágico	魔法防守	Garde Magik	Magicscudo	매직가드	マジックガード	マジックガード	魔法防守
+0098-magic_guard-0001|data.Desc		The Pokémon only takes damage from attacks.	Das Pokémon nimmt nur durch Offensiv-Attacken Schaden.	Solo dañan al Pokémon los ataques directos.	不会受到攻击以外的伤害。	Seule une attaque directe peut blesser le Pokémon.	Il Pokémon subisce danni solo da attacchi diretti.	공격 이외에는 데미지를 입지 않는다.	こうげき　いがいでは ダメージを　うけない。	攻撃　以外では ダメージを　受けない。	不會受到攻擊以外的傷害。
+0099-no_guard-0000|data.Name		No Guard	Schildlos	Indefenso	无防守	Annule Garde	Nullodifesa	노가드	ノーガード	ノーガード	無防守
+0099-no_guard-0001|data.Desc		The Pokémon employs no-guard tactics to ensure incoming and outgoing attacks always land.	Alle Attacken des oder auf das Pokémon gelingen aufgrund seiner deckungslosen Kampftaktik.	Al quedar ambos expuestos, tanto los movimientos del Pokémon como los del rival acertarán siempre.	由于无防守战术， 双方使出的招式都必定会击中。	Les capacités du Pokémon touchent l’ennemi à coup sûr, et vice-versa.	Il Pokémon e chiunque lo attacchi abbassano la guardia e le loro mosse vanno sempre a segno.	노가드전법에 따라 서로가 사용하는 기술이 반드시 맞게 된다.	ノーガード　せんぽうに　よって おたがいの　だす　わざが かならず　あたる　ようになる。	ノーガード戦法に　よって お互いの　出す　技が かならず　当たる　ようになる。	由於無防守戰術， 雙方使出的招式都必定會擊中。
+0100-stall-0000|data.Name		Stall	Zeitspiel	Rezagado	慢出	Frein	Rallentatore	시간벌기	あとだし	あとだし	慢出
+0100-stall-0001|data.Desc		Boosts move power if the Pokémon was last hit by the target.	Erhöht die Stärke einer Attacke, wenn das Pokémon von seinem Gegner zuletzt angegriffen wurde.					포켓몬을 마지막으로 공격했던 상대에게 쓰는 기술의 위력이 증가한다.			
+0101-technician-0000|data.Name		Technician	Techniker	Experto	技术高手	Technicien	Tecnico	테크니션	テクニシャン	テクニシャン	技術高手
+0101-technician-0001|data.Desc		Powers up the Pokémon's weaker moves.	Steigert die Effektivität von schwächeren Attacken.	Potencia los movimientos más débiles del Pokémon.	攻击时可以将 低威力招式的威力提高。	Augmente la puissance des capacités les plus faibles.	Potenzia le mosse più deboli del Pokémon.	약한 기술의 위력이 올라간다.	よわい　わざの いりょくが　あがる。	弱い　技の 威力が　あがる。	可讓威力低的招式 提高威力來進行攻擊。
+0102-leaf_guard-0000|data.Name		Leaf Guard	Floraschild	Defensa Hoja	叶子防守	Feuille Garde	Fogliamanto	리프가드	リーフガード	リーフガード	葉子防守
+0102-leaf_guard-0001|data.Desc		Avoids enemy status moves in sunny weather.	Verhindert bei Sonnenschein, dass gegnerische Statusattacken treffen können.								
+0103-klutz-0000|data.Name		Klutz	Tollpatsch	Zoquete	笨拙	Maladresse	Impaccio	서투름	ぶきよう	ぶきよう	笨拙
+0103-klutz-0001|data.Desc		Items held by the Pokémon have no effect. They also can't stick to the Pokémon.	Items, die das Pokémon trägt, haben keinen Effekt. Diese können außerdem nicht am Pokémon kleben.								
+0104-mold_breaker-0000|data.Name		Mold Breaker	Überbrückung	Rompemoldes	破格	Brise Moule	Rompiforma	틀깨기	かたやぶり	かたやぶり	破格
+0104-mold_breaker-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.	Schadene Attacken entfernen die Fähigkeiten von gegnerischen Pokémon.								
+0105-super_luck-0000|data.Name		Super Luck	Glückspilz	Afortunado	超幸运	Chanceux	Supersorte	대운	きょううん	きょううん	超幸運
+0105-super_luck-0001|data.Desc		The Pokémon is so lucky that the critical-hit ratios of its moves are boosted.	Großes Glück erhöht die Wahrscheinlichkeit, einen Volltreffer zu landen.	Su buena suerte aumenta la probabilidad de asestar golpes críticos.	因为拥有超幸运， 攻击容易击中对手的要害。	Le Pokémon est tellement chanceux qu’il inflige plus fréquemment des coups critiques.	Il Pokémon ha una fortuna incredibile che aumenta la sua probabilità di infliggere brutti colpi.	대운을 가지고 있어 상대의 급소에 공격이 맞기 쉽다.	きょううんを　もっているため あいての　きゅうしょに こうげきが　あたりやすい。	強運を　持っているため 相手の　急所に 攻撃が　当たりやすい。	因為非常幸運， 容易擊中對手的要害。
+0106-aftermath-0000|data.Name		Aftermath	Finalschlag	Resquicio	引爆	Boom Final	Scoppio	유폭	ゆうばく	ゆうばく	引爆
+0106-aftermath-0001|data.Desc		The Pokémon explodes when fainted.	Das Pokémon explodiert, wenn es ohnmächtig wird.								
+0107-anticipation-0000|data.Name		Anticipation	Vorahnung	Anticipación	危险预知	Anticipation	Presagio	위험예지	きけんよち	きけんよち	危險預知
+0107-anticipation-0001|data.Desc		Avoids the strongest super-effective move that the opposing Pokémon has.	Ahnt die gefährlichste, sehr effektive Attacke des gegnerischen Pokémons voraus.								
+0108-forewarn-0000|data.Name		Forewarn	Vorwarnung	Alerta	预知梦	Prédiction	Premonizione	예지몽	よちむ	よちむ	預知夢
+0108-forewarn-0001|data.Desc		Avoids the strongest move that the opposing Pokémon has.	Weicht der stärksten Attacke des gegnerischen Pokémons aus.								
+0109-unaware-0000|data.Name		Unaware	Unkenntnis	Ignorante	纯朴	Inconscient	Imprudenza	천진	てんねん	てんねん	純樸
+0109-unaware-0001|data.Desc		Ignores the opposing Pokémon's stat changes.	Ignoriert Statusveränderungen des Zieles.	No tiene en cuenta las mejoras en las características del rival.		Ignore les changements de stats de l’ennemi.	Ignora le modifiche alle statistiche del nemico.	상대의 능력 변화를 무시한다.	あいての　のうりょくの へんかを　むしする。	相手の　能力の 変化を　無視する。	
+0110-tinted_lens-0000|data.Name		Tinted Lens	Aufwertung	Cromolente	有色眼镜	Lentiteintée	Lentifumé	색안경	いろめがね	いろめがね	有色眼鏡
+0110-tinted_lens-0001|data.Desc		Powers up "not very effective" moves.	Verstärkt nicht sehr effektive Attacken.	Potencia los movimientos que no son muy eficaces.		Améliore les capacités "pas très efficaces".	Potenzia le mosse non molto efficaci.	효과가 별로인 기술이 강해진다.	こうかいまひとつ　のとき わざを　つよめる。	効果いまひとつ　のとき 技を　強める。	
+0111-filter-0000|data.Name		Filter	Filter	Filtro	过滤	Filtre	Filtro	필터	フィルター	フィルター	過濾
+0111-filter-0001|data.Desc		Reduces damage from super-effective attacks.	Senkt die Stärke sehr effektiver Attacken.	Mitiga los movimientos supereficaces.	受到效果绝佳的攻击时， 可以减弱其威力。	Réduit les dégâts des capacités "super efficaces" subies.	Riduce la potenza delle mosse superefficaci.	효과가 굉장한 기술의 위력을 약하게 한다.	こうかばつぐん　のとき いりょくを　よわめる。	効果バツグン　のとき 威力を　弱める。	受到效果絕佳的攻擊時， 可減弱其威力。
+0112-slow_start-0000|data.Name		Slow Start	Saumselig	Inicio Lento	慢启动	Début Calme	Lentoinizio	슬로스타트	スロースタート	スロースタート	慢啟動
+0112-slow_start-0001|data.Desc		Temporarily lowers the Pokémon's Movement Speed.	Halbiert zeitweilig die Initiative des Pokémons.								
+0113-scrappy-0000|data.Name		Scrappy	Rauflust	Intrépido	胆量	Querelleur	Nervisaldi	배짱	きもったま	きもったま	膽量
+0113-scrappy-0001|data.Desc		The Pokémon can hit Ghost-type Pokémon with Normal- and Fighting-type moves.	Bewirkt, dass Normal- und Kampf-Attacken auch Pokémon vom Typ Geist treffen können.	Los movimientos de tipo Normal o Lucha alcanzan a los Pokémon de tipo Fantasma.	一般属性和格斗属性的招式 可以击中幽灵属性的宝可梦。	Permet aux capacités de type Normal ou Combat du Pokémon de toucher les Pokémon de type Spectre.	Permette di colpire Pokémon di tipo Spettro con mosse di tipo Normale e Lotta.	고스트타입 포켓몬에게 노말타입과 격투타입의 기술을 맞게 한다.	ゴーストタイプの　ポケモンに ノーマルタイプと　かくとうタイプの わざを　あてることが　できる。	ゴーストタイプの　ポケモンに ノーマルタイプと　かくとうタイプの 技を　当てることが　できる。	一般屬性和格鬥屬性的招式 可擊中幽靈屬性的寶可夢。
+0114-storm_drain-0000|data.Name		Storm Drain	Sturmsog	Colector	引水	Lavabo	Acquascolo	마중물	よびみず	よびみず	引水
+0114-storm_drain-0001|data.Desc		Draws in all Water-type moves. Instead of being hit by Water-type moves, it boosts its Sp. Atk.	Zieht Wasser-Attacken an. Statt durch diese Schaden zu nehmen, erhöht es den eigenen Spezial-Angriff.	Además de atraer y neutralizar los movimientos de tipo Agua, sube el Ataque Especial.	将水属性的招式引到自己身上， 不会受到伤害，而是会提高特攻。	Le Pokémon détourne sur lui les capacités de type Eau et les neutralise, tout en montant son Attaque Spéciale.	Attira e neutralizza mosse di tipo Acqua e aumenta l’Attacco Speciale.	물타입의 기술을 자신에게 끌어모아 데미지는 받지 않고 특수공격이 올라간다.	みずタイプの　わざを　じぶんに　よせつけ ダメージは　うけずに　とくこうが　あがる。	みずタイプの　技を　自分に　よせつけ ダメージは　受けずに　特攻が　上がる。	將水屬性的招式引到自己身上， 不但不會受到傷害， 反而會提高特攻。
+0115-ice_body-0000|data.Name		Ice Body	Eishaut	Gélido	冰冻之躯	Corps Gel	Corpogelo	아이스바디	アイスボディ	アイスボディ	冰凍之軀
+0115-ice_body-0001|data.Desc		The Pokémon gradually regains HP when battling in a hailstorm.	Regeneriert bei Hagel nach und nach KP.	Recupera algunos PS cuando hay tormentas de granizo.	冰雹天气时， 会缓缓回复ＨＰ。	Régénère ses PV lors des tempêtes de grêle.	Il Pokémon recupera PS quando grandina.	싸라기눈일 때 HP를 조금씩 회복한다.	あられのとき　HPを すこしずつ　かいふく。	あられのとき　ＨＰを 少しずつ　回復。	天氣為冰雹時， 會漸漸回復ＨＰ。
+0116-solid_rock-0000|data.Name		Solid Rock	Felskern	Roca Sólida	坚硬岩石	Solide Roc	Solidroccia	하드록	ハードロック	ハードロック	堅硬岩石
+0116-solid_rock-0001|data.Desc		Reduces damage from super-effective attacks.	Senkt die Stärke sehr effektiver Attacken.	Mitiga los movimientos supereficaces.	受到效果绝佳的攻击时， 可以减弱其威力。	Réduit les dégâts des capacités "super efficaces" subies.	Riduce la potenza delle mosse superefficaci.	효과가 굉장한 기술의 위력을 약하게 한다.	こうかばつぐん　のとき いりょくを　よわめる。	効果バツグン　のとき 威力を　弱める。	受到效果絕佳的攻擊時， 可減弱其威力。
+0117-snow_warning-0000|data.Name		Snow Warning	Hagelalarm	Nevada	降雪	Alerte Neige	Scendineve	눈퍼뜨리기	ゆきふらし	ゆきふらし	降雪
+0117-snow_warning-0001|data.Desc		The Pokémon summons a hailstorm when it is battling.	Das Pokémon beschwört einen Hagelsturm herauf, wenn es sich im Kampf befindet.					싸우는 동안 싸라기눈을 내리게 한다.			
+0118-honey_gather-0000|data.Name		Honey Gather	Honigmaul	Recogemiel	采蜜	Cherche Miel	Mielincetta	꿀모으기	みつあつめ	みつあつめ	採蜜
+0118-honey_gather-0001|data.Desc		The Pokémon may gather Nectar when it enters a new floor.	Das Pokémon sammelt eventuell Honig auf, wenn es eine neue Ebene betritt.					다음 층으로 넘어갈 때 달콤한꿀을 모아서 올 때가 있다.			
+0119-frisk-0000|data.Name		Frisk	Schnüffler	Cacheo	察觉	Fouille	Indagine	통찰	おみとおし	おみとおし	察覺
+0119-frisk-0001|data.Desc		Attacking an opposing Pokémon removes its held item.	Greift das Pokémon einen Gegner an, entfernt es dabei sein gehaltenes Item.					적 포켓몬을 공격하면 들고 있던 도구를 제거한다.			
+0120-reckless-0000|data.Name		Reckless	Achtlos	Audaz	舍身	Téméraire	Temerarietà	이판사판	すてみ	すてみ	捨身
+0120-reckless-0001|data.Desc		Powers up moves that have recoil damage.	Verstärkt Attacken mit Rückstoß-Schaden.	Potencia los movimientos que dañan al usuario.	自己会因反作用力受伤的招式， 其威力会提高。	Booste les capacités ayant des dégâts de contrecoups.	Potenzia le mosse che provocano  contraccolpi.	반동 데미지를 받는 기술이 강해진다.	はんどうで　ダメージを うけるわざが　つよくなる。	反動で　ダメージを 受ける技が　強くなる。	會讓自己因反作用力而受傷的招式 威力會提高。
+0121-multitype-0000|data.Name		Multitype	Variabilität	Multitipo	多属性	Multi-Type	Multitipo	멀티타입	マルチタイプ	マルチタイプ	多屬性
+0121-multitype-0001|data.Desc		Changes the Pokémon's type to match its held Plate. The Pokémon can also utilize the protection of Plates in its Bag.	Passt seinen Typ der getragenen Tafel an. Das Pokémon kann außerdem den Schutz der Tafeln im Schatzbeutel zu Nutze machen.					지니고 있는 플레이트에 따라 타입이 바뀐다. 또한 트레저 백에 있는 플레이트의 보호 효과를 받는다.			
+0122-flower_gift-0000|data.Name		Flower Gift	Pflanzengabe	Don Floral	花之礼	Don Floral	Regalfiore	플라워기프트	フラワーギフト	フラワーギフト	花之禮
+0122-flower_gift-0001|data.Desc		Boosts the Attack and Sp. Def stats of itself and allies in harsh sunlight.	Erhöht bei Sonnenschein den Angriff und die Spezial-Verteidigung aller Team-Pokémon.	Aumenta el Ataque y la Defensa Especial de todos los Pokémon del equipo si hace sol.	晴朗天气时， 自己与同伴的攻击和 特防能力会提高。	Augmente l’Attaque et la Défense Spéciale du Pokémon et de ses alliés lorsque le soleil brille.	Se la luce del sole è intensa, aumenta la Difesa Speciale e l’Attacco del Pokémon e dei suoi alleati.	날씨가 맑을 때 자신과 같은 편의 공격과 특수방어의 능력이 올라간다.	てんきが　はれのとき じぶんと　みかたの　こうげきと とくぼうの　のうりょくが　あがる。	天気が　晴れのとき 自分と　味方の　攻撃と 特防の　能力が　上がる。	天氣為晴朗時， 自己和同伴的攻擊和 特防能力會提高。
+0123-bad_dreams-0000|data.Name		Bad Dreams	Alptraum	Mal Sueño	梦魇	Mauvais Rêve	Sogniamari	나이트메어	ナイトメア	ナイトメア	夢魘
+0123-bad_dreams-0001|data.Desc		Reduces the HP of opposing Pokémon that are asleep.	Senkt die KP eines schlafenden Gegners.	Reduce los PS de cualquier rival que esté dormido.	给予睡眠状态的对手伤害。	Réduit les PV d’un ennemi endormi.	Riduce i PS dei nemici addormentati.	잠들어 있는 상대의 HP를 줄인다.	ねむっている　あいての ＨＰを　へらす。	ねむっている　相手の ＨＰを　減らす。	給予陷入睡眠狀態的對手傷害。
+0124-pickpocket-0000|data.Name		Pickpocket	Langfinger	Hurto	顺手牵羊	Pickpocket	Arraffalesto	나쁜손버릇	わるいてぐせ	わるいてぐせ	順手牽羊
+0124-pickpocket-0001|data.Desc		Steals an item from an attacker that made direct contact.	Stiehlt Angreifern Items, wenn es von ihnen berührt wird.	Al ser golpeado, roba el objeto del objetivo.	盗取接触到自己的 对手的道具。	Vole l’objet de l’attaquant si son attaque touche.	Al contatto subito, ruba lo strumento di chi lo ha attaccato.	닿은 상대로부터 도구를 훔친다.	さわられた　あいてから どうぐを　ぬすむ。	触られた　相手から 道具を　盗む。	盜取接觸到自己的 對手的道具。
+0125-sheer_force-0000|data.Name		Sheer Force	Rohe Gewalt	Potencia Bruta	强行	Sans Limite	Forzabruta	우격다짐	ちからずく	ちからずく	強行
+0125-sheer_force-0001|data.Desc		Removes additional effects to increase the power of moves when attacking.	Erhöht die Stärke von Attacken, aber hebt dafür ihre Zusatzeffekte auf.	Sube la potencia de los movimientos en detrimento de los efectos secundarios, que se ven anulados.	招式的追加效果消失， 但因此能以更高的威力使出招式。	Les capacités ayant un effet additionnel perdent celui-ci, mais leur puissance augmente.	Aumenta i danni delle mosse, ma ne annulla gli effetti aggiuntivi.	기술의 추가 효과가 없어지지만 그만큼 높은 위력으로 기술을 사용할 수 있다.	わざの　ついか　こうかは　なくなるが そのぶん　たかい　いりょくで わざを　だすことが　できる。	技の　追加効果は　なくなるが そのぶん　高い　威力で 技を　出すことが　できる。	招式會失去追加效果， 但可以用更高的威力使出招式。
+0126-contrary-0000|data.Name		Contrary	Umkehrung	Respondón	唱反调	Contestation	Inversione	심술꾸러기	あまのじゃく	あまのじゃく	唱反調
+0126-contrary-0001|data.Desc		Makes stat changes have an opposite effect.	Statusveränderungen werden umgekehrt.	Invierte los cambios en las características.	能力的变化发生逆转， 原本提高时会降低， 而原本降低时会提高。	Inverse les variations de stats.	Le modifiche alle statistiche hanno effetto inverso.	능력의 변화가 역전된다.	のうりょくの　へんかが ぎゃくてんする。	能力の　変化が 逆転する。	能力的變化會逆轉， 原本提高時會降低， 原本降低時會提高。
+0127-unnerve-0000|data.Name		Unnerve	Anspannung	Nerviosismo	紧张感	Tension	Agitazione	긴장감	きんちょうかん	きんちょうかん	緊張感
+0127-unnerve-0001|data.Desc		Unnerves opposing Pokémon and makes them unable to eat food items.	Hindert den Gegner durch Stress am Konsum von essbaren Items.					적 포켓몬을 긴장시켜 나무열매를 먹지 못하게 한다.			
+0128-defiant-0000|data.Name		Defiant	Siegeswille	Competitivo	不服输	Acharné	Agonismo	오기	まけんき	まけんき	不服輸
+0128-defiant-0001|data.Desc		Boosts the Pokémon's Attack stat sharply when its stats are lowered.	Werden die Statuswerte des Pokémon gesenkt, steigt sein Angriff stark.	Sube mucho el Ataque cuando el rival le baja las características.	能力被降低时， 攻击会大幅提高。	Augmente beaucoup l’Attaque du Pokémon quand ses stats baissent.	L’Attacco aumenta di molto quando le statistiche diminuiscono a causa di un nemico.	능력이 떨어지면 공격이 크게 올라간다.	のうりょくを　さげられると こうげきが　ぐーんと　あがる。	能力を　下げられると 攻撃が　ぐーんと　上がる。	能力被降低時， 攻擊會大幅提高。
+0129-defeatist-0000|data.Name		Defeatist	Schwächling	Flaqueza	软弱	Défaitiste	Sconforto	무기력	よわき	よわき	軟弱
+0129-defeatist-0001|data.Desc		Halves the Pokémon's Attack and Sp. Atk stats when its HP becomes half or less.	Fallen seine KP auf die Hälfte des Maximalwerts oder weniger, bekommt es Angst. Dadurch wird die Stärke seines Angriffs und Spezial-Angriffs halbiert.	Se debilita tanto cuando sus PS se ven reducidos a la mitad que su Ataque y su Ataque Especial bajan.	ＨＰ减半时， 会变得软弱， 攻击和特攻会减半。	Le Pokémon devient défaitiste quand ses PV tombent à la moitié, et son Attaque et son Attaque Spéciale sont divisées par deux.	Quando i PS scendono a metà o meno, il Pokémon si scoraggia e l’Attacco e l’Attacco Speciale vengono dimezzati.	HP가 절반이 되면 무기력해져서 공격과 특수공격이 반감된다.	ＨＰが　はんぶんに　なると よわきに　なって　こうげきと とくこうが　はんげんする。	ＨＰが　半分に　なると 弱気に　なって　攻撃と 特攻が　半減する。	ＨＰ降到一半以下時， 會變得軟弱而使得 攻擊和特攻減半。
+0130-cursed_body-0000|data.Name		Cursed Body	Tastfluch	Cuerpo Maldito	诅咒之躯	Corps Maudit	Corpofunesto	저주받은바디	のろわれボディ	のろわれボディ	詛咒之軀
+0130-cursed_body-0001|data.Desc		May disable a move used on the Pokémon.	Blockiert gelegentlich Attacken.	Puede anular el movimiento usado en su contra.	受到攻击时， 有时会把对手的招式 变为定身法状态。	Peut empêcher l’ennemi de réutiliser une attaque.	A volte inibisce l’ultima mossa usata dal nemico.	공격받으면 가끔 상대를 사슬묶기 상태로 만든다.	こうげきされると　たまに かなしばりにする。	攻撃されると　たまに かなしばりにする。	受到攻擊時， 有時會把對手的招式 變為定身法狀態。
+0131-healer-0000|data.Name		Healer	Heilherz	Alma Cura	治愈之心	Cœur Soin	Curacuore	치유의마음	いやしのこころ	いやしのこころ	治癒之心
+0131-healer-0001|data.Desc		Heals the status conditions of nearby Pokémon when battling.	Befreit von Pokémon in der Nähe gelegentlich von Statusproblemen, wenn sich das Pokémon im Kampf befindet.					싸우는 동안 같은 편의 상태 이상을 회복시킨다.			
+0132-friend_guard-0000|data.Name		Friend Guard	Freundeshut	Compiescolta	友情防守	Garde Amie	Amicoscudo	프렌드가드	フレンドガード	フレンドガード	友情防守
+0132-friend_guard-0001|data.Desc		Reduces damage done to nearby allies.	Verringert den Schaden an Mitstreitern.	Reduce el daño que sufren los aliados.	可以减少我方的伤害。	Diminue les dégâts subis par les alliés.	Riduce il danno subito dagli alleati.	아군의 데미지를 줄일 수 있다.	 かたの　ダメージを へらすことができる。	味方の　ダメージを 減らすことができる。	可以減少我方受到的傷害。
+0133-weak_armor-0000|data.Name		Weak Armor	Bruchrüstung	Armadura Frágil	碎裂铠甲	Armurouillée	Sottilguscio	깨어진갑옷	くだけるよろい	くだけるよろい	碎裂鎧甲
+0133-weak_armor-0001|data.Desc		Physical attacks lower its Defense stat and raise its Movement Speed.	Physische Treffer senken den Verteidigungswert und steigern das Tempo.					물리 기술을 받으면 방어가 떨어지고 행동속도가 올라간다.			
+0134-heavy_metal-0000|data.Name		Heavy Metal	Schwermetall	Metal Pesado	重金属	Heavy Metal	Metalpesante	헤비메탈	ヘヴィメタル	ヘヴィメタル	重金屬
+0134-heavy_metal-0001|data.Desc		Doubles the Pokémon's weight.	Verdoppelt das eigene Gewicht.	Duplica el peso del Pokémon.	自身的重量会变为２倍。	Double le poids du Pokémon.	Raddoppia il peso del Pokémon.	자신의 무게가 2배가 된다.	じぶんの　おもさが ２ばいに　なる。	自分の　重さが ２倍に　なる。	自己的重量會變為２倍。
+0135-light_metal-0000|data.Name		Light Metal	Leichtmetall	Metal Liviano	轻金属	Light Metal	Metalleggero	라이트메탈	ライトメタル	ライトメタル	輕金屬
+0135-light_metal-0001|data.Desc		Halves the Pokémon's weight.	Halbiert das eigene Gewicht.	Reduce a la mitad el peso del Pokémon.	自身的重量会减半。	Divise par deux le poids du Pokémon.	Dimezza il peso del Pokémon.	자신의 무게가 절반이 된다.	じぶんの　おもさが はんぶんに　なる。	自分の　重さが 半分に　なる。	自己的重量會減半。
+0136-multiscale-0000|data.Name		Multiscale	Multischuppe	Compensación	多重鳞片	Multiécaille	Multisquame	멀티스케일	マルチスケイル	マルチスケイル	多重鱗片
+0136-multiscale-0001|data.Desc		Reduces damage the Pokémon takes when its HP is full.	Verringert den erlittenen Schaden bei vollen KP.	Reduce el daño sufrido si los PS están al máximo.	ＨＰ全满时， 受到的伤害会变少。	Reçoit moins de dégâts si les PV sont au maximum.	Riduce il danno subito se i PS sono al massimo.	HP가 꽉 찼을 때 받는 데미지가 줄어든다.	ＨＰが　まんたんのときに ダメージが　すくなくなる。	ＨＰが　満タンのときに ダメージが　少なくなる。	ＨＰ全滿時， 受到的傷害會變少。
+0137-toxic_boost-0000|data.Name		Toxic Boost	Giftwahn	Ímpetu Tóxico	中毒激升	Rage Poison	Velenimpeto	독폭주	どくぼうそう	どくぼうそう	中毒激升
+0137-toxic_boost-0001|data.Desc		Powers up physical attacks when the Pokémon is poisoned.	Erhöht bei Vergiftung die Stärke von physischen Attacken.	Aumenta la potencia física si está envenenado.	变为中毒状态时， 物理招式的威力会提高。	Booste les attaques physiques si le Pokémon est empoisonné.	Aumenta l’Attacco se il Pokémon è avvelenato.	독 상태일 때 물리공격의 위력이 올라간다.	どくのとき　ぶつりの いりょくが　あがる。	どくのとき　物理の 威力が　あがる。	陷入中毒狀態時， 物理招式的威力會提高。
+0138-flare_boost-0000|data.Name		Flare Boost	Hitzewahn	Ímpetu Ardiente	受热激升	Rage Brûlure	Bruciaimpeto	열폭주	ねつぼうそう	ねつぼうそう	受熱激升
+0138-flare_boost-0001|data.Desc		Powers up special attacks when the Pokémon is burned.	Verstärkt bei Verbrennungen die Stärke von Spezial-Attacken.	Potencia los ataques especiales cuando el Pokémon se quema.	变为灼伤状态时， 特殊招式的威力会提高。	Booste les attaques spéciales si le Pokémon est brûlé.	Aumenta l’Attacco Speciale se il Pokémon è scottato.	화상 상태일 때 특수공격의 위력이 올라간다.	やけどのとき　とくしゅの いりょくが　あがる。	やけどのとき　特殊の 威力が　あがる。	陷入灼傷狀態時， 特殊招式的威力會提高。
+0139-harvest-0000|data.Name		Harvest	Reiche Ernte	Cosecha	收获	Récolte	Coglibacche	수확	しゅうかく	しゅうかく	收穫
+0139-harvest-0001|data.Desc		Passes the effect of Berries to nearby allies.	Gibt die Effekte von Beeren an Partner in der Nähe weiter.					사용한 나무열매의 효과를 근처 아군과 공유한다.			
+0140-telepathy-0000|data.Name		Telepathy	Telepathie	Telepatía	心灵感应	Télépathe	Telepatia	텔레파시	テレパシー	テレパシー	心靈感應
+0140-telepathy-0001|data.Desc		Anticipates an ally's attack and dodges it.	Erkennt und pariert Attacken von Mitstreitern.	Elude los ataques de aliados en batalla.	读取我方的攻击， 并闪避其招式伤害。	Anticipe et évite les attaques de ses alliés.	Prevede ed evita gli attacchi degli alleati.	같은 편의 공격의 낌새를 읽고 회피한다.	 かたの　こうげきを よ とって　うけない。	味方の　攻撃を 読 取って　受けない。	預測我方的攻擊， 並閃避其招式。
+0141-moody-0000|data.Name		Moody	Gefühlswippe	Veleta	心情不定	Lunatique	Altalena	변덕쟁이	ムラっけ	ムラっけ	心情不定
+0141-moody-0001|data.Desc		Raises one stat and lowers another.	Erhöht einen Statuswert und senkt einen anderen.	Sube una característica mucho, pero baja otra.		Monte une stat tout en en baissant une autre.	Aumenta una statistica e ne riduce un’altra.	능력이 오르락내리락한다.	のうりょくが　あがったり さがったりする。	能力が　あがったり さがったりする。	
+0142-overcoat-0000|data.Name		Overcoat	Wetterfest	Funda	防尘	Envelocape	Copricapo	방진	ぼうじん	ぼうじん	防塵
+0142-overcoat-0001|data.Desc		Protects the Pokémon from the weather and splash damage.	Beschützt Pokémon vor Wetter und Bereichsschäden.					날씨 효과나 범위 효과로부터 보호한다.			
+0143-poison_touch-0000|data.Name		Poison Touch	Giftgriff	Toque Tóxico	毒手	Toxitouche	Velentocco	독수	どくしゅ	どくしゅ	毒手
+0143-poison_touch-0001|data.Desc		May poison a target when the Pokémon makes contact.	Kann das Ziel durch bloßes Berühren vergiften.	Puede envenenar al objetivo con solo tocarlo.	只通过接触就有可能 让对手变为中毒状态。	Peut empoisonner l’ennemi par simple contact.	Può avvelenare il nemico al solo contatto fisico.	접촉하기만 해도 상대를 독 상태로 만들 때가 있다.	さわるだけで　あいてを どくにすることがある。	触るだけで　相手を どくにすることがある。	有時僅是接觸 就能讓對手中毒。
+0144-regenerator-0000|data.Name		Regenerator	Belebekraft	Regeneración	再生力	Régé-Force	Rigenergia	재생력	さいせいりょく	さいせいりょく	再生力
+0144-regenerator-0001|data.Desc		Restores HP when there are no threats nearby.	Heilt KP, wenn keine Gefahren in der Nähe sind.					근처에 위험이 없을 때 HP를 회복한다.			
+0145-big_pecks-0000|data.Name		Big Pecks	Brustbieter	Sacapecho	健壮胸肌	Cœur de Coq	Pettinfuori	부풀린가슴	はとむね	はとむね	健壯胸肌
+0145-big_pecks-0001|data.Desc		Protects the Pokémon from Defense-lowering effects.	Hindert Angreifer daran, die Verteidigung des Pokémon zu senken.	Impide que el rival baje la Defensa del Pokémon.	不会受到防御降低的效果。	Empêche les capacités adverses de baisser la Défense.	Evita che la Difesa diminuisca.	방어를 떨어뜨리는 효과를 받지 않는다.	ぼうぎょを　さげる こうかを　うけない。	防御を　下げる 効果を　受けない。	不會受到降低防禦的效果影響。
+0146-sand_rush-0000|data.Name		Sand Rush	Sandscharrer	Ímpetu Arena	拨沙	Baigne Sable	Remasabbia	모래헤치기	すなかき	すなかき	撥沙
+0146-sand_rush-0001|data.Desc		Boosts the Pokémon's Movement Speed in a sandstorm.	Erhöht in Sandstürmen das Tempo des Pokémons.					모래바람이 불 때 행동속도가 증가한다.			
+0147-wonder_skin-0000|data.Name		Wonder Skin	Wunderhaut	Piel Milagro	奇迹皮肤	Peau Miracle	Splendicute	미라클스킨	ミラクルスキン	ミラクルスキン	奇跡皮膚
+0147-wonder_skin-0001|data.Desc		Avoids all status moves targeting the Pokémon.	Weicht allen Status-Attacken, die dieses Pokémon als Ziel wählen, aus.					이 포켓몬을 목표로 하는 모든 상태이상 기술을 회피한다.			
+0148-analytic-0000|data.Name		Analytic	Analyse	Cálculo Final	分析	Analyste	Ponderazione	애널라이즈	アナライズ	アナライズ	分析
+0148-analytic-0001|data.Desc		Boosts move power if the Pokémon was last hit by the target.	Erhöht die Stärke einer Attacke, wenn das Pokémon von seinem Gegner zuletzt angegriffen wurde.					포켓몬을 마지막으로 공격했던 상대에게 쓰는 기술의 위력이 증가한다.			
+0149-illusion-0000|data.Name		Illusion	Trugbild	Ilusión	幻觉	Illusion	Illusione	일루전	イリュージョン	イリュージョン	幻覺
+0149-illusion-0001|data.Desc		Disguises itself as another Pokémon, fooling wild Pokémon of the same species.									
+0150-imposter-0000|data.Name		Imposter	Doppelgänger	Impostor	变身者	Imposteur	Sosia	괴짜	かわりもの	かわりもの	變身者
+0150-imposter-0001|data.Desc		If defeated while transformed, the Pokémon reverts to its original form instead of fainting.	Falls das Pokémon besiegt wird während es verwandelt ist, kehrt es zu seiner normalen Form zurück statt ohnmächtig zu werden.					변신한 동안 기절하게 되면, 그 대신 원래 모습으로 변한다.			
+0151-infiltrator-0000|data.Name		Infiltrator	Schwebedurch	Allanamiento	穿透	Infiltration	Intrapasso	틈새포착	すりぬけ	すりぬけ	穿透
+0151-infiltrator-0001|data.Desc		Passes through the opposing Pokémon's barrier and strikes.	Überwindet gegnerische Schilde und greift an.	Ataca rodeando la barrera del rival.		Traverse les barrières de l’ennemi pour attaquer.	Attacca evitando le barriere del nemico.	상대의 벽을 뚫고 공격한다.	あいての　かべを すりぬけて　こうげき。	相手の　かべを すりぬけて　攻撃。	
+0152-mummy-0000|data.Name		Mummy	Mumie	Momia	木乃伊	Momie	Mummia	미라	ミイラ	ミイラ	木乃伊
+0152-mummy-0001|data.Desc		Contact with the Pokémon spreads this Ability.	Berührt man das Pokémon, übernimmt man seine Fähigkeit.	Contagia Momia al rival que lo toque.		Momifie le talent de l’ennemi qui le touche.	L’abilità del nemico cambia in Mummia dopo il contatto.	접촉한 상대에게 이 특성을 전염한다.	あいてに　さわられると あいてを　ミイラにする。	相手に　触られると 相手を　ミイラにする。	
+0153-moxie-0000|data.Name		Moxie	Hochmut	Autoestima	自信过度	Impudence	Arroganza	자기과신	じしんかじょう	じしんかじょう	自信過度
+0153-moxie-0001|data.Desc		The Pokémon shows moxie, which may boost the Attack stat after knocking out any Pokémon with a move.									
+0154-justified-0000|data.Name		Justified	Redlichkeit	Justiciero	正义之心	Cœur Noble	Giustizia	정의의마음	せいぎのこころ	せいぎのこころ	正義之心
+0154-justified-0001|data.Desc		Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.	Wird es von einer Unlicht-Attacke getroffen, meldet sich sein Sinn für Gerechtigkeit zu Wort und sein Angriff steigt.	Si le alcanza un movimiento de tipo Siniestro, aumenta el Ataque debido a su integridad.	受到恶属性的招式攻击时， 因为正义感，攻击会提高。	Réveille la noblesse du Pokémon lorsqu’il subit une capacité de type Ténèbres, ce qui augmente son Attaque.	Quando il Pokémon viene colpito da una mossa di tipo Buio, il suo forte senso di giustizia fa sì che l’Attacco aumenti.	악타입 공격을 받으면 정의감으로 공격이 올라간다.	あくタイプの　こうげきを　うけると せいぎかんで　こうげきが　あがる。	あくタイプの　攻撃を　受けると 正義感で　攻撃が　上がる。	受到惡屬性的招式攻擊時， 因為正義感，攻擊會提高。
+0155-rattled-0000|data.Name		Rattled	Hasenfuß	Cobardía	胆怯	Phobique	Paura	주눅	びびり	びびり	膽怯
+0155-rattled-0001|data.Desc		Dark-, Ghost-, and Bug-type moves scare the Pokémon and boost its Movement Speed.	Wird es von einer Unlicht-, Geister- oder Käfer- Attacke getroffen, bekommt es Angst und seine Bewegungsgeschwindigkeit steigt.					악타입, 고스트타입, 벌레타입의 기술에 당하면 겁을 집어먹어서 행동속도가 증가한다.			
+0156-magic_bounce-0000|data.Name		Magic Bounce	Magiespiegel	Espejo Mágico	魔法镜	Miroir Magik	Magispecchio	매직미러	マジックミラー	マジックミラー	魔法鏡
+0156-magic_bounce-0001|data.Desc		Reflects moves that cause status conditions.	Reflektiert Attacken, welche Statusprobleme verursachen.					상태이상을 일으키는 기술을 반사한다.			
+0157-sap_sipper-0000|data.Name		Sap Sipper	Vegetarier	Herbívoro	食草	Herbivore	Mangiaerba	초식	そうしょく	そうしょく	食草
+0157-sap_sipper-0001|data.Desc		Boosts the Attack stat if hit by a Grass-type move, instead of taking damage.	Wird es von einer Pflanzen-Attacke getroffen, erleidet es keinerlei Schaden und sein Angriff steigt.	Neutraliza los movimientos de tipo Planta y sube el Ataque.	受到草属性的招式攻击时， 不会受到伤害，而是攻击会提高。	Annule les attaques de type Plante subies par le Pokémon et augmente son Attaque.	Se il Pokémon viene colpito da una mossa di tipo Erba, la neutralizza e aumenta l’Attacco.	풀타입 기술을 받으면 데미지를 입지 않고 공격이 올라간다.	くさタイプの　わざを　うけると ダメージを　うけずに こうげきが　あがる。	くさタイプの　技を　受けると ダメージを　受けずに　 攻撃が　上がる。	受到草屬性的招式攻擊時， 不但不會受到傷害，反而攻擊會提高。
+0158-prankster-0000|data.Name		Prankster	Strolch	Bromista	恶作剧之心	Farceur	Burla	짓궂은마음	いたずらごころ	いたずらごころ	惡作劇之心
+0158-prankster-0001|data.Desc		Increases the Attack Range of status moves.	Erhöht die Reichweite von Statusattacken.					상태이상 기술의 공격범위가 증가한다.			
+0159-sand_force-0000|data.Name		Sand Force	Sandgewalt	Poder Arena	沙之力	Force Sable	Silicoforza	모래의힘	すなのちから	すなのちから	沙之力
+0159-sand_force-0001|data.Desc		Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.	Erhöht in Sandstürmen die Stärke von Gesteins-, Boden- und Stahl-Attacken.	Potencia los movimientos de tipo Tierra, Acero y Roca durante las tormentas de arena.	沙暴天气时， 岩石属性、地面属性 和钢属性的招式威力会提高。	Augmente la puissance des capacités de type Roche, Sol et Acier en cas de tempête de sable.	Potenzia le mosse di tipo Roccia, Terra e Acciaio durante le tempeste di sabbia.	날씨가 모래바람일 때 바위타입과 땅타입과 강철타입의 위력이 올라간다.	てんきが　すなあらしの　とき いわタイプと　じめんタイプと はがねタイプの　いりょくが　あがる。	天気が　すなあらしの　とき いわタイプと　じめんタイプと はがねタイプの　威力が　上がる。	沙暴天氣時， 岩石屬性、地面屬性 和鋼屬性招式的威力會提高。
+0160-iron_barbs-0000|data.Name		Iron Barbs	Eisenstachel	Punta Acero	铁刺	Épine de Fer	Spineferrate	철가시	てつのトゲ	てつのトゲ	鐵刺
+0160-iron_barbs-0001|data.Desc		Inflicts damage to the attacker on contact with iron barbs.	Fügt dem Angreifer bei Berührung mit eisernen Stacheln Schaden zu.	Inflige daño al rival si este golpea al Pokémon con un movimiento de contacto.	用铁刺给予接触到自己的 对手伤害。	Inflige des dégâts à l’attaquant lorsque le Pokémon subit une attaque directe.	Se il Pokémon viene colpito da un attacco diretto, infligge danni a sua volta con le sue spine di ferro.	자신과 접촉한 상대에게 철가시로 데미지를 준다.	じぶんに　さわった　あいてに てつのトゲで　ダメージを　あたえる。	自分に　触った　相手に 鉄のトゲで　ダメージを　あたえる。	用鐵刺給予接觸到自己的 對手傷害。
+0161-zen_mode-0000|data.Name		Zen Mode	Trance-Modus	Modo Daruma	达摩模式	Mode Transe	Stato Zen	달마모드	ダルマモード	ダルマモード	達摩模式
+0161-zen_mode-0001|data.Desc		Changes the Pokémon's shape when HP is half or less.	Wechselt seine Gestalt, wenn es eng wird.	Cambia de forma en un apuro.	ＨＰ变为一半以下时， 样子会改变。	Transforme le Pokémon dans les moments délicats.	Se il Pokémon è in difficoltà, ne cambia l’aspetto.	HP가 절반 이하일때 모습이 변화한다.	ピンチに　なると すがたが　へんかする。	ピンチに　なると 姿が　変化する。	ＨＰ變為一半以下時， 樣子會改變。
+0162-victory_star-0000|data.Name		Victory Star	Triumphstern	Tinovictoria	胜利之星	Victorieux	Vittorstella	승리의별	しょうりのほし	しょうりのほし	勝利之星
+0162-victory_star-0001|data.Desc		Boosts the Attack Range of party Pokémon.	Erhöht die Angriffsreichweite des Teams.					아군의 공격범위가 증가한다.			
+0163-turboblaze-0000|data.Name		Turboblaze	Turbobrand	Turbollama	涡轮火焰	TurboBrasier	Piroturbina	터보블레이즈	ターボブレイズ	ターボブレイズ	渦輪火焰
+0163-turboblaze-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.	Schadene Attacken entfernen die Fähigkeiten von gegnerischen Pokémon.								
+0164-teravolt-0000|data.Name		Teravolt	Teravolt	Terravoltaje	兆级电压	Téra-Voltage	Teravolt	테라볼티지	テラボルテージ	テラボルテージ	兆級電壓
+0164-teravolt-0001|data.Desc		Damaging moves will remove the abilities of opposing Pokémon.	Schadene Attacken entfernen die Fähigkeiten von gegnerischen Pokémon.								
+0165-aroma_veil-0000|data.Name		Aroma Veil	Dufthülle	Velo Aroma	芳香幕	Aroma-Voile	Aromavelo	아로마베일	アロマベール	アロマベール	芳香幕
+0165-aroma_veil-0001|data.Desc		Protects itself and its allies from attacks that limit their move choices.	Kann alle Team-Pokémon vor mentalen Angriffen schützen.	Protege a todo el equipo de ataques que impiden elegir movimientos.	可以防住向自己和同伴 发出的心灵攻击。	Protège l’équipe des effets limitant le libre arbitre.	Protegge tutta la squadra da mosse che limitano la scelta di attacchi.	아군을 기술을 제한하는 효과의 공격으로부터 보호한다.	じぶんと　みかたへの　メンタル こうげきを　ふせぐことが　できる。	自分と　味方への　メンタル 攻撃を　防ぐことが　できる。	可防住向自己和同伴 發出的心靈攻擊。
+0166-flower_veil-0000|data.Name		Flower Veil	Blütenhülle	Velo Flor	花幕	Flora-Voile	Fiorvelo	플라워베일	フラワーベール	フラワーベール	花幕
+0166-flower_veil-0001|data.Desc		Protects ally Pokémon from major status conditions.									
+0167-cheek_pouch-0000|data.Name		Cheek Pouch	Backentaschen	Carrillo	颊囊	Bajoues	Guancegonfie	볼주머니	ほおぶくろ	ほおぶくろ	頰囊
+0167-cheek_pouch-0001|data.Desc		Restores HP when the Pokémon eats a food item.	Heilt bei Konsum von essbaren Items KP.					음식 아이템을 먹으면 HP를 회복한다.			
+0168-protean-0000|data.Name		Protean	Wandlungskunst	Mutatipo	变幻自如	Protéen	Mutatipo	변환자재	へんげんじざい	へんげんじざい	變幻自如
+0168-protean-0001|data.Desc		Changes the Pokémon's type to the type of the move it last used.	Das Pokémon nimmt bei Einsatz einer Attacke deren Typ an.	Cambia el tipo del Pokémon al del último movimiento usado.		Le Pokémon prend le type de sa dernière capacité lancée.	Cambia il tipo del Pokémon in quello della mossa usata.	사용한 기술과 같은 타입으로 변화한다.	だした　わざと　おなじ タイプに　へんかする。	だした　技と　同じ タイプに　変化する。	
+0169-fur_coat-0000|data.Name		Fur Coat	Fellkleid	Pelaje Recio	毛皮大衣	Toison Épaisse	Foltopelo	퍼코트	ファーコート	ファーコート	毛皮大衣
+0169-fur_coat-0001|data.Desc		Halves damage from physical moves.	Halbiert den Schaden durch physische Attacken.	Reduce a la mitad el daño recibido por ataques físicos.	对手给予的物理招式的 伤害会减半。	Divise les dégâts des attaques physiques par deux.	Dimezza il danno degli attacchi fisici subiti.	물리 기술의 데미지가 절반이 된다.	ぶつりわざの　ダメージが はんぶんになる。	物理技の　ダメージが 半分になる。	對手的物理招式造成的 傷害會減半。
+0170-magician-0000|data.Name		Magician	Zauberer	Prestidigitador	魔术师	Magicien	Prestigiatore	매지션	マジシャン	マジシャン	魔術師
+0170-magician-0001|data.Desc		The Pokémon steals the item of a Pokémon it hits with a move.	Das Pokémon stiehlt das Item von einem Pokémon, welches es mit einer Attacke getroffen hat.					기술을 맞은 상대의 아이템을 빼앗아 버린다.			
+0171-bulletproof-0000|data.Name		Bulletproof	Kugelsicher	Antibalas	防弹	Pare-Balles	Antiproiettile	방탄	ぼうだん	ぼうだん	防彈
+0171-bulletproof-0001|data.Desc		Protects the Pokémon from explosions.	Schützt das Pokémon vor Explosionen.					폭발로부터 포켓몬을 보호한다.			
+0172-competitive-0000|data.Name		Competitive	Unbeugsamkeit	Tenacidad	好胜	Battant	Tenacia	승기	かちき	かちき	好勝
+0172-competitive-0001|data.Desc		Boosts the Sp. Atk stat sharply when a stat is lowered.	Erhöht den Spezial-Angriff stark, wenn ein Statuswert gesenkt wurde.	Aumenta mucho su Ataque Especial cuando el rival le baja cualquiera de sus características.	如果能力被降低， 特攻就会大幅提高。	Augmente beaucoup l’Attaque Spéciale du Pokémon quand ses stats baissent.	L’Attacco Speciale aumenta di molto quando le statistiche diminuiscono a causa di un nemico.	스탯이 떨어지면 대신 특수공격이 크게 올라간다.	のうりょくを　さげられると とくこうが　ぐーんと　あがる。	能力を　下げられると 特攻が　ぐーんと　上がる。	能力被降低時， 特攻會大幅提高。
+0173-strong_jaw-0000|data.Name		Strong Jaw	Titankiefer	Mandíbula Fuerte	强壮之颚	Prognathe	Ferromascella	옹골찬턱	がんじょうあご	がんじょうあご	強壯之顎
+0173-strong_jaw-0001|data.Desc		The Pokémon's strong jaw boosts the power of its biting moves.	Der kräftige Kiefer des Pokémon erhöht die Stärke von Biss-Attacken.	Su robusta mandíbula le confiere una mordedura potente.	因为颚部强壮， 啃咬类招式的威力会提高。	Le Pokémon a une mâchoire robuste qui augmente la puissance de ses capacités à base de morsures.	La robusta mascella del Pokémon permette morsi molto potenti.	턱이 튼튼하여 무는 기술의 위력이 올라간다.	あごが　がんじょうで かむ　わざの　いりょくが たかくなる。	あごが　頑丈で 噛む　技の　威力が 高くなる。	顎部強壯， 會提高啃咬類招式的威力。
+0174-refrigerate-0000|data.Name		Refrigerate	Frostschicht	Piel Helada	冰冻皮肤	Peau Gelée	Pellegelo	프리즈스킨	フリーズスキン	フリーズスキン	冰凍皮膚
+0174-refrigerate-0001|data.Desc		Normal-type moves become Ice-type moves.	Attacken vom Typ Normal nehmen den Typ Eis an.	Convierte movimientos de tipo Normal en tipo Hielo.		Les capacités de type Normal deviennent de type Glace.	Le mosse di tipo Normale diventano di tipo Ghiaccio.	노말타입의 기술이 얼음타입이 된다.	ノーマルタイプの　わざが こおりタイプになる。	ノーマルタイプの　技が こおりタイプに　なる。	
+0175-sweet_veil-0000|data.Name		Sweet Veil	Zuckerhülle	Velo Dulce	甜幕	Gluco-Voile	Dolcevelo	스위트베일	スイートベール	スイートベール	甜幕
+0175-sweet_veil-0001|data.Desc		Prevents party Pokémon from falling asleep.	Alle Pokémon im Team können nicht einschlafen.	Evita que tu equipo Pokémon se duerma.	我方的宝可梦 不会变为睡眠状态。	Les Pokémon de l’équipe ne peuvent pas s’endormir.	Impedisce a sé e agli alleati di addormentarsi.	같은 편의 포켓몬이 잠들지 않게 된다.	 かたの　ポケモンは ねむらなくなる。	味方の　ポケモンは 眠らなくなる。	我方的寶可夢 不會陷入睡眠狀態。
+0176-stance_change-0000|data.Name		Stance Change	Taktikwechsel	Cambio Táctico	战斗切换	Déclic Tactique	Accendilotta	배틀스위치	バトルスイッチ	バトルスイッチ	戰鬥切換
+0176-stance_change-0001|data.Desc		The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King's Shield.	Setzt das Pokémon eine Offensiv-Attacke ein, nimmt es die Klingenform an. Setzt es danach die Attacke Königsschild ein, nimmt es die Schildform an.	Adopta la Forma Filo al lanzar un ataque, o bien la Forma Escudo si usa el movimiento Escudo Real.	如果使出攻击招式，会变为刀剑形态， 如果使出招式“王者盾牌”， 会变为盾牌形态。	Le Pokémon prend la Forme Assaut lorsqu’il utilise une attaque, et la Forme Parade lorsqu’il utilise Bouclier Royal.	Assume la Forma Spada se usa una mossa d’attacco e la Forma Scudo se usa Scudo Reale.	공격 기술을 쓰면 블레이드폼으로 기술 킹실드를 쓰면 실드폼으로 변한다.	こうげきわざを　だすと　ブレードフォルムに わざ　キングシールドを　だすと シールドフォルムに　へんかする。	攻撃技を　出すと　ブレードフォルムに 技　キングシールドを　出すと シールドフォルムに　変化する。	若使出攻擊招式，會變為刀劍形態， 若使出招式「王者盾牌」， 會變為盾牌形態。
+0177-gale_wings-0000|data.Name		Gale Wings	Orkanschwingen	Alas Vendaval	疾风之翼	Ailes Bourrasque	Aliraffica	질풍날개	はやてのつばさ	はやてのつばさ	疾風之翼
+0177-gale_wings-0001|data.Desc		Increases the Attack Range of Flying-type moves.	Erhöht die Angriffsreichweite von Attacken des Typen Flug.					비행타입 기술의 공격범위를 증가시킨다..			
+0178-mega_launcher-0000|data.Name		Mega Launcher	Megawumme	Megadisparador	超级发射器	Méga Blaster	Megalancio	메가런처	メガランチャー	メガランチャー	超級發射器
+0178-mega_launcher-0001|data.Desc		Powers up aura and pulse moves.	Erhöht die Stärke einiger Wellen-, Aura- und Puls-Attacken.	Aumenta la potencia de algunos movimientos de pulsos y auras.	波动和波导类招式的 威力会提高。	Augmente la puissance de certaines capacités de type aura.	Potenzia le mosse “pulsar” e altre come Ondasana.	파동 기술의 위력이 크다.	はどうの　わざの いりょくが　たかい。	はどうの　技の 威力が　高い。	波動和波導類招式的 威力會提高。
+0179-grass_pelt-0000|data.Name		Grass Pelt	Pflanzenpelz	Manto Frondoso	草之毛皮	Toison Herbue	Peloderba	풀모피	くさのけがわ	くさのけがわ	草之毛皮
+0179-grass_pelt-0001|data.Desc		Boosts the Defense stat in Grassy Terrain.	Erhöht die Verteidigung, wenn Grasfeld aktiv ist.	Aumenta la Defensa mientras dura el efecto de Campo de Hierba.	在青草场地时， 防御会提高。	Augmente la Défense si Champ Herbu est actif.	Aumenta la Difesa durante l’effetto di Campo Erboso.	그래스필드일 때 방어가 올라간다.	グラスフィールドのとき ぼうぎょが　あがる。	グラスフィールドのとき 防御が　上がる。	在青草場地時， 防禦會提高。
+0180-symbiosis-0000|data.Name		Symbiosis	Nutznießer	Simbiosis	共生	Symbiose	Simbiosi	공생	きょうせい	きょうせい	共生
+0180-symbiosis-0001|data.Desc		Passes the effect of certain held items to ally Pokémon. It won't use the item itself.									
+0181-tough_claws-0000|data.Name		Tough Claws	Krallenwucht	Garra Dura	硬爪	Griffe Dure	Unghiedure	단단한발톱	かたいツメ	かたいツメ	硬爪
+0181-tough_claws-0001|data.Desc		Powers up moves that make direct contact.	Erhöht die Stärke von direkten Angriffen.	Aumenta la potencia de los movimientos de contacto directo.	接触到对手的招式 威力会提高。	Augmente la puissance des attaques directes.	Potenzia le mosse che causano un contatto fisico.	접촉하는 기술의 위력이 올라간다.	せっしょくする　わざの いりょくが　あがる。	接触する　技の 威力が　あがる。	接觸到對手的招式 威力會提高。
+0182-pixilate-0000|data.Name		Pixilate	Feenschicht	Piel Feérica	妖精皮肤	Peau Féérique	Pellefolletto	페어리스킨	フェアリースキン	フェアリースキン	妖精皮膚
+0182-pixilate-0001|data.Desc		Normal-type moves become Fairy-type moves.	Attacken vom Typ Normal nehmen den Typ Fee an.	Convierte movimientos de tipo Normal en tipo Hada.		Les capacités de type Normal deviennent de type Fée.	Le mosse di tipo Normale diventano di tipo Folletto.	노말타입의 기술이 페어리타입이 된다.	ノーマルタイプの　わざが フェアリータイプになる。	ノーマルタイプの　技が フェアリータイプになる。	
+0183-gooey-0000|data.Name		Gooey	Viskosität	Baba	黏滑	Poisseux	Viscosità	미끈미끈	ぬめぬめ	ぬめぬめ	黏滑
+0183-gooey-0001|data.Desc		Contact with the Pokémon lowers the attacker's Movement Speed.	Wird Kontakt mit diesem Pokémon gemacht, verringert sich das Tempo des Angreifers.					접촉한 상대의 행동속도를 떨어뜨린다.			
+0184-aerilate-0000|data.Name		Aerilate	Zenithaut	Piel Celeste	飞行皮肤	Peau Céleste	Pellecielo	스카이스킨	スカイスキン	スカイスキン	飛行皮膚
+0184-aerilate-0001|data.Desc		Normal-type moves become Flying-type moves.	Attacken vom Typ Normal nehmen den Typ Flug an.	Convierte movimientos de tipo Normal en tipo Volador.		Les capacités de type Normal deviennent de type Vol.	Le mosse di tipo Normale diventano di tipo Volante.	노말타입의 기술이 비행타입이 된다.	ノーマルタイプの　わざが ひこうタイプになる。	ノーマルタイプの　技が ひこうタイプになる。	
+0185-parental_bond-0000|data.Name		Parental Bond	Familienbande	Amor Filial	亲子爱	Amour Filial	Amorefiliale	부자유친	おやこあい	おやこあい	親子愛
+0185-parental_bond-0001|data.Desc		Parent and child attack together.	Zwei Generationen setzen gemeinsam zum Angriff an.	Ataque en familia.	亲子俩可以合计攻击２次。	Attaque en famille.	Il Pokémon e il suo piccolo attaccano insieme.	부모와 자식 2마리가 공격한다.	おやこ　２ひきで こうげきする。	親子　２匹で 攻撃する。	親子倆可合計攻擊２次。
+0186-dark_aura-0000|data.Name		Dark Aura	Dunkelaura	Aura Oscura	暗黑气场	Aura Ténébreuse	Auratetra	다크오라	ダークオーラ	ダークオーラ	暗黑氣場
+0186-dark_aura-0001|data.Desc		Powers up all Dark-type moves.	Erhöht die Stärke aller Attacken des Typs Unlicht.	Aumenta la potencia de todos los movimientos de tipo Siniestro.	全体的恶属性招式变强。	Renforce les attaques de type Ténèbres de tous les Pokémon.	Potenzia le mosse di tipo Buio di tutti i Pokémon.	전원의 악타입 기술이 강해진다.	ぜんいんの　あくタイプの わざが　つよくなる。	全員の　あくタイプの 技が　強くなる。	全體的惡屬性招式變強。
+0187-fairy_aura-0000|data.Name		Fairy Aura	Feenaura	Aura Feérica	妖精气场	Aura Féérique	Aurafolletto	페어리오라	フェアリーオーラ	フェアリーオーラ	妖精氣場
+0187-fairy_aura-0001|data.Desc		Powers up all Fairy-type moves.	Erhöht die Stärke aller Attacken des Typs Fee.	Aumenta la potencia de todos los movimientos de tipo Hada.	全体的妖精属性招式变强。	Renforce les attaques de type Fée de tous les Pokémon.	Potenzia le mosse di tipo Folletto  di tutti i Pokémon.	전원의 페어리타입 기술이 강해진다.	ぜんいんの　フェアリー わざが　つよくなる。	全員の　フェアリー 技が　強くなる。	全體的妖精屬性招式變強。
+0188-aura_break-0000|data.Name		Aura Break	Aura-Umkehr	Rompeaura	气场破坏	Aura Inversée	Frangiaura	오라브레이크	オーラブレイク	オーラブレイク	氣場破壞
+0188-aura_break-0001|data.Desc		The effects of aura abilities are reversed to lower the power of affected moves.									
+0189-primordial_sea-0000|data.Name		Primordial Sea	Urmeer	Mar del Albor	始源之海	Mer Primaire	Mare Primordiale	시작의바다	はじまりのうみ	はじまりのうみ	始源之海
+0189-primordial_sea-0001|data.Desc		Affects weather and nullifies any Fire-type attacks.	Ändert das Wetter. Unterbindet direkte Feuer-Attacken.	Altera el clima para anular los ataques de tipo Fuego.	变为不会受到 火属性攻击的天气。	Altère les conditions météo et rend inefficaces les attaques Feu.	Crea un clima che rende inefficaci   gli attacchi di tipo Fuoco.	불꽃타입의 공격을 받지 않는 날씨로 만든다.	ほのおタイプの　こうげきを うけない　てんきにする。	ほのおタイプの　攻撃を 受けない　天気にする。	變為讓火屬性攻擊 失效的天氣。
+0190-desolate_land-0000|data.Name		Desolate Land	Endland	Tierra del Ocaso	终结之地	Terre Finale	Terra Estrema	끝의대지	おわりのだいち	おわりのだいち	終結之地
+0190-desolate_land-0001|data.Desc		Affects weather and nullifies any Water-type attacks.	Ändert das Wetter. Unterbindet direkte Wasser-Attacken.	Altera el clima para anular los ataques de tipo Agua.	变为不会受到 水属性攻击的天气。	Altère les conditions météo et rend inefficaces les attaques Eau.	Crea un clima che rende inefficaci   gli attacchi di tipo Acqua.	물타입의 공격을 받지 않는 날씨로 만든다.	 ずタイプの　こうげきを うけない　てんきに　する。	 ずタイプの　攻撃を 受けない　天気にする。	變為讓水屬性攻擊 失效的天氣。
+0191-delta_stream-0000|data.Name		Delta Stream	Delta-Wind	Ráfaga Delta	德尔塔气流	Souffle Delta	Flusso Delta	델타스트림	デルタストリーム	デルタストリーム	德爾塔氣流
+0191-delta_stream-0001|data.Desc		Affects weather and eliminates all of the Flying type's weaknesses.	Ändert das Wetter. Schwächen des Typs Flug werden beseitigt.	Altera el clima para anular las vulnerabilidades del tipo Volador.	变为令飞行属性的弱点 消失的天气。	Altère les conditions météo et annule les faiblesses du type Vol.	Crea un clima che annulla i punti deboli del tipo Volante.	비행타입의 약점이 없어지는 날씨로 만든다.	ひこうの　じゃくてんが なくなる　てんきにする。	ひこうタイプの　弱点が なくなる　天気にする。	變為令飛行屬性的弱點 消失的天氣。
+0192-stamina-0000|data.Name		Stamina	Zähigkeit	Firmeza	持久力	Endurance	Sopportazione	지구력	じきゅうりょく	じきゅうりょく	持久力
+0192-stamina-0001|data.Desc		Boosts the Defense stat when hit by an attack.	Wird es von einer Attacke getroffen, steigt seine Verteidigung.	Aumenta la Defensa al recibir un ataque.	受到攻击时， 防御会提高。	Augmente la Défense du Pokémon lorsqu'il subit une attaque.	Se il Pokémon subisce un attacco, la sua Difesa aumenta.	공격을 받으면 방어가 올라간다.	こうげきを　うけると ぼうぎょが　あがる。	攻撃を　受けると 防御が　上がる。	受到攻擊時， 防禦會提高。
+0193-wimp_out-0000|data.Name		Wimp Out	Reißaus	Huida	跃跃欲逃	Escampette	Fuggifuggi	도망태세	にげごし	にげごし	躍躍欲逃
+0193-wimp_out-0001|data.Desc		The Pokémon cowardly switches out when its HP becomes half or less.	Fallen seine KP auf die Hälfte des Maximalwerts oder weniger, zieht es sich ängstlich zurück.	Se asusta y abandona el terreno de combate cuando sus PS se ven reducidos a la mitad.	ＨＰ变为一半时， 会慌慌张张逃走， 退回同行队伍中。	Le Pokémon perd confiance quand ses PV tombent à la moitié et s'enfuit dans sa Poké Ball.	Se i PS scendono a metà o meno, il Pokémon si fa prendere dalla paura e abbandona la lotta in tutta fretta.	HP가 절반이 되면 황급히 도망쳐서 지닌 포켓몬으로 돌아간다.	ＨＰが　はんぶんに　なると あわてて　にげだして てもちに　ひっこんで　しまう。	ＨＰが　半分に　なると あわてて　逃げ出して 手持ちに　引っ込んで　しまう。	ＨＰ變為一半時， 會慌慌張張逃走， 退回同行隊伍裡面。
+0194-emergency_exit-0000|data.Name		Emergency Exit	Rückzug	Retirada	危险回避	Repli Tactique	Passoindietro	위기회피	ききかいひ	ききかいひ	危險迴避
+0194-emergency_exit-0001|data.Desc		The Pokémon, sensing danger, switches out when its HP becomes half or less.	Fallen seine KP auf die Hälfte des Maximalwerts oder weniger, bringt es sich in Sicherheit.	Abandona el terreno de combate cuando sus PS se ven reducidos a la mitad para evitar males mayores.	ＨＰ变为一半时， 为了回避危险， 会退回到同行队伍中。	Le Pokémon évite les situations inutilement dangereuses. Quand ses PV tombent à la moitié, il se réfugie dans sa Poké Ball.	Se i PS scendono a metà o meno, il Pokémon abbandona la lotta per sfuggire al pericolo.	HP가 절반이 되면 위험을 회피하기 위해 지닌 포켓몬으로 돌아간다.	ＨＰが　はんぶんに　なると きけんを　かいひするため てもちに　ひっこんで　しまう。	ＨＰが　半分に　なると 危険を　回避するため 手持ちに　引っ込んで　しまう。	ＨＰ減到一半時， 為了避開危險， 會退回同行隊伍裡面。
+0195-water_compaction-0000|data.Name		Water Compaction	Verklumpen	Hidrorrefuerzo	遇水凝固	Sable Humide	Idrorinforzo	꾸덕꾸덕굳기	みずがため	みずがため	遇水凝固
+0195-water_compaction-0001|data.Desc		Boosts the Pokémon's Defense stat sharply when hit by a Water-type move.	Wird es von einer Wasser-Attacke getroffen, steigt seine Verteidigung stark.	Aumenta mucho la Defensa si le alcanza un movimiento de tipo Agua.	受到水属性的招式攻击时， 防御会大幅提高。	Augmente beaucoup la Défense du Pokémon quand il subit une capacité de type Eau.	Se il Pokémon subisce una mossa di tipo Acqua, la sua Difesa aumenta di molto.	물타입의 기술을 받으면 방어가 크게 올라간다.	みずタイプの　わざを　うけると ぼうぎょが　ぐーんと　あがる。	みずタイプの　技を　受けると 防御が　ぐーんと　上がる。	受到水屬性的招式攻擊時， 防禦會大幅提高。
+0196-merciless-0000|data.Name		Merciless	Quälerei	Ensañamiento	不仁不义	Cruauté	Spietatezza	무도한행동	ひとでなし	ひとでなし	不仁不義
+0196-merciless-0001|data.Desc		The Pokémon's attacks become critical hits if the target is poisoned.	Sorgt bei Angriffen auf vergiftete Ziele für Volltreffergarantie.	Hace que los movimientos asesten siempre un golpe crítico si el rival está envenenado.	攻击中毒状态的对手时， 必定会击中要害。	Lorsque le Pokémon attaque un adversaire empoisonné, le coup sera forcément critique.	Gli attacchi sferrati su un bersaglio avvelenato producono sempre brutti colpi.	독 상태의 상대를 공격하면 반드시 급소에 맞는다.	どく　じょうたいの あいてを　こうげきすると かならず　きゅうしょに　あたる。	どく状態の 相手を　攻撃すると かならず　急所に　当たる。	攻擊中毒狀態的對手時， 必定會擊中要害。
+0197-shields_down-0000|data.Name		Shields Down	Limitschild	Escudo Limitado	界限盾壳	Bouclier-Carcan	Scudosoglia	리밋실드	リミットシールド	リミットシールド	界限盾殼
+0197-shields_down-0001|data.Desc		When its HP becomes half or less, the Pokémon's shell breaks and it becomes aggressive.	Fallen seine KP auf die Hälfte des Maximalwerts oder weniger, zerbricht die Panzerung des Pokémon und es wird aggressiver.	Rompe su coraza cuando sus PS se ven reducidos a la mitad y adopta una forma ofensiva.	ＨＰ变为一半时， 壳会坏掉，变得有攻击性。	Lorsque le Pokémon perd la moitié de ses PV, son enveloppe se brise, mais son Attaque et son Attaque Spéciale augmentent.	Se i PS scendono a metà o meno, il guscio si rompe e il Pokémon si prepara all'offensiva.	HP가 절반이 되면 껍질이 깨져 공격적으로 된다.	ＨＰが　はんぶんに　なると からが　こわれて こうげきてきに　なる。	ＨＰが　半分に　なると 殻が　壊れて 攻撃的に　なる。	ＨＰ變為一半時， 殼會壞掉，變得更有攻擊性。
+0198-stakeout-0000|data.Name		Stakeout	Beschattung	Vigilante	蹲守	Filature	Sorveglianza	잠복	はりこみ	はりこみ	監視
+0198-stakeout-0001|data.Desc		The Pokémon's first attack deals increased damage.									
+0199-water_bubble-0000|data.Name		Water Bubble	Wasserblase	Pompa	水泡	Aquabulle	Bolladacqua	수포	すいほう	すいほう	水泡
+0199-water_bubble-0001|data.Desc		Lowers the power of Fire-type moves done to the Pokémon and prevents the Pokémon from getting a burn.	Feuer-Attacken fügen dem Pokémon weniger Schaden zu. Verhindert Verbrennungen.	Reduce el daño que le provocan los movimientos de tipo Fuego e impide que sufra quemaduras.	降低与自己相对的火属性 招式的威力，不会灼伤。	Réduit les dégâts des capacités de type Feu subies par le Pokémon. Il est également immunisé contre les brûlures.	Riduce la potenza delle mosse di tipo Fuoco subite e rende immuni alle scottature.	자신을 향하는 불꽃타입 기술의 위력을 떨어뜨린다. 화상을 입지 않는다.	じぶんに　たいする　ほのおタイプの わざの　いりょくを　さげる。 やけど　しない。	自分に　対する　ほのおタイプの 技の　威力を　下げる。 やけど　しない。	降低與自己相對的火屬性 招式的威力，不會灼傷。
+0200-steelworker-0000|data.Name		Steelworker	Stahlprofi	Acero Templado	钢能力者	Expert Acier	Tempracciaio	강철술사	はがねつかい	はがねつかい	鋼能力者
+0200-steelworker-0001|data.Desc		Powers up Steel-type moves.	Erhöht die Stärke von Stahl-Attacken.	Potencia los movimientos de tipo Acero.	钢属性的招式威力会提高。	Augmente la puissance des attaques de type Acier.	Aumenta la potenza delle mosse di tipo Acciaio.	강철타입 기술의 위력이 올라간다.	はがねタイプの　わざの いりょくが　あがる。	はがねタイプの　技の 威力が　上がる。	鋼屬性的招式威力會提高。
+0201-berserk-0000|data.Name		Berserk	Wutausbruch	Cólera	怒火冲天	Dracolère	Furore	발끈	ぎゃくじょう	ぎゃくじょう	怒火沖天
+0201-berserk-0001|data.Desc		Boosts the Pokémon's Sp. Atk stat when it takes a hit that causes its HP to become half or less.	Fallen seine KP nach einem Angriff auf die Hälfte des Maximalwerts oder weniger, steigt sein Spezial-Angriff.	Aumenta el Ataque Especial si los ataques del oponente le reducen los PS a la mitad.	因对手的攻击 ＨＰ变为一半时， 特攻会提高。	Augmente l'Attaque Spéciale du Pokémon lorsqu'il tombe à la moitié de ses PV à cause d'une attaque.	Se i PS scendono a metà o meno a causa di un attacco, l'Attacco Speciale aumenta.	상대의 공격으로 HP가 절반이 되면 특수공격이 올라간다.	あいての　こうげきで ＨＰが　はんぶんに　なると とくこうが　あがる。	相手の　攻撃で ＨＰが　半分に　なると 特攻が　上がる。	ＨＰ因對手的攻擊 降到一半時， 特攻會提高。
+0202-slush_rush-0000|data.Name		Slush Rush	Schneescharrer	Quitanieves	拨雪	Chasse-Neige	Spalaneve	눈치우기	ゆきかき	ゆきかき	撥雪
+0202-slush_rush-0001|data.Desc		Boosts the Pokémon's Speed stat in a hailstorm.	Erhöht bei Hagel die Initiative.	Aumenta su Velocidad si está granizando.	冰雹天气时， 速度会提高。	Augmente la Vitesse du Pokémon quand il grêle.	Se grandina, la Velocità aumenta.	날씨가 싸라기눈일 때 스피드가 올라간다.	てんきが　あられ　のとき すばやさが　あがる。	天気が　あられ　のとき 素早さが　上がる。	天氣為冰雹時， 速度會提高。
+0203-long_reach-0000|data.Name		Long Reach	Langstrecke	Remoto	远隔	Longue Portée	Distacco	원격	えんかく	えんかく	遠隔
+0203-long_reach-0001|data.Desc		The Pokémon uses its moves without making contact with the target.	Ermöglicht dem Pokémon den Einsatz aller seiner Attacken, ohne das Ziel dabei direkt zu berühren.	Permite usar cualquier movimiento sin entrar en contacto con el rival.	可以不接触对手 就使出所有的招式。	Le Pokémon est capable d'utiliser toutes ses capacités sans entrer en contact direct avec sa cible.	Il Pokémon è in grado di usare tutte le sue mosse senza entrare in contatto diretto con il bersaglio.	모든 기술을 상대에게 접촉하지 않고 사용할 수 있다.	すべての　わざを あいてに　せっしょく　しないで だすことが　できる。	すべての　技を 相手に　接触　しないで 出すことが　できる。	可以不接觸對手 就使出所有的招式。
+0204-liquid_voice-0000|data.Name		Liquid Voice	Plätscherstimme	Voz Fluida	湿润之声	Hydrata-Son	Idrovoce	촉촉보이스	うるおいボイス	うるおいボイス	濕潤之聲
+0204-liquid_voice-0001|data.Desc		All sound-based moves become Water-type moves.	Bewirkt, dass alle Lärm-Attacken des Pokémon den Typ Wasser annehmen.	Hace que todos los movimientos del Pokémon basados en sonido pasen a ser de tipo Agua.	所有的声音招式 都变为水属性。	Toutes les attaques sonores du Pokémon prennent le type Eau.	Le mosse basate sul suono del Pokémon con questa abilità diventano di tipo Acqua.	모든 소리 기술이 물타입이 된다.	すべての　おとわざが みずタイプに　なる。	すべての　音技が みずタイプに　なる。	所有的聲音招式 都變為水屬性。
+0205-triage-0000|data.Name		Triage	Heilwandel	Primer Auxilio	先行治疗	Prioguérison	Primacura	힐링시프트	ヒーリングシフト	ヒーリングシフト	先行治療
+0205-triage-0001|data.Desc		Gives priority to a healing move.	Ermöglicht einen Erstschlag mit Attacken, welche die KP des Anwenders direkt regenerieren.	Da prioridad a los movimientos que curan PS directamente al Pokémon.	可以率先使出回复招式。	Toutes les capacités qui soignent le Pokémon directement deviennent prioritaires.	Le mosse che ripristinano direttamente i PS del Pokémon acquistano priorità alta.	회복 기술을 먼저 사용할 수 있다.	かいふくわざを　せんせいで だすことが　できる。	回復技を　先制で 出すことが　できる。	可以搶先使出回復招式。
+0206-galvanize-0000|data.Name		Galvanize	Elektrohaut	Piel Eléctrica	电气皮肤	Peau Électrique	Pellelettro	일렉트릭스킨	エレキスキン	エレキスキン	電氣皮膚
+0206-galvanize-0001|data.Desc		Normal-type moves become Electric-type moves.									
+0207-surge_surfer-0000|data.Name		Surge Surfer	Surf-Schweif	Cola Surf	冲浪之尾	Surf Caudal	Codasurf	서핑테일	サーフテール	サーフテール	衝浪之尾
+0207-surge_surfer-0001|data.Desc		Doubles the Pokémon's Speed stat on Electric Terrain.	Verdoppelt die Initiative, wenn zuvor ein Elektrofeld erzeugt wurde.	Duplica la Velocidad si hay un campo eléctrico en el terreno de combate.	电气场地时， 速度会变为２倍。	La Vitesse du Pokémon est doublée sur un Champ Électrifié.	In presenza di un Campo Elettrico, la Velocità raddoppia.	일렉트릭필드일 때 스피드가 2배가 된다.	エレキフィールド　のとき すばやさが　２ばいに　なる。	エレキフィールド　のとき 素早さが　２倍に　なる。	電氣場地時， 速度會變為２倍。
+0208-schooling-0000|data.Name		Schooling	Fischschwarm	Banco	鱼群	Banc	Banco	어군	ぎょぐん	ぎょぐん	魚群
+0208-schooling-0001|data.Desc		When it has a lot of HP, the Pokémon forms a powerful school. It stops schooling when its HP is low.	Verfügt es über einen hohen KP-Wert, wird es zu einem Schwarm und gewinnt an Stärke. Ist der KP-Wert niedrig, löst sich der Schwarm wieder auf.	Forma bancos con sus congéneres cuando tiene muchos PS, lo cual le otorga más fuerza. Cuando le quedan pocos PS, el banco se dispersa.	ＨＰ多的时候会聚起来变强。 ＨＰ剩余量变少时， 群体会分崩离析。	Le Pokémon se rassemble avec ses congénères quand ses PV sont élevés. Plus ses PV baissent, plus le banc s'amenuise.	Quando ha molti PS, il Pokémon forma un banco con i propri simili e si rafforza. Quando ne ha pochi, il banco si disperde.	HP가 많을 때 무리지어 강해진다. HP가 얼마 남지 않으면 무리는 뿔뿔이 흩어진다.	ＨＰが　おおいときは　むれて　つよくなる。 ＨＰの　のこりが　すくなくなると むれは　ちりぢりに　なってしまう。	ＨＰが　多いときは　群れて　強くなる。 ＨＰの　残りが　少なくなると 群れは　散り散りに　なってしまう。	ＨＰ多的時候會聚起來變強。 ＨＰ剩餘量變少時， 群體會分崩離析。
+0209-disguise-0000|data.Name		Disguise	Kostümspuk	Disfraz	画皮	Fantômasque	Fantasmanto	탈	ばけのかわ	ばけのかわ	畫皮
+0209-disguise-0001|data.Desc		Once per battle, the shroud that covers the Pokémon can protect it from an attack.	Kann ein Mal pro Kampf mit seinem gruseligen Kostüm einen Angriff abwehren.	Permite eludir un único ataque valiéndose de la tela que le cubre el cuerpo.	通过画皮覆盖住身体， 可以防住１次攻击。	Le déguisement qui recouvre le corps du Pokémon est capable de le protéger d'une attaque.	Il panno che ricopre il Pokémon lo protegge da un singolo attacco.	몸을 덮는 탈로 1번 공격을 막을 수 있다.	からだを　おおう　ばけのかわで　 １かい　こうげきを　ふせぐことが　できる。	体を　被う　化けの皮で　 １回　攻撃を　防ぐことが　できる。	用畫皮覆蓋住身體， 可防住１次攻擊。
+0210-battle_bond-0000|data.Name		Battle Bond	Freundschaftsakt	Fuerte Afecto	牵绊变身	Synergie	Morfosintonia	유대변화	きずなへんげ	きずなへんげ	牽絆變身
+0210-battle_bond-0001|data.Desc		Defeating an opposing Pokémon strengthens the Pokémon's bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful.	Besiegt es ein Ziel, vertieft dies die Freundschaft zu seinem Trainer, wodurch es die Ash-Form annimmt und sein Wasser-Shuriken stärker wird.	Al derrotar a un rival, los vínculos con su Entrenador se refuerzan y se convierte en Greninja Ash. Su Shuriken de Agua también se ve potenciado.	打倒对手时，与训练家的牵绊会增强， 变为小智版甲贺忍蛙。 飞水手里剑的招式威力会增强。	En battant un ennemi, ce Pokémon renforce ses liens avec son Dresseur. Il prend alors sa Forme Sacha et ses Sheauriken gagnent en puissance.	Se il Pokémon manda KO un nemico, il legame con l'Allenatore si rafforza, attivando la trasformazione in Greninja Forma Ash. Acqualame si potenzia.	상대를 쓰러뜨리면 트레이너와의 유대감이 깊어져서 지우개굴닌자로 변한다. 물수리검이 강해진다.	あいてを　たおすと　トレーナーとの きずなが　ふかまり　サトシゲッコウガに へんげする。みずしゅりけんが　つよくなる。	相手を　倒すと　トレーナーとの キズナが　深まり　サトシゲッコウガに 変化する。みずしゅりけんが　強くなる。	打倒對手時，與訓練家的牽絆會加深， 變化成小智版甲賀忍蛙。 飛水手裡劍的威力會增強。
+0211-power_construct-0000|data.Name		Power Construct	Scharwandel	Agrupamiento	群聚变形	Rassemblement	Sciamefusione	스웜체인지	スワームチェンジ	スワームチェンジ	群聚變形
+0211-power_construct-0001|data.Desc		Other Cells gather to aid when its HP becomes half or less. Then the Pokémon changes its form to Complete Forme.	Fallen seine KP auf die Hälfte des Maximalwerts oder weniger, eilen ihm weitere Zellen zu Hilfe und es nimmt die Optimumform an.	Cuando sus PS se ven reducidos a la mitad, las células se reagrupan y adopta su Forma Completa.	ＨＰ变为一半时， 细胞们会赶来支援， 变为完全体形态。	Lorsque le Pokémon perd la moitié de ses PV, ses Cellules se rassemblent pour l'encourager, ce qui lui permet de prendre sa Forme Parfaite.	Se i PS del Pokémon scendono a metà o meno, le cellule si raggruppano e gli permettono di assumere la Forma Perfetta.	HP가 절반이 되면 셀들이 응원하러 달려와 퍼펙트폼으로 모습이 변한다.	ＨＰが　はんぶんに　なると セルたちが　おうえんに　かけつけ パーフェクトフォルムに　すがたを　かえる。	ＨＰが　半分に　なると セルたちが　応援に　駆けつけ パーフェクトフォルムに　姿を　変える。	ＨＰ變為一半時， 細胞們會趕來支援， 變為完全體形態。
+0212-corrosion-0000|data.Name		Corrosion	Korrosion	Corrosión	腐蚀	Corrosion	Corrosione	부식	ふしょく	ふしょく	腐蝕
+0212-corrosion-0001|data.Desc		The Pokémon can poison the target even if it's a Steel or Poison type.	Kann selbst Pokémon vom Typ Stahl oder Gift vergiften.	Permite envenenar incluso a rivales de tipo Acero o Veneno.	可以使钢属性和毒属性的宝可梦 也陷入中毒状态。	Permet d'empoisonner les Pokémon de type Acier ou Poison.	Il Pokémon è in grado di avvelenare il bersaglio anche se questo è di tipo Acciaio o Veleno.	강철타입이나 독타입도 독 상태로 만들 수 있다.	はがねタイプや　どくタイプも どく　じょうたいに　することが　できる。	はがねタイプや　どくタイプも どく状態に　することが　できる。	就算對方是鋼屬性或毒屬性寶可夢， 也可讓對方陷入中毒狀態。
+0213-comatose-0000|data.Name		Comatose	Dauerschlaf	Letargo Perenne	绝对睡眠	Hypersommeil	Sonno Assoluto	절대안깸	ぜったいねむり	ぜったいねむり	絕對睡眠
+0213-comatose-0001|data.Desc		It's always drowsing and will never wake up. It can attack without waking up.	Das Pokémon befindet sich ununterbrochen im Halbschlaf und wacht nie vollständig auf. Es kann jedoch im Schlaf angreifen.	No despierta jamás de su profundo letargo e incluso ataca dormido.	总是半梦半醒的状态， 绝对不会醒来。 可以就这么睡着进行攻击。	Le Pokémon rêve en permanence et ne se réveille jamais. Il est capable d'attaquer normalement tout en dormant.	Il Pokémon si trova in un costante stato di dormiveglia che gli impedisce di svegliarsi. Può attaccare anche da addormentato.	항상 비몽사몽 상태로 절대 깨지 않는다. 잠든 상태로 공격할 수 있다.	つねに　ゆめうつつの　じょうたいで ぜったいに　めざめない。 ねむったまま　こうげきが　できる。	つねに　夢うつつの　状態で 絶対に　目覚めない。 眠ったまま　攻撃が　できる。	總是半夢半醒的狀態， 絕對不會醒來。 可在睡著的狀況下進行攻擊。
+0214-queenly_majesty-0000|data.Name		Queenly Majesty	Majestät	Regia Presencia	女王的威严	Prestance Royale	Regalità	여왕의위엄	じょおうのいげん	じょおうのいげん	女王的威嚴
+0214-queenly_majesty-0001|data.Desc		Its majesty pressures the opposing Pokémon, making it unable to attack using priority moves.	Schüchtert den Gegner ein und hindert ihn so daran, Attacken mit hoher Erstschlagquote einzusetzen.	Intimida al rival y le impide usar movimientos con prioridad dirigidos al Pokémon.	向对手施加威慑力， 使其无法对我方使出先制招式。	L'adversaire est impressionné par la majesté du Pokémon et ne peut pas le viser avec une attaque prioritaire.	L'aura di regalità del Pokémon impedisce al nemico di attaccarlo con mosse che hanno priorità alta.	상대에게 위압감을 줘서 이쪽을 향한 선제 기술을 사용할 수 없게 한다.	あいてに　いあつかんを　あたえ こちらに　むかって　せんせいわざを だせない　ようにする。	相手に　威圧感を　あたえ こちらに　むかって　先制技を 出せない　ようにする。	向對手施加威懾力， 使其無法對我方使出先制招式。
+0215-innards_out-0000|data.Name		Innards Out	Magenkrempler	Revés	飞出的内在物	Expuls'Organes	Espellinterno	내용물분출	とびだすなかみ	とびだすなかみ	飛出的內在物
+0215-innards_out-0001|data.Desc		Damages the attacker landing the finishing hit by the amount equal to its last HP.	Wird es durch eine Attacke besiegt, fügt es dem Angreifer Schaden in Höhe des KP-Werts zu, den es besaß, bevor es kampfunfähig wurde.	Al caer debilitado, inflige al rival un daño equivalente a los PS que le quedaran.	被对手打倒的时候， 会给予对手相当于 ＨＰ剩余量的伤害。	Le Pokémon inflige à l'adversaire l'ayant mis K.O. des dégâts égaux au nombre de PV qu'il lui restait avant le coup de grâce.	Se il Pokémon viene mandato KO da un attacco, infligge a chi lo ha sferrato tanti danni quanti erano i suoi PS prima di ricevere il colpo.	상대가 쓰러뜨렸을 때 HP의 남은 양만큼 상대에게 데미지를 준다.	あいてに　たおされたとき ＨＰの　のこりの　ぶんだけ あいてに　ダメージを　あたえる。	相手に　倒されたとき ＨＰの　残りの　ぶんだけ 相手に　ダメージを　あたえる。	被對手打倒的時候， 會給予對手相當於 ＨＰ剩餘量的傷害。
+0216-dancer-0000|data.Name		Dancer	Tänzer	Pareja de Baile	舞者	Danseuse	Sincrodanza	무희	おどりこ	おどりこ	舞者
+0216-dancer-0001|data.Desc		When another Pokémon uses a dance move, it can use a dance move following it regardless of its Speed.	Kann direkt im Anschluss an die Tanz-Attacke eines anderen Pokémon ebenfalls eine solche einsetzen.	Permite copiar inmediatamente cualquier movimiento de baile que haya usado otro Pokémon presente en el combate.	有谁使出跳舞招式时， 自己也能就这么接着使出跳舞招式。	Si n'importe quel Pokémon utilise une capacité dansante, ce Pokémon peut se mettre aussi à danser.	Permette al Pokémon di copiare immediatamente qualsiasi mossa basata sulla danza usata da un altro Pokémon in campo.	누군가 춤 기술을 쓰면 자신도 이어서 춤 기술을 쓸 수 있다.	だれかが　おどりわざを　つかうと じぶんも　それに　つづいて おどりわざを　だすことが　できる。	だれかが　踊り技を　使うと 自分も　それに　続いて 踊り技を　出すことが　できる。	當有誰使出跳舞招式時， 自己也能接著使出跳舞招式。
+0217-battery-0000|data.Name		Battery	Batterie	Batería	蓄电池	Batterie	Batteria	배터리	バッテリー	バッテリー	蓄電池
+0217-battery-0001|data.Desc		Powers up ally Pokémon's special moves.	Erhöht die Stärke der Spezial-Attacken seiner Mitstreiter.	Potencia los movimientos especiales de los aliados.	会提高我方的 特殊招式的威力。	Augmente la puissance des capacités spéciales des alliés.	Aumenta la potenza delle mosse speciali degli alleati.	같은 편 특수 기술의 위력을 올린다.	みかたの　とくしゅわざの いりょくを　あげる。	味方の　特殊技の 威力を　上げる。	會提高我方的 特殊招式的威力。
+0218-fluffy-0000|data.Name		Fluffy	Flauschigkeit	Peluche	毛茸茸	Boule de Poils	Morbidone	복슬복슬	もふもふ	もふもふ	毛茸茸
+0218-fluffy-0001|data.Desc		Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.	Halbiert den Schaden, den es durch direkte Attacken nimmt, aber verdoppelt dafür den durch Feuer-Attacken erlittenen Schaden.	Reduce a la mitad el daño provocado por los movimientos de contacto, pero duplica el infligido por los de tipo Fuego.	会将对手所给予的接触类招式的伤害减半， 但火属性招式的伤害会变为２倍。	Divise par deux les dégâts des attaques directes subies par le Pokémon, mais double les dégâts des capacités de type Feu.	Dimezza il danno causato dagli attacchi diretti di un nemico, ma raddoppia quello subito dalle mosse di tipo Fuoco.	상대로부터 받은 접촉하는 기술의 데미지를 반감시키지만 불꽃타입 기술의 데미지는 2배가 된다.	あいてから　うけた　せっしょくする　わざの ダメージを　はんげんするが　ほのおタイプの わざの　ダメージは　２ばいになる。	相手から　受けた　接触する　技の ダメージを　半減するが　ほのおタイプの 技の　ダメージは　２倍になる。	會將對手所給予的接觸類招式的傷害減半， 但火屬性招式的傷害會變為２倍。
+0219-dazzling-0000|data.Name		Dazzling	Buntkörper	Cuerpo Vívido	鲜艳之躯	Corps Coloré	Corposgargiante	비비드바디	ビビッドボディ	ビビッドボディ	鮮艷之軀
+0219-dazzling-0001|data.Desc		Surprises the opposing Pokémon, making it unable to attack using priority moves.	Überrascht den Gegner und hindert ihn so daran, Attacken mit hoher Erstschlagquote einzusetzen.	Desconcierta al rival y le impide utilizar movimientos con prioridad contra el usuario.	让对手吓一跳， 使其无法对我方使出先制招式。	L'adversaire est abasourdi par le Pokémon et ne peut pas le viser avec une capacité prioritaire.	Il Pokémon sbalordisce il nemico e non gli permette di attaccarlo con mosse che hanno priorità alta.	상대를 놀라게 해서 이쪽을 향한 선제 기술을 사용할 수 없게 한다.	あいてを　びっくり　させて こちらに　むかって　せんせいわざを だせない　ようにする。	相手を　びっくり　させて こちらに　むかって　先制技を 出せない　ようにする。	讓對手嚇一跳， 使其無法對我方使出先制招式。
+0220-soul_heart-0000|data.Name		Soul-Heart	Seelenherz	Coránima	魂心	Animacœur	Cuoreanima	소울하트	ソウルハート	ソウルハート	魂心
+0220-soul_heart-0001|data.Desc		Boosts its Sp. Atk stat every time a Pokémon faints.	Erhöht jedes Mal, wenn ein Pokémon besiegt wird, den eigenen Spezial-Angriff.	Aumenta el Ataque Especial cada vez que un Pokémon cae debilitado.	宝可梦每次变为濒死状态时， 特攻会提高。	Augmente l'Attaque Spéciale du Pokémon lorsqu'un autre Pokémon est mis K.O.	Aumenta l'Attacco Speciale ogni volta che un Pokémon va KO.	포켓몬이 기절할 때마다 특수공격이 올라간다.	ポケモンが　ひんしに　なるたびに とくこうが　あがる。	ポケモンが　ひんしに　なるたびに 特攻が　上がる。	每當場上有寶可夢 陷入瀕死狀態時， 特攻就會提高。
+0221-tangling_hair-0000|data.Name		Tangling Hair	Lockenkopf	Rizos Rebeldes	卷发	Mèche Rebelle	Boccolidoro	컬리헤어	カーリーヘアー	カーリーヘアー	捲髮
+0221-tangling_hair-0001|data.Desc		Contact with the Pokémon lowers the attacker's Speed stat.	Senkt bei Berührung im Zuge eines Angriffs die Initiative des Angreifers.	Baja la Velocidad del rival cuando este ataca al Pokémon con un movimiento de contacto.	对于用攻击接触到自己的对手， 会降低其速度。	Baisse la Vitesse de l'attaquant lorsque le Pokémon subit une attaque directe.	Se il Pokémon viene colpito da un attacco diretto, la Velocità di chi l'ha colpito diminuisce.	공격으로 자신과 접촉한 상대의 스피드를 떨어뜨린다.	こうげきで　じぶんに　ふれた　あいての すばやさを　さげる。	攻撃で　自分に　触れた　相手の 素早さを　下げる。	對手用攻擊接觸到自己時， 降低此對手的速度。
+0222-receiver-0000|data.Name		Receiver	Receiver	Receptor	接球手	Receveur	Ricezione	리시버	レシーバー	レシーバー	接球手
+0222-receiver-0001|data.Desc		The Pokémon copies the Ability of an ally.									
+0223-power_of_alchemy-0000|data.Name		Power of Alchemy	Chemiekraft	Reacción Química	化学之力	Osmose	Forza Chimica	과학의힘	かがくのちから	かがくのちから	化學之力
+0223-power_of_alchemy-0001|data.Desc		The Pokémon copies the Ability of an ally.									
+0224-beast_boost-0000|data.Name		Beast Boost	Bestien-Boost	Ultraimpulso	异兽提升	Boost Chimère	Ultraboost	비스트부스트	ビーストブースト	ビーストブースト	異獸提升
+0224-beast_boost-0001|data.Desc		The Pokémon may boost its most proficient stat each time it knocks out a Pokémon with a move.									
+0225-rks_system-0000|data.Name		RKS System	Alpha-System	Sistema Alfa	ＡＲ系统	Système Alpha	Sistema Primevo	AR시스템	ＡＲシステム	ＡＲシステム	ＡＲ系統
+0225-rks_system-0001|data.Desc		Changes the Pokémon's type to match the memory disc it holds.	Das Pokémon passt seinen Typ der getragenen Disc an.	Cambia su tipo según el disco que lleve instalado.	根据持有的存储碟， 自己的属性会改变。	Change le type du Pokémon en fonction de la ROM équipée.	Il tipo del Pokémon cambia in base alla ROM installata.	지니고 있는 메모리로 자신의 타입이 변한다.	もっている　メモリで じぶんの　タイプが　かわる。	持っている　メモリで 自分の　タイプが　変わる。	根據持有的記憶碟， 自己的屬性會改變。
+0226-electric_surge-0000|data.Name		Electric Surge	Elektro-Erzeuger	Electrogénesis	电气制造者	Créa-Élec	Elettrogenesi	일렉트릭메이커	エレキメイカー	エレキメイカー	電氣製造者
+0226-electric_surge-0001|data.Desc		Turns the ground into Electric Terrain when the Pokémon enters a battle.	Erzeugt bei Kampfantritt ein Elektrofeld.	Crea un campo eléctrico al entrar en combate.	出场时， 会布下电气场地。	Le Pokémon crée un Champ Électrifié au moment où il entre au combat.	Quando il Pokémon entra in campo, lo trasforma in un Campo Elettrico.	등장했을 때 일렉트릭필드를 사용한다.	とうじょう　したときに エレキフィールドを　はりめぐらせる。	登場　したときに エレキフィールドを　はりめぐらせる。	出場時， 會布下電氣場地。
+0227-psychic_surge-0000|data.Name		Psychic Surge	Psycho-Erzeuger	Psicogénesis	精神制造者	Créa-Psy	Psicogenesi	사이코메이커	サイコメイカー	サイコメイカー	精神製造者
+0227-psychic_surge-0001|data.Desc		Turns the ground into Psychic Terrain when the Pokémon enters a battle.	Erzeugt bei Kampfantritt ein Psychofeld.	Crea un campo psíquico al entrar en combate.	出场时， 会布下精神场地。	Le Pokémon crée un Champ Psychique au moment où il entre au combat.	Quando il Pokémon entra in campo, lo trasforma in un Campo Psichico.	등장했을 때 사이코필드를 사용한다.	とうじょう　したときに サイコフィールドを　はりめぐらせる。	登場　したときに サイコフィールドを　はりめぐらせる。	出場時， 會布下精神場地。
+0228-misty_surge-0000|data.Name		Misty Surge	Nebel-Erzeuger	Nebulogénesis	薄雾制造者	Créa-Brume	Nebbiogenesi	미스트메이커	ミストメイカー	ミストメイカー	薄霧製造者
+0228-misty_surge-0001|data.Desc		Turns the ground into Misty Terrain when the Pokémon enters a battle.	Erzeugt bei Kampfantritt ein Nebelfeld.	Crea un campo de niebla al entrar en combate.	出场时， 会布下薄雾场地。	Le Pokémon crée un Champ Brumeux au moment où il entre au combat.	Quando il Pokémon entra in campo, lo trasforma in un Campo Nebbioso.	등장했을 때 미스트필드를 사용한다.	とうじょう　したときに ミストフィールドを　はりめぐらせる。	登場　したときに ミストフィールドを　はりめぐらせる。	出場時， 會布下薄霧場地。
+0229-grassy_surge-0000|data.Name		Grassy Surge	Gras-Erzeuger	Herbogénesis	青草制造者	Créa-Herbe	Erbogenesi	그래스메이커	グラスメイカー	グラスメイカー	青草製造者
+0229-grassy_surge-0001|data.Desc		Turns the ground into Grassy Terrain when the Pokémon enters a battle.	Erzeugt bei Kampfantritt ein Grasfeld.	Crea un campo de hierba al entrar en combate.	出场时， 会布下青草场地。	Le Pokémon crée un Champ Herbu au moment où il entre au combat.	Quando il Pokémon entra in campo, lo trasforma in un Campo Erboso.	등장했을 때 그래스필드를 사용한다.	とうじょう　したときに グラスフィールドを　はりめぐらせる。	登場　したときに グラスフィールドを　はりめぐらせる。	出場時， 會布下青草場地。
+0230-full_metal_body-0000|data.Name		Full Metal Body	Metallprotektor	Guardia Metálica	金属防护	Métallo-Garde	Metalprotezione	메탈프로텍트	メタルプロテクト	メタルプロテクト	金屬防護
+0230-full_metal_body-0001|data.Desc		Prevents other Pokémon's moves or Abilities from lowering the Pokémon's stats.	Verhindert das Senken der Statuswerte durch Attacken und Fähigkeiten von Angreifern.	Evita que bajen sus características a causa de movimientos o habilidades de otros Pokémon.	不会因为对手的招式或特性 而被降低能力。	Empêche les stats du Pokémon de baisser à cause d'une capacité ou d'un talent.	Rende immuni alla diminuzione delle statistiche causata da abilità o mosse di altri Pokémon.	상대 기술이나 특성으로 능력을 떨어뜨릴 수 없다.	あいての　わざや　とくせいで のうりょくを　さげられない。	相手の　技や　特性で 能力を　下げられない。	不會因對手的招式或特性 而被降低能力。
+0231-shadow_shield-0000|data.Name		Shadow Shield	Phantomschutz	Guardia Espectro	幻影防守	Spectro-Bouclier	Spettroguardia	스펙터가드	ファントムガード	ファントムガード	幻影防守
+0231-shadow_shield-0001|data.Desc		Reduces the amount of damage the Pokémon takes while its HP is full.	Verringert den erlittenen Schaden bei vollen KP.	Reduce el daño sufrido si los PS están al máximo.	ＨＰ全满时， 受到的伤害会变少。	Le Pokémon reçoit moins de dégâts quand ses PV sont au maximum.	Se i PS sono al massimo, riduce il danno subito.	HP가 꽉 찼을 때 받는 데미지가 줄어든다.	ＨＰが　まんたんの　ときに うける　ダメージが　すくなくなる。	ＨＰが　満タンの　ときに 受ける　ダメージが　少なくなる。	ＨＰ全滿時， 受到的傷害會變少。
+0232-prism_armor-0000|data.Name		Prism Armor	Prismarüstung	Armadura Prisma	棱镜装甲	Prisme-Armure	Scudoprisma	프리즘아머	プリズムアーマー	プリズムアーマー	稜鏡裝甲
+0232-prism_armor-0001|data.Desc		Reduces the power of supereffective attacks taken.	Reduziert die Stärke von sehr effektiven Attacken und verringert damit den Schaden, den das Pokémon durch sie erleidet.	Mitiga el daño que le infligen los movimientos supereficaces.	受到效果绝佳的攻击时， 可以减弱其威力。	Réduit les dégâts subis lorsque le Pokémon est touché par une capacité super efficace.	Riduce la potenza delle mosse superefficaci subite.	효과가 굉장한 공격의 위력을 약하게 만든다.	こうかばつぐんに　なってしまう こうげきの　いりょくを よわめる　ことが　できる。	効果バツグンに　なってしまう 攻撃の　威力を 弱める　ことが　できる。	受到效果絕佳的攻擊時， 可減弱其威力。
+0233-neuroforce-0000|data.Name		Neuroforce	Zerebralmacht	Fuerza Cerebral	脑核之力	Cérébro-Force	Cerebroforza	브레인포스	ブレインフォース	ブレインフォース	腦核之力
+0233-neuroforce-0001|data.Desc		Powers up moves that are super effective.	Erhöht die Stärke von sehr effektiven Attacken.	Potencia los ataques supereficaces.	效果绝佳的攻击， 威力会变得更强。	Augmente encore plus les dégâts infligés par les attaques super efficaces.	Potenzia le mosse superefficaci.	효과가 굉장한 공격의 위력이 더욱 올라간다.	こうかばつぐんの　こうげきで いりょくが　さらに　あがる。	効果バツグンの　攻撃で 威力が　さらに　上がる。	可進一步提升 效果絕佳招式的威力。
+0234-intrepid_sword-0000|data.Name		Intrepid Sword	Kühnes Schwert	Espada Indómita	不挠之剑	Lame Indomptable	Spada Indomita	불요의검			不撓之劍
+0234-intrepid_sword-0001|data.Desc		Boosts the Pokémon's Attack stat when the Pokémon enters a battle.	Erhöht den Angriff-Wert des Pokemons wenn es einen Kampf beginnt.								
+0235-dauntless_shield-0000|data.Name		Dauntless Shield	Wackerer Schild	Escudo Recio		Égide Inflexible	Scudo Saldo	불굴의방패			不屈之盾
+0235-dauntless_shield-0001|data.Desc		Boosts the Pokémon's Defense stat when the Pokémon enters a battle.	Erhöht den Verteidigung-Wert des Pokemons wenn es einen Kampf beginnt.								
+0236-libero-0000|data.Name		Libero	Libero	Líbero		Libéro	Libero	리베로			自由者
+0236-libero-0001|data.Desc		Changes the Pokémon's type to the type of the move it last used.	Das Pokémon nimmt bei Einsatz einer Attacke deren Typ an.	Cambia el tipo del Pokémon al del último movimiento usado.		Le Pokémon prend le type de sa dernière capacité lancée.	Cambia il tipo del Pokémon in quello della mossa usata.	사용한 기술과 같은 타입으로 변화한다.	だした　わざと　おなじ タイプに　へんかする。	だした　技と　同じ タイプに　変化する。	
+0237-ball_fetch-0000|data.Name		Ball Fetch	Apport	Recogebolas	捡球	Ramasse Ball	Raccattapalle	볼줍기			撿球
+0237-ball_fetch-0001|data.Desc		If the Pokémon is not holding an item, it will fetch the Poké Ball from the first failed throw of the battle.									
+0238-cotton_down-0000|data.Name		Cotton Down	Wollflaum	Pelusa		Effilochage	Lanugine	솜털			棉絮
+0238-cotton_down-0001|data.Desc		When the Pokémon is hit by an attack, it scatters cotton fluff around and lowers the Speed stat of all Pokémon except itself.									
+0239-propeller_tail-0000|data.Name		Propeller Tail	Schraubflosse	Hélice Caudal	螺旋尾鳍	Propulseur	Elicopinna	스크루지느러미			螺旋尾鰭
+0239-propeller_tail-0001|data.Desc		Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.									
+0240-mirror_armor-0000|data.Name		Mirror Armor	Spiegelrüstung	Coraza Reflejo	镜甲	Armure Miroir	Blindospecchio	미러아머			鏡甲
+0240-mirror_armor-0001|data.Desc		Bounces back only the stat-lowering effects that the Pokémon receives.									
+0241-gulp_missile-0000|data.Name		Gulp Missile	Würggeschoss	Tragamisil	口导弹	Dégobage	Inghiottimissile	그대로꿀꺽미사일			口飛彈
+0241-gulp_missile-0001|data.Desc		When the Pokémon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack.									
+0242-stalwart-0000|data.Name		Stalwart	Stahlrückgrat	Acérrimo	坚毅	Nerfs d'Acier	Volontà di Ferro	굳건한신념			堅毅
+0242-stalwart-0001|data.Desc		Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.									
+0243-steam_engine-0000|data.Name		Steam Engine	Dampfantrieb	Combustible	蒸汽机	Turbine	Vapormacchina	증기기관			蒸汽機
+0243-steam_engine-0001|data.Desc		Boosts the Pokémon's Speed stat drastically if hit by a Fire- or Water-type move.									
+0244-punk_rock-0000|data.Name		Punk Rock	Punk Rock	Punk Rock	庞克摇滚	Punk Rock	Punk Rock	펑크록			龐克搖滾
+0244-punk_rock-0001|data.Desc		Boosts the power of sound-based moves. The Pokémon also takes half the damage from these kinds of moves.									
+0245-sand_spit-0000|data.Name		Sand Spit	Sandspeier	Expulsarena		Expul'Sable	Sputasabbia	모래뿜기			吐沙
+0245-sand_spit-0001|data.Desc		The Pokémon creates a sandstorm when it's hit by an attack.									
+0246-ice_scales-0000|data.Name		Ice Scales	Eisflügelstaub	Escama de Hielo	冰鳞粉	Écailles Glacées	Geloscaglie	얼음인분			冰鱗粉
+0246-ice_scales-0001|data.Desc		The Pokémon is protected by ice scales, which halve the damage taken from special moves.									
+0247-ripen-0000|data.Name		Ripen	Heranreifen	Maduración		Mûrissement	Maturazione	숙성			熟成
+0247-ripen-0001|data.Desc		Raises a stat when it eats a berry.									
+0248-ice_face-0000|data.Name		Ice Face	Tiefkühlkopf	Cara de Hielo	结冻头	Tête de Gel	Gelofaccia	아이스페이스			結凍頭
+0248-ice_face-0001|data.Desc		The Pokémon's ice head can take a physical attack as a substitute, but the attack also changes the Pokémon's appearance. The ice will be restored when it hails.									
+0249-power_spot-0000|data.Name		Power Spot	Kraftquelle	Fuente Energía	能量点	Cercle d'Énergie	Fonte Energetica	파워스폿			能量點
+0249-power_spot-0001|data.Desc		Just being next to the Pokémon powers up moves.									
+0250-mimicry-0000|data.Name		Mimicry	Mimese	Mimetismo	拟态	Mimétisme	Mimetismo	의태			擬態
+0250-mimicry-0001|data.Desc		Changes the Pokémon's type depending on the terrain.									
+0251-screen_cleaner-0000|data.Name		Screen Cleaner	Hemmungslos	Antibarrera		Brise-Barrière	Annullabarriere	배리어프리			除障
+0251-screen_cleaner-0001|data.Desc		When the Pokémon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pokémon.									
+0252-steely_spirit-0000|data.Name		Steely Spirit	Stählerner Wille	Alma Acerada	钢之意志	Boost Acier	Spiritoferreo	강철정신			鋼之意志
+0252-steely_spirit-0001|data.Desc		Powers up ally Pokémon's Steel-type moves.									
+0253-perish_body-0000|data.Name		Perish Body	Unheilskörper	Cuerpo Mortal	灭亡之躯	Corps Condamné	Ultimotocco	멸망의바디			滅亡之軀
+0253-perish_body-0001|data.Desc		When hit by a move that makes direct contact, the Pokémon and the attacker will faint after three turns unless they switch out of battle.									
+0254-wandering_spirit-0000|data.Name		Wandering Spirit	Rastlose Seele	Alma Errante	游魂	Âme Vagabonde	Anima Errante	떠도는영혼			遊魂
+0254-wandering_spirit-0001|data.Desc		The Pokémon exchanges Abilities with a Pokémon that hits it with a move that makes direct contact.									
+0255-gorilla_tactics-0000|data.Name		Gorilla Tactics	Affenfokus	Monotema	意	Entêtement	Vigorilla	무아지경			猩
+0255-gorilla_tactics-0001|data.Desc		Boosts the Pokémon's Attack stat but only allows the use of the first selected move.									
+0256-neutralizing_gas-0000|data.Name		Neutralizing Gas	Reaktionsgas	Gas Reactivo		Gaz Inhibiteur	Gas Reagente	화학변화가스			化學變化氣體
+0256-neutralizing_gas-0001|data.Desc		The Pokémon neutralizes abilities when attacked.									
+0257-pastel_veil-0000|data.Name		Pastel Veil	Pastellhülle	Velo Pastel	粉彩护幕	Voile Pastel	Pastelvelo	파스텔베일			粉彩護幕
+0257-pastel_veil-0001|data.Desc		Protects the Pokémon and its ally Pokémon from being poisoned.									
+0258-hunger_switch-0000|data.Name		Hunger Switch	Heißhunger	Mutapetito	饱了又饿	Déclic Fringale	Pancialterna	꼬르륵스위치			飽了又餓
+0258-hunger_switch-0001|data.Desc		The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of each turn.									
+0259-quick_draw-0000|data.Name		Quick Draw	Schnellschuss	Mano Rápida	速击	Tir Vif	Colpolesto	퀵드로			速擊
+0259-quick_draw-0001|data.Desc		Enables the Pokémon to move first occasionally.									
+0260-unseen_fist-0000|data.Name		Unseen Fist	Verborgene Faust	Puño Invisible	无形拳	Poing Invisible	Pugni Invisibili	보이지않는주먹			無形拳
+0260-unseen_fist-0001|data.Desc		If the Pokémon uses moves that make direct contact, it can attack the target even if the target protects itself.									
+0261-curious_medicine-0000|data.Name		Curious Medicine	Kuriose Arznei	Medicina Extraña	怪药	Breuvage Suspect	Stranofarmaco	기묘한약			怪藥
+0261-curious_medicine-0001|data.Desc		When the Pokémon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies.									
+0262-transistor-0000|data.Name		Transistor	Transistor	Transistor	电晶体	Transistor	Transistor	트랜지스터			電晶體
+0262-transistor-0001|data.Desc		Powers up Electric-type moves.									
+0263-dragons_maw-0000|data.Name		Dragon's Maw	Drachenkiefer	Mandíbula Dragón	龙颚	Dent de Dragon	Dragomascelle	용의턱			龍顎
+0263-dragons_maw-0001|data.Desc		Powers up Dragon-type moves.									
+0264-chilling_neigh-0000|data.Name		Chilling Neigh	Helles Wiehern	Relincho Blanco	苍白嘶鸣	Blanche Ruade	Nitrito Bianco	백의울음			蒼白嘶鳴
+0264-chilling_neigh-0001|data.Desc		When the Pokémon knocks out a target, it utters a chilling neigh, which boosts its Attack stat.									
+0265-grim_neigh-0000|data.Name		Grim Neigh	Dunkles Wiehern	Relincho Negro	漆黑嘶鸣	Sombre Ruade	Nitrito Nero	흑의울음			漆黑嘶鳴
+0265-grim_neigh-0001|data.Desc		When the Pokémon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat.									
+0266-as_one_chill-0000|data.Name		As One	Reitgespann	Unidad Ecuestre	人马一体	Osmose Équine	Sintonia Equina	혼연일체			人馬一體
+0266-as_one_chill-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Glastrier's Chilling Neigh Ability.									
+0267-as_one_grim-0000|data.Name		As One	Reitgespann	Unidad Ecuestre	人马一体	Osmose Équine	Sintonia Equina	혼연일체			人馬一體
+0267-as_one_grim-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.									

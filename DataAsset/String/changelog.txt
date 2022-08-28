@@ -1,4 +1,8 @@
 Sheet: Hardcode
+    * Added MENU_MOD_LOG_DEPENDENCY
+    * Added MENU_MOD_LOG_INCOMPATIBLE
+    * Added MENU_MOD_LOG_ORDER
+    * Added MENU_MOD_LOG_TITLE
 
 Sheet: Content
 
@@ -21,8 +25,6 @@ Sheet: Excl Names
 Sheet: Excl Effects
 
 Sheet: Zones
-    * Deleted key 0000-debug-0000|data.Name
-    * Added 0000-debug_zone-0000|data.Name
 
 Sheet: Maps
 

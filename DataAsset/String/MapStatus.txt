@@ -1,81 +1,81 @@
-Key		EN
-0000-blizzard-0000|data.Name		Blizzard
-0000-blizzard-0001|data.Desc		
-0000-clear-0000|data.Name		Clear
-0000-clear-0001|data.Desc		The weather is clear.
-0000-cloudy-0000|data.Name		Cloudy
-0000-cloudy-0001|data.Desc		
-0000-dark-0000|data.Name		Dark
-0000-dark-0001|data.Desc		
-0000-default_mapstatus-0000|data.Name		Default MapStatus
-0000-default_mapstatus-0001|data.Desc		
-0000-default_weather-0000|data.Name		Default Weather
-0000-default_weather-0001|data.Desc		
-0000-electric_terrain-0000|data.Name		Electric Terrain
-0000-electric_terrain-0001|data.Desc		Electric-type attacks are boosted, and all Pokémon on the floor cannot sleep.
-0000-foe_fov-0000|data.Name		Foe FOV
-0000-foe_fov-0001|data.Desc		
-0000-fog-0000|data.Name		Fog
-0000-fog-0001|data.Desc		
-0000-grassy_terrain-0000|data.Name		Grassy Terrain
-0000-grassy_terrain-0001|data.Desc		Grass-type attacks are boosted, Ground-type attacks are weakened, and all Pokémon on the floor slowly gain HP except Flying types.
-0000-gravity-0000|data.Name		Gravity
-0000-gravity-0001|data.Desc		All Pokémon on the floor become less evasive and are forced to drop to the ground.
-0000-hail-0000|data.Name		Hail
-0000-hail-0001|data.Desc		All Pokémon on the floor will take damage except Ice-types.
-0000-harsh_sun-0000|data.Name		Harsh Sun
-0000-harsh_sun-0001|data.Desc		
-0000-heavy_rain-0000|data.Name		Heavy Rain
-0000-heavy_rain-0001|data.Desc		
-0000-intrusion_check-0000|data.Name		Intrusion Check
-0000-intrusion_check-0001|data.Desc		
-0000-inverse-0000|data.Name		Inverse
-0000-inverse-0001|data.Desc		All type matchups are reversed.
-0000-items_sniffed-0000|data.Name		Items Sniffed
-0000-items_sniffed-0001|data.Desc		
-0000-magic_room-0000|data.Name		Magic Room
-0000-magic_room-0001|data.Desc		All Pokémon on the floor have their held items and abilities disabled.
-0000-map_clear_check-0000|data.Name		Map Clear Check
-0000-map_clear_check-0001|data.Desc		
-0000-map_surveyed-0000|data.Name		Map Surveyed
-0000-map_surveyed-0001|data.Desc		
-0000-mercy_revive-0000|data.Name		Mercy Revive
-0000-mercy_revive-0001|data.Desc		
-0000-misty_terrain-0000|data.Name		Misty Terrain
-0000-misty_terrain-0001|data.Desc		Dragon-type attacks are weakened, and all Pokémon are protected from major status problems.
-0000-monster_mansion-0000|data.Name		Monster Mansion
-0000-monster_mansion-0001|data.Desc		
-0000-move_ban-0000|data.Name		Move Ban
-0000-move_ban-0001|data.Desc		A move has been banned and can no longer be used.
-0000-mysterious_force-0000|data.Name		Mysterious Force
-0000-mysterious_force-0001|data.Desc		A mysterious force prevents Orbs, Machines, and special items from working.
-0000-outlaw_clear_check-0000|data.Name		Outlaw Clear Check
-0000-outlaw_clear_check-0001|data.Desc		
-0000-rain-0000|data.Name		Rain
-0000-rain-0001|data.Desc		Water-type attacks are boosted and Fire-type attacks are weakened.
-0000-rescued-0000|data.Name		Rescued
-0000-rescued-0001|data.Desc		
-0000-sandstorm-0000|data.Name		Sandstorm
-0000-sandstorm-0001|data.Desc		All Pokémon on the floor will take damage except Rock, Ground, and Steel-types. The Sp. Def of Rock-types is boosted.
-0000-scanner-0000|data.Name		Scanner
-0000-scanner-0001|data.Desc		
-0000-shop_security-0000|data.Name		Shop Security
-0000-shop_security-0001|data.Desc		
-0000-shopping-0000|data.Name		Shopping
-0000-shopping-0001|data.Desc		
-0000-snow-0000|data.Name		Snow
-0000-snow-0001|data.Desc		
-0000-somethings_stirring-0000|data.Name		Something's stirring...
-0000-somethings_stirring-0001|data.Desc		Something's approaching. The exploration team must leave the floor before it arrives, or they will be forced out of the dungeon.
-0000-stairs_sensed-0000|data.Name		Stairs Sensed
-0000-stairs_sensed-0001|data.Desc		
-0000-sunny-0000|data.Name		Sunny
-0000-sunny-0001|data.Desc		Fire-type attacks are boosted and Water-type attacks are weakened.
-0000-thief-0000|data.Name		Thief
-0000-thief-0001|data.Desc		
-0000-trick_room-0000|data.Name		Trick Room
-0000-trick_room-0001|data.Desc		Effects on all Pokémon's Movement Speed are reversed.
-0000-wind-0000|data.Name		Wind
-0000-wind-0001|data.Desc		Flying-type Pokémon are protected from their weaknesses.
-0000-wonder_room-0000|data.Name		Wonder Room
-0000-wonder_room-0001|data.Desc		Physical attacks become Special attacks, and vice versa.
+Key		EN	DE	ES	FR	KO
+0000-blizzard-0000|data.Name		Blizzard	Blizzard	Ventisca		
+0000-blizzard-0001|data.Desc						
+0000-clear-0000|data.Name		Clear	Klar	Despejado	Clair	
+0000-clear-0001|data.Desc		The weather is clear.	Das Wetter ist klar.	El tiempo está despejado.	Clair.	
+0000-cloudy-0000|data.Name		Cloudy	Wolkig	Nublado	Nuageux	
+0000-cloudy-0001|data.Desc						
+0000-dark-0000|data.Name		Dark		Oscuro		
+0000-dark-0001|data.Desc						
+0000-default_mapstatus-0000|data.Name		Default MapStatus		Estado del Mapa por defecto		
+0000-default_mapstatus-0001|data.Desc						
+0000-default_weather-0000|data.Name		Default Weather		Tiempo por defecto		
+0000-default_weather-0001|data.Desc						
+0000-electric_terrain-0000|data.Name		Electric Terrain	Elektrofeld	Campo Eléctrico	Champ Électrifié	
+0000-electric_terrain-0001|data.Desc		Electric-type attacks are boosted, and all Pokémon on the floor cannot sleep.	Elektro-Attacken sind verstärkt und alle Pokémon auf der Ebene können nicht schlafen.	Los ataques de tipo eléctrico se potencian, y todos los Pokémon en el suelo no pueden dormir.	Les attaques de type Électrik sont boostées et les Pokémon de l'étage ne peuvent pas s'endormir.	
+0000-foe_fov-0000|data.Name		Foe FOV				
+0000-foe_fov-0001|data.Desc						
+0000-fog-0000|data.Name		Fog	Nebel	Niebla	Brouillard	
+0000-fog-0001|data.Desc						
+0000-grassy_terrain-0000|data.Name		Grassy Terrain	Grasfeld	Campo de hierba	Champ Herbu	
+0000-grassy_terrain-0001|data.Desc		Grass-type attacks are boosted, Ground-type attacks are weakened, and all Pokémon on the floor slowly gain HP except Flying types.	Pflanzen-Attacken sind verstärkt, Boden-Attacken geschwächt und alle Pokémon außer Flug-Pokémon auf der Ebene erhalten langsam KP zurück.	Los ataques de tipo Planta se potencian, los ataques de tipo Tierra se debilitan y todos los Pokémon en el suelo ganan PS lentamente, excepto los de tipo Volador.		
+0000-gravity-0000|data.Name		Gravity	Erdanziehung	Gravedad	Gravitée	
+0000-gravity-0001|data.Desc		All Pokémon on the floor become less evasive and are forced to drop to the ground.	Alle Pokémon auf der Ebene können weniger ausweichen und sind gezwungen, auf den Boden zu fallen.	Todos los Pokémon del piso se vuelven menos evasivos y están forzados a caer al suelo.		
+0000-hail-0000|data.Name		Hail	Hagel	Granizo	Grêle	
+0000-hail-0001|data.Desc		All Pokémon on the floor will take damage except Ice-types.	Alle Pokémon außer Eis werden Schaden nehmen.	Todos los Pokémon del piso recibirán daño excepto los de tipo Hielo.	Tout les Pokémon de l'étage subiront des dégâts sauf les types Glace.	
+0000-harsh_sun-0000|data.Name		Harsh Sun	Strenge Sonne	Sol abrasador	Soleil Intense	
+0000-harsh_sun-0001|data.Desc						
+0000-heavy_rain-0000|data.Name		Heavy Rain	Starkregen	Diluvio	Pluie Battante	
+0000-heavy_rain-0001|data.Desc						
+0000-intrusion_check-0000|data.Name		Intrusion Check				
+0000-intrusion_check-0001|data.Desc						
+0000-inverse-0000|data.Name		Inverse	Umkehr	Inverso	Inversement	
+0000-inverse-0001|data.Desc		All type matchups are reversed.	Alle Typvor- und Nachteile sind umgekehrt.	Todos las eficacias de tipo se han invertido.	L'efficacité des types est inversée.	
+0000-items_sniffed-0000|data.Name		Items Sniffed				
+0000-items_sniffed-0001|data.Desc						
+0000-magic_room-0000|data.Name		Magic Room	Magieraum	Zona Mágica	Zone Magique	
+0000-magic_room-0001|data.Desc		All Pokémon on the floor have their held items and abilities disabled.	Die Items und Fähigkeiten aller Pokémon auf der Ebene werden unbrauchbar.	Todos los Pokémon del piso tienen los objetos llevados y las habilidades desactivados.	Tout les Pokémon de l'étage perdent l'effet de leurs objets tenus.	
+0000-map_clear_check-0000|data.Name		Map Clear Check				
+0000-map_clear_check-0001|data.Desc						
+0000-map_surveyed-0000|data.Name		Map Surveyed	Karte überschaut	Mapa Inspeccionado		
+0000-map_surveyed-0001|data.Desc						
+0000-mercy_revive-0000|data.Name		Mercy Revive	Gnädige Wiederbelebung			
+0000-mercy_revive-0001|data.Desc						
+0000-misty_terrain-0000|data.Name		Misty Terrain	Nebelfeld	Campo de niebla	Champ Brumeux	
+0000-misty_terrain-0001|data.Desc		Dragon-type attacks are weakened, and all Pokémon are protected from major status problems.	Drachen-Attacken sind geschwächt und alle Pokémon auf der Ebene sind vor Statusproblemen geschützt.	Los ataques de tipo Dragón se debilitan, y todos los Pokémon están protegidos de graves problemas de estado.	Les attaques de type Dragon sont affaiblies et tout les Pokémon sont protégés des principaux problèmes de status.	
+0000-monster_mansion-0000|data.Name		Monster Mansion				
+0000-monster_mansion-0001|data.Desc						
+0000-move_ban-0000|data.Name		Move Ban	Attackenverbannung	Prohibición de movimiento	Interdiction de Capacité	
+0000-move_ban-0001|data.Desc		A move has been banned and can no longer be used.	Eine Attacke wurde gebannt und kann nicht mehr länger benutzt werden.	Un movimiento ha sido prohibido y no se puede usar más.	Une capacité est interdite, elle ne peut plus être utilisée.	
+0000-mysterious_force-0000|data.Name		Mysterious Force	Mysteriöse Kraft	Fuerza Misteriosa	Aura Mystère	
+0000-mysterious_force-0001|data.Desc		A mysterious force prevents Orbs, Machines, and special items from working.	Eine mysteriöse Kraft verhindert den Einsatz von Orbs, Maschinen und speziellen Items.	Una fuerza misteriosa que evita que las Esferas, máquinas y otros objetos especiales funcionen.		
+0000-outlaw_clear_check-0000|data.Name		Outlaw Clear Check				
+0000-outlaw_clear_check-0001|data.Desc						
+0000-rain-0000|data.Name		Rain	Regen	Lluvioso	Pluvieux	
+0000-rain-0001|data.Desc		Water-type attacks are boosted and Fire-type attacks are weakened.	Wasser-Attacken sind verstärkt und Feuer-Attacken sind geschwächt.	Los ataque de tipo Agua se potencian y los ataques de tipo Fuego se debilitan.	Les attaques de type de type Eau sont boostées et les attaques de type Feu affaiblies.	
+0000-rescued-0000|data.Name		Rescued				
+0000-rescued-0001|data.Desc						
+0000-sandstorm-0000|data.Name		Sandstorm	Sandstorm	Tormenta de arena	Tempête de sable	
+0000-sandstorm-0001|data.Desc		All Pokémon on the floor will take damage except Rock, Ground, and Steel-types. The Sp. Def of Rock-types is boosted.	Alle Pokémon, welche nicht Gestein, Boden und Stahl als Typ besitzen, werden auf der Ebene Schaden nehmen. Die Spezial-Verteidigung von Gestein-Typen ist erhöht.	Todos los Pokémon del piso recibirán daño, excepto los de tipo Roca, Tierra y Acero. Aumenta la Defensa Especial de los de tipo Roca.		
+0000-scanner-0000|data.Name		Scanner		Escáner		
+0000-scanner-0001|data.Desc						
+0000-shop_security-0000|data.Name		Shop Security				
+0000-shop_security-0001|data.Desc						
+0000-shopping-0000|data.Name		Shopping				
+0000-shopping-0001|data.Desc						
+0000-snow-0000|data.Name		Snow	Schnee	Nieve	Neigeux	
+0000-snow-0001|data.Desc						
+0000-somethings_stirring-0000|data.Name		Something's stirring...	Da ist irgendwas...	Algo se está moviendo...		
+0000-somethings_stirring-0001|data.Desc		Something's approaching. The exploration team must leave the floor before it arrives, or they will be forced out of the dungeon.	Es scheint näher zu kommen. Das Erkundungsteam muss die nächste Ebene erreichen bevor es ankommt oder es wird gezwungen den Dungeon zu verlassen.	Algo se está acercando. El equipo de exploración debe abandonar el piso antes de que llegue, o serán forzados a salir de la mazmorra.		
+0000-stairs_sensed-0000|data.Name		Stairs Sensed	Treppen wahrgenommen	Escaleras Detectadas		
+0000-stairs_sensed-0001|data.Desc						
+0000-sunny-0000|data.Name		Sunny	Sonnig	Soleado	Ensoleillé	쾌청
+0000-sunny-0001|data.Desc		Fire-type attacks are boosted and Water-type attacks are weakened.	Feuer-Attacken sind verstärkt und Wasser-Attacken sind geschwächt.	Los ataques de tipo Fuego se potencian y los ataques de tipo Agua se debilitan.	Les attaques de type de type Feu sont boostées et les attaques de type Eau affaiblies.	
+0000-thief-0000|data.Name		Thief		Ladrón		
+0000-thief-0001|data.Desc						
+0000-trick_room-0000|data.Name		Trick Room	Bizarroraum	Espacio Raro	Distorsion	트릭룸
+0000-trick_room-0001|data.Desc		Effects on all Pokémon's Movement Speed are reversed.	Verursacht, dass das Tempo aller Pokémon umgekehrt sind.	Los efectos de la Velocidad de Movimiento de los Pokémon se invierten.		
+0000-wind-0000|data.Name		Wind	Wind	Viento	Courant d'Air	
+0000-wind-0001|data.Desc		Flying-type Pokémon are protected from their weaknesses.	Flug-Pokémon sind gegen ihre Schwächen geschützt.	Los Pokémon de tipo Volador están protegidos de sus debilidades.	Les Pokémon de type Vol sont protégés de leurs faiblesses.	
+0000-wonder_room-0000|data.Name		Wonder Room	Wunderraum	Zona Extraña	Zone Étrange	
+0000-wonder_room-0001|data.Desc		Physical attacks become Special attacks, and vice versa.	Physische Attacken werden zu speziellen Attacken und umgekehrt.	Los ataques Físicos se vuelve Especiales, y viceversa.	Les attaques physiques deviennent des attaques spéciales et inversement.	
