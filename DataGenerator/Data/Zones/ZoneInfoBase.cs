@@ -1483,6 +1483,27 @@ namespace DataGenerator.Data
                     PerlinWaterStep<MapGenContext> coverStep = new PerlinWaterStep<MapGenContext>(new RandRange(20), 3, new Tile(coverTerrain), new MapTerrainStencil<MapGenContext>(true, false, false), 1);
                     layout.GenSteps.Add(PR_WATER, coverStep);
 
+                    //TerrainBorderStencil<MapGenContext> stencil = new TerrainBorderStencil<MapGenContext>();
+                    //stencil.MatchTiles.Add(new Tile("wall"));
+                    //stencil.BorderTiles.Add(new Tile("grass"));
+                    //stencil.BorderTiles.Add(new Tile("walkable"));
+                    //stencil.FullSide = true;
+                    //stencil.Intrude = true;
+                    
+                    MapTerrainStencil<MapGenContext> stencil = new MapTerrainStencil<MapGenContext>(true, false, false);
+
+                    NoChokepointStencil<MapGenContext> noChoke = new NoChokepointStencil<MapGenContext>();
+                    MultiStencil<MapGenContext> combined = new MultiStencil<MapGenContext>();
+                    combined.List.Add(stencil);
+                    combined.List.Add(noChoke);
+                    combined.RequireAll = true;
+
+                    LoadBlobStep<MapGenContext> wallStep = new LoadBlobStep<MapGenContext>();
+                    wallStep.TerrainStencil = combined;
+                    wallStep.PreventChanges = PostProcType.Panel & PostProcType.Terrain;
+                    wallStep.Maps.Add("test_blob", 10);
+                    wallStep.Amount = new RandRange(10, 15);
+                    layout.GenSteps.Add(PR_WATER, wallStep);
 
                     //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
