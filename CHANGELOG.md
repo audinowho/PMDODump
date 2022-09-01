@@ -3,4 +3,5 @@
 * Fix sableye's swap shop
 * Ally AI uses leech seed correctly
 * Moves menu uses PMD's hotkeys
+* Allow sort key in item swap menu
 * Add LoadBlobStep, allowing scattered placement of a remade map

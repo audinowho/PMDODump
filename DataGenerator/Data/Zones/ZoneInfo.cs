@@ -721,7 +721,7 @@ namespace DataGenerator.Data
 
                             AddDrawGridSteps(layout);
 
-                            AddStairStep(layout, false);
+                            AddStairStep(layout, true);
 
                             floorSegment.Floors.Add(layout);
                         }
