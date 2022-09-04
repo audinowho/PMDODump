@@ -1,61 +1,61 @@
-Key		EN	DE	ES	FR
-0000-ambush_forest-0000|data.Name		Ambush Forest	Auflauerwald	Bosque Emboscada	
-0000-ambush_forest-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Ambush Forest\nB{0}F	Auflauerwald\n{0}.KG	Bosque Emboscada\nP-{0}	
-0000-bramble_woods-0000|data.Name		Bramble Woods			
-0000-bramble_woods-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Bramble Woods\nB{0}F			
-0000-bramble_woods-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Bramble Thicket\nB{0}F			
-0000-cave_of_solace-0000|data.Name		Cave of Solace	Höhle des Trostes	Cueva Consuelo	
-0000-cave_of_solace-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Cave of Solace\nB{0}F	Höhle des Trostes\n{0}.KG	Cueva Consuelo\nP-{0}	
-0000-cave_of_whispers-0000|data.Name		Cave of Whispers	Höhle des Geflüsters	Cueva de los Susurros	
-0000-cave_of_whispers-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Cave of Whispers\nB{0}F	Höhle des Geflüsters\n{0}.KG	Cueva de los Susurros\nP-{0}	
-0000-champions_road-0000|data.Name		Champion's Road	Pfad des Champions	Ruta del Campeón	
-0000-champions_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Champion's Road\n{0}F	Pfad des Champions\n{0}.OG	Ruta del Campeón\nP{0}	
-0000-debug_zone-0000|data.Name		Debug Zone			
-0000-faded_trail-0000|data.Name		Faded Trail	Verbleichender Pfad	Sendero Desvanecido 	
-0000-faded_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faded Trail\n{0}F	Verbleichender Pfad\n{0}.OG	Sendero Desvanecido\nP{0}	
-0000-faded_trail-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Hidden Trail\nB{0}F			
-0000-faulted_cliffs-0000|data.Name		Faulted Cliffs			
-0000-faulted_cliffs-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faulted Cliffs\n{0}F			
-0000-flyaway_cliffs-0000|data.Name		Flyaway Cliffs	Geladene Klippen	Acantilado Nido	
-0000-flyaway_cliffs-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Flyaway Cliffs\n{0}F	Geladene Klippen\n{0}.OG	Acantilado Nido\nP{0}	
-0000-forsaken_desert-0000|data.Name		Forsaken Desert	Verlassene Wüste	Desierto Abandonado	
-0000-forsaken_desert-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Forsaken Desert\n{0}F	Verlassene Wüste\n{0}.OG	Desierto Abandonado\nP{0}	
-0000-guildmaster_island-0000|data.Name		Guildmaster Island	Gildenmeister-Insel	Isla Maestro	Île du Maître de la Guilde
-0000-guildmaster_trail-0000|data.Name		Guildmaster Trail	Gildenmeister-Pfad	Sendero del Maestro	
-0000-guildmaster_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Guildmaster Trail\n{0}F	Gildenmeister-Pfad\n{0}.OG	Sendero del Maestro\nP{0}	
-0000-igneous_tunnel-0000|data.Name		Igneous Tunnel	Feuriger Tunnel	Túnel Ígneo	
-0000-igneous_tunnel-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Igneous Tunnel\nB{0}F	Feuriger Tunnel\n{0}.KG	Túnel Ígneo\nP-{0}	
-0000-illusion_ridge-0000|data.Name		Illusion Ridge	Illusionsstrecke	Cordillera Ilusión	
-0000-illusion_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Illusion Ridge\n{0}F	Illusionsstrecke\n{0}.OG	Cordillera Ilusión\nP{0}	
-0000-lunar_range-0000|data.Name		Lunar Range	Mond-Landschaft	Cordillera Lunar	
-0000-lunar_range-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Lunar Range\n{0}F	Mond-Landschaft\n{0}.OG	Cordillera Lunar\nP{0}	
-0000-overgrown_wilds-0000|data.Name		Overgrown Wilds	Überwachsene Wildnis		
-0000-overgrown_wilds-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Overgrown Wilds\n{0}F	Überwachsene Wildnis\n{0}.OG		
-0000-relic_tower-0000|data.Name		Relic Tower	Reliktenturm	Torre Reliquia	
-0000-relic_tower-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Relic Tower\n{0}F	Reliktenturm\n{0}.OG	Torre Reliquia\nP{0}	
-0000-royal_halls-0000|data.Name		Royal Halls	Königliche Hallen	Salones Reales	
-0000-royal_halls-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Royal Halls\nB{0}F	Königliche Hallen\n{0}.KG	Salones Reales\nP-{0}	
-0000-secret_garden-0000|data.Name		Secret Garden	Geheimer Garten	Jardín Secreto	
-0000-secret_garden-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Secret Garden\nB{0}F	Geheimer Garten\n{0}.KG	Jardín Secreto\nP-{0}	
-0000-shimmer_bay-0000|data.Name		Shimmer Bay	Schimmernde Bucht	Bahía Brillante	
-0000-shimmer_bay-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Shimmer Bay\n{0}F	Schimmernde Bucht\n{0}.OG	Bahía Brillante\nP{0}	
-0000-sickly_hollow-0000|data.Name		Sickly Hollow			
-0000-sickly_hollow-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Sickly Hollow\nB{0}F			
-0000-snowbound_path-0000|data.Name		Snowbound Path		Paso Helado Errático	
-0000-snowbound_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Snowbound Path\n{0}F		Paso Helado Errático\nP{0}	
-0000-the_abyss-0000|data.Name		The Abyss	Die Kluft	El Abismo	
-0000-the_abyss-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Abyss\nB{0}F	Die Kluft\n{0}.KG	El Abismo\nP-{0}	
-0000-the_sky-0000|data.Name		The Sky	Der Himmel	El Cielo	
-0000-the_sky-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Sky\n{0}F	Der Himmel\n{0}.OG	El Cielo\nP{0}	
-0000-thunderstruck_pass-0000|data.Name		Thunderstruck Pass	Donnerschlag-Übergang	Senda Atónita	
-0000-thunderstruck_pass-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Thunderstruck Pass\n{0}F	Donnerschlag-Übergang {0}.OG	Senda Atónita\nP{0}	
-0000-training_maze-0000|data.Name		Training Maze	Trainings Labyrinth	Laberinto Entrenamiento	
-0000-treacherous_mountain-0000|data.Name		Treacherous Mountain	Tückisches Gebirge	Montaña Traicionera	
-0000-treacherous_mountain-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Treacherous Mountain\n{0}F	Tückisches Gebirge\n{0}.OG	Montaña Traicionera\nP{0}	
-0000-tropical_path-0000|data.Name		Tropical Path	Tropischer Pfad	Paso Tropical	
-0000-tropical_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tropical Path\n{0}F	Tropischer Pfad\n{0}.OG	Paso Tropical\nP{0}	
-0000-tropical_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room			
-0000-wayward_wetlands-0000|data.Name		Wayward Wetlands	Launische Auen	Humedales Caprichosos	
-0000-wayward_wetlands-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wayward Wetlands\nB{0}F	Launische Auen\n{0}.KG	Humedales Caprichosos\nP-{0}	
-0000-windy_valley-0000|data.Name		Windy Valley	Tal des Windes	Valle Ventoso	
-0000-windy_valley-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Windy Valley\nB{0}F	Tal des Windes\n{0}.KG	Valle Ventoso\nP-{0}	
+Key		EN
+0000-ambush_forest-0000|data.Name		Ambush Forest
+0000-ambush_forest-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Ambush Forest\nB{0}F
+0000-bramble_woods-0000|data.Name		Bramble Woods
+0000-bramble_woods-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Bramble Woods\nB{0}F
+0000-bramble_woods-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Bramble Thicket\nB{0}F
+0000-cave_of_solace-0000|data.Name		Cave of Solace
+0000-cave_of_solace-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Cave of Solace\nB{0}F
+0000-cave_of_whispers-0000|data.Name		Cave of Whispers
+0000-cave_of_whispers-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Cave of Whispers\nB{0}F
+0000-champions_road-0000|data.Name		Champion's Road
+0000-champions_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Champion's Road\n{0}F
+0000-debug_zone-0000|data.Name		Debug Zone
+0000-faded_trail-0000|data.Name		Faded Trail
+0000-faded_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faded Trail\n{0}F
+0000-faded_trail-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Hidden Trail\nB{0}F
+0000-faulted_cliffs-0000|data.Name		Faulted Cliffs
+0000-faulted_cliffs-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faulted Cliffs\n{0}F
+0000-flyaway_cliffs-0000|data.Name		Flyaway Cliffs
+0000-flyaway_cliffs-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Flyaway Cliffs\n{0}F
+0000-forsaken_desert-0000|data.Name		Forsaken Desert
+0000-forsaken_desert-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Forsaken Desert\n{0}F
+0000-guildmaster_island-0000|data.Name		Guildmaster Island
+0000-guildmaster_trail-0000|data.Name		Guildmaster Trail
+0000-guildmaster_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Guildmaster Trail\n{0}F
+0000-igneous_tunnel-0000|data.Name		Igneous Tunnel
+0000-igneous_tunnel-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Igneous Tunnel\nB{0}F
+0000-illusion_ridge-0000|data.Name		Illusion Ridge
+0000-illusion_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Illusion Ridge\n{0}F
+0000-lunar_range-0000|data.Name		Lunar Range
+0000-lunar_range-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Lunar Range\n{0}F
+0000-overgrown_wilds-0000|data.Name		Overgrown Wilds
+0000-overgrown_wilds-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Overgrown Wilds\n{0}F
+0000-relic_tower-0000|data.Name		Relic Tower
+0000-relic_tower-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Relic Tower\n{0}F
+0000-royal_halls-0000|data.Name		Royal Halls
+0000-royal_halls-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Royal Halls\nB{0}F
+0000-secret_garden-0000|data.Name		Secret Garden
+0000-secret_garden-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Secret Garden\nB{0}F
+0000-shimmer_bay-0000|data.Name		Shimmer Bay
+0000-shimmer_bay-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Shimmer Bay\n{0}F
+0000-sickly_hollow-0000|data.Name		Sickly Hollow
+0000-sickly_hollow-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Sickly Hollow\nB{0}F
+0000-snowbound_path-0000|data.Name		Snowbound Path
+0000-snowbound_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Snowbound Path\n{0}F
+0000-the_abyss-0000|data.Name		The Abyss
+0000-the_abyss-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Abyss\nB{0}F
+0000-the_sky-0000|data.Name		The Sky
+0000-the_sky-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Sky\n{0}F
+0000-thunderstruck_pass-0000|data.Name		Thunderstruck Pass
+0000-thunderstruck_pass-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Thunderstruck Pass\n{0}F
+0000-training_maze-0000|data.Name		Training Maze
+0000-treacherous_mountain-0000|data.Name		Treacherous Mountain
+0000-treacherous_mountain-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Treacherous Mountain\n{0}F
+0000-tropical_path-0000|data.Name		Tropical Path
+0000-tropical_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tropical Path\n{0}F
+0000-tropical_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room
+0000-wayward_wetlands-0000|data.Name		Wayward Wetlands
+0000-wayward_wetlands-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wayward Wetlands\nB{0}F
+0000-windy_valley-0000|data.Name		Windy Valley
+0000-windy_valley-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Windy Valley\nB{0}F

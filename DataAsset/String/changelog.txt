@@ -1,8 +1,4 @@
 Sheet: Hardcode
-    * Added MENU_MOD_LOG_DEPENDENCY
-    * Added MENU_MOD_LOG_INCOMPATIBLE
-    * Added MENU_MOD_LOG_ORDER
-    * Added MENU_MOD_LOG_TITLE
 
 Sheet: Content
 
@@ -27,6 +23,7 @@ Sheet: Excl Effects
 Sheet: Zones
 
 Sheet: Maps
+    * Added test_blob-0000|data.Name
 
 Sheet: GroundMaps
 
