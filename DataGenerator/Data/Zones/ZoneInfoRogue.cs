@@ -4810,7 +4810,7 @@ namespace DataGenerator.Data
 
                 if (ii <= 8)
                     floorData.CharSight = Map.SightRange.Dark;
-                else if (ii <= 12)
+                else if (ii <= 10)
                     floorData.CharSight = Map.SightRange.Clear;
                 else
                     floorData.CharSight = Map.SightRange.Dark;
@@ -4826,21 +4826,21 @@ namespace DataGenerator.Data
 
                 //Tilesets
                 if (ii <= 4)
-                    AddTextureData(layout, "purity_forest_9_wall", "purity_forest_9_floor", "purity_forest_9_secondary", "normal");
+                    AddSpecificTextureData(layout, "purity_forest_9_wall", "purity_forest_9_floor", "purity_forest_9_secondary", "tall_grass", "normal");
                 else if (ii <= 12)
-                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "bug");
+                    AddSpecificTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "tall_grass", "bug");
                 else if (ii <= 16)
-                    AddTextureData(layout, "forest_area_wall", "forest_area_floor", "forest_area_secondary", "flying");
+                    AddSpecificTextureData(layout, "forest_area_wall", "forest_area_floor", "forest_area_secondary", "tall_grass", "flying");
                 else if (ii <= 20)
-                    AddTextureData(layout, "forest_path_wall", "forest_path_floor", "forest_path_secondary", "grass");
+                    AddSpecificTextureData(layout, "forest_path_wall", "forest_path_floor", "forest_path_secondary", "tall_grass", "grass");
                 else if (ii <= 24)
                     AddTextureData(layout, "western_cave_1_wall", "western_cave_1_floor", "western_cave_1_secondary", "rock");
                 else if (ii <= 27)
                     AddTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary", "psychic");
                 else if (ii <= 34)
-                    AddTextureData(layout, "treeshroud_forest_2_wall", "treeshroud_forest_2_floor", "treeshroud_forest_2_secondary", "normal");
+                    AddSpecificTextureData(layout, "treeshroud_forest_2_wall", "treeshroud_forest_2_floor", "treeshroud_forest_2_secondary", "tall_grass", "normal");
                 else
-                    AddTextureData(layout, "foggy_forest_wall", "foggy_forest_floor", "foggy_forest_secondary", "fairy");
+                    AddSpecificTextureData(layout, "foggy_forest_wall", "foggy_forest_floor", "foggy_forest_secondary", "tall_grass", "fairy");
 
                 //wonder tiles
                 RandRange wonderTileRange;
@@ -5431,18 +5431,41 @@ namespace DataGenerator.Data
 
                 if (ii <= 4)
                 {
-                    //nothing
+                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 80), new RandRange(50));
                 }
-                else if (ii < 9)
-                    AddWaterSteps(layout, "water", new RandRange(30), false);//water
-                else if (ii <= 12)
+                else if (ii <= 8)
+                {
+                    AddWaterSteps(layout, "water", new RandRange(20), false);//water
+                    AddGrassSteps(layout, new RandRange(4, 7), new IntRange(4, 80), new RandRange(30));
+                }
+                else if (ii <= 10)
+                {
                     AddWaterSteps(layout, "water", new RandRange(30));//water
+                }
+                else if (ii <= 12)
+                {
+                    AddWaterSteps(layout, "water", new RandRange(30));//water
+                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 80), new RandRange(30));
+                }
                 else if (ii <= 16)
+                {
                     AddWaterSteps(layout, "water", new RandRange(25));//water
+                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 80), new RandRange(30));
+                }
                 else if (ii <= 20)
+                {
                     AddWaterSteps(layout, "water", new RandRange(15));//water
-                else
+                    AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 80), new RandRange(30));
+                }
+                else if (ii < 27)
+                {
                     AddWaterSteps(layout, "water", new RandRange(22));//water
+                }
+                else
+                {
+                    AddWaterSteps(layout, "water", new RandRange(22));//water
+                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 70), new RandRange(30));
+                }
 
 
 
