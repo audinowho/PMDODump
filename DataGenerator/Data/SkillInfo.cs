@@ -4195,6 +4195,8 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(75));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice

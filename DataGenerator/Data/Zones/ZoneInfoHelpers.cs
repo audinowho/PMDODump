@@ -121,6 +121,26 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_TEXTURES, textureStep);
         }
 
+        public static void AddSpecificTextureData<T>(MapGen<T> layout, string block, string ground, string water, string grass, string element, bool independent = false) where T : BaseMapGenContext
+        {
+            MapDictTextureStep<T> textureStep = new MapDictTextureStep<T>();
+            {
+                textureStep.BlankBG = block;
+                textureStep.TextureMap["floor"] = ground;
+                textureStep.TextureMap["unbreakable"] = block;
+                textureStep.TextureMap["wall"] = block;
+                textureStep.TextureMap["water"] = water;
+                textureStep.TextureMap["lava"] = water;
+                textureStep.TextureMap["pit"] = water;
+                textureStep.TextureMap["poison_water"] = water;
+                textureStep.TextureMap["grass"] = grass;
+            }
+            textureStep.GroundElement = element;
+            textureStep.LayeredGround = true;
+            layout.GenSteps.Add(PR_TEXTURES, textureStep);
+
+        }
+
         public static void AddRespawnData<T>(MapGen<T> layout, int maxFoes, int respawnTime) where T : BaseMapGenContext
         {
             MobSpawnSettingsStep<T> spawnStep = new MobSpawnSettingsStep<T>(maxFoes, respawnTime);
@@ -201,6 +221,32 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<T>(new Tile(terrain)));
             if (eraseIsolated)
                 layout.GenSteps.Add(PR_WATER_DE_ISOLATE, new EraseIsolatedStep<T>(new Tile(terrain)));
+        }
+        public static void AddGrassSteps<T>(MapGen<T> layout, RandRange roomBlobCount, IntRange roomBlobArea, RandRange hallPercent) where T : BaseMapGenContext
+        {
+            string coverTerrain = "grass";
+            {
+                MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false);
+                BlobTilePercentStencil<T> terrainPercentStencil = new BlobTilePercentStencil<T>(50, terrainStencil);
+
+                MatchTerrainStencil<T> matchStencil = new MatchTerrainStencil<T>();
+                matchStencil.MatchTiles.Add(new Tile("floor"));
+                matchStencil.MatchTiles.Add(new Tile("grass"));
+                NoChokepointStencil<T> roomStencil = new NoChokepointStencil<T>(matchStencil);
+                BlobWaterStep<T> coverStep = new BlobWaterStep<T>(roomBlobCount, new Tile(coverTerrain), new MapTerrainStencil<T>(true, false, false), new MultiBlobStencil<T>(false, terrainPercentStencil, roomStencil), roomBlobArea, new IntRange(10, 30));
+                layout.GenSteps.Add(PR_WATER, coverStep);
+            }
+            {
+                MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false);
+                MatchTerrainStencil<T> matchStencil = new MatchTerrainStencil<T>();
+                matchStencil.MatchTiles.Add(new Tile("floor"));
+                matchStencil.MatchTiles.Add(new Tile("grass"));
+                NoChokepointTerrainStencil<T> roomStencil = new NoChokepointTerrainStencil<T>(matchStencil);
+                roomStencil.Negate = true;
+                PerlinWaterStep<T> coverStep = new PerlinWaterStep<T>(hallPercent, 4, new Tile(coverTerrain), new MultiTerrainStencil<T>(false, terrainStencil, roomStencil), 0, false);
+                layout.GenSteps.Add(PR_WATER, coverStep);
+            }
+
         }
 
 

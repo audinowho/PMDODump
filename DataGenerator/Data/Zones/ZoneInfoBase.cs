@@ -1311,8 +1311,13 @@ namespace DataGenerator.Data
                     //layout.GenSteps.Add(PR_WATER, floorStep);
 
                     //put the walls back in via "water" algorithm
+
+                    MatchTerrainStencil<ListMapGenContext> matchStencil = new MatchTerrainStencil<ListMapGenContext>();
+                    matchStencil.MatchTiles.Add(new Tile("floor"));
+                    matchStencil.MatchTiles.Add(new Tile("grass"));
+                    NoChokepointStencil<ListMapGenContext> roomStencil = new NoChokepointStencil<ListMapGenContext>(matchStencil);
                     string wallTerrain = "wall";
-                    IntrudingBlobWaterStep<ListMapGenContext> wallStep = new IntrudingBlobWaterStep<ListMapGenContext>(new RandRange(10), new Tile(wallTerrain), new DefaultTerrainStencil<ListMapGenContext>(), 0, new RandRange(20));
+                    BlobWaterStep<ListMapGenContext> wallStep = new BlobWaterStep<ListMapGenContext>(new RandRange(10), new Tile(wallTerrain), new DefaultTerrainStencil<ListMapGenContext>(), roomStencil, new IntRange(1, 20), new IntRange(1, 20));
                     layout.GenSteps.Add(PR_WATER, wallStep);
 
                     //Remove walls where diagonals of water exist and replace with water
@@ -1492,11 +1497,10 @@ namespace DataGenerator.Data
                     
                     MapTerrainStencil<MapGenContext> stencil = new MapTerrainStencil<MapGenContext>(true, false, false);
 
-                    NoChokepointStencil<MapGenContext> noChoke = new NoChokepointStencil<MapGenContext>();
-                    MultiStencil<MapGenContext> combined = new MultiStencil<MapGenContext>();
-                    combined.List.Add(stencil);
+                    NoChokepointStencil<MapGenContext> noChoke = new NoChokepointStencil<MapGenContext>(new MapTerrainStencil<MapGenContext>(true, false, false));
+                    MultiBlobStencil<MapGenContext> combined = new MultiBlobStencil<MapGenContext>();
+                    combined.List.Add(new BlobTileStencil<MapGenContext>(stencil));
                     combined.List.Add(noChoke);
-                    combined.RequireAll = true;
 
                     LoadBlobStep<MapGenContext> wallStep = new LoadBlobStep<MapGenContext>();
                     wallStep.TerrainStencil = combined;
