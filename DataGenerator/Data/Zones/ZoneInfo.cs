@@ -899,14 +899,26 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
+                        if (ii < 5)
+                            AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
+                        else
+                            AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         if (ii < 2)
+                        {
                             AddWaterSteps(layout, "pit", new RandRange(20));//abyss
+                            AddGrassSteps(layout, new RandRange(3, 7), new IntRange(4, 70), new RandRange(20));
+                        }
                         else if (ii < 5)
+                        {
                             AddWaterSteps(layout, "pit", new RandRange(60));//abyss
+                            AddGrassSteps(layout, new RandRange(0), new IntRange(4, 70), new RandRange(30));
+                        }
                         else
+                        {
                             AddWaterSteps(layout, "pit", new RandRange(40));//abyss
+                            AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 70), new RandRange(10));
+                        }
 
 
                         //Tilesets
@@ -914,7 +926,7 @@ namespace DataGenerator.Data
                         if (ii < 5)
                             AddTextureData(layout, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary", "flying");
                         else
-                            AddTextureData(layout, "hidden_highland_wall", "hidden_highland_floor", "hidden_highland_secondary", "flying");
+                            AddSpecificTextureData(layout, "hidden_highland_wall", "hidden_highland_floor", "hidden_highland_secondary", "tall_grass", "flying");
 
                         //money - 765P to 3,315P
                         AddMoneyData(layout, new RandRange(1, 4));
@@ -3808,13 +3820,17 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
+                        AddFloorData(layout, "B06. Bramble Woods.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+
                         if (ii < 3)
-                            AddFloorData(layout, "B06. Bramble Woods.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
+                        {
+
+                        }
                         else
-                            AddFloorData(layout, "B06. Bramble Woods.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddGrassSteps(layout, new RandRange(2, 5), new IntRange(4, 50), new RandRange(50));
 
                         //Tilesets
-                        AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "bug");
+                        AddSpecificTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "tall_grass_dark", "bug");
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(5, 7), "tile_wonder");//wonder tile
@@ -3956,7 +3972,7 @@ namespace DataGenerator.Data
                             }
                         }
 
-                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+                        //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -4104,8 +4120,10 @@ namespace DataGenerator.Data
                         //Floor settings
                         AddFloorData(layout, "B19. Bramble Thicket.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
+                        AddGrassSteps(layout, new RandRange(3, 7), new IntRange(4, 50), new RandRange(50));
+
                         //Tilesets
-                        AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "bug");
+                        AddSpecificTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "tall_grass_dark", "bug");
 
                         //money - 315P to 1,260P
                         AddMoneyData(layout, new RandRange(1, 4));
@@ -4953,7 +4971,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+                        //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }

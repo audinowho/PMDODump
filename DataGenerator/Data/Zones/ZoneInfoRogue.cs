@@ -2469,9 +2469,9 @@ namespace DataGenerator.Data
                 else if (ii < 9)
                     AddTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary", "water");
                 else if (ii < 11)
-                    AddTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", "ground");
+                    AddSpecificTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", "tall_grass_dark", "ground");
                 else if (ii < 14)
-                    AddTextureData(layout, "quicksand_unused_wall", "quicksand_unused_floor", "quicksand_unused_secondary", "fairy");
+                    AddSpecificTextureData(layout, "quicksand_unused_wall", "quicksand_unused_floor", "quicksand_unused_secondary", "tall_grass_dark", "fairy");
                 else if (ii < 17)
                     AddTextureData(layout, "mt_blaze_wall", "mt_blaze_floor", "mt_blaze_secondary", "fire");
                 else if (ii < 19)
@@ -3062,7 +3062,20 @@ namespace DataGenerator.Data
                 else
                     AddWaterSteps(layout, "pit", new RandRange(25));//abyss
 
-                layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+                //grasses
+                if (ii < 9)
+                {
+
+                }
+                else if (ii < 11)
+                {
+                    AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 70), new RandRange(35));
+                }
+                else if (ii < 13)
+                {
+                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 70), new RandRange(10));
+                }
+                //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                 floorSegment.Floors.Add(layout);
             }
@@ -4838,9 +4851,9 @@ namespace DataGenerator.Data
                 else if (ii <= 27)
                     AddTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary", "psychic");
                 else if (ii <= 34)
-                    AddSpecificTextureData(layout, "treeshroud_forest_2_wall", "treeshroud_forest_2_floor", "treeshroud_forest_2_secondary", "tall_grass", "normal");
+                    AddSpecificTextureData(layout, "treeshroud_forest_2_wall", "treeshroud_forest_2_floor", "treeshroud_forest_2_secondary", "tall_grass_dark", "normal");
                 else
-                    AddSpecificTextureData(layout, "foggy_forest_wall", "foggy_forest_floor", "foggy_forest_secondary", "tall_grass", "fairy");
+                    AddTextureData(layout, "foggy_forest_wall", "foggy_forest_floor", "foggy_forest_secondary", "fairy");
 
                 //wonder tiles
                 RandRange wonderTileRange;
