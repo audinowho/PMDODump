@@ -1225,6 +1225,7 @@ namespace DataGenerator.Data
                 item.Icon = 0;
                 item.Price = 50;
                 item.ArcThrow = true;
+                item.BreakOnThrow = true;
                 item.UseEvent.Category = BattleData.SkillCategory.Magical;
                 item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
@@ -1266,6 +1267,7 @@ namespace DataGenerator.Data
                 item.Icon = 0;
                 item.Price = 3;
                 item.ArcThrow = true;
+                item.BreakOnThrow = true;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
                 item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
