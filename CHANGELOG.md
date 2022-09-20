@@ -1,11 +1,8 @@
-# 0.6.3 Changes #
+# 0.6.4 Changes #
 
-* Fix sableye's swap shop
-* Ally AI uses leech seed correctly
-* Moves menu uses PMD's hotkeys
-* Allow sort key in item swap menu
-* Comboboxes in editors will detect keystrokes for searching
-* Added a probability summary for ItemSpawnZoneStep (dungeon editor), showing a table of item probabilities for each floor
-* Added ItemSectionedZoneStep (dungeon editor), which allows developers to edit probability tables for items and apply them to floors
-* Add LoadBlobStep (dungeon floor editor), allowing scattered placement of a remade map
-* Added ScriptableMenu, with an example in test grounds
+* Fixed an issue with StarterMod and the debug zone
+* Added option to delete all replays
+* Added option to delete tilesets in editor
+* Optimizations for handling large amounts of enemies on a map
+* Splash damage items break on throw (gravelerock, etc.)
+* Added developer option for species-specific terrain mobility
