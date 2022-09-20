@@ -2530,28 +2530,43 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("**Forsaken Desert");
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
+                    int max_floors = 4;
 
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Forsaken Desert\n{0}F")));
 
+
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(10, 21), new RandRange(10));
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
                     //items!
                     ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
                     itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+
+                    CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
+                    necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
+                    itemSpawnZoneStep.Spawns.Add("necessities", necessities);
+
+                    necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 9);//Leppa
+                    necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 12);//Oran
+                    necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);//Lum
+                    necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 5);//reviver seed
+                    necessities.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 9);//blast seed
+
                     //evo stones
                     floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
 
                     //mobs
                     TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
                     poolSpawn.Priority = PR_RESPAWN_MOB;
-
-                    poolSpawn.TeamSizes.Add(1, new IntRange(0, 20), 12);
+                    //120 Staryu : 55 Water Gun
+                    poolSpawn.Spawns.Add(GetTeamMob("staryu", "natural_cure", "", "", "", "", new RandRange(4), "wander_dumb"), new IntRange(0, 4), 10);
+                    poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -2559,7 +2574,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
 
-                    for (int ii = 0; ii < 4; ii++)
+                    for (int ii = 0; ii < max_floors; ii++)
                     {
                         GridFloorGen layout = new GridFloorGen();
 
@@ -2596,23 +2611,33 @@ namespace DataGenerator.Data
                         }
 
                         //money - Ballpark 25K
-                        AddMoneyData(layout, new RandRange(2, 4));
+                        AddMoneyData(layout, new RandRange(250, 250));
 
                         //enemies! ~ lv 18 to 32
-                        AddRespawnData(layout, 3, 80);
+                        if (ii == 0)
+                        {
+                            AddRadiusDespawnData(layout, 160, 160);
+                            AddRadiusRespawnData(layout, 120, 100, 80);
+                            AddRadiusEnemySpawnData(layout, 120, new RandRange(100));
+                        }
+                        else
+                        {
+                            AddRadiusDespawnData(layout, 160, 120);
+                            AddRadiusRespawnData(layout, 120, 120, 60);
+                            AddRadiusEnemySpawnData(layout, 120, new RandRange(120));
+                        }
 
                         //enemies
-                        AddEnemySpawnData(layout, 20, new RandRange(200, 250));
 
 
                         //items
-                        AddItemData(layout, new RandRange(3, 6), 25);
+                        AddItemData(layout, new RandRange(250, 250), 25);
 
 
                         //construct paths
                         {
                             if (ii == 0)
-                                AddInitGridStep(layout, 30, 30, 8, 8);
+                                AddInitGridStep(layout, 32, 32, 8, 8);
                             else
                                 AddInitGridStep(layout, 50, 50, 8, 8);
 
