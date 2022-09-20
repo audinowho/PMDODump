@@ -299,9 +299,12 @@ namespace DataGenerator.Data
 
                     MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                     PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                    poolSpawn.Spawns.Add(GetTeamMob("castform", "", "", "", "", "", new RandRange(18), "wander_normal", true), 10);
-                    poolSpawn.TeamSizes.Add(1, 12);
-                    spawnStep.Spawns.Add(poolSpawn, 100);
+                    //poolSpawn.Spawns.Add(GetTeamMob("castform", "", "", "", "", "", new RandRange(18), "wander_smart", true), 10);
+                    //poolSpawn.TeamSizes.Add(1, 12);
+                    //spawnStep.Spawns.Add(poolSpawn, 100);
+
+                    SpecificTeamSpawner teamSpawn = new SpecificTeamSpawner(GetGenericMob("castform", "", "", "", "", "", new RandRange(18), "wander_smart", true), GetGenericMob("castform", "", "", "", "", "", new RandRange(18), "wander_smart", true));
+                    spawnStep.Spawns.Add(teamSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
 
                     AddEnemySpawnData(layout, 20, new RandRange(200));
