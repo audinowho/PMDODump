@@ -143,7 +143,23 @@ namespace DataGenerator.Data
 
         public static void AddRespawnData<T>(MapGen<T> layout, int maxFoes, int respawnTime) where T : BaseMapGenContext
         {
-            MobSpawnSettingsStep<T> spawnStep = new MobSpawnSettingsStep<T>(maxFoes, respawnTime);
+            MobSpawnSettingsStep<T> spawnStep = new MobSpawnSettingsStep<T>(new Priority(15), new RespawnFromEligibleEvent(maxFoes, respawnTime));
+            layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
+        }
+
+        public static void AddRadiusRespawnData<T>(MapGen<T> layout, int radius, int maxFoes, int respawnTime) where T : BaseMapGenContext
+        {
+            RespawnFromRandomEvent respawn = new RespawnFromRandomEvent(maxFoes, respawnTime);
+            respawn.Radius = radius;
+            MobSpawnSettingsStep<T> spawnStep = new MobSpawnSettingsStep<T>(new Priority(15), respawn);
+            layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
+        }
+
+        public static void AddRadiusDespawnData<T>(MapGen<T> layout, int radius, int despawnTime) where T : BaseMapGenContext
+        {
+            DespawnRadiusEvent despawn = new DespawnRadiusEvent(radius, despawnTime);
+            MapEffectStep<T> spawnStep = new MapEffectStep<T>();
+            spawnStep.Effect.OnMapTurnEnds.Add(new Priority(15), despawn);
             layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
         }
 
@@ -153,6 +169,13 @@ namespace DataGenerator.Data
             if (connectivity != ConnectivityRoom.Connectivity.None)
                 mobStep.Filters.Add(new RoomFilterConnectivity(connectivity));
             mobStep.ClumpFactor = clumpFactor;
+            layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
+        }
+
+        public static void AddRadiusEnemySpawnData<T>(MapGen<T> layout, int radius, RandRange amount) where T : ListMapGenContext
+        {
+            PlaceRadiusMobsStep<T> mobStep = new PlaceRadiusMobsStep<T>(new TeamContextSpawner<T>(amount));
+            mobStep.Radius = radius;
             layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
         }
 

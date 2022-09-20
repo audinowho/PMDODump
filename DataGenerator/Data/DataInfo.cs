@@ -29,7 +29,13 @@ namespace DataGenerator.Data
             universalEvent.OnHitTiles.Add(5, new TilePostEvent());
             universalEvent.OnActions.Add(-10, new PreActionEvent());
             universalEvent.AfterActions.Add(5, new UsePostEvent("last_used_move_slot", "last_used_move", "times_move_used", "last_ally_move", "missed_all_last_turn"));
-            universalEvent.OnRefresh.Add(-5, new RefreshPreEvent());
+            ElementMobilityEvent mobility = new ElementMobilityEvent();
+            mobility.ElementPair["water"] = TerrainData.Mobility.Water;
+            mobility.ElementPair["fire"] = TerrainData.Mobility.Lava;
+            mobility.ElementPair["dragon"] = TerrainData.Mobility.Water | TerrainData.Mobility.Lava;
+            mobility.ElementPair["flying"] = TerrainData.Mobility.Water | TerrainData.Mobility.Lava | TerrainData.Mobility.Abyss;
+            mobility.ElementPair["ghost"] = TerrainData.Mobility.Block;
+            universalEvent.OnRefresh.Add(-5, mobility);
             universalEvent.InitActionData.Add(-10, new PreSkillEvent());
             universalEvent.InitActionData.Add(-10, new PreItemEvent());
             universalEvent.InitActionData.Add(-10, new PreThrowEvent());
