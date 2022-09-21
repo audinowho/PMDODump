@@ -1,4 +1,7 @@
 Sheet: Hardcode
+    * Added DLG_DELETE_REPLAY
+    * Added DLG_DELETE_REPLAY_COMPLETE
+    * Added MENU_DELETE_REPLAY_TITLE
 
 Sheet: Content
 
@@ -23,7 +26,6 @@ Sheet: Excl Effects
 Sheet: Zones
 
 Sheet: Maps
-    * Added test_blob-0000|data.Name
 
 Sheet: GroundMaps
 
