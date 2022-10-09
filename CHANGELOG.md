@@ -1,8 +1,6 @@
-# 0.6.4 Changes #
+# 0.6.5 Changes #
 
-* Fixed an issue with StarterMod and the debug zone
-* Added option to delete all replays
-* Added option to delete tilesets in editor
-* Optimizations for handling large amounts of enemies on a map
-* Splash damage items break on throw (gravelerock, etc.)
-* Added developer option for species-specific terrain mobility
+* Added a Store All option in the storage box, from pull request
+* Fixed an issue with Pokemon not warping when forced on untraversible terrain
+* Fixed an issue that made items catchable if players were caught in the explosion
+* Fixed spawn count issue with LoadBlobStep
