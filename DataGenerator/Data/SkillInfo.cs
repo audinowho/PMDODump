@@ -6840,7 +6840,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
-                skill.Data.OnActions.Add(0, new MajorStatusPowerEvent(false));
+                skill.Data.OnActions.Add(0, new MajorStatusPowerEvent(false, 2, 1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -13114,7 +13114,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(45));
-                skill.Data.BeforeHits.Add(0, new MajorStatusPowerEvent(true));
+                skill.Data.BeforeHits.Add(0, new MajorStatusPowerEvent(true, 2, 1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
