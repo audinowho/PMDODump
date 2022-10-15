@@ -7,3 +7,4 @@
 * Added dev option to verify a replay or play it as quicksave
 * Added UI:BeginMultiPageMenu script call
 * Fixed spawn count issue with LoadBlobStep
+* Added more game events and enhancements to existing game events, from pull request

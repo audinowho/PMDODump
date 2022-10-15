@@ -1,7 +1,14 @@
 Sheet: Hardcode
-    * Added DLG_DELETE_REPLAY
-    * Added DLG_DELETE_REPLAY_COMPLETE
-    * Added MENU_DELETE_REPLAY_TITLE
+    * Added DLG_REPLAY_VERIFY_DESYNC
+    * Added DLG_REPLAY_VERIFY_OK
+    * Added DLG_STORE_ALL_CONFIRM
+    * Erased contents of MENU_ASSEMBLY_FAVORITE
+    * Erased contents of MENU_ASSEMBLY_UNFAVORITE
+    * Added MENU_FAVORITE, transferred from MENU_ASSEMBLY_FAVORITE
+    * Added MENU_FAVORITE_OFF, transferred from MENU_ASSEMBLY_UNFAVORITE
+    * Added MENU_REPLAY_QUICKSAVE
+    * Added MENU_REPLAY_VERIFY
+    * Added MENU_STORAGE_STORE_ALL
 
 Sheet: Content
 
