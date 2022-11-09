@@ -1352,9 +1352,9 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["unbreakable"] = "wyvern_hill_wall";
                         textureStep.TextureMap["wall"] = "wyvern_hill_wall";
                         textureStep.TextureMap["water"] = "wyvern_hill_secondary";
-                        textureStep.TextureMap["poison_water"] = "wyvern_hill_secondary";
+                        textureStep.TextureMap["water_poison"] = "wyvern_hill_secondary";
                         textureStep.TextureMap["pit"] = "wyvern_hill_secondary";
-                        textureStep.TextureMap["poison_water"] = "wyvern_hill_secondary";
+                        textureStep.TextureMap["water_poison"] = "wyvern_hill_secondary";
                         textureStep.TextureMap["grass"] = "tall_grass";
                     }
                     textureStep.GroundElement = "normal";
@@ -1535,9 +1535,9 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["unbreakable"] = "spacial_rift_1_wall";
                         textureStep.TextureMap["wall"] = "spacial_rift_1_wall";
                         textureStep.TextureMap["water"] = "chasm_cave_1_wall";
-                        textureStep.TextureMap["poison_water"] = "chasm_cave_1_wall";
+                        textureStep.TextureMap["water_poison"] = "chasm_cave_1_wall";
                         textureStep.TextureMap["pit"] = "chasm_cave_1_wall";
-                        textureStep.TextureMap["poison_water"] = "chasm_cave_1_wall";
+                        textureStep.TextureMap["water_poison"] = "chasm_cave_1_wall";
                     }
                     textureStep.GroundElement = "normal";
                     textureStep.LayeredGround = true;
@@ -1824,9 +1824,9 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["unbreakable"] = "wyvern_hill_wall";
                         textureStep.TextureMap["wall"] = "wyvern_hill_wall";
                         textureStep.TextureMap["water"] = "wyvern_hill_secondary";
-                        textureStep.TextureMap["poison_water"] = "mt_blaze_secondary";
+                        textureStep.TextureMap["water_poison"] = "mt_blaze_secondary";
                         textureStep.TextureMap["pit"] = "chasm_cave_1_wall";
-                        textureStep.TextureMap["poison_water"] = "poison_maze_secondary";
+                        textureStep.TextureMap["water_poison"] = "poison_maze_secondary";
                         textureStep.TextureMap["grass"] = "tall_grass";
                     }
                     textureStep.GroundElement = "normal";
@@ -1926,9 +1926,9 @@ namespace DataGenerator.Data
                         textureStep.TextureMap["unbreakable"] = "wyvern_hill_wall";
                         textureStep.TextureMap["wall"] = "wyvern_hill_wall";
                         textureStep.TextureMap["water"] = "wyvern_hill_secondary";
-                        textureStep.TextureMap["poison_water"] = "mt_blaze_secondary";
+                        textureStep.TextureMap["water_poison"] = "mt_blaze_secondary";
                         textureStep.TextureMap["pit"] = "chasm_cave_1_wall";
-                        textureStep.TextureMap["poison_water"] = "poison_maze_secondary";
+                        textureStep.TextureMap["water_poison"] = "poison_maze_secondary";
                         textureStep.TextureMap["grass"] = "tall_grass";
                     }
                     textureStep.GroundElement = "normal";
