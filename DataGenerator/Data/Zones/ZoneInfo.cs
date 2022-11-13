@@ -4892,7 +4892,7 @@ namespace DataGenerator.Data
 
                         }
                         else if (ii < 10)
-                            AddWaterSteps(layout, "poison_water", new RandRange(20));//poison
+                            AddWaterSteps(layout, "water_poison", new RandRange(20));//poison
                         else
                             AddWaterSteps(layout, "pit", new RandRange(20), false);//abyss
 

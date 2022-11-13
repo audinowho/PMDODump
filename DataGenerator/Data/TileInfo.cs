@@ -470,7 +470,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                newData.OnHitTiles.Add(0, new WarpFoesToTileEvent(4));
+                newData.OnHitTiles.Add(0, new WarpFoesToTileEvent(80, 4));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 16)

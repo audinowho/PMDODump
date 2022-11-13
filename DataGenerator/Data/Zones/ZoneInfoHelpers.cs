@@ -132,7 +132,7 @@ namespace DataGenerator.Data
                 textureStep.TextureMap["water"] = water;
                 textureStep.TextureMap["lava"] = water;
                 textureStep.TextureMap["pit"] = water;
-                textureStep.TextureMap["poison_water"] = water;
+                textureStep.TextureMap["water_poison"] = water;
                 textureStep.TextureMap["grass"] = grass;
             }
             textureStep.GroundElement = element;

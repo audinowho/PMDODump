@@ -605,7 +605,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Warp Seed");
                 item.Desc = new LocalText("A seed that warps the Pokémon and its nearby allies to a different place on the floor.");
                 item.Sprite = "Seed_Green";
-                item.UseEvent.OnHits.Add(0, new RandomGroupWarpEvent(50, true));
+                item.UseEvent.OnHits.Add(0, new RandomGroupWarpEvent(80, true));
             }
             else if (ii == 109)
             {

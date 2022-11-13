@@ -2668,7 +2668,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new RandomGroupWarpEvent(50, true));
+                skill.Data.OnHits.Add(0, new RandomGroupWarpEvent(80, true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -6396,7 +6396,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new WarpAlliesInEvent(3, false, new StringKey("MSG_SUMMON_ALLIES"), false));
+                skill.Data.OnHits.Add(0, new WarpAlliesInEvent(80, 3, false, new StringKey("MSG_SUMMON_ALLIES"), false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
                 ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
@@ -6840,7 +6840,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
-                skill.Data.OnActions.Add(0, new MajorStatusPowerEvent(false));
+                skill.Data.OnActions.Add(0, new MajorStatusPowerEvent(false, 2, 1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -13114,7 +13114,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(45));
-                skill.Data.BeforeHits.Add(0, new MajorStatusPowerEvent(true));
+                skill.Data.BeforeHits.Add(0, new MajorStatusPowerEvent(true, 2, 1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();

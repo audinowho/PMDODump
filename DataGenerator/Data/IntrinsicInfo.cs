@@ -304,7 +304,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Illuminate");
                 ability.Desc = new LocalText("It may warp an ally to the Pokémon when it is hurt.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, false, true, 35, new WarpAlliesInEvent(1, true, new StringKey("MSG_ILLUMINATE"), true)));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, false, true, 35, new WarpAlliesInEvent(80, 1, true, new StringKey("MSG_ILLUMINATE"), true)));
             }
             else if (ii == 36)
             {

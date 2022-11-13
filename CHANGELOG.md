@@ -1,6 +1,7 @@
-# 0.6.5 Changes #
+# 0.6.6 Changes #
 
-* Added a Store All option in the storage box, from pull request
-* Fixed an issue with Pokemon not warping when forced on untraversible terrain
-* Fixed an issue that made items catchable if players were caught in the explosion
-* Fixed spawn count issue with LoadBlobStep
+* Fixed floor generation in Sickly Hollow
+* Fixed an issue preventing AOK mail from generating with a replay
+* Fix an issue where summon traps and similar warping mechanics ingored unbreakable blocks
+* Fix issues with textboxes in replay verification
+* Out-of-date quicksaves are more gracefully handled
