@@ -1498,12 +1498,10 @@ namespace DataGenerator.Data
                     //stencil.FullSide = true;
                     //stencil.Intrude = true;
                     
-                    MapTerrainStencil<MapGenContext> stencil = new MapTerrainStencil<MapGenContext>(true, false, false);
-
-                    NoChokepointStencil<MapGenContext> noChoke = new NoChokepointStencil<MapGenContext>(new MapTerrainStencil<MapGenContext>(true, false, false));
                     MultiBlobStencil<MapGenContext> combined = new MultiBlobStencil<MapGenContext>();
-                    combined.List.Add(new BlobTileStencil<MapGenContext>(stencil));
-                    combined.List.Add(noChoke);
+                    combined.List.Add(new BlobTileStencil<MapGenContext>(new MapTerrainStencil<MapGenContext>(true, false, false)));
+                    combined.List.Add(new NoChokepointStencil<MapGenContext>(new MapTerrainStencil<MapGenContext>(true, false, false)));
+                    combined.List.Add(new BlobTileStencil<MapGenContext>(new TileEffectStencil<MapGenContext>(true)));
 
                     LoadBlobStep<MapGenContext> wallStep = new LoadBlobStep<MapGenContext>();
                     wallStep.TerrainStencil = combined;
