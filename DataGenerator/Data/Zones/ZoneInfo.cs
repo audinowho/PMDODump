@@ -338,10 +338,6 @@ namespace DataGenerator.Data
                         special.Spawns.Add(new InvItem("key", false, 1), new IntRange(2, 7), 10);//Key
 
                         floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
-                        SpawnList<IGenPriority> assemblyZoneSpawns = new SpawnList<IGenPriority>();
-                        assemblyZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("machine_assembly_box"))))), 10);//assembly box
-                        SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(2, 7), new IntRange(0, 7)), assemblyZoneSpawns);
-                        floorSegment.ZoneSteps.Add(assemblyZoneStep);
 
                         //mobs
                         TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
@@ -3782,11 +3778,6 @@ namespace DataGenerator.Data
 
                     floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
 
-                    SpawnList<IGenPriority> assemblyZoneSpawns = new SpawnList<IGenPriority>();
-                    assemblyZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("machine_assembly_box"))))), 10);//assembly box
-                    SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(2, 7), new IntRange(0, 7)), assemblyZoneSpawns);
-                    floorSegment.ZoneSteps.Add(assemblyZoneStep);
-
 
                     //mobs
                     TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
@@ -4346,7 +4337,6 @@ namespace DataGenerator.Data
                     }
 
                     special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, max_floors), 25);//Key
-                    special.Spawns.Add(new InvItem("machine_assembly_box"), new IntRange(9, 30), 30);//Assembly Box
 
 
                     //orbs
@@ -4499,7 +4489,7 @@ namespace DataGenerator.Data
 
                     SpawnList<IGenPriority> assemblyZoneSpawns = new SpawnList<IGenPriority>();
                     assemblyZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("machine_assembly_box"))))), 10);//assembly box
-                    SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(2, 6), new IntRange(0, max_floors)), assemblyZoneSpawns);
+                    SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(2, 6), new IntRange(8, max_floors)), assemblyZoneSpawns);
                     floorSegment.ZoneSteps.Add(assemblyZoneStep);
 
                     SpawnList<IGenPriority> appleZoneSpawns = new SpawnList<IGenPriority>();
@@ -4622,7 +4612,7 @@ namespace DataGenerator.Data
                         monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
                         monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, max_floors), 10);//key
                         monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 10);//link box
-                        monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, max_floors), 10);//assembly box
+                        monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(8, max_floors), 10);//assembly box
                         monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 10);//ability capsule
 
                         monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(0, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//no theme

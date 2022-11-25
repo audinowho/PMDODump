@@ -1423,7 +1423,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_HEAL_BLOCK_END")));
                 status.ModifyHPs.Add(1, new HealMultEvent(0, 1));
                 status.RestoreHPs.Add(0, new HealMultEvent(0, 1));
-                status.StatusStates.Set(new CountDownState(25));
+                status.StatusStates.Set(new CountDownState(50));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
             else if (ii == 82)

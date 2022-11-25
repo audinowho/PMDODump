@@ -1199,7 +1199,7 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(keyZoneStep);
             SpawnList<IGenPriority> assemblyZoneSpawns = new SpawnList<IGenPriority>();
             assemblyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("machine_assembly_box"))))), 10);
-            SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(4, 30)), assemblyZoneSpawns);//assembly box
+            SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, 30)), assemblyZoneSpawns);//assembly box
             floorSegment.ZoneSteps.Add(assemblyZoneStep);
             SpawnList<IGenPriority> apricornZoneSpawns = new SpawnList<IGenPriority>();
             apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_blue"))))), 10);//blue apricorns
@@ -1285,7 +1285,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, 30), 10);//heart scale
                 monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 10);//key
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, 30), 10);//assembly box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, 30), 10);//assembly box
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 10);//ability capsule
                 monsterChanceZoneStep.Items.Add(new MapItem("held_friend_bow"), new IntRange(0, 30), 10);//friend bow
 
@@ -1334,7 +1334,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, 30), 10);//heart scale
                 monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 10);//key
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, 30), 10);//assembly box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, 30), 10);//assembly box
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 10);//ability capsule
                 monsterChanceZoneStep.Items.Add(new MapItem("held_friend_bow"), new IntRange(0, 30), 10);//friend bow
 
@@ -1380,7 +1380,7 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, 30), 20);//reviver seed
                 chestChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, 30), 20);//joy seed
                 chestChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
-                chestChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, 30), 10);//assembly box
+                chestChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, 30), 10);//assembly box
                 chestChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 10);//ability capsule
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(2, 5)), new IntRange(0, 30), 30);
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(2, 4), "seed_reviver"), new IntRange(0, 30), 10);//reviver seed
@@ -1423,7 +1423,7 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, 30), 20);//joy seed
                 chestChanceZoneStep.Items.Add(new MapItem("seed_golden"), new IntRange(0, 30), 20);//golden seed
                 chestChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
-                chestChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, 30), 10);//assembly box
+                chestChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, 30), 10);//assembly box
                 chestChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 10);//ability capsule
                 chestChanceZoneStep.Items.Add(new MapItem("evo_harmony_scarf"), new IntRange(0, 30), 10);//harmony scarf
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeNone(50, new RandRange(4, 7))), new IntRange(0, 30), 30);
@@ -3143,7 +3143,7 @@ namespace DataGenerator.Data
 
 
             special.Spawns.Add(new InvItem("machine_recall_box"), new IntRange(0, 27), 25);//Link Box
-            special.Spawns.Add(new InvItem("machine_assembly_box"), new IntRange(4, 27), 5);//Assembly Box
+            special.Spawns.Add(new InvItem("machine_assembly_box"), new IntRange(6, 27), 5);//Assembly Box
             special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, 24), 10);//Key
                                                                                      //snacks
             CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
@@ -3758,7 +3758,7 @@ namespace DataGenerator.Data
 
             SpawnList<IGenPriority> assemblyZoneSpawns = new SpawnList<IGenPriority>();
             assemblyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("machine_assembly_box"))))), 10);
-            SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(4, max_floors)), appleZoneSpawns);//assembly box
+            SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors)), appleZoneSpawns);//assembly box
             floorSegment.ZoneSteps.Add(assemblyZoneStep);
 
             {
@@ -3840,7 +3840,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
                 monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, max_floors), 10);//key
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, max_floors), 30);//assembly box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, max_floors), 30);//assembly box
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 10);//ability capsule
 
 
@@ -3907,7 +3907,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
                 monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, max_floors), 10);//key
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, max_floors), 30);//assembly box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, max_floors), 30);//assembly box
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 10);//ability capsule
 
 
@@ -3965,7 +3965,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, max_floors), 30);//assembly box
+                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, max_floors), 30);//assembly box
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 10);//ability capsule
 
 
@@ -4029,7 +4029,7 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 20);//reviver seed
                 chestChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, max_floors), 20);//joy seed
                 chestChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
-                chestChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, max_floors), 30);//assembly box
+                chestChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, max_floors), 30);//assembly box
                 chestChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 10);//ability capsule
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(2, 5)), new IntRange(0, max_floors), 30);
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(2, 4), "seed_reviver"), new IntRange(0, max_floors), 10);//reviver seed
@@ -4102,8 +4102,8 @@ namespace DataGenerator.Data
                     vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, 30), 200);//reviver seed
                     vaultChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, 30), 200);//joy seed
                     vaultChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 200);//ability capsule
-                    vaultChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, 30), 500);//link box
-                    vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 500);//assembly box
+                    vaultChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(0, 30), 500);//assembly box
+                    vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 500);//link box
                     vaultChanceZoneStep.Items.Add(new MapItem("evo_harmony_scarf"), new IntRange(0, 30), 100);//harmony scarf
                     vaultChanceZoneStep.Items.Add(new MapItem("orb_itemizer"), new IntRange(15, 30), 50);//itemizer orb
                     vaultChanceZoneStep.Items.Add(new MapItem("wand_transfer", 3), new IntRange(15, 30), 50);//transfer wand
