@@ -3817,7 +3817,8 @@ namespace DataGenerator.Data
                     ((ProjectileAction)item.UseAction).Range = CharAction.MAX_RANGE;
                     ((ProjectileAction)item.UseAction).Speed = 12;
                     ((ProjectileAction)item.UseAction).StopAtHit = true;
-                    ((ProjectileAction)item.UseAction).StopAtWall = true;
+                    if (ii != 234)
+                        ((ProjectileAction)item.UseAction).StopAtWall = true;
                     ((ProjectileAction)item.UseAction).Anim = new AnimData("Confuse_Ray", 2);
                     item.UseAction.TargetAlignments = (Alignment.Foe | Alignment.Friend | Alignment.Self);
                     item.Explosion.TargetAlignments = (Alignment.Foe | Alignment.Friend | Alignment.Self);
