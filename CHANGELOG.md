@@ -6,3 +6,5 @@
 * Fixed issue with portrait display in Dev menu
 * Fixed issue with ground script generation where table functions would generate as CURMAPSCR instead of the map asset name
 * Minor dev fixes
+
+
