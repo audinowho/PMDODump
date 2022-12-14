@@ -648,6 +648,8 @@ namespace DataGenerator.Data
                         poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob("aipom", "", "scratch", "sand_attack", "", "", new RandRange(8), "wander_dumb"), GetGenericMob("aipom", "", "scratch", "sand_attack", "", "", new RandRange(8), "wander_dumb")), new IntRange(0, 3), 10);
                         //161 Sentret : 10 Scratch : 111 Defense Curl
                         poolSpawn.Spawns.Add(GetTeamMob("sentret", "", "scratch", "defense_curl", "", "", new RandRange(10), "wander_dumb"), new IntRange(0, 3), 10);
+                        //161 Sentret : Charm : Bite
+                        poolSpawn.Spawns.Add(GetTeamMob("snubbull", "", "charm", "bite", "", "", new RandRange(10), "wander_dumb"), new IntRange(0, 3), 10);
                         //396 Starly : 33 Tackle : 45 Growl - later pairs
                         poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob("starly", "", "tackle", "growl", "", "", new RandRange(7), "wander_dumb"), GetGenericMob("starly", "", "tackle", "growl", "", "", new RandRange(7), "wander_dumb")), new IntRange(0, 3), 20);
                         //438 Bonsly : 88 Rock Throw
