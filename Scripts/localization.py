@@ -546,7 +546,7 @@ class Localization:
                                 if overwrite.lower() == 'y':
                                     requests = []
                                     for cell_ind in range(len(pair[3])):
-                                        if pair[2][cell_ind][0] != "":
+                                        if pair[3][cell_ind][0] != "":
                                             requests.append(create_color_req(sheet_id, (sheet_ind-1, sheet_ind), (cell_ind+3, cell_ind+4),
                                                                              { "red": 234 / 255, "green": 153 / 255, "blue": 153 / 255 }))
                                     if len(requests) > 0:
