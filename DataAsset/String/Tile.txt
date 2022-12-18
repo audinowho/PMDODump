@@ -50,7 +50,7 @@ Key		EN
 0000-trap_apple-0000|data.Name		Apple Trap
 0000-trap_apple-0001|data.Desc		Triggering this trap turns a held-effect item into an apple.
 0000-trap_chestnut-0000|data.Name		Chestnut Trap
-0000-trap_chestnut-0001|data.Desc		Triggering this trap makes spiky unshelled Chestnuts drop, inflicting damage on nearby Pokémon.
+0000-trap_chestnut-0001|data.Desc		Triggering this trap makes spiky unshelled Chestnuts drop, inflicting damage on nearby Pokémon and causing them to flinch.
 0000-trap_discord-0000|data.Name		Discord Trap
 0000-trap_discord-0001|data.Desc		Triggering this trap creates a discord among the party.
 0000-trap_emera_crush-0000|data.Name		Emera-Crush Trap

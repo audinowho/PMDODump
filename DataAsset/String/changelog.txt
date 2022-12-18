@@ -1,7 +1,5 @@
 Sheet: Hardcode
-    * Added DLG_ERR_READ_QUICKSAVE
-    * Changed DLG_FILE_VERSION_DIFF from "There are version differences between the file and the current game.[pause=0] The load may fail." to "The file has version differences.[pause=0] The load may fail."
-    * Changed DLG_REPLAY_VERIFY_OK from "The replay has completed. If no errors occured, it is considered legitimate." to "The replay has been verified."
+    * Added MENU_TEAM_LEARNSET
 
 Sheet: Content
 
@@ -16,8 +14,13 @@ Sheet: MapStatuses
 Sheet: Moves
 
 Sheet: Statuses
+    * Significantly changed 0000-burn-0001|data.Desc from "The Pokémon will take some damage every turn, and its Attack will be lowered. This status wears off after a few turns." to "The Pokémon will take some damage every turn it attacks, and its Attack will be lowered."
+    * Changed 0000-paralyze-0001|data.Desc from "The Pokémon is paralyzed and cannot attack in consecutive turns. This status wears off after a few turns." to "The Pokémon is paralyzed and cannot move in consecutive turns. This status wears off after a few turns."
+    * Significantly changed 0000-poison-0001|data.Desc from "The Pokémon gradually takes damage every time it attacks. Its natural HP recovery is also stopped." to "The Pokémon takes damage on every action, and its ability to recover HP is reduced. This status wears off after a few turns."
+    * Significantly changed 0000-poison_toxic-0001|data.Desc from "The Pokémon takes gradually worsening damage every time it attacks. Its natural HP recovery is also stopped." to "The Pokémon takes damage on every action, with the damage worsening if it attacks. Its ability to recover HP is also reduced. This status wears off after a few turns."
 
 Sheet: Tiles
+    * Significantly changed 0000-trap_chestnut-0001|data.Desc from "Triggering this trap makes spiky unshelled Chestnuts drop, inflicting damage on nearby Pokémon." to "Triggering this trap makes spiky unshelled Chestnuts drop, inflicting damage on nearby Pokémon and causing them to flinch."
 
 Sheet: Excl Names
 
