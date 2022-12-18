@@ -4800,7 +4800,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
-                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("poison", true, true)));
                 skill.Explosion.Range = 1;
@@ -11501,7 +11501,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(95));
-                skill.Data.SkillStates.Set(new AdditionalEffectState(50));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("poison", true, true)));
                 skill.Strikes = 1;
@@ -12528,8 +12528,8 @@ namespace DataGenerator.Data
                 skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 90;
-                skill.Data.SkillStates.Set(new BasePowerState(65));
-                skill.Data.SkillStates.Set(new AdditionalEffectState(25));
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("poison", true, true)));
 

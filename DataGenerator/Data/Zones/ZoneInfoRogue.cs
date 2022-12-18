@@ -538,7 +538,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob("nincada", "", "bide", "scratch", "harden", "", new RandRange(9)), new IntRange(2, 4), 10);
 
             //5//406 Budew : 071 Absorb : 078 Stun Spore : 346 Water Sport
-            poolSpawn.Spawns.Add(GetTeamMob("budew", "", "absorb", "stun_spore", "water_sport", "", new RandRange(6)), new IntRange(2, 4), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("budew", "poison_point", "absorb", "stun_spore", "water_sport", "", new RandRange(6)), new IntRange(2, 4), 10);
 
             //7//433 Chingling : 310 Astonish : 035 Wrap
             poolSpawn.Spawns.Add(GetTeamMob("chingling", "", "astonish", "wrap", "", "", new RandRange(8)), new IntRange(2, 4), 10);
@@ -594,7 +594,7 @@ namespace DataGenerator.Data
 
 
             //046 Paras : 78 Stun Spore : 141 Leech Life
-            poolSpawn.Spawns.Add(GetTeamMob("paras", "", "stun_spore", "leech_life", "", "", new RandRange(9)), new IntRange(5, 7), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("paras", "", "poison_powder", "leech_life", "", "", new RandRange(9)), new IntRange(5, 7), 10);
 
             //456 Finneon : 114 Storm Drain : 55 Water Gun : 16 Gust
             poolSpawn.Spawns.Add(GetTeamMob("finneon", "storm_drain", "water_gun", "gust", "", "", new RandRange(13), TeamMemberSpawn.MemberRole.Loner), new IntRange(5, 7), 10);
@@ -3657,13 +3657,13 @@ namespace DataGenerator.Data
 
             {
                 //032 Nidoran♂ : 079 Rivalry : 043 Leer : 064 Peck
-                TeamMemberSpawn teamSpawn = GetTeamMob("nidoran_m", "rivalry", "leer", "peck", "", "", new RandRange(6));
+                TeamMemberSpawn teamSpawn = GetTeamMob("nidoran_m", "poison_point", "leer", "peck", "", "", new RandRange(6));
                 teamSpawn.Spawn.SpawnConditions.Add(new MobCheckVersionDiff(0, 2));
                 poolSpawn.Spawns.Add(teamSpawn, new IntRange(1, 5), 10);
             }
             {
                 //029 Nidoran♀ : 079 Rivalry : 045 Growl : 010 Scratch
-                TeamMemberSpawn teamSpawn = GetTeamMob("nidoran_f", "rivalry", "growl", "scratch", "", "", new RandRange(6));
+                TeamMemberSpawn teamSpawn = GetTeamMob("nidoran_f", "poison_point", "growl", "scratch", "", "", new RandRange(6));
                 teamSpawn.Spawn.SpawnConditions.Add(new MobCheckVersionDiff(1, 2));
                 poolSpawn.Spawns.Add(teamSpawn, new IntRange(1, 5), 10);
             }
