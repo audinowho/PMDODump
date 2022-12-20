@@ -1,0 +1,33 @@
+//items
+ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+
+
+
+
+floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+//mobs
+TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+poolSpawn.Priority = PR_RESPAWN_MOB;
+
+
+poolSpawn.Spawns.Add(GetTeamMob("seel", "", "icy_wind", "encore", "", "", new RandRange(22)), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("clamperl", "", "clamp", "whirlpool", "iron_defense", "", new RandRange(23), "turret"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("goldeen", "", "horn_attack", "water_pulse", "", "", new RandRange(22)), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("mantyke", "", "wing_attack", "bubble_beam", "", "", new RandRange(22)), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("finneon", "", "attract", "water_gun", "", "", new RandRange(24)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("carvanha", "", "bite", "screech", "", "", new RandRange(24)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("wailmer", "", "whirlpool", "astonish", "", "", new RandRange(25)), new IntRange(6, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("tentacool", "", "acid_spray", "wrap", "", "", new RandRange(25)), new IntRange(6, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("corsola", "", "spike_cannon", "lucky_chant", "", "", new RandRange(25)), new IntRange(6, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("chinchou", "", "confuse_ray", "spark", "", "", new RandRange(24)), new IntRange(6, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("mantine", "", "wide_guard", "bubble_beam", "", "", new RandRange(28)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("phione", "", "dive", "aqua_ring", "acid_armor", "", new RandRange(36)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("huntail", "", "ice_fang", "sucker_punch", "dive", "", new RandRange(28)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("gorebyss", "", "amnesia", "draining_kiss", "dive", "", new RandRange(28)), new IntRange(0, max_floors), 10);
+//spawn in the walls
+poolSpawn.Spawns.Add(GetTeamMob("dratini", "", "twister", "dragon_rage", "", "", new RandRange(25)), new IntRange(0, max_floors), 10);
+//asleep, with shell bell
+poolSpawn.Spawns.Add(GetTeamMob("vaporeon", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

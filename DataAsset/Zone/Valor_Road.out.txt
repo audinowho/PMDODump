@@ -1,0 +1,35 @@
+//items
+ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+
+
+
+
+floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+//mobs
+TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+poolSpawn.Priority = PR_RESPAWN_MOB;
+
+
+poolSpawn.Spawns.Add(GetTeamMob("aron", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("cloyster", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("pineco", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("skarmory", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("tangrowth", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("gligar", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("koffing", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("rhyhorn", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("hippowdon", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("graveler", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("sudowoodo", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("sandslash", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("pinsir", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("pelipper", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("burmy", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("wormadam", 1, "", Gender.Unknown), "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("nincada", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("bidoof", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("onix", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("machoke", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

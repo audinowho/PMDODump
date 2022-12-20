@@ -87,4 +87,14 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-poolSpawn.Spawns.Add(GetTeamMob("poochyena", "", "bite", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("ekans", "", "wrap", "bite", "", "", new RandRange(12), "wander_dumb"), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("zigzagoon", "", "growl", "headbutt", "", "", new RandRange(12), "wander_dumb"), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("bonsly", "", "rock_throw", "", "", "", new RandRange(14), "weird_tree"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("lotad", "", "bubble", "natural_gift", "", "", new RandRange(13), "wander_dumb"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("surskit", "", "sweet_scent", "quick_attack", "", "", new RandRange(13), "wander_dumb"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("beedrill", "", "fury_attack", "focus_energy", "", "", new RandRange(13), "wander_dumb"), new IntRange(3, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("spinarak", "", "string_shot", "leech_life", "", "", new RandRange(13), "wander_dumb"), new IntRange(3, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("poochyena", "", "bite", "howl", "", "", new RandRange(13), "wander_dumb"), new IntRange(3, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("corphish", "", "leer", "vice_grip", "", "", new RandRange(13), "wander_dumb"), new IntRange(3, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("azurill", "", "charm", "splash", "", "", new RandRange(10), "wander_dumb"), new IntRange(3, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("tauros", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

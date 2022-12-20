@@ -1,0 +1,23 @@
+//items
+ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+
+
+
+
+floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+//mobs
+TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+poolSpawn.Priority = PR_RESPAWN_MOB;
+
+
+poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("ninetales", 1, "", Gender.Unknown), "", "ice_beam", "dazzling_gleam", "", "", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("abomasnow", "", "wood_hammer", "ice_shard", "", "", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("altaria", "", "dragon_breath", "", "", "", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("piloswine", "", "ice_fang", "earthquake", "", "", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("eiscue", "", "freeze_dry", "amnesia", "", "", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("azumarill", "huge_power", "aqua_tail", "aqua_ring", "", "", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
+//spawns asleep, with choice specs
+poolSpawn.Spawns.Add(GetTeamMob("glaceon", "", "blizzard", "", "", "", new RandRange(60), TeamMemberSpawn.MemberRole.Loner), new IntRange(0, max_floors), 10);

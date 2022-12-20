@@ -13,3 +13,37 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
+poolSpawn.Spawns.Add(GetTeamMob("ursaring", "", "hammer_arm", "thrash", "", "", new RandRange(38), "wander_normal"), new IntRange(0, 3), 10);
+poolSpawn.Spawns.Add(GetTeamMob("skarmory", "", "steel_wing", "spikes", "", "", new RandRange(38), "wander_normal"), new IntRange(0, 3), 10);
+poolSpawn.Spawns.Add(GetTeamMob("staraptor", "", "close_combat", "brave_bird", "", "", new RandRange(38), "wander_normal"), new IntRange(0, 3), 10);
+poolSpawn.Spawns.Add(GetTeamMob("mamoswine", "", "ancient_power", "thrash", "", "", new RandRange(38), "wander_normal"), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("heracross", "", "megahorn", "brick_break", "", "", new RandRange(38), "wander_normal"), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("florges", "", "petal_blizzard", "flower_shield", "", "", new RandRange(39), "wander_normal"), new IntRange(3, 9), 10);
+poolSpawn.Spawns.Add(GetTeamMob("machamp", "no_guard", "dynamic_punch", "", "", "", new RandRange(39), "wander_normal"), new IntRange(3, 9), 10);
+poolSpawn.Spawns.Add(GetTeamMob("golem", "", "stone_edge", "rock_blast", "", "", new RandRange(39), "wander_normal"), new IntRange(3, 9), 10);
+poolSpawn.Spawns.Add(GetTeamMob("sunflora", "", "solar_beam", "ingrain", "", "", new RandRange(39), "wander_normal"), new IntRange(3, 9), 10);
+poolSpawn.Spawns.Add(GetTeamMob("gallade", "", "psycho_cut", "teleport", "", "", new RandRange(39), "wander_normal"), new IntRange(6, 12), 10);
+poolSpawn.Spawns.Add(GetTeamMob("gardevoir", "", "psychic", "wish", "", "", new RandRange(39), "wander_normal"), new IntRange(6, 12), 10);
+poolSpawn.Spawns.Add(GetTeamMob("magnezone", "", "discharge", "magnet_bomb", "", "", new RandRange(39), "wander_normal"), new IntRange(6, 12), 10);
+poolSpawn.Spawns.Add(GetTeamMob("drapion", "", "poison_jab", "sucker_punch", "", "", new RandRange(39), "wander_normal"), new IntRange(6, 12), 10);
+poolSpawn.Spawns.Add(GetTeamMob("flygon", "", "earthquake", "dragon_tail", "", "", new RandRange(40), TeamMemberSpawn.MemberRole.Loner, "wander_normal"), new IntRange(9, 15), 10);
+poolSpawn.Spawns.Add(GetTeamMob("ledian", "", "reflect", "light_screen", "silver_wind", "", new RandRange(40), "wander_normal"), new IntRange(9, 15), 10);
+poolSpawn.Spawns.Add(GetTeamMob("exploud", "", "hyper_voice", "stomp", "", "", new RandRange(40), "wander_normal"), new IntRange(9, 15), 10);
+poolSpawn.Spawns.Add(GetTeamMob("starmie", "", "hydro_pump", "recover", "swift", "", new RandRange(40), "wander_normal"), new IntRange(9, 15), 10);
+poolSpawn.Spawns.Add(GetTeamMob("mismagius", "", "shadow_ball", "mystical_fire", "", "", new RandRange(40), "wander_normal"), new IntRange(12, 18), 10);
+poolSpawn.Spawns.Add(GetTeamMob("steelix", "", "iron_tail", "double_edge", "", "", new RandRange(40), "wander_normal"), new IntRange(12, 18), 10);
+poolSpawn.Spawns.Add(GetTeamMob("azumarill", "", "play_rough", "aqua_ring", "", "", new RandRange(40), "wander_normal"), new IntRange(12, 18), 10);
+poolSpawn.Spawns.Add(GetTeamMob("swalot", "", "sludge_bomb", "encore", "", "", new RandRange(40), "wander_normal"), new IntRange(12, 18), 10);
+poolSpawn.Spawns.Add(GetTeamMob("manectric", "lightning_rod", "thunder", "roar", "", "", new RandRange(41), "wander_normal"), new IntRange(15, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("electivire", "", "thunderbolt", "fire_punch", "", "", new RandRange(41), "wander_normal"), new IntRange(15, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("magmortar", "", "fire_blast", "smokescreen", "", "", new RandRange(41), "wander_normal"), new IntRange(15, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("clefable", "", "cosmic_power", "moonblast", "", "", new RandRange(41), "wander_normal"), new IntRange(15, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("eiscue", "", "blizzard", "surf", "", "", new RandRange(42), "wander_normal"), new IntRange(18, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("salamence", "", "dragon_claw", "fly", "", "", new RandRange(42), "wander_normal"), new IntRange(18, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("drifblim", "aftermath", "ominous_wind", "explosion", "", "", new RandRange(42), "wander_normal"), new IntRange(18, max_floors), 10);
+//show up in alternating floors
+poolSpawn.Spawns.Add(GetTeamMob("emboar", "", "fire_pledge", "heat_crash", "", "", new RandRange(43), "wander_normal"), new IntRange(9, max_floors), 10);
+//until floor 19+
+poolSpawn.Spawns.Add(GetTeamMob("samurott", "", "water_pledge", "razor_shell", "", "", new RandRange(43), "wander_normal"), new IntRange(9, max_floors), 10);
+//when they all show up
+poolSpawn.Spawns.Add(GetTeamMob("serperior", "", "grass_pledge", "leaf_blade", "", "", new RandRange(43), "wander_normal"), new IntRange(9, max_floors), 10);

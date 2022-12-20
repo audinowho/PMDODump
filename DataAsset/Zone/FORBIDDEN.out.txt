@@ -77,3 +77,11 @@ poolSpawn.Spawns.Add(GetTeamMob("volbeat", "", "tail_glow", "signal_beam", "", "
 poolSpawn.Spawns.Add(GetTeamMob("houndoom", "", "beat_up", "howl", "", "", new RandRange(26)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("hitmonchan", "", "pursuit", "close_combat", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("magneton", "", "lock_on", "zap_cannon", "electric_terrain", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("skarmory", "", "metal_claw", "air_cutter", "", "", new RandRange(20), "wander_dumb"), new IntRange(0, 5), 5);
+//spawn asleep
+poolSpawn.Spawns.Add(GetTeamMob("noctowl", "keen_eye", "reflect", "sky_attack", "", "", new RandRange(20), "wander_normal"), new IntRange(0, 5), 10);
+poolSpawn.Spawns.Add(GetTeamMob("wingull", "", "mist", "water_pulse", "", "", new RandRange(18), "wander_dumb"), new IntRange(0, 5), 10);
+poolSpawn.Spawns.Add(GetTeamMob("chatot", "", "chatter", "", "", "", new RandRange(16), "wander_dumb"), new IntRange(0, 5), 10);
+poolSpawn.Spawns.Add(GetTeamMob("clefairy", "", "follow_me", "minimize", "", "", new RandRange(23)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("thievul", "stakeout", "sucker_punch", "foul_play", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("raticate", "", "double_edge", "pursuit", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

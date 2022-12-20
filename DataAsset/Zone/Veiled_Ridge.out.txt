@@ -13,15 +13,15 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-poolSpawn.Spawns.Add(GetTeamMob("zorua", "", "foul_play", "", "", "", new RandRange(29)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("zoroark", "", "night_daze", "", "", "", new RandRange(57)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("koffing", "levitate", "self_destruct", "poison_gas", "", "", new RandRange(28)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("hariyama", "thick_fat", "fake_out", "force_palm", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("absol", "", "future_sight", "quick_attack", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("houndoom", "", "beat_up", "bite", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("sneasel", "pickpocket", "agility", "quick_attack", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("mightyena", "", "thief", "scary_face", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("missingno", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("zorua", "", "foul_play", "", "", "", new RandRange(25), "wander_dumb"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("koffing", "levitate", "self_destruct", "haze", "", "", new RandRange(28), "wander_dumb"), new IntRange(0, 8), 10);
+poolSpawn.Spawns.Add(GetTeamMob("pawniard", "", "torment", "slash", "", "", new RandRange(30), "wander_dumb"), new IntRange(0, 8), 10);
+poolSpawn.Spawns.Add(GetTeamMob("absol", "", "future_sight", "night_slash", "", "", new RandRange(33), "wander_dumb"), new IntRange(8, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("scrafty", "", "beat_up", "feint_attack", "", "", new RandRange(30), "wander_dumb"), new IntRange(8, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("mightyena", "", "thief", "scary_face", "", "", new RandRange(31), "wander_dumb"), new IntRange(4, 12), 10);
+poolSpawn.Spawns.Add(GetTeamMob("ninetales", "", "imprison", "flamethrower", "", "", new RandRange(30), "wander_dumb"), new IntRange(4, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("sableye", "", "knock_off", "detect", "", "", new RandRange(30), "wander_dumb"), new IntRange(8, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("masquerain", "", "ominous_wind", "stun_spore", "", "", new RandRange(30), "wander_dumb"), new IntRange(0, 8), 10);
+poolSpawn.Spawns.Add(GetTeamMob("graveler", "", "rock_blast", "", "", "", new RandRange(32), "wander_dumb"), new IntRange(0, 12), 10);
+//spawns with pearl, if initial
+poolSpawn.Spawns.Add(GetTeamMob("grumpig", "", "magic_coat", "zen_headbutt", "", "", new RandRange(30), "wander_dumb"), new IntRange(4, max_floors), 10);

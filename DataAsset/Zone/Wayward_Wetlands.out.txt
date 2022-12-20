@@ -1,0 +1,19 @@
+//items
+ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+
+
+
+
+floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+//mobs
+TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+poolSpawn.Priority = PR_RESPAWN_MOB;
+
+
+poolSpawn.Spawns.Add(GetTeamMob("carnivine", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("croagunk", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+//spawn in the walls
+poolSpawn.Spawns.Add(GetTeamMob("feebas", "", "flail", "", "", "", new RandRange(25)), new IntRange(0, max_floors), 10);

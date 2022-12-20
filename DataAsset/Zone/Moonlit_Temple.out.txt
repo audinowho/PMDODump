@@ -1,0 +1,24 @@
+//items
+ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+
+
+
+
+floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+//mobs
+TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+poolSpawn.Priority = PR_RESPAWN_MOB;
+
+
+poolSpawn.Spawns.Add(GetTeamMob("mr_mime", "", "quick_guard", "psybeam", "", "", new RandRange(26)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("kirlia", "", "heal_pulse", "disarming_voice", "", "", new RandRange(26)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("glameow", "", "fake_out", "fury_swipes", "", "", new RandRange(26)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("drowzee", "", "hypnosis", "meditate", "", "", new RandRange(24)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("wobbuffet", "", "counter", "safeguard", "", "", new RandRange(26)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("lunatone", "", "embargo", "moonblast", "", "", new RandRange(23)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("floette", "", "grassy_terrain", "wish", "", "", new RandRange(24)), new IntRange(0, max_floors), 10);
+//sleeping, with assault vest
+poolSpawn.Spawns.Add(GetTeamMob("sylveon", "", "moonblast", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

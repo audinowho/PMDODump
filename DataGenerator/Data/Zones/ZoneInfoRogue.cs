@@ -3594,7 +3594,7 @@ namespace DataGenerator.Data
             //080 Slowbro : 505 Heal Pulse : 133 Amnesia : 352 Water Pulse
             poolSpawn.Spawns.Add(GetTeamMob("slowbro", "", "heal_pulse", "amnesia", "water_pulse", "", new RandRange(45)), new IntRange(25, 28), 10);
             //068 Machamp : 099 No Guard : 223 Dynamic Punch : 530 Dual Chop
-            poolSpawn.Spawns.Add(GetTeamMob("machamp", "no_guard", "dynamic_punch", "dual_chop", "", "", new RandRange(45)), new IntRange(25, 28), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("machamp", "no_guard", "dynamic_punch", "", "", "", new RandRange(45)), new IntRange(25, 28), 10);
             //136 Flareon : 083 Fire Spin : 436 Lava Plume
             poolSpawn.Spawns.Add(GetTeamMob("flareon", "", "fire_spin", "lava_plume", "", "", new RandRange(45)), new IntRange(25, 28), 10);
             //202 Wobbuffet : 219 Safeguard : 068 Counter : 243 Mirror Coat : 227 Encore
@@ -5452,6 +5452,139 @@ namespace DataGenerator.Data
             zone.Segments.Add(floorSegment);
 
             zone.GroundMaps.Add("garden_end");
+        }
+        #endregion
+
+        #region CAVE OF WHISPERS
+        static void FillCaveOfWhispers(ZoneData zone)
+        {
+            zone.Name = new LocalText("**Cave of Whispers");
+            zone.Level = 5;
+            zone.LevelCap = true;
+            zone.Rescues = 2;
+            zone.Rogue = RogueStatus.AllTransfer;
+
+            LayeredSegment floorSegment = new LayeredSegment();
+            floorSegment.IsRelevant = true;
+            floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+            floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Cave of Whispers\nB{0}F")));
+
+            //money
+            MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(63, 72), new RandRange(21, 24));
+            moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+            floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+            //items!
+            ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+            itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+            floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+            //mobs
+            TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+            poolSpawn.Priority = PR_RESPAWN_MOB;
+            //put something here
+            poolSpawn.TeamSizes.Add(1, new IntRange(0, 16), 12);
+            floorSegment.ZoneSteps.Add(poolSpawn);
+
+            TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+            tileSpawn.Priority = PR_RESPAWN_TRAP;
+            floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+            for (int ii = 0; ii < 16; ii++)
+            {
+                GridFloorGen layout = new GridFloorGen();
+
+
+                //Floor settings
+                if (ii < 8)
+                    AddFloorData(layout, "Star Cave.ogg", 3000, Map.SightRange.Clear, Map.SightRange.Dark);
+                else if (ii < 12)
+                    AddFloorData(layout, "Limestone Cavern.ogg", 3000, Map.SightRange.Dark, Map.SightRange.Dark);
+                else
+                    AddFloorData(layout, "Deep Limestone Cavern.ogg", 3000, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                //Tilesets
+                if (ii < 2)
+                    AddTextureData(layout, "waterfall_pond_wall", "waterfall_pond_floor", "waterfall_pond_secondary", "rock");
+                else if (ii < 4)
+                    AddTextureData(layout, "unused_waterfall_pond_wall", "unused_waterfall_pond_floor", "unused_waterfall_pond_secondary", "rock");
+                else if (ii < 6)
+                    AddTextureData(layout, "crystal_cave_1_wall", "crystal_cave_1_floor", "crystal_cave_1_secondary", "rock");
+                else if (ii < 8)
+                    AddTextureData(layout, "crystal_cave_2_wall", "crystal_cave_2_floor", "crystal_cave_2_secondary", "rock");
+                else if (ii < 10)
+                    AddTextureData(layout, "lapis_cave_wall", "lapis_cave_floor", "lapis_cave_secondary", "rock");
+                else if (ii < 12)
+                    AddTextureData(layout, "southern_cavern_2_wall", "southern_cavern_2_floor", "southern_cavern_2_secondary", "rock");
+                else
+                    AddTextureData(layout, "wish_cave_2_wall", "wish_cave_2_floor", "wish_cave_2_secondary", "rock");
+
+                //traps
+                AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                AddTrapsSteps(layout, new RandRange(6, 9));
+
+                //money - 9,280P to 25,536P
+                if (ii < 8)
+                    AddMoneyData(layout, new RandRange(1, 5));
+                else
+                    AddMoneyData(layout, new RandRange(3, 7));
+
+                //1F Key guaranteed
+                //SpecificItemZoneStep<MapGenContext> specificItemZoneStep = new SpecificItemZoneStep<MapGenContext>();
+                //layout.ZoneSteps.Add(specificItemZoneStep);
+
+                //enemies! ~ up to lv 20
+                AddRespawnData(layout, 3, 80);
+
+                //enemies
+                AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+
+                //items
+                if (ii < 8)
+                    AddItemData(layout, new RandRange(2, 6), 25);
+                else
+                    AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                //construct paths
+                {
+                    AddInitGridStep(layout, 4, 4, 10, 10);
+
+                    GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                    path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                    path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                    path.RoomRatio = new RandRange(90);
+                    path.BranchRatio = new RandRange(0, 25);
+
+                    SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                    //cross
+                    genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                    //round
+                    genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                    path.GenericRooms = genericRooms;
+
+                    SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                    genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                    path.GenericHalls = genericHalls;
+
+                    layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                    layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                }
+
+                AddDrawGridSteps(layout);
+
+                AddStairStep(layout, false);
+
+                AddWaterSteps(layout, "water", new RandRange(30));//water
+
+                floorSegment.Floors.Add(layout);
+            }
+
+            zone.Segments.Add(floorSegment);
         }
         #endregion
 
