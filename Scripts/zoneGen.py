@@ -41,6 +41,7 @@ class ZoneGen:
             if idx <= 1:
                 continue
             sheet_name = sheet['properties']['title']
+            print("Reading " + sheet_name)
 
             item_values = self._query_items(sheet_name)
             mon_values = self._query_mons(sheet_name)
@@ -54,7 +55,7 @@ class ZoneGen:
 
     def parseRange(self, startStr, endStr):
         start = '0'
-        if startStr != '-':
+        if startStr != '-' and startStr != "":
             start = str(int(startStr)-1)
         end = 'max_floors'
         if endStr != '-':
@@ -91,11 +92,11 @@ class ZoneGen:
 
             num = row[4]
             val = ''
-            if row[6] != '0':
+            if row[6] != '0' and row[6] != '':
                 val = ', {0}'.format(row[6])
             frange = self.parseRange(row[7], row[8])
             rate = int(row[9])
-            if num != '----':
+            if num != '----' and num != "":
                 if row[5] == '0':
                     if val != '':
                         val = ', false{0}'.format(val)
@@ -140,7 +141,7 @@ class ZoneGen:
         for row in mons:
             num = row[0]
             frange = self.parseRange(row[9], row[10])
-            if num != '---':
+            if num != '---' and num != "":
                 attr_nums = ['""', '""', '""', '""', '""']
                 for idx in range(2, 7):
                     inum = row[idx]
@@ -149,9 +150,9 @@ class ZoneGen:
 
                 level = "new RandRange({0})".format(row[7])
                 anum = row[8]
-                if row[12] != '---':
+                if row[12] != '---' and row[12] != "":
                     level += ", TeamMemberSpawn.MemberRole." + row[12]
-                if anum != '--':
+                if anum != '--' and anum != "":
                     level += ', "{0}"'.format(anum)
 
                 # add comment if exists

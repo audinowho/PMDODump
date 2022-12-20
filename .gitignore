@@ -13,5 +13,7 @@ publish/
 __pycache__/
 Scripts/.credentials/sheets.googleapis.com-localization.json
 Scripts/client_secret.json
-Scripts/sheet_id.txt
+Scripts/string_sheet_id.txt
+Scripts/zone_sheet_id.txt
+Scripts/item_sheet_id.txt
 venv/
