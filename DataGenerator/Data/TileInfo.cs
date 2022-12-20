@@ -354,7 +354,7 @@ namespace DataGenerator.Data
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new SetItemStickyEvent(true, false, "seed_decoy", true, new HashSet<FlagType>()));
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
-                statusStates.Set(new CountDownState(4));
+                statusStates.Set(new CountDownState(5));
                 newData.OnHits.Add(0, new StatusStateBattleEvent("immobilized", true, false, true, statusStates));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
@@ -499,7 +499,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Chestnut Trap");
                 fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("*", "")).ToLower();
-                tile.Desc = new LocalText("Triggering this trap makes spiky unshelled Chestnuts drop, inflicting damage on nearby Pokémon.");
+                tile.Desc = new LocalText("Triggering this trap makes spiky unshelled Chestnuts drop, inflicting damage on nearby Pokémon and causing them to flinch.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
                 tile.Anim = new ObjAnimData("Trap_Chestnut", 1);
@@ -524,6 +524,7 @@ namespace DataGenerator.Data
                 newData.HitRate = -1;
                 newData.HitCharAction = new CharAnimFrameType(04);//Hurt
                 newData.OnHits.Add(0, new IndirectDamageEvent(6));
+                newData.OnHits.Add(0, new StatusBattleEvent("flinch", true, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 18)

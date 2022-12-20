@@ -16,7 +16,7 @@ flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
 SCOPES = 'https://www.googleapis.com/auth/spreadsheets'
 CLIENT_SECRET_FILE = 'client_secret.json'
 APPLICATION_NAME = 'Localization Sync'
-SHEET_ID_FILE = 'sheet_id.txt'
+SHEET_ID_FILE = 'zone_sheet_id.txt'
 
 def get_credentials():
     """Gets valid user credentials from storage.
@@ -42,40 +42,41 @@ def get_credentials():
         print('Storing credentials to ' + credential_path)
     return credentials
 
-def get_sheet_id():
+def get_sheet_ids():
     """
     Gets the ID of the google spreadsheet to access.
     """
+    sheet_ids = []
     with open(SHEET_ID_FILE) as file:
-        file.readline()
-        file.readline()
-        return file.readline().strip()
+        sheet_ids.append(file.readline().strip())
+        sheet_ids.append(file.readline().strip())
+    return sheet_ids
 
 def main():
     """
     Synchronizes exclusive items for the project.
     """
     credentials = get_credentials()
-    sheet_id = get_sheet_id()
+    sheet_ids = get_sheet_ids()
 
-    zoneGen = ZoneGen()
-    zoneGen.open_sheet(credentials, sheet_id)
-    print("Sheet opened.")
+    for sheet_id in sheet_ids:
+        zoneGen = ZoneGen()
+        zoneGen.open_sheet(credentials, sheet_id)
+        print("Sheet opened.")
 
-    # Reference
-    # first run the game in a setting that spits out all item types to their own files
-    # call("../PMDO/PMDO.exe -zoneprep", shell=True)
+        # Reference
+        # first run the game in a setting that spits out all item types to their own files
+        # call("../PMDO/PMDO.exe -zoneprep", shell=True)
 
+        # Reference
+        zoneGen.write_data_text("PreZone", "Resources")
 
-    # Reference
-    zoneGen.write_data_text("PreZone", "Resources")
+        print("Updated References.")
 
-    print("Updated References.")
+        # Item Data
+        zoneGen.load_sheet_texts()
 
-    # Item Data
-    zoneGen.load_sheet_texts()
-
-    print("Pulled Zone Data.")
+        print("Pulled Zone Data.")
 
     print("Complete.")
 

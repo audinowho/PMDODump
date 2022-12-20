@@ -66,11 +66,12 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Burned");
                 fileName = "burn";
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon will take some damage every turn, and its Attack will be lowered. This status wears off after a few turns.");
+                status.Desc = new LocalText("The Pokémon will take some damage every turn it attacks, and its Attack will be lowered.");
                 status.Emoticon = "Burn";
                 status.StatusStates.Set(new MajorStatusState());
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
+                status.StatusStates.Set(new AttackedThisTurnState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_BURN_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_BURN_FAIL")));
                 status.BeforeStatusAdds.Add(0, new TypeCheck("fire", new StringKey("MSG_BURN_FAIL_ELEMENT")));
@@ -80,9 +81,8 @@ namespace DataGenerator.Data
                 status.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 2, 3));
                 //status.AfterHittings.Add(0, new StatusSpreadEffect(true));
                 //status.AfterBeingHits.Add(0, new StatusSpreadEffect(false));
-                status.OnMapTurnEnds.Add(0, new CountDownRemoveEvent(true));
-                status.OnMapTurnEnds.Add(0, new BurnEvent());
-                status.StatusStates.Set(new CountDownState(6));
+                status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
+                status.OnTurnEnds.Add(0, new BurnEvent());
             }
             else if (ii == 3)
             {
@@ -123,7 +123,7 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Paralyzed");
                 fileName = "paralyze";
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon is paralyzed and cannot attack in consecutive turns. This status wears off after a few turns.");
+                status.Desc = new LocalText("The Pokémon is paralyzed and cannot move in consecutive turns. This status wears off after a few turns.");
                 status.DrawEffect = DrawEffect.Shaking;
                 status.StatusStates.Set(new MajorStatusState());
                 status.StatusStates.Set(new BadStatusState());
@@ -147,12 +147,14 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Poisoned");
                 fileName = "poison";
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon gradually takes damage every time it attacks. Its natural HP recovery is also stopped.");
+                status.Desc = new LocalText("The Pokémon takes damage on every action, and its ability to recover HP is reduced. This status wears off after a few turns.");
                 status.Emoticon = "Skull_White";
                 status.StatusStates.Set(new MajorStatusState());
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
                 status.StatusStates.Set(new CountState(2));
+                status.StatusStates.Set(new CountDownState(6));
+                status.StatusStates.Set(new AttackedThisTurnState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison_toxic", new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_POISON_FAIL")));
@@ -162,19 +164,26 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
                 status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(false)));
+                status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
+                //status.OnWalks.Add(0, new PoisonSingleEvent(false));
+                status.OnTurnEnds.Add(1, new PoisonSingleEvent(false));
+                status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
+                status.RestoreHPs.Add(0, new HealMultEvent(1, 2));
             }
             else if (ii == 6)
             {
                 status.Name = new LocalText("Badly Poisoned");
                 fileName = "poison_toxic";
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon takes gradually worsening damage every time it attacks. Its natural HP recovery is also stopped.");
+                status.Desc = new LocalText("The Pokémon takes damage on every action, with the damage worsening if it attacks. Its ability to recover HP is also reduced. This status wears off after a few turns.");
                 status.Emoticon = "Skull_Purple";
                 status.StatusStates.Set(new MajorStatusState());
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
-                status.StatusStates.Set(new CountState(0));
+                status.StatusStates.Set(new CountState(2));
+                status.StatusStates.Set(new CountDownState(6));
+                status.StatusStates.Set(new AttackedThisTurnState());
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison", new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_POISON_FAIL")));
@@ -184,7 +193,12 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_TOXIC_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
                 status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(true)));
+                status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
+                //status.OnWalks.Add(0, new PoisonSingleEvent(false));
+                status.OnTurnEnds.Add(1, new PoisonSingleEvent(false));
+                status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
+                status.RestoreHPs.Add(0, new HealMultEvent(1, 2));
             }
             else if (ii == 7)
             {

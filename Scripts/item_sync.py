@@ -16,7 +16,7 @@ flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
 SCOPES = 'https://www.googleapis.com/auth/spreadsheets'
 CLIENT_SECRET_FILE = 'client_secret.json'
 APPLICATION_NAME = 'Localization Sync'
-SHEET_ID_FILE = 'sheet_id.txt'
+SHEET_ID_FILE = 'item_sheet_id.txt'
 
 def get_credentials():
     """Gets valid user credentials from storage.
@@ -47,7 +47,6 @@ def get_sheet_id():
     Gets the ID of the google spreadsheet to access.
     """
     with open(SHEET_ID_FILE) as file:
-        file.readline()
         return file.readline().strip()
 
 def main():

@@ -14,7 +14,7 @@ Key		EN
 0000-bouncing-0000|data.Name		Bouncing
 0000-bouncing-0001|data.Desc		The Pokémon is in mid-air from a bounce and can avoid most moves. It will unleash the move on its next turn.
 0000-burn-0000|data.Name		Burned
-0000-burn-0001|data.Desc		The Pokémon will take some damage every turn, and its Attack will be lowered. This status wears off after a few turns.
+0000-burn-0001|data.Desc		The Pokémon will take some damage every turn it attacks, and its Attack will be lowered.
 0000-charge-0000|data.Name		Charge
 0000-charge-0001|data.Desc		The Pokémon is charging electrical energy, boosting the power of an Electric-type attack. This status wears off after a few turns.
 0000-charging_focus_punch-0000|data.Name		Charging Focus Punch
@@ -168,7 +168,7 @@ Key		EN
 0000-outrage-0000|data.Name		Outrage
 0000-outrage-0001|data.Desc		The Pokémon will use Outrage repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.
 0000-paralyze-0000|data.Name		Paralyzed
-0000-paralyze-0001|data.Desc		The Pokémon is paralyzed and cannot attack in consecutive turns. This status wears off after a few turns.
+0000-paralyze-0001|data.Desc		The Pokémon is paralyzed and cannot move in consecutive turns. This status wears off after a few turns.
 0000-paused-0000|data.Name		Paused
 0000-paused-0001|data.Desc		The Pokémon is rendered incapable of taking any action. This status wears off after a few turns.
 0000-perish_song-0000|data.Name		Perish Song
@@ -180,9 +180,9 @@ Key		EN
 0000-pierce-0000|data.Name		Pierce
 0000-pierce-0001|data.Desc		The Pokémon's attacks and items can hit through multiple targets and walls.
 0000-poison-0000|data.Name		Poisoned
-0000-poison-0001|data.Desc		The Pokémon gradually takes damage every time it attacks. Its natural HP recovery is also stopped.
+0000-poison-0001|data.Desc		The Pokémon takes damage on every action, and its ability to recover HP is reduced. This status wears off after a few turns.
 0000-poison_toxic-0000|data.Name		Badly Poisoned
-0000-poison_toxic-0001|data.Desc		The Pokémon takes gradually worsening damage every time it attacks. Its natural HP recovery is also stopped.
+0000-poison_toxic-0001|data.Desc		The Pokémon takes damage on every action, with the damage worsening if it attacks. Its ability to recover HP is also reduced. This status wears off after a few turns.
 0000-powder-0000|data.Name		Powder
 0000-powder-0001|data.Desc		The Pokémon is covered in a powder that causes an explosion when exposed to fire or electricity.
 0000-power_charged-0000|data.Name		Power-Charged

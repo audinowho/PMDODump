@@ -13,13 +13,17 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-poolSpawn.Spawns.Add(GetTeamMob("electabuzz", "", "thunder_punch", "light_screen", "", "", new RandRange(29)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("magneton", "", "electric_terrain", "thunder_wave", "", "", new RandRange(28)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("emolga", "", "double_team", "nuzzle", "", "", new RandRange(26)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("plusle", "", "discharge", "", "", "", new RandRange(30)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("minun", "", "discharge", "", "", "", new RandRange(30)), new IntRange(0, max_floors), 10);
-//Sleeping
-poolSpawn.Spawns.Add(GetTeamMob("manectric", "lightning_rod", "thunder", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("fearow", "", "pluck", "agility", "", "", new RandRange(26)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("geodude", 1, "", Gender.Unknown), "", "spark", "defense_curl", "", "", new RandRange(24)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("golbat", "", "screech", "leech_life", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("electabuzz", "", "thunder_punch", "light_screen", "", "", new RandRange(29)), new IntRange(10, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("emolga", "", "shock_wave", "volt_switch", "", "", new RandRange(26)), new IntRange(0, 10), 10);
+//Version Excl
+poolSpawn.Spawns.Add(GetTeamMob("plusle", "", "discharge", "play_nice", "", "", new RandRange(30)), new IntRange(10, max_floors), 10);
+//Version Excl
+poolSpawn.Spawns.Add(GetTeamMob("minun", "", "discharge", "play_nice", "", "", new RandRange(30)), new IntRange(10, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("magneton", "", "electric_terrain", "thunder_wave", "", "", new RandRange(30)), new IntRange(5, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("voltorb", "", "eerie_impulse", "charge_beam", "", "", new RandRange(26)), new IntRange(0, 10), 10);
+poolSpawn.Spawns.Add(GetTeamMob("hitmonchan", "", "focus_punch", "agility", "", "", new RandRange(26)), new IntRange(0, 10), 10);
+poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("geodude", 1, "", Gender.Unknown), "", "spark", "defense_curl", "", "", new RandRange(24)), new IntRange(0, 5), 10);
+poolSpawn.Spawns.Add(GetTeamMob("loudred", "", "screech", "echoed_voice", "", "", new RandRange(26)), new IntRange(0, 10), 10);
+poolSpawn.Spawns.Add(GetTeamMob("hariyama", "", "fake_out", "smelling_salts", "", "", new RandRange(30)), new IntRange(5, max_floors), 10);
+//Sleeping, holding wide lens
+poolSpawn.Spawns.Add(GetTeamMob("jolteon", "", "thunder", "agility", "shadow_ball", "", new RandRange(5)), new IntRange(0, max_floors), 10);

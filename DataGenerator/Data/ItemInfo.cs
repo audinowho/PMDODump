@@ -1290,7 +1290,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Big Apricorn");
                 item.Desc = new LocalText("An apricorn with a pleasant scent. It can tossed at wild Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_White";
-                item.Price = 500;
+                item.Price = 400;
                 item.UseEvent.OnHits.Add(0, new FlatRecruitmentEvent(30));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
@@ -1299,7 +1299,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Plain Apricorn");
                 item.Desc = new LocalText("An apricorn with a pleasant scent. It can tossed at wild Pokémon of any type, as a gift to recruit them into the team.");
                 item.Sprite = "Apricorn_White";
-                item.Price = 300;
+                item.Price = 250;
                 item.UseEvent.OnHits.Add(0, new FlatRecruitmentEvent(0));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
@@ -1308,7 +1308,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Blue Apricorn");
                 item.Desc = new LocalText("An apricorn that can be tossed at Water- or Ice-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Blue";
-                item.Price = 300;
+                item.Price = 250;
                 HashSet<string> elements = new HashSet<string>();
                 elements.Add("water");
                 elements.Add("ice");
@@ -1320,7 +1320,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Green Apricorn");
                 item.Desc = new LocalText("An apricorn that can be tossed at Grass- or Bug-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Green";
-                item.Price = 300;
+                item.Price = 250;
                 HashSet<string> elements = new HashSet<string>();
                 elements.Add("grass");
                 elements.Add("bug");
@@ -1332,7 +1332,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Brown Apricorn");
                 item.Desc = new LocalText("An apricorn that can be tossed at Fighting-, Rock-, or Ground-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Brown";
-                item.Price = 300;
+                item.Price = 250;
                 HashSet<string> elements = new HashSet<string>();
                 elements.Add("fighting");
                 elements.Add("rock");
@@ -1345,7 +1345,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Purple Apricorn");
                 item.Desc = new LocalText("An apricorn that can be tossed at Poison- or Psychic-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Purple";
-                item.Price = 300;
+                item.Price = 250;
                 HashSet<string> elements = new HashSet<string>();
                 elements.Add("poison");
                 elements.Add("psychic");
@@ -1357,7 +1357,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Red Apricorn");
                 item.Desc = new LocalText("An apricorn that can be tossed at Fire- or Dragon-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Red";
-                item.Price = 300;
+                item.Price = 250;
                 HashSet<string> elements = new HashSet<string>();
                 elements.Add("fire");
                 elements.Add("dragon");
@@ -1369,7 +1369,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("White Apricorn");
                 item.Desc = new LocalText("An apricorn that can be tossed at Normal-, Flying-, or Fairy-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_White";
-                item.Price = 300;
+                item.Price = 250;
                 HashSet<string> elements = new HashSet<string>();
                 elements.Add("normal");
                 elements.Add("flying");
@@ -1382,7 +1382,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Yellow Apricorn");
                 item.Desc = new LocalText("An apricorn that can be tossed at Electric- or Steel-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Yellow";
-                item.Price = 300;
+                item.Price = 250;
                 HashSet<string> elements = new HashSet<string>();
                 elements.Add("electric");
                 elements.Add("steel");
@@ -1394,7 +1394,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Black Apricorn");
                 item.Desc = new LocalText("An apricorn that can be tossed at Ghost- or Dark-type Pokémon as a gift for a high chance to recruit them into the team.");
                 item.Sprite = "Apricorn_Black";
-                item.Price = 300;
+                item.Price = 250;
                 HashSet<string> elements = new HashSet<string>();
                 elements.Add("ghost");
                 elements.Add("dark");

@@ -1,10 +1,15 @@
-# 0.6.6 Changes #
+# 0.6.7 Changes #
 
-* Fixed floor generation in Sickly Hollow
-* Fixed an issue in which vault entrances did not block vision 
-* Lowered the appearance rate of Assembly Boxes
-* Fixed an issue preventing AOK mail from generating with a replay
-* Fix an issue where summon traps and similar warping mechanics ingored unbreakable blocks
-* Fix issues with textboxes in replay verification
-* Out-of-date quicksaves are more gracefully handled
-* Developer option to clamp dungeon maps
+* Poison reworked to deal steady damage and then wear off.  Toxic increases damage if the user attacks.  It also decreases HP restoration.
+* Burn reworked to deal damage when attacking, and remain until cured.
+* Chestnut Traps cause a flinch
+* Fixed issues with visibility in clear-sight clamped maps
+* Added learnset data for pokemon summaries
+* Switcheroo/Bestow can no longer remove undroppable items
+* Items of 0 price cannot be sold
+* Fixed an issue with Lob Wand not going through walls
+* Fixed issue with portrait display in Dev menu
+* Fixed issue with ground script generation where table functions would generate as CURMAPSCR instead of the map asset name
+* Minor dev fixes
+
+
