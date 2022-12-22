@@ -215,6 +215,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_GRAVITY_START"), true));
                 //remove statuses when gravity intensifies
                 status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent("flying")));
+                status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent("sky_drop_target")));
                 status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent("bouncing")));
                 status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent("telekinesis")));
                 status.OnMapStatusAdds.Add(0, new MapStatusCharEvent(new RemoveStatusEvent("magnet_rise")));
@@ -222,6 +223,7 @@ namespace DataGenerator.Data
                 status.TargetElementEffects.Add(1, new TypeVulnerableEvent("ground"));
                 //prevent telekinesis, magnet rise, bounce and fly status effects
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck("flying", new StringKey("MSG_GRAVITY_NO_FLY")));
+                status.BeforeStatusAdds.Add(0, new PreventStatusCheck("sky_drop_target", new StringKey("MSG_GRAVITY_NO_FLY")));
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck("bouncing", new StringKey("MSG_GRAVITY_NO_BOUNCE")));
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck("telekinesis", new StringKey("MSG_GRAVITY_NO_LEVITATE")));
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck("magnet_rise", new StringKey("MSG_GRAVITY_NO_LEVITATE")));

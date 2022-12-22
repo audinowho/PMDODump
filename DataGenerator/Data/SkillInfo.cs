@@ -13130,21 +13130,44 @@ namespace DataGenerator.Data
             }
             else if (ii == 507)
             {
-                skill.Name = new LocalText("**Sky Drop");
+                skill.Name = new LocalText("Sky Drop");
                 skill.Desc = new LocalText("The user takes the target into the sky, then drops it during the next turn. The target cannot attack while in the sky.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
-                skill.Data.HitRate = 100;
+                skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
+                AttackAction altAction = new AttackAction();
+                altAction.CharAnimData = new CharAnimProcess(CharAnimProcess.ProcessType.Kidnap, 05);//Fly
+                altAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                BattleFX altPreFX = new BattleFX();
+                altPreFX.Sound = "DUN_Fly";
+                altAction.ActionFX = altPreFX;
+
+                ExplosionData altExplosion = new ExplosionData();
+                altExplosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+
+                BattleData altMoveData = new BattleData();
+                altMoveData.Element = DataManager.Instance.DefaultElement;
+                altMoveData.Category = BattleData.SkillCategory.None;
+                altMoveData.HitRate = -1;
+                altMoveData.HitCharAction = new CharAnimProcess(CharAnimProcess.ProcessType.Fly, 04);//Hurt
+                BattleFX altPostFX = new BattleFX();
+                altPostFX.Delay = 10;
+                altMoveData.HitFX = altPostFX;
+                altMoveData.OnHits.Add(0, new CoupledStatusBattleEvent("sky_drop_target", "sky_drop_user", true, false));
+
+                skill.Data.BeforeTryActions.Add(0, new ChargeCustomEvent(altAction, altExplosion, altMoveData));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                ((AttackAction)skill.HitboxAction).Emitter = new SingleEmitter(new AnimData("Fury_Swipes", 3));
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimProcess(CharAnimProcess.ProcessType.Drop);
+                BattleFX preFX = new BattleFX();
+                preFX.Sound = "DUN_Deep_Fall";
+                skill.HitboxAction.PreActions.Add(preFX);
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
             }
             else if (ii == 508)
             {

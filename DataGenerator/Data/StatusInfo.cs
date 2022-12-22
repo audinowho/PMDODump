@@ -2351,6 +2351,46 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Friendly Fire");
                 status.OnRefresh.Add(0, new FriendlyFireToEvent());
             }
+            else if (ii == 132)
+            {
+                status.Name = new LocalText("Sky Drop");
+                fileName = "sky_drop_user";
+                status.MenuName = true;
+                status.Desc = new LocalText("The Pokémon is holding its target in the sky and can avoid most moves. It will drop back down on the next turn.");
+                status.Targeted = true;
+                status.DrawEffect = DrawEffect.Absent;
+                status.OnStatusAdds.Add(0, new TargetedBattleLogEvent(new StringKey("MSG_SKY_DROP_CHARGE"), true));
+                status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FLY_END")));
+                status.OnStatusRemoves.Add(0, new RemoveTargetStatusEvent("sky_drop_target", false));
+                status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
+                status.BeforeTryActions.Add(-1, new ForceMoveEvent("sky_drop"));
+                status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeActions.Add(0, new ForceFaceTargetEvent());
+                status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
+                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));
+                status.OnRefresh.Add(0, new AttackOnlyEvent());
+                status.OnRefresh.Add(0, new ImmobilizationEvent());
+            }
+            else if (ii == 133)
+            {
+                status.Name = new LocalText("Sky Drop");
+                fileName = "sky_drop_target";
+                status.MenuName = true;
+                status.Desc = new LocalText("The Pokémon is being held in the sky and is rendered incapable of any action. Most moves will miss the Pokémon during this time.");
+                status.Targeted = true;
+                status.DrawEffect = DrawEffect.Absent;
+                status.BeforeStatusAdds.Add(0, new SameTargetedStatusCheck(new StringKey("MSG_SKILL_FAILED")));
+                status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
+                status.OnStatusRemoves.Add(0, new RemoveTargetStatusEvent("sky_drop_user", true));
+                status.OnStatusRemoves.Add(0, new StatusCharAnimEvent(new CharAnimProcess(CharAnimProcess.ProcessType.Drop, 04)));
+                status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
+                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeActions.Add(0, new PreventActionEvent(new StringKey(), BattleActionType.Skill, BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));
+                status.OnRefresh.Add(0, new ImmobilizationEvent());
+                status.OnRefresh.Add(0, new AttackOnlyEvent());
+            }
 
             if (status.Name.DefaultText.StartsWith("**"))
                 status.Name.DefaultText = status.Name.DefaultText.Replace("*", "");
