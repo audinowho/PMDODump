@@ -17,7 +17,7 @@ poolSpawn.Spawns.Add(GetTeamMob("seel", "", "icy_wind", "encore", "", "", new Ra
 poolSpawn.Spawns.Add(GetTeamMob("clamperl", "", "clamp", "whirlpool", "iron_defense", "", new RandRange(23), "turret"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("goldeen", "", "horn_attack", "water_pulse", "", "", new RandRange(22)), new IntRange(0, 6), 10);
 poolSpawn.Spawns.Add(GetTeamMob("mantyke", "", "wing_attack", "bubble_beam", "", "", new RandRange(22)), new IntRange(0, 6), 10);
-poolSpawn.Spawns.Add(GetTeamMob("finneon", "", "attract", "water_gun", "", "", new RandRange(24)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("horsea", "", "smokescreen", "twister", "", "", new RandRange(24)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("carvanha", "", "bite", "screech", "", "", new RandRange(24)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("wailmer", "", "whirlpool", "astonish", "", "", new RandRange(25)), new IntRange(6, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("tentacool", "", "acid_spray", "wrap", "", "", new RandRange(25)), new IntRange(6, max_floors), 10);

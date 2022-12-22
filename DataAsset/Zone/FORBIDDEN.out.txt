@@ -85,3 +85,7 @@ poolSpawn.Spawns.Add(GetTeamMob("chatot", "", "chatter", "", "", "", new RandRan
 poolSpawn.Spawns.Add(GetTeamMob("clefairy", "", "follow_me", "minimize", "", "", new RandRange(23)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("thievul", "stakeout", "sucker_punch", "foul_play", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("raticate", "", "double_edge", "pursuit", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("milotic", "", "recover", "water_pulse", "safeguard", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("nosepass", "", "rest", "rock_slide", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("chimecho", "", "healing_wish", "yawn", "", "", new RandRange(5), TeamMemberSpawn.MemberRole.Support), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("lumineon", "", "aqua_ring", "u_turn", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

@@ -22,3 +22,4 @@ poolSpawn.Spawns.Add(GetTeamMob("mankey", "", "seismic_toss", "", "", "", new Ra
 poolSpawn.Spawns.Add(GetTeamMob("sandshrew", "", "rapid_spin", "", "", "", new RandRange(17)), new IntRange(5, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("bidoof", "simple", "defense_curl", "tackle", "", "", new RandRange(16)), new IntRange(0, 5), 10);
 poolSpawn.Spawns.Add(GetTeamMob("poochyena", "", "howl", "bite", "", "", new RandRange(14)), new IntRange(5, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("abra", "", "teleport", "", "", "", new RandRange(12)), new IntRange(5, max_floors), 10);

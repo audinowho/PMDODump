@@ -88,7 +88,7 @@ poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
 poolSpawn.Spawns.Add(GetTeamMob("ekans", "", "wrap", "bite", "", "", new RandRange(12), "wander_dumb"), new IntRange(0, 6), 10);
-poolSpawn.Spawns.Add(GetTeamMob("zigzagoon", "", "growl", "headbutt", "", "", new RandRange(12), "wander_dumb"), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("doduo", "", "growl", "fury_attack", "", "", new RandRange(12), "wander_dumb"), new IntRange(0, 6), 10);
 poolSpawn.Spawns.Add(GetTeamMob("bonsly", "", "rock_throw", "", "", "", new RandRange(14), "weird_tree"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("lotad", "", "bubble", "natural_gift", "", "", new RandRange(13), "wander_dumb"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("surskit", "", "sweet_scent", "quick_attack", "", "", new RandRange(13), "wander_dumb"), new IntRange(0, max_floors), 10);

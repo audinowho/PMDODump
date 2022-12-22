@@ -21,3 +21,5 @@ poolSpawn.Spawns.Add(GetTeamMob("duskull", "", "shadow_sneak", "astonish", "", "
 poolSpawn.Spawns.Add(GetTeamMob("servine", "", "leaf_tornado", "", "", "", new RandRange(21)), new IntRange(0, max_floors), 10);
 //sleeping, holding scope lens
 poolSpawn.Spawns.Add(GetTeamMob("leafeon", "", "leaf_blade", "aerial_ace", "x_scissor", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+//MH Only
+poolSpawn.Spawns.Add(GetTeamMob("heracross", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
