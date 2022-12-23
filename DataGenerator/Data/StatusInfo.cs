@@ -2371,6 +2371,11 @@ namespace DataGenerator.Data
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
+                status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Block));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Water));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Lava));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Abyss));
             }
             else if (ii == 133)
             {
@@ -2381,6 +2386,7 @@ namespace DataGenerator.Data
                 status.Targeted = true;
                 status.DrawEffect = DrawEffect.Absent;
                 status.BeforeStatusAdds.Add(0, new SameTargetedStatusCheck(new StringKey("MSG_SKILL_FAILED")));
+                status.OnStatusAdds.Add(0, new StatusAnimEvent(new EmptyFiniteEmitter(), "DUN_Fly", 0, true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
                 status.OnStatusRemoves.Add(0, new RemoveTargetStatusEvent("sky_drop_user", true));
                 status.OnStatusRemoves.Add(0, new StatusCharAnimEvent(new CharAnimProcess(CharAnimProcess.ProcessType.Drop, 04)));
@@ -2390,6 +2396,11 @@ namespace DataGenerator.Data
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
+                status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Block));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Water));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Lava));
+                status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Abyss));
             }
 
             if (status.Name.DefaultText.StartsWith("**"))

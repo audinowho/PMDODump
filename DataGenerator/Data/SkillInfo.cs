@@ -13138,11 +13138,18 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
-                AttackAction altAction = new AttackAction();
-                altAction.CharAnimData = new CharAnimProcess(CharAnimProcess.ProcessType.Kidnap, 05);//Fly
+
+
+                DashAction altAction = new DashAction();
+                altAction.CharAnim = 05;//Attack
+                altAction.AppearanceMod = DashAction.DashAppearance.Kidnap;
+                altAction.Range = 2;
+                altAction.StopAtWall = true;
+                altAction.StopAtHit = true;
+                altAction.HitTiles = true;
                 altAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
                 BattleFX altPreFX = new BattleFX();
-                altPreFX.Sound = "DUN_Fly";
+                altPreFX.Sound = "DUN_Thief";
                 altAction.ActionFX = altPreFX;
 
                 ExplosionData altExplosion = new ExplosionData();
@@ -13156,7 +13163,9 @@ namespace DataGenerator.Data
                 BattleFX altPostFX = new BattleFX();
                 altPostFX.Delay = 10;
                 altMoveData.HitFX = altPostFX;
-                altMoveData.OnHits.Add(0, new CoupledStatusBattleEvent("sky_drop_target", "sky_drop_user", true, false));
+                altMoveData.BeforeActions.Add(0, new SingleStrikeEvent());
+                altMoveData.OnActions.Add(1, new NoPierceEvent(true, false));
+                altMoveData.OnHits.Add(0, new SkyDropStatusBattleEvent("sky_drop_target", "sky_drop_user", true, false));
 
                 skill.Data.BeforeTryActions.Add(0, new ChargeCustomEvent(altAction, altExplosion, altMoveData));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
