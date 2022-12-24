@@ -403,7 +403,7 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("Swords Dance");
                 skill.Desc = new LocalText("A frenetic dance to uplift the fighting spirit. This sharply raises the Attack stat.");
-                skill.BaseCharges = 14;
+                skill.BaseCharges = 12;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
@@ -3401,7 +3401,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 12;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
-                skill.Data.HitRate = 80;
+                skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 5;
@@ -3826,13 +3826,14 @@ namespace DataGenerator.Data
             }
             else if (ii == 148)
             {
-                skill.Name = new LocalText("=Flash");
-                skill.Desc = new LocalText("The user flashes a bright light that cuts the target's accuracy.");
-                skill.BaseCharges = 15;
+                skill.Name = new LocalText("Flash");
+                skill.Desc = new LocalText("The user flashes a bright light that cuts the target's accuracy. It also reveals part of the floor.");
+                skill.BaseCharges = 12;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 90;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent("mod_accuracy", true, false, -1));
+                skill.Data.AfterActions.Add(0, new MapOutRadiusEvent(20));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -3841,6 +3842,12 @@ namespace DataGenerator.Data
                 CircleSquareAreaEmitter emitter = new CircleSquareAreaEmitter(new AnimData("Sparkle_RSE", 3));
                 emitter.ParticlesPerTile = 2;
                 ((AreaAction)skill.HitboxAction).Emitter = emitter;
+                FiniteOverlayEmitter overlay = new FiniteOverlayEmitter();
+                overlay.Anim = new BGAnimData("White", 1, -1, -1, 128);
+                overlay.TotalTime = 60;
+                overlay.Movement = new RogueElements.Loc(0, -1);
+                overlay.Layer = DrawLayer.Bottom;
+                skill.HitboxAction.ActionFX.Emitter = overlay;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
                 skill.HitboxAction.ActionFX.Sound = "DUN_Disable";
@@ -5290,7 +5297,7 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("Swagger");
                 skill.Desc = new LocalText("The user enrages and confuses the target. However, this also sharply raises the target's Attack stat.");
-                skill.BaseCharges = 14;
+                skill.BaseCharges = 12;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 90;
@@ -5308,8 +5315,8 @@ namespace DataGenerator.Data
                 preFX.Emitter = endAnim;
                 preFX.Sound = "DUN_Rage";
                 skill.HitboxAction.PreActions.Add(preFX);
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
             }
             else if (ii == 208)
             {
@@ -5922,7 +5929,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
-                skill.Data.SkillStates.Set(new AdditionalEffectState(50));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
@@ -6753,7 +6760,7 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("=Flatter");
                 skill.Desc = new LocalText("Flattery is used to confuse the target. However, this also raises the target's Sp. Atk stat.");
-                skill.BaseCharges = 14;
+                skill.BaseCharges = 12;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = 90;
@@ -6764,8 +6771,8 @@ namespace DataGenerator.Data
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(25);//Appeal
                 ((ThrowAction)skill.HitboxAction).Coverage = ThrowAction.ArcCoverage.WideAngle;
                 ((ThrowAction)skill.HitboxAction).Range = 2;
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
                 BetweenEmitter endAnim = new BetweenEmitter(new AnimData("Flatter_Back", 2), new AnimData("Flatter_Front", 2));
                 endAnim.HeightBack = 56;
                 endAnim.HeightFront = 56;
@@ -7395,7 +7402,7 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("-Skill Swap");
                 skill.Desc = new LocalText("The user employs its psychic power to exchange Abilities with the target.");
-                skill.BaseCharges = 18;
+                skill.BaseCharges = 24;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
@@ -8616,10 +8623,10 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("Bullet Seed");
                 skill.Desc = new LocalText("The user forcefully shoots seeds at the target five times in a row.");
-                skill.BaseCharges = 14;
+                skill.BaseCharges = 15;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
-                skill.Data.HitRate = 75;
+                skill.Data.HitRate = 65;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 5;
@@ -11224,7 +11231,7 @@ namespace DataGenerator.Data
             else if (ii == 432)
             {
                 skill.Name = new LocalText("-Defog");
-                skill.Desc = new LocalText("A strong wind blows away the target's barriers such as Reflect or Light Screen. This also lowers the target's evasiveness.");
+                skill.Desc = new LocalText("A strong wind blows away traps and barriers such as Reflect or Light Screen. This also lowers the target's evasiveness.");
                 skill.BaseCharges = 16;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -15334,7 +15341,7 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("Power-Up Punch");
                 skill.Desc = new LocalText("Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.");
-                skill.BaseCharges = 20;
+                skill.BaseCharges = 12;
                 skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());

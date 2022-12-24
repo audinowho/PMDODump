@@ -140,6 +140,9 @@ namespace DataGenerator.Data
             }
             //WritePersonalityChecklist(personalities, totalEntries);
 
+            //PrintLearnables();
+
+
             //m_dbConnection.Close();
             //m_db7Connection.Close();
             m_dbTLConnection.Close();
@@ -2038,6 +2041,55 @@ namespace DataGenerator.Data
                     }
                     file.WriteLine();
                 }
+            }
+        }
+
+        public static void CreateLearnables(MonsterData[] totalEntries)
+        {
+            Dictionary<string, int> dexToId = new Dictionary<string, int>();
+            for (int ii = 0; ii < TOTAL_DEX; ii++)
+            {
+                string fileName = getAssetName(totalEntries[ii].Name.DefaultText);
+                dexToId[fileName] = ii;
+            }
+
+            Dictionary<string, int> learnMoves = new Dictionary<string, int>();
+            for (int ii = 0; ii < TOTAL_DEX; ii++)
+            {
+                MonsterData mon = totalEntries[ii];
+                if (!mon.Released)
+                    continue;
+                MonsterFormData form = (MonsterFormData)mon.Forms[0];
+                foreach (LearnableSkill skill in form.TeachSkills)
+                {
+                    bool newSkill = true;
+                    string prevData = mon.PromoteFrom;
+                    if (!String.IsNullOrEmpty(prevData))
+                    {
+                        MonsterData preMon = totalEntries[dexToId[prevData]];
+                        MonsterFormData preForm = (MonsterFormData)preMon.Forms[0];
+                        foreach (LearnableSkill preSkill in form.TeachSkills)
+                        {
+                            if (preSkill.Skill == skill.Skill)
+                            {
+                                newSkill = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (newSkill)
+                    {
+                        if (!learnMoves.ContainsKey(skill.Skill))
+                            learnMoves[skill.Skill] = 0;
+                        learnMoves[skill.Skill]++;
+                    }
+                }
+            }
+
+            foreach (string key in learnMoves.Keys)
+            {
+                Console.WriteLine(key + "," + learnMoves[key]);
             }
         }
     }

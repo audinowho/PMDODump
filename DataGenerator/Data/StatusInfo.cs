@@ -2298,7 +2298,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Detect");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.");
+                status.Desc = new LocalText("The Pokémon is protected from all moves. This status wears off after a few turns.");
                 status.Emoticon = "Shield_Brown";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_PROTECT_ALREADY")));
@@ -2306,11 +2306,8 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Leer", 1));
                 status.BeforeBeingHits.Add(0, new ProtectEvent(new BattleAnimEvent(emitter, "DUN_Mind_Reader", true, 10)));
-                status.StatusStates.Set(new RecentState());
                 status.StatusStates.Set(new CountDownState(3));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
-                status.BeforeActions.Add(0, new RemoveRecentEvent());
-                status.AfterActions.Add(0, new ExceptionStatusEvent(typeof(RecentState), new RemoveOnActionEvent(true)));
             }
             else if (ii == 126)
             {
@@ -2401,6 +2398,21 @@ namespace DataGenerator.Data
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Water));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Lava));
                 status.OnRefresh.Add(0, new AddMobilityEvent(TerrainData.Mobility.Abyss));
+            }
+            else if (ii == 134)
+            {
+                status.Name = new LocalText("All Protect");
+                status.MenuName = true;
+                status.Desc = new LocalText("The Pokémon is protected from all moves. This status wears off after a few turns.");
+                status.Emoticon = "Shield_Green";
+                status.StatusStates.Set(new TransferStatusState());
+                status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_PROTECT_ALREADY")));
+                status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_PROTECT"), true));
+                status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Protect", 2));
+                status.BeforeBeingHits.Add(0, new ProtectEvent(new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                status.StatusStates.Set(new CountDownState(3));
+                status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
 
             if (status.Name.DefaultText.StartsWith("**"))

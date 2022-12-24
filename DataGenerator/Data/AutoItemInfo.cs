@@ -1376,7 +1376,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, it partially reveals the floor's layout the Pokémon reaches a new floor.");
                 if (includeEffects)
                 {
-                    item.OnMapStarts.Add(0, new FamilySingleEvent(new MapSurveyorEvent("map_surveyed", 22)));
+                    item.OnMapStarts.Add(0, new FamilySingleEvent(new MapSurveyorEvent("map_surveyed", 20)));
                 }
             }
             else if (type == ExclusiveItemEffect.XRay)

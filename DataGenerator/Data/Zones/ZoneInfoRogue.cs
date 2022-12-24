@@ -345,141 +345,19 @@ namespace DataGenerator.Data
             itemSpawnZoneStep.Spawns.Add("tms", machines);
 
             range = new IntRange(0, 30);
-            machines.Spawns.Add(new InvItem("tm_echoed_voice"), range, 2);//TM Echoed Voice
-            machines.Spawns.Add(new InvItem("tm_double_team"), range, 2);//TM Double Team
-            machines.Spawns.Add(new InvItem("tm_toxic"), range, 2);//TM Toxic
-            machines.Spawns.Add(new InvItem("tm_will_o_wisp"), range, 2);//TM Will-o-Wisp
-            machines.Spawns.Add(new InvItem("tm_dragon_tail"), range, 2);//TM Dragon Tail
-            machines.Spawns.Add(new InvItem("tm_protect"), range, 2);//TM Protect
-            machines.Spawns.Add(new InvItem("tm_defog"), range, 2);//TM Defog
-            machines.Spawns.Add(new InvItem("tm_roar"), range, 2);//TM Roar
-            machines.Spawns.Add(new InvItem("tm_swagger"), range, 2);//TM Swagger
-            machines.Spawns.Add(new InvItem("tm_dive"), range, 2);//TM Dive
-            machines.Spawns.Add(new InvItem("tm_fly"), range, 2);//TM Fly
-            machines.Spawns.Add(new InvItem("tm_facade"), range, 2);//TM Facade
-            machines.Spawns.Add(new InvItem("tm_rock_climb"), range, 2);//TM Rock Climb
-            machines.Spawns.Add(new InvItem("tm_waterfall"), range, 2);//TM Waterfall
-            machines.Spawns.Add(new InvItem("tm_smack_down"), range, 2);//TM Smack Down
-            machines.Spawns.Add(new InvItem("tm_flame_charge"), range, 2);//TM Flame Charge
-            machines.Spawns.Add(new InvItem("tm_low_sweep"), range, 2);//TM Low Sweep
-            machines.Spawns.Add(new InvItem("tm_charge_beam"), range, 2);//TM Charge Beam
-            machines.Spawns.Add(new InvItem("tm_payback"), range, 2);//TM Payback
-            machines.Spawns.Add(new InvItem("tm_wild_charge"), range, 2);//TM Wild Charge
-            machines.Spawns.Add(new InvItem("tm_hone_claws"), range, 2);//TM Hone Claws
-            machines.Spawns.Add(new InvItem("tm_telekinesis"), range, 2);//TM Telekinesis
-            machines.Spawns.Add(new InvItem("tm_giga_impact"), range, 2);//TM Giga Impact
-            machines.Spawns.Add(new InvItem("tm_rock_polish"), range, 2);//TM Rock Polish
-            machines.Spawns.Add(new InvItem("tm_dig"), range, 2);//TM Dig
-            machines.Spawns.Add(new InvItem("tm_gyro_ball"), range, 2);//TM Gyro Ball
-            machines.Spawns.Add(new InvItem("tm_substitute"), range, 2);//TM Substitute
-            machines.Spawns.Add(new InvItem("tm_trick_room"), range, 2);//TM Trick Room
-            machines.Spawns.Add(new InvItem("tm_safeguard"), range, 2);//TM Safeguard
-            machines.Spawns.Add(new InvItem("tm_venoshock"), range, 2);//TM Venoshock
-            machines.Spawns.Add(new InvItem("tm_work_up"), range, 2);//TM Work Up
-            machines.Spawns.Add(new InvItem("tm_scald"), range, 2);//TM Scald
-            machines.Spawns.Add(new InvItem("tm_explosion"), range, 2);//TM Explosion
-            machines.Spawns.Add(new InvItem("tm_u_turn"), range, 2);//TM U-turn
-            machines.Spawns.Add(new InvItem("tm_thunder_wave"), range, 2);//TM Thunder Wave
-            machines.Spawns.Add(new InvItem("tm_return"), range, 2);//TM Return
-            machines.Spawns.Add(new InvItem("tm_pluck"), range, 2);//TM Pluck
-            machines.Spawns.Add(new InvItem("tm_frustration"), range, 2);//TM Frustration
-            machines.Spawns.Add(new InvItem("tm_thief"), range, 2);//TM Thief
-            machines.Spawns.Add(new InvItem("tm_acrobatics"), range, 2);//TM Acrobatics
-            machines.Spawns.Add(new InvItem("tm_false_swipe"), range, 2);//TM False Swipe
-            machines.Spawns.Add(new InvItem("tm_fling"), range, 2);//TM Fling
-            machines.Spawns.Add(new InvItem("tm_captivate"), range, 2);//TM Captivate
-            machines.Spawns.Add(new InvItem("tm_roost"), range, 2);//TM Roost
-            machines.Spawns.Add(new InvItem("tm_infestation"), range, 2);//TM Infestation
-            machines.Spawns.Add(new InvItem("tm_drain_punch"), range, 2);//TM Drain Punch
-            machines.Spawns.Add(new InvItem("tm_water_pulse"), range, 2);//TM Water Pulse
-            machines.Spawns.Add(new InvItem("tm_giga_drain"), range, 2);//TM Giga Drain
-            machines.Spawns.Add(new InvItem("tm_shock_wave"), range, 2);//TM Shock Wave
-            machines.Spawns.Add(new InvItem("tm_volt_switch"), range, 2);//TM Volt Switch
-            machines.Spawns.Add(new InvItem("tm_steel_wing"), range, 2);//TM Steel Wing
-            machines.Spawns.Add(new InvItem("tm_psyshock"), range, 2);//TM Psyshock
-            machines.Spawns.Add(new InvItem("tm_bulldoze"), range, 2);//TM Bulldoze
-            machines.Spawns.Add(new InvItem("tm_poison_jab"), range, 2);//TM Poison Jab
-            machines.Spawns.Add(new InvItem("tm_dream_eater"), range, 2);//TM Dream Eater
-            machines.Spawns.Add(new InvItem("tm_thunder"), range, 2);//TM Thunder
-            machines.Spawns.Add(new InvItem("tm_x_scissor"), range, 2);//TM X-Scissor
-            machines.Spawns.Add(new InvItem("tm_retaliate"), range, 2);//TM Retaliate
-            machines.Spawns.Add(new InvItem("tm_reflect"), range, 2);//TM Reflect
-            machines.Spawns.Add(new InvItem("tm_quash"), range, 2);//TM Quash
-            machines.Spawns.Add(new InvItem("tm_round"), range, 2);//TM Round
-            machines.Spawns.Add(new InvItem("tm_aerial_ace"), range, 2);//TM Aerial Ace
-            machines.Spawns.Add(new InvItem("tm_incinerate"), range, 2);//TM Incinerate
-            machines.Spawns.Add(new InvItem("tm_struggle_bug"), range, 2);//TM Struggle Bug
-            machines.Spawns.Add(new InvItem("tm_dragon_claw"), range, 2);//TM Dragon Claw
-            machines.Spawns.Add(new InvItem("tm_rain_dance"), range, 2);//TM Rain Dance
-            machines.Spawns.Add(new InvItem("tm_sunny_day"), range, 2);//TM Sunny Day
-            machines.Spawns.Add(new InvItem("tm_sandstorm"), range, 2);//TM Sandstorm
-            machines.Spawns.Add(new InvItem("tm_hail"), range, 2);//TM Hail
-            machines.Spawns.Add(new InvItem("tm_rock_tomb"), range, 2);//TM Rock Tomb
-            machines.Spawns.Add(new InvItem("tm_attract"), range, 2);//TM Attract
-            machines.Spawns.Add(new InvItem("tm_hidden_power"), range, 2);//TM Hidden Power
-            machines.Spawns.Add(new InvItem("tm_taunt"), range, 2);//TM Taunt
-            machines.Spawns.Add(new InvItem("tm_ice_beam"), range, 2);//TM Ice Beam
-            machines.Spawns.Add(new InvItem("tm_light_screen"), range, 2);//TM Light Screen
-            machines.Spawns.Add(new InvItem("tm_stone_edge"), range, 2);//TM Stone Edge
-            machines.Spawns.Add(new InvItem("tm_shadow_claw"), range, 2);//TM Shadow Claw
-            machines.Spawns.Add(new InvItem("tm_grass_knot"), range, 2);//TM Grass Knot
-            machines.Spawns.Add(new InvItem("tm_brick_break"), range, 2);//TM Brick Break
-            machines.Spawns.Add(new InvItem("tm_calm_mind"), range, 2);//TM Calm Mind
-            machines.Spawns.Add(new InvItem("tm_torment"), range, 2);//TM Torment
-            machines.Spawns.Add(new InvItem("tm_strength"), range, 2);//TM Strength
-            machines.Spawns.Add(new InvItem("tm_cut"), range, 2);//TM Cut
-            machines.Spawns.Add(new InvItem("tm_rock_smash"), range, 2);//TM Rock Smash
-            machines.Spawns.Add(new InvItem("tm_bulk_up"), range, 2);//TM Bulk Up
-            machines.Spawns.Add(new InvItem("tm_rest"), range, 2);//TM Rest
-            machines.Spawns.Add(new InvItem("tm_psych_up"), range, 2);//TM Psych Up
+
+            //tms
+            foreach (string tm_id in IterateTMs(TMClass.Starter | TMClass.Bottom | TMClass.Mid))
+                machines.Spawns.Add(new InvItem(tm_id), range, 2);
 
             range = new IntRange(10, 30);
 
-            machines.Spawns.Add(new InvItem("tm_psychic"), range, 1);//TM Psychic
-            machines.Spawns.Add(new InvItem("tm_flamethrower"), range, 1);//TM Flamethrower
-            machines.Spawns.Add(new InvItem("tm_hyper_beam"), range, 1);//TM Hyper Beam
-            machines.Spawns.Add(new InvItem("tm_blizzard"), range, 1);//TM Blizzard
-            machines.Spawns.Add(new InvItem("tm_rock_slide"), range, 1);//TM Rock Slide
-            machines.Spawns.Add(new InvItem("tm_sludge_wave"), range, 1);//TM Sludge Wave
-            machines.Spawns.Add(new InvItem("tm_swords_dance"), range, 1);//TM Swords Dance
-            machines.Spawns.Add(new InvItem("tm_energy_ball"), range, 1);//TM Energy Ball
-            machines.Spawns.Add(new InvItem("tm_fire_blast"), range, 1);//TM Fire Blast
-            machines.Spawns.Add(new InvItem("tm_thunderbolt"), range, 1);//TM Thunderbolt
-            machines.Spawns.Add(new InvItem("tm_shadow_ball"), range, 1);//TM Shadow Ball
-            machines.Spawns.Add(new InvItem("tm_dark_pulse"), range, 1);//TM Dark Pulse
-            machines.Spawns.Add(new InvItem("tm_earthquake"), range, 1);//TM Earthquake
-            machines.Spawns.Add(new InvItem("tm_frost_breath"), range, 1);//TM Frost Breath
-            machines.Spawns.Add(new InvItem("tm_dazzling_gleam"), range, 1);//TM Dazzling Gleam
-            machines.Spawns.Add(new InvItem("tm_snarl"), range, 1);//TM Snarl
-            machines.Spawns.Add(new InvItem("tm_focus_blast"), range, 1);//TM Focus Blast
-            machines.Spawns.Add(new InvItem("tm_overheat"), range, 1);//TM Overheat
-            machines.Spawns.Add(new InvItem("tm_sludge_bomb"), range, 1);//TM Sludge Bomb
-            machines.Spawns.Add(new InvItem("tm_recycle"), range, 1);//TM Solar Beam
-            machines.Spawns.Add(new InvItem("tm_flash_cannon"), range, 1);//TM Flash Cannon
-            machines.Spawns.Add(new InvItem("tm_surf"), range, 1);//TM Surf
-
-            machines.Spawns.Add(new InvItem("tm_psychic", true), range, 1);//TM Psychic
-            machines.Spawns.Add(new InvItem("tm_flamethrower", true), range, 1);//TM Flamethrower
-            machines.Spawns.Add(new InvItem("tm_hyper_beam", true), range, 1);//TM Hyper Beam
-            machines.Spawns.Add(new InvItem("tm_blizzard", true), range, 1);//TM Blizzard
-            machines.Spawns.Add(new InvItem("tm_rock_slide", true), range, 1);//TM Rock Slide
-            machines.Spawns.Add(new InvItem("tm_sludge_wave", true), range, 1);//TM Sludge Wave
-            machines.Spawns.Add(new InvItem("tm_swords_dance", true), range, 1);//TM Swords Dance
-            machines.Spawns.Add(new InvItem("tm_energy_ball", true), range, 1);//TM Energy Ball
-            machines.Spawns.Add(new InvItem("tm_fire_blast", true), range, 1);//TM Fire Blast
-            machines.Spawns.Add(new InvItem("tm_thunderbolt", true), range, 1);//TM Thunderbolt
-            machines.Spawns.Add(new InvItem("tm_shadow_ball", true), range, 1);//TM Shadow Ball
-            machines.Spawns.Add(new InvItem("tm_dark_pulse", true), range, 1);//TM Dark Pulse
-            machines.Spawns.Add(new InvItem("tm_earthquake", true), range, 1);//TM Earthquake
-            machines.Spawns.Add(new InvItem("tm_frost_breath", true), range, 1);//TM Frost Breath
-            machines.Spawns.Add(new InvItem("tm_dazzling_gleam", true), range, 1);//TM Dazzling Gleam
-            machines.Spawns.Add(new InvItem("tm_snarl", true), range, 1);//TM Snarl
-            machines.Spawns.Add(new InvItem("tm_focus_blast", true), range, 1);//TM Focus Blast
-            machines.Spawns.Add(new InvItem("tm_overheat", true), range, 1);//TM Overheat
-            machines.Spawns.Add(new InvItem("tm_sludge_bomb", true), range, 1);//TM Sludge Bomb
-            machines.Spawns.Add(new InvItem("tm_recycle", true), range, 1);//TM Solar Beam
-            machines.Spawns.Add(new InvItem("tm_flash_cannon", true), range, 1);//TM Flash Cannon
-            machines.Spawns.Add(new InvItem("tm_surf", true), range, 1);//TM Surf
+            //tms
+            foreach (string tm_id in IterateTMs(TMClass.Top))
+            {
+                machines.Spawns.Add(new InvItem(tm_id), range, 1);
+                machines.Spawns.Add(new InvItem(tm_id, true), range, 1);
+            }
 
             //evo items
             CategorySpawn<InvItem> evoItems = new CategorySpawn<InvItem>();
@@ -1278,7 +1156,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_ribbon"), new IntRange(0, 30), 4);//Sun Ribbon
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_lunar_ribbon"), new IntRange(0, 30), 4);//Moon Ribbon
                 monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, 30), 25);//banana
-                foreach (string key in IterateTMs())
+                foreach (string key in IterateTMs(TMClass.Natural))
                     monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 10);//nugget
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, 30), 10);//pearl
@@ -1327,7 +1205,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_ribbon"), new IntRange(0, 30), 4);//Sun Ribbon
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_lunar_ribbon"), new IntRange(0, 30), 4);//Moon Ribbon
                 monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, 30), 25);//banana
-                foreach (string key in IterateTMs())
+                foreach (string key in IterateTMs(TMClass.Natural))
                     monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 10);//nugget
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, 30), 10);//pearl
@@ -1371,7 +1249,7 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, 30), 20);//full heal
                 foreach (string key in IterateXItems())
                     chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 15);//X-Items
-                foreach (string key in IterateTMs())
+                foreach (string key in IterateTMs(TMClass.Natural))
                     chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
                 chestChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 20);//nugget
                 chestChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 3), new IntRange(0, 30), 10);//heart scale
@@ -1412,7 +1290,7 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, 30), 20);//full heal
                 foreach (string key in IterateXItems())
                     chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 15);//X-Items
-                foreach (string key in IterateTMs())
+                foreach (string key in IterateTMs(TMClass.Natural))
                     chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
                 chestChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 20);//nugget
                 chestChanceZoneStep.Items.Add(new MapItem("loot_pearl", 3), new IntRange(0, 30), 5);//pearl
@@ -1649,7 +1527,7 @@ namespace DataGenerator.Data
                 // Vault FOES
                 {
                     //37//470 Leafeon : 320 Grass Whistle : 076 Solar Beam* : 235 Synthesis : 241 Sunny Day
-                    vaultChanceZoneStep.Mobs.Add(GetFOEMob("leafeon", "", "grass_whistle", "solar_beam", "synthesis", "sunny_day", 4), new IntRange(0, 10), 10);
+                    vaultChanceZoneStep.Mobs.Add(GetFOEMob("leafeon", "chlorophyll", "grass_whistle", "leaf_blade", "synthesis", "sunny_day", 4), new IntRange(0, 10), 10);
 
                     //43//471 Glaceon : 59 Blizzard : 270 Helping Hand : 258 Hail
                     vaultChanceZoneStep.Mobs.Add(GetFOEMob("glaceon", "", "blizzard", "helping_hand", "hail", "", 4), new IntRange(20, 30), 10);
@@ -2041,56 +1919,9 @@ namespace DataGenerator.Data
                     bossChanceZoneStep.Items.Add(new MapItem("evo_harmony_scarf"), new IntRange(0, 30), 100);//harmony scarf
                     bossChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 1000);//key
 
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_toxic"), new IntRange(0, 30), 5);//TM Toxic
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_climb"), new IntRange(0, 30), 5);//TM Rock Climb
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_waterfall"), new IntRange(0, 30), 5);//TM Waterfall
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_charge_beam"), new IntRange(0, 30), 5);//TM Charge Beam
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_hone_claws"), new IntRange(0, 30), 5);//TM Hone Claws
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_giga_impact"), new IntRange(0, 30), 5);//TM Giga Impact
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_dig"), new IntRange(0, 30), 5);//TM Dig
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_safeguard"), new IntRange(0, 30), 5);//TM Safeguard
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_work_up"), new IntRange(0, 30), 5);//TM Work Up
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_scald"), new IntRange(0, 30), 5);//TM Scald
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_u_turn"), new IntRange(0, 30), 5);//TM U-turn
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunder_wave"), new IntRange(0, 30), 5);//TM Thunder Wave
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_roost"), new IntRange(0, 30), 5);//TM Roost
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_psyshock"), new IntRange(0, 30), 5);//TM Psyshock
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunder"), new IntRange(0, 30), 5);//TM Thunder
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_x_scissor"), new IntRange(0, 30), 5);//TM X-Scissor
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_taunt"), new IntRange(0, 30), 5);//TM Taunt
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_ice_beam"), new IntRange(0, 30), 5);//TM Ice Beam
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_light_screen"), new IntRange(0, 30), 5);//TM Light Screen
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_calm_mind"), new IntRange(0, 30), 5);//TM Calm Mind
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_torment"), new IntRange(0, 30), 5);//TM Torment
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_strength"), new IntRange(0, 30), 5);//TM Strength
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_cut"), new IntRange(0, 30), 5);//TM Cut
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_smash"), new IntRange(0, 30), 5);//TM Rock Smash
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_bulk_up"), new IntRange(0, 30), 5);//TM Bulk Up
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_rest"), new IntRange(0, 30), 5);//TM Rest
-
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_psychic"), new IntRange(0, 30), 5);//TM Psychic
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_flamethrower"), new IntRange(0, 30), 5);//TM Flamethrower
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_hyper_beam"), new IntRange(0, 30), 5);//TM Hyper Beam
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_blizzard"), new IntRange(0, 30), 5);//TM Blizzard
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_slide"), new IntRange(0, 30), 5);//TM Rock Slide
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_sludge_wave"), new IntRange(0, 30), 5);//TM Sludge Wave
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_swords_dance"), new IntRange(0, 30), 5);//TM Swords Dance
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_energy_ball"), new IntRange(0, 30), 5);//TM Energy Ball
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_fire_blast"), new IntRange(0, 30), 5);//TM Fire Blast
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunderbolt"), new IntRange(0, 30), 5);//TM Thunderbolt
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_shadow_ball"), new IntRange(0, 30), 5);//TM Shadow Ball
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_dark_pulse"), new IntRange(0, 30), 5);//TM Dark Pulse
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_earthquake"), new IntRange(0, 30), 5);//TM Earthquake
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_frost_breath"), new IntRange(0, 30), 5);//TM Frost Breath
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_dazzling_gleam"), new IntRange(0, 30), 5);//TM Dazzling Gleam
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_snarl"), new IntRange(0, 30), 5);//TM Snarl
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_focus_blast"), new IntRange(0, 30), 5);//TM Focus Blast
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_overheat"), new IntRange(0, 30), 5);//TM Overheat
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_sludge_bomb"), new IntRange(0, 30), 5);//TM Sludge Bomb
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_recycle"), new IntRange(0, 30), 5);//TM Solar Beam
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_flash_cannon"), new IntRange(0, 30), 5);//TM Flash Cannon
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_surf"), new IntRange(0, 30), 5);//TM Surf
-
+                    //tms
+                    foreach (string tm_id in IterateTMs(TMClass.Top | TMClass.Mid))
+                        bossChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, 30), 5);
                 }
 
                 // item spawnings for the vault
@@ -2291,28 +2122,8 @@ namespace DataGenerator.Data
                 shop.Items.Add(new MapItem("seed_joy", 0, 2000), 5);//joy seed
 
 
-                shop.Items.Add(new MapItem("tm_psychic", 0, 5000), 2);//TM Psychic
-                shop.Items.Add(new MapItem("tm_flamethrower", 0, 5000), 2);//TM Flamethrower
-                shop.Items.Add(new MapItem("tm_hyper_beam", 0, 5000), 2);//TM Hyper Beam
-                shop.Items.Add(new MapItem("tm_blizzard", 0, 5000), 2);//TM Blizzard
-                shop.Items.Add(new MapItem("tm_rock_slide", 0, 5000), 2);//TM Rock Slide
-                shop.Items.Add(new MapItem("tm_sludge_wave", 0, 5000), 2);//TM Sludge Wave
-                shop.Items.Add(new MapItem("tm_swords_dance", 0, 4000), 2);//TM Swords Dance
-                shop.Items.Add(new MapItem("tm_energy_ball", 0, 5000), 2);//TM Energy Ball
-                shop.Items.Add(new MapItem("tm_fire_blast", 0, 5000), 2);//TM Fire Blast
-                shop.Items.Add(new MapItem("tm_thunderbolt", 0, 5000), 2);//TM Thunderbolt
-                shop.Items.Add(new MapItem("tm_shadow_ball", 0, 5000), 2);//TM Shadow Ball
-                shop.Items.Add(new MapItem("tm_dark_pulse", 0, 5000), 2);//TM Dark Pulse
-                shop.Items.Add(new MapItem("tm_earthquake", 0, 4000), 2);//TM Earthquake
-                shop.Items.Add(new MapItem("tm_frost_breath", 0, 4000), 2);//TM Frost Breath
-                shop.Items.Add(new MapItem("tm_dazzling_gleam", 0, 5000), 2);//TM Dazzling Gleam
-                shop.Items.Add(new MapItem("tm_snarl", 0, 4000), 2);//TM Snarl
-                shop.Items.Add(new MapItem("tm_focus_blast", 0, 5000), 2);//TM Focus Blast
-                shop.Items.Add(new MapItem("tm_overheat", 0, 5000), 2);//TM Overheat
-                shop.Items.Add(new MapItem("tm_sludge_bomb", 0, 5000), 2);//TM Sludge Bomb
-                shop.Items.Add(new MapItem("tm_recycle", 0, 5000), 2);//TM Solar Beam
-                shop.Items.Add(new MapItem("tm_flash_cannon", 0, 5000), 2);//TM Flash Cannon
-                shop.Items.Add(new MapItem("tm_surf", 0, 5000), 2);//TM Surf
+                foreach (string tm_id in IterateTMs(TMClass.Top))
+                    shop.Items.Add(new MapItem(tm_id, 0, getTMPrice(tm_id)), 2);//TMs
 
                 foreach (string key in IterateTypeBoosters())
                     shop.Items.Add(new MapItem(key, 0, 2000), 5);//type items
@@ -3385,56 +3196,20 @@ namespace DataGenerator.Data
             evo.Spawns.Add(new InvItem("evo_link_cable"), new IntRange(0, max_floors), 10);//Link Cable
             evo.Spawns.Add(new InvItem("evo_moon_stone"), new IntRange(0, max_floors), 10);//Moon Stone
             evo.Spawns.Add(new InvItem("evo_water_stone"), new IntRange(0, max_floors), 10);//Water Stone
-                                                                               //tms
+
             CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
             tms.SpawnRates.SetRange(5, new IntRange(0, 27));
             itemSpawnZoneStep.Spawns.Add("tms", tms);
 
-
-            tms.Spawns.Add(new InvItem("tm_secret_power"), new IntRange(0, max_floors), 10);//TM Secret Power
-            tms.Spawns.Add(new InvItem("tm_echoed_voice"), new IntRange(0, max_floors), 10);//TM Echoed Voice
-            tms.Spawns.Add(new InvItem("tm_double_team"), new IntRange(0, max_floors), 10);//TM Double Team
-            tms.Spawns.Add(new InvItem("tm_toxic"), new IntRange(0, max_floors), 10);//TM Toxic
-            tms.Spawns.Add(new InvItem("tm_protect"), new IntRange(0, max_floors), 10);//TM Protect
-            tms.Spawns.Add(new InvItem("tm_defog"), new IntRange(0, max_floors), 10);//TM Defog
-            tms.Spawns.Add(new InvItem("tm_roar"), new IntRange(0, max_floors), 10);//TM Roar
-            tms.Spawns.Add(new InvItem("tm_hyper_beam"), new IntRange(0, max_floors), 5);//TM Hyper Beam
-            tms.Spawns.Add(new InvItem("tm_swagger"), new IntRange(0, max_floors), 10);//TM Swagger
-            tms.Spawns.Add(new InvItem("tm_fly"), new IntRange(0, max_floors), 10);//TM Fly
-            tms.Spawns.Add(new InvItem("tm_facade"), new IntRange(0, max_floors), 10);//TM Façade
-            tms.Spawns.Add(new InvItem("tm_rock_climb"), new IntRange(0, max_floors), 10);//TM Rock Climb
-            tms.Spawns.Add(new InvItem("tm_payback"), new IntRange(0, max_floors), 10);//TM Payback
-            tms.Spawns.Add(new InvItem("tm_giga_impact"), new IntRange(0, max_floors), 5);//TM Giga Impact
-            tms.Spawns.Add(new InvItem("tm_dig"), new IntRange(0, max_floors), 10);//TM Dig
-            tms.Spawns.Add(new InvItem("tm_substitute"), new IntRange(0, max_floors), 10);//TM Substitute
-            tms.Spawns.Add(new InvItem("tm_safeguard"), new IntRange(0, max_floors), 10);//TM Safeguard
-            tms.Spawns.Add(new InvItem("tm_swords_dance"), new IntRange(0, max_floors), 5);//TM Swords Dance
-            tms.Spawns.Add(new InvItem("tm_work_up"), new IntRange(0, max_floors), 10);//TM Work Up
-            tms.Spawns.Add(new InvItem("tm_return"), new IntRange(0, max_floors), 10);//TM Return
-            tms.Spawns.Add(new InvItem("tm_frustration"), new IntRange(0, max_floors), 10);//TM Frustration
-            tms.Spawns.Add(new InvItem("tm_flash"), new IntRange(0, max_floors), 10);//TM Flash
-            tms.Spawns.Add(new InvItem("tm_thief"), new IntRange(0, max_floors), 10);//TM Thief
-            tms.Spawns.Add(new InvItem("tm_fling"), new IntRange(0, max_floors), 10);//TM Fling
-            tms.Spawns.Add(new InvItem("tm_captivate"), new IntRange(0, max_floors), 10);//TM Captivate
-            tms.Spawns.Add(new InvItem("tm_earthquake"), new IntRange(0, max_floors), 10);//TM Earthquake
-            tms.Spawns.Add(new InvItem("tm_reflect"), new IntRange(0, max_floors), 10);//TM Reflect
-            tms.Spawns.Add(new InvItem("tm_round"), new IntRange(0, max_floors), 10);//TM Round
-            tms.Spawns.Add(new InvItem("tm_rain_dance"), new IntRange(0, max_floors), 10);//TM Rain Dance
-            tms.Spawns.Add(new InvItem("tm_sunny_day"), new IntRange(0, max_floors), 10);//TM Sunny Day
-            tms.Spawns.Add(new InvItem("tm_sandstorm"), new IntRange(0, max_floors), 10);//TM Sandstorm
-            tms.Spawns.Add(new InvItem("tm_hail"), new IntRange(0, max_floors), 10);//TM Hail
-            tms.Spawns.Add(new InvItem("tm_attract"), new IntRange(0, max_floors), 10);//TM Attract
-            tms.Spawns.Add(new InvItem("tm_hidden_power"), new IntRange(0, max_floors), 10);//TM Hidden Power
-            tms.Spawns.Add(new InvItem("tm_taunt"), new IntRange(0, max_floors), 10);//TM Taunt
-            tms.Spawns.Add(new InvItem("tm_light_screen"), new IntRange(0, max_floors), 10);//TM Light Screen
-            tms.Spawns.Add(new InvItem("tm_grass_knot"), new IntRange(0, max_floors), 10);//TM Grass Knot
-            tms.Spawns.Add(new InvItem("tm_strength"), new IntRange(0, max_floors), 10);//TM Strength
-            tms.Spawns.Add(new InvItem("tm_cut"), new IntRange(0, max_floors), 10);//TM Cut
-            tms.Spawns.Add(new InvItem("tm_rock_smash"), new IntRange(0, max_floors), 10);//TM Rock Smash
-            tms.Spawns.Add(new InvItem("tm_surf"), new IntRange(0, max_floors), 10);//TM Surf
-            tms.Spawns.Add(new InvItem("tm_rest"), new IntRange(0, max_floors), 10);//TM Rest
-            tms.Spawns.Add(new InvItem("tm_psych_up"), new IntRange(0, max_floors), 10);//TM Psych Up
-
+            //tms
+            foreach (string tm_id in IterateDistroTMs(TMDistroClass.Universal | TMDistroClass.High | TMDistroClass.Medium))
+            {
+                int price = getTMPrice(tm_id);
+                if (price < 5000)
+                    tms.Spawns.Add(new InvItem(tm_id), new IntRange(0, max_floors), 10);
+                else
+                    tms.Spawns.Add(new InvItem(tm_id), new IntRange(0, max_floors), 5);
+            }
 
             floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
 
@@ -3833,8 +3608,8 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_link_cable"), new IntRange(0, max_floors), 4);//Link Cable
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_stone"), new IntRange(0, max_floors), 4);//Sun Stone
                 monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
-                for (int ii = 0; ii < specific_tms.Length; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii].Item1), new IntRange(0, max_floors), 2);//TMs
+                foreach(string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
+                    monsterChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 10);//nugget
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
@@ -3900,8 +3675,8 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_link_cable"), new IntRange(0, max_floors), 4);//Link Cable
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_stone"), new IntRange(0, max_floors), 4);//Sun Stone
                 monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
-                for (int ii = 0; ii < specific_tms.Length; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii].Item1), new IntRange(0, max_floors), 2);//TMs
+                foreach (string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
+                    monsterChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 10);//nugget
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
@@ -3960,8 +3735,8 @@ namespace DataGenerator.Data
                 foreach (string key in IterateGummis())
                     monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
                 monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
-                for (int ii = 0; ii < specific_tms.Length; ii++)
-                    monsterChanceZoneStep.Items.Add(new MapItem(specific_tms[ii].Item1), new IntRange(0, max_floors), 2);//TMs
+                foreach (string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
+                    monsterChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
@@ -4020,8 +3795,8 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, max_floors), 20);//full heal
                 foreach (string key in IterateXItems())
                     chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 15);//X-Items
-                for (int ii = 0; ii < specific_tms.Length; ii++)
-                    chestChanceZoneStep.Items.Add(new MapItem(specific_tms[ii].Item1), new IntRange(0, max_floors), 2);//TMs
+                foreach (string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
+                    chestChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
                 chestChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 20);//nugget
                 chestChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 3), new IntRange(0, max_floors), 10);//heart scale
                 chestChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 20);//amber tear
@@ -4480,56 +4255,9 @@ namespace DataGenerator.Data
                     bossChanceZoneStep.Items.Add(new MapItem("evo_harmony_scarf"), new IntRange(0, max_floors), 100);//harmony scarf
                     bossChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 1000);//key
 
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_toxic"), new IntRange(0, 30), 5);//TM Toxic
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_climb"), new IntRange(0, 30), 5);//TM Rock Climb
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_waterfall"), new IntRange(0, 30), 5);//TM Waterfall
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_charge_beam"), new IntRange(0, 30), 5);//TM Charge Beam
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_hone_claws"), new IntRange(0, 30), 5);//TM Hone Claws
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_giga_impact"), new IntRange(0, 30), 5);//TM Giga Impact
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_dig"), new IntRange(0, 30), 5);//TM Dig
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_safeguard"), new IntRange(0, 30), 5);//TM Safeguard
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_work_up"), new IntRange(0, 30), 5);//TM Work Up
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_scald"), new IntRange(0, 30), 5);//TM Scald
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_u_turn"), new IntRange(0, 30), 5);//TM U-turn
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunder_wave"), new IntRange(0, 30), 5);//TM Thunder Wave
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_roost"), new IntRange(0, 30), 5);//TM Roost
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_psyshock"), new IntRange(0, 30), 5);//TM Psyshock
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunder"), new IntRange(0, 30), 5);//TM Thunder
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_x_scissor"), new IntRange(0, 30), 5);//TM X-Scissor
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_taunt"), new IntRange(0, 30), 5);//TM Taunt
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_ice_beam"), new IntRange(0, 30), 5);//TM Ice Beam
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_light_screen"), new IntRange(0, 30), 5);//TM Light Screen
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_calm_mind"), new IntRange(0, 30), 5);//TM Calm Mind
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_torment"), new IntRange(0, 30), 5);//TM Torment
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_strength"), new IntRange(0, 30), 5);//TM Strength
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_cut"), new IntRange(0, 30), 5);//TM Cut
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_smash"), new IntRange(0, 30), 5);//TM Rock Smash
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_bulk_up"), new IntRange(0, 30), 5);//TM Bulk Up
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_rest"), new IntRange(0, 30), 5);//TM Rest
-
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_psychic"), new IntRange(0, 30), 5);//TM Psychic
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_flamethrower"), new IntRange(0, 30), 5);//TM Flamethrower
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_hyper_beam"), new IntRange(0, 30), 5);//TM Hyper Beam
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_blizzard"), new IntRange(0, 30), 5);//TM Blizzard
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_rock_slide"), new IntRange(0, 30), 5);//TM Rock Slide
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_sludge_wave"), new IntRange(0, 30), 5);//TM Sludge Wave
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_swords_dance"), new IntRange(0, 30), 5);//TM Swords Dance
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_energy_ball"), new IntRange(0, 30), 5);//TM Energy Ball
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_fire_blast"), new IntRange(0, 30), 5);//TM Fire Blast
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_thunderbolt"), new IntRange(0, 30), 5);//TM Thunderbolt
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_shadow_ball"), new IntRange(0, 30), 5);//TM Shadow Ball
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_dark_pulse"), new IntRange(0, 30), 5);//TM Dark Pulse
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_earthquake"), new IntRange(0, 30), 5);//TM Earthquake
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_frost_breath"), new IntRange(0, 30), 5);//TM Frost Breath
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_dazzling_gleam"), new IntRange(0, 30), 5);//TM Dazzling Gleam
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_snarl"), new IntRange(0, 30), 5);//TM Snarl
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_focus_blast"), new IntRange(0, 30), 5);//TM Focus Blast
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_overheat"), new IntRange(0, 30), 5);//TM Overheat
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_sludge_bomb"), new IntRange(0, 30), 5);//TM Sludge Bomb
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_recycle"), new IntRange(0, 30), 5);//TM Solar Beam
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_flash_cannon"), new IntRange(0, 30), 5);//TM Flash Cannon
-                    bossChanceZoneStep.Items.Add(new MapItem("tm_surf"), new IntRange(0, 30), 5);//TM Surf
-
+                    //tms
+                    foreach (string tm_id in IterateTMs(TMClass.Top | TMClass.Mid))
+                        bossChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, 30), 5);
                 }
 
                 // item spawnings for the vault
@@ -4681,8 +4409,8 @@ namespace DataGenerator.Data
                 shop.Items.Add(new MapItem("seed_blast", 0, 350), 20);//blast seed
                 shop.Items.Add(new MapItem("seed_joy", 0, 2000), 5);//joy seed
 
-                for(int nn = 0; nn < specific_tms.Length; nn++)
-                    shop.Items.Add(new MapItem(specific_tms[nn].Item1, 0, specific_tms[nn].Item2), 2);//TMs
+                foreach(string tm_id in IterateDistroTMs(TMDistroClass.NonUniversal))
+                    shop.Items.Add(new MapItem(tm_id, 0, getTMPrice(tm_id)), 2);//TMs
 
                 foreach (string key in IterateTypeBoosters())
                     shop.Items.Add(new MapItem(key, 0, 2000), 5);//type items

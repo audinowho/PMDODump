@@ -5640,7 +5640,6 @@ namespace DataGenerator.Data
 
                     range = new IntRange(0, max_floors);
                     machines.Spawns.Add(new InvItem("tm_double_team"), range, 2);//TM Double Team
-                    machines.Spawns.Add(new InvItem("tm_toxic"), range, 2);//TM Toxic
                     machines.Spawns.Add(new InvItem("tm_will_o_wisp"), range, 2);//TM Will-o-Wisp
                     machines.Spawns.Add(new InvItem("tm_protect"), range, 2);//TM Protect
                     machines.Spawns.Add(new InvItem("tm_defog"), range, 2);//TM Defog
@@ -5660,6 +5659,10 @@ namespace DataGenerator.Data
 
                     machines.Spawns.Add(new InvItem("tm_sludge_bomb"), range, 1);//TM Sludge Bomb
                     machines.Spawns.Add(new InvItem("tm_sludge_bomb", true), range, 1);//TM Sludge Bomb
+                    machines.Spawns.Add(new InvItem("tm_sludge_wave"), range, 1);//TM Sludge Wave
+                    machines.Spawns.Add(new InvItem("tm_sludge_wave", true), range, 1);//TM Sludge Wave
+                    machines.Spawns.Add(new InvItem("tm_fire_blast"), range, 1);//TM Fire Blast
+                    machines.Spawns.Add(new InvItem("tm_fire_blast", true), range, 1);//TM Fire Blast
 
                     //evo items
                     CategorySpawn<InvItem> evoItems = new CategorySpawn<InvItem>();
@@ -5850,7 +5853,7 @@ namespace DataGenerator.Data
                             vaultChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, 30), 300);//full heal
                             foreach (string key in IterateXItems())
                                 vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 50);//X-Items
-                            foreach (string key in IterateTMs())
+                            foreach (string key in IterateTMs(TMClass.Natural))
                                 vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 5);//TMs
                             vaultChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 200);//nugget
                             vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear"), new IntRange(0, 30), 100);//amber tear
@@ -5888,7 +5891,6 @@ namespace DataGenerator.Data
                                 SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
 
                                 //TMs
-                                boxTreasure.Add(new MapItem("tm_toxic"), 8);//TM Toxic
                                 boxTreasure.Add(new MapItem("tm_will_o_wisp"), 8);//TM Will-o-Wisp
                                 boxTreasure.Add(new MapItem("tm_protect"), 8);//TM Protect
                                 boxTreasure.Add(new MapItem("tm_facade"), 8);//TM Facade
@@ -5986,7 +5988,6 @@ namespace DataGenerator.Data
                         shop.Items.Add(new MapItem("orb_rebound", 0, 400), 2);//rebound orb
                         shop.Items.Add(new MapItem("orb_mirror", 0, 400), 2);//mirror orb
 
-                        shop.Items.Add(new MapItem("tm_toxic", 0, 1000), 2);//TM Toxic
                         shop.Items.Add(new MapItem("tm_will_o_wisp", 0, 1000), 2);//TM Will-o-Wisp
                         shop.Items.Add(new MapItem("tm_protect", 0, 1000), 2);//TM Protect
                         shop.Items.Add(new MapItem("tm_facade", 0, 1000), 2);//TM Facade
@@ -5997,6 +5998,8 @@ namespace DataGenerator.Data
                         shop.Items.Add(new MapItem("tm_cut", 0, 1000), 2);//TM Cut
                         shop.Items.Add(new MapItem("tm_rock_smash", 0, 1000), 2);//TM Rock Smash
                         shop.Items.Add(new MapItem("tm_sludge_bomb", 0, 1000), 1);//TM Sludge Bomb
+                        shop.Items.Add(new MapItem("tm_sludge_wave", 0, 1000), 1);//TM Sludge Wave
+                        shop.Items.Add(new MapItem("tm_fire_blast", 0, 1000), 1);//TM Fire Blast
 
                         shop.Items.Add(new MapItem("held_poison_barb", 0, 1000), 2);//Poison Barb
                         shop.Items.Add(new MapItem("held_twisted_spoon", 0, 1000), 2);//Twisted Spoon

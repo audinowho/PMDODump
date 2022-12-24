@@ -763,121 +763,460 @@ namespace DataGenerator.Data
             yield return "xcl_element_water_silk";
         }
 
-        static IEnumerable<string> IterateTMs()
+        [Flags]
+        public enum TMClass
         {
-            yield return "tm_secret_power";
-            yield return "tm_embargo";
-            yield return "tm_echoed_voice";
-            yield return "tm_double_team";
-            yield return "tm_psychic";
-            yield return "tm_toxic";
-            yield return "tm_will_o_wisp";
-            yield return "tm_dragon_tail";
-            yield return "tm_flamethrower";
-            yield return "tm_protect";
-            yield return "tm_defog";
-            yield return "tm_roar";
-            yield return "tm_hyper_beam";
-            yield return "tm_swagger";
-            yield return "tm_dive";
-            yield return "tm_fly";
-            yield return "tm_facade";
-            yield return "tm_rock_climb";
-            yield return "tm_waterfall";
-            yield return "tm_smack_down";
-            yield return "tm_flame_charge";
-            yield return "tm_low_sweep";
-            yield return "tm_charge_beam";
-            yield return "tm_payback";
-            yield return "tm_blizzard";
-            yield return "tm_wild_charge";
-            yield return "tm_hone_claws";
-            yield return "tm_telekinesis";
-            yield return "tm_giga_impact";
-            yield return "tm_rock_polish";
-            yield return "tm_dig";
-            yield return "tm_gyro_ball";
-            yield return "tm_rock_slide";
-            yield return "tm_sludge_wave";
-            yield return "tm_substitute";
-            yield return "tm_trick_room";
-            yield return "tm_safeguard";
-            yield return "tm_swords_dance";
-            yield return "tm_venoshock";
-            yield return "tm_work_up";
-            yield return "tm_scald";
-            yield return "tm_energy_ball";
-            yield return "tm_explosion";
-            yield return "tm_u_turn";
-            yield return "tm_thunder_wave";
-            yield return "tm_return";
-            yield return "tm_pluck";
-            yield return "tm_frustration";
-            yield return "tm_fire_blast";
-            yield return "tm_ally_switch";
-            yield return "tm_flash";
-            yield return "tm_thief";
-            yield return "tm_acrobatics";
-            yield return "tm_thunderbolt";
-            yield return "tm_shadow_ball";
-            yield return "tm_false_swipe";
-            yield return "tm_fling";
-            yield return "tm_captivate";
-            yield return "tm_roost";
-            yield return "tm_infestation";
-            yield return "tm_drain_punch";
-            yield return "tm_water_pulse";
-            yield return "tm_dark_pulse";
-            yield return "tm_giga_drain";
-            yield return "tm_shock_wave";
-            yield return "tm_volt_switch";
-            yield return "tm_steel_wing";
-            yield return "tm_earthquake";
-            yield return "tm_psyshock";
-            yield return "tm_bulldoze";
-            yield return "tm_poison_jab";
-            yield return "tm_frost_breath";
-            yield return "tm_dream_eater";
-            yield return "tm_thunder";
-            yield return "tm_x_scissor";
-            yield return "tm_dazzling_gleam";
-            yield return "tm_retaliate";
-            yield return "tm_reflect";
-            yield return "tm_quash";
-            yield return "tm_snarl";
-            yield return "tm_round";
-            yield return "tm_aerial_ace";
-            yield return "tm_focus_blast";
-            yield return "tm_incinerate";
-            yield return "tm_struggle_bug";
-            yield return "tm_overheat";
-            yield return "tm_dragon_claw";
-            yield return "tm_rain_dance";
-            yield return "tm_sunny_day";
-            yield return "tm_sludge_bomb";
-            yield return "tm_sandstorm";
-            yield return "tm_hail";
-            yield return "tm_rock_tomb";
-            yield return "tm_attract";
-            yield return "tm_hidden_power";
-            yield return "tm_taunt";
-            yield return "tm_recycle";
-            yield return "tm_ice_beam";
-            yield return "tm_flash_cannon";
-            yield return "tm_light_screen";
-            yield return "tm_stone_edge";
-            yield return "tm_shadow_claw";
-            yield return "tm_grass_knot";
-            yield return "tm_brick_break";
-            yield return "tm_calm_mind";
-            yield return "tm_torment";
-            yield return "tm_strength";
-            yield return "tm_cut";
-            yield return "tm_rock_smash";
-            yield return "tm_bulk_up";
-            yield return "tm_surf";
-            yield return "tm_rest";
-            yield return "tm_psych_up";
+            None = 0,
+            Top = 1,
+            Mid = 2,
+            Bottom = 4,
+            Starter = 8,
+            Natural = 15,
+            ShopOnly = 16
+        }
+
+        static IEnumerable<string> IterateTMs(TMClass tmClass)
+        {
+            if ((tmClass & TMClass.Top) != TMClass.None)
+            {
+                yield return "tm_earthquake";
+                yield return "tm_hyper_beam";
+                yield return "tm_overheat";
+                yield return "tm_blizzard";
+                yield return "tm_swords_dance";
+                yield return "tm_surf";
+                yield return "tm_dark_pulse";
+                yield return "tm_psychic";
+                yield return "tm_thunder";
+                yield return "tm_shadow_ball";
+                yield return "tm_ice_beam";
+                yield return "tm_giga_impact";
+                yield return "tm_fire_blast";
+                yield return "tm_dazzling_gleam";
+                yield return "tm_flash_cannon";
+                yield return "tm_stone_edge";
+                yield return "tm_sludge_bomb";
+                yield return "tm_focus_blast";
+            }
+
+            if ((tmClass & TMClass.Mid) != TMClass.None)
+            {
+                yield return "tm_explosion";
+                yield return "tm_snatch";
+                yield return "tm_sunny_day";
+                yield return "tm_rain_dance";
+                yield return "tm_sandstorm";
+                yield return "tm_hail";
+                yield return "tm_x_scissor";
+                yield return "tm_wild_charge";
+                yield return "tm_taunt";
+                yield return "tm_focus_punch";
+                yield return "tm_safeguard";
+                yield return "tm_light_screen";
+                yield return "tm_psyshock";
+                yield return "tm_will_o_wisp";
+                yield return "tm_dream_eater";
+                yield return "tm_nature_power";
+                yield return "tm_facade";
+                yield return "tm_swagger";
+                yield return "tm_captivate";
+                yield return "tm_rock_slide";
+                yield return "tm_fling";
+                yield return "tm_thunderbolt";
+                yield return "tm_water_pulse";
+                yield return "tm_shock_wave";
+                yield return "tm_brick_break";
+                yield return "tm_payback";
+                yield return "tm_calm_mind";
+                yield return "tm_reflect";
+                yield return "tm_charge_beam";
+                yield return "tm_flamethrower";
+                yield return "tm_energy_ball";
+                yield return "tm_retaliate";
+                yield return "tm_scald";
+                yield return "tm_waterfall";
+                yield return "tm_roost";
+                yield return "tm_rock_polish";
+                yield return "tm_acrobatics";
+                yield return "tm_rock_climb";
+                yield return "tm_bulk_up";
+                yield return "tm_pluck";
+                yield return "tm_psych_up";
+                yield return "tm_secret_power";
+                yield return "tm_natural_gift";
+            }
+
+            if ((tmClass & TMClass.Bottom) != TMClass.None)
+            {
+                yield return "tm_return";
+                yield return "tm_frustration";
+                yield return "tm_giga_drain";
+                yield return "tm_dive";
+                yield return "tm_poison_jab";
+                yield return "tm_torment";
+                yield return "tm_shadow_claw";
+                yield return "tm_endure";
+                yield return "tm_echoed_voice";
+                yield return "tm_gyro_ball";
+                yield return "tm_recycle";
+                yield return "tm_false_swipe";
+                yield return "tm_defog";
+                yield return "tm_telekinesis";
+                yield return "tm_double_team";
+                yield return "tm_thunder_wave";
+                yield return "tm_attract";
+                yield return "tm_steel_wing";
+                yield return "tm_smack_down";
+                yield return "tm_snarl";
+                yield return "tm_flame_charge";
+                yield return "tm_bulldoze";
+                yield return "tm_substitute";
+                yield return "tm_iron_tail";
+                yield return "tm_brine";
+                yield return "tm_venoshock";
+                yield return "tm_u_turn";
+                yield return "tm_aerial_ace";
+                yield return "tm_hone_claws";
+                yield return "tm_rock_smash";
+            }
+
+            if ((tmClass & TMClass.Starter) != TMClass.None)
+            {
+                yield return "tm_protect";
+                yield return "tm_round";
+                yield return "tm_rest";
+                yield return "tm_hidden_power";
+                yield return "tm_rock_tomb";
+                yield return "tm_strength";
+                yield return "tm_thief";
+                yield return "tm_dig";
+                yield return "tm_cut";
+                yield return "tm_whirlpool";
+                yield return "tm_grass_knot";
+                yield return "tm_fly";
+                yield return "tm_power_up_punch";
+                yield return "tm_infestation";
+                yield return "tm_work_up";
+                yield return "tm_incinerate";
+                yield return "tm_roar";
+                yield return "tm_flash";
+                yield return "tm_bullet_seed";
+            }
+
+            if ((tmClass & TMClass.ShopOnly) != TMClass.None)
+            {
+                yield return "tm_embargo";
+                yield return "tm_dragon_claw";
+                yield return "tm_low_sweep";
+                yield return "tm_volt_switch";
+                yield return "tm_dragon_pulse";
+                yield return "tm_sludge_wave";
+                yield return "tm_struggle_bug";
+                yield return "tm_avalanche";
+                yield return "tm_drain_punch";
+                yield return "tm_dragon_tail";
+                yield return "tm_silver_wind";
+                yield return "tm_frost_breath";
+                yield return "tm_sky_drop";
+                yield return "tm_quash";
+            }
+        }
+
+
+
+        [Flags]
+        public enum TMDistroClass
+        {
+            None = 0,
+            Universal = 1,
+            High = 2,
+            Medium = 4,
+            Low = 8,
+            Ordinary = 14,
+            Natural = 15,
+            ShopOnly = 16,
+            NonUniversal = 30,
+        }
+
+        static IEnumerable<string> IterateDistroTMs(TMDistroClass tmClass)
+        {
+            if ((tmClass & TMDistroClass.Universal) != TMDistroClass.None)
+            {
+                yield return "tm_substitute";
+                yield return "tm_protect";
+                yield return "tm_facade";
+                yield return "tm_round";
+                yield return "tm_rest";
+                yield return "tm_hidden_power";
+                yield return "tm_return";
+                yield return "tm_frustration";
+                yield return "tm_double_team";
+                yield return "tm_swagger";
+                yield return "tm_secret_power";
+                yield return "tm_attract";
+                yield return "tm_endure";
+                yield return "tm_natural_gift";
+                yield return "tm_sunny_day";
+                yield return "tm_rain_dance";
+                yield return "tm_captivate";
+            }
+
+
+            if ((tmClass & TMDistroClass.High) != TMDistroClass.None)
+            {
+                yield return "tm_rock_smash";
+                yield return "tm_thief";
+                yield return "tm_flash";
+                yield return "tm_shadow_ball";
+                yield return "tm_psych_up";
+                yield return "tm_rock_tomb";
+                yield return "tm_strength";
+                yield return "tm_rock_slide";
+                yield return "tm_aerial_ace";
+                yield return "tm_fling";
+                yield return "tm_ice_beam";
+                yield return "tm_dig";
+                yield return "tm_safeguard";
+                yield return "tm_thunder_wave";
+                yield return "tm_grass_knot";
+                yield return "tm_light_screen";
+                yield return "tm_thunderbolt";
+            }
+
+
+            if ((tmClass & TMDistroClass.Medium) != TMDistroClass.None)
+            {
+                yield return "tm_blizzard";
+                yield return "tm_water_pulse";
+                yield return "tm_shock_wave";
+                yield return "tm_bulldoze";
+                yield return "tm_cut";
+                yield return "tm_thunder";
+                yield return "tm_psychic";
+                yield return "tm_iron_tail";
+                yield return "tm_taunt";
+                yield return "tm_brick_break";
+                yield return "tm_giga_impact";
+                yield return "tm_echoed_voice";
+                yield return "tm_payback";
+                yield return "tm_earthquake";
+                yield return "tm_hyper_beam";
+                yield return "tm_sandstorm";
+                yield return "tm_calm_mind";
+                yield return "tm_reflect";
+                yield return "tm_charge_beam";
+                yield return "tm_dream_eater";
+                yield return "tm_flamethrower";
+                yield return "tm_swords_dance";
+                yield return "tm_surf";
+                yield return "tm_fire_blast";
+                yield return "tm_energy_ball";
+                yield return "tm_work_up";
+                yield return "tm_incinerate";
+                yield return "tm_hail";
+                yield return "tm_retaliate";
+                yield return "tm_power_up_punch";
+                yield return "tm_roar";
+                yield return "tm_torment";
+                yield return "tm_shadow_claw";
+                yield return "tm_u_turn";
+                yield return "tm_whirlpool";
+                yield return "tm_hone_claws";
+                yield return "tm_dark_pulse";
+                yield return "tm_stone_edge";
+                yield return "tm_focus_punch";
+                yield return "tm_sludge_bomb";
+                yield return "tm_poison_jab";
+                yield return "tm_giga_drain";
+            }
+
+            if ((tmClass & TMDistroClass.Low) != TMDistroClass.None)
+            {
+                yield return "tm_nature_power";
+                yield return "tm_dive";
+                yield return "tm_dazzling_gleam";
+                yield return "tm_scald";
+                yield return "tm_psyshock";
+                yield return "tm_waterfall";
+                yield return "tm_will_o_wisp";
+                yield return "tm_roost";
+                yield return "tm_telekinesis";
+                yield return "tm_smack_down";
+                yield return "tm_focus_blast";
+                yield return "tm_wild_charge";
+                yield return "tm_rock_polish";
+                yield return "tm_fly";
+                yield return "tm_steel_wing";
+                yield return "tm_explosion";
+                yield return "tm_acrobatics";
+                yield return "tm_brine";
+                yield return "tm_infestation";
+                yield return "tm_gyro_ball";
+                yield return "tm_recycle";
+                yield return "tm_snatch";
+                yield return "tm_false_swipe";
+                yield return "tm_venoshock";
+                yield return "tm_x_scissor";
+                yield return "tm_rock_climb";
+                yield return "tm_overheat";
+                yield return "tm_defog";
+                yield return "tm_bulk_up";
+                yield return "tm_snarl";
+                yield return "tm_flame_charge";
+                yield return "tm_flash_cannon";
+                yield return "tm_pluck";
+                yield return "tm_bullet_seed";
+            }
+
+            if ((tmClass & TMDistroClass.ShopOnly) != TMDistroClass.None)
+            {
+                yield return "tm_embargo";
+                yield return "tm_dragon_claw";
+                yield return "tm_low_sweep";
+                yield return "tm_volt_switch";
+                yield return "tm_dragon_pulse";
+                yield return "tm_sludge_wave";
+                yield return "tm_struggle_bug";
+                yield return "tm_avalanche";
+                yield return "tm_drain_punch";
+                yield return "tm_dragon_tail";
+                yield return "tm_silver_wind";
+                yield return "tm_frost_breath";
+                yield return "tm_sky_drop";
+                yield return "tm_quash";
+            }
+        }
+
+        public static int getTMPrice(string tm_id)
+        {
+            switch (tm_id)
+            {
+                case "tm_earthquake": return 5000;
+                case "tm_hyper_beam": return 6000;
+                case "tm_overheat": return 5000;
+                case "tm_blizzard": return 5000;
+                case "tm_swords_dance": return 5000;
+                case "tm_surf": return 5000;
+                case "tm_dark_pulse": return 5000;
+                case "tm_psychic": return 5000;
+                case "tm_thunder": return 5000;
+                case "tm_shadow_ball": return 5000;
+                case "tm_ice_beam": return 5000;
+                case "tm_giga_impact": return 6000;
+                case "tm_fire_blast": return 5000;
+                case "tm_dazzling_gleam": return 5000;
+                case "tm_flash_cannon": return 5000;
+                case "tm_stone_edge": return 5000;
+                case "tm_sludge_bomb": return 5000;
+                case "tm_focus_blast": return 5000;
+                case "tm_explosion": return 3500;
+                case "tm_snatch": return 3500;
+                case "tm_sunny_day": return 3500;
+                case "tm_rain_dance": return 3500;
+                case "tm_sandstorm": return 3500;
+                case "tm_hail": return 3500;
+                case "tm_x_scissor": return 3500;
+                case "tm_wild_charge": return 3500;
+                case "tm_taunt": return 3500;
+                case "tm_focus_punch": return 3500;
+                case "tm_safeguard": return 3500;
+                case "tm_light_screen": return 3500;
+                case "tm_psyshock": return 3500;
+                case "tm_will_o_wisp": return 3500;
+                case "tm_dream_eater": return 3500;
+                case "tm_nature_power": return 3500;
+                case "tm_facade": return 3500;
+                case "tm_swagger": return 3500;
+                case "tm_captivate": return 3500;
+                case "tm_rock_slide": return 3500;
+                case "tm_fling": return 3500;
+                case "tm_thunderbolt": return 3500;
+                case "tm_water_pulse": return 3500;
+                case "tm_shock_wave": return 3500;
+                case "tm_brick_break": return 3500;
+                case "tm_payback": return 3500;
+                case "tm_calm_mind": return 3500;
+                case "tm_reflect": return 3500;
+                case "tm_charge_beam": return 3500;
+                case "tm_flamethrower": return 3500;
+                case "tm_energy_ball": return 3500;
+                case "tm_retaliate": return 3500;
+                case "tm_scald": return 3500;
+                case "tm_waterfall": return 3500;
+                case "tm_roost": return 3500;
+                case "tm_rock_polish": return 3500;
+                case "tm_acrobatics": return 3500;
+                case "tm_rock_climb": return 3500;
+                case "tm_bulk_up": return 3500;
+                case "tm_pluck": return 3500;
+                case "tm_psych_up": return 3500;
+                case "tm_secret_power": return 3500;
+                case "tm_natural_gift": return 3500;
+                case "tm_return": return 2500;
+                case "tm_frustration": return 2500;
+                case "tm_giga_drain": return 2500;
+                case "tm_dive": return 2500;
+                case "tm_poison_jab": return 2500;
+                case "tm_torment": return 2500;
+                case "tm_shadow_claw": return 2500;
+                case "tm_endure": return 2500;
+                case "tm_echoed_voice": return 2500;
+                case "tm_gyro_ball": return 2500;
+                case "tm_recycle": return 2500;
+                case "tm_false_swipe": return 2500;
+                case "tm_defog": return 2500;
+                case "tm_telekinesis": return 2500;
+                case "tm_double_team": return 2500;
+                case "tm_thunder_wave": return 2500;
+                case "tm_attract": return 2500;
+                case "tm_steel_wing": return 2500;
+                case "tm_smack_down": return 2500;
+                case "tm_snarl": return 2500;
+                case "tm_flame_charge": return 2500;
+                case "tm_bulldoze": return 2500;
+                case "tm_substitute": return 2500;
+                case "tm_iron_tail": return 2500;
+                case "tm_brine": return 2500;
+                case "tm_venoshock": return 2500;
+                case "tm_u_turn": return 2500;
+                case "tm_aerial_ace": return 2500;
+                case "tm_hone_claws": return 2500;
+                case "tm_rock_smash": return 2500;
+                case "tm_protect": return 2500;
+                case "tm_round": return 2500;
+                case "tm_rest": return 2500;
+                case "tm_hidden_power": return 2500;
+                case "tm_rock_tomb": return 2500;
+                case "tm_strength": return 2500;
+                case "tm_thief": return 2500;
+                case "tm_dig": return 3500;
+                case "tm_cut": return 2500;
+                case "tm_whirlpool": return 2500;
+                case "tm_grass_knot": return 2500;
+                case "tm_fly": return 3500;
+                case "tm_power_up_punch": return 3500;
+                case "tm_infestation": return 2500;
+                case "tm_work_up": return 3500;
+                case "tm_incinerate": return 2500;
+                case "tm_roar": return 2500;
+                case "tm_flash": return 2500;
+                case "tm_bullet_seed": return 3500;
+                case "tm_embargo": return 2500;
+                case "tm_dragon_claw": return 3500;
+                case "tm_low_sweep": return 2500;
+                case "tm_volt_switch": return 3500;
+                case "tm_dragon_pulse": return 5000;
+                case "tm_sludge_wave": return 5000;
+                case "tm_struggle_bug": return 2500;
+                case "tm_avalanche": return 2500;
+                case "tm_drain_punch": return 3500;
+                case "tm_dragon_tail": return 3500;
+                case "tm_silver_wind": return 5000;
+                case "tm_frost_breath": return 3500;
+                case "tm_sky_drop": return 2500;
+                case "tm_quash": return 2500;
+            }
+            throw new Exception("Unknown TM ID");
         }
 
         static IEnumerable<string> IterateTypeBoosters()
@@ -1054,76 +1393,5 @@ namespace DataGenerator.Data
             }
         }
 
-        static readonly (string, int)[] specific_tms = { ("tm_embargo", 2500), //TM Embargo
-                                                ("tm_psychic", 5000), //TM Psychic
-                                                ("tm_will_o_wisp", 3500), //TM Will-O-Wisp
-                                                ("tm_dragon_tail", 5000), //TM Dragon Tail
-                                                ("tm_flamethrower", 5000), //TM Flamethrower
-                                                ("tm_dive", 5000), //TM Dive
-                                                ("tm_waterfall", 5000), //TM Waterfall
-                                                ("tm_smack_down", 3500), //TM Smack Down
-                                                ("tm_flame_charge", 5000), //TM Flame Charge
-                                                ("tm_low_sweep", 2500), //TM Low Sweep
-                                                ("tm_charge_beam", 5000), //TM Charge Beam
-                                                ("tm_blizzard", 5000), //TM Blizzard
-                                                ("tm_wild_charge", 5000), //TM Wild Charge
-                                                ("tm_hone_claws", 5000), //TM Hone Claws
-                                                ("tm_telekinesis", 3500), //TM Telekinesis
-                                                ("tm_rock_polish", 2500), //TM Rock Polish
-                                                ("tm_gyro_ball", 3500), //TM Gyro Ball
-                                                ("tm_rock_slide", 5000), //TM Rock Slide
-                                                ("tm_sludge_wave", 5000), //TM Sludge Wave
-                                                ("tm_trick_room", 3500), //TM Trick Room
-                                                ("tm_venoshock", 3500), //TM Venoshock
-                                                ("tm_scald", 5000), //TM Scald
-                                                ("tm_energy_ball", 5000), //TM Energy Ball
-                                                ("tm_explosion", 5000), //TM Explosion
-                                                ("tm_u_turn", 3500), //TM U-turn
-                                                ("tm_thunder_wave", 3500), //TM Thunder Wave
-                                                ("tm_pluck", 5000), //TM Pluck
-                                                ("tm_fire_blast", 5000), //TM Fire Blast
-                                                ("tm_ally_switch", 2500), //TM Ally Switch
-                                                ("tm_acrobatics", 5000), //TM Acrobatics
-                                                ("tm_thunderbolt", 5000), //TM Thunderbolt
-                                                ("tm_shadow_ball", 5000), //TM Shadow Ball
-                                                ("tm_false_swipe", 5000), //TM False Swipe
-                                                ("tm_roost", 5000), //TM Roost
-                                                ("tm_infestation", 2500), //TM Infestation
-                                                ("tm_drain_punch", 5000), //TM Drain Punch
-                                                ("tm_water_pulse", 5000), //TM Water Pulse
-                                                ("tm_dark_pulse", 5000), //TM Dark Pulse
-                                                ("tm_giga_drain", 3500), //TM Giga Drain
-                                                ("tm_shock_wave", 5000), //TM Shock Wave
-                                                ("tm_volt_switch", 5000), //TM Volt Switch
-                                                ("tm_steel_wing", 5000), //TM Steel Wing
-                                                ("tm_psyshock", 5000), //TM Psyshock
-                                                ("tm_bulldoze", 3500), //TM Bulldoze
-                                                ("tm_poison_jab", 5000), //TM Poison Jab
-                                                ("tm_frost_breath", 5000), //TM Frost Breath
-                                                ("tm_dream_eater", 3500), //TM Dream Eater
-                                                ("tm_thunder", 5000), //TM Thunder
-                                                ("tm_x_scissor", 5000), //TM X-Scissor
-                                                ("tm_dazzling_gleam", 5000), //TM Dazzling Gleam
-                                                ("tm_retaliate", 3500), //TM Retaliate
-                                                ("tm_quash", 2500), //TM Quash
-                                                ("tm_snarl", 2500), //TM Snarl
-                                                ("tm_aerial_ace", 2500), //TM Aerial Ace
-                                                ("tm_focus_blast", 5000), //TM Focus Blast
-                                                ("tm_incinerate", 2500), //TM Incinerate
-                                                ("tm_struggle_bug", 2500), //TM Struggle Bug
-                                                ("tm_overheat", 5000), //TM Overheat
-                                                ("tm_dragon_claw", 3500), //TM Dragon Claw
-                                                ("tm_sludge_bomb", 5000), //TM Sludge Bomb
-                                                ("tm_rock_tomb", 5000), //TM Rock Tomb
-                                                ("tm_recycle", 3500), //TM Recycle
-                                                ("tm_ice_beam", 5000), //TM Ice Beam
-                                                ("tm_flash_cannon", 5000), //TM Flash Cannon
-                                                ("tm_stone_edge", 5000), //TM Stone Edge
-                                                ("tm_shadow_claw", 5000), //TM Shadow Claw
-                                                ("tm_brick_break", 5000), //TM Brick Break
-                                                ("tm_calm_mind", 5000), //TM Calm Mind
-                                                ("tm_torment", 2500), //TM Torment
-                                                ("tm_bulk_up", 5000) //TM Bulk Up
-                                              };
     }
 }

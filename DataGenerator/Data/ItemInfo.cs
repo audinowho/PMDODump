@@ -1842,7 +1842,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Orb_Green";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
-                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("protect", true, false, statusStates));
+                item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("all_protect", true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -3318,238 +3318,254 @@ namespace DataGenerator.Data
                 item.UseEvent.HitFX.Sound = "_UNK_EVT_043";
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Materialize", 2));
             }
-            else if (ii == 586)
-            {
-
-            }
-            else if (ii == 587)
-                FillTMData(item, "secret_power");//Secret Power
-            else if (ii == 588)
-                FillTMData(item, "embargo");//Embargo
-            else if (ii == 589)
-                FillTMData(item, "echoed_voice");//Echoed Voice
-            else if (ii == 590)
-                FillTMData(item, "double_team");//Double Team
-            else if (ii == 591)
-                FillTMData(item, "psychic");//Psychic
-            else if (ii == 592)
-                FillTMData(item, "toxic");//Toxic
-            else if (ii == 593)
-                FillTMData(item, "will_o_wisp");//Will-o-wisp
-            else if (ii == 594)
-                FillTMData(item, "dragon_tail");//Dragon Tail
-            else if (ii == 595)
-                FillTMData(item, "flamethrower");//Flamethrower
-            else if (ii == 596)
-                FillTMData(item, "protect");//Protect
-            else if (ii == 597)
-                FillTMData(item, "defog");//Defog
-            else if (ii == 598)
-                FillTMData(item, "roar");//Roar
-            else if (ii == 599)
-                FillTMData(item, "hyper_beam");//Hyper Beam
-            else if (ii == 600)
-                FillTMData(item, "swagger");//Swagger
-            else if (ii == 601)
-                FillTMData(item, "dive");//Dive
-            else if (ii == 602)
-                FillTMData(item, "fly");//Fly
-            else if (ii == 603)
-                FillTMData(item, "facade");//Facade
-            else if (ii == 604)
-                FillTMData(item, "rock_climb");//Defog
-            else if (ii == 605)
-                FillTMData(item, "waterfall");//Waterfall
-            else if (ii == 606)
-                FillTMData(item, "smack_down");//Smack Down
-            else if (ii == 607)
-                FillTMData(item, "flame_charge");//Flame Charge
-            else if (ii == 608)
-                FillTMData(item, "low_sweep");//Low Sweep
-            else if (ii == 609)
-                FillTMData(item, "charge_beam");//Charge Beam
-            else if (ii == 610)
-                FillTMData(item, "payback");//Payback
-            else if (ii == 611)
-                FillTMData(item, "blizzard");//Blizzard
-            else if (ii == 612)
-                FillTMData(item, "wild_charge");//Wild Charge
-            else if (ii == 613)
-                FillTMData(item, "hone_claws");//Hone Claws
-            else if (ii == 614)
-                FillTMData(item, "telekinesis");//Telekinesis
-            else if (ii == 615)
-                FillTMData(item, "giga_impact");//Giga Impact
-            else if (ii == 616)
-                FillTMData(item, "rock_polish");//Rock Polish
-            else if (ii == 617)
-                FillTMData(item, "dig");//Dig
-            else if (ii == 618)
-                FillTMData(item, "gyro_ball");//Gyro Ball
-            else if (ii == 619)
-                FillTMData(item, "rock_slide");//Rock Slide
-            else if (ii == 620)
-                FillTMData(item, "sludge_wave");//Sludge Wave
-            else if (ii == 621)
-                FillTMData(item, "substitute");//Substitute
-            else if (ii == 622)
-                FillTMData(item, "trick_room");//Trick Room
-            else if (ii == 623)
-                FillTMData(item, "safeguard");//Safeguard
-            else if (ii == 624)
-                FillTMData(item, "swords_dance");//Swords Dance
-            else if (ii == 625)
-                FillTMData(item, "venoshock");//Veoshock
-            else if (ii == 626)
-                FillTMData(item, "work_up");//Work Up
-            else if (ii == 627)
-                FillTMData(item, "scald");//Scald
-            else if (ii == 628)
-                FillTMData(item, "energy_ball");//Energy Ball
-            else if (ii == 629)
-                FillTMData(item, "explosion");//Explosion
-            else if (ii == 630)
-                FillTMData(item, "u_turn");//U-turn
-            else if (ii == 631)
-                FillTMData(item, "thunder_wave");//Thunder Wave
-            else if (ii == 632)
-                FillTMData(item, "return");//Return
-            else if (ii == 633)
-                FillTMData(item, "pluck");//Pluck
-            else if (ii == 634)
-                FillTMData(item, "frustration");//Frustration
-            else if (ii == 635)
-                FillTMData(item, "fire_blast");//Fire Blast
-            else if (ii == 636)
-                FillTMData(item, "ally_switch");//Ally Switch
-            else if (ii == 637)
-                FillTMData(item, "flash");//Flash
-            else if (ii == 638)
-                FillTMData(item, "thief");//Thief
-            else if (ii == 639)
-                FillTMData(item, "acrobatics");//Acrobatics
-            else if (ii == 640)
-                FillTMData(item, "thunderbolt");//Thunderbolt
-            else if (ii == 641)
-                FillTMData(item, "shadow_ball");//Shadow Ball
-            else if (ii == 642)
-                FillTMData(item, "false_swipe");//False Swipe
-            else if (ii == 643)
-                FillTMData(item, "fling");//Fling
-            else if (ii == 644)
-                FillTMData(item, "captivate");//Captivate
-            else if (ii == 645)
-                FillTMData(item, "roost");//Roost
-            else if (ii == 646)
-                FillTMData(item, "infestation");//Infestation
-            else if (ii == 647)
-                FillTMData(item, "drain_punch");//Drain Punch
-            else if (ii == 648)
-                FillTMData(item, "water_pulse");//Water Pulse
-            else if (ii == 649)
-                FillTMData(item, "dark_pulse");//Dark Pulse
-            else if (ii == 650)
-                FillTMData(item, "giga_drain");//Giga Drain
-            else if (ii == 651)
-                FillTMData(item, "shock_wave");
-            else if (ii == 652)
-                FillTMData(item, "volt_switch");
-            else if (ii == 653)
-                FillTMData(item, "steel_wing");
-            else if (ii == 654)
+            else if (ii == 576)
                 FillTMData(item, "earthquake");
-            else if (ii == 655)
-                FillTMData(item, "psyshock");
-            else if (ii == 656)
-                FillTMData(item, "bulldoze");
-            else if (ii == 657)
-                FillTMData(item, "poison_jab");
-            else if (ii == 658)
-                FillTMData(item, "frost_breath");
-            else if (ii == 659)
-                FillTMData(item, "dream_eater");
-            else if (ii == 660)
-                FillTMData(item, "thunder");
-            else if (ii == 661)
-                FillTMData(item, "x_scissor");
-            else if (ii == 662)
-                FillTMData(item, "dazzling_gleam");
-            else if (ii == 663)
-                FillTMData(item, "retaliate");
-            else if (ii == 664)
-                FillTMData(item, "reflect");
-            else if (ii == 665)
-                FillTMData(item, "quash");
-            else if (ii == 666)
-                FillTMData(item, "snarl");
-            else if (ii == 667)
-                FillTMData(item, "round");
-            else if (ii == 668)
-                FillTMData(item, "aerial_ace");
-            else if (ii == 669)
-                FillTMData(item, "focus_blast");
-            else if (ii == 670)
-                FillTMData(item, "incinerate");
-            else if (ii == 671)
-                FillTMData(item, "struggle_bug");
-            else if (ii == 672)
+            else if (ii == 577)
+                FillTMData(item, "hyper_beam");
+            else if (ii == 578)
                 FillTMData(item, "overheat");
-            else if (ii == 673)
-                FillTMData(item, "dragon_claw");
-            else if (ii == 674)
-                FillTMData(item, "rain_dance");
-            else if (ii == 675)
-                FillTMData(item, "sunny_day");
-            else if (ii == 676)
-                FillTMData(item, "sludge_bomb");
-            else if (ii == 677)
-                FillTMData(item, "sandstorm");
-            else if (ii == 678)
-                FillTMData(item, "hail");
-            else if (ii == 679)
-                FillTMData(item, "rock_tomb");
-            else if (ii == 680)
-                FillTMData(item, "attract");
-            else if (ii == 681)
-                FillTMData(item, "hidden_power");
-            else if (ii == 682)
-                FillTMData(item, "taunt");
-            else if (ii == 683)
-                FillTMData(item, "recycle");
-            else if (ii == 684)
-                FillTMData(item, "ice_beam");
-            else if (ii == 685)
-                FillTMData(item, "flash_cannon");
-            else if (ii == 686)
-                FillTMData(item, "light_screen");
-            else if (ii == 687)
-                FillTMData(item, "stone_edge");
-            else if (ii == 688)
-                FillTMData(item, "shadow_claw");
-            else if (ii == 689)
-                FillTMData(item, "grass_knot");
-            else if (ii == 690)
-                FillTMData(item, "brick_break");
-            else if (ii == 691)
-                FillTMData(item, "calm_mind");
-            else if (ii == 692)
-                FillTMData(item, "torment");
-            else if (ii == 693)
-                FillTMData(item, "strength");
-            else if (ii == 694)
-                FillTMData(item, "cut");
-            else if (ii == 695)
-                FillTMData(item, "rock_smash");
-            else if (ii == 696)
-                FillTMData(item, "bulk_up");
-            else if (ii == 697)
+            else if (ii == 579)
+                FillTMData(item, "blizzard");
+            else if (ii == 580)
+                FillTMData(item, "swords_dance");
+            else if (ii == 581)
                 FillTMData(item, "surf");
-            else if (ii == 698)
-                FillTMData(item, "rest");
-            else if (ii == 699)
+            else if (ii == 582)
+                FillTMData(item, "dark_pulse");
+            else if (ii == 583)
+                FillTMData(item, "psychic");
+            else if (ii == 584)
+                FillTMData(item, "thunder");
+            else if (ii == 585)
+                FillTMData(item, "shadow_ball");
+            else if (ii == 586)
+                FillTMData(item, "ice_beam");
+            else if (ii == 587)
+                FillTMData(item, "giga_impact");
+            else if (ii == 588)
+                FillTMData(item, "fire_blast");
+            else if (ii == 589)
+                FillTMData(item, "dazzling_gleam");
+            else if (ii == 590)
+                FillTMData(item, "flash_cannon");
+            else if (ii == 591)
+                FillTMData(item, "stone_edge");
+            else if (ii == 592)
+                FillTMData(item, "sludge_bomb");
+            else if (ii == 593)
+                FillTMData(item, "focus_blast");
+            else if (ii == 594)
+                FillTMData(item, "explosion");
+            else if (ii == 595)
+                FillTMData(item, "snatch");
+            else if (ii == 596)
+                FillTMData(item, "sunny_day");
+            else if (ii == 597)
+                FillTMData(item, "rain_dance");
+            else if (ii == 598)
+                FillTMData(item, "sandstorm");
+            else if (ii == 599)
+                FillTMData(item, "hail");
+            else if (ii == 600)
+                FillTMData(item, "x_scissor");
+            else if (ii == 601)
+                FillTMData(item, "wild_charge");
+            else if (ii == 602)
+                FillTMData(item, "taunt");
+            else if (ii == 603)
+                FillTMData(item, "focus_punch");
+            else if (ii == 604)
+                FillTMData(item, "safeguard");
+            else if (ii == 605)
+                FillTMData(item, "light_screen");
+            else if (ii == 606)
+                FillTMData(item, "psyshock");
+            else if (ii == 607)
+                FillTMData(item, "will_o_wisp");
+            else if (ii == 608)
+                FillTMData(item, "dream_eater");
+            else if (ii == 609)
+                FillTMData(item, "nature_power");
+            else if (ii == 610)
+                FillTMData(item, "facade");
+            else if (ii == 611)
+                FillTMData(item, "swagger");
+            else if (ii == 612)
+                FillTMData(item, "captivate");
+            else if (ii == 613)
+                FillTMData(item, "rock_slide");
+            else if (ii == 614)
+                FillTMData(item, "fling");
+            else if (ii == 615)
+                FillTMData(item, "thunderbolt");
+            else if (ii == 616)
+                FillTMData(item, "water_pulse");
+            else if (ii == 617)
+                FillTMData(item, "shock_wave");
+            else if (ii == 618)
+                FillTMData(item, "brick_break");
+            else if (ii == 619)
+                FillTMData(item, "payback");
+            else if (ii == 620)
+                FillTMData(item, "calm_mind");
+            else if (ii == 621)
+                FillTMData(item, "reflect");
+            else if (ii == 622)
+                FillTMData(item, "charge_beam");
+            else if (ii == 623)
+                FillTMData(item, "flamethrower");
+            else if (ii == 624)
+                FillTMData(item, "energy_ball");
+            else if (ii == 625)
+                FillTMData(item, "retaliate");
+            else if (ii == 626)
+                FillTMData(item, "scald");
+            else if (ii == 627)
+                FillTMData(item, "waterfall");
+            else if (ii == 628)
+                FillTMData(item, "roost");
+            else if (ii == 629)
+                FillTMData(item, "rock_polish");
+            else if (ii == 630)
+                FillTMData(item, "acrobatics");
+            else if (ii == 631)
+                FillTMData(item, "rock_climb");
+            else if (ii == 632)
+                FillTMData(item, "bulk_up");
+            else if (ii == 633)
+                FillTMData(item, "pluck");
+            else if (ii == 634)
                 FillTMData(item, "psych_up");
-
-
+            else if (ii == 635)
+                FillTMData(item, "secret_power");
+            else if (ii == 636)
+                FillTMData(item, "natural_gift");
+            else if (ii == 637)
+                FillTMData(item, "return");
+            else if (ii == 638)
+                FillTMData(item, "frustration");
+            else if (ii == 639)
+                FillTMData(item, "giga_drain");
+            else if (ii == 640)
+                FillTMData(item, "dive");
+            else if (ii == 641)
+                FillTMData(item, "poison_jab");
+            else if (ii == 642)
+                FillTMData(item, "torment");
+            else if (ii == 643)
+                FillTMData(item, "shadow_claw");
+            else if (ii == 644)
+                FillTMData(item, "endure");
+            else if (ii == 645)
+                FillTMData(item, "echoed_voice");
+            else if (ii == 646)
+                FillTMData(item, "gyro_ball");
+            else if (ii == 647)
+                FillTMData(item, "recycle");
+            else if (ii == 648)
+                FillTMData(item, "false_swipe");
+            else if (ii == 649)
+                FillTMData(item, "defog");
+            else if (ii == 650)
+                FillTMData(item, "telekinesis");
+            else if (ii == 651)
+                FillTMData(item, "double_team");
+            else if (ii == 652)
+                FillTMData(item, "thunder_wave");
+            else if (ii == 653)
+                FillTMData(item, "attract");
+            else if (ii == 654)
+                FillTMData(item, "steel_wing");
+            else if (ii == 655)
+                FillTMData(item, "smack_down");
+            else if (ii == 656)
+                FillTMData(item, "snarl");
+            else if (ii == 657)
+                FillTMData(item, "flame_charge");
+            else if (ii == 658)
+                FillTMData(item, "bulldoze");
+            else if (ii == 659)
+                FillTMData(item, "substitute");
+            else if (ii == 660)
+                FillTMData(item, "iron_tail");
+            else if (ii == 661)
+                FillTMData(item, "brine");
+            else if (ii == 662)
+                FillTMData(item, "venoshock");
+            else if (ii == 663)
+                FillTMData(item, "u_turn");
+            else if (ii == 664)
+                FillTMData(item, "aerial_ace");
+            else if (ii == 665)
+                FillTMData(item, "hone_claws");
+            else if (ii == 666)
+                FillTMData(item, "rock_smash");
+            else if (ii == 667)
+                FillTMData(item, "protect");
+            else if (ii == 668)
+                FillTMData(item, "round");
+            else if (ii == 669)
+                FillTMData(item, "rest");
+            else if (ii == 670)
+                FillTMData(item, "hidden_power");
+            else if (ii == 671)
+                FillTMData(item, "rock_tomb");
+            else if (ii == 672)
+                FillTMData(item, "strength");
+            else if (ii == 673)
+                FillTMData(item, "thief");
+            else if (ii == 674)
+                FillTMData(item, "dig");
+            else if (ii == 675)
+                FillTMData(item, "cut");
+            else if (ii == 676)
+                FillTMData(item, "whirlpool");
+            else if (ii == 677)
+                FillTMData(item, "grass_knot");
+            else if (ii == 678)
+                FillTMData(item, "fly");
+            else if (ii == 679)
+                FillTMData(item, "power_up_punch");
+            else if (ii == 680)
+                FillTMData(item, "infestation");
+            else if (ii == 681)
+                FillTMData(item, "work_up");
+            else if (ii == 682)
+                FillTMData(item, "incinerate");
+            else if (ii == 683)
+                FillTMData(item, "roar");
+            else if (ii == 684)
+                FillTMData(item, "flash");
+            else if (ii == 685)
+                FillTMData(item, "bullet_seed");
+            else if (ii == 686)
+                FillTMData(item, "embargo");
+            else if (ii == 687)
+                FillTMData(item, "dragon_claw");
+            else if (ii == 688)
+                FillTMData(item, "low_sweep");
+            else if (ii == 689)
+                FillTMData(item, "volt_switch");
+            else if (ii == 690)
+                FillTMData(item, "dragon_pulse");
+            else if (ii == 691)
+                FillTMData(item, "sludge_wave");
+            else if (ii == 692)
+                FillTMData(item, "struggle_bug");
+            else if (ii == 693)
+                FillTMData(item, "avalanche");
+            else if (ii == 694)
+                FillTMData(item, "drain_punch");
+            else if (ii == 695)
+                FillTMData(item, "dragon_tail");
+            else if (ii == 696)
+                FillTMData(item, "silver_wind");
+            else if (ii == 697)
+                FillTMData(item, "frost_breath");
+            else if (ii == 698)
+                FillTMData(item, "sky_drop");
+            else if (ii == 699)
+                FillTMData(item, "quash");
 
 
             if (item.Name.DefaultText.StartsWith("**"))
