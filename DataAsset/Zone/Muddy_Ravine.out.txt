@@ -23,9 +23,8 @@ itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
 snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 10);
 snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, max_floors), 10);
 snacks.Spawns.Add(new InvItem("seed_hunger"), new IntRange(0, max_floors), 10);
-snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, max_floors), 10);
-snacks.Spawns.Add(new InvItem("herb_white"), new IntRange(0, max_floors), 10);
 //special
 CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
 special.SpawnRates.SetRange(3, new IntRange(0, max_floors));
@@ -43,13 +42,12 @@ throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("throwable", throwable);
 
 
-throwable.Spawns.Add(new InvItem("ammo_cacnea_spike"), new IntRange(0, max_floors), 10);
-throwable.Spawns.Add(new InvItem("wand_pounce"), new IntRange(0, max_floors), 10);
-throwable.Spawns.Add(new InvItem("wand_whirlwind"), new IntRange(0, max_floors), 10);
-throwable.Spawns.Add(new InvItem("wand_switcher"), new IntRange(0, max_floors), 10);
-throwable.Spawns.Add(new InvItem("wand_slow"), new IntRange(0, max_floors), 10);
-throwable.Spawns.Add(new InvItem("ammo_stick"), new IntRange(0, max_floors), 10);
-throwable.Spawns.Add(new InvItem("ammo_geo_pebble"), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("ammo_cacnea_spike", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_whirlwind", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_switcher", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_slow", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("ammo_geo_pebble", false, 3), new IntRange(0, max_floors), 10);
 //orbs
 CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
 orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -57,15 +55,14 @@ itemSpawnZoneStep.Spawns.Add("orbs", orbs);
 
 
 orbs.Spawns.Add(new InvItem("orb_all_aim"), new IntRange(0, max_floors), 10);
-orbs.Spawns.Add(new InvItem("orb_trap_see"), new IntRange(0, max_floors), 10);
-orbs.Spawns.Add(new InvItem("orb_trapbust"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_all_dodge"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, max_floors), 10);
 orbs.Spawns.Add(new InvItem("orb_petrify"), new IntRange(0, max_floors), 10);
 orbs.Spawns.Add(new InvItem("orb_slumber"), new IntRange(0, max_floors), 10);
 orbs.Spawns.Add(new InvItem("orb_foe_hold"), new IntRange(0, max_floors), 10);
-orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, max_floors), 10);
 //held
 CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
-held.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+held.SpawnRates.SetRange(4, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("held", held);
 
 

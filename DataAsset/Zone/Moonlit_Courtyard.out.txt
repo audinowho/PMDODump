@@ -3,6 +3,128 @@ ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
 itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
 
 
+//necessities
+CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
+necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("necessities", necessities);
+
+
+necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 9);
+necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 12);
+necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, max_floors), 10);
+necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
+//snacks
+CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
+snacks.SpawnRates.SetRange(5, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("snacks", snacks);
+
+
+snacks.Spawns.Add(new InvItem("berry_roseli"), new IntRange(0, max_floors), 3);
+snacks.Spawns.Add(new InvItem("berry_chilan"), new IntRange(0, max_floors), 3);
+snacks.Spawns.Add(new InvItem("berry_rindo"), new IntRange(0, max_floors), 3);
+//boosters
+CategorySpawn<InvItem> boosters = new CategorySpawn<InvItem>();
+boosters.SpawnRates.SetRange(3, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("boosters", boosters);
+
+
+boosters.Spawns.Add(new InvItem("gummi_blue"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_black"), new IntRange(0, max_floors), 5);
+boosters.Spawns.Add(new InvItem("gummi_clear"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_grass"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_green"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_brown"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_orange"), new IntRange(0, max_floors), 5);
+boosters.Spawns.Add(new InvItem("gummi_gold"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_pink"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_purple"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_red"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_royal"), new IntRange(0, max_floors), 5);
+boosters.Spawns.Add(new InvItem("gummi_silver"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_white"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_yellow"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_sky"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_gray"), new IntRange(0, max_floors), 1);
+boosters.Spawns.Add(new InvItem("gummi_magenta"), new IntRange(0, max_floors), 5);
+//special
+CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
+special.SpawnRates.SetRange(3, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("special", special);
+
+
+special.Spawns.Add(new InvItem("apricorn_plain"), new IntRange(0, max_floors), 10);
+special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, max_floors), 10);
+special.Spawns.Add(new InvItem("apricorn_purple"), new IntRange(0, max_floors), 10);
+special.Spawns.Add(new InvItem("apricorn_white"), new IntRange(0, max_floors), 10);
+special.Spawns.Add(new InvItem("machine_assembly_box"), new IntRange(0, max_floors), 10);
+//evo
+CategorySpawn<InvItem> evo = new CategorySpawn<InvItem>();
+evo.SpawnRates.SetRange(1, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("evo", evo);
+
+
+evo.Spawns.Add(new InvItem("evo_moon_stone"), new IntRange(0, max_floors), 10);
+//throwable
+CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
+throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("throwable", throwable);
+
+
+throwable.Spawns.Add(new InvItem("ammo_cacnea_spike", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("ammo_corsola_twig", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_fear", false, 2), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_lure", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_warp", false, 3), new IntRange(0, max_floors), 10);
+//orbs
+CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
+orbs.SpawnRates.SetRange(20, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("orbs", orbs);
+
+
+orbs.Spawns.Add(new InvItem("orb_trapbust"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_foe_hold"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_all_dodge"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_spurn"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_petrify"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_totter"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_scanner"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_freeze"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_all_protect"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_slow"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_halving"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_rollcall"), new IntRange(0, max_floors), 10);
+//held
+CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
+held.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("held", held);
+
+
+held.Spawns.Add(new InvItem("held_heal_ribbon"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_warp_scarf"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_twist_band"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_shell_bell"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_pink_bow"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_twisted_spoon"), new IntRange(0, max_floors), 10);
+//tms
+CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
+tms.SpawnRates.SetRange(7, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("tms", tms);
+
+
+tms.Spawns.Add(new InvItem("tm_protect"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_round"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_rest"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_hidden_power"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_thief"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_dig"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_cut"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_grass_knot"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_fly"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_infestation"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_work_up"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_roar"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_flash"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_bullet_seed"), new IntRange(0, max_floors), 10);
 
 
 floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
@@ -18,8 +140,8 @@ poolSpawn.Spawns.Add(GetTeamMob("gloom", "", "mega_drain", "moonlight", "", "", 
 poolSpawn.Spawns.Add(GetTeamMob("cutiefly", "", "draining_kiss", "struggle_bug", "", "", new RandRange(22)), new IntRange(0, 5), 10);
 poolSpawn.Spawns.Add(GetTeamMob("ralts", "", "teleport", "growl", "", "", new RandRange(18)), new IntRange(0, 10), 10);
 poolSpawn.Spawns.Add(GetTeamMob("mime_jr", "", "copycat", "encore", "", "", new RandRange(23)), new IntRange(0, 5), 10);
-poolSpawn.Spawns.Add(GetTeamMob("roselia", "", "magical_leaf", "", "", "", new RandRange(25)), new IntRange(0, 6), 10);
-poolSpawn.Spawns.Add(GetTeamMob("bayleef", "", "magical_leaf", "synthesis", "", "", new RandRange(25)), new IntRange(5, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("roselia", "", "magical_leaf", "", "", "", new RandRange(22)), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("bayleef", "", "magical_leaf", "synthesis", "", "", new RandRange(22)), new IntRange(5, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("lunatone", "", "embargo", "moonblast", "", "", new RandRange(23)), new IntRange(5, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("floette", "", "grassy_terrain", "wish", "", "", new RandRange(24)), new IntRange(5, max_floors), 10);
 //groups.  maybe group turret?

@@ -1,147 +1,147 @@
 Monster	Skill	Intrinsic	Status	AI	Item	Role
 ---	---	---	---	--	----	---
-abomasnow	absorb	adaptability	aqua_ring	avoid_trouble	ammo_cacnea_spike	Normal
-abra	accelerock	aerilate	area_counter	boss	ammo_corsola_twig	Support
-absol	acid	aftermath	belch	cannibal	ammo_geo_pebble	Leader
-accelgor	acid_armor	air_lock	biding	get_away	ammo_golden_thorn	Loner
-aegislash	acid_downpour	analytic	bind	go_after_foes	ammo_gravelerock	
-aerodactyl	acid_spray	anger_point	blinker	item_finder	ammo_iron_thorn	
-aggron	acrobatics	anticipation	bouncing	loot_guard	ammo_rare_fossil	
-aipom	acupressure	arena_trap	burn	patrol	ammo_silver_spike	
-alakazam	aerial_ace	aroma_veil	charge	retreater	ammo_stick	
-alcremie	aeroblast	as_one_chill	charging_focus_punch	shopkeeper	apricorn_big	
-alomomola	after_you	as_one_grim	charging_razor_wind	shuckle	apricorn_black	
-altaria	agility	aura_break	charging_skull_bash	slow_patrol	apricorn_blue	
-amaura	air_cutter	bad_dreams	charging_sky_attack	slow_wander	apricorn_brown	
-ambipom	air_slash	ball_fetch	charging_solar_beam	split_up	apricorn_green	
-amoonguss	ally_switch	battery	chasing	staged_boss	apricorn_perfect	
-ampharos	all_out_pummeling	battle_armor	clamp	stick_together	apricorn_plain	
-anorith	amnesia	battle_bond	confuse	thief	apricorn_purple	
-appletun	anchor_shot	beast_boost	conversion	tit_for_tat	apricorn_red	
-applin	ancient_power	berserk	conversion_2	turret	apricorn_white	
-araquanid	apple_acid	big_pecks	counter	wait_attack	apricorn_yellow	
-arbok	aqua_jet	blaze	crits_landed	wait_only	berry_apicot	
-arcanine	aqua_ring	bulletproof	cursed	wait_there	berry_aspear	
-arceus	aqua_tail	cheek_pouch	decoy	wander_dumb	berry_babiri	
-archen	arm_thrust	chilling_neigh	defense_curl	wander_normal	berry_charti	
-archeops	aromatherapy	chlorophyll	destiny_bond	wander_smart	berry_cheri	
-arctovish	aromatic_mist	clear_body	detect	weird_tree	berry_chesto	
-arctozolt	assist	cloud_nine	digging		berry_chilan	
-ariados	assurance	color_change	disable		berry_chople	
-armaldo	astonish	comatose	diving		berry_coba	
-aromatisse	astral_barrage	competitive	doom_desire		berry_colbur	
-aron	attack	compound_eyes	electrified		berry_custap	
-arrokuda	attack_order	contrary	embargo		berry_enigma	
-articuno	attract	corrosion	encore		berry_ganlon	
-audino	aura_sphere	cotton_down	endure		berry_haban	
-aurorus	aura_wheel	curious_medicine	enraged		berry_hondew	
-avalugg	aurora_beam	cursed_body	exposed		berry_jaboca	
-axew	aurora_veil	cute_charm	fire_pledge		berry_kasib	
-azelf	autotomize	damp	fire_spin		berry_kebia	
-azumarill	avalanche	dancer	flinch		berry_kee	
-azurill	baby_doll_eyes	dark_aura	flying		berry_kelpsy	
-bagon	baddy_bad	dauntless_shield	focus_energy		berry_leppa	
-baltoy	baneful_bunker	dazzling	follow_me		berry_liechi	
-banette	barrage	defeatist	freeze		berry_lum	
-barbaracle	barrier	defiant	friendly_fire		berry_maranga	
-barboach	baton_pass	delta_stream	future_sight		berry_micle	
-barraskewda	beak_blast	desolate_land	grass_pledge		berry_occa	
-basculin	beat_up	disguise	grudge		berry_oran	
-bastiodon	behemoth_bash	download	heal_block		berry_passho	
-bayleef	behemoth_blade	dragons_maw	illusion		berry_payapa	
-beartic	belch	drizzle	immobilized		berry_pecha	
-beautifly	belly_drum	drought	infestation		berry_persim	
-beedrill	bestow	dry_skin	ingrain		berry_petaya	
-beheeyem	bide	early_bird	invisible		berry_qualot	
-beldum	bind	effect_spore	in_love		berry_rawst	
-bellossom	bite	electric_surge	last_ally_move		berry_rindo	
-bellsprout	black_hole_eclipse	emergency_exit	last_move_hit_by_other		berry_roseli	
-bergmite	blast_burn	fairy_aura	last_targeted_by		berry_rowap	
-bewear	blaze_kick	filter	last_used_move		berry_salac	
-bibarel	blizzard	flame_body	last_used_move_slot		berry_shuca	
-bidoof	block	flare_boost	leech_seed		berry_sitrus	
-binacle	bloom_doom	flash_fire	light_screen		berry_starf	
-bisharp	blue_flare	flower_gift	lucky_chant		berry_tamato	
-blacephalon	body_press	flower_veil	magic_coat		berry_tanga	
-blastoise	body_slam	fluffy	magma_storm		berry_wacan	
-blaziken	bolt_beak	forecast	magnet_rise		berry_yache	
-blipbug	bolt_strike	forewarn	mental_charged		boost_calcium	
-blissey	bonemerang	friend_guard	metal_burst		boost_carbos	
-blitzle	bone_club	frisk	minimized		boost_hp_up	
-boldore	bone_rush	full_metal_body	mini_counter		boost_iron	
-boltund	boomburst	fur_coat	miracle_eye		boost_nectar	
-bonsly	bounce	gale_wings	mirror_coat		boost_protein	
-bouffalant	bouncy_bubble	galvanize	missed_all_last_turn		boost_zinc	
-bounsweet	branch_poke	gluttony	mist		box_dainty	
-braixen	brave_bird	gooey	mod_accuracy		box_deluxe	
-braviary	breaking_swipe	gorilla_tactics	mod_attack		box_glittery	
-breloom	breakneck_blitz	grassy_surge	mod_defense		box_heavy	
-brionne	brick_break	grass_pelt	mod_evasion		box_light	
-bronzong	brine	grim_neigh	mod_range		box_nifty	
-bronzor	brutal_swing	gulp_missile	mod_special_attack		empty	
-bruxish	bubble	guts	mod_special_defense		evo_chipped_pot	
-budew	bubble_beam	harvest	mod_speed		evo_cracked_pot	
-buizel	bug_bite	healer	nightmare		evo_dawn_stone	
-bulbasaur	bug_buzz	heatproof	none		evo_deep_sea_scale	
-buneary	bulk_up	heavy_metal	outrage		evo_deep_sea_tooth	
-bunnelby	bulldoze	honey_gather	paralyze		evo_dubious_disc	
-burmy	bullet_punch	huge_power	paused		evo_dusk_stone	
-butterfree	bullet_seed	hunger_switch	perish_song		evo_electirizer	
-buzzwole	burning_jealousy	hustle	petal_dance		evo_everstone	
-cacnea	burn_up	hydration	phantom_force		evo_fire_stone	
-cacturne	buzzy_buzz	hyper_cutter	pierce		evo_harmony_scarf	
-calyrex	calm_mind	ice_body	poison		evo_ice_stone	
-camerupt	camouflage	ice_face	poison_toxic		evo_kings_rock	
-carbink	captivate	ice_scales	powder		evo_leaf_stone	
-carkol	catastropika	illuminate	power_charged		evo_link_cable	
-carnivine	celebrate	illusion	protect		evo_lunar_ribbon	
-carracosta	charge	immunity	quick_guard		evo_magmarizer	
-carvanha	charge_beam	imposter	rage_powder		evo_moon_stone	
-cascoon	charm	infiltrator	recruit_boost		evo_oval_stone	
-castform	chatter	innards_out	reflect		evo_prism_scale	
-caterpie	chip_away	inner_focus	regeneration		evo_protector	
-celebi	circle_throw	insomnia	retaliate		evo_razor_claw	
-celesteela	clamp	intimidate	roosting		evo_razor_fang	
-centiskorch	clanging_scales	intrepid_sword	safeguard		evo_reaper_cloth	
-chandelure	clangorous_soul	iron_barbs	sand_tomb		evo_shiny_stone	
-chansey	clangorous_soulblaze	iron_fist	shadow_force		evo_sun_ribbon	
-charizard	clear_smog	justified	shopkeeper		evo_sun_stone	
-charjabug	close_combat	keen_eye	sleep		evo_thunder_stone	
-charmander	coaching	klutz	sleepless		evo_up_grade	
-charmeleon	coil	leaf_guard	slip		evo_water_stone	
-chatot	comet_punch	levitate	snatch		food_apple	
-cherrim	confide	libero	status_protection		food_apple_big	
-cherubi	confuse_ray	lightning_rod	stat_charged		food_apple_golden	
-chesnaught	confusion	light_metal	stockpile		food_apple_huge	
-chespin	constrict	limber	super_mobile		food_apple_perfect	
-chewtle	continental_crush	liquid_ooze	sure_shot		food_banana	
-chikorita	conversion	liquid_voice	taunted		food_banana_big	
-chimchar	conversion_2	long_reach	telekinesis		food_banana_golden	
-chimecho	copycat	magician	thrash		food_chestnut	
-chinchou	core_enforcer	magic_bounce	times_move_used		food_grimy	
-chingling	corkscrew_crash	magic_guard	torment		food_grimy_2	
-cinccino	corrosive_gas	magma_armor	type_boosted		gummi_black	
-cinderace	cosmic_power	magnet_pull	type_converted		gummi_blue	
-clamperl	cotton_guard	marvel_scale	type_protected		gummi_brown	
-clauncher	cotton_spore	mega_launcher	veiled		gummi_clear	
-clawitzer	counter	merciless	was_hurt_last_turn		gummi_gold	
-claydol	court_change	mimicry	water_pledge		gummi_grass	
-clefable	covet	minus	weakness_drain		gummi_gray	
-clefairy	crabhammer	mirror_armor	whirlpool		gummi_green	
-cleffa	crafty_shield	misty_surge	wide_guard		gummi_magenta	
-clobbopus	cross_chop	mold_breaker	wish		gummi_orange	
-cloyster	cross_poison	moody	wrap		gummi_pink	
-coalossal	crunch	motor_drive	yawning		gummi_purple	
-cobalion	crush_claw	moxie			gummi_red	
-cofagrigus	crush_grip	multiscale			gummi_royal	
-combee	curse	multitype			gummi_silver	
+abomasnow	absorb	adaptability	all_protect	avoid_trouble	ammo_cacnea_spike	Normal
+abra	accelerock	aerilate	aqua_ring	boss	ammo_corsola_twig	Support
+absol	acid	aftermath	area_counter	cannibal	ammo_geo_pebble	Leader
+accelgor	acid_armor	air_lock	belch	get_away	ammo_golden_thorn	Loner
+aegislash	acid_downpour	analytic	biding	go_after_foes	ammo_gravelerock	
+aerodactyl	acid_spray	anger_point	bind	item_finder	ammo_iron_thorn	
+aggron	acrobatics	anticipation	blinker	loot_guard	ammo_rare_fossil	
+aipom	acupressure	arena_trap	bouncing	patrol	ammo_silver_spike	
+alakazam	aerial_ace	aroma_veil	burn	retreater	ammo_stick	
+alcremie	aeroblast	as_one_chill	charge	shopkeeper	apricorn_big	
+alomomola	after_you	as_one_grim	charging_focus_punch	shuckle	apricorn_black	
+altaria	agility	aura_break	charging_razor_wind	slow_patrol	apricorn_blue	
+amaura	air_cutter	bad_dreams	charging_skull_bash	slow_wander	apricorn_brown	
+ambipom	air_slash	ball_fetch	charging_sky_attack	split_up	apricorn_green	
+amoonguss	all_out_pummeling	battery	charging_solar_beam	staged_boss	apricorn_perfect	
+ampharos	ally_switch	battle_armor	chasing	stick_together	apricorn_plain	
+anorith	amnesia	battle_bond	clamp	thief	apricorn_purple	
+appletun	anchor_shot	beast_boost	confuse	tit_for_tat	apricorn_red	
+applin	ancient_power	berserk	conversion	turret	apricorn_white	
+araquanid	apple_acid	big_pecks	conversion_2	wait_attack	apricorn_yellow	
+arbok	aqua_jet	blaze	counter	wait_only	berry_apicot	
+arcanine	aqua_ring	bulletproof	crits_landed	wait_there	berry_aspear	
+arceus	aqua_tail	cheek_pouch	cursed	wander_dumb	berry_babiri	
+archen	arm_thrust	chilling_neigh	decoy	wander_normal	berry_charti	
+archeops	aromatherapy	chlorophyll	defense_curl	wander_smart	berry_cheri	
+arctovish	aromatic_mist	clear_body	destiny_bond	weird_tree	berry_chesto	
+arctozolt	assist	cloud_nine	detect		berry_chilan	
+ariados	assurance	color_change	digging		berry_chople	
+armaldo	astonish	comatose	disable		berry_coba	
+aromatisse	astral_barrage	competitive	diving		berry_colbur	
+aron	attack	compound_eyes	doom_desire		berry_custap	
+arrokuda	attack_order	contrary	electrified		berry_enigma	
+articuno	attract	corrosion	embargo		berry_ganlon	
+audino	aura_sphere	cotton_down	encore		berry_haban	
+aurorus	aura_wheel	curious_medicine	endure		berry_hondew	
+avalugg	aurora_beam	cursed_body	enraged		berry_jaboca	
+axew	aurora_veil	cute_charm	exposed		berry_kasib	
+azelf	autotomize	damp	fire_pledge		berry_kebia	
+azumarill	avalanche	dancer	fire_spin		berry_kee	
+azurill	baby_doll_eyes	dark_aura	flinch		berry_kelpsy	
+bagon	baddy_bad	dauntless_shield	flying		berry_leppa	
+baltoy	baneful_bunker	dazzling	focus_energy		berry_liechi	
+banette	barrage	defeatist	follow_me		berry_lum	
+barbaracle	barrier	defiant	freeze		berry_maranga	
+barboach	baton_pass	delta_stream	friendly_fire		berry_micle	
+barraskewda	beak_blast	desolate_land	future_sight		berry_occa	
+basculin	beat_up	disguise	grass_pledge		berry_oran	
+bastiodon	behemoth_bash	download	grudge		berry_passho	
+bayleef	behemoth_blade	dragons_maw	heal_block		berry_payapa	
+beartic	belch	drizzle	illusion		berry_pecha	
+beautifly	belly_drum	drought	immobilized		berry_persim	
+beedrill	bestow	dry_skin	in_love		berry_petaya	
+beheeyem	bide	early_bird	infestation		berry_qualot	
+beldum	bind	effect_spore	ingrain		berry_rawst	
+bellossom	bite	electric_surge	invisible		berry_rindo	
+bellsprout	black_hole_eclipse	emergency_exit	last_ally_move		berry_roseli	
+bergmite	blast_burn	fairy_aura	last_move_hit_by_other		berry_rowap	
+bewear	blaze_kick	filter	last_targeted_by		berry_salac	
+bibarel	blizzard	flame_body	last_used_move		berry_shuca	
+bidoof	block	flare_boost	last_used_move_slot		berry_sitrus	
+binacle	bloom_doom	flash_fire	leech_seed		berry_starf	
+bisharp	blue_flare	flower_gift	light_screen		berry_tamato	
+blacephalon	body_press	flower_veil	lucky_chant		berry_tanga	
+blastoise	body_slam	fluffy	magic_coat		berry_wacan	
+blaziken	bolt_beak	forecast	magma_storm		berry_yache	
+blipbug	bolt_strike	forewarn	magnet_rise		boost_calcium	
+blissey	bone_club	friend_guard	mental_charged		boost_carbos	
+blitzle	bone_rush	frisk	metal_burst		boost_hp_up	
+boldore	bonemerang	full_metal_body	mini_counter		boost_iron	
+boltund	boomburst	fur_coat	minimized		boost_nectar	
+bonsly	bounce	gale_wings	miracle_eye		boost_protein	
+bouffalant	bouncy_bubble	galvanize	mirror_coat		boost_zinc	
+bounsweet	branch_poke	gluttony	missed_all_last_turn		box_dainty	
+braixen	brave_bird	gooey	mist		box_deluxe	
+braviary	breaking_swipe	gorilla_tactics	mod_accuracy		box_glittery	
+breloom	breakneck_blitz	grass_pelt	mod_attack		box_heavy	
+brionne	brick_break	grassy_surge	mod_defense		box_light	
+bronzong	brine	grim_neigh	mod_evasion		box_nifty	
+bronzor	brutal_swing	gulp_missile	mod_range		empty	
+bruxish	bubble	guts	mod_special_attack		evo_chipped_pot	
+budew	bubble_beam	harvest	mod_special_defense		evo_cracked_pot	
+buizel	bug_bite	healer	mod_speed		evo_dawn_stone	
+bulbasaur	bug_buzz	heatproof	nightmare		evo_deep_sea_scale	
+buneary	bulk_up	heavy_metal	none		evo_deep_sea_tooth	
+bunnelby	bulldoze	honey_gather	outrage		evo_dubious_disc	
+burmy	bullet_punch	huge_power	paralyze		evo_dusk_stone	
+butterfree	bullet_seed	hunger_switch	paused		evo_electirizer	
+buzzwole	burn_up	hustle	perish_song		evo_everstone	
+cacnea	burning_jealousy	hydration	petal_dance		evo_fire_stone	
+cacturne	buzzy_buzz	hyper_cutter	phantom_force		evo_harmony_scarf	
+calyrex	calm_mind	ice_body	pierce		evo_ice_stone	
+camerupt	camouflage	ice_face	poison		evo_kings_rock	
+carbink	captivate	ice_scales	poison_toxic		evo_leaf_stone	
+carkol	catastropika	illuminate	powder		evo_link_cable	
+carnivine	celebrate	illusion	power_charged		evo_lunar_ribbon	
+carracosta	charge	immunity	protect		evo_magmarizer	
+carvanha	charge_beam	imposter	quick_guard		evo_moon_stone	
+cascoon	charm	infiltrator	rage_powder		evo_oval_stone	
+castform	chatter	innards_out	recruit_boost		evo_prism_scale	
+caterpie	chip_away	inner_focus	reflect		evo_protector	
+celebi	circle_throw	insomnia	regeneration		evo_razor_claw	
+celesteela	clamp	intimidate	retaliate		evo_razor_fang	
+centiskorch	clanging_scales	intrepid_sword	roosting		evo_reaper_cloth	
+chandelure	clangorous_soul	iron_barbs	safeguard		evo_shiny_stone	
+chansey	clangorous_soulblaze	iron_fist	sand_tomb		evo_sun_ribbon	
+charizard	clear_smog	justified	shadow_force		evo_sun_stone	
+charjabug	close_combat	keen_eye	shopkeeper		evo_thunder_stone	
+charmander	coaching	klutz	sky_drop_target		evo_up_grade	
+charmeleon	coil	leaf_guard	sky_drop_user		evo_water_stone	
+chatot	comet_punch	levitate	sleep		food_apple	
+cherrim	confide	libero	sleepless		food_apple_big	
+cherubi	confuse_ray	light_metal	slip		food_apple_golden	
+chesnaught	confusion	lightning_rod	snatch		food_apple_huge	
+chespin	constrict	limber	stat_charged		food_apple_perfect	
+chewtle	continental_crush	liquid_ooze	status_protection		food_banana	
+chikorita	conversion	liquid_voice	stockpile		food_banana_big	
+chimchar	conversion_2	long_reach	super_mobile		food_banana_golden	
+chimecho	copycat	magic_bounce	sure_shot		food_chestnut	
+chinchou	core_enforcer	magic_guard	taunted		food_grimy	
+chingling	corkscrew_crash	magician	telekinesis		food_grimy_2	
+cinccino	corrosive_gas	magma_armor	thrash		gummi_black	
+cinderace	cosmic_power	magnet_pull	times_move_used		gummi_blue	
+clamperl	cotton_guard	marvel_scale	torment		gummi_brown	
+clauncher	cotton_spore	mega_launcher	type_boosted		gummi_clear	
+clawitzer	counter	merciless	type_converted		gummi_gold	
+claydol	court_change	mimicry	type_protected		gummi_grass	
+clefable	covet	minus	veiled		gummi_gray	
+clefairy	crabhammer	mirror_armor	was_hurt_last_turn		gummi_green	
+cleffa	crafty_shield	misty_surge	water_pledge		gummi_magenta	
+clobbopus	cross_chop	mold_breaker	weakness_drain		gummi_orange	
+cloyster	cross_poison	moody	whirlpool		gummi_pink	
+coalossal	crunch	motor_drive	wide_guard		gummi_purple	
+cobalion	crush_claw	moxie	wish		gummi_red	
+cofagrigus	crush_grip	multiscale	wrap		gummi_royal	
+combee	curse	multitype	yawning		gummi_silver	
 combusken	cut	mummy			gummi_sky	
-comfey	darkest_lariat	natural_cure			gummi_white	
-conkeldurr	dark_pulse	neuroforce			gummi_wonder	
-copperajah	dark_void	neutralizing_gas			gummi_yellow	
-corphish	dazzling_gleam	none			held_assault_vest	
-corsola	decorate	normalize			held_big_root	
-corviknight	defend_order	no_guard			held_binding_band	
+comfey	dark_pulse	natural_cure			gummi_white	
+conkeldurr	dark_void	neuroforce			gummi_wonder	
+copperajah	darkest_lariat	neutralizing_gas			gummi_yellow	
+corphish	dazzling_gleam	no_guard			held_assault_vest	
+corsola	decorate	none			held_big_root	
+corviknight	defend_order	normalize			held_binding_band	
 corvisquire	defense_curl	oblivious			held_black_belt	
 cosmoem	defog	overcoat			held_black_glasses	
 cosmog	destiny_bond	overgrow			held_black_sludge	
@@ -173,8 +173,8 @@ dedenne	dragon_pulse	quick_draw			held_iron_plate
 deerling	dragon_rage	quick_feet			held_life_orb	
 deino	dragon_rush	rain_dish			held_magnet	
 delcatty	dragon_tail	rattled			held_meadow_plate	
-delibird	draining_kiss	receiver			held_metal_coat	
-delphox	drain_punch	reckless			held_metronome	
+delibird	drain_punch	receiver			held_metal_coat	
+delphox	draining_kiss	reckless			held_metronome	
 deoxys	dream_eater	refrigerate			held_mind_plate	
 dewgong	drill_peck	regenerator			held_miracle_seed	
 dewott	drill_run	ripen			held_mobile_scarf	
@@ -183,30 +183,30 @@ dhelmise	dual_chop	rks_system			held_never_melt_ice
 dialga	dual_wingbeat	rock_head			held_pass_scarf	
 diancie	dynamax_cannon	rough_skin			held_pierce_band	
 diggersby	dynamic_punch	run_away			held_pink_bow	
-diglett	earthquake	sand_force			held_pixie_plate	
-ditto	earth_power	sand_rush			held_poison_barb	
+diglett	earth_power	sand_force			held_pixie_plate	
+ditto	earthquake	sand_rush			held_poison_barb	
 dodrio	echoed_voice	sand_spit			held_power_band	
 doduo	eerie_impulse	sand_stream			held_reunion_cape	
 donphan	eerie_spell	sand_veil			held_ring_target	
 dottler	egg_bomb	sap_sipper			held_scope_lens	
 doublade	electric_terrain	schooling			held_sharp_beak	
 dracovish	electrify	scrappy			held_shed_shell	
-dracozolt	electroweb	screen_cleaner			held_shell_bell	
-dragalge	electro_ball	serene_grace			held_silk_scarf	
+dracozolt	electro_ball	screen_cleaner			held_shell_bell	
+dragalge	electroweb	serene_grace			held_silk_scarf	
 dragapult	embargo	shadow_shield			held_silver_powder	
 dragonair	ember	shadow_tag			held_sky_plate	
 dragonite	encore	shed_skin			held_soft_sand	
 drakloak	endeavor	sheer_force			held_special_band	
 drampa	endure	shell_armor			held_spell_tag	
-drapion	energy_ball	shields_down			held_splash_plate	
-dratini	entrainment	shield_dust			held_spooky_plate	
+drapion	energy_ball	shield_dust			held_splash_plate	
+dratini	entrainment	shields_down			held_spooky_plate	
 drednaw	eruption	simple			held_sticky_barb	
 dreepy	eternabeam	skill_link			held_stone_plate	
 drifblim	expanding_force	slow_start			held_toxic_orb	
 drifloon	explosion	slush_rush			held_toxic_plate	
 drilbur	extrasensory	sniper			held_trap_scarf	
-drizzile	extreme_evoboost	snow_cloak			held_twisted_spoon	
-drowzee	extreme_speed	snow_warning			held_twist_band	
+drizzile	extreme_evoboost	snow_cloak			held_twist_band	
+drowzee	extreme_speed	snow_warning			held_twisted_spoon	
 druddigon	facade	solar_power			held_warp_scarf	
 dubwool	fairy_lock	solid_rock			held_weather_rock	
 ducklett	fairy_wind	soul_heart			held_wide_lens	
@@ -231,10 +231,10 @@ electivire	first_impression	suction_cups			loot_mystery_part
 electrike	fishious_rend	super_luck			loot_nugget	
 electrode	fissure	surge_surfer			loot_pearl	
 elekid	flail	swarm			loot_red_orb	
-elgyem	flamethrower	sweet_veil			loot_spacetime_globe	
-emboar	flame_burst	swift_swim			machine_ability_capsule	
-emolga	flame_charge	symbiosis			machine_assembly_box	
-empoleon	flame_wheel	synchronize			machine_recall_box	
+elgyem	flame_burst	sweet_veil			loot_spacetime_globe	
+emboar	flame_charge	swift_swim			machine_ability_capsule	
+emolga	flame_wheel	symbiosis			machine_assembly_box	
+empoleon	flamethrower	synchronize			machine_recall_box	
 entei	flare_blitz	tangled_feet			machine_storage_box	
 escavalier	flash	tangling_hair			medicine_amber_tear	
 espeon	flash_cannon	technician			medicine_dire_hit	
@@ -248,9 +248,9 @@ falinks	flower_shield	toxic_boost			medicine_potion
 farfetchd	fly	trace			medicine_x_accuracy	
 fearow	flying_press	transistor			medicine_x_attack	
 feebas	focus_blast	triage			medicine_x_defense	
-fennekin	focus_energy	truant			medicine_x_speed	
-feraligatr	focus_punch	turboblaze			medicine_x_sp_atk	
-ferroseed	follow_me	unaware			medicine_x_sp_def	
+fennekin	focus_energy	truant			medicine_x_sp_atk	
+feraligatr	focus_punch	turboblaze			medicine_x_sp_def	
+ferroseed	follow_me	unaware			medicine_x_speed	
 ferrothorn	force_palm	unburden			orb_all_aim	
 finneon	foresight	unnerve			orb_all_dodge	
 flaaffy	forests_curse	unseen_fist			orb_all_hit	
@@ -273,26 +273,26 @@ frogadier	gear_grind				orb_luminous
 froslass	gear_up				orb_mirror	
 frosmoth	genesis_supernova				orb_mobile	
 furfrou	geomancy				orb_mug	
-furret	gigavolt_havoc				orb_nullify	
-gabite	giga_drain				orb_one_room	
-gallade	giga_impact				orb_one_shot	
+furret	giga_drain				orb_nullify	
+gabite	giga_impact				orb_one_room	
+gallade	gigavolt_havoc				orb_one_shot	
 galvantula	glacial_lance				orb_petrify	
 garbodor	glaciate				orb_pierce	
 garchomp	glare				orb_rebound	
 gardevoir	glitzy_glow				orb_revival	
-gastly	grassy_glide				orb_rollcall	
-gastrodon	grassy_terrain				orb_scanner	
-genesect	grass_knot				orb_slow	
-gengar	grass_pledge				orb_slumber	
-geodude	grass_whistle				orb_spurn	
-gible	gravity				orb_stayaway	
-gigalith	grav_apple				orb_totter	
-girafarig	growl				orb_trapbust	
-giratina	growth				orb_trap_see	
+gastly	grass_knot				orb_rollcall	
+gastrodon	grass_pledge				orb_scanner	
+genesect	grass_whistle				orb_slow	
+gengar	grassy_glide				orb_slumber	
+geodude	grassy_terrain				orb_spurn	
+gible	grav_apple				orb_stayaway	
+gigalith	gravity				orb_totter	
+girafarig	growl				orb_trap_see	
+giratina	growth				orb_trapbust	
 glaceon	grudge				orb_trawl	
-glalie	guardian_of_alola				orb_weather	
-glameow	guard_split				seed_ban	
-glastrier	guard_swap				seed_blast	
+glalie	guard_split				orb_weather	
+glameow	guard_swap				seed_ban	
+glastrier	guardian_of_alola				seed_blast	
 gligar	guillotine				seed_blinker	
 gliscor	gunk_shot				seed_decoy	
 gloom	gust				seed_doom	
@@ -302,402 +302,402 @@ goldeen	hammer_arm				seed_ice
 golduck	happy_hour				seed_joy	
 golem	harden				seed_last_chance	
 golett	haze				seed_plain	
-golisopod	headbutt				seed_pure	
-golurk	head_charge				seed_reviver	
-goodra	head_smash				seed_sleep	
-goomy	healing_wish				seed_spreader	
-gorebyss	heal_bell				seed_training	
-gossifleur	heal_block				seed_vanish	
-gothita	heal_order				seed_vile	
-gothitelle	heal_pulse				seed_warp	
+golisopod	head_charge				seed_pure	
+golurk	head_smash				seed_reviver	
+goodra	headbutt				seed_sleep	
+goomy	heal_bell				seed_spreader	
+gorebyss	heal_block				seed_training	
+gossifleur	heal_order				seed_vanish	
+gothita	heal_pulse				seed_vile	
+gothitelle	healing_wish				seed_warp	
 gothorita	heart_stamp				tm_acrobatics	
 gourgeist	heart_swap				tm_aerial_ace	
-granbull	heat_crash				tm_ally_switch	
-grapploct	heat_wave				tm_attract	
+granbull	heat_crash				tm_attract	
+grapploct	heat_wave				tm_avalanche	
 graveler	heavy_slam				tm_blizzard	
 greedent	helping_hand				tm_brick_break	
-greninja	hex				tm_bulk_up	
-grimer	hidden_power				tm_bulldoze	
-grimmsnarl	high_horsepower				tm_calm_mind	
-grookey	high_jump_kick				tm_captivate	
-grotle	hold_back				tm_charge_beam	
-groudon	hold_hands				tm_cut	
-grovyle	hone_claws				tm_dark_pulse	
-growlithe	horn_attack				tm_dazzling_gleam	
-grubbin	horn_drill				tm_defog	
-grumpig	horn_leech				tm_dig	
-gulpin	howl				tm_dive	
-gumshoos	hurricane				tm_double_team	
-gurdurr	hydro_cannon				tm_dragon_claw	
-guzzlord	hydro_pump				tm_dragon_tail	
-gyarados	hydro_vortex				tm_drain_punch	
-hakamo_o	hyperspace_fury				tm_dream_eater	
-happiny	hyperspace_hole				tm_earthquake	
-hariyama	hyper_beam				tm_echoed_voice	
-hatenna	hyper_fang				tm_embargo	
-hatterene	hyper_voice				tm_energy_ball	
-hattrem	hypnosis				tm_explosion	
-haunter	ice_ball				tm_facade	
-hawlucha	ice_beam				tm_false_swipe	
-haxorus	ice_burn				tm_fire_blast	
-heatmor	ice_fang				tm_flamethrower	
-heatran	ice_hammer				tm_flame_charge	
-heliolisk	ice_punch				tm_flash	
-helioptile	ice_shard				tm_flash_cannon	
-heracross	icicle_crash				tm_fling	
-herdier	icicle_spear				tm_fly	
-hippopotas	icy_wind				tm_focus_blast	
-hippowdon	imprison				tm_frost_breath	
-hitmonchan	incinerate				tm_frustration	
-hitmonlee	inferno				tm_giga_drain	
-hitmontop	inferno_overdrive				tm_giga_impact	
-honchkrow	infestation				tm_grass_knot	
-honedge	ingrain				tm_gyro_ball	
-hoopa	instruct				tm_hail	
-hoothoot	ion_deluge				tm_hidden_power	
-hoppip	iron_defense				tm_hone_claws	
-horsea	iron_head				tm_hyper_beam	
-houndoom	iron_tail				tm_ice_beam	
-houndour	jaw_lock				tm_incinerate	
-ho_oh	judgment				tm_infestation	
-huntail	jump_kick				tm_light_screen	
-hydreigon	jungle_healing				tm_low_sweep	
-hypno	karate_chop				tm_overheat	
-igglybuff	kinesis				tm_payback	
-illumise	kings_shield				tm_pluck	
-impidimp	knock_off				tm_poison_jab	
-incineroar	lands_wrath				tm_protect	
-indeedee	laser_focus				tm_psychic	
-infernape	lash_out				tm_psych_up	
-inkay	last_resort				tm_psyshock	
-inteleon	lava_plume				tm_quash	
-ivysaur	leafage				tm_rain_dance	
-jangmo_o	leaf_blade				tm_recycle	
-jellicent	leaf_storm				tm_reflect	
-jigglypuff	leaf_tornado				tm_rest	
-jirachi	leech_life				tm_retaliate	
-jolteon	leech_seed				tm_return	
-joltik	leer				tm_roar	
-jumpluff	lets_snuggle_forever				tm_rock_climb	
-jynx	lick				tm_rock_polish	
-kabuto	life_dew				tm_rock_slide	
-kabutops	light_of_ruin				tm_rock_smash	
-kadabra	light_screen				tm_rock_tomb	
-kakuna	light_that_burns_the_sky				tm_roost	
-kangaskhan	liquidation				tm_round	
-karrablast	lock_on				tm_safeguard	
-kartana	lovely_kiss				tm_sandstorm	
-kecleon	low_kick				tm_scald	
-keldeo	low_sweep				tm_secret_power	
-kingdra	lucky_chant				tm_shadow_ball	
-kingler	lunar_dance				tm_shadow_claw	
-kirlia	lunge				tm_shock_wave	
-klang	luster_purge				tm_sludge_bomb	
-klefki	mach_punch				tm_sludge_wave	
-klink	magical_leaf				tm_smack_down	
-klinklang	magic_coat				tm_snarl	
-koffing	magic_powder				tm_steel_wing	
-komala	magic_room				tm_stone_edge	
-kommo_o	magma_storm				tm_strength	
-krabby	magnetic_flux				tm_struggle_bug	
-kricketot	magnet_bomb				tm_substitute	
-kricketune	magnet_rise				tm_sunny_day	
-krokorok	magnitude				tm_surf	
-krookodile	malicious_moonsault				tm_swagger	
-kubfu	mat_block				tm_swords_dance	
-kyogre	max_airstream				tm_taunt	
-kyurem	max_darkness				tm_telekinesis	
-lairon	max_flare				tm_thief	
-lampent	max_flutterby				tm_thunder	
-landorus	max_geyser				tm_thunderbolt	
-lanturn	max_guard				tm_thunder_wave	
-lapras	max_hailstorm				tm_torment	
-larvesta	max_knuckle				tm_toxic	
-larvitar	max_lightning				tm_trick_room	
-latias	max_mindstorm				tm_u_turn	
-latios	max_ooze				tm_venoshock	
-leafeon	max_overgrowth				tm_volt_switch	
-leavanny	max_phantasm				tm_waterfall	
-ledian	max_quake				tm_water_pulse	
-ledyba	max_rockfall				tm_wild_charge	
-lickilicky	max_starfall				tm_will_o_wisp	
-lickitung	max_steelspike				tm_work_up	
-liepard	max_strike				tm_x_scissor	
-lileep	max_wyrmwind				wand_fear	
-lilligant	mean_look				wand_infatuation	
-lillipup	meditate				wand_lob	
-linoone	megahorn				wand_lure	
-litleo	mega_drain				wand_path	
-litten	mega_kick				wand_pounce	
-litwick	mega_punch				wand_purge	
-lombre	memento				wand_slow	
-lopunny	menacing_moonraze_maelstrom				wand_stayaway	
-lotad	metal_burst				wand_surround	
-loudred	metal_claw				wand_switcher	
-lucario	metal_sound				wand_topsy_turvy	
-ludicolo	meteor_assault				wand_totter	
-lugia	meteor_beam				wand_transfer	
-lumineon	meteor_mash				wand_vanish	
-lunala	metronome				wand_warp	
-lunatone	me_first				wand_whirlwind	
-lurantis	milk_drink				xcl_element_bug_dust	
-luvdisc	mimic				xcl_element_bug_gem	
-luxio	mind_blown				xcl_element_bug_globe	
-luxray	mind_reader				xcl_element_bug_silk	
-lycanroc	minimize				xcl_element_dark_dust	
-machamp	miracle_eye				xcl_element_dark_gem	
-machoke	mirror_coat				xcl_element_dark_globe	
-machop	mirror_move				xcl_element_dark_silk	
-magby	mirror_shot				xcl_element_dragon_dust	
-magcargo	mist				xcl_element_dragon_gem	
-magearna	misty_explosion				xcl_element_dragon_globe	
-magikarp	misty_terrain				xcl_element_dragon_silk	
-magmar	mist_ball				xcl_element_electric_dust	
-magmortar	moonblast				xcl_element_electric_gem	
-magnemite	moongeist_beam				xcl_element_electric_globe	
-magneton	moonlight				xcl_element_electric_silk	
-magnezone	morning_sun				xcl_element_fairy_dust	
-makuhita	muddy_water				xcl_element_fairy_gem	
-malamar	mud_bomb				xcl_element_fairy_globe	
-mamoswine	mud_shot				xcl_element_fairy_silk	
-manaphy	mud_slap				xcl_element_fighting_dust	
-mandibuzz	mud_sport				xcl_element_fighting_gem	
-manectric	multi_attack				xcl_element_fighting_globe	
-mankey	mystical_fire				xcl_element_fighting_silk	
-mantine	nasty_plot				xcl_element_fire_dust	
-mantyke	natural_gift				xcl_element_fire_gem	
-maractus	natures_madness				xcl_element_fire_globe	
-mareanie	nature_power				xcl_element_fire_silk	
-mareep	needle_arm				xcl_element_flying_dust	
-marill	never_ending_nightmare				xcl_element_flying_gem	
-marowak	nightmare				xcl_element_flying_globe	
-marshadow	night_daze				xcl_element_flying_silk	
-marshtomp	night_shade				xcl_element_ghost_dust	
-masquerain	night_slash				xcl_element_ghost_gem	
-mawile	noble_roar				xcl_element_ghost_globe	
-medicham	no_retreat				xcl_element_ghost_silk	
-meditite	nuzzle				xcl_element_grass_dust	
-meganium	oblivion_wing				xcl_element_grass_gem	
-melmetal	obstruct				xcl_element_grass_globe	
-meloetta	oceanic_operetta				xcl_element_grass_silk	
-meltan	octazooka				xcl_element_ground_dust	
-meowstic	octolock				xcl_element_ground_gem	
-meowth	odor_sleuth				xcl_element_ground_globe	
-mesprit	ominous_wind				xcl_element_ground_silk	
-metagross	origin_pulse				xcl_element_ice_dust	
-metang	outrage				xcl_element_ice_gem	
-metapod	overdrive				xcl_element_ice_globe	
-mew	overheat				xcl_element_ice_silk	
-mewtwo	pain_split				xcl_element_normal_dust	
-mienfoo	parabolic_charge				xcl_element_normal_gem	
-mienshao	parting_shot				xcl_element_normal_globe	
-mightyena	payback				xcl_element_normal_silk	
-milcery	pay_day				xcl_element_poison_dust	
-milotic	peck				xcl_element_poison_gem	
-miltank	perish_song				xcl_element_poison_globe	
-mime_jr	petal_blizzard				xcl_element_poison_silk	
-mimikyu	petal_dance				xcl_element_psychic_dust	
-minccino	phantom_force				xcl_element_psychic_gem	
-minior	photon_geyser				xcl_element_psychic_globe	
-minun	pika_papow				xcl_element_psychic_silk	
-misdreavus	pin_missile				xcl_element_rock_dust	
-mismagius	plasma_fists				xcl_element_rock_gem	
-missingno	play_nice				xcl_element_rock_globe	
-moltres	play_rough				xcl_element_rock_silk	
-monferno	pluck				xcl_element_steel_dust	
-morelull	poison_fang				xcl_element_steel_gem	
-morgrem	poison_gas				xcl_element_steel_globe	
-morpeko	poison_jab				xcl_element_steel_silk	
-mothim	poison_powder				xcl_element_water_dust	
-mr_mime	poison_sting				xcl_element_water_gem	
-mr_rime	poison_tail				xcl_element_water_globe	
-mudbray	pollen_puff				xcl_element_water_silk	
-mudkip	poltergeist				xcl_family_abra_00	
-mudsdale	pound				xcl_family_abra_01	
-muk	powder				xcl_family_abra_02	
-munchlax	powder_snow				xcl_family_abra_03	
-munna	power_gem				xcl_family_abra_04	
-murkrow	power_split				xcl_family_absol_00	
-musharna	power_swap				xcl_family_absol_01	
-naganadel	power_trick				xcl_family_absol_02	
-natu	power_trip				xcl_family_absol_03	
-necrozma	power_up_punch				xcl_family_absol_04	
-nickit	power_whip				xcl_family_absol_05	
-nidoking	precipice_blades				xcl_family_aerodactyl_00	
-nidoqueen	present				xcl_family_aerodactyl_01	
-nidoran_f	prismatic_laser				xcl_family_aerodactyl_02	
-nidoran_m	protect				xcl_family_aerodactyl_03	
-nidorina	psybeam				xcl_family_aerodactyl_04	
-nidorino	psychic				xcl_family_aipom_00	
-nihilego	psychic_fangs				xcl_family_aipom_01	
-nincada	psychic_terrain				xcl_family_aipom_02	
-ninetales	psycho_boost				xcl_family_aipom_03	
-ninjask	psycho_cut				xcl_family_anorith_00	
-noctowl	psycho_shift				xcl_family_anorith_01	
-noibat	psych_up				xcl_family_anorith_02	
-noivern	psyshock				xcl_family_anorith_03	
-nosepass	psystrike				xcl_family_anorith_04	
-numel	psywave				xcl_family_aron_00	
-nuzleaf	pulverizing_pancake				xcl_family_aron_01	
-obstagoon	punishment				xcl_family_aron_02	
-octillery	purify				xcl_family_aron_03	
-oddish	pursuit				xcl_family_aron_04	
-omanyte	pyro_ball				xcl_family_bagon_00	
-omastar	quash				xcl_family_bagon_01	
-onix	quick_attack				xcl_family_bagon_02	
-oranguru	quick_guard				xcl_family_bagon_03	
-orbeetle	quiver_dance				xcl_family_baltoy_00	
-oricorio	rage				xcl_family_baltoy_01	
-oshawott	rage_powder				xcl_family_baltoy_02	
-pachirisu	rain_dance				xcl_family_baltoy_03	
-palkia	rapid_spin				xcl_family_baltoy_04	
-palossand	razor_leaf				xcl_family_barboach_00	
-palpitoad	razor_shell				xcl_family_barboach_01	
-pancham	razor_wind				xcl_family_barboach_02	
-pangoro	recover				xcl_family_barboach_03	
-panpour	recycle				xcl_family_barboach_04	
-pansage	reflect				xcl_family_beldum_00	
-pansear	reflect_type				xcl_family_beldum_01	
-paras	refresh				xcl_family_beldum_02	
-parasect	relic_song				xcl_family_beldum_03	
-passimian	rest				xcl_family_bellsprout_00	
-patrat	retaliate				xcl_family_bellsprout_01	
-pawniard	return				xcl_family_bellsprout_02	
-pelipper	revelation_dance				xcl_family_bellsprout_03	
-perrserker	revenge				xcl_family_bellsprout_04	
-persian	reversal				xcl_family_bidoof_00	
-petilil	rising_voltage				xcl_family_bidoof_01	
-phanpy	roar				xcl_family_bidoof_02	
-phantump	roar_of_time				xcl_family_bidoof_03	
-pheromosa	rock_blast				xcl_family_bidoof_04	
-phione	rock_climb				xcl_family_bidoof_05	
-pichu	rock_polish				xcl_family_bird_trio_00	
-pidgeot	rock_slide				xcl_family_bird_trio_01	
-pidgeotto	rock_smash				xcl_family_bird_trio_02	
-pidgey	rock_throw				xcl_family_bird_trio_03	
-pidove	rock_tomb				xcl_family_bird_trio_04	
-pignite	rock_wrecker				xcl_family_bird_trio_05	
-pikachu	role_play				xcl_family_bronzor_00	
-pikipek	rolling_kick				xcl_family_bronzor_01	
-piloswine	rollout				xcl_family_bronzor_02	
-pincurchin	roost				xcl_family_bronzor_03	
-pineco	rototiller				xcl_family_buizel_00	
-pinsir	round				xcl_family_buizel_01	
-piplup	sacred_fire				xcl_family_buizel_02	
-plusle	sacred_sword				xcl_family_buizel_03	
-poipole	safeguard				xcl_family_buizel_04	
-politoed	sandstorm				xcl_family_buizel_05	
-poliwag	sand_attack				xcl_family_bulbasaur_00	
-poliwhirl	sand_tomb				xcl_family_bulbasaur_01	
-poliwrath	sappy_seed				xcl_family_bulbasaur_02	
-polteageist	savage_spin_out				xcl_family_bulbasaur_03	
-ponyta	scald				xcl_family_bulbasaur_04	
-poochyena	scale_shot				xcl_family_bulbasaur_05	
-popplio	scary_face				xcl_family_buneary_00	
-porygon	scorching_sands				xcl_family_buneary_01	
-porygon2	scratch				xcl_family_buneary_02	
-porygon_z	screech				xcl_family_buneary_03	
-primarina	searing_shot				xcl_family_buneary_04	
-primeape	searing_sunraze_smash				xcl_family_burmy_00	
-prinplup	secret_power				xcl_family_burmy_01	
-probopass	secret_sword				xcl_family_burmy_02	
-psyduck	seed_bomb				xcl_family_burmy_03	
-pumpkaboo	seed_flare				xcl_family_burmy_04	
-pupitar	seismic_toss				xcl_family_burmy_05	
-purrloin	self_destruct				xcl_family_cacnea_00	
-purugly	shadow_ball				xcl_family_cacnea_01	
-pyroar	shadow_bone				xcl_family_cacnea_02	
-pyukumuku	shadow_claw				xcl_family_cacnea_03	
-quagsire	shadow_force				xcl_family_carnivine_00	
-quilava	shadow_punch				xcl_family_carnivine_01	
-quilladin	shadow_sneak				xcl_family_carnivine_02	
-qwilfish	sharpen				xcl_family_carnivine_03	
-raboot	shattered_psyche				xcl_family_carnivine_04	
-raichu	sheer_cold				xcl_family_carvanha_00	
-raikou	shell_side_arm				xcl_family_carvanha_01	
-ralts	shell_smash				xcl_family_carvanha_02	
-rampardos	shell_trap				xcl_family_carvanha_03	
-rapidash	shift_gear				xcl_family_carvanha_04	
-raticate	shock_wave				xcl_family_castform_00	
-rattata	shore_up				xcl_family_castform_01	
-rayquaza	signal_beam				xcl_family_castform_02	
-regice	silver_wind				xcl_family_castform_03	
-regidrago	simple_beam				xcl_family_castform_04	
-regieleki	sing				xcl_family_caterpie_00	
-regigigas	sinister_arrow_raid				xcl_family_caterpie_01	
-regirock	sizzly_slide				xcl_family_caterpie_02	
-registeel	sketch				xcl_family_caterpie_03	
-relicanth	skill_swap				xcl_family_celebi_00	
-remoraid	skitter_smack				xcl_family_celebi_01	
-reshiram	skull_bash				xcl_family_celebi_02	
-reuniclus	sky_attack				xcl_family_celebi_03	
-rhydon	sky_drop				xcl_family_celebi_04	
-rhyhorn	sky_uppercut				xcl_family_chansey_00	
-rhyperior	slack_off				xcl_family_chansey_01	
-ribombee	slam				xcl_family_chansey_02	
-rillaboom	slash				xcl_family_chansey_03	
-riolu	sleep_powder				xcl_family_chansey_04	
-rockruff	sleep_talk				xcl_family_chansey_05	
-roggenrola	sludge				xcl_family_charmander_00	
-rolycoly	sludge_bomb				xcl_family_charmander_01	
-rookidee	sludge_wave				xcl_family_charmander_02	
-roselia	smack_down				xcl_family_charmander_03	
-roserade	smart_strike				xcl_family_charmander_04	
-rotom	smelling_salts				xcl_family_charmander_05	
-rowlet	smog				xcl_family_chatot_00	
-rufflet	smokescreen				xcl_family_chatot_01	
-runerigus	snap_trap				xcl_family_chatot_02	
-sableye	snarl				xcl_family_chatot_03	
-salamence	snatch				xcl_family_cherubi_00	
-salandit	snipe_shot				xcl_family_cherubi_01	
-salazzle	snore				xcl_family_cherubi_02	
-samurott	soak				xcl_family_cherubi_03	
-sandaconda	soft_boiled				xcl_family_cherubi_04	
-sandile	solar_beam				xcl_family_cherubi_05	
-sandshrew	solar_blade				xcl_family_chikorita_00	
-sandslash	sonic_boom				xcl_family_chikorita_01	
-sandygast	soul_stealing_7_star_strike				xcl_family_chikorita_02	
-sawk	spacial_rend				xcl_family_chikorita_03	
-sawsbuck	spark				xcl_family_chikorita_04	
-scatterbug	sparkling_aria				xcl_family_chikorita_05	
-sceptile	sparkly_swirl				xcl_family_chimchar_00	
-scizor	spectral_thief				xcl_family_chimchar_01	
-scolipede	speed_swap				xcl_family_chimchar_02	
-scorbunny	spider_web				xcl_family_chimchar_03	
-scrafty	spikes				xcl_family_chimchar_04	
-scraggy	spike_cannon				xcl_family_chimchar_05	
-scyther	spiky_shield				xcl_family_chimecho_00	
-seadra	spirit_break				xcl_family_chimecho_01	
-seaking	spirit_shackle				xcl_family_chimecho_02	
-sealeo	spite				xcl_family_chimecho_03	
-seedot	spit_up				xcl_family_chimecho_04	
-seel	splash				xcl_family_chimecho_05	
-seismitoad	splintered_stormshards				xcl_family_chinchou_00	
-sentret	splishy_splash				xcl_family_chinchou_01	
-serperior	spore				xcl_family_chinchou_02	
-servine	spotlight				xcl_family_chinchou_03	
-seviper	stealth_rock				xcl_family_clamperl_00	
-sewaddle	steamroller				xcl_family_clamperl_01	
-sharpedo	steam_eruption				xcl_family_clamperl_02	
-shaymin	steel_beam				xcl_family_clamperl_03	
-shedinja	steel_roller				xcl_family_clamperl_04	
-shelgon	steel_wing				xcl_family_clamperl_05	
-shellder	sticky_web				xcl_family_clefairy_00	
-shellos	stockpile				xcl_family_clefairy_01	
-shelmet	stoked_sparksurfer				xcl_family_clefairy_02	
-shieldon	stomp				xcl_family_clefairy_03	
-shiftry	stomping_tantrum				xcl_family_clefairy_04	
-shiinotic	stone_edge				xcl_family_clefairy_05	
-shinx	stored_power				xcl_family_combee_00	
-shroomish	storm_throw				xcl_family_combee_01	
-shuckle	strange_steam				xcl_family_combee_02	
-shuppet	strength				xcl_family_combee_03	
-sigilyph	strength_sap				xcl_family_combee_04	
-silcoon	string_shot				xcl_family_corphish_00	
-silicobra	struggle				xcl_family_corphish_01	
-silvally	struggle_bug				xcl_family_corphish_02	
-simipour	stuff_cheeks				xcl_family_corphish_03	
-simisage	stun_spore				xcl_family_corphish_04	
-simisear	submission				xcl_family_corsola_00	
-sinistea	substitute				xcl_family_corsola_01	
-sirfetchd	subzero_slammer				xcl_family_corsola_02	
+greninja	hex				tm_brine	
+grimer	hidden_power				tm_bulk_up	
+grimmsnarl	high_horsepower				tm_bulldoze	
+grookey	high_jump_kick				tm_bullet_seed	
+grotle	hold_back				tm_calm_mind	
+groudon	hold_hands				tm_captivate	
+grovyle	hone_claws				tm_charge_beam	
+growlithe	horn_attack				tm_cut	
+grubbin	horn_drill				tm_dark_pulse	
+grumpig	horn_leech				tm_dazzling_gleam	
+gulpin	howl				tm_defog	
+gumshoos	hurricane				tm_dig	
+gurdurr	hydro_cannon				tm_dive	
+guzzlord	hydro_pump				tm_double_team	
+gyarados	hydro_vortex				tm_dragon_claw	
+hakamo_o	hyper_beam				tm_dragon_pulse	
+happiny	hyper_fang				tm_dragon_tail	
+hariyama	hyper_voice				tm_drain_punch	
+hatenna	hyperspace_fury				tm_dream_eater	
+hatterene	hyperspace_hole				tm_earthquake	
+hattrem	hypnosis				tm_echoed_voice	
+haunter	ice_ball				tm_embargo	
+hawlucha	ice_beam				tm_endure	
+haxorus	ice_burn				tm_energy_ball	
+heatmor	ice_fang				tm_explosion	
+heatran	ice_hammer				tm_facade	
+heliolisk	ice_punch				tm_false_swipe	
+helioptile	ice_shard				tm_fire_blast	
+heracross	icicle_crash				tm_flame_charge	
+herdier	icicle_spear				tm_flamethrower	
+hippopotas	icy_wind				tm_flash	
+hippowdon	imprison				tm_flash_cannon	
+hitmonchan	incinerate				tm_fling	
+hitmonlee	inferno				tm_fly	
+hitmontop	inferno_overdrive				tm_focus_blast	
+ho_oh	infestation				tm_focus_punch	
+honchkrow	ingrain				tm_frost_breath	
+honedge	instruct				tm_frustration	
+hoopa	ion_deluge				tm_giga_drain	
+hoothoot	iron_defense				tm_giga_impact	
+hoppip	iron_head				tm_grass_knot	
+horsea	iron_tail				tm_gyro_ball	
+houndoom	jaw_lock				tm_hail	
+houndour	judgment				tm_hidden_power	
+huntail	jump_kick				tm_hone_claws	
+hydreigon	jungle_healing				tm_hyper_beam	
+hypno	karate_chop				tm_ice_beam	
+igglybuff	kinesis				tm_incinerate	
+illumise	kings_shield				tm_infestation	
+impidimp	knock_off				tm_iron_tail	
+incineroar	lands_wrath				tm_light_screen	
+indeedee	laser_focus				tm_low_sweep	
+infernape	lash_out				tm_natural_gift	
+inkay	last_resort				tm_nature_power	
+inteleon	lava_plume				tm_overheat	
+ivysaur	leaf_blade				tm_payback	
+jangmo_o	leaf_storm				tm_pluck	
+jellicent	leaf_tornado				tm_poison_jab	
+jigglypuff	leafage				tm_power_up_punch	
+jirachi	leech_life				tm_protect	
+jolteon	leech_seed				tm_psych_up	
+joltik	leer				tm_psychic	
+jumpluff	lets_snuggle_forever				tm_psyshock	
+jynx	lick				tm_quash	
+kabuto	life_dew				tm_rain_dance	
+kabutops	light_of_ruin				tm_recycle	
+kadabra	light_screen				tm_reflect	
+kakuna	light_that_burns_the_sky				tm_rest	
+kangaskhan	liquidation				tm_retaliate	
+karrablast	lock_on				tm_return	
+kartana	lovely_kiss				tm_roar	
+kecleon	low_kick				tm_rock_climb	
+keldeo	low_sweep				tm_rock_polish	
+kingdra	lucky_chant				tm_rock_slide	
+kingler	lunar_dance				tm_rock_smash	
+kirlia	lunge				tm_rock_tomb	
+klang	luster_purge				tm_roost	
+klefki	mach_punch				tm_round	
+klink	magic_coat				tm_safeguard	
+klinklang	magic_powder				tm_sandstorm	
+koffing	magic_room				tm_scald	
+komala	magical_leaf				tm_secret_power	
+kommo_o	magma_storm				tm_shadow_ball	
+krabby	magnet_bomb				tm_shadow_claw	
+kricketot	magnet_rise				tm_shock_wave	
+kricketune	magnetic_flux				tm_silver_wind	
+krokorok	magnitude				tm_sky_drop	
+krookodile	malicious_moonsault				tm_sludge_bomb	
+kubfu	mat_block				tm_sludge_wave	
+kyogre	max_airstream				tm_smack_down	
+kyurem	max_darkness				tm_snarl	
+lairon	max_flare				tm_snatch	
+lampent	max_flutterby				tm_steel_wing	
+landorus	max_geyser				tm_stone_edge	
+lanturn	max_guard				tm_strength	
+lapras	max_hailstorm				tm_struggle_bug	
+larvesta	max_knuckle				tm_substitute	
+larvitar	max_lightning				tm_sunny_day	
+latias	max_mindstorm				tm_surf	
+latios	max_ooze				tm_swagger	
+leafeon	max_overgrowth				tm_swords_dance	
+leavanny	max_phantasm				tm_taunt	
+ledian	max_quake				tm_telekinesis	
+ledyba	max_rockfall				tm_thief	
+lickilicky	max_starfall				tm_thunder	
+lickitung	max_steelspike				tm_thunder_wave	
+liepard	max_strike				tm_thunderbolt	
+lileep	max_wyrmwind				tm_torment	
+lilligant	me_first				tm_u_turn	
+lillipup	mean_look				tm_venoshock	
+linoone	meditate				tm_volt_switch	
+litleo	mega_drain				tm_water_pulse	
+litten	mega_kick				tm_waterfall	
+litwick	mega_punch				tm_whirlpool	
+lombre	megahorn				tm_wild_charge	
+lopunny	memento				tm_will_o_wisp	
+lotad	menacing_moonraze_maelstrom				tm_work_up	
+loudred	metal_burst				tm_x_scissor	
+lucario	metal_claw				wand_fear	
+ludicolo	metal_sound				wand_infatuation	
+lugia	meteor_assault				wand_lob	
+lumineon	meteor_beam				wand_lure	
+lunala	meteor_mash				wand_path	
+lunatone	metronome				wand_pounce	
+lurantis	milk_drink				wand_purge	
+luvdisc	mimic				wand_slow	
+luxio	mind_blown				wand_stayaway	
+luxray	mind_reader				wand_surround	
+lycanroc	minimize				wand_switcher	
+machamp	miracle_eye				wand_topsy_turvy	
+machoke	mirror_coat				wand_totter	
+machop	mirror_move				wand_transfer	
+magby	mirror_shot				wand_vanish	
+magcargo	mist				wand_warp	
+magearna	mist_ball				wand_whirlwind	
+magikarp	misty_explosion				xcl_element_bug_dust	
+magmar	misty_terrain				xcl_element_bug_gem	
+magmortar	moonblast				xcl_element_bug_globe	
+magnemite	moongeist_beam				xcl_element_bug_silk	
+magneton	moonlight				xcl_element_dark_dust	
+magnezone	morning_sun				xcl_element_dark_gem	
+makuhita	mud_bomb				xcl_element_dark_globe	
+malamar	mud_shot				xcl_element_dark_silk	
+mamoswine	mud_slap				xcl_element_dragon_dust	
+manaphy	mud_sport				xcl_element_dragon_gem	
+mandibuzz	muddy_water				xcl_element_dragon_globe	
+manectric	multi_attack				xcl_element_dragon_silk	
+mankey	mystical_fire				xcl_element_electric_dust	
+mantine	nasty_plot				xcl_element_electric_gem	
+mantyke	natural_gift				xcl_element_electric_globe	
+maractus	nature_power				xcl_element_electric_silk	
+mareanie	natures_madness				xcl_element_fairy_dust	
+mareep	needle_arm				xcl_element_fairy_gem	
+marill	never_ending_nightmare				xcl_element_fairy_globe	
+marowak	night_daze				xcl_element_fairy_silk	
+marshadow	night_shade				xcl_element_fighting_dust	
+marshtomp	night_slash				xcl_element_fighting_gem	
+masquerain	nightmare				xcl_element_fighting_globe	
+mawile	no_retreat				xcl_element_fighting_silk	
+medicham	noble_roar				xcl_element_fire_dust	
+meditite	nuzzle				xcl_element_fire_gem	
+meganium	oblivion_wing				xcl_element_fire_globe	
+melmetal	obstruct				xcl_element_fire_silk	
+meloetta	oceanic_operetta				xcl_element_flying_dust	
+meltan	octazooka				xcl_element_flying_gem	
+meowstic	octolock				xcl_element_flying_globe	
+meowth	odor_sleuth				xcl_element_flying_silk	
+mesprit	ominous_wind				xcl_element_ghost_dust	
+metagross	origin_pulse				xcl_element_ghost_gem	
+metang	outrage				xcl_element_ghost_globe	
+metapod	overdrive				xcl_element_ghost_silk	
+mew	overheat				xcl_element_grass_dust	
+mewtwo	pain_split				xcl_element_grass_gem	
+mienfoo	parabolic_charge				xcl_element_grass_globe	
+mienshao	parting_shot				xcl_element_grass_silk	
+mightyena	pay_day				xcl_element_ground_dust	
+milcery	payback				xcl_element_ground_gem	
+milotic	peck				xcl_element_ground_globe	
+miltank	perish_song				xcl_element_ground_silk	
+mime_jr	petal_blizzard				xcl_element_ice_dust	
+mimikyu	petal_dance				xcl_element_ice_gem	
+minccino	phantom_force				xcl_element_ice_globe	
+minior	photon_geyser				xcl_element_ice_silk	
+minun	pika_papow				xcl_element_normal_dust	
+misdreavus	pin_missile				xcl_element_normal_gem	
+mismagius	plasma_fists				xcl_element_normal_globe	
+missingno	play_nice				xcl_element_normal_silk	
+moltres	play_rough				xcl_element_poison_dust	
+monferno	pluck				xcl_element_poison_gem	
+morelull	poison_fang				xcl_element_poison_globe	
+morgrem	poison_gas				xcl_element_poison_silk	
+morpeko	poison_jab				xcl_element_psychic_dust	
+mothim	poison_powder				xcl_element_psychic_gem	
+mr_mime	poison_sting				xcl_element_psychic_globe	
+mr_rime	poison_tail				xcl_element_psychic_silk	
+mudbray	pollen_puff				xcl_element_rock_dust	
+mudkip	poltergeist				xcl_element_rock_gem	
+mudsdale	pound				xcl_element_rock_globe	
+muk	powder				xcl_element_rock_silk	
+munchlax	powder_snow				xcl_element_steel_dust	
+munna	power_gem				xcl_element_steel_gem	
+murkrow	power_split				xcl_element_steel_globe	
+musharna	power_swap				xcl_element_steel_silk	
+naganadel	power_trick				xcl_element_water_dust	
+natu	power_trip				xcl_element_water_gem	
+necrozma	power_up_punch				xcl_element_water_globe	
+nickit	power_whip				xcl_element_water_silk	
+nidoking	precipice_blades				xcl_family_abra_00	
+nidoqueen	present				xcl_family_abra_01	
+nidoran_f	prismatic_laser				xcl_family_abra_02	
+nidoran_m	protect				xcl_family_abra_03	
+nidorina	psybeam				xcl_family_abra_04	
+nidorino	psych_up				xcl_family_absol_00	
+nihilego	psychic				xcl_family_absol_01	
+nincada	psychic_fangs				xcl_family_absol_02	
+ninetales	psychic_terrain				xcl_family_absol_03	
+ninjask	psycho_boost				xcl_family_absol_04	
+noctowl	psycho_cut				xcl_family_absol_05	
+noibat	psycho_shift				xcl_family_aerodactyl_00	
+noivern	psyshock				xcl_family_aerodactyl_01	
+nosepass	psystrike				xcl_family_aerodactyl_02	
+numel	psywave				xcl_family_aerodactyl_03	
+nuzleaf	pulverizing_pancake				xcl_family_aerodactyl_04	
+obstagoon	punishment				xcl_family_aipom_00	
+octillery	purify				xcl_family_aipom_01	
+oddish	pursuit				xcl_family_aipom_02	
+omanyte	pyro_ball				xcl_family_aipom_03	
+omastar	quash				xcl_family_anorith_00	
+onix	quick_attack				xcl_family_anorith_01	
+oranguru	quick_guard				xcl_family_anorith_02	
+orbeetle	quiver_dance				xcl_family_anorith_03	
+oricorio	rage				xcl_family_anorith_04	
+oshawott	rage_powder				xcl_family_aron_00	
+pachirisu	rain_dance				xcl_family_aron_01	
+palkia	rapid_spin				xcl_family_aron_02	
+palossand	razor_leaf				xcl_family_aron_03	
+palpitoad	razor_shell				xcl_family_aron_04	
+pancham	razor_wind				xcl_family_bagon_00	
+pangoro	recover				xcl_family_bagon_01	
+panpour	recycle				xcl_family_bagon_02	
+pansage	reflect				xcl_family_bagon_03	
+pansear	reflect_type				xcl_family_baltoy_00	
+paras	refresh				xcl_family_baltoy_01	
+parasect	relic_song				xcl_family_baltoy_02	
+passimian	rest				xcl_family_baltoy_03	
+patrat	retaliate				xcl_family_baltoy_04	
+pawniard	return				xcl_family_barboach_00	
+pelipper	revelation_dance				xcl_family_barboach_01	
+perrserker	revenge				xcl_family_barboach_02	
+persian	reversal				xcl_family_barboach_03	
+petilil	rising_voltage				xcl_family_barboach_04	
+phanpy	roar				xcl_family_beldum_00	
+phantump	roar_of_time				xcl_family_beldum_01	
+pheromosa	rock_blast				xcl_family_beldum_02	
+phione	rock_climb				xcl_family_beldum_03	
+pichu	rock_polish				xcl_family_bellsprout_00	
+pidgeot	rock_slide				xcl_family_bellsprout_01	
+pidgeotto	rock_smash				xcl_family_bellsprout_02	
+pidgey	rock_throw				xcl_family_bellsprout_03	
+pidove	rock_tomb				xcl_family_bellsprout_04	
+pignite	rock_wrecker				xcl_family_bidoof_00	
+pikachu	role_play				xcl_family_bidoof_01	
+pikipek	rolling_kick				xcl_family_bidoof_02	
+piloswine	rollout				xcl_family_bidoof_03	
+pincurchin	roost				xcl_family_bidoof_04	
+pineco	rototiller				xcl_family_bidoof_05	
+pinsir	round				xcl_family_bird_trio_00	
+piplup	sacred_fire				xcl_family_bird_trio_01	
+plusle	sacred_sword				xcl_family_bird_trio_02	
+poipole	safeguard				xcl_family_bird_trio_03	
+politoed	sand_attack				xcl_family_bird_trio_04	
+poliwag	sand_tomb				xcl_family_bird_trio_05	
+poliwhirl	sandstorm				xcl_family_bronzor_00	
+poliwrath	sappy_seed				xcl_family_bronzor_01	
+polteageist	savage_spin_out				xcl_family_bronzor_02	
+ponyta	scald				xcl_family_bronzor_03	
+poochyena	scale_shot				xcl_family_buizel_00	
+popplio	scary_face				xcl_family_buizel_01	
+porygon	scorching_sands				xcl_family_buizel_02	
+porygon_z	scratch				xcl_family_buizel_03	
+porygon2	screech				xcl_family_buizel_04	
+primarina	searing_shot				xcl_family_buizel_05	
+primeape	searing_sunraze_smash				xcl_family_bulbasaur_00	
+prinplup	secret_power				xcl_family_bulbasaur_01	
+probopass	secret_sword				xcl_family_bulbasaur_02	
+psyduck	seed_bomb				xcl_family_bulbasaur_03	
+pumpkaboo	seed_flare				xcl_family_bulbasaur_04	
+pupitar	seismic_toss				xcl_family_bulbasaur_05	
+purrloin	self_destruct				xcl_family_buneary_00	
+purugly	shadow_ball				xcl_family_buneary_01	
+pyroar	shadow_bone				xcl_family_buneary_02	
+pyukumuku	shadow_claw				xcl_family_buneary_03	
+quagsire	shadow_force				xcl_family_buneary_04	
+quilava	shadow_punch				xcl_family_burmy_00	
+quilladin	shadow_sneak				xcl_family_burmy_01	
+qwilfish	sharpen				xcl_family_burmy_02	
+raboot	shattered_psyche				xcl_family_burmy_03	
+raichu	sheer_cold				xcl_family_burmy_04	
+raikou	shell_side_arm				xcl_family_burmy_05	
+ralts	shell_smash				xcl_family_cacnea_00	
+rampardos	shell_trap				xcl_family_cacnea_01	
+rapidash	shift_gear				xcl_family_cacnea_02	
+raticate	shock_wave				xcl_family_cacnea_03	
+rattata	shore_up				xcl_family_carnivine_00	
+rayquaza	signal_beam				xcl_family_carnivine_01	
+regice	silver_wind				xcl_family_carnivine_02	
+regidrago	simple_beam				xcl_family_carnivine_03	
+regieleki	sing				xcl_family_carnivine_04	
+regigigas	sinister_arrow_raid				xcl_family_carvanha_00	
+regirock	sizzly_slide				xcl_family_carvanha_01	
+registeel	sketch				xcl_family_carvanha_02	
+relicanth	skill_swap				xcl_family_carvanha_03	
+remoraid	skitter_smack				xcl_family_carvanha_04	
+reshiram	skull_bash				xcl_family_castform_00	
+reuniclus	sky_attack				xcl_family_castform_01	
+rhydon	sky_drop				xcl_family_castform_02	
+rhyhorn	sky_uppercut				xcl_family_castform_03	
+rhyperior	slack_off				xcl_family_castform_04	
+ribombee	slam				xcl_family_caterpie_00	
+rillaboom	slash				xcl_family_caterpie_01	
+riolu	sleep_powder				xcl_family_caterpie_02	
+rockruff	sleep_talk				xcl_family_caterpie_03	
+roggenrola	sludge				xcl_family_celebi_00	
+rolycoly	sludge_bomb				xcl_family_celebi_01	
+rookidee	sludge_wave				xcl_family_celebi_02	
+roselia	smack_down				xcl_family_celebi_03	
+roserade	smart_strike				xcl_family_celebi_04	
+rotom	smelling_salts				xcl_family_chansey_00	
+rowlet	smog				xcl_family_chansey_01	
+rufflet	smokescreen				xcl_family_chansey_02	
+runerigus	snap_trap				xcl_family_chansey_03	
+sableye	snarl				xcl_family_chansey_04	
+salamence	snatch				xcl_family_chansey_05	
+salandit	snipe_shot				xcl_family_charmander_00	
+salazzle	snore				xcl_family_charmander_01	
+samurott	soak				xcl_family_charmander_02	
+sandaconda	soft_boiled				xcl_family_charmander_03	
+sandile	solar_beam				xcl_family_charmander_04	
+sandshrew	solar_blade				xcl_family_charmander_05	
+sandslash	sonic_boom				xcl_family_chatot_00	
+sandygast	soul_stealing_7_star_strike				xcl_family_chatot_01	
+sawk	spacial_rend				xcl_family_chatot_02	
+sawsbuck	spark				xcl_family_chatot_03	
+scatterbug	sparkling_aria				xcl_family_cherubi_00	
+sceptile	sparkly_swirl				xcl_family_cherubi_01	
+scizor	spectral_thief				xcl_family_cherubi_02	
+scolipede	speed_swap				xcl_family_cherubi_03	
+scorbunny	spider_web				xcl_family_cherubi_04	
+scrafty	spike_cannon				xcl_family_cherubi_05	
+scraggy	spikes				xcl_family_chikorita_00	
+scyther	spiky_shield				xcl_family_chikorita_01	
+seadra	spirit_break				xcl_family_chikorita_02	
+seaking	spirit_shackle				xcl_family_chikorita_03	
+sealeo	spit_up				xcl_family_chikorita_04	
+seedot	spite				xcl_family_chikorita_05	
+seel	splash				xcl_family_chimchar_00	
+seismitoad	splintered_stormshards				xcl_family_chimchar_01	
+sentret	splishy_splash				xcl_family_chimchar_02	
+serperior	spore				xcl_family_chimchar_03	
+servine	spotlight				xcl_family_chimchar_04	
+seviper	stealth_rock				xcl_family_chimchar_05	
+sewaddle	steam_eruption				xcl_family_chimecho_00	
+sharpedo	steamroller				xcl_family_chimecho_01	
+shaymin	steel_beam				xcl_family_chimecho_02	
+shedinja	steel_roller				xcl_family_chimecho_03	
+shelgon	steel_wing				xcl_family_chimecho_04	
+shellder	sticky_web				xcl_family_chimecho_05	
+shellos	stockpile				xcl_family_chinchou_00	
+shelmet	stoked_sparksurfer				xcl_family_chinchou_01	
+shieldon	stomp				xcl_family_chinchou_02	
+shiftry	stomping_tantrum				xcl_family_chinchou_03	
+shiinotic	stone_edge				xcl_family_clamperl_00	
+shinx	stored_power				xcl_family_clamperl_01	
+shroomish	storm_throw				xcl_family_clamperl_02	
+shuckle	strange_steam				xcl_family_clamperl_03	
+shuppet	strength				xcl_family_clamperl_04	
+sigilyph	strength_sap				xcl_family_clamperl_05	
+silcoon	string_shot				xcl_family_clefairy_00	
+silicobra	struggle				xcl_family_clefairy_01	
+silvally	struggle_bug				xcl_family_clefairy_02	
+simipour	stuff_cheeks				xcl_family_clefairy_03	
+simisage	stun_spore				xcl_family_clefairy_04	
+simisear	submission				xcl_family_clefairy_05	
+sinistea	substitute				xcl_family_combee_00	
+sirfetchd	subzero_slammer				xcl_family_combee_01	

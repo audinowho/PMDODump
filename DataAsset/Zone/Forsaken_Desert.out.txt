@@ -3,6 +3,86 @@ ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
 itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
 
 
+//snacks
+CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
+snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("snacks", snacks);
+
+
+snacks.Spawns.Add(new InvItem("seed_hunger"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_vile"), new IntRange(0, max_floors), 10);
+//special
+CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
+special.SpawnRates.SetRange(3, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("special", special);
+
+
+special.Spawns.Add(new InvItem("apricorn_brown"), new IntRange(0, max_floors), 10);
+special.Spawns.Add(new InvItem("apricorn_red"), new IntRange(0, max_floors), 10);
+special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, max_floors), 10);
+//throwable
+CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
+throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("throwable", throwable);
+
+
+throwable.Spawns.Add(new InvItem("ammo_gravelerock", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("ammo_geo_pebble", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_lure", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_topsy_turvy", false, 2), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 10);
+//orbs
+CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
+orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("orbs", orbs);
+
+
+orbs.Spawns.Add(new InvItem("orb_weather"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_rebound"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_cleanse"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_trapbust"), new IntRange(0, max_floors), 10);
+//held
+CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
+held.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("held", held);
+
+
+held.Spawns.Add(new InvItem("held_power_band", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_power_band"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_defense_scarf", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_defense_scarf"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_scope_lens", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_scope_lens"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_shell_bell", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_shell_bell"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_soft_sand", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_soft_sand"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_poison_barb", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_poison_barb"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_grip_claw", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_grip_claw"), new IntRange(0, max_floors), 7);
+//tms
+CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
+tms.SpawnRates.SetRange(7, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("tms", tms);
+
+
+tms.Spawns.Add(new InvItem("tm_round"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_rest"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_hidden_power"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_rock_tomb"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_strength"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_thief"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_dig"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_cut"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_power_up_punch"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_infestation"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_work_up"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_incinerate"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_roar"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_flash"), new IntRange(0, max_floors), 10);
 
 
 floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
