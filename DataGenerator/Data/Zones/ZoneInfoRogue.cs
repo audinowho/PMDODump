@@ -1049,9 +1049,9 @@ namespace DataGenerator.Data
             tileSpawn.Spawns.Add(new EffectTile("trap_spin", false), new IntRange(0, max_floors), 10);//spin trap
             tileSpawn.Spawns.Add(new EffectTile("trap_grimy", false), new IntRange(0, max_floors), 10);//grimy trap
             tileSpawn.Spawns.Add(new EffectTile("trap_trigger", true), new IntRange(0, max_floors), 20);//trigger trap
-                                                                                            //pokemon trap
             tileSpawn.Spawns.Add(new EffectTile("trap_grudge", true), new IntRange(15, max_floors), 10);//grudge trap
-                                                                                             //training switch
+                                                                                                        //pokemon trap
+                                                                                                        //training switch
             floorSegment.ZoneSteps.Add(tileSpawn);
 
 
