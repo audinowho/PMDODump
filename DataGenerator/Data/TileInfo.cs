@@ -261,7 +261,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitFX.Emitter = new SingleEmitter(new AnimData("X_RSE", 15), 3);
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot", true));
+                newData.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot", true, false));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 9)

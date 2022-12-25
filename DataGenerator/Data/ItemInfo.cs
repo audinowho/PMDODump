@@ -1200,7 +1200,7 @@ namespace DataGenerator.Data
                 item.Price = 11;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
                 item.UseEvent.SkillStates.Set(new BasePowerState(50));
-                item.UseEvent.OnActions.Add(0, new PierceEvent(false, true, false, true));
+                item.UseEvent.OnActions.Add(0, new PierceEvent(false, true, true, true));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
             }
             else if (ii == 205)
@@ -1778,8 +1778,9 @@ namespace DataGenerator.Data
             {
                 item.Name = new LocalText("One-Shot Orb");
                 item.Desc = new LocalText("An orb that causes the target to instantly faint, if it hits. It affects all enemies up to 5 tiles away.");
-                item.UseEvent.HitRate = 0;
+                item.UseEvent.HitRate = -1;
                 item.Sprite = "Orb_Purple";
+                item.BeforeHittings.Add(0, new ChanceEvadeEvent(2, 3));
                 item.UseEvent.OnHits.Add(-1, new OHKODamageEvent());
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
@@ -1793,7 +1794,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An orb that allows the team to endure any attack with at least 1 HP.");
                 item.Sprite = "Orb_Green";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
-                statusStates.Set(new CountDownState(6));
+                statusStates.Set(new CountDownState(11));
                 item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("endure", true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
@@ -2112,9 +2113,9 @@ namespace DataGenerator.Data
             else if (ii == 286)
             {
                 item.Name = new LocalText("Foe-Seal Orb");
-                item.Desc = new LocalText("An orb that seals the last-used move of all enemies. It affects all enemies up to 5 tiles away.");
+                item.Desc = new LocalText("An orb that seals the a move known by the target. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_DarkBlue";
-                item.UseEvent.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot"));
+                item.UseEvent.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot", false, true));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
