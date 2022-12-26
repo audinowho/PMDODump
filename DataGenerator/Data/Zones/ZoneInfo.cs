@@ -1232,6 +1232,8 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("jolteon", "", "thunder", "agility", "shadow_ball", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 6);
+
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -1514,6 +1516,8 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(GetTeamMob("grumpig", "", "magic_coat", "zen_headbutt", "", "", new RandRange(30), "wander_dumb"), new IntRange(4, max_floors), 10);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 6);
+
                         floorSegment.ZoneSteps.Add(poolSpawn);
 
                         TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -1786,7 +1790,11 @@ namespace DataGenerator.Data
                         //sleeping, disguised as grumpig
                         poolSpawn.Spawns.Add(GetTeamMob("zoroark", "", "night_daze", "u_turn", "agility", "", new RandRange(57)), new IntRange(0, max_floors), 10);
 
+
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 6);
+
+
                         floorSegment.ZoneSteps.Add(poolSpawn);
 
                         TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -2134,7 +2142,12 @@ namespace DataGenerator.Data
                     //when they all show up
                     poolSpawn.Spawns.Add(GetTeamMob("serperior", "", "grass_pledge", "leaf_blade", "", "", new RandRange(43), "wander_normal"), new IntRange(9, max_floors), 10);
 
+
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 6);
+                    poolSpawn.TeamSizes.Add(3, new IntRange(15, max_floors), 3);
+
+
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -2398,6 +2411,8 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(GetTeamMob("illumise", "", "wish", "struggle_bug", "", "", new RandRange(24)), new IntRange(5, max_floors), 10);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
+
                         floorSegment.ZoneSteps.Add(poolSpawn);
 
                         TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -2642,6 +2657,8 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(GetTeamMob("sylveon", "", "moonblast", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
+
                         floorSegment.ZoneSteps.Add(poolSpawn);
 
                         TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -3201,6 +3218,8 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("heatran", "", "magma_storm", "earth_power", "", "", new RandRange(40)), new IntRange(0, max_floors), 10);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 4);
+
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -3492,6 +3511,8 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("vaporeon", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
+
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -4212,7 +4233,12 @@ namespace DataGenerator.Data
                     //MH Only
                     poolSpawn.Spawns.Add(GetTeamMob("spiritomb", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 
+
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(0, 10), 3);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(10, max_floors), 4);
+                    poolSpawn.TeamSizes.Add(3, new IntRange(15, max_floors), 3);
+
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -4554,6 +4580,10 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("noivern", "", "boomburst", "dragon_pulse", "", "", new RandRange(38)), new IntRange(22, max_floors), 10);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(0, 10), 3);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(10, max_floors), 4);
+
+
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -4678,22 +4708,95 @@ namespace DataGenerator.Data
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
-                    //items!
+                    //items
                     ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
                     itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
 
-                    CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
-                    necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
-                    itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
-                    necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 9);//Leppa
-                    necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 12);//Oran
-                    necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);//Lum
-                    necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 5);//reviver seed
-                    necessities.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 9);//blast seed
+                    //snacks
+                    CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
+                    snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
+                    itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
-                    //evo stones
+
+                    snacks.Spawns.Add(new InvItem("seed_hunger"), new IntRange(0, max_floors), 10);
+                    snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, max_floors), 10);
+                    snacks.Spawns.Add(new InvItem("seed_vile"), new IntRange(0, max_floors), 10);
+                    //special
+                    CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
+                    special.SpawnRates.SetRange(3, new IntRange(0, max_floors));
+                    itemSpawnZoneStep.Spawns.Add("special", special);
+
+
+                    special.Spawns.Add(new InvItem("apricorn_brown"), new IntRange(0, max_floors), 10);
+                    special.Spawns.Add(new InvItem("apricorn_red"), new IntRange(0, max_floors), 10);
+                    special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, max_floors), 10);
+                    //throwable
+                    CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
+                    throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
+                    itemSpawnZoneStep.Spawns.Add("throwable", throwable);
+
+
+                    throwable.Spawns.Add(new InvItem("ammo_gravelerock", false, 3), new IntRange(0, max_floors), 10);
+                    throwable.Spawns.Add(new InvItem("ammo_geo_pebble", false, 3), new IntRange(0, max_floors), 10);
+                    throwable.Spawns.Add(new InvItem("wand_lure", false, 3), new IntRange(0, max_floors), 10);
+                    throwable.Spawns.Add(new InvItem("wand_topsy_turvy", false, 2), new IntRange(0, max_floors), 10);
+                    throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 10);
+                    //orbs
+                    CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
+                    orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
+                    itemSpawnZoneStep.Spawns.Add("orbs", orbs);
+
+
+                    orbs.Spawns.Add(new InvItem("orb_weather"), new IntRange(0, max_floors), 10);
+                    orbs.Spawns.Add(new InvItem("orb_rebound"), new IntRange(0, max_floors), 10);
+                    orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, max_floors), 10);
+                    orbs.Spawns.Add(new InvItem("orb_cleanse"), new IntRange(0, max_floors), 10);
+                    orbs.Spawns.Add(new InvItem("orb_trapbust"), new IntRange(0, max_floors), 10);
+                    //held
+                    CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
+                    held.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+                    itemSpawnZoneStep.Spawns.Add("held", held);
+
+
+                    held.Spawns.Add(new InvItem("held_power_band", true), new IntRange(0, max_floors), 3);
+                    held.Spawns.Add(new InvItem("held_power_band"), new IntRange(0, max_floors), 7);
+                    held.Spawns.Add(new InvItem("held_defense_scarf", true), new IntRange(0, max_floors), 3);
+                    held.Spawns.Add(new InvItem("held_defense_scarf"), new IntRange(0, max_floors), 7);
+                    held.Spawns.Add(new InvItem("held_scope_lens", true), new IntRange(0, max_floors), 3);
+                    held.Spawns.Add(new InvItem("held_scope_lens"), new IntRange(0, max_floors), 7);
+                    held.Spawns.Add(new InvItem("held_shell_bell", true), new IntRange(0, max_floors), 3);
+                    held.Spawns.Add(new InvItem("held_shell_bell"), new IntRange(0, max_floors), 7);
+                    held.Spawns.Add(new InvItem("held_soft_sand", true), new IntRange(0, max_floors), 3);
+                    held.Spawns.Add(new InvItem("held_soft_sand"), new IntRange(0, max_floors), 7);
+                    held.Spawns.Add(new InvItem("held_poison_barb", true), new IntRange(0, max_floors), 3);
+                    held.Spawns.Add(new InvItem("held_poison_barb"), new IntRange(0, max_floors), 7);
+                    held.Spawns.Add(new InvItem("held_grip_claw", true), new IntRange(0, max_floors), 3);
+                    held.Spawns.Add(new InvItem("held_grip_claw"), new IntRange(0, max_floors), 7);
+                    //tms
+                    CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
+                    tms.SpawnRates.SetRange(7, new IntRange(0, max_floors));
+                    itemSpawnZoneStep.Spawns.Add("tms", tms);
+
+
+                    tms.Spawns.Add(new InvItem("tm_round"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_rest"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_hidden_power"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_rock_tomb"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_strength"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_thief"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_dig"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_cut"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_power_up_punch"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_infestation"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_work_up"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_incinerate"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_roar"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_flash"), new IntRange(0, max_floors), 10);
+
+
                     floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
 
 
                     //mobs
@@ -4713,6 +4816,8 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wander_normal"), new IntRange(1, max_floors), 5);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
+
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -5044,6 +5149,8 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(GetTeamMob("golduck", "", "disable", "aqua_jet", "", "", new RandRange(36), "wander_normal"), new IntRange(0, 11), 10);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 6);
+
                         floorSegment.ZoneSteps.Add(poolSpawn);
 
                         TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -5308,6 +5415,8 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(GetTeamMob("glaceon", "", "blizzard", "", "", "", new RandRange(60), TeamMemberSpawn.MemberRole.Loner), new IntRange(0, max_floors), 10);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 6);
+
                         floorSegment.ZoneSteps.Add(poolSpawn);
 
                         TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -5561,7 +5670,11 @@ namespace DataGenerator.Data
                     //sleeping, holding choice scarf
                     poolSpawn.Spawns.Add(GetTeamMob("espeon", "magic_bounce", "psychic", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 
-                    poolSpawn.TeamSizes.Add(1, new IntRange(0, 10), 12);
+
+                    poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
+
+
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -7068,6 +7181,8 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(GetTeamMob("steelix", "", "dragon_breath", "iron_tail", "", "", new RandRange(28), "wander_dumb"), new IntRange(7, max_floors), 5);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
+
                         floorSegment.ZoneSteps.Add(poolSpawn);
 
                         TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -7300,6 +7415,8 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(GetTeamMob("aron", "", "iron_head", "harden", "", "", new RandRange(24)), new IntRange(0, max_floors), 10);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
+
                         floorSegment.ZoneSteps.Add(poolSpawn);
 
                         TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
