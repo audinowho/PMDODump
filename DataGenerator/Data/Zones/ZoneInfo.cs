@@ -59,7 +59,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Tropical Path\n{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(10, 21), new RandRange(10));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -265,7 +265,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Faded Trail\n{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(18, 24), new RandRange(9, 12));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -567,7 +567,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Hidden Trail\nB{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -745,7 +745,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Flyaway Cliffs\n{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(36, 52), new RandRange(9, 13));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -1057,7 +1057,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Thunderstruck Pass\n{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(66, 90), new RandRange(11, 15));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -1337,7 +1337,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Veiled Ridge\n{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(104, 134), new RandRange(13, 17));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -1612,7 +1612,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Illusion Ridge\nB{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 15);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -1885,7 +1885,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Champion's Road\n{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(150, 190), new RandRange(15, 19));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -2236,7 +2236,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Moonlit Courtyard\n{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(96, 104), new RandRange(16, 19));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -2491,7 +2491,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Moonlit Temple\nB{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -2736,7 +2736,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Faulted Cliffs\n{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(30, 42), new RandRange(10, 14));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -3006,7 +3006,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Sleeping Caldera\nB{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(48, 60), new RandRange(12, 15));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -3334,7 +3334,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Shimmer Bay\n{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(15, 19), new RandRange(15, 19));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 5);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -3609,7 +3609,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Fertile Ravine\nB{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(30, 42), new RandRange(10, 14));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -3806,7 +3806,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Muddy Ravine\nB{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -3996,7 +3996,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Ambush Forest\nB{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -4334,7 +4334,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Treacherous Mountain\n{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -4667,7 +4667,7 @@ namespace DataGenerator.Data
 
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(10, 21), new RandRange(10));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -4865,7 +4865,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Snowbound Path\n{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 5);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -5137,7 +5137,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Glacial Path\nB{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 15);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -5397,7 +5397,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Relic Tower\n{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -5662,7 +5662,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Overgrown Wilds\n{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(30, 42), new RandRange(10, 14));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -5895,7 +5895,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Lost Wilds\nB{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -6128,7 +6128,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Wayward Wetlands\nB{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -6244,7 +6244,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Trickster Steppe\n{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -6462,7 +6462,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Trickster Forest\nB{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -6586,7 +6586,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Lava Floe\nIsland\n{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -6804,7 +6804,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Abyssal Island\nB{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -6917,7 +6917,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Fissure Quarry\n{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(0));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -7152,7 +7152,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Magnetic Quarry\nB{0}F")));
 
                         //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                        MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
                         moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                         floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -7391,7 +7391,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Cave of Solace\nB{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(120, 144), new RandRange(15, 18));
+                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -7505,7 +7505,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Royal Halls\nB{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(120, 144), new RandRange(15, 18));
+                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -7611,7 +7611,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("The Sky\n{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(230, 260), new RandRange(23, 26));
+                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -7721,7 +7721,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("The Abyss\nB{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(54, 63), new RandRange(18, 21));
+                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -7875,20 +7875,20 @@ namespace DataGenerator.Data
                 FillTrainingMaze(zone);
             else if (index == 36)
             {
+                zone.Name = new LocalText("Bramble Woods");
+                zone.Rescues = 2;
+                zone.Level = 10;
+                zone.Rogue = RogueStatus.ItemTransfer;
                 #region BRAMBLE WOODS
                 {
-                    zone.Name = new LocalText("Bramble Woods");
-                    zone.Rescues = 2;
-                    zone.Level = 10;
-                    zone.Rogue = RogueStatus.ItemTransfer;
-
+                    int max_floors = 7;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Bramble Woods\nB{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(18, 24), new RandRange(9, 12));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -7898,59 +7898,59 @@ namespace DataGenerator.Data
 
                     //necessities
                     CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
-                    necessities.SpawnRates.SetRange(50, new IntRange(0, 7));
+                    necessities.SpawnRates.SetRange(50, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
-                    necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, 7), 9);//Leppa
-                    necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, 7), 12);//Oran
-                    necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, 7), 10);//Apple
-                    necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, 7), 80);//Lum
-                    necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, 7), 5);//reviver seed
+                    necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 9);//Leppa
+                    necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 12);//Oran
+                    necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, max_floors), 10);//Apple
+                    necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 80);//Lum
+                    necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 5);//reviver seed
 
                     //snacks
                     CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
-                    snacks.SpawnRates.SetRange(10, new IntRange(0, 7));
+                    snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
-                    snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, 7), 20);//blast seed
-                    snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, 7), 10);//warp seed
-                    snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, 7), 10);//sleep seed
+                    snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 20);//blast seed
+                    snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, max_floors), 10);//warp seed
+                    snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, max_floors), 10);//sleep seed
 
                     //wands
                     CategorySpawn<InvItem> ammo = new CategorySpawn<InvItem>();
-                    ammo.SpawnRates.SetRange(10, new IntRange(0, 7));
+                    ammo.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("ammo", ammo);
 
-                    ammo.Spawns.Add(new InvItem("ammo_stick", false, 3), new IntRange(0, 7), 10);//stick
-                    ammo.Spawns.Add(new InvItem("wand_whirlwind", false, 2), new IntRange(0, 7), 10);//whirlwind wand
-                    ammo.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, 7), 10);//pounce wand
-                    ammo.Spawns.Add(new InvItem("wand_warp", false, 1), new IntRange(0, 7), 10);//warp wand
-                    ammo.Spawns.Add(new InvItem("wand_lob", false, 2), new IntRange(0, 7), 10);//lob wand
-                    ammo.Spawns.Add(new InvItem("ammo_geo_pebble", false, 2), new IntRange(0, 7), 10);//Geo Pebble
+                    ammo.Spawns.Add(new InvItem("ammo_stick", false, 3), new IntRange(0, max_floors), 10);//stick
+                    ammo.Spawns.Add(new InvItem("wand_whirlwind", false, 2), new IntRange(0, max_floors), 10);//whirlwind wand
+                    ammo.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 10);//pounce wand
+                    ammo.Spawns.Add(new InvItem("wand_warp", false, 1), new IntRange(0, max_floors), 10);//warp wand
+                    ammo.Spawns.Add(new InvItem("wand_lob", false, 2), new IntRange(0, max_floors), 10);//lob wand
+                    ammo.Spawns.Add(new InvItem("ammo_geo_pebble", false, 2), new IntRange(0, max_floors), 10);//Geo Pebble
 
                     //orbs
                     CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
-                    orbs.SpawnRates.SetRange(10, new IntRange(0, 7));
+                    orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("orbs", orbs);
 
-                    orbs.Spawns.Add(new InvItem("orb_rebound"), new IntRange(0, 7), 10);//Rebound
-                    orbs.Spawns.Add(new InvItem("orb_all_protect"), new IntRange(0, 7), 5);//All Protect
-                    orbs.Spawns.Add(new InvItem("orb_luminous"), new IntRange(0, 7), 9);//Luminous
-                    orbs.Spawns.Add(new InvItem("orb_petrify"), new IntRange(0, 7), 10);//Petrify
-                    orbs.Spawns.Add(new InvItem("orb_slumber"), new IntRange(0, 7), 8);//Slumber Orb
-                    orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, 7), 8);//Mirror Orb
+                    orbs.Spawns.Add(new InvItem("orb_rebound"), new IntRange(0, max_floors), 10);//Rebound
+                    orbs.Spawns.Add(new InvItem("orb_all_protect"), new IntRange(0, max_floors), 5);//All Protect
+                    orbs.Spawns.Add(new InvItem("orb_luminous"), new IntRange(0, max_floors), 9);//Luminous
+                    orbs.Spawns.Add(new InvItem("orb_petrify"), new IntRange(0, max_floors), 10);//Petrify
+                    orbs.Spawns.Add(new InvItem("orb_slumber"), new IntRange(0, max_floors), 8);//Slumber Orb
+                    orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, max_floors), 8);//Mirror Orb
 
                     //special
                     CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
-                    special.SpawnRates.SetRange(4, new IntRange(0, 7));
+                    special.SpawnRates.SetRange(4, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("special", special);
 
                     int rate = 2;
-                    special.Spawns.Add(new InvItem("apricorn_blue"), new IntRange(0, 7), rate);//blue apricorns
-                    special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, 7), rate);//green apricorns
-                    special.Spawns.Add(new InvItem("apricorn_white"), new IntRange(0, 7), rate);//white apricorns
-                    special.Spawns.Add(new InvItem("apricorn_red"), new IntRange(0, 7), rate);//red apricorns
-                    special.Spawns.Add(new InvItem("apricorn_yellow"), new IntRange(0, 7), rate);//yellow apricorns
+                    special.Spawns.Add(new InvItem("apricorn_blue"), new IntRange(0, max_floors), rate);//blue apricorns
+                    special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, max_floors), rate);//green apricorns
+                    special.Spawns.Add(new InvItem("apricorn_white"), new IntRange(0, max_floors), rate);//white apricorns
+                    special.Spawns.Add(new InvItem("apricorn_red"), new IntRange(0, max_floors), rate);//red apricorns
+                    special.Spawns.Add(new InvItem("apricorn_yellow"), new IntRange(0, max_floors), rate);//yellow apricorns
 
                     floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
 
@@ -7963,31 +7963,31 @@ namespace DataGenerator.Data
                         //032 Nidoran♂ : 079 Rivalry : 043 Leer : 064 Peck
                         TeamMemberSpawn teamSpawn = GetTeamMob("nidoran_m", "poison_point", "leer", "peck", "", "", new RandRange(7));
                         teamSpawn.Spawn.SpawnConditions.Add(new MobCheckVersionDiff(0, 2));
-                        poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, 7), 10);
+                        poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 10);
                     }
                     {
                         //029 Nidoran♀ : 079 Rivalry : 045 Growl : 010 Scratch
                         TeamMemberSpawn teamSpawn = GetTeamMob("nidoran_f", "poison_point", "growl", "scratch", "", "", new RandRange(7));
                         teamSpawn.Spawn.SpawnConditions.Add(new MobCheckVersionDiff(1, 2));
-                        poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, 7), 10);
+                        poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 10);
                     }
                     // 13 Weedle : 40 Poison Sting
-                    poolSpawn.Spawns.Add(GetTeamMob("weedle", "", "poison_sting", "", "", "", new RandRange(5), "wander_dumb"), new IntRange(0, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("weedle", "", "poison_sting", "", "", "", new RandRange(5), "wander_dumb"), new IntRange(0, max_floors), 10);
                     // 10 Caterpie : 81 String Shot : 33 Tackle
-                    poolSpawn.Spawns.Add(GetTeamMob("caterpie", "", "string_shot", "tackle", "", "", new RandRange(5), "wander_dumb"), new IntRange(0, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("caterpie", "", "string_shot", "tackle", "", "", new RandRange(5), "wander_dumb"), new IntRange(0, max_floors), 10);
                     // 406 Budew : 30 Natural Cure : 71 Absorb : 78 Stun Spore
                     poolSpawn.Spawns.Add(GetTeamMob("budew", "poison_point", "absorb", "stun_spore", "", "", new RandRange(7), "wander_dumb"), new IntRange(0, 3), 10);
                     // 285 Shroomish : 90 Poison Heal : 73 Leech Seed : 33 Tackle
-                    poolSpawn.Spawns.Add(GetTeamMob("shroomish", "poison_heal", "leech_seed", "tackle", "", "", new RandRange(8), "wander_dumb"), new IntRange(3, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("shroomish", "poison_heal", "leech_seed", "tackle", "", "", new RandRange(8), "wander_dumb"), new IntRange(3, max_floors), 10);
                     // 165 Ledyba : 48 Supersonic : 4 Comet Punch
-                    poolSpawn.Spawns.Add(GetTeamMob("ledyba", "", "supersonic", "comet_punch", "", "", new RandRange(7), "wander_dumb"), new IntRange(3, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("ledyba", "", "supersonic", "comet_punch", "", "", new RandRange(7), "wander_dumb"), new IntRange(3, max_floors), 10);
 
                     // 14 Kakuna : 106 Harden
-                    poolSpawn.Spawns.Add(GetTeamMob("kakuna", "", "harden", "", "", "", new RandRange(8), "wait_attack"), new IntRange(3, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("kakuna", "", "harden", "", "", "", new RandRange(8), "wait_attack"), new IntRange(3, max_floors), 10);
                     // 11 Metapod : 106 Harden
-                    poolSpawn.Spawns.Add(GetTeamMob("metapod", "", "harden", "", "", "", new RandRange(8), "wait_attack"), new IntRange(3, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("metapod", "", "harden", "", "", "", new RandRange(8), "wait_attack"), new IntRange(3, max_floors), 10);
 
-                    poolSpawn.TeamSizes.Add(1, new IntRange(0, 7), 12);
+                    poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
 
@@ -8017,7 +8017,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
 
-                    for (int ii = 0; ii < 7; ii++)
+                    for (int ii = 0; ii < max_floors; ii++)
                     {
                         GridFloorGen layout = new GridFloorGen();
 
@@ -8205,12 +8205,13 @@ namespace DataGenerator.Data
                 }
 
                 {
+                    int max_floors = 3;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Bramble Thicket\nB{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(72, 96), new RandRange(9, 12));
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -8220,67 +8221,67 @@ namespace DataGenerator.Data
 
                     //necessities
                     CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
-                    necessities.SpawnRates.SetRange(15, new IntRange(0, 3));
+                    necessities.SpawnRates.SetRange(15, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
-                    necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, 3), 9);//Leppa
-                    necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, 3), 12);//Oran
-                    necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, 3), 10);//Apple
-                    necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, 3), 35);//Lum
-                    necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, 3), 5);//reviver seed
+                    necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 9);//Leppa
+                    necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 12);//Oran
+                    necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, max_floors), 10);//Apple
+                    necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 35);//Lum
+                    necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 5);//reviver seed
 
                     //snacks
                     CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
-                    snacks.SpawnRates.SetRange(10, new IntRange(0, 3));
+                    snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
-                    snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, 3), 20);//blast seed
-                    snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, 3), 10);//warp seed
-                    snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, 3), 10);//sleep seed
-                    snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, 3), 10);//blinker seed
+                    snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 20);//blast seed
+                    snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, max_floors), 10);//warp seed
+                    snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, max_floors), 10);//sleep seed
+                    snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, max_floors), 10);//blinker seed
 
                     //wands
                     CategorySpawn<InvItem> ammo = new CategorySpawn<InvItem>();
-                    ammo.SpawnRates.SetRange(10, new IntRange(0, 3));
+                    ammo.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("ammo", ammo);
 
-                    ammo.Spawns.Add(new InvItem("ammo_stick", false, 3), new IntRange(0, 3), 10);//stick
-                    ammo.Spawns.Add(new InvItem("wand_whirlwind", false, 2), new IntRange(0, 3), 10);//whirlwind wand
-                    ammo.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, 3), 10);//pounce wand
-                    ammo.Spawns.Add(new InvItem("wand_warp", false, 1), new IntRange(0, 3), 10);//warp wand
-                    ammo.Spawns.Add(new InvItem("wand_lob", false, 2), new IntRange(0, 3), 10);//lob wand
-                    ammo.Spawns.Add(new InvItem("ammo_geo_pebble", false, 2), new IntRange(0, 3), 10);//Geo Pebble
+                    ammo.Spawns.Add(new InvItem("ammo_stick", false, 3), new IntRange(0, max_floors), 10);//stick
+                    ammo.Spawns.Add(new InvItem("wand_whirlwind", false, 2), new IntRange(0, max_floors), 10);//whirlwind wand
+                    ammo.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 10);//pounce wand
+                    ammo.Spawns.Add(new InvItem("wand_warp", false, 1), new IntRange(0, max_floors), 10);//warp wand
+                    ammo.Spawns.Add(new InvItem("wand_lob", false, 2), new IntRange(0, max_floors), 10);//lob wand
+                    ammo.Spawns.Add(new InvItem("ammo_geo_pebble", false, 2), new IntRange(0, max_floors), 10);//Geo Pebble
 
                     //orbs
                     CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
-                    orbs.SpawnRates.SetRange(10, new IntRange(0, 3));
+                    orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("orbs", orbs);
 
-                    orbs.Spawns.Add(new InvItem("orb_rebound"), new IntRange(0, 3), 10);//Rebound
-                    orbs.Spawns.Add(new InvItem("orb_all_protect"), new IntRange(0, 3), 5);//All Protect
-                    orbs.Spawns.Add(new InvItem("orb_luminous"), new IntRange(0, 3), 9);//Luminous
-                    orbs.Spawns.Add(new InvItem("orb_petrify"), new IntRange(0, 3), 10);//Petrify
-                    orbs.Spawns.Add(new InvItem("orb_slumber"), new IntRange(0, 3), 8);//Slumber Orb
-                    orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, 3), 8);//Mirror Orb
+                    orbs.Spawns.Add(new InvItem("orb_rebound"), new IntRange(0, max_floors), 10);//Rebound
+                    orbs.Spawns.Add(new InvItem("orb_all_protect"), new IntRange(0, max_floors), 5);//All Protect
+                    orbs.Spawns.Add(new InvItem("orb_luminous"), new IntRange(0, max_floors), 9);//Luminous
+                    orbs.Spawns.Add(new InvItem("orb_petrify"), new IntRange(0, max_floors), 10);//Petrify
+                    orbs.Spawns.Add(new InvItem("orb_slumber"), new IntRange(0, max_floors), 8);//Slumber Orb
+                    orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, max_floors), 8);//Mirror Orb
 
                     //held items
                     CategorySpawn<InvItem> heldItems = new CategorySpawn<InvItem>();
-                    heldItems.SpawnRates.SetRange(1, new IntRange(0, 3));
+                    heldItems.SpawnRates.SetRange(1, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("held", heldItems);
 
-                    heldItems.Spawns.Add(new InvItem("held_black_belt"), new IntRange(0, 10), 1);//Silver Powder
-                    heldItems.Spawns.Add(new InvItem("held_toxic_plate"), new IntRange(0, 10), 1);//Toxic Plate
+                    heldItems.Spawns.Add(new InvItem("held_black_belt"), new IntRange(0, max_floors), 1);//Silver Powder
+                    heldItems.Spawns.Add(new InvItem("held_toxic_plate"), new IntRange(0, max_floors), 1);//Toxic Plate
 
                     //special
                     CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
-                    special.SpawnRates.SetRange(8, new IntRange(0, 3));
+                    special.SpawnRates.SetRange(8, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("special", special);
 
                     int rate = 2;
-                    special.Spawns.Add(new InvItem("apricorn_blue"), new IntRange(0, 3), rate);//blue apricorns
-                    special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, 3), rate);//green apricorns
-                    special.Spawns.Add(new InvItem("apricorn_white"), new IntRange(0, 3), rate);//white apricorns
-                    special.Spawns.Add(new InvItem("apricorn_purple"), new IntRange(0, 3), rate);//purple apricorns
+                    special.Spawns.Add(new InvItem("apricorn_blue"), new IntRange(0, max_floors), rate);//blue apricorns
+                    special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, max_floors), rate);//green apricorns
+                    special.Spawns.Add(new InvItem("apricorn_white"), new IntRange(0, max_floors), rate);//white apricorns
+                    special.Spawns.Add(new InvItem("apricorn_purple"), new IntRange(0, max_floors), rate);//purple apricorns
 
                     floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
 
@@ -8292,32 +8293,32 @@ namespace DataGenerator.Data
                         //032 Nidoran♂ : 079 Rivalry : 043 Leer : 064 Peck
                         TeamMemberSpawn teamSpawn = GetTeamMob("nidoran_m", "poison_point", "leer", "peck", "", "", new RandRange(7));
                         teamSpawn.Spawn.SpawnConditions.Add(new MobCheckVersionDiff(0, 2));
-                        poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, 3), 10);
+                        poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 10);
                     }
                     {
                         //029 Nidoran♀ : 079 Rivalry : 045 Growl : 010 Scratch
                         TeamMemberSpawn teamSpawn = GetTeamMob("nidoran_f", "poison_point", "growl", "scratch", "", "", new RandRange(7));
                         teamSpawn.Spawn.SpawnConditions.Add(new MobCheckVersionDiff(1, 2));
-                        poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, 3), 10);
+                        poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 10);
                     }
                     // 406 Budew : 30 Natural Cure : 71 Absorb : 78 Stun Spore
-                    poolSpawn.Spawns.Add(GetTeamMob("budew", "natural_cure", "absorb", "poison_powder", "", "", new RandRange(9), "wander_dumb"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("budew", "natural_cure", "absorb", "poison_powder", "", "", new RandRange(9), "wander_dumb"), new IntRange(0, max_floors), 10);
                     // 285 Shroomish : 90 Poison Heal : 73 Leech Seed : 33 Tackle
-                    poolSpawn.Spawns.Add(GetTeamMob("shroomish", "poison_heal", "leech_seed", "tackle", "", "", new RandRange(10), "wander_dumb"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("shroomish", "poison_heal", "leech_seed", "tackle", "", "", new RandRange(10), "wander_dumb"), new IntRange(0, max_floors), 10);
                     // 165 Ledyba : 48 Supersonic : 4 Comet Punch
-                    poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob("ledyba", "", "supersonic", "comet_punch", "", "", new RandRange(10), "wander_dumb"), GetGenericMob("ledyba", "", "supersonic", "comet_punch", "", "", new RandRange(10), "wander_dumb")), new IntRange(0, 3), 10);
+                    poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob("ledyba", "", "supersonic", "comet_punch", "", "", new RandRange(10), "wander_dumb"), GetGenericMob("ledyba", "", "supersonic", "comet_punch", "", "", new RandRange(10), "wander_dumb")), new IntRange(0, max_floors), 10);
 
                     // 14 Kakuna : 106 Harden
-                    poolSpawn.Spawns.Add(GetTeamMob("kakuna", "", "harden", "", "", "", new RandRange(9), "wait_attack"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("kakuna", "", "harden", "", "", "", new RandRange(9), "wait_attack"), new IntRange(0, max_floors), 10);
                     // 11 Metapod : 106 Harden
-                    poolSpawn.Spawns.Add(GetTeamMob("metapod", "", "harden", "", "", "", new RandRange(9), "wait_attack"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("metapod", "", "harden", "", "", "", new RandRange(9), "wait_attack"), new IntRange(0, max_floors), 10);
 
                     // 15 Beedrill : 41 Twineedle
-                    poolSpawn.Spawns.Add(GetTeamMob("beedrill", "", "twineedle", "", "", "", new RandRange(14), "wander_dumb"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("beedrill", "", "twineedle", "", "", "", new RandRange(14), "wander_dumb"), new IntRange(0, max_floors), 10);
                     // 12 Butterfree : 14 Compound Eyes : 78 Stun Spore : 79 Sleep powder : 77 Poison powder : 93 Confusion
-                    poolSpawn.Spawns.Add(GetTeamMob("butterfree", "compound_eyes", "stun_spore", "sleep_powder", "poison_powder", "confusion", new RandRange(14), "wander_dumb"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("butterfree", "compound_eyes", "stun_spore", "sleep_powder", "poison_powder", "confusion", new RandRange(14), "wander_dumb"), new IntRange(0, max_floors), 10);
 
-                    poolSpawn.TeamSizes.Add(1, new IntRange(0, 3), 12);
+                    poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -8325,7 +8326,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
 
-                    for (int ii = 0; ii < 3; ii++)
+                    for (int ii = 0; ii < max_floors; ii++)
                     {
                         GridFloorGen layout = new GridFloorGen();
 
@@ -8412,7 +8413,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Sickly Hollow\nB{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(108, 120), new RandRange(18, 20));
+                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(30, 40), new RandRange(30, 34));
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 

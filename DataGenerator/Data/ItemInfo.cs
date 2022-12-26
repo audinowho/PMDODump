@@ -3299,7 +3299,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A beautiful flower that blooms in the Secret Garden. It can be used on Shaymin once per floor to cause a Forme change.");
                 item.Sprite = "Gracidea";
                 item.UsageType = ItemData.UseType.UseOther;
-                item.Price = 100000;
+                item.Price = 50000;
                 item.MaxStack = -1;
                 item.UseEvent.BeforeTryActions.Add(0, new CheckItemActiveEvent());
                 item.UseEvent.BeforeTryActions.Add(1, new FormChoiceEvent("shaymin"));

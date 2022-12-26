@@ -179,6 +179,13 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
         }
 
+        public static MoneySpawnZoneStep GetMoneySpawn(int level, int floors_in)
+        {
+            RandRange addRange = new RandRange(level * 2 / 5 + 8, level * 2 / 5 + 12);
+            RandRange startRange = new RandRange(level + 5 + floors_in * addRange.Min, level + 10 + floors_in * addRange.Max);
+            return new MoneySpawnZoneStep(PR_RESPAWN_MONEY, startRange, addRange);
+        }
+
         public static void AddMoneyData<T>(MapGen<T> layout, RandRange divAmount, bool includeHalls = false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.None) where T : ListMapGenContext
         {
             TerminalSpawnStep<T, MoneySpawn> moneyStep = new TerminalSpawnStep<T, MoneySpawn>(new MoneyDivSpawner<T>(divAmount), includeHalls);

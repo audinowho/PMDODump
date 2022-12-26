@@ -39,7 +39,7 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Guildmaster Trail\n{0}F")));
 
             //money
-            MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(63, 72), new RandRange(21, 24));
+            MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(60, 70), new RandRange(30, 34));
             moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
             floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -2927,7 +2927,7 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Secret Garden\nB{0}F")));
 
             //money
-            MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(63, 72), new RandRange(21, 24));
+            MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(60, 70), new RandRange(30, 34));
             moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
             floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
