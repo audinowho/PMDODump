@@ -159,13 +159,13 @@ poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
 poolSpawn.Spawns.Add(GetTeamMob("absol", "", "future_sight", "night_slash", "", "", new RandRange(33), "wander_dumb"), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("mightyena", "", "thief", "scary_face", "", "", new RandRange(30), "wander_dumb"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("mightyena", "", "thief", "scary_face", "", "", new RandRange(30), "thief"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("pawniard", "", "torment", "slash", "", "", new RandRange(30), "wander_dumb"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("masquerain", "", "ominous_wind", "stun_spore", "", "", new RandRange(30), "wander_dumb"), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("sneasel", "pickpocket", "agility", "quick_attack", "", "", new RandRange(33), "wander_dumb"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("sneasel", "pickpocket", "agility", "quick_attack", "", "", new RandRange(33), "thief"), new IntRange(0, max_floors), 10);
 //spawns with pearl, if initial spawn, sleeping
 poolSpawn.Spawns.Add(GetTeamMob("grumpig", "", "magic_coat", "zen_headbutt", "", "", new RandRange(30), "wander_dumb"), new IntRange(0, max_floors), 10);
 //spawns with sticky item
-poolSpawn.Spawns.Add(GetTeamMob("persian", "", "switcheroo", "feint_attack", "swift", "", new RandRange(33), "wander_dumb"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("persian", "", "switcheroo", "feint_attack", "swift", "", new RandRange(33), "thief"), new IntRange(0, max_floors), 10);
 //sleeping, disguised as grumpig
-poolSpawn.Spawns.Add(GetTeamMob("zoroark", "", "night_daze", "u_turn", "agility", "", new RandRange(57)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("zoroark", "", "night_daze", "u_turn", "agility", "", new RandRange(57), "wander_normal"), new IntRange(0, max_floors), 10);

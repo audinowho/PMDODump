@@ -15,6 +15,7 @@ poolSpawn.Priority = PR_RESPAWN_MOB;
 
 poolSpawn.Spawns.Add(GetTeamMob("poliwag", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("psyduck", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("espurr", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("nincada", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("whismur", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("vanillite", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

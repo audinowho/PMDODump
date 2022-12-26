@@ -75,11 +75,11 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-poolSpawn.Spawns.Add(GetTeamMob("gyarados", "", "splash", "dragon_dance", "aqua_tail", "", new RandRange(62)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("drifblim", "", "ominous_wind", "minimize", "baton_pass", "", new RandRange(62)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("camerupt", "", "eruption", "earthquake", "", "", new RandRange(62)), new IntRange(4, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("machamp", "", "seismic_toss", "dynamic_punch", "", "", new RandRange(62)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("octillery", "", "hyper_beam", "gunk_shot", "", "", new RandRange(62)), new IntRange(0, 5), 10);
-poolSpawn.Spawns.Add(GetTeamMob("salazzle", "", "toxic", "flame_burst", "", "", new RandRange(62)), new IntRange(0, 5), 10);
-poolSpawn.Spawns.Add(GetTeamMob("castform", "", "weather_ball", "sunny_day", "rain_dance", "", new RandRange(62)), new IntRange(4, max_floors), 5);
-poolSpawn.Spawns.Add(GetTeamMob("gastrodon", "", "muddy_water", "recover", "", "", new RandRange(62)), new IntRange(4, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("gyarados", "", "splash", "dragon_dance", "aqua_tail", "", new RandRange(62), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("drifblim", "", "ominous_wind", "minimize", "baton_pass", "", new RandRange(62), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("camerupt", "", "eruption", "earthquake", "", "", new RandRange(62), "wander_normal"), new IntRange(4, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("machamp", "", "seismic_toss", "dynamic_punch", "", "", new RandRange(62), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("octillery", "", "hyper_beam", "gunk_shot", "", "", new RandRange(62), "wander_normal"), new IntRange(0, 5), 10);
+poolSpawn.Spawns.Add(GetTeamMob("salazzle", "", "toxic", "flame_burst", "", "", new RandRange(62), "wander_normal"), new IntRange(0, 5), 10);
+poolSpawn.Spawns.Add(GetTeamMob("castform", "", "weather_ball", "sunny_day", "rain_dance", "", new RandRange(62), "wander_normal"), new IntRange(4, max_floors), 5);
+poolSpawn.Spawns.Add(GetTeamMob("gastrodon", "", "muddy_water", "recover", "", "", new RandRange(62), "wander_normal"), new IntRange(4, max_floors), 10);

@@ -183,6 +183,6 @@ poolSpawn.Spawns.Add(GetTeamMob("pignite", "", "heat_crash", "rollout", "", "", 
 poolSpawn.Spawns.Add(GetTeamMob("slugma", "", "incinerate", "harden", "", "", new RandRange(33), "wander_dumb"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("marowak", 1, "", Gender.Unknown), "", "shadow_bone", "will_o_wisp", "", "", new RandRange(33), "wander_dumb"), new IntRange(0, max_floors), 10);
 //sleeping, with choice band
-poolSpawn.Spawns.Add(GetTeamMob("flareon", "", "flare_blitz", "", "", "", new RandRange(50)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("flareon", "", "flare_blitz", "", "", "", new RandRange(50), "wander_normal"), new IntRange(0, max_floors), 10);
 //only one
-poolSpawn.Spawns.Add(GetTeamMob("heatran", "", "magma_storm", "earth_power", "", "", new RandRange(40)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("heatran", "", "magma_storm", "earth_power", "", "", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
