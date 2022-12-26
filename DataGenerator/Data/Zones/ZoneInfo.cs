@@ -1326,7 +1326,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Veiled Ridge");
                     zone.Rescues = 2;
-                    zone.Level = 40;
+                    zone.Level = 35;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -2226,6 +2226,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Moonlit Courtyard");
                     zone.Rescues = 4;
+                    zone.Level = 25;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -2997,6 +2998,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Sleeping Caldera");
                     zone.Rescues = 2;
+                    zone.Level = 35;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     int max_floors = 12;
@@ -3324,6 +3326,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Shimmer Bay");
                     zone.Rescues = 2;
+                    zone.Level = 25;
                     zone.Rogue = RogueStatus.ItemTransfer;
                     //zone.Persistent = true;
 
@@ -3599,6 +3602,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Fertile Ravine");
                     zone.Rescues = 2;
+                    zone.Level = 15;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -3987,6 +3991,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("**Ambush Forest");
                     zone.Rescues = 2;
+                    zone.Level = 30;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     int max_floors = 25;
@@ -4325,6 +4330,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("**Treacherous Mountain");
                     zone.Rescues = 2;
+                    zone.Level = 40;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     int max_floors = 25;
@@ -4657,6 +4663,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Forsaken Desert");
                     zone.Rescues = 2;
+                    zone.Level = 25;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     int max_floors = 4;
@@ -4855,6 +4862,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Snowbound Path");
                     zone.Rescues = 2;
+                    zone.Level = 40;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -5388,6 +5396,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Relic Tower");
                     zone.Rescues = 2;
+                    zone.Level = 30;
                     zone.Rogue = RogueStatus.ItemTransfer;
                     int max_floors = 10;
 
@@ -5397,7 +5406,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Relic Tower\n{0}F")));
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level + 40, 0);
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -5652,6 +5661,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Overgrown Wilds");
                     zone.Rescues = 2;
+                    zone.Level = 20;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -6234,6 +6244,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Trickster Steppe");
                     zone.Rescues = 2;
+                    zone.Level = 20;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -6576,6 +6587,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Lava Floe Island");
                     zone.Rescues = 2;
+                    zone.Level = 20;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -6907,6 +6919,7 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("Fissure Quarry");
                     zone.Rescues = 2;
+                    zone.Level = 25;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -9219,6 +9232,1750 @@ namespace DataGenerator.Data
                     }
 
                     zone.Segments.Add(floorSegment);
+                }
+                #endregion
+            }
+            else if (index == 38)
+            {
+                #region ENERGY GARDEN
+                {
+                    zone.Name = new LocalText("**Energy Garden");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Energy Garden\nB{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                            
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+                            
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 39)
+            {
+                #region TINY TUNNEL
+                {
+                    zone.Name = new LocalText("**Tiny Tunnel");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Tiny Tunnel\nB{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 40)
+            {
+                #region Geode Underpass
+                {
+                    zone.Name = new LocalText("**Geode Underpass");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Geode Underpass\nB{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 41)
+            {
+                #region STARFALL HEIGHTS
+                {
+                    zone.Name = new LocalText("**Starfall Heights");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Starfall Heights\n{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 42)
+            {
+                #region EON ISLAND
+                {
+                    zone.Name = new LocalText("**Eon Island");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Eon Island Coast\n{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 43)
+            {
+                #region BARREN TUNDRA
+                {
+                    zone.Name = new LocalText("**Barren Tundra");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Barren Tundra\n{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 44)
+            {
+                #region WAYWARD WETLANDS
+                {
+                    zone.Name = new LocalText("**Wayward Wetlands");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Wayward Wetlands\n{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 45)
+            {
+                #region BRAVERY ROAD
+                {
+                    zone.Name = new LocalText("**Bravery Road");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Bravery Road\n{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 46)
+            {
+                #region WISDOM ROAD
+                {
+                    zone.Name = new LocalText("**Wisdom Road");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Wisdom Road\n{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 47)
+            {
+                #region HOPE ROAD
+                {
+                    zone.Name = new LocalText("**Hope Road");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Hope Road\n{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 48)
+            {
+                #region DESERTED FORTRESS
+                {
+                    zone.Name = new LocalText("**Deserted Fortress");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Deserted Fortress\n{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 49)
+            {
+                #region PRISM ISLES
+                {
+                    zone.Name = new LocalText("**Prism Isles");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("White Isle\n{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 50)
+            {
+                #region LABYRINTH OF THE LOST
+                {
+                    zone.Name = new LocalText("**LABYRINTH OF THE LOST");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Labyrinth of the Lost\nB{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 51)
+            {
+                #region SACRED TOWER
+                {
+                    zone.Name = new LocalText("**Sacred Tower");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Sacred Tower\n{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 52)
+            {
+                #region LOST SEAS
+                {
+                    zone.Name = new LocalText("**Lost Seas");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Lost Seas\nB{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+                }
+                #endregion
+            }
+            else if (index == 53)
+            {
+                #region ENERGY GARDEN
+                {
+                    zone.Name = new LocalText("**Inscribed Cave");
+                    zone.Level = 10;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Inscribed Cave\nB{0}F")));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
                 }
                 #endregion
             }
