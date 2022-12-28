@@ -959,7 +959,7 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        if (ii < 5)
+                        if (ii < 2)
                             AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
                         else
                             AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
@@ -967,9 +967,8 @@ namespace DataGenerator.Data
                         if (ii < 2)
                         {
                             AddWaterSteps(layout, "pit", new RandRange(20));//abyss
-                            AddGrassSteps(layout, new RandRange(3, 7), new IntRange(4, 70), new RandRange(20));
                         }
-                        else if (ii < 5)
+                        else if (ii < 6)
                         {
                             AddWaterSteps(layout, "pit", new RandRange(60));//abyss
                             AddGrassSteps(layout, new RandRange(0), new IntRange(4, 70), new RandRange(30));
@@ -983,7 +982,7 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         //Mt. Horn -> hidden Land -> hidden land 2 -> mt. horn?
-                        if (ii < 5)
+                        if (ii < 6)
                             AddTextureData(layout, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary", "flying");
                         else
                             AddSpecificTextureData(layout, "hidden_highland_wall", "hidden_highland_floor", "hidden_highland_secondary", "tall_grass", "flying");
@@ -1258,12 +1257,12 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B14. Champion Road.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "B10. Thunderstruck Pass.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         //Tilesets
-                        if (ii < 4)
+                        if (ii < 5)
                             AddTextureData(layout, "mt_thunder_peak_wall", "mt_thunder_peak_floor", "mt_thunder_peak_secondary", "electric");
-                        else if (ii < 7)
+                        else if (ii < 10)
                             AddTextureData(layout, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary", "electric");
                         else
                             AddTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", "electric");
@@ -1548,9 +1547,7 @@ namespace DataGenerator.Data
                                 AddFloorData(layout, "Dark Wasteland.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
-                            if (ii < 4)
-                                AddTextureData(layout, "frosty_forest_wall", "frosty_forest_floor", "frosty_forest_secondary", "dark");
-                            else if (ii < 8)
+                            if (ii < 8)
                                 AddTextureData(layout, "steel_aegis_cave_wall", "steel_aegis_cave_floor", "steel_aegis_cave_secondary", "dark");
                             else
                                 AddTextureData(layout, "sky_peak_summit_pass_wall", "sky_peak_summit_pass_floor", "sky_peak_summit_pass_secondary", "dark");
@@ -2167,13 +2164,12 @@ namespace DataGenerator.Data
                         AddFloorData(layout, "B14. Champion Road.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         //Tilesets
-                        if (ii < 8)
-                        {
-                            if (ii < 6)
-                                AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", "ice");
-                            else
-                                AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", "steel");
-                        }
+                        if (ii < 6)
+                            AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", "ice");
+                        else if (ii < 12)
+                            AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", "steel");
+                        else if (ii < 18)
+                            AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", "steel");
                         else
                             AddTextureData(layout, "sky_ruins_area_wall", "northwind_field_floor", "northwind_field_secondary", "steel", true);
 
@@ -2437,12 +2433,12 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "Miracle Sea.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Clear);
+                            AddFloorData(layout, "Miracle Sea.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
-                            if (ii < 4)
+                            if (ii < 5)
                                 AddTextureData(layout, "limestone_cavern_wall", "limestone_cavern_floor", "limestone_cavern_secondary", "fairy");
-                            else if (ii < 8)
+                            else if (ii < 10)
                                 AddTextureData(layout, "zero_isle_east_3_wall", "zero_isle_east_3_floor", "zero_isle_east_3_secondary", "fairy");
                             else
                                 AddTextureData(layout, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary", "fairy");
@@ -3280,7 +3276,7 @@ namespace DataGenerator.Data
                         AddFloorData(layout, "B11. Igneous Tunnel.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                         //Tilesets
-                        if (ii < 5)
+                        if (ii < 6)
                             AddTextureData(layout, "mt_blaze_wall", "mt_blaze_floor", "mt_blaze_secondary", "fire");
                         else
                             AddTextureData(layout, "magma_cavern_2_wall", "magma_cavern_2_floor", "magma_cavern_2_secondary", "fire");
@@ -3546,12 +3542,10 @@ namespace DataGenerator.Data
                         AddFloorData(layout, "Craggy Coast.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
 
                         //Tilesets
-                        if (ii < 3)
+                        if (ii < 6)
                             AddTextureData(layout, "miracle_sea_wall", "miracle_sea_floor", "miracle_sea_secondary", "water");
-                        else if (ii < 5)
-                            AddTextureData(layout, "stormy_sea_1_wall", "stormy_sea_1_floor", "stormy_sea_1_secondary", "water");
                         else
-                            AddTextureData(layout, "purity_forest_4_wall", "purity_forest_4_floor", "purity_forest_4_secondary", "water");
+                            AddTextureData(layout, "stormy_sea_1_wall", "stormy_sea_1_floor", "stormy_sea_1_secondary", "water");
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -3761,16 +3755,10 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            if (ii < 5)
-                                AddFloorData(layout, "Sky Peak Prairie.ogg", 500, Map.SightRange.Clear, Map.SightRange.Clear);
-                            else
-                                AddFloorData(layout, "Barren Valley.ogg", 500, Map.SightRange.Clear, Map.SightRange.Clear);
-
+                            AddFloorData(layout, "B16. Fertile Valley.ogg", 500, Map.SightRange.Clear, Map.SightRange.Clear);
 
                             //Tilesets
-                            if (ii < 4)
-                                AddTextureData(layout, "quicksand_pit_wall", "quicksand_pit_floor", "quicksand_pit_secondary", "flying");
-                            else if (ii < 8)
+                            if (ii < 6)
                                 AddTextureData(layout, "quicksand_unused_wall", "quicksand_unused_floor", "quicksand_unused_secondary", "flying");
                             else
                                 AddTextureData(layout, "quicksand_cave_wall", "quicksand_cave_floor", "quicksand_cave_secondary", "ground");
@@ -3953,13 +3941,13 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B02. Demonstration 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "B17. Fertile Valley 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
 
                             AddWaterSteps(layout, "floor", new RandRange(20));//empty
 
 
                             //Tilesets
-                            AddTextureData(layout, "wyvern_hill_wall", "wyvern_hill_floor", "wyvern_hill_secondary", "normal");
+                            AddTextureData(layout, "quicksand_pit_wall", "quicksand_pit_floor", "quicksand_pit_secondary", "ground");
 
                             //money
                             AddMoneyData(layout, new RandRange(1, 4));
@@ -4278,24 +4266,22 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        if (ii < 9)
+                        if (ii < 12)
                             AddFloorData(layout, "Dusk Forest.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
-                        else if (ii < 18)
+                        else if (ii < 20)
                             AddFloorData(layout, "Deep Dusk Forest.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
                         else
                             AddFloorData(layout, "Sinister Woods.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Clear);
 
                         //Tilesets
-                        if (ii < 4)
+                        if (ii < 8)
                             AddTextureData(layout, "dusk_forest_1_wall", "dusk_forest_1_floor", "dusk_forest_1_secondary", "bug");
-                        else if (ii < 9)
+                        else if (ii < 12)
                             AddTextureData(layout, "dusk_forest_2_wall", "dusk_forest_2_floor", "dusk_forest_2_secondary", "bug");
-                        else if (ii < 13)
+                        else if (ii < 16)
                             AddTextureData(layout, "deep_dusk_forest_1_wall", "deep_dusk_forest_1_floor", "deep_dusk_forest_1_secondary", "bug");
-                        else if (ii < 18)
+                        else if (ii < 20)
                             AddTextureData(layout, "murky_forest_wall", "murky_forest_floor", "murky_forest_secondary", "bug");
-                        else if (ii < 21)
-                            AddTextureData(layout, "darknight_relic_wall", "darknight_relic_floor", "darknight_relic_secondary", "bug");
                         else
                             AddTextureData(layout, "rescue_team_maze_wall", "rescue_team_maze_floor", "rescue_team_maze_secondary", "bug");
 
@@ -4624,16 +4610,22 @@ namespace DataGenerator.Data
 
 
                         //Floor settings
-                        if (ii < 9)
+                        if (ii < 12)
                             AddFloorData(layout, "Chasm Cave.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
-                        else if (ii < 18)
+                        else if (ii < 20)
                             AddFloorData(layout, "Concealed Ruins.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                         else
                             AddFloorData(layout, "Mt. Blaze Peak.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
 
                         //Tilesets
-                        if (ii < 9)
+                        if (ii < 8)
+                            AddTextureData(layout, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary", "dragon");
+                        else if (ii < 12)
+                            AddTextureData(layout, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary", "dragon");
+                        else if (ii < 16)
+                            AddTextureData(layout, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary", "dragon");
+                        else if (ii < 20)
                             AddTextureData(layout, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary", "dragon");
                         else
                             AddTextureData(layout, "temporal_unused_wall", "temporal_unused_floor", "temporal_unused_secondary", "dragon");
@@ -4850,18 +4842,15 @@ namespace DataGenerator.Data
 
 
                         //Floor settings
-                        {
-                            AddFloorData(layout, "B08. Forsaken Desert.ogg", 30000, Map.SightRange.Clear, Map.SightRange.Dark);
-                            //we need something else here.  quicksand cave?  quicksand pit?  something suspicious...
-                        }
+                        AddFloorData(layout, "B08. Forsaken Desert.ogg", 30000, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         //Tilesets
-                        if (ii < 2)
+                        if (ii < 1)
+                            AddTextureData(layout, "desert_region_wall", "desert_region_floor", "desert_region_secondary", "ground");
+                        else if (ii < 2)
                             AddTextureData(layout, "northern_desert_1_wall", "northern_desert_1_floor", "northern_desert_1_secondary", "ground");
-                        else if (ii < 3)
-                            AddTextureData(layout, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary", "ground");
                         else
-                            AddTextureData(layout, "great_canyon_wall", "great_canyon_floor", "great_canyon_secondary", "ground");
+                            AddTextureData(layout, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary", "ground");
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -5183,15 +5172,16 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            if (ii < 9)
-                                AddFloorData(layout, "Mystifying Forest.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);//not sure about this song
+                            if (ii < 7)
+                                AddFloorData(layout, "Sky Peak Snowfield.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                             else
-                                AddFloorData(layout, "Mystifying Forest.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                                AddFloorData(layout, "Sky Peak Snowfield.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
-                            if (ii < 5)
-                                AddTextureData(layout, "water_maze_wall", "water_maze_floor", "water_maze_secondary", "ice");
-                            else if (ii < 9)
+
+                            if (ii < 7)
+                                AddTextureData(layout, "frosty_forest_wall", "frosty_forest_floor", "frosty_forest_secondary", "ice");
+                            else if (ii < 11)
                                 AddTextureData(layout, "poison_maze_wall", "poison_maze_floor", "poison_maze_secondary", "ice");
                             else
                                 AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "ice");
@@ -5448,7 +5438,7 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B02. Demonstration 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "Fortune Ravine.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                             AddWaterSteps(layout, "floor", new RandRange(20));//empty
 
@@ -5712,7 +5702,7 @@ namespace DataGenerator.Data
                             AddFloorData(layout, "B09. Relic Tower.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         //Tilesets
-                        if (ii < 5)
+                        if (ii < 8)
                             AddTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary", "psychic");
                         else
                             AddTextureData(layout, "joyous_tower_wall", "joyous_tower_floor", "joyous_tower_secondary", "psychic");
@@ -5960,7 +5950,9 @@ namespace DataGenerator.Data
                             AddFloorData(layout, "Random Dungeon Theme 3.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
-                            if (ii < 5)
+                            if (ii < 4)
+                                AddTextureData(layout, "lush_prairie_wall", "lush_prairie_floor", "lush_prairie_secondary", "grass");
+                            else if (ii < 8)
                                 AddTextureData(layout, "lush_prairie_wall", "lush_prairie_floor", "lush_prairie_secondary", "grass");
                             else
                                 AddTextureData(layout, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "grass");
@@ -6522,10 +6514,7 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            if (ii < 5)
-                                AddFloorData(layout, "B09. Relic Tower.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
-                            else
-                                AddFloorData(layout, "B09. Relic Tower.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "Sky Peak Forest.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
 
                             //Tilesets
                             if (ii < 5)
@@ -6867,16 +6856,23 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            if (ii < 5)
-                                AddFloorData(layout, "B09. Relic Tower.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
-                            else
-                                AddFloorData(layout, "B09. Relic Tower.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "B18. Faulted Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                             //Tilesets
-                            if (ii < 5)
-                                AddTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary", "psychic");
+                            if (ii < 8)
+                            {
+                                if (ii % 2 == 0)
+                                    AddTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary", "psychic");
+                                else
+                                    AddTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary", "psychic");
+                            }
                             else
-                                AddTextureData(layout, "joyous_tower_wall", "joyous_tower_floor", "joyous_tower_secondary", "psychic");
+                            {
+                                if (ii % 2 == 0)
+                                    AddTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary", "psychic");
+                                else
+                                    AddTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary", "psychic");
+                            }
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -7218,13 +7214,13 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            if (ii < 5)
-                                AddFloorData(layout, "B09. Relic Tower.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                            if (ii < 7)
+                                AddFloorData(layout, "Spring Cave.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
                             else
-                                AddFloorData(layout, "B09. Relic Tower.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                                AddFloorData(layout, "Spring Cave Depths.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
-                            if (ii < 5)
+                            if (ii < 7)
                                 AddTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary", "psychic");
                             else
                                 AddTextureData(layout, "joyous_tower_wall", "joyous_tower_floor", "joyous_tower_secondary", "psychic");
@@ -7453,10 +7449,9 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B02. Demonstration 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "B02. Demonstration 2.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             AddWaterSteps(layout, "floor", new RandRange(20));//empty
-
 
                             //Tilesets
                             AddTextureData(layout, "wyvern_hill_wall", "wyvern_hill_floor", "wyvern_hill_secondary", "normal");
@@ -9374,12 +9369,12 @@ namespace DataGenerator.Data
                 #region ENERGY GARDEN
                 {
                     zone.Name = new LocalText("**Energy Garden");
-                    zone.Level = 10;
+                    zone.Level = 35;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
-                        int max_floors = 3;
+                        int max_floors = 12;
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
@@ -9408,29 +9403,32 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(tileSpawn);
 
 
-
                         for (int ii = 0; ii < max_floors; ii++)
                         {
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
-                            
+                            AddFloorData(layout, "Mystifying Forest.ogg", 500, Map.SightRange.Dark, Map.SightRange.Dark);
+
                             //Tilesets
-                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
-                            
+                            if (ii < 9)
+                                AddTextureData(layout, "western_cave_1_wall", "western_cave_1_floor", "western_cave_1_secondary", "normal");
+                            else
+                                AddTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary", "normal");
+
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
-                            //money
+                            //money - Ballpark 25K
                             AddMoneyData(layout, new RandRange(2, 4));
 
-                            //enemies!
+                            //enemies! ~ lv 20 to 30
                             AddRespawnData(layout, 3, 80);
 
                             //enemies
                             AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
 
                             //items
                             AddItemData(layout, new RandRange(3, 6), 25);
@@ -10464,12 +10462,12 @@ namespace DataGenerator.Data
                 #region DESERTED FORTRESS
                 {
                     zone.Name = new LocalText("**Deserted Fortress");
-                    zone.Level = 10;
+                    zone.Level = 25;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
-                        int max_floors = 3;
+                        int max_floors = 18;
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
@@ -10504,23 +10502,27 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                            AddFloorData(layout, "Mystifying Forest.ogg", 500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
-                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+                            if (ii < 9)
+                                AddTextureData(layout, "darknight_relic_wall", "darknight_relic_floor", "darknight_relic_secondary", "normal");
+                            else
+                                AddTextureData(layout, "rescue_team_maze_wall", "rescue_team_maze_floor", "rescue_team_maze_secondary", "normal");
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
-                            //money
+                            //money - Ballpark 25K
                             AddMoneyData(layout, new RandRange(2, 4));
 
-                            //enemies!
+                            //enemies! ~ lv 20 to 30
                             AddRespawnData(layout, 3, 80);
 
                             //enemies
                             AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
 
                             //items
                             AddItemData(layout, new RandRange(3, 6), 25);
@@ -11006,7 +11008,7 @@ namespace DataGenerator.Data
             }
             else if (index == 53)
             {
-                #region ENERGY GARDEN
+                #region INSCRIBED CAVE
                 {
                     zone.Name = new LocalText("**Inscribed Cave");
                     zone.Level = 10;

@@ -108,6 +108,21 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_FLOOR_DATA, statusData);
         }
 
+        public static void AddTestTextureData<T>(MapGen<T> layout, string block, string ground, string water, string element, bool independent = false) where T : BaseMapGenContext
+        {
+            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<T>(0, new LocalText(block)));
+
+            MapTextureStep<T> textureStep = new MapTextureStep<T>();
+            {
+                textureStep.GroundElement = element;
+                textureStep.GroundTileset = ground;
+                textureStep.WaterTileset = water;
+                textureStep.BlockTileset = block;
+                textureStep.IndependentGround = independent;
+            }
+            layout.GenSteps.Add(PR_TEXTURES, textureStep);
+        }
+
         public static void AddTextureData<T>(MapGen<T> layout, string block, string ground, string water, string element, bool independent = false) where T : BaseMapGenContext
         {
             MapTextureStep<T> textureStep = new MapTextureStep<T>();
