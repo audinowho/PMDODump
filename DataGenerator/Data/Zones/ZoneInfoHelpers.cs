@@ -131,7 +131,7 @@ namespace DataGenerator.Data
                 textureStep.GroundTileset = ground;
                 textureStep.WaterTileset = water;
                 textureStep.BlockTileset = block;
-                textureStep.IndependentGround = independent;
+                textureStep.LayeredGround = independent;
             }
             layout.GenSteps.Add(PR_TEXTURES, textureStep);
         }

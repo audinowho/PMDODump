@@ -2255,13 +2255,13 @@ namespace DataGenerator.Data
                 if (ii < 5)
                     floorData.Music = "B01. Demonstration.ogg";
                 else if (ii < 9)
-                    floorData.Music = "B18. Faulted Cliffs.ogg";
+                    floorData.Music = "B18. Faultline Ridge.ogg";
                 else if (ii < 14)
                     floorData.Music = "B07. Flyaway Cliffs.ogg";
                 else if (ii < 19)
-                    floorData.Music = "B11. Igneous Tunnel.ogg";
+                    floorData.Music = "B11. Enraged Caldera.ogg";
                 else if (ii < 24)
-                    floorData.Music = "Fortune Ravine.ogg";
+                    floorData.Music = "B34. Glacial Path.ogg";
                 else
                     floorData.Music = "B14. Champion Road.ogg";
 
@@ -2297,7 +2297,7 @@ namespace DataGenerator.Data
                         AddTextureData(layout, "northwind_field_wall", "high_cave_area_floor", "high_cave_area_secondary", "ice");
                 }
                 else
-                    AddTextureData(layout, "buried_relic_2_sky_wall", "buried_relic_2_sky_floor", "buried_relic_2_sky_secondary", "steel", true);
+                    AddTextureData(layout, "buried_relic_2_wall", "buried_relic_2_floor", "buried_relic_2_sky_secondary", "steel", true);
 
                 //wonder tiles
                 RandRange wonderTileRange;
@@ -4537,11 +4537,11 @@ namespace DataGenerator.Data
                 if (ii <= 4)
                     floorData.Music = "B02. Demonstration 2.ogg";
                 else if (ii <= 12)
-                    floorData.Music = "Sky Peak Forest.ogg";
+                    floorData.Music = "B25. Trickster Woods.ogg";
                 else if (ii <= 16)
-                    floorData.Music = "Random Dungeon Theme 3.ogg";
+                    floorData.Music = "B22. Overgrown Wilds.ogg";
                 else if (ii <= 20)
-                    floorData.Music = "Miracle Sea.ogg";
+                    floorData.Music = "B24. Shimmer Bay 2.ogg";
                 else if (ii <= 27)
                     floorData.Music = "B03. Demonstration 3.ogg";
                 else if (ii <= 34)
