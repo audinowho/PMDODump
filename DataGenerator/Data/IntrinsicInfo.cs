@@ -1569,19 +1569,22 @@ namespace DataGenerator.Data
             }
             else if (ii == 200)
             {
-                ability.Name = new LocalText("**Steelworker");
+                ability.Name = new LocalText("Steelworker");
                 ability.Desc = new LocalText("Powers up Steel-type moves.");
+                ability.OnActions.Add(0, new MultiplyElementEvent("steel", 4, 3, false));
             }
             else if (ii == 201)
             {
-                ability.Name = new LocalText("**Berserk");
-                ability.Desc = new LocalText("Boosts the Pokémon's Sp. Atk stat when it takes a hit that causes its HP to become half or less.");
-                //ability.AfterBeingHits.Add(0, new HPDropRequiredEvent(1, 2, new StatusStackBattleEvent("mod_special_attack", true, true, false, 1, new StringKey("MSG_BERSERK"))));
+                ability.Name = new LocalText("Berserk");
+                ability.Desc = new LocalText("Boosts the Pokémon's Sp. Atk stat when its HP is half or less.");
+                ability.OnActions.Add(0, new PinchNeededEvent(2, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 4, 3)));
             }
             else if (ii == 202)
             {
-                ability.Name = new LocalText("**Slush Rush");
+                ability.Name = new LocalText("Slush Rush");
                 ability.Desc = new LocalText("Boosts the Pokémon's Speed stat in a hailstorm.");
+                ability.OnRefresh.Add(0, new MiscEvent(new HailState()));
+                ability.OnRefresh.Add(0, new WeatherSpeedEvent("hail"));
             }
             else if (ii == 203)
             {
@@ -1633,8 +1636,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 212)
             {
-                ability.Name = new LocalText("**Corrosion");
+                ability.Name = new LocalText("Corrosion");
                 ability.Desc = new LocalText("The Pokémon can poison the target even if it's a Steel or Poison type.");
+                ability.OnActions.Add(0, new AddContextStateEvent(new Corrosion()));
             }
             else if (ii == 213)
             {
@@ -1890,13 +1894,15 @@ namespace DataGenerator.Data
             }
             else if (ii == 262)
             {
-                ability.Name = new LocalText("**Transistor");
+                ability.Name = new LocalText("Transistor");
                 ability.Desc = new LocalText("Powers up Electric-type moves.");
+                ability.OnActions.Add(0, new MultiplyElementEvent("electric", 11, 10, false));
             }
             else if (ii == 263)
             {
-                ability.Name = new LocalText("**Dragon's Maw");
+                ability.Name = new LocalText("Dragon's Maw");
                 ability.Desc = new LocalText("Powers up Dragon-type moves.");
+                ability.OnActions.Add(0, new MultiplyElementEvent("dragon", 11, 10, false));
             }
             else if (ii == 264)
             {

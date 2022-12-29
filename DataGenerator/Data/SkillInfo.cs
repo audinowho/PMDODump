@@ -10333,12 +10333,12 @@ namespace DataGenerator.Data
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
-                ((AreaAction)skill.HitboxAction).Range = 2;
+                ((AreaAction)skill.HitboxAction).Range = 1;
                 ((AreaAction)skill.HitboxAction).Speed = 10;
                 ((AreaAction)skill.HitboxAction).HitTiles = true;
                 ((AreaAction)skill.HitboxAction).LagBehindTime = 30;
                 skill.HitboxAction.ActionFX.Emitter = new BetweenEmitter(new AnimData("Dark_Pulse_Back", 2), new AnimData("Dark_Pulse_Front", 2));
-                CircleSquareAreaEmitter areaEmitter = new CircleSquareAreaEmitter(new AnimData("Dark_Pulse_Particle", 3, 0, 3), new AnimData("Dark_Pulse_Ranger", 3));
+                CircleSquareAreaEmitter areaEmitter = new CircleSquareAreaEmitter(new AnimData("Dark_Pulse_Particle", 3), new AnimData("Dark_Pulse_Ranger", 3));
                 areaEmitter.ParticlesPerTile = 1.5;
                 areaEmitter.RangeDiff = -12;
                 ((AreaAction)skill.HitboxAction).Emitter = areaEmitter;
@@ -11502,15 +11502,13 @@ namespace DataGenerator.Data
             else if (ii == 441)
             {
                 skill.Name = new LocalText("Gunk Shot");
-                skill.Desc = new LocalText("The user shoots filthy garbage at the target to attack. This may also poison the target.");
+                skill.Desc = new LocalText("The user shoots filthy garbage at the target to attack.");
                 skill.BaseCharges = 11;
                 skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 75;
-                skill.Data.SkillStates.Set(new BasePowerState(95));
-                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
+                skill.Data.SkillStates.Set(new BasePowerState(90));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("poison", true, true)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -11520,8 +11518,8 @@ namespace DataGenerator.Data
                 ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
                 ((ProjectileAction)skill.HitboxAction).HitTiles = true;
                 ((ProjectileAction)skill.HitboxAction).Anim = new AnimData("Gunk_Shot", 3);
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
                 skill.HitboxAction.ActionFX.Sound = "DUN_Gunk_Shot";
                 StaticAreaEmitter emitter = new StaticAreaEmitter(new AnimData("Gunk_Shot_Hit", 1));
                 emitter.Range = 14;
@@ -13883,20 +13881,24 @@ namespace DataGenerator.Data
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.SkillStates.Set(new BasePowerState(55));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_accuracy", true, true, -1)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
-                ((AreaAction)skill.HitboxAction).Range = 2;
+                ((AreaAction)skill.HitboxAction).Range = 4;
                 ((AreaAction)skill.HitboxAction).Speed = 10;
                 ((AreaAction)skill.HitboxAction).HitTiles = true;
-                skill.HitboxAction.TileEmitter = new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3));
+                ((AreaAction)skill.HitboxAction).LagBehindTime = 30;
+                CircleSquareAreaEmitter areaEmitter = new CircleSquareAreaEmitter(new AnimData("Dark_Pulse_Particle", 3), new AnimData("Dark_Pulse_Ranger", 3));
+                areaEmitter.ParticlesPerTile = 1.5;
+                areaEmitter.RangeDiff = -12;
+                ((AreaAction)skill.HitboxAction).Emitter = areaEmitter;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
-                skill.HitboxAction.ActionFX.Sound = "DUN_Charge_Beam_2";
+                skill.HitboxAction.ActionFX.Sound = "DUN_Radar_Orb";
             }
             else if (ii == 540)
             {
@@ -16163,19 +16165,28 @@ namespace DataGenerator.Data
             }
             else if (ii == 662)
             {
-                skill.Name = new LocalText("**Spirit Shackle");
+                skill.Name = new LocalText("-Spirit Shackle");
                 skill.Desc = new LocalText("The user attacks while simultaneously stitching the target's shadow to the ground to prevent the target from escaping.");
-                skill.BaseCharges = 10;
+                skill.BaseCharges = 13;
                 skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("immobilized", true, false)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ProjectileAction)skill.HitboxAction).Range = 6;
+                ((ProjectileAction)skill.HitboxAction).Speed = 10;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
+                ((ProjectileAction)skill.HitboxAction).Anim = new AnimData("Wave_Circle_Blue", 3);
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.HitboxAction.ActionFX.Sound = "_UNK_DUN_Water_Echo_2";
             }
             else if (ii == 663)
             {
@@ -16375,19 +16386,30 @@ namespace DataGenerator.Data
             }
             else if (ii == 676)
             {
-                skill.Name = new LocalText("**Pollen Puff");
+                skill.Name = new LocalText("-Pollen Puff");
                 skill.Desc = new LocalText("The user attacks the enemy with a pollen puff that explodes. If the target is an ally, it gives the ally a pollen puff that restores its HP instead.");
-                skill.BaseCharges = 15;
+                skill.BaseCharges = 13;
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+
+                BattleData newData = new BattleData();
+                newData.Element = "normal";
+                newData.Category = BattleData.SkillCategory.Status;
+                newData.HitRate = -1;
+                newData.OnHits.Add(0, new RestoreHPEvent(1, 3, true));
+                skill.Data.BeforeHits.Add(-5, new AllyDifferentEvent(newData));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new ThrowAction();
+                ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ThrowAction)skill.HitboxAction).Coverage = ThrowAction.ArcCoverage.WideAngle;
+                ((ThrowAction)skill.HitboxAction).Range = 3;
+                ((ThrowAction)skill.HitboxAction).Speed = 10;
+                skill.HitboxAction.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                skill.Explosion.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                skill.HitboxAction.ActionFX.Sound = "DUN_Pound";
             }
             else if (ii == 677)
             {
@@ -17014,19 +17036,30 @@ namespace DataGenerator.Data
             }
             else if (ii == 716)
             {
-                skill.Name = new LocalText("**Zing Zap");
+                skill.Name = new LocalText("-Zing Zap");
                 skill.Desc = new LocalText("A strong electric blast crashes down on the target, giving it an electric shock. This may also make the target flinch.");
-                skill.BaseCharges = 10;
+                skill.BaseCharges = 15;
                 skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("flinch", true, true)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).Range = 2;
+                ((DashAction)skill.HitboxAction).StopAtWall = true;
+                ((DashAction)skill.HitboxAction).StopAtHit = true;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
+                BattleFX preFX = new BattleFX();
+                preFX.Emitter = new SingleEmitter(new AnimData("Spark", 3));
+                preFX.Sound = "DUN_Spark";
+                skill.HitboxAction.PreActions.Add(preFX);
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Spark", 3));
+                skill.Data.HitFX.Sound = "DUN_Spark";
             }
             else if (ii == 717)
             {
@@ -18019,19 +18052,24 @@ namespace DataGenerator.Data
             }
             else if (ii == 780)
             {
-                skill.Name = new LocalText("**Pyro Ball");
-                skill.Desc = new LocalText("");
+                skill.Name = new LocalText("-Pyro Ball");
+                skill.Desc = new LocalText("The user attacks by igniting a small stone and launching it as a fiery ball at the target.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 90;
-                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ProjectileAction)skill.HitboxAction).Range = 6;
+                ((ProjectileAction)skill.HitboxAction).Speed = 10;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
             }
             else if (ii == 781)
             {
@@ -18195,17 +18233,30 @@ namespace DataGenerator.Data
             }
             else if (ii == 791)
             {
-                skill.Name = new LocalText("**Life Dew");
-                skill.Desc = new LocalText("");
+                skill.Name = new LocalText("-Life Dew");
+                skill.Desc = new LocalText("The user scatters mysterious water around and restores the HP of itself and its ally Pokémon in the battle.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 4, true));
+                skill.HitboxAction = new AreaAction();
+                ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
+                ((AreaAction)skill.HitboxAction).Range = 4;
+                ((AreaAction)skill.HitboxAction).Speed = 3;
+                ((AreaAction)skill.HitboxAction).HitTiles = true;
+                ((AreaAction)skill.HitboxAction).LagBehindTime = 30;
+                skill.HitboxAction.TargetAlignments = (Alignment.Self | Alignment.Friend);
+                skill.Explosion.TargetAlignments = (Alignment.Self | Alignment.Friend);
+                CircleSquareFountainEmitter emitter = new CircleSquareFountainEmitter();
+                emitter.Anims.Add(new EmittingAnim(new AnimData("Water_Sport", 1, 0, 0), new StaticAnim(new AnimData("Water_Sport", 1, 0, 3)), DrawLayer.Normal));
+                emitter.BurstTime = 4;
+                emitter.ParticlesPerBurst = 2;
+                emitter.Bursts = 6;
+                emitter.RangeDiff = 16;
+                emitter.HeightRatio = 0.8f;
+                ((AreaAction)skill.HitboxAction).Emitter = emitter;
             }
             else if (ii == 792)
             {
