@@ -18169,35 +18169,57 @@ namespace DataGenerator.Data
             }
             else if (ii == 787)
             {
-                skill.Name = new LocalText("**Apple Acid");
-                skill.Desc = new LocalText("");
+                skill.Name = new LocalText("-Apple Acid");
+                skill.Desc = new LocalText("The user attacks the target with an acidic liquid created from tart apples. This also lowers the target's Sp. Def stat.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_special_defense", true, true, -1)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ProjectileAction)skill.HitboxAction).Range = 3;
+                ((ProjectileAction)skill.HitboxAction).Speed = 10;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
+                AttachReleaseEmitter emitter = new AttachReleaseEmitter(new AnimData("Bubbles_Green", 3));
+                emitter.BurstTime = 3;
+                emitter.ParticlesPerBurst = 1;
+                emitter.Speed = 12;
+                emitter.StartDistance = 6;
+                ((ProjectileAction)skill.HitboxAction).Emitter = emitter;
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Bubble";
+                skill.Data.HitFX.Sound = "DUN_Bubble_2";
             }
             else if (ii == 788)
             {
-                skill.Name = new LocalText("**Grav Apple");
-                skill.Desc = new LocalText("");
+                skill.Name = new LocalText("-Grav Apple");
+                skill.Desc = new LocalText("The user inflicts damage by dropping an apple from high above. This also lowers the target's Defense stat.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_defense", true, true, -1)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new ThrowAction();
+                ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ThrowAction)skill.HitboxAction).Coverage = ThrowAction.ArcCoverage.WideAngle;
+                ((ThrowAction)skill.HitboxAction).Range = 3;
+                ((ThrowAction)skill.HitboxAction).Speed = 10;
+                ((ThrowAction)skill.HitboxAction).Anim = new AnimData("Rock_Pieces", 3, 5, 5);
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Rock_Throw";
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Bonemarang_Hit", 3));
             }
             else if (ii == 789)
             {
