@@ -1261,11 +1261,14 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 5)
-                            AddTextureData(layout, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary", "electric");
+                            AddSpecificTextureData(layout, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary", "tall_grass_yellow", "electric");
                         else if (ii < 10)
-                            AddTextureData(layout, "mt_thunder_peak_wall", "mt_thunder_peak_floor", "mt_thunder_peak_secondary", "electric");
+                            AddSpecificTextureData(layout, "mt_thunder_peak_wall", "mt_thunder_peak_floor", "mt_thunder_peak_secondary", "tall_grass_yellow", "electric");
                         else
-                            AddTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", "electric");
+                            AddSpecificTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", "tall_grass_dark", "electric");
+
+                        if (ii >= 5)
+                            AddGrassSteps(layout, new RandRange(3, 7), new IntRange(4, 60), new RandRange(30));
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -1547,14 +1550,16 @@ namespace DataGenerator.Data
                             //Tilesets
                             // other candidates: dark_hill_2,steel_aegis_cave,sealed_ruin_wall
                             if (ii < 4)
-                                AddTextureData(layout, "rock_path_tds_wall", "rock_path_tds_floor", "rock_path_tds_secondary", "dark");
+                                AddSpecificTextureData(layout, "rock_path_tds_wall", "rock_path_tds_floor", "rock_path_tds_secondary", "tall_grass_dark", "dark");
                             else if (ii < 8)
-                                AddTextureData(layout, "dark_hill_2_wall", "dark_hill_2_floor", "dark_hill_2_secondary", "dark");
+                                AddSpecificTextureData(layout, "dark_hill_2_wall", "dark_hill_2_floor", "dark_hill_2_secondary", "tall_grass_dark", "dark");
                             else
-                                AddTextureData(layout, "dark_hill_1_wall", "dark_hill_1_floor", "dark_hill_1_secondary", "dark");
+                                AddSpecificTextureData(layout, "dark_hill_1_wall", "dark_hill_1_floor", "dark_hill_1_secondary", "tall_grass_dark", "dark");
 
                             if (ii >= 10)
                                 AddWaterSteps(layout, "water", new RandRange(20));//water
+
+                            AddGrassSteps(layout, new RandRange(2, 5), new IntRange(4, 60), new RandRange(30));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -2168,14 +2173,17 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 12)
-                            AddTextureData(layout, "northwind_field_wall", "northwind_field_floor", "northwind_field_secondary", "fairy");
+                            AddSpecificTextureData(layout, "northwind_field_wall", "northwind_field_floor", "northwind_field_secondary", "tall_grass_dark", "fairy");
                         else if (ii < 18)
-                            AddTextureData(layout, "craggy_peak_wall", "craggy_peak_floor", "craggy_peak_secondary", "steel");
+                            AddSpecificTextureData(layout, "craggy_peak_wall", "craggy_peak_floor", "craggy_peak_secondary", "tall_grass_dark", "steel");
                         else
-                            AddTextureData(layout, "sky_ruins_area_wall", "sky_ruins_floor", "sky_ruins_secondary", "flying", true);
+                            AddSpecificTextureData(layout, "sky_ruins_area_wall", "sky_ruins_floor", "sky_ruins_secondary", "tall_grass_dark", "flying", true);
 
                         if (ii >= 6)
                             AddWaterSteps(layout, "pit", new RandRange(25));//pit
+
+                        if (ii >= 12)
+                            AddGrassSteps(layout, new RandRange(0, 6), new IntRange(4, 70), new RandRange(30));
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -2439,11 +2447,13 @@ namespace DataGenerator.Data
 
                             //Tilesets
                             if (ii < 5)
-                                AddTextureData(layout, "moonlit_courtyard_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "fairy");
+                                AddSpecificTextureData(layout, "moonlit_courtyard_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy");
                             else if (ii < 10)
-                                AddTextureData(layout, "sky_ruins_area_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "fairy", true);
+                                AddSpecificTextureData(layout, "sky_ruins_area_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy", true);
                             else
-                                AddTextureData(layout, "moonlit_courtyard_2_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "fairy", true);
+                                AddSpecificTextureData(layout, "moonlit_courtyard_2_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy", true);
+
+                            AddGrassSteps(layout, new RandRange(1, 6), new IntRange(4, 70), new RandRange(0));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -4280,16 +4290,18 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 8)
-                            AddTextureData(layout, "deep_dusk_forest_1_wall", "deep_dusk_forest_1_floor", "deep_dusk_forest_1_secondary", "bug");
+                            AddSpecificTextureData(layout, "deep_dusk_forest_1_wall", "deep_dusk_forest_1_floor", "deep_dusk_forest_1_secondary", "tall_grass_dark", "bug");
                         else if (ii < 12)
-                            AddTextureData(layout, "dusk_forest_1_wall", "dusk_forest_1_floor", "dusk_forest_1_secondary", "bug");
+                            AddSpecificTextureData(layout, "dusk_forest_1_wall", "dusk_forest_1_floor", "dusk_forest_1_secondary", "tall_grass_dark", "bug");
                         else if (ii < 20)
-                            AddTextureData(layout, "dusk_forest_2_wall", "dusk_forest_2_floor", "dusk_forest_2_secondary", "bug");
+                            AddSpecificTextureData(layout, "dusk_forest_2_wall", "dusk_forest_2_floor", "dusk_forest_2_secondary", "tall_grass_blue", "bug");
                         else
-                            AddTextureData(layout, "murky_forest_wall", "murky_forest_floor", "murky_forest_secondary", "bug");
+                            AddSpecificTextureData(layout, "murky_forest_wall", "murky_forest_floor", "murky_forest_secondary", "tall_grass_blue", "bug");
 
                         if (ii >= 12)
                             AddWaterSteps(layout, "water", new RandRange(15));//water
+
+                        AddGrassSteps(layout, new RandRange(8, 12), new IntRange(4, 40), new RandRange(25));
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -4624,18 +4636,23 @@ namespace DataGenerator.Data
 
                         //Tilesets
                         if (ii < 8)
-                            AddTextureData(layout, "zero_isle_south_2_wall", "zero_isle_south_2_floor", "zero_isle_south_2_secondary", "dragon");
+                            AddSpecificTextureData(layout, "zero_isle_south_2_wall", "zero_isle_south_2_floor", "zero_isle_south_2_secondary", "tall_grass_dark", "dragon");
                         else if (ii < 12)
-                            AddTextureData(layout, "mt_horn_wall", "mt_horn_floor", "mt_horn_secondary", "dragon");
+                            AddSpecificTextureData(layout, "mt_horn_wall", "mt_horn_floor", "mt_horn_secondary", "tall_grass_dark", "dragon");
                         else if (ii < 16)
-                            AddTextureData(layout, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary", "dragon");
+                            AddSpecificTextureData(layout, "mt_thunder_wall", "mt_thunder_floor", "mt_thunder_secondary", "tall_grass_yellow", "dragon");
                         else if (ii < 20)
-                            AddTextureData(layout, "mt_thunder_wall", "mt_thunder_floor", "mt_thunder_secondary", "dragon");
+                            AddSpecificTextureData(layout, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary", "tall_grass_gray", "dragon");
                         else
-                            AddTextureData(layout, "zero_isle_east_3_wall", "zero_isle_east_3_floor", "zero_isle_east_3_secondary", "dragon");
+                            AddSpecificTextureData(layout, "zero_isle_east_3_wall", "zero_isle_east_3_floor", "zero_isle_east_3_secondary", "tall_grass_dark", "dragon");
 
                         if (ii >= 10)
                             AddWaterSteps(layout, "water", new RandRange(25));//water
+
+                        if (ii < 12)
+                            AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 70), new RandRange(30));
+                        else if (ii < 20)
+                            AddGrassSteps(layout, new RandRange(3, 7), new IntRange(4, 60), new RandRange(20));
 
 
                         //traps
@@ -5191,11 +5208,14 @@ namespace DataGenerator.Data
 
                             //Tilesets
                             if (ii < 7)
-                                AddTextureData(layout, "sky_peak_7th_pass_wall", "sky_peak_7th_pass_floor", "sky_peak_7th_pass_secondary", "ice");
+                                AddSpecificTextureData(layout, "frosty_forest_wall", "frosty_forest_floor", "frosty_forest_secondary", "tall_grass_white", "ice");
                             else if (ii < 11)
-                                AddTextureData(layout, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary", "ice");
+                                AddSpecificTextureData(layout, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary", "tall_grass_white", "ice");
                             else
-                                AddTextureData(layout, "frosty_forest_wall", "frosty_forest_floor", "frosty_forest_secondary", "ice");
+                                AddSpecificTextureData(layout, "sky_peak_7th_pass_wall", "sky_peak_7th_pass_floor", "sky_peak_7th_pass_secondary", "tall_grass_white", "ice");
+
+                            if (ii < 11)
+                                AddGrassSteps(layout, new RandRange(2, 5), new IntRange(4, 60), new RandRange(25));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -5956,18 +5976,26 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B22. Overgrown Wilds.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            if ((ii / 2) % 2 == 0)
+                                AddFloorData(layout, "B22. Overgrown Wilds.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            else
+                                AddFloorData(layout, "B22. Overgrown Wilds.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
                             if (ii < 4)
-                                AddTextureData(layout, "lush_prairie_wall", "lush_prairie_floor", "lush_prairie_secondary", "grass");
+                                AddSpecificTextureData(layout, "lush_prairie_wall", "lush_prairie_floor", "lush_prairie_secondary", "tall_grass", "grass");
                             else if (ii < 8)
-                                AddTextureData(layout, "purity_forest_9_wall", "purity_forest_9_floor", "purity_forest_9_secondary", "grass");
+                                AddSpecificTextureData(layout, "purity_forest_9_wall", "purity_forest_9_floor", "purity_forest_9_secondary", "tall_grass", "grass");
                             else
-                                AddTextureData(layout, "southern_jungle_wall", "southern_jungle_floor", "southern_jungle_secondary", "grass");
+                                AddSpecificTextureData(layout, "southern_jungle_wall", "southern_jungle_floor", "southern_jungle_secondary", "tall_grass_dark", "grass");
 
                             if (ii < 8)
                                 AddWaterSteps(layout, "water", new RandRange(20));//water
+
+                            if (ii < 4)
+                                AddGrassSteps(layout, new RandRange(3, 7), new IntRange(4, 50), new RandRange(20));
+                            else
+                                AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 80), new RandRange(40));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -6193,9 +6221,11 @@ namespace DataGenerator.Data
                             AddFloorData(layout, "B22. Overgrown Wilds.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
-                            AddTextureData(layout, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "grass");
+                            AddSpecificTextureData(layout, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "tall_grass_dark", "grass");
 
                             AddWaterSteps(layout, "water", new RandRange(20));//water
+
+                            AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 80), new RandRange(20));
 
                             //money
                             AddMoneyData(layout, new RandRange(1, 4));
@@ -6859,7 +6889,10 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B18. Faultline Ridge.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
+                            if (ii < 8)
+                                AddFloorData(layout, "B18. Faultline Ridge.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
+                            else
+                                AddFloorData(layout, "B18. Faultline Ridge.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                             //Tilesets
                             //other caniddates: side_path,lower_brine_cave
