@@ -17674,17 +17674,21 @@ namespace DataGenerator.Data
             }
             else if (ii == 756)
             {
-                skill.Name = new LocalText("**Court Change");
-                skill.Desc = new LocalText("");
+                skill.Name = new LocalText("-Court Change");
+                skill.Desc = new LocalText("The user successively switches its position with the positions of other Pokémon.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
-                skill.Data.HitRate = 100;
+                skill.Data.HitRate = -1;
+                skill.Data.OnHits.Add(0, new SwitcherEvent());
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new AreaAction();
+                ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
+                ((AreaAction)skill.HitboxAction).Range = 5;
+                ((AreaAction)skill.HitboxAction).Speed = 10;
+                skill.HitboxAction.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
+                skill.Explosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
+                skill.HitboxAction.ActionFX.Sound = "_UNK_DUN_Flash";
             }
             else if (ii == 757)
             {
