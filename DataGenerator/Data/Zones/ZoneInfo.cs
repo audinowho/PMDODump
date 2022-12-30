@@ -4887,14 +4887,14 @@ namespace DataGenerator.Data
                         //enemies! ~ lv 18 to 32
                         if (ii == 0)
                         {
-                            AddRadiusDespawnData(layout, 160, 160);
-                            AddRadiusRespawnData(layout, 120, 100, 80);
+                            AddRadiusDespawnData(layout, 120, 160);
+                            AddRadiusRespawnData(layout, 80, 100, 80);
                             AddRadiusEnemySpawnData(layout, 120, new RandRange(100));
                         }
                         else
                         {
-                            AddRadiusDespawnData(layout, 160, 120);
-                            AddRadiusRespawnData(layout, 120, 120, 60);
+                            AddRadiusDespawnData(layout, 120, 120);
+                            AddRadiusRespawnData(layout, 80, 120, 60);
                             AddRadiusEnemySpawnData(layout, 120, new RandRange(120));
                         }
 

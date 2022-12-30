@@ -2275,10 +2275,12 @@ namespace DataGenerator.Data
                 layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
                 //Tilesets
-                if (ii < 5)
+                if (ii < 2)
                     AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", "normal");
+                else if (ii < 5)
+                    AddSpecificTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", "tall_grass", "normal");
                 else if (ii < 9)
-                    AddTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary", "water");
+                    AddSpecificTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary", "tall_grass", "grass");
                 else if (ii < 11)
                     AddSpecificTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", "tall_grass_dark", "ground");
                 else if (ii < 14)
@@ -2288,7 +2290,7 @@ namespace DataGenerator.Data
                 else if (ii < 19)
                     AddTextureData(layout, "magma_cavern_2_wall", "magma_cavern_2_floor", "magma_cavern_2_secondary", "fire");
                 else if (ii < 21)
-                    AddTextureData(layout, "high_cave_area_wall", "high_cave_area_floor", "high_cave_area_secondary", "steel");
+                    AddSpecificTextureData(layout, "high_cave_area_wall", "high_cave_area_floor", "high_cave_area_secondary", "tall_grass_dark", "steel");
                 else if (ii < 24)
                 {
                     if (ii < 23)
@@ -2298,6 +2300,61 @@ namespace DataGenerator.Data
                 }
                 else
                     AddTextureData(layout, "buried_relic_2_wall", "buried_relic_2_floor", "buried_relic_2_sky_secondary", "steel", true);
+
+
+                //water
+                if (ii < 4)
+                    AddWaterSteps(layout, "water", new RandRange(35));//water
+                else if (ii < 8)
+                    AddWaterSteps(layout, "water", new RandRange(25));//water
+                else if (ii < 10)
+                    AddWaterSteps(layout, "water", new RandRange(22));//water
+                else if (ii < 12)
+                    AddWaterSteps(layout, "water", new RandRange(30), false);//water
+                else if (ii < 14)
+                    AddWaterSteps(layout, "water", new RandRange(15), false);//water
+                else if (ii < 15)
+                    AddWaterSteps(layout, "lava", new RandRange(22));//lava
+                else if (ii < 16)
+                    AddWaterSteps(layout, "lava", new RandRange(30));//lava
+                else if (ii < 18)
+                    AddWaterSteps(layout, "lava", new RandRange(50));//lava
+                else if (ii < 19)
+                    AddWaterSteps(layout, "lava", new RandRange(20));//lava
+                else if (ii < 20)
+                { }
+                else if (ii < 23)
+                    AddWaterSteps(layout, "pit", new RandRange(30), false);//abyss
+                else if (ii < 24)
+                { }
+                else if (ii < 26)
+                    AddWaterSteps(layout, "pit", new RandRange(35));//abyss
+                else if (ii < 27)
+                    AddWaterSteps(layout, "pit", new RandRange(55));//abyss
+                else if (ii < 28)
+                    AddWaterSteps(layout, "pit", new RandRange(75));//abyss
+                else if (ii < 29)
+                    AddWaterSteps(layout, "pit", new RandRange(45));//abyss
+                else
+                    AddWaterSteps(layout, "pit", new RandRange(25));//abyss
+
+                //grasses
+                if (ii < 2)
+                {
+                }
+                else if (ii < 5)
+                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 70), new RandRange(20));
+                else if (ii < 9)
+                    AddGrassSteps(layout, new RandRange(2, 5), new IntRange(4, 70), new RandRange(30));
+                else if (ii < 11)
+                    AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 70), new RandRange(35));
+                else if (ii < 13)
+                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 70), new RandRange(40));
+                else if (ii < 19)
+                {
+                }
+                else if (ii < 22)
+                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 70), new RandRange(50));
 
                 //wonder tiles
                 RandRange wonderTileRange;
@@ -2837,55 +2894,6 @@ namespace DataGenerator.Data
 
                 AddStairStep(layout, false);
 
-                //water
-                if (ii < 4)
-                    AddWaterSteps(layout, "water", new RandRange(35));//water
-                else if (ii < 8)
-                    AddWaterSteps(layout, "water", new RandRange(25));//water
-                else if (ii < 10)
-                    AddWaterSteps(layout, "water", new RandRange(22));//water
-                else if (ii < 12)
-                    AddWaterSteps(layout, "water", new RandRange(30), false);//water
-                else if (ii < 14)
-                    AddWaterSteps(layout, "water", new RandRange(15), false);//water
-                else if (ii < 15)
-                    AddWaterSteps(layout, "lava", new RandRange(22));//lava
-                else if (ii < 16)
-                    AddWaterSteps(layout, "lava", new RandRange(30));//lava
-                else if (ii < 18)
-                    AddWaterSteps(layout, "lava", new RandRange(50));//lava
-                else if (ii < 19)
-                    AddWaterSteps(layout, "lava", new RandRange(20));//lava
-                else if (ii < 20)
-                { }
-                else if (ii < 23)
-                    AddWaterSteps(layout, "pit", new RandRange(30), false);//abyss
-                else if (ii < 24)
-                { }
-                else if (ii < 26)
-                    AddWaterSteps(layout, "pit", new RandRange(35));//abyss
-                else if (ii < 27)
-                    AddWaterSteps(layout, "pit", new RandRange(55));//abyss
-                else if (ii < 28)
-                    AddWaterSteps(layout, "pit", new RandRange(75));//abyss
-                else if (ii < 29)
-                    AddWaterSteps(layout, "pit", new RandRange(45));//abyss
-                else
-                    AddWaterSteps(layout, "pit", new RandRange(25));//abyss
-
-                //grasses
-                if (ii < 9)
-                {
-
-                }
-                else if (ii < 11)
-                {
-                    AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 70), new RandRange(35));
-                }
-                else if (ii < 13)
-                {
-                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 70), new RandRange(10));
-                }
                 //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                 floorSegment.Floors.Add(layout);
@@ -4583,6 +4591,46 @@ namespace DataGenerator.Data
                 else
                     AddTextureData(layout, "foggy_forest_wall", "foggy_forest_floor", "foggy_forest_secondary", "fairy");
 
+
+                if (ii <= 4)
+                {
+                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 80), new RandRange(50));
+                }
+                else if (ii <= 8)
+                {
+                    AddWaterSteps(layout, "water", new RandRange(20), false);//water
+                    AddGrassSteps(layout, new RandRange(4, 7), new IntRange(4, 80), new RandRange(30));
+                }
+                else if (ii <= 10)
+                {
+                    AddWaterSteps(layout, "water", new RandRange(30));//water
+                }
+                else if (ii <= 12)
+                {
+                    AddWaterSteps(layout, "water", new RandRange(30));//water
+                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 80), new RandRange(30));
+                }
+                else if (ii <= 16)
+                {
+                    AddWaterSteps(layout, "water", new RandRange(25));//water
+                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 80), new RandRange(30));
+                }
+                else if (ii <= 20)
+                {
+                    AddWaterSteps(layout, "water", new RandRange(15));//water
+                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 60), new RandRange(20));
+                }
+                else if (ii < 27)
+                {
+                    AddWaterSteps(layout, "water", new RandRange(22));//water
+                }
+                else
+                {
+                    AddWaterSteps(layout, "water", new RandRange(22));//water
+                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 70), new RandRange(30));
+                }
+
+
                 //wonder tiles
                 RandRange wonderTileRange;
                 if (ii <= 12)
@@ -5168,44 +5216,6 @@ namespace DataGenerator.Data
                         RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                         layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                     }
-                }
-
-                if (ii <= 4)
-                {
-                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 80), new RandRange(50));
-                }
-                else if (ii <= 8)
-                {
-                    AddWaterSteps(layout, "water", new RandRange(20), false);//water
-                    AddGrassSteps(layout, new RandRange(4, 7), new IntRange(4, 80), new RandRange(30));
-                }
-                else if (ii <= 10)
-                {
-                    AddWaterSteps(layout, "water", new RandRange(30));//water
-                }
-                else if (ii <= 12)
-                {
-                    AddWaterSteps(layout, "water", new RandRange(30));//water
-                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 80), new RandRange(30));
-                }
-                else if (ii <= 16)
-                {
-                    AddWaterSteps(layout, "water", new RandRange(25));//water
-                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 80), new RandRange(30));
-                }
-                else if (ii <= 20)
-                {
-                    AddWaterSteps(layout, "water", new RandRange(15));//water
-                    AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 80), new RandRange(30));
-                }
-                else if (ii < 27)
-                {
-                    AddWaterSteps(layout, "water", new RandRange(22));//water
-                }
-                else
-                {
-                    AddWaterSteps(layout, "water", new RandRange(22));//water
-                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 70), new RandRange(30));
                 }
 
 
