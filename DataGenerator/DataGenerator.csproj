@@ -31,6 +31,7 @@
     <Compile Include="Data\StatusInfo.cs" />
     <Compile Include="Data\TileInfo.cs" />
     <Compile Include="Data\Zones\MapInfo.cs" />
+    <Compile Include="Data\Zones\ZoneInfoTables.cs" />
     <Compile Include="Data\Zones\ZoneInfoHelpers.cs" />
     <Compile Include="Data\Zones\ZoneInfoRogue.cs" />
     <Compile Include="Data\Zones\ZoneInfoBase.cs" />
