@@ -3636,9 +3636,9 @@ namespace DataGenerator.Data
             }
             else if (index == 13)
             {
-                #region FERTILE RAVINE
+                #region FERTILE VALLEY
                 {
-                    zone.Name = new LocalText("Fertile Ravine");
+                    zone.Name = new LocalText("Fertile Valley");
                     zone.Rescues = 2;
                     zone.Level = 15;
                     zone.Rogue = RogueStatus.ItemTransfer;
@@ -3648,7 +3648,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Fertile Ravine\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Fertile Valley\nB{0}F")));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -3770,7 +3770,7 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B16. Fertile Ravine.ogg", 500, Map.SightRange.Clear, Map.SightRange.Clear);
+                            AddFloorData(layout, "B16. Fertile Valley.ogg", 500, Map.SightRange.Clear, Map.SightRange.Clear);
 
                             //Tilesets
                             if (ii < 6)
@@ -3839,7 +3839,7 @@ namespace DataGenerator.Data
                         int max_floors = 5;
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Muddy Ravine\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Muddy Valley\nB{0}F")));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -3956,7 +3956,7 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B17. Muddy Ravine.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "B17. Muddy Valley.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                             AddWaterSteps(layout, "water", new RandRange(20));//water
 
@@ -6559,7 +6559,12 @@ namespace DataGenerator.Data
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
-                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                            patternList.Add(new PatternPlan("pattern_crosshair", PatternPlan.PatternExtend.Single), 10);
+                            AddTrapPatternSteps(layout, new RandRange(5), patternList);
+
+                            AddTrapsSteps(layout, new RandRange(4, 7));
 
                             //money - Ballpark 25K
                             AddMoneyData(layout, new RandRange(2, 4));

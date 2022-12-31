@@ -71,6 +71,8 @@ namespace DataGenerator.Data
         static readonly Priority PR_TEXTURES = new Priority(4);
         //4.1 shops
         static readonly Priority PR_SHOPS = new Priority(4, 1);
+        //4.2 traps
+        static readonly Priority PR_SPAWN_TRAPS = new Priority(4, 2);
         //5 money
         static readonly Priority PR_SPAWN_MONEY = new Priority(5);
         //5.1 items
@@ -81,8 +83,6 @@ namespace DataGenerator.Data
         static readonly Priority PR_SPAWN_MOBS = new Priority(5, 2);
         //5.2.1 extra mobs
         static readonly Priority PR_SPAWN_MOBS_EXTRA = new Priority(5, 2, 1);
-        //5.3 traps
-        static readonly Priority PR_SPAWN_TRAPS = new Priority(5, 3);
         //6 monster houses
         static readonly Priority PR_HOUSES = new Priority(6);
         //7 debug checks
