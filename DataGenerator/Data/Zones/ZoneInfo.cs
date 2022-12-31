@@ -971,12 +971,12 @@ namespace DataGenerator.Data
                         else if (ii < 6)
                         {
                             AddWaterSteps(layout, "pit", new RandRange(60));//abyss
-                            AddGrassSteps(layout, new RandRange(0), new IntRange(4, 70), new RandRange(30));
+                            AddGrassSteps(layout, new RandRange(0), new IntRange(3, 9), new RandRange(30));
                         }
                         else
                         {
                             AddWaterSteps(layout, "pit", new RandRange(40));//abyss
-                            AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 70), new RandRange(10));
+                            AddGrassSteps(layout, new RandRange(4, 8), new IntRange(3, 9), new RandRange(10));
                         }
 
 
@@ -1268,7 +1268,7 @@ namespace DataGenerator.Data
                             AddSpecificTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", "tall_grass_dark", "electric");
 
                         if (ii >= 5)
-                            AddGrassSteps(layout, new RandRange(3, 7), new IntRange(4, 60), new RandRange(30));
+                            AddGrassSteps(layout, new RandRange(3, 7), new IntRange(2, 7), new RandRange(30));
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -1559,7 +1559,7 @@ namespace DataGenerator.Data
                             if (ii >= 10)
                                 AddWaterSteps(layout, "water", new RandRange(20));//water
 
-                            AddGrassSteps(layout, new RandRange(2, 5), new IntRange(4, 60), new RandRange(30));
+                            AddGrassSteps(layout, new RandRange(2, 5), new IntRange(2, 7), new RandRange(30));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -2183,7 +2183,7 @@ namespace DataGenerator.Data
                             AddWaterSteps(layout, "pit", new RandRange(25));//pit
 
                         if (ii >= 12)
-                            AddGrassSteps(layout, new RandRange(0, 6), new IntRange(4, 70), new RandRange(30));
+                            AddGrassSteps(layout, new RandRange(0, 6), new IntRange(3, 9), new RandRange(30));
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -2453,7 +2453,7 @@ namespace DataGenerator.Data
                             else
                                 AddSpecificTextureData(layout, "moonlit_courtyard_2_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy", true);
 
-                            AddGrassSteps(layout, new RandRange(1, 6), new IntRange(4, 70), new RandRange(0));
+                            AddGrassSteps(layout, new RandRange(1, 6), new IntRange(3, 9), new RandRange(0));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -2695,8 +2695,7 @@ namespace DataGenerator.Data
                             //Tilesets
                             AddTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary", "fairy");
 
-                            if (ii < 2)
-                                AddWaterSteps(layout, "water", new RandRange(15));//water
+                            //TODO: add water at the borders
 
                             //money
                             AddMoneyData(layout, new RandRange(1, 4));
@@ -4299,9 +4298,9 @@ namespace DataGenerator.Data
                             AddSpecificTextureData(layout, "murky_forest_wall", "murky_forest_floor", "murky_forest_secondary", "tall_grass_blue", "bug");
 
                         if (ii >= 12)
-                            AddWaterSteps(layout, "water", new RandRange(15));//water
+                            AddBlobWaterSteps(layout, "water", new RandRange(1, 4), new IntRange(2, 9), true);
 
-                        AddGrassSteps(layout, new RandRange(8, 12), new IntRange(4, 40), new RandRange(25));
+                        AddGrassSteps(layout, new RandRange(8, 12), new IntRange(2, 6), new RandRange(25));
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -4650,9 +4649,9 @@ namespace DataGenerator.Data
                             AddWaterSteps(layout, "water", new RandRange(25));//water
 
                         if (ii < 12)
-                            AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 70), new RandRange(30));
+                            AddGrassSteps(layout, new RandRange(4, 8), new IntRange(3, 9), new RandRange(30));
                         else if (ii < 20)
-                            AddGrassSteps(layout, new RandRange(3, 7), new IntRange(4, 60), new RandRange(20));
+                            AddGrassSteps(layout, new RandRange(3, 7), new IntRange(2, 7), new RandRange(20));
 
 
                         //traps
@@ -4874,10 +4873,7 @@ namespace DataGenerator.Data
                         else
                             AddTextureData(layout, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary", "ground");
 
-                        MatchTerrainStencil<MapGenContext> matchStencil = new MatchTerrainStencil<MapGenContext>();
-                        matchStencil.MatchTiles.Add(new Tile("floor"));
-                        matchStencil.MatchTiles.Add(new Tile("grass"));
-                        NoChokepointStencil<MapGenContext> roomStencil = new NoChokepointStencil<MapGenContext>(matchStencil);
+                        NoChokepointStencil<MapGenContext> roomStencil = new NoChokepointStencil<MapGenContext>(new MapTerrainStencil<MapGenContext>(false, false, true, true));
                         BlobWaterStep<MapGenContext> waterStep = new BlobWaterStep<MapGenContext>(new RandRange(0, 3), new Tile("water"), new DefaultTerrainStencil<MapGenContext>(), roomStencil, new IntRange(1, 20), new IntRange(1, 20));
                         layout.GenSteps.Add(PR_WATER, waterStep);
 
@@ -5215,7 +5211,7 @@ namespace DataGenerator.Data
                                 AddSpecificTextureData(layout, "sky_peak_7th_pass_wall", "sky_peak_7th_pass_floor", "sky_peak_7th_pass_secondary", "tall_grass_white", "ice");
 
                             if (ii < 11)
-                                AddGrassSteps(layout, new RandRange(2, 5), new IntRange(4, 60), new RandRange(25));
+                                AddGrassSteps(layout, new RandRange(2, 5), new IntRange(2, 7), new RandRange(25));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -5736,7 +5732,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "buried_relic_3_wall", "buried_relic_3_floor", "buried_relic_3_secondary", "psychic");
 
                         if (ii < 4)
-                            AddWaterSteps(layout, "water", new RandRange(10));//water
+                            AddBlobWaterSteps(layout, "water", new RandRange(1, 4), new IntRange(2, 6), true);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -5993,9 +5989,9 @@ namespace DataGenerator.Data
                                 AddWaterSteps(layout, "water", new RandRange(20));//water
 
                             if (ii < 4)
-                                AddGrassSteps(layout, new RandRange(3, 7), new IntRange(4, 50), new RandRange(20));
+                                AddGrassSteps(layout, new RandRange(3, 7), new IntRange(2, 6), new RandRange(20));
                             else
-                                AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 80), new RandRange(40));
+                                AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 11), new RandRange(40));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -6225,7 +6221,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(20));//water
 
-                            AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 80), new RandRange(20));
+                            AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 11), new RandRange(20));
 
                             //money
                             AddMoneyData(layout, new RandRange(1, 4));
@@ -8206,7 +8202,7 @@ namespace DataGenerator.Data
 
                         }
                         else
-                            AddGrassSteps(layout, new RandRange(2, 5), new IntRange(4, 50), new RandRange(50));
+                            AddGrassSteps(layout, new RandRange(2, 5), new IntRange(2, 6), new RandRange(50));
 
                         //Tilesets
                         AddSpecificTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "tall_grass_dark", "bug");
@@ -8510,7 +8506,7 @@ namespace DataGenerator.Data
                         //Floor settings
                         AddFloorData(layout, "B19. Bramble Thicket.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
-                        AddGrassSteps(layout, new RandRange(3, 7), new IntRange(4, 50), new RandRange(50));
+                        AddGrassSteps(layout, new RandRange(3, 7), new IntRange(2, 6), new RandRange(50));
 
                         //Tilesets
                         AddSpecificTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "tall_grass_dark", "bug");

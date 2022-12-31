@@ -226,7 +226,7 @@ namespace DataGenerator.Data
 
 
                 //Second floor.  Tests Monster Houses, Locked Passages, and Beetle-shaped rooms
-                #region DEBUG FLOOR 2
+                #region ENEMY STRESS TEST
                 {
                     GridFloorGen layout = new GridFloorGen();
 
@@ -373,7 +373,7 @@ namespace DataGenerator.Data
                     GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                     path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                     path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                    path.RoomRatio = new RandRange(15);
+                    path.RoomRatio = new RandRange(50);
 
                     SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
                     //round
@@ -410,6 +410,8 @@ namespace DataGenerator.Data
 
                     //Tilesets
                     AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
+
+                    AddBlobWaterSteps(layout, "water", new RandRange(10), new IntRange(2, 10));
 
                     // neutral NPC
                     {
@@ -1304,24 +1306,11 @@ namespace DataGenerator.Data
 
                     //Generate water (specified by user as Terrain 2) with a frequency of 99%, using Perlin Noise in an order of 2.
                     string terrain = "pit";
-                    PerlinWaterStep<ListMapGenContext> waterStep = new PerlinWaterStep<ListMapGenContext>(new RandRange(80), 3, new Tile(terrain), new MapTerrainStencil<ListMapGenContext>(false, true, false), 2, false);
+                    PerlinWaterStep<ListMapGenContext> waterStep = new PerlinWaterStep<ListMapGenContext>(new RandRange(80), 3, new Tile(terrain), new MapTerrainStencil<ListMapGenContext>(false, true, false, false), 2, false);
                     layout.GenSteps.Add(PR_WATER, waterStep);
 
-                    //lay down more floor
-                    //commented out and using disconnected rooms instead...
-                    //int floorTerrain = 0;
-                    //IntrudingBlobWaterStep<ListMapGenContext> floorStep = new IntrudingBlobWaterStep<ListMapGenContext>(new RandRange(8), new Tile(floorTerrain), 10, new RandRange(20));
-                    //layout.GenSteps.Add(PR_WATER, floorStep);
-
                     //put the walls back in via "water" algorithm
-
-                    MatchTerrainStencil<ListMapGenContext> matchStencil = new MatchTerrainStencil<ListMapGenContext>();
-                    matchStencil.MatchTiles.Add(new Tile("floor"));
-                    matchStencil.MatchTiles.Add(new Tile("grass"));
-                    NoChokepointStencil<ListMapGenContext> roomStencil = new NoChokepointStencil<ListMapGenContext>(matchStencil);
-                    string wallTerrain = "wall";
-                    BlobWaterStep<ListMapGenContext> wallStep = new BlobWaterStep<ListMapGenContext>(new RandRange(10), new Tile(wallTerrain), new DefaultTerrainStencil<ListMapGenContext>(), roomStencil, new IntRange(1, 20), new IntRange(1, 20));
-                    layout.GenSteps.Add(PR_WATER, wallStep);
+                    AddBlobWaterSteps(layout, "wall", new RandRange(10), new IntRange(1, 20), false);
 
                     //Remove walls where diagonals of water exist and replace with water
                     layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<ListMapGenContext>(new Tile(terrain)));
@@ -1488,7 +1477,7 @@ namespace DataGenerator.Data
 
                     //grass
                     string coverTerrain = "grass";
-                    PerlinWaterStep<MapGenContext> coverStep = new PerlinWaterStep<MapGenContext>(new RandRange(20), 3, new Tile(coverTerrain), new MapTerrainStencil<MapGenContext>(true, false, false), 1);
+                    PerlinWaterStep<MapGenContext> coverStep = new PerlinWaterStep<MapGenContext>(new RandRange(20), 3, new Tile(coverTerrain), new MapTerrainStencil<MapGenContext>(true, false, false, false), 1);
                     layout.GenSteps.Add(PR_WATER, coverStep);
 
                     //TerrainBorderStencil<MapGenContext> stencil = new TerrainBorderStencil<MapGenContext>();
@@ -1499,9 +1488,10 @@ namespace DataGenerator.Data
                     //stencil.Intrude = true;
                     
                     MultiBlobStencil<MapGenContext> combined = new MultiBlobStencil<MapGenContext>();
-                    combined.List.Add(new BlobTileStencil<MapGenContext>(new MapTerrainStencil<MapGenContext>(true, false, false)));
-                    combined.List.Add(new NoChokepointStencil<MapGenContext>(new MapTerrainStencil<MapGenContext>(true, false, false)));
+                    combined.List.Add(new BlobTileStencil<MapGenContext>(new MapTerrainStencil<MapGenContext>(false, false, true, true)));
+                    combined.List.Add(new NoChokepointStencil<MapGenContext>(new MapTerrainStencil<MapGenContext>(false, false, true, true)));
                     combined.List.Add(new BlobTileStencil<MapGenContext>(new TileEffectStencil<MapGenContext>(true)));
+                    combined.List.Add(new StairsStencil<MapGenContext>(true));
 
                     LoadBlobStep<MapGenContext> wallStep = new LoadBlobStep<MapGenContext>();
                     wallStep.TerrainStencil = combined;
@@ -1510,7 +1500,7 @@ namespace DataGenerator.Data
                     wallStep.Amount = new RandRange(10, 15);
                     layout.GenSteps.Add(PR_WATER, wallStep);
 
-                    //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+                    layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
 
                     structure.Floors.Add(layout);
@@ -1609,7 +1599,7 @@ namespace DataGenerator.Data
 
                     //Generate water (specified by user as Terrain 2) with a frequency of 100%, using Perlin Noise in an order of 2.
                     string terrain = "pit";
-                    PerlinWaterStep<MapGenContext> waterStep = new PerlinWaterStep<MapGenContext>(new RandRange(100), 3, new Tile(terrain), new MapTerrainStencil<MapGenContext>(false, true, false), 2);
+                    PerlinWaterStep<MapGenContext> waterStep = new PerlinWaterStep<MapGenContext>(new RandRange(100), 3, new Tile(terrain), new MapTerrainStencil<MapGenContext>(false, true, false, false), 2);
                     layout.GenSteps.Add(PR_WATER, waterStep);
                     
                     //Remove walls where diagonals of water exist and replace with water

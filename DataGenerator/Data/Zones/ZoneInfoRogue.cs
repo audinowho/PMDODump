@@ -2072,18 +2072,18 @@ namespace DataGenerator.Data
                 {
                 }
                 else if (ii < 5)
-                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 70), new RandRange(20));
+                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(3, 9), new RandRange(20));
                 else if (ii < 9)
-                    AddGrassSteps(layout, new RandRange(2, 5), new IntRange(4, 70), new RandRange(30));
+                    AddGrassSteps(layout, new RandRange(2, 5), new IntRange(3, 9), new RandRange(30));
                 else if (ii < 11)
-                    AddGrassSteps(layout, new RandRange(4, 8), new IntRange(4, 70), new RandRange(35));
+                    AddGrassSteps(layout, new RandRange(4, 8), new IntRange(3, 9), new RandRange(35));
                 else if (ii < 13)
-                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 70), new RandRange(40));
+                    AddGrassSteps(layout, new RandRange(0), new IntRange(3, 9), new RandRange(40));
                 else if (ii < 19)
                 {
                 }
                 else if (ii < 22)
-                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 70), new RandRange(50));
+                    AddGrassSteps(layout, new RandRange(0), new IntRange(3, 9), new RandRange(50));
 
                 //wonder tiles
                 RandRange wonderTileRange;
@@ -4146,12 +4146,12 @@ namespace DataGenerator.Data
 
                 if (ii <= 4)
                 {
-                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 80), new RandRange(50));
+                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 11), new RandRange(50));
                 }
                 else if (ii <= 8)
                 {
                     AddWaterSteps(layout, "water", new RandRange(20), false);//water
-                    AddGrassSteps(layout, new RandRange(4, 7), new IntRange(4, 80), new RandRange(30));
+                    AddGrassSteps(layout, new RandRange(4, 7), new IntRange(4, 11), new RandRange(30));
                 }
                 else if (ii <= 10)
                 {
@@ -4160,17 +4160,17 @@ namespace DataGenerator.Data
                 else if (ii <= 12)
                 {
                     AddWaterSteps(layout, "water", new RandRange(30));//water
-                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 80), new RandRange(30));
+                    AddGrassSteps(layout, new RandRange(0), new IntRange(4, 11), new RandRange(30));
                 }
                 else if (ii <= 16)
                 {
                     AddWaterSteps(layout, "water", new RandRange(25));//water
-                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 80), new RandRange(30));
+                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 11), new RandRange(30));
                 }
                 else if (ii <= 20)
                 {
                     AddWaterSteps(layout, "water", new RandRange(15));//water
-                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 60), new RandRange(20));
+                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(2, 7), new RandRange(20));
                 }
                 else if (ii < 27)
                 {
@@ -4179,7 +4179,7 @@ namespace DataGenerator.Data
                 else
                 {
                     AddWaterSteps(layout, "water", new RandRange(22));//water
-                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(4, 70), new RandRange(30));
+                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(3, 9), new RandRange(30));
                 }
 
 

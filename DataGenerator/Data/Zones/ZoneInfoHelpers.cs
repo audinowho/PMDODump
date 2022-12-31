@@ -258,35 +258,66 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_TILES_BARRIER, new UnbreakableBorderStep<T>(1));
         }
 
+        /// <summary>
+        /// Adds water based on perlin noise.  Respects walkable tiles.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="layout"></param>
+        /// <param name="terrain"></param>
+        /// <param name="percent"></param>
+        /// <param name="eraseIsolated"></param>
         public static void AddWaterSteps<T>(MapGen<T> layout, string terrain, RandRange percent, bool eraseIsolated = true) where T : BaseMapGenContext
         {
-            PerlinWaterStep<T> waterStep = new PerlinWaterStep<T>(new RandRange(), 3, new Tile(terrain), new MapTerrainStencil<T>(false, true, false), 1);
+            PerlinWaterStep<T> waterStep = new PerlinWaterStep<T>(new RandRange(), 3, new Tile(terrain), new MapTerrainStencil<T>(false, true, false, false), 1);
             waterStep.WaterPercent = percent;
             layout.GenSteps.Add(PR_WATER, waterStep);
             layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<T>(new Tile(terrain)));
             if (eraseIsolated)
                 layout.GenSteps.Add(PR_WATER_DE_ISOLATE, new EraseIsolatedStep<T>(new Tile(terrain)));
         }
-        public static void AddGrassSteps<T>(MapGen<T> layout, RandRange roomBlobCount, IntRange roomBlobArea, RandRange hallPercent) where T : BaseMapGenContext
+
+        /// <summary>
+        /// Adds water a number of times with blobs.  These blobs can eat into walkable tiles, but respect chokepoints.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="layout"></param>
+        /// <param name="terrain"></param>
+        /// <param name="amount"></param>
+        /// <param name="amount"></param>
+        /// <param name="eraseIsolated"></param>
+        public static void AddBlobWaterSteps<T>(MapGen<T> layout, string terrain, RandRange amount, IntRange size, bool eraseIsolated = true) where T : StairsMapGenContext
+        {
+            MultiBlobStencil<T> multiBlobStencil = new MultiBlobStencil<T>(false);
+
+            if (eraseIsolated)
+                multiBlobStencil.List.Add(new BlobTileStencil<T>(new MapTerrainStencil<T>(false, false, true, true), true));
+
+            //not allowed to draw the blob over start or end.
+            multiBlobStencil.List.Add(new StairsStencil<T>(true));
+            //effect tile checks are also needed since even though they are postproc-shielded, it'll cut off the path to those locations
+            multiBlobStencil.List.Add(new BlobTileStencil<T>(new TileEffectStencil<T>(true)));
+
+            //not allowed to draw the blob such that chokepoints are removed
+            multiBlobStencil.List.Add(new NoChokepointStencil<T>(new MapTerrainStencil<T>(false, false, true, true)));
+
+            //not allowed to draw individual tiles over unbreakable tiles
+            BlobWaterStep<T> waterStep = new BlobWaterStep<T>(amount, new Tile(terrain), new MatchTerrainStencil<T>(true, new Tile("unbreakable")), multiBlobStencil, size, new IntRange(Math.Max(size.Min, 7), Math.Max(size.Max * 3 / 2, 8)));
+            layout.GenSteps.Add(PR_WATER, waterStep);
+            layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<T>(new Tile(terrain)));
+        }
+
+        public static void AddGrassSteps<T>(MapGen<T> layout, RandRange roomBlobCount, IntRange roomBlobSize, RandRange hallPercent) where T : BaseMapGenContext
         {
             string coverTerrain = "grass";
             {
-                MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false);
-                BlobTilePercentStencil<T> terrainPercentStencil = new BlobTilePercentStencil<T>(50, terrainStencil);
+                BlobTilePercentStencil<T> terrainPercentStencil = new BlobTilePercentStencil<T>(50, new MapTerrainStencil<T>(false, false, true, true));
 
-                MatchTerrainStencil<T> matchStencil = new MatchTerrainStencil<T>();
-                matchStencil.MatchTiles.Add(new Tile("floor"));
-                matchStencil.MatchTiles.Add(new Tile("grass"));
-                NoChokepointStencil<T> roomStencil = new NoChokepointStencil<T>(matchStencil);
-                BlobWaterStep<T> coverStep = new BlobWaterStep<T>(roomBlobCount, new Tile(coverTerrain), new MapTerrainStencil<T>(true, false, false), new MultiBlobStencil<T>(false, terrainPercentStencil, roomStencil), roomBlobArea, new IntRange(10, 30));
+                BlobWaterStep<T> coverStep = new BlobWaterStep<T>(roomBlobCount, new Tile(coverTerrain), new MapTerrainStencil<T>(true, false, false, false), terrainPercentStencil, roomBlobSize, new IntRange(Math.Max(roomBlobSize.Min, 6), Math.Max(roomBlobSize.Max * 3 / 2, 15)));
                 layout.GenSteps.Add(PR_WATER, coverStep);
             }
             {
-                MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false);
-                MatchTerrainStencil<T> matchStencil = new MatchTerrainStencil<T>();
-                matchStencil.MatchTiles.Add(new Tile("floor"));
-                matchStencil.MatchTiles.Add(new Tile("grass"));
-                NoChokepointTerrainStencil<T> roomStencil = new NoChokepointTerrainStencil<T>(matchStencil);
+                MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false, false);
+                NoChokepointTerrainStencil<T> roomStencil = new NoChokepointTerrainStencil<T>(new MapTerrainStencil<T>(true, false, false, false));
                 roomStencil.Negate = true;
                 PerlinWaterStep<T> coverStep = new PerlinWaterStep<T>(hallPercent, 4, new Tile(coverTerrain), new MultiTerrainStencil<T>(false, terrainStencil, roomStencil), 0, false);
                 layout.GenSteps.Add(PR_WATER, coverStep);
@@ -318,6 +349,22 @@ namespace DataGenerator.Data
             RandomRoomSpawnStep<T, EffectTile> trapStep = new RandomRoomSpawnStep<T, EffectTile>(new PickerSpawner<T, EffectTile>(new LoopedRand<EffectTile>(effectTileSpawns, amount)), includeHalls);
             if (connectivity != ConnectivityRoom.Connectivity.None)
                 trapStep.Filters.Add(new RoomFilterConnectivity(connectivity));
+            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+        }
+
+        public static void AddTrapPatternSteps<T>(MapGen<T> layout, RandRange amount, SpawnList<PatternPlan> planSpawns, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext
+        {
+            PatternSpawnStep<T, EffectTile> trapStep = new PatternSpawnStep<T, EffectTile>();
+            trapStep.Amount = amount;
+            trapStep.Maps = planSpawns;
+            if (connectivity != ConnectivityRoom.Connectivity.None)
+                trapStep.Filters.Add(new RoomFilterConnectivity(connectivity));
+
+            MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false, false);
+            NoChokepointTerrainStencil<T> roomStencil = new NoChokepointTerrainStencil<T>(new MapTerrainStencil<T>(true, false, false, false));
+
+            trapStep.TerrainStencil = new MultiTerrainStencil<T>(false, terrainStencil, roomStencil);
+
             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
         }
 
