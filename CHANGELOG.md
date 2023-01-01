@@ -4,4 +4,5 @@
 * Fix Secret Garden cutscene
 * Properly seed random for scripting
 * Added move range preview
+* Added more menu scripting options
 * Better error reporting for missing assets
