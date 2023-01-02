@@ -1,54 +1,54 @@
 Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-area_script-0000|data.Name		Script Trigger																										
 0000-area_script-0001|data.Desc																												
-0000-area_shop-0000|data.Name		Shop Tile			Baldosa Tienda																							
+0000-area_shop-0000|data.Name		Shop Tile	Case Magasin		Baldosa Tienda																							
 0000-area_shop-0001|data.Desc																												
-0000-chest_empty-0000|data.Name	Not displayed to players.	Empty Chest		Leere Truhe	Cofre Vacío			빈 상자																				
+0000-chest_empty-0000|data.Name	Not displayed to players.	Empty Chest	Coffre Vide	Leere Truhe	Cofre Vacío			빈 상자																				
 0000-chest_empty-0001|data.Desc																												
-0000-chest_full-0000|data.Name	Not displayed to players.	Treasure Chest		Schatztruhe	Cofre del Tesoro			보물상자																				
+0000-chest_full-0000|data.Name	Not displayed to players.	Treasure Chest	Coffre aux trésors	Schatztruhe	Cofre del Tesoro			보물상자																				
 0000-chest_full-0001|data.Desc																												
 0000-none-0000|data.Name		None	Aucun	Keines	Ninguno			효과없음																				
 0000-none-0001|data.Desc		This tile has no effect.	Cette case n'a aucun effet!	Dieses Feld hat keinen Effekt.	Esta baldosa no tiene efecto.			이 타일은 아무런 효과도 없다.																				
-0000-sealed_block-0000|data.Name	Not displayed to players.	Sealed Block			Bloque Sellado			봉인된블럭																				
+0000-sealed_block-0000|data.Name	Not displayed to players.	Sealed Block	Bloc Scellé		Bloque Sellado			봉인된블럭																				
 0000-sealed_block-0001|data.Desc																												
-0000-sealed_door-0000|data.Name	Not displayed to players.	Sealed Door		Versiegelte Tür	Puerta Sellada			봉인된문																				
+0000-sealed_door-0000|data.Name	Not displayed to players.	Sealed Door	Porte Scellée	Versiegelte Tür	Puerta Sellada			봉인된문																				
 0000-sealed_door-0001|data.Desc																												
-0000-sign-0000|data.Name		Sign		Schild	Letrero																							
+0000-sign-0000|data.Name		Sign	Panneau	Schild	Letrero																							
 0000-sign-0001|data.Desc																												
 0000-stairs_back_down-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단																				
-0000-stairs_back_down-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.																										
+0000-stairs_back_down-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.	Escaliers menant à l'étage précédent. Si vous êtes au premier étage, vous pourrez vous échapper du donjon.																									
 0000-stairs_back_up-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단																				
-0000-stairs_back_up-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.																										
-0000-stairs_exit_down-0000|data.Name		Exit Stairs																										
-0000-stairs_exit_down-0001|data.Desc		Stairs leading to the dungeon's exit.																										
-0000-stairs_exit_up-0000|data.Name		Exit Stairs																										
-0000-stairs_exit_up-0001|data.Desc		Stairs leading to the dungeon's exit.																										
+0000-stairs_back_up-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.	Escaliers menant à l'étage précédent. Si vous êtes au premier étage, vous pourrez vous échapper du donjon.																									
+0000-stairs_exit_down-0000|data.Name		Exit Stairs	Escaliers de sortie																									
+0000-stairs_exit_down-0001|data.Desc		Stairs leading to the dungeon's exit.	Escaliers menant à la sortie du donjon.																									
+0000-stairs_exit_up-0000|data.Name		Exit Stairs	Escaliers de sortie																									
+0000-stairs_exit_up-0001|data.Desc		Stairs leading to the dungeon's exit.	Escaliers menant à la sortie du donjon.																									
 0000-stairs_go_down-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단																				
 0000-stairs_go_down-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.	Ces escaliers mènent à l'étage suivant. Si vous êtes au dernier étage, vous quitterez le donjon!	Stufen, die zur nächsten Ebene führen. Bist du auf der letzten Ebene, wirst du aus dem Dungeon entkommen.	Escaleras que conducen al siguiente piso. Si ya estás en el último piso, escaparás de la mazmorra.			다음 층으로 향하는 계단. 마지막 층이라면 던전에서 탈출할 수 있다.																				
 0000-stairs_go_up-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단																				
 0000-stairs_go_up-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.	Ces escaliers mènent à l'étage suivant. Si vous êtes au dernier étage, vous quitterez le donjon!	Stufen, die zur nächsten Ebene führen. Bist du auf der letzten Ebene, wirst du aus dem Dungeon entkommen.	Escaleras que conducen al siguiente piso. Si ya estás en el último piso, escaparás de la mazmorra.			다음 층으로 향하는 계단. 마지막 층이라면 던전에서 탈출할 수 있다.																				
-0000-stairs_secret_down-0000|data.Name		Secret Stairs		Geheime Treppe	Escaleras Secretas			비밀의 계단																				
-0000-stairs_secret_down-0001|data.Desc		Stairs leading to an unknown location.		Stufen, welche zu einem unbekannten Ort führen. Erkunder sollten sich vorbereiten bevor diese voranschreiten, um jeder kommenden Gefahr zu trotzen.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.			알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.																				
-0000-stairs_secret_up-0000|data.Name		Secret Stairs		Geheime Treppe	Escaleras Secretas			비밀의 계단																				
-0000-stairs_secret_up-0001|data.Desc		Stairs leading to an unknown location.		Stufen, welche zu einem unbekannten Ort führen. Erkunder sollten sich vorbereiten bevor diese voranschreiten, um jeder kommenden Gefahr zu trotzen.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.			알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.																				
-0000-tile_boss-0000|data.Name		Signal Area			Área Señal																							
-0000-tile_boss-0001|data.Desc		A mysterious signal that calls Pokémon to the area.			Una misteriosa señal que llama Pokémon al área.																							
-0000-tile_compass-0000|data.Name		Compass Tile																										
-0000-tile_compass-0001|data.Desc		A tile that shows the way to important locations on the floor.																										
+0000-stairs_secret_down-0000|data.Name		Secret Stairs	Escaliers Secrets	Geheime Treppe	Escaleras Secretas			비밀의 계단																				
+0000-stairs_secret_down-0001|data.Desc		Stairs leading to an unknown location.	Des escaliers menant à un endroit inconnu.	Stufen, welche zu einem unbekannten Ort führen. Erkunder sollten sich vorbereiten bevor diese voranschreiten, um jeder kommenden Gefahr zu trotzen.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.			알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.																				
+0000-stairs_secret_up-0000|data.Name		Secret Stairs	Escaliers Secrets	Geheime Treppe	Escaleras Secretas			비밀의 계단																				
+0000-stairs_secret_up-0001|data.Desc		Stairs leading to an unknown location.	Des escaliers menant à un endroit inconnu.	Stufen, welche zu einem unbekannten Ort führen. Erkunder sollten sich vorbereiten bevor diese voranschreiten, um jeder kommenden Gefahr zu trotzen.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.			알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.																				
+0000-tile_boss-0000|data.Name		Signal Area	Zone de Signal		Área Señal																							
+0000-tile_boss-0001|data.Desc		A mysterious signal that calls Pokémon to the area.	Un signal mystérieux qui appelle les Pokémon dans la zone.		Una misteriosa señal que llama Pokémon al área.																							
+0000-tile_compass-0000|data.Name		Compass Tile	Case Compas																									
+0000-tile_compass-0001|data.Desc		A tile that shows the way to important locations on the floor.	Une case qui indique le chemin vers les endroits importants du sol.																									
 0000-tile_evo-0000|data.Name		Luminous Area	Zone Lumineuse	Leuchtende Fläche	Area Luminosa			빛의 지대																				
 0000-tile_evo-0001|data.Desc		A mysterious area that allows Pokémon to evolve.	Un endroit mystérieux qui permet aux Pokémon d'évoluer.	Ein mysteriöser Bereich, welcher Pokémon die Entwicklung ermöglicht.	Un área misteriosa que permite a los Pokémon evolucionar.			포켓몬이 진화할 수 있게 해주는 신비한 지대.																				
-0000-tile_rescue-0000|data.Name		Rescue Point		Rettungszone	Punto de rescate																							
-0000-tile_rescue-0001|data.Desc		It's the rescue spot where your friend's team went down! Send an A-OK mail to rescue the defeated team.		In dieser Rettungszone wurde das Team deines Freundes besiegt! Versende einen OK Brief um das besiegte Team zu retten.	¡Es el lugar de rescate donde el equipo amigo cayó derrotado! Envia un correo A-OK para rescatar al equipo derrotado.																							
-0000-tile_reset-0000|data.Name		Reset Tile		Resetfeld	Baldosa Reinicio																							
-0000-tile_reset-0001|data.Desc		A switch that resets the floor, returning all items, traps, and wild Pokémon to their original positions.		Ein Schalter, der die Ebene zurücksetzt, sodass alle Items, Fallen und wilden Pokemon zu ihrem ursprünglichen Zustand zurückgesetzt werden.	Un botón que reinicia el piso, devolviendo todos los objetos, trampas y Pokémon salvajes a sus posiciones originales.																							
-0000-tile_switch-0000|data.Name		Switch Tile		Schalterfeld	Baldosa Interruptor			스위치 타일																				
-0000-tile_switch-0001|data.Desc		A switch that opens various blocked passageways found on the floor.		Ein Schalter, der verschlossene Pfade auf der Ebene öffnet.	Un botón que abre varios pasillos bloqueados encontrados en el piso.			층 곳곳의 봉쇄된 통로를 여는 스위치.																				
+0000-tile_rescue-0000|data.Name		Rescue Point	Point de Sauvetage	Rettungszone	Punto de rescate																							
+0000-tile_rescue-0001|data.Desc		It's the rescue spot where your friend's team went down! Send an A-OK mail to rescue the defeated team.	C'est le lieu de sauvetage où l'équipe de votre ami a été vaincue ! Envoyez un courrier A-OK pour sauver l'équipe vaincue.	In dieser Rettungszone wurde das Team deines Freundes besiegt! Versende einen OK Brief um das besiegte Team zu retten.	¡Es el lugar de rescate donde el equipo amigo cayó derrotado! Envia un correo A-OK para rescatar al equipo derrotado.																							
+0000-tile_reset-0000|data.Name		Reset Tile	Case de Réinitialisation	Resetfeld	Baldosa Reinicio																							
+0000-tile_reset-0001|data.Desc		A switch that resets the floor, returning all items, traps, and wild Pokémon to their original positions.	Un interrupteur qui réinitialise l'étage, remettant tous les objets, pièges et Pokémon sauvages à leur position initiale.	Ein Schalter, der die Ebene zurücksetzt, sodass alle Items, Fallen und wilden Pokemon zu ihrem ursprünglichen Zustand zurückgesetzt werden.	Un botón que reinicia el piso, devolviendo todos los objetos, trampas y Pokémon salvajes a sus posiciones originales.																							
+0000-tile_switch-0000|data.Name		Switch Tile	Case Interrupteur	Schalterfeld	Baldosa Interruptor			스위치 타일																				
+0000-tile_switch-0001|data.Desc		A switch that opens various blocked passageways found on the floor.	Un interrupteur qui ouvre divers passages bloqués trouvés a l'étage.	Ein Schalter, der verschlossene Pfade auf der Ebene öffnet.	Un botón que abre varios pasillos bloqueados encontrados en el piso.			층 곳곳의 봉쇄된 통로를 여는 스위치.																				
 0000-tile_training-0000|data.Name		Training Switch	Bachopiège	Trainingschalter	Baldosa Práctica			트레이닝 스위치																				
 0000-tile_training-0001|data.Desc		Stepping on this tile gives the Trained status to the party.	Marcher sur cette case donne le status Bachotage à l'équipe.	Wird dieses Feld betreten, wird der "Trainiert"-Status an das Team gegeben.	Pisar en esta baldosa da el estado Practicando al equipo.			밟으면 아군에게 트레이닝 상태를 부여한다.																				
 0000-tile_wonder-0000|data.Name		Wonder Tile	Case Miracle	Wunderfeld	Baldosa Mágica			이상한 마루																				
 0000-tile_wonder-0001|data.Desc		An odd floor tile seen in many dungeons. Triggering it resets nearby Pokémon's stats if they are boosted or reduced.	Une étrange cases présente dans beaucoup de donjon. Marcher dessus réinitialise les stats du Pokémon.	Ein merkwürdiges Feld, das man in vielen Dungeons findet. Tritt ein Pokémon darauf, werden Angriff, Verteidigung und andere Statuswert, wenn sie erhöht oder gesenkt waren, wieder auf den normalen Stand gesetzt.	Una extraña baldosa que se ve en varias mazmorras. Al activarla reinicia las estadísticas de los Pokémon cercanos si están reducidos o aumentados.			많은 던전에서 보이는 이상한 타일. 작동하면 근처 포켓몬의 능력치를 원래대로 되돌린다.																				
 0000-trap_apple-0000|data.Name		Apple Trap	Piège Pomme	Apfel-Falle	Trampa Manzana			사과 함정																				
-0000-trap_apple-0001|data.Desc		Triggering this trap turns a held-effect item into an apple.		Wird diese Falle ausgelöst, wird ein Item, welches einen Effekt beim Tragen besitzt, in einen Apfel verwandelt.	Al activar esta trampa convierte un objeto que se activa al llevarlo en una manzana.			밟으면 지니고 있을때 효과를 주는 도구 하나가 사과로 변한다.																				
+0000-trap_apple-0001|data.Desc		Triggering this trap turns a held-effect item into an apple.	Le déclenchement de ce piège transforme un objet à effet maintenu en une pomme.	Wird diese Falle ausgelöst, wird ein Item, welches einen Effekt beim Tragen besitzt, in einen Apfel verwandelt.	Al activar esta trampa convierte un objeto que se activa al llevarlo en una manzana.			밟으면 지니고 있을때 효과를 주는 도구 하나가 사과로 변한다.																				
 0000-trap_chestnut-0000|data.Name		Chestnut Trap	Piège Châtaigne	Kastanien-Falle	Trampa Castañazo			밤송이 스위치																				
 0000-trap_chestnut-0001|data.Desc		Triggering this trap makes spiky unshelled Chestnuts drop, inflicting damage on nearby Pokémon and causing them to flinch.																										
 0000-trap_discord-0000|data.Name		Discord Trap	Piège Discorde	Zwietrachts-Falle	Trampa Discordia			불화 함정																				
