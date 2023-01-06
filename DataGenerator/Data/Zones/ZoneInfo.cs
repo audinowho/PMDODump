@@ -1266,7 +1266,7 @@ namespace DataGenerator.Data
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
-                        GridFloorGen layout = new GridFloorGen();
+                        RoomFloorGen layout = new RoomFloorGen();
 
                         //Floor settings
                         AddFloorData(layout, "B10. Thunderstruck Pass.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
@@ -1300,32 +1300,53 @@ namespace DataGenerator.Data
 
                         //construct paths
                         {
-                            AddInitGridStep(layout, 4, 4, 10, 10);
+                            AddInitListStep(layout, 50, 40);
 
-                            GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                            FloorPathBranch<ListMapGenContext> path = new FloorPathBranch<ListMapGenContext>();
+
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                             path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                            path.RoomRatio = new RandRange(90);
-                            path.BranchRatio = new RandRange(0, 25);
+                            path.FillPercent = new RandRange(40);
+                            path.BranchRatio = new RandRange(80);
+                            path.HallPercent = 100;
 
-                            SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                            SpawnList<RoomGen<ListMapGenContext>> genericRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                             //cross
-                            genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
-                            //round
-                            genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                            if (ii >= 5)
+                                genericRooms.Add(new RoomGenCross<ListMapGenContext>(new RandRange(5, 9), new RandRange(5, 9), new RandRange(2, 5), new RandRange(2, 5)), 4);
+                            //diamond
+                            genericRooms.Add(new RoomGenDiamond<ListMapGenContext>(new RandRange(5), new RandRange(5)), 8);
+                            genericRooms.Add(new RoomGenDiamond<ListMapGenContext>(new RandRange(9), new RandRange(9)), 4);
+                            genericRooms.Add(new RoomGenDiamond<ListMapGenContext>(new RandRange(15), new RandRange(15)), 2);
                             path.GenericRooms = genericRooms;
 
-                            SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
-                            genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                            SpawnList<PermissiveRoomGen<ListMapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
+                            if (ii < 5)
+                                genericHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(1), new RandRange(1)), 10);
+                            else
+                            {
+                                genericHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(1, 4), new RandRange(1)), 10);
+                                genericHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(1), new RandRange(1, 4)), 10);
+                            }
                             path.GenericHalls = genericHalls;
 
-                            layout.GenSteps.Add(PR_GRID_GEN, path);
+                            layout.GenSteps.Add(PR_ROOMS_GEN, path);
 
-                            layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            AddTunnelStep<ListMapGenContext> tunneler = new AddTunnelStep<ListMapGenContext>();
+                            if (ii < 10)
+                                tunneler.Halls = new RandRange(12, 18);
+                            else
+                                tunneler.Halls = new RandRange(16, 22);
+
+                            tunneler.TurnLength = new RandRange(2, 4);
+                            tunneler.MaxLength = new RandRange(2, 6);
+                            tunneler.AllowDeadEnd = true;
+                            layout.GenSteps.Add(PR_TILES_GEN_TUNNEL, tunneler);
 
                         }
 
-                        AddDrawGridSteps(layout);
+                        AddDrawListSteps(layout);
 
                         AddStairStep(layout, false);
 
@@ -6622,21 +6643,64 @@ namespace DataGenerator.Data
                             AddItemData(layout, new RandRange(3, 6), 25);
 
 
+
                             //construct paths
+                            if (ii < 5)
                             {
-                                AddInitGridStep(layout, 4, 4, 10, 10);
+                                //prim maze with caves
+                                AddInitGridStep(layout, 4, 3, 12, 12);
 
                                 GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                                 path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                                 path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                                path.RoomRatio = new RandRange(90);
-                                path.BranchRatio = new RandRange(0, 25);
+                                path.RoomRatio = new RandRange(100);
+                                path.BranchRatio = new RandRange(0, 35);
 
                                 SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
                                 //cross
-                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(5, 12), new RandRange(5, 12), new RandRange(4, 6), new RandRange(4, 6)), 10);
                                 //round
-                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(6, 11), new RandRange(6, 11)), 10);
+                                //blocked
+                                genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(6, 9), new RandRange(6, 9), new RandRange(1, 5), new RandRange(1, 5)), 5);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(50, 50));
+
+                                {
+                                    CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(1, 4), GetImmutableFilterList());
+                                    step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                    step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                    step.RoomComponents.Set(new NoEventRoom());
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenRound<MapGenContext>(new RandRange(7), new RandRange(10, 15))), 10);
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(5, 7), new RandRange(10, 15), new RandRange(1, 3), new RandRange(3, 7))), 10);
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenRound<MapGenContext>(new RandRange(10, 15), new RandRange(7))), 10);
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(10, 15), new RandRange(5, 7), new RandRange(3, 7), new RandRange(1, 3))), 10);
+                                    layout.GenSteps.Add(PR_GRID_GEN, step);
+                                }
+                            }
+                            else
+                            {
+                                //prim maze with caves
+                                AddInitGridStep(layout, 6, 5, 7, 7);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(80);
+                                path.BranchRatio = new RandRange(0, 35);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(5, 7), new RandRange(5, 7), new RandRange(2, 5), new RandRange(2, 5)), 10);
+                                //blocked
+                                genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(4, 7), new RandRange(4, 7), new RandRange(1, 3), new RandRange(1, 3)), 5);
                                 path.GenericRooms = genericRooms;
 
                                 SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
@@ -6647,11 +6711,24 @@ namespace DataGenerator.Data
 
                                 layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
 
+                                {
+                                    CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(8, 12), GetImmutableFilterList());
+                                    step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                    step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                    step.RoomComponents.Set(new NoEventRoom());
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), new RoomGenRound<MapGenContext>(new RandRange(10, 15), new RandRange(10, 15))), 10);
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(10, 15), new RandRange(10, 15), new RandRange(3, 7), new RandRange(3, 7))), 10);
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(5, 7), new RandRange(10, 15), new RandRange(1, 3), new RandRange(3, 7))), 10);
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenRound<MapGenContext>(new RandRange(10, 15), new RandRange(7))), 10);
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(10, 15), new RandRange(5, 7), new RandRange(3, 7), new RandRange(1, 3))), 10);
+                                    layout.GenSteps.Add(PR_GRID_GEN, step);
+                                }
                             }
 
                             AddDrawGridSteps(layout);
 
-                            AddStairStep(layout, false);
+                            AddStairStep(layout, true);
+
 
 
                             floorSegment.Floors.Add(layout);
@@ -6737,19 +6814,20 @@ namespace DataGenerator.Data
 
                             //construct paths
                             {
-                                AddInitGridStep(layout, 4, 3, 8, 8);
+                                //prim maze with caves
+                                AddInitGridStep(layout, 6, 5, 7, 7, 1, true);
 
                                 GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                                 path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                                 path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                                path.RoomRatio = new RandRange(90);
-                                path.BranchRatio = new RandRange(0, 25);
+                                path.RoomRatio = new RandRange(100);
+                                path.BranchRatio = new RandRange(0, 35);
 
                                 SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
                                 //cross
-                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(2, 7), new RandRange(2, 7), new RandRange(2, 6), new RandRange(2, 6)), 10);
-                                //round
-                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(4, 8), new RandRange(4, 8)), 10);
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(5, 7), new RandRange(5, 7), new RandRange(2, 5), new RandRange(2, 5)), 10);
+                                //blocked
+                                genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(4, 7), new RandRange(4, 7), new RandRange(1, 3), new RandRange(1, 3)), 5);
                                 path.GenericRooms = genericRooms;
 
                                 SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
@@ -6760,11 +6838,26 @@ namespace DataGenerator.Data
 
                                 layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
 
+                                {
+                                    CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(5, 9), GetImmutableFilterList());
+                                    step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                    step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                    step.RoomComponents.Set(new NoEventRoom());
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), new RoomGenRound<MapGenContext>(new RandRange(10, 15), new RandRange(10, 15))), 10);
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(10, 15), new RandRange(10, 15), new RandRange(3, 7), new RandRange(3, 7))), 10);
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(5, 7), new RandRange(10, 15), new RandRange(1, 3), new RandRange(3, 7))), 10);
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenRound<MapGenContext>(new RandRange(10, 15), new RandRange(7))), 10);
+                                    step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(10, 15), new RandRange(5, 7), new RandRange(3, 7), new RandRange(1, 3))), 10);
+                                    layout.GenSteps.Add(PR_GRID_GEN, step);
+                                }
                             }
 
-                            AddDrawGridSteps(layout);
+                            layout.GenSteps.Add(PR_ROOMS_INIT, new DrawGridToFloorStep<MapGenContext>());
+                            layout.GenSteps.Add(PR_TILES_INIT, new DrawFloorToTileStep<MapGenContext>());
 
-                            AddStairStep(layout, true);
+                            //Add the stairs up and down
+                            AddStairStep(layout, false);
+
 
                             floorSegment.Floors.Add(layout);
                         }
