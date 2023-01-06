@@ -378,16 +378,10 @@ namespace DataGenerator
 
                         if ((dump & DataManager.DataType.Zone) != DataManager.DataType.None)
                         {
-                            //GraphicsManager.InitParams();
-                            //using (GameBase game = new GameBase())
-                            //{
-                            //    GraphicsManager.InitSystem(game.GraphicsDevice);
-                            //    GraphicsManager.InitStatic();
-
                             MapInfo.AddMapData();
                             MapInfo.AddGroundData(MapInfo.MapNames[0]);
                             ZoneInfo.AddZoneData();
-                            //}
+                            //ZoneInfo.AddZoneData(20);
                         }
 
                         DataManager.DataType reserializeType = DataManager.DataType.None;

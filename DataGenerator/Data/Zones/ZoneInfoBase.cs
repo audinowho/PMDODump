@@ -2082,7 +2082,7 @@ namespace DataGenerator.Data
                 //Tests Tilesets, and unlockables
                 #region TILESET TESTS
                 int curTileIndex = 0;
-                for (int kk = 0; kk < 5; kk++)
+                for (int kk = 0; kk < 153; kk++)
                 {
                     string[] level = {
                             "...........................................",
