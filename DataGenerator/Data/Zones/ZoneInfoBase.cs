@@ -1746,7 +1746,7 @@ namespace DataGenerator.Data
                     //Initialize a 13x11 grid of 2x2 cells.
                     //AddInitGridStep(layout, 13, 11, 2, 2);
 
-                    AddInitGridStep(layout, 8, 5, 6, 7, 1, true);
+                    AddInitGridStep(layout, 8, 5, 7, 6, 1, true);
 
                     GridPathTiered<MapGenContext> path = new GridPathTiered<MapGenContext>();
                     path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
