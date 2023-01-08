@@ -306,6 +306,22 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<T>(new Tile(terrain)));
         }
 
+        public static void AddTerrainPatternSteps<T>(MapGen<T> layout, string terrain, RandRange amount, SpawnList<PatternPlan> planSpawns, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext
+        {
+            PatternTerrainStep<T> trapStep = new PatternTerrainStep<T>(new Tile(terrain));
+            trapStep.Amount = amount;
+            trapStep.Maps = planSpawns;
+            if (connectivity != ConnectivityRoom.Connectivity.None)
+                trapStep.Filters.Add(new RoomFilterConnectivity(connectivity));
+
+            MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false, false);
+            NoChokepointTerrainStencil<T> roomStencil = new NoChokepointTerrainStencil<T>(new MapTerrainStencil<T>(true, false, false, false));
+
+            trapStep.TerrainStencil = new MultiTerrainStencil<T>(false, terrainStencil, roomStencil);
+
+            layout.GenSteps.Add(PR_WATER, trapStep);
+        }
+
         public static void AddGrassSteps<T>(MapGen<T> layout, RandRange roomBlobCount, IntRange roomBlobSize, RandRange hallPercent) where T : BaseMapGenContext
         {
             string coverTerrain = "grass";
