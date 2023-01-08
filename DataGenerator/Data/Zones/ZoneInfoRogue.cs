@@ -4614,7 +4614,7 @@ namespace DataGenerator.Data
                         CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(3), GetImmutableFilterList());
                         step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                         step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                        step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), new RoomGenSquare<MapGenContext>(new RandRange(5), new RandRange(5))), 10);
+                        step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), new RoomGenSquare<MapGenContext>(new RandRange(6), new RandRange(6))), 10);
                         layout.GenSteps.Add(PR_GRID_GEN, step);
                     }
                 }
@@ -4663,7 +4663,7 @@ namespace DataGenerator.Data
 
                     //Special rooms
                     {
-                        AddLargeRoomStep<MapGenContext> step = new AddLargeRoomStep<MapGenContext>(new RandRange(3, 7), GetImmutableFilterList());
+                        AddLargeRoomStep<MapGenContext> step = new AddLargeRoomStep<MapGenContext>(new RandRange(3, 6), GetImmutableFilterList());
                         step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                         step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                         {
@@ -4675,15 +4675,10 @@ namespace DataGenerator.Data
                             step.GiantRooms.Add(largeRoom, 10);
                         }
                         {
-                            string[] custom = new string[] {  "~~~..~~~",
-                                              "~~~..~~~",
-                                              "~~#..#~~",
-                                              "........",
-                                              "........",
-                                              "~~#..#~~",
-                                              "~~~..~~~",
-                                              "~~~..~~~"};
-                            LargeRoom<MapGenContext> largeRoom = new LargeRoom<MapGenContext>(CreateRoomGenSpecific<MapGenContext>(custom), new Loc(3), 2);
+                            RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
+                            loadRoom.MapID = "room_garden_cross_water";
+                            loadRoom.RoomTerrain = new Tile("floor");
+                            LargeRoom<MapGenContext> largeRoom = new LargeRoom<MapGenContext>(loadRoom, new Loc(3), 2);
                             largeRoom.OpenBorders[(int)Dir4.Down][1] = true;
                             largeRoom.OpenBorders[(int)Dir4.Left][1] = true;
                             largeRoom.OpenBorders[(int)Dir4.Up][1] = true;
