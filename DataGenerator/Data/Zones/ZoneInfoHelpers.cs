@@ -311,6 +311,7 @@ namespace DataGenerator.Data
             PatternTerrainStep<T> trapStep = new PatternTerrainStep<T>(new Tile(terrain));
             trapStep.Amount = amount;
             trapStep.Maps = planSpawns;
+            trapStep.AllowTerminal = true;
             if (connectivity != ConnectivityRoom.Connectivity.None)
                 trapStep.Filters.Add(new RoomFilterConnectivity(connectivity));
 

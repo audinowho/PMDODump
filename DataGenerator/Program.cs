@@ -378,10 +378,10 @@ namespace DataGenerator
 
                         if ((dump & DataManager.DataType.Zone) != DataManager.DataType.None)
                         {
-                            MapInfo.AddMapData();
-                            MapInfo.AddGroundData(MapInfo.MapNames[0]);
+                            //MapInfo.AddMapData();
+                            //MapInfo.AddGroundData(MapInfo.MapNames[0]);
                             ZoneInfo.AddZoneData();
-                            //ZoneInfo.AddZoneData(20);
+                            //ZoneInfo.AddZoneData(11);
                         }
 
                         DataManager.DataType reserializeType = DataManager.DataType.None;

@@ -1596,6 +1596,14 @@ namespace DataGenerator.Data
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+
+                            SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                            patternList.Add(new PatternPlan("pattern_teeth", PatternPlan.PatternExtend.Extrapolate), 5);
+                            patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
+                            patternList.Add(new PatternPlan("pattern_slash", PatternPlan.PatternExtend.Repeat2D), 5);
+                            patternList.Add(new PatternPlan("pattern_crosshair", PatternPlan.PatternExtend.Extrapolate), 5);
+                            AddTrapPatternSteps(layout, new RandRange(1, 4), patternList);
+
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
                             //money - 5,278P to 10,353P
@@ -1877,6 +1885,12 @@ namespace DataGenerator.Data
                             //other options: craggy_peak, sky_peak_summit_pass
                             AddTextureData(layout, "spacial_rift_2_wall", "spacial_rift_2_floor", "spacial_rift_2_secondary", "dark");
 
+                            SpawnList<PatternPlan> terrainPattern = new SpawnList<PatternPlan>();
+                            terrainPattern.Add(new PatternPlan("pattern_blob", PatternPlan.PatternExtend.Single), 5);
+                            terrainPattern.Add(new PatternPlan("pattern_checker_large", PatternPlan.PatternExtend.Single), 5);
+                            terrainPattern.Add(new PatternPlan("pattern_plus", PatternPlan.PatternExtend.Single), 5);
+                            AddTerrainPatternSteps(layout, "wall", new RandRange(4, 8), terrainPattern);
+
                             AddWaterSteps(layout, "pit", new RandRange(10));//lava
 
                             //money
@@ -1891,6 +1905,13 @@ namespace DataGenerator.Data
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
+
+                            SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                            patternList.Add(new PatternPlan("pattern_checker", PatternPlan.PatternExtend.Repeat1D), 5);
+                            patternList.Add(new PatternPlan("pattern_x_repeat", PatternPlan.PatternExtend.Repeat2D), 5);
+                            patternList.Add(new PatternPlan("pattern_crosshair", PatternPlan.PatternExtend.Extrapolate), 5);
+                            AddTrapPatternSteps(layout, new RandRange(1, 4), patternList);
+
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
                             //construct paths
@@ -3188,7 +3209,6 @@ namespace DataGenerator.Data
                             //the disconnected rooms
                             {
                                 AddDisconnectedRoomsStep<MapGenContext> addDisconnect = new AddDisconnectedRoomsStep<MapGenContext>();
-                                addDisconnect.Components.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Disconnected));
                                 addDisconnect.Components.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Disconnected));
                                 addDisconnect.Amount = new RandRange(1, 4);
 
@@ -5484,6 +5504,17 @@ namespace DataGenerator.Data
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+
+                            SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                            patternList.Add(new PatternPlan("pattern_teeth", PatternPlan.PatternExtend.Extrapolate), 5);
+                            patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
+                            patternList.Add(new PatternPlan("pattern_x", PatternPlan.PatternExtend.Extrapolate), 5);
+                            patternList.Add(new PatternPlan("pattern_bubble", PatternPlan.PatternExtend.Single), 5);
+                            if (ii < 11)
+                                AddTrapPatternSteps(layout, new RandRange(0, 4), patternList);
+                            else
+                                AddTrapPatternSteps(layout, new RandRange(2, 5), patternList);
+
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
                             //money - Ballpark 25K
@@ -6072,6 +6103,12 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "temporal_unused_wall", "temporal_unused_floor", "temporal_unused_secondary", "psychic");
                         else
                             AddTextureData(layout, "buried_relic_3_wall", "buried_relic_3_floor", "buried_relic_3_secondary", "psychic");
+
+                        SpawnList<PatternPlan> terrainPattern = new SpawnList<PatternPlan>();
+                        terrainPattern.Add(new PatternPlan("pattern_blob", PatternPlan.PatternExtend.Single), 5);
+                        terrainPattern.Add(new PatternPlan("pattern_double_colon", PatternPlan.PatternExtend.Single), 10);
+                        terrainPattern.Add(new PatternPlan("pattern_plus", PatternPlan.PatternExtend.Single), 20);
+                        AddTerrainPatternSteps(layout, "wall", new RandRange(2, 6), terrainPattern);
 
                         if (ii < 4)
                             AddBlobWaterSteps(layout, "water", new RandRange(1, 4), new IntRange(2, 6), true);
@@ -6935,8 +6972,15 @@ namespace DataGenerator.Data
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
 
                             SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
-                            patternList.Add(new PatternPlan("pattern_crosshair", PatternPlan.PatternExtend.Single), 10);
-                            AddTrapPatternSteps(layout, new RandRange(5), patternList);
+                            if (ii < 5)
+                                patternList.Add(new PatternPlan("pattern_slash", PatternPlan.PatternExtend.Extrapolate), 10);
+                            patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 10);
+                            if (ii >= 5)
+                            {
+                                patternList.Add(new PatternPlan("pattern_crosshair", PatternPlan.PatternExtend.Extrapolate), 5);
+                                patternList.Add(new PatternPlan("pattern_x_repeat", PatternPlan.PatternExtend.Repeat2D), 5);
+                            }
+                            AddTrapPatternSteps(layout, new RandRange(2, 5), patternList);
 
                             AddTrapsSteps(layout, new RandRange(4, 7));
 
@@ -7121,6 +7165,13 @@ namespace DataGenerator.Data
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
+
+                            SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                            patternList.Add(new PatternPlan("pattern_checker", PatternPlan.PatternExtend.Repeat1D), 10);
+                            patternList.Add(new PatternPlan("pattern_crosshair", PatternPlan.PatternExtend.Extrapolate), 5);
+                            patternList.Add(new PatternPlan("pattern_x_repeat", PatternPlan.PatternExtend.Repeat2D), 5);
+                            AddTrapPatternSteps(layout, new RandRange(2, 5), patternList);
+
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
                             //construct paths
@@ -7859,6 +7910,12 @@ namespace DataGenerator.Data
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+
+                            SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                            patternList.Add(new PatternPlan("pattern_dither_fourth", PatternPlan.PatternExtend.Repeat2D), 5);
+                            patternList.Add(new PatternPlan("pattern_x", PatternPlan.PatternExtend.Extrapolate), 5);
+                            AddTrapPatternSteps(layout, new RandRange(1, 4), patternList);
+
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
                             //money - Ballpark 25K
@@ -8117,7 +8174,7 @@ namespace DataGenerator.Data
 
                                 path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                                 path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                                path.FillPercent = new RandRange(60);
+                                path.FillPercent = new RandRange(55);
 
                                 path.BranchRatio = new RandRange(80);
 
