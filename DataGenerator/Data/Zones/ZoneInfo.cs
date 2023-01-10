@@ -456,7 +456,7 @@ namespace DataGenerator.Data
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
 
-                            //enemies! ~ lv 5 to 10
+                            //enemies
                             AddRespawnData(layout, 5, 80);
                             AddEnemySpawnData(layout, 20, new RandRange(2, 5));
 
@@ -1005,11 +1005,11 @@ namespace DataGenerator.Data
                         //items
                         AddItemData(layout, new RandRange(3, 5), 25);
 
-                        //enemies! ~ lv 10 to 20
-                        AddRespawnData(layout, 3, 80);
+                        //enemies!
+                        AddRespawnData(layout, 6, 90);
 
                         //enemies
-                        AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                        AddEnemySpawnData(layout, 20, new RandRange(3, 6));
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -1289,11 +1289,9 @@ namespace DataGenerator.Data
                         //money - 3,036P to 6,210P
                         AddMoneyData(layout, new RandRange(2, 4));
 
-                        //enemies! ~ lv 20 to 32
-                        AddRespawnData(layout, 3, 80);
-
                         //enemies
-                        AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                        AddRespawnData(layout, 13, 110);
+                        AddEnemySpawnData(layout, 20, new RandRange(10, 12));
 
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
@@ -1609,11 +1607,9 @@ namespace DataGenerator.Data
                             //money - 5,278P to 10,353P
                             AddMoneyData(layout, new RandRange(2, 4));
 
-                            //enemies! ~ lv 32 to 45
-                            AddRespawnData(layout, 3, 80);
-
                             //enemies
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            AddRespawnData(layout, 15, 110);
+                            AddEnemySpawnData(layout, 20, new RandRange(11, 14));
 
                             //items
                             AddItemData(layout, new RandRange(3, 6), 25);
@@ -1898,9 +1894,9 @@ namespace DataGenerator.Data
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
 
-                            //enemies! ~ lv 5 to 10
-                            AddRespawnData(layout, 4, 80);
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            //enemies
+                            AddRespawnData(layout, 15, 110);
+                            AddEnemySpawnData(layout, 20, new RandRange(11, 14));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
@@ -2281,12 +2277,9 @@ namespace DataGenerator.Data
                         //money - 7,650P to 19,380P
                         AddMoneyData(layout, new RandRange(2, 5));
 
-                        //enemies! ~ lv 45 to 55
-                        AddRespawnData(layout, 3, 80);
-
                         //enemies
-                        AddEnemySpawnData(layout, 20, new RandRange(2, 4));
-
+                        AddRespawnData(layout, 20, 120);
+                        AddEnemySpawnData(layout, 20, new RandRange(14, 18));
 
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
@@ -2710,11 +2703,9 @@ namespace DataGenerator.Data
                             //money - 4,416P to 7,866P
                             AddMoneyData(layout, new RandRange(2, 4));
 
-                            //enemies! ~ lv 20 to 45
-                            AddRespawnData(layout, 3, 80);
-
                             //enemies
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            AddRespawnData(layout, 7, 70);
+                            AddEnemySpawnData(layout, 20, new RandRange(5, 7));
 
 
                             //items
@@ -3070,9 +3061,9 @@ namespace DataGenerator.Data
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
 
-                            //enemies! ~ lv 5 to 10
-                            AddRespawnData(layout, 4, 80);
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            //enemies
+                            AddRespawnData(layout, 7, 90);
+                            AddEnemySpawnData(layout, 20, new RandRange(5, 7));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
@@ -3680,11 +3671,9 @@ namespace DataGenerator.Data
                         //money - 1,560P to 5,850P
                         AddMoneyData(layout, new RandRange(2, 4));
 
-                        //enemies! ~ lv 15 to 35
-                        AddRespawnData(layout, 3, 80);
-
                         //enemies
-                        AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                        AddRespawnData(layout, 5, 50);
+                        AddEnemySpawnData(layout, 20, new RandRange(3, 5));
 
 
                         //items
@@ -3957,12 +3946,9 @@ namespace DataGenerator.Data
                         //money - 630P to 1,197P
                         AddMoneyData(layout, new RandRange(2, 4));
 
-                        //enemies! ~ up to lv 8
-                        AddRespawnData(layout, 3, 80);
-
                         //enemies
-                        AddEnemySpawnData(layout, 20, new RandRange(2, 4));
-
+                        AddRespawnData(layout, 12, 150);
+                        AddEnemySpawnData(layout, 20, new RandRange(9, 12));
 
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
@@ -4224,11 +4210,11 @@ namespace DataGenerator.Data
                             //money - 1,020P to 4,284P
                             AddMoneyData(layout, new RandRange(2, 4));
 
-                            //enemies! ~ lv 6 to 20
-                            AddRespawnData(layout, 3, 80);
+                            //enemies!
+                            AddRespawnData(layout, 6, 90);
 
                             //enemies
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            AddEnemySpawnData(layout, 20, new RandRange(3, 6));
 
 
                             //items
@@ -4423,9 +4409,9 @@ namespace DataGenerator.Data
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
 
-                            //enemies! ~ lv 5 to 10
-                            AddRespawnData(layout, 4, 80);
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            //enemies
+                            AddRespawnData(layout, 6, 90);
+                            AddEnemySpawnData(layout, 20, new RandRange(3, 6));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
@@ -4783,12 +4769,9 @@ namespace DataGenerator.Data
                         //money - Ballpark 35K
                         AddMoneyData(layout, new RandRange(2, 4));
 
-                        //enemies! ~ lv 7 to 30
-                        AddRespawnData(layout, 3, 80);
-
                         //enemies
-                        AddEnemySpawnData(layout, 20, new RandRange(2, 4));
-
+                        AddRespawnData(layout, 18, 120);
+                        AddEnemySpawnData(layout, 20, new RandRange(14, 18));
 
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
@@ -5314,11 +5297,9 @@ namespace DataGenerator.Data
                         //money - Ballpark 30K
                         AddMoneyData(layout, new RandRange(2, 4));
 
-                        //enemies! ~ lv 10 to 33
-                        AddRespawnData(layout, 3, 80);
-
                         //enemies
-                        AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                        AddRespawnData(layout, 18, 120);
+                        AddEnemySpawnData(layout, 20, new RandRange(14, 18));
 
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
@@ -6056,11 +6037,9 @@ namespace DataGenerator.Data
                             //money - Ballpark 25K
                             AddMoneyData(layout, new RandRange(2, 4));
 
-                            //enemies! ~ lv 20 to 30
-                            AddRespawnData(layout, 3, 80);
-
                             //enemies
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            AddRespawnData(layout, 15, 110);
+                            AddEnemySpawnData(layout, 20, new RandRange(11, 14));
 
                             //items
                             AddItemData(layout, new RandRange(3, 6), 25);
@@ -6366,9 +6345,9 @@ namespace DataGenerator.Data
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
 
-                            //enemies! ~ lv 5 to 10
-                            AddRespawnData(layout, 4, 80);
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            //enemies
+                            AddRespawnData(layout, 15, 110);
+                            AddEnemySpawnData(layout, 20, new RandRange(11, 14));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
@@ -6656,12 +6635,9 @@ namespace DataGenerator.Data
                         //money - Ballpark 25K
                         AddMoneyData(layout, new RandRange(2, 4));
 
-                        //enemies! ~ lv 22 to 32
-                        AddRespawnData(layout, 3, 80);
-
                         //enemies
-                        AddEnemySpawnData(layout, 20, new RandRange(2, 4));
-
+                        AddRespawnData(layout, 11, 100);
+                        AddEnemySpawnData(layout, 20, new RandRange(8, 11));
 
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
@@ -6925,11 +6901,9 @@ namespace DataGenerator.Data
                             //money - 750P to 3,150P
                             AddMoneyData(layout, new RandRange(2, 4));
 
-                            //enemies! ~ up to lv 15
-                            AddRespawnData(layout, 3, 80);
-
                             //enemies
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            AddRespawnData(layout, 9, 90);
+                            AddEnemySpawnData(layout, 20, new RandRange(6, 8));
 
                             //items
                             AddItemData(layout, new RandRange(3, 6), 25);
@@ -7169,10 +7143,10 @@ namespace DataGenerator.Data
 
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
-
-                            //enemies! ~ lv 5 to 10
-                            AddRespawnData(layout, 4, 80);
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            
+                            //enemies
+                            AddRespawnData(layout, 9, 90);
+                            AddEnemySpawnData(layout, 20, new RandRange(6, 8));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
@@ -7525,11 +7499,9 @@ namespace DataGenerator.Data
                             //money - Ballpark 25K
                             AddMoneyData(layout, new RandRange(2, 4));
 
-                            //enemies! ~ lv 22 to 32
-                            AddRespawnData(layout, 3, 80);
-
                             //enemies
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            AddRespawnData(layout, 7, 90);
+                            AddEnemySpawnData(layout, 20, new RandRange(4, 7));
 
 
                             //items
@@ -7697,9 +7669,9 @@ namespace DataGenerator.Data
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
 
-                            //enemies! ~ lv 5 to 10
-                            AddRespawnData(layout, 4, 80);
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            //enemies
+                            AddRespawnData(layout, 7, 90);
+                            AddEnemySpawnData(layout, 20, new RandRange(4, 7));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
@@ -8002,11 +7974,9 @@ namespace DataGenerator.Data
                             //money - Ballpark 25K
                             AddMoneyData(layout, new RandRange(2, 4));
 
-                            //enemies! ~ lv 22 to 32
-                            AddRespawnData(layout, 3, 80);
-
                             //enemies
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            AddRespawnData(layout, 7, 90);
+                            AddEnemySpawnData(layout, 20, new RandRange(4, 7));
 
 
                             //items
@@ -8180,9 +8150,9 @@ namespace DataGenerator.Data
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
 
-                            //enemies! ~ lv 5 to 10
-                            AddRespawnData(layout, 4, 80);
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            //enemies
+                            AddRespawnData(layout, 7, 40);
+                            AddEnemySpawnData(layout, 20, new RandRange(4, 7));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
@@ -8459,12 +8429,9 @@ namespace DataGenerator.Data
                             //money - Ballpark 25K
                             AddMoneyData(layout, new RandRange(2, 4));
 
-                            //enemies! ~ lv 22 to 32
-                            AddRespawnData(layout, 3, 80);
-
                             //enemies
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
-
+                            AddRespawnData(layout, 10, 100);
+                            AddEnemySpawnData(layout, 20, new RandRange(7, 10));
 
                             //items
                             AddItemData(layout, new RandRange(3, 6), 25);
@@ -8696,9 +8663,9 @@ namespace DataGenerator.Data
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
 
-                            //enemies! ~ lv 5 to 10
-                            AddRespawnData(layout, 4, 80);
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+                            //enemies
+                            AddRespawnData(layout, 10, 100);
+                            AddEnemySpawnData(layout, 20, new RandRange(7, 10));
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
