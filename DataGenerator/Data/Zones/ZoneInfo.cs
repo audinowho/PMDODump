@@ -451,7 +451,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "tiny_meadow_wall", "tiny_meadow_floor", "tiny_meadow_secondary", "normal");
 
                             //money
-                            AddMoneyData(layout, new RandRange(1, 4));
+                            AddMoneyData(layout, new RandRange(2, 4));
 
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
@@ -1000,10 +1000,10 @@ namespace DataGenerator.Data
                             AddSpecificTextureData(layout, "hidden_highland_wall", "hidden_highland_floor", "hidden_highland_secondary", "tall_grass", "flying");
 
                         //money
-                        AddMoneyData(layout, new RandRange(1, 4));
+                        AddMoneyData(layout, new RandRange(2, 5));
 
                         //items
-                        AddItemData(layout, new RandRange(3, 5), 25);
+                        AddItemData(layout, new RandRange(2, 6), 25);
 
                         //enemies!
                         AddRespawnData(layout, 6, 90);
@@ -1286,15 +1286,15 @@ namespace DataGenerator.Data
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
-                        //money - 3,036P to 6,210P
-                        AddMoneyData(layout, new RandRange(2, 4));
+                        //money
+                        AddMoneyData(layout, new RandRange(3, 7));
 
                         //enemies
                         AddRespawnData(layout, 13, 110);
                         AddEnemySpawnData(layout, 20, new RandRange(10, 12));
 
                         //items
-                        AddItemData(layout, new RandRange(3, 6), 25);
+                        AddItemData(layout, new RandRange(3, 7), 25);
 
                         //construct paths
                         {
@@ -1604,16 +1604,15 @@ namespace DataGenerator.Data
 
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
-                            //money - 5,278P to 10,353P
-                            AddMoneyData(layout, new RandRange(2, 4));
+                            //money
+                            AddMoneyData(layout, new RandRange(3, 7));
 
                             //enemies
                             AddRespawnData(layout, 15, 110);
                             AddEnemySpawnData(layout, 20, new RandRange(11, 14));
 
                             //items
-                            AddItemData(layout, new RandRange(3, 6), 25);
-
+                            AddItemData(layout, new RandRange(3, 7), 25);
 
                             //construct paths
                             if (ii < 4)
@@ -1889,10 +1888,10 @@ namespace DataGenerator.Data
                             AddWaterSteps(layout, "pit", new RandRange(10));//lava
 
                             //money
-                            AddMoneyData(layout, new RandRange(1, 4));
+                            AddMoneyData(layout, new RandRange(3, 7));
 
                             //items
-                            AddItemData(layout, new RandRange(2, 5), 25);
+                            AddItemData(layout, new RandRange(3, 7), 25);
 
                             //enemies
                             AddRespawnData(layout, 15, 110);
@@ -2274,15 +2273,15 @@ namespace DataGenerator.Data
 
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
-                        //money - 7,650P to 19,380P
-                        AddMoneyData(layout, new RandRange(2, 5));
+                        //money
+                        AddMoneyData(layout, new RandRange(4, 9));
 
                         //enemies
                         AddRespawnData(layout, 20, 120);
                         AddEnemySpawnData(layout, 20, new RandRange(14, 18));
 
                         //items
-                        AddItemData(layout, new RandRange(3, 6), 25);
+                        AddItemData(layout, new RandRange(4, 7), 25);
 
 
                         //construct paths
@@ -2700,17 +2699,15 @@ namespace DataGenerator.Data
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
-                            //money - 4,416P to 7,866P
-                            AddMoneyData(layout, new RandRange(2, 4));
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 5));
 
                             //enemies
                             AddRespawnData(layout, 7, 70);
                             AddEnemySpawnData(layout, 20, new RandRange(5, 7));
 
-
                             //items
                             AddItemData(layout, new RandRange(3, 6), 25);
-
 
                             //construct paths
                             if (ii < 5 || ii >= 10)
@@ -3056,10 +3053,10 @@ namespace DataGenerator.Data
                             layout.GenSteps.Add(PR_WATER, trapStep);
 
                             //money
-                            AddMoneyData(layout, new RandRange(1, 4));
+                            AddMoneyData(layout, new RandRange(2, 4));
 
                             //items
-                            AddItemData(layout, new RandRange(2, 5), 25);
+                            AddItemData(layout, new RandRange(3, 5), 25);
 
                             //enemies
                             AddRespawnData(layout, 7, 90);
@@ -3286,10 +3283,10 @@ namespace DataGenerator.Data
                         else
                             AddTrapsSteps(layout, new RandRange(36, 42), true);
 
-                        //money - 750P to 3,150P
-                        AddMoneyData(layout, new RandRange(2, 4));
+                        //money
+                        AddMoneyData(layout, new RandRange(2, 5));
 
-                        //enemies! ~ lv 15
+                        //enemies
                         if (ii < 6)
                         {
                             AddRespawnData(layout, 5, 80);
@@ -3668,17 +3665,15 @@ namespace DataGenerator.Data
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
-                        //money - 1,560P to 5,850P
-                        AddMoneyData(layout, new RandRange(2, 4));
+                        //money
+                        AddMoneyData(layout, new RandRange(3, 7));
 
                         //enemies
                         AddRespawnData(layout, 5, 50);
                         AddEnemySpawnData(layout, 20, new RandRange(3, 5));
 
-
                         //items
-                        AddItemData(layout, new RandRange(3, 6), 25);
-
+                        AddItemData(layout, new RandRange(3, 7), 25);
 
                         //construct paths
                         {
@@ -3943,8 +3938,8 @@ namespace DataGenerator.Data
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
-                        //money - 630P to 1,197P
-                        AddMoneyData(layout, new RandRange(2, 4));
+                        //money
+                        AddMoneyData(layout, new RandRange(3, 6));
 
                         //enemies
                         AddRespawnData(layout, 12, 150);
@@ -3952,7 +3947,6 @@ namespace DataGenerator.Data
 
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
-
 
                         //construct paths
                         {
@@ -4207,18 +4201,15 @@ namespace DataGenerator.Data
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
-                            //money - 1,020P to 4,284P
-                            AddMoneyData(layout, new RandRange(2, 4));
-
-                            //enemies!
-                            AddRespawnData(layout, 6, 90);
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 5));
 
                             //enemies
+                            AddRespawnData(layout, 6, 90);
                             AddEnemySpawnData(layout, 20, new RandRange(3, 6));
 
-
                             //items
-                            AddItemData(layout, new RandRange(3, 6), 25);
+                            AddItemData(layout, new RandRange(2, 5), 25);
 
 
                             //construct paths
@@ -4404,7 +4395,7 @@ namespace DataGenerator.Data
                             AddWaterSteps(layout, "water", new RandRange(20));//water
 
                             //money
-                            AddMoneyData(layout, new RandRange(1, 4));
+                            AddMoneyData(layout, new RandRange(2, 5));
 
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
@@ -4766,16 +4757,18 @@ namespace DataGenerator.Data
 
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
-                        //money - Ballpark 35K
-                        AddMoneyData(layout, new RandRange(2, 4));
+                        //money
+                        AddMoneyData(layout, new RandRange(4, 9));
 
                         //enemies
                         AddRespawnData(layout, 18, 120);
                         AddEnemySpawnData(layout, 20, new RandRange(14, 18));
 
                         //items
-                        AddItemData(layout, new RandRange(3, 6), 25);
-
+                        if (ii < 8)
+                            AddItemData(layout, new RandRange(3, 6), 25);
+                        else
+                            AddItemData(layout, new RandRange(4, 7), 25);
 
                         //construct paths
                         if (ii < 8)
@@ -5294,15 +5287,18 @@ namespace DataGenerator.Data
 
                         AddTrapsSteps(layout, new RandRange(6, 9));
 
-                        //money - Ballpark 30K
-                        AddMoneyData(layout, new RandRange(2, 4));
+                        //money
+                        AddMoneyData(layout, new RandRange(4, 9));
 
                         //enemies
                         AddRespawnData(layout, 18, 120);
                         AddEnemySpawnData(layout, 20, new RandRange(14, 18));
 
                         //items
-                        AddItemData(layout, new RandRange(3, 6), 25);
+                        if (ii < 8)
+                            AddItemData(layout, new RandRange(3, 6), 25);
+                        else
+                            AddItemData(layout, new RandRange(4, 7), 25);
 
                         //construct paths
                         if (ii < 8)
@@ -6034,16 +6030,15 @@ namespace DataGenerator.Data
 
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
-                            //money - Ballpark 25K
-                            AddMoneyData(layout, new RandRange(2, 4));
+                            //money
+                            AddMoneyData(layout, new RandRange(3, 8));
 
                             //enemies
                             AddRespawnData(layout, 15, 110);
                             AddEnemySpawnData(layout, 20, new RandRange(11, 14));
 
                             //items
-                            AddItemData(layout, new RandRange(3, 6), 25);
-
+                            AddItemData(layout, new RandRange(3, 7), 25);
 
                             //construct paths
                             if (ii < 7)
@@ -6340,10 +6335,10 @@ namespace DataGenerator.Data
                             AddWaterSteps(layout, "water", new RandRange(20));//water
 
                             //money
-                            AddMoneyData(layout, new RandRange(1, 4));
+                            AddMoneyData(layout, new RandRange(3, 8));
 
                             //items
-                            AddItemData(layout, new RandRange(2, 5), 25);
+                            AddItemData(layout, new RandRange(3, 7), 25);
 
                             //enemies
                             AddRespawnData(layout, 15, 110);
@@ -6642,7 +6637,6 @@ namespace DataGenerator.Data
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
 
-
                         //construct paths
                         {
                             //100% Square Path
@@ -6898,16 +6892,15 @@ namespace DataGenerator.Data
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
-                            //money - 750P to 3,150P
-                            AddMoneyData(layout, new RandRange(2, 4));
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 5));
 
                             //enemies
                             AddRespawnData(layout, 9, 90);
                             AddEnemySpawnData(layout, 20, new RandRange(6, 8));
 
                             //items
-                            AddItemData(layout, new RandRange(3, 6), 25);
-
+                            AddItemData(layout, new RandRange(2, 6), 25);
 
                             //construct paths
                             {
@@ -7142,8 +7135,8 @@ namespace DataGenerator.Data
                             AddMoneyData(layout, new RandRange(1, 4));
 
                             //items
-                            AddItemData(layout, new RandRange(2, 5), 25);
-                            
+                            AddItemData(layout, new RandRange(2, 6), 25);
+
                             //enemies
                             AddRespawnData(layout, 9, 90);
                             AddEnemySpawnData(layout, 20, new RandRange(6, 8));
@@ -7496,8 +7489,8 @@ namespace DataGenerator.Data
 
                             AddTrapsSteps(layout, new RandRange(4, 7));
 
-                            //money - Ballpark 25K
-                            AddMoneyData(layout, new RandRange(2, 4));
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 5));
 
                             //enemies
                             AddRespawnData(layout, 7, 90);
@@ -7505,8 +7498,7 @@ namespace DataGenerator.Data
 
 
                             //items
-                            AddItemData(layout, new RandRange(3, 6), 25);
-
+                            AddItemData(layout, new RandRange(2, 5), 25);
 
 
                             //construct paths
@@ -7664,7 +7656,7 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary", "normal");
 
                             //money
-                            AddMoneyData(layout, new RandRange(1, 4));
+                            AddMoneyData(layout, new RandRange(2, 5));
 
                             //items
                             AddItemData(layout, new RandRange(2, 5), 25);
@@ -7971,16 +7963,15 @@ namespace DataGenerator.Data
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
-                            //money - Ballpark 25K
-                            AddMoneyData(layout, new RandRange(2, 4));
+                            //money
+                            AddMoneyData(layout, new RandRange(1, 4));
 
                             //enemies
                             AddRespawnData(layout, 7, 90);
                             AddEnemySpawnData(layout, 20, new RandRange(4, 7));
 
-
                             //items
-                            AddItemData(layout, new RandRange(3, 6), 25);
+                            AddItemData(layout, new RandRange(2, 6), 25);
 
                             if (ii >= 10)
                             {
@@ -8143,12 +8134,11 @@ namespace DataGenerator.Data
                             //put the walls back in via "water" algorithm
                             AddBlobWaterSteps(layout, "wall", new RandRange(3, 7), new IntRange(1, 9), false);
 
-
                             //money
                             AddMoneyData(layout, new RandRange(1, 4));
 
                             //items
-                            AddItemData(layout, new RandRange(2, 5), 25);
+                            AddItemData(layout, new RandRange(2, 6), 25);
 
                             //enemies
                             AddRespawnData(layout, 7, 40);
@@ -8426,8 +8416,8 @@ namespace DataGenerator.Data
 
                             AddTrapsSteps(layout, new RandRange(6, 9));
 
-                            //money - Ballpark 25K
-                            AddMoneyData(layout, new RandRange(2, 4));
+                            //money
+                            AddMoneyData(layout, new RandRange(3, 6));
 
                             //enemies
                             AddRespawnData(layout, 10, 100);
@@ -8658,10 +8648,10 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary", "steel");
 
                             //money
-                            AddMoneyData(layout, new RandRange(1, 4));
+                            AddMoneyData(layout, new RandRange(3, 6));
 
                             //items
-                            AddItemData(layout, new RandRange(2, 5), 25);
+                            AddItemData(layout, new RandRange(3, 6), 25);
 
                             //enemies
                             AddRespawnData(layout, 10, 100);
@@ -9225,11 +9215,12 @@ namespace DataGenerator.Data
                 FillTrainingMaze(zone);
             else if (index == 36)
             {
+                #region BRAMBLE WOODS
                 zone.Name = new LocalText("Bramble Woods");
                 zone.Rescues = 2;
                 zone.Level = 10;
                 zone.Rogue = RogueStatus.ItemTransfer;
-                #region BRAMBLE WOODS
+
                 {
                     int max_floors = 7;
                     LayeredSegment floorSegment = new LayeredSegment();
@@ -9388,8 +9379,8 @@ namespace DataGenerator.Data
                         AddSingleTrapStep(layout, new RandRange(5, 7), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(5, 7));
 
-                        //money - 315P to 1,260P
-                        AddMoneyData(layout, new RandRange(1, 4));
+                        //money
+                        AddMoneyData(layout, new RandRange(2, 4));
 
                         //items
                         AddItemData(layout, new RandRange(3, 7), 25);

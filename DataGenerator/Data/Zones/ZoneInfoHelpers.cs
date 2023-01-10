@@ -196,8 +196,8 @@ namespace DataGenerator.Data
 
         public static MoneySpawnZoneStep GetMoneySpawn(int level, int floors_in)
         {
-            RandRange addRange = new RandRange(level * 2 / 5 + 8, level * 2 / 5 + 12);
-            RandRange startRange = new RandRange(level + 5 + floors_in * addRange.Min, level + 10 + floors_in * addRange.Max);
+            RandRange addRange = new RandRange(level * 2 / 5, level * 2 / 5 + 4);
+            RandRange startRange = new RandRange(level * 3 + 25 + floors_in * addRange.Min, level * 3 + 30 + floors_in * addRange.Max);
             return new MoneySpawnZoneStep(PR_RESPAWN_MONEY, startRange, addRange);
         }
 
