@@ -4429,6 +4429,7 @@ namespace DataGenerator.Data
                     {
                         CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(2, 5), GetImmutableFilterList());
                         step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        step.Filters.Add(new RoomFilterDefaultGen(true));
                         step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenCave<MapGenContext>(new RandRange(10), new RandRange(18))), 10);
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenCave<MapGenContext>(new RandRange(18), new RandRange(10))), 10);
@@ -4473,6 +4474,7 @@ namespace DataGenerator.Data
                     {
                         CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(2, 6), GetImmutableFilterList());
                         step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        step.Filters.Add(new RoomFilterDefaultGen(true));
                         step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 2), new RoomGenCave<MapGenContext>(new RandRange(16), new RandRange(16))), 10);
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenCave<MapGenContext>(new RandRange(8), new RandRange(16))), 10);
@@ -4511,6 +4513,7 @@ namespace DataGenerator.Data
                     {
                         CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(2, 4), GetImmutableFilterList());
                         step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        step.Filters.Add(new RoomFilterDefaultGen(true));
                         step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 2), new RoomGenCave<MapGenContext>(new RandRange(16), new RandRange(16))), 10);
                         layout.GenSteps.Add(PR_GRID_GEN, step);
@@ -4552,6 +4555,7 @@ namespace DataGenerator.Data
                     {
                         CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(2, 5), GetImmutableFilterList());
                         step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        step.Filters.Add(new RoomFilterDefaultGen(true));
                         step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 2), new RoomGenCross<MapGenContext>(new RandRange(4, 15), new RandRange(4, 15), new RandRange(2, 4), new RandRange(2, 4))), 10);
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenCross<MapGenContext>(new RandRange(4, 15), new RandRange(4, 15), new RandRange(2, 4), new RandRange(2, 4))), 10);
@@ -4613,6 +4617,7 @@ namespace DataGenerator.Data
                     {
                         CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(3), GetImmutableFilterList());
                         step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        step.Filters.Add(new RoomFilterDefaultGen(true));
                         step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), new RoomGenSquare<MapGenContext>(new RandRange(6), new RandRange(6))), 10);
                         layout.GenSteps.Add(PR_GRID_GEN, step);
@@ -4691,6 +4696,7 @@ namespace DataGenerator.Data
                     {
                         CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(3), GetImmutableFilterList());
                         step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        step.Filters.Add(new RoomFilterDefaultGen(true));
                         step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), new RoomGenSquare<MapGenContext>(new RandRange(5), new RandRange(5))), 10);
                         layout.GenSteps.Add(PR_GRID_GEN, step);

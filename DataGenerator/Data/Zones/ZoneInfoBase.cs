@@ -1445,6 +1445,7 @@ namespace DataGenerator.Data
                     {
                         CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(8), GetImmutableFilterList());
                         step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        step.Filters.Add(new RoomFilterDefaultGen(true));
                         step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                         step.RoomComponents.Set(new NoEventRoom());
                         step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), new RoomGenRound<MapGenContext>(new RandRange(13), new RandRange(13))), 10);
