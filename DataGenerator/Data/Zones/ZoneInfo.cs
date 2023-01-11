@@ -1284,7 +1284,7 @@ namespace DataGenerator.Data
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
-                        AddTrapsSteps(layout, new RandRange(6, 9));
+                        AddTrapsSteps(layout, new RandRange(10, 14));
 
                         //money
                         AddMoneyData(layout, new RandRange(3, 7));
@@ -1602,7 +1602,7 @@ namespace DataGenerator.Data
                             patternList.Add(new PatternPlan("pattern_crosshair", PatternPlan.PatternExtend.Extrapolate), 5);
                             AddTrapPatternSteps(layout, new RandRange(1, 4), patternList);
 
-                            AddTrapsSteps(layout, new RandRange(6, 9));
+                            AddTrapsSteps(layout, new RandRange(10, 14));
 
                             //money
                             AddMoneyData(layout, new RandRange(3, 7));
@@ -2271,7 +2271,7 @@ namespace DataGenerator.Data
                         patternList.Add(new PatternPlan("pattern_x_repeat", PatternPlan.PatternExtend.Repeat2D), 5);
                         AddTrapPatternSteps(layout, new RandRange(2, 4), patternList);
 
-                        AddTrapsSteps(layout, new RandRange(6, 9));
+                        AddTrapsSteps(layout, new RandRange(10, 14));
 
                         //money
                         AddMoneyData(layout, new RandRange(4, 9));
@@ -2697,7 +2697,7 @@ namespace DataGenerator.Data
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
-                            AddTrapsSteps(layout, new RandRange(6, 9));
+                            AddTrapsSteps(layout, new RandRange(8, 12));
 
                             //money
                             AddMoneyData(layout, new RandRange(2, 5));
@@ -3663,7 +3663,7 @@ namespace DataGenerator.Data
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
-                        AddTrapsSteps(layout, new RandRange(6, 9));
+                        AddTrapsSteps(layout, new RandRange(8, 12));
 
                         //money
                         AddMoneyData(layout, new RandRange(3, 7));
@@ -3936,7 +3936,7 @@ namespace DataGenerator.Data
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
-                        AddTrapsSteps(layout, new RandRange(6, 9));
+                        AddTrapsSteps(layout, new RandRange(8, 12));
 
                         //money
                         AddMoneyData(layout, new RandRange(3, 6));
@@ -4755,7 +4755,7 @@ namespace DataGenerator.Data
                             AddTrapPatternSteps(layout, new RandRange(1, 3), patternList);
                         }
 
-                        AddTrapsSteps(layout, new RandRange(6, 9));
+                        AddTrapsSteps(layout, new RandRange(10, 14));
 
                         //money
                         AddMoneyData(layout, new RandRange(4, 9));
@@ -5285,7 +5285,7 @@ namespace DataGenerator.Data
                             AddTrapPatternSteps(layout, new RandRange(1, 3), patternList);
                         }
 
-                        AddTrapsSteps(layout, new RandRange(6, 9));
+                        AddTrapsSteps(layout, new RandRange(20, 24), true);
 
                         //money
                         AddMoneyData(layout, new RandRange(4, 9));
@@ -5673,8 +5673,8 @@ namespace DataGenerator.Data
                         layout.GenSteps.Add(PR_WATER, waterStep);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
-                        AddTrapsSteps(layout, new RandRange(6, 9));
+                        AddSingleTrapStep(layout, new RandRange(80, 100), "tile_wonder");//wonder tile
+                        AddTrapsSteps(layout, new RandRange(300, 400));
 
 
                         if (ii == 0)
@@ -6028,7 +6028,7 @@ namespace DataGenerator.Data
                             else
                                 AddTrapPatternSteps(layout, new RandRange(2, 5), patternList);
 
-                            AddTrapsSteps(layout, new RandRange(6, 9));
+                            AddTrapsSteps(layout, new RandRange(20, 24), true);
 
                             //money
                             AddMoneyData(layout, new RandRange(3, 8));
@@ -6345,8 +6345,8 @@ namespace DataGenerator.Data
                             AddEnemySpawnData(layout, 20, new RandRange(11, 14));
 
                             //traps
-                            AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
-                            AddTrapsSteps(layout, new RandRange(6, 9));
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(10, 14));
 
                             //construct paths
                             if (ii < 3)
@@ -8146,7 +8146,7 @@ namespace DataGenerator.Data
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
-                            AddTrapsSteps(layout, new RandRange(6, 9));
+                            AddTrapsSteps(layout, new RandRange(20, 24));
 
 
 
@@ -8414,7 +8414,7 @@ namespace DataGenerator.Data
                             patternList.Add(new PatternPlan("pattern_x", PatternPlan.PatternExtend.Extrapolate), 5);
                             AddTrapPatternSteps(layout, new RandRange(1, 4), patternList);
 
-                            AddTrapsSteps(layout, new RandRange(6, 9));
+                            AddTrapsSteps(layout, new RandRange(10, 14));
 
                             //money
                             AddMoneyData(layout, new RandRange(3, 6));
@@ -8659,7 +8659,7 @@ namespace DataGenerator.Data
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
-                            AddTrapsSteps(layout, new RandRange(6, 9));
+                            AddTrapsSteps(layout, new RandRange(14, 18));
 
                             //construct paths
                             {
