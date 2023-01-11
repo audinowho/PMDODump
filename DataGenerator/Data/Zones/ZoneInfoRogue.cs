@@ -1159,7 +1159,7 @@ namespace DataGenerator.Data
                 foreach (string key in IterateTMs(TMClass.Natural))
                     monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 10);//nugget
-                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, 30), 10);//pearl
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 2), new IntRange(0, 30), 10);//pearl
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, 30), 10);//heart scale
                 monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 10);//key
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
@@ -1208,7 +1208,7 @@ namespace DataGenerator.Data
                 foreach (string key in IterateTMs(TMClass.Natural))
                     monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 10);//nugget
-                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, 30), 10);//pearl
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 2), new IntRange(0, 30), 10);//pearl
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, 30), 10);//heart scale
                 monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 10);//key
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
@@ -1260,7 +1260,7 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
                 chestChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, 30), 10);//assembly box
                 chestChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 10);//ability capsule
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(2, 5)), new IntRange(0, 30), 30);
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeNone(50, new RandRange(2, 5)), new IntRange(0, 30), 30);
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(2, 4), "seed_reviver"), new IntRange(0, 30), 10);//reviver seed
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 4), "seed_joy"), new IntRange(0, 30), 10);//joy seed
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), ItemArray(IterateManmades())), new IntRange(0, 30), 100);//manmade items
@@ -1293,7 +1293,7 @@ namespace DataGenerator.Data
                 foreach (string key in IterateTMs(TMClass.Natural))
                     chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
                 chestChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 20);//nugget
-                chestChanceZoneStep.Items.Add(new MapItem("loot_pearl", 3), new IntRange(0, 30), 5);//pearl
+                chestChanceZoneStep.Items.Add(new MapItem("loot_pearl", 2), new IntRange(0, 30), 5);//pearl
                 chestChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 3), new IntRange(0, 30), 10);//heart scale
                 chestChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, 30), 200);//amber tear
                 chestChanceZoneStep.Items.Add(new MapItem("ammo_rare_fossil", 3), new IntRange(0, 30), 20);//rare fossil
@@ -1401,7 +1401,6 @@ namespace DataGenerator.Data
                 }
 
                 // item spawnings for the vault
-                for (int ii = 0; ii < 30; ii++)
                 {
                     //add a PickerSpawner <- PresetMultiRand <- coins
                     List<MapItem> treasures = new List<MapItem>();
@@ -1654,7 +1653,6 @@ namespace DataGenerator.Data
                 }
 
                 // item spawnings for the vault
-                for (int ii = 0; ii < 30; ii++)
                 {
                     //add a PickerSpawner <- PresetMultiRand <- coins
                     List<MapItem> treasures = new List<MapItem>();
@@ -3348,7 +3346,7 @@ namespace DataGenerator.Data
                 foreach(string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
                     monsterChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 10);//nugget
-                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 3), new IntRange(0, max_floors), 10);//pearl
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
                 monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, max_floors), 10);//key
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
@@ -3474,7 +3472,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
                 foreach (string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
                     monsterChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
-                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 1), new IntRange(0, max_floors), 10);//pearl
+                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 2), new IntRange(0, max_floors), 10);//pearl
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
                 monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, max_floors), 30);//assembly box
@@ -3543,7 +3541,7 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
                 chestChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, max_floors), 30);//assembly box
                 chestChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 10);//ability capsule
-                chestChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(2, 5)), new IntRange(0, max_floors), 30);
+                chestChanceZoneStep.ItemThemes.Add(new ItemThemeNone(50, new RandRange(2, 5)), new IntRange(0, max_floors), 30);
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(2, 4), "seed_reviver"), new IntRange(0, max_floors), 10);//reviver seed
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 4), "seed_joy"), new IntRange(0, max_floors), 10);//joy seed
                 chestChanceZoneStep.ItemThemes.Add(new ItemThemeRange(true, true, new RandRange(1, 3), ItemArray(IterateManmades())), new IntRange(0, max_floors), 100);//manmade items
@@ -4048,13 +4046,13 @@ namespace DataGenerator.Data
                 shop.Items.Add(new MapItem("evo_kings_rock", 0, 3500), 50);//King's Rock
                 shop.Items.Add(new MapItem("evo_link_cable", 0, 3500), 50);//Link Cable
 
-                foreach (string key in IterateTypeBoosters())
+                foreach (string key in IterateTypePlates())
                     shop.Items.Add(new MapItem(key, 0, 2000), 10);//type items
 
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
                 shop.ItemThemes.Add(new ItemStateType(new FlagType(typeof(EvoState)), false, true, new RandRange(3, 5)), 10);//evo items
-                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), ItemArray(IterateTypeBoosters())), 10);//type items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), ItemArray(IterateTypePlates())), 10);//type items
 
                 // Cleffa : 98 Magic Guard : 118 Metronome : 47 Sing : 204 Charm : 313 Fake Tears
                 {

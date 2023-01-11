@@ -563,6 +563,17 @@ namespace DataGenerator.Data
             yield return "berry_micle";
         }
 
+        static IEnumerable<string> IterateVitamins()
+        {
+            yield return "boost_nectar";
+            yield return "boost_hp_up";
+            yield return "boost_protein";
+            yield return "boost_iron";
+            yield return "boost_calcium";
+            yield return "boost_zinc";
+            yield return "boost_carbos";
+        }
+
         static IEnumerable<string> IterateTypeBerries()
         {
             yield return "berry_tanga";
