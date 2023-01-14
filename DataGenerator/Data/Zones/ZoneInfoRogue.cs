@@ -1445,7 +1445,7 @@ namespace DataGenerator.Data
                     //    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_nifty", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
                     //}
 
-                    //447      ***    Dainty Box - Stat ups, wonder gummi, nectar, golden apple, golden banana
+                    //447      ***    Dainty Box - Stat ups, wonder gummi, nectar, perfect apple, big banana
                     {
                         SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
 
