@@ -1177,10 +1177,10 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Stairs");
                 fileName = "stairs_back_down";
                 tile.Desc = new LocalText("Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.");
-                tile.Comment = "Back Up";
+                tile.Comment = "Back Down";
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Passage;
-                tile.Anim = new ObjAnimData("Stairs_Up", 1);
+                tile.Anim = new ObjAnimData("Stairs_Down", 1);
                 tile.MinimapIcon = new Loc(4, 0);
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
@@ -1193,10 +1193,10 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Stairs");
                 fileName = "stairs_back_up";
                 tile.Desc = new LocalText("Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.");
-                tile.Comment = "Back Down";
+                tile.Comment = "Back Up";
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Passage;
-                tile.Anim = new ObjAnimData("Stairs_Down", 1);
+                tile.Anim = new ObjAnimData("Stairs_Up", 1);
                 tile.MinimapIcon = new Loc(4, 0);
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());

@@ -2093,6 +2093,7 @@ namespace DataGenerator.Data
                 //structure.MainExit = new ZoneLoc(1, 0);
                 zone.Segments.Add(structure);
             }
+
             {
                 LayeredSegment structure = new LayeredSegment();
                 //Tests Tilesets, and unlockables

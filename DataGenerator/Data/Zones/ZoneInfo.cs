@@ -1984,7 +1984,7 @@ namespace DataGenerator.Data
                         {
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                            secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                            secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                             RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                             exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors)), exitZoneSpawns);
@@ -3351,7 +3351,7 @@ namespace DataGenerator.Data
                                     //StepSpawner <- PresetMultiRand
                                     MultiStepSpawner<ListMapGenContext, EffectTile> mainSpawner = new MultiStepSpawner<ListMapGenContext, EffectTile>();
                                     EffectTile secretTile = new EffectTile("stairs_secret_down", true);
-                                    secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                                    secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                                     mainSpawner.Picker = new PresetMultiRand<IStepSpawner<ListMapGenContext, EffectTile>>(new PickerSpawner<ListMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                                     detourChanceZoneStep.TileSpawners.SetRange(mainSpawner, new IntRange(0, max_floors));
                                 }
@@ -4022,12 +4022,12 @@ namespace DataGenerator.Data
             else if (index == 10)
             {
                 #region FAULTLINE RIDGE
-                {
-                    zone.Name = new LocalText("Faultline Ridge");
-                    zone.Rescues = 2;
-                    zone.Level = 15;
-                    zone.Rogue = RogueStatus.ItemTransfer;
+                zone.Name = new LocalText("Faultline Ridge");
+                zone.Rescues = 2;
+                zone.Level = 15;
+                zone.Rogue = RogueStatus.ItemTransfer;
 
+                {
                     int max_floors = 10;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
@@ -4169,7 +4169,7 @@ namespace DataGenerator.Data
                         secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
                         RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                         exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
-                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors)), exitZoneSpawns);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
                         floorSegment.ZoneSteps.Add(exitZoneStep);
                     }
@@ -4321,6 +4321,132 @@ namespace DataGenerator.Data
 
                     zone.Segments.Add(floorSegment);
                 }
+
+                {
+                    SingularSegment structure = new SingularSegment(30);
+
+
+                    GridFloorGen layout = new GridFloorGen();
+
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(0, new LocalText("Mysteriosity Pass")));
+
+                    //Floor settings
+                    AddFloorData(layout, "B35. Mysterious Passage.ogg", 800, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                    //Tilesets
+                    AddTextureData(layout, "the_nightmare_wall", "the_nightmare_floor", "the_nightmare_secondary", "normal");
+
+                    AddWaterSteps(layout, "pit", new RandRange(20));//water
+
+                    //enemies
+                    MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
+                    PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", 0, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(zone.Level - 5), "wander_smart"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", 1, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(zone.Level - 5), "wander_smart"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", 2, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(zone.Level - 5), "wander_smart"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", 3, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(zone.Level - 5), "wander_smart"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", 4, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(zone.Level - 5), "wander_smart"), 10);
+                    poolSpawn.TeamSizes.Add(1, 12);
+                    spawnStep.Spawns.Add(poolSpawn, 100);
+                    layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
+
+                    AddRespawnData(layout, 7, 15);
+                    AddEnemySpawnData(layout, 20, new RandRange(7));
+
+                    //specific mons, choose two out of four
+                    {
+                        PoolTeamSpawner subSpawn = new PoolTeamSpawner();
+                        subSpawn.Spawns.Add(GetTeamMob("audino", "", "pound", "", "", "", new RandRange(zone.Level), "wander_smart"), 10);
+                        subSpawn.Spawns.Add(GetTeamMob(new MonsterID("vivillon", 3, "", Gender.Unknown), "", "light_screen", "struggle_bug", "", "", new RandRange(zone.Level), "wander_smart"), 10);
+                        subSpawn.Spawns.Add(GetTeamMob("omanyte", "", "water_gun", "rollout", "", "", new RandRange(zone.Level), "wander_smart"), 10);
+                        subSpawn.Spawns.Add(GetTeamMob("kabuto", "", "harden", "absorb", "", "", new RandRange(zone.Level), "wander_smart"), 10);
+                        subSpawn.TeamSizes.Add(1, 12);
+
+                        LoopedTeamSpawner<MapGenContext> spawner = new LoopedTeamSpawner<MapGenContext>(subSpawn);
+                        spawner.AmountSpawner = new RandRange(4);
+                        PlaceRandomMobsStep<MapGenContext> mobStep = new PlaceRandomMobsStep<MapGenContext>(spawner);
+                        mobStep.ClumpFactor = 25;
+                        layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
+                    }
+
+                    //items
+                    ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
+                    SpawnList<InvItem> items = new SpawnList<InvItem>();
+                    items.Add(new InvItem("berry_enigma"), 12);
+                    itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
+                    layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
+                    AddItemData(layout, new RandRange(0, 3), 25);
+
+                    {
+                        List<MapItem> treasures = new List<MapItem>();
+                        treasures.Add(new MapItem("loot_pearl", 3));
+                        treasures.Add(new MapItem("loot_pearl", 2));
+                        treasures.Add(new MapItem("loot_pearl", 3));
+                        treasures.Add(new MapItem("loot_pearl", 2));
+                        PickerSpawner<MapGenContext, MapItem> treasurePicker = new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
+
+                        SpawnList<IStepSpawner<MapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<MapGenContext, MapItem>>();
+
+                        //445      ***    Deluxe Box - 5* items
+                        boxSpawn.Add(new BoxSpawner<MapGenContext>("box_deluxe", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(5), new RandRange(1))), 10);
+
+                        MultiStepSpawner<MapGenContext, MapItem> boxPicker = new MultiStepSpawner<MapGenContext, MapItem>(new LoopedRand<IStepSpawner<MapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
+
+                        MultiStepSpawner<MapGenContext, MapItem> mainSpawner = new MultiStepSpawner<MapGenContext, MapItem>();
+                        mainSpawner.Picker = new PresetMultiRand<IStepSpawner<MapGenContext, MapItem>>(treasurePicker, boxPicker);
+
+                        RandomRoomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<MapGenContext, MapItem>(mainSpawner);
+                        specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
+                    }
+
+                    //construct paths
+                    AddInitGridStep(layout, 4, 3, 7, 7, 1, true);
+
+                    GridPathTiered<MapGenContext> path = new GridPathTiered<MapGenContext>();
+                    path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                    path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                    path.TierAxis = Axis4.Horiz;
+                    path.TierConnections = new RandRange(1, 3);
+
+                    SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                    //square
+                    genericRooms.Add(new RoomGenSquare<MapGenContext>(new RandRange(3, 7), new RandRange(3, 7)), 10);
+                    path.GenericRooms = genericRooms;
+
+                    SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                    genericHalls.Add(new RoomGenAngledHall<MapGenContext>(20), 10);
+                    path.GenericHalls = genericHalls;
+
+                    layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                    layout.GenSteps.Add(PR_GRID_GEN, new SetGridDefaultsStep<MapGenContext>(new RandRange(25), GetImmutableFilterList()));
+                    {
+                        CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(6, 8), GetImmutableFilterList());
+                        step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                        step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenCave<MapGenContext>(new RandRange(9, 13), new RandRange(5, 7))), 10);
+                        step.Combos.Add(new GridCombo<MapGenContext>(new Loc(3, 1), new RoomGenCave<MapGenContext>(new RandRange(15, 19), new RandRange(5, 7))), 10);
+                        layout.GenSteps.Add(PR_GRID_GEN, step);
+                    }
+
+                    layout.GenSteps.Add(PR_ROOMS_INIT, new DrawGridToFloorStep<MapGenContext>());
+                    layout.GenSteps.Add(PR_TILES_INIT, new DrawFloorToTileStep<MapGenContext>());
+
+                    {
+                        EffectTile exitTile = new EffectTile("stairs_go_down", true);
+                        exitTile.TileStates.Set(new DestState(new SegLoc(-1, 1), true));
+                        var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
+                        step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
+                        layout.GenSteps.Add(PR_EXITS, step);
+                    }
+
+                    structure.BaseFloor = layout;
+
+                    zone.Segments.Add(structure);
+                }
+
                 #endregion
             }
             else if (index == 11)
@@ -4723,7 +4849,20 @@ namespace DataGenerator.Data
 
                         AddDrawListSteps(layout);
 
-                        AddStairStep(layout, false);
+                        {
+                            EffectTile exitTile = new EffectTile("stairs_back_up", true);
+                            exitTile.TileStates.Set(new DestState(new SegLoc(0, -1), true));
+                            var step = new FloorStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
+                            step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
+                            layout.GenSteps.Add(PR_EXITS, step);
+                        }
+                        if (ii < max_floors - 1)
+                        {
+                            EffectTile secretTile = new EffectTile("stairs_go_down", true);
+                            RandomSpawnStep<ListMapGenContext, EffectTile> trapStep = new RandomSpawnStep<ListMapGenContext, EffectTile>(new PickerSpawner<ListMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+                        }
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -4946,202 +5085,96 @@ namespace DataGenerator.Data
                     }
 
                     {
-                        SpreadCombinedZoneStep combinedVaultZoneStep = new SpreadCombinedZoneStep();
+                        SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(0, 7, 50), new IntRange(1, max_floors)));
 
+                        //making room for the vault
                         {
-                            SpreadVaultZoneStep detourChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandRange(1), new IntRange(1, max_floors)));
-
-                            //making room for the vault
-                            {
-                                ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(16, 16), Dir8.None);
-                                detourChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, addSizeStep));
-                                ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
-                                detourChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, limitStep));
-                                ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
-                                detourChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, clampStep));
-                            }
-
-                            // room addition step
-                            {
-                                SpawnList<RoomGen<ListMapGenContext>> detourRooms = new SpawnList<RoomGen<ListMapGenContext>>();
-                                detourRooms.Add(new RoomGenCross<ListMapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
-                                SpawnList<PermissiveRoomGen<ListMapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
-                                detourHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
-                                AddConnectedRoomsStep<ListMapGenContext> detours = new AddConnectedRoomsStep<ListMapGenContext>(detourRooms, detourHalls);
-                                detours.Amount = new RandRange(1);
-                                detours.HallPercent = 100;
-                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
-                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
-                                detours.RoomComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
-                                detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
-                                detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
-
-                                detourChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
-                            }
-
-                            //sealing the vault
-                            {
-                                KeySealStep<ListMapGenContext> vaultStep = new KeySealStep<ListMapGenContext>("sealed_block", "sealed_door", "key");
-                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
-                                detourChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_TILES_GEN_EXTRA, vaultStep));
-                            }
-
-                            // item spawnings for the vault
-                            {
-                                //add a PickerSpawner <- PresetMultiRand <- coins
-                                List<MapItem> treasures = new List<MapItem>();
-                                treasures.Add(MapItem.CreateMoney(200));
-                                treasures.Add(MapItem.CreateMoney(200));
-                                treasures.Add(MapItem.CreateMoney(200));
-                                treasures.Add(MapItem.CreateMoney(200));
-                                treasures.Add(MapItem.CreateMoney(200));
-                                PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
-
-                                SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
-
-                                //444      ***    Light Box - 1* items
-                                {
-                                    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(1), new RandRange(1))), 30);
-                                }
-
-                                //445      ***    Heavy Box - 2* items
-                                {
-                                    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_heavy", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
-                                }
-
-                                MultiStepSpawner<ListMapGenContext, MapItem> boxPicker = new MultiStepSpawner<ListMapGenContext, MapItem>(new LoopedRand<IStepSpawner<ListMapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
-
-                                //StepSpawner <- PresetMultiRand
-                                MultiStepSpawner<ListMapGenContext, MapItem> mainSpawner = new MultiStepSpawner<ListMapGenContext, MapItem>();
-                                mainSpawner.Picker = new PresetMultiRand<IStepSpawner<ListMapGenContext, MapItem>>(treasurePicker, boxPicker);
-                                detourChanceZoneStep.ItemSpawners.SetRange(mainSpawner, new IntRange(0, max_floors));
-                            }
-                            detourChanceZoneStep.ItemAmount.SetRange(new RandRange(0), new IntRange(0, max_floors));
-
-                            // item placements for the vault
-                            {
-                                RandomRoomSpawnStep<ListMapGenContext, MapItem> detourItems = new RandomRoomSpawnStep<ListMapGenContext, MapItem>();
-                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
-                                detourChanceZoneStep.ItemPlacements.SetRange(detourItems, new IntRange(0, max_floors));
-                            }
-
-                            // trap spawnings for the vault
-                            {
-                                //StepSpawner <- PresetMultiRand
-                                MultiStepSpawner<ListMapGenContext, EffectTile> mainSpawner = new MultiStepSpawner<ListMapGenContext, EffectTile>();
-                                EffectTile secretTile = new EffectTile("stairs_secret_down", true);
-                                secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
-                                mainSpawner.Picker = new PresetMultiRand<IStepSpawner<ListMapGenContext, EffectTile>>(new PickerSpawner<ListMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-                                detourChanceZoneStep.TileSpawners.SetRange(mainSpawner, new IntRange(0, max_floors));
-                            }
-
-                            // trap placements for the vault
-                            {
-                                RandomRoomSpawnStep<ListMapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<ListMapGenContext, EffectTile>();
-                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
-                                detourChanceZoneStep.TilePlacements.SetRange(detourItems, new IntRange(0, max_floors));
-                            }
-
-                            combinedVaultZoneStep.Steps.Add(detourChanceZoneStep);
+                            ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(16, 16), Dir8.None);
+                            vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, addSizeStep));
+                            ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
+                            vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, limitStep));
+                            ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
+                            vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, clampStep));
                         }
 
+                        // room addition step
                         {
-                            SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(0, 7, 50), new IntRange(1, max_floors)));
+                            SpawnList<RoomGen<ListMapGenContext>> detourRooms = new SpawnList<RoomGen<ListMapGenContext>>();
+                            detourRooms.Add(new RoomGenCross<ListMapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
+                            SpawnList<PermissiveRoomGen<ListMapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
+                            detourHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                            AddConnectedRoomsStep<ListMapGenContext> detours = new AddConnectedRoomsStep<ListMapGenContext>(detourRooms, detourHalls);
+                            detours.Amount = new RandRange(1);
+                            detours.HallPercent = 100;
+                            detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                            detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
+                            detours.RoomComponents.Set(new NoConnectRoom());
+                            detours.RoomComponents.Set(new NoEventRoom());
+                            detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
+                            detours.HallComponents.Set(new NoConnectRoom());
+                            detours.RoomComponents.Set(new NoEventRoom());
 
-                            //making room for the vault
-                            {
-                                ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(16, 16), Dir8.None);
-                                vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, addSizeStep));
-                                ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
-                                vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, limitStep));
-                                ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
-                                vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, clampStep));
-                            }
-
-                            // room addition step
-                            {
-                                SpawnList<RoomGen<ListMapGenContext>> detourRooms = new SpawnList<RoomGen<ListMapGenContext>>();
-                                detourRooms.Add(new RoomGenCross<ListMapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
-                                SpawnList<PermissiveRoomGen<ListMapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
-                                detourHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
-                                AddConnectedRoomsStep<ListMapGenContext> detours = new AddConnectedRoomsStep<ListMapGenContext>(detourRooms, detourHalls);
-                                detours.Amount = new RandRange(1);
-                                detours.HallPercent = 100;
-                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
-                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
-                                detours.RoomComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
-                                detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
-                                detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
-
-                                vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
-                            }
-
-                            //sealing the vault
-                            {
-                                KeySealStep<ListMapGenContext> vaultStep = new KeySealStep<ListMapGenContext>("sealed_block", "sealed_door", "key");
-                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
-                                vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_TILES_GEN_EXTRA, vaultStep));
-                            }
-
-                            //items for the vault
-                            {
-                                foreach (string key in IterateTMs(TMClass.Starter))
-                                    vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
-                                vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear"), new IntRange(0, max_floors), 100);//amber tear
-                                vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
-                                vaultChanceZoneStep.Items.Add(new MapItem("seed_pure"), new IntRange(0, max_floors), 100);//pure seed
-                                vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 200);//recall box
-                            }
-
-                            // item spawnings for the vault
-                            {
-                                //add a PickerSpawner <- PresetMultiRand <- coins
-                                List<MapItem> treasures = new List<MapItem>();
-                                treasures.Add(MapItem.CreateMoney(200));
-                                treasures.Add(MapItem.CreateMoney(200));
-                                treasures.Add(MapItem.CreateMoney(200));
-                                treasures.Add(MapItem.CreateMoney(200));
-                                treasures.Add(MapItem.CreateMoney(200));
-                                PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
-
-                                SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
-
-                                //444      ***    Light Box - 1* items
-                                {
-                                    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(1), new RandRange(1))), 30);
-                                }
-
-                                //445      ***    Heavy Box - 2* items
-                                {
-                                    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_heavy", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
-                                }
-
-                                MultiStepSpawner<ListMapGenContext, MapItem> boxPicker = new MultiStepSpawner<ListMapGenContext, MapItem>(new LoopedRand<IStepSpawner<ListMapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
-
-                                //StepSpawner <- PresetMultiRand
-                                MultiStepSpawner<ListMapGenContext, MapItem> mainSpawner = new MultiStepSpawner<ListMapGenContext, MapItem>();
-                                mainSpawner.Picker = new PresetMultiRand<IStepSpawner<ListMapGenContext, MapItem>>(treasurePicker, boxPicker);
-                                vaultChanceZoneStep.ItemSpawners.SetRange(mainSpawner, new IntRange(0, max_floors));
-                            }
-                            vaultChanceZoneStep.ItemAmount.SetRange(new RandRange(0, 2), new IntRange(0, max_floors));
-
-
-                            // item placements for the vault
-                            {
-                                RandomRoomSpawnStep<ListMapGenContext, MapItem> detourItems = new RandomRoomSpawnStep<ListMapGenContext, MapItem>();
-                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
-                                vaultChanceZoneStep.ItemPlacements.SetRange(detourItems, new IntRange(0, max_floors));
-                            }
-
-                            combinedVaultZoneStep.Steps.Add(vaultChanceZoneStep);
+                            vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                         }
 
+                        //sealing the vault
+                        {
+                            KeySealStep<ListMapGenContext> vaultStep = new KeySealStep<ListMapGenContext>("sealed_block", "sealed_door", "key");
+                            vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
+                            vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_TILES_GEN_EXTRA, vaultStep));
+                        }
 
-                        floorSegment.ZoneSteps.Add(combinedVaultZoneStep);
+                        //items for the vault
+                        {
+                            foreach (string key in IterateTMs(TMClass.Starter))
+                                vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
+                            vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear"), new IntRange(0, max_floors), 100);//amber tear
+                            vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
+                            vaultChanceZoneStep.Items.Add(new MapItem("seed_pure"), new IntRange(0, max_floors), 100);//pure seed
+                            vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 200);//recall box
+                        }
+
+                        // item spawnings for the vault
+                        {
+                            //add a PickerSpawner <- PresetMultiRand <- coins
+                            List<MapItem> treasures = new List<MapItem>();
+                            treasures.Add(MapItem.CreateMoney(200));
+                            treasures.Add(MapItem.CreateMoney(200));
+                            treasures.Add(MapItem.CreateMoney(200));
+                            treasures.Add(MapItem.CreateMoney(200));
+                            treasures.Add(MapItem.CreateMoney(200));
+                            PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
+
+                            SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
+
+                            //444      ***    Light Box - 1* items
+                            {
+                                boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(1), new RandRange(1))), 30);
+                            }
+
+                            //445      ***    Heavy Box - 2* items
+                            {
+                                boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_heavy", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
+                            }
+
+                            MultiStepSpawner<ListMapGenContext, MapItem> boxPicker = new MultiStepSpawner<ListMapGenContext, MapItem>(new LoopedRand<IStepSpawner<ListMapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
+
+                            //StepSpawner <- PresetMultiRand
+                            MultiStepSpawner<ListMapGenContext, MapItem> mainSpawner = new MultiStepSpawner<ListMapGenContext, MapItem>();
+                            mainSpawner.Picker = new PresetMultiRand<IStepSpawner<ListMapGenContext, MapItem>>(treasurePicker, boxPicker);
+                            vaultChanceZoneStep.ItemSpawners.SetRange(mainSpawner, new IntRange(0, max_floors));
+                        }
+                        vaultChanceZoneStep.ItemAmount.SetRange(new RandRange(0, 2), new IntRange(0, max_floors));
+
+
+                        // item placements for the vault
+                        {
+                            RandomRoomSpawnStep<ListMapGenContext, MapItem> detourItems = new RandomRoomSpawnStep<ListMapGenContext, MapItem>();
+                            detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
+                            vaultChanceZoneStep.ItemPlacements.SetRange(detourItems, new IntRange(0, max_floors));
+                        }
+
+                        floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                     }
 
                     for (int ii = 0; ii < max_floors; ii++)
@@ -5242,7 +5275,7 @@ namespace DataGenerator.Data
                         AddDrawGridSteps(layout);
 
                         {
-                            EffectTile exitTile = new EffectTile("stairs_back_down", true);
+                            EffectTile exitTile = new EffectTile("stairs_back_up", true);
                             exitTile.TileStates.Set(new DestState(new SegLoc(0, -1), true));
                             var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
                             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
@@ -5399,7 +5432,7 @@ namespace DataGenerator.Data
                         {
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                            secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                            secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                             RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                             exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors)), exitZoneSpawns);
@@ -7910,7 +7943,7 @@ namespace DataGenerator.Data
                         {
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                            secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                            secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                             RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                             exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors)), exitZoneSpawns);
@@ -9217,7 +9250,7 @@ namespace DataGenerator.Data
                         {
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                            secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                            secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                             RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                             exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors)), exitZoneSpawns);
@@ -9932,7 +9965,7 @@ namespace DataGenerator.Data
                         {
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                            secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                            secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                             RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                             exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors)), exitZoneSpawns);
@@ -11090,7 +11123,7 @@ namespace DataGenerator.Data
                                     //StepSpawner <- PresetMultiRand
                                     MultiStepSpawner<ListMapGenContext, EffectTile> mainSpawner = new MultiStepSpawner<ListMapGenContext, EffectTile>();
                                     EffectTile secretTile = new EffectTile("stairs_secret_down", true);
-                                    secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                                    secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                                     mainSpawner.Picker = new PresetMultiRand<IStepSpawner<ListMapGenContext, EffectTile>>(new PickerSpawner<ListMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                                     detourChanceZoneStep.TileSpawners.SetRange(mainSpawner, new IntRange(0, max_floors));
                                 }
