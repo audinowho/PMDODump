@@ -265,7 +265,7 @@ namespace DataGenerator.Data
                         AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
                         detours.Amount = new RandRange(1);
                         detours.HallPercent = 100;
-                        detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom()));
+                        detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
                         detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                         detours.RoomComponents.Set(new NoConnectRoom());
                         detours.RoomComponents.Set(new NoEventRoom());
@@ -488,7 +488,7 @@ namespace DataGenerator.Data
                         AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
                         detours.Amount = new RandRange(2, 4);
                         detours.HallPercent = 100;
-                        detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom()));
+                        detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
                         detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                         detours.RoomComponents.Set(new NoConnectRoom());
                         detours.RoomComponents.Set(new NoEventRoom());
@@ -578,7 +578,7 @@ namespace DataGenerator.Data
                         SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
                         detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
                         AddBossRoomStep<MapGenContext> detours = new AddBossRoomStep<MapGenContext>(bossRooms, treasureRooms, detourHalls);
-                        detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom()));
+                        detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
                         detours.BossComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                         detours.BossComponents.Set(new NoEventRoom());
                         detours.BossComponents.Set(new BossRoom());
@@ -811,6 +811,11 @@ namespace DataGenerator.Data
                         layout.GenSteps.Add(PR_GRID_GEN, step);
                         //layout.GenSteps.Add(PR_GRID_GEN, new MarkAsHallStep<MapGenContext>());
                     }
+                    {
+                        SetGridInnerComponentStep<MapGenContext> step = new SetGridInnerComponentStep<MapGenContext>();
+                        step.Components.Set(new UnVaultableRoom());
+                        layout.GenSteps.Add(PR_GRID_GEN, step);
+                    }
 
                     AddDrawGridSteps(layout);
 
@@ -951,6 +956,11 @@ namespace DataGenerator.Data
                         step.Components.Set(new NoEventRoom());
                         layout.GenSteps.Add(PR_GRID_GEN, step);
                         //layout.GenSteps.Add(PR_GRID_GEN, new MarkAsHallStep<MapGenContext>());
+                    }
+                    {
+                        SetGridInnerComponentStep<MapGenContext> step = new SetGridInnerComponentStep<MapGenContext>();
+                        step.Components.Set(new UnVaultableRoom());
+                        layout.GenSteps.Add(PR_GRID_GEN, step);
                     }
 
                     //MODDABLE: use different special rooms
@@ -1100,6 +1110,11 @@ namespace DataGenerator.Data
                         step.Components.Set(new NoEventRoom());
                         layout.GenSteps.Add(PR_GRID_GEN, step);
                         //layout.GenSteps.Add(PR_GRID_GEN, new MarkAsHallStep<MapGenContext>());
+                    }
+                    {
+                        SetGridInnerComponentStep<MapGenContext> step = new SetGridInnerComponentStep<MapGenContext>();
+                        step.Components.Set(new UnVaultableRoom());
+                        layout.GenSteps.Add(PR_GRID_GEN, step);
                     }
 
                     //MODDABLE: use different special rooms
@@ -1657,7 +1672,7 @@ namespace DataGenerator.Data
                         SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
                         detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
                         AddBossRoomStep<MapGenContext> detours = new AddBossRoomStep<MapGenContext>(bossRooms, treasureRooms, detourHalls);
-                        detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom()));
+                        detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
                         detours.BossComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                         detours.BossComponents.Set(new NoEventRoom());
                         detours.BossComponents.Set(new BossRoom());

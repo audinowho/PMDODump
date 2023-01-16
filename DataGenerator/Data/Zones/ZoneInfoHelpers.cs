@@ -31,11 +31,11 @@ namespace DataGenerator.Data
         static readonly Priority PR_GRID_GEN_EXTRA = new Priority(-4, 1);
         //-3 writing grids to freeform floorplans
         static readonly Priority PR_ROOMS_INIT = new Priority(-3);
-        //-2 path generation (list version), adding Freeform connections
-        static readonly Priority PR_ROOMS_PRE_VAULT = new Priority(-2, -5);
         static readonly Priority PR_ROOMS_GEN = new Priority(-2);
         //-2.1 special rooms, extra rooms added
-        static readonly Priority PR_ROOMS_GEN_EXTRA = new Priority(-2, 1);
+        //-2 path generation (list version), adding Freeform connections
+        static readonly Priority PR_ROOMS_PRE_VAULT = new Priority(-2, 1);
+        static readonly Priority PR_ROOMS_GEN_EXTRA = new Priority(-2, 2);
         static readonly Priority PR_ROOMS_PRE_VAULT_CLAMP = new Priority(-2, 5);
         //-1 init map size
         static readonly Priority PR_TILES_INIT = new Priority(-1);
@@ -459,7 +459,7 @@ namespace DataGenerator.Data
             SpawnList<PermissiveRoomGen<ListMapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
             detourHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
             AddBossRoomStep<ListMapGenContext> detours = new AddBossRoomStep<ListMapGenContext>(bossRooms, treasureRooms, detourHalls);
-            detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom()));
+            detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
             detours.BossComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
             detours.BossComponents.Set(new NoEventRoom());
             detours.BossComponents.Set(new BossRoom());

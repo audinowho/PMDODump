@@ -1342,12 +1342,12 @@ namespace DataGenerator.Data
 
                 //making room for the vault
                 {
-                    ResizeFloorStep<ListMapGenContext> vaultStep = new ResizeFloorStep<ListMapGenContext>(new Loc(8, 8), Dir8.DownRight, Dir8.UpLeft);
-                    vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, vaultStep));
-                }
-                {
-                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
-                    vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, vaultStep));
+                    ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(16, 16), Dir8.None);
+                    vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, addSizeStep));
+                    ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
+                    vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, limitStep));
+                    ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
+                    vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, clampStep));
                 }
 
                 // room addition step
@@ -1359,7 +1359,7 @@ namespace DataGenerator.Data
                     AddConnectedRoomsStep<ListMapGenContext> detours = new AddConnectedRoomsStep<ListMapGenContext>(detourRooms, detourHalls);
                     detours.Amount = new RandRange(8, 10);
                     detours.HallPercent = 100;
-                    detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom()));
+                    detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
                     detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                     detours.RoomComponents.Set(new NoConnectRoom());
                     detours.RoomComponents.Set(new NoEventRoom());
@@ -1588,12 +1588,12 @@ namespace DataGenerator.Data
                 SpreadBossZoneStep bossChanceZoneStep = new SpreadBossZoneStep(PR_ROOMS_GEN_EXTRA, PR_SPAWN_ITEMS_EXTRA, new SpreadPlanQuota(new RandDecay(0, 4, 50), new IntRange(2, 30)));
 
                 {
-                    ResizeFloorStep<ListMapGenContext> resizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(8, 8), Dir8.DownRight, Dir8.UpLeft);
-                    bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, resizeStep));
-                }
-                {
-                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
-                    bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, vaultStep));
+                    ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(16, 16), Dir8.None);
+                    bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, addSizeStep));
+                    ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
+                    bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, limitStep));
+                    ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
+                    bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, clampStep));
                 }
 
                 //BOSS TEAMS
@@ -3560,12 +3560,12 @@ namespace DataGenerator.Data
 
                 //making room for the vault
                 {
-                    ResizeFloorStep<ListMapGenContext> vaultStep = new ResizeFloorStep<ListMapGenContext>(new Loc(8, 8), Dir8.DownRight, Dir8.UpLeft);
-                    vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, vaultStep));
-                }
-                {
-                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
-                    vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, vaultStep));
+                    ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(16, 16), Dir8.None);
+                    vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, addSizeStep));
+                    ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
+                    vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, limitStep));
+                    ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
+                    vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, clampStep));
                 }
 
                 // room addition step
@@ -3577,7 +3577,7 @@ namespace DataGenerator.Data
                     AddConnectedRoomsStep<ListMapGenContext> detours = new AddConnectedRoomsStep<ListMapGenContext>(detourRooms, detourHalls);
                     detours.Amount = new RandRange(8, 10);
                     detours.HallPercent = 100;
-                    detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom()));
+                    detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
                     detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                     detours.RoomComponents.Set(new NoConnectRoom());
                     detours.RoomComponents.Set(new NoEventRoom());
@@ -3757,13 +3757,14 @@ namespace DataGenerator.Data
             {
                 SpreadBossZoneStep bossChanceZoneStep = new SpreadBossZoneStep(PR_ROOMS_GEN_EXTRA, PR_SPAWN_ITEMS_EXTRA, new SpreadPlanQuota(new RandDecay(0, 8, 55), new IntRange(2, 30)));
 
+                //making room for the vault
                 {
-                    ResizeFloorStep<ListMapGenContext> resizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(8, 8), Dir8.DownRight, Dir8.UpLeft);
-                    bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, resizeStep));
-                }
-                {
-                    ClampFloorStep<ListMapGenContext> vaultStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
-                    bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, vaultStep));
+                    ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(16, 16), Dir8.None);
+                    bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, addSizeStep));
+                    ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
+                    bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, limitStep));
+                    ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
+                    bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, clampStep));
                 }
 
                 //boss rooms
@@ -4609,6 +4610,11 @@ namespace DataGenerator.Data
                         layout.GenSteps.Add(PR_GRID_GEN, step);
                         //layout.GenSteps.Add(PR_GRID_GEN, new MarkAsHallStep<MapGenContext>());
                     }
+                    {
+                        SetGridInnerComponentStep<MapGenContext> step = new SetGridInnerComponentStep<MapGenContext>();
+                        step.Components.Set(new UnVaultableRoom());
+                        layout.GenSteps.Add(PR_GRID_GEN, step);
+                    }
 
                     //Combine some rooms for large rooms
                     {
@@ -4661,6 +4667,11 @@ namespace DataGenerator.Data
                         step.Components.Set(new NoEventRoom());
                         layout.GenSteps.Add(PR_GRID_GEN, step);
                         //layout.GenSteps.Add(PR_GRID_GEN, new MarkAsHallStep<MapGenContext>());
+                    }
+                    {
+                        SetGridInnerComponentStep<MapGenContext> step = new SetGridInnerComponentStep<MapGenContext>();
+                        step.Components.Set(new UnVaultableRoom());
+                        layout.GenSteps.Add(PR_GRID_GEN, step);
                     }
 
                     //Special rooms
