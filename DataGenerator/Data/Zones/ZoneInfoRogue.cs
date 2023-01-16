@@ -1338,7 +1338,7 @@ namespace DataGenerator.Data
 
             //switch vaults
             {
-                SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandRange(1, 4), new IntRange(0, 30)));
+                SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandRange(1, 4), new IntRange(0, 30)));
 
                 //making room for the vault
                 {
@@ -3556,7 +3556,7 @@ namespace DataGenerator.Data
 
             //switch vaults
             {
-                SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandRange(1, 4), new IntRange(0, 30)));
+                SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandRange(1, 4), new IntRange(0, 30)));
 
                 //making room for the vault
                 {
@@ -3630,7 +3630,6 @@ namespace DataGenerator.Data
                     treasures.Add(MapItem.CreateMoney(200));
                     treasures.Add(MapItem.CreateMoney(200));
                     treasures.Add(MapItem.CreateMoney(200));
-                    treasures.Add(new MapItem("boost_iron"));
                     PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
 

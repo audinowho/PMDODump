@@ -33,10 +33,10 @@ namespace DataGenerator.Data
         static readonly Priority PR_ROOMS_INIT = new Priority(-3);
         //-2 path generation (list version), adding Freeform connections
         static readonly Priority PR_ROOMS_PRE_VAULT = new Priority(-2, -5);
-        static readonly Priority PR_ROOMS_PRE_VAULT_CLAMP = new Priority(-2, -1);
         static readonly Priority PR_ROOMS_GEN = new Priority(-2);
         //-2.1 special rooms, extra rooms added
         static readonly Priority PR_ROOMS_GEN_EXTRA = new Priority(-2, 1);
+        static readonly Priority PR_ROOMS_PRE_VAULT_CLAMP = new Priority(-2, 5);
         //-1 init map size
         static readonly Priority PR_TILES_INIT = new Priority(-1);
         //0 draw floor
@@ -624,7 +624,7 @@ namespace DataGenerator.Data
             return post_mob;
         }
 
-        static MobSpawn GetFOEMob(string species, string ability, string move1, string move2, string move3, string move4, int baseLv)
+        static MobSpawn GetFOEMob(string species, string ability, string move1, string move2, string move3, string move4, int baseLv, int scaleNum = 5, int scaleDen = 3)
         {
             MobSpawn post_mob = new MobSpawn();
             post_mob.BaseForm = new MonsterID(species, 0, "", Gender.Unknown);
@@ -639,7 +639,7 @@ namespace DataGenerator.Data
                 post_mob.SpecifiedSkills.Add(move4);
             post_mob.Tactic = "loot_guard";
             post_mob.Level = new RandRange(baseLv);
-            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(5, 3));
+            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(scaleNum, scaleDen));
             post_mob.SpawnFeatures.Add(new MobSpawnMovesOff(post_mob.SpecifiedSkills.Count));
             return post_mob;
         }

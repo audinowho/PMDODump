@@ -381,7 +381,7 @@ namespace DataGenerator
                             //MapInfo.AddMapData();
                             //MapInfo.AddGroundData(MapInfo.MapNames[0]);
                             ZoneInfo.AddZoneData();
-                            //ZoneInfo.AddZoneData(11);
+                            //ZoneInfo.AddZoneData(22);
                         }
 
                         DataManager.DataType reserializeType = DataManager.DataType.None;
