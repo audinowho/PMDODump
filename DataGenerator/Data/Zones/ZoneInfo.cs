@@ -239,7 +239,7 @@ namespace DataGenerator.Data
                     {
                         LoadGen layout = new LoadGen();
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
-                        startGen.MapID = "zone_02_end";
+                        startGen.MapID = "secret_tropical_path";
                         layout.GenSteps.Add(PR_TILES_INIT, startGen);
                         //add a chest
 
@@ -2425,13 +2425,12 @@ namespace DataGenerator.Data
             else if (index == 7)
             {
                 #region CHAMPION'S ROAD
+                zone.Name = new LocalText("Champion's Road");
+                zone.Rescues = 2;
+                zone.Level = 45;
+                zone.NoEXP = true;
+                zone.Rogue = RogueStatus.ItemTransfer;
                 {
-                    zone.Name = new LocalText("Champion's Road");
-                    zone.Rescues = 2;
-                    zone.Level = 45;
-                    zone.NoEXP = true;
-                    zone.Rogue = RogueStatus.ItemTransfer;
-
                     int max_floors = 22;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
@@ -2698,6 +2697,21 @@ namespace DataGenerator.Data
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
+
+                    tileSpawn.Spawns.Add(new EffectTile("trap_slumber", false), new IntRange(0, max_floors), 10);//sleep trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_hunger", true), new IntRange(0, max_floors), 10);//hunger trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_sticky", false), new IntRange(0, max_floors), 10);//sticky trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_spin", false), new IntRange(0, max_floors), 10);//spin trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_grimy", false), new IntRange(0, max_floors), 10);//grimy trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_poison", false), new IntRange(0, max_floors), 10);//poison trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_trigger", true), new IntRange(0, max_floors), 20);//trigger trap
+
+                    tileSpawn.Spawns.Add(new EffectTile("trap_mud", false), new IntRange(0, max_floors), 10);//mud trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_self_destruct", false), new IntRange(0, max_floors), 10);//selfdestruct trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_pp_leech", true), new IntRange(0, max_floors), 10);//pp-leech trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_grudge", true), new IntRange(0, max_floors), 10);//grudge trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_summon", true), new IntRange(0, max_floors), 10);//summon trap
+
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
 
@@ -3005,6 +3019,22 @@ namespace DataGenerator.Data
                                 step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenCave<MapGenContext>(new RandRange(10, 18), new RandRange(5, 10))), 10);
                                 layout.GenSteps.Add(PR_GRID_GEN, step);
                             }
+
+
+                            if (ii == 17)
+                            {
+                                SetGridSpecialRoomStep<MapGenContext> specialStep = new SetGridSpecialRoomStep<MapGenContext>();
+                                specialStep.Filters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
+                                specialStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+
+                                RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
+                                loadRoom.MapID = "room_updraft";
+                                loadRoom.RoomTerrain = new Tile("floor");
+
+                                specialStep.Rooms = new PresetPicker<RoomGen<MapGenContext>>(loadRoom);
+                                specialStep.RoomComponents.Set(new ImmutableRoom());
+                                layout.GenSteps.Add(PR_GRID_GEN_EXTRA, specialStep);
+                            }
                         }
                         else
                         {
@@ -3071,6 +3101,155 @@ namespace DataGenerator.Data
 
                         floorSegment.Floors.Add(layout);
                     }
+                    zone.Segments.Add(floorSegment);
+                }
+
+
+                {
+                    int max_floors = 4;
+                    LayeredSegment floorSegment = new LayeredSegment();
+                    floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Clouded Road\n{0}F")));
+
+                    //money
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 20);
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                    floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                    //items
+                    ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                    itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+
+                    floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+                    //mobs
+                    TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                    poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                    poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    floorSegment.ZoneSteps.Add(poolSpawn);
+
+                    TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                    tileSpawn.Priority = PR_RESPAWN_TRAP;
+
+                    tileSpawn.Spawns.Add(new EffectTile("trap_slumber", false), new IntRange(0, max_floors), 10);//sleep trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_hunger", true), new IntRange(0, max_floors), 10);//hunger trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_sticky", false), new IntRange(0, max_floors), 10);//sticky trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_spin", false), new IntRange(0, max_floors), 10);//spin trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_grimy", false), new IntRange(0, max_floors), 10);//grimy trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_poison", false), new IntRange(0, max_floors), 10);//poison trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_trigger", true), new IntRange(0, max_floors), 20);//trigger trap
+
+                    tileSpawn.Spawns.Add(new EffectTile("trap_mud", false), new IntRange(0, max_floors), 10);//mud trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_self_destruct", false), new IntRange(0, max_floors), 10);//selfdestruct trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_pp_leech", true), new IntRange(0, max_floors), 10);//pp-leech trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_grudge", true), new IntRange(0, max_floors), 10);//grudge trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_summon", true), new IntRange(0, max_floors), 10);//summon trap
+
+
+                    floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+                    {
+                        LoadGen layout = new LoadGen();
+                        MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                        startGen.MapID = "secret_champions_road";
+                        layout.GenSteps.Add(PR_TILES_INIT, startGen);
+                        floorSegment.Floors.Add(layout);
+                    }
+
+                    for (int ii = 0; ii < max_floors; ii++)
+                    {
+                        RoomFloorGen layout = new RoomFloorGen();
+
+                        //Floor settings
+                        AddFloorData(layout, "Sky Tower Summit.ogg", 1000, Map.SightRange.Clear, Map.SightRange.Dark);
+
+                        //Tilesets
+                        AddTextureData(layout, "sky_tower_wall", "sky_tower_floor", "sky_tower_secondary", "flying");
+
+                        //Water
+                        AddWaterSteps(layout, "pit", new RandRange(100));//pit
+
+                        //put the walls back in via "water" algorithm
+                        AddBlobWaterSteps(layout, "wall", new RandRange(7, 12), new IntRange(1, 9), false);
+
+                        //money
+                        AddMoneyData(layout, new RandRange(2, 5));
+
+                        //items
+                        AddItemData(layout, new RandRange(2, 5), 25);
+
+                        //enemies
+                        AddRespawnData(layout, 7, 90);
+                        AddEnemySpawnData(layout, 20, new RandRange(4, 7));
+
+                        //traps
+                        AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
+
+                        SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                        patternList.Add(new PatternPlan("pattern_dither_fourth", PatternPlan.PatternExtend.Repeat2D), 5);
+                        patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
+                        patternList.Add(new PatternPlan("pattern_x_repeat", PatternPlan.PatternExtend.Repeat2D), 5);
+                        AddTrapPatternSteps(layout, new RandRange(2, 4), patternList);
+
+                        AddTrapsSteps(layout, new RandRange(16, 19));
+
+                        //construct paths
+                        {
+                            //prim maze with caves
+                            AddInitListStep(layout, 58, 40, true);
+
+                            //Create a path that is composed of a branching tree
+                            FloorPathBranch<ListMapGenContext> path = new FloorPathBranch<ListMapGenContext>();
+                            path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                            path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                            path.HallPercent = 100;
+                            path.FillPercent = new RandRange(65);
+                            path.BranchRatio = new RandRange(30);
+
+                            //Give it some room types to place
+                            SpawnList<RoomGen<ListMapGenContext>> genericRooms = new SpawnList<RoomGen<ListMapGenContext>>();
+                            //cave
+                            genericRooms.Add(new RoomGenCave<ListMapGenContext>(new RandRange(6, 18), new RandRange(6, 18)), 10);
+                            genericRooms.Add(new RoomGenCave<ListMapGenContext>(new RandRange(4, 7), new RandRange(4, 7)), 10);
+
+                            path.GenericRooms = genericRooms;
+
+                            //Give it some hall types to place
+                            SpawnList<PermissiveRoomGen<ListMapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
+                            {
+                                RoomGenAngledHall<ListMapGenContext> hall = new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(1, 8), new RandRange(1));
+                                hall.Brush = new TerrainHallBrush(Loc.One, new Tile("pit"));
+                                genericHalls.Add(hall, 20);
+                            }
+                            {
+                                RoomGenAngledHall<ListMapGenContext> hall = new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(1), new RandRange(1, 8));
+                                hall.Brush = new TerrainHallBrush(Loc.One, new Tile("pit"));
+                                genericHalls.Add(hall, 20);
+                            }
+                            path.GenericHalls = genericHalls;
+
+                            layout.GenSteps.Add(PR_ROOMS_GEN, path);
+                        }
+
+                        //draw paths
+                        layout.GenSteps.Add(PR_TILES_INIT, new DrawFloorToTileStep<ListMapGenContext>());
+
+                        //Add the stairs up and down
+                        AddStairStep(layout, false);
+
+                        //add a stairs that takes the player back to the main path
+                        {
+                            EffectTile secretTile = new EffectTile("stairs_exit_down", true);
+                            secretTile.TileStates.Set(new DestState(new SegLoc(-1, 17), true));
+                            NearSpawnableSpawnStep<ListMapGenContext, EffectTile, MapGenEntrance> trapStep = new NearSpawnableSpawnStep<ListMapGenContext, EffectTile, MapGenEntrance>(new PickerSpawner<ListMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)), 100);
+                            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+                        }
+
+                        floorSegment.Floors.Add(layout);
+                    }
+
                     zone.Segments.Add(floorSegment);
                 }
                 #endregion
@@ -10093,13 +10272,26 @@ namespace DataGenerator.Data
                                     step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenBlocked<MapGenContext>(new Tile("wall"), new RandRange(10, 15), new RandRange(5, 7), new RandRange(3, 7), new RandRange(1, 3))), 10);
                                     layout.GenSteps.Add(PR_GRID_GEN, step);
                                 }
+
+                                if (ii == 5)
+                                {
+                                    SetGridSpecialRoomStep<MapGenContext> specialStep = new SetGridSpecialRoomStep<MapGenContext>();
+                                    specialStep.Filters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
+                                    specialStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+
+                                    RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
+                                    loadRoom.MapID = "room_fairy_ring";
+                                    loadRoom.RoomTerrain = new Tile("floor");
+
+                                    specialStep.Rooms = new PresetPicker<RoomGen<MapGenContext>>(loadRoom);
+                                    specialStep.RoomComponents.Set(new ImmutableRoom());
+                                    layout.GenSteps.Add(PR_GRID_GEN_EXTRA, specialStep);
+                                }
                             }
 
                             AddDrawGridSteps(layout);
 
                             AddStairStep(layout, true);
-
-
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -12492,7 +12684,7 @@ namespace DataGenerator.Data
                     {
                         LoadGen layout = new LoadGen();
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
-                        startGen.MapID = "zone_36_end";
+                        startGen.MapID = "end_bramble_woods";
                         layout.GenSteps.Add(PR_TILES_INIT, startGen);
                         //add a chest
 
@@ -13504,7 +13696,7 @@ namespace DataGenerator.Data
                     {
                         LoadGen layout = new LoadGen();
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
-                        startGen.MapID = "zone_37_end";
+                        startGen.MapID = "end_sickly_hollow";
                         layout.GenSteps.Add(PR_TILES_INIT, startGen);
                         //add a chest
 

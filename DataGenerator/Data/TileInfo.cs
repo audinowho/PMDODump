@@ -929,7 +929,7 @@ namespace DataGenerator.Data
             }
             else if (ii == 33)
             {
-                tile.Name = new LocalText("Luminous Area");
+                tile.Name = new LocalText("Luminous Site");
                 fileName = "tile_evo";
                 tile.Desc = new LocalText("A mysterious area that allows Pokémon to evolve.");
                 tile.BlockItem = true;
@@ -976,7 +976,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Empty Chest");
                 fileName = "chest_empty";
-                tile.ObjectLayer = true;
+                tile.Layer = DrawLayer.Back;
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Blocker;
                 tile.Anim = new ObjAnimData("Chest_Open", 1);
@@ -987,7 +987,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Treasure Chest");
                 fileName = "chest_full";
-                tile.ObjectLayer = true;
+                tile.Layer = DrawLayer.Back;
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Unlockable;
                 tile.Anim = new ObjAnimData("Chest", 1);
@@ -998,7 +998,7 @@ namespace DataGenerator.Data
             }
             else if (ii == 38)
             {
-                tile.Name = new LocalText("Signal Area");
+                tile.Name = new LocalText("Sigil Site");
                 fileName = "tile_boss";
                 tile.Desc = new LocalText("A mysterious signal that calls Pokémon to the area.");
                 tile.BlockItem = true;
@@ -1014,7 +1014,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Sealed Door");
                 fileName = "sealed_door";
-                tile.ObjectLayer = true;
+                tile.Layer = DrawLayer.Back;
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Unlockable;
                 tile.Anim = new ObjAnimData("Block_Vault", 1);
@@ -1045,7 +1045,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Sealed Block");
                 fileName = "sealed_block";
-                tile.ObjectLayer = true;
+                tile.Layer = DrawLayer.Back;
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Blocker;
                 tile.Anim = new ObjAnimData("Block_Blank", 1);
@@ -1101,7 +1101,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Sign");
                 fileName = "sign";
-                tile.ObjectLayer = true;
+                tile.Layer = DrawLayer.Back;
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Blocker;
                 tile.Anim = new ObjAnimData("Sign", 1);
@@ -1219,6 +1219,74 @@ namespace DataGenerator.Data
                 emitter.Layer = DrawLayer.Top;
                 tile.InteractWithTiles.Add(0, new CompassEvent(emitter, "stairs_go_up", "stairs_go_down", "stairs_secret_up", "stairs_secret_down", "rescue_point",
                     "chest_treasure", "tile_boss", "sealed_door", "stairs_exit_up", "stairs_exit_down", "stairs_back_up", "stairs_back_down"));
+            }
+            else if (ii == 52)
+            {
+                tile.Name = new LocalText("Fairy Ring");
+                fileName = "tile_fairy_ring";
+                tile.Desc = new LocalText("A mysterious energy permeates the area...");
+                tile.BlockItem = true;
+                tile.StepType = TileData.TriggerType.Site;
+                tile.Anim = new ObjAnimData("Fairy_Ring", 1);
+                tile.MinimapIcon = new Loc(4, 1);
+                tile.MinimapColor = Color.Cyan;
+                tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
+                tile.InteractWithTiles.Add(0, new TransportOnElementEvent("fairy", "EVT_Fade_White", new StringKey("MSG_PASSAGE_FAIRY"), new StringKey("MSG_PASSAGE_FAIRY_OPEN")));
+                //needs a dest state
+            }
+            else if (ii == 53)
+            {
+                tile.Name = new LocalText("Updraft");
+                fileName = "tile_updraft";
+                tile.Desc = new LocalText("A mysterious wind current is blowing upwards...");
+                tile.BlockItem = true;
+                tile.StepType = TileData.TriggerType.Site;
+                tile.Anim = new ObjAnimData("Updraft", 2);
+                tile.Layer = DrawLayer.Front;
+                tile.MinimapIcon = new Loc(4, 1);
+                tile.MinimapColor = Color.Cyan;
+                tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
+                tile.InteractWithTiles.Add(0, new TransportOnElementEvent("flying", "EVT_Fade_White", new StringKey("MSG_PASSAGE_FLYING"), new StringKey("MSG_PASSAGE_FLYING_OPEN")));
+                //needs a dest state
+            }
+            else if (ii == 54)
+            {
+                tile.Name = new LocalText("Guild Gate");
+                fileName = "sealed_guild";
+                tile.Layer = DrawLayer.Back;
+                tile.BlockItem = true;
+                tile.StepType = TileData.TriggerType.Unlockable;
+                tile.Anim = new ObjAnimData("Block_Guild", 1);
+                tile.MinimapIcon = new Loc(4, 1);
+                tile.MinimapColor = Color.Cyan;
+                tile.LandedOnTiles.Add(0, new AskUnlockEvent());//need a scripted event to check for story completion
+                tile.InteractWithTiles.Add(0, new OpenSelfEvent());
+            }
+            else if (ii == 55)
+            {
+                tile.Name = new LocalText("Mystery Site");
+                fileName = "tile_mystery";
+                tile.Desc = new LocalText("???");
+                tile.BlockItem = true;
+                tile.StepType = TileData.TriggerType.Site;
+                tile.Anim = new ObjAnimData("Portal", 1);
+                tile.MinimapIcon = new Loc(4, 0);
+                tile.MinimapColor = Color.Orange;
+                tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
+                //needs a dest state
+            }
+            else if (ii == 56)
+            {
+                tile.Name = new LocalText("Temporary Tile");
+                fileName = "tile_temporary";
+                tile.Desc = new LocalText("???");
+                tile.BlockItem = true;
+                tile.StepType = TileData.TriggerType.Site;
+                tile.Anim = new ObjAnimData("Tile_Switch", 1);
+                tile.MinimapIcon = new Loc(4, 0);
+                tile.MinimapColor = Color.Orange;
+                tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
+                //needs a dest state
             }
 
             if (tile.Name.DefaultText.StartsWith("**"))
