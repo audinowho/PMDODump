@@ -4263,12 +4263,12 @@ namespace DataGenerator.Data
             else if (ii == 166)
             {
                 skill.Name = new LocalText("=Sketch");
-                skill.Desc = new LocalText("It enables the user to permanently learn the move last used by the target. Once used, Sketch disappears.");
+                skill.Desc = new LocalText("It enables the user to permanently learn the target's moves. Once used, Sketch disappears.");
                 skill.BaseCharges = 1;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new SketchBattleEvent("last_used_move"));
+                skill.Data.OnHits.Add(0, new SketchBattleEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special

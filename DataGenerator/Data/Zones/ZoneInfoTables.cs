@@ -20,6 +20,277 @@ namespace DataGenerator.Data
 {
     public partial class ZoneInfo
     {
+        [Flags]
+        public enum DungeonStage
+        {
+            Beginner = 0,
+            Intermediate = 1,
+            Advanced = 2
+        }
+
+        static MobSpawnStep<MapGenContext> GetUnownSpawns(string unown, int level)
+        {
+            MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
+            PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
+            for (int ii = 0; ii < unown.Length; ii++)
+            {
+                if (unown[ii] == '!')
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", 26, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(level), "wander_normal"), 10);
+                else if (unown[ii] == '?')
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", 27, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(level), "wander_normal"), 10);
+                else
+                {
+                    int formNum = unown[ii] - 'a';
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", formNum, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(level), "wander_normal"), 10);
+                }
+            }
+            poolSpawn.TeamSizes.Add(1, 12);
+            poolSpawn.TeamSizes.Add(2, 6);
+            spawnStep.Spawns.Add(poolSpawn, 100);
+            return spawnStep;
+        }
+
+        static PlaceRandomMobsStep<MapGenContext> GetSingleSelectableSpawn(TeamMemberSpawn teamSpawn)
+        {
+            PoolTeamSpawner subSpawn = new PoolTeamSpawner();
+            subSpawn.Spawns.Add(teamSpawn, 10);
+            subSpawn.TeamSizes.Add(1, 12);
+
+            LoopedTeamSpawner<MapGenContext> spawner = new LoopedTeamSpawner<MapGenContext>(subSpawn);
+            spawner.AmountSpawner = new RandRange(2);
+            PlaceRandomMobsStep<MapGenContext> mobStep = new PlaceRandomMobsStep<MapGenContext>(spawner);
+            mobStep.ClumpFactor = 25;
+            return mobStep;
+        }
+
+        static IFloorGen getSecretRoom(int zoneLevel, DungeonStage stage, string map_type, int moveBack)
+        {
+            GridFloorGen layout = new GridFloorGen();
+
+            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(0, new LocalText("Mysteriosity Pass")));
+
+            //Floor settings
+            AddFloorData(layout, "B35. Mysterious Passage.ogg", 800, Map.SightRange.Dark, Map.SightRange.Dark);
+
+            //Tilesets
+            AddTextureData(layout, "the_nightmare_wall", "the_nightmare_floor", "the_nightmare_secondary", "normal");
+
+            AddWaterSteps(layout, "pit", new RandRange(20));//water
+
+            //enemies
+            {
+                RandGenStep<MapGenContext> chanceGenStep = new RandGenStep<MapGenContext>();
+                SpawnList<GenStep<MapGenContext>> spawns = new SpawnList<GenStep<MapGenContext>>();
+                spawns.Add(GetUnownSpawns("abcde", zoneLevel - 5), 10);
+                spawns.Add(GetUnownSpawns("fghij", zoneLevel - 5), 10);
+                spawns.Add(GetUnownSpawns("klmno", zoneLevel - 5), 10);
+                spawns.Add(GetUnownSpawns("pqrst", zoneLevel - 5), 10);
+                spawns.Add(GetUnownSpawns("uvwxyz", zoneLevel - 5), 10);
+                chanceGenStep.Spawns = new LoopedRand<GenStep<MapGenContext>>(spawns, new RandRange(1));
+                layout.GenSteps.Add(PR_RESPAWN_MOB, chanceGenStep);
+
+                //TODO: include a variant for alcremie?
+            }
+            // a rare mon appears, based on the difficulty level
+            {
+                MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
+                PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
+                if (stage == DungeonStage.Beginner)
+                    poolSpawn.Spawns.Add(GetTeamMob("smeargle", "", "sketch", "", "", "", new RandRange(zoneLevel), "wander_smart"), 10);
+                else if (stage == DungeonStage.Intermediate)
+                    poolSpawn.Spawns.Add(GetTeamMob("porygon", "", "tri_attack", "", "", "", new RandRange(zoneLevel), "wander_smart"), 10);
+                else
+                    poolSpawn.Spawns.Add(GetTeamMob("kecleon", "", "synchronoise", "thief", "", "", new RandRange(zoneLevel), "thief"), 10);
+                poolSpawn.TeamSizes.Add(1, 12);
+                spawnStep.Spawns.Add(poolSpawn, 20);
+                layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
+            }
+
+            AddRespawnData(layout, 7, 20);
+            AddEnemySpawnData(layout, 20, new RandRange(7));
+
+            //audino always appears once or thrice
+            {
+                PoolTeamSpawner subSpawn = new PoolTeamSpawner();
+                subSpawn.Spawns.Add(GetTeamMob("audino", "", "secret_power", "", "", "", new RandRange(zoneLevel), "wander_smart"), 10);
+                subSpawn.TeamSizes.Add(1, 12);
+                LoopedTeamSpawner<MapGenContext> spawner = new LoopedTeamSpawner<MapGenContext>(subSpawn);
+                spawner.AmountSpawner = new RandRange(1, 4);
+                PlaceRandomMobsStep<MapGenContext> mobStep = new PlaceRandomMobsStep<MapGenContext>(spawner);
+                mobStep.ClumpFactor = 25;
+                layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
+            }
+
+            //choose two fossils out of the entire selection, spawn two of each
+            {
+                RandGenStep<MapGenContext> chanceGenStep = new RandGenStep<MapGenContext>();
+                SpawnList<GenStep<MapGenContext>> spawns = new SpawnList<GenStep<MapGenContext>>();
+                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("omanyte", "", "ancient_power", "brine", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("kabuto", "", "ancient_power", "aqua_jet", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("anorith", "", "ancient_power", "bug_bite", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("lileep", "", "ancient_power", "ingrain", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("cranidos", "", "ancient_power", "take_down", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("shieldon", "", "ancient_power", "iron_defense", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("amaura", "", "ancient_power", "aurora_beam", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                chanceGenStep.Spawns = new LoopedRand<GenStep<MapGenContext>>(spawns, new RandRange(2));
+                layout.GenSteps.Add(PR_RESPAWN_MOB, chanceGenStep);
+            }
+
+            //items
+            ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
+            SpawnList<InvItem> items = new SpawnList<InvItem>();
+            items.Add(new InvItem("berry_enigma"), 12);
+            items.Add(new InvItem("orb_invert"), 4);
+            itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
+            layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
+            AddItemData(layout, new RandRange(0, 3), 25);
+
+            {
+                List<MapItem> treasures = new List<MapItem>();
+                treasures.Add(new MapItem("loot_pearl", 3));
+                treasures.Add(new MapItem("loot_pearl", 2));
+                treasures.Add(new MapItem("loot_pearl", 3));
+                treasures.Add(new MapItem("loot_pearl", 2));
+                PickerSpawner<MapGenContext, MapItem> treasurePicker = new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
+
+                SpawnList<IStepSpawner<MapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<MapGenContext, MapItem>>();
+
+                //445      ***    Deluxe Box - 5* items
+                boxSpawn.Add(new BoxSpawner<MapGenContext>("box_deluxe", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(5), new RandRange(1))), 10);
+
+                MultiStepSpawner<MapGenContext, MapItem> boxPicker = new MultiStepSpawner<MapGenContext, MapItem>(new LoopedRand<IStepSpawner<MapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
+
+                MultiStepSpawner<MapGenContext, MapItem> mainSpawner = new MultiStepSpawner<MapGenContext, MapItem>();
+                mainSpawner.Picker = new PresetMultiRand<IStepSpawner<MapGenContext, MapItem>>(treasurePicker, boxPicker);
+
+                RandomRoomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<MapGenContext, MapItem>(mainSpawner);
+                specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
+            }
+
+            //construct paths
+            switch (map_type)
+            {
+                case "small_square":
+                    {
+                        AddInitGridStep(layout, 5, 5, 6, 6, 1, true);
+
+                        GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                        path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                        path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                        path.RoomRatio = new RandRange(80);
+                        path.BranchRatio = new RandRange(30);
+
+                        SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                        //square
+                        genericRooms.Add(new RoomGenSquare<MapGenContext>(new RandRange(3, 7), new RandRange(3, 7)), 10);
+                        path.GenericRooms = genericRooms;
+
+                        SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                        genericHalls.Add(new RoomGenAngledHall<MapGenContext>(20), 10);
+                        path.GenericHalls = genericHalls;
+
+                        layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                        layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(40, 0));
+
+                        layout.GenSteps.Add(PR_GRID_GEN, new SetGridDefaultsStep<MapGenContext>(new RandRange(25), GetImmutableFilterList()));
+                        {
+                            CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(3, 6), GetImmutableFilterList());
+                            step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                            step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenCave<MapGenContext>(new RandRange(9, 13), new RandRange(5, 7))), 10);
+                            step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenCave<MapGenContext>(new RandRange(5, 7), new RandRange(9, 13))), 10);
+                            layout.GenSteps.Add(PR_GRID_GEN, step);
+                        }
+                    }
+                    break;
+                case "tall_hall":
+                    {
+                        AddInitGridStep(layout, 3, 10, 3, 3, 1, true);
+
+                        GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                        path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                        path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                        path.RoomRatio = new RandRange(100);
+                        path.BranchRatio = new RandRange(30);
+
+                        SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                        //cross
+                        genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(2, 4), new RandRange(2, 4), new RandRange(1, 3), new RandRange(1, 3)), 10);
+                        path.GenericRooms = genericRooms;
+
+                        SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                        genericHalls.Add(new RoomGenAngledHall<MapGenContext>(20), 10);
+                        path.GenericHalls = genericHalls;
+
+                        layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                        layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(40, 0));
+
+                        layout.GenSteps.Add(PR_GRID_GEN, new SetGridDefaultsStep<MapGenContext>(new RandRange(25), GetImmutableFilterList()));
+                        {
+                            CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(6, 9), GetImmutableFilterList());
+                            step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                            step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenBump<MapGenContext>(new RandRange(7), new RandRange(3), new RandRange(20, 60))), 10);
+                            step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenBump<MapGenContext>(new RandRange(3), new RandRange(7), new RandRange(20, 60))), 10);
+                            layout.GenSteps.Add(PR_GRID_GEN, step);
+                        }
+                    }
+                    break;
+                case "wide_hall":
+                    {
+                        AddInitGridStep(layout, 12, 2, 4, 4, 1, true);
+
+                        GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                        path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                        path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                        path.RoomRatio = new RandRange(100);
+                        path.BranchRatio = new RandRange(30);
+
+                        SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                        //cross
+                        genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(2, 5), new RandRange(2, 5), new RandRange(1, 3), new RandRange(1, 3)), 10);
+                        path.GenericRooms = genericRooms;
+
+                        SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                        genericHalls.Add(new RoomGenAngledHall<MapGenContext>(20), 10);
+                        path.GenericHalls = genericHalls;
+
+                        layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                        layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(40, 0));
+
+                        layout.GenSteps.Add(PR_GRID_GEN, new SetGridDefaultsStep<MapGenContext>(new RandRange(25), GetImmutableFilterList()));
+                        {
+                            CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(6, 9), GetImmutableFilterList());
+                            step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                            step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenBump<MapGenContext>(new RandRange(9), new RandRange(4), new RandRange(20, 60))), 10);
+                            step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenBump<MapGenContext>(new RandRange(4), new RandRange(9), new RandRange(20, 60))), 10);
+                            layout.GenSteps.Add(PR_GRID_GEN, step);
+                        }
+                    }
+                    break;
+            }
+
+
+            layout.GenSteps.Add(PR_ROOMS_INIT, new DrawGridToFloorStep<MapGenContext>());
+            layout.GenSteps.Add(PR_TILES_INIT, new DrawFloorToTileStep<MapGenContext>());
+
+            {
+                EffectTile exitTile = new EffectTile("stairs_go_down", true);
+                exitTile.TileStates.Set(new DestState(new SegLoc(moveBack, 1), true));
+                var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
+                step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
+                layout.GenSteps.Add(PR_EXITS, step);
+            }
+
+            return layout;
+        }
+
         static AddBossRoomStep<ListMapGenContext> getBossRoom(string id)
         {
             if (id == "vespiquen")
