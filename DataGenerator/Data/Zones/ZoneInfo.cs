@@ -3030,6 +3030,7 @@ namespace DataGenerator.Data
                                 RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
                                 loadRoom.MapID = "room_updraft";
                                 loadRoom.RoomTerrain = new Tile("floor");
+                                loadRoom.PreventChanges = PostProcType.Panel | PostProcType.Terrain;
 
                                 specialStep.Rooms = new PresetPicker<RoomGen<MapGenContext>>(loadRoom);
                                 specialStep.RoomComponents.Set(new ImmutableRoom());
@@ -10282,6 +10283,7 @@ namespace DataGenerator.Data
                                     RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
                                     loadRoom.MapID = "room_fairy_ring";
                                     loadRoom.RoomTerrain = new Tile("floor");
+                                    loadRoom.PreventChanges = PostProcType.Panel | PostProcType.Terrain;
 
                                     specialStep.Rooms = new PresetPicker<RoomGen<MapGenContext>>(loadRoom);
                                     specialStep.RoomComponents.Set(new ImmutableRoom());
@@ -10787,6 +10789,26 @@ namespace DataGenerator.Data
                                     layout.GenSteps.Add(PR_ROOMS_GEN, path);
                                 }
 
+
+                                if (ii == 5)
+                                {
+                                    AddDisconnectedRoomsStep<ListMapGenContext> addDisconnect = new AddDisconnectedRoomsStep<ListMapGenContext>();
+                                    addDisconnect.Components.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Disconnected));
+                                    addDisconnect.Components.Set(new ImmutableRoom());
+                                    addDisconnect.Amount = new RandRange(1);
+
+                                    SpawnList<RoomGen<ListMapGenContext>> genericRooms = new SpawnList<RoomGen<ListMapGenContext>>();
+
+                                    RoomGenLoadMap<ListMapGenContext> loadRoom = new RoomGenLoadMap<ListMapGenContext>();
+                                    loadRoom.MapID = "room_inscribed_entrance";
+                                    loadRoom.RoomTerrain = new Tile("floor");
+                                    loadRoom.PreventChanges = PostProcType.Panel | PostProcType.Terrain;
+                                    genericRooms.Add(loadRoom, 10);
+
+                                    addDisconnect.GenericRooms = genericRooms;
+                                    layout.GenSteps.Add(PR_ROOMS_GEN, addDisconnect);
+                                }
+
                                 if (ii >= 8)
                                 {
                                     //Add some disconnected rooms
@@ -10806,7 +10828,6 @@ namespace DataGenerator.Data
 
                                     layout.GenSteps.Add(PR_ROOMS_GEN, addDisconnect);
                                 }
-
                             }
 
                             //draw paths
@@ -10871,7 +10892,7 @@ namespace DataGenerator.Data
                             RoomFloorGen layout = new RoomFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B29. Treacherous Mountain.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                            AddFloorData(layout, "Limestone Cavern.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             AddWaterSteps(layout, "floor", new RandRange(20));//empty
 

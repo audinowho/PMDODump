@@ -1022,7 +1022,8 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Cyan;
                 //tile.BlockLight = true;
                 tile.LandedOnTiles.Add(0, new AskUnlockEvent());//for doors/chests, this will be triggered when "talked to"
-                tile.InteractWithTiles.Add(0, new OpenSelfEvent());
+                //invoke the unlock sound and animation
+                tile.InteractWithTiles.Add(0, new OpenSelfEvent(new BattleFX(new SingleEmitter(new AnimData("Vault_Key_Open", 3)), "DUN_Open_Chamber", 30), true, true));
 
                 WindEmitter overlay = new WindEmitter(new AnimData("Wind_Leaves", 4), new AnimData("Wind_Leaves_Small", 3));
                 overlay.Bursts = 4;
@@ -1259,8 +1260,8 @@ namespace DataGenerator.Data
                 tile.Anim = new ObjAnimData("Block_Guild", 1);
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
-                tile.LandedOnTiles.Add(0, new AskUnlockEvent());//need a scripted event to check for story completion
-                tile.InteractWithTiles.Add(0, new OpenSelfEvent());
+                tile.LandedOnTiles.Add(0, new SingleCharScriptEvent("GuildBlock"));//need a scripted event to check for story completion
+                tile.InteractWithTiles.Add(0, new OpenSelfEvent(new BattleFX(new SingleEmitter(new AnimData("Seven_Treasures", 3)), "EVT_Seven_Treasures", 156), false, false));
             }
             else if (ii == 55)
             {
