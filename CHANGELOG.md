@@ -1,8 +1,5 @@
-# 0.6.8 Changes #
+# 0.6.9 Changes #
 
-* Fix memory accumulation when switching between certain maps, viewing replays, and playing many sound effects.
-* Fix Secret Garden cutscene
-* Properly seed random for scripting
-* Added move range preview
-* Added more menu scripting options
-* Better error reporting for missing assets
+* Fixed various issues with pre-targeting
+* Fixed an issue where Wonder Room would re-apply its effect on multistrike moves
+* Devs: Added object movement and wait for frame operations

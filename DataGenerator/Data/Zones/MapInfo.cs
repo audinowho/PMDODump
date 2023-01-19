@@ -383,7 +383,7 @@ namespace DataGenerator.Data
                     map.AddObject(groundObject);
                 }
                 {
-                    GroundObject groundObject = new GroundObject(new ObjAnimData("Assembly", 1, 0, 0), new Rect(48, 224, 24, 24), new Loc(0, 8), false, "Assembly");
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Assembly", 30), new Rect(48, 224, 24, 24), new Loc(0, 8), false, "Assembly");
                     map.AddObject(groundObject);
                 }
 
