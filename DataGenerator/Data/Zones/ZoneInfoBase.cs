@@ -2094,11 +2094,254 @@ namespace DataGenerator.Data
                 zone.Segments.Add(structure);
             }
 
+            bool continuous = false;
+
+            if (continuous)
+            {
+                SingularSegment structure = new SingularSegment(100);
+                #region TILESET TESTS
+                StairsFloorGen layout = new StairsFloorGen();
+
+                AddFloorData(layout, "A07. Summit.ogg", -1, Map.SightRange.Clear, Map.SightRange.Clear);
+
+                string[] level = {
+                            "#######.#######",
+                            "#######.#######",
+                            "#######.#######",
+                            "#######.#######",
+                            "#######.#######",
+                            "#######.#######",
+                            "#######.#######",
+                            "#######.#######",
+                            "#######.#######",
+                            "#######.#######",
+                            "#######.#######",
+                            "#######.#######",
+                            "#######.#######",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                            "........~~~~~~~",
+                        };
+
+                int total_tiles = 147;
+                InitTilesStep<StairsMapGenContext> startStep = new InitTilesStep<StairsMapGenContext>();
+                int width = level[0].Length;
+                int height = level.Length;
+                startStep.Width = width;
+                startStep.Height = height * total_tiles;
+
+                layout.GenSteps.Add(PR_TILES_INIT, startStep);
+
+                SpecificTilesStep<StairsMapGenContext> drawStep = new SpecificTilesStep<StairsMapGenContext>();
+
+                drawStep.Tiles = new Tile[width][];
+                for (int xx = 0; xx < width; xx++)
+                {
+                    drawStep.Tiles[xx] = new Tile[height * total_tiles];
+                    for (int ii = 0; ii < total_tiles; ii++)
+                    {
+                        int y_off = ii * height;
+                        for (int jj = 0; jj < height; jj++)
+                        {
+                            Tile tile;
+                            if (level[jj][xx] == '#')
+                                tile = new Tile("wall");
+                            else if (level[jj][xx] == '~')
+                                tile = new Tile("water");
+                            else
+                                tile = new Tile("floor");
+
+                            switch (ii)
+                            {
+                                case 0: SetTestTileData(tile, "tiny_woods_wall", "tiny_woods_floor", "tiny_woods_secondary"); break;
+                                case 1: SetTestTileData(tile, "thunderwave_cave_wall", "thunderwave_cave_floor", "thunderwave_cave_secondary"); break;
+                                case 2: SetTestTileData(tile, "mt_steel_1_wall", "mt_steel_1_floor", "mt_steel_1_secondary"); break;
+                                case 3: SetTestTileData(tile, "mt_steel_2_wall", "mt_steel_2_floor", "mt_steel_2_secondary"); break;
+                                case 4: SetTestTileData(tile, "grass_maze_wall", "grass_maze_floor", "grass_maze_secondary"); break;
+                                case 5: SetTestTileData(tile, "uproar_forest_wall", "uproar_forest_floor", "uproar_forest_secondary"); break;
+                                case 6: SetTestTileData(tile, "electric_maze_wall", "electric_maze_floor", "electric_maze_secondary"); break;
+                                case 7: SetTestTileData(tile, "water_maze_wall", "water_maze_floor", "water_maze_secondary"); break;
+                                case 8: SetTestTileData(tile, "poison_maze_wall", "poison_maze_floor", "poison_maze_secondary"); break;
+                                case 9: SetTestTileData(tile, "rock_maze_wall", "rock_maze_floor", "rock_maze_secondary"); break;
+                                case 10: SetTestTileData(tile, "silent_chasm_wall", "silent_chasm_floor", "silent_chasm_secondary"); break;
+                                case 11: SetTestTileData(tile, "mt_thunder_wall", "mt_thunder_floor", "mt_thunder_secondary"); break;
+                                case 12: SetTestTileData(tile, "mt_thunder_peak_wall", "mt_thunder_peak_floor", "mt_thunder_peak_secondary"); break;
+                                case 13: SetTestTileData(tile, "great_canyon_wall", "great_canyon_floor", "great_canyon_secondary"); break;
+                                case 14: SetTestTileData(tile, "lapis_cave_wall", "lapis_cave_floor", "lapis_cave_secondary"); break;
+                                case 15: SetTestTileData(tile, "southern_cavern_2_wall", "southern_cavern_2_floor", "southern_cavern_2_secondary"); break;
+                                case 16: SetTestTileData(tile, "wish_cave_2_wall", "wish_cave_2_floor", "wish_cave_2_secondary"); break;
+                                case 17: SetTestTileData(tile, "rock_path_rb_wall", "rock_path_rb_floor", "rock_path_rb_secondary"); break;
+                                case 18: SetTestTileData(tile, "northern_range_1_wall", "northern_range_1_floor", "northern_range_1_secondary"); break;
+                                case 19: SetTestTileData(tile, "mt_blaze_wall", "mt_blaze_floor", "mt_blaze_secondary"); break;
+                                case 20: SetTestTileData(tile, "snow_path_wall", "snow_path_floor", "snow_path_secondary"); break;
+                                case 21: SetTestTileData(tile, "frosty_forest_wall", "frosty_forest_floor", "frosty_forest_secondary"); break;
+                                case 22: SetTestTileData(tile, "mt_freeze_wall", "mt_freeze_floor", "mt_freeze_secondary"); break;
+                                case 23: SetTestTileData(tile, "ice_maze_wall", "ice_maze_floor", "ice_maze_secondary"); break;
+                                case 24: SetTestTileData(tile, "magma_cavern_2_wall", "magma_cavern_2_floor", "magma_cavern_2_secondary"); break;
+                                case 25: SetTestTileData(tile, "magma_cavern_3_wall", "magma_cavern_3_floor", "magma_cavern_3_secondary"); break;
+                                case 26: SetTestTileData(tile, "howling_forest_2_wall", "howling_forest_2_floor", "howling_forest_2_secondary"); break;
+                                case 27: SetTestTileData(tile, "sky_tower_wall", "sky_tower_floor", "sky_tower_secondary"); break;
+                                case 28: SetTestTileData(tile, "darknight_relic_wall", "darknight_relic_floor", "darknight_relic_secondary"); break;
+                                case 29: SetTestTileData(tile, "desert_region_wall", "desert_region_floor", "desert_region_secondary"); break;
+                                case 30: SetTestTileData(tile, "howling_forest_1_wall", "howling_forest_1_floor", "howling_forest_1_secondary"); break;
+                                case 31: SetTestTileData(tile, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary"); break;
+                                case 32: SetTestTileData(tile, "wyvern_hill_wall", "wyvern_hill_floor", "wyvern_hill_secondary"); break;
+                                case 33: SetTestTileData(tile, "solar_cave_1_wall", "solar_cave_1_floor", "solar_cave_1_secondary"); break;
+                                case 34: SetTestTileData(tile, "waterfall_pond_wall", "waterfall_pond_floor", "waterfall_pond_secondary"); break;
+                                case 35: SetTestTileData(tile, "stormy_sea_1_wall", "stormy_sea_1_floor", "stormy_sea_1_secondary"); break;
+                                case 36: SetTestTileData(tile, "stormy_sea_2_wall", "stormy_sea_2_floor", "stormy_sea_2_secondary"); break;
+                                case 37: SetTestTileData(tile, "silver_trench_3_wall", "silver_trench_3_floor", "silver_trench_3_secondary"); break;
+                                case 38: SetTestTileData(tile, "buried_relic_1_wall", "buried_relic_1_floor", "buried_relic_1_secondary"); break;
+                                case 39: SetTestTileData(tile, "buried_relic_2_wall", "buried_relic_2_floor", "buried_relic_2_secondary"); break;
+                                case 40: SetTestTileData(tile, "buried_relic_3_wall", "buried_relic_3_floor", "buried_relic_3_secondary"); break;
+                                case 41: SetTestTileData(tile, "lightning_field_wall", "lightning_field_floor", "lightning_field_secondary"); break;
+                                case 42: SetTestTileData(tile, "northwind_field_wall", "northwind_field_floor", "northwind_field_secondary"); break;
+                                case 43: SetTestTileData(tile, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary"); break;
+                                case 44: SetTestTileData(tile, "mt_faraway_4_wall", "mt_faraway_4_floor", "mt_faraway_4_secondary"); break;
+                                case 45: SetTestTileData(tile, "northern_range_2_wall", "northern_range_2_floor", "northern_range_2_secondary"); break;
+                                case 46: SetTestTileData(tile, "pitfall_valley_1_wall", "pitfall_valley_1_floor", "pitfall_valley_1_secondary"); break;
+                                case 47: SetTestTileData(tile, "joyous_tower_wall", "joyous_tower_floor", "joyous_tower_secondary"); break;
+                                case 48: SetTestTileData(tile, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary"); break;
+                                case 49: SetTestTileData(tile, "purity_forest_4_wall", "purity_forest_4_floor", "purity_forest_4_secondary"); break;
+                                case 50: SetTestTileData(tile, "purity_forest_6_wall", "purity_forest_6_floor", "purity_forest_6_secondary"); break;
+                                case 51: SetTestTileData(tile, "purity_forest_7_wall", "purity_forest_7_floor", "purity_forest_7_secondary"); break;
+                                case 52: SetTestTileData(tile, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary"); break;
+                                case 53: SetTestTileData(tile, "purity_forest_9_wall", "purity_forest_9_floor", "purity_forest_9_secondary"); break;
+                                case 54: SetTestTileData(tile, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary"); break;
+                                case 55: SetTestTileData(tile, "murky_cave_wall", "murky_cave_floor", "murky_cave_secondary"); break;
+                                case 56: SetTestTileData(tile, "western_cave_1_wall", "western_cave_1_floor", "western_cave_1_secondary"); break;
+                                case 57: SetTestTileData(tile, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary"); break;
+                                case 58: SetTestTileData(tile, "meteor_cave_wall", "meteor_cave_floor", "meteor_cave_secondary"); break;
+                                case 59: SetTestTileData(tile, "rescue_team_maze_wall", "rescue_team_maze_floor", "rescue_team_maze_secondary"); break;
+                                case 60: SetTestTileData(tile, "beach_cave_wall", "beach_cave_floor", "beach_cave_secondary"); break;
+                                case 61: SetTestTileData(tile, "drenched_bluff_wall", "drenched_bluff_floor", "drenched_bluff_secondary"); break;
+                                case 62: SetTestTileData(tile, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary"); break;
+                                case 63: SetTestTileData(tile, "waterfall_cave_wall", "waterfall_cave_floor", "waterfall_cave_secondary"); break;
+                                case 64: SetTestTileData(tile, "apple_woods_wall", "apple_woods_floor", "apple_woods_secondary"); break;
+                                case 65: SetTestTileData(tile, "craggy_coast_wall", "craggy_coast_floor", "craggy_coast_secondary"); break;
+                                case 66: SetTestTileData(tile, "side_path_wall", "side_path_floor", "side_path_secondary"); break;
+                                case 67: SetTestTileData(tile, "mt_horn_wall", "mt_horn_floor", "mt_horn_secondary"); break;
+                                case 68: SetTestTileData(tile, "rock_path_tds_wall", "rock_path_tds_floor", "rock_path_tds_secondary"); break;
+                                case 69: SetTestTileData(tile, "foggy_forest_wall", "foggy_forest_floor", "foggy_forest_secondary"); break;
+                                case 70: SetTestTileData(tile, "forest_path_wall", "forest_path_floor", "forest_path_secondary"); break;
+                                case 71: SetTestTileData(tile, "steam_cave_wall", "steam_cave_floor", "steam_cave_secondary"); break;
+                                case 72: SetTestTileData(tile, "unused_steam_cave_wall", "unused_steam_cave_floor", "unused_steam_cave_secondary"); break;
+                                case 73: SetTestTileData(tile, "amp_plains_wall", "amp_plains_floor", "amp_plains_secondary"); break;
+                                case 74: SetTestTileData(tile, "far_amp_plains_wall", "far_amp_plains_floor", "far_amp_plains_secondary"); break;
+                                case 75: SetTestTileData(tile, "northern_desert_1_wall", "northern_desert_1_floor", "northern_desert_1_secondary"); break;
+                                case 76: SetTestTileData(tile, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary"); break;
+                                case 77: SetTestTileData(tile, "quicksand_cave_wall", "quicksand_cave_floor", "quicksand_cave_secondary"); break;
+                                case 78: SetTestTileData(tile, "quicksand_pit_wall", "quicksand_pit_floor", "quicksand_pit_secondary"); break;
+                                case 79: SetTestTileData(tile, "quicksand_unused_wall", "quicksand_unused_floor", "quicksand_unused_secondary"); break;
+                                case 80: SetTestTileData(tile, "crystal_cave_1_wall", "crystal_cave_1_floor", "crystal_cave_1_secondary"); break;
+                                case 81: SetTestTileData(tile, "crystal_cave_2_wall", "crystal_cave_2_floor", "crystal_cave_2_secondary"); break;
+                                case 82: SetTestTileData(tile, "crystal_crossing_wall", "crystal_crossing_floor", "crystal_crossing_secondary"); break;
+                                case 83: SetTestTileData(tile, "chasm_cave_1_wall", "chasm_cave_1_floor", "chasm_cave_1_wall"); break;
+                                case 84: SetTestTileData(tile, "chasm_cave_2_wall", "chasm_cave_2_floor", "chasm_cave_2_wall"); break;
+                                case 85: SetTestTileData(tile, "dark_hill_1_wall", "dark_hill_1_floor", "dark_hill_1_secondary"); break;
+                                case 86: SetTestTileData(tile, "dark_hill_2_wall", "dark_hill_2_floor", "dark_hill_2_secondary"); break;
+                                case 87: SetTestTileData(tile, "sealed_ruin_wall", "sealed_ruin_floor", "sealed_ruin_secondary"); break;
+                                case 88: SetTestTileData(tile, "deep_sealed_ruin_wall", "deep_sealed_ruin_floor", "deep_sealed_ruin_secondary"); break;
+                                case 89: SetTestTileData(tile, "dusk_forest_1_wall", "dusk_forest_1_floor", "dusk_forest_1_secondary"); break;
+                                case 90: SetTestTileData(tile, "dusk_forest_2_wall", "dusk_forest_2_floor", "dusk_forest_2_secondary"); break;
+                                case 91: SetTestTileData(tile, "deep_dusk_forest_1_wall", "deep_dusk_forest_1_floor", "deep_dusk_forest_1_secondary"); break;
+                                case 92: SetTestTileData(tile, "deep_dusk_forest_2_wall", "deep_dusk_forest_2_floor", "deep_dusk_forest_2_secondary"); break;
+                                case 93: SetTestTileData(tile, "treeshroud_forest_1_wall", "treeshroud_forest_1_floor", "treeshroud_forest_1_secondary"); break;
+                                case 94: SetTestTileData(tile, "treeshroud_forest_2_wall", "treeshroud_forest_2_floor", "treeshroud_forest_2_secondary"); break;
+                                case 95: SetTestTileData(tile, "brine_cave_wall", "brine_cave_floor", "brine_cave_secondary"); break;
+                                case 96: SetTestTileData(tile, "lower_brine_cave_wall", "lower_brine_cave_floor", "lower_brine_cave_secondary"); break;
+                                case 97: SetTestTileData(tile, "unused_brine_cave_wall", "unused_brine_cave_floor", "unused_brine_cave_secondary"); break;
+                                case 98: SetTestTileData(tile, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary"); break;
+                                case 99: SetTestTileData(tile, "hidden_highland_wall", "hidden_highland_floor", "hidden_highland_secondary"); break;
+                                case 100: SetTestTileData(tile, "southern_jungle_wall", "southern_jungle_floor", "southern_jungle_secondary"); break;
+                                case 101: SetTestTileData(tile, "temporal_tower_wall", "temporal_tower_floor", "temporal_tower_secondary"); break;
+                                case 102: SetTestTileData(tile, "temporal_spire_wall", "temporal_spire_floor", "temporal_spire_secondary"); break;
+                                case 103: SetTestTileData(tile, "temporal_unused_wall", "temporal_unused_floor", "temporal_unused_secondary"); break;
+                                case 104: SetTestTileData(tile, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary"); break;
+                                case 105: SetTestTileData(tile, "concealed_ruins_wall", "concealed_ruins_floor", "concealed_ruins_secondary"); break;
+                                case 106: SetTestTileData(tile, "surrounded_sea_wall", "surrounded_sea_floor", "surrounded_sea_secondary"); break;
+                                case 107: SetTestTileData(tile, "miracle_sea_wall", "miracle_sea_floor", "miracle_sea_secondary"); break;
+                                case 108: SetTestTileData(tile, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary"); break;
+                                case 109: SetTestTileData(tile, "the_nightmare_wall", "the_nightmare_floor", "the_nightmare_secondary"); break;
+                                case 110: SetTestTileData(tile, "spacial_rift_1_wall", "spacial_rift_1_floor", "spacial_rift_1_secondary"); break;
+                                case 111: SetTestTileData(tile, "spacial_rift_2_wall", "spacial_rift_2_floor", "spacial_rift_2_secondary"); break;
+                                case 112: SetTestTileData(tile, "dark_crater_wall", "dark_crater_floor", "dark_crater_secondary"); break;
+                                case 113: SetTestTileData(tile, "deep_dark_crater_wall", "deep_dark_crater_floor", "deep_dark_crater_secondary"); break;
+                                case 114: SetTestTileData(tile, "world_abyss_2_wall", "world_abyss_2_floor", "world_abyss_2_secondary"); break;
+                                case 115: SetTestTileData(tile, "golden_chamber_wall", "golden_chamber_floor", "golden_chamber_secondary"); break;
+                                case 116: SetTestTileData(tile, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary"); break;
+                                case 117: SetTestTileData(tile, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary"); break;
+                                case 118: SetTestTileData(tile, "zero_isle_east_3_wall", "zero_isle_east_3_floor", "zero_isle_east_3_secondary"); break;
+                                case 119: SetTestTileData(tile, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary"); break;
+                                case 120: SetTestTileData(tile, "zero_isle_south_1_wall", "zero_isle_south_1_floor", "zero_isle_south_1_secondary"); break;
+                                case 121: SetTestTileData(tile, "zero_isle_south_2_wall", "zero_isle_south_2_floor", "zero_isle_south_2_secondary"); break;
+                                case 122: SetTestTileData(tile, "tiny_meadow_wall", "tiny_meadow_floor", "tiny_meadow_secondary"); break;
+                                case 123: SetTestTileData(tile, "final_maze_2_wall", "final_maze_2_floor", "final_maze_2_secondary"); break;
+                                case 124: SetTestTileData(tile, "unused_waterfall_pond_wall", "unused_waterfall_pond_floor", "unused_waterfall_pond_secondary"); break;
+                                case 125: SetTestTileData(tile, "lush_prairie_wall", "lush_prairie_floor", "lush_prairie_secondary"); break;
+                                case 126: SetTestTileData(tile, "rock_aegis_cave_wall", "rock_aegis_cave_floor", "rock_aegis_cave_secondary"); break;
+                                case 127: SetTestTileData(tile, "ice_aegis_cave_wall", "ice_aegis_cave_floor", "ice_aegis_cave_secondary"); break;
+                                case 128: SetTestTileData(tile, "steel_aegis_cave_wall", "steel_aegis_cave_floor", "steel_aegis_cave_secondary"); break;
+                                case 129: SetTestTileData(tile, "murky_forest_wall", "murky_forest_floor", "murky_forest_secondary"); break;
+                                case 130: SetTestTileData(tile, "deep_boulder_quarry_wall", "deep_boulder_quarry_floor", "deep_boulder_quarry_secondary"); break;
+                                case 131: SetTestTileData(tile, "limestone_cavern_wall", "limestone_cavern_floor", "limestone_cavern_secondary"); break;
+                                case 132: SetTestTileData(tile, "deep_limestone_cavern_wall", "deep_limestone_cavern_floor", "deep_limestone_cavern_secondary"); break;
+                                case 133: SetTestTileData(tile, "barren_valley_wall", "barren_valley_floor", "barren_valley_secondary"); break;
+                                case 134: SetTestTileData(tile, "dark_wasteland_wall", "dark_wasteland_floor", "dark_wasteland_secondary"); break;
+                                case 135: SetTestTileData(tile, "future_temporal_tower_wall", "future_temporal_tower_floor", "future_temporal_tower_secondary"); break;
+                                case 136: SetTestTileData(tile, "future_temporal_spire_wall", "future_temporal_spire_floor", "future_temporal_spire_secondary"); break;
+                                case 137: SetTestTileData(tile, "spacial_cliffs_wall", "spacial_cliffs_floor", "spacial_cliffs_secondary"); break;
+                                case 138: SetTestTileData(tile, "dark_ice_mountain_wall", "dark_ice_mountain_floor", "dark_ice_mountain_secondary"); break;
+                                case 139: SetTestTileData(tile, "dark_ice_mountain_peak_wall", "dark_ice_mountain_peak_floor", "dark_ice_mountain_peak_secondary"); break;
+                                case 140: SetTestTileData(tile, "icicle_forest_wall", "icicle_forest_floor", "icicle_forest_secondary"); break;
+                                case 141: SetTestTileData(tile, "vast_ice_mountain_wall", "vast_ice_mountain_floor", "vast_ice_mountain_secondary"); break;
+                                case 142: SetTestTileData(tile, "vast_ice_mountain_peak_wall", "vast_ice_mountain_peak_floor", "vast_ice_mountain_peak_secondary"); break;
+                                case 143: SetTestTileData(tile, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary"); break;
+                                case 144: SetTestTileData(tile, "sky_peak_7th_pass_wall", "sky_peak_7th_pass_floor", "sky_peak_7th_pass_secondary"); break;
+                                case 145: SetTestTileData(tile, "sky_peak_summit_pass_wall", "sky_peak_summit_pass_floor", "sky_peak_summit_pass_secondary"); break;
+                                case 146: SetTestTileData(tile, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary"); break;
+                            }
+
+                            drawStep.Tiles[xx][y_off + jj] = tile;
+                        }
+                    }
+                }
+
+                layout.GenSteps.Add(PR_TILES_GEN, drawStep);
+
+                {
+                    List<(MapGenEntrance, Loc)> items = new List<(MapGenEntrance, Loc)>();
+                    items.Add((new MapGenEntrance(Dir8.Down), new Loc(7, 5)));
+                    AddSpecificSpawn(layout, items, PR_TILES_INIT);
+                }
+                {
+                    List<(MapGenExit, Loc)> items = new List<(MapGenExit, Loc)>();
+                    items.Add((new MapGenExit(new EffectTile("stairs_go_up", true)), new Loc(7, 4110)));
+                    AddSpecificSpawn(layout, items, PR_TILES_INIT);
+                }
+
+                structure.BaseFloor = layout;
+                #endregion
+
+                zone.Segments.Add(structure);
+            }
+            else
             {
                 LayeredSegment structure = new LayeredSegment();
                 //Tests Tilesets, and unlockables
                 #region TILESET TESTS
-                int curTileIndex = 0;
                 for (int kk = 0; kk < 153; kk++)
                 {
                     string[] level = {
@@ -2173,159 +2416,159 @@ namespace DataGenerator.Data
 
                     switch (kk)
                     {
-                        case 0: AddTestTextureData(layout, "tiny_woods_wall", "tiny_woods_floor", "tiny_woods_secondary", "normal"); break;
-                        case 1: AddTestTextureData(layout, "thunderwave_cave_wall", "thunderwave_cave_floor", "thunderwave_cave_secondary", "normal"); break;
-                        case 2: AddTestTextureData(layout, "mt_steel_1_wall", "mt_steel_1_floor", "mt_steel_1_secondary", "normal"); break;
-                        case 3: AddTestTextureData(layout, "mt_steel_2_wall", "mt_steel_2_floor", "mt_steel_2_secondary", "normal"); break;
-                        case 4: AddTestTextureData(layout, "grass_maze_wall", "grass_maze_floor", "grass_maze_secondary", "normal"); break;
-                        case 5: AddTestTextureData(layout, "uproar_forest_wall", "uproar_forest_floor", "uproar_forest_secondary", "normal"); break;
-                        case 6: AddTestTextureData(layout, "electric_maze_wall", "electric_maze_floor", "electric_maze_secondary", "normal"); break;
-                        case 7: AddTestTextureData(layout, "water_maze_wall", "water_maze_floor", "water_maze_secondary", "normal"); break;
-                        case 8: AddTestTextureData(layout, "poison_maze_wall", "poison_maze_floor", "poison_maze_secondary", "normal"); break;
-                        case 9: AddTestTextureData(layout, "rock_maze_wall", "rock_maze_floor", "rock_maze_secondary", "normal"); break;
-                        case 10: AddTestTextureData(layout, "silent_chasm_wall", "silent_chasm_floor", "silent_chasm_secondary", "normal"); break;
-                        case 11: AddTestTextureData(layout, "mt_thunder_wall", "mt_thunder_floor", "mt_thunder_secondary", "normal"); break;
-                        case 12: AddTestTextureData(layout, "mt_thunder_peak_wall", "mt_thunder_peak_floor", "mt_thunder_peak_secondary", "normal"); break;
-                        case 13: AddTestTextureData(layout, "great_canyon_wall", "great_canyon_floor", "great_canyon_secondary", "normal"); break;
-                        case 14: AddTestTextureData(layout, "lapis_cave_wall", "lapis_cave_floor", "lapis_cave_secondary", "normal"); break;
-                        case 15: AddTestTextureData(layout, "southern_cavern_2_wall", "southern_cavern_2_floor", "southern_cavern_2_secondary", "normal"); break;
-                        case 16: AddTestTextureData(layout, "wish_cave_2_wall", "wish_cave_2_floor", "wish_cave_2_secondary", "normal"); break;
-                        case 17: AddTestTextureData(layout, "rock_path_rb_wall", "rock_path_rb_floor", "rock_path_rb_secondary", "normal"); break;
-                        case 18: AddTestTextureData(layout, "northern_range_1_wall", "northern_range_1_floor", "northern_range_1_secondary", "normal"); break;
-                        case 19: AddTestTextureData(layout, "mt_blaze_wall", "mt_blaze_floor", "mt_blaze_secondary", "normal"); break;
-                        case 20: AddTestTextureData(layout, "snow_path_wall", "snow_path_floor", "snow_path_secondary", "normal"); break;
-                        case 21: AddTestTextureData(layout, "frosty_forest_wall", "frosty_forest_floor", "frosty_forest_secondary", "normal"); break;
-                        case 22: AddTestTextureData(layout, "mt_freeze_wall", "mt_freeze_floor", "mt_freeze_secondary", "normal"); break;
-                        case 23: AddTestTextureData(layout, "ice_maze_wall", "ice_maze_floor", "ice_maze_secondary", "normal"); break;
-                        case 24: AddTestTextureData(layout, "magma_cavern_2_wall", "magma_cavern_2_floor", "magma_cavern_2_secondary", "normal"); break;
-                        case 25: AddTestTextureData(layout, "magma_cavern_3_wall", "magma_cavern_3_floor", "magma_cavern_3_secondary", "normal"); break;
-                        case 26: AddTestTextureData(layout, "howling_forest_2_wall", "howling_forest_2_floor", "howling_forest_2_secondary", "normal"); break;
-                        case 27: AddTestTextureData(layout, "sky_tower_wall", "sky_tower_floor", "sky_tower_secondary", "normal"); break;
-                        case 28: AddTestTextureData(layout, "darknight_relic_wall", "darknight_relic_floor", "darknight_relic_secondary", "normal"); break;
-                        case 29: AddTestTextureData(layout, "desert_region_wall", "desert_region_floor", "desert_region_secondary", "normal"); break;
-                        case 30: AddTestTextureData(layout, "howling_forest_1_wall", "howling_forest_1_floor", "howling_forest_1_secondary", "normal"); break;
-                        case 31: AddTestTextureData(layout, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary", "normal"); break;
-                        case 32: AddTestTextureData(layout, "wyvern_hill_wall", "wyvern_hill_floor", "wyvern_hill_secondary", "normal"); break;
-                        case 33: AddTestTextureData(layout, "solar_cave_1_wall", "solar_cave_1_floor", "solar_cave_1_secondary", "normal"); break;
-                        case 34: AddTestTextureData(layout, "waterfall_pond_wall", "waterfall_pond_floor", "waterfall_pond_secondary", "normal"); break;
-                        case 35: AddTestTextureData(layout, "stormy_sea_1_wall", "stormy_sea_1_floor", "stormy_sea_1_secondary", "normal"); break;
-                        case 36: AddTestTextureData(layout, "stormy_sea_2_wall", "stormy_sea_2_floor", "stormy_sea_2_secondary", "normal"); break;
-                        case 37: AddTestTextureData(layout, "silver_trench_3_wall", "silver_trench_3_floor", "silver_trench_3_secondary", "normal"); break;
-                        case 38: AddTestTextureData(layout, "buried_relic_1_wall", "buried_relic_1_floor", "buried_relic_1_secondary", "normal"); break;
-                        case 39: AddTestTextureData(layout, "buried_relic_2_wall", "buried_relic_2_floor", "buried_relic_2_secondary", "normal"); break;
-                        case 40: AddTestTextureData(layout, "buried_relic_3_wall", "buried_relic_3_floor", "buried_relic_3_secondary", "normal"); break;
-                        case 41: AddTestTextureData(layout, "lightning_field_wall", "lightning_field_floor", "lightning_field_secondary", "normal"); break;
-                        case 42: AddTestTextureData(layout, "northwind_field_wall", "northwind_field_floor", "northwind_field_secondary", "normal"); break;
-                        case 43: AddTestTextureData(layout, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary", "normal"); break;
-                        case 44: AddTestTextureData(layout, "mt_faraway_4_wall", "mt_faraway_4_floor", "mt_faraway_4_secondary", "normal"); break;
-                        case 45: AddTestTextureData(layout, "northern_range_2_wall", "northern_range_2_floor", "northern_range_2_secondary", "normal"); break;
-                        case 46: AddTestTextureData(layout, "pitfall_valley_1_wall", "pitfall_valley_1_floor", "pitfall_valley_1_secondary", "normal"); break;
-                        case 47: AddTestTextureData(layout, "joyous_tower_wall", "joyous_tower_floor", "joyous_tower_secondary", "normal"); break;
-                        case 48: AddTestTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", "normal"); break;
-                        case 49: AddTestTextureData(layout, "purity_forest_4_wall", "purity_forest_4_floor", "purity_forest_4_secondary", "normal"); break;
-                        case 50: AddTestTextureData(layout, "purity_forest_6_wall", "purity_forest_6_floor", "purity_forest_6_secondary", "normal"); break;
-                        case 51: AddTestTextureData(layout, "purity_forest_7_wall", "purity_forest_7_floor", "purity_forest_7_secondary", "normal"); break;
-                        case 52: AddTestTextureData(layout, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary", "normal"); break;
-                        case 53: AddTestTextureData(layout, "purity_forest_9_wall", "purity_forest_9_floor", "purity_forest_9_secondary", "normal"); break;
-                        case 54: AddTestTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary", "normal"); break;
-                        case 55: AddTestTextureData(layout, "murky_cave_wall", "murky_cave_floor", "murky_cave_secondary", "normal"); break;
-                        case 56: AddTestTextureData(layout, "western_cave_1_wall", "western_cave_1_floor", "western_cave_1_secondary", "normal"); break;
-                        case 57: AddTestTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary", "normal"); break;
-                        case 58: AddTestTextureData(layout, "meteor_cave_wall", "meteor_cave_floor", "meteor_cave_secondary", "normal"); break;
-                        case 59: AddTestTextureData(layout, "rescue_team_maze_wall", "rescue_team_maze_floor", "rescue_team_maze_secondary", "normal"); break;
-                        case 60: AddTestTextureData(layout, "beach_cave_wall", "beach_cave_floor", "beach_cave_secondary", "normal"); break;
-                        case 61: AddTestTextureData(layout, "drenched_bluff_wall", "drenched_bluff_floor", "drenched_bluff_secondary", "normal"); break;
-                        case 62: AddTestTextureData(layout, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary", "normal"); break;
-                        case 63: AddTestTextureData(layout, "waterfall_cave_wall", "waterfall_cave_floor", "waterfall_cave_secondary", "normal"); break;
-                        case 64: AddTestTextureData(layout, "apple_woods_wall", "apple_woods_floor", "apple_woods_secondary", "normal"); break;
-                        case 65: AddTestTextureData(layout, "craggy_coast_wall", "craggy_coast_floor", "craggy_coast_secondary", "normal"); break;
-                        case 66: AddTestTextureData(layout, "side_path_wall", "side_path_floor", "side_path_secondary", "normal"); break;
-                        case 67: AddTestTextureData(layout, "mt_horn_wall", "mt_horn_floor", "mt_horn_secondary", "normal"); break;
-                        case 68: AddTestTextureData(layout, "rock_path_tds_wall", "rock_path_tds_floor", "rock_path_tds_secondary", "normal"); break;
-                        case 69: AddTestTextureData(layout, "foggy_forest_wall", "foggy_forest_floor", "foggy_forest_secondary", "normal"); break;
-                        case 70: AddTestTextureData(layout, "forest_path_wall", "forest_path_floor", "forest_path_secondary", "normal"); break;
-                        case 71: AddTestTextureData(layout, "steam_cave_wall", "steam_cave_floor", "steam_cave_secondary", "normal"); break;
-                        case 72: AddTestTextureData(layout, "unused_steam_cave_wall", "unused_steam_cave_floor", "unused_steam_cave_secondary", "normal"); break;
-                        case 73: AddTestTextureData(layout, "amp_plains_wall", "amp_plains_floor", "amp_plains_secondary", "normal"); break;
-                        case 74: AddTestTextureData(layout, "far_amp_plains_wall", "far_amp_plains_floor", "far_amp_plains_secondary", "normal"); break;
-                        case 75: AddTestTextureData(layout, "northern_desert_1_wall", "northern_desert_1_floor", "northern_desert_1_secondary", "normal"); break;
-                        case 76: AddTestTextureData(layout, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary", "normal"); break;
-                        case 77: AddTestTextureData(layout, "quicksand_cave_wall", "quicksand_cave_floor", "quicksand_cave_secondary", "normal"); break;
-                        case 78: AddTestTextureData(layout, "quicksand_pit_wall", "quicksand_pit_floor", "quicksand_pit_secondary", "normal"); break;
-                        case 79: AddTestTextureData(layout, "quicksand_unused_wall", "quicksand_unused_floor", "quicksand_unused_secondary", "normal"); break;
-                        case 80: AddTestTextureData(layout, "crystal_cave_1_wall", "crystal_cave_1_floor", "crystal_cave_1_secondary", "normal"); break;
-                        case 81: AddTestTextureData(layout, "crystal_cave_2_wall", "crystal_cave_2_floor", "crystal_cave_2_secondary", "normal"); break;
-                        case 82: AddTestTextureData(layout, "crystal_crossing_wall", "crystal_crossing_floor", "crystal_crossing_secondary", "normal"); break;
-                        case 83: AddTestTextureData(layout, "chasm_cave_1_wall", "chasm_cave_1_floor", "chasm_cave_1_wall", "normal"); break;
-                        case 84: AddTestTextureData(layout, "chasm_cave_2_wall", "chasm_cave_2_floor", "chasm_cave_2_wall", "normal"); break;
-                        case 85: AddTestTextureData(layout, "dark_hill_1_wall", "dark_hill_1_floor", "dark_hill_1_secondary", "normal"); break;
-                        case 86: AddTestTextureData(layout, "dark_hill_2_wall", "dark_hill_2_floor", "dark_hill_2_secondary", "normal"); break;
-                        case 87: AddTestTextureData(layout, "sealed_ruin_wall", "sealed_ruin_floor", "sealed_ruin_secondary", "normal"); break;
-                        case 88: AddTestTextureData(layout, "deep_sealed_ruin_wall", "deep_sealed_ruin_floor", "deep_sealed_ruin_secondary", "normal"); break;
-                        case 89: AddTestTextureData(layout, "dusk_forest_1_wall", "dusk_forest_1_floor", "dusk_forest_1_secondary", "normal"); break;
-                        case 90: AddTestTextureData(layout, "dusk_forest_2_wall", "dusk_forest_2_floor", "dusk_forest_2_secondary", "normal"); break;
-                        case 91: AddTestTextureData(layout, "deep_dusk_forest_1_wall", "deep_dusk_forest_1_floor", "deep_dusk_forest_1_secondary", "normal"); break;
-                        case 92: AddTestTextureData(layout, "deep_dusk_forest_2_wall", "deep_dusk_forest_2_floor", "deep_dusk_forest_2_secondary", "normal"); break;
-                        case 93: AddTestTextureData(layout, "treeshroud_forest_1_wall", "treeshroud_forest_1_floor", "treeshroud_forest_1_secondary", "normal"); break;
-                        case 94: AddTestTextureData(layout, "treeshroud_forest_2_wall", "treeshroud_forest_2_floor", "treeshroud_forest_2_secondary", "normal"); break;
-                        case 95: AddTestTextureData(layout, "brine_cave_wall", "brine_cave_floor", "brine_cave_secondary", "normal"); break;
-                        case 96: AddTestTextureData(layout, "lower_brine_cave_wall", "lower_brine_cave_floor", "lower_brine_cave_secondary", "normal"); break;
-                        case 97: AddTestTextureData(layout, "unused_brine_cave_wall", "unused_brine_cave_floor", "unused_brine_cave_secondary", "normal"); break;
-                        case 98: AddTestTextureData(layout, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary", "normal"); break;
-                        case 99: AddTestTextureData(layout, "hidden_highland_wall", "hidden_highland_floor", "hidden_highland_secondary", "normal"); break;
-                        case 100: AddTestTextureData(layout, "southern_jungle_wall", "southern_jungle_floor", "southern_jungle_secondary", "normal"); break;
-                        case 101: AddTestTextureData(layout, "temporal_tower_wall", "temporal_tower_floor", "temporal_tower_secondary", "normal"); break;
-                        case 102: AddTestTextureData(layout, "temporal_spire_wall", "temporal_spire_floor", "temporal_spire_secondary", "normal"); break;
-                        case 103: AddTestTextureData(layout, "temporal_unused_wall", "temporal_unused_floor", "temporal_unused_secondary", "normal"); break;
-                        case 104: AddTestTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "normal"); break;
-                        case 105: AddTestTextureData(layout, "concealed_ruins_wall", "concealed_ruins_floor", "concealed_ruins_secondary", "normal"); break;
-                        case 106: AddTestTextureData(layout, "surrounded_sea_wall", "surrounded_sea_floor", "surrounded_sea_secondary", "normal"); break;
-                        case 107: AddTestTextureData(layout, "miracle_sea_wall", "miracle_sea_floor", "miracle_sea_secondary", "normal"); break;
-                        case 108: AddTestTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary", "normal"); break;
-                        case 109: AddTestTextureData(layout, "the_nightmare_wall", "the_nightmare_floor", "the_nightmare_secondary", "normal"); break;
-                        case 110: AddTestTextureData(layout, "spacial_rift_1_wall", "spacial_rift_1_floor", "spacial_rift_1_secondary", "normal"); break;
-                        case 111: AddTestTextureData(layout, "spacial_rift_2_wall", "spacial_rift_2_floor", "spacial_rift_2_secondary", "normal"); break;
-                        case 112: AddTestTextureData(layout, "dark_crater_wall", "dark_crater_floor", "dark_crater_secondary", "normal"); break;
-                        case 113: AddTestTextureData(layout, "deep_dark_crater_wall", "deep_dark_crater_floor", "deep_dark_crater_secondary", "normal"); break;
-                        case 114: AddTestTextureData(layout, "world_abyss_2_wall", "world_abyss_2_floor", "world_abyss_2_secondary", "normal"); break;
-                        case 115: AddTestTextureData(layout, "golden_chamber_wall", "golden_chamber_floor", "golden_chamber_secondary", "normal"); break;
-                        case 116: AddTestTextureData(layout, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary", "normal"); break;
-                        case 117: AddTestTextureData(layout, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "normal"); break;
-                        case 118: AddTestTextureData(layout, "zero_isle_east_3_wall", "zero_isle_east_3_floor", "zero_isle_east_3_secondary", "normal"); break;
-                        case 119: AddTestTextureData(layout, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary", "normal"); break;
-                        case 120: AddTestTextureData(layout, "zero_isle_south_1_wall", "zero_isle_south_1_floor", "zero_isle_south_1_secondary", "normal"); break;
-                        case 121: AddTestTextureData(layout, "zero_isle_south_2_wall", "zero_isle_south_2_floor", "zero_isle_south_2_secondary", "normal"); break;
-                        case 122: AddTestTextureData(layout, "tiny_meadow_wall", "tiny_meadow_floor", "tiny_meadow_secondary", "normal"); break;
-                        case 123: AddTestTextureData(layout, "final_maze_2_wall", "final_maze_2_floor", "final_maze_2_secondary", "normal"); break;
-                        case 124: AddTestTextureData(layout, "unused_waterfall_pond_wall", "unused_waterfall_pond_floor", "unused_waterfall_pond_secondary", "normal"); break;
-                        case 125: AddTestTextureData(layout, "lush_prairie_wall", "lush_prairie_floor", "lush_prairie_secondary", "normal"); break;
-                        case 126: AddTestTextureData(layout, "rock_aegis_cave_wall", "rock_aegis_cave_floor", "rock_aegis_cave_secondary", "normal"); break;
-                        case 127: AddTestTextureData(layout, "ice_aegis_cave_wall", "ice_aegis_cave_floor", "ice_aegis_cave_secondary", "normal"); break;
-                        case 128: AddTestTextureData(layout, "steel_aegis_cave_wall", "steel_aegis_cave_floor", "steel_aegis_cave_secondary", "normal"); break;
-                        case 129: AddTestTextureData(layout, "murky_forest_wall", "murky_forest_floor", "murky_forest_secondary", "normal"); break;
-                        case 130: AddTestTextureData(layout, "deep_boulder_quarry_wall", "deep_boulder_quarry_floor", "deep_boulder_quarry_secondary", "normal"); break;
-                        case 131: AddTestTextureData(layout, "limestone_cavern_wall", "limestone_cavern_floor", "limestone_cavern_secondary", "normal"); break;
-                        case 132: AddTestTextureData(layout, "deep_limestone_cavern_wall", "deep_limestone_cavern_floor", "deep_limestone_cavern_secondary", "normal"); break;
-                        case 133: AddTestTextureData(layout, "barren_valley_wall", "barren_valley_floor", "barren_valley_secondary", "normal"); break;
-                        case 134: AddTestTextureData(layout, "dark_wasteland_wall", "dark_wasteland_floor", "dark_wasteland_secondary", "normal"); break;
-                        case 135: AddTestTextureData(layout, "future_temporal_tower_wall", "future_temporal_tower_floor", "future_temporal_tower_secondary", "normal"); break;
-                        case 136: AddTestTextureData(layout, "future_temporal_spire_wall", "future_temporal_spire_floor", "future_temporal_spire_secondary", "normal"); break;
-                        case 137: AddTestTextureData(layout, "spacial_cliffs_wall", "spacial_cliffs_floor", "spacial_cliffs_secondary", "normal"); break;
-                        case 138: AddTestTextureData(layout, "dark_ice_mountain_wall", "dark_ice_mountain_floor", "dark_ice_mountain_secondary", "normal"); break;
-                        case 139: AddTestTextureData(layout, "dark_ice_mountain_peak_wall", "dark_ice_mountain_peak_floor", "dark_ice_mountain_peak_secondary", "normal"); break;
-                        case 140: AddTestTextureData(layout, "icicle_forest_wall", "icicle_forest_floor", "icicle_forest_secondary", "normal"); break;
-                        case 141: AddTestTextureData(layout, "vast_ice_mountain_wall", "vast_ice_mountain_floor", "vast_ice_mountain_secondary", "normal"); break;
-                        case 142: AddTestTextureData(layout, "vast_ice_mountain_peak_wall", "vast_ice_mountain_peak_floor", "vast_ice_mountain_peak_secondary", "normal"); break;
-                        case 143: AddTestTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal"); break;
-                        case 144: AddTestTextureData(layout, "sky_peak_7th_pass_wall", "sky_peak_7th_pass_floor", "sky_peak_7th_pass_secondary", "normal"); break;
-                        case 145: AddTestTextureData(layout, "sky_peak_summit_pass_wall", "sky_peak_summit_pass_floor", "sky_peak_summit_pass_secondary", "normal"); break;
-                        case 146: AddTestTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal"); break;
-                        case 147: AddTestTextureData(layout, "forest_area_wall", "forest_area_floor", "forest_area_secondary", "normal"); break;
-                        case 148: AddTestTextureData(layout, "high_cave_area_wall", "high_cave_area_floor", "high_cave_area_secondary", "normal"); break;
-                        case 149: AddTestTextureData(layout, "sky_ruins_area_wall", "sky_ruins_area_floor", "sky_ruins_area_secondary", "normal"); break;
-                        case 150: AddTestTextureData(layout, "craggy_peak_wall", "craggy_peak_floor", "craggy_peak_secondary", "normal"); break;
-                        case 151: AddTestTextureData(layout, "sky_ruins_wall", "sky_ruins_floor", "sky_ruins_secondary", "normal"); break;
-                        case 152: AddTestTextureData(layout, "buried_relic_2_sky_wall", "buried_relic_2_sky_floor", "buried_relic_2_sky_secondary", "normal"); break;
+                        case 0: AddTestTextureData(layout, "tiny_woods_wall", "tiny_woods_floor", "tiny_woods_secondary"); break;
+                        case 1: AddTestTextureData(layout, "thunderwave_cave_wall", "thunderwave_cave_floor", "thunderwave_cave_secondary"); break;
+                        case 2: AddTestTextureData(layout, "mt_steel_1_wall", "mt_steel_1_floor", "mt_steel_1_secondary"); break;
+                        case 3: AddTestTextureData(layout, "mt_steel_2_wall", "mt_steel_2_floor", "mt_steel_2_secondary"); break;
+                        case 4: AddTestTextureData(layout, "grass_maze_wall", "grass_maze_floor", "grass_maze_secondary"); break;
+                        case 5: AddTestTextureData(layout, "uproar_forest_wall", "uproar_forest_floor", "uproar_forest_secondary"); break;
+                        case 6: AddTestTextureData(layout, "electric_maze_wall", "electric_maze_floor", "electric_maze_secondary"); break;
+                        case 7: AddTestTextureData(layout, "water_maze_wall", "water_maze_floor", "water_maze_secondary"); break;
+                        case 8: AddTestTextureData(layout, "poison_maze_wall", "poison_maze_floor", "poison_maze_secondary"); break;
+                        case 9: AddTestTextureData(layout, "rock_maze_wall", "rock_maze_floor", "rock_maze_secondary"); break;
+                        case 10: AddTestTextureData(layout, "silent_chasm_wall", "silent_chasm_floor", "silent_chasm_secondary"); break;
+                        case 11: AddTestTextureData(layout, "mt_thunder_wall", "mt_thunder_floor", "mt_thunder_secondary"); break;
+                        case 12: AddTestTextureData(layout, "mt_thunder_peak_wall", "mt_thunder_peak_floor", "mt_thunder_peak_secondary"); break;
+                        case 13: AddTestTextureData(layout, "great_canyon_wall", "great_canyon_floor", "great_canyon_secondary"); break;
+                        case 14: AddTestTextureData(layout, "lapis_cave_wall", "lapis_cave_floor", "lapis_cave_secondary"); break;
+                        case 15: AddTestTextureData(layout, "southern_cavern_2_wall", "southern_cavern_2_floor", "southern_cavern_2_secondary"); break;
+                        case 16: AddTestTextureData(layout, "wish_cave_2_wall", "wish_cave_2_floor", "wish_cave_2_secondary"); break;
+                        case 17: AddTestTextureData(layout, "rock_path_rb_wall", "rock_path_rb_floor", "rock_path_rb_secondary"); break;
+                        case 18: AddTestTextureData(layout, "northern_range_1_wall", "northern_range_1_floor", "northern_range_1_secondary"); break;
+                        case 19: AddTestTextureData(layout, "mt_blaze_wall", "mt_blaze_floor", "mt_blaze_secondary"); break;
+                        case 20: AddTestTextureData(layout, "snow_path_wall", "snow_path_floor", "snow_path_secondary"); break;
+                        case 21: AddTestTextureData(layout, "frosty_forest_wall", "frosty_forest_floor", "frosty_forest_secondary"); break;
+                        case 22: AddTestTextureData(layout, "mt_freeze_wall", "mt_freeze_floor", "mt_freeze_secondary"); break;
+                        case 23: AddTestTextureData(layout, "ice_maze_wall", "ice_maze_floor", "ice_maze_secondary"); break;
+                        case 24: AddTestTextureData(layout, "magma_cavern_2_wall", "magma_cavern_2_floor", "magma_cavern_2_secondary"); break;
+                        case 25: AddTestTextureData(layout, "magma_cavern_3_wall", "magma_cavern_3_floor", "magma_cavern_3_secondary"); break;
+                        case 26: AddTestTextureData(layout, "howling_forest_2_wall", "howling_forest_2_floor", "howling_forest_2_secondary"); break;
+                        case 27: AddTestTextureData(layout, "sky_tower_wall", "sky_tower_floor", "sky_tower_secondary"); break;
+                        case 28: AddTestTextureData(layout, "darknight_relic_wall", "darknight_relic_floor", "darknight_relic_secondary"); break;
+                        case 29: AddTestTextureData(layout, "desert_region_wall", "desert_region_floor", "desert_region_secondary"); break;
+                        case 30: AddTestTextureData(layout, "howling_forest_1_wall", "howling_forest_1_floor", "howling_forest_1_secondary"); break;
+                        case 31: AddTestTextureData(layout, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary"); break;
+                        case 32: AddTestTextureData(layout, "wyvern_hill_wall", "wyvern_hill_floor", "wyvern_hill_secondary"); break;
+                        case 33: AddTestTextureData(layout, "solar_cave_1_wall", "solar_cave_1_floor", "solar_cave_1_secondary"); break;
+                        case 34: AddTestTextureData(layout, "waterfall_pond_wall", "waterfall_pond_floor", "waterfall_pond_secondary"); break;
+                        case 35: AddTestTextureData(layout, "stormy_sea_1_wall", "stormy_sea_1_floor", "stormy_sea_1_secondary"); break;
+                        case 36: AddTestTextureData(layout, "stormy_sea_2_wall", "stormy_sea_2_floor", "stormy_sea_2_secondary"); break;
+                        case 37: AddTestTextureData(layout, "silver_trench_3_wall", "silver_trench_3_floor", "silver_trench_3_secondary"); break;
+                        case 38: AddTestTextureData(layout, "buried_relic_1_wall", "buried_relic_1_floor", "buried_relic_1_secondary"); break;
+                        case 39: AddTestTextureData(layout, "buried_relic_2_wall", "buried_relic_2_floor", "buried_relic_2_secondary"); break;
+                        case 40: AddTestTextureData(layout, "buried_relic_3_wall", "buried_relic_3_floor", "buried_relic_3_secondary"); break;
+                        case 41: AddTestTextureData(layout, "lightning_field_wall", "lightning_field_floor", "lightning_field_secondary"); break;
+                        case 42: AddTestTextureData(layout, "northwind_field_wall", "northwind_field_floor", "northwind_field_secondary"); break;
+                        case 43: AddTestTextureData(layout, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary"); break;
+                        case 44: AddTestTextureData(layout, "mt_faraway_4_wall", "mt_faraway_4_floor", "mt_faraway_4_secondary"); break;
+                        case 45: AddTestTextureData(layout, "northern_range_2_wall", "northern_range_2_floor", "northern_range_2_secondary"); break;
+                        case 46: AddTestTextureData(layout, "pitfall_valley_1_wall", "pitfall_valley_1_floor", "pitfall_valley_1_secondary"); break;
+                        case 47: AddTestTextureData(layout, "joyous_tower_wall", "joyous_tower_floor", "joyous_tower_secondary"); break;
+                        case 48: AddTestTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary"); break;
+                        case 49: AddTestTextureData(layout, "purity_forest_4_wall", "purity_forest_4_floor", "purity_forest_4_secondary"); break;
+                        case 50: AddTestTextureData(layout, "purity_forest_6_wall", "purity_forest_6_floor", "purity_forest_6_secondary"); break;
+                        case 51: AddTestTextureData(layout, "purity_forest_7_wall", "purity_forest_7_floor", "purity_forest_7_secondary"); break;
+                        case 52: AddTestTextureData(layout, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary"); break;
+                        case 53: AddTestTextureData(layout, "purity_forest_9_wall", "purity_forest_9_floor", "purity_forest_9_secondary"); break;
+                        case 54: AddTestTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary"); break;
+                        case 55: AddTestTextureData(layout, "murky_cave_wall", "murky_cave_floor", "murky_cave_secondary"); break;
+                        case 56: AddTestTextureData(layout, "western_cave_1_wall", "western_cave_1_floor", "western_cave_1_secondary"); break;
+                        case 57: AddTestTextureData(layout, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary"); break;
+                        case 58: AddTestTextureData(layout, "meteor_cave_wall", "meteor_cave_floor", "meteor_cave_secondary"); break;
+                        case 59: AddTestTextureData(layout, "rescue_team_maze_wall", "rescue_team_maze_floor", "rescue_team_maze_secondary"); break;
+                        case 60: AddTestTextureData(layout, "beach_cave_wall", "beach_cave_floor", "beach_cave_secondary"); break;
+                        case 61: AddTestTextureData(layout, "drenched_bluff_wall", "drenched_bluff_floor", "drenched_bluff_secondary"); break;
+                        case 62: AddTestTextureData(layout, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary"); break;
+                        case 63: AddTestTextureData(layout, "waterfall_cave_wall", "waterfall_cave_floor", "waterfall_cave_secondary"); break;
+                        case 64: AddTestTextureData(layout, "apple_woods_wall", "apple_woods_floor", "apple_woods_secondary"); break;
+                        case 65: AddTestTextureData(layout, "craggy_coast_wall", "craggy_coast_floor", "craggy_coast_secondary"); break;
+                        case 66: AddTestTextureData(layout, "side_path_wall", "side_path_floor", "side_path_secondary"); break;
+                        case 67: AddTestTextureData(layout, "mt_horn_wall", "mt_horn_floor", "mt_horn_secondary"); break;
+                        case 68: AddTestTextureData(layout, "rock_path_tds_wall", "rock_path_tds_floor", "rock_path_tds_secondary"); break;
+                        case 69: AddTestTextureData(layout, "foggy_forest_wall", "foggy_forest_floor", "foggy_forest_secondary"); break;
+                        case 70: AddTestTextureData(layout, "forest_path_wall", "forest_path_floor", "forest_path_secondary"); break;
+                        case 71: AddTestTextureData(layout, "steam_cave_wall", "steam_cave_floor", "steam_cave_secondary"); break;
+                        case 72: AddTestTextureData(layout, "unused_steam_cave_wall", "unused_steam_cave_floor", "unused_steam_cave_secondary"); break;
+                        case 73: AddTestTextureData(layout, "amp_plains_wall", "amp_plains_floor", "amp_plains_secondary"); break;
+                        case 74: AddTestTextureData(layout, "far_amp_plains_wall", "far_amp_plains_floor", "far_amp_plains_secondary"); break;
+                        case 75: AddTestTextureData(layout, "northern_desert_1_wall", "northern_desert_1_floor", "northern_desert_1_secondary"); break;
+                        case 76: AddTestTextureData(layout, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary"); break;
+                        case 77: AddTestTextureData(layout, "quicksand_cave_wall", "quicksand_cave_floor", "quicksand_cave_secondary"); break;
+                        case 78: AddTestTextureData(layout, "quicksand_pit_wall", "quicksand_pit_floor", "quicksand_pit_secondary"); break;
+                        case 79: AddTestTextureData(layout, "quicksand_unused_wall", "quicksand_unused_floor", "quicksand_unused_secondary"); break;
+                        case 80: AddTestTextureData(layout, "crystal_cave_1_wall", "crystal_cave_1_floor", "crystal_cave_1_secondary"); break;
+                        case 81: AddTestTextureData(layout, "crystal_cave_2_wall", "crystal_cave_2_floor", "crystal_cave_2_secondary"); break;
+                        case 82: AddTestTextureData(layout, "crystal_crossing_wall", "crystal_crossing_floor", "crystal_crossing_secondary"); break;
+                        case 83: AddTestTextureData(layout, "chasm_cave_1_wall", "chasm_cave_1_floor", "chasm_cave_1_wall"); break;
+                        case 84: AddTestTextureData(layout, "chasm_cave_2_wall", "chasm_cave_2_floor", "chasm_cave_2_wall"); break;
+                        case 85: AddTestTextureData(layout, "dark_hill_1_wall", "dark_hill_1_floor", "dark_hill_1_secondary"); break;
+                        case 86: AddTestTextureData(layout, "dark_hill_2_wall", "dark_hill_2_floor", "dark_hill_2_secondary"); break;
+                        case 87: AddTestTextureData(layout, "sealed_ruin_wall", "sealed_ruin_floor", "sealed_ruin_secondary"); break;
+                        case 88: AddTestTextureData(layout, "deep_sealed_ruin_wall", "deep_sealed_ruin_floor", "deep_sealed_ruin_secondary"); break;
+                        case 89: AddTestTextureData(layout, "dusk_forest_1_wall", "dusk_forest_1_floor", "dusk_forest_1_secondary"); break;
+                        case 90: AddTestTextureData(layout, "dusk_forest_2_wall", "dusk_forest_2_floor", "dusk_forest_2_secondary"); break;
+                        case 91: AddTestTextureData(layout, "deep_dusk_forest_1_wall", "deep_dusk_forest_1_floor", "deep_dusk_forest_1_secondary"); break;
+                        case 92: AddTestTextureData(layout, "deep_dusk_forest_2_wall", "deep_dusk_forest_2_floor", "deep_dusk_forest_2_secondary"); break;
+                        case 93: AddTestTextureData(layout, "treeshroud_forest_1_wall", "treeshroud_forest_1_floor", "treeshroud_forest_1_secondary"); break;
+                        case 94: AddTestTextureData(layout, "treeshroud_forest_2_wall", "treeshroud_forest_2_floor", "treeshroud_forest_2_secondary"); break;
+                        case 95: AddTestTextureData(layout, "brine_cave_wall", "brine_cave_floor", "brine_cave_secondary"); break;
+                        case 96: AddTestTextureData(layout, "lower_brine_cave_wall", "lower_brine_cave_floor", "lower_brine_cave_secondary"); break;
+                        case 97: AddTestTextureData(layout, "unused_brine_cave_wall", "unused_brine_cave_floor", "unused_brine_cave_secondary"); break;
+                        case 98: AddTestTextureData(layout, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary"); break;
+                        case 99: AddTestTextureData(layout, "hidden_highland_wall", "hidden_highland_floor", "hidden_highland_secondary"); break;
+                        case 100: AddTestTextureData(layout, "southern_jungle_wall", "southern_jungle_floor", "southern_jungle_secondary"); break;
+                        case 101: AddTestTextureData(layout, "temporal_tower_wall", "temporal_tower_floor", "temporal_tower_secondary"); break;
+                        case 102: AddTestTextureData(layout, "temporal_spire_wall", "temporal_spire_floor", "temporal_spire_secondary"); break;
+                        case 103: AddTestTextureData(layout, "temporal_unused_wall", "temporal_unused_floor", "temporal_unused_secondary"); break;
+                        case 104: AddTestTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary"); break;
+                        case 105: AddTestTextureData(layout, "concealed_ruins_wall", "concealed_ruins_floor", "concealed_ruins_secondary"); break;
+                        case 106: AddTestTextureData(layout, "surrounded_sea_wall", "surrounded_sea_floor", "surrounded_sea_secondary"); break;
+                        case 107: AddTestTextureData(layout, "miracle_sea_wall", "miracle_sea_floor", "miracle_sea_secondary"); break;
+                        case 108: AddTestTextureData(layout, "mt_travail_wall", "mt_travail_floor", "mt_travail_secondary"); break;
+                        case 109: AddTestTextureData(layout, "the_nightmare_wall", "the_nightmare_floor", "the_nightmare_secondary"); break;
+                        case 110: AddTestTextureData(layout, "spacial_rift_1_wall", "spacial_rift_1_floor", "spacial_rift_1_secondary"); break;
+                        case 111: AddTestTextureData(layout, "spacial_rift_2_wall", "spacial_rift_2_floor", "spacial_rift_2_secondary"); break;
+                        case 112: AddTestTextureData(layout, "dark_crater_wall", "dark_crater_floor", "dark_crater_secondary"); break;
+                        case 113: AddTestTextureData(layout, "deep_dark_crater_wall", "deep_dark_crater_floor", "deep_dark_crater_secondary"); break;
+                        case 114: AddTestTextureData(layout, "world_abyss_2_wall", "world_abyss_2_floor", "world_abyss_2_secondary"); break;
+                        case 115: AddTestTextureData(layout, "golden_chamber_wall", "golden_chamber_floor", "golden_chamber_secondary"); break;
+                        case 116: AddTestTextureData(layout, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary"); break;
+                        case 117: AddTestTextureData(layout, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary"); break;
+                        case 118: AddTestTextureData(layout, "zero_isle_east_3_wall", "zero_isle_east_3_floor", "zero_isle_east_3_secondary"); break;
+                        case 119: AddTestTextureData(layout, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary"); break;
+                        case 120: AddTestTextureData(layout, "zero_isle_south_1_wall", "zero_isle_south_1_floor", "zero_isle_south_1_secondary"); break;
+                        case 121: AddTestTextureData(layout, "zero_isle_south_2_wall", "zero_isle_south_2_floor", "zero_isle_south_2_secondary"); break;
+                        case 122: AddTestTextureData(layout, "tiny_meadow_wall", "tiny_meadow_floor", "tiny_meadow_secondary"); break;
+                        case 123: AddTestTextureData(layout, "final_maze_2_wall", "final_maze_2_floor", "final_maze_2_secondary"); break;
+                        case 124: AddTestTextureData(layout, "unused_waterfall_pond_wall", "unused_waterfall_pond_floor", "unused_waterfall_pond_secondary"); break;
+                        case 125: AddTestTextureData(layout, "lush_prairie_wall", "lush_prairie_floor", "lush_prairie_secondary"); break;
+                        case 126: AddTestTextureData(layout, "rock_aegis_cave_wall", "rock_aegis_cave_floor", "rock_aegis_cave_secondary"); break;
+                        case 127: AddTestTextureData(layout, "ice_aegis_cave_wall", "ice_aegis_cave_floor", "ice_aegis_cave_secondary"); break;
+                        case 128: AddTestTextureData(layout, "steel_aegis_cave_wall", "steel_aegis_cave_floor", "steel_aegis_cave_secondary"); break;
+                        case 129: AddTestTextureData(layout, "murky_forest_wall", "murky_forest_floor", "murky_forest_secondary"); break;
+                        case 130: AddTestTextureData(layout, "deep_boulder_quarry_wall", "deep_boulder_quarry_floor", "deep_boulder_quarry_secondary"); break;
+                        case 131: AddTestTextureData(layout, "limestone_cavern_wall", "limestone_cavern_floor", "limestone_cavern_secondary"); break;
+                        case 132: AddTestTextureData(layout, "deep_limestone_cavern_wall", "deep_limestone_cavern_floor", "deep_limestone_cavern_secondary"); break;
+                        case 133: AddTestTextureData(layout, "barren_valley_wall", "barren_valley_floor", "barren_valley_secondary"); break;
+                        case 134: AddTestTextureData(layout, "dark_wasteland_wall", "dark_wasteland_floor", "dark_wasteland_secondary"); break;
+                        case 135: AddTestTextureData(layout, "future_temporal_tower_wall", "future_temporal_tower_floor", "future_temporal_tower_secondary"); break;
+                        case 136: AddTestTextureData(layout, "future_temporal_spire_wall", "future_temporal_spire_floor", "future_temporal_spire_secondary"); break;
+                        case 137: AddTestTextureData(layout, "spacial_cliffs_wall", "spacial_cliffs_floor", "spacial_cliffs_secondary"); break;
+                        case 138: AddTestTextureData(layout, "dark_ice_mountain_wall", "dark_ice_mountain_floor", "dark_ice_mountain_secondary"); break;
+                        case 139: AddTestTextureData(layout, "dark_ice_mountain_peak_wall", "dark_ice_mountain_peak_floor", "dark_ice_mountain_peak_secondary"); break;
+                        case 140: AddTestTextureData(layout, "icicle_forest_wall", "icicle_forest_floor", "icicle_forest_secondary"); break;
+                        case 141: AddTestTextureData(layout, "vast_ice_mountain_wall", "vast_ice_mountain_floor", "vast_ice_mountain_secondary"); break;
+                        case 142: AddTestTextureData(layout, "vast_ice_mountain_peak_wall", "vast_ice_mountain_peak_floor", "vast_ice_mountain_peak_secondary"); break;
+                        case 143: AddTestTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary"); break;
+                        case 144: AddTestTextureData(layout, "sky_peak_7th_pass_wall", "sky_peak_7th_pass_floor", "sky_peak_7th_pass_secondary"); break;
+                        case 145: AddTestTextureData(layout, "sky_peak_summit_pass_wall", "sky_peak_summit_pass_floor", "sky_peak_summit_pass_secondary"); break;
+                        case 146: AddTestTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary"); break;
+                        case 147: AddTestTextureData(layout, "forest_area_wall", "forest_area_floor", "forest_area_secondary"); break;
+                        case 148: AddTestTextureData(layout, "high_cave_area_wall", "high_cave_area_floor", "high_cave_area_secondary"); break;
+                        case 149: AddTestTextureData(layout, "sky_ruins_area_wall", "sky_ruins_area_floor", "sky_ruins_area_secondary"); break;
+                        case 150: AddTestTextureData(layout, "craggy_peak_wall", "craggy_peak_floor", "craggy_peak_secondary"); break;
+                        case 151: AddTestTextureData(layout, "sky_ruins_wall", "sky_ruins_floor", "sky_ruins_secondary"); break;
+                        case 152: AddTestTextureData(layout, "buried_relic_2_sky_wall", "buried_relic_2_sky_floor", "buried_relic_2_sky_secondary"); break;
                     }
 
 
@@ -3892,5 +4135,31 @@ namespace DataGenerator.Data
         }
 
         #endregion
+
+
+
+        public static void AddTestTextureData<T>(MapGen<T> layout, string block, string ground, string water, bool independent = false) where T : BaseMapGenContext
+        {
+            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<T>(0, new LocalText(block)));
+
+            MapTextureStep<T> textureStep = new MapTextureStep<T>();
+            {
+                textureStep.GroundTileset = ground;
+                textureStep.WaterTileset = water;
+                textureStep.BlockTileset = block;
+                textureStep.IndependentGround = independent;
+            }
+            layout.GenSteps.Add(PR_TEXTURES, textureStep);
+        }
+
+        public static void SetTestTileData(Tile tile, string block, string ground, string water)
+        {
+            if (tile.ID == "wall")
+                tile.Data.TileTex = new AutoTile(block);
+            else if (tile.ID == "water")
+                tile.Data.TileTex = new AutoTile(water);
+            else
+                tile.Data.TileTex = new AutoTile(ground);
+        }
     }
 }
