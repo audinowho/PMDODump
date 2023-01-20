@@ -1065,7 +1065,7 @@ namespace DataGenerator.Data
                 tile.MinimapIcon = new Loc(2, 1);
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
-                tile.InteractWithTiles.Add(0, new TriggerSwitchEvent(true));
+                tile.InteractWithTiles.Add(0, new TriggerSwitchEvent(false));
 
 
                 WindEmitter overlay = new WindEmitter(new AnimData("Wind_Leaves", 4), new AnimData("Wind_Leaves_Small", 3));
@@ -1087,16 +1087,35 @@ namespace DataGenerator.Data
             }
             else if (ii == 42)
             {
-                tile.Name = new LocalText("Reset Tile");
-                fileName = "tile_reset";
-                tile.Desc = new LocalText("A switch that resets the floor, returning all items, traps, and wild Pokémon to their original positions.");
+                tile.Name = new LocalText("Switch Tile");
+                fileName = "tile_switch_sync";
+                tile.Comment = "Simultaneous";
+                tile.Desc = new LocalText("A switch that opens various blocked passageways found on the floor.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Switch;
                 tile.Anim = new ObjAnimData("Tile_Reset", 1);
                 tile.MinimapIcon = new Loc(2, 1);
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
-                tile.InteractWithTiles.Add(0, new ResetFloorEvent());
+                tile.InteractWithTiles.Add(0, new TriggerSwitchEvent(true));
+
+
+                WindEmitter overlay = new WindEmitter(new AnimData("Wind_Leaves", 4), new AnimData("Wind_Leaves_Small", 3));
+                overlay.Bursts = 4;
+                overlay.BurstTime = 20;
+                overlay.ParticlesPerBurst = 4;
+                overlay.Speed = -420;
+                overlay.SpeedDiff = 300;
+                overlay.StartDistance = 32;
+                overlay.Layer = DrawLayer.Front;
+
+                OpenOtherPassageEvent openEvent = new OpenOtherPassageEvent();
+                openEvent.TimeLimitStatus = "somethings_stirring";
+                openEvent.Emitter = overlay;
+                openEvent.Warning = new StringKey("MSG_TIME_WARNING_1");
+                openEvent.WarningSE = "DUN_Wind";
+                openEvent.WarningBGM = "C04. Wind.ogg";
+                tile.InteractWithTiles.Add(0, openEvent);
             }
             else if (ii == 43)
             {
@@ -1288,6 +1307,19 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Orange;
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
                 //needs a dest state
+            }
+            else if (ii == 57)
+            {
+                tile.Name = new LocalText("Reset Tile");
+                fileName = "tile_reset";
+                tile.Desc = new LocalText("A switch that resets the floor, returning all items, traps, and wild Pokémon to their original positions.");
+                tile.BlockItem = true;
+                tile.StepType = TileData.TriggerType.Switch;
+                tile.Anim = new ObjAnimData("Tile_Reset", 1);
+                tile.MinimapIcon = new Loc(2, 1);
+                tile.MinimapColor = Color.Cyan;
+                tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new ResetFloorEvent());
             }
 
             if (tile.Name.DefaultText.StartsWith("**"))

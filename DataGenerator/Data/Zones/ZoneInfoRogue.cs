@@ -1372,7 +1372,7 @@ namespace DataGenerator.Data
 
                 //sealing the vault
                 {
-                    SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", true);
+                    SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", 1, true);
                     vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                     vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                     vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -3590,7 +3590,7 @@ namespace DataGenerator.Data
 
                 //sealing the vault
                 {
-                    SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", true);
+                    SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", 1, true);
                     vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                     vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                     vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));

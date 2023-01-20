@@ -500,7 +500,7 @@ namespace DataGenerator.Data
                     }
                     //sealing the vault
                     {
-                        SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch", true);
+                        SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch", 1, true);
                         vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                         vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                         vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));

@@ -546,7 +546,7 @@ namespace DataGenerator.Data
                                 }
                                 //sealing the vault
                                 {
-                                    SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch", false);
+                                    SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch", 1, false);
                                     vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                                     vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                                     vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -998,7 +998,7 @@ namespace DataGenerator.Data
 
                         //sealing the vault
                         {
-                            SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", false);
+                            SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", 1, false);
                             vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                             vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                             vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -1498,7 +1498,7 @@ namespace DataGenerator.Data
 
                             //sealing the vault
                             {
-                                SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", true);
+                                SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", 1, true);
                                 vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                                 vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                                 vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -2116,6 +2116,7 @@ namespace DataGenerator.Data
 
                         //Add the stairs up and down
                         AddStairStep(layout, false);
+
 
 
                         floorSegment.Floors.Add(layout);
@@ -3870,6 +3871,61 @@ namespace DataGenerator.Data
 
                             AddStairStep(layout, false);
 
+
+                            if (ii == 7)
+                            {
+                                //making room for the vault
+                                {
+                                    ResizeFloorStep<MapGenContext> addSizeStep = new ResizeFloorStep<MapGenContext>(new Loc(16, 16), Dir8.None);
+                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, addSizeStep);
+                                    ClampFloorStep<MapGenContext> limitStep = new ClampFloorStep<MapGenContext>(new Loc(0), new Loc(78, 54));
+                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, limitStep);
+                                    ClampFloorStep<MapGenContext> clampStep = new ClampFloorStep<MapGenContext>();
+                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT_CLAMP, clampStep);
+                                }
+
+                                //vault rooms
+                                {
+                                    SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                    detourRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
+                                    SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                    detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                                    AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
+                                    detours.Amount = new RandRange(1);
+                                    detours.HallPercent = 100;
+                                    detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                    detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                                    detours.RoomComponents.Set(new NoConnectRoom());
+                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                                    detours.HallComponents.Set(new NoConnectRoom());
+                                    detours.RoomComponents.Set(new NoEventRoom());
+
+                                    layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                                }
+                                //sealing the vault
+                                {
+                                    SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch", 3, false);
+                                    vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                                    vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                    vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
+                                    layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                                }
+
+                                //vault treasures
+                                {
+                                    BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
+
+                                    EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
+                                    secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
+                                    treasures.SpecificSpawns.Add(secretStairs);
+
+                                    RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
+                                    detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                                    layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                                }
+                            }
+
                             floorSegment.Floors.Add(layout);
                         }
 
@@ -4087,7 +4143,7 @@ namespace DataGenerator.Data
 
                             //sealing the vault
                             {
-                                SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", false);
+                                SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", 1, false);
                                 vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                                 vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                                 vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -6914,7 +6970,7 @@ namespace DataGenerator.Data
 
                         //sealing the vault
                         {
-                            SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", true);
+                            SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", 1, true);
                             vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                             vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                             vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -7955,7 +8011,7 @@ namespace DataGenerator.Data
 
                         //sealing the vault
                         {
-                            SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", true);
+                            SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", 1, true);
                             vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                             vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                             vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -9370,7 +9426,7 @@ namespace DataGenerator.Data
 
                         //sealing the vault
                         {
-                            SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", false);
+                            SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", 1, false);
                             vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                             vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                             vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -10097,7 +10153,7 @@ namespace DataGenerator.Data
 
                             //sealing the vault
                             {
-                                SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", false);
+                                SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", 1, false);
                                 vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                                 vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                                 vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -14719,6 +14775,60 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+
+                            if (ii == 1)
+                            {
+                                //making room for the vault
+                                {
+                                    ResizeFloorStep<MapGenContext> addSizeStep = new ResizeFloorStep<MapGenContext>(new Loc(16, 16), Dir8.None);
+                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, addSizeStep);
+                                    ClampFloorStep<MapGenContext> limitStep = new ClampFloorStep<MapGenContext>(new Loc(0), new Loc(78, 54));
+                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, limitStep);
+                                    ClampFloorStep<MapGenContext> clampStep = new ClampFloorStep<MapGenContext>();
+                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT_CLAMP, clampStep);
+                                }
+
+                                //vault rooms
+                                {
+                                    SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                    detourRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
+                                    SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                    detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                                    AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
+                                    detours.Amount = new RandRange(1);
+                                    detours.HallPercent = 100;
+                                    detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                    detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                                    detours.RoomComponents.Set(new NoConnectRoom());
+                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                                    detours.HallComponents.Set(new NoConnectRoom());
+                                    detours.RoomComponents.Set(new NoEventRoom());
+
+                                    layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                                }
+                                //sealing the vault
+                                {
+                                    SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch_sync", 3, false);
+                                    vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                                    vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                    vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
+                                    layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                                }
+
+                                //vault treasures
+                                {
+                                    BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
+
+                                    EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
+                                    secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
+                                    treasures.SpecificSpawns.Add(secretStairs);
+
+                                    RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
+                                    detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                                    layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                                }
+                            }
 
                             floorSegment.Floors.Add(layout);
                         }
