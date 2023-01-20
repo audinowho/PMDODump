@@ -1289,26 +1289,14 @@ namespace DataGenerator.Data
                 tile.Desc = new LocalText("???");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Site;
-                tile.Anim = new ObjAnimData("Portal", 1);
+                tile.Anim = new ObjAnimData("Portal", 3);
                 tile.MinimapIcon = new Loc(4, 0);
                 tile.MinimapColor = Color.Orange;
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
+                tile.InteractWithTiles.Add(0, new TempTileToStairsEvent("stairs_secret_down", "mysterious_distortion"));
                 //needs a dest state
             }
             else if (ii == 56)
-            {
-                tile.Name = new LocalText("Temporary Tile");
-                fileName = "tile_temporary";
-                tile.Desc = new LocalText("???");
-                tile.BlockItem = true;
-                tile.StepType = TileData.TriggerType.Site;
-                tile.Anim = new ObjAnimData("Tile_Switch", 1);
-                tile.MinimapIcon = new Loc(4, 0);
-                tile.MinimapColor = Color.Orange;
-                tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
-                //needs a dest state
-            }
-            else if (ii == 57)
             {
                 tile.Name = new LocalText("Reset Tile");
                 fileName = "tile_reset";

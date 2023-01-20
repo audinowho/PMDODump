@@ -8144,9 +8144,11 @@ namespace DataGenerator.Data
 
                     {
                         SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
-                        EffectTile secretTile = new EffectTile("stairs_secret_down", false);
+                        EffectTile secretTile = new EffectTile("tile_mystery", true);
                         secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
-                        RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                        TempTileStep<MapGenContext> trapStep = new TempTileStep<MapGenContext>(new PresetPicker<EffectTile>(secretTile), "mysterious_distortion");
+                        trapStep.TileFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        trapStep.TileFilters.Add(new RoomFilterComponent(true, new BossRoom()));
                         exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                         SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));

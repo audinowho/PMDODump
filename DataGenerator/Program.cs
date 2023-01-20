@@ -309,14 +309,14 @@ namespace DataGenerator
                     LuaEngine.InitInstance();
 
                     //before reserializing, reserialize skill and monsters, and delete all data
-                    dump = addTypeDependency(dump, DataManager.DataType.Element, DataManager.DataType.Item);
-                    dump = addTypeDependency(dump, DataManager.DataType.Monster, DataManager.DataType.Item);
-                    dump = addTypeDependency(dump, DataManager.DataType.Status, DataManager.DataType.Item);
-                    dump = addTypeDependency(dump, DataManager.DataType.MapStatus, DataManager.DataType.Item);
+                    //dump = addTypeDependency(dump, DataManager.DataType.Element, DataManager.DataType.Item);
+                    //dump = addTypeDependency(dump, DataManager.DataType.Monster, DataManager.DataType.Item);
+                    //dump = addTypeDependency(dump, DataManager.DataType.Status, DataManager.DataType.Item);
+                    //dump = addTypeDependency(dump, DataManager.DataType.MapStatus, DataManager.DataType.Item);
 
-                    dump = addTypeDependency(dump, DataManager.DataType.Rank, DataManager.DataType.Zone);
-                    dump = addTypeDependency(dump, DataManager.DataType.Monster, DataManager.DataType.Zone);
-                    dump = addTypeDependency(dump, DataManager.DataType.AI, DataManager.DataType.Zone);
+                    //dump = addTypeDependency(dump, DataManager.DataType.Rank, DataManager.DataType.Zone);
+                    //dump = addTypeDependency(dump, DataManager.DataType.Monster, DataManager.DataType.Zone);
+                    //dump = addTypeDependency(dump, DataManager.DataType.AI, DataManager.DataType.Zone);
 
                     {
                         DataManager.InitInstance();

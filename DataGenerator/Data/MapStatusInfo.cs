@@ -625,6 +625,20 @@ namespace DataGenerator.Data
                 status.OnRefresh.Add(0, new FactionRefreshEvent(Faction.Player, new SeeCharsEvent()));
                 status.OnRefresh.Add(0, new FactionRefreshEvent(Faction.Player, new SeeItemsEvent(false)));
             }
+            else if (ii == 42)
+            {
+                status.Name = new LocalText("Mysterious Distortion");
+                status.Desc = new LocalText("The space-time is distorted on this floor...");
+                status.RepeatMethod = new MapStatusReplaceEvent();
+
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Stair_Sensor_Arrow", 6), 6);
+                emitter.Layer = DrawLayer.Top;
+                status.OnMapStarts.Add(0, new HintTempTileEvent(new StringKey("MSG_STAIR_SENSOR"), emitter));
+                status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_INVERSE_END"), true));
+                status.StatusStates.Set(new MapCountDownState());
+                status.StatusStates.Set(new MapLocState());
+                status.OnMapTurnEnds.Add(7, new TempTileCollapseEvent());
+            }
 
 
             if (status.Name.DefaultText.StartsWith("**"))
