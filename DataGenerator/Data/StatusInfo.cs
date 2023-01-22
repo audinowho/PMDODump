@@ -155,6 +155,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new CountState(2));
                 status.StatusStates.Set(new CountDownState(6));
                 status.StatusStates.Set(new AttackedThisTurnState());
+                status.StatusStates.Set(new WalkedThisTurnState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison_toxic", new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_POISON_FAIL")));
@@ -165,8 +166,9 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
                 status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(false)));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                //status.OnWalks.Add(0, new PoisonSingleEvent(false));
-                status.OnTurnEnds.Add(1, new PoisonSingleEvent(false));
+                status.OnWalks.Add(0, new PoisonSingleEvent(false));
+                status.OnWalks.Add(0, new WalkedThisTurnEvent());
+                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
                 status.RestoreHPs.Add(0, new HealMultEvent(1, 2));
@@ -184,6 +186,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new CountState(2));
                 status.StatusStates.Set(new CountDownState(6));
                 status.StatusStates.Set(new AttackedThisTurnState());
+                status.StatusStates.Set(new WalkedThisTurnState());
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison", new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_POISON_FAIL")));
@@ -194,8 +197,9 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
                 status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(true)));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                //status.OnWalks.Add(0, new PoisonSingleEvent(false));
-                status.OnTurnEnds.Add(1, new PoisonSingleEvent(false));
+                status.OnWalks.Add(0, new PoisonSingleEvent(false));
+                status.OnWalks.Add(0, new WalkedThisTurnEvent());
+                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
                 status.RestoreHPs.Add(0, new HealMultEvent(1, 2));
