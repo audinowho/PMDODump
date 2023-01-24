@@ -1294,6 +1294,14 @@ namespace DataGenerator.Data
                 tile.MinimapIcon = new Loc(4, 0);
                 tile.MinimapColor = Color.Orange;
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
+
+                FiniteOverlayEmitter overlay = new FiniteOverlayEmitter();
+                overlay.Anim = new BGAnimData("White", 1);
+                overlay.TotalTime = 30;
+                overlay.FadeIn = 30;
+                overlay.FadeOut = 30;
+                overlay.Layer = DrawLayer.Bottom;
+                tile.InteractWithTiles.Add(0, new AnimEvent(overlay, "_UNK_DUN_Flash", 60));
                 tile.InteractWithTiles.Add(0, new TempTileToStairsEvent("stairs_secret_down", "mysterious_distortion"));
                 //needs a dest state
             }

@@ -629,15 +629,27 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Mysterious Distortion");
                 status.Desc = new LocalText("The space-time is distorted on this floor...");
+                OverlayEmitter overlay = new OverlayEmitter();
+                overlay.Anim = new BGAnimData("Inverse", 3);
+                overlay.Color = Color.White * 0.3f;
+                overlay.Layer = DrawLayer.Top;
+                status.Emitter = overlay;
                 status.RepeatMethod = new MapStatusReplaceEvent();
-
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Stair_Sensor_Arrow", 6), 6);
-                emitter.Layer = DrawLayer.Top;
-                status.OnMapStarts.Add(0, new HintTempTileEvent(new StringKey("MSG_STAIR_SENSOR"), emitter));
-                status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_INVERSE_END"), true));
+                status.OnMapStarts.Add(0, new NullCharEvent(new BattleLogEvent(new StringKey("MSG_MYSTERIOSITY_START"))));
+                status.OnMapStarts.Add(0, new NullCharEvent(new AnimEvent(new EmptyFiniteEmitter(), "_UNK_EVT_004", 90)));
+                status.OnMapStarts.Add(0, new NullCharEvent(new HintTempTileEvent(new StringKey("MSG_TREASURE_SENSOR"), emitter)));
+                status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_MYSTERIOSITY_END"), true));
                 status.StatusStates.Set(new MapCountDownState());
                 status.StatusStates.Set(new MapLocState());
-                status.OnMapTurnEnds.Add(7, new TempTileCollapseEvent());
+
+                FiniteOverlayEmitter endOverlay = new FiniteOverlayEmitter();
+                endOverlay.Anim = new BGAnimData("White", 1);
+                endOverlay.TotalTime = 30;
+                endOverlay.FadeIn = 30;
+                endOverlay.FadeOut = 30;
+                endOverlay.Layer = DrawLayer.Bottom;
+                status.OnMapTurnEnds.Add(7, new TempTileCollapseEvent(new AnimEvent(endOverlay, "", 30)));
             }
 
 
