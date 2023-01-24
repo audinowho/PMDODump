@@ -2212,7 +2212,7 @@ namespace DataGenerator.Data
                     //monster house
                     {
                         EffectTile effect = new EffectTile("chest_full", true, new Loc(4, 4));
-                        effect.Danger = true;
+                        effect.TileStates.Set(new DangerState(true));
                         effect.TileStates.Set(new UnlockState("key"));
                         effect.TileStates.Set(new BoundsState(new Rect(0, 0, 10, 10)));
                         ItemSpawnState itemSpawn = new ItemSpawnState();
@@ -2235,7 +2235,7 @@ namespace DataGenerator.Data
                     }
                     {
                         EffectTile effect = new EffectTile("chest_full", true, new Loc(5, 5));
-                        effect.Danger = true;
+                        effect.TileStates.Set(new DangerState(true));
                         effect.TileStates.Set(new UnlockState("key"));
                         effect.TileStates.Set(new BoundsState(new Rect(3, 3, 13, 13)));
                         ItemSpawnState itemSpawn = new ItemSpawnState();

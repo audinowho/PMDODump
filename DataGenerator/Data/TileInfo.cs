@@ -1064,6 +1064,7 @@ namespace DataGenerator.Data
                 tile.MinimapIcon = new Loc(2, 1);
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new TriggerSwitchEvent(true));
 
 

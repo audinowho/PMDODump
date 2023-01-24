@@ -12,3 +12,4 @@
 * Fixed an issue where Wonder Room would re-apply its effect on multistrike moves
 * Devs: Added experimental capability for custom team sizes
 * Devs: Added object movement and wait for frame operations
+* Devs: Changed SingleCharEvent to use contexts.  The character argument must be changed to context, and accessing character is done through context.User
