@@ -6,6 +6,7 @@
 * Added the option to restart a roguelocke
 * Added a mod to allow displaying of music names when the song plays
 * Added input buffering for turning after actions
+* Added a progress report for strategy guide prints
 * Fixed a graphical issue that placed darkness on the right side of the map
 * Fixed an issue that caused party members to attack sleeping enemies unprovoked
 * Fixed various issues with pre-targeting
