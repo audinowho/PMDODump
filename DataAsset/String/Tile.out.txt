@@ -1,5 +1,5 @@
 Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
-0000-area_script-0000|data.Name		Script Trigger																										
+0000-area_script-0000|data.Name		Script Trigger									脚本触发器																	
 0000-area_script-0001|data.Desc																												
 0000-area_shop-0000|data.Name		Shop Tile	Case Magasin		Baldosa Tienda																							
 0000-area_shop-0001|data.Desc																												
@@ -7,17 +7,17 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-chest_empty-0001|data.Desc																												
 0000-chest_full-0000|data.Name	Not displayed to players.	Treasure Chest	Coffre aux trésors	Schatztruhe	Cofre del Tesoro			보물상자																				
 0000-chest_full-0001|data.Desc																												
-0000-none-0000|data.Name		None	Aucun	Keines	Ninguno			효과없음																				
-0000-none-0001|data.Desc		This tile has no effect.	Cette case n'a aucun effet!	Dieses Feld hat keinen Effekt.	Esta baldosa no tiene efecto.			이 타일은 아무런 효과도 없다.																				
+0000-none-0000|data.Name		None	Aucun	Keines	Ninguno			효과없음			无																	
+0000-none-0001|data.Desc		This tile has no effect.	Cette case n'a aucun effet!	Dieses Feld hat keinen Effekt.	Esta baldosa no tiene efecto.			이 타일은 아무런 효과도 없다.			这个地板没有效果。																	
 0000-sealed_block-0000|data.Name	Not displayed to players.	Sealed Block	Bloc Scellé		Bloque Sellado			봉인된블럭																				
 0000-sealed_block-0001|data.Desc																												
 0000-sealed_door-0000|data.Name	Not displayed to players.	Sealed Door	Porte Scellée	Versiegelte Tür	Puerta Sellada			봉인된문																				
 0000-sealed_door-0001|data.Desc																												
-0000-sign-0000|data.Name		Sign	Panneau	Schild	Letrero																							
+0000-sign-0000|data.Name		Sign	Panneau	Schild	Letrero						标志																	
 0000-sign-0001|data.Desc																												
-0000-stairs_back_down-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단																				
+0000-stairs_back_down-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단			楼梯																	
 0000-stairs_back_down-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.	Escaliers menant à l'étage précédent. Si vous êtes au premier étage, vous pourrez vous échapper du donjon.																									
-0000-stairs_back_up-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단																				
+0000-stairs_back_up-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단			楼梯																	
 0000-stairs_back_up-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.	Escaliers menant à l'étage précédent. Si vous êtes au premier étage, vous pourrez vous échapper du donjon.																									
 0000-stairs_exit_down-0000|data.Name		Exit Stairs	Escaliers de sortie																									
 0000-stairs_exit_down-0001|data.Desc		Stairs leading to the dungeon's exit.	Escaliers menant à la sortie du donjon.																									

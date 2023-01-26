@@ -1,13 +1,13 @@
 Key	Comment	EN	FR	FR-CA	DE	ES	ES-LA	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU	LT
 Rank-none|data.Name		None	Aucun		Keine	Ninguno		Nenhum		분류없음			无			
-Rank-normal|data.Name		Normal		Ordinaire	Normal	Normal		Normal		노말						
-Rank-bronze|data.Name		Bronze		Bronze	Bronze	Bronce		Bronze		브론즈						
-Rank-silver|data.Name		Silver		Argent	Silber	Plata		Prata		실버						
-Rank-gold|data.Name		Gold		Or	Gold	Oro		Ouro		골드						
-Rank-platinum|data.Name		Platinum		Platin	Platin	Platino		Platina		플래티넘						
-Rank-diamond|data.Name		Diamond		Diamant	Diamant	Diamante		Diamante		다이아몬드						
-Rank-super|data.Name		Super		Formidable	Super	Alto		Super		슈퍼						
-Rank-ultra|data.Name		Ultra		Supérieur	Ultra	Superior		Ultra		울트라						
-Rank-hyper|data.Name		Hyper		Extraordinaire	Hyper	Avanzado		Hiper		하이퍼						
-Rank-master|data.Name		Master		Maître	Meister	Experto		Mestre		마스터						
-Rank-grandmaster|data.Name		Grandmaster		Grand Maître	Gildenmeister	Maestro		Grão-Mestre		그레이트 마스터
+Rank-normal|data.Name		Normal		Ordinaire	Normal	Normal		Normal		노말			普通等级			
+Rank-bronze|data.Name		Bronze		Bronze	Bronze	Bronce		Bronze		브론즈			青铜等级			
+Rank-silver|data.Name		Silver		Argent	Silber	Plata		Prata		실버			白银等级			
+Rank-gold|data.Name		Gold		Or	Gold	Oro		Ouro		골드			黄金等级			
+Rank-platinum|data.Name		Platinum		Platin	Platin	Platino		Platina		플래티넘			铂金等级			
+Rank-diamond|data.Name		Diamond		Diamant	Diamant	Diamante		Diamante		다이아몬드			钻石等级			
+Rank-super|data.Name		Super		Formidable	Super	Alto		Super		슈퍼			出色等级			
+Rank-ultra|data.Name		Ultra		Supérieur	Ultra	Superior		Ultra		울트라			超级等级			
+Rank-hyper|data.Name		Hyper		Extraordinaire	Hyper	Avanzado		Hiper		하이퍼			高级等级			
+Rank-master|data.Name		Master		Maître	Meister	Experto		Mestre		마스터			大师等级			
+Rank-grandmaster|data.Name		Grandmaster		Grand Maître	Gildenmeister	Maestro		Grão-Mestre		그레이트 마스터			会长等级

@@ -4,8 +4,8 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>DataGenerator</RootNamespace>
     <AssemblyName>DataGenerator</AssemblyName>
-    <AssemblyVersion>0.6.8</AssemblyVersion>
-    <AssemblyCopyright>Audino 2022</AssemblyCopyright>
+    <AssemblyVersion>0.6.9</AssemblyVersion>
+    <AssemblyCopyright>Audino 2023</AssemblyCopyright>
     <TargetFramework>net5.0</TargetFramework>
     <EnableDefaultItems>false</EnableDefaultItems>
     <Platforms>AnyCPU;x64</Platforms>

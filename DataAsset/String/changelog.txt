@@ -1,9 +1,10 @@
 Sheet: Hardcode
-    * Added MENU_SKILL_PREVIEW
-    * Significantly changed MENU_TEAM_LEARNSET from "Level-Up Moves" to "{0}'s Level-Up Moves"
+    * Changed DLG_REPLAY_VERIFY_DESYNC from "Encountered a desync during replay verification. [pause=0] Returing to the menu ... " to "Encountered a desync during replay verification. [pause=0] Returning to the menu ... "
+    * Added DLG_TRY_AGAIN_ASK
+    * Added MENU_SETTINGS_TEXT_SPEED
+    * Added MENU_TIMER
 
 Sheet: Content
-    * Changed MSG_CRINGE_START from "Puanteur de {0} " to "{0} cringed!"
 
 Sheet: Script
 
@@ -24,36 +25,6 @@ Sheet: Excl Names
 Sheet: Excl Effects
 
 Sheet: Zones
-    * Added 0000-fertile_ravine-0000|data.Name
-    * Added 0000-fertile_ravine-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-fertile_ravine-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Added 0000-fissure_quarry-0000|data.Name
-    * Added 0000-fissure_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-fissure_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Deleted key 0000-igneous_tunnel-0000|data.Name
-    * Deleted key 0000-igneous_tunnel-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Deleted key 0000-illusion_ridge-0000|data.Name
-    * Deleted key 0000-illusion_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-lava_floe_island-0000|data.Name
-    * Added 0000-lava_floe_island-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-lava_floe_island-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Deleted key 0000-lunar_range-0000|data.Name
-    * Deleted key 0000-lunar_range-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-moonlit_courtyard-0000|data.Name
-    * Added 0000-moonlit_courtyard-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-moonlit_courtyard-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Added 0000-overgrown_wilds-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Added 0000-sleeping_caldera-0000|data.Name
-    * Added 0000-sleeping_caldera-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-snowbound_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Added 0000-trickster_steppe-0000|data.Name
-    * Added 0000-trickster_steppe-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-trickster_steppe-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Added 0000-veiled_ridge-0000|data.Name
-    * Added 0000-veiled_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-veiled_ridge-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Deleted key 0000-windy_valley-0000|data.Name
-    * Deleted key 0000-windy_valley-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
 
 Sheet: Maps
 
