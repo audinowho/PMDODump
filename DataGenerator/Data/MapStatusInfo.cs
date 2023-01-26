@@ -630,8 +630,8 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Mysterious Distortion");
                 status.Desc = new LocalText("The space-time is distorted on this floor...");
                 OverlayEmitter overlay = new OverlayEmitter();
-                overlay.Anim = new BGAnimData("Inverse", 3);
-                overlay.Color = Color.White * 0.3f;
+                overlay.Anim = new BGAnimData("Distortion", 3);
+                overlay.Color = Color.White * 0.2f;
                 overlay.Layer = DrawLayer.Top;
                 status.Emitter = overlay;
                 status.RepeatMethod = new MapStatusReplaceEvent();
@@ -648,8 +648,8 @@ namespace DataGenerator.Data
                 endOverlay.TotalTime = 30;
                 endOverlay.FadeIn = 30;
                 endOverlay.FadeOut = 30;
-                endOverlay.Layer = DrawLayer.Bottom;
-                status.OnMapTurnEnds.Add(7, new TempTileCollapseEvent(new AnimEvent(endOverlay, "", 30)));
+                endOverlay.Layer = DrawLayer.Top;
+                status.OnMapTurnEnds.Add(7, new TempTileCollapseEvent(new AnimEvent(endOverlay, "_UNK_EVT_073", 30)));
             }
 
 

@@ -1263,6 +1263,7 @@ namespace DataGenerator.Data
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Site;
                 tile.Anim = new ObjAnimData("Updraft", 2);
+                tile.Offset = new Loc(0, -16);
                 tile.Layer = DrawLayer.Front;
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
@@ -1290,7 +1291,7 @@ namespace DataGenerator.Data
                 tile.Desc = new LocalText("???");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Site;
-                tile.Anim = new ObjAnimData("Portal", 3);
+                tile.Anim = new ObjAnimData("Portal_Small", 3);
                 tile.MinimapIcon = new Loc(4, 0);
                 tile.MinimapColor = Color.Orange;
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
@@ -1300,8 +1301,8 @@ namespace DataGenerator.Data
                 overlay.TotalTime = 30;
                 overlay.FadeIn = 30;
                 overlay.FadeOut = 30;
-                overlay.Layer = DrawLayer.Bottom;
-                tile.InteractWithTiles.Add(0, new AnimEvent(overlay, "_UNK_DUN_Flash", 60));
+                overlay.Layer = DrawLayer.Top;
+                tile.InteractWithTiles.Add(0, new AnimEvent(overlay, "_UNK_EVT_074", 60));
                 tile.InteractWithTiles.Add(0, new TempTileToStairsEvent("stairs_secret_down", "mysterious_distortion"));
                 //needs a dest state
             }
