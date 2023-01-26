@@ -814,7 +814,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(-1, new CountDownBoostMod(typeof(GripState), 3, 2));
-                status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState)));
+                status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState), 2));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey()));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FIRE_SPIN_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
@@ -824,8 +824,8 @@ namespace DataGenerator.Data
                 emitter.HeightBack = 32;
                 emitter.HeightFront = 32;
                 status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Fire_Spin", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
-                status.StatusStates.Set(new CountDownState(6));
-                status.StatusStates.Set(new StackState());
+                status.StatusStates.Set(new CountDownState(4));
+                status.StatusStates.Set(new StackState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
             }
@@ -838,7 +838,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(-1, new CountDownBoostMod(typeof(GripState), 3, 2));
-                status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState)));
+                status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState), 2));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey()));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_WHIRLPOOL_START"), true));
                 status.OnActions.Add(-1, new SnapDashBackEvent());
@@ -846,8 +846,8 @@ namespace DataGenerator.Data
                 emitter.LocHeight = 24;
                 status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Whirlpool", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
-                status.StatusStates.Set(new CountDownState(6));
-                status.StatusStates.Set(new StackState());
+                status.StatusStates.Set(new CountDownState(4));
+                status.StatusStates.Set(new StackState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
             }
@@ -860,7 +860,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(-1, new CountDownBoostMod(typeof(GripState), 3, 2));
-                status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState)));
+                status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState), 2));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey()));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SAND_TOMB_START"), true));
                 status.OnActions.Add(-1, new SnapDashBackEvent());
@@ -870,8 +870,8 @@ namespace DataGenerator.Data
                 emitter.HeightFront = 32;
                 status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Sand_Tomb", 20), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
-                status.StatusStates.Set(new CountDownState(6));
-                status.StatusStates.Set(new StackState());
+                status.StatusStates.Set(new CountDownState(4));
+                status.StatusStates.Set(new StackState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
             }
@@ -1054,7 +1054,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new TransferStatusState());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TELEKINESIS_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
-                status.StatusStates.Set(new CountDownState(3));
+                status.StatusStates.Set(new CountDownState(4));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 //status.AfterActions.Add(0, new CountDownOnActionEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
@@ -1834,14 +1834,14 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(-1, new CountDownBoostMod(typeof(GripState), 3, 2));
-                status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState)));
+                status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState), 2));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_TRAP_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_INFESTATION_START"), true));
                 status.OnActions.Add(-1, new SnapDashBackEvent());
                 status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(new SingleEmitter(new AnimData("Attack_Order", 2)), "DUN_Gunk_Shot_2", 35), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
-                status.StatusStates.Set(new CountDownState(6));
-                status.StatusStates.Set(new StackState());
+                status.StatusStates.Set(new CountDownState(4));
+                status.StatusStates.Set(new StackState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
             }
@@ -1874,7 +1874,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(-1, new CountDownBoostMod(typeof(GripState), 3, 2));
-                status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState)));
+                status.BeforeStatusAdds.Add(-1, new StatusStackBoostMod(typeof(BindState), 2));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey()));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MAGMA_STORM_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
@@ -1883,8 +1883,8 @@ namespace DataGenerator.Data
                 emitter.HeightBack = 32;
                 emitter.HeightFront = 32;
                 status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Magma_Storm", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
-                status.StatusStates.Set(new CountDownState(6));
-                status.StatusStates.Set(new StackState());
+                status.StatusStates.Set(new CountDownState(4));
+                status.StatusStates.Set(new StackState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
             }
