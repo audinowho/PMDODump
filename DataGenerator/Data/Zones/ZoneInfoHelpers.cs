@@ -85,6 +85,8 @@ namespace DataGenerator.Data
         static readonly Priority PR_SPAWN_MOBS_EXTRA = new Priority(5, 2, 1);
         //6 monster houses
         static readonly Priority PR_HOUSES = new Priority(6);
+        //6.1 compass
+        static readonly Priority PR_COMPASS = new Priority(6, 1);
         //7 debug checks
         static readonly Priority PR_DBG_CHECK = new Priority(7);
 

@@ -7665,14 +7665,158 @@ namespace DataGenerator.Data
                             layout.GenSteps.Add(PR_HOUSES, chestStep);
                         }
 
+
+                        if (ii == 2)
+                        {
+                            //vault rooms
+                            {
+                                SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                detourRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(3), new RandRange(3), new RandRange(2), new RandRange(2)), 10);
+                                SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                                AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
+                                detours.Amount = new RandRange(1);
+                                detours.HallPercent = 100;
+                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                                detours.RoomComponents.Set(new NoConnectRoom());
+                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                                detours.HallComponents.Set(new NoConnectRoom());
+                                detours.RoomComponents.Set(new NoEventRoom());
+
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                            }
+                            //sealing the vault
+                            {
+                                SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch", 2, false);
+                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                                vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
+                                layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                            }
+
+                            //vault treasures
+                            {
+                                BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
+
+                                EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
+                                secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
+                                treasures.SpecificSpawns.Add(secretStairs);
+
+                                RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
+                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                                layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                            }
+                        }
+
                         {
                             SetCompassStep<MapGenContext> trapStep = new SetCompassStep<MapGenContext>("tile_compass");
-                            layout.GenSteps.Add(new Priority(6, 1), trapStep);
+                            layout.GenSteps.Add(PR_COMPASS, trapStep);
                         }
 
                         floorSegment.Floors.Add(layout);
                     }
 
+                    zone.Segments.Add(floorSegment);
+                }
+
+                {
+                    LayeredSegment floorSegment = new LayeredSegment();
+                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Secret Room")));
+                    {
+                        LoadGen layout = new LoadGen();
+                        MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                        startGen.MapID = "secret_forsaken_desert";
+                        layout.GenSteps.Add(PR_TILES_INIT, startGen);
+
+                        //add a chest
+                        List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
+                        {
+                            List<InvItem> treasure = new List<InvItem>();
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_eevee_02"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_eevee_05"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_eevee_08"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_eevee_11"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_eevee_14"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_eevee_17"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_eevee_20"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_eevee_23"));
+                            items.Add((treasure, new Loc(6, 8)));
+                        }
+                        //TODO: do we want other things in this pool?
+                        {
+                            List<InvItem> treasure = new List<InvItem>();
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_bulbasaur_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_charmander_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_squirtle_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_pikachu_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_chikorita_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_cyndaquil_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_totodile_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_treecko_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_torchic_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_mudkip_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_turtwig_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_chimchar_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_piplup_01"));
+                            items.Add((treasure, new Loc(2, 6)));
+                        }
+                        {
+                            List<InvItem> treasure = new List<InvItem>();
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_bulbasaur_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_charmander_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_squirtle_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_pikachu_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_chikorita_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_cyndaquil_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_totodile_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_treecko_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_torchic_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_mudkip_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_turtwig_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_chimchar_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_piplup_01"));
+                            items.Add((treasure, new Loc(10, 6)));
+                        }
+                        {
+                            List<InvItem> treasure = new List<InvItem>();
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_bulbasaur_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_charmander_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_squirtle_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_pikachu_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_chikorita_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_cyndaquil_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_totodile_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_treecko_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_torchic_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_mudkip_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_turtwig_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_chimchar_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_piplup_01"));
+                            items.Add((treasure, new Loc(2, 11)));
+                        }
+                        {
+                            List<InvItem> treasure = new List<InvItem>();
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_bulbasaur_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_charmander_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_squirtle_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_pikachu_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_chikorita_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_cyndaquil_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_totodile_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_treecko_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_torchic_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_mudkip_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_turtwig_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_chimchar_01"));
+                            treasure.Add(InvItem.CreateBox("box_deluxe", "xcl_family_piplup_01"));
+                            items.Add((treasure, new Loc(10, 11)));
+                        }
+                        AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
+
+                        floorSegment.Floors.Add(layout);
+                    }
                     zone.Segments.Add(floorSegment);
                 }
                 #endregion
