@@ -611,6 +611,34 @@ namespace DataGenerator.Data
             return post_mob;
         }
 
+        static MobSpawn GetGuardMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, RandRange level,
+            string tactic = "wander_normal", string statusID = "")
+        {
+            MobSpawn post_mob = new MobSpawn();
+            post_mob.BaseForm = id;
+            post_mob.Intrinsic = ability;
+            if (!String.IsNullOrEmpty(move1))
+                post_mob.SpecifiedSkills.Add(move1);
+            if (!String.IsNullOrEmpty(move2))
+                post_mob.SpecifiedSkills.Add(move2);
+            if (!String.IsNullOrEmpty(move3))
+                post_mob.SpecifiedSkills.Add(move3);
+            if (!String.IsNullOrEmpty(move4))
+                post_mob.SpecifiedSkills.Add(move4);
+            post_mob.Level = level;
+            post_mob.Tactic = tactic;
+            post_mob.SpawnFeatures.Add(new MobSpawnMovesOff(post_mob.SpecifiedSkills.Count));
+            if (!String.IsNullOrEmpty(statusID))
+            {
+                StatusEffect sleep = new StatusEffect(statusID);
+                sleep.StatusStates.Set(new CountDownState(-1));
+                MobSpawnStatus status = new MobSpawnStatus();
+                status.Statuses.Add(sleep, 10);
+                post_mob.SpawnFeatures.Add(status);
+            }
+            return post_mob;
+        }
+
         static MobSpawn GetFOEMob(string species, string ability, string move1, string move2, string move3, string move4, int baseLv, int scaleNum = 5, int scaleDen = 3)
         {
             MobSpawn post_mob = new MobSpawn();

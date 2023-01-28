@@ -8509,6 +8509,77 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
+
+                        if (ii == 11)
+                        {
+                            //vault rooms
+                            {
+                                SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                detourRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
+                                SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                RoomGenAngledHall<MapGenContext> hall = new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4));
+                                detourHalls.Add(hall, 10);
+                                AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
+                                detours.Amount = new RandRange(1);
+                                detours.HallPercent = 100;
+                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
+                                detours.RoomComponents.Set(new NoConnectRoom());
+                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
+                                detours.HallComponents.Set(new NoConnectRoom());
+                                detours.RoomComponents.Set(new NoEventRoom());
+
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                            }
+                            //sealing the vault
+                            {
+                                SpawnList<MobSpawn> guardList = new SpawnList<MobSpawn>();
+                                guardList.Add(GetGuardMob(new MonsterID("slaking", 0, "", Gender.Unknown), "", "hammer_arm", "punishment", "slack_off", "chip_away", new RandRange(45), "wander_normal", "freeze"), 10);
+                                guardList.Add(GetGuardMob(new MonsterID("slowbro", 0, "", Gender.Unknown), "", "psychic", "water_pulse", "disable", "amnesia", new RandRange(45), "wander_normal", "freeze"), 10);
+                                guardList.Add(GetGuardMob(new MonsterID("hitmontop", 0, "", Gender.Unknown), "", "triple_kick", "gyro_ball", "wide_guard", "endeavor", new RandRange(45), "wander_normal", "freeze"), 10);
+                                guardList.Add(GetGuardMob(new MonsterID("forretress", 0, "", Gender.Unknown), "", "heavy_slam", "bug_bite", "take_down", "self_destruct", new RandRange(45), "wander_normal", "freeze"), 10);
+                                guardList.Add(GetGuardMob(new MonsterID("luxray", 0, "", Gender.Unknown), "", "crunch", "thunder_fang", "leer", "roar", new RandRange(45), "wander_normal", "freeze"), 10);
+                                LoopedRand<MobSpawn> guards = new LoopedRand<MobSpawn>(guardList, new RandRange(4));
+                                GuardSealStep<MapGenContext> vaultStep = new GuardSealStep<MapGenContext>(guards);
+                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
+                                layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                            }
+                            // items for the vault
+                            {
+                                BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
+                                treasures.RandomSpawns.Add(new InvItem("apricorn_big"), 10);//big apricorn
+                                treasures.RandomSpawns.Add(new InvItem("orb_mobile"), 10);//mobile orb
+                                treasures.RandomSpawns.Add(new InvItem("seed_reviver"), 10);//reviver seed
+                                treasures.SpawnAmount = 1;
+                                RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
+                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
+                                layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                            }
+                            //money for the vault
+                            {
+                                BulkSpawner<MapGenContext, MoneySpawn> treasures = new BulkSpawner<MapGenContext, MoneySpawn>();
+                                treasures.SpecificSpawns.Add(new MoneySpawn(300));
+                                treasures.SpecificSpawns.Add(new MoneySpawn(300));
+                                treasures.SpecificSpawns.Add(new MoneySpawn(300));
+                                RandomRoomSpawnStep<MapGenContext, MoneySpawn> detourItems = new RandomRoomSpawnStep<MapGenContext, MoneySpawn>(treasures);
+                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
+                                layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                            }
+                            //vault treasures
+                            {
+                                BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
+
+                                EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
+                                secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
+                                treasures.SpecificSpawns.Add(secretStairs);
+
+                                RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
+                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
+                                layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
+                            }
+                        }
+
                         floorSegment.Floors.Add(layout);
                     }
 
@@ -13029,7 +13100,10 @@ namespace DataGenerator.Data
                             }
                             //sealing the vault
                             {
-                                KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>("sealed_block", "sealed_door", "key");
+                                SpawnList<MobSpawn> guardList = new SpawnList<MobSpawn>();
+                                guardList.Add(GetGuardMob(new MonsterID("roselia", 0, "", Gender.Unknown), "poison_point", "growth", "leech_seed", "mega_drain", "", new RandRange(20), "wander_normal", "sleep"), 10);
+                                LoopedRand<MobSpawn> guards = new LoopedRand<MobSpawn>(guardList, new RandRange(1));
+                                GuardSealStep<MapGenContext> vaultStep = new GuardSealStep<MapGenContext>(guards);
                                 vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                                 layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
                             }
@@ -13048,7 +13122,7 @@ namespace DataGenerator.Data
                             {
                                 BulkSpawner<MapGenContext, MoneySpawn> treasures = new BulkSpawner<MapGenContext, MoneySpawn>();
                                 treasures.SpecificSpawns.Add(new MoneySpawn(100));
-                                treasures.SpecificSpawns.Add(new MoneySpawn(200));
+                                treasures.SpecificSpawns.Add(new MoneySpawn(100));
                                 RandomRoomSpawnStep<MapGenContext, MoneySpawn> detourItems = new RandomRoomSpawnStep<MapGenContext, MoneySpawn>(treasures);
                                 detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                                 layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
