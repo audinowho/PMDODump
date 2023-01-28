@@ -563,7 +563,7 @@ namespace DataGenerator.Data
 
                                     RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
                                     detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
-                                    layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                                    layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
                                 }
                             }
 
@@ -2075,6 +2075,8 @@ namespace DataGenerator.Data
                         //construct paths
                         if (ii < 4)
                             AddInitGridStep(layout, 6, 4, 7, 6, 1, true);
+                        else if (ii >= 8 && ii < 12)
+                            AddInitGridStep(layout, 7, 5, 6, 7, 1, true);
                         else
                             AddInitGridStep(layout, 7, 5, 7, 6, 1, true);
 
@@ -2088,8 +2090,16 @@ namespace DataGenerator.Data
                         //bump
                         genericRooms.Add(new RoomGenBump<MapGenContext>(new RandRange(3, 7), new RandRange(3, 7), new RandRange(40, 70)), 10);
                         //blocked
-                        genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("water"), new RandRange(4, 7), new RandRange(4, 7), new RandRange(8, 9), new RandRange(1, 3)), 3);
-                        genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("water"), new RandRange(4, 7), new RandRange(4, 7), new RandRange(1, 3), new RandRange(8, 9)), 3);
+                        if (ii >= 8 && ii < 12)
+                        {
+                            genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7), new RandRange(2, 5), new RandRange(2, 5)), 3);
+                            genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7), new RandRange(2, 5), new RandRange(2, 5)), 3);
+                        }
+                        else
+                        {
+                            genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("water"), new RandRange(4, 7), new RandRange(4, 7), new RandRange(8, 9), new RandRange(1, 3)), 3);
+                            genericRooms.Add(new RoomGenBlocked<MapGenContext>(new Tile("water"), new RandRange(4, 7), new RandRange(4, 7), new RandRange(1, 3), new RandRange(8, 9)), 3);
+                        }
                         path.GenericRooms = genericRooms;
 
                         SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
@@ -2098,7 +2108,10 @@ namespace DataGenerator.Data
 
                         layout.GenSteps.Add(PR_GRID_GEN, path);
 
-                        layout.GenSteps.Add(PR_GRID_GEN, new SetGridDefaultsStep<MapGenContext>(new RandRange(25), GetImmutableFilterList()));
+                        if (ii >= 8 && ii < 12)
+                            layout.GenSteps.Add(PR_GRID_GEN, new SetGridDefaultsStep<MapGenContext>(new RandRange(50), GetImmutableFilterList()));
+                        else
+                            layout.GenSteps.Add(PR_GRID_GEN, new SetGridDefaultsStep<MapGenContext>(new RandRange(25), GetImmutableFilterList()));
                         {
                             CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(6, 8), GetImmutableFilterList());
                             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
@@ -2118,6 +2131,36 @@ namespace DataGenerator.Data
                         AddStairStep(layout, false);
 
 
+                        if (ii == 9)
+                        {
+                            //vault rooms
+                            {
+                                AddDisconnectedRoomsStep<MapGenContext> addDisconnect = new AddDisconnectedRoomsStep<MapGenContext>();
+                                addDisconnect.Components.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Disconnected));
+                                addDisconnect.Amount = new RandRange(1);
+
+                                //Give it some room types to place
+                                SpawnList<RoomGen<MapGenContext>> disconnectedRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //only one tile size
+                                disconnectedRooms.Add(new RoomGenDefault<MapGenContext>(), 10);
+
+                                addDisconnect.GenericRooms = disconnectedRooms;
+
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, addDisconnect);
+                            }
+                            //vault treasures
+                            {
+                                BulkSpawner<MapGenContext, MapGenExit> treasures = new BulkSpawner<MapGenContext, MapGenExit>();
+
+                                EffectTile secretStairs = new EffectTile("stairs_secret_down", false);
+                                secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
+                                treasures.SpecificSpawns.Add(new MapGenExit(secretStairs));
+
+                                RandomRoomSpawnStep<MapGenContext, MapGenExit> detourItems = new RandomRoomSpawnStep<MapGenContext, MapGenExit>(treasures);
+                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Disconnected));
+                                layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
+                            }
+                        }
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -2401,7 +2444,6 @@ namespace DataGenerator.Data
 
                         //Add the stairs up and down
                         AddStairStep(layout, true);
-
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -3922,7 +3964,7 @@ namespace DataGenerator.Data
 
                                     RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
                                     detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
-                                    layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                                    layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
                                 }
                             }
 
@@ -7706,7 +7748,7 @@ namespace DataGenerator.Data
 
                                 RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
                                 detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
-                                layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                                layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
                             }
                         }
 
@@ -9693,12 +9735,13 @@ namespace DataGenerator.Data
 
                             layout.GenSteps.Add(PR_GRID_GEN, path);
 
-                            AddTunnelStep<MapGenContext> tunneler = new AddTunnelStep<MapGenContext>();
-                            tunneler.Halls = new RandRange(14, 20);
-                            tunneler.TurnLength = new RandRange(3, 8);
-                            tunneler.MaxLength = new RandRange(25);
-                            layout.GenSteps.Add(PR_TILES_GEN_TUNNEL, tunneler);
-
+                            {
+                                AddTunnelStep<MapGenContext> tunneler = new AddTunnelStep<MapGenContext>();
+                                tunneler.Halls = new RandRange(14, 20);
+                                tunneler.TurnLength = new RandRange(3, 8);
+                                tunneler.MaxLength = new RandRange(25);
+                                layout.GenSteps.Add(PR_TILES_GEN_TUNNEL, tunneler);
+                            }
 
                             {
                                 CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(3, 7), GetImmutableFilterList());
@@ -9710,11 +9753,47 @@ namespace DataGenerator.Data
                                 step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenCave<MapGenContext>(new RandRange(10, 15), new RandRange(7))), 10);
                                 layout.GenSteps.Add(PR_GRID_GEN, step);
                             }
+
                         }
 
                         AddDrawGridSteps(layout);
 
                         AddStairStep(layout, true);
+
+                        if (ii == 7)
+                        {
+                            //vault rooms
+                            {
+                                SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
+                                loadRoom.MapID = "room_exotic_wilds_entrance";
+                                loadRoom.RoomTerrain = new Tile("grass");
+                                loadRoom.PreventChanges = PostProcType.Panel | PostProcType.Terrain;
+                                detourRooms.Add(loadRoom, 10);
+                                SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                RoomGenAngledHall<MapGenContext> hall = new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4));
+                                hall.Brush = new TerrainHallBrush(Loc.One, new Tile("grass"));
+                                detourHalls.Add(hall, 10);
+                                AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
+                                detours.Amount = new RandRange(1);
+                                detours.HallPercent = 100;
+                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BlockVault));
+                                detours.RoomComponents.Set(new NoConnectRoom());
+                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BlockVault));
+                                detours.HallComponents.Set(new NoConnectRoom());
+                                detours.RoomComponents.Set(new NoEventRoom());
+
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                            }
+                            //sealing the vault
+                            {
+                                TerrainSealStep<MapGenContext> vaultStep = new TerrainSealStep<MapGenContext>("grass", "wall");
+                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BlockVault));
+                                layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                            }
+                        }
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -11750,6 +11829,59 @@ namespace DataGenerator.Data
                             AddStairStep(layout, false);
 
 
+                            if (ii == 6)
+                            {
+                                //vault rooms
+                                {
+                                    SpawnList<RoomGen<ListMapGenContext>> detourRooms = new SpawnList<RoomGen<ListMapGenContext>>();
+                                    detourRooms.Add(new RoomGenCross<ListMapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
+                                    SpawnList<PermissiveRoomGen<ListMapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
+                                    detourHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                                    AddConnectedRoomsStep<ListMapGenContext> detours = new AddConnectedRoomsStep<ListMapGenContext>(detourRooms, detourHalls);
+                                    detours.Amount = new RandRange(1);
+                                    detours.HallPercent = 100;
+                                    detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                    detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BlockVault));
+                                    detours.RoomComponents.Set(new NoConnectRoom());
+                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BlockVault));
+                                    detours.HallComponents.Set(new NoConnectRoom());
+                                    detours.RoomComponents.Set(new NoEventRoom());
+
+                                    layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                                }
+                                //sealing the vault
+                                {
+                                    TerrainSealStep<ListMapGenContext> vaultStep = new TerrainSealStep<ListMapGenContext>("wall", "wall");
+                                    vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BlockVault));
+                                    layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                                }
+                                //money for the vault
+                                {
+                                    BulkSpawner<ListMapGenContext, MoneySpawn> treasures = new BulkSpawner<ListMapGenContext, MoneySpawn>();
+                                    treasures.SpecificSpawns.Add(new MoneySpawn(200));
+                                    treasures.SpecificSpawns.Add(new MoneySpawn(200));
+                                    treasures.SpecificSpawns.Add(new MoneySpawn(200));
+                                    treasures.SpecificSpawns.Add(new MoneySpawn(200));
+                                    treasures.SpecificSpawns.Add(new MoneySpawn(200));
+                                    RandomRoomSpawnStep<ListMapGenContext, MoneySpawn> detourItems = new RandomRoomSpawnStep<ListMapGenContext, MoneySpawn>(treasures);
+                                    detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BlockVault));
+                                    layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                                }
+                                //vault treasures
+                                {
+                                    BulkSpawner<ListMapGenContext, EffectTile> treasures = new BulkSpawner<ListMapGenContext, EffectTile>();
+
+                                    EffectTile secretStairs = new EffectTile("stairs_secret_down", true);
+                                    secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
+                                    treasures.SpecificSpawns.Add(secretStairs);
+
+                                    RandomRoomSpawnStep<ListMapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<ListMapGenContext, EffectTile>(treasures);
+                                    detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BlockVault));
+                                    layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
+                                }
+                            }
+
                             floorSegment.Floors.Add(layout);
                         }
 
@@ -12896,7 +13028,7 @@ namespace DataGenerator.Data
 
                                 RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
                                 detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
-                                layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                                layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
                             }
                         }
 
@@ -14972,7 +15104,7 @@ namespace DataGenerator.Data
 
                                     RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
                                     detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
-                                    layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                                    layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
                                 }
                             }
 
