@@ -5737,6 +5737,41 @@ namespace DataGenerator.Data
 
                             AddStairStep(layout, false);
 
+                            if (ii == 2)
+                            {
+                                //vault rooms
+                                {
+                                    SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                    RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
+                                    loadRoom.MapID = "room_muddy_valley_entrance";
+                                    loadRoom.RoomTerrain = new Tile("floor");
+                                    loadRoom.PreventChanges = PostProcType.Panel | PostProcType.Terrain;
+                                    detourRooms.Add(loadRoom, 10);
+                                    SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                    RoomGenAngledHall<MapGenContext> hall = new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4));
+                                    hall.Brush = new TerrainHallBrush(Loc.One, new Tile("water"));
+                                    detourHalls.Add(hall, 10);
+                                    AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
+                                    detours.Amount = new RandRange(1);
+                                    detours.HallPercent = 100;
+                                    detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                    detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BlockVault));
+                                    detours.RoomComponents.Set(new NoConnectRoom());
+                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BlockVault));
+                                    detours.HallComponents.Set(new NoConnectRoom());
+                                    detours.RoomComponents.Set(new NoEventRoom());
+
+                                    layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                                }
+                                //sealing the vault
+                                {
+                                    TerrainSealStep<MapGenContext> vaultStep = new TerrainSealStep<MapGenContext>("water", "water");
+                                    vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BlockVault));
+                                    layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                                }
+                            }
+
                             floorSegment.Floors.Add(layout);
                         }
 
