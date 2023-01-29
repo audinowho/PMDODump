@@ -1157,6 +1157,17 @@ namespace DataGenerator.Data
                     formEntry.Released = hasFormeGraphics(index, entry.Forms.Count);
 
                     entry.Forms.Add(formEntry);
+
+                    //alcremie needs more forms to represent ALL appearances
+                    if (index == 869)
+                    {
+                        for (int ii = 0; ii < 6; ii++)
+                        {
+                            MonsterFormData formCopy = formEntry.Copy();
+                            entry.Forms.Add(formCopy);
+                        }
+                    }
+
                     if (formEntry.Released)
                         entry.Released = true;
 

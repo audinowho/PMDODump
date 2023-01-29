@@ -18010,17 +18010,27 @@ namespace DataGenerator.Data
             }
             else if (ii == 777)
             {
-                skill.Name = new LocalText("**Decorate");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Name = new LocalText("-Decorate");
+                skill.Desc = new LocalText("The user sharply raises the target's Attack and Sp. Atk stats by decorating the target.");
+                skill.BaseCharges = 12;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.OnHits.Add(0, new StatusStackBattleEvent("mod_attack", true, false, 2));
+                skill.Data.OnHits.Add(0, new StatusStackBattleEvent("mod_special_attack", true, false, 2));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new ThrowAction();
+                ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(25);//Appeal
+                ((ThrowAction)skill.HitboxAction).Coverage = ThrowAction.ArcCoverage.WideAngle;
+                ((ThrowAction)skill.HitboxAction).Range = 3;
+                skill.HitboxAction.TargetAlignments = Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Friend;
+                BetweenEmitter endAnim = new BetweenEmitter(new AnimData("Flatter_Back", 2), new AnimData("Flatter_Front", 2));
+                endAnim.HeightBack = 56;
+                endAnim.HeightFront = 56;
+                skill.Data.HitFX.Emitter = endAnim;
+                skill.Data.HitFX.Sound = "DUN_Encore_2";
+                skill.Data.HitFX.Delay = 30;
             }
             else if (ii == 778)
             {

@@ -63,11 +63,63 @@ namespace DataGenerator.Data
             return mobStep;
         }
 
-        static IFloorGen getSecretRoom(int zoneLevel, DungeonStage stage, string map_type, int moveBack)
+        static IFloorGen getSecretRoom(string map_type, int moveBack, string wall, string floor, string water, string grass, string element, SpawnList<TeamMemberSpawn> enemies, params Loc[] locs)
+        {
+            LoadGen layout = new LoadGen();
+            MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+            startGen.MapID = map_type;
+            layout.GenSteps.Add(PR_TILES_INIT, startGen);
+
+            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapLoadContext>(0, new LocalText("Secret Room")));
+
+            MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+            layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+
+            //Tilesets
+            if (String.IsNullOrEmpty(grass))
+                AddTextureData(layout, wall, floor, water, element);
+            else
+                AddSpecificTextureData(layout, wall, floor, water, grass, element);
+
+            {
+                PoolTeamSpawner subSpawn = new PoolTeamSpawner();
+                subSpawn.Spawns = enemies;
+                subSpawn.TeamSizes.Add(1, 12);
+                LoopedTeamSpawner<MapLoadContext> spawner = new LoopedTeamSpawner<MapLoadContext>(subSpawn);
+                spawner.AmountSpawner = new RandRange(1, 3);
+                PlaceTerrainMobsStep<MapLoadContext> mobStep = new PlaceTerrainMobsStep<MapLoadContext>(spawner);
+                mobStep.AcceptedTiles.Add(new Tile("floor"));
+                layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
+            }
+
+            {
+                HashSet<string> exceptFor = new HashSet<string>();
+                foreach (string legend in IterateLegendaries())
+                    exceptFor.Add(legend);
+                SpeciesItemElementSpawner<MapLoadContext> spawn = new SpeciesItemElementSpawner<MapLoadContext>(new IntRange(1), new RandRange(1), element, exceptFor);
+                BoxSpawner<MapLoadContext> box = new BoxSpawner<MapLoadContext>("box_light", spawn);
+                List<Loc> treasureLocs = new List<Loc>();
+                treasureLocs.AddRange(locs);
+                layout.GenSteps.Add(PR_SPAWN_ITEMS, new SpecificSpawnStep<MapLoadContext, MapItem>(box, treasureLocs));
+            }
+
+            {
+                EffectTile exitTile = new EffectTile("stairs_go_up", true);
+                exitTile.TileStates.Set(new DestState(new SegLoc(moveBack, 1), true));
+                MapTileStep<MapLoadContext> trapStep = new MapTileStep<MapLoadContext>(exitTile);
+
+                trapStep.TerrainStencil = new MatchTileEffectStencil<MapLoadContext>("stairs_go_up");
+                layout.GenSteps.Add(PR_EXITS, trapStep);
+            }
+
+            return layout;
+        }
+
+        static IFloorGen getMysteryRoom(int zoneLevel, DungeonStage stage, string map_type, int moveBack)
         {
             GridFloorGen layout = new GridFloorGen();
 
-            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(0, new LocalText("Mysteriosity Pass")));
+            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(0, new LocalText("Mysterious Passage")));
 
             //Floor settings
             AddFloorData(layout, "B35. Mysterious Passage.ogg", 800, Map.SightRange.Dark, Map.SightRange.Dark);
@@ -88,8 +140,6 @@ namespace DataGenerator.Data
                 spawns.Add(GetUnownSpawns("uvwxyz", zoneLevel - 5), 10);
                 chanceGenStep.Spawns = new LoopedRand<GenStep<MapGenContext>>(spawns, new RandRange(1));
                 layout.GenSteps.Add(PR_RESPAWN_MOB, chanceGenStep);
-
-                //TODO: include a variant for alcremie?
             }
             // a rare mon appears, based on the difficulty level
             {
@@ -900,6 +950,97 @@ namespace DataGenerator.Data
             yield return "xcl_element_rock_silk";
             yield return "xcl_element_steel_silk";
             yield return "xcl_element_water_silk";
+        }
+
+        static IEnumerable<string> IterateLegendaries()
+        {
+            yield return "articuno";
+            yield return "zapdos";
+            yield return "moltres";
+            yield return "mewtwo";
+            yield return "mew";
+            yield return "lugia";
+            yield return "ho_oh";
+            yield return "celebi";
+            yield return "regirock";
+            yield return "regice";
+            yield return "registeel";
+            yield return "latias";
+            yield return "latios";
+            yield return "kyogre";
+            yield return "groudon";
+            yield return "rayquaza";
+            yield return "jirachi";
+            yield return "deoxys";
+            yield return "uxie";
+            yield return "mesprit";
+            yield return "azelf";
+            yield return "dialga";
+            yield return "palkia";
+            yield return "heatran";
+            yield return "regigigas";
+            yield return "giratina";
+            yield return "cresselia";
+            yield return "phione";
+            yield return "manaphy";
+            yield return "darkrai";
+            yield return "shaymin";
+            yield return "arceus";
+            yield return "victini";
+            yield return "cobalion";
+            yield return "terrakion";
+            yield return "virizion";
+            yield return "tornadus";
+            yield return "thundurus";
+            yield return "reshiram";
+            yield return "zekrom";
+            yield return "landorus";
+            yield return "kyurem";
+            yield return "keldeo";
+            yield return "meloetta";
+            yield return "genesect";
+            yield return "xerneas";
+            yield return "yveltal";
+            yield return "zygarde";
+            yield return "diancie";
+            yield return "hoopa";
+            yield return "volcanion";
+            yield return "tapu_koko";
+            yield return "tapu_lele";
+            yield return "tapu_bulu";
+            yield return "tapu_fini";
+            yield return "cosmog";
+            yield return "cosmoem";
+            yield return "solgaleo";
+            yield return "lunala";
+            yield return "nihilego";
+            yield return "buzzwole";
+            yield return "pheromosa";
+            yield return "xurkitree";
+            yield return "celesteela";
+            yield return "kartana";
+            yield return "guzzlord";
+            yield return "necrozma";
+            yield return "magearna";
+            yield return "marshadow";
+            yield return "poipole";
+            yield return "naganadel";
+            yield return "stakataka";
+            yield return "blacephalon";
+            yield return "zeraora";
+            yield return "meltan";
+            yield return "melmetal";
+            yield return "zacian";
+            yield return "zamazenta";
+            yield return "eternatus";
+            yield return "kubfu";
+            yield return "urshifu";
+            yield return "zarude";
+            yield return "regieleki";
+            yield return "regidrago";
+            yield return "glastrier";
+            yield return "spectrier";
+            yield return "calyrex";
         }
 
         [Flags]
