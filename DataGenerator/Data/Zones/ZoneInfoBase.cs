@@ -2419,7 +2419,7 @@ namespace DataGenerator.Data
             #region REPLAY TEST ZONE
             {
                 RangeDictSegment floorSegment = new RangeDictSegment();
-                floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Replay Test Zone\n{0}F")));
+                floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Replay Test Zone\n{0}F"), new Priority(-15)));
                 int total_floors = 10;
 
                 SpawnList<IGenPriority> shopZoneSpawns = new SpawnList<IGenPriority>();
@@ -2818,7 +2818,7 @@ namespace DataGenerator.Data
                 LoadGen layout = new LoadGen();
                 MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                 startGen.MapID = "guildmaster_summit";
-                layout.GenSteps.Add(PR_TILES_INIT, startGen);
+                layout.GenSteps.Add(PR_FILE_LOAD, startGen);
                 staticSegment.Floors.Add(layout);
                 zone.Segments.Add(staticSegment);
             }
@@ -3271,7 +3271,7 @@ namespace DataGenerator.Data
                 LoadGen layout = new LoadGen();
                 MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                 startGen.MapID = MapInfo.MapNames[jj];
-                layout.GenSteps.Add(PR_TILES_INIT, startGen);
+                layout.GenSteps.Add(PR_FILE_LOAD, startGen);
                 MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
                 noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
                 layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
@@ -3326,7 +3326,7 @@ namespace DataGenerator.Data
             //\u8226Steel-types are immune to being Poisoned.
 
             DictionarySegment structure = new DictionarySegment();
-            structure.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Training Maze\nLv. {0}")));
+            structure.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Training Maze\nLv. {0}"), new Priority(-15)));
 
             for (int nn = 0; nn < 4; nn++)
             {
