@@ -3319,6 +3319,14 @@ namespace DataGenerator.Data
                 item.UseEvent.HitFX.Sound = "_UNK_EVT_043";
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Materialize", 2));
             }
+            else if (ii == 492)
+            {
+                item.Name = new LocalText("Mystery Egg");
+                fileName = "egg_mystery";
+                item.Sprite = "Egg_Sea";
+                item.Desc = new LocalText("An egg with bizarre colors that have never been seen before. What could this egg be?");
+                item.MaxStack = -1;
+            }
             else if (ii == 576)
                 FillTMData(item, "earthquake");
             else if (ii == 577)

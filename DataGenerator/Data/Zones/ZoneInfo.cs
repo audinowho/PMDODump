@@ -5260,7 +5260,7 @@ namespace DataGenerator.Data
                     //spawn in the walls
                     poolSpawn.Spawns.Add(GetTeamMob("dratini", "", "twister", "dragon_rage", "", "", new RandRange(25), "wander_dumb"), new IntRange(0, max_floors), 10);
                     //asleep, with shell bell
-                    poolSpawn.Spawns.Add(GetTeamMob("vaporeon", "", "aqua_ring", "acid_armor", "muddy_water", "", new RandRange(50), "wander_normal"), new IntRange(0, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("vaporeon", "", "aqua_ring", "acid_armor", "muddy_water", "", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
@@ -5403,6 +5403,15 @@ namespace DataGenerator.Data
                         //Floor settings
                         AddFloorData(layout, "B23. Shimmer Bay.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
+                        MapEffectStep<MapGenContext> takeTreasure = new MapEffectStep<MapGenContext>();
+                        takeTreasure.Effect.OnMapStarts.Add();
+                        if (ii == max_floors - 1)
+                        {
+                            takeTreasure.Effect.OnPickups.Add(0, new ItemScriptEvent("ShimmerBayShift"));
+                            takeTreasure.Effect.OnEquips.Add(0, new ItemScriptEvent("ShimmerBayShift"));
+                        }
+                        layout.GenSteps.Add(PR_FLOOR_DATA, takeTreasure);
+
                         //Tilesets
                         if (ii < 6)
                             AddTextureData(layout, "miracle_sea_wall", "miracle_sea_floor", "miracle_sea_secondary", "water");
@@ -5458,6 +5467,20 @@ namespace DataGenerator.Data
 
                             layout.GenSteps.Add(PR_GRID_GEN, path);
 
+                            if (ii == max_floors - 1)
+                            {
+                                CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(1), GetImmutableFilterList());
+                                step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+
+                                RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
+                                loadRoom.MapID = "room_egg_altar";
+                                loadRoom.RoomTerrain = new Tile("floor");
+                                loadRoom.PreventChanges = PostProcType.Terrain;
+                                step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 3), loadRoom), 10);
+                                layout.GenSteps.Add(PR_GRID_GEN, step);
+                            }
+
                             if (ii >= 6)
                             {
                                 CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(1, 3), GetImmutableFilterList());
@@ -5489,6 +5512,7 @@ namespace DataGenerator.Data
                                 step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenRound<MapGenContext>(new RandRange(6, 9), new RandRange(4))), 5);
                                 layout.GenSteps.Add(PR_GRID_GEN, step);
                             }
+
                         }
 
                         AddDrawGridSteps(layout);
