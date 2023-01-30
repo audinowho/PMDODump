@@ -2633,7 +2633,7 @@ namespace DataGenerator.Data
                 LoadGen layout = new LoadGen();
                 MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                 startGen.MapID = "guildmaster_summit";
-                layout.GenSteps.Add(PR_TILES_INIT, startGen);
+                layout.GenSteps.Add(PR_FILE_LOAD, startGen);
                 MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
                 noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
                 layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);

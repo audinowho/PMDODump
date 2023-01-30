@@ -68,7 +68,7 @@ namespace DataGenerator.Data
             LoadGen layout = new LoadGen();
             MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
             startGen.MapID = map_type;
-            layout.GenSteps.Add(PR_TILES_INIT, startGen);
+            layout.GenSteps.Add(PR_FILE_LOAD, startGen);
 
             layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapLoadContext>(0, new LocalText("Secret Room")));
 

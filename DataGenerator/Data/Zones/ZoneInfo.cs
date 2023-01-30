@@ -240,7 +240,7 @@ namespace DataGenerator.Data
                         LoadGen layout = new LoadGen();
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "secret_tropical_path";
-                        layout.GenSteps.Add(PR_TILES_INIT, startGen);
+                        layout.GenSteps.Add(PR_FILE_LOAD, startGen);
                         //add a chest
 
                         List<InvItem> treasure = new List<InvItem>();
@@ -3197,7 +3197,7 @@ namespace DataGenerator.Data
                         LoadGen layout = new LoadGen();
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "secret_champions_road";
-                        layout.GenSteps.Add(PR_TILES_INIT, startGen);
+                        layout.GenSteps.Add(PR_FILE_LOAD, startGen);
                         floorSegment.Floors.Add(layout);
                     }
 
@@ -5404,7 +5404,8 @@ namespace DataGenerator.Data
                         AddFloorData(layout, "B23. Shimmer Bay.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         MapEffectStep<MapGenContext> takeTreasure = new MapEffectStep<MapGenContext>();
-                        takeTreasure.Effect.OnMapStarts.Add();
+                        takeTreasure.Effect.OnMapStarts.Add(-20, new SingleCharScriptEvent("ShimmerBayAltMusic"));
+                        takeTreasure.Effect.OnMapStarts.Add(-15, new SingleCharScriptEvent("ShimmerBayAltEnemies"));
                         if (ii == max_floors - 1)
                         {
                             takeTreasure.Effect.OnPickups.Add(0, new ItemScriptEvent("ShimmerBayShift"));
@@ -7868,7 +7869,7 @@ namespace DataGenerator.Data
                         LoadGen layout = new LoadGen();
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "secret_forsaken_desert";
-                        layout.GenSteps.Add(PR_TILES_INIT, startGen);
+                        layout.GenSteps.Add(PR_FILE_LOAD, startGen);
 
                         //add a chest
                         List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
@@ -13205,7 +13206,7 @@ namespace DataGenerator.Data
                         LoadGen layout = new LoadGen();
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "end_bramble_woods";
-                        layout.GenSteps.Add(PR_TILES_INIT, startGen);
+                        layout.GenSteps.Add(PR_FILE_LOAD, startGen);
                         //add a chest
 
                         //List<(InvItem, Loc)> items = new List<(InvItem, Loc)>();
@@ -14217,7 +14218,7 @@ namespace DataGenerator.Data
                         LoadGen layout = new LoadGen();
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "end_sickly_hollow";
-                        layout.GenSteps.Add(PR_TILES_INIT, startGen);
+                        layout.GenSteps.Add(PR_FILE_LOAD, startGen);
                         //add a chest
 
                         //List<(InvItem, Loc)> items = new List<(InvItem, Loc)>();
