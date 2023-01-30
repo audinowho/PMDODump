@@ -5098,7 +5098,7 @@ namespace DataGenerator.Data
                     zone.Rescues = 2;
                     zone.Level = 25;
                     zone.Rogue = RogueStatus.ItemTransfer;
-                    //zone.Persistent = true;
+                    zone.Persistent = true;
 
                     int max_floors = 12;
                     LayeredSegment floorSegment = new LayeredSegment();
@@ -5254,13 +5254,18 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("corsola", "", "spike_cannon", "lucky_chant", "", "", new RandRange(25), "wander_dumb"), new IntRange(6, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("chinchou", "", "confuse_ray", "spark", "", "", new RandRange(24), "wander_dumb"), new IntRange(6, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("mantine", "", "wide_guard", "bubble_beam", "", "", new RandRange(28), "wander_dumb"), new IntRange(0, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("phione", "", "dive", "aqua_ring", "acid_armor", "", new RandRange(36), "wander_dumb"), new IntRange(0, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("huntail", "", "ice_fang", "sucker_punch", "dive", "", new RandRange(28), "wander_dumb"), new IntRange(0, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("gorebyss", "", "amnesia", "draining_kiss", "dive", "", new RandRange(28), "wander_dumb"), new IntRange(0, max_floors), 10);
                     //spawn in the walls
                     poolSpawn.Spawns.Add(GetTeamMob("dratini", "", "twister", "dragon_rage", "", "", new RandRange(25), "wander_dumb"), new IntRange(0, max_floors), 10);
                     //asleep, with shell bell
                     poolSpawn.Spawns.Add(GetTeamMob("vaporeon", "", "aqua_ring", "acid_armor", "muddy_water", "", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
+
+                    {
+                        TeamMemberSpawn teamSpawn = GetTeamMob("phione", "", "dive", "aqua_ring", "acid_armor", "", new RandRange(36), "wander_dumb");
+                        teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("shimmer_bay.TookTreasure", false));
+                        poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 10);
+                    }
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
@@ -5434,8 +5439,10 @@ namespace DataGenerator.Data
                         AddMoneyData(layout, new RandRange(3, 6));
 
                         //enemies
-                        AddRespawnData(layout, 12, 150);
+                        AddRespawnData(layout, 14, 150);
                         AddEnemySpawnData(layout, 20, new RandRange(9, 12));
+
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, new ScriptGenStep<MapGenContext>("ShimmerBayRevisit"));
 
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
@@ -5520,7 +5527,9 @@ namespace DataGenerator.Data
 
                         {
                             EffectTile exitTile = new EffectTile("stairs_back_up", true);
-                            exitTile.TileStates.Set(new DestState(new SegLoc(0, -1), true));
+                            DestState dest = new DestState(new SegLoc(0, -1), true);
+                            dest.PreserveMusic = true;
+                            exitTile.TileStates.Set(dest);
                             var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
                             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                             step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -5528,8 +5537,11 @@ namespace DataGenerator.Data
                         }
                         if (ii < max_floors - 1)
                         {
-                            EffectTile secretTile = new EffectTile("stairs_go_down", true);
-                            RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                            EffectTile exitTile = new EffectTile("stairs_go_down", true);
+                            DestState dest = new DestState(new SegLoc(0, 1), true);
+                            dest.PreserveMusic = true;
+                            exitTile.TileStates.Set(dest);
+                            RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
                             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                         }
 
