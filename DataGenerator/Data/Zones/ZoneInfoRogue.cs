@@ -36,7 +36,7 @@ namespace DataGenerator.Data
             LayeredSegment floorSegment = new LayeredSegment();
             floorSegment.IsRelevant = true;
             floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-            floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Guildmaster Trail\n{0}F")));
+            floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Guildmaster Trail\n{0}F"), new Priority(-15)));
 
             //money
             MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(160, 170), new RandRange(22, 26));
@@ -2659,7 +2659,7 @@ namespace DataGenerator.Data
             LayeredSegment floorSegment = new LayeredSegment();
             floorSegment.IsRelevant = true;
             floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-            floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Secret Garden\nB{0}F")));
+            floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Secret Garden\nB{0}F"), new Priority(-15)));
 
             //money
             MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(160, 170), new RandRange(22, 26));
@@ -4802,7 +4802,7 @@ namespace DataGenerator.Data
             LayeredSegment floorSegment = new LayeredSegment();
             floorSegment.IsRelevant = true;
             floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-            floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Cave of Whispers\nB{0}F")));
+            floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Cave of Whispers\nB{0}F"), new Priority(-15)));
 
             //money
             MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(160, 170), new RandRange(22, 26));

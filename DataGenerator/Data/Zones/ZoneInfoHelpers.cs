@@ -21,6 +21,8 @@ namespace DataGenerator.Data
     public partial class ZoneInfo
     {
         //GUIDE TO MAP GENERATION PRIORITY:
+        //-6.-1 starting with a preloaded map
+        static readonly Priority PR_FILE_LOAD = new Priority(-6, -1);
         //-6 name, ID, floor data
         static readonly Priority PR_FLOOR_DATA = new Priority(-6);
         //-5 Grid Creation

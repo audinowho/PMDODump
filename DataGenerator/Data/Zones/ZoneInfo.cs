@@ -68,7 +68,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Tropical Path\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Tropical Path\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -235,7 +235,7 @@ namespace DataGenerator.Data
                 }
                 {
                     LayeredSegment floorSegment = new LayeredSegment();
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Secret Room")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Secret Room"), new Priority(-15)));
                     {
                         LoadGen layout = new LoadGen();
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
@@ -274,7 +274,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Faded Trail\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Faded Trail\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -577,7 +577,7 @@ namespace DataGenerator.Data
                     {
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Hidden Trail\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Hidden Trail\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -755,7 +755,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Flyaway Cliffs\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Flyaway Cliffs\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -1162,7 +1162,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Thunderstruck Pass\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Thunderstruck Pass\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -1754,7 +1754,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Veiled Ridge\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Veiled Ridge\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -2167,7 +2167,7 @@ namespace DataGenerator.Data
                     int max_floors = 6;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Illusion Ridge\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Illusion Ridge\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 15);
@@ -2477,7 +2477,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Champion's Road\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Champion's Road\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -3152,7 +3152,7 @@ namespace DataGenerator.Data
                     int max_floors = 4;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Clouded Road\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Clouded Road\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 20);
@@ -3313,7 +3313,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Moonlit Courtyard\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Moonlit Courtyard\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -3978,7 +3978,7 @@ namespace DataGenerator.Data
                         int max_floors = 6;
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Moonlit Temple\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Moonlit Temple\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -4367,7 +4367,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Faultline Ridge\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Faultline Ridge\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -4681,7 +4681,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Sleeping Caldera\nB{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Sleeping Caldera\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -5104,7 +5104,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Shimmer Bay\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Shimmer Bay\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 5);
@@ -5555,7 +5555,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Fertile Valley\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Fertile Valley\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -5807,7 +5807,7 @@ namespace DataGenerator.Data
                         int max_floors = 5;
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Muddy Valley\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Muddy Valley\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -6023,7 +6023,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Ambush Forest\nB{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Ambush Forest\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -6754,7 +6754,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Treacherous Mountain\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Treacherous Mountain\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -7535,7 +7535,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Forsaken Desert\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Forsaken Desert\n{0}F"), new Priority(-15)));
 
 
                     //money
@@ -7864,7 +7864,7 @@ namespace DataGenerator.Data
 
                 {
                     LayeredSegment floorSegment = new LayeredSegment();
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Secret Room")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Secret Room"), new Priority(-15)));
                     {
                         LoadGen layout = new LoadGen();
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
@@ -7975,7 +7975,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Snowbound Path\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Snowbound Path\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 5);
@@ -8655,7 +8655,7 @@ namespace DataGenerator.Data
                     int max_floors = 6;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Glacial Path\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Glacial Path\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 15);
@@ -9002,7 +9002,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Relic Tower\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Relic Tower\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level + 40, 0);
@@ -9551,7 +9551,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Overgrown Wilds\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Overgrown Wilds\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -9978,7 +9978,7 @@ namespace DataGenerator.Data
                     int max_floors = 4;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Exotic Wilds\nB{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Exotic Wilds\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -10256,7 +10256,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Wayward Wetlands\nB{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Wayward Wetlands\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -10373,7 +10373,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Trickster Woods\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Trickster Woods\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -10757,7 +10757,7 @@ namespace DataGenerator.Data
                         int max_floors = 4;
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Trickster Maze\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Trickster Maze\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -10912,7 +10912,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Lava Floe\nIsland\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Lava Floe\nIsland\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -11301,7 +11301,7 @@ namespace DataGenerator.Data
                         int max_floors = 10;
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Abyssal Island\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Abyssal Island\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -11465,7 +11465,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Copper Quarry\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Copper Quarry\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -12058,7 +12058,7 @@ namespace DataGenerator.Data
                         int max_floors = 4;
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Magnetic Quarry\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Magnetic Quarry\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -12407,7 +12407,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Cave of Solace\nB{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Cave of Solace\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -12522,7 +12522,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Royal Halls\nB{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Royal Halls\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -12628,7 +12628,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("The Sky\n{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("The Sky\n{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -12738,7 +12738,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("The Abyss\nB{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("The Abyss\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -12906,7 +12906,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Bramble Woods\nB{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Bramble Woods\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -13232,7 +13232,7 @@ namespace DataGenerator.Data
                     int max_floors = 3;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Bramble Thicket\nB{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Bramble Thicket\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -13434,7 +13434,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Sickly Hollow\nB{0}F")));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Sickly Hollow\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(30, 40), new RandRange(30, 34));
@@ -14259,7 +14259,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Energy Garden\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Energy Garden\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -14373,7 +14373,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Tiny Tunnel\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Tiny Tunnel\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -14480,7 +14480,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Geode Underpass\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Geode Underpass\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -14590,7 +14590,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Starfall Heights\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Starfall Heights\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -14699,7 +14699,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Eon Island Coast\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Eon Island Coast\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -14808,7 +14808,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Barren Tundra\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Barren Tundra\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -14915,7 +14915,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Wayward Wetlands\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Wayward Wetlands\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -15024,7 +15024,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Bravery Road\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Bravery Road\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -15133,7 +15133,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Wisdom Road\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Wisdom Road\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -15296,7 +15296,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Hope Road\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Hope Road\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -15405,7 +15405,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Deserted Fortress\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Deserted Fortress\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -15518,7 +15518,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("White Isle\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("White Isle\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -15627,7 +15627,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Labyrinth of the Lost\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Labyrinth of the Lost\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -15736,7 +15736,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Sacred Tower\n{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Sacred Tower\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -15846,7 +15846,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Lost Seas\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Lost Seas\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -15955,7 +15955,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameIDZoneStep(PR_FLOOR_DATA, new LocalText("Inscribed Cave\nB{0}F")));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Inscribed Cave\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
