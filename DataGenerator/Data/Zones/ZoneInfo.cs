@@ -4676,6 +4676,7 @@ namespace DataGenerator.Data
                     zone.Rescues = 2;
                     zone.Level = 35;
                     zone.Rogue = RogueStatus.ItemTransfer;
+                    zone.Persistent = true;
 
                     int max_floors = 12;
                     LayeredSegment floorSegment = new LayeredSegment();
@@ -4898,7 +4899,7 @@ namespace DataGenerator.Data
 
 
                     {
-                        SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(1, 8, 50), new IntRange(1, max_floors)));
+                        SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(1, 8, 50), new IntRange(1, max_floors-1)));
 
                         //making room for the vault
                         {
@@ -4998,13 +4999,52 @@ namespace DataGenerator.Data
                         //Floor settings
                         AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
+                        MapEffectStep<ListMapGenContext> takeTreasure = new MapEffectStep<ListMapGenContext>();
+                        takeTreasure.Effect.OnMapStarts.Add(-20, new SingleCharScriptEvent("SleepingCalderaAltData"));
+                        takeTreasure.Effect.OnMapStarts.Add(-15, new SingleCharScriptEvent("SleepingCalderaAltTiles"));
+                        takeTreasure.Effect.OnMapStarts.Add(-15, new SingleCharScriptEvent("SleepingCalderaAltEnemies"));
+                        takeTreasure.Effect.OnMapStarts.Add(5, new SingleCharScriptEvent("SleepingCalderaSummonHeatran"));
+                        if (ii == max_floors - 1)
+                        {
+                            takeTreasure.Effect.OnPickups.Add(0, new ItemScriptEvent("SleepingCalderaShift"));
+                            takeTreasure.Effect.OnEquips.Add(0, new ItemScriptEvent("SleepingCalderaShift"));
+                        }
+                        layout.GenSteps.Add(PR_FLOOR_DATA, takeTreasure);
+
                         //Tilesets
                         //other candidates: steam_cave
                         //solar_cave_1/deep_dark_crater,waterfall_cave/dark_crater,unused_steam_cave/magma_cavern_3
+                        string block, ground, water, lava, element;
                         if (ii < 6)
-                            AddTextureData(layout, "rock_path_rb_wall", "rock_path_rb_floor", "rock_path_rb_secondary", "fire");
+                        {
+                            block = "rock_path_rb_wall";
+                            ground = "rock_path_rb_floor";
+                            water = "rock_path_rb_secondary";
+                            lava = "deep_dark_crater_secondary";
+                            element = "fire";
+                        }
                         else
-                            AddTextureData(layout, "waterfall_cave_wall", "waterfall_cave_floor", "waterfall_cave_secondary", "fire");
+                        {
+                            block = "waterfall_cave_wall";
+                            ground = "waterfall_cave_floor";
+                            water = "waterfall_cave_secondary";
+                            lava = "dark_crater_secondary";
+                            element = "fire";
+                        }
+
+
+                        MapDictTextureStep<ListMapGenContext> textureStep = new MapDictTextureStep<ListMapGenContext>();
+                        {
+                            textureStep.BlankBG = block;
+                            textureStep.TextureMap["floor"] = ground;
+                            textureStep.TextureMap["unbreakable"] = block;
+                            textureStep.TextureMap["wall"] = block;
+                            textureStep.TextureMap["water"] = water;
+                            textureStep.TextureMap["lava"] = lava;
+                        }
+                        textureStep.GroundElement = element;
+                        textureStep.LayeredGround = true;
+                        layout.GenSteps.Add(PR_TEXTURES, textureStep);
 
                         //add water cracks
                         AddTunnelStep<ListMapGenContext> tunneler = new AddTunnelStep<ListMapGenContext>();
@@ -5286,7 +5326,7 @@ namespace DataGenerator.Data
 
 
                     {
-                        SpreadHouseZoneStep chestChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanQuota(new RandBinomial(8, 60), new IntRange(4, max_floors)));
+                        SpreadHouseZoneStep chestChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanQuota(new RandBinomial(8, 60), new IntRange(4, max_floors-1)));
                         chestChanceZoneStep.ModStates.Add(new FlagType(typeof(ChestModGenState)));
                         chestChanceZoneStep.HouseStepSpawns.Add(new ChestStep<ListMapGenContext>(false, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
@@ -5309,7 +5349,7 @@ namespace DataGenerator.Data
                     }
 
                     {
-                        SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(0, 7, 50), new IntRange(1, max_floors)));
+                        SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(0, 7, 50), new IntRange(1, max_floors-1)));
 
                         //making room for the vault
                         {
