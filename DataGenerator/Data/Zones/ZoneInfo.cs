@@ -4873,9 +4873,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("slugma", "", "incinerate", "harden", "", "", new RandRange(33), "wander_dumb"), new IntRange(0, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("marowak", 1, "", Gender.Unknown), "", "shadow_bone", "will_o_wisp", "", "", new RandRange(33), "wander_dumb"), new IntRange(0, max_floors), 10);
                     //sleeping, with choice band
-                    poolSpawn.Spawns.Add(GetTeamMob("flareon", "", "flare_blitz", "", "", "", new RandRange(50), "wander_normal"), new IntRange(0, max_floors), 10);
-                    //only one
-                    poolSpawn.Spawns.Add(GetTeamMob("heatran", "", "magma_storm", "earth_power", "", "", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("flareon", "", "flare_blitz", "", "", "", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 4);
@@ -5004,6 +5002,7 @@ namespace DataGenerator.Data
                         takeTreasure.Effect.OnMapStarts.Add(-15, new SingleCharScriptEvent("SleepingCalderaAltTiles"));
                         takeTreasure.Effect.OnMapStarts.Add(-15, new SingleCharScriptEvent("SleepingCalderaAltEnemies"));
                         takeTreasure.Effect.OnMapStarts.Add(5, new SingleCharScriptEvent("SleepingCalderaSummonHeatran"));
+                        takeTreasure.Effect.AfterActions.Add(5, new BattleScriptEvent("LegendRecruitCheck"));
                         if (ii == max_floors - 1)
                         {
                             takeTreasure.Effect.OnPickups.Add(0, new ItemScriptEvent("SleepingCalderaShift"));
@@ -5020,7 +5019,7 @@ namespace DataGenerator.Data
                             block = "rock_path_rb_wall";
                             ground = "rock_path_rb_floor";
                             water = "rock_path_rb_secondary";
-                            lava = "deep_dark_crater_secondary";
+                            lava = "dark_crater_secondary";
                             element = "fire";
                         }
                         else
@@ -5028,7 +5027,7 @@ namespace DataGenerator.Data
                             block = "waterfall_cave_wall";
                             ground = "waterfall_cave_floor";
                             water = "waterfall_cave_secondary";
-                            lava = "dark_crater_secondary";
+                            lava = "deep_dark_crater_secondary";
                             element = "fire";
                         }
 
@@ -5110,7 +5109,9 @@ namespace DataGenerator.Data
 
                         {
                             EffectTile exitTile = new EffectTile("stairs_back_up", true);
-                            exitTile.TileStates.Set(new DestState(new SegLoc(0, -1), true));
+                            DestState dest = new DestState(new SegLoc(0, -1), true);
+                            dest.PreserveMusic = true;
+                            exitTile.TileStates.Set(dest);
                             var step = new FloorStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
                             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                             step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
@@ -5118,8 +5119,11 @@ namespace DataGenerator.Data
                         }
                         if (ii < max_floors - 1)
                         {
-                            EffectTile secretTile = new EffectTile("stairs_go_down", true);
-                            RandomSpawnStep<ListMapGenContext, EffectTile> trapStep = new RandomSpawnStep<ListMapGenContext, EffectTile>(new PickerSpawner<ListMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                            EffectTile exitTile = new EffectTile("stairs_go_down", true);
+                            DestState dest = new DestState(new SegLoc(0, 1), true);
+                            dest.PreserveMusic = true;
+                            exitTile.TileStates.Set(dest);
+                            RandomSpawnStep<ListMapGenContext, EffectTile> trapStep = new RandomSpawnStep<ListMapGenContext, EffectTile>(new PickerSpawner<ListMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
                             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                         }
 
