@@ -271,7 +271,7 @@ namespace DataGenerator.Data
                         detours.RoomComponents.Set(new NoEventRoom());
                         detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                         detours.HallComponents.Set(new NoConnectRoom());
-                        detours.RoomComponents.Set(new NoEventRoom());
+                        detours.HallComponents.Set(new NoEventRoom());
 
                         layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                     }
@@ -494,7 +494,7 @@ namespace DataGenerator.Data
                         detours.RoomComponents.Set(new NoEventRoom());
                         detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                         detours.HallComponents.Set(new NoConnectRoom());
-                        detours.RoomComponents.Set(new NoEventRoom());
+                        detours.HallComponents.Set(new NoEventRoom());
 
                         layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                     }

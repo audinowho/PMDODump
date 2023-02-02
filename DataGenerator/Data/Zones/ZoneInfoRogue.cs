@@ -1365,7 +1365,7 @@ namespace DataGenerator.Data
                     detours.RoomComponents.Set(new NoEventRoom());
                     detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                     detours.HallComponents.Set(new NoConnectRoom());
-                    detours.RoomComponents.Set(new NoEventRoom());
+                    detours.HallComponents.Set(new NoEventRoom());
 
                     vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                 }
@@ -3583,7 +3583,7 @@ namespace DataGenerator.Data
                     detours.RoomComponents.Set(new NoEventRoom());
                     detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                     detours.HallComponents.Set(new NoConnectRoom());
-                    detours.RoomComponents.Set(new NoEventRoom());
+                    detours.HallComponents.Set(new NoEventRoom());
 
                     vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                 }
@@ -4767,14 +4767,18 @@ namespace DataGenerator.Data
                     {
                         //the next floor is in whatever room, but exposed
                         EffectTile secretTile = new EffectTile("stairs_go_down", true);
-                        RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                        RandomRoomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomRoomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
+                        trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        trapStep.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
                         layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                     }
                     else if (ii < 39)
                     {
                         //the next floor will be in whatever room, hidden
                         EffectTile secretTile = new EffectTile("stairs_go_down", false);
-                        RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                        RandomRoomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomRoomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
+                        trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        trapStep.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
                         layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                     }
                 }

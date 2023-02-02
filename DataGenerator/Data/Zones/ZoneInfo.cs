@@ -540,7 +540,7 @@ namespace DataGenerator.Data
                                     detours.RoomComponents.Set(new NoEventRoom());
                                     detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                                     detours.HallComponents.Set(new NoConnectRoom());
-                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new NoEventRoom());
 
                                     layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                                 }
@@ -991,7 +991,7 @@ namespace DataGenerator.Data
                             detours.RoomComponents.Set(new NoEventRoom());
                             detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                             detours.HallComponents.Set(new NoConnectRoom());
-                            detours.RoomComponents.Set(new NoEventRoom());
+                            detours.HallComponents.Set(new NoEventRoom());
 
                             vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                         }
@@ -1489,7 +1489,7 @@ namespace DataGenerator.Data
                                 detours.RoomComponents.Set(new NoEventRoom());
                                 detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                                 detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
 
                                 vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                             }
@@ -3563,7 +3563,7 @@ namespace DataGenerator.Data
                                     detours.RoomComponents.Set(new NoEventRoom());
                                     detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                                     detours.HallComponents.Set(new NoConnectRoom());
-                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new NoEventRoom());
 
                                     detourChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                                 }
@@ -3658,7 +3658,7 @@ namespace DataGenerator.Data
                                     detours.RoomComponents.Set(new NoEventRoom());
                                     detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                                     detours.HallComponents.Set(new NoConnectRoom());
-                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new NoEventRoom());
 
                                     vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                                 }
@@ -3940,7 +3940,7 @@ namespace DataGenerator.Data
                                     detours.RoomComponents.Set(new NoEventRoom());
                                     detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                                     detours.HallComponents.Set(new NoConnectRoom());
-                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new NoEventRoom());
 
                                     layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                                 }
@@ -4177,7 +4177,7 @@ namespace DataGenerator.Data
                                 detours.RoomComponents.Set(new NoEventRoom());
                                 detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                                 detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
 
                                 vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                             }
@@ -4924,7 +4924,7 @@ namespace DataGenerator.Data
                             detours.RoomComponents.Set(new NoEventRoom());
                             detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                             detours.HallComponents.Set(new NoConnectRoom());
-                            detours.RoomComponents.Set(new NoEventRoom());
+                            detours.HallComponents.Set(new NoEventRoom());
 
                             vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                         }
@@ -5050,7 +5050,7 @@ namespace DataGenerator.Data
                         tunneler.Halls = new RandRange(2, 5);
                         tunneler.TurnLength = new RandRange(3, 8);
                         tunneler.MaxLength = new RandRange(25);
-                        tunneler.Brush = new TerrainHallBrush(Loc.One * 2, new Tile("water"));
+                        tunneler.Brush = new TerrainHallBrush(Loc.One, new Tile("water"));
                         layout.GenSteps.Add(PR_WATER, tunneler);
 
                         AddBlobWaterSteps(layout, "water", new RandRange(2, 5), new IntRange(2, 8), true);//water
@@ -5073,8 +5073,10 @@ namespace DataGenerator.Data
                         {
                             if (ii < 6)
                                 AddInitListStep(layout, 52, 40);
-                            else
+                            else if (ii < max_floors - 1)
                                 AddInitListStep(layout, 58, 46);
+                            else
+                                AddInitListStep(layout, 52, 38);
 
                             FloorPathBranch<ListMapGenContext> path = new FloorPathBranch<ListMapGenContext>();
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
@@ -5082,9 +5084,15 @@ namespace DataGenerator.Data
                             path.HallPercent = 50;
                             if (ii < 6)
                                 path.FillPercent = new RandRange(50);
-                            else
+                            else if (ii < max_floors - 1)
                                 path.FillPercent = new RandRange(55);
-                            path.BranchRatio = new RandRange(0, 25);
+                            else
+                                path.FillPercent = new RandRange(20);
+
+                            if (ii < max_floors - 1)
+                                path.BranchRatio = new RandRange(0, 25);
+                            else
+                                path.BranchRatio = new RandRange(0);
 
                             SpawnList<RoomGen<ListMapGenContext>> genericRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                             if (ii >= 6)
@@ -5123,9 +5131,130 @@ namespace DataGenerator.Data
                             DestState dest = new DestState(new SegLoc(0, 1), true);
                             dest.PreserveMusic = true;
                             exitTile.TileStates.Set(dest);
-                            RandomSpawnStep<ListMapGenContext, EffectTile> trapStep = new RandomSpawnStep<ListMapGenContext, EffectTile>(new PickerSpawner<ListMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
+                            RandomRoomSpawnStep<ListMapGenContext, EffectTile> trapStep = new RandomRoomSpawnStep<ListMapGenContext, EffectTile>(new PickerSpawner<ListMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
+                            trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            trapStep.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
                             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                         }
+
+
+
+                        if (ii == max_floors - 1)
+                        {
+                            //making room for the vault
+                            {
+                                ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(20, 16), Dir8.None);
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, addSizeStep);
+                                ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, limitStep);
+                                ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT_CLAMP, clampStep);
+                            }
+
+                            //vault rooms
+                            {
+                                SpawnList<RoomGen<ListMapGenContext>> detourRooms = new SpawnList<RoomGen<ListMapGenContext>>();
+
+                                RoomGenLoadMap<ListMapGenContext> loadRoom = new RoomGenLoadMap<ListMapGenContext>();
+                                loadRoom.MapID = "room_sleeping_caldera_altar";
+                                loadRoom.RoomTerrain = new Tile("floor");
+                                loadRoom.PreventChanges = PostProcType.Terrain;
+                                detourRooms.Add(loadRoom, 10);
+                                SpawnList<PermissiveRoomGen<ListMapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
+                                detourHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                                AddConnectedRoomsStep<ListMapGenContext> detours = new AddConnectedRoomsStep<ListMapGenContext>(detourRooms, detourHalls);
+                                detours.Amount = new RandRange(1);
+                                detours.HallPercent = 100;
+                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                                detours.RoomComponents.Set(new NoEventRoom());
+
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                            }
+
+                            {
+                                SpawnList<RoomGen<ListMapGenContext>> detourRooms = new SpawnList<RoomGen<ListMapGenContext>>();
+
+                                detourRooms.Add(new RoomGenRound<ListMapGenContext>(new RandRange(4, 8), new RandRange(4, 8)), 10);
+                                detourRooms.Add(new RoomGenCave<ListMapGenContext>(new RandRange(4, 9), new RandRange(4, 9)), 10);
+                                SpawnList<PermissiveRoomGen<ListMapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
+                                detourHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                                AddConnectedRoomsStep<ListMapGenContext> detours = new AddConnectedRoomsStep<ListMapGenContext>(detourRooms, detourHalls);
+                                detours.Amount = new RandRange(20);
+                                detours.HallPercent = 100;
+                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom()));
+                                detours.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+
+                                // try to add more halls connecting
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericListConnect(60, 0));
+                            }
+
+
+                            //sealing the vault
+                            {
+                                SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", 3, false);
+                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                                vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
+                                layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                            }
+
+                            // item spawnings for the vault
+                            {
+                                //add a PickerSpawner <- PresetMultiRand <- coins
+                                List<MapItem> treasures = new List<MapItem>();
+                                treasures.Add(MapItem.CreateMoney(200));
+                                treasures.Add(MapItem.CreateMoney(200));
+                                treasures.Add(MapItem.CreateMoney(200));
+                                treasures.Add(MapItem.CreateMoney(200));
+                                treasures.Add(MapItem.CreateMoney(200));
+                                PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
+
+                                SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
+
+                                {
+                                    HashSet<string> exceptFor = new HashSet<string>();
+                                    foreach (string legend in IterateLegendaries())
+                                        exceptFor.Add(legend);
+                                    SpeciesItemElementSpawner<ListMapGenContext> spawn = new SpeciesItemElementSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1), "fire", exceptFor);
+                                    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_deluxe", spawn), 10);
+                                }
+                                {
+                                    HashSet<string> exceptFor = new HashSet<string>();
+                                    foreach (string legend in IterateLegendaries())
+                                        exceptFor.Add(legend);
+                                    SpeciesItemElementSpawner<ListMapGenContext> spawn = new SpeciesItemElementSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1), "water", exceptFor);
+                                    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_deluxe", spawn), 10);
+                                }
+                                {
+                                    HashSet<string> exceptFor = new HashSet<string>();
+                                    foreach (string legend in IterateLegendaries())
+                                        exceptFor.Add(legend);
+                                    SpeciesItemElementSpawner<ListMapGenContext> spawn = new SpeciesItemElementSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1), "grass", exceptFor);
+                                    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_deluxe", spawn), 10);
+                                }
+                                {
+                                    HashSet<string> exceptFor = new HashSet<string>();
+                                    foreach (string legend in IterateLegendaries())
+                                        exceptFor.Add(legend);
+                                    SpeciesItemElementSpawner<ListMapGenContext> spawn = new SpeciesItemElementSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1), "electric", exceptFor);
+                                    boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_deluxe", spawn), 10);
+                                }
+
+                                MultiStepSpawner<ListMapGenContext, MapItem> boxPicker = new MultiStepSpawner<ListMapGenContext, MapItem>(new LoopedRand<IStepSpawner<ListMapGenContext, MapItem>>(boxSpawn, new RandRange(3)));
+
+                                //StepSpawner <- PresetMultiRand
+                                MultiStepSpawner<ListMapGenContext, MapItem> mainSpawner = new MultiStepSpawner<ListMapGenContext, MapItem>();
+                                mainSpawner.Picker = new PresetMultiRand<IStepSpawner<ListMapGenContext, MapItem>>(treasurePicker, boxPicker);
+
+                                RandomRoomSpawnStep<ListMapGenContext, MapItem> detourItems = new RandomRoomSpawnStep<ListMapGenContext, MapItem>(mainSpawner);
+                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                                layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                            }
+                        }
+
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -5380,7 +5509,7 @@ namespace DataGenerator.Data
                             detours.RoomComponents.Set(new NoEventRoom());
                             detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                             detours.HallComponents.Set(new NoConnectRoom());
-                            detours.RoomComponents.Set(new NoEventRoom());
+                            detours.HallComponents.Set(new NoEventRoom());
 
                             vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                         }
@@ -5526,7 +5655,7 @@ namespace DataGenerator.Data
                                 step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
 
                                 RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
-                                loadRoom.MapID = "room_egg_altar";
+                                loadRoom.MapID = "room_shimmer_bay_altar";
                                 loadRoom.RoomTerrain = new Tile("floor");
                                 loadRoom.PreventChanges = PostProcType.Terrain;
                                 step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 3), loadRoom), 10);
@@ -5585,7 +5714,9 @@ namespace DataGenerator.Data
                             DestState dest = new DestState(new SegLoc(0, 1), true);
                             dest.PreserveMusic = true;
                             exitTile.TileStates.Set(dest);
-                            RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
+                            RandomRoomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomRoomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
+                            trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            trapStep.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
                             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                         }
 
@@ -5841,7 +5972,7 @@ namespace DataGenerator.Data
                                     detours.RoomComponents.Set(new NoEventRoom());
                                     detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BlockVault));
                                     detours.HallComponents.Set(new NoConnectRoom());
-                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new NoEventRoom());
 
                                     layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                                 }
@@ -7139,7 +7270,7 @@ namespace DataGenerator.Data
                             detours.RoomComponents.Set(new NoEventRoom());
                             detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                             detours.HallComponents.Set(new NoConnectRoom());
-                            detours.RoomComponents.Set(new NoEventRoom());
+                            detours.HallComponents.Set(new NoEventRoom());
 
                             vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                         }
@@ -7880,7 +8011,7 @@ namespace DataGenerator.Data
                                 detours.RoomComponents.Set(new NoEventRoom());
                                 detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                                 detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
 
                                 layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                             }
@@ -8345,7 +8476,7 @@ namespace DataGenerator.Data
                             detours.RoomComponents.Set(new NoEventRoom());
                             detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                             detours.HallComponents.Set(new NoConnectRoom());
-                            detours.RoomComponents.Set(new NoEventRoom());
+                            detours.HallComponents.Set(new NoEventRoom());
 
                             vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                         }
@@ -8648,7 +8779,7 @@ namespace DataGenerator.Data
                                 detours.RoomComponents.Set(new NoEventRoom());
                                 detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                                 detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
 
                                 layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                             }
@@ -9323,7 +9454,7 @@ namespace DataGenerator.Data
                                 detours.RoomComponents.Set(new NoEventRoom());
                                 detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                                 detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
 
                                 detourChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                             }
@@ -9418,7 +9549,7 @@ namespace DataGenerator.Data
                                 detours.RoomComponents.Set(new NoEventRoom());
                                 detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                                 detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
 
                                 vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                             }
@@ -9835,7 +9966,7 @@ namespace DataGenerator.Data
                             detours.RoomComponents.Set(new NoEventRoom());
                             detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                             detours.HallComponents.Set(new NoConnectRoom());
-                            detours.RoomComponents.Set(new NoEventRoom());
+                            detours.HallComponents.Set(new NoEventRoom());
 
                             vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                         }
@@ -10011,7 +10142,7 @@ namespace DataGenerator.Data
                                 detours.RoomComponents.Set(new NoEventRoom());
                                 detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BlockVault));
                                 detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
 
                                 layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                             }
@@ -10597,7 +10728,7 @@ namespace DataGenerator.Data
                                 detours.RoomComponents.Set(new NoEventRoom());
                                 detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                                 detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
 
                                 vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                             }
@@ -11805,7 +11936,7 @@ namespace DataGenerator.Data
                                     detours.RoomComponents.Set(new NoEventRoom());
                                     detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                                     detours.HallComponents.Set(new NoConnectRoom());
-                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new NoEventRoom());
 
                                     detourChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                                 }
@@ -11900,7 +12031,7 @@ namespace DataGenerator.Data
                                     detours.RoomComponents.Set(new NoEventRoom());
                                     detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                                     detours.HallComponents.Set(new NoConnectRoom());
-                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new NoEventRoom());
 
                                     vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                                 }
@@ -12067,7 +12198,7 @@ namespace DataGenerator.Data
                                     detours.RoomComponents.Set(new NoEventRoom());
                                     detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BlockVault));
                                     detours.HallComponents.Set(new NoConnectRoom());
-                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new NoEventRoom());
 
                                     layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                                 }
@@ -12297,7 +12428,7 @@ namespace DataGenerator.Data
                                 detours.RoomComponents.Set(new NoEventRoom());
                                 detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                                 detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
 
                                 vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                             }
@@ -13207,7 +13338,7 @@ namespace DataGenerator.Data
                                 detours.RoomComponents.Set(new NoEventRoom());
                                 detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                                 detours.HallComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
 
                                 layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                             }
@@ -13933,7 +14064,7 @@ namespace DataGenerator.Data
                             detours.RoomComponents.Set(new NoEventRoom());
                             detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
                             detours.HallComponents.Set(new NoConnectRoom());
-                            detours.RoomComponents.Set(new NoEventRoom());
+                            detours.HallComponents.Set(new NoEventRoom());
 
                             vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
                         }
@@ -15303,7 +15434,7 @@ namespace DataGenerator.Data
                                     detours.RoomComponents.Set(new NoEventRoom());
                                     detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                                     detours.HallComponents.Set(new NoConnectRoom());
-                                    detours.RoomComponents.Set(new NoEventRoom());
+                                    detours.HallComponents.Set(new NoEventRoom());
 
                                     layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                                 }
