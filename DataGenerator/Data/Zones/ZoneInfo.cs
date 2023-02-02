@@ -524,6 +524,15 @@ namespace DataGenerator.Data
 
                             if (ii == 4)
                             {
+                                //making room for the vault
+                                {
+                                    ResizeFloorStep<MapGenContext> addSizeStep = new ResizeFloorStep<MapGenContext>(new Loc(16, 16), Dir8.None);
+                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, addSizeStep);
+                                    ClampFloorStep<MapGenContext> limitStep = new ClampFloorStep<MapGenContext>(new Loc(0), new Loc(78, 54));
+                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, limitStep);
+                                    ClampFloorStep<MapGenContext> clampStep = new ClampFloorStep<MapGenContext>();
+                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT_CLAMP, clampStep);
+                                }
 
                                 //vault rooms
                                 {
@@ -964,7 +973,7 @@ namespace DataGenerator.Data
 
                     //switch vaults
                     {
-                        SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(1, 8, 35), new IntRange(0, max_floors)));
+                        SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(1, 8, 35), new IntRange(0, max_floors-1)));
 
                         //making room for the vault
                         {
@@ -1130,6 +1139,51 @@ namespace DataGenerator.Data
                         AddDrawGridSteps(layout);
 
                         AddStairStep(layout, false);
+
+
+                        if (ii == max_floors - 1)
+                        {
+                            //making room for the vault
+                            {
+                                ResizeFloorStep<MapGenContext> addSizeStep = new ResizeFloorStep<MapGenContext>(new Loc(16, 16), Dir8.None);
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, addSizeStep);
+                                ClampFloorStep<MapGenContext> limitStep = new ClampFloorStep<MapGenContext>(new Loc(0), new Loc(78, 54));
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, limitStep);
+                                ClampFloorStep<MapGenContext> clampStep = new ClampFloorStep<MapGenContext>();
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT_CLAMP, clampStep);
+                            }
+
+                            //vault rooms
+                            {
+                                SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
+
+                                RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
+                                loadRoom.MapID = "room_flying_item";
+                                loadRoom.RoomTerrain = new Tile("floor");
+                                loadRoom.PreventChanges = PostProcType.Panel | PostProcType.Terrain;
+                                detourRooms.Add(loadRoom, 10);
+                                SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                                AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
+                                detours.Amount = new RandRange(1);
+                                detours.HallPercent = 100;
+                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
+                                detours.RoomComponents.Set(new NoConnectRoom());
+                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
+                                detours.HallComponents.Set(new NoConnectRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
+
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                            }
+                            //sealing the vault
+                            {
+                                KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>("sealed_block", "sealed_door", "key");
+                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
+                                layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                            }
+                        }
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -6912,6 +6966,50 @@ namespace DataGenerator.Data
                         AddStairStep(layout, false);
 
 
+                        if (ii == max_floors / 2)
+                        {
+                            //making room for the vault
+                            {
+                                ResizeFloorStep<MapGenContext> addSizeStep = new ResizeFloorStep<MapGenContext>(new Loc(16, 16), Dir8.None);
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, addSizeStep);
+                                ClampFloorStep<MapGenContext> limitStep = new ClampFloorStep<MapGenContext>(new Loc(0), new Loc(78, 54));
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, limitStep);
+                                ClampFloorStep<MapGenContext> clampStep = new ClampFloorStep<MapGenContext>();
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT_CLAMP, clampStep);
+                            }
+
+                            //vault rooms
+                            {
+                                SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
+
+                                RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
+                                loadRoom.MapID = "room_ambush_item";
+                                loadRoom.RoomTerrain = new Tile("grass");
+                                loadRoom.PreventChanges = PostProcType.Panel | PostProcType.Terrain;
+                                detourRooms.Add(loadRoom, 10);
+                                SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                                AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
+                                detours.Amount = new RandRange(1);
+                                detours.HallPercent = 100;
+                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
+                                detours.RoomComponents.Set(new NoConnectRoom());
+                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
+                                detours.HallComponents.Set(new NoConnectRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
+
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                            }
+                            //sealing the vault
+                            {
+                                KeySealStep<MapGenContext> vaultStep = new KeySealStep<MapGenContext>("sealed_block", "sealed_door", "key");
+                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
+                                layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                            }
+                        }
+
                         floorSegment.Floors.Add(layout);
                     }
 
@@ -7690,7 +7788,52 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
+
+                        if (ii == max_floors / 2)
+                        {
+                            //making room for the vault
+                            {
+                                ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(16, 16), Dir8.None);
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, addSizeStep);
+                                ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, limitStep);
+                                ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT_CLAMP, clampStep);
+                            }
+
+                            //vault rooms
+                            {
+                                SpawnList<RoomGen<ListMapGenContext>> detourRooms = new SpawnList<RoomGen<ListMapGenContext>>();
+
+                                RoomGenLoadMap<ListMapGenContext> loadRoom = new RoomGenLoadMap<ListMapGenContext>();
+                                loadRoom.MapID = "room_treacherous_item";
+                                loadRoom.RoomTerrain = new Tile("floor");
+                                loadRoom.PreventChanges = PostProcType.Panel | PostProcType.Terrain;
+                                detourRooms.Add(loadRoom, 10);
+                                SpawnList<PermissiveRoomGen<ListMapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
+                                detourHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                                AddConnectedRoomsStep<ListMapGenContext> detours = new AddConnectedRoomsStep<ListMapGenContext>(detourRooms, detourHalls);
+                                detours.Amount = new RandRange(1);
+                                detours.HallPercent = 100;
+                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
+                                detours.RoomComponents.Set(new NoConnectRoom());
+                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.KeyVault));
+                                detours.HallComponents.Set(new NoConnectRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
+
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                            }
+                            //sealing the vault
+                            {
+                                KeySealStep<ListMapGenContext> vaultStep = new KeySealStep<ListMapGenContext>("sealed_block", "sealed_door", "key");
+                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
+                                layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                            }
+                        }
+
+                        //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
 
 
                         floorSegment.Floors.Add(layout);
@@ -13323,6 +13466,16 @@ namespace DataGenerator.Data
 
                         if (ii == 4)
                         {
+                            //making room for the vault
+                            {
+                                ResizeFloorStep<MapGenContext> addSizeStep = new ResizeFloorStep<MapGenContext>(new Loc(16, 16), Dir8.None);
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, addSizeStep);
+                                ClampFloorStep<MapGenContext> limitStep = new ClampFloorStep<MapGenContext>(new Loc(0), new Loc(78, 54));
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, limitStep);
+                                ClampFloorStep<MapGenContext> clampStep = new ClampFloorStep<MapGenContext>();
+                                layout.GenSteps.Add(PR_ROOMS_PRE_VAULT_CLAMP, clampStep);
+                            }
+
                             //vault rooms
                             {
                                 SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
@@ -14406,14 +14559,27 @@ namespace DataGenerator.Data
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "end_sickly_hollow";
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
-                        //add a chest
+                        //add 2 chests
+
+
+                        {
+                            HashSet<string> exceptFor = new HashSet<string>();
+                            foreach (string legend in IterateLegendaries())
+                                exceptFor.Add(legend);
+                            SpeciesItemElementSpawner<MapLoadContext> spawn = new SpeciesItemElementSpawner<MapLoadContext>(new IntRange(4), new RandRange(1), "poison", exceptFor);
+                            BoxSpawner<MapLoadContext> box = new BoxSpawner<MapLoadContext>("box_deluxe", spawn);
+                            List<Loc> treasureLocs = new List<Loc>();
+                            treasureLocs.Add(new Loc(7, 6));
+                            layout.GenSteps.Add(PR_SPAWN_ITEMS, new SpecificSpawnStep<MapLoadContext, MapItem>(box, treasureLocs));
+                        }
+
 
                         //List<(InvItem, Loc)> items = new List<(InvItem, Loc)>();
                         //items.Add((new InvItem("apricorn_plain"), new Loc(13, 10)));//Plain Apricorn
                         //layout.GenSteps.Add(PR_SPAWN_ITEMS, new SpecificSpawnStep<MapLoadContext, InvItem>(items));
 
                         List<InvItem> treasure1 = new List<InvItem>();
-                        //TODO: a specific item from anyone in the dex
+                        // a specific item from poison types in the dex
                         treasure1.Add(InvItem.CreateBox("box_glittery", "medicine_amber_tear"));//Amber Tear
                         treasure1.Add(InvItem.CreateBox("box_glittery", "ammo_golden_thorn"));//Golden Thorn
                         treasure1.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
@@ -14421,7 +14587,7 @@ namespace DataGenerator.Data
                         List<InvItem> treasure2 = new List<InvItem>();
                         treasure2.Add(InvItem.CreateBox("box_light", "xcl_element_poison_dust"));//Poison Dust
                         List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
-                        items.Add((treasure1, new Loc(7, 7)));
+                        items.Add((treasure1, new Loc(7, 8)));
                         items.Add((treasure2, new Loc(7, 13)));
                         AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
 
