@@ -2213,6 +2213,25 @@ namespace DataGenerator.Data
 
                         floorSegment.Floors.Add(layout);
                     }
+
+
+                    {
+                        LoadGen layout = new LoadGen();
+                        MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                        startGen.MapID = "end_veiled_ridge";
+                        layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                        AddTextureData(layout, "rock_path_tds_wall", "rock_path_tds_floor", "rock_path_tds_secondary", "dark");
+
+                        List<InvItem> treasure1 = new List<InvItem>();
+                        treasure1.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
+
+                        List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
+                        items.Add((treasure1, new Loc(7, 2)));
+                        AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
+
+                        floorSegment.Floors.Add(layout);
+                    }
                     zone.Segments.Add(floorSegment);
                 }
 
@@ -4020,6 +4039,25 @@ namespace DataGenerator.Data
                                     layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
                                 }
                             }
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+
+                        {
+                            LoadGen layout = new LoadGen();
+                            MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                            startGen.MapID = "end_moonlit_courtyard";
+                            layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                            AddSpecificTextureData(layout, "moonlit_courtyard_2_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy", true);
+
+                            List<InvItem> treasure1 = new List<InvItem>();
+                            treasure1.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
+
+                            List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
+                            items.Add((treasure1, new Loc(7, 8)));
+                            AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -8189,6 +8227,28 @@ namespace DataGenerator.Data
                         floorSegment.Floors.Add(layout);
                     }
 
+
+                    {
+                        LoadGen layout = new LoadGen();
+                        MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                        startGen.MapID = "end_forsaken_desert";
+                        layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                        AddTextureData(layout, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary", "ground");
+
+                        List<InvItem> treasure1 = new List<InvItem>();
+                        treasure1.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
+                        List<InvItem> treasure2 = new List<InvItem>();
+                        treasure2.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
+
+                        List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
+                        items.Add((treasure1, new Loc(7, 6)));
+                        items.Add((treasure2, new Loc(7, 12)));
+                        AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
+
+                        floorSegment.Floors.Add(layout);
+                    }
+
                     zone.Segments.Add(floorSegment);
                 }
 
@@ -8287,6 +8347,7 @@ namespace DataGenerator.Data
                         AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
 
                         floorSegment.Floors.Add(layout);
+
                     }
                     zone.Segments.Add(floorSegment);
                 }
@@ -9844,6 +9905,25 @@ namespace DataGenerator.Data
                         floorSegment.Floors.Add(layout);
                     }
 
+
+                    {
+                        LoadGen layout = new LoadGen();
+                        MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                        startGen.MapID = "end_relic_tower";
+                        layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                        AddTextureData(layout, "buried_relic_3_wall", "buried_relic_3_floor", "buried_relic_3_secondary", "psychic");
+
+                        List<InvItem> treasure1 = new List<InvItem>();
+                        treasure1.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
+
+                        List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
+                        items.Add((treasure1, new Loc(7, 8)));
+                        AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
+
+                        floorSegment.Floors.Add(layout);
+                    }
+
                     zone.Segments.Add(floorSegment);
                 }
 
@@ -10299,7 +10379,26 @@ namespace DataGenerator.Data
 
                         floorSegment.Floors.Add(layout);
                     }
-                    //floorSegment.MainExit = new ZoneLoc(1, new SegLoc(-1, 4));
+
+
+                    {
+                        LoadGen layout = new LoadGen();
+                        MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                        startGen.MapID = "end_overgrown_wilds";
+                        layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                        AddSpecificTextureData(layout, "southern_jungle_wall", "southern_jungle_floor", "southern_jungle_secondary", "tall_grass_dark", "grass");
+
+                        List<InvItem> treasure1 = new List<InvItem>();
+                        treasure1.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
+
+                        List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
+                        items.Add((treasure1, new Loc(10, 5)));
+                        AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
+
+                        floorSegment.Floors.Add(layout);
+                    }
+
                     zone.Segments.Add(floorSegment);
                 }
 
@@ -12380,6 +12479,25 @@ namespace DataGenerator.Data
                             floorSegment.Floors.Add(layout);
                         }
 
+
+                        {
+                            LoadGen layout = new LoadGen();
+                            MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                            startGen.MapID = "end_copper_quarry";
+                            layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                            AddTextureData(layout, "drenched_bluff_isolated", "copper_quarry_floor", "copper_quarry_secondary", "steel", true);
+
+                            List<InvItem> treasure1 = new List<InvItem>();
+                            treasure1.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
+
+                            List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
+                            items.Add((treasure1, new Loc(7, 9)));
+                            AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
                         zone.Segments.Add(floorSegment);
                     }
 
@@ -13549,6 +13667,8 @@ namespace DataGenerator.Data
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
                         //add a chest
 
+                        AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "bug");
+
                         //List<(InvItem, Loc)> items = new List<(InvItem, Loc)>();
                         //items.Add((new InvItem("apricorn_plain"), new Loc(13, 10)));//Plain Apricorn
                         //layout.GenSteps.Add(PR_SPAWN_ITEMS, new SpecificSpawnStep<MapLoadContext, InvItem>(items));
@@ -14561,6 +14681,8 @@ namespace DataGenerator.Data
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
                         //add 2 chests
 
+                        AddTextureData(layout, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary", "poison");
+
 
                         {
                             HashSet<string> exceptFor = new HashSet<string>();
@@ -14584,11 +14706,8 @@ namespace DataGenerator.Data
                         treasure1.Add(InvItem.CreateBox("box_glittery", "ammo_golden_thorn"));//Golden Thorn
                         treasure1.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
 
-                        List<InvItem> treasure2 = new List<InvItem>();
-                        treasure2.Add(InvItem.CreateBox("box_light", "xcl_element_poison_dust"));//Poison Dust
                         List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
                         items.Add((treasure1, new Loc(7, 8)));
-                        items.Add((treasure2, new Loc(7, 13)));
                         AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
 
                         floorSegment.Floors.Add(layout);
