@@ -92,6 +92,12 @@ namespace DataGenerator.Data
         //7 debug checks
         static readonly Priority PR_DBG_CHECK = new Priority(7);
 
+        public static void AddTitleDrop<T>(MapGen<T> layout) where T : BaseMapGenContext
+        {
+            MapEffectStep<T> fade = new MapEffectStep<T>();
+            fade.Effect.OnMapStarts.Add(new Priority(-15), new FadeTitleEvent());
+            layout.GenSteps.Add(PR_FLOOR_DATA, fade);
+        }
 
         public static void AddFloorData<T>(MapGen<T> layout, string music, int timeLimit, Map.SightRange tileSight, Map.SightRange charSight) where T : BaseMapGenContext
         {

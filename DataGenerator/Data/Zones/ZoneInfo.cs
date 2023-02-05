@@ -162,6 +162,14 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
+
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=2}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
                     for (int ii = 0; ii < max_floors; ii++)
                     {
                         GridFloorGen layout = new GridFloorGen();
@@ -257,6 +265,19 @@ namespace DataGenerator.Data
                         floorSegment.Floors.Add(layout);
                     }
                     zone.Segments.Add(floorSegment);
+                }
+
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                    structure.BaseFloor = multiGen;
+
+                    zone.Segments.Add(structure);
                 }
                 #endregion
             }
@@ -432,6 +453,12 @@ namespace DataGenerator.Data
                         tileSpawn.Priority = PR_RESPAWN_TRAP;
                         floorSegment.ZoneSteps.Add(tileSpawn);
 
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=2}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
 
                         for (int ii = 0; ii < max_floors; ii++)
                         {
@@ -584,6 +611,7 @@ namespace DataGenerator.Data
 
 
                     {
+                        int max_floors = 3;
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
                         floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Hidden Trail\nB{0}F"), new Priority(-15)));
@@ -599,7 +627,7 @@ namespace DataGenerator.Data
 
                         //necessities
                         CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
-                        necessities.SpawnRates.SetRange(14, new IntRange(0, 3));
+                        necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
                         itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
                         necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, 3), 9);//Leppa
@@ -610,7 +638,7 @@ namespace DataGenerator.Data
 
                         //snacks
                         CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
-                        snacks.SpawnRates.SetRange(10, new IntRange(0, 3));
+                        snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                         itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
                         snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, 3), 20);//blast seed
@@ -619,7 +647,7 @@ namespace DataGenerator.Data
 
                         //wands
                         CategorySpawn<InvItem> ammo = new CategorySpawn<InvItem>();
-                        ammo.SpawnRates.SetRange(10, new IntRange(0, 3));
+                        ammo.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                         itemSpawnZoneStep.Spawns.Add("ammo", ammo);
 
                         ammo.Spawns.Add(new InvItem("ammo_stick", false, 3), new IntRange(0, 3), 10);//stick
@@ -631,7 +659,7 @@ namespace DataGenerator.Data
 
                         //orbs
                         CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
-                        orbs.SpawnRates.SetRange(10, new IntRange(0, 3));
+                        orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                         itemSpawnZoneStep.Spawns.Add("orbs", orbs);
 
                         orbs.Spawns.Add(new InvItem("orb_rebound"), new IntRange(0, 3), 10);//Rebound
@@ -641,7 +669,7 @@ namespace DataGenerator.Data
 
                         //held items
                         CategorySpawn<InvItem> heldItems = new CategorySpawn<InvItem>();
-                        heldItems.SpawnRates.SetRange(2, new IntRange(0, 3));
+                        heldItems.SpawnRates.SetRange(2, new IntRange(0, max_floors));
                         itemSpawnZoneStep.Spawns.Add("held", heldItems);
 
                         heldItems.Spawns.Add(new InvItem("held_power_band"), new IntRange(0, 3), 1);//Power Band
@@ -650,7 +678,7 @@ namespace DataGenerator.Data
 
                         //special
                         CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
-                        special.SpawnRates.SetRange(7, new IntRange(0, 3));
+                        special.SpawnRates.SetRange(7, new IntRange(0, max_floors));
                         itemSpawnZoneStep.Spawns.Add("special", special);
 
                         int rate = 2;
@@ -677,15 +705,21 @@ namespace DataGenerator.Data
                         //438 Bonsly : 88 Rock Throw
                         poolSpawn.Spawns.Add(GetTeamMob("bonsly", "", "rock_throw", "", "", "", new RandRange(9), "weird_tree"), new IntRange(0, 3), 8);
 
-                        poolSpawn.TeamSizes.Add(1, new IntRange(0, 3), 12);
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                         floorSegment.ZoneSteps.Add(poolSpawn);
 
                         TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                         tileSpawn.Priority = PR_RESPAWN_TRAP;
                         floorSegment.ZoneSteps.Add(tileSpawn);
 
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=15, SegDiff=2}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
 
-                        for (int ii = 0; ii < 3; ii++)
+                        for (int ii = 0; ii < max_floors; ii++)
                         {
                             GridFloorGen layout = new GridFloorGen();
 
@@ -747,6 +781,32 @@ namespace DataGenerator.Data
                         }
 
                         zone.Segments.Add(floorSegment);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
+                        structure.BaseFloor = multiGen;
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
+                        structure.BaseFloor = multiGen;
+
+                        zone.Segments.Add(structure);
                     }
                 }
                 #endregion
@@ -1053,10 +1113,17 @@ namespace DataGenerator.Data
                         SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                         EffectTile secretTile = new EffectTile("stairs_secret_down", false);
                         secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
-                        RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-                        exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
+                        RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                        exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                         SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=2}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         floorSegment.ZoneSteps.Add(exitZoneStep);
                     }
 
@@ -1196,6 +1263,19 @@ namespace DataGenerator.Data
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         enemyList.Add(GetTeamMob(new MonsterID("vivillon", 0, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
                         structure.BaseFloor = getSecretRoom("special_rby_bird", -1, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary", "tall_grass_dark", "flying", enemyList, new Loc(6, 4));
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
+                        structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
                     }
@@ -1686,10 +1766,17 @@ namespace DataGenerator.Data
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
                             secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
-                            RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-                            exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
+                            RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                            exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                             exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
+
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=2}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                             floorSegment.ZoneSteps.Add(exitZoneStep);
                         }
 
@@ -1788,6 +1875,19 @@ namespace DataGenerator.Data
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         structure.BaseFloor = getSecretRoom("special_grass_maze", -1, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary", "tall_grass_yellow", "electric", enemyList, new Loc(5, 11));
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -2), 10);
+                        structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
                     }
@@ -2067,11 +2167,18 @@ namespace DataGenerator.Data
                     {
                         SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                         EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                        secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
-                        RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-                        exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
+                        secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                        RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                        exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                         SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         floorSegment.ZoneSteps.Add(exitZoneStep);
                     }
 
@@ -2439,6 +2546,13 @@ namespace DataGenerator.Data
 
 
 
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=15, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
                     for (int ii = 0; ii < max_floors; ii++)
                     {
                         RoomFloorGen layout = new RoomFloorGen();
@@ -2532,6 +2646,31 @@ namespace DataGenerator.Data
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 19, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 20, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     structure.BaseFloor = getSecretRoom("special_gsc_ghost", -2, "dark_hill_2_wall", "dark_hill_2_floor", "dark_hill_2_secondary", "tall_grass_dark", "dark", enemyList, new Loc(7, 6));
+
+                    zone.Segments.Add(structure);
+                }
+
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                    structure.BaseFloor = multiGen;
+
+                    zone.Segments.Add(structure);
+                }
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                    structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
                 }
@@ -3799,6 +3938,13 @@ namespace DataGenerator.Data
                             floorSegment.ZoneSteps.Add(combinedVaultZoneStep);
                         }
 
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
+
                         for (int ii = 0; ii < max_floors; ii++)
                         {
                             GridFloorGen layout = new GridFloorGen();
@@ -4317,6 +4463,13 @@ namespace DataGenerator.Data
                             floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                         }
 
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=15, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
+
                         for (int ii = 0; ii < max_floors; ii++)
                         {
                             GridFloorGen layout = new GridFloorGen();
@@ -4440,6 +4593,32 @@ namespace DataGenerator.Data
                         enemyList.Add(GetTeamMob(new MonsterID("alcremie", 5, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                         enemyList.Add(GetTeamMob(new MonsterID("alcremie", 6, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                         structure.BaseFloor = getSecretRoom("special_rby_fairy", -2, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "tall_grass", "fairy", enemyList, new Loc(13, 5));
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        structure.BaseFloor = multiGen;
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
                     }
@@ -4594,10 +4773,17 @@ namespace DataGenerator.Data
                         SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                         EffectTile secretTile = new EffectTile("stairs_secret_down", false);
                         secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
-                        RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-                        exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
+                        RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                        exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                         SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=2}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         floorSegment.ZoneSteps.Add(exitZoneStep);
                     }
 
@@ -4754,6 +4940,19 @@ namespace DataGenerator.Data
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                     structure.BaseFloor = getSecretRoom("special_rby_fossil", -1, "amp_plains_wall", "amp_plains_floor", "amp_plains_secondary", "", "ground", enemyList, new Loc(5, 11));
+
+                    zone.Segments.Add(structure);
+                }
+
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
+                    structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
                 }
@@ -5955,11 +6154,18 @@ namespace DataGenerator.Data
                         {
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                            secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
-                            RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-                            exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
+                            secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                            RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                            exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                             exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
+
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                             floorSegment.ZoneSteps.Add(exitZoneStep);
                         }
 
@@ -6197,6 +6403,12 @@ namespace DataGenerator.Data
 
                         floorSegment.ZoneSteps.Add(tileSpawn);
 
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=15, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
 
                         for (int ii = 0; ii < max_floors; ii++)
                         {
@@ -6283,6 +6495,32 @@ namespace DataGenerator.Data
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         enemyList.Add(GetTeamMob(new MonsterID("vivillon", 5, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
                         structure.BaseFloor = getSecretRoom("special_gsc_plant", -2, "purity_forest_7_wall", "purity_forest_7_floor", "purity_forest_7_secondary", "tall_grass", "water", enemyList, new Loc(9, 5));
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        structure.BaseFloor = multiGen;
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
                     }
@@ -6734,9 +6972,9 @@ namespace DataGenerator.Data
                         SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                         EffectTile secretTile = new EffectTile("stairs_secret_down", false);
                         secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
-                        RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-                        exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
-                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandDecay(1, 8, 70), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                        exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
                         floorSegment.ZoneSteps.Add(exitZoneStep);
                     }
@@ -7560,9 +7798,9 @@ namespace DataGenerator.Data
                         SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                         EffectTile secretTile = new EffectTile("stairs_secret_down", false);
                         secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
-                        RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-                        exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
-                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandDecay(1, 8, 70), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                        exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
                         floorSegment.ZoneSteps.Add(exitZoneStep);
                     }
@@ -8817,17 +9055,10 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                     }
 
-
                     {
                         SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
-                        EffectTile secretTile = new EffectTile("tile_mystery", true);
-                        secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
-                        TempTileStep<MapGenContext> trapStep = new TempTileStep<MapGenContext>(new PresetPicker<EffectTile>(secretTile), "mysterious_distortion");
-                        trapStep.TileFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                        trapStep.TileFilters.Add(new RoomFilterComponent(true, new BossRoom()));
-                        exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
-                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
-                        exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         floorSegment.ZoneSteps.Add(exitZoneStep);
                     }
 
@@ -9285,6 +9516,14 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
                     }
 
+
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=15, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
                     for (int ii = 0; ii < max_floors; ii++)
                     {
                         GridFloorGen layout = new GridFloorGen();
@@ -9375,6 +9614,30 @@ namespace DataGenerator.Data
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                     enemyList.Add(GetTeamMob(new MonsterID("vivillon", 6, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
                     structure.BaseFloor = getSecretRoom("special_grass_maze", -2, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary", "tall_grass_white", "ice", enemyList, new Loc(5, 11));
+
+                    zone.Segments.Add(structure);
+                }
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                    structure.BaseFloor = multiGen;
+
+                    zone.Segments.Add(structure);
+                }
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                    structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
                 }
@@ -9822,6 +10085,14 @@ namespace DataGenerator.Data
                     }
 
 
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=2}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
+
                     for (int ii = 0; ii < max_floors; ii++)
                     {
                         GridFloorGen layout = new GridFloorGen();
@@ -9939,6 +10210,19 @@ namespace DataGenerator.Data
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 12, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 13, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     structure.BaseFloor = getSecretRoom("special_gsc_ghost", -1, "buried_relic_3_wall", "buried_relic_3_floor", "buried_relic_3_secondary", "", "psychic", enemyList, new Loc(7, 6));
+
+                    zone.Segments.Add(structure);
+                }
+
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -2), 10);
+                    structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
                 }
@@ -10243,13 +10527,21 @@ namespace DataGenerator.Data
                     {
                         SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                         EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                        secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
-                        RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-                        exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
+                        secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                        RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                        exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                         SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                         exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
                         floorSegment.ZoneSteps.Add(exitZoneStep);
                     }
+
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -10588,6 +10880,13 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
                     }
 
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=15, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -10668,6 +10967,31 @@ namespace DataGenerator.Data
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                     enemyList.Add(GetTeamMob(new MonsterID("vivillon", 4, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
                     structure.BaseFloor = getSecretRoom("special_gsc_plant", -2, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "tall_grass_dark", "grass", enemyList, new Loc(9, 5));
+
+                    zone.Segments.Add(structure);
+                }
+
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                    structure.BaseFloor = multiGen;
+
+                    zone.Segments.Add(structure);
+                }
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                    structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
                 }
@@ -11024,13 +11348,22 @@ namespace DataGenerator.Data
                         {
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                            secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
-                            RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-                            exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
+                            secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                            RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                            exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                             exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
                             floorSegment.ZoneSteps.Add(exitZoneStep);
                         }
+
+
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
+
 
                         for (int ii = 0; ii < max_floors; ii++)
                         {
@@ -11231,6 +11564,13 @@ namespace DataGenerator.Data
 
                         floorSegment.ZoneSteps.Add(tileSpawn);
 
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=15, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
+
 
                         for (int ii = 0; ii < max_floors; ii++)
                         {
@@ -11321,6 +11661,32 @@ namespace DataGenerator.Data
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         structure.BaseFloor = getSecretRoom("special_gsc_plant", -2, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary", "tall_grass", "normal", enemyList, new Loc(9, 5));
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        structure.BaseFloor = multiGen;
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
                     }
@@ -11510,12 +11876,20 @@ namespace DataGenerator.Data
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
                             secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
-                            RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-                            exitZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
+                            RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                            exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
                             exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
                             floorSegment.ZoneSteps.Add(exitZoneStep);
                         }
+
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
+
 
                         for (int ii = 0; ii < max_floors; ii++)
                         {
@@ -11874,6 +12248,19 @@ namespace DataGenerator.Data
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         enemyList.Add(GetTeamMob(new MonsterID("vivillon", 10, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
                         structure.BaseFloor = getSecretRoom("special_rby_fossil", -2, "craggy_coast_wall", "craggy_coast_floor", "craggy_coast_secondary", "", "fire", enemyList, new Loc(5, 11));
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
                     }
@@ -12341,6 +12728,13 @@ namespace DataGenerator.Data
                             floorSegment.ZoneSteps.Add(combinedVaultZoneStep);
                         }
 
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
+
                         for (int ii = 0; ii < max_floors; ii++)
                         {
                             RoomFloorGen layout = new RoomFloorGen();
@@ -12754,6 +13148,13 @@ namespace DataGenerator.Data
                             floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                         }
 
+                        {
+                            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                            floorSegment.ZoneSteps.Add(exitZoneStep);
+                        }
+
 
                         for (int ii = 0; ii < max_floors; ii++)
                         {
@@ -12828,6 +13229,32 @@ namespace DataGenerator.Data
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         enemyList.Add(GetTeamMob(new MonsterID("carbink", 0, "", Gender.Unknown), "", "stealth_rock", "power_gem", "rock_throw", "", new RandRange(zone.Level), "turret"), 10);
                         structure.BaseFloor = getSecretRoom("special_rby_fossil", -2, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary", "", "steel", enemyList, new Loc(5, 11));
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                        structure.BaseFloor = multiGen;
+
+                        zone.Segments.Add(structure);
+                    }
+
+
+                    {
+                        SingularSegment structure = new SingularSegment(-1);
+
+                        ChanceFloorGen multiGen = new ChanceFloorGen();
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                        structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
                     }
@@ -13485,6 +13912,13 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=2}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -13809,6 +14243,13 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=3}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -13874,6 +14315,32 @@ namespace DataGenerator.Data
                     }
 
                     zone.Segments.Add(floorSegment);
+                }
+
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                    structure.BaseFloor = multiGen;
+
+                    zone.Segments.Add(structure);
+                }
+
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                    structure.BaseFloor = multiGen;
+
+                    zone.Segments.Add(structure);
                 }
                 #endregion
             }
@@ -14543,6 +15010,24 @@ namespace DataGenerator.Data
                     shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
                     floorSegment.ZoneSteps.Add(shopZoneStep);
 
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        EffectTile secretTile = new EffectTile("stairs_secret_down", false);
+                        secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                        RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                        exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
+                    {
+                        SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+                        exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance=5, SegDiff=2}")), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), exitZoneSpawns);
+                        floorSegment.ZoneSteps.Add(exitZoneStep);
+                    }
+
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -14714,6 +15199,34 @@ namespace DataGenerator.Data
                     }
 
                     zone.Segments.Add(floorSegment);
+                }
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
+                    enemyList.Add(GetTeamMob(new MonsterID("alcremie", 21, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
+                    enemyList.Add(GetTeamMob(new MonsterID("alcremie", 22, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
+                    enemyList.Add(GetTeamMob(new MonsterID("alcremie", 23, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
+                    enemyList.Add(GetTeamMob(new MonsterID("alcremie", 24, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
+                    enemyList.Add(GetTeamMob(new MonsterID("alcremie", 25, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
+                    enemyList.Add(GetTeamMob(new MonsterID("alcremie", 26, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
+                    enemyList.Add(GetTeamMob(new MonsterID("alcremie", 27, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
+                    structure.BaseFloor = getSecretRoom("special_gsc_ghost", -2, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary", "tall_grass_dark", "poison", enemyList, new Loc(7, 6));
+
+                    zone.Segments.Add(structure);
+                }
+
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Advanced, "small_square", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Advanced, "tall_hall", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Advanced, "wide_hall", -2), 10);
+                    structure.BaseFloor = multiGen;
+
+                    zone.Segments.Add(structure);
                 }
                 #endregion
             }
