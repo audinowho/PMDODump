@@ -205,6 +205,11 @@ namespace DataGenerator.Data
                 treasures.Add(new MapItem("loot_pearl", 2));
                 PickerSpawner<MapGenContext, MapItem> treasurePicker = new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
+                SpawnList<MapItem> recruitSpawn = new SpawnList<MapItem>();
+                recruitSpawn.Add(new MapItem("apricorn_brown"), 10);
+                recruitSpawn.Add(new MapItem("apricorn_purple"), 10);
+                PickerSpawner<MapGenContext, MapItem> recruitPicker = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(recruitSpawn, new RandRange(1)));
+
                 SpawnList<IStepSpawner<MapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<MapGenContext, MapItem>>();
 
                 //445      ***    Deluxe Box - 5* items
@@ -213,7 +218,7 @@ namespace DataGenerator.Data
                 MultiStepSpawner<MapGenContext, MapItem> boxPicker = new MultiStepSpawner<MapGenContext, MapItem>(new LoopedRand<IStepSpawner<MapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
 
                 MultiStepSpawner<MapGenContext, MapItem> mainSpawner = new MultiStepSpawner<MapGenContext, MapItem>();
-                mainSpawner.Picker = new PresetMultiRand<IStepSpawner<MapGenContext, MapItem>>(treasurePicker, boxPicker);
+                mainSpawner.Picker = new PresetMultiRand<IStepSpawner<MapGenContext, MapItem>>(treasurePicker, recruitPicker, boxPicker);
 
                 RandomRoomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<MapGenContext, MapItem>(mainSpawner);
                 specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));

@@ -249,8 +249,11 @@ namespace DataGenerator.Data
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "secret_tropical_path";
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
-                        //add a chest
 
+                        MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                        layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+
+                        //add a chest
                         List<InvItem> treasure = new List<InvItem>();
                         treasure.Add(InvItem.CreateBox("box_dainty", "seed_reviver"));//Reviver Seed
                         treasure.Add(InvItem.CreateBox("box_dainty", "seed_reviver"));//Reviver Seed
@@ -2331,6 +2334,9 @@ namespace DataGenerator.Data
                         startGen.MapID = "end_veiled_ridge";
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
 
+                        MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                        layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+
                         AddTextureData(layout, "rock_path_tds_wall", "rock_path_tds_floor", "rock_path_tds_secondary", "dark");
 
                         List<InvItem> treasure1 = new List<InvItem>();
@@ -3413,6 +3419,10 @@ namespace DataGenerator.Data
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "secret_champions_road";
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                        MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                        layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+
                         floorSegment.Floors.Add(layout);
                     }
 
@@ -3794,7 +3804,7 @@ namespace DataGenerator.Data
                                 {
                                     //add a PickerSpawner <- PresetMultiRand <- coins
                                     List<MapItem> treasures = new List<MapItem>();
-                                    treasures.Add(new MapItem("apricorn_plain"));
+                                    treasures.Add(new MapItem("loot_pearl", 2));
                                     PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
                                     SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
@@ -4201,6 +4211,9 @@ namespace DataGenerator.Data
                             MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                             startGen.MapID = "end_moonlit_courtyard";
                             layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                            MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                            layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
                             AddSpecificTextureData(layout, "moonlit_courtyard_2_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy", true);
 
@@ -8489,6 +8502,9 @@ namespace DataGenerator.Data
                         startGen.MapID = "end_forsaken_desert";
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
 
+                        MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                        layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+
                         AddTextureData(layout, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary", "ground");
 
                         List<InvItem> treasure1 = new List<InvItem>();
@@ -8515,6 +8531,9 @@ namespace DataGenerator.Data
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "secret_forsaken_desert";
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                        MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                        layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
                         //add a chest
                         List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
@@ -9954,7 +9973,7 @@ namespace DataGenerator.Data
                             {
                                 //add a PickerSpawner <- PresetMultiRand <- coins
                                 List<MapItem> treasures = new List<MapItem>();
-                                treasures.Add(new MapItem("apricorn_plain"));
+                                treasures.Add(new MapItem("loot_pearl", 2));
                                 PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
                                 SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
@@ -10199,6 +10218,9 @@ namespace DataGenerator.Data
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "end_relic_tower";
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                        MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                        layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
                         AddTextureData(layout, "buried_relic_3_wall", "buried_relic_3_floor", "buried_relic_3_secondary", "psychic");
 
@@ -10695,6 +10717,9 @@ namespace DataGenerator.Data
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "end_overgrown_wilds";
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                        MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                        layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
                         AddSpecificTextureData(layout, "southern_jungle_wall", "southern_jungle_floor", "southern_jungle_secondary", "tall_grass_dark", "grass");
 
@@ -12598,7 +12623,7 @@ namespace DataGenerator.Data
                                 {
                                     //add a PickerSpawner <- PresetMultiRand <- coins
                                     List<MapItem> treasures = new List<MapItem>();
-                                    treasures.Add(new MapItem("apricorn_plain"));
+                                    treasures.Add(new MapItem("loot_pearl", 2));
                                     PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
                                     SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
@@ -12896,6 +12921,9 @@ namespace DataGenerator.Data
                             MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                             startGen.MapID = "end_copper_quarry";
                             layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                            MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                            layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
                             AddTextureData(layout, "drenched_bluff_isolated", "copper_quarry_floor", "copper_quarry_secondary", "steel", true);
 
@@ -14116,9 +14144,13 @@ namespace DataGenerator.Data
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "end_bramble_woods";
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
-                        //add a chest
+
+                        MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                        layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
                         AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "bug");
+
+                        //add a chest
 
                         //List<(InvItem, Loc)> items = new List<(InvItem, Loc)>();
                         //items.Add((new InvItem("apricorn_plain"), new Loc(13, 10)));//Plain Apricorn
@@ -15181,10 +15213,13 @@ namespace DataGenerator.Data
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                         startGen.MapID = "end_sickly_hollow";
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
-                        //add 2 chests
+
+                        MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                        layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
                         AddTextureData(layout, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary", "poison");
 
+                        //add 2 chests
 
                         {
                             HashSet<string> exceptFor = new HashSet<string>();

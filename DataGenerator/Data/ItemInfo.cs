@@ -3016,7 +3016,7 @@ namespace DataGenerator.Data
                 //444      ***    Light Box - 1* items
                 item.Name = new LocalText("Light Box");
                 item.Desc = new LocalText("A box that is somewhat light. Specific Pokémon adore the items inside.");
-                item.Sprite = "Chest_Gold";
+                item.Sprite = "Chest_Blue";
             }
             else if (ii == 445)
             {
@@ -3030,7 +3030,7 @@ namespace DataGenerator.Data
                 //446      ***    Nifty Box - all high tier TMs, ability capsule, heart scale 9, max potion, full heal, max elixir
                 item.Name = new LocalText("Nifty Box");
                 item.Desc = new LocalText("A box that is completely impressive. There is something mysterious inside.");
-                item.Sprite = "Chest_Blue";
+                item.Sprite = "Chest_Red";
             }
             else if (ii == 447)
             {

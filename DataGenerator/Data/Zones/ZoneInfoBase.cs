@@ -3235,6 +3235,10 @@ namespace DataGenerator.Data
                 MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                 startGen.MapID = "guildmaster_summit";
                 layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+
                 staticSegment.Floors.Add(layout);
                 zone.Segments.Add(staticSegment);
             }
