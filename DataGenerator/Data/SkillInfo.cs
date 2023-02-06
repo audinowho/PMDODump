@@ -11230,21 +11230,23 @@ namespace DataGenerator.Data
             }
             else if (ii == 432)
             {
-                skill.Name = new LocalText("-Defog");
-                skill.Desc = new LocalText("A strong wind blows away traps and barriers such as Reflect or Light Screen. This also lowers the target's evasiveness.");
+                skill.Name = new LocalText("Defog");
+                skill.Desc = new LocalText("A strong wind blows away traps, barriers, and map conditions.");
                 skill.BaseCharges = 16;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new StatusStackBattleEvent("mod_evasion", true, false, -1));
                 skill.Data.OnHits.Add(0, new RemoveStatusBattleEvent("reflect", true));
                 skill.Data.OnHits.Add(0, new RemoveStatusBattleEvent("light_screen", true));
                 skill.Data.OnHits.Add(0, new RemoveStatusBattleEvent("mist", true));
+                skill.Data.AfterActions.Add(0, new GiveMapStatusEvent("clear", 0, new StringKey(), typeof(ExtendWeatherState)));
+                skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(32);//FlapAround
                 ((AreaAction)skill.HitboxAction).Range = 5;
                 ((AreaAction)skill.HitboxAction).Speed = 8;
+                ((AreaAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.ActionFX.Sound = "DUN_Defog";
                 CircleSquareAreaEmitter emitter = new CircleSquareAreaEmitter(new AnimData("Gust_Wind", 2));
                 emitter.ParticlesPerTile = 0.8;

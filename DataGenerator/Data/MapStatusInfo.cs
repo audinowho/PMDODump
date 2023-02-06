@@ -139,7 +139,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("**Fog");
                 OverlayEmitter overlay = new OverlayEmitter();
-                overlay.Anim = new BGAnimData("White", 3);
+                overlay.Anim = new BGAnimData("Fog", 3);
                 overlay.Color = Color.Gray * 0.4f;
                 overlay.Layer = DrawLayer.Top;
                 status.Emitter = overlay;
@@ -154,13 +154,22 @@ namespace DataGenerator.Data
             else if (ii == 6)
             {
                 status.Name = new LocalText("Cloudy");
+                status.Desc = new LocalText("Moves of all types are weakened, except the Normal-type.");
                 OverlayEmitter overlay = new OverlayEmitter();
-                overlay.Anim = new BGAnimData("Clouds_Overhead", 1);
-                overlay.Color = Color.White * 0.234f;
+                overlay.Anim = new BGAnimData("Fog_2", 1);
+                overlay.Color = Color.Gray * 0.50f;
                 overlay.Movement = new RogueElements.Loc(-20, 20);
                 overlay.Layer = DrawLayer.Top;
                 status.Emitter = overlay;
                 status.RepeatMethod = new MapStatusRefreshEvent();
+                status.StatusStates.Set(new MapWeatherState());
+                status.OnMapStatusAdds.Add(0, new MapStatusSoundEvent("DUN_Cloudy"));
+                status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_CLOUDY_START"), true));
+                status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
+                status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_CLOUDY_END"), true));
+                status.OnActions.Add(0, new MultiplyNotElementEvent("normal", 3, 4, false));
+                status.StatusStates.Set(new MapCountDownState(50));
+                status.OnMapTurnEnds.Add(5, new MapStatusCountDownEvent());
             }
             else if (ii == 7)
             {
@@ -330,9 +339,10 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Misty Terrain");
                 status.Desc = new LocalText("Dragon-type attacks are weakened, and all Pokémon are protected from major status problems.");
                 OverlayEmitter overlay = new OverlayEmitter();
-                overlay.Anim = new BGAnimData("White", 3);
-                overlay.Color = Color.LightPink * 0.3f;
+                overlay.Anim = new BGAnimData("Fog", 3);
+                overlay.Color = Color.LightPink * 0.8f;
                 overlay.Layer = DrawLayer.Top;
+                overlay.Movement = new RogueElements.Loc(0, -32);
                 status.Emitter = overlay;
                 status.RepeatMethod = new MapStatusRefreshEvent();
                 status.StatusStates.Set(new MapWeatherState());
@@ -650,6 +660,17 @@ namespace DataGenerator.Data
                 endOverlay.FadeOut = 30;
                 endOverlay.Layer = DrawLayer.Top;
                 status.OnMapTurnEnds.Add(7, new TempTileCollapseEvent(new AnimEvent(endOverlay, "_UNK_EVT_073", 30)));
+            }
+            else if (ii == 43)
+            {
+                status.Name = new LocalText("Clouds Overhead");
+                OverlayEmitter overlay = new OverlayEmitter();
+                overlay.Anim = new BGAnimData("Clouds_Overhead", 1);
+                overlay.Color = Color.White * 0.234f;
+                overlay.Movement = new RogueElements.Loc(-20, 20);
+                overlay.Layer = DrawLayer.Top;
+                status.Emitter = overlay;
+                status.RepeatMethod = new MapStatusRefreshEvent();
             }
 
 

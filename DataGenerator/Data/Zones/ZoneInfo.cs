@@ -1137,6 +1137,9 @@ namespace DataGenerator.Data
                         else
                             AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
+                        if (ii > 2)
+                            AddDefaultMapStatus(layout, "default_weather", "cloudy", "clear", "clear", "clear", "clear");
+
                         if (ii < 2)
                         {
                             AddWaterSteps(layout, "pit", new RandRange(20));//abyss
@@ -3955,6 +3958,9 @@ namespace DataGenerator.Data
                             else
                                 AddFloorData(layout, "Star Cave.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
+                            if (ii >= 5)
+                                AddDefaultMapStatus(layout, "default_weather", "misty_terrain", "clear", "clear", "clear");
+
                             //Tilesets
                             if (ii < 5)
                                 AddSpecificTextureData(layout, "moonlit_courtyard_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy");
@@ -5288,6 +5294,9 @@ namespace DataGenerator.Data
                         //Floor settings
                         AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
+                        if (ii < 8)
+                            AddDefaultMapStatus(layout, "default_weather", "rain", "clear", "clear", "clear", "clear");
+
                         MapEffectStep<ListMapGenContext> takeTreasure = new MapEffectStep<ListMapGenContext>();
                         takeTreasure.Effect.OnMapStarts.Add(-20, new SingleCharScriptEvent("SleepingCalderaAltData"));
                         takeTreasure.Effect.OnMapStarts.Add(-15, new SingleCharScriptEvent("SleepingCalderaAltTiles"));
@@ -5740,7 +5749,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
 
 
-                    tileSpawn.Spawns.Add(new EffectTile("trap_mud", false), new IntRange(0, max_floors), 10);//mud trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_trip", false), new IntRange(0, max_floors), 10);//trip trap
                     tileSpawn.Spawns.Add(new EffectTile("trap_slow", false), new IntRange(0, max_floors), 10);//slow trap
                     tileSpawn.Spawns.Add(new EffectTile("trap_chestnut", false), new IntRange(0, max_floors), 10);//chestnut trap
                     tileSpawn.Spawns.Add(new EffectTile("trap_gust", false), new IntRange(0, max_floors), 10);//gust trap
@@ -6493,7 +6502,7 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                        enemyList.Add(GetTeamMob(new MonsterID("vivillon", 5, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
+                        //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 5, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
                         structure.BaseFloor = getSecretRoom("special_gsc_plant", -2, "purity_forest_7_wall", "purity_forest_7_floor", "purity_forest_7_secondary", "tall_grass", "water", enemyList, new Loc(9, 5));
 
                         zone.Segments.Add(structure);
@@ -7817,6 +7826,11 @@ namespace DataGenerator.Data
                         else
                             AddFloorData(layout, "B31. Treacherous Mountain 3.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
+                        if (ii == 0)
+                            AddDefaultMapStatus(layout, "default_weather", "sandstorm", "hail");
+                        else
+                            AddDefaultMapStatus(layout, "default_weather", "sandstorm", "hail", "clear", "clear", "clear", "clear", "clear", "clear", "clear", "clear");
+
 
                         //Tilesets
                         if (ii < 8)
@@ -8283,6 +8297,9 @@ namespace DataGenerator.Data
 
                         //Floor settings
                         AddFloorData(layout, "B08. Forsaken Desert.ogg", 30000, Map.SightRange.Clear, Map.SightRange.Dark);
+
+                        if (ii % 2 == 1)
+                            AddDefaultMapStatus(layout, "default_weather", "sunny");
 
                         //Tilesets
                         if (ii < 1)
@@ -9612,7 +9629,7 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                    enemyList.Add(GetTeamMob(new MonsterID("vivillon", 6, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
+                    //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 6, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
                     structure.BaseFloor = getSecretRoom("special_grass_maze", -2, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary", "tall_grass_white", "ice", enemyList, new Loc(5, 11));
 
                     zone.Segments.Add(structure);
@@ -10965,7 +10982,7 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                    enemyList.Add(GetTeamMob(new MonsterID("vivillon", 4, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
+                    //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 4, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
                     structure.BaseFloor = getSecretRoom("special_gsc_plant", -2, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "tall_grass_dark", "grass", enemyList, new Loc(9, 5));
 
                     zone.Segments.Add(structure);
@@ -12246,7 +12263,7 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                        enemyList.Add(GetTeamMob(new MonsterID("vivillon", 10, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
+                        //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 10, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
                         structure.BaseFloor = getSecretRoom("special_rby_fossil", -2, "craggy_coast_wall", "craggy_coast_floor", "craggy_coast_secondary", "", "fire", enemyList, new Loc(5, 11));
 
                         zone.Segments.Add(structure);

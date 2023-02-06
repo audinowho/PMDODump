@@ -352,7 +352,7 @@ namespace DataGenerator
                         {
                             //SkillInfo.AddUnreleasedMoveData();
                             //SkillInfo.AddMoveData();
-                            //SkillInfo.AddMoveData(777);
+                            //SkillInfo.AddMoveData(432);
                         }
 
                         if ((dump & DataManager.DataType.Intrinsic) != DataManager.DataType.None)
@@ -381,7 +381,7 @@ namespace DataGenerator
                             //MapInfo.AddMapData();
                             //MapInfo.AddGroundData(MapInfo.MapNames[0]);
                             ZoneInfo.AddZoneData();
-                            //ZoneInfo.AddZoneData(11);
+                            //ZoneInfo.AddZoneData(37);
                         }
 
                         DataManager.DataType reserializeType = DataManager.DataType.None;
