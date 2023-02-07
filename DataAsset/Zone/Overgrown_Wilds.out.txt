@@ -135,5 +135,5 @@ poolSpawn.Spawns.Add(GetTeamMob("venonat", "", "leech_life", "poison_powder", ""
 poolSpawn.Spawns.Add(GetTeamMob("pineco", "", "bug_bite", "self_destruct", "", "", new RandRange(17), "turret"), new IntRange(8, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("girafarig", "", "stomp", "confusion", "", "", new RandRange(17), "wander_dumb"), new IntRange(4, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("snivy", "", "growth", "vine_whip", "", "", new RandRange(14), "wander_dumb"), new IntRange(0, 4), 10);
-//MH Only
+//sleeping
 poolSpawn.Spawns.Add(GetTeamMob("heracross", "", "horn_attack", "arm_thrust", "", "", new RandRange(20), "wander_dumb"), new IntRange(0, max_floors), 10);

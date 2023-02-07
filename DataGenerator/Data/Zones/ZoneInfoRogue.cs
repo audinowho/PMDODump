@@ -2283,7 +2283,7 @@ namespace DataGenerator.Data
 
                     LoopedTeamSpawner<MapGenContext> spawner = new LoopedTeamSpawner<MapGenContext>(specificTeam);
                     {
-                        spawner.AmountSpawner = new RandDecay(0, 4, 80);
+                        spawner.AmountSpawner = new RandDecay(0, 3, 70);
                     }
                     PlaceRandomMobsStep<MapGenContext> secretMobPlacement = new PlaceRandomMobsStep<MapGenContext>(spawner);
                     layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
@@ -4246,7 +4246,7 @@ namespace DataGenerator.Data
 
                     LoopedTeamSpawner<MapGenContext> spawner = new LoopedTeamSpawner<MapGenContext>(specificTeam);
                     {
-                        spawner.AmountSpawner = new RandDecay(0, 4, 50);
+                        spawner.AmountSpawner = new RandDecay(0, 3, 50);
                     }
                     PlaceRandomMobsStep<MapGenContext> secretMobPlacement = new PlaceRandomMobsStep<MapGenContext>(spawner);
                     layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);

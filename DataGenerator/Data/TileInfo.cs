@@ -833,7 +833,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                newData.OnHitTiles.Add(0, new TriggerTrapEvent());
+                newData.OnHitTiles.Add(0, new TriggerTrapEvent("trap_trigger"));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 29)

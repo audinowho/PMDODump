@@ -4713,12 +4713,11 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 70;
                 skill.Data.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, -2));
                 skill.Strikes = 1;
-                skill.HitboxAction = new ProjectileAction();
-                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
-                ((ProjectileAction)skill.HitboxAction).Range = 8;
-                ((ProjectileAction)skill.HitboxAction).Speed = 20;
-                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
-                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                skill.HitboxAction = new AreaAction();
+                ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
+                ((AreaAction)skill.HitboxAction).HitArea = Hitbox.AreaLimit.Cone;
+                ((AreaAction)skill.HitboxAction).Range = 2;
+                ((AreaAction)skill.HitboxAction).Speed = 10;
                 BattleFX preFX = new BattleFX();
                 preFX.Emitter = new SingleEmitter(new AnimData("Charge_Up", 3));
                 preFX.Sound = "DUN_Move_Start";

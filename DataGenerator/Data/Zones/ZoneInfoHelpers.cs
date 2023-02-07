@@ -565,33 +565,33 @@ namespace DataGenerator.Data
 
 
         static TeamMemberSpawn GetTeamMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level,
-            string tactic = "wander_normal", bool sleeping = false)
+            string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
         {
-            return GetTeamMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping);
+            return GetTeamMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping, unrecruitable);
         }
         static TeamMemberSpawn GetTeamMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, RandRange level,
-            string tactic = "wander_normal", bool sleeping = false)
+            string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
         {
-            return GetTeamMob(id, ability, move1, move2, move3, move4, level, TeamMemberSpawn.MemberRole.Normal, tactic, sleeping);
+            return GetTeamMob(id, ability, move1, move2, move3, move4, level, TeamMemberSpawn.MemberRole.Normal, tactic, sleeping, unrecruitable);
         }
         static TeamMemberSpawn GetTeamMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level,
-            TeamMemberSpawn.MemberRole role, string tactic = "wander_normal", bool sleeping = false)
+            TeamMemberSpawn.MemberRole role, string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
         {
-            return GetTeamMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, role, tactic, sleeping);
+            return GetTeamMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, role, tactic, sleeping, unrecruitable);
         }
         static TeamMemberSpawn GetTeamMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, RandRange level,
-            TeamMemberSpawn.MemberRole role, string tactic = "wander_normal", bool sleeping = false)
+            TeamMemberSpawn.MemberRole role, string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
         {
-            return new TeamMemberSpawn(GetGenericMob(id, ability, move1, move2, move3, move4, level, tactic, sleeping), role);
+            return new TeamMemberSpawn(GetGenericMob(id, ability, move1, move2, move3, move4, level, tactic, sleeping, unrecruitable), role);
         }
 
         static MobSpawn GetGenericMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level,
-            string tactic = "wander_normal", bool sleeping = false)
+            string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
         {
-            return GetGenericMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping);
+            return GetGenericMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping, unrecruitable);
         }
         static MobSpawn GetGenericMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, RandRange level,
-            string tactic = "wander_normal", bool sleeping = false)
+            string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
         {
             MobSpawn post_mob = new MobSpawn();
             post_mob.BaseForm = id;
@@ -616,7 +616,15 @@ namespace DataGenerator.Data
                 status.Statuses.Add(sleep, 10);
                 post_mob.SpawnFeatures.Add(status);
             }
+            if (unrecruitable)
+                post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
             return post_mob;
+        }
+
+        static MobSpawn GetGuardMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level,
+            string tactic = "wander_normal", string statusID = "")
+        {
+            return GetGuardMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, statusID);
         }
 
         static MobSpawn GetGuardMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, RandRange level,

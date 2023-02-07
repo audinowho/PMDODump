@@ -194,7 +194,7 @@ poolSpawn.Spawns.Add(GetTeamMob("furret", "", "defense_curl", "follow_me", "", "
 poolSpawn.Spawns.Add(GetTeamMob("haunter", "", "dream_eater", "payback", "", "", new RandRange(30), "wander_normal"), new IntRange(14, 20), 10);
 poolSpawn.Spawns.Add(GetTeamMob("teddiursa", "", "covet", "sweet_scent", "fury_swipes", "", new RandRange(29), "thief"), new IntRange(14, 20), 10);
 poolSpawn.Spawns.Add(GetTeamMob("hypno", "", "nightmare", "confusion", "", "", new RandRange(30), "wander_normal"), new IntRange(16, 22), 10);
-poolSpawn.Spawns.Add(GetTeamMob("mr_mime", "", "wide_guard", "psybeam", "", "", new RandRange(30), "wander_normal"), new IntRange(16, 22), 10);
+poolSpawn.Spawns.Add(GetTeamMob("mr_mime", "", "wide_guard", "psybeam", "", "", new RandRange(30), "wander_normal"), new IntRange(18, 23), 10);
 poolSpawn.Spawns.Add(GetTeamMob("ariados", "", "spider_web", "sucker_punch", "", "", new RandRange(28), "wander_normal"), new IntRange(18, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("parasect", "", "spore", "growth", "leech_life", "", new RandRange(30), "wander_normal"), new IntRange(20, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("delphox", "magician", "howl", "fire_spin", "", "", new RandRange(36), "thief"), new IntRange(20, max_floors), 5);

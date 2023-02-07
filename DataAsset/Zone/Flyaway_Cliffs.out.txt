@@ -57,6 +57,7 @@ itemSpawnZoneStep.Spawns.Add("special", special);
 special.Spawns.Add(new InvItem("machine_recall_box"), new IntRange(0, max_floors), 25);
 special.Spawns.Add(new InvItem("apricorn_white"), new IntRange(0, max_floors), 5);
 special.Spawns.Add(new InvItem("apricorn_plain"), new IntRange(0, max_floors), 5);
+special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, max_floors), 5);
 //throwable
 CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
 throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
@@ -112,7 +113,8 @@ poolSpawn.Spawns.Add(GetTeamMob("lickitung", "", "wrap", "", "", "", new RandRan
 poolSpawn.Spawns.Add(GetTeamMob("hoothoot", "", "foresight", "peck", "", "", new RandRange(16), "wander_dumb"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("wingull", "", "growl", "quick_attack", "", "", new RandRange(18), "wander_dumb"), new IntRange(2, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("spinda", "", "dizzy_punch", "", "", "", new RandRange(18), "wander_dumb"), new IntRange(6, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("farfetchd", "defiant", "aerial_ace", "knock_off", "", "", new RandRange(20), TeamMemberSpawn.MemberRole.Loner, "wander_dumb"), new IntRange(6, max_floors), 10);
+//sleeping
+poolSpawn.Spawns.Add(GetTeamMob("farfetchd", "defiant", "aerial_ace", "knock_off", "poison_jab", "", new RandRange(25), TeamMemberSpawn.MemberRole.Loner, "wander_dumb"), new IntRange(6, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("staravia", "", "double_team", "wing_attack", "", "", new RandRange(19), "wander_dumb"), new IntRange(6, max_floors), 10);
 //Increase the team size to 2
 poolSpawn.Spawns.Add(GetTeamMob("chatot", "", "round", "", "", "", new RandRange(16), TeamMemberSpawn.MemberRole.Support, "wander_dumb"), new IntRange(6, max_floors), 10);
