@@ -4787,6 +4787,8 @@ namespace DataGenerator.Data
 
                         zone.Segments.Add(structure);
                     }
+
+                    zone.GroundMaps.Add("moonlit_end");
                 }
                 #endregion
             }
