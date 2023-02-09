@@ -149,11 +149,10 @@ namespace DataGenerator.Data
             Tactics.Add(tactic);
 
             tactic = new AITactic();
-            tactic.Name = new LocalText("Cannibal");//12
-            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
-            tactic.Comment = "Deprecated\nUse any other AI and just give them the Friendly Fire status";
-            iq = AIFlags.Cannibal | AIFlags.AttackToEscape;
-            tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
+            tactic.Name = new LocalText("Itemless Dumb Wander");//12
+            tactic.ID = "wander_dumb_itemless";
+            iq = AIFlags.AttackToEscape;
+            tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.DumbAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));

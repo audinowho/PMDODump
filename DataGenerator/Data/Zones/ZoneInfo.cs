@@ -5620,25 +5620,27 @@ namespace DataGenerator.Data
                         AddDrawListSteps(layout);
 
                         {
-                            EffectTile exitTile = new EffectTile("stairs_back_up", true);
-                            DestState dest = new DestState(new SegLoc(0, -1), true);
-                            dest.PreserveMusic = true;
-                            exitTile.TileStates.Set(dest);
-                            var step = new FloorStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
+                            var step = new FloorStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>();
+                            step.Entrances.Add(new MapGenEntrance(Dir8.Down));
+
+                            EffectTile returnTile = new EffectTile("stairs_back_up", true);
+                            DestState returnDest = new DestState(new SegLoc(0, -1), true);
+                            returnDest.PreserveMusic = true;
+                            returnTile.TileStates.Set(returnDest);
+                            step.Exits.Add(new MapGenExit(returnTile));
+
+                            if (ii < max_floors - 1)
+                            {
+                                EffectTile exitTile = new EffectTile("stairs_go_down", true);
+                                DestState exitDest = new DestState(new SegLoc(0, 1), true);
+                                exitDest.PreserveMusic = true;
+                                exitTile.TileStates.Set(exitDest);
+                                step.Exits.Add(new MapGenExit(exitTile));
+                            }
+
                             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                             step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
                             layout.GenSteps.Add(PR_EXITS, step);
-                        }
-                        if (ii < max_floors - 1)
-                        {
-                            EffectTile exitTile = new EffectTile("stairs_go_down", true);
-                            DestState dest = new DestState(new SegLoc(0, 1), true);
-                            dest.PreserveMusic = true;
-                            exitTile.TileStates.Set(dest);
-                            RandomRoomSpawnStep<ListMapGenContext, EffectTile> trapStep = new RandomRoomSpawnStep<ListMapGenContext, EffectTile>(new PickerSpawner<ListMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
-                            trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                            trapStep.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
-                            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                         }
 
 
@@ -6244,27 +6246,28 @@ namespace DataGenerator.Data
                         AddDrawGridSteps(layout);
 
                         {
-                            EffectTile exitTile = new EffectTile("stairs_back_up", true);
-                            DestState dest = new DestState(new SegLoc(0, -1), true);
-                            dest.PreserveMusic = true;
-                            exitTile.TileStates.Set(dest);
-                            var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
+                            var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>();
+                            step.Entrances.Add(new MapGenEntrance(Dir8.Down));
+
+                            EffectTile returnTile = new EffectTile("stairs_back_up", true);
+                            DestState returnDest = new DestState(new SegLoc(0, -1), true);
+                            returnDest.PreserveMusic = true;
+                            returnTile.TileStates.Set(returnDest);
+                            step.Exits.Add(new MapGenExit(returnTile));
+
+                            if (ii < max_floors - 1)
+                            {
+                                EffectTile exitTile = new EffectTile("stairs_go_down", true);
+                                DestState exitDest = new DestState(new SegLoc(0, 1), true);
+                                exitDest.PreserveMusic = true;
+                                exitTile.TileStates.Set(exitDest);
+                                step.Exits.Add(new MapGenExit(exitTile));
+                            }
+
                             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                             step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
                             layout.GenSteps.Add(PR_EXITS, step);
                         }
-                        if (ii < max_floors - 1)
-                        {
-                            EffectTile exitTile = new EffectTile("stairs_go_down", true);
-                            DestState dest = new DestState(new SegLoc(0, 1), true);
-                            dest.PreserveMusic = true;
-                            exitTile.TileStates.Set(dest);
-                            RandomRoomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomRoomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
-                            trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                            trapStep.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
-                            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
-                        }
-
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -8481,17 +8484,17 @@ namespace DataGenerator.Data
                     poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-                    poolSpawn.Spawns.Add(GetTeamMob("cubone", "", "bone_club", "growl", "", "", new RandRange(23), "wander_normal"), new IntRange(0, 3), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("marowak", "", "bonemerang", "", "", "", new RandRange(28), "wander_normal"), new IntRange(3, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("hippopotas", "", "sand_tomb", "dig", "", "", new RandRange(26), "wander_normal"), new IntRange(1, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("fearow", "", "drill_run", "pluck", "", "", new RandRange(24), "wander_normal"), new IntRange(0, 2), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("sandslash", "", "magnitude", "sand_attack", "", "", new RandRange(25), "wander_normal"), new IntRange(1, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("cacnea", "", "leech_seed", "needle_arm", "", "", new RandRange(24), "wander_normal"), new IntRange(0, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("skorupi", "", "acupressure", "bug_bite", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wander_normal"), new IntRange(2, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("torkoal", "", "smokescreen", "lava_plume", "", "", new RandRange(25), "wander_normal"), new IntRange(0, 2), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("arbok", "", "screech", "glare", "crunch", "", new RandRange(25), "wander_normal"), new IntRange(2, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "thief", "", "", new RandRange(25), "wander_normal"), new IntRange(0, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wander_normal"), new IntRange(1, max_floors), 5);
+                    poolSpawn.Spawns.Add(GetTeamMob("cubone", "", "bone_club", "growl", "", "", new RandRange(23), "wander_dumb_itemless"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("marowak", "", "bonemerang", "", "", "", new RandRange(28), "wander_dumb_itemless"), new IntRange(3, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("hippopotas", "", "sand_tomb", "dig", "", "", new RandRange(26), "wander_dumb_itemless"), new IntRange(1, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("fearow", "", "drill_run", "pluck", "", "", new RandRange(24), "wander_dumb_itemless"), new IntRange(0, 2), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("sandslash", "", "magnitude", "sand_attack", "", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(1, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("cacnea", "", "leech_seed", "needle_arm", "", "", new RandRange(24), "wander_dumb_itemless"), new IntRange(0, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("skorupi", "", "acupressure", "bug_bite", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wander_dumb_itemless"), new IntRange(2, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("torkoal", "", "smokescreen", "lava_plume", "", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(0, 2), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("arbok", "", "screech", "glare", "crunch", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(2, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "thief", "", "", new RandRange(25), "thief"), new IntRange(0, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wander_dumb_itemless"), new IntRange(1, max_floors), 5);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
@@ -8537,15 +8540,32 @@ namespace DataGenerator.Data
                         layout.GenSteps.Add(PR_WATER, waterStep);
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(80, 100), "tile_wonder");//wonder tile
+                        
+                        //wonder tile
+                        {
+                            SpawnList<EffectTile> effectTileSpawns = new SpawnList<EffectTile>();
+                            effectTileSpawns.Add(new EffectTile("tile_wonder", true), 10);
+                            SpacedRoomSpawnStep<MapGenContext, EffectTile> trapStep = new SpacedRoomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new LoopedRand<EffectTile>(effectTileSpawns, new RandRange(80, 100))), false);
+                            trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+                        }
+
                         AddTrapsSteps(layout, new RandRange(300, 400));
 
 
-                        if (ii == 0)
-                            AddSingleTrapStep(layout, new RandRange(35), "tile_compass");//compass tile
-                        else
-                            AddSingleTrapStep(layout, new RandRange(60), "tile_compass");//compass tile
-
+                        {
+                            SpawnList<EffectTile> effectTileSpawns = new SpawnList<EffectTile>();
+                            effectTileSpawns.Add(new EffectTile("tile_compass", true), 10);
+                            RandRange compassAmount;
+                            if (ii == 0)
+                                compassAmount = new RandRange(35);
+                            else
+                                compassAmount = new RandRange(60);
+                            SpacedRoomSpawnStep<MapGenContext, EffectTile> trapStep = new SpacedRoomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new LoopedRand<EffectTile>(effectTileSpawns, compassAmount)), false);
+                            trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+                        }
+                        
                         if (ii < 2)
                         {
                             EffectTile secretTile = new EffectTile("tile_compass", true);
@@ -8612,11 +8632,35 @@ namespace DataGenerator.Data
 
                             layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(80, 30));
 
+                            {
+                                RandRange combines;
+                                if (ii == 0)
+                                    combines = new RandRange(300);
+                                else
+                                    combines = new RandRange(800);
+                                CombineGridRoomRandStep<MapGenContext> step = new CombineGridRoomRandStep<MapGenContext>(combines, GetImmutableFilterList());
+                                step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenCave<MapGenContext>(new RandRange(6, 9), new RandRange(13, 18))), 10);
+                                step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenCave<MapGenContext>(new RandRange(13, 18), new RandRange(6, 9))), 10);
+                                //step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 2), new RoomGenCave<MapGenContext>(new RandRange(13, 18), new RandRange(13, 18))), 10);
+                                layout.GenSteps.Add(PR_GRID_GEN, step);
+                            }
+
                         }
 
                         AddDrawGridSteps(layout);
-
-                        AddStairStep(layout, false);
+                        {
+                            IntRange range;
+                            if (ii == 0)
+                                range = new IntRange(72, 600);
+                            else
+                                range = new IntRange(120, 1000);
+                            var step = new FloorStairsDistanceStep<MapGenContext, MapGenEntrance, MapGenExit>(range, new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile("stairs_go_up", true)));
+                            step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
+                            layout.GenSteps.Add(PR_EXITS, step);
+                        }
 
 
                         //chest

@@ -3127,20 +3127,30 @@ namespace DataGenerator.Data
                 evoStep.Spawns.Add(new RoomGenOption(new RoomGenEvo<MapGenContext>(), new RoomGenEvo<ListMapGenContext>(), evoFilters), 10);
                 floorSegment.ZoneSteps.Add(evoStep);
 
-                for (int ii = 0; ii < total_floors; ii += 5)
+                for (int ii = 0; ii < total_floors; ii++)
                 {
 
                     GridFloorGen layout = new GridFloorGen();
 
                     AddFloorData(layout, "A02. Base Town.ogg", -1, Map.SightRange.Dark, Map.SightRange.Dark);
 
-                    AddInitGridStep(layout, 5, 4, 11, 11);
+                    if (ii == 0)
+                        AddInitGridStep(layout, 1, 1, 11, 11);
+                    else if (ii == 1)
+                        AddInitGridStep(layout, 2, 1, 11, 11);
+                    else
+                        AddInitGridStep(layout, 5, 4, 11, 11);
 
                     //construct paths
                     GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                     path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                     path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                    path.RoomRatio = new RandRange(80);
+                    if (ii == 0)
+                        path.RoomRatio = new RandRange(100);
+                    else if (ii == 1)
+                        path.RoomRatio = new RandRange(100);
+                    else
+                        path.RoomRatio = new RandRange(80);
                     path.BranchRatio = new RandRange(0, 25);
 
                     SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();

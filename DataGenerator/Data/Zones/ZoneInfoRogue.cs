@@ -4765,7 +4765,7 @@ namespace DataGenerator.Data
                         //It will always be in the same room as the exit stairs if possible
                         EffectTile secretTile = new EffectTile("stairs_go_down", true);
                         NearSpawnableSpawnStep<MapGenContext, EffectTile, MapGenExit> trapStep = new NearSpawnableSpawnStep<MapGenContext, EffectTile, MapGenExit>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)), 100);
-                        layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+                        layout.GenSteps.Add(PR_EXITS, trapStep);
                     }
                     else if (ii <= 34)
                     {
@@ -4774,7 +4774,7 @@ namespace DataGenerator.Data
                         RandomRoomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomRoomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
                         trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                         trapStep.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
-                        layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+                        layout.GenSteps.Add(PR_EXITS, trapStep);
                     }
                     else if (ii < 39)
                     {
@@ -4783,7 +4783,7 @@ namespace DataGenerator.Data
                         RandomRoomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomRoomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(exitTile)));
                         trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                         trapStep.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
-                        layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+                        layout.GenSteps.Add(PR_EXITS, trapStep);
                     }
                 }
 
