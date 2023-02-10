@@ -3591,6 +3591,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Moonlit Courtyard");
                     zone.Rescues = 4;
                     zone.Level = 25;
+                    zone.BagRestrict = 8;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -5133,6 +5134,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Sleeping Caldera");
                     zone.Rescues = 2;
                     zone.Level = 35;
+                    zone.BagRestrict = 0;
                     zone.Rogue = RogueStatus.ItemTransfer;
                     zone.Persistent = true;
 
@@ -5778,6 +5780,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Shimmer Bay");
                     zone.Rescues = 2;
                     zone.Level = 25;
+                    zone.BagRestrict = 0;
                     zone.Rogue = RogueStatus.ItemTransfer;
                     zone.Persistent = true;
 
@@ -8889,6 +8892,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Snowbound Path");
                 zone.Rescues = 2;
                 zone.Level = 40;
+                zone.NoEXP = true;
                 zone.Rogue = RogueStatus.ItemTransfer;
 
                 {
@@ -9957,6 +9961,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Relic Tower");
                 zone.Rescues = 2;
                 zone.Level = 30;
+                zone.BagRestrict = 8;
                 zone.Rogue = RogueStatus.ItemTransfer;
                 {
                     int max_floors = 13;
@@ -11342,6 +11347,9 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("**Wayward Wetlands");
                     zone.Rescues = 2;
+                    zone.Level = 25;
+                    zone.BagRestrict = 0;
+                    zone.MoneyRestrict = true;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     LayeredSegment floorSegment = new LayeredSegment();
@@ -11457,6 +11465,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Trickster Woods");
                     zone.Rescues = 2;
                     zone.Level = 20;
+                    zone.TeamSize = 1;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -12174,6 +12183,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Lava Floe Island");
                     zone.Rescues = 2;
                     zone.Level = 20;
+                    zone.TeamSize = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -13871,7 +13881,8 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("**Royal Halls");
                     zone.Rescues = 4;
-                    zone.Level = 60;
+                    zone.Level = 80;
+                    zone.NoEXP = true;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     LayeredSegment floorSegment = new LayeredSegment();
@@ -13977,7 +13988,8 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("**The Sky");
                     zone.TeamSize = 3;
                     zone.Rescues = 4;
-                    zone.Level = 60;
+                    zone.Level = 70;
+                    zone.MoneyRestrict = true;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     LayeredSegment floorSegment = new LayeredSegment();
@@ -14082,12 +14094,11 @@ namespace DataGenerator.Data
                 #region THE ABYSS
                 {
                     zone.Name = new LocalText("**The Abyss");
-                    zone.Level = 90;
+                    zone.Level = 100;
                     zone.LevelCap = true;
                     zone.BagRestrict = 0;
                     zone.MoneyRestrict = true;
-                    zone.TeamSize = 2;
-                    zone.TeamRestrict = true;
+                    zone.TeamSize = 1;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     LayeredSegment floorSegment = new LayeredSegment();
@@ -15723,7 +15734,10 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("**Energy Garden");
                     zone.Level = 35;
+                    zone.LevelCap = true;
                     zone.Rescues = 2;
+                    zone.BagRestrict = 8;
+                    zone.TeamSize = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -15837,6 +15851,8 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("**Tiny Tunnel");
                     zone.Level = 5;
                     zone.LevelCap = true;
+                    zone.BagRestrict = 16;
+                    zone.TeamSize = 1;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -15943,7 +15959,10 @@ namespace DataGenerator.Data
                 #region Geode Underpass
                 {
                     zone.Name = new LocalText("**Geode Underpass");
-                    zone.Level = 10;
+                    zone.Level = 20;
+                    zone.LevelCap = true;
+                    zone.BagRestrict = 8;
+                    zone.TeamSize = 2;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -16053,7 +16072,10 @@ namespace DataGenerator.Data
                 #region STARFALL HEIGHTS
                 {
                     zone.Name = new LocalText("**Starfall Heights");
-                    zone.Level = 10;
+                    zone.Level = 35;
+                    zone.LevelCap = true;
+                    zone.BagRestrict = 8;
+                    zone.TeamSize = 3;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -16162,7 +16184,10 @@ namespace DataGenerator.Data
                 #region EON ISLAND
                 {
                     zone.Name = new LocalText("**Eon Island");
-                    zone.Level = 10;
+                    zone.Level = 5;
+                    zone.LevelCap = true;
+                    zone.BagRestrict = 16;
+                    zone.TeamSize = 2;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -16271,7 +16296,9 @@ namespace DataGenerator.Data
                 #region BARREN TUNDRA
                 {
                     zone.Name = new LocalText("**Barren Tundra");
-                    zone.Level = 10;
+                    zone.Level = 35;
+                    zone.BagRestrict = 0;
+                    zone.TeamSize = 3;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -16378,7 +16405,10 @@ namespace DataGenerator.Data
                 #region WAYWARD WETLANDS
                 {
                     zone.Name = new LocalText("**Wayward Wetlands");
-                    zone.Level = 10;
+                    zone.Level = 25;
+                    zone.BagRestrict = 0;
+                    zone.MoneyRestrict = true;
+                    zone.TeamSize = 4;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -16487,7 +16517,9 @@ namespace DataGenerator.Data
                 #region BRAVERY ROAD
                 {
                     zone.Name = new LocalText("**Bravery Road");
-                    zone.Level = 10;
+                    zone.Level = 30;
+                    zone.LevelCap = true;
+                    zone.TeamSize = 2;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -16596,7 +16628,9 @@ namespace DataGenerator.Data
                 #region WISDOM ROAD
                 {
                     zone.Name = new LocalText("**Wisdom Road");
-                    zone.Level = 10;
+                    zone.Level = 30;
+                    zone.LevelCap = true;
+                    zone.TeamSize = 2;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -16759,7 +16793,9 @@ namespace DataGenerator.Data
                 #region HOPE ROAD
                 {
                     zone.Name = new LocalText("**Hope Road");
-                    zone.Level = 10;
+                    zone.Level = 40;
+                    zone.LevelCap = true;
+                    zone.TeamSize = 2;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -16869,6 +16905,9 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("**Deserted Fortress");
                     zone.Level = 25;
+                    zone.LevelCap = true;
+                    zone.TeamSize = 2;
+                    zone.BagRestrict = 16;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -16982,8 +17021,12 @@ namespace DataGenerator.Data
                 {
                     zone.Name = new LocalText("**Prism Isles");
                     zone.Level = 10;
+                    zone.LevelCap = true;
+                    zone.BagRestrict = 4;
+                    zone.MoneyRestrict = true;
+                    zone.TeamSize = 3;
                     zone.Rescues = 2;
-                    zone.Rogue = RogueStatus.ItemTransfer;
+                    zone.Rogue = RogueStatus.AllTransfer;
 
                     {
                         int max_floors = 3;
@@ -17090,9 +17133,12 @@ namespace DataGenerator.Data
                 #region LABYRINTH OF THE LOST
                 {
                     zone.Name = new LocalText("**LABYRINTH OF THE LOST");
-                    zone.Level = 10;
+                    zone.Level = 5;
+                    zone.LevelCap = true;
+                    zone.BagRestrict = 8;
+                    zone.TeamSize = 1;
                     zone.Rescues = 2;
-                    zone.Rogue = RogueStatus.ItemTransfer;
+                    zone.Rogue = RogueStatus.AllTransfer;
 
                     {
                         int max_floors = 3;
@@ -17199,7 +17245,11 @@ namespace DataGenerator.Data
                 #region SACRED TOWER
                 {
                     zone.Name = new LocalText("**Sacred Tower");
-                    zone.Level = 10;
+                    zone.Level = 50;
+                    zone.LevelCap = true;
+                    zone.BagRestrict = 0;
+                    zone.MoneyRestrict = true;
+                    zone.TeamSize = 3;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -17309,7 +17359,8 @@ namespace DataGenerator.Data
                 #region LOST SEAS
                 {
                     zone.Name = new LocalText("**Lost Seas");
-                    zone.Level = 10;
+                    zone.Level = 50;
+                    zone.MoneyRestrict = true;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
@@ -17418,7 +17469,10 @@ namespace DataGenerator.Data
                 #region INSCRIBED CAVE
                 {
                     zone.Name = new LocalText("**Inscribed Cave");
-                    zone.Level = 10;
+                    zone.Level = 60;
+                    zone.BagRestrict = 0;
+                    zone.MoneyRestrict = true;
+                    zone.TeamSize = 2;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
