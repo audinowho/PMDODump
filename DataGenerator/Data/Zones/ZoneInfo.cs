@@ -236,6 +236,10 @@ namespace DataGenerator.Data
                             RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                         }
+
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
                         floorSegment.Floors.Add(layout);
                     }
                     zone.Segments.Add(floorSegment);
@@ -606,6 +610,11 @@ namespace DataGenerator.Data
                                 }
                             }
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+                            if (ii == 4)
+                                layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("stairs_secret_up"));
+
                             floorSegment.Floors.Add(layout);
                         }
 
@@ -779,6 +788,8 @@ namespace DataGenerator.Data
                             AddDrawGridSteps(layout);
 
                             AddStairStep(layout, true);
+
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -1260,6 +1271,8 @@ namespace DataGenerator.Data
                                 layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
                             }
                         }
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -1886,6 +1899,8 @@ namespace DataGenerator.Data
 
                             AddStairStep(layout, false);
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
+
                             floorSegment.Floors.Add(layout);
                         }
 
@@ -2336,17 +2351,28 @@ namespace DataGenerator.Data
                             }
                             //vault treasures
                             {
-                                BulkSpawner<MapGenContext, MapGenExit> treasures = new BulkSpawner<MapGenContext, MapGenExit>();
+                                BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
 
                                 EffectTile secretStairs = new EffectTile("stairs_secret_down", false);
                                 secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
-                                treasures.SpecificSpawns.Add(new MapGenExit(secretStairs));
-
-                                RandomRoomSpawnStep<MapGenContext, MapGenExit> detourItems = new RandomRoomSpawnStep<MapGenContext, MapGenExit>(treasures);
+                                treasures.SpecificSpawns.Add(secretStairs);
+                                
+                                RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
                                 detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Disconnected));
                                 layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
                             }
+                            // prevent further changes
+                            {
+                                RoomPostProcStep<MapGenContext> stableStep = new RoomPostProcStep<MapGenContext>(PostProcType.Terrain | PostProcType.Panel, new RandRange(2), true, true);
+                                stableStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Disconnected));
+                                layout.GenSteps.Add(PR_EXITS_DETOUR, stableStep);
+                            }
                         }
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+                        if (ii == 9)
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("stairs_secret_down"));
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -2372,6 +2398,7 @@ namespace DataGenerator.Data
 
                         floorSegment.Floors.Add(layout);
                     }
+
                     zone.Segments.Add(floorSegment);
                 }
 
@@ -2683,6 +2710,8 @@ namespace DataGenerator.Data
 
                         //Add the stairs up and down
                         AddStairStep(layout, true);
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -3420,6 +3449,12 @@ namespace DataGenerator.Data
                         AddStairStep(layout, false);
 
 
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+                        if (ii == 17)
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("tile_updraft"));
+
                         floorSegment.Floors.Add(layout);
                     }
                     zone.Segments.Add(floorSegment);
@@ -3497,10 +3532,22 @@ namespace DataGenerator.Data
                         AddTextureData(layout, "sky_tower_wall", "sky_tower_floor", "sky_tower_secondary", "flying");
 
                         //Water
-                        AddWaterSteps(layout, "pit", new RandRange(100));//pit
+                        if (ii < 2)
+                            AddWaterSteps(layout, "pit", new RandRange(25));//pit
+                        else
+                            AddWaterSteps(layout, "pit", new RandRange(80));//pit
+
+                        //add water at the halls
+                        {
+                            RoomTerrainStep<ListMapGenContext> chasmStep = new RoomTerrainStep<ListMapGenContext>(new Tile("pit"), new RandRange(100), false, true);
+                            chasmStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            chasmStep.TerrainStencil = new MatchTerrainStencil<ListMapGenContext>(false, new Tile("floor"));
+                            layout.GenSteps.Add(PR_WATER, chasmStep);
+                        }
 
                         //put the walls back in via "water" algorithm
-                        AddBlobWaterSteps(layout, "wall", new RandRange(7, 12), new IntRange(1, 9), false);
+                        if (ii >= 2)
+                            AddBlobWaterSteps(layout, "wall", new RandRange(10, 14), new IntRange(1, 9), false);
 
                         //money
                         AddMoneyData(layout, new RandRange(2, 5));
@@ -3523,17 +3570,19 @@ namespace DataGenerator.Data
 
                         AddTrapsSteps(layout, new RandRange(16, 19));
 
+                        AddInitListStep(layout, 58, 40, true);
+
                         //construct paths
                         {
-                            //prim maze with caves
-                            AddInitListStep(layout, 58, 40, true);
-
                             //Create a path that is composed of a branching tree
                             FloorPathBranch<ListMapGenContext> path = new FloorPathBranch<ListMapGenContext>();
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                             path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                             path.HallPercent = 100;
-                            path.FillPercent = new RandRange(65);
+                            if (ii < 2)
+                                path.FillPercent = new RandRange(65);
+                            else
+                                path.FillPercent = new RandRange(55);
                             path.BranchRatio = new RandRange(30);
 
                             //Give it some room types to place
@@ -3545,15 +3594,20 @@ namespace DataGenerator.Data
                             path.GenericRooms = genericRooms;
 
                             //Give it some hall types to place
+                            int minLength;
+                            if (ii < 2)
+                                minLength = 1;
+                            else
+                                minLength = 4;
                             SpawnList<PermissiveRoomGen<ListMapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
                             {
-                                RoomGenAngledHall<ListMapGenContext> hall = new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(1, 8), new RandRange(1));
-                                hall.Brush = new TerrainHallBrush(Loc.One, new Tile("pit"));
+                                RoomGenAngledHall<ListMapGenContext> hall = new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(minLength, 8), new RandRange(2));
+                                hall.Brush = new SquareHallBrush(Loc.One * 2);
                                 genericHalls.Add(hall, 20);
                             }
                             {
-                                RoomGenAngledHall<ListMapGenContext> hall = new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(1), new RandRange(1, 8));
-                                hall.Brush = new TerrainHallBrush(Loc.One, new Tile("pit"));
+                                RoomGenAngledHall<ListMapGenContext> hall = new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2), new RandRange(minLength, 8));
+                                hall.Brush = new SquareHallBrush(Loc.One * 2);
                                 genericHalls.Add(hall, 20);
                             }
                             path.GenericHalls = genericHalls;
@@ -4312,6 +4366,11 @@ namespace DataGenerator.Data
                                 }
                             }
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+                            if (ii == 7)
+                                layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("stairs_secret_up"));
+
                             floorSegment.Floors.Add(layout);
                         }
 
@@ -4656,7 +4715,7 @@ namespace DataGenerator.Data
 
 
                             //add water at the borders
-                            RoomTerrainStep<MapGenContext> trapStep = new RoomTerrainStep<MapGenContext>(new Tile("water"), new RandRange(2, 5), true);
+                            RoomTerrainStep<MapGenContext> trapStep = new RoomTerrainStep<MapGenContext>(new Tile("water"), new RandRange(2, 5), true, true);
                             trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
 
                             MatchTerrainStencil<MapGenContext> terrainStencil = new MatchTerrainStencil<MapGenContext>(false, new Tile("wall"));
@@ -4740,6 +4799,8 @@ namespace DataGenerator.Data
                             AddDrawGridSteps(layout);
 
                             AddStairStep(layout, true);
+
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -5096,6 +5157,8 @@ namespace DataGenerator.Data
                                 layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
                             }
                         }
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -5766,6 +5829,11 @@ namespace DataGenerator.Data
                         }
 
 
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
+                        if (ii == max_floors - 1)
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectItemStep<ListMapGenContext>("box_deluxe"));
+
+
                         floorSegment.Floors.Add(layout);
                     }
 
@@ -6274,6 +6342,13 @@ namespace DataGenerator.Data
                             layout.GenSteps.Add(PR_EXITS, step);
                         }
 
+
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+                        if (ii == max_floors - 1)
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectItemStep<MapGenContext>("egg_mystery"));
+
+
                         floorSegment.Floors.Add(layout);
                     }
 
@@ -6545,6 +6620,11 @@ namespace DataGenerator.Data
                                 }
                             }
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+                            if (ii == 2)
+                                layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("stairs_secret_down"));
+
                             floorSegment.Floors.Add(layout);
                         }
 
@@ -6746,6 +6826,8 @@ namespace DataGenerator.Data
                             AddDrawGridSteps(layout);
 
                             AddStairStep(layout, true);
+
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -7526,6 +7608,8 @@ namespace DataGenerator.Data
                                 layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
                             }
                         }
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -8355,8 +8439,7 @@ namespace DataGenerator.Data
                             }
                         }
 
-                        //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
-
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -8750,6 +8833,8 @@ namespace DataGenerator.Data
                             SetCompassStep<MapGenContext> trapStep = new SetCompassStep<MapGenContext>("tile_compass");
                             layout.GenSteps.Add(PR_COMPASS, trapStep);
                         }
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -9564,6 +9649,11 @@ namespace DataGenerator.Data
                             }
                         }
 
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+                        if (ii == 11)
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("stairs_secret_up"));
+
                         floorSegment.Floors.Add(layout);
                     }
 
@@ -9911,6 +10001,8 @@ namespace DataGenerator.Data
                         AddDrawGridSteps(layout);
 
                         AddStairStep(layout, true);
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -10497,6 +10589,7 @@ namespace DataGenerator.Data
                         AddStairStep(layout, false);
 
 
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -10997,6 +11090,11 @@ namespace DataGenerator.Data
                             }
                         }
 
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+                        if (ii == 7)
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("stairs_secret_down"));
+
                         floorSegment.Floors.Add(layout);
                     }
 
@@ -11298,6 +11396,8 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, true);
 
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
+
                         floorSegment.Floors.Add(layout);
                     }
 
@@ -11449,6 +11549,8 @@ namespace DataGenerator.Data
                         AddStairStep(layout, false);
 
                         AddWaterSteps(layout, "water", new RandRange(30));//water
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
 
                         floorSegment.Floors.Add(layout);
@@ -11881,6 +11983,11 @@ namespace DataGenerator.Data
 
                             AddStairStep(layout, true);
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+                            if (ii == 5)
+                                layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("tile_fairy_ring"));
+
                             floorSegment.Floors.Add(layout);
                         }
 
@@ -12132,6 +12239,8 @@ namespace DataGenerator.Data
                             //Add the stairs up and down
                             AddStairStep(layout, false);
 
+
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -12576,6 +12685,10 @@ namespace DataGenerator.Data
                             AddStairStep(layout, true);
 
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
+
+                            if (ii == 5)
+                                layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<ListMapGenContext>("stairs_secret_down"));
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -12719,6 +12832,7 @@ namespace DataGenerator.Data
 
                             AddStairStep(layout, false);
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -13345,7 +13459,7 @@ namespace DataGenerator.Data
                                 {
                                     BulkSpawner<ListMapGenContext, EffectTile> treasures = new BulkSpawner<ListMapGenContext, EffectTile>();
 
-                                    EffectTile secretStairs = new EffectTile("stairs_secret_down", true);
+                                    EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
                                     secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
                                     treasures.SpecificSpawns.Add(secretStairs);
 
@@ -13354,6 +13468,11 @@ namespace DataGenerator.Data
                                     layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
                                 }
                             }
+
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
+
+                            if (ii == 6)
+                                layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<ListMapGenContext>("stairs_secret_up"));
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -13707,6 +13826,8 @@ namespace DataGenerator.Data
 
                             AddStairStep(layout, false);
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
+
                             floorSegment.Floors.Add(layout);
                         }
 
@@ -13867,6 +13988,7 @@ namespace DataGenerator.Data
 
                         AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -13973,6 +14095,7 @@ namespace DataGenerator.Data
 
                         AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -14081,6 +14204,7 @@ namespace DataGenerator.Data
 
                         AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -14249,6 +14373,7 @@ namespace DataGenerator.Data
 
                         AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -14581,7 +14706,10 @@ namespace DataGenerator.Data
                             }
                         }
 
-                        //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+                        if (ii == 4)
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("stairs_secret_up"));
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -14805,6 +14933,8 @@ namespace DataGenerator.Data
                         AddDrawGridSteps(layout);
 
                         AddStairStep(layout, false);
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -15649,7 +15779,7 @@ namespace DataGenerator.Data
 
                         AddStairStep(layout, false);
 
-                        //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                         floorSegment.Floors.Add(layout);
                     }
@@ -15835,6 +15965,7 @@ namespace DataGenerator.Data
 
                             AddStairStep(layout, false);
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -15945,6 +16076,7 @@ namespace DataGenerator.Data
 
                             AddStairStep(layout, false);
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -15956,7 +16088,7 @@ namespace DataGenerator.Data
             }
             else if (index == 40)
             {
-                #region Geode Underpass
+                #region GEODE UNDERPASS
                 {
                     zone.Name = new LocalText("**Geode Underpass");
                     zone.Level = 20;
@@ -16058,6 +16190,7 @@ namespace DataGenerator.Data
 
                             AddStairStep(layout, false);
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -16170,6 +16303,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -16282,6 +16416,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -16391,6 +16526,7 @@ namespace DataGenerator.Data
 
                             AddStairStep(layout, false);
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -16503,6 +16639,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -16614,6 +16751,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -16780,6 +16918,8 @@ namespace DataGenerator.Data
                                 }
                             }
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
                             floorSegment.Floors.Add(layout);
                         }
 
@@ -16890,6 +17030,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -17006,6 +17147,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -17119,6 +17261,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -17231,6 +17374,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -17345,6 +17489,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -17455,6 +17600,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }
@@ -17567,6 +17713,7 @@ namespace DataGenerator.Data
 
                             AddWaterSteps(layout, "water", new RandRange(30));//water
 
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                             floorSegment.Floors.Add(layout);
                         }

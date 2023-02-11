@@ -2621,7 +2621,7 @@ namespace DataGenerator.Data
 
                 AddStairStep(layout, false);
 
-                //layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+                layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                 floorSegment.Floors.Add(layout);
             }
@@ -4787,7 +4787,7 @@ namespace DataGenerator.Data
                     }
                 }
 
-
+                layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                 floorSegment.Floors.Add(layout);
             }
@@ -4923,6 +4923,8 @@ namespace DataGenerator.Data
                 AddStairStep(layout, false);
 
                 AddWaterSteps(layout, "water", new RandRange(30));//water
+
+                layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
                 floorSegment.Floors.Add(layout);
             }

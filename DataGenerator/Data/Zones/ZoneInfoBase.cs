@@ -23,7 +23,7 @@ namespace DataGenerator.Data
 
         static void FillDebugZone(ZoneData zone)
         {
-            zone.Name = new LocalText("Debug Zone");
+            zone.Name = new LocalText("**Debug Zone");
 
             {
                 LayeredSegment structure = new LayeredSegment();
