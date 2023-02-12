@@ -71,24 +71,24 @@ namespace DataGenerator.Data
         static readonly Priority PR_WATER_DE_ISOLATE = new Priority(3, 2);
         //4 textures
         static readonly Priority PR_TEXTURES = new Priority(4);
-        //4.1 shops
-        static readonly Priority PR_SHOPS = new Priority(4, 1);
-        //4.2 traps
-        static readonly Priority PR_SPAWN_TRAPS = new Priority(4, 2);
-        //5 money
-        static readonly Priority PR_SPAWN_MONEY = new Priority(5);
-        //5.1 items
-        static readonly Priority PR_SPAWN_ITEMS = new Priority(5, 1);
-        //5.1.1 extra items
-        static readonly Priority PR_SPAWN_ITEMS_EXTRA = new Priority(5, 1, 1);
-        //5.2 mobs
-        static readonly Priority PR_SPAWN_MOBS = new Priority(5, 2);
-        //5.2.1 extra mobs
-        static readonly Priority PR_SPAWN_MOBS_EXTRA = new Priority(5, 2, 1);
-        //6 monster houses
-        static readonly Priority PR_HOUSES = new Priority(6);
-        //6.1 compass
-        static readonly Priority PR_COMPASS = new Priority(6, 1);
+        //4.1 monster houses
+        static readonly Priority PR_HOUSES = new Priority(4, 1);
+        //4.2 shops
+        static readonly Priority PR_SHOPS = new Priority(4, 2);
+        //5 traps
+        static readonly Priority PR_SPAWN_TRAPS = new Priority(5);
+        //5.1 compass
+        static readonly Priority PR_COMPASS = new Priority(5, 1);
+        //6 money
+        static readonly Priority PR_SPAWN_MONEY = new Priority(6);
+        //6.1 items
+        static readonly Priority PR_SPAWN_ITEMS = new Priority(6, 1);
+        //6.1.1 extra items
+        static readonly Priority PR_SPAWN_ITEMS_EXTRA = new Priority(6, 1, 1);
+        //6.2 mobs
+        static readonly Priority PR_SPAWN_MOBS = new Priority(6, 2);
+        //6.2.1 extra mobs
+        static readonly Priority PR_SPAWN_MOBS_EXTRA = new Priority(6, 2, 1);
         //7 debug checks
         static readonly Priority PR_DBG_CHECK = new Priority(7);
 
