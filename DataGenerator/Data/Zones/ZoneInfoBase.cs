@@ -1301,7 +1301,7 @@ namespace DataGenerator.Data
 
                     {
                         //Add some disconnected rooms
-                        AddDisconnectedRoomsStep<ListMapGenContext> addDisconnect = new AddDisconnectedRoomsStep<ListMapGenContext>();
+                        AddDisconnectedRoomsRandStep<ListMapGenContext> addDisconnect = new AddDisconnectedRoomsRandStep<ListMapGenContext>();
                         addDisconnect.Components.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Disconnected));
                         addDisconnect.Amount = new RandRange(2, 4);
 
