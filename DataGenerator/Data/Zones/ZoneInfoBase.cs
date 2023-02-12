@@ -264,7 +264,7 @@ namespace DataGenerator.Data
                         detourRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
                         SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
                         detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 6), new RandRange(2, 6)), 10);
-                        AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
+                        AddConnectedRoomsRandStep<MapGenContext> detours = new AddConnectedRoomsRandStep<MapGenContext>(detourRooms, detourHalls);
                         detours.Amount = new RandRange(1);
                         detours.HallPercent = 100;
                         detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
@@ -488,7 +488,7 @@ namespace DataGenerator.Data
                         detourRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
                         SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
                         detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
-                        AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
+                        AddConnectedRoomsRandStep<MapGenContext> detours = new AddConnectedRoomsRandStep<MapGenContext>(detourRooms, detourHalls);
                         detours.Amount = new RandRange(2, 4);
                         detours.HallPercent = 100;
                         detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
