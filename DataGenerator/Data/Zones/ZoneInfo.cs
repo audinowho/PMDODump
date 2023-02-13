@@ -2212,7 +2212,7 @@ namespace DataGenerator.Data
                     {
                         SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                         EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                        secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                        secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                         RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                         exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                         SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
@@ -5036,7 +5036,11 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "amp_plains_wall", "amp_plains_floor", "amp_plains_secondary", "rock");
 
                         //traps
-                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                        if (ii < 6)
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                        else
+                            AddSingleTrapStep(layout, new RandRange(1, 3), "tile_wonder");//wonder tile
+
                         if (ii < 6)
                             AddTrapsSteps(layout, new RandRange(12, 16));
                         else
@@ -6492,7 +6496,7 @@ namespace DataGenerator.Data
                         {
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                            secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                            secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                             RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                             exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
@@ -8641,16 +8645,9 @@ namespace DataGenerator.Data
                         }
 
                         //traps
-                        
-                        //wonder tile
-                        {
-                            SpawnList<EffectTile> effectTileSpawns = new SpawnList<EffectTile>();
-                            effectTileSpawns.Add(new EffectTile("tile_wonder", true), 10);
-                            SpacedRoomSpawnStep<MapGenContext, EffectTile> trapStep = new SpacedRoomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new LoopedRand<EffectTile>(effectTileSpawns, new RandRange(80, 100))), false);
-                            trapStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
-                        }
 
+                        //wonder tile
+                        AddSingleTrapStep(layout, new RandRange(80, 100), "tile_wonder");//wonder tile
                         AddTrapsSteps(layout, new RandRange(300, 400));
 
 
@@ -10961,7 +10958,7 @@ namespace DataGenerator.Data
                     {
                         SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                         EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                        secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                        secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                         RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                         exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                         SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
@@ -11809,7 +11806,7 @@ namespace DataGenerator.Data
                         {
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                            secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                            secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                             RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                             exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);
@@ -12481,7 +12478,7 @@ namespace DataGenerator.Data
                         {
                             SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
                             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
-                            secretTile.TileStates.Set(new DestState(new SegLoc(1, 0), true));
+                            secretTile.TileStates.Set(new DestState(new SegLoc(2, 0), true));
                             RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
                             exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), new IntRange(0, max_floors), 10);
                             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), exitZoneSpawns);

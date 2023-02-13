@@ -1913,12 +1913,16 @@ namespace DataGenerator.Data
                     for (int yy = 0; yy < height; yy++)
                     {
                         map.Layers[0].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCamp"));
-                        if (yy >= 8 && (xx < 8 || xx >= 17))
-                        {
-                            //long tilePos = GraphicsManager.TileIndex.GetPosition("SnowCampCliffs", new Loc(xx, yy));
-                            //if (tilePos > 0)
-                            //    map.Layers[1].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCampCliffs"));
-                        }
+                        if (yy >= 20 && (xx < 8 || xx >= 17))
+                            map.Layers[1].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCampCliffs"));
+                        else if (yy >= 17 && (xx < 7 || xx >= 18))
+                            map.Layers[1].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCampCliffs"));
+                        else if (yy >= 14 && (xx < 6 || xx >= 19))
+                            map.Layers[1].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCampCliffs"));
+                        else if (yy >= 10 && (xx < 5 || xx >= 20))
+                            map.Layers[1].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCampCliffs"));
+                        else if (yy >= 8 && (xx < 3 || xx >= 22))
+                            map.Layers[1].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCampCliffs"));
                     }
                 }
 

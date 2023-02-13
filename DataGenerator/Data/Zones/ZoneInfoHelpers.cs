@@ -342,7 +342,7 @@ namespace DataGenerator.Data
         {
             SpawnList<EffectTile> effectTileSpawns = new SpawnList<EffectTile>();
             effectTileSpawns.Add(new EffectTile(id, revealed), 10);
-            RandomRoomSpawnStep<T, EffectTile> trapStep = new RandomRoomSpawnStep<T, EffectTile>(new PickerSpawner<T, EffectTile>(new LoopedRand<EffectTile>(effectTileSpawns, amount)), includeHalls);
+            SpacedRoomSpawnStep<T, EffectTile> trapStep = new SpacedRoomSpawnStep<T, EffectTile>(new PickerSpawner<T, EffectTile>(new LoopedRand<EffectTile>(effectTileSpawns, amount)), includeHalls);
             if (connectivity != ConnectivityRoom.Connectivity.None)
                 trapStep.Filters.Add(new RoomFilterConnectivity(connectivity));
             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);

@@ -379,7 +379,7 @@ namespace DataGenerator
                         if ((dump & DataManager.DataType.Zone) != DataManager.DataType.None)
                         {
                             //MapInfo.AddMapData();
-                            //MapInfo.AddGroundData(MapInfo.MapNames[0]);
+                            //MapInfo.AddGroundData("final_stop");
                             ZoneInfo.AddZoneData();
                             //ZoneInfo.AddZoneData(7);
                         }
