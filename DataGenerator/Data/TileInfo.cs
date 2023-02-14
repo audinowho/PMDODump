@@ -89,18 +89,19 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Red;
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
 
-                //SE 121
-
-                ProjectileAction altAction = new ProjectileAction();
-                altAction.Range = 8;
-                altAction.Speed = 10;
-                altAction.Rays = ProjectileAction.RayCount.FourCross;
-                altAction.StopAtWall = true;
-                altAction.StopAtHit = true;
+                AreaAction altAction = new AreaAction();
+                altAction.Range = 1;
+                altAction.Speed = 8;
                 altAction.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
-                altAction.Anim = new AnimData("Pin_Missile", 3);
+                CircleSquareAreaEmitter emitter = new CircleSquareAreaEmitter();
+                SingleEmitter single = new SingleEmitter(new AnimData("Poison_Trap_Spike", 1));
+                single.LocHeight = 24;
+                emitter.Anims.Add(single);
+                emitter.ParticlesPerTile = 1.4;
+                altAction.Emitter = emitter;
+                altAction.LagBehindTime = 40;
+                altAction.ActionFX.Sound = "DUN_Poison_Trap";
 
-                altAction.ActionFX.Sound = "DUN_Throw_Spike";
                 ExplosionData altExplosion = new ExplosionData();
                 altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                 BattleData newData = new BattleData();
