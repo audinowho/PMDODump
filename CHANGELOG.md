@@ -7,6 +7,7 @@
 * Poison Trap reworked into a simple AoE
 * Removed TMs for Toxic, Ally Switch, Trick Room
 * Added TMs for Avalanche, Brine, Bullet seed, Dragon pulse, Endure, Focus punch, Iron tail, Natural gift, Nature power, Power up punch, Silver wind, Sky drop, Snatch, Whirlpool
+* A localized title for Chinese!
 * Fixed an issue where All Protect Orb wears off if attacking
 * Fixed Feint to lift protection of Protect, Detect, and All-Protect, and increased its range
 * Foe-Seal Orb will disable a random move if the target hasn't used a move yet, favoring enabled moves.
