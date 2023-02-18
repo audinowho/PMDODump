@@ -5065,7 +5065,7 @@ namespace DataGenerator.Data
                         if (ii < 6)
                             AddItemData(layout, new RandRange(3, 6), 25);
                         else
-                            AddItemData(layout, new RandRange(5, 7), 25, true);
+                            AddItemData(layout, new RandRange(4, 6), 25, true);
 
 
                         //construct paths
@@ -6475,7 +6475,7 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(GetTeamMob("poochyena", "", "bite", "howl", "", "", new RandRange(13), "wander_dumb"), new IntRange(3, max_floors), 10);
                         poolSpawn.Spawns.Add(GetTeamMob("corphish", "", "leer", "vice_grip", "", "", new RandRange(13), "wander_dumb"), new IntRange(3, max_floors), 10);
                         poolSpawn.Spawns.Add(GetTeamMob("azurill", "", "charm", "splash", "", "", new RandRange(10), "wander_dumb"), new IntRange(3, max_floors), 10);
-                        poolSpawn.Spawns.Add(GetTeamMob("tauros", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob("tauros", "", "rage", "horn_attack", "", "", new RandRange(20)), new IntRange(4, max_floors), 10);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                         floorSegment.ZoneSteps.Add(poolSpawn);
@@ -6516,7 +6516,7 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B16. Fertile Valley.ogg", 500, Map.SightRange.Clear, Map.SightRange.Clear);
+                            AddFloorData(layout, "B16. Fertile Valley.ogg", 800, Map.SightRange.Clear, Map.SightRange.Clear);
 
                             //Tilesets
                             if (ii < 6)
@@ -6525,6 +6525,7 @@ namespace DataGenerator.Data
                                 AddTextureData(layout, "purity_forest_6_wall", "purity_forest_6_floor", "purity_forest_6_secondary", "ground");
 
                             //cave in
+                            if (ii != 2)
                             {
                                 RandRange amount = new RandRange(3, 8);
                                 IntRange size = new IntRange(3, 9);
@@ -6560,12 +6561,12 @@ namespace DataGenerator.Data
 
                             //construct paths
                             {
-                                AddInitGridStep(layout, 9, 6, 7, 7);
+                                AddInitGridStep(layout, 9, 6, 7, 6);
 
                                 GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                                 path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                                 path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                                path.RoomRatio = new RandRange(40);
+                                path.RoomRatio = new RandRange(35);
                                 path.BranchRatio = new RandRange(0);
 
                                 SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
@@ -6576,7 +6577,8 @@ namespace DataGenerator.Data
                                 path.GenericRooms = genericRooms;
 
                                 SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
-                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(100), 10);
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new SquareHallBrush(new Loc(2))), 10);
                                 path.GenericHalls = genericHalls;
 
                                 layout.GenSteps.Add(PR_GRID_GEN, path);
@@ -6763,7 +6765,7 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B17. Muddy Valley.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "B17. Muddy Valley.ogg", 1000, Map.SightRange.Clear, Map.SightRange.Dark);
 
                             //Tilesets
                             AddTextureData(layout, "quicksand_pit_wall", "quicksand_pit_floor", "quicksand_pit_secondary", "ground");
@@ -6803,7 +6805,7 @@ namespace DataGenerator.Data
 
                             //construct paths
                             {
-                                AddInitGridStep(layout, 9, 6, 7, 7);
+                                AddInitGridStep(layout, 9, 6, 7, 6);
 
                                 GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                                 path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
@@ -6901,6 +6903,12 @@ namespace DataGenerator.Data
                     ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
                     itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
 
+                    //fakes
+                    CategorySpawn<InvItem> fakes = new CategorySpawn<InvItem>();
+                    fakes.SpawnRates.SetRange(5, new IntRange(0, max_floors));
+                    itemSpawnZoneStep.Spawns.Add("fakes", fakes);
+
+                    fakes.Spawns.Add(InvItem.CreateBox("food_apple_big", "appletun"), new IntRange(10, max_floors), 10);//Big Apple (fake)
 
                     //necessities
                     CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
@@ -6910,9 +6918,10 @@ namespace DataGenerator.Data
 
                     necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 9);
                     necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 6);
-                    necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, max_floors), 10);
+                    necessities.Spawns.Add(new InvItem("food_apple_big"), new IntRange(0, max_floors), 5);
                     necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
                     necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(0, max_floors), 6);
+
                     //snacks
                     CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
                     snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -7317,6 +7326,13 @@ namespace DataGenerator.Data
                             AddFloorData(layout, "B27. Ambush Forest 2.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
                         else
                             AddFloorData(layout, "B28. Ambush Forest 3.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                        if (ii >= 10)
+                        {
+                            Dictionary<ItemFake, MobSpawn> spawnTable = new Dictionary<ItemFake, MobSpawn>();
+                            spawnTable.Add(new ItemFake("food_apple_big", "appletun"), GetGenericMob("appletun", "", "apple_acid", "body_slam", "", "", new RandRange(32)));
+                            AddFloorFakeItems(layout, spawnTable);
+                        }
 
                         //Tilesets
                         if (ii < 8)
@@ -11597,6 +11613,14 @@ namespace DataGenerator.Data
                         itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
 
 
+                        //fakes
+                        CategorySpawn<InvItem> fakes = new CategorySpawn<InvItem>();
+                        fakes.SpawnRates.SetRange(6, new IntRange(0, max_floors));
+                        itemSpawnZoneStep.Spawns.Add("fakes", fakes);
+
+                        fakes.Spawns.Add(InvItem.CreateBox("food_apple", "applin"), new IntRange(4, max_floors), 3);
+
+
                         //necessities
                         CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
                         necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
@@ -11606,6 +11630,7 @@ namespace DataGenerator.Data
                         necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 9);
                         necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 6);
                         necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, max_floors), 10);
+
                         //snacks
                         CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
                         snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -11830,6 +11855,10 @@ namespace DataGenerator.Data
                             //Floor settings
                             AddFloorData(layout, "B25. Trickster Woods.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
 
+                            Dictionary<ItemFake, MobSpawn> spawnTable = new Dictionary<ItemFake, MobSpawn>();
+                            spawnTable.Add(new ItemFake("food_apple", "applin"), GetGenericMob("applin", "", "astonish", "withdraw", "", "", new RandRange(20)));
+                            AddFloorFakeItems(layout, spawnTable);
+
                             //Tilesets
                             //other candidates: purity_forest_6_wall,uproar_forest
                             if (ii < 5)
@@ -12029,6 +12058,8 @@ namespace DataGenerator.Data
                         necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 9);
                         necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 6);
                         necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, max_floors), 10);
+                        necessities.Spawns.Add(InvItem.CreateBox("food_apple", "applin"), new IntRange(0, max_floors), 5);//Apple (fake)
+
                         //snacks
                         CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
                         snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -12178,6 +12209,10 @@ namespace DataGenerator.Data
 
                             //Floor settings
                             AddFloorData(layout, "B01. Demonstration.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+
+                            Dictionary<ItemFake, MobSpawn> spawnTable = new Dictionary<ItemFake, MobSpawn>();
+                            spawnTable.Add(new ItemFake("food_apple", "applin"), GetGenericMob("applin", "", "astonish", "withdraw", "", "", new RandRange(20)));
+                            AddFloorFakeItems(layout, spawnTable);
 
                             //Tilesets
                             AddTextureData(layout, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary", "normal");

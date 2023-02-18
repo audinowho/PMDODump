@@ -47,6 +47,27 @@ namespace DataGenerator.Data
             ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
             itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
 
+            //fakes
+            CategorySpawn<InvItem> fakes = new CategorySpawn<InvItem>();
+            fakes.SpawnRates.SetRange(5, new IntRange(0, max_floors));
+            itemSpawnZoneStep.Spawns.Add("fakes", fakes);
+
+            fakes.Spawns.Add(InvItem.CreateBox("orb_escape", "ditto"), new IntRange(13, 18), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("seed_reviver", "ditto"), new IntRange(13, 18), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("held_x_ray_specs", "ditto"), new IntRange(13, 18), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("orb_all_protect", "ditto"), new IntRange(13, 18), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("orb_luminous", "ditto"), new IntRange(13, 18), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("berry_starf", "ditto"), new IntRange(13, 18), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("apricorn_big", "ditto"), new IntRange(13, 18), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("seed_pure", "ditto"), new IntRange(25, max_floors), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("boost_protein", "ditto"), new IntRange(25, max_floors), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("boost_iron", "ditto"), new IntRange(25, max_floors), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("boost_calcium", "ditto"), new IntRange(25, max_floors), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("boost_zinc", "ditto"), new IntRange(25, max_floors), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("boost_hp_up", "ditto"), new IntRange(25, max_floors), 10);
+            fakes.Spawns.Add(InvItem.CreateBox("boost_carbos", "ditto"), new IntRange(25, max_floors), 10);
+
+
             //necesities
             CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
             necessities.SpawnRates.SetRange(14, new IntRange(0, 30));
@@ -614,9 +635,6 @@ namespace DataGenerator.Data
 
             //352 Kecleon : 168 Thief : 425 Shadow Sneak
             poolSpawn.Spawns.Add(GetTeamMob("kecleon", "", "thief", "shadow_sneak", "", "", new RandRange(25), TeamMemberSpawn.MemberRole.Support, "thief"), new IntRange(13, 15), 10);
-
-            //1//132 Ditto : 144 Transform
-            poolSpawn.Spawns.Add(GetTeamMob("ditto", "", "transform", "", "", "", new RandRange(20), TeamMemberSpawn.MemberRole.Loner), new IntRange(13, 15), 10);
 
             //200 Misdreavus : 180 Spite : 310 Astonish : 220 Pain Split
             poolSpawn.Spawns.Add(GetTeamMob("misdreavus", "", "spite", "astonish", "pain_split", "", new RandRange(25)), new IntRange(13, 15), 10);
@@ -2001,6 +2019,30 @@ namespace DataGenerator.Data
 
                 layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
+
+                Dictionary<ItemFake, MobSpawn> spawnTable = new Dictionary<ItemFake, MobSpawn>();
+                if (ii < 20)
+                {
+                    spawnTable.Add(new ItemFake("orb_escape", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(20)));
+                    spawnTable.Add(new ItemFake("seed_reviver", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(20)));
+                    spawnTable.Add(new ItemFake("held_x_ray_specs", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(20)));
+                    spawnTable.Add(new ItemFake("orb_all_protect", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(20)));
+                    spawnTable.Add(new ItemFake("orb_luminous", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(20)));
+                    spawnTable.Add(new ItemFake("berry_starf", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(20)));
+                    spawnTable.Add(new ItemFake("apricorn_big", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(20)));
+                }
+                else
+                {
+                    spawnTable.Add(new ItemFake("seed_pure", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(40)));
+                    spawnTable.Add(new ItemFake("boost_protein", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(40)));
+                    spawnTable.Add(new ItemFake("boost_iron", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(40)));
+                    spawnTable.Add(new ItemFake("boost_calcium", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(40)));
+                    spawnTable.Add(new ItemFake("boost_zinc", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(40)));
+                    spawnTable.Add(new ItemFake("boost_hp_up", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(40)));
+                    spawnTable.Add(new ItemFake("boost_carbos", "ditto"), GetGenericMob("ditto", "", "transform", "", "", "", new RandRange(40)));
+                }
+                AddFloorFakeItems(layout, spawnTable);
+
                 //Tilesets
                 if (ii < 2)
                     AddTextureData(layout, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary", "normal");
@@ -2675,6 +2717,15 @@ namespace DataGenerator.Data
             itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
 
 
+            //fakes
+            CategorySpawn<InvItem> fakes = new CategorySpawn<InvItem>();
+            fakes.SpawnRates.SetRange(5, new IntRange(0, max_floors));
+            itemSpawnZoneStep.Spawns.Add("fakes", fakes);
+
+            fakes.Spawns.Add(InvItem.CreateBox("food_apple", "applin"), new IntRange(6, 20), 10);//Apple (fake)
+            fakes.Spawns.Add(InvItem.CreateBox("food_apple_big", "appletun"), new IntRange(20, max_floors), 10);//Big Apple (fake)
+
+
             //necessities
             CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
             necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
@@ -2682,7 +2733,7 @@ namespace DataGenerator.Data
 
 
             necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(0, max_floors), 45);//Sitrus Berry
-            necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, 31), 70);//Leppa Berry
+            necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, 31), 30);//Leppa Berry
             necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, 31), 15);//Apple
             necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 50);//Lum Berry
             necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, 27), 10);//Reviver Seed
@@ -3265,14 +3316,20 @@ namespace DataGenerator.Data
             SpreadStepZoneStep appleZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, max_floors)), appleZoneSpawns);//apple
             floorSegment.ZoneSteps.Add(appleZoneStep);
 
+            SpawnList<IGenPriority> bigAppleZoneSpawns = new SpawnList<IGenPriority>();
+            bigAppleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("food_apple_big"))))), 10);
+            bigAppleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("food_apple_huge"))))), 10);
+            SpreadStepZoneStep bigAppleZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(12, 15), new IntRange(0, 30)), bigAppleZoneSpawns);//big apple
+            floorSegment.ZoneSteps.Add(bigAppleZoneStep);
+
             SpawnList<IGenPriority> leppaZoneSpawns = new SpawnList<IGenPriority>();
             leppaZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("berry_leppa"))))), 10);
-            SpreadStepZoneStep leppaZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(0, max_floors)), appleZoneSpawns);//leppa
+            SpreadStepZoneStep leppaZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(0, max_floors)), leppaZoneSpawns);//leppa
             floorSegment.ZoneSteps.Add(leppaZoneStep);
 
             SpawnList<IGenPriority> assemblyZoneSpawns = new SpawnList<IGenPriority>();
             assemblyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("machine_assembly_box"))))), 10);
-            SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors)), appleZoneSpawns);//assembly box
+            SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors)), assemblyZoneSpawns);//assembly box
             floorSegment.ZoneSteps.Add(assemblyZoneStep);
 
             {
@@ -4126,6 +4183,23 @@ namespace DataGenerator.Data
                     floorData.TileSight = Map.SightRange.Dark;
 
                 layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+
+
+                Dictionary<ItemFake, MobSpawn> spawnTable = new Dictionary<ItemFake, MobSpawn>();
+                if (ii < 10)
+                    spawnTable.Add(new ItemFake("food_apple", "applin"), GetGenericMob("applin", "", "astonish", "", "", "", new RandRange(12)));
+                else if (ii < 14)
+                    spawnTable.Add(new ItemFake("food_apple", "applin"), GetGenericMob("applin", "", "astonish", "withdraw", "", "", new RandRange(20)));
+                else if (ii < 18)
+                    spawnTable.Add(new ItemFake("food_apple", "applin"), GetGenericMob("applin", "", "astonish", "withdraw", "", "", new RandRange(24)));
+                else if (ii < 20)
+                    spawnTable.Add(new ItemFake("food_apple", "applin"), GetGenericMob("applin", "", "astonish", "withdraw", "", "", new RandRange(30)));
+                else if (ii < 28)
+                    spawnTable.Add(new ItemFake("food_apple_big", "appletun"), GetGenericMob("appletun", "", "apple_acid", "body_slam", "", "", new RandRange(36)));
+                else
+                    spawnTable.Add(new ItemFake("food_apple_big", "appletun"), GetGenericMob("appletun", "", "apple_acid", "dragon_pulse", "", "", new RandRange(45)));
+                AddFloorFakeItems(layout, spawnTable);
+
 
                 //Tilesets
                 if (ii <= 4)

@@ -507,20 +507,20 @@ namespace DataGenerator.Data
                         else if (evoSpecies == 841)//flapple
                         {
                             EvoItem evoDetail = new EvoItem();
-                            evoDetail.ItemNum = "food_apple_big";//Big Apple
+                            evoDetail.ItemNum = "food_apple_big";//Apple
                             branch.Details.Add(evoDetail);
 
                             EvoHunger hungerDetail = new EvoHunger();
-                            hungerDetail.Hungry = true;
                             branch.Details.Add(hungerDetail);
                         }
                         else if (evoSpecies == 842)//appletun
                         {
                             EvoItem evoDetail = new EvoItem();
-                            evoDetail.ItemNum = "food_apple";//Apple
+                            evoDetail.ItemNum = "food_apple_huge";//Apple
                             branch.Details.Add(evoDetail);
 
                             EvoHunger hungerDetail = new EvoHunger();
+                            hungerDetail.Hungry = true;
                             branch.Details.Add(hungerDetail);
                         }
                         else if (evoSpecies == 853)//grapploct

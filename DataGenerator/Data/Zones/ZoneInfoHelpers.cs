@@ -95,7 +95,7 @@ namespace DataGenerator.Data
         public static void AddTitleDrop<T>(MapGen<T> layout) where T : BaseMapGenContext
         {
             MapEffectStep<T> fade = new MapEffectStep<T>();
-            fade.Effect.OnMapStarts.Add(new Priority(-15), new FadeTitleEvent());
+            fade.Effect.OnMapStarts.Add(-15, new FadeTitleEvent());
             layout.GenSteps.Add(PR_FLOOR_DATA, fade);
         }
 
@@ -103,6 +103,15 @@ namespace DataGenerator.Data
         {
             MapDataStep<T> floorData = new MapDataStep<T>(music, timeLimit, tileSight, charSight);
             layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+        }
+
+        public static void AddFloorFakeItems<T>(MapGen<T> layout, Dictionary<ItemFake, MobSpawn> spawnTable) where T : BaseMapGenContext
+        {
+            MapEffectStep<T> fake = new MapEffectStep<T>();
+            fake.Effect.OnPickups.Add(-1, new FakeItemEvent(spawnTable));
+            fake.Effect.OnEquips.Add(-1, new FakeItemEvent(spawnTable));
+            fake.Effect.BeforeActions.Add(-5, new FakeItemBattleEvent(spawnTable));
+            layout.GenSteps.Add(PR_FLOOR_DATA, fake);
         }
 
         /// <summary>

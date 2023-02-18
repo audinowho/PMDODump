@@ -370,6 +370,11 @@ namespace DataGenerator.Data
                     AddTitleDrop(layout);
                     AddFloorData(layout, "A07. Summit.ogg", 500, Map.SightRange.Dark, Map.SightRange.Dark);
 
+                    Dictionary<ItemFake, MobSpawn> spawnTable = new Dictionary<ItemFake, MobSpawn>();
+                    spawnTable.Add(new ItemFake("food_apple", "applin"), GetGenericMob("applin", "", "astonish", "", "", "", new RandRange(20)));
+                    spawnTable.Add(new ItemFake("food_apple", "appletun"), GetGenericMob("appletun", "", "apple_acid", "", "", "", new RandRange(20)));
+                    AddFloorFakeItems(layout, spawnTable);
+
                     AddInitGridStep(layout, 8, 8, 8, 8);
 
                     //construct paths
@@ -397,9 +402,12 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnStep<MapGenContext> itemSpawnZoneStep = new ItemSpawnStep<MapGenContext>();
                     SpawnList<InvItem> items = new SpawnList<InvItem>();
-                    items.Add(new InvItem("berry_leppa"), 12);
+                    items.Add(InvItem.CreateBox("food_apple", "applin"), 12);
+                    items.Add(InvItem.CreateBox("food_apple", "appletun"), 12);
                     itemSpawnZoneStep.Spawns.Add("uncategorized", items, 10);
                     layout.GenSteps.Add(PR_RESPAWN_ITEM, itemSpawnZoneStep);
+
+                    AddItemData(layout, new RandRange(2, 5), 25);
 
                     //enemies!
                     AddRespawnData(layout, 3, 80);
