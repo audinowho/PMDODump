@@ -1073,61 +1073,22 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(tileSpawn);
 
 
-            SpawnList<IGenPriority> appleZoneSpawns = new SpawnList<IGenPriority>();
-            appleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("food_apple"))))), 10);
-            SpreadStepZoneStep appleZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, 30)), appleZoneSpawns);//apple
-            floorSegment.ZoneSteps.Add(appleZoneStep);
-            SpawnList<IGenPriority> bigAppleZoneSpawns = new SpawnList<IGenPriority>();
-            bigAppleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("food_apple_big"))))), 10);
-            SpreadStepZoneStep bigAppleZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(13, 15), new IntRange(0, 30)), bigAppleZoneSpawns);//big apple
-            floorSegment.ZoneSteps.Add(bigAppleZoneStep);
-            SpawnList<IGenPriority> leppaZoneSpawns = new SpawnList<IGenPriority>();
-            leppaZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("berry_leppa"))))), 10);
-            SpreadStepZoneStep leppaZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, 30)), leppaZoneSpawns);//leppa
-            floorSegment.ZoneSteps.Add(leppaZoneStep);
-            SpawnList<IGenPriority> joySeedZoneSpawns = new SpawnList<IGenPriority>();
-            joySeedZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("seed_joy"))))), 10);
-            SpreadStepZoneStep joySeedZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(12, 30), new IntRange(0, 30)), joySeedZoneSpawns);//joy seed
-            floorSegment.ZoneSteps.Add(joySeedZoneStep);
-            SpawnList<IGenPriority> keyZoneSpawns = new SpawnList<IGenPriority>();
-            keyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("key", 1))))), 10);
-            SpreadStepZoneStep keyZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(0, 5)), keyZoneSpawns);//key
-            floorSegment.ZoneSteps.Add(keyZoneStep);
-            SpawnList<IGenPriority> assemblyZoneSpawns = new SpawnList<IGenPriority>();
-            assemblyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("machine_assembly_box"))))), 10);
-            SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, 30)), assemblyZoneSpawns);//assembly box
-            floorSegment.ZoneSteps.Add(assemblyZoneStep);
-            SpawnList<IGenPriority> apricornZoneSpawns = new SpawnList<IGenPriority>();
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_blue"))))), 10);//blue apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_green"))))), 10);//green apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_brown"))))), 10);//brown apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_purple"))))), 10);//purple apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_red"))))), 10);//red apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_white"))))), 10);//white apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_yellow"))))), 10);//yellow apricorns
-            apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_black"))))), 10);//black apricorns
-            SpreadStepZoneStep apricornZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(1, 21)), apricornZoneSpawns);//apricorn (variety)
-            floorSegment.ZoneSteps.Add(apricornZoneStep);
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, 30)), new MapItem("food_apple"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(13, 15), new IntRange(0, 30)), new MapItem("food_apple_big"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, 30)), new MapItem("berry_leppa"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, 5)), new MapItem("key", 1));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, 30)), new MapItem("machine_assembly_box"));
 
-            SpawnList<IGenPriority> cleanseZoneSpawns = new SpawnList<IGenPriority>();
-            cleanseZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("orb_cleanse"))))), 10);
-            SpreadStepZoneStep cleanseZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandDecay(1, 10, 50), new IntRange(3, 30)), cleanseZoneSpawns);//cleanse orb
-            floorSegment.ZoneSteps.Add(cleanseZoneStep);
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 10, 50), new IntRange(3, 30)), new MapItem("orb_cleanse"));
 
-            SpawnList<IGenPriority> evoZoneSpawns = new SpawnList<IGenPriority>();
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_fire_stone"))))), 10);//Fire Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_thunder_stone"))))), 10);//Thunder Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_water_stone"))))), 10);//Water Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_moon_stone"))))), 10);//Moon Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_dusk_stone"))))), 10);//Dusk Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_dawn_stone"))))), 10);//Dawn Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_shiny_stone"))))), 10);//Shiny Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_leaf_stone"))))), 10);//Leaf Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_ice_stone"))))), 10);//Ice Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_sun_ribbon"))))), 10);//Sun Ribbon
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_lunar_ribbon"))))), 10);//Moon Ribbon
-            SpreadStepZoneStep evoItemZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(2, 4), new IntRange(0, 15)), evoZoneSpawns);//evo items
-            floorSegment.ZoneSteps.Add(evoItemZoneStep);
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(1, 21)),
+                new MapItem("apricorn_blue"), new MapItem("apricorn_green"), new MapItem("apricorn_brown"), new MapItem("apricorn_purple"),
+                new MapItem("apricorn_red"), new MapItem("apricorn_white"), new MapItem("apricorn_yellow"), new MapItem("apricorn_black"));
+
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(2, 4), new IntRange(0, 15)),
+                new MapItem("evo_fire_stone"), new MapItem("evo_thunder_stone"), new MapItem("evo_water_stone"), new MapItem("evo_moon_stone"),
+                new MapItem("evo_dusk_stone"), new MapItem("evo_dawn_stone"), new MapItem("evo_shiny_stone"), new MapItem("evo_leaf_stone"),
+                new MapItem("evo_ice_stone"), new MapItem("evo_sun_ribbon"), new MapItem("evo_lunar_ribbon"));
 
 
             SpreadRoomZoneStep evoZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(3, 30)));
@@ -3311,73 +3272,31 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(tileSpawn);
 
 
-            SpawnList<IGenPriority> appleZoneSpawns = new SpawnList<IGenPriority>();
-            appleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("food_apple"))))), 10);
-            SpreadStepZoneStep appleZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, max_floors)), appleZoneSpawns);//apple
-            floorSegment.ZoneSteps.Add(appleZoneStep);
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, max_floors)), new MapItem("food_apple"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(12, 15), new IntRange(0, 30)), new MapItem("food_apple_big"), new MapItem("food_apple_huge"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors)), new MapItem("machine_assembly_box"));
 
-            SpawnList<IGenPriority> bigAppleZoneSpawns = new SpawnList<IGenPriority>();
-            bigAppleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("food_apple_big"))))), 10);
-            bigAppleZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("food_apple_huge"))))), 10);
-            SpreadStepZoneStep bigAppleZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(12, 15), new IntRange(0, 30)), bigAppleZoneSpawns);//big apple
-            floorSegment.ZoneSteps.Add(bigAppleZoneStep);
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, 21)),
+                new MapItem("apricorn_blue"), new MapItem("apricorn_green"), new MapItem("apricorn_brown"), new MapItem("apricorn_purple"),
+                new MapItem("apricorn_red"), new MapItem("apricorn_white"), new MapItem("apricorn_yellow"), new MapItem("apricorn_black"));
 
-            SpawnList<IGenPriority> leppaZoneSpawns = new SpawnList<IGenPriority>();
-            leppaZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("berry_leppa"))))), 10);
-            SpreadStepZoneStep leppaZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(0, max_floors)), leppaZoneSpawns);//leppa
-            floorSegment.ZoneSteps.Add(leppaZoneStep);
-
-            SpawnList<IGenPriority> assemblyZoneSpawns = new SpawnList<IGenPriority>();
-            assemblyZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("machine_assembly_box"))))), 10);
-            SpreadStepZoneStep assemblyZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors)), assemblyZoneSpawns);//assembly box
-            floorSegment.ZoneSteps.Add(assemblyZoneStep);
-
-            {
-                SpawnList<IGenPriority> apricornZoneSpawns = new SpawnList<IGenPriority>();
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_blue"))))), 10);//blue apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_green"))))), 10);//green apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_brown"))))), 10);//brown apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_purple"))))), 10);//purple apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_red"))))), 10);//red apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_white"))))), 10);//white apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_yellow"))))), 10);//yellow apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_black"))))), 10);//black apricorns
-                SpreadStepZoneStep apricornZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, 21)), apricornZoneSpawns);//apricorn (variety)
-                floorSegment.ZoneSteps.Add(apricornZoneStep);
-            }
 
             int max_apricorn = 20;
             for (int jj = 0; jj < 3; jj++)
             {
-                SpawnList<IGenPriority> apricornZoneSpawns = new SpawnList<IGenPriority>();
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_blue"))))), 10);//blue apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_green"))))), 10);//green apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_brown"))))), 10);//brown apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_purple"))))), 10);//purple apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_red"))))), 10);//red apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_white"))))), 10);//white apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_yellow"))))), 10);//yellow apricorns
-                apricornZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_black"))))), 10);//black apricorns
-                SpreadStepZoneStep apricornZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(1, max_apricorn)), apricornZoneSpawns);//apricorn (variety)
-                floorSegment.ZoneSteps.Add(apricornZoneStep);
+                AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(1, max_apricorn)),
+                    new MapItem("apricorn_blue"), new MapItem("apricorn_green"), new MapItem("apricorn_brown"), new MapItem("apricorn_purple"),
+                    new MapItem("apricorn_red"), new MapItem("apricorn_white"), new MapItem("apricorn_yellow"), new MapItem("apricorn_black"));
                 max_apricorn /= 2;
             }
 
-            SpawnList<IGenPriority> cleanseZoneSpawns = new SpawnList<IGenPriority>();
-            cleanseZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("orb_cleanse"))))), 10);
-            SpreadStepZoneStep cleanseZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandDecay(2, 10, 60), new IntRange(3, max_floors)), cleanseZoneSpawns);//cleanse orb
-            floorSegment.ZoneSteps.Add(cleanseZoneStep);
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 10, 60), new IntRange(3, max_floors)), new MapItem("orb_cleanse"));
 
-            SpawnList<IGenPriority> evoZoneSpawns = new SpawnList<IGenPriority>();
-            SpreadStepZoneStep evoItemZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(1, 4), new IntRange(0, 15)), evoZoneSpawns);//evo items
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_fire_stone"))))), 10);//Fire Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_leaf_stone"))))), 10);//Leaf Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_water_stone"))))), 10);//Water Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_moon_stone"))))), 10);//Moon Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_sun_stone"))))), 10);//Sun Stone
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_kings_rock"))))), 10);//King's Rock
-            evoZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<BaseMapGenContext, MapItem>(new PickerSpawner<BaseMapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("evo_link_cable"))))), 10);//Link Cable
-            floorSegment.ZoneSteps.Add(evoItemZoneStep);
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(12, 24), new IntRange(0, max_floors)), new MapItem("seed_joy"));
+
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1, 4), new IntRange(0, 15)),
+                new MapItem("evo_fire_stone"), new MapItem("evo_leaf_stone"), new MapItem("evo_water_stone"), new MapItem("evo_moon_stone"), new MapItem("evo_sun_stone"), new MapItem("evo_kings_rock"), new MapItem("evo_link_cable"));
 
 
             SpreadRoomZoneStep evoZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(3, max_floors)));

@@ -114,6 +114,43 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_FLOOR_DATA, fake);
         }
 
+        public static void AddItemSpreadZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, params MapItem[] items)
+        {
+            SpawnList<MapItem> zoneSpawns = new SpawnList<MapItem>();
+            foreach (MapItem item in items)
+                zoneSpawns.Add(item, 10);
+            AddItemSpreadZoneStep(floorSegment, spreadPlan, zoneSpawns);
+        }
+
+        public static void AddItemSpreadZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, SpawnList<MapItem> items)
+        {
+            SpawnList<IGenPriority> zoneSpawns = new SpawnList<IGenPriority>();
+            foreach (SpawnList<MapItem>.SpawnRate spawnRate in items)
+                zoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(spawnRate.Spawn)))), spawnRate.Rate);
+            SpreadStepZoneStep zoneStep = new SpreadStepZoneStep(spreadPlan, zoneSpawns);
+            floorSegment.ZoneSteps.Add(zoneStep);
+        }
+
+        public static void AddHiddenStairStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, int segDiff)
+        {
+            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+            EffectTile secretTile = new EffectTile("stairs_secret_down", false);
+            secretTile.TileStates.Set(new DestState(new SegLoc(segDiff, 0), true));
+            RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+            exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), spreadPlan.FloorRange, 10);
+            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(spreadPlan, exitZoneSpawns);
+            exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
+            floorSegment.ZoneSteps.Add(exitZoneStep);
+        }
+
+        public static void AddMysteriosityZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, int baseChance, int segDiff)
+        {
+            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance="+baseChance+", SegDiff="+segDiff+"}")), spreadPlan.FloorRange, 10);
+            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(spreadPlan, exitZoneSpawns);
+            floorSegment.ZoneSteps.Add(exitZoneStep);
+        }
+
         /// <summary>
         /// Sets a default status for the map, one which even when changed, snaps back to normal after enough time.
         /// </summary>

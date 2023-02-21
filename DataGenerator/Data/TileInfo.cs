@@ -686,7 +686,7 @@ namespace DataGenerator.Data
                 //SE 72
 
                 AreaAction altAction = new AreaAction();
-                altAction.Range = 1;
+                altAction.Range = 4;
                 altAction.Speed = 10;
                 altAction.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
 
