@@ -3117,6 +3117,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Rock_Purple";
                 item.Icon = 16;
                 item.UsageType = ItemData.UseType.Eat;
+                item.ItemStates.Set(new EdibleState());
                 item.ItemStates.Set(new FoodState());
                 item.Price = 1;
                 item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(30, false));
@@ -3164,6 +3165,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Rock_Purple";
                 item.Icon = 16;
                 item.UsageType = ItemData.UseType.Eat;
+                item.ItemStates.Set(new EdibleState());
                 item.ItemStates.Set(new FoodState());
                 item.Price = 1000;
                 item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(30, false));

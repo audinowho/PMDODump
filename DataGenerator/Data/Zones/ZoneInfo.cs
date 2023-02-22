@@ -8943,7 +8943,7 @@ namespace DataGenerator.Data
                 zone.Rogue = RogueStatus.ItemTransfer;
 
                 {
-                    int max_floors = 16;
+                    int max_floors = 18;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
@@ -13345,7 +13345,7 @@ namespace DataGenerator.Data
 
                             AddDrawListSteps(layout);
 
-                            AddStairStep(layout, false);
+                            AddStairStep(layout, true);
 
 
                             if (ii == 6)
@@ -13452,13 +13452,13 @@ namespace DataGenerator.Data
 
                         //necessities
                         CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
-                        necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
+                        necessities.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                         itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
 
                         necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 9);
                         necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 6);
-                        necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, max_floors), 10);
+                        necessities.Spawns.Add(new InvItem("food_grimy"), new IntRange(0, max_floors), 10);
                         necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
                         necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(0, max_floors), 6);
                         //snacks
@@ -13751,7 +13751,7 @@ namespace DataGenerator.Data
 
                             AddDrawListSteps(layout);
 
-                            AddStairStep(layout, false);
+                            AddStairStep(layout, true);
 
                             layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
 
