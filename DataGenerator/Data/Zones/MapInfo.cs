@@ -366,6 +366,10 @@ namespace DataGenerator.Data
                     map.AddObject(groundObject);
                 }
                 {
+                    GroundObject groundObject = new GroundObject(new ObjAnimData("Sign", 1), new Rect(200, 120, 24, 24), new Loc(8, 0), false, "Sign4");
+                    map.AddObject(groundObject);
+                }
+                {
                     GroundObject groundObject = new GroundObject(new ObjAnimData("", 0), new Rect(0, 452, 456, 4), true, "SouthExit");
                     map.AddObject(groundObject);
                 }
