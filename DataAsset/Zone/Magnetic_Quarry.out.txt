@@ -129,3 +129,6 @@ poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("grimer", 1, "", Gender.Unknown), 
 poolSpawn.Spawns.Add(GetTeamMob("golbat", "", "screech", "leech_life", "", "", new RandRange(24), "wander_dumb"), new IntRange(0, max_floors), 10);
 //In Groups
 poolSpawn.Spawns.Add(GetTeamMob("aron", "", "iron_head", "harden", "", "", new RandRange(24), "wander_dumb"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("togedemaru", "", "rollout", "spark", "", "", new RandRange(24), "wander_dumb"), new IntRange(0, max_floors), 5);
+//sleeping
+poolSpawn.Spawns.Add(GetTeamMob("lairon", "", "iron_head", "iron_tail", "", "", new RandRange(35), "wander_dumb"), new IntRange(3, max_floors), 10);

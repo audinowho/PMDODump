@@ -3,6 +3,13 @@ ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
 itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
 
 
+//necessities
+CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
+necessities.SpawnRates.SetRange(3, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("necessities", necessities);
+
+
+necessities.Spawns.Add(new InvItem("food_grimy"), new IntRange(0, max_floors), 10);
 //snacks
 CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
 snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -10,8 +17,11 @@ itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
 
 snacks.Spawns.Add(new InvItem("seed_hunger"), new IntRange(0, max_floors), 10);
-snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, max_floors), 10);
 snacks.Spawns.Add(new InvItem("seed_vile"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_last_chance"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, max_floors), 5);
 //special
 CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
 special.SpawnRates.SetRange(3, new IntRange(0, max_floors));
@@ -21,6 +31,8 @@ itemSpawnZoneStep.Spawns.Add("special", special);
 special.Spawns.Add(new InvItem("apricorn_brown"), new IntRange(0, max_floors), 10);
 special.Spawns.Add(new InvItem("apricorn_red"), new IntRange(0, max_floors), 10);
 special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, max_floors), 10);
+special.Spawns.Add(new InvItem("machine_recall_box"), new IntRange(0, max_floors), 10);
+special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, max_floors), 5);
 //throwable
 CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
 throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
@@ -29,9 +41,12 @@ itemSpawnZoneStep.Spawns.Add("throwable", throwable);
 
 throwable.Spawns.Add(new InvItem("ammo_gravelerock", false, 3), new IntRange(0, max_floors), 10);
 throwable.Spawns.Add(new InvItem("ammo_geo_pebble", false, 3), new IntRange(0, max_floors), 10);
-throwable.Spawns.Add(new InvItem("wand_lure", false, 3), new IntRange(0, max_floors), 10);
-throwable.Spawns.Add(new InvItem("wand_topsy_turvy", false, 2), new IntRange(0, max_floors), 10);
-throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("ammo_cacnea_spike", false, 2), new IntRange(0, max_floors), 3);
+throwable.Spawns.Add(new InvItem("ammo_iron_thorn", false, 2), new IntRange(0, max_floors), 3);
+throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 3);
+throwable.Spawns.Add(new InvItem("wand_lure", false, 3), new IntRange(0, max_floors), 3);
+throwable.Spawns.Add(new InvItem("wand_topsy_turvy", false, 2), new IntRange(0, max_floors), 3);
+throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 3);
 //orbs
 CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
 orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -102,5 +117,5 @@ poolSpawn.Spawns.Add(GetTeamMob("cacnea", "", "leech_seed", "needle_arm", "", ""
 poolSpawn.Spawns.Add(GetTeamMob("skorupi", "", "acupressure", "bug_bite", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wander_normal"), new IntRange(2, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("torkoal", "", "smokescreen", "lava_plume", "", "", new RandRange(25), "wander_normal"), new IntRange(0, 2), 10);
 poolSpawn.Spawns.Add(GetTeamMob("arbok", "", "screech", "glare", "crunch", "", new RandRange(25), "wander_normal"), new IntRange(2, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "thief", "", "", new RandRange(25), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "thief", "", "", new RandRange(25), "thief"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wander_normal"), new IntRange(1, max_floors), 5);

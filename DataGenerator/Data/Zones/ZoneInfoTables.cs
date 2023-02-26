@@ -97,8 +97,8 @@ namespace DataGenerator.Data
                 HashSet<string> exceptFor = new HashSet<string>();
                 foreach (string legend in IterateLegendaries())
                     exceptFor.Add(legend);
-                SpeciesItemElementSpawner<MapLoadContext> spawn = new SpeciesItemElementSpawner<MapLoadContext>(new IntRange(1), new RandRange(1), element, exceptFor);
-                BoxSpawner<MapLoadContext> box = new BoxSpawner<MapLoadContext>("box_light", spawn);
+                SpeciesItemElementSpawner<MapLoadContext> spawn = new SpeciesItemElementSpawner<MapLoadContext>(new IntRange(2), new RandRange(locs.Length), element, exceptFor);
+                BoxSpawner<MapLoadContext> box = new BoxSpawner<MapLoadContext>("box_heavy", spawn);
                 List<Loc> treasureLocs = new List<Loc>();
                 treasureLocs.AddRange(locs);
                 layout.GenSteps.Add(PR_SPAWN_ITEMS, new SpecificSpawnStep<MapLoadContext, MapItem>(box, treasureLocs));

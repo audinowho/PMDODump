@@ -5,7 +5,7 @@ itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
 
 //necessities
 CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
-necessities.SpawnRates.SetRange(8, new IntRange(0, max_floors));
+necessities.SpawnRates.SetRange(5, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
 
@@ -149,4 +149,4 @@ poolSpawn.Spawns.Add(GetTeamMob("bronzor", "", "psywave", "imprison", "", "", ne
 poolSpawn.Spawns.Add(GetTeamMob("wobbuffet", "", "mirror_coat", "safeguard", "", "", new RandRange(31), "wander_dumb"), new IntRange(8, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("braixen", "", "fire_spin", "lucky_chant", "", "", new RandRange(28), "wander_dumb"), new IntRange(4, max_floors), 10);
 //sleeping, holding choice scarf
-poolSpawn.Spawns.Add(GetTeamMob("espeon", "magic_bounce", "psychic", "", "", "", new RandRange(5), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("espeon", "magic_bounce", "psychic", "", "", "", new RandRange(50), "wander_normal"), new IntRange(0, max_floors), 10);

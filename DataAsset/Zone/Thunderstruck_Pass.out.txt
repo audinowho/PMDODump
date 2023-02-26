@@ -156,9 +156,9 @@ poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
 poolSpawn.Spawns.Add(GetTeamMob("electabuzz", "", "thunder_punch", "light_screen", "", "", new RandRange(29), "wander_dumb"), new IntRange(10, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("plusle", "", "electro_ball", "play_nice", "", "", new RandRange(30), "wander_dumb"), new IntRange(0, 10), 10);
+poolSpawn.Spawns.Add(GetTeamMob("plusle", "", "play_nice", "helping_hand", "electro_ball", "", new RandRange(30), "wander_dumb"), new IntRange(0, 10), 10);
 //Version Excl
-poolSpawn.Spawns.Add(GetTeamMob("minun", "", "electro_ball", "play_nice", "", "", new RandRange(30), "wander_dumb"), new IntRange(0, 10), 10);
+poolSpawn.Spawns.Add(GetTeamMob("minun", "", "play_nice", "helping_hand", "nuzzle", "", new RandRange(30), "wander_dumb"), new IntRange(0, 10), 10);
 //Version Excl
 poolSpawn.Spawns.Add(GetTeamMob("magnemite", "", "thunder_shock", "thunder_wave", "", "", new RandRange(26), "wander_dumb"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("raichu", "", "thunderbolt", "", "", "", new RandRange(28), "wander_dumb"), new IntRange(10, max_floors), 10);

@@ -1240,7 +1240,7 @@ namespace DataGenerator.Data
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Stair_Sensor_Arrow", 6), 6);
                 emitter.Layer = DrawLayer.Top;
                 tile.InteractWithTiles.Add(0, new CompassEvent(emitter, "stairs_go_up", "stairs_go_down", "stairs_secret_up", "stairs_secret_down", "rescue_point",
-                    "chest_full", "tile_boss", "sealed_door", "stairs_exit_up", "stairs_exit_down", "stairs_back_up", "stairs_back_down", "tile_switch"));
+                    "chest_full", "tile_boss", "sealed_door", "stairs_exit_up", "stairs_exit_down", "stairs_back_up", "stairs_back_down"));
             }
             else if (ii == 52)
             {

@@ -12932,7 +12932,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
-                skill.Data.OnActions.Add(0, new AddContextStateEvent(new Infiltrator()));
+                skill.Data.OnActions.Add(0, new AddContextStateEvent(new Infiltrator(new StringKey("MSG_INFILTRATOR_SKILL"))));
                 skill.Data.BeforeHits.Add(4, new IgnoreStatsEvent(true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
@@ -13756,7 +13756,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
-                skill.Data.OnActions.Add(0, new AddContextStateEvent(new Infiltrator()));
+                skill.Data.OnActions.Add(0, new AddContextStateEvent(new Infiltrator(new StringKey("MSG_INFILTRATOR_SKILL"))));
                 skill.Data.BeforeHits.Add(4, new IgnoreStatsEvent(true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
