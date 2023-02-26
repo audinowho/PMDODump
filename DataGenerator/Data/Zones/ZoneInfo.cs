@@ -1518,6 +1518,7 @@ namespace DataGenerator.Data
                         AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 8), new IntRange(0, max_floors)), new MapItem("food_apple"), new MapItem("food_grimy"));
                         AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
                         AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(3, max_floors)), new MapItem("machine_assembly_box"));
+                        AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(max_floors / 2, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
 
 
                         AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)),
@@ -2153,6 +2154,7 @@ namespace DataGenerator.Data
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)),
                         new MapItem("apricorn_brown"), new MapItem("apricorn_purple"), new MapItem("apricorn_red"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(3, max_floors)), new MapItem("machine_assembly_box"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(max_floors / 2, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
 
                     {
                         //monster houses
@@ -3055,6 +3057,7 @@ namespace DataGenerator.Data
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(6, 10), new IntRange(0, max_floors)), new MapItem("food_apple"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(6, 11), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(max_floors / 2, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
 
 
                     {
@@ -5463,6 +5466,7 @@ namespace DataGenerator.Data
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 8, 50), new IntRange(0, max_floors)), new MapItem("key", 1));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(3, max_floors)), new MapItem("machine_assembly_box"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(max_floors / 2, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)),
                         new MapItem("apricorn_blue"), new MapItem("apricorn_white"), new MapItem("apricorn_purple"), new MapItem("apricorn_red"));
@@ -7228,6 +7232,7 @@ namespace DataGenerator.Data
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(0, max_floors)), new MapItem("food_apple"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(8, 15), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(max_floors / 2, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
 
 
                     {
@@ -7988,6 +7993,7 @@ namespace DataGenerator.Data
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(8, 15), new IntRange(0, max_floors)), new MapItem("food_apple"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(max_floors / 2, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
 
 
                     {
@@ -8689,7 +8695,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("skorupi", "", "acupressure", "bug_bite", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wander_dumb_itemless"), new IntRange(2, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("torkoal", "", "smokescreen", "lava_plume", "", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(0, 2), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("arbok", "", "screech", "glare", "crunch", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(2, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "thief", "", "", new RandRange(25), "thief"), new IntRange(0, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "assurance", "", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(0, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wander_dumb_itemless"), new IntRange(1, max_floors), 5);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
@@ -8782,14 +8788,14 @@ namespace DataGenerator.Data
                         if (ii == 0)
                         {
                             AddRadiusDespawnData(layout, 100, 160);
-                            AddRadiusRespawnData(layout, 70, 80, 80);
-                            AddRadiusEnemySpawnData(layout, 120, new RandRange(70));
+                            AddRadiusRespawnData(layout, 70, 100, 80);
+                            AddRadiusEnemySpawnData(layout, 80, new RandRange(100));
                         }
                         else
                         {
                             AddRadiusDespawnData(layout, 100, 120);
-                            AddRadiusRespawnData(layout, 70, 160, 60);
-                            AddRadiusEnemySpawnData(layout, 80, new RandRange(160));
+                            AddRadiusRespawnData(layout, 70, 120, 60);
+                            AddRadiusEnemySpawnData(layout, 80, new RandRange(120));
                         }
 
                         //items
@@ -9312,6 +9318,7 @@ namespace DataGenerator.Data
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)),
                         new MapItem("apricorn_brown"), new MapItem("apricorn_white"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(max_floors / 2, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
 
                     {
                         //monster houses
@@ -10435,6 +10442,7 @@ namespace DataGenerator.Data
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 20), new IntRange(0, max_floors)), new MapItem("food_grimy"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(3, max_floors)), new MapItem("machine_assembly_box"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(max_floors / 2, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
 
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)),
