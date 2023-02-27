@@ -21,5 +21,6 @@
 * Fixed Feint to lift protection of Protect, Detect, and All-Protect, and increased its range
 * Foe-Seal Orb will disable a random move if the target hasn't used a move yet, favoring enabled moves
 * Added "speed" and "emote" text tags
+* Fixed: Minor offset error in Swing animation generation
 * Fixed issues with the loading and closing of the item spawn table summary menu
 * Introduced Cloudy weather.  Old weather under the name "cloudy" has been renamed to "clouds_overhead"
