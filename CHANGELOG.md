@@ -2,7 +2,6 @@
 
 * Introduced grass to dungeons
 * In-Dungeon Assembly is limited to all Pokemon recruited within the dungeon + what's brought in
-* All assembly members gain EXP from the adventure
 * Sky Drop added
 * Poison Trap reworked into a simple AoE
 * Lowered duration of partial trapping moves and increased their residual damage
@@ -20,7 +19,7 @@
 * Fixed: error when opening key doors
 * Fixed: error using Chip Away to break through barriers
 * Fixed Feint to lift protection of Protect, Detect, and All-Protect, and increased its range
-* Foe-Seal Orb will disable a random move if the target hasn't used a move yet, favoring enabled moves.
+* Foe-Seal Orb will disable a random move if the target hasn't used a move yet, favoring enabled moves
 * Added "speed" and "emote" text tags
 * Fixed issues with the loading and closing of the item spawn table summary menu
 * Introduced Cloudy weather.  Old weather under the name "cloudy" has been renamed to "clouds_overhead"
