@@ -729,7 +729,7 @@ namespace DataGenerator.Data
             else if (ii == 88)
             {
                 ability.Name = new LocalText("Download");
-                ability.Desc = new LocalText("Compares an opposing Pokémon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat— whichever will be more effective.");
+                ability.Desc = new LocalText("Compares an opposing Pokémon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat- whichever will be more effective.");
                 ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, false, true, 100, new DownloadEvent("mod_attack", "mod_special_attack")));
             }
             else if (ii == 89)
