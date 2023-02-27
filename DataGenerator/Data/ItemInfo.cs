@@ -416,6 +416,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats.");
                 item.Sprite = "Gummi_White";
                 item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.None, 2));
+                item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(20, true));
             }
             else if (ii == 76)
             {
