@@ -1156,7 +1156,16 @@ namespace DataGenerator.Data
 
                     formEntry.Released = hasFormeGraphics(index, entry.Forms.Count);
 
-                    entry.Forms.Add(formEntry);
+                    //vivillon meadow form should be considered standard
+                    if (index == 666)
+                    {
+                        if (entry.Forms.Count == 6)
+                            entry.Forms.Insert(0, formEntry);
+                        else
+                            entry.Forms.Add(formEntry);
+                    }
+                    else
+                        entry.Forms.Add(formEntry);
 
                     //alcremie needs more forms to represent ALL appearances
                     if (index == 869)

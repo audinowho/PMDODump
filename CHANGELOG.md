@@ -8,6 +8,7 @@
 * Removed TMs for Toxic, Ally Switch, Trick Room
 * Added TMs for Avalanche, Brine, Bullet seed, Dragon pulse, Endure, Focus punch, Iron tail, Natural gift, Nature power, Power up punch, Silver wind, Sky drop, Snatch, Whirlpool
 * A localized title for Chinese!
+* Made type-advantage VFX play on fast battlespeed
 * Flash now reveals part of the floor
 * Increased PP of Overheat, Protect, Will-o-Wisp
 * Fixed: items could be picked up after poison death
@@ -21,6 +22,7 @@
 * Fixed Feint to lift protection of Protect, Detect, and All-Protect, and increased its range
 * Foe-Seal Orb will disable a random move if the target hasn't used a move yet, favoring enabled moves
 * Added "speed" and "emote" text tags
+* Added new sprites from Spritebot
 * Fixed: Minor offset error in Swing animation generation
 * Fixed issues with the loading and closing of the item spawn table summary menu
 * Introduced Cloudy weather.  Old weather under the name "cloudy" has been renamed to "clouds_overhead"

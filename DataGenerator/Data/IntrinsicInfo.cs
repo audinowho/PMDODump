@@ -1812,8 +1812,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 246)
             {
-                ability.Name = new LocalText("**Ice Scales");
+                ability.Name = new LocalText("Ice Scales");
                 ability.Desc = new LocalText("The Pokémon is protected by ice scales, which halve the damage taken from special moves.");
+                ability.BeforeBeingHits.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 1, 2, new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 247)
             {

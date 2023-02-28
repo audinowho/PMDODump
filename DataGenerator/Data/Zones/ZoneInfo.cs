@@ -9281,8 +9281,8 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("swinub", "", "powder_snow", "mud_bomb", "", "", new RandRange(30), "wander_dumb"), new IntRange(0, 7), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("piloswine", "", "ice_fang", "earthquake", "", "", new RandRange(37), "wander_dumb"), new IntRange(11, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("jynx", "", "lovely_kiss", "draining_kiss", "ice_punch", "", new RandRange(36), "wander_dumb"), new IntRange(11, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("snorunt", "", "frost_breath", "", "", "", new RandRange(36), "wander_dumb"), new IntRange(6, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("vanillish", "", "icy_wind", "icicle_spear", "", "", new RandRange(35), "wander_dumb"), new IntRange(0, 11), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("snorunt", "ice_body", "frost_breath", "", "", "", new RandRange(36), "wander_dumb"), new IntRange(0, 11), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("frosmoth", "", "aurora_beam", "bug_buzz", "", "", new RandRange(35), "wander_dumb"), new IntRange(6, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("furret", "", "foresight", "follow_me", "rest", "", new RandRange(36), "wander_dumb"), new IntRange(2, 15), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("altaria", "", "dragon_breath", "", "", "", new RandRange(36), "wander_dumb"), new IntRange(11, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("snover", "", "ice_shard", "ingrain", "", "", new RandRange(36), "wander_dumb"), new IntRange(0, 11), 10);
@@ -12973,7 +12973,7 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                        //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 10, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
+                        //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 9, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
                         structure.BaseFloor = getSecretRoom("special_rby_fossil", -2, "craggy_coast_wall", "craggy_coast_floor", "craggy_coast_secondary", "", "fire", enemyList, new Loc(5, 11));
 
                         zone.Segments.Add(structure);
