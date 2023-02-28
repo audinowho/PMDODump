@@ -20,7 +20,7 @@ namespace DataGenerator.Data
 {
     public partial class ZoneInfo
     {
-        public const int MAX_ZONES = 50;
+        public const int MAX_ZONES = 55;
 
         public static void AddZoneData(params int[] zonesToAdd)
         {
@@ -1301,7 +1301,7 @@ namespace DataGenerator.Data
             {
                 #region THUNDERSTRUCK PASS
                 {
-                    zone.Name = new LocalText("Thunderstruck Pass");
+                    zone.Name = new LocalText("**Thunderstruck Pass");
                     zone.Rescues = 2;
                     zone.Level = 30;
                     zone.Rogue = RogueStatus.ItemTransfer;
@@ -2756,7 +2756,7 @@ namespace DataGenerator.Data
             else if (index == 7)
             {
                 #region CHAMPION'S ROAD
-                zone.Name = new LocalText("Champion's Road");
+                zone.Name = new LocalText("**Champion's Road");
                 zone.Rescues = 2;
                 zone.Level = 45;
                 zone.NoEXP = true;
@@ -3639,7 +3639,7 @@ namespace DataGenerator.Data
             {
                 #region MOONLIT COURTYARD
                 {
-                    zone.Name = new LocalText("Moonlit Courtyard");
+                    zone.Name = new LocalText("**Moonlit Courtyard");
                     zone.Rescues = 4;
                     zone.Level = 25;
                     zone.BagRestrict = 8;
@@ -5948,7 +5948,7 @@ namespace DataGenerator.Data
             {
                 #region SHIMMER BAY
                 {
-                    zone.Name = new LocalText("Shimmer Bay");
+                    zone.Name = new LocalText("**Shimmer Bay");
                     zone.Rescues = 2;
                     zone.Level = 30;
                     zone.BagRestrict = 0;
@@ -6461,7 +6461,7 @@ namespace DataGenerator.Data
             {
                 #region FERTILE VALLEY
                 {
-                    zone.Name = new LocalText("Fertile Valley");
+                    zone.Name = new LocalText("**Fertile Valley");
                     zone.Rescues = 2;
                     zone.Level = 15;
                     zone.Rogue = RogueStatus.ItemTransfer;
@@ -6972,7 +6972,7 @@ namespace DataGenerator.Data
             {
                 #region AMBUSH FOREST
                 {
-                    zone.Name = new LocalText("Ambush Forest");
+                    zone.Name = new LocalText("**Ambush Forest");
                     zone.Rescues = 2;
                     zone.Level = 30;
                     zone.Rogue = RogueStatus.ItemTransfer;
@@ -7736,7 +7736,7 @@ namespace DataGenerator.Data
             {
                 #region TREACHEROUS MOUNTAIN
                 {
-                    zone.Name = new LocalText("Treacherous Mountain");
+                    zone.Name = new LocalText("**Treacherous Mountain");
                     zone.Rescues = 2;
                     zone.Level = 40;
                     zone.Rogue = RogueStatus.ItemTransfer;
@@ -8560,7 +8560,7 @@ namespace DataGenerator.Data
             {
                 #region FORSAKEN DESERT
                 {
-                    zone.Name = new LocalText("Forsaken Desert");
+                    zone.Name = new LocalText("**Forsaken Desert");
                     zone.Rescues = 2;
                     zone.Level = 30;
                     zone.Rogue = RogueStatus.ItemTransfer;
@@ -9106,7 +9106,7 @@ namespace DataGenerator.Data
             else if (index == 17)
             {
                 #region SNOWBOUND PATH
-                zone.Name = new LocalText("Snowbound Path");
+                zone.Name = new LocalText("**Snowbound Path");
                 zone.Rescues = 2;
                 zone.Level = 40;
                 zone.NoEXP = true;
@@ -10182,7 +10182,7 @@ namespace DataGenerator.Data
             {
                 #region RELIC TOWER
 
-                zone.Name = new LocalText("Relic Tower");
+                zone.Name = new LocalText("**Relic Tower");
                 zone.Rescues = 2;
                 zone.Level = 35;
                 zone.BagRestrict = 8;
@@ -10793,7 +10793,7 @@ namespace DataGenerator.Data
             {
                 #region OVERGROWN WILDS
 
-                zone.Name = new LocalText("Overgrown Wilds");
+                zone.Name = new LocalText("**Overgrown Wilds");
                 zone.Rescues = 2;
                 zone.Level = 20;
                 zone.Rogue = RogueStatus.ItemTransfer;
@@ -11697,7 +11697,7 @@ namespace DataGenerator.Data
             {
                 #region TRICKSTER WOODS
                 {
-                    zone.Name = new LocalText("Trickster Woods");
+                    zone.Name = new LocalText("**Trickster Woods");
                     zone.Rescues = 2;
                     zone.Level = 20;
                     zone.TeamSize = 1;
@@ -12428,7 +12428,7 @@ namespace DataGenerator.Data
             {
                 #region LAVA FLOE ISLAND
                 {
-                    zone.Name = new LocalText("Lava Floe Island");
+                    zone.Name = new LocalText("**Lava Floe Island");
                     zone.Rescues = 2;
                     zone.Level = 20;
                     zone.TeamSize = 2;
@@ -12998,7 +12998,7 @@ namespace DataGenerator.Data
             {
                 #region COPPER QUARRY
                 {
-                    zone.Name = new LocalText("Copper Quarry");
+                    zone.Name = new LocalText("**Copper Quarry");
                     zone.Rescues = 2;
                     zone.Level = 25;
                     zone.Rogue = RogueStatus.ItemTransfer;
@@ -17818,6 +17818,121 @@ namespace DataGenerator.Data
 
                         zone.Segments.Add(floorSegment);
                     }
+                }
+                #endregion
+            }
+            else if (index == 54)
+            {
+                #region NEVERENDING TALE
+                {
+                    zone.Name = new LocalText("**The NeverEnding Tale");
+                    zone.Level = 60;
+                    zone.BagRestrict = 0;
+                    zone.MoneyRestrict = true;
+                    zone.TeamSize = 2;
+                    zone.Rescues = 2;
+                    zone.Rogue = RogueStatus.ItemTransfer;
+
+                    {
+                        int max_floors = 3;
+                        LayeredSegment floorSegment = new LayeredSegment();
+                        floorSegment.IsRelevant = true;
+                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("The NeverEnding Tale\nCh. {0}"), new Priority(-15)));
+
+                        //money
+                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                        //items
+                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                        //mobs
+                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                        poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                        floorSegment.ZoneSteps.Add(poolSpawn);
+
+                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                        tileSpawn.Priority = PR_RESPAWN_TRAP;
+                        floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                        for (int ii = 0; ii < max_floors; ii++)
+                        {
+                            GridFloorGen layout = new GridFloorGen();
+
+                            //Floor settings
+                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                            //Tilesets
+                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+
+                            //traps
+                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                            AddTrapsSteps(layout, new RandRange(6, 9));
+
+                            //money
+                            AddMoneyData(layout, new RandRange(2, 4));
+
+                            //enemies!
+                            AddRespawnData(layout, 3, 80);
+
+                            //enemies
+                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                            //items
+                            AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                            //construct paths
+                            {
+                                AddInitGridStep(layout, 4, 4, 10, 10);
+
+                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                path.RoomRatio = new RandRange(90);
+                                path.BranchRatio = new RandRange(0, 25);
+
+                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //cross
+                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
+                                //round
+                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
+                                path.GenericRooms = genericRooms;
+
+                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
+                                path.GenericHalls = genericHalls;
+
+                                layout.GenSteps.Add(PR_GRID_GEN, path);
+
+                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
+
+                            }
+
+                            AddDrawGridSteps(layout);
+
+                            AddStairStep(layout, false);
+
+                            AddWaterSteps(layout, "water", new RandRange(30));//water
+
+                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+                            floorSegment.Floors.Add(layout);
+                        }
+
+                        zone.Segments.Add(floorSegment);
+                    }
+
+                    zone.GroundMaps.Add("dev_room");
                 }
                 #endregion
             }
