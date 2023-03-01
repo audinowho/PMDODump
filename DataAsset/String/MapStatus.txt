@@ -3,8 +3,10 @@ Key		EN
 0000-blizzard-0001|data.Desc		
 0000-clear-0000|data.Name		Clear
 0000-clear-0001|data.Desc		The weather is clear.
+0000-clouds_overhead-0000|data.Name		Clouds Overhead
+0000-clouds_overhead-0001|data.Desc		
 0000-cloudy-0000|data.Name		Cloudy
-0000-cloudy-0001|data.Desc		
+0000-cloudy-0001|data.Desc		Moves of all types are weakened, except the Normal-type.
 0000-dark-0000|data.Name		Dark
 0000-dark-0001|data.Desc		
 0000-default_mapstatus-0000|data.Name		Default MapStatus
@@ -47,6 +49,8 @@ Key		EN
 0000-monster_mansion-0001|data.Desc		
 0000-move_ban-0000|data.Name		Move Ban
 0000-move_ban-0001|data.Desc		A move has been banned and can no longer be used.
+0000-mysterious_distortion-0000|data.Name		Mysterious Distortion
+0000-mysterious_distortion-0001|data.Desc		The space-time is distorted on this floor...
 0000-mysterious_force-0000|data.Name		Mysterious Force
 0000-mysterious_force-0001|data.Desc		A mysterious force prevents Orbs, Machines, and special items from working.
 0000-outlaw_clear_check-0000|data.Name		Outlaw Clear Check

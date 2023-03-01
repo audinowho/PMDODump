@@ -597,6 +597,8 @@ Key		EN
 0012-orb_trawl-0001|data.Desc		An orb that pulls unclaimed items on the floor to the user.
 0012-orb_weather-0000|data.Name		Weather Orb
 0012-orb_weather-0001|data.Desc		A climate-control orb that changes the dungeon floor's condition depending on the user's type.
+0013-egg_mystery-0000|data.Name		Mystery Egg
+0013-egg_mystery-0001|data.Desc		An egg with bizarre colors that have never been seen before. What could this egg be?
 0013-food_grimy-0000|data.Name		Grimy Food
 0013-food_grimy-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also inflict a variety of status problems because it's covered in filthy grime. Be careful of what you eat!
 0013-food_grimy_2-0000|data.Name		Grimy Food
@@ -636,7 +638,7 @@ Key		EN
 0013-machine_ability_capsule-0000|data.Name		Ability Capsule
 0013-machine_ability_capsule-0001|data.Desc		A capsule that allows a Pokémon to change its Abilities when used.
 0013-machine_assembly_box-0000|data.Name		Assembly Box
-0013-machine_assembly_box-0001|data.Desc		A marvelous box that lets the user add any Pokémon from the assembly to the team.
+0013-machine_assembly_box-0001|data.Desc		A marvelous box that lets the user add a Pokémon from the assembly to the team. It only works for Pokémon that joined the current dungeon.
 0013-machine_recall_box-0000|data.Name		Recall Box
 0013-machine_recall_box-0001|data.Desc		A marvelous box that lets the user recall any move they've learned in the past.
 0013-machine_storage_box-0000|data.Name		Storage Box

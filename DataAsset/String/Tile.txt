@@ -13,6 +13,8 @@ Key		EN
 0000-sealed_block-0001|data.Desc		
 0000-sealed_door-0000|data.Name		Sealed Door
 0000-sealed_door-0001|data.Desc		
+0000-sealed_guild-0000|data.Name		Guild Gate
+0000-sealed_guild-0001|data.Desc		
 0000-sign-0000|data.Name		Sign
 0000-sign-0001|data.Desc		
 0000-stairs_back_down-0000|data.Name		Stairs
@@ -31,20 +33,28 @@ Key		EN
 0000-stairs_secret_down-0001|data.Desc		Stairs leading to an unknown location.
 0000-stairs_secret_up-0000|data.Name		Secret Stairs
 0000-stairs_secret_up-0001|data.Desc		Stairs leading to an unknown location.
-0000-tile_boss-0000|data.Name		Signal Area
+0000-tile_boss-0000|data.Name		Sigil Site
 0000-tile_boss-0001|data.Desc		A mysterious signal that calls Pokémon to the area.
 0000-tile_compass-0000|data.Name		Compass Tile
 0000-tile_compass-0001|data.Desc		A tile that shows the way to important locations on the floor.
-0000-tile_evo-0000|data.Name		Luminous Area
+0000-tile_evo-0000|data.Name		Luminous Site
 0000-tile_evo-0001|data.Desc		A mysterious area that allows Pokémon to evolve.
+0000-tile_fairy_ring-0000|data.Name		Fairy Ring
+0000-tile_fairy_ring-0001|data.Desc		A mysterious energy permeates the area...
+0000-tile_mystery-0000|data.Name		Mystery Site
+0000-tile_mystery-0001|data.Desc		???
 0000-tile_rescue-0000|data.Name		Rescue Point
 0000-tile_rescue-0001|data.Desc		It's the rescue spot where your friend's team went down! Send an A-OK mail to rescue the defeated team.
 0000-tile_reset-0000|data.Name		Reset Tile
 0000-tile_reset-0001|data.Desc		A switch that resets the floor, returning all items, traps, and wild Pokémon to their original positions.
 0000-tile_switch-0000|data.Name		Switch Tile
 0000-tile_switch-0001|data.Desc		A switch that opens various blocked passageways found on the floor.
+0000-tile_switch_sync-0000|data.Name		Switch Tile
+0000-tile_switch_sync-0001|data.Desc		A switch that opens various blocked passageways found on the floor.
 0000-tile_training-0000|data.Name		Training Switch
 0000-tile_training-0001|data.Desc		Stepping on this tile gives the Trained status to the party.
+0000-tile_updraft-0000|data.Name		Updraft
+0000-tile_updraft-0001|data.Desc		A mysterious wind current is blowing upwards...
 0000-tile_wonder-0000|data.Name		Wonder Tile
 0000-tile_wonder-0001|data.Desc		An odd floor tile seen in many dungeons. Triggering it resets nearby Pokémon's stats if they are boosted or reduced.
 0000-trap_apple-0000|data.Name		Apple Trap

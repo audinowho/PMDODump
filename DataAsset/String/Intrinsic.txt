@@ -176,7 +176,7 @@ Key		EN
 0087-dry_skin-0000|data.Name		Dry Skin
 0087-dry_skin-0001|data.Desc		Restores HP in rain or when hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves.
 0088-download-0000|data.Name		Download
-0088-download-0001|data.Desc		Compares an opposing Pokémon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat— whichever will be more effective.
+0088-download-0001|data.Desc		Compares an opposing Pokémon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat- whichever will be more effective.
 0089-iron_fist-0000|data.Name		Iron Fist
 0089-iron_fist-0001|data.Desc		Powers up punching moves.
 0090-poison_heal-0000|data.Name		Poison Heal
@@ -402,7 +402,7 @@ Key		EN
 0200-steelworker-0000|data.Name		Steelworker
 0200-steelworker-0001|data.Desc		Powers up Steel-type moves.
 0201-berserk-0000|data.Name		Berserk
-0201-berserk-0001|data.Desc		Boosts the Pokémon's Sp. Atk stat when it takes a hit that causes its HP to become half or less.
+0201-berserk-0001|data.Desc		Boosts the Pokémon's Sp. Atk stat when its HP is half or less.
 0202-slush_rush-0000|data.Name		Slush Rush
 0202-slush_rush-0001|data.Desc		Boosts the Pokémon's Speed stat in a hailstorm.
 0203-long_reach-0000|data.Name		Long Reach

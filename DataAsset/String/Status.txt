@@ -1,4 +1,6 @@
 Key		EN
+0000-all_protect-0000|data.Name		All Protect
+0000-all_protect-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns.
 0000-aqua_ring-0000|data.Name		Aqua Ring
 0000-aqua_ring-0001|data.Desc		The Pokémon is surrounded by a veil of water that gradually restores its HP. This status wears off after a few turns.
 0000-area_counter-0000|data.Name		Area Counter
@@ -50,7 +52,7 @@ Key		EN
 0000-destiny_bond-0000|data.Name		Destiny Bond
 0000-destiny_bond-0001|data.Desc		Any damage done to this Pokémon from direct attacks is also done to the target of the Destiny Bond. This status wears off after a few turns, or if the Pokémon moves.
 0000-detect-0000|data.Name		Detect
-0000-detect-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.
+0000-detect-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns.
 0000-digging-0000|data.Name		Digging
 0000-digging-0001|data.Desc		The Pokémon is digging underground and can avoid most moves and obstacles. It will resurface in a few turns, or when it chooses to attack.
 0000-disable-0000|data.Name		Disable
@@ -211,6 +213,10 @@ Key		EN
 0000-shadow_force-0001|data.Desc		The Pokémon vanished completely and can avoid moves and obstacles. Its Movement Speed is also boosted. It will reappear in a few turns, or when it chooses to attack.
 0000-shopkeeper-0000|data.Name		Shopkeeper
 0000-shopkeeper-0001|data.Desc		
+0000-sky_drop_target-0000|data.Name		Sky Drop
+0000-sky_drop_target-0001|data.Desc		The Pokémon is being held in the sky and is rendered incapable of any action. Most moves will miss the Pokémon during this time.
+0000-sky_drop_user-0000|data.Name		Sky Drop
+0000-sky_drop_user-0001|data.Desc		The Pokémon is holding its target in the sky and can avoid most moves. It will drop back down on the next turn.
 0000-sleep-0000|data.Name		Asleep
 0000-sleep-0001|data.Desc		The Pokémon is asleep and incapable of any action until it wakes up. This status wears off after a few turns, or if the Pokémon is attacked.
 0000-sleepless-0000|data.Name		Sleepless
