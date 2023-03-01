@@ -1,5 +1,6 @@
 # 0.7.0 Changes #
 
+* Released new dungeon: Flyaway Cliffs
 * Introduced grass to dungeons
 * In-Dungeon Assembly is limited to all Pokemon recruited within the dungeon + what's brought in
 * Sky Drop added
