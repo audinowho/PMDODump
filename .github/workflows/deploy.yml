@@ -38,7 +38,7 @@ jobs:
       - name: Zip Mac PMDOSetup
         run: cd publish/osx-x64/;zip -r setup-osx-x64.zip PMDOSetup/
       - name: Set Version
-        run: echo "::set-output name=version::$(sed -En 's,<\AssemblyVersion>(.+)</AssemblyVersion>,\1,p' DataGenerator/DataGenerator.csproj)"
+        run: echo "version=$(sed -En 's,<\AssemblyVersion>(.+)</AssemblyVersion>,\1,p' DataGenerator/DataGenerator.csproj)" >> $GITHUB_OUTPUT
         id: version
       - name: Create Release
         uses: actions/create-release@v1
