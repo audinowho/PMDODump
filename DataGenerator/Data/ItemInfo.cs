@@ -2114,7 +2114,7 @@ namespace DataGenerator.Data
             else if (ii == 286)
             {
                 item.Name = new LocalText("Foe-Seal Orb");
-                item.Desc = new LocalText("An orb that seals the a move known by the target. It affects all enemies up to 5 tiles away.");
+                item.Desc = new LocalText("An orb that seals the last-used move of all enemies. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_DarkBlue";
                 item.UseEvent.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot", false, true));
                 item.UseAction = new AreaAction();
