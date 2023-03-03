@@ -2117,15 +2117,29 @@ namespace DataGenerator.Data
                 zone.Segments.Add(structure);
             }
 
+            bool repeated = false;
             bool continuous = false;
 
-            if (continuous)
+            if (repeated)
+            {
+                SingularSegment structure = new SingularSegment(-1);
+
+                LoadGen layout = new LoadGen();
+                MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                startGen.MapID = "test_tiles";
+                layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                structure.BaseFloor = layout;
+
+                zone.Segments.Add(structure);
+            }
+            else if (continuous)
             {
                 SingularSegment structure = new SingularSegment(100);
                 #region TILESET TESTS
                 StairsFloorGen layout = new StairsFloorGen();
 
-                AddFloorData(layout, "A07. Summit.ogg", -1, Map.SightRange.Clear, Map.SightRange.Clear);
+                AddFloorData(layout, "B02. Demonstration 2.ogg", -1, Map.SightRange.Clear, Map.SightRange.Clear);
 
                 string[] level = {
                             "#######.#######",
@@ -2235,14 +2249,14 @@ namespace DataGenerator.Data
                                 case 44: SetTestTileData(tile, "mt_faraway_4_wall", "mt_faraway_4_floor", "mt_faraway_4_secondary"); break;
                                 case 45: SetTestTileData(tile, "northern_range_2_wall", "northern_range_2_floor", "northern_range_2_secondary"); break;
                                 case 46: SetTestTileData(tile, "pitfall_valley_1_wall", "pitfall_valley_1_floor", "pitfall_valley_1_secondary"); break;
-                                case 47: SetTestTileData(tile, "joyous_tower_wall", "joyous_tower_floor", "joyous_tower_secondary"); break;
-                                case 48: SetTestTileData(tile, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary"); break;
-                                case 49: SetTestTileData(tile, "purity_forest_4_wall", "purity_forest_4_floor", "purity_forest_4_secondary"); break;
-                                case 50: SetTestTileData(tile, "purity_forest_6_wall", "purity_forest_6_floor", "purity_forest_6_secondary"); break;
-                                case 51: SetTestTileData(tile, "purity_forest_7_wall", "purity_forest_7_floor", "purity_forest_7_secondary"); break;
-                                case 52: SetTestTileData(tile, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary"); break;
-                                case 53: SetTestTileData(tile, "purity_forest_9_wall", "purity_forest_9_floor", "purity_forest_9_secondary"); break;
-                                case 54: SetTestTileData(tile, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary"); break;
+                                case 47: SetTestTileData(tile, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary"); break;
+                                case 48: SetTestTileData(tile, "joyous_tower_wall", "joyous_tower_floor", "joyous_tower_secondary"); break;
+                                case 49: SetTestTileData(tile, "purity_forest_2_wall", "purity_forest_2_floor", "purity_forest_2_secondary"); break;
+                                case 50: SetTestTileData(tile, "purity_forest_4_wall", "purity_forest_4_floor", "purity_forest_4_secondary"); break;
+                                case 51: SetTestTileData(tile, "purity_forest_6_wall", "purity_forest_6_floor", "purity_forest_6_secondary"); break;
+                                case 52: SetTestTileData(tile, "purity_forest_7_wall", "purity_forest_7_floor", "purity_forest_7_secondary"); break;
+                                case 53: SetTestTileData(tile, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary"); break;
+                                case 54: SetTestTileData(tile, "purity_forest_9_wall", "purity_forest_9_floor", "purity_forest_9_secondary"); break;
                                 case 55: SetTestTileData(tile, "murky_cave_wall", "murky_cave_floor", "murky_cave_secondary"); break;
                                 case 56: SetTestTileData(tile, "western_cave_1_wall", "western_cave_1_floor", "western_cave_1_secondary"); break;
                                 case 57: SetTestTileData(tile, "western_cave_2_wall", "western_cave_2_floor", "western_cave_2_secondary"); break;
@@ -2288,11 +2302,11 @@ namespace DataGenerator.Data
                                 case 97: SetTestTileData(tile, "unused_brine_cave_wall", "unused_brine_cave_floor", "unused_brine_cave_secondary"); break;
                                 case 98: SetTestTileData(tile, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary"); break;
                                 case 99: SetTestTileData(tile, "hidden_highland_wall", "hidden_highland_floor", "hidden_highland_secondary"); break;
-                                case 100: SetTestTileData(tile, "southern_jungle_wall", "southern_jungle_floor", "southern_jungle_secondary"); break;
-                                case 101: SetTestTileData(tile, "temporal_tower_wall", "temporal_tower_floor", "temporal_tower_secondary"); break;
-                                case 102: SetTestTileData(tile, "temporal_spire_wall", "temporal_spire_floor", "temporal_spire_secondary"); break;
-                                case 103: SetTestTileData(tile, "temporal_unused_wall", "temporal_unused_floor", "temporal_unused_secondary"); break;
-                                case 104: SetTestTileData(tile, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary"); break;
+                                case 100: SetTestTileData(tile, "temporal_tower_wall", "temporal_tower_floor", "temporal_tower_secondary"); break;
+                                case 101: SetTestTileData(tile, "temporal_spire_wall", "temporal_spire_floor", "temporal_spire_secondary"); break;
+                                case 102: SetTestTileData(tile, "temporal_unused_wall", "temporal_unused_floor", "temporal_unused_secondary"); break;
+                                case 103: SetTestTileData(tile, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary"); break;
+                                case 104: SetTestTileData(tile, "southern_jungle_wall", "southern_jungle_floor", "southern_jungle_secondary"); break;
                                 case 105: SetTestTileData(tile, "concealed_ruins_wall", "concealed_ruins_floor", "concealed_ruins_secondary"); break;
                                 case 106: SetTestTileData(tile, "surrounded_sea_wall", "surrounded_sea_floor", "surrounded_sea_secondary"); break;
                                 case 107: SetTestTileData(tile, "miracle_sea_wall", "miracle_sea_floor", "miracle_sea_secondary"); break;
