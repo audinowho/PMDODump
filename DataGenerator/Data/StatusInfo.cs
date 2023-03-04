@@ -1016,6 +1016,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FUTURE_SIGHT_START"), true));
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
+                effects.Add(new WaitAnimsOverEvent());
                 effects.Add(new BattleLogOwnerEvent(new StringKey("MSG_FUTURE_SIGHT_ATTACK")));
                 status.StatusStates.Set(new HPState());
                 FiniteAreaEmitter emitter = new FiniteAreaEmitter(new AnimData("U_Turn_Out", 2));

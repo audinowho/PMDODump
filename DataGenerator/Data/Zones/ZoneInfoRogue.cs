@@ -2083,7 +2083,7 @@ namespace DataGenerator.Data
                 else if (ii < 19)
                 {
                 }
-                else if (ii < 22)
+                else if (ii < 21)
                     AddGrassSteps(layout, new RandRange(0), new IntRange(3, 9), new RandRange(50));
 
                 //wonder tiles
