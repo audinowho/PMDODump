@@ -81,7 +81,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Poison Trap");
                 fileName = Text.Sanitize(RogueEssence.Dev.DevHelper.ReverseEndian(tile.Name.DefaultText).Replace("*", "")).ToLower();
-                tile.Desc = new LocalText("Triggering this trap will shoot poison spikes in all directions. Pokémon hit will become poisoned.");
+                tile.Desc = new LocalText("Triggering this trap will release spikes that poison nearby Pokémon.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Trap;
                 tile.Anim = new ObjAnimData("Trap_Poison", 1);

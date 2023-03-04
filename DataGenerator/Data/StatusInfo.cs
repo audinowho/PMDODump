@@ -249,7 +249,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new StackState());
                 status.StatusStates.Set(new StatChangeState(Stat.Speed));
                 status.StatusStates.Set(new TransferStatusState());
-                status.BeforeStatusAdds.Add(0, new StringStackCheck(-3, 3, new StringKey("MSG_SPEED_BUFF_NO_MORE"), new StringKey("MSG_SPEED_BUFF_NO_LESS")));
+                status.BeforeStatusAdds.Add(1, new StringStackCheck(-3, 3, new StringKey("MSG_SPEED_BUFF_NO_MORE"), new StringKey("MSG_SPEED_BUFF_NO_LESS")));
                 status.StatusStates.Set(new CountDownState(20));
                 status.OnStatusAdds.Add(0, new ShowStatChangeEvent("DUN_Speed_Up", "DUN_Speed_Down", "Stat_Blue_Ring", "Stat_Blue_Line"));
                 status.OnStatusAdds.Add(0, new ReportSpeedEvent(true));
@@ -269,7 +269,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new StackState());
                 status.StatusStates.Set(new StatChangeState(Stat.Attack));
                 status.StatusStates.Set(new TransferStatusState());
-                status.BeforeStatusAdds.Add(0, new StatStackCheck(-6, 6, Stat.Attack));
+                status.BeforeStatusAdds.Add(1, new StatStackCheck(-6, 6, Stat.Attack));
                 status.OnStatusAdds.Add(0, new ShowStatChangeEvent("DUN_Attack_Up", "DUN_Atk_Down", "Stat_Red_Ring", "Stat_Red_Line"));
                 status.OnStatusAdds.Add(0, new ReportStatEvent(Stat.Attack));
                 status.OnStatusAdds.Add(0, new RemoveStackZeroEvent());
@@ -288,7 +288,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new StackState());
                 status.StatusStates.Set(new StatChangeState(Stat.Defense));
                 status.StatusStates.Set(new TransferStatusState());
-                status.BeforeStatusAdds.Add(0, new StatStackCheck(-6, 6, Stat.Defense));
+                status.BeforeStatusAdds.Add(1, new StatStackCheck(-6, 6, Stat.Defense));
                 status.OnStatusAdds.Add(0, new ShowStatChangeEvent("DUN_Stat_Up_3", "DUN_Defense_Down", "Stat_Green_Ring", "Stat_Green_Line"));
                 status.OnStatusAdds.Add(0, new ReportStatEvent(Stat.Defense));
                 status.OnStatusAdds.Add(0, new RemoveStackZeroEvent());
@@ -307,7 +307,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new StackState());
                 status.StatusStates.Set(new StatChangeState(Stat.MAtk));
                 status.StatusStates.Set(new TransferStatusState());
-                status.BeforeStatusAdds.Add(0, new StatStackCheck(-6, 6, Stat.MAtk));
+                status.BeforeStatusAdds.Add(1, new StatStackCheck(-6, 6, Stat.MAtk));
                 status.OnStatusAdds.Add(0, new ShowStatChangeEvent("DUN_SpAtk_Up", "DUN_SpAtk_Down", "Stat_Purple_Ring", "Stat_Purple_Line"));
                 status.OnStatusAdds.Add(0, new ReportStatEvent(Stat.MAtk));
                 status.OnStatusAdds.Add(0, new RemoveStackZeroEvent());
@@ -326,7 +326,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new StackState());
                 status.StatusStates.Set(new StatChangeState(Stat.MDef));
                 status.StatusStates.Set(new TransferStatusState());
-                status.BeforeStatusAdds.Add(0, new StatStackCheck(-6, 6, Stat.MDef));
+                status.BeforeStatusAdds.Add(1, new StatStackCheck(-6, 6, Stat.MDef));
                 status.OnStatusAdds.Add(0, new ShowStatChangeEvent("DUN_SpDef_Up", "DUN_SpDef_Down", "Stat_White_Ring", "Stat_White_Line"));
                 status.OnStatusAdds.Add(0, new ReportStatEvent(Stat.MDef));
                 status.OnStatusAdds.Add(0, new RemoveStackZeroEvent());
@@ -345,7 +345,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new StackState());
                 status.StatusStates.Set(new StatChangeState(Stat.HitRate));
                 status.StatusStates.Set(new TransferStatusState());
-                status.BeforeStatusAdds.Add(0, new StatStackCheck(-6, 6, Stat.HitRate));
+                status.BeforeStatusAdds.Add(1, new StatStackCheck(-6, 6, Stat.HitRate));
                 status.OnStatusAdds.Add(0, new ShowStatChangeEvent("DUN_Stat_Up_3", "DUN_Stat_Down", "Stat_Pink_Ring", "Stat_Pink_Line"));
                 status.OnStatusAdds.Add(0, new ReportStatEvent(Stat.HitRate));
                 status.OnStatusAdds.Add(0, new RemoveStackZeroEvent());
@@ -363,7 +363,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new StackState());
                 status.StatusStates.Set(new StatChangeState(Stat.DodgeRate));
                 status.StatusStates.Set(new TransferStatusState());
-                status.BeforeStatusAdds.Add(0, new StatStackCheck(-6, 6, Stat.DodgeRate));
+                status.BeforeStatusAdds.Add(1, new StatStackCheck(-6, 6, Stat.DodgeRate));
                 status.OnStatusAdds.Add(0, new ShowStatChangeEvent("DUN_Evasion_Up", "DUN_Evasion_Down", "Stat_Yellow_Ring", "Stat_Yellow_Line"));
                 status.OnStatusAdds.Add(0, new ReportStatEvent(Stat.DodgeRate));
                 status.OnStatusAdds.Add(0, new RemoveStackZeroEvent());
@@ -378,7 +378,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new StackState());
                 status.StatusStates.Set(new StatChangeState(Stat.Range));
                 status.StatusStates.Set(new TransferStatusState());
-                status.BeforeStatusAdds.Add(0, new StatStackCheck(-3, 3, Stat.Range));
+                status.BeforeStatusAdds.Add(1, new StatStackCheck(-3, 3, Stat.Range));
                 status.StatusStates.Set(new CountDownState(20));
                 status.OnStatusAdds.Add(0, new ShowStatChangeEvent("DUN_Evasion_Up", "DUN_Evasion_Down", "Stat_Pink_Ring", "Stat_Pink_Line"));
                 status.OnStatusAdds.Add(0, new ReportStatEvent(Stat.Range));
