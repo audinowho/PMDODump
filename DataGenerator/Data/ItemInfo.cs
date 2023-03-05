@@ -1406,31 +1406,19 @@ namespace DataGenerator.Data
             {
                 item.Name = new LocalText("Perfect Apricorn");
                 item.Desc = new LocalText("A beautiful apricorn with an indescribable scent. It can be tossed at wild Pokémon as a gift to recruit them into the team without any hesitation.");
-                item.Sprite = "Apricorn_Yellow";
+                item.Sprite = "Apricorn_White";
                 item.Price = 50000;
                 item.UseEvent.OnHits.Add(0, new FlatRecruitmentEvent(1000));
                 item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
             else if (ii == 220)
             {
-                item.Name = new LocalText("Path Wand");
-                item.Desc = new LocalText("A wand to be waved at terrain features. It clears obstacles to form a path directly in front of the user.");
-                item.Sprite = "Wand_Purple";
-                item.Price = 5;
-                item.UseAction = new ProjectileAction();
-                ((ProjectileAction)item.UseAction).CharAnimData = new CharAnimFrameType(42);//Rotate
-                ((ProjectileAction)item.UseAction).Range = 8;
-                ((ProjectileAction)item.UseAction).Speed = 12;
-                ((ProjectileAction)item.UseAction).HitTiles = true;
-                ((ProjectileAction)item.UseAction).Anim = new AnimData("Confuse_Ray", 2);
-                item.UseAction.TargetAlignments = (Alignment.Foe | Alignment.Friend);
-                item.Explosion.TargetAlignments = (Alignment.Foe | Alignment.Friend);
-                BattleFX itemFX = new BattleFX();
-                itemFX.Sound = "DUN_Throw_Start";
-                item.UseAction.PreActions.Add(itemFX);
-                item.UseAction.ActionFX.Sound = "DUN_Blowback_Orb";
-                item.UseEvent.OnHitTiles.Add(0, new RemoveTrapEvent());
-                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", new SingleEmitter(new AnimData("Puff_Brown", 3)), "wall", "water", "lava", "pit"));
+                item.Name = new LocalText("Glittery Apricorn");
+                item.Desc = new LocalText("An apricorn that can be tossed at shiny Pokémon as a gift for a high chance to recruit them into the team.");
+                item.Sprite = "Apricorn_Black";
+                item.Price = 500;
+                item.UseEvent.OnHits.Add(0, new SkinRecruitmentEvent());
+                item.UseEvent.OnHits.Add(0, new RecruitmentEvent(new BattleScriptEvent("AllyInteract")));
             }
             else if (ii == 221)
             {
@@ -1590,6 +1578,27 @@ namespace DataGenerator.Data
                 item.Price = 5;
                 item.UseEvent.OnHits.Add(0, new StatusBattleEvent("invisible", true, false));
                 item.UseEvent.HitFX.Sound = "DUN_Invisible";
+            }
+            else if (ii == 237)
+            {
+                item.Name = new LocalText("Path Wand");
+                item.Desc = new LocalText("A wand to be waved at terrain features. It clears obstacles to form a path directly in front of the user.");
+                item.Sprite = "Wand_Purple";
+                item.Price = 5;
+                item.UseAction = new ProjectileAction();
+                ((ProjectileAction)item.UseAction).CharAnimData = new CharAnimFrameType(42);//Rotate
+                ((ProjectileAction)item.UseAction).Range = 8;
+                ((ProjectileAction)item.UseAction).Speed = 12;
+                ((ProjectileAction)item.UseAction).HitTiles = true;
+                ((ProjectileAction)item.UseAction).Anim = new AnimData("Confuse_Ray", 2);
+                item.UseAction.TargetAlignments = (Alignment.Foe | Alignment.Friend);
+                item.Explosion.TargetAlignments = (Alignment.Foe | Alignment.Friend);
+                BattleFX itemFX = new BattleFX();
+                itemFX.Sound = "DUN_Throw_Start";
+                item.UseAction.PreActions.Add(itemFX);
+                item.UseAction.ActionFX.Sound = "DUN_Blowback_Orb";
+                item.UseEvent.OnHitTiles.Add(0, new RemoveTrapEvent());
+                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", new SingleEmitter(new AnimData("Puff_Brown", 3)), "wall", "water", "lava", "pit"));
             }
             else if (ii == 250)
             {
@@ -3679,7 +3688,7 @@ namespace DataGenerator.Data
                     item.ItemStates.Set(new AmmoState());
                     item.MaxStack = 9;
                 }
-                else if (ii < 220)//apricorn
+                else if (ii < 221)//apricorn
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();

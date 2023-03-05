@@ -1301,6 +1301,14 @@ namespace DataGenerator.Data
                     entry.Height = Convert.ToDouble(reader["height"].ToString()) / 10;
                     entry.Weight = Convert.ToDouble(reader["weight"].ToString()) / 10;
                     entry.ExpYield = Convert.ToInt32(reader["base_experience"].ToString());
+
+                    //special case
+                    if (index == 113) //chansey
+                        entry.ExpYield = 250;
+                    else if (index == 242) // blissey
+                        entry.ExpYield = 255;
+                    else if (index == 531) // audino
+                        entry.ExpYield = 500;
                     read++;
                 }
             }
@@ -1566,6 +1574,82 @@ namespace DataGenerator.Data
 
         public static int MapJoinRate(int dexIndex, MonsterData[] totalEntries)
         {
+            //special cases
+            switch (dexIndex)
+            {
+                //eeveelutions
+                case 134:
+                case 135:
+                case 136:
+                case 196:
+                case 197:
+                case 470:
+                case 471:
+                case 700:
+                    return -60;
+                //pseudolegend stage 1
+                case 147:
+                case 246:
+                case 371:
+                case 374:
+                case 443:
+                case 633:
+                case 704:
+                case 782:
+                case 885:
+                    return -5;
+                //pseudolegend stage 2
+                case 148:
+                case 247:
+                case 372:
+                case 375:
+                case 444:
+                case 634:
+                case 705:
+                case 783:
+                case 886:
+                    return -40;
+                //pseudolegend final
+                case 149:
+                case 248:
+                case 373:
+                case 376:
+                case 445:
+                case 635:
+                case 706:
+                case 784:
+                case 887:
+                    return -100;
+                //wandering legendaries
+                case 243:
+                case 244:
+                case 245:
+                    return -40;
+                //wandering unobtainables
+                case 251://celebi
+                case 647://keldeo
+                case 719://diancie
+                    return -50;
+                //UBs
+                case 793:
+                case 794:
+                case 795:
+                case 796:
+                case 797:
+                case 798:
+                case 799:
+                case 804:
+                case 805:
+                case 806:
+                    return -120;
+                case 803:
+                    return -80;
+                //heatran
+                case 485:
+                    return -60;
+
+            }
+
             MonsterData entry = totalEntries[dexIndex];
             int evoCount = 0;
             foreach (PromoteBranch evo in entry.Promotions)

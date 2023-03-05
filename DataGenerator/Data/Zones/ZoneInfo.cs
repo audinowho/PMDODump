@@ -11404,7 +11404,8 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("yanma", "speed_boost", "sonic_boom", "", "", "", new RandRange(21), "wander_dumb"), new IntRange(0, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("duskull", "", "shadow_sneak", "astonish", "", "", new RandRange(21), "wander_dumb"), new IntRange(0, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("servine", "", "leaf_tornado", "", "", "", new RandRange(21), "wander_dumb"), new IntRange(0, max_floors), 10);
-                    
+                    poolSpawn.Spawns.Add(GetTeamMob("seedot", "", "harden", "nature_power", "", "", new RandRange(17), "wander_dumb"), new IntRange(0, max_floors), 10);
+
                     poolSpawn.Spawns.Add(GetTeamMob("pineco", "", "bug_bite", "take_down", "", "", new RandRange(21), "turret"), new IntRange(0, max_floors), 10);
                     
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
@@ -11470,7 +11471,7 @@ namespace DataGenerator.Data
                         AddFloorData(layout, "B22. Overgrown Wilds.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                         //Tilesets
-                        AddSpecificTextureData(layout, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "tall_grass_dark", "grass");
+                        AddSpecificTextureData(layout, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "tall_grass_dark", "bug");
 
                         AddWaterSteps(layout, "water", new RandRange(20));//water
 

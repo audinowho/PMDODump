@@ -1,5 +1,6 @@
 # 0.7.1 Changes #
 
+* Normal foes will not use self-boosting moves more than 4 tiles away unless attacked first
 * Fixed interaction box in Base Camp that was supposed to be disabled.
 * Fixed graphics on a certain floor of Guildmaster Trail
 * Fixed: protection from stat drops only worked against dropping stats from neutral
