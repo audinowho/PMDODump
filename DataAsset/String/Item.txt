@@ -243,6 +243,8 @@ Key		EN
 0008-apricorn_blue-0001|data.Desc		An apricorn that can be tossed at Water- or Ice-type Pokémon as a gift for a high chance to recruit them into the team.
 0008-apricorn_brown-0000|data.Name		Brown Apricorn
 0008-apricorn_brown-0001|data.Desc		An apricorn that can be tossed at Fighting-, Rock-, or Ground-type Pokémon as a gift for a high chance to recruit them into the team.
+0008-apricorn_glittery-0000|data.Name		Glittery Apricorn
+0008-apricorn_glittery-0001|data.Desc		An apricorn that can be tossed at shiny Pokémon as a gift for a high chance to recruit them into the team.
 0008-apricorn_green-0000|data.Name		Green Apricorn
 0008-apricorn_green-0001|data.Desc		An apricorn that can be tossed at Grass- or Bug-type Pokémon as a gift for a high chance to recruit them into the team.
 0008-apricorn_perfect-0000|data.Name		Perfect Apricorn

@@ -3,8 +3,8 @@ base_camp-0000|data.Name		Base Camp	Camp de Base	Hauptlager	Campamento Base
 base_camp_2-0000|data.Name		Base Town			
 canyon_camp-0000|data.Name		Ravine Camp		Schlucht-Lager	Campamento Desfiladero
 cliff_camp-0000|data.Name		Cliff Camp	Camp de Falaise	Klippen-Lager	Campamento Acantilado
-dev_room-0000|data.Name		Developer Room			Cabaña del Maestro
-final_stop-0000|data.Name		Path to the Summit			
+dev_room-0000|data.Name		Developer Room			
+final_stop-0000|data.Name		Path to the Summit	Chemin du Sommet	Pfad zum Gipfel	Camino a la Cima
 forest_camp-0000|data.Name		Forest Camp	Camp Fôrestier	Wald-Lager	Campamento Bosque
 garden_end-0000|data.Name		Secret Garden Grove		Geheimgarten-Hain	
 guild_hut-0000|data.Name		Guildmaster Hut			Cabaña del Maestro
@@ -14,6 +14,6 @@ luminous_spring-0000|data.Name		Luminous Spring			Manantial Luminoso
 moonlit_end-0000|data.Name					
 post_office-0000|data.Name		Pelipper Post Office			Mensajeros Pelipper
 rest_stop-0000|data.Name		Cave Shelter		Höhlenzuflucht	Cueva Refugio
-test_grounds-0000|data.Name		Test Grounds			
+test_grounds-0000|data.Name		Test Grounds	Camp de Base	Testbereich	Terreno de Pruebas
 training_maze-0000|data.Name					
 training_maze_2-0000|data.Name					

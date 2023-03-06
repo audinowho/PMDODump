@@ -1,178 +1,34 @@
 Sheet: Hardcode
+    * Added _ENUM_InputType_SkillPreview
 
 Sheet: Content
 
 Sheet: Script
+    * Changed ground\base_camp_2/Appraisal_No_Money from "Whoa, whoa![pause=0] You don't have enough \uE024 for that!" to "Hey![pause=0] You don't have enough \uE024 for that!"
 
 Sheet: Abilities
 
 Sheet: Items
-    * Changed 0012-orb_foe_seal-0001|data.Desc from "An orb that seals the a move known by the target. It affects all enemies up to 5 tiles away." to "An orb that seals the last-used move of all enemies. It affects all enemies up to 5 tiles away."
+    * Added 0008-apricorn_glittery-0000|data.Name
+    * Added 0008-apricorn_glittery-0001|data.Desc
 
 Sheet: MapStatuses
-    * Added 0000-clouds_overhead-0000|data.Name
-    * Added 0000-clouds_overhead-0001|data.Desc
-    * Significantly changed 0000-cloudy-0001|data.Desc from "" to "Moves of all types are weakened, except the Normal-type."
-    * Added 0000-mysterious_distortion-0000|data.Name
-    * Added 0000-mysterious_distortion-0001|data.Desc
 
 Sheet: Moves
-    * Significantly changed 0148-flash-0001|data.Desc from "The user flashes a bright light that cuts the target’s accuracy." to "The user flashes a bright light that cuts the target's accuracy. It also reveals part of the floor."
-    * Significantly changed 0166-sketch-0001|data.Desc from "It enables the user to permanently learn the move last used by the target. Once used, Sketch disappears." to "It enables the user to permanently learn the target's moves. Once used, Sketch disappears."
-    * Significantly changed 0432-defog-0001|data.Desc from "A strong wind blows away the target's barriers such as Reflect or Light Screen. This also lowers the target's evasiveness." to "A strong wind blows away traps, barriers, and map conditions."
-    * Significantly changed 0441-gunk_shot-0001|data.Desc from "The user shoots filthy garbage at the target to attack. This may also poison the target." to "The user shoots filthy garbage at the target to attack."
-    * Significantly changed 0756-court_change-0001|data.Desc from "" to "The user successively switches its position with the positions of other Pokémon."
-    * Significantly changed 0777-decorate-0001|data.Desc from "" to "The user sharply raises the target's Attack and Sp. Atk stats by decorating the target."
-    * Significantly changed 0780-pyro_ball-0001|data.Desc from "" to "The user attacks by igniting a small stone and launching it as a fiery ball at the target."
-    * Significantly changed 0787-apple_acid-0001|data.Desc from "" to "The user attacks the target with an acidic liquid created from tart apples. This also lowers the target's Sp. Def stat."
-    * Significantly changed 0788-grav_apple-0001|data.Desc from "" to "The user inflicts damage by dropping an apple from high above. This also lowers the target's Defense stat."
-    * Significantly changed 0791-life_dew-0001|data.Desc from "" to "The user scatters mysterious water around and restores the HP of itself and its ally Pokémon in the battle."
 
 Sheet: Statuses
-    * Added 0000-all_protect-0000|data.Name
-    * Added 0000-all_protect-0001|data.Desc
-    * Significantly changed 0000-detect-0001|data.Desc from "The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks." to "The Pokémon is protected from all moves. This status wears off after a few turns."
-    * Added 0000-sky_drop_target-0000|data.Name
-    * Added 0000-sky_drop_target-0001|data.Desc
-    * Added 0000-sky_drop_user-0000|data.Name
-    * Added 0000-sky_drop_user-0001|data.Desc
 
 Sheet: Tiles
-    * Added 0000-sealed_guild-0000|data.Name
-    * Added 0000-sealed_guild-0001|data.Desc
-    * Changed 0000-tile_boss-0000|data.Name from "Signal Area" to "Sigil Site"
-    * Changed 0000-tile_evo-0000|data.Name from "Luminous Area" to "Luminous Site"
-    * Added 0000-tile_fairy_ring-0000|data.Name
-    * Added 0000-tile_fairy_ring-0001|data.Desc
-    * Added 0000-tile_mystery-0000|data.Name
-    * Added 0000-tile_mystery-0001|data.Desc
-    * Added 0000-tile_switch_sync-0000|data.Name, transferred from 0000-tile_switch-0000|data.Name
-    * Added 0000-tile_switch_sync-0001|data.Desc, transferred from 0000-tile_switch-0001|data.Desc
-    * Added 0000-tile_updraft-0000|data.Name
-    * Added 0000-tile_updraft-0001|data.Desc
+    * Significantly changed 0000-trap_poison-0001|data.Desc from "Triggering this trap will shoot poison spikes in all directions. Pokémon hit will become poisoned." to "Triggering this trap will release spikes that poison nearby Pokémon."
 
 Sheet: Excl Names
 
 Sheet: Excl Effects
 
 Sheet: Zones
-    * Added 0000-barren_tundra-0000|data.Name
-    * Added 0000-barren_tundra-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-bravery_road-0000|data.Name
-    * Added 0000-bravery_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-champions_road-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Added 0000-copper_quarry-0000|data.Name
-    * Added 0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name, transferred from 0000-fissure_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Added 0000-deserted_fortress-0000|data.Name
-    * Added 0000-deserted_fortress-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-energy_garden-0000|data.Name
-    * Added 0000-energy_garden-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-eon_island-0000|data.Name
-    * Added 0000-eon_island-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Deleted key 0000-faulted_cliffs-0000|data.Name
-    * Deleted key 0000-faulted_cliffs-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-faultline_ridge-0000|data.Name
-    * Added 0000-faultline_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Deleted key 0000-fertile_ravine-0000|data.Name
-    * Deleted key 0000-fertile_ravine-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Deleted key 0000-fertile_ravine-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Added 0000-fertile_valley-0000|data.Name
-    * Added 0000-fertile_valley-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-fertile_valley-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Deleted key 0000-fissure_quarry-0000|data.Name
-    * Deleted key 0000-fissure_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Deleted key 0000-fissure_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Added 0000-forsaken_desert-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name, transferred from 0000-tropical_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name
-    * Added 0000-geode_underpass-0000|data.Name
-    * Added 0000-geode_underpass-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-hope_road-0000|data.Name
-    * Added 0000-hope_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-inscribed_cave-0000|data.Name
-    * Added 0000-inscribed_cave-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-labyrinth_of_the_lost-0000|data.Name
-    * Added 0000-labyrinth_of_the_lost-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Significantly changed 0000-lava_floe_island-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name from "Lava Floe\nIsland\n{0}F" to "Lava Floe\nIsland\nB{0}F"
-    * Added 0000-lost_seas-0000|data.Name
-    * Added 0000-lost_seas-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Significantly changed 0000-overgrown_wilds-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name from "Lost Wilds\nB{0}F" to "Exotic Wilds\nB{0}F"
-    * Added 0000-prism_isles-0000|data.Name
-    * Added 0000-prism_isles-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-sacred_tower-0000|data.Name
-    * Added 0000-sacred_tower-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-starfall_heights-0000|data.Name
-    * Added 0000-starfall_heights-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-the_neverending_tale-0000|data.Name
-    * Added 0000-the_neverending_tale-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-tiny_tunnel-0000|data.Name
-    * Added 0000-tiny_tunnel-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Deleted key 0000-trickster_steppe-0000|data.Name
-    * Deleted key 0000-trickster_steppe-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Deleted key 0000-trickster_steppe-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Added 0000-trickster_woods-0000|data.Name
-    * Added 0000-trickster_woods-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Added 0000-trickster_woods-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
-    * Significantly changed 0000-wayward_wetlands-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name from "Wayward Wetlands\nB{0}F" to "Wayward Wetlands\n{0}F"
-    * Added 0000-wisdom_road-0000|data.Name
-    * Added 0000-wisdom_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
 
 Sheet: Maps
-    * Added end_bramble_woods-0000|data.Name
-    * Added end_copper_quarry-0000|data.Name
-    * Added end_forsaken_desert-0000|data.Name
-    * Added end_moonlit_courtyard-0000|data.Name
-    * Added end_overgrown_wilds-0000|data.Name
-    * Added end_relic_tower-0000|data.Name
-    * Added end_sickly_hollow-0000|data.Name
-    * Added end_veiled_ridge-0000|data.Name
-    * Added pattern_blob-0000|data.Name
-    * Added pattern_bubble-0000|data.Name
-    * Added pattern_checker-0000|data.Name
-    * Added pattern_checker_large-0000|data.Name
-    * Added pattern_crosshair-0000|data.Name
-    * Added pattern_dither_fourth-0000|data.Name
-    * Added pattern_double_colon-0000|data.Name
-    * Added pattern_plus-0000|data.Name
-    * Added pattern_slash-0000|data.Name
-    * Added pattern_squiggle-0000|data.Name
-    * Added pattern_teeth-0000|data.Name
-    * Added pattern_x-0000|data.Name
-    * Added pattern_x_repeat-0000|data.Name
-    * Added room_ambush_item-0000|data.Name
-    * Added room_exotic_wilds_entrance-0000|data.Name
-    * Added room_fairy_ring-0000|data.Name
-    * Added room_flying_item-0000|data.Name
-    * Added room_garden_center_cross-0000|data.Name
-    * Added room_garden_cross-0000|data.Name
-    * Added room_garden_cross_water-0000|data.Name
-    * Added room_garden_grid-0000|data.Name
-    * Added room_garden_lines-0000|data.Name
-    * Added room_inscribed_entrance-0000|data.Name
-    * Added room_moon_crescent_left-0000|data.Name
-    * Added room_moon_crescent_right-0000|data.Name
-    * Added room_moon_full-0000|data.Name
-    * Added room_moon_half_left-0000|data.Name
-    * Added room_moon_half_right-0000|data.Name
-    * Added room_moon_new-0000|data.Name
-    * Added room_muddy_valley_entrance-0000|data.Name
-    * Added room_shimmer_bay_altar-0000|data.Name
-    * Added room_sleeping_caldera_altar-0000|data.Name
-    * Added room_treacherous_item-0000|data.Name
-    * Added room_updraft-0000|data.Name
-    * Added secret_champions_road-0000|data.Name
-    * Added secret_forsaken_desert-0000|data.Name
-    * Added secret_tropical_path-0000|data.Name
-    * Added special_grass_maze-0000|data.Name
-    * Added special_gsc_ghost-0000|data.Name
-    * Added special_gsc_plant-0000|data.Name
-    * Added special_rby_bird-0000|data.Name
-    * Added special_rby_fairy-0000|data.Name
-    * Added special_rby_fossil-0000|data.Name
-    * Deleted key zone_02_end-0000|data.Name
-    * Deleted key zone_36_end-0000|data.Name
-    * Deleted key zone_37_end-0000|data.Name
+    * Added test_tiles-0000|data.Name
 
 Sheet: GroundMaps
-    * Added dev_room-0000|data.Name
-    * Added moonlit_end-0000|data.Name
 

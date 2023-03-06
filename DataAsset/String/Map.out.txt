@@ -12,10 +12,10 @@ end_relic_tower-0000|data.Name
 end_sickly_hollow-0000|data.Name													
 end_veiled_ridge-0000|data.Name													
 final_stop-0000|data.Name													
-forest_camp-0000|data.Name		Forest Camp		Wald-Lager	Campamento Bosque								
+forest_camp-0000|data.Name		Forest Camp		Wald-Lager	Campamento Bosque						森林营地		
 guild_hut-0000|data.Name													
 guild_path-0000|data.Name													
-guildmaster_summit-0000|data.Name		Guildmaster Summit		Gildenmeister-Gipfel	Cima del Maestro								
+guildmaster_summit-0000|data.Name		Guildmaster Summit		Gildenmeister-Gipfel	Cima del Maestro						公会会长之巅		
 luminous_spring-0000|data.Name													
 pattern_blob-0000|data.Name													
 pattern_bubble-0000|data.Name													
@@ -31,7 +31,7 @@ pattern_teeth-0000|data.Name
 pattern_x-0000|data.Name													
 pattern_x_repeat-0000|data.Name													
 post_office-0000|data.Name													
-rest_stop-0000|data.Name		Rest Stop		Rastplatz	Parada de Descanso								
+rest_stop-0000|data.Name		Rest Stop		Rastplatz	Parada de Descanso						休息站		
 room_ambush_item-0000|data.Name		
 room_exotic_wilds_entrance-0000|data.Name		
 room_fairy_ring-0000|data.Name		
@@ -65,3 +65,4 @@ special_rby_fossil-0000|data.Name
 test_blob-0000|data.Name		
 test_grounds-0000|data.Name		
 test_room-0000|data.Name		
+test_tiles-0000|data.Name		

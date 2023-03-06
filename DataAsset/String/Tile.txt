@@ -82,7 +82,7 @@ Key		EN
 0000-trap_pitfall-0000|data.Name		Pitfall Trap
 0000-trap_pitfall-0001|data.Desc		Stepping on this trap drops the Pokémon to the floor below, inflicting damage.
 0000-trap_poison-0000|data.Name		Poison Trap
-0000-trap_poison-0001|data.Desc		Triggering this trap will shoot poison spikes in all directions. Pokémon hit will become poisoned.
+0000-trap_poison-0001|data.Desc		Triggering this trap will release spikes that poison nearby Pokémon.
 0000-trap_pokemon-0000|data.Name		Pokémon Trap
 0000-trap_pokemon-0001|data.Desc		Triggering this trap transforms all items in the area into hostile Pokémon.
 0000-trap_pp_leech-0000|data.Name		PP-Leech Trap

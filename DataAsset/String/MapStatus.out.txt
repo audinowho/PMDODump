@@ -3,10 +3,10 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-blizzard-0001|data.Desc											
 0000-clear-0000|data.Name		Clear	Clair	Klar	Despejado						晴朗
 0000-clear-0001|data.Desc		The weather is clear.	Clair.	Das Wetter ist klar.	El tiempo está despejado.						天气很晴朗。
-0000-clouds_overhead-0000|data.Name		Clouds Overhead									
+0000-clouds_overhead-0000|data.Name		Clouds Overhead									多云
 0000-clouds_overhead-0001|data.Desc											
 0000-cloudy-0000|data.Name	Not displayed to players.	Cloudy	Nuageux	Wolkig	Nublado						阴天
-0000-cloudy-0001|data.Desc		Moves of all types are weakened, except the Normal-type.									
+0000-cloudy-0001|data.Desc		Moves of all types are weakened, except the Normal-type.									一般属性之外的招式威力降低了。
 0000-dark-0000|data.Name		Dark			Oscuro						黑暗
 0000-dark-0001|data.Desc											
 0000-default_mapstatus-0000|data.Name	Not displayed to players.  Low Priority.	Default MapStatus			Estado del Mapa por defecto						默认地图状态
@@ -49,17 +49,17 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-monster_mansion-0001|data.Desc											
 0000-move_ban-0000|data.Name		Move Ban	Interdiction de Capacité	Attackenverbannung	Prohibición de movimiento						招式禁用
 0000-move_ban-0001|data.Desc		A move has been banned and can no longer be used.	Une capacité est interdite, elle ne peut plus être utilisée.	Eine Attacke wurde gebannt und kann nicht mehr länger benutzt werden.	Un movimiento ha sido prohibido y no se puede usar más.						一个招式被禁用了，不能再使用。
-0000-mysterious_distortion-0000|data.Name		Mysterious Distortion									
-0000-mysterious_distortion-0001|data.Desc		The space-time is distorted on this floor...									
+0000-mysterious_distortion-0000|data.Name		Mysterious Distortion									不可思议的扭曲
+0000-mysterious_distortion-0001|data.Desc		The space-time is distorted on this floor...									这层楼的时空扭曲了......
 0000-mysterious_force-0000|data.Name		Mysterious Force	Aura Mystère	Mysteriöse Kraft	Fuerza Misteriosa						神秘力量
-0000-mysterious_force-0001|data.Desc		A mysterious force prevents Orbs, Machines, and special items from working.		Eine mysteriöse Kraft verhindert den Einsatz von Orbs, Maschinen und speziellen Items.	Una fuerza misteriosa que evita que las Esferas, máquinas y otros objetos especiales funcionen.						一种神秘的力量，阻止了不可思议之玉、机器和特殊道具的使用。
+0000-mysterious_force-0001|data.Desc		A mysterious force prevents Orbs, Machines, and special items from working.		Eine mysteriöse Kraft verhindert den Einsatz von Orbs, Maschinen und speziellen Items.	Una fuerza misteriosa que evita que las Esferas, máquinas y otros objetos especiales funcionen.						一种神秘的力量，阻止了不可思议之玉、 机器和特殊道具的使用。
 0000-outlaw_clear_check-0000|data.Name		Outlaw Clear Check									
 0000-outlaw_clear_check-0001|data.Desc											
 0000-rain-0000|data.Name		Rain	Pluvieux	Regen	Lluvioso						下雨
 0000-rain-0001|data.Desc		Water-type attacks are boosted and Fire-type attacks are weakened.	Les attaques de type de type Eau sont boostées et les attaques de type Feu affaiblies.	Wasser-Attacken sind verstärkt und Feuer-Attacken sind geschwächt.	Los ataque de tipo Agua se potencian y los ataques de tipo Fuego se debilitan.						水属性攻击威力提高，火属性攻击威力降低。
 0000-rescued-0000|data.Name		Rescued									
 0000-rescued-0001|data.Desc											
-0000-sandstorm-0000|data.Name		Sandstorm	Tempête de sable	Sandstorm	Tormenta de arena						沙暴
+0000-sandstorm-0000|data.Name		Sandstorm	Tempête de sable	Sandstorm	Tormenta de arena						沙暴		.
 0000-sandstorm-0001|data.Desc		All Pokémon on the floor will take damage except Rock, Ground, and Steel-types. The Sp. Def of Rock-types is boosted.		Alle Pokémon, welche nicht Gestein, Boden und Stahl als Typ besitzen, werden auf der Ebene Schaden nehmen. Die Spezial-Verteidigung von Gestein-Typen ist erhöht.	Todos los Pokémon del piso recibirán daño, excepto los de tipo Roca, Tierra y Acero. Aumenta la Defensa Especial de los de tipo Roca.						除了岩石，地面和钢属性的宝可梦，楼层内的所有宝可梦都会受到伤害。岩石属性的特防会提高。
 0000-scanner-0000|data.Name		Scanner			Escáner						侦查
 0000-scanner-0001|data.Desc											
