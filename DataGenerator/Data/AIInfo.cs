@@ -152,7 +152,7 @@ namespace DataGenerator.Data
             tactic.Name = new LocalText("Itemless Dumb Wander");//12
             tactic.ID = "wander_dumb_itemless";
             iq = AIFlags.AttackToEscape;
-            tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.DumbAttack, AIPlan.PositionChoice.Close));
+            tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.DumbAttack, AIPlan.PositionChoice.Approach));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
@@ -191,7 +191,7 @@ namespace DataGenerator.Data
             tactic.Name = new LocalText("Dumb Wander");//16
             tactic.ID = "wander_dumb";
             iq = AIFlags.ItemGrabber | AIFlags.AttackToEscape;
-            tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.DumbAttack, AIPlan.PositionChoice.Close));
+            tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.DumbAttack, AIPlan.PositionChoice.Approach));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
