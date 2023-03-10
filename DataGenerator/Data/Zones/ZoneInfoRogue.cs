@@ -4167,14 +4167,18 @@ namespace DataGenerator.Data
                     AddWaterSteps(layout, "water", new RandRange(15));//water
                     AddGrassSteps(layout, new RandRange(3, 6), new IntRange(2, 7), new RandRange(20));
                 }
-                else if (ii < 27)
+                else if (ii <= 27)
                 {
                     AddWaterSteps(layout, "water", new RandRange(22));//water
+                }
+                else if (ii <= 34)
+                {
+                    AddWaterSteps(layout, "water", new RandRange(22));//water
+                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(3, 9), new RandRange(30));
                 }
                 else
                 {
                     AddWaterSteps(layout, "water", new RandRange(22));//water
-                    AddGrassSteps(layout, new RandRange(3, 6), new IntRange(3, 9), new RandRange(30));
                 }
 
 
