@@ -18,7 +18,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-copper_quarry-0000|data.Name		Copper Quarry									粗铜矿场
 0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\n{0}F									粗铜矿场\n{0}
 0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Magnetic Quarry\nB{0}F									磁力矿场\nB{0}F
-0000-debug_zone-0000|data.Name		Debug Zone									Debug 区
+0000-debug_zone-0000|data.Name		Debug Zone									Debug区域
 0000-deserted_fortress-0000|data.Name		Deserted Fortress									空寂要塞
 0000-deserted_fortress-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Deserted Fortress\n{0}F									空寂要塞\n{0}F
 0000-energy_garden-0000|data.Name		Energy Garden									元气花园
@@ -37,7 +37,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-flyaway_cliffs-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Flyaway Cliffs\n{0}F		Geladene Klippen\n{0}.OG	Acantilado Nido\nP{0}						飞翔悬崖\n{0}F
 0000-forsaken_desert-0000|data.Name		Forsaken Desert		Verlassene Wüste	Desierto Abandonado						荒芜沙漠
 0000-forsaken_desert-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Forsaken Desert\n{0}F		Verlassene Wüste\n{0}.OG	Desierto Abandonado\nP{0}						荒芜沙漠\n{0}F
-0000-forsaken_desert-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room									秘密房间
+0000-forsaken_desert-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room									秘密之间
 0000-geode_underpass-0000|data.Name		Geode Underpass									紫晶地道
 0000-geode_underpass-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Geode Underpass\nB{0}F									紫晶地道\nB{0}F
 0000-guildmaster_island-0000|data.Name		Guildmaster Island	Île du Maître de la Guilde	Gildenmeister-Insel	Isla Maestro						公会会长之岛

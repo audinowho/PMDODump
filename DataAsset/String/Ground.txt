@@ -1,19 +1,19 @@
-Key		EN	FR	DE	ES
-base_camp-0000|data.Name		Base Camp	Camp de Base	Hauptlager	Campamento Base
-base_camp_2-0000|data.Name		Base Town			
-canyon_camp-0000|data.Name		Ravine Camp		Schlucht-Lager	Campamento Desfiladero
-cliff_camp-0000|data.Name		Cliff Camp	Camp de Falaise	Klippen-Lager	Campamento Acantilado
-dev_room-0000|data.Name		Developer Room			
-final_stop-0000|data.Name		Path to the Summit	Chemin du Sommet	Pfad zum Gipfel	Camino a la Cima
-forest_camp-0000|data.Name		Forest Camp	Camp Fôrestier	Wald-Lager	Campamento Bosque
-garden_end-0000|data.Name		Secret Garden Grove		Geheimgarten-Hain	
-guild_hut-0000|data.Name		Guildmaster Hut			Cabaña del Maestro
-guild_path-0000|data.Name		Guildmaster Path			Sendero del Maestro
-guildmaster_summit-0000|data.Name		Guildmaster Summit		Gildenmeister-Gipfel	Cima del Maestro
-luminous_spring-0000|data.Name		Luminous Spring			Manantial Luminoso
-moonlit_end-0000|data.Name					
-post_office-0000|data.Name		Pelipper Post Office			Mensajeros Pelipper
-rest_stop-0000|data.Name		Cave Shelter		Höhlenzuflucht	Cueva Refugio
-test_grounds-0000|data.Name		Test Grounds	Camp de Base	Testbereich	Terreno de Pruebas
-training_maze-0000|data.Name					
-training_maze_2-0000|data.Name					
+Key		EN	ZH-HANS	FR	DE	ES
+base_camp-0000|data.Name		Base Camp	起点营地	Camp de Base	Hauptlager	Campamento Base
+base_camp_2-0000|data.Name		Base Town	起点镇			
+canyon_camp-0000|data.Name		Ravine Camp	峡谷营地		Schlucht-Lager	Campamento Desfiladero
+cliff_camp-0000|data.Name		Cliff Camp	悬崖营地	Camp de Falaise	Klippen-Lager	Campamento Acantilado
+dev_room-0000|data.Name		Developer Room	开发者房间			
+final_stop-0000|data.Name		Path to the Summit	往顶峰之路	Chemin du Sommet	Pfad zum Gipfel	Camino a la Cima
+forest_camp-0000|data.Name		Forest Camp	森林营地	Camp Fôrestier	Wald-Lager	Campamento Bosque
+garden_end-0000|data.Name		Secret Garden Grove	秘密花园树林		Geheimgarten-Hain	
+guild_hut-0000|data.Name		Guildmaster Hut	公会会长之屋			Cabaña del Maestro
+guild_path-0000|data.Name		Guildmaster Path	公会会长之径			Sendero del Maestro
+guildmaster_summit-0000|data.Name		Guildmaster Summit	公会会长之巅		Gildenmeister-Gipfel	Cima del Maestro
+luminous_spring-0000|data.Name		Luminous Spring	光之泉			Manantial Luminoso
+moonlit_end-0000|data.Name						
+post_office-0000|data.Name		Pelipper Post Office	大嘴鸥联络站			Mensajeros Pelipper
+rest_stop-0000|data.Name		Cave Shelter	洞穴庇护所		Höhlenzuflucht	Cueva Refugio
+test_grounds-0000|data.Name		Test Grounds	测试地面	Camp de Base	Testbereich	Terreno de Pruebas
+training_maze-0000|data.Name						
+training_maze_2-0000|data.Name						

@@ -6461,7 +6461,7 @@ namespace DataGenerator.Data
             {
                 #region FERTILE VALLEY
                 {
-                    zone.Name = new LocalText("**Fertile Valley");
+                    zone.Name = new LocalText("Fertile Valley");
                     zone.Rescues = 2;
                     zone.Level = 15;
                     zone.Rogue = RogueStatus.ItemTransfer;

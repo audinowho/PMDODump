@@ -4,7 +4,7 @@ base_camp_2-0000|data.Name		Base Town									起点镇
 canyon_camp-0000|data.Name		Ravine Camp		Schlucht-Lager	Campamento Desfiladero						峡谷营地		
 cliff_camp-0000|data.Name		Cliff Camp	Camp de Falaise	Klippen-Lager	Campamento Acantilado						悬崖营地		
 dev_room-0000|data.Name		Developer Room									开发者房间		
-final_stop-0000|data.Name		Path to the Summit	Chemin du Sommet	Pfad zum Gipfel	Camino a la Cima						往顶峰之路		
+final_stop-0000|data.Name		Path to the Summit	Chemin du Sommet	Pfad zum Gipfel	Camino a la Cima						向顶峰之路		
 forest_camp-0000|data.Name		Forest Camp	Camp Fôrestier	Wald-Lager	Campamento Bosque						森林营地		
 garden_end-0000|data.Name		Secret Garden Grove		Geheimgarten-Hain							秘密花园树林		
 guild_hut-0000|data.Name		Guildmaster Hut			Cabaña del Maestro						公会会长之屋		

@@ -1,16 +1,12 @@
 Sheet: Hardcode
-    * Added _ENUM_InputType_SkillPreview
 
 Sheet: Content
 
 Sheet: Script
-    * Changed ground\base_camp_2/Appraisal_No_Money from "Whoa, whoa![pause=0] You don't have enough \uE024 for that!" to "Hey![pause=0] You don't have enough \uE024 for that!"
 
 Sheet: Abilities
 
 Sheet: Items
-    * Added 0008-apricorn_glittery-0000|data.Name
-    * Added 0008-apricorn_glittery-0001|data.Desc
 
 Sheet: MapStatuses
 
@@ -19,7 +15,6 @@ Sheet: Moves
 Sheet: Statuses
 
 Sheet: Tiles
-    * Significantly changed 0000-trap_poison-0001|data.Desc from "Triggering this trap will shoot poison spikes in all directions. Pokémon hit will become poisoned." to "Triggering this trap will release spikes that poison nearby Pokémon."
 
 Sheet: Excl Names
 
@@ -28,7 +23,6 @@ Sheet: Excl Effects
 Sheet: Zones
 
 Sheet: Maps
-    * Added test_tiles-0000|data.Name
 
 Sheet: GroundMaps
 

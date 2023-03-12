@@ -1117,11 +1117,16 @@ namespace DataGenerator.Data
                     MonsterFormData formEntry = LoadForme(m_dbTLConnection, version, index, dexId, formId, entry.Name);
                     formEntry.Generation = genVersion(version);
                     if (Ratio == -1)
-                        formEntry.GenderlessWeight = 1;
+                    {
+                        formEntry.GenderlessWeight = 8;
+                        //formEntry.MaleWeight = 1;
+                        //formEntry.FemaleWeight = 1;
+                    }
                     else
                     {
                         formEntry.MaleWeight = 8 - Ratio;
-                        formEntry.FemaleWeight = Ratio;
+                        //formEntry.FemaleWeight = Ratio;
+                        //formEntry.GenderlessWeight = 2;
                     }
                     formEntry.Temporary = battle_only;
 

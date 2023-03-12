@@ -47,8 +47,6 @@ namespace DataGenerator.Data
         public static Map GetMapData(string name)
         {
             Map map = new Map();
-            //Added asset name here!
-            map.AssetName = name;
 
             if (name == MapNames[3])
             {
@@ -289,8 +287,6 @@ namespace DataGenerator.Data
         public static GroundMap GetGroundData(string name)
         {
             GroundMap map = new GroundMap();
-            //Added asset name here!
-            map.AssetName = name;
 
             if (name == MapNames[0])
             {
