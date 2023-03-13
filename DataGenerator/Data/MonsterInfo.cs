@@ -1125,7 +1125,7 @@ namespace DataGenerator.Data
                     else
                     {
                         formEntry.MaleWeight = 8 - Ratio;
-                        //formEntry.FemaleWeight = Ratio;
+                        formEntry.FemaleWeight = Ratio;
                         //formEntry.GenderlessWeight = 2;
                     }
                     formEntry.Temporary = battle_only;
