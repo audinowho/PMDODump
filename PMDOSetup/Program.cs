@@ -8,10 +8,20 @@ using System.Net;
 using System.IO.Compression;
 using Mono.Unix;
 using System.Text.Json;
+using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 
 namespace PMDOSetup
 {
+    public class Release
+    {
+        public string Url { get; set; }
+        public string Assets_Url { get; set; }
+        public string Name { get; set; }
+        public string Tag_Name {get; set;}
+        public string Body {get; set;}
+    }
+
     class Program
     {
         static string updaterPath;
@@ -62,6 +72,7 @@ namespace PMDOSetup
                     Console.WriteLine("2: Update the Updater");
                     Console.WriteLine("3: Reset Updater XML");
                     Console.WriteLine("4: Uninstall (Retain Save Data)");
+                    Console.WriteLine("5: Revert to a Previous Version (Make sure to run the game at least once)");
                     Console.WriteLine("Press any other key to check for game updates.");
                     if (argNum > -1)
                     {
@@ -73,6 +84,8 @@ namespace PMDOSetup
                             choice = ConsoleKey.D3;
                         else if (argNum == 4)
                             choice = ConsoleKey.D4;
+                        else if (argNum == 5)
+                            choice = ConsoleKey.D5;
                         else
                             choice = ConsoleKey.Enter;
                     }
@@ -85,6 +98,7 @@ namespace PMDOSetup
 
                 Console.WriteLine();
                 bool force = false;
+                bool prev_version = false;
                 if (choice == ConsoleKey.D1)
                     force = true;
                 else if (choice == ConsoleKey.D2)
@@ -111,8 +125,12 @@ namespace PMDOSetup
                     ReadKey();
                     return;
                 }
+                else if (choice == ConsoleKey.D5)
+                {
+                    prev_version = true;
+                }
 
-                Update(force);
+                Update(force, prev_version);
             }
             catch (Exception ex)
             {
@@ -202,7 +220,7 @@ namespace PMDOSetup
             ReadKey();
         }
 
-        static void Update(bool force)
+        static void Update(bool force, bool prev_version)
         {
             Version nextVersion;
             string exeFile = null;
@@ -216,16 +234,32 @@ namespace PMDOSetup
             using (var wc = new WebClient())
             {
                 wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                string latestResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/latest", curVerRepo));
-                JsonElement latestJson = JsonDocument.Parse(latestResponse).RootElement;
+                var builds = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases", curVerRepo));
 
-                string uploadedVersionStr = latestJson.GetProperty("name").GetString();
-                string changelog = latestJson.GetProperty("body").GetString();
+                List<Release> releases = JsonConvert.DeserializeObject<List<Release>>(builds);
+
+                // Commented out, only helpful for Debug
+                /*
+                for (int i = 0; i < releases.Count; i++)
+                {
+                    Console.WriteLine("Version {0}", releases[i].Name);
+                    Console.WriteLine("URL: " + releases[i].Url);
+                    Console.WriteLine("Asset URL: " + releases[i].Assets_Url);
+                    Console.WriteLine("Tag Name: " + releases[i].Tag_Name);
+                    Console.WriteLine("Changelog: " + releases[i].Body);
+                    Console.WriteLine();
+                }*/
+
+                // 0 is the latest release, 1 is the previous release
+                int desired_version = Convert.ToInt32(prev_version);
+                
+                string uploadedVersionStr = releases[desired_version].Name;
+                string changelog = releases[desired_version].Body;
                 nextVersion = new Version(uploadedVersionStr);
 
                 if (lastVersion >= nextVersion)
                 {
-                    if (force)
+                    if (force || prev_version)
                         Console.WriteLine("Update will be forced. {0} >= {1}", lastVersion, nextVersion);
                     else
                     {
@@ -244,9 +278,8 @@ namespace PMDOSetup
                 Console.WriteLine();
                 Console.WriteLine();
 
-                string tagStr = latestJson.GetProperty("tag_name").GetString();
+                string tagStr = releases[desired_version].Tag_Name;
                 Regex pattern = new Regex(@"https://github\.com/(?<repo>\w+/\w+).git");
-
                 {
                     //Get the exe submodule's version (commit) at this tag
                     wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
