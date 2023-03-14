@@ -8,15 +8,12 @@ using System.Net;
 using System.IO.Compression;
 using Mono.Unix;
 using System.Text.Json;
-using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 
 namespace PMDOSetup
 {
     public class Release
     {
-        public string Url { get; set; }
-        public string Assets_Url { get; set; }
         public string Name { get; set; }
         public string Tag_Name {get; set;}
         public string Body {get; set;}
@@ -234,9 +231,19 @@ namespace PMDOSetup
             using (var wc = new WebClient())
             {
                 wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                var builds = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases", curVerRepo));
+                string builds = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases", curVerRepo));
 
-                List<Release> releases = JsonConvert.DeserializeObject<List<Release>>(builds);
+                List<Release> releases = new List<Release>();
+
+                JsonElement releasesJson = JsonDocument.Parse(builds).RootElement;
+                foreach (JsonElement buildJson in releasesJson.EnumerateArray())
+                {
+                    Release specificRelease = new Release();
+                    specificRelease.Name = buildJson.GetProperty("name").GetString();
+                    specificRelease.Body = buildJson.GetProperty("body").GetString();
+                    specificRelease.Tag_Name = buildJson.GetProperty("tag_name").GetString();
+                    releases.Add(specificRelease);
+                }
 
                 Console.Clear();
                 Console.WriteLine("Choose a Version:");

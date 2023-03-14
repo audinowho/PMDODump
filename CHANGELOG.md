@@ -1,5 +1,6 @@
 # 0.7.3 Changes #
 
+* Version selector in updater
 * Fixed Path Wand
 * Lob Wand 70 basepower
 * Mega Punch 100 accuracy, 16PP
