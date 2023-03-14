@@ -59,78 +59,86 @@ namespace PMDOSetup
 
             try
             {
-                ConsoleKey choice = ConsoleKey.Enter;
+                while (true)
+                {
+                    Console.Clear();
+                    ConsoleKey choice = ConsoleKey.Enter;
 
-                if (lastVersion == new Version(0, 0, 0, 0))
-                {
-                    Console.WriteLine("Preparing PMDO installation...");
-                }
-                else
-                {
-                    Console.WriteLine("Updater Options:");
-                    Console.WriteLine("1: Force Update");
-                    Console.WriteLine("2: Update the Updater");
-                    Console.WriteLine("3: Reset Updater XML");
-                    Console.WriteLine("4: Uninstall (Retain Save Data)");
-                    Console.WriteLine("5: Revert to the Previous Version");
-                    Console.WriteLine("Press any other key to check for game updates.");
-                    if (argNum > -1)
+                    if (lastVersion == new Version(0, 0, 0, 0))
                     {
-                        if (argNum == 1)
-                            choice = ConsoleKey.D1;
-                        else if (argNum == 2)
-                            choice = ConsoleKey.D2;
-                        else if (argNum == 3)
-                            choice = ConsoleKey.D3;
-                        else if (argNum == 4)
-                            choice = ConsoleKey.D4;
-                        else if (argNum == 5)
-                            choice = ConsoleKey.D5;
-                        else
-                            choice = ConsoleKey.Enter;
+                        Console.WriteLine("Preparing PMDO installation...");
                     }
                     else
                     {
-                        ConsoleKeyInfo keyInfo = Console.ReadKey();
-                        choice = keyInfo.Key;
+                        Console.WriteLine("Updater Options:");
+                        Console.WriteLine("1: Force Update");
+                        Console.WriteLine("2: Update the Updater");
+                        Console.WriteLine("3: Reset Updater XML");
+                        Console.WriteLine("4: Uninstall (Retain Save Data)");
+                        Console.WriteLine("5: Revert to an Older Version");
+                        Console.WriteLine("Press any other key to check for game updates.");
+                        if (argNum > -1)
+                        {
+                            if (argNum == 1)
+                                choice = ConsoleKey.D1;
+                            else if (argNum == 2)
+                                choice = ConsoleKey.D2;
+                            else if (argNum == 3)
+                                choice = ConsoleKey.D3;
+                            else if (argNum == 4)
+                                choice = ConsoleKey.D4;
+                            else if (argNum == 5)
+                                choice = ConsoleKey.D5;
+                            else
+                                choice = ConsoleKey.Enter;
+                        }
+                        else
+                        {
+                            ConsoleKeyInfo keyInfo = Console.ReadKey();
+                            choice = keyInfo.Key;
+                        }
                     }
-                }
 
-                Console.WriteLine();
-                bool force = false;
-                bool prev_version = false;
-                if (choice == ConsoleKey.D1)
-                    force = true;
-                else if (choice == ConsoleKey.D2)
-                {
-                    UpdateUpdater();
-                    return;
-                }
-                else if (choice == ConsoleKey.D3)
-                {
-                    Console.WriteLine("Resetting XML");
-                    DefaultXml();
-                    SaveXml();
-                    Console.WriteLine("Done.");
-                    ReadKey();
-                    return;
-                }
-                else if (choice == ConsoleKey.D4)
-                {
-                    Console.WriteLine("Uninstalling...");
-                    DeleteWithExclusions(Path.Join(updaterPath, "PMDO"));
-                    DeleteWithExclusions(Path.Join(updaterPath, "WaypointServer"));
-                    DeleteWithExclusions(Path.Join(updaterPath, "temp"));
-                    Console.WriteLine("Done.");
-                    ReadKey();
-                    return;
-                }
-                else if (choice == ConsoleKey.D5)
-                {
-                    prev_version = true;
-                }
+                    Console.WriteLine();
+                    bool force = false;
+                    Release specificRelease = null;
+                    if (choice == ConsoleKey.D1)
+                        force = true;
+                    else if (choice == ConsoleKey.D2)
+                    {
+                        UpdateUpdater();
+                        return;
+                    }
+                    else if (choice == ConsoleKey.D3)
+                    {
+                        Console.WriteLine("Resetting XML");
+                        DefaultXml();
+                        SaveXml();
+                        Console.WriteLine("Done.");
+                        ReadKey();
+                        return;
+                    }
+                    else if (choice == ConsoleKey.D4)
+                    {
+                        Console.WriteLine("Uninstalling...");
+                        DeleteWithExclusions(Path.Join(updaterPath, "PMDO"));
+                        DeleteWithExclusions(Path.Join(updaterPath, "WaypointServer"));
+                        DeleteWithExclusions(Path.Join(updaterPath, "temp"));
+                        Console.WriteLine("Done.");
+                        ReadKey();
+                        return;
+                    }
+                    else if (choice == ConsoleKey.D5)
+                    {
+                        force = true;
+                        specificRelease = GetSpecificRelease();
+                        if (specificRelease == null)
+                            continue;
+                    }
 
-                Update(force, prev_version);
+                    Update(force, specificRelease);
+                    return;
+                }
             }
             catch (Exception ex)
             {
@@ -220,16 +228,8 @@ namespace PMDOSetup
             ReadKey();
         }
 
-        static void Update(bool force, bool prev_version)
+        static Release GetSpecificRelease()
         {
-            Version nextVersion;
-            string exeFile = null;
-            string tempExe, tempAsset;
-
-            bool firstInstall = lastVersion == new Version(0, 0, 0, 0);
-            if (!firstInstall)
-                Console.WriteLine("WARNING: Updates will invalidate existing quicksaves.  Be sure to finish them first!");
-            
             //3: read from site what version is uploaded. if greater than the current version, upgrade
             using (var wc = new WebClient())
             {
@@ -238,40 +238,78 @@ namespace PMDOSetup
 
                 List<Release> releases = JsonConvert.DeserializeObject<List<Release>>(builds);
 
-                // 0 is the latest release, 1 is the previous release
-                int desired_version = Convert.ToInt32(prev_version);
-                
-                string uploadedVersionStr = releases[desired_version].Name;
-                string changelog = releases[desired_version].Body;
-                nextVersion = new Version(uploadedVersionStr);
+                Console.Clear();
+                Console.WriteLine("Choose a Version:");
+                for (int ii = 1; ii < releases.Count && ii < 10; ii++)
+                    Console.WriteLine("{0}: {1}", ii, releases[ii].Name);
 
-                if (lastVersion >= nextVersion)
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+                int choice = keyInfo.Key - ConsoleKey.D0;
+
+                Console.WriteLine();
+                if (choice < 1 || choice > 9 || choice > releases.Count)
                 {
-                    if (force || prev_version)
-                        Console.WriteLine("Update will be forced. {0} >= {1}", lastVersion, nextVersion);
-                    else
+                    Console.WriteLine("Invalid selection.");
+                    return null;
+                }
+                else
+                    return releases[choice];
+            }
+        }
+
+        static void Update(bool force, Release specificRelease)
+        {
+            Version nextVersion;
+            string exeFile = null;
+            string tempExe, tempAsset;
+
+            bool firstInstall = lastVersion == new Version(0, 0, 0, 0);
+            if (!firstInstall)
+                Console.WriteLine("WARNING: Updates will invalidate existing quicksaves.  Be sure to finish them first!");
+
+            //3: read from site what version is uploaded. if greater than the current version, upgrade
+            using (var wc = new WebClient())
+            {
+                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                if (specificRelease == null)
+                {
+                    string latestResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/latest", curVerRepo));
+                    JsonElement latestJson = JsonDocument.Parse(latestResponse).RootElement;
+                    specificRelease = new Release();
+                    specificRelease.Name = latestJson.GetProperty("name").GetString();
+                    specificRelease.Body = latestJson.GetProperty("body").GetString();
+                    specificRelease.Tag_Name = latestJson.GetProperty("tag_name").GetString();
+                }
+
+                nextVersion = new Version(specificRelease.Name);
+                if (firstInstall)
+                    Console.WriteLine("Installing {0}", nextVersion);
+                else if (force)
+                {
+                    Console.WriteLine("Update will be forced. {0} -> {1}", lastVersion, nextVersion);
+                }
+                else
+                {
+                    if (lastVersion >= nextVersion)
                     {
                         Console.WriteLine("You are up to date. {0} >= {1}", lastVersion, nextVersion);
                         ReadKey();
                         return;
                     }
+                    else
+                        Console.WriteLine("Update available. {0} < {1}", lastVersion, nextVersion);
                 }
-                else if (firstInstall)
-                    Console.WriteLine("Installing {0}", nextVersion);
-                else
-                    Console.WriteLine("Update available. {0} < {1}", lastVersion, nextVersion);
 
                 Console.WriteLine();
-                Console.WriteLine(changelog);
+                Console.WriteLine(specificRelease.Body);
                 Console.WriteLine();
                 Console.WriteLine();
 
-                string tagStr = releases[desired_version].Tag_Name;
                 Regex pattern = new Regex(@"https://github\.com/(?<repo>\w+/\w+).git");
                 {
                     //Get the exe submodule's version (commit) at this tag
                     wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                    string exeSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, exeSubmodule, tagStr));
+                    string exeSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, exeSubmodule, specificRelease.Tag_Name));
                     JsonElement exeSubmoduleJson = JsonDocument.Parse(exeSubmoduleResponse).RootElement;
 
                     string exeUrl = exeSubmoduleJson.GetProperty("submodule_git_url").GetString();
@@ -319,7 +357,7 @@ namespace PMDOSetup
                 {
                     //Get the asset submodule's version at this tag
                     wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                    string assetSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, assetSubmodule, tagStr));
+                    string assetSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, assetSubmodule, specificRelease.Tag_Name));
                     JsonElement assetSubmoduleJson = JsonDocument.Parse(assetSubmoduleResponse).RootElement;
 
                     string assetUrl = assetSubmoduleJson.GetProperty("submodule_git_url").GetString();
