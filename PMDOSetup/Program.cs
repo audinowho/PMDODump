@@ -72,7 +72,7 @@ namespace PMDOSetup
                     Console.WriteLine("2: Update the Updater");
                     Console.WriteLine("3: Reset Updater XML");
                     Console.WriteLine("4: Uninstall (Retain Save Data)");
-                    Console.WriteLine("5: Revert to a Previous Version (Make sure to run the game at least once)");
+                    Console.WriteLine("5: Revert to the Previous Version");
                     Console.WriteLine("Press any other key to check for game updates.");
                     if (argNum > -1)
                     {
@@ -173,7 +173,7 @@ namespace PMDOSetup
                 Console.WriteLine("Version {0} will be downloaded from the endpoints:\n  {1}.\n\nPress any key to continue.", nextVersion, updaterFile);
                 ReadKey();
 
-                File.Move(Path.Join(updaterPath, updaterExe), Path.Join(updaterPath, updaterExe + ".bak"));
+                File.Move(Path.Join(updaterPath, updaterExe), Path.Join(updaterPath, updaterExe + ".bak"), true);
                 File.Copy(Path.Join(updaterPath, updaterExe + ".bak"), Path.Join(updaterPath, updaterExe));
 
                 //4: download the respective zip from specified location
@@ -237,18 +237,6 @@ namespace PMDOSetup
                 var builds = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases", curVerRepo));
 
                 List<Release> releases = JsonConvert.DeserializeObject<List<Release>>(builds);
-
-                // Commented out, only helpful for Debug
-                /*
-                for (int i = 0; i < releases.Count; i++)
-                {
-                    Console.WriteLine("Version {0}", releases[i].Name);
-                    Console.WriteLine("URL: " + releases[i].Url);
-                    Console.WriteLine("Asset URL: " + releases[i].Assets_Url);
-                    Console.WriteLine("Tag Name: " + releases[i].Tag_Name);
-                    Console.WriteLine("Changelog: " + releases[i].Body);
-                    Console.WriteLine();
-                }*/
 
                 // 0 is the latest release, 1 is the previous release
                 int desired_version = Convert.ToInt32(prev_version);
@@ -361,7 +349,7 @@ namespace PMDOSetup
                 wc.DownloadFile(assetFile, tempAsset);
             }
 
-            if (!firstInstall)
+            if (!firstInstall && Directory.Exists(saveDir))
             {
                 Console.WriteLine("Backing up {0} to {1}...", saveDir, saveBackupDir);
 
