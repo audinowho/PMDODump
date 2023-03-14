@@ -21,6 +21,7 @@ namespace PMDOSetup
         public string Tag_Name {get; set;}
         public string Body {get; set;}
     }
+
     class Program
     {
         static string updaterPath;
@@ -249,8 +250,11 @@ namespace PMDOSetup
                     Console.WriteLine();
                 }*/
 
-                string uploadedVersionStr = releases[Convert.ToInt32(prev_version)].Name;
-                string changelog = releases[Convert.ToInt32(prev_version)].Body;
+                // 0 is the latest release, 1 is the previous release
+                int desired_version = Convert.ToInt32(prev_version);
+                
+                string uploadedVersionStr = releases[desired_version].Name;
+                string changelog = releases[desired_version].Body;
                 nextVersion = new Version(uploadedVersionStr);
 
                 if (lastVersion >= nextVersion)
