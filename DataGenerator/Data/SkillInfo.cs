@@ -159,12 +159,12 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("Mega Punch");
                 skill.Desc = new LocalText("The target is slugged by a punch thrown with muscle-packed power.");
-                skill.BaseCharges = 18;
+                skill.BaseCharges = 16;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
-                skill.Data.HitRate = 80;
+                skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
@@ -664,24 +664,29 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("Mega Kick");
                 skill.Desc = new LocalText("The target is attacked by a kick launched with muscle-packed power.");
-                skill.BaseCharges = 16;
+                skill.BaseCharges = 15;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
-                skill.Data.HitRate = 70;
+                skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(21);//Kick
-                ((AttackAction)skill.HitboxAction).HitTiles = true;
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).Range = 2;
+                ((DashAction)skill.HitboxAction).StopAtWall = true;
+                ((DashAction)skill.HitboxAction).StopAtHit = true;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
                 skill.HitboxAction.ActionFX.Sound = "DUN_Shadow_Force";
-                ((AttackAction)skill.HitboxAction).Emitter = new SingleEmitter(new AnimData("Print_Foot", 12));
+                BattleFX introFX = new BattleFX();
+                introFX.Emitter = new SingleEmitter(new AnimData("Print_Foot", 12));
+                skill.Data.IntroFX.Add(introFX);
                 SingleEmitter endAnim = new SingleEmitter(new AnimData("Mega_Background_Yellow", 3));
                 endAnim.Layer = DrawLayer.Back;
                 skill.Data.HitFX.Emitter = endAnim;
+                skill.Data.HitFX.Sound = "DUN_Double_Kick";
             }
             else if (ii == 26)
             {
@@ -4071,7 +4076,7 @@ namespace DataGenerator.Data
             {
                 skill.Name = new LocalText("Hyper Fang");
                 skill.Desc = new LocalText("The user bites hard on the target with its sharp front fangs. This may also make the target flinch.");
-                skill.BaseCharges = 20;
+                skill.BaseCharges = 18;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());

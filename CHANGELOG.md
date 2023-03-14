@@ -1,8 +1,12 @@
-# 0.7.2 Changes #
+# 0.7.3 Changes #
 
-* Released new dungeon: Fertile Valley
-* Dumb enemy AI no longer kites with Confusion
-* Fixed various issues with replays pertaining to boss battles
-* Dev: Added option for unrecruitable entities in maps
-* Dev: Mod descriptions and authors
-* Dev: safeguards for modding and assetnames
+* Fixed Path Wand
+* Lob Wand 70 basepower
+* Mega Punch 100 accuracy, 16PP
+* Mega Kick range 2, 15 PP
+* Hyper Fang 18PP
+* Display descriptions for mods
+* Fixed: maps failing to load under certain circumstances
+* Fixed: Certain Pokemon appearing as male-only
+* Fixed crashes in mod editor
+* Dev: Ground Editor has more helpful information regarding script callbacks

@@ -1556,7 +1556,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Wand_White";
                 item.Price = 5;
                 item.UseEvent.Category = BattleData.SkillCategory.Magical;
-                item.UseEvent.SkillStates.Set(new BasePowerState(40));
+                item.UseEvent.SkillStates.Set(new BasePowerState(70));
                 item.UseEvent.OnActions.Add(0, new PierceEvent(true, true, false, true));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
             }
@@ -1579,7 +1579,7 @@ namespace DataGenerator.Data
                 item.UseEvent.OnHits.Add(0, new StatusBattleEvent("invisible", true, false));
                 item.UseEvent.HitFX.Sound = "DUN_Invisible";
             }
-            else if (ii == 237)
+            else if (ii == 249)
             {
                 item.Name = new LocalText("Path Wand");
                 item.Desc = new LocalText("A wand to be waved at terrain features. It clears obstacles to form a path directly in front of the user.");
@@ -3847,7 +3847,7 @@ namespace DataGenerator.Data
             }
             else if (item.ItemStates.Contains<WandState>())
             {
-                if (ii > 221)
+                if (ii < 249)
                 {
                     item.UseAction = new ProjectileAction();
                     ((ProjectileAction)item.UseAction).CharAnimData = new CharAnimFrameType(42);//Rotate
