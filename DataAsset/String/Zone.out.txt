@@ -16,7 +16,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-champions_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Champion's Road\n{0}F		Pfad des Champions\n{0}.OG	Ruta del Campeón\nP{0}						冠军之路\n{0}F
 0000-champions_road-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Clouded Road\n{0}F									阴云之路\n{0}F
 0000-copper_quarry-0000|data.Name		Copper Quarry									粗铜矿场
-0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\n{0}F									粗铜矿场\n{0}
+0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\n{0}F									粗铜矿场\n{0}F
 0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Magnetic Quarry\nB{0}F									磁力矿场\nB{0}F
 0000-debug_zone-0000|data.Name		Debug Zone									Debug区域
 0000-deserted_fortress-0000|data.Name		Deserted Fortress									空寂要塞
@@ -30,8 +30,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-faded_trail-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Hidden Trail\nB{0}F									隐蔽山道\nB{0}F
 0000-faultline_ridge-0000|data.Name		Faultline Ridge									断层山脊
 0000-faultline_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faultline Ridge\n{0}F									断层山脊\n{0}F
-0000-fertile_valley-0000|data.Name		Fertile Valley									肥沃山谷
-0000-fertile_valley-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Fertile Valley\nB{0}F									肥沃山谷\nB{0}F
+0000-fertile_valley-0000|data.Name		Fertile Valley									丰饶山谷
+0000-fertile_valley-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Fertile Valley\nB{0}F									丰饶山谷\nB{0}F
 0000-fertile_valley-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Muddy Valley\nB{0}F									泥泞山谷\nB{0}F
 0000-flyaway_cliffs-0000|data.Name		Flyaway Cliffs		Geladene Klippen	Acantilado Nido						飞翔悬崖
 0000-flyaway_cliffs-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Flyaway Cliffs\n{0}F		Geladene Klippen\n{0}.OG	Acantilado Nido\nP{0}						飞翔悬崖\n{0}F

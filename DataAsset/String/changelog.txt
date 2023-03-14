@@ -1,4 +1,5 @@
 Sheet: Hardcode
+    * Added MENU_MODS_AUTHOR
 
 Sheet: Content
 

@@ -82,7 +82,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-trap_pitfall-0000|data.Name		Pitfall Trap	Piège Trappe	Gruben-Falle	Trampa Trampilla			구멍 함정			掉落陷阱																	
 0000-trap_pitfall-0001|data.Desc		Stepping on this trap drops the Pokémon to the floor below, inflicting damage.	Marcher sur ce piège fait tomber le Pokémon à l'étage inférieur et lui inflige des dégâts.	Wird diese Falle ausgelöst, fällt das Pokémon zur nächsten Ebene, wodurch es Schaden erhält.	Al pisar en esta trampa el Pokémon cae al piso inferior, infligiendo daño. 			밟으면 해당 포켓몬은 피해를 입고 다음 층으로 떨어진다.			踩上此陷阱后，宝可梦会掉到楼下，造成伤害。																	
 0000-trap_poison-0000|data.Name		Poison Trap	Piège Poison	Gift-Falle	Trampa Venenosa			독침 스위치			毒针陷阱																	
-0000-trap_poison-0001|data.Desc		Triggering this trap will release spikes that poison nearby Pokémon.																										
+0000-trap_poison-0001|data.Desc		Triggering this trap will release spikes that poison nearby Pokémon.									触发此陷阱后，会射出毒针，使触发它的宝可梦中毒。																	
 0000-trap_pokemon-0000|data.Name		Pokémon Trap	Piège Pokémon	Pokémon-Falle	Trampa Nido			포켓몬 스위치			宝可梦陷阱																	
 0000-trap_pokemon-0001|data.Desc		Triggering this trap transforms all items in the area into hostile Pokémon.	Activering this Piège transforms all items in the area into hostile Pokémon.	Wird diese Falle ausgelöst, verwandeln sich alle Items in diesem Bereich in gegnerische Pokémon.	Al activar esta trampa transforma todos los objetos del área en Pokémon hostiles.			작동하면 근방의 모든 아이템을 적대적인 포켓몬으로 변하게 한다.			触发此陷阱后，会将范围内的所有道具变为敌方宝可梦。																	
 0000-trap_pp_leech-0000|data.Name		PP-Leech Trap	Piège PP-Zéro	AP-Minus-Falle	Trampa Anula-PP			기술줄임 함정			PP抽取陷阱																	
