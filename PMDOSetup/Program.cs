@@ -278,7 +278,7 @@ namespace PMDOSetup
                 Console.WriteLine();
                 Console.WriteLine();
 
-                string tagStr = releases[Convert.ToInt32(prev_version)].Tag_Name;
+                string tagStr = releases[desired_version].Tag_Name;
                 Regex pattern = new Regex(@"https://github\.com/(?<repo>\w+/\w+).git");
                 {
                     //Get the exe submodule's version (commit) at this tag
