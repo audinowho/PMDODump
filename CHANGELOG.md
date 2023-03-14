@@ -10,4 +10,5 @@
 * Fixed: maps failing to load under certain circumstances
 * Fixed: Certain Pokemon appearing as male-only
 * Fixed crashes in mod editor
+* Dev: Dialoguebox dimension customization
 * Dev: Ground Editor has more helpful information regarding script callbacks
