@@ -380,8 +380,8 @@ namespace DataGenerator
                         {
                             //MapInfo.AddMapData();
                             //MapInfo.AddGroundData("final_stop");
-                            ZoneInfo.AddZoneData();
-                            //ZoneInfo.AddZoneData(7);
+                            //ZoneInfo.AddZoneData();
+                            ZoneInfo.AddZoneData(30);
                         }
 
                         DataManager.DataType reserializeType = DataManager.DataType.None;
