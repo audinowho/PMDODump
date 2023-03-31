@@ -94,8 +94,7 @@ namespace DataGenerator.Data
 
         public static void AddTitleDrop<T>(MapGen<T> layout) where T : BaseMapGenContext
         {
-            MapEffectStep<T> fade = new MapEffectStep<T>();
-            fade.Effect.OnMapStarts.Add(-15, new FadeTitleEvent());
+            MapTitleDropStep<T> fade = new MapTitleDropStep<T>(new Priority(-15));
             layout.GenSteps.Add(PR_FLOOR_DATA, fade);
         }
 
