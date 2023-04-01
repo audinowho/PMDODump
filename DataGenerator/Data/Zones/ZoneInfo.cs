@@ -12429,7 +12429,7 @@ namespace DataGenerator.Data
             {
                 #region LAVA FLOE ISLAND
                 {
-                    zone.Name = new LocalText("**Lava Floe Island");
+                    zone.Name = new LocalText("Lava Floe Island");
                     zone.Rescues = 2;
                     zone.Level = 20;
                     zone.TeamSize = 2;
