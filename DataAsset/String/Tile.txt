@@ -1,115 +1,115 @@
-Key		EN	ZH-HANS	FR	ES	DE	KO
-0000-area_script-0000|data.Name		Script Trigger	脚本触发器				
-0000-area_script-0001|data.Desc							
-0000-area_shop-0000|data.Name		Shop Tile	商店地板	Case Magasin	Baldosa Tienda		
-0000-area_shop-0001|data.Desc							
-0000-chest_empty-0000|data.Name		Empty Chest		Coffre Vide	Cofre Vacío	Leere Truhe	빈 상자
-0000-chest_empty-0001|data.Desc							
-0000-chest_full-0000|data.Name		Treasure Chest		Coffre aux trésors	Cofre del Tesoro	Schatztruhe	보물상자
-0000-chest_full-0001|data.Desc							
-0000-none-0000|data.Name		None	无	Aucun	Ninguno	Keines	효과없음
-0000-none-0001|data.Desc		This tile has no effect.	这个地板没有效果。	Cette case n'a aucun effet!	Esta baldosa no tiene efecto.	Dieses Feld hat keinen Effekt.	이 타일은 아무런 효과도 없다.
-0000-sealed_block-0000|data.Name		Sealed Block		Bloc Scellé	Bloque Sellado		봉인된블럭
-0000-sealed_block-0001|data.Desc							
-0000-sealed_door-0000|data.Name		Sealed Door		Porte Scellée	Puerta Sellada	Versiegelte Tür	봉인된문
-0000-sealed_door-0001|data.Desc							
-0000-sealed_guild-0000|data.Name		Guild Gate	公会大门				
-0000-sealed_guild-0001|data.Desc							
-0000-sign-0000|data.Name		Sign	标牌	Panneau	Letrero	Schild	
-0000-sign-0001|data.Desc							
-0000-stairs_back_down-0000|data.Name		Stairs	楼梯	Escaliers	Escaleras	Treppe	계단
-0000-stairs_back_down-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.	通向上一层的楼梯。如果在顶层，就会直接离开迷宫。	Escaliers menant à l'étage précédent. Si vous êtes au premier étage, vous pourrez vous échapper du donjon.			
-0000-stairs_back_up-0000|data.Name		Stairs	楼梯	Escaliers	Escaleras	Treppe	계단
-0000-stairs_back_up-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.	通向上一层的楼梯。如果在顶层，就会直接离开迷宫。	Escaliers menant à l'étage précédent. Si vous êtes au premier étage, vous pourrez vous échapper du donjon.			
-0000-stairs_exit_down-0000|data.Name		Exit Stairs	出口楼梯	Escaliers de sortie			
-0000-stairs_exit_down-0001|data.Desc		Stairs leading to the dungeon's exit.	通向迷宫出口的楼梯。	Escaliers menant à la sortie du donjon.			
-0000-stairs_exit_up-0000|data.Name		Exit Stairs	出口楼梯	Escaliers de sortie			
-0000-stairs_exit_up-0001|data.Desc		Stairs leading to the dungeon's exit.	通向迷宫出口的楼梯。	Escaliers menant à la sortie du donjon.			
-0000-stairs_go_down-0000|data.Name		Stairs	楼梯	Escaliers	Escaleras	Treppe	계단
-0000-stairs_go_down-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.	通向下一层的楼梯。如果在底层，就会直接离开迷宫。	Ces escaliers mènent à l'étage suivant. Si vous êtes au dernier étage, vous quitterez le donjon!	Escaleras que conducen al siguiente piso. Si ya estás en el último piso, escaparás de la mazmorra.	Stufen, die zur nächsten Ebene führen. Bist du auf der letzten Ebene, wirst du aus dem Dungeon entkommen.	다음 층으로 향하는 계단. 마지막 층이라면 던전에서 탈출할 수 있다.
-0000-stairs_go_up-0000|data.Name		Stairs	楼梯	Escaliers	Escaleras	Treppe	계단
-0000-stairs_go_up-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.	通向下一层的楼梯。如果在底层，就会直接离开迷宫。	Ces escaliers mènent à l'étage suivant. Si vous êtes au dernier étage, vous quitterez le donjon!	Escaleras que conducen al siguiente piso. Si ya estás en el último piso, escaparás de la mazmorra.	Stufen, die zur nächsten Ebene führen. Bist du auf der letzten Ebene, wirst du aus dem Dungeon entkommen.	다음 층으로 향하는 계단. 마지막 층이라면 던전에서 탈출할 수 있다.
-0000-stairs_secret_down-0000|data.Name		Secret Stairs	秘密楼梯	Escaliers Secrets	Escaleras Secretas	Geheime Treppe	비밀의 계단
-0000-stairs_secret_down-0001|data.Desc		Stairs leading to an unknown location.	通向一个未知地点的楼梯。	Des escaliers menant à un endroit inconnu.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.	Stufen, welche zu einem unbekannten Ort führen. Erkunder sollten sich vorbereiten bevor diese voranschreiten, um jeder kommenden Gefahr zu trotzen.	알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.
-0000-stairs_secret_up-0000|data.Name		Secret Stairs	秘密楼梯	Escaliers Secrets	Escaleras Secretas	Geheime Treppe	비밀의 계단
-0000-stairs_secret_up-0001|data.Desc		Stairs leading to an unknown location.	通向一个未知地点的楼梯。	Des escaliers menant à un endroit inconnu.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.	Stufen, welche zu einem unbekannten Ort führen. Erkunder sollten sich vorbereiten bevor diese voranschreiten, um jeder kommenden Gefahr zu trotzen.	알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.
-0000-tile_boss-0000|data.Name		Sigil Site	信号区域	Zone de Signal	Área Señal		
-0000-tile_boss-0001|data.Desc		A mysterious signal that calls Pokémon to the area.	一种可以召集宝可梦来到这里的神秘信号。	Un signal mystérieux qui appelle les Pokémon dans la zone.	Una misteriosa señal que llama Pokémon al área.		
-0000-tile_compass-0000|data.Name		Compass Tile	指南地板	Case Compas			
-0000-tile_compass-0001|data.Desc		A tile that shows the way to important locations on the floor.	可以指向楼层内重要地点的地板。	Une case qui indique le chemin vers les endroits importants du sol.			
-0000-tile_evo-0000|data.Name		Luminous Site	光之领域	Zone Lumineuse	Area Luminosa	Leuchtende Fläche	빛의 지대
-0000-tile_evo-0001|data.Desc		A mysterious area that allows Pokémon to evolve.	可以让宝可梦进化的不可思议区域。	Un endroit mystérieux qui permet aux Pokémon d'évoluer.	Un área misteriosa que permite a los Pokémon evolucionar.	Ein mysteriöser Bereich, welcher Pokémon die Entwicklung ermöglicht.	포켓몬이 진화할 수 있게 해주는 신비한 지대.
-0000-tile_fairy_ring-0000|data.Name		Fairy Ring	妖精环圈				
-0000-tile_fairy_ring-0001|data.Desc		A mysterious energy permeates the area...	一股不可思议的力量弥漫在这里......				
-0000-tile_mystery-0000|data.Name		Mystery Site	不可思议区域				
-0000-tile_mystery-0001|data.Desc		???	？？？				
-0000-tile_rescue-0000|data.Name		Rescue Point	救助地点	Point de Sauvetage	Punto de rescate	Rettungszone	
-0000-tile_rescue-0001|data.Desc		It's the rescue spot where your friend's team went down! Send an A-OK mail to rescue the defeated team.	这是你朋友的团队倒下的救助点！发送复活信，救援被击败的团队。	C'est le lieu de sauvetage où l'équipe de votre ami a été vaincue ! Envoyez un courrier A-OK pour sauver l'équipe vaincue.	¡Es el lugar de rescate donde el equipo amigo cayó derrotado! Envia un correo A-OK para rescatar al equipo derrotado.	In dieser Rettungszone wurde das Team deines Freundes besiegt! Versende einen OK Brief um das besiegte Team zu retten.	
-0000-tile_reset-0000|data.Name		Reset Tile	重置地板	Case de Réinitialisation	Baldosa Reinicio	Resetfeld	
-0000-tile_reset-0001|data.Desc		A switch that resets the floor, returning all items, traps, and wild Pokémon to their original positions.	重置楼层的开关，使所有道具、 陷阱和野生宝可梦复位。	Un interrupteur qui réinitialise l'étage, remettant tous les objets, pièges et Pokémon sauvages à leur position initiale.	Un botón que reinicia el piso, devolviendo todos los objetos, trampas y Pokémon salvajes a sus posiciones originales.	Ein Schalter, der die Ebene zurücksetzt, sodass alle Items, Fallen und wilden Pokemon zu ihrem ursprünglichen Zustand zurückgesetzt werden.	
-0000-tile_switch-0000|data.Name		Switch Tile	机关地板	Case Interrupteur	Baldosa Interruptor	Schalterfeld	스위치 타일
-0000-tile_switch-0001|data.Desc		A switch that opens various blocked passageways found on the floor.	可以打开楼层内所有闭合路径的开关。	Un interrupteur qui ouvre divers passages bloqués trouvés a l'étage.	Un botón que abre varios pasillos bloqueados encontrados en el piso.	Ein Schalter, der verschlossene Pfade auf der Ebene öffnet.	층 곳곳의 봉쇄된 통로를 여는 스위치.
-0000-tile_switch_sync-0000|data.Name		Switch Tile	机关地板	Case Interrupteur	Baldosa Interruptor	Schalterfeld	스위치 타일
-0000-tile_switch_sync-0001|data.Desc		A switch that opens various blocked passageways found on the floor.	可以打开楼层内所有闭合路径的开关。	Un interrupteur qui ouvre divers passages bloqués trouvés a l'étage.	Un botón que abre varios pasillos bloqueados encontrados en el piso.	Ein Schalter, der verschlossene Pfade auf der Ebene öffnet.	층 곳곳의 봉쇄된 통로를 여는 스위치.
-0000-tile_training-0000|data.Name		Training Switch	训练地板	Bachopiège	Baldosa Práctica	Trainingschalter	트레이닝 스위치
-0000-tile_training-0001|data.Desc		Stepping on this tile gives the Trained status to the party.	触发此地板后，会使全队进入训练状态。	Marcher sur cette case donne le status Bachotage à l'équipe.	Pisar en esta baldosa da el estado Practicando al equipo.	Wird dieses Feld betreten, wird der "Trainiert"-Status an das Team gegeben.	밟으면 아군에게 트레이닝 상태를 부여한다.
-0000-tile_updraft-0000|data.Name		Updraft	上升气流				
-0000-tile_updraft-0001|data.Desc		A mysterious wind current is blowing upwards...	一股不可思议的气流在向上吹......				
-0000-tile_wonder-0000|data.Name		Wonder Tile	不可思议地板	Case Miracle	Baldosa Mágica	Wunderfeld	이상한 마루
-0000-tile_wonder-0001|data.Desc		An odd floor tile seen in many dungeons. Triggering it resets nearby Pokémon's stats if they are boosted or reduced.	在许多迷宫中都能找到这个奇特的地板。触发后，附近宝可梦的能力变化都会恢复至正常水平。	Une étrange cases présente dans beaucoup de donjon. Marcher dessus réinitialise les stats du Pokémon.	Una extraña baldosa que se ve en varias mazmorras. Al activarla reinicia las estadísticas de los Pokémon cercanos si están reducidos o aumentados.	Ein merkwürdiges Feld, das man in vielen Dungeons findet. Tritt ein Pokémon darauf, werden Angriff, Verteidigung und andere Statuswert, wenn sie erhöht oder gesenkt waren, wieder auf den normalen Stand gesetzt.	많은 던전에서 보이는 이상한 타일. 작동하면 근처 포켓몬의 능력치를 원래대로 되돌린다.
-0000-trap_apple-0000|data.Name		Apple Trap	苹果陷阱	Piège Pomme	Trampa Manzana	Apfel-Falle	사과 함정
-0000-trap_apple-0001|data.Desc		Triggering this trap turns a held-effect item into an apple.	触发此陷阱后，会使背包中有额外效果的携带物变成苹果。	Le déclenchement de ce piège transforme un objet à effet maintenu en une pomme.	Al activar esta trampa convierte un objeto que se activa al llevarlo en una manzana.	Wird diese Falle ausgelöst, wird ein Item, welches einen Effekt beim Tragen besitzt, in einen Apfel verwandelt.	밟으면 지니고 있을때 효과를 주는 도구 하나가 사과로 변한다.
-0000-trap_chestnut-0000|data.Name		Chestnut Trap	刺栗陷阱	Piège Châtaigne	Trampa Castañazo	Kastanien-Falle	밤송이 스위치
-0000-trap_chestnut-0001|data.Desc		Triggering this trap makes spiky unshelled Chestnuts drop, inflicting damage on nearby Pokémon and causing them to flinch.	触发此陷阱后，掉落带刺的栗子，攻击附近的宝可梦，并使其畏缩。				
-0000-trap_discord-0000|data.Name		Discord Trap	关系恶化陷阱	Piège Discorde	Trampa Discordia	Zwietrachts-Falle	불화 함정
-0000-trap_discord-0001|data.Desc		Triggering this trap creates a discord among the party.	触发此陷阱后，会使团队内的关系恶化。	Activer ce créé un conflit au sein de l'équipe.	Al activar esta trampa crea una discordia entre el equipo.	Wird diese Falle ausgelöst, entsteht Uneinigkeit im Team.	밟으면 동료들 사이에 불화가 생긴다.
-0000-trap_emera_crush-0000|data.Name		Emera-Crush Trap	琉石消失陷阱	Suppresseur d'Éphélite	Trampa Destruye-Iristales	Sipalschwund-Falle	라피스 제거 함정
-0000-trap_emera_crush-0001|data.Desc		Triggering this trap causes an emera on a looplet to come off and disappear.	触发此陷阱后，会使环镯上的一个琉石消失。	Activer ce piège fait disparaître une Éphélite du Pokémon au hasard.	Al activar esta trampa cause que un iristal del brazal se caiga y desaparezca.	Wenn ein Pokémon auf diese Falle tritt, löst sich ein zufälliger Sipal aus seinem Ringel und verschwindet.	밟은 포켓몬의 링글에 장착된 라피스 중 하나를 파괴한다.
-0000-trap_emera_swap-0000|data.Name		Emera-Swap Trap	琉石变化陷阱	Changeur d'Éphélite	Trampa Cambia-Iristales	Sipalwechsel-Falle	라피스 교체 함정
-0000-trap_emera_swap-0001|data.Desc		Triggering this trap swaps an emera on a looplet for another emera.	触发此陷阱后，会使环镯上的一个琉石变为另一种。	Activer ce piège remplacera une Éphélite du Pokémon par une autre au hasard.	Al activar esta trampa cambia un iristal en un brazal por otro iristal.	Wenn ein Pokémon auf diese Falle tritt, wird einer der zufälligen Sipale in seinem Ringel mit einem anderen Sipal ausgewechselt.	밟은 포켓몬의 링글에 장착된 라피스 중 하나를 무작위의 다른 라피스로 교체한다.
-0000-trap_explosion-0000|data.Name		Explosion Trap	大爆炸陷阱	Électromine	Trampa Explosiva	Bomben-Falle	폭발 스위치
-0000-trap_explosion-0001|data.Desc		Activating this trap triggers a huge explosion. Its damage extends to everything up to 2 steps away from it.	激活此陷阱后，会引发巨大爆炸，爆炸范围延伸至2格远的位置。	Activer ce piège provoque une énorme explosion touchant tout ce qui se trouve dans un rayon de 2 cases autour du piège.	Al activar esta trampa activa una gran explosión. El daño se extiende a todo que esté a 2 pasos de él.	Wird diese Falle ausgelöst, entsteht eine große Explosion. Der Schaden erstreckt sich über 2 Felder in alle Richtungen.	작동하면 주변 2칸의 범위에 폭발을 일으킨다.
-0000-trap_grimy-0000|data.Name		Grimy Trap	臭泥陷阱	Piège Tadmorv	Trampa Pestilente	Sleimkost-Falle	질퍽 스위치
-0000-trap_grimy-0001|data.Desc		Triggering this trap makes it spew a muck that gums up food and removes abilities.	触发此陷阱后，它会喷出淤泥覆盖一个食物，也会使宝可梦的特性消失。	Activer ce piège projette une boue nauséabonde qui pourrit la nourriture et supprime la Capacité Spéciale du Pokémon!	Al activar esta trampa hace arrojar una mugre que estropea la comida y quita habilidades.	Wird diese Falle ausgelöst, wird ekliger Sleim ausgespuckt, wodurch das Essen des Pokémon ungenießbar wird und seine Fähigkeiten verliert.	밟으면 식량을 질퍽하게 하고 특성을 제거하는 쓰레기가 방출된다.
-0000-trap_grudge-0000|data.Name		Grudge Trap	怨念陷阱	Piège Rancune	Trampa Rabiosa	Nachspiel-Falle	원념 스위치
-0000-trap_grudge-0001|data.Desc		Triggering this trap gives the Grudge status to all opposing Pokémon in the area.	触发此陷阱后，会使范围内的野生宝可梦进入怨念状态。	Activer ce piège donne le status Rancune aux Pokémon ennemis proches.	Al activar esta trampa da a todos los Pokémon oponentes del area el estado Rabia.	Wird diese Falle ausgelöst, erhalten alle gegnerische Pokémon auf der Ebene den Nachspiel-Status.	작동하면 근처 모든 적대적인 포켓몬에게 원념 상태를 일으킨다.
-0000-trap_gust-0000|data.Name		Gust Trap	吹飞陷阱	Piège Ventilo	Trampa Tornado	Wirbel-Falle	돌풍 스위치
-0000-trap_gust-0001|data.Desc		Activating this trap triggers a gust of wind that sends nearby Pokémon flying.	触发此陷阱后，会吹起一阵风，吹飞附近的宝可梦。	Activer ce piège provoque un souffle qui repousse les Pokémon proches.	Al activar esta trampa crea una ráfaga de viento que lanza a los Pokémon cercanos por los aires.	Wird diese Falle ausgelöst, wird ein Windstoß erzeugt, welcher Pokémon in der Nähe wegfliegen lässt.	작동하면 돌풍을 일으켜 근처 포켓몬을 날려보낸다.
-0000-trap_hunger-0000|data.Name		Hunger Trap	饥饿陷阱	Piège Famine	Trampa Hambre	Hungerfalle	포만감 함정
-0000-trap_hunger-0001|data.Desc		Triggering this trap causes the Pokémon to become hungry.	触发此陷阱后，宝可梦会变得更饥饿。	Ce piège donne le status Affamé au Pokémon qui marche dessus.	Al activar esta trampa causa al Pokémon que tenga hambre.	Wird diese Falle ausgelöst, wird das Pokémon hungrig.	밟은 포켓몬은 배가 고파진다.
-0000-trap_mud-0000|data.Name		Mud Trap	泥浆陷阱	Piège Boue	Trampa Lodo	Schlamm-Falle	진흙 스위치
-0000-trap_mud-0001|data.Desc		Triggering this trap makes it blow mud that sharply lowers the highest base stat of all nearby Pokémon.	触发此陷阱后，它会喷出泥，大幅降低宝可梦的最高基础能力。	Activer ce piège projette de la boue sur tout les Pokémon proches faisant beaucoup baisser leur plus haute stats.	Al activar esta trampa hace saltar lodo que baja bruscamente la estadística más alta de todos los Pokémon cercanos.	Wird diese Falle ausgelöst, lässt es Schlamm herausschießen, welches den höchsten Statuswert naher Pokémon stark senkt.	작동하면 진흙을 뿌려 근처 포켓몬의 가장 높은 능력치를 크게 낮춘다.
-0000-trap_pitfall-0000|data.Name		Pitfall Trap	掉落陷阱	Piège Trappe	Trampa Trampilla	Gruben-Falle	구멍 함정
-0000-trap_pitfall-0001|data.Desc		Stepping on this trap drops the Pokémon to the floor below, inflicting damage.	踩上此陷阱后，宝可梦会掉到楼下，造成伤害。	Marcher sur ce piège fait tomber le Pokémon à l'étage inférieur et lui inflige des dégâts.	Al pisar en esta trampa el Pokémon cae al piso inferior, infligiendo daño. 	Wird diese Falle ausgelöst, fällt das Pokémon zur nächsten Ebene, wodurch es Schaden erhält.	밟으면 해당 포켓몬은 피해를 입고 다음 층으로 떨어진다.
-0000-trap_poison-0000|data.Name		Poison Trap	毒针陷阱	Piège Poison	Trampa Venenosa	Gift-Falle	독침 스위치
-0000-trap_poison-0001|data.Desc		Triggering this trap will release spikes that poison nearby Pokémon.	触发此陷阱后，会射出毒针，使触发它的宝可梦中毒。				
-0000-trap_pokemon-0000|data.Name		Pokémon Trap	宝可梦陷阱	Piège Pokémon	Trampa Nido	Pokémon-Falle	포켓몬 스위치
-0000-trap_pokemon-0001|data.Desc		Triggering this trap transforms all items in the area into hostile Pokémon.	触发此陷阱后，会将范围内的所有道具变为敌方宝可梦。	Activering this Piège transforms all items in the area into hostile Pokémon.	Al activar esta trampa transforma todos los objetos del área en Pokémon hostiles.	Wird diese Falle ausgelöst, verwandeln sich alle Items in diesem Bereich in gegnerische Pokémon.	작동하면 근방의 모든 아이템을 적대적인 포켓몬으로 변하게 한다.
-0000-trap_pp_leech-0000|data.Name		PP-Leech Trap	PP抽取陷阱	Piège PP-Zéro	Trampa Anula-PP	AP-Minus-Falle	기술줄임 함정
-0000-trap_pp_leech-0001|data.Desc		Triggering this trap completely drains the PP of the Pokémon's last-used move.	触发此陷阱后，会耗尽宝可梦最后使用招式的PP。	Activer ce piège draine tout les PP de la dernière capacité utilisé par le Pokémon.	Al activar esta trampa drena completamente todo el PP del último movimiento usado por el Pokémon	Wird diese Falle ausgelöst, werden die AP der zuletzt eingesetzten Attacke des Pokémon auf 0 herabgesetzt.	밟은 포켓몬은 가장 최근에 썼던 기술의 PP가 0이 된다.
-0000-trap_seal-0000|data.Name		Seal Trap	封印陷阱	Piège Verrou	Trampa Sellante	Siegel-Falle	봉인 스위치
-0000-trap_seal-0001|data.Desc		Triggering this trap disables the last-used move of all nearby Pokémon.	触发此陷阱后，会封印附近所有宝可梦最后使用的招式。	Activer ce piège verrouille la dernière capacité utilisé par les Pokémon proches.	Al activar esta trampa desactiva el último movimiento usado de todos los Pokémon cercanos.	Wird diese Falle ausgelöst, wird die zuletzt eingesetzte Attacke aller sich in der Nähe befindenden Pokémon unbenutzbar.	작동하면 근처 포켓몬이 가장 최근에 썼던 기술을 사용하지 못하게 한다.
-0000-trap_self_destruct-0000|data.Name		Self-Destruct Trap	自爆陷阱	Voltomine	Trampa Autodestructiva	Spreng-Falle	자폭 스위치
-0000-trap_self_destruct-0001|data.Desc		Triggering this trap makes it explode. Its damage extends to everything near the trap.	激活此陷阱后，会引发爆炸，爆炸范围延伸至陷阱周围。	Activer ce piège le fait exploser touchant tout ce qui se trouve autour du piège.	Al activar esta trampa explota, dañando a todo lo cercano a la trampa.	Wird diese Falle ausgelöst, explodiert diese. Alles, das sich in der Nähe befindet, erleidet Schaden.	작동하면 주변 1칸의 범위에 폭발을 일으킨다.
-0000-trap_slow-0000|data.Name		Slow Trap	缓速陷阱	Piège Ramoloss	Trampa Ralentí	Lahm-Falle	야돈 스위치
-0000-trap_slow-0001|data.Desc		Triggering this trap lowers the Movement Speed of nearby Pokémon by one level.	触发此陷阱后，附近宝可梦的移动速度会降低一级。	Activer ce piège diminuera de 1 la Vitesse de Mouvement des Pokémon proches.	Al activar esta trampa se reduce la Velocidad de Movimiento de los Pokémon cercanos por un nivel.	Wird diese Falle ausgelöst, verringert sich das Tempo naher Pokémon um eine Stufe.	작동하면 근처 포켓몬의 행동속도를 한단계 낮춘다.
-0000-trap_slumber-0000|data.Name		Slumber Trap	睡眠陷阱	Piège Soporifique	Trampa Somnífera	Schlaf-Falle	잠듦 스위치
-0000-trap_slumber-0001|data.Desc		Triggering this trap releases a sleeping gas that puts all nearby Pokémon to sleep.	触发此陷阱后，会释放一种睡眠气体，使附近所有宝可梦睡着。	Activer ce piège relâche un gaz soporifique qui endort tout les Pokémon proches.	Al activar esta trampa se libera un gas somnífero que pone a todos los Pokémon cercanos a dormir.	Wird diese Falle ausgelöst, wird ein Schlafgas freigesetzt, welches in der Nähe befindende Pokémon einschlafen lässt.	작동하면 수면 가스를 방출하여 근처의 포켓몬을 수면 상태로 만든다.
-0000-trap_spikes-0000|data.Name		Spikes	撒菱	Picots	Púas	Stacheln	가시가시 함정
-0000-trap_spikes-0001|data.Desc		Stepping on this trap damages the Pokémon standing on it.	踩上后，会对站在上面的宝可梦造成伤害。	Ce piège inflige des dégâts au Pokémon qui marche dessus.	Pisar en esta trampa hace daño al Pokémon que está encima.	Sobald ein Pokémon auf diese Falle tritt, verursacht diese Falle Schaden.	밟는 포켓몬에게 피해를 입힌다.
-0000-trap_spin-0000|data.Name		Spin Trap	旋转陷阱	Piège Tournis	Trampa Rotatoria	Schwindel-Falle	빙글빙글 스위치
-0000-trap_spin-0001|data.Desc		Triggering this trap spins all nearby Pokémon around dizzyingly, making them confused.	触发此陷阱后，会旋转附近所有的宝可梦，使其混乱。	Activer ce piège fera tournoyer sur place les Pokémon proches, les rendant Confus.	Al activar esta trampa gira a todos los Pokémon cercanos rápidamente, quedando confundidos.	Wird diese Falle ausgelöst, dreht sich das Pokémon schwindelig rundherum, woraufhin es verwirrt ist.	작동하면 근처 포켓몬을 어지럽게 회전시켜 혼란에 빠지게 한다.
-0000-trap_stealth_rock-0000|data.Name		Stealth Rock	隐形岩	Piège de Roc	Trampa Rocas	Tarnsteine	스텔스록
-0000-trap_stealth_rock-0001|data.Desc		Stepping on this trap damages the Pokémon standing on it with a Rock-type attack.	踩上后，会对站在上面的宝可梦造成岩石属性伤害。	Ce piège inflige des dégâts de type Roche au Pokémon qui marche dessus.	Pisar en esta trampa daña al Pokémon que está encima con un ataque del tipo Roca.	Sobald ein Pokémon auf diese Falle tritt, verursacht diese Falle Schaden vom Typ Gestein.	밟는 포켓몬에게 바위 타입 피해를 입힌다.
-0000-trap_sticky-0000|data.Name		Sticky Trap	粘着陷阱	Piège Glu	Trampa Pegajosa	Klebe-Falle	끈적끈적 스위치
-0000-trap_sticky-0001|data.Desc		Triggering this trap makes all nearby Pokémon immobilized. It will also cause items to become sticky.	触发此陷阱后，会固定附近的宝可梦，也会使一个道具粘着。	Activer ce piège immobilise tout les Pokémon proches. Il rend aussi les objets collants.	Al activar esta trampa hace que todo los Pokémon cercanos se inmobilizen. Además los objetos se volverán pegajosos.	Wird diese Falle ausgelöst, werden alle Pokémon in der Nähe bewegungsunfähig. Außerdem werden gehaltene Items klebrig.	작동하면 근처 포켓몬을 경직 상태이상에 걸리게 한다. 도구가 끈적해지기도 한다.
-0000-trap_summon-0000|data.Name		Summon Trap	召唤陷阱	Piège Appeau	Trampa Aromática	Sammel-Falle	불러내기 스위치
-0000-trap_summon-0001|data.Desc		Triggering this trap releases a sweet aroma that attracts Pokémon from afar.	触发此陷阱后，会释放一种甜蜜的香气，吸引远处的宝可梦。	Activer ce piège relâche dans l'air un parfum qui attire les Pokémon.	Al activar esta trampa libera un aroma dulce que atrae Pokémon desde lejos.	Wird diese Falle ausgelöst, wird ein süßer Duft freigesetzt, welcher Pokémon aus weiter Ferne herlockt.	작동하면 달콤한 향기를 방출해 포켓몬을 불러모은다.
-0000-trap_toxic_spikes-0000|data.Name		Toxic Spikes	毒菱	Pics Toxik	Púas Venenosas	Giftspitzen	독가시 함정
-0000-trap_toxic_spikes-0001|data.Desc		Stepping on this trap badly poisons the Pokémon standing on it.	踩上后，上面的宝可梦会中剧毒。	Ce piège empoisonne gravement le Pokémon qui marche dessus.	Pisar en esta trampa envenena gravemente al Pokémon que está encima.	Sobald ein Pokémon auf diese Falle tritt, verursacht diese Falle schwere Vergiftungen.	밟는 포켓몬은 맹독에 걸린다.
-0000-trap_trigger-0000|data.Name		Trigger Trap	激活陷阱	Détonateur	Trampa Disparador	Auslöse-Falle	작동 스위치
-0000-trap_trigger-0001|data.Desc		Triggering this trap sets off all other traps in the area.	触发此陷阱后，范围内的其他陷阱也会被触发。	Activer ce piège enclenche tout les pièges dans les environs.	Al activar esta trampa pone en marcha todas las demás trampas del área.	Wird diese Falle ausgelöst, löst diese alle anderen Fallen in diesem Bereich aus.	작동하면 근처의 다른 함정을 작동시킨다.
-0000-trap_trip-0000|data.Name		Trip Trap	绊倒陷阱	Croche-Piège	Trampa Tropezón	Stolperfalle	발걸기 함정
-0000-trap_trip-0001|data.Desc		Triggering this trap causes nearby Pokémon to trip and drop their items.	触发此陷阱后，会绊倒附近的宝可梦，并使它们的道具掉落。	Activer ce piège fais trébucher les Pokémon proches et fait tomber leurs objet.	Al activar esta trampa causa que los Pokémon cercanos se tropiecen y caigan sus objetos.	Wird diese Falle ausgelöst, stolpern Pokémon in der Nähe und lassen ihre Items fallen.	작동하면 근처 포켓몬이 넘어져 아이템을 떨어뜨리게 만든다.
-0000-trap_warp-0000|data.Name		Warp Trap	传送陷阱	Télépiège	Teletrampa	Warp-Falle	워프 스위치
-0000-trap_warp-0001|data.Desc		Triggering this trap instantly warps the Pokémon to another spot on the floor.	触发此陷阱后，会立刻将宝可梦传送至楼层的其他地方。	Activer ce piège téléporte instantanément le Pokémon à un autre endroit de l'étage.	Al activar esta trampa teletransporta al Pokémon instantáneamente a otro lugar del piso.	Wird diese Falle ausgelöst, wird das Pokémon auf einem anderen Punkt auf der Ebene hinteleportiert.	밟으면 밟은 포켓몬을 즉시 층의 다른 곳으로 순간이동한다.
+Key		EN
+0000-area_script-0000|data.Name		Script Trigger
+0000-area_script-0001|data.Desc		
+0000-area_shop-0000|data.Name		Shop Tile
+0000-area_shop-0001|data.Desc		
+0000-chest_empty-0000|data.Name		Empty Chest
+0000-chest_empty-0001|data.Desc		
+0000-chest_full-0000|data.Name		Treasure Chest
+0000-chest_full-0001|data.Desc		
+0000-none-0000|data.Name		None
+0000-none-0001|data.Desc		This tile has no effect.
+0000-sealed_block-0000|data.Name		Sealed Block
+0000-sealed_block-0001|data.Desc		
+0000-sealed_door-0000|data.Name		Sealed Door
+0000-sealed_door-0001|data.Desc		
+0000-sealed_guild-0000|data.Name		Guild Gate
+0000-sealed_guild-0001|data.Desc		
+0000-sign-0000|data.Name		Sign
+0000-sign-0001|data.Desc		
+0000-stairs_back_down-0000|data.Name		Stairs
+0000-stairs_back_down-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.
+0000-stairs_back_up-0000|data.Name		Stairs
+0000-stairs_back_up-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.
+0000-stairs_exit_down-0000|data.Name		Exit Stairs
+0000-stairs_exit_down-0001|data.Desc		Stairs leading to the dungeon's exit.
+0000-stairs_exit_up-0000|data.Name		Exit Stairs
+0000-stairs_exit_up-0001|data.Desc		Stairs leading to the dungeon's exit.
+0000-stairs_go_down-0000|data.Name		Stairs
+0000-stairs_go_down-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.
+0000-stairs_go_up-0000|data.Name		Stairs
+0000-stairs_go_up-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.
+0000-stairs_secret_down-0000|data.Name		Secret Stairs
+0000-stairs_secret_down-0001|data.Desc		Stairs leading to an unknown location.
+0000-stairs_secret_up-0000|data.Name		Secret Stairs
+0000-stairs_secret_up-0001|data.Desc		Stairs leading to an unknown location.
+0000-tile_boss-0000|data.Name		Sigil Site
+0000-tile_boss-0001|data.Desc		A mysterious signal that calls Pokémon to the area.
+0000-tile_compass-0000|data.Name		Compass Tile
+0000-tile_compass-0001|data.Desc		A tile that shows the way to important locations on the floor.
+0000-tile_evo-0000|data.Name		Luminous Site
+0000-tile_evo-0001|data.Desc		A mysterious area that allows Pokémon to evolve.
+0000-tile_fairy_ring-0000|data.Name		Fairy Ring
+0000-tile_fairy_ring-0001|data.Desc		A mysterious energy permeates the area...
+0000-tile_mystery-0000|data.Name		Mystery Site
+0000-tile_mystery-0001|data.Desc		???
+0000-tile_rescue-0000|data.Name		Rescue Point
+0000-tile_rescue-0001|data.Desc		It's the rescue spot where your friend's team went down! Send an A-OK mail to rescue the defeated team.
+0000-tile_reset-0000|data.Name		Reset Tile
+0000-tile_reset-0001|data.Desc		A switch that resets the floor, returning all items, traps, and wild Pokémon to their original positions.
+0000-tile_switch-0000|data.Name		Switch Tile
+0000-tile_switch-0001|data.Desc		A switch that opens various blocked passageways found on the floor.
+0000-tile_switch_sync-0000|data.Name		Switch Tile
+0000-tile_switch_sync-0001|data.Desc		A switch that opens various blocked passageways found on the floor.
+0000-tile_training-0000|data.Name		Training Switch
+0000-tile_training-0001|data.Desc		Stepping on this tile gives the Trained status to the party.
+0000-tile_updraft-0000|data.Name		Updraft
+0000-tile_updraft-0001|data.Desc		A mysterious wind current is blowing upwards...
+0000-tile_wonder-0000|data.Name		Wonder Tile
+0000-tile_wonder-0001|data.Desc		An odd floor tile seen in many dungeons. Triggering it resets nearby Pokémon's stats if they are boosted or reduced.
+0000-trap_apple-0000|data.Name		Apple Trap
+0000-trap_apple-0001|data.Desc		Triggering this trap turns a held-effect item into an apple.
+0000-trap_chestnut-0000|data.Name		Chestnut Trap
+0000-trap_chestnut-0001|data.Desc		Triggering this trap makes spiky unshelled Chestnuts drop, inflicting damage on nearby Pokémon and causing them to flinch.
+0000-trap_discord-0000|data.Name		Discord Trap
+0000-trap_discord-0001|data.Desc		Triggering this trap creates a discord among the party.
+0000-trap_emera_crush-0000|data.Name		Emera-Crush Trap
+0000-trap_emera_crush-0001|data.Desc		Triggering this trap causes an emera on a looplet to come off and disappear.
+0000-trap_emera_swap-0000|data.Name		Emera-Swap Trap
+0000-trap_emera_swap-0001|data.Desc		Triggering this trap swaps an emera on a looplet for another emera.
+0000-trap_explosion-0000|data.Name		Explosion Trap
+0000-trap_explosion-0001|data.Desc		Activating this trap triggers a huge explosion. Its damage extends to everything up to 2 steps away from it.
+0000-trap_grimy-0000|data.Name		Grimy Trap
+0000-trap_grimy-0001|data.Desc		Triggering this trap makes it spew a muck that gums up food and removes abilities.
+0000-trap_grudge-0000|data.Name		Grudge Trap
+0000-trap_grudge-0001|data.Desc		Triggering this trap gives the Grudge status to all opposing Pokémon in the area.
+0000-trap_gust-0000|data.Name		Gust Trap
+0000-trap_gust-0001|data.Desc		Activating this trap triggers a gust of wind that sends nearby Pokémon flying.
+0000-trap_hunger-0000|data.Name		Hunger Trap
+0000-trap_hunger-0001|data.Desc		Triggering this trap causes the Pokémon to become hungry.
+0000-trap_mud-0000|data.Name		Mud Trap
+0000-trap_mud-0001|data.Desc		Triggering this trap makes it blow mud that sharply lowers the highest base stat of all nearby Pokémon.
+0000-trap_pitfall-0000|data.Name		Pitfall Trap
+0000-trap_pitfall-0001|data.Desc		Stepping on this trap drops the Pokémon to the floor below, inflicting damage.
+0000-trap_poison-0000|data.Name		Poison Trap
+0000-trap_poison-0001|data.Desc		Triggering this trap will release spikes that poison nearby Pokémon.
+0000-trap_pokemon-0000|data.Name		Pokémon Trap
+0000-trap_pokemon-0001|data.Desc		Triggering this trap transforms all items in the area into hostile Pokémon.
+0000-trap_pp_leech-0000|data.Name		PP-Leech Trap
+0000-trap_pp_leech-0001|data.Desc		Triggering this trap completely drains the PP of the Pokémon's last-used move.
+0000-trap_seal-0000|data.Name		Seal Trap
+0000-trap_seal-0001|data.Desc		Triggering this trap disables the last-used move of all nearby Pokémon.
+0000-trap_self_destruct-0000|data.Name		Self-Destruct Trap
+0000-trap_self_destruct-0001|data.Desc		Triggering this trap makes it explode. Its damage extends to everything near the trap.
+0000-trap_slow-0000|data.Name		Slow Trap
+0000-trap_slow-0001|data.Desc		Triggering this trap lowers the Movement Speed of nearby Pokémon by one level.
+0000-trap_slumber-0000|data.Name		Slumber Trap
+0000-trap_slumber-0001|data.Desc		Triggering this trap releases a sleeping gas that puts all nearby Pokémon to sleep.
+0000-trap_spikes-0000|data.Name		Spikes
+0000-trap_spikes-0001|data.Desc		Stepping on this trap damages the Pokémon standing on it.
+0000-trap_spin-0000|data.Name		Spin Trap
+0000-trap_spin-0001|data.Desc		Triggering this trap spins all nearby Pokémon around dizzyingly, making them confused.
+0000-trap_stealth_rock-0000|data.Name		Stealth Rock
+0000-trap_stealth_rock-0001|data.Desc		Stepping on this trap damages the Pokémon standing on it with a Rock-type attack.
+0000-trap_sticky-0000|data.Name		Sticky Trap
+0000-trap_sticky-0001|data.Desc		Triggering this trap makes all nearby Pokémon immobilized. It will also cause items to become sticky.
+0000-trap_summon-0000|data.Name		Summon Trap
+0000-trap_summon-0001|data.Desc		Triggering this trap releases a sweet aroma that attracts Pokémon from afar.
+0000-trap_toxic_spikes-0000|data.Name		Toxic Spikes
+0000-trap_toxic_spikes-0001|data.Desc		Stepping on this trap badly poisons the Pokémon standing on it.
+0000-trap_trigger-0000|data.Name		Trigger Trap
+0000-trap_trigger-0001|data.Desc		Triggering this trap sets off all other traps in the area.
+0000-trap_trip-0000|data.Name		Trip Trap
+0000-trap_trip-0001|data.Desc		Triggering this trap causes nearby Pokémon to trip and drop their items.
+0000-trap_warp-0000|data.Name		Warp Trap
+0000-trap_warp-0001|data.Desc		Triggering this trap instantly warps the Pokémon to another spot on the floor.

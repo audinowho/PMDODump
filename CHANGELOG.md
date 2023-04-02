@@ -1,7 +1,6 @@
-# 0.7.4 Changes #
+# 0.7.5 Changes #
 
-* Game now runs using dot net 6.0
-* Better assembly sorting
-* Wild species you've already recruited have their names show green instead of cyan
-* Dev: Ability to edit StartParams in the UI
-* Dev: More friendly text on the dungeon editor
+* A new dungeon, with some new NPCs.
+* Fixed an issue with the process where Pokemon evolve into their alolan forms.
+* Fixes to mods and modding
+* Improvements to listboxes in the dev editor.
