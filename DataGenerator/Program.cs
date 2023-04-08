@@ -215,26 +215,57 @@ namespace DataGenerator
                     DataManager.InitInstance();
                     DataManager.Instance.InitData();
 
-
-
                     Localization.WriteNamedDataTable(DataManager.DataType.Skin);
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Skin);
                     Localization.CopyNamedData(DataManager.DataType.Skin, "shiny", "shiny_square");
+                    Localization.WriteNamedDataTable(DataManager.DataType.Skin);
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Skin);
+                    DataManager.Instance.LoadIndex(DataManager.DataType.Skin);
+                    DataManager.Instance.ClearCache(DataManager.DataType.Skin);
+
                     Localization.WriteNamedDataTable(DataManager.DataType.Element);
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Element);
+                    DataManager.Instance.LoadIndex(DataManager.DataType.Element);
+                    DataManager.Instance.ClearCache(DataManager.DataType.Element);
                     Localization.WriteNamedDataTable(DataManager.DataType.Rank);
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Rank);
+                    DataManager.Instance.LoadIndex(DataManager.DataType.Rank);
+                    DataManager.Instance.ClearCache(DataManager.DataType.Rank);
                     Localization.WriteNamedDataTable(DataManager.DataType.AI);
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.AI);
+                    DataManager.Instance.LoadIndex(DataManager.DataType.AI);
+                    DataManager.Instance.ClearCache(DataManager.DataType.AI);
                     Localization.WriteDescribedDataTable(DataManager.DataType.Skill);
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Skill);
+                    DataManager.Instance.LoadIndex(DataManager.DataType.Skill);
+                    DataManager.Instance.ClearCache(DataManager.DataType.Skill);
                     Localization.WriteDescribedDataTable(DataManager.DataType.Intrinsic);
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Intrinsic);
+                    DataManager.Instance.LoadIndex(DataManager.DataType.Intrinsic);
+                    DataManager.Instance.ClearCache(DataManager.DataType.Intrinsic);
                     Localization.WriteDescribedDataTable(DataManager.DataType.Status);
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Status);
+                    DataManager.Instance.LoadIndex(DataManager.DataType.Status);
+                    DataManager.Instance.ClearCache(DataManager.DataType.Status);
                     Localization.WriteDescribedDataTable(DataManager.DataType.MapStatus);
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.MapStatus);
+                    DataManager.Instance.LoadIndex(DataManager.DataType.MapStatus);
+                    DataManager.Instance.ClearCache(DataManager.DataType.MapStatus);
                     Localization.WriteDescribedDataTable(DataManager.DataType.Tile);
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Tile);
+                    DataManager.Instance.LoadIndex(DataManager.DataType.Tile);
+                    DataManager.Instance.ClearCache(DataManager.DataType.Tile);
                     Localization.WriteItemStringTable();
                     ItemInfo.AddCalculatedItemData();
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Item);
+                    DataManager.Instance.LoadIndex(DataManager.DataType.Item);
+                    DataManager.Instance.ClearCache(DataManager.DataType.Item);
                     Localization.WriteTitledDataTable(DataManager.MAP_PATH, DataManager.MAP_EXT, DataManager.Instance.GetMap);
                     Localization.WriteTitledDataTable(DataManager.GROUND_PATH, DataManager.GROUND_EXT, DataManager.Instance.GetGround);
                     Localization.WriteZoneStringTable();
-
-                    DiagManager.Instance.LogInfo("Reserializing indices");
-                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.All);
+                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Zone);
+                    DataManager.Instance.LoadIndex(DataManager.DataType.Zone);
+                    DataManager.Instance.ClearCache(DataManager.DataType.Zone);
 
                     DataManager.Instance.UniversalData = DataManager.LoadData<TypeDict<BaseData>>(PathMod.ModPath(DataManager.MISC_PATH + "Index" + DataManager.DATA_EXT));
                     RogueEssence.Dev.DevHelper.RunExtraIndexing(DataManager.DataType.All);

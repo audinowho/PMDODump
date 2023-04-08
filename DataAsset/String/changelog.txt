@@ -7,8 +7,6 @@ Sheet: Script
 Sheet: Abilities
 
 Sheet: Items
-    * Changed 0010-held_golden_mask-0001|data.Desc to 0010-held_friend_bow-0001|data.Desc, retaining translations
-    * Changed 0010-held_friend_bow-0001|data.Desc to 0010-held_golden_mask-0001|data.Desc, retaining translations
 
 Sheet: MapStatuses
 

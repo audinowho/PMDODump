@@ -1,6 +1,5 @@
-# 0.7.5 Changes #
+# 0.7.6 Changes #
 
-* A new dungeon, with some new NPCs.
-* Fixed an issue with the process where Pokemon evolve into their alolan forms.
-* Fixes to mods and modding
-* Improvements to listboxes in the dev editor.
+* Fixed an issue that prevented Secret Rooms from being accessed.
+* Minor translation fixes.
+* Improvements to classes in dev editor.

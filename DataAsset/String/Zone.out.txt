@@ -15,8 +15,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-champions_road-0000|data.Name		Champion's Road		Pfad des Champions	Ruta del Campeón						冠军之路
 0000-champions_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Champion's Road\n{0}F		Pfad des Champions\n{0}.OG	Ruta del Campeón\nP{0}						冠军之路\n{0}F
 0000-champions_road-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Clouded Road\n{0}F									阴云之路\n{0}F
-0000-copper_quarry-0000|data.Name		Copper Quarry									粗铜矿场
-0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\n{0}F									粗铜矿场\n{0}F
+0000-copper_quarry-0000|data.Name		Copper Quarry									采铜矿场
+0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\n{0}F									采铜矿场\n{0}F
 0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Magnetic Quarry\nB{0}F									磁力矿场\nB{0}F
 0000-debug_zone-0000|data.Name		Debug Zone									Debug区域
 0000-deserted_fortress-0000|data.Name		Deserted Fortress									空寂要塞
@@ -83,8 +83,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-starfall_heights-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Starfall Heights\n{0}F								
 0000-the_abyss-0000|data.Name		The Abyss		Die Kluft	El Abismo						深渊
 0000-the_abyss-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Abyss\nB{0}F		Die Kluft\n{0}.KG	El Abismo\nP-{0}						深渊\nB{0}F
-0000-the_neverending_tale-0000|data.Name		The NeverEnding Tale									永无止境的传说
-0000-the_neverending_tale-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The NeverEnding Tale\nCh. {0}									永无止境的传说\nCh. {0}
+0000-the_neverending_tale-0000|data.Name		The NeverEnding Tale									那永续的传说
+0000-the_neverending_tale-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The NeverEnding Tale\nCh. {0}									那永续的传说\nCh. {0}
 0000-the_sky-0000|data.Name		The Sky		Der Himmel	El Cielo						天空
 0000-the_sky-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Sky\n{0}F		Der Himmel\n{0}.OG	El Cielo\nP{0}						天空\n{0}F
 0000-thunderstruck_pass-0000|data.Name		Thunderstruck Pass		Donnerschlag-Übergang	Senda Atónita						雷霆山口
