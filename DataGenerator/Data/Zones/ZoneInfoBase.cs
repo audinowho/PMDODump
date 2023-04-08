@@ -33,7 +33,7 @@ namespace DataGenerator.Data
                 {
                     StairsFloorGen layout = new StairsFloorGen();
 
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<StairsMapGenContext>(structure.Floors.Count, new LocalText("Debug Dungeon Main Room")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<StairsMapGenContext>(new LocalText("Debug Dungeon Main Room")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "A07. Summit.ogg", -1, Map.SightRange.Dark, Map.SightRange.Dark);
 
@@ -231,7 +231,7 @@ namespace DataGenerator.Data
                 {
                     GridFloorGen layout = new GridFloorGen();
 
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Enemies")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Enemies")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "A07. Summit.ogg", 500, Map.SightRange.Clear, Map.SightRange.Clear);
                     AddDefaultMapStatus(layout, "default_weather", "rain");
@@ -366,7 +366,7 @@ namespace DataGenerator.Data
                 {
                     GridFloorGen layout = new GridFloorGen();
 
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Vault Shop Boss")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Vault Shop Boss")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "A07. Summit.ogg", 500, Map.SightRange.Dark, Map.SightRange.Dark);
 
@@ -629,7 +629,7 @@ namespace DataGenerator.Data
                 {
                     GridFloorGen layout = new GridFloorGen();
 
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Monster Hall")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Monster Hall")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 500, Map.SightRange.Dark, Map.SightRange.Dark);
 
@@ -710,7 +710,7 @@ namespace DataGenerator.Data
                 {
                     GridFloorGen layout = new GridFloorGen();
 
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Monster Mansion")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Monster Mansion")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 500, Map.SightRange.Dark, Map.SightRange.Dark);
 
@@ -781,7 +781,7 @@ namespace DataGenerator.Data
                 {
                     GridFloorGen layout = new GridFloorGen();
 
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Monster Maze")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Monster Maze")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 500, Map.SightRange.Dark, Map.SightRange.Dark);
 
@@ -880,7 +880,7 @@ namespace DataGenerator.Data
                     GridFloorGen layout = new GridFloorGen();
 
                     //Floor settings
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Hedge Maze")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Hedge Maze")));
                     AddTitleDrop(layout);
                     AddFloorData(layout,"B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Clear, Map.SightRange.Dark);
                     AddDefaultMapStatus(layout, "default_weather", "sandstorm");
@@ -1040,7 +1040,7 @@ namespace DataGenerator.Data
                     GridFloorGen layout = new GridFloorGen();
 
                     //Floor settings
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Hedge Maze 2")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Hedge Maze 2")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Clear, Map.SightRange.Dark);
                     AddDefaultMapStatus(layout, "default_mapstatus", "gravity");
@@ -1199,7 +1199,7 @@ namespace DataGenerator.Data
                     RoomFloorGen layout = new RoomFloorGen();
 
                     //Floor settings
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<ListMapGenContext>(structure.Floors.Count, new LocalText("Test: Floating Islands")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<ListMapGenContext>(new LocalText("Test: Floating Islands")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 2000, Map.SightRange.Clear, Map.SightRange.Dark);
                     AddDefaultMapStatus(layout, "default_mapstatus", "inverse");
@@ -1360,7 +1360,7 @@ namespace DataGenerator.Data
                     GridFloorGen layout = new GridFloorGen();
 
                     //Floor settings
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Grid Room Merging")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Grid Room Merging")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Dark, Map.SightRange.Dark);
 
@@ -1546,7 +1546,7 @@ namespace DataGenerator.Data
                     GridFloorGen layout = new GridFloorGen();
 
                     //Floor settings
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Chasm Cave")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Chasm Cave")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 2000, Map.SightRange.Clear, Map.SightRange.Dark);
 
@@ -1735,7 +1735,7 @@ namespace DataGenerator.Data
                     GridFloorGen layout = new GridFloorGen();
 
                     //Floor settings
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Wrapped Tiered Floor")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Wrapped Tiered Floor")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Dark, Map.SightRange.Dark);
 
@@ -1835,7 +1835,7 @@ namespace DataGenerator.Data
                     GridFloorGen layout = new GridFloorGen();
 
                     //Floor settings
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Script Gen Step")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Script Gen Step")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Dark, Map.SightRange.Dark);
 
@@ -1938,7 +1938,7 @@ namespace DataGenerator.Data
                     GridFloorGen layout = new GridFloorGen();
 
                     //Floor settings
-                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(structure.Floors.Count, new LocalText("Test: Script Gen Step on Grid and Floor")));
+                    layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Test: Script Gen Step on Grid and Floor")));
                     AddTitleDrop(layout);
                     AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1000, Map.SightRange.Dark, Map.SightRange.Dark);
 
@@ -2100,7 +2100,7 @@ namespace DataGenerator.Data
                 layout.GenSteps.Add(PR_TILES_BARRIER, new UnbreakableBorderStep<StairsMapGenContext>(1));
 
                 //TODO: secret rooms can't scale NPC levels this way; figure it out if you ever want to scale level
-                layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<StairsMapGenContext>(0, new LocalText("Secret Room")));
+                layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<StairsMapGenContext>(new LocalText("Secret Room")));
                 AddTitleDrop(layout);
 
                 EffectTile secretStairs = new EffectTile("stairs_go_up", true);
@@ -4191,7 +4191,7 @@ namespace DataGenerator.Data
 
         public static void AddTestTextureData<T>(MapGen<T> layout, string block, string ground, string water, bool independent = false) where T : BaseMapGenContext
         {
-            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<T>(0, new LocalText(block)));
+            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<T>(new LocalText(block)));
             AddTitleDrop(layout);
 
             MapTextureStep<T> textureStep = new MapTextureStep<T>();

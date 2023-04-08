@@ -70,7 +70,7 @@ namespace DataGenerator.Data
             startGen.MapID = map_type;
             layout.GenSteps.Add(PR_FILE_LOAD, startGen);
 
-            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapLoadContext>(0, new LocalText("Secret Room")));
+            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapLoadContext>(new LocalText("Secret Room")));
             AddTitleDrop(layout);
 
             MapTimeLimitStep <MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
@@ -120,7 +120,7 @@ namespace DataGenerator.Data
         {
             GridFloorGen layout = new GridFloorGen();
 
-            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(0, new LocalText("Mysterious Passage")));
+            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Mysterious Passage")));
             AddTitleDrop(layout);
 
             //Floor settings
