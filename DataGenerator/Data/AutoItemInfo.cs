@@ -2193,16 +2193,13 @@ namespace DataGenerator.Data
             {
                 if (ii > 0)
                 {
-                    if (input.Length > 2)
-                        totalString.Append(", ");
-                    else if (ii == input.Length - 1)
-                    {
-                        string key = "ADD_END";
-                        string text;
-                        if (!stringsAll[code].TryGetValue(key, out text))
-                            text = stringsAll[""][key];
-                        totalString.Append(text + " ");
-                    }
+                    string key = "ADD_SEPARATOR";
+                    if (ii == input.Length - 1)
+                        key = "ADD_END";
+                    string text;
+                    if (!stringsAll[code].TryGetValue(key, out text))
+                        text = stringsAll[""][key];
+                    totalString.Append(text);
                 }
                 totalString.Append(input[ii]);
             }
