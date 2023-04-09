@@ -1756,7 +1756,7 @@ namespace DataGenerator.Data
                 floorSegment.ZoneSteps.Add(bossChanceZoneStep);
             }
 
-            SpawnRangeList<IGenPriority> shopZoneSpawns = new SpawnRangeList<IGenPriority>();
+            SpawnRangeList<IGenStep> shopZoneSpawns = new SpawnRangeList<IGenStep>();
             {
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 0;
@@ -1805,7 +1805,7 @@ namespace DataGenerator.Data
                     shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "power_trick", "bug_bite", "stone_edge", "bulldoze", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1, "shuckle"), 5);
                 }
 
-                shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(2, 25), 10);
+                shopZoneSpawns.Add(shop, new IntRange(2, 25), 10);
             }
             {
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
@@ -1851,7 +1851,7 @@ namespace DataGenerator.Data
                     shop.Mobs.Add(GetShopMob("kecleon", "protean", "aerial_ace", "shadow_claw", "psybeam", "feint", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1, "shuckle"), 10);
                 }
 
-                shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(25, 30), 10);
+                shopZoneSpawns.Add(shop, new IntRange(25, 30), 10);
             }
             {
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
@@ -1944,9 +1944,9 @@ namespace DataGenerator.Data
                     shop.Mobs.Add(GetShopMob("clefable", "magic_guard", "metronome", "attract", "knock_off", "follow_me", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_03" }, -1), 5);
                 }
 
-                shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(15, 30), 10);
+                shopZoneSpawns.Add(shop, new IntRange(15, 30), 10);
             }
-            SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(4, 14), new IntRange(2, 28)), shopZoneSpawns);
+            SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(4, 14), new IntRange(2, 28)), PR_SHOPS, shopZoneSpawns);
             shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
             floorSegment.ZoneSteps.Add(shopZoneStep);
 
@@ -3924,7 +3924,7 @@ namespace DataGenerator.Data
             }
 
 
-            SpawnRangeList<IGenPriority> shopZoneSpawns = new SpawnRangeList<IGenPriority>();
+            SpawnRangeList<IGenStep> shopZoneSpawns = new SpawnRangeList<IGenStep>();
             {
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                 shop.Personality = 0;
@@ -3971,7 +3971,7 @@ namespace DataGenerator.Data
                     shop.Mobs.Add(GetShopMob("kecleon", "protean", "aerial_ace", "shadow_claw", "psybeam", "feint", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1, "shuckle"), 10);
                 }
 
-                shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(5, max_floors), 10);
+                shopZoneSpawns.Add(shop, new IntRange(5, max_floors), 10);
             }
             {
                 ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
@@ -4059,9 +4059,9 @@ namespace DataGenerator.Data
                     shop.Mobs.Add(GetShopMob("clefable", "magic_guard", "metronome", "attract", "knock_off", "follow_me", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_03" }, -1), 5);
                 }
 
-                shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), new IntRange(5, max_floors), 10);
+                shopZoneSpawns.Add(shop, new IntRange(5, max_floors), 10);
             }
-            SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(4, 14), new IntRange(2, 38)), shopZoneSpawns);
+            SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(4, 14), new IntRange(2, 38)), PR_SHOPS, shopZoneSpawns);
             shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
             floorSegment.ZoneSteps.Add(shopZoneStep);
 

@@ -2860,7 +2860,7 @@ namespace DataGenerator.Data
                 floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Replay Test Zone\n{0}F"), new Priority(-15)));
                 int total_floors = 10;
 
-                SpawnList<IGenPriority> shopZoneSpawns = new SpawnList<IGenPriority>();
+                SpawnList<IGenStep> shopZoneSpawns = new SpawnList<IGenStep>();
                 //kecleon shop
                 {
                     ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
@@ -2885,7 +2885,7 @@ namespace DataGenerator.Data
                         // 352 Kecleon : 168 protean : 332 aerial ace : 421 shadow claw : 60 psybeam : 364 feint
                         shop.Mobs.Add(GetShopMob("kecleon", "protean", "aerial_ace", "shadow_claw", "psybeam", "feint", new string[] { "xcl_family_kecleon_00", "xcl_family_kecleon_01", "xcl_family_kecleon_04" }, -1), 10);
                     }
-                    shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
+                    shopZoneSpawns.Add(shop, 10);
                 }
 
                 //star treasures
@@ -2921,7 +2921,7 @@ namespace DataGenerator.Data
                         // 36 Clefable : 98 Magic Guard : 118 Metronome : 213 Attract : 282 Knock Off : 266 Follow Me
                         shop.Mobs.Add(GetShopMob("clefable", "magic_guard", "metronome", "attract", "knock_off", "follow_me", new string[] { "xcl_family_clefairy_00", "xcl_family_clefairy_02" }, -1), 10);
                     }
-                    shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
+                    shopZoneSpawns.Add(shop, 10);
                 }
 
                 //porygon wares
@@ -2953,7 +2953,7 @@ namespace DataGenerator.Data
                         // 233 Porygon2 : 36 Trace : 176 Conversion2 : 277 Magic Coat : 161 Tri Attack : 97 Agility
                         shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "magic_coat", "tri_attack", "agility", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
                     }
-                    shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
+                    shopZoneSpawns.Add(shop, 10);
                 }
 
                 //bottle shop
@@ -2980,7 +2980,7 @@ namespace DataGenerator.Data
                         shop.Mobs.Add(GetShopMob("shuckle", "sturdy", "power_trick", "bug_bite", "stone_edge", "dig", new string[] { "xcl_family_shuckle_00", "xcl_family_shuckle_01", "xcl_family_shuckle_02", "xcl_family_shuckle_03" }, -1), 10);
                     }
 
-                    shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
+                    shopZoneSpawns.Add(shop, 10);
                 }
 
                 //dunsparce finds
@@ -3008,10 +3008,10 @@ namespace DataGenerator.Data
                         // 206 Dunsparce : 155 Rattled : 137 Glare : 180 Spite : 20 Bind : 506 Hex
                         shop.Mobs.Add(GetShopMob("dunsparce", "rattled", "glare", "spite", "bind", "hex", new string[] { "xcl_family_dunsparce_00", "xcl_family_dunsparce_01", "xcl_family_dunsparce_04" }, -1), 10);
                     }
-                    shopZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SHOPS, shop), 10);
+                    shopZoneSpawns.Add(shop, 10);
                 }
 
-                SpreadStepZoneStep shopZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(1, 3), new IntRange(2, 10)), shopZoneSpawns);
+                SpreadStepZoneStep shopZoneStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(1, 3), new IntRange(2, 10)), PR_SHOPS, shopZoneSpawns);
                 floorSegment.ZoneSteps.Add(shopZoneStep);
 
 
@@ -3062,7 +3062,7 @@ namespace DataGenerator.Data
                 floorSegment.ZoneSteps.Add(scriptZoneStep);
 
 
-                RandBag<IGenPriority> npcZoneSpawns = new RandBag<IGenPriority>();
+                RandBag<IGenStep> npcZoneSpawns = new RandBag<IGenStep>();
                 npcZoneSpawns.RemoveOnRoll = true;
                 //Generic Dialogue
                 {
@@ -3077,7 +3077,7 @@ namespace DataGenerator.Data
                     multiTeamSpawner.Spawns.Add(post_team);
                     PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
                     randomSpawn.Ally = true;
-                    npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                    npcZoneSpawns.ToSpawn.Add(randomSpawn);
                 }
                 //Scripted Dialogue
                 {
@@ -3092,7 +3092,7 @@ namespace DataGenerator.Data
                     multiTeamSpawner.Spawns.Add(post_team);
                     PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
                     randomSpawn.Ally = true;
-                    npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                    npcZoneSpawns.ToSpawn.Add(randomSpawn);
                 }
                 //Ally Team
                 {
@@ -3127,9 +3127,9 @@ namespace DataGenerator.Data
                     multiTeamSpawner.Spawns.Add(post_team);
                     PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
                     randomSpawn.Ally = true;
-                    npcZoneSpawns.ToSpawn.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_MOBS_EXTRA, randomSpawn));
+                    npcZoneSpawns.ToSpawn.Add(randomSpawn);
                 }
-                SpreadStepZoneStep npcZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(4, 5), new IntRange(7, total_floors), true), npcZoneSpawns);
+                SpreadStepZoneStep npcZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(4, 5), new IntRange(7, total_floors), true), PR_SPAWN_MOBS_EXTRA, npcZoneSpawns);
                 floorSegment.ZoneSteps.Add(npcZoneStep);
 
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -3137,9 +3137,9 @@ namespace DataGenerator.Data
                 tileSpawn.Spawns.Add(new EffectTile("trap_explosion", true), new IntRange(0, 5), 10);
                 floorSegment.ZoneSteps.Add(tileSpawn);
 
-                SpawnList<IGenPriority> apricornZoneSpawns = new SpawnList<IGenPriority>();
-                apricornZoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_plain"))))), 10);//plain
-                SpreadStepZoneStep apricornStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(3, 25)), apricornZoneSpawns);//apricorn (variety)
+                SpawnList<IGenStep> apricornZoneSpawns = new SpawnList<IGenStep>();
+                apricornZoneSpawns.Add(new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(new MapItem("apricorn_plain")))), 10);//plain
+                SpreadStepZoneStep apricornStep = new SpreadStepZoneStep(new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(3, 25)), PR_SPAWN_ITEMS, apricornZoneSpawns);//apricorn (variety)
                 floorSegment.ZoneSteps.Add(apricornStep);
 
                 SpreadRoomZoneStep evoStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, new SpreadPlanSpaced(new RandRange(1, 1), new IntRange(0, 5)));

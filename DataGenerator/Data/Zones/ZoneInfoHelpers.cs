@@ -123,30 +123,30 @@ namespace DataGenerator.Data
 
         public static void AddItemSpreadZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, SpawnList<MapItem> items)
         {
-            SpawnList<IGenPriority> zoneSpawns = new SpawnList<IGenPriority>();
+            SpawnList<IGenStep> zoneSpawns = new SpawnList<IGenStep>();
             foreach (SpawnList<MapItem>.SpawnRate spawnRate in items)
-                zoneSpawns.Add(new GenPriority<GenStep<MapGenContext>>(PR_SPAWN_ITEMS, new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(spawnRate.Spawn)))), spawnRate.Rate);
-            SpreadStepZoneStep zoneStep = new SpreadStepZoneStep(spreadPlan, zoneSpawns);
+                zoneSpawns.Add(new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(spawnRate.Spawn))), spawnRate.Rate);
+            SpreadStepZoneStep zoneStep = new SpreadStepZoneStep(spreadPlan, PR_SPAWN_ITEMS, zoneSpawns);
             floorSegment.ZoneSteps.Add(zoneStep);
         }
 
         public static void AddHiddenStairStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, int segDiff)
         {
-            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
+            SpawnRangeList<IGenStep> exitZoneSpawns = new SpawnRangeList<IGenStep>();
             EffectTile secretTile = new EffectTile("stairs_secret_down", false);
             secretTile.TileStates.Set(new DestState(new SegLoc(segDiff, 0), true));
             RandomSpawnStep<BaseMapGenContext, EffectTile> trapStep = new RandomSpawnStep<BaseMapGenContext, EffectTile>(new PickerSpawner<BaseMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
-            exitZoneSpawns.Add(new GenPriority<GenStep<BaseMapGenContext>>(PR_SPAWN_TRAPS, trapStep), spreadPlan.FloorRange, 10);
-            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(spreadPlan, exitZoneSpawns);
+            exitZoneSpawns.Add(trapStep, spreadPlan.FloorRange, 10);
+            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(spreadPlan, PR_SPAWN_TRAPS, exitZoneSpawns);
             exitZoneStep.ModStates.Add(new FlagType(typeof(StairsModGenState)));
             floorSegment.ZoneSteps.Add(exitZoneStep);
         }
 
         public static void AddMysteriosityZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, int baseChance, int segDiff)
         {
-            SpawnRangeList<IGenPriority> exitZoneSpawns = new SpawnRangeList<IGenPriority>();
-            exitZoneSpawns.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_SPAWN_TRAPS, new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance="+baseChance+", SegDiff="+segDiff+"}")), spreadPlan.FloorRange, 10);
-            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(spreadPlan, exitZoneSpawns);
+            SpawnRangeList<IGenStep> exitZoneSpawns = new SpawnRangeList<IGenStep>();
+            exitZoneSpawns.Add(new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance="+baseChance+", SegDiff="+segDiff+"}"), spreadPlan.FloorRange, 10);
+            SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(spreadPlan, PR_SPAWN_TRAPS, exitZoneSpawns);
             floorSegment.ZoneSteps.Add(exitZoneStep);
         }
 
