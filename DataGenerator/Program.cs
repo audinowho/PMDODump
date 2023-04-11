@@ -410,7 +410,7 @@ namespace DataGenerator
                         if ((dump & DataManager.DataType.Zone) != DataManager.DataType.None)
                         {
                             //MapInfo.AddMapData();
-                            //MapInfo.AddGroundData("final_stop");
+                            MapInfo.AddGroundData("test_grounds");
                             ZoneInfo.AddZoneData();
                             //ZoneInfo.AddZoneData(30);
                         }
