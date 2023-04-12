@@ -401,6 +401,11 @@ namespace PMDOSetup
                 copyFilesRecursively(new DirectoryInfo(saveDir), new DirectoryInfo(saveBackupDir));
             }
 
+            //Delete old files
+            Console.WriteLine("Deleting old files...");
+            DeleteWithExclusions(Path.Join(updaterPath, "PMDO"));
+            DeleteWithExclusions(Path.Join(updaterPath, "WaypointServer"));
+
             //Console.WriteLine("Adjusting filenames...");
             //unzip the exe, rename, then rezip just to rename the file... ugh
             //RenameRezip(tempExe);
@@ -473,9 +478,8 @@ namespace PMDOSetup
                         }
                         else
                         {
-                            if (Directory.Exists(destPath))
-                                Directory.Delete(destPath, true);
-                            Directory.CreateDirectory(destPath);
+                            if (!Directory.Exists(destPath))
+                                Directory.CreateDirectory(destPath);
                             Console.WriteLine("Unzipping {0}", entry.FullName);
                         }
                     }
@@ -652,6 +656,9 @@ namespace PMDOSetup
 
         static bool DeleteWithExclusions(string path)
         {
+            if (!Directory.Exists(path))
+                return false;
+
             if (isExcluded(path))
                 return false;
 
@@ -679,6 +686,11 @@ namespace PMDOSetup
 
         static bool isExcluded(string path)
         {
+            //ignore .git
+            string filename = Path.GetFileName(path);
+            if (filename == ".git")
+                return true;
+
             string fullPath = Path.GetFullPath(path).Replace("\\", "/").Trim('/');
             foreach (string exclusion in excludedFiles)
             {

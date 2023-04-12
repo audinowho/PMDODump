@@ -1,5 +1,7 @@
-# 0.7.6 Changes #
+# 0.7.7 Changes #
 
-* Fixed an issue that prevented Secret Rooms from being accessed.
-* Minor translation fixes.
-* Improvements to classes in dev editor.
+* Fixed an issue with translation when building lists.
+* Dev: Voiceover textbox dimensions can be changed and support tags.
+* Dev: More convenient editor functions.
+* Dev: Fixed an issue with VFX playingin script
+* Dev: Refactored the SpreadStepZoneStep and RangeZoneStep classes.  Mods will need to be reserialized.
