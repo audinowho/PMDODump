@@ -76,8 +76,8 @@ ExclusiveItemEffect.CheekPouch		When kept in the bag, the Pokémon's HP is resto
 ExclusiveItemEffect.HealInWater		When kept in the bag, the Pokémon recovers HP when in water.
 ExclusiveItemEffect.HealInLava		When kept in the bag, the Pokémon recovers HP when in lava.
 ExclusiveItemEffect.HealOnNewFloor		When kept in the bag, the Pokémon is fully healed upon entering a new floor.
-ExclusiveItemEffect.EndureCategory		When kept in the bag, prevents the Pokémon from fainting to {0} moves, leaving it with 1 HP.
-ExclusiveItemEffect.EndureType		When kept in the bag, prevents the Pokémon from fainting to {0}-type moves, leaving it with 1 HP.
+ExclusiveItemEffect.EndureCategory		When kept in the bag, it prevents the Pokémon from fainting to {0} moves, leaving it with 1 HP.
+ExclusiveItemEffect.EndureType		When kept in the bag, it prevents the Pokémon from fainting to {0}-type moves, leaving it with 1 HP.
 ExclusiveItemEffect.SpikeDropper		When kept in the bag, the Pokémon scatters Spikes when hit by a {0} attack.
 ExclusiveItemEffect.NoStatusInWeather		When kept in the bag, the Pokémon is protected from status conditions when the floor has the {0} status.
 ExclusiveItemEffect.DeepBreatherPlus		When kept in the bag, it restores the PP of all moves when the Pokémon reaches a new floor.
