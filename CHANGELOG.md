@@ -1,7 +1,4 @@
-# 0.7.7 Changes #
+# 0.7.7.1 Changes #
 
-* Fixed an issue with translation when building lists.
-* Dev: Voiceover textbox dimensions can be changed and support tags.
-* Dev: More convenient editor functions.
-* Dev: Fixed an issue with VFX playingin script
-* Dev: Refactored the SpreadStepZoneStep and RangeZoneStep classes.  Mods will need to be reserialized.
+* Fixed a crash bug when adding items to dungeons
+* Fixed a VFX alignment issue with column animations
