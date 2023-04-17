@@ -174,15 +174,15 @@ class Localization:
                 support[val] = lang
 
 
-        self._write_txt(os.path.join("..", "DataAsset", "String", "Special.out.txt"), header_row, sheet[1:6])
+        self._write_txt(os.path.join("..", "DataAsset", "String", "Special.out.txt"), header_row, sheet[1:8])
 
-        self._write_txt(os.path.join("..", "DataAsset", "String", "Skin.out.txt"), header_row, sheet[6:8])
+        self._write_txt(os.path.join("..", "DataAsset", "String", "Skin.out.txt"), header_row, sheet[8:10])
 
-        self._write_txt(os.path.join("..", "DataAsset", "String", "Element.out.txt"), header_row, sheet[8:27])
+        self._write_txt(os.path.join("..", "DataAsset", "String", "Element.out.txt"), header_row, sheet[10:29])
 
-        self._write_txt(os.path.join("..", "DataAsset", "String", "Rank.out.txt"), header_row, sheet[27:39])
+        self._write_txt(os.path.join("..", "DataAsset", "String", "Rank.out.txt"), header_row, sheet[29:41])
 
-        self._write_txt(os.path.join("..", "DataAsset", "String", "AI.out.txt"), header_row, sheet[39:])
+        self._write_txt(os.path.join("..", "DataAsset", "String", "AI.out.txt"), header_row, sheet[41:])
 
 
 

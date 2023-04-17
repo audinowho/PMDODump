@@ -15,6 +15,7 @@ using PMDC.Dungeon;
 using PMDC.LevelGen;
 using PMDC;
 using PMDC.Data;
+using DataGenerator.Dev;
 
 namespace DataGenerator.Data
 {
@@ -26,6 +27,13 @@ namespace DataGenerator.Data
             Beginner = 0,
             Intermediate = 1,
             Advanced = 2
+        }
+
+        private static Dictionary<string, LocalText> specialRows;
+
+        public static void InitStringsAll()
+        {
+            specialRows = Localization.readLocalizationRows(GenPath.TL_PATH + "Special.out.txt");
         }
 
         static MobSpawnStep<MapGenContext> GetUnownSpawns(string unown, int level)
@@ -63,14 +71,17 @@ namespace DataGenerator.Data
             return mobStep;
         }
 
-        static IFloorGen getSecretRoom(string map_type, int moveBack, string wall, string floor, string water, string grass, string element, SpawnList<TeamMemberSpawn> enemies, params Loc[] locs)
+        static IFloorGen getSecretRoom(bool translate, string map_type, int moveBack, string wall, string floor, string water, string grass, string element, SpawnList<TeamMemberSpawn> enemies, params Loc[] locs)
         {
             LoadGen layout = new LoadGen();
             MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
             startGen.MapID = map_type;
             layout.GenSteps.Add(PR_FILE_LOAD, startGen);
 
-            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapLoadContext>(new LocalText("Secret Room")));
+            if (translate)
+                layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapLoadContext>(specialRows["secretRoom"]));
+            else
+                layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapLoadContext>(new LocalText("Secret Room")));
             AddTitleDrop(layout);
 
             MapTimeLimitStep <MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
@@ -116,11 +127,14 @@ namespace DataGenerator.Data
             return layout;
         }
 
-        static IFloorGen getMysteryRoom(int zoneLevel, DungeonStage stage, string map_type, int moveBack)
+        static IFloorGen getMysteryRoom(bool translate, int zoneLevel, DungeonStage stage, string map_type, int moveBack)
         {
             GridFloorGen layout = new GridFloorGen();
 
-            layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Mysterious Passage")));
+            if (translate)
+                layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(specialRows["mysteryPass"]));
+            else
+                layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Mysterious Passage")));
             AddTitleDrop(layout);
 
             //Floor settings

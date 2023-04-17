@@ -22,14 +22,16 @@ namespace DataGenerator.Data
     {
         public const int MAX_ZONES = 55;
 
-        public static void AddZoneData(params int[] zonesToAdd)
+        public static void AddZoneData(bool translate, params int[] zonesToAdd)
         {
+            if (translate)
+                InitStringsAll();
 
             if (zonesToAdd.Length > 0)
             {
                 for (int ii = 0; ii < zonesToAdd.Length; ii++)
                 {
-                    ZoneData zone = GetZoneData(zonesToAdd[ii]);
+                    ZoneData zone = GetZoneData(zonesToAdd[ii], translate);
                     if (zone.Name.DefaultText != "")
                         DataManager.SaveData(Text.Sanitize(zone.Name.DefaultText).ToLower(), DataManager.DataType.Zone.ToString(), zone);
                 }
@@ -39,7 +41,7 @@ namespace DataGenerator.Data
                 DataInfo.DeleteIndexedData(DataManager.DataType.Zone.ToString());
                 for (int ii = 0; ii < MAX_ZONES; ii++)
                 {
-                    ZoneData zone = GetZoneData(ii);
+                    ZoneData zone = GetZoneData(ii, translate);
                     if (zone.Name.DefaultText != "")
                         DataManager.SaveData(Text.Sanitize(zone.Name.DefaultText).ToLower(), DataManager.DataType.Zone.ToString(), zone);
                 }
@@ -47,7 +49,7 @@ namespace DataGenerator.Data
         }
 
 
-        public static ZoneData GetZoneData(int index)
+        public static ZoneData GetZoneData(int index, bool translate)
         {
             ZoneData zone = new ZoneData();
             if (index == 0)
@@ -274,9 +276,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -794,9 +796,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -807,9 +809,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -1277,7 +1279,7 @@ namespace DataGenerator.Data
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         enemyList.Add(GetTeamMob(new MonsterID("vivillon", 0, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
-                        structure.BaseFloor = getSecretRoom("special_rby_bird", -1, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary", "tall_grass_dark", "flying", enemyList, new Loc(6, 4));
+                        structure.BaseFloor = getSecretRoom(translate, "special_rby_bird", -1, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary", "tall_grass_dark", "flying", enemyList, new Loc(6, 4));
 
                         zone.Segments.Add(structure);
                     }
@@ -1287,9 +1289,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -1907,7 +1909,7 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                        structure.BaseFloor = getSecretRoom("special_grass_maze", -1, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary", "tall_grass_yellow", "electric", enemyList, new Loc(5, 11));
+                        structure.BaseFloor = getSecretRoom(translate, "special_grass_maze", -1, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary", "tall_grass_yellow", "electric", enemyList, new Loc(5, 11));
 
                         zone.Segments.Add(structure);
                     }
@@ -1917,9 +1919,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -2), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -2), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "small_square", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "tall_hall", -2), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "wide_hall", -2), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -2722,7 +2724,7 @@ namespace DataGenerator.Data
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 18, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 19, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 20, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
-                    structure.BaseFloor = getSecretRoom("special_gsc_ghost", -2, "dark_hill_2_wall", "dark_hill_2_floor", "dark_hill_2_secondary", "tall_grass_dark", "dark", enemyList, new Loc(7, 6));
+                    structure.BaseFloor = getSecretRoom(translate, "special_gsc_ghost", -2, "dark_hill_2_wall", "dark_hill_2_floor", "dark_hill_2_secondary", "tall_grass_dark", "dark", enemyList, new Loc(7, 6));
 
                     zone.Segments.Add(structure);
                 }
@@ -2732,9 +2734,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -2744,9 +2746,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -4838,7 +4840,7 @@ namespace DataGenerator.Data
                         enemyList.Add(GetTeamMob(new MonsterID("alcremie", 4, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                         enemyList.Add(GetTeamMob(new MonsterID("alcremie", 5, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                         enemyList.Add(GetTeamMob(new MonsterID("alcremie", 6, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
-                        structure.BaseFloor = getSecretRoom("special_rby_fairy", -2, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "tall_grass", "fairy", enemyList, new Loc(13, 5));
+                        structure.BaseFloor = getSecretRoom(translate, "special_rby_fairy", -2, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "tall_grass", "fairy", enemyList, new Loc(13, 5));
 
                         zone.Segments.Add(structure);
                     }
@@ -4848,9 +4850,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -4861,9 +4863,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -5184,7 +5186,7 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                    structure.BaseFloor = getSecretRoom("special_rby_fossil", -1, "amp_plains_wall", "amp_plains_floor", "amp_plains_secondary", "", "ground", enemyList, new Loc(5, 11));
+                    structure.BaseFloor = getSecretRoom(translate, "special_rby_fossil", -1, "amp_plains_wall", "amp_plains_floor", "amp_plains_secondary", "", "ground", enemyList, new Loc(5, 11));
 
                     zone.Segments.Add(structure);
                 }
@@ -5194,9 +5196,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -2), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -6935,7 +6937,7 @@ namespace DataGenerator.Data
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 5, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
-                        structure.BaseFloor = getSecretRoom("special_gsc_plant", -2, "purity_forest_7_wall", "purity_forest_7_floor", "purity_forest_7_secondary", "tall_grass", "water", enemyList, new Loc(9, 5));
+                        structure.BaseFloor = getSecretRoom(translate, "special_gsc_plant", -2, "purity_forest_7_wall", "purity_forest_7_floor", "purity_forest_7_secondary", "tall_grass", "water", enemyList, new Loc(9, 5));
 
                         zone.Segments.Add(structure);
                     }
@@ -6945,9 +6947,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -6958,9 +6960,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -7726,7 +7728,7 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                    structure.BaseFloor = getSecretRoom("special_grass_maze", -1, "murky_forest_wall", "murky_forest_floor", "murky_forest_secondary", "tall_grass_blue", "bug", enemyList, new Loc(5, 11));
+                    structure.BaseFloor = getSecretRoom(translate, "special_grass_maze", -1, "murky_forest_wall", "murky_forest_floor", "murky_forest_secondary", "tall_grass_blue", "bug", enemyList, new Loc(5, 11));
 
                     zone.Segments.Add(structure);
                 }
@@ -8550,7 +8552,7 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                    structure.BaseFloor = getSecretRoom("special_grass_maze", -1, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary", "tall_grass_white", "rock", enemyList, new Loc(5, 11));
+                    structure.BaseFloor = getSecretRoom(translate, "special_grass_maze", -1, "southern_cavern_1_wall", "southern_cavern_1_floor", "southern_cavern_1_secondary", "tall_grass_white", "rock", enemyList, new Loc(5, 11));
 
                     zone.Segments.Add(structure);
                 }
@@ -10148,7 +10150,7 @@ namespace DataGenerator.Data
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                     //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 6, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
-                    structure.BaseFloor = getSecretRoom("special_grass_maze", -2, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary", "tall_grass_white", "ice", enemyList, new Loc(5, 11));
+                    structure.BaseFloor = getSecretRoom(translate, "special_grass_maze", -2, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary", "tall_grass_white", "ice", enemyList, new Loc(5, 11));
 
                     zone.Segments.Add(structure);
                 }
@@ -10157,9 +10159,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -10169,9 +10171,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -10767,7 +10769,7 @@ namespace DataGenerator.Data
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 11, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 12, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 13, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
-                    structure.BaseFloor = getSecretRoom("special_gsc_ghost", -1, "buried_relic_3_wall", "buried_relic_3_floor", "buried_relic_3_secondary", "", "psychic", enemyList, new Loc(7, 6));
+                    structure.BaseFloor = getSecretRoom(translate, "special_gsc_ghost", -1, "buried_relic_3_wall", "buried_relic_3_floor", "buried_relic_3_secondary", "", "psychic", enemyList, new Loc(7, 6));
 
                     zone.Segments.Add(structure);
                 }
@@ -10777,9 +10779,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -2), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -2), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "small_square", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "tall_hall", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "wide_hall", -2), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -11543,7 +11545,7 @@ namespace DataGenerator.Data
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                     //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 4, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
-                    structure.BaseFloor = getSecretRoom("special_gsc_plant", -2, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "tall_grass_dark", "grass", enemyList, new Loc(9, 5));
+                    structure.BaseFloor = getSecretRoom(translate, "special_gsc_plant", -2, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "tall_grass_dark", "grass", enemyList, new Loc(9, 5));
 
                     zone.Segments.Add(structure);
                 }
@@ -11553,9 +11555,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -11565,9 +11567,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -12392,7 +12394,7 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                        structure.BaseFloor = getSecretRoom("special_gsc_plant", -2, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary", "tall_grass", "normal", enemyList, new Loc(9, 5));
+                        structure.BaseFloor = getSecretRoom(translate, "special_gsc_plant", -2, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary", "tall_grass", "normal", enemyList, new Loc(9, 5));
 
                         zone.Segments.Add(structure);
                     }
@@ -12402,9 +12404,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -12415,9 +12417,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -12975,7 +12977,7 @@ namespace DataGenerator.Data
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 9, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
-                        structure.BaseFloor = getSecretRoom("special_rby_fossil", -2, "craggy_coast_wall", "craggy_coast_floor", "craggy_coast_secondary", "", "fire", enemyList, new Loc(5, 11));
+                        structure.BaseFloor = getSecretRoom(translate, "special_rby_fossil", -2, "craggy_coast_wall", "craggy_coast_floor", "craggy_coast_secondary", "", "fire", enemyList, new Loc(5, 11));
 
                         zone.Segments.Add(structure);
                     }
@@ -12985,9 +12987,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -13970,7 +13972,7 @@ namespace DataGenerator.Data
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         enemyList.Add(GetTeamMob(new MonsterID("carbink", 0, "", Gender.Unknown), "", "stealth_rock", "power_gem", "rock_throw", "", new RandRange(zone.Level), "turret"), 10);
-                        structure.BaseFloor = getSecretRoom("special_rby_fossil", -2, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary", "", "steel", enemyList, new Loc(5, 11));
+                        structure.BaseFloor = getSecretRoom(translate, "special_rby_fossil", -2, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary", "", "steel", enemyList, new Loc(5, 11));
 
                         zone.Segments.Add(structure);
                     }
@@ -13980,9 +13982,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -13993,9 +13995,9 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         ChanceFloorGen multiGen = new ChanceFloorGen();
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
-                        multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "small_square", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "tall_hall", -3), 10);
+                        multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Intermediate, "wide_hall", -3), 10);
                         structure.BaseFloor = multiGen;
 
                         zone.Segments.Add(structure);
@@ -15068,9 +15070,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -15081,9 +15083,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -15939,7 +15941,7 @@ namespace DataGenerator.Data
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 25, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 26, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 27, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
-                    structure.BaseFloor = getSecretRoom("special_gsc_ghost", -2, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary", "tall_grass_dark", "poison", enemyList, new Loc(7, 6));
+                    structure.BaseFloor = getSecretRoom(translate, "special_gsc_ghost", -2, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary", "tall_grass_dark", "poison", enemyList, new Loc(7, 6));
 
                     zone.Segments.Add(structure);
                 }
@@ -15948,9 +15950,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Advanced, "small_square", -2), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Advanced, "tall_hall", -2), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(zone.Level, DungeonStage.Advanced, "wide_hall", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Advanced, "small_square", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Advanced, "tall_hall", -2), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Advanced, "wide_hall", -2), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);

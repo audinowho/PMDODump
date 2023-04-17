@@ -262,6 +262,7 @@ namespace DataGenerator
                     DataManager.Instance.ClearCache(DataManager.DataType.Item);
                     Localization.WriteTitledDataTable(DataManager.MAP_PATH, DataManager.MAP_EXT, DataManager.Instance.GetMap);
                     Localization.WriteTitledDataTable(DataManager.GROUND_PATH, DataManager.GROUND_EXT, DataManager.Instance.GetGround);
+                    ZoneInfo.AddZoneData(true);
                     Localization.WriteZoneStringTable();
                     RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Zone);
                     DataManager.Instance.LoadIndex(DataManager.DataType.Zone);
@@ -411,7 +412,7 @@ namespace DataGenerator
                         {
                             //MapInfo.AddMapData();
                             MapInfo.AddGroundData("test_grounds");
-                            ZoneInfo.AddZoneData();
+                            ZoneInfo.AddZoneData(false);
                             //ZoneInfo.AddZoneData(30);
                         }
 
