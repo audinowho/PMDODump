@@ -1984,7 +1984,8 @@ namespace DataGenerator.Data
         {
             string fileName = "xcl_test_" + Text.Sanitize(effect.ToString()).ToLower();
 
-            AutoItemInfo.FillSpecificExclusiveData(fileName, item, "", "**" + effect.ToString() + " Test", ExclusiveItemType.None, effect, effectArgs, "bulbasaur", translate);
+            AutoItemInfo.FillSpecificExclusiveData(fileName, item, "", effect.ToString() + " Test", ExclusiveItemType.None, effect, effectArgs, "bulbasaur", translate);
+            item.Name.DefaultText = "**" + item.Name.DefaultText;
 
             return fileName;
         }

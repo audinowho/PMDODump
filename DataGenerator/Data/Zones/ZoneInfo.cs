@@ -10795,7 +10795,7 @@ namespace DataGenerator.Data
             {
                 #region OVERGROWN WILDS
 
-                zone.Name = new LocalText("**Overgrown Wilds");
+                zone.Name = new LocalText("Overgrown Wilds");
                 zone.Rescues = 2;
                 zone.Level = 20;
                 zone.Rogue = RogueStatus.ItemTransfer;
