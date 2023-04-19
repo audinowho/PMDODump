@@ -1,7 +1,6 @@
-# 0.7.8 Changes #
+# 0.7.9 Changes #
 
-* Fixed a crash bug when adding map items to dungeons
-* Fixed a display issue where evealed traps do not show as such on minimap
-* Improved grammar with language translation.
-* Devs: DUNGEON:SetMinimapVisible for setting minimap visibility
-* Devs: Fixed an issue with single-sheet sprite import that causes offsets to import wrong when individual frames do not align to center
+* Released new dungeon, unlocked by completing Fertile Valley
+* Devs: Added confirmation when deleting items from a list.
+* Devs: Fixed an issue with animation generation for the sprite editor
+* FNA engine update
