@@ -11145,7 +11145,7 @@ namespace DataGenerator.Data
                         //construct paths
                         {
                             //prim maze with caves
-                            AddInitGridStep(layout, 6, 5, 7, 7);
+                            AddInitGridStep(layout, 6, 6, 6, 6);
 
                             GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
