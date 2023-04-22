@@ -236,6 +236,8 @@ def main():
     print("Updating Transfer Map")
     updateTransfers(base_path, out_path)
 
+    input("Transfer json updated.  Review the added_nodes.txt and Make your changes before proceeding.")
+
     print("Reloading Transfer Map")
     # list denoting which sprites/portrait to transfer and to where
     main_transfer = loadTransferMap(os.path.join(out_path, "transfer.json"))
