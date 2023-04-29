@@ -1623,7 +1623,7 @@ namespace DataGenerator.Data
                     newData.HitRate = -1;
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(6));
 
-                    item.AfterHittings.Add(0, new FamilyBattleEvent(new TargetDeadNeededEvent(new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_EXCESSIVE_FORCE")))));
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new TargetDeadNeededEvent(new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_EXCESSIVE_FORCE"), true))));
                 }
             }
             else if (type == ExclusiveItemEffect.CelebrateCure)

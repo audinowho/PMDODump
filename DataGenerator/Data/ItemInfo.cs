@@ -659,7 +659,7 @@ namespace DataGenerator.Data
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                 newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
-                item.UseEvent.OnHits.Add(0, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey()));
+                item.UseEvent.OnHits.Add(0, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey(), true));
             }
             else if (ii == 113)
             {

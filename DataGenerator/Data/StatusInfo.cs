@@ -1697,7 +1697,7 @@ namespace DataGenerator.Data
                 newData.HitRate = 100;
                 newData.SkillStates.Set(new BasePowerState(100));
                 newData.OnHits.Add(-1, new DamageFormulaEvent());
-                status.AfterBeingHits.Add(0, new FoodNeededEvent(new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_BELCH"))));
+                status.AfterBeingHits.Add(0, new FoodNeededEvent(new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_BELCH"), true)));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.StatusStates.Set(new CountDownState(4));
             }
@@ -2204,7 +2204,7 @@ namespace DataGenerator.Data
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
-                    status.OnActions.Add(0, new ElementNeededEvent("fire", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
+                    status.OnActions.Add(0, new ElementNeededEvent("fire", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), true)));
                 }
 
                 {
@@ -2229,7 +2229,7 @@ namespace DataGenerator.Data
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
-                    status.OnActions.Add(0, new ElementNeededEvent("electric", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
+                    status.OnActions.Add(0, new ElementNeededEvent("electric", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), true)));
                 }
                 status.AfterBeingHits.Add(0, new ElementNeededEvent("fire", new RemoveBattleEvent(false)));
                 status.AfterBeingHits.Add(0, new ElementNeededEvent("electric", new RemoveBattleEvent(false)));
@@ -2256,7 +2256,7 @@ namespace DataGenerator.Data
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
-                    status.AfterBeingHits.Add(0, new ElementNeededEvent("fire", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
+                    status.AfterBeingHits.Add(0, new ElementNeededEvent("fire", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), true)));
                 }
 
 
@@ -2282,7 +2282,7 @@ namespace DataGenerator.Data
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
                     newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
-                    status.AfterBeingHits.Add(0, new ElementNeededEvent("electric", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"))));
+                    status.AfterBeingHits.Add(0, new ElementNeededEvent("electric", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), true)));
                 }
             }
             else if (ii == 124)
