@@ -11189,7 +11189,7 @@ namespace DataGenerator.Data
 
                         AddDrawGridSteps(layout);
 
-                        AddStairStep(layout, true);
+                        AddStairStep(layout, false);
 
                         if (ii == 7)
                         {
