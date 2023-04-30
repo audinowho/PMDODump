@@ -16304,7 +16304,7 @@ namespace DataGenerator.Data
             }
             else if (ii == 670)
             {
-                skill.Name = new LocalText("**Leafage");
+                skill.Name = new LocalText("=Leafage");
                 skill.Desc = new LocalText("The user attacks by pelting the target with leaves.");
                 skill.BaseCharges = 40;
                 skill.Data.Element = "grass";
@@ -16313,10 +16313,17 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(40));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new ThrowAction();
+                ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ThrowAction)skill.HitboxAction).Coverage = ThrowAction.ArcCoverage.WideAngle;
+                ((ThrowAction)skill.HitboxAction).Range = 2;
+                ((ThrowAction)skill.HitboxAction).Speed = 10;
+                ((ThrowAction)skill.HitboxAction).Anim = new AnimData("Gastro_Acid_Ball", 3);
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                SingleEmitter endAnim = new SingleEmitter(new AnimData("Razor_Leaf_Charge", 2));
+                endAnim.LocHeight = 20;
+                skill.Data.HitFX.Emitter = endAnim;
             }
             else if (ii == 671)
             {
