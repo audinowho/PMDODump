@@ -1570,7 +1570,7 @@ namespace DataGenerator.Data
 
                         SpawnRangeList<IGenStep> shopZoneSpawns = new SpawnRangeList<IGenStep>();
                         {
-                            ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
+                            ShopStep<ListMapGenContext> shop = new ShopStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                             shop.Personality = 0;
                             shop.SecurityStatus = "shop_security";
 
@@ -1604,7 +1604,7 @@ namespace DataGenerator.Data
                             shopZoneSpawns.Add(shop, new IntRange(0, max_floors), 10);
                         }
                         {
-                            ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
+                            ShopStep<ListMapGenContext> shop = new ShopStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                             shop.Personality = 2;
                             shop.SecurityStatus = "shop_security";
 
@@ -10372,7 +10372,7 @@ namespace DataGenerator.Data
 
                     {
 
-                        MobSpawn mob = GetGuardMob("espeon", "", "thunder", "agility", "shadow_ball", "", new RandRange(50), "wander_normal", "sleep");
+                        MobSpawn mob = GetGuardMob("espeon", "", "psychic", "", "", "", new RandRange(50), "wander_normal", "sleep");
                         MobSpawnItem keySpawn = new MobSpawnItem(true);
                         keySpawn.Items.Add(new InvItem("held_choice_scarf"), 10);
                         mob.SpawnFeatures.Add(keySpawn);
@@ -10449,6 +10449,45 @@ namespace DataGenerator.Data
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)),
                         new MapItem("apricorn_brown"), new MapItem("apricorn_purple"), new MapItem("apricorn_red"), new MapItem("apricorn_white"));
+
+
+                    SpawnRangeList<IGenStep> shopZoneSpawns = new SpawnRangeList<IGenStep>();
+                    {
+                        ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
+                        shop.Personality = 2;
+                        shop.SecurityStatus = "shop_security";
+
+                        foreach (string tm_id in IterateTMs(TMClass.Top | TMClass.ShopOnly))
+                            shop.Items.Add(new MapItem(tm_id, 0, getTMPrice(tm_id)), 2);//TMs
+
+                        shop.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 6)), 10);//TMs
+
+                        // 137 Porygon : 36 Trace : 97 Agility : 59 Blizzard : 435 Discharge : 94 Psychic
+                        shop.StartMob = GetShopMob("porygon", "trace", "agility", "blizzard", "discharge", "psychic", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, 2);
+                        {
+                            // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 63 Hyper Beam : 435 Discharge : 373 Embargo
+                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "hyper_beam", "discharge", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
+                            // 474 Porygon-Z : 91 Adaptability : 160 Conversion : 59 Blizzard : 435 Discharge : 473 Psyshock
+                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "conversion", "blizzard", "discharge", "psyshock", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
+                            // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 63 Hyper Beam : 435 Discharge : 373 Embargo
+                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "hyper_beam", "discharge", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
+                            // 474 Porygon-Z : 91 Adaptability : 417 Nasty Plot : 161 Tri Attack : 247 Shadow Ball : 373 Embargo
+                            shop.Mobs.Add(GetShopMob("porygon_z", "adaptability", "nasty_plot", "tri_attack", "shadow_ball", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
+                            // 474 Porygon-Z : 88 Download : 97 Agility : 473 Psyshock : 324 Signal Beam : 373 Embargo
+                            shop.Mobs.Add(GetShopMob("porygon_z", "download", "agility", "psyshock", "signal_beam", "embargo", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
+                            // 233 Porygon2 : 36 Trace : 176 Conversion2 : 105 Recover : 60 Psybeam : 324 Signal Beam
+                            shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "recover", "psybeam", "signal_beam", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
+                            // 233 Porygon2 : 36 Trace : 176 Conversion2 : 105 Recover : 60 Psybeam : 435 Discharge
+                            shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "recover", "psybeam", "discharge", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
+                            // 233 Porygon2 : 36 Trace : 176 Conversion2 : 277 Magic Coat : 161 Tri Attack : 97 Agility
+                            shop.Mobs.Add(GetShopMob("porygon2", "trace", "conversion_2", "magic_coat", "tri_attack", "agility", new string[] { "xcl_family_porygon_00", "xcl_family_porygon_01", "xcl_family_porygon_02", "xcl_family_porygon_03" }, -1), 10);
+                        }
+
+                        shopZoneSpawns.Add(shop, new IntRange(0, max_floors), 10);
+                    }
+                    SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandBinomial(2, 70), new IntRange(2, max_floors)), PR_SHOPS, shopZoneSpawns);
+                    shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
+                    floorSegment.ZoneSteps.Add(shopZoneStep);
 
 
                     {
@@ -11179,9 +11218,9 @@ namespace DataGenerator.Data
                                 step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                                 step.Filters.Add(new RoomFilterDefaultGen(true));
                                 step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                                step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), new RoomGenCave<MapGenContext>(new RandRange(10, 15), new RandRange(10, 15))), 10);
-                                step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenCave<MapGenContext>(new RandRange(7), new RandRange(10, 15))), 10);
-                                step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenCave<MapGenContext>(new RandRange(10, 15), new RandRange(7))), 10);
+                                step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), new RoomGenCave<MapGenContext>(new RandRange(10, 13), new RandRange(10, 13))), 10);
+                                step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenCave<MapGenContext>(new RandRange(7), new RandRange(10, 13))), 10);
+                                step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenCave<MapGenContext>(new RandRange(10, 13), new RandRange(7))), 10);
                                 layout.GenSteps.Add(PR_GRID_GEN, step);
                             }
 
