@@ -293,6 +293,17 @@ namespace DataGenerator.Data
             tactic.Plans.Add(new PreparePlan(iq | AIFlags.TrapAvoider, AIPlan.AttackChoice.RandomAttack));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
+            
+            tactic = new AITactic();
+            tactic.Name = new LocalText("Flee Stairs");//26
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
+            iq = AIFlags.WontDisturb | AIFlags.AttackToEscape;
+            tactic.Plans.Add(new FleeStairsPlan(iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new AvoidFoesCornerPlan(iq | AIFlags.TrapAvoider));//if cornered, attack
+            tactic.Plans.Add(new AttackFoesPlan(iq, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
+            tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
+            Tactics.Add(tactic);
 
             //make a variant of explore to go for items (For use of team characters, certain thief enemies)
             //always avoid traps when exploring
