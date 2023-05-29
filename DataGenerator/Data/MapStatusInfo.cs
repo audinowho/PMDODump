@@ -340,7 +340,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("Dragon-type attacks are weakened, and all Pokémon are protected from major status problems.");
                 OverlayEmitter overlay = new OverlayEmitter();
                 overlay.Anim = new BGAnimData("Fog", 3);
-                overlay.Color = Color.LightPink * 0.8f;
+                overlay.Color = Color.LightPink * 0.6f;
                 overlay.Layer = DrawLayer.Top;
                 overlay.Movement = new RogueElements.Loc(0, -32);
                 status.Emitter = overlay;

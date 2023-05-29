@@ -3641,7 +3641,7 @@ namespace DataGenerator.Data
             {
                 #region MOONLIT COURTYARD
                 {
-                    zone.Name = new LocalText("**Moonlit Courtyard");
+                    zone.Name = new LocalText("Moonlit Courtyard");
                     zone.Rescues = 4;
                     zone.Level = 25;
                     zone.BagRestrict = 8;
@@ -4334,7 +4334,8 @@ namespace DataGenerator.Data
                             AddStairStep(layout, false);
 
 
-                            if (ii == 7)
+                            //if (ii == 7)
+                            if (false)
                             {
                                 //making room for the vault
                                 {
@@ -4390,7 +4391,8 @@ namespace DataGenerator.Data
 
                             layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
-                            if (ii == 7)
+                            //if (ii == 7)
+                            if (false)
                                 layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("stairs_secret_up"));
 
                             floorSegment.Floors.Add(layout);
@@ -11739,7 +11741,7 @@ namespace DataGenerator.Data
             {
                 #region TRICKSTER WOODS
                 {
-                    zone.Name = new LocalText("**Trickster Woods");
+                    zone.Name = new LocalText("Trickster Woods");
                     zone.Rescues = 2;
                     zone.Level = 20;
                     zone.TeamSize = 1;
@@ -12105,7 +12107,7 @@ namespace DataGenerator.Data
                             else
                             {
                                 //prim maze with caves
-                                AddInitGridStep(layout, 6, 5, 7, 7);
+                                AddInitGridStep(layout, 5, 5, 7, 7);
 
                                 GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                                 path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
@@ -12377,7 +12379,7 @@ namespace DataGenerator.Data
                             //construct paths
                             {
                                 //prim maze with caves
-                                AddInitGridStep(layout, 6, 5, 7, 7, 1, true);
+                                AddInitGridStep(layout, 5, 5, 7, 7, 1, true);
 
                                 GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                                 path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
