@@ -995,7 +995,10 @@ namespace DataGenerator.Data
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new AskUnlockEvent());//for doors/chests, this will be triggered when "talked to"
-                tile.InteractWithTiles.Add(0, new ChestEvent());//for doors/chests, this will be triggered when the key is used
+                ChestEvent chestEvent = new ChestEvent();
+                chestEvent.ChestAnimation = new AnimData("Chest_Open", 8);
+                chestEvent.ChestEmptyTile = "chest_empty";
+                tile.InteractWithTiles.Add(0, chestEvent);//for doors/chests, this will be triggered when the key is used
             }
             else if (ii == 38)
             {

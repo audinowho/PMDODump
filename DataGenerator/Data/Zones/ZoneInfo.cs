@@ -3203,7 +3203,7 @@ namespace DataGenerator.Data
                         else if (ii < 18)
                             AddSpecificTextureData(layout, "craggy_peak_wall", "craggy_peak_floor", "craggy_peak_secondary", "tall_grass_dark", "steel");
                         else
-                            AddSpecificTextureData(layout, "sky_ruins_area_wall", "sky_ruins_floor", "sky_ruins_secondary", "tall_grass_dark", "flying", true);
+                            AddSpecificTextureData(layout, "sky_ruins_area_wall", "sky_ruins_floor", "sky_ruins_secondary", "tall_grass_dark", "flying");
 
 
                         if (ii < 6)
@@ -4140,9 +4140,9 @@ namespace DataGenerator.Data
                             if (ii < 5)
                                 AddSpecificTextureData(layout, "moonlit_courtyard_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy");
                             else if (ii < 10)
-                                AddSpecificTextureData(layout, "sky_ruins_area_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy", true);
+                                AddSpecificTextureData(layout, "moonlit_courtyard_2_wall", "moonlit_courtyard_2_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy");
                             else
-                                AddSpecificTextureData(layout, "moonlit_courtyard_2_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy", true);
+                                AddSpecificTextureData(layout, "moonlit_courtyard_3_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy");
 
                             //grass
                             BlobWaterStep<MapGenContext> coverStep = new BlobWaterStep<MapGenContext>(new RandRange(2, 6), new Tile("grass"), new MapTerrainStencil<MapGenContext>(true, false, false, false), new DefaultBlobStencil<MapGenContext>(), new IntRange(4, 9), new IntRange(6, 15));
@@ -4408,7 +4408,7 @@ namespace DataGenerator.Data
                             MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
                             layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
-                            AddSpecificTextureData(layout, "moonlit_courtyard_2_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy", true);
+                            AddSpecificTextureData(layout, "moonlit_courtyard_2_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy");
 
                             {
                                 HashSet<string> exceptFor = new HashSet<string>();
@@ -12162,7 +12162,7 @@ namespace DataGenerator.Data
 
                             AddDrawGridSteps(layout);
 
-                            AddStairStep(layout, true);
+                            AddStairStep(layout, false);
 
                             layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
@@ -12420,7 +12420,7 @@ namespace DataGenerator.Data
                             layout.GenSteps.Add(PR_TILES_INIT, new DrawFloorToTileStep<MapGenContext>());
 
                             //Add the stairs up and down
-                            AddStairStep(layout, false);
+                            AddStairStep(layout, true);
 
 
                             layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());

@@ -163,7 +163,7 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_FLOOR_DATA, statusData);
         }
 
-        public static void AddTextureData<T>(MapGen<T> layout, string block, string ground, string water, string element, bool independent = false) where T : BaseMapGenContext
+        public static void AddTextureData<T>(MapGen<T> layout, string block, string ground, string water, string element, bool layered = false) where T : BaseMapGenContext
         {
             MapTextureStep<T> textureStep = new MapTextureStep<T>();
             {
@@ -171,12 +171,12 @@ namespace DataGenerator.Data
                 textureStep.GroundTileset = ground;
                 textureStep.WaterTileset = water;
                 textureStep.BlockTileset = block;
-                textureStep.LayeredGround = independent;
+                textureStep.LayeredGround = layered;
             }
             layout.GenSteps.Add(PR_TEXTURES, textureStep);
         }
 
-        public static void AddSpecificTextureData<T>(MapGen<T> layout, string block, string ground, string water, string grass, string element, bool independent = false) where T : BaseMapGenContext
+        public static void AddSpecificTextureData<T>(MapGen<T> layout, string block, string ground, string water, string grass, string element) where T : BaseMapGenContext
         {
             MapDictTextureStep<T> textureStep = new MapDictTextureStep<T>();
             {

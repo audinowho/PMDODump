@@ -1,7 +1,8 @@
-# 0.7.11 Changes #
+# 0.7.12 Changes #
 
-* 2 New Dungeons: Trickster Woods and Moonlit Courtyard.  Note, the latter is currently missing story hint.
-* Add convenience features for editors and closing confirmation.
-* Fix an issue with exclusive item swapping.
-* Map Editor fixes
-* Added support for cross-fading
+* Added an accessibility mod to telegraph monster houses for the faint of heart
+* Enhancements to some tilesets
+* Alignment fixes to various VFX
+* Fix to text formatting for lists
+* Fix duplicate list eleents added in editors
+* Minor animation fix when swapping from cutscene mode
