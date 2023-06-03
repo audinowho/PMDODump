@@ -4,5 +4,5 @@
 * Enhancements to some tilesets
 * Alignment fixes to various VFX
 * Fix to text formatting for lists
-* Fix duplicate list eleents added in editors
+* Fix duplicate list elements added in editors
 * Minor animation fix when swapping from cutscene mode

@@ -3,10 +3,7 @@ Sheet: Hardcode
 Sheet: Content
 
 Sheet: Script
-    * Significantly changed ground\base_camp/Outside_Line_001 from "Mystery Dungeons aren't a common sight outside of Guildmaster Island.[br]They used to be everywhere, but that was a long time ago..." to "Guildmaster Island's home to the last of the Mystery Dungeons.[br]They're strange places that shift and change each time you enter.[br]They vanished from the rest of the world a long time ago, but this place is full of them..."
-    * Added ground\canyon_camp/Strategy_Line_001
-    * Changed ground\cliff_camp/Rival_Line_001 from "Hiss... The road ahead is difficult.[pause=0] Fellow traveler, take thissss..." to "Hiss... The road ahead is treacherousss...[br]Fellow traveler,[pause=0] take thissss..."
-    * Added ground\final_stop/Storehouse_Line_002
+    * Added ground\canyon_camp/Fairy_Line_001
 
 Sheet: Abilities
 
