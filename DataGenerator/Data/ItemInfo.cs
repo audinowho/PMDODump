@@ -3072,11 +3072,10 @@ namespace DataGenerator.Data
                 item.Icon = 12;
                 item.UsageType = ItemData.UseType.UseOther;
                 item.ItemStates.Set(new MachineState());
-                RecallBoxAction action = new RecallBoxAction();
-                action.IncludePreEvolutions = true;
+                RecallBoxEvent action = new RecallBoxEvent(true);
                 item.GroundUseActions.Add(action);
                 item.GroundUseActions[0].Selection = SelectionType.Others;
-                item.GroundUseActions[0].ActionName = new LocalText("Use");
+                item.GroundUseActions[0].GroundUsageType = ItemData.UseType.UseOther;
                 item.Price = 800;
                 item.UseEvent.BeforeTryActions.Add(1, new LinkBoxEvent());
                 item.UseEvent.OnHits.Add(0, new MoveLearnEvent());
@@ -3120,9 +3119,9 @@ namespace DataGenerator.Data
                 item.Icon = 12;
                 item.UsageType = ItemData.UseType.UseOther;
                 item.ItemStates.Set(new MachineState());
-                item.GroundUseActions.Add(new AbilityCapsuleAction());
+                item.GroundUseActions.Add(new AbilityCapsuleItemEvent());
                 item.GroundUseActions[0].Selection = SelectionType.Others;
-                item.GroundUseActions[0].ActionName = new LocalText("Use");
+                item.GroundUseActions[0].GroundUsageType = ItemData.UseType.UseOther;
                 item.Price = 800;
                 item.UseEvent.BeforeTryActions.Add(1, new AbilityCapsuleEvent());
                 item.UseEvent.OnHits.Add(0, new AbilityLearnEvent());
@@ -3934,9 +3933,9 @@ namespace DataGenerator.Data
             LocalText tmFormatDesc = new LocalText("Teaches the move {0} to a Pokémon.");
             item.Name = LocalText.FormatLocalText(tmFormatName, move.Name);
             item.Desc = LocalText.FormatLocalText(tmFormatDesc, move.Name);
-            item.GroundUseActions.Add(new LearnItemAction(moveIndex));
+            item.GroundUseActions.Add(new LearnItemEvent(moveIndex));
             item.GroundUseActions[0].Selection = SelectionType.Self;
-            item.GroundUseActions[0].ActionName = new LocalText("Teach");
+            item.GroundUseActions[0].GroundUsageType = ItemData.UseType.Learn;
             item.ItemStates.Set(new ItemIDState(moveIndex));
             item.UseEvent.BeforeTryActions.Add(1, new TMEvent());
             item.UseEvent.OnHits.Add(0, new MoveLearnEvent());
