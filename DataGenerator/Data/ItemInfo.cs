@@ -2976,7 +2976,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A hold item that slightly boosts the Pokémon's Defense.");
                 item.Sprite = "Scarf_Green";
                 item.Price = 120;
-                item.BeforeBeingHits.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 11, 10));
+                item.BeforeBeingHits.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 9, 10));
             }
             else if (ii == 403)
             {
@@ -2984,7 +2984,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A hold item that slightly boosts the Pokémon's Special Defense.");
                 item.Sprite = "Band_Gray";
                 item.Price = 120;
-                item.BeforeBeingHits.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 11, 10));
+                item.BeforeBeingHits.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 9, 10));
             }
             else if (ii == 404)
             {
