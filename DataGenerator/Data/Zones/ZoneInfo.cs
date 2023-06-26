@@ -3644,7 +3644,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Moonlit Courtyard");
                     zone.Rescues = 4;
                     zone.Level = 25;
-                    zone.BagRestrict = 8;
+                    zone.BagRestrict = 16;
                     zone.Rogue = RogueStatus.ItemTransfer;
 
                     {
@@ -4133,7 +4133,7 @@ namespace DataGenerator.Data
                             else
                                 AddFloorData(layout, "Star Cave.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
-                            if (ii >= 5)
+                            if (ii >= 7)
                                 AddDefaultMapStatus(layout, "default_weather", "misty_terrain", "clear", "clear", "clear");
 
                             //Tilesets
@@ -4334,65 +4334,18 @@ namespace DataGenerator.Data
                             AddStairStep(layout, false);
 
 
-                            //if (ii == 7)
-                            if (false)
+                            if (ii == 7)
                             {
-                                //making room for the vault
-                                {
-                                    ResizeFloorStep<MapGenContext> addSizeStep = new ResizeFloorStep<MapGenContext>(new Loc(16, 16), Dir8.None);
-                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, addSizeStep);
-                                    ClampFloorStep<MapGenContext> limitStep = new ClampFloorStep<MapGenContext>(new Loc(0), new Loc(78, 54));
-                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, limitStep);
-                                    ClampFloorStep<MapGenContext> clampStep = new ClampFloorStep<MapGenContext>();
-                                    layout.GenSteps.Add(PR_ROOMS_PRE_VAULT_CLAMP, clampStep);
-                                }
-
-                                //vault rooms
-                                {
-                                    SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
-                                    detourRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
-                                    SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
-                                    detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
-                                    AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
-                                    detours.Amount = new RandRange(1);
-                                    detours.HallPercent = 100;
-                                    detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
-                                    detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
-                                    detours.RoomComponents.Set(new NoConnectRoom());
-                                    detours.RoomComponents.Set(new NoEventRoom());
-                                    detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
-                                    detours.HallComponents.Set(new NoConnectRoom());
-                                    detours.HallComponents.Set(new NoEventRoom());
-
-                                    layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
-                                }
-                                //sealing the vault
-                                {
-                                    SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch", 3, false, false);
-                                    vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
-                                    vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                                    vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
-                                    layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
-                                }
-
-                                //vault treasures
-                                {
-                                    BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
-
-                                    EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
-                                    secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
-                                    treasures.SpecificSpawns.Add(secretStairs);
-
-                                    RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
-                                    detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
-                                    layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
-                                }
+                                EffectTile secretTile = new EffectTile("stairs_secret_up", false);
+                                secretTile.TileStates.Set(new DestState(new SegLoc(1, 0)));
+                                RandomSpawnStep<MapGenContext, EffectTile> trapStep = new RandomSpawnStep<MapGenContext, EffectTile>(new PickerSpawner<MapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)));
+                                layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                             }
 
                             layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
-                            //if (ii == 7)
-                            if (false)
+                            if (ii == 7)
+                            //if (false)
                                 layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("stairs_secret_up"));
 
                             floorSegment.Floors.Add(layout);
@@ -4432,7 +4385,7 @@ namespace DataGenerator.Data
                         int max_floors = 6;
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Moonlit Temple\nB{0}F"), new Priority(-15)));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Moonlit Temple\n{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
@@ -4821,7 +4774,7 @@ namespace DataGenerator.Data
 
                             AddDrawGridSteps(layout);
 
-                            AddStairStep(layout, true);
+                            AddStairStep(layout, false);
 
                             layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 

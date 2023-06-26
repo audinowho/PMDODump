@@ -1063,8 +1063,10 @@ namespace DataGenerator.Data
             }
             else if (ii == 129)
             {
-                ability.Name = new LocalText("**Defeatist");
+                ability.Name = new LocalText("Defeatist");
                 ability.Desc = new LocalText("Halves the Pokémon's Attack and Sp. Atk stats when its HP becomes half or less.");
+                ability.OnActions.Add(0, new PinchNeededEvent(2, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 1, 2)));
+                ability.OnActions.Add(0, new PinchNeededEvent(2, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 1, 2)));
             }
             else if (ii == 130)
             {
