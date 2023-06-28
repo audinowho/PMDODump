@@ -1,8 +1,6 @@
-# 0.7.12 Changes #
+# 0.7.13 Changes #
 
-* Added an accessibility mod to telegraph monster houses for the faint of heart
-* Enhancements to some tilesets
-* Alignment fixes to various VFX
-* Fix to text formatting for lists
-* Fix duplicate list elements added in editors
-* Minor animation fix when swapping from cutscene mode
+* Fixed an audio bug in some Windows platforms.
+* Completing Roguelocke no longer doubles total money.
+* Menu fix where items were mislabeled as disabled.
+* Overworld use for Recall Boxes and Ability Capsules
