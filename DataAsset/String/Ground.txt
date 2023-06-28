@@ -11,7 +11,7 @@ guild_hut-0000|data.Name		Guildmaster Hut	公会会长之屋			Cabaña del Maest
 guild_path-0000|data.Name		Guildmaster Path	公会会长之径			Sendero del Maestro
 guildmaster_summit-0000|data.Name		Guildmaster Summit	公会会长之巅		Gildenmeister-Gipfel	Cima del Maestro
 luminous_spring-0000|data.Name		Luminous Spring	光之泉			Manantial Luminoso
-moonlit_end-0000|data.Name						
+moonlit_end-0000|data.Name		Moonlit Chamber				
 post_office-0000|data.Name		Pelipper Post Office	大嘴鸥联络站			Mensajeros Pelipper
 rest_stop-0000|data.Name		Cave Shelter	洞穴庇护所		Höhlenzuflucht	Cueva Refugio
 test_grounds-0000|data.Name		Test Grounds				

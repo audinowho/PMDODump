@@ -56,7 +56,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-lost_seas-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Lost Seas\nB{0}F									迷失之海\nB{0}F
 0000-moonlit_courtyard-0000|data.Name		Moonlit Courtyard									月光庭院
 0000-moonlit_courtyard-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Moonlit Courtyard\n{0}F									月光庭院\n{0}F
-0000-moonlit_courtyard-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Moonlit Temple\nB{0}F									月光神庙\nB{0}F
+0000-moonlit_courtyard-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Moonlit Temple\n{0}F									
 0000-overgrown_wilds-0000|data.Name		Overgrown Wilds		Überwachsene Wildnis							杂草原野
 0000-overgrown_wilds-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Overgrown Wilds\n{0}F		Überwachsene Wildnis\n{0}.OG							杂草原野\n{0}F				
 0000-overgrown_wilds-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Exotic Wilds\nB{0}F									异草原野\nB{0}F
@@ -83,8 +83,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-starfall_heights-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Starfall Heights\n{0}F								
 0000-the_abyss-0000|data.Name		The Abyss		Die Kluft	El Abismo						深渊
 0000-the_abyss-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Abyss\nB{0}F		Die Kluft\n{0}.KG	El Abismo\nP-{0}						深渊\nB{0}F
-0000-the_neverending_tale-0000|data.Name		The NeverEnding Tale									那永续的传说
-0000-the_neverending_tale-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The NeverEnding Tale\nCh. {0}									那永续的传说\nCh. {0}
+0000-the_neverending_tale-0000|data.Name		The NeverEnding Tale								
+0000-the_neverending_tale-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The NeverEnding Tale\nCh. {0}								
 0000-the_sky-0000|data.Name		The Sky		Der Himmel	El Cielo						天空
 0000-the_sky-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Sky\n{0}F		Der Himmel\n{0}.OG	El Cielo\nP{0}						天空\n{0}F
 0000-thunderstruck_pass-0000|data.Name		Thunderstruck Pass		Donnerschlag-Übergang	Senda Atónita						雷霆山口

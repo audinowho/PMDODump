@@ -3,7 +3,20 @@ Sheet: Hardcode
 Sheet: Content
 
 Sheet: Script
-    * Added ground\canyon_camp/Fairy_Line_001
+    * Added ground\moonlit_end/Expo_Cutscene_Ask_Join
+    * Erased contents of ground\moonlit_end/Expo_Cutscene_Line_001
+    * Added ground\moonlit_end/Expo_Cutscene_Line_002_Default
+    * Added ground\moonlit_end/Expo_Cutscene_Line_002_Postgame
+    * Added ground\moonlit_end/Expo_Cutscene_Line_003
+    * Added ground\moonlit_end/Expo_Cutscene_Line_004
+    * Added ground\moonlit_end/Expo_Cutscene_Line_005
+    * Added ground\moonlit_end/Expo_Cutscene_Line_006
+    * Added ground\moonlit_end/Expo_Cutscene_Line_007
+    * Added ground\moonlit_end/Expo_Cutscene_Line_Accept
+    * Added ground\moonlit_end/Expo_Cutscene_Line_Reject
+    * Added ground\moonlit_end/Post_Cutscene_Line_001
+    * Added ground\moonlit_end/Post_Cutscene_Line_Fail
+    * Added ground\moonlit_end/Post_Cutscene_Line_Success
 
 Sheet: Abilities
 
@@ -22,8 +35,10 @@ Sheet: Excl Names
 Sheet: Excl Effects
 
 Sheet: Zones
+    * Significantly changed 0000-moonlit_courtyard-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name from "Moonlit Temple\nB{0}F" to "Moonlit Temple\n{0}F"
 
 Sheet: Maps
 
 Sheet: GroundMaps
+    * Significantly changed moonlit_end-0000|data.Name from "" to "Moonlit Chamber"
 
