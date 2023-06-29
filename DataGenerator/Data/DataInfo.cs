@@ -23,7 +23,7 @@ namespace DataGenerator.Data
         public static void AddUniversalEvent()
         {
             File.Delete(PathMod.ModPath(DataManager.DATA_PATH + "Universal" + DataManager.DATA_EXT));
-            ActiveEffect universalEvent = new ActiveEffect();
+            UniversalActiveEffect universalEvent = new UniversalActiveEffect();
 
             universalEvent.OnHits.Add(5, new HitPostEvent("was_hurt_last_turn", "last_move_hit_by_other", "last_targeted_by", "crits_landed"));
             universalEvent.OnHitTiles.Add(5, new TilePostEvent());
