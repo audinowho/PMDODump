@@ -1,7 +1,6 @@
-# 0.7.13 Changes #
+# 0.7.14 Changes #
 
-* Overworld use for Recall Boxes and Ability Capsules
-* Completing Roguelocke no longer doubles total money
-* Fixed an audio bug in some Windows platforms
-* Menu fix where items were mislabeled as disabled
-* Minor menu and dev fixes
+* Secret Garden exit moved one floor earlier
+* Dev: Made it possible to apply universal zone steps
+* Dev: Made it possible to add friendly NPCs in static maps
+* Dev: Issue fixed where editing TypeRecruitmentEvent was impossible

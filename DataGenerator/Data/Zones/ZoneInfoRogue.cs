@@ -4744,7 +4744,7 @@ namespace DataGenerator.Data
 
                 AddDrawGridSteps(layout);
 
-                if (ii <= 27)
+                if (ii < 27)
                     AddStairStep(layout, true);
                 else
                 {
@@ -4756,7 +4756,7 @@ namespace DataGenerator.Data
                     step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
                     layout.GenSteps.Add(PR_EXITS, step);
 
-                    if (ii == 28)
+                    if (ii == 27 || ii == 28)
                     {
                         //the next floor is all in visible tiles, as a secret stairs.
                         //It will always be in the same room as the exit stairs if possible
