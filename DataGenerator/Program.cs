@@ -357,6 +357,7 @@ namespace DataGenerator
                         DataInfo.AddSystemFX();
                         DataInfo.AddUniversalEvent();
                         DataInfo.AddUniversalData();
+                        DataManager.Instance.InitBase();
 
                         if ((dump & DataManager.DataType.Element) != DataManager.DataType.None)
                             ElementInfo.AddElementData();
@@ -402,7 +403,6 @@ namespace DataGenerator
 
                     {
                         DataManager.InitInstance();
-                        DataManager.Instance.LoadConversions();
                         DataManager.Instance.InitData();
 
                         if ((dump & DataManager.DataType.Item) != DataManager.DataType.None)
@@ -413,7 +413,7 @@ namespace DataGenerator
                             //MapInfo.AddMapData();
                             MapInfo.AddGroundData("test_grounds");
                             //ZoneInfo.AddZoneData(false);
-                            ZoneInfo.AddZoneData(false, 9);
+                            ZoneInfo.AddZoneData(false, 30);
                         }
 
                         DataManager.DataType reserializeType = DataManager.DataType.None;
