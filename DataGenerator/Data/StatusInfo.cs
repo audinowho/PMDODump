@@ -1781,7 +1781,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_LEECH_SEED_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_LEECH_SEED_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_LEECH_SEED_END")));
-                status.OnTurnEnds.Add(0, new LeechSeedEvent());
+                status.OnTurnEnds.Add(0, new LeechSeedEvent(new StringKey("MSG_LEECH_SEED"), 4, 12));
             }
             else if (ii == 102)
             {
