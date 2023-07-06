@@ -82,7 +82,7 @@ namespace DataGenerator.Data
                 //status.AfterHittings.Add(0, new StatusSpreadEffect(true));
                 //status.AfterBeingHits.Add(0, new StatusSpreadEffect(false));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                status.OnTurnEnds.Add(0, new BurnEvent());
+                status.OnTurnEnds.Add(0, new BurnEvent(8));
             }
             else if (ii == 3)
             {
@@ -166,9 +166,9 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
                 status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(false)));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                status.OnWalks.Add(0, new PoisonSingleEvent(false));
+                status.OnWalks.Add(0, new PoisonSingleEvent(false, 16, 16));
                 status.OnWalks.Add(0, new WalkedThisTurnEvent());
-                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true));
+                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true, 16, 16));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
                 status.RestoreHPs.Add(0, new HealMultEvent(1, 2));
@@ -197,9 +197,9 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
                 status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(true)));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                status.OnWalks.Add(0, new PoisonSingleEvent(false));
+                status.OnWalks.Add(0, new PoisonSingleEvent(false, 16, 16));
                 status.OnWalks.Add(0, new WalkedThisTurnEvent());
-                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true));
+                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true, 16, 16));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
                 status.RestoreHPs.Add(0, new HealMultEvent(1, 2));
