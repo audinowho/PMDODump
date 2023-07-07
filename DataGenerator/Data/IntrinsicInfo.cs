@@ -7,6 +7,7 @@ using RogueEssence.Data;
 using PMDC.Dungeon;
 using PMDC;
 using PMDC.Data;
+using Avalonia.X11;
 
 namespace DataGenerator.Data
 {
@@ -1555,8 +1556,12 @@ namespace DataGenerator.Data
             }
             else if (ii == 197)
             {
-                ability.Name = new LocalText("**Shields Down");
-                ability.Desc = new LocalText("When its HP becomes half or less, the Pokémon's shell breaks and it becomes aggressive.");
+                ability.Name = new LocalText("Shields Down");
+                ability.Desc = new LocalText("When it takes a hit that causes its HP to become half or less, the Pokémon's shell breaks and it becomes aggressive.");
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
+                ability.BeforeStatusAdds.Add(0, new FormeNeededStatusEvent(new StateStatusCheck(typeof(BadStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(emitter, "DUN_Screen_Hit", 10)), 0, 1, 2, 3, 4, 5, 6));
+                ability.OnMapStarts.Add(0, new MeteorFormeEvent("minior", 0, 7, 50, false));
+                ability.AfterBeingHits.Add(6, new BattlelessEvent(true, new MeteorFormeEvent("minior", 1, 7, 50, true)));
             }
             else if (ii == 198)
             {
