@@ -166,8 +166,8 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
                 status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(false)));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                status.OnWalks.Add(0, new PoisonSingleEvent(false));
-                status.OnWalks.Add(0, new WalkedThisTurnEvent());
+                status.OnWalks.Add(0, new PoisonSingleEvent(false, false));
+                status.OnWalks.Add(0, new WalkedThisTurnEvent(false));
                 status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
@@ -197,8 +197,8 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
                 status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(true)));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                status.OnWalks.Add(0, new PoisonSingleEvent(false));
-                status.OnWalks.Add(0, new WalkedThisTurnEvent());
+                status.OnWalks.Add(0, new PoisonSingleEvent(false, false));
+                status.OnWalks.Add(0, new WalkedThisTurnEvent(false));
                 status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
