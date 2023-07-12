@@ -532,13 +532,13 @@ namespace DataGenerator.Data
                                                                       ".##...##.",
                                                                       ".##...##.",
                                                                       "........."};
-                //   All ditto, no impostor
+                //   All ditto, impostor
                 SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                 List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(4, 1)));
-                mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(4, 7)));
-                mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(1, 4)));
-                mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(7, 4)));
+                mobSpawns.Add(GetBossMob("ditto", "imposter", "", "", "", "", "", new Loc(4, 1)));
+                mobSpawns.Add(GetBossMob("ditto", "imposter", "", "", "", "", "", new Loc(4, 7)));
+                mobSpawns.Add(GetBossMob("ditto", "imposter", "", "", "", "", "", new Loc(1, 4)));
+                mobSpawns.Add(GetBossMob("ditto", "imposter", "", "", "", "", "", new Loc(7, 4)));
                 bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customPillarCross, new Loc(4, 4), mobSpawns, false), 10);
                 return CreateGenericBossRoomStep(bossRooms);
             }

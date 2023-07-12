@@ -2419,6 +2419,11 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new CountDownState(3));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
+            else if (ii == 135)
+            {
+                status.Name = new LocalText("Transformed");
+                status.StatusStates.Set(new HPState());//HP before transform
+            }
 
             if (status.Name.DefaultText.StartsWith("**"))
                 status.Name.DefaultText = status.Name.DefaultText.Replace("*", "");
