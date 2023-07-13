@@ -1578,7 +1578,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon will gradually restore the HP of its allies when its own HP is full.");
                 if (includeEffects)
                 {
-                    item.OnTurnEnds.Add(-3, new FamilySingleEvent(new RoyalVeilEvent(4)));
+                    item.OnTurnEnds.Add(-3, new FamilySingleEvent(new RoyalVeilEvent(4, 16)));
                 }
             }
             else if (type == ExclusiveItemEffect.Celebrate)
