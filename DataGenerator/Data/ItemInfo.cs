@@ -1567,7 +1567,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A wand to be waved at a Pokémon. It transforms the target into the same Pokémon as the user.");
                 item.Sprite = "Wand_Pink";
                 item.Price = 10;
-                item.UseEvent.OnHits.Add(0, new TransformEvent(true));
+                item.UseEvent.OnHits.Add(0, new TransformEvent(true, "transformed"));
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Puff_Green", 3));
                 item.UseEvent.HitFX.Sound = "DUN_Transform";
             }
@@ -1624,6 +1624,7 @@ namespace DataGenerator.Data
                 weatherPair.Add("grass", "grassy_terrain");
                 weatherPair.Add("electric", "electric_terrain");
                 weatherPair.Add("fairy", "misty_terrain");
+                weatherPair.Add("psychic", "psychic_terrain");
                 weatherPair.Add("ice", "hail");
                 weatherPair.Add("rock", "sandstorm");
                 weatherPair.Add("ground", "sandstorm");

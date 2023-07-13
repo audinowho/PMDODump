@@ -1,7 +1,11 @@
-# 0.7.13 Changes #
+# 0.7.14 Changes #
 
-* Overworld use for Recall Boxes and Ability Capsules
-* Completing Roguelocke no longer doubles total money
-* Fixed an audio bug in some Windows platforms
-* Menu fix where items were mislabeled as disabled
-* Minor menu and dev fixes
+* Secret Garden exit moved one floor earlier
+* Prevent Transform's effect when already transformed
+* Imposter's revive is now 1/2 the HP before transformation
+* Fixed an issue with save variables in upgrade
+* Fix for taking stackable items from storage when stacks are already in bag
+* Added -help flag when running PMDO
+* Dev: Made it possible to apply universal zone steps
+* Dev: Made it possible to add friendly NPCs in static maps
+* Dev: Issue fixed where editing TypeRecruitmentEvent was impossible

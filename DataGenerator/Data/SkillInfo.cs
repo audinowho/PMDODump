@@ -1875,6 +1875,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(30));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new HPDrainEvent(2));
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -1897,6 +1898,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 16;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -2768,6 +2770,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 12;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
                 skill.Strikes = 1;
@@ -3496,6 +3499,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 14;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
                 skill.Strikes = 1;
@@ -3572,6 +3576,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.BeforeHits.Add(0, new StatusPowerEvent("sleep", true));
                 skill.Data.AfterActions.Add(0, new HPDrainEvent(2));
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -3646,6 +3651,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -3732,7 +3738,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new TransformEvent());
+                skill.Data.OnHits.Add(0, new TransformEvent(false, "transformed"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(25);//Appeal
@@ -4034,6 +4040,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestEvent("sleep"));
                 skill.Strikes = 1;
@@ -5180,6 +5187,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -5329,6 +5337,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
                 skill.Strikes = 1;
@@ -5975,6 +5984,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 Dictionary<string, bool> weather = new Dictionary<string, bool>();
                 weather.Add("sunny", true);
@@ -5999,6 +6009,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 Dictionary<string, bool> weather = new Dictionary<string, bool>();
                 weather.Add("sunny", true);
@@ -6030,6 +6041,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 Dictionary<string, bool> weather = new Dictionary<string, bool>();
                 weather.Add("sunny", true);
@@ -6611,6 +6623,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
 
                 Dictionary<int, Tuple<CombatAction, ExplosionData, BattleData>> tiers = new Dictionary<int, Tuple<CombatAction, ExplosionData, BattleData>>();
@@ -7092,6 +7105,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 16;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new StatusHPBattleEvent("wish", true, false, false, 2));
                 skill.Strikes = 1;
@@ -7865,6 +7879,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 14;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
                 skill.Strikes = 1;
@@ -9216,6 +9231,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
                 skill.Data.OnHits.Add(0, new StatusBattleEvent("roosting", true, false));
@@ -9361,6 +9377,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 6;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 1, true));
                 skill.Data.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
@@ -10622,6 +10639,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new FistState());
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -11926,6 +11944,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
                 skill.Strikes = 1;
@@ -12041,6 +12060,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 14;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 1, true));
                 skill.Data.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
@@ -13099,6 +13119,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new PulseState());
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 2, true));
                 skill.Strikes = 1;
@@ -13737,6 +13758,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -14522,6 +14544,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 1;
                 skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -14667,6 +14690,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -15375,6 +15399,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -16132,6 +16157,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -16249,6 +16275,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -16279,6 +16306,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = 100;
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -16442,17 +16470,22 @@ namespace DataGenerator.Data
             }
             else if (ii == 678)
             {
-                skill.Name = new LocalText("**Psychic Terrain");
+                skill.Name = new LocalText("Psychic Terrain");
                 skill.Desc = new LocalText("This protects Pokémon on the ground from priority moves and powers up Psychic-type moves for five turns.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.OnHits.Add(0, new GiveMapStatusEvent("psychic_terrain", 0, new StringKey(), typeof(ExtendWeatherState)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new SelfAction();
+                ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
+                skill.HitboxAction.TargetAlignments = Alignment.Self;
+                skill.Explosion.TargetAlignments = Alignment.Self;
+                BattleFX preFX = new BattleFX();
+                preFX.Sound = "DUN_Move_Start";
+                preFX.Emitter = new SingleEmitter(new AnimData("Charge_Up", 3));
+                skill.HitboxAction.PreActions.Add(preFX);
             }
             else if (ii == 679)
             {
@@ -16555,6 +16588,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 20;
                 skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();

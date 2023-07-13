@@ -7,6 +7,7 @@ using RogueEssence.Data;
 using PMDC.Dungeon;
 using PMDC;
 using PMDC.Data;
+using Avalonia.X11;
 
 namespace DataGenerator.Data
 {
@@ -1555,8 +1556,12 @@ namespace DataGenerator.Data
             }
             else if (ii == 197)
             {
-                ability.Name = new LocalText("**Shields Down");
-                ability.Desc = new LocalText("When its HP becomes half or less, the Pokémon's shell breaks and it becomes aggressive.");
+                ability.Name = new LocalText("Shields Down");
+                ability.Desc = new LocalText("When it takes a hit that causes its HP to become half or less, the Pokémon's shell breaks and it becomes aggressive.");
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
+                ability.BeforeStatusAdds.Add(0, new FormeNeededStatusEvent(new StateStatusCheck(typeof(BadStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(emitter, "DUN_Screen_Hit", 10)), 0, 1, 2, 3, 4, 5, 6));
+                ability.OnMapStarts.Add(0, new MeteorFormeEvent("minior", 0, 7, 50, false));
+                ability.AfterBeingHits.Add(6, new BattlelessEvent(true, new MeteorFormeEvent("minior", 1, 7, 50, true)));
             }
             else if (ii == 198)
             {
@@ -1597,13 +1602,15 @@ namespace DataGenerator.Data
             }
             else if (ii == 204)
             {
-                ability.Name = new LocalText("**Liquid Voice");
+                ability.Name = new LocalText("Liquid Voice");
                 ability.Desc = new LocalText("All sound-based moves become Water-type moves.");
+                ability.OnActions.Add(-1, new MoveStateNeededEvent(typeof(SoundState), new ChangeMoveElementEvent("none", "water")));
             }
             else if (ii == 205)
             {
-                ability.Name = new LocalText("**Triage");
-                ability.Desc = new LocalText("Gives priority to a healing move.");
+                ability.Name = new LocalText("Triage");
+                ability.Desc = new LocalText("Boosts the Attack Range of healing moves.");
+                ability.OnActions.Add(-1, new MoveStateNeededEvent(typeof(HealState), new AddRangeEvent(1)));
             }
             else if (ii == 206)
             {
@@ -1713,43 +1720,51 @@ namespace DataGenerator.Data
             }
             else if (ii == 226)
             {
-                ability.Name = new LocalText("**Electric Surge");
-                ability.Desc = new LocalText("Turns the ground into Electric Terrain when the Pokémon enters a battle.");
+                ability.Name = new LocalText("Electric Surge");
+                ability.Desc = new LocalText("Turns the ground into Electric Terrain when the Pokémon is battling.");
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("electric_terrain", 10, new StringKey(), typeof(ExtendWeatherState))));
             }
             else if (ii == 227)
             {
-                ability.Name = new LocalText("**Psychic Surge");
-                ability.Desc = new LocalText("Turns the ground into Psychic Terrain when the Pokémon enters a battle.");
+                ability.Name = new LocalText("Psychic Surge");
+                ability.Desc = new LocalText("Turns the ground into Psychic Terrain when the Pokémon is battling.");
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("psychic_terrain", 10, new StringKey(), typeof(ExtendWeatherState))));
             }
             else if (ii == 228)
             {
-                ability.Name = new LocalText("**Misty Surge");
-                ability.Desc = new LocalText("Turns the ground into Misty Terrain when the Pokémon enters a battle.");
+                ability.Name = new LocalText("Misty Surge");
+                ability.Desc = new LocalText("Turns the ground into Misty Terrain when the Pokémon is battling.");
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("misty_terrain", 10, new StringKey(), typeof(ExtendWeatherState))));
             }
             else if (ii == 229)
             {
-                ability.Name = new LocalText("**Grassy Surge");
-                ability.Desc = new LocalText("Turns the ground into Grassy Terrain when the Pokémon enters a battle.");
+                ability.Name = new LocalText("Grassy Surge");
+                ability.Desc = new LocalText("Turns the ground into Grassy Terrain when the Pokémon is battling.");
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("grassy_terrain", 10, new StringKey(), typeof(ExtendWeatherState))));
             }
             else if (ii == 230)
             {
-                ability.Name = new LocalText("**Full Metal Body");
+                ability.Name = new LocalText("Full Metal Body");
                 ability.Desc = new LocalText("Prevents other Pokémon's moves or Abilities from lowering the Pokémon's stats.");
+                ability.BeforeStatusAdds.Add(0, new StatChangeCheck(new List<Stat>(), new StringKey("MSG_STAT_DROP_PROTECT"), true, false, false));
             }
             else if (ii == 231)
             {
-                ability.Name = new LocalText("**Shadow Shield");
+                ability.Name = new LocalText("Shadow Shield");
                 ability.Desc = new LocalText("Reduces the amount of damage the Pokémon takes while its HP is full.");
+                ability.BeforeBeingHits.Add(0, new MultiScaleEvent(new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 232)
             {
-                ability.Name = new LocalText("**Prism Armor");
+                ability.Name = new LocalText("Prism Armor");
                 ability.Desc = new LocalText("Reduces the power of supereffective attacks taken.");
+                ability.BeforeBeingHits.Add(0, new MultiplyEffectiveEvent(false, 2, 3, new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 233)
             {
-                ability.Name = new LocalText("**Neuroforce");
+                ability.Name = new LocalText("Neuroforce");
                 ability.Desc = new LocalText("Powers up moves that are super effective.");
+                ability.BeforeHittings.Add(1, new MultiplyEffectiveEvent(false, 5, 4));
             }
             else if (ii == 234)
             {
@@ -1784,8 +1799,12 @@ namespace DataGenerator.Data
             }
             else if (ii == 240)
             {
-                ability.Name = new LocalText("**Mirror Armor");
-                ability.Desc = new LocalText("Bounces back only the stat-lowering effects that the Pokémon receives.");
+                ability.Name = new LocalText("Mirror Armor");
+                ability.Desc = new LocalText("Bounces back stat-lowering effects from other Pokémon.");
+                StatChangeReflect reflect = new StatChangeReflect(new List<Stat>(), new StringKey("MSG_STAT_DROP_REFLECT"), true, false, false);
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
+                reflect.Anims.Add(new StatusAnimEvent(emitter, "DUN_Screen_Hit", 10));
+                ability.BeforeStatusAdds.Add(0, reflect);
             }
             else if (ii == 241)
             {
