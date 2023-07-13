@@ -5,7 +5,9 @@
 * Imposter's revive is now 1/2 the HP before transformation
 * Fixed an issue with save variables in upgrade
 * Fix for taking stackable items from storage when stacks are already in bag
+* Grimy food can no longer paralyze, and can now drop defenses drastically
 * Added -help flag when running PMDO
+* Dev: Fonts are now moddable
 * Dev: Made it possible to apply universal zone steps
 * Dev: Made it possible to add friendly NPCs in static maps
 * Dev: Issue fixed where editing TypeRecruitmentEvent was impossible

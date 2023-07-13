@@ -3140,7 +3140,7 @@ namespace DataGenerator.Data
                 item.ItemStates.Set(new FoodState());
                 item.Price = 1;
                 item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(30, false));
-                item.UseEvent.OnHits.Add(0, new ChooseOneEvent(new StatusBattleEvent("sleep", true, false), new StatusBattleEvent("burn", true, false), new StatusBattleEvent("paralyze", true, false), new StatusBattleEvent("poison_toxic", true, false)));
+                item.UseEvent.OnHits.Add(0, new ChooseOneEvent(new StatusBattleEvent("sleep", true, false), new MultiBattleEvent(new StatusStackBattleEvent("mod_defense", true, false, -3), new StatusStackBattleEvent("mod_special_defense", true, false, -3)), new StatusBattleEvent("burn", true, false), new StatusBattleEvent("poison_toxic", true, false)));
                 item.UseAction = new SelfAction();
                 item.UseAction.TargetAlignments |= Alignment.Self;
                 item.Explosion.TargetAlignments |= Alignment.Self;
@@ -3178,16 +3178,16 @@ namespace DataGenerator.Data
             }
             else if (ii == 458)
             {
-                item.Name = new LocalText("Grimy Food");
-                fileName = "food_grimy_2";
+                item.Name = new LocalText("Foul Gummi");
+                fileName = "gummi_foul";
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.");
-                item.Sprite = "Rock_Purple";
+                item.Sprite = "Gummi_Black";
                 item.Icon = 16;
                 item.UsageType = ItemData.UseType.Eat;
                 item.ItemStates.Set(new EdibleState());
                 item.ItemStates.Set(new FoodState());
                 item.Price = 1000;
-                item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(30, false));
+                item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(25, false));
                 item.UseEvent.OnHits.Add(0, new LevelChangeEvent(-1));
                 item.UseAction = new SelfAction();
                 item.UseAction.TargetAlignments |= Alignment.Self;
