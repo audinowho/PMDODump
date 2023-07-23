@@ -4180,9 +4180,9 @@ namespace DataGenerator.Data
 
                 structure.Floors[floor_level - 1] = layout;
 
-                //structure.MainExit = ZoneLoc.Invalid;
-                zone.Segments.Add(structure);
             }
+            //structure.MainExit = ZoneLoc.Invalid;
+            zone.Segments.Add(structure);
         }
 
         #endregion

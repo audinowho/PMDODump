@@ -7,6 +7,9 @@
 * Fix for taking stackable items from storage when stacks are already in bag
 * Grimy food can no longer paralyze, and can now drop defenses drastically
 * Added -help flag when running PMDO
+* Minor Fertile Valley generation fixes
+* Fix for multi-segment replays
+* Dev: AI options for max range in which the pokemon is allowed ot attack from
 * Dev: Fonts are now moddable
 * Dev: More chip damage/healing events are now moddable
 * Dev: Made it possible to apply universal zone steps
