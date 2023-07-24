@@ -1,6 +1,7 @@
 # 0.7.14 Changes #
 
 * Secret Garden exit moved one floor earlier
+* Fixed Sickly Hollow's poison water behavior with terrain-altering moves and items
 * Prevent Transform's effect when already transformed
 * Imposter's revive is now 1/2 the HP before transformation
 * Fixed an issue with save variables in upgrade
