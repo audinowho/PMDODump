@@ -560,8 +560,7 @@ namespace DataGenerator.Data
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
+                newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 19)
@@ -596,8 +595,7 @@ namespace DataGenerator.Data
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
+                newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 20)
@@ -1374,7 +1372,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.White;
                 tile.BlockDiagonal = true;
                 tile.BlockLight = true;
-                tile.TerrainStates.Set(new WallState());
+                tile.TerrainStates.Set(new WallTerrainState());
                 tile.LandedOnTiles.Add(0, new TeamHungerEvent(800));
             }
             else if (ii == 3)
