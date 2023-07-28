@@ -245,6 +245,8 @@ Key		EN
 0000-times_move_used-0001|data.Desc		
 0000-torment-0000|data.Name		Torment
 0000-torment-0001|data.Desc		The Pokémon is prevented from using the same move twice in a row. This status wears off after many turns have passed.
+0000-transformed-0000|data.Name		Transformed
+0000-transformed-0001|data.Desc		
 0000-type_boosted-0000|data.Name		Type-Boosted
 0000-type_boosted-0001|data.Desc		The Pokémon has moves of a certain type boosted. This status wears off after many turns have passed.
 0000-type_converted-0000|data.Name		Type-Converted

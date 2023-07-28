@@ -394,7 +394,7 @@ Key		EN
 0196-merciless-0000|data.Name		Merciless
 0196-merciless-0001|data.Desc		The Pokémon's attacks become critical hits if the target is poisoned.
 0197-shields_down-0000|data.Name		Shields Down
-0197-shields_down-0001|data.Desc		When its HP becomes half or less, the Pokémon's shell breaks and it becomes aggressive.
+0197-shields_down-0001|data.Desc		When it takes a hit that causes its HP to become half or less, the Pokémon's shell breaks and it becomes aggressive.
 0198-stakeout-0000|data.Name		Stakeout
 0198-stakeout-0001|data.Desc		The Pokémon's first attack deals increased damage.
 0199-water_bubble-0000|data.Name		Water Bubble
@@ -410,7 +410,7 @@ Key		EN
 0204-liquid_voice-0000|data.Name		Liquid Voice
 0204-liquid_voice-0001|data.Desc		All sound-based moves become Water-type moves.
 0205-triage-0000|data.Name		Triage
-0205-triage-0001|data.Desc		Gives priority to a healing move.
+0205-triage-0001|data.Desc		Boosts the Attack Range of healing moves.
 0206-galvanize-0000|data.Name		Galvanize
 0206-galvanize-0001|data.Desc		Normal-type moves become Electric-type moves.
 0207-surge_surfer-0000|data.Name		Surge Surfer
@@ -452,13 +452,13 @@ Key		EN
 0225-rks_system-0000|data.Name		RKS System
 0225-rks_system-0001|data.Desc		Changes the Pokémon's type to match the memory disc it holds.
 0226-electric_surge-0000|data.Name		Electric Surge
-0226-electric_surge-0001|data.Desc		Turns the ground into Electric Terrain when the Pokémon enters a battle.
+0226-electric_surge-0001|data.Desc		Turns the ground into Electric Terrain when the Pokémon is battling.
 0227-psychic_surge-0000|data.Name		Psychic Surge
-0227-psychic_surge-0001|data.Desc		Turns the ground into Psychic Terrain when the Pokémon enters a battle.
+0227-psychic_surge-0001|data.Desc		Turns the ground into Psychic Terrain when the Pokémon is battling.
 0228-misty_surge-0000|data.Name		Misty Surge
-0228-misty_surge-0001|data.Desc		Turns the ground into Misty Terrain when the Pokémon enters a battle.
+0228-misty_surge-0001|data.Desc		Turns the ground into Misty Terrain when the Pokémon is battling.
 0229-grassy_surge-0000|data.Name		Grassy Surge
-0229-grassy_surge-0001|data.Desc		Turns the ground into Grassy Terrain when the Pokémon enters a battle.
+0229-grassy_surge-0001|data.Desc		Turns the ground into Grassy Terrain when the Pokémon is battling.
 0230-full_metal_body-0000|data.Name		Full Metal Body
 0230-full_metal_body-0001|data.Desc		Prevents other Pokémon's moves or Abilities from lowering the Pokémon's stats.
 0231-shadow_shield-0000|data.Name		Shadow Shield
@@ -480,7 +480,7 @@ Key		EN
 0239-propeller_tail-0000|data.Name		Propeller Tail
 0239-propeller_tail-0001|data.Desc		Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.
 0240-mirror_armor-0000|data.Name		Mirror Armor
-0240-mirror_armor-0001|data.Desc		Bounces back only the stat-lowering effects that the Pokémon receives.
+0240-mirror_armor-0001|data.Desc		Bounces back stat-lowering effects from other Pokémon.
 0241-gulp_missile-0000|data.Name		Gulp Missile
 0241-gulp_missile-0001|data.Desc		When the Pokémon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack.
 0242-stalwart-0000|data.Name		Stalwart

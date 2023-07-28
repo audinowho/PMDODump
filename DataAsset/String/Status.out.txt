@@ -245,6 +245,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-times_move_used-0001|data.Desc																												
 0000-torment-0000|data.Name		Torment	Tourmente	Folterknecht	Tormento						无理取闹																	
 0000-torment-0001|data.Desc		The Pokémon is prevented from using the same move twice in a row. This status wears off after many turns have passed.	Le Pokémon ne peut pas utiliser la même capacité deux fois d'affilée. Ce statut disparaît après plusieurs tours.	Das Pokémon kann keine Attacke zweimal hintereinander nutzen. Dieser Status lässt erst nach vielen Zügen nach.	El Pokémon se le impide usar el mismo movimiento dos veces seguidas. Este estado desaparece tras pasar unos turnos.						这只宝可梦不能连续两次使用相同的招式。该状态在大量回合后解除。																	
+0000-transformed-0000|data.Name		Transformed																										
+0000-transformed-0001|data.Desc																												
 0000-type_boosted-0000|data.Name		Type-Boosted	Boost Type	Typverstärkt							属性增强																	
 0000-type_boosted-0001|data.Desc		The Pokémon has moves of a certain type boosted. This status wears off after many turns have passed.	Le Pokémon voit ses capacités d'un certain type boostés. Ce statut disparaît après plusieurs tours.	Attacken mit einem bestimmten Typ sind verstärkt. Dieser Status lässt nach vielen Zügen nach.							这只宝可梦某种属性的招式增强了。该状态在大量回合后解除。																	
 0000-type_converted-0000|data.Name		Type-Converted	Conversion Type	Typkonverter							属性转变																	

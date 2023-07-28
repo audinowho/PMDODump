@@ -1,32 +1,59 @@
 Sheet: Hardcode
+    * Added DLG_TRANSFER_ALL_ASK, transferred from DLG_TRANSFER_ASK
+    * Erased contents of DLG_TRANSFER_ASK
+    * Added DLG_TRANSFER_ITEM_ASK
 
 Sheet: Content
+    * Added MSG_PSYCHIC_TERRAIN_END
+    * Added MSG_PSYCHIC_TERRAIN_START
+    * Added MSG_STAT_DROP_REFLECT
 
 Sheet: Script
-    * Added ground\moonlit_end/Expo_Cutscene_Ask_Join
-    * Erased contents of ground\moonlit_end/Expo_Cutscene_Line_001
-    * Added ground\moonlit_end/Expo_Cutscene_Line_002_Default
-    * Added ground\moonlit_end/Expo_Cutscene_Line_002_Postgame
-    * Added ground\moonlit_end/Expo_Cutscene_Line_003
-    * Added ground\moonlit_end/Expo_Cutscene_Line_004
-    * Added ground\moonlit_end/Expo_Cutscene_Line_005
-    * Added ground\moonlit_end/Expo_Cutscene_Line_006
-    * Added ground\moonlit_end/Expo_Cutscene_Line_007
-    * Added ground\moonlit_end/Expo_Cutscene_Line_Accept
-    * Added ground\moonlit_end/Expo_Cutscene_Line_Reject
-    * Added ground\moonlit_end/Post_Cutscene_Line_001
-    * Added ground\moonlit_end/Post_Cutscene_Line_Fail
-    * Added ground\moonlit_end/Post_Cutscene_Line_Success
+    * Added ground\base_camp/Statue_Center_Text
+    * Added ground\base_camp/Statue_Left_Text
+    * Added ground\base_camp/Statue_Right_Text
+    * Added ground\base_camp_2/Appraisal_Choose_Max
+    * Added ground\base_camp_2/Appraisal_End_Max_001
+    * Added ground\base_camp_2/Appraisal_End_Max_002
+    * Erased contents of ground\base_camp_2/Appraisal_Start
+    * Added ground\base_camp_2/Appraisal_Start_001, transferred from ground\base_camp_2/Appraisal_Start
+    * Added ground\base_camp_2/Appraisal_Start_002
+    * Added ground\base_camp_2/Appraisal_Start_Max
+    * Added ground\base_camp_2/Swap_Complete
+    * Erased contents of ground\base_camp_2/Swap_Complete_001
+    * Erased contents of ground\base_camp_2/Swap_Complete_002
+    * Added ground\base_camp_2/Swap_Complete_Max_001
+    * Added ground\base_camp_2/Swap_Complete_Max_002
+    * Added ground\base_camp_2/Swap_Complete_Max_003
+    * Added ground\base_camp_2/Swap_Complete_Max_004
+    * Changed ground\moonlit_end/Expo_Cutscene_Line_001 from "Greetings.[pause=0]I am Cresselia,[pause=30] the Pokémon of the crescent moon.[br]I was once a part of the guild of legend,[pause=30] aiding its master before they left this world." to "Greetings.[scroll]I am Cresselia,[pause=30] the Pokémon of the crescent moon.[br]I was once a part of the guild of legend,[pause=30] aiding its master before they left this world."
 
 Sheet: Abilities
+    * Significantly changed 0197-shields_down-0001|data.Desc from "When its HP becomes half or less, the Pokémon's shell breaks and it becomes aggressive." to "When it takes a hit that causes its HP to become half or less, the Pokémon's shell breaks and it becomes aggressive."
+    * Significantly changed 0205-triage-0001|data.Desc from "Gives priority to a healing move." to "Boosts the Attack Range of healing moves."
+    * Significantly changed 0226-electric_surge-0001|data.Desc from "Turns the ground into Electric Terrain when the Pokémon enters a battle." to "Turns the ground into Electric Terrain when the Pokémon is battling."
+    * Significantly changed 0227-psychic_surge-0001|data.Desc from "Turns the ground into Psychic Terrain when the Pokémon enters a battle." to "Turns the ground into Psychic Terrain when the Pokémon is battling."
+    * Significantly changed 0228-misty_surge-0001|data.Desc from "Turns the ground into Misty Terrain when the Pokémon enters a battle." to "Turns the ground into Misty Terrain when the Pokémon is battling."
+    * Significantly changed 0229-grassy_surge-0001|data.Desc from "Turns the ground into Grassy Terrain when the Pokémon enters a battle." to "Turns the ground into Grassy Terrain when the Pokémon is battling."
+    * Significantly changed 0240-mirror_armor-0001|data.Desc from "Bounces back only the stat-lowering effects that the Pokémon receives." to "Bounces back stat-lowering effects from other Pokémon."
 
 Sheet: Items
+    * Deleted key 0013-food_grimy_2-0000|data.Name
+    * Deleted key 0013-food_grimy_2-0001|data.Desc
+    * Added 0013-gummi_foul-0000|data.Name
+    * Added 0013-gummi_foul-0001|data.Desc, transferred from 0013-food_grimy_2-0001|data.Desc
 
 Sheet: MapStatuses
+    * Added 0000-psychic_terrain-0000|data.Name
+    * Added 0000-psychic_terrain-0001|data.Desc
 
 Sheet: Moves
+    * Changed 0072-mega_drain-0001|data.Desc to 0071-absorb-0001|data.Desc, retaining translations
+    * Changed 0355-roost-0001|data.Desc from "The user lands and rests its body. It restores the user’s HP by up to half of its max HP." to "The user lands and rests its body. It restores the user's HP by up to half of its max HP."
 
 Sheet: Statuses
+    * Added 0000-transformed-0000|data.Name
+    * Added 0000-transformed-0001|data.Desc
 
 Sheet: Tiles
 
@@ -35,10 +62,10 @@ Sheet: Excl Names
 Sheet: Excl Effects
 
 Sheet: Zones
-    * Significantly changed 0000-moonlit_courtyard-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name from "Moonlit Temple\nB{0}F" to "Moonlit Temple\n{0}F"
+    * Added 0000-debug_zone-0001|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0000]).Name
+    * Added 0000-training_maze-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0000]).Name
 
 Sheet: Maps
 
 Sheet: GroundMaps
-    * Significantly changed moonlit_end-0000|data.Name from "" to "Moonlit Chamber"
 

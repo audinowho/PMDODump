@@ -55,6 +55,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-mysterious_force-0001|data.Desc		A mysterious force prevents Orbs, Machines, and special items from working.		Eine mysteriöse Kraft verhindert den Einsatz von Orbs, Maschinen und speziellen Items.	Una fuerza misteriosa que evita que las Esferas, máquinas y otros objetos especiales funcionen.						一种神秘的力量，阻止了不可思议之玉、 机器和特殊道具的使用。
 0000-outlaw_clear_check-0000|data.Name		Outlaw Clear Check									
 0000-outlaw_clear_check-0001|data.Desc											
+0000-psychic_terrain-0000|data.Name		Psychic Terrain									
+0000-psychic_terrain-0001|data.Desc		Psychic-type attacks are boosted, and Pokémon can evade moves from close up.									
 0000-rain-0000|data.Name		Rain	Pluvieux	Regen	Lluvioso						下雨
 0000-rain-0001|data.Desc		Water-type attacks are boosted and Fire-type attacks are weakened.	Les attaques de type de type Eau sont boostées et les attaques de type Feu affaiblies.	Wasser-Attacken sind verstärkt und Feuer-Attacken sind geschwächt.	Los ataque de tipo Agua se potencian y los ataques de tipo Fuego se debilitan.						水属性攻击威力提高，火属性攻击威力降低。
 0000-rescued-0000|data.Name		Rescued									

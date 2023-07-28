@@ -19,6 +19,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\n{0}F									采铜矿场\n{0}F
 0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Magnetic Quarry\nB{0}F									磁力矿场\nB{0}F
 0000-debug_zone-0000|data.Name		Debug Zone									Debug区域
+0000-debug_zone-0001|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0000]).Name		Replay Test Zone\n{0}F			
 0000-deserted_fortress-0000|data.Name		Deserted Fortress									空寂要塞
 0000-deserted_fortress-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Deserted Fortress\n{0}F									空寂要塞\n{0}F
 0000-energy_garden-0000|data.Name		Energy Garden									元气花园
@@ -56,7 +57,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-lost_seas-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Lost Seas\nB{0}F									迷失之海\nB{0}F
 0000-moonlit_courtyard-0000|data.Name		Moonlit Courtyard									月光庭院
 0000-moonlit_courtyard-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Moonlit Courtyard\n{0}F									月光庭院\n{0}F
-0000-moonlit_courtyard-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Moonlit Temple\n{0}F									
+0000-moonlit_courtyard-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Moonlit Temple\n{0}F									月光神庙\n{0}F
 0000-overgrown_wilds-0000|data.Name		Overgrown Wilds		Überwachsene Wildnis							杂草原野
 0000-overgrown_wilds-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Overgrown Wilds\n{0}F		Überwachsene Wildnis\n{0}.OG							杂草原野\n{0}F				
 0000-overgrown_wilds-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Exotic Wilds\nB{0}F									异草原野\nB{0}F
@@ -92,11 +93,12 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-tiny_tunnel-0000|data.Name		Tiny Tunnel									小小地道
 0000-tiny_tunnel-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tiny Tunnel\nB{0}F									小小地道\nB{0}F
 0000-training_maze-0000|data.Name		Training Maze		Trainings Labyrinth	Laberinto Entrenamiento						训练迷宫
+0000-training_maze-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0000]).Name		Training Maze\nLv. {0}			
 0000-treacherous_mountain-0000|data.Name		Treacherous Mountain		Tückisches Gebirge	Montaña Traicionera						奸诈山峰
 0000-treacherous_mountain-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Treacherous Mountain\n{0}F		Tückisches Gebirge\n{0}.OG	Montaña Traicionera\nP{0}						奸诈山峰\n{0}F
-0000-trickster_woods-0000|data.Name		Trickster Woods									欺骗森林
-0000-trickster_woods-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Trickster Woods\n{0}F									欺骗森林\n{0}F
-0000-trickster_woods-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Trickster Maze\nB{0}F									欺骗迷宫\nB{0}F
+0000-trickster_woods-0000|data.Name		Trickster Woods									戏法森林
+0000-trickster_woods-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Trickster Woods\n{0}F									戏法森林\n{0}F
+0000-trickster_woods-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Trickster Maze\nB{0}F									戏法迷宫\nB{0}F
 0000-tropical_path-0000|data.Name		Tropical Path		Tropischer Pfad	Paso Tropical						热带小径
 0000-tropical_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tropical Path\n{0}F		Tropischer Pfad\n{0}.OG	Paso Tropical\nP{0}						热带小径\n{0}F
 0000-tropical_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room									秘密之间

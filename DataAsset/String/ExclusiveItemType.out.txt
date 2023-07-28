@@ -63,7 +63,7 @@ ExclusiveItemType.Seal		{0} Seal	Sceau de {0}	{0} Siegel	Cuño {0}						{0}刻�
 ExclusiveItemType.Seed		{0} Seed	Graine de {0}	{0} Samen	Semilla {0}						{0}种子
 ExclusiveItemType.Shard		{0} Shard	Tesson de {0}	{0} Splitter	Trozo {0}						{0}碎片
 ExclusiveItemType.Shield		{0} Shield	Bouclier de {0}	{0} Schild	Escudo {0}						{0}护盾
-ExclusiveItemType.Shoot		{0} Shoot	Tire de {0}	{0} Spross	Brote {0}						{0}嫩枝
+ExclusiveItemType.Shoot		{0} Shoot	Tire de {0}	{0} Spross	Brote {0}						{0}之刺
 ExclusiveItemType.Song		{0} Song	Chanson de {0}	{0} Song	Corchea {0}						{0}之音
 ExclusiveItemType.Specs		{0} Specs	Lunettes de {0}	{0} Brille	Lentes {0}						{0}眼镜
 ExclusiveItemType.Sweat		{0} Sweat	Essence de {0}	{0} Schweiß	Esencia {0}						{0}之汗

@@ -603,8 +603,8 @@ Key		EN
 0013-egg_mystery-0001|data.Desc		An egg with bizarre colors that have never been seen before. What could this egg be?
 0013-food_grimy-0000|data.Name		Grimy Food
 0013-food_grimy-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also inflict a variety of status problems because it's covered in filthy grime. Be careful of what you eat!
-0013-food_grimy_2-0000|data.Name		Grimy Food
-0013-food_grimy_2-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.
+0013-gummi_foul-0000|data.Name		Foul Gummi
+0013-gummi_foul-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.
 0013-key-0000|data.Name		Key
 0013-key-0001|data.Desc		A key that unlocks a chest or door inside a dungeon.
 0013-key_ancient-0000|data.Name		Ancient Key
