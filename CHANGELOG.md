@@ -10,6 +10,7 @@
 * Added -help flag when running PMDO
 * Minor Fertile Valley generation fixes
 * Fix for multi-segment replays
+* Dev: Fix for editable ranges
 * Dev: AI options for max range in which the pokemon is allowed ot attack from
 * Dev: Fonts are now moddable
 * Dev: More chip damage/healing events are now moddable
