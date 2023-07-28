@@ -12629,10 +12629,14 @@ namespace DataGenerator.Data
                             RoomFloorGen layout = new RoomFloorGen();
 
                             //Floor settings
+                            string song = "B37. Lava Floe Island Fire.ogg";
+                            if (ii % 2 == 0)
+                                song = "B37. Lava Floe Island Water.ogg";
+
                             if (ii < 8)
-                                AddFloorData(layout, "B18. Faultline Ridge.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
+                                AddFloorData(layout, song, 1500, Map.SightRange.Clear, Map.SightRange.Clear);
                             else
-                                AddFloorData(layout, "B18. Faultline Ridge.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                                AddFloorData(layout, song, 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                             //Tilesets
                             //other caniddates: side_path,lower_brine_cave
