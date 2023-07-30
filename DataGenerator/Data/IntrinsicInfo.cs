@@ -13,7 +13,7 @@ namespace DataGenerator.Data
 {
     public static class IntrinsicInfo
     {
-        public const int MAX_INTRINSICS = 268;
+        public const int MAX_INTRINSICS = 299;
 
         public static void AddIntrinsicData()
         {
@@ -1946,6 +1946,161 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("**As One");
                 fileName = "as_one_grim";
                 ability.Desc = new LocalText("This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.");
+            }
+            else if (ii == 268)
+            {
+                ability.Name = new LocalText("**Lingering Aroma");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 269)
+            {
+                ability.Name = new LocalText("**Seed Sower");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 270)
+            {
+                ability.Name = new LocalText("**Thermal Exchange");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 271)
+            {
+                ability.Name = new LocalText("**Anger Shell");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 272)
+            {
+                ability.Name = new LocalText("**Purifying Salt");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 273)
+            {
+                ability.Name = new LocalText("**Well-Baked Body");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 274)
+            {
+                ability.Name = new LocalText("**Wind Rider");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 275)
+            {
+                ability.Name = new LocalText("**Guard Dog");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 276)
+            {
+                ability.Name = new LocalText("**Rocky Payload");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 277)
+            {
+                ability.Name = new LocalText("**Wind Power");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 278)
+            {
+                ability.Name = new LocalText("**Zero to Hero");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 279)
+            {
+                ability.Name = new LocalText("**Commander");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 280)
+            {
+                ability.Name = new LocalText("**Electromorphosis");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 281)
+            {
+                ability.Name = new LocalText("**Protosynthesis");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 282)
+            {
+                ability.Name = new LocalText("**Quark Drive");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 283)
+            {
+                ability.Name = new LocalText("**Good as Gold");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 284)
+            {
+                ability.Name = new LocalText("**Vessel of Ruin");
+                ability.Desc = new LocalText("The power of the Pokémon's ruinous vessel lowers the Sp. Atk stats of all Pokémon except itself.");
+            }
+            else if (ii == 285)
+            {
+                ability.Name = new LocalText("**Sword of Ruin");
+                ability.Desc = new LocalText("The power of the Pokémon's ruinous sword lowers the Defense stats of all Pokémon except itself.");
+            }
+            else if (ii == 286)
+            {
+                ability.Name = new LocalText("**Tablets of Ruin");
+                ability.Desc = new LocalText("The power of the Pokémon's ruinous wooden tablets lowers the Attack stats of all Pokémon except itself.");
+            }
+            else if (ii == 287)
+            {
+                ability.Name = new LocalText("**Beads of Ruin");
+                ability.Desc = new LocalText("The power of the Pokémon's ruinous beads lowers the Sp. Def stats of all Pokémon except itself.");
+            }
+            else if (ii == 288)
+            {
+                ability.Name = new LocalText("**Orichalcum Pulse");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 289)
+            {
+                ability.Name = new LocalText("**Hadron Engine");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 290)
+            {
+                ability.Name = new LocalText("**Opportunist");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 291)
+            {
+                ability.Name = new LocalText("**Cud Chew");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 292)
+            {
+                ability.Name = new LocalText("**Sharpness");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 293)
+            {
+                ability.Name = new LocalText("**Supreme Overlord");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 294)
+            {
+                ability.Name = new LocalText("**Costar");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 295)
+            {
+                ability.Name = new LocalText("**Toxic Debris");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 296)
+            {
+                ability.Name = new LocalText("**Armor Tail");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 297)
+            {
+                ability.Name = new LocalText("**Earth Eater");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 298)
+            {
+                ability.Name = new LocalText("**Mycelium Might");
+                ability.Desc = new LocalText("");
             }
 
             if (ability.Name.DefaultText.StartsWith("**"))

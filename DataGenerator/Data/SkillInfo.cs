@@ -13,7 +13,7 @@ namespace DataGenerator.Data
 {
     public class SkillInfo
     {
-        public const int MAX_SKILLS = 827;
+        public const int MAX_SKILLS = 901;
 
 
         public static void AddUnreleasedMoveData()
@@ -18917,6 +18917,1162 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 827)
+            {
+                skill.Name = new LocalText("**Dire Claw");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "poison";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 828)
+            {
+                skill.Name = new LocalText("**Psyshield Bash");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 829)
+            {
+                skill.Name = new LocalText("**Power Shift");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 830)
+            {
+                skill.Name = new LocalText("**Stone Axe");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "rock";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(65));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 831)
+            {
+                skill.Name = new LocalText("**Springtide Storm");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "fairy";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 80;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 832)
+            {
+                skill.Name = new LocalText("**Mystical Power");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 833)
+            {
+                skill.Name = new LocalText("**Raging Fury");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fire";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 834)
+            {
+                skill.Name = new LocalText("**Wave Crash");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 835)
+            {
+                skill.Name = new LocalText("**Chloroblast");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "grass";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 95;
+                skill.Data.SkillStates.Set(new BasePowerState(150));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 836)
+            {
+                skill.Name = new LocalText("**Mountain Gale");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ice";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 85;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 837)
+            {
+                skill.Name = new LocalText("**Victory Dance");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fighting";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 838)
+            {
+                skill.Name = new LocalText("**Headlong Rush");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "ground";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 839)
+            {
+                skill.Name = new LocalText("**Barb Barrage");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "poison";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(60));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 840)
+            {
+                skill.Name = new LocalText("**Esper Wing");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 841)
+            {
+                skill.Name = new LocalText("**Bitter Malice");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ghost";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(75));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 842)
+            {
+                skill.Name = new LocalText("**Shelter");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "steel";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 843)
+            {
+                skill.Name = new LocalText("**Triple Arrows");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fighting";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 844)
+            {
+                skill.Name = new LocalText("**Infernal Parade");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "ghost";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(60));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 845)
+            {
+                skill.Name = new LocalText("**Ceaseless Edge");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "dark";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(65));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 846)
+            {
+                skill.Name = new LocalText("**Bleakwind Storm");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "flying";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 80;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 847)
+            {
+                skill.Name = new LocalText("**Wildbolt Storm");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "electric";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 80;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 848)
+            {
+                skill.Name = new LocalText("**Sandsear Storm");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ground";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 80;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 849)
+            {
+                skill.Name = new LocalText("**Lunar Blessing");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 850)
+            {
+                skill.Name = new LocalText("**Take Heart");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 851)
+            {
+                skill.Name = new LocalText("**Tera Blast");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 852)
+            {
+                skill.Name = new LocalText("**Silk Trap");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "bug";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 853)
+            {
+                skill.Name = new LocalText("**Axe Kick");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fighting";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 854)
+            {
+                skill.Name = new LocalText("**Last Respects");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ghost";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 855)
+            {
+                skill.Name = new LocalText("**Lumina Crash");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 856)
+            {
+                skill.Name = new LocalText("**Order Up");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "dragon";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 857)
+            {
+                skill.Name = new LocalText("**Jet Punch");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(60));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 858)
+            {
+                skill.Name = new LocalText("**Spicy Extract");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "grass";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 859)
+            {
+                skill.Name = new LocalText("**Spin Out");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "steel";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 860)
+            {
+                skill.Name = new LocalText("**Population Bomb");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(20));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 861)
+            {
+                skill.Name = new LocalText("**Ice Spinner");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "ice";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 862)
+            {
+                skill.Name = new LocalText("**Glaive Rush");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "dragon";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 863)
+            {
+                skill.Name = new LocalText("**Revival Blessing");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 1;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 864)
+            {
+                skill.Name = new LocalText("**Salt Cure");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "rock";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 865)
+            {
+                skill.Name = new LocalText("**Triple Dive");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 95;
+                skill.Data.SkillStates.Set(new BasePowerState(30));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 866)
+            {
+                skill.Name = new LocalText("**Mortal Spin");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "poison";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(30));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 867)
+            {
+                skill.Name = new LocalText("**Doodle");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = 100;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 868)
+            {
+                skill.Name = new LocalText("**Fillet Away");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 869)
+            {
+                skill.Name = new LocalText("**Kowtow Cleave");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "dark";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = -1;
+                skill.Data.SkillStates.Set(new BasePowerState(85));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 870)
+            {
+                skill.Name = new LocalText("**Flower Trick");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "grass";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = -1;
+                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 871)
+            {
+                skill.Name = new LocalText("**Torch Song");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fire";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 872)
+            {
+                skill.Name = new LocalText("**Aqua Step");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 873)
+            {
+                skill.Name = new LocalText("**Raging Bull");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 874)
+            {
+                skill.Name = new LocalText("**Make It Rain");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "steel";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 875)
+            {
+                skill.Name = new LocalText("**Psyblade");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 876)
+            {
+                skill.Name = new LocalText("**Hydro Steam");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 877)
+            {
+                skill.Name = new LocalText("**Ruination");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "dark";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(1));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 878)
+            {
+                skill.Name = new LocalText("**Collision Course");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "fighting";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 879)
+            {
+                skill.Name = new LocalText("**Electro Drift");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "electric";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 880)
+            {
+                skill.Name = new LocalText("**Shed Tail");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 881)
+            {
+                skill.Name = new LocalText("**Chilly Reception");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ice";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 882)
+            {
+                skill.Name = new LocalText("**Tidy Up");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 883)
+            {
+                skill.Name = new LocalText("**Snowscape");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ice";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 884)
+            {
+                skill.Name = new LocalText("**Pounce");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 20;
+                skill.Data.Element = "bug";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 885)
+            {
+                skill.Name = new LocalText("**Trailblaze");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 20;
+                skill.Data.Element = "grass";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 886)
+            {
+                skill.Name = new LocalText("**Chilling Water");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 20;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 887)
+            {
+                skill.Name = new LocalText("**Hyper Drill");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 888)
+            {
+                skill.Name = new LocalText("**Twin Beam");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 889)
+            {
+                skill.Name = new LocalText("**Rage Fist");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ghost";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 890)
+            {
+                skill.Name = new LocalText("**Armor Cannon");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "fire";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 891)
+            {
+                skill.Name = new LocalText("**Bitter Blade");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fire";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 892)
+            {
+                skill.Name = new LocalText("**Double Shock");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "electric";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 893)
+            {
+                skill.Name = new LocalText("**Gigaton Hammer");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "steel";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(160));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 894)
+            {
+                skill.Name = new LocalText("**Comeuppance");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "dark";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(1));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 895)
+            {
+                skill.Name = new LocalText("**Aqua Cutter");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 20;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 896)
+            {
+                skill.Name = new LocalText("**Blazing Torque");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fire";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 897)
+            {
+                skill.Name = new LocalText("**Wicked Torque");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "dark";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 898)
+            {
+                skill.Name = new LocalText("**Noxious Torque");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "poison";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 899)
+            {
+                skill.Name = new LocalText("**Combat Torque");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fighting";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 900)
+            {
+                skill.Name = new LocalText("**Magical Torque");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fairy";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
