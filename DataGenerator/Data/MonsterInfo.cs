@@ -579,6 +579,8 @@ namespace DataGenerator.Data
                         {
                             //FIXME
                             EvoMoveUse evoDetail = new EvoMoveUse();
+                            evoDetail.LastMoveStatusID = "last_used_move";
+                            evoDetail.MoveRepeatStatusID = "times_move_used";
                             evoDetail.MoveNum = "psyshield_bash";
                             evoDetail.Amount = 10;
                             branch.Details.Add(evoDetail);
@@ -608,6 +610,8 @@ namespace DataGenerator.Data
                         {
                             //FIXME
                             EvoMoveUse evoDetail = new EvoMoveUse();
+                            evoDetail.LastMoveStatusID = "last_used_move";
+                            evoDetail.MoveRepeatStatusID = "times_move_used";
                             evoDetail.MoveNum = "barb_barrage";
                             evoDetail.Amount = 10;
                             branch.Details.Add(evoDetail);
@@ -661,6 +665,8 @@ namespace DataGenerator.Data
                         {
                             //FIXME
                             EvoMoveUse evoDetail = new EvoMoveUse();
+                            evoDetail.LastMoveStatusID = "last_used_move";
+                            evoDetail.MoveRepeatStatusID = "times_move_used";
                             evoDetail.MoveNum = "rage_fist";
                             evoDetail.Amount = 10;
                             branch.Details.Add(evoDetail);
@@ -942,6 +948,24 @@ namespace DataGenerator.Data
                             {
                                 //original form required due to having a regional -> new that requires a different form
                                 branch.Details.Insert(0, new EvoForm(0));
+                            }
+                            break;
+                        case 903://sneasler
+                            {
+                                //first alt form required
+                                branch.Details.Insert(0, new EvoForm(1));
+                            }
+                            break;
+                        case 461://weavile
+                            {
+                                //original form required due to having a regional -> new that requires a different form
+                                branch.Details.Insert(0, new EvoForm(0));
+                            }
+                            break;
+                        case 904://overqwil
+                            {
+                                //first alt form required
+                                branch.Details.Insert(0, new EvoForm(1));
                             }
                             break;
                     }
@@ -1250,6 +1274,9 @@ namespace DataGenerator.Data
                     int version = Convert.ToInt32(reader["version_group_id"].ToString());
                     if (version < 16)
                         version = 16;
+                    // hisui forms don't have info for their original game...
+                    if (version == 24)
+                        version = 25;
                     MonsterFormData formEntry = LoadForme(m_dbTLConnection, version, index, dexId, formId, entry.Name);
                     formEntry.Generation = genVersion(version);
                     if (Ratio == -1)

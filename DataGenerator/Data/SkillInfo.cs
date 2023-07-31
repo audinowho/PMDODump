@@ -16485,19 +16485,33 @@ namespace DataGenerator.Data
             }
             else if (ii == 677)
             {
-                skill.Name = new LocalText("**Anchor Shot");
+                skill.Name = new LocalText("-Anchor Shot");
                 skill.Desc = new LocalText("The user entangles the target with its anchor chain while attacking. The target becomes unable to flee.");
-                skill.BaseCharges = 20;
+                skill.BaseCharges = 16;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("immobilized", true, false)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ProjectileAction)skill.HitboxAction).Range = 4;
+                ((ProjectileAction)skill.HitboxAction).Speed = 10;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
+                ((ProjectileAction)skill.HitboxAction).Anim = new AnimData("Arrow_Shot", 2);
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.HitboxAction.ActionFX.Sound = "_UNK_DUN_Shatter_2";
+                BetweenEmitter endAnim = new BetweenEmitter(new AnimData("Wrap_White_Back", 3), new AnimData("Wrap_White_Front", 3));
+                endAnim.HeightBack = 16;
+                endAnim.HeightFront = 16;
+                skill.Data.HitFX.Emitter = endAnim;
+                skill.Data.HitFX.Sound = "_UNK_DUN_Clank";
             }
             else if (ii == 678)
             {
@@ -16584,17 +16598,33 @@ namespace DataGenerator.Data
             }
             else if (ii == 683)
             {
-                skill.Name = new LocalText("**Speed Swap");
+                skill.Name = new LocalText("Speed Swap");
                 skill.Desc = new LocalText("The user exchanges Speed stats with the target.");
-                skill.BaseCharges = 10;
+                skill.BaseCharges = 20;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.OnHits.Add(0, new SpeedSwapEvent());
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
+                ((ProjectileAction)skill.HitboxAction).Range = 6;
+                ((ProjectileAction)skill.HitboxAction).Speed = 0;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                skill.HitboxAction.PreActions.Add(new BattleFX(new SingleEmitter(new AnimData("Circle_Small_Green_In", 2)), "DUN_Growth_2", 0));
+                skill.HitboxAction.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                skill.Explosion.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+
+                SwingSwitchEmitter emitter = new SwingSwitchEmitter(new AnimData("Skill_Swap_RSE", 3));
+                emitter.AxisRatio = 0.5f;
+                emitter.Amount = 1;
+                emitter.RotationTime = 20;
+                skill.Data.IntroFX.Add(new BattleFX(emitter, "", 20));
+                SingleEmitter destAnim = new SingleEmitter(new AnimData("Circle_Small_Green_Out", 2));
+                destAnim.UseDest = true;
+                skill.Data.IntroFX.Add(new BattleFX(destAnim, "", 0));
+                skill.Data.IntroFX.Add(new BattleFX(new SingleEmitter(new AnimData("Circle_Small_Green_Out", 2)), "DUN_Growth", 0));
             }
             else if (ii == 684)
             {
@@ -19114,19 +19144,39 @@ namespace DataGenerator.Data
             }
             else if (ii == 839)
             {
-                skill.Name = new LocalText("**Barb Barrage");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 10;
+                skill.Name = new LocalText("Barb Barrage");
+                skill.Desc = new LocalText("The user launches countless toxic barbs to inflict damage. This may also poison the target. This move’s power is doubled if the target is already poisoned.");
+                skill.BaseCharges = 14;
                 skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(60));
+                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
+                skill.Data.BeforeHits.Add(0, new StatusPowerEvent("poison", true));
+                skill.Data.BeforeHits.Add(0, new StatusPowerEvent("poison_toxic", true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("poison", true, true)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ProjectileAction)skill.HitboxAction).Range = 6;
+                ((ProjectileAction)skill.HitboxAction).Speed = 16;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
+                ((ProjectileAction)skill.HitboxAction).Anim = new AnimData("Spike_Cannon", 3);
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Throw_Spike";
+                SqueezedAreaEmitter emitter = new SqueezedAreaEmitter(new AnimData("Bubbles_Purple", 3));
+                emitter.BurstTime = 3;
+                emitter.Bursts = 4;
+                emitter.ParticlesPerBurst = 1;
+                emitter.Range = 12;
+                emitter.StartHeight = -4;
+                emitter.HeightSpeed = 12;
+                emitter.SpeedDiff = 4;
+                skill.Data.HitFX.Emitter = emitter;
             }
             else if (ii == 840)
             {
@@ -19192,19 +19242,35 @@ namespace DataGenerator.Data
             }
             else if (ii == 844)
             {
-                skill.Name = new LocalText("**Infernal Parade");
-                skill.Desc = new LocalText("");
+                skill.Name = new LocalText("-Infernal Parade");
+                skill.Desc = new LocalText("The user attacks with myriad fireballs. This may also leave the target with a burn. This move's power is doubled if the target has a status condition.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(60));
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
+                skill.Data.BeforeHits.Add(0, new MajorStatusPowerEvent(true, 2, 1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("burn", true, true)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ProjectileAction)skill.HitboxAction).Range = 4;
+                ((ProjectileAction)skill.HitboxAction).Speed = 10;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
+                AttachAreaEmitter emitter = new AttachAreaEmitter(new AnimData("Grudge_Lights", 3));
+                emitter.BurstTime = 2;
+                emitter.ParticlesPerBurst = 1;
+                emitter.Range = 12;
+                emitter.AddHeight = 12;
+                ((ProjectileAction)skill.HitboxAction).Emitter = emitter;
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Fire_Spin";
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Thief_Hit_Dark", 1));
             }
             else if (ii == 845)
             {

@@ -1,19 +1,5 @@
-# 0.7.14 Changes #
+# 0.7.15 Changes #
 
-* Secret Garden exit moved one floor earlier
-* Fixed Sickly Hollow's poison water behavior with terrain-altering moves and items
-* Prevent Transform's effect when already transformed
-* Imposter's revive is now 1/2 the HP before transformation
-* Fixed an issue with save variables in upgrade
-* Fix for taking stackable items from storage when stacks are already in bag
-* Grimy food can no longer paralyze, and can now drop defenses drastically
-* Added -help flag when running PMDO
-* Minor Fertile Valley generation fixes
-* Fix for multi-segment replays
-* Dev: Fix for editable ranges
-* Dev: AI options for max range in which the pokemon is allowed ot attack from
-* Dev: Fonts are now moddable
-* Dev: More chip damage/healing events are now moddable
-* Dev: Made it possible to apply universal zone steps
-* Dev: Made it possible to add friendly NPCs in static maps
-* Dev: Issue fixed where editing TypeRecruitmentEvent was impossible
+* New Pokemon available: Flapple, Raichu-A, Marowak-A, Typhlosion-H, Qwilfish-H
+* Pokemon Data updated to Gen 9
+* Fixed an issue with mass sprite export skipping sprites not in dex
