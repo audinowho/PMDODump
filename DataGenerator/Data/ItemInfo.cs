@@ -3347,7 +3347,6 @@ namespace DataGenerator.Data
                 fileName = "egg_mystery";
                 item.Sprite = "Egg_Sea";
                 item.Desc = new LocalText("An egg with bizarre colors that have never been seen before. What could this egg be?");
-                item.MaxStack = -1;
             }
             else if (ii == 576)
                 FillTMData(item, "earthquake");

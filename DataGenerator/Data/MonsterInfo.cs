@@ -137,14 +137,14 @@ namespace DataGenerator.Data
                     ((MonsterFormData)totalEntries[ii].Forms[jj]).Personalities = personality;
                 }
             }
+
+            m_dbTLConnection.Close();
+
             WritePersonalityChecklist(personalities, totalEntries);
 
-            //PrintLearnables();
+            //CreateLearnables();
+            ListAllIncompletes(totalEntries);
 
-
-            //m_dbConnection.Close();
-            //m_db7Connection.Close();
-            m_dbTLConnection.Close();
 
             //string outpt = "";
             for (int ii = 0; ii < TOTAL_DEX; ii++)
@@ -1982,8 +1982,10 @@ namespace DataGenerator.Data
                 return 6;
             else if (version < 20)
                 return 7;
-            else
+            else if (version < 25)
                 return 8;
+            else
+                return 9;
         }
 
         private static bool hasFormeGraphics(int species, int form)
@@ -2429,6 +2431,61 @@ namespace DataGenerator.Data
             foreach (string key in learnMoves.Keys)
             {
                 Console.WriteLine(key + "," + learnMoves[key]);
+            }
+        }
+
+        private static string getBasePrevo(MonsterData[] mons, Dictionary<string, int> filenames, int id)
+        {
+            MonsterData monData = mons[id];
+            while (!String.IsNullOrEmpty(monData.PromoteFrom))
+            {
+                monData = mons[filenames[monData.PromoteFrom]];
+            }
+            return getAssetName(monData.Name.DefaultText);
+        }
+
+        private static void ListAllIncompletes(MonsterData[] mons)
+        {
+            Dictionary<string, int> filenames = new Dictionary<string, int>();
+            for (int ii = 0; ii < mons.Length; ii++)
+            {
+                string filename = getAssetName(mons[ii].Name.DefaultText);
+                filenames[filename] = ii;
+            }
+            Dictionary<string, List<string>> missingMons = new Dictionary<string, List<string>>();
+            HashSet<string> hasData = new HashSet<string>();
+            for (int ii = 0; ii < mons.Length; ii++)
+            {
+                MonsterData entry = mons[ii];
+                for (int jj = 0; jj < entry.Forms.Count; jj++)
+                {
+                    MonsterFormData form = (MonsterFormData)entry.Forms[jj];
+                    if (!form.FormName.DefaultText.Contains("Mega ") && !form.FormName.DefaultText.Contains("Gigantamax "))
+                    {
+                        string prevo = getBasePrevo(mons, filenames, ii);
+                        if ((!entry.Released || !form.Released))
+                        {
+                            if (!missingMons.ContainsKey(prevo))
+                                missingMons[prevo] = new List<string>();
+                            missingMons[prevo].Add(form.FormName.DefaultText);
+                        }
+                        else
+                        {
+                            hasData.Add(prevo);
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("INCOMPLETE LINES");
+            foreach (string name in missingMons.Keys)
+            {
+                if (hasData.Contains(name))
+                {
+                    Console.WriteLine(name);
+                    List<string> missing = missingMons[name];
+                    foreach (string miss in missing)
+                        Console.WriteLine("  " + miss);
+                }
             }
         }
     }
