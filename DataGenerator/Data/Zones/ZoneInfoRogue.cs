@@ -4079,7 +4079,7 @@ namespace DataGenerator.Data
                 else if (ii <= 16)
                     floorData.Music = "B22. Overgrown Wilds.ogg";
                 else if (ii <= 20)
-                    floorData.Music = "B24. Shimmer Bay 2.ogg";
+                    floorData.Music = "B24. Castaway Cave 2.ogg";
                 else if (ii <= 27)
                     floorData.Music = "B03. Demonstration 3.ogg";
                 else if (ii <= 34)

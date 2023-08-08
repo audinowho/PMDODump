@@ -5907,9 +5907,9 @@ namespace DataGenerator.Data
             }
             else if (index == 12)
             {
-                #region SHIMMER BAY
+                #region CASTAWAY CAVE
                 {
-                    zone.Name = new LocalText("Shimmer Bay");
+                    zone.Name = new LocalText("Castaway Cave");
                     zone.Rescues = 2;
                     zone.Level = 30;
                     zone.Rogue = RogueStatus.ItemTransfer;
@@ -5919,7 +5919,7 @@ namespace DataGenerator.Data
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Shimmer Bay\n{0}F"), new Priority(-15)));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Castaway Cave\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 5);
@@ -6060,9 +6060,9 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("woobat", "", "heart_stamp", "confusion", "", "", new RandRange(23), "wander_dumb"), new IntRange(0, 4), 10);
                     poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("qwilfish", 1, "", Gender.Unknown), "", "pin_missile", "spikes", "", "", new RandRange(24), "wander_dumb"), new IntRange(4, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("makuhita", "", "fake_out", "whirlwind", "", "", new RandRange(25), "wander_dumb"), new IntRange(4, 10), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("anorith", "", "ancient_power", "bug_bite", "", "", new RandRange(29), "wander_dumb"), new IntRange(8, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("lileep", "", "acid", "ingrain", "", "", new RandRange(29), "wander_dumb"), new IntRange(8, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("honedge", "", "autotomize", "shadow_sneak", "", "", new RandRange(28), "wander_dumb"), new IntRange(6, max_floors), 10);
+                    //poolSpawn.Spawns.Add(GetTeamMob("anorith", "", "ancient_power", "bug_bite", "", "", new RandRange(29), "wander_dumb"), new IntRange(8, max_floors), 10);
+                    //poolSpawn.Spawns.Add(GetTeamMob("lileep", "", "acid", "ingrain", "", "", new RandRange(29), "wander_dumb"), new IntRange(8, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("honedge", "", "autotomize", "shadow_sneak", "", "", new RandRange(28), "wander_dumb"), new IntRange(6, max_floors), 5);
                     poolSpawn.Spawns.Add(GetTeamMob("bronzor", "", "psywave", "imprison", "", "", new RandRange(27), "wander_dumb"), new IntRange(6, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("shellos", 1, "", Gender.Unknown), "", "mud_bomb", "hidden_power", "", "", new RandRange(23), "wander_dumb"), new IntRange(2, 8), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("goldeen", "", "horn_attack", "water_pulse", "", "", new RandRange(22), "wander_dumb"), new IntRange(0, 6), 10);
@@ -6072,27 +6072,27 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("carvanha", "", "bite", "screech", "", "", new RandRange(24), "wander_dumb"), new IntRange(0, 8), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("corphish", "", "knock_off", "bubble", "", "", new RandRange(27), "wander_dumb"), new IntRange(6, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("tentacool", "", "acid_spray", "wrap", "", "", new RandRange(28), "wander_dumb"), new IntRange(6, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("corsola", "", "spike_cannon", "lucky_chant", "", "", new RandRange(29), "wander_dumb"), new IntRange(6, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("corsola", "", "spike_cannon", "lucky_chant", "ancient_power", "", new RandRange(29), "wander_dumb"), new IntRange(8, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("chinchou", "", "confuse_ray", "spark", "", "", new RandRange(26), "wander_dumb"), new IntRange(4, 10), 10);
                     
                     {
                         TeamMemberSpawn teamSpawn = GetTeamMob("mantine", "", "wide_guard", "bubble_beam", "", "", new RandRange(30), "wander_normal");
-                        teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("shimmer_bay.TookTreasure", true));
+                        teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("castaway_cave.TookTreasure", true));
                         poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 100);
                     }
                     {
                         TeamMemberSpawn teamSpawn = GetTeamMob("huntail", "", "ice_fang", "sucker_punch", "dive", "", new RandRange(30), "wander_normal");
-                        teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("shimmer_bay.TookTreasure", true));
+                        teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("castaway_cave.TookTreasure", true));
                         poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 100);
                     }
                     {
                         TeamMemberSpawn teamSpawn = GetTeamMob("gorebyss", "", "amnesia", "draining_kiss", "dive", "", new RandRange(30), "wander_normal");
-                        teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("shimmer_bay.TookTreasure", true));
+                        teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("castaway_cave.TookTreasure", true));
                         poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 100);
                     }
                     {
                         TeamMemberSpawn teamSpawn = GetTeamMob("dhelmise", "", "anchor_shot", "giga_drain", "metal_sound", "", new RandRange(32), "wander_normal");
-                        teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("shimmer_bay.TookTreasure", true));
+                        teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("castaway_cave.TookTreasure", true));
                         poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 50);
                     }
 
@@ -6252,15 +6252,15 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B23. Shimmer Bay.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "B23. Castaway Cave.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         MapEffectStep<MapGenContext> takeTreasure = new MapEffectStep<MapGenContext>();
-                        takeTreasure.Effect.OnMapStarts.Add(-20, new SingleCharScriptEvent("ShimmerBayAltMusic"));
-                        takeTreasure.Effect.OnMapStarts.Add(-15, new SingleCharScriptEvent("ShimmerBayAltEnemies"));
+                        takeTreasure.Effect.OnMapStarts.Add(-20, new SingleCharScriptEvent("CastawayCaveAltMusic"));
+                        takeTreasure.Effect.OnMapStarts.Add(-15, new SingleCharScriptEvent("CastawayCaveAltEnemies"));
                         if (ii == max_floors - 1)
                         {
-                            takeTreasure.Effect.OnPickups.Add(0, new ItemScriptEvent("ShimmerBayShift"));
-                            takeTreasure.Effect.OnEquips.Add(0, new ItemScriptEvent("ShimmerBayShift"));
+                            takeTreasure.Effect.OnPickups.Add(0, new ItemScriptEvent("CastawayCaveShift"));
+                            takeTreasure.Effect.OnEquips.Add(0, new ItemScriptEvent("CastawayCaveShift"));
                         }
                         layout.GenSteps.Add(PR_FLOOR_DATA, takeTreasure);
 
@@ -6336,7 +6336,7 @@ namespace DataGenerator.Data
                             layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
                         }
 
-                        layout.GenSteps.Add(PR_SPAWN_ITEMS, new ScriptGenStep<MapGenContext>("ShimmerBayRevisit"));
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, new ScriptGenStep<MapGenContext>("CastawayCaveRevisit"));
 
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
@@ -6389,7 +6389,7 @@ namespace DataGenerator.Data
                                 step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
 
                                 RoomGenLoadMap<MapGenContext> loadRoom = new RoomGenLoadMap<MapGenContext>();
-                                loadRoom.MapID = "room_shimmer_bay_altar";
+                                loadRoom.MapID = "room_castaway_cave_altar";
                                 loadRoom.RoomTerrain = new Tile("floor");
                                 loadRoom.PreventChanges = PostProcType.Terrain;
                                 step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 3), loadRoom), 10);
@@ -17438,7 +17438,7 @@ namespace DataGenerator.Data
             {
                 #region LABYRINTH OF THE LOST
                 {
-                    zone.Name = new LocalText("**LABYRINTH OF THE LOST");
+                    zone.Name = new LocalText("**Labyrinth of the Lost");
                     zone.Level = 5;
                     zone.LevelCap = true;
                     zone.BagRestrict = 8;
