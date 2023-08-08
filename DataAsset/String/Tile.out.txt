@@ -5,13 +5,13 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-area_shop-0001|data.Desc																												
 0000-chest_empty-0000|data.Name	Not displayed to players.	Empty Chest	Coffre Vide	Leere Truhe	Cofre Vacío			빈 상자			空大宝箱																	
 0000-chest_empty-0001|data.Desc																												
-0000-chest_full-0000|data.Name	Not displayed to players.	Treasure Chest	Coffre aux trésors	Schatztruhe	Cofre del Tesoro			보물상자			大宝箱																	
+0000-chest_full-0000|data.Name	Not displayed to players.	Treasure Chest	Coffre aux trésors	Schatztruhe	Cofre del Tesoro		Scrigno del Tesoro	보물상자			大宝箱																	
 0000-chest_full-0001|data.Desc																												
 0000-none-0000|data.Name		None	Aucun	Keines	Ninguno			효과없음			无																	
 0000-none-0001|data.Desc		This tile has no effect.	Cette case n'a aucun effet!	Dieses Feld hat keinen Effekt.	Esta baldosa no tiene efecto.			이 타일은 아무런 효과도 없다.			这个地板没有效果。																	
-0000-sealed_block-0000|data.Name	Not displayed to players.	Sealed Block	Bloc Scellé		Bloque Sellado			봉인된블럭			门																	
+0000-sealed_block-0000|data.Name	Not displayed to players.	Sealed Block	Bloc Scellé		Bloque Sellado		Blocco sigillato	봉인된블럭			门																	
 0000-sealed_block-0001|data.Desc																												
-0000-sealed_door-0000|data.Name	Not displayed to players.	Sealed Door	Porte Scellée	Versiegelte Tür	Puerta Sellada			봉인된문			钥匙门																	
+0000-sealed_door-0000|data.Name	Not displayed to players.	Sealed Door	Porte Scellée	Versiegelte Tür	Puerta Sellada		Porta sigillata	봉인된문			钥匙门																	
 0000-sealed_door-0001|data.Desc																												
 0000-sealed_guild-0000|data.Name		Guild Gate									公会大门																	
 0000-sealed_guild-0001|data.Desc																												

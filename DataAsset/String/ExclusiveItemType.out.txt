@@ -1,79 +1,79 @@
 Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU	LT
-ExclusiveItemType.Apron	Pokemon name goes into the {0}	{0} Apron	Tablier de {0}	{0} Schürze	Mandil {0}						{0}围裙
-ExclusiveItemType.Armlet	Ex. "Pikachu Armlet"	{0} Armlet	Brassard de {0}	{0} Armband	Brazal {0}						{0}臂章
-ExclusiveItemType.Armor	"Rhydon Armor"	{0} Armor	Armure de {0}	{0} Rüstung	Coraza {0}						{0}铠甲
-ExclusiveItemType.Aroma	"Bellossom Aroma"	{0} Aroma	Arôme de {0}	{0} Aroma	Aroma {0}						{0}香水
-ExclusiveItemType.Band	etc.	{0} Band	Bandeau de {0}	{0} Band	Banda {0}						{0}头巾
-ExclusiveItemType.Bangle		{0} Bangle	Bracelet de {0}	{0} Armreif	Pulsera {0}						{0}手镯
-ExclusiveItemType.Beam	Translated from Japanese as "Light".  Ex "Mantyke Beam" means "Mantyke's Light".  It also shows up as a yellow-colored orb sprite in game.	{0} Beam	Rayon de {0}	{0} Strahl	Rayo {0}						{0}之光
-ExclusiveItemType.Belt		{0} Belt	Ceinture de {0}	{0} Gürtel	Cinto {0}						{0}腰带
-ExclusiveItemType.Blade		{0} Blade	Lame de {0}	{0} Klinge	Cuchilla {0}						{0}刃片
-ExclusiveItemType.Bow		{0} Bow	Ruban de {0}	{0} Bogen	Lazo {0}						{0}缎带
-ExclusiveItemType.Branch		{0} Branch	Branche de {0}	{0} Zweig	Rama {0}						{0}木枝
-ExclusiveItemType.Brooch		{0} Brooch	Broche de {0}	{0} Brosche	Broche {0}						{0}胸针
-ExclusiveItemType.Cap		{0} Cap	Chapeau de {0}	{0} Mütze	Gorra {0}						{0}帽子
-ExclusiveItemType.Cape		{0} Cape	Cape de {0}	{0} Umhang	Capa {0}						{0}披肩
-ExclusiveItemType.Card		{0} Card	Carte de {0}	{0} Karte	Papiro {0}						{0}卡片
-ExclusiveItemType.Charm		{0} Charm	Amulette de {0}	{0} Talisman	Amuleto {0}						{0}饰物
-ExclusiveItemType.Choker		{0} Choker	Collier de {0}	{0} Halsband	Collarín {0}						{0}项圈
-ExclusiveItemType.Claw		{0} Claw	Griffe de {0}	{0} Kralle	Garra {0}				{0}のツメ		{0}之爪
-ExclusiveItemType.Coat		{0} Coat	Manteau de {0}	{0} Mantel	Abrigo {0}						{0}外套
-ExclusiveItemType.Coin		{0} Coin	Pièce de {0}	{0} Münze	Moneda {0}						{0}硬币
-ExclusiveItemType.Collar		{0} Collar	Collier de {0}	{0} Halskette	Collar {0}						{0}卷巾	
-ExclusiveItemType.Crest		{0} Crest	Blason de {0}	{0} Wappen	Blasón {0}						{0}徽章
-ExclusiveItemType.Crown		{0} Crown	Couronne de {0}	{0} Krone	Corona {0}						{0}王冠
-ExclusiveItemType.Dew		{0} Dew	Rosée de {0}	{0} Tau	Rocío {0}						{0}水珠
-ExclusiveItemType.Dress		{0} Dress	Robe de {0}	{0} Kleid	Traje {0}						{0}装束
-ExclusiveItemType.Drill		{0} Drill	Perceuse de {0}	{0} Bohrer	Taladro {0}						{0}钻头
-ExclusiveItemType.Drool		{0} Drool	Salive de {0}	{0} Sabber	Baba {0}						{0}口水
-ExclusiveItemType.Dust		{0} Dust	Poussière de {0}	{0} Staub	Polvo {0}						{0}粉末
-ExclusiveItemType.Earring		{0} Earring	Boucle d'oreille de {0}	{0} Ohrring	Pendiente {0}						{0}耳饰
-ExclusiveItemType.Fang	Specifically refers to the canine tooth, not the inciscors, etc.	{0} Fang	Croc de {0}	{0} Reißzahn	Colmillo {0}				{0}のキバ		{0}之牙
-ExclusiveItemType.Float		{0} Float	Flotteur de {0}	{0} Reif	Flotador {0}						{0}浮板
-ExclusiveItemType.Foam		{0} Foam	Mousse de {0}	{0} Schaum	Éter {0}						{0}泡沫
-ExclusiveItemType.Gasp		{0} Gasp	Souffle de {0}	{0} Atemzug	Soplo {0}						{0}气息
-ExclusiveItemType.Glasses		{0} Glasses	Lunettes de {0}	{0} Brille	Gafas {0}						{0}墨镜
-ExclusiveItemType.Guard		{0} Guard	Garde de {0}	{0} Schild	Guardia {0}						{0}护符
-ExclusiveItemType.Hair		{0} Hair	Cheveux de {0}	{0} Haare	Pelo {0}						{0}绒毛
-ExclusiveItemType.Hat		{0} Hat	Chapeau de {0}	{0} Hut	Sombrero {0}						{0}之帽
-ExclusiveItemType.Heart		{0} Heart	Cœur de {0}	{0} Herz	Corazón {0}						{0}之心
-ExclusiveItemType.Helmet		{0} Helmet	Casque de {0}	{0} Helm	Casco {0}						{0}头盔
-ExclusiveItemType.Horn		{0} Horn	Corne de {0}	{0} Horn	Cuerno {0}						{0}之角
-ExclusiveItemType.Jaw		{0} Jaw	Mâchoir de {0}	{0} Kinn	Fauce {0}						{0}之颚
-ExclusiveItemType.Jewel		{0} Jewel	Joyeau de {0}	{0} Juwel	Gema {0}						{0}宝石
-ExclusiveItemType.Key		{0} Key	Clé de {0}	{0} Schlüssel	Llave {0}						{0}钥匙
-ExclusiveItemType.Leaf		{0} Leaf	Feuille de {0}	{0} Blatt	Hoja {0}						{0}之叶
-ExclusiveItemType.Mantle		{0} Mantle	Manteau de {0}	{0} Mantel	Manto {0}						{0}羽衣
-ExclusiveItemType.Mask		{0} Mask	Masque de {0}	{0} Maske	Máscara {0}						{0}兜帽
-ExclusiveItemType.Medal		{0} Medal	Médaille de {0}	{0} Medaille	Medalla {0}						{0}奖牌
-ExclusiveItemType.Mud		{0} Mud	Boue de {0}	{0} Schlamm	Lodo {0}						{0}之泥
-ExclusiveItemType.None		{0} None	Aucun de {0}	{0} Nichts	Ninguno {0}						{0}空物
-ExclusiveItemType.Ore		{0} Ore	Minerai de {0}	{0} Eisen	Pepita {0}						{0}矿石
-ExclusiveItemType.Pebble		{0} Pebble	Caillou de {0}	{0} Kieselstein	Guijarro {0}						{0}卵石
-ExclusiveItemType.Poncho		{0} Poncho	Poncho de {0}	{0} Poncho	Poncho {0}						{0}斗篷
-ExclusiveItemType.Ring		{0} Ring	Anneau de {0}	{0} Ring	Anillo {0}						{0}耳环
-ExclusiveItemType.Robe		{0} Robe	Robe de {0}	{0} Robe	Túnica {0}						{0}之袍
-ExclusiveItemType.Rock		{0} Rock	Roche de {0}	{0} Stein	Roca {0}						{0}之石
-ExclusiveItemType.Root		{0} Root	Racine de {0}	{0} Wurzel	Raíz {0}						{0}根茎
-ExclusiveItemType.Ruff		{0} Ruff	Foulard de {0}	{0} Halskrause	Chal {0}						{0}领巾
-ExclusiveItemType.Sash		{0} Sash	Bandeau de {0}	{0} Schärpe	Banda {0}						{0}纱巾
-ExclusiveItemType.Scarf		{0} Scarf	Mouchoir de {0}	{0} Schal	Pañuelo {0}						{0}围巾
-ExclusiveItemType.Scope		{0} Scope	Portée de {0}	{0} Oszilloskop	Periscopio {0}						{0}眼镜
-ExclusiveItemType.Seal		{0} Seal	Sceau de {0}	{0} Siegel	Cuño {0}						{0}刻印
-ExclusiveItemType.Seed		{0} Seed	Graine de {0}	{0} Samen	Semilla {0}						{0}种子
-ExclusiveItemType.Shard		{0} Shard	Tesson de {0}	{0} Splitter	Trozo {0}						{0}碎片
-ExclusiveItemType.Shield		{0} Shield	Bouclier de {0}	{0} Schild	Escudo {0}						{0}护盾
-ExclusiveItemType.Shoot		{0} Shoot	Tire de {0}	{0} Spross	Brote {0}						{0}之刺
-ExclusiveItemType.Song		{0} Song	Chanson de {0}	{0} Song	Corchea {0}						{0}之音
-ExclusiveItemType.Specs		{0} Specs	Lunettes de {0}	{0} Brille	Lentes {0}						{0}眼镜
-ExclusiveItemType.Sweat		{0} Sweat	Essence de {0}	{0} Schweiß	Esencia {0}						{0}之汗
-ExclusiveItemType.Tag		{0} Tag	Note de {0}	{0} Etikett	Nota {0}						{0}标签
-ExclusiveItemType.Tail		{0} Tail	Queue de {0}	{0} Schweif	Cola {0}						{0}之尾
-ExclusiveItemType.Thorn		{0} Thorn	Épine de {0}	{0} Dorn	Espina {0}						{0}之刺
-ExclusiveItemType.Tiara		{0} Tiara	Diadème de {0}	{0} Tiara	Tiara {0}						{0}之冠
-ExclusiveItemType.Tie		{0} Tie	Cravate de {0}	{0} Schleife	Fular {0}						{0}领带
-ExclusiveItemType.Tooth	Specifically refers to the incisors.	{0} Tooth	Dent de {0}	{0} Zahn	Diente {0}						{0}门牙
-ExclusiveItemType.Torc		{0} Torc	Torque de {0}	{0} Reif	Alhaja {0}						{0}饰环
-ExclusiveItemType.Twig		{0} Twig	Brindille de {0}	{0} Zweig	Ramita {0}						{0}细枝
-ExclusiveItemType.Veil		{0} Veil	Voile de {0}	{0} Schleier	Velo {0}						{0}屏障
-ExclusiveItemType.Wing		{0} Wing	Aile de {0}	{0} Flügel	Ala {0}						{0}之翼
+ExclusiveItemType.Apron	Pokemon name goes into the {0}	{0} Apron	Tablier de {0}	{0} Schürze	Mandil {0}	Avental {0}	Grembiule {0}				{0}围裙
+ExclusiveItemType.Armlet	Ex. "Pikachu Armlet"	{0} Armlet	Brassard de {0}	{0} Armband	Brazal {0}	Bracelete {0}	Fascia {0}				{0}臂章
+ExclusiveItemType.Armor	"Rhydon Armor"	{0} Armor	Armure de {0}	{0} Rüstung	Coraza {0}	Armadura {0}	Armatura {0}				{0}铠甲
+ExclusiveItemType.Aroma	"Bellossom Aroma"	{0} Aroma	Arôme de {0}	{0} Aroma	Aroma {0}	Perfume {0}	Aroma {0}				{0}香水
+ExclusiveItemType.Band	etc.	{0} Band	Bandeau de {0}	{0} Band	Banda {0}	Anel {0}	Banda {0}				{0}头巾
+ExclusiveItemType.Bangle		{0} Bangle	Bracelet de {0}	{0} Armreif	Pulsera {0}	Pulseira {0}	Bracciale {0}				{0}手镯
+ExclusiveItemType.Beam	Translated from Japanese as "Light".  Ex "Mantyke Beam" means "Mantyke's Light".  It also shows up as a yellow-colored orb sprite in game.	{0} Beam	Rayon de {0}	{0} Strahl	Rayo {0}	Luz de {0}	Luce di {0}				{0}之光
+ExclusiveItemType.Belt		{0} Belt	Ceinture de {0}	{0} Gürtel	Cinto {0}	Cinto {0}	Cintura {0}				{0}腰带
+ExclusiveItemType.Blade		{0} Blade	Lame de {0}	{0} Klinge	Cuchilla {0}	Lâmina {0}	Lama {0}				{0}刃片
+ExclusiveItemType.Bow		{0} Bow	Ruban de {0}	{0} Bogen	Lazo {0}	Laço {0}	Fiocco {0}				{0}缎带
+ExclusiveItemType.Branch		{0} Branch	Branche de {0}	{0} Zweig	Rama {0}	Galho {0}	Ramo {0}				{0}木枝
+ExclusiveItemType.Brooch		{0} Brooch	Broche de {0}	{0} Brosche	Broche {0}		Spilla {0}				{0}胸针
+ExclusiveItemType.Cap		{0} Cap	Chapeau de {0}	{0} Mütze	Gorra {0}		Berretto {0}				{0}帽子
+ExclusiveItemType.Cape		{0} Cape	Cape de {0}	{0} Umhang	Capa {0}		Mantello {0}				{0}披肩
+ExclusiveItemType.Card		{0} Card	Carte de {0}	{0} Karte	Papiro {0}		Carta {0}				{0}卡片
+ExclusiveItemType.Charm		{0} Charm	Amulette de {0}	{0} Talisman	Amuleto {0}		Amuleto {0}				{0}饰物
+ExclusiveItemType.Choker		{0} Choker	Collier de {0}	{0} Halsband	Collarín {0}		Collarino {0}				{0}项圈
+ExclusiveItemType.Claw		{0} Claw	Griffe de {0}	{0} Kralle	Garra {0}		Artiglio {0}		{0}のツメ		{0}之爪
+ExclusiveItemType.Coat		{0} Coat	Manteau de {0}	{0} Mantel	Abrigo {0}		Manto {0}				{0}外套
+ExclusiveItemType.Coin		{0} Coin	Pièce de {0}	{0} Münze	Moneda {0}		Moneta {0}				{0}硬币
+ExclusiveItemType.Collar		{0} Collar	Collier de {0}	{0} Halskette	Collar {0}		Collare {0}				{0}卷巾	
+ExclusiveItemType.Crest		{0} Crest	Blason de {0}	{0} Wappen	Blasón {0}		Stemma {0}				{0}徽章
+ExclusiveItemType.Crown		{0} Crown	Couronne de {0}	{0} Krone	Corona {0}		Corona {0}				{0}王冠
+ExclusiveItemType.Dew		{0} Dew	Rosée de {0}	{0} Tau	Rocío {0}		Rugiada {0}				{0}水珠
+ExclusiveItemType.Dress		{0} Dress	Robe de {0}	{0} Kleid	Traje {0}		Veste {0}				{0}装束
+ExclusiveItemType.Drill		{0} Drill	Perceuse de {0}	{0} Bohrer	Taladro {0}		Trapano {0}				{0}钻头
+ExclusiveItemType.Drool		{0} Drool	Salive de {0}	{0} Sabber	Baba {0}		Saliva {0}				{0}口水
+ExclusiveItemType.Dust		{0} Dust	Poussière de {0}	{0} Staub	Polvo {0}		Polvere {0}				{0}粉末
+ExclusiveItemType.Earring		{0} Earring	Boucle d'oreille de {0}	{0} Ohrring	Pendiente {0}		Orecchino {0}				{0}耳饰
+ExclusiveItemType.Fang	Specifically refers to the canine tooth, not the inciscors, etc.	{0} Fang	Croc de {0}	{0} Reißzahn	Colmillo {0}		Zanna {0}		{0}のキバ		{0}之牙
+ExclusiveItemType.Float		{0} Float	Flotteur de {0}	{0} Reif	Flotador {0}		Galleggiante {0}				{0}浮板
+ExclusiveItemType.Foam		{0} Foam	Mousse de {0}	{0} Schaum	Éter {0}		Schiuma {0}				{0}泡沫
+ExclusiveItemType.Gasp		{0} Gasp	Souffle de {0}	{0} Atemzug	Soplo {0}		Sussulto {0}				{0}气息
+ExclusiveItemType.Glasses		{0} Glasses	Lunettes de {0}	{0} Brille	Gafas {0}		Occhiali {0}				{0}墨镜
+ExclusiveItemType.Guard		{0} Guard	Garde de {0}	{0} Schild	Guardia {0}		Guardia {0}				{0}护符
+ExclusiveItemType.Hair		{0} Hair	Cheveux de {0}	{0} Haare	Pelo {0}		Pelo {0}				{0}绒毛
+ExclusiveItemType.Hat		{0} Hat	Chapeau de {0}	{0} Hut	Sombrero {0}		Cappello {0}				{0}之帽
+ExclusiveItemType.Heart		{0} Heart	Cœur de {0}	{0} Herz	Corazón {0}		Cuore {0}				{0}之心
+ExclusiveItemType.Helmet		{0} Helmet	Casque de {0}	{0} Helm	Casco {0}		Casco {0}				{0}头盔
+ExclusiveItemType.Horn		{0} Horn	Corne de {0}	{0} Horn	Cuerno {0}		Corno {0}				{0}之角
+ExclusiveItemType.Jaw		{0} Jaw	Mâchoir de {0}	{0} Kinn	Fauce {0}		Mandibola {0}				{0}之颚
+ExclusiveItemType.Jewel		{0} Jewel	Joyeau de {0}	{0} Juwel	Gema {0}		Gioiello {0}				{0}宝石
+ExclusiveItemType.Key		{0} Key	Clé de {0}	{0} Schlüssel	Llave {0}		Chiave {0}				{0}钥匙
+ExclusiveItemType.Leaf		{0} Leaf	Feuille de {0}	{0} Blatt	Hoja {0}		Foglia {0}				{0}之叶
+ExclusiveItemType.Mantle		{0} Mantle	Manteau de {0}	{0} Mantel	Manto {0}		Mantella {0}				{0}羽衣
+ExclusiveItemType.Mask		{0} Mask	Masque de {0}	{0} Maske	Máscara {0}		Maschera {0}				{0}兜帽
+ExclusiveItemType.Medal		{0} Medal	Médaille de {0}	{0} Medaille	Medalla {0}		Medaglia {0}				{0}奖牌
+ExclusiveItemType.Mud		{0} Mud	Boue de {0}	{0} Schlamm	Lodo {0}		Fango {0}				{0}之泥
+ExclusiveItemType.None		{0} None	Aucun de {0}	{0} Nichts	Ninguno {0}		Nulla {0}				{0}空物
+ExclusiveItemType.Ore		{0} Ore	Minerai de {0}	{0} Eisen	Pepita {0}		Minerale {0}				{0}矿石
+ExclusiveItemType.Pebble		{0} Pebble	Caillou de {0}	{0} Kieselstein	Guijarro {0}		Sasso {0}				{0}卵石
+ExclusiveItemType.Poncho		{0} Poncho	Poncho de {0}	{0} Poncho	Poncho {0}		Poncho {0}				{0}斗篷
+ExclusiveItemType.Ring		{0} Ring	Anneau de {0}	{0} Ring	Anillo {0}		Anello {0}				{0}耳环
+ExclusiveItemType.Robe		{0} Robe	Robe de {0}	{0} Robe	Túnica {0}		Tunica {0}				{0}之袍
+ExclusiveItemType.Rock		{0} Rock	Roche de {0}	{0} Stein	Roca {0}		Roccia {0}				{0}之石
+ExclusiveItemType.Root		{0} Root	Racine de {0}	{0} Wurzel	Raíz {0}		Radice {0}				{0}根茎
+ExclusiveItemType.Ruff		{0} Ruff	Foulard de {0}	{0} Halskrause	Chal {0}		Fazzoletto {0}				{0}领巾
+ExclusiveItemType.Sash		{0} Sash	Bandeau de {0}	{0} Schärpe	Banda {0}		Bandana {0}				{0}纱巾
+ExclusiveItemType.Scarf		{0} Scarf	Mouchoir de {0}	{0} Schal	Pañuelo {0}		Sciarpa {0}				{0}围巾
+ExclusiveItemType.Scope		{0} Scope	Portée de {0}	{0} Oszilloskop	Periscopio {0}		Lente {0}				{0}眼镜
+ExclusiveItemType.Seal		{0} Seal	Sceau de {0}	{0} Siegel	Cuño {0}		Sigillo {0}				{0}刻印
+ExclusiveItemType.Seed		{0} Seed	Graine de {0}	{0} Samen	Semilla {0}		Seme {0}				{0}种子
+ExclusiveItemType.Shard		{0} Shard	Tesson de {0}	{0} Splitter	Trozo {0}		Scheggia {0}				{0}碎片
+ExclusiveItemType.Shield		{0} Shield	Bouclier de {0}	{0} Schild	Escudo {0}		Scudo {0}				{0}护盾
+ExclusiveItemType.Shoot		{0} Shoot	Tire de {0}	{0} Spross	Brote {0}		Colpo {0}				{0}之刺
+ExclusiveItemType.Song		{0} Song	Chanson de {0}	{0} Song	Corchea {0}		Canzone {0}				{0}之音
+ExclusiveItemType.Specs		{0} Specs	Lunettes de {0}	{0} Brille	Lentes {0}		Lenti {0}				{0}眼镜
+ExclusiveItemType.Sweat		{0} Sweat	Essence de {0}	{0} Schweiß	Esencia {0}		Sudore {0}				{0}之汗
+ExclusiveItemType.Tag		{0} Tag	Note de {0}	{0} Etikett	Nota {0}		Etichetta {0}				{0}标签
+ExclusiveItemType.Tail		{0} Tail	Queue de {0}	{0} Schweif	Cola {0}		Coda {0}				{0}之尾
+ExclusiveItemType.Thorn		{0} Thorn	Épine de {0}	{0} Dorn	Espina {0}		Spina {0}				{0}之刺
+ExclusiveItemType.Tiara		{0} Tiara	Diadème de {0}	{0} Tiara	Tiara {0}		Diadema {0}				{0}之冠
+ExclusiveItemType.Tie		{0} Tie	Cravate de {0}	{0} Schleife	Fular {0}		Cravatta {0}				{0}领带
+ExclusiveItemType.Tooth	Specifically refers to the incisors.	{0} Tooth	Dent de {0}	{0} Zahn	Diente {0}		Dente {0}				{0}门牙
+ExclusiveItemType.Torc		{0} Torc	Torque de {0}	{0} Reif	Alhaja {0}		Collana {0}				{0}饰环
+ExclusiveItemType.Twig		{0} Twig	Brindille de {0}	{0} Zweig	Ramita {0}	Ramo {0}	Ramo {0}				{0}细枝
+ExclusiveItemType.Veil		{0} Veil	Voile de {0}	{0} Schleier	Velo {0}	Véu {0}	Velo {0}				{0}屏障
+ExclusiveItemType.Wing		{0} Wing	Aile de {0}	{0} Flügel	Ala {0}	Asa de {0}	Ala {0}				{0}之翼

@@ -8,6 +8,8 @@ Key		EN
 0000-bramble_woods-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Bramble Thicket\nB{0}F
 0000-bravery_road-0000|data.Name		Bravery Road
 0000-bravery_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Bravery Road\n{0}F
+0000-castaway_cave-0000|data.Name		Castaway Cave
+0000-castaway_cave-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Castaway Cave\nB{0}F
 0000-cave_of_solace-0000|data.Name		Cave of Solace
 0000-cave_of_solace-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Cave of Solace\nB{0}F
 0000-cave_of_whispers-0000|data.Name		Cave of Whispers
@@ -48,7 +50,7 @@ Key		EN
 0000-hope_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Hope Road\n{0}F
 0000-inscribed_cave-0000|data.Name		Inscribed Cave
 0000-inscribed_cave-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Inscribed Cave\nB{0}F
-0000-labyrinth_of_the_lost-0000|data.Name		LABYRINTH OF THE LOST
+0000-labyrinth_of_the_lost-0000|data.Name		Labyrinth of the Lost
 0000-labyrinth_of_the_lost-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Labyrinth of the Lost\nB{0}F
 0000-lava_floe_island-0000|data.Name		Lava Floe Island
 0000-lava_floe_island-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Lava Floe\nIsland\nB{0}F
@@ -71,8 +73,6 @@ Key		EN
 0000-sacred_tower-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Sacred Tower\n{0}F
 0000-secret_garden-0000|data.Name		Secret Garden
 0000-secret_garden-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Secret Garden\nB{0}F
-0000-shimmer_bay-0000|data.Name		Shimmer Bay
-0000-shimmer_bay-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Shimmer Bay\n{0}F
 0000-sickly_hollow-0000|data.Name		Sickly Hollow
 0000-sickly_hollow-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Sickly Hollow\nB{0}F
 0000-sleeping_caldera-0000|data.Name		Sleeping Caldera

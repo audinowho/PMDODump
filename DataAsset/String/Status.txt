@@ -109,6 +109,8 @@ Key		EN
 0000-ingrain-0001|data.Desc		The Pokémon's roots are planted in the ground, gradually restoring its HP and preventing it from moving. This status wears off after a few turns.
 0000-invisible-0000|data.Name		Invisible
 0000-invisible-0001|data.Desc		The Pokémon is invisible and cannot be seen by other Pokémon. This status wears off after a few turns.
+0000-kings_shield-0000|data.Name		King's Shield
+0000-kings_shield-0001|data.Desc		The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks. 
 0000-last_ally_move-0000|data.Name		Last Ally Move
 0000-last_ally_move-0001|data.Desc		
 0000-last_move_hit_by_other-0000|data.Name		Last Move Hit By Other
