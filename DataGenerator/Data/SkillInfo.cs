@@ -38,7 +38,7 @@ namespace DataGenerator.Data
                     SkillData oldMove = DataManager.LoadData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString(), ".json");
                     if (oldMove != null)
                     {
-                        oldMove.Data.OnHitTiles = move.Item2.Data.OnHitTiles;
+                        oldMove.Data.BeforeHits = move.Item2.Data.BeforeHits;
                         DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
                     }
                 }
@@ -51,7 +51,7 @@ namespace DataGenerator.Data
                     SkillData oldMove = DataManager.LoadData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString(), ".json");
                     if (oldMove != null)
                     {
-                        oldMove.Data.OnHitTiles = move.Item2.Data.OnHitTiles;
+                        oldMove.Data.BeforeHits = move.Item2.Data.BeforeHits;
                         DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
                     }
                 }
@@ -9533,6 +9533,9 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("wide_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("quick_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("all_protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("detect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("kings_shield", true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
@@ -12267,6 +12270,9 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("wide_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("quick_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("all_protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("detect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("kings_shield", true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
@@ -13807,27 +13813,31 @@ namespace DataGenerator.Data
             else if (ii == 533)
             {
                 skill.Name = new LocalText("=Sacred Sword");
-                skill.Desc = new LocalText("The user attacks by slicing with a long horn. The target's stat changes don't affect this attack's damage.");
-                skill.BaseCharges = 8;
+                skill.Desc = new LocalText("The user attacks by slicing with a sword. The target's stat changes don't affect this attack's damage.");
+                skill.BaseCharges = 12;
                 skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnActions.Add(0, new AddContextStateEvent(new Infiltrator(new StringKey("MSG_INFILTRATOR_SKILL"))));
                 skill.Data.BeforeHits.Add(4, new IgnoreStatsEvent(true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
-                ((AttackAction)skill.HitboxAction).WideAngle = AttackCoverage.Wide;
-                ((AttackAction)skill.HitboxAction).HitTiles = true;
-                ((AttackAction)skill.HitboxAction).Emitter = new SingleEmitter(new AnimData("Slash_Blue_RSE", 3));
+
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).Range = 2;
+                ((DashAction)skill.HitboxAction).CharAnim = 13;//Slice
+                ((DashAction)skill.HitboxAction).StopAtWall = true;
+                ((DashAction)skill.HitboxAction).StopAtHit = true;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
-                skill.HitboxAction.ActionFX.Sound = "DUN_Morning_Sun";
+                skill.HitboxAction.ActionFX.Sound = "DUN_Fury_Cutter";
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Slash_Blue_RSE", 3));
+                skill.Data.HitFX.Sound = "DUN_Metal_Sound";
             }
             else if (ii == 534)
             {
@@ -14493,6 +14503,9 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("wide_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("quick_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("all_protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("detect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("kings_shield", true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -14930,17 +14943,20 @@ namespace DataGenerator.Data
             }
             else if (ii == 588)
             {
-                skill.Name = new LocalText("**King's Shield");
-                skill.Desc = new LocalText("The user takes a defensive stance while it protects itself from damage. It also harshly lowers the Attack stat of any attacker who makes direct contact.");
+                skill.Name = new LocalText("King's Shield");
+                skill.Desc = new LocalText("The user takes a defensive stance while it protects itself from damage. It also lowers the Attack stat of any attacker.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.OnHits.Add(0, new StatusBattleEvent("kings_shield", true, false));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new SelfAction();
+                ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(37);//Withdraw
+                skill.HitboxAction.ActionFX.Emitter = new SingleEmitter(new AnimData("Protect_Yellow", 2), 4);
+                skill.HitboxAction.TargetAlignments = Alignment.Self;
+                skill.Explosion.TargetAlignments = Alignment.Self;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Protect";
             }
             else if (ii == 589)
             {

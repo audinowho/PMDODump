@@ -1404,8 +1404,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 176)
             {
-                ability.Name = new LocalText("**Stance Change");
+                ability.Name = new LocalText("Stance Change");
                 ability.Desc = new LocalText("The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King's Shield.");
+                ability.AfterActions.Add(-1, new StanceChangeEvent("aegislash", "kings_shield", 0, 1));
             }
             else if (ii == 177)
             {
