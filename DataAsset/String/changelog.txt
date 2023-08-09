@@ -1,23 +1,11 @@
 Sheet: Hardcode
-    * Significantly changed DLG_ROGUE_INFO_3 from "If your team completes the dungeon, all items and recruits can be sent to the main save file." to "Items and recruits can be sent to the main save file, depending on the dungeon."
-    * Added TRANSFER_ALL
-    * Added TRANSFER_ITEMS
-    * Added ZONE_TRANSFER
 
 Sheet: Content
-    * Added EVO_REQ_SKILL_USE
-    * Added MSG_PASTEL_VEIL
-    * Added MSG_STAT_SWAP_OTHER
 
 Sheet: Script
-    * Changed ground\base_camp_2/Tutor_Cant_Forget from "Hold up![pause=0] There's no moves to forget!" to "Hold up![pause=0] You can't forget any more moves!"
-    * Changed ground\canyon_camp/Storehouse_Line_001 from "[tmp]We've found the hideout of the outlaw leader.  We need your help to take them down!" to "[tmp]We've foud the hideout of the outlaw leader.  We need your help to take them down!"
-    * Changed ground\cliff_camp/DexRater_Reward_Dungeon from "A good deed,[pause=30] indeed![pause=0]\nAs thanks,[pause=30] let me tell you a secret..." to "A good deed,[pause=30] indeed![pause=0]\n As thanks,[pause=30] let me tell you a secret..."
-    * Changed ground\final_stop/Storehouse_Line_001 from "[tmp]We've found the hideout of the other outlaw leader.  We need your help to take them down!" to "[tmp]We've foud the hideout of the other outlaw leader.  We need your help to take them down!"
-    * Changed ground\garden_end/Expo_Cutscene_Line_006 from "Ah,[pause=20] {0}. \u266A[pause=0]\nIt's a pleasure to meet you." to "Ah,[pause=20] {0}. \u266A[pause=0]\n It's a pleasure to meet you."
-    * Changed ground\garden_end/Expo_Cutscene_Line_007 from "I was a part of a team before...[pause=0]\nAn entire guild, to be exact." to "I was a part of a team before...[pause=0]\n An entire guild, to be exact."
-    * Changed ground\guildmaster_summit/Expo_Cutscene_Line_002 from "I am Xatu.[pause=0]\nGuardians are we, of the Guildmaster Trials." to "I am Xatu.[pause=0]\n Guardians are we, of the Guildmaster Trials."
-    * Changed ground\post_office/Connect_Info_P2P_005 from "Then, configure your server settings use your friend's IP." to "Then, configure your server settings to use your friend's IP."
+    * Changed ground\garden_end/Expo_Cutscene_Line_006 from "Ah,[pause=20] {0}. \u266A[pause=0]\n It's a pleasure to meet you." to "Ah,[pause=20] {0}. \u266A[pause=0]\nIt's a pleasure to meet you."
+    * Changed ground\garden_end/Expo_Cutscene_Line_007 from "I was a part of a team before...[pause=0]\n An entire guild, to be exact." to "I was a part of a team before...[pause=0]\nAn entire guild, to be exact."
+    * Changed ground\guildmaster_summit/Expo_Cutscene_Line_002 from "I am Xatu.[pause=0]\n Guardians are we, of the Guildmaster Trials." to "I am Xatu.[pause=0]\nGuardians are we, of the Guildmaster Trials."
 
 Sheet: Abilities
 
@@ -26,14 +14,8 @@ Sheet: Items
 Sheet: MapStatuses
 
 Sheet: Moves
-    * Changed 0533-sacred_sword-0001|data.Desc from "The user attacks by slicing with a long horn. The target's stat changes don't affect this attack's damage." to "The user attacks by slicing with a sword. The target's stat changes don't affect this attack's damage."
-    * Significantly changed 0588-kings_shield-0001|data.Desc from "The user takes a defensive stance while it protects itself from damage. It also harshly lowers the Attack stat of any attacker who makes direct contact." to "The user takes a defensive stance while it protects itself from damage. It also lowers the Attack stat of any attacker."
-    * Significantly changed 0839-barb_barrage-0001|data.Desc from "" to "The user launches countless toxic barbs to inflict damage. This may also poison the target. This move’s power is doubled if the target is already poisoned."
-    * Significantly changed 0844-infernal_parade-0001|data.Desc from "" to "The user attacks with myriad fireballs. This may also leave the target with a burn. This move's power is doubled if the target has a status condition."
 
 Sheet: Statuses
-    * Added 0000-kings_shield-0000|data.Name
-    * Added 0000-kings_shield-0001|data.Desc
 
 Sheet: Tiles
 
@@ -42,15 +24,8 @@ Sheet: Excl Names
 Sheet: Excl Effects
 
 Sheet: Zones
-    * Added 0000-castaway_cave-0000|data.Name
-    * Added 0000-castaway_cave-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
-    * Changed 0000-labyrinth_of_the_lost-0000|data.Name from "LABYRINTH OF THE LOST" to "Labyrinth of the Lost"
-    * Deleted key 0000-shimmer_bay-0000|data.Name
-    * Deleted key 0000-shimmer_bay-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
 
 Sheet: Maps
-    * Added room_castaway_cave_altar-0000|data.Name
-    * Deleted key room_shimmer_bay_altar-0000|data.Name
 
 Sheet: GroundMaps
 

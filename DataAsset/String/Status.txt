@@ -1,275 +1,275 @@
-Key		EN
-0000-all_protect-0000|data.Name		All Protect
-0000-all_protect-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns.
-0000-aqua_ring-0000|data.Name		Aqua Ring
-0000-aqua_ring-0001|data.Desc		The Pokémon is surrounded by a veil of water that gradually restores its HP. This status wears off after a few turns.
-0000-area_counter-0000|data.Name		Area Counter
-0000-area_counter-0001|data.Desc		All damage done to this Pokémon of a certain category of moves will be reflected on all foes within 3 tiles. This status wears off after many turns have passed.
-0000-belch-0000|data.Name		Belch
-0000-belch-0001|data.Desc		The Pokémon is ready to belch, unleashing the attack whenever it eats a food item. This status wears off after a few turns.
-0000-biding-0000|data.Name		Biding
-0000-biding-0001|data.Desc		The Pokémon is storing energy for an attack. In a few turns, it will unleash the energy, doing double the amount of damage it took while biding.
-0000-bind-0000|data.Name		Bind
-0000-bind-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.
-0000-blinker-0000|data.Name		Blinker
-0000-blinker-0001|data.Desc		The Pokémon has its Attack Range limited, allowing it to hit only targets in front. This status wears off after many turns have passed.
-0000-bouncing-0000|data.Name		Bouncing
-0000-bouncing-0001|data.Desc		The Pokémon is in mid-air from a bounce and can avoid most moves. It will unleash the move on its next turn.
-0000-burn-0000|data.Name		Burned
-0000-burn-0001|data.Desc		The Pokémon will take some damage every turn it attacks, and its Attack will be lowered.
-0000-charge-0000|data.Name		Charge
-0000-charge-0001|data.Desc		The Pokémon is charging electrical energy, boosting the power of an Electric-type attack. This status wears off after a few turns.
-0000-charging_focus_punch-0000|data.Name		Charging Focus Punch
-0000-charging_focus_punch-0001|data.Desc		The Pokémon is charging Focus Punch. It will unleash the move on its next attack.
-0000-charging_razor_wind-0000|data.Name		Charging Razor Wind
-0000-charging_razor_wind-0001|data.Desc		The Pokémon is charging Razor Wind. It will unleash the move on its next turn.
-0000-charging_skull_bash-0000|data.Name		Charging Skull Bash
-0000-charging_skull_bash-0001|data.Desc		The Pokémon is charging Skull Bash. It will unleash the move on its next turn.
-0000-charging_sky_attack-0000|data.Name		Charging Sky Attack
-0000-charging_sky_attack-0001|data.Desc		The Pokémon is charging Sky Attack. It will unleash the move on its next turn.
-0000-charging_solar_beam-0000|data.Name		Charging Solar Beam
-0000-charging_solar_beam-0001|data.Desc		The Pokémon is charging Solar Beam. It will unleash the move on its next turn.
-0000-chasing-0000|data.Name		Chasing
-0000-chasing-0001|data.Desc		Every time the target makes a move, this Pokémon will automatically warp to it. This status wears off after a few turns.
-0000-clamp-0000|data.Name		Clamp
-0000-clamp-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.
-0000-confuse-0000|data.Name		Confused
-0000-confuse-0001|data.Desc		The Pokémon is confused, causing its movements and attacks to vary wildly. Attacks that target foes can also target friends, and vice versa.
-0000-conversion-0000|data.Name		Conversion
-0000-conversion-0001|data.Desc		The Pokémon will change its type to match its moves. This status wears off after a few turns.
-0000-conversion_2-0000|data.Name		Conversion 2
-0000-conversion_2-0001|data.Desc		The Pokémon will change its type to resist incoming moves. This status wears off after a few turns.
-0000-counter-0000|data.Name		Counter
-0000-counter-0001|data.Desc		The Pokémon will return damage from physical attacks back at the user with double the power. This status wears off after a few turns.
-0000-crits_landed-0000|data.Name		Crits Landed
-0000-crits_landed-0001|data.Desc		
-0000-cursed-0000|data.Name		Cursed
-0000-cursed-0001|data.Desc		The Pokémon is cursed and will take damage each time it attacks a foe. This status wears off after a few turns.
-0000-decoy-0000|data.Name		Decoy
-0000-decoy-0001|data.Desc		The Pokémon is made into a Decoy, making it a target of everyone's attacks. This status wears off after many turns have passed.
-0000-defense_curl-0000|data.Name		Defense Curl
-0000-defense_curl-0001|data.Desc		
-0000-destiny_bond-0000|data.Name		Destiny Bond
-0000-destiny_bond-0001|data.Desc		Any damage done to this Pokémon from direct attacks is also done to the target of the Destiny Bond. This status wears off after a few turns, or if the Pokémon moves.
-0000-detect-0000|data.Name		Detect
-0000-detect-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns.
-0000-digging-0000|data.Name		Digging
-0000-digging-0001|data.Desc		The Pokémon is digging underground and can avoid most moves and obstacles. It will resurface in a few turns, or when it chooses to attack.
-0000-disable-0000|data.Name		Disable
-0000-disable-0001|data.Desc		The Pokémon has one of its moves disabled and cannot use it.
-0000-diving-0000|data.Name		Diving
-0000-diving-0001|data.Desc		The Pokémon is hiding underwater and can avoid most moves. It will resurface in a few turns, or when it chooses to attack.
-0000-doom_desire-0000|data.Name		Doom Desire
-0000-doom_desire-0001|data.Desc		The Pokémon will be attacked at a few turns in the future. Nearby allies will also take splash damage when the attack hits.
-0000-electrified-0000|data.Name		Electrified
-0000-electrified-0001|data.Desc		The Pokémon has all of its moves converted to the Electric-type. This status wears off after a few turns.
-0000-embargo-0000|data.Name		Embargo
-0000-embargo-0001|data.Desc		The Pokémon is rendered incapable of using any items, and its held item item loses its effect. This status wears off after many turns have passed.
-0000-encore-0000|data.Name		Encore
-0000-encore-0001|data.Desc		The Pokémon is given an encore, forcing it to repeat the last move it used. This status wears off after a few turns.
-0000-endure-0000|data.Name		Endure
-0000-endure-0001|data.Desc		The Pokémon is bracing itself, preventing it from fainting from a direct attack. This status wears off after a few turns, or if the Pokémon moves.
-0000-enraged-0000|data.Name		Enraged
-0000-enraged-0001|data.Desc		The Pokémon will gain a boost to its Attack each time it takes damage from an attack. This status wears off after a few turns.
-0000-exposed-0000|data.Name		Exposed
-0000-exposed-0001|data.Desc		All attacks made on the Pokémon will ignore its resistances, immunities, and evasion changes.
-0000-fire_pledge-0000|data.Name		Fire Pledge
-0000-fire_pledge-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
-0000-fire_spin-0000|data.Name		Fire Spin
-0000-fire_spin-0001|data.Desc		The Pokémon is trapped in a vortex of fire, taking gradual damage and preventing it from moving. This status wears off after a few turns.
-0000-flinch-0000|data.Name		Cringing
-0000-flinch-0001|data.Desc		The Pokémon is cringing and cannot attack or use items. This status wears off on the next turn.
-0000-flying-0000|data.Name		Flying
-0000-flying-0001|data.Desc		The Pokémon is flying and can avoid most moves and obstacles. It will drop back down in a few turns, or when it chooses to attack.
-0000-focus_energy-0000|data.Name		Focus Energy
-0000-focus_energy-0001|data.Desc		The Pokémon is focused and can land critical hits more easily. This status wears off after many turns have passed.
-0000-follow_me-0000|data.Name		Follow Me
-0000-follow_me-0001|data.Desc		The Pokémon is the center of attention and will redirect any attack targetting its allies. This status wears off after a few turns.
-0000-freeze-0000|data.Name		Frozen
-0000-freeze-0001|data.Desc		The Pokémon is frozen and incapable of acting or being affected by moves. This status wears off after a few turns, or if the Pokémon is hit by a Fire-type attack.
-0000-friendly_fire-0000|data.Name		Friendly Fire
-0000-friendly_fire-0001|data.Desc		
-0000-future_sight-0000|data.Name		Future Sight
-0000-future_sight-0001|data.Desc		The Pokémon will be attacked a few turns in the future. Nearby allies will also take splash damage when the attack hits.
-0000-grass_pledge-0000|data.Name		Grass Pledge
-0000-grass_pledge-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
-0000-grudge-0000|data.Name		Grudge
-0000-grudge-0001|data.Desc		Enemies that damage this Pokémon with attacks will have all their moves lose PP. This status wears off after many turns have passed.
-0000-heal_block-0000|data.Name		Heal Block
-0000-heal_block-0001|data.Desc		The Pokémon is prevented from restoring its HP. This status wears off after many turns have passed.
-0000-illusion-0000|data.Name		Illusion
-0000-illusion-0001|data.Desc		The Pokémon has disguised itself as a different Pokémon. Wild Pokémon of the same species will not attack it.
-0000-immobilized-0000|data.Name		Immobilized
-0000-immobilized-0001|data.Desc		The Pokémon is immobilized and cannot move. This status wears off after a few turns.
-0000-in_love-0000|data.Name		In Love
-0000-in_love-0001|data.Desc		The Pokémon is infatuated with the enemy and cannot target it with any moves or items. This status wears off after a few turns.
-0000-infestation-0000|data.Name		Infestation
-0000-infestation-0001|data.Desc		The Pokémon is trapped by an infestation, taking gradual damage and preventing it from moving. This status wears off after a few turns.
-0000-ingrain-0000|data.Name		Ingrain
-0000-ingrain-0001|data.Desc		The Pokémon's roots are planted in the ground, gradually restoring its HP and preventing it from moving. This status wears off after a few turns.
-0000-invisible-0000|data.Name		Invisible
-0000-invisible-0001|data.Desc		The Pokémon is invisible and cannot be seen by other Pokémon. This status wears off after a few turns.
-0000-kings_shield-0000|data.Name		King's Shield
-0000-kings_shield-0001|data.Desc		The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks. 
-0000-last_ally_move-0000|data.Name		Last Ally Move
-0000-last_ally_move-0001|data.Desc		
-0000-last_move_hit_by_other-0000|data.Name		Last Move Hit By Other
-0000-last_move_hit_by_other-0001|data.Desc		
-0000-last_targeted_by-0000|data.Name		Last Targeted By
-0000-last_targeted_by-0001|data.Desc		
-0000-last_used_move-0000|data.Name		Last Used Move
-0000-last_used_move-0001|data.Desc		
-0000-last_used_move_slot-0000|data.Name		Last Used Move Slot
-0000-last_used_move_slot-0001|data.Desc		
-0000-leech_seed-0000|data.Name		Leech Seed
-0000-leech_seed-0001|data.Desc		The Pokémon's HP is sapped and given to a foe every turn. This status wears off if there are no foes around.
-0000-light_screen-0000|data.Name		Light Screen
-0000-light_screen-0001|data.Desc		The Pokémon takes half damage from special attacks. This status wears off after a few turns.
-0000-lucky_chant-0000|data.Name		Lucky Chant
-0000-lucky_chant-0001|data.Desc		The Pokémon is protected from critical hits and the additional effects of attacking moves. This status wears off after many turns have passed.
-0000-magic_coat-0000|data.Name		Magic Coat
-0000-magic_coat-0001|data.Desc		The Pokémon will reflect any moves that inflict status back at the user. This status wears off after a few turns.
-0000-magma_storm-0000|data.Name		Magma Storm
-0000-magma_storm-0001|data.Desc		The Pokémon is trapped by a vortex of magma, taking gradual damage and preventing it from moving. This status wears off after a few turns.
-0000-magnet_rise-0000|data.Name		Magnet Rise
-0000-magnet_rise-0001|data.Desc		The Pokémon is levitating with electromagnetism, allowing it to avoid Ground-type attacks. This status wears off after many turns have passed.
-0000-mental_charged-0000|data.Name		Mental-Charged
-0000-mental_charged-0001|data.Desc		The Pokémon is protected against move-binding effects. This status wears off after many turns have passed.
-0000-metal_burst-0000|data.Name		Metal Burst
-0000-metal_burst-0001|data.Desc		All damage done to this Pokémon will be reflected on all nearby foes. This status wears off after a few turns, or if the Pokémon moves.
-0000-mini_counter-0000|data.Name		Mini-Counter
-0000-mini_counter-0001|data.Desc		The Pokémon will return damage from all attacks back at the user. This status wears off after many turns have passed.
-0000-minimized-0000|data.Name		Minimized
-0000-minimized-0001|data.Desc		
-0000-miracle_eye-0000|data.Name		Miracle Eye
-0000-miracle_eye-0001|data.Desc		All attacks made by the Pokémon will ignore the target's resistances, immunities, and evasion changes.
-0000-mirror_coat-0000|data.Name		Mirror Coat
-0000-mirror_coat-0001|data.Desc		The Pokémon will return damage from special attacks back at the user with double the power. This status wears off after a few turns.
-0000-missed_all_last_turn-0000|data.Name		Missed All Last Turn
-0000-missed_all_last_turn-0001|data.Desc		
-0000-mist-0000|data.Name		Mist
-0000-mist-0001|data.Desc		The Pokémon is surrounded in mist, preventing others from dropping its stats. This status wears off after many turns have passed.
-0000-mod_accuracy-0000|data.Name		Accuracy
-0000-mod_accuracy-0001|data.Desc		The Pokémon's Accuracy has been modified, allowing its attacks to hit more or less often.
-0000-mod_attack-0000|data.Name		Attack
-0000-mod_attack-0001|data.Desc		The Pokémon's Attack has been modified, doing more or less damage with Physical attacks.
-0000-mod_defense-0000|data.Name		Defense
-0000-mod_defense-0001|data.Desc		The Pokémon's Defense has been modified, causing it to take more or less damage from Physical attacks.
-0000-mod_evasion-0000|data.Name		Evasion
-0000-mod_evasion-0001|data.Desc		The Pokémon's Evasion has been modified, allowing it to dodge attacks more or less often.
-0000-mod_range-0000|data.Name		Range
-0000-mod_range-0001|data.Desc		
-0000-mod_special_attack-0000|data.Name		Special Attack
-0000-mod_special_attack-0001|data.Desc		The Pokémon's Special Attack has been modified, doing more or less damage with Special attacks.
-0000-mod_special_defense-0000|data.Name		Special Defense
-0000-mod_special_defense-0001|data.Desc		The Pokémon's Special Defense has been modified, causing it to take more or less damage from Special attacks.
-0000-mod_speed-0000|data.Name		Movement Speed
-0000-mod_speed-0001|data.Desc		The Pokémon's Movement Speed has been modified to move faster or slower than usual.
-0000-nightmare-0000|data.Name		Nightmare
-0000-nightmare-0001|data.Desc		The Pokémon takes gradual damage every turn when it is sleeping. This status wears off after many turns have passed.
-0000-none-0000|data.Name		None
-0000-none-0001|data.Desc		
-0000-outrage-0000|data.Name		Outrage
-0000-outrage-0001|data.Desc		The Pokémon will use Outrage repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.
-0000-paralyze-0000|data.Name		Paralyzed
-0000-paralyze-0001|data.Desc		The Pokémon is paralyzed and cannot move in consecutive turns. This status wears off after a few turns.
-0000-paused-0000|data.Name		Paused
-0000-paused-0001|data.Desc		The Pokémon is rendered incapable of taking any action. This status wears off after a few turns.
-0000-perish_song-0000|data.Name		Perish Song
-0000-perish_song-0001|data.Desc		The Pokémon has heard Perish Song, and will faint when its countdown reaches zero.
-0000-petal_dance-0000|data.Name		Petal Dance
-0000-petal_dance-0001|data.Desc		The Pokémon will use Petal Dance repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.
-0000-phantom_force-0000|data.Name		Phantom Force
-0000-phantom_force-0001|data.Desc		The Pokémon vanished completely and can avoid moves and obstacles. It will reappear in a few turns, or when it chooses to attack.
-0000-pierce-0000|data.Name		Pierce
-0000-pierce-0001|data.Desc		The Pokémon's attacks and items can hit through multiple targets and walls.
-0000-poison-0000|data.Name		Poisoned
-0000-poison-0001|data.Desc		The Pokémon takes damage on every action, and its ability to recover HP is reduced. This status wears off after a few turns.
-0000-poison_toxic-0000|data.Name		Badly Poisoned
-0000-poison_toxic-0001|data.Desc		The Pokémon takes damage on every action, with the damage worsening if it attacks. Its ability to recover HP is also reduced. This status wears off after a few turns.
-0000-powder-0000|data.Name		Powder
-0000-powder-0001|data.Desc		The Pokémon is covered in a powder that causes an explosion when exposed to fire or electricity.
-0000-power_charged-0000|data.Name		Power-Charged
-0000-power_charged-0001|data.Desc		The Pokémon is able to use moves without charging or recharging, and its PP is prevented from dropping. This status wears off after many turns have passed.
-0000-protect-0000|data.Name		Protect
-0000-protect-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.
-0000-quick_guard-0000|data.Name		Quick Guard
-0000-quick_guard-0001|data.Desc		The Pokémon is protected from moves that have a long range. This status wears off after a few turns.
-0000-rage_powder-0000|data.Name		Rage Powder
-0000-rage_powder-0001|data.Desc		The Pokémon is enraged by the enemy and cannot target anyone else with any moves or items. This status wears off after a few turns.
-0000-recruit_boost-0000|data.Name		Recruit Boost
-0000-recruit_boost-0001|data.Desc		The Pokémon's chances of recruiting other members is temporarily increased.
-0000-reflect-0000|data.Name		Reflect
-0000-reflect-0001|data.Desc		The Pokémon takes half damage from physical attacks. This status wears off after a few turns.
-0000-regeneration-0000|data.Name		Regeneration
-0000-regeneration-0001|data.Desc		The Pokémon gradually regains HP each turn. This status wears off after a few turns.
-0000-retaliate-0000|data.Name		Retaliate
-0000-retaliate-0001|data.Desc		The Pokémon is ready to retaliate, unleashing the move whenever a nearby foe attacks an ally. This status wears off after a few turns.
-0000-roosting-0000|data.Name		Roosting
-0000-roosting-0001|data.Desc		The Pokémon is roosting, eliminating its Flying-type matchups. This status wears off when the Pokémon moves.
-0000-safeguard-0000|data.Name		Safeguard
-0000-safeguard-0001|data.Desc		The Pokémon is protected from bad status effects with a veil. This status wears off after many turns have passed.
-0000-sand_tomb-0000|data.Name		Sand Tomb
-0000-sand_tomb-0001|data.Desc		The Pokémon is trapped in quicksand, taking gradual damage and preventing it from moving. This status wears off after a few turns.
-0000-shadow_force-0000|data.Name		Shadow Force
-0000-shadow_force-0001|data.Desc		The Pokémon vanished completely and can avoid moves and obstacles. Its Movement Speed is also boosted. It will reappear in a few turns, or when it chooses to attack.
-0000-shopkeeper-0000|data.Name		Shopkeeper
-0000-shopkeeper-0001|data.Desc		
-0000-sky_drop_target-0000|data.Name		Sky Drop
-0000-sky_drop_target-0001|data.Desc		The Pokémon is being held in the sky and is rendered incapable of any action. Most moves will miss the Pokémon during this time.
-0000-sky_drop_user-0000|data.Name		Sky Drop
-0000-sky_drop_user-0001|data.Desc		The Pokémon is holding its target in the sky and can avoid most moves. It will drop back down on the next turn.
-0000-sleep-0000|data.Name		Asleep
-0000-sleep-0001|data.Desc		The Pokémon is asleep and incapable of any action until it wakes up. This status wears off after a few turns, or if the Pokémon is attacked.
-0000-sleepless-0000|data.Name		Sleepless
-0000-sleepless-0001|data.Desc		The Pokémon is prevented from becoming drowsy or sleeping. This status wears off after many turns have passed.
-0000-slip-0000|data.Name		Slip
-0000-slip-0001|data.Desc		The Pokémon is given the ability to traverse water.
-0000-snatch-0000|data.Name		Snatch
-0000-snatch-0001|data.Desc		The Pokémon is ready to snatch any stat-boosting move that foes use on themselves. This status wears off after a few turns.
-0000-stat_charged-0000|data.Name		Stat-Charged
-0000-stat_charged-0001|data.Desc		The Pokémon is protected from all stat changes, including its own.
-0000-status_protection-0000|data.Name		Status Protection
-0000-status_protection-0001|data.Desc		The Pokémon is protected from a certain status effect. This status wears off after many turns have passed.
-0000-stockpile-0000|data.Name		Stockpile
-0000-stockpile-0001|data.Desc		The Pokémon has stockpiled energy, to use in the moves Swallow or Spit Up. It also increases its Defense and Special Defense. This status wears off after many turns have passed.
-0000-super_mobile-0000|data.Name		Super Mobile
-0000-super_mobile-0001|data.Desc		The Pokémon is given the ability to traverse walls.
-0000-sure_shot-0000|data.Name		Sure Shot
-0000-sure_shot-0001|data.Desc		The Pokémon's attacks cannot miss. This status wears off after many turns have passed.
-0000-taunted-0000|data.Name		Taunted
-0000-taunted-0001|data.Desc		The Pokémon is taunted into only using attacking moves. This status wears off after many turns have passed.
-0000-telekinesis-0000|data.Name		Telekinesis
-0000-telekinesis-0001|data.Desc		The Pokémon is floating from telekinesis, preventing it from moving or avoiding attacks. This status wears off after a few turns.
-0000-thrash-0000|data.Name		Thrash
-0000-thrash-0001|data.Desc		The Pokémon will use Thrash repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.
-0000-times_move_used-0000|data.Name		Times Move Used
-0000-times_move_used-0001|data.Desc		
-0000-torment-0000|data.Name		Torment
-0000-torment-0001|data.Desc		The Pokémon is prevented from using the same move twice in a row. This status wears off after many turns have passed.
-0000-transformed-0000|data.Name		Transformed
-0000-transformed-0001|data.Desc		
-0000-type_boosted-0000|data.Name		Type-Boosted
-0000-type_boosted-0001|data.Desc		The Pokémon has moves of a certain type boosted. This status wears off after many turns have passed.
-0000-type_converted-0000|data.Name		Type-Converted
-0000-type_converted-0001|data.Desc		The Pokémon has all of its moves converted to a single type.
-0000-type_protected-0000|data.Name		Type-Protected
-0000-type_protected-0001|data.Desc		The Pokémon is protected from moves of a certain type. This status wears off after many turns have passed.
-0000-veiled-0000|data.Name		Veiled
-0000-veiled-0001|data.Desc		
-0000-was_hurt_last_turn-0000|data.Name		Was Hurt Last Turn
-0000-was_hurt_last_turn-0001|data.Desc		
-0000-water_pledge-0000|data.Name		Water Pledge
-0000-water_pledge-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
-0000-weakness_drain-0000|data.Name		Weakness Drain
-0000-weakness_drain-0001|data.Desc		The Pokémon will have its HP restored if hit by a super-effective move. This status wears off after many turns have passed.
-0000-whirlpool-0000|data.Name		Whirlpool
-0000-whirlpool-0001|data.Desc		The Pokémon is trapped in a whirlpool, taking gradual damage and preventing it from moving. This status wears off after a few turns.
-0000-wide_guard-0000|data.Name		Wide Guard
-0000-wide_guard-0001|data.Desc		The Pokémon is protected from moves that hit in a wide range. This status wears off after a few turns.
-0000-wish-0000|data.Name		Wish
-0000-wish-0001|data.Desc		The Pokémon will have its HP restored a few turns in the future. The amount of HP restored depends on the Maximum HP of the user.
-0000-wrap-0000|data.Name		Wrap
-0000-wrap-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.
-0000-yawning-0000|data.Name		Yawning
-0000-yawning-0001|data.Desc		The Pokémon is yawning and will fall asleep in a few turns.
+Key		EN	ZH-HANS	FR	DE	ES	IT	PT
+0000-all_protect-0000|data.Name		All Protect	全面保护					
+0000-all_protect-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns.	这只宝可梦受到了保护，不会受到任何招式影响。该状态在几回合后解除。					
+0000-aqua_ring-0000|data.Name		Aqua Ring	水流环	Anneau Hydro	Wasserring	Acua Aro	Acquanello	
+0000-aqua_ring-0001|data.Desc		The Pokémon is surrounded by a veil of water that gradually restores its HP. This status wears off after a few turns.	宝可梦的身体周围覆盖着可逐渐回复HP的水幕。该状态在几回合后解除。	Le Pokémon est entouré d'un anneau d'eau qui restaure régulièrement ses PV. Ce statut disparaît après quelques tours.	Das Pokémon ist mit einem Schleier aus Wasser umgeben, wodurch es stetig KP regeneriert. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está rodeado por un manto de agua que restaura gradualmente sus PS. Este estado desaparece tras unos turnos.		
+0000-area_counter-0000|data.Name		Area Counter	区域奉还	Riposte Zone	Bereichskonter			
+0000-area_counter-0001|data.Desc		All damage done to this Pokémon of a certain category of moves will be reflected on all foes within 3 tiles. This status wears off after many turns have passed.	对这只宝可梦造成的所有伤害都会奉还到3格内的对手上。该状态在几回合后解除。		Jeglicher Schaden einer bestimmten Kategorie, der an diesem Pokémon verursacht wurde, wird an alle Gegner innerhalb von 3 Feldern reflektiert. Dieser Status lässt nach vielen Zügen nach.			
+0000-belch-0000|data.Name		Belch	打嗝	Éructation	Rülpser	Eructo	Rutto	
+0000-belch-0001|data.Desc		The Pokémon is ready to belch, unleashing the attack whenever it eats a food item. This status wears off after a few turns.	这只宝可梦正在准备打嗝，食用食物后就会发动攻击。该状态在几回合后解除。	Le Pokémon est prêt à éructer et libère l'attaque dès qu'il mange un aliment. Ce statut disparaît après quelques tours.	Das Pokémon ist bereit zu rülpsen, wodurch es jedes Mal, wenn es etwas isst, eine Attacke auszulöst. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está listo para eructar, desatando el ataque siempre que coma un objeto comida. Este estado desaparece tras unos turnos. 		
+0000-biding-0000|data.Name		Biding	忍耐	Patience	Geduld	Venganza	Pazienza	
+0000-biding-0001|data.Desc		The Pokémon is storing energy for an attack. In a few turns, it will unleash the energy, doing double the amount of damage it took while biding.	这只宝可梦正在为一次攻击储存能量。几回合后，它将释放能量，并造成在忍耐期间受到所有伤害的两倍的伤害。	Le Pokémon patiente et encaisse les coups. Après plusieurs tours, il attaque occasionnant le double des dégâts qu'il à subit en pendant sa Patience	Das Pokémon speichert Energie für einen Angriff. In einigen Zügen wird es seine Energie entfesseln. Der Schaden, den es während Geduld erhalten hat, wird mit doppelter Kraft zugefügt.	El Pokémon está acumulando energía para un ataque. En unos turnos liberará la energía, haciendo el doble del daño recibido durante este estado.		
+0000-bind-0000|data.Name		Bind	绑紧		gefesselt			
+0000-bind-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.	这只宝可梦无法做任何事情，并且会持续受到敌人的伤害。该状态在几回合后解除。	Le Pokémon est incapable d'effectuer une action et subit des dégâts progressifs de l'ennemi. Ce statut disparaît après quelques tours.	Das Pokémon ist unfähig, jegliche Handlung zu durchführen und nimmt vom Gegner stetig Schaden. Dieser Status lässt nach einigen Zügen nach.	El Pokémon es incapaz de realizar ninguna acción, y recibe daño gradual del enemigo. Este estado desaparece tras unos turnos.		
+0000-blinker-0000|data.Name		Blinker	失明	Ébloui	Geblendet	Ceguera		
+0000-blinker-0001|data.Desc		The Pokémon has its Attack Range limited, allowing it to hit only targets in front. This status wears off after many turns have passed.	这只宝可梦的攻击范围受限，只能攻击前方的对手。该状态在几回合后解除。	La portée des attaques du Pokémon est diminuée, il ne peut attaquer que les ennemis proches de lui. Ce statut disparaît après plusieurs tours.	Die Reichweite des Pokémon ist eingeschränkt, wodurch es ausschließlich Ziele direkt vor ihm treffen kann. Dieser Status lässt nach vielen Zügen nach.	El Pokémon tiene su Rango de Ataque limitado, permitiendole golpear sólo a objetivos enfrente suya. Este estado desaparece tras pasar varios turnos.		
+0000-bouncing-0000|data.Name		Bouncing	弹跳	Rebond	Springend	Botando		
+0000-bouncing-0001|data.Desc		The Pokémon is in mid-air from a bounce and can avoid most moves. It will unleash the move on its next turn.	这只宝可梦高高地跳到半空，可以躲避大多数招式。下回合将使出弹跳。	Le Pokémon est en plein rebond et peut éviter la plupart des attaques. Il libère l'attaque au prochain tour.	Das Pokémon ist durch einen Sprung in der Luft und kann dadurch den meisten Angriffen und Hindernissen ausweichen. Es wird die Attacke in der nächsten Runde ausführen.	El Pokémon está en el aire de un bote y puede esquivar muchos movimientos. Liberará el movimiento en el siguiente turno.		
+0000-burn-0000|data.Name		Burned	灼伤	Brûlé	Brennend	Quemado		Queimado
+0000-burn-0001|data.Desc		The Pokémon will take some damage every turn it attacks, and its Attack will be lowered.	这只宝可梦每攻击一回合都会受到伤害，且攻击会下降。					O Pokémon receberá um pouco de dano a cada turno que atacar, e seu Ataque cairá.
+0000-charge-0000|data.Name		Charge	充电	Chargeur	Aufgeladen	Carga		
+0000-charge-0001|data.Desc		The Pokémon is charging electrical energy, boosting the power of an Electric-type attack. This status wears off after a few turns.	这只宝可梦正在蓄积电能，电属性招式的威力增加。该状态在几回合后解除。	Le Pokémon est chargé d'énergie électrique, ses capacités Électrik sont boostées. Ce statut disparaît après quelques tours.	Das Pokémon lädt elektrische Energie auf, wodurch es die Kraft von Elektro-Attacken verstärkt. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está cargando energía eléctrica, potenciando los ataques de tipo Eléctrico. Este estado desaparece tras unos turnos.		
+0000-charging_focus_punch-0000|data.Name		Charging Focus Punch	真气拳蓄力	Charge Mitra-Poing	Power-Punch aufladend	Cargando Puño Certero		
+0000-charging_focus_punch-0001|data.Desc		The Pokémon is charging Focus Punch. It will unleash the move on its next attack.	这只宝可梦正在为真气拳蓄力，下回合将使出真气拳。	Le Pokémon charge l'attaque Mitra-Poing. Il libère l'attaque au prochain tour.	Dieses Pokémon lädt Power-Punch auf. Es wird ihn in der nächsten Runde entfesseln.	El Pokémon está cargando Puño Certero. Liberará el movimiento en el próximo turno.		
+0000-charging_razor_wind-0000|data.Name		Charging Razor Wind	旋风刀蓄力	Charge Coupe-Vent	Klingensturm aufladend	Cargando Viento Cortante		
+0000-charging_razor_wind-0001|data.Desc		The Pokémon is charging Razor Wind. It will unleash the move on its next turn.	这只宝可梦正在为旋风刀蓄力，下回合将使出旋风刀。	Le Pokémon charge l'attaque Coupe-Vent. Il libère l'attaque au prochain tour.	Dieses Pokémon lädt Klingensturm auf. Es wird ihn in der nächsten Runde entfesseln.	El Pokémon está cargando Viento Cortante. Liberará el movimiento en el próximo turno.		
+0000-charging_skull_bash-0000|data.Name		Charging Skull Bash	火箭头槌蓄力	Charge Coud'Krâne	Schädelwumme aufladend	Cargando Cabezazo		
+0000-charging_skull_bash-0001|data.Desc		The Pokémon is charging Skull Bash. It will unleash the move on its next turn.	这只宝可梦正在为火箭头槌蓄力，下回合将使出火箭头槌。	Le Pokémon charge l'attaque Coud'Krâne. Il libère l'attaque au prochain tour.	Dieses Pokémon lädt Schädelwumme auf. Es wird ihn in der nächsten Runde entfesseln.	El Pokémon está cargando Cabezazo. Liberará el movimiento en el próximo turno.		
+0000-charging_sky_attack-0000|data.Name		Charging Sky Attack	神鸟猛击蓄力	Charge Piqué	Himmelsfeger aufladend	Cargando Ataque Aéreo		
+0000-charging_sky_attack-0001|data.Desc		The Pokémon is charging Sky Attack. It will unleash the move on its next turn.	这只宝可梦正在为神鸟猛击蓄力，下回合将使出神鸟猛击。	Le Pokémon charge l'attaque Piqué. Il libère l'attaque au prochain tour.	Dieses Pokémon lädt Himmelsfeger auf. Es wird ihn in der nächsten Runde entfesseln.	El Pokémon está cargando Ataque Aéreo. Liberará el movimiento en el próximo turno.		
+0000-charging_solar_beam-0000|data.Name		Charging Solar Beam	日光束蓄力	Charge Lance-Soleil	Solarstrahl aufladend	Cargando Rayo Solar		
+0000-charging_solar_beam-0001|data.Desc		The Pokémon is charging Solar Beam. It will unleash the move on its next turn.	这只宝可梦正在为日光束蓄力，下回合将使出日光束。	Le Pokémon charge l'attaque Lance-Soleil. Il libère l'attaque au prochain tour.	Dieses Pokémon lädt Solarstrahl auf. Es wird ihn in der nächsten Runde entfesseln.	El Pokémon está cargando Rayo Solar. Liberará el movimiento en el próximo turno.		
+0000-chasing-0000|data.Name		Chasing	追逐	Poursuite	Verfolgend	Persecución		
+0000-chasing-0001|data.Desc		Every time the target makes a move, this Pokémon will automatically warp to it. This status wears off after a few turns.	每当目标移动时，这只宝可梦会自动地传送到目标附近。该状态在几回合后解除。	Chaque fois que la cible se déplace, le Pokémon est téléporté près d'elle. Ce statut disparaît après quelque tours.	Jedes Mal, wenn das Ziel sich bewegt, wird dieses Pokémon zum Ziel teleportiert. Dieser Status lässt nach einigen Zügen nach.	Cada vez que el objetivo se mueva, el Pokémon automáticamente se teletransporta hasta él. Este estado desaparace tras unos turnos.		
+0000-clamp-0000|data.Name		Clamp	钳制		eingeklemmt	Tenaza		
+0000-clamp-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.	这只宝可梦无法做任何事情，并且会持续受到敌人的伤害。该状态在几回合后解除。	Le Pokémon est incapable d'effectuer une action et subit des dégâts progressifs de l'ennemi. Ce statut disparaît après quelques tours.	Das Pokémon ist unfähig, jegliche Handlung zu durchführen und nimmt vom Gegner stetig Schaden. Dieser Status lässt nach einigen Zügen nach.	El Pokémon es incapaz de realizar ninguna acción, y recibe daño gradual del enemigo. Este estado desaparece tras unos turnos.		
+0000-confuse-0000|data.Name		Confused	混乱	Confus	Verwirrt	Confuso		Confuso
+0000-confuse-0001|data.Desc		The Pokémon is confused, causing its movements and attacks to vary wildly. Attacks that target foes can also target friends, and vice versa.	这只宝可梦混乱了，它的移动方式和攻击方式变得不受控制。对敌人的攻击可能对队友造成伤害，反之亦然。	Le Pokémon est confus et la direction de ses attaques est aléatoire. Ses attaques peuvent toucher ses alliés.	Das Pokémon ist verwirrt, wodurch die Richtung von Bewegungen und Attacken wild variiert. Angriffe, welche den Gegner als Ziel wählen, können nun auf Verbündete gewirkt werden und umgekehrt.	El Pokémon está confuso, causando que sus movimientos y ataques varíen a lo loco. Los ataques a objetivos enemigos también pueden dañar a aliados, y viceversa.		
+0000-conversion-0000|data.Name		Conversion	纹理	Conversion	Umwandlung	Conversión		
+0000-conversion-0001|data.Desc		The Pokémon will change its type to match its moves. This status wears off after a few turns.	这只宝可梦的属性将会与使出的招式属性同步。该状态在几回合后解除。	Le Pokémon va changer de type pour correspondre à ses capacités. Ce statut disparaît après quelques tours.	Das Pokémon wird seinen Typ nach seinen Attacken verändern. Dieser Status lässt nach einigen Zügen nach.	El Pokémon cambiará su tipo para coincidir con sus movimientos. Este estado desaparece tras unos turnos.		
+0000-conversion_2-0000|data.Name		Conversion 2	纹理2	Conversion 2	Umwandlung 2	Conversión 2		
+0000-conversion_2-0001|data.Desc		The Pokémon will change its type to resist incoming moves. This status wears off after a few turns.	这只宝可梦的属性将会改变其为抵抗对手的属性。该状态在几回合后解除。		Das Pokémon verändert seinen Typ, um eingehende Attacken widerstehen zu können. Dieser Status lässt nach einigen Zügen nach.	El Pokémon cambiará su tipo para resistir próximos movimientos. Este estado desaparece tras unos turnos.		
+0000-counter-0000|data.Name		Counter	双倍奉还	Riposte	Konter	Contraataque		
+0000-counter-0001|data.Desc		The Pokémon will return damage from physical attacks back at the user with double the power. This status wears off after a few turns.	这只宝可梦将会把受到的物理攻击伤害以双倍返还给使用者。该状态在几回合后解除。	Le Pokémon renvoie le double des dégâts des Attaques Physiques à l'ennemi. Ce statut disparaît après quelques tours.	Das Pokémon wirft jeglichen Schaden von physischen Attacken doppelt so stark an seinen Angreifer zurück. Dieser Status lässt nach einigen Zügen nach.	El Pokémon devolverá el daño de los ataques físicos al usuario con el doble de potencia. Este estado desaparece tras unos turnos.		
+0000-crits_landed-0000|data.Name		Crits Landed						
+0000-crits_landed-0001|data.Desc								
+0000-cursed-0000|data.Name		Cursed	诅咒	Malédiction	Verflucht	Maldecido		
+0000-cursed-0001|data.Desc		The Pokémon is cursed and will take damage each time it attacks a foe. This status wears off after a few turns.	这只宝可梦被诅咒了，每次攻击敌人时都将受到伤害。该状态在几回合后解除。	Le Pokémon est maudit et va prendre des dégâts chaque fois qu'il attaque un ennemi. Ce statut disparaît après quelques tours.	Das Pokémon ist verflucht und nimmt jedes Mal Schaden, wenn es einen Gegner angreift. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está maldecido y recibirá daño cada turno que ataque a un enemigo. Este estado desaparece tras unos turnos.		
+0000-decoy-0000|data.Name		Decoy	诱饵	Appât	Köder	Señuelo		
+0000-decoy-0001|data.Desc		The Pokémon is made into a Decoy, making it a target of everyone's attacks. This status wears off after many turns have passed.	这只宝可梦变成了一个诱饵，成为了每个人的攻击目标。该状态在大量回合后解除。	Le Pokémon devient un appât, il est la cible des attaques de tout le monde. Ce statut disparaît après plusieurs tours.	Das Pokémon wird zum Köder, wodurch es zum Ziel aller Angriffe in der Nähe wird. Dieser Status lässt nach vielen Zügen nach.	El Pokémon se convierte en un Señuelo, haciéndolo un objetivo de los ataques de todos. Este estado desaparece tras pasar varios turnos.		
+0000-defense_curl-0000|data.Name		Defense Curl	变圆	Boul'Armure	Einigler	Rizo Defensa		
+0000-defense_curl-0001|data.Desc								
+0000-destiny_bond-0000|data.Name		Destiny Bond	同命	Prlvt Destin	Abgangsbund	Mismo Destino		
+0000-destiny_bond-0001|data.Desc		Any damage done to this Pokémon from direct attacks is also done to the target of the Destiny Bond. This status wears off after a few turns, or if the Pokémon moves.	任何直接攻击对这只宝可梦造成伤害时，也会对同命的目标造成伤害。该状态在几回合后，或宝可梦移动后解除。		Jeglicher Schaden, der an diesem Pokémon angerichtet wird, wird auch beim Ziel des Abgangsbundes verursacht. Dieser Status lässt entweder nach einigen Zügen nach oder wenn sich das Pokémon bewegt.	Todo el daño recibido por el Pokémon por ataques directos también lo recibe el objetivo de Mismo Destino. Este estado desparace tras unos turnos, o hasta que el Pokémon se mueva.		
+0000-detect-0000|data.Name		Detect	看穿	Détection	Scanner	Detección		
+0000-detect-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns.	这只宝可梦受到了保护，不会受到任何招式影响。该状态在几回合后解除。					
+0000-digging-0000|data.Name		Digging	挖洞	Tunnel	Schaufelnd	Excavando		
+0000-digging-0001|data.Desc		The Pokémon is digging underground and can avoid most moves and obstacles. It will resurface in a few turns, or when it chooses to attack.	这只宝可梦潜入了地下，可以躲避大多数招式和障碍。在几回合后或主动选择攻击后回到地面。	Le Pokémon creuse sous le sol, évitant ainsi la plupart des attaques et obstacles. Il refait surface après plusieurs tours ou lorqu'il choisit d'attaquer.	Dieses Pokémon gräbt sich in den Boden und kann dadurch den meisten Angriffen und Hindernissen ausweichen. Es taucht entweder in einigen Zügen wieder auf oder wenn es sich entscheidet anzugreifen.	El Pokémon está excavando bajo tierra y puede esquivar muchos movimientos y obstáculos. Volverá a la superficie en unos turnos, o cuando decida atacar.		
+0000-disable-0000|data.Name		Disable	招式禁用	Entrave	Aussetzer			
+0000-disable-0001|data.Desc		The Pokémon has one of its moves disabled and cannot use it.	这只宝可梦的一个招式被禁用了，将无法使用该招式	Une capacité du Pokémon est entravée, il ne peut plus l'utiliser.	Eine Attacke des Pokémon ist blockiert und kann nicht benutzt werden.			
+0000-diving-0000|data.Name		Diving	潜水	Plongée	Tauchend	Buceando		
+0000-diving-0001|data.Desc		The Pokémon is hiding underwater and can avoid most moves. It will resurface in a few turns, or when it chooses to attack.	这只宝可梦正潜入水下，可以躲避大多数招式。在几回合后或主动选择攻击后回到水面。	Le Pokémon se cache sous l'eau, évitant ainsi la plupart des attaques. Il refait surface après plusieurs tours ou lorqu'il choisit d'attaquer.	Das Pokémon taucht unter Wasser ab und kann dadurch den meisten Angriffen und Hindernissen ausweichen. Es taucht entweder in einigen Zügen wieder auf oder wenn es sich entscheidet anzugreifen.	El Pokémon se está ocultando bajo el agua y puede esquivar muchos movimientos. Volverá a la superficie en unos turnos, o cuando decida atacar.		
+0000-doom_desire-0000|data.Name		Doom Desire	破灭之愿		Kismetwunsch	Deseo Oculto		
+0000-doom_desire-0001|data.Desc		The Pokémon will be attacked at a few turns in the future. Nearby allies will also take splash damage when the attack hits.	这只宝可梦将在未来的几回合受到攻击。当攻击到来，附近的队友也会受到溅射伤害。		Das Pokémon wird in der nahen Zukunft angegriffen. Sich in der Nähe befindene Verbündete des Ziels erhalten auch Schaden wenn die Attacke trifft.	El Pokémon será atacado en unos turnos en el futuro. Aliados cercanos recibirán daño por salpicadura cuando el ataque impacte.		
+0000-electrified-0000|data.Name		Electrified	输电	Électrifié	Elektrifiziert			
+0000-electrified-0001|data.Desc		The Pokémon has all of its moves converted to the Electric-type. This status wears off after a few turns.	这只宝可梦的招式都变为了电属性。该状态在几回合后解除。					
+0000-embargo-0000|data.Name		Embargo	查封	Embargo	Itemsperre	Embargo		
+0000-embargo-0001|data.Desc		The Pokémon is rendered incapable of using any items, and its held item item loses its effect. This status wears off after many turns have passed.	这只宝可梦无法使用道具，携带的道具也会失去效果。该状态在大量回合后解除。	Le Pokémon est incapable d'utiliser des objets et perd l'effet de son objet tenu. Ce statut disparaît après plusieurs tours.	Das Pokémon kann keine Items benutzen und sein gehaltenes Item verliert jeglichen Effekt. Dieser Status lässt nach vielen Zügen nach.	El Pokémon es incapaz de usar cualquier objeto, y los objetos que lleve pierden su efecto. Este estado desaparece tras pasar varios turnos.		
+0000-encore-0000|data.Name		Encore	再来一次	Encore	Zugabe	Otra Vez		
+0000-encore-0001|data.Desc		The Pokémon is given an encore, forcing it to repeat the last move it used. This status wears off after a few turns.	这只宝可梦接受了再来一次，迫使它重复使用上一次的招式。该状态在几回合后解除。	Le Pokémon subit un Encore le forçant à répéter la dernière capacité utilisé. Ce statut disparaît après quelques tours.	Das Pokémon gibt eine Zugabe, wodurch es gezwungen ist, die zuletzt eingesetzte Attacke zu nutzen. Dieser Status lässt nach einigen Zügen nach.			
+0000-endure-0000|data.Name		Endure	挺住	Ténacité	Ausdauer	Aguante		
+0000-endure-0001|data.Desc		The Pokémon is bracing itself, preventing it from fainting from a direct attack. This status wears off after a few turns, or if the Pokémon moves.	这只宝可梦挺住了，不会因为直接攻击而被打倒。该状态在几回合后，或宝可梦移动后解除。	Le Pokémon rassemble ses forces, il ne peut plus tomber K.O d'une attaque directe. Ce statut disparaît après quelques tours ou si le Pokémon bouge.	Das Pokémon macht sich bereit, den nächsten direkten Angriff zu widerstehen, wodurch es nicht besiegt werden kann. Dieser Status lässt entweder nach einigen Zügen nach oder wenn sich das Pokémon bewegt.	El Pokémon se está preparando, impidiendo debilitarse de un ataque directo. Este estado desaparece tras unos turnos, o si el Pokémon se mueve.		
+0000-enraged-0000|data.Name		Enraged	愤怒	Frénétique	Raserei	Furioso		
+0000-enraged-0001|data.Desc		The Pokémon will gain a boost to its Attack each time it takes damage from an attack. This status wears off after a few turns.	这只宝可梦每次受到攻击时，其攻击都会提高。该状态在几回合后解除。	Le Pokémon gagne un boost d'Attaque à chaque fois qu'il subit des dégâts. Ce statut disparaît après quelques tours.	Das Pokémon erhält jedes Mal einen Angriffswertschub, wenn es von einem Angriff Schaden erhält. Dieser Status lässt nach einigen Zügen nach.	El Pokémon recibirá un aumento de su Ataque cada vez que reciba daño de un ataque. Este estado desaparece tras unos turnos.		
+0000-exposed-0000|data.Name		Exposed	被识破	Vulnérable	Offengelegt	Expuesto		
+0000-exposed-0001|data.Desc		All attacks made on the Pokémon will ignore its resistances, immunities, and evasion changes.	所有对这只宝可梦的攻击将无视其相应的抗性、 免疫和闪避率变化。	Toutes les attaques infligés au Pokémon ne prennent plus en compte ses faiblesses, résistances et son esquive	Alle Attacken, die dieses Pokémon als Ziel auswählen, ignorieren Resistenzen, Immunitäten und Fluchtwertsveränderungen.	Todos los ataques hechos al Pokémon ignorarán sus resistencias, inmunidades y cambios de evasión.		
+0000-fire_pledge-0000|data.Name		Fire Pledge	火之誓约	Aire de Feu	Feuersäulen			
+0000-fire_pledge-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.	这只宝可梦随时准备在敌人受到攻击时发动后续攻击。该状态在几回合后解除。	Le Pokémon est prêt à libérer une attaque suivie dès qu'un ennemi est attaqué. Ce statut disparaît après quelques tours.	Das Pokémon ist bereit jedes Mal, wenn ein Gegner angegriffen wird, eine nachfolgende Attacke einzusetzen. Dieser Status lässt nach einigen Zügen nach.			
+0000-fire_spin-0000|data.Name		Fire Spin	火焰旋涡	Danse Flamme	Feuerwirbel	Giro Fuego		
+0000-fire_spin-0001|data.Desc		The Pokémon is trapped in a vortex of fire, taking gradual damage and preventing it from moving. This status wears off after a few turns.	这只宝可梦被困在了火焰旋涡中，每回合都会受到少量伤害并且无法移动。该状态在几回合后解除。	Le Pokémon est piégé dans un vortex de feu, il est immobilisé et prend régulièrement des dégâts. Ce statut disparaît après quelques tours.	Das Pokémon ist in einem Wirbel aus Flammen gefangen, wodurch es stetig Schaden erhält und jegliche Bewegungen von ihm verhindert werden. Dieser Status lässt nach einigen Zügen nach.	El Pokémon es atrapado en un vórtice de fuego, recibiendo daño gradual e impidiendo moverse. Este estado desaparece tras unos turnos.		
+0000-flinch-0000|data.Name		Cringing	畏缩	Apeuré	Zurückschrecken	Encogido		
+0000-flinch-0001|data.Desc		The Pokémon is cringing and cannot attack or use items. This status wears off on the next turn.	这只宝可梦畏缩了，无法使用物品或进行攻击。该状态在下回合解除。	Le Pokémon a peur et ne peut pas attaquer ou utiliser d'objet. Ce statut disparaît au tour suivant.	Das Pokémon ist zurückgeschreckt und kann weder angreifen noch Items nutzen. Dieser Status lässt im nächsten Zug nach.	El Pokémon está encogido y no puede atacar o usar objetos. Este estado desaparece en el siguiente turno.		
+0000-flying-0000|data.Name		Flying	飞翔	Vol	Fliegend	Volando		
+0000-flying-0001|data.Desc		The Pokémon is flying and can avoid most moves and obstacles. It will drop back down in a few turns, or when it chooses to attack.	这只宝可梦正在飞翔，可以躲避大多数招式和障碍。在几回合后或主动选择攻击后落回地面。	Le Pokémon vole et évite ainsi la plupart des attaques et obstacles. Il revient au sol après plusieurs tours ou lorqu'il choisit d'attaquer.	Das Pokémon fliegt und kann dadurch den meisten Angriffen und Hindernissen ausweichen. Es kommt entweder in einigen Zügen zurück oder wenn es sich entscheidet anzugreifen.	El Pokémon está volando y puede esquivar muchos movimientos y obstáculos. Descenderá en unos turnos, o cuando decida atacar.		
+0000-focus_energy-0000|data.Name		Focus Energy	聚气	Puissance	Energiefokus	Foco Energía		
+0000-focus_energy-0001|data.Desc		The Pokémon is focused and can land critical hits more easily. This status wears off after many turns have passed.	这只宝可梦正在集中精神，更容易击中要害。该状态在大量回合后解除。	Le Pokémon est concentré et a plus de chance de faire des coups critiques. Ce statut disparaît après plusieurs tours.	Das Pokémon ist fokussiert und kann somit leichter kritische Treffer landen. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está concentrado y puede conseguir golpes críticos más fácilmente. Este estado desaparece tras pasar unos turnos.		
+0000-follow_me-0000|data.Name		Follow Me	万众瞩目	Par Ici	Spotlight	Señuelo		
+0000-follow_me-0001|data.Desc		The Pokémon is the center of attention and will redirect any attack targetting its allies. This status wears off after a few turns.	这只宝可梦成为了关注的焦点，会吸引所有攻向队友的攻击对准自己。该状态在几回合后解除。	Le Pokémon devient le centre d'attention et redirige vers lui les attaques ciblant ses alliés. Ce statut disparaît après quelques tours.	Das Pokémon wird zum Zentrum der Aufmerksamkeit und jede Attacke, die an seine Verbündete gerichtet wären, werden auf dieses gelenkt. Dieser Status lässt nach einigen Zügen nach.	El Pokémon es el centro de atención y redigirá cualquier ataque dirigido a sus aliados. Este estado desaparece tras unos turnos.		
+0000-freeze-0000|data.Name		Frozen	冰冻	Gelé	Eingefroren	Congelado		Congelado
+0000-freeze-0001|data.Desc		The Pokémon is frozen and incapable of acting or being affected by moves. This status wears off after a few turns, or if the Pokémon is hit by a Fire-type attack.	这只宝可梦处于冰冻状态，无法行动且不能被招式影响。该状态在几回合后或被火属性招式攻击后解除。	Le Pokémon est gelé et incapable d'effectuer la moindre action ou d'être touché par une attaque. Ce statut disparaît après quelques tours ou si le Pokémon subit une attaque de type Feu.	Das Pokémon ist eingefroren und kann weder Attacken ausführen noch von ihnen betroffen werden. Dieser Status lässt entweder nach einigen Zügen nach oder falls das Pokémon von einer Attacke vom Typ Feuer getroffen wird.	El Pokémon está congelado e incapaz de realizar acciones o ser afectado por movimientos. Este estado desaparece tras unos turnos, o si el Pokémon es golpeado por un ataque de tipo Fuego.		O Pokémon está congelado e incapaz de realizar ações ou ser afetado por golpes. Esse efeito desaparece após alguns turnos, ou se o Pokémon for atingido por um golpe tipo Fogo.
+0000-friendly_fire-0000|data.Name		Friendly Fire						
+0000-friendly_fire-0001|data.Desc								
+0000-future_sight-0000|data.Name		Future Sight	预知未来	Prescience	Seher	Premonición		
+0000-future_sight-0001|data.Desc		The Pokémon will be attacked a few turns in the future. Nearby allies will also take splash damage when the attack hits.	这只宝可梦将在未来的几回合内受到攻击。当攻击命中时，附近的同伴也会受到溅射伤害。	Le Pokémon sera attaqué DANS LE FUTUR! Ce qui ne représente en fait que quelques tours... Les alliés proches subiront quelques dégâts quand l'attaque frappera.	Das Pokémon wird in der nahen Zukunft angegriffen. Sich in der Nähe befindene Verbündete des Ziels erhalten auch Schaden wenn die Attacke trifft.	El Pokémon será atacado en unos turnos en el futuro. Aliados cercanos recibirán daño por salpicadura cuando el ataque impacte.		
+0000-grass_pledge-0000|data.Name		Grass Pledge	草之誓约	Aire d'Herbe	Pflanzensäulen			
+0000-grass_pledge-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.	这只宝可梦随时准备在敌人受到攻击时发动后续攻击。该状态在几回合后解除。	Le Pokémon est prêt à libérer une attaque suivie dès qu'un ennemi est attaqué. Ce statut disparaît après quelques tours.	Das Pokémon ist bereit jedes Mal, wenn ein Gegner angegriffen wird, eine nachfolgende Attacke einzusetzen. Dieser Status lässt nach einigen Zügen nach.			
+0000-grudge-0000|data.Name		Grudge	怨念	Rancune	Nachspiel	Rabia		
+0000-grudge-0001|data.Desc		Enemies that damage this Pokémon with attacks will have all their moves lose PP. This status wears off after many turns have passed.	攻击这只宝可梦的对手会失去所有招式的PP。该状态在大量回合后解除。	Les ennemis qui attaquent ce Pokémon perdront des PP sur toutes leurs capacités. Ce statut disparaît après plusieurs tours.	Wenn diesem Pokémon mit einer Attacke Schaden zugefügt wird, verlieren alle Attacken vom angreifenden Pokémon AP. Dieser Status lässt erst nach vielen Zügen nach.	Enemigos que dañen a este Pokémon con ataques hará que todos sus movimientos pierdan PP. Este estado desaparece tras pasar unos turnos.		
+0000-heal_block-0000|data.Name		Heal Block	回复封锁	Anti-Soin	Heilblockade	Anticura		
+0000-heal_block-0001|data.Desc		The Pokémon is prevented from restoring its HP. This status wears off after many turns have passed.	这只宝可梦无法回复HP。该状态在大量回合后解除。	Le Pokémon ne peut pas soigner ses PV. Ce statut disparaît après plusieurs tours.	Das Pokémon kann keine KP regenerieren. Dieser Status lässt nach vielen Zügen nach.	El Pokémon está incapacitado de recuperar sus PS. Este estado desaparece tras pasar varios turnos.		
+0000-illusion-0000|data.Name		Illusion	幻觉	Illusion	Trugbild	Ilusión		
+0000-illusion-0001|data.Desc		The Pokémon has disguised itself as a different Pokémon. Wild Pokémon of the same species will not attack it.	这只宝可梦伪装成了其他的宝可梦。同一物种的野生宝可梦不会攻击它。					
+0000-immobilized-0000|data.Name		Immobilized	禁足	Immobilisé	Bewegungsunfähig	Inmovilizado		
+0000-immobilized-0001|data.Desc		The Pokémon is immobilized and cannot move. This status wears off after a few turns.	这只宝可梦被固定住了，无法移动。该状态在几回合后解除。	Le Pokémon est immobilisé et ne peut pas bouger. Ce statut disparaît après quelques tours.	Das Pokémon ist bewegungsunfähig und kann sich nicht bewegen. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está inmovilizado y no se puede mover. Este estado desaparece tras unos turnos.		
+0000-in_love-0000|data.Name		In Love	着迷	Amoureux	Verliebt	Enamorado		
+0000-in_love-0001|data.Desc		The Pokémon is infatuated with the enemy and cannot target it with any moves or items. This status wears off after a few turns.	这只宝可梦着迷了，无法以敌人为目标使用任何招式或物品。该状态在几回合后解除。	Le Pokémon est sous le charme de l'ennemi et ne peut pas attaquer ou utiliser d'objet. Ce statut disparaît après quelque tours.	Das Pokémon ist in den Gegner verliebt und kann es nicht als Ziel für Attacken oder Items auswählen. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está enamorado del enemigo y no puede atacarlo ni con movimientos ni con objetos. Este estado desaparece tras unos turnos.		
+0000-infestation-0000|data.Name		Infestation	死缠烂打	Harcèlement	Plage	Acoso		
+0000-infestation-0001|data.Desc		The Pokémon is trapped by an infestation, taking gradual damage and preventing it from moving. This status wears off after a few turns.	这只宝可梦正在被纠缠，逐渐受到伤害且无法移动。该状态在几回合后解除。	Le Pokémon est harcelé par l'ennemi, il subit régulièrement des dégâts et ne peut pas bouger. Ce statut disparaît après quelques tours.	Das Pokémon wird von einer Plage heimgesucht, wodurch es stetig Schaden erhält und es sich nicht fortbewegen kann. Dieser Status lässt nach einigen Zügen nach.	El Pokémon es atrapado en una plaga, recibiendo daño gradual e impidiendo moverse. Este estado desaparece tras unos turnos.		
+0000-ingrain-0000|data.Name		Ingrain	扎根	Racines	Verwurzelt	Arraigo		
+0000-ingrain-0001|data.Desc		The Pokémon's roots are planted in the ground, gradually restoring its HP and preventing it from moving. This status wears off after a few turns.	这只宝可梦正在扎根，会逐渐回复HP且无法移动。该状态在几回合后解除。	Les racines du Pokémon puisent les nutriments du sol ce qui restaure régulièrement ses PV mais l'empêche de bouger. Ce statut disparaît après quelques tours.	Die Wurzeln des Pokémon sind in den Boden gepflanzt, wodurch es stetig KP regeneriert und seine Bewegungen verhindert werden. Dieser Status lässt nach einigen Zügen nach.	Las raíces del Pokémon son plantados en el suelo, gradualmente recuperando sus PS e impidiendo moverse. Este estado desaparece tras unos turnos.		
+0000-invisible-0000|data.Name		Invisible	透明	Invisible				
+0000-invisible-0001|data.Desc		The Pokémon is invisible and cannot be seen by other Pokémon. This status wears off after a few turns.	这只宝可梦隐身了，无法被其它宝可梦看见。该状态在几回合后解除。					
+0000-kings_shield-0000|data.Name		King's Shield						
+0000-kings_shield-0001|data.Desc		The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks. 						
+0000-last_ally_move-0000|data.Name		Last Ally Move	上一个队伍成员使用的招式	Dernière Capacité Alliée	Letzte Verbündetenattacke	Último Movimiento Aliado		
+0000-last_ally_move-0001|data.Desc								
+0000-last_move_hit_by_other-0000|data.Name		Last Move Hit By Other						
+0000-last_move_hit_by_other-0001|data.Desc								
+0000-last_targeted_by-0000|data.Name		Last Targeted By	上一次选作目标是被	Dernière Cible	Zuletzt als Ziel gewählt von	Último Objetivo		
+0000-last_targeted_by-0001|data.Desc								
+0000-last_used_move-0000|data.Name		Last Used Move	上一次使用的招式	Dernière capacité utilisée	Zuletzt verwendete Attacke	Último Movimiento Usado		
+0000-last_used_move-0001|data.Desc								
+0000-last_used_move_slot-0000|data.Name		Last Used Move Slot	上一次使用的招式槽	Dernier Emplacement Capacité Utilisée	Zuletzt verwendeter Attackenslot	Ranura Último Movimiento Usado		
+0000-last_used_move_slot-0001|data.Desc								
+0000-leech_seed-0000|data.Name		Leech Seed	寄生种子	Vampigraine	Egelsamen	Drenadoras		
+0000-leech_seed-0001|data.Desc		The Pokémon's HP is sapped and given to a foe every turn. This status wears off if there are no foes around.	这只宝可梦会被夺取HP并将其分给一个对手。如果周围没有对手，该状态解除。	Les PV du Pokémon sont drainés et absorbé par l'ennemi à chaque tour. Ce statut disparaît si il n'y plus d'ennemis aux alentours.	Die KP des Pokémon werden in jedem Zug aufgezehrt und an einen Gegner weitergegeben. Dieser Status lässt nach, sobald keine Gegner in der Nähe sind. 	Los PS del Pokémon son absorbidos y dados a un enemigo cada turno. Este estado desaparece si no hay enemigos alrededor.		
+0000-light_screen-0000|data.Name		Light Screen	光墙	Mur Lumière	Lichtschild	Pantalla de luz		
+0000-light_screen-0001|data.Desc		The Pokémon takes half damage from special attacks. This status wears off after a few turns.	这只宝可梦受到的特殊攻击减半。该状态在几回合后解除。		Das Pokémon erhält nur noch halben Schaden von speziellen Attacken. Dieser Status lässt nach einigen Zügen nach.	El Pokémon recibe la mitad del daño de los ataques Especiales. Este estado desaparece tras unos turnos.		
+0000-lucky_chant-0000|data.Name		Lucky Chant	幸运咒语	Air Veinard	Beschwörung	Conjuro		
+0000-lucky_chant-0001|data.Desc		The Pokémon is protected from critical hits and the additional effects of attacking moves. This status wears off after many turns have passed.	这只宝可梦受到了保护，不会被击中要害，也不会发动追加效果。该状态在大量回合后解除。	Le Pokémon est protégé des coups critiques et des effets secondaires des attaques ennemies. Ce statut disparaît après plusieurs tours.	Das Pokémon ist gegen kritische Treffer und von zusätzlichen Effekten von Angriffen geschützt. Dieser Status lässt erst nach vielen Zügen nach.	El Pokémon está protegido de golpes críticos y los efectos adicionales de los movimientos de ataque. Este estado desaparece tras pasar unos turnos.		
+0000-magic_coat-0000|data.Name		Magic Coat	魔法反射	Reflet Magik	Magiemantel	Capa Mágica		
+0000-magic_coat-0001|data.Desc		The Pokémon will reflect any moves that inflict status back at the user. This status wears off after a few turns.	这只宝可梦会反弹对自己造成异常状态的变化招式。该状态在几回合后解除。	Le Pokémon va refletter n'importe quelle capacité infligeant un statut sur l'envoyeur. Ce statut disparaît après quelques tours.	Das Pokémon reflektiert jede Attacke, die Statusprobleme verursacht, zurück an den Nutzer. Dieser Status lässt nach einigen Zügen nach.	El Pokémon reflejará todo movimiento que cause estados al usuario. Este estado desaparece tras unos turnos.		
+0000-magma_storm-0000|data.Name		Magma Storm	熔岩风暴	Vortex Magma	Lavasturm	Lluvia Ígnea		
+0000-magma_storm-0001|data.Desc		The Pokémon is trapped by a vortex of magma, taking gradual damage and preventing it from moving. This status wears off after a few turns.	这只宝可梦困住了熔岩旋涡中，逐渐受到伤害且无法移动。该状态在几回合后解除。	Le Pokémon est piégé dans un votex de magma, il subit régulièrement des dégâts et ne peut pas bouger. Ce statut disparaît après quelques tours.	Das Pokémon ist in einem Wirbel aus Magma gefangen, wodurch es stetig Schaden erhält und es sich nicht fortbewegen kann. Dieser Status lässt nach einigen Zügen nach.	El Pokémon es atrapado en un vórtice de magma, recibiendo daño gradual e impidiendo moverse. Este estado desaparece tras unos turnos.		
+0000-magnet_rise-0000|data.Name		Magnet Rise	电磁飘浮	Vol Magnétik	Magnetflug	Levitón		
+0000-magnet_rise-0001|data.Desc		The Pokémon is levitating with electromagnetism, allowing it to avoid Ground-type attacks. This status wears off after many turns have passed.	这只宝可梦利用电气产生的磁力浮在空中，免疫了地面属性的攻击。该状态在大量回合后解除。	Le Pokémon lévite par électromagnétisme, ce qui lui permet d'éviter les attaques de type Sol. Ce statut disparaît après plusieurs tours.	Das Pokémon schwebt dank Elektromagnetismus, wodurch es Boden-Attacken ausweicht. Dieser Status lässt nach vielen Zügen nach.	El Pokémon está levitando con electromagnetismo, permitiendo evitar ataques de tipo Tierra. Este estado desaparece tras pasar varios turnos.		
+0000-mental_charged-0000|data.Name		Mental-Charged	精神充盈		Geistig gestärkt			
+0000-mental_charged-0001|data.Desc		The Pokémon is protected against move-binding effects. This status wears off after many turns have passed.	这只宝可梦受到了保护，招式不会被封锁。该状态在大量回合后解除。					
+0000-metal_burst-0000|data.Name		Metal Burst	金属爆炸	Fulmifer	Metallstoß	Represión Metal		
+0000-metal_burst-0001|data.Desc		All damage done to this Pokémon will be reflected on all nearby foes. This status wears off after a few turns, or if the Pokémon moves.	对这只宝可梦造成的所有伤害都会返还到附近的对手身上。该状态在几回合后，或宝可梦移动后解除。		Jeglicher Schaden, die diesem Pokémon zugefügt wurde, wird an alle benachbarten Gegner reflektiert. Dieser Status lässt entweder nach einigen Zügen nach oder wenn sich das Pokémon bewegt.	Todo el daño hecho a este Pokémon será reflejado a todos los enemigos cercanos. Este estado desaparece tras unos turnos, o si el Pokémon se mueve.		
+0000-mini_counter-0000|data.Name		Mini-Counter	反击	Mini-Riposte	Mini-Konter	Mini-Contra		
+0000-mini_counter-0001|data.Desc		The Pokémon will return damage from all attacks back at the user. This status wears off after many turns have passed.	这只宝可梦会将所有攻击的伤害反弹给使用者。该状态在大量回合后解除。	Le Pokémon reflette tout les dégâts qui lui sont infligés. Ce statut disparaît après plusieurs tours.	Das Pokémon wirft jeden Schaden, den ein Gegner an ihm verursacht, an dessen Nutzer zurück. Dieser Status lässt nach vielen Zügen nach.	El Pokémon devolverá el daño de todos los ataques al usuario. Este estado desaparece tras pasar varios turnos.		
+0000-minimized-0000|data.Name		Minimized	变小	Lilliput	Komprimator	Reducción		
+0000-minimized-0001|data.Desc								
+0000-miracle_eye-0000|data.Name		Miracle Eye	奇迹之眼	Œil Miracle	Wunderauge	Gran Ojo		
+0000-miracle_eye-0001|data.Desc		All attacks made by the Pokémon will ignore the target's resistances, immunities, and evasion changes.	所有对这只宝可梦的攻击将无视其相应的抗性、 免疫和闪避率变化。	Toutes les attaques infligés par le Pokémon ne prennent plus en compte les faiblesses, résistances et l'esquive de la cible.	Alle Attacken, die dieses Pokémon ausführt, ignorieren die Resistenzen, Immunitäten und Fluchtwertsveränderungen des Zieles.	Todos los ataques hechos por el Pokémon ignorarán las resistencias, inmunidades y cambios de evasión del objetivo.		
+0000-mirror_coat-0000|data.Name		Mirror Coat	镜面反射	Voile Miroir	Spiegelcape	Manto Espejo		
+0000-mirror_coat-0001|data.Desc		The Pokémon will return damage from special attacks back at the user with double the power. This status wears off after a few turns.	这只宝可梦将会把受到的特殊攻击伤害以双倍返还给使用者。该状态在几回合后解除。	Le Pokémon renvoie le double des dégâts des Attaques Spéciales à l'ennemi. Ce statut disparaît après quelques tours.	Das Pokémon wirft jeglichen Schaden von speziellen Attacken doppelt so stark an seinen Angreifer zurück. Dieser Status lässt nach einigen Zügen nach.	El Pokémon devolverá el daño de los ataques especiales al usuario con el doble de potencia. Este estado desaparece tras unos turnos.		
+0000-missed_all_last_turn-0000|data.Name		Missed All Last Turn						
+0000-missed_all_last_turn-0001|data.Desc								
+0000-mist-0000|data.Name		Mist	白雾	Brume	Weißnebel	Neblina		
+0000-mist-0001|data.Desc		The Pokémon is surrounded in mist, preventing others from dropping its stats. This status wears off after many turns have passed.	这只宝可梦被白雾包围，阻止了能力降低。该状态在大量回合后解除。		Das Pokémon ist in Weißnebel gehüllt, wodurch seine Statuswerte nicht gesenkt werden können. Dieser Status lässt erst nach vielen Zügen nach.	El Pokémon está envuelto en bruma, impidiendo a otros de reducir sus estadísticas. Este estado desaparece tras pasar unos turnos.		
+0000-mod_accuracy-0000|data.Name		Accuracy	命中	Précision	Genauigkeit	Precisión		Precisão
+0000-mod_accuracy-0001|data.Desc		The Pokémon's Accuracy has been modified, allowing its attacks to hit more or less often.	这只宝可梦的命中率发生了变化，攻击更容易或更难命中。		Die Genauigkeit des Pokémon wurde verändert, wodurch seine Attacken besser oder schlechter treffen können.	La Precisión del Pokémon ha sido modificado, permitiendo que sus ataques golpeen más a menudo o menos.		
+0000-mod_attack-0000|data.Name		Attack	攻击	Stat Attaque	Angriff	Ataque		Ataque
+0000-mod_attack-0001|data.Desc		The Pokémon's Attack has been modified, doing more or less damage with Physical attacks.	这只宝可梦的攻击发生了变化，物理攻击造成的伤害比通常状态下更高或者更低。		Der Angriff des Pokémon wurde verändert, wodurch es mehr oder weniger Schaden mit physischen Attacken verursacht.	El Ataque del Pokémon ha sido modificado, haciendo más o menos daño con ataques Físicos.		
+0000-mod_defense-0000|data.Name		Defense	防御	Stat Défense	Verteidigung	Defensa		Defesa
+0000-mod_defense-0001|data.Desc		The Pokémon's Defense has been modified, causing it to take more or less damage from Physical attacks.	这只宝可梦的防御发生了变化，物理攻击对它造成的伤害比通常状态下更高或者更低。		Die Verteidigung des Pokémon wurde verändert, wodurch es mehr oder weniger Schaden von physischen Attacken erhält.	La Defensa del Pokémon ha sido modificada, causando que reciba más o menos daño con ataques Físicos.		
+0000-mod_evasion-0000|data.Name		Evasion	闪避	Esquive	Fluchtwert	Evasión		Evasão
+0000-mod_evasion-0001|data.Desc		The Pokémon's Evasion has been modified, allowing it to dodge attacks more or less often.	这只宝可梦的闪避率发生了变化，更难或更容易躲避攻击。		Der Fluchtwert des Pokémon wurde verändert, wodurch es leichter oder schwerer Attacken ausweichen kann.	La Evasión del Pokémon ha sido modificada, permitiendo esquivar ataques más a menudo o menos. 		
+0000-mod_range-0000|data.Name		Range	范围	Portée	Reichweite	Rango		Alcançe
+0000-mod_range-0001|data.Desc								
+0000-mod_special_attack-0000|data.Name		Special Attack	特攻	Stat Attaque Sp.	Spezial Angriff	Ataque Especial		Ataque Especial
+0000-mod_special_attack-0001|data.Desc		The Pokémon's Special Attack has been modified, doing more or less damage with Special attacks.	这只宝可梦的特攻发生了变化，特殊攻击造成的伤害比通常状态下更高或者更低。		Der Spezial Angriff des Pokémon wurde verändert, wodurch es mehr oder weniger Schaden mit speziellen Attacken verursacht.	El Ataque Especial del Pokémon ha sido modificado, haciendo más o menos daño con ataques Especiales.		O Ataque Especial desse Pokémon foi modificado, causando mais ou menos dano com ataques Especiais.
+0000-mod_special_defense-0000|data.Name		Special Defense	特防	Stat Défense Sp.	Spezial Verteidigung	Defensa Especial		Defesa Especial
+0000-mod_special_defense-0001|data.Desc		The Pokémon's Special Defense has been modified, causing it to take more or less damage from Special attacks.	这只宝可梦的特防发生了变化，特殊攻击对它造成的伤害比通常状态下更高或者更低。		Die Spezial Verteidigung wurde verändert, wodurch es mehr oder weniger Schaden von speziellen Attacken erhält.	La Defensa Especial del Pokémon ha sido modificada, causando que reciba más o menos daño con ataques Especial		A Defesa Especial desse Pokémon foi modificada, fazendo com que receba mais ou menos dano de ataques Especiais.
+0000-mod_speed-0000|data.Name		Movement Speed	移动速度	Stat Vitesse	Tempo	Velocidad de movimiento		
+0000-mod_speed-0001|data.Desc		The Pokémon's Movement Speed has been modified to move faster or slower than usual.	这只宝可梦的移动速度发生了变化，比通常状态下更快或者更慢。		Das Tempo des Pokémon wurde verändert, wodurch es sich entweder schneller oder langsamer bewegen kann als normalerweise.	La Velocidad de Movimiento del Pokémon ha sido modificado para moverse más rápido o lento de lo normal.		
+0000-nightmare-0000|data.Name		Nightmare	恶梦	Cauchemar	Alptraum	Pesadilla		
+0000-nightmare-0001|data.Desc		The Pokémon takes gradual damage every turn when it is sleeping. This status wears off after many turns have passed.	这只宝可梦睡着时每回合都会逐渐受到伤害。该状态在大量回合后解除。	Le Pokémon subit des dégâts à chaque tour dans son sommeil. Ce statut disparaît après plusieurs tours.	Das Pokémon nimmt jeden Zug stetig Schaden, wenn es schlafen sollte. Dieser Status lässt nach vielen Zügen nach.	El Pokémon recibe daño gradual cada turno cuando está durmiendo. Este estado desaparece tras pasar varios turnos.		
+0000-none-0000|data.Name		None	无	Aucun	Keine	Ninguno		Nenhum
+0000-none-0001|data.Desc								
+0000-outrage-0000|data.Name		Outrage	逆鳞	Colère	Wutanfall	Enfado		
+0000-outrage-0001|data.Desc		The Pokémon will use Outrage repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.	这只宝可梦将持续使出逆鳞直到状态解除。该状态在几回合后解除，并且解除后这只宝可梦将因为疲劳而陷入混乱。	Le Pokémon utilise Colère en continu jusqu'à ce que le statut disparaisse. Ce statut disparaît après plusieurs tours, laissant le Pokémon confus de fatigué.	Das Pokémon wird Wutanfall wiederholt einsetzen bis der Status nachlässt. Dieser Status lässt nach einigen Zügen nach, wodurch das Pokémon durch Erschöpfung verwirrt wird.	El Pokémon usará Enfado repetidamente hasta que el estado desaparezca. Este estado desaparece tras unos turnos, dejando al Pokémon confundido de la fatiga.		
+0000-paralyze-0000|data.Name		Paralyzed	麻痹	Paralysé	Paralysiert	Paralizado		Paralisado
+0000-paralyze-0001|data.Desc		The Pokémon is paralyzed and cannot move in consecutive turns. This status wears off after a few turns.	这只宝可梦处于麻痹状态，在接下来的几回合内不能攻击。该状态在几回合后解除。		Das Pokémon ist paralysiert und kann nicht in aufeinanderfolgenden Zügen angreifen. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está paralizado y no puede atacar en los siguientes turnos. Este estado desaparece tras unos turnos.		
+0000-paused-0000|data.Name		Paused	观望	Fatigué	Erschöpft			
+0000-paused-0001|data.Desc		The Pokémon is rendered incapable of taking any action. This status wears off after a few turns.	这只宝可梦无法做任何事情。该状态在几回合后解除。	Le Pokémon est fatigué et ne peut réaliser aucune action. Ce statut disparaît après quelques tours.	Das Pokémon ist unfähig jegliche Aktionen auszuführen. Dieser Status lasst nach einigen Zügen nach.			
+0000-perish_song-0000|data.Name		Perish Song	灭亡之歌	Requiem	Abgesang	Canto Mortal		
+0000-perish_song-0001|data.Desc		The Pokémon has heard Perish Song, and will faint when its countdown reaches zero.	这只宝可梦听了灭亡之歌，将在三回合倒计时结束后倒下。	Le Pokémon à entendu Requiem et tombera K.O quand le compte à rebours atteindra zéro.	Das Pokémon hat den Abgesang gehört und wird besiegt, sobald der Countdown null erreicht.	El Pokémon ha oído Canto mortal, y se debilitará cuando el contador llegue a cero.		
+0000-petal_dance-0000|data.Name		Petal Dance	花瓣舞	Danse-Fleur	Blättertanz	Danza Pétalo		
+0000-petal_dance-0001|data.Desc		The Pokémon will use Petal Dance repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.	这只宝可梦将持续使出花瓣舞直到状态解除。该状态在几回合后解除，并且解除后这只宝可梦将因为疲劳而陷入混乱。	Le Pokémon utilise Danse-Fleur en continu jusqu'à ce que le statut disparaisse. Ce statut disparaît après plusieurs tours, laissant le Pokémon confus de fatigué.	Das Pokémon wird Blättertanz wiederholt einsetzen bis der Status nachlässt. Dieser Status lässt nach einigen Zügen nach, wodurch das Pokémon durch Erschöpfung verwirrt wird.	El Pokémon usará Danza Pétalo repetidamente hasta que el estado desaparezca. Este estado desaparece tras unos turnos, dejando al Pokémon confundido de la fatiga.		
+0000-phantom_force-0000|data.Name		Phantom Force	潜灵奇袭	Hantise	Phantomkraft	Golpe Fantasma		
+0000-phantom_force-0001|data.Desc		The Pokémon vanished completely and can avoid moves and obstacles. It will reappear in a few turns, or when it chooses to attack.	这只宝可梦完全消失了，可以躲避大多数招式和障碍。在几回合后或主动选择攻击后重新出现。	Le Pokémon disparaît complètement et peut éviter les attaques et les obstacles. Il réapparaît après plusieurs tours ou lorqu'il choisit d'attaquer.	Das Pokémon verschwindet ganz und kann dadurch den meisten Attacken und Hindernissen ausweichen. Es erscheint entweder in einigen Zügen wieder oder wenn es sich entscheidet anzugreifen.	El Pokémon desapareció completamente y puede esquivar movimientos y obstáculos. Reaparecerá en unos turnos, o cuando decida atacar.		
+0000-pierce-0000|data.Name		Pierce	贯穿	Perceur	Durchdringend	Perforador		
+0000-pierce-0001|data.Desc		The Pokémon's attacks and items can hit through multiple targets and walls.	这只宝可梦的攻击和道具可以穿透多个目标和墙壁。		Die Attacken und Items des Pokémon können durch mehrere Ziele und Wände hindurch treffen.	Los ataques y objetos del Pokémon puede golpear a través de múltiple objetivos y paredes.		
+0000-poison-0000|data.Name		Poisoned	中毒	Empoisonné	Vergiftet	Envenenado		Envenenado
+0000-poison-0001|data.Desc		The Pokémon takes damage on every action, and its ability to recover HP is reduced. This status wears off after a few turns.	这只宝可梦每次行动都会受到伤害，且回复HP的能力也会降低。该状态在几回合后解除。					
+0000-poison_toxic-0000|data.Name		Badly Poisoned	剧毒	Gravement Empoisonné	Schwer vergiftet	Gravemente envenenado		Gravemente Envenenado
+0000-poison_toxic-0001|data.Desc		The Pokémon takes damage on every action, with the damage worsening if it attacks. Its ability to recover HP is also reduced. This status wears off after a few turns.	这只宝可梦每次行动都会受到伤害，如果攻击，伤害会恶化。回复HP的能力也会降低。该状态在几回合后解除。					
+0000-powder-0000|data.Name		Powder	粉尘		Puder	Polvo Explosivo		
+0000-powder-0001|data.Desc		The Pokémon is covered in a powder that causes an explosion when exposed to fire or electricity.	这只宝可梦被一种粉尘覆盖，当暴露在火或电中就会引发爆炸。		Das Pokémon ist von Puder bedeckt, welches Explosionen verursachen kann, wenn es Feuer oder Elektrizität ausgesetzt wird.	El Pokémon está cubierto de un polvo que causa una explosión cuando está expuesto a fuego o a electricidad.		
+0000-power_charged-0000|data.Name		Power-Charged	力量充盈	Surchargé	Energiegeladen			
+0000-power_charged-0001|data.Desc		The Pokémon is able to use moves without charging or recharging, and its PP is prevented from dropping. This status wears off after many turns have passed.	这只宝可梦可以直接使出需要蓄力的招式，也可以阻止PP被减少。该状态在大量回合后解除。					
+0000-protect-0000|data.Name		Protect	守住	Abri	Schutzschild	Protección		
+0000-protect-0001|data.Desc		The Pokémon is protected from all moves. This status wears off after a few turns, or if the Pokémon attacks.	这只宝可梦受到了保护，不会受到招式影响。该状态在几回合后，或宝可梦攻击后解除。					
+0000-quick_guard-0000|data.Name		Quick Guard	快速防守	Prévention	Rapidschutz	Anticipo		
+0000-quick_guard-0001|data.Desc		The Pokémon is protected from moves that have a long range. This status wears off after a few turns.	这只宝可梦受到了保护，不会受到远程攻击。该状态在几回合后解除。	Le Pokémon est protégé des attaques à longue distance. Ce statut disparaît après quelques tours.	Das Pokémon ist gegen Attacken mit großer Reichweite geschützt. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está protegido de movimientos con largo alcance. Este estado desaparece tras unos turnos. 		
+0000-rage_powder-0000|data.Name		Rage Powder	愤怒粉	Poudre Fureur	Wutpulver	Polvo Ira		
+0000-rage_powder-0001|data.Desc		The Pokémon is enraged by the enemy and cannot target anyone else with any moves or items. This status wears off after a few turns.	这只宝可梦被敌人激怒了，使用招式或物品时无法以其他敌人为目标。该状态几回合后解除。	Le Pokémon est enragé par l'ennemi et ne peut pas attaquer quelqu'un d'autre avec un objet ou une capacité. Ce statut disparaît après quelque tours.	Das Pokémon wurde wütend auf den Gegner und es kann kein anderes Ziel als ihn für Attacken und Items auswählen. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está furioso con el enemigo y no puede atacar a otros objetivos con movimientos u objetos. Este estado desaparece tras unos turnos.		
+0000-recruit_boost-0000|data.Name		Recruit Boost	招募提升	Recruteur	Rekrutierboost			
+0000-recruit_boost-0001|data.Desc		The Pokémon's chances of recruiting other members is temporarily increased.	这只宝可梦招募其他成员的机会暂时提高了。	Le Pokémon à temporairement plus de chances de recuter d'autres membres.	Die Chancen auf eine erfolgreiche Rekrutierung anderer Mitglieder sind für dieses Pokémon erhöht.			
+0000-reflect-0000|data.Name		Reflect	反射壁	Protection	Reflektor	Reflejo		
+0000-reflect-0001|data.Desc		The Pokémon takes half damage from physical attacks. This status wears off after a few turns.	这只宝可梦受到的物理攻击减半。该状态在几回合后解除。		Das Pokémon erhält nur noch halben Schaden von physischen Attacken. Dieser Status lässt nach einigen Zügen nach.	El Pokémon recibe la mitad del daño de los ataques Físicos. Este estado desaparece tras unos turnos.		
+0000-regeneration-0000|data.Name		Regeneration	再生	Régénération	Regeneration	Regeneración		
+0000-regeneration-0001|data.Desc		The Pokémon gradually regains HP each turn. This status wears off after a few turns.	这只宝可梦每回合逐渐回复HP。该状态在几回合后解除。		Das Pokemon regeneriert jeden Zug zusätzliche KP. Dieser Statuseffekt endet nach ein paar Zügen.	El Pokémon recupera gradualmente PS cada turno. Este estado desaparece tras unos turnos.		
+0000-retaliate-0000|data.Name		Retaliate	报仇	Vengeance	Heimzahlung	Represalia		
+0000-retaliate-0001|data.Desc		The Pokémon is ready to retaliate, unleashing the move whenever a nearby foe attacks an ally. This status wears off after a few turns.	这只宝可梦正在准备报仇，当附近的敌人攻击队友后就会发动招式。该状态在几回合后解除。	Le Pokémon est prêt à se venger et libère l'attaque dès qu'un ennemi attaque un allié. Ce statut disparaît après quelques tours.	Das Pokémon macht sich für eine Heimzahlung bereit, wodurch es Gegner immer dann angreift, wenn Verbündete von nahen Gegnern angegriffen werden. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está listo para responder, desatando el movimiento cuando un enemigo cercano ataca a un aliado. Este estado desaparece tras unos turnos.		
+0000-roosting-0000|data.Name		Roosting	羽栖	Atterrissage	Ruheort			
+0000-roosting-0001|data.Desc		The Pokémon is roosting, eliminating its Flying-type matchups. This status wears off when the Pokémon moves.	这只宝可梦正在羽栖，失去了飞行属性的克制关系。该状态在宝可梦移动后解除。	Le Pokémon atterris, ce qui élimine ses faiblesses lié au type Vol. Ce statut disparaît quand le Pokémon bouge.	Das Pokémon lässt sich nieder, wodurch es seinen Flug-Typ verliert. Dieser Status lässt nach, sobald sich das Pokémon bewegt.			
+0000-safeguard-0000|data.Name		Safeguard	神秘守护	Rune Protect	Bodyguard	Velo Sagrado		
+0000-safeguard-0001|data.Desc		The Pokémon is protected from bad status effects with a veil. This status wears off after many turns have passed.	这只宝可梦正在被保护，不会变为异常状态。该状态在大量回合后解除。	Le Pokémon is protected from bad statut effects with a veil. Ce statut disparaît après plusieurs tours.	Das Pokémon schützt sich mit einem Schleier gegen Statusprobleme. Dieser Status lässt erst nach vielen Zügen nach.	El Pokémon está protegido de los cambios de estado negativos con un velo. Este estado desaparece tras pasar unos turnos.		
+0000-sand_tomb-0000|data.Name		Sand Tomb	流沙地狱	Tourbi-Sable	Sandgrab	Bucle Arena		
+0000-sand_tomb-0001|data.Desc		The Pokémon is trapped in quicksand, taking gradual damage and preventing it from moving. This status wears off after a few turns.	这只宝可梦被困在了流沙中，每回合都会受到少量伤害并且无法移动。该状态在几回合后解除。	Le Pokémon est piégé dans un tourbillon de sable, il est immobilisé et prend régulièrement des dégâts. Ce statut disparaît après quelques tours.	Das Pokémon ist in Treibsand gefangen, wodurch es stetig Schaden erhält und jegliche Bewegungen von ihm verhindert werden. Dieser Status lässt nach einigen Zügen nach.	El Pokémon es atrapado en arena movedizas, recibiendo daño gradual e impidiendo moverse. Este estado desaparece tras unos turnos.		
+0000-shadow_force-0000|data.Name		Shadow Force	暗影奇袭	Revenant	Schemenkraft	Golpe Umbrío		
+0000-shadow_force-0001|data.Desc		The Pokémon vanished completely and can avoid moves and obstacles. Its Movement Speed is also boosted. It will reappear in a few turns, or when it chooses to attack.	这只宝可梦完全消失了，可以躲避大多数招式和障碍。它的移动速度也会增加。在几回合后或主动选择攻击后重新出现。	Le Pokémon disparaît complètement et peut éviter les attaques et les obstacles. De plus sa Vitesse de Mouvement est boostée. Il réapparaît après plusieurs tours ou lorqu'il choisit d'attaquer.	Das Pokémon verschwindet ganz und kann dadurch den meisten Attacken und Hindernissen ausweichen. Außerdem erhöht sich das Tempo des Pokémons. Es erscheint entweder in einigen Zügen wieder oder wenn es sich entscheidet anzugreifen.	El Pokémon desapareció completamente y puede esquivar movimientos y obstáculos. Su Velocidad de Movimiento también aumenta. Reaparecerá en unos turnos, o cuando decida atacar.		
+0000-shopkeeper-0000|data.Name		Shopkeeper						
+0000-shopkeeper-0001|data.Desc								
+0000-sky_drop_target-0000|data.Name		Sky Drop	自由落体					
+0000-sky_drop_target-0001|data.Desc		The Pokémon is being held in the sky and is rendered incapable of any action. Most moves will miss the Pokémon during this time.	这只宝可梦被带到了空中，无法进行任何行动。在这段时间内，大多数招式都无法命中。					
+0000-sky_drop_user-0000|data.Name		Sky Drop	自由落体					
+0000-sky_drop_user-0001|data.Desc		The Pokémon is holding its target in the sky and can avoid most moves. It will drop back down on the next turn.	这只宝可梦将目标带上了天空，可以避开大部分的招式。下回合将会落回地面。					
+0000-sleep-0000|data.Name		Asleep	睡眠	Endormi	Schlafend	Dormido		Adormecido
+0000-sleep-0001|data.Desc		The Pokémon is asleep and incapable of any action until it wakes up. This status wears off after a few turns, or if the Pokémon is attacked.	这只宝可梦处于睡眠状态，在醒来之前什么也做不了。该状态在几个回合后或受到攻击后解除。	Le Pokémon est endormi et incapable d'effectuer la moindre action jusqu'à son réveil. Ce statut disparaît après quelques tours ou si le Pokémon est attaqué.	Das Pokémon schläft und kann bis es aufwacht keine Aktionen ausführen. Dieser Status lässt entweder nach einigen Zügen nach oder wenn das Pokémon angegriffen wurde.	El Pokémon está dormido e incapaz de realizar ninguna acción hasta que se despierte. Este estado desaparece después de unos turnos, o si el Pokémon es atacado. 		O Pokémon está adormecido e incapaz de realizar qualquer ação até acordar. Esse efeito desaparece depois de alguns turnos, ou se o Pokémon for atacado.
+0000-sleepless-0000|data.Name		Sleepless	不眠	Insomniaque	Schlaflos	Desvelado		
+0000-sleepless-0001|data.Desc		The Pokémon is prevented from becoming drowsy or sleeping. This status wears off after many turns have passed.	这只宝可梦不会打瞌睡或睡着。该状态在大量回合后解除。	Le Pokémon ne peut pas s'endormir ou devenir somnolent. Ce statut disparaît après plusieurs tours.	Das Pokémon kann nicht schläfrig werden bzw. schlafen. Dieser Status lässt erst nach vielen Zügen nach.	El Pokémon es incapaz de quedarse somnoliento o dormir. Este estado desaparece tras pasar unos turnos.		
+0000-slip-0000|data.Name		Slip	水面	Amphibie	Schwimmfähig			
+0000-slip-0001|data.Desc		The Pokémon is given the ability to traverse water.	这只宝可梦可以穿越水。	Le Pokémon peut marcher sur l'eau.	Das Pokémon erlangt die Fähigkeit durch Wasser zu schwimmen.			
+0000-snatch-0000|data.Name		Snatch	抢夺	Saisie	Schnapper			
+0000-snatch-0001|data.Desc		The Pokémon is ready to snatch any stat-boosting move that foes use on themselves. This status wears off after a few turns.	这只宝可梦正在准备抢夺对手对自己使用的能力提升的招式效果。该状态在几回合后解除。	Le pokémon se tient prêt à saisir les augmentation de stats de l'ennemi suite à une capacité. Ce statut disparaît après quelques tours.	Das Pokémon ist bereit, jede statuswertveränderende Attacke, welche Gegner auf sich selbst nutzen, zu schnappen und selbst davon zu profitieren. Dieser Status lässt nach einigen Zügen nach.			
+0000-stat_charged-0000|data.Name		Stat-Charged	能力保护		Statuswert-Schutz			
+0000-stat_charged-0001|data.Desc		The Pokémon is protected from all stat changes, including its own.	这只宝可梦受到了保护，能力不会被改变，包括它自己的变化招式。		Das Pokémon ist gegen jegliche Statuswertsenkungen geschützt. Eigene Statuswertsenkungen sind somit auch eingeschlossen.			
+0000-status_protection-0000|data.Name		Status Protection	状态保护	Protection Statut	Statusschutz			
+0000-status_protection-0001|data.Desc		The Pokémon is protected from a certain status effect. This status wears off after many turns have passed.	这只宝可梦受到了保护，不受某种状态影响。该状态在大量回合后解除。	Le Pokémon est protégé de certains statuts. Ce statut disparaît après plusieurs tours.	Das Pokémon ist gegen einen bestimmten Statuseffekt geschützt. Dieser Status lässt nach vielen Zügen nach.			
+0000-stockpile-0000|data.Name		Stockpile	蓄力	Stockage	Horter	Reserva		
+0000-stockpile-0001|data.Desc		The Pokémon has stockpiled energy, to use in the moves Swallow or Spit Up. It also increases its Defense and Special Defense. This status wears off after many turns have passed.	这只宝可梦储存能量用于吞下或喷出招式。它的防御和特防也将提升。该状态在很久之后才会解除。	Le Pokémon stocke de l'énergie pour les capacités Avale et Relâche. Améliore aussi la Défense et la Défense Spéciale. Ce statut disparaît après plusieurs tours.	Das Pokémon hortet Energie, um Attacken wie Entfessler und Verzehrer nutzen zu können. Des Weiteren erhöht es seine Verteidigung und Spezial Verteidigung. Dieser Status lässt nach vielen Zügen nach.	El Pokémon ha acumulado energia, para usarlo en los movimientos Tragar o Escupir. También aumenta su Defensa y Defensa Especial. Este estado desaparece tras pasar unos turnos.		
+0000-super_mobile-0000|data.Name		Super Mobile	畅通	Passmuraille	Supermobil			
+0000-super_mobile-0001|data.Desc		The Pokémon is given the ability to traverse walls.	这只宝可梦可以穿越墙壁。	Le Pokémon peut traverser les murs.	Das Pokémon erlangt die Fähigkeit Wände zu durchqueren.			
+0000-sure_shot-0000|data.Name		Sure Shot	必中	Coup Sûr	Scharfschuss			
+0000-sure_shot-0001|data.Desc		The Pokémon's attacks cannot miss. This status wears off after many turns have passed.	这只宝可梦的招式一定会命中。该状态在大量回合后解除。	Les attaques du Pokémon ne peuvent pas échouer. Ce statut disparaît après plusieurs tours.	Die Attacken des Pokémon können nicht verfehlen. Dieser Status lässt nach vielen Zügen nach.			
+0000-taunted-0000|data.Name		Taunted	挑衅	Provoqué	Provoziert	Mofado		
+0000-taunted-0001|data.Desc		The Pokémon is taunted into only using attacking moves. This status wears off after many turns have passed.	这只宝可梦被挑衅了，只能使用攻击招式。该状态在大量回合后解除。	Le Pokémon est provoqué et ne peut utiliser que des attaques offensive. Ce statut disparaît après plusieurs tours.	Das Pokémon wurde provoziert, sodass es nur schadende Attacken nutzen kann. Dieser Status lässt erst nach vielen Zügen nach.	El Pokémon está mofado en usar únicamente movimientos de ataque. Este estado desaparece tras pasar unos turnos.		
+0000-telekinesis-0000|data.Name		Telekinesis	意念移物	Lévikinésie	Telekinese	Telequinesis		
+0000-telekinesis-0001|data.Desc		The Pokémon is floating from telekinesis, preventing it from moving or avoiding attacks. This status wears off after a few turns.	这只宝可梦由于意念而悬浮，无法移动或躲避攻击。该状态在几回合后解除。	Le Pokémon flotte dans les airs par télékinésie, il ne peut pas bouger ou eviter les attaques. Ce statut disparaît après quelques tours.	Das Pokémon schwebt durch Telekinese, wodurch es sich sowohl nicht mehr bewegen als auch Attacken ausweichen kann. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está flotando por telequinesis, impidiendo moverse o esquivar ataques. Este estado desaparece tras unos turnos.		
+0000-thrash-0000|data.Name		Thrash	大闹一番	Mania	Fuchtler	Golpe		
+0000-thrash-0001|data.Desc		The Pokémon will use Thrash repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.	这只宝可梦将持续使出大闹一番直到状态解除。该状态在几回合后解除，并且解除后这只宝可梦将因为疲劳而陷入混乱。	Le Pokémon utilise Mania en continu jusqu'à ce que le statut disparaisse. Ce statut disparaît après plusieurs tours, laissant le Pokémon confus de fatigué.	Das Pokémon wird Fuchtler wiederholt einsetzen bis der Status nachlässt. Dieser Status lässt nach einigen Zügen nach, wodurch das Pokémon durch Erschöpfung verwirrt wird.	El Pokémon usará Golpe repetidamente hasta que el estado desaparezca. Este estado desaparece tras unos turnos, dejando al Pokémon confundido de la fatiga.		
+0000-times_move_used-0000|data.Name		Times Move Used	招式使用次数	Nombre d'utilisations de la capacité	Anzahl der Attackenutzung	Veces Movimiento Usado		
+0000-times_move_used-0001|data.Desc								
+0000-torment-0000|data.Name		Torment	无理取闹	Tourmente	Folterknecht	Tormento		
+0000-torment-0001|data.Desc		The Pokémon is prevented from using the same move twice in a row. This status wears off after many turns have passed.	这只宝可梦不能连续两次使用相同的招式。该状态在大量回合后解除。	Le Pokémon ne peut pas utiliser la même capacité deux fois d'affilée. Ce statut disparaît après plusieurs tours.	Das Pokémon kann keine Attacke zweimal hintereinander nutzen. Dieser Status lässt erst nach vielen Zügen nach.	El Pokémon se le impide usar el mismo movimiento dos veces seguidas. Este estado desaparece tras pasar unos turnos.		
+0000-transformed-0000|data.Name		Transformed						
+0000-transformed-0001|data.Desc								
+0000-type_boosted-0000|data.Name		Type-Boosted	属性增强	Boost Type	Typverstärkt			
+0000-type_boosted-0001|data.Desc		The Pokémon has moves of a certain type boosted. This status wears off after many turns have passed.	这只宝可梦某种属性的招式增强了。该状态在大量回合后解除。	Le Pokémon voit ses capacités d'un certain type boostés. Ce statut disparaît après plusieurs tours.	Attacken mit einem bestimmten Typ sind verstärkt. Dieser Status lässt nach vielen Zügen nach.			
+0000-type_converted-0000|data.Name		Type-Converted	属性转变	Conversion Type	Typkonverter			
+0000-type_converted-0001|data.Desc		The Pokémon has all of its moves converted to a single type.	这只宝可梦所有招式的属性都变为了同一种属性。	Toutes les capacités du Pokémon sont converties au même type.	Alle Attacken des Pokémon sind in einen einzigen Typ umgewandelt worden.			
+0000-type_protected-0000|data.Name		Type-Protected	属性保护	Protection-Type	Typschutz			
+0000-type_protected-0001|data.Desc		The Pokémon is protected from moves of a certain type. This status wears off after many turns have passed.	这只宝可梦受到了保护，不会被某种属性的招式伤害。该状态在大量回合后解除。	Le Pokémon est protégé des attaques d'un certain type. Ce statut disparaît après plusieurs tours.	Das Pokémon ist gegen Attacken eines bestimmten Typs geschützt. Dieser Status lässt nach vielen Zügen nach.			
+0000-veiled-0000|data.Name		Veiled						
+0000-veiled-0001|data.Desc								
+0000-was_hurt_last_turn-0000|data.Name		Was Hurt Last Turn	上一回合受到过伤害	Touché au Dernier Tour	Wurde letzte Runde verletzt	Ha Recibido Daño en el Último Turno		
+0000-was_hurt_last_turn-0001|data.Desc								
+0000-water_pledge-0000|data.Name		Water Pledge	水之誓约	Aire d'Eau	Wassersäulen			
+0000-water_pledge-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.	这只宝可梦随时准备在敌人受到攻击时发动后续攻击。该状态在几回合后解除。	Le Pokémon est prêt à libérer une attaque suivie dès qu'un ennemi est attaqué. Ce statut disparaît après quelques tours.	Das Pokémon ist bereit jedes Mal, wenn ein Gegner angegriffen wird, eine nachfolgende Attacke einzusetzen. Dieser Status lässt nach einigen Zügen nach.			
+0000-weakness_drain-0000|data.Name		Weakness Drain	弱点吸收		Schwäche aufzehren			
+0000-weakness_drain-0001|data.Desc		The Pokémon will have its HP restored if hit by a super-effective move. This status wears off after many turns have passed.	这只宝可梦受到效果绝佳的招式攻击时，会回复HP。该状态在大量回合后解除。		Das Pokémon regeneriert KP, sobald es von einer sehr effektiven Attacke getroffen wurde. Dieser Status lässt nach vielen Zügen nach.			
+0000-whirlpool-0000|data.Name		Whirlpool	潮旋	Siphon	Whirlpool	Torbellino		
+0000-whirlpool-0001|data.Desc		The Pokémon is trapped in a whirlpool, taking gradual damage and preventing it from moving. This status wears off after a few turns.	这只宝可梦被困在了潮旋中，每回合都会受到少量伤害并且无法移动。该状态在几回合后解除。	Le Pokémon est piégé dans un siphon, il est immobilisé et prend régulièrement des dégâts. Ce statut disparaît après quelques tours.	Das Pokémon ist in einem Whirlpool gefangen, wodurch es stetig Schaden erhält und jegliche Bewegungen von ihm verhindert werden. Dieser Status lässt nach einigen Zügen nach.	El Pokémon es atrapado en un torbellino, recibiendo daño gradual e impidiendo moverse. Este estado desaparece tras unos turnos.		
+0000-wide_guard-0000|data.Name		Wide Guard	广域防守	Garde Large	Rundumschutz	Vastaguardia		
+0000-wide_guard-0001|data.Desc		The Pokémon is protected from moves that hit in a wide range. This status wears off after a few turns.	这只宝可梦受到了保护，不会受到大范围攻击。该状态在几回合后解除。	Le Pokémon est protégé des attaques à large portée. Ce statut disparaît après quelques tours.	Das Pokémon ist gegen Bereichsangriffe geschützt. Dieser Status lässt nach einigen Zügen nach.	El Pokémon está protegido de movimientos que golpean en un rango amplio. Este estado desaparece tras unos turnos.		
+0000-wish-0000|data.Name		Wish	祈愿	Vœu	Wunschtraum	Deseo		
+0000-wish-0001|data.Desc		The Pokémon will have its HP restored a few turns in the future. The amount of HP restored depends on the Maximum HP of the user.	这只宝可梦将在未来的几回合内回复HP。回复的HP由使用者的最大HP决定。	Le Pokémon récupèrera des PV d'ici quelques tours. La quantité de PV restaurés dépend des PV Max du lanceur.	Das Pokémon heilt seine KP nach einigen Zügen. Die Höhe der Heilung hängt von den maximalen KP des Nutzers ab.	El Pokémon recuperará sus PS en unos turnos en el futuro. La cantidad de PS restauradas depende de los PS Máximos del usuario. 		
+0000-wrap-0000|data.Name		Wrap	紧束		umwickelt			
+0000-wrap-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.	这只宝可梦无法做任何事情，并且会持续受到敌人的伤害。该状态在几回合后解除。	Le Pokémon est incapable d'effectuer une action et subit des dégâts progressifs de l'ennemi. Ce statut disparaît après quelques tours.	Das Pokémon ist unfähig, jegliche Handlung zu durchführen und nimmt vom Gegner stetig Schaden. Dieser Status lässt nach einigen Zügen nach.	El Pokémon es incapaz de realizar ninguna acción, y recibe daño gradual del enemigo. Este estado desaparece tras unos turnos.		
+0000-yawning-0000|data.Name		Yawning	哈欠	Bâillement	Gähnend	Somnoliento		
+0000-yawning-0001|data.Desc		The Pokémon is yawning and will fall asleep in a few turns.	这只宝可梦打哈欠了，几回合后会陷入睡眠状态。	Le Pokémon bâille et s'endormira dans quelques tours.	Das Pokémon muss gähnen und es wird in einigen Zügen einschlafen.	El Pokémon está bostezando y se quedará dormido en unos turnos		

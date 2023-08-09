@@ -109,8 +109,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-ingrain-0001|data.Desc		The Pokémon's roots are planted in the ground, gradually restoring its HP and preventing it from moving. This status wears off after a few turns.	Les racines du Pokémon puisent les nutriments du sol ce qui restaure régulièrement ses PV mais l'empêche de bouger. Ce statut disparaît après quelques tours.	Die Wurzeln des Pokémon sind in den Boden gepflanzt, wodurch es stetig KP regeneriert und seine Bewegungen verhindert werden. Dieser Status lässt nach einigen Zügen nach.	Las raíces del Pokémon son plantados en el suelo, gradualmente recuperando sus PS e impidiendo moverse. Este estado desaparece tras unos turnos.						这只宝可梦正在扎根，会逐渐回复HP且无法移动。该状态在几回合后解除。																	
 0000-invisible-0000|data.Name		Invisible	Invisible								透明																	
 0000-invisible-0001|data.Desc		The Pokémon is invisible and cannot be seen by other Pokémon. This status wears off after a few turns.									这只宝可梦隐身了，无法被其它宝可梦看见。该状态在几回合后解除。																	
-0000-kings_shield-0000|data.Name		King's Shield																										
-0000-kings_shield-0001|data.Desc		The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks. 																										
+0000-kings_shield-0000|data.Name		King's Shield									王者盾牌																	
+0000-kings_shield-0001|data.Desc		The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks. 									这只宝可梦受到了保护，不会受到任何伤害。该状态在几回合后，或宝可梦攻击后解除。																	
 0000-last_ally_move-0000|data.Name		Last Ally Move	Dernière Capacité Alliée	Letzte Verbündetenattacke	Último Movimiento Aliado						上一个队伍成员使用的招式																	
 0000-last_ally_move-0001|data.Desc																												
 0000-last_move_hit_by_other-0000|data.Name		Last Move Hit By Other																										
