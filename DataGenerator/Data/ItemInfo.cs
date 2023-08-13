@@ -769,7 +769,7 @@ namespace DataGenerator.Data
             {
                 item.Name = new LocalText("Amber Tear");
                 fileName = "medicine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
-                item.Desc = new LocalText("An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises the Pokémon's chances of recruitment on the floor it's used.");
+                item.Desc = new LocalText("An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises chances of recruiting other Pokémon to the team on the floor it's used.");
                 item.Sprite = "Bottle_Gold";
                 item.Price = 2500;
                 item.MaxStack = 3;

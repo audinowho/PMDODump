@@ -2075,7 +2075,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_NOTHING_HAPPENED")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_RECRUIT_BOOST_START"), true));
                 status.BeforeHittings.Add(0, new FlatRecruitmentEvent(50));
-                status.BeforeBeingHits.Add(0, new FlatRecruitmentEvent(50));
+                //status.BeforeBeingHits.Add(0, new FlatRecruitmentEvent(50));
             }
             else if (ii == 119)
             {
@@ -2432,6 +2432,8 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Protect_Yellow", 2));
                 status.BeforeBeingHits.Add(0, new AttackingMoveNeededEvent(new ProtectEvent(new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10))));
+                //TODO: this is kind of a hack and should technically be bound to the protection from before via some kind of context state
+                //currently te bug won't surface unless Unseen Fist or some other move is added the ignores protect but does not lift it
                 status.BeforeBeingHits.Add(15, new AttackingMoveNeededEvent(new StatusStackBattleEvent("mod_attack", false, true, -1)));
                 status.StatusStates.Set(new RecentState());
                 status.StatusStates.Set(new CountDownState(3));
