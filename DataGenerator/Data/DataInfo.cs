@@ -10,6 +10,7 @@ using PMDC;
 using PMDC.Data;
 using System.IO;
 using PMDC.Dev;
+using RogueEssence.LevelGen;
 
 namespace DataGenerator.Data
 {
@@ -47,9 +48,11 @@ namespace DataGenerator.Data
             universalEvent.OnDeaths.Add(-10, new SetDeathEvent());
             universalEvent.OnDeaths.Add(0, new ImpostorReviveEvent("imposter", "transformed"));
             universalEvent.OnDeaths.Add(10, new HandoutRelativeExpEvent(1, 7, 10, 5, 2));
+            universalEvent.OnMapStarts.Add(-10, new SingleCharScriptEvent("UpdateEscort"));
             universalEvent.OnMapStarts.Add(-10, new FadeInEvent());
             universalEvent.OnMapStarts.Add(-5, new SpecialIntroEvent());
             universalEvent.OnMapStarts.Add(-5, new ReactivateItemsEvent());
+            universalEvent.ZoneSteps.Add(new ScriptZoneStep("SpawnMissionNpcFromSV"));
             //UniversalEvent.OnWalks.Add(-5, new RevealFrontTrapEvent());
 
 

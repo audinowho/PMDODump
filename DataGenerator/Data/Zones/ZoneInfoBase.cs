@@ -3058,9 +3058,6 @@ namespace DataGenerator.Data
                 poolSpawn.TeamSizes.Add(4, new IntRange(0, 5), 1);
                 floorSegment.ZoneSteps.Add(poolSpawn);
 
-                ScriptZoneStep scriptZoneStep = new ScriptZoneStep("SpawnMissionNpcFromSV");
-                floorSegment.ZoneSteps.Add(scriptZoneStep);
-
 
                 RandBag<IGenStep> npcZoneSpawns = new RandBag<IGenStep>();
                 npcZoneSpawns.RemoveOnRoll = true;
