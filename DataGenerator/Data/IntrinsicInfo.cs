@@ -1230,6 +1230,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Infiltrator");
                 ability.Desc = new LocalText("Passes through the opposing Pokémon's barrier and strikes.");
                 ability.OnActions.Add(0, new AddContextStateEvent(new Infiltrator(new StringKey("MSG_INFILTRATOR"))));
+                ability.BeforeStatusAddings.Add(-1, new AddStatusContextStateEvent(new Infiltrator(new StringKey("MSG_INFILTRATOR"))));
             }
             else if (ii == 152)
             {
@@ -1263,7 +1264,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Magic Bounce");
                 ability.Desc = new LocalText("Reflects moves that cause status conditions.");
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Green", 2, -1, -1, 192), 3);
-                ability.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(true, new BounceStatusEvent(new StringKey("MSG_MAGIC_BOUNCE"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
+                ability.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(false, new BounceStatusEvent(new StringKey("MSG_MAGIC_BOUNCE"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
             }
             else if (ii == 157)
             {
@@ -1447,6 +1448,7 @@ namespace DataGenerator.Data
                 ability.ProximityEvent.OnMapTurnEnds.Add(0, new ShareOnMapTurnEndsEvent());
                 ability.ProximityEvent.OnMapStarts.Add(0, new ShareOnMapStartsEvent());
                 ability.ProximityEvent.BeforeStatusAdds.Add(0, new ShareBeforeStatusAddsEvent());
+                ability.ProximityEvent.BeforeStatusAddings.Add(0, new ShareBeforeStatusAddingsEvent());
                 ability.ProximityEvent.OnStatusAdds.Add(0, new ShareOnStatusAddsEvent());
                 ability.ProximityEvent.OnStatusRemoves.Add(0, new ShareOnStatusRemovesEvent());
                 ability.ProximityEvent.OnMapStatusAdds.Add(0, new ShareOnMapStatusAddsEvent());
@@ -1648,6 +1650,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Corrosion");
                 ability.Desc = new LocalText("The Pokémon can poison the target even if it's a Steel or Poison type.");
                 ability.OnActions.Add(0, new AddContextStateEvent(new Corrosion()));
+                ability.BeforeStatusAddings.Add(-1, new AddStatusContextStateEvent(new Corrosion()));
             }
             else if (ii == 213)
             {

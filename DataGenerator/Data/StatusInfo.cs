@@ -190,8 +190,8 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison", new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_POISON_FAIL")));
-                status.BeforeStatusAdds.Add(0, new TypeCheck("poison", new StringKey("MSG_POISON_FAIL_ELEMENT")));
-                status.BeforeStatusAdds.Add(0, new TypeCheck("steel", new StringKey("MSG_POISON_FAIL_ELEMENT")));
+                status.BeforeStatusAdds.Add(0, new ExceptionStatusContextEvent(typeof(Corrosion), new TypeCheck("poison", new StringKey("MSG_POISON_FAIL_ELEMENT"))));
+                status.BeforeStatusAdds.Add(0, new ExceptionStatusContextEvent(typeof(Corrosion), new TypeCheck("steel", new StringKey("MSG_POISON_FAIL_ELEMENT"))));
                 status.OnStatusAdds.Add(-5, new ReplaceMajorStatusEvent());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_TOXIC_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
@@ -1229,7 +1229,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SAFEGUARD_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SAFEGUARD_END")));
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
-                status.BeforeStatusAdds.Add(0, new ExceptInfiltratorStatusEvent(true, new StateStatusCheck(typeof(BadStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(emitter, "DUN_Screen_Hit", 10))));
+                status.BeforeStatusAdds.Add(0, new ExceptInfiltratorStatusEvent(false, new StateStatusCheck(typeof(BadStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(emitter, "DUN_Screen_Hit", 10))));
                 status.StatusStates.Set(new CountDownState(15));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1249,7 +1249,7 @@ namespace DataGenerator.Data
                 emitter.Speed = 36;
                 emitter.HeightSpeed = 10;
                 emitter.SpeedDiff = 10;
-                status.BeforeStatusAdds.Add(0, new ExceptInfiltratorStatusEvent(true, new StatChangeCheck(new List<Stat>(), new StringKey("MSG_STAT_DROP_PROTECT"), true, false, true, new StatusAnimEvent(emitter, "DUN_Pokemon_Trap", 10))));
+                status.BeforeStatusAdds.Add(0, new ExceptInfiltratorStatusEvent(false, new StatChangeCheck(new List<Stat>(), new StringKey("MSG_STAT_DROP_PROTECT"), true, false, true, new StatusAnimEvent(emitter, "DUN_Pokemon_Trap", 10))));
                 status.StatusStates.Set(new CountDownState(15));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1456,7 +1456,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MAGIC_COAT_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Green", 2, -1, -1, 192), 3);
-                status.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(true, new BounceStatusEvent(new StringKey("MSG_MAGIC_COAT"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
+                status.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(false, new BounceStatusEvent(new StringKey("MSG_MAGIC_COAT"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
                 status.StatusStates.Set(new CountDownState(15));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
