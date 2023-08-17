@@ -6,3 +6,4 @@
 * Dev: More friendly strings for editors
 * Dev: Delete button for map entities
 * Dev: TeleportTo for GroundObjects
+* Dev: Fixed vertical movement in ActionToPosition
