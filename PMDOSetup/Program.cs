@@ -272,7 +272,7 @@ namespace PMDOSetup
 
             bool firstInstall = lastVersion == new Version(0, 0, 0, 0);
             if (!firstInstall)
-                Console.WriteLine("WARNING: Updates will invalidate existing quicksaves.  Be sure to finish them first!");
+                Console.WriteLine("WARNING: Updates will invalidate existing quicksaves and pending rescues.  Be sure to finish them first!");
 
             //3: read from site what version is uploaded. if greater than the current version, upgrade
             using (var wc = new WebClient())
