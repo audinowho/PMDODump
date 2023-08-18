@@ -38,7 +38,7 @@ namespace DataGenerator.Data
                     SkillData oldMove = DataManager.LoadData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString(), ".json");
                     if (oldMove != null)
                     {
-                        oldMove.Data.BeforeHits = move.Item2.Data.BeforeHits;
+                        oldMove.Data.SkillStates = move.Item2.Data.SkillStates;
                         DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
                     }
                 }
@@ -458,6 +458,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -2006,6 +2007,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 12;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
@@ -4241,6 +4243,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
@@ -5420,6 +5423,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.BeforeHits.Add(0, new RepeatHitEvent("last_used_move", "times_move_used", 10, 1, false));
@@ -8230,6 +8234,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 14;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
@@ -8705,6 +8710,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -9077,6 +9083,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
@@ -10409,6 +10416,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
@@ -10496,6 +10504,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 18;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(50));
@@ -10533,6 +10542,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -11148,6 +11158,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 16;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
@@ -11539,6 +11550,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
@@ -13818,6 +13830,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnActions.Add(0, new AddContextStateEvent(new Infiltrator(new StringKey("MSG_INFILTRATOR_SKILL"))));
@@ -13847,6 +13860,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(70));
@@ -16368,6 +16382,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(125));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -16994,6 +17009,8 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new JawState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -17655,6 +17672,8 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new JawState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -17787,6 +17806,8 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new JawState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -18216,6 +18237,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 5;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -19023,6 +19045,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 15;
                 skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(65));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -19295,6 +19318,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 15;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(65));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -19527,6 +19551,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -19665,6 +19690,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -19761,6 +19787,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 15;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -20009,6 +20036,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -20073,6 +20101,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 20;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());

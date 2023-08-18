@@ -2035,23 +2035,35 @@ namespace DataGenerator.Data
             }
             else if (ii == 284)
             {
-                ability.Name = new LocalText("**Vessel of Ruin");
+                ability.Name = new LocalText("Vessel of Ruin");
                 ability.Desc = new LocalText("The power of the Pokémon's ruinous vessel lowers the Sp. Atk stats of all Pokémon except itself.");
+                ability.ProximityEvent.Radius = 3;
+                ability.ProximityEvent.TargetAlignments = Alignment.Friend | Alignment.Foe;
+                ability.ProximityEvent.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 3, 4));
             }
             else if (ii == 285)
             {
-                ability.Name = new LocalText("**Sword of Ruin");
+                ability.Name = new LocalText("Sword of Ruin");
                 ability.Desc = new LocalText("The power of the Pokémon's ruinous sword lowers the Defense stats of all Pokémon except itself.");
+                ability.ProximityEvent.Radius = 3;
+                ability.ProximityEvent.TargetAlignments = Alignment.Friend | Alignment.Foe;
+                ability.ProximityEvent.BeforeBeingHits.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 4, 3));
             }
             else if (ii == 286)
             {
-                ability.Name = new LocalText("**Tablets of Ruin");
+                ability.Name = new LocalText("Tablets of Ruin");
                 ability.Desc = new LocalText("The power of the Pokémon's ruinous wooden tablets lowers the Attack stats of all Pokémon except itself.");
+                ability.ProximityEvent.Radius = 3;
+                ability.ProximityEvent.TargetAlignments = Alignment.Friend | Alignment.Foe;
+                ability.ProximityEvent.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 3, 4));
             }
             else if (ii == 287)
             {
-                ability.Name = new LocalText("**Beads of Ruin");
+                ability.Name = new LocalText("Beads of Ruin");
                 ability.Desc = new LocalText("The power of the Pokémon's ruinous beads lowers the Sp. Def stats of all Pokémon except itself.");
+                ability.ProximityEvent.Radius = 3;
+                ability.ProximityEvent.TargetAlignments = Alignment.Friend | Alignment.Foe;
+                ability.ProximityEvent.BeforeBeingHits.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 4, 3));
             }
             else if (ii == 288)
             {
@@ -2075,8 +2087,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 292)
             {
-                ability.Name = new LocalText("**Sharpness");
-                ability.Desc = new LocalText("");
+                ability.Name = new LocalText("Sharpness");
+                ability.Desc = new LocalText("Powers up slicing moves.");
+                ability.OnActions.Add(0, new MultiplyMoveStateEvent(typeof(BladeState), 5, 4));
             }
             else if (ii == 293)
             {
