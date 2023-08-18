@@ -1430,6 +1430,7 @@ namespace DataGenerator.Data
                 asset = "grass";
                 tile.MinimapColor = Color.Teal;
                 tile.BlockLight = true;
+                tile.TerrainStates.Set(new FoliageTerrainState());
             }
 
             return (asset, tile);

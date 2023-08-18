@@ -1274,6 +1274,9 @@ namespace DataGenerator.Data
                     int version = Convert.ToInt32(reader["version_group_id"].ToString());
                     if (version < 16)
                         version = 16;
+                    //These mons are from LEGENDS ARCEUS.  NOT SWORD AND SHIELD.
+                    if (index >= 899 && index < 906)
+                        version = 24;
                     // hisui forms don't have info for their original game...
                     if (version == 24)
                         version = 25;
