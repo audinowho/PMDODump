@@ -658,8 +658,7 @@ namespace DataGenerator.Data
                 newData.OnHits.Add(-1, new LevelDamageEvent(false, 2, 1));
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
+                newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                 item.UseEvent.OnHits.Add(0, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey(), true));
             }
             else if (ii == 113)
@@ -770,7 +769,7 @@ namespace DataGenerator.Data
             {
                 item.Name = new LocalText("Amber Tear");
                 fileName = "medicine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
-                item.Desc = new LocalText("An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises the Pokémon's chances of recruitment on the floor it's used.");
+                item.Desc = new LocalText("An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises chances of recruiting other Pokémon to the team on the floor it's used.");
                 item.Sprite = "Bottle_Gold";
                 item.Price = 2500;
                 item.MaxStack = 3;
@@ -1567,7 +1566,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A wand to be waved at a Pokémon. It transforms the target into the same Pokémon as the user.");
                 item.Sprite = "Wand_Pink";
                 item.Price = 10;
-                item.UseEvent.OnHits.Add(0, new TransformEvent(true));
+                item.UseEvent.OnHits.Add(0, new TransformEvent(true, "transformed"));
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Puff_Green", 3));
                 item.UseEvent.HitFX.Sound = "DUN_Transform";
             }
@@ -1599,7 +1598,8 @@ namespace DataGenerator.Data
                 item.UseAction.PreActions.Add(itemFX);
                 item.UseAction.ActionFX.Sound = "DUN_Blowback_Orb";
                 item.UseEvent.OnHitTiles.Add(0, new RemoveTrapEvent());
-                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", new SingleEmitter(new AnimData("Puff_Brown", 3)), "wall", "water", "lava", "pit"));
+                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Transform", new SingleEmitter(new AnimData("Puff_Brown", 3)),
+                    new FlagType(typeof(WallTerrainState)), new FlagType(typeof(WaterTerrainState)), new FlagType(typeof(LavaTerrainState)), new FlagType(typeof(AbyssTerrainState)), new FlagType(typeof(FoliageTerrainState))));
             }
             else if (ii == 250)
             {
@@ -1624,6 +1624,7 @@ namespace DataGenerator.Data
                 weatherPair.Add("grass", "grassy_terrain");
                 weatherPair.Add("electric", "electric_terrain");
                 weatherPair.Add("fairy", "misty_terrain");
+                weatherPair.Add("psychic", "psychic_terrain");
                 weatherPair.Add("ice", "hail");
                 weatherPair.Add("rock", "sandstorm");
                 weatherPair.Add("ground", "sandstorm");
@@ -1700,7 +1701,8 @@ namespace DataGenerator.Data
                 ((AreaAction)item.UseAction).Speed = 36;
                 ((AreaAction)item.UseAction).HitTiles = true;
                 item.UseAction.ActionFX.Sound = "_UNK_DUN_Seismic";
-                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("", new SingleEmitter(new AnimData("Puff_Brown", 3)), "water", "lava", "pit"));
+                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new SingleEmitter(new AnimData("Puff_Brown", 3)),
+                    new FlagType(typeof(WaterTerrainState)), new FlagType(typeof(LavaTerrainState)), new FlagType(typeof(AbyssTerrainState))));
                 item.UseEvent.AfterActions.Add(0, new BattleLogBattleEvent(new StringKey("MSG_FLOOR_FILL")));
             }
             else if (ii == 257)
@@ -2049,7 +2051,7 @@ namespace DataGenerator.Data
                 ((AreaAction)item.UseAction).Speed = 36;
                 item.UseAction.ActionFX.Sound = "DUN_One_Room_Orb";
                 ((AreaAction)item.UseAction).HitTiles = true;
-                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("", new SingleEmitter(new AnimData("Wall_Break", 2)), "wall", "grass"));
+                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new SingleEmitter(new AnimData("Wall_Break", 2)), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                 item.UseEvent.OnHitTiles.Add(0, new MapOutEvent());
                 item.UseEvent.AfterActions.Add(0, new BattleLogBattleEvent(new StringKey("MSG_FLOOR_ROOM")));
             }
@@ -3139,7 +3141,7 @@ namespace DataGenerator.Data
                 item.ItemStates.Set(new FoodState());
                 item.Price = 1;
                 item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(30, false));
-                item.UseEvent.OnHits.Add(0, new ChooseOneEvent(new StatusBattleEvent("sleep", true, false), new StatusBattleEvent("burn", true, false), new StatusBattleEvent("paralyze", true, false), new StatusBattleEvent("poison_toxic", true, false)));
+                item.UseEvent.OnHits.Add(0, new ChooseOneEvent(new StatusBattleEvent("sleep", true, false), new MultiBattleEvent(new StatusStackBattleEvent("mod_defense", true, false, -3), new StatusStackBattleEvent("mod_special_defense", true, false, -3)), new StatusBattleEvent("burn", true, false), new StatusBattleEvent("poison_toxic", true, false)));
                 item.UseAction = new SelfAction();
                 item.UseAction.TargetAlignments |= Alignment.Self;
                 item.Explosion.TargetAlignments |= Alignment.Self;
@@ -3177,16 +3179,16 @@ namespace DataGenerator.Data
             }
             else if (ii == 458)
             {
-                item.Name = new LocalText("Grimy Food");
-                fileName = "food_grimy_2";
+                item.Name = new LocalText("Foul Gummi");
+                fileName = "gummi_foul";
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.");
-                item.Sprite = "Rock_Purple";
+                item.Sprite = "Gummi_Black";
                 item.Icon = 16;
                 item.UsageType = ItemData.UseType.Eat;
                 item.ItemStates.Set(new EdibleState());
                 item.ItemStates.Set(new FoodState());
                 item.Price = 1000;
-                item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(30, false));
+                item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(25, false));
                 item.UseEvent.OnHits.Add(0, new LevelChangeEvent(-1));
                 item.UseAction = new SelfAction();
                 item.UseAction.TargetAlignments |= Alignment.Self;
@@ -3345,7 +3347,6 @@ namespace DataGenerator.Data
                 fileName = "egg_mystery";
                 item.Sprite = "Egg_Sea";
                 item.Desc = new LocalText("An egg with bizarre colors that have never been seen before. What could this egg be?");
-                item.MaxStack = -1;
             }
             else if (ii == 576)
                 FillTMData(item, "earthquake");

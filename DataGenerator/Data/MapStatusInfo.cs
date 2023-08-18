@@ -7,6 +7,7 @@ using PMDC.Dungeon;
 using PMDC;
 using PMDC.Data;
 using Microsoft.Xna.Framework;
+using static RogueEssence.Data.TerrainData;
 
 namespace DataGenerator.Data
 {
@@ -671,6 +672,28 @@ namespace DataGenerator.Data
                 overlay.Layer = DrawLayer.Top;
                 status.Emitter = overlay;
                 status.RepeatMethod = new MapStatusRefreshEvent();
+            }
+            else if (ii == 44)
+            {
+                status.Name = new LocalText("Psychic Terrain");
+                status.Desc = new LocalText("Psychic-type attacks are boosted, and Pokémon can evade moves from close up.");
+                OverlayEmitter overlay = new OverlayEmitter();
+                overlay.Anim = new BGAnimData("White", 3);
+                overlay.Color = Color.Purple * 0.3f;
+                overlay.Layer = DrawLayer.Top;
+                status.Emitter = overlay;
+                status.RepeatMethod = new MapStatusRefreshEvent();
+                status.StatusStates.Set(new MapWeatherState());
+                status.OnMapStatusAdds.Add(0, new MapStatusSoundEvent("DUN_Gyro_Ball"));
+                status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_PSYCHIC_TERRAIN_START"), true));
+                status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
+                status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_PSYCHIC_TERRAIN_END"), true));
+                status.OnActions.Add(0, new MultiplyElementEvent("psychic", 3, 2, false));
+                status.BeforeBeingHits.Add(0, new EvadeDistanceEvent(true));
+                status.StatusStates.Set(new MapCountDownState(50));
+                status.StatusStates.Set(new MapTickState(0));
+                status.OnMapTurnEnds.Add(5, new MapTickEvent());
+                status.OnMapTurnEnds.Add(5, new MapStatusCountDownEvent());
             }
 
 

@@ -193,8 +193,8 @@ namespace DataGenerator.Data
                 SpawnList<GenStep<MapGenContext>> spawns = new SpawnList<GenStep<MapGenContext>>();
                 spawns.Add(GetSingleSelectableSpawn(GetTeamMob("omanyte", "", "ancient_power", "brine", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
                 spawns.Add(GetSingleSelectableSpawn(GetTeamMob("kabuto", "", "ancient_power", "aqua_jet", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
-                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("anorith", "", "ancient_power", "bug_bite", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
-                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("lileep", "", "ancient_power", "ingrain", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                //spawns.Add(GetSingleSelectableSpawn(GetTeamMob("anorith", "", "ancient_power", "bug_bite", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                //spawns.Add(GetSingleSelectableSpawn(GetTeamMob("lileep", "", "ancient_power", "ingrain", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
                 spawns.Add(GetSingleSelectableSpawn(GetTeamMob("cranidos", "", "ancient_power", "take_down", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
                 spawns.Add(GetSingleSelectableSpawn(GetTeamMob("shieldon", "", "ancient_power", "iron_defense", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
                 spawns.Add(GetSingleSelectableSpawn(GetTeamMob("amaura", "", "ancient_power", "aurora_beam", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
@@ -532,13 +532,13 @@ namespace DataGenerator.Data
                                                                       ".##...##.",
                                                                       ".##...##.",
                                                                       "........."};
-                //   All ditto, no impostor
+                //   All ditto, impostor
                 SpawnList<RoomGen<ListMapGenContext>> bossRooms = new SpawnList<RoomGen<ListMapGenContext>>();
                 List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(4, 1)));
-                mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(4, 7)));
-                mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(1, 4)));
-                mobSpawns.Add(GetBossMob("ditto", "", "", "", "", "", "", new Loc(7, 4)));
+                mobSpawns.Add(GetBossMob("ditto", "imposter", "", "", "", "", "", new Loc(4, 1)));
+                mobSpawns.Add(GetBossMob("ditto", "imposter", "", "", "", "", "", new Loc(4, 7)));
+                mobSpawns.Add(GetBossMob("ditto", "imposter", "", "", "", "", "", new Loc(1, 4)));
+                mobSpawns.Add(GetBossMob("ditto", "imposter", "", "", "", "", "", new Loc(7, 4)));
                 bossRooms.Add(CreateRoomGenSpecificBoss<ListMapGenContext>(customPillarCross, new Loc(4, 4), mobSpawns, false), 10);
                 return CreateGenericBossRoomStep(bossRooms);
             }

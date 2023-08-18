@@ -70,7 +70,9 @@
 56	0	x	x						x	x		x		x		x						x	x					
 57	0								x			x		x		x						x	x					
 58	0	x	x	x	x				x	x	x	x	x			x		x			x	x	x					x
+58	1																						x					
 59	0	x	x		x	x	x		x		x	x		x	x	x	x	x		x	x	x	x					x
+59	1																						x					
 60	0	x	x	x	x					x	x		x		x			x	x				x					x
 61	0	x	x	x	x	x			x		x	x	x	x		x	x	x				x	x					x
 62	0		x			x			x			x		x		x		x				x	x					x
@@ -122,7 +124,9 @@
 98	0	x	x	x	x					x	x	x	x		x			x				x	x					x
 99	0		x		x				x		x	x		x	x	x	x	x			x	x	x					x
 100	0	x	x					x	x			x		x		x							x					
+100	1																						x					
 101	0	x	x					x	x			x		x		x							x					
+101	1																						x					
 102	0	x	x	x	x					x	x		x					x	x			x	x					x
 103	0		x		x	x			x		x			x		x		x				x	x					x
 103	1		x		x	x			x		x			x		x		x				x	x					x
@@ -154,6 +158,9 @@
 126	0		x		x	x			x		x	x		x		x	x	x			x	x	x					x
 127	0		x						x			x		x		x		x			x	x	x					x
 128	0		x						x			x	x	x		x	x	x			x	x	x					x
+128	1																						x					
+128	2																						x					
+128	3																						x					
 129	0	x	x	x	x					x	x		x	x	x		x											
 130	0		x						x			x		x		x					x							
 131	0	x	x	x	x	x					x		x		x		x	x		x	x		x					x
@@ -186,6 +193,7 @@
 155	0	x	x	x	x					x	x	x	x					x	x			x	x					x
 156	0	x	x	x	x				x		x	x		x		x	x	x				x	x					x
 157	0		x			x			x		x	x		x		x	x	x			x	x	x					x
+157	1																						x					
 158	0	x	x		x				x	x	x	x		x		x		x	x			x	x					x
 159	0	x	x						x	x		x		x		x		x				x	x					x
 160	0		x			x			x			x		x		x		x			x	x	x					x
@@ -223,6 +231,7 @@
 192	0	x	x	x	x					x	x			x	x	x		x		x	x	x	x					x
 193	0	x		x	x					x	x		x			x		x				x	x					x
 194	0	x	x	x						x	x		x	x		x		x				x	x					x
+194	1																						x					
 195	0	x	x	x	x	x			x		x		x	x		x		x			x	x	x					x
 196	0	x	x		x	x					x				x		x	x		x	x	x	x					x
 197	0	x	x		x	x			x		x	x	x			x	x	x		x	x	x	x					x
@@ -231,33 +240,6 @@
 199	1		x		x	x			x				x			x	x			x	x							
 200	0	x	x	x	x					x	x	x			x		x	x		x		x	x					x
 201	0							x																				
-201	1							x																				
-201	2							x																				
-201	3							x																				
-201	4							x																				
-201	5							x																				
-201	6							x																				
-201	7							x																				
-201	8							x																				
-201	9							x																				
-201	10							x																				
-201	11							x																				
-201	12							x																				
-201	13							x																				
-201	14							x																				
-201	15							x																				
-201	16							x																				
-201	17							x																				
-201	18							x																				
-201	19							x																				
-201	20							x																				
-201	21							x																				
-201	22							x																				
-201	23							x																				
-201	24							x																				
-201	25							x																				
-201	26																							x				
-201	27							x																				
 202	0		x		x	x			x		x		x	x	x	x	x	x					x					
 203	0	x	x	x	x				x	x	x	x	x	x	x	x	x	x		x	x	x	x					x
 204	0	x	x	x	x					x	x	x	x					x				x	x					x
@@ -268,10 +250,12 @@
 209	0	x	x	x	x				x	x	x	x	x	x	x	x	x	x				x	x					x
 210	0		x		x	x			x			x	x	x	x	x	x	x			x	x	x					x
 211	0		x		x				x	x		x	x	x		x		x				x	x					x
+211	1																						x					
 212	0		x			x			x			x		x		x		x			x	x	x					x
 213	0	x	x	x	x				x	x	x		x		x	x	x	x					x					x
 214	0	x	x	x	x	x			x		x	x	x	x		x	x	x			x	x	x					x
 215	0	x	x		x				x	x		x		x	x	x		x				x	x					x
+215	1																						x					
 216	0	x	x	x	x					x	x	x	x					x	x			x	x					x
 217	0		x			x			x			x		x		x		x			x	x	x					x
 218	0	x	x	x	x					x	x		x	x	x			x				x	x					x
@@ -558,7 +542,9 @@
 481	0										x				x					x								
 482	0				x	x															x							
 483	0																							x				
+483	1																						x					
 484	0																								x			
+484	1																						x					
 485	0					x											x											
 486	0																									x		
 487	0						x																					
@@ -580,6 +566,7 @@
 501	0	x																					x					
 502	0	x																					x					
 503	0																						x					
+503	1																						x					
 504	0	x																					x					
 505	0																						x					
 506	0	x																					x					
@@ -626,8 +613,10 @@
 547	0	x																					x					
 548	0	x																					x					
 549	0																						x					
+549	1																						x					
 550	0																						x					
 550	1																						x					
+550	2																						x					
 551	0	x																					x					
 552	0	x																					x					
 553	0																						x					
@@ -652,7 +641,9 @@
 568	0	x																					x					
 569	0																						x					
 570	0	x																					x					
+570	1																						x					
 571	0																						x					
+571	1																						x					
 572	0	x																					x					
 573	0	x																					x					
 574	0																						x					
@@ -717,6 +708,7 @@
 626	0																						x					
 627	0	x																					x					
 628	0																						x					
+628	1																						x					
 629	0	x																	x				x					
 630	0																						x					
 631	0																						x					
@@ -842,7 +834,9 @@
 703	0	x																					x					
 704	0	x																					x					
 705	0	x																					x					
+705	1																						x					
 706	0	x																					x					
+706	1																						x					
 707	0	x																					x					
 708	0	x																					x					
 709	0																						x					
@@ -856,6 +850,7 @@
 711	3																						x					
 712	0	x																					x					
 713	0																						x					
+713	1																						x					
 714	0	x																					x					
 715	0																						x					
 716	0						x																x					
@@ -869,6 +864,7 @@
 722	0																						x					
 723	0																						x					
 724	0																						x					
+724	1																						x					
 725	0																						x					
 726	0																						x					
 727	0																						x					
@@ -1061,8 +1057,11 @@
 886	0																						x					
 887	0																						x					
 888	0						x																					
+888	1																						x					
 889	0						x																					
+889	1																						x					
 890	0																							x	x			
+890	1																						x					
 891	0																						x					
 892	0																						x					
 892	1																						x					
@@ -1074,3 +1073,124 @@
 898	0						x																					
 898	1						x																					
 898	2						x																					
+899	0																						x					
+900	0																						x					
+901	0																						x					
+902	0																						x					
+902	1																						x					
+903	0																						x					
+904	0																						x					
+905	0																						x					
+905	1																						x					
+906	0																						x					
+907	0																						x					
+908	0																						x					
+909	0																						x					
+910	0																						x					
+911	0																						x					
+912	0																						x					
+913	0																						x					
+914	0																						x					
+915	0																						x					
+916	0																						x					
+916	1																						x					
+917	0																						x					
+918	0																						x					
+919	0																						x					
+920	0																						x					
+921	0																						x					
+922	0																						x					
+923	0																						x					
+924	0																						x					
+925	0																						x					
+925	1																						x					
+926	0																						x					
+927	0																						x					
+928	0																						x					
+929	0																						x					
+930	0																						x					
+931	0																						x					
+932	0																						x					
+933	0																						x					
+934	0																						x					
+935	0																						x					
+936	0																						x					
+937	0																						x					
+938	0																						x					
+939	0																						x					
+940	0																						x					
+941	0																						x					
+942	0																						x					
+943	0																						x					
+944	0																						x					
+945	0																						x					
+946	0																						x					
+947	0																						x					
+948	0																						x					
+949	0																						x					
+950	0																						x					
+951	0																						x					
+952	0																						x					
+953	0																						x					
+954	0																						x					
+955	0																						x					
+956	0																						x					
+957	0																						x					
+958	0																						x					
+959	0																						x					
+960	0																						x					
+961	0																						x					
+962	0																						x					
+963	0																						x					
+964	0																						x					
+964	1						x				x																	
+965	0																						x					
+966	0																						x					
+967	0																						x					
+968	0																						x					
+969	0																						x					
+970	0																						x					
+971	0																						x					
+972	0																						x					
+973	0																						x					
+974	0																						x					
+975	0																						x					
+976	0																						x					
+977	0																						x					
+978	0																						x					
+978	1																						x					
+978	2																						x					
+979	0																						x					
+980	0																						x					
+981	0																						x					
+982	0																						x					
+982	1																						x					
+983	0					x																	x					
+984	0											x																
+985	0											x																
+986	0											x																
+987	0											x																
+988	0											x																
+989	0											x																
+990	0							x																				
+991	0							x																				
+992	0							x																				
+993	0							x																				
+994	0							x																				
+995	0							x																				
+996	0																						x					
+997	0																						x					
+998	0																						x					
+999	0																						x					x
+999	1																						x					x
+1000	0																						x					x
+1001	0																										x	
+1002	0																										x	
+1003	0																										x	
+1004	0																										x	
+1005	0											x																
+1006	0							x																				
+1007	0											x																
+1008	0							x																				
+1009	0											x																
+1010	0							x																				

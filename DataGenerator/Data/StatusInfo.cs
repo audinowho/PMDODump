@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using RogueEssence.Dungeon;
 using RogueEssence.Content;
@@ -82,7 +82,7 @@ namespace DataGenerator.Data
                 //status.AfterHittings.Add(0, new StatusSpreadEffect(true));
                 //status.AfterBeingHits.Add(0, new StatusSpreadEffect(false));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                status.OnTurnEnds.Add(0, new BurnEvent());
+                status.OnTurnEnds.Add(0, new BurnEvent(8));
             }
             else if (ii == 3)
             {
@@ -166,9 +166,9 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
                 status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(false)));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                status.OnWalks.Add(0, new PoisonSingleEvent(false));
-                status.OnWalks.Add(0, new WalkedThisTurnEvent());
-                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true));
+                status.OnWalks.Add(0, new PoisonSingleEvent(false, false, 16, 16));
+                status.OnWalks.Add(0, new WalkedThisTurnEvent(false));
+                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true, 16, 16));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
                 status.RestoreHPs.Add(0, new HealMultEvent(1, 2));
@@ -190,16 +190,16 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison", new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_POISON_ALREADY")));
                 status.BeforeStatusAdds.Add(0, new OKStatusCheck(new StringKey("MSG_POISON_FAIL")));
-                status.BeforeStatusAdds.Add(0, new TypeCheck("poison", new StringKey("MSG_POISON_FAIL_ELEMENT")));
-                status.BeforeStatusAdds.Add(0, new TypeCheck("steel", new StringKey("MSG_POISON_FAIL_ELEMENT")));
+                status.BeforeStatusAdds.Add(0, new ExceptionStatusContextEvent(typeof(Corrosion), new TypeCheck("poison", new StringKey("MSG_POISON_FAIL_ELEMENT"))));
+                status.BeforeStatusAdds.Add(0, new ExceptionStatusContextEvent(typeof(Corrosion), new TypeCheck("steel", new StringKey("MSG_POISON_FAIL_ELEMENT"))));
                 status.OnStatusAdds.Add(-5, new ReplaceMajorStatusEvent());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_TOXIC_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
                 status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(true)));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                status.OnWalks.Add(0, new PoisonSingleEvent(false));
-                status.OnWalks.Add(0, new WalkedThisTurnEvent());
-                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true));
+                status.OnWalks.Add(0, new PoisonSingleEvent(false, false, 16, 16));
+                status.OnWalks.Add(0, new WalkedThisTurnEvent(false));
+                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true, 16, 16));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
                 status.RestoreHPs.Add(0, new HealMultEvent(1, 2));
@@ -1229,7 +1229,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SAFEGUARD_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SAFEGUARD_END")));
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
-                status.BeforeStatusAdds.Add(0, new ExceptInfiltratorStatusEvent(true, new StateStatusCheck(typeof(BadStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(emitter, "DUN_Screen_Hit", 10))));
+                status.BeforeStatusAdds.Add(0, new ExceptInfiltratorStatusEvent(false, new StateStatusCheck(typeof(BadStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(emitter, "DUN_Screen_Hit", 10))));
                 status.StatusStates.Set(new CountDownState(15));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1249,7 +1249,7 @@ namespace DataGenerator.Data
                 emitter.Speed = 36;
                 emitter.HeightSpeed = 10;
                 emitter.SpeedDiff = 10;
-                status.BeforeStatusAdds.Add(0, new ExceptInfiltratorStatusEvent(true, new StatChangeCheck(new List<Stat>(), new StringKey("MSG_STAT_DROP_PROTECT"), true, false, true, new StatusAnimEvent(emitter, "DUN_Pokemon_Trap", 10))));
+                status.BeforeStatusAdds.Add(0, new ExceptInfiltratorStatusEvent(false, new StatChangeCheck(new List<Stat>(), new StringKey("MSG_STAT_DROP_PROTECT"), true, false, true, new StatusAnimEvent(emitter, "DUN_Pokemon_Trap", 10))));
                 status.StatusStates.Set(new CountDownState(15));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1456,7 +1456,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MAGIC_COAT_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Green", 2, -1, -1, 192), 3);
-                status.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(true, new BounceStatusEvent(new StringKey("MSG_MAGIC_COAT"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
+                status.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(false, new BounceStatusEvent(new StringKey("MSG_MAGIC_COAT"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
                 status.StatusStates.Set(new CountDownState(15));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
@@ -1781,7 +1781,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_LEECH_SEED_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_LEECH_SEED_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_LEECH_SEED_END")));
-                status.OnTurnEnds.Add(0, new LeechSeedEvent());
+                status.OnTurnEnds.Add(0, new LeechSeedEvent(new StringKey("MSG_LEECH_SEED"), 4, 12));
             }
             else if (ii == 102)
             {
@@ -2075,7 +2075,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_NOTHING_HAPPENED")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_RECRUIT_BOOST_START"), true));
                 status.BeforeHittings.Add(0, new FlatRecruitmentEvent(50));
-                status.BeforeBeingHits.Add(0, new FlatRecruitmentEvent(50));
+                //status.BeforeBeingHits.Add(0, new FlatRecruitmentEvent(50));
             }
             else if (ii == 119)
             {
@@ -2202,8 +2202,7 @@ namespace DataGenerator.Data
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                     status.OnActions.Add(0, new ElementNeededEvent("fire", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), true)));
                 }
 
@@ -2227,8 +2226,7 @@ namespace DataGenerator.Data
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                     status.OnActions.Add(0, new ElementNeededEvent("electric", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), true)));
                 }
                 status.AfterBeingHits.Add(0, new ElementNeededEvent("fire", new RemoveBattleEvent(false)));
@@ -2254,8 +2252,7 @@ namespace DataGenerator.Data
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                     status.AfterBeingHits.Add(0, new ElementNeededEvent("fire", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), true)));
                 }
 
@@ -2280,8 +2277,7 @@ namespace DataGenerator.Data
                     newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
-                    newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                     status.AfterBeingHits.Add(0, new ElementNeededEvent("electric", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), true)));
                 }
             }
@@ -2418,6 +2414,32 @@ namespace DataGenerator.Data
                 status.BeforeBeingHits.Add(0, new ProtectEvent(new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
                 status.StatusStates.Set(new CountDownState(3));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
+            }
+            else if (ii == 135)
+            {
+                status.Name = new LocalText("Transformed");
+                status.StatusStates.Set(new HPState());//HP before transform
+            }
+            else if (ii == 136)
+            {
+                status.Name = new LocalText("King's Shield");
+                status.MenuName = true;
+                status.Desc = new LocalText("The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks. ");
+                status.Emoticon = "Shield_Yellow";
+                status.StatusStates.Set(new TransferStatusState());
+                status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_PROTECT_ALREADY")));
+                status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_PROTECT"), true));
+                status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Protect_Yellow", 2));
+                status.BeforeBeingHits.Add(0, new AttackingMoveNeededEvent(new ProtectEvent(new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10))));
+                //TODO: this is kind of a hack and should technically be bound to the protection from before via some kind of context state
+                //currently te bug won't surface unless Unseen Fist or some other move is added the ignores protect but does not lift it
+                status.BeforeBeingHits.Add(15, new AttackingMoveNeededEvent(new StatusStackBattleEvent("mod_attack", false, true, -1)));
+                status.StatusStates.Set(new RecentState());
+                status.StatusStates.Set(new CountDownState(3));
+                status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
+                status.BeforeActions.Add(0, new RemoveRecentEvent());
+                status.AfterActions.Add(0, new ExceptionStatusEvent(typeof(RecentState), new RemoveOnActionEvent(true)));
             }
 
             if (status.Name.DefaultText.StartsWith("**"))

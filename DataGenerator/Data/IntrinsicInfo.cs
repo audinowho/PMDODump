@@ -12,7 +12,7 @@ namespace DataGenerator.Data
 {
     public static class IntrinsicInfo
     {
-        public const int MAX_INTRINSICS = 268;
+        public const int MAX_INTRINSICS = 299;
 
         public static void AddIntrinsicData()
         {
@@ -862,8 +862,7 @@ namespace DataGenerator.Data
                 newData.OnHits.Add(-1, new MaxHPDamageEvent(4));
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
+                newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                 ability.OnDeaths.Add(-1, new InvokeAttackEvent(altAction, altExplosion, newData, new StringKey("MSG_EXPLODE")));
             }
             else if (ii == 107)
@@ -1184,7 +1183,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Regenerator");
                 ability.Desc = new LocalText("Restores HP when there are no threats nearby.");
-                ability.OnTurnEnds.Add(0, new RegeneratorEvent(7));
+                ability.OnTurnEnds.Add(0, new RegeneratorEvent(7, 8));
             }
             else if (ii == 145)
             {
@@ -1230,6 +1229,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Infiltrator");
                 ability.Desc = new LocalText("Passes through the opposing Pokémon's barrier and strikes.");
                 ability.OnActions.Add(0, new AddContextStateEvent(new Infiltrator(new StringKey("MSG_INFILTRATOR"))));
+                ability.BeforeStatusAddings.Add(-1, new AddStatusContextStateEvent(new Infiltrator(new StringKey("MSG_INFILTRATOR"))));
             }
             else if (ii == 152)
             {
@@ -1263,7 +1263,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Magic Bounce");
                 ability.Desc = new LocalText("Reflects moves that cause status conditions.");
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Green", 2, -1, -1, 192), 3);
-                ability.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(true, new BounceStatusEvent(new StringKey("MSG_MAGIC_BOUNCE"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
+                ability.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(false, new BounceStatusEvent(new StringKey("MSG_MAGIC_BOUNCE"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
             }
             else if (ii == 157)
             {
@@ -1404,8 +1404,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 176)
             {
-                ability.Name = new LocalText("**Stance Change");
+                ability.Name = new LocalText("Stance Change");
                 ability.Desc = new LocalText("The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King's Shield.");
+                ability.AfterActions.Add(-1, new StanceChangeEvent("aegislash", "kings_shield", 0, 1));
             }
             else if (ii == 177)
             {
@@ -1446,6 +1447,7 @@ namespace DataGenerator.Data
                 ability.ProximityEvent.OnMapTurnEnds.Add(0, new ShareOnMapTurnEndsEvent());
                 ability.ProximityEvent.OnMapStarts.Add(0, new ShareOnMapStartsEvent());
                 ability.ProximityEvent.BeforeStatusAdds.Add(0, new ShareBeforeStatusAddsEvent());
+                ability.ProximityEvent.BeforeStatusAddings.Add(0, new ShareBeforeStatusAddingsEvent());
                 ability.ProximityEvent.OnStatusAdds.Add(0, new ShareOnStatusAddsEvent());
                 ability.ProximityEvent.OnStatusRemoves.Add(0, new ShareOnStatusRemovesEvent());
                 ability.ProximityEvent.OnMapStatusAdds.Add(0, new ShareOnMapStatusAddsEvent());
@@ -1555,8 +1557,12 @@ namespace DataGenerator.Data
             }
             else if (ii == 197)
             {
-                ability.Name = new LocalText("**Shields Down");
-                ability.Desc = new LocalText("When its HP becomes half or less, the Pokémon's shell breaks and it becomes aggressive.");
+                ability.Name = new LocalText("Shields Down");
+                ability.Desc = new LocalText("When it takes a hit that causes its HP to become half or less, the Pokémon's shell breaks and it becomes aggressive.");
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
+                ability.BeforeStatusAdds.Add(0, new FormeNeededStatusEvent(new StateStatusCheck(typeof(BadStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(emitter, "DUN_Screen_Hit", 10)), 0, 1, 2, 3, 4, 5, 6));
+                ability.OnMapStarts.Add(0, new MeteorFormeEvent("minior", 0, 7, 50, false));
+                ability.AfterBeingHits.Add(6, new BattlelessEvent(true, new MeteorFormeEvent("minior", 1, 7, 50, true)));
             }
             else if (ii == 198)
             {
@@ -1597,13 +1603,15 @@ namespace DataGenerator.Data
             }
             else if (ii == 204)
             {
-                ability.Name = new LocalText("**Liquid Voice");
+                ability.Name = new LocalText("Liquid Voice");
                 ability.Desc = new LocalText("All sound-based moves become Water-type moves.");
+                ability.OnActions.Add(-1, new MoveStateNeededEvent(typeof(SoundState), new ChangeMoveElementEvent("none", "water")));
             }
             else if (ii == 205)
             {
-                ability.Name = new LocalText("**Triage");
-                ability.Desc = new LocalText("Gives priority to a healing move.");
+                ability.Name = new LocalText("Triage");
+                ability.Desc = new LocalText("Boosts the Attack Range of healing moves.");
+                ability.OnActions.Add(-1, new MoveStateNeededEvent(typeof(HealState), new AddRangeEvent(1)));
             }
             else if (ii == 206)
             {
@@ -1641,6 +1649,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Corrosion");
                 ability.Desc = new LocalText("The Pokémon can poison the target even if it's a Steel or Poison type.");
                 ability.OnActions.Add(0, new AddContextStateEvent(new Corrosion()));
+                ability.BeforeStatusAddings.Add(-1, new AddStatusContextStateEvent(new Corrosion()));
             }
             else if (ii == 213)
             {
@@ -1713,43 +1722,51 @@ namespace DataGenerator.Data
             }
             else if (ii == 226)
             {
-                ability.Name = new LocalText("**Electric Surge");
-                ability.Desc = new LocalText("Turns the ground into Electric Terrain when the Pokémon enters a battle.");
+                ability.Name = new LocalText("Electric Surge");
+                ability.Desc = new LocalText("Turns the ground into Electric Terrain when the Pokémon is battling.");
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("electric_terrain", 10, new StringKey(), typeof(ExtendWeatherState))));
             }
             else if (ii == 227)
             {
-                ability.Name = new LocalText("**Psychic Surge");
-                ability.Desc = new LocalText("Turns the ground into Psychic Terrain when the Pokémon enters a battle.");
+                ability.Name = new LocalText("Psychic Surge");
+                ability.Desc = new LocalText("Turns the ground into Psychic Terrain when the Pokémon is battling.");
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("psychic_terrain", 10, new StringKey(), typeof(ExtendWeatherState))));
             }
             else if (ii == 228)
             {
-                ability.Name = new LocalText("**Misty Surge");
-                ability.Desc = new LocalText("Turns the ground into Misty Terrain when the Pokémon enters a battle.");
+                ability.Name = new LocalText("Misty Surge");
+                ability.Desc = new LocalText("Turns the ground into Misty Terrain when the Pokémon is battling.");
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("misty_terrain", 10, new StringKey(), typeof(ExtendWeatherState))));
             }
             else if (ii == 229)
             {
-                ability.Name = new LocalText("**Grassy Surge");
-                ability.Desc = new LocalText("Turns the ground into Grassy Terrain when the Pokémon enters a battle.");
+                ability.Name = new LocalText("Grassy Surge");
+                ability.Desc = new LocalText("Turns the ground into Grassy Terrain when the Pokémon is battling.");
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new GiveMapStatusEvent("grassy_terrain", 10, new StringKey(), typeof(ExtendWeatherState))));
             }
             else if (ii == 230)
             {
-                ability.Name = new LocalText("**Full Metal Body");
+                ability.Name = new LocalText("Full Metal Body");
                 ability.Desc = new LocalText("Prevents other Pokémon's moves or Abilities from lowering the Pokémon's stats.");
+                ability.BeforeStatusAdds.Add(0, new StatChangeCheck(new List<Stat>(), new StringKey("MSG_STAT_DROP_PROTECT"), true, false, false));
             }
             else if (ii == 231)
             {
-                ability.Name = new LocalText("**Shadow Shield");
+                ability.Name = new LocalText("Shadow Shield");
                 ability.Desc = new LocalText("Reduces the amount of damage the Pokémon takes while its HP is full.");
+                ability.BeforeBeingHits.Add(0, new MultiScaleEvent(new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 232)
             {
-                ability.Name = new LocalText("**Prism Armor");
+                ability.Name = new LocalText("Prism Armor");
                 ability.Desc = new LocalText("Reduces the power of supereffective attacks taken.");
+                ability.BeforeBeingHits.Add(0, new MultiplyEffectiveEvent(false, 2, 3, new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 233)
             {
-                ability.Name = new LocalText("**Neuroforce");
+                ability.Name = new LocalText("Neuroforce");
                 ability.Desc = new LocalText("Powers up moves that are super effective.");
+                ability.BeforeHittings.Add(1, new MultiplyEffectiveEvent(false, 5, 4));
             }
             else if (ii == 234)
             {
@@ -1784,8 +1801,12 @@ namespace DataGenerator.Data
             }
             else if (ii == 240)
             {
-                ability.Name = new LocalText("**Mirror Armor");
-                ability.Desc = new LocalText("Bounces back only the stat-lowering effects that the Pokémon receives.");
+                ability.Name = new LocalText("Mirror Armor");
+                ability.Desc = new LocalText("Bounces back stat-lowering effects from other Pokémon.");
+                StatChangeReflect reflect = new StatChangeReflect(new List<Stat>(), new StringKey("MSG_STAT_DROP_REFLECT"), true, false, false);
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
+                reflect.Anims.Add(new StatusAnimEvent(emitter, "DUN_Screen_Hit", 10));
+                ability.BeforeStatusAdds.Add(0, reflect);
             }
             else if (ii == 241)
             {
@@ -1872,8 +1893,11 @@ namespace DataGenerator.Data
             }
             else if (ii == 257)
             {
-                ability.Name = new LocalText("**Pastel Veil");
+                ability.Name = new LocalText("Pastel Veil");
                 ability.Desc = new LocalText("Protects the Pokémon and its ally Pokémon from being poisoned.");
+                ability.ProximityEvent.TargetAlignments = (Alignment.Self | Alignment.Friend);
+                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison", new StringKey("MSG_PASTEL_VEIL"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
+                ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison_toxic", new StringKey("MSG_PASTEL_VEIL"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
             }
             else if (ii == 258)
             {
@@ -1928,6 +1952,161 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("**As One");
                 fileName = "as_one_grim";
                 ability.Desc = new LocalText("This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.");
+            }
+            else if (ii == 268)
+            {
+                ability.Name = new LocalText("**Lingering Aroma");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 269)
+            {
+                ability.Name = new LocalText("**Seed Sower");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 270)
+            {
+                ability.Name = new LocalText("**Thermal Exchange");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 271)
+            {
+                ability.Name = new LocalText("**Anger Shell");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 272)
+            {
+                ability.Name = new LocalText("**Purifying Salt");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 273)
+            {
+                ability.Name = new LocalText("**Well-Baked Body");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 274)
+            {
+                ability.Name = new LocalText("**Wind Rider");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 275)
+            {
+                ability.Name = new LocalText("**Guard Dog");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 276)
+            {
+                ability.Name = new LocalText("**Rocky Payload");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 277)
+            {
+                ability.Name = new LocalText("**Wind Power");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 278)
+            {
+                ability.Name = new LocalText("**Zero to Hero");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 279)
+            {
+                ability.Name = new LocalText("**Commander");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 280)
+            {
+                ability.Name = new LocalText("**Electromorphosis");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 281)
+            {
+                ability.Name = new LocalText("**Protosynthesis");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 282)
+            {
+                ability.Name = new LocalText("**Quark Drive");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 283)
+            {
+                ability.Name = new LocalText("**Good as Gold");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 284)
+            {
+                ability.Name = new LocalText("**Vessel of Ruin");
+                ability.Desc = new LocalText("The power of the Pokémon's ruinous vessel lowers the Sp. Atk stats of all Pokémon except itself.");
+            }
+            else if (ii == 285)
+            {
+                ability.Name = new LocalText("**Sword of Ruin");
+                ability.Desc = new LocalText("The power of the Pokémon's ruinous sword lowers the Defense stats of all Pokémon except itself.");
+            }
+            else if (ii == 286)
+            {
+                ability.Name = new LocalText("**Tablets of Ruin");
+                ability.Desc = new LocalText("The power of the Pokémon's ruinous wooden tablets lowers the Attack stats of all Pokémon except itself.");
+            }
+            else if (ii == 287)
+            {
+                ability.Name = new LocalText("**Beads of Ruin");
+                ability.Desc = new LocalText("The power of the Pokémon's ruinous beads lowers the Sp. Def stats of all Pokémon except itself.");
+            }
+            else if (ii == 288)
+            {
+                ability.Name = new LocalText("**Orichalcum Pulse");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 289)
+            {
+                ability.Name = new LocalText("**Hadron Engine");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 290)
+            {
+                ability.Name = new LocalText("**Opportunist");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 291)
+            {
+                ability.Name = new LocalText("**Cud Chew");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 292)
+            {
+                ability.Name = new LocalText("**Sharpness");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 293)
+            {
+                ability.Name = new LocalText("**Supreme Overlord");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 294)
+            {
+                ability.Name = new LocalText("**Costar");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 295)
+            {
+                ability.Name = new LocalText("**Toxic Debris");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 296)
+            {
+                ability.Name = new LocalText("**Armor Tail");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 297)
+            {
+                ability.Name = new LocalText("**Earth Eater");
+                ability.Desc = new LocalText("");
+            }
+            else if (ii == 298)
+            {
+                ability.Name = new LocalText("**Mycelium Might");
+                ability.Desc = new LocalText("");
             }
 
             if (ability.Name.DefaultText.StartsWith("**"))

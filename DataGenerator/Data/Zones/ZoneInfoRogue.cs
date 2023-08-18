@@ -4079,7 +4079,7 @@ namespace DataGenerator.Data
                 else if (ii <= 16)
                     floorData.Music = "B22. Overgrown Wilds.ogg";
                 else if (ii <= 20)
-                    floorData.Music = "B24. Shimmer Bay 2.ogg";
+                    floorData.Music = "B24. Castaway Cave 2.ogg";
                 else if (ii <= 27)
                     floorData.Music = "B03. Demonstration 3.ogg";
                 else if (ii <= 34)
@@ -4744,7 +4744,7 @@ namespace DataGenerator.Data
 
                 AddDrawGridSteps(layout);
 
-                if (ii <= 27)
+                if (ii < 27)
                     AddStairStep(layout, true);
                 else
                 {
@@ -4756,7 +4756,7 @@ namespace DataGenerator.Data
                     step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
                     layout.GenSteps.Add(PR_EXITS, step);
 
-                    if (ii == 28)
+                    if (ii == 27 || ii == 28)
                     {
                         //the next floor is all in visible tiles, as a secret stairs.
                         //It will always be in the same room as the exit stairs if possible

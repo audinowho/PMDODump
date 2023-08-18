@@ -1,7 +1,13 @@
-# 0.7.13 Changes #
+# 0.7.16 Changes #
 
-* Overworld use for Recall Boxes and Ability Capsules
-* Completing Roguelocke no longer doubles total money
-* Fixed an audio bug in some Windows platforms
-* Menu fix where items were mislabeled as disabled
-* Minor menu and dev fixes
+* Fixed the learnsets for Pokemon introduced in Pokemon Legends Arceus
+* Fixed an issue where grass couldnt be cut
+* Fixed an issue where wild pokemon would grab the treasure of Castaway Cave
+* Fixed an issue where Amber Tear would stack from user and target.
+* Fixed issues where Corrosion and Infiltrator would affect the user.
+* Fixed error occurring when warping off of water due to stepping on a gust trap due to warping off of water due to not being able to walk on water
+* Dev: Ability to add decorations in dungeon maps
+* Dev: More friendly strings for editors
+* Dev: Delete button for map entities
+* Dev: TeleportTo for GroundObjects
+* Dev: Fixed vertical movement in ActionToPosition
