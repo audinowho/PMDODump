@@ -565,7 +565,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Times Move Used");
                 status.StatusStates.Set(new RecentState());
-                status.StatusStates.Set(new CountState(1));
+                status.StatusStates.Set(new CountState());
                 status.StatusStates.Set(new CountDownState());//turns passed since it initially used the move
                 status.OnTurnEnds.Add(0, new CountUpEvent());
             }
