@@ -7,7 +7,6 @@ using RogueEssence.Data;
 using PMDC.Dungeon;
 using PMDC;
 using PMDC.Data;
-using Avalonia.X11;
 
 namespace DataGenerator.Data
 {
