@@ -1568,7 +1568,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Stakeout");
                 ability.Desc = new LocalText("The Pokémon's first attack deals increased damage.");
-                ability.OnActions.Add(0, new MultiplyCategoryWithoutStatusEvent("last_used_move", BattleData.SkillCategory.None, 2, 1, false));
+                ability.OnActions.Add(-11, new MultiplyCategoryWithoutStatusEvent("last_used_move", BattleData.SkillCategory.None, 2, 1, false));
             }
             else if (ii == 199)
             {
