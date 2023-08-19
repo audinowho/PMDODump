@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29102.190
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapGenTest", "PMDC\MapGenTest\MapGenTest.csproj", "{82CD32D3-966A-4F8A-877B-0E715079BB61}"
 EndProject
@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLua.netstandard2.0", "PMDC\RogueEssence\NLua\build\netstandard2.0\NLua.netstandard2.0.csproj", "{3A22E200-E5D3-43F0-91AD-B0204A78525B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeraLua.NetStandard20", "PMDC\RogueEssence\NLua\KeraLua\build\netstandard2.0\KeraLua.NetStandard20.csproj", "{BC2FB232-F0C6-49A4-A89F-6F56079765E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -178,11 +182,47 @@ Global
 		{92BFCDA9-3AF8-4370-906A-4F3AB0B1246C}.Release|x64.Build.0 = Release|x64
 		{92BFCDA9-3AF8-4370-906A-4F3AB0B1246C}.Release|x86.ActiveCfg = Release|Any CPU
 		{92BFCDA9-3AF8-4370-906A-4F3AB0B1246C}.Release|x86.Build.0 = Release|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Debug|x64.Build.0 = Debug|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Debug|x86.Build.0 = Debug|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Release|x64.ActiveCfg = Release|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Release|x64.Build.0 = Release|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Release|x86.ActiveCfg = Release|Any CPU
+		{3A22E200-E5D3-43F0-91AD-B0204A78525B}.Release|x86.Build.0 = Release|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Debug|x64.Build.0 = Debug|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Debug|x86.Build.0 = Debug|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Release|x64.ActiveCfg = Release|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Release|x64.Build.0 = Release|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Release|x86.ActiveCfg = Release|Any CPU
+		{BC2FB232-F0C6-49A4-A89F-6F56079765E2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2286E0FF-D727-4EBD-B375-BCB4DF86784B}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		PMDC\RogueEssence\NLua\src\NLua.Shared.projitems*{3a22e200-e5d3-43f0-91ad-b0204a78525b}*SharedItemsImports = 5
+		PMDC\RogueEssence\NLua\KeraLua\src\KeraLua.Core.projitems*{bc2fb232-f0c6-49a4-a89f-6f56079765e2}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
