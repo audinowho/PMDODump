@@ -1,11 +1,23 @@
 Sheet: Hardcode
 
 Sheet: Content
+    * Changed TALK_ESCORT_SISTER_FULL_001 from "This can't be real..." to "[tmp]This can't be real..."
+    * Changed TALK_ESCORT_SISTER_FULL_002 from "This feels so strange..." to "[tmp]This feels so strange..."
+    * Changed TALK_ESCORT_SISTER_FULL_003 from "H-Hey... what are you?" to "[tmp]H-Hey... what are you?"
+    * Changed TALK_ESCORT_SISTER_FULL_004 from "... ..." to "[tmp]... ..."
+    * Changed TALK_ESCORT_SISTER_HALF from "Owie! Why is everyone so mean!?" to "[tmp]Owie! Why is everyone so mean!?"
+    * Changed TALK_ESCORT_SISTER_PINCH from "I can't go on..." to "[tmp]I can't go on..."
+    * Changed TALK_ESCORT_SISTER_START from "Where am I?  Am I dreaming?  I feel a slight breeze..." to "[tmp]Where am I?  Am I dreaming?  I feel a slight breeze..."
 
 Sheet: Script
-    * Changed ground\garden_end/Expo_Cutscene_Line_006 from "Ah,[pause=20] {0}. \u266A[pause=0]\n It's a pleasure to meet you." to "Ah,[pause=20] {0}. \u266A[pause=0]\nIt's a pleasure to meet you."
-    * Changed ground\garden_end/Expo_Cutscene_Line_007 from "I was a part of a team before...[pause=0]\n An entire guild, to be exact." to "I was a part of a team before...[pause=0]\nAn entire guild, to be exact."
-    * Changed ground\guildmaster_summit/Expo_Cutscene_Line_002 from "I am Xatu.[pause=0]\n Guardians are we, of the Guildmaster Trials." to "I am Xatu.[pause=0]\nGuardians are we, of the Guildmaster Trials."
+    * Changed ground\forest_camp/Sleeper_Line_002 from "GROOOOO!" to "[tmp]GROOOOO!"
+    * Changed ground\forest_camp/Sleeper_Line_Ask from "Wake it up?" to "[tmp]Wake it up?"
+    * Changed ground\forest_camp/Sleeper_Line_Fail_001 from "Yeah, he doesn't like having his sleep disturbed." to "[tmp]Yeah, he doesn't like having his sleep disturbed."
+    * Changed ground\forest_camp/Sleeper_Line_Success_001 from "NOOOOO *Runs away*" to "[tmp]NOOOOO *Runs away*"
+    * Changed ground\forest_camp/Sleeper_Line_Success_002 from "Thanks for moving Snorlax. Have a reward." to "[tmp]Thanks for moving Snorlax. Have a reward."
+    * Changed ground\forest_camp/Sleeper_Line_Success_003 from "Lets get this stock to cliff camp." to "[tmp]Lets get this stock to cliff camp."
+    * Changed ground\rest_stop/Boss_Line_001 from "You've disturbed the nest of Golbats![br]Golbats disturb loudreds, loudreds disturb golem, golem disturbs steelix!" to "[tmp]You've disturbed the nest of Golbats![br]Golbats disturb loudreds, loudreds disturb golem, golem disturbs steelix!"
+    * Changed ground\rest_stop/Boss_Line_Success_001 from "The bosses settle down." to "[tmp]The bosses settle down."
 
 Sheet: Abilities
 

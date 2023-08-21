@@ -1205,7 +1205,7 @@ namespace DataGenerator.Data
                 tile.StepType = TileData.TriggerType.Passage;
                 tile.Anim = new ObjAnimData("Stairs_Down", 1);
                 tile.MinimapIcon = new Loc(4, 0);
-                tile.MinimapColor = Color.Cyan;
+                tile.MinimapColor = new Color(0, 231, 0);
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
@@ -1221,7 +1221,7 @@ namespace DataGenerator.Data
                 tile.StepType = TileData.TriggerType.Passage;
                 tile.Anim = new ObjAnimData("Stairs_Up", 1);
                 tile.MinimapIcon = new Loc(4, 0);
-                tile.MinimapColor = Color.Cyan;
+                tile.MinimapColor = new Color(0, 231, 0);
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());

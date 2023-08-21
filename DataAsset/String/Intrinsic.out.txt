@@ -584,7 +584,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0291-cud_chew-0000|data.Name		Cud Chew	Ruminant	Wiederkäuer	Rumia		Ruminante		はんすう	はんすう																																																					
 0291-cud_chew-0001|data.Desc																																																															
 0292-sharpness-0000|data.Name		Sharpness	Incisif	Scharfkantig	Cortante		Affilama		きれあじ	きれあじ																																																					
-0292-sharpness-0001|data.Desc																																																															
+0292-sharpness-0001|data.Desc		Powers up slicing moves.																																																													
 0293-supreme_overlord-0000|data.Name		Supreme Overlord	Général Suprême	Feldherr	General Supremo		Generale Supremo		そうだいしょう	そうだいしょう																																																					
 0293-supreme_overlord-0001|data.Desc																																																															
 0294-costar-0000|data.Name		Costar	Collab	Synchronauftritt	Unísono		Coprotagonismo		きょうえん	きょうえん																																																					

@@ -1,38 +1,38 @@
 Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-area_script-0000|data.Name		Script Trigger									脚本触发器																	
 0000-area_script-0001|data.Desc																												
-0000-area_shop-0000|data.Name		Shop Tile	Case Magasin		Baldosa Tienda						商店地板																	
+0000-area_shop-0000|data.Name		Shop Tile	Case Magasin		Baldosa Tienda		Casella magazzino				商店地板																	
 0000-area_shop-0001|data.Desc																												
-0000-chest_empty-0000|data.Name	Not displayed to players.	Empty Chest	Coffre Vide	Leere Truhe	Cofre Vacío			빈 상자			空大宝箱																	
+0000-chest_empty-0000|data.Name	Not displayed to players.	Empty Chest	Coffre Vide	Leere Truhe	Cofre Vacío		Scrigno vuoto	빈 상자			空大宝箱																	
 0000-chest_empty-0001|data.Desc																												
 0000-chest_full-0000|data.Name	Not displayed to players.	Treasure Chest	Coffre aux trésors	Schatztruhe	Cofre del Tesoro		Scrigno del Tesoro	보물상자			大宝箱																	
 0000-chest_full-0001|data.Desc																												
-0000-none-0000|data.Name		None	Aucun	Keines	Ninguno			효과없음			无																	
-0000-none-0001|data.Desc		This tile has no effect.	Cette case n'a aucun effet!	Dieses Feld hat keinen Effekt.	Esta baldosa no tiene efecto.			이 타일은 아무런 효과도 없다.			这个地板没有效果。																	
+0000-none-0000|data.Name		None	Aucun	Keines	Ninguno		Nessuno	효과없음			无																	
+0000-none-0001|data.Desc		This tile has no effect.	Cette case n'a aucun effet!	Dieses Feld hat keinen Effekt.	Esta baldosa no tiene efecto.		Questa casella non ha alcun effetto.	이 타일은 아무런 효과도 없다.			这个地板没有效果。																	
 0000-sealed_block-0000|data.Name	Not displayed to players.	Sealed Block	Bloc Scellé		Bloque Sellado		Blocco sigillato	봉인된블럭			门																	
 0000-sealed_block-0001|data.Desc																												
 0000-sealed_door-0000|data.Name	Not displayed to players.	Sealed Door	Porte Scellée	Versiegelte Tür	Puerta Sellada		Porta sigillata	봉인된문			钥匙门																	
 0000-sealed_door-0001|data.Desc																												
 0000-sealed_guild-0000|data.Name		Guild Gate									公会大门																	
 0000-sealed_guild-0001|data.Desc																												
-0000-sign-0000|data.Name		Sign	Panneau	Schild	Letrero						标牌																	
+0000-sign-0000|data.Name		Sign	Panneau	Schild	Letrero		Cartello				标牌																	
 0000-sign-0001|data.Desc																												
-0000-stairs_back_down-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단			楼梯																	
-0000-stairs_back_down-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.	Escaliers menant à l'étage précédent. Si vous êtes au premier étage, vous pourrez vous échapper du donjon.								通向上一层的楼梯。如果在顶层，就会直接离开迷宫。																	
-0000-stairs_back_up-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단			楼梯																	
-0000-stairs_back_up-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.	Escaliers menant à l'étage précédent. Si vous êtes au premier étage, vous pourrez vous échapper du donjon.								通向上一层的楼梯。如果在顶层，就会直接离开迷宫。																	
-0000-stairs_exit_down-0000|data.Name		Exit Stairs	Escaliers de sortie								出口楼梯																	
-0000-stairs_exit_down-0001|data.Desc		Stairs leading to the dungeon's exit.	Escaliers menant à la sortie du donjon.								通向迷宫出口的楼梯。																	
-0000-stairs_exit_up-0000|data.Name		Exit Stairs	Escaliers de sortie								出口楼梯																	
-0000-stairs_exit_up-0001|data.Desc		Stairs leading to the dungeon's exit.	Escaliers menant à la sortie du donjon.								通向迷宫出口的楼梯。																	
-0000-stairs_go_down-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단			楼梯																	
-0000-stairs_go_down-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.	Ces escaliers mènent à l'étage suivant. Si vous êtes au dernier étage, vous quitterez le donjon!	Stufen, die zur nächsten Ebene führen. Bist du auf der letzten Ebene, wirst du aus dem Dungeon entkommen.	Escaleras que conducen al siguiente piso. Si ya estás en el último piso, escaparás de la mazmorra.			다음 층으로 향하는 계단. 마지막 층이라면 던전에서 탈출할 수 있다.			通向下一层的楼梯。如果在底层，就会直接离开迷宫。																	
-0000-stairs_go_up-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras			계단			楼梯																	
-0000-stairs_go_up-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.	Ces escaliers mènent à l'étage suivant. Si vous êtes au dernier étage, vous quitterez le donjon!	Stufen, die zur nächsten Ebene führen. Bist du auf der letzten Ebene, wirst du aus dem Dungeon entkommen.	Escaleras que conducen al siguiente piso. Si ya estás en el último piso, escaparás de la mazmorra.			다음 층으로 향하는 계단. 마지막 층이라면 던전에서 탈출할 수 있다.			通向下一层的楼梯。如果在底层，就会直接离开迷宫。																	
-0000-stairs_secret_down-0000|data.Name		Secret Stairs	Escaliers Secrets	Geheime Treppe	Escaleras Secretas			비밀의 계단			秘密楼梯																	
-0000-stairs_secret_down-0001|data.Desc		Stairs leading to an unknown location.	Des escaliers menant à un endroit inconnu.	Stufen, welche zu einem unbekannten Ort führen. Erkunder sollten sich vorbereiten bevor diese voranschreiten, um jeder kommenden Gefahr zu trotzen.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.			알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.			通向一个未知地点的楼梯。																	
-0000-stairs_secret_up-0000|data.Name		Secret Stairs	Escaliers Secrets	Geheime Treppe	Escaleras Secretas			비밀의 계단			秘密楼梯																	
-0000-stairs_secret_up-0001|data.Desc		Stairs leading to an unknown location.	Des escaliers menant à un endroit inconnu.	Stufen, welche zu einem unbekannten Ort führen. Erkunder sollten sich vorbereiten bevor diese voranschreiten, um jeder kommenden Gefahr zu trotzen.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.			알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.			通向一个未知地点的楼梯。																	
+0000-stairs_back_down-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras		Scale	계단			楼梯																	
+0000-stairs_back_down-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.	Escaliers menant à l'étage précédent. Si vous êtes au premier étage, vous pourrez vous échapper du donjon.				Scale che portano al piano precedente. Se sei nel primo piano uscirai dal dungeon.				通向上一层的楼梯。如果在顶层，就会直接离开迷宫。																	
+0000-stairs_back_up-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras		Scale	계단			楼梯																	
+0000-stairs_back_up-0001|data.Desc		Stairs leading to the previous floor. If you are on the first floor, you will escape from the dungeon.	Escaliers menant à l'étage précédent. Si vous êtes au premier étage, vous pourrez vous échapper du donjon.				Scale che portano al piano precedente. Se sei nel primo piano uscirai dal dungeon.				通向上一层的楼梯。如果在顶层，就会直接离开迷宫。																	
+0000-stairs_exit_down-0000|data.Name		Exit Stairs	Escaliers de sortie				Scale di uscita				出口楼梯																	
+0000-stairs_exit_down-0001|data.Desc		Stairs leading to the dungeon's exit.	Escaliers menant à la sortie du donjon.				Scale che portano all'uscita del dungeon.				通向迷宫出口的楼梯。																	
+0000-stairs_exit_up-0000|data.Name		Exit Stairs	Escaliers de sortie				Scale di uscita				出口楼梯																	
+0000-stairs_exit_up-0001|data.Desc		Stairs leading to the dungeon's exit.	Escaliers menant à la sortie du donjon.				Scale che portano all'uscita del dungeon.				通向迷宫出口的楼梯。																	
+0000-stairs_go_down-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras		Scale	계단			楼梯																	
+0000-stairs_go_down-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.	Ces escaliers mènent à l'étage suivant. Si vous êtes au dernier étage, vous quitterez le donjon!	Stufen, die zur nächsten Ebene führen. Bist du auf der letzten Ebene, wirst du aus dem Dungeon entkommen.	Escaleras que conducen al siguiente piso. Si ya estás en el último piso, escaparás de la mazmorra.		Scale che portano al prossimo piano. Se sei nell'ultimo piano uscirai dal dungeon.	다음 층으로 향하는 계단. 마지막 층이라면 던전에서 탈출할 수 있다.			通向下一层的楼梯。如果在底层，就会直接离开迷宫。																	
+0000-stairs_go_up-0000|data.Name		Stairs	Escaliers	Treppe	Escaleras		Scale	계단			楼梯																	
+0000-stairs_go_up-0001|data.Desc		Stairs leading to the next floor. If you are on the final floor, you will escape from the dungeon.	Ces escaliers mènent à l'étage suivant. Si vous êtes au dernier étage, vous quitterez le donjon!	Stufen, die zur nächsten Ebene führen. Bist du auf der letzten Ebene, wirst du aus dem Dungeon entkommen.	Escaleras que conducen al siguiente piso. Si ya estás en el último piso, escaparás de la mazmorra.		Scale che portano al prossimo piano. Se sei nell'ultimo piano uscirai dal dungeon.	다음 층으로 향하는 계단. 마지막 층이라면 던전에서 탈출할 수 있다.			通向下一层的楼梯。如果在底层，就会直接离开迷宫。																	
+0000-stairs_secret_down-0000|data.Name		Secret Stairs	Escaliers Secrets	Geheime Treppe	Escaleras Secretas		Scale segrete	비밀의 계단			秘密楼梯																	
+0000-stairs_secret_down-0001|data.Desc		Stairs leading to an unknown location.	Des escaliers menant à un endroit inconnu.	Stufen, welche zu einem unbekannten Ort führen. Erkunder sollten sich vorbereiten bevor diese voranschreiten, um jeder kommenden Gefahr zu trotzen.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.		Scale che portano in un luogo sconosciuto.	알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.			通向一个未知地点的楼梯。																	
+0000-stairs_secret_up-0000|data.Name		Secret Stairs	Escaliers Secrets	Geheime Treppe	Escaleras Secretas		Scale segrete	비밀의 계단			秘密楼梯																	
+0000-stairs_secret_up-0001|data.Desc		Stairs leading to an unknown location.	Des escaliers menant à un endroit inconnu.	Stufen, welche zu einem unbekannten Ort führen. Erkunder sollten sich vorbereiten bevor diese voranschreiten, um jeder kommenden Gefahr zu trotzen.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.		Scale che portano in un luogo sconosciuto.	알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.			通向一个未知地点的楼梯。																	
 0000-tile_boss-0000|data.Name		Sigil Site	Zone de Signal		Área Señal						信号区域																	
 0000-tile_boss-0001|data.Desc		A mysterious signal that calls Pokémon to the area.	Un signal mystérieux qui appelle les Pokémon dans la zone.		Una misteriosa señal que llama Pokémon al área.						一种可以召集宝可梦来到这里的神秘信号。																	
 0000-tile_compass-0000|data.Name		Compass Tile	Case Compas								指南地板																	

@@ -1,5 +1,5 @@
 Key	Comment	EN	FR	FR-CA	DE	ES	ES-LA	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU	LT
-Element-none|data.Name		None	Aucun	Nul	Kein	Ninguno		Nenhum		무속성			无	無		
+Element-none|data.Name		None	Aucun	Nul	Kein	Ninguno		Nenhum	Nessuno	무속성			无	無		
 Element-bug|data.Name		Bug	Insecte		Käfer	Bicho		Inseto	Coleottero	벌레	むし	むし	虫	蟲		Vabzdys
 Element-dark|data.Name		Dark	Ténèbres		Unlicht	Siniestro		Sombra	Buio	악	あく	あく	恶	惡		Tamsus
 Element-dragon|data.Name		Dragon	Dragon		Drache	Dragón		Dragão	Drago	드래곤	ドラゴン	ドラゴン	龙	龍		Drakonas
