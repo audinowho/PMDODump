@@ -563,8 +563,8 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Liquid Ooze");
                 ability.Desc = new LocalText("Oozed liquid has strong stench, which damages attackers using any draining move.");
-                ability.AfterBeingHits.Add(0, new AddContextStateEvent(new TaintedDrain(), true));
-                ability.OnRefresh.Add(0, new MiscEvent(new DrainDamageState()));
+                ability.AfterBeingHits.Add(0, new AddContextStateEvent(new TaintedDrain(4), true));
+                ability.OnRefresh.Add(0, new MiscEvent(new DrainDamageState(4)));
             }
             else if (ii == 65)
             {
