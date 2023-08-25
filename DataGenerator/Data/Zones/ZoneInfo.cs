@@ -4826,7 +4826,7 @@ namespace DataGenerator.Data
                         zone.Segments.Add(structure);
                     }
 
-                    zone.GroundMaps.Add("moonlit_end");
+                    zone.GroundMaps.Add("end_moonlit_temple");
                 }
                 #endregion
             }
@@ -6985,7 +6985,7 @@ namespace DataGenerator.Data
             {
                 #region AMBUSH FOREST
                 {
-                    zone.Name = new LocalText("**Ambush Forest");
+                    zone.Name = new LocalText("Ambush Forest");
                     zone.Rescues = 2;
                     zone.Level = 30;
                     zone.Rogue = RogueStatus.NoTransfer;
@@ -7743,13 +7743,29 @@ namespace DataGenerator.Data
 
                     zone.Segments.Add(structure);
                 }
+
+                {
+                    LayeredSegment staticSegment = new LayeredSegment();
+                    LoadGen layout = new LoadGen();
+                    MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                    startGen.MapID = "end_ambush_forest";
+                    layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+                    MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
+                    noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
+                    layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
+                    staticSegment.Floors.Add(layout);
+                    zone.Segments.Add(staticSegment);
+                }
+
+
+                zone.GroundMaps.Add("end_ambush_forest");
                 #endregion
             }
             else if (index == 15)
             {
                 #region TREACHEROUS MOUNTAIN
                 {
-                    zone.Name = new LocalText("**Treacherous Mountain");
+                    zone.Name = new LocalText("Treacherous Mountain");
                     zone.Rescues = 2;
                     zone.Level = 40;
                     zone.Rogue = RogueStatus.NoTransfer;
@@ -8567,6 +8583,8 @@ namespace DataGenerator.Data
 
                     zone.Segments.Add(structure);
                 }
+
+                zone.GroundMaps.Add("end_treacherous_mountain");
                 #endregion
             }
             else if (index == 16)
