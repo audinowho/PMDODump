@@ -1303,7 +1303,7 @@ namespace DataGenerator.Data
             {
                 #region THUNDERSTRUCK PASS
                 {
-                    zone.Name = new LocalText("**Thunderstruck Pass");
+                    zone.Name = new LocalText("Thunderstruck Pass");
                     zone.Rescues = 2;
                     zone.Level = 30;
                     zone.Rogue = RogueStatus.NoTransfer;
@@ -2758,7 +2758,7 @@ namespace DataGenerator.Data
             else if (index == 7)
             {
                 #region CHAMPION'S ROAD
-                zone.Name = new LocalText("**Champion's Road");
+                zone.Name = new LocalText("Champion's Road");
                 zone.Rescues = 2;
                 zone.Level = 45;
                 zone.NoEXP = true;
@@ -8584,6 +8584,20 @@ namespace DataGenerator.Data
                     zone.Segments.Add(structure);
                 }
 
+
+                {
+                    LayeredSegment staticSegment = new LayeredSegment();
+                    LoadGen layout = new LoadGen();
+                    MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                    startGen.MapID = "end_treacherous_mountain";
+                    layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+                    MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
+                    noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
+                    layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
+                    staticSegment.Floors.Add(layout);
+                    zone.Segments.Add(staticSegment);
+                }
+
                 zone.GroundMaps.Add("end_treacherous_mountain");
                 #endregion
             }
@@ -9137,7 +9151,7 @@ namespace DataGenerator.Data
             else if (index == 17)
             {
                 #region SNOWBOUND PATH
-                zone.Name = new LocalText("**Snowbound Path");
+                zone.Name = new LocalText("Snowbound Path");
                 zone.Rescues = 2;
                 zone.Level = 40;
                 zone.NoEXP = true;
@@ -10213,7 +10227,7 @@ namespace DataGenerator.Data
             {
                 #region RELIC TOWER
 
-                zone.Name = new LocalText("**Relic Tower");
+                zone.Name = new LocalText("Relic Tower");
                 zone.Rescues = 2;
                 zone.Level = 35;
                 zone.BagRestrict = 8;
