@@ -52,6 +52,7 @@ namespace DataGenerator.Data
                             data.LeaderFX.Emitter = emitter;
                             data.LeaderFX.Sound = "EVT_CH14_Eye_Glint";
                             data.LeaderFX.Delay = 20;
+                            data.Display = true;
                             data.MinimapColor = new Color(255, 0, 255);
                         }
                         break;
@@ -68,6 +69,7 @@ namespace DataGenerator.Data
                             data.LeaderFX.Sound = "EVT_CH14_Eye_Glint";
                             data.LeaderFX.Delay = 20;
                             data.Challenge = true;
+                            data.Display = true;
                             data.MinimapColor = new Color(255, 0, 255);
                         }
                         break;
