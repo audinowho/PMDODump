@@ -1959,7 +1959,7 @@ namespace DataGenerator.Data
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon has disguised itself as a different Pokémon. Wild Pokémon of the same species will not attack it.");
                 status.StatusStates.Set(new TransferStatusState());
-
+                status.BeforeStatusAdds.Add(0, new SameStatusCheck());
                 FiniteReleaseEmitter emitter = new FiniteReleaseEmitter(new AnimData("Puff_Green", 3), new AnimData("Puff_Yellow", 3), new AnimData("Puff_Blue", 3), new AnimData("Puff_Red", 3));
                 emitter.BurstTime = 4;
                 emitter.ParticlesPerBurst = 2;
@@ -2424,7 +2424,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("King's Shield");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks. ");
+                status.Desc = new LocalText("The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks.");
                 status.Emoticon = "Shield_Yellow";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_PROTECT_ALREADY")));
@@ -2440,6 +2440,15 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeActions.Add(0, new RemoveRecentEvent());
                 status.AfterActions.Add(0, new ExceptionStatusEvent(typeof(RecentState), new RemoveOnActionEvent(true)));
+            }
+            else if (ii == 137)
+            {
+                status.Name = new LocalText("Attack Response");
+                status.MenuName = false;
+                status.Comment = "Used to trigger scripts when an enemy or neutral is attacked.";
+
+                status.AfterBeingHits.Add(0, new OnHitEvent(true, false, 100, new BattleScriptStateEvent()));
+                status.StatusStates.Set(new ScriptCallState());
             }
 
             if (status.Name.DefaultText.StartsWith("**"))

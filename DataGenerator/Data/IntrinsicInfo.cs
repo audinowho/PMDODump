@@ -1621,8 +1621,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 207)
             {
-                ability.Name = new LocalText("**Surge Surfer");
-                ability.Desc = new LocalText("Doubles the Pokémon's Speed stat on Electric Terrain.");
+                ability.Name = new LocalText("Surge Surfer");
+                ability.Desc = new LocalText("Boosts the Pokémon's Movement Speed on Electric Terrain.");
+                ability.OnRefresh.Add(0, new WeatherSpeedEvent("electric_terrain"));
             }
             else if (ii == 208)
             {

@@ -445,7 +445,7 @@ namespace DataGenerator.Data
                         {
                             PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                             MobSpawn post_mob = new MobSpawn();
-                            post_mob.BaseForm = new MonsterID("machop", 0, "normal", Gender.Male);
+                            post_mob.BaseForm = new MonsterID("swablu", 0, "normal", Gender.Male);
                             post_mob.Tactic = "slow_wander";
                             post_mob.Level = new RandRange(14);
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_STAT_DROP"))));
@@ -17922,12 +17922,10 @@ namespace DataGenerator.Data
             {
                 #region NEVERENDING TALE
                 {
-                    zone.Name = new LocalText("**The NeverEnding Tale");
-                    zone.Level = 60;
+                    zone.Name = new LocalText("The NeverEnding Tale");
+                    zone.Level = 5;
                     zone.BagRestrict = 0;
                     zone.MoneyRestrict = true;
-                    zone.TeamSize = 2;
-                    zone.Rescues = 2;
                     zone.Rogue = RogueStatus.NoTransfer;
 
                     {
@@ -17966,7 +17964,7 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                            AddFloorData(layout, "Hidden Land.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
                             AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
