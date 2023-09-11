@@ -1,9 +1,5 @@
 # 0.7.17 Changes #
 
-* Fixed an issue where strong encounters appeared on the first floor of Castaway Cave earlier than expected
-* Fixed errors from certain moves with large textures such as Brine and Stone Edge
-* Interaction-triggered objects that can be walked through no longer trigger on overlap
-* Fixed an issue where the main menu cursor stopped blinking
-* Dev: MenutTextChoice and MenuElementChoice support in ScriptableSingleStripMenu
-* Dev: Some lists in editors will auto-collapse if they are opened with no items
-* Dev: Better string editing
+* Added graphics for keyboard controls!
+* Dev: Debugging enabled for lua scripts!  Currently operational for Windows and Linux.  Mac is pending for volunteers.
+* Dev: Common scripts are updated to include a common_vars.lua file.  If your mod changes scriptvars.lua, and does not change common.lua, you must include an empty common_vars.lua
