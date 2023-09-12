@@ -2,6 +2,7 @@
 
 * Added graphics for keyboard controls!
 * Fixed an issue preventing certain alternate-form Pokemon from relearning moves
+* Fixed an issue that could faint a target when they're already fainted
 * Various fixes for various mods
 * Dev: Added editor for chars
 * Dev: Debugging enabled for lua scripts!  Currently operational for Windows and Linux.  Mac is pending for volunteers.
