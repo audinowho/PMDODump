@@ -151,6 +151,7 @@ namespace DataGenerator.Data
             {
                 totalEntries[ii].JoinRate = MapJoinRate(ii, totalEntries);
                 MapFriendshipEvo(ii, totalEntries);
+                MapFormEvo(ii, totalEntries);
                 //if (TotalEntries[ii].JoinRate > 0)
                 //    outpt += (TotalEntries[ii].Name + ": " + TotalEntries[ii].JoinRate + "\n");
             }
@@ -907,6 +908,8 @@ namespace DataGenerator.Data
                         evoDetail.ShedSpecies = monsterKeys[292];
                         branch.Details.Add(evoDetail);
                     }
+                    else if (evoSpecies == 414)//mothim
+                        branch.Details.Add(new EvoSetForm(0));
                     else if (evoSpecies == 666)//vivillon
                         branch.Details.Add(new EvoFormLocOrigin());
                     else if (evoSpecies == 678)//meowstic
@@ -932,6 +935,7 @@ namespace DataGenerator.Data
                             {
                                 //second alt form required
                                 branch.Details.Insert(0, new EvoForm(2));
+                                branch.Details.Add(new EvoSetForm(0));
                             }
                             break;
                         case 862://obstagoon
@@ -942,6 +946,7 @@ namespace DataGenerator.Data
                             {
                                 //first alt form required
                                 branch.Details.Insert(0, new EvoForm(1));
+                                branch.Details.Add(new EvoSetForm(0));
                             }
                             break;
                         case 563://cofagrigus
@@ -954,6 +959,23 @@ namespace DataGenerator.Data
                             {
                                 //first alt form required
                                 branch.Details.Insert(0, new EvoForm(1));
+                                branch.Details.Add(new EvoSetForm(0));
+                            }
+                            break;
+                        case 902://basculegion
+                            {
+                                //second alt form required
+                                branch.Details.Insert(0, new EvoForm(2));
+                                {
+                                    EvoSetForm evoDetail = new EvoSetForm(0);
+                                    evoDetail.Conditions.Add(new EvoGender(Gender.Male));
+                                    branch.Details.Add(evoDetail);
+                                }
+                                {
+                                    EvoSetForm evoDetail = new EvoSetForm(1);
+                                    evoDetail.Conditions.Add(new EvoGender(Gender.Female));
+                                    branch.Details.Add(evoDetail);
+                                }
                             }
                             break;
                         case 461://weavile
@@ -966,6 +988,7 @@ namespace DataGenerator.Data
                             {
                                 //first alt form required
                                 branch.Details.Insert(0, new EvoForm(1));
+                                branch.Details.Add(new EvoSetForm(0));
                             }
                             break;
                     }
@@ -1175,6 +1198,7 @@ namespace DataGenerator.Data
                         PromoteBranch altBranch = new PromoteBranch();
                         altBranch.Result = branch.Result;
                         altBranch.Details.Add(new EvoForm(1));
+                        altBranch.Details.Add(new EvoSetForm(2));
 
                         EvoLevel evoDetail = new EvoLevel();
                         evoDetail.Level = Convert.ToInt32(35);
@@ -1961,6 +1985,46 @@ namespace DataGenerator.Data
 
             }
 
+        }
+
+        public static void MapFormEvo(int prevoSpecies, MonsterData[] totalEntries)
+        {
+            MonsterData prevoData = totalEntries[prevoSpecies];
+            foreach (PromoteBranch branch in prevoData.Promotions)
+            {
+                MonsterData evoData = totalEntries[monsterKeys.IndexOf(branch.Result)];
+
+                //by default, the evo evolves from the same form of the prevo, as long as they're both there.
+                for(int ii = 0; ii < evoData.Forms.Count && ii < prevoData.Forms.Count; ii++)
+                {
+                    BaseMonsterForm form = evoData.Forms[ii];
+                    form.PromoteForm = ii;
+                }
+
+                int reqForm = 0;
+                foreach (PromoteDetail detail in branch.Details)
+                {
+                    if (detail is EvoForm)
+                        reqForm = ((EvoForm)detail).ReqForm;
+                }
+                int resultForm = reqForm;
+                foreach (PromoteDetail detail in branch.Details)
+                {
+                    if (detail is EvoSetForm)
+                    {
+                        EvoSetForm setForm = ((EvoSetForm)detail);
+                        int innerForm = setForm.Form;
+                        int innerReqForm = reqForm;
+                        foreach (PromoteDetail innerReq in setForm.Conditions)
+                        {
+                            if (innerReq is EvoForm)
+                                innerReqForm = ((EvoForm)innerReq).ReqForm;
+                        }
+                        BaseMonsterForm form = evoData.Forms[innerForm];
+                        form.PromoteForm = innerReqForm;
+                    }
+                }
+            }
         }
 
         public static int GetGenBoundary(int index)
