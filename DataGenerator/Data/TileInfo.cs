@@ -1002,15 +1002,15 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Sigil Site");
                 fileName = "tile_boss";
-                tile.Desc = new LocalText("A mysterious signal that calls Pokémon to the area.");
+                tile.Desc = new LocalText("A mysterious sigil that calls Pokémon to the area.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Site;
                 tile.Anim = new ObjAnimData("Tile_Signal", 12);
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
-                tile.InteractWithTiles.Add(0, new LockdownTileEvent("map_clear_check"));
-                tile.InteractWithTiles.Add(0, new BossSpawnEvent());
+                tile.InteractWithTiles.Add(0, new LeaderCharEvent(new LockdownTileEvent("map_clear_check")));
+                tile.InteractWithTiles.Add(0, new LeaderCharEvent(new BossSpawnEvent()));
             }
             else if (ii == 39)
             {
