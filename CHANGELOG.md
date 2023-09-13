@@ -3,7 +3,10 @@
 * Added graphics for keyboard controls!
 * Fixed an issue preventing certain alternate-form Pokemon from relearning moves
 * Fixed an issue that could faint a target when they're already fainted
+* Prevented enemies from triggering boss tiles
 * Various fixes for various mods
-* Dev: Added editor for chars
+* Dev: Added ReverseGroundAction
+* Dev: Added editor for char datatype
+* Dev: Various editor display corrections
 * Dev: Debugging enabled for lua scripts!  Currently operational for Windows and Linux.  Mac is pending for volunteers.
 * Dev: Common scripts are updated to include a common_vars.lua file.  If your mod changes scriptvars.lua, and does not change common.lua, you must include an empty common_vars.lua
