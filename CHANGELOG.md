@@ -7,6 +7,7 @@
 * Various fixes for various mods
 * Dev: Added ReverseGroundAction
 * Dev: Added option to specify direction for boss battle starting position
+* Dev: Ground Entity draw order can be set with EntOrder
 * Dev: Added editor for char datatype
 * Dev: Various editor display corrections
 * Dev: Debugging enabled for lua scripts!  Currently operational for Windows and Linux.  Mac is pending for volunteers.
