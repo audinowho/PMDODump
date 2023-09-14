@@ -10,5 +10,5 @@
 * Dev: Ground Entity draw order can be set with EntOrder
 * Dev: Added editor for char datatype
 * Dev: Various editor display corrections
-* Dev: Debugging enabled for lua scripts!  Currently operational for Windows and Linux.  Mac is pending for volunteers.
+* Dev: Debugging enabled for lua scripts!  You can break and step through code with Zerobrane Studio.
 * Dev: Common scripts are updated to include a common_vars.lua file.  If your mod changes scriptvars.lua, and does not change common.lua, you must include an empty common_vars.lua

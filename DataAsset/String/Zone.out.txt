@@ -1,8 +1,8 @@
 Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-ambush_forest-0000|data.Name		Ambush Forest		Auflauerwald	Bosque Emboscada		Foresta Agguato				埋伏森林
 0000-ambush_forest-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Ambush Forest\nB{0}F		Auflauerwald\n{0}.KG	Bosque Emboscada\nP-{0}		Foresta Agguato\nP-{0}				埋伏森林\nB{0}F
-0000-barren_tundra-0000|data.Name		Barren Tundra			Tundra Árido		Tundra Desolata
-0000-barren_tundra-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Barren Tundra\n{0}F			Tundra Árido\nP{0}		Tundra Desolata\nP{0}
+0000-barren_tundra-0000|data.Name		Barren Tundra			Tundra Árido		Tundra Desolata				寂寥苔原
+0000-barren_tundra-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Barren Tundra\n{0}F			Tundra Árido\nP{0}		Tundra Desolata\nP{0}				寂寥苔原\n{0}F
 0000-bramble_woods-0000|data.Name		Bramble Woods			Bosque Zarza		Foresta Rovospino				荆棘树林
 0000-bramble_woods-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Bramble Woods\nB{0}F			Bosque Zarza\nP-{0}		Foresta Rovospino\nP-{0}				荆棘树林\nB{0}F
 0000-bramble_woods-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Bramble Thicket\nB{0}F			Matorral Zarza\nP-{0}		Boschetto Rovospino\nP-{0}				荆棘密林\nB{0}F
@@ -19,7 +19,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-champions_road-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Clouded Road\n{0}F			Camino Nublado\nP{0}		Cammino Nuvoloso\nP{0}				阴云之路\n{0}F
 0000-copper_quarry-0000|data.Name		Copper Quarry			Cantera Bronce		Miniera di Rame				采铜矿场
 0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\n{0}F			Cantera Bronce\nP{0}		Miniera di Rame\nP{0}				采铜矿场\n{0}F
-0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Lodestone Quarry\nB{0}F									
+0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Lodestone Quarry\nB{0}F									磁力矿场\nB{0}F
 0000-debug_zone-0000|data.Name		Debug Zone			Zona de Debug		Zona di Debug				Debug区域
 0000-debug_zone-0001|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0000]).Name		Replay Test Zone\n{0}F			Zona de Prueba de Replay\nP{0}		Zona di test Replay\nP{0}				回放测试区域\n{0}F
 0000-deserted_fortress-0000|data.Name		Deserted Fortress			Fortaleza Desolada		Fortezza Desolata				空寂要塞
@@ -38,8 +38,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-fertile_valley-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Muddy Valley\nB{0}F			Valle Lodoso\nP-{0}		Valle Fangosa\nP-{0}				泥泞山谷\nB{0}F
 0000-flyaway_cliffs-0000|data.Name		Flyaway Cliffs		Geladene Klippen	Acantilado Nido		Colline del Volo				飞翔悬崖
 0000-flyaway_cliffs-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Flyaway Cliffs\n{0}F		Geladene Klippen\n{0}.OG	Acantilado Nido\nP{0}		Colline del Volo\nP{0}				飞翔悬崖\n{0}F
-0000-forsaken_desert-0000|data.Name		Forsaken Desert		Verlassene Wüste	Desierto Abandonado		Deserto Abbandonato				荒芜沙漠
-0000-forsaken_desert-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Forsaken Desert\n{0}F		Verlassene Wüste\n{0}.OG	Desierto Abandonado\nP{0}		Deserto Abbandonato\nP{0}				荒芜沙漠\n{0}F
+0000-forsaken_desert-0000|data.Name		Forsaken Desert		Verlassene Wüste	Desierto Abandonado		Deserto Abbandonato				落寂沙漠
+0000-forsaken_desert-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Forsaken Desert\n{0}F		Verlassene Wüste\n{0}.OG	Desierto Abandonado\nP{0}		Deserto Abbandonato\nP{0}				落寂沙漠\n{0}F
 0000-forsaken_desert-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room			Sala Secreta		Stanza Segreta				秘密之间
 0000-geode_underpass-0000|data.Name		Geode Underpass			Galería Geoda		Galleria Geode				紫晶地道
 0000-geode_underpass-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Geode Underpass\nB{0}F			Galería Geoda\nP-{0}		Galleria Geode\nP-{0}				紫晶地道\nB{0}F
@@ -80,8 +80,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-snowbound_path-0000|data.Name		Snowbound Path			Paso Helado Errático		Passo Innevato				雪封小径
 0000-snowbound_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Snowbound Path\n{0}F			Paso Helado Errático\nP{0}		Passo Innevato\nP{0}				雪封小径\n{0}F	
 0000-snowbound_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Glacial Path\nB{0}F					Sentiero Glaciale\nP-{0}				冰河小径\nB{0}F
-0000-starfall_heights-0000|data.Name		Starfall Heights			Alto Lluevestrella		Alture Cometa			
-0000-starfall_heights-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Starfall Heights\n{0}F			Alto Lluevestrella\nP{0}		Alture Cometa\nP{0}			
+0000-starfall_heights-0000|data.Name		Starfall Heights			Alto Lluevestrella		Alture Cometa				落星高地
+0000-starfall_heights-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Starfall Heights\n{0}F			Alto Lluevestrella\nP{0}		Alture Cometa\nP{0}				落星高地\n{0}F
 0000-the_abyss-0000|data.Name		The Abyss		Die Kluft	El Abismo		L'Abisso				深渊
 0000-the_abyss-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Abyss\nB{0}F		Die Kluft\n{0}.KG	El Abismo\nP-{0}		L'Abisso\nP-{0}				深渊\nB{0}F
 0000-the_neverending_tale-0000|data.Name		The NeverEnding Tale					La Storia Senza Fine			

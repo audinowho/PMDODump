@@ -414,7 +414,7 @@ Key		EN
 0206-galvanize-0000|data.Name		Galvanize
 0206-galvanize-0001|data.Desc		Normal-type moves become Electric-type moves.
 0207-surge_surfer-0000|data.Name		Surge Surfer
-0207-surge_surfer-0001|data.Desc		Doubles the Pokémon's Speed stat on Electric Terrain.
+0207-surge_surfer-0001|data.Desc		Boosts the Pokémon's Movement Speed on Electric Terrain.
 0208-schooling-0000|data.Name		Schooling
 0208-schooling-0001|data.Desc		When it has a lot of HP, the Pokémon forms a powerful school. It stops schooling when its HP is low.
 0209-disguise-0000|data.Name		Disguise

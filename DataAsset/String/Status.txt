@@ -5,6 +5,8 @@ Key		EN
 0000-aqua_ring-0001|data.Desc		The Pokémon is surrounded by a veil of water that gradually restores its HP. This status wears off after a few turns.
 0000-area_counter-0000|data.Name		Area Counter
 0000-area_counter-0001|data.Desc		All damage done to this Pokémon of a certain category of moves will be reflected on all foes within 3 tiles. This status wears off after many turns have passed.
+0000-attack_response-0000|data.Name		Attack Response
+0000-attack_response-0001|data.Desc		
 0000-belch-0000|data.Name		Belch
 0000-belch-0001|data.Desc		The Pokémon is ready to belch, unleashing the attack whenever it eats a food item. This status wears off after a few turns.
 0000-biding-0000|data.Name		Biding
@@ -110,7 +112,7 @@ Key		EN
 0000-invisible-0000|data.Name		Invisible
 0000-invisible-0001|data.Desc		The Pokémon is invisible and cannot be seen by other Pokémon. This status wears off after a few turns.
 0000-kings_shield-0000|data.Name		King's Shield
-0000-kings_shield-0001|data.Desc		The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks. 
+0000-kings_shield-0001|data.Desc		The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks.
 0000-last_ally_move-0000|data.Name		Last Ally Move
 0000-last_ally_move-0001|data.Desc		
 0000-last_move_hit_by_other-0000|data.Name		Last Move Hit By Other

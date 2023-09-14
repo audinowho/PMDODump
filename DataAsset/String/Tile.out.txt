@@ -34,7 +34,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-stairs_secret_up-0000|data.Name		Secret Stairs	Escaliers Secrets	Geheime Treppe	Escaleras Secretas		Scale segrete	비밀의 계단			秘密楼梯																	
 0000-stairs_secret_up-0001|data.Desc		Stairs leading to an unknown location.	Des escaliers menant à un endroit inconnu.	Stufen, welche zu einem unbekannten Ort führen. Erkunder sollten sich vorbereiten bevor diese voranschreiten, um jeder kommenden Gefahr zu trotzen.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.		Scale che portano in un luogo sconosciuto.	알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.			通向一个未知地点的楼梯。																	
 0000-tile_boss-0000|data.Name		Sigil Site	Zone de Signal		Área Señal						信号区域																	
-0000-tile_boss-0001|data.Desc		A mysterious signal that calls Pokémon to the area.	Un signal mystérieux qui appelle les Pokémon dans la zone.		Una misteriosa señal que llama Pokémon al área.						一种可以召集宝可梦来到这里的神秘信号。																	
+0000-tile_boss-0001|data.Desc		A mysterious sigil that calls Pokémon to the area.	Un signal mystérieux qui appelle les Pokémon dans la zone.		Una misteriosa señal que llama Pokémon al área.						一种可以召集宝可梦来到这里的神秘信号。																	
 0000-tile_compass-0000|data.Name		Compass Tile	Case Compas								指南地板																	
 0000-tile_compass-0001|data.Desc		A tile that shows the way to important locations on the floor.	Une case qui indique le chemin vers les endroits importants du sol.								可以指向楼层内重要地点的地板。																	
 0000-tile_evo-0000|data.Name		Luminous Site	Zone Lumineuse	Leuchtende Fläche	Area Luminosa			빛의 지대			光之领域																	
