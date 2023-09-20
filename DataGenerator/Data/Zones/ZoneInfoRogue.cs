@@ -3216,12 +3216,12 @@ namespace DataGenerator.Data
 
 
             poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
-            poolSpawn.TeamSizes.Add(2, new IntRange(8, 12), 3);
-            poolSpawn.TeamSizes.Add(2, new IntRange(12, 20), 6);
+            poolSpawn.TeamSizes.Add(2, new IntRange(8, 14), 3);
+            poolSpawn.TeamSizes.Add(2, new IntRange(14, 20), 6);
             poolSpawn.TeamSizes.Add(2, new IntRange(20, max_floors), 8);
 
-            poolSpawn.TeamSizes.Add(3, new IntRange(24, max_floors), 3);
-            poolSpawn.TeamSizes.Add(3, new IntRange(27, max_floors), 4);
+            poolSpawn.TeamSizes.Add(3, new IntRange(28, 34), 3);
+            poolSpawn.TeamSizes.Add(3, new IntRange(34, max_floors), 4);
             floorSegment.ZoneSteps.Add(poolSpawn);
 
 
