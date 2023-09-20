@@ -47,7 +47,10 @@ namespace DataGenerator.Data
             universalEvent.OnDeaths.Add(-10, new PreDeathEvent());
             universalEvent.OnDeaths.Add(-10, new SetDeathEvent());
             universalEvent.OnDeaths.Add(0, new ImpostorReviveEvent("imposter", "transformed"));
-            universalEvent.OnDeaths.Add(10, new HandoutRelativeExpEvent(1, 7, 10, 5, 2));
+
+            HandoutExpEvent low = new HandoutRelativeExpEvent(1, 7, 5, 2);
+            HandoutExpEvent high = new HandoutRelativeExpEvent(1, 7, 5, 2);
+            universalEvent.OnDeaths.Add(10, new HandoutPiecewiseExpEvent(5, 0, low, high));
             //universalEvent.OnMapStarts.Add(-10, new SingleCharScriptEvent("UpdateEscort"));
             universalEvent.OnMapStarts.Add(-10, new FadeInEvent());
             universalEvent.OnMapStarts.Add(-5, new SpecialIntroEvent());
