@@ -9,6 +9,7 @@ using System.IO.Compression;
 using Mono.Unix;
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace PMDOSetup
 {
@@ -187,10 +188,15 @@ namespace PMDOSetup
 
                 tempUpdater = Path.Join(updaterPath, "temp", "setup-" + Path.GetFileName(updaterFile));
 
+                wc.DownloadProgressChanged += Wc_DownloadProgressChanged;
+                wc.DownloadFileCompleted += Wc_DownloadFileCompleted;
                 Console.WriteLine("Downloading from {0} to {1}. May take a while...", updaterFile, tempUpdater);
                 wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                wc.DownloadFile(updaterFile, tempUpdater);
-
+                DownloadIncomplete = true;
+                wc.DownloadFileAsync(new Uri(updaterFile), tempUpdater);
+                while (DownloadIncomplete)
+                    Thread.Sleep(1);
+                Console.WriteLine();
             }
 
             Console.WriteLine("Unzipping...");
@@ -224,6 +230,24 @@ namespace PMDOSetup
             Console.WriteLine("Done.");
             ReadKey();
         }
+
+        static bool DownloadIncomplete;
+        static object lockObj = new object();
+
+        private static void Wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            lock (lockObj)
+            {
+                (int Left, int Top) cursor = Console.GetCursorPosition();
+                Console.SetCursorPosition(0, cursor.Top);
+                Console.Write(String.Format("Progress: {0}/{1} Bytes", e.BytesReceived, e.TotalBytesToReceive));
+            }
+        }
+        private static void Wc_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
+        {
+            DownloadIncomplete = false;
+        }
+
 
         static Release GetSpecificRelease()
         {
@@ -386,12 +410,23 @@ namespace PMDOSetup
                 tempExe = Path.Join(updaterPath, "temp", Path.GetFileName(exeFile));
                 tempAsset = Path.Join(updaterPath, "temp", "Asset.zip");
 
+                wc.DownloadProgressChanged += Wc_DownloadProgressChanged;
+                wc.DownloadFileCompleted += Wc_DownloadFileCompleted;
                 Console.WriteLine("Downloading from {0} to {1}. May take a while...", exeFile, tempExe);
                 wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                wc.DownloadFile(exeFile, tempExe);
+                DownloadIncomplete = true;
+                wc.DownloadFileAsync(new Uri(exeFile), tempExe);
+                while (DownloadIncomplete)
+                    Thread.Sleep(1);
+                Console.WriteLine();
+
                 Console.WriteLine("Downloading from {0} to {1}. May take a while...", assetFile, tempAsset);
                 wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
-                wc.DownloadFile(assetFile, tempAsset);
+                DownloadIncomplete = true;
+                wc.DownloadFileAsync(new Uri(assetFile), tempAsset);
+                while (DownloadIncomplete)
+                    Thread.Sleep(1);
+                Console.WriteLine();
             }
 
             if (!firstInstall && Directory.Exists(saveDir))
