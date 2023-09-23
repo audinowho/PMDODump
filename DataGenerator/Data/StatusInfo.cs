@@ -164,11 +164,11 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(-5, new ReplaceMajorStatusEvent());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
-                status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(false)));
+                status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(false, 16, 12)));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                status.OnWalks.Add(0, new PoisonSingleEvent(false, false, 16, 16));
+                status.OnWalks.Add(0, new PoisonSingleEvent(false, false, 16, 12));
                 status.OnWalks.Add(0, new WalkedThisTurnEvent(false));
-                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true, 16, 16));
+                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true, 16, 12));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
                 status.RestoreHPs.Add(0, new HealMultEvent(1, 2));
@@ -195,11 +195,11 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(-5, new ReplaceMajorStatusEvent());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_TOXIC_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POISON_END")));
-                status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(true)));
+                status.AfterActions.Add(0, new OnAggressionEvent(new PoisonEvent(true, 16, 12)));
                 status.AfterActions.Add(0, new OnAggressionEvent(new AttackedThisTurnEvent()));
-                status.OnWalks.Add(0, new PoisonSingleEvent(false, false, 16, 16));
+                status.OnWalks.Add(0, new PoisonSingleEvent(false, false, 16, 12));
                 status.OnWalks.Add(0, new WalkedThisTurnEvent(false));
-                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true, 16, 16));
+                status.OnTurnEnds.Add(1, new PoisonEndEvent(false, true, 16, 12));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.ModifyHPs.Add(0, new HealMultEvent(0, 1));
                 status.RestoreHPs.Add(0, new HealMultEvent(1, 2));
@@ -980,15 +980,22 @@ namespace DataGenerator.Data
             }
             else if (ii == 54)
             {
-                status.Name = new LocalText("Perish Song");
+                status.Name = new LocalText("Perish Count");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon has heard Perish Song, and will faint when its countdown reaches zero.");
+                fileName = "perish_song";
+                status.Emoticon = "Exclaim_White";
+                status.Desc = new LocalText("The Pokémon has a Perish Count that drops each time it hears Perish Song. It will faint when it drops to 0.");
+                status.BeforeStatusAdds.Add(0, new StatusCountdownCheck());
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
-                status.StatusStates.Set(new CountDownState(61));
-                status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_PERISH_START"), true));
+                status.StatusStates.Set(new CountDownState(3));
+                FiniteOverlayEmitter overlay = new FiniteOverlayEmitter();
+                overlay.Anim = new BGAnimData("White", 3);
+                overlay.TotalTime = 80;
+                overlay.Color = Microsoft.Xna.Framework.Color.Black;
+                overlay.Layer = DrawLayer.Bottom;
+                status.OnStatusAdds.Add(0, new PerishStatusEvent(new StringKey("MSG_PERISH_COUNT"), true, new StatusAnimEvent(overlay, "_UNK_DUN_Suspense", 60), new StatusAnimEvent(new EmptyFiniteEmitter(), "DUN_Hit_Super_Effective", 0)));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
-                status.OnMapTurnEnds.Add(0, new PerishEvent(20));
             }
             else if (ii == 55)
             {
@@ -2173,7 +2180,7 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Powder");
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon is covered in a powder that causes an explosion when exposed to fire or electricity.");
-                status.Emoticon = "Exclaim_White";
+                status.Emoticon = "Exclaim_Red";
                 status.StatusStates.Set(new TransferStatusState());
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_POWDER_START"), true));
 

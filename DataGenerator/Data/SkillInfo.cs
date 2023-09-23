@@ -5425,7 +5425,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 90;
-                skill.Data.SkillStates.Set(new BasePowerState(10));
+                skill.Data.SkillStates.Set(new BasePowerState(20));
                 skill.Data.BeforeHits.Add(0, new RepeatHitEvent("last_used_move", "times_move_used", 10, 1, false));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
