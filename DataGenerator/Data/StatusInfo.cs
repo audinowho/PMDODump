@@ -1060,6 +1060,7 @@ namespace DataGenerator.Data
                 status.DrawEffect = DrawEffect.Hurt;
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
+                status.BeforeStatusAdds.Add(-1, new CountDownBoostMod(typeof(GripState), 3, 2));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TELEKINESIS_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
                 status.StatusStates.Set(new CountDownState(4));

@@ -1474,7 +1474,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Wand_Pink";
                 item.Price = 5;
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_Out", 2));
-                item.UseEvent.OnHitTiles.Add(0, new LureEvent());
+                item.UseEvent.OnHits.Add(0, new LureEvent());
             }
             else if (ii == 226)
             {
@@ -2215,7 +2215,7 @@ namespace DataGenerator.Data
             else if (ii == 304)
             {
                 item.Name = new LocalText("Pass Scarf");
-                item.Desc = new LocalText("A held item that causes the Pokémon to shrug off any damaging moves and pass them on to an adjacent Pokémon.");
+                item.Desc = new LocalText("A held item that causes the Pokémon to shrug off damaging moves and pass them on to an adjacent Pokémon.");
                 item.Sprite = "Scarf_Pink";
                 item.Price = 200;
                 item.ProximityEvent.Radius = 0;
@@ -2249,10 +2249,12 @@ namespace DataGenerator.Data
             else if (ii == 308)
             {
                 item.Name = new LocalText("Binding Band");
-                item.Desc = new LocalText("A band that increases the power of binding moves used by the holder.");
+                item.Desc = new LocalText("An item to be held by a Pokémon. When the holder successfully inflicts damage, the target may also be immobilized.");
                 item.Sprite = "Band_Tan";
                 item.Price = 200;
-                item.OnRefresh.Add(0, new MiscEvent(new BindState()));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(3));
+                item.AfterHittings.Add(0, new OnMoveUseEvent(new OnHitEvent(true, false, 25, new StatusStateBattleEvent("immobilized", true, true, statusStates))));
             }
             else if (ii == 309)
             {
@@ -3020,9 +3022,13 @@ namespace DataGenerator.Data
                 item.Price = 200;
                 item.OnRefresh.Add(0, new SeeTrapsEvent());
             }
-            else if (ii == 407)
+            else if (ii == 408)
             {
-
+                //item.Name = new LocalText("Lure Band");
+                //item.Desc = new LocalText("A band that may pull the target to the holder when it successfully inflicts damage.");
+                //item.Sprite = "Band_Tan";
+                //item.Price = 200;
+                //item.AfterHittings.Add(0, new OnMoveUseEvent(new OnHitEvent(true, false, 25, new LureEvent())));
             }
             else if (ii == 444)
             {
