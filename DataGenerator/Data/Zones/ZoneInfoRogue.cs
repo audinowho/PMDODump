@@ -2334,9 +2334,9 @@ namespace DataGenerator.Data
                 else if (ii < 20)
                     AddRespawnData(layout, 20, 100);
                 else if (ii < 27)
-                    AddRespawnData(layout, 30, 100);
+                    AddRespawnData(layout, 28, 100);
                 else
-                    AddRespawnData(layout, 25, 120);
+                    AddRespawnData(layout, 23, 120);
 
                 //enemies
                 if (ii < 8)
@@ -2344,11 +2344,11 @@ namespace DataGenerator.Data
                 else if (ii < 16)
                     AddEnemySpawnData(layout, 30, new RandRange(9, 14));
                 else if (ii < 20)
-                    AddEnemySpawnData(layout, 30, new RandRange(13, 18));
+                    AddEnemySpawnData(layout, 30, new RandRange(12, 17));
                 else if (ii < 27)
-                    AddEnemySpawnData(layout, 20, new RandRange(18, 25));
+                    AddEnemySpawnData(layout, 20, new RandRange(17, 23));
                 else
-                    AddEnemySpawnData(layout, 20, new RandRange(15, 24));
+                    AddEnemySpawnData(layout, 20, new RandRange(14, 22));
 
 
                 //construct paths
@@ -2666,7 +2666,7 @@ namespace DataGenerator.Data
             itemSpawnZoneStep.Spawns.Add("fakes", fakes);
 
             fakes.Spawns.Add(InvItem.CreateBox("food_apple", "applin"), new IntRange(6, 20), 10);//Apple (fake)
-            fakes.Spawns.Add(InvItem.CreateBox("food_apple_big", "appletun"), new IntRange(20, max_floors), 10);//Big Apple (fake)
+            fakes.Spawns.Add(InvItem.CreateBox("food_apple_big", "flapple"), new IntRange(20, max_floors), 10);//Big Apple (fake)
 
 
             //necessities
@@ -2951,225 +2951,114 @@ namespace DataGenerator.Data
             TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
             poolSpawn.Priority = PR_RESPAWN_MOB;
 
-
-            //010 Caterpie : 033 Tackle : 081 String Shot
-            poolSpawn.Spawns.Add(GetTeamMob("caterpie", "", "tackle", "string_shot", "", "", new RandRange(3)), new IntRange(0, 3), 10);
-            //396 Starly : 033 Tackle
-            poolSpawn.Spawns.Add(GetTeamMob("starly", "", "tackle", "", "", "", new RandRange(3)), new IntRange(0, 3), 10);
-            //191 Sunkern : 071 Absorb
-            poolSpawn.Spawns.Add(GetTeamMob("sunkern", "", "absorb", "", "", "", new RandRange(5)), new IntRange(0, 3), 10);
-            //273 Seedot : 117 Bide
-            poolSpawn.Spawns.Add(GetTeamMob("seedot", "", "bide", "", "", "", new RandRange(5)), new IntRange(0, 3), 10);
-            //161 Sentret : 010 Scratch : 111 Defense Curl
+            poolSpawn.Spawns.Add(GetTeamMob("caterpie", "", "tackle", "string_shot", "", "", new RandRange(3), "item_finder"), new IntRange(0, 3), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("starly", "", "tackle", "", "", "", new RandRange(3), "item_finder"), new IntRange(0, 3), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("sunkern", "", "absorb", "", "", "", new RandRange(5), "item_finder"), new IntRange(0, 3), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("seedot", "", "bide", "", "", "", new RandRange(5), "item_finder"), new IntRange(0, 3), 10);
             poolSpawn.Spawns.Add(GetTeamMob("sentret", "", "scratch", "defense_curl", "", "", new RandRange(5)), new IntRange(1, 5), 10);
-            //013 Weedle : 040 Poison Sting : 081 String Shot
             poolSpawn.Spawns.Add(GetTeamMob("weedle", "", "poison_sting", "string_shot", "", "", new RandRange(5)), new IntRange(1, 5), 10);
-            //050 Diglett : 071 Arena Trap : 310 Astonish : 028 Sand Attack
             poolSpawn.Spawns.Add(GetTeamMob("diglett", "arena_trap", "astonish", "sand_attack", "", "", new RandRange(6)), new IntRange(1, 5), 10);
-            //333 Swablu : 030 Natural Cure : 047 Sing : 064 Peck
             poolSpawn.Spawns.Add(GetTeamMob("swablu", "natural_cure", "sing", "peck", "", "", new RandRange(6)), new IntRange(1, 5), 10);
-            //309 Electrike : 336 Howl : 033 Tackle
             poolSpawn.Spawns.Add(GetTeamMob("electrike", "", "howl", "tackle", "", "", new RandRange(6)), new IntRange(1, 5), 10);
-            //412 Burmy : 033 Tackle
             poolSpawn.Spawns.Add(GetTeamMob("burmy", "", "tackle", "", "", "", new RandRange(10), "turret"), new IntRange(3, 7), 5);
-            //412 Burmy : 033 Tackle
             poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("burmy", 1, "", Gender.Unknown), "", "tackle", "", "", "", new RandRange(10), "turret"), new IntRange(3, 7), 5);
-            //412 Burmy : 033 Tackle
             poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("burmy", 2, "", Gender.Unknown), "", "tackle", "", "", "", new RandRange(10), "turret"), new IntRange(3, 7), 5);
-            //066 Machop : 067 Low Kick : 116 Focus Energy
             poolSpawn.Spawns.Add(GetTeamMob("machop", "", "low_kick", "focus_energy", "", "", new RandRange(8)), new IntRange(3, 7), 10);
-            //043 Oddish : 230 Sweet Scent : 051 Acid
             poolSpawn.Spawns.Add(GetTeamMob("oddish", "", "sweet_scent", "acid", "", "", new RandRange(9)), new IntRange(3, 7), 10);
-            //300 Skitty : 056 Cute Charm : 252 Fake Out
             poolSpawn.Spawns.Add(GetTeamMob("skitty", "cute_charm", "fake_out", "", "", "", new RandRange(10)), new IntRange(3, 7), 10);
-            //209 Snubbull : 044 Bite : 204 Charm
             poolSpawn.Spawns.Add(GetTeamMob("snubbull", "", "bite", "charm", "", "", new RandRange(9)), new IntRange(3, 7), 10);
-            //179 Mareep : 178 Cotton Spore : 084 Thunder Shock
             poolSpawn.Spawns.Add(GetTeamMob("mareep", "", "cotton_spore", "thunder_shock", "", "", new RandRange(10)), new IntRange(3, 7), 10);
-            //187 Hoppip : 235 Synthesis : 033 Tackle
             poolSpawn.Spawns.Add(GetTeamMob("hoppip", "", "synthesis", "tackle", "", "", new RandRange(10)), new IntRange(3, 7), 10);
-            //023 Ekans : 040 Poison Sting : 043 Leer
             poolSpawn.Spawns.Add(GetTeamMob("ekans", "", "poison_sting", "leer", "", "", new RandRange(10)), new IntRange(5, 9), 10);
-            //393 Piplup : 128 Defiant : 064 Peck
             poolSpawn.Spawns.Add(GetTeamMob("piplup", "defiant", "peck", "", "", "", new RandRange(12), TeamMemberSpawn.MemberRole.Loner), new IntRange(5, 9), 10);
-            //390 Chimchar : 269 Taunt : 052 Ember
             poolSpawn.Spawns.Add(GetTeamMob("chimchar", "", "taunt", "ember", "", "", new RandRange(12), TeamMemberSpawn.MemberRole.Loner), new IntRange(5, 9), 10);
-            //387 Turtwig : 110 Withdraw : 071 Absorb
             poolSpawn.Spawns.Add(GetTeamMob("turtwig", "", "withdraw", "absorb", "", "", new RandRange(12), TeamMemberSpawn.MemberRole.Loner), new IntRange(5, 9), 10);
-            //133 Eevee : 608 Baby-Doll Eyes : 129 Swift
             poolSpawn.Spawns.Add(GetTeamMob("eevee", "", "baby_doll_eyes", "swift", "", "", new RandRange(11)), new IntRange(5, 9), 10);
-            //325 Spoink : 149 Psywave
             poolSpawn.Spawns.Add(GetTeamMob("spoink", "", "psywave", "", "", "", new RandRange(14)), new IntRange(5, 9), 10);
-            //438 Bonsly : 313 Fake Tears : 067 Low Kick
             poolSpawn.Spawns.Add(GetTeamMob("bonsly", "", "fake_tears", "low_kick", "", "", new RandRange(14), TeamMemberSpawn.MemberRole.Loner, "weird_tree"), new IntRange(5, 9), 10);
-            //077 Ponyta : 172 Flame Wheel : 039 Tail Whip
             poolSpawn.Spawns.Add(GetTeamMob("ponyta", "", "flame_wheel", "tail_whip", "", "", new RandRange(13)), new IntRange(5, 9), 10);
-            //060 Poliwag : 346 Water Sport : 055 Water Gun
             poolSpawn.Spawns.Add(GetTeamMob("poliwag", "", "water_sport", "water_gun", "", "", new RandRange(12)), new IntRange(5, 9), 10);
-            //193 Yanma : 003 Speed Boost : 049 Sonic Boom
             poolSpawn.Spawns.Add(GetTeamMob("yanma", "speed_boost", "sonic_boom", "", "", "", new RandRange(14)), new IntRange(7, 11), 10);
-            //440 Happiny : 383 Copycat : 204 Charm
             poolSpawn.Spawns.Add(GetTeamMob("happiny", "", "copycat", "charm", "", "", new RandRange(16), TeamMemberSpawn.MemberRole.Support), new IntRange(7, 11), 5);
-            //215 Sneasel : 196 Icy Wind : 269 Taunt
             poolSpawn.Spawns.Add(GetTeamMob("sneasel", "", "icy_wind", "taunt", "", "", new RandRange(16)), new IntRange(7, 11), 10);
-            //274 Nuzleaf : 259 Torment : 075 Razor Leaf
             poolSpawn.Spawns.Add(GetTeamMob("nuzleaf", "", "torment", "razor_leaf", "", "", new RandRange(16)), new IntRange(7, 11), 10);
-            //360 Wynaut : 227 Encore : 068 Counter : 243 Mirror Coat
             poolSpawn.Spawns.Add(GetTeamMob("wynaut", "", "encore", "counter", "mirror_coat", "", new RandRange(17)), new IntRange(7, 11), 10);
-            //163 Hoothoot : 115 Reflect : 064 Peck
             poolSpawn.Spawns.Add(GetTeamMob("hoothoot", "", "reflect", "peck", "", "", new RandRange(16)), new IntRange(7, 11), 10);
-            //074 Geodude : 088 Rock Throw : 111 Defense Curl
             poolSpawn.Spawns.Add(GetTeamMob("geodude", "", "rock_throw", "defense_curl", "", "", new RandRange(16)), new IntRange(7, 11), 10);
-            //079 Slowpoke : 050 Disable : 055 Water Gun : 093 Confusion
             poolSpawn.Spawns.Add(GetTeamMob("slowpoke", "", "disable", "water_gun", "confusion", "", new RandRange(17)), new IntRange(7, 11), 10);
-            //092 Gastly : 101 Night Shade : 095 Hypnosis
             poolSpawn.Spawns.Add(GetTeamMob("gastly", "", "night_shade", "hypnosis", "", "", new RandRange(19)), new IntRange(9, 13), 10);
-            //058 Growlithe : 052 Ember : 046 Roar : 316 Odor Sleuth
             poolSpawn.Spawns.Add(GetTeamMob("growlithe", "", "ember", "roar", "odor_sleuth", "", new RandRange(20), TeamMemberSpawn.MemberRole.Support), new IntRange(9, 13), 10);
-            //012 Butterfree : 014 Compound Eyes : 018 Whirlwind : 093 Confusion
             poolSpawn.Spawns.Add(GetTeamMob("butterfree", "compound_eyes", "whirlwind", "confusion", "", "", new RandRange(22)), new IntRange(11, 15), 10);
-            //056 Mankey : 069 Seismic Toss : 103 Screech
             poolSpawn.Spawns.Add(GetTeamMob("mankey", "", "seismic_toss", "screech", "", "", new RandRange(23)), new IntRange(11, 15), 10);
-            //397 Staravia : 104 Double Team : 018 Whirlwind : 017 Wing Attack
             poolSpawn.Spawns.Add(GetTeamMob("staravia", "", "double_team", "whirlwind", "wing_attack", "", new RandRange(23)), new IntRange(11, 15), 10);
-            //216 Teddiursa : 230 Sweet Scent : 343 Covet : 154 Fury Swipes
             poolSpawn.Spawns.Add(GetTeamMob("teddiursa", "", "sweet_scent", "covet", "fury_swipes", "", new RandRange(22)), new IntRange(11, 15), 10);
-            //083 Farfetch'd : 128 Defiant : 332 Aerial Ace : 282 Knock Off
             poolSpawn.Spawns.Add(GetTeamMob("farfetchd", "defiant", "aerial_ace", "knock_off", "", "", new RandRange(23)), new IntRange(11, 15), 10);
-            //180 Flaaffy : 178 Cotton Spore : 268 Charge : 486 Electro Ball
             poolSpawn.Spawns.Add(GetTeamMob("flaaffy", "", "cotton_spore", "charge", "electro_ball", "", new RandRange(25)), new IntRange(13, 17), 10);
-            //227 Skarmory : 191 Spikes : 232 Metal Claw
             poolSpawn.Spawns.Add(GetTeamMob("skarmory", "", "spikes", "metal_claw", "", "", new RandRange(28), TeamMemberSpawn.MemberRole.Leader), new IntRange(13, 17), 10);
-            //210 Granbull : 155 Rattled : 424 Fire Fang : 422 Thunder Fang : 423 Ice Fang : 184 Scary Face
             poolSpawn.Spawns.Add(GetTeamMob("granbull", "rattled", "fire_fang", "thunder_fang", "ice_fang", "scary_face", new RandRange(26), TeamMemberSpawn.MemberRole.Leader), new IntRange(13, 17), 10);
-            //075 Graveler : 222 Magnitude : 205 Rollout
             poolSpawn.Spawns.Add(GetTeamMob("graveler", "", "magnitude", "rollout", "", "", new RandRange(25), TeamMemberSpawn.MemberRole.Loner), new IntRange(13, 17), 10);
-            //188 Skiploom : 073 Leech Seed : 072 Mega Drain : 235 Synthesis
             poolSpawn.Spawns.Add(GetTeamMob("skiploom", "", "leech_seed", "mega_drain", "synthesis", "", new RandRange(26)), new IntRange(13, 17), 10);
-            //310 Manectric : 604 Electric Terrain : 209 Spark
             poolSpawn.Spawns.Add(GetTeamMob("manectric", "", "electric_terrain", "spark", "", "", new RandRange(26)), new IntRange(13, 17), 10);
-            //015 Beedrill : 390 Toxic Spikes : 228 Pursuit : 041 Twineedle
             poolSpawn.Spawns.Add(GetTeamMob("beedrill", "", "toxic_spikes", "pursuit", "twineedle", "", new RandRange(25)), new IntRange(13, 17), 10);
-            //413 Wormadam : 107 Anticipation : 075 Razor Leaf : 074 Growth
             poolSpawn.Spawns.Add(GetTeamMob("wormadam", "anticipation", "razor_leaf", "growth", "", "", new RandRange(29), TeamMemberSpawn.MemberRole.Leader, "turret"), new IntRange(15, 19), 5);
-            //413 Wormadam : 107 Anticipation : 350 Rock Blast : 106 Harden
             poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("wormadam", 1, "", Gender.Unknown), "anticipation", "rock_blast", "harden", "", "", new RandRange(29), TeamMemberSpawn.MemberRole.Leader, "turret"), new IntRange(15, 19), 5);
-            //413 Wormadam : 107 Anticipation : 429 Mirror Shot : 319 Metal Sound
             poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("wormadam", 2, "", Gender.Unknown), "anticipation", "mirror_shot", "metal_sound", "", "", new RandRange(29), TeamMemberSpawn.MemberRole.Leader, "turret"), new IntRange(15, 19), 5);
-            //391 Monferno : 172 Flame Wheel : 259 Torment
             poolSpawn.Spawns.Add(GetTeamMob("monferno", "", "flame_wheel", "torment", "", "", new RandRange(29)), new IntRange(15, 19), 10);
-            //213 Shuckle : 227 Encore : 522 Struggle Bug
             poolSpawn.Spawns.Add(GetTeamMob("shuckle", "", "encore", "struggle_bug", "", "", new RandRange(29)), new IntRange(15, 19), 10);
-            //067 Machoke : 116 Focus Energy : 490 Low Sweep
             poolSpawn.Spawns.Add(GetTeamMob("machoke", "", "focus_energy", "low_sweep", "", "", new RandRange(29)), new IntRange(15, 19), 10);
-            //093 Haunter : 212 Mean Look : 101 Night Shade
             poolSpawn.Spawns.Add(GetTeamMob("haunter", "", "mean_look", "night_shade", "", "", new RandRange(29)), new IntRange(15, 19), 10);
-            //051 Dugtrio : 071 Arena Trap : 389 Sucker Punch : 523 Bulldoze
             poolSpawn.Spawns.Add(GetTeamMob("dugtrio", "arena_trap", "sucker_punch", "bulldoze", "", "", new RandRange(29)), new IntRange(15, 19), 10);
-            //207 Gligar : 282 Knock Off : 512 Acrobatics
             poolSpawn.Spawns.Add(GetTeamMob("gligar", "", "knock_off", "acrobatics", "", "", new RandRange(29)), new IntRange(15, 19), 10);
-            //064 Kadabra : 477 Telekinesis : 060 Psybeam
             poolSpawn.Spawns.Add(GetTeamMob("kadabra", "", "telekinesis", "psybeam", "", "", new RandRange(33)), new IntRange(17, 21), 10);
-            //113 Chansey : 516 Bestow : 505 Heal Pulse
             poolSpawn.Spawns.Add(GetTeamMob("chansey", "", "bestow", "heal_pulse", "", "", new RandRange(33), TeamMemberSpawn.MemberRole.Support), new IntRange(17, 21), 5);
-            //326 Grumpig : 277 Magic Coat : 149 Psywave : 109 Confuse Ray
             poolSpawn.Spawns.Add(GetTeamMob("grumpig", "", "magic_coat", "psywave", "confuse_ray", "", new RandRange(33)), new IntRange(17, 21), 10);
-            //181 Ampharos : 602 Magnetic Flux : 406 Dragon Pulse : 486 Electro Ball
             poolSpawn.Spawns.Add(GetTeamMob("ampharos", "", "magnetic_flux", "dragon_pulse", "electro_ball", "", new RandRange(33)), new IntRange(17, 21), 10);
-            //059 Arcanine : 424 Fire Fang : 245 Extreme Speed : 514 Retaliate
             poolSpawn.Spawns.Add(GetTeamMob("arcanine", "", "fire_fang", "extreme_speed", "retaliate", "", new RandRange(33)), new IntRange(17, 21), 10);
-            //162 Furret : 193 Foresight : 266 Follow Me : 156 Rest
             poolSpawn.Spawns.Add(GetTeamMob("furret", "", "foresight", "follow_me", "rest", "", new RandRange(36), TeamMemberSpawn.MemberRole.Support), new IntRange(17, 21), 10);
-            //189 Jumpluff : 476 Rage Powder : 369 U-turn : 235 Synthesis
             poolSpawn.Spawns.Add(GetTeamMob("jumpluff", "", "rage_powder", "u_turn", "synthesis", "", new RandRange(37), TeamMemberSpawn.MemberRole.Support), new IntRange(19, 23), 10);
-            //044 Gloom : 236 Moonlight : 381 Lucky Chant : 072 Mega Drain
             poolSpawn.Spawns.Add(GetTeamMob("gloom", "", "moonlight", "lucky_chant", "mega_drain", "", new RandRange(36), TeamMemberSpawn.MemberRole.Support), new IntRange(19, 23), 10);
-            //192 Sunflora : 074 Growth : 076 Solar Beam
             poolSpawn.Spawns.Add(GetTeamMob("sunflora", "", "growth", "solar_beam", "", "", new RandRange(36)), new IntRange(19, 23), 15);
-            //182 Bellossom : 241 Sunny Day : 345 Magical Leaf
             poolSpawn.Spawns.Add(GetTeamMob("bellossom", "", "sunny_day", "magical_leaf", "", "", new RandRange(36)), new IntRange(19, 23), 15);
-            //301 Delcatty : 096 Normalize : 274 Assist : 047 Sing
             poolSpawn.Spawns.Add(GetTeamMob("delcatty", "normalize", "assist", "sing", "", "", new RandRange(36), TeamMemberSpawn.MemberRole.Support), new IntRange(19, 23), 10);
-            //078 Rapidash : 083 Fire Spin : 517 Inferno
             poolSpawn.Spawns.Add(GetTeamMob("rapidash", "", "fire_spin", "inferno", "", "", new RandRange(38), TeamMemberSpawn.MemberRole.Loner), new IntRange(19, 23), 10);
-            //389 Torterra : 452 Wood Hammer : 089 Earthquake : 235 Synthesis
             poolSpawn.Spawns.Add(GetTeamMob("torterra", "", "wood_hammer", "earthquake", "synthesis", "", new RandRange(36)), new IntRange(19, 23), 10);
-            //398 Staraptor : 097 Agility : 515 Final Gambit : 370 Close Combat
             poolSpawn.Spawns.Add(GetTeamMob("staraptor", "", "agility", "final_gambit", "close_combat", "", new RandRange(39)), new IntRange(21, 25), 10);
-            //062 Poliwrath : 358 Wake-Up Slap : 095 Hypnosis
             poolSpawn.Spawns.Add(GetTeamMob("poliwrath", "", "wake_up_slap", "hypnosis", "", "", new RandRange(39)), new IntRange(21, 25), 10);
-            //337 Lunatone : 478 Magic Room : 585 Moonblast : 157 Rock Slide
             poolSpawn.Spawns.Add(GetTeamMob("lunatone", "", "magic_room", "moonblast", "rock_slide", "", new RandRange(39)), new IntRange(21, 25), 10);
-            //164 Noctowl : 115 Reflect : 138 Dream Eater : 355 Roost
             poolSpawn.Spawns.Add(GetTeamMob("noctowl", "", "reflect", "dream_eater", "roost", "", new RandRange(39), TeamMemberSpawn.MemberRole.Support), new IntRange(21, 25), 10);
-            //094 Gengar : 247 Shadow Ball : 095 Hypnosis : 138 Dream Eater
             poolSpawn.Spawns.Add(GetTeamMob("gengar", "", "shadow_ball", "hypnosis", "dream_eater", "", new RandRange(39)), new IntRange(21, 25), 10);
-            //057 Primeape : 386 Punishment : 238 Cross Chop
             poolSpawn.Spawns.Add(GetTeamMob("primeape", "", "punishment", "cross_chop", "", "", new RandRange(42)), new IntRange(21, 25), 10);
-            //302 Sableye : 212 Mean Look : 282 Knock Off
             poolSpawn.Spawns.Add(GetTeamMob("sableye", "", "mean_look", "knock_off", "", "", new RandRange(42)), new IntRange(23, 28), 10);
-            //186 Politoed : 195 Perish Song : 207 Swagger
             poolSpawn.Spawns.Add(GetTeamMob("politoed", "", "perish_song", "swagger", "", "", new RandRange(42), TeamMemberSpawn.MemberRole.Loner), new IntRange(23, 28), 20);
-            //065 Alakazam : 105 Recover : 094 Psychic
             poolSpawn.Spawns.Add(GetTeamMob("alakazam", "", "recover", "psychic", "", "", new RandRange(42)), new IntRange(23, 28), 10);
-            //080 Slowbro : 505 Heal Pulse : 133 Amnesia : 352 Water Pulse
             poolSpawn.Spawns.Add(GetTeamMob("slowbro", "", "heal_pulse", "amnesia", "water_pulse", "", new RandRange(45)), new IntRange(25, 28), 10);
-            //068 Machamp : 099 No Guard : 223 Dynamic Punch : 530 Dual Chop
             poolSpawn.Spawns.Add(GetTeamMob("machamp", "no_guard", "dynamic_punch", "", "", "", new RandRange(45)), new IntRange(25, 28), 10);
-            //136 Flareon : 083 Fire Spin : 436 Lava Plume
             poolSpawn.Spawns.Add(GetTeamMob("flareon", "", "fire_spin", "lava_plume", "", "", new RandRange(45)), new IntRange(25, 28), 10);
-            //202 Wobbuffet : 219 Safeguard : 068 Counter : 243 Mirror Coat : 227 Encore
             poolSpawn.Spawns.Add(GetTeamMob("wobbuffet", "", "safeguard", "counter", "mirror_coat", "encore", new RandRange(45), TeamMemberSpawn.MemberRole.Loner), new IntRange(25, 28), 10);
-            //213 Shuckle : 379 Power Trick : 205 Rollout
             poolSpawn.Spawns.Add(GetTeamMob("shuckle", "", "power_trick", "rollout", "", "", new RandRange(45), TeamMemberSpawn.MemberRole.Loner), new IntRange(25, 31), 10);
-            //338 Solrock : 472 Wonder Room : 083 Fire Spin : 397 Rock Polish
             poolSpawn.Spawns.Add(GetTeamMob("solrock", "", "wonder_room", "fire_spin", "rock_polish", "", new RandRange(45)), new IntRange(25, 31), 15);
-            //461 Weavile : 251 Beat Up : 386 Punishment : 196 Icy Wind
             poolSpawn.Spawns.Add(GetTeamMob("weavile", "", "beat_up", "punishment", "icy_wind", "", new RandRange(47), TeamMemberSpawn.MemberRole.Loner), new IntRange(25, 31), 10);
-            //392 Infernape : 370 Close Combat : 394 Flare Blitz
             poolSpawn.Spawns.Add(GetTeamMob("infernape", "", "close_combat", "flare_blitz", "", "", new RandRange(47)), new IntRange(26, 31), 10);
-            //413 Wormadam : 107 Anticipation : 319 Metal Sound : 445 Captivate : 213 Attract
             poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("wormadam", 2, "", Gender.Unknown), "anticipation", "metal_sound", "captivate", "attract", "", new RandRange(48), TeamMemberSpawn.MemberRole.Loner, "turret"), new IntRange(28, 35), 5);
-            //413 Wormadam : 107 Anticipation : 437 Leaf Storm : 445 Captivate : 213 Attract
             poolSpawn.Spawns.Add(GetTeamMob("wormadam", "anticipation", "leaf_storm", "captivate", "attract", "", new RandRange(48), TeamMemberSpawn.MemberRole.Loner, "turret"), new IntRange(28, 35), 5);
-            //217 Ursaring : 095 Quick Feet : 359 Hammer Arm : 230 Sweet Scent
             poolSpawn.Spawns.Add(GetTeamMob("ursaring", "quick_feet", "hammer_arm", "sweet_scent", "", "", new RandRange(48)), new IntRange(26, 31), 10);
-            //024 Arbok : 114 Haze : 380 Gastro Acid : 254 Stockpile : 242 Crunch
             poolSpawn.Spawns.Add(GetTeamMob("arbok", "", "haze", "gastro_acid", "stockpile", "crunch", new RandRange(48), TeamMemberSpawn.MemberRole.Support), new IntRange(28, 31), 20);
-            //185 Sudowoodo : 068 Counter : 452 Wood Hammer
-            //make this spawn at doorsteps
             poolSpawn.Spawns.Add(GetTeamMob("sudowoodo", "", "counter", "wood_hammer", "", "", new RandRange(48), TeamMemberSpawn.MemberRole.Loner, "weird_tree"), new IntRange(28, 31), 10);
-            //469 Yanmega : 003 Speed Boost : 048 Supersonic : 246 Ancient Power
             poolSpawn.Spawns.Add(GetTeamMob("yanmega", "speed_boost", "supersonic", "ancient_power", "", "", new RandRange(48)), new IntRange(31, 35), 10);
-            //334 Altaria : 434 Draco Meteor : 219 Safeguard : 363 Natural Gift
-            //seek berries on the map
             poolSpawn.Spawns.Add(GetTeamMob("altaria", "", "draco_meteor", "safeguard", "natural_gift", "", new RandRange(48), TeamMemberSpawn.MemberRole.Leader), new IntRange(26, 31), 10);
-            //357 Tropius : 139 Harvest : 363 Natural Gift : 437 Leaf Storm
             //seek berries on the map
             poolSpawn.Spawns.Add(GetTeamMob("tropius", "harvest", "natural_gift", "leaf_storm", "", "", new RandRange(48), TeamMemberSpawn.MemberRole.Leader), new IntRange(26, 31), 10);
-            //414 Mothim : 110 Tinted Lens : 483 Quiver Dance : 318 Silver Wind
             poolSpawn.Spawns.Add(GetTeamMob("mothim", "tinted_lens", "quiver_dance", "silver_wind", "", "", new RandRange(51)), new IntRange(31, 35), 10);
-            //395 Empoleon : 128 Defiant : 065 Drill Peck : 453 Aqua Jet : 014 Swords Dance
             poolSpawn.Spawns.Add(GetTeamMob("empoleon", "defiant", "drill_peck", "aqua_jet", "swords_dance", "", new RandRange(51)), new IntRange(31, 35), 10);
-            //062 Poliwrath : 187 Belly Drum : 358 Wake-Up Slap : 095 Hypnosis
             poolSpawn.Spawns.Add(GetTeamMob("poliwrath", "", "belly_drum", "wake_up_slap", "hypnosis", "", new RandRange(51)), new IntRange(31, 35), 10);
-            //076 Golem : 089 Earthquake : 300 Mud Sport : 484 Heavy Slam : 205 Rollout
             poolSpawn.Spawns.Add(GetTeamMob("golem", "", "earthquake", "mud_sport", "heavy_slam", "rollout", new RandRange(51)), new IntRange(31, 35), 10);
-            //162 Furret : 226 Baton Pass : 133 Amnesia : 156 Rest : 266 Follow Me
             poolSpawn.Spawns.Add(GetTeamMob("furret", "", "baton_pass", "amnesia", "rest", "follow_me", new RandRange(51), TeamMemberSpawn.MemberRole.Support), new IntRange(31, 35), 10);
-            //045 Vileplume : 580 Grassy Terrain : 572 Petal Blizzard : 078 Stun Spore
             poolSpawn.Spawns.Add(GetTeamMob("vileplume", "", "grassy_terrain", "petal_blizzard", "stun_spore", "", new RandRange(51)), new IntRange(31, 35), 10);
-            //181 Ampharos : 406 Dragon Pulse : 192 Zap Cannon : 324 Signal Beam : 178 Cotton Spore
             poolSpawn.Spawns.Add(GetTeamMob("ampharos", "", "dragon_pulse", "zap_cannon", "signal_beam", "cotton_spore", new RandRange(54)), new IntRange(31, 40), 10);
-            //472 Gliscor : 103 Screech : 512 Acrobatics : 423 Ice Fang
             poolSpawn.Spawns.Add(GetTeamMob("gliscor", "", "screech", "acrobatics", "ice_fang", "", new RandRange(54)), new IntRange(31, 40), 10);
-            //189 Jumpluff : 079 Sleep Powder : 262 Memento : 235 Synthesis
             poolSpawn.Spawns.Add(GetTeamMob("jumpluff", "", "sleep_powder", "memento", "synthesis", "", new RandRange(57), TeamMemberSpawn.MemberRole.Support), new IntRange(35, 40), 10);
-            //302 Sableye : 158 Prankster : 511 Quash : 109 Confuse Ray : 492 Foul Play : 193 Foresight
             poolSpawn.Spawns.Add(GetTeamMob("sableye", "prankster", "quash", "confuse_ray", "foul_play", "foresight", new RandRange(57)), new IntRange(35, 40), 10);
-            //078 Rapidash : 097 Agility : 517 Inferno
             poolSpawn.Spawns.Add(GetTeamMob("rapidash", "", "agility", "inferno", "", "", new RandRange(57), TeamMemberSpawn.MemberRole.Loner), new IntRange(35, 40), 10);
-            //310 Manectric : 604 Electric Terrain : 435 Discharge : 424 Fire Fang
             poolSpawn.Spawns.Add(GetTeamMob("manectric", "", "electric_terrain", "discharge", "fire_fang", "", new RandRange(57)), new IntRange(35, 40), 10);
 
 
@@ -4096,9 +3985,9 @@ namespace DataGenerator.Data
                 else if (ii < 20)
                     spawnTable.Add(new ItemFake("food_apple", "applin"), GetGenericMob("applin", "", "astonish", "withdraw", "", "", new RandRange(30)));
                 else if (ii < 28)
-                    spawnTable.Add(new ItemFake("food_apple_big", "appletun"), GetGenericMob("appletun", "", "apple_acid", "body_slam", "", "", new RandRange(36)));
+                    spawnTable.Add(new ItemFake("food_apple_big", "flapple"), GetGenericMob("flapple", "", "grav_apple", "dragon_dance", "", "", new RandRange(36)));
                 else
-                    spawnTable.Add(new ItemFake("food_apple_big", "appletun"), GetGenericMob("appletun", "", "apple_acid", "dragon_pulse", "", "", new RandRange(45)));
+                    spawnTable.Add(new ItemFake("food_apple_big", "flapple"), GetGenericMob("flapple", "", "grav_apple", "dragon_dance", "acrobatics", "", new RandRange(45)));
                 AddFloorFakeItems(layout, spawnTable);
 
 
@@ -4248,15 +4137,15 @@ namespace DataGenerator.Data
 
                 //enemies
                 if (ii <= 8)
-                    AddRespawnData(layout, 10, 85);
+                    AddRespawnData(layout, 10, 110);
                 else if (ii <= 16)
-                    AddRespawnData(layout, 14, 90);
+                    AddRespawnData(layout, 14, 115);
                 else if (ii <= 20)
-                    AddRespawnData(layout, 18, 100);
+                    AddRespawnData(layout, 16, 130);
                 else if (ii <= 27)
-                    AddRespawnData(layout, 26, 110);
+                    AddRespawnData(layout, 24, 140);
                 else
-                    AddRespawnData(layout, 22, 130);
+                    AddRespawnData(layout, 20, 150);
 
                 //enemies
                 if (ii <= 8)
@@ -4264,11 +4153,11 @@ namespace DataGenerator.Data
                 else if (ii <= 16)
                     AddEnemySpawnData(layout, 30, new RandRange(7, 12));
                 else if (ii <= 20)
-                    AddEnemySpawnData(layout, 30, new RandRange(12, 16));
+                    AddEnemySpawnData(layout, 30, new RandRange(11, 14));
                 else if (ii <= 27)
-                    AddEnemySpawnData(layout, 20, new RandRange(17, 22));
+                    AddEnemySpawnData(layout, 20, new RandRange(16, 20));
                 else
-                    AddEnemySpawnData(layout, 20, new RandRange(13, 18));
+                    AddEnemySpawnData(layout, 20, new RandRange(13, 17));
 
                 //items
                 if (ii <= 8)
@@ -4300,14 +4189,11 @@ namespace DataGenerator.Data
 
                     if (ii == 0)
                     {
-                        specificSpawns.Add(new MapItem("apricorn_blue"));//blue apricorns
                         specificSpawns.Add(new MapItem("apricorn_green"));//green apricorns
                         specificSpawns.Add(new MapItem("apricorn_brown"));//brown apricorns
-                        specificSpawns.Add(new MapItem("apricorn_purple"));//purple apricorns
                         specificSpawns.Add(new MapItem("apricorn_red"));//red apricorns
                         specificSpawns.Add(new MapItem("apricorn_white"));//white apricorns
                         specificSpawns.Add(new MapItem("apricorn_yellow"));//yellow apricorns
-                        specificSpawns.Add(new MapItem("apricorn_black"));//black apricorns
                     }
 
                     RandomRoomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(new RandBag<MapItem>(specificSpawns), new RandRange(1))));

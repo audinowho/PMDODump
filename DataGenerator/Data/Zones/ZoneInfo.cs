@@ -7304,7 +7304,7 @@ namespace DataGenerator.Data
 
                     {
                         //monster houses
-                        SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(25, new IntRange(0, max_floors)));
+                        SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(20, new IntRange(0, max_floors)));
                         monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                         foreach (string gummi in IterateGummis())
                             monsterChanceZoneStep.Items.Add(new MapItem(gummi), new IntRange(0, max_floors), 4);//gummis
@@ -7331,7 +7331,7 @@ namespace DataGenerator.Data
 
 
                     {
-                        SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(20, new IntRange(8, max_floors)));
+                        SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(20, new IntRange(10, max_floors)));
                         monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(11, 9), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                         monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(15, 13), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
@@ -7531,9 +7531,9 @@ namespace DataGenerator.Data
                         else if (ii < 8)
                             AddEnemySpawnData(layout, 20, new RandRange(8, 12));
                         else if (ii < 16)
-                            AddEnemySpawnData(layout, 20, new RandRange(9, 13));
+                            AddEnemySpawnData(layout, 20, new RandRange(9, 12));
                         else
-                            AddEnemySpawnData(layout, 20, new RandRange(10, 14));
+                            AddEnemySpawnData(layout, 20, new RandRange(10, 13));
 
                         //items
                         if (ii < 8)

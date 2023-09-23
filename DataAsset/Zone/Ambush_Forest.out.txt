@@ -177,8 +177,8 @@ poolSpawn.Priority = PR_RESPAWN_MOB;
 poolSpawn.Spawns.Add(GetTeamMob("murkrow", "insomnia", "pursuit", "wing_attack", "", "", new RandRange(25), "wander_normal"), new IntRange(0, 6), 10);
 poolSpawn.Spawns.Add(GetTeamMob("spinarak", "", "spider_web", "night_shade", "", "", new RandRange(25), "wander_normal"), new IntRange(0, 4), 10);
 poolSpawn.Spawns.Add(GetTeamMob("gastly", "", "night_shade", "hypnosis", "", "", new RandRange(23), "wander_normal"), new IntRange(0, 4), 10);
-poolSpawn.Spawns.Add(GetTeamMob("dartrix", "", "foresight", "pluck", "", "", new RandRange(26), "wander_normal"), new IntRange(0, 6), 10);
-poolSpawn.Spawns.Add(GetTeamMob("corphish", "", "bubble_beam", "night_slash", "", "", new RandRange(25), "wander_normal"), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("dartrix", "", "foresight", "razor_leaf", "", "", new RandRange(26), "wander_normal"), new IntRange(0, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("corphish", "", "bubble", "knock_off", "harden", "", new RandRange(25), "wander_normal"), new IntRange(0, 6), 10);
 poolSpawn.Spawns.Add(GetTeamMob("teddiursa", "", "covet", "sweet_scent", "fury_swipes", "", new RandRange(27), "thief"), new IntRange(2, 8), 10);
 poolSpawn.Spawns.Add(GetTeamMob("scyther", "", "vacuum_wave", "false_swipe", "", "", new RandRange(27), "wander_normal"), new IntRange(2, 8), 10);
 poolSpawn.Spawns.Add(GetTeamMob("whismur", "", "round", "sing", "", "", new RandRange(27), "wander_normal"), new IntRange(4, 8), 10);
@@ -186,7 +186,7 @@ poolSpawn.Spawns.Add(GetTeamMob("zangoose", "", "pursuit", "fury_cutter", "", ""
 poolSpawn.Spawns.Add(GetTeamMob("shedinja", "", "sand_attack", "shadow_sneak", "", "", new RandRange(25), "wander_normal"), new IntRange(6, 10), 10);
 poolSpawn.Spawns.Add(GetTeamMob("sneasel", "", "beat_up", "icy_wind", "", "", new RandRange(27), "wander_normal"), new IntRange(8, 12), 10);
 poolSpawn.Spawns.Add(GetTeamMob("raticate", "", "pursuit", "super_fang", "crunch", "", new RandRange(28), "wander_normal"), new IntRange(8, 12), 10);
-//Sleeping, holds chest
+//Sleeping, holds metronome/twist band/trap scarf
 poolSpawn.Spawns.Add(GetTeamMob("spinda", "tangled_feet", "teeter_dance", "copycat", "", "", new RandRange(32), TeamMemberSpawn.MemberRole.Loner, "wander_normal"), new IntRange(8, 16), 5);
 poolSpawn.Spawns.Add(GetTeamMob("swellow", "", "quick_guard", "aerial_ace", "", "", new RandRange(26), "wander_normal"), new IntRange(8, 14), 10);
 poolSpawn.Spawns.Add(GetTeamMob("hattrem", "", "dazzling_gleam", "life_dew", "", "", new RandRange(28), TeamMemberSpawn.MemberRole.Support, "wander_normal"), new IntRange(8, 14), 10);

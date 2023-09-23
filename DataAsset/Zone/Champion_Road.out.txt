@@ -211,7 +211,7 @@ poolSpawn.Priority = PR_RESPAWN_MOB;
 
 poolSpawn.Spawns.Add(GetTeamMob("ursaring", "", "hammer_arm", "thrash", "", "", new RandRange(38), "wander_normal"), new IntRange(0, 4), 10);
 poolSpawn.Spawns.Add(GetTeamMob("skarmory", "", "steel_wing", "spikes", "", "", new RandRange(38), "wander_normal"), new IntRange(0, 4), 10);
-poolSpawn.Spawns.Add(GetTeamMob("staraptor", "", "close_combat", "brave_bird", "", "", new RandRange(38), "wander_normal"), new IntRange(0, 4), 10);
+poolSpawn.Spawns.Add(GetTeamMob("staraptor", "", "close_combat", "brave_bird", "", "", new RandRange(38), TeamMemberSpawn.MemberRole.Leader, "wander_normal"), new IntRange(0, 4), 10);
 //sleeping
 poolSpawn.Spawns.Add(GetTeamMob("mamoswine", "", "earthquake", "icicle_crash", "", "", new RandRange(45), "wander_normal"), new IntRange(0, 6), 10);
 poolSpawn.Spawns.Add(GetTeamMob("heracross", "", "megahorn", "brick_break", "", "", new RandRange(38), "wander_normal"), new IntRange(0, 6), 10);
@@ -244,7 +244,6 @@ poolSpawn.Spawns.Add(GetTeamMob("noivern", "", "boomburst", "dragon_pulse", "", 
 poolSpawn.Spawns.Add(GetTeamMob("scizor", "swarm", "focus_energy", "bullet_punch", "x_scissor", "", new RandRange(42), "wander_normal"), new IntRange(20, max_floors), 10);
 //sleeping
 poolSpawn.Spawns.Add(GetTeamMob("rhyperior", "solid_rock", "drill_run", "rock_wrecker", "", "", new RandRange(45), "wander_normal"), new IntRange(20, max_floors), 10);
-
 //show up in alternating floors
 poolSpawn.Spawns.Add(GetTeamMob("emboar", "", "fire_pledge", "heat_crash", "", "", new RandRange(43), "wander_normal"), new IntRange(10, max_floors), 10);
 //until floor 20+

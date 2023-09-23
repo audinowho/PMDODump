@@ -182,6 +182,7 @@ namespace DataGenerator.Data
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.AttackToEscape;
             tactic.Plans.Add(new AttackFoesPlan(iq, 0, 0, 4, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
+            tactic.Plans.Add(new FindItemPlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));

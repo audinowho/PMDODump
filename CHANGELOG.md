@@ -9,4 +9,4 @@
 * Binding Band works like King's Rock for Immobilization
 * Added VFX for various moves
 * Altered the EXP gain curve to contain a linear increase and harmonic decrease
-* 
+* Dev: Item Finder AI now prioritizes looking for items when exploring
