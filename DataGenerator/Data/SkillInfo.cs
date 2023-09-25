@@ -2554,7 +2554,7 @@ namespace DataGenerator.Data
                 FiniteOverlayEmitter overlay = new FiniteOverlayEmitter();
                 overlay.Anim = new BGAnimData("Psychic", 3, -1, -1, 128);
                 overlay.TotalTime = 60;
-                overlay.Movement = new RogueElements.Loc(0, 0);
+                overlay.Movement = new Loc(0, 0);
                 overlay.Layer = DrawLayer.Bottom;
                 BattleFX preFX = new BattleFX();
                 preFX.Emitter = overlay;
@@ -6026,7 +6026,7 @@ namespace DataGenerator.Data
                 weather.Add("rain", false);
                 weather.Add("sandstorm", false);
                 weather.Add("hail", false);
-                skill.Data.OnHits.Add(0, new WeatherHPEvent(3, weather));
+                skill.Data.OnHits.Add(0, new WeatherHPEvent(4, weather));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
@@ -6083,7 +6083,7 @@ namespace DataGenerator.Data
                 weather.Add("rain", false);
                 weather.Add("sandstorm", false);
                 weather.Add("hail", false);
-                skill.Data.OnHits.Add(0, new WeatherHPEvent(4, weather));
+                skill.Data.OnHits.Add(0, new WeatherHPEvent(3, weather));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
@@ -9522,11 +9522,14 @@ namespace DataGenerator.Data
                 SingleEmitter endAnim = new SingleEmitter(new AnimData("Natural_Gift", 1));
                 endAnim.LocHeight = 8;
                 endAnim.Offset = 12;
-                skill.HitboxAction.ActionFX.Emitter = endAnim;
+
+                BattleFX preFX = new BattleFX();
+                preFX.Emitter = endAnim;
+                preFX.Sound = "DUN_Natural_Gift";
+                skill.HitboxAction.PreActions.Add(preFX);
                 ((AttackAction)skill.HitboxAction).LagBehindTime = 25;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
-                skill.HitboxAction.ActionFX.Sound = "DUN_Natural_Gift";
             }
             else if (ii == 364)
             {
@@ -16331,18 +16334,46 @@ namespace DataGenerator.Data
             }
             else if (ii == 666)
             {
-                skill.Name = new LocalText("**Floral Healing");
-                skill.Desc = new LocalText("The user restores the target's HP by up to half of its max HP. It restores more HP when the terrain is grass.");
-                skill.BaseCharges = 10;
+                skill.Name = new LocalText("Floral Healing");
+                skill.Desc = new LocalText("The user restores the party's HP. It restores more HP when the terrain is grass.");
+                skill.BaseCharges = 13;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
+                Dictionary<string, bool> weather = new Dictionary<string, bool>();
+                weather.Add("grassy_terrain", true);
+                skill.Data.OnHits.Add(0, new WeatherHPEvent(3, weather));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new OffsetAction();
+                ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
+                ((OffsetAction)skill.HitboxAction).HitArea = OffsetAction.OffsetArea.Area;
+                ((OffsetAction)skill.HitboxAction).Range = 1;
+                ((OffsetAction)skill.HitboxAction).Speed = 6;
+                ((OffsetAction)skill.HitboxAction).LagBehindTime = 5;
+                ((OffsetAction)skill.HitboxAction).HitTiles = true;
+                BattleFX preFX = new BattleFX();
+                BetweenEmitter emitter = new BetweenEmitter(new AnimData("Grass_Knot_Grass_Back", 1), new AnimData("Grass_Knot_Grass_Front", 1));
+                emitter.HeightBack = 8;
+                emitter.HeightFront = 8;
+                preFX.Emitter = emitter;
+                preFX.Sound = "DUN_Harden";
+                skill.HitboxAction.PreActions.Add(preFX);
+                CircleSquareAreaEmitter flowerEmitter = new CircleSquareAreaEmitter(new AnimData("Petal_Dance_Flower_Pink", 60, 0, 0), new AnimData("Petal_Dance_Flower_Yellow", 60, 0, 0));
+                flowerEmitter.ParticlesPerTile = 3;
+
+                CircleSquareSprinkleEmitter sparkleEmitter = new CircleSquareSprinkleEmitter(new AnimData("Natural_Gift_Sparkle", 5));
+                sparkleEmitter.ParticlesPerTile = 2;
+                sparkleEmitter.StartHeight = 0;
+                sparkleEmitter.HeightSpeed = 20;
+                sparkleEmitter.SpeedDiff = 15;
+                MultiCircleSquareEmitter multiEmitter = new MultiCircleSquareEmitter();
+                multiEmitter.Emitters.Add(flowerEmitter);
+                multiEmitter.Emitters.Add(sparkleEmitter);
+                ((OffsetAction)skill.HitboxAction).Emitter = multiEmitter;
+                skill.HitboxAction.TargetAlignments = Alignment.Friend | Alignment.Self;
+                skill.Explosion.TargetAlignments = Alignment.Friend | Alignment.Self;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Aromatherapy";
             }
             else if (ii == 667)
             {
