@@ -2970,9 +2970,9 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob("snubbull", "", "bite", "charm", "", "", new RandRange(8)), new IntRange(3, 7), 10);
             poolSpawn.Spawns.Add(GetTeamMob("mareep", "", "cotton_spore", "thunder_shock", "", "", new RandRange(10)), new IntRange(4, 8), 10);
             poolSpawn.Spawns.Add(GetTeamMob("ekans", "", "poison_sting", "leer", "", "", new RandRange(10)), new IntRange(4, 9), 10);
-            poolSpawn.Spawns.Add(GetTeamMob("piplup", "defiant", "peck", "", "", "", new RandRange(14), TeamMemberSpawn.MemberRole.Loner), new IntRange(5, 9), 10);
-            poolSpawn.Spawns.Add(GetTeamMob("chimchar", "", "taunt", "ember", "", "", new RandRange(14), TeamMemberSpawn.MemberRole.Loner), new IntRange(5, 9), 10);
-            poolSpawn.Spawns.Add(GetTeamMob("turtwig", "", "withdraw", "absorb", "", "", new RandRange(14), TeamMemberSpawn.MemberRole.Loner), new IntRange(5, 9), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("piplup", "defiant", "peck", "", "", "", new RandRange(11), TeamMemberSpawn.MemberRole.Loner), new IntRange(5, 9), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("chimchar", "", "taunt", "ember", "", "", new RandRange(11), TeamMemberSpawn.MemberRole.Loner), new IntRange(5, 9), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("turtwig", "", "withdraw", "absorb", "", "", new RandRange(11), TeamMemberSpawn.MemberRole.Loner), new IntRange(5, 9), 10);
             poolSpawn.Spawns.Add(GetTeamMob("eevee", "", "baby_doll_eyes", "swift", "", "", new RandRange(11)), new IntRange(5, 9), 10);
             poolSpawn.Spawns.Add(GetTeamMob("bonsly", "", "fake_tears", "low_kick", "", "", new RandRange(13), TeamMemberSpawn.MemberRole.Loner, "weird_tree"), new IntRange(5, 9), 10);
             poolSpawn.Spawns.Add(GetTeamMob("poliwag", "", "water_sport", "water_gun", "", "", new RandRange(12)), new IntRange(5, 9), 10);
