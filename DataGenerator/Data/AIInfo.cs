@@ -24,7 +24,6 @@ namespace DataGenerator.Data
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             AIFlags iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner | AIFlags.PlayerSense;
             tactic.Plans.Add(new PrepareWithLeaderPlan(iq | AIFlags.TrapAvoider, 0, 0, 0, AIPlan.AttackChoice.SmartAttack));
-            tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new AttackFoesPlan(iq | AIFlags.TrapAvoider, 0, 0, 0, AIPlan.AttackChoice.SmartAttack, AIPlan.PositionChoice.Avoid));
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
