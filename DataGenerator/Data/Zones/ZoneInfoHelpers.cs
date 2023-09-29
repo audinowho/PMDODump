@@ -610,6 +610,29 @@ namespace DataGenerator.Data
         }
 
 
+        static TeamMemberSpawn GetBoostedTeamMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level, int boost,
+            string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
+        {
+            return GetBoostedTeamMob(species, ability, move1, move2, move3, move4, level, boost, TeamMemberSpawn.MemberRole.Normal, tactic, sleeping, unrecruitable);
+
+        }
+
+        static TeamMemberSpawn GetBoostedTeamMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level, int boost,
+            TeamMemberSpawn.MemberRole role, string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
+        {
+            TeamMemberSpawn teamMob = GetTeamMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, role, tactic, sleeping, unrecruitable);
+
+            MobSpawnBoost spawnBoost = new MobSpawnBoost();
+            spawnBoost.MaxHPBonus = boost;
+            spawnBoost.AtkBonus = boost;
+            spawnBoost.DefBonus = boost;
+            spawnBoost.SpAtkBonus = boost;
+            spawnBoost.SpDefBonus = boost;
+            spawnBoost.SpeedBonus = boost;
+            teamMob.Spawn.SpawnFeatures.Add(spawnBoost);
+
+            return teamMob;
+        }
 
         static TeamMemberSpawn GetTeamMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level,
             string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
@@ -637,6 +660,7 @@ namespace DataGenerator.Data
         {
             return GetGenericMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping, unrecruitable);
         }
+
         static MobSpawn GetGenericMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, RandRange level,
             string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
         {

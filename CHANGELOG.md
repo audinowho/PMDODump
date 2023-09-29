@@ -2,8 +2,12 @@
 
 * Reworked Secret Garden's encounters to result in fewer level spikes, added Comfey
 * Wild Pokemon warped in via Summon Trap, Beat Up, and Illuminate will not act immediately after summoning.
+* Allies transitively touching the leader and who cant move any closer will attack in Stick Together
+* Fixed an issue where AI didn't use Pursuit properly
+* "Quad Weakness" damage multiplier 2x -> 2.25x
 * Inferno uses a new Cross range, PP 14->10, BP 100->90
-* Perish Song Acc NeverMiss->100; Perish Count only drops when hearing Perish Song
+* Perish Count now rops iff hearing Perish Song
+* Flail no longer hits allies
 * Stone Edge Acc 80->100
 * Fury Cutter BP 10->20
 * Aromatherapy heals only allies
