@@ -2747,7 +2747,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new MimicBattleEvent("last_used_move"));
+                skill.Data.OnHits.Add(0, new MimicBattleEvent("last_used_move", 5));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(25);//Appeal
@@ -3771,7 +3771,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new TransformEvent(false, "transformed"));
+                skill.Data.OnHits.Add(0, new TransformEvent(false, "transformed", 5));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(25);//Appeal

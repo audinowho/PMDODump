@@ -127,7 +127,7 @@ namespace DataGenerator.Data
             return layout;
         }
 
-        static IFloorGen getMysteryRoom(bool translate, int zoneLevel, DungeonStage stage, string map_type, int moveBack, bool unrecruitable)
+        static IFloorGen getMysteryRoom(bool translate, int zoneLevel, DungeonStage stage, string map_type, int moveBack, bool unrecruitable, bool noExp)
         {
             GridFloorGen layout = new GridFloorGen();
 
@@ -162,11 +162,11 @@ namespace DataGenerator.Data
             {
                 MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                 PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                if (stage == DungeonStage.Beginner)
+                if (stage == DungeonStage.Beginner || noExp)
                     poolSpawn.Spawns.Add(GetTeamMob("smeargle", "", "sketch", "", "", "", new RandRange(zoneLevel), "wander_smart"), 10);
-                else if (stage == DungeonStage.Intermediate)
+                if (stage == DungeonStage.Intermediate || noExp)
                     poolSpawn.Spawns.Add(GetTeamMob("porygon", "", "tri_attack", "", "", "", new RandRange(zoneLevel), "wander_smart"), 10);
-                else
+                if (stage == DungeonStage.Advanced || noExp)
                     poolSpawn.Spawns.Add(GetTeamMob("kecleon", "", "synchronoise", "thief", "", "", new RandRange(zoneLevel), "thief"), 10);
                 poolSpawn.TeamSizes.Add(1, 12);
                 spawnStep.Spawns.Add(poolSpawn, 20);
@@ -177,6 +177,7 @@ namespace DataGenerator.Data
             AddEnemySpawnData(layout, 20, new RandRange(7));
 
             //audino always appears once or thrice
+            if (!noExp)
             {
                 PoolTeamSpawner subSpawn = new PoolTeamSpawner();
                 subSpawn.Spawns.Add(GetTeamMob("audino", "", "secret_power", "", "", "", new RandRange(zoneLevel), "wander_smart"), 10);
@@ -245,7 +246,7 @@ namespace DataGenerator.Data
                     HashSet<string> exceptFor = new HashSet<string>();
                     foreach (string legend in IterateLegendaries())
                         exceptFor.Add(legend);
-                    boxSpawn.Add(new BoxSpawner<MapGenContext>("box_deluxe", new SpeciesItemElementSpawner<MapGenContext>(new IntRange(3, 5), new RandRange(1), "", exceptFor)), 10);
+                    boxSpawn.Add(new BoxSpawner<MapGenContext>("box_deluxe", new SpeciesItemElementSpawner<MapGenContext>(new IntRange(3, 5), new RandRange(1), "none", exceptFor)), 10);
                 }
                 else
                     boxSpawn.Add(new BoxSpawner<MapGenContext>("box_deluxe", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(5), new RandRange(1))), 10);

@@ -729,7 +729,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("grudge", true, false, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 25)
             {

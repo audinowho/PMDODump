@@ -1566,7 +1566,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A wand to be waved at a Pokémon. It transforms the target into the same Pokémon as the user.");
                 item.Sprite = "Wand_Pink";
                 item.Price = 10;
-                item.UseEvent.OnHits.Add(0, new TransformEvent(true, "transformed"));
+                item.UseEvent.OnHits.Add(0, new TransformEvent(true, "transformed", 5));
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Puff_Green", 3));
                 item.UseEvent.HitFX.Sound = "DUN_Transform";
             }
@@ -1710,7 +1710,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Devolve Orb");
                 item.Desc = new LocalText("An orb that devolves all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_Pink";
-                item.UseEvent.OnHits.Add(0, new DevolveEvent());
+                item.UseEvent.OnHits.Add(0, new DevolveEvent(false, "transformed", 5));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
