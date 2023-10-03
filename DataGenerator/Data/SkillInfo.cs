@@ -10627,7 +10627,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
-                skill.Data.HitRate = 75;
+                skill.Data.HitRate = 70;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
