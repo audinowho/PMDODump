@@ -208,7 +208,7 @@ namespace DataGenerator.Data
 
                 ItemData item = new ItemData();
                 item.UseEvent.Element = "none";
-                item.SortCategory = 16;
+                item.SortCategory = 17;
                 AutoItemInfo.FillExclusiveEffects(item, new List<LocalText>(), false, descType, new object[0], false);
 
 
@@ -515,7 +515,7 @@ namespace DataGenerator.Data
 
                     ItemData item = new ItemData();
                     item.UseEvent.Element = "none";
-                    item.SortCategory = 16;
+                    item.SortCategory = 17;
 
                     if (exclType != ExclusiveItemType.None && customName != "")
                         Console.WriteLine(String.Format("Item {0} found with both name \"{1}\" and type {2}.", fileName, customName, exclType));

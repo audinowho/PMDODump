@@ -698,7 +698,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("fly"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
-                status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
+                status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
@@ -724,7 +724,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("dive"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
-                status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
+                status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[2] { "surf", "whirlpool" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
@@ -741,7 +741,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("bounce"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
-                status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
+                status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -762,7 +762,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("phantom_force"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
-                status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
+                status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[0] { }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
@@ -781,7 +781,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("shadow_force"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
-                status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
+                status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[0] { }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new MiscEvent(new TrapState()));
@@ -1032,7 +1032,7 @@ namespace DataGenerator.Data
                 emitter.TotalParticles = 6;
                 effects.Add(new DamageAreaEvent(1, new AnimEvent(emitter, "DUN_Blowback_Orb", 30)));
                 status.StatusStates.Set(new CountDownState(3));
-                status.OnTurnEnds.Add(0, new CountDownEvent(effects));
+                status.OnMapTurnEnds.Add(0, new CountDownEvent(effects));
             }
             else if (ii == 57)
             {
@@ -2174,7 +2174,7 @@ namespace DataGenerator.Data
                 emitter.TotalParticles = 16;
                 effects.Add(new DamageAreaEvent(3, new AnimEvent(overlay, "", 10), new AnimEvent(emitter, "DUN_Escape_Orb", 40)));
                 status.StatusStates.Set(new CountDownState(6));
-                status.OnTurnEnds.Add(0, new CountDownEvent(effects));
+                status.OnMapTurnEnds.Add(0, new CountDownEvent(effects));
             }
             else if (ii == 123)
             {
@@ -2373,7 +2373,7 @@ namespace DataGenerator.Data
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new ForceFaceTargetEvent());
-                status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
+                status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
                 status.OnRefresh.Add(0, new ImmobilizationEvent());

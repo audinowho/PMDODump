@@ -58,6 +58,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -74,6 +75,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -952,6 +954,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Orange;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -968,6 +971,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Orange;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -1166,6 +1170,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -1182,6 +1187,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -1208,6 +1214,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = new Color(0, 231, 0);
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -1224,6 +1231,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = new Color(0, 231, 0);
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }

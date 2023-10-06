@@ -3204,6 +3204,7 @@ namespace DataGenerator.Data
                         guarded.Treasures.RandomSpawns.Add(new MapItem("seed_pure"), 10);
                         guarded.Treasures.SpawnAmount = 6;
                         //guard
+
                         MobSpawn spawner = new MobSpawn();
                         spawner.BaseForm = new MonsterID("dragonite", 0, "", Gender.Unknown);
                         spawner.Level = new RandRange(80);

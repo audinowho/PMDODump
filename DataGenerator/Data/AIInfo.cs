@@ -160,7 +160,7 @@ namespace DataGenerator.Data
             tactic = new AITactic();
             tactic.Name = new LocalText("Retreater");//13
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
-            iq = AIFlags.ItemGrabber | AIFlags.AttackToEscape | AIFlags.WontDisturb;
+            iq = AIFlags.ItemGrabber | AIFlags.WontDisturb;
             tactic.Plans.Add(new RetreaterPlan(AIFlags.AttackToEscape | AIFlags.TrapAvoider, 3));
             tactic.Plans.Add(new AttackFoesPlan(iq, 0, 0, 4, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));

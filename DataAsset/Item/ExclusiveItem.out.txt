@@ -451,18 +451,18 @@ Generic Name	Custom Name	User	Evos	Custom Group	Group Name	Name	Item For	Index	T
 1* Claw		munchlax	True					D	*	2*	1* 050: Anchor							
 0* None	Tummy Charm	munchlax	True					E	*	3*	3* 042: ExplosionGuard							
 0* None	Valor Charm	snorlax	True					F	*	3*	0* 000: None							
-0* None	Freeze Veil	articuno	False		bird_trio			A		5*	5* 100: ChanceStatusOnTypeHit	flying	freeze				35	
-3* Scarf		articuno	False		bird_trio			B		4*	4* 047: Celebrate							
-2* Crest		articuno	False		bird_trio			C		3*	2* 059: StatMirror							
-0* None	Thunder Veil	zapdos	True		bird_trio			A		5*	5* 100: ChanceStatusOnTypeHit	flying	paralyze				35	
-3* Crown		zapdos	False		bird_trio			B		4*	3* 048: Absorption							
-2* Crest		zapdos	False		bird_trio			C		3*	3* 069: GapProber							
-0* None	Fire Veil	moltres	False		bird_trio			A		5*	5* 100: ChanceStatusOnTypeHit	flying	burn				35	
-3* Cape		moltres	False		bird_trio			B		4*	3* 049: ExcessiveForce							
-2* Crest		moltres	False		bird_trio			C		3*	3* 005: SuperCrit							
-0* None	Mystery Wing	articuno	False	articuno, zapdos, moltres	bird_trio			D		1*	3* 043: WandMaster							
-0* None	Mystery Card	articuno	False	articuno, zapdos, moltres	bird_trio			E		2*	2* 052: BetterOdds							
-0* None	Mystery Seal	articuno	False	articuno, zapdos, moltres	bird_trio			F		3*	3* 017: CounterBasher							
+0* None	Freeze Veil	articuno	False		bird_trio			A	CL	5*	5* 100: ChanceStatusOnTypeHit	flying	freeze				35	
+3* Scarf		articuno	False		bird_trio			B	CJK	4*	4* 047: Celebrate							
+2* Crest		articuno	False		bird_trio			C	JK	3*	2* 059: StatMirror							
+0* None	Thunder Veil	zapdos	False		bird_trio			D	FL	5*	5* 100: ChanceStatusOnTypeHit	flying	paralyze				35	
+3* Crown		zapdos	False		bird_trio			E	FJK	4*	3* 048: Absorption							
+2* Crest		zapdos	False		bird_trio			F	JK	3*	3* 069: GapProber							
+0* None	Fire Veil	moltres	False		bird_trio			G	IL	5*	5* 100: ChanceStatusOnTypeHit	flying	burn				35	
+3* Cape		moltres	False		bird_trio			H	IJK	4*	3* 049: ExcessiveForce							
+2* Crest		moltres	False		bird_trio			I	JK	3*	3* 005: SuperCrit							
+0* None	Mystery Wing	articuno	False	articuno, zapdos, moltres	bird_trio			J		1*	3* 043: WandMaster							
+0* None	Mystery Card	articuno	False	articuno, zapdos, moltres	bird_trio			K		2*	2* 052: BetterOdds							
+0* None	Mystery Seal	articuno	False	articuno, zapdos, moltres	bird_trio			L		3*	3* 017: CounterBasher							
 0* None	Mirage Cape	dragonite	True					A	*	5*	5* 078: EndureType	ice						
 3* Tiara		dragonair	True					B	*	4*	4* 041: TrapBuster							
 1* Foam		dratini	True					C	*	1*	1* 026: SureHitAttacker							
@@ -1403,16 +1403,16 @@ Generic Name	Custom Name	User	Evos	Custom Group	Group Name	Name	Item For	Index	T
 1* Card		rotom	False					D	*	2*	1* 061: ErraticDefender							
 2* Tag		rotom	False					E	*	3*	0* 000: None							
 0* None		rotom	False					F	*	3*	0* 000: None							
-0* None	Edify Robe	uxie	False		lake_trio			A	BI	5*	5* 034: MapSurveyor							
+0* None	Edify Robe	uxie	False		lake_trio			A	BJ	5*	5* 034: MapSurveyor							
 2* Jewel		uxie	False		lake_trio			B	GH	3*	2* 013: PPBoost						2	
-0* None	Charity Robe	mesprit	False		lake_trio			C	DI	5*	4* 081: DeepBreatherPlus							
+0* None	Charity Robe	mesprit	False		lake_trio			C	DJ	5*	4* 081: DeepBreatherPlus							
 2* Jewel		mesprit	False		lake_trio			D	GH	3*	3* 057: SelfCurer							
-0* None	Hope Robe	azelf	False		lake_trio			E	FI	5*	5* 007: Nontraitor							
+0* None	Hope Robe	azelf	False		lake_trio			E	FJ	5*	5* 007: Nontraitor							
 2* Jewel		azelf	False		lake_trio			F	GH	3*	2* 039: WideAttack							
 0* None	Spirit Dust	azelf	False	uxie, mesprit, azelf	lake_trio			G		1*	1* 027: SpecialAttacker							
 0* None	Spirit Shard	azelf	False	uxie, mesprit, azelf	lake_trio			H		2*	1* 062: FastFriend							
 0* None	Red Chain	azelf	False	uxie, mesprit, azelf	lake_trio			I	BDF	4*	3* 089: StatusSplash							
-0* None	Spirit Crest	azelf	False	uxie, mesprit, azelf	lake_trio			J	GH	3*	2* 053: ClutchPerformer							
+0* None	Spirit Crest	azelf	False	uxie, mesprit, azelf	lake_trio			J		3*	2* 053: ClutchPerformer							
 0* None	Time Shield	dialga	False					A	*	5*	5* 087: MapStatusOnCategoryUse					002: Magical		trick_room
 3* Torc		dialga	False					B	*	4*	4* 047: Celebrate							
 1* Card		dialga	False					C	*	1*	2* 052: BetterOdds							

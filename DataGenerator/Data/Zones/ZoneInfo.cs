@@ -2764,7 +2764,7 @@ namespace DataGenerator.Data
                 zone.NoEXP = true;
                 zone.Rogue = RogueStatus.NoTransfer;
                 {
-                    int max_floors = 24;
+                    int max_floors = 23;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
@@ -3013,7 +3013,7 @@ namespace DataGenerator.Data
 
                     //sleeping
                     {
-                        TeamMemberSpawn mob = GetTeamMob("exploud", "", "hyper_voice", "sleep_talk", "rest", "boomburst", new RandRange(45), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true, true);
+                        TeamMemberSpawn mob = GetTeamMob("exploud", "", "hyper_voice", "sleep_talk", "rest", "boomburst", new RandRange(42), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true, true);
                         HashSet<string> exceptFor = new HashSet<string>();
                         foreach (string legend in IterateLegendaries())
                             exceptFor.Add(legend);
@@ -3024,7 +3024,7 @@ namespace DataGenerator.Data
 
                     poolSpawn.Spawns.Add(GetTeamMob("ledian", "", "reflect", "light_screen", "silver_wind", "", new RandRange(40), "wander_normal", false, true), new IntRange(10, 16), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("starmie", "", "hydro_pump", "recover", "swift", "", new RandRange(40), "wander_normal", false, true), new IntRange(12, 16), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("gallade", "", "wide_guard", "psycho_cut", "teleport", "swords_dance", new RandRange(39), "wander_normal", false, true), new IntRange(12, 18), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("gallade", "", "wide_guard", "psycho_cut", "teleport", "swords_dance", new RandRange(39), "retreater", false, true), new IntRange(12, 18), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("gardevoir", "", "psychic", "wish", "moonblast", "", new RandRange(39), "wander_normal", false, true), new IntRange(12, 18), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("steelix", "", "iron_tail", "double_edge", "", "", new RandRange(39), "wander_normal", false, true), new IntRange(12, 18), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("sunflora", "", "solar_beam", "ingrain", "", "", new RandRange(39), "wander_normal", false, true), new IntRange(8, 12), 10);
@@ -3034,10 +3034,9 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("raichu", "lightning_rod", "thunder", "", "", "", new RandRange(41), "wander_normal", false, true), new IntRange(16, 22), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("clefable", "", "cosmic_power", "moonblast", "", "", new RandRange(41), "wander_normal", false, true), new IntRange(18, 22), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("eiscue", "", "blizzard", "surf", "", "", new RandRange(42), "wander_normal", false, true), new IntRange(18, 22), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("salamence", "", "dragon_claw", "fly", "", "", new RandRange(41), "wander_normal", false, true), new IntRange(18, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("drifblim", "aftermath", "ominous_wind", "explosion", "", "", new RandRange(42), "wander_normal", false, true), new IntRange(18, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("drifblim", "aftermath", "ominous_wind", "explosion", "", "", new RandRange(41), "wander_normal", false, true), new IntRange(18, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("noivern", "", "boomburst", "dragon_pulse", "", "", new RandRange(41), "wander_normal", false, true), new IntRange(20, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("scizor", "swarm", "focus_energy", "bullet_punch", "x_scissor", "", new RandRange(42), "wander_normal", false, true), new IntRange(20, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("scizor", "swarm", "focus_energy", "bullet_punch", "x_scissor", "", new RandRange(41), "wander_normal", false, true), new IntRange(20, max_floors), 10);
                     
                     //sleeping
                     {
@@ -3223,6 +3222,42 @@ namespace DataGenerator.Data
 
                         floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
                     }
+
+
+
+
+                    SpreadRoomZoneStep caveZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, new SpreadPlanQuota(new RandRange(1), new IntRange(19, max_floors - 1)));
+                    List<BaseRoomFilter> caveFilters = new List<BaseRoomFilter>();
+                    caveFilters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
+                    caveFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                    {
+
+                        RoomGenGuardedCave<MapGenContext> guarded = new RoomGenGuardedCave<MapGenContext>();
+                        //treasure
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_bird_trio_09"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_bird_trio_10"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_ho_oh_beasts_08"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_ho_oh_beasts_09"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_ho_oh_beasts_12"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_ho_oh_beasts_13"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_ho_oh_beasts_16"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_ho_oh_beasts_17"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_regi_trio_06"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_regi_trio_07"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_regi_trio_10"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_regi_trio_11"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_regi_trio_14"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_regi_trio_15"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_lake_trio_06"), 10);
+                        guarded.Treasures.RandomSpawns.Add(MapItem.CreateBox("box_deluxe", "xcl_family_lake_trio_07"), 10);
+                        guarded.Treasures.SpawnAmount = 3;
+                        //guard
+                        MobSpawn spawner = GetGenericMob("dragonite", "multiscale", "outrage", "roost", "aqua_tail", "hurricane", new RandRange(47), "boss", true, true);
+                        guarded.GuardTypes.Add(spawner, 10);
+
+                        caveZoneStep.Spawns.Add(new RoomGenOption(guarded, new RoomGenDefault<ListMapGenContext>(), caveFilters), 10);
+                    }
+                    floorSegment.ZoneSteps.Add(caveZoneStep);
 
                     AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 10, 2);
 
@@ -3410,7 +3445,7 @@ namespace DataGenerator.Data
                                 layout.GenSteps.Add(PR_GRID_GEN, step);
                             }
 
-                            if (ii == 19)
+                            if (ii == 18)
                             {
                                 SetGridSpecialRoomStep<MapGenContext> specialStep = new SetGridSpecialRoomStep<MapGenContext>();
                                 specialStep.Filters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
@@ -3492,8 +3527,23 @@ namespace DataGenerator.Data
 
                         layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
-                        if (ii == 19)
+                        if (ii == 18)
                             layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("tile_updraft"));
+
+                        floorSegment.Floors.Add(layout);
+                    }
+
+
+                    {
+                        LoadGen layout = new LoadGen();
+                        MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                        startGen.MapID = "end_champions_road";
+                        layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                        MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                        layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+
+                        AddTextureData(layout, "sky_ruins_area_wall", "sky_ruins_floor", "sky_ruins_secondary", "flying", true);
 
                         floorSegment.Floors.Add(layout);
                     }

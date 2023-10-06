@@ -3141,6 +3141,7 @@ namespace DataGenerator.Data
                 fileName = "food_grimy";
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly. However, it will also inflict a variety of status problems because it's covered in filthy grime. Be careful of what you eat!");
                 item.Sprite = "Rock_Purple";
+                item.SortCategory = 4;
                 item.Icon = 16;
                 item.UsageType = ItemData.UseType.Eat;
                 item.ItemStates.Set(new EdibleState());
@@ -3161,6 +3162,7 @@ namespace DataGenerator.Data
                 item.Icon = 18;
                 item.UsageType = ItemData.UseType.Use;
                 item.ItemStates.Set(new UtilityState());
+                item.SortCategory = 13;
                 item.Price = 10;
                 item.MaxStack = 3;
                 item.UseEvent.BeforeTryActions.Add(1, new KeyCheckEvent());
@@ -3189,6 +3191,7 @@ namespace DataGenerator.Data
                 fileName = "gummi_foul";
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.");
                 item.Sprite = "Gummi_Black";
+                item.SortCategory = 4;
                 item.Icon = 16;
                 item.UsageType = ItemData.UseType.Eat;
                 item.ItemStates.Set(new EdibleState());
@@ -3252,7 +3255,11 @@ namespace DataGenerator.Data
             }
             else if (ii == 485)
             {
-
+                item.Name = new LocalText("**Secret Slab");
+                item.Desc = new LocalText("An ancient stone slab inscribed with what seems to be prehistoric legend, rumored to hold an incredible secret. Its writings change depending on the dungeon it's used in.");
+                // Lua script: Will list out all restrictions the player needs to abide by to get to the dungeon's golden chamber, also keep track of which restrictions are met?
+                // If the dungeon doesn't have a golden chamber, just say it's blank.
+                item.Price = 80000;
             }
             else if (ii == 486)
             {
@@ -3617,7 +3624,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = "food_" + Text.Sanitize(ReverseWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 1;
+                    item.SortCategory = 4;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new FoodState());
@@ -3627,7 +3634,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 2;
+                    item.SortCategory = 6;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new BerryState());
@@ -3639,7 +3646,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 2;
+                    item.SortCategory = 5;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new GummiState());
@@ -3650,7 +3657,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 4;
+                    item.SortCategory = 7;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new SeedState());
@@ -3665,7 +3672,7 @@ namespace DataGenerator.Data
                     {
                         if (fileName == "")
                             fileName = "boost_" + Text.Sanitize(item.Name.DefaultText).ToLower();
-                        item.SortCategory = 6;
+                        item.SortCategory = 9;
                         item.UsageType = ItemData.UseType.Drink;
                         item.ItemStates.Set(new EdibleState());
                         item.ItemStates.Set(new DrinkState());
@@ -3677,7 +3684,7 @@ namespace DataGenerator.Data
                     {
                         if (fileName == "")
                             fileName = "medicine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
-                        item.SortCategory = 7;
+                        item.SortCategory = 10;
                         item.UsageType = ItemData.UseType.Use;
                         item.ItemStates.Set(new UtilityState());
                         item.Icon = 7;
@@ -3686,7 +3693,7 @@ namespace DataGenerator.Data
                     {
                         if (fileName == "")
                             fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                        item.SortCategory = 5;
+                        item.SortCategory = 8;
                         item.UsageType = ItemData.UseType.Eat;
                         item.ItemStates.Set(new EdibleState());
                         item.ItemStates.Set(new HerbState());
@@ -3698,7 +3705,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = "ammo_" + Text.Sanitize(item.Name.DefaultText).ToLower();
-                    item.SortCategory = 9;
+                    item.SortCategory = 2;
                     item.UsageType = ItemData.UseType.Throw;
                     item.ItemStates.Set(new AmmoState());
                     item.MaxStack = 9;
@@ -3719,7 +3726,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 11;
+                    item.SortCategory = 3;
                     item.UsageType = ItemData.UseType.Use;
                     item.ItemStates.Set(new WandState());
                     item.Icon = 8;
@@ -3729,7 +3736,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 12;
+                    item.SortCategory = 11;
                     item.UsageType = ItemData.UseType.Use;
                     item.ItemStates.Set(new OrbState());
                     item.Icon = 9;
@@ -3750,6 +3757,7 @@ namespace DataGenerator.Data
                         if (fileName == "")
                             fileName = "evo_" + Text.Sanitize(item.Name.DefaultText).ToLower();
                         item.ItemStates.Set(new EvoState());
+                        item.SortCategory = 14;
                     }
                     //else if (ii >= 380 && ii <= 397)
                     //{
@@ -3762,8 +3770,8 @@ namespace DataGenerator.Data
                         if (fileName == "")
                             fileName = "held_" + Text.Sanitize(item.Name.DefaultText).ToLower();
                         item.ItemStates.Set(new EquipState());
+                        item.SortCategory = 1;
                     }
-                    item.SortCategory = 10;
 
                     item.UsageType = ItemData.UseType.None;
                     item.ItemStates.Set(new HeldState());
@@ -3778,7 +3786,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 14;
+                    item.SortCategory = 16;
                     item.Icon = 17;
                     item.UsageType = ItemData.UseType.Box;
                     item.Price = 1000;
@@ -3789,19 +3797,20 @@ namespace DataGenerator.Data
                     {
                         if (fileName == "")
                             fileName = "machine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                        item.SortCategory = 12;
                     }
                     else if (ii >= 477)
                     {
                         if (fileName == "")
                             fileName = "loot_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                        item.SortCategory = 15;
                     }
-                    item.SortCategory = 13;
                 }
                 else if (ii < 700)//TM
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(item.Name.DefaultText).ToLower();
-                    item.SortCategory = 15;
+                    item.SortCategory = 13;
                     item.Sprite = "Disc_Blue";
                     item.Icon = 13;
                     item.Price = 500;
