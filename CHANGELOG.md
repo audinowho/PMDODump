@@ -1,6 +1,7 @@
 # 0.7.18 Changes #
 
 * Reworked Secret Garden's encounters to result in fewer level spikes, added Comfey
+* Reworked Faded Trail encounters, added Petilil
 * Allies transitively touching the leader and who cant move any closer will attack in Stick Together
 * Wild Pokemon warped in via Summon Trap, Beat Up, and Illuminate will not act immediately after summoning.
 * Grudge Trap breaks after trigger
@@ -10,13 +11,15 @@
 * Fixed an issue where One-Shot orb cannot miss, instantly KOing everything in range
 * Effects that change moves such as Mimic and Transform will always set the temporary move's PP to 5
 * Binding Band works like King's Rock for Immobilization
-* AI is more conscious of freeze status
 * Telekinesis affected by Grip Claw
+* Nullify Orb affects the entire floor
+* AI is more conscious of freeze status
 * "Quad Weakness" damage multiplier 2x -> 2.25x
 * Perish Count drops if-and-only-if hearing Perish Song
 * Stone Edge Acc 80->100
 * Fury Cutter BP 10->20
 * Skull Bash BP 100->110
+* Facade BP 60->65
 * Heal Order PP 10->12
 * Quick Guard PP 15->13
 * Wide Guard PP 16->15

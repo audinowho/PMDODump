@@ -6898,7 +6898,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(60));
+                skill.Data.SkillStates.Set(new BasePowerState(65));
                 skill.Data.OnActions.Add(0, new MajorStatusPowerEvent(false, 2, 1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;

@@ -2005,11 +2005,11 @@ namespace DataGenerator.Data
             else if (ii == 277)
             {
                 item.Name = new LocalText("Nullify Orb");
-                item.Desc = new LocalText("An orb that nullifies the Abilities of all enemies up to 5 tiles away.");
+                item.Desc = new LocalText("An orb that nullifies the Abilities of all enemies on the floor.");
                 item.Sprite = "Orb_Green";
                 item.UseEvent.OnHits.Add(0, new ChangeToAbilityEvent(DataManager.Instance.DefaultIntrinsic, true));
                 item.UseAction = new AreaAction();
-                ((AreaAction)item.UseAction).Range = 5;
+                ((AreaAction)item.UseAction).Range = CharAction.MAX_RANGE;
                 ((AreaAction)item.UseAction).Speed = 10;
                 item.UseAction.ActionFX.Sound = "DUN_Disable";
                 ((AreaAction)item.UseAction).ActionFX.Emitter = new SingleEmitter(new AnimData("Circle_Red_Out", 3));
@@ -2165,7 +2165,7 @@ namespace DataGenerator.Data
             else if (ii == 289)
             {
                 item.Name = new LocalText("Mug Orb");
-                item.Desc = new LocalText("An orb that pulls all items held by enemy Pokémon to the user.");
+                item.Desc = new LocalText("An orb that pulls all items held by enemy Pokémon to the user. It affects all enemies on the floor.");
                 item.Sprite = "Orb_Yellow";
                 item.UseEvent.OnHits.Add(0, new MugItemEvent());
                 item.UseAction = new AreaAction();
@@ -3255,11 +3255,6 @@ namespace DataGenerator.Data
             }
             else if (ii == 485)
             {
-                item.Name = new LocalText("**Secret Slab");
-                item.Desc = new LocalText("An ancient stone slab inscribed with what seems to be prehistoric legend, rumored to hold an incredible secret. Its writings change depending on the dungeon it's used in.");
-                // Lua script: Will list out all restrictions the player needs to abide by to get to the dungeon's golden chamber, also keep track of which restrictions are met?
-                // If the dungeon doesn't have a golden chamber, just say it's blank.
-                item.Price = 80000;
             }
             else if (ii == 486)
             {
@@ -3360,6 +3355,31 @@ namespace DataGenerator.Data
                 fileName = "egg_mystery";
                 item.Sprite = "Egg_Sea";
                 item.Desc = new LocalText("An egg with bizarre colors that have never been seen before. What could this egg be?");
+            }
+            else if (ii == 493)
+            {
+                item.Name = new LocalText("**Secret Slab");
+                item.Desc = new LocalText("An ancient stone slab inscribed with what seems to be prehistoric legend, rumored to hold an incredible secret. Its writings change depending on the dungeon it's used in.");
+                // Lua script: Will list out all restrictions the player needs to abide by to get to the dungeon's golden chamber, also keep track of which restrictions are met?
+                // If the dungeon doesn't have a golden chamber, just say it's blank.
+                item.Price = 80000;
+            }
+            else if (ii == 494)
+            {
+                item.Name = new LocalText("**Music Box");
+                item.Desc = new LocalText("An enchanting music box that plays a beautiful melody. It is said to draw something special to it when it is kept close by.");
+                // This will trigger legendaries to appear.
+                // when they do appear, the music will change to a music box tune.
+                // they will never spawn at the start of the dungeon, or when the wind timer is visible.
+                // they have a chance to spawn at 100 turns into the floor and no more
+                item.Price = 80000;
+            }
+            else if (ii == 495)
+            {
+                item.Name = new LocalText("**Mystery Part");
+                item.Desc = new LocalText("A mysterious mechanical part that has lain undisturbed for eons, veiled by legendary mystery. It is said to have an effect on mysterious distortions.");
+                // This will prevent mysterious distortions from occurring, and cause them to flood out when taken away
+                item.Price = 80000;
             }
             else if (ii == 576)
                 FillTMData(item, "earthquake");

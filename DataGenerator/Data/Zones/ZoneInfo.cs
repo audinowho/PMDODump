@@ -383,20 +383,19 @@ namespace DataGenerator.Data
                         //need one super-effective for each possible starter
                         //037 Vulpix : 52 Ember
                         poolSpawn.Spawns.Add(GetTeamMob("vulpix", "", "ember", "", "", "", new RandRange(10), "wander_dumb"), new IntRange(4, 7), 10);
-                        //114 Tangela : 022 Vine Whip
-                        poolSpawn.Spawns.Add(GetTeamMob("tangela", "", "", "vine_whip", "", "", new RandRange(10), "wander_dumb"), new IntRange(4, 7), 10);
+
+                        poolSpawn.Spawns.Add(GetTeamMob("petilil", "", "sleep_powder", "absorb", "", "", new RandRange(10), "wander_dumb"), new IntRange(4, 7), 10);
                         //403 Shinx : 033 Tackle : 43 Leer
                         poolSpawn.Spawns.Add(GetTeamMob("shinx", "", "tackle", "leer", "", "", new RandRange(5), "wander_dumb"), new IntRange(0, 4), 10);
                         poolSpawn.Spawns.Add(GetTeamMob("shinx", "", "tackle", "leer", "", "", new RandRange(7), "wander_dumb"), new IntRange(4, 7), 10);
                         //190 Aipom : 010 Scratch : Sand Attack
                         poolSpawn.Spawns.Add(GetTeamMob("aipom", "", "scratch", "sand_attack", "", "", new RandRange(8), "wander_dumb"), new IntRange(0, 7), 10);
-                        //161 Sentret : 10 Scratch : 111 Defense Curl
-                        poolSpawn.Spawns.Add(GetTeamMob("sentret", "", "scratch", "defense_curl", "", "", new RandRange(5), "wander_dumb"), new IntRange(0, 4), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob("kricketot", "", "growl", "bide", "", "", new RandRange(6), "wander_dumb"), new IntRange(0, 4), 10);
                         //060 Poliwag : 55 Water Gun
                         poolSpawn.Spawns.Add(GetTeamMob("poliwag", "", "water_gun", "", "", "", new RandRange(8), "wander_dumb"), new IntRange(4, 7), 10);
-                        //396 Starly : 33 Tackle : 45 Growl - later pairs
-                        poolSpawn.Spawns.Add(GetTeamMob("starly", "", "tackle", "growl", "", "", new RandRange(6), "wander_dumb"), new IntRange(0, 4), 10);
-                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob("starly", "", "tackle", "growl", "", "", new RandRange(7), "wander_dumb"), GetGenericMob("starly", "", "tackle", "growl", "", "", new RandRange(7), "wander_dumb")), new IntRange(4, 7), 20);
+                        
+                        poolSpawn.Spawns.Add(GetTeamMob("starly", "", "tackle", "quick_attack", "", "", new RandRange(6), "wander_dumb"), new IntRange(0, 4), 10);
+                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob("starly", "", "tackle", "quick_attack", "", "", new RandRange(7), "wander_dumb"), GetGenericMob("starly", "", "tackle", "quick_attack", "", "", new RandRange(7), "wander_dumb")), new IntRange(4, 7), 20);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, 7), 12);
                         floorSegment.ZoneSteps.Add(poolSpawn);
@@ -707,12 +706,12 @@ namespace DataGenerator.Data
                         poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob("shinx", "", "tackle", "leer", "", "", new RandRange(8), "wander_dumb"), GetGenericMob("shinx", "", "tackle", "leer", "", "", new RandRange(6), "wander_dumb")), new IntRange(0, 3), 10);
                         //190 Aipom : 010 Scratch : Sand Attack
                         poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob("aipom", "", "scratch", "sand_attack", "", "", new RandRange(8), "wander_dumb"), GetGenericMob("aipom", "", "scratch", "sand_attack", "", "", new RandRange(8), "wander_dumb")), new IntRange(0, 3), 10);
-                        //161 Sentret : 10 Scratch : 111 Defense Curl
-                        poolSpawn.Spawns.Add(GetTeamMob("sentret", "", "scratch", "defense_curl", "", "", new RandRange(10), "wander_dumb"), new IntRange(0, 3), 10);
+                        //114 Tangela : 022 Vine Whip
+                        poolSpawn.Spawns.Add(GetTeamMob("tangela", "", "vine_whip", "ingrain", "", "", new RandRange(10), "wander_dumb"), new IntRange(0, 3), 10);
                         //161 Sentret : Charm : Bite
                         poolSpawn.Spawns.Add(GetTeamMob("snubbull", "", "charm", "bite", "", "", new RandRange(10), "wander_dumb"), new IntRange(0, 3), 10);
                         //396 Starly : 33 Tackle : 45 Growl - later pairs
-                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob("starly", "", "tackle", "growl", "", "", new RandRange(7), "wander_dumb"), GetGenericMob("starly", "", "tackle", "growl", "", "", new RandRange(7), "wander_dumb")), new IntRange(0, 3), 20);
+                        poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob("starly", "", "tackle", "quick_attack", "", "", new RandRange(7), "wander_dumb"), GetGenericMob("starly", "", "tackle", "quick_attack", "", "", new RandRange(7), "wander_dumb")), new IntRange(0, 3), 20);
                         //438 Bonsly : 88 Rock Throw
                         poolSpawn.Spawns.Add(GetTeamMob("bonsly", "", "rock_throw", "", "", "", new RandRange(9), "weird_tree"), new IntRange(0, 3), 8);
 
@@ -6599,7 +6598,7 @@ namespace DataGenerator.Data
 
                         //necessities
                         CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
-                        necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
+                        necessities.SpawnRates.SetRange(20, new IntRange(0, max_floors));
                         itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
 
@@ -6608,7 +6607,7 @@ namespace DataGenerator.Data
                         necessities.Spawns.Add(new InvItem("food_apple"), new IntRange(0, max_floors), 10);
                         necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
                         necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 5);
-                        necessities.Spawns.Add(new InvItem("food_apple_big"), new IntRange(0, max_floors), 3);
+                        necessities.Spawns.Add(new InvItem("food_apple_big"), new IntRange(0, max_floors), 10);
                         //snacks
                         CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
                         snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -6709,8 +6708,8 @@ namespace DataGenerator.Data
 
                         floorSegment.ZoneSteps.Add(tileSpawn);
 
-                        AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 8), new IntRange(0, max_floors)), new MapItem("food_apple"));
-                        AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
+                        AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors)), new MapItem("food_apple"));
+                        AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
 
                         AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)),
                             new MapItem("apricorn_blue"), new MapItem("apricorn_green"), new MapItem("apricorn_brown"), new MapItem("apricorn_purple"),
@@ -8872,8 +8871,9 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("skorupi", "", "acupressure", "bug_bite", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wander_dumb_itemless"), new IntRange(2, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("torkoal", "", "smokescreen", "lava_plume", "", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(0, 2), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("arbok", "", "screech", "glare", "crunch", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(2, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "assurance", "", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(0, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "assurance", "", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(2, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wander_dumb_itemless"), new IntRange(1, max_floors), 5);
+                    poolSpawn.Spawns.Add(GetTeamMob("scraggy", "", "leer", "low_kick", "", "", new RandRange(24), "wander_dumb_itemless"), new IntRange(0, 2), 5);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
@@ -14865,14 +14865,14 @@ namespace DataGenerator.Data
 
                     RandBag<IGenStep> npcZoneSpawns = new RandBag<IGenStep>();
                     npcZoneSpawns.RemoveOnRoll = true;
-                    //Supersonic's range
+                    //poison protection
                     {
                         PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                         MobSpawn post_mob = new MobSpawn();
                         post_mob.BaseForm = new MonsterID("sandshrew", 0, "normal", Gender.Male);
                         post_mob.Tactic = "slow_wander";
                         post_mob.Level = new RandRange(14);
-                        post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_RANGE"))));
+                        post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_POISON"))));
                         SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
                         post_team.Explorer = true;
                         multiTeamSpawner.Spawns.Add(post_team);
