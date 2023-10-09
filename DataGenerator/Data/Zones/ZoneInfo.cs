@@ -429,7 +429,7 @@ namespace DataGenerator.Data
                         {
                             PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
                             MobSpawn post_mob = new MobSpawn();
-                            post_mob.BaseForm = new MonsterID("loudred", 0, "normal", Gender.Male);
+                            post_mob.BaseForm = new MonsterID("furret", 0, "normal", Gender.Male);
                             post_mob.Tactic = "slow_patrol";
                             post_mob.Level = new RandRange(21);
                             post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_FADED"))));
