@@ -1,24 +1,54 @@
 Sheet: Hardcode
+    * Deleted key _ENUM_Keys_D0
+    * Deleted key _ENUM_Keys_D1
+    * Deleted key _ENUM_Keys_D2
+    * Deleted key _ENUM_Keys_D3
+    * Deleted key _ENUM_Keys_D4
+    * Deleted key _ENUM_Keys_D5
+    * Deleted key _ENUM_Keys_D6
+    * Deleted key _ENUM_Keys_D7
+    * Deleted key _ENUM_Keys_D8
+    * Deleted key _ENUM_Keys_D9
+    * Deleted key _ENUM_Keys_Down
+    * Deleted key _ENUM_Keys_Escape
+    * Deleted key _ENUM_Keys_Left
+    * Deleted key _ENUM_Keys_OemBackslash
+    * Deleted key _ENUM_Keys_OemCloseBrackets
+    * Deleted key _ENUM_Keys_OemComma
+    * Deleted key _ENUM_Keys_OemMinus
+    * Deleted key _ENUM_Keys_OemOpenBrackets
+    * Deleted key _ENUM_Keys_OemPeriod
+    * Deleted key _ENUM_Keys_OemPipe
+    * Deleted key _ENUM_Keys_OemPlus
+    * Deleted key _ENUM_Keys_OemQuestion
+    * Deleted key _ENUM_Keys_OemQuotes
+    * Deleted key _ENUM_Keys_OemSemicolon
+    * Deleted key _ENUM_Keys_OemTilde
+    * Deleted key _ENUM_Keys_Right
+    * Deleted key _ENUM_Keys_Up
+    * Added ZONE_RESET_MOVESET
+    * Changed ZONE_RESTRICT_ITEM from "Item limit: {0}" to "Item Limit: {0}"
 
 Sheet: Content
+    * Changed MSG_RECYCLE from "{0}'s {1} was recycled and became a {2}" to "{0}'s {1} was recycled and became a {2}."
+    * Changed TALK_ADVICE_STAT_DROP from "Aurgh, that Aipom threw some sand in my eyes and now my attacks are harder to hit![br]I need to get to a Wonder Tile..." to "Aurgh, that Aipom threw some sand in my eyes and now I can barely hit anything![br]I need to get to a Wonder Tile..."
 
 Sheet: Script
-    * Added ground\moonlit_end/Expo_Cutscene_Ask_Join
-    * Erased contents of ground\moonlit_end/Expo_Cutscene_Line_001
-    * Added ground\moonlit_end/Expo_Cutscene_Line_002_Default
-    * Added ground\moonlit_end/Expo_Cutscene_Line_002_Postgame
-    * Added ground\moonlit_end/Expo_Cutscene_Line_003
-    * Added ground\moonlit_end/Expo_Cutscene_Line_004
-    * Added ground\moonlit_end/Expo_Cutscene_Line_005
-    * Added ground\moonlit_end/Expo_Cutscene_Line_006
-    * Added ground\moonlit_end/Expo_Cutscene_Line_007
-    * Added ground\moonlit_end/Expo_Cutscene_Line_Accept
-    * Added ground\moonlit_end/Expo_Cutscene_Line_Reject
-    * Added ground\moonlit_end/Post_Cutscene_Line_001
-    * Added ground\moonlit_end/Post_Cutscene_Line_Fail
-    * Added ground\moonlit_end/Post_Cutscene_Line_Success
+    * Significantly changed ground\base_camp/Noctowl_Action_Line_001 from "" to "[tmp]You've cleared guildmaster trail but this island still holds many secrets."
+    * Deleted key ground\base_camp/Noctowl_Action_Line_002
+    * Deleted key ground\base_camp/Noctowl_Action_Line_003
+    * Added ground\guildmaster_summit/Ending_Cutscene_Line_Ask_001
+    * Added ground\guildmaster_summit/Ending_Cutscene_Line_Ask_002
+    * Changed ground\guildmaster_summit/Expo_Cutscene_Line_012 to ground\guildmaster_summit/Expo_Cutscene_Line_008, retaining translations
+    * Changed ground\guildmaster_summit/Expo_Cutscene_Line_013 to ground\guildmaster_summit/Expo_Cutscene_Line_009, retaining translations
+    * Changed ground\guildmaster_summit/Expo_Cutscene_Line_014 to ground\guildmaster_summit/Expo_Cutscene_Line_010, retaining translations
+    * Erased contents of ground\guildmaster_summit/Expo_Cutscene_Line_011
+    * Erased contents of ground\guildmaster_summit/Expo_Cutscene_Line_012
+    * Erased contents of ground\guildmaster_summit/Expo_Cutscene_Line_013
+    * Erased contents of ground\guildmaster_summit/Expo_Cutscene_Line_014
 
 Sheet: Abilities
+    * Significantly changed 0207-surge_surfer-0001|data.Desc from "Doubles the Pokémon's Speed stat on Electric Terrain." to "Boosts the Pokémon's Movement Speed on Electric Terrain."
 
 Sheet: Items
 
@@ -27,18 +57,27 @@ Sheet: MapStatuses
 Sheet: Moves
 
 Sheet: Statuses
+    * Added 0000-attack_response-0000|data.Name
+    * Added 0000-attack_response-0001|data.Desc
+    * Changed 0000-kings_shield-0001|data.Desc from "The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks. " to "The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks."
 
 Sheet: Tiles
+    * Changed 0000-tile_boss-0001|data.Desc from "A mysterious signal that calls Pokémon to the area." to "A mysterious sigil that calls Pokémon to the area."
 
 Sheet: Excl Names
 
 Sheet: Excl Effects
 
 Sheet: Zones
-    * Significantly changed 0000-moonlit_courtyard-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name from "Moonlit Temple\nB{0}F" to "Moonlit Temple\n{0}F"
 
 Sheet: Maps
+    * Added end_ambush_forest-0000|data.Name
+    * Added end_treacherous_mountain-0000|data.Name
 
 Sheet: GroundMaps
-    * Significantly changed moonlit_end-0000|data.Name from "" to "Moonlit Chamber"
+    * Added end_ambush_forest-0000|data.Name
+    * Added end_moonlit_temple-0000|data.Name, transferred from moonlit_end-0000|data.Name
+    * Added end_treacherous_mountain-0000|data.Name
+    * Significantly changed final_stop-0000|data.Name from "Path to the Summit" to "Blizzard Camp"
+    * Deleted key moonlit_end-0000|data.Name
 

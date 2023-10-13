@@ -357,8 +357,8 @@ namespace DataGenerator.Data
 
             MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false, false);
             NoChokepointTerrainStencil<T> roomStencil = new NoChokepointTerrainStencil<T>(new MapTerrainStencil<T>(true, false, false, false));
-
-            trapStep.TerrainStencil = new MultiTerrainStencil<T>(false, terrainStencil, roomStencil);
+            TileEffectStencil<T> noTile = new TileEffectStencil<T>(true);
+            trapStep.TerrainStencil = new MultiTerrainStencil<T>(false, terrainStencil, roomStencil, noTile);
 
             layout.GenSteps.Add(PR_WATER, trapStep);
         }
@@ -368,15 +368,17 @@ namespace DataGenerator.Data
             string coverTerrain = "grass";
             {
                 BlobTilePercentStencil<T> terrainPercentStencil = new BlobTilePercentStencil<T>(50, new MapTerrainStencil<T>(false, false, true, true));
-
-                BlobWaterStep<T> coverStep = new BlobWaterStep<T>(roomBlobCount, new Tile(coverTerrain), new MapTerrainStencil<T>(true, false, false, false), terrainPercentStencil, roomBlobSize, new IntRange(Math.Max(roomBlobSize.Min, 6), Math.Max(roomBlobSize.Max * 3 / 2, 15)));
+                MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false, false);
+                TileEffectStencil<T> noTile = new TileEffectStencil<T>(true);
+                BlobWaterStep<T> coverStep = new BlobWaterStep<T>(roomBlobCount, new Tile(coverTerrain), new MultiTerrainStencil<T>(false, terrainStencil, noTile), terrainPercentStencil, roomBlobSize, new IntRange(Math.Max(roomBlobSize.Min, 6), Math.Max(roomBlobSize.Max * 3 / 2, 15)));
                 layout.GenSteps.Add(PR_WATER, coverStep);
             }
             {
                 MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false, false);
                 NoChokepointTerrainStencil<T> roomStencil = new NoChokepointTerrainStencil<T>(new MapTerrainStencil<T>(true, false, false, false));
                 roomStencil.Negate = true;
-                PerlinWaterStep<T> coverStep = new PerlinWaterStep<T>(hallPercent, 4, new Tile(coverTerrain), new MultiTerrainStencil<T>(false, terrainStencil, roomStencil), 0, false);
+                TileEffectStencil<T> noTile = new TileEffectStencil<T>(true);
+                PerlinWaterStep<T> coverStep = new PerlinWaterStep<T>(hallPercent, 4, new Tile(coverTerrain), new MultiTerrainStencil<T>(false, terrainStencil, roomStencil, noTile), 0, false);
                 layout.GenSteps.Add(PR_WATER, coverStep);
             }
 

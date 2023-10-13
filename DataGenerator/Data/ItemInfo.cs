@@ -658,8 +658,7 @@ namespace DataGenerator.Data
                 newData.OnHits.Add(-1, new LevelDamageEvent(false, 2, 1));
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
+                newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                 item.UseEvent.OnHits.Add(0, new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey(), true));
             }
             else if (ii == 113)
@@ -770,7 +769,7 @@ namespace DataGenerator.Data
             {
                 item.Name = new LocalText("Amber Tear");
                 fileName = "medicine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
-                item.Desc = new LocalText("An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises the Pokémon's chances of recruitment on the floor it's used.");
+                item.Desc = new LocalText("An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises chances of recruiting other Pokémon to the team on the floor it's used.");
                 item.Sprite = "Bottle_Gold";
                 item.Price = 2500;
                 item.MaxStack = 3;
@@ -1475,7 +1474,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Wand_Pink";
                 item.Price = 5;
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_Out", 2));
-                item.UseEvent.OnHitTiles.Add(0, new LureEvent());
+                item.UseEvent.OnHits.Add(0, new LureEvent());
             }
             else if (ii == 226)
             {
@@ -1599,7 +1598,8 @@ namespace DataGenerator.Data
                 item.UseAction.PreActions.Add(itemFX);
                 item.UseAction.ActionFX.Sound = "DUN_Blowback_Orb";
                 item.UseEvent.OnHitTiles.Add(0, new RemoveTrapEvent());
-                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", new SingleEmitter(new AnimData("Puff_Brown", 3)), "wall", "water", "lava", "pit"));
+                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Transform", new SingleEmitter(new AnimData("Puff_Brown", 3)),
+                    new FlagType(typeof(WallTerrainState)), new FlagType(typeof(WaterTerrainState)), new FlagType(typeof(LavaTerrainState)), new FlagType(typeof(AbyssTerrainState)), new FlagType(typeof(FoliageTerrainState))));
             }
             else if (ii == 250)
             {
@@ -1701,7 +1701,8 @@ namespace DataGenerator.Data
                 ((AreaAction)item.UseAction).Speed = 36;
                 ((AreaAction)item.UseAction).HitTiles = true;
                 item.UseAction.ActionFX.Sound = "_UNK_DUN_Seismic";
-                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("", new SingleEmitter(new AnimData("Puff_Brown", 3)), "water", "lava", "pit"));
+                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new SingleEmitter(new AnimData("Puff_Brown", 3)),
+                    new FlagType(typeof(WaterTerrainState)), new FlagType(typeof(LavaTerrainState)), new FlagType(typeof(AbyssTerrainState))));
                 item.UseEvent.AfterActions.Add(0, new BattleLogBattleEvent(new StringKey("MSG_FLOOR_FILL")));
             }
             else if (ii == 257)
@@ -2050,7 +2051,7 @@ namespace DataGenerator.Data
                 ((AreaAction)item.UseAction).Speed = 36;
                 item.UseAction.ActionFX.Sound = "DUN_One_Room_Orb";
                 ((AreaAction)item.UseAction).HitTiles = true;
-                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainEvent("", new SingleEmitter(new AnimData("Wall_Break", 2)), "wall", "grass"));
+                item.UseEvent.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new SingleEmitter(new AnimData("Wall_Break", 2)), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                 item.UseEvent.OnHitTiles.Add(0, new MapOutEvent());
                 item.UseEvent.AfterActions.Add(0, new BattleLogBattleEvent(new StringKey("MSG_FLOOR_ROOM")));
             }
@@ -2214,7 +2215,7 @@ namespace DataGenerator.Data
             else if (ii == 304)
             {
                 item.Name = new LocalText("Pass Scarf");
-                item.Desc = new LocalText("A held item that causes the Pokémon to shrug off any damaging moves and pass them on to an adjacent Pokémon.");
+                item.Desc = new LocalText("A held item that causes the Pokémon to shrug off damaging moves and pass them on to an adjacent Pokémon.");
                 item.Sprite = "Scarf_Pink";
                 item.Price = 200;
                 item.ProximityEvent.Radius = 0;
@@ -2248,10 +2249,12 @@ namespace DataGenerator.Data
             else if (ii == 308)
             {
                 item.Name = new LocalText("Binding Band");
-                item.Desc = new LocalText("A band that increases the power of binding moves used by the holder.");
+                item.Desc = new LocalText("An item to be held by a Pokémon. When the holder successfully inflicts damage, the target may also be immobilized.");
                 item.Sprite = "Band_Tan";
                 item.Price = 200;
-                item.OnRefresh.Add(0, new MiscEvent(new BindState()));
+                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
+                statusStates.Set(new CountDownState(3));
+                item.AfterHittings.Add(0, new OnMoveUseEvent(new OnHitEvent(true, false, 25, new StatusStateBattleEvent("immobilized", true, true, statusStates))));
             }
             else if (ii == 309)
             {
@@ -3019,9 +3022,13 @@ namespace DataGenerator.Data
                 item.Price = 200;
                 item.OnRefresh.Add(0, new SeeTrapsEvent());
             }
-            else if (ii == 407)
+            else if (ii == 408)
             {
-
+                //item.Name = new LocalText("Lure Band");
+                //item.Desc = new LocalText("A band that may pull the target to the holder when it successfully inflicts damage.");
+                //item.Sprite = "Band_Tan";
+                //item.Price = 200;
+                //item.AfterHittings.Add(0, new OnMoveUseEvent(new OnHitEvent(true, false, 25, new LureEvent())));
             }
             else if (ii == 444)
             {
@@ -3346,7 +3353,6 @@ namespace DataGenerator.Data
                 fileName = "egg_mystery";
                 item.Sprite = "Egg_Sea";
                 item.Desc = new LocalText("An egg with bizarre colors that have never been seen before. What could this egg be?");
-                item.MaxStack = -1;
             }
             else if (ii == 576)
                 FillTMData(item, "earthquake");

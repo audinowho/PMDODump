@@ -10,6 +10,7 @@ using PMDC;
 using PMDC.Data;
 using System.IO;
 using PMDC.Dev;
+using RogueEssence.LevelGen;
 
 namespace DataGenerator.Data
 {
@@ -27,8 +28,8 @@ namespace DataGenerator.Data
 
             universalEvent.OnHits.Add(5, new HitPostEvent("was_hurt_last_turn", "last_move_hit_by_other", "last_targeted_by", "crits_landed"));
             universalEvent.OnHitTiles.Add(5, new TilePostEvent());
-            universalEvent.OnActions.Add(-10, new PreActionEvent());
-            universalEvent.AfterActions.Add(5, new UsePostEvent("last_used_move_slot", "last_used_move", "times_move_used", "last_ally_move", "missed_all_last_turn"));
+            universalEvent.OnActions.Add(-10, new PreActionEvent("last_used_move_slot", "last_used_move", "times_move_used"));
+            universalEvent.AfterActions.Add(5, new UsePostEvent("times_move_used", "last_ally_move", "missed_all_last_turn"));
             ElementMobilityEvent mobility = new ElementMobilityEvent();
             mobility.ElementPair["water"] = TerrainData.Mobility.Water;
             mobility.ElementPair["fire"] = TerrainData.Mobility.Lava;
@@ -46,10 +47,15 @@ namespace DataGenerator.Data
             universalEvent.OnDeaths.Add(-10, new PreDeathEvent());
             universalEvent.OnDeaths.Add(-10, new SetDeathEvent());
             universalEvent.OnDeaths.Add(0, new ImpostorReviveEvent("imposter", "transformed"));
-            universalEvent.OnDeaths.Add(10, new HandoutRelativeExpEvent(1, 7, 10, 5, 2));
+
+            HandoutExpEvent low = new HandoutStackExpEvent(1, 7, 5);
+            HandoutExpEvent high = new HandoutHarmonicExpEvent(1, 7, 5);
+            universalEvent.OnDeaths.Add(10, new HandoutPiecewiseExpEvent(5, 0, low, high));
+            //universalEvent.OnMapStarts.Add(-10, new SingleCharScriptEvent("UpdateEscort"));
             universalEvent.OnMapStarts.Add(-10, new FadeInEvent());
             universalEvent.OnMapStarts.Add(-5, new SpecialIntroEvent());
             universalEvent.OnMapStarts.Add(-5, new ReactivateItemsEvent());
+            universalEvent.ZoneSteps.Add(new ScriptZoneStep("SpawnMissionNpcFromSV"));
             //UniversalEvent.OnWalks.Add(-5, new RevealFrontTrapEvent());
 
 

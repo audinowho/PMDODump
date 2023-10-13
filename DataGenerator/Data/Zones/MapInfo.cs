@@ -133,7 +133,7 @@ namespace DataGenerator.Data
                 }
                 map.MapTeams.Add(team);
 
-                map.MapEffect.OnMapStarts.Add(-15, new BattlePositionEvent(new Loc(0, 0), new Loc(0, 1), new Loc(-1, 1), new Loc(-1, 1)));
+                map.MapEffect.OnMapStarts.Add(-15, new BattlePositionEvent(new LocRay8(0, 0, Dir8.Up), new LocRay8(0, 1, Dir8.Up), new LocRay8(-1, 1, Dir8.Up), new LocRay8(-1, 1, Dir8.Up)));
                 map.MapEffect.OnMapStarts.Add(-5, new BeginBattleEvent("map_clear_check"));
             }
             else if (name == MapNames[6])
@@ -247,7 +247,7 @@ namespace DataGenerator.Data
                 }
                 map.MapTeams.Add(team);
 
-                map.MapEffect.OnMapStarts.Add(-15, new BattlePositionEvent(new Loc(0, -1), new Loc(-2, 0), new Loc(2, 0), new Loc(0, 1)));
+                map.MapEffect.OnMapStarts.Add(-15, new BattlePositionEvent(new LocRay8(0, -1, Dir8.Up), new LocRay8(-2, 0, Dir8.Up), new LocRay8(2, 0, Dir8.Up), new LocRay8(0, 1, Dir8.Up)));
                 map.MapEffect.OnMapStarts.Add(-15, new PrepareCameraEvent(new Loc(17 * GraphicsManager.TileSize / 2, GraphicsManager.ScreenHeight / 2 + 104)));
                 map.MapEffect.OnMapStarts.Add(-5, new BeginBattleEvent("map_clear_check"));
 

@@ -560,8 +560,7 @@ namespace DataGenerator.Data
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
+                newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 19)
@@ -596,8 +595,7 @@ namespace DataGenerator.Data
                 newData.OnHits.Add(-1, new CutHPDamageEvent());
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
-                newData.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "grass"));
+                newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
             }
             else if (ii == 20)
@@ -1004,15 +1002,15 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Sigil Site");
                 fileName = "tile_boss";
-                tile.Desc = new LocalText("A mysterious signal that calls Pokémon to the area.");
+                tile.Desc = new LocalText("A mysterious sigil that calls Pokémon to the area.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Site;
                 tile.Anim = new ObjAnimData("Tile_Signal", 12);
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
-                tile.InteractWithTiles.Add(0, new LockdownTileEvent("map_clear_check"));
-                tile.InteractWithTiles.Add(0, new BossSpawnEvent());
+                tile.InteractWithTiles.Add(0, new LeaderCharEvent(new LockdownTileEvent("map_clear_check")));
+                tile.InteractWithTiles.Add(0, new LeaderCharEvent(new BossSpawnEvent()));
             }
             else if (ii == 39)
             {
@@ -1207,7 +1205,7 @@ namespace DataGenerator.Data
                 tile.StepType = TileData.TriggerType.Passage;
                 tile.Anim = new ObjAnimData("Stairs_Down", 1);
                 tile.MinimapIcon = new Loc(4, 0);
-                tile.MinimapColor = Color.Cyan;
+                tile.MinimapColor = new Color(0, 231, 0);
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
@@ -1223,7 +1221,7 @@ namespace DataGenerator.Data
                 tile.StepType = TileData.TriggerType.Passage;
                 tile.Anim = new ObjAnimData("Stairs_Up", 1);
                 tile.MinimapIcon = new Loc(4, 0);
-                tile.MinimapColor = Color.Cyan;
+                tile.MinimapColor = new Color(0, 231, 0);
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
@@ -1374,6 +1372,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.White;
                 tile.BlockDiagonal = true;
                 tile.BlockLight = true;
+                tile.TerrainStates.Set(new WallTerrainState());
                 tile.LandedOnTiles.Add(0, new TeamHungerEvent(800));
             }
             else if (ii == 3)
@@ -1383,6 +1382,7 @@ namespace DataGenerator.Data
                 tile.BlockType = TerrainData.Mobility.Water;
                 tile.MinimapColor = Color.Blue;
                 tile.ShadowType = 3;
+                tile.TerrainStates.Set(new WaterTerrainState());
                 tile.LandedOnTiles.Add(0, new RemoveStatusEvent("burn"));
             }
             else if (ii == 4)
@@ -1394,6 +1394,7 @@ namespace DataGenerator.Data
                 tile.ShadowType = 4;
                 SingleEmitter endAnim = new SingleEmitter(new AnimData("Burned", 3));
                 endAnim.LocHeight = 18;
+                tile.TerrainStates.Set(new LavaTerrainState());
                 tile.LandedOnTiles.Add(0, new SingleExceptEvent(typeof(LavaState), new GiveStatusEvent("burn", new StateCollection<StatusState>(), true, new StringKey(), "DUN_Flamethrower_3", endAnim)));
             }
             else if (ii == 5)
@@ -1403,6 +1404,7 @@ namespace DataGenerator.Data
                 tile.BlockType = TerrainData.Mobility.Abyss;
                 tile.MinimapColor = Color.Gray;
                 tile.ShadowType = 4;
+                tile.TerrainStates.Set(new AbyssTerrainState());
             }
             else if (ii == 6)
             {
@@ -1419,6 +1421,7 @@ namespace DataGenerator.Data
                 emitter.StartHeight = -4;
                 emitter.HeightSpeed = 12;
                 emitter.SpeedDiff = 4;
+                tile.TerrainStates.Set(new WaterTerrainState());
                 tile.LandedOnTiles.Add(0, new SingleExceptEvent(typeof(PoisonState), new GiveStatusEvent("poison", new StateCollection<StatusState>(), true, new StringKey(), "DUN_Toxic", emitter)));
             }
             else if (ii == 7)
@@ -1427,6 +1430,7 @@ namespace DataGenerator.Data
                 asset = "grass";
                 tile.MinimapColor = Color.Teal;
                 tile.BlockLight = true;
+                tile.TerrainStates.Set(new FoliageTerrainState());
             }
 
             return (asset, tile);

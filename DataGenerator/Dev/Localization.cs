@@ -234,19 +234,17 @@ namespace DataGenerator.Dev
                 updateWorkingLists(rows, orderedKeys, languages, index.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|data.Name", data.Comment, data.Name);
                 for (int jj = 0; jj < data.Segments.Count; jj++)
                 {
-                    LayeredSegment structure = data.Segments[jj] as LayeredSegment;
-                    if (structure != null)
+                    ZoneSegmentBase structure = data.Segments[jj];
+
+                    for (int kk = 0; kk < structure.ZoneSteps.Count; kk++)
                     {
-                        for (int kk = 0; kk < structure.ZoneSteps.Count; kk++)
+                        FloorNameIDZoneStep postProc = structure.ZoneSteps[kk] as FloorNameIDZoneStep;
+                        if (postProc != null)
                         {
-                            FloorNameIDZoneStep postProc = structure.ZoneSteps[kk] as FloorNameIDZoneStep;
-                            if (postProc != null)
-                            {
-                                //TODO: get these type names via reflection
-                                nn++;
-                                updateWorkingLists(rows, orderedKeys, languages,
-                                    index.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name", "", postProc.Name);
-                            }
+                            //TODO: get these type names via reflection
+                            nn++;
+                            updateWorkingLists(rows, orderedKeys, languages,
+                                index.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name", "", postProc.Name);
                         }
                     }
                 }
@@ -464,18 +462,15 @@ namespace DataGenerator.Dev
                 data.Name = rows[sort.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name"];
                 for (int jj = 0; jj < data.Segments.Count; jj++)
                 {
-                    LayeredSegment structure = data.Segments[jj] as LayeredSegment;
-                    if (structure != null)
+                    ZoneSegmentBase structure = data.Segments[jj];
+                    for (int kk = 0; kk < structure.ZoneSteps.Count; kk++)
                     {
-                        for (int kk = 0; kk < structure.ZoneSteps.Count; kk++)
+                        FloorNameIDZoneStep postProc = structure.ZoneSteps[kk] as FloorNameIDZoneStep;
+                        if (postProc != null)
                         {
-                            FloorNameIDZoneStep postProc = structure.ZoneSteps[kk] as FloorNameIDZoneStep;
-                            if (postProc != null)
-                            {
-                                //TODO: get these type names via reflection
-                                nn++;
-                                postProc.Name = rows[sort.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name"];
-                            }
+                            //TODO: get these type names via reflection
+                            nn++;
+                            postProc.Name = rows[sort.ToString("D4") + "-" + key + "-" + nn.ToString("D4") + "|((FloorNameIDZoneStep)data.Segments[" + jj.ToString("D4") + "].ZoneSteps[" + kk.ToString("D4") + "]).Name"];
                         }
                     }
                 }

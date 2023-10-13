@@ -803,13 +803,13 @@ namespace DataGenerator.Data
                     foreach (Stat stat in boostedStats)
                     {
                         if (stat == Stat.Attack)
-                            item.OnActions.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new DustState(), BattleData.SkillCategory.Physical, 20, 1));
+                            item.OnActions.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new DustState(), BattleData.SkillCategory.Physical, 10, 1));
                         else if (stat == Stat.MAtk)
-                            item.OnActions.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new DustState(), BattleData.SkillCategory.Magical, 20, 1));
+                            item.OnActions.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new DustState(), BattleData.SkillCategory.Magical, 10, 1));
                         else if (stat == Stat.Defense)
-                            item.BeforeBeingHits.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new SilkState(), BattleData.SkillCategory.Physical, 20, 1));
+                            item.BeforeBeingHits.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new SilkState(), BattleData.SkillCategory.Physical, 10, 1));
                         else if (stat == Stat.MDef)
-                            item.BeforeBeingHits.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new SilkState(), BattleData.SkillCategory.Magical, 20, 1));
+                            item.BeforeBeingHits.Add(0, new TypeSpecificMultCategoryEvent((string)args[0], new SilkState(), BattleData.SkillCategory.Magical, 10, 1));
                     }
                 }
             }
@@ -952,7 +952,7 @@ namespace DataGenerator.Data
                 {
                     item.OnActions.Add(1, new FamilyBattleEvent(new MeleeHitTilesEvent(TileAlignment.Wall)));
                     SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                    item.OnHitTiles.Add(0, new FamilyBattleEvent(new OnMoveUseEvent(new OnMeleeActionEvent(false, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall")))));
+                    item.OnHitTiles.Add(0, new FamilyBattleEvent(new OnMoveUseEvent(new OnMeleeActionEvent(false, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState)))))));
                 }
             }
             else if (type == ExclusiveItemEffect.GapFiller)
@@ -961,7 +961,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, some of the Pokémon's moves will fill water, lava, and pits.");
                 if (includeEffects)
                 {
-                    item.OnHitTiles.Add(0, new FamilyBattleEvent(new OnMoveUseEvent(new OnMeleeActionEvent(true, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "water", "lava", "pit")))));
+                    item.OnHitTiles.Add(0, new FamilyBattleEvent(new OnMoveUseEvent(new OnMeleeActionEvent(true, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WaterTerrainState)), new FlagType(typeof(LavaTerrainState)), new FlagType(typeof(AbyssTerrainState)))))));
                 }
             }
             else if (type == ExclusiveItemEffect.PPBoost)

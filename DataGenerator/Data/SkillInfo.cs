@@ -13,7 +13,7 @@ namespace DataGenerator.Data
 {
     public class SkillInfo
     {
-        public const int MAX_SKILLS = 827;
+        public const int MAX_SKILLS = 901;
 
 
         public static void AddUnreleasedMoveData()
@@ -24,6 +24,37 @@ namespace DataGenerator.Data
                 (string, SkillData) move = GetSkillData(ii);
                 if (!move.Item2.Released)
                     DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
+            }
+        }
+
+        public static void AddMoveDataToAnims(params int[] movesToAdd)
+        {
+            if (movesToAdd.Length > 0)
+            {
+                for (int ii = 0; ii < movesToAdd.Length; ii++)
+                {
+
+                    (string, SkillData) move = GetSkillData(movesToAdd[ii]);
+                    SkillData oldMove = DataManager.LoadData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString(), ".json");
+                    if (oldMove != null)
+                    {
+                        oldMove.Data.SkillStates = move.Item2.Data.SkillStates;
+                        DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
+                    }
+                }
+            }
+            else
+            {
+                for (int ii = 0; ii < MAX_SKILLS; ii++)
+                {
+                    (string, SkillData) move = GetSkillData(ii);
+                    SkillData oldMove = DataManager.LoadData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString(), ".json");
+                    if (oldMove != null)
+                    {
+                        oldMove.Data.BeforeHits = move.Item2.Data.BeforeHits;
+                        DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
+                    }
+                }
             }
         }
 
@@ -347,7 +378,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new OHKODamageEvent());
                 //Other sounds: _UNK_DUN_Rustle_2 _UNK_DUN_Spray_Soft
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", terrainEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -381,7 +412,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", terrainEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -427,11 +458,12 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", terrainEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -844,7 +876,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(0, new ExplorerImmuneEvent());
                 skill.Data.OnHits.Add(-1, new OHKODamageEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 20;//Jab
@@ -1369,7 +1401,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("burn", true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -1458,7 +1490,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Transform", terrainEmitter, new FlagType(typeof(LavaTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -1494,7 +1526,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Transform", terrainEmitter, new FlagType(typeof(LavaTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -1699,9 +1731,9 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", terrainEmitter, "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
                 skill.Data.AfterActions.Add(0, new StatusStateBattleEvent("paused", false, true, statusStates));
@@ -1975,12 +2007,13 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 12;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", terrainEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -2018,7 +2051,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new WeatherNeededEvent("hail", new MultiplyDamageEvent(2, 3)));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", terrainEmitter, "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new WaveMotionAction();
                 ((WaveMotionAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -2212,7 +2245,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new StatusBattleEvent("fire_spin", true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -2429,7 +2462,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeTryActions.Add(0, new ChargeOrReleaseEvent("digging", altAction));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
@@ -2521,7 +2554,7 @@ namespace DataGenerator.Data
                 FiniteOverlayEmitter overlay = new FiniteOverlayEmitter();
                 overlay.Anim = new BGAnimData("Psychic", 3, -1, -1, 128);
                 overlay.TotalTime = 60;
-                overlay.Movement = new RogueElements.Loc(0, 0);
+                overlay.Movement = new Loc(0, 0);
                 overlay.Layer = DrawLayer.Bottom;
                 BattleFX preFX = new BattleFX();
                 preFX.Emitter = overlay;
@@ -3102,9 +3135,9 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -3131,9 +3164,9 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -3265,7 +3298,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("burn", true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -3964,9 +3997,9 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 2;
                 skill.Explosion.HitTiles = true;
@@ -3994,7 +4027,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(15));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", terrainEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 5;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(14);//MultiScratch
@@ -4062,7 +4095,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("flinch", true, true)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "water", "lava", "pit"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Transform", terrainEmitter, new FlagType(typeof(WaterTerrainState)), new FlagType(typeof(LavaTerrainState)), new FlagType(typeof(AbyssTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -4210,12 +4243,13 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -4409,7 +4443,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("burn", true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 2;
@@ -4557,7 +4591,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", terrainEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -5294,7 +5328,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(0, new AddContextStateEvent(new AttackEndure()));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", terrainEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -5389,12 +5423,13 @@ namespace DataGenerator.Data
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 90;
-                skill.Data.SkillStates.Set(new BasePowerState(10));
+                skill.Data.SkillStates.Set(new BasePowerState(20));
                 skill.Data.BeforeHits.Add(0, new RepeatHitEvent("last_used_move", "times_move_used", 10, 1, false));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", terrainEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", terrainEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -5656,7 +5691,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("burn", true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -5712,7 +5747,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("confuse", true, true)));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -5920,7 +5955,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_defense", true, true, -1)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(40);//Swing
@@ -5945,10 +5980,10 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(35));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent("mod_attack", false, true, 1)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(10);//Scratch
@@ -5991,7 +6026,7 @@ namespace DataGenerator.Data
                 weather.Add("rain", false);
                 weather.Add("sandstorm", false);
                 weather.Add("hail", false);
-                skill.Data.OnHits.Add(0, new WeatherHPEvent(3, weather));
+                skill.Data.OnHits.Add(0, new WeatherHPEvent(4, weather));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
@@ -6048,7 +6083,7 @@ namespace DataGenerator.Data
                 weather.Add("rain", false);
                 weather.Add("sandstorm", false);
                 weather.Add("hail", false);
-                skill.Data.OnHits.Add(0, new WeatherHPEvent(4, weather));
+                skill.Data.OnHits.Add(0, new WeatherHPEvent(3, weather));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
@@ -6395,7 +6430,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new StatusBattleEvent("whirlpool", true, true)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Transform", terrainEmitter, new FlagType(typeof(LavaTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -7194,7 +7229,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_attack", false, true, -1));
                 skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_defense", false, true, -1));
                 skill.Strikes = 1;
@@ -7307,7 +7342,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("light_screen", true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(09);//Chop
@@ -7958,9 +7993,9 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_defense", true, true, -1)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(10);//Scratch
@@ -7982,7 +8017,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(130));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Data.AfterActions.Add(0, new StatusBattleEvent("paused", false, true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
@@ -8010,7 +8045,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new StatusBattleEvent("paused", false, true));
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall", "lava"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(LavaTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -8199,12 +8234,13 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 14;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -8241,7 +8277,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_attack", false, true, -2));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
@@ -8289,7 +8325,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_speed", true, true, -1)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "water", "lava", "pit"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Transform", terrainEmitter, new FlagType(typeof(WaterTerrainState)), new FlagType(typeof(LavaTerrainState)), new FlagType(typeof(AbyssTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(31);//Rumble
@@ -8436,7 +8472,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new HPBasePowerEvent(100, false, false));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Transform", terrainEmitter, new FlagType(typeof(LavaTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Water_Spout_Up", 1));
@@ -8621,7 +8657,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_accuracy", true, true, -1)));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Transform", terrainEmitter, new FlagType(typeof(LavaTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new WaveMotionAction();
                 ((WaveMotionAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -8674,11 +8710,12 @@ namespace DataGenerator.Data
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 13;//Slice
@@ -8777,7 +8814,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(90));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(10);//Scratch
@@ -9046,12 +9083,13 @@ namespace DataGenerator.Data
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -9410,7 +9448,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(0, new BrineEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Transform", terrainEmitter, new FlagType(typeof(LavaTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new WaveMotionAction();
                 skill.HitboxAction.PreActions.Add(new BattleFX(new SingleEmitter(new AnimData("Charge_Up", 3)), "DUN_Move_Start", 0));
@@ -9484,11 +9522,14 @@ namespace DataGenerator.Data
                 SingleEmitter endAnim = new SingleEmitter(new AnimData("Natural_Gift", 1));
                 endAnim.LocHeight = 8;
                 endAnim.Offset = 12;
-                skill.HitboxAction.ActionFX.Emitter = endAnim;
+
+                BattleFX preFX = new BattleFX();
+                preFX.Emitter = endAnim;
+                preFX.Sound = "DUN_Natural_Gift";
+                skill.HitboxAction.PreActions.Add(preFX);
                 ((AttackAction)skill.HitboxAction).LagBehindTime = 25;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
-                skill.HitboxAction.ActionFX.Sound = "DUN_Natural_Gift";
             }
             else if (ii == 364)
             {
@@ -9502,6 +9543,9 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("wide_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("quick_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("all_protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("detect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("kings_shield", true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
@@ -10225,7 +10269,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("burn", true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
@@ -10375,12 +10419,13 @@ namespace DataGenerator.Data
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 13;//Slice
@@ -10436,7 +10481,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -10462,13 +10507,14 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 18;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(55));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("flinch", true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -10499,11 +10545,12 @@ namespace DataGenerator.Data
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -10694,7 +10741,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_special_defense", true, true, -1)));
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -10775,7 +10822,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_special_defense", true, true, -1)));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "water", "lava", "pit"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WaterTerrainState)), new FlagType(typeof(LavaTerrainState)), new FlagType(typeof(AbyssTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new WaveMotionAction();
                 ((WaveMotionAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(31);//Rumble
@@ -10826,7 +10873,7 @@ namespace DataGenerator.Data
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
                 skill.Data.AfterActions.Add(0, new StatusStateBattleEvent("paused", false, true, statusStates));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -10959,7 +11006,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(10);//Scratch
@@ -11114,12 +11161,13 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 16;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -11308,9 +11356,9 @@ namespace DataGenerator.Data
                 skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_attack", false, true, -2));
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 SingleEmitter preEmitter = new SingleEmitter(new AnimData("Draco_Meteor", 2));
                 preEmitter.LocHeight = 96;
@@ -11378,7 +11426,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("burn", true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(35);//Emit
@@ -11478,7 +11526,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new StatusBattleEvent("paused", false, true));
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -11505,6 +11553,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(75));
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
@@ -11512,7 +11561,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("poison", true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -11590,7 +11639,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", new EmptyFiniteEmitter(), "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -11971,7 +12020,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.AfterActions.Add(0, new HPRecoilEvent(3, false));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 05;//Attack
@@ -12236,6 +12285,9 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("wide_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("quick_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("all_protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("detect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("kings_shield", true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
@@ -12526,7 +12578,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -12689,7 +12741,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = -1;
                 skill.Data.OnHits.Add(0, new ChangeToElementEvent("water"));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Puff_Brown", 3));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Transform", terrainEmitter, "lava"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Transform", terrainEmitter, new FlagType(typeof(LavaTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -12713,7 +12765,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent("mod_speed", false, true, 1)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
@@ -13259,7 +13311,7 @@ namespace DataGenerator.Data
                 eligibles.Add(new FlagType(typeof(EdibleState)));
                 skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new DestroyItemEvent(false, false, "seed_decoy", eligibles)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -13409,7 +13461,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("burn", true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new OffsetAction();
                 ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -13461,7 +13513,7 @@ namespace DataGenerator.Data
                 skill.Data.BeforeTryActions.Add(0, new WatchOrStrikeEvent("fire_pledge", altAnim, "DUN_Move_Start"));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -13562,7 +13614,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_speed", true, true, -1)));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", terrainEmitter, "wall", "water", "lava", "pit"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", terrainEmitter, new FlagType(typeof(WallTerrainState)), new FlagType(typeof(WaterTerrainState)), new FlagType(typeof(LavaTerrainState)), new FlagType(typeof(AbyssTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(31);//Rumble
@@ -13696,7 +13748,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new BoostCriticalEvent(1));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Rollout", terrainEmitter, "wall"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 20;//Jab
@@ -13721,7 +13773,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(45));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 2;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(09);//Chop
@@ -13776,27 +13828,32 @@ namespace DataGenerator.Data
             else if (ii == 533)
             {
                 skill.Name = new LocalText("=Sacred Sword");
-                skill.Desc = new LocalText("The user attacks by slicing with a long horn. The target's stat changes don't affect this attack's damage.");
-                skill.BaseCharges = 8;
+                skill.Desc = new LocalText("The user attacks by slicing with a sword. The target's stat changes don't affect this attack's damage.");
+                skill.BaseCharges = 12;
                 skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnActions.Add(0, new AddContextStateEvent(new Infiltrator(new StringKey("MSG_INFILTRATOR_SKILL"))));
                 skill.Data.BeforeHits.Add(4, new IgnoreStatsEvent(true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
-                ((AttackAction)skill.HitboxAction).WideAngle = AttackCoverage.Wide;
-                ((AttackAction)skill.HitboxAction).HitTiles = true;
-                ((AttackAction)skill.HitboxAction).Emitter = new SingleEmitter(new AnimData("Slash_Blue_RSE", 3));
+
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).Range = 2;
+                ((DashAction)skill.HitboxAction).CharAnim = 13;//Slice
+                ((DashAction)skill.HitboxAction).StopAtWall = true;
+                ((DashAction)skill.HitboxAction).StopAtHit = true;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
-                skill.HitboxAction.ActionFX.Sound = "DUN_Morning_Sun";
+                skill.HitboxAction.ActionFX.Sound = "DUN_Fury_Cutter";
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Slash_Blue_RSE", 3));
+                skill.Data.HitFX.Sound = "DUN_Metal_Sound";
             }
             else if (ii == 534)
             {
@@ -13806,13 +13863,14 @@ namespace DataGenerator.Data
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(70));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_defense", true, true, -1)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -14095,7 +14153,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(4, new FlipCategoryEvent(true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
@@ -14462,6 +14520,9 @@ namespace DataGenerator.Data
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("wide_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("quick_guard", true));
                 skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("all_protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("detect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("kings_shield", true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -14899,17 +14960,20 @@ namespace DataGenerator.Data
             }
             else if (ii == 588)
             {
-                skill.Name = new LocalText("**King's Shield");
-                skill.Desc = new LocalText("The user takes a defensive stance while it protects itself from damage. It also harshly lowers the Attack stat of any attacker who makes direct contact.");
+                skill.Name = new LocalText("King's Shield");
+                skill.Desc = new LocalText("The user takes a defensive stance while it protects itself from damage. It also lowers the Attack stat of any attacker.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.OnHits.Add(0, new StatusBattleEvent("kings_shield", true, false));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new SelfAction();
+                ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(37);//Withdraw
+                skill.HitboxAction.ActionFX.Emitter = new SingleEmitter(new AnimData("Protect_Yellow", 2), 4);
+                skill.HitboxAction.TargetAlignments = Alignment.Self;
+                skill.Explosion.TargetAlignments = Alignment.Self;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Protect";
             }
             else if (ii == 589)
             {
@@ -15029,7 +15093,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(20));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("DUN_Charge_Start", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 3;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -15054,7 +15118,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_special_attack", true, true, -1)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
-                skill.Data.OnHitTiles.Add(0, new RemoveTerrainEvent("", cuttingEmitter, "grass"));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -16270,18 +16334,46 @@ namespace DataGenerator.Data
             }
             else if (ii == 666)
             {
-                skill.Name = new LocalText("**Floral Healing");
-                skill.Desc = new LocalText("The user restores the target's HP by up to half of its max HP. It restores more HP when the terrain is grass.");
-                skill.BaseCharges = 10;
+                skill.Name = new LocalText("Floral Healing");
+                skill.Desc = new LocalText("The user restores the party's HP. It restores more HP when the terrain is grass.");
+                skill.BaseCharges = 13;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
+                Dictionary<string, bool> weather = new Dictionary<string, bool>();
+                weather.Add("grassy_terrain", true);
+                skill.Data.OnHits.Add(0, new WeatherHPEvent(3, weather));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new OffsetAction();
+                ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
+                ((OffsetAction)skill.HitboxAction).HitArea = OffsetAction.OffsetArea.Area;
+                ((OffsetAction)skill.HitboxAction).Range = 1;
+                ((OffsetAction)skill.HitboxAction).Speed = 6;
+                ((OffsetAction)skill.HitboxAction).LagBehindTime = 5;
+                ((OffsetAction)skill.HitboxAction).HitTiles = true;
+                BattleFX preFX = new BattleFX();
+                BetweenEmitter emitter = new BetweenEmitter(new AnimData("Grass_Knot_Grass_Back", 1), new AnimData("Grass_Knot_Grass_Front", 1));
+                emitter.HeightBack = 8;
+                emitter.HeightFront = 8;
+                preFX.Emitter = emitter;
+                preFX.Sound = "DUN_Harden";
+                skill.HitboxAction.PreActions.Add(preFX);
+                CircleSquareAreaEmitter flowerEmitter = new CircleSquareAreaEmitter(new AnimData("Petal_Dance_Flower_Pink", 60, 0, 0), new AnimData("Petal_Dance_Flower_Yellow", 60, 0, 0));
+                flowerEmitter.ParticlesPerTile = 3;
+
+                CircleSquareSprinkleEmitter sparkleEmitter = new CircleSquareSprinkleEmitter(new AnimData("Natural_Gift_Sparkle", 5));
+                sparkleEmitter.ParticlesPerTile = 2;
+                sparkleEmitter.StartHeight = 0;
+                sparkleEmitter.HeightSpeed = 20;
+                sparkleEmitter.SpeedDiff = 15;
+                MultiCircleSquareEmitter multiEmitter = new MultiCircleSquareEmitter();
+                multiEmitter.Emitters.Add(flowerEmitter);
+                multiEmitter.Emitters.Add(sparkleEmitter);
+                ((OffsetAction)skill.HitboxAction).Emitter = multiEmitter;
+                skill.HitboxAction.TargetAlignments = Alignment.Friend | Alignment.Self;
+                skill.Explosion.TargetAlignments = Alignment.Friend | Alignment.Self;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Aromatherapy";
             }
             else if (ii == 667)
             {
@@ -16321,6 +16413,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(125));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -16454,19 +16547,33 @@ namespace DataGenerator.Data
             }
             else if (ii == 677)
             {
-                skill.Name = new LocalText("**Anchor Shot");
+                skill.Name = new LocalText("-Anchor Shot");
                 skill.Desc = new LocalText("The user entangles the target with its anchor chain while attacking. The target becomes unable to flee.");
-                skill.BaseCharges = 20;
+                skill.BaseCharges = 16;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("immobilized", true, false)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ProjectileAction)skill.HitboxAction).Range = 4;
+                ((ProjectileAction)skill.HitboxAction).Speed = 10;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
+                ((ProjectileAction)skill.HitboxAction).Anim = new AnimData("Arrow_Shot", 2);
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.HitboxAction.ActionFX.Sound = "_UNK_DUN_Shatter_2";
+                BetweenEmitter endAnim = new BetweenEmitter(new AnimData("Wrap_White_Back", 3), new AnimData("Wrap_White_Front", 3));
+                endAnim.HeightBack = 16;
+                endAnim.HeightFront = 16;
+                skill.Data.HitFX.Emitter = endAnim;
+                skill.Data.HitFX.Sound = "_UNK_DUN_Clank";
             }
             else if (ii == 678)
             {
@@ -16553,17 +16660,33 @@ namespace DataGenerator.Data
             }
             else if (ii == 683)
             {
-                skill.Name = new LocalText("**Speed Swap");
+                skill.Name = new LocalText("Speed Swap");
                 skill.Desc = new LocalText("The user exchanges Speed stats with the target.");
-                skill.BaseCharges = 10;
+                skill.BaseCharges = 20;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.OnHits.Add(0, new SpeedSwapEvent());
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
+                ((ProjectileAction)skill.HitboxAction).Range = 6;
+                ((ProjectileAction)skill.HitboxAction).Speed = 0;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                skill.HitboxAction.PreActions.Add(new BattleFX(new SingleEmitter(new AnimData("Circle_Small_Green_In", 2)), "DUN_Growth_2", 0));
+                skill.HitboxAction.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                skill.Explosion.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+
+                SwingSwitchEmitter emitter = new SwingSwitchEmitter(new AnimData("Skill_Swap_RSE", 3));
+                emitter.AxisRatio = 0.5f;
+                emitter.Amount = 1;
+                emitter.RotationTime = 20;
+                skill.Data.IntroFX.Add(new BattleFX(emitter, "", 20));
+                SingleEmitter destAnim = new SingleEmitter(new AnimData("Circle_Small_Green_Out", 2));
+                destAnim.UseDest = true;
+                skill.Data.IntroFX.Add(new BattleFX(destAnim, "", 0));
+                skill.Data.IntroFX.Add(new BattleFX(new SingleEmitter(new AnimData("Circle_Small_Green_Out", 2)), "DUN_Growth", 0));
             }
             else if (ii == 684)
             {
@@ -16917,6 +17040,8 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 10;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new JawState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -17304,12 +17429,12 @@ namespace DataGenerator.Data
             else if (ii == 729)
             {
                 skill.Name = new LocalText("**Zippy Zap");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Desc = new LocalText("The user attacks the target with bursts of electricity at high speed. This move always goes first and results in a critical hit.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17320,7 +17445,7 @@ namespace DataGenerator.Data
             else if (ii == 730)
             {
                 skill.Name = new LocalText("**Splishy Splash");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user charges a huge wave with electricity and hits the opposing Pokémon with the wave. This may also leave the opposing Pokémon with paralysis.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -17336,7 +17461,7 @@ namespace DataGenerator.Data
             else if (ii == 731)
             {
                 skill.Name = new LocalText("**Floaty Fall");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user floats in the air, and then dives at a steep angle to attack the target. This may also make the target flinch.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -17352,7 +17477,7 @@ namespace DataGenerator.Data
             else if (ii == 732)
             {
                 skill.Name = new LocalText("**Pika Papow");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The more Pikachu loves its Trainer, the greater the move’s power. It never misses.");
                 skill.BaseCharges = 20;
                 skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -17368,12 +17493,12 @@ namespace DataGenerator.Data
             else if (ii == 733)
             {
                 skill.Name = new LocalText("**Bouncy Bubble");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Desc = new LocalText("The user attacks by shooting water bubbles at the target. It then absorbs water and restores its HP by half the damage taken by the target.");
+                skill.BaseCharges = 20;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17384,12 +17509,12 @@ namespace DataGenerator.Data
             else if (ii == 734)
             {
                 skill.Name = new LocalText("**Buzzy Buzz");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Desc = new LocalText("The user shoots a jolt of electricity to attack the target. This also leaves the target with paralysis.");
+                skill.BaseCharges = 20;
                 skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17400,12 +17525,12 @@ namespace DataGenerator.Data
             else if (ii == 735)
             {
                 skill.Name = new LocalText("**Sizzly Slide");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Desc = new LocalText("The user cloaks itself in fire and charges at the target. This also leaves the target with a burn.");
+                skill.BaseCharges = 20;
                 skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17416,12 +17541,12 @@ namespace DataGenerator.Data
             else if (ii == 736)
             {
                 skill.Name = new LocalText("**Glitzy Glow");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user bombards the target with telekinetic force. A wondrous wall of light is put up to weaken the power of the opposing Pokémon’s special moves.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
-                skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.HitRate = 95;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17432,12 +17557,12 @@ namespace DataGenerator.Data
             else if (ii == 737)
             {
                 skill.Name = new LocalText("**Baddy Bad");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user acts bad and attacks the target. A wondrous wall of light is put up to weaken the power of the opposing Pokémon’s physical moves.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
-                skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.HitRate = 95;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17448,12 +17573,12 @@ namespace DataGenerator.Data
             else if (ii == 738)
             {
                 skill.Name = new LocalText("**Sappy Seed");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Desc = new LocalText("The user grows a gigantic stalk that scatters seeds to attack the target. The seeds drain the target’s HP every turn.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
-                skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17464,12 +17589,12 @@ namespace DataGenerator.Data
             else if (ii == 739)
             {
                 skill.Name = new LocalText("**Freezy Frost");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Desc = new LocalText("The user attacks with a crystal made of cold frozen haze. It eliminates every stat change among all the Pokémon engaged in battle.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
-                skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17480,12 +17605,12 @@ namespace DataGenerator.Data
             else if (ii == 740)
             {
                 skill.Name = new LocalText("**Sparkly Swirl");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Desc = new LocalText("The user attacks the target by wrapping it with a whirlwind of an overpowering scent. This also heals all status conditions of the user’s party.");
+                skill.BaseCharges = 5;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
-                skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.HitRate = 85;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17496,7 +17621,7 @@ namespace DataGenerator.Data
             else if (ii == 741)
             {
                 skill.Name = new LocalText("**Veevee Volley");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The more Eevee loves its Trainer, the greater the move’s power. It never misses.");
                 skill.BaseCharges = 20;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -17512,7 +17637,7 @@ namespace DataGenerator.Data
             else if (ii == 742)
             {
                 skill.Name = new LocalText("**Double Iron Bash");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user rotates, centering the hex nut in its chest, and then strikes with its arms twice in a row. This may also make the target flinch.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -17528,8 +17653,8 @@ namespace DataGenerator.Data
             else if (ii == 743)
             {
                 skill.Name = new LocalText("**Max Guard");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
@@ -17542,7 +17667,7 @@ namespace DataGenerator.Data
             else if (ii == 744)
             {
                 skill.Name = new LocalText("**Dynamax Cannon");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user unleashes a strong beam from its core. This move deals twice the damage if the target is Dynamaxed.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -17558,7 +17683,7 @@ namespace DataGenerator.Data
             else if (ii == 745)
             {
                 skill.Name = new LocalText("**Snipe Shot");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user ignores the effects of opposing Pokémon’s moves and Abilities that draw in moves, allowing this move to hit the chosen target.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -17574,10 +17699,12 @@ namespace DataGenerator.Data
             else if (ii == 746)
             {
                 skill.Name = new LocalText("**Jaw Lock");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("This move prevents the user and the target from switching out until either of them faints. The effect goes away if either of the Pokémon leaves the field.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new JawState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -17590,7 +17717,7 @@ namespace DataGenerator.Data
             else if (ii == 747)
             {
                 skill.Name = new LocalText("**Stuff Cheeks");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user eats its held Berry, then sharply raises its Defense stat.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -17604,7 +17731,7 @@ namespace DataGenerator.Data
             else if (ii == 748)
             {
                 skill.Name = new LocalText("**No Retreat");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("This move raises all the user’s stats but prevents the user from switching out or fleeing.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -17618,7 +17745,7 @@ namespace DataGenerator.Data
             else if (ii == 749)
             {
                 skill.Name = new LocalText("**Tar Shot");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user pours sticky tar over the target, lowering the target’s Speed stat. The target becomes weaker to Fire-type moves.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -17632,7 +17759,7 @@ namespace DataGenerator.Data
             else if (ii == 750)
             {
                 skill.Name = new LocalText("**Magic Powder");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user scatters a cloud of magic powder that changes the target to Psychic type.");
                 skill.BaseCharges = 20;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -17646,7 +17773,7 @@ namespace DataGenerator.Data
             else if (ii == 751)
             {
                 skill.Name = new LocalText("**Dragon Darts");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks twice using Dreepy. If there are two targets, this move hits each target once.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -17662,7 +17789,7 @@ namespace DataGenerator.Data
             else if (ii == 752)
             {
                 skill.Name = new LocalText("**Teatime");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user has teatime with all the Pokémon in the battle. Each Pokémon eats its held Berry.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -17676,7 +17803,7 @@ namespace DataGenerator.Data
             else if (ii == 753)
             {
                 skill.Name = new LocalText("**Octolock");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user locks the target in and prevents it from fleeing. This move also lowers the target’s Defense and Sp. Def every turn.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -17690,7 +17817,7 @@ namespace DataGenerator.Data
             else if (ii == 754)
             {
                 skill.Name = new LocalText("**Bolt Beak");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user stabs the target with its electrified beak. If the user attacks before the target, the power of this move is doubled.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -17706,10 +17833,12 @@ namespace DataGenerator.Data
             else if (ii == 755)
             {
                 skill.Name = new LocalText("**Fishious Rend");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user rends the target with its hard gills. If the user attacks before the target, the power of this move is doubled.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new JawState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -17740,12 +17869,12 @@ namespace DataGenerator.Data
             else if (ii == 757)
             {
                 skill.Name = new LocalText("**Max Flare");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Fire-type attack Dynamax Pokémon use. The user intensifies the sun for five turns.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "fire";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17756,12 +17885,12 @@ namespace DataGenerator.Data
             else if (ii == 758)
             {
                 skill.Name = new LocalText("**Max Flutterby");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Bug-type attack Dynamax Pokémon use. This lowers the target’s Sp. Atk stat.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "bug";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17772,12 +17901,12 @@ namespace DataGenerator.Data
             else if (ii == 759)
             {
                 skill.Name = new LocalText("**Max Lightning");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is an Electric-type attack Dynamax Pokémon use. The user turns the ground into Electric Terrain for five turns.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "electric";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17788,12 +17917,12 @@ namespace DataGenerator.Data
             else if (ii == 760)
             {
                 skill.Name = new LocalText("**Max Strike");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Normal-type attack Dynamax Pokémon use. This lowers the target’s Speed stat.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17804,12 +17933,12 @@ namespace DataGenerator.Data
             else if (ii == 761)
             {
                 skill.Name = new LocalText("**Max Knuckle");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Fighting-type attack Dynamax Pokémon use. This raises ally Pokémon’s Attack stats.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "fighting";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17820,12 +17949,12 @@ namespace DataGenerator.Data
             else if (ii == 762)
             {
                 skill.Name = new LocalText("**Max Phantasm");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Ghost-type attack Dynamax Pokémon use. This lowers the target’s Defense stat.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "ghost";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17836,12 +17965,12 @@ namespace DataGenerator.Data
             else if (ii == 763)
             {
                 skill.Name = new LocalText("**Max Hailstorm");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is an Ice-type attack Dynamax Pokémon use. The user summons a hailstorm lasting five turns.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "ice";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17852,12 +17981,12 @@ namespace DataGenerator.Data
             else if (ii == 764)
             {
                 skill.Name = new LocalText("**Max Ooze");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Poison-type attack Dynamax Pokémon use. This raises ally Pokémon’s Sp. Atk stats.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "poison";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17868,12 +17997,12 @@ namespace DataGenerator.Data
             else if (ii == 765)
             {
                 skill.Name = new LocalText("**Max Geyser");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Water-type attack Dynamax Pokémon use. The user summons a heavy rain that falls for five turns.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "water";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17884,12 +18013,12 @@ namespace DataGenerator.Data
             else if (ii == 766)
             {
                 skill.Name = new LocalText("**Max Airstream");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Flying-type attack Dynamax Pokémon use. This raises ally Pokémon’s Speed stats.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "flying";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17900,12 +18029,12 @@ namespace DataGenerator.Data
             else if (ii == 767)
             {
                 skill.Name = new LocalText("**Max Starfall");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Fairy-type attack Dynamax Pokémon use. The user turns the ground into Misty Terrain for five turns.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "fairy";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17916,12 +18045,12 @@ namespace DataGenerator.Data
             else if (ii == 768)
             {
                 skill.Name = new LocalText("**Max Wyrmwind");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Dragon-type attack Dynamax Pokémon use. This lowers the target’s Attack stat.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "dragon";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17932,12 +18061,12 @@ namespace DataGenerator.Data
             else if (ii == 769)
             {
                 skill.Name = new LocalText("**Max Mindstorm");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Psychic-type attack Dynamax Pokémon use. The user turns the ground into Psychic Terrain for five turns.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "psychic";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17948,12 +18077,12 @@ namespace DataGenerator.Data
             else if (ii == 770)
             {
                 skill.Name = new LocalText("**Max Rockfall");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Rock-type attack Dynamax Pokémon use. The user summons a sandstorm lasting five turns.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "rock";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17964,12 +18093,12 @@ namespace DataGenerator.Data
             else if (ii == 771)
             {
                 skill.Name = new LocalText("**Max Quake");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Ground-type attack Dynamax Pokémon use. This raises ally Pokémon’s Sp. Def stats.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "ground";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17980,12 +18109,12 @@ namespace DataGenerator.Data
             else if (ii == 772)
             {
                 skill.Name = new LocalText("**Max Darkness");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Dark-type attack Dynamax Pokémon use. This lowers the target’s Sp. Def stat.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "dark";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -17996,12 +18125,12 @@ namespace DataGenerator.Data
             else if (ii == 773)
             {
                 skill.Name = new LocalText("**Max Overgrowth");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Grass-type attack Dynamax Pokémon use. The user turns the ground into Grassy Terrain for five turns.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "grass";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -18012,12 +18141,12 @@ namespace DataGenerator.Data
             else if (ii == 774)
             {
                 skill.Name = new LocalText("**Max Steelspike");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 0;
+                skill.Desc = new LocalText("This is a Steel-type attack Dynamax Pokémon use. This raises ally Pokémon’s Defense stats.");
+                skill.BaseCharges = 10;
                 skill.Data.Element = "steel";
-                skill.Data.Category = BattleData.SkillCategory.None;
+                skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(0));
+                skill.Data.SkillStates.Set(new BasePowerState(10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -18028,7 +18157,7 @@ namespace DataGenerator.Data
             else if (ii == 775)
             {
                 skill.Name = new LocalText("**Clangorous Soul");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user raises all its stats by using some of its HP.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -18042,7 +18171,7 @@ namespace DataGenerator.Data
             else if (ii == 776)
             {
                 skill.Name = new LocalText("**Body Press");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks by slamming its body into the target. The higher the user’s Defense, the more damage it can inflict on the target.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18082,7 +18211,7 @@ namespace DataGenerator.Data
             else if (ii == 778)
             {
                 skill.Name = new LocalText("**Drum Beating");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user plays its drum, controlling the drum’s roots to attack the target. This also lowers the target’s Speed stat.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18098,7 +18227,7 @@ namespace DataGenerator.Data
             else if (ii == 779)
             {
                 skill.Name = new LocalText("**Snap Trap");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user snares the target in a snap trap for four to five turns.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18135,10 +18264,11 @@ namespace DataGenerator.Data
             else if (ii == 781)
             {
                 skill.Name = new LocalText("**Behemoth Blade");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user becomes a gigantic sword and cuts the target. This move deals twice the damage if the target is Dynamaxed.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -18151,7 +18281,7 @@ namespace DataGenerator.Data
             else if (ii == 782)
             {
                 skill.Name = new LocalText("**Behemoth Bash");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user becomes a gigantic shield and slams into the target. This move deals twice the damage if the target is Dynamaxed.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18167,7 +18297,7 @@ namespace DataGenerator.Data
             else if (ii == 783)
             {
                 skill.Name = new LocalText("**Aura Wheel");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("Morpeko attacks and raises its Speed with the energy stored in its cheeks. This move’s type changes depending on the user’s form.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18183,7 +18313,7 @@ namespace DataGenerator.Data
             else if (ii == 784)
             {
                 skill.Name = new LocalText("**Breaking Swipe");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user swings its tough tail wildly and attacks opposing Pokémon. This also lowers their Attack stats.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18199,7 +18329,7 @@ namespace DataGenerator.Data
             else if (ii == 785)
             {
                 skill.Name = new LocalText("**Branch Poke");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks the target by poking it with a sharply pointed branch.");
                 skill.BaseCharges = 40;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18215,7 +18345,7 @@ namespace DataGenerator.Data
             else if (ii == 786)
             {
                 skill.Name = new LocalText("**Overdrive");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks opposing Pokémon by twanging a guitar or bass guitar, causing a huge echo and strong vibration.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18285,7 +18415,7 @@ namespace DataGenerator.Data
             else if (ii == 789)
             {
                 skill.Name = new LocalText("**Spirit Break");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks the target with so much force that it could break the target’s spirit. This also lowers the target’s Sp. Atk stat.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18301,7 +18431,7 @@ namespace DataGenerator.Data
             else if (ii == 790)
             {
                 skill.Name = new LocalText("**Strange Steam");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks the target by emitting steam. This may also confuse the target.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18344,7 +18474,7 @@ namespace DataGenerator.Data
             else if (ii == 792)
             {
                 skill.Name = new LocalText("**Obstruct");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession. Direct contact harshly lowers the attacker’s Defense stat.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -18358,7 +18488,7 @@ namespace DataGenerator.Data
             else if (ii == 793)
             {
                 skill.Name = new LocalText("**False Surrender");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user pretends to bow its head, but then it stabs the target with its disheveled hair. This attack never misses.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18374,7 +18504,7 @@ namespace DataGenerator.Data
             else if (ii == 794)
             {
                 skill.Name = new LocalText("**Meteor Assault");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks wildly with its thick leek. The user can’t move on the next turn, because the force of this move makes it stagger.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18390,7 +18520,7 @@ namespace DataGenerator.Data
             else if (ii == 795)
             {
                 skill.Name = new LocalText("**Eternabeam");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("This is Eternatus’s most powerful attack in its original form. The user can’t move on the next turn.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18406,7 +18536,7 @@ namespace DataGenerator.Data
             else if (ii == 796)
             {
                 skill.Name = new LocalText("**Steel Beam");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user fires a beam of steel that it collected from its entire body. This also damages the user.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18422,7 +18552,7 @@ namespace DataGenerator.Data
             else if (ii == 797)
             {
                 skill.Name = new LocalText("**Expanding Force");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks the target with its psychic power. This move’s power goes up and damages all opposing Pokémon on Psychic Terrain.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18438,7 +18568,7 @@ namespace DataGenerator.Data
             else if (ii == 798)
             {
                 skill.Name = new LocalText("**Steel Roller");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks while destroying the terrain. This move fails when the ground hasn’t turned into a terrain.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18454,7 +18584,7 @@ namespace DataGenerator.Data
             else if (ii == 799)
             {
                 skill.Name = new LocalText("**Scale Shot");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks by shooting scales two to five times in a row. This move boosts the user’s Speed stat but lowers its Defense stat.");
                 skill.BaseCharges = 20;
                 skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18470,7 +18600,7 @@ namespace DataGenerator.Data
             else if (ii == 800)
             {
                 skill.Name = new LocalText("**Meteor Beam");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("In this two-turn attack, the user gathers space power and boosts its Sp. Atk stat, then attacks the target on the next turn.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18486,7 +18616,7 @@ namespace DataGenerator.Data
             else if (ii == 801)
             {
                 skill.Name = new LocalText("**Shell Side Arm");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("This move inflicts physical or special damage, whichever will be more effective. This may also poison the target.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18502,7 +18632,7 @@ namespace DataGenerator.Data
             else if (ii == 802)
             {
                 skill.Name = new LocalText("**Misty Explosion");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks everything around it and faints upon using this move. This move’s power is increased on Misty Terrain.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18518,7 +18648,7 @@ namespace DataGenerator.Data
             else if (ii == 803)
             {
                 skill.Name = new LocalText("**Grassy Glide");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("Gliding on the ground, the user attacks the target. This move always goes first on Grassy Terrain.");
                 skill.BaseCharges = 20;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18534,7 +18664,7 @@ namespace DataGenerator.Data
             else if (ii == 804)
             {
                 skill.Name = new LocalText("**Rising Voltage");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks with electric voltage rising from the ground. This move’s power doubles when the target is on Electric Terrain.");
                 skill.BaseCharges = 20;
                 skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18550,7 +18680,7 @@ namespace DataGenerator.Data
             else if (ii == 805)
             {
                 skill.Name = new LocalText("**Terrain Pulse");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user utilizes the power of the terrain to attack. This move’s type and power changes depending on the terrain when it’s used.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18566,7 +18696,7 @@ namespace DataGenerator.Data
             else if (ii == 806)
             {
                 skill.Name = new LocalText("**Skitter Smack");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user skitters behind the target to attack. This also lowers the target’s Sp. Atk stat.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18582,7 +18712,7 @@ namespace DataGenerator.Data
             else if (ii == 807)
             {
                 skill.Name = new LocalText("**Burning Jealousy");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks with energy from jealousy. This leaves all opposing Pokémon that have had their stats boosted during the turn with a burn.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "fire";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18598,7 +18728,7 @@ namespace DataGenerator.Data
             else if (ii == 808)
             {
                 skill.Name = new LocalText("**Lash Out");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user lashes out to vent its frustration toward the target. If the user’s stats were lowered during this turn, the power of this move is doubled.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18614,7 +18744,7 @@ namespace DataGenerator.Data
             else if (ii == 809)
             {
                 skill.Name = new LocalText("**Poltergeist");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks the target by controlling the target’s item. The move fails if the target doesn’t have an item.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18630,7 +18760,7 @@ namespace DataGenerator.Data
             else if (ii == 810)
             {
                 skill.Name = new LocalText("**Corrosive Gas");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user surrounds everything around it with highly acidic gas and melts away items they hold.");
                 skill.BaseCharges = 40;
                 skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -18644,7 +18774,7 @@ namespace DataGenerator.Data
             else if (ii == 811)
             {
                 skill.Name = new LocalText("**Coaching");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user properly coaches its ally Pokémon, boosting their Attack and Defense stats.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -18658,7 +18788,7 @@ namespace DataGenerator.Data
             else if (ii == 812)
             {
                 skill.Name = new LocalText("**Flip Turn");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("After making its attack, the user rushes back to switch places with a party Pokémon in waiting.");
                 skill.BaseCharges = 20;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18674,7 +18804,7 @@ namespace DataGenerator.Data
             else if (ii == 813)
             {
                 skill.Name = new LocalText("**Triple Axel");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("A consecutive three-kick attack that becomes more powerful with each successful hit.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18690,7 +18820,7 @@ namespace DataGenerator.Data
             else if (ii == 814)
             {
                 skill.Name = new LocalText("**Dual Wingbeat");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user slams the target with its wings. The target is hit twice in a row.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18706,7 +18836,7 @@ namespace DataGenerator.Data
             else if (ii == 815)
             {
                 skill.Name = new LocalText("**Scorching Sands");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user throws scorching sand at the target to attack. This may also leave the target with a burn.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18722,7 +18852,7 @@ namespace DataGenerator.Data
             else if (ii == 816)
             {
                 skill.Name = new LocalText("**Jungle Healing");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user becomes one with the jungle, restoring HP and healing any status conditions of itself and its ally Pokémon in battle.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
@@ -18736,7 +18866,7 @@ namespace DataGenerator.Data
             else if (ii == 817)
             {
                 skill.Name = new LocalText("**Wicked Blow");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user, having mastered the Dark style, strikes the target with a fierce blow. This attack always results in a critical hit.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18752,7 +18882,7 @@ namespace DataGenerator.Data
             else if (ii == 818)
             {
                 skill.Name = new LocalText("**Surging Strikes");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user, having mastered the Water style, strikes the target with a flowing motion three times in a row. This attack always results in a critical hit.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18768,7 +18898,7 @@ namespace DataGenerator.Data
             else if (ii == 819)
             {
                 skill.Name = new LocalText("**Thunder Cage");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user traps the target in a cage of sparking electricity for four to five turns.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "electric";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18784,7 +18914,7 @@ namespace DataGenerator.Data
             else if (ii == 820)
             {
                 skill.Name = new LocalText("**Dragon Energy");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("Converting its life-force into power, the user attacks opposing Pokémon. The lower the user’s HP, the lower the move’s power.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "dragon";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18800,7 +18930,7 @@ namespace DataGenerator.Data
             else if (ii == 821)
             {
                 skill.Name = new LocalText("**Freezing Glare");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user shoots its psychic power from its eyes to attack. This may also leave the target frozen.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18816,7 +18946,7 @@ namespace DataGenerator.Data
             else if (ii == 822)
             {
                 skill.Name = new LocalText("**Fiery Wrath");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user transforms its wrath into a fire-like aura to attack. This may also make opposing Pokémon flinch.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18832,7 +18962,7 @@ namespace DataGenerator.Data
             else if (ii == 823)
             {
                 skill.Name = new LocalText("**Thunderous Kick");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user overwhelms the target with lightning-like movement before delivering a kick. This also lowers the target’s Defense stat.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18848,7 +18978,7 @@ namespace DataGenerator.Data
             else if (ii == 824)
             {
                 skill.Name = new LocalText("**Glacial Lance");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks by hurling a blizzard-cloaked icicle lance at opposing Pokémon.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -18864,7 +18994,7 @@ namespace DataGenerator.Data
             else if (ii == 825)
             {
                 skill.Name = new LocalText("**Astral Barrage");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks by sending a frightful amount of small ghosts at opposing Pokémon.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18880,7 +19010,7 @@ namespace DataGenerator.Data
             else if (ii == 826)
             {
                 skill.Name = new LocalText("**Eerie Spell");
-                skill.Desc = new LocalText("");
+                skill.Desc = new LocalText("The user attacks with its tremendous psychic power. This also removes 3 PP from the target’s last move.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -18893,6 +19023,1206 @@ namespace DataGenerator.Data
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
             }
+            else if (ii == 827)
+            {
+                skill.Name = new LocalText("**Dire Claw");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "poison";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 828)
+            {
+                skill.Name = new LocalText("**Psyshield Bash");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 829)
+            {
+                skill.Name = new LocalText("**Power Shift");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 830)
+            {
+                skill.Name = new LocalText("**Stone Axe");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "rock";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(65));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 831)
+            {
+                skill.Name = new LocalText("**Springtide Storm");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "fairy";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 80;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 832)
+            {
+                skill.Name = new LocalText("**Mystical Power");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 833)
+            {
+                skill.Name = new LocalText("**Raging Fury");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fire";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 834)
+            {
+                skill.Name = new LocalText("**Wave Crash");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 835)
+            {
+                skill.Name = new LocalText("**Chloroblast");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "grass";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 95;
+                skill.Data.SkillStates.Set(new BasePowerState(150));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 836)
+            {
+                skill.Name = new LocalText("**Mountain Gale");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ice";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 85;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 837)
+            {
+                skill.Name = new LocalText("**Victory Dance");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fighting";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 838)
+            {
+                skill.Name = new LocalText("**Headlong Rush");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "ground";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 839)
+            {
+                skill.Name = new LocalText("Barb Barrage");
+                skill.Desc = new LocalText("The user launches countless toxic barbs to inflict damage. This may also poison the target. This move’s power is doubled if the target is already poisoned.");
+                skill.BaseCharges = 14;
+                skill.Data.Element = "poison";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
+                skill.Data.BeforeHits.Add(0, new StatusPowerEvent("poison", true));
+                skill.Data.BeforeHits.Add(0, new StatusPowerEvent("poison_toxic", true));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("poison", true, true)));
+                skill.Strikes = 1;
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ProjectileAction)skill.HitboxAction).Range = 6;
+                ((ProjectileAction)skill.HitboxAction).Speed = 16;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
+                ((ProjectileAction)skill.HitboxAction).Anim = new AnimData("Spike_Cannon", 3);
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Throw_Spike";
+                SqueezedAreaEmitter emitter = new SqueezedAreaEmitter(new AnimData("Bubbles_Purple", 3));
+                emitter.BurstTime = 3;
+                emitter.Bursts = 4;
+                emitter.ParticlesPerBurst = 1;
+                emitter.Range = 12;
+                emitter.StartHeight = -4;
+                emitter.HeightSpeed = 12;
+                emitter.SpeedDiff = 4;
+                skill.Data.HitFX.Emitter = emitter;
+            }
+            else if (ii == 840)
+            {
+                skill.Name = new LocalText("**Esper Wing");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 841)
+            {
+                skill.Name = new LocalText("**Bitter Malice");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ghost";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(75));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 842)
+            {
+                skill.Name = new LocalText("**Shelter");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "steel";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 843)
+            {
+                skill.Name = new LocalText("**Triple Arrows");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fighting";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 844)
+            {
+                skill.Name = new LocalText("-Infernal Parade");
+                skill.Desc = new LocalText("The user attacks with myriad fireballs. This may also leave the target with a burn. This move's power is doubled if the target has a status condition.");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "ghost";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(35));
+                skill.Data.BeforeHits.Add(0, new MajorStatusPowerEvent(true, 2, 1));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("burn", true, true)));
+                skill.Strikes = 1;
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ProjectileAction)skill.HitboxAction).Range = 4;
+                ((ProjectileAction)skill.HitboxAction).Speed = 10;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
+                AttachAreaEmitter emitter = new AttachAreaEmitter(new AnimData("Grudge_Lights", 3));
+                emitter.BurstTime = 2;
+                emitter.ParticlesPerBurst = 1;
+                emitter.Range = 12;
+                emitter.AddHeight = 12;
+                ((ProjectileAction)skill.HitboxAction).Emitter = emitter;
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Fire_Spin";
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Thief_Hit_Dark", 1));
+            }
+            else if (ii == 845)
+            {
+                skill.Name = new LocalText("**Ceaseless Edge");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "dark";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(65));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 846)
+            {
+                skill.Name = new LocalText("**Bleakwind Storm");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "flying";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 80;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 847)
+            {
+                skill.Name = new LocalText("**Wildbolt Storm");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "electric";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 80;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 848)
+            {
+                skill.Name = new LocalText("**Sandsear Storm");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ground";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 80;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 849)
+            {
+                skill.Name = new LocalText("**Lunar Blessing");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 850)
+            {
+                skill.Name = new LocalText("**Take Heart");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 851)
+            {
+                skill.Name = new LocalText("**Tera Blast");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 852)
+            {
+                skill.Name = new LocalText("**Silk Trap");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "bug";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 853)
+            {
+                skill.Name = new LocalText("**Axe Kick");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fighting";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 854)
+            {
+                skill.Name = new LocalText("**Last Respects");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ghost";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 855)
+            {
+                skill.Name = new LocalText("**Lumina Crash");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 856)
+            {
+                skill.Name = new LocalText("**Order Up");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "dragon";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 857)
+            {
+                skill.Name = new LocalText("**Jet Punch");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(60));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 858)
+            {
+                skill.Name = new LocalText("**Spicy Extract");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "grass";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 859)
+            {
+                skill.Name = new LocalText("**Spin Out");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "steel";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 860)
+            {
+                skill.Name = new LocalText("**Population Bomb");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(20));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 861)
+            {
+                skill.Name = new LocalText("**Ice Spinner");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "ice";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 862)
+            {
+                skill.Name = new LocalText("**Glaive Rush");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "dragon";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 863)
+            {
+                skill.Name = new LocalText("**Revival Blessing");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 1;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 864)
+            {
+                skill.Name = new LocalText("**Salt Cure");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "rock";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 865)
+            {
+                skill.Name = new LocalText("**Triple Dive");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 95;
+                skill.Data.SkillStates.Set(new BasePowerState(30));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 866)
+            {
+                skill.Name = new LocalText("**Mortal Spin");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "poison";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(30));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 867)
+            {
+                skill.Name = new LocalText("**Doodle");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = 100;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 868)
+            {
+                skill.Name = new LocalText("**Fillet Away");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 869)
+            {
+                skill.Name = new LocalText("**Kowtow Cleave");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "dark";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
+                skill.Data.HitRate = -1;
+                skill.Data.SkillStates.Set(new BasePowerState(85));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 870)
+            {
+                skill.Name = new LocalText("**Flower Trick");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "grass";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = -1;
+                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 871)
+            {
+                skill.Name = new LocalText("**Torch Song");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fire";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 872)
+            {
+                skill.Name = new LocalText("**Aqua Step");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 873)
+            {
+                skill.Name = new LocalText("**Raging Bull");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 874)
+            {
+                skill.Name = new LocalText("**Make It Rain");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "steel";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 875)
+            {
+                skill.Name = new LocalText("**Psyblade");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 876)
+            {
+                skill.Name = new LocalText("**Hydro Steam");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 15;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 877)
+            {
+                skill.Name = new LocalText("**Ruination");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "dark";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 90;
+                skill.Data.SkillStates.Set(new BasePowerState(1));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 878)
+            {
+                skill.Name = new LocalText("**Collision Course");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "fighting";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 879)
+            {
+                skill.Name = new LocalText("**Electro Drift");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "electric";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 880)
+            {
+                skill.Name = new LocalText("**Shed Tail");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 881)
+            {
+                skill.Name = new LocalText("**Chilly Reception");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ice";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 882)
+            {
+                skill.Name = new LocalText("**Tidy Up");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 883)
+            {
+                skill.Name = new LocalText("**Snowscape");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ice";
+                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.HitRate = -1;
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 884)
+            {
+                skill.Name = new LocalText("**Pounce");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 20;
+                skill.Data.Element = "bug";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 885)
+            {
+                skill.Name = new LocalText("**Trailblaze");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 20;
+                skill.Data.Element = "grass";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 886)
+            {
+                skill.Name = new LocalText("**Chilling Water");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 20;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 887)
+            {
+                skill.Name = new LocalText("**Hyper Drill");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "normal";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 888)
+            {
+                skill.Name = new LocalText("**Twin Beam");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "psychic";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 889)
+            {
+                skill.Name = new LocalText("**Rage Fist");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "ghost";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 890)
+            {
+                skill.Name = new LocalText("**Armor Cannon");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "fire";
+                skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 891)
+            {
+                skill.Name = new LocalText("**Bitter Blade");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fire";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 892)
+            {
+                skill.Name = new LocalText("**Double Shock");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "electric";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 893)
+            {
+                skill.Name = new LocalText("**Gigaton Hammer");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 5;
+                skill.Data.Element = "steel";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(160));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 894)
+            {
+                skill.Name = new LocalText("**Comeuppance");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "dark";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(1));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 895)
+            {
+                skill.Name = new LocalText("**Aqua Cutter");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 20;
+                skill.Data.Element = "water";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new BladeState());
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 896)
+            {
+                skill.Name = new LocalText("**Blazing Torque");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fire";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 897)
+            {
+                skill.Name = new LocalText("**Wicked Torque");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "dark";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 898)
+            {
+                skill.Name = new LocalText("**Noxious Torque");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "poison";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 899)
+            {
+                skill.Name = new LocalText("**Combat Torque");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fighting";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+            else if (ii == 900)
+            {
+                skill.Name = new LocalText("**Magical Torque");
+                skill.Desc = new LocalText("");
+                skill.BaseCharges = 10;
+                skill.Data.Element = "fairy";
+                skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Strikes = 1;
+                skill.HitboxAction = new AttackAction();
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction.TargetAlignments = Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Foe;
+            }
+
 
             if (skill.Name.DefaultText.StartsWith("**"))
                 skill.Name.DefaultText = skill.Name.DefaultText.Replace("*", "");

@@ -50,18 +50,16 @@ namespace DataGenerator.Data
         }
 
 
-        const int TOTAL_DEX = 899;
+        const int TOTAL_DEX = 1011;
         static Dictionary<int, string> langIDs;
         static Dictionary<int, int> langCols;
         static int[] existing = { 1, 3, 5, 6, 7, 8, 9 };
         static int[] straggler = { 11 };
         static int[] added = { 4, 12 };
         const int TOTAL_LANG_COLS = 13;
-
+        const int ADD_VERSION_ID = 25;
         static string MONSTER_PATH { get => GenPath.DATA_GEN_PATH + "Monster/"; }
-        static string DEX_FILE { get => MONSTER_PATH + "pokedex.6.sqlite"; }
-        static string DEX_7_FILE { get => MONSTER_PATH + "pokedex.7.sqlite"; }
-        static string TL_FILE { get => MONSTER_PATH + "pokedex.8.sqlite"; }
+        static string TL_FILE { get => MONSTER_PATH + "pokedex.9.sqlite"; }
 
         static List<string> monsterKeys;
 
@@ -100,6 +98,7 @@ namespace DataGenerator.Data
             //CreateMoves();
             //CreateMoveCodes();
             //CreateAbilities();
+            //CreateAbilityCodes();
             //CreateItems();
         }
 
@@ -131,27 +130,28 @@ namespace DataGenerator.Data
                 {
                     List<byte> personality;
                     int actualForme = jj;
-                    while (!personalities.TryGetValue(ii + "-" + actualForme, out personality))
-                    {
+                    while (!personalities.TryGetValue(ii + "-" + actualForme, out personality) && actualForme > 0)
                         actualForme--;
-                    }
+                    if (personality == null)
+                        personality = new List<byte>();
                     ((MonsterFormData)totalEntries[ii].Forms[jj]).Personalities = personality;
                 }
             }
-            //WritePersonalityChecklist(personalities, totalEntries);
 
-            //PrintLearnables();
-
-
-            //m_dbConnection.Close();
-            //m_db7Connection.Close();
             m_dbTLConnection.Close();
+
+            WritePersonalityChecklist(personalities, totalEntries);
+
+            //CreateLearnables();
+            ListAllIncompletes(totalEntries);
+
 
             //string outpt = "";
             for (int ii = 0; ii < TOTAL_DEX; ii++)
             {
                 totalEntries[ii].JoinRate = MapJoinRate(ii, totalEntries);
                 MapFriendshipEvo(ii, totalEntries);
+                MapFormEvo(ii, totalEntries);
                 //if (TotalEntries[ii].JoinRate > 0)
                 //    outpt += (TotalEntries[ii].Name + ": " + TotalEntries[ii].JoinRate + "\n");
             }
@@ -211,14 +211,28 @@ namespace DataGenerator.Data
                 for (int jj = 0; jj < totalEntries[ii].Forms.Count; jj++)
                 {
                     bool include = !totalEntries[ii].Forms[jj].Temporary;
+                    // forms that are temporary but result in personality change
                     switch (ii)
                     {
                         case 421://cherrim
                         case 746://wishiwashi
                         case 774://minior
                         case 877://morpeko
+                        case 964://palafin
                             include = true;
                             break;
+                    }
+                    //forms that are not temporary but do not result in personality change
+                    if (jj > 0)
+                    {
+                        switch (ii)
+                        {
+                            case 201://unown
+                            case 869://alcremie
+                            case 931://squawkabilliy
+                                include = false;
+                                break;
+                        }
                     }
                     if (!include)
                         continue;
@@ -562,6 +576,116 @@ namespace DataGenerator.Data
                             evoDetail.Weather = "sandstorm";//sandstorm
                             branch.Details.Add(evoDetail);
                         }
+                        else if (evoSpecies == 899)//wyrdeer
+                        {
+                            //FIXME
+                            EvoMoveUse evoDetail = new EvoMoveUse();
+                            evoDetail.LastMoveStatusID = "last_used_move";
+                            evoDetail.MoveRepeatStatusID = "times_move_used";
+                            evoDetail.MoveNum = "psyshield_bash";
+                            evoDetail.Amount = 10;
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 900)//kleavor
+                        {
+                            //FIXME
+                            EvoItem evoDetail = new EvoItem();
+                            evoDetail.ItemNum = "held_hard_stone";
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 901)//ursaluna
+                        {
+                            //FIXME
+                            EvoItem evoDetail = new EvoItem();
+                            evoDetail.ItemNum = "held_soft_sand";
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 902)//basculegion
+                        {
+                            //FIXME
+                            EvoTookDamage evoDetail = new EvoTookDamage();
+                            evoDetail.Amount = 200;
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 904)//overqwil
+                        {
+                            //FIXME
+                            EvoMoveUse evoDetail = new EvoMoveUse();
+                            evoDetail.LastMoveStatusID = "last_used_move";
+                            evoDetail.MoveRepeatStatusID = "times_move_used";
+                            evoDetail.MoveNum = "barb_barrage";
+                            evoDetail.Amount = 10;
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 923)//pawmot
+                        {
+                            //FIXME
+                            EvoWalk evoDetail = new EvoWalk();
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 925)//maushold
+                        {
+                            //FIXME
+                            EvoLevel evoDetail = new EvoLevel();
+                            evoDetail.Level = Convert.ToInt32(25);
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 936)//armarouge
+                        {
+                            //FIXME
+                            EvoItem evoDetail = new EvoItem();
+                            evoDetail.ItemNum = "empty";
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 937)//ceruledge
+                        {
+                            //FIXME
+                            EvoItem evoDetail = new EvoItem();
+                            evoDetail.ItemNum = "empty";
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 947)//brambleghast
+                        {
+                            //FIXME
+                            EvoWalk evoDetail = new EvoWalk();
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 954)//rabsca
+                        {
+                            //FIXME
+                            EvoWalk evoDetail = new EvoWalk();
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 964)//palafin
+                        {
+                            //FIXME
+                            EvoRescue evoDetail = new EvoRescue();
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 979)//annihilape
+                        {
+                            //FIXME
+                            EvoMoveUse evoDetail = new EvoMoveUse();
+                            evoDetail.LastMoveStatusID = "last_used_move";
+                            evoDetail.MoveRepeatStatusID = "times_move_used";
+                            evoDetail.MoveNum = "rage_fist";
+                            evoDetail.Amount = 10;
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 983)//kingambit
+                        {
+                            //FIXME
+                            EvoKillCount evoDetail = new EvoKillCount();
+                            evoDetail.Amount = 10;
+                            branch.Details.Add(evoDetail);
+                        }
+                        else if (evoSpecies == 1000)//gholdengo
+                        {
+                            //FIXME
+                            EvoMoney evoDetail = new EvoMoney();
+                            evoDetail.Amount = 1000000;
+                            branch.Details.Add(evoDetail);
+                        }
                         else if (evoSpecies == 869)//alcremie
                             branch.Details.Add(new EvoFormCream());
                         else if (evoSpecies == 892)//urshifu
@@ -784,6 +908,8 @@ namespace DataGenerator.Data
                         evoDetail.ShedSpecies = monsterKeys[292];
                         branch.Details.Add(evoDetail);
                     }
+                    else if (evoSpecies == 414)//mothim
+                        branch.Details.Add(new EvoSetForm(0));
                     else if (evoSpecies == 666)//vivillon
                         branch.Details.Add(new EvoFormLocOrigin());
                     else if (evoSpecies == 678)//meowstic
@@ -809,6 +935,7 @@ namespace DataGenerator.Data
                             {
                                 //second alt form required
                                 branch.Details.Insert(0, new EvoForm(2));
+                                branch.Details.Add(new EvoSetForm(0));
                             }
                             break;
                         case 862://obstagoon
@@ -819,12 +946,49 @@ namespace DataGenerator.Data
                             {
                                 //first alt form required
                                 branch.Details.Insert(0, new EvoForm(1));
+                                branch.Details.Add(new EvoSetForm(0));
                             }
                             break;
                         case 563://cofagrigus
                             {
                                 //original form required due to having a regional -> new that requires a different form
                                 branch.Details.Insert(0, new EvoForm(0));
+                            }
+                            break;
+                        case 903://sneasler
+                            {
+                                //first alt form required
+                                branch.Details.Insert(0, new EvoForm(1));
+                                branch.Details.Add(new EvoSetForm(0));
+                            }
+                            break;
+                        case 902://basculegion
+                            {
+                                //second alt form required
+                                branch.Details.Insert(0, new EvoForm(2));
+                                {
+                                    EvoSetForm evoDetail = new EvoSetForm(0);
+                                    evoDetail.Conditions.Add(new EvoGender(Gender.Male));
+                                    branch.Details.Add(evoDetail);
+                                }
+                                {
+                                    EvoSetForm evoDetail = new EvoSetForm(1);
+                                    evoDetail.Conditions.Add(new EvoGender(Gender.Female));
+                                    branch.Details.Add(evoDetail);
+                                }
+                            }
+                            break;
+                        case 461://weavile
+                            {
+                                //original form required due to having a regional -> new that requires a different form
+                                branch.Details.Insert(0, new EvoForm(0));
+                            }
+                            break;
+                        case 904://overqwil
+                            {
+                                //first alt form required
+                                branch.Details.Insert(0, new EvoForm(1));
+                                branch.Details.Add(new EvoSetForm(0));
                             }
                             break;
                     }
@@ -850,6 +1014,19 @@ namespace DataGenerator.Data
                             {
                                 EvoSetForm evoDetail = new EvoSetForm(1);
                                 evoDetail.Conditions.Add(new EvoLocation(Text.Sanitize(ElementInfo.Element.Fairy.ToString()).ToLower()));
+                                branch.Details.Add(evoDetail);
+                            }
+                            break;
+                        //hisui
+                        case 157://typhlosion
+                        case 503://samurott
+                        case 628://braviary
+                        case 705://sliggoo
+                        case 713://avalugg
+                        case 724://decidueye
+                            {
+                                EvoSetForm evoDetail = new EvoSetForm(1);
+                                evoDetail.Conditions.Add(new EvoLocation(Text.Sanitize(ElementInfo.Element.Ice.ToString()).ToLower()));
                                 branch.Details.Add(evoDetail);
                             }
                             break;
@@ -1021,6 +1198,7 @@ namespace DataGenerator.Data
                         PromoteBranch altBranch = new PromoteBranch();
                         altBranch.Result = branch.Result;
                         altBranch.Details.Add(new EvoForm(1));
+                        altBranch.Details.Add(new EvoSetForm(2));
 
                         EvoLevel evoDetail = new EvoLevel();
                         evoDetail.Level = Convert.ToInt32(35);
@@ -1076,6 +1254,8 @@ namespace DataGenerator.Data
                         continue;
                     if (index == 105 && read > 2)//only 2 marowak form - somehow the db has a duplicate marowak after alolan????
                         break;
+                    if (index == 133 && read > 1)//only 1 eevee form
+                        break;
                     if (index == 172 && read > 1)//only 1 pichu form
                         break;
                     if (index == 414 && read > 1)//only 1 mothim form
@@ -1106,6 +1286,10 @@ namespace DataGenerator.Data
                         break;
                     if (index == 893 && read > 1)//only 1 zarude form
                         break;
+                    if (index == 1007 && read > 1)//only 1 koraidon form
+                        break;
+                    if (index == 1008 && read > 1)//only 1 miraidon form
+                        break;
 
 
                     int dexId = Convert.ToInt32(reader["dexId"].ToString());
@@ -1114,6 +1298,12 @@ namespace DataGenerator.Data
                     int version = Convert.ToInt32(reader["version_group_id"].ToString());
                     if (version < 16)
                         version = 16;
+                    //These mons are from LEGENDS ARCEUS.  NOT SWORD AND SHIELD.
+                    if (index >= 899 && index < 906)
+                        version = 24;
+                    // hisui forms don't have info for their original game...
+                    if (version == 24)
+                        version = 25;
                     MonsterFormData formEntry = LoadForme(m_dbTLConnection, version, index, dexId, formId, entry.Name);
                     formEntry.Generation = genVersion(version);
                     if (Ratio == -1)
@@ -1158,6 +1348,12 @@ namespace DataGenerator.Data
                     //silvally
                     if (index == 773 && entry.Forms.Count > 0)
                         formEntry.Temporary = true;
+                    //cramorant
+                    if (index == 845 && entry.Forms.Count > 0)
+                        formEntry.Temporary = true;
+                    //noice eiscue
+                    if (index == 875 && entry.Forms.Count > 0)
+                        formEntry.Temporary = true;
 
                     formEntry.Released = hasFormeGraphics(index, entry.Forms.Count);
 
@@ -1179,6 +1375,22 @@ namespace DataGenerator.Data
                         {
                             MonsterFormData formCopy = formEntry.Copy();
                             entry.Forms.Add(formCopy);
+                        }
+                    }
+
+                    if (index == 902)//basculegion; forme has fixed gender ratio
+                    {
+                        if (entry.Forms.Count == 0)//male
+                        {
+                            formEntry.MaleWeight = 8;
+                            formEntry.FemaleWeight = 0;
+                            formEntry.GenderlessWeight = 0;
+                        }
+                        else
+                        {
+                            formEntry.MaleWeight = 0;
+                            formEntry.FemaleWeight = 8;
+                            formEntry.GenderlessWeight = 0;
                         }
                     }
 
@@ -1291,33 +1503,6 @@ namespace DataGenerator.Data
                 }
             }
 
-            //height
-            //weight
-            //exp
-            sql = "SELECT * FROM pokemon_v2_pokemon WHERE id = " + dexId;
-            command = new SQLiteCommand(sql, m_dbTLConnection);
-            using (SQLiteDataReader reader = command.ExecuteReader())
-            {
-                int read = 0;
-                while (reader.Read())
-                {
-                    if (read > 0)
-                        throw new Exception(entry.FormName + ": More than 1 statistic result!?");
-                    entry.Height = Convert.ToDouble(reader["height"].ToString()) / 10;
-                    entry.Weight = Convert.ToDouble(reader["weight"].ToString()) / 10;
-                    entry.ExpYield = Convert.ToInt32(reader["base_experience"].ToString());
-
-                    //special case
-                    if (index == 113) //chansey
-                        entry.ExpYield = 250;
-                    else if (index == 242) // blissey
-                        entry.ExpYield = 255;
-                    else if (index == 531) // audino
-                        entry.ExpYield = 500;
-                    read++;
-                }
-            }
-
             //stats
             sql = "SELECT * FROM pokemon_v2_pokemonstat WHERE pokemon_id = " + dexId;
             command = new SQLiteCommand(sql, m_dbTLConnection);
@@ -1341,6 +1526,40 @@ namespace DataGenerator.Data
                         entry.BaseMDef = Convert.ToInt32(reader["base_stat"].ToString());
                     else if (slot == 6)
                         entry.BaseSpeed = Convert.ToInt32(reader["base_stat"].ToString());
+                    read++;
+                }
+            }
+
+            //height
+            //weight
+            //exp
+            sql = "SELECT * FROM pokemon_v2_pokemon WHERE id = " + dexId;
+            command = new SQLiteCommand(sql, m_dbTLConnection);
+            using (SQLiteDataReader reader = command.ExecuteReader())
+            {
+                int read = 0;
+                while (reader.Read())
+                {
+                    if (read > 0)
+                        throw new Exception(entry.FormName + ": More than 1 statistic result!?");
+                    entry.Height = Convert.ToDouble(reader["height"].ToString()) / 10;
+                    entry.Weight = Convert.ToDouble(reader["weight"].ToString()) / 10;
+                    string base_exp_str = reader["base_experience"].ToString();
+                    if (base_exp_str == "")
+                    {
+                        Console.WriteLine("WARNING: STUBBED EXP YIELD");
+                        entry.ExpYield = (entry.BaseHP + entry.BaseAtk + entry.BaseDef + entry.BaseMAtk + entry.BaseMDef + entry.BaseSpeed) / 4;
+                    }
+                    else
+                        entry.ExpYield = Convert.ToInt32(base_exp_str);
+
+                    //special case
+                    if (index == 113) //chansey
+                        entry.ExpYield = 250;
+                    else if (index == 242) // blissey
+                        entry.ExpYield = 255;
+                    else if (index == 531) // audino
+                        entry.ExpYield = 500;
                     read++;
                 }
             }
@@ -1462,6 +1681,8 @@ namespace DataGenerator.Data
                 case 304: //razor-fang
                 case 686: //whipped-dream
                 case 687: //sachet
+                case 2045: //auspicious armor
+                case 2046: //malicious armor
                     return "";
             }
             throw new Exception("No item mappable");
@@ -1766,6 +1987,46 @@ namespace DataGenerator.Data
 
         }
 
+        public static void MapFormEvo(int prevoSpecies, MonsterData[] totalEntries)
+        {
+            MonsterData prevoData = totalEntries[prevoSpecies];
+            foreach (PromoteBranch branch in prevoData.Promotions)
+            {
+                MonsterData evoData = totalEntries[monsterKeys.IndexOf(branch.Result)];
+
+                //by default, the evo evolves from the same form of the prevo, as long as they're both there.
+                for(int ii = 0; ii < evoData.Forms.Count && ii < prevoData.Forms.Count; ii++)
+                {
+                    BaseMonsterForm form = evoData.Forms[ii];
+                    form.PromoteForm = ii;
+                }
+
+                int reqForm = 0;
+                foreach (PromoteDetail detail in branch.Details)
+                {
+                    if (detail is EvoForm)
+                        reqForm = ((EvoForm)detail).ReqForm;
+                }
+                int resultForm = reqForm;
+                foreach (PromoteDetail detail in branch.Details)
+                {
+                    if (detail is EvoSetForm)
+                    {
+                        EvoSetForm setForm = ((EvoSetForm)detail);
+                        int innerForm = setForm.Form;
+                        int innerReqForm = reqForm;
+                        foreach (PromoteDetail innerReq in setForm.Conditions)
+                        {
+                            if (innerReq is EvoForm)
+                                innerReqForm = ((EvoForm)innerReq).ReqForm;
+                        }
+                        BaseMonsterForm form = evoData.Forms[innerForm];
+                        form.PromoteForm = innerReqForm;
+                    }
+                }
+            }
+        }
+
         public static int GetGenBoundary(int index)
         {
             if (index < 151)
@@ -1788,8 +2049,10 @@ namespace DataGenerator.Data
                 return 6;
             else if (version < 20)
                 return 7;
-            else
+            else if (version < 25)
                 return 8;
+            else
+                return 9;
         }
 
         private static bool hasFormeGraphics(int species, int form)
@@ -1810,7 +2073,7 @@ namespace DataGenerator.Data
             return fileName;
         }
 
-        const int TOTAL_MOVES = 826;
+        const int TOTAL_MOVES = 901;
 
         public static int compareOldNew(string oldStr, string newStr)
         {
@@ -1907,7 +2170,7 @@ namespace DataGenerator.Data
             //and that table will simply be put through the converter for code
             //alternatively, have this be the start of the stream
             //the downside is, if there are any english messages that sound better than the originals, they must be moved in manually.
-            SQLiteConnection m_dbTLConnection = new SQLiteConnection("Data Source=" + DEX_7_FILE + ";Version=3;");
+            SQLiteConnection m_dbTLConnection = new SQLiteConnection("Data Source=" + TL_FILE + ";Version=3;");
             m_dbTLConnection.Open();
 
             using (StreamWriter file = new StreamWriter("skill.txt"))
@@ -1915,7 +2178,7 @@ namespace DataGenerator.Data
                 for (int ii = 0; ii < TOTAL_MOVES; ii++)
                 {
                     string name = getTLStr(m_dbTLConnection, "SELECT * FROM pokemon_v2_movename WHERE move_id = " + ii + " AND language_id = ", 9, "name");
-                    string description = getTLStr(m_dbTLConnection, "SELECT * FROM pokemon_v2_moveflavortext WHERE move_id = " + ii + " AND version_group_id = 18 AND language_id = ", 9, "flavor_text");
+                    string description = getTLStr(m_dbTLConnection, "SELECT * FROM pokemon_v2_moveflavortext WHERE move_id = " + ii + " AND version_group_id = "+ADD_VERSION_ID+" AND language_id = ", 9, "flavor_text");
 
                     int power = 0;
                     int pp = 0;
@@ -2006,11 +2269,11 @@ namespace DataGenerator.Data
                     descRow[jj] = "";
 
                 assignRowElements(descRow, ii, m_dbTLConnection,
-                    "SELECT * FROM pokemon_v2_moveflavortext WHERE move_id = " + ii + " AND version_group_id = 20 AND language_id = ", "flavor_text");
+                    "SELECT * FROM pokemon_v2_moveflavortext WHERE move_id = " + ii + " AND version_group_id = "+ADD_VERSION_ID+" AND language_id = ", "flavor_text");
 
                 totalEntries[ii * 2 + 1] = descRow;
 
-                Console.WriteLine("#" + ii + " " + totalEntries[ii * 2][0] + " Read");
+                Console.WriteLine("#" + ii + " " + totalEntries[ii * 2][2] + " Read");
             }
 
             m_dbTLConnection.Close();
@@ -2032,8 +2295,43 @@ namespace DataGenerator.Data
 
 
 
-        const int TOTAL_ABILITIES = 268;
+        const int TOTAL_ABILITIES = 299;
 
+
+
+        public static void CreateAbilityCodes()
+        {
+            //load names and descriptions to the translation table
+            //include the english column of the actual description to see if there's a difference.
+            //just take it out after the initial setup
+            //this is meant to be a one-time fill-in job.  all translations will go to their respective places, and then this should never be visited again
+            //even when new blank descs are filled in, those blanks will not have a corresponding translation in the table, so running this script again will give useless translations
+            //so when adding the new blank descs, the initial table generation will be run on the final translation table from the spreadsheet,
+            //and that table will simply be put through the converter for code
+            //alternatively, have this be the start of the stream
+            //the downside is, if there are any english messages that sound better than the originals, they must be moved in manually.
+            SQLiteConnection m_dbTLConnection = new SQLiteConnection("Data Source=" + TL_FILE + ";Version=3;");
+            m_dbTLConnection.Open();
+
+            using (StreamWriter file = new StreamWriter("intrinsic.txt"))
+            {
+                for (int ii = 0; ii < TOTAL_ABILITIES; ii++)
+                {
+                    string name = getTLStr(m_dbTLConnection, "SELECT * FROM pokemon_v2_abilityname WHERE ability_id = " + ii + " AND language_id = ", 9, "name");
+                    string description = getTLStr(m_dbTLConnection, "SELECT * FROM pokemon_v2_abilityflavortext WHERE ability_id = " + ii + " AND version_group_id = "+ADD_VERSION_ID+" AND language_id = ", 9, "flavor_text");
+
+                    file.WriteLine("else if (ii == " + ii + ")");
+                    file.WriteLine("{");
+                    file.WriteLine("	ability.Name = new LocalText(\"**" + name.Replace('’', '\'') + "\");");
+                    file.WriteLine("	ability.Desc = new LocalText(\"" + description + "\");");
+                    file.WriteLine("}");
+
+                    Console.WriteLine("#" + ii + " " + name + " Read");
+                }
+            }
+
+            m_dbTLConnection.Close();
+        }
 
         public static void CreateAbilities()
         {
@@ -2067,11 +2365,11 @@ namespace DataGenerator.Data
                     descRow[jj] = "";
 
                 assignRowElements(descRow, ii, m_dbTLConnection, 
-                    "SELECT * FROM pokemon_v2_abilityflavortext WHERE ability_id = " + ii + " AND version_group_id = 18 AND language_id = ", "flavor_text");
+                    "SELECT * FROM pokemon_v2_abilityflavortext WHERE ability_id = " + ii + " AND version_group_id = "+ADD_VERSION_ID+" AND language_id = ", "flavor_text");
 
                 totalEntries[ii * 2 + 1] = descRow;
 
-                Console.WriteLine("#" + ii + " " + totalEntries[ii * 2][0] + " Read");
+                Console.WriteLine("#" + ii + " " + totalEntries[ii * 2][2] + " Read");
             }
 
             m_dbTLConnection.Close();
@@ -2090,6 +2388,7 @@ namespace DataGenerator.Data
                 }
             }
         }
+
 
 
         const int TOTAL_ITEMS = 1006;
@@ -2129,7 +2428,7 @@ namespace DataGenerator.Data
                     descRow[jj] = "";
 
                 assignRowElements(descRow, ii, m_dbTLConnection,
-                    "SELECT * FROM pokemon_v2_itemflavortext WHERE item_id = " + ii + " AND version_group_id = 18 AND language_id = ", "flavor_text");
+                    "SELECT * FROM pokemon_v2_itemflavortext WHERE item_id = " + ii + " AND version_group_id = 25 AND language_id = ", "flavor_text");
 
                 totalEntries[ii * 2 + 1] = descRow;
 
@@ -2199,6 +2498,61 @@ namespace DataGenerator.Data
             foreach (string key in learnMoves.Keys)
             {
                 Console.WriteLine(key + "," + learnMoves[key]);
+            }
+        }
+
+        private static string getBasePrevo(MonsterData[] mons, Dictionary<string, int> filenames, int id)
+        {
+            MonsterData monData = mons[id];
+            while (!String.IsNullOrEmpty(monData.PromoteFrom))
+            {
+                monData = mons[filenames[monData.PromoteFrom]];
+            }
+            return getAssetName(monData.Name.DefaultText);
+        }
+
+        private static void ListAllIncompletes(MonsterData[] mons)
+        {
+            Dictionary<string, int> filenames = new Dictionary<string, int>();
+            for (int ii = 0; ii < mons.Length; ii++)
+            {
+                string filename = getAssetName(mons[ii].Name.DefaultText);
+                filenames[filename] = ii;
+            }
+            Dictionary<string, List<string>> missingMons = new Dictionary<string, List<string>>();
+            HashSet<string> hasData = new HashSet<string>();
+            for (int ii = 0; ii < mons.Length; ii++)
+            {
+                MonsterData entry = mons[ii];
+                for (int jj = 0; jj < entry.Forms.Count; jj++)
+                {
+                    MonsterFormData form = (MonsterFormData)entry.Forms[jj];
+                    if (!form.FormName.DefaultText.Contains("Mega ") && !form.FormName.DefaultText.Contains("Gigantamax "))
+                    {
+                        string prevo = getBasePrevo(mons, filenames, ii);
+                        if ((!entry.Released || !form.Released))
+                        {
+                            if (!missingMons.ContainsKey(prevo))
+                                missingMons[prevo] = new List<string>();
+                            missingMons[prevo].Add(form.FormName.DefaultText);
+                        }
+                        else
+                        {
+                            hasData.Add(prevo);
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("INCOMPLETE LINES");
+            foreach (string name in missingMons.Keys)
+            {
+                if (hasData.Contains(name))
+                {
+                    Console.WriteLine(name);
+                    List<string> missing = missingMons[name];
+                    foreach (string miss in missing)
+                        Console.WriteLine("  " + miss);
+                }
             }
         }
     }

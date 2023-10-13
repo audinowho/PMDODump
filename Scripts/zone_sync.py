@@ -73,7 +73,7 @@ def main():
 
         print("Updated References.")
 
-        # Item Data
+        # Zone Data
         zoneGen.load_sheet_texts()
 
         print("Pulled Zone Data.")

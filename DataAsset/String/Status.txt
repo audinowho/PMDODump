@@ -5,6 +5,8 @@ Key		EN
 0000-aqua_ring-0001|data.Desc		The Pokémon is surrounded by a veil of water that gradually restores its HP. This status wears off after a few turns.
 0000-area_counter-0000|data.Name		Area Counter
 0000-area_counter-0001|data.Desc		All damage done to this Pokémon of a certain category of moves will be reflected on all foes within 3 tiles. This status wears off after many turns have passed.
+0000-attack_response-0000|data.Name		Attack Response
+0000-attack_response-0001|data.Desc		
 0000-belch-0000|data.Name		Belch
 0000-belch-0001|data.Desc		The Pokémon is ready to belch, unleashing the attack whenever it eats a food item. This status wears off after a few turns.
 0000-biding-0000|data.Name		Biding
@@ -109,6 +111,8 @@ Key		EN
 0000-ingrain-0001|data.Desc		The Pokémon's roots are planted in the ground, gradually restoring its HP and preventing it from moving. This status wears off after a few turns.
 0000-invisible-0000|data.Name		Invisible
 0000-invisible-0001|data.Desc		The Pokémon is invisible and cannot be seen by other Pokémon. This status wears off after a few turns.
+0000-kings_shield-0000|data.Name		King's Shield
+0000-kings_shield-0001|data.Desc		The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks.
 0000-last_ally_move-0000|data.Name		Last Ally Move
 0000-last_ally_move-0001|data.Desc		
 0000-last_move_hit_by_other-0000|data.Name		Last Move Hit By Other
@@ -245,6 +249,8 @@ Key		EN
 0000-times_move_used-0001|data.Desc		
 0000-torment-0000|data.Name		Torment
 0000-torment-0001|data.Desc		The Pokémon is prevented from using the same move twice in a row. This status wears off after many turns have passed.
+0000-transformed-0000|data.Name		Transformed
+0000-transformed-0001|data.Desc		
 0000-type_boosted-0000|data.Name		Type-Boosted
 0000-type_boosted-0001|data.Desc		The Pokémon has moves of a certain type boosted. This status wears off after many turns have passed.
 0000-type_converted-0000|data.Name		Type-Converted

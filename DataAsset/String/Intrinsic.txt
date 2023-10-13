@@ -394,7 +394,7 @@ Key		EN
 0196-merciless-0000|data.Name		Merciless
 0196-merciless-0001|data.Desc		The Pokémon's attacks become critical hits if the target is poisoned.
 0197-shields_down-0000|data.Name		Shields Down
-0197-shields_down-0001|data.Desc		When its HP becomes half or less, the Pokémon's shell breaks and it becomes aggressive.
+0197-shields_down-0001|data.Desc		When it takes a hit that causes its HP to become half or less, the Pokémon's shell breaks and it becomes aggressive.
 0198-stakeout-0000|data.Name		Stakeout
 0198-stakeout-0001|data.Desc		The Pokémon's first attack deals increased damage.
 0199-water_bubble-0000|data.Name		Water Bubble
@@ -410,11 +410,11 @@ Key		EN
 0204-liquid_voice-0000|data.Name		Liquid Voice
 0204-liquid_voice-0001|data.Desc		All sound-based moves become Water-type moves.
 0205-triage-0000|data.Name		Triage
-0205-triage-0001|data.Desc		Gives priority to a healing move.
+0205-triage-0001|data.Desc		Boosts the Attack Range of healing moves.
 0206-galvanize-0000|data.Name		Galvanize
 0206-galvanize-0001|data.Desc		Normal-type moves become Electric-type moves.
 0207-surge_surfer-0000|data.Name		Surge Surfer
-0207-surge_surfer-0001|data.Desc		Doubles the Pokémon's Speed stat on Electric Terrain.
+0207-surge_surfer-0001|data.Desc		Boosts the Pokémon's Movement Speed on Electric Terrain.
 0208-schooling-0000|data.Name		Schooling
 0208-schooling-0001|data.Desc		When it has a lot of HP, the Pokémon forms a powerful school. It stops schooling when its HP is low.
 0209-disguise-0000|data.Name		Disguise
@@ -452,13 +452,13 @@ Key		EN
 0225-rks_system-0000|data.Name		RKS System
 0225-rks_system-0001|data.Desc		Changes the Pokémon's type to match the memory disc it holds.
 0226-electric_surge-0000|data.Name		Electric Surge
-0226-electric_surge-0001|data.Desc		Turns the ground into Electric Terrain when the Pokémon enters a battle.
+0226-electric_surge-0001|data.Desc		Turns the ground into Electric Terrain when the Pokémon is battling.
 0227-psychic_surge-0000|data.Name		Psychic Surge
-0227-psychic_surge-0001|data.Desc		Turns the ground into Psychic Terrain when the Pokémon enters a battle.
+0227-psychic_surge-0001|data.Desc		Turns the ground into Psychic Terrain when the Pokémon is battling.
 0228-misty_surge-0000|data.Name		Misty Surge
-0228-misty_surge-0001|data.Desc		Turns the ground into Misty Terrain when the Pokémon enters a battle.
+0228-misty_surge-0001|data.Desc		Turns the ground into Misty Terrain when the Pokémon is battling.
 0229-grassy_surge-0000|data.Name		Grassy Surge
-0229-grassy_surge-0001|data.Desc		Turns the ground into Grassy Terrain when the Pokémon enters a battle.
+0229-grassy_surge-0001|data.Desc		Turns the ground into Grassy Terrain when the Pokémon is battling.
 0230-full_metal_body-0000|data.Name		Full Metal Body
 0230-full_metal_body-0001|data.Desc		Prevents other Pokémon's moves or Abilities from lowering the Pokémon's stats.
 0231-shadow_shield-0000|data.Name		Shadow Shield
@@ -480,7 +480,7 @@ Key		EN
 0239-propeller_tail-0000|data.Name		Propeller Tail
 0239-propeller_tail-0001|data.Desc		Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.
 0240-mirror_armor-0000|data.Name		Mirror Armor
-0240-mirror_armor-0001|data.Desc		Bounces back only the stat-lowering effects that the Pokémon receives.
+0240-mirror_armor-0001|data.Desc		Bounces back stat-lowering effects from other Pokémon.
 0241-gulp_missile-0000|data.Name		Gulp Missile
 0241-gulp_missile-0001|data.Desc		When the Pokémon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack.
 0242-stalwart-0000|data.Name		Stalwart
@@ -535,3 +535,65 @@ Key		EN
 0266-as_one_chill-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Glastrier's Chilling Neigh Ability.
 0267-as_one_grim-0000|data.Name		As One
 0267-as_one_grim-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.
+0268-lingering_aroma-0000|data.Name		Lingering Aroma
+0268-lingering_aroma-0001|data.Desc		
+0269-seed_sower-0000|data.Name		Seed Sower
+0269-seed_sower-0001|data.Desc		
+0270-thermal_exchange-0000|data.Name		Thermal Exchange
+0270-thermal_exchange-0001|data.Desc		
+0271-anger_shell-0000|data.Name		Anger Shell
+0271-anger_shell-0001|data.Desc		
+0272-purifying_salt-0000|data.Name		Purifying Salt
+0272-purifying_salt-0001|data.Desc		
+0273-well_baked_body-0000|data.Name		Well-Baked Body
+0273-well_baked_body-0001|data.Desc		
+0274-wind_rider-0000|data.Name		Wind Rider
+0274-wind_rider-0001|data.Desc		
+0275-guard_dog-0000|data.Name		Guard Dog
+0275-guard_dog-0001|data.Desc		
+0276-rocky_payload-0000|data.Name		Rocky Payload
+0276-rocky_payload-0001|data.Desc		
+0277-wind_power-0000|data.Name		Wind Power
+0277-wind_power-0001|data.Desc		
+0278-zero_to_hero-0000|data.Name		Zero to Hero
+0278-zero_to_hero-0001|data.Desc		
+0279-commander-0000|data.Name		Commander
+0279-commander-0001|data.Desc		
+0280-electromorphosis-0000|data.Name		Electromorphosis
+0280-electromorphosis-0001|data.Desc		
+0281-protosynthesis-0000|data.Name		Protosynthesis
+0281-protosynthesis-0001|data.Desc		
+0282-quark_drive-0000|data.Name		Quark Drive
+0282-quark_drive-0001|data.Desc		
+0283-good_as_gold-0000|data.Name		Good as Gold
+0283-good_as_gold-0001|data.Desc		
+0284-vessel_of_ruin-0000|data.Name		Vessel of Ruin
+0284-vessel_of_ruin-0001|data.Desc		The power of the Pokémon's ruinous vessel lowers the Sp. Atk stats of all Pokémon except itself.
+0285-sword_of_ruin-0000|data.Name		Sword of Ruin
+0285-sword_of_ruin-0001|data.Desc		The power of the Pokémon's ruinous sword lowers the Defense stats of all Pokémon except itself.
+0286-tablets_of_ruin-0000|data.Name		Tablets of Ruin
+0286-tablets_of_ruin-0001|data.Desc		The power of the Pokémon's ruinous wooden tablets lowers the Attack stats of all Pokémon except itself.
+0287-beads_of_ruin-0000|data.Name		Beads of Ruin
+0287-beads_of_ruin-0001|data.Desc		The power of the Pokémon's ruinous beads lowers the Sp. Def stats of all Pokémon except itself.
+0288-orichalcum_pulse-0000|data.Name		Orichalcum Pulse
+0288-orichalcum_pulse-0001|data.Desc		
+0289-hadron_engine-0000|data.Name		Hadron Engine
+0289-hadron_engine-0001|data.Desc		
+0290-opportunist-0000|data.Name		Opportunist
+0290-opportunist-0001|data.Desc		
+0291-cud_chew-0000|data.Name		Cud Chew
+0291-cud_chew-0001|data.Desc		
+0292-sharpness-0000|data.Name		Sharpness
+0292-sharpness-0001|data.Desc		Powers up slicing moves.
+0293-supreme_overlord-0000|data.Name		Supreme Overlord
+0293-supreme_overlord-0001|data.Desc		
+0294-costar-0000|data.Name		Costar
+0294-costar-0001|data.Desc		
+0295-toxic_debris-0000|data.Name		Toxic Debris
+0295-toxic_debris-0001|data.Desc		
+0296-armor_tail-0000|data.Name		Armor Tail
+0296-armor_tail-0001|data.Desc		
+0297-earth_eater-0000|data.Name		Earth Eater
+0297-earth_eater-0001|data.Desc		
+0298-mycelium_might-0000|data.Name		Mycelium Might
+0298-mycelium_might-0001|data.Desc		

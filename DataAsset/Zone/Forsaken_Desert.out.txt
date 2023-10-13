@@ -117,5 +117,5 @@ poolSpawn.Spawns.Add(GetTeamMob("cacnea", "", "leech_seed", "needle_arm", "", ""
 poolSpawn.Spawns.Add(GetTeamMob("skorupi", "", "acupressure", "bug_bite", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wander_normal"), new IntRange(2, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("torkoal", "", "smokescreen", "lava_plume", "", "", new RandRange(25), "wander_normal"), new IntRange(0, 2), 10);
 poolSpawn.Spawns.Add(GetTeamMob("arbok", "", "screech", "glare", "crunch", "", new RandRange(25), "wander_normal"), new IntRange(2, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "thief", "", "", new RandRange(25), "thief"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "assurance", "", "", new RandRange(25), "wander_normal"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wander_normal"), new IntRange(1, max_floors), 5);

@@ -261,8 +261,8 @@ class Localization:
 
         result_rows = []
 
-        for row_min in range(SHEET_CONTENT_START, SHEET_CONTENT_START+total_rows, 500):
-            row_max = min(row_min + 500, SHEET_CONTENT_START+total_rows)
+        for row_min in range(SHEET_CONTENT_START, SHEET_CONTENT_START+total_rows, 400):
+            row_max = min(row_min + 400, SHEET_CONTENT_START+total_rows)
             range_name = sheet_name + "!"+str(row_min)+":"+str(row_max-1)
             result = self._service.spreadsheets().get(spreadsheetId=self._id, ranges=range_name, includeGridData=True).execute()
             result_rows = result_rows + result['sheets'][0]['data'][0]['rowData']

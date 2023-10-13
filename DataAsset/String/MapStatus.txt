@@ -55,6 +55,8 @@ Key		EN
 0000-mysterious_force-0001|data.Desc		A mysterious force prevents Orbs, Machines, and special items from working.
 0000-outlaw_clear_check-0000|data.Name		Outlaw Clear Check
 0000-outlaw_clear_check-0001|data.Desc		
+0000-psychic_terrain-0000|data.Name		Psychic Terrain
+0000-psychic_terrain-0001|data.Desc		Psychic-type attacks are boosted, and Pokémon can evade moves from close up.
 0000-rain-0000|data.Name		Rain
 0000-rain-0001|data.Desc		Water-type attacks are boosted and Fire-type attacks are weakened.
 0000-rescued-0000|data.Name		Rescued

@@ -36,20 +36,20 @@ namespace DataGenerator.Data
             specialRows = Localization.readLocalizationRows(GenPath.TL_PATH + "Special.out.txt");
         }
 
-        static MobSpawnStep<MapGenContext> GetUnownSpawns(string unown, int level)
+        static MobSpawnStep<MapGenContext> GetUnownSpawns(string unown, int level, bool unrecruitable)
         {
             MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
             PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
             for (int ii = 0; ii < unown.Length; ii++)
             {
                 if (unown[ii] == '!')
-                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", 26, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(level), "wander_normal"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", 26, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(level), "wander_normal", false, unrecruitable), 10);
                 else if (unown[ii] == '?')
-                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", 27, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(level), "wander_normal"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", 27, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(level), "wander_normal", false, unrecruitable), 10);
                 else
                 {
                     int formNum = unown[ii] - 'a';
-                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", formNum, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(level), "wander_normal"), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("unown", formNum, "", Gender.Unknown), "", "hidden_power", "", "", "", new RandRange(level), "wander_normal", false, unrecruitable), 10);
                 }
             }
             poolSpawn.TeamSizes.Add(1, 12);
@@ -127,7 +127,7 @@ namespace DataGenerator.Data
             return layout;
         }
 
-        static IFloorGen getMysteryRoom(bool translate, int zoneLevel, DungeonStage stage, string map_type, int moveBack)
+        static IFloorGen getMysteryRoom(bool translate, int zoneLevel, DungeonStage stage, string map_type, int moveBack, bool unrecruitable)
         {
             GridFloorGen layout = new GridFloorGen();
 
@@ -149,15 +149,16 @@ namespace DataGenerator.Data
             {
                 RandGenStep<MapGenContext> chanceGenStep = new RandGenStep<MapGenContext>();
                 SpawnList<GenStep<MapGenContext>> spawns = new SpawnList<GenStep<MapGenContext>>();
-                spawns.Add(GetUnownSpawns("abcde", zoneLevel - 5), 10);
-                spawns.Add(GetUnownSpawns("fghij", zoneLevel - 5), 10);
-                spawns.Add(GetUnownSpawns("klmno", zoneLevel - 5), 10);
-                spawns.Add(GetUnownSpawns("pqrst", zoneLevel - 5), 10);
-                spawns.Add(GetUnownSpawns("uvwxyz", zoneLevel - 5), 10);
+                spawns.Add(GetUnownSpawns("abcde", zoneLevel - 5, unrecruitable), 10);
+                spawns.Add(GetUnownSpawns("fghij", zoneLevel - 5, unrecruitable), 10);
+                spawns.Add(GetUnownSpawns("klmno", zoneLevel - 5, unrecruitable), 10);
+                spawns.Add(GetUnownSpawns("pqrst", zoneLevel - 5, unrecruitable), 10);
+                spawns.Add(GetUnownSpawns("uvwxyz", zoneLevel - 5, unrecruitable), 10);
                 chanceGenStep.Spawns = new LoopedRand<GenStep<MapGenContext>>(spawns, new RandRange(1));
                 layout.GenSteps.Add(PR_RESPAWN_MOB, chanceGenStep);
             }
             // a rare mon appears, based on the difficulty level
+            if (!unrecruitable)
             {
                 MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                 PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
@@ -181,20 +182,24 @@ namespace DataGenerator.Data
                 subSpawn.Spawns.Add(GetTeamMob("audino", "", "secret_power", "", "", "", new RandRange(zoneLevel), "wander_smart"), 10);
                 subSpawn.TeamSizes.Add(1, 12);
                 LoopedTeamSpawner<MapGenContext> spawner = new LoopedTeamSpawner<MapGenContext>(subSpawn);
-                spawner.AmountSpawner = new RandRange(1, 4);
+                if (unrecruitable)
+                    spawner.AmountSpawner = new RandRange(3, 6);
+                else
+                    spawner.AmountSpawner = new RandRange(1, 4);
                 PlaceRandomMobsStep<MapGenContext> mobStep = new PlaceRandomMobsStep<MapGenContext>(spawner);
                 mobStep.ClumpFactor = 25;
                 layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
             }
 
             //choose two fossils out of the entire selection, spawn two of each
+            if (!unrecruitable)
             {
                 RandGenStep<MapGenContext> chanceGenStep = new RandGenStep<MapGenContext>();
                 SpawnList<GenStep<MapGenContext>> spawns = new SpawnList<GenStep<MapGenContext>>();
                 spawns.Add(GetSingleSelectableSpawn(GetTeamMob("omanyte", "", "ancient_power", "brine", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
                 spawns.Add(GetSingleSelectableSpawn(GetTeamMob("kabuto", "", "ancient_power", "aqua_jet", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
-                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("anorith", "", "ancient_power", "bug_bite", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
-                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("lileep", "", "ancient_power", "ingrain", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                //spawns.Add(GetSingleSelectableSpawn(GetTeamMob("anorith", "", "ancient_power", "bug_bite", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                //spawns.Add(GetSingleSelectableSpawn(GetTeamMob("lileep", "", "ancient_power", "ingrain", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
                 spawns.Add(GetSingleSelectableSpawn(GetTeamMob("cranidos", "", "ancient_power", "take_down", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
                 spawns.Add(GetSingleSelectableSpawn(GetTeamMob("shieldon", "", "ancient_power", "iron_defense", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
                 spawns.Add(GetSingleSelectableSpawn(GetTeamMob("amaura", "", "ancient_power", "aurora_beam", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
@@ -214,20 +219,36 @@ namespace DataGenerator.Data
             {
                 List<MapItem> treasures = new List<MapItem>();
                 treasures.Add(new MapItem("loot_pearl", 3));
-                treasures.Add(new MapItem("loot_pearl", 2));
                 treasures.Add(new MapItem("loot_pearl", 3));
-                treasures.Add(new MapItem("loot_pearl", 2));
+                if (!unrecruitable)
+                {
+                    treasures.Add(new MapItem("loot_pearl", 2));
+                    treasures.Add(new MapItem("loot_pearl", 2));
+                }
                 PickerSpawner<MapGenContext, MapItem> treasurePicker = new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
                 SpawnList<MapItem> recruitSpawn = new SpawnList<MapItem>();
-                recruitSpawn.Add(new MapItem("apricorn_brown"), 10);
-                recruitSpawn.Add(new MapItem("apricorn_purple"), 10);
+                if (unrecruitable)
+                    recruitSpawn.Add(new MapItem("loot_nugget"), 10);
+                else
+                {
+                    recruitSpawn.Add(new MapItem("apricorn_brown"), 10);
+                    recruitSpawn.Add(new MapItem("apricorn_purple"), 10);
+                }
                 PickerSpawner<MapGenContext, MapItem> recruitPicker = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(recruitSpawn, new RandRange(1)));
 
                 SpawnList<IStepSpawner<MapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<MapGenContext, MapItem>>();
 
                 //445      ***    Deluxe Box - 5* items
-                boxSpawn.Add(new BoxSpawner<MapGenContext>("box_deluxe", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(5), new RandRange(1))), 10);
+                if (unrecruitable)
+                {
+                    HashSet<string> exceptFor = new HashSet<string>();
+                    foreach (string legend in IterateLegendaries())
+                        exceptFor.Add(legend);
+                    boxSpawn.Add(new BoxSpawner<MapGenContext>("box_deluxe", new SpeciesItemElementSpawner<MapGenContext>(new IntRange(3, 5), new RandRange(1), "", exceptFor)), 10);
+                }
+                else
+                    boxSpawn.Add(new BoxSpawner<MapGenContext>("box_deluxe", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(5), new RandRange(1))), 10);
 
                 MultiStepSpawner<MapGenContext, MapItem> boxPicker = new MultiStepSpawner<MapGenContext, MapItem>(new LoopedRand<IStepSpawner<MapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
 
@@ -1619,7 +1640,10 @@ namespace DataGenerator.Data
                 ai.Add(key);
 
             foreach (string key in DataManager.Instance.DataIndices[DataManager.DataType.Item].GetOrderedKeys(false))
-                items.Add(key);
+            {
+                if (!key.StartsWith("xcl_"))
+                    items.Add(key);
+            }
 
             for (int ii = 0; ii <= (int)TeamMemberSpawn.MemberRole.Loner; ii++)
                 roles.Add(((TeamMemberSpawn.MemberRole)ii).ToString());
@@ -1676,7 +1700,7 @@ namespace DataGenerator.Data
                     if (ii < items.Count)
                     {
                         row.Add(items[ii]);
-                        completed = ii >= 700;
+                        completed = false;
                     }
                     else
                         row.Add("");

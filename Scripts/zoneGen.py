@@ -181,24 +181,30 @@ class ZoneGen:
         result = self._service.spreadsheets().get(spreadsheetId=self._id, ranges=range_name, includeGridData=True).execute()
         time.sleep(WAIT_TIME)
 
+        max_cells = 0
         content_rows = []
         for row in result['sheets'][0]['data'][0]['rowData']:
             content_row = []
-            for cell in row['values']:
-                if 'userEnteredValue' in cell and 'stringValue' in cell['userEnteredValue']:
-                    content_str = cell['userEnteredValue']['stringValue']
-                elif 'userEnteredValue' in cell and 'boolValue' in cell['userEnteredValue']:
-                    content_str = str(cell['userEnteredValue']['boolValue'])
-                elif 'userEnteredValue' in cell and 'numberValue' in cell['userEnteredValue']:
-                    content_str = str(cell['userEnteredValue']['numberValue'])
-                else:
-                    content_str = ''
-                if '\n' in content_str:
-                    print('Newline found in ' + sheet_name + ': ' + content_str)
-                content_row.append(content_str)
+            if 'values' in row:
+                for cell in row['values']:
+                    if 'userEnteredValue' in cell and 'stringValue' in cell['userEnteredValue']:
+                        content_str = cell['userEnteredValue']['stringValue']
+                    elif 'userEnteredValue' in cell and 'boolValue' in cell['userEnteredValue']:
+                        content_str = str(cell['userEnteredValue']['boolValue'])
+                    elif 'userEnteredValue' in cell and 'numberValue' in cell['userEnteredValue']:
+                        content_str = str(cell['userEnteredValue']['numberValue'])
+                    else:
+                        content_str = ''
+                    if '\n' in content_str:
+                        print('Newline found in ' + sheet_name + ': ' + content_str)
+                    content_row.append(content_str)
 
+            max_cells = max(len(content_row), max_cells)
             content_rows.append(content_row)
 
+        for row_idx in range(len(content_rows)):
+            while len(content_rows[row_idx]) < max_cells:
+                content_rows[row_idx].append("")
 
         return header_row, content_rows
 

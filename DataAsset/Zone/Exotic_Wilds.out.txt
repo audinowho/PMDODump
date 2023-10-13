@@ -130,6 +130,7 @@ poolSpawn.Spawns.Add(GetTeamMob("weepinbell", "", "vine_whip", "poison_powder", 
 poolSpawn.Spawns.Add(GetTeamMob("yanma", "speed_boost", "sonic_boom", "", "", "", new RandRange(21), "wander_dumb"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("duskull", "", "shadow_sneak", "astonish", "", "", new RandRange(21), "wander_dumb"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("servine", "", "leaf_tornado", "", "", "", new RandRange(21), "wander_dumb"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("seedot", "", "harden", "nature_power", "", "", new RandRange(17), "wander_dumb"), new IntRange(0, max_floors), 10);
 //sleeping, holding scope lens
 poolSpawn.Spawns.Add(GetTeamMob("leafeon", "", "leaf_blade", "aerial_ace", "x_scissor", "synthesis", new RandRange(40), "wander_normal"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("pineco", "", "bug_bite", "take_down", "", "", new RandRange(21), "turret"), new IntRange(0, max_floors), 10);

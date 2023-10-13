@@ -206,7 +206,7 @@ Key		EN
 0006-boost_zinc-0000|data.Name		Zinc
 0006-boost_zinc-0001|data.Desc		A drink that permanently raises the Pokémon's Special Defense.
 0006-medicine_amber_tear-0000|data.Name		Amber Tear
-0006-medicine_amber_tear-0001|data.Desc		An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises the Pokémon's chances of recruitment on the floor it's used.
+0006-medicine_amber_tear-0001|data.Desc		An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises chances of recruiting other Pokémon to the team on the floor it's used.
 0007-medicine_dire_hit-0000|data.Name		Dire Hit
 0007-medicine_dire_hit-0001|data.Desc		An item that raises critical-hit ratio. It affects all team members up to 3 tiles away.
 0007-medicine_elixir-0000|data.Name		Elixir
@@ -603,8 +603,8 @@ Key		EN
 0013-egg_mystery-0001|data.Desc		An egg with bizarre colors that have never been seen before. What could this egg be?
 0013-food_grimy-0000|data.Name		Grimy Food
 0013-food_grimy-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also inflict a variety of status problems because it's covered in filthy grime. Be careful of what you eat!
-0013-food_grimy_2-0000|data.Name		Grimy Food
-0013-food_grimy_2-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.
+0013-gummi_foul-0000|data.Name		Foul Gummi
+0013-gummi_foul-0001|data.Desc		A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.
 0013-key-0000|data.Name		Key
 0013-key-0001|data.Desc		A key that unlocks a chest or door inside a dungeon.
 0013-key_ancient-0000|data.Name		Ancient Key
