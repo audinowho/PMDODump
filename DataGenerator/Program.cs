@@ -413,8 +413,8 @@ namespace DataGenerator
                         {
                             //MapInfo.AddMapData();
                             MapInfo.AddGroundData("test_grounds");
-                            //ZoneInfo.AddZoneData(false);
-                            ZoneInfo.AddZoneData(false, 7);
+                            ZoneInfo.AddZoneData(false);
+                            //ZoneInfo.AddZoneData(false, 7);
                         }
 
                         DataManager.DataType reserializeType = DataManager.DataType.None;

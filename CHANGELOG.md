@@ -2,7 +2,7 @@
 
 * Reworked Secret Garden's encounters to result in fewer level spikes, added Comfey
 * Reworked Faded Trail encounters, added Petilil
-* Allies transitively touching the leader and who cant move any closer will attack in Stick Together
+* Stick Together Tactic: Allies that are transitively touching the leader and cant move any closer will attack
 * Wild Pokemon warped in via Summon Trap, Beat Up, and Illuminate will not act immediately after summoning.
 * Grudge Trap breaks after trigger
 * Improved item sort order
@@ -33,5 +33,6 @@
 * Moonlight PP 11->10, default healing is 1/3 instead of 1/4
 * Morning Sun PP 10->11, default healing is 1/4 instead of 1/3
 * Added VFX for various moves
+* Fixed some draw settings
 * Altered the EXP gain curve to contain a linear increase and harmonic decrease
 * Dev: Item Finder AI now prioritizes looking for items when exploring

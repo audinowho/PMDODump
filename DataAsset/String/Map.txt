@@ -5,6 +5,7 @@ canyon_camp-0000|data.Name
 cliff_camp-0000|data.Name						
 end_ambush_forest-0000|data.Name		Ambush Forest Grove				
 end_bramble_woods-0000|data.Name						
+end_champions_road-0000|data.Name						
 end_copper_quarry-0000|data.Name						
 end_forsaken_desert-0000|data.Name						
 end_moonlit_courtyard-0000|data.Name						

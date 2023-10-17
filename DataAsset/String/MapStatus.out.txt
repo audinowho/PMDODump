@@ -15,7 +15,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-default_weather-0001|data.Desc											
 0000-electric_terrain-0000|data.Name		Electric Terrain	Champ Électrifié	Elektrofeld	Campo Eléctrico		Campo Elettrico				电气场地
 0000-electric_terrain-0001|data.Desc		Electric-type attacks are boosted, and all Pokémon on the floor cannot sleep.	Les attaques de type Électrik sont boostées et les Pokémon de l'étage ne peuvent pas s'endormir.	Elektro-Attacken sind verstärkt und alle Pokémon auf der Ebene können nicht schlafen.	Los ataques de tipo eléctrico se potencian, y todos los Pokémon en el suelo no pueden dormir.		La potenza delle mosse di tipo Elettro aumenta. Tutti i Pokémon che si trovano nel piano non possono dormire.				电属性攻击威力提高，地面上的宝可梦无法入眠。
-0000-foe_fov-0000|data.Name		Foe FOV					FOV del nemico				
+0000-foe_fov-0000|data.Name		Foe FOV					FOV del nemico				敌人视野
 0000-foe_fov-0001|data.Desc											
 0000-fog-0000|data.Name	Not displayed to players.	Fog	Brouillard	Nebel	Niebla		Nebbia				起雾
 0000-fog-0001|data.Desc											
@@ -29,11 +29,11 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-harsh_sun-0001|data.Desc											
 0000-heavy_rain-0000|data.Name		Heavy Rain	Pluie Battante	Starkregen	Diluvio		Acquazzone				大雨
 0000-heavy_rain-0001|data.Desc											
-0000-intrusion_check-0000|data.Name		Intrusion Check									
+0000-intrusion_check-0000|data.Name		Intrusion Check									闯入判定
 0000-intrusion_check-0001|data.Desc											
 0000-inverse-0000|data.Name		Inverse	Inversement	Umkehr	Inverso		Inverso				反转
-0000-inverse-0001|data.Desc		All type matchups are reversed.	L'efficacité des types est inversée.	Alle Typvor- und Nachteile sind umgekehrt.	Todos las eficacias de tipo se han invertido.		L'efficacia dei tipi viene invertita.				所有属性克制关系均反转。
-0000-items_sniffed-0000|data.Name		Items Sniffed																								
+0000-inverse-0001|data.Desc		All type matchups are reversed.	L'efficacité des types est inversée.	Alle Typvor- und Nachteile sind umgekehrt.	Todos las eficacias de tipo se han invertido.		L'efficacia dei tipi viene invertita.				所有属性克制关系均被反转。
+0000-items_sniffed-0000|data.Name		Items Sniffed									道具察觉															
 0000-items_sniffed-0001|data.Desc																	
 0000-magic_room-0000|data.Name		Magic Room	Zone Magique	Magieraum	Zona Mágica		Magicozona				魔法空间
 0000-magic_room-0001|data.Desc		All Pokémon on the floor have their held items and abilities disabled.	Tout les Pokémon de l'étage perdent l'effet de leurs objets tenus.	Die Items und Fähigkeiten aller Pokémon auf der Ebene werden unbrauchbar.	Todos los Pokémon del piso tienen los objetos llevados y las habilidades desactivados.		Tutti i Pokémon nel piano hanno lo strumento tenuto e l'abilità annulati.				楼层内所有宝可梦的携带道具和特性都会失效。
@@ -59,15 +59,15 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-psychic_terrain-0001|data.Desc		Psychic-type attacks are boosted, and Pokémon can evade moves from close up.					La potenza delle mosse di tipo Psico aumenta e i Pokémon possono schivare le mosse da vicino. 				超能力属性攻击提高，宝可梦能够躲避近身攻击。
 0000-rain-0000|data.Name		Rain	Pluvieux	Regen	Lluvioso		Pioggia				下雨
 0000-rain-0001|data.Desc		Water-type attacks are boosted and Fire-type attacks are weakened.	Les attaques de type de type Eau sont boostées et les attaques de type Feu affaiblies.	Wasser-Attacken sind verstärkt und Feuer-Attacken sind geschwächt.	Los ataque de tipo Agua se potencian y los ataques de tipo Fuego se debilitan.		La potenza delle mosse di tipo Acqua aumenta, mentre quella delle mosse Fuoco dimunuisce.				水属性攻击威力提高，火属性攻击威力降低。
-0000-rescued-0000|data.Name		Rescued									
+0000-rescued-0000|data.Name		Rescued									已被救助
 0000-rescued-0001|data.Desc											
 0000-sandstorm-0000|data.Name		Sandstorm	Tempête de sable	Sandstorm	Tormenta de arena		Tempesta di sabbia				沙暴
 0000-sandstorm-0001|data.Desc		All Pokémon on the floor will take damage except Rock, Ground, and Steel-types. The Sp. Def of Rock-types is boosted.		Alle Pokémon, welche nicht Gestein, Boden und Stahl als Typ besitzen, werden auf der Ebene Schaden nehmen. Die Spezial-Verteidigung von Gestein-Typen ist erhöht.	Todos los Pokémon del piso recibirán daño, excepto los de tipo Roca, Tierra y Acero. Aumenta la Defensa Especial de los de tipo Roca.		Tutti i Pokémon nel piano subiscono danno eccetto quelli di tipo Roccia, Terra e Acciaio. La Difesa Speciale dei Pokémon di tipo Roccia aumenta.				除了岩石，地面和钢属性的宝可梦，楼层内的所有宝可梦都会受到伤害。岩石属性的特防会提高。
 0000-scanner-0000|data.Name		Scanner			Escáner		Scanner				侦查
 0000-scanner-0001|data.Desc											
-0000-shop_security-0000|data.Name		Shop Security									
+0000-shop_security-0000|data.Name		Shop Security									店的安防
 0000-shop_security-0001|data.Desc											
-0000-shopping-0000|data.Name		Shopping									
+0000-shopping-0000|data.Name		Shopping									购物中
 0000-shopping-0001|data.Desc											
 0000-snow-0000|data.Name	Not displayed to players.	Snow	Neigeux	Schnee	Nieve		Neve				下雪
 0000-snow-0001|data.Desc											

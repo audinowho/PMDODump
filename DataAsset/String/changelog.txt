@@ -1,68 +1,253 @@
 Sheet: Hardcode
-    * Deleted key _ENUM_Keys_D0
-    * Deleted key _ENUM_Keys_D1
-    * Deleted key _ENUM_Keys_D2
-    * Deleted key _ENUM_Keys_D3
-    * Deleted key _ENUM_Keys_D4
-    * Deleted key _ENUM_Keys_D5
-    * Deleted key _ENUM_Keys_D6
-    * Deleted key _ENUM_Keys_D7
-    * Deleted key _ENUM_Keys_D8
-    * Deleted key _ENUM_Keys_D9
-    * Deleted key _ENUM_Keys_Down
-    * Deleted key _ENUM_Keys_Escape
-    * Deleted key _ENUM_Keys_Left
-    * Deleted key _ENUM_Keys_OemBackslash
-    * Deleted key _ENUM_Keys_OemCloseBrackets
-    * Deleted key _ENUM_Keys_OemComma
-    * Deleted key _ENUM_Keys_OemMinus
-    * Deleted key _ENUM_Keys_OemOpenBrackets
-    * Deleted key _ENUM_Keys_OemPeriod
-    * Deleted key _ENUM_Keys_OemPipe
-    * Deleted key _ENUM_Keys_OemPlus
-    * Deleted key _ENUM_Keys_OemQuestion
-    * Deleted key _ENUM_Keys_OemQuotes
-    * Deleted key _ENUM_Keys_OemSemicolon
-    * Deleted key _ENUM_Keys_OemTilde
-    * Deleted key _ENUM_Keys_Right
-    * Deleted key _ENUM_Keys_Up
-    * Added ZONE_RESET_MOVESET
-    * Changed ZONE_RESTRICT_ITEM from "Item limit: {0}" to "Item Limit: {0}"
+    * Changed MENU_MSG_LOG_TITLE to _ENUM_InputType_MsgLog, retaining translations
+    * Added RANGE_AREA_CROSS
+    * Added RANGE_OFFSET_CROSS
 
 Sheet: Content
-    * Changed MSG_RECYCLE from "{0}'s {1} was recycled and became a {2}" to "{0}'s {1} was recycled and became a {2}."
-    * Changed TALK_ADVICE_STAT_DROP from "Aurgh, that Aipom threw some sand in my eyes and now my attacks are harder to hit![br]I need to get to a Wonder Tile..." to "Aurgh, that Aipom threw some sand in my eyes and now I can barely hit anything![br]I need to get to a Wonder Tile..."
+    * Added DLG_BAG_SIZE
+    * Added DLG_DUNGEON_DEAD_END
+    * Added DLG_MISSION_DESTINATION
+    * Added DLG_MISSION_ESCORT_DONE
+    * Added DLG_MISSION_OUTLAW
+    * Added DLG_MISSION_OUTLAW_DONE
+    * Added DLG_MISSION_OUTLAW_TRAP
+    * Added DLG_MISSION_REMINDER
+    * Added DLG_MISSION_RESCUE_ASK
+    * Added DLG_MISSION_RESCUE_DONE
+    * Added DLG_MISSION_RESCUE_THANKS
+    * Added ITEM_KEY_CARD_GRASS
+    * Added ITEM_KEY_CARD_MIST
+    * Added ITEM_KEY_CARD_MOON
+    * Added ITEM_KEY_CARD_SAND
+    * Added ITEM_KEY_CARD_STAR
+    * Added ITEM_KEY_CARD_SUN
+    * Added ITEM_KEY_CARD_WATER
+    * Added ITEM_KEY_CARD_WIND
+    * Added ITEM_KEY_CARD_WORLD
+    * Significantly changed MSG_DMG_BOOST_ANY_STATUS from "The power was boosted due to the target's major status!" to "The power was boosted due to the its major status!"
+    * Added MSG_DMG_BOOST_ANY_STATUS_OTHER, transferred from MSG_DMG_BOOST_ANY_STATUS
+    * Added TALK_ADVICE_POISON
+    * Added TALK_OUTLAW_DISGUISE_001
+    * Added TALK_OUTLAW_DISGUISE_002
+    * Added TALK_OUTLAW_DISGUISE_003
+    * Added TALK_OUTLAW_DISGUISE_004
+    * Added TALK_OUTLAW_DISGUISE_005
+    * Added TALK_OUTLAW_DISGUISE_ATTACKED
 
 Sheet: Script
-    * Significantly changed ground\base_camp/Noctowl_Action_Line_001 from "" to "[tmp]You've cleared guildmaster trail but this island still holds many secrets."
-    * Deleted key ground\base_camp/Noctowl_Action_Line_002
-    * Deleted key ground\base_camp/Noctowl_Action_Line_003
-    * Added ground\guildmaster_summit/Ending_Cutscene_Line_Ask_001
-    * Added ground\guildmaster_summit/Ending_Cutscene_Line_Ask_002
-    * Changed ground\guildmaster_summit/Expo_Cutscene_Line_012 to ground\guildmaster_summit/Expo_Cutscene_Line_008, retaining translations
-    * Changed ground\guildmaster_summit/Expo_Cutscene_Line_013 to ground\guildmaster_summit/Expo_Cutscene_Line_009, retaining translations
-    * Changed ground\guildmaster_summit/Expo_Cutscene_Line_014 to ground\guildmaster_summit/Expo_Cutscene_Line_010, retaining translations
-    * Erased contents of ground\guildmaster_summit/Expo_Cutscene_Line_011
-    * Erased contents of ground\guildmaster_summit/Expo_Cutscene_Line_012
-    * Erased contents of ground\guildmaster_summit/Expo_Cutscene_Line_013
-    * Erased contents of ground\guildmaster_summit/Expo_Cutscene_Line_014
+    * Added ground\base_camp/Noctowl_Reward_Line_001
+    * Added ground\base_camp/Noctowl_Reward_Line_002
+    * Added ground\base_camp/Noctowl_Reward_Line_003
+    * Added ground\base_camp/Noctowl_Reward_Line_004
+    * Added ground\base_camp_2/Storehouse_Line_Route
+    * Added ground\canyon_camp/Carry_Line_001
+    * Added ground\canyon_camp/Carry_Line_002
+    * Added ground\canyon_camp/Carry_Line_003
+    * Added ground\canyon_camp/Carry_Line_004
+    * Added ground\canyon_camp/Carry_Line_005
+    * Added ground\canyon_camp/Carry_Line_006
+    * Added ground\canyon_camp/Carry_Line_007
+    * Added ground\canyon_camp/Carry_Line_008
+    * Added ground\canyon_camp/Carry_Line_009
+    * Added ground\canyon_camp/Carry_Line_Route
+    * Added ground\canyon_camp/Deliver_Line_001
+    * Added ground\canyon_camp/Deliver_Line_002
+    * Added ground\canyon_camp/Deliver_Line_003
+    * Added ground\canyon_camp/Deliver_Line_004
+    * Added ground\canyon_camp/Deliver_Line_005
+    * Added ground\canyon_camp/Deliver_Line_006
+    * Added ground\canyon_camp/Deliver_Line_007
+    * Added ground\canyon_camp/Deliver_Line_008
+    * Added ground\canyon_camp/Deliver_Line_009
+    * Added ground\canyon_camp/Deliver_Line_Route
+    * Changed ground\canyon_camp/Storehouse_Line_001 from "[tmp]We've foud the hideout of the outlaw leader.  We need your help to take them down!" to "[tmp]I went ahead and set up tent here! I'm waiting for my subordinates to make another trip!"
+    * Added ground\canyon_camp/Storehouse_Line_002
+    * Added ground\canyon_camp/Storehouse_Line_003
+    * Added ground\canyon_camp/Storehouse_Line_004
+    * Added ground\canyon_camp/Storehouse_Line_005
+    * Added ground\canyon_camp/Storehouse_Line_006
+    * Added ground\canyon_camp/Storehouse_Line_007, transferred from ground\canyon_camp/Storehouse_Line_001
+    * Added ground\canyon_camp/Storehouse_Line_008
+    * Added ground\canyon_camp/Storehouse_Line_009
+    * Added ground\canyon_camp/Storehouse_Line_010
+    * Added ground\canyon_camp/Storehouse_Line_011
+    * Added ground\canyon_camp/Storehouse_Line_Route
+    * Added ground\cliff_camp/Carry_Line_001
+    * Added ground\cliff_camp/Carry_Line_002
+    * Added ground\cliff_camp/Carry_Line_003
+    * Added ground\cliff_camp/Carry_Line_004
+    * Added ground\cliff_camp/Carry_Line_005
+    * Added ground\cliff_camp/Carry_Line_Route
+    * Added ground\cliff_camp/Deliver_Line_001
+    * Added ground\cliff_camp/Deliver_Line_002
+    * Added ground\cliff_camp/Deliver_Line_003
+    * Added ground\cliff_camp/Deliver_Line_004
+    * Added ground\cliff_camp/Deliver_Line_005
+    * Added ground\cliff_camp/Deliver_Line_Route
+    * Erased contents of ground\cliff_camp/Doduo_Intro_001
+    * Erased contents of ground\cliff_camp/Doduo_Intro_002
+    * Erased contents of ground\cliff_camp/Doduo_Intro_003
+    * Erased contents of ground\cliff_camp/Doduo_Intro_004
+    * Erased contents of ground\cliff_camp/Doduo_Line_001
+    * Erased contents of ground\cliff_camp/Doduo_Line_002
+    * Erased contents of ground\cliff_camp/Doduo_Line_003
+    * Erased contents of ground\cliff_camp/Doduo_Line_004
+    * Erased contents of ground\cliff_camp/Doduo_Line_005
+    * Erased contents of ground\cliff_camp/Pachirisu_Intro_001
+    * Erased contents of ground\cliff_camp/Pachirisu_Intro_002
+    * Erased contents of ground\cliff_camp/Pachirisu_Intro_003
+    * Erased contents of ground\cliff_camp/Pachirisu_Intro_004
+    * Erased contents of ground\cliff_camp/Pachirisu_Line_001
+    * Erased contents of ground\cliff_camp/Pachirisu_Line_002
+    * Erased contents of ground\cliff_camp/Pachirisu_Line_003
+    * Erased contents of ground\cliff_camp/Pachirisu_Line_004
+    * Changed ground\cliff_camp/Rival_Line_003 to ground\cliff_camp/Rival_Line_001, retaining translations
+    * Erased contents of ground\cliff_camp/Rival_Line_002
+    * Erased contents of ground\cliff_camp/Rival_Line_003
+    * Significantly changed ground\cliff_camp/Storehouse_Line_001 from "Confound it![pause=0] Where are those two slackers?[br]Ekans and Gligar were supposed to be here with the supplies a long time ago!" to "Confound it![pause=0] Where are those two slackers?[br]Machop and Ponyta were supposed to be here with the supplies a long time ago!"
+    * Added ground\cliff_camp/Storehouse_Line_002
+    * Added ground\cliff_camp/Storehouse_Line_003
+    * Added ground\cliff_camp/Storehouse_Line_004
+    * Added ground\cliff_camp/Storehouse_Line_005
+    * Added ground\cliff_camp/Storehouse_Line_006
+    * Added ground\cliff_camp/Storehouse_Line_Route
+    * Added ground\end_ambush_forest/Ending_Cutscene_Line_001
+    * Added ground\end_ambush_forest/Expo_Cutscene_Line_001
+    * Added ground\end_ambush_forest/Expo_Cutscene_Line_002
+    * Added ground\end_ambush_forest/Expo_Cutscene_Line_003
+    * Added ground\end_ambush_forest/Expo_Cutscene_Line_004
+    * Added ground\end_ambush_forest/Expo_Cutscene_Short
+    * Added ground\end_moonlit_temple/Expo_Cutscene_Ask_Join, transferred from ground\moonlit_end/Expo_Cutscene_Ask_Join
+    * Added ground\end_moonlit_temple/Expo_Cutscene_Line_001, transferred from ground\moonlit_end/Expo_Cutscene_Line_001
+    * Added ground\end_moonlit_temple/Expo_Cutscene_Line_002_Default, transferred from ground\moonlit_end/Expo_Cutscene_Line_002_Default
+    * Added ground\end_moonlit_temple/Expo_Cutscene_Line_002_Postgame, transferred from ground\moonlit_end/Expo_Cutscene_Line_002_Postgame
+    * Added ground\end_moonlit_temple/Expo_Cutscene_Line_003, transferred from ground\moonlit_end/Expo_Cutscene_Line_003
+    * Added ground\end_moonlit_temple/Expo_Cutscene_Line_004, transferred from ground\moonlit_end/Expo_Cutscene_Line_004
+    * Added ground\end_moonlit_temple/Expo_Cutscene_Line_005, transferred from ground\moonlit_end/Expo_Cutscene_Line_005
+    * Added ground\end_moonlit_temple/Expo_Cutscene_Line_006, transferred from ground\moonlit_end/Expo_Cutscene_Line_006
+    * Added ground\end_moonlit_temple/Expo_Cutscene_Line_007, transferred from ground\moonlit_end/Expo_Cutscene_Line_007
+    * Added ground\end_moonlit_temple/Expo_Cutscene_Line_Accept, transferred from ground\moonlit_end/Expo_Cutscene_Line_Accept
+    * Added ground\end_moonlit_temple/Expo_Cutscene_Line_Reject, transferred from ground\moonlit_end/Expo_Cutscene_Line_Reject
+    * Added ground\end_moonlit_temple/Post_Cutscene_Line_001, transferred from ground\moonlit_end/Post_Cutscene_Line_001
+    * Added ground\end_moonlit_temple/Post_Cutscene_Line_Fail, transferred from ground\moonlit_end/Post_Cutscene_Line_Fail
+    * Added ground\end_moonlit_temple/Post_Cutscene_Line_Success, transferred from ground\moonlit_end/Post_Cutscene_Line_Success
+    * Added ground\end_treacherous_mountain/Ending_Cutscene_Line_001
+    * Added ground\end_treacherous_mountain/Expo_Cutscene_Line_001
+    * Added ground\end_treacherous_mountain/Expo_Cutscene_Line_002
+    * Added ground\end_treacherous_mountain/Expo_Cutscene_Line_003
+    * Added ground\end_treacherous_mountain/Expo_Cutscene_Line_004
+    * Added ground\end_treacherous_mountain/Expo_Cutscene_Short
+    * Added ground\final_stop/Carry_Line_001
+    * Added ground\final_stop/Carry_Line_002
+    * Added ground\final_stop/Carry_Line_003
+    * Added ground\final_stop/Carry_Line_004
+    * Added ground\final_stop/Carry_Line_005
+    * Added ground\final_stop/Carry_Line_006
+    * Added ground\final_stop/Carry_Line_007
+    * Added ground\final_stop/Carry_Line_008
+    * Added ground\final_stop/Carry_Line_009
+    * Added ground\final_stop/Carry_Line_Route
+    * Added ground\final_stop/Deliver_Line_001
+    * Added ground\final_stop/Deliver_Line_002
+    * Added ground\final_stop/Deliver_Line_003
+    * Added ground\final_stop/Deliver_Line_004
+    * Added ground\final_stop/Deliver_Line_005
+    * Added ground\final_stop/Deliver_Line_006
+    * Added ground\final_stop/Deliver_Line_007
+    * Added ground\final_stop/Deliver_Line_008
+    * Added ground\final_stop/Deliver_Line_009
+    * Added ground\final_stop/Deliver_Line_Route
+    * Changed ground\final_stop/Storehouse_Line_001 from "[tmp]We've foud the hideout of the other outlaw leader.  We need your help to take them down!" to "[tmp]Thanks for apprehending the criminal, take this reward."
+    * Changed ground\final_stop/Storehouse_Line_002 from "We're all rooting for you![pause=0]\nBlaze the trail to that summit!" to "[tmp]We've got to do something about these thieves."
+    * Added ground\final_stop/Storehouse_Line_003
+    * Added ground\final_stop/Storehouse_Line_004, transferred from ground\final_stop/Storehouse_Line_001
+    * Added ground\final_stop/Storehouse_Line_005
+    * Added ground\final_stop/Storehouse_Line_006
+    * Added ground\final_stop/Storehouse_Line_007
+    * Added ground\final_stop/Storehouse_Line_008, transferred from ground\final_stop/Storehouse_Line_002
+    * Added ground\final_stop/Storehouse_Line_009
+    * Added ground\final_stop/Storehouse_Line_Route
+    * Added ground\final_stop/Summit_Fail_Line_001
+    * Added ground\final_stop/Summit_Fail_Line_002
+    * Added ground\forest_camp/Carry_Line_Route
+    * Added ground\forest_camp/Deliver_Line_Route
+    * Added ground\forest_camp/Doduo_Line_001
+    * Added ground\forest_camp/Doduo_Line_002
+    * Added ground\forest_camp/Doduo_Line_003
+    * Added ground\forest_camp/Pachirisu_Line_001
+    * Added ground\forest_camp/Pachirisu_Line_002
+    * Added ground\forest_camp/Pachirisu_Line_003
+    * Added ground\forest_camp/Storehouse_Line_Route
+    * Added ground\guild_hut/Expo_Cutscene_Line_001
+    * Added ground\guild_hut/Expo_Cutscene_Line_002
+    * Added ground\guild_hut/Journal_Line_001
+    * Added ground\guild_hut/Journal_Line_002
+    * Added ground\guild_hut/Journal_Line_Card
+    * Added ground\guild_hut/Menu_Novel_Notes
+    * Added ground\guild_hut/Menu_Novel_Read
+    * Added ground\guild_hut/Novel_After_001
+    * Added ground\guild_hut/Novel_After_002
+    * Added ground\guild_hut/Novel_Ask
+    * Added ground\guild_hut/Novel_Intro_001
+    * Added ground\guild_hut/Novel_Intro_002
+    * Added ground\guildmaster_summit/Carry_Line_Route
+    * Added ground\guildmaster_summit/Deliver_Line_Route
+    * Added ground\guildmaster_summit/Noctowl_Reward_Line_001
+    * Added ground\guildmaster_summit/Noctowl_Reward_Line_002
+    * Added ground\guildmaster_summit/Noctowl_Reward_Line_003
+    * Added ground\guildmaster_summit/Supply_Line_001
+    * Added ground\guildmaster_summit/Supply_Line_002
+    * Added ground\guildmaster_summit/Supply_Line_003
+    * Deleted key ground\moonlit_end/Expo_Cutscene_Ask_Join
+    * Deleted key ground\moonlit_end/Expo_Cutscene_Line_001
+    * Deleted key ground\moonlit_end/Expo_Cutscene_Line_002_Default
+    * Deleted key ground\moonlit_end/Expo_Cutscene_Line_002_Postgame
+    * Deleted key ground\moonlit_end/Expo_Cutscene_Line_003
+    * Deleted key ground\moonlit_end/Expo_Cutscene_Line_004
+    * Deleted key ground\moonlit_end/Expo_Cutscene_Line_005
+    * Deleted key ground\moonlit_end/Expo_Cutscene_Line_006
+    * Deleted key ground\moonlit_end/Expo_Cutscene_Line_007
+    * Deleted key ground\moonlit_end/Expo_Cutscene_Line_Accept
+    * Deleted key ground\moonlit_end/Expo_Cutscene_Line_Reject
+    * Deleted key ground\moonlit_end/Post_Cutscene_Line_001
+    * Deleted key ground\moonlit_end/Post_Cutscene_Line_Fail
+    * Deleted key ground\moonlit_end/Post_Cutscene_Line_Success
+    * Added ground\rest_stop/Carry_Line_001
+    * Added ground\rest_stop/Carry_Line_002
+    * Added ground\rest_stop/Carry_Line_003
+    * Added ground\rest_stop/Carry_Line_004
+    * Added ground\rest_stop/Carry_Line_005
+    * Added ground\rest_stop/Carry_Line_006
+    * Added ground\rest_stop/Carry_Line_Route
+    * Added ground\rest_stop/Deliver_Line_001
+    * Added ground\rest_stop/Deliver_Line_002
+    * Added ground\rest_stop/Deliver_Line_003
+    * Added ground\rest_stop/Deliver_Line_004
+    * Added ground\rest_stop/Deliver_Line_005
+    * Added ground\rest_stop/Deliver_Line_006
+    * Added ground\rest_stop/Deliver_Line_Route
+    * Added ground\rest_stop/Storehouse_Line_001
+    * Added ground\rest_stop/Storehouse_Line_002
+    * Added ground\rest_stop/Storehouse_Line_003
+    * Added ground\rest_stop/Storehouse_Line_004
+    * Added ground\rest_stop/Storehouse_Line_005
+    * Added ground\rest_stop/Storehouse_Line_006
+    * Added ground\rest_stop/Storehouse_Line_007
+    * Added ground\rest_stop/Storehouse_Line_Route
 
 Sheet: Abilities
-    * Significantly changed 0207-surge_surfer-0001|data.Desc from "Doubles the Pokémon's Speed stat on Electric Terrain." to "Boosts the Pokémon's Movement Speed on Electric Terrain."
-
-Sheet: Items
+    * Changed 0084-unburden-0001|data.Desc from "Boosts Movement Speed the Pokémon has no held item." to "Boosts Movement Speed if the Pokémon has no held item."
 
 Sheet: MapStatuses
 
 Sheet: Moves
+    * Significantly changed 0666-floral_healing-0001|data.Desc from "The user restores the target's HP by up to half of its max HP. It restores more HP when the terrain is grass." to "The user restores the party's HP. It restores more HP when the terrain is grass."
 
 Sheet: Statuses
-    * Added 0000-attack_response-0000|data.Name
-    * Added 0000-attack_response-0001|data.Desc
-    * Changed 0000-kings_shield-0001|data.Desc from "The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks. " to "The Pokémon is protected from all damaging moves. This status wears off after a few turns, or if the Pokémon attacks."
+    * Significantly changed 0000-perish_song-0000|data.Name from "Perish Song" to "Perish Count"
+    * Significantly changed 0000-perish_song-0001|data.Desc from "The Pokémon has heard Perish Song, and will faint when its countdown reaches zero." to "The Pokémon has a Perish Count that drops each time it hears Perish Song. It will faint when it drops to 0."
 
 Sheet: Tiles
-    * Changed 0000-tile_boss-0001|data.Desc from "A mysterious signal that calls Pokémon to the area." to "A mysterious sigil that calls Pokémon to the area."
 
 Sheet: Excl Names
 
@@ -71,13 +256,9 @@ Sheet: Excl Effects
 Sheet: Zones
 
 Sheet: Maps
-    * Added end_ambush_forest-0000|data.Name
-    * Added end_treacherous_mountain-0000|data.Name
+    * Added end_champions_road-0000|data.Name
 
 Sheet: GroundMaps
-    * Added end_ambush_forest-0000|data.Name
-    * Added end_moonlit_temple-0000|data.Name, transferred from moonlit_end-0000|data.Name
-    * Added end_treacherous_mountain-0000|data.Name
-    * Significantly changed final_stop-0000|data.Name from "Path to the Summit" to "Blizzard Camp"
-    * Deleted key moonlit_end-0000|data.Name
+    * Deleted key training_maze-0000|data.Name
+    * Deleted key training_maze_2-0000|data.Name
 

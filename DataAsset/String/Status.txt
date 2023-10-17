@@ -177,8 +177,8 @@ Key		EN
 0000-paralyze-0001|data.Desc		The Pokémon is paralyzed and cannot move in consecutive turns. This status wears off after a few turns.
 0000-paused-0000|data.Name		Paused
 0000-paused-0001|data.Desc		The Pokémon is rendered incapable of taking any action. This status wears off after a few turns.
-0000-perish_song-0000|data.Name		Perish Song
-0000-perish_song-0001|data.Desc		The Pokémon has heard Perish Song, and will faint when its countdown reaches zero.
+0000-perish_song-0000|data.Name		Perish Count
+0000-perish_song-0001|data.Desc		The Pokémon has a Perish Count that drops each time it hears Perish Song. It will faint when it drops to 0.
 0000-petal_dance-0000|data.Name		Petal Dance
 0000-petal_dance-0001|data.Desc		The Pokémon will use Petal Dance repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.
 0000-phantom_force-0000|data.Name		Phantom Force

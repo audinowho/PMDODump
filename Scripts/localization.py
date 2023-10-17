@@ -523,6 +523,7 @@ class Localization:
                             body = { 'values': [[cmb_key, moved_comment, local_str] + moved_strings + ([""] * cols)] }
 
                             range_name = sheet_name + "!"+str(sheet_ind)+":"+str(sheet_ind)
+                            print("Updating range {0}".format(range_name))
                             self._service.spreadsheets().values().update(spreadsheetId=self._id, range=range_name, valueInputOption="RAW", body=body).execute()
                             # set the colors too
                             if len(requests) > 0:
