@@ -1,0 +1,57 @@
+== BaseTaskUser.ThinkType ==
+
+
+Contains the type of thinking this entity does
+
+
+== BaseTaskUser.Task ==
+
+
+Current task
+
+
+== GroundAIUser.AI ==
+
+
+AI container
+
+
+== GroundAIUser.IsInteracting ==
+
+
+Whether the entity is busy interacting, and should act accordingly
+
+
+== GroundAIUser.AIEnabled ==
+
+
+Whether the AI is enabled or disabled for this entity
+
+
+== GroundEntity.triggerType ==
+
+
+
+
+
+== GroundEntity.EntEnabled ==
+
+
+When this property is false, all processing of this entity is disabled.
+So it essentially becomes invisible and inactive on the map.
+Its mainly meant to be used with the mape editor so entities
+can be placed and activated only when needed by the map scenario.
+
+
+== GroundEntity.EntOrder ==
+
+
+The draw/interaction order of the entity.  Lower values are handled before higher ones.
+
+
+== GroundEntity.DevEntColoring ==
+
+
+The color of the boxes and etc around the entity
+
+

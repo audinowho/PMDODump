@@ -1,0 +1,146 @@
+== BattleContext.StrikeStartTile ==
+
+
+the tile of the user before it started a strike (used for tipper effects)
+wrapped; it can't go out of bounds anyway
+
+
+== BattleContext.StrikeEndTile ==
+
+
+the tile of the user JUST AFTER it started a strike (used for updating position)
+wrapped; it can't go out of bounds anyway
+
+
+== BattleContext.StartDir ==
+
+
+the direcion of the user before it started a strike (used for multistrike confusion)
+unwrapped
+
+
+== BattleContext.ExplosionTile ==
+
+
+the origin tile for the explosion
+unwrapped
+
+
+== BattleContext.TargetTile ==
+
+
+the location of the tile being targeted
+unwrapped
+
+
+== BattleContext.StrikeLandTiles ==
+
+
+all tiles in which a strike's hitbox ended (used for item landing)
+unwrapped
+
+
+== BattleContext.ActionType ==
+
+
+The ActionType: Skill, Item, Throw or Trap
+
+
+== BattleContext.UsageSlot ==
+
+
+For skills, the skill slot
+For items, the item slot
+
+
+== BattleContext.StrikesMade ==
+
+
+Strikes that have currently been made in the BattleContext.
+
+
+== BattleContext.Strikes ==
+
+
+The total strikes that should be made in the BattleContext.
+
+
+== BattleContext.HitboxAction ==
+
+
+Determines the range and type of hitbox.
+
+
+== BattleContext.Explosion ==
+
+
+Determiens the size of splash effect.
+
+
+== BattleContext.Data ==
+
+
+The effect of the skill, item, trap, etc. on the target.
+
+
+== BattleContext.Item ==
+
+
+The item that is used, and most likely dropped
+
+
+== BattleContext.SkillUsedUp ==
+
+
+The skill whose last charge was used up
+
+
+== BattleContext.TurnCancel ==
+
+
+Determines if this action should trigger end-of-turn.
+
+
+== BattleContext.Hit ==
+
+
+Denotes whether the action hit its target.
+
+
+== BattleContext.RangeMod ==
+
+
+A number of be added to the Range argument for the hitbox, when it comes out.
+
+
+== BattleContext.GlobalContextStates ==
+
+
+Context states that remain on the main battlecontext even after iterating over different targets.
+Ordinarily, context states are left behind when switching to a new target (in multi-target contexts)
+
+
+== UserTargetGameContext.Target ==
+
+
+The character that the action is targeted at
+
+
+== GameContext.ContextStates ==
+
+
+Contains contextual info to be passed along the GameContext, used by GameEvents
+
+
+== GameContext.User ==
+
+
+The character that is performing the action
+
+
+== GameContext.CancelState ==
+
+
+Whether the action should be canceled or not.
+
+
