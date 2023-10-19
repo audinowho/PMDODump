@@ -38,7 +38,7 @@ namespace DataGenerator.Data
                     SkillData oldMove = DataManager.LoadData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString(), ".json");
                     if (oldMove != null)
                     {
-                        oldMove.Data.SkillStates = move.Item2.Data.SkillStates;
+                        oldMove.Data.OnActions = move.Item2.Data.OnActions;
                         DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
                     }
                 }
@@ -51,7 +51,7 @@ namespace DataGenerator.Data
                     SkillData oldMove = DataManager.LoadData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString(), ".json");
                     if (oldMove != null)
                     {
-                        oldMove.Data.BeforeHits = move.Item2.Data.BeforeHits;
+                        oldMove.Data.OnActions = move.Item2.Data.OnActions;
                         DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
                     }
                 }

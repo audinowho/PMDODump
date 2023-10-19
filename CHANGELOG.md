@@ -1,4 +1,5 @@
-# 0.7.18.1 Changes #
+# 0.7.18.2 Changes #
 
-* Fix a blackscreen bug when entering a dungeon with 1 team member
-* Fix a load bug related to SpeciesMobilityEvent
+* Fix a bug preventing missions from occurring
+* Fix gameplay discrepancy with visible monsterhouses mod
+* Fix Natural Gift with Rowap berry
