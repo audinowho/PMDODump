@@ -9503,6 +9503,7 @@ namespace DataGenerator.Data
                 itemPair.Add("berry_roseli", "fairy");
 
                 itemPair.Add("berry_jaboca", "dragon");
+                itemPair.Add("berry_rowap", "dark");
                 itemPair.Add("berry_liechi", "grass");
                 itemPair.Add("berry_ganlon", "ice");
                 itemPair.Add("berry_salac", "fighting");
