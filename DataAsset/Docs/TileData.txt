@@ -13,7 +13,7 @@ The description of the data
 == TileData.Released ==
 
 
-Determines if it's released
+Is it released and allowed to show up in the game?
 
 
 == TileData.Comment ==

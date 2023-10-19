@@ -1,0 +1,85 @@
+== StatusData.Name ==
+
+
+The name of the data
+
+
+== StatusData.Desc ==
+
+
+The description of the data
+
+
+== StatusData.Released ==
+
+
+Is it released and allowed to show up in the game?
+
+
+== StatusData.Comment ==
+
+
+Comments visible to only developers
+
+
+== StatusData.MenuName ==
+
+
+Determines if it shows up in the status menu.
+
+
+== StatusData.CarryOver ==
+
+
+Determines if the status stays when changing floors.
+
+
+== StatusData.Emoticon ==
+
+
+The icon that appears over the character's head when they have the status.
+
+
+== StatusData.DropEmoticon ==
+
+
+The icon that appears over the character's head when they have this status with a stack below 0
+
+
+== StatusData.FreeEmote ==
+
+
+Icon that appears on the character's body when they have the status.
+
+
+== StatusData.DrawEffect ==
+
+
+Special visual effects applied to the character with this status.
+
+
+== StatusData.Targeted ==
+
+
+Will keep track of the character that inflicted the status.
+
+
+== StatusData.StatusStates ==
+
+
+Special variables that this status contains.
+They are potentially checked against in a select number of battle events.
+
+
+== StatusData.OnSkillChanges ==
+
+
+Event for when the character's skills are changed or swapped around.
+
+
+== StatusData.TargetPassive ==
+
+
+Passive effects applied to the character that inflicted the status.
+
+

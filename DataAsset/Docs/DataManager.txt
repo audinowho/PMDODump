@@ -1,3 +1,88 @@
+== _DATA.Start ==
+
+
+The parameters governing the start of the game.
+Such as starting character, map, level, etc.
+
+
+== _DATA.DefaultMonster ==
+
+
+The monster ID consiered default for purposes of initialization
+
+
+== _DATA.DefaultSkill ==
+
+
+The skill ID considered default for purposes of initialization and comparing to "nothing"
+
+
+== _DATA.DefaultIntrinsic ==
+
+
+The skill ID considered default for purposes of initialization and comparing to "nothing"
+
+
+== _DATA.DefaultMapStatus ==
+
+
+The skill ID considered default for purposes of initialization and comparing to "nothing"
+
+
+== _DATA.DefaultElement ==
+
+
+The skill ID considered default for purposes of initialization and comparing to "nothing"
+
+
+== _DATA.DefaultTile ==
+
+
+The skill ID considered default for purposes of initialization and comparing to "nothing"
+
+
+== _DATA.DefaultZone ==
+
+
+The skill ID considered default for purposes of initialization.
+
+
+== _DATA.DefaultRank ==
+
+
+The skill ID considered default for purposes of initialization.
+
+
+== _DATA.DefaultAI ==
+
+
+The skill ID considered default for purposes of initialization.
+
+
+== _DATA.DefaultSkin ==
+
+
+The skill ID considered default for purposes of initialization.
+
+
+== _DATA.GenFloor ==
+
+
+The terrain ID considered to be universally "floor" in random dungeon generation
+
+
+== _DATA.GenWall ==
+
+
+The terrain ID considered to be universally "wall" in random dungeon generation
+
+
+== _DATA.GenUnbreakable ==
+
+
+The terrain ID considered to be universally "unbreakable" in random dungeon generation
+
+
 == _DATA.Save ==
 
 
