@@ -240,7 +240,10 @@ namespace PMDOSetup
             {
                 (int Left, int Top) cursor = Console.GetCursorPosition();
                 Console.SetCursorPosition(0, cursor.Top);
-                Console.Write(String.Format("Progress: {0}/{1} Bytes", e.BytesReceived, e.TotalBytesToReceive));
+                if (e.TotalBytesToReceive > -1)
+                    Console.Write(String.Format("Progress: {0}/{1} Bytes", e.BytesReceived, e.TotalBytesToReceive));
+                else
+                    Console.Write(String.Format("Progress: {0} Bytes", e.BytesReceived));
             }
         }
         private static void Wc_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
@@ -295,8 +298,6 @@ namespace PMDOSetup
             string tempExe, tempAsset;
 
             bool firstInstall = lastVersion == new Version(0, 0, 0, 0);
-            if (!firstInstall)
-                Console.WriteLine("WARNING: Updates will invalidate existing quicksaves and pending rescues.  Be sure to finish them first!");
 
             //3: read from site what version is uploaded. if greater than the current version, upgrade
             using (var wc = new WebClient())
@@ -333,7 +334,6 @@ namespace PMDOSetup
 
                 Console.WriteLine();
                 Console.WriteLine(specificRelease.Body);
-                Console.WriteLine();
                 Console.WriteLine();
 
                 Regex pattern = new Regex(@"https://github\.com/(?<repo>\w+/\w+).git");
@@ -401,7 +401,14 @@ namespace PMDOSetup
                     assetFile = String.Format("https://api.github.com/repos/{0}/zipball/{1}", assetRepo, refStr);
                 }
 
-                Console.WriteLine("Version {0} will be downloaded from the endpoints:\n  {1}\n  {2}.\n\nPress any key to continue.", nextVersion, exeFile, assetFile);
+                Console.WriteLine("Version {0} will be downloaded from the endpoints:\n  {1}\n  {2}.", nextVersion, exeFile, assetFile);
+
+                Console.WriteLine();
+
+                if (!firstInstall)
+                    Console.WriteLine("WARNING: Updates will invalidate existing quicksaves and pending rescues.  Be sure to finish them first!");
+
+                Console.WriteLine("Press any key to continue.");
                 ReadKey();
 
                 //4: download the respective zip from specified location
