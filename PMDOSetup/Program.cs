@@ -27,7 +27,7 @@ namespace PMDOSetup
         static string curVerRepo;
         static string assetSubmodule;
         static string exeSubmodule;
-        static List<string> excludedFiles;
+        static List<string> filesToDelete;
         static List<string> executableFiles;
 
         static string saveDir;
@@ -50,7 +50,7 @@ namespace PMDOSetup
             saveDir = "PMDO/SAVE";
             saveBackupDir = "SAVE.bak/";
             lastVersion = new Version(0, 0, 0, 0);
-            excludedFiles = new List<string>();
+            filesToDelete = new List<string>();
             executableFiles = new List<string>();
             //2: load xml-filename, xml name, last version, exclusions - if possible
             LoadXml();
@@ -119,9 +119,8 @@ namespace PMDOSetup
                     else if (choice == ConsoleKey.D4)
                     {
                         Console.WriteLine("Uninstalling...");
-                        DeleteWithExclusions(Path.Join(updaterPath, "PMDO"));
-                        DeleteWithExclusions(Path.Join(updaterPath, "WaypointServer"));
-                        DeleteWithExclusions(Path.Join(updaterPath, "temp"));
+                        foreach (string inclusion in filesToDelete)
+                            DeleteWithExclusions(Path.Join(updaterPath, inclusion));
                         Console.WriteLine("Done.");
                         ReadKey();
                         return;
@@ -445,8 +444,8 @@ namespace PMDOSetup
 
             //Delete old files
             Console.WriteLine("Deleting old files...");
-            DeleteWithExclusions(Path.Join(updaterPath, "PMDO"));
-            DeleteWithExclusions(Path.Join(updaterPath, "WaypointServer"));
+            foreach (string inclusion in filesToDelete)
+                DeleteWithExclusions(Path.Join(updaterPath, inclusion));
 
             //Console.WriteLine("Adjusting filenames...");
             //unzip the exe, rename, then rezip just to rename the file... ugh
@@ -489,41 +488,27 @@ namespace PMDOSetup
                         destPcs.Add(pathPcs[ii]);
 
                     string destName = String.Join("/", destPcs.ToArray());
+                    bool setPerms = executableFiles.Contains(destName);
+                    string destPath = Path.GetFullPath(Path.Join(updaterPath, Path.Combine(".", destName)));
 
-                    //go through the list of exemptions
-                    bool exempt = false;
-                    foreach (string exemption in excludedFiles)
+                    string folderPath = Path.GetDirectoryName(destPath);
+                    if (!Directory.Exists(folderPath))
+                        Directory.CreateDirectory(folderPath);
+                    if (!destPath.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
                     {
-                        if (exemption.StartsWith(destName, StringComparison.OrdinalIgnoreCase))
+                        entry.ExtractToFile(destPath, true);
+                        if (setPerms)
                         {
-                            exempt = true;
-                            break;
+                            var info = new UnixFileInfo(destPath);
+                            info.FileAccessPermissions = FileAccessPermissions.AllPermissions;
+                            info.Refresh();
                         }
                     }
-                    if (!exempt)
+                    else
                     {
-                        bool setPerms = executableFiles.Contains(destName);
-                        string destPath = Path.GetFullPath(Path.Join(updaterPath, Path.Combine(".", destName)));
-
-                        string folderPath = Path.GetDirectoryName(destPath);
-                        if (!Directory.Exists(folderPath))
-                            Directory.CreateDirectory(folderPath);
-                        if (!destPath.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
-                        {
-                            entry.ExtractToFile(destPath, true);
-                            if (setPerms)
-                            {
-                                var info = new UnixFileInfo(destPath);
-                                info.FileAccessPermissions = FileAccessPermissions.AllPermissions;
-                                info.Refresh();
-                            }
-                        }
-                        else
-                        {
-                            if (!Directory.Exists(destPath))
-                                Directory.CreateDirectory(destPath);
-                            Console.WriteLine("Unzipping {0}", entry.FullName);
-                        }
+                        if (!Directory.Exists(destPath))
+                            Directory.CreateDirectory(destPath);
+                        Console.WriteLine("Unzipping {0}", entry.FullName);
                     }
                 }
             }
@@ -610,10 +595,10 @@ namespace PMDOSetup
                     assetSubmodule = xmldoc.SelectSingleNode("Config/Asset").InnerText;
                     lastVersion = new Version(xmldoc.SelectSingleNode("Config/LastVersion").InnerText);
 
-                    excludedFiles.Clear();
-                    XmlNode keys = xmldoc.SelectSingleNode("Config/Exclusions");
-                    foreach (XmlNode key in keys.SelectNodes("Exclusion"))
-                        excludedFiles.Add(key.InnerText);
+                    filesToDelete.Clear();
+                    XmlNode keys = xmldoc.SelectSingleNode("Config/ToDelete");
+                    foreach (XmlNode key in keys.SelectNodes("Deletion"))
+                        filesToDelete.Add(key.InnerText);
 
                     executableFiles.Clear();
                     XmlNode exes = xmldoc.SelectSingleNode("Config/Executables");
@@ -640,16 +625,32 @@ namespace PMDOSetup
             curVerRepo = "audinowho/PMDODump";
             assetSubmodule = "DumpAsset";
             lastVersion = new Version(0, 0, 0, 0);
-            excludedFiles = new List<string>();
+            filesToDelete = new List<string>();
             executableFiles = new List<string>();
-            excludedFiles.Clear();
-            excludedFiles.Add("PMDO/CONFIG/");
-            excludedFiles.Add("PMDO/LOG/");
-            excludedFiles.Add("PMDO/MODS/");
-            excludedFiles.Add("PMDO/REPLAY/");
-            excludedFiles.Add("PMDO/RESCUE/");
-            excludedFiles.Add("PMDO/SAVE/");
-            executableFiles.Clear();
+            filesToDelete.Add("WaypointServer/");
+            filesToDelete.Add("PMDO/Base/");
+            filesToDelete.Add("PMDO/Content/");
+            filesToDelete.Add("PMDO/Controls/");
+            filesToDelete.Add("PMDO/Data/");
+            filesToDelete.Add("PMDO/Editor/");
+            filesToDelete.Add("PMDO/Licenses/");
+            filesToDelete.Add("PMDO/Strings/");
+            filesToDelete.Add("PMDO/MODS/All_Starters");
+            filesToDelete.Add("PMDO/MODS/Gender_Unlock");
+            filesToDelete.Add("PMDO/MODS/Music_Notice");
+            filesToDelete.Add("PMDO/MODS/Visible_Monster_Houses");
+            filesToDelete.Add("PMDO/dev.bat");
+            filesToDelete.Add("PMDO/FNA.pdb");
+            filesToDelete.Add("PMDO/KeraLua.pdb");
+            filesToDelete.Add("PMDO/NLua.pdb");
+            filesToDelete.Add("PMDO/PMDC.pdb");
+            filesToDelete.Add("PMDO/PMDO.exe");
+            filesToDelete.Add("PMDO/PMDO.png");
+            filesToDelete.Add("PMDO/README.txt");
+            filesToDelete.Add("PMDO/RogueElements.pdb");
+            filesToDelete.Add("PMDO/RogueEssence.Editor.Avalonia.pdb");
+            filesToDelete.Add("PMDO/RogueEssence.pdb");
+            filesToDelete.Add("PMDO/spritebot_credits.txt");
             executableFiles.Add("PMDO/PMDO");
             executableFiles.Add("PMDO/dev.sh");
             executableFiles.Add("PMDO/MapGenTest");
@@ -670,10 +671,10 @@ namespace PMDOSetup
                 appendConfigNode(xmldoc, docNode, "Asset", assetSubmodule);
                 appendConfigNode(xmldoc, docNode, "LastVersion", lastVersion.ToString());
 
-                XmlNode keys = xmldoc.CreateElement("Exclusions");
-                foreach (string key in excludedFiles)
+                XmlNode keys = xmldoc.CreateElement("ToDelete");
+                foreach (string key in filesToDelete)
                 {
-                    XmlNode node = xmldoc.CreateElement("Exclusion");
+                    XmlNode node = xmldoc.CreateElement("Deletion");
                     node.InnerText = key;
                     keys.AppendChild(node);
                 }
@@ -698,31 +699,37 @@ namespace PMDOSetup
 
         static bool DeleteWithExclusions(string path)
         {
-            if (!Directory.Exists(path))
-                return false;
-
             if (isExcluded(path))
                 return false;
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+                return true;
+            }
+
+            if (!Directory.Exists(path))
+                return true;
 
             bool deletedAll = true;
             string[] listDir = Directory.GetDirectories(path);
             foreach (string dir in listDir)
             {
                 bool deletedAllSub = DeleteWithExclusions(dir);
-
-                if (deletedAllSub)
-                    Directory.Delete(dir, false);
-                else
+                if (!deletedAllSub)
                     deletedAll = false;
             }
             string[] listFiles = Directory.GetFiles(path);
             foreach (string file in listFiles)
             {
-                if (!isExcluded(file))
-                    File.Delete(file);
-                else
+                bool deletedAllSub = DeleteWithExclusions(file);
+                if (!deletedAllSub)
                     deletedAll = false;
             }
+
+            if (deletedAll)
+                Directory.Delete(path, false);
+
             return deletedAll;
         }
 
@@ -733,13 +740,6 @@ namespace PMDOSetup
             if (filename == ".git")
                 return true;
 
-            string fullPath = Path.GetFullPath(path).Replace("\\", "/").Trim('/');
-            foreach (string exclusion in excludedFiles)
-            {
-                string fullExclusion = Path.GetFullPath(exclusion).Replace("\\", "/").Trim('/');
-                if (string.Equals(fullPath, fullExclusion, StringComparison.OrdinalIgnoreCase))
-                    return true;
-            }
             return false;
         }
 
