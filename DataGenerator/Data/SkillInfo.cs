@@ -14435,20 +14435,24 @@ namespace DataGenerator.Data
             else if (ii == 563)
             {
                 skill.Name = new LocalText("-Rototiller");
-                skill.Desc = new LocalText("The user overturns the soil, destroying traps and making it easier for plants to grow. This raises the Attack and Sp. Atk stats of Grass-type Pokémon.");
-                skill.BaseCharges = 20;
+                skill.Desc = new LocalText("The user overturns the soil, destroying obstacles along the way.");
+                skill.BaseCharges = 18;
                 skill.Data.Element = "ground";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new CharElementNeededEvent("grass", new StatusStackBattleEvent("mod_attack", true, false, 1), new StatusStackBattleEvent("mod_special_attack", true, false, 1)));
+                //skill.Data.OnHits.Add(0, new CharElementNeededEvent("grass", new StatusStackBattleEvent("mod_attack", true, false, 1), new StatusStackBattleEvent("mod_special_attack", true, false, 1)));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
+                SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", terrainEmitter, new FlagType(typeof(WallTerrainState)), new FlagType(typeof(WaterTerrainState)), new FlagType(typeof(LavaTerrainState)), new FlagType(typeof(AbyssTerrainState))));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 4;
-                ((DashAction)skill.HitboxAction).StopAtWall = true;
+                //((DashAction)skill.HitboxAction).StopAtWall = true;
                 ((DashAction)skill.HitboxAction).WideAngle = LineCoverage.Wide;
                 ((DashAction)skill.HitboxAction).HitTiles = true;
-                skill.Explosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
+                //skill.HitboxAction.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                //skill.Explosion.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                skill.HitboxAction.ActionFX.Sound = "_UNK_DUN_Heave_Up";
             }
             else if (ii == 564)
             {
