@@ -1,5 +1,4 @@
-# 0.7.18.2 Changes #
+# 0.7.18.3 Changes #
 
-* Fix a bug preventing missions from occurring
-* Fix gameplay discrepancy with visible monsterhouses mod
-* Fix Natural Gift with Rowap berry
+* Disarming Voice PP 16->18, BP 30->35
+* Round BP 30->40

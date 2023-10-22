@@ -12947,7 +12947,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(30));
+                skill.Data.SkillStates.Set(new BasePowerState(40));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
@@ -14691,7 +14691,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(30));
+                skill.Data.SkillStates.Set(new BasePowerState(35));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
