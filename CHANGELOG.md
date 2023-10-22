@@ -2,4 +2,5 @@
 
 * Disarming Voice PP 16->18, BP 30->35
 * Round BP 30->40
+* Allies will walk toward items if they have no enemies or leaders to move to
 * Dev: UI:ExportSpeakerSettings() and UI:ImportSpeakerSettings() for saving and loading speaker settings
