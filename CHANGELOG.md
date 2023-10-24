@@ -1,5 +1,6 @@
 # 0.7.18.3 Changes #
 
+* Fix off-looking letters in Chinese localization
 * Disarming Voice PP 16->18, BP 30->35
 * Round BP 30->40
 * Rototiller PP 20->17, does not raise stats, instead removes all trap and terrain
