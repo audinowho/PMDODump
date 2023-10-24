@@ -6,4 +6,5 @@
 * Allies will walk toward items if they have no enemies or leaders to move to
 * Explosions will not destroy CannotDrop items
 * Fixes for minor presentation issues
+* Dev: services added by main.lua from mods will stack
 * Dev: UI:ExportSpeakerSettings() and UI:ImportSpeakerSettings() for saving and loading speaker settings
