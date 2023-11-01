@@ -1,6 +1,9 @@
 # 0.7.18.3 Changes #
 
+* Recruitment search screen
 * Fix off-looking letters in Chinese localization
+* Fixed an issue with poison working through magic guard
+* Localization fixes for the plsash screen
 * Disarming Voice PP 16->18, BP 30->35
 * Round BP 30->40
 * Rototiller PP 20->17, does not raise stats, instead removes all trap and terrain

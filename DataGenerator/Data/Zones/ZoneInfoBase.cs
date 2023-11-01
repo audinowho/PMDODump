@@ -305,7 +305,7 @@ namespace DataGenerator.Data
                     //poolSpawn.TeamSizes.Add(1, 12);
                     //spawnStep.Spawns.Add(poolSpawn, 100);
 
-                    SpecificTeamSpawner teamSpawn = new SpecificTeamSpawner(GetGenericMob("castform", "", "", "", "", "", new RandRange(18), "wander_smart", true), GetGenericMob("castform", "", "", "", "", "", new RandRange(18), "wander_smart", true));
+                    SpecificTeamSpawner teamSpawn = new SpecificTeamSpawner(GetGenericMob("castform", "", "", "", "", "", new RandRange(18), "wander_smart", true, true), GetGenericMob("castform", "", "", "", "", "", new RandRange(18), "wander_smart", true, true));
                     spawnStep.Spawns.Add(teamSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
 
