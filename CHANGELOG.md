@@ -1,6 +1,7 @@
 # 0.7.18.3 Changes #
 
 * Recruitment search screen
+* Trail results in final epitaph
 * Fix off-looking letters in Chinese localization
 * Fixed an issue with poison working through magic guard
 * Localization fixes for the plsash screen
