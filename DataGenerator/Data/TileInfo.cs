@@ -1004,9 +1004,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 38)
             {
-                tile.Name = new LocalText("Sigil Site");
+                tile.Name = new LocalText("Mirage Tablet");
                 fileName = "tile_boss";
-                tile.Desc = new LocalText("A mysterious sigil that calls Pokémon to the area.");
+                tile.Desc = new LocalText("A stone tablet engraved with names long lost. There is an indent at the bottom that fits an Explorer Badge...");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Site;
                 tile.Anim = new ObjAnimData("Tile_Signal", 12);
@@ -1248,7 +1248,7 @@ namespace DataGenerator.Data
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Stair_Sensor_Arrow", 6), 6);
                 emitter.Layer = DrawLayer.Top;
-                tile.InteractWithTiles.Add(0, new CompassEvent(emitter, "stairs_go_up", "stairs_go_down", "stairs_secret_up", "stairs_secret_down", "rescue_point",
+                tile.InteractWithTiles.Add(0, new CompassEvent(emitter, "stairs_go_up", "stairs_go_down", "rescue_point",
                     "chest_full", "tile_boss", "sealed_door", "stairs_exit_up", "stairs_exit_down", "stairs_back_up", "stairs_back_down"));
             }
             else if (ii == 52)

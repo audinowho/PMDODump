@@ -2780,7 +2780,7 @@ namespace DataGenerator.Data
 
                     //necessities
                     CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
-                    necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
+                    necessities.SpawnRates.SetRange(12, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
 
@@ -2791,6 +2791,7 @@ namespace DataGenerator.Data
                     necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
                     necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(0, max_floors), 6);
                     necessities.Spawns.Add(new InvItem("food_grimy"), new IntRange(0, max_floors), 8);
+
                     //snacks
                     CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
                     snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -3093,8 +3094,10 @@ namespace DataGenerator.Data
 
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(6, 10), new IntRange(0, max_floors)), new MapItem("food_apple"));
-                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(6, 11), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
-                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(max_floors / 2, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_oran"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(10, max_floors)), new MapItem("berry_leppa"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(5, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
 
 
                     {
@@ -8140,6 +8143,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(8, 15), new IntRange(0, max_floors)), new MapItem("food_apple"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(1, 4), new IntRange(0, max_floors)), new MapItem("berry_sitrus"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(max_floors / 2, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
 
@@ -8916,7 +8920,11 @@ namespace DataGenerator.Data
 
 
                         {
-                            RandRange amount = new RandRange(1, 4);
+                            //oases: 1-2, 2-3, 2-3, 2-3
+
+                            RandRange amount = new RandRange(1, 3);
+                            if (ii > 0)
+                                amount = new RandRange(2, 4);
                             MultiBlobStencil<MapGenContext> multiBlobStencil = new MultiBlobStencil<MapGenContext>(false);
 
                             //not allowed to draw the blob over start or end.
@@ -8987,13 +8995,20 @@ namespace DataGenerator.Data
                         {
                             if (ii == 0)
                                 AddInitGridStep(layout, 32, 32, 8, 8);
+                            //else if (ii == 1)
+                            //    AddInitGridStep(layout, 40, 40, 8, 8);
                             else
                                 AddInitGridStep(layout, 50, 50, 8, 8);
 
-                            GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
+                            //on the third floor, create a 200x200 tile structure made of a 23x23 cell megaroom.
+                            //there are no entrances into the room except for the center, which connects straight down to the room below it
+                            //then, 4 switches are placed at the exact corners of this structure, bulldozing out in their directions until they hit another walkable
+                            //the main path must connect to this room
+
+                            GridPathBranchSpread<MapGenContext> path = new GridPathBranchSpread<MapGenContext>();
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                             path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                            path.RoomRatio = new RandRange(97);
+                            path.RoomRatio = new RandRange(90);
                             path.BranchRatio = new RandRange(0, 35);
 
                             SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
@@ -9052,13 +9067,99 @@ namespace DataGenerator.Data
 
 
                         //chest
+                        int boss_amount = 0;
                         int chest_amount = 0;
                         if (ii == 1)
-                            chest_amount = 1;
+                            boss_amount = 1;
                         else if (ii == 2)
-                            chest_amount = 2;
+                            boss_amount = 2;
                         else if (ii == 3)
-                            chest_amount = 4;
+                        {
+                            boss_amount = 3;
+                            chest_amount = 1;
+                        }
+
+                        for (int kk = 0; kk < boss_amount; kk++)
+                        {
+                            {
+                                SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                //boss that only shows on second or final floor
+                                if (ii == 1 || ii == 3 && kk == 0)
+                                {
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("hippowdon", 23, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("thievul", 23, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("drapion", 23, 0, 1), 10);
+                                }
+                                //boss that only shows on third or final floor
+                                if (ii == 2 || ii == 3 && kk > 0 && kk < 2)
+                                {
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("armaldo", 23, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("bastiodon", 23, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("aerodactyl", 23, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("flygon", 23, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("arbok", 23, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("ditto", 23, 0, 1), 10);
+                                }
+                                //special boss that only shows up on the final floor.
+                                //guaranteed to be one of these, guaranteed only one of these
+                                if (ii == 3 && kk == 2)
+                                {
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("camerupt-water", 23, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("claydol-water", 23, 0, 1), 10);
+                                }
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericBossRoomStep(bossRooms, kk));
+                            }
+                            //sealing the boss room and treasure room
+                            {
+                                BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>("sealed_block", "tile_boss");
+                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                                vaultStep.Filters.Add(new RoomFilterIndex(false, kk));
+                                vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
+                                vaultStep.BossFilters.Add(new RoomFilterIndex(false, kk));
+                                layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                            }
+                            //vault treasures
+                            {
+                                BulkSpawner<MapGenContext, MapItem> treasures = new BulkSpawner<MapGenContext, MapItem>();
+                                if (kk == 2)
+                                {
+                                    //joy seed guaranteed; it is an oasis
+                                    treasures.SpecificSpawns.Add(new MapItem("seed_joy"));
+                                }
+                                if (ii == 3 && kk == 0)
+                                {
+                                    //key guaranteed; go check the chest.
+                                    treasures.SpecificSpawns.Add(new MapItem("key", 1));
+                                }
+
+                                treasures.SpawnAmount = 3;
+                                foreach (string key in IterateVitamins())
+                                    treasures.RandomSpawns.Add(new MapItem(key), 4);//boosters
+                                foreach (string key in IterateGummis())
+                                    treasures.RandomSpawns.Add(new MapItem(key), 4);//gummis
+                                treasures.RandomSpawns.Add(new MapItem("held_pierce_band"), 10);//pierce band
+                                treasures.RandomSpawns.Add(new MapItem("held_friend_bow"), 10);//friend bow
+                                treasures.RandomSpawns.Add(new MapItem("held_goggle_specs"), 10);//goggle specs
+                                treasures.RandomSpawns.Add(new MapItem("evo_harmony_scarf"), 10);//harmony scarf
+                                treasures.RandomSpawns.Add(new MapItem("medicine_max_elixir"), 20);//max elixir
+                                treasures.RandomSpawns.Add(new MapItem("medicine_max_potion"), 20);//max potion
+                                treasures.RandomSpawns.Add(new MapItem("medicine_full_heal"), 20);//full heal
+                                treasures.RandomSpawns.Add(new MapItem("medicine_amber_tear", 2), 20);//amber tear
+
+
+
+                                SpawnList<IStepSpawner<MapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<MapGenContext, MapItem>>();
+                                boxSpawn.Add(new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1, 3), new RandRange(1))), 10);
+                                MultiStepSpawner<MapGenContext, MapItem> boxPicker = new MultiStepSpawner<MapGenContext, MapItem>(new LoopedRand<IStepSpawner<MapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
+
+                                MultiStepSpawner<MapGenContext, MapItem> mainSpawner = new MultiStepSpawner<MapGenContext, MapItem>();
+                                mainSpawner.Picker = new PresetMultiRand<IStepSpawner<MapGenContext, MapItem>>(treasures, boxPicker);
+                                RandomRoomSpawnStep<MapGenContext, MapItem> detourItems = new RandomRoomSpawnStep<MapGenContext, MapItem>(mainSpawner);
+                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                                detourItems.Filters.Add(new RoomFilterIndex(false, kk));
+                                layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                            }
+                        }
 
                         for (int kk = 0; kk < chest_amount; kk++)
                         {
@@ -9072,13 +9173,8 @@ namespace DataGenerator.Data
                             chestStep.Items.Add(new MapItem("held_friend_bow"), 10);//friend bow
                             chestStep.Items.Add(new MapItem("held_goggle_specs"), 10);//goggle specs
                             chestStep.Items.Add(new MapItem("evo_harmony_scarf"), 10);//harmony scarf
-                            chestStep.Items.Add(new MapItem("medicine_max_elixir"), 20);//max elixir
-                            chestStep.Items.Add(new MapItem("medicine_max_potion"), 20);//max potion
-                            chestStep.Items.Add(new MapItem("medicine_full_heal"), 20);//full heal
-                            chestStep.Items.Add(new MapItem("medicine_amber_tear", 2), 20);//amber tear
 
                             chestStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(HeldState)), false, true, new RandRange(1)), 10);//held
-                            chestStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(UtilityState)), false, true, new RandRange(2)), 10);//manmades
                             chestStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(DrinkState)), false, true, new RandRange(3, 6)), 10);//vitamins
                             chestStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), false, true, new RandRange(5, 10)), 10);//gummis
                             layout.GenSteps.Add(PR_HOUSES, chestStep);

@@ -542,82 +542,119 @@ namespace DataGenerator.Data
 
                     //boss rooms
                     {
-                        SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
-                        string[] custom = new string[] {  "~~~...~~~",
-                                                              "~~~...~~~",
-                                                              "~~X...X~~",
-                                                              ".........",
-                                                              ".........",
-                                                              ".........",
-                                                              "~~X...X~~",
-                                                              "~~~...~~~",
-                                                              "~~~...~~~"};
-                        List<MobSpawn> mobSpawns = new List<MobSpawn>();
+                        int boss_idx = 0;
                         {
-                            MobSpawn post_mob = new MobSpawn();
-                            post_mob.BaseForm = new MonsterID("kyogre", 0, "normal", Gender.Unknown);
-                            post_mob.Tactic = "wait_only";
-                            post_mob.Level = new RandRange(50);
-                            post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(1, 4)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
-                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
-                            mobSpawns.Add(post_mob);
+                            SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
+                            bossRooms.Add(getBossRoomGen<MapGenContext>("camerupt-water", 23, 0, 1), 10);
+                            layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericBossRoomStep(bossRooms, boss_idx));
                         }
+                        //sealing the boss room and treasure room
                         {
-                            MobSpawn post_mob = new MobSpawn();
-                            post_mob.BaseForm = new MonsterID("groudon", 0, "normal", Gender.Unknown);
-                            post_mob.Tactic = "wait_only";
-                            post_mob.Level = new RandRange(50);
-                            post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(7, 4)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
-                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
-                            mobSpawns.Add(post_mob);
+                            BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>("sealed_block", "tile_boss");
+                            vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                            vaultStep.Filters.Add(new RoomFilterIndex(false, boss_idx));
+                            vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
+                            vaultStep.BossFilters.Add(new RoomFilterIndex(false, boss_idx));
+                            layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
                         }
+                        //vault treasures
                         {
-                            MobSpawn post_mob = new MobSpawn();
-                            post_mob.BaseForm = new MonsterID("rayquaza", 0, "normal", Gender.Unknown);
-                            post_mob.Tactic = "wait_only";
-                            post_mob.Level = new RandRange(50);
-                            post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(4, 1)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
-                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
-                            mobSpawns.Add(post_mob);
+                            BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
+                            RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
+                            detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                            detourItems.Filters.Add(new RoomFilterIndex(false, boss_idx));
+                            layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
                         }
-                        bossRooms.Add(CreateRoomGenSpecificBoss<MapGenContext>(custom, new Loc(4, 4), mobSpawns, true), 10);
-                        SpawnList<RoomGen<MapGenContext>> treasureRooms = new SpawnList<RoomGen<MapGenContext>>();
-                        treasureRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
-                        SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
-                        detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
-                        AddBossRoomStep<MapGenContext> detours = new AddBossRoomStep<MapGenContext>(bossRooms, treasureRooms, detourHalls);
-                        detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
-                        detours.BossComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                        detours.BossComponents.Set(new NoEventRoom());
-                        detours.BossComponents.Set(new BossRoom());
-                        detours.BossHallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                        detours.VaultComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BossLocked));
-                        detours.VaultComponents.Set(new NoConnectRoom());
-                        detours.VaultComponents.Set(new NoEventRoom());
-                        detours.VaultHallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BossLocked));
-                        detours.VaultHallComponents.Set(new NoConnectRoom());
+                    }
 
-                        layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
-                    }
-                    //sealing the boss room and treasure room
                     {
-                        BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>("sealed_block", "tile_boss");
-                        vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
-                        vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
-                        layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                        int boss_idx = 1;
+                        {
+                            SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
+                            bossRooms.Add(getBossRoomGen<MapGenContext>("claydol-water", 23, 0, 1), 10);
+                            layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericBossRoomStep(bossRooms, boss_idx));
+                        }
+                        //sealing the boss room and treasure room
+                        {
+                            BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>("sealed_block", "tile_boss");
+                            vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                            vaultStep.Filters.Add(new RoomFilterIndex(false, boss_idx));
+                            vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
+                            vaultStep.BossFilters.Add(new RoomFilterIndex(false, boss_idx));
+                            layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                        }
+                        //vault treasures
+                        {
+                            BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_black"));
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_black"));
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_black"));
+                            RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
+                            detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                            detourItems.Filters.Add(new RoomFilterIndex(false, boss_idx));
+                            layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                        }
                     }
-                    //vault treasures
+
                     {
-                        BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
-                        treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
-                        treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
-                        treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
-                        RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
-                        detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
-                        layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                        int boss_idx = 2;
+                        {
+                            SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
+                            bossRooms.Add(getBossRoomGen<MapGenContext>("camerupt", 23, 0, 1), 10);
+                            layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericBossRoomStep(bossRooms, boss_idx));
+                        }
+                        //sealing the boss room and treasure room
+                        {
+                            BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>("sealed_block", "tile_boss");
+                            vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                            vaultStep.Filters.Add(new RoomFilterIndex(false, boss_idx));
+                            vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
+                            vaultStep.BossFilters.Add(new RoomFilterIndex(false, boss_idx));
+                            layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                        }
+                        //vault treasures
+                        {
+                            BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_pink"));
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_pink"));
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_pink"));
+                            RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
+                            detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                            detourItems.Filters.Add(new RoomFilterIndex(false, boss_idx));
+                            layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                        }
+                    }
+
+                    {
+                        int boss_idx = 3;
+                        {
+                            SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
+                            bossRooms.Add(getBossRoomGen<MapGenContext>("claydol", 23, 0, 1), 10);
+                            layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericBossRoomStep(bossRooms, boss_idx));
+                        }
+                        //sealing the boss room and treasure room
+                        {
+                            BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>("sealed_block", "tile_boss");
+                            vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                            vaultStep.Filters.Add(new RoomFilterIndex(false, boss_idx));
+                            vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
+                            vaultStep.BossFilters.Add(new RoomFilterIndex(false, boss_idx));
+                            layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                        }
+                        //vault treasures
+                        {
+                            BulkSpawner<MapGenContext, InvItem> treasures = new BulkSpawner<MapGenContext, InvItem>();
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_pink"));
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_pink"));
+                            treasures.SpecificSpawns.Add(new InvItem("gummi_pink"));
+                            RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
+                            detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                            detourItems.Filters.Add(new RoomFilterIndex(false, boss_idx));
+                            layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
+                        }
                     }
 
 
@@ -1644,71 +1681,15 @@ namespace DataGenerator.Data
 
                     //boss rooms
                     {
-                        SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
-                        string[] custom = new string[] {  "~~~...~~~",
-                                                              "~~~...~~~",
-                                                              "~~X...X~~",
-                                                              ".........",
-                                                              ".........",
-                                                              ".........",
-                                                              "~~X...X~~",
-                                                              "~~~...~~~",
-                                                              "~~~...~~~"};
-                        List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                        {
-                            MobSpawn post_mob = new MobSpawn();
-                            post_mob.BaseForm = new MonsterID("kyogre", 0, "normal", Gender.Unknown);
-                            post_mob.Tactic = "wait_only";
-                            post_mob.Level = new RandRange(50);
-                            post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(1, 4)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
-                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
-                            mobSpawns.Add(post_mob);
-                        }
-                        {
-                            MobSpawn post_mob = new MobSpawn();
-                            post_mob.BaseForm = new MonsterID("groudon", 0, "normal", Gender.Unknown);
-                            post_mob.Tactic = "wait_only";
-                            post_mob.Level = new RandRange(50);
-                            post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(7, 4)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
-                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
-                            mobSpawns.Add(post_mob);
-                        }
-                        {
-                            MobSpawn post_mob = new MobSpawn();
-                            post_mob.BaseForm = new MonsterID("rayquaza", 0, "normal", Gender.Unknown);
-                            post_mob.Tactic = "wait_only";
-                            post_mob.Level = new RandRange(50);
-                            post_mob.SpawnFeatures.Add(new MobSpawnLoc(new Loc(4, 1)));
-                            post_mob.SpawnFeatures.Add(new MobSpawnItem(true, "food_apple"));
-                            post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
-                            mobSpawns.Add(post_mob);
-                        }
-                        bossRooms.Add(CreateRoomGenSpecificBoss<MapGenContext>(custom, new Loc(4, 4), mobSpawns, true), 10);
-                        SpawnList<RoomGen<MapGenContext>> treasureRooms = new SpawnList<RoomGen<MapGenContext>>();
-                        treasureRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
-                        SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
-                        detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
-                        AddBossRoomStep<MapGenContext> detours = new AddBossRoomStep<MapGenContext>(bossRooms, treasureRooms, detourHalls);
-                        detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
-                        detours.BossComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                        detours.BossComponents.Set(new NoEventRoom());
-                        detours.BossComponents.Set(new BossRoom());
-                        detours.BossHallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                        detours.VaultComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BossLocked));
-                        detours.VaultComponents.Set(new NoConnectRoom());
-                        detours.VaultComponents.Set(new NoEventRoom());
-                        detours.VaultHallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BossLocked));
-                        detours.VaultHallComponents.Set(new NoConnectRoom());
-
-                        layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+                        layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, getBossRoomStep<MapGenContext>("hippowdon", 0));
                     }
                     //sealing the boss room and treasure room
                     {
                         BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>("sealed_block", "tile_boss");
                         vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                        vaultStep.Filters.Add(new RoomFilterIndex(false, 0));
                         vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
+                        vaultStep.BossFilters.Add(new RoomFilterIndex(false, 0));
                         layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
                     }
                     //vault treasures
@@ -1719,6 +1700,7 @@ namespace DataGenerator.Data
                         treasures.SpecificSpawns.Add(new InvItem("gummi_wonder"));
                         RandomRoomSpawnStep<MapGenContext, InvItem> detourItems = new RandomRoomSpawnStep<MapGenContext, InvItem>(treasures);
                         detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                        detourItems.Filters.Add(new RoomFilterIndex(false, 0));
                         layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, detourItems);
                     }
 
@@ -2379,7 +2361,7 @@ namespace DataGenerator.Data
                 LayeredSegment structure = new LayeredSegment();
                 //Tests Tilesets, and unlockables
                 #region TILESET TESTS
-                for (int kk = 0; kk < 153; kk++)
+                for (int kk = 0; kk < 5/*153*/; kk++)
                 {
                     string[] level = {
                             "...........................................",

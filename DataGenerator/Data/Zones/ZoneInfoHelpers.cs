@@ -494,23 +494,26 @@ namespace DataGenerator.Data
             return roomGen;
         }
 
-        public static AddBossRoomStep<ListMapGenContext> CreateGenericBossRoomStep(IRandPicker<RoomGen<ListMapGenContext>> bossRooms)
+        public static AddBossRoomStep<T> CreateGenericBossRoomStep<T>(IRandPicker<RoomGen<T>> bossRooms, int bossIndex = 0) where T : ListMapGenContext
         {
-            SpawnList<RoomGen<ListMapGenContext>> treasureRooms = new SpawnList<RoomGen<ListMapGenContext>>();
-            treasureRooms.Add(new RoomGenCross<ListMapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
-            SpawnList<PermissiveRoomGen<ListMapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
-            detourHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
-            AddBossRoomStep<ListMapGenContext> detours = new AddBossRoomStep<ListMapGenContext>(bossRooms, treasureRooms, detourHalls);
+            SpawnList<RoomGen<T>> treasureRooms = new SpawnList<RoomGen<T>>();
+            treasureRooms.Add(new RoomGenCross<T>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
+            SpawnList<PermissiveRoomGen<T>> detourHalls = new SpawnList<PermissiveRoomGen<T>>();
+            detourHalls.Add(new RoomGenAngledHall<T>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+            AddBossRoomStep<T> detours = new AddBossRoomStep<T>(bossRooms, treasureRooms, detourHalls);
             detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
             detours.BossComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
             detours.BossComponents.Set(new NoEventRoom());
             detours.BossComponents.Set(new BossRoom());
+            detours.BossComponents.Set(new IndexRoom(bossIndex));
             detours.BossHallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
             detours.VaultComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BossLocked));
             detours.VaultComponents.Set(new NoConnectRoom());
             detours.VaultComponents.Set(new NoEventRoom());
+            detours.VaultComponents.Set(new IndexRoom(bossIndex));
             detours.VaultHallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BossLocked));
             detours.VaultHallComponents.Set(new NoConnectRoom());
+            detours.VaultHallComponents.Set(new IndexRoom(bossIndex));
 
             return detours;
         }
@@ -764,12 +767,12 @@ namespace DataGenerator.Data
             return post_mob;
         }
 
-        static MobSpawn GetBossMob(string species, string ability, string move1, string move2, string move3, string move4, string item, Loc loc, string tactic = "boss")
+        static MobSpawn GetBossMob(string species, string ability, string move1, string move2, string move3, string move4, string item, Loc loc, int baseLv = 3, int scaleNum = 4, int scaleDen = 3)
         {
-            return GetBossMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, item, loc, tactic);
+            return GetBossMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, item, loc, baseLv, scaleNum, scaleDen);
         }
 
-        static MobSpawn GetBossMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, string item, Loc loc, string tactic = "boss")
+        static MobSpawn GetBossMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, string item, Loc loc, int baseLv = 3, int scaleNum = 4, int scaleDen = 3)
         {
             MobSpawn post_mob = new MobSpawn();
             post_mob.BaseForm = id;
@@ -782,12 +785,12 @@ namespace DataGenerator.Data
                 post_mob.SpecifiedSkills.Add(move3);
             if (!String.IsNullOrEmpty(move4))
                 post_mob.SpecifiedSkills.Add(move4);
-            post_mob.Tactic = tactic;
-            post_mob.Level = new RandRange(3);
+            post_mob.Tactic = "boss";
+            post_mob.Level = new RandRange(baseLv);
             post_mob.SpawnFeatures.Add(new MobSpawnLoc(loc));
             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, item));
             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
-            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(4, 3));
+            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(scaleNum, scaleDen));
             MobSpawnScaledBoost boost = new MobSpawnScaledBoost(new IntRange(1, 50));
             boost.MaxHPBonus = new IntRange(15, MonsterFormData.MAX_STAT_BOOST);
             post_mob.SpawnFeatures.Add(boost);
