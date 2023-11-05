@@ -4238,6 +4238,8 @@ namespace DataGenerator.Data
                                 AddFloorData(layout, "Star Cave.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             if (ii >= 7)
+                                AddDefaultMapStatus(layout, "default_weather", "misty_terrain");
+                            else if (ii > 7)
                                 AddDefaultMapStatus(layout, "default_weather", "misty_terrain", "clear", "clear", "clear");
 
                             //Tilesets
@@ -8919,26 +8921,6 @@ namespace DataGenerator.Data
                             AddTextureData(layout, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary", "ground");
 
 
-                        {
-                            //oases: 1-2, 2-3, 2-3, 2-3
-
-                            RandRange amount = new RandRange(1, 3);
-                            if (ii > 0)
-                                amount = new RandRange(2, 4);
-                            MultiBlobStencil<MapGenContext> multiBlobStencil = new MultiBlobStencil<MapGenContext>(false);
-
-                            //not allowed to draw the blob over start or end.
-                            multiBlobStencil.List.Add(new StairsStencil<MapGenContext>(true));
-                            //effect tile checks are also needed since even though they are postproc-shielded, it'll cut off the path to those locations
-                            multiBlobStencil.List.Add(new BlobTileStencil<MapGenContext>(new TileEffectStencil<MapGenContext>(true)));
-
-                            //not allowed to draw the blob such that chokepoints are removed
-                            multiBlobStencil.List.Add(new NoChokepointStencil<MapGenContext>(new MapTerrainStencil<MapGenContext>(false, false, true, true)));
-
-                            BlobWaterStep<MapGenContext> waterStep = new BlobWaterStep<MapGenContext>(amount, new Tile("water"), new MatchTerrainStencil<MapGenContext>(true, new Tile("unbreakable")), multiBlobStencil, new IntRange(4, 10), new IntRange(7, 20));
-                            layout.GenSteps.Add(PR_WATER, waterStep);
-                        }
-
                         //traps
 
                         //wonder tile
@@ -9034,6 +9016,26 @@ namespace DataGenerator.Data
                                 layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(80, 30));
                             else
                                 layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(150, 30));
+
+
+
+                            {
+                                //oases: 1, 1-2, 2-3, 2-3
+                                RandRange amount = new RandRange(2, 4);
+                                if (ii < 1)
+                                    amount = new RandRange(1);
+                                else if (ii < 2)
+                                    amount = new RandRange(1, 3);
+                                CombineGridRoomRandStep<MapGenContext> step = new CombineGridRoomRandStep<MapGenContext>(amount, GetImmutableFilterList());
+                                step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                                RoomGenOasis<MapGenContext> oasisGen = new RoomGenOasis<MapGenContext>(new RandRange(13, 18), new RandRange(13, 18));
+                                oasisGen.WaterTerrain = new Tile("water");
+                                oasisGen.ItemAmount = 1;
+                                oasisGen.Treasures.Add(new MapItem("seed_joy"), 10);
+                                step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2), oasisGen), 5);
+                                layout.GenSteps.Add(PR_GRID_GEN, step);
+                            }
 
                             {
                                 RandRange combines;
@@ -9137,16 +9139,14 @@ namespace DataGenerator.Data
                                     treasures.RandomSpawns.Add(new MapItem(key), 4);//boosters
                                 foreach (string key in IterateGummis())
                                     treasures.RandomSpawns.Add(new MapItem(key), 4);//gummis
-                                treasures.RandomSpawns.Add(new MapItem("held_pierce_band"), 10);//pierce band
-                                treasures.RandomSpawns.Add(new MapItem("held_friend_bow"), 10);//friend bow
-                                treasures.RandomSpawns.Add(new MapItem("held_goggle_specs"), 10);//goggle specs
-                                treasures.RandomSpawns.Add(new MapItem("evo_harmony_scarf"), 10);//harmony scarf
+                                treasures.RandomSpawns.Add(new MapItem("held_pierce_band"), 5);//pierce band
+                                treasures.RandomSpawns.Add(new MapItem("held_friend_bow"), 5);//friend bow
+                                treasures.RandomSpawns.Add(new MapItem("held_goggle_specs"), 5);//goggle specs
+                                treasures.RandomSpawns.Add(new MapItem("evo_harmony_scarf"), 5);//harmony scarf
                                 treasures.RandomSpawns.Add(new MapItem("medicine_max_elixir"), 20);//max elixir
                                 treasures.RandomSpawns.Add(new MapItem("medicine_max_potion"), 20);//max potion
                                 treasures.RandomSpawns.Add(new MapItem("medicine_full_heal"), 20);//full heal
                                 treasures.RandomSpawns.Add(new MapItem("medicine_amber_tear", 2), 20);//amber tear
-
-
 
                                 SpawnList<IStepSpawner<MapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<MapGenContext, MapItem>>();
                                 boxSpawn.Add(new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1, 3), new RandRange(1))), 10);
