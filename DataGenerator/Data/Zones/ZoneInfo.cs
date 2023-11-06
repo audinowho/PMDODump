@@ -8755,7 +8755,7 @@ namespace DataGenerator.Data
 
 
                     //money
-                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level * 40, 10);
+                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(3200, 3300), new RandRange(1500, 1600));
                     moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                     floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
 
@@ -8949,7 +8949,12 @@ namespace DataGenerator.Data
                         }
 
                         //money - Ballpark 25K
-                        AddMoneyData(layout, new RandRange(90, 120));
+                        if (ii == 0)
+                            AddMoneyTrails(layout, new RandRange(12, 22), new IntRange(20, 120), new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1), new RandRange(3))));
+                        else if (ii == 1)
+                            AddMoneyTrails(layout, new RandRange(16, 30), new IntRange(20, 120), new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1), new RandRange(4))));
+                        else
+                            AddMoneyTrails(layout, new RandRange(16, 30), new IntRange(20, 120), new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1), new RandRange(6))));
 
                         //enemies! ~ lv 18 to 32
                         if (ii == 0)
@@ -9149,7 +9154,7 @@ namespace DataGenerator.Data
                                 treasures.RandomSpawns.Add(new MapItem("medicine_amber_tear", 2), 20);//amber tear
 
                                 SpawnList<IStepSpawner<MapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<MapGenContext, MapItem>>();
-                                boxSpawn.Add(new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1, 3), new RandRange(1))), 10);
+                                boxSpawn.Add(new BoxSpawner<MapGenContext>("box_heavy", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(2), new RandRange(1))), 10);
                                 MultiStepSpawner<MapGenContext, MapItem> boxPicker = new MultiStepSpawner<MapGenContext, MapItem>(new LoopedRand<IStepSpawner<MapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
 
                                 MultiStepSpawner<MapGenContext, MapItem> mainSpawner = new MultiStepSpawner<MapGenContext, MapItem>();

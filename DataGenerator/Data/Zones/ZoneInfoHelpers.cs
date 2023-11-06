@@ -249,6 +249,14 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_SPAWN_MONEY, moneyStep);
         }
 
+        public static void AddMoneyTrails<T>(MapGen<T> layout, RandRange trailLength, IntRange placementValue, IStepSpawner<T, MapItem> terminalSpawn, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.None) where T : MapGenContext
+        {
+            MoneyTrailSpawnStep<T, MapItem> moneyStep = new MoneyTrailSpawnStep<T, MapItem>(terminalSpawn, trailLength, placementValue);
+            if (connectivity != ConnectivityRoom.Connectivity.None)
+                moneyStep.Filters.Add(new RoomFilterConnectivity(connectivity));
+            layout.GenSteps.Add(PR_SPAWN_MONEY, moneyStep);
+        }
+
         public static void AddItemData<T>(MapGen<T> layout, RandRange amount, int successPercent, bool includeHalls = false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext
         {
             DueSpawnStep<T, InvItem, MapGenEntrance> itemStep = new DueSpawnStep<T, InvItem, MapGenEntrance>(new ContextSpawner<T, InvItem>(amount), successPercent, includeHalls);
