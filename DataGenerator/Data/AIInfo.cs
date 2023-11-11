@@ -298,6 +298,15 @@ namespace DataGenerator.Data
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
 
+            tactic = new AITactic();
+            tactic.Name = new LocalText("Wait and See");//26
+            tactic.ID = "wait_and_see";
+            iq = AIFlags.AttackToEscape;
+            tactic.Plans.Add(new AttackFoesPlan(iq, 4, 4, 3, AIPlan.AttackChoice.DumbAttack, AIPlan.PositionChoice.Approach));
+            tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
+            Tactics.Add(tactic);
+
             //make a variant of explore to go for items (For use of team characters, certain thief enemies)
             //always avoid traps when exploring
             //always avoid traps when following a leader

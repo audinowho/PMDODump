@@ -8769,8 +8769,8 @@ namespace DataGenerator.Data
                     necessities.SpawnRates.SetRange(3, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
-
                     necessities.Spawns.Add(new InvItem("food_grimy"), new IntRange(0, max_floors), 10);
+
                     //snacks
                     CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
                     snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -8779,6 +8779,7 @@ namespace DataGenerator.Data
 
                     snacks.Spawns.Add(new InvItem("seed_hunger"), new IntRange(0, max_floors), 10);
                     snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, max_floors), 10);
+                    snacks.Spawns.Add(new InvItem("seed_plain"), new IntRange(0, max_floors), 10);
                     snacks.Spawns.Add(new InvItem("seed_vile"), new IntRange(0, max_floors), 10);
                     snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 10);
                     snacks.Spawns.Add(new InvItem("seed_last_chance"), new IntRange(0, max_floors), 10);
@@ -8868,18 +8869,19 @@ namespace DataGenerator.Data
                     poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-                    poolSpawn.Spawns.Add(GetTeamMob("cubone", "", "bone_club", "growl", "", "", new RandRange(23), "wander_dumb_itemless"), new IntRange(0, 3), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("marowak", "", "bonemerang", "", "", "", new RandRange(28), "wander_dumb_itemless"), new IntRange(3, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("hippopotas", "", "sand_tomb", "dig", "", "", new RandRange(26), "wander_dumb_itemless"), new IntRange(1, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("fearow", "", "drill_run", "pluck", "", "", new RandRange(24), "wander_dumb_itemless"), new IntRange(0, 2), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("sandslash", "", "magnitude", "sand_attack", "", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(1, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("cacnea", "", "leech_seed", "needle_arm", "", "", new RandRange(24), "wander_dumb_itemless"), new IntRange(0, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("skorupi", "", "acupressure", "bug_bite", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wander_dumb_itemless"), new IntRange(2, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("torkoal", "", "smokescreen", "lava_plume", "", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(0, 2), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("arbok", "", "screech", "glare", "crunch", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(2, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "assurance", "", "", new RandRange(25), "wander_dumb_itemless"), new IntRange(2, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wander_dumb_itemless"), new IntRange(1, max_floors), 5);
-                    poolSpawn.Spawns.Add(GetTeamMob("scraggy", "", "leer", "low_kick", "", "", new RandRange(24), "wander_dumb_itemless"), new IntRange(0, 2), 5);
+                    poolSpawn.Spawns.Add(GetTeamMob("cubone", "", "bone_club", "growl", "", "", new RandRange(23), "wait_and_see"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("marowak", "", "bonemerang", "", "", "", new RandRange(28), "wait_and_see"), new IntRange(3, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("hippopotas", "", "sand_tomb", "dig", "", "", new RandRange(26), "wait_and_see"), new IntRange(0, 2), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("fearow", "", "drill_run", "pluck", "", "", new RandRange(24), "wait_and_see"), new IntRange(0, 2), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("sandslash", "", "magnitude", "sand_attack", "", "", new RandRange(25), "wait_and_see"), new IntRange(1, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("cacnea", "", "leech_seed", "needle_arm", "", "", new RandRange(24), "wait_and_see"), new IntRange(0, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("skorupi", "", "acupressure", "bug_bite", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wait_and_see"), new IntRange(2, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("torkoal", "drought", "smokescreen", "lava_plume", "", "", new RandRange(25), "wait_and_see"), new IntRange(0, 2), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("arbok", "", "screech", "glare", "crunch", "", new RandRange(25), "wait_and_see"), new IntRange(2, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "assurance", "", "", new RandRange(25), "wait_and_see"), new IntRange(2, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wait_and_see"), new IntRange(1, max_floors), 5);
+                    poolSpawn.Spawns.Add(GetTeamMob("scraggy", "", "leer", "low_kick", "", "", new RandRange(24), "wait_and_see"), new IntRange(0, 2), 5);
+                    poolSpawn.Spawns.Add(GetTeamMob("gible", "", "sandstorm", "dragon_rage", "", "", new RandRange(25), "wait_and_see"), new IntRange(2, max_floors), 10);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
@@ -8913,9 +8915,9 @@ namespace DataGenerator.Data
                             AddDefaultMapStatus(layout, "default_weather", "sunny");
 
                         //Tilesets
-                        if (ii < 1)
+                        if (ii < 2)
                             AddTextureData(layout, "desert_region_wall", "desert_region_floor", "desert_region_secondary", "ground");
-                        else if (ii < 2)
+                        else if (ii < 3)
                             AddTextureData(layout, "northern_desert_1_wall", "northern_desert_1_floor", "northern_desert_1_secondary", "ground");
                         else
                             AddTextureData(layout, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary", "ground");
@@ -8924,7 +8926,8 @@ namespace DataGenerator.Data
                         //traps
 
                         //wonder tile
-                        AddSingleTrapStep(layout, new RandRange(80, 100), "tile_wonder");//wonder tile
+                        AddSingleTrapStep(layout, new RandRange(100 + ii * 30, 120 + ii * 30), "tile_wonder");//wonder tile
+
                         AddTrapsSteps(layout, new RandRange(300, 400));
 
 
@@ -8953,6 +8956,8 @@ namespace DataGenerator.Data
                             AddMoneyTrails(layout, new RandRange(12, 22), new IntRange(20, 120), new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1), new RandRange(3))));
                         else if (ii == 1)
                             AddMoneyTrails(layout, new RandRange(16, 30), new IntRange(20, 120), new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1), new RandRange(4))));
+                        else if (ii == 2)
+                            AddMoneyTrails(layout, new RandRange(16, 30), new IntRange(20, 120), new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1), new RandRange(5))));
                         else
                             AddMoneyTrails(layout, new RandRange(16, 30), new IntRange(20, 120), new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1), new RandRange(6))));
 
@@ -8972,7 +8977,7 @@ namespace DataGenerator.Data
 
                         //items
                         {
-                            RandRange itemRange = (ii == 0) ? new RandRange(180) : new RandRange(250);
+                            RandRange itemRange = new RandRange(100 + ii * 50, 120 + ii * 50);
                             RandomRoomSpawnStep<MapGenContext, InvItem> itemStep = new RandomRoomSpawnStep<MapGenContext, InvItem>(new ContextSpawner<MapGenContext, InvItem>(itemRange), false);
                             itemStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                             layout.GenSteps.Add(PR_SPAWN_ITEMS, itemStep);
@@ -8982,8 +8987,8 @@ namespace DataGenerator.Data
                         {
                             if (ii == 0)
                                 AddInitGridStep(layout, 32, 32, 8, 8);
-                            //else if (ii == 1)
-                            //    AddInitGridStep(layout, 40, 40, 8, 8);
+                            else if (ii == 1)
+                                AddInitGridStep(layout, 40, 40, 8, 8);
                             else
                                 AddInitGridStep(layout, 50, 50, 8, 8);
 
@@ -8992,11 +8997,62 @@ namespace DataGenerator.Data
                             //then, 4 switches are placed at the exact corners of this structure, bulldozing out in their directions until they hit another walkable
                             //the main path must connect to this room
 
-                            GridPathBranchSpread<MapGenContext> path = new GridPathBranchSpread<MapGenContext>();
+                            GridPathStartStepGeneric<MapGenContext> path;
+                            if (ii != 2)
+                            {
+                                GridPathBranchSpread<MapGenContext> spreadPath = new GridPathBranchSpread<MapGenContext>();
+                                spreadPath.RoomRatio = new RandRange(90);
+                                spreadPath.BranchRatio = new RandRange(0, 35);
+                                path = spreadPath;
+                            }
+                            else
+                            {
+                                GridPathPyramid<MapGenContext> spreadPath = new GridPathPyramid<MapGenContext>();
+
+                                spreadPath.GiantHallSize = new Loc(20, 20);
+                                spreadPath.LargeRoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                                spreadPath.LargeRoomComponents.Set(new NoConnectRoom());
+                                spreadPath.LargeRoomComponents.Set(new NoEventRoom());
+                                RoomGenLoadMapBordered<MapGenContext> pyramid = new RoomGenLoadMapBordered<MapGenContext>();
+                                pyramid.MapID = "room_pyramid";
+                                pyramid.PreventChanges = PostProcType.Terrain | PostProcType.Panel;
+
+                                int room_width = 179;
+                                int room_height = 179;
+                                pyramid.Borders[Dir4.Down] = new bool[room_width];
+                                pyramid.Borders[Dir4.Up] = new bool[room_width];
+                                pyramid.Borders[Dir4.Left] = new bool[room_width];
+                                pyramid.Borders[Dir4.Right] = new bool[room_width];
+
+                                pyramid.Borders[Dir4.Down][room_width / 2] = true;
+                                pyramid.Borders[Dir4.Up][room_width / 2] = true;
+                                pyramid.Borders[Dir4.Left][room_height / 2] = true;
+                                pyramid.Borders[Dir4.Right][room_height / 2] = true;
+
+                                spreadPath.GiantHallGen.Add(pyramid, 10);
+
+                                spreadPath.CornerRoomComponents.Set(new CornerRoom());
+                                spreadPath.CornerRoomComponents.Set(new ImmutableRoom());
+                                spreadPath.CornerRoomComponents.Set(new NoEventRoom());
+
+                                spreadPath.RoomRatio = new RandRange(90);
+                                spreadPath.BranchRatio = new RandRange(0, 35);
+
+                                path = spreadPath;
+
+
+                                //sealing the vault
+                                {
+                                    SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch", 4, true, false);
+                                    vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                                    vaultStep.SwitchFilters.Add(new RoomFilterComponent(false, new CornerRoom()));
+                                    vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
+                                    layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                                }
+                            }
+
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                             path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                            path.RoomRatio = new RandRange(90);
-                            path.BranchRatio = new RandRange(0, 35);
 
                             SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
                             //cross
@@ -9026,11 +9082,13 @@ namespace DataGenerator.Data
 
                             {
                                 //oases: 1, 1-2, 2-3, 2-3
-                                RandRange amount = new RandRange(2, 4);
+                                RandRange amount;
                                 if (ii < 1)
                                     amount = new RandRange(1);
                                 else if (ii < 2)
                                     amount = new RandRange(1, 3);
+                                else
+                                    amount = new RandRange(2, 4);
                                 CombineGridRoomRandStep<MapGenContext> step = new CombineGridRoomRandStep<MapGenContext>(amount, GetImmutableFilterList());
                                 step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                                 step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
@@ -9043,11 +9101,7 @@ namespace DataGenerator.Data
                             }
 
                             {
-                                RandRange combines;
-                                if (ii == 0)
-                                    combines = new RandRange(300);
-                                else
-                                    combines = new RandRange(800);
+                                RandRange combines = new RandRange(300 + 150 * ii);
                                 CombineGridRoomRandStep<MapGenContext> step = new CombineGridRoomRandStep<MapGenContext>(combines, GetImmutableFilterList());
                                 step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                                 step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
@@ -9185,52 +9239,6 @@ namespace DataGenerator.Data
                             layout.GenSteps.Add(PR_HOUSES, chestStep);
                         }
 
-
-                        if (ii == 2)
-                        {
-                            //vault rooms
-                            {
-                                SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
-                                detourRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(3), new RandRange(3), new RandRange(2), new RandRange(2)), 10);
-                                SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
-                                detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
-                                AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
-                                detours.Amount = new RandRange(1);
-                                detours.HallPercent = 100;
-                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
-                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
-                                detours.RoomComponents.Set(new NoConnectRoom());
-                                detours.RoomComponents.Set(new NoEventRoom());
-                                detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
-                                detours.HallComponents.Set(new NoConnectRoom());
-                                detours.HallComponents.Set(new NoEventRoom());
-
-                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
-                            }
-
-                            //sealing the vault
-                            {
-                                SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch", 2, true, false);
-                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
-                                vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                                vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
-                                layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
-                            }
-
-                            //vault treasures
-                            {
-                                BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
-
-                                EffectTile secretStairs = new EffectTile("stairs_secret_up", true);
-                                secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
-                                treasures.SpecificSpawns.Add(secretStairs);
-
-                                RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
-                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
-                                layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
-                            }
-                        }
-
                         {
                             SetCompassStep<MapGenContext> trapStep = new SetCompassStep<MapGenContext>("tile_compass");
                             layout.GenSteps.Add(PR_COMPASS, trapStep);
@@ -9240,7 +9248,6 @@ namespace DataGenerator.Data
 
                         floorSegment.Floors.Add(layout);
                     }
-
 
                     {
                         LoadGen layout = new LoadGen();
