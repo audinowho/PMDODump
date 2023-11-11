@@ -3189,7 +3189,7 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(tileSpawn);
 
 
-            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, 10)), new MapItem("food_apple"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, 36)), new MapItem("food_apple"));
             AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 8), new IntRange(6, 32)), new MapItem("food_apple_big"), new MapItem("food_apple_huge"));
             AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
             AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors)), new MapItem("machine_assembly_box"));

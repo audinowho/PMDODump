@@ -716,6 +716,7 @@ namespace DataGenerator.Data
             {
                 string[] customJigsaw = new string[] {                ".........",
                                                                       "....#....",
+                                                                      "...#.#...",
                                                                       "..#...#..",
                                                                       ".........",
                                                                       ".........",
@@ -724,9 +725,28 @@ namespace DataGenerator.Data
                                                                       "........."};
                 //    tank team
                 List<MobSpawn> mobSpawns = new List<MobSpawn>();
-                mobSpawns.Add(GetBossMob("drapion", "battle_armor", "acupressure", "knock_off", "toxic_spikes", "bite", "", new Loc(4, 2), baseLv, scaleNum, scaleDen));
-                mobSpawns.Add(GetBossMob("skarmory", "sturdy", "spikes", "steel_wing", "sand_attack", "agility", "", new Loc(2, 3), baseLv, scaleNum, scaleDen));
-                mobSpawns.Add(GetBossMob("arbok", "shed_skin", "stockpile", "coil", "swallow", "wrap", "", new Loc(6, 3), baseLv, scaleNum, scaleDen));
+                mobSpawns.Add(GetBossMob("drapion", "battle_armor", "acupressure", "knock_off", "toxic_spikes", "bite", "", new Loc(4, 3), baseLv, scaleNum, scaleDen));
+                mobSpawns.Add(GetBossMob("skarmory", "sturdy", "spikes", "steel_wing", "sand_attack", "agility", "", new Loc(2, 5), baseLv, scaleNum, scaleDen));
+                mobSpawns.Add(GetBossMob("arbok", "shed_skin", "stockpile", "coil", "swallow", "wrap", "", new Loc(6, 5), baseLv, scaleNum, scaleDen));
+                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(4, 5), mobSpawns, false);
+            }
+
+            if (id == "lycanroc")
+            {
+                string[] customJigsaw = new string[] {                "...###...",
+                                                                      "...###...",
+                                                                      ".........",
+                                                                      "##.....##",
+                                                                      "##.....##",
+                                                                      "##.....##",
+                                                                      ".........",
+                                                                      ".........",
+                                                                      "........."};
+                //    tank team
+                List<MobSpawn> mobSpawns = new List<MobSpawn>();
+                mobSpawns.Add(GetBossMob(new MonsterID("lycanroc", 2, "", Gender.Unknown), "", "rock_climb", "rock_slide", "thrash", "crunch", "", new Loc(4, 2), baseLv, scaleNum, scaleDen));
+                mobSpawns.Add(GetBossMob(new MonsterID("lycanroc", 0, "", Gender.Unknown), "steadfast", "accelerock", "wide_guard", "roar", "stealth_rock", "", new Loc(2, 3), baseLv, scaleNum, scaleDen));
+                mobSpawns.Add(GetBossMob(new MonsterID("lycanroc", 1, "", Gender.Unknown), "vital_spirit", "reversal", "counter", "roar", "stealth_rock", "", new Loc(6, 3), baseLv, scaleNum, scaleDen));
                 return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(4, 5), mobSpawns, false);
             }
 

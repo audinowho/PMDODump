@@ -17090,7 +17090,7 @@ namespace DataGenerator.Data
             }
             else if (ii == 709)
             {
-                skill.Name = new LocalText("**Accelerock");
+                skill.Name = new LocalText("Accelerock");
                 skill.Desc = new LocalText("The user smashes into the target at high speed. This move always goes first.");
                 skill.BaseCharges = 20;
                 skill.Data.Element = "rock";
@@ -17099,10 +17099,17 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(40));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).Range = 3;
+                ((DashAction)skill.HitboxAction).StopAtWall = true;
+                ((DashAction)skill.HitboxAction).StopAtHit = false;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                BattleFX preFX = new BattleFX();
+                preFX.Sound = "DUN_Rock_Wrecker";
+                skill.HitboxAction.PreActions.Add(preFX);
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Rock_Smash", 2));
             }
             else if (ii == 710)
             {

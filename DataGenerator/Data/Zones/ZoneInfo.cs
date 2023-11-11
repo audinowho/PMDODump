@@ -8779,6 +8779,7 @@ namespace DataGenerator.Data
 
                     snacks.Spawns.Add(new InvItem("seed_hunger"), new IntRange(0, max_floors), 10);
                     snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, max_floors), 10);
+                    snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, max_floors), 10);
                     snacks.Spawns.Add(new InvItem("seed_plain"), new IntRange(0, max_floors), 10);
                     snacks.Spawns.Add(new InvItem("seed_vile"), new IntRange(0, max_floors), 10);
                     snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 10);
@@ -8868,11 +8869,11 @@ namespace DataGenerator.Data
                     TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
                     poolSpawn.Priority = PR_RESPAWN_MOB;
 
-
                     poolSpawn.Spawns.Add(GetTeamMob("cubone", "", "bone_club", "growl", "", "", new RandRange(23), "wait_and_see"), new IntRange(0, 3), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("rockruff", "", "odor_sleuth", "rock_throw", "", "", new RandRange(22), TeamMemberSpawn.MemberRole.Support, "wait_and_see"), new IntRange(0, 2), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("marowak", "", "bonemerang", "", "", "", new RandRange(28), "wait_and_see"), new IntRange(3, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("hippopotas", "", "sand_tomb", "dig", "", "", new RandRange(26), "wait_and_see"), new IntRange(0, 2), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("fearow", "", "drill_run", "pluck", "", "", new RandRange(24), "wait_and_see"), new IntRange(0, 2), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("fearow", "", "drill_run", "pluck", "", "", new RandRange(24), "wait_and_see"), new IntRange(1, 3), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("sandslash", "", "magnitude", "sand_attack", "", "", new RandRange(25), "wait_and_see"), new IntRange(1, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("cacnea", "", "leech_seed", "needle_arm", "", "", new RandRange(24), "wait_and_see"), new IntRange(0, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("skorupi", "", "acupressure", "bug_bite", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wait_and_see"), new IntRange(2, max_floors), 10);
@@ -8882,6 +8883,19 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wait_and_see"), new IntRange(1, max_floors), 5);
                     poolSpawn.Spawns.Add(GetTeamMob("scraggy", "", "leer", "low_kick", "", "", new RandRange(24), "wait_and_see"), new IntRange(0, 2), 5);
                     poolSpawn.Spawns.Add(GetTeamMob("gible", "", "sandstorm", "dragon_rage", "", "", new RandRange(25), "wait_and_see"), new IntRange(2, max_floors), 10);
+                    
+                    poolSpawn.Spawns.Add(GetTeamMob("rockruff", "", "odor_sleuth", "rock_throw", "", "", new RandRange(22), TeamMemberSpawn.MemberRole.Support, "wait_and_see"), new IntRange(0, 2), 10);
+
+                    {
+                        TeamMemberSpawn teamSpawn = GetTeamMob(new MonsterID("lycanroc", 0, "", Gender.Unknown), "", "accelerock", "rock_throw", "", "", new RandRange(26), "wait_and_see");
+                        teamSpawn.Spawn.SpawnConditions.Add(new MobCheckVersionDiff(0, 2));
+                        poolSpawn.Spawns.Add(teamSpawn, new IntRange(2, max_floors), 10);
+                    }
+                    {
+                        TeamMemberSpawn teamSpawn = GetTeamMob(new MonsterID("lycanroc", 1, "", Gender.Unknown), "", "counter", "rock_throw", "", "", new RandRange(26), "wait_and_see");
+                        teamSpawn.Spawn.SpawnConditions.Add(new MobCheckVersionDiff(1, 2));
+                        poolSpawn.Spawns.Add(teamSpawn, new IntRange(2, max_floors), 10);
+                    }
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
@@ -8964,15 +8978,30 @@ namespace DataGenerator.Data
                         //enemies! ~ lv 18 to 32
                         if (ii == 0)
                         {
-                            AddRadiusDespawnData(layout, 100, 160);
-                            AddRadiusRespawnData(layout, 70, 100, 80);
-                            AddRadiusEnemySpawnData(layout, 80, new RandRange(100));
+                            AddRadiusDespawnData(layout, 100, 120);
+                            AddRadiusRespawnData(layout, 70, 100, 40);
+                            AddRadiusEnemySpawnData(layout, 80, new RandRange(90));
                         }
                         else
                         {
-                            AddRadiusDespawnData(layout, 100, 120);
-                            AddRadiusRespawnData(layout, 70, 120, 60);
-                            AddRadiusEnemySpawnData(layout, 80, new RandRange(120));
+                            AddRadiusDespawnData(layout, 90, 120);
+                            AddRadiusRespawnData(layout, 60, 100, 40);
+                            AddRadiusEnemySpawnData(layout, 80, new RandRange(90));
+                        }
+
+                        {
+                            PresetMultiTeamSpawner<MapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<MapGenContext>();
+                            MobSpawn post_mob = new MobSpawn();
+                            post_mob.BaseForm = new MonsterID("baltoy", 0, "normal", Gender.Genderless);
+                            post_mob.Tactic = "wait_only";
+                            post_mob.Level = new RandRange(25);
+                            post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_PYRAMID"))));
+                            SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                            post_team.Explorer = true;
+                            multiTeamSpawner.Spawns.Add(post_team);
+                            PlaceNearSpawnableMobsStep<MapGenContext, MapGenExit> randomSpawn = new PlaceNearSpawnableMobsStep<MapGenContext, MapGenExit>(multiTeamSpawner);
+                            randomSpawn.Ally = true;
+                            layout.GenSteps.Add(PR_SPAWN_MOBS_EXTRA, randomSpawn);
                         }
 
                         //items
@@ -9155,6 +9184,7 @@ namespace DataGenerator.Data
                                 if (ii == 2 || ii == 3 && kk > 0 && kk < 2)
                                 {
                                     bossRooms.Add(getBossRoomGen<MapGenContext>("armaldo", 23, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("lycanroc", 23, 0, 1), 10);
                                     bossRooms.Add(getBossRoomGen<MapGenContext>("bastiodon", 23, 0, 1), 10);
                                     bossRooms.Add(getBossRoomGen<MapGenContext>("aerodactyl", 23, 0, 1), 10);
                                     bossRooms.Add(getBossRoomGen<MapGenContext>("flygon", 23, 0, 1), 10);
@@ -9186,6 +9216,14 @@ namespace DataGenerator.Data
                                 {
                                     //joy seed guaranteed; it is an oasis
                                     treasures.SpecificSpawns.Add(new MapItem("seed_joy"));
+                                }
+                                if (ii == 1)
+                                {
+                                    treasures.SpecificSpawns.Add(new MapItem("food_apple", 1));
+                                }
+                                else if (ii == 2)
+                                {
+                                    treasures.SpecificSpawns.Add(new MapItem("orb_luminous", 1));
                                 }
                                 if (ii == 3 && kk == 0)
                                 {
@@ -10634,7 +10672,8 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("bronzor", "", "psywave", "imprison", "", "", new RandRange(26), "wander_dumb"), new IntRange(0, 8), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("wobbuffet", "", "mirror_coat", "safeguard", "", "", new RandRange(31), "wander_dumb"), new IntRange(8, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("braixen", "", "fire_spin", "lucky_chant", "", "", new RandRange(28), "wander_dumb"), new IntRange(4, max_floors), 10);
-                    
+                    poolSpawn.Spawns.Add(GetTeamMob("larvesta", "", "ember", "string_shot", "leech_life", "", new RandRange(31), "wander_dumb"), new IntRange(4, max_floors), 10);
+
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
 
