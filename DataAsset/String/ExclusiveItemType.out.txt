@@ -28,7 +28,7 @@ ExclusiveItemType.Drill		{0} Drill	Perceuse de {0}	{0} Bohrer	Taladro {0}		Trapa
 ExclusiveItemType.Drool		{0} Drool	Salive de {0}	{0} Sabber	Baba {0}		Saliva {0}				{0}口水
 ExclusiveItemType.Dust		{0} Dust	Poussière de {0}	{0} Staub	Polvo {0}		Polvere {0}				{0}粉末
 ExclusiveItemType.Earring		{0} Earring	Boucle d'oreille de {0}	{0} Ohrring	Pendiente {0}		Orecchino {0}				{0}耳饰
-ExclusiveItemType.Fang	Specifically refers to the canine tooth, not the inciscors, etc.	{0} Fang	Croc de {0}	{0} Reißzahn	Colmillo {0}		Zanna {0}		{0}のキバ		{0}之牙
+ExclusiveItemType.Fang	Specifically refers to the canine tooth, not the inciscors, etc.	{0} Fang	Croc de {0}	{0} Eckzahn	Colmillo {0}		Zanna {0}		{0}のキバ		{0}之牙
 ExclusiveItemType.Float		{0} Float	Flotteur de {0}	{0} Reif	Flotador {0}		Galleggiante {0}				{0}浮板
 ExclusiveItemType.Foam		{0} Foam	Mousse de {0}	{0} Schaum	Éter {0}		Schiuma {0}				{0}泡沫
 ExclusiveItemType.Gasp		{0} Gasp	Souffle de {0}	{0} Atemzug	Soplo {0}		Sussulto {0}				{0}气息
@@ -72,7 +72,7 @@ ExclusiveItemType.Tail		{0} Tail	Queue de {0}	{0} Schweif	Cola {0}		Coda {0}				
 ExclusiveItemType.Thorn		{0} Thorn	Épine de {0}	{0} Dorn	Espina {0}		Spina {0}				{0}之刺
 ExclusiveItemType.Tiara		{0} Tiara	Diadème de {0}	{0} Tiara	Tiara {0}		Diadema {0}				{0}之冠
 ExclusiveItemType.Tie		{0} Tie	Cravate de {0}	{0} Schleife	Fular {0}		Cravatta {0}				{0}领带
-ExclusiveItemType.Tooth	Specifically refers to the incisors.	{0} Tooth	Dent de {0}	{0} Zahn	Diente {0}		Dente {0}				{0}门牙
+ExclusiveItemType.Tooth	Specifically refers to the incisors.	{0} Tooth	Dent de {0}	{0} Schneidezahn	Diente {0}		Dente {0}				{0}门牙
 ExclusiveItemType.Torc		{0} Torc	Torque de {0}	{0} Reif	Alhaja {0}		Collana {0}				{0}饰环
 ExclusiveItemType.Twig		{0} Twig	Brindille de {0}	{0} Zweig	Ramita {0}	Ramo {0}	Ramo {0}				{0}细枝
 ExclusiveItemType.Veil		{0} Veil	Voile de {0}	{0} Schleier	Velo {0}	Véu {0}	Velo {0}				{0}屏障

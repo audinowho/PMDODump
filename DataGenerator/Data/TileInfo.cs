@@ -1006,7 +1006,7 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Mirage Tablet");
                 fileName = "tile_boss";
-                tile.Desc = new LocalText("A stone tablet engraved with names long lost. There is an indent at the bottom that fits an Explorer Badge...");
+                tile.Desc = new LocalText("A stone tablet engraved with a set of names. There is an indent at the bottom that fits an Explorer Badge...");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Site;
                 tile.Anim = new ObjAnimData("Tile_Signal", 12);

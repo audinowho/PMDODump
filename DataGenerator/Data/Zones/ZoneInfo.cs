@@ -8880,7 +8880,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("skorupi", "", "acupressure", "bug_bite", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wait_and_see"), new IntRange(2, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("torkoal", "drought", "smokescreen", "lava_plume", "", "", new RandRange(25), "wait_and_see"), new IntRange(0, 2), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("arbok", "", "screech", "glare", "crunch", "", new RandRange(25), "wait_and_see"), new IntRange(2, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "assurance", "", "", new RandRange(25), "wait_and_see"), new IntRange(2, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("thievul", "run_away", "snarl", "assurance", "", "", new RandRange(25), "wait_and_see"), new IntRange(2, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wait_and_see"), new IntRange(1, max_floors), 5);
                     poolSpawn.Spawns.Add(GetTeamMob("scraggy", "", "leer", "low_kick", "", "", new RandRange(24), "wait_and_see"), new IntRange(0, 2), 5);
                     poolSpawn.Spawns.Add(GetTeamMob("gible", "", "sandstorm", "dragon_rage", "", "", new RandRange(25), "wait_and_see"), new IntRange(2, max_floors), 10);
@@ -8979,14 +8979,14 @@ namespace DataGenerator.Data
                         //enemies! ~ lv 18 to 32
                         if (ii == 0)
                         {
-                            AddRadiusDespawnData(layout, 100, 120);
-                            AddRadiusRespawnData(layout, 70, 100, 40);
+                            AddRadiusDespawnData(layout, 100, 90);
+                            AddRadiusRespawnData(layout, 70, 100, 30);
                             AddRadiusEnemySpawnData(layout, 80, new RandRange(90));
                         }
                         else
                         {
-                            AddRadiusDespawnData(layout, 90, 120);
-                            AddRadiusRespawnData(layout, 60, 100, 40);
+                            AddRadiusDespawnData(layout, 90, 90);
+                            AddRadiusRespawnData(layout, 60, 100, 30);
                             AddRadiusEnemySpawnData(layout, 80, new RandRange(90));
                         }
 
