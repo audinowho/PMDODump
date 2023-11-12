@@ -135,7 +135,7 @@ namespace DataGenerator.Data
             tactic.Name = new LocalText("Weird Tree");//10
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
-            tactic.Plans.Add(new ExploreIfUnseenPlan(iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new ExploreIfSeenPlan(true, iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitUntilAttackedPlan(iq | AIFlags.TrapAvoider, "last_targeted_by"));
             tactic.Plans.Add(new AttackFoesPlan(iq, 0, 0, 4, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
@@ -304,6 +304,7 @@ namespace DataGenerator.Data
             iq = AIFlags.AttackToEscape;
             tactic.Plans.Add(new AttackFoesPlan(iq, 4, 4, 3, AIPlan.AttackChoice.DumbAttack, AIPlan.PositionChoice.Approach));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new ExploreIfSeenPlan(false, iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
 

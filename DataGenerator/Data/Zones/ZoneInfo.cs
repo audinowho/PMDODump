@@ -8809,7 +8809,8 @@ namespace DataGenerator.Data
                     throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 3);
                     throwable.Spawns.Add(new InvItem("wand_lure", false, 3), new IntRange(0, max_floors), 3);
                     throwable.Spawns.Add(new InvItem("wand_topsy_turvy", false, 2), new IntRange(0, max_floors), 3);
-                    throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 3);
+                    throwable.Spawns.Add(new InvItem("wand_path", false, 1), new IntRange(0, max_floors), 3);
+
                     //orbs
                     CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
                     orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -8989,6 +8990,7 @@ namespace DataGenerator.Data
                             AddRadiusEnemySpawnData(layout, 80, new RandRange(90));
                         }
 
+                        if (ii == 2)
                         {
                             PresetMultiTeamSpawner<MapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<MapGenContext>();
                             MobSpawn post_mob = new MobSpawn();

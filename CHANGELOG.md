@@ -1,10 +1,11 @@
 # 0.7.18.3 Changes #
 
+* Fixed occasional issue that caused many errors when entering dungeons
 * Recruitment search screen
 * Trail results in final epitaph
 * Fix off-looking letters in Chinese localization
 * Fixed an issue with poison working through magic guard
-* Localization fixes for the plsash screen
+* Localization fixes for the splash screen
 * Disarming Voice PP 16->18, BP 30->35
 * Round BP 30->40
 * Rototiller PP 20->17, does not raise stats, instead removes all trap and terrain
