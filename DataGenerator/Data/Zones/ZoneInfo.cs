@@ -4225,6 +4225,19 @@ namespace DataGenerator.Data
                             floorSegment.ZoneSteps.Add(combinedVaultZoneStep);
                         }
 
+                        {
+                            SpreadRoomZoneStep danceZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, new SpreadPlanQuota(new RandRange(0, 2), new IntRange(10, max_floors)));
+                            List<BaseRoomFilter> danceFilters = new List<BaseRoomFilter>();
+                            danceFilters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
+                            danceFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            RoomGenLoadMap<MapGenContext> loadMap = new RoomGenLoadMap<MapGenContext>();
+                            loadMap.MapID = "room_moon_dance";
+                            loadMap.RoomTerrain = new Tile("floor");
+                            loadMap.PreventChanges = PostProcType.Panel | PostProcType.Terrain;
+                            danceZoneStep.Spawns.Add(new RoomGenOption(loadMap, new RoomGenDefault<ListMapGenContext>(), danceFilters), 10);
+                            floorSegment.ZoneSteps.Add(danceZoneStep);
+                        }
+
                         AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 3);
 
                         for (int ii = 0; ii < max_floors; ii++)
@@ -4237,7 +4250,7 @@ namespace DataGenerator.Data
                             else
                                 AddFloorData(layout, "Star Cave.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
-                            if (ii >= 7)
+                            if (ii == 7)
                                 AddDefaultMapStatus(layout, "default_weather", "misty_terrain");
                             else if (ii > 7)
                                 AddDefaultMapStatus(layout, "default_weather", "misty_terrain", "clear", "clear", "clear");
@@ -4700,7 +4713,7 @@ namespace DataGenerator.Data
 
                         //switch vaults
                         {
-                            SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(2, 8, 50), new IntRange(0, max_floors)));
+                            SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(2, 4, 50), new IntRange(0, max_floors)));
 
                             //making room for the vault
                             {
@@ -4880,7 +4893,63 @@ namespace DataGenerator.Data
 
                             AddDrawGridSteps(layout);
 
-                            AddStairStep(layout, false);
+                            {
+                                EffectTile exitTile = new EffectTile("stairs_exit_down", true);
+                                exitTile.TileStates.Set(new DestState(SegLoc.Invalid));
+                                var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
+                                step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
+                                layout.GenSteps.Add(PR_EXITS, step);
+                            }
+
+                            if (ii == 0)
+                            {
+                                EffectTile secretTile = new EffectTile("stairs_go_up", true);
+                                RandomRoomSpawnStep<MapGenContext, MapGenExit> secretStep = new RandomRoomSpawnStep<MapGenContext, MapGenExit>(new PickerSpawner<MapGenContext, MapGenExit>(new PresetMultiRand<MapGenExit>(new MapGenExit(secretTile))));
+                                secretStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                secretStep.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
+                                layout.GenSteps.Add(PR_EXITS, secretStep);
+                            }
+                            else if (ii < 5)
+                            {
+                                EffectTile secretTile = new EffectTile("stairs_go_up", false);
+                                RandomRoomSpawnStep<MapGenContext, MapGenExit> secretStep = new RandomRoomSpawnStep<MapGenContext, MapGenExit>(new PickerSpawner<MapGenContext, MapGenExit>(new PresetMultiRand<MapGenExit>(new MapGenExit(secretTile))));
+                                secretStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                secretStep.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
+                                layout.GenSteps.Add(PR_EXITS, secretStep);
+                            }
+                            else
+                            {
+                                {
+                                    SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("clefable", 24, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("gallade", 30, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("umbreon", 30, 0, 1), 10);
+                                    bossRooms.Add(getBossRoomGen<MapGenContext>("volbeat", 30, 0, 1), 10);
+                                    layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericBossRoomStep(bossRooms, 0));
+                                }
+                                //sealing the boss room and treasure room
+                                {
+                                    BossSealStep<MapGenContext> vaultStep = new BossSealStep<MapGenContext>("sealed_block", "tile_boss");
+                                    vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                                    vaultStep.Filters.Add(new RoomFilterIndex(false, 0));
+                                    vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
+                                    vaultStep.BossFilters.Add(new RoomFilterIndex(false, 0));
+                                    layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                                }
+                                {
+                                    BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
+
+                                    EffectTile secretStairs = new EffectTile("stairs_go_up", true);
+                                    treasures.SpecificSpawns.Add(secretStairs);
+
+                                    RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
+                                    detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                                    detourItems.Filters.Add(new RoomFilterIndex(false, 0));
+                                    layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
+                                }
+                            }
+
 
                             layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 

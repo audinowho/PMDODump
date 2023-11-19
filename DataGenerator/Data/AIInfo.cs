@@ -298,6 +298,9 @@ namespace DataGenerator.Data
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
 
+            //attacks on sight
+            //moves around if in FOV
+            //does not move at all outside of FOV
             tactic = new AITactic();
             tactic.Name = new LocalText("Wait and See");//26
             tactic.ID = "wait_and_see";
@@ -305,6 +308,19 @@ namespace DataGenerator.Data
             tactic.Plans.Add(new AttackFoesPlan(iq, 4, 4, 3, AIPlan.AttackChoice.DumbAttack, AIPlan.PositionChoice.Approach));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new ExploreIfSeenPlan(false, iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
+            Tactics.Add(tactic);
+
+            //dances around the moon stone until the moon stone is gone or ANYONE in the team is attacked
+            //then just becomes normal wander
+            tactic = new AITactic();
+            tactic.Name = new LocalText("Moon Dance");//27
+            tactic.ID = "moon_dance";
+            iq = AIFlags.ItemGrabber | AIFlags.AttackToEscape | AIFlags.WontDisturb;
+            tactic.Plans.Add(new CultDancePlan(iq | AIFlags.TrapAvoider, "evo_moon_stone", "last_targeted_by"));
+            tactic.Plans.Add(new AttackFoesPlan(iq, 0, 0, 4, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close));
+            tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
 

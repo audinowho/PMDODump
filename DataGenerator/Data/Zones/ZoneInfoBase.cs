@@ -545,7 +545,7 @@ namespace DataGenerator.Data
                         int boss_idx = 0;
                         {
                             SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
-                            bossRooms.Add(getBossRoomGen<MapGenContext>("drapion", 23, 0, 1), 10);
+                            bossRooms.Add(getBossRoomGen<MapGenContext>("volbeat", 23, 0, 1), 10);
                             layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericBossRoomStep(bossRooms, boss_idx));
                         }
                         //sealing the boss room and treasure room
@@ -574,7 +574,7 @@ namespace DataGenerator.Data
                         int boss_idx = 1;
                         {
                             SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
-                            bossRooms.Add(getBossRoomGen<MapGenContext>("lycanroc", 23, 0, 1), 10);
+                            bossRooms.Add(getBossRoomGen<MapGenContext>("gallade", 23, 0, 1), 10);
                             layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericBossRoomStep(bossRooms, boss_idx));
                         }
                         //sealing the boss room and treasure room

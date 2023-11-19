@@ -1041,6 +1041,54 @@ namespace DataGenerator.Data
             }
 
 
+            if (id == "gallade")
+            {
+                string[] customCrown = new string[] {       ".........",
+                                                            ".#.....#.",
+                                                            ".........",
+                                                            ".#.....#.",
+                                                            ".........",
+                                                            ".#.....#.",
+                                                            "........."};
+
+                List<MobSpawn> mobSpawns = new List<MobSpawn>();
+                //034 Nidoking : 125 Sheer Force : 398 Poison Jab : 224 Megahorn : 116 Focus Energy : 529 Drill Run
+                mobSpawns.Add(GetBossMob("gardevoir", "trace", "dazzling_gleam", "wish", "magical_leaf", "heal_pulse", "", new Loc(3, 1), baseLv, scaleNum, scaleDen));
+                //031 Nidoqueen : 079 Rivalry : 270 Helping Hand : 445 Captivate : 414 Earth Power : 482 Sludge Wave
+                mobSpawns.Add(GetBossMob("gallade", "steadfast", "psycho_cut", "leaf_blade", "night_slash", "wide_guard", "", new Loc(5, 1), baseLv, scaleNum, scaleDen));
+                return CreateRoomGenSpecificBoss<T>(customCrown, new Loc(4, 4), mobSpawns, false);
+            }
+
+
+            if (id == "volbeat")
+            {
+                string[] customCrown = new string[] {       "####.####",
+                                                            "#.~#.#~.#",
+                                                            "#~.~.~.~#",
+                                                            "##~...~##",
+                                                            ".........",
+                                                            "##~...~##",
+                                                            "#~.~.~.~#",
+                                                            "#.~#.#~.#",
+                                                            "####.####"};
+
+                List<MobSpawn> mobSpawns = new List<MobSpawn>();
+                //034 Nidoking : 125 Sheer Force : 398 Poison Jab : 224 Megahorn : 116 Focus Energy : 529 Drill Run
+                mobSpawns.Add(GetBossMob("volbeat", "swarm", "tail_glow", "signal_beam", "thunder", "confuse_ray", "", new Loc(3, 3), baseLv, scaleNum, scaleDen));
+                //031 Nidoqueen : 079 Rivalry : 270 Helping Hand : 445 Captivate : 414 Earth Power : 482 Sludge Wave
+                mobSpawns.Add(GetBossMob("illumise", "tinted_lens", "moonlight", "encore", "struggle_bug", "bug_buzz", "", new Loc(5, 3), baseLv, scaleNum, scaleDen));
+                return CreateRoomGenSpecificBoss<T>(customCrown, new Loc(4, 4), mobSpawns, false);
+            }
+
+
+            if (id == "palafin")
+            {
+                //3 finizen in front of the player
+                //palafin is hiding behind a wall in the back
+                //first turn uses jet punch and breaks the walls
+            }
+
+
             throw new Exception("Invalid boss id");
         }
 
