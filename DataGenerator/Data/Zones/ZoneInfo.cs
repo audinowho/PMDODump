@@ -2284,8 +2284,8 @@ namespace DataGenerator.Data
                         //blocked
                         if (ii >= 8 && ii < 12)
                         {
-                            genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7), new RandRange(2, 5), new RandRange(2, 5)), 3);
-                            genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 7), new RandRange(4, 7), new RandRange(2, 5), new RandRange(2, 5)), 3);
+                            genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 7), new RandRange(4, 6), new RandRange(2, 5), new RandRange(2, 5)), 3);
+                            genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 7), new RandRange(4, 6), new RandRange(2, 5), new RandRange(2, 5)), 3);
                         }
                         else
                         {
@@ -2304,13 +2304,16 @@ namespace DataGenerator.Data
                             layout.GenSteps.Add(PR_GRID_GEN, new SetGridDefaultsStep<MapGenContext>(new RandRange(50), GetImmutableFilterList()));
                         else
                             layout.GenSteps.Add(PR_GRID_GEN, new SetGridDefaultsStep<MapGenContext>(new RandRange(25), GetImmutableFilterList()));
+
                         {
                             CombineGridRoomStep<MapGenContext> step = new CombineGridRoomStep<MapGenContext>(new RandRange(6, 8), GetImmutableFilterList());
                             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                             step.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                            step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenCave<MapGenContext>(new RandRange(9, 13), new RandRange(5, 7))), 10);
+                            step.Combos.Add(new GridCombo<MapGenContext>(new Loc(2, 1), new RoomGenCave<MapGenContext>(new RandRange(9, 13), new RandRange(5))), 10);
                             if (ii < 8)
                                 step.Combos.Add(new GridCombo<MapGenContext>(new Loc(1, 2), new RoomGenCave<MapGenContext>(new RandRange(5, 7), new RandRange(9, 13))), 10);
+                            else if (ii >= 8 && ii < 12)
+                                step.Combos.Add(new GridCombo<MapGenContext>(new Loc(3, 1), new RoomGenCave<MapGenContext>(new RandRange(15, 19), new RandRange(4, 6))), 10);
                             else
                                 step.Combos.Add(new GridCombo<MapGenContext>(new Loc(3, 1), new RoomGenCave<MapGenContext>(new RandRange(15, 19), new RandRange(5, 7))), 10);
                             layout.GenSteps.Add(PR_GRID_GEN, step);
@@ -2327,19 +2330,32 @@ namespace DataGenerator.Data
                         {
                             //vault rooms
                             {
-                                AddDisconnectedRoomsStep<MapGenContext> addDisconnect = new AddDisconnectedRoomsStep<MapGenContext>();
-                                addDisconnect.Components.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Disconnected));
-                                addDisconnect.Amount = new RandRange(1);
+                                SpawnList<RoomGen<MapGenContext>> detourRooms = new SpawnList<RoomGen<MapGenContext>>();
+                                detourRooms.Add(new RoomGenSquare<MapGenContext>(new RandRange(1), new RandRange(1)), 10);
+                                SpawnList<PermissiveRoomGen<MapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                                detourHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new RandRange(1), new RandRange(1)), 10);
+                                AddConnectedRoomsStep<MapGenContext> detours = new AddConnectedRoomsStep<MapGenContext>(detourRooms, detourHalls);
+                                detours.Amount = new RandRange(1);
+                                detours.HallPercent = 100;
+                                detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                                detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                                detours.RoomComponents.Set(new NoConnectRoom());
+                                detours.RoomComponents.Set(new NoEventRoom());
+                                detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                                detours.HallComponents.Set(new NoConnectRoom());
+                                detours.HallComponents.Set(new NoEventRoom());
 
-                                //Give it some room types to place
-                                SpawnList<RoomGen<MapGenContext>> disconnectedRooms = new SpawnList<RoomGen<MapGenContext>>();
-                                //only one tile size
-                                disconnectedRooms.Add(new RoomGenDefault<MapGenContext>(), 10);
-
-                                addDisconnect.GenericRooms = disconnectedRooms;
-
-                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, addDisconnect);
+                                layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
                             }
+                            //sealing the vault
+                            {
+                                SwitchSealStep<MapGenContext> vaultStep = new SwitchSealStep<MapGenContext>("sealed_block", "tile_switch_sync", 2, true, false);
+                                vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                                vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                                vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
+                                layout.GenSteps.Add(PR_TILES_GEN_EXTRA, vaultStep);
+                            }
+
                             //vault treasures
                             {
                                 BulkSpawner<MapGenContext, EffectTile> treasures = new BulkSpawner<MapGenContext, EffectTile>();
@@ -2347,16 +2363,10 @@ namespace DataGenerator.Data
                                 EffectTile secretStairs = new EffectTile("stairs_secret_down", false);
                                 secretStairs.TileStates.Set(new DestState(new SegLoc(1, 0)));
                                 treasures.SpecificSpawns.Add(secretStairs);
-                                
+
                                 RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
-                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Disconnected));
+                                detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                                 layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
-                            }
-                            // prevent further changes
-                            {
-                                RoomPostProcStep<MapGenContext> stableStep = new RoomPostProcStep<MapGenContext>(PostProcType.Terrain | PostProcType.Panel, new RandRange(2), true, true);
-                                stableStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Disconnected));
-                                layout.GenSteps.Add(PR_EXITS_DETOUR, stableStep);
                             }
                         }
 
