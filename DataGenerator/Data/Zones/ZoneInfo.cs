@@ -5354,7 +5354,7 @@ namespace DataGenerator.Data
                     zone.Rescues = 2;
                     zone.Level = 35;
                     zone.BagRestrict = 0;
-                    zone.Rogue = RogueStatus.NoTransfer;
+                    zone.Rogue = RogueStatus.ItemTransfer;
                     zone.Persistent = true;
 
                     int max_floors = 12;
@@ -5554,7 +5554,6 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("grimer", "", "sludge_bomb", "disable", "", "", new RandRange(29), "wander_dumb_itemless"), new IntRange(6, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("stunky", "", "poison_gas", "fury_swipes", "", "", new RandRange(29), "wander_dumb_itemless"), new IntRange(0, 6), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("poliwhirl", "", "hypnosis", "water_sport", "double_slap", "", new RandRange(29), "wander_dumb_itemless"), new IntRange(0, 6), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("snorlax", "", "rest", "body_slam", "", "", new RandRange(29), "wander_dumb_itemless"), new IntRange(6, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("dunsparce", "", "yawn", "ancient_power", "", "", new RandRange(29), "wander_dumb_itemless"), new IntRange(0, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("quilava", "", "flame_wheel", "", "", "", new RandRange(29), "wander_dumb_itemless"), new IntRange(0, max_floors), 10);
 
@@ -5877,6 +5876,30 @@ namespace DataGenerator.Data
 
                         //money
                         AddMoneyData(layout, new RandRange(3, 7));
+
+                        if (ii >= 3 && ii < 9)
+                        {
+                            SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
+                            MobSpawn mob = GetGenericMob("snorlax", "", "rest", "body_slam", "amnesia", "", new RandRange(38), "wander_normal", true);
+
+                            HashSet<string> exceptFor = new HashSet<string>();
+                            foreach (string legend in IterateLegendaries())
+                                exceptFor.Add(legend);
+                            MobSpawnExclElement itemSpawn = new MobSpawnExclElement("box_light", exceptFor, new IntRange(1), true);
+                            mob.SpawnFeatures.Add(itemSpawn);
+
+                            specificTeam.Spawns.Add(mob);
+
+                            LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(specificTeam);
+                            {
+                                spawner.AmountSpawner = new RandRange(0, 2);
+                            }
+                            PlaceRandomMobsStep<ListMapGenContext> secretMobPlacement = new PlaceRandomMobsStep<ListMapGenContext>(spawner);
+                            secretMobPlacement.Filters.Add(new RoomFilterHall(false));
+                            secretMobPlacement.ClumpFactor = 20;
+                            secretMobPlacement.IncludeHalls = true;
+                            layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
+                        }
 
                         AddRespawnData(layout, 14, 160);
                         if (ii < 3)
@@ -10589,8 +10612,8 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Relic Tower");
                 zone.Rescues = 2;
                 zone.Level = 35;
-                zone.BagRestrict = 8;
-                zone.Rogue = RogueStatus.NoTransfer;
+                zone.LevelCap = true;
+                zone.Rogue = RogueStatus.ItemTransfer;
                 {
                     int max_floors = 13;
                     LayeredSegment floorSegment = new LayeredSegment();
@@ -10851,7 +10874,7 @@ namespace DataGenerator.Data
 
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)),
-                        new MapItem("apricorn_brown"), new MapItem("apricorn_purple"), new MapItem("apricorn_red"), new MapItem("apricorn_white"));
+                        new MapItem("apricorn_brown"), new MapItem("apricorn_purple"), new MapItem("apricorn_red"));
 
 
                     SpawnRangeList<IGenStep> shopZoneSpawns = new SpawnRangeList<IGenStep>();

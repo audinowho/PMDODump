@@ -14539,7 +14539,7 @@ namespace DataGenerator.Data
                 preFX.Emitter = new SingleEmitter(new AnimData("Dark_Void_Sparkle", 1));
                 preFX.Sound = "DUN_Snadow_Sneak_2";
                 skill.HitboxAction.PreActions.Add(preFX);
-                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Thief_Hit_Dark", 1));
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Thief_Hit_Dark", 2));
             }
             else if (ii == 567)
             {
@@ -17074,19 +17074,27 @@ namespace DataGenerator.Data
             }
             else if (ii == 708)
             {
-                skill.Name = new LocalText("**Shadow Bone");
+                skill.Name = new LocalText("Shadow Bone");
                 skill.Desc = new LocalText("The user attacks by beating the target with a bone that contains a spirit. This may also lower the target's Defense stat.");
-                skill.BaseCharges = 10;
+                skill.BaseCharges = 15;
                 skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_defense", true, true, -1)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(08);//Strike
+                ((AttackAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                BattleFX preFX = new BattleFX();
+                preFX.Sound = "DUN_Attack";
+                skill.HitboxAction.PreActions.Add(preFX);
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Thief_Hit_Dark", 2));
+                skill.Data.HitFX.Sound = "DUN_Punch";
             }
             else if (ii == 709)
             {
@@ -19352,7 +19360,7 @@ namespace DataGenerator.Data
                 skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
                 skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
                 skill.HitboxAction.ActionFX.Sound = "DUN_Fire_Spin";
-                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Thief_Hit_Dark", 1));
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Thief_Hit_Dark", 2));
             }
             else if (ii == 845)
             {
