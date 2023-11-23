@@ -31,6 +31,9 @@
     <Compile Include="Data\StatusInfo.cs" />
     <Compile Include="Data\TileInfo.cs" />
     <Compile Include="Data\Zones\MapInfo.cs" />
+    <Compile Include="Data\Zones\ZoneInfoPostgame.cs" />
+    <Compile Include="Data\Zones\ZoneInfoOptional.cs" />
+    <Compile Include="Data\Zones\ZoneInfoChallenge.cs" />
     <Compile Include="Data\Zones\ZoneInfoTables.cs" />
     <Compile Include="Data\Zones\ZoneInfoHelpers.cs" />
     <Compile Include="Data\Zones\ZoneInfoRogue.cs" />
