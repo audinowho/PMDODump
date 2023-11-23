@@ -130,6 +130,20 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(zoneStep);
         }
 
+
+        public static void AddEvoZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, bool small)
+        {
+            SpreadRoomZoneStep evoZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, spreadPlan);
+            List<BaseRoomFilter> evoFilters = new List<BaseRoomFilter>();
+            evoFilters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
+            evoFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+            if (small)
+                evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvoSmall<MapGenContext>(), new RoomGenEvoSmall<ListMapGenContext>(), evoFilters), 10);
+            else
+                evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvo<MapGenContext>(), new RoomGenEvo<ListMapGenContext>(), evoFilters), 10);
+            floorSegment.ZoneSteps.Add(evoZoneStep);
+        }
+
         public static void AddHiddenStairStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, int segDiff)
         {
             SpawnRangeList<IGenStep> exitZoneSpawns = new SpawnRangeList<IGenStep>();

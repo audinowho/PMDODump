@@ -1090,13 +1090,7 @@ namespace DataGenerator.Data
                 new MapItem("evo_dusk_stone"), new MapItem("evo_dawn_stone"), new MapItem("evo_shiny_stone"), new MapItem("evo_leaf_stone"),
                 new MapItem("evo_ice_stone"), new MapItem("evo_sun_ribbon"), new MapItem("evo_lunar_ribbon"));
 
-
-            SpreadRoomZoneStep evoZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(3, 30)));
-            List<BaseRoomFilter> evoFilters = new List<BaseRoomFilter>();
-            evoFilters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
-            evoFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-            evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvo<MapGenContext>(), new RoomGenEvo<ListMapGenContext>(), evoFilters), 10);
-            floorSegment.ZoneSteps.Add(evoZoneStep);
+            AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(1, max_floors)), false);
 
 
             string[] dexMap = { "bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "chikorita", "bayleef", "meganium", "cyndaquil", "quilava", "typhlosion", "totodile", "croconaw", "feraligatr",
@@ -3215,13 +3209,7 @@ namespace DataGenerator.Data
             AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1, 4), new IntRange(0, 15)),
                 new MapItem("evo_fire_stone"), new MapItem("evo_leaf_stone"), new MapItem("evo_water_stone"), new MapItem("evo_moon_stone"), new MapItem("evo_sun_stone"), new MapItem("evo_kings_rock"), new MapItem("evo_link_cable"));
 
-
-            SpreadRoomZoneStep evoZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(3, max_floors)));
-            List<BaseRoomFilter> evoFilters = new List<BaseRoomFilter>();
-            evoFilters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
-            evoFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-            evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvoSmall<MapGenContext>(), new RoomGenEvoSmall<ListMapGenContext>(), evoFilters), 10);
-            floorSegment.ZoneSteps.Add(evoZoneStep);
+            AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(3, max_floors)), true);
 
 
             {

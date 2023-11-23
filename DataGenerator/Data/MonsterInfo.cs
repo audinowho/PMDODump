@@ -500,14 +500,14 @@ namespace DataGenerator.Data
                         {
                             //FIXME
                             EvoLocation evoDetail = new EvoLocation();
-                            evoDetail.TileElement = Text.Sanitize(ElementInfo.Element.Electric.ToString()).ToLower();
+                            evoDetail.TileElement = Text.Sanitize(ElementInfo.Element.Steel.ToString()).ToLower();
                             branch.Details.Add(evoDetail);
                         }
                         else if (evoSpecies == 740)//crabominable
                         {
                             //FIXME
-                            EvoLocation evoDetail = new EvoLocation();
-                            evoDetail.TileElement = Text.Sanitize(ElementInfo.Element.Ice.ToString()).ToLower();
+                            EvoItem evoDetail = new EvoItem();
+                            evoDetail.ItemNum = "evo_ice_stone";//Ice Stone
                             branch.Details.Add(evoDetail);
                         }
                         else if (evoSpecies == 745)//lycanroc

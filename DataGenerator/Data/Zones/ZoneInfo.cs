@@ -4248,6 +4248,8 @@ namespace DataGenerator.Data
                             floorSegment.ZoneSteps.Add(danceZoneStep);
                         }
 
+                        AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(1, max_floors)), true);
+
                         AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 3);
 
                         for (int ii = 0; ii < max_floors; ii++)
@@ -6448,12 +6450,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                     }
 
-                    SpreadRoomZoneStep evoZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(1, max_floors-1)));
-                    List<BaseRoomFilter> evoFilters = new List<BaseRoomFilter>();
-                    evoFilters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
-                    evoFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                    evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvo<MapGenContext>(), new RoomGenEvo<ListMapGenContext>(), evoFilters), 10);
-                    floorSegment.ZoneSteps.Add(evoZoneStep);
+                    AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(1, max_floors - 1)), false);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -10004,6 +10001,8 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                     }
 
+                    AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(1, max_floors)), true);
+
                     AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 3);
 
                     for (int ii = 0; ii < max_floors; ii++)
@@ -13076,13 +13075,7 @@ namespace DataGenerator.Data
                             floorSegment.ZoneSteps.Add(chestChanceZoneStep);
                         }
 
-                        SpreadRoomZoneStep evoZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(1, max_floors)));
-                        List<BaseRoomFilter> evoFilters = new List<BaseRoomFilter>();
-                        evoFilters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
-                        evoFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                        evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvo<MapGenContext>(), new RoomGenEvo<ListMapGenContext>(), evoFilters), 10);
-                        floorSegment.ZoneSteps.Add(evoZoneStep);
-
+                        AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(1, max_floors)), false);
 
                         AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), 2);
 
@@ -13942,6 +13935,8 @@ namespace DataGenerator.Data
 
                             floorSegment.ZoneSteps.Add(combinedVaultZoneStep);
                         }
+
+                        AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors)), false);
 
                         AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 3);
 
@@ -15958,14 +15953,6 @@ namespace DataGenerator.Data
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, 5)), new MapItem("key", 1));
 
 
-                    SpreadRoomZoneStep evoZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(1, max_floors)));
-                    List<BaseRoomFilter> evoFilters = new List<BaseRoomFilter>();
-                    evoFilters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
-                    evoFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                    evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvo<MapGenContext>(), new RoomGenEvo<ListMapGenContext>(), evoFilters), 10);
-                    floorSegment.ZoneSteps.Add(evoZoneStep);
-
-
                     {
                         //monster houses
                         SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(20, new IntRange(1, 15)));
@@ -16226,6 +16213,8 @@ namespace DataGenerator.Data
                     SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandDecay(0, 4, 35), new IntRange(2, max_floors)), PR_SHOPS, shopZoneSpawns);
                     shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
                     floorSegment.ZoneSteps.Add(shopZoneStep);
+
+                    AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(1, max_floors)), false);
 
                     AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), 1);
 
@@ -16595,6 +16584,8 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(tileSpawn);
 
 
+                        AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(1, max_floors)), true);
+
 
                         for (int ii = 0; ii < max_floors; ii++)
                         {
@@ -16705,6 +16696,8 @@ namespace DataGenerator.Data
                         tileSpawn.Priority = PR_RESPAWN_TRAP;
                         floorSegment.ZoneSteps.Add(tileSpawn);
 
+
+                        AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(1, max_floors)), true);
 
 
                         for (int ii = 0; ii < max_floors; ii++)
