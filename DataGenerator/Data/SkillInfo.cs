@@ -16852,17 +16852,32 @@ namespace DataGenerator.Data
             }
             else if (ii == 694)
             {
-                skill.Name = new LocalText("**Aurora Veil");
+                skill.Name = new LocalText("Aurora Veil");
                 skill.Desc = new LocalText("This move reduces damage from physical and special moves for five turns. This can be used only in a hailstorm.");
-                skill.BaseCharges = 20;
+                skill.BaseCharges = 15;
                 skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.OnActions.Add(-1, new WeatherRequiredEvent("hail", new StringKey("MSG_NOT_HAILING")));
+                skill.Data.OnHits.Add(0, new StatusBattleEvent("light_screen", true, false));
+                skill.Data.OnHits.Add(0, new StatusBattleEvent("reflect", true, false));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new AreaAction();
+                ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
+                ((AreaAction)skill.HitboxAction).Range = 1;
+                ((AreaAction)skill.HitboxAction).Speed = 10;
+                CircleSquareAreaEmitter emitter = new CircleSquareAreaEmitter();
+                emitter.Anims.Add(new SingleEmitter(new BeamAnimData("Column_Blue", 3, -1, -1, 192)));
+                emitter.Anims.Add(new SingleEmitter(new BeamAnimData("Column_Green", 3, -1, -1, 192)));
+                emitter.Anims.Add(new SingleEmitter(new BeamAnimData("Column_Purple", 3, -1, -1, 192)));
+                emitter.Anims.Add(new SingleEmitter(new BeamAnimData("Column_Red", 3, -1, -1, 192)));
+                emitter.Anims.Add(new SingleEmitter(new BeamAnimData("Column_Yellow", 3, -1, -1, 192)));
+                emitter.ParticlesPerTile = 0.7;
+                ((AreaAction)skill.HitboxAction).Emitter = emitter;
+                skill.HitboxAction.TargetAlignments = (Alignment.Self | Alignment.Friend);
+                skill.Explosion.TargetAlignments = (Alignment.Self | Alignment.Friend);
+                skill.HitboxAction.ActionFX.Sound = "DUN_Light_Screen_2";
+                skill.HitboxAction.ActionFX.Emitter = new SingleEmitter(new AnimData("Screen_RSE_Yellow", 3, -1, -1, 192));
             }
             else if (ii == 695)
             {
