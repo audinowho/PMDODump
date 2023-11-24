@@ -140,6 +140,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A berry that matures slowly, storing nutrients beneficial to Pokémon health. It cures many status problems.");
                 item.Sprite = "Berry_Lum";
                 item.ItemStates.Set(new CurerState());
+                item.UseEvent.BeforeActions.Add(-1, new AddContextStateEvent(new CureAttack()));
                 item.UseEvent.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
             }
             else if (ii == 13)
@@ -911,6 +912,8 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Full Heal");
                 item.Desc = new LocalText("A spray-type medicine that cures status problems. It affects all team members up to 3 tiles away.");
                 item.Sprite = "Medicine_Green";
+                item.ItemStates.Set(new CurerState());
+                item.UseEvent.BeforeActions.Add(-1, new AddContextStateEvent(new CureAttack()));
                 item.UseEvent.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 3;

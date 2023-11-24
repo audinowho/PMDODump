@@ -5481,6 +5481,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = -1;
+                skill.Data.BeforeActions.Add(-1, new AddContextStateEvent(new CureAttack()));
                 skill.Data.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
@@ -6646,6 +6647,7 @@ namespace DataGenerator.Data
                     newData.Element = "normal";
                     newData.Category = BattleData.SkillCategory.Status;
                     newData.HitRate = -1;
+                    newData.OnHits.Add(-1, new AddContextStateEvent(new CureAttack()));
                     newData.OnHits.Add(0, new RestoreHPEvent(1, 1, true));
                     newData.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
                     newData.AfterActions.Add(0, new RemoveStatusBattleEvent("stockpile", false));
@@ -7437,6 +7439,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.BeforeActions.Add(-1, new AddContextStateEvent(new CureAttack()));
                 skill.Data.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(MajorStatusState), true, new StringKey("MSG_CURE_MAJOR")));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
@@ -8126,6 +8129,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.BeforeActions.Add(-1, new AddContextStateEvent(new CureAttack()));
                 skill.Data.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
@@ -9347,6 +9351,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
+                skill.Data.BeforeActions.Add(-1, new AddContextStateEvent(new CureAttack()));
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 1, true));
                 skill.Data.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
                 skill.Data.AfterActions.Add(0, new HPTo1Event(false));
@@ -12042,6 +12047,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
+                skill.Data.BeforeActions.Add(-1, new AddContextStateEvent(new CureAttack()));
                 skill.Data.OnHits.Add(0, new RestoreHPEvent(1, 1, true));
                 skill.Data.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
                 skill.Data.AfterActions.Add(0, new HPTo1Event(false));
