@@ -2221,7 +2221,7 @@ namespace DataGenerator.Data
                 //spawns asleep with pearl, if initial
                 {
 
-                    TeamMemberSpawn mob = GetTeamMob("grumpig", "", "magic_coat", "zen_headbutt", "", "", new RandRange(30), "wander_normal", true);
+                    TeamMemberSpawn mob = GetTeamMob("grumpig", "thick_fat", "magic_coat", "psywave", "confuse_ray", "", new RandRange(30), "wander_normal", true);
                     MobSpawnItem keySpawn = new MobSpawnItem(true);
                     keySpawn.Items.Add(new InvItem("loot_pearl", false, 2), 10);
                     mob.Spawn.SpawnFeatures.Add(keySpawn);
