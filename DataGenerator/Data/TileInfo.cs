@@ -1340,7 +1340,7 @@ namespace DataGenerator.Data
             return (fileName, tile);
         }
 
-        public const int MAX_TERRAIN = 8;
+        public const int MAX_TERRAIN = 9;
 
         public static void AddTerrainData()
         {
@@ -1368,6 +1368,8 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Impassable");
                 asset = "unbreakable";
                 tile.BlockType = TerrainData.Mobility.Impassable;
+                tile.ItemAllow = TerrainData.TileItemAllowance.Forbid;
+                tile.ItemDraw = TerrainData.TileItemDraw.Hide;
                 tile.MinimapColor = Color.White;
                 tile.BlockDiagonal = true;
                 tile.BlockLight = true;
@@ -1377,6 +1379,8 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Blocked");
                 asset = "wall";
                 tile.BlockType = TerrainData.Mobility.Block;
+                tile.ItemAllow = TerrainData.TileItemAllowance.Forbid;
+                tile.ItemDraw = TerrainData.TileItemDraw.Hide;
                 tile.MinimapColor = Color.White;
                 tile.BlockDiagonal = true;
                 tile.BlockLight = true;
@@ -1388,6 +1392,7 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Water");
                 asset = "water";
                 tile.BlockType = TerrainData.Mobility.Water;
+                tile.ItemDraw = TerrainData.TileItemDraw.Transparent;
                 tile.MinimapColor = Color.Blue;
                 tile.ShadowType = 3;
                 tile.TerrainStates.Set(new WaterTerrainState());
@@ -1398,6 +1403,9 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Lava");
                 asset = "lava";
                 tile.BlockType = TerrainData.Mobility.Lava;
+                tile.ItemAllow = TerrainData.TileItemAllowance.Force;
+                tile.ItemLand = TerrainData.TileItemLand.Destroy;
+                tile.ItemDraw = TerrainData.TileItemDraw.Transparent;
                 tile.MinimapColor = Color.DarkOrange;
                 tile.ShadowType = 4;
                 SingleEmitter endAnim = new SingleEmitter(new AnimData("Burned", 3));
@@ -1410,6 +1418,9 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Abyss");
                 asset = "pit";
                 tile.BlockType = TerrainData.Mobility.Abyss;
+                tile.ItemAllow = TerrainData.TileItemAllowance.Force;
+                tile.ItemLand = TerrainData.TileItemLand.Fall;
+                tile.ItemDraw = TerrainData.TileItemDraw.Transparent;
                 tile.MinimapColor = Color.Gray;
                 tile.ShadowType = 4;
                 tile.TerrainStates.Set(new AbyssTerrainState());
@@ -1419,6 +1430,7 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Poison");
                 asset = "water_poison";
                 tile.BlockType = TerrainData.Mobility.Water;
+                tile.ItemDraw = TerrainData.TileItemDraw.Transparent;
                 tile.MinimapColor = Color.Blue;
                 tile.ShadowType = 3;
                 SqueezedAreaEmitter emitter = new SqueezedAreaEmitter(new AnimData("Bubbles_Purple", 3));
@@ -1436,9 +1448,17 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Variable-Texture Foliage");
                 asset = "grass";
+                tile.ItemDraw = TerrainData.TileItemDraw.Transparent;
                 tile.MinimapColor = Color.Teal;
                 tile.BlockLight = true;
                 tile.TerrainStates.Set(new FoliageTerrainState());
+            }
+            else if (ii == 8)
+            {
+                tile.Name = new LocalText("Variable-Texture Cloud");
+                asset = "floor_cloud";
+                tile.ItemAllow = TerrainData.TileItemAllowance.Force;
+                tile.ItemLand = TerrainData.TileItemLand.Fall;
             }
 
             return (asset, tile);
