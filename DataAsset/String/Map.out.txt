@@ -48,6 +48,7 @@ room_garden_lines-0000|data.Name
 room_inscribed_entrance-0000|data.Name		
 room_moon_crescent_left-0000|data.Name		
 room_moon_crescent_right-0000|data.Name		
+room_moon_dance-0000|data.Name		
 room_moon_full-0000|data.Name		
 room_moon_half_left-0000|data.Name		
 room_moon_half_right-0000|data.Name		

@@ -106,6 +106,6 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-veiled_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Veiled Ridge\n{0}F		Verdeckter Grat\nE{0}	Ladera Velada\nP{0}		Crinale Velato\nP{0}				朦胧山脊\n{0}F
 0000-veiled_ridge-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Illusion Ridge\nB{0}F		Illusionsgrat\nU{0}	Ladera Ilusoria\nP-{0}		Cresta Illusione\nP-{0}				幻想山脊\nB{0}F
 0000-wayward_wetlands-0000|data.Name		Wayward Wetlands		Launische Auen	Humedales Caprichosos		Acquitrini Capriccio				任性湿地
-0000-wayward_wetlands-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wayward Wetlands\n{0}F		Launische Auen\nE{0}	Humedales Caprichosos\nP{0}		Acquitrini Capriccio\nP{0}				任性湿地\n{0}F				
+0000-wayward_wetlands-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wayward Wetlands\nB{0}F													
 0000-wisdom_road-0000|data.Name		Wisdom Road		Pass der Weisheit	Sendero Sabiduría		Strada della Saggezza				智慧之路
 0000-wisdom_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wisdom Road\n{0}F		Pass der Weisheit\nE{0}	Sendero Sabiduría\nP{0}		Strada della Saggezza\nP{0}				智慧之路\n{0}F

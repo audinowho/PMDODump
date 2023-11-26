@@ -1,17 +1,33 @@
 Sheet: Hardcode
-    * Changed GAME_SPLASH from "This is a free fangame\ncreated by fans of\nPokemon Mystery Dungeon.\n\nPlease support the series\nby purchasing an official game.\n\n\n\nPokemon Mystery Dungeon is owned by\n\nNintendo\nPokemon\nCreatures Inc\nGAME FREAK Inc\nSpike Chunsoft" to "This is a free fangame\ncreated by fans of\nPokémon Mystery Dungeon.\n\nPlease support the series\nby purchasing an official game.\n\n\n\nPokémon Mystery Dungeon is owned by\n\nNintendo\nPokemon\nCreatures Inc\nGAME FREAK Inc\nSpike Chunsoft"
-    * Added MENU_TRAIL_TITLE
 
 Sheet: Content
-    * Added MENU_RECRUITMENT
-    * Added MENU_RECRUITMENT_NONE
-    * Added MENU_RECRUITMENT_TITLE
-    * Added TALK_ADVICE_PYRAMID
+    * Added MSG_NOT_HAILING
+    * Changed TALK_ADVICE_POISON from "If you get poisoned, don't panic![scroll]If you wait it out without moving or attacking, and you'll take less damage." to "If you get poisoned, don't panic![scroll]Wait it out without moving or attacking, and you'll take less damage."
+    * Changed TALK_ADVICE_STAT_DROP from "Aurgh, that Aipom threw some sand in my eyes and now I can barely hit anything![br]I need to get to a Wonder Tile..." to "Aurgh, that Aipom threw some sand in my eyes and now my aim is off![br]I need to get to a Wonder Tile..."
+    * Added TALK_ADVICE_STAT_DROP_CLEAR
 
 Sheet: Script
-    * Significantly changed ground\cliff_camp/Sightseer_Line_001 from "Lovely breeze here, isn't it?[br]This cliff would be a nice place to make a nest, if I do say so myself.[br]If only it wasn't surrounded by Mystery Dungeons..." to "After the trailblazers set up camp in the ravine,[pause=0] the areas beyond were too hostile to camp in.[br]Even now, there's no clear path to the summit."
-    * Significantly changed ground\cliff_camp/Storehouse_Line_001 from "Confound it![pause=0] Where are those two slackers?[br]Machop and Ponyta were supposed to be here with the supplies a long time ago!" to "Confound it![pause=0] Where are those two slackers?[br]{0} and {1} were supposed to be here with the supplies a long time ago!"
-    * Significantly changed ground\forest_camp/Camps_Line_001 from "When trailblazers first came to climb the mountain,[pause=0] they set up rest camps along the way.[br]But after they passed the Ravine,[pause=0] the areas became too hostile to camp in.[br]Even now, there's no clear path to the summit." to "When trailblazers first came to climb the mountain,[pause=0] they set up rest camps along the way.[br]Go straight through the {0} they left behind, and you'll find yourself in {1}."
+    * Erased contents of ground\base_camp_2/Tutor_Cant_Forget
+    * Erased contents of ground\base_camp_2/Tutor_Cant_Remember
+    * Significantly changed ground\base_camp_2/Tutor_Info_002 from "For a small fee, any move you've learned from leveling up can be learned again!" to "For a small fee, I can help you relearn any move you've learned in the past![br]I can also help you forget a move, for free!"
+    * Significantly changed ground\base_camp_2/Tutor_Info_003 from "I can also help forget moves." to "I can help you relearn any move you've learned in the past![br]I can also help you forget a move, if you want."
+    * Added ground\base_camp_2/Tutor_Info_004
+    * Added ground\base_camp_2/Tutor_Intro_Free
+    * Added ground\base_camp_2/Tutor_Now_Free
+    * Added ground\base_camp_2/Tutor_Now_Teaches
+    * Changed ground\base_camp_2/Tutor_Option_Tutor from "Tutor" to "Tutor Move"
+    * Added ground\base_camp_2/Tutor_Teach_Success
+    * Added ground\base_camp_2/Tutor_Teach_What
+    * Added ground\base_camp_2/Tutor_Teach_Who
+    * Added ground\canyon_camp/NextCamp_Line_001
+    * Added ground\canyon_camp/Tutor_Accept
+    * Added ground\canyon_camp/Tutor_Ask
+    * Added ground\canyon_camp/Tutor_Decline
+    * Added ground\canyon_camp/Tutor_Done
+    * Added ground\canyon_camp/Tutor_Incompatible
+    * Added ground\canyon_camp/Tutor_Intro
+    * Added ground\canyon_camp/Tutor_Replace
+    * Added ground\canyon_camp/Tutor_Taught
 
 Sheet: Abilities
 
@@ -20,22 +36,20 @@ Sheet: Items
 Sheet: MapStatuses
 
 Sheet: Moves
-    * Significantly changed 0563-rototiller-0001|data.Desc from "The user overturns the soil, destroying traps and making it easier for plants to grow. This raises the Attack and Sp. Atk stats of Grass-type Pokémon." to "The user overturns the soil, destroying obstacles along the way."
 
 Sheet: Statuses
 
 Sheet: Tiles
-    * Significantly changed 0000-tile_boss-0000|data.Name from "Sigil Site" to "Mirage Tablet"
-    * Significantly changed 0000-tile_boss-0001|data.Desc from "A mysterious sigil that calls Pokémon to the area." to "A stone tablet engraved with names long lost. There is an indent at the bottom that fits an Explorer Badge..."
 
 Sheet: Excl Names
 
 Sheet: Excl Effects
 
 Sheet: Zones
+    * Significantly changed 0000-wayward_wetlands-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name from "Wayward Wetlands\n{0}F" to "Wayward Wetlands\nB{0}F"
 
 Sheet: Maps
-    * Added room_pyramid-0000|data.Name
+    * Added room_moon_dance-0000|data.Name
 
 Sheet: GroundMaps
 

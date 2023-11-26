@@ -34,7 +34,7 @@ Key		EN
 0000-stairs_secret_up-0000|data.Name		Secret Stairs
 0000-stairs_secret_up-0001|data.Desc		Stairs leading to an unknown location.
 0000-tile_boss-0000|data.Name		Mirage Tablet
-0000-tile_boss-0001|data.Desc		A stone tablet engraved with names long lost. There is an indent at the bottom that fits an Explorer Badge...
+0000-tile_boss-0001|data.Desc		A stone tablet engraved with a set of names. There is an indent at the bottom that fits an Explorer Badge...
 0000-tile_compass-0000|data.Name		Compass Tile
 0000-tile_compass-0001|data.Desc		A tile that shows the way to important locations on the floor.
 0000-tile_evo-0000|data.Name		Luminous Site

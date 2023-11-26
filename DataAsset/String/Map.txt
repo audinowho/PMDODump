@@ -1,9 +1,9 @@
-Key		EN	ZH-HANS	DE	ES	IT
+Key		EN	DE	ZH-HANS	ES	IT
 base_camp-0000|data.Name						
 base_camp_2-0000|data.Name						
 canyon_camp-0000|data.Name						
 cliff_camp-0000|data.Name						
-end_ambush_forest-0000|data.Name		Ambush Forest Grove	埋伏森林树丛			
+end_ambush_forest-0000|data.Name		Ambush Forest Grove	Hain im Auflauerwald	埋伏森林树丛		
 end_bramble_woods-0000|data.Name						
 end_champions_road-0000|data.Name						
 end_copper_quarry-0000|data.Name						
@@ -12,13 +12,13 @@ end_moonlit_courtyard-0000|data.Name
 end_overgrown_wilds-0000|data.Name						
 end_relic_tower-0000|data.Name						
 end_sickly_hollow-0000|data.Name						
-end_treacherous_mountain-0000|data.Name		Treacherous Mountain Cave	奸诈山峰洞窟			
+end_treacherous_mountain-0000|data.Name		Treacherous Mountain Cave	Höhle im tückischem Gebirge	奸诈山峰洞窟		
 end_veiled_ridge-0000|data.Name						
 final_stop-0000|data.Name						
-forest_camp-0000|data.Name		Forest Camp	森林营地	Wald-Lager	Campamento Bosque	Accampamento Boschivo
+forest_camp-0000|data.Name		Forest Camp	Wald-Lager	森林营地	Campamento Bosque	Accampamento Boschivo
 guild_hut-0000|data.Name						
 guild_path-0000|data.Name						
-guildmaster_summit-0000|data.Name		Guildmaster Summit	公会会长之巅	Gildenmeister-Gipfel	Cima del Maestro	Vetta del Maestro
+guildmaster_summit-0000|data.Name		Guildmaster Summit	Gildenmeister-Gipfel	公会会长之巅	Cima del Maestro	Vetta del Maestro
 luminous_spring-0000|data.Name						
 pattern_blob-0000|data.Name						
 pattern_bubble-0000|data.Name						
@@ -34,7 +34,7 @@ pattern_teeth-0000|data.Name
 pattern_x-0000|data.Name						
 pattern_x_repeat-0000|data.Name						
 post_office-0000|data.Name						
-rest_stop-0000|data.Name		Rest Stop	休息站	Rastplatz	Parada de Descanso	Stazione di Riposo
+rest_stop-0000|data.Name		Rest Stop	Rastplatz	休息站	Parada de Descanso	Stazione di Riposo
 room_ambush_item-0000|data.Name						
 room_castaway_cave_altar-0000|data.Name						
 room_exotic_wilds_entrance-0000|data.Name						
@@ -48,6 +48,7 @@ room_garden_lines-0000|data.Name
 room_inscribed_entrance-0000|data.Name						
 room_moon_crescent_left-0000|data.Name						
 room_moon_crescent_right-0000|data.Name						
+room_moon_dance-0000|data.Name						
 room_moon_full-0000|data.Name						
 room_moon_half_left-0000|data.Name						
 room_moon_half_right-0000|data.Name						
