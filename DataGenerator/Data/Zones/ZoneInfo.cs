@@ -447,7 +447,15 @@ namespace DataGenerator.Data
                             post_mob.BaseForm = new MonsterID("swablu", 0, "normal", Gender.Male);
                             post_mob.Tactic = "slow_wander";
                             post_mob.Level = new RandRange(14);
-                            post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_STAT_DROP"))));
+                            post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new BattleScriptEvent("AccuracyTalk")));
+                            //post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_STAT_DROP"))));
+                            {
+                                StatusEffect stack = new StatusEffect("mod_accuracy");
+                                stack.StatusStates.Set(new StackState(-1));
+                                MobSpawnStatus status = new MobSpawnStatus();
+                                status.Statuses.Add(stack, 10);
+                                post_mob.SpawnFeatures.Add(status);
+                            }
                             SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
                             post_team.Explorer = true;
                             multiTeamSpawner.Spawns.Add(post_team);
