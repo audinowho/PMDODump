@@ -142,7 +142,7 @@ namespace DataGenerator.Data
 
             WritePersonalityChecklist(personalities, totalEntries);
 
-            //CreateLearnables();
+            CreateLearnables(totalEntries);
             ListAllIncompletes(totalEntries);
 
 
@@ -2462,42 +2462,103 @@ namespace DataGenerator.Data
             }
 
             Dictionary<string, int> learnMoves = new Dictionary<string, int>();
+            Dictionary<string, int> eggMoves = new Dictionary<string, int>();
             for (int ii = 0; ii < TOTAL_DEX; ii++)
             {
                 MonsterData mon = totalEntries[ii];
                 if (!mon.Released)
                     continue;
-                MonsterFormData form = (MonsterFormData)mon.Forms[0];
-                foreach (LearnableSkill skill in form.TeachSkills)
+                for (int jj = 0; jj < mon.Forms.Count; jj++)
                 {
-                    bool newSkill = true;
-                    string prevData = mon.PromoteFrom;
-                    if (!String.IsNullOrEmpty(prevData))
+                    MonsterFormData form = (MonsterFormData)mon.Forms[jj];
+                    if (!form.Released)
+                        continue;
+
+                    foreach (LearnableSkill skill in form.SecretSkills)
                     {
-                        MonsterData preMon = totalEntries[dexToId[prevData]];
-                        MonsterFormData preForm = (MonsterFormData)preMon.Forms[0];
-                        foreach (LearnableSkill preSkill in form.TeachSkills)
+                        bool newSkill = true;
+                        string prevData = mon.PromoteFrom;
+                        int prevForm = form.PromoteForm;
+                        if (!String.IsNullOrEmpty(prevData))
                         {
-                            if (preSkill.Skill == skill.Skill)
+                            MonsterData preMon = totalEntries[dexToId[prevData]];
+                            MonsterFormData preForm = (MonsterFormData)preMon.Forms[prevForm];
+                            foreach (LearnableSkill preSkill in preForm.SecretSkills)
                             {
-                                newSkill = false;
-                                break;
+                                if (preSkill.Skill == skill.Skill)
+                                {
+                                    newSkill = false;
+                                    break;
+                                }
                             }
+                        }
+
+                        if (newSkill)
+                        {
+                            if (!learnMoves.ContainsKey(skill.Skill))
+                                learnMoves[skill.Skill] = 0;
+                            learnMoves[skill.Skill]++;
                         }
                     }
 
-                    if (newSkill)
+                    
+                    foreach (LearnableSkill skill in form.SharedSkills)
                     {
-                        if (!learnMoves.ContainsKey(skill.Skill))
-                            learnMoves[skill.Skill] = 0;
-                        learnMoves[skill.Skill]++;
+                        bool newSkill = true;
+                        string prevData = mon.PromoteFrom;
+                        int prevForm = form.PromoteForm;
+                        if (!String.IsNullOrEmpty(prevData))
+                        {
+                            MonsterData preMon = totalEntries[dexToId[prevData]];
+                            MonsterFormData preForm = (MonsterFormData)preMon.Forms[prevForm];
+                            foreach (LearnableSkill preSkill in preForm.SharedSkills)
+                            {
+                                if (preSkill.Skill == skill.Skill)
+                                {
+                                    newSkill = false;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (newSkill)
+                        {
+                            if (!eggMoves.ContainsKey(skill.Skill))
+                                eggMoves[skill.Skill] = 0;
+                            eggMoves[skill.Skill]++;
+                        }
                     }
                 }
             }
 
+            Dictionary<string, (int, int)> totalMoves = new Dictionary<string, (int, int)>();
+            foreach (string key in eggMoves.Keys)
+            {
+                int tutorCount;
+                learnMoves.TryGetValue(key, out tutorCount);
+                totalMoves[key] = (eggMoves[key], tutorCount);
+            }
             foreach (string key in learnMoves.Keys)
             {
-                Console.WriteLine(key + "," + learnMoves[key]);
+                if (!eggMoves.ContainsKey(key))
+                    totalMoves[key] = (0, learnMoves[key]);
+            }
+            using (StreamWriter file = new StreamWriter("tutor.txt"))
+            {
+                foreach (string key in totalMoves.Keys)
+                {
+                    SkillData skillData = DataManager.LoadData<SkillData>(key, DataManager.DataType.Skill.ToString());
+                    int tutorCost;
+                    if (skillData.BaseCharges < 10)
+                        tutorCost = (10 - skillData.BaseCharges) + 7;
+                    else if (skillData.BaseCharges < 20)
+                        tutorCost = (20 - skillData.BaseCharges) / 2 + 2;
+                    else if (skillData.BaseCharges < 23)
+                        tutorCost = 2;
+                    else
+                        tutorCost = 1;
+                    file.WriteLine(key + "\t" + totalMoves[key].Item1 + "\t" + totalMoves[key].Item2 + "\t" + tutorCost);
+                }
             }
         }
 
