@@ -1,0 +1,102 @@
+== Character.Absentee ==
+
+
+If turned on, this entity is considered NOT a part of the adventure for the duration of that adventure.
+
+
+== Character.CharLoc ==
+
+
+Position on the map grid in tiles.
+
+
+== Character.CharDir ==
+
+
+Character's direction.
+
+
+== Character.MustHitNext ==
+
+
+Guaranteed to hit next attack
+
+
+== Character.TurnWait ==
+
+
+The number of turns this character must wait before being able to move again.
+
+
+== Character.TiersUsed ==
+
+
+The number of turn tiers that this character has moved OR acted on.
+
+
+== Character.TurnUsed ==
+
+
+Whether the character has made an action during this map turn.  Only one action per map turn permitted.
+
+
+== Character.ItemDisabled ==
+
+
+Will prevent the passive item effects.  Does not prevent active use.
+
+
+== Character.IntrinsicDisabled ==
+
+
+Prevents passive intrinsic effects
+
+
+== Character.MovesScrambled ==
+
+
+Will move erratically
+
+
+== Character.WaitToAttack ==
+
+
+The Wait command translates to attack.
+
+
+== Character.CantInteract ==
+
+
+Can't pick up/place/equip/take items, cant interact with ground/people.
+
+
+== Character.EnemyOfFriend ==
+
+
+Treated as a foe by friends in combat
+
+
+== Character.AttackFriend ==
+
+
+Treats friends as foes in and out of combat
+
+
+== Character.MapLoc ==
+
+
+Position on the map in pixels.
+
+
+== CharData.IsFounder ==
+
+
+Cannot be removed from assembly.
+
+
+== CharData.IsPartner ==
+
+
+Cannot be removed from team.
+
+

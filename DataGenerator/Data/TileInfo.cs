@@ -58,6 +58,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -74,6 +75,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -729,7 +731,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("grudge", true, false, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
             }
             else if (ii == 25)
             {
@@ -952,6 +954,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Orange;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -968,6 +971,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Orange;
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -1000,9 +1004,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 38)
             {
-                tile.Name = new LocalText("Sigil Site");
+                tile.Name = new LocalText("Mirage Tablet");
                 fileName = "tile_boss";
-                tile.Desc = new LocalText("A mysterious sigil that calls Pokémon to the area.");
+                tile.Desc = new LocalText("A stone tablet engraved with a set of names. There is an indent at the bottom that fits an Explorer Badge...");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Site;
                 tile.Anim = new ObjAnimData("Tile_Signal", 12);
@@ -1163,9 +1167,10 @@ namespace DataGenerator.Data
                 tile.StepType = TileData.TriggerType.Passage;
                 tile.Anim = new ObjAnimData("Stairs_Up", 1);
                 tile.MinimapIcon = new Loc(4, 0);
-                tile.MinimapColor = Color.Cyan;
+                tile.MinimapColor = new Color(0, 231, 0);
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -1179,9 +1184,10 @@ namespace DataGenerator.Data
                 tile.StepType = TileData.TriggerType.Passage;
                 tile.Anim = new ObjAnimData("Stairs_Down", 1);
                 tile.MinimapIcon = new Loc(4, 0);
-                tile.MinimapColor = Color.Cyan;
+                tile.MinimapColor = new Color(0, 231, 0);
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -1208,6 +1214,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = new Color(0, 231, 0);
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -1224,6 +1231,7 @@ namespace DataGenerator.Data
                 tile.MinimapColor = new Color(0, 231, 0);
                 tile.LandedOnTiles.Add(0, new RevealSecretEvent());
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new NextFloorEvent());
                 tile.InteractWithTiles.Add(0, new SwitchMapEvent());
             }
@@ -1240,7 +1248,7 @@ namespace DataGenerator.Data
                 tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Stair_Sensor_Arrow", 6), 6);
                 emitter.Layer = DrawLayer.Top;
-                tile.InteractWithTiles.Add(0, new CompassEvent(emitter, "stairs_go_up", "stairs_go_down", "stairs_secret_up", "stairs_secret_down", "rescue_point",
+                tile.InteractWithTiles.Add(0, new CompassEvent(emitter, "stairs_go_up", "stairs_go_down", "rescue_point",
                     "chest_full", "tile_boss", "sealed_door", "stairs_exit_up", "stairs_exit_down", "stairs_back_up", "stairs_back_down"));
             }
             else if (ii == 52)
@@ -1332,7 +1340,7 @@ namespace DataGenerator.Data
             return (fileName, tile);
         }
 
-        public const int MAX_TERRAIN = 8;
+        public const int MAX_TERRAIN = 9;
 
         public static void AddTerrainData()
         {
@@ -1360,6 +1368,8 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Impassable");
                 asset = "unbreakable";
                 tile.BlockType = TerrainData.Mobility.Impassable;
+                tile.ItemAllow = TerrainData.TileItemAllowance.Forbid;
+                tile.ItemDraw = TerrainData.TileItemDraw.Hide;
                 tile.MinimapColor = Color.White;
                 tile.BlockDiagonal = true;
                 tile.BlockLight = true;
@@ -1369,6 +1379,8 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Blocked");
                 asset = "wall";
                 tile.BlockType = TerrainData.Mobility.Block;
+                tile.ItemAllow = TerrainData.TileItemAllowance.Forbid;
+                tile.ItemDraw = TerrainData.TileItemDraw.Hide;
                 tile.MinimapColor = Color.White;
                 tile.BlockDiagonal = true;
                 tile.BlockLight = true;
@@ -1380,6 +1392,7 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Water");
                 asset = "water";
                 tile.BlockType = TerrainData.Mobility.Water;
+                tile.ItemDraw = TerrainData.TileItemDraw.Transparent;
                 tile.MinimapColor = Color.Blue;
                 tile.ShadowType = 3;
                 tile.TerrainStates.Set(new WaterTerrainState());
@@ -1390,6 +1403,9 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Lava");
                 asset = "lava";
                 tile.BlockType = TerrainData.Mobility.Lava;
+                tile.ItemAllow = TerrainData.TileItemAllowance.Force;
+                tile.ItemLand = TerrainData.TileItemLand.Destroy;
+                tile.ItemDraw = TerrainData.TileItemDraw.Transparent;
                 tile.MinimapColor = Color.DarkOrange;
                 tile.ShadowType = 4;
                 SingleEmitter endAnim = new SingleEmitter(new AnimData("Burned", 3));
@@ -1402,6 +1418,9 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Abyss");
                 asset = "pit";
                 tile.BlockType = TerrainData.Mobility.Abyss;
+                tile.ItemAllow = TerrainData.TileItemAllowance.Force;
+                tile.ItemLand = TerrainData.TileItemLand.Fall;
+                tile.ItemDraw = TerrainData.TileItemDraw.Transparent;
                 tile.MinimapColor = Color.Gray;
                 tile.ShadowType = 4;
                 tile.TerrainStates.Set(new AbyssTerrainState());
@@ -1411,6 +1430,7 @@ namespace DataGenerator.Data
                 tile.Name = new LocalText("Variable-Texture Poison");
                 asset = "water_poison";
                 tile.BlockType = TerrainData.Mobility.Water;
+                tile.ItemDraw = TerrainData.TileItemDraw.Transparent;
                 tile.MinimapColor = Color.Blue;
                 tile.ShadowType = 3;
                 SqueezedAreaEmitter emitter = new SqueezedAreaEmitter(new AnimData("Bubbles_Purple", 3));
@@ -1428,9 +1448,17 @@ namespace DataGenerator.Data
             {
                 tile.Name = new LocalText("Variable-Texture Foliage");
                 asset = "grass";
+                tile.ItemDraw = TerrainData.TileItemDraw.Transparent;
                 tile.MinimapColor = Color.Teal;
                 tile.BlockLight = true;
                 tile.TerrainStates.Set(new FoliageTerrainState());
+            }
+            else if (ii == 8)
+            {
+                tile.Name = new LocalText("Variable-Texture Cloud");
+                asset = "floor_cloud";
+                tile.ItemAllow = TerrainData.TileItemAllowance.Force;
+                tile.ItemLand = TerrainData.TileItemLand.Fall;
             }
 
             return (asset, tile);

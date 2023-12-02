@@ -697,7 +697,7 @@ namespace DataGenerator.Data
             else if (ii == 84)
             {
                 ability.Name = new LocalText("Unburden");
-                ability.Desc = new LocalText("Boosts Movement Speed the Pokémon has no held item.");
+                ability.Desc = new LocalText("Boosts Movement Speed if the Pokémon has no held item.");
                 ability.OnRefresh.Add(0, new UnburdenEvent());
             }
             else if (ii == 85)

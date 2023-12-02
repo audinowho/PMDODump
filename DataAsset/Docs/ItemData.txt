@@ -1,0 +1,131 @@
+== ItemData.Name ==
+
+
+The name of the data
+
+
+== ItemData.Sprite ==
+
+
+How the item looks in the game.
+
+
+== ItemData.Icon ==
+
+
+The icon displayed next to the item's name.
+
+
+== ItemData.Desc ==
+
+
+The description of the item
+
+
+== ItemData.Released ==
+
+
+Is it released and allowed to show up in the game?
+
+
+== ItemData.Comment ==
+
+
+Comments visible to only developers
+
+
+== ItemData.SortCategory ==
+
+
+The number order of the item for sorting
+
+
+== ItemData.Price ==
+
+
+How much the item sells for.
+
+
+== ItemData.Rarity ==
+
+
+The rarity rating of the item.
+
+
+== ItemData.MaxStack ==
+
+
+The maximum amount a single slot of this item can be stacked.
+0 is unstackable.
+
+
+== ItemData.CannotDrop ==
+
+
+Cannot be manually dropped, cannot be lost, cannot be stolen.
+
+
+== ItemData.BagEffect ==
+
+
+Determines whether the item activates in bag or on equip.
+
+
+== ItemData.ItemStates ==
+
+
+Special variables that this item contains.
+They are potentially checked against in a select number of battle events.
+
+
+== ItemData.GroundUseActions ==
+
+
+List of ground actions that can be used with that item.
+
+
+== ItemData.UseAction ==
+
+
+The hitbox of the attack that comes out when the item is used.
+
+
+== ItemData.Explosion ==
+
+
+The splash effect that is triggered for each target of the UseAction hitbox.
+
+
+== ItemData.UseEvent ==
+
+
+The effects of using the item.
+
+
+== ItemData.UsageType ==
+
+
+Define whether this is a food, drink, etc for the proper sound/animation on use
+"None" and "ammo" will prevent use, but UseEffect can still be triggered by throwing it.
+This means that throw effect is the same as use effect.
+
+
+== ItemData.ArcThrow ==
+
+
+Defines whether this item flies in an arc or in a straight line.
+
+
+== ItemData.BreakOnThrow ==
+
+
+Defines whether this item will disappear if thrown, even if it doesnt hit a target.
+
+
+== ItemData.ThrowAnim ==
+
+
+Defines the custom graphics for the item when it is thrown.
+Set to an empty anim to use the item's own sprite.
+
+

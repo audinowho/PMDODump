@@ -1,0 +1,79 @@
+== TileData.Name ==
+
+
+The name of the data
+
+
+== TileData.Desc ==
+
+
+The description of the data
+
+
+== TileData.Released ==
+
+
+Is it released and allowed to show up in the game?
+
+
+== TileData.Comment ==
+
+
+Comments visible to only developers
+
+
+== TileData.Anim ==
+
+
+The object animation used for this tile
+
+
+== TileData.Offset ==
+
+
+The offset for which to draw the object animation
+
+
+== TileData.Layer ==
+
+
+The layer to draw the tile on. Only supports Bottom, Back, and Front for now.
+
+
+== TileData.BlockItem ==
+
+
+Prevents items from landing on it.
+
+
+== TileData.StepType ==
+
+
+Determines how the tile can be interacted with
+
+
+== TileData.MinimapIcon ==
+
+
+Texture for the minimap icon
+
+
+== TileData.MinimapColor ==
+
+
+Color for the minimap icon
+
+
+== TileData.LandedOnTiles ==
+
+
+What happens when a character walks on the tile.
+Also triggers if forced on or winds up on it in any other way.
+
+
+== TileData.InteractWithTiles ==
+
+
+What happens when the character voluntarily triggers the tile.
+
+

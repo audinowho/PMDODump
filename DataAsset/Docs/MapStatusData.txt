@@ -1,0 +1,60 @@
+== MapStatusData.Name ==
+
+
+The name of the data
+
+
+== MapStatusData.Desc ==
+
+
+The description of the data
+
+
+== MapStatusData.Released ==
+
+
+Is it released and allowed to show up in the game?
+
+
+== MapStatusData.Comment ==
+
+
+Comments visible to only developers
+
+
+== MapStatusData.CarryOver ==
+
+
+Does it carry over between floors?
+
+
+== MapStatusData.Emitter ==
+
+
+The VFX to play while the map status is in effect.
+
+
+== MapStatusData.DefaultHidden ==
+
+
+Should this map status start off hidden from the menu?
+
+
+== MapStatusData.StatusStates ==
+
+
+States of the map status
+
+
+== MapStatusData.OnMapRefresh ==
+
+
+Triggers when a characer needs to refresh traits
+
+
+== MapStatusData.RepeatMethod ==
+
+
+Triggers when something attempts to add a map status when it already exists
+
+

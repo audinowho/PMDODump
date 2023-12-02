@@ -208,7 +208,7 @@ namespace DataGenerator.Data
 
                 ItemData item = new ItemData();
                 item.UseEvent.Element = "none";
-                item.SortCategory = 16;
+                item.SortCategory = 17;
                 AutoItemInfo.FillExclusiveEffects(item, new List<LocalText>(), false, descType, new object[0], false);
 
 
@@ -515,7 +515,7 @@ namespace DataGenerator.Data
 
                     ItemData item = new ItemData();
                     item.UseEvent.Element = "none";
-                    item.SortCategory = 16;
+                    item.SortCategory = 17;
 
                     if (exclType != ExclusiveItemType.None && customName != "")
                         Console.WriteLine(String.Format("Item {0} found with both name \"{1}\" and type {2}.", fileName, customName, exclType));
@@ -1130,8 +1130,8 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the Pokémon's regular attacks and thrown items have a chance to devolve the target.");
                 if (includeEffects)
                 {
-                    item.AfterHittings.Add(0, new FamilyBattleEvent(new RegularAttackNeededEvent(new OnHitEvent(true, false, 35, new DevolveEvent(true, new BattleAnimEvent(new SingleEmitter(new AnimData("Puff_Green", 3)), "DUN_Transform", true))))));
-                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ThrownItemNeededEvent(new OnHitEvent(true, false, 35, new DevolveEvent(true, new BattleAnimEvent(new SingleEmitter(new AnimData("Puff_Green", 3)), "DUN_Transform", true))))));
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new RegularAttackNeededEvent(new OnHitEvent(true, false, 35, new DevolveEvent(true, "transformed", 5, new BattleAnimEvent(new SingleEmitter(new AnimData("Puff_Green", 3)), "DUN_Transform", true))))));
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ThrownItemNeededEvent(new OnHitEvent(true, false, 35, new DevolveEvent(true, "transformed", 5, new BattleAnimEvent(new SingleEmitter(new AnimData("Puff_Green", 3)), "DUN_Transform", true))))));
                 }
             }
             else if (type == ExclusiveItemEffect.KnockbackOnAttack)

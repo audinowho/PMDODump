@@ -140,6 +140,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A berry that matures slowly, storing nutrients beneficial to Pokémon health. It cures many status problems.");
                 item.Sprite = "Berry_Lum";
                 item.ItemStates.Set(new CurerState());
+                item.UseEvent.BeforeActions.Add(-1, new AddContextStateEvent(new CureAttack()));
                 item.UseEvent.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
             }
             else if (ii == 13)
@@ -911,6 +912,8 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Full Heal");
                 item.Desc = new LocalText("A spray-type medicine that cures status problems. It affects all team members up to 3 tiles away.");
                 item.Sprite = "Medicine_Green";
+                item.ItemStates.Set(new CurerState());
+                item.UseEvent.BeforeActions.Add(-1, new AddContextStateEvent(new CureAttack()));
                 item.UseEvent.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 3;
@@ -1566,7 +1569,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A wand to be waved at a Pokémon. It transforms the target into the same Pokémon as the user.");
                 item.Sprite = "Wand_Pink";
                 item.Price = 10;
-                item.UseEvent.OnHits.Add(0, new TransformEvent(true, "transformed"));
+                item.UseEvent.OnHits.Add(0, new TransformEvent(true, "transformed", 5));
                 item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Puff_Green", 3));
                 item.UseEvent.HitFX.Sound = "DUN_Transform";
             }
@@ -1710,7 +1713,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Devolve Orb");
                 item.Desc = new LocalText("An orb that devolves all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_Pink";
-                item.UseEvent.OnHits.Add(0, new DevolveEvent());
+                item.UseEvent.OnHits.Add(0, new DevolveEvent(false, "transformed", 5));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -1791,9 +1794,9 @@ namespace DataGenerator.Data
             {
                 item.Name = new LocalText("One-Shot Orb");
                 item.Desc = new LocalText("An orb that causes the target to instantly faint, if it hits. It affects all enemies up to 5 tiles away.");
-                item.UseEvent.HitRate = -1;
+                item.UseEvent.HitRate = 100;
                 item.Sprite = "Orb_Purple";
-                item.BeforeHittings.Add(0, new ChanceEvadeEvent(2, 3));
+                item.UseEvent.BeforeHits.Add(0, new CustomHitRateEvent(1, 2));
                 item.UseEvent.OnHits.Add(-1, new OHKODamageEvent());
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
@@ -2005,11 +2008,11 @@ namespace DataGenerator.Data
             else if (ii == 277)
             {
                 item.Name = new LocalText("Nullify Orb");
-                item.Desc = new LocalText("An orb that nullifies the Abilities of all enemies up to 5 tiles away.");
+                item.Desc = new LocalText("An orb that nullifies the Abilities of all enemies on the floor.");
                 item.Sprite = "Orb_Green";
                 item.UseEvent.OnHits.Add(0, new ChangeToAbilityEvent(DataManager.Instance.DefaultIntrinsic, true));
                 item.UseAction = new AreaAction();
-                ((AreaAction)item.UseAction).Range = 5;
+                ((AreaAction)item.UseAction).Range = CharAction.MAX_RANGE;
                 ((AreaAction)item.UseAction).Speed = 10;
                 item.UseAction.ActionFX.Sound = "DUN_Disable";
                 ((AreaAction)item.UseAction).ActionFX.Emitter = new SingleEmitter(new AnimData("Circle_Red_Out", 3));
@@ -2165,7 +2168,7 @@ namespace DataGenerator.Data
             else if (ii == 289)
             {
                 item.Name = new LocalText("Mug Orb");
-                item.Desc = new LocalText("An orb that pulls all items held by enemy Pokémon to the user.");
+                item.Desc = new LocalText("An orb that pulls all items held by enemy Pokémon to the user. It affects all enemies on the floor.");
                 item.Sprite = "Orb_Yellow";
                 item.UseEvent.OnHits.Add(0, new MugItemEvent());
                 item.UseAction = new AreaAction();
@@ -3141,6 +3144,7 @@ namespace DataGenerator.Data
                 fileName = "food_grimy";
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly. However, it will also inflict a variety of status problems because it's covered in filthy grime. Be careful of what you eat!");
                 item.Sprite = "Rock_Purple";
+                item.SortCategory = 4;
                 item.Icon = 16;
                 item.UsageType = ItemData.UseType.Eat;
                 item.ItemStates.Set(new EdibleState());
@@ -3161,6 +3165,7 @@ namespace DataGenerator.Data
                 item.Icon = 18;
                 item.UsageType = ItemData.UseType.Use;
                 item.ItemStates.Set(new UtilityState());
+                item.SortCategory = 13;
                 item.Price = 10;
                 item.MaxStack = 3;
                 item.UseEvent.BeforeTryActions.Add(1, new KeyCheckEvent());
@@ -3189,6 +3194,7 @@ namespace DataGenerator.Data
                 fileName = "gummi_foul";
                 item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly. However, it will also reduce the Pokémon's level by 1.");
                 item.Sprite = "Gummi_Black";
+                item.SortCategory = 4;
                 item.Icon = 16;
                 item.UsageType = ItemData.UseType.Eat;
                 item.ItemStates.Set(new EdibleState());
@@ -3252,7 +3258,6 @@ namespace DataGenerator.Data
             }
             else if (ii == 485)
             {
-
             }
             else if (ii == 486)
             {
@@ -3353,6 +3358,31 @@ namespace DataGenerator.Data
                 fileName = "egg_mystery";
                 item.Sprite = "Egg_Sea";
                 item.Desc = new LocalText("An egg with bizarre colors that have never been seen before. What could this egg be?");
+            }
+            else if (ii == 493)
+            {
+                item.Name = new LocalText("**Secret Slab");
+                item.Desc = new LocalText("An ancient stone slab inscribed with what seems to be prehistoric legend, rumored to hold an incredible secret. Its writings change depending on the dungeon it's used in.");
+                // Lua script: Will list out all restrictions the player needs to abide by to get to the dungeon's golden chamber, also keep track of which restrictions are met?
+                // If the dungeon doesn't have a golden chamber, just say it's blank.
+                item.Price = 80000;
+            }
+            else if (ii == 494)
+            {
+                item.Name = new LocalText("**Music Box");
+                item.Desc = new LocalText("An enchanting music box that plays a beautiful melody. It is said to draw something special to it when it is kept close by.");
+                // This will trigger legendaries to appear.
+                // when they do appear, the music will change to a music box tune.
+                // they will never spawn at the start of the dungeon, or when the wind timer is visible.
+                // they have a chance to spawn at 100 turns into the floor and no more
+                item.Price = 80000;
+            }
+            else if (ii == 495)
+            {
+                item.Name = new LocalText("**Mystery Part");
+                item.Desc = new LocalText("A mysterious mechanical part that has lain undisturbed for eons, veiled by legendary mystery. It is said to have an effect on mysterious distortions.");
+                // This will prevent mysterious distortions from occurring, and cause them to flood out when taken away
+                item.Price = 80000;
             }
             else if (ii == 576)
                 FillTMData(item, "earthquake");
@@ -3617,7 +3647,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = "food_" + Text.Sanitize(ReverseWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 1;
+                    item.SortCategory = 4;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new FoodState());
@@ -3627,7 +3657,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 2;
+                    item.SortCategory = 6;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new BerryState());
@@ -3639,7 +3669,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 2;
+                    item.SortCategory = 5;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new GummiState());
@@ -3650,7 +3680,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 4;
+                    item.SortCategory = 7;
                     item.UsageType = ItemData.UseType.Eat;
                     item.ItemStates.Set(new EdibleState());
                     item.ItemStates.Set(new SeedState());
@@ -3665,7 +3695,7 @@ namespace DataGenerator.Data
                     {
                         if (fileName == "")
                             fileName = "boost_" + Text.Sanitize(item.Name.DefaultText).ToLower();
-                        item.SortCategory = 6;
+                        item.SortCategory = 9;
                         item.UsageType = ItemData.UseType.Drink;
                         item.ItemStates.Set(new EdibleState());
                         item.ItemStates.Set(new DrinkState());
@@ -3677,7 +3707,7 @@ namespace DataGenerator.Data
                     {
                         if (fileName == "")
                             fileName = "medicine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
-                        item.SortCategory = 7;
+                        item.SortCategory = 10;
                         item.UsageType = ItemData.UseType.Use;
                         item.ItemStates.Set(new UtilityState());
                         item.Icon = 7;
@@ -3686,7 +3716,7 @@ namespace DataGenerator.Data
                     {
                         if (fileName == "")
                             fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                        item.SortCategory = 5;
+                        item.SortCategory = 8;
                         item.UsageType = ItemData.UseType.Eat;
                         item.ItemStates.Set(new EdibleState());
                         item.ItemStates.Set(new HerbState());
@@ -3698,7 +3728,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = "ammo_" + Text.Sanitize(item.Name.DefaultText).ToLower();
-                    item.SortCategory = 9;
+                    item.SortCategory = 2;
                     item.UsageType = ItemData.UseType.Throw;
                     item.ItemStates.Set(new AmmoState());
                     item.MaxStack = 9;
@@ -3719,7 +3749,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 11;
+                    item.SortCategory = 3;
                     item.UsageType = ItemData.UseType.Use;
                     item.ItemStates.Set(new WandState());
                     item.Icon = 8;
@@ -3729,7 +3759,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 12;
+                    item.SortCategory = 11;
                     item.UsageType = ItemData.UseType.Use;
                     item.ItemStates.Set(new OrbState());
                     item.Icon = 9;
@@ -3750,6 +3780,7 @@ namespace DataGenerator.Data
                         if (fileName == "")
                             fileName = "evo_" + Text.Sanitize(item.Name.DefaultText).ToLower();
                         item.ItemStates.Set(new EvoState());
+                        item.SortCategory = 14;
                     }
                     //else if (ii >= 380 && ii <= 397)
                     //{
@@ -3762,8 +3793,8 @@ namespace DataGenerator.Data
                         if (fileName == "")
                             fileName = "held_" + Text.Sanitize(item.Name.DefaultText).ToLower();
                         item.ItemStates.Set(new EquipState());
+                        item.SortCategory = 1;
                     }
-                    item.SortCategory = 10;
 
                     item.UsageType = ItemData.UseType.None;
                     item.ItemStates.Set(new HeldState());
@@ -3778,7 +3809,7 @@ namespace DataGenerator.Data
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(ShiftNameWords(item.Name.DefaultText)).ToLower();
-                    item.SortCategory = 14;
+                    item.SortCategory = 16;
                     item.Icon = 17;
                     item.UsageType = ItemData.UseType.Box;
                     item.Price = 1000;
@@ -3789,19 +3820,20 @@ namespace DataGenerator.Data
                     {
                         if (fileName == "")
                             fileName = "machine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                        item.SortCategory = 12;
                     }
                     else if (ii >= 477)
                     {
                         if (fileName == "")
                             fileName = "loot_" + Text.Sanitize(item.Name.DefaultText).ToLower();
+                        item.SortCategory = 15;
                     }
-                    item.SortCategory = 13;
                 }
                 else if (ii < 700)//TM
                 {
                     if (fileName == "")
                         fileName = Text.Sanitize(item.Name.DefaultText).ToLower();
-                    item.SortCategory = 15;
+                    item.SortCategory = 13;
                     item.Sprite = "Disc_Blue";
                     item.Icon = 13;
                     item.Price = 500;

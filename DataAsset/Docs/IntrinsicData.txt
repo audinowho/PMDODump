@@ -1,0 +1,30 @@
+== IntrinsicData.Name ==
+
+
+The name of the data
+
+
+== IntrinsicData.Desc ==
+
+
+The description of the data
+
+
+== IntrinsicData.Released ==
+
+
+Is it released and allowed to show up in the game?
+
+
+== IntrinsicData.Comment ==
+
+
+Comments visible to only developers
+
+
+== IntrinsicData.IndexNum ==
+
+
+Index number of the intrinsic for sorting.  Must be unique
+
+

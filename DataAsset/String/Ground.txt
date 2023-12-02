@@ -1,21 +1,19 @@
-Key		EN	IT	ZH-HANS	FR	DE	ES
-base_camp-0000|data.Name		Base Camp	Campo Base	起点营地	Camp de Base	Hauptlager	Campamento Base
-base_camp_2-0000|data.Name		Base Town	Città Base	起点镇			
-canyon_camp-0000|data.Name		Ravine Camp	Campo Crepaccio	峡谷营地		Schlucht-Lager	Campamento Desfiladero
-cliff_camp-0000|data.Name		Cliff Camp	Campo Collina	悬崖营地	Camp de Falaise	Klippen-Lager	Campamento Acantilado
-dev_room-0000|data.Name		Developer Room	Stanza Sviluppatore	开发者房间			Sala del Desarrollador
-end_ambush_forest-0000|data.Name		Ambush Forest Grove					
-end_moonlit_temple-0000|data.Name		Moonlit Chamber	Camera Brillaluna	月光厅堂			Cámara Luz de Luna
-end_treacherous_mountain-0000|data.Name		Treacherous Mountain Cave					
-final_stop-0000|data.Name		Blizzard Camp	Percorso per la Vetta	通往顶峰之路	Chemin du Sommet	Pfad zum Gipfel	Camino a la Cima
-forest_camp-0000|data.Name		Forest Camp	Campo Foresta	森林营地	Camp Fôrestier	Wald-Lager	Campamento Bosque
-garden_end-0000|data.Name		Secret Garden Grove	Radura Segreta	秘密花园树林		Geheimgarten-Hain	Arboleda del Jardín Secreto
-guild_hut-0000|data.Name		Guildmaster Hut	Capanna del Maestro	公会会长之屋			Cabaña del Maestro
-guild_path-0000|data.Name		Guildmaster Path	Sentiero del Maestro	公会会长之径			Sendero del Maestro
-guildmaster_summit-0000|data.Name		Guildmaster Summit	Vetta del Maestro	公会会长之巅		Gildenmeister-Gipfel	Cima del Maestro
-luminous_spring-0000|data.Name		Luminous Spring	Sorgente Luccichio	光之泉			Manantial Luminoso
-post_office-0000|data.Name		Pelipper Post Office	Ufficio Postale Pelipper	大嘴鸥联络站			Mensajeros Pelipper
-rest_stop-0000|data.Name		Cave Shelter	Rifugio Montanaro	洞穴庇护所		Höhlenzuflucht	Cueva Refugio
+Key		EN	DE	IT	ZH-HANS	FR	ES
+base_camp-0000|data.Name		Base Camp	Basis-Lager	Campo Base	起点营地	Camp de Base	Campamento Base
+base_camp_2-0000|data.Name		Base Town	Basis-Dorf	Città Base	起点镇		
+canyon_camp-0000|data.Name		Ravine Camp	Schlucht-Lager	Campo Crepaccio	峡谷营地		Campamento Desfiladero
+cliff_camp-0000|data.Name		Cliff Camp	Klippen-Lager	Campo Collina	悬崖营地	Camp de Falaise	Campamento Acantilado
+dev_room-0000|data.Name		Developer Room	Entwicklerraum	Stanza Sviluppatore	开发者房间		Sala del Desarrollador
+end_ambush_forest-0000|data.Name		Ambush Forest Grove	Hain im Auflauerwald		埋伏森林树丛		
+end_moonlit_temple-0000|data.Name		Moonlit Chamber	Mondhelle Kammer	Camera Brillaluna	月光厅堂		Cámara Luz de Luna
+end_treacherous_mountain-0000|data.Name		Treacherous Mountain Cave	Höhle im tückischem Gebirge		奸诈山峰洞窟		
+final_stop-0000|data.Name		Blizzard Camp	Blizzard-Lager		风雪营地		
+forest_camp-0000|data.Name		Forest Camp	Wald-Lager	Campo Foresta	森林营地	Camp Fôrestier	Campamento Bosque
+garden_end-0000|data.Name		Secret Garden Grove	Geheimgarten-Hain	Radura Segreta	秘密花园树林		Arboleda del Jardín Secreto
+guild_hut-0000|data.Name		Guildmaster Hut	Gildenmeister-Hütte	Capanna del Maestro	公会会长之屋		Cabaña del Maestro
+guild_path-0000|data.Name		Guildmaster Path	Gildenmeister-Pfad	Sentiero del Maestro	公会会长之径		Sendero del Maestro
+guildmaster_summit-0000|data.Name		Guildmaster Summit	Gildenmeister-Gipfel	Vetta del Maestro	公会会长之巅		Cima del Maestro
+luminous_spring-0000|data.Name		Luminous Spring	Leuchtende Quelle	Sorgente Luccichio	光之泉		Manantial Luminoso
+post_office-0000|data.Name		Pelipper Post Office	Pelipper-Post	Ufficio Postale Pelipper	大嘴鸥联络站		Mensajeros Pelipper
+rest_stop-0000|data.Name		Cave Shelter	Höhlenzuflucht	Rifugio Montanaro	洞穴庇护所		Cueva Refugio
 test_grounds-0000|data.Name		Test Grounds					
-training_maze-0000|data.Name							
-training_maze_2-0000|data.Name							

@@ -238,7 +238,6 @@ poolSpawn.Spawns.Add(GetTeamMob("magmortar", "", "fire_blast", "", "", "", new R
 poolSpawn.Spawns.Add(GetTeamMob("raichu", "lightning_rod", "thunder", "", "", "", new RandRange(41), "wander_normal"), new IntRange(16, 22), 10);
 poolSpawn.Spawns.Add(GetTeamMob("clefable", "", "cosmic_power", "moonblast", "", "", new RandRange(41), "wander_normal"), new IntRange(18, 22), 10);
 poolSpawn.Spawns.Add(GetTeamMob("eiscue", "", "blizzard", "surf", "", "", new RandRange(42), "wander_normal"), new IntRange(18, 22), 10);
-poolSpawn.Spawns.Add(GetTeamMob("salamence", "", "dragon_claw", "fly", "", "", new RandRange(42), "wander_normal"), new IntRange(18, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("drifblim", "aftermath", "ominous_wind", "explosion", "", "", new RandRange(42), "wander_normal"), new IntRange(18, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("noivern", "", "boomburst", "dragon_pulse", "", "", new RandRange(43), "wander_normal"), new IntRange(20, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("scizor", "swarm", "focus_energy", "bullet_punch", "x_scissor", "", new RandRange(42), "wander_normal"), new IntRange(20, max_floors), 10);
@@ -250,3 +249,4 @@ poolSpawn.Spawns.Add(GetTeamMob("emboar", "", "fire_pledge", "heat_crash", "", "
 poolSpawn.Spawns.Add(GetTeamMob("samurott", "", "water_pledge", "razor_shell", "", "", new RandRange(43), "wander_normal"), new IntRange(10, max_floors), 10);
 //when they all show up
 poolSpawn.Spawns.Add(GetTeamMob("serperior", "", "grass_pledge", "leaf_blade", "", "", new RandRange(43), "wander_normal"), new IntRange(10, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("dragonite", "", "outrage", "roost", "hurricane", "aqua_tail", new RandRange(47), "boss"), new IntRange(0, max_floors), 10);

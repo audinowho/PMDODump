@@ -130,6 +130,20 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(zoneStep);
         }
 
+
+        public static void AddEvoZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, bool small)
+        {
+            SpreadRoomZoneStep evoZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, spreadPlan);
+            List<BaseRoomFilter> evoFilters = new List<BaseRoomFilter>();
+            evoFilters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
+            evoFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+            if (small)
+                evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvoSmall<MapGenContext>(), new RoomGenEvoSmall<ListMapGenContext>(), evoFilters), 10);
+            else
+                evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvo<MapGenContext>(), new RoomGenEvo<ListMapGenContext>(), evoFilters), 10);
+            floorSegment.ZoneSteps.Add(evoZoneStep);
+        }
+
         public static void AddHiddenStairStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, int segDiff)
         {
             SpawnRangeList<IGenStep> exitZoneSpawns = new SpawnRangeList<IGenStep>();
@@ -244,6 +258,14 @@ namespace DataGenerator.Data
         public static void AddMoneyData<T>(MapGen<T> layout, RandRange divAmount, bool includeHalls = false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.None) where T : ListMapGenContext
         {
             TerminalSpawnStep<T, MoneySpawn> moneyStep = new TerminalSpawnStep<T, MoneySpawn>(new MoneyDivSpawner<T>(divAmount), includeHalls);
+            if (connectivity != ConnectivityRoom.Connectivity.None)
+                moneyStep.Filters.Add(new RoomFilterConnectivity(connectivity));
+            layout.GenSteps.Add(PR_SPAWN_MONEY, moneyStep);
+        }
+
+        public static void AddMoneyTrails<T>(MapGen<T> layout, RandRange trailLength, IntRange placementValue, IStepSpawner<T, MapItem> terminalSpawn, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.None) where T : MapGenContext
+        {
+            MoneyTrailSpawnStep<T, MapItem> moneyStep = new MoneyTrailSpawnStep<T, MapItem>(terminalSpawn, trailLength, placementValue);
             if (connectivity != ConnectivityRoom.Connectivity.None)
                 moneyStep.Filters.Add(new RoomFilterConnectivity(connectivity));
             layout.GenSteps.Add(PR_SPAWN_MONEY, moneyStep);
@@ -494,23 +516,26 @@ namespace DataGenerator.Data
             return roomGen;
         }
 
-        public static AddBossRoomStep<ListMapGenContext> CreateGenericBossRoomStep(IRandPicker<RoomGen<ListMapGenContext>> bossRooms)
+        public static AddBossRoomStep<T> CreateGenericBossRoomStep<T>(IRandPicker<RoomGen<T>> bossRooms, int bossIndex = 0) where T : ListMapGenContext
         {
-            SpawnList<RoomGen<ListMapGenContext>> treasureRooms = new SpawnList<RoomGen<ListMapGenContext>>();
-            treasureRooms.Add(new RoomGenCross<ListMapGenContext>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
-            SpawnList<PermissiveRoomGen<ListMapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
-            detourHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
-            AddBossRoomStep<ListMapGenContext> detours = new AddBossRoomStep<ListMapGenContext>(bossRooms, treasureRooms, detourHalls);
+            SpawnList<RoomGen<T>> treasureRooms = new SpawnList<RoomGen<T>>();
+            treasureRooms.Add(new RoomGenCross<T>(new RandRange(4), new RandRange(4), new RandRange(3), new RandRange(3)), 10);
+            SpawnList<PermissiveRoomGen<T>> detourHalls = new SpawnList<PermissiveRoomGen<T>>();
+            detourHalls.Add(new RoomGenAngledHall<T>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+            AddBossRoomStep<T> detours = new AddBossRoomStep<T>(bossRooms, treasureRooms, detourHalls);
             detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
             detours.BossComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
             detours.BossComponents.Set(new NoEventRoom());
             detours.BossComponents.Set(new BossRoom());
+            detours.BossComponents.Set(new IndexRoom(bossIndex));
             detours.BossHallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
             detours.VaultComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BossLocked));
             detours.VaultComponents.Set(new NoConnectRoom());
             detours.VaultComponents.Set(new NoEventRoom());
+            detours.VaultComponents.Set(new IndexRoom(bossIndex));
             detours.VaultHallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BossLocked));
             detours.VaultHallComponents.Set(new NoConnectRoom());
+            detours.VaultHallComponents.Set(new IndexRoom(bossIndex));
 
             return detours;
         }
@@ -610,6 +635,35 @@ namespace DataGenerator.Data
         }
 
 
+        static TeamMemberSpawn GetBoostedTeamMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level, int boost,
+            string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
+        {
+            return GetBoostedTeamMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, boost, TeamMemberSpawn.MemberRole.Normal, tactic, sleeping, unrecruitable);
+
+        }
+
+        static TeamMemberSpawn GetBoostedTeamMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level, int boost,
+            TeamMemberSpawn.MemberRole role, string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
+        {
+            return GetBoostedTeamMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, boost, TeamMemberSpawn.MemberRole.Normal, tactic, sleeping, unrecruitable);
+        }
+
+        static TeamMemberSpawn GetBoostedTeamMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, RandRange level, int boost,
+            TeamMemberSpawn.MemberRole role, string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
+        {
+            TeamMemberSpawn teamMob = GetTeamMob(id, ability, move1, move2, move3, move4, level, role, tactic, sleeping, unrecruitable);
+
+            MobSpawnBoost spawnBoost = new MobSpawnBoost();
+            spawnBoost.MaxHPBonus = boost;
+            spawnBoost.AtkBonus = boost;
+            spawnBoost.DefBonus = boost;
+            spawnBoost.SpAtkBonus = boost;
+            spawnBoost.SpDefBonus = boost;
+            spawnBoost.SpeedBonus = boost;
+            teamMob.Spawn.SpawnFeatures.Add(spawnBoost);
+
+            return teamMob;
+        }
 
         static TeamMemberSpawn GetTeamMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level,
             string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
@@ -637,6 +691,7 @@ namespace DataGenerator.Data
         {
             return GetGenericMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, level, tactic, sleeping, unrecruitable);
         }
+
         static MobSpawn GetGenericMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, RandRange level,
             string tactic = "wander_normal", bool sleeping = false, bool unrecruitable = false)
         {
@@ -734,12 +789,12 @@ namespace DataGenerator.Data
             return post_mob;
         }
 
-        static MobSpawn GetBossMob(string species, string ability, string move1, string move2, string move3, string move4, string item, Loc loc, string tactic = "boss")
+        static MobSpawn GetBossMob(string species, string ability, string move1, string move2, string move3, string move4, string item, Loc loc, int baseLv = 3, int scaleNum = 4, int scaleDen = 3)
         {
-            return GetBossMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, item, loc, tactic);
+            return GetBossMob(new MonsterID(species, 0, "", Gender.Unknown), ability, move1, move2, move3, move4, item, loc, baseLv, scaleNum, scaleDen);
         }
 
-        static MobSpawn GetBossMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, string item, Loc loc, string tactic = "boss")
+        static MobSpawn GetBossMob(MonsterID id, string ability, string move1, string move2, string move3, string move4, string item, Loc loc, int baseLv = 3, int scaleNum = 4, int scaleDen = 3)
         {
             MobSpawn post_mob = new MobSpawn();
             post_mob.BaseForm = id;
@@ -752,12 +807,12 @@ namespace DataGenerator.Data
                 post_mob.SpecifiedSkills.Add(move3);
             if (!String.IsNullOrEmpty(move4))
                 post_mob.SpecifiedSkills.Add(move4);
-            post_mob.Tactic = tactic;
-            post_mob.Level = new RandRange(3);
+            post_mob.Tactic = "boss";
+            post_mob.Level = new RandRange(baseLv);
             post_mob.SpawnFeatures.Add(new MobSpawnLoc(loc));
             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, item));
             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
-            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(4, 3));
+            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(scaleNum, scaleDen));
             MobSpawnScaledBoost boost = new MobSpawnScaledBoost(new IntRange(1, 50));
             boost.MaxHPBonus = new IntRange(15, MonsterFormData.MAX_STAT_BOOST);
             post_mob.SpawnFeatures.Add(boost);

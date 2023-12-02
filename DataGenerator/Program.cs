@@ -385,8 +385,8 @@ namespace DataGenerator
                         {
                             //SkillInfo.AddUnreleasedMoveData();
                             //SkillInfo.AddMoveData();
-                            //SkillInfo.AddMoveData(363);
-                            //SkillInfo.AddMoveDataToAnims(15,75,163,210,314,332,348,400,403,404,427,440,533,534,669,781,830,845,860,869,875,891,895);
+                            //SkillInfo.AddMoveData(694);
+                            //SkillInfo.AddMoveDataToAnims(215, 256, 287, 312, 361, 461);
                         }
 
                         if ((dump & DataManager.DataType.Intrinsic) != DataManager.DataType.None)
@@ -413,8 +413,9 @@ namespace DataGenerator
                         {
                             //MapInfo.AddMapData();
                             MapInfo.AddGroundData("test_grounds");
-                            //ZoneInfo.AddZoneData(false);
-                            ZoneInfo.AddZoneData(false, 30);
+                            ZoneInfo.AddZoneData(false);
+                            //ZoneInfo.AddZoneData(false, 3);
+                            //ZoneInfo.AddZoneData(false, 0);
                         }
 
                         DataManager.DataType reserializeType = DataManager.DataType.None;

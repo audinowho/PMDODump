@@ -1,0 +1,61 @@
+== SkillData.Name ==
+
+
+The name of the data
+
+
+== SkillData.Desc ==
+
+
+The description of the data
+
+
+== SkillData.Released ==
+
+
+Is it released and allowed to show up in the game?
+
+
+== SkillData.Comment ==
+
+
+Comments visible to only developers
+
+
+== SkillData.IndexNum ==
+
+
+Index number of the skill for sorting.  Must be unique
+
+
+== SkillData.BaseCharges ==
+
+
+The number of times the skill can be used.
+
+
+== SkillData.Strikes ==
+
+
+How many times the skill attacks.
+
+
+== SkillData.HitboxAction ==
+
+
+Data on the hitbox of the attack.  Controls range and targeting.
+
+
+== SkillData.Explosion ==
+
+
+Optional data to specify a splash effect on the tiles hit.
+
+
+== SkillData.Data ==
+
+
+Events that occur with this skill.
+Before it's used, when it hits, after it's used, etc.
+
+

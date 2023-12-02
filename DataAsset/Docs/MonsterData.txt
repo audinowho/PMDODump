@@ -1,0 +1,234 @@
+== MonsterData.Name ==
+
+
+Monster's name
+
+
+== MonsterData.Title ==
+
+
+Monster's species title
+
+
+== MonsterData.Released ==
+
+
+Is it released and allowed to show up in the game?
+
+
+== MonsterData.Comment ==
+
+
+Comments visible to only developers
+
+
+== MonsterData.IndexNum ==
+
+
+Index number of the monster for sorting.  Must be unique
+
+
+== MonsterData.EXPTable ==
+
+
+How fast this unit levels up.  Uses the Growth Group EXP tables.
+
+
+== MonsterData.SkillGroup1 ==
+
+
+Skill group for shared skills
+
+
+== MonsterData.SkillGroup2 ==
+
+
+Skill group 2 for shared skills
+
+
+== MonsterData.JoinRate ==
+
+
+Chance to be recruited
+
+
+== MonsterData.PromoteFrom ==
+
+
+Monster SPECIES this was promoted from
+
+
+== MonsterData.Promotions ==
+
+
+Possible promotions
+
+
+== MonsterData.Forms ==
+
+
+Forms of the monster
+
+
+== BaseMonsterForm.FormName ==
+
+
+Monster's form title
+
+
+== BaseMonsterForm.Released ==
+
+
+Is it released and allowed to show up in the game?
+
+
+== BaseMonsterForm.Temporary ==
+
+
+Is it a temporary form?  Cannot be picked in rogue mode if so.
+
+
+== BaseMonsterForm.PromoteForm ==
+
+
+Monster FORM this was promoted from
+
+
+== BaseMonsterForm.Element1 ==
+
+
+elemental typing 1
+
+
+== BaseMonsterForm.Element2 ==
+
+
+elemental typing 2
+
+
+== BaseMonsterForm.Intrinsic1 ==
+
+
+possible intrinsic 1
+
+
+== BaseMonsterForm.Intrinsic2 ==
+
+
+possible intrinsic 2
+
+
+== BaseMonsterForm.Intrinsic3 ==
+
+
+possible intrinsic 3
+
+
+== BaseMonsterForm.LevelSkills ==
+
+
+skills learned on level up
+
+
+== MonsterFormData.Generation ==
+
+
+What generation it was introduced in
+
+
+== MonsterFormData.GenderlessWeight ==
+
+
+How often it appears as genderless (weight)
+
+
+== MonsterFormData.MaleWeight ==
+
+
+How often it appears as male (weight)
+
+
+== MonsterFormData.FemaleWeight ==
+
+
+How often it appears as female (weight)
+
+
+== MonsterFormData.BaseHP ==
+
+
+Base HP stat
+
+
+== MonsterFormData.BaseAtk ==
+
+
+Base attack stat
+
+
+== MonsterFormData.BaseDef ==
+
+
+Base defense stat
+
+
+== MonsterFormData.BaseMAtk ==
+
+
+Base special attack stat
+
+
+== MonsterFormData.BaseMDef ==
+
+
+Base special defense stat
+
+
+== MonsterFormData.BaseSpeed ==
+
+
+Base speed stat
+
+
+== MonsterFormData.ExpYield ==
+
+
+Base EXP yield
+
+
+== MonsterFormData.Height ==
+
+
+species/form height
+
+
+== MonsterFormData.Weight ==
+
+
+species/form weight
+
+
+== MonsterFormData.Personalities ==
+
+
+Possible personalities (advanced)
+
+
+== MonsterFormData.TeachSkills ==
+
+
+Moves learned by TM
+
+
+== MonsterFormData.SharedSkills ==
+
+
+Egg moves
+
+
+== MonsterFormData.SecretSkills ==
+
+
+Tutor moves
+
+

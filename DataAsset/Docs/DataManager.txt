@@ -1,0 +1,420 @@
+== _DATA.Start ==
+
+
+The parameters governing the start of the game.
+Such as starting character, map, level, etc.
+
+
+== _DATA.DefaultMonster ==
+
+
+The monster ID consiered default for purposes of initialization
+
+
+== _DATA.DefaultSkill ==
+
+
+The skill ID considered default for purposes of initialization and comparing to "nothing"
+
+
+== _DATA.DefaultIntrinsic ==
+
+
+The skill ID considered default for purposes of initialization and comparing to "nothing"
+
+
+== _DATA.DefaultMapStatus ==
+
+
+The skill ID considered default for purposes of initialization and comparing to "nothing"
+
+
+== _DATA.DefaultElement ==
+
+
+The skill ID considered default for purposes of initialization and comparing to "nothing"
+
+
+== _DATA.DefaultTile ==
+
+
+The skill ID considered default for purposes of initialization and comparing to "nothing"
+
+
+== _DATA.DefaultZone ==
+
+
+The skill ID considered default for purposes of initialization.
+
+
+== _DATA.DefaultRank ==
+
+
+The skill ID considered default for purposes of initialization.
+
+
+== _DATA.DefaultAI ==
+
+
+The skill ID considered default for purposes of initialization.
+
+
+== _DATA.DefaultSkin ==
+
+
+The skill ID considered default for purposes of initialization.
+
+
+== _DATA.GenFloor ==
+
+
+The terrain ID considered to be universally "floor" in random dungeon generation
+
+
+== _DATA.GenWall ==
+
+
+The terrain ID considered to be universally "wall" in random dungeon generation
+
+
+== _DATA.GenUnbreakable ==
+
+
+The terrain ID considered to be universally "unbreakable" in random dungeon generation
+
+
+== _DATA.Save ==
+
+
+The current save file, loaded into memory
+
+
+== _DATA:GetIndex(RogueEssence.Data.DataManager.DataType) ==
+
+
+Index paths are modified like mods.  However, if multiple mods have conflicting indices, a combined index must be generated.
+
+
+=== Arguments ===
+
+* <code>basePath</code>: None
+
+== _DATA:GetZone(System.String) ==
+
+
+Gets a zone based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetMap(System.String) ==
+
+
+Gets a map based on its ID
+
+
+=== Arguments ===
+
+* <code>name</code>: None
+
+== _DATA:GetGround(System.String) ==
+
+
+Gets a ground map based on its ID
+
+
+=== Arguments ===
+
+* <code>name</code>: None
+
+== _DATA:GetSkill(System.String) ==
+
+
+Gets the data for a skill based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetItem(System.String) ==
+
+
+Gets the data for an item based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetAutoTile(System.String) ==
+
+
+Gets the data for an autotile based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetMonster(System.String) ==
+
+
+Gets the data for a monster based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetStatus(System.String) ==
+
+
+Gets the data for a status effect based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetIntrinsic(System.String) ==
+
+
+Gets the data for an intrinsic (passive ability) based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetMapStatus(System.String) ==
+
+
+Gets the data for a map-wide status effect based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetTile(System.String) ==
+
+
+Gets the data for a tile, such as stairs or traps, based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetTerrain(System.String) ==
+
+
+Gets the data for a terrain type based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetEmote(System.String) ==
+
+
+Gets the data for an emote based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetElement(System.String) ==
+
+
+Gets the data for an elemental type based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetGrowth(System.String) ==
+
+
+Gets the data for a growth group based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetSkillGroup(System.String) ==
+
+
+Gets the data for a skill-sharing group based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetAITactic(System.String) ==
+
+
+Gets the data for an ai tactic based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetRank(System.String) ==
+
+
+Gets the data for a team rank based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:GetSkin(System.String) ==
+
+
+Gets the data for a skin based on its ID
+
+
+=== Arguments ===
+
+* <code>index</code>: None
+
+== _DATA:BeginPlay(System.String,System.String,System.Boolean,System.Boolean,System.DateTime) ==
+
+
+Starts recording the quicksave for a new adventure.
+From here on, the replayWriter will remain open as a way to continue writing game states and player inputs.
+
+
+=== Arguments ===
+
+* <code>filePath</code>: None
+* <code>zoneId</code>: None
+* <code>rogue</code>: None
+* <code>seeded</code>: None
+* <code>sessionStart</code>: None
+
+== _DATA:ResumePlay(RogueEssence.Data.ReplayData,System.DateTime) ==
+
+
+Called when resuming an adventure from a quicksave.
+The quicksave file is loaded and the stream position is set to the end, so that it can continue writing the replay.
+
+
+=== Arguments ===
+
+* <code>replay</code>: The quicksave replay to resume from.
+* <code>sessionResumeTime</code>: None
+
+== _DATA:LogState ==
+
+
+Writes the game state to the current replay.  The player must be in dungeon mode.
+This is used when the player begins a new dungeon in their adventure. (One adventure can contain a trek through multiple dungeons)
+
+
+== _DATA:LogGroundSave ==
+
+
+Writes the game state to the current replay.  The player must be in ground mode.
+This is used when a player saves in the middle of an adventure in a ground mode rest area.
+
+
+== _DATA:LogQuicksave ==
+
+
+Writes the entire game state for faster loading of quicksaves.
+Currently not used due to quicksaves still loading from the start of the dungeon and replaying every step up to the current point.
+
+
+== _DATA:LogPlay(RogueEssence.Dungeon.GameAction) ==
+
+
+Logs a player action to the current quicksave replay.
+
+
+=== Arguments ===
+
+* <code>play</code>: None
+
+== _DATA:LogUIPlay(System.Int32[]) ==
+
+
+Logs a player UI action to the current quicksave replay.
+
+
+== _DATA:LogUIStringPlay(System.String) ==
+
+
+Logs a string to the current quicksave replay.  Used for name inputs.
+
+
+== _DATA:QueueLogUI ==
+
+
+Starts queueing UI commands to the current replay quicksave.
+UI commands need to be queued sometimes, because they may happen mid-action for an action that may fail later.
+If a player action fails, it is not logged.  Thus, if queues didn't exist, UI actions would be logged for actions that didn't actually happen.
+
+
+== _DATA:DequeueLogUI ==
+
+
+Stops queueing UI commands to the current replay quicksave and writes the current queue to the replay.
+
+
+== _DATA:EndPlay(RogueEssence.Data.GameProgress,System.String) ==
+
+
+Called when an adventure is ended.  Closes the replay writing stream and saves the quicksave into a replay.
+
+
+=== Arguments ===
+
+* <code>epitaph</code>: None
+* <code>outFile</code>: None
+
+== _DATA:SaveSessionTime(System.TimeSpan) ==
+
+
+Saves the current session time
+
+
+=== Arguments ===
+
+* <code>sessionTime</code>: None
+
+== _DATA:SuspendPlay ==
+
+
+Called when an adventure is suspended.  Closes the replay writing stream to allow for clean exit.
+Note how nothing else is done aside form closing the stream.
+Quicksaves already save every action from the player as it happens, so even if they closed the game there is no lost data.
+
+
+== _DATA:LoadMainGameState(System.Boolean) ==
+
+
+Returns game progress loaded from the save folder and current zone.
+
+
+== _DATA:DeleteReplayData(System.Boolean) ==
+
+
+Deletes replays from the replay folder corresponding to the current mod.
+
+
+=== Arguments ===
+
+* <code>includeFav</code>: Favorites will be deleted too.
+

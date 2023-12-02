@@ -168,7 +168,7 @@ Key		EN
 0083-anger_point-0000|data.Name		Anger Point
 0083-anger_point-0001|data.Desc		The Pokémon is angered when it takes a critical hit, and that maxes its Attack stat.
 0084-unburden-0000|data.Name		Unburden
-0084-unburden-0001|data.Desc		Boosts Movement Speed the Pokémon has no held item.
+0084-unburden-0001|data.Desc		Boosts Movement Speed if the Pokémon has no held item.
 0085-heatproof-0000|data.Name		Heatproof
 0085-heatproof-0001|data.Desc		Weakens the power of Fire-type moves.
 0086-simple-0000|data.Name		Simple

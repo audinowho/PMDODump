@@ -331,6 +331,7 @@ Ends the current adventure, sending the player to a specified destination.
 * <code>entryid</code>: The entry point on the resulting map
 * <code>display</code>: Display an epitaph marking the end of the adventure.
 * <code>fanfare</code>: Play a fanfare.
+* <code>completedZone</code>: Zone to mark as completed. Defaults to current zone.
 
 === Example ===
 
@@ -452,6 +453,29 @@ Centers the camera on a position.
 <pre>
 
 GAME:MoveCamera(200, 240, 60, false)
+
+</pre>
+
+== GAME:MoveCameraToChara ==
+
+
+Centers the camera on a character.
+
+As we are simply moving the camera to a character, this will simply set ViewCenter and not ViewOffset.
+
+
+=== Arguments ===
+
+* <code>x</code>: X coordinate of the camera center, as an offset for the chara
+* <code>y</code>: Y coordinate of the camera center, as an offset for the chara
+* <code>duration</code>: The amount of time it takes ot move to the destination
+* <code>chara</code>: The character to center on.
+
+=== Example ===
+
+<pre>
+
+GAME:MoveCameraToChara(200, 240, 60, false)
 
 </pre>
 
@@ -1148,7 +1172,7 @@ Removes money from the player's bank.
 == GAME:IsKeyDown(System.Int32) ==
 
 
-Checks if a player is making a certain input.
+Checks if a player is making a certain physical keyboard input.
 
 
 === Arguments ===
@@ -1158,6 +1182,20 @@ Checks if a player is making a certain input.
 === Returns ===
 
 True if the button is currently pressed.  False otherwise.
+
+== GAME:IsInputDown(System.Int32) ==
+
+
+Checks if a player is making a certain game input.
+
+
+=== Arguments ===
+
+* <code>inputid</code>: None
+
+=== Returns ===
+
+True if the input is currently pressed.  False otherwise.
 
 == GAME:CutsceneMode(System.Boolean) ==
 
@@ -1534,7 +1572,7 @@ CharTurnToCharAnimated(charFrom, Dir8.Left, 3)
 
 </pre>
 
-== GROUND:TeleportTo(RogueEssence.Ground.GroundEntity,System.Int32,System.Int32,RogueElements.Dir8) ==
+== GROUND:TeleportTo(RogueEssence.Ground.GroundEntity,System.Int32,System.Int32,RogueElements.Dir8,System.Int32) ==
 
 
 Repositions the ground entity in a specified location.
@@ -1546,6 +1584,7 @@ Repositions the ground entity in a specified location.
 * <code>x</code>: The X coordinate of the destination
 * <code>y</code>: The Y coordinate of the destination
 * <code>direction</code>: The direction to point the entity.  Defaults to Dir8.None, which leaves it untouched.
+* <code>height</code>: None
 
 == GROUND:MoveInDirection ==
 
@@ -1672,6 +1711,7 @@ Make a ground entity move to a position with custom animation
 * <code>y</code>: Y coordinate of the destination
 * <code>animSpeed</code>: Speed of animation, where 1.0 represents normal speed
 * <code>speed</code>: Speed movement, in pixels per frame
+* <code>height</code>: Height of the destination
 
 === Example ===
 
@@ -1714,6 +1754,46 @@ Sets the ground character's draw effect to become invisible, shaking, still, etc
 
 * <code>chara</code>: Target ground character.
 * <code>effect</code>: The draw effect.
+
+== GROUND:CharGetAnimFallback(RogueEssence.Ground.GroundChar,System.String) ==
+
+
+Gets the fallback animation for the character.
+
+
+=== Arguments ===
+
+* <code>chara</code>: None
+* <code>anim</code>: The anim to get the fallback anim of.
+
+=== Returns ===
+
+The fallback animation, as a string.  Blank if there is none.  Will return anim if anim already exists.
+
+== GROUND:CharGetAnim(RogueEssence.Ground.GroundChar) ==
+
+
+Gets a character's current animation as a string.
+
+
+=== Arguments ===
+
+* <code>chara</code>: None
+
+== GROUND:CharGetAnimPoint(RogueEssence.Ground.GroundChar,RogueEssence.Content.ActionPointType) ==
+
+
+Gets the chosen action point of the character at this specific frame.
+
+
+=== Arguments ===
+
+* <code>chara</code>: None
+* <code>actionPoint</code>: The ype of action point to retrieve the coordinates for.
+
+=== Returns ===
+
+The location of the action point in absolute coordinates on the map.
 
 == GROUND:CharSetAnim(RogueEssence.Ground.GroundChar,System.String,System.Boolean) ==
 
@@ -1764,7 +1844,7 @@ Set a character's action.
 
 === Arguments ===
 
-* <code>chara</code>: Character to perfomr the action
+* <code>chara</code>: Character to perfom the action
 * <code>action</code>: The action to perform
 
 == GROUND:CharWaitAction ==
@@ -1883,6 +1963,18 @@ Plays a screen-moving effect.
 === Arguments ===
 
 * <code>mover</code>: The screen mover.
+
+== GROUND:LevelUpChar ==
+
+
+Levels up a character a certain amount of times all at once.
+Also handles learning new moves.
+
+
+=== Arguments ===
+
+* <code>character</code>: The characters to level up.
+* <code>numLevelUps</code>: The number of level ups.
 
 == GROUND:AddMapStatus(System.String) ==
 
@@ -2108,7 +2200,7 @@ The current language, represented by a locale code.
 == STRINGS:Format(System.String,System.Object[]) ==
 
 
-Formats a string.  Will unescape escaped characters.
+Formats a string.  Will unescape escaped characters and process grammar tags.
 
 
 === Arguments ===
@@ -2304,6 +2396,7 @@ Takes a string as an argument.
 === Arguments ===
 
 * <code>text</code>: The text to display.
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
 
 === Example ===
 
@@ -2323,6 +2416,7 @@ Displays a dialogue box with text, waiting until the specified time has expired.
 
 * <code>text</code>: The text to display.
 * <code>waitTime</code>: The time for the textbox to remain on screen. Pass -1 to wait for layer input.
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
 
 === Example ===
 
@@ -2332,7 +2426,7 @@ UI:WaitShowTimedDialogue("Hello World!", 120)
 
 </pre>
 
-== UI:TextDialogue(System.String,System.Int32) ==
+== UI:TextDialogue(System.String,System.Int32,NLua.LuaTable) ==
 
 
 Sets the current dialogue text to be shown.  Requires WaitDialog to actually display.
@@ -2342,6 +2436,7 @@ Sets the current dialogue text to be shown.  Requires WaitDialog to actually dis
 
 * <code>text</code>: The text to display.
 * <code>waitTime</code>: The time for the textbox to remain on screen. Pass -1 to wait for layer input.
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
 
 == UI:WaitShowVoiceOver ==
 
@@ -2353,6 +2448,11 @@ Displays a voice over, waiting until the player completes it.
 
 * <code>text</code>: The text to display.
 * <code>expireTime</code>: The time for the textbox to remain on screen. Pass -1 to wait for layer input.
+* <code>x</code>: The X position of the box
+* <code>y</code>: The Y position of the box
+* <code>width</code>: Width of the box
+* <code>height</code>: Height of the box
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
 
 === Example ===
 
@@ -2362,7 +2462,7 @@ UI:WaitShowVoiceOver("Hello World!", 120)
 
 </pre>
 
-== UI:TextVoiceOver(System.String,System.Int32) ==
+== UI:TextVoiceOver(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,NLua.LuaTable) ==
 
 
 Sets the current voice-over text to be shown.  Requires WaitDialog to actually display.
@@ -2372,17 +2472,28 @@ Sets the current voice-over text to be shown.  Requires WaitDialog to actually d
 
 * <code>text</code>: The text to display.
 * <code>expireTime</code>: The time for the textbox to remain on screen. Pass -1 to wait for layer input.
+* <code>x</code>: The X position of the box
+* <code>y</code>: The Y position of the box
+* <code>width</code>: Width of the box
+* <code>height</code>: Height of the box
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
 
-== UI:PopUp(System.String,System.Int32) ==
+== UI:TextPopUp(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean) ==
 
 
-Makes text pop up in the bottom-left corner. Displays concurrently with any other process.
+Makes text pop up in the bottom-left corner by default. Displays concurrently with any other process.
 
 
 === Arguments ===
 
 * <code>text</code>: The text to display.
 * <code>expireTime</code>: The time for the textbox to remain on screen.
+* <code>x</code>: The X position of the box
+* <code>y</code>: The Y position of the box
+* <code>width</code>: Width of the box
+* <code>height</code>: Height of the box
+* <code>centerH</code>: Horizontal centering
+* <code>centerV</code>: Vertical centering
 
 == UI:WaitShowTitle ==
 
@@ -2590,6 +2701,67 @@ Sets the position and size of the dialogue box.
 * <code>width</code>: Width of the box
 * <code>height</code>: Height of the box
 
+== UI:SetSe(System.String,System.Int32) ==
+
+
+Sets the speaker sound effect and speak frames played in the TextDialogue functions.
+
+
+=== Arguments ===
+
+* <code>newSe</code>: The sound effect of the box
+* <code>speakTime</code>: The amount of frames to wait between each sound effect
+
+=== Example ===
+
+<pre>
+
+UI:SetSe("Battle/_UNK_DUN_Water_Drop", 3)
+
+</pre>
+
+== UI:SetSe(System.String) ==
+
+
+Sets the speaker sound effect played in the TextDialogue functions.
+
+
+=== Arguments ===
+
+* <code>newSe</code>: The sound effect of the box
+
+=== Example ===
+
+<pre>
+
+UI:SetSe("Menu/Unknown-3")
+
+</pre>
+
+== UI:SetSpeakTime(System.Int32) ==
+
+
+Sets the speak frames played in the TextDialogue functions.
+
+
+=== Arguments ===
+
+* <code>speakTime</code>: The amount of frames to wait between each sound effect
+
+=== Example ===
+
+<pre>
+
+UI:SetSpeakTime(10)
+
+</pre>
+
+== UI:ResetSe ==
+
+
+Resets to the default speaker sound effect and speaker frames.
+
+
 == UI:ResetBounds ==
 
 
@@ -2665,7 +2837,7 @@ UI:WaitDialog()
 Instantly break. Used as default/invalid value when returning a yieldable value.
 
 
-== UI:ChoiceMenuYesNo(System.String,System.Boolean) ==
+== UI:ChoiceMenuYesNo(System.String,System.Boolean,NLua.LuaTable) ==
 
 
 Ask a question answered by yes or no via character dialogue to the player.
@@ -2680,6 +2852,7 @@ The Yes/No menu returns 1 for yes, and 0 for no.
 
 * <code>message</code>: Question to be asked to the user.
 * <code>bdefaultstono</code>: Whether the cursor starts on no by default
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
 
 == UI:NameMenu(System.String,System.String,System.Int32) ==
 
@@ -2948,7 +3121,7 @@ TODO
 TODO
 
 
-== UI:ChooseMonsterMenu(System.String,NLua.LuaTable,System.Boolean,System.Boolean) ==
+== UI:ChooseMonsterMenu(System.String,NLua.LuaTable,System.Boolean,System.Boolean,System.Int32) ==
 
 
 Marks the start of a choice menu for choosing monsters, showing a preview of their appearances via portrait.
@@ -2963,6 +3136,7 @@ Then to recover the string indicating the chosen species, UI:ChoiceResult() must
 * <code>choices</code>: A lua table of choices with each element being a MonsterID.
 * <code>canMenu</code>: If set to true, the Menu Button exits the menu if pressed.
 * <code>canCancel</code>: If set to true, the Cancel Button exits the menu if pressed.
+* <code>slotsPerPage</code>: Slots to display per page
 
 == UI:SetCustomMenu(RogueEssence.Menu.InteractableMenu) ==
 
@@ -2973,7 +3147,7 @@ UI:WaitForChoice() must be called afterwards for the menu to be actually display
 and for execution to suspend until the menu is exited.
 
 
-== UI:BeginChoiceMenu(System.String,NLua.LuaTable,System.Object,System.Object) ==
+== UI:BeginChoiceMenu(System.String,NLua.LuaTable,System.Object,System.Object,NLua.LuaTable) ==
 
 
 Marks the start of a multi-choice menu.
@@ -2988,6 +3162,7 @@ Then to recover the integer value indicating the result of the menu, UI:ChoiceRe
 * <code>choicesPairs</code>: A table of choices.  Each choice can be either a string, or { string, bool } representing the text and enabled status.
 * <code>defaultChoice</code>: The cursor starts on this choice.
 * <code>cancelChoice</code>: This choice is chosen if the player presses the cancel button.
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
 
 == UI:BeginMultiPageMenu(System.Int32,System.Int32,System.Int32,System.String,NLua.LuaTable,System.Int32,System.Object,System.Object) ==
 
@@ -3042,4 +3217,10 @@ Displays the currently set choice menu and waits for the player's selection to c
 UI:WaitForChoice()
 
 </pre>
+
+== UI:__WaitForChoice ==
+
+
+Wait for choice and then CLEAN UP m_curchoice
+
 

@@ -177,7 +177,7 @@ namespace DataGenerator.Data
                     //Xatu : 156 Magic Bounce : 248 Future Sight : 273 Wish : 403 Air Slash : 466 Ominous Wind
                     CharData mobData = new CharData();
                     mobData.BaseForm = new MonsterID("xatu", 0, "normal", Gender.Male);
-                    mobData.Level = 60;
+                    mobData.Level = 50;
                     mobData.BaseSkills[0] = new SlotSkill("future_sight");
                     mobData.BaseSkills[1] = new SlotSkill("wish");
                     mobData.BaseSkills[2] = new SlotSkill("air_slash");
@@ -190,9 +190,9 @@ namespace DataGenerator.Data
                     newMob.CharLoc = new Loc(8, 5);
                     newMob.CharDir = Dir8.Down;
                     newMob.MaxHPBonus = MonsterFormData.MAX_STAT_BOOST;
-                    newMob.DefBonus = MonsterFormData.MAX_STAT_BOOST;
-                    newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST;
-                    newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.DefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 8;
                     newMob.HP = newMob.MaxHP;
                     newMob.EquippedItem = new InvItem("seed_reviver");
                     newMob.Skills[3].Element.Enabled = false;
@@ -201,7 +201,7 @@ namespace DataGenerator.Data
                     //Lucario : 80 Steadfast : 396 Aura Sphere : 406 Dragon Pulse : 198 Bone Rush : 409 Drain Punch
                     CharData mobData = new CharData();
                     mobData.BaseForm = new MonsterID("lucario", 0, "normal", Gender.Male);
-                    mobData.Level = 60;
+                    mobData.Level = 50;
                     mobData.BaseSkills[0] = new SlotSkill("aura_sphere");
                     mobData.BaseSkills[1] = new SlotSkill("dragon_pulse");
                     mobData.BaseSkills[2] = new SlotSkill("bone_rush");
@@ -214,9 +214,9 @@ namespace DataGenerator.Data
                     newMob.CharLoc = new Loc(6, 6);
                     newMob.CharDir = Dir8.Down;
                     newMob.MaxHPBonus = MonsterFormData.MAX_STAT_BOOST;
-                    newMob.DefBonus = MonsterFormData.MAX_STAT_BOOST;
-                    newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST;
-                    newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.DefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 8;
                     newMob.HP = newMob.MaxHP;
                     newMob.EquippedItem = new InvItem("held_assault_vest");
                     newMob.Skills[3].Element.Enabled = false;
@@ -225,7 +225,7 @@ namespace DataGenerator.Data
                     //Wigglytuff : 172 Competitive : 47 Sing : 605 Dazzling Gleam : 304 Hyper Voice : 50 Disable
                     CharData mobData = new CharData();
                     mobData.BaseForm = new MonsterID("wigglytuff", 0, "normal", Gender.Male);
-                    mobData.Level = 60;
+                    mobData.Level = 50;
                     mobData.BaseSkills[0] = new SlotSkill("sing");
                     mobData.BaseSkills[1] = new SlotSkill("dazzling_gleam");
                     mobData.BaseSkills[2] = new SlotSkill("disable");
@@ -238,9 +238,9 @@ namespace DataGenerator.Data
                     newMob.CharLoc = new Loc(10, 6);
                     newMob.CharDir = Dir8.Down;
                     newMob.MaxHPBonus = MonsterFormData.MAX_STAT_BOOST;
-                    newMob.DefBonus = MonsterFormData.MAX_STAT_BOOST;
-                    newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST;
-                    newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.DefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 8;
                     newMob.HP = newMob.MaxHP;
                     newMob.EquippedItem = new InvItem("berry_lum");
                     newMob.Skills[3].Element.Enabled = false;

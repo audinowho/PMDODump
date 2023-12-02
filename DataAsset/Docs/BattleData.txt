@@ -1,0 +1,109 @@
+== BattleData.Element ==
+
+
+Elemental typing of attack
+
+
+== BattleData.Category ==
+
+
+Category of attack
+
+
+== BattleData.HitRate ==
+
+
+The chance of the attack hitting.
+
+
+== BattleData.SkillStates ==
+
+
+Special variables that this skill contains.
+They are potentially checked against in a select number of battle events.
+
+
+== BattleData.BeforeTryActions ==
+
+
+Occurs before the attacker tries to use the skill.
+If the skill is cancelled here, the turn and skill are not used.
+
+
+== BattleData.BeforeActions ==
+
+
+Occurs before the attacker uses the skill.
+If the skill is cancelled here, the turn will still be passed.
+
+
+== BattleData.OnActions ==
+
+
+Occurs right after the attacker uses the skill.
+The skill will have been called out, and the turn will be passed.
+In a skill with multiple strikes, this event will be called at the beginning of each strike.
+
+
+== BattleData.BeforeExplosions ==
+
+
+Occurs after a tile is targeted and before it creates a splash damage hitbox.
+Can be used to alter the hitbox or redirect it.
+
+
+== BattleData.BeforeHits ==
+
+
+Occurs before the target is hit.
+At this point, the target variable is available for calculations.
+
+
+== BattleData.OnHits ==
+
+
+Occurs when the target is hit.
+Does not occur if the target evaded the attack.
+
+
+== BattleData.OnHitTiles ==
+
+
+Occurs when the attack hits a tile.
+Can be used for terrain deformation.
+
+
+== BattleData.AfterActions ==
+
+
+Occurs after all targets are hit by the skill.
+In a skill with multiple strikes, this event will be called at the end of each strike.
+
+
+== BattleData.ElementEffects ==
+
+
+Modifies the elemental effect system.
+
+
+== BattleData.IntroFX ==
+
+
+VFX that play target before they are hit.
+Will always play, even if the evasion roll results in a miss.
+
+
+== BattleData.HitFX ==
+
+
+VFX that play when the target is hit.
+Only plays if the target is actually hit.
+
+
+== BattleData.HitCharAction ==
+
+
+Target character animation when it is hit.
+Only plays if the target is actually hit.
+
+
