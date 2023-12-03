@@ -548,16 +548,14 @@ namespace DataGenerator.Data
 
                         EffectTile returnTile = new EffectTile("stairs_back_up", true);
                         DestState returnDest = new DestState(new SegLoc(0, -1), true);
-                        returnDest.PreserveMusic = true;
+                        if (ii > 0)
+                            returnDest.PreserveMusic = true;
                         returnTile.TileStates.Set(returnDest);
                         step.Exits.Add(new MapGenExit(returnTile));
 
                         if (ii < max_floors - 1)
                         {
                             EffectTile exitTile = new EffectTile("stairs_go_down", true);
-                            DestState exitDest = new DestState(new SegLoc(0, 1), true);
-                            exitDest.PreserveMusic = true;
-                            exitTile.TileStates.Set(exitDest);
                             step.Exits.Add(new MapGenExit(exitTile));
                         }
 
@@ -1199,16 +1197,14 @@ namespace DataGenerator.Data
 
                         EffectTile returnTile = new EffectTile("stairs_back_up", true);
                         DestState returnDest = new DestState(new SegLoc(0, -1), true);
-                        returnDest.PreserveMusic = true;
+                        if (ii > 0)
+                            returnDest.PreserveMusic = true;
                         returnTile.TileStates.Set(returnDest);
                         step.Exits.Add(new MapGenExit(returnTile));
 
                         if (ii < max_floors - 1)
                         {
                             EffectTile exitTile = new EffectTile("stairs_go_down", true);
-                            DestState exitDest = new DestState(new SegLoc(0, 1), true);
-                            exitDest.PreserveMusic = true;
-                            exitTile.TileStates.Set(exitDest);
                             step.Exits.Add(new MapGenExit(exitTile));
                         }
 
