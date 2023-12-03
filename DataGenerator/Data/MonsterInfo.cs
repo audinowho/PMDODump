@@ -51,6 +51,7 @@ namespace DataGenerator.Data
 
 
         const int TOTAL_DEX = 1011;
+        const bool GENDER_UNLOCK = true;
         static Dictionary<int, string> langIDs;
         static Dictionary<int, int> langCols;
         static int[] existing = { 1, 3, 5, 6, 7, 8, 9 };
@@ -516,7 +517,11 @@ namespace DataGenerator.Data
                             evoDetail.Level = Convert.ToInt32(level);
                             branch.Details.Add(evoDetail);
 
-                            branch.Details.Add(new EvoFormDusk());
+                            EvoFormDusk dusk = new EvoFormDusk();
+                            dusk.DefaultForm = 2;
+                            dusk.ItemMap["evo_sun_ribbon"] = 0;
+                            dusk.ItemMap["evo_lunar_ribbon"] = 1;
+                            branch.Details.Add(dusk);
                         }
                         else if (evoSpecies == 841)//flapple
                         {
@@ -1309,14 +1314,18 @@ namespace DataGenerator.Data
                     if (Ratio == -1)
                     {
                         formEntry.GenderlessWeight = 8;
-                        //formEntry.MaleWeight = 1;
-                        //formEntry.FemaleWeight = 1;
+                        if (GENDER_UNLOCK)
+                        {
+                            formEntry.MaleWeight = 1;
+                            formEntry.FemaleWeight = 1;
+                        }
                     }
                     else
                     {
                         formEntry.MaleWeight = 8 - Ratio;
                         formEntry.FemaleWeight = Ratio;
-                        //formEntry.GenderlessWeight = 2;
+                        if (GENDER_UNLOCK)
+                            formEntry.GenderlessWeight = 2;
                     }
                     formEntry.Temporary = battle_only;
 
