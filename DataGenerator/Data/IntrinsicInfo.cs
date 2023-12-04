@@ -1849,7 +1849,7 @@ namespace DataGenerator.Data
             else if (ii == 248)
             {
                 ability.Name = new LocalText("**Ice Face");
-                ability.Desc = new LocalText("The Pokémon's ice head can take a physical attack as a substitute, but the attack also changes the Pokémon's appearance. The ice will be restored when it hails.");
+                ability.Desc = new LocalText("The Pokémon's ice head can take a physical attack as a substitute, breaking in the process. The ice is restored in hail.");
             }
             else if (ii == 249)
             {

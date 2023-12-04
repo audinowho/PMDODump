@@ -3145,7 +3145,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("snover", "", "ice_shard", "ingrain", "", "", new RandRange(36), "wander_dumb"), new IntRange(0, 11), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("azumarill", "thick_fat", "aqua_tail", "aqua_ring", "", "", new RandRange(36), "wander_dumb"), new IntRange(6, 15), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("vigoroth", "", "uproar", "chip_away", "", "", new RandRange(33), "wander_dumb"), new IntRange(0, 7), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("hitmonlee", "", "wide_guard", "high_jump_kick", "", "", new RandRange(36), "wander_dumb"), new IntRange(11, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("hitmonlee", "", "wide_guard", "high_jump_kick", "", "", new RandRange(35), "wander_dumb"), new IntRange(11, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("fearow", "", "agility", "mirror_move", "", "", new RandRange(36), "wander_dumb"), new IntRange(6, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("golduck", "", "disable", "aqua_jet", "", "", new RandRange(36), "wander_dumb"), new IntRange(0, 11), 10);
 

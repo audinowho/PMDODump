@@ -171,6 +171,7 @@ namespace DataGenerator
                 if (itemPrep)
                 {
                     LuaEngine.InitInstance();
+                    LuaEngine.Instance.LoadScripts();
                     DataManager.InitInstance();
                     DataManager.Instance.InitData();
 
@@ -180,6 +181,7 @@ namespace DataGenerator
                 if (zonePrep)
                 {
                     LuaEngine.InitInstance();
+                    LuaEngine.Instance.LoadScripts();
                     DataManager.InitInstance();
                     DataManager.Instance.InitData();
 
@@ -190,6 +192,7 @@ namespace DataGenerator
                 {
                     //we need the datamanager for this
                     LuaEngine.InitInstance();
+                    LuaEngine.Instance.LoadScripts();
                     DataManager.InitInstance();
                     DataManager.Instance.InitData();
 
@@ -211,6 +214,7 @@ namespace DataGenerator
                 if (saveStrings)
                 {
                     LuaEngine.InitInstance();
+                    LuaEngine.Instance.LoadScripts();
                     //we need the datamanager for this
                     DataManager.InitInstance();
                     DataManager.Instance.InitData();
@@ -282,6 +286,7 @@ namespace DataGenerator
                     }
 
                     LuaEngine.InitInstance();
+                    LuaEngine.Instance.LoadScripts();
                     DataManager.InitInstance();
                     DataManager.Instance.LoadConversions();
                     RogueEssence.Dev.DevHelper.PrepareAssetConversion();
@@ -294,6 +299,7 @@ namespace DataGenerator
                     //we need the datamanager for this, but only while data is hardcoded
                     //TODO: remove when data is no longer hardcoded
                     LuaEngine.InitInstance();
+                    LuaEngine.Instance.LoadScripts();
                     DataManager.InitInstance();
                     DataManager.Instance.LoadConversions();
 
@@ -325,6 +331,7 @@ namespace DataGenerator
                     //we need the datamanager for this, but only while data is hardcoded
                     //TODO: remove when data is no longer hardcoded
                     LuaEngine.InitInstance();
+                    LuaEngine.Instance.LoadScripts();
                     DataManager.InitInstance();
                     DataManager.Instance.LoadConversions();
                     DataManager.InitDataDirs(PathMod.ModPath(""));
@@ -339,6 +346,7 @@ namespace DataGenerator
                 if (dump > DataManager.DataType.None)
                 {
                     LuaEngine.InitInstance();
+                    LuaEngine.Instance.LoadScripts();
 
                     //before reserializing, reserialize skill and monsters, and delete all data
                     //dump = addTypeDependency(dump, DataManager.DataType.Element, DataManager.DataType.Item);
@@ -431,6 +439,7 @@ namespace DataGenerator
                 if (demo)
                 {
                     LuaEngine.InitInstance();
+                    LuaEngine.Instance.LoadScripts();
                     RogueEssence.Dev.DevHelper.DemoData(DataManager.DATA_PATH + "Zone/", DataManager.DATA_EXT, typeof(ZoneData));
                     //RogueEssence.Dev.DevHelper.DemoData(DataManager.DATA_PATH + "Map/", DataManager.MAP_EXT);
                     RogueEssence.Dev.DevHelper.DemoData(DataManager.DATA_PATH + "Ground/", DataManager.GROUND_EXT, typeof(GroundMap));

@@ -548,16 +548,14 @@ namespace DataGenerator.Data
 
                         EffectTile returnTile = new EffectTile("stairs_back_up", true);
                         DestState returnDest = new DestState(new SegLoc(0, -1), true);
-                        returnDest.PreserveMusic = true;
+                        if (ii > 0)
+                            returnDest.PreserveMusic = true;
                         returnTile.TileStates.Set(returnDest);
                         step.Exits.Add(new MapGenExit(returnTile));
 
                         if (ii < max_floors - 1)
                         {
                             EffectTile exitTile = new EffectTile("stairs_go_down", true);
-                            DestState exitDest = new DestState(new SegLoc(0, 1), true);
-                            exitDest.PreserveMusic = true;
-                            exitTile.TileStates.Set(exitDest);
                             step.Exits.Add(new MapGenExit(exitTile));
                         }
 
@@ -987,7 +985,7 @@ namespace DataGenerator.Data
                     {
                         foreach (string key in IterateTMs(TMClass.Starter))
                             vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
-                        vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear"), new IntRange(0, max_floors), 100);//amber tear
+                        vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 100);//amber tear
                         vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
                         vaultChanceZoneStep.Items.Add(new MapItem("seed_pure"), new IntRange(0, max_floors), 100);//pure seed
                         vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 200);//recall box
@@ -1199,16 +1197,14 @@ namespace DataGenerator.Data
 
                         EffectTile returnTile = new EffectTile("stairs_back_up", true);
                         DestState returnDest = new DestState(new SegLoc(0, -1), true);
-                        returnDest.PreserveMusic = true;
+                        if (ii > 0)
+                            returnDest.PreserveMusic = true;
                         returnTile.TileStates.Set(returnDest);
                         step.Exits.Add(new MapGenExit(returnTile));
 
                         if (ii < max_floors - 1)
                         {
                             EffectTile exitTile = new EffectTile("stairs_go_down", true);
-                            DestState exitDest = new DestState(new SegLoc(0, 1), true);
-                            exitDest.PreserveMusic = true;
-                            exitTile.TileStates.Set(exitDest);
                             step.Exits.Add(new MapGenExit(exitTile));
                         }
 
@@ -3463,7 +3459,7 @@ namespace DataGenerator.Data
                         foreach (string key in IterateTMs(TMClass.Natural))
                             vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
                         vaultChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 200);//nugget
-                        vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear"), new IntRange(0, max_floors), 100);//amber tear
+                        vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 100);//amber tear
                         vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
                         vaultChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, max_floors), 100);//joy seed
                         vaultChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 200);//ability capsule
@@ -4435,7 +4431,7 @@ namespace DataGenerator.Data
                         {
                             foreach (string key in IterateTMs(TMClass.Starter))
                                 vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
-                            vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear"), new IntRange(0, max_floors), 100);//amber tear
+                            vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 100);//amber tear
                             vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
                             vaultChanceZoneStep.Items.Add(new MapItem("seed_pure"), new IntRange(0, max_floors), 100);//pure seed
                             vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 200);//recall box

@@ -1116,7 +1116,7 @@ namespace DataGenerator.Data
             else if (ii == 184)
             {
                 item.Name = new LocalText("Power Herb");
-                item.Desc = new LocalText("An herb that allows the use of two-turn attacks in one turn, and prevents PP from dropping.");
+                item.Desc = new LocalText("An herb that allows the use of two-turn attacks in one turn, and protects against PP-draining effects.");
                 item.Sprite = "Herb_Red";
                 item.Price = 100;
                 item.UseEvent.OnHits.Add(0, new StatusBattleEvent("power_charged", true, false));
