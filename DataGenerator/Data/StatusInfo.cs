@@ -2211,7 +2211,7 @@ namespace DataGenerator.Data
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
-                    status.OnActions.Add(0, new ElementNeededEvent("fire", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), true)));
+                    status.OnActions.Add(0, new ElementNeededEvent("fire", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), false)));
                 }
 
                 {
@@ -2235,7 +2235,7 @@ namespace DataGenerator.Data
                     newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                     newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                     newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
-                    status.OnActions.Add(0, new ElementNeededEvent("electric", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), true)));
+                    status.OnActions.Add(0, new ElementNeededEvent("electric", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), false)));
                 }
                 status.AfterBeingHits.Add(0, new ElementNeededEvent("fire", new RemoveBattleEvent(false)));
                 status.AfterBeingHits.Add(0, new ElementNeededEvent("electric", new RemoveBattleEvent(false)));
