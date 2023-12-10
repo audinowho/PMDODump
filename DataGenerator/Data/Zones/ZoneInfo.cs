@@ -739,8 +739,10 @@ namespace DataGenerator.Data
                             //Floor settings
                             AddFloorData(layout, "B02. Demonstration 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
-                            AddWaterSteps(layout, "floor", new RandRange(20));//empty
-
+                            AddWaterSteps(layout, "water", new RandRange(20));//empty
+                            FloorTerrainStep<MapGenContext> floorPass = new FloorTerrainStep<MapGenContext>(new Tile("floor"));
+                            floorPass.TerrainStencil = new MatchTerrainStencil<MapGenContext>(false, new Tile("water"));
+                            layout.GenSteps.Add(PR_WATER_DE_ISOLATE, floorPass);
 
                             //Tilesets
                             AddTextureData(layout, "wyvern_hill_wall", "wyvern_hill_floor", "wyvern_hill_secondary", "normal");
