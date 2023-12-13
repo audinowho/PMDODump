@@ -11,3 +11,4 @@
 * Fix minor music issue in Castaway Cave exit
 * Dev: Fix off by one in RoomGenPlus and LoopedTeamSpawner
 * Dev: Comment fields for zonesegment and floorgen
+* Dev: ability to disable recruitment for a save
