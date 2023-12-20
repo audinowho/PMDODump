@@ -53,6 +53,16 @@ namespace DataGenerator.Data
                 if (ii < MAX_GROUPS - 1)
                     next = Text.Sanitize(Text.GetMemberTitle(((TeamRank)ii + 1).ToString())).ToLower();
                 RankData data = new RankData(new LocalText(Text.GetMemberTitle(((TeamRank)ii).ToString())), 24, RANK_NEXT[ii], next);
+                if (ii == (int)TeamRank.None)
+                    data.BagSize = 24;
+                else if (ii == (int)TeamRank.Normal)
+                    data.BagSize = 24;
+                else if (ii == (int)TeamRank.Bronze)
+                    data.BagSize = 32;
+                else if (ii == (int)TeamRank.Silver)
+                    data.BagSize = 40;
+                else
+                    data.BagSize = 48;
                 DataManager.SaveData(Text.Sanitize(data.Name.DefaultText).ToLower(), DataManager.DataType.Rank.ToString(), data);
             }
         }

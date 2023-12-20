@@ -4256,7 +4256,7 @@ namespace DataGenerator.Data
                 newData.Category = BattleData.SkillCategory.Status;
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new RestoreHPEvent(1, 3, true));
-                skill.Data.BeforeHits.Add(-5, new AllyDifferentEvent(newData));
+                skill.Data.BeforeHits.Add(-5, new AlignmentDifferentEvent(Alignment.Friend | Alignment.Self, newData));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot

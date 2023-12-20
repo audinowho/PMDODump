@@ -51,7 +51,7 @@ namespace DataGenerator.Data
 
 
         const int TOTAL_DEX = 1011;
-        const bool GENDER_UNLOCK = true;
+        const bool GENDER_UNLOCK = false;
         static Dictionary<int, string> langIDs;
         static Dictionary<int, int> langCols;
         static int[] existing = { 1, 3, 5, 6, 7, 8, 9 };
@@ -2470,6 +2470,10 @@ namespace DataGenerator.Data
                 dexToId[fileName] = ii;
             }
 
+            HashSet<string> tm_skills = new HashSet<string>();
+            foreach (string tm in ZoneInfo.IterateTMs(ZoneInfo.TMClass.All))
+                tm_skills.Add(tm);
+
             Dictionary<string, int> learnMoves = new Dictionary<string, int>();
             Dictionary<string, int> eggMoves = new Dictionary<string, int>();
             for (int ii = 0; ii < TOTAL_DEX; ii++)
@@ -2485,6 +2489,9 @@ namespace DataGenerator.Data
 
                     foreach (LearnableSkill skill in form.SecretSkills)
                     {
+                        if (tm_skills.Contains("tm_" + skill.Skill))
+                            continue;
+
                         bool newSkill = true;
                         string prevData = mon.PromoteFrom;
                         int prevForm = form.PromoteForm;
@@ -2513,6 +2520,9 @@ namespace DataGenerator.Data
                     
                     foreach (LearnableSkill skill in form.SharedSkills)
                     {
+                        if (tm_skills.Contains("tm_" + skill.Skill))
+                            continue;
+
                         bool newSkill = true;
                         string prevData = mon.PromoteFrom;
                         int prevForm = form.PromoteForm;

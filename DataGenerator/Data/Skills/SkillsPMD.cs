@@ -3062,6 +3062,21 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
+                {
+                    BattleData newData = new BattleData();
+                    newData.Element = "normal";
+                    newData.Category = BattleData.SkillCategory.Physical;
+                    newData.HitRate = -1;
+                    newData.OnHits.Add(-1, new CutHPDamageEvent());
+                    newData.ElementEffects.Add(0, new NormalizeEvent());
+                    newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
+                    newData.OnHitTiles.Add(0, new RemoveTrapEvent());
+                    newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
+                    SingleEmitter cuttingEmitter2 = new SingleEmitter(new AnimData("Grass_Clear", 2));
+                    newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter2, new FlagType(typeof(FoliageTerrainState))));
+                    skill.Data.BeforeHits.Add(-5, new AlignmentDifferentEvent(Alignment.Self, newData));
+                }
+
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
@@ -3924,6 +3939,20 @@ namespace DataGenerator.Data
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
+
+                BattleData newData = new BattleData();
+                newData.Element = "normal";
+                newData.Category = BattleData.SkillCategory.Physical;
+                newData.HitRate = -1;
+                newData.OnHits.Add(-1, new CutHPDamageEvent());
+                newData.ElementEffects.Add(0, new NormalizeEvent());
+                newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
+                newData.OnHitTiles.Add(0, new RemoveTrapEvent());
+                newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
+                SingleEmitter cuttingEmitter2 = new SingleEmitter(new AnimData("Grass_Clear", 2));
+                newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter2, new FlagType(typeof(FoliageTerrainState))));
+                skill.Data.BeforeHits.Add(-5, new AlignmentDifferentEvent(Alignment.Self, newData));
+
                 skill.Data.OnHits.Add(-1, new CutHPDamageEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
@@ -5535,7 +5564,7 @@ namespace DataGenerator.Data
                 newData.Category = BattleData.SkillCategory.Status;
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new RestoreHPEvent(1, 3, true));
-                skill.Data.BeforeHits.Add(-5, new AllyDifferentEvent(newData));
+                skill.Data.BeforeHits.Add(-5, new AlignmentDifferentEvent(Alignment.Friend | Alignment.Self, newData));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -6442,7 +6471,7 @@ namespace DataGenerator.Data
                 newData.Category = BattleData.SkillCategory.Status;
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new StatusBattleEvent("sleepless", true, true));
-                skill.Data.BeforeHits.Add(-5, new AllyDifferentEvent(newData));
+                skill.Data.BeforeHits.Add(-5, new AlignmentDifferentEvent(Alignment.Friend | Alignment.Self, newData));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(25);//Appeal
@@ -6887,7 +6916,7 @@ namespace DataGenerator.Data
                 newData.HitRate = -1;
                 newData.HitFX.Delay = 20;
                 newData.OnHits.Add(0, new RemoveStatusBattleEvent("paralyze", true));
-                skill.Data.BeforeHits.Add(-5, new AllyDifferentEvent(newData));
+                skill.Data.BeforeHits.Add(-5, new AlignmentDifferentEvent(Alignment.Friend | Alignment.Self, newData));
 
                 skill.Data.BeforeHits.Add(0, new StatusPowerEvent("paralyze", true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
@@ -9272,7 +9301,7 @@ namespace DataGenerator.Data
                 newData.Category = BattleData.SkillCategory.Status;
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("sleepless", true, false));
-                skill.Data.BeforeHits.Add(-5, new AllyDifferentEvent(newData));
+                skill.Data.BeforeHits.Add(-5, new AlignmentDifferentEvent(Alignment.Friend | Alignment.Self, newData));
 
                 skill.Data.BeforeHits.Add(0, new StatusPowerEvent("sleep", true));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
