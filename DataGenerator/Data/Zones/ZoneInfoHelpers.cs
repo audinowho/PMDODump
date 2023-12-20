@@ -15,6 +15,7 @@ using PMDC.Dungeon;
 using PMDC.LevelGen;
 using PMDC;
 using PMDC.Data;
+using System.Linq;
 
 namespace DataGenerator.Data
 {
@@ -161,6 +162,17 @@ namespace DataGenerator.Data
             SpawnRangeList<IGenStep> exitZoneSpawns = new SpawnRangeList<IGenStep>();
             exitZoneSpawns.Add(new ScriptGenStep<ListMapGenContext>("Mysteriosity", "{BaseChance="+baseChance+", SegDiff="+segDiff+"}"), spreadPlan.FloorRange, 10);
             SpreadStepRangeZoneStep exitZoneStep = new SpreadStepRangeZoneStep(spreadPlan, PR_SPAWN_TRAPS, exitZoneSpawns);
+            floorSegment.ZoneSteps.Add(exitZoneStep);
+        }
+
+        public static void AddTutorZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, IntRange cost, List<string> tutorElements)
+        {
+            RandBag<IGenStep> npcZoneSpawns = new RandBag<IGenStep>();
+            List<string> quotedElements = new List<string>();
+            foreach (string element in tutorElements)
+                quotedElements.Add(String.Format("\"{0}\"", element));
+            npcZoneSpawns.ToSpawn.Add(new ScriptGenStep<ListMapGenContext>("SpawnRandomTutor", "{ MinCost = "+ cost.Min +", MaxCost = "+ cost.Max+", Elements = {" + String.Join(", ", quotedElements) + "}}"));
+            SpreadStepZoneStep exitZoneStep = new SpreadStepZoneStep(spreadPlan, PR_SPAWN_MOBS_EXTRA, npcZoneSpawns);
             floorSegment.ZoneSteps.Add(exitZoneStep);
         }
 
