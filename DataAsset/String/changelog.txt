@@ -1,41 +1,57 @@
 Sheet: Hardcode
 
 Sheet: Content
-    * Added MSG_NOT_HAILING
-    * Changed TALK_ADVICE_POISON from "If you get poisoned, don't panic![scroll]If you wait it out without moving or attacking, and you'll take less damage." to "If you get poisoned, don't panic![scroll]Wait it out without moving or attacking, and you'll take less damage."
-    * Changed TALK_ADVICE_STAT_DROP from "Aurgh, that Aipom threw some sand in my eyes and now I can barely hit anything![br]I need to get to a Wonder Tile..." to "Aurgh, that Aipom threw some sand in my eyes and now my aim is off![br]I need to get to a Wonder Tile..."
-    * Added TALK_ADVICE_STAT_DROP_CLEAR
+    * Added MENU_CURRENCY_AVAILABLE
+    * Added MENU_SKILL_TUTOR
+    * Added TALK_ESCORT_BROTHER_ACCEPT
+    * Added TALK_ESCORT_BROTHER_FULL_001
+    * Added TALK_ESCORT_BROTHER_HALF
+    * Added TALK_ESCORT_BROTHER_PINCH
+    * Added TALK_ESCORT_BROTHER_START
+    * Added TALK_ESCORT_FATHER_ACCEPT
+    * Added TALK_ESCORT_FATHER_FULL_001
+    * Added TALK_ESCORT_FATHER_HALF
+    * Added TALK_ESCORT_FATHER_PINCH
+    * Added TALK_ESCORT_FATHER_START
+    * Added TALK_ESCORT_GRANDMA_ACCEPT
+    * Added TALK_ESCORT_GRANDMA_FULL_001
+    * Added TALK_ESCORT_GRANDMA_HALF
+    * Added TALK_ESCORT_GRANDMA_PINCH
+    * Added TALK_ESCORT_GRANDMA_START
+    * Added TALK_ESCORT_MOTHER_ACCEPT
+    * Added TALK_ESCORT_MOTHER_FULL_001
+    * Added TALK_ESCORT_MOTHER_HALF
+    * Added TALK_ESCORT_MOTHER_PINCH
+    * Added TALK_ESCORT_MOTHER_START
+    * Added TALK_ESCORT_PET_ACCEPT
+    * Added TALK_ESCORT_PET_FULL_001
+    * Added TALK_ESCORT_PET_HALF
+    * Added TALK_ESCORT_PET_PINCH
+    * Added TALK_ESCORT_PET_START
+    * Added TALK_TUTOR
+    * Added TALK_TUTOR_ACCEPT
+    * Added TALK_TUTOR_ALREADY
+    * Added TALK_TUTOR_ASK
+    * Added TALK_TUTOR_DECLINE
+    * Added TALK_TUTOR_DONE
+    * Added TALK_TUTOR_REPLACE
+    * Added TALK_TUTOR_VISIT
 
 Sheet: Script
-    * Erased contents of ground\base_camp_2/Tutor_Cant_Forget
-    * Erased contents of ground\base_camp_2/Tutor_Cant_Remember
-    * Significantly changed ground\base_camp_2/Tutor_Info_002 from "For a small fee, any move you've learned from leveling up can be learned again!" to "For a small fee, I can help you relearn any move you've learned in the past![br]I can also help you forget a move, for free!"
-    * Significantly changed ground\base_camp_2/Tutor_Info_003 from "I can also help forget moves." to "I can help you relearn any move you've learned in the past![br]I can also help you forget a move, if you want."
-    * Added ground\base_camp_2/Tutor_Info_004
-    * Added ground\base_camp_2/Tutor_Intro_Free
-    * Added ground\base_camp_2/Tutor_Now_Free
-    * Added ground\base_camp_2/Tutor_Now_Teaches
-    * Changed ground\base_camp_2/Tutor_Option_Tutor from "Tutor" to "Tutor Move"
-    * Added ground\base_camp_2/Tutor_Teach_Success
-    * Added ground\base_camp_2/Tutor_Teach_What
-    * Added ground\base_camp_2/Tutor_Teach_Who
-    * Added ground\canyon_camp/NextCamp_Line_001
-    * Added ground\canyon_camp/Tutor_Accept
-    * Added ground\canyon_camp/Tutor_Ask
-    * Added ground\canyon_camp/Tutor_Decline
-    * Added ground\canyon_camp/Tutor_Done
-    * Added ground\canyon_camp/Tutor_Incompatible
-    * Added ground\canyon_camp/Tutor_Intro
-    * Added ground\canyon_camp/Tutor_Replace
-    * Added ground\canyon_camp/Tutor_Taught
+    * Added ground\canyon_camp/Tutor_Already
+    * Deleted key ground\canyon_camp/Tutor_Replace
 
 Sheet: Abilities
+    * Changed 0248-ice_face-0001|data.Desc from "The Pokémon's ice head can take a physical attack as a substitute, but the attack also changes the Pokémon's appearance. The ice will be restored when it hails." to "The Pokémon's ice head can take a physical attack as a substitute, breaking in the process. The ice is restored in hail."
 
 Sheet: Items
+    * Changed 0008-herb_power-0001|data.Desc from "An herb that allows the use of two-turn attacks in one turn, and prevents PP from dropping." to "An herb that allows the use of two-turn attacks in one turn, and protects against PP-draining effects."
 
 Sheet: MapStatuses
+    * Significantly changed 0000-trick_room-0001|data.Desc from "Effects on all Pokémon's Movement Speed are reversed." to "Effects on all Pokémon's Movement Speed are reversed, and Pokémon with a lower Speed stat have better accuracy and evasion."
 
 Sheet: Moves
+    * Significantly changed 0478-magic_room-0001|data.Desc from "The user creates a bizarre area in which Pokémon's held items lose their effects." to "The user creates a bizarre area in which Pokémon's abilities and held items lose their effects."
 
 Sheet: Statuses
 
@@ -46,10 +62,8 @@ Sheet: Excl Names
 Sheet: Excl Effects
 
 Sheet: Zones
-    * Significantly changed 0000-wayward_wetlands-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name from "Wayward Wetlands\n{0}F" to "Wayward Wetlands\nB{0}F"
 
 Sheet: Maps
-    * Added room_moon_dance-0000|data.Name
 
 Sheet: GroundMaps
 

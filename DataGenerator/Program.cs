@@ -421,8 +421,8 @@ namespace DataGenerator
                         {
                             //MapInfo.AddMapData();
                             MapInfo.AddGroundData("test_grounds");
-                            //ZoneInfo.AddZoneData(false);
-                            ZoneInfo.AddZoneData(false, 3);
+                            ZoneInfo.AddZoneData(false);
+                            //ZoneInfo.AddZoneData(false, 10);
                             //ZoneInfo.AddZoneData(false, 0);
                         }
 

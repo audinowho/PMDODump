@@ -194,7 +194,7 @@ namespace DataGenerator.Data
             else if (ii == 9)
             {
                 status.Name = new LocalText("Trick Room");
-                status.Desc = new LocalText("Effects on all Pokémon's Movement Speed are reversed.");
+                status.Desc = new LocalText("Effects on all Pokémon's Movement Speed are reversed, and Pokémon with a lower Speed stat have better accuracy and evasion.");
                 OverlayEmitter overlay = new OverlayEmitter();
                 overlay.Anim = new BGAnimData("Trick_Room", 3, 0, 0, 64);
                 overlay.Layer = DrawLayer.Top;
@@ -205,6 +205,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_TRICK_ROOM_START"), true));
                 status.OnMapStatusRemoves.Add(0, new MapStatusSoundEvent("DUN_Focus_Blast"));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_TRICK_ROOM_END"), true));
+                status.BeforeBeingHits.Add(-10, new SpeedReverseHitEvent());
                 status.OnRefresh.Add(5, new SpeedReverseEvent());
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));

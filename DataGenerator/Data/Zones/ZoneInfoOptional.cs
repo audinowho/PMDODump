@@ -715,6 +715,8 @@ namespace DataGenerator.Data
                 poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                 floorSegment.ZoneSteps.Add(poolSpawn);
 
+                List<string> tutorElements = new List<string>() { "grass", "water", "fire", "normal" };
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 2, 30), new IntRange(0, max_floors), true), new IntRange(0, 5), tutorElements);
 
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                 tileSpawn.Priority = PR_RESPAWN_TRAP;
@@ -1315,6 +1317,11 @@ namespace DataGenerator.Data
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
+
+
+                    List<string> tutorElements = new List<string>() { "ice", "psychic", "flying", "normal" };
+                    AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(0, 1, 60), new IntRange(0, max_floors), true), new IntRange(0, 5), tutorElements);
+
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
@@ -2233,6 +2240,11 @@ namespace DataGenerator.Data
 
                 floorSegment.ZoneSteps.Add(poolSpawn);
 
+
+                List<string> tutorElements = new List<string>() { "fighting", "bug", "fairy" };
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 3, 30), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements);
+
+
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                 tileSpawn.Priority = PR_RESPAWN_TRAP;
 
@@ -2716,8 +2728,12 @@ namespace DataGenerator.Data
                 poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                 poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 6);
 
-
                 floorSegment.ZoneSteps.Add(poolSpawn);
+
+
+                List<string> tutorElements = new List<string>() { "fighting", "bug", "fairy" };
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(0, 1, 70), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements);
+
 
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                 tileSpawn.Priority = PR_RESPAWN_TRAP;
@@ -3034,9 +3050,13 @@ namespace DataGenerator.Data
                 poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                 floorSegment.ZoneSteps.Add(poolSpawn);
 
+
+                List<string> tutorElements = new List<string>() { "fire", "poison", "bug" };
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 3, 60), new IntRange(0, max_floors), true), new IntRange(0, 5), tutorElements);
+
+
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                 tileSpawn.Priority = PR_RESPAWN_TRAP;
-
 
                 tileSpawn.Spawns.Add(new EffectTile("trap_trip", true), new IntRange(0, max_floors), 10);//trip trap
                 tileSpawn.Spawns.Add(new EffectTile("trap_poison", false), new IntRange(0, max_floors), 10);//poison trap
@@ -3486,6 +3506,10 @@ namespace DataGenerator.Data
                 poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                 floorSegment.ZoneSteps.Add(poolSpawn);
 
+                List<string> tutorElements = new List<string>() { "fire", "poison", "bug" };
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(0, 1, 60), new IntRange(0, max_floors), true), new IntRange(0, 5), tutorElements);
+
+
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                 tileSpawn.Priority = PR_RESPAWN_TRAP;
 
@@ -3798,9 +3822,13 @@ namespace DataGenerator.Data
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
+
+                    List<string> tutorElements = new List<string>() { "fighting", "flying", "electric" };
+                    AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 2, 30), new IntRange(0, max_floors), true), new IntRange(0, 5), tutorElements);
+
+
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
-
 
                     tileSpawn.Spawns.Add(new EffectTile("trap_mud", true), new IntRange(0, max_floors), 10);//mud trap
                     tileSpawn.Spawns.Add(new EffectTile("trap_chestnut", true), new IntRange(0, max_floors), 10);//chestnut trap
@@ -4235,6 +4263,11 @@ namespace DataGenerator.Data
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
+
+
+                    List<string> tutorElements = new List<string>() { "fighting", "flying", "electric" };
+                    AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(0, 1, 60), new IntRange(0, max_floors), true), new IntRange(0, 5), tutorElements);
+
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
@@ -4673,6 +4706,11 @@ namespace DataGenerator.Data
                     SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandBinomial(2, 70), new IntRange(2, max_floors)), PR_SHOPS, shopZoneSpawns);
                     shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
                     floorSegment.ZoneSteps.Add(shopZoneStep);
+
+
+                    List<string> tutorElements = new List<string>() { "fire", "steel", "poison" };
+                    AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 3, 60), new IntRange(0, max_floors), true), new IntRange(0, 5), tutorElements);
+
 
                     //key vault
                     {
@@ -5329,6 +5367,11 @@ namespace DataGenerator.Data
                     poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
 
                     floorSegment.ZoneSteps.Add(poolSpawn);
+
+
+                    List<string> tutorElements = new List<string>() { "fire", "steel", "poison" };
+                    AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(0, 1, 60), new IntRange(0, max_floors), true), new IntRange(0, 5), tutorElements);
+
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;

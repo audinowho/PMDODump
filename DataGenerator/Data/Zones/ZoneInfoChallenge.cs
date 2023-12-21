@@ -191,30 +191,40 @@ namespace DataGenerator.Data
                 poolSpawn.Spawns.Add(GetTeamMob("chinchou", "", "confuse_ray", "spark", "", "", new RandRange(26), "wander_dumb_itemless"), new IntRange(4, 10), 10);
 
                 {
-                    TeamMemberSpawn teamSpawn = GetTeamMob("mantine", "", "wide_guard", "bubble_beam", "", "", new RandRange(30), "wander_normal");
+                    TeamMemberSpawn teamSpawn = GetTeamMob("mantine", "", "wide_guard", "bubble_beam", "", "", new RandRange(32), "wander_normal");
                     teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("castaway_cave.TookTreasure", true));
-                    poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 100);
+                    poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, 8), 100);
+                }
+                {
+                    TeamMemberSpawn teamSpawn = GetTeamMob("wailmer", "", "whirlpool", "water_pulse", "", "", new RandRange(32), "wander_normal");
+                    teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("castaway_cave.TookTreasure", true));
+                    poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, 8), 100);
                 }
                 {
                     TeamMemberSpawn teamSpawn = GetTeamMob("huntail", "", "ice_fang", "sucker_punch", "dive", "", new RandRange(30), "wander_normal");
                     teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("castaway_cave.TookTreasure", true));
-                    poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 100);
+                    poolSpawn.Spawns.Add(teamSpawn, new IntRange(4, max_floors), 100);
                 }
                 {
                     TeamMemberSpawn teamSpawn = GetTeamMob("gorebyss", "", "amnesia", "draining_kiss", "dive", "", new RandRange(30), "wander_normal");
                     teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("castaway_cave.TookTreasure", true));
-                    poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 100);
+                    poolSpawn.Spawns.Add(teamSpawn, new IntRange(4, max_floors), 100);
                 }
                 {
                     TeamMemberSpawn teamSpawn = GetTeamMob("dhelmise", "", "anchor_shot", "giga_drain", "metal_sound", "", new RandRange(32), "wander_normal");
                     teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("castaway_cave.TookTreasure", true));
-                    poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 50);
+                    poolSpawn.Spawns.Add(teamSpawn, new IntRange(4, max_floors), 50);
                 }
 
                 poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                 poolSpawn.TeamSizes.Add(2, new IntRange(8, max_floors), 3);
 
                 floorSegment.ZoneSteps.Add(poolSpawn);
+
+
+                List<string> tutorElements = new List<string>() { "electric", "grass", "dark" };
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 3, 50), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements);
+
 
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                 tileSpawn.Priority = PR_RESPAWN_TRAP;
@@ -820,6 +830,11 @@ namespace DataGenerator.Data
                 poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 4);
 
                 floorSegment.ZoneSteps.Add(poolSpawn);
+
+
+                List<string> tutorElements = new List<string>() { "rock", "ground", "water", "dragon" };
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 3, 50), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements);
+
 
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                 tileSpawn.Priority = PR_RESPAWN_TRAP;
@@ -1589,6 +1604,10 @@ namespace DataGenerator.Data
                 poolSpawn.TeamSizes.Add(3, new IntRange(15, max_floors), 3);
 
                 floorSegment.ZoneSteps.Add(poolSpawn);
+
+                List<string> tutorElements = new List<string>() { "poison", "psychic", "ghost" };
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 3, 30), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements);
+
 
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                 tileSpawn.Priority = PR_RESPAWN_TRAP;
@@ -2378,8 +2397,12 @@ namespace DataGenerator.Data
                 poolSpawn.TeamSizes.Add(2, new IntRange(0, 10), 3);
                 poolSpawn.TeamSizes.Add(2, new IntRange(10, max_floors), 4);
 
-
                 floorSegment.ZoneSteps.Add(poolSpawn);
+
+
+                List<string> tutorElements = new List<string>() { "dragon", "ice", "fairy" };
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 3, 30), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements);
+
 
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                 tileSpawn.Priority = PR_RESPAWN_TRAP;
@@ -2694,9 +2717,9 @@ namespace DataGenerator.Data
                     if (ii >= 8)
                     {
                         SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
-                        patternList.Add(new PatternPlan("pattern_checker", PatternPlan.PatternExtend.Repeat2D), 5);
+                        patternList.Add(new PatternPlan("pattern_checker", PatternPlan.PatternExtend.Repeat1D), 5);
                         patternList.Add(new PatternPlan("pattern_crosshair", PatternPlan.PatternExtend.Extrapolate), 5);
-                        patternList.Add(new PatternPlan("pattern_x_repeat", PatternPlan.PatternExtend.Repeat2D), 5);
+                        patternList.Add(new PatternPlan("pattern_x_repeat", PatternPlan.PatternExtend.Extrapolate), 5);
                         AddTrapPatternSteps(layout, new RandRange(1, 3), patternList);
                     }
 
@@ -2706,7 +2729,7 @@ namespace DataGenerator.Data
                     AddMoneyData(layout, new RandRange(4, 9));
 
                     //enemies
-                    AddRespawnData(layout, 11, 130);
+                    AddRespawnData(layout, 10, 130);
                     AddEnemySpawnData(layout, 20, new RandRange(9, 11));
 
                     //items

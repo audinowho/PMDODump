@@ -143,9 +143,6 @@ namespace DataGenerator.Data
 
             WritePersonalityChecklist(personalities, totalEntries);
 
-            CreateLearnables(totalEntries);
-            ListAllIncompletes(totalEntries);
-
 
             //string outpt = "";
             for (int ii = 0; ii < TOTAL_DEX; ii++)
@@ -153,9 +150,13 @@ namespace DataGenerator.Data
                 totalEntries[ii].JoinRate = MapJoinRate(ii, totalEntries);
                 MapFriendshipEvo(ii, totalEntries);
                 MapFormEvo(ii, totalEntries);
+                PropagateSkills(ii, totalEntries);
                 //if (TotalEntries[ii].JoinRate > 0)
                 //    outpt += (TotalEntries[ii].Name + ": " + TotalEntries[ii].JoinRate + "\n");
             }
+
+            //CreateLearnables(totalEntries);
+            //ListAllIncompletes(totalEntries);
 
             for (int ii = 0; ii < TOTAL_DEX; ii++)
             {
@@ -2036,6 +2037,40 @@ namespace DataGenerator.Data
             }
         }
 
+        private static void transferSkills(List<LearnableSkill> source, List<LearnableSkill> dest)
+        {
+            foreach (LearnableSkill skill in source)
+            {
+                if (dest.FindIndex(a => a.Skill == skill.Skill) < 0)
+                    dest.Add(skill);
+            }
+        }
+
+        /// <summary>
+        /// Adds all TM, egg, and tutor moves from the previous evos to the current evo.
+        /// </summary>
+        /// <param name="evoSpecies"></param>
+        /// <param name="totalEntries"></param>
+        public static void PropagateSkills(int evoSpecies, MonsterData[] totalEntries)
+        {
+            MonsterData evoData = totalEntries[evoSpecies];
+            for (int ii = 0; ii < evoData.Forms.Count; ii++)
+            {
+                MonsterFormData evoForm = (MonsterFormData)evoData.Forms[ii];
+                MonsterData prevoData = evoData;
+                MonsterFormData prevoForm = evoForm;
+                while (!String.IsNullOrEmpty(prevoData.PromoteFrom))
+                {
+                    prevoData = totalEntries[monsterKeys.IndexOf(prevoData.PromoteFrom)];
+                    prevoForm = (MonsterFormData)prevoData.Forms[prevoForm.PromoteForm];
+
+                    transferSkills(prevoForm.TeachSkills, evoForm.TeachSkills);
+                    transferSkills(prevoForm.SharedSkills, evoForm.SharedSkills);
+                    transferSkills(prevoForm.SecretSkills, evoForm.SecretSkills);
+                }
+            }
+        }
+
         public static int GetGenBoundary(int index)
         {
             if (index < 151)
@@ -2461,6 +2496,118 @@ namespace DataGenerator.Data
             }
         }
 
+        private delegate IEnumerable<string> IterSkills(MonsterFormData form);
+
+        private static IEnumerable<string> IterLevel(MonsterFormData form)
+        {
+            foreach (LevelUpSkill skill in form.LevelSkills)
+                yield return skill.Skill;
+        }
+        private static IEnumerable<string> IterEgg(MonsterFormData form)
+        {
+            foreach (LearnableSkill skill in form.SharedSkills)
+                yield return skill.Skill;
+        }
+        private static IEnumerable<string> IterTutor(MonsterFormData form)
+        {
+            foreach (LearnableSkill skill in form.SecretSkills)
+                yield return skill.Skill;
+        }
+
+        private static MonsterID getFinalEvo(Dictionary<MonsterID, MonsterID> evoTree, MonsterID monId)
+        {
+            MonsterID resultId = monId;
+            while (evoTree.ContainsKey(resultId))
+                resultId = evoTree[resultId];
+            return resultId;
+        }
+
+        private static string chooseTeacherString(Dictionary<string, List<MonsterID>> teachers, string move)
+        {
+            if (teachers.ContainsKey(move))
+            {
+                List<MonsterID> list = teachers[move];
+                MonsterID resultMon = list[MathUtils.Rand.Next(list.Count)];
+                return resultMon.Species + ":" + resultMon.Form;
+            }
+            return null;
+        }
+        private static string ChooseTeacher(Dictionary<string, List<MonsterID>> levelTeachers, Dictionary<string, List<MonsterID>> eggTeachers, Dictionary<string, List<MonsterID>> tutorTeachers, string move)
+        {
+            string teachers = chooseTeacherString(levelTeachers, move);
+            if (teachers != null)
+                return teachers;
+
+            teachers = chooseTeacherString(eggTeachers, move);
+            if (teachers != null)
+                return teachers;
+
+            teachers = chooseTeacherString(tutorTeachers, move);
+            if (teachers != null)
+                return teachers;
+
+            return "";
+        }
+
+        private static void updateSkillList(MonsterData[] totalEntries, Dictionary<string, int> dexToId, Dictionary<MonsterID, MonsterID> evoTree, HashSet<string> tm_skills,
+            MonsterData mon, int formIdx, MonsterFormData form, IterSkills iter, Dictionary<string, int> moveTable, Dictionary<string, List<MonsterID>> teachers)
+        {
+            string fileName = getAssetName(mon.Name.DefaultText);
+
+            foreach (string skill in iter(form))
+            {
+                if (tm_skills.Contains("tm_" + skill))
+                    continue;
+
+                bool newSkill = true;
+                string prevData = mon.PromoteFrom;
+                int prevForm = form.PromoteForm;
+                if (!String.IsNullOrEmpty(prevData))
+                {
+                    MonsterData preMon = totalEntries[dexToId[prevData]];
+                    MonsterFormData preForm = (MonsterFormData)preMon.Forms[prevForm];
+                    foreach (string preSkill in iter(preForm))
+                    {
+                        if (preSkill == skill)
+                        {
+                            newSkill = false;
+                            break;
+                        }
+                    }
+                }
+
+                if (newSkill)
+                {
+                    if (!moveTable.ContainsKey(skill))
+                        moveTable[skill] = 0;
+                    moveTable[skill]++;
+                }
+
+                if (mon.SkillGroup1 != "undiscovered")
+                {
+                    MonsterID monId = getFinalEvo(evoTree, new MonsterID(fileName, formIdx, "", Gender.Unknown));
+
+                    MonsterData finalMon = totalEntries[dexToId[monId.Species]];
+                    MonsterFormData finalForm = (MonsterFormData)finalMon.Forms[monId.Form];
+
+                    if (finalMon.Released && finalForm.Released)
+                    {
+                        if (!teachers.ContainsKey(skill))
+                            teachers[skill] = new List<MonsterID>();
+
+                        bool hasMon = false;
+                        foreach (MonsterID teacher in teachers[skill])
+                        {
+                            if (monId == teacher)
+                                hasMon = true;
+                        }
+                        if (!hasMon)
+                            teachers[skill].Add(monId);
+                    }
+                }
+            }
+        }
+
         public static void CreateLearnables(MonsterData[] totalEntries)
         {
             Dictionary<string, int> dexToId = new Dictionary<string, int>();
@@ -2470,12 +2617,35 @@ namespace DataGenerator.Data
                 dexToId[fileName] = ii;
             }
 
+            Dictionary<MonsterID, MonsterID> evoTree = new Dictionary<MonsterID, MonsterID>();
+            for (int ii = 0; ii < TOTAL_DEX; ii++)
+            {
+                MonsterData mon = totalEntries[ii];
+                string fileName = getAssetName(mon.Name.DefaultText);
+
+                if (String.IsNullOrEmpty(mon.PromoteFrom))
+                    continue;
+
+                for (int jj = 0; jj < mon.Forms.Count; jj++)
+                {
+                    MonsterFormData form = (MonsterFormData)mon.Forms[jj];
+                    if (form.Temporary)
+                        continue;
+
+                    evoTree[new MonsterID(mon.PromoteFrom, form.PromoteForm, "", Gender.Unknown)] = new MonsterID(fileName, jj, "", Gender.Unknown);
+                }
+            }
+
             HashSet<string> tm_skills = new HashSet<string>();
             foreach (string tm in ZoneInfo.IterateTMs(ZoneInfo.TMClass.All))
                 tm_skills.Add(tm);
 
-            Dictionary<string, int> learnMoves = new Dictionary<string, int>();
+            Dictionary<string, int> levelMoves = new Dictionary<string, int>();
+            Dictionary<string, int> tutorMoves = new Dictionary<string, int>();
             Dictionary<string, int> eggMoves = new Dictionary<string, int>();
+            Dictionary<string, List<MonsterID>> levelTeachers = new Dictionary<string, List<MonsterID>>();
+            Dictionary<string, List<MonsterID>> eggTeachers = new Dictionary<string, List<MonsterID>>();
+            Dictionary<string, List<MonsterID>> tutorTeachers = new Dictionary<string, List<MonsterID>>();
             for (int ii = 0; ii < TOTAL_DEX; ii++)
             {
                 MonsterData mon = totalEntries[ii];
@@ -2487,80 +2657,26 @@ namespace DataGenerator.Data
                     if (!form.Released)
                         continue;
 
-                    foreach (LearnableSkill skill in form.SecretSkills)
-                    {
-                        if (tm_skills.Contains("tm_" + skill.Skill))
-                            continue;
+                    updateSkillList(totalEntries, dexToId, evoTree, tm_skills, mon, jj, form, IterLevel, levelMoves, levelTeachers);
 
-                        bool newSkill = true;
-                        string prevData = mon.PromoteFrom;
-                        int prevForm = form.PromoteForm;
-                        if (!String.IsNullOrEmpty(prevData))
-                        {
-                            MonsterData preMon = totalEntries[dexToId[prevData]];
-                            MonsterFormData preForm = (MonsterFormData)preMon.Forms[prevForm];
-                            foreach (LearnableSkill preSkill in preForm.SecretSkills)
-                            {
-                                if (preSkill.Skill == skill.Skill)
-                                {
-                                    newSkill = false;
-                                    break;
-                                }
-                            }
-                        }
+                    updateSkillList(totalEntries, dexToId, evoTree, tm_skills, mon, jj, form, IterEgg, eggMoves, eggTeachers);
 
-                        if (newSkill)
-                        {
-                            if (!learnMoves.ContainsKey(skill.Skill))
-                                learnMoves[skill.Skill] = 0;
-                            learnMoves[skill.Skill]++;
-                        }
-                    }
+                    updateSkillList(totalEntries, dexToId, evoTree, tm_skills, mon, jj, form, IterTutor, tutorMoves, tutorTeachers);
 
-                    
-                    foreach (LearnableSkill skill in form.SharedSkills)
-                    {
-                        if (tm_skills.Contains("tm_" + skill.Skill))
-                            continue;
-
-                        bool newSkill = true;
-                        string prevData = mon.PromoteFrom;
-                        int prevForm = form.PromoteForm;
-                        if (!String.IsNullOrEmpty(prevData))
-                        {
-                            MonsterData preMon = totalEntries[dexToId[prevData]];
-                            MonsterFormData preForm = (MonsterFormData)preMon.Forms[prevForm];
-                            foreach (LearnableSkill preSkill in preForm.SharedSkills)
-                            {
-                                if (preSkill.Skill == skill.Skill)
-                                {
-                                    newSkill = false;
-                                    break;
-                                }
-                            }
-                        }
-
-                        if (newSkill)
-                        {
-                            if (!eggMoves.ContainsKey(skill.Skill))
-                                eggMoves[skill.Skill] = 0;
-                            eggMoves[skill.Skill]++;
-                        }
-                    }
                 }
             }
 
-            Dictionary<string, (int, int)> totalMoves = new Dictionary<string, (int, int)>();
+            Dictionary<string, (int, int, string)> totalMoves = new Dictionary<string, (int, int, string)>();
             foreach (string key in eggMoves.Keys)
             {
                 int tutorCount;
-                learnMoves.TryGetValue(key, out tutorCount);
-                totalMoves[key] = (eggMoves[key], tutorCount);
+                tutorMoves.TryGetValue(key, out tutorCount);
+                totalMoves[key] = (eggMoves[key], tutorCount, ChooseTeacher(levelTeachers, eggTeachers, tutorTeachers, key));
             }
-            foreach (string key in learnMoves.Keys)
+            foreach (string key in tutorMoves.Keys)
             {
-                if (!eggMoves.ContainsKey(key))
-                    totalMoves[key] = (0, learnMoves[key]);
+                if (!eggMoves.ContainsKey(key) && !levelMoves.ContainsKey(key))
+                    totalMoves[key] = (0, tutorMoves[key], ChooseTeacher(levelTeachers, eggTeachers, tutorTeachers, key));
             }
             using (StreamWriter file = new StreamWriter("tutor.txt"))
             {
@@ -2576,7 +2692,7 @@ namespace DataGenerator.Data
                         tutorCost = 2;
                     else
                         tutorCost = 1;
-                    file.WriteLine(key + "\t" + totalMoves[key].Item1 + "\t" + totalMoves[key].Item2 + "\t" + tutorCost);
+                    file.WriteLine(key + "\t" + totalMoves[key].Item1 + "\t" + totalMoves[key].Item2 + "\t" + tutorCost + "\t" + totalMoves[key].Item3);
                 }
             }
         }

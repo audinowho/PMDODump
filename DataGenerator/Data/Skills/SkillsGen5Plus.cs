@@ -224,7 +224,7 @@ namespace DataGenerator.Data
             else if (ii == 478)
             {
                 skill.Name = new LocalText("-Magic Room");
-                skill.Desc = new LocalText("The user creates a bizarre area in which Pokémon's held items lose their effects.");
+                skill.Desc = new LocalText("The user creates a bizarre area in which Pokémon's abilities and held items lose their effects.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Status;

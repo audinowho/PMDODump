@@ -80,7 +80,7 @@ Key		EN
 0000-thief-0000|data.Name		Thief
 0000-thief-0001|data.Desc		
 0000-trick_room-0000|data.Name		Trick Room
-0000-trick_room-0001|data.Desc		Effects on all Pokémon's Movement Speed are reversed.
+0000-trick_room-0001|data.Desc		Effects on all Pokémon's Movement Speed are reversed, and Pokémon with a lower Speed stat have better accuracy and evasion.
 0000-wind-0000|data.Name		Wind
 0000-wind-0001|data.Desc		Flying-type Pokémon are protected from their weaknesses.
 0000-wonder_room-0000|data.Name		Wonder Room

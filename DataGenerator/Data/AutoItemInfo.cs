@@ -1175,7 +1175,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("When kept in the bag, the category of the Pokémon's regular attack is changed from physical to special.");
                 if (includeEffects)
                 {
-                    item.OnActions.Add(-5, new FamilyBattleEvent(new RegularAttackNeededEvent(new FlipCategoryEvent(false))));
+                    item.BeforeActions.Add(-5, new FamilyBattleEvent(new RegularAttackNeededEvent(new FlipCategoryEvent(false))));
                 }
             }
             else if (type == ExclusiveItemEffect.StatusOnCategoryHit)
