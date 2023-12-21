@@ -3,6 +3,7 @@
 * Added a summary menu for replays
 * Fixed the adventure trail section of replays
 * Fixed Rockruff evolution method
+* Fixed speed boost effect of Type-specific gems
 * Fixed various dex issues in Gender Unlock mod
 * Explosion and Self-Destruct now affect ghost types using the move
 * Trick Room also reverses speed's effect on accuracy and evasion
