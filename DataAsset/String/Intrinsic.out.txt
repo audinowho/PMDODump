@@ -496,7 +496,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0247-ripen-0000|data.Name		Ripen	Mûrissement	Heranreifen	Maduración		Maturazione	숙성	じゅくせい	じゅくせい	熟成	熟成																																																			
 0247-ripen-0001|data.Desc		Raises a stat when it eats a berry.	Le Pokémon fait mûrir la Baie qu’il tient et double ainsi son effet.	Verdoppelt den Effekt von Beeren, indem es sie heranreifen lässt.	Hace madurar las bayas, por lo que duplica sus efectos.		Fa maturare le bacche raddoppiandone gli effetti.	나무열매를 숙성시켜서 효과가 2배가 된다.	じゅくせい　させることで きのみの　こうかが ばいに　なる。	熟成　させることで きのみの　効果が 倍に　なる。	使树果成熟， 效果变为2倍。	讓樹果成熟， 使效果變為２倍。																																																			
 0248-ice_face-0000|data.Name		Ice Face	Tête de Gel	Tiefkühlkopf	Cara de Hielo		Gelofaccia	아이스페이스	アイスフェイス	アイスフェイス	结冻头	結凍頭																																																			
-0248-ice_face-0001|data.Desc		The Pokémon's ice head can take a physical attack as a substitute, but the attack also changes the Pokémon's appearance. The ice will be restored when it hails.	Le glaçon sur sa tête encaisse les attaques physiques à la place du Pokémon, mais sa destruction modifie son apparence. Le glaçon se reforme quand il grêle.	Der Eisblock um seinen Kopf blockt eine physische Attacke ab. Dies bewirkt jedoch einen Formwechsel. Durch Hagel wird der Eisblock wiederhergestellt.	Absorbe el daño de un ataque físico con el hielo de la cabeza, tras lo cual cambia de forma. El hielo se regenerará la próxima vez que granice.		Grazie al ghiaccio sulla testa, il Pokémon può incassare i danni causati da mosse fisiche, ma cambia forma. Torna al suo stato originale quando grandina.	물리공격을 머리의 얼음이 대신 맞아주지만 모습도 바뀐다. 얼음은 싸라기눈이 내리면 원래대로 돌아온다.	ぶつりこうげきは　あたまの　こおりが みがわりに　なるが　すがたも　かわる。 こおりは　あられが　ふると　もとにもどる。	物理攻撃は　頭の　氷が みがわりに　なるが　姿も　変わる。 氷は　あられが　降ると　元に戻る。	头部的冰会代替自己承受 物理攻击，但是样子会改变。 下冰雹时，冰会恢复原状。	頭部的冰會代替自己承受 物理攻擊，但是樣子會改變。 下冰雹時，冰會回復原狀。																																																			
+0248-ice_face-0001|data.Desc		The Pokémon's ice head can take a physical attack as a substitute, breaking in the process. The ice is restored in hail.	Le glaçon sur sa tête encaisse les attaques physiques à la place du Pokémon, mais sa destruction modifie son apparence. Le glaçon se reforme quand il grêle.	Der Eisblock um seinen Kopf blockt eine physische Attacke ab. Dies bewirkt jedoch einen Formwechsel. Durch Hagel wird der Eisblock wiederhergestellt.	Absorbe el daño de un ataque físico con el hielo de la cabeza, tras lo cual cambia de forma. El hielo se regenerará la próxima vez que granice.		Grazie al ghiaccio sulla testa, il Pokémon può incassare i danni causati da mosse fisiche, ma cambia forma. Torna al suo stato originale quando grandina.	물리공격을 머리의 얼음이 대신 맞아주지만 모습도 바뀐다. 얼음은 싸라기눈이 내리면 원래대로 돌아온다.	ぶつりこうげきは　あたまの　こおりが みがわりに　なるが　すがたも　かわる。 こおりは　あられが　ふると　もとにもどる。	物理攻撃は　頭の　氷が みがわりに　なるが　姿も　変わる。 氷は　あられが　降ると　元に戻る。	头部的冰会代替自己承受 物理攻击，但是样子会改变。 下冰雹时，冰会恢复原状。	頭部的冰會代替自己承受 物理攻擊，但是樣子會改變。 下冰雹時，冰會回復原狀。																																																			
 0249-power_spot-0000|data.Name		Power Spot	Cercle d’Énergie	Kraftquelle	Fuente Energía		Fonte Energetica	파워스폿	パワースポット	パワースポット	能量点	能量點																																																			
 0249-power_spot-0001|data.Desc		Just being next to the Pokémon powers up moves.	Augmente la puissance des capacités des Pokémon qui se trouvent à proximité.	Erhöht bei direkt benachbarten Pokémon die Stärke von Attacken.	Potencia los movimientos de los Pokémon adyacentes.		Potenzia le mosse di chi si trova nelle immediate vicinanze.	옆에 있기만 해도 기술의 위력이 올라간다.	となりに　いるだけで わざの　いりょくが　あがる。	隣に　いるだけで 技の　威力が　上がる。	只要处在相邻位置， 招式的威力就会提高。	只要站在旁邊， 招式的威力就會提高。																																																			
 0250-mimicry-0000|data.Name		Mimicry	Mimétisme	Mimese	Mimetismo		Mimetismo	의태	ぎたい	ぎたい	拟态	擬態																																																			
@@ -535,37 +535,37 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0266-as_one_chill-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Glastrier's Chilling Neigh Ability.	Les talents Tension de Sylveroy et Blanche Ruade de Blizzeval sont cumulés.	Das Pokémon verfügt sowohl über Coronospas Fähigkeit Anspannung als auch über Polaross’ Fähigkeit Helles Wiehern.	El Pokémon tiene dos habilidades: Relincho Blanco de Glastrier y Nerviosismo de Calyrex.		Il Pokémon ha una doppia abilità: Agitazione di Calyrex e Nitrito Bianco di Glastrier.	버드렉스의 긴장감과 블리자포스의 백의울음 두 가지 특성을 겸비한다.	バドレックスの　きんちょうかんと ブリザポスの　しろのいななきの ふたつの　とくせいを　あわせもつ。	バドレックスの　きんちょうかんと ブリザポスの　しろのいななきの 二つの　特性を　あわせ持つ。	兼备蕾冠王的紧张感和 雪暴马的苍白嘶鸣这两种特性。	兼具蕾冠王的緊張感和 雪暴馬的蒼白嘶鳴這２種特性。																																																			
 0267-as_one_grim-0000|data.Name		As One	Osmose Équine	Reitgespann	Unidad Ecuestre		Sintonia Equina	혼연일체	じんばいったい	じんばいったい	人马一体	人馬一體																																																			
 0267-as_one_grim-0001|data.Desc		This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.	Les talents Tension de Sylveroy et Sombre Ruade de Spectreval sont cumulés.	Das Pokémon verfügt sowohl über Coronospas Fähigkeit Anspannung als auch über Phantoross’ Fähigkeit Dunkles Wiehern.	El Pokémon tiene dos habilidades: Relincho Negro de Spectrier y Nerviosismo de Calyrex.		Il Pokémon ha una doppia abilità: Agitazione di Calyrex e Nitrito Nero di Spectrier.	버드렉스의 긴장감과 레이스포스의 흑의울음 두 가지 특성을 겸비한다.	バドレックスの　きんちょうかんと レイスポスの　くろのいななきの ふたつの　とくせいを　あわせもつ。	バドレックスの　きんちょうかんと レイスポスの　くろのいななきの 二つの　特性を　あわせ持つ。	兼备蕾冠王的紧张感和 灵幽马的漆黑嘶鸣这两种特性。	兼具蕾冠王的緊張感和 靈幽馬的漆黑嘶鳴這２種特性。																																																			
-0268-lingering_aroma-0000|data.Name		Lingering Aroma	Odeur Tenace	Duftschwade	Olor Persistente		Odore Tenace		とれないにおい	とれないにおい																																																					
+0268-lingering_aroma-0000|data.Name		Lingering Aroma	Odeur Tenace	Duftschwade	Olor Persistente		Odore Tenace		とれないにおい	とれないにおい	甩不掉的气味																																																				
 0268-lingering_aroma-0001|data.Desc																																																															
-0269-seed_sower-0000|data.Name		Seed Sower	Semencier	Streusaat	Disemillar		Spargisemi		こぼれダネ	こぼれダネ																																																					
+0269-seed_sower-0000|data.Name		Seed Sower	Semencier	Streusaat	Disemillar		Spargisemi		こぼれダネ	こぼれダネ	掉出种子																																																				
 0269-seed_sower-0001|data.Desc																																																															
-0270-thermal_exchange-0000|data.Name		Thermal Exchange	Thermodynamique	Thermowandel	Termoscambio		Termoscambio		ねつこうかん	ねつこうかん																																																					
+0270-thermal_exchange-0000|data.Name		Thermal Exchange	Thermodynamique	Thermowandel	Termoscambio		Termoscambio		ねつこうかん	ねつこうかん	热交换																																																				
 0270-thermal_exchange-0001|data.Desc																																																															
-0271-anger_shell-0000|data.Name		Anger Shell	Courroupace	Wutpanzer	Coraza Ira		Iraguscio		いかりのこうら	いかりのこうら																																																					
+0271-anger_shell-0000|data.Name		Anger Shell	Courroupace	Wutpanzer	Coraza Ira		Iraguscio		いかりのこうら	いかりのこうら	愤怒甲壳																																																				
 0271-anger_shell-0001|data.Desc																																																															
-0272-purifying_salt-0000|data.Name		Purifying Salt	Sel Purificateur	Läutersalz	Sal Purificadora		Sale Purificante		きよめのしお	きよめのしお																																																					
+0272-purifying_salt-0000|data.Name		Purifying Salt	Sel Purificateur	Läutersalz	Sal Purificadora		Sale Purificante		きよめのしお	きよめのしお	洁净之盐																																																				
 0272-purifying_salt-0001|data.Desc																																																															
-0273-well_baked_body-0000|data.Name		Well-Baked Body	Bien Cuit	Knusperkruste	Cuerpo Horneado		Bentostato		こんがりボディ	こんがりボディ																																																					
+0273-well_baked_body-0000|data.Name		Well-Baked Body	Bien Cuit	Knusperkruste	Cuerpo Horneado		Bentostato		こんがりボディ	こんがりボディ	焦香之躯																																																				
 0273-well_baked_body-0001|data.Desc																																																															
-0274-wind_rider-0000|data.Name		Wind Rider	Aéroporté	Windreiter	Surcavientos		Vento Propizio		かぜのり	かぜのり																																																					
+0274-wind_rider-0000|data.Name		Wind Rider	Aéroporté	Windreiter	Surcavientos		Vento Propizio		かぜのり	かぜのり	乘风																																																				
 0274-wind_rider-0001|data.Desc																																																															
-0275-guard_dog-0000|data.Name		Guard Dog	Chien de Garde	Wachhund	Perro Guardián		Cane da Guardia		ばんけん	ばんけん																																																					
+0275-guard_dog-0000|data.Name		Guard Dog	Chien de Garde	Wachhund	Perro Guardián		Cane da Guardia		ばんけん	ばんけん	看门犬																																																				
 0275-guard_dog-0001|data.Desc																																																															
-0276-rocky_payload-0000|data.Name		Rocky Payload	Porte-Roche	Steinträger	Transportarrocas		Portamassi		いわはこび	いわはこび																																																					
+0276-rocky_payload-0000|data.Name		Rocky Payload	Porte-Roche	Steinträger	Transportarrocas		Portamassi		いわはこび	いわはこび	搬岩																																																				
 0276-rocky_payload-0001|data.Desc																																																															
-0277-wind_power-0000|data.Name		Wind Power	Turbine Éolienne	Windkraft	Energía Eólica		Energia Eolica		ふうりょくでんき	ふうりょくでんき																																																					
+0277-wind_power-0000|data.Name		Wind Power	Turbine Éolienne	Windkraft	Energía Eólica		Energia Eolica		ふうりょくでんき	ふうりょくでんき	风力发电																																																				
 0277-wind_power-0001|data.Desc																																																															
-0278-zero_to_hero-0000|data.Name		Zero to Hero	Supermutation	Superwechsel	Cambio Heroico		Supercambio		マイティチェンジ	マイティチェンジ																																																					
+0278-zero_to_hero-0000|data.Name		Zero to Hero	Supermutation	Superwechsel	Cambio Heroico		Supercambio		マイティチェンジ	マイティチェンジ	全能变身																																																				
 0278-zero_to_hero-0001|data.Desc																																																															
-0279-commander-0000|data.Name		Commander	Commandant	Kommandant	Comandar		Torre di Comando		しれいとう	しれいとう																																																					
+0279-commander-0000|data.Name		Commander	Commandant	Kommandant	Comandar		Torre di Comando		しれいとう	しれいとう	发号施令																																																				
 0279-commander-0001|data.Desc																																																															
-0280-electromorphosis-0000|data.Name		Electromorphosis	Grecharge	Dynamo	Dinamo		Convertivolt		でんきにかえる	でんきにかえる																																																					
+0280-electromorphosis-0000|data.Name		Electromorphosis	Grecharge	Dynamo	Dinamo		Convertivolt		でんきにかえる	でんきにかえる	电力转换																																																				
 0280-electromorphosis-0001|data.Desc																																																															
-0281-protosynthesis-0000|data.Name		Protosynthesis	Paléosynthèse	Paläosynthese	Paleosíntesis		Paleoattivazione		こだいかっせい	こだいかっせい																																																					
+0281-protosynthesis-0000|data.Name		Protosynthesis	Paléosynthèse	Paläosynthese	Paleosíntesis		Paleoattivazione		こだいかっせい	こだいかっせい	古代活性																																																				
 0281-protosynthesis-0001|data.Desc																																																															
-0282-quark_drive-0000|data.Name		Quark Drive	Charge Quantique	Quantenantrieb	Carga Cuark		Carica Quark		クォークチャージ	クォークチャージ																																																					
+0282-quark_drive-0000|data.Name		Quark Drive	Charge Quantique	Quantenantrieb	Carga Cuark		Carica Quark		クォークチャージ	クォークチャージ	夸克充能																																																				
 0282-quark_drive-0001|data.Desc																																																															
-0283-good_as_gold-0000|data.Name		Good as Gold	Corps en Or	Goldkörper	Cuerpo Áureo		Corpo Aureo		おうごんのからだ	おうごんのからだ																																																					
+0283-good_as_gold-0000|data.Name		Good as Gold	Corps en Or	Goldkörper	Cuerpo Áureo		Corpo Aureo		おうごんのからだ	おうごんのからだ	黄金之躯																																																				
 0283-good_as_gold-0001|data.Desc																																																															
 0284-vessel_of_ruin-0000|data.Name		Vessel of Ruin	Urne du Fléau	Unheilsgefäß	Caldero Debacle		Vaso Nefasto		わざわいのうつわ	わざわいのうつわ	灾祸之鼎																																																				
 0284-vessel_of_ruin-0001|data.Desc		The power of the Pokémon's ruinous vessel lowers the Sp. Atk stats of all Pokémon except itself.			El catastrófico poder del caldero del Pokémon reduce el Ataque Especial de todos los Pokémon menos el usuario.						以能呼唤灾厄的鼎的力量降低除自己以外的宝可梦的特攻。 																																																				
@@ -575,25 +575,25 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0286-tablets_of_ruin-0001|data.Desc		The power of the Pokémon's ruinous wooden tablets lowers the Attack stats of all Pokémon except itself.			El catastrófico poder de la tablilla del Pokémon reduce el Ataque de todos los Pokémon menos el usuario.						以能呼唤灾厄的简的力量降低除自己以外的宝可梦的攻击。																																																				
 0287-beads_of_ruin-0000|data.Name		Beads of Ruin	Perles du Fléau	Unheilsjuwelen	Abalorio Debacle		Monile Nefasto		わざわいのたま	わざわいのたま	灾祸之玉																																																				
 0287-beads_of_ruin-0001|data.Desc		The power of the Pokémon's ruinous beads lowers the Sp. Def stats of all Pokémon except itself.			El catastrófico poder del abalorio del Pokémon reduce la Defensa Especial de todos los Pokémon menos el usuario.						以能呼唤灾厄的勾玉的力量降低除自己以外的宝可梦的特防。																																																				
-0288-orichalcum_pulse-0000|data.Name		Orichalcum Pulse	Pouls Orichalque	Orichalkum-Puls	Latido Oricalco		Ritmo d’Oricalco		ひひいろのこどう	ひひいろのこどう																																																					
+0288-orichalcum_pulse-0000|data.Name		Orichalcum Pulse	Pouls Orichalque	Orichalkum-Puls	Latido Oricalco		Ritmo d’Oricalco		ひひいろのこどう	ひひいろのこどう	绯红脉动																																																				
 0288-orichalcum_pulse-0001|data.Desc																																																															
-0289-hadron_engine-0000|data.Name		Hadron Engine	Moteur à Hadrons	Hadronen-Motor	Motor Hadrónico		Motore Adronico		ハドロンエンジン	ハドロンエンジン																																																					
+0289-hadron_engine-0000|data.Name		Hadron Engine	Moteur à Hadrons	Hadronen-Motor	Motor Hadrónico		Motore Adronico		ハドロンエンジン	ハドロンエンジン	强子引擎																																																				
 0289-hadron_engine-0001|data.Desc																																																															
-0290-opportunist-0000|data.Name		Opportunist	Opportuniste	Profiteur	Oportunista		Scrocco		びんじょう	びんじょう																																																					
+0290-opportunist-0000|data.Name		Opportunist	Opportuniste	Profiteur	Oportunista		Scrocco		びんじょう	びんじょう	跟风																																																				
 0290-opportunist-0001|data.Desc																																																															
-0291-cud_chew-0000|data.Name		Cud Chew	Ruminant	Wiederkäuer	Rumia		Ruminante		はんすう	はんすう																																																					
+0291-cud_chew-0000|data.Name		Cud Chew	Ruminant	Wiederkäuer	Rumia		Ruminante		はんすう	はんすう	反刍																																																				
 0291-cud_chew-0001|data.Desc																																																															
-0292-sharpness-0000|data.Name		Sharpness	Incisif	Scharfkantig	Cortante		Affilama		きれあじ	きれあじ																																																					
-0292-sharpness-0001|data.Desc		Powers up slicing moves.			Aumenta el poder de los movimientos cortantes.																																																										
-0293-supreme_overlord-0000|data.Name		Supreme Overlord	Général Suprême	Feldherr	General Supremo		Generale Supremo		そうだいしょう	そうだいしょう																																																					
+0292-sharpness-0000|data.Name		Sharpness	Incisif	Scharfkantig	Cortante		Affilama		きれあじ	きれあじ	锋锐																																																				
+0292-sharpness-0001|data.Desc		Powers up slicing moves.			Aumenta el poder de los movimientos cortantes.						提高切割对手的招式的威力。																																																				
+0293-supreme_overlord-0000|data.Name		Supreme Overlord	Général Suprême	Feldherr	General Supremo		Generale Supremo		そうだいしょう	そうだいしょう	大将																																																				
 0293-supreme_overlord-0001|data.Desc																																																															
-0294-costar-0000|data.Name		Costar	Collab	Synchronauftritt	Unísono		Coprotagonismo		きょうえん	きょうえん																																																					
+0294-costar-0000|data.Name		Costar	Collab	Synchronauftritt	Unísono		Coprotagonismo		きょうえん	きょうえん	同台共演																																																				
 0294-costar-0001|data.Desc																																																															
-0295-toxic_debris-0000|data.Name		Toxic Debris	Dépôt Toxique	Giftbelag	Capa Tóxica		Mantossina		どくげしょう	どくげしょう																																																					
+0295-toxic_debris-0000|data.Name		Toxic Debris	Dépôt Toxique	Giftbelag	Capa Tóxica		Mantossina		どくげしょう	どくげしょう	毒满地																																																				
 0295-toxic_debris-0001|data.Desc																																																															
-0296-armor_tail-0000|data.Name		Armor Tail	Armure Caudale	Schweifrüstung	Cola Armadura		Codarmatura		テイルアーマー	テイルアーマー																																																					
+0296-armor_tail-0000|data.Name		Armor Tail	Armure Caudale	Schweifrüstung	Cola Armadura		Codarmatura		テイルアーマー	テイルアーマー	尾甲																																																				
 0296-armor_tail-0001|data.Desc																																																															
-0297-earth_eater-0000|data.Name		Earth Eater	Absorbe-Terre	Bodenschmaus	Geofagia		Mangiaterra		どしょく	どしょく																																																					
+0297-earth_eater-0000|data.Name		Earth Eater	Absorbe-Terre	Bodenschmaus	Geofagia		Mangiaterra		どしょく	どしょく	食土																																																				
 0297-earth_eater-0001|data.Desc																																																															
-0298-mycelium_might-0000|data.Name		Mycelium Might	Force Fongique	Myzelienkraft	Poder Fúngico		Micoforza		きんしのちから	きんしのちから																																																					
+0298-mycelium_might-0000|data.Name		Mycelium Might	Force Fongique	Myzelienkraft	Poder Fúngico		Micoforza		きんしのちから	きんしのちから	菌丝之力																																																				
 0298-mycelium_might-0001|data.Desc																																																															

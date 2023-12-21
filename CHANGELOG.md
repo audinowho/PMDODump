@@ -5,6 +5,7 @@
 * Fixed Rockruff evolution method
 * Fixed speed boost effect of Type-specific gems
 * Fixed various dex issues in Gender Unlock mod
+* Added Wailmer in Castaway Cave
 * Explosion and Self-Destruct now affect ghost types using the move
 * Trick Room also reverses speed's effect on accuracy and evasion
 * Soak Accuracy: Cannot Miss -> 100%

@@ -496,7 +496,7 @@ Key		EN
 0247-ripen-0000|data.Name		Ripen
 0247-ripen-0001|data.Desc		Raises a stat when it eats a berry.
 0248-ice_face-0000|data.Name		Ice Face
-0248-ice_face-0001|data.Desc		The Pokémon's ice head can take a physical attack as a substitute, but the attack also changes the Pokémon's appearance. The ice will be restored when it hails.
+0248-ice_face-0001|data.Desc		The Pokémon's ice head can take a physical attack as a substitute, breaking in the process. The ice is restored in hail.
 0249-power_spot-0000|data.Name		Power Spot
 0249-power_spot-0001|data.Desc		Just being next to the Pokémon powers up moves.
 0250-mimicry-0000|data.Name		Mimicry

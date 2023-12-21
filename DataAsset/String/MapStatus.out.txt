@@ -80,7 +80,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-thief-0000|data.Name	Not displayed to players.  Low Priority.	Thief		Dieb	Ladrón		Ladro				盗贼
 0000-thief-0001|data.Desc											
 0000-trick_room-0000|data.Name		Trick Room	Distorsion	Bizarroraum	Espacio Raro		Distortozona	트릭룸			戏法空间
-0000-trick_room-0001|data.Desc		Effects on all Pokémon's Movement Speed are reversed.		Verursacht, dass die Bewegungsgeschwindigkeit aller Pokémon umgekehrt sind.	Los efectos de la Velocidad de Movimiento de los Pokémon se invierten.		La velocità di movimento dei Pokémon viene invertita.				所有宝可梦的移动速度效果反转。
+0000-trick_room-0001|data.Desc		Effects on all Pokémon's Movement Speed are reversed, and Pokémon with a lower Speed stat have better accuracy and evasion.									
 0000-wind-0000|data.Name		Wind	Courant d'Air	Wind	Viento		Vento				起风
 0000-wind-0001|data.Desc		Flying-type Pokémon are protected from their weaknesses.	Les Pokémon de type Vol sont protégés de leurs faiblesses.	Flug-Pokémon sind gegen ihre Schwächen geschützt.	Los Pokémon de tipo Volador están protegidos de sus debilidades.		I Pokémon di tipo Volante sono protetti dalle loro debolezze.				飞行属性宝可梦的弱点被保护了。
 0000-wonder_room-0000|data.Name		Wonder Room	Zone Étrange	Wunderraum	Zona Extraña		Mirabilzona				奇妙空间
