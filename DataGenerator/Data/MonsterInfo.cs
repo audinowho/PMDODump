@@ -918,6 +918,8 @@ namespace DataGenerator.Data
                         branch.Details.Add(new EvoSetForm(0));
                     else if (evoSpecies == 666)//vivillon
                         branch.Details.Add(new EvoFormLocOrigin());
+                    else if (evoSpecies == 671)//florges
+                        branch.Details.Add(new EvoForm(0, 1, 2, 3, 4));
                     else if (evoSpecies == 678)//meowstic
                     {
                         EvoSetForm evoDetail = new EvoSetForm(1);

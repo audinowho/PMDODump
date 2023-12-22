@@ -3245,19 +3245,30 @@ namespace DataGenerator.Data
             }
             else if (ii == 617)
             {
-                skill.Name = new LocalText("**Light of Ruin");
+                skill.Name = new LocalText("Light of Ruin");
                 skill.Desc = new LocalText("Drawing power from the Eternal Flower, the user fires a powerful beam of light. This also damages the user quite a lot.");
                 skill.BaseCharges = 5;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
-                skill.Data.HitRate = 90;
-                skill.Data.SkillStates.Set(new BasePowerState(140));
+                skill.Data.HitRate = 85;
+                skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(3, false));
+                SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new WaveMotionAction();
+                ((WaveMotionAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((WaveMotionAction)skill.HitboxAction).Range = 8;
+                ((WaveMotionAction)skill.HitboxAction).Speed = 10;
+                ((WaveMotionAction)skill.HitboxAction).Linger = 6;
+                ((WaveMotionAction)skill.HitboxAction).Wide = true;
+                ((WaveMotionAction)skill.HitboxAction).HitTiles = true;
+                skill.HitboxAction.ActionFX.ScreenMovement = new ScreenMover(0, 8, 30);
+                ((WaveMotionAction)skill.HitboxAction).Anim = new BeamAnimData("Beam_Pink", 2);
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Lunar_Dance_2";
             }
             else if (ii == 618)
             {
