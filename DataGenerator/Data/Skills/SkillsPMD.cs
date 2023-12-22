@@ -5579,7 +5579,7 @@ namespace DataGenerator.Data
             else if (ii == 218)
             {
                 skill.Name = new LocalText("-Frustration");
-                skill.Desc = new LocalText("A full-power attack that grows more powerful if the user has no allies near it.");
+                skill.Desc = new LocalText("A full-power attack that grows less powerful the more allies there are nearby.");
                 skill.BaseCharges = 18;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
