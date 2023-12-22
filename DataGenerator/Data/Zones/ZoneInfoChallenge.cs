@@ -1049,6 +1049,8 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                 }
 
+                AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(1, max_floors - 1)), false);
+
                 for (int ii = 0; ii < max_floors; ii++)
                 {
                     RoomFloorGen layout = new RoomFloorGen();
