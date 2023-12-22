@@ -110,7 +110,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("poison", true, false, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"),  false));
             }
             else if (ii == 4)
             {
@@ -140,7 +140,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("sleep", true, false, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 5)
             {
@@ -174,7 +174,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("confuse", true, false, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 6)
             {
@@ -205,7 +205,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, true, -1));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 7)
             {
@@ -236,7 +236,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new AffectHighestStatBattleEvent(true, "mod_attack", "mod_defense", "mod_special_attack", "mod_special_defense", true, -2));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 8)
             {
@@ -265,7 +265,7 @@ namespace DataGenerator.Data
                 newData.HitFX.Emitter = new SingleEmitter(new AnimData("X_RSE", 15), 3);
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot", true, false));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 9)
             {
@@ -290,7 +290,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new SpiteEvent("last_used_move_slot", 100));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 10)
             {
@@ -325,7 +325,7 @@ namespace DataGenerator.Data
                 eligibles.Add(new FlagType(typeof(GummiState)));
                 newData.OnHits.Add(0, new TransformItemEvent(true, false, "seed_decoy", "food_grimy", eligibles));
                 newData.OnHits.Add(0, new ChangeToAbilityEvent("none", true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 11)
             {
@@ -359,7 +359,7 @@ namespace DataGenerator.Data
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(5));
                 newData.OnHits.Add(0, new StatusStateBattleEvent("immobilized", true, false, true, statusStates));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 12)
             {
@@ -388,7 +388,7 @@ namespace DataGenerator.Data
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(HeldState)));
                 newData.OnHits.Add(0, new TransformItemEvent(true, false, "seed_decoy", "food_apple", eligibles));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 13)
             {
@@ -415,7 +415,7 @@ namespace DataGenerator.Data
 
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new RandomWarpEvent(50, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 14)
             {
@@ -445,7 +445,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHitTiles.Add(0, new LaunchAllEvent(8));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 15)
             {
@@ -474,7 +474,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHitTiles.Add(0, new WarpFoesToTileEvent(80, 4));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 16)
             {
@@ -496,7 +496,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 17)
             {
@@ -528,7 +528,7 @@ namespace DataGenerator.Data
                 newData.HitCharAction = new CharAnimFrameType(04);//Hurt
                 newData.OnHits.Add(0, new IndirectDamageEvent(6));
                 newData.OnHits.Add(0, new StatusBattleEvent("flinch", true, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 18)
             {
@@ -563,7 +563,7 @@ namespace DataGenerator.Data
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 19)
             {
@@ -598,7 +598,7 @@ namespace DataGenerator.Data
                 newData.OnHitTiles.Add(0, new RemoveTrapEvent());
                 newData.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 20)
             {
@@ -621,7 +621,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new IndirectDamageEvent(8));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 21)
             {
@@ -645,7 +645,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("poison_toxic", true, false, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 22)
             {
@@ -669,7 +669,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(-1, new IndirectElementDamageEvent("rock", 8));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 23)
             {
@@ -702,7 +702,7 @@ namespace DataGenerator.Data
                 //newData.HitEffects.Add(-1, new DamageFormulaEffect());
                 newData.HitCharAction = new CharAnimFrameType(04);//Hurt
                 newData.OnHits.Add(0, new DropItemEvent(false, false, "seed_decoy", new HashSet<FlagType>(), new StringKey(), false));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 24)
             {
@@ -731,7 +731,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("grudge", true, false, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 25)
             {
@@ -754,7 +754,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new RestoreBellyEvent(-20, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 26)
             {
@@ -775,7 +775,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 27)
             {
@@ -809,7 +809,7 @@ namespace DataGenerator.Data
                 newData.HitFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
 
                 newData.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(StatChangeState), true, new StringKey("MSG_BUFF_REMOVE")));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 28)
             {
@@ -835,7 +835,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHitTiles.Add(0, new TriggerTrapEvent("trap_trigger"));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 29)
             {
@@ -857,7 +857,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 30)
             {
@@ -880,7 +880,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 31)
             {
@@ -903,7 +903,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 32)
             {
@@ -926,7 +926,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 33)
             {
