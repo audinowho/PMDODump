@@ -145,8 +145,7 @@ namespace DataGenerator.Data
                 AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(0, max_floors)),
                     new MapItem("apricorn_green"), new MapItem("apricorn_purple"));
 
-                RandBag<IGenStep> npcZoneSpawns = new RandBag<IGenStep>();
-                npcZoneSpawns.RemoveOnRoll = true;
+                RandBag<IGenStep> npcZoneSpawns = new RandBag<IGenStep>(true, new List<IGenStep>());
                 //poison protection
                 {
                     PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
