@@ -2094,8 +2094,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 293)
             {
-                ability.Name = new LocalText("**Supreme Overlord");
-                ability.Desc = new LocalText("");
+                ability.Name = new LocalText("Supreme Overlord");
+                ability.Desc = new LocalText("The Pokémon's Attack and Sp. Atk stats are boosted for every fainted teammate.");
+                ability.OnActions.Add(0, new MultiplyFromFallenEvent(10));
             }
             else if (ii == 294)
             {

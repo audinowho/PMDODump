@@ -2,6 +2,7 @@
 
 * Added Light of Ruin
 * Prevented Eternal Floette from evolving
+* Nigh Slash PP 16 -> 15
 * Fixed issues where changed abilities and typings persisted across floors
 * Moved hub destinations to before dungeon destinations
 * Block out unreleased moves in learnset menu

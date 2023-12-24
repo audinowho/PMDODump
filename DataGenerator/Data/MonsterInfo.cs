@@ -680,9 +680,9 @@ namespace DataGenerator.Data
                         }
                         else if (evoSpecies == 983)//kingambit
                         {
-                            //FIXME
-                            EvoKillCount evoDetail = new EvoKillCount();
-                            evoDetail.Amount = 10;
+                            EvoPartner evoDetail = new EvoPartner();
+                            evoDetail.Species = "bisharp";
+                            evoDetail.Amount = 2;
                             branch.Details.Add(evoDetail);
                         }
                         else if (evoSpecies == 1000)//gholdengo
@@ -819,6 +819,7 @@ namespace DataGenerator.Data
                             {
                                 EvoPartner evoDetail = new EvoPartner();
                                 evoDetail.Species = monsterKeys[Convert.ToInt32(allySpecies)];
+                                evoDetail.Amount = 1;
                                 branch.Details.Add(evoDetail);
                             }
                             else if (CheckEvoConditions(reader, "min_level", "party_type_id"))
@@ -867,6 +868,7 @@ namespace DataGenerator.Data
                             {
                                 EvoPartner evoDetail = new EvoPartner();
                                 evoDetail.Species = monsterKeys[Convert.ToInt32(tradeSpecies)];
+                                evoDetail.Amount = 1;
                                 branch.Details.Add(evoDetail);
                             }
                             else

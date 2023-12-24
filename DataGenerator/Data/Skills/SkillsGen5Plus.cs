@@ -7479,20 +7479,29 @@ namespace DataGenerator.Data
             }
             else if (ii == 869)
             {
-                skill.Name = new LocalText("**Kowtow Cleave");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 10;
+                skill.Name = new LocalText("Kowtow Cleave");
+                skill.Desc = new LocalText("The user slashes at the target after kowtowing to make the target let down its guard. This attack never misses.");
+                skill.BaseCharges = 17;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new BladeState());
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(85));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).CharAnim = 13;//Slice
+                ((DashAction)skill.HitboxAction).Range = 2;
+                ((DashAction)skill.HitboxAction).StopAtWall = true;
+                ((DashAction)skill.HitboxAction).StopAtHit = true;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
+                skill.HitboxAction.TileEmitter = new SingleEmitter(new AnimData("Night_Slash", 1));
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Guillotine";
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Psycho_Cut_Cut", 2));
             }
             else if (ii == 870)
             {
