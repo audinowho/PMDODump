@@ -2,7 +2,8 @@
 
 * Added Light of Ruin
 * Prevented Eternal Floette from evolving
-* Nigh Slash PP 16 -> 15
+* Night Slash PP 16 -> 15
+* Assembly Box brings in any Pokemon from the assembly
 * Fixed issues where changed abilities and typings persisted across floors
 * Moved hub destinations to before dungeon destinations
 * Block out unreleased moves in learnset menu

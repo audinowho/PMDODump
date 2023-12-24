@@ -3095,7 +3095,7 @@ namespace DataGenerator.Data
             else if (ii == 451)
             {
                 item.Name = new LocalText("Assembly Box");
-                item.Desc = new LocalText("A marvelous box that lets the user add a Pokémon from the assembly to the team. It only works for Pokémon that joined the current dungeon.");
+                item.Desc = new LocalText("A marvelous box that lets the user add a Pokémon from the assembly to the team.");
                 item.Sprite = "Machine_Green";
                 item.Icon = 12;
                 item.UsageType = ItemData.UseType.Use;
