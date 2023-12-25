@@ -2013,6 +2013,7 @@ namespace DataGenerator.Data
                 item.UseEvent.OnHits.Add(0, new ChangeToAbilityEvent(DataManager.Instance.DefaultIntrinsic, true));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = CharAction.MAX_RANGE;
+                ((AreaAction)item.UseAction).Speed = 72;
                 item.UseAction.ActionFX.Sound = "DUN_Disable";
                 ((AreaAction)item.UseAction).ActionFX.Emitter = new SingleEmitter(new AnimData("Circle_Red_Out", 3));
                 item.UseAction.TargetAlignments |= Alignment.Foe;

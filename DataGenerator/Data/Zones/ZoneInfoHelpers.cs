@@ -126,7 +126,7 @@ namespace DataGenerator.Data
         {
             SpawnList<IGenStep> zoneSpawns = new SpawnList<IGenStep>();
             foreach (SpawnList<MapItem>.SpawnRate spawnRate in items)
-                zoneSpawns.Add(new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(spawnRate.Spawn))), spawnRate.Rate);
+                zoneSpawns.Add(new RandomSpawnStep<ListMapGenContext, MapItem>(new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(spawnRate.Spawn))), spawnRate.Rate);
             SpreadStepZoneStep zoneStep = new SpreadStepZoneStep(spreadPlan, PR_SPAWN_ITEMS, zoneSpawns);
             floorSegment.ZoneSteps.Add(zoneStep);
         }

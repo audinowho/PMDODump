@@ -393,7 +393,7 @@ namespace DataGenerator
                         {
                             //SkillInfo.AddUnreleasedMoveData();
                             //SkillInfo.AddMoveData();
-                            SkillInfo.AddMoveData(617);
+                            //SkillInfo.AddMoveData(869);
                             //SkillInfo.AddMoveDataToAnims(120, 153);
                         }
 
