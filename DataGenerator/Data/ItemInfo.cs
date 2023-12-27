@@ -2013,7 +2013,7 @@ namespace DataGenerator.Data
                 item.UseEvent.OnHits.Add(0, new ChangeToAbilityEvent(DataManager.Instance.DefaultIntrinsic, true));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = CharAction.MAX_RANGE;
-                ((AreaAction)item.UseAction).Speed = 10;
+                ((AreaAction)item.UseAction).Speed = 72;
                 item.UseAction.ActionFX.Sound = "DUN_Disable";
                 ((AreaAction)item.UseAction).ActionFX.Emitter = new SingleEmitter(new AnimData("Circle_Red_Out", 3));
                 item.UseAction.TargetAlignments |= Alignment.Foe;
@@ -3095,7 +3095,7 @@ namespace DataGenerator.Data
             else if (ii == 451)
             {
                 item.Name = new LocalText("Assembly Box");
-                item.Desc = new LocalText("A marvelous box that lets the user add a Pokémon from the assembly to the team. It only works for Pokémon that joined the current dungeon.");
+                item.Desc = new LocalText("A marvelous box that lets the user add a Pokémon from the assembly to the team.");
                 item.Sprite = "Machine_Green";
                 item.Icon = 12;
                 item.UsageType = ItemData.UseType.Use;

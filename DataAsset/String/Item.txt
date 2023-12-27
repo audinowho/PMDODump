@@ -548,7 +548,7 @@ Key		EN
 0012-machine_ability_capsule-0000|data.Name		Ability Capsule
 0012-machine_ability_capsule-0001|data.Desc		A capsule that allows a Pokémon to change its Abilities when used.
 0012-machine_assembly_box-0000|data.Name		Assembly Box
-0012-machine_assembly_box-0001|data.Desc		A marvelous box that lets the user add a Pokémon from the assembly to the team. It only works for Pokémon that joined the current dungeon.
+0012-machine_assembly_box-0001|data.Desc		A marvelous box that lets the user add a Pokémon from the assembly to the team.
 0012-machine_recall_box-0000|data.Name		Recall Box
 0012-machine_recall_box-0001|data.Desc		A marvelous box that lets the user recall any move they've learned in the past.
 0012-machine_storage_box-0000|data.Name		Storage Box

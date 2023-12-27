@@ -393,7 +393,7 @@ namespace DataGenerator
                         {
                             //SkillInfo.AddUnreleasedMoveData();
                             //SkillInfo.AddMoveData();
-                            SkillInfo.AddMoveData(617);
+                            //SkillInfo.AddMoveData(869);
                             //SkillInfo.AddMoveDataToAnims(120, 153);
                         }
 
@@ -422,7 +422,7 @@ namespace DataGenerator
                             //MapInfo.AddMapData();
                             MapInfo.AddGroundData("test_grounds");
                             ZoneInfo.AddZoneData(false);
-                            //ZoneInfo.AddZoneData(false, 10);
+                            //ZoneInfo.AddZoneData(false, 7);
                             //ZoneInfo.AddZoneData(false, 0);
                         }
 
