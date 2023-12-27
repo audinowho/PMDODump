@@ -635,6 +635,9 @@ namespace DataGenerator.Data
                             EvoLevel evoDetail = new EvoLevel();
                             evoDetail.Level = Convert.ToInt32(25);
                             branch.Details.Add(evoDetail);
+                            EvoSetForm stealthForm = new EvoSetForm(1);
+                            stealthForm.Conditions.Add(new EvoMapStart());
+                            branch.Details.Add(stealthForm);
                         }
                         else if (evoSpecies == 936)//armarouge
                         {
