@@ -4,6 +4,7 @@
 * Prevented Eternal Floette from evolving
 * Night Slash PP 16 -> 15
 * Assembly Box brings in any Pokemon from the assembly
+* Fixed an issue where allies that look for items will not pick them up if they spawned on top of them
 * Fixed issues where changed abilities and typings persisted across floors
 * Fixed enemies despawning onscreen in certain dungeons
 * Moved hub destinations to before dungeon destinations
