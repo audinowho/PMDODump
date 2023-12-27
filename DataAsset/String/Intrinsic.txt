@@ -586,7 +586,7 @@ Key		EN
 0292-sharpness-0000|data.Name		Sharpness
 0292-sharpness-0001|data.Desc		Powers up slicing moves.
 0293-supreme_overlord-0000|data.Name		Supreme Overlord
-0293-supreme_overlord-0001|data.Desc		
+0293-supreme_overlord-0001|data.Desc		The Pokémon's Attack and Sp. Atk stats are boosted for every fainted teammate.
 0294-costar-0000|data.Name		Costar
 0294-costar-0001|data.Desc		
 0295-toxic_debris-0000|data.Name		Toxic Debris

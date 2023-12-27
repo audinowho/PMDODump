@@ -1,57 +1,93 @@
 Sheet: Hardcode
 
 Sheet: Content
-    * Added MENU_CURRENCY_AVAILABLE
-    * Added MENU_SKILL_TUTOR
-    * Added TALK_ESCORT_BROTHER_ACCEPT
-    * Added TALK_ESCORT_BROTHER_FULL_001
-    * Added TALK_ESCORT_BROTHER_HALF
-    * Added TALK_ESCORT_BROTHER_PINCH
-    * Added TALK_ESCORT_BROTHER_START
-    * Added TALK_ESCORT_FATHER_ACCEPT
-    * Added TALK_ESCORT_FATHER_FULL_001
-    * Added TALK_ESCORT_FATHER_HALF
-    * Added TALK_ESCORT_FATHER_PINCH
-    * Added TALK_ESCORT_FATHER_START
-    * Added TALK_ESCORT_GRANDMA_ACCEPT
-    * Added TALK_ESCORT_GRANDMA_FULL_001
-    * Added TALK_ESCORT_GRANDMA_HALF
-    * Added TALK_ESCORT_GRANDMA_PINCH
-    * Added TALK_ESCORT_GRANDMA_START
-    * Added TALK_ESCORT_MOTHER_ACCEPT
-    * Added TALK_ESCORT_MOTHER_FULL_001
-    * Added TALK_ESCORT_MOTHER_HALF
-    * Added TALK_ESCORT_MOTHER_PINCH
-    * Added TALK_ESCORT_MOTHER_START
-    * Added TALK_ESCORT_PET_ACCEPT
-    * Added TALK_ESCORT_PET_FULL_001
-    * Added TALK_ESCORT_PET_HALF
-    * Added TALK_ESCORT_PET_PINCH
-    * Added TALK_ESCORT_PET_START
-    * Added TALK_TUTOR
-    * Added TALK_TUTOR_ACCEPT
-    * Added TALK_TUTOR_ALREADY
-    * Added TALK_TUTOR_ASK
-    * Added TALK_TUTOR_DECLINE
-    * Added TALK_TUTOR_DONE
-    * Added TALK_TUTOR_REPLACE
-    * Added TALK_TUTOR_VISIT
+    * Added EVO_REQ_ALLY_SPECIES_MULTI
 
 Sheet: Script
-    * Added ground\canyon_camp/Tutor_Already
-    * Deleted key ground\canyon_camp/Tutor_Replace
+    * Added ground\base_camp/Steel_Complete_Line_001
+    * Added ground\base_camp/Steel_Complete_Line_002
+    * Added ground\base_camp/Steel_Line_001
+    * Added ground\base_camp/Steel_Line_002
+    * Added ground\base_camp_2/Brother_Line_001
+    * Erased contents of ground\base_camp_2/Father_Line_001
+    * Added ground\base_camp_2/Grandma_Line_001
+    * Added ground\base_camp_2/Isekai_Line_001
+    * Added ground\base_camp_2/Isekai_Line_002
+    * Added ground\base_camp_2/King_Line_001, transferred from ground\base_camp_2/Father_Line_001
+    * Erased contents of ground\base_camp_2/Mother_Line_001
+    * Added ground\base_camp_2/Pet_Line_001
+    * Added ground\base_camp_2/Queen_Line_001, transferred from ground\base_camp_2/Mother_Line_001
+    * Added ground\base_camp_2/Sister_Line_001
+    * Added ground\canyon_camp/Argue_Line_001
+    * Added ground\canyon_camp/Argue_Line_002
+    * Added ground\canyon_camp/Argue_Option
+    * Added ground\canyon_camp/Argue_Solved_Line_001
+    * Added ground\canyon_camp/Conjurer_Line_001
+    * Added ground\canyon_camp/Conjurer_Line_002
+    * Added ground\canyon_camp/Dragon_Line_005
+    * Added ground\canyon_camp/Dragon_Line_006
+    * Added ground\canyon_camp/Seer_Line_001
+    * Added ground\canyon_camp/Seer_Line_002
+    * Added ground\cliff_camp/Conjurer_Line_001
+    * Added ground\cliff_camp/Conjurer_Line_002
+    * Added ground\cliff_camp/Seer_Line_001
+    * Added ground\cliff_camp/Seer_Line_002
+    * Added ground\final_stop/Conjurer_Line_001
+    * Added ground\final_stop/Conjurer_Line_002
+    * Added ground\final_stop/Dragon_Line_001
+    * Added ground\final_stop/Dragon_Line_002
+    * Added ground\final_stop/Seer_Complete_Line_001
+    * Added ground\final_stop/Seer_Complete_Line_002
+    * Added ground\final_stop/Seer_Complete_Line_003
+    * Added ground\final_stop/Seer_Complete_Line_004
+    * Added ground\final_stop/Seer_Complete_Line_005
+    * Added ground\final_stop/Seer_Complete_Line_006
+    * Added ground\final_stop/Seer_Complete_Line_007
+    * Added ground\final_stop/Seer_Help_Line_001
+    * Added ground\final_stop/Seer_Help_Line_002
+    * Added ground\final_stop/Seer_Line_001
+    * Added ground\final_stop/Seer_Line_002
+    * Added ground\forest_camp/Cure_Line_001
+    * Added ground\forest_camp/Cure_Line_002
+    * Added ground\forest_camp/Sickness_Line_001
+    * Added ground\forest_camp/Sickness_Line_002
+    * Added ground\forest_camp/Sickness_Line_003
+    * Added ground\forest_camp/Sickness_Line_004
+    * Added ground\guild_hut/Isekai_Line_001
+    * Added ground\guild_hut/Isekai_Line_002
+    * Added ground\guild_hut/Isekai_Line_003
+    * Added ground\guild_hut/Isekai_Line_004
+    * Added ground\guild_hut/Isekai_Line_005
+    * Added ground\guild_hut/Isekai_Line_006
+    * Added ground\guild_hut/Isekai_Line_007
+    * Significantly changed ground\rest_stop/Boss_Line_001 from "[tmp]You've disturbed the nest of Golbats![br]Golbats disturb loudreds, loudreds disturb golem, golem disturbs steelix!" to "[tmp]You've disturbed the nest of Golbats![br]Golbats disturb loudreds, loudreds disturb golem, golem disturbs aggron!"
+    * Added ground\rest_stop/Conjurer_Line_001
+    * Added ground\rest_stop/Conjurer_Line_002
+    * Added ground\rest_stop/Dragon_Line_001
+    * Added ground\rest_stop/Dragon_Rescue_Line_001
+    * Added ground\rest_stop/Loud_Boss_Line_001
+    * Added ground\rest_stop/Loud_Boss_Line_002
+    * Added ground\rest_stop/Loud_Boss_Line_003
+    * Added ground\rest_stop/Loud_Boss_Line_004
+    * Added ground\rest_stop/Loud_Rabble_Line_001
+    * Added ground\rest_stop/Rock_Boss_Line_001
+    * Added ground\rest_stop/Rock_Boss_Line_002
+    * Added ground\rest_stop/Rock_Boss_Reward
+    * Added ground\rest_stop/Screech_Rabble_Line_001
+    * Added ground\rest_stop/Seer_Line_001
+    * Added ground\rest_stop/Seer_Line_002
 
 Sheet: Abilities
-    * Changed 0248-ice_face-0001|data.Desc from "The Pokémon's ice head can take a physical attack as a substitute, but the attack also changes the Pokémon's appearance. The ice will be restored when it hails." to "The Pokémon's ice head can take a physical attack as a substitute, breaking in the process. The ice is restored in hail."
+    * Significantly changed 0293-supreme_overlord-0001|data.Desc from "" to "The Pokémon's Attack and Sp. Atk stats are boosted for every fainted teammate."
 
 Sheet: Items
-    * Changed 0008-herb_power-0001|data.Desc from "An herb that allows the use of two-turn attacks in one turn, and prevents PP from dropping." to "An herb that allows the use of two-turn attacks in one turn, and protects against PP-draining effects."
+    * Significantly changed 0012-machine_assembly_box-0001|data.Desc from "A marvelous box that lets the user add a Pokémon from the assembly to the team. It only works for Pokémon that joined the current dungeon." to "A marvelous box that lets the user add a Pokémon from the assembly to the team."
 
 Sheet: MapStatuses
-    * Significantly changed 0000-trick_room-0001|data.Desc from "Effects on all Pokémon's Movement Speed are reversed." to "Effects on all Pokémon's Movement Speed are reversed, and Pokémon with a lower Speed stat have better accuracy and evasion."
 
 Sheet: Moves
-    * Significantly changed 0478-magic_room-0001|data.Desc from "The user creates a bizarre area in which Pokémon's held items lose their effects." to "The user creates a bizarre area in which Pokémon's abilities and held items lose their effects."
+    * Changed 0218-frustration-0001|data.Desc from "A full-power attack that grows more powerful if the user has no allies near it." to "A full-power attack that grows less powerful the more allies there are nearby."
+    * Significantly changed 0869-kowtow_cleave-0001|data.Desc from "" to "The user slashes at the target after kowtowing to make the target let down its guard. This attack never misses."
 
 Sheet: Statuses
 

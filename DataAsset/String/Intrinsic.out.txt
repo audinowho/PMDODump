@@ -586,7 +586,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0292-sharpness-0000|data.Name		Sharpness	Incisif	Scharfkantig	Cortante		Affilama		きれあじ	きれあじ	锋锐																																																				
 0292-sharpness-0001|data.Desc		Powers up slicing moves.			Aumenta el poder de los movimientos cortantes.						提高切割对手的招式的威力。																																																				
 0293-supreme_overlord-0000|data.Name		Supreme Overlord	Général Suprême	Feldherr	General Supremo		Generale Supremo		そうだいしょう	そうだいしょう	大将																																																				
-0293-supreme_overlord-0001|data.Desc																																																															
+0293-supreme_overlord-0001|data.Desc		The Pokémon's Attack and Sp. Atk stats are boosted for every fainted teammate.																																																													
 0294-costar-0000|data.Name		Costar	Collab	Synchronauftritt	Unísono		Coprotagonismo		きょうえん	きょうえん	同台共演																																																				
 0294-costar-0001|data.Desc																																																															
 0295-toxic_debris-0000|data.Name		Toxic Debris	Dépôt Toxique	Giftbelag	Capa Tóxica		Mantossina		どくげしょう	どくげしょう	毒满地																																																				
