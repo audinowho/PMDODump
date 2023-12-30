@@ -942,7 +942,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Honey Gather");
                 ability.Desc = new LocalText("The Pokémon may gather Nectar when it enters a new floor.");
-                ability.OnMapStarts.Add(0, new GatherEvent("boost_nectar", 50, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), "")));
+                ability.OnMapStarts.Add(0, new GatherEvent(new List<string> { "boost_nectar" }, 50, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), "")));
             }
             else if (ii == 119)
             {
@@ -1248,7 +1248,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Justified");
                 ability.Desc = new LocalText("Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.");
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_attack", true, true, false, 1, new StringKey("MSG_JUSTIFIED"))));
+                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_attack", true, true, false, 1, new StringKey("MSG_JUSTIFIED")))));
             }
             else if (ii == 155)
             {
@@ -1532,8 +1532,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 192)
             {
-                ability.Name = new LocalText("**Stamina");
-                ability.Desc = new LocalText("Boosts the Defense stat when hit by an attack.");
+                ability.Name = new LocalText("Stamina");
+                ability.Desc = new LocalText("The Pokémon may boost its Defense stat when hit by a move.");
+                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new HitCounterEvent((Alignment.Friend | Alignment.Foe), true, false, true, 25, new StatusStackBattleEvent("mod_defense", true, true, false, 1, new StringKey("MSG_STAMINA")))));
             }
             else if (ii == 193)
             {
@@ -1787,8 +1788,11 @@ namespace DataGenerator.Data
             }
             else if (ii == 237)
             {
-                ability.Name = new LocalText("**Ball Fetch");
-                ability.Desc = new LocalText("If the Pokémon is not holding an item, it will fetch the Poké Ball from the first failed throw of the battle.");
+                ability.Name = new LocalText("Ball Fetch");
+                ability.Desc = new LocalText("The Pokémon will fetch any Apricorn that fails to recruit wild Pokémon.");
+                ability.ProximityEvent.Radius = 5;
+                ability.ProximityEvent.TargetAlignments = Alignment.Friend | Alignment.Foe;
+                ability.ProximityEvent.AfterBeingHits.Add(0, new FetchEvent(new StringKey("MSG_BALL_FETCH")));
             }
             else if (ii == 238)
             {

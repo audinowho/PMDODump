@@ -4329,7 +4329,7 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(GetTeamMob("diglett", "", "dig", "", "", "", new RandRange(22), "wander_dumb"), new IntRange(0, 3), 10);
                         poolSpawn.Spawns.Add(GetTeamMob("dugtrio", "", "dig", "sucker_punch", "", "", new RandRange(26), "wander_dumb"), new IntRange(7, max_floors), 10);
                         //sleeping
-                        poolSpawn.Spawns.Add(GetTeamMob("lairon", "", "iron_head", "iron_tail", "", "", new RandRange(35), "wander_dumb", true), new IntRange(3, max_floors), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob("lairon", "", "iron_head", "iron_tail", "", "", new RandRange(32), "wander_dumb", true), new IntRange(3, max_floors), 10);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                         poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);

@@ -34,7 +34,7 @@ namespace DataGenerator.Data
                 zone.Rogue = RogueStatus.NoTransfer;
 
                 {
-                    int max_floors = 3;
+                    int max_floors = 70;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
