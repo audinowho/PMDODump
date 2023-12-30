@@ -324,6 +324,16 @@ namespace DataGenerator.Data
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
 
+            tactic = new AITactic();
+            tactic.Name = new LocalText("Lead Boss");//28
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
+            iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.AttackToEscape | AIFlags.WontDisturb | AIFlags.TeamPartner;
+            tactic.Plans.Add(new LeadSkillPlan(iq | AIFlags.TrapAvoider, 0, 0, 0, "last_used_move_slot"));
+            tactic.Plans.Add(new BossPlan(iq | AIFlags.TrapAvoider, 0, 0, 0, AIPlan.AttackChoice.SmartAttack, AIPlan.PositionChoice.Avoid));
+            tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
+            Tactics.Add(tactic);
+
+
             //make a variant of explore to go for items (For use of team characters, certain thief enemies)
             //always avoid traps when exploring
             //always avoid traps when following a leader

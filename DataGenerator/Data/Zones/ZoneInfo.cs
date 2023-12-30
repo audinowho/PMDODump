@@ -2495,13 +2495,13 @@ namespace DataGenerator.Data
                         AddMoneyData(layout, new RandRange(4, 9));
 
                         //enemies
-                        AddRespawnData(layout, 20, 120);
+                        AddRespawnData(layout, 19, 120);
                         if (ii < 12)
-                            AddEnemySpawnData(layout, 20, new RandRange(10, 14));
+                            AddEnemySpawnData(layout, 20, new RandRange(9, 12));
                         else if (ii < 20)
-                            AddEnemySpawnData(layout, 20, new RandRange(11, 15));
+                            AddEnemySpawnData(layout, 20, new RandRange(11, 14));
                         else
-                            AddEnemySpawnData(layout, 20, new RandRange(14, 18));
+                            AddEnemySpawnData(layout, 20, new RandRange(12, 16));
 
                         //items
                         AddItemData(layout, new RandRange(4, 7), 25);
