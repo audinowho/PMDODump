@@ -422,8 +422,7 @@ namespace DataGenerator
                             MapInfo.AddMapData("final_stop");
                             //MapInfo.AddGroundData("test_grounds");
                             //ZoneInfo.AddZoneData(false);
-                            //ZoneInfo.AddZoneData(false, 7);
-                            //ZoneInfo.AddZoneData(false, 0);
+                            //ZoneInfo.AddZoneData(false, 51);
                         }
 
                         DataManager.DataType reserializeType = DataManager.DataType.None;
