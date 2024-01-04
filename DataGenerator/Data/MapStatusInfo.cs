@@ -696,6 +696,16 @@ namespace DataGenerator.Data
                 status.OnMapTurnEnds.Add(5, new MapTickEvent());
                 status.OnMapTurnEnds.Add(5, new MapStatusCountDownEvent());
             }
+            else if (ii == 45)
+            {
+                status.Name = new LocalText("Diamond Dust");
+                status.Desc = new LocalText("");
+                status.DefaultHidden = true;
+                status.RepeatMethod = new MapStatusRefreshEvent();
+                status.StatusStates.Set(new MapWeatherState());
+                //status.OnMapStatusAdds.Add(0, new MapStatusSoundEvent("DUN_Hail"));
+                status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
+            }
 
 
             if (status.Name.DefaultText.StartsWith("**"))

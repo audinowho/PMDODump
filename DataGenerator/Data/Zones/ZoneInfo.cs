@@ -2495,13 +2495,13 @@ namespace DataGenerator.Data
                         AddMoneyData(layout, new RandRange(4, 9));
 
                         //enemies
-                        AddRespawnData(layout, 20, 120);
+                        AddRespawnData(layout, 19, 120);
                         if (ii < 12)
-                            AddEnemySpawnData(layout, 20, new RandRange(10, 14));
+                            AddEnemySpawnData(layout, 20, new RandRange(9, 12));
                         else if (ii < 20)
-                            AddEnemySpawnData(layout, 20, new RandRange(11, 15));
+                            AddEnemySpawnData(layout, 20, new RandRange(11, 14));
                         else
-                            AddEnemySpawnData(layout, 20, new RandRange(14, 18));
+                            AddEnemySpawnData(layout, 20, new RandRange(12, 16));
 
                         //items
                         AddItemData(layout, new RandRange(4, 7), 25);
@@ -4329,7 +4329,7 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(GetTeamMob("diglett", "", "dig", "", "", "", new RandRange(22), "wander_dumb"), new IntRange(0, 3), 10);
                         poolSpawn.Spawns.Add(GetTeamMob("dugtrio", "", "dig", "sucker_punch", "", "", new RandRange(26), "wander_dumb"), new IntRange(7, max_floors), 10);
                         //sleeping
-                        poolSpawn.Spawns.Add(GetTeamMob("lairon", "", "iron_head", "iron_tail", "", "", new RandRange(35), "wander_dumb", true), new IntRange(3, max_floors), 10);
+                        poolSpawn.Spawns.Add(GetTeamMob("lairon", "", "iron_head", "iron_tail", "", "", new RandRange(32), "wander_dumb", true), new IntRange(3, max_floors), 10);
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                         poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);

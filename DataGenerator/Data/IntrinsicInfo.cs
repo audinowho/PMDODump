@@ -942,7 +942,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Honey Gather");
                 ability.Desc = new LocalText("The Pokémon may gather Nectar when it enters a new floor.");
-                ability.OnMapStarts.Add(0, new GatherEvent("boost_nectar", 50, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), "")));
+                ability.OnMapStarts.Add(0, new GatherEvent(new List<string> { "boost_nectar" }, 50, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), "")));
             }
             else if (ii == 119)
             {
@@ -1248,7 +1248,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Justified");
                 ability.Desc = new LocalText("Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.");
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_attack", true, true, false, 1, new StringKey("MSG_JUSTIFIED"))));
+                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_attack", true, true, false, 1, new StringKey("MSG_JUSTIFIED")))));
             }
             else if (ii == 155)
             {
@@ -1532,8 +1532,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 192)
             {
-                ability.Name = new LocalText("**Stamina");
-                ability.Desc = new LocalText("Boosts the Defense stat when hit by an attack.");
+                ability.Name = new LocalText("Stamina");
+                ability.Desc = new LocalText("The Pokémon may boost its Defense stat when hit by a move.");
+                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new HitCounterEvent((Alignment.Friend | Alignment.Foe), true, false, true, 25, new StatusStackBattleEvent("mod_defense", true, true, false, 1, new StringKey("MSG_STAMINA")))));
             }
             else if (ii == 193)
             {
@@ -1632,8 +1633,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 209)
             {
-                ability.Name = new LocalText("**Disguise");
-                ability.Desc = new LocalText("Once per battle, the shroud that covers the Pokémon can protect it from an attack.");
+                ability.Name = new LocalText("Disguise");
+                ability.Desc = new LocalText("Once per floor, the shroud that covers the Pokémon can protect it from an attack.");
+                ability.BeforeBeingHits.Add(0, new AttackingMoveNeededEvent(new BustFormEvent("mimikyu", 0, 1, new StringKey("MSG_DISGUISE_DECOY"), new BattleAnimEvent(new SingleEmitter(new AnimData("Puff_White", 3)), "_UNK_EVT_012", true, 10))));
             }
             else if (ii == 210)
             {
@@ -1787,8 +1789,11 @@ namespace DataGenerator.Data
             }
             else if (ii == 237)
             {
-                ability.Name = new LocalText("**Ball Fetch");
-                ability.Desc = new LocalText("If the Pokémon is not holding an item, it will fetch the Poké Ball from the first failed throw of the battle.");
+                ability.Name = new LocalText("Ball Fetch");
+                ability.Desc = new LocalText("The Pokémon will fetch any Apricorn that fails to recruit wild Pokémon.");
+                ability.ProximityEvent.Radius = 5;
+                ability.ProximityEvent.TargetAlignments = Alignment.Friend | Alignment.Foe;
+                ability.ProximityEvent.AfterBeingHits.Add(0, new FetchEvent(new StringKey("MSG_BALL_FETCH")));
             }
             else if (ii == 238)
             {
@@ -1848,8 +1853,22 @@ namespace DataGenerator.Data
             }
             else if (ii == 248)
             {
-                ability.Name = new LocalText("**Ice Face");
+                ability.Name = new LocalText("Ice Face");
                 ability.Desc = new LocalText("The Pokémon's ice head can take a physical attack as a substitute, breaking in the process. The ice is restored in hail.");
+                FiniteReleaseEmitter endAnim = new FiniteReleaseEmitter(new AnimData("Ice_Pieces", 6, 0, 0), new AnimData("Ice_Pieces", 12, 1, 1), new AnimData("Ice_Pieces", 12, 1, 1));
+                endAnim.BurstTime = 2;
+                endAnim.ParticlesPerBurst = 4;
+                endAnim.Bursts = 4;
+                endAnim.StartDistance = 8;
+                endAnim.Speed = 60;
+                endAnim.Layer = DrawLayer.Front;
+                ability.BeforeBeingHits.Add(0, new CategoryNeededEvent(BattleData.SkillCategory.Physical, new BustFormEvent("eiscue", 0, 1, new StringKey("MSG_DISGUISE_DECOY"), new BattleAnimEvent(endAnim, "DUN_Ice_Ball_2", true, 10))));
+                
+                {
+                    Dictionary<string, int> weather = new Dictionary<string, int>();
+                    weather.Add("hail", 0);
+                    ability.OnMapTurnEnds.Add(0, new WeatherFormeSingleEvent("eiscue", -1, weather, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Wonder_Tile", 10)));
+                }
             }
             else if (ii == 249)
             {
@@ -1873,8 +1892,10 @@ namespace DataGenerator.Data
             }
             else if (ii == 253)
             {
-                ability.Name = new LocalText("**Perish Body");
-                ability.Desc = new LocalText("When hit by a move that makes direct contact, the Pokémon and the attacker will faint after three turns unless they switch out of battle.");
+                ability.Name = new LocalText("Perish Body");
+                ability.Desc = new LocalText("When hit by a move that makes direct contact, the attacker will receive the Perish Count status.");
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100, new StatusBattleEvent("perish_song", false, true, false, new StringKey("MSG_HAS_ABILITY"),
+                    new BattleAnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", false, 30))));
             }
             else if (ii == 254)
             {

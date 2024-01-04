@@ -34,6 +34,13 @@ namespace DataGenerator.Data
                     DataManager.SaveData(PathMod.ModPath(DataManager.MAP_PATH + MapNames[ii] + DataManager.MAP_EXT), data);
             }
         }
+        public static void AddMapData(string name)
+        {
+            Map data = GetMapData(name);
+            if (data != null)
+                DataManager.SaveData(PathMod.ModPath(DataManager.MAP_PATH + name + DataManager.MAP_EXT), data);
+        }
+
 
         private static void SetObstacle(Map map, int xx, int yy, string val)
         {
@@ -142,6 +149,190 @@ namespace DataGenerator.Data
                 map.EntryPoints.Add(new LocRay8(new Loc(), Dir8.Down));
                 map.Name = new LocalText("Rest Stop");
                 map.Music = "A05. Cave Camp.ogg";
+            }
+            else if (name == MapNames[7])
+            {
+                int width = 25;
+                int height = 27;
+                map.CreateNew(width, height);
+                map.Name = new LocalText("Blizzard Camp");
+                map.Music = "C06. Final Battle.ogg";
+                map.EdgeView = Map.ScrollEdge.Clamp;
+
+                map.AddLayer("Cliff");
+                map.Layers[1].Layer = DrawLayer.Top;
+
+                for (int xx = 0; xx < width; xx++)
+                {
+                    for (int yy = 0; yy < height; yy++)
+                    {
+                        map.Layers[0].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCamp"));
+                        if (yy >= 20 && (xx < 8 || xx >= 17))
+                            map.Layers[1].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCampCliffs"));
+                        else if (yy >= 17 && (xx < 7 || xx >= 18))
+                            map.Layers[1].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCampCliffs"));
+                        else if (yy >= 14 && (xx < 6 || xx >= 19))
+                            map.Layers[1].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCampCliffs"));
+                        else if (yy >= 10 && (xx < 5 || xx >= 20))
+                            map.Layers[1].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCampCliffs"));
+                        else if (yy >= 8 && (xx < 3 || xx >= 22))
+                            map.Layers[1].Tiles[xx][yy] = new AutoTile(new TileLayer(new Loc(xx, yy), "SnowCampCliffs"));
+                    }
+                }
+
+                for (int xx = 0; xx < width; xx++)
+                {
+                    for (int yy = 0; yy < height; yy++)
+                    {
+                        if (yy == 0)
+                            SetObstacle(map, xx, yy, DataManager.Instance.GenUnbreakable);
+                        else if (yy <= 4)
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 8 || xx >= 17 && xx < 25) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
+                        else if (yy == 5)
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 19 && xx < 25) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
+                        else if (yy == 6)
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 4 || xx >= 21 && xx < 25) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
+                        else if (yy <= 8)
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 1 || xx >= 24 && xx < 25) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
+                        else if (yy == 9)
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 2 || xx >= 23 && xx < 25) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
+                        else if (yy == 10)
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 3 || xx >= 22 && xx < 25) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
+                        else if (yy <= 13)
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 4 || xx >= 21 && xx < 25) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
+                        else if (yy <= 17)
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 5 || xx >= 20 && xx < 25) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
+                        else if (yy <= 20)
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 6 || xx >= 19 && xx < 25) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
+                        else if (yy < 26)
+                            SetObstacle(map, xx, yy, (xx >= 0 && xx < 7 || xx >= 18 && xx < 25) ? DataManager.Instance.GenUnbreakable : DataManager.Instance.GenFloor);
+                        else if (yy == 26)
+                            SetObstacle(map, xx, yy, DataManager.Instance.GenUnbreakable);
+                    }
+                }
+                SetObstacle(map, 3, 7, DataManager.Instance.GenUnbreakable);
+                SetObstacle(map, 4, 7, DataManager.Instance.GenUnbreakable);
+                SetObstacle(map, 5, 6, DataManager.Instance.GenUnbreakable);
+                SetObstacle(map, 7, 10, DataManager.Instance.GenUnbreakable);
+                SetObstacle(map, 5, 12, DataManager.Instance.GenUnbreakable);
+                SetObstacle(map, 18, 11, DataManager.Instance.GenUnbreakable);
+                SetObstacle(map, 19, 11, DataManager.Instance.GenUnbreakable);
+                SetObstacle(map, 17, 14, DataManager.Instance.GenUnbreakable);
+
+                map.EntryPoints.Add(new LocRay8(new Loc(12, 10), Dir8.Up));
+
+
+                ExplorerTeam team = new ExplorerTeam();
+                team.SetRank("normal");
+                {
+                    //Charizard
+                    CharData mobData = new CharData();
+                    mobData.BaseForm = new MonsterID("charizard", 0, "normal", Gender.Male);
+                    mobData.Level = 62;
+                    mobData.BaseSkills[0] = new SlotSkill("ancient_power");
+                    mobData.BaseSkills[1] = new SlotSkill("air_slash");
+                    mobData.BaseSkills[2] = new SlotSkill("dragon_pulse");
+                    mobData.BaseSkills[3] = new SlotSkill("inferno");
+                    mobData.BaseIntrinsics[0] = "blaze";
+                    Character newMob = new Character(mobData);
+                    team.Players.Add(newMob);
+                    AITactic tactic = DataManager.Instance.GetAITactic("staged_boss");
+                    newMob.Tactic = new AITactic(tactic);
+                    newMob.CharLoc = new Loc(12, 8);
+                    newMob.CharDir = Dir8.Down;
+                    newMob.MaxHPBonus = MonsterFormData.MAX_STAT_BOOST;
+                    newMob.DefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.HP = newMob.MaxHP;
+                    newMob.Skills[3].Element.Enabled = false;
+                    //newMob.HeldItem = new InvItem("seed_reviver");
+                }
+                {
+                    //Aerodactyl
+                    CharData mobData = new CharData();
+                    mobData.BaseForm = new MonsterID("aerodactyl", 0, "normal", Gender.Male);
+                    mobData.Level = 62;
+                    mobData.BaseSkills[0] = new SlotSkill("agility");
+                    mobData.BaseSkills[1] = new SlotSkill("sky_drop");
+                    mobData.BaseSkills[2] = new SlotSkill("wide_guard");
+                    mobData.BaseSkills[3] = new SlotSkill("stone_edge");
+                    mobData.BaseIntrinsics[0] = "pressure";
+                    Character newMob = new Character(mobData);
+                    team.Players.Add(newMob);
+                    AITactic tactic = DataManager.Instance.GetAITactic("staged_boss");
+                    newMob.Tactic = new AITactic(tactic);
+                    newMob.CharLoc = new Loc(11, 8);
+                    newMob.CharDir = Dir8.Down;
+                    newMob.MaxHPBonus = MonsterFormData.MAX_STAT_BOOST;
+                    newMob.DefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.HP = newMob.MaxHP;
+                    //newMob.HeldItem = new InvItem("seed_reviver");
+                }
+                {
+                    //Gyarados
+                    CharData mobData = new CharData();
+                    mobData.BaseForm = new MonsterID("gyarados", 0, "normal", Gender.Male);
+                    mobData.Level = 62;
+                    mobData.BaseSkills[0] = new SlotSkill("waterfall");
+                    mobData.BaseSkills[1] = new SlotSkill("dragon_rage");
+                    mobData.BaseSkills[2] = new SlotSkill("ice_fang");
+                    mobData.BaseSkills[3] = new SlotSkill("giga_impact");
+                    mobData.BaseIntrinsics[0] = "intimidate";
+                    Character newMob = new Character(mobData);
+                    team.Players.Add(newMob);
+                    AITactic tactic = DataManager.Instance.GetAITactic("staged_boss");
+                    newMob.Tactic = new AITactic(tactic);
+                    newMob.CharLoc = new Loc(13, 8);
+                    newMob.CharDir = Dir8.Down;
+                    newMob.MaxHPBonus = MonsterFormData.MAX_STAT_BOOST;
+                    newMob.DefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.HP = newMob.MaxHP;
+                    //newMob.HeldItem = new InvItem("seed_reviver");
+                }
+                {
+                    //Flygon
+                    CharData mobData = new CharData();
+                    mobData.BaseForm = new MonsterID("flygon", 0, "normal", Gender.Male);
+                    mobData.Level = 63;
+                    mobData.BaseSkills[0] = new SlotSkill("draco_meteor");
+                    mobData.BaseSkills[1] = new SlotSkill("dragon_rush");
+                    mobData.BaseSkills[2] = new SlotSkill("rock_slide");
+                    mobData.BaseSkills[3] = new SlotSkill("earthquake");
+                    mobData.BaseIntrinsics[0] = "levitate";
+                    Character newMob = new Character(mobData);
+                    team.Players.Add(newMob);
+                    AITactic tactic = DataManager.Instance.GetAITactic("lead_boss");
+                    newMob.Tactic = new AITactic(tactic);
+                    newMob.CharLoc = new Loc(12, 7);
+                    newMob.CharDir = Dir8.Down;
+                    newMob.MaxHPBonus = MonsterFormData.MAX_STAT_BOOST;
+                    newMob.DefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.MDefBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.SpeedBonus = MonsterFormData.MAX_STAT_BOOST / 4;
+                    newMob.HP = newMob.MaxHP;
+                    //newMob.Skills[3].Element.Enabled = false;
+                    //newMob.HeldItem = new InvItem("seed_reviver");
+                }
+                map.MapTeams.Add(team);
+
+                map.MapEffect.OnMapStarts.Add(-15, new BattlePositionEvent(new LocRay8(0, 0, Dir8.Up), new LocRay8(0, 1, Dir8.Up), new LocRay8(-1, 0, Dir8.Up), new LocRay8(1, 0, Dir8.Up)));
+                map.MapEffect.OnMapStarts.Add(-5, new BeginBattleEvent("map_clear_check"));
+
+                {
+                    MapStatus status = new MapStatus("mysterious_force");
+                    status.LoadFromData();
+                    map.Status.Add(status.ID, status);
+                }
+                {
+                    MapStatus status = new MapStatus("default_mapstatus");
+                    status.StatusStates.Set(new MapIDState("diamond_dust"));
+                    map.Status.Add(status.ID, status);
+                }
             }
             else if (name == MapNames[8])
             {

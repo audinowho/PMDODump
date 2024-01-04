@@ -27,6 +27,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("**Sacred Tower");
                 zone.Level = 50;
                 zone.LevelCap = true;
+                zone.KeepSkills = true;
                 zone.BagRestrict = 0;
                 zone.MoneyRestrict = true;
                 zone.TeamSize = 3;
@@ -34,7 +35,7 @@ namespace DataGenerator.Data
                 zone.Rogue = RogueStatus.NoTransfer;
 
                 {
-                    int max_floors = 3;
+                    int max_floors = 70;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
@@ -69,11 +70,24 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Sacred Tower.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                         //Tilesets
                         // candidates: buried_relic_2,temporal_spire,temporal_tower,joyous_tower,electric maze
-                        AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+                        if (ii < 10)
+                            AddTextureData(layout, "buried_relic_2_wall", "buried_relic_2_floor", "buried_relic_2_secondary", "normal");
+                        else if (ii < 20)
+                            AddTextureData(layout, "temporal_tower_wall", "temporal_tower_floor", "temporal_tower_secondary", "normal");
+                        else if (ii < 30)
+                            AddTextureData(layout, "temporal_spire_wall", "temporal_spire_floor", "temporal_spire_secondary", "normal");
+                        else if (ii < 40)
+                            AddTextureData(layout, "joyous_tower_wall", "joyous_tower_floor", "joyous_tower_secondary", "normal");
+                        else if (ii < 50)
+                            AddTextureData(layout, "electric_maze_wall", "electric_maze_floor", "electric_maze_secondary", "normal");
+                        else if (ii < 60)
+                            AddTextureData(layout, "temporal_tower_wall", "temporal_tower_floor", "temporal_tower_secondary", "normal");
+                        else
+                            AddTextureData(layout, "temporal_tower_wall", "temporal_tower_floor", "temporal_tower_secondary", "normal");
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -94,7 +108,7 @@ namespace DataGenerator.Data
 
                         //construct paths
                         {
-                            AddInitGridStep(layout, 4, 4, 10, 10);
+                            AddInitGridStep(layout, 3, 2, 10, 10);
 
                             GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
