@@ -1,3 +1,3 @@
-# 0.7.23 Changes #
+# 0.7.24 Changes #
 
-* Prevented large-brush halls from drawing out of bounds
+* Lowered the effect of vitamins and gummis

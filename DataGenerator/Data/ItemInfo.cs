@@ -725,42 +725,42 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Protein");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Attack.");
                 item.Sprite = "Medicine_Red";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Attack, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Attack, 4));
             }
             else if (ii == 152)
             {
                 item.Name = new LocalText("Iron");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Defense.");
                 item.Sprite = "Medicine_Yellow";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Defense, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Defense, 4));
             }
             else if (ii == 153)
             {
                 item.Name = new LocalText("Calcium");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Special Attack.");
                 item.Sprite = "Medicine_Red";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.MAtk, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.MAtk, 4));
             }
             else if (ii == 154)
             {
                 item.Name = new LocalText("Zinc");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Special Defense.");
                 item.Sprite = "Medicine_Yellow";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.MDef, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.MDef, 4));
             }
             else if (ii == 155)
             {
                 item.Name = new LocalText("Carbos");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Speed.");
                 item.Sprite = "Medicine_Orange";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Speed, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Speed, 4));
             }
             else if (ii == 156)
             {
                 item.Name = new LocalText("HP Up");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Maximum HP.");
                 item.Sprite = "Medicine_Orange";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.HP, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.HP, 4));
             }
             else if (ii == 157)
             {
