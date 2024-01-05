@@ -6062,7 +6062,7 @@ namespace DataGenerator.Data
             else if (ii == 237)
             {
                 skill.Name = new LocalText("=Hidden Power");
-                skill.Desc = new LocalText("A unique attack that varies in type each time it is used.");
+                skill.Desc = new LocalText("A unique attack that varies in type depending on the Pokémon and the dungeon floor.");
                 skill.BaseCharges = 18;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;

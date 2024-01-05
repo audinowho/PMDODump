@@ -3384,6 +3384,46 @@ namespace DataGenerator.Data
                 // This will prevent mysterious distortions from occurring, and cause them to flood out when taken away
                 item.Price = 80000;
             }
+            else if (ii == 545)
+            {
+                item.Name = new LocalText("Special Ingredient");
+                item.Comment = "Do not Translate";
+                fileName = "lost_item_bug";
+                item.Sprite = "Flower_Blue";
+                item.Desc = new LocalText("A mission item.");
+            }
+            else if (ii == 546)
+            {
+                item.Name = new LocalText("Lost Satchel");
+                item.Comment = "Do not Translate";
+                fileName = "lost_item_dark";
+                item.Sprite = "Flower_Blue";
+                item.Desc = new LocalText("A mission item.");
+            }
+            else if (ii == 547)
+            {
+                item.Name = new LocalText("Lost Scarf");
+                item.Comment = "Do not Translate";
+                fileName = "lost_item_ground";
+                item.Sprite = "Flower_Blue";
+                item.Desc = new LocalText("A mission item.");
+            }
+            else if (ii == 548)
+            {
+                item.Name = new LocalText("Herba Mystica");
+                item.Comment = "Do not Translate";
+                fileName = "lost_item_grass";
+                item.Sprite = "Flower_Blue";
+                item.Desc = new LocalText("A mission item.");
+            }
+            else if (ii == 549)
+            {
+                item.Name = new LocalText("Not-So-Normal Gem");
+                item.Comment = "Do not Translate";
+                fileName = "lost_item_normal";
+                item.Sprite = "Flower_Blue";
+                item.Desc = new LocalText("A mission item.");
+            }
             else if (ii == 576)
                 FillTMData(item, "earthquake");
             else if (ii == 577)
@@ -3814,7 +3854,7 @@ namespace DataGenerator.Data
                     item.UsageType = ItemData.UseType.Box;
                     item.Price = 1000;
                 }
-                else if (ii < 500)//special
+                else if (ii < 540)//special
                 {
                     if (ii < 454)
                     {
@@ -3828,6 +3868,10 @@ namespace DataGenerator.Data
                             fileName = "loot_" + Text.Sanitize(item.Name.DefaultText).ToLower();
                         item.SortCategory = 15;
                     }
+                }
+                else if (ii < 550)//mission items
+                {
+                    item.SortCategory = 18;
                 }
                 else if (ii < 700)//TM
                 {
