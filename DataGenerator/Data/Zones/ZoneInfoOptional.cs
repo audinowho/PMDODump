@@ -737,9 +737,11 @@ namespace DataGenerator.Data
 
                     foreach (string key in IterateGummis())
                         chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
+                    foreach (string key in IterateEvoItems(EvoClass.Early))
+                        chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 8);
                     chestChanceZoneStep.Items.Add(new MapItem("apricorn_big"), new IntRange(0, max_floors), 20);//big apricorn
-                    chestChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, max_floors), 80);//elixir
-                    chestChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, max_floors), 40);//potion
+                    chestChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, max_floors), 40);//elixir
+                    chestChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, max_floors), 30);//potion
                     chestChanceZoneStep.Items.Add(new MapItem("medicine_max_elixir"), new IntRange(0, max_floors), 10);//max elixir
                     chestChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, max_floors), 10);//max potion
                     chestChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, max_floors), 20);//full heal
@@ -2068,6 +2070,7 @@ namespace DataGenerator.Data
                 necessities.Spawns.Add(new InvItem("berry_oran", true), new IntRange(0, max_floors), 2);
                 necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 4);
                 necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
+                necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 3);
                 necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(0, max_floors), 6);
                 necessities.Spawns.Add(new InvItem("food_grimy"), new IntRange(0, max_floors), 10);
                 //snacks
@@ -3083,6 +3086,8 @@ namespace DataGenerator.Data
                         shop.Items.Add(new MapItem(key, 0, 100), 1);//type berries
                     foreach (string key in IterateGummis())
                         shop.Items.Add(new MapItem(key, 0, 800), 1);//gummis
+                    foreach (string key in IterateEvoItems(EvoClass.Early))
+                        shop.Items.Add(new MapItem(key, 0, 2500), 2);
                     shop.Items.Add(new MapItem("food_apple_huge", 0, 1000), 10);//huge apple
 
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
@@ -3543,6 +3548,8 @@ namespace DataGenerator.Data
                         monsterChanceZoneStep.Items.Add(new MapItem(gummi), new IntRange(0, max_floors), 4);//gummis
                     foreach (string iter_item in IterateApricorns())
                         monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 4);//apricorns
+                    monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_ribbon"), new IntRange(0, max_floors), 50);
+                    monsterChanceZoneStep.Items.Add(new MapItem("evo_kings_rock"), new IntRange(0, max_floors), 50);
                     monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 50);//banana
                     monsterChanceZoneStep.Items.Add(new MapItem("food_apple_big"), new IntRange(0, max_floors), 50);//big apple
                     monsterChanceZoneStep.Items.Add(new MapItem("food_banana_big"), new IntRange(0, max_floors), 10);//big banana
@@ -4854,6 +4861,8 @@ namespace DataGenerator.Data
                             {
                                 foreach (string key in IterateTMs(TMClass.Starter))
                                     vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
+                                vaultChanceZoneStep.Items.Add(new MapItem("evo_lunar_ribbon"), new IntRange(0, max_floors), 50);
+                                vaultChanceZoneStep.Items.Add(new MapItem("evo_kings_rock"), new IntRange(0, max_floors), 50);
                                 vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear"), new IntRange(0, max_floors), 100);//amber tear
                                 vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
                                 vaultChanceZoneStep.Items.Add(new MapItem("seed_pure"), new IntRange(0, max_floors), 100);//pure seed
@@ -5797,6 +5806,8 @@ namespace DataGenerator.Data
                 held.Spawns.Add(new InvItem("held_soft_sand"), new IntRange(0, max_floors), 7);
                 held.Spawns.Add(new InvItem("held_poison_barb", true), new IntRange(0, max_floors), 3);
                 held.Spawns.Add(new InvItem("held_poison_barb"), new IntRange(0, max_floors), 7);
+                held.Spawns.Add(new InvItem("held_metal_coat", true), new IntRange(0, max_floors), 3);
+                held.Spawns.Add(new InvItem("held_metal_coat"), new IntRange(0, max_floors), 7);
                 held.Spawns.Add(new InvItem("held_grip_claw", true), new IntRange(0, max_floors), 3);
                 held.Spawns.Add(new InvItem("held_grip_claw"), new IntRange(0, max_floors), 7);
                 //tms
@@ -6198,7 +6209,8 @@ namespace DataGenerator.Data
                             treasures.RandomSpawns.Add(new MapItem("held_pierce_band"), 5);//pierce band
                             treasures.RandomSpawns.Add(new MapItem("held_friend_bow"), 5);//friend bow
                             treasures.RandomSpawns.Add(new MapItem("held_goggle_specs"), 5);//goggle specs
-                            treasures.RandomSpawns.Add(new MapItem("evo_harmony_scarf"), 5);//harmony scarf
+                            treasures.RandomSpawns.Add(new MapItem("evo_sun_ribbon"), 10);
+                            treasures.RandomSpawns.Add(new MapItem("evo_lunar_ribbon"), 10);
                             treasures.RandomSpawns.Add(new MapItem("medicine_max_elixir"), 20);//max elixir
                             treasures.RandomSpawns.Add(new MapItem("medicine_max_potion"), 20);//max potion
                             treasures.RandomSpawns.Add(new MapItem("medicine_full_heal"), 20);//full heal

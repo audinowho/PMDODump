@@ -734,6 +734,8 @@ namespace DataGenerator.Data
                 held.Spawns.Add(new InvItem("held_soft_sand"), new IntRange(0, max_floors), 7);
                 held.Spawns.Add(new InvItem("held_twisted_spoon", true), new IntRange(0, max_floors), 3);
                 held.Spawns.Add(new InvItem("held_twisted_spoon"), new IntRange(0, max_floors), 7);
+                held.Spawns.Add(new InvItem("held_dragon_scale", true), new IntRange(0, max_floors), 3);
+                held.Spawns.Add(new InvItem("held_dragon_scale"), new IntRange(0, max_floors), 7);
                 //tms
                 CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
                 tms.SpawnRates.SetRange(7, new IntRange(0, max_floors));
@@ -2307,6 +2309,7 @@ namespace DataGenerator.Data
                 held.Spawns.Add(new InvItem("held_soft_sand"), new IntRange(0, max_floors), 10);
                 held.Spawns.Add(new InvItem("held_never_melt_ice"), new IntRange(0, max_floors), 10);
                 held.Spawns.Add(new InvItem("held_sharp_beak"), new IntRange(0, max_floors), 10);
+                held.Spawns.Add(new InvItem("held_dragon_scale"), new IntRange(0, max_floors), 10);
                 held.Spawns.Add(new InvItem("held_fist_plate"), new IntRange(0, max_floors), 10);
                 held.Spawns.Add(new InvItem("held_zap_plate"), new IntRange(0, max_floors), 10);
                 held.Spawns.Add(new InvItem("held_splash_plate"), new IntRange(0, max_floors), 10);
@@ -4084,7 +4087,7 @@ namespace DataGenerator.Data
                 special.Spawns.Add(new InvItem("machine_ability_capsule"), new IntRange(0, max_floors), 5);
                 //evo
                 CategorySpawn<InvItem> evo = new CategorySpawn<InvItem>();
-                evo.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+                evo.SpawnRates.SetRange(3, new IntRange(0, max_floors));
                 itemSpawnZoneStep.Spawns.Add("evo", evo);
 
 
@@ -4247,8 +4250,9 @@ namespace DataGenerator.Data
                     foreach (string key in IterateGummis())
                         chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
                     chestChanceZoneStep.Items.Add(new MapItem("apricorn_big"), new IntRange(0, max_floors), 20);//big apricorn
-                    chestChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, max_floors), 80);//elixir
-                    chestChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, max_floors), 40);//potion
+                    chestChanceZoneStep.Items.Add(new MapItem("evo_link_cable"), new IntRange(0, max_floors), 15);
+                    chestChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, max_floors), 40);//elixir
+                    chestChanceZoneStep.Items.Add(new MapItem("medicine_potion"), new IntRange(0, max_floors), 30);//potion
                     chestChanceZoneStep.Items.Add(new MapItem("medicine_max_elixir"), new IntRange(0, max_floors), 20);//max elixir
                     chestChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, max_floors), 20);//max potion
                     chestChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, max_floors), 20);//full heal
