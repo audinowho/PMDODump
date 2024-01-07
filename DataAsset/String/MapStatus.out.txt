@@ -13,6 +13,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-default_mapstatus-0001|data.Desc											
 0000-default_weather-0000|data.Name	Not displayed to players.  Low Priority.	Default Weather		Standard Wetter	Tiempo por defecto		Meteo predefenito				默认天气
 0000-default_weather-0001|data.Desc											
+0000-diamond_dust-0000|data.Name		Diamond Dust									
+0000-diamond_dust-0001|data.Desc											
 0000-electric_terrain-0000|data.Name		Electric Terrain	Champ Électrifié	Elektrofeld	Campo Eléctrico		Campo Elettrico				电气场地
 0000-electric_terrain-0001|data.Desc		Electric-type attacks are boosted, and all Pokémon on the floor cannot sleep.	Les attaques de type Électrik sont boostées et les Pokémon de l'étage ne peuvent pas s'endormir.	Elektro-Attacken sind verstärkt und alle Pokémon auf der Ebene können nicht schlafen.	Los ataques de tipo eléctrico se potencian, y todos los Pokémon en el suelo no pueden dormir.		La potenza delle mosse di tipo Elettro aumenta. Tutti i Pokémon che si trovano nel piano non possono dormire.				电属性攻击威力提高，地面上的宝可梦无法入眠。
 0000-foe_fov-0000|data.Name		Foe FOV		Gegner Sichtfeld			FOV del nemico				敌人视野

@@ -1,93 +1,219 @@
 Sheet: Hardcode
 
 Sheet: Content
-    * Added EVO_REQ_ALLY_SPECIES_MULTI
+    * Added MSG_BALL_FETCH
+    * Added MSG_DISGUISE_DECOY
+    * Added MSG_HAS_ABILITY
+    * Added MSG_STAMINA
+    * Added TALK_ADVICE_QUARRY
+    * Changed TALK_ESCORT_PET_START from "[tmp]Woof! Woof!" to "[tmp]Woof! Woof![br]Surprise! Not everyone who got isekai'd to the Pokemon world was human!"
 
 Sheet: Script
-    * Added ground\base_camp/Steel_Complete_Line_001
-    * Added ground\base_camp/Steel_Complete_Line_002
-    * Added ground\base_camp/Steel_Line_001
-    * Added ground\base_camp/Steel_Line_002
-    * Added ground\base_camp_2/Brother_Line_001
-    * Erased contents of ground\base_camp_2/Father_Line_001
-    * Added ground\base_camp_2/Grandma_Line_001
-    * Added ground\base_camp_2/Isekai_Line_001
-    * Added ground\base_camp_2/Isekai_Line_002
-    * Added ground\base_camp_2/King_Line_001, transferred from ground\base_camp_2/Father_Line_001
-    * Erased contents of ground\base_camp_2/Mother_Line_001
-    * Added ground\base_camp_2/Pet_Line_001
-    * Added ground\base_camp_2/Queen_Line_001, transferred from ground\base_camp_2/Mother_Line_001
-    * Added ground\base_camp_2/Sister_Line_001
-    * Added ground\canyon_camp/Argue_Line_001
-    * Added ground\canyon_camp/Argue_Line_002
-    * Added ground\canyon_camp/Argue_Option
-    * Added ground\canyon_camp/Argue_Solved_Line_001
-    * Added ground\canyon_camp/Conjurer_Line_001
-    * Added ground\canyon_camp/Conjurer_Line_002
-    * Added ground\canyon_camp/Dragon_Line_005
-    * Added ground\canyon_camp/Dragon_Line_006
-    * Added ground\canyon_camp/Seer_Line_001
-    * Added ground\canyon_camp/Seer_Line_002
-    * Added ground\cliff_camp/Conjurer_Line_001
-    * Added ground\cliff_camp/Conjurer_Line_002
-    * Added ground\cliff_camp/Seer_Line_001
-    * Added ground\cliff_camp/Seer_Line_002
-    * Added ground\final_stop/Conjurer_Line_001
-    * Added ground\final_stop/Conjurer_Line_002
-    * Added ground\final_stop/Dragon_Line_001
-    * Added ground\final_stop/Dragon_Line_002
-    * Added ground\final_stop/Seer_Complete_Line_001
-    * Added ground\final_stop/Seer_Complete_Line_002
-    * Added ground\final_stop/Seer_Complete_Line_003
-    * Added ground\final_stop/Seer_Complete_Line_004
-    * Added ground\final_stop/Seer_Complete_Line_005
-    * Added ground\final_stop/Seer_Complete_Line_006
-    * Added ground\final_stop/Seer_Complete_Line_007
-    * Added ground\final_stop/Seer_Help_Line_001
-    * Added ground\final_stop/Seer_Help_Line_002
-    * Added ground\final_stop/Seer_Line_001
-    * Added ground\final_stop/Seer_Line_002
-    * Added ground\forest_camp/Cure_Line_001
-    * Added ground\forest_camp/Cure_Line_002
-    * Added ground\forest_camp/Sickness_Line_001
-    * Added ground\forest_camp/Sickness_Line_002
-    * Added ground\forest_camp/Sickness_Line_003
-    * Added ground\forest_camp/Sickness_Line_004
-    * Added ground\guild_hut/Isekai_Line_001
-    * Added ground\guild_hut/Isekai_Line_002
-    * Added ground\guild_hut/Isekai_Line_003
-    * Added ground\guild_hut/Isekai_Line_004
-    * Added ground\guild_hut/Isekai_Line_005
-    * Added ground\guild_hut/Isekai_Line_006
-    * Added ground\guild_hut/Isekai_Line_007
-    * Significantly changed ground\rest_stop/Boss_Line_001 from "[tmp]You've disturbed the nest of Golbats![br]Golbats disturb loudreds, loudreds disturb golem, golem disturbs steelix!" to "[tmp]You've disturbed the nest of Golbats![br]Golbats disturb loudreds, loudreds disturb golem, golem disturbs aggron!"
-    * Added ground\rest_stop/Conjurer_Line_001
-    * Added ground\rest_stop/Conjurer_Line_002
-    * Added ground\rest_stop/Dragon_Line_001
-    * Added ground\rest_stop/Dragon_Rescue_Line_001
-    * Added ground\rest_stop/Loud_Boss_Line_001
-    * Added ground\rest_stop/Loud_Boss_Line_002
-    * Added ground\rest_stop/Loud_Boss_Line_003
-    * Added ground\rest_stop/Loud_Boss_Line_004
-    * Added ground\rest_stop/Loud_Rabble_Line_001
-    * Added ground\rest_stop/Rock_Boss_Line_001
-    * Added ground\rest_stop/Rock_Boss_Line_002
-    * Added ground\rest_stop/Rock_Boss_Reward
-    * Added ground\rest_stop/Screech_Rabble_Line_001
-    * Added ground\rest_stop/Seer_Line_001
-    * Added ground\rest_stop/Seer_Line_002
+    * Added ground\base_camp/Catch_Line_001
+    * Added ground\base_camp/Catch_Line_002
+    * Added ground\base_camp/Hint_Mother_Line_001
+    * Added ground\base_camp/Hint_Sister_Line_001
+    * Added ground\base_camp/Hint_Sister_Line_002
+    * Added ground\base_camp/Hint_Sister_Line_003
+    * Added ground\base_camp/Hint_Sister_Line_004
+    * Added ground\base_camp/Hint_Sister_Line_005
+    * Deleted key ground\base_camp/Range_Line_001
+    * Deleted key ground\base_camp/Range_Line_002
+    * Added ground\base_camp/Unlucky_Line_001, transferred from ground\base_camp/Range_Line_001
+    * Added ground\base_camp/Unlucky_Line_002, transferred from ground\base_camp/Range_Line_002
+    * Erased contents of ground\base_camp_2/History_Line_001
+    * Erased contents of ground\base_camp_2/History_Line_002
+    * Added ground\base_camp_2/Juice_Help_001
+    * Added ground\base_camp_2/Juice_Help_002
+    * Added ground\base_camp_2/Juice_Help_003
+    * Added ground\base_camp_2/Juice_Help_004
+    * Added ground\base_camp_2/Juice_Setup
+    * Added ground\base_camp_2/Solo_Line_001, transferred from ground\base_camp_2/History_Line_001
+    * Added ground\base_camp_2/Solo_Line_002, transferred from ground\base_camp_2/History_Line_002
+    * Added ground\canyon_camp/Brains_Line_001
+    * Added ground\canyon_camp/Brains_Line_002
+    * Added ground\canyon_camp/Brains_Line_003
+    * Added ground\canyon_camp/Brains_Line_004
+    * Added ground\canyon_camp/Desert_Line_001
+    * Added ground\canyon_camp/Desert_Line_002
+    * Changed ground\canyon_camp/Dragon_Line_004 from "We are Team Dragon![pause=30] Monarchs of the Mystery Dungeon!" to "We are Team Dragon![pause=30] Rulers of the Mystery Dungeon!"
+    * Changed ground\canyon_camp/Dragon_Line_005 from "[tmp]A second plot beat will have Team Dragon continuing their boast and mentoring actual dragon types that look up to them (applin, goomy, trapinch)." to "We are Team Dragon![pause=30] Rulers of the Mystery Dungeon!(spoken to)"
+    * Changed ground\canyon_camp/Dragon_Line_006 from "[tmp]After the rescue, Team Dragon is seen mentoring others as humble heroes." to "[tmp]A second plot beat will have Team Dragon continuing their boast.[br]We're mentoring actual dragon types that look up to us in a show of dramatic irony (trapinch)."
+    * Added ground\canyon_camp/Dragon_Line_007
+    * Added ground\canyon_camp/Dragon_Line_008
+    * Added ground\canyon_camp/Dragon_Line_009
+    * Added ground\canyon_camp/Dragon_Line_010, transferred from ground\canyon_camp/Dragon_Line_006
+    * Added ground\canyon_camp/Dragon_Line_011
+    * Added ground\canyon_camp/Dragon_Line_012
+    * Added ground\canyon_camp/Goals_Line_001
+    * Added ground\canyon_camp/Goals_Line_002
+    * Added ground\canyon_camp/Monk_Line_001
+    * Added ground\canyon_camp/Monk_Line_002
+    * Added ground\canyon_camp/Protege_Line_001
+    * Added ground\canyon_camp/Rival_1_Help_Line_001
+    * Added ground\canyon_camp/Rival_1_Help_Line_002
+    * Added ground\canyon_camp/Rival_1_Line_001
+    * Added ground\canyon_camp/Rival_2_Help_Line_001
+    * Added ground\canyon_camp/Rival_2_Help_Line_002
+    * Added ground\canyon_camp/Rival_2_Help_Line_003
+    * Added ground\canyon_camp/Rival_2_Line_001
+    * Added ground\canyon_camp/Shortcut_Complete_Line_001
+    * Added ground\canyon_camp/Shortcut_Complete_Line_002
+    * Added ground\canyon_camp/Shortcut_Complete_Line_003
+    * Added ground\canyon_camp/Shortcut_Complete_Line_004
+    * Changed ground\canyon_camp/Shortcut_Line_001 from "*It's rumored that the guildmasters took a shortcut to the summit of the mountain, where they lay in wait to bestow their title to a new team." to "[tmp]It's rumored that the guildmasters took a shortcut to the summit of the mountain, where they lay in wait to bestow their title to a new team.[br]Where is this shortcut, you may ask?[br] Why,[pause=0] it's none other than Guildmaster Trail!"
+    * Changed ground\canyon_camp/Shortcut_Line_002 from "Where is this shortcut, you may ask?[br] Why,[pause=0] it's none other than Guildmaster Trail!" to "[tmp]Prinplup needs a partner."
+    * Added ground\canyon_camp/Shortcut_Quest_Line_001
+    * Added ground\canyon_camp/Shortcut_Quest_Line_002
+    * Added ground\canyon_camp/Solo_Line_001
+    * Added ground\canyon_camp/Solo_Line_002
+    * Added ground\canyon_camp/Spar_Complete_Line_001
+    * Added ground\canyon_camp/Spar_Complete_Line_002
+    * Added ground\canyon_camp/Spar_Complete_Line_003
+    * Added ground\canyon_camp/Spar_Help_Line_001
+    * Added ground\canyon_camp/Spar_Help_Line_002
+    * Added ground\canyon_camp/Spar_Line_001
+    * Added ground\canyon_camp/Spar_Line_002
+    * Added ground\canyon_camp/Spar_Line_003
+    * Changed ground\canyon_camp/Strategy_Line_001 from "The Steel-type Pokemon in Copper Quarry shrugged off all our attacks.[br]We'll need to strategize.[pause=0]\nLet's consider what moves we can use..." to "[tmp]Sleeping Caldera has a way down, and a way up.[br]Let's find the stairs up before we go down each floor."
+    * Added ground\canyon_camp/Strategy_Line_002, transferred from ground\canyon_camp/Strategy_Line_001
+    * Added ground\canyon_camp/Strategy_Line_003
+    * Added ground\canyon_camp/Strategy_Line_004
+    * Added ground\canyon_camp/Strategy_Rescued_Line_001
+    * Added ground\canyon_camp/Strategy_Rescued_Line_002
+    * Added ground\canyon_camp/Strategy_Rescued_Line_003
+    * Added ground\cliff_camp/Broke_Line_001
+    * Added ground\cliff_camp/Broke_Line_002
+    * Added ground\cliff_camp/Broke_Line_003
+    * Added ground\cliff_camp/Broke_Line_004
+    * Added ground\cliff_camp/Catch_Done_Line_001
+    * Added ground\cliff_camp/Catch_Done_Line_002
+    * Added ground\cliff_camp/Catch_Done_Line_003
+    * Added ground\cliff_camp/Catch_Done_Line_004
+    * Added ground\cliff_camp/Catch_Line_001
+    * Added ground\cliff_camp/Catch_Line_002
+    * Added ground\cliff_camp/Catch_Line_003
+    * Added ground\cliff_camp/Catch_Line_004
+    * Added ground\cliff_camp/Catch_Line_005
+    * Added ground\cliff_camp/Catch_Line_006
+    * Deleted key ground\cliff_camp/Doduo_Intro_001
+    * Deleted key ground\cliff_camp/Doduo_Intro_002
+    * Deleted key ground\cliff_camp/Doduo_Intro_003
+    * Deleted key ground\cliff_camp/Doduo_Intro_004
+    * Significantly changed ground\cliff_camp/Doduo_Line_001 from "" to "[tmp]Wild Pokemon aren't very smart. They'll lose you easily if you run through grass."
+    * Significantly changed ground\cliff_camp/Doduo_Line_002 from "" to "[tmp]Maybe retreating isn't always the answer..."
+    * Deleted key ground\cliff_camp/Doduo_Line_003
+    * Deleted key ground\cliff_camp/Doduo_Line_004
+    * Deleted key ground\cliff_camp/Doduo_Line_005
+    * Added ground\cliff_camp/Hint_Father_Line_001
+    * Added ground\cliff_camp/Hint_Father_Line_002
+    * Added ground\cliff_camp/Hint_Pet_Line_001
+    * Added ground\cliff_camp/Hint_Pet_Line_002
+    * Added ground\cliff_camp/Kidnap_Line_001
+    * Added ground\cliff_camp/Kidnap_Line_002
+    * Added ground\cliff_camp/Kidnap_Line_003
+    * Added ground\cliff_camp/Kidnap_Line_004
+    * Added ground\cliff_camp/Pachirisu_Done_Line_001
+    * Added ground\cliff_camp/Pachirisu_Help_Line_001
+    * Added ground\cliff_camp/Pachirisu_Help_Line_002
+    * Deleted key ground\cliff_camp/Pachirisu_Intro_001
+    * Deleted key ground\cliff_camp/Pachirisu_Intro_002
+    * Deleted key ground\cliff_camp/Pachirisu_Intro_003
+    * Deleted key ground\cliff_camp/Pachirisu_Intro_004
+    * Significantly changed ground\cliff_camp/Pachirisu_Line_001 from "" to "[tmp]Some moves like Tackle and Quick Attack can send you forward. You can use them to outpace your foes, and even cross short gaps!"
+    * Significantly changed ground\cliff_camp/Pachirisu_Line_002 from "" to "[tmp]We should mix up our strategy and use our speed for offense too!"
+    * Deleted key ground\cliff_camp/Pachirisu_Line_003
+    * Deleted key ground\cliff_camp/Pachirisu_Line_004
+    * Added ground\cliff_camp/Rival_1_Line_001
+    * Added ground\cliff_camp/Rival_2_Line_001
+    * Deleted key ground\cliff_camp/Rival_Line_002
+    * Deleted key ground\cliff_camp/Rival_Line_003
+    * Added ground\cliff_camp/Sightseer_Quest_Line_001
+    * Added ground\cliff_camp/Sightseer_Quest_Line_002
+    * Added ground\cliff_camp/Sightseer_Quest_Line_003
+    * Added ground\cliff_camp/Solo_Line_001
+    * Added ground\cliff_camp/Unlucky_Done_Line_001
+    * Added ground\cliff_camp/Unlucky_Done_Line_002
+    * Added ground\final_stop/Dragon_Accept
+    * Added ground\final_stop/Dragon_Decline
+    * Added ground\final_stop/Dragon_Fail_Line_001
+    * Changed ground\final_stop/Dragon_Line_001 from "[tmp]We're helping Altaria train!  Want to be our sparring partner?" to "[tmp]We're helping Flygon master a new technique![br]But we need an experienced team on the other side.[br]Want to be our sparring partner?"
+    * Changed ground\final_stop/Dragon_Line_002 from "[tmp]After defeating us, we reveal that we've taught Alteria Draco Meteor! And we'll be available to teach you too." to "[tmp]After defeating us, we reveal that we've taught Flygon Draco Meteor![br]We congratulate Flygon for finally pulling it off."
+    * Added ground\final_stop/Dragon_Line_003
+    * Added ground\final_stop/Dragon_Line_004
+    * Added ground\final_stop/Dragon_Line_005
+    * Added ground\final_stop/Forbidden_Line_001
+    * Added ground\final_stop/Hint_Brother_Line_001
+    * Added ground\final_stop/Hint_Grandma_Line_001
+    * Added ground\final_stop/Rival_1_Line_001
+    * Added ground\final_stop/Rival_2_Line_001
+    * Added ground\final_stop/Secluded_Line_001
+    * Added ground\final_stop/Tutor_Accept
+    * Added ground\final_stop/Tutor_Ask
+    * Added ground\final_stop/Tutor_Decline
+    * Added ground\final_stop/Tutor_Intro
+    * Added ground\final_stop/Tutor_Taught
+    * Added ground\forest_camp/Catch_Line_001
+    * Added ground\forest_camp/Catch_Line_002
+    * Added ground\forest_camp/Cure_Line_003
+    * Added ground\forest_camp/Cure_Line_004
+    * Added ground\forest_camp/Cure_Line_005
+    * Added ground\forest_camp/Elder_Complete_Line_001
+    * Added ground\forest_camp/Elder_Complete_Line_002
+    * Added ground\forest_camp/Elder_Line_001
+    * Added ground\forest_camp/Elder_Line_002
+    * Changed ground\forest_camp/Sickness_Line_001 from "[tmp]Sunkern's fallen ill to a mysterious sickness. I don't know what to do." to "[tmp]Sunkern's fallen ill to a mysterious disease. I don't know what to do."
+    * Changed ground\forest_camp/Sickness_Line_003 from "[tmp]You'll help us?[br]You will need to extract an herb from around {0}F.[br]It's very hard to spot if you don't know what you're looking for,[br]which explains why it didn't spawn until I handed you the mission just now." to "[tmp]Will you help us?[br]You will need to extract an herb from around {0}F.[br]It's very hard to spot if you don't know what you're looking for,[br]which explains why it didn't spawn until I handed you the mission just now."
+    * Added ground\forest_camp/Solo_Line_001
+    * Added ground\forest_camp/Unlucky_Line_001
+    * Added ground\guildmaster_summit/Rival_1_Line_001
+    * Added ground\guildmaster_summit/Rival_2_Line_001
+    * Added ground\rest_stop/Dragon_Line_002
+    * Added ground\rest_stop/Dragon_Line_003
+    * Added ground\rest_stop/Dragon_Line_004
+    * Added ground\rest_stop/Dragon_Line_005
+    * Added ground\rest_stop/Dragon_Rescue_Line_002
+    * Added ground\rest_stop/Goals_Done_Line_001
+    * Added ground\rest_stop/Goals_Help_Line_001
+    * Added ground\rest_stop/Goals_Help_Line_002
+    * Added ground\rest_stop/Goals_Line_001
+    * Added ground\rest_stop/Goals_Line_002
+    * Added ground\rest_stop/Goals_Line_003
+    * Added ground\rest_stop/Goals_Line_004
+    * Added ground\rest_stop/Rival_1_Help_Line_001
+    * Added ground\rest_stop/Rival_1_Help_Line_002
+    * Added ground\rest_stop/Rival_1_Help_Line_003
+    * Added ground\rest_stop/Rival_1_Line_001
+    * Added ground\rest_stop/Rival_2_Help_Line_001
+    * Added ground\rest_stop/Rival_2_Help_Line_002
+    * Added ground\rest_stop/Rival_2_Line_001
+    * Added ground\rest_stop/Strategy_Line_001
+    * Added ground\rest_stop/Strategy_Line_002
 
 Sheet: Abilities
-    * Significantly changed 0293-supreme_overlord-0001|data.Desc from "" to "The Pokémon's Attack and Sp. Atk stats are boosted for every fainted teammate."
+    * Significantly changed 0192-stamina-0001|data.Desc from "Boosts the Defense stat when hit by an attack." to "The Pokémon may boost its Defense stat when hit by a move."
+    * Significantly changed 0209-disguise-0001|data.Desc from "Once per battle, the shroud that covers the Pokémon can protect it from an attack." to "Once per floor, the shroud that covers the Pokémon can protect it from an attack."
+    * Significantly changed 0237-ball_fetch-0001|data.Desc from "If the Pokémon is not holding an item, it will fetch the Poké Ball from the first failed throw of the battle." to "The Pokémon will fetch any Apricorn that fails to recruit wild Pokémon."
+    * Significantly changed 0253-perish_body-0001|data.Desc from "When hit by a move that makes direct contact, the Pokémon and the attacker will faint after three turns unless they switch out of battle." to "When hit by a move that makes direct contact, the attacker will receive the Perish Count status."
 
 Sheet: Items
-    * Significantly changed 0012-machine_assembly_box-0001|data.Desc from "A marvelous box that lets the user add a Pokémon from the assembly to the team. It only works for Pokémon that joined the current dungeon." to "A marvelous box that lets the user add a Pokémon from the assembly to the team."
+    * Added 0018-lost_item_bug-0000|data.Name
+    * Added 0018-lost_item_bug-0001|data.Desc
+    * Added 0018-lost_item_dark-0000|data.Name
+    * Added 0018-lost_item_dark-0001|data.Desc
+    * Added 0018-lost_item_grass-0000|data.Name
+    * Added 0018-lost_item_grass-0001|data.Desc
+    * Added 0018-lost_item_ground-0000|data.Name
+    * Added 0018-lost_item_ground-0001|data.Desc
+    * Added 0018-lost_item_normal-0000|data.Name
+    * Added 0018-lost_item_normal-0001|data.Desc
 
 Sheet: MapStatuses
+    * Added 0000-diamond_dust-0000|data.Name
+    * Added 0000-diamond_dust-0001|data.Desc
 
 Sheet: Moves
-    * Changed 0218-frustration-0001|data.Desc from "A full-power attack that grows more powerful if the user has no allies near it." to "A full-power attack that grows less powerful the more allies there are nearby."
-    * Significantly changed 0869-kowtow_cleave-0001|data.Desc from "" to "The user slashes at the target after kowtowing to make the target let down its guard. This attack never misses."
+    * Significantly changed 0237-hidden_power-0001|data.Desc from "A unique attack that varies in type each time it is used." to "A unique attack that varies in type depending on the Pokémon and the dungeon floor."
 
 Sheet: Statuses
 
@@ -100,6 +226,7 @@ Sheet: Excl Effects
 Sheet: Zones
 
 Sheet: Maps
+    * Significantly changed final_stop-0000|data.Name from "" to "Blizzard Camp"
 
 Sheet: GroundMaps
 

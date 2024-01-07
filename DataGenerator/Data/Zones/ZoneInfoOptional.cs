@@ -5806,8 +5806,8 @@ namespace DataGenerator.Data
                 held.Spawns.Add(new InvItem("held_soft_sand"), new IntRange(0, max_floors), 7);
                 held.Spawns.Add(new InvItem("held_poison_barb", true), new IntRange(0, max_floors), 3);
                 held.Spawns.Add(new InvItem("held_poison_barb"), new IntRange(0, max_floors), 7);
-                held.Spawns.Add(new InvItem("held_metal_coat", true), new IntRange(0, max_floors), 3);
-                held.Spawns.Add(new InvItem("held_metal_coat"), new IntRange(0, max_floors), 7);
+                held.Spawns.Add(new InvItem("held_twisted_spoon", true), new IntRange(0, max_floors), 3);
+                held.Spawns.Add(new InvItem("held_twisted_spoon"), new IntRange(0, max_floors), 7);
                 held.Spawns.Add(new InvItem("held_grip_claw", true), new IntRange(0, max_floors), 3);
                 held.Spawns.Add(new InvItem("held_grip_claw"), new IntRange(0, max_floors), 7);
                 //tms

@@ -1147,3 +1147,13 @@ Key		EN
 0017-xcl_family_zangoose_00-0000|data.Name		Strong Sash
 0017-xcl_family_zubat_00-0000|data.Name		Slash Bow
 0017-xcl_family_zubat_01-0000|data.Name		Absorb Scarf
+0018-lost_item_bug-0000|data.Name		Special Ingredient
+0018-lost_item_bug-0001|data.Desc		A mission item.
+0018-lost_item_dark-0000|data.Name		Lost Satchel
+0018-lost_item_dark-0001|data.Desc		A mission item.
+0018-lost_item_grass-0000|data.Name		Herba Mystica
+0018-lost_item_grass-0001|data.Desc		A mission item.
+0018-lost_item_ground-0000|data.Name		Lost Scarf
+0018-lost_item_ground-0001|data.Desc		A mission item.
+0018-lost_item_normal-0000|data.Name		Not-So-Normal Gem
+0018-lost_item_normal-0001|data.Desc		A mission item.

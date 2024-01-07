@@ -13,6 +13,8 @@ Key		EN
 0000-default_mapstatus-0001|data.Desc		
 0000-default_weather-0000|data.Name		Default Weather
 0000-default_weather-0001|data.Desc		
+0000-diamond_dust-0000|data.Name		Diamond Dust
+0000-diamond_dust-0001|data.Desc		
 0000-electric_terrain-0000|data.Name		Electric Terrain
 0000-electric_terrain-0001|data.Desc		Electric-type attacks are boosted, and all Pokémon on the floor cannot sleep.
 0000-foe_fov-0000|data.Name		Foe FOV
