@@ -1582,7 +1582,7 @@ namespace DataGenerator.Data
 
                 //Sleeping, holds item
                 {
-                    TeamMemberSpawn mob = GetBoostedTeamMob("spinda", "tangled_feet", "teeter_dance", "copycat", "", "", new RandRange(30), 4, TeamMemberSpawn.MemberRole.Support, "wander_normal", true);
+                    TeamMemberSpawn mob = GetBoostedTeamMob("spinda", "tangled_feet", "teeter_dance", "copycat", "", "", new RandRange(30), 4, TeamMemberSpawn.MemberRole.Support, "wander_normal", true, true);
                     MobSpawnItem itemSpawn = new MobSpawnItem(true);
                     itemSpawn.Items.Add(new InvItem("held_trap_scarf"), 10);
                     itemSpawn.Items.Add(new InvItem("held_twist_band"), 10);
