@@ -725,42 +725,42 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Protein");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Attack.");
                 item.Sprite = "Medicine_Red";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Attack, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Attack, 4));
             }
             else if (ii == 152)
             {
                 item.Name = new LocalText("Iron");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Defense.");
                 item.Sprite = "Medicine_Yellow";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Defense, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Defense, 4));
             }
             else if (ii == 153)
             {
                 item.Name = new LocalText("Calcium");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Special Attack.");
                 item.Sprite = "Medicine_Red";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.MAtk, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.MAtk, 4));
             }
             else if (ii == 154)
             {
                 item.Name = new LocalText("Zinc");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Special Defense.");
                 item.Sprite = "Medicine_Yellow";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.MDef, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.MDef, 4));
             }
             else if (ii == 155)
             {
                 item.Name = new LocalText("Carbos");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Speed.");
                 item.Sprite = "Medicine_Orange";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Speed, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.Speed, 4));
             }
             else if (ii == 156)
             {
                 item.Name = new LocalText("HP Up");
                 item.Desc = new LocalText("A drink that permanently raises the Pokémon's Maximum HP.");
                 item.Sprite = "Medicine_Orange";
-                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.HP, 3));
+                item.UseEvent.OnHits.Add(0, new VitaminEvent(Stat.HP, 4));
             }
             else if (ii == 157)
             {
@@ -3384,6 +3384,46 @@ namespace DataGenerator.Data
                 // This will prevent mysterious distortions from occurring, and cause them to flood out when taken away
                 item.Price = 80000;
             }
+            else if (ii == 545)
+            {
+                item.Name = new LocalText("Special Ingredient");
+                item.Comment = "Do not Translate";
+                fileName = "lost_item_bug";
+                item.Sprite = "Flower_Blue";
+                item.Desc = new LocalText("A mission item.");
+            }
+            else if (ii == 546)
+            {
+                item.Name = new LocalText("Lost Satchel");
+                item.Comment = "Do not Translate";
+                fileName = "lost_item_dark";
+                item.Sprite = "Flower_Blue";
+                item.Desc = new LocalText("A mission item.");
+            }
+            else if (ii == 547)
+            {
+                item.Name = new LocalText("Lost Scarf");
+                item.Comment = "Do not Translate";
+                fileName = "lost_item_ground";
+                item.Sprite = "Flower_Blue";
+                item.Desc = new LocalText("A mission item.");
+            }
+            else if (ii == 548)
+            {
+                item.Name = new LocalText("Herba Mystica");
+                item.Comment = "Do not Translate";
+                fileName = "lost_item_grass";
+                item.Sprite = "Flower_Blue";
+                item.Desc = new LocalText("A mission item.");
+            }
+            else if (ii == 549)
+            {
+                item.Name = new LocalText("Not-So-Normal Gem");
+                item.Comment = "Do not Translate";
+                fileName = "lost_item_normal";
+                item.Sprite = "Flower_Blue";
+                item.Desc = new LocalText("A mission item.");
+            }
             else if (ii == 576)
                 FillTMData(item, "earthquake");
             else if (ii == 577)
@@ -3814,7 +3854,7 @@ namespace DataGenerator.Data
                     item.UsageType = ItemData.UseType.Box;
                     item.Price = 1000;
                 }
-                else if (ii < 500)//special
+                else if (ii < 540)//special
                 {
                     if (ii < 454)
                     {
@@ -3828,6 +3868,10 @@ namespace DataGenerator.Data
                             fileName = "loot_" + Text.Sanitize(item.Name.DefaultText).ToLower();
                         item.SortCategory = 15;
                     }
+                }
+                else if (ii < 550)//mission items
+                {
+                    item.SortCategory = 18;
                 }
                 else if (ii < 700)//TM
                 {

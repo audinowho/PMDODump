@@ -384,7 +384,7 @@ Key		EN
 0191-delta_stream-0000|data.Name		Delta Stream
 0191-delta_stream-0001|data.Desc		Affects weather and eliminates all of the Flying type's weaknesses.
 0192-stamina-0000|data.Name		Stamina
-0192-stamina-0001|data.Desc		Boosts the Defense stat when hit by an attack.
+0192-stamina-0001|data.Desc		The Pokémon may boost its Defense stat when hit by a move.
 0193-wimp_out-0000|data.Name		Wimp Out
 0193-wimp_out-0001|data.Desc		The Pokémon cowardly switches out when its HP becomes half or less.
 0194-emergency_exit-0000|data.Name		Emergency Exit
@@ -418,7 +418,7 @@ Key		EN
 0208-schooling-0000|data.Name		Schooling
 0208-schooling-0001|data.Desc		When it has a lot of HP, the Pokémon forms a powerful school. It stops schooling when its HP is low.
 0209-disguise-0000|data.Name		Disguise
-0209-disguise-0001|data.Desc		Once per battle, the shroud that covers the Pokémon can protect it from an attack.
+0209-disguise-0001|data.Desc		Once per floor, the shroud that covers the Pokémon can protect it from an attack.
 0210-battle_bond-0000|data.Name		Battle Bond
 0210-battle_bond-0001|data.Desc		Defeating an opposing Pokémon strengthens the Pokémon's bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful.
 0211-power_construct-0000|data.Name		Power Construct
@@ -474,7 +474,7 @@ Key		EN
 0236-libero-0000|data.Name		Libero
 0236-libero-0001|data.Desc		Changes the Pokémon's type to the type of the move it last used.
 0237-ball_fetch-0000|data.Name		Ball Fetch
-0237-ball_fetch-0001|data.Desc		If the Pokémon is not holding an item, it will fetch the Poké Ball from the first failed throw of the battle.
+0237-ball_fetch-0001|data.Desc		The Pokémon will fetch any Apricorn that fails to recruit wild Pokémon.
 0238-cotton_down-0000|data.Name		Cotton Down
 0238-cotton_down-0001|data.Desc		When the Pokémon is hit by an attack, it scatters cotton fluff around and lowers the Speed stat of all Pokémon except itself.
 0239-propeller_tail-0000|data.Name		Propeller Tail
@@ -506,7 +506,7 @@ Key		EN
 0252-steely_spirit-0000|data.Name		Steely Spirit
 0252-steely_spirit-0001|data.Desc		Powers up ally Pokémon's Steel-type moves.
 0253-perish_body-0000|data.Name		Perish Body
-0253-perish_body-0001|data.Desc		When hit by a move that makes direct contact, the Pokémon and the attacker will faint after three turns unless they switch out of battle.
+0253-perish_body-0001|data.Desc		When hit by a move that makes direct contact, the attacker will receive the Perish Count status.
 0254-wandering_spirit-0000|data.Name		Wandering Spirit
 0254-wandering_spirit-0001|data.Desc		The Pokémon exchanges Abilities with a Pokémon that hits it with a move that makes direct contact.
 0255-gorilla_tactics-0000|data.Name		Gorilla Tactics

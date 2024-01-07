@@ -16,4 +16,4 @@ guildmaster_summit-0000|data.Name		Guildmaster Summit	Gildenmeister-Gipfel	Vetta
 luminous_spring-0000|data.Name		Luminous Spring	Leuchtende Quelle	Sorgente Luccichio	光之泉		Manantial Luminoso
 post_office-0000|data.Name		Pelipper Post Office	Pelipper-Post	Ufficio Postale Pelipper	大嘴鸥联络站		Mensajeros Pelipper
 rest_stop-0000|data.Name		Cave Shelter	Höhlenzuflucht	Rifugio Montanaro	洞穴庇护所		Cueva Refugio
-test_grounds-0000|data.Name		Test Grounds					
+test_grounds-0000|data.Name		Test Grounds	Testbereich	Terreni di Prova	测试地面	Camp de Base	Terreno de Pruebas

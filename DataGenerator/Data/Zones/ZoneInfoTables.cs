@@ -1302,7 +1302,86 @@ namespace DataGenerator.Data
             yield return "glastrier";
             yield return "spectrier";
             yield return "calyrex";
+            yield return "enamorus";
+            yield return "great_tusk";
+            yield return "scream_tail";
+            yield return "brute_bonnet";
+            yield return "flutter_mane";
+            yield return "slither_wing";
+            yield return "sandy_shocks";
+            yield return "iron_treads";
+            yield return "iron_bundle";
+            yield return "iron_hands";
+            yield return "iron_jugulis";
+            yield return "iron_moth";
+            yield return "iron_thorns";
+            yield return "wo_chien";
+            yield return "chien_pao";
+            yield return "ting_lu";
+            yield return "chi_yu";
+            yield return "roaring_moon";
+            yield return "iron_valiant";
+            yield return "koraidon";
+            yield return "miraidon";
         }
+
+
+        [Flags]
+        public enum EvoClass
+        {
+            None = 0,
+            Early = 1,
+            Mid = 2,
+            Late = 4,
+            End = 8,
+            All = 15
+        }
+
+        /// <summary>
+        /// This does not include type boosting items that are also evo items
+        /// </summary>
+        /// <param name="evoClass"></param>
+        /// <returns></returns>
+        public static IEnumerable<string> IterateEvoItems(EvoClass evoClass)
+        {
+            if ((evoClass & EvoClass.End) != EvoClass.None)
+            {
+                yield return "evo_prism_scale";
+                yield return "evo_reaper_cloth";
+                yield return "evo_magmarizer";
+                yield return "evo_electirizer";
+                yield return "evo_protector";
+            }
+
+            if ((evoClass & EvoClass.Late) != EvoClass.None)
+            {
+                yield return "evo_link_cable";
+                yield return "evo_dawn_stone";
+                yield return "evo_dusk_stone";
+                yield return "evo_shiny_stone";
+            }
+
+            if ((evoClass & EvoClass.Mid) != EvoClass.None)
+            {
+                yield return "evo_sun_stone";
+                yield return "evo_moon_stone";
+                yield return "evo_kings_rock";
+                yield return "evo_sun_ribbon";
+                yield return "evo_moon_ribbon";
+            }
+
+            if ((evoClass & EvoClass.Early) != EvoClass.None)
+            {
+                yield return "evo_thunder_stone";
+                yield return "evo_fire_stone";
+                yield return "evo_water_stone";
+                yield return "evo_leaf_stone";
+                yield return "evo_ice_stone";
+            }
+        }
+
+
+
 
         [Flags]
         public enum TMClass

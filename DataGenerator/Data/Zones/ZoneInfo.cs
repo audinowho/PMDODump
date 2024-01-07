@@ -1393,9 +1393,8 @@ namespace DataGenerator.Data
                         CategorySpawn<InvItem> evo = new CategorySpawn<InvItem>();
                         evo.SpawnRates.SetRange(1, new IntRange(0, max_floors));
                         itemSpawnZoneStep.Spawns.Add("evo", evo);
-
-
                         evo.Spawns.Add(new InvItem("evo_thunder_stone"), new IntRange(0, max_floors), 10);
+
                         //throwable
                         CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
                         throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
@@ -1588,6 +1587,7 @@ namespace DataGenerator.Data
                             shop.Items.Add(new MapItem("held_x_ray_specs", 0, 4000), 10);//x-ray specs
                             shop.Items.Add(new MapItem("held_heal_ribbon", 0, 4000), 10);//heal ribbon
                             shop.Items.Add(new MapItem("held_wide_lens", 0, 4500), 10);//wide lens
+                            shop.Items.Add(new MapItem("evo_link_cable", 0, 3500), 10);
 
                             foreach (string key in IterateTypeBoosters())
                                 shop.Items.Add(new MapItem(key, 0, 2000), 5);//type items
@@ -2992,6 +2992,7 @@ namespace DataGenerator.Data
                     necessities.Spawns.Add(new InvItem("berry_leppa", true), new IntRange(0, max_floors), 3);
                     necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 6);
                     necessities.Spawns.Add(new InvItem("berry_oran", true), new IntRange(0, max_floors), 2);
+                    necessities.Spawns.Add(new InvItem("seed_reviver", true), new IntRange(0, max_floors), 4);
                     necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 4);
                     necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
                     necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(0, max_floors), 6);
@@ -4279,7 +4280,7 @@ namespace DataGenerator.Data
                         orbs.Spawns.Add(new InvItem("orb_foe_seal"), new IntRange(0, max_floors), 10);
                         //held
                         CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
-                        held.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+                        held.SpawnRates.SetRange(4, new IntRange(0, max_floors));
                         itemSpawnZoneStep.Spawns.Add("held", held);
 
 
@@ -4288,7 +4289,7 @@ namespace DataGenerator.Data
                         held.Spawns.Add(new InvItem("held_iron_ball"), new IntRange(0, max_floors), 10);
                         held.Spawns.Add(new InvItem("held_cover_band"), new IntRange(0, max_floors), 10);
                         held.Spawns.Add(new InvItem("held_magnet"), new IntRange(0, max_floors), 10);
-                        held.Spawns.Add(new InvItem("held_metal_coat"), new IntRange(0, max_floors), 10);
+                        held.Spawns.Add(new InvItem("held_metal_coat"), new IntRange(0, max_floors), 15);
                         //tms
                         CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
                         tms.SpawnRates.SetRange(7, new IntRange(0, max_floors));
@@ -4335,6 +4336,28 @@ namespace DataGenerator.Data
                         poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
 
                         floorSegment.ZoneSteps.Add(poolSpawn);
+
+
+
+                        RandBag<IGenStep> npcZoneSpawns = new RandBag<IGenStep>(true, new List<IGenStep>());
+                        //Secret Exit
+                        {
+                            PresetMultiTeamSpawner<ListMapGenContext> multiTeamSpawner = new PresetMultiTeamSpawner<ListMapGenContext>();
+                            MobSpawn post_mob = new MobSpawn();
+                            post_mob.BaseForm = new MonsterID("linoone", 0, "normal", Gender.Male);
+                            post_mob.Tactic = "slow_wander";
+                            post_mob.Level = new RandRange(28);
+                            post_mob.SpawnFeatures.Add(new MobSpawnInteractable(new NpcDialogueBattleEvent(new StringKey("TALK_ADVICE_QUARRY"))));
+                            SpecificTeamSpawner post_team = new SpecificTeamSpawner(post_mob);
+                            post_team.Explorer = true;
+                            multiTeamSpawner.Spawns.Add(post_team);
+                            PlaceRandomMobsStep<ListMapGenContext> randomSpawn = new PlaceRandomMobsStep<ListMapGenContext>(multiTeamSpawner);
+                            randomSpawn.Ally = true;
+                            npcZoneSpawns.ToSpawn.Add(randomSpawn);
+                        }
+                        SpreadStepZoneStep npcZoneStep = new SpreadStepZoneStep(new SpreadPlanQuota(new RandRange(1), new IntRange(7, 9), true), PR_SPAWN_MOBS_EXTRA, npcZoneSpawns);
+                        floorSegment.ZoneSteps.Add(npcZoneStep);
+
 
                         TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                         tileSpawn.Priority = PR_RESPAWN_TRAP;
@@ -4425,6 +4448,8 @@ namespace DataGenerator.Data
                                 shop.Items.Add(new MapItem(key, 0, 100), 1);//type berries
                             foreach (string key in IterateGummis())
                                 shop.Items.Add(new MapItem(key, 0, 800), 1);//gummis
+                            foreach (string key in IterateEvoItems(EvoClass.Early))
+                                shop.Items.Add(new MapItem(key, 0, 2500), 2);
                             shop.Items.Add(new MapItem("food_apple_huge", 0, 1000), 10);//huge apple
 
                             shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
@@ -4746,7 +4771,6 @@ namespace DataGenerator.Data
                                     detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BlockVault));
                                     detours.RoomComponents.Set(new NoConnectRoom());
                                     detours.RoomComponents.Set(new NoEventRoom());
-                                    detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.BlockVault));
                                     detours.HallComponents.Set(new NoConnectRoom());
                                     detours.HallComponents.Set(new NoEventRoom());
 
