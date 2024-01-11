@@ -1263,7 +1263,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Magic Bounce");
                 ability.Desc = new LocalText("Reflects moves that cause status conditions.");
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Green", 2, -1, -1, 192), 3);
-                ability.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(false, new BounceStatusEvent(new StringKey("MSG_MAGIC_BOUNCE"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
+                ability.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(false, new BounceStatusEvent(true, new StringKey("MSG_MAGIC_BOUNCE"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
             }
             else if (ii == 157)
             {

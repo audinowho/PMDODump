@@ -1464,7 +1464,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MAGIC_COAT_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Screen_RSE_Green", 2, -1, -1, 192), 3);
-                status.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(false, new BounceStatusEvent(new StringKey("MSG_MAGIC_COAT"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
+                status.BeforeBeingHits.Add(-3, new ExceptInfiltratorEvent(false, new BounceStatusEvent(false, new StringKey("MSG_MAGIC_COAT"), new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 30))));
                 status.StatusStates.Set(new CountDownState(15));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
