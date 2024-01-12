@@ -63,6 +63,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Tropical Path");
                     zone.Rescues = 2;
                     zone.Level = 5;
+                    zone.ExpPercent = 75;
                     zone.Rogue = RogueStatus.NoTransfer;
 
                     int max_floors = 4;
@@ -291,6 +292,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Faded Trail");
                     zone.Rescues = 2;
                     zone.Level = 10;
+                    zone.ExpPercent = 75;
                     zone.Rogue = RogueStatus.NoTransfer;
 
                     {
@@ -833,6 +835,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Flyaway Cliffs");
                     zone.Rescues = 2;
                     zone.Level = 20;
+                    zone.ExpPercent = 65;
                     zone.Rogue = RogueStatus.NoTransfer;
 
                     int max_floors = 10;
@@ -1312,6 +1315,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Thunderstruck Pass");
                     zone.Rescues = 2;
                     zone.Level = 30;
+                    zone.ExpPercent = 75;
                     zone.Rogue = RogueStatus.NoTransfer;
 
                     {
@@ -4184,6 +4188,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Copper Quarry");
                     zone.Rescues = 2;
                     zone.Level = 25;
+                    zone.ExpPercent = 65;
                     zone.Rogue = RogueStatus.NoTransfer;
 
                     {

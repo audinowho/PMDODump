@@ -1463,6 +1463,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Lava Floe Island");
                 zone.Rescues = 2;
                 zone.Level = 20;
+                zone.ExpPercent = 75;
                 zone.TeamSize = 2;
                 zone.Rogue = RogueStatus.NoTransfer;
 
@@ -2041,6 +2042,7 @@ namespace DataGenerator.Data
             zone.Name = new LocalText("Veiled Ridge");
             zone.Rescues = 2;
             zone.Level = 35;
+            zone.ExpPercent = 85;
             zone.Rogue = RogueStatus.NoTransfer;
 
             {
@@ -2889,6 +2891,7 @@ namespace DataGenerator.Data
             zone.Name = new LocalText("Overgrown Wilds");
             zone.Rescues = 2;
             zone.Level = 20;
+            zone.ExpPercent = 80;
             zone.Rogue = RogueStatus.NoTransfer;
 
             {
@@ -4431,6 +4434,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Moonlit Courtyard");
                 zone.Rescues = 4;
                 zone.Level = 25;
+                zone.ExpPercent = 55;
                 zone.BagRestrict = 16;
                 zone.Rogue = RogueStatus.NoTransfer;
 
@@ -5711,6 +5715,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Forsaken Desert");
                 zone.Rescues = 2;
                 zone.Level = 30;
+                zone.ExpPercent = 85;
                 zone.Rogue = RogueStatus.NoTransfer;
 
                 int max_floors = 4;
