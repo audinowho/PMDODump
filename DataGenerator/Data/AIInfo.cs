@@ -335,6 +335,7 @@ namespace DataGenerator.Data
 
             //ai for mission target
             //will not wander into secondary terrain or walls
+            tactic = new AITactic();
             tactic.Name = new LocalText("Mission Target");//29
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
@@ -345,6 +346,7 @@ namespace DataGenerator.Data
 
             //ai for fleeing
             //the AI will try to flee for the stairs, while not wandering into secondary terrain or walls
+            tactic = new AITactic();
             tactic.Name = new LocalText("Super Flee Stairs");//30
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
