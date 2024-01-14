@@ -1371,7 +1371,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Ambush Forest");
                 zone.Rescues = 2;
                 zone.Level = 30;
-                zone.ExpPercent = 35;
+                zone.ExpPercent = 30;
                 zone.Rogue = RogueStatus.NoTransfer;
 
                 int max_floors = 20;
@@ -2176,7 +2176,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Treacherous Mountain");
                 zone.Rescues = 2;
                 zone.Level = 40;
-                zone.ExpPercent = 65;
+                zone.ExpPercent = 60;
                 zone.Rogue = RogueStatus.NoTransfer;
 
                 int max_floors = 20;

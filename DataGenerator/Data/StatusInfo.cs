@@ -1659,7 +1659,7 @@ namespace DataGenerator.Data
                 status.ProximityEvent.Radius = 3;
                 status.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
                 status.ProximityEvent.BeforeBeingHits.Add(-5, new SnatchEvent(new SingleEmitter(new AnimData("Charge_Up", 3)), "DUN_Move_Start"));
-                status.StatusStates.Set(new CountDownState(3));
+                status.StatusStates.Set(new CountDownState(10));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
             else if (ii == 95)
