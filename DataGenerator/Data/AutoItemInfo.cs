@@ -1364,7 +1364,7 @@ namespace DataGenerator.Data
             else if (type == ExclusiveItemEffect.AcuteSniffer)
             {
                 item.Rarity = 2;
-                item.Desc = new LocalText("When kept in the bag, it reveals the number of items laying on the ground the Pokémon reaches a new floor.");
+                item.Desc = new LocalText("When kept in the bag, it reveals the number of items laying on the ground whenever the Pokémon reaches a new floor.");
                 if (includeEffects)
                 {
                     item.OnMapStarts.Add(0, new FamilySingleEvent(new AcuteSnifferEvent("items_sniffed", new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), ""))));
@@ -1658,7 +1658,7 @@ namespace DataGenerator.Data
             else if (type == ExclusiveItemEffect.BetterOdds)
             {
                 item.Rarity = 2;
-                item.Desc = new LocalText("When kept in the bag, the Pokémon's attacks never miss, and always land a critical hit if the move is on its last PP.");
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's attacks never miss and always land a critical hit if the move is on its last PP.");
                 if (includeEffects)
                 {
                     item.BeforeHittings.Add(0, new FamilyBattleEvent(new BetterOddsEvent()));
