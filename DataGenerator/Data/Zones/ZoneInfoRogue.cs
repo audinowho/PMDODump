@@ -4215,8 +4215,6 @@ namespace DataGenerator.Data
                     }
                     if (ii == 29)
                         specificSpawns.Add(new MapItem("berry_leppa"));//Leppa Berry
-                    if (ii == 39)
-                        specificSpawns.Add(new MapItem("loot_gracidea"));//Gracidea
 
                     RandomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(specificSpawns)));
                     layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);

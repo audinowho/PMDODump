@@ -289,7 +289,7 @@ namespace DataGenerator.Data
             else if (ii == 36)
             {
                 item.Name = new LocalText("Roseli Berry");
-                item.Desc = new LocalText("A mysterious berry. It changes the Pokémon to the Fairy-type.");
+                item.Desc = new LocalText("The slight bitterness that cuts through the rich sweetness makes this Berry perfect for adding an accent.  It changes the Pokémon to the Fairy-type.");
                 item.Sprite = "Berry_Roseli";
                 item.UseEvent.OnHits.Add(0, new ChangeToElementEvent("fairy"));
             }
@@ -423,128 +423,128 @@ namespace DataGenerator.Data
             else if (ii == 76)
             {
                 item.Name = new LocalText("Blue Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Water-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Maximum HP, and Water-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Blue";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("water"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("water", true, Stat.HP));
             }
             else if (ii == 77)
             {
                 item.Name = new LocalText("Black Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Dark-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Maximum HP, and Dark-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Black";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("dark"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("dark", true, Stat.HP));
             }
             else if (ii == 78)
             {
                 item.Name = new LocalText("Clear Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ice-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Special Defense, and Ice-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Clear";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("ice"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("ice", true, Stat.MDef));
             }
             else if (ii == 79)
             {
                 item.Name = new LocalText("Grass Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Grass-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Special Defense, and Grass-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Grass";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("grass"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("grass", true, Stat.MDef));
             }
             else if (ii == 80)
             {
                 item.Name = new LocalText("Green Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Bug-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Speed, and Bug-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Green";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("bug"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("bug", true, Stat.Speed));
             }
             else if (ii == 81)
             {
                 item.Name = new LocalText("Brown Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ground-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Attack, and Ground-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Brown";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("ground"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("ground", true, Stat.Attack));
             }
             else if (ii == 82)
             {
                 item.Name = new LocalText("Orange Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fighting-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Attack, and Fighting-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Orange";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("fighting"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("fighting", true, Stat.Attack));
             }
             else if (ii == 83)
             {
                 item.Name = new LocalText("Gold Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Psychic-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Special Attack, and Psychic-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Gold";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("psychic"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("psychic", true, Stat.MAtk));
             }
             else if (ii == 84)
             {
                 item.Name = new LocalText("Pink Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Poison-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Defense, and Poison-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Pink";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("poison"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("poison", true, Stat.Defense));
             }
             else if (ii == 85)
             {
                 item.Name = new LocalText("Purple Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Ghost-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Special Attack, and Ghost-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Purple";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("ghost"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("ghost", true, Stat.MAtk));
             }
             else if (ii == 86)
             {
                 item.Name = new LocalText("Red Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fire-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Special Attack, and Fire-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Red";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("fire"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("fire", true, Stat.MAtk));
             }
             else if (ii == 87)
             {
                 item.Name = new LocalText("Royal Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Dragon-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Attack, and Dragon-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Royal";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("dragon"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("dragon", true, Stat.Attack));
             }
             else if (ii == 88)
             {
                 item.Name = new LocalText("Silver Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Steel-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Defense, and Steel-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Silver";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("steel"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("steel", true, Stat.Defense));
             }
             else if (ii == 89)
             {
                 item.Name = new LocalText("White Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Normal-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Maximum HP, and Normal-type Pokémon like it the most.");
                 item.Sprite = "Gummi_White";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("normal"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("normal", true, Stat.HP));
             }
             else if (ii == 90)
             {
                 item.Name = new LocalText("Yellow Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Electric-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Speed, and Electric-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Yellow";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("electric"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("electric", true, Stat.Speed));
             }
             else if (ii == 91)
             {
                 item.Name = new LocalText("Sky Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Flying-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Speed, and Flying-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Sky";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("flying"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("flying", true, Stat.Speed));
             }
             else if (ii == 92)
             {
                 item.Name = new LocalText("Gray Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Rock-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Defense, and Rock-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Gray";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("rock"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("rock", true, Stat.Defense));
             }
             else if (ii == 93)
             {
                 item.Name = new LocalText("Magenta Gummi");
-                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. Fairy-type Pokémon like it the most.");
+                item.Desc = new LocalText("A food item that somewhat fills the Pokémon's belly, and permanently boosts its stats. It usually boosts Special Defense, and Fairy-type Pokémon like it the most.");
                 item.Sprite = "Gummi_Magenta";
-                item.UseEvent.OnHits.Add(0, new GummiEvent("fairy"));
+                item.UseEvent.OnHits.Add(0, new VitaGummiEvent("fairy", true, Stat.MDef));
             }
             else if (ii == 94)
             {
@@ -2316,7 +2316,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A magnifying lens that boosts the Pokémon's Attack Range.");
                 item.Sprite = "Specs_LightBlue";
                 item.Price = 200;
-                item.OnActions.Add(-1, new AddRangeEvent(1));
+                item.OnActions.Add(-1, new OnMoveUseEvent(new AddRangeEvent(1)));
             }
             else if (ii == 315)
             {

@@ -3139,7 +3139,7 @@ namespace DataGenerator.Data
                 skill.Desc = new LocalText("The target is infested and trapped for three turns.");
                 skill.BaseCharges = 20;
                 skill.Data.Element = "bug";
-                skill.Data.Category = BattleData.SkillCategory.Status;
+                skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(30));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());

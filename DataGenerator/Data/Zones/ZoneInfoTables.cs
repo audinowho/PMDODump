@@ -240,16 +240,12 @@ namespace DataGenerator.Data
 
                 SpawnList<IStepSpawner<MapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<MapGenContext, MapItem>>();
 
-                //445      ***    Deluxe Box - 5* items
-                if (unrecruitable)
                 {
                     HashSet<string> exceptFor = new HashSet<string>();
                     foreach (string legend in IterateLegendaries())
                         exceptFor.Add(legend);
-                    boxSpawn.Add(new BoxSpawner<MapGenContext>("box_deluxe", new SpeciesItemElementSpawner<MapGenContext>(new IntRange(3, 5), new RandRange(1), "none", exceptFor)), 10);
+                    boxSpawn.Add(new BoxSpawner<MapGenContext>("box_deluxe", new SpeciesItemActiveTeamSpawner<MapGenContext>(new IntRange(1, 3), new RandRange(1), exceptFor, "unown")), 10);
                 }
-                else
-                    boxSpawn.Add(new BoxSpawner<MapGenContext>("box_deluxe", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(5), new RandRange(1))), 10);
 
                 MultiStepSpawner<MapGenContext, MapItem> boxPicker = new MultiStepSpawner<MapGenContext, MapItem>(new LoopedRand<IStepSpawner<MapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
 

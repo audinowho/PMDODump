@@ -261,7 +261,7 @@ namespace DataGenerator.Data
 
                     AddDrawGridSteps(layout);
 
-                    AddStairStep(layout, false);
+                    AddStairStep(layout, true);
 
                     if (ii > 4)
                         AddWaterSteps(layout, "water", new RandRange(30));//water
@@ -562,7 +562,7 @@ namespace DataGenerator.Data
 
                     AddDrawGridSteps(layout);
 
-                    AddStairStep(layout, false);
+                    AddStairStep(layout, true);
 
                     layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
@@ -4867,7 +4867,7 @@ namespace DataGenerator.Data
                                     vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
                                 vaultChanceZoneStep.Items.Add(new MapItem("evo_lunar_ribbon"), new IntRange(0, max_floors), 50);
                                 vaultChanceZoneStep.Items.Add(new MapItem("evo_kings_rock"), new IntRange(0, max_floors), 50);
-                                vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear"), new IntRange(0, max_floors), 100);//amber tear
+                                vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 100);//amber tear
                                 vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
                                 vaultChanceZoneStep.Items.Add(new MapItem("seed_pure"), new IntRange(0, max_floors), 100);//pure seed
                                 vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 200);//recall box

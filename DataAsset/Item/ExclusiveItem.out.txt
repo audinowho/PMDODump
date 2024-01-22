@@ -600,32 +600,32 @@ Generic Name	Custom Name	User	Evos	Custom Group	Group Name	Name	Item For	Index	T
 1* Hair		misdreavus	True					D	*	2*	2* 016: MisfortuneMirror							
 0* None		misdreavus	True					E	*	3*	0* 000: None							
 0* None		mismagius	True					F	*	3*	0* 000: None							
-2* Seal	\uE041	unown	False					A		5*	5* 082: WeaknessReduce	dark						
-2* Seal	\uE042	unown	False					B		5*	5* 040: ExplosiveAttack							
-2* Seal	\uE043	unown	False					C		5*	4* 044: WandSpread							
-2* Seal	\uE044	unown	False					D		5*	4* 045: MultiRayShot							
-2* Seal	\uE045	unown	False					E		5*	4* 095: CelebrateCure							
-2* Seal	\uE046	unown	False					F		5*	4* 047: Celebrate							
-2* Seal	\uE047	unown	False					G		5*	2* 013: PPBoost						5	
-2* Seal	\uE048	unown	False					H		5*	5* 011: Wallbreaker							
-2* Seal	\uE049	unown	False					I		5*	5* 034: MapSurveyor							
-2* Seal	\uE04A	unown	False					J		5*	4* 091: ProjectileAttack							
-2* Seal	\uE04B	unown	False					K		5*	2* 051: BarrageGuard							
-2* Seal	\uE04C	unown	False					L		5*	4* 056: FastHealer							
-2* Seal	\uE04D	unown	False					M		5*	4* 093: AttackRangeInWeather							clear
-2* Seal	\uE04E	unown	False					N		5*	3* 054: DistanceDodge							
-2* Seal	\uE04F	unown	False					O		5*	3* 055: CloseDodge							
-2* Seal	\uE050	unown	False					P		5*	1* 026: SureHitAttacker							
-2* Seal	\uE051	unown	False					Q		5*	2* 033: AcuteSniffer							
-2* Seal	\uE052	unown	False					R		5*	3* 032: StairSensor							
-2* Seal	\uE053	unown	False					S		5*	3* 048: Absorption							
-2* Seal	\uE054	unown	False					T		5*	4* 046: RoyalVeil							
-2* Seal	\uE055	unown	False					U		5*	4* 073: CheekPouch							
-2* Seal	\uE056	unown	False					V		5*	4* 080: NoStatusInWeather							clear
-2* Seal	\uE057	unown	False					W		5*	2* 016: MisfortuneMirror							
-2* Seal	\uE058	unown	False					X		5*	1* 015: PracticeSwinger							
-2* Seal	\uE059	unown	False					Y		5*	2* 053: ClutchPerformer							
-2* Seal	\uE05A	unown	False					Z		5*	2* 059: StatMirror							
+1* Seal	\uE041	unown	False					A		1*	5* 082: WeaknessReduce	dark						
+1* Seal	\uE042	unown	False					B		1*	5* 040: ExplosiveAttack							
+1* Seal	\uE043	unown	False					C		1*	4* 044: WandSpread							
+1* Seal	\uE044	unown	False					D		1*	4* 045: MultiRayShot							
+1* Seal	\uE045	unown	False					E		1*	4* 095: CelebrateCure							
+1* Seal	\uE046	unown	False					F		1*	4* 047: Celebrate							
+1* Seal	\uE047	unown	False					G		1*	2* 013: PPBoost						5	
+1* Seal	\uE048	unown	False					H		1*	5* 011: Wallbreaker							
+1* Seal	\uE049	unown	False					I		1*	5* 034: MapSurveyor							
+1* Seal	\uE04A	unown	False					J		1*	4* 091: ProjectileAttack							
+1* Seal	\uE04B	unown	False					K		1*	2* 051: BarrageGuard							
+1* Seal	\uE04C	unown	False					L		1*	4* 056: FastHealer							
+1* Seal	\uE04D	unown	False					M		1*	4* 093: AttackRangeInWeather							clear
+1* Seal	\uE04E	unown	False					N		1*	3* 054: DistanceDodge							
+1* Seal	\uE04F	unown	False					O		1*	3* 055: CloseDodge							
+1* Seal	\uE050	unown	False					P		1*	1* 026: SureHitAttacker							
+1* Seal	\uE051	unown	False					Q		1*	2* 033: AcuteSniffer							
+1* Seal	\uE052	unown	False					R		1*	3* 032: StairSensor							
+1* Seal	\uE053	unown	False					S		1*	3* 048: Absorption							
+1* Seal	\uE054	unown	False					T		1*	4* 046: RoyalVeil							
+1* Seal	\uE055	unown	False					U		1*	4* 073: CheekPouch							
+1* Seal	\uE056	unown	False					V		1*	4* 080: NoStatusInWeather							clear
+1* Seal	\uE057	unown	False					W		1*	2* 016: MisfortuneMirror							
+1* Seal	\uE058	unown	False					X		1*	1* 015: PracticeSwinger							
+1* Seal	\uE059	unown	False					Y		1*	2* 053: ClutchPerformer							
+1* Seal	\uE05A	unown	False					Z		1*	2* 059: StatMirror							
 0* None	Suffer Scarf	wobbuffet	True					A	*	5*	5* 078: EndureType	dark						
 3* Tie		wobbuffet	True					B	*	4*	5* 034: MapSurveyor							
 1* Card		wynaut	True					C	*	1*	1* 014: DeepBreather							
