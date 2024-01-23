@@ -6,7 +6,10 @@
 * Psych Up fixed to be Normal Type
 * Infestation fixed to be Special Category
 * Fixed Amber Tear stacks of 0 in certain dungeons
+* Fixed vision issues at seams fo wraparound maps
 * Snatch Duration 3->10 turns
 * Removed the extra gracidea from Secret Garden
 * RC: Mysterious distortions give out exclusive items based on the team that entered them
 * RC: Operational Juice Shop
+* DEV: Fixed an issue where multi-choice menus did not obey text alignment params
+* BREAKING: COMMON.ShowDestinationMenu has been refactored.  You can call it the same way, but if you have your own version please update it. The old one will fail to call UI:DestinationMenu due to input and output change
