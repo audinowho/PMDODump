@@ -1304,7 +1304,7 @@ namespace DataGenerator.Data
                 tile.Anim = new ObjAnimData("Portal_Small", 3);
                 tile.MinimapIcon = new Loc(4, 0);
                 tile.MinimapColor = Color.Orange;
-                tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
+                tile.LandedOnTiles.Add(0, new PlayerCharEvent(new TriggerUnderfootEvent()));
 
                 FiniteOverlayEmitter overlay = new FiniteOverlayEmitter();
                 overlay.Anim = new BGAnimData("White", 1);
