@@ -1,6 +1,7 @@
 # 0.7.24 Changes #
 
 * New EXP balancing for all dungeons
+* Fixed issue where AI controlled characters used negative status moves or items on each other
 * Magic Coat deflects all status moves, as does mirror orb
 * Fixed issue with Harvest causing multi-activation with Wide Lens
 * Psych Up fixed to be Normal Type

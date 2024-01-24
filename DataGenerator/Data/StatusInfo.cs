@@ -2027,6 +2027,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("The Pokémon has its Attack Range limited, allowing it to hit only targets in front. This status wears off after many turns have passed.");
                 status.Emoticon = "Blind_Blue";
                 status.StatusStates.Set(new TransferStatusState());
+                status.StatusStates.Set(new BadStatusState());
                 status.OnStatusAdds.Add(0, new StatusAnimEvent(new SingleEmitter(new AnimData("Puff_Black", 3)), "DUN_Smokescreen", 30, true));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_BLINKER_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_BLINKER_END")));
