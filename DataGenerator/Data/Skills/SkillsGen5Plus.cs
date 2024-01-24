@@ -7786,8 +7786,8 @@ namespace DataGenerator.Data
             }
             else if (ii == 888)
             {
-                skill.Name = new LocalText("**Twin Beam");
-                skill.Desc = new LocalText("");
+                skill.Name = new LocalText("Twin Beam");
+                skill.Desc = new LocalText("The user shoots mystical beams from its eyes to inflict damage. The target is hit twice in a row.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
@@ -7795,10 +7795,21 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(40));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((ProjectileAction)skill.HitboxAction).Range = 8;
+                ((ProjectileAction)skill.HitboxAction).Speed = 12;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
+                StreamEmitter shotAnim = new StreamEmitter(new AnimData("Aurora_Beam_Custom", 3));
+                shotAnim.StartDistance = 16;
+                shotAnim.Shots = 12;
+                shotAnim.BurstTime = 3;
+                ((ProjectileAction)skill.HitboxAction).StreamEmitter = shotAnim;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Psybeam";
             }
             else if (ii == 889)
             {
