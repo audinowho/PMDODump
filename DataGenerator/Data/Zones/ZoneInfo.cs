@@ -1315,7 +1315,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Thunderstruck Pass");
                     zone.Rescues = 2;
                     zone.Level = 30;
-                    zone.ExpPercent = 75;
+                    zone.ExpPercent = 60;
                     zone.Rogue = RogueStatus.NoTransfer;
 
                     {
@@ -4188,7 +4188,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Copper Quarry");
                     zone.Rescues = 2;
                     zone.Level = 25;
-                    zone.ExpPercent = 65;
+                    zone.ExpPercent = 50;
                     zone.Rogue = RogueStatus.NoTransfer;
 
                     {

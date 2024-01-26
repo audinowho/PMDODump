@@ -14,4 +14,5 @@
 * RC: Operational Juice Shop
 * RC: Enemies no longer stabilize the mystery distortion stairs
 * DEV: Fixed an issue where multi-choice menus did not obey text alignment params
+* DEV: A hacky-supported mass-validate option is now in the Replays menu: Hold CTRL and press Minimap.
 * BREAKING: COMMON.ShowDestinationMenu has been refactored.  You can call it the same way, but if you have your own version please update it. The old one will fail to call UI:DestinationMenu due to input and output change

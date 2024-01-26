@@ -945,6 +945,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Fertile Valley");
                 zone.Rescues = 2;
                 zone.Level = 15;
+                zone.ExpPercent = 80;
                 zone.Rogue = RogueStatus.NoTransfer;
 
                 {
@@ -2042,7 +2043,7 @@ namespace DataGenerator.Data
             zone.Name = new LocalText("Veiled Ridge");
             zone.Rescues = 2;
             zone.Level = 35;
-            zone.ExpPercent = 85;
+            zone.ExpPercent = 80;
             zone.Rogue = RogueStatus.NoTransfer;
 
             {
@@ -5715,7 +5716,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Forsaken Desert");
                 zone.Rescues = 2;
                 zone.Level = 30;
-                zone.ExpPercent = 85;
+                zone.ExpPercent = 80;
                 zone.Rogue = RogueStatus.NoTransfer;
 
                 int max_floors = 4;
