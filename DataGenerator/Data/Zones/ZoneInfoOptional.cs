@@ -5716,7 +5716,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Forsaken Desert");
                 zone.Rescues = 2;
                 zone.Level = 30;
-                zone.ExpPercent = 80;
+                zone.ExpPercent = 70;
                 zone.Rogue = RogueStatus.NoTransfer;
 
                 int max_floors = 4;
