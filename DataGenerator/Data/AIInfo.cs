@@ -39,6 +39,7 @@ namespace DataGenerator.Data
             tactic.Plans.Add(new FindItemPlan(iq | AIFlags.TrapAvoider, true));
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
+            
             Tactics.Add(tactic);
 
             tactic = new AITactic();
@@ -351,7 +352,7 @@ namespace DataGenerator.Data
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider, 0, 0, 4, (TerrainData.Mobility) 14, false));
-            tactic.Plans.Add(new FleeStairsPlan(iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new FleeStairsPlan(iq | AIFlags.TrapAvoider, new HashSet<string>() {"stairs_back_down", "stairs_back_up", "stairs_exit_down", "stairs_exit_up", "stairs_go_up", "stairs_go_down"}));
             Tactics.Add(tactic);
             
             //make a variant of explore to go for items (For use of team characters, certain thief enemies)
