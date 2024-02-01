@@ -5551,17 +5551,26 @@ namespace DataGenerator.Data
             }
             else if (ii == 752)
             {
-                skill.Name = new LocalText("**Teatime");
+                skill.Name = new LocalText("=Teatime");
                 skill.Desc = new LocalText("The user has teatime with all the Pokémon in the battle. Each Pokémon eats its held Berry.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new AreaAction();
+                ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
+                ((AreaAction)skill.HitboxAction).Range = 2;
+                ((AreaAction)skill.HitboxAction).Speed = 6;
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Beat_Up", 3));
+                emitter.LocHeight = 24;
+                BattleFX preFX = new BattleFX();
+                preFX.Emitter = emitter;
+                preFX.Sound = "DUN_Rollcall_Orb";
+                preFX.Delay = 20;
+                skill.HitboxAction.PreActions.Add(preFX);
+                skill.HitboxAction.TargetAlignments = Alignment.Self | Alignment.Friend | Alignment.Foe;
+                skill.Explosion.TargetAlignments = Alignment.Self | Alignment.Friend | Alignment.Foe;
             }
             else if (ii == 753)
             {
