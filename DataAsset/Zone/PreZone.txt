@@ -1,888 +1,888 @@
 Monster	Skill	Intrinsic	Status	AI	Item	Role
 ---	---	---	---	--	----	---
-abomasnow	absorb	adaptability	all_protect	avoid_trouble	ammo_cacnea_spike	Normal
-abra	accelerock	aerilate	aqua_ring	boss	ammo_corsola_twig	Support
-absol	acid	aftermath	area_counter	get_away	ammo_geo_pebble	Leader
-accelgor	acid_armor	air_lock	attack_response	go_after_foes	ammo_golden_thorn	Loner
-aegislash	acid_downpour	analytic	belch	item_finder	ammo_gravelerock	
-aerodactyl	acid_spray	anger_point	biding	loot_guard	ammo_iron_thorn	
-aggron	acrobatics	anger_shell	bind	patrol	ammo_rare_fossil	
-aipom	acupressure	anticipation	blinker	retreater	ammo_silver_spike	
-alakazam	aerial_ace	arena_trap	bouncing	shopkeeper	ammo_stick	
-alcremie	aeroblast	armor_tail	burn	shuckle	apricorn_big	
-alomomola	after_you	aroma_veil	charge	slow_patrol	apricorn_black	
-altaria	agility	as_one_chill	charging_focus_punch	slow_wander	apricorn_blue	
-amaura	air_cutter	as_one_grim	charging_razor_wind	split_up	apricorn_brown	
-ambipom	air_slash	aura_break	charging_skull_bash	staged_boss	apricorn_glittery	
-amoonguss	all_out_pummeling	bad_dreams	charging_sky_attack	stick_together	apricorn_green	
-ampharos	ally_switch	ball_fetch	charging_solar_beam	thief	apricorn_perfect	
-annihilape	amnesia	battery	chasing	tit_for_tat	apricorn_plain	
-anorith	anchor_shot	battle_armor	clamp	turret	apricorn_purple	
-appletun	ancient_power	battle_bond	confuse	wait_attack	apricorn_red	
-applin	apple_acid	beads_of_ruin	conversion	wait_only	apricorn_white	
-araquanid	aqua_cutter	beast_boost	conversion_2	wait_there	apricorn_yellow	
-arbok	aqua_jet	berserk	counter	wander_dumb	berry_apicot	
-arboliva	aqua_ring	big_pecks	crits_landed	wander_dumb_itemless	berry_aspear	
-arcanine	aqua_step	blaze	cursed	wander_normal	berry_babiri	
-arceus	aqua_tail	bulletproof	decoy	wander_smart	berry_charti	
-archen	arm_thrust	cheek_pouch	defense_curl	weird_tree	berry_cheri	
-archeops	armor_cannon	chilling_neigh	destiny_bond		berry_chesto	
-arctibax	aromatherapy	chlorophyll	detect		berry_chilan	
-arctovish	aromatic_mist	clear_body	digging		berry_chople	
-arctozolt	assist	cloud_nine	disable		berry_coba	
-ariados	assurance	color_change	diving		berry_colbur	
-armaldo	astonish	comatose	doom_desire		berry_custap	
-armarouge	astral_barrage	commander	electrified		berry_enigma	
-aromatisse	attack	competitive	embargo		berry_ganlon	
-aron	attack_order	compound_eyes	encore		berry_haban	
-arrokuda	attract	contrary	endure		berry_hondew	
-articuno	aura_sphere	corrosion	enraged		berry_jaboca	
-audino	aura_wheel	costar	exposed		berry_kasib	
-aurorus	aurora_beam	cotton_down	fire_pledge		berry_kebia	
-avalugg	aurora_veil	cud_chew	fire_spin		berry_kee	
-axew	autotomize	curious_medicine	flinch		berry_kelpsy	
-azelf	avalanche	cursed_body	flying		berry_leppa	
-azumarill	axe_kick	cute_charm	focus_energy		berry_liechi	
-azurill	baby_doll_eyes	damp	follow_me		berry_lum	
-bagon	baddy_bad	dancer	freeze		berry_maranga	
-baltoy	baneful_bunker	dark_aura	friendly_fire		berry_micle	
-banette	barb_barrage	dauntless_shield	future_sight		berry_occa	
-barbaracle	barrage	dazzling	grass_pledge		berry_oran	
-barboach	barrier	defeatist	grudge		berry_passho	
-barraskewda	baton_pass	defiant	heal_block		berry_payapa	
-basculegion	beak_blast	delta_stream	illusion		berry_pecha	
-basculin	beat_up	desolate_land	immobilized		berry_persim	
-bastiodon	behemoth_bash	disguise	in_love		berry_petaya	
-baxcalibur	behemoth_blade	download	infestation		berry_qualot	
-bayleef	belch	dragons_maw	ingrain		berry_rawst	
-beartic	belly_drum	drizzle	invisible		berry_rindo	
-beautifly	bestow	drought	kings_shield		berry_roseli	
-beedrill	bide	dry_skin	last_ally_move		berry_rowap	
-beheeyem	bind	early_bird	last_move_hit_by_other		berry_salac	
-beldum	bite	earth_eater	last_targeted_by		berry_shuca	
-bellibolt	bitter_blade	effect_spore	last_used_move		berry_sitrus	
-bellossom	bitter_malice	electric_surge	last_used_move_slot		berry_starf	
-bellsprout	black_hole_eclipse	electromorphosis	leech_seed		berry_tamato	
-bergmite	blast_burn	emergency_exit	light_screen		berry_tanga	
-bewear	blaze_kick	fairy_aura	lucky_chant		berry_wacan	
-bibarel	blazing_torque	filter	magic_coat		berry_yache	
-bidoof	bleakwind_storm	flame_body	magma_storm		boost_calcium	
-binacle	blizzard	flare_boost	magnet_rise		boost_carbos	
-bisharp	block	flash_fire	mental_charged		boost_hp_up	
-blacephalon	bloom_doom	flower_gift	metal_burst		boost_iron	
-blastoise	blue_flare	flower_veil	mini_counter		boost_nectar	
-blaziken	body_press	fluffy	minimized		boost_protein	
-blipbug	body_slam	forecast	miracle_eye		boost_zinc	
-blissey	bolt_beak	forewarn	mirror_coat		box_dainty	
-blitzle	bolt_strike	friend_guard	missed_all_last_turn		box_deluxe	
-boldore	bone_club	frisk	mist		box_glittery	
-boltund	bone_rush	full_metal_body	mod_accuracy		box_heavy	
-bombirdier	bonemerang	fur_coat	mod_attack		box_light	
-bonsly	boomburst	gale_wings	mod_defense		box_nifty	
-bouffalant	bounce	galvanize	mod_evasion		egg_mystery	
-bounsweet	bouncy_bubble	gluttony	mod_range		empty	
-braixen	branch_poke	good_as_gold	mod_special_attack		evo_chipped_pot	
-brambleghast	brave_bird	gooey	mod_special_defense		evo_cracked_pot	
-bramblin	breaking_swipe	gorilla_tactics	mod_speed		evo_dawn_stone	
-braviary	breakneck_blitz	grass_pelt	nightmare		evo_deep_sea_scale	
-breloom	brick_break	grassy_surge	none		evo_deep_sea_tooth	
-brionne	brine	grim_neigh	outrage		evo_dubious_disc	
-bronzong	brutal_swing	guard_dog	paralyze		evo_dusk_stone	
-bronzor	bubble	gulp_missile	paused		evo_electirizer	
-brute_bonnet	bubble_beam	guts	perish_song		evo_everstone	
-bruxish	bug_bite	hadron_engine	petal_dance		evo_fire_stone	
-budew	bug_buzz	harvest	phantom_force		evo_harmony_scarf	
-buizel	bulk_up	healer	pierce		evo_ice_stone	
-bulbasaur	bulldoze	heatproof	poison		evo_kings_rock	
-buneary	bullet_punch	heavy_metal	poison_toxic		evo_leaf_stone	
-bunnelby	bullet_seed	honey_gather	powder		evo_link_cable	
-burmy	burn_up	huge_power	power_charged		evo_lunar_ribbon	
-butterfree	burning_jealousy	hunger_switch	protect		evo_magmarizer	
-buzzwole	buzzy_buzz	hustle	quick_guard		evo_moon_stone	
-cacnea	calm_mind	hydration	rage_powder		evo_oval_stone	
-cacturne	camouflage	hyper_cutter	recruit_boost		evo_prism_scale	
-calyrex	captivate	ice_body	reflect		evo_protector	
-camerupt	catastropika	ice_face	regeneration		evo_razor_claw	
-capsakid	ceaseless_edge	ice_scales	retaliate		evo_razor_fang	
-carbink	celebrate	illuminate	roosting		evo_reaper_cloth	
-carkol	charge	illusion	safeguard		evo_shiny_stone	
-carnivine	charge_beam	immunity	sand_tomb		evo_sun_ribbon	
-carracosta	charm	imposter	shadow_force		evo_sun_stone	
-carvanha	chatter	infiltrator	shopkeeper		evo_thunder_stone	
-cascoon	chilling_water	innards_out	sky_drop_target		evo_up_grade	
-castform	chilly_reception	inner_focus	sky_drop_user		evo_water_stone	
-caterpie	chip_away	insomnia	sleep		food_apple	
-celebi	chloroblast	intimidate	sleepless		food_apple_big	
-celesteela	circle_throw	intrepid_sword	slip		food_apple_golden	
-centiskorch	clamp	iron_barbs	snatch		food_apple_huge	
-ceruledge	clanging_scales	iron_fist	stat_charged		food_apple_perfect	
-cetitan	clangorous_soul	justified	status_protection		food_banana	
-cetoddle	clangorous_soulblaze	keen_eye	stockpile		food_banana_big	
-chandelure	clear_smog	klutz	super_mobile		food_banana_golden	
-chansey	close_combat	leaf_guard	sure_shot		food_chestnut	
-charcadet	coaching	levitate	taunted		food_grimy	
-charizard	coil	libero	telekinesis		gummi_black	
-charjabug	collision_course	light_metal	thrash		gummi_blue	
-charmander	combat_torque	lightning_rod	times_move_used		gummi_brown	
-charmeleon	comet_punch	limber	torment		gummi_clear	
-chatot	comeuppance	lingering_aroma	transformed		gummi_foul	
-cherrim	confide	liquid_ooze	type_boosted		gummi_gold	
-cherubi	confuse_ray	liquid_voice	type_converted		gummi_grass	
-chesnaught	confusion	long_reach	type_protected		gummi_gray	
-chespin	constrict	magic_bounce	veiled		gummi_green	
-chewtle	continental_crush	magic_guard	was_hurt_last_turn		gummi_magenta	
-chi_yu	conversion	magician	water_pledge		gummi_orange	
-chien_pao	conversion_2	magma_armor	weakness_drain		gummi_pink	
-chikorita	copycat	magnet_pull	whirlpool		gummi_purple	
-chimchar	core_enforcer	marvel_scale	wide_guard		gummi_red	
-chimecho	corkscrew_crash	mega_launcher	wish		gummi_royal	
-chinchou	corrosive_gas	merciless	wrap		gummi_silver	
-chingling	cosmic_power	mimicry	yawning		gummi_sky	
-cinccino	cotton_guard	minus			gummi_white	
-cinderace	cotton_spore	mirror_armor			gummi_wonder	
-clamperl	counter	misty_surge			gummi_yellow	
-clauncher	court_change	mold_breaker			held_assault_vest	
-clawitzer	covet	moody			held_big_root	
-claydol	crabhammer	motor_drive			held_binding_band	
-clefable	crafty_shield	moxie			held_black_belt	
-clefairy	cross_chop	multiscale			held_black_glasses	
-cleffa	cross_poison	multitype			held_black_sludge	
-clobbopus	crunch	mummy			held_blank_plate	
-clodsire	crush_claw	mycelium_might			held_charcoal	
-cloyster	crush_grip	natural_cure			held_choice_band	
-coalossal	curse	neuroforce			held_choice_scarf	
-cobalion	cut	neutralizing_gas			held_choice_specs	
-cofagrigus	dark_pulse	no_guard			held_cover_band	
-combee	dark_void	none			held_defense_scarf	
-combusken	darkest_lariat	normalize			held_draco_plate	
-comfey	dazzling_gleam	oblivious			held_dragon_scale	
-conkeldurr	decorate	opportunist			held_dread_plate	
-copperajah	defend_order	orichalcum_pulse			held_earth_plate	
-corphish	defense_curl	overcoat			held_expert_belt	
-corsola	defog	overgrow			held_fist_plate	
-corviknight	destiny_bond	own_tempo			held_flame_orb	
-corvisquire	detect	parental_bond			held_flame_plate	
-cosmoem	devastating_drake	pastel_veil			held_friend_bow	
-cosmog	diamond_storm	perish_body			held_goggle_specs	
-cottonee	dig	pickpocket			held_golden_mask	
-crabominable	dire_claw	pickup			held_grip_claw	
-crabrawler	disable	pixilate			held_hard_stone	
-cradily	disarming_voice	plus			held_heal_ribbon	
-cramorant	discharge	poison_heal			held_icicle_plate	
-cranidos	dive	poison_point			held_insect_plate	
-crawdaunt	dizzy_punch	poison_touch			held_iron_ball	
-cresselia	doodle	power_construct			held_iron_plate	
-croagunk	doom_desire	power_of_alchemy			held_life_orb	
-crobat	double_edge	power_spot			held_magnet	
-crocalor	double_hit	prankster			held_meadow_plate	
-croconaw	double_iron_bash	pressure			held_metal_coat	
-crustle	double_kick	primordial_sea			held_metronome	
-cryogonal	double_shock	prism_armor			held_mind_plate	
-cubchoo	double_slap	propeller_tail			held_miracle_seed	
-cubone	double_team	protean			held_mobile_scarf	
-cufant	draco_meteor	protosynthesis			held_mystic_water	
-cursola	dragon_ascent	psychic_surge			held_never_melt_ice	
-cutiefly	dragon_breath	punk_rock			held_pass_scarf	
-cyclizar	dragon_claw	pure_power			held_pierce_band	
-cyndaquil	dragon_dance	purifying_salt			held_pink_bow	
-dachsbun	dragon_darts	quark_drive			held_pixie_plate	
-darkrai	dragon_energy	queenly_majesty			held_poison_barb	
-darmanitan	dragon_hammer	quick_draw			held_power_band	
-dartrix	dragon_pulse	quick_feet			held_reunion_cape	
-darumaka	dragon_rage	rain_dish			held_ring_target	
-decidueye	dragon_rush	rattled			held_scope_lens	
-dedenne	dragon_tail	receiver			held_sharp_beak	
-deerling	drain_punch	reckless			held_shed_shell	
-deino	draining_kiss	refrigerate			held_shell_bell	
-delcatty	dream_eater	regenerator			held_silk_scarf	
-delibird	drill_peck	ripen			held_silver_powder	
-delphox	drill_run	rivalry			held_sky_plate	
-deoxys	drum_beating	rks_system			held_soft_sand	
-dewgong	dual_chop	rock_head			held_special_band	
-dewott	dual_wingbeat	rocky_payload			held_spell_tag	
-dewpider	dynamax_cannon	rough_skin			held_splash_plate	
-dhelmise	dynamic_punch	run_away			held_spooky_plate	
-dialga	earth_power	sand_force			held_sticky_barb	
-diancie	earthquake	sand_rush			held_stone_plate	
-diggersby	echoed_voice	sand_spit			held_toxic_orb	
-diglett	eerie_impulse	sand_stream			held_toxic_plate	
-ditto	eerie_spell	sand_veil			held_trap_scarf	
-dodrio	egg_bomb	sap_sipper			held_twist_band	
-doduo	electric_terrain	schooling			held_twisted_spoon	
-dolliv	electrify	scrappy			held_warp_scarf	
-dondozo	electro_ball	screen_cleaner			held_weather_rock	
-donphan	electro_drift	seed_sower			held_wide_lens	
-dottler	electroweb	serene_grace			held_x_ray_specs	
-doublade	embargo	shadow_shield			held_zap_plate	
-dracovish	ember	shadow_tag			held_zinc_band	
-dracozolt	encore	sharpness			herb_mental	
-dragalge	endeavor	shed_skin			herb_power	
-dragapult	endure	sheer_force			herb_white	
-dragonair	energy_ball	shell_armor			key	
-dragonite	entrainment	shield_dust			key_ancient	
-drakloak	eruption	shields_down			loot_adamant_orb	
-drampa	esper_wing	simple			loot_berserk_gene	
-drapion	eternabeam	skill_link			loot_blue_orb	
-dratini	expanding_force	slow_start			loot_gracidea	
-drednaw	explosion	slush_rush			loot_green_orb	
-dreepy	extrasensory	sniper			loot_griseous_orb	
-drifblim	extreme_evoboost	snow_cloak			loot_heart_scale	
-drifloon	extreme_speed	snow_warning			loot_lustrous_orb	
-drilbur	facade	solar_power			loot_meteorite	
-drizzile	fairy_lock	solid_rock			loot_mystery_part	
-drowzee	fairy_wind	soul_heart			loot_nugget	
-druddigon	fake_out	soundproof			loot_pearl	
-dubwool	fake_tears	speed_boost			loot_red_orb	
-ducklett	false_surrender	stakeout			loot_spacetime_globe	
-dudunsparce	false_swipe	stall			machine_ability_capsule	
-dugtrio	feather_dance	stalwart			machine_assembly_box	
-dunsparce	feint	stamina			machine_recall_box	
-duosion	feint_attack	stance_change			machine_storage_box	
-duraludon	fell_stinger	static			medicine_amber_tear	
-durant	fiery_dance	steadfast			medicine_dire_hit	
-dusclops	fiery_wrath	steam_engine			medicine_elixir	
-dusknoir	fillet_away	steelworker			medicine_full_heal	
-duskull	final_gambit	steely_spirit			medicine_full_restore	
-dustox	fire_blast	stench			medicine_guard_spec	
-dwebble	fire_fang	sticky_hold			medicine_max_elixir	
-eelektrik	fire_lash	storm_drain			medicine_max_potion	
-eelektross	fire_pledge	strong_jaw			medicine_potion	
-eevee	fire_punch	sturdy			medicine_x_accuracy	
-eiscue	fire_spin	suction_cups			medicine_x_attack	
-ekans	first_impression	super_luck			medicine_x_defense	
-eldegoss	fishious_rend	supreme_overlord			medicine_x_sp_atk	
-electabuzz	fissure	surge_surfer			medicine_x_sp_def	
-electivire	flail	swarm			medicine_x_speed	
-electrike	flame_burst	sweet_veil			orb_all_aim	
-electrode	flame_charge	swift_swim			orb_all_dodge	
-elekid	flame_wheel	sword_of_ruin			orb_all_hit	
-elgyem	flamethrower	symbiosis			orb_all_power_up	
-emboar	flare_blitz	synchronize			orb_all_protect	
-emolga	flash	tablets_of_ruin			orb_cleanse	
-empoleon	flash_cannon	tangled_feet			orb_devolve	
-enamorus	flatter	tangling_hair			orb_endure	
-entei	fleur_cannon	technician			orb_escape	
-escavalier	fling	telepathy			orb_fill_in	
-espathra	flip_turn	teravolt			orb_foe_hold	
-espeon	floaty_fall	thermal_exchange			orb_foe_seal	
-espurr	floral_healing	thick_fat			orb_freeze	
-eternatus	flower_shield	tinted_lens			orb_halving	
-excadrill	flower_trick	torrent			orb_health	
-exeggcute	fly	tough_claws			orb_invert	
-exeggutor	flying_press	toxic_boost			orb_invisify	
-exploud	focus_blast	toxic_debris			orb_itemizer	
-falinks	focus_energy	trace			orb_luminous	
-farfetchd	focus_punch	transistor			orb_mirror	
-farigiraf	follow_me	triage			orb_mobile	
-fearow	force_palm	truant			orb_mug	
-feebas	foresight	turboblaze			orb_nullify	
-fennekin	forests_curse	unaware			orb_one_room	
-feraligatr	foul_play	unburden			orb_one_shot	
-ferroseed	freeze_dry	unnerve			orb_petrify	
-ferrothorn	freeze_shock	unseen_fist			orb_pierce	
-fidough	freezing_glare	vessel_of_ruin			orb_rebound	
-finizen	freezy_frost	victory_star			orb_revival	
-finneon	frenzy_plant	vital_spirit			orb_rollcall	
-flaaffy	frost_breath	volt_absorb			orb_scanner	
-flabebe	frustration	wandering_spirit			orb_slow	
-flamigo	fury_attack	water_absorb			orb_slumber	
-flapple	fury_cutter	water_bubble			orb_spurn	
-flareon	fury_swipes	water_compaction			orb_stayaway	
-fletchinder	fusion_bolt	water_veil			orb_totter	
-fletchling	fusion_flare	weak_armor			orb_trap_see	
-flittle	future_sight	well_baked_body			orb_trapbust	
-floatzel	gastro_acid	white_smoke			orb_trawl	
-floette	gear_grind	wimp_out			orb_weather	
-floragato	gear_up	wind_power			seed_ban	
-florges	genesis_supernova	wind_rider			seed_blast	
-flutter_mane	geomancy	wonder_guard			seed_blinker	
-flygon	giga_drain	wonder_skin			seed_decoy	
-fomantis	giga_impact	zen_mode			seed_doom	
-foongus	gigaton_hammer	zero_to_hero			seed_golden	
-forretress	gigavolt_havoc				seed_hunger	
-fraxure	glacial_lance				seed_ice	
-frigibax	glaciate				seed_joy	
-frillish	glaive_rush				seed_last_chance	
-froakie	glare				seed_plain	
-frogadier	glitzy_glow				seed_pure	
-froslass	grass_knot				seed_reviver	
-frosmoth	grass_pledge				seed_sleep	
-fuecoco	grass_whistle				seed_spreader	
-furfrou	grassy_glide				seed_training	
-furret	grassy_terrain				seed_vanish	
-gabite	grav_apple				seed_vile	
-gallade	gravity				seed_warp	
-galvantula	growl				tm_acrobatics	
-garbodor	growth				tm_aerial_ace	
-garchomp	grudge				tm_attract	
-gardevoir	guard_split				tm_avalanche	
-garganacl	guard_swap				tm_blizzard	
-gastly	guardian_of_alola				tm_brick_break	
-gastrodon	guillotine				tm_brine	
-genesect	gunk_shot				tm_bulk_up	
-gengar	gust				tm_bulldoze	
-geodude	gyro_ball				tm_bullet_seed	
-gholdengo	hail				tm_calm_mind	
-gible	hammer_arm				tm_captivate	
-gigalith	happy_hour				tm_charge_beam	
-gimmighoul	harden				tm_cut	
-girafarig	haze				tm_dark_pulse	
-giratina	head_charge				tm_dazzling_gleam	
-glaceon	head_smash				tm_defog	
-glalie	headbutt				tm_dig	
-glameow	headlong_rush				tm_dive	
-glastrier	heal_bell				tm_double_team	
-gligar	heal_block				tm_dragon_claw	
-glimmet	heal_order				tm_dragon_pulse	
-glimmora	heal_pulse				tm_dragon_tail	
-gliscor	healing_wish				tm_drain_punch	
-gloom	heart_stamp				tm_dream_eater	
-gogoat	heart_swap				tm_earthquake	
-golbat	heat_crash				tm_echoed_voice	
-goldeen	heat_wave				tm_embargo	
-golduck	heavy_slam				tm_endure	
-golem	helping_hand				tm_energy_ball	
-golett	hex				tm_explosion	
-golisopod	hidden_power				tm_facade	
-golurk	high_horsepower				tm_false_swipe	
-goodra	high_jump_kick				tm_fire_blast	
-goomy	hold_back				tm_flame_charge	
-gorebyss	hold_hands				tm_flamethrower	
-gossifleur	hone_claws				tm_flash	
-gothita	horn_attack				tm_flash_cannon	
-gothitelle	horn_drill				tm_fling	
-gothorita	horn_leech				tm_fly	
-gourgeist	howl				tm_focus_blast	
-grafaiai	hurricane				tm_focus_punch	
-granbull	hydro_cannon				tm_frost_breath	
-grapploct	hydro_pump				tm_frustration	
-graveler	hydro_steam				tm_giga_drain	
-great_tusk	hydro_vortex				tm_giga_impact	
-greavard	hyper_beam				tm_grass_knot	
-greedent	hyper_drill				tm_gyro_ball	
-greninja	hyper_fang				tm_hail	
-grimer	hyper_voice				tm_hidden_power	
-grimmsnarl	hyperspace_fury				tm_hone_claws	
-grookey	hyperspace_hole				tm_hyper_beam	
-grotle	hypnosis				tm_ice_beam	
-groudon	ice_ball				tm_incinerate	
-grovyle	ice_beam				tm_infestation	
-growlithe	ice_burn				tm_iron_tail	
-grubbin	ice_fang				tm_light_screen	
-grumpig	ice_hammer				tm_low_sweep	
-gulpin	ice_punch				tm_natural_gift	
-gumshoos	ice_shard				tm_nature_power	
-gurdurr	ice_spinner				tm_overheat	
-guzzlord	icicle_crash				tm_payback	
-gyarados	icicle_spear				tm_pluck	
-hakamo_o	icy_wind				tm_poison_jab	
-happiny	imprison				tm_power_up_punch	
-hariyama	incinerate				tm_protect	
-hatenna	infernal_parade				tm_psych_up	
-hatterene	inferno				tm_psychic	
-hattrem	inferno_overdrive				tm_psyshock	
-haunter	infestation				tm_quash	
-hawlucha	ingrain				tm_rain_dance	
-haxorus	instruct				tm_recycle	
-heatmor	ion_deluge				tm_reflect	
-heatran	iron_defense				tm_rest	
-heliolisk	iron_head				tm_retaliate	
-helioptile	iron_tail				tm_return	
-heracross	jaw_lock				tm_roar	
-herdier	jet_punch				tm_rock_climb	
-hippopotas	judgment				tm_rock_polish	
-hippowdon	jump_kick				tm_rock_slide	
-hitmonchan	jungle_healing				tm_rock_smash	
-hitmonlee	karate_chop				tm_rock_tomb	
-hitmontop	kinesis				tm_roost	
-ho_oh	kings_shield				tm_round	
-honchkrow	knock_off				tm_safeguard	
-honedge	kowtow_cleave				tm_sandstorm	
-hoopa	lands_wrath				tm_scald	
-hoothoot	laser_focus				tm_secret_power	
-hoppip	lash_out				tm_shadow_ball	
-horsea	last_resort				tm_shadow_claw	
-houndoom	last_respects				tm_shock_wave	
-houndour	lava_plume				tm_silver_wind	
-houndstone	leaf_blade				tm_sky_drop	
-huntail	leaf_storm				tm_sludge_bomb	
-hydreigon	leaf_tornado				tm_sludge_wave	
-hypno	leafage				tm_smack_down	
-igglybuff	leech_life				tm_snarl	
-illumise	leech_seed				tm_snatch	
-impidimp	leer				tm_steel_wing	
-incineroar	lets_snuggle_forever				tm_stone_edge	
-indeedee	lick				tm_strength	
-infernape	life_dew				tm_struggle_bug	
-inkay	light_of_ruin				tm_substitute	
-inteleon	light_screen				tm_sunny_day	
-iron_bundle	light_that_burns_the_sky				tm_surf	
-iron_hands	liquidation				tm_swagger	
-iron_jugulis	lock_on				tm_swords_dance	
-iron_leaves	lovely_kiss				tm_taunt	
-iron_moth	low_kick				tm_telekinesis	
-iron_thorns	low_sweep				tm_thief	
-iron_treads	lucky_chant				tm_thunder	
-iron_valiant	lumina_crash				tm_thunder_wave	
-ivysaur	lunar_blessing				tm_thunderbolt	
-jangmo_o	lunar_dance				tm_torment	
-jellicent	lunge				tm_u_turn	
-jigglypuff	luster_purge				tm_venoshock	
-jirachi	mach_punch				tm_volt_switch	
-jolteon	magic_coat				tm_water_pulse	
-joltik	magic_powder				tm_waterfall	
-jumpluff	magic_room				tm_whirlpool	
-jynx	magical_leaf				tm_wild_charge	
-kabuto	magical_torque				tm_will_o_wisp	
-kabutops	magma_storm				tm_work_up	
-kadabra	magnet_bomb				tm_x_scissor	
-kakuna	magnet_rise				wand_fear	
-kangaskhan	magnetic_flux				wand_infatuation	
-karrablast	magnitude				wand_lob	
-kartana	make_it_rain				wand_lure	
-kecleon	malicious_moonsault				wand_path	
-keldeo	mat_block				wand_pounce	
-kilowattrel	max_airstream				wand_purge	
-kingambit	max_darkness				wand_slow	
-kingdra	max_flare				wand_stayaway	
-kingler	max_flutterby				wand_surround	
-kirlia	max_geyser				wand_switcher	
-klang	max_guard				wand_topsy_turvy	
-klawf	max_hailstorm				wand_totter	
-kleavor	max_knuckle				wand_transfer	
-klefki	max_lightning				wand_vanish	
-klink	max_mindstorm				wand_warp	
-klinklang	max_ooze				wand_whirlwind	
-koffing	max_overgrowth					
-komala	max_phantasm					
-kommo_o	max_quake					
-koraidon	max_rockfall					
-krabby	max_starfall					
-kricketot	max_steelspike					
-kricketune	max_strike					
-krokorok	max_wyrmwind					
-krookodile	me_first					
-kubfu	mean_look					
-kyogre	meditate					
-kyurem	mega_drain					
-lairon	mega_kick					
-lampent	mega_punch					
-landorus	megahorn					
-lanturn	memento					
-lapras	menacing_moonraze_maelstrom					
-larvesta	metal_burst					
-larvitar	metal_claw					
-latias	metal_sound					
-latios	meteor_assault					
-leafeon	meteor_beam					
-leavanny	meteor_mash					
-lechonk	metronome					
-ledian	milk_drink					
-ledyba	mimic					
-lickilicky	mind_blown					
-lickitung	mind_reader					
-liepard	minimize					
-lileep	miracle_eye					
-lilligant	mirror_coat					
-lillipup	mirror_move					
-linoone	mirror_shot					
-litleo	mist					
-litten	mist_ball					
-litwick	misty_explosion					
-lokix	misty_terrain					
-lombre	moonblast					
-lopunny	moongeist_beam					
-lotad	moonlight					
-loudred	morning_sun					
-lucario	mortal_spin					
-ludicolo	mountain_gale					
-lugia	mud_bomb					
-lumineon	mud_shot					
-lunala	mud_slap					
-lunatone	mud_sport					
-lurantis	muddy_water					
-luvdisc	multi_attack					
-luxio	mystical_fire					
-luxray	mystical_power					
-lycanroc	nasty_plot					
-mabosstiff	natural_gift					
-machamp	nature_power					
-machoke	natures_madness					
-machop	needle_arm					
-magby	never_ending_nightmare					
-magcargo	night_daze					
-magearna	night_shade					
-magikarp	night_slash					
-magmar	nightmare					
-magmortar	no_retreat					
-magnemite	noble_roar					
-magneton	noxious_torque					
-magnezone	nuzzle					
-makuhita	oblivion_wing					
-malamar	obstruct					
-mamoswine	oceanic_operetta					
-manaphy	octazooka					
-mandibuzz	octolock					
-manectric	odor_sleuth					
-mankey	ominous_wind					
-mantine	order_up					
-mantyke	origin_pulse					
-maractus	outrage					
-mareanie	overdrive					
-mareep	overheat					
-marill	pain_split					
-marowak	parabolic_charge					
-marshadow	parting_shot					
-marshtomp	pay_day					
-maschiff	payback					
-masquerain	peck					
-maushold	perish_song					
-mawile	petal_blizzard					
-medicham	petal_dance					
-meditite	phantom_force					
-meganium	photon_geyser					
-melmetal	pika_papow					
-meloetta	pin_missile					
-meltan	plasma_fists					
-meowscarada	play_nice					
-meowstic	play_rough					
-meowth	pluck					
-mesprit	poison_fang					
-metagross	poison_gas					
-metang	poison_jab					
-metapod	poison_powder					
-mew	poison_sting					
-mewtwo	poison_tail					
-mienfoo	pollen_puff					
-mienshao	poltergeist					
-mightyena	population_bomb					
-milcery	pounce					
-milotic	pound					
-miltank	powder					
-mime_jr	powder_snow					
-mimikyu	power_gem					
-minccino	power_shift					
-minior	power_split					
-minun	power_swap					
-miraidon	power_trick					
-misdreavus	power_trip					
-mismagius	power_up_punch					
-missingno	power_whip					
-moltres	precipice_blades					
-monferno	present					
-morelull	prismatic_laser					
-morgrem	protect					
-morpeko	psybeam					
-mothim	psyblade					
-mr_mime	psych_up					
-mr_rime	psychic					
-mudbray	psychic_fangs					
-mudkip	psychic_terrain					
-mudsdale	psycho_boost					
-muk	psycho_cut					
-munchlax	psycho_shift					
-munna	psyshield_bash					
-murkrow	psyshock					
-musharna	psystrike					
-nacli	psywave					
-naclstack	pulverizing_pancake					
-naganadel	punishment					
-natu	purify					
-necrozma	pursuit					
-nickit	pyro_ball					
-nidoking	quash					
-nidoqueen	quick_attack					
-nidoran_f	quick_guard					
-nidoran_m	quiver_dance					
-nidorina	rage					
-nidorino	rage_fist					
-nihilego	rage_powder					
-nincada	raging_bull					
-ninetales	raging_fury					
-ninjask	rain_dance					
-noctowl	rapid_spin					
-noibat	razor_leaf					
-noivern	razor_shell					
-nosepass	razor_wind					
-numel	recover					
-nuzleaf	recycle					
-nymble	reflect					
-obstagoon	reflect_type					
-octillery	refresh					
-oddish	relic_song					
-oinkologne	rest					
-omanyte	retaliate					
-omastar	return					
-onix	revelation_dance					
-oranguru	revenge					
-orbeetle	reversal					
-oricorio	revival_blessing					
-orthworm	rising_voltage					
-oshawott	roar					
-overqwil	roar_of_time					
-pachirisu	rock_blast					
-palafin	rock_climb					
-palkia	rock_polish					
-palossand	rock_slide					
-palpitoad	rock_smash					
-pancham	rock_throw					
-pangoro	rock_tomb					
-panpour	rock_wrecker					
-pansage	role_play					
-pansear	rolling_kick					
-paras	rollout					
-parasect	roost					
-passimian	rototiller					
-patrat	round					
-pawmi	ruination					
-pawmo	sacred_fire					
-pawmot	sacred_sword					
-pawniard	safeguard					
-pelipper	salt_cure					
-perrserker	sand_attack					
-persian	sand_tomb					
-petilil	sandsear_storm					
-phanpy	sandstorm					
-phantump	sappy_seed					
-pheromosa	savage_spin_out					
-phione	scald					
-pichu	scale_shot					
-pidgeot	scary_face					
-pidgeotto	scorching_sands					
-pidgey	scratch					
-pidove	screech					
-pignite	searing_shot					
-pikachu	searing_sunraze_smash					
-pikipek	secret_power					
-piloswine	secret_sword					
-pincurchin	seed_bomb					
-pineco	seed_flare					
-pinsir	seismic_toss					
-piplup	self_destruct					
-plusle	shadow_ball					
-poipole	shadow_bone					
-politoed	shadow_claw					
-poliwag	shadow_force					
-poliwhirl	shadow_punch					
-poliwrath	shadow_sneak					
-polteageist	sharpen					
-ponyta	shattered_psyche					
-poochyena	shed_tail					
-popplio	sheer_cold					
-porygon	shell_side_arm					
-porygon_z	shell_smash					
-porygon2	shell_trap					
-primarina	shelter					
-primeape	shift_gear					
-prinplup	shock_wave					
-probopass	shore_up					
-psyduck	signal_beam					
-pumpkaboo	silk_trap					
-pupitar	silver_wind					
-purrloin	simple_beam					
-purugly	sing					
-pyroar	sinister_arrow_raid					
-pyukumuku	sizzly_slide					
-quagsire	sketch					
-quaquaval	skill_swap					
-quaxly	skitter_smack					
-quaxwell	skull_bash					
-quilava	sky_attack					
-quilladin	sky_drop					
-qwilfish	sky_uppercut					
-raboot	slack_off					
-rabsca	slam					
-raichu	slash					
-raikou	sleep_powder					
-ralts	sleep_talk					
-rampardos	sludge					
-rapidash	sludge_bomb					
-raticate	sludge_wave					
-rattata	smack_down					
-rayquaza	smart_strike					
-regice	smelling_salts					
-regidrago	smog					
-regieleki	smokescreen					
-regigigas	snap_trap					
-regirock	snarl					
-registeel	snatch					
-relicanth	snipe_shot					
-rellor	snore					
-remoraid	snowscape					
-reshiram	soak					
-reuniclus	soft_boiled					
-revavroom	solar_beam					
-rhydon	solar_blade					
-rhyhorn	sonic_boom					
-rhyperior	soul_stealing_7_star_strike					
-ribombee	spacial_rend					
-rillaboom	spark					
-riolu	sparkling_aria					
-roaring_moon	sparkly_swirl					
-rockruff	spectral_thief					
-roggenrola	speed_swap					
-rolycoly	spicy_extract					
-rookidee	spider_web					
-roselia	spike_cannon					
-roserade	spikes					
-rotom	spiky_shield					
-rowlet	spin_out					
-rufflet	spirit_break					
-runerigus	spirit_shackle					
-sableye	spit_up					
-salamence	spite					
-salandit	splash					
-salazzle	splintered_stormshards					
-samurott	splishy_splash					
-sandaconda	spore					
-sandile	spotlight					
-sandshrew	springtide_storm					
-sandslash	stealth_rock					
-sandy_shocks	steam_eruption					
-sandygast	steamroller					
-sawk	steel_beam					
-sawsbuck	steel_roller					
-scatterbug	steel_wing					
-sceptile	sticky_web					
-scizor	stockpile					
-scolipede	stoked_sparksurfer					
-scorbunny	stomp					
-scovillain	stomping_tantrum					
-scrafty	stone_axe					
-scraggy	stone_edge					
-scream_tail	stored_power					
-scyther	storm_throw					
-seadra	strange_steam					
-seaking	strength					
-sealeo	strength_sap					
-seedot	string_shot					
-seel	struggle					
-seismitoad	struggle_bug					
-sentret	stuff_cheeks					
-serperior	stun_spore					
-servine	submission					
-seviper	substitute					
-sewaddle	subzero_slammer					
-sharpedo	sucker_punch					
-shaymin	sunny_day					
-shedinja	sunsteel_strike					
-shelgon	super_fang					
-shellder	superpower					
-shellos	supersonic					
-shelmet	supersonic_skystrike					
-shieldon	surf					
-shiftry	surging_strikes					
-shiinotic	swagger					
-shinx	swallow					
-shroodle	sweet_kiss					
-shroomish	sweet_scent					
-shuckle	swift					
-shuppet	switcheroo					
-sigilyph	swords_dance					
-silcoon	synchronoise					
-silicobra	synthesis					
-silvally	tackle					
-simipour	tail_glow					
-simisage	tail_slap					
-simisear	tail_whip					
-sinistea	tailwind					
-sirfetchd	take_down					
-sizzlipede	take_heart					
-skarmory	tar_shot					
-skeledirge	taunt					
-skiddo	tearful_look					
-skiploom	teatime					
-skitty	techno_blast					
-skorupi	tectonic_rage					
-skrelp	teeter_dance					
-skuntank	telekinesis					
-skwovet	teleport					
-slaking	ten_million_volt_thunderbolt					
-slakoth	tera_blast					
-sliggoo	terrain_pulse					
-slither_wing	thief					
-slowbro	thousand_arrows					
-slowking	thousand_waves					
-slowpoke	thrash					
-slugma	throat_chop					
-slurpuff	thunder					
-smeargle	thunder_cage					
-smoliv	thunder_fang					
-smoochum	thunder_punch					
-sneasel	thunder_shock					
-sneasler	thunder_wave					
-snivy	thunderbolt					
-snom	thunderous_kick					
-snorlax	tickle					
-snorunt	tidy_up					
-snover	topsy_turvy					
-snubbull	torch_song					
-sobble	torment					
-solgaleo	toxic					
-solosis	toxic_spikes					
-solrock	toxic_thread					
-spearow	trailblaze					
-spectrier	transform					
-spewpa	tri_attack					
-spheal	trick					
-spidops	trick_or_treat					
-spinarak	trick_room					
-spinda	triple_arrows					
-spiritomb	triple_axel					
-spoink	triple_dive					
-sprigatito	triple_kick					
-spritzee	trop_kick					
-squawkabilly	trump_card					
-squirtle	twin_beam					
-stakataka	twineedle					
-stantler	twinkle_tackle					
-staraptor	twister					
-staravia	u_turn					
-starly	uproar					
-starmie	v_create					
-staryu	vacuum_wave					
-steelix	veevee_volley					
-steenee	venom_drench					
-stonjourner	venoshock					
-stoutland	vice_grip					
-stufful	victory_dance					
-stunfisk	vine_whip					
-stunky	vital_throw					
-sudowoodo	volt_switch					
-suicune	volt_tackle					
-sunflora	wake_up_slap					
-sunkern	water_gun					
-surskit	water_pledge					
-swablu	water_pulse					
-swadloon	water_shuriken					
-swalot	water_sport					
-swampert	water_spout					
-swanna	waterfall					
-swellow	wave_crash					
-swinub	weather_ball					
-swirlix	whirlpool					
-swoobat	whirlwind					
-sylveon	wicked_blow					
-tadbulb	wicked_torque					
-taillow	wide_guard					
-talonflame	wild_charge					
-tandemaus	wildbolt_storm					
-tangela	will_o_wisp					
-tangrowth	wing_attack					
-tapu_bulu	wish					
-tapu_fini	withdraw					
-tapu_koko	wonder_room					
-tapu_lele	wood_hammer					
-tarountula	work_up					
-tatsugiri	worry_seed					
-tauros	wrap					
-teddiursa	wring_out					
-tentacool	x_scissor					
-tentacruel	yawn					
-tepig	zap_cannon					
-terrakion	zen_headbutt					
-thievul	zing_zap					
-throh	zippy_zap					
+abomasnow	attack	none	all_protect	avoid_trouble	ammo_cacnea_spike	Normal
+abra	pound	stench	aqua_ring	boss	ammo_corsola_twig	Support
+absol	karate_chop	drizzle	area_counter	get_away	ammo_geo_pebble	Leader
+accelgor	double_slap	speed_boost	attack_response	go_after_foes	ammo_golden_thorn	Loner
+aegislash	comet_punch	battle_armor	belch	item_finder	ammo_gravelerock	
+aerodactyl	mega_punch	sturdy	biding	lead_boss	ammo_iron_thorn	
+aggron	pay_day	damp	bind	loot_guard	ammo_rare_fossil	
+aipom	fire_punch	limber	blinker	mission_target	ammo_silver_spike	
+alakazam	ice_punch	sand_veil	bouncing	moon_dance	ammo_stick	
+alcremie	thunder_punch	static	burn	patrol	apricorn_big	
+alomomola	scratch	volt_absorb	charge	retreater	apricorn_black	
+altaria	vice_grip	water_absorb	charging_focus_punch	shopkeeper	apricorn_blue	
+amaura	guillotine	oblivious	charging_razor_wind	shuckle	apricorn_brown	
+ambipom	razor_wind	cloud_nine	charging_skull_bash	slow_patrol	apricorn_glittery	
+amoonguss	swords_dance	compound_eyes	charging_sky_attack	slow_wander	apricorn_green	
+ampharos	cut	insomnia	charging_solar_beam	split_up	apricorn_perfect	
+annihilape	gust	color_change	chasing	staged_boss	apricorn_plain	
+anorith	wing_attack	immunity	clamp	stick_together	apricorn_purple	
+appletun	whirlwind	flash_fire	confuse	super_flee_stairs	apricorn_red	
+applin	fly	shield_dust	conversion	thief	apricorn_white	
+araquanid	bind	own_tempo	conversion_2	tit_for_tat	apricorn_yellow	
+arbok	slam	suction_cups	counter	turret	berry_apicot	
+arboliva	vine_whip	intimidate	crits_landed	wait_and_see	berry_aspear	
+arcanine	stomp	shadow_tag	cursed	wait_attack	berry_babiri	
+arceus	double_kick	rough_skin	decoy	wait_only	berry_charti	
+archen	mega_kick	wonder_guard	defense_curl	wait_there	berry_cheri	
+archeops	jump_kick	levitate	destiny_bond	wander_dumb	berry_chesto	
+arctibax	rolling_kick	effect_spore	detect	wander_dumb_itemless	berry_chilan	
+arctovish	sand_attack	synchronize	digging	wander_normal	berry_chople	
+arctozolt	headbutt	clear_body	disable	wander_smart	berry_coba	
+ariados	horn_attack	natural_cure	diving	weird_tree	berry_colbur	
+armaldo	fury_attack	lightning_rod	doom_desire		berry_custap	
+armarouge	horn_drill	serene_grace	electrified		berry_enigma	
+aromatisse	tackle	swift_swim	embargo		berry_ganlon	
+aron	body_slam	chlorophyll	encore		berry_haban	
+arrokuda	wrap	illuminate	endure		berry_hondew	
+articuno	take_down	trace	enraged		berry_jaboca	
+audino	thrash	huge_power	exposed		berry_kasib	
+aurorus	double_edge	poison_point	fire_pledge		berry_kebia	
+avalugg	tail_whip	inner_focus	fire_spin		berry_kee	
+axew	poison_sting	magma_armor	flinch		berry_kelpsy	
+azelf	twineedle	water_veil	flying		berry_leppa	
+azumarill	pin_missile	magnet_pull	focus_energy		berry_liechi	
+azurill	leer	soundproof	follow_me		berry_lum	
+bagon	bite	rain_dish	freeze		berry_maranga	
+baltoy	growl	sand_stream	friendly_fire		berry_micle	
+banette	roar	pressure	future_sight		berry_occa	
+barbaracle	sing	thick_fat	grass_pledge		berry_oran	
+barboach	supersonic	early_bird	grudge		berry_passho	
+barraskewda	sonic_boom	flame_body	heal_block		berry_payapa	
+basculegion	disable	run_away	illusion		berry_pecha	
+basculin	acid	keen_eye	immobilized		berry_persim	
+bastiodon	ember	hyper_cutter	in_love		berry_petaya	
+baxcalibur	flamethrower	pickup	infestation		berry_qualot	
+bayleef	mist	truant	ingrain		berry_rawst	
+beartic	water_gun	hustle	invisible		berry_rindo	
+beautifly	hydro_pump	cute_charm	kings_shield		berry_roseli	
+beedrill	surf	plus	last_ally_move		berry_rowap	
+beheeyem	ice_beam	minus	last_move_hit_by_other		berry_salac	
+beldum	blizzard	forecast	last_targeted_by		berry_shuca	
+bellibolt	psybeam	sticky_hold	last_used_move		berry_sitrus	
+bellossom	bubble_beam	shed_skin	last_used_move_slot		berry_starf	
+bellsprout	aurora_beam	guts	leech_seed		berry_tamato	
+bergmite	hyper_beam	marvel_scale	light_screen		berry_tanga	
+bewear	peck	liquid_ooze	lucky_chant		berry_wacan	
+bibarel	drill_peck	overgrow	magic_coat		berry_yache	
+bidoof	submission	blaze	magma_storm		boost_calcium	
+binacle	low_kick	torrent	magnet_rise		boost_carbos	
+bisharp	counter	swarm	mental_charged		boost_hp_up	
+blacephalon	seismic_toss	rock_head	metal_burst		boost_iron	
+blastoise	strength	drought	mini_counter		boost_nectar	
+blaziken	absorb	arena_trap	minimized		boost_protein	
+blipbug	mega_drain	vital_spirit	miracle_eye		boost_zinc	
+blissey	leech_seed	white_smoke	mirror_coat		box_dainty	
+blitzle	growth	pure_power	missed_all_last_turn		box_deluxe	
+boldore	razor_leaf	shell_armor	mist		box_glittery	
+boltund	solar_beam	air_lock	mod_accuracy		box_heavy	
+bombirdier	poison_powder	tangled_feet	mod_attack		box_light	
+bonsly	stun_spore	motor_drive	mod_defense		box_nifty	
+bouffalant	sleep_powder	rivalry	mod_evasion		egg_mystery	
+bounsweet	petal_dance	steadfast	mod_range		empty	
+braixen	string_shot	snow_cloak	mod_special_attack		evo_chipped_pot	
+brambleghast	dragon_rage	gluttony	mod_special_defense		evo_cracked_pot	
+bramblin	fire_spin	anger_point	mod_speed		evo_dawn_stone	
+braviary	thunder_shock	unburden	nightmare		evo_deep_sea_scale	
+breloom	thunderbolt	heatproof	none		evo_deep_sea_tooth	
+brionne	thunder_wave	simple	outrage		evo_dubious_disc	
+bronzong	thunder	dry_skin	paralyze		evo_dusk_stone	
+bronzor	rock_throw	download	paused		evo_electirizer	
+brute_bonnet	earthquake	iron_fist	perish_song		evo_everstone	
+bruxish	fissure	poison_heal	petal_dance		evo_fire_stone	
+budew	dig	adaptability	phantom_force		evo_harmony_scarf	
+buizel	toxic	skill_link	pierce		evo_ice_stone	
+bulbasaur	confusion	hydration	poison		evo_kings_rock	
+buneary	psychic	solar_power	poison_toxic		evo_leaf_stone	
+bunnelby	hypnosis	quick_feet	powder		evo_link_cable	
+burmy	meditate	normalize	power_charged		evo_lunar_ribbon	
+butterfree	agility	sniper	protect		evo_magmarizer	
+buzzwole	quick_attack	magic_guard	quick_guard		evo_moon_stone	
+cacnea	rage	no_guard	rage_powder		evo_oval_stone	
+cacturne	teleport	stall	recruit_boost		evo_prism_scale	
+calyrex	night_shade	technician	reflect		evo_protector	
+camerupt	mimic	leaf_guard	regeneration		evo_razor_claw	
+capsakid	screech	klutz	retaliate		evo_razor_fang	
+carbink	double_team	mold_breaker	roosting		evo_reaper_cloth	
+carkol	recover	super_luck	safeguard		evo_shiny_stone	
+carnivine	harden	aftermath	sand_tomb		evo_sun_ribbon	
+carracosta	minimize	anticipation	shadow_force		evo_sun_stone	
+carvanha	smokescreen	forewarn	shopkeeper		evo_thunder_stone	
+cascoon	confuse_ray	unaware	sky_drop_target		evo_up_grade	
+castform	withdraw	tinted_lens	sky_drop_user		evo_water_stone	
+caterpie	defense_curl	filter	sleep		food_apple	
+celebi	barrier	slow_start	sleepless		food_apple_big	
+celesteela	light_screen	scrappy	slip		food_apple_golden	
+centiskorch	haze	storm_drain	snatch		food_apple_huge	
+ceruledge	reflect	ice_body	stat_charged		food_apple_perfect	
+cetitan	focus_energy	solid_rock	status_protection		food_banana	
+cetoddle	bide	snow_warning	stockpile		food_banana_big	
+chandelure	metronome	honey_gather	super_mobile		food_banana_golden	
+chansey	mirror_move	frisk	sure_shot		food_chestnut	
+charcadet	self_destruct	reckless	taunted		food_grimy	
+charizard	egg_bomb	multitype	telekinesis		gummi_black	
+charjabug	lick	flower_gift	thrash		gummi_blue	
+charmander	smog	bad_dreams	times_move_used		gummi_brown	
+charmeleon	sludge	pickpocket	torment		gummi_clear	
+chatot	bone_club	sheer_force	transformed		gummi_foul	
+cherrim	fire_blast	contrary	type_boosted		gummi_gold	
+cherubi	waterfall	unnerve	type_converted		gummi_grass	
+chesnaught	clamp	defiant	type_protected		gummi_gray	
+chespin	swift	defeatist	veiled		gummi_green	
+chewtle	skull_bash	cursed_body	was_hurt_last_turn		gummi_magenta	
+chi_yu	spike_cannon	healer	water_pledge		gummi_orange	
+chien_pao	constrict	friend_guard	weakness_drain		gummi_pink	
+chikorita	amnesia	weak_armor	whirlpool		gummi_purple	
+chimchar	kinesis	heavy_metal	wide_guard		gummi_red	
+chimecho	soft_boiled	light_metal	wish		gummi_royal	
+chinchou	high_jump_kick	multiscale	wrap		gummi_silver	
+chingling	glare	toxic_boost	yawning		gummi_sky	
+cinccino	dream_eater	flare_boost			gummi_white	
+cinderace	poison_gas	harvest			gummi_wonder	
+clamperl	barrage	telepathy			gummi_yellow	
+clauncher	leech_life	moody			held_assault_vest	
+clawitzer	lovely_kiss	overcoat			held_big_root	
+claydol	sky_attack	poison_touch			held_binding_band	
+clefable	transform	regenerator			held_black_belt	
+clefairy	bubble	big_pecks			held_black_glasses	
+cleffa	dizzy_punch	sand_rush			held_black_sludge	
+clobbopus	spore	wonder_skin			held_blank_plate	
+clodsire	flash	analytic			held_charcoal	
+cloyster	psywave	illusion			held_choice_band	
+coalossal	splash	imposter			held_choice_scarf	
+cobalion	acid_armor	infiltrator			held_choice_specs	
+cofagrigus	crabhammer	mummy			held_cover_band	
+combee	explosion	moxie			held_defense_scarf	
+combusken	fury_swipes	justified			held_draco_plate	
+comfey	bonemerang	rattled			held_dragon_scale	
+conkeldurr	rest	magic_bounce			held_dread_plate	
+copperajah	rock_slide	sap_sipper			held_earth_plate	
+corphish	hyper_fang	prankster			held_expert_belt	
+corsola	sharpen	sand_force			held_fist_plate	
+corviknight	conversion	iron_barbs			held_flame_orb	
+corvisquire	tri_attack	zen_mode			held_flame_plate	
+cosmoem	super_fang	victory_star			held_friend_bow	
+cosmog	slash	turboblaze			held_goggle_specs	
+cottonee	substitute	teravolt			held_golden_mask	
+crabominable	struggle	aroma_veil			held_grip_claw	
+crabrawler	sketch	flower_veil			held_hard_stone	
+cradily	triple_kick	cheek_pouch			held_heal_ribbon	
+cramorant	thief	protean			held_icicle_plate	
+cranidos	spider_web	fur_coat			held_insect_plate	
+crawdaunt	mind_reader	magician			held_iron_ball	
+cresselia	nightmare	bulletproof			held_iron_plate	
+croagunk	flame_wheel	competitive			held_life_orb	
+crobat	snore	strong_jaw			held_magnet	
+crocalor	curse	refrigerate			held_meadow_plate	
+croconaw	flail	sweet_veil			held_metal_coat	
+crustle	conversion_2	stance_change			held_metronome	
+cryogonal	aeroblast	gale_wings			held_mind_plate	
+cubchoo	cotton_spore	mega_launcher			held_miracle_seed	
+cubone	reversal	grass_pelt			held_mobile_scarf	
+cufant	spite	symbiosis			held_mystic_water	
+cursola	powder_snow	tough_claws			held_never_melt_ice	
+cutiefly	protect	pixilate			held_pass_scarf	
+cyclizar	mach_punch	gooey			held_pierce_band	
+cyndaquil	scary_face	aerilate			held_pink_bow	
+dachsbun	feint_attack	parental_bond			held_pixie_plate	
+darkrai	sweet_kiss	dark_aura			held_poison_barb	
+darmanitan	belly_drum	fairy_aura			held_power_band	
+dartrix	sludge_bomb	aura_break			held_reunion_cape	
+darumaka	mud_slap	primordial_sea			held_ring_target	
+decidueye	octazooka	desolate_land			held_scope_lens	
+dedenne	spikes	delta_stream			held_sharp_beak	
+deerling	zap_cannon	stamina			held_shed_shell	
+deino	foresight	wimp_out			held_shell_bell	
+delcatty	destiny_bond	emergency_exit			held_silk_scarf	
+delibird	perish_song	water_compaction			held_silver_powder	
+delphox	icy_wind	merciless			held_sky_plate	
+deoxys	detect	shields_down			held_soft_sand	
+dewgong	bone_rush	stakeout			held_special_band	
+dewott	lock_on	water_bubble			held_spell_tag	
+dewpider	outrage	steelworker			held_splash_plate	
+dhelmise	sandstorm	berserk			held_spooky_plate	
+dialga	giga_drain	slush_rush			held_sticky_barb	
+diancie	endure	long_reach			held_stone_plate	
+diggersby	charm	liquid_voice			held_toxic_orb	
+diglett	rollout	triage			held_toxic_plate	
+ditto	false_swipe	galvanize			held_trap_scarf	
+dodrio	swagger	surge_surfer			held_twist_band	
+doduo	milk_drink	schooling			held_twisted_spoon	
+dolliv	spark	disguise			held_warp_scarf	
+dondozo	fury_cutter	battle_bond			held_weather_rock	
+donphan	steel_wing	power_construct			held_wide_lens	
+dottler	mean_look	corrosion			held_x_ray_specs	
+doublade	attract	comatose			held_zap_plate	
+dracovish	sleep_talk	queenly_majesty			held_zinc_band	
+dracozolt	heal_bell	innards_out			herb_mental	
+dragalge	return	dancer			herb_power	
+dragapult	present	battery			herb_white	
+dragonair	frustration	fluffy			key	
+dragonite	safeguard	dazzling			key_ancient	
+drakloak	pain_split	soul_heart			loot_adamant_orb	
+drampa	sacred_fire	tangling_hair			loot_berserk_gene	
+drapion	magnitude	receiver			loot_blue_orb	
+dratini	dynamic_punch	power_of_alchemy			loot_gracidea	
+drednaw	megahorn	beast_boost			loot_green_orb	
+dreepy	dragon_breath	rks_system			loot_griseous_orb	
+drifblim	baton_pass	electric_surge			loot_heart_scale	
+drifloon	encore	psychic_surge			loot_lustrous_orb	
+drilbur	pursuit	misty_surge			loot_meteorite	
+drizzile	rapid_spin	grassy_surge			loot_music_box	
+drowzee	sweet_scent	full_metal_body			loot_mystery_part	
+druddigon	iron_tail	shadow_shield			loot_nugget	
+dubwool	metal_claw	prism_armor			loot_pearl	
+ducklett	vital_throw	neuroforce			loot_red_orb	
+dudunsparce	morning_sun	intrepid_sword			loot_secret_slab	
+dugtrio	synthesis	dauntless_shield			loot_spacetime_globe	
+dunsparce	moonlight	libero			lost_item_bug	
+duosion	hidden_power	ball_fetch			lost_item_dark	
+duraludon	cross_chop	cotton_down			lost_item_grass	
+durant	twister	propeller_tail			lost_item_ground	
+dusclops	rain_dance	mirror_armor			lost_item_normal	
+dusknoir	sunny_day	gulp_missile			machine_ability_capsule	
+duskull	crunch	stalwart			machine_assembly_box	
+dustox	mirror_coat	steam_engine			machine_recall_box	
+dwebble	psych_up	punk_rock			machine_storage_box	
+eelektrik	extreme_speed	sand_spit			medicine_amber_tear	
+eelektross	ancient_power	ice_scales			medicine_dire_hit	
+eevee	shadow_ball	ripen			medicine_elixir	
+eiscue	future_sight	ice_face			medicine_full_heal	
+ekans	rock_smash	power_spot			medicine_full_restore	
+eldegoss	whirlpool	mimicry			medicine_guard_spec	
+electabuzz	beat_up	screen_cleaner			medicine_max_elixir	
+electivire	fake_out	steely_spirit			medicine_max_potion	
+electrike	uproar	perish_body			medicine_potion	
+electrode	stockpile	wandering_spirit			medicine_x_accuracy	
+elekid	spit_up	gorilla_tactics			medicine_x_attack	
+elgyem	swallow	neutralizing_gas			medicine_x_defense	
+emboar	heat_wave	pastel_veil			medicine_x_sp_atk	
+emolga	hail	hunger_switch			medicine_x_sp_def	
+empoleon	torment	quick_draw			medicine_x_speed	
+enamorus	flatter	unseen_fist			orb_all_aim	
+entei	will_o_wisp	curious_medicine			orb_all_dodge	
+escavalier	memento	transistor			orb_all_hit	
+espathra	facade	dragons_maw			orb_all_power_up	
+espeon	focus_punch	chilling_neigh			orb_all_protect	
+espurr	smelling_salts	grim_neigh			orb_cleanse	
+eternatus	follow_me	as_one_chill			orb_devolve	
+excadrill	nature_power	as_one_grim			orb_endure	
+exeggcute	charge	lingering_aroma			orb_escape	
+exeggutor	taunt	seed_sower			orb_fill_in	
+exploud	helping_hand	thermal_exchange			orb_foe_hold	
+falinks	trick	anger_shell			orb_foe_seal	
+farfetchd	role_play	purifying_salt			orb_freeze	
+farigiraf	wish	well_baked_body			orb_halving	
+fearow	assist	wind_rider			orb_health	
+feebas	ingrain	guard_dog			orb_invert	
+fennekin	superpower	rocky_payload			orb_invisify	
+feraligatr	magic_coat	wind_power			orb_itemizer	
+ferroseed	recycle	zero_to_hero			orb_luminous	
+ferrothorn	revenge	commander			orb_mirror	
+fidough	brick_break	electromorphosis			orb_mobile	
+finizen	yawn	protosynthesis			orb_mug	
+finneon	knock_off	quark_drive			orb_nullify	
+flaaffy	endeavor	good_as_gold			orb_one_room	
+flabebe	eruption	vessel_of_ruin			orb_one_shot	
+flamigo	skill_swap	sword_of_ruin			orb_petrify	
+flapple	imprison	tablets_of_ruin			orb_pierce	
+flareon	refresh	beads_of_ruin			orb_rebound	
+fletchinder	grudge	orichalcum_pulse			orb_revival	
+fletchling	snatch	hadron_engine			orb_rollcall	
+flittle	secret_power	opportunist			orb_scanner	
+floatzel	dive	cud_chew			orb_slow	
+floette	arm_thrust	sharpness			orb_slumber	
+floragato	camouflage	supreme_overlord			orb_spurn	
+florges	tail_glow	costar			orb_stayaway	
+flutter_mane	luster_purge	toxic_debris			orb_totter	
+flygon	mist_ball	armor_tail			orb_trap_see	
+fomantis	feather_dance	earth_eater			orb_trapbust	
+foongus	teeter_dance	mycelium_might			orb_trawl	
+forretress	blaze_kick				orb_weather	
+fraxure	mud_sport				seed_ban	
+frigibax	ice_ball				seed_blast	
+frillish	needle_arm				seed_blinker	
+froakie	slack_off				seed_decoy	
+frogadier	hyper_voice				seed_doom	
+froslass	poison_fang				seed_golden	
+frosmoth	crush_claw				seed_hunger	
+fuecoco	blast_burn				seed_ice	
+furfrou	hydro_cannon				seed_joy	
+furret	meteor_mash				seed_last_chance	
+gabite	astonish				seed_plain	
+gallade	weather_ball				seed_pure	
+galvantula	aromatherapy				seed_reviver	
+garbodor	fake_tears				seed_sleep	
+garchomp	air_cutter				seed_spreader	
+gardevoir	overheat				seed_training	
+garganacl	odor_sleuth				seed_vanish	
+gastly	rock_tomb				seed_vile	
+gastrodon	silver_wind				seed_warp	
+genesect	metal_sound				tm_acrobatics	
+gengar	grass_whistle				tm_aerial_ace	
+geodude	tickle				tm_attract	
+gholdengo	cosmic_power				tm_avalanche	
+gible	water_spout				tm_blizzard	
+gigalith	signal_beam				tm_brick_break	
+gimmighoul	shadow_punch				tm_brine	
+girafarig	extrasensory				tm_bulk_up	
+giratina	sky_uppercut				tm_bulldoze	
+glaceon	sand_tomb				tm_bullet_seed	
+glalie	sheer_cold				tm_calm_mind	
+glameow	muddy_water				tm_captivate	
+glastrier	bullet_seed				tm_charge_beam	
+gligar	aerial_ace				tm_cut	
+glimmet	icicle_spear				tm_dark_pulse	
+glimmora	iron_defense				tm_dazzling_gleam	
+gliscor	block				tm_defog	
+gloom	howl				tm_dig	
+gogoat	dragon_claw				tm_dive	
+golbat	frenzy_plant				tm_double_team	
+goldeen	bulk_up				tm_dragon_claw	
+golduck	bounce				tm_dragon_pulse	
+golem	mud_shot				tm_dragon_tail	
+golett	poison_tail				tm_drain_punch	
+golisopod	covet				tm_dream_eater	
+golurk	volt_tackle				tm_earthquake	
+goodra	magical_leaf				tm_echoed_voice	
+goomy	water_sport				tm_embargo	
+gorebyss	calm_mind				tm_endure	
+gossifleur	leaf_blade				tm_energy_ball	
+gothita	dragon_dance				tm_explosion	
+gothitelle	rock_blast				tm_facade	
+gothorita	shock_wave				tm_false_swipe	
+gourgeist	water_pulse				tm_fire_blast	
+grafaiai	doom_desire				tm_flame_charge	
+granbull	psycho_boost				tm_flamethrower	
+grapploct	roost				tm_flash	
+graveler	gravity				tm_flash_cannon	
+great_tusk	miracle_eye				tm_fling	
+greavard	wake_up_slap				tm_fly	
+greedent	hammer_arm				tm_focus_blast	
+greninja	gyro_ball				tm_focus_punch	
+grimer	healing_wish				tm_frost_breath	
+grimmsnarl	brine				tm_frustration	
+grookey	natural_gift				tm_giga_drain	
+grotle	feint				tm_giga_impact	
+groudon	pluck				tm_grass_knot	
+grovyle	tailwind				tm_gyro_ball	
+growlithe	acupressure				tm_hail	
+grubbin	metal_burst				tm_hidden_power	
+grumpig	u_turn				tm_hone_claws	
+gulpin	close_combat				tm_hyper_beam	
+gumshoos	payback				tm_ice_beam	
+gurdurr	assurance				tm_incinerate	
+guzzlord	embargo				tm_infestation	
+gyarados	fling				tm_iron_tail	
+hakamo_o	psycho_shift				tm_light_screen	
+happiny	trump_card				tm_low_sweep	
+hariyama	heal_block				tm_natural_gift	
+hatenna	wring_out				tm_nature_power	
+hatterene	power_trick				tm_overheat	
+hattrem	gastro_acid				tm_payback	
+haunter	lucky_chant				tm_pluck	
+hawlucha	me_first				tm_poison_jab	
+haxorus	copycat				tm_power_up_punch	
+heatmor	power_swap				tm_protect	
+heatran	guard_swap				tm_psych_up	
+heliolisk	punishment				tm_psychic	
+helioptile	last_resort				tm_psyshock	
+heracross	worry_seed				tm_quash	
+herdier	sucker_punch				tm_rain_dance	
+hippopotas	toxic_spikes				tm_recycle	
+hippowdon	heart_swap				tm_reflect	
+hitmonchan	aqua_ring				tm_rest	
+hitmonlee	magnet_rise				tm_retaliate	
+hitmontop	flare_blitz				tm_return	
+ho_oh	force_palm				tm_roar	
+honchkrow	aura_sphere				tm_rock_climb	
+honedge	rock_polish				tm_rock_polish	
+hoopa	poison_jab				tm_rock_slide	
+hoothoot	dark_pulse				tm_rock_smash	
+hoppip	night_slash				tm_rock_tomb	
+horsea	aqua_tail				tm_roost	
+houndoom	seed_bomb				tm_round	
+houndour	air_slash				tm_safeguard	
+houndstone	x_scissor				tm_sandstorm	
+huntail	bug_buzz				tm_scald	
+hydreigon	dragon_pulse				tm_secret_power	
+hypno	dragon_rush				tm_shadow_ball	
+igglybuff	power_gem				tm_shadow_claw	
+illumise	drain_punch				tm_shock_wave	
+impidimp	vacuum_wave				tm_silver_wind	
+incineroar	focus_blast				tm_sky_drop	
+indeedee	energy_ball				tm_sludge_bomb	
+infernape	brave_bird				tm_sludge_wave	
+inkay	earth_power				tm_smack_down	
+inteleon	switcheroo				tm_snarl	
+iron_bundle	giga_impact				tm_snatch	
+iron_hands	nasty_plot				tm_steel_wing	
+iron_jugulis	bullet_punch				tm_stone_edge	
+iron_leaves	avalanche				tm_strength	
+iron_moth	ice_shard				tm_struggle_bug	
+iron_thorns	shadow_claw				tm_substitute	
+iron_treads	thunder_fang				tm_sunny_day	
+iron_valiant	ice_fang				tm_surf	
+ivysaur	fire_fang				tm_swagger	
+jangmo_o	shadow_sneak				tm_swords_dance	
+jellicent	mud_bomb				tm_taunt	
+jigglypuff	psycho_cut				tm_telekinesis	
+jirachi	zen_headbutt				tm_thief	
+jolteon	mirror_shot				tm_thunder	
+joltik	flash_cannon				tm_thunder_wave	
+jumpluff	rock_climb				tm_thunderbolt	
+jynx	defog				tm_torment	
+kabuto	trick_room				tm_u_turn	
+kabutops	draco_meteor				tm_venoshock	
+kadabra	discharge				tm_volt_switch	
+kakuna	lava_plume				tm_water_pulse	
+kangaskhan	leaf_storm				tm_waterfall	
+karrablast	power_whip				tm_whirlpool	
+kartana	rock_wrecker				tm_wild_charge	
+kecleon	cross_poison				tm_will_o_wisp	
+keldeo	gunk_shot				tm_work_up	
+kilowattrel	iron_head				tm_x_scissor	
+kingambit	magnet_bomb				wand_fear	
+kingdra	stone_edge				wand_infatuation	
+kingler	captivate				wand_lob	
+kirlia	stealth_rock				wand_lure	
+klang	grass_knot				wand_path	
+klawf	chatter				wand_pounce	
+kleavor	judgment				wand_purge	
+klefki	bug_bite				wand_slow	
+klink	charge_beam				wand_stayaway	
+klinklang	wood_hammer				wand_surround	
+koffing	aqua_jet				wand_switcher	
+komala	attack_order				wand_topsy_turvy	
+kommo_o	defend_order				wand_totter	
+koraidon	heal_order				wand_transfer	
+krabby	head_smash				wand_vanish	
+kricketot	double_hit				wand_warp	
+kricketune	roar_of_time				wand_whirlwind	
+krokorok	spacial_rend					
+krookodile	lunar_dance					
+kubfu	crush_grip					
+kyogre	magma_storm					
+kyurem	dark_void					
+lairon	seed_flare					
+lampent	ominous_wind					
+landorus	shadow_force					
+lanturn	hone_claws					
+lapras	wide_guard					
+larvesta	guard_split					
+larvitar	power_split					
+latias	wonder_room					
+latios	psyshock					
+leafeon	venoshock					
+leavanny	autotomize					
+lechonk	rage_powder					
+ledian	telekinesis					
+ledyba	magic_room					
+lickilicky	smack_down					
+lickitung	storm_throw					
+liepard	flame_burst					
+lileep	sludge_wave					
+lilligant	quiver_dance					
+lillipup	heavy_slam					
+linoone	synchronoise					
+litleo	electro_ball					
+litten	soak					
+litwick	flame_charge					
+lokix	coil					
+lombre	low_sweep					
+lopunny	acid_spray					
+lotad	foul_play					
+loudred	simple_beam					
+lucario	entrainment					
+ludicolo	after_you					
+lugia	round					
+lumineon	echoed_voice					
+lunala	chip_away					
+lunatone	clear_smog					
+lurantis	stored_power					
+luvdisc	quick_guard					
+luxio	ally_switch					
+luxray	scald					
+lycanroc	shell_smash					
+mabosstiff	heal_pulse					
+machamp	hex					
+machoke	sky_drop					
+machop	shift_gear					
+magby	circle_throw					
+magcargo	incinerate					
+magearna	quash					
+magikarp	acrobatics					
+magmar	reflect_type					
+magmortar	retaliate					
+magnemite	final_gambit					
+magneton	bestow					
+magnezone	inferno					
+makuhita	water_pledge					
+malamar	fire_pledge					
+mamoswine	grass_pledge					
+manaphy	volt_switch					
+mandibuzz	struggle_bug					
+manectric	bulldoze					
+mankey	frost_breath					
+mantine	dragon_tail					
+mantyke	work_up					
+maractus	electroweb					
+mareanie	wild_charge					
+mareep	drill_run					
+marill	dual_chop					
+marowak	heart_stamp					
+marshadow	horn_leech					
+marshtomp	sacred_sword					
+maschiff	razor_shell					
+masquerain	heat_crash					
+maushold	leaf_tornado					
+mawile	steamroller					
+medicham	cotton_guard					
+meditite	night_daze					
+meganium	psystrike					
+melmetal	tail_slap					
+meloetta	hurricane					
+meltan	head_charge					
+meowscarada	gear_grind					
+meowstic	searing_shot					
+meowth	techno_blast					
+mesprit	relic_song					
+metagross	secret_sword					
+metang	glaciate					
+metapod	bolt_strike					
+mew	blue_flare					
+mewtwo	fiery_dance					
+mienfoo	freeze_shock					
+mienshao	ice_burn					
+mightyena	snarl					
+milcery	icicle_crash					
+milotic	v_create					
+miltank	fusion_flare					
+mime_jr	fusion_bolt					
+mimikyu	flying_press					
+minccino	mat_block					
+minior	belch					
+minun	rototiller					
+miraidon	sticky_web					
+misdreavus	fell_stinger					
+mismagius	phantom_force					
+missingno	trick_or_treat					
+moltres	noble_roar					
+monferno	ion_deluge					
+morelull	parabolic_charge					
+morgrem	forests_curse					
+morpeko	petal_blizzard					
+mothim	freeze_dry					
+mr_mime	disarming_voice					
+mr_rime	parting_shot					
+mudbray	topsy_turvy					
+mudkip	draining_kiss					
+mudsdale	crafty_shield					
+muk	flower_shield					
+munchlax	grassy_terrain					
+munna	misty_terrain					
+murkrow	electrify					
+musharna	play_rough					
+nacli	fairy_wind					
+naclstack	moonblast					
+naganadel	boomburst					
+natu	fairy_lock					
+necrozma	kings_shield					
+nickit	play_nice					
+nidoking	confide					
+nidoqueen	diamond_storm					
+nidoran_f	steam_eruption					
+nidoran_m	hyperspace_hole					
+nidorina	water_shuriken					
+nidorino	mystical_fire					
+nihilego	spiky_shield					
+nincada	aromatic_mist					
+ninetales	eerie_impulse					
+ninjask	venom_drench					
+noctowl	powder					
+noibat	geomancy					
+noivern	magnetic_flux					
+nosepass	happy_hour					
+numel	electric_terrain					
+nuzleaf	dazzling_gleam					
+nymble	celebrate					
+obstagoon	hold_hands					
+octillery	baby_doll_eyes					
+oddish	nuzzle					
+oinkologne	hold_back					
+omanyte	infestation					
+omastar	power_up_punch					
+onix	oblivion_wing					
+oranguru	thousand_arrows					
+orbeetle	thousand_waves					
+oricorio	lands_wrath					
+orthworm	light_of_ruin					
+oshawott	origin_pulse					
+overqwil	precipice_blades					
+pachirisu	dragon_ascent					
+palafin	hyperspace_fury					
+palkia	breakneck_blitz					
+palossand	all_out_pummeling					
+palpitoad	supersonic_skystrike					
+pancham	acid_downpour					
+pangoro	tectonic_rage					
+panpour	continental_crush					
+pansage	savage_spin_out					
+pansear	never_ending_nightmare					
+paras	corkscrew_crash					
+parasect	inferno_overdrive					
+passimian	hydro_vortex					
+patrat	bloom_doom					
+pawmi	gigavolt_havoc					
+pawmo	shattered_psyche					
+pawmot	subzero_slammer					
+pawniard	devastating_drake					
+pelipper	black_hole_eclipse					
+perrserker	twinkle_tackle					
+persian	catastropika					
+petilil	shore_up					
+phanpy	first_impression					
+phantump	baneful_bunker					
+pheromosa	spirit_shackle					
+phione	darkest_lariat					
+pichu	sparkling_aria					
+pidgeot	ice_hammer					
+pidgeotto	floral_healing					
+pidgey	high_horsepower					
+pidove	strength_sap					
+pignite	solar_blade					
+pikachu	leafage					
+pikipek	spotlight					
+piloswine	toxic_thread					
+pincurchin	laser_focus					
+pineco	gear_up					
+pinsir	throat_chop					
+piplup	pollen_puff					
+plusle	anchor_shot					
+poipole	psychic_terrain					
+politoed	lunge					
+poliwag	fire_lash					
+poliwhirl	power_trip					
+poliwrath	burn_up					
+polteageist	speed_swap					
+ponyta	smart_strike					
+poochyena	purify					
+popplio	revelation_dance					
+porygon	core_enforcer					
+porygon_z	trop_kick					
+porygon2	instruct					
+primarina	beak_blast					
+primeape	clanging_scales					
+prinplup	dragon_hammer					
+probopass	brutal_swing					
+psyduck	aurora_veil					
+pumpkaboo	sinister_arrow_raid					
+pupitar	malicious_moonsault					
+purrloin	oceanic_operetta					
+purugly	guardian_of_alola					
+pyroar	soul_stealing_7_star_strike					
+pyukumuku	stoked_sparksurfer					
+quagsire	pulverizing_pancake					
+quaquaval	extreme_evoboost					
+quaxly	genesis_supernova					
+quaxwell	shell_trap					
+quilava	fleur_cannon					
+quilladin	psychic_fangs					
+qwilfish	stomping_tantrum					
+raboot	shadow_bone					
+rabsca	accelerock					
+raichu	liquidation					
+raikou	prismatic_laser					
+ralts	spectral_thief					
+rampardos	sunsteel_strike					
+rapidash	moongeist_beam					
+raticate	tearful_look					
+rattata	zing_zap					
+rayquaza	natures_madness					
+regice	multi_attack					
+regidrago	ten_million_volt_thunderbolt					
+regieleki	mind_blown					
+regigigas	plasma_fists					
+regirock	photon_geyser					
+registeel	light_that_burns_the_sky					
+relicanth	searing_sunraze_smash					
+rellor	menacing_moonraze_maelstrom					
+remoraid	lets_snuggle_forever					
+reshiram	splintered_stormshards					
+reuniclus	clangorous_soulblaze					
+revavroom	zippy_zap					
+rhydon	splishy_splash					
+rhyhorn	floaty_fall					
+rhyperior	pika_papow					
+ribombee	bouncy_bubble					
+rillaboom	buzzy_buzz					
+riolu	sizzly_slide					
+roaring_moon	glitzy_glow					
+rockruff	baddy_bad					
+roggenrola	sappy_seed					
+rolycoly	freezy_frost					
+rookidee	sparkly_swirl					
+roselia	veevee_volley					
+roserade	double_iron_bash					
+rotom	max_guard					
+rowlet	dynamax_cannon					
+rufflet	snipe_shot					
+runerigus	jaw_lock					
+sableye	stuff_cheeks					
+salamence	no_retreat					
+salandit	tar_shot					
+salazzle	magic_powder					
+samurott	dragon_darts					
+sandaconda	teatime					
+sandile	octolock					
+sandshrew	bolt_beak					
+sandslash	fishious_rend					
+sandy_shocks	court_change					
+sandygast	max_flare					
+sawk	max_flutterby					
+sawsbuck	max_lightning					
+scatterbug	max_strike					
+sceptile	max_knuckle					
+scizor	max_phantasm					
+scolipede	max_hailstorm					
+scorbunny	max_ooze					
+scovillain	max_geyser					
+scrafty	max_airstream					
+scraggy	max_starfall					
+scream_tail	max_wyrmwind					
+scyther	max_mindstorm					
+seadra	max_rockfall					
+seaking	max_quake					
+sealeo	max_darkness					
+seedot	max_overgrowth					
+seel	max_steelspike					
+seismitoad	clangorous_soul					
+sentret	body_press					
+serperior	decorate					
+servine	drum_beating					
+seviper	snap_trap					
+sewaddle	pyro_ball					
+sharpedo	behemoth_blade					
+shaymin	behemoth_bash					
+shedinja	aura_wheel					
+shelgon	breaking_swipe					
+shellder	branch_poke					
+shellos	overdrive					
+shelmet	apple_acid					
+shieldon	grav_apple					
+shiftry	spirit_break					
+shiinotic	strange_steam					
+shinx	life_dew					
+shroodle	obstruct					
+shroomish	false_surrender					
+shuckle	meteor_assault					
+shuppet	eternabeam					
+sigilyph	steel_beam					
+silcoon	expanding_force					
+silicobra	steel_roller					
+silvally	scale_shot					
+simipour	meteor_beam					
+simisage	shell_side_arm					
+simisear	misty_explosion					
+sinistea	grassy_glide					
+sirfetchd	rising_voltage					
+sizzlipede	terrain_pulse					
+skarmory	skitter_smack					
+skeledirge	burning_jealousy					
+skiddo	lash_out					
+skiploom	poltergeist					
+skitty	corrosive_gas					
+skorupi	coaching					
+skrelp	flip_turn					
+skuntank	triple_axel					
+skwovet	dual_wingbeat					
+slaking	scorching_sands					
+slakoth	jungle_healing					
+sliggoo	wicked_blow					
+slither_wing	surging_strikes					
+slowbro	thunder_cage					
+slowking	dragon_energy					
+slowpoke	freezing_glare					
+slugma	fiery_wrath					
+slurpuff	thunderous_kick					
+smeargle	glacial_lance					
+smoliv	astral_barrage					
+smoochum	eerie_spell					
+sneasel	dire_claw					
+sneasler	psyshield_bash					
+snivy	power_shift					
+snom	stone_axe					
+snorlax	springtide_storm					
+snorunt	mystical_power					
+snover	raging_fury					
+snubbull	wave_crash					
+sobble	chloroblast					
+solgaleo	mountain_gale					
+solosis	victory_dance					
+solrock	headlong_rush					
+spearow	barb_barrage					
+spectrier	esper_wing					
+spewpa	bitter_malice					
+spheal	shelter					
+spidops	triple_arrows					
+spinarak	infernal_parade					
+spinda	ceaseless_edge					
+spiritomb	bleakwind_storm					
+spoink	wildbolt_storm					
+sprigatito	sandsear_storm					
+spritzee	lunar_blessing					
+squawkabilly	take_heart					
+squirtle	tera_blast					
+stakataka	silk_trap					
+stantler	axe_kick					
+staraptor	last_respects					
+staravia	lumina_crash					
+starly	order_up					
+starmie	jet_punch					
+staryu	spicy_extract					
+steelix	spin_out					
+steenee	population_bomb					
+stonjourner	ice_spinner					
+stoutland	glaive_rush					
+stufful	revival_blessing					
+stunfisk	salt_cure					
+stunky	triple_dive					
+sudowoodo	mortal_spin					
+suicune	doodle					
+sunflora	fillet_away					
+sunkern	kowtow_cleave					
+surskit	flower_trick					
+swablu	torch_song					
+swadloon	aqua_step					
+swalot	raging_bull					
+swampert	make_it_rain					
+swanna	psyblade					
+swellow	hydro_steam					
+swinub	ruination					
+swirlix	collision_course					
+swoobat	electro_drift					
+sylveon	shed_tail					
+tadbulb	chilly_reception					
+taillow	tidy_up					
+talonflame	snowscape					
+tandemaus	pounce					
+tangela	trailblaze					
+tangrowth	chilling_water					
+tapu_bulu	hyper_drill					
+tapu_fini	twin_beam					
+tapu_koko	rage_fist					
+tapu_lele	armor_cannon					
+tarountula	bitter_blade					
+tatsugiri	double_shock					
+tauros	gigaton_hammer					
+teddiursa	comeuppance					
+tentacool	aqua_cutter					
+tentacruel	blazing_torque					
+tepig	wicked_torque					
+terrakion	noxious_torque					
+thievul	combat_torque					
+throh	magical_torque					
 thundurus						
 thwackey						
 timburr						

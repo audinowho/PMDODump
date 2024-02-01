@@ -1,109 +1,125 @@
 ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
-0* None	0* 000: None	000: HP	abomasnow	bug	aqua_ring	blizzard	000: None
-1* Beam	1* 001: TypeStatBonus	001: Attack	abra	dark	area_counter	cloudy	001: Physical
-1* Branch	1* 006: NVECrit	002: Defense	absol	dragon	belch	dark	002: Magical
-1* Card	1* 014: DeepBreather	003: MAtk	accelgor	electric	blinker	electric_terrain	003: Status
-1* Claw	1* 015: PracticeSwinger	004: MDef	aegislash	fairy	burn	fog	
-1* Dew	1* 026: SureHitAttacker	005: Speed	aerodactyl	fighting	charge	grassy_terrain	
-1* Drool	1* 027: SpecialAttacker	006: HitRate	aggron	fire	chasing	gravity	
-1* Fang	1* 050: Anchor	007: DodgeRate	aipom	flying	confuse	hail	
-1* Foam	1* 061: ErraticDefender	008: Range	alakazam	ghost	conversion	harsh_sun	
-1* Gasp	1* 062: FastFriend		alcremie	grass	conversion_2	heavy_rain	
-1* Hair	1* 084: HitAndRun		alomomola	ground	counter	inverse	
-1* Horn	1* 094: PPSaver		altaria	ice	cursed	magic_room	
-1* Leaf	2* 008: WaterTerrain		amaura	none	decoy	misty_terrain	
-1* Mud	2* 009: LavaTerrain		ambipom	normal	destiny_bond	move_ban	
-1* Root	2* 013: PPBoost		amoonguss	poison	detect	mysterious_force	
-1* Seed	2* 016: MisfortuneMirror		ampharos	psychic	disable	rain	
-1* Shoot	2* 018: DoubleAttacker		anorith	rock	electrified	sandstorm	
-1* Song	2* 019: MasterHurler		appletun	steel	embargo	snow	
-1* Sweat	2* 022: PressurePlus		applin	water	encore	sunny	
-1* Tail	2* 023: StatusOnAttack		araquanid		endure	trick_room	
-1* Thorn	2* 029: StatDropImmune		arbok		enraged	wind	
-1* Tooth	2* 030: SleepWalker		arcanine		exposed	wonder_room	
-1* Twig	2* 033: AcuteSniffer		arceus		fire_pledge		
-1* Wing	2* 039: WideAttack		archen		fire_spin		
-2* Aroma	2* 051: BarrageGuard		archeops		flinch		
-2* Brooch	2* 052: BetterOdds		arctovish		focus_energy		
-2* Charm	2* 053: ClutchPerformer		arctozolt		follow_me		
-2* Coin	2* 059: StatMirror		ariados		freeze		
-2* Crest	2* 060: ErraticAttacker		armaldo		grass_pledge		
-2* Dust	2* 083: Gratitude		aromatisse		grudge		
-2* Earring	2* 088: DoubleDash		aron		heal_block		
-2* Guard	3* 002: TypeSpeedBoost		arrokuda		illusion		
-2* Heart	3* 005: SuperCrit		articuno		immobilized		
-2* Jaw	3* 017: CounterBasher		audino		infestation		
-2* Jewel	3* 024: KnockbackOnAttack		aurorus		ingrain		
-2* Key	3* 028: StatusImmune		avalugg		invisible		
-2* Medal	3* 031: ChargeWalker		axew		in_love		
-2* Ore	3* 032: StairSensor		azelf		leech_seed		
-2* Pebble	3* 038: LungeAttack		azumarill		light_screen		
-2* Ring	3* 042: ExplosionGuard		azurill		lucky_chant		
-2* Rock	3* 043: WandMaster		bagon		magic_coat		
-2* Seal	3* 048: Absorption		baltoy		magma_storm		
-2* Shard	3* 049: ExcessiveForce		banette		magnet_rise		
-2* Tag	3* 054: DistanceDodge		barbaracle		mental_charged		
-3* Apron	3* 055: CloseDodge		barboach		metal_burst		
-3* Armlet	3* 057: SelfCurer		barraskewda		mini_counter		
-3* Armor	3* 058: StatusMirror		basculin		miracle_eye		
-3* Band	3* 063: CoinWatcher		bastiodon		mirror_coat		
-3* Bangle	3* 064: HiddenStairFinder		bayleef		mist		
-3* Belt	3* 065: ChestFinder		beartic		mod_accuracy		
-3* Blade	3* 066: ShopFinder		beautifly		mod_attack		
-3* Bow	3* 069: GapProber		beedrill		mod_defense		
-3* Cap	3* 071: WeatherProtection		beheeyem		mod_evasion		
-3* Cape	3* 072: RemoveAbilityAttack		beldum		mod_range		
-3* Choker	3* 075: HealInLava		bellossom		mod_special_attack		
-3* Coat	3* 076: HealOnNewFloor		bellsprout		mod_special_defense		
-3* Collar	3* 085: StatusOnCategoryHit		bergmite		mod_speed		
-3* Crown	3* 089: StatusSplash		bewear		nightmare		
-3* Dress	3* 096: TypeBodyguard		bibarel		paralyze		
-3* Drill	3* 102: ChanceStatusOnCategoryHit		bidoof		paused		
-3* Float	4* 010: AllTerrain		binacle		perish_song		
-3* Glasses	4* 025: ThrowOnAttack		bisharp		pierce		
-3* Hat	4* 041: TrapBuster		blacephalon		poison		
-3* Helmet	4* 044: WandSpread		blastoise		poison_toxic		
-3* Mantle	4* 045: MultiRayShot		blaziken		powder		
-3* Mask	4* 046: RoyalVeil		blipbug		power_charged		
-3* Poncho	4* 047: Celebrate		blissey		protect		
-3* Robe	4* 056: FastHealer		blitzle		quick_guard		
-3* Ruff	4* 068: TypedAttack		boldore		rage_powder		
-3* Sash	4* 070: PassThroughAttacker		boltund		recruit_boost		
-3* Scarf	4* 073: CheekPouch		bonsly		reflect		
-3* Scope	4* 074: HealInWater		bouffalant		regeneration		
-3* Shield	4* 080: NoStatusInWeather		bounsweet		retaliate		
-3* Specs	4* 081: DeepBreatherPlus		braixen		roosting		
-3* Tiara	4* 086: StatusOnCategoryUse		braviary		safeguard		
-3* Tie	4* 090: DevolveOnAttack		breloom		sand_tomb		
-3* Torc	4* 091: ProjectileAttack		brionne		sleep		
-3* Veil	4* 093: AttackRangeInWeather		bronzong		sleepless		
-	4* 095: CelebrateCure		bronzor		slip		
-	4* 097: StatOnCategoryUse		bruxish		snatch		
-	5* 003: TypeGroupWeaknessReduce		budew		status_protection		
-	5* 004: TypeBulldozer		buizel		stat_charged		
-	5* 007: Nontraitor		bulbasaur		stockpile		
-	5* 011: Wallbreaker		buneary		super_mobile		
-	5* 012: GapFiller		bunnelby		sure_shot		
-	5* 020: AllyReviver		burmy		taunted		
-	5* 021: AllyReviverBattle		butterfree		telekinesis		
-	5* 034: MapSurveyor		buzzwole		torment		
-	5* 035: XRay		cacnea		type_boosted		
-	5* 036: WeaknessPayback		cacturne		type_converted		
-	5* 037: WarpPayback		calyrex		type_protected		
-	5* 040: ExplosiveAttack		camerupt		water_pledge		
-	5* 067: SecondSTAB		carbink		weakness_drain		
-	5* 077: EndureCategory		carkol		whirlpool		
-	5* 078: EndureType		carnivine		wide_guard		
-	5* 079: SpikeDropper		carracosta		wish		
-	5* 082: WeaknessReduce		carvanha		yawning		
-	5* 087: MapStatusOnCategoryUse		cascoon				
-	5* 092: MetronomePlus		castform				
-	5* 098: StatusOnTypeHit		caterpie				
-	5* 099: SweetDreams		celebi				
-	5* 100: ChanceStatusOnTypeHit		celesteela				
-	5* 101: ChanceStatOnTypeHit		centiskorch				
+0* None	000: None	000: HP	abomasnow	bug	all_protect	blizzard	000: None
+1* Beam	001: TypeStatBonus	001: Attack	abra	dark	aqua_ring	clouds_overhead	001: Physical
+1* Branch	002: TypeSpeedBoost	002: Defense	absol	dragon	area_counter	cloudy	002: Magical
+1* Card	003: TypeGroupWeaknessReduce	003: MAtk	accelgor	electric	belch	dark	003: Status
+1* Claw	004: TypeBulldozer	004: MDef	aegislash	fairy	blinker	electric_terrain	
+1* Dew	005: SuperCrit	005: Speed	aerodactyl	fighting	burn	fog	
+1* Drool	006: NVECrit	006: HitRate	aggron	fire	charge	grassy_terrain	
+1* Fang	007: Nontraitor	007: DodgeRate	aipom	flying	chasing	gravity	
+1* Foam	008: WaterTerrain	008: Range	alakazam	ghost	confuse	hail	
+1* Gasp	009: LavaTerrain		alcremie	grass	conversion	harsh_sun	
+1* Hair	010: AllTerrain		alomomola	ground	conversion_2	heavy_rain	
+1* Horn	011: Wallbreaker		altaria	ice	counter	inverse	
+1* Leaf	012: GapFiller		amaura	none	cursed	magic_room	
+1* Mud	013: PPBoost		ambipom	normal	decoy	misty_terrain	
+1* Root	014: DeepBreather		amoonguss	poison	destiny_bond	move_ban	
+1* Seed	015: PracticeSwinger		ampharos	psychic	detect	mysterious_distortion	
+1* Shoot	016: MisfortuneMirror		annihilape	rock	disable	mysterious_force	
+1* Song	017: CounterBasher		anorith	steel	electrified	psychic_terrain	
+1* Sweat	018: DoubleAttacker		appletun	water	embargo	rain	
+1* Tail	019: MasterHurler		applin		encore	sandstorm	
+1* Thorn	020: AllyReviver		araquanid		endure	snow	
+1* Tooth	021: AllyReviverBattle		arbok		enraged	sunny	
+1* Twig	022: PressurePlus		arboliva		exposed	trick_room	
+1* Wing	023: StatusOnAttack		arcanine		fire_pledge	wind	
+2* Aroma	024: KnockbackOnAttack		arceus		fire_spin	wonder_room	
+2* Brooch	025: ThrowOnAttack		archen		flinch		
+2* Charm	026: SureHitAttacker		archeops		focus_energy		
+2* Coin	027: SpecialAttacker		arctibax		follow_me		
+2* Crest	028: StatusImmune		arctovish		freeze		
+2* Dust	029: StatDropImmune		arctozolt		grass_pledge		
+2* Earring	030: SleepWalker		ariados		grudge		
+2* Guard	031: ChargeWalker		armaldo		heal_block		
+2* Heart	032: StairSensor		armarouge		illusion		
+2* Jaw	033: AcuteSniffer		aromatisse		immobilized		
+2* Jewel	034: MapSurveyor		aron		in_love		
+2* Key	035: XRay		arrokuda		infestation		
+2* Medal	036: WeaknessPayback		articuno		ingrain		
+2* Ore	037: WarpPayback		audino		invisible		
+2* Pebble	038: LungeAttack		aurorus		kings_shield		
+2* Ring	039: WideAttack		avalugg		leech_seed		
+2* Rock	040: ExplosiveAttack		axew		light_screen		
+2* Seal	041: TrapBuster		azelf		lucky_chant		
+2* Shard	042: ExplosionGuard		azumarill		magic_coat		
+2* Tag	043: WandMaster		azurill		magma_storm		
+3* Apron	044: WandSpread		bagon		magnet_rise		
+3* Armlet	045: MultiRayShot		baltoy		mental_charged		
+3* Armor	046: RoyalVeil		banette		metal_burst		
+3* Band	047: Celebrate		barbaracle		mini_counter		
+3* Bangle	048: Absorption		barboach		miracle_eye		
+3* Belt	049: ExcessiveForce		barraskewda		mirror_coat		
+3* Blade	050: Anchor		basculegion		mist		
+3* Bow	051: BarrageGuard		basculin		mod_accuracy		
+3* Cap	052: BetterOdds		bastiodon		mod_attack		
+3* Cape	053: ClutchPerformer		baxcalibur		mod_defense		
+3* Choker	054: DistanceDodge		bayleef		mod_evasion		
+3* Coat	055: CloseDodge		beartic		mod_range		
+3* Collar	056: FastHealer		beautifly		mod_special_attack		
+3* Crown	057: SelfCurer		beedrill		mod_special_defense		
+3* Dress	058: StatusMirror		beheeyem		mod_speed		
+3* Drill	059: StatMirror		beldum		nightmare		
+3* Float	060: ErraticAttacker		bellibolt		paralyze		
+3* Glasses	061: ErraticDefender		bellossom		paused		
+3* Hat	062: FastFriend		bellsprout		perish_song		
+3* Helmet	063: CoinWatcher		bergmite		pierce		
+3* Mantle	064: HiddenStairFinder		bewear		poison		
+3* Mask	065: ChestFinder		bibarel		poison_toxic		
+3* Poncho	066: ShopFinder		bidoof		powder		
+3* Robe	067: SecondSTAB		binacle		power_charged		
+3* Ruff	068: TypedAttack		bisharp		protect		
+3* Sash	069: GapProber		blacephalon		quick_guard		
+3* Scarf	070: PassThroughAttacker		blastoise		rage_powder		
+3* Scope	071: WeatherProtection		blaziken		recruit_boost		
+3* Shield	072: RemoveAbilityAttack		blipbug		reflect		
+3* Specs	073: CheekPouch		blissey		regeneration		
+3* Tiara	074: HealInWater		blitzle		retaliate		
+3* Tie	075: HealInLava		boldore		roosting		
+3* Torc	076: HealOnNewFloor		boltund		safeguard		
+3* Veil	077: EndureCategory		bombirdier		sand_tomb		
+	078: EndureType		bonsly		sleep		
+	079: SpikeDropper		bouffalant		sleepless		
+	080: NoStatusInWeather		bounsweet		slip		
+	081: DeepBreatherPlus		braixen		snatch		
+	082: WeaknessReduce		brambleghast		stat_charged		
+	083: Gratitude		bramblin		status_protection		
+	084: HitAndRun		braviary		stockpile		
+	085: StatusOnCategoryHit		breloom		super_mobile		
+	086: StatusOnCategoryUse		brionne		sure_shot		
+	087: MapStatusOnCategoryUse		bronzong		taunted		
+	088: DoubleDash		bronzor		telekinesis		
+	089: StatusSplash		brute_bonnet		torment		
+	090: DevolveOnAttack		bruxish		type_boosted		
+	091: ProjectileAttack		budew		type_converted		
+	092: MetronomePlus		buizel		type_protected		
+	093: AttackRangeInWeather		bulbasaur		water_pledge		
+	094: PPSaver		buneary		weakness_drain		
+	095: CelebrateCure		bunnelby		whirlpool		
+	096: TypeBodyguard		burmy		wide_guard		
+	097: StatOnCategoryUse		butterfree		wish		
+	098: StatusOnTypeHit		buzzwole		yawning		
+	099: SweetDreams		cacnea				
+	100: ChanceStatusOnTypeHit		cacturne				
+	101: ChanceStatOnTypeHit		calyrex				
+	102: ChanceStatusOnCategoryHit		camerupt				
+	103: TypeBecomesCategory		capsakid				
+	104: WeaknessDodge		carbink				
+			carkol				
+			carnivine				
+			carracosta				
+			carvanha				
+			cascoon				
+			castform				
+			caterpie				
+			celebi				
+			celesteela				
+			centiskorch				
+			ceruledge				
+			cetitan				
+			cetoddle				
 			chandelure				
 			chansey				
+			charcadet				
 			charizard				
 			charjabug				
 			charmander				
@@ -114,6 +130,8 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			chesnaught				
 			chespin				
 			chewtle				
+			chi_yu				
+			chien_pao				
 			chikorita				
 			chimchar				
 			chimecho				
@@ -129,6 +147,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			clefairy				
 			cleffa				
 			clobbopus				
+			clodsire				
 			cloyster				
 			coalossal				
 			cobalion				
@@ -154,6 +173,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			cresselia				
 			croagunk				
 			crobat				
+			crocalor				
 			croconaw				
 			crustle				
 			cryogonal				
@@ -162,7 +182,9 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			cufant				
 			cursola				
 			cutiefly				
+			cyclizar				
 			cyndaquil				
+			dachsbun				
 			darkrai				
 			darmanitan				
 			dartrix				
@@ -186,6 +208,8 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			ditto				
 			dodrio				
 			doduo				
+			dolliv				
+			dondozo				
 			donphan				
 			dottler				
 			doublade				
@@ -209,6 +233,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			druddigon				
 			dubwool				
 			ducklett				
+			dudunsparce				
 			dugtrio				
 			dunsparce				
 			duosion				
@@ -234,8 +259,10 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			emboar				
 			emolga				
 			empoleon				
+			enamorus				
 			entei				
 			escavalier				
+			espathra				
 			espeon				
 			espurr				
 			eternatus				
@@ -245,32 +272,41 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			exploud				
 			falinks				
 			farfetchd				
+			farigiraf				
 			fearow				
 			feebas				
 			fennekin				
 			feraligatr				
 			ferroseed				
 			ferrothorn				
+			fidough				
+			finizen				
 			finneon				
 			flaaffy				
 			flabebe				
+			flamigo				
 			flapple				
 			flareon				
 			fletchinder				
 			fletchling				
+			flittle				
 			floatzel				
 			floette				
+			floragato				
 			florges				
+			flutter_mane				
 			flygon				
 			fomantis				
 			foongus				
 			forretress				
 			fraxure				
+			frigibax				
 			frillish				
 			froakie				
 			frogadier				
 			froslass				
 			frosmoth				
+			fuecoco				
 			furfrou				
 			furret				
 			gabite				
@@ -279,13 +315,16 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			garbodor				
 			garchomp				
 			gardevoir				
+			garganacl				
 			gastly				
 			gastrodon				
 			genesect				
 			gengar				
 			geodude				
+			gholdengo				
 			gible				
 			gigalith				
+			gimmighoul				
 			girafarig				
 			giratina				
 			glaceon				
@@ -293,6 +332,8 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			glameow				
 			glastrier				
 			gligar				
+			glimmet				
+			glimmora				
 			gliscor				
 			gloom				
 			gogoat				
@@ -311,9 +352,12 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			gothitelle				
 			gothorita				
 			gourgeist				
+			grafaiai				
 			granbull				
 			grapploct				
 			graveler				
+			great_tusk				
+			greavard				
 			greedent				
 			greninja				
 			grimer				
@@ -350,6 +394,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			hitmonchan				
 			hitmonlee				
 			hitmontop				
+			ho_oh				
 			honchkrow				
 			honedge				
 			hoopa				
@@ -358,7 +403,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			horsea				
 			houndoom				
 			houndour				
-			ho_oh				
+			houndstone				
 			huntail				
 			hydreigon				
 			hypno				
@@ -370,6 +415,14 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			infernape				
 			inkay				
 			inteleon				
+			iron_bundle				
+			iron_hands				
+			iron_jugulis				
+			iron_leaves				
+			iron_moth				
+			iron_thorns				
+			iron_treads				
+			iron_valiant				
 			ivysaur				
 			jangmo_o				
 			jellicent				
@@ -388,16 +441,21 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			kartana				
 			kecleon				
 			keldeo				
+			kilowattrel				
+			kingambit				
 			kingdra				
 			kingler				
 			kirlia				
 			klang				
+			klawf				
+			kleavor				
 			klefki				
 			klink				
 			klinklang				
 			koffing				
 			komala				
 			kommo_o				
+			koraidon				
 			krabby				
 			kricketot				
 			kricketune				
@@ -417,6 +475,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			latios				
 			leafeon				
 			leavanny				
+			lechonk				
 			ledian				
 			ledyba				
 			lickilicky				
@@ -429,6 +488,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			litleo				
 			litten				
 			litwick				
+			lokix				
 			lombre				
 			lopunny				
 			lotad				
@@ -444,6 +504,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			luxio				
 			luxray				
 			lycanroc				
+			mabosstiff				
 			machamp				
 			machoke				
 			machop				
@@ -472,7 +533,9 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			marowak				
 			marshadow				
 			marshtomp				
+			maschiff				
 			masquerain				
+			maushold				
 			mawile				
 			medicham				
 			meditite				
@@ -480,6 +543,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			melmetal				
 			meloetta				
 			meltan				
+			meowscarada				
 			meowstic				
 			meowth				
 			mesprit				
@@ -499,6 +563,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			minccino				
 			minior				
 			minun				
+			miraidon				
 			misdreavus				
 			mismagius				
 			missingno				
@@ -518,6 +583,8 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			munna				
 			murkrow				
 			musharna				
+			nacli				
+			naclstack				
 			naganadel				
 			natu				
 			necrozma				
@@ -538,17 +605,22 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			nosepass				
 			numel				
 			nuzleaf				
+			nymble				
 			obstagoon				
 			octillery				
 			oddish				
+			oinkologne				
 			omanyte				
 			omastar				
 			onix				
 			oranguru				
 			orbeetle				
 			oricorio				
+			orthworm				
 			oshawott				
+			overqwil				
 			pachirisu				
+			palafin				
 			palkia				
 			palossand				
 			palpitoad				
@@ -561,6 +633,9 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			parasect				
 			passimian				
 			patrat				
+			pawmi				
+			pawmo				
+			pawmot				
 			pawniard				
 			pelipper				
 			perrserker				
@@ -594,8 +669,8 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			poochyena				
 			popplio				
 			porygon				
-			porygon2				
 			porygon_z				
+			porygon2				
 			primarina				
 			primeape				
 			prinplup				
@@ -608,10 +683,14 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			pyroar				
 			pyukumuku				
 			quagsire				
+			quaquaval				
+			quaxly				
+			quaxwell				
 			quilava				
 			quilladin				
 			qwilfish				
 			raboot				
+			rabsca				
 			raichu				
 			raikou				
 			ralts				
@@ -627,15 +706,18 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			regirock				
 			registeel				
 			relicanth				
+			rellor				
 			remoraid				
 			reshiram				
 			reuniclus				
+			revavroom				
 			rhydon				
 			rhyhorn				
 			rhyperior				
 			ribombee				
 			rillaboom				
 			riolu				
+			roaring_moon				
 			rockruff				
 			roggenrola				
 			rolycoly				
@@ -655,6 +737,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			sandile				
 			sandshrew				
 			sandslash				
+			sandy_shocks				
 			sandygast				
 			sawk				
 			sawsbuck				
@@ -663,8 +746,10 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			scizor				
 			scolipede				
 			scorbunny				
+			scovillain				
 			scrafty				
 			scraggy				
+			scream_tail				
 			scyther				
 			seadra				
 			seaking				
@@ -688,6 +773,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			shiftry				
 			shiinotic				
 			shinx				
+			shroodle				
 			shroomish				
 			shuckle				
 			shuppet				
@@ -702,6 +788,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			sirfetchd				
 			sizzlipede				
 			skarmory				
+			skeledirge				
 			skiddo				
 			skiploom				
 			skitty				
@@ -712,14 +799,17 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			slaking				
 			slakoth				
 			sliggoo				
+			slither_wing				
 			slowbro				
 			slowking				
 			slowpoke				
 			slugma				
 			slurpuff				
 			smeargle				
+			smoliv				
 			smoochum				
 			sneasel				
+			sneasler				
 			snivy				
 			snom				
 			snorlax				
@@ -734,11 +824,14 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			spectrier				
 			spewpa				
 			spheal				
+			spidops				
 			spinarak				
 			spinda				
 			spiritomb				
 			spoink				
+			sprigatito				
 			spritzee				
+			squawkabilly				
 			squirtle				
 			stakataka				
 			stantler				
@@ -769,14 +862,18 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			swirlix				
 			swoobat				
 			sylveon				
+			tadbulb				
 			taillow				
 			talonflame				
+			tandemaus				
 			tangela				
 			tangrowth				
 			tapu_bulu				
 			tapu_fini				
 			tapu_koko				
 			tapu_lele				
+			tarountula				
+			tatsugiri				
 			tauros				
 			teddiursa				
 			tentacool				
@@ -788,7 +885,13 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			thundurus				
 			thwackey				
 			timburr				
+			ting_lu				
+			tinkatink				
+			tinkaton				
+			tinkatuff				
 			tirtouga				
+			toedscool				
+			toedscruel				
 			togedemaru				
 			togekiss				
 			togepi				
@@ -825,6 +928,7 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			umbreon				
 			unfezant				
 			unown				
+			ursaluna				
 			ursaring				
 			urshifu				
 			uxie				
@@ -832,6 +936,8 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			vanillite				
 			vanilluxe				
 			vaporeon				
+			varoom				
+			veluza				
 			venipede				
 			venomoth				
 			venonat				
@@ -853,9 +959,11 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			vulpix				
 			wailmer				
 			wailord				
+			walking_wake				
 			walrein				
 			wartortle				
 			watchog				
+			wattrel				
 			weavile				
 			weedle				
 			weepinbell				
@@ -865,16 +973,20 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 			whiscash				
 			whismur				
 			wigglytuff				
+			wiglett				
 			wimpod				
 			wingull				
 			wishiwashi				
+			wo_chien				
 			wobbuffet				
 			woobat				
 			wooloo				
 			wooper				
 			wormadam				
+			wugtrio				
 			wurmple				
 			wynaut				
+			wyrdeer				
 			xatu				
 			xerneas				
 			xurkitree				

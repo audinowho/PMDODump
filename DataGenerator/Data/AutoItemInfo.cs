@@ -123,6 +123,8 @@ namespace DataGenerator.Data
         ChanceStatusOnTypeHit,
         ChanceStatOnTypeHit,
         ChanceStatusOnCategoryHit,
+        TypeBecomesCategory,
+        WeaknessDodge
     }
     public class AutoItemInfo
     {
@@ -180,6 +182,7 @@ namespace DataGenerator.Data
         {
             List<string> itemTypes = new List<string>();
             List<string> effectTypes = new List<string>();
+            Dictionary<string, string> effectRarities = new Dictionary<string, string>();
             Dictionary<string, string> effectDescriptions = new Dictionary<string, string>();
             List<string> stats = new List<string>();
             List<string> monsters = new List<string>();
@@ -212,8 +215,9 @@ namespace DataGenerator.Data
                 AutoItemInfo.FillExclusiveEffects(item, new List<LocalText>(), false, descType, new object[0], false);
 
 
-                effectTypes.Add(item.Rarity + "* "+ ((int)descType).ToString("D3") + ": " + descType.ToString());
-                effectDescriptions.Add(item.Rarity + "* " + ((int)descType).ToString("D3") + ": " + descType.ToString(), item.Desc.DefaultText);
+                effectTypes.Add(((int)descType).ToString("D3") + ": " + descType.ToString());
+                effectRarities.Add(((int)descType).ToString("D3") + ": " + descType.ToString(), item.Rarity + "*");
+                effectDescriptions.Add(((int)descType).ToString("D3") + ": " + descType.ToString(), item.Desc.DefaultText);
             }
             effectTypes.Sort();
 
@@ -318,10 +322,10 @@ namespace DataGenerator.Data
             path = GenPath.ITEM_PATH  + "AutoItemRef.txt";
             using (StreamWriter file = new StreamWriter(path))
             {
-                file.WriteLine("EffectType\tDescription");
+                file.WriteLine("Rarity\tEffectType\tDescription");
                 for(int ii = 0; ii < effectTypes.Count; ii++)
                 {
-                    file.WriteLine(effectTypes[ii] + '\t' + effectDescriptions[effectTypes[ii]]);
+                    file.WriteLine(effectRarities[effectTypes[ii]] + '\t' + effectTypes[ii] + '\t' + effectDescriptions[effectTypes[ii]]);
                 }
             }
 
@@ -1178,6 +1182,24 @@ namespace DataGenerator.Data
                     item.BeforeActions.Add(-5, new FamilyBattleEvent(new RegularAttackNeededEvent(new FlipCategoryEvent(false))));
                 }
             }
+            else if (type == ExclusiveItemEffect.TypeBecomesCategory)
+            {
+                item.Rarity = 1;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's {0}-type moves are change to become {1}.");
+                if (includeEffects)
+                {
+                    string element = (string)args[0];
+                    localArgs.Add(DataManager.Instance.GetElement(element).Name);
+                    BattleData.SkillCategory category = (BattleData.SkillCategory)args[1];
+                    localArgs.Add(ToLocalText(category, translate ? itemEffectRows[typeof(ExclusiveItemEffect).Name + "." + type] : item.Desc, translate));
+
+                    if (category == BattleData.SkillCategory.Physical)
+                        category = BattleData.SkillCategory.Magical;
+                    else if (category == BattleData.SkillCategory.Magical)
+                        category = BattleData.SkillCategory.Physical;
+                    item.BeforeActions.Add(-5, new FamilyBattleEvent(new ElementNeededEvent(element, new CategoryNeededEvent(category, new FlipCategoryEvent(false)))));
+                }
+            }
             else if (type == ExclusiveItemEffect.StatusOnCategoryHit)
             {
                 item.Rarity = 3;
@@ -1689,6 +1711,18 @@ namespace DataGenerator.Data
                 if (includeEffects)
                 {
                     item.BeforeBeingHits.Add(0, new FamilyBattleEvent(new EvasiveCloseUpEvent()));
+                }
+            }
+            else if (type == ExclusiveItemEffect.WeaknessDodge)
+            {
+                item.Rarity = 2;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon becomes extremely likely to avoid {0}-type attacks.");
+                if (includeEffects)
+                {
+                    string counterElement = (string)args[0];
+                    localArgs.Add(DataManager.Instance.GetElement(counterElement).Name);
+
+                    item.BeforeBeingHits.Add(0, new FamilyBattleEvent(new ElementNeededEvent(counterElement, new EvadeIfPossibleEvent())));
                 }
             }
             else if (type == ExclusiveItemEffect.SweetDreams)
