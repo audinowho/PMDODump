@@ -6,6 +6,8 @@
 * Fix rescue sidequests causing desyncs
 * Fix enemies standing still when blocked by shopkeepers or sleepers
 * Retaliate and Pledges no longer trigger on friendly fire
+* Ally and Smart enemy AI will not waste turns attacking foes with semi-invulnerable effects, protection, or wonder guard
+* AI will not use Recycle.  It's up to you!
 * Completing purchase in a dungeon shop now clears prices for items outside the matted area (they previously remained)
 * Fix issue where relearned/tutored moves are default enabled in spite of settings specifying otherwise
 * RC: Compasses point to Rescue tiles correctly
