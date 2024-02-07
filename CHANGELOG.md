@@ -5,6 +5,7 @@
 * Fix shop item price duplication using stackables
 * Fix enemies standing still when blocked by shopkeepers or sleepers
 * Retaliate and Pledges no longer trigger on friendly fire
+* Rage PP 20 -> 15
 * Ally and Smart enemy AI will not waste turns attacking foes with semi-invulnerable effects, protection, or wonder guard
 * AI will not use Recycle.  It's up to you!
 * Completing purchase in a dungeon shop now clears prices for items outside the matted area (they previously remained)
