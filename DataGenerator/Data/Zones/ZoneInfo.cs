@@ -2636,7 +2636,7 @@ namespace DataGenerator.Data
                                 layout.GenSteps.Add(PR_GRID_GEN, step);
                             }
 
-                            if (ii == 18)
+                            if (ii == 17)
                             {
                                 SetGridSpecialRoomStep<MapGenContext> specialStep = new SetGridSpecialRoomStep<MapGenContext>();
                                 specialStep.Filters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
@@ -2718,7 +2718,7 @@ namespace DataGenerator.Data
 
                         layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
 
-                        if (ii == 18)
+                        if (ii == 17)
                             layout.GenSteps.Add(PR_DBG_CHECK, new DetectTileStep<MapGenContext>("tile_updraft"));
 
                         floorSegment.Floors.Add(layout);
@@ -2905,7 +2905,7 @@ namespace DataGenerator.Data
                         //add a stairs that takes the player back to the main path
                         {
                             EffectTile secretTile = new EffectTile("stairs_exit_down", true);
-                            secretTile.TileStates.Set(new DestState(new SegLoc(-1, 17), true));
+                            secretTile.TileStates.Set(new DestState(new SegLoc(-1, 18), true));
                             NearSpawnableSpawnStep<ListMapGenContext, EffectTile, MapGenEntrance> trapStep = new NearSpawnableSpawnStep<ListMapGenContext, EffectTile, MapGenEntrance>(new PickerSpawner<ListMapGenContext, EffectTile>(new PresetMultiRand<EffectTile>(secretTile)), 100);
                             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
                         }
