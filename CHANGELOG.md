@@ -14,6 +14,7 @@
 * RC: Entering floors with wandering move tutors will no longer cause desyncs
 * RC: Compasses point to Rescue tiles correctly
 * RC: Fix issue with drinking gummis
+* RC: Fixed an issue preventing sneasel's questline from continuing
 * Dev: You can travel to dungeon segments that have infinite (-1) floors
 * Dev: Default name available for selecting a team name
 
