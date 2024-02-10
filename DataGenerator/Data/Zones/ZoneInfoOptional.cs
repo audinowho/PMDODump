@@ -916,7 +916,7 @@ namespace DataGenerator.Data
                 SingularSegment structure = new SingularSegment(-1);
 
                 SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                structure.BaseFloor = getSecretRoom(translate, "special_rby_fossil", -1, "amp_plains_wall", "amp_plains_floor", "amp_plains_secondary", "", "ground", enemyList, new Loc(5, 11));
+                structure.BaseFloor = getSecretRoom(translate, "special_rby_fossil", -1, "amp_plains_wall", "amp_plains_floor", "amp_plains_secondary", "", "ground", DungeonStage.Beginner, DungeonAccessibility.Unlockable, enemyList, new Loc(5, 11));
 
                 zone.Segments.Add(structure);
             }
@@ -1422,7 +1422,7 @@ namespace DataGenerator.Data
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                     //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 5, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
-                    structure.BaseFloor = getSecretRoom(translate, "special_gsc_plant", -2, "purity_forest_7_wall", "purity_forest_7_floor", "purity_forest_7_secondary", "tall_grass", "water", enemyList, new Loc(9, 5));
+                    structure.BaseFloor = getSecretRoom(translate, "special_gsc_plant", -2, "purity_forest_7_wall", "purity_forest_7_floor", "purity_forest_7_secondary", "tall_grass", "water", DungeonStage.Beginner, DungeonAccessibility.Unlockable, enemyList, new Loc(9, 5));
 
                     zone.Segments.Add(structure);
                 }
@@ -2014,7 +2014,7 @@ namespace DataGenerator.Data
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                     //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 9, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
-                    structure.BaseFloor = getSecretRoom(translate, "special_rby_fossil", -2, "craggy_coast_wall", "craggy_coast_floor", "craggy_coast_secondary", "", "fire", enemyList, new Loc(5, 11));
+                    structure.BaseFloor = getSecretRoom(translate, "special_rby_fossil", -2, "craggy_coast_wall", "craggy_coast_floor", "craggy_coast_secondary", "", "fire", DungeonStage.Beginner, DungeonAccessibility.Unlockable, enemyList, new Loc(5, 11));
 
                     zone.Segments.Add(structure);
                 }
@@ -2852,7 +2852,7 @@ namespace DataGenerator.Data
                 enemyList.Add(GetTeamMob(new MonsterID("alcremie", 18, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                 enemyList.Add(GetTeamMob(new MonsterID("alcremie", 19, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                 enemyList.Add(GetTeamMob(new MonsterID("alcremie", 20, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
-                structure.BaseFloor = getSecretRoom(translate, "special_gsc_ghost", -2, "dark_hill_2_wall", "dark_hill_2_floor", "dark_hill_2_secondary", "tall_grass_dark", "dark", enemyList, new Loc(7, 6));
+                structure.BaseFloor = getSecretRoom(translate, "special_gsc_ghost", -2, "dark_hill_2_wall", "dark_hill_2_floor", "dark_hill_2_secondary", "tall_grass_dark", "dark", DungeonStage.Intermediate, DungeonAccessibility.Unlockable, enemyList, new Loc(7, 6));
 
                 zone.Segments.Add(structure);
             }
@@ -3652,7 +3652,7 @@ namespace DataGenerator.Data
 
                 SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                 //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 4, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
-                structure.BaseFloor = getSecretRoom(translate, "special_gsc_plant", -2, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "tall_grass_dark", "grass", enemyList, new Loc(9, 5));
+                structure.BaseFloor = getSecretRoom(translate, "special_gsc_plant", -2, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "tall_grass_dark", "grass", DungeonStage.Beginner, DungeonAccessibility.Unlockable, enemyList, new Loc(9, 5));
 
                 zone.Segments.Add(structure);
             }
@@ -4393,7 +4393,7 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                    structure.BaseFloor = getSecretRoom(translate, "special_gsc_plant", -2, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary", "tall_grass", "normal", enemyList, new Loc(9, 5));
+                    structure.BaseFloor = getSecretRoom(translate, "special_gsc_plant", -2, "purity_forest_8_wall", "purity_forest_8_floor", "purity_forest_8_secondary", "tall_grass", "normal", DungeonStage.Beginner, DungeonAccessibility.Unlockable, enemyList, new Loc(9, 5));
 
                     zone.Segments.Add(structure);
                 }
@@ -5672,7 +5672,7 @@ namespace DataGenerator.Data
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 4, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 5, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                     enemyList.Add(GetTeamMob(new MonsterID("alcremie", 6, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
-                    structure.BaseFloor = getSecretRoom(translate, "special_rby_fairy", -2, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "tall_grass", "fairy", enemyList, new Loc(13, 5));
+                    structure.BaseFloor = getSecretRoom(translate, "special_rby_fairy", -2, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "tall_grass", "fairy", DungeonStage.Beginner, DungeonAccessibility.Hidden, enemyList, new Loc(13, 5));
 
                     zone.Segments.Add(structure);
                 }

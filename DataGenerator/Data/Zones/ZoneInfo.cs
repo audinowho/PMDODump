@@ -1288,7 +1288,7 @@ namespace DataGenerator.Data
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         enemyList.Add(GetTeamMob(new MonsterID("vivillon", 0, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
-                        structure.BaseFloor = getSecretRoom(translate, "special_rby_bird", -1, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary", "tall_grass_dark", "flying", enemyList, new Loc(6, 4));
+                        structure.BaseFloor = getSecretRoom(translate, "special_rby_bird", -1, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary", "tall_grass_dark", "flying", DungeonStage.Beginner, DungeonAccessibility.MainPath, enemyList, new Loc(6, 4));
 
                         zone.Segments.Add(structure);
                     }
@@ -1919,7 +1919,7 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                        structure.BaseFloor = getSecretRoom(translate, "special_grass_maze", -1, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary", "tall_grass_yellow", "electric", enemyList, new Loc(5, 11));
+                        structure.BaseFloor = getSecretRoom(translate, "special_grass_maze", -1, "mt_bristle_wall", "mt_bristle_floor", "mt_bristle_secondary", "tall_grass_yellow", "electric", DungeonStage.Intermediate, DungeonAccessibility.MainPath, enemyList, new Loc(5, 11));
 
                         zone.Segments.Add(structure);
                     }
@@ -4011,7 +4011,7 @@ namespace DataGenerator.Data
 
                     SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                     //enemyList.Add(GetTeamMob(new MonsterID("vivillon", 6, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
-                    structure.BaseFloor = getSecretRoom(translate, "special_grass_maze", -2, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary", "tall_grass_white", "ice", enemyList, new Loc(5, 11));
+                    structure.BaseFloor = getSecretRoom(translate, "special_grass_maze", -2, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary", "tall_grass_white", "ice", DungeonStage.Intermediate, DungeonAccessibility.MainPath, enemyList, new Loc(5, 11));
 
                     zone.Segments.Add(structure);
                 }
@@ -5182,7 +5182,7 @@ namespace DataGenerator.Data
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
                         enemyList.Add(GetTeamMob(new MonsterID("carbink", 0, "", Gender.Unknown), "", "stealth_rock", "power_gem", "rock_throw", "", new RandRange(zone.Level), "turret"), 10);
-                        structure.BaseFloor = getSecretRoom(translate, "special_rby_fossil", -2, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary", "", "steel", enemyList, new Loc(5, 11));
+                        structure.BaseFloor = getSecretRoom(translate, "special_rby_fossil", -2, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary", "", "steel", DungeonStage.Intermediate, DungeonAccessibility.MainPath, enemyList, new Loc(5, 11));
 
                         zone.Segments.Add(structure);
                     }
