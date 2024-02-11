@@ -1113,48 +1113,41 @@ namespace DataGenerator.Data
                 //monster houses
                 SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(10, new IntRange(4, 15)));
                 monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
-                foreach (string key in IterateGummis())
-                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 4);//gummis
-                foreach (string key in IterateApricorns())
-                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 4);//apricorns
-                monsterChanceZoneStep.Items.Add(new MapItem("evo_fire_stone"), new IntRange(0, 30), 4);//Fire Stone
-                monsterChanceZoneStep.Items.Add(new MapItem("evo_thunder_stone"), new IntRange(0, 30), 4);//Thunder Stone
-                monsterChanceZoneStep.Items.Add(new MapItem("evo_water_stone"), new IntRange(0, 30), 4);//Water Stone
-                monsterChanceZoneStep.Items.Add(new MapItem("evo_moon_stone"), new IntRange(0, 30), 4);//Moon Stone
-                monsterChanceZoneStep.Items.Add(new MapItem("evo_dusk_stone"), new IntRange(0, 30), 4);//Dusk Stone
-                monsterChanceZoneStep.Items.Add(new MapItem("evo_dawn_stone"), new IntRange(0, 30), 4);//Dawn Stone
-                monsterChanceZoneStep.Items.Add(new MapItem("evo_shiny_stone"), new IntRange(0, 30), 4);//Shiny Stone
-                monsterChanceZoneStep.Items.Add(new MapItem("evo_leaf_stone"), new IntRange(0, 30), 4);//Leaf Stone
-                monsterChanceZoneStep.Items.Add(new MapItem("evo_ice_stone"), new IntRange(0, 30), 4);//Ice Stone
-                monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_ribbon"), new IntRange(0, 30), 4);//Sun Ribbon
-                monsterChanceZoneStep.Items.Add(new MapItem("evo_lunar_ribbon"), new IntRange(0, 30), 4);//Moon Ribbon
-                monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, 30), 25);//banana
-                foreach (string key in IterateTMs(TMClass.Natural))
-                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, 30), 2);//TMs
-                monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, 30), 10);//nugget
-                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 2), new IntRange(0, 30), 10);//pearl
-                monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, 30), 10);//heart scale
-                monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, 30), 10);//key
-                monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, 30), 10);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, 30), 10);//assembly box
-                monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, 30), 10);//ability capsule
-                monsterChanceZoneStep.Items.Add(new MapItem("held_friend_bow"), new IntRange(0, 30), 10);//friend bow
 
-                //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, 30), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 20);//no theme
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_fire_stone"), new IntRange(0, max_floors), 4);//Fire Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_thunder_stone"), new IntRange(0, max_floors), 4);//Thunder Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_water_stone"), new IntRange(0, max_floors), 4);//Water Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_moon_stone"), new IntRange(0, max_floors), 4);//Moon Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_dusk_stone"), new IntRange(0, max_floors), 4);//Dusk Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_dawn_stone"), new IntRange(0, max_floors), 4);//Dawn Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_shiny_stone"), new IntRange(0, max_floors), 4);//Shiny Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_leaf_stone"), new IntRange(0, max_floors), 4);//Leaf Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_ice_stone"), new IntRange(0, max_floors), 4);//Ice Stone
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_ribbon"), new IntRange(0, max_floors), 4);//Sun Ribbon
+                monsterChanceZoneStep.Items.Add(new MapItem("evo_lunar_ribbon"), new IntRange(0, max_floors), 4);//Moon Ribbon
+
+                foreach (string key in IterateApricorns())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
+                foreach (string key in IterateTMs(TMClass.Natural))
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 2);//TMs
+
+                PopulateHouseItems(monsterChanceZoneStep, DungeonStage.Rogue, DungeonAccessibility.MainPath, max_floors);
+
+                //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, max_floors), 20);
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//no theme
                                                                                                                                                                                                                          //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMoney(500, new ParamRange(5, 11)), new ParamRange(0, 30));
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 5)), new IntRange(0, 30), 10);//TMs
-                monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
-                monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 6)), new IntRange(0, 30), 10);//apricorns
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 5)), new IntRange(0, max_floors), 10);//TMs
+                monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, max_floors), 30);//gummis
+                monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 6)), new IntRange(0, max_floors), 10);//apricorns
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
                 for (int ii = 0; ii < dexMap.Length; ii++)
-                    monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, 30), 10);//all monsters in the game
-                monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, 30), 10);
+                    monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, max_floors), 10);//all monsters in the game
+                monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, max_floors), 10);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo, new RandRange(7, 13)), new IntRange(0, 10), 10);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FirstEvo | EvoFlag.NoEvo | EvoFlag.MidEvo, new RandRange(7, 13)), new IntRange(10, 20), 10);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.All, new RandRange(7, 13)), new IntRange(12, 22), 10);
-                monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FinalEvo | EvoFlag.NoEvo | EvoFlag.MidEvo, new RandRange(7, 13)), new IntRange(20, 30), 10);
+                monsterChanceZoneStep.MobThemes.Add(new MobThemeTypingSeeded(EvoFlag.FinalEvo | EvoFlag.NoEvo | EvoFlag.MidEvo, new RandRange(7, 13)), new IntRange(20, max_floors), 10);
                 floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
             }
 
@@ -2843,12 +2836,9 @@ namespace DataGenerator.Data
 
             {
                 //monster houses
-                SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(10, new IntRange(3, 30)));
+                SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(10, new IntRange(3, max_floors)));
                 monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
-                foreach (string key in IterateGummis())
-                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
-                foreach (string key in IterateApricorns())
-                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
+
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_fire_stone"), new IntRange(0, max_floors), 4);//Fire Stone
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_water_stone"), new IntRange(0, max_floors), 4);//Water Stone
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_moon_stone"), new IntRange(0, max_floors), 4);//Moon Stone
@@ -2856,45 +2846,13 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_kings_rock"), new IntRange(0, max_floors), 4);//King's Rock
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_link_cable"), new IntRange(0, max_floors), 4);//Link Cable
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_stone"), new IntRange(0, max_floors), 4);//Sun Stone
-                monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
-                foreach(string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
+                
+                foreach (string key in IterateApricorns())
+                    monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
+                foreach (string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
                     monsterChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
-                monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 10);//nugget
-                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 3), new IntRange(0, max_floors), 10);//pearl
-                monsterChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
-                monsterChanceZoneStep.Items.Add(new MapItem("key", 1), new IntRange(0, max_floors), 10);//key
-                monsterChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 30);//link box
-                monsterChanceZoneStep.Items.Add(new MapItem("machine_assembly_box"), new IntRange(10, max_floors), 30);//assembly box
-                monsterChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 10);//ability capsule
 
-
-                monsterChanceZoneStep.Items.Add(new MapItem("held_mobile_scarf"), new IntRange(0, max_floors), 1);//Mobile Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem("held_pass_scarf"), new IntRange(0, max_floors), 1);//Pass Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem("held_cover_band"), new IntRange(0, max_floors), 1);//Cover Band
-                monsterChanceZoneStep.Items.Add(new MapItem("held_reunion_cape"), new IntRange(0, max_floors), 1);//Reunion Cape
-                monsterChanceZoneStep.Items.Add(new MapItem("held_trap_scarf"), new IntRange(0, max_floors), 1);//Trap Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem("held_grip_claw"), new IntRange(0, max_floors), 1);//Grip Claw
-                monsterChanceZoneStep.Items.Add(new MapItem("held_twist_band"), new IntRange(0, max_floors), 1);//Twist Band
-                monsterChanceZoneStep.Items.Add(new MapItem("held_metronome"), new IntRange(0, max_floors), 1);//Metronome
-                monsterChanceZoneStep.Items.Add(new MapItem("held_shell_bell"), new IntRange(0, max_floors), 1);//Shell Bell
-                monsterChanceZoneStep.Items.Add(new MapItem("held_scope_lens"), new IntRange(0, max_floors), 1);//Scope Lens
-                monsterChanceZoneStep.Items.Add(new MapItem("held_power_band"), new IntRange(0, max_floors), 1);//Power Band
-                monsterChanceZoneStep.Items.Add(new MapItem("held_special_band"), new IntRange(0, max_floors), 1);//Special Band
-                monsterChanceZoneStep.Items.Add(new MapItem("held_defense_scarf"), new IntRange(0, max_floors), 1);//Defense Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem("held_zinc_band"), new IntRange(0, max_floors), 1);//Zinc Band
-                monsterChanceZoneStep.Items.Add(new MapItem("held_wide_lens"), new IntRange(0, max_floors), 1);//Wide Lens
-                monsterChanceZoneStep.Items.Add(new MapItem("held_pierce_band"), new IntRange(0, max_floors), 1);//Pierce Band
-                monsterChanceZoneStep.Items.Add(new MapItem("held_shed_shell"), new IntRange(0, max_floors), 1);//Shed Shell
-                monsterChanceZoneStep.Items.Add(new MapItem("held_x_ray_specs"), new IntRange(0, max_floors), 1);//X-Ray Specs
-                monsterChanceZoneStep.Items.Add(new MapItem("held_big_root"), new IntRange(0, max_floors), 1);//Big Root
-                monsterChanceZoneStep.Items.Add(new MapItem("held_weather_rock"), new IntRange(0, max_floors), 1);//Weather Rock
-                monsterChanceZoneStep.Items.Add(new MapItem("held_expert_belt"), new IntRange(0, max_floors), 1);//Expert Belt
-                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_scarf"), new IntRange(0, max_floors), 1);//Choice Scarf
-                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_specs"), new IntRange(0, max_floors), 1);//Choice Specs
-                monsterChanceZoneStep.Items.Add(new MapItem("held_choice_band"), new IntRange(0, max_floors), 1);//Choice Band
-                monsterChanceZoneStep.Items.Add(new MapItem("held_assault_vest"), new IntRange(0, max_floors), 1);//Assault Vest
-                monsterChanceZoneStep.Items.Add(new MapItem("held_life_orb"), new IntRange(0, max_floors), 1);//Life Orb
-                monsterChanceZoneStep.Items.Add(new MapItem("held_heal_ribbon"), new IntRange(0, max_floors), 1);//Heal Ribbon
+                PopulateHouseItems(monsterChanceZoneStep, DungeonStage.Rogue, DungeonAccessibility.Unlockable, max_floors);
 
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, max_floors), 20);
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, max_floors), 30);//no theme
