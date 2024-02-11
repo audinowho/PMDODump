@@ -1185,6 +1185,95 @@ namespace DataGenerator.Data
                         vaultChanceZoneStep.ItemPlacements.SetRange(detourItems, new IntRange(0, max_floors));
                     }
                 }
+                else
+                {
+                    // item spawnings for the vault
+                    {
+                        //add a PickerSpawner <- PresetMultiRand <- coins
+                        List<MapItem> treasures = new List<MapItem>();
+                        treasures.Add(MapItem.CreateMoney(200));
+                        treasures.Add(MapItem.CreateMoney(200));
+                        treasures.Add(MapItem.CreateMoney(200));
+                        treasures.Add(MapItem.CreateMoney(200));
+                        treasures.Add(MapItem.CreateMoney(200));
+                        PickerSpawner<ListMapGenContext, MapItem> treasurePicker = new PickerSpawner<ListMapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
+
+                        SpawnList<IStepSpawner<ListMapGenContext, MapItem>> boxSpawn = new SpawnList<IStepSpawner<ListMapGenContext, MapItem>>();
+
+                        //444      ***    Light Box - 1* items
+                        {
+                            boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_light", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(1), new RandRange(1))), 30);
+                        }
+
+                        //445      ***    Heavy Box - 2* items
+                        {
+                            boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_heavy", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(2), new RandRange(1))), 10);
+                        }
+
+                        if (gamePhase == DungeonStage.Advanced)
+                        {
+                            //446      ***    Nifty Box - all high tier TMs, ability capsule, heart scale 9, max potion, full heal, max elixir
+                            {
+                                SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
+
+                                boxTreasure.Add(new MapItem("machine_ability_capsule"), 100);//ability capsule
+                                boxTreasure.Add(new MapItem("loot_heart_scale"), 100);//heart scale
+                                boxTreasure.Add(new MapItem("medicine_max_potion"), 30);//max potion
+                                boxTreasure.Add(new MapItem("medicine_full_heal"), 100);//full heal
+                                boxTreasure.Add(new MapItem("medicine_max_elixir"), 30);//max elixir
+                                boxTreasure.Add(new MapItem("evo_reaper_cloth"), 80);//Reaper Cloth
+                                boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_nifty", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
+                            }
+
+                            //447      ***    Dainty Box - Stat ups, wonder gummi, nectar, golden apple, golden banana
+                            {
+                                SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
+
+                                boxTreasure.Add(new MapItem("boost_protein"), 2);//protein
+                                boxTreasure.Add(new MapItem("boost_iron"), 2);//iron
+                                boxTreasure.Add(new MapItem("boost_calcium"), 2);//calcium
+                                boxTreasure.Add(new MapItem("boost_zinc"), 2);//zinc
+                                boxTreasure.Add(new MapItem("boost_carbos"), 2);//carbos
+                                boxTreasure.Add(new MapItem("boost_hp_up"), 2);//hp up
+                                boxTreasure.Add(new MapItem("boost_nectar"), 2);//nectar
+
+                                boxTreasure.Add(new MapItem("food_apple_perfect"), 10);//perfect apple
+                                boxTreasure.Add(new MapItem("food_banana_big"), 10);//big banana
+                                boxTreasure.Add(new MapItem("seed_joy"), 10);//joy seed
+                                boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_dainty", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 3);
+                            }
+
+                            //448    Glittery Box - golden apple, amber tear, golden banana, nugget, golden thorn 9
+                            {
+                                SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
+                                boxTreasure.Add(new MapItem("ammo_golden_thorn"), 10);//golden thorn
+                                boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
+                                boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
+                                boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_glittery", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);
+                            }
+                        }
+
+                        MultiStepSpawner<ListMapGenContext, MapItem> boxPicker;
+                        if (gamePhase == DungeonStage.Advanced)
+                            boxPicker = new MultiStepSpawner<ListMapGenContext, MapItem>(new LoopedRand<IStepSpawner<ListMapGenContext, MapItem>>(boxSpawn, new RandRange(1, 3)));
+                        else
+                            boxPicker = new MultiStepSpawner<ListMapGenContext, MapItem>(new LoopedRand<IStepSpawner<ListMapGenContext, MapItem>>(boxSpawn, new RandRange(1)));
+
+                        //StepSpawner <- PresetMultiRand
+                        MultiStepSpawner<ListMapGenContext, MapItem> mainSpawner = new MultiStepSpawner<ListMapGenContext, MapItem>();
+                        mainSpawner.Picker = new PresetMultiRand<IStepSpawner<ListMapGenContext, MapItem>>(treasurePicker, boxPicker);
+                        vaultChanceZoneStep.ItemSpawners.SetRange(mainSpawner, new IntRange(0, max_floors));
+                    }
+                    vaultChanceZoneStep.ItemAmount.SetRange(new RandRange(1), new IntRange(0, max_floors));
+
+
+                    // item placements for the vault
+                    {
+                        RandomRoomSpawnStep<ListMapGenContext, MapItem> detourItems = new RandomRoomSpawnStep<ListMapGenContext, MapItem>();
+                        detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
+                        vaultChanceZoneStep.ItemPlacements.SetRange(detourItems, new IntRange(0, max_floors));
+                    }
+                }
             }
         }
 
