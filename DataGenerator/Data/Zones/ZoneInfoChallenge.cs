@@ -943,12 +943,7 @@ namespace DataGenerator.Data
 
                     //items for the vault
                     {
-                        foreach (string key in IterateTMs(TMClass.Starter))
-                            vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
-                        vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 100);//amber tear
-                        vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
-                        vaultChanceZoneStep.Items.Add(new MapItem("seed_pure"), new IntRange(0, max_floors), 100);//pure seed
-                        vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 200);//recall box
+
                     }
 
                     PopulateVaultItems(vaultChanceZoneStep, DungeonStage.Intermediate, DungeonAccessibility.SidePath, max_floors, true);
@@ -3299,13 +3294,7 @@ namespace DataGenerator.Data
 
                     //items for the vault
                     {
-                        foreach (string key in IterateTMs(TMClass.Natural))
-                            vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
-                        vaultChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 200);//nugget
-                        vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 100);//amber tear
-                        vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
-                        vaultChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, max_floors), 100);//joy seed
-                        vaultChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 200);//ability capsule
+                        vaultChanceZoneStep.Items.Add(new MapItem("evo_reaper_cloth"), new IntRange(0, max_floors), 150);//reaper cloth
                     }
 
                     PopulateVaultItems(vaultChanceZoneStep, DungeonStage.Advanced, DungeonAccessibility.Unlockable, max_floors, true);
@@ -4148,15 +4137,10 @@ namespace DataGenerator.Data
 
                         //items for the vault
                         {
-                            foreach (string key in IterateTMs(TMClass.Natural))
-                                vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
-                            vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 100);//amber tear
-                            vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
-                            vaultChanceZoneStep.Items.Add(new MapItem("seed_pure"), new IntRange(0, max_floors), 100);//pure seed
-                            vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 200);//recall box
+
                         }
 
-                        PopulateVaultItems(vaultChanceZoneStep, DungeonStage.Intermediate, DungeonAccessibility.Hidden, max_floors, true);
+                        PopulateVaultItems(vaultChanceZoneStep, DungeonStage.Advanced, DungeonAccessibility.Hidden, max_floors, true);
 
                         combinedVaultZoneStep.Steps.Add(vaultChanceZoneStep);
                     }

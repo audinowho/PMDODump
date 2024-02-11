@@ -1187,6 +1187,26 @@ namespace DataGenerator.Data
                 }
                 else
                 {
+                    if (gamePhase == DungeonStage.Advanced)
+                    {
+                        foreach (string key in IterateTMs(TMClass.Natural))
+                            vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
+                        vaultChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 200);//nugget
+                        vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 100);//amber tear
+                        vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
+                        vaultChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, max_floors), 100);//joy seed
+                        vaultChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 200);//ability capsule
+                    }
+                    else
+                    {
+                        foreach (string key in IterateTMs(TMClass.Starter))
+                            vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 5);//TMs
+                        vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 100);//amber tear
+                        vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
+                        vaultChanceZoneStep.Items.Add(new MapItem("seed_pure"), new IntRange(0, max_floors), 100);//pure seed
+                        vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 200);//recall box
+                    }
+
                     // item spawnings for the vault
                     {
                         //add a PickerSpawner <- PresetMultiRand <- coins
@@ -1221,7 +1241,6 @@ namespace DataGenerator.Data
                                 boxTreasure.Add(new MapItem("medicine_max_potion"), 30);//max potion
                                 boxTreasure.Add(new MapItem("medicine_full_heal"), 100);//full heal
                                 boxTreasure.Add(new MapItem("medicine_max_elixir"), 30);//max elixir
-                                boxTreasure.Add(new MapItem("evo_reaper_cloth"), 80);//Reaper Cloth
                                 boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_nifty", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 10);
                             }
 
