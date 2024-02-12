@@ -2182,6 +2182,18 @@ namespace DataGenerator.Data
             }
             else if (ii == 290)
             {
+                item.Name = new LocalText("**Monster Orb");
+                item.Desc = new LocalText("An orb that summons a monster house near the user.");
+                item.Sprite = "Orb_Green";
+                item.UseEvent.OnHits.Add(0, new BattlelessEvent(true, new MonsterHouseOwnerEvent()));
+                item.UseAction = new SelfAction();
+                item.UseAction.ActionFX.Sound = "DUN_Petrify_Orb";
+                item.UseAction.TargetAlignments |= Alignment.Self;
+                item.Explosion.TargetAlignments |= Alignment.Self;
+            }
+            else if (ii == 291)
+            {
+
             }
             else if (ii == 300)
             {
