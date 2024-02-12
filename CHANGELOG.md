@@ -11,11 +11,14 @@
 * Completing purchase in a dungeon shop now clears prices for items outside the matted area (they previously remained)
 * Fix issue where relearned/tutored moves are default enabled in spite of settings specifying otherwise
 * Shop no longer sells pure seeds, and sells more plain apricorn
+* Vitamins are no longer forced to increase a stat by 1 (this behavior can be toggled by devs)
+* Lowered the effect of gummis when super-effective or matching type (originally gave equivalent 3x vitamin boost)
 * RC: Interacting with eescue sidequest target NPCs will no longer cause desyncs
 * RC: Entering floors with wandering move tutors will no longer cause desyncs
 * RC: Compasses point to Rescue tiles correctly
 * RC: Fix issue with drinking gummis
 * RC: Fixed an issue preventing sneasel's questline from continuing
+* RC: Vitamins have double effect if used for juice
 * Dev: You can travel to dungeon segments that have infinite (-1) floors
 * Dev: Default name available for selecting a team name
 
