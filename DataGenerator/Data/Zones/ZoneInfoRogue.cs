@@ -124,7 +124,7 @@ namespace DataGenerator.Data
             boosters.SpawnRates.SetRange(7, new IntRange(0, 30));
             itemSpawnZoneStep.Spawns.Add("boosters", boosters);
 
-            foreach (string key in IterateGummis())
+            foreach (string key in IterateGummis(false))
                 boosters.Spawns.Add(new InvItem(key), new IntRange(0, 30), 1);
 
             IntRange range = new IntRange(3, 30);
@@ -727,7 +727,7 @@ namespace DataGenerator.Data
             {
                 TeamMemberSpawn mob = GetTeamMob("charizard", "", "fire_blast", "wing_attack", "", "", new RandRange(45), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
                 MobSpawnItem itemSpawn = new MobSpawnItem(true);
-                foreach(string item_name in IterateGummis())
+                foreach(string item_name in IterateGummis(true))
                     itemSpawn.Items.Add(new InvItem(item_name), 100);
                 mob.Spawn.SpawnFeatures.Add(itemSpawn);
                 poolSpawn.Spawns.Add(mob, new IntRange(17, 19), 10);
@@ -939,7 +939,7 @@ namespace DataGenerator.Data
             {
                 TeamMemberSpawn mob = GetTeamMob("weezing", "neutralizing_gas", "destiny_bond", "explosion", "", "", new RandRange(50), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
                 MobSpawnItem itemSpawn = new MobSpawnItem(true);
-                foreach (string item_name in IterateGummis())
+                foreach (string item_name in IterateGummis(true))
                     itemSpawn.Items.Add(new InvItem(item_name), 100);
                 mob.Spawn.SpawnFeatures.Add(itemSpawn);
                 poolSpawn.Spawns.Add(mob, new IntRange(22, 25), 10);
@@ -1126,7 +1126,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_ribbon"), new IntRange(0, max_floors), 4);//Sun Ribbon
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_lunar_ribbon"), new IntRange(0, max_floors), 4);//Moon Ribbon
 
-                foreach (string key in IterateApricorns())
+                foreach (string key in IterateApricorns(true))
                     monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
                 foreach (string key in IterateTMs(TMClass.Natural))
                     monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 2);//TMs
@@ -1168,7 +1168,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_ribbon"), new IntRange(0, max_floors), 4);//Sun Ribbon
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_lunar_ribbon"), new IntRange(0, max_floors), 4);//Moon Ribbon
 
-                foreach (string key in IterateApricorns())
+                foreach (string key in IterateApricorns(true))
                     monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
 
                 foreach (string key in IterateTMs(TMClass.Natural))
@@ -1409,7 +1409,7 @@ namespace DataGenerator.Data
                 shop.Items.Add(new MapItem("berry_sitrus", 0, 100), 20);//sitrus
                 shop.Items.Add(new MapItem("seed_reviver", 0, 800), 15);//reviver
                 shop.Items.Add(new MapItem("seed_ban", 0, 500), 15);//ban
-                foreach (string key in IterateApricorns())
+                foreach (string key in IterateApricorns(false))
                     shop.Items.Add(new MapItem(key, 0, 600), 2);//apricorns
                 shop.Items.Add(new MapItem("apricorn_plain", 0, 800), 5);//plain apricorn
                 foreach (string key in IteratePinchBerries())
@@ -1459,7 +1459,7 @@ namespace DataGenerator.Data
                 shop.Items.Add(new MapItem("berry_sitrus", 0, 100), 20);//sitrus
                 shop.Items.Add(new MapItem("seed_reviver", 0, 800), 15);//reviver
                 shop.Items.Add(new MapItem("seed_ban", 0, 500), 15);//ban
-                foreach (string key in IterateApricorns())
+                foreach (string key in IterateApricorns(false))
                     shop.Items.Add(new MapItem(key, 0, 600), 2);//apricorns
                 shop.Items.Add(new MapItem("apricorn_plain", 0, 800), 5);//plain apricorn
                 foreach (string key in IteratePinchBerries())
@@ -1834,7 +1834,7 @@ namespace DataGenerator.Data
                         secretItemSpawns.Add(new InvItem("held_life_orb"), 3);//Life Orb
                         secretItemSpawns.Add(new InvItem("held_heal_ribbon"), 3);//Heal Ribbon
                         secretItemSpawns.Add(new InvItem("key", false, 1), 35);//Key
-                        foreach (string key in IterateGummis())
+                        foreach (string key in IterateGummis(true))
                             secretItemSpawns.Add(new InvItem(key), 2);
 
                         RandomRoomSpawnStep<MapGenContext, InvItem> secretPlacement = new RandomRoomSpawnStep<MapGenContext, InvItem>(new PickerSpawner<MapGenContext, InvItem>(new LoopedRand<InvItem>(secretItemSpawns, new RandRange(1, 3))));
@@ -2656,7 +2656,7 @@ namespace DataGenerator.Data
             {
                 TeamMemberSpawn mob = GetTeamMob("torterra", "", "earthquake", "synthesis", "", "", new RandRange(38), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
                 MobSpawnItem itemSpawn = new MobSpawnItem(true);
-                foreach (string item_name in IterateGummis())
+                foreach (string item_name in IterateGummis(true))
                     itemSpawn.Items.Add(new InvItem(item_name), 100);
                 mob.Spawn.SpawnFeatures.Add(itemSpawn);
                 poolSpawn.Spawns.Add(mob, new IntRange(19, 22), 10);
@@ -2847,7 +2847,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_link_cable"), new IntRange(0, max_floors), 4);//Link Cable
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_stone"), new IntRange(0, max_floors), 4);//Sun Stone
                 
-                foreach (string key in IterateApricorns())
+                foreach (string key in IterateApricorns(true))
                     monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
                 foreach (string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
                     monsterChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
@@ -2878,7 +2878,7 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_kings_rock"), new IntRange(0, max_floors), 4);//King's Rock
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_link_cable"), new IntRange(0, max_floors), 4);//Link Cable
                 monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_stone"), new IntRange(0, max_floors), 4);//Sun Stone
-                foreach (string key in IterateApricorns())
+                foreach (string key in IterateApricorns(true))
                     monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
 
                 foreach (string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
@@ -3095,7 +3095,7 @@ namespace DataGenerator.Data
                 shop.Items.Add(new MapItem("seed_ban", 0, 500), 15);//ban
                 shop.Items.Add(new MapItem("machine_recall_box", 0, 1200), 20);//Link Box
                 shop.Items.Add(new MapItem("machine_assembly_box", 0, 1200), 20);//Assembly Box
-                foreach (string key in IterateApricorns())
+                foreach (string key in IterateApricorns(false))
                     shop.Items.Add(new MapItem(key, 0, 600), 2);//apricorns
                 shop.Items.Add(new MapItem("apricorn_plain", 0, 800), 5);//plain apricorn
                 foreach (string key in IteratePinchBerries())

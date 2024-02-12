@@ -30,9 +30,10 @@ namespace DataGenerator.Data
         }
 
 
-        static IEnumerable<string> IterateGummis()
+        static IEnumerable<string> IterateGummis(bool wonder)
         {
-            yield return "gummi_wonder";
+            if (wonder)
+                yield return "gummi_wonder";
             yield return "gummi_blue";
             yield return "gummi_black";
             yield return "gummi_clear";
@@ -108,9 +109,10 @@ namespace DataGenerator.Data
             yield return "berry_roseli";
         }
 
-        static IEnumerable<string> IterateApricorns()
+        static IEnumerable<string> IterateApricorns(bool plain)
         {
-            yield return "apricorn_plain";
+            if (plain)
+                yield return "apricorn_plain";
             yield return "apricorn_blue";
             yield return "apricorn_green";
             yield return "apricorn_brown";

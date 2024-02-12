@@ -1200,7 +1200,7 @@ namespace DataGenerator.Data
                             }
                             if (gamePhase < DungeonStage.Advanced)
                             {
-                                foreach (string key in IterateGummis())
+                                foreach (string key in IterateGummis(false))
                                     boxTreasure.Add(new MapItem(key), 1);//gummis
 
                                 boxTreasure.Add(new MapItem("boost_nectar"), 10);//nectar
@@ -1309,7 +1309,7 @@ namespace DataGenerator.Data
                         {
                             SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
 
-                            if (gamePhase == DungeonStage.Advanced)
+                            if (gamePhase >= DungeonStage.Advanced)
                             {
                                 boxTreasure.Add(new MapItem("boost_protein"), 2);//protein
                                 boxTreasure.Add(new MapItem("boost_iron"), 2);//iron
@@ -1323,7 +1323,7 @@ namespace DataGenerator.Data
                             }
                             if (gamePhase < DungeonStage.Advanced)
                             {
-                                foreach (string key in IterateGummis())
+                                foreach (string key in IterateGummis(false))
                                     boxTreasure.Add(new MapItem(key), 1);//gummis
 
                                 boxTreasure.Add(new MapItem("boost_nectar"), 10);//nectar
@@ -1383,7 +1383,7 @@ namespace DataGenerator.Data
                         foreach (string key in IterateXItems())
                             vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 50);//X-Items
                     }
-                    foreach (string key in IterateGummis())
+                    foreach (string key in IterateGummis(true))
                         vaultChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 200);//gummis
                     vaultChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 2000);//amber tear
                     vaultChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
@@ -1471,8 +1471,15 @@ namespace DataGenerator.Data
                     {
                         SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
 
-                        foreach (string key in IterateGummis())
-                            boxTreasure.Add(new MapItem(key), 1);
+                        if (gamePhase >= DungeonStage.Advanced)
+                        {
+                            boxTreasure.Add(new MapItem("gummi_wonder"), 2);//wonder gummi
+                        }
+                        else
+                        {
+                            foreach (string key in IterateGummis(false))
+                                boxTreasure.Add(new MapItem(key), 1);
+                        }
 
                         boxTreasure.Add(new MapItem("boost_protein"), 2);//protein
                         boxTreasure.Add(new MapItem("boost_iron"), 2);//iron
@@ -1573,7 +1580,7 @@ namespace DataGenerator.Data
                 bossChanceZoneStep.Items.Add(new MapItem("medicine_full_heal"), new IntRange(0, max_floors), 200);//full heal
                 foreach (string key in IterateXItems())
                     bossChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 50);//X-Items
-                foreach (string key in IterateGummis())
+                foreach (string key in IterateGummis(true))
                     bossChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 200);//gummis
                 bossChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 200);//amber tear
                 bossChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 200);//reviver seed
@@ -1636,8 +1643,15 @@ namespace DataGenerator.Data
                 {
                     SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
 
-                    foreach (string key in IterateGummis())
-                        boxTreasure.Add(new MapItem(key), 1);
+                    if (gamePhase >= DungeonStage.Advanced)
+                    {
+                        boxTreasure.Add(new MapItem("gummi_wonder"), 2);//wonder gummi
+                    }
+                    else
+                    {
+                        foreach (string key in IterateGummis(false))
+                            boxTreasure.Add(new MapItem(key), 1);
+                    }
 
                     boxTreasure.Add(new MapItem("boost_protein"), 2);//protein
                     boxTreasure.Add(new MapItem("boost_iron"), 2);//iron
@@ -1715,13 +1729,14 @@ namespace DataGenerator.Data
         {
             if (gamePhase == DungeonStage.Rogue)
             {
-                foreach (string key in IterateGummis())
+                foreach (string key in IterateGummis(true))
                     chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
                 if (ambush)
                     chestChanceZoneStep.Items.Add(new MapItem("apricorn_big"), new IntRange(0, max_floors), 10);//big apricorn
                 else
                 {
-                    foreach (string key in IterateApricorns())
+                    chestChanceZoneStep.Items.Add(new MapItem("apricorn_plain"), new IntRange(0, max_floors), 5);//plain apricorn
+                    foreach (string key in IterateApricorns(false))
                         chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
                 }
                 chestChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, max_floors), 80);//elixir
@@ -1786,7 +1801,7 @@ namespace DataGenerator.Data
                     foreach (string key in IterateVitamins())
                         chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//boosters
                 }
-                foreach (string key in IterateGummis())
+                foreach (string key in IterateGummis(true))
                     chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
                 chestChanceZoneStep.Items.Add(new MapItem("apricorn_big"), new IntRange(0, max_floors), 10);//big apricorn
                 chestChanceZoneStep.Items.Add(new MapItem("medicine_elixir"), new IntRange(0, max_floors), 20);//elixir
@@ -1819,7 +1834,7 @@ namespace DataGenerator.Data
 
         static void PopulateHouseItems(SpreadHouseZoneStep monsterChanceZoneStep, DungeonStage gamePhase, DungeonAccessibility access, int max_floors)
         {
-            foreach (string key in IterateGummis())
+            foreach (string key in IterateGummis(false))
                 monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
 
 
@@ -1890,7 +1905,7 @@ namespace DataGenerator.Data
 
         static void PopulateHallItems(SpreadHouseZoneStep monsterChanceZoneStep, DungeonStage gamePhase, DungeonAccessibility access, int max_floors)
         {
-            foreach (string key in IterateGummis())
+            foreach (string key in IterateGummis(false))
                 monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
 
             monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana

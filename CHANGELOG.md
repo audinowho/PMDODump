@@ -1,6 +1,8 @@
 # 0.8 Changes #
 
 * Assembly members in town say things based on species
+* Glittery Apricorn can be found in chests
+* Colored apricorns more common in Fertile Valley
 * Fix storage withdrawals failing after adding a stackable item
 * Fix shop item price duplication using stackables
 * Fix enemies standing still when blocked by shopkeepers or sleepers

@@ -3130,7 +3130,7 @@ namespace DataGenerator.Data
                     SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(20, new IntRange(1, 15)));
                     monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                    foreach (string iter_item in IterateApricorns())
+                    foreach (string iter_item in IterateApricorns(true))
                         monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 4);//apricorns
 
                     PopulateHouseItems(monsterChanceZoneStep, DungeonStage.Advanced, DungeonAccessibility.Unlockable, max_floors);
@@ -3825,7 +3825,7 @@ namespace DataGenerator.Data
                     SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(15, new IntRange(0, max_floors)));
                     monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                    foreach (string iter_item in IterateApricorns())
+                    foreach (string iter_item in IterateApricorns(true))
                         monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 2);//apricorns
                     foreach (string iter_item in IterateTypePlates())
                         monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 5);//type plates

@@ -2578,7 +2578,7 @@ namespace DataGenerator.Data
                         effect.TileStates.Set(new UnlockState("key"));
                         effect.TileStates.Set(new BoundsState(new Rect(0, 0, 10, 10)));
                         ItemSpawnState itemSpawn = new ItemSpawnState();
-                        foreach(string key in IterateGummis())
+                        foreach(string key in IterateGummis(true))
                             itemSpawn.Spawns.Add(new MapItem(key));
                         effect.TileStates.Set(itemSpawn);
                         MobSpawnState mobSpawn = new MobSpawnState();
@@ -2601,7 +2601,7 @@ namespace DataGenerator.Data
                         effect.TileStates.Set(new UnlockState("key"));
                         effect.TileStates.Set(new BoundsState(new Rect(3, 3, 13, 13)));
                         ItemSpawnState itemSpawn = new ItemSpawnState();
-                        foreach (string key in IterateGummis())
+                        foreach (string key in IterateGummis(true))
                             itemSpawn.Spawns.Add(new MapItem(key));
                         effect.TileStates.Set(itemSpawn);
                         MobSpawnState mobSpawn = new MobSpawnState();

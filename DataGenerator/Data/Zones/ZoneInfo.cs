@@ -1528,7 +1528,7 @@ namespace DataGenerator.Data
                             SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(25, new IntRange(0, max_floors)));
                             monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                            foreach (string iter_item in IterateApricorns())
+                            foreach (string iter_item in IterateApricorns(true))
                                 monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 4);//apricorns
 
                             monsterChanceZoneStep.Items.Add(new MapItem("food_banana_big"), new IntRange(0, max_floors), 10);//big banana
@@ -2205,7 +2205,7 @@ namespace DataGenerator.Data
                         monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(11, 9), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                         monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(15, 13), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                        foreach (string key in IterateApricorns())
+                        foreach (string key in IterateApricorns(true))
                             monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
                         monsterChanceZoneStep.Items.Add(new MapItem("evo_thunder_stone"), new IntRange(0, 30), 4);//Thunder Stone
                         monsterChanceZoneStep.Items.Add(new MapItem("evo_leaf_stone"), new IntRange(0, 30), 4);//Leaf Stone
@@ -3007,7 +3007,7 @@ namespace DataGenerator.Data
                         SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(15, new IntRange(0, max_floors)));
                         monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                        foreach (string iter_item in IterateApricorns())
+                        foreach (string iter_item in IterateApricorns(true))
                             monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 4);//apricorns
                         foreach (string iter_item in IterateTypePlates())
                             monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 5);//type plates
@@ -3595,7 +3595,7 @@ namespace DataGenerator.Data
                         monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(11, 9), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                         monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(15, 13), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                        foreach (string key in IterateApricorns())
+                        foreach (string key in IterateApricorns(true))
                             monsterChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//apricorns
                         foreach (string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
                             monsterChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
@@ -4082,7 +4082,7 @@ namespace DataGenerator.Data
                             SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(15, new IntRange(0, max_floors)));
                             monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                            foreach (string iter_item in IterateApricorns())
+                            foreach (string iter_item in IterateApricorns(true))
                                 monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 2);//apricorns
                             foreach (string iter_item in IterateTypePlates())
                                 monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 5);//type plates
@@ -4142,7 +4142,7 @@ namespace DataGenerator.Data
                                 shop.Items.Add(new MapItem(key, 0, 600), 3);//pinch berries
                             foreach (string key in IterateTypeBerries())
                                 shop.Items.Add(new MapItem(key, 0, 100), 1);//type berries
-                            foreach (string key in IterateGummis())
+                            foreach (string key in IterateGummis(false))
                                 shop.Items.Add(new MapItem(key, 0, 800), 1);//gummis
                             foreach (string key in IterateEvoItems(EvoClass.Early))
                                 shop.Items.Add(new MapItem(key, 0, 2500), 2);

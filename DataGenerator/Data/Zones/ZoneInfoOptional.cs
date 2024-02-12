@@ -977,15 +977,12 @@ namespace DataGenerator.Data
                     snacks.Spawns.Add(new InvItem("seed_hunger"), new IntRange(0, max_floors), 10);
                     //special
                     CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
-                    special.SpawnRates.SetRange(3, new IntRange(0, max_floors));
+                    special.SpawnRates.SetRange(30, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("special", special);
 
+                    foreach (string iter_item in IterateApricorns(false))
+                        special.Spawns.Add(new InvItem(iter_item), new IntRange(0, max_floors), 5);
 
-                    special.Spawns.Add(new InvItem("apricorn_plain"), new IntRange(0, max_floors), 5);
-                    special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, max_floors), 5);
-                    special.Spawns.Add(new InvItem("apricorn_purple"), new IntRange(0, max_floors), 5);
-                    special.Spawns.Add(new InvItem("apricorn_brown"), new IntRange(0, max_floors), 5);
-                    special.Spawns.Add(new InvItem("apricorn_black"), new IntRange(0, max_floors), 5);
                     //throwable
                     CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
                     throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
@@ -1725,7 +1722,7 @@ namespace DataGenerator.Data
                             secretItemSpawns.Add(new InvItem("held_weather_rock"), 3);//Weather Rock
                             secretItemSpawns.Add(new InvItem("loot_pearl", false, 2), 10);//Pearl
                             secretItemSpawns.Add(new InvItem("key", false, 1), 10);//Key
-                            foreach (string key in IterateGummis())
+                            foreach (string key in IterateGummis(true))
                                 secretItemSpawns.Add(new InvItem(key), 2);
 
                             RandRange spawnRange = (ii < 12) ? new RandRange(0, 2) : new RandRange(1, 3);
@@ -2253,7 +2250,7 @@ namespace DataGenerator.Data
                     SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(20, new IntRange(0, max_floors)));
                     monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                    foreach (string iter_item in IterateApricorns())
+                    foreach (string iter_item in IterateApricorns(true))
                         monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 4);//apricorns
                     foreach (string iter_item in IterateTypePlates())
                         monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 5);//type plates
@@ -3000,7 +2997,7 @@ namespace DataGenerator.Data
                 {
                     TeamMemberSpawn mob = GetTeamMob("heracross", "", "horn_attack", "arm_thrust", "", "", new RandRange(22), "wander_normal", true);
                     MobSpawnItem itemSpawn = new MobSpawnItem(true);
-                    foreach (string item_name in IterateGummis())
+                    foreach (string item_name in IterateGummis(true))
                         itemSpawn.Items.Add(new InvItem(item_name), 10);
                     mob.Spawn.SpawnFeatures.Add(itemSpawn);
                     poolSpawn.Spawns.Add(mob, new IntRange(4, max_floors), 5);
@@ -3041,7 +3038,7 @@ namespace DataGenerator.Data
                         shop.Items.Add(new MapItem(key, 0, 600), 3);//pinch berries
                     foreach (string key in IterateTypeBerries())
                         shop.Items.Add(new MapItem(key, 0, 100), 1);//type berries
-                    foreach (string key in IterateGummis())
+                    foreach (string key in IterateGummis(false))
                         shop.Items.Add(new MapItem(key, 0, 800), 1);//gummis
                     foreach (string key in IterateEvoItems(EvoClass.Early))
                         shop.Items.Add(new MapItem(key, 0, 2500), 2);
@@ -3474,7 +3471,7 @@ namespace DataGenerator.Data
                     SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(20, new IntRange(0, max_floors)));
                     monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                    foreach (string iter_item in IterateApricorns())
+                    foreach (string iter_item in IterateApricorns(true))
                         monsterChanceZoneStep.Items.Add(new MapItem(iter_item), new IntRange(0, max_floors), 4);//apricorns
                     monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_ribbon"), new IntRange(0, max_floors), 50);
                     monsterChanceZoneStep.Items.Add(new MapItem("evo_kings_rock"), new IntRange(0, max_floors), 50);
@@ -5999,7 +5996,7 @@ namespace DataGenerator.Data
                             treasures.SpawnAmount = 3;
                             foreach (string key in IterateVitamins())
                                 treasures.RandomSpawns.Add(new MapItem(key), 4);//boosters
-                            foreach (string key in IterateGummis())
+                            foreach (string key in IterateGummis(true))
                                 treasures.RandomSpawns.Add(new MapItem(key), 4);//gummis
                             treasures.RandomSpawns.Add(new MapItem("held_pierce_band"), 5);//pierce band
                             treasures.RandomSpawns.Add(new MapItem("held_friend_bow"), 5);//friend bow
@@ -6030,7 +6027,7 @@ namespace DataGenerator.Data
 
                         foreach (string key in IterateVitamins())
                             chestStep.Items.Add(new MapItem(key), 4);//boosters
-                        foreach (string key in IterateGummis())
+                        foreach (string key in IterateGummis(true))
                             chestStep.Items.Add(new MapItem(key), 4);//gummis
                         chestStep.Items.Add(new MapItem("held_pierce_band"), 10);//pierce band
                         chestStep.Items.Add(new MapItem("held_friend_bow"), 10);//friend bow
