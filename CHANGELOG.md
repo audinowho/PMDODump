@@ -16,14 +16,17 @@
 * Shop no longer sells pure seeds, and sells more plain apricorn
 * Vitamins are no longer forced to increase a stat by 1 (this behavior can be toggled by devs)
 * Lowered the effect of gummis when super-effective or matching type (originally gave equivalent 3x vitamin boost)
+* Fixed event recruits not having dungeon talk events
 * RC: Interacting with eescue sidequest target NPCs will no longer cause desyncs
 * RC: Entering floors with wandering move tutors will no longer cause desyncs
 * RC: Compasses point to Rescue tiles correctly
 * RC: Fix issue with drinking gummis
 * RC: Fixed an issue preventing sneasel's questline from continuing
 * RC: Vitamins have double effect if used for juice
+* RC: Fixed an issue where you could evolve quest NPCs in dungeon
 * Dev: You can travel to dungeon segments that have infinite (-1) floors
 * Dev: Default name available for selecting a team name
+* Dev: Fixed duplicate exports in Mass Export of sprites/portraits
 
 TODO: update docstrings
 TODO: update wiki docstrings
