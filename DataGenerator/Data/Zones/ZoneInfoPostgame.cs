@@ -29,6 +29,7 @@ namespace DataGenerator.Data
                 zone.LevelCap = true;
                 zone.KeepSkills = true;
                 zone.BagRestrict = 0;
+                zone.KeepTreasure = true;
                 zone.MoneyRestrict = true;
                 zone.TeamSize = 3;
                 zone.Rescues = 2;
@@ -269,6 +270,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("**Inscribed Cave");
                 zone.Level = 60;
                 zone.BagRestrict = 0;
+                zone.KeepTreasure = true;
                 zone.MoneyRestrict = true;
                 zone.TeamSize = 2;
                 zone.Rescues = 2;
@@ -490,6 +492,7 @@ namespace DataGenerator.Data
             {
                 zone.Name = new LocalText("**Cave of Solace");
                 zone.BagRestrict = 0;
+                zone.KeepTreasure = true;
                 zone.MoneyRestrict = true;
                 zone.TeamSize = 1;
                 zone.Level = 80;
@@ -727,6 +730,7 @@ namespace DataGenerator.Data
                 zone.Level = 100;
                 zone.LevelCap = true;
                 zone.BagRestrict = 0;
+                zone.KeepTreasure = true;
                 zone.MoneyRestrict = true;
                 zone.TeamSize = 1;
                 zone.Rogue = RogueStatus.NoTransfer;

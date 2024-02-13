@@ -530,7 +530,7 @@ namespace DataGenerator.Data
                     item.Sprite = "Box_Yellow";
                     item.Icon = 10;
                     item.Price = 800 * item.Rarity;
-                    item.UsageType = ItemData.UseType.None;
+                    item.UsageType = ItemData.UseType.Treasure;
                     item.ItemStates.Set(new MaterialState());
                     item.BagEffect = true;
                     item.CannotDrop = true;
@@ -2152,9 +2152,9 @@ namespace DataGenerator.Data
             else
             {
                 if (family)
-                    return new LocalText("An exclusive item for the {0} family. {1}");
+                    return new LocalText("A rare treasure for the {0} family. {1}");
                 else
-                    return new LocalText("An exclusive item for {0}. {1}");
+                    return new LocalText("A rare treasure for {0}. {1}");
             }
         }
 
@@ -2163,7 +2163,7 @@ namespace DataGenerator.Data
             if (translate)
                 return specialRows["exclFormatDescType"];
             else
-                return new LocalText("An exclusive item for {0}-type Pokémon. {1}");
+                return new LocalText("A rare treasure for {0}-type Pokémon. {1}");
         }
 
 

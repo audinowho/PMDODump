@@ -3751,9 +3751,10 @@ namespace DataGenerator.Data
                 #region WAYWARD WETLANDS
                 {
                     zone.Name = new LocalText("**Wayward Wetlands");
-                    zone.Rescues = 2;
+                    zone.Rescues = 3;
                     zone.Level = 25;
                     zone.BagRestrict = 0;
+                    zone.KeepTreasure = true;
                     zone.MoneyRestrict = true;
                     zone.Rogue = RogueStatus.NoTransfer;
 
@@ -4830,6 +4831,7 @@ namespace DataGenerator.Data
                     zone.Level = 5;
                     zone.LevelCap = true;
                     zone.BagRestrict = 16;
+                    zone.KeepTreasure = true;
                     zone.TeamSize = 1;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.NoTransfer;
@@ -4943,6 +4945,7 @@ namespace DataGenerator.Data
                     zone.Level = 20;
                     zone.LevelCap = true;
                     zone.BagRestrict = 8;
+                    zone.KeepTreasure = true;
                     zone.TeamSize = 2;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.NoTransfer;
@@ -5059,6 +5062,7 @@ namespace DataGenerator.Data
                     zone.Level = 35;
                     zone.LevelCap = true;
                     zone.BagRestrict = 8;
+                    zone.KeepTreasure = true;
                     zone.TeamSize = 3;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.NoTransfer;
@@ -5172,6 +5176,7 @@ namespace DataGenerator.Data
                     zone.Level = 5;
                     zone.LevelCap = true;
                     zone.BagRestrict = 16;
+                    zone.KeepTreasure = true;
                     zone.TeamSize = 2;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.NoTransfer;
@@ -5284,7 +5289,8 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("**Barren Tundra");
                     zone.Level = 35;
                     zone.BagRestrict = 0;
-                    zone.TeamSize = 3;
+                    zone.KeepTreasure = true;
+                    zone.TeamSize = 2;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.NoTransfer;
 
@@ -5791,6 +5797,7 @@ namespace DataGenerator.Data
                     zone.LevelCap = true;
                     zone.TeamSize = 2;
                     zone.BagRestrict = 16;
+                    zone.KeepTreasure = true;
                     zone.Rescues = 2;
                     zone.Rogue = RogueStatus.NoTransfer;
 

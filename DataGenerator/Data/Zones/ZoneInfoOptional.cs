@@ -4329,6 +4329,7 @@ namespace DataGenerator.Data
                 zone.Level = 25;
                 zone.ExpPercent = 55;
                 zone.BagRestrict = 16;
+                zone.KeepTreasure = true;
                 zone.Rogue = RogueStatus.NoTransfer;
 
                 {

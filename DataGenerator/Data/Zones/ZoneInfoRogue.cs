@@ -28,6 +28,7 @@ namespace DataGenerator.Data
             zone.Level = 5;
             zone.LevelCap = true;
             zone.BagRestrict = 4;
+            zone.KeepTreasure = true;
             zone.Rescues = 2;
             zone.Rogue = RogueStatus.AllTransfer;
 
@@ -2259,6 +2260,7 @@ namespace DataGenerator.Data
             zone.Level = 5;
             zone.LevelCap = true;
             zone.BagRestrict = 8;
+            zone.KeepTreasure = true;
             zone.TeamSize = 2;
             zone.Rescues = 2;
             zone.Rogue = RogueStatus.AllTransfer;
@@ -4070,6 +4072,7 @@ namespace DataGenerator.Data
                 zone.Level = 10;
                 zone.LevelCap = true;
                 zone.BagRestrict = 4;
+                zone.KeepTreasure = true;
                 zone.MoneyRestrict = true;
                 zone.TeamSize = 3;
                 zone.Rescues = 2;
@@ -4186,6 +4189,7 @@ namespace DataGenerator.Data
                 zone.Level = 5;
                 zone.LevelCap = true;
                 zone.BagRestrict = 8;
+                zone.KeepTreasure = true;
                 zone.TeamSize = 1;
                 zone.Rescues = 2;
                 zone.Rogue = RogueStatus.AllTransfer;

@@ -4463,7 +4463,7 @@ namespace DataGenerator.Data
                 item.Sprite = "Box_Yellow";
                 item.Icon = 10;
                 item.Price = 800 * item.Rarity;
-                item.UsageType = ItemData.UseType.None;
+                item.UsageType = ItemData.UseType.Treasure;
                 item.ItemStates.Set(new MaterialState());
                 item.BagEffect = true;
                 item.CannotDrop = ii <= 771;
