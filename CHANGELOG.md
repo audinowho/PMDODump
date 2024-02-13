@@ -17,6 +17,7 @@
 * Vitamins are no longer forced to increase a stat by 1 (this behavior can be toggled by devs)
 * Lowered the effect of gummis when super-effective or matching type (originally gave equivalent 3x vitamin boost)
 * Fixed event recruits not having dungeon talk events
+* Minimap color settings
 * RC: Interacting with eescue sidequest target NPCs will no longer cause desyncs
 * RC: Entering floors with wandering move tutors will no longer cause desyncs
 * RC: Compasses point to Rescue tiles correctly
