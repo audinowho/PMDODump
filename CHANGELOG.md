@@ -18,12 +18,13 @@
 * Lowered the effect of gummis when super-effective or matching type (originally gave equivalent 3x vitamin boost)
 * Fixed event recruits not having dungeon talk events
 * Minimap color settings
-* RC: Interacting with eescue sidequest target NPCs will no longer cause desyncs
+* RC: Interacting with rescue sidequest target NPCs will no longer cause desyncs
 * RC: Entering floors with wandering move tutors will no longer cause desyncs
 * RC: Compasses point to Rescue tiles correctly
 * RC: Fix issue with drinking gummis
 * RC: Fixed an issue preventing sneasel's questline from continuing
 * RC: Vitamins have double effect if used for juice
+* RC: Combining all herbs results in a full stat reset. Combining them with grimy food results in a full stat and level reset.
 * RC: Fixed an issue where you could evolve quest NPCs in dungeon
 * Dev: You can travel to dungeon segments that have infinite (-1) floors
 * Dev: Default name available for selecting a team name
