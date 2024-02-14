@@ -706,6 +706,10 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new MapWeatherState());
                 //status.OnMapStatusAdds.Add(0, new MapStatusSoundEvent("DUN_Hail"));
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
+                status.StatusStates.Set(new MapCountDownState(50));
+                status.StatusStates.Set(new MapTickState(0));
+                status.OnMapTurnEnds.Add(5, new MapTickEvent());
+                status.OnMapTurnEnds.Add(5, new MapStatusCountDownEvent());
             }
 
 
