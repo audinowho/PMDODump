@@ -7,6 +7,8 @@
 * Fix storage withdrawals failing after adding a stackable item
 * Fix shop item price duplication using stackables
 * Fix enemies standing still when blocked by shopkeepers or sleepers
+* Fix Sky Drop behavior from redirected
+* Fix Go After Foes behavior when allies have X-ray specs
 * Retaliate and Pledges no longer trigger on friendly fire
 * Rage PP 20 -> 15
 * Ally and Smart enemy AI will not waste turns attacking foes with semi-invulnerable effects, protection, or wonder guard
