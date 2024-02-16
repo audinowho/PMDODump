@@ -5559,7 +5559,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = -1;
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
-                ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
+                ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(38);//RearUp
                 ((AreaAction)skill.HitboxAction).Range = 2;
                 ((AreaAction)skill.HitboxAction).Speed = 6;
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Beat_Up", 3));

@@ -1,7 +1,44 @@
 Sheet: Hardcode
+    * Added _ENUM_MinimapStyle_Black
+    * Added _ENUM_MinimapStyle_Blue
+    * Added _ENUM_MinimapStyle_White
+    * Added DLG_RESTRICT_ITEM_ALL_NON_TREASURE
+    * Added DLG_RESTRICT_ITEM_SLOT_NON_TREASURE
+    * Added MENU_SETTINGS_MINIMAP_COLOR
 
 Sheet: Content
-    * Significantly changed TALK_REST_0209_VAR_00 from "Don't call me names, or I'll bite you!" to "Don't call me ugly, or I'll bite you!"
-    * Significantly changed TALK_REST_0400_VAR_00 from "Adventure? I may be dull, but don't you underestimate me!" to "Adventure? I may look dull, but don't you underestimate me!"
-    * Significantly changed TALK_REST_0583_VAR_00 from "How cool and delicious you look, they say.[pause=0] But please don't eat me!" to ""How cool and delicious you look," they say.[pause=0] But please don't eat me!"
+    * Added MSG_LEVEL_STAT_CHANGE, transferred from MSG_LEVEL_STAT_DROP
+    * Erased contents of MSG_LEVEL_STAT_DROP
+    * Added MSG_STAT_BOOST_MULTI_MIN
+
+Sheet: Script
+    * Changed ground\base_camp/Hint_Sister_Line_001 from "[tmp]I met a lost Pokemon in Faulted Cliffs, but when I brought us out with an Escape Orb, she was left behind." to "[tmp]I met a lost Pokemon in Faultline Ridge, but when I brought us out with an Escape Orb, she was left behind."
+
+Sheet: Abilities
+
+Sheet: Items
+    * Added 0011-orb_monster-0000|data.Name
+    * Added 0011-orb_monster-0001|data.Desc
+    * Added 0016-xcl_test_typebecomescategory-0000|data.Name
+    * Added 0016-xcl_test_weaknessdodge-0000|data.Name
+
+Sheet: MapStatuses
+
+Sheet: Moves
+
+Sheet: Statuses
+
+Sheet: Tiles
+
+Sheet: Excl Names
+
+Sheet: Excl Effects
+    * Added ExclusiveItemEffect.TypeBecomesCategory
+    * Added ExclusiveItemEffect.WeaknessDodge
+
+Sheet: Zones
+
+Sheet: Maps
+
+Sheet: GroundMaps
 

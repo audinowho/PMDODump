@@ -26,8 +26,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-deserted_fortress-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Deserted Fortress\n{0}F		Verlassene Festung\nE{0}	Fortaleza Desolada\nP{0}		Fortezza Desolata\nP{0}				空寂要塞\n{0}F
 0000-energy_garden-0000|data.Name		Energy Garden		Energiegarten	Jardín Energía		Giardino Energetico				元气花园
 0000-energy_garden-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Energy Garden\nB{0}F		Energiegarten\nU{0}	Jardín Energía\nP-{0}		Giardino Energetico\nP-{0}				元气花园\nB{0}F
-0000-eon_island-0000|data.Name		Eon Island		Äoneninsel	Isla Eón		Isola Eone
-0000-eon_island-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Eon Island Coast\n{0}F		Äoneninsel\nE{0}	Costa Isla Eón\nP{0}		Costa Eone\nP{0}
+0000-eon_island-0000|data.Name		Eon Island		Äoneninsel	Isla Eón		Isola Eone				永恒岛
+0000-eon_island-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Eon Island Coast\n{0}F		Äoneninsel\nE{0}	Costa Isla Eón\nP{0}		Costa Eone\nP{0}				永恒海滨\n{0}F
 0000-faded_trail-0000|data.Name		Faded Trail		Verbleichender Pfad	Sendero Desvanecido 		Sentiero Sbiadito				消逝山道
 0000-faded_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faded Trail\n{0}F		Verbleichender Pfad\nE{0}	Sendero Desvanecido\nP{0}		Sentiero Sbiadito\nP{0}				消逝山道\n{0}F
 0000-faded_trail-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Hidden Trail\nB{0}F		Versteckter Pfad\nU{0}	Sendero Oculto\nP-{0}		Percorso Occulto\nP-{0}				隐蔽山道\nB{0}F
@@ -63,8 +63,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-overgrown_wilds-0000|data.Name		Overgrown Wilds		Überwachsene Wildnis			Bosco Selvaggio				杂草原野
 0000-overgrown_wilds-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Overgrown Wilds\n{0}F		Überwachsene Wildnis\nE{0}			Bosco Selvaggio\nP{0}				杂草原野\n{0}F				
 0000-overgrown_wilds-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Exotic Wilds\nB{0}F		Exotische Wildnis\nU{0}			Boscaglia Esotica\nP-{0}				异草原野\nB{0}F
-0000-prism_isles-0000|data.Name		Prism Isles		Prismeninseln	Islas Prisma		Isole Prisma
-0000-prism_isles-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		White Isle\n{0}F		Weiße Insel\nE{0}	Isla Blanca\nP{0}		Isola Candida\nP{0}
+0000-prism_isles-0000|data.Name		Prism Isles		Prismeninseln	Islas Prisma		Isole Prisma				棱镜岛
+0000-prism_isles-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		White Isle\n{0}F		Weiße Insel\nE{0}	Isla Blanca\nP{0}		Isola Candida\nP{0}				白澜岛\n{0}F
 0000-relic_tower-0000|data.Name		Relic Tower		Reliktenturm	Torre Reliquia		Torre Reliquia				遗迹之塔
 0000-relic_tower-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Relic Tower\n{0}F		Reliktenturm\nE{0}	Torre Reliquia\nP{0}		Torre Reliquia\nP{0}				遗迹之塔\n{0}F
 0000-royal_halls-0000|data.Name		Royal Halls		Königliche Hallen	Salones Reales		Sale Reali				庄严大厅
@@ -106,6 +106,6 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-veiled_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Veiled Ridge\n{0}F		Verdeckter Grat\nE{0}	Ladera Velada\nP{0}		Crinale Velato\nP{0}				朦胧山脊\n{0}F
 0000-veiled_ridge-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Illusion Ridge\nB{0}F		Illusionsgrat\nU{0}	Ladera Ilusoria\nP-{0}		Cresta Illusione\nP-{0}				幻想山脊\nB{0}F
 0000-wayward_wetlands-0000|data.Name		Wayward Wetlands		Launische Auen	Humedales Caprichosos		Acquitrini Capriccio				任性湿地
-0000-wayward_wetlands-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wayward Wetlands\nB{0}F									任性湿地\nB{0}F				
+0000-wayward_wetlands-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wayward Wetlands\nB{0}F		Launische Auen\nU{0}							任性湿地\nB{0}F				
 0000-wisdom_road-0000|data.Name		Wisdom Road		Pass der Weisheit	Sendero Sabiduría		Strada della Saggezza				智慧之路
 0000-wisdom_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wisdom Road\n{0}F		Pass der Weisheit\nE{0}	Sendero Sabiduría\nP{0}		Strada della Saggezza\nP{0}				智慧之路\n{0}F

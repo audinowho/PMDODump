@@ -507,6 +507,8 @@ Key		EN
 0011-orb_mirror-0001|data.Desc		An orb that protects the team with a barrier that reflects status moves.
 0011-orb_mobile-0000|data.Name		Mobile Orb
 0011-orb_mobile-0001|data.Desc		An orb that allows the user's team to move through walls.
+0011-orb_monster-0000|data.Name		Monster Orb
+0011-orb_monster-0001|data.Desc		An orb that summons a monster house near the user.
 0011-orb_mug-0000|data.Name		Mug Orb
 0011-orb_mug-0001|data.Desc		An orb that pulls all items held by enemy Pokémon to the user. It affects all enemies on the floor.
 0011-orb_nullify-0000|data.Name		Nullify Orb
@@ -807,6 +809,7 @@ Key		EN
 0016-xcl_test_surehitattacker-0000|data.Name		SureHitAttacker Test
 0016-xcl_test_throwonattack-0000|data.Name		ThrowOnAttack Test
 0016-xcl_test_trapbuster-0000|data.Name		TrapBuster Test
+0016-xcl_test_typebecomescategory-0000|data.Name		TypeBecomesCategory Test
 0016-xcl_test_typebodyguard-0000|data.Name		TypeBodyguard Test
 0016-xcl_test_typebulldozer-0000|data.Name		TypeBulldozer Test
 0016-xcl_test_typedattack-0000|data.Name		TypedAttack Test
@@ -815,6 +818,7 @@ Key		EN
 0016-xcl_test_wandspread-0000|data.Name		WandSpread Test
 0016-xcl_test_warppayback-0000|data.Name		WarpPayback Test
 0016-xcl_test_waterterrain-0000|data.Name		WaterTerrain Test
+0016-xcl_test_weaknessdodge-0000|data.Name		WeaknessDodge Test
 0016-xcl_test_weaknesspayback-0000|data.Name		WeaknessPayback Test
 0016-xcl_test_weaknessreduce-0000|data.Name		WeaknessReduce Test
 0016-xcl_test_weatherprotection-0000|data.Name		WeatherProtection Test

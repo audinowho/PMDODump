@@ -102,3 +102,5 @@ ExclusiveItemEffect.SweetDreams		When kept in the bag, the Pokémon gradually re
 ExclusiveItemEffect.ChanceStatusOnTypeHit		When kept in the bag, the Pokémon's {0}-type moves have a chance to inflict the {1} status.
 ExclusiveItemEffect.ChanceStatOnTypeHit		When kept in the bag, the Pokémon's {0}-type moves may lower the target's {1}.
 ExclusiveItemEffect.ChanceStatusOnCategoryHit		When kept in the bag, the Pokémon's {1} moves may inflict the {0} status.
+ExclusiveItemEffect.TypeBecomesCategory		When kept in the bag, the Pokémon's {0}-type moves are change to become {1}.
+ExclusiveItemEffect.WeaknessDodge		When kept in the bag, the Pokémon becomes extremely likely to avoid {0}-type attacks.

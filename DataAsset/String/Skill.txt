@@ -474,7 +474,7 @@ Key		EN	DE	PT	IT	ZH-HANS	FR	ES	KO	JA	JA-JP	ZH-HANT
 0236-moonlight-0000|data.Name		Moonlight	Mondschein		Lucelunare	月光	Rayon Lune	Luz Lunar	달의불빛	つきのひかり	つきのひかり	月光
 0236-moonlight-0001|data.Desc		The user restores the party's HP. The amount of HP regained varies with the weather.	Füllt KP des Teams auf. Die Menge hängt vom Wetter ab.		Il Pokémon fa recuperare i PS del team. Il numero di PS recuperati dipende dalle condizioni atmosferiche.	回复全队的HP。根据天气的不同，回复量也会有所变化。			자신의 HP를 회복한다. 날씨에 따라 회복량이 변한다.			
 0237-hidden_power-0000|data.Name		Hidden Power	Kraftreserve		Introforza	觉醒力量	Puissance Cachée	Poder Oculto	잠재파워	めざめるパワー	めざめるパワー	覺醒力量
-0237-hidden_power-0001|data.Desc		A unique attack that varies in type depending on the Pokémon and the dungeon floor.										
+0237-hidden_power-0001|data.Desc		A unique attack that varies in type depending on the Pokémon and the dungeon floor.	Der Typ der Attacke hängt vom Pokémon und von der Ebene ab.			一种独特的攻击，根据使出此招式的宝可梦以及来到迷宫楼层的不同，招式的属性会变化。						
 0238-cross_chop-0000|data.Name		Cross Chop	Kreuzhieb		Incrocolpo	十字劈	Coup-Croix	Tajo Cruzado	크로스촙	クロスチョップ	クロスチョップ	十字劈
 0238-cross_chop-0001|data.Desc		The user delivers a double chop with its forearms crossed. Critical hits land more easily.	Doppelter Hieb mit den Unterarmen. Hohe Volltrefferquote.		Il Pokémon attacca il bersaglio con un colpo sferrato con le braccia incrociate. Probabile brutto colpo.	用两手呈十字劈打对手进行攻击。容易击中要害。	Le lanceur délivre un coup double en croisant les avant-bras. Taux de critiques élevé.	Corte doble que suele propinar un golpe crítico.	양손으로 당수를 상대에게 힘껏 쳐서 공격한다. 급소에 맞기 쉽다.	りょうて　チョップを あいてに　たたきつけて　こうげきする。 きゅうしょに　あたりやすい。	両手チョップを 相手に　たたきつけて　攻撃する。 急所に　当たりやすい。	用左右手刀 劈打對手進行攻擊。 容易擊中要害。
 0239-twister-0000|data.Name		Twister	Windhose		Tornado	龙卷风	Ouragan	Ciclón	회오리	たつまき	たつまき	龍捲風
@@ -1739,7 +1739,7 @@ Key		EN	DE	PT	IT	ZH-HANS	FR	ES	KO	JA	JA-JP	ZH-HANT
 0886-chilling_water-0001|data.Desc												
 0887-hyper_drill-0000|data.Name		Hyper Drill			Ipertrapano	强力钻		Hipertaladro		ハイパードリル	ハイパードリル	强力钻
 0887-hyper_drill-0001|data.Desc												
-0888-twin_beam-0000|data.Name		Twin Beam										
+0888-twin_beam-0000|data.Name		Twin Beam			Doppioraggio	双光束		Láser Doble		ツインビーム	ツインビーム	双光束
 0888-twin_beam-0001|data.Desc		The user shoots mystical beams from its eyes to inflict damage. The target is hit twice in a row.										
 0889-rage_fist-0000|data.Name		Rage Fist			Pugno Furibondo	愤怒之拳		Puño Furia		ふんどのこぶし	ふんどのこぶし	愤怒之拳
 0889-rage_fist-0001|data.Desc												

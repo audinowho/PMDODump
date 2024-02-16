@@ -14,7 +14,7 @@ end_relic_tower-0000|data.Name
 end_sickly_hollow-0000|data.Name						
 end_treacherous_mountain-0000|data.Name		Treacherous Mountain Cave	Höhle im tückischem Gebirge	奸诈山峰洞窟		
 end_veiled_ridge-0000|data.Name						
-final_stop-0000|data.Name		Blizzard Camp				
+final_stop-0000|data.Name		Blizzard Camp	Blizzard-Lager	风雪营地		
 forest_camp-0000|data.Name		Forest Camp	Wald-Lager	森林营地	Campamento Bosque	Accampamento Boschivo
 guild_hut-0000|data.Name						
 guild_path-0000|data.Name						
