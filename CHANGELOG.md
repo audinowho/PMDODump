@@ -1,4 +1,4 @@
-# 0.8 Changes #
+# 0.7.25 Changes #
 
 * Assembly members in town say things based on species
 * Glittery Apricorn can be found in chests
@@ -11,6 +11,7 @@
 * Fix Go After Foes behavior when allies have X-ray specs
 * Retaliate and Pledges no longer trigger on friendly fire
 * Rage PP 20 -> 15
+* Fixed an issue where reordering the team would not take effect until the next turn
 * Ally and Smart enemy AI will not waste turns attacking foes with semi-invulnerable effects, protection, or wonder guard
 * AI will not use Recycle.  It's up to you!
 * Completing purchase in a dungeon shop now clears prices for items outside the matted area (they previously remained)
@@ -28,11 +29,10 @@
 * RC: Vitamins have double effect if used for juice
 * RC: Combining all herbs results in a full stat reset. Combining them with grimy food results in a full stat and level reset.
 * RC: Fixed an issue where you could evolve quest NPCs in dungeon
+* RC: Exiting Sleeping Caldera immediately no longer clears it
 * Dev: You can travel to dungeon segments that have infinite (-1) floors
+* Dev: You can create a full map screenshot by pressing F11; They are saved to the SCREENSHOT folder
 * Dev: Default name available for selecting a team name
 * Dev: Fixed duplicate exports in Mass Export of sprites/portraits
-
-TODO: update docstrings
-TODO: update wiki docstrings
-TODO: update sprites
-TODO: block off bad sprites
+* Dev: Item scripts on pickup properly include amount and price
+* Dev: Fixed various doc strings in editor
