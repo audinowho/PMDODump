@@ -97,7 +97,7 @@ Index paths are modified like mods.  However, if multiple mods have conflicting 
 
 === Arguments ===
 
-* <code>basePath</code>: None
+* <code>type</code>: None
 
 == _DATA:GetZone(System.String) ==
 

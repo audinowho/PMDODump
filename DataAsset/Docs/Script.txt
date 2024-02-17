@@ -541,6 +541,16 @@ Prevents or allows the switching of leaders for the save file.
 
 * <code>canSwitch</code>: Set to true to allow switching, set to false to prevent it.
 
+== GAME:SetCanRecruit(System.Boolean) ==
+
+
+Prevents or allows the joining of recruits for the save file.
+
+
+=== Arguments ===
+
+* <code>canRecruit</code>: Set to true to allow recruit joins, set to false to prevent it.
+
 == GAME:GetPlayerPartyCount ==
 
 
@@ -841,7 +851,30 @@ Removed a skill from the specified character.
 * <code>chara</code>: The character to forget the skill
 * <code>slot</code>: The slot of the skill to forget
 
-== GAME:SetCharacterSkill(RogueEssence.Dungeon.Character,System.String,System.Int32) ==
+== GAME:LockSkill(RogueEssence.Dungeon.Character,System.Int32) ==
+
+
+Makes a skill impossible to forget or replace for the specified character.
+Note that this only affects normal gameplay. Scripts can still freely get rid of the skill.
+
+
+=== Arguments ===
+
+* <code>chara</code>: The character to lock the skill
+* <code>slot</code>: The slot of the skill to lock
+
+== GAME:UnlockSkill(RogueEssence.Dungeon.Character,System.Int32) ==
+
+
+Unlocks a previously locked skill for the specified character, making it possible to be forgotten or replaced during normal gameplay.
+
+
+=== Arguments ===
+
+* <code>chara</code>: The character to unlock the skill
+* <code>slot</code>: The slot of the skill to unlock
+
+== GAME:SetCharacterSkill(RogueEssence.Dungeon.Character,System.String,System.Int32,System.Boolean) ==
 
 
 Gives a new skill to a specified character, replacing a specifically chosen slot.
@@ -1020,7 +1053,7 @@ Gets the item found at the specified slot of the player's bag.
 
 The item found in the slot
 
-== GAME:TakePlayerBagItem(System.Int32) ==
+== GAME:TakePlayerBagItem(System.Int32,System.Boolean) ==
 
 
 Remove an item from player inventory
@@ -1029,8 +1062,9 @@ Remove an item from player inventory
 === Arguments ===
 
 * <code>slot</code>: The slot from which to remove the item
+* <code>takeAll</code>: None
 
-== GAME:TakePlayerEquippedItem(System.Int32) ==
+== GAME:TakePlayerEquippedItem(System.Int32,System.Boolean) ==
 
 
 Remove the equipped item from a chosen member of the team
@@ -1039,8 +1073,9 @@ Remove the equipped item from a chosen member of the team
 === Arguments ===
 
 * <code>slot</code>: The slot of the character on the team from which to remove the item
+* <code>takeAll</code>: None
 
-== GAME:TakeGuestEquippedItem(System.Int32) ==
+== GAME:TakeGuestEquippedItem(System.Int32,System.Boolean) ==
 
 
 Remove the equipped item from a chosen guest of the team
@@ -1049,6 +1084,7 @@ Remove the equipped item from a chosen guest of the team
 === Arguments ===
 
 * <code>slot</code>: The slot of the character on the team's guest list from which to remove the item
+* <code>takeAll</code>: None
 
 == GAME:GetPlayerStorageCount ==
 
@@ -1964,6 +2000,18 @@ Plays a screen-moving effect.
 
 * <code>mover</code>: The screen mover.
 
+== GROUND:HandoutEXP ==
+
+
+Gives a character a set amount of EXP.
+Also handles leveling up and learning new moves.
+
+
+=== Arguments ===
+
+* <code>character</code>: The characters to level up.
+* <code>experience</code>: The amount of EXP to gain.
+
 == GROUND:LevelUpChar ==
 
 
@@ -2854,7 +2902,7 @@ The Yes/No menu returns 1 for yes, and 0 for no.
 * <code>bdefaultstono</code>: Whether the cursor starts on no by default
 * <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
 
-== UI:NameMenu(System.String,System.String,System.Int32) ==
+== UI:NameMenu(System.String,System.String,System.Int32,System.String) ==
 
 
 Displays the name input box.
@@ -2869,6 +2917,7 @@ Then to recover the string value indicating the result of the menu, UI:ChoiceRes
 * <code>title</code>: The text to show above the input line.
 * <code>desc</code>: The text to show below the input line.
 * <code>maxLength</code>: The length of the text in pixels.
+* <code>defaultName</code>: Name to start the textbox with.
 
 == UI:AssemblyMenu ==
 
@@ -2954,7 +3003,7 @@ and for execution to suspend until the choice is returned.
 Then to recover the table indicating the indices of items chosen, UI:ChoiceResult() must be called.
 
 
-== UI:TutorTeamMenu ==
+== UI:TutorTeamMenu(NLua.LuaFunction) ==
 
 
 Displays the Tutor Team menu.
@@ -3066,7 +3115,7 @@ The Yes/No menu returns 1 for yes, and 0 for no.
 * <code>name</code>: Name of the destination
 * <code>dest</code>: The ZoneLoc location of the destination.
 
-== UI:DestinationMenu(NLua.LuaTable) ==
+== UI:DestinationMenu(NLua.LuaTable,System.Object) ==
 
 
 Marks the start of a choice menu for choosing destinations, showing a preview of restrictions and requirements for dungeons.
