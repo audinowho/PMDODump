@@ -2182,10 +2182,10 @@ namespace DataGenerator.Data
             }
             else if (ii == 290)
             {
-                item.Name = new LocalText("**Monster Orb");
-                item.Desc = new LocalText("An orb that summons a monster house near the user.");
+                item.Name = new LocalText("Monster Orb");
+                item.Desc = new LocalText("An orb that summons a monster house near the user. It is less effective in hallways.");
                 item.Sprite = "Orb_Green";
-                item.UseEvent.OnHits.Add(0, new BattlelessEvent(true, new MonsterHouseOwnerEvent()));
+                item.UseEvent.OnHits.Add(0, new BattlelessEvent(true, new MonsterHouseOwnerEvent(new RogueElements.RandRange(7, 13), 50)));
                 item.UseAction = new SelfAction();
                 item.UseAction.ActionFX.Sound = "DUN_Petrify_Orb";
                 item.UseAction.TargetAlignments |= Alignment.Self;
