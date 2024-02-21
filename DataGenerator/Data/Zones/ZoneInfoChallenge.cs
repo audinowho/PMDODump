@@ -428,6 +428,14 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
 
 
+                    SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                    PopulateWallItems(wallSpawns, DungeonStage.Rogue, DungeonEnvironment.Rock);
+
+                    TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile("wall"));
+                    wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
+
+
                     //construct paths
                     {
                         //3-tier Merged Maze
@@ -1052,6 +1060,13 @@ namespace DataGenerator.Data
                     //items
                     AddItemData(layout, new RandRange(3, 7), 25);
 
+                    SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                    PopulateWallItems(wallSpawns, DungeonStage.Rogue, DungeonEnvironment.Rock);
+
+                    TerrainSpawnStep<ListMapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<ListMapGenContext, MapItem>(new Tile("wall"));
+                    wallItemZoneStep.Spawn = new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
+
                     //construct paths
                     {
                         if (ii < 6)
@@ -1578,13 +1593,13 @@ namespace DataGenerator.Data
                     PopulateHallItems(monsterChanceZoneStep, DungeonStage.Intermediate, DungeonAccessibility.Hidden, max_floors);
 
                     //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(100, new RandRange(5, 11)), new ParamRange(0, 30), 20);
-                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
+                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_heart_scale"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
                     monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
                         new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(0, 30), 10);//TMs + machines
 
                     monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
-                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
-                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
+                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
+                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
                     monsterChanceZoneStep.Mobs.Add(GetGenericMob("spiritomb", "", "hypnosis", "dream_eater", "", "", new RandRange(31), "wander_normal", false, true), new IntRange(0, max_floors), 10);
                     monsterChanceZoneStep.Mobs.Add(GetGenericMob("decidueye", "long_reach", "spirit_shackle", "sucker_punch", "", "", new RandRange(37), "wander_normal", false, true), new IntRange(14, max_floors), 10);
                     monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(20, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
@@ -1699,6 +1714,16 @@ namespace DataGenerator.Data
                         AddItemData(layout, new RandRange(3, 6), 25);
                     else
                         AddItemData(layout, new RandRange(4, 7), 25);
+
+                    SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                    wallSpawns.Add(MapItem.CreateMoney(100), 20);
+                    wallSpawns.Add(MapItem.CreateMoney(200), 15);
+                    wallSpawns.Add(MapItem.CreateMoney(300), 10);
+                    PopulateWallItems(wallSpawns, DungeonStage.Advanced, DungeonEnvironment.Forest);
+
+                    TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile("wall"));
+                    wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
 
                     //construct paths
                     if (ii < 4)
@@ -2453,6 +2478,16 @@ namespace DataGenerator.Data
                         AddItemData(layout, new RandRange(3, 6), 25);
                     else
                         AddItemData(layout, new RandRange(4, 7), 25);
+
+                    SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                    wallSpawns.Add(MapItem.CreateMoney(100), 20);
+                    wallSpawns.Add(MapItem.CreateMoney(200), 15);
+                    wallSpawns.Add(MapItem.CreateMoney(300), 10);
+                    PopulateWallItems(wallSpawns, DungeonStage.Advanced, DungeonEnvironment.Rock);
+
+                    TerrainSpawnStep<ListMapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<ListMapGenContext, MapItem>(new Tile("wall"));
+                    wallItemZoneStep.Spawn = new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
 
                     //construct paths
                     if (ii < 4)
@@ -3335,6 +3370,13 @@ namespace DataGenerator.Data
                     //items
                     AddItemData(layout, new RandRange(4, 7), 25);
 
+                    SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                    PopulateWallItems(wallSpawns, DungeonStage.Advanced, DungeonEnvironment.Forest);
+
+                    TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile("wall"));
+                    wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
+
 
                     //construct paths
                     if (ii < 5)
@@ -4066,6 +4108,13 @@ namespace DataGenerator.Data
 
                     //items
                     AddItemData(layout, new RandRange(3, 6), 25);
+
+                    SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                    PopulateWallItems(wallSpawns, DungeonStage.Intermediate, DungeonEnvironment.Rock);
+
+                    TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile("wall"));
+                    wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
 
                     //construct paths
                     {

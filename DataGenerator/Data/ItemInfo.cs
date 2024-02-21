@@ -910,13 +910,13 @@ namespace DataGenerator.Data
             else if (ii == 173)
             {
                 item.Name = new LocalText("Full Heal");
-                item.Desc = new LocalText("A spray-type medicine that cures status problems. It affects all team members up to 3 tiles away.");
+                item.Desc = new LocalText("A spray-type medicine that cures status problems. It affects all team members up to 5 tiles away.");
                 item.Sprite = "Medicine_Green";
                 item.ItemStates.Set(new CurerState());
                 item.UseEvent.BeforeActions.Add(-1, new AddContextStateEvent(new CureAttack()));
                 item.UseEvent.OnHits.Add(0, new RemoveStateStatusBattleEvent(typeof(BadStatusState), true, new StringKey("MSG_CURE_ALL")));
                 item.UseAction = new AreaAction();
-                ((AreaAction)item.UseAction).Range = 3;
+                ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 6;
                 ((AreaAction)item.UseAction).LagBehindTime = 24;
                 CircleSquareReleaseEmitter emitter = new CircleSquareReleaseEmitter(new AnimData("Event_Gather_Sparkle", 5));
@@ -939,11 +939,11 @@ namespace DataGenerator.Data
             else if (ii == 175)
             {
                 item.Name = new LocalText("X Attack");
-                item.Desc = new LocalText("An item that sharply raises Attack. It affects all team members up to 3 tiles away.");
+                item.Desc = new LocalText("An item that sharply raises Attack. It affects all team members up to 5 tiles away.");
                 item.Sprite = "Medicine_Red";
                 item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_attack", true, false, 2));
                 item.UseAction = new AreaAction();
-                ((AreaAction)item.UseAction).Range = 3;
+                ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 6;
                 ((AreaAction)item.UseAction).LagBehindTime = 24;
                 CircleSquareReleaseEmitter emitter = new CircleSquareReleaseEmitter(new AnimData("Event_Gather_Sparkle", 5));
@@ -962,11 +962,11 @@ namespace DataGenerator.Data
             else if (ii == 176)
             {
                 item.Name = new LocalText("X Defense");
-                item.Desc = new LocalText("An item that sharply raises Defense. It affects all team members up to 3 tiles away.");
+                item.Desc = new LocalText("An item that sharply raises Defense. It affects all team members up to 5 tiles away.");
                 item.Sprite = "Medicine_Yellow";
                 item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_defense", true, false, 2));
                 item.UseAction = new AreaAction();
-                ((AreaAction)item.UseAction).Range = 3;
+                ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 6;
                 ((AreaAction)item.UseAction).LagBehindTime = 24;
                 CircleSquareReleaseEmitter emitter = new CircleSquareReleaseEmitter(new AnimData("Event_Gather_Sparkle", 5));
@@ -985,11 +985,11 @@ namespace DataGenerator.Data
             else if (ii == 177)
             {
                 item.Name = new LocalText("X Sp. Atk");
-                item.Desc = new LocalText("An item that sharply raises Special Attack. It affects all team members up to 3 tiles away.");
+                item.Desc = new LocalText("An item that sharply raises Special Attack. It affects all team members up to 5 tiles away.");
                 item.Sprite = "Medicine_Red";
                 item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_attack", true, false, 2));
                 item.UseAction = new AreaAction();
-                ((AreaAction)item.UseAction).Range = 3;
+                ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 6;
                 ((AreaAction)item.UseAction).LagBehindTime = 24;
                 CircleSquareReleaseEmitter emitter = new CircleSquareReleaseEmitter(new AnimData("Event_Gather_Sparkle", 5));
@@ -1008,11 +1008,11 @@ namespace DataGenerator.Data
             else if (ii == 178)
             {
                 item.Name = new LocalText("X Sp. Def");
-                item.Desc = new LocalText("An item that sharply raises Special Defense. It affects all team members up to 3 tiles away.");
+                item.Desc = new LocalText("An item that sharply raises Special Defense. It affects all team members up to 5 tiles away.");
                 item.Sprite = "Medicine_Yellow";
                 item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_defense", true, false, 2));
                 item.UseAction = new AreaAction();
-                ((AreaAction)item.UseAction).Range = 3;
+                ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 6;
                 ((AreaAction)item.UseAction).LagBehindTime = 24;
                 CircleSquareReleaseEmitter emitter = new CircleSquareReleaseEmitter(new AnimData("Event_Gather_Sparkle", 5));
@@ -1031,11 +1031,11 @@ namespace DataGenerator.Data
             else if (ii == 179)
             {
                 item.Name = new LocalText("X Speed");
-                item.Desc = new LocalText("An item that boosts Movement Speed by 1 stage. It affects all team members up to 3 tiles away.");
+                item.Desc = new LocalText("An item that boosts Movement Speed by 1 stage. It affects all team members up to 5 tiles away.");
                 item.Sprite = "Medicine_Orange";
                 item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, 2));
                 item.UseAction = new AreaAction();
-                ((AreaAction)item.UseAction).Range = 3;
+                ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 6;
                 ((AreaAction)item.UseAction).LagBehindTime = 24;
                 CircleSquareReleaseEmitter emitter = new CircleSquareReleaseEmitter(new AnimData("Event_Gather_Sparkle", 5));
@@ -1054,11 +1054,11 @@ namespace DataGenerator.Data
             else if (ii == 180)
             {
                 item.Name = new LocalText("X Accuracy");
-                item.Desc = new LocalText("An item that sharply raises Accuracy. It affects all team members up to 3 tiles away.");
+                item.Desc = new LocalText("An item that sharply raises Accuracy. It affects all team members up to 5 tiles away.");
                 item.Sprite = "Medicine_Orange";
                 item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_accuracy", true, false, 2));
                 item.UseAction = new AreaAction();
-                ((AreaAction)item.UseAction).Range = 3;
+                ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 6;
                 ((AreaAction)item.UseAction).LagBehindTime = 24;
                 CircleSquareReleaseEmitter emitter = new CircleSquareReleaseEmitter(new AnimData("Event_Gather_Sparkle", 5));
@@ -1077,11 +1077,11 @@ namespace DataGenerator.Data
             else if (ii == 181)
             {
                 item.Name = new LocalText("Dire Hit");
-                item.Desc = new LocalText("An item that raises critical-hit ratio. It affects all team members up to 3 tiles away.");
+                item.Desc = new LocalText("An item that raises critical-hit ratio. It affects all team members up to 5 tiles away.");
                 item.Sprite = "Medicine_Orange";
                 item.UseEvent.OnHits.Add(0, new StatusBattleEvent("focus_energy", true, false));
                 item.UseAction = new AreaAction();
-                ((AreaAction)item.UseAction).Range = 3;
+                ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 6;
                 ((AreaAction)item.UseAction).LagBehindTime = 24;
                 CircleSquareReleaseEmitter emitter = new CircleSquareReleaseEmitter(new AnimData("Event_Gather_Sparkle", 5));
@@ -2183,7 +2183,7 @@ namespace DataGenerator.Data
             else if (ii == 290)
             {
                 item.Name = new LocalText("Monster Orb");
-                item.Desc = new LocalText("An orb that summons a monster house near the user. It is less effective in hallways.");
+                item.Desc = new LocalText("An orb that summons a monster house near the user.");
                 item.Sprite = "Orb_Green";
                 item.UseEvent.OnHits.Add(0, new BattlelessEvent(true, new MonsterHouseOwnerEvent(new RogueElements.RandRange(7, 13), 50)));
                 item.UseAction = new SelfAction();
@@ -3227,9 +3227,29 @@ namespace DataGenerator.Data
             }
             else if (ii == 478)
             {
-                item.Name = new LocalText("**Mystery Part");
-                item.Sprite = "Piece_Yellow";
-                item.Price = 100000;
+                item.Name = new LocalText("Prison Bottle");
+                item.Desc = new LocalText("A bottle believed to have been used to seal away the power of a certain Pokémon long, long ago.");
+                item.Sprite = "Bottle_Purple";
+                item.UsageType = ItemData.UseType.UseOther;
+                item.Price = 800000;
+                item.MaxStack = -1;
+                item.UseEvent.BeforeTryActions.Add(0, new CheckItemActiveEvent());
+                item.UseEvent.BeforeTryActions.Add(1, new FormChoiceEvent("hoopa"));
+                item.UseEvent.OnHits.Add(0, new SwitchFormEvent());
+                item.UseEvent.OnHits.Add(0, new DeactivateItemEvent());
+                item.UseAction = new SelfAction();
+                item.UseAction.TargetAlignments |= Alignment.Self;
+                item.Explosion.TargetAlignments |= Alignment.Self;
+
+                BattleFX itemFX = new BattleFX();
+                itemFX.Sound = "DUN_Wonder_Tile";
+                itemFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2));
+                itemFX.Delay = 20;
+                item.UseAction.PreActions.Add(itemFX);
+
+                item.UseEvent.HitFX.Delay = 20;
+                item.UseEvent.HitFX.Sound = "_UNK_EVT_043";
+                item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Materialize", 2));
             }
             else if (ii == 479)
             {
@@ -3270,6 +3290,10 @@ namespace DataGenerator.Data
             }
             else if (ii == 485)
             {
+                item.Name = new LocalText("Comet Shard");
+                item.Desc = new LocalText("A shard that fell to the ground when a comet passed nearby. It sells for an extremely high price.");
+                item.Sprite = "Crystal_Blue";
+                item.Price = 60000;
             }
             else if (ii == 486)
             {
@@ -3394,7 +3418,8 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("**Mystery Part");
                 item.Desc = new LocalText("A mysterious mechanical part that has lain undisturbed for eons, veiled by legendary mystery. It is said to have an effect on mysterious distortions.");
                 // This will prevent mysterious distortions from occurring, and cause them to flood out when taken away
-                item.Price = 80000;
+                item.Sprite = "Piece_Yellow";
+                item.Price = 40000;
             }
             else if (ii == 545)
             {

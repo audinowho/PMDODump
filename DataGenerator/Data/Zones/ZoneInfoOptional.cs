@@ -2329,6 +2329,13 @@ namespace DataGenerator.Data
                     //items
                     AddItemData(layout, new RandRange(3, 7), 25);
 
+                    SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                    PopulateWallItems(wallSpawns, DungeonStage.Intermediate, DungeonEnvironment.Rock);
+
+                    TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile("wall"));
+                    wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
+
                     //construct paths
                     if (ii < 4)
                         AddInitGridStep(layout, 6, 4, 7, 6, 1, true);
@@ -2732,6 +2739,13 @@ namespace DataGenerator.Data
 
                     //items
                     AddItemData(layout, new RandRange(3, 7), 25);
+
+                    SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                    PopulateWallItems(wallSpawns, DungeonStage.Intermediate, DungeonEnvironment.Rock);
+
+                    TerrainSpawnStep<ListMapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<ListMapGenContext, MapItem>(new Tile("wall"));
+                    wallItemZoneStep.Spawn = new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
 
                     //enemies
                     AddRespawnData(layout, 15, 110);
@@ -4815,6 +4829,14 @@ namespace DataGenerator.Data
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
 
+                        SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                        PopulateWallItems(wallSpawns, DungeonStage.Intermediate, DungeonEnvironment.Forest);
+
+                        TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile("wall"));
+                        wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
+
+
                         //construct paths
                         if (ii < 5 || ii >= 10)
                         {
@@ -5312,6 +5334,13 @@ namespace DataGenerator.Data
 
                         //items
                         AddItemData(layout, new RandRange(3, 5), 25);
+
+                        SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
+                        PopulateWallItems(wallSpawns, DungeonStage.Intermediate, DungeonEnvironment.Rock);
+
+                        TerrainSpawnStep<MapGenContext, MapItem> wallItemZoneStep = new TerrainSpawnStep<MapGenContext, MapItem>(new Tile("wall"));
+                        wallItemZoneStep.Spawn = new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(wallSpawns, new RandRange(6, 10)));
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, wallItemZoneStep);
 
                         //enemies
                         AddRespawnData(layout, 7, 90);

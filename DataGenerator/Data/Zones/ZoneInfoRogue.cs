@@ -1180,7 +1180,6 @@ namespace DataGenerator.Data
 
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, max_floors), 20);
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//no theme
-                                                                                                                                                                                                                         //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMoney(500, new ParamRange(5, 11)), new ParamRange(0, 30));
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 5)), new IntRange(0, max_floors), 10);//TMs
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, max_floors), 30);//gummis
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 6)), new IntRange(0, max_floors), 10);//apricorns
@@ -2912,8 +2911,7 @@ namespace DataGenerator.Data
                 PopulateHallItems(monsterChanceZoneStep, DungeonStage.Rogue, DungeonAccessibility.Unlockable, max_floors);
 
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, 30), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 20);//no theme
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMoney(200, new RandRange(4, 7)), new IntRange(0, max_floors), 20);
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeMoney(250, new RandRange(4, 7)), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 20);//no theme
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
 
                 floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
