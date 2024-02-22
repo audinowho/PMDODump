@@ -9528,7 +9528,7 @@ namespace DataGenerator.Data
             else if (ii == 365)
             {
                 skill.Name = new LocalText("Pluck");
-                skill.Desc = new LocalText("The user pecks the target. If the target is holding a Berry, the user eats it and gains its effect.");
+                skill.Desc = new LocalText("The user pecks the target. If the target is holding a food item, the user eats it and gains its effect.");
                 skill.BaseCharges = 16;
                 skill.Data.Element = "flying";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
@@ -11804,7 +11804,7 @@ namespace DataGenerator.Data
             else if (ii == 450)
             {
                 skill.Name = new LocalText("Bug Bite");
-                skill.Desc = new LocalText("The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.");
+                skill.Desc = new LocalText("The user bites the target. If the target is holding a food item, the user eats it and gains its effect.");
                 skill.BaseCharges = 18;
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
