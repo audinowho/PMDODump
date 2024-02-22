@@ -822,8 +822,8 @@ namespace DataGenerator.Data
                 BetweenEmitter emitter = new BetweenEmitter(new AnimData("Fire_Spin_Back", 1), new AnimData("Fire_Spin_Front", 1));
                 emitter.HeightBack = 32;
                 emitter.HeightFront = 32;
-                status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Fire_Spin", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
-                status.StatusStates.Set(new CountDownState(3));
+                status.OnTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Fire_Spin", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
+                status.StatusStates.Set(new CountDownState(4));
                 status.StatusStates.Set(new CountState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
@@ -843,9 +843,9 @@ namespace DataGenerator.Data
                 status.OnActions.Add(-1, new SnapDashBackEvent());
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Gust_Blue", 1));
                 emitter.LocHeight = 24;
-                status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Whirlpool", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
+                status.OnTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Whirlpool", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
-                status.StatusStates.Set(new CountDownState(3));
+                status.StatusStates.Set(new CountDownState(4));
                 status.StatusStates.Set(new CountState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
@@ -867,9 +867,9 @@ namespace DataGenerator.Data
                 BetweenEmitter emitter = new BetweenEmitter(new AnimData("Sand_Tomb_Back", 1), new AnimData("Sand_Tomb_Front", 1));
                 emitter.HeightBack = 32;
                 emitter.HeightFront = 32;
-                status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Sand_Tomb", 20), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
+                status.OnTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Sand_Tomb", 20), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
-                status.StatusStates.Set(new CountDownState(3));
+                status.StatusStates.Set(new CountDownState(4));
                 status.StatusStates.Set(new CountState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
@@ -971,7 +971,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new CountDownState(25));
                 status.OnStatusAdds.Add(0, new StatusLogStackEvent(new StringKey("MSG_STOCKPILE"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STOCKPILE_END")));
-                status.OnMapTurnEnds.Add(0, new CountDownRemoveEvent(true));
+                status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.OnActions.Add(0, new UserStatBoostEvent(Stat.Defense));
                 status.BeforeBeingHits.Add(-5, new TargetStatBoostEvent(Stat.Defense));
                 status.OnActions.Add(0, new UserStatBoostEvent(Stat.MDef));
@@ -1031,7 +1031,7 @@ namespace DataGenerator.Data
                 emitter.TotalParticles = 6;
                 effects.Add(new DamageAreaEvent(1, new AnimEvent(emitter, "DUN_Blowback_Orb", 30)));
                 status.StatusStates.Set(new CountDownState(3));
-                status.OnMapTurnEnds.Add(0, new CountDownEvent(effects));
+                status.OnTurnEnds.Add(0, new CountDownEvent(effects));
             }
             else if (ii == 57)
             {
@@ -1845,9 +1845,9 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_TRAP_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_INFESTATION_START"), true));
                 status.OnActions.Add(-1, new SnapDashBackEvent());
-                status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(new SingleEmitter(new AnimData("Attack_Order", 2)), "DUN_Gunk_Shot_2", 35), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
+                status.OnTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(new SingleEmitter(new AnimData("Attack_Order", 2)), "DUN_Gunk_Shot_2", 35), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_TRAP_END")));
-                status.StatusStates.Set(new CountDownState(3));
+                status.StatusStates.Set(new CountDownState(4));
                 status.StatusStates.Set(new CountState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
@@ -1889,9 +1889,9 @@ namespace DataGenerator.Data
                 BetweenEmitter emitter = new BetweenEmitter(new AnimData("Magma_Storm_Back", 1), new AnimData("Magma_Storm_Front", 1));
                 emitter.HeightBack = 32;
                 emitter.HeightFront = 32;
-                status.OnMapTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Magma_Storm", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
-                status.StatusStates.Set(new CountDownState(3));
-                status.StatusStates.Set(new StackState(2));
+                status.OnTurnEnds.Add(0, new PartialTrapEvent(new StringKey("MSG_HURT_BY"), new AnimEvent(emitter, "DUN_Magma_Storm", 30), new AnimEvent(new SingleEmitter(new AnimData("Hit_Neutral", 3)), "DUN_Hit_Neutral")));
+                status.StatusStates.Set(new CountDownState(4));
+                status.StatusStates.Set(new CountState(2));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
             }
@@ -2173,7 +2173,7 @@ namespace DataGenerator.Data
                 emitter.TotalParticles = 16;
                 effects.Add(new DamageAreaEvent(3, new AnimEvent(overlay, "", 10), new AnimEvent(emitter, "DUN_Escape_Orb", 40)));
                 status.StatusStates.Set(new CountDownState(6));
-                status.OnMapTurnEnds.Add(0, new CountDownEvent(effects));
+                status.OnTurnEnds.Add(0, new CountDownEvent(effects));
             }
             else if (ii == 123)
             {

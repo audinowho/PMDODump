@@ -1867,7 +1867,7 @@ namespace DataGenerator.Data
                 {
                     Dictionary<string, int> weather = new Dictionary<string, int>();
                     weather.Add("hail", 0);
-                    ability.OnMapTurnEnds.Add(0, new WeatherFormeSingleEvent("eiscue", -1, weather, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Wonder_Tile", 10)));
+                    ability.OnTurnEnds.Add(0, new WeatherFormeSingleEvent("eiscue", -1, weather, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Wonder_Tile", 10)));
                 }
             }
             else if (ii == 249)
@@ -1911,7 +1911,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Neutralizing Gas");
                 ability.Desc = new LocalText("The Pokémon neutralizes abilities when attacked.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100, new ChangeToAbilityEvent("none", true, true)));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100, new ChangeToAbilityEvent("none", false, true)));
             }
             else if (ii == 257)
             {
