@@ -4122,7 +4122,7 @@ namespace DataGenerator.Data
                         //shops
                         SpawnRangeList<IGenStep> shopZoneSpawns = new SpawnRangeList<IGenStep>();
                         {
-                            ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
+                            ShopStep<ListMapGenContext> shop = new ShopStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                             shop.Personality = 0;
                             shop.SecurityStatus = "shop_security";
 
@@ -4156,7 +4156,7 @@ namespace DataGenerator.Data
                             shopZoneSpawns.Add(shop, new IntRange(0, max_floors), 10);
                         }
                         {
-                            ShopStep<MapGenContext> shop = new ShopStep<MapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
+                            ShopStep<ListMapGenContext> shop = new ShopStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom()));
                             shop.Personality = 0;
                             shop.SecurityStatus = "shop_security";
                             shop.Items.Add(new MapItem("berry_sitrus", 0, 100), 10);//sitrus
