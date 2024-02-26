@@ -2249,6 +2249,8 @@ namespace DataGenerator.Data
             }
 
             zone.Segments.Add(floorSegment);
+
+            zone.GroundMaps.Add("guildmaster_summit");
         }
         #endregion
 
