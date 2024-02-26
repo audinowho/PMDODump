@@ -7,5 +7,6 @@
 * X Items and Full Heal Range 3 -> 5
 * RC: End-of-adventure inventory menu fixed to support inv extensions
 * RC: Failing the final story battle gives no penalty
+* RC: Fixed an issue where exiting Bramble Woods mysterious distortion cleared the dungeon
 * Dev: Report error when generating with type mismatch
 * Dev: Fixed a constructor for GroundObject not taking passable parameter
