@@ -5,6 +5,8 @@
 * Fixed an issue where partial trapping moves damaged the player more times than the enemy
 * Fixed the effect of Neutralizing Gas
 * X Items and Full Heal Range 3 -> 5
+* Fixed errors ocurring at the end of a dungeon completion cutscene
+* Escape does not count towards rogue mode completion
 * RC: End-of-adventure inventory menu fixed to support inv extensions
 * RC: Failing the final story battle gives no penalty
 * RC: Fixed an issue where exiting Bramble Woods mysterious distortion cleared the dungeon
