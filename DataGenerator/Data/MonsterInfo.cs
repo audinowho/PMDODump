@@ -1372,6 +1372,7 @@ namespace DataGenerator.Data
                     if (index == 875 && entry.Forms.Count > 0)
                         formEntry.Temporary = true;
 
+                    //TODO: read from a text to determine release status
                     formEntry.Released = hasFormeGraphics(index, entry.Forms.Count);
 
                     //vivillon meadow form should be considered standard
@@ -2615,12 +2616,119 @@ namespace DataGenerator.Data
             }
         }
 
+        /// <summary>
+        /// Prints the mon number, form, name, list missing moves/abilities, boolean sprite exists, what dungeon to find (recruitable). Spreadsheet will add "certified"
+        /// </summary>
+        public static void CreateLines(MonsterData[] totalEntries)
+        {
+            Dictionary<string, int> dexToId = new Dictionary<string, int>();
+            for (int ii = 0; ii < TOTAL_DEX; ii++)
+            {
+                string fileName = monsterKeys[ii];
+                dexToId[fileName] = ii;
+            }
+
+            Dictionary<MonsterID, string> encounterDict = new Dictionary<MonsterID, string>();
+            //TODO: populate this
+
+            List<(string familyName, List<MonsterID> mons)> evoTrees = new List<(string, List<MonsterID>)>();
+            HashSet<string> traversed = new HashSet<string>();
+
+            for (int ii = 0; ii < totalEntries.Length; ii++)
+            {
+                if (traversed.Contains(monsterKeys[ii]))
+                    continue;
+
+                List<MonsterID> family = getMonFamily(totalEntries, dexToId, ii, traversed);
+
+                evoTrees.Add((monsterKeys[ii], family));
+
+            }
+
+            List<(string family, MonsterID key, string name, string mechanics, string dungeons, bool sprite)> totalMons = new List<(string family, MonsterID key, string name, string mechanics, string dungeons, bool sprite)>();
+
+            for (int ii = 0; ii < evoTrees.Count; ii++)
+            {
+                for (int jj = 0; jj < evoTrees[ii].mons.Count; jj++)
+                {
+                    MonsterID key = evoTrees[ii].mons[jj];
+                    int monId = dexToId[key.Species];
+                    MonsterData data = totalEntries[monId];
+                    MonsterFormData formData = (MonsterFormData)data.Forms[jj];
+                    //TODO: populate name, missing, sprite
+                    string family = evoTrees[ii].familyName;
+                    string name = data.Name.DefaultText + " " + formData.FormName.DefaultText;
+                    string mechanics = getMissingMechanics(formData);
+                    string dungeons = encounterDict[key];
+                    bool sprite = hasFormeGraphics(monId, jj);
+                    totalMons.Add((family, key, name, mechanics, dungeons, sprite));
+                }
+            }
+
+            using (StreamWriter file = new StreamWriter(GenPath.MONSTER_PATH + "gen5plus.txt"))
+            {
+                foreach ((string family, MonsterID key, string name, string mechanics, string dungeons, bool sprite) mon in totalMons)
+                {
+                    file.WriteLine(mon.family + "\t" + mon.key.Species + "\t" + mon.key.Form + "\t" + mon.name + "\t" + mon.mechanics + "\t" + mon.dungeons + "\t" + (mon.sprite ? "TRUE" : "FALSE"));
+                }
+            }
+        }
+
+        private static string getMissingMechanics(MonsterFormData formData)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static List<MonsterID> getMonFamily(MonsterData[] totalEntries, Dictionary<string, int> dexToId, int ii, HashSet<string> traversed)
+        {
+            List<MonsterID> family = new List<MonsterID>();
+
+            string firstStage = monsterKeys[ii];
+            MonsterData data = DataManager.Instance.GetMonster(firstStage);
+            string prevo = data.PromoteFrom;
+            while (!String.IsNullOrEmpty(prevo))
+            {
+                firstStage = prevo;
+                data = DataManager.Instance.GetMonster(firstStage);
+                prevo = data.PromoteFrom;
+            }
+
+            List<string> dexNums = new List<string>();
+            dexNums.Add(firstStage.ToString());
+            FindEvos(totalEntries, dexToId, dexNums, data);
+
+            foreach (string dexNum in dexNums)
+            {
+                List<BaseMonsterForm> forms = totalEntries[dexToId[dexNum]].Forms;
+                for (int jj = 0; jj < forms.Count; jj++)
+                {
+                    MonsterID monID = new MonsterID(dexNum, jj, "", Gender.Unknown);
+                    family.Add(monID);
+                }
+
+                traversed.Add(dexNum);
+            }
+
+            return family;
+        }
+
+        private static void FindEvos(MonsterData[] totalEntries, Dictionary<string, int> dexToId, List<string> dexNums, MonsterData data)
+        {
+            bool branched = data.Promotions.Count > 1;
+            foreach (PromoteBranch evo in data.Promotions)
+            {
+                dexNums.Add(evo.Result.ToString());
+                MonsterData evoData = totalEntries[dexToId[evo.Result]];
+                FindEvos(totalEntries, dexToId, dexNums, evoData);
+            }
+        }
+
         public static void CreateLearnables(MonsterData[] totalEntries)
         {
             Dictionary<string, int> dexToId = new Dictionary<string, int>();
             for (int ii = 0; ii < TOTAL_DEX; ii++)
             {
-                string fileName = getAssetName(totalEntries[ii].Name.DefaultText);
+                string fileName = monsterKeys[ii];
                 dexToId[fileName] = ii;
             }
 
@@ -2685,7 +2793,7 @@ namespace DataGenerator.Data
                 if (!eggMoves.ContainsKey(key) && !levelMoves.ContainsKey(key))
                     totalMoves[key] = (0, tutorMoves[key], ChooseTeacher(levelTeachers, eggTeachers, tutorTeachers, key));
             }
-            using (StreamWriter file = new StreamWriter("tutor.txt"))
+            using (StreamWriter file = new StreamWriter(GenPath.MONSTER_PATH + "tutor.txt"))
             {
                 foreach (string key in totalMoves.Keys)
                 {

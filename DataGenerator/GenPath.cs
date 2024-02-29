@@ -9,6 +9,7 @@ namespace DataGenerator
 
         public static string TL_PATH { get => DATA_GEN_PATH + "String/"; }
         public static string ITEM_PATH { get => DATA_GEN_PATH + "Item/"; }
+        public static string MONSTER_PATH { get => DATA_GEN_PATH + "Monster/"; }
         public static string ZONE_PATH { get => DATA_GEN_PATH + "Zone/"; }
     }
 }
