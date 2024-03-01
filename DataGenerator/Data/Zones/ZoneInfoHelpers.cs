@@ -884,11 +884,12 @@ namespace DataGenerator.Data
             return step;
         }
 
-        static string[] ItemArray(IEnumerable<string> iter)
+        static string[] ItemArray(params IEnumerable<string>[] iters)
         {
             List<string> result = new List<string>();
-            foreach (string item in iter)
-                result.Add(item);
+            foreach(IEnumerable<string> iter in iters)
+                foreach (string item in iter)
+                    result.Add(item);
             return result.ToArray();
         }
 

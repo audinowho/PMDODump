@@ -1555,11 +1555,13 @@ namespace DataGenerator.Data
                 shop.Items.Add(new MapItem("held_metal_coat", 0, 3500), 40);//Metal Coat
                 foreach (string key in IterateTypeBoosters())
                     shop.Items.Add(new MapItem(key, 0, 2000), 10);//type items
+                foreach (string key in IterateTypePlates())
+                    shop.Items.Add(new MapItem(key, 0, 2000), 10);//type items
 
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
                 shop.ItemThemes.Add(new ItemStateType(new FlagType(typeof(EvoState)), false, true, new RandRange(3, 5)), 10);//evo items
-                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), ItemArray(IterateTypePlates())), 10);//type items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), ItemArray(IterateTypeBoosters(), IterateTypePlates())), 10);//type items
 
                 // Cleffa : 98 Magic Guard : 118 Metronome : 47 Sing : 204 Charm : 313 Fake Tears
                 {
@@ -3186,13 +3188,15 @@ namespace DataGenerator.Data
                 shop.Items.Add(new MapItem("evo_kings_rock", 0, 3500), 50);//King's Rock
                 shop.Items.Add(new MapItem("evo_link_cable", 0, 3500), 50);//Link Cable
 
+                foreach (string key in IterateTypeBoosters())
+                    shop.Items.Add(new MapItem(key, 0, 2000), 10);//type items
                 foreach (string key in IterateTypePlates())
                     shop.Items.Add(new MapItem(key, 0, 2000), 10);//type items
 
 
                 shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
                 shop.ItemThemes.Add(new ItemStateType(new FlagType(typeof(EvoState)), false, true, new RandRange(3, 5)), 10);//evo items
-                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), ItemArray(IterateTypePlates())), 10);//type items
+                shop.ItemThemes.Add(new ItemThemeRange(false, true, new RandRange(3, 5), ItemArray(IterateTypeBoosters(), IterateTypePlates())), 10);//type items
 
                 // Cleffa : 98 Magic Guard : 118 Metronome : 47 Sing : 204 Charm : 313 Fake Tears
                 {
