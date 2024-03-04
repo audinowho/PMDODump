@@ -12,6 +12,8 @@ using System.Linq;
 using PMDC;
 using PMDC.Data;
 using System.Data.SQLite;
+using PMDC.Dev;
+using SkiaSharp;
 
 namespace DataGenerator.Data
 {
@@ -117,6 +119,7 @@ namespace DataGenerator.Data
             MonsterData[] totalEntries = new MonsterData[TOTAL_DEX];
 
             Dictionary<string, List<byte>> personalities = GetPersonalityChecklist();
+            Dictionary<string, bool> releases = GetReleaseChecklist();
             monsterKeys = new List<string>();
             for (int ii = 0; ii < TOTAL_DEX; ii++)
             {
@@ -127,6 +130,7 @@ namespace DataGenerator.Data
             {
                 totalEntries[ii] = LoadDex(m_dbTLConnection, ii);
                 Console.WriteLine("#" + ii + " " + totalEntries[ii].Name + " Read");
+                bool anyReleased = false;
                 for (int jj = 0; jj < totalEntries[ii].Forms.Count; jj++)
                 {
                     List<byte> personality;
@@ -136,7 +140,15 @@ namespace DataGenerator.Data
                     if (personality == null)
                         personality = new List<byte>();
                     ((MonsterFormData)totalEntries[ii].Forms[jj]).Personalities = personality;
+
+                    bool released;
+                    if (releases.TryGetValue(ii + "-" + jj, out released))
+                    {
+                        ((MonsterFormData)totalEntries[ii].Forms[jj]).Released = released;
+                        anyReleased |= released;
+                    }
                 }
+                totalEntries[ii].Released = anyReleased;
             }
 
             m_dbTLConnection.Close();
@@ -175,6 +187,20 @@ namespace DataGenerator.Data
             Console.SetCursorPosition(0, currentLineCursor);
         }
 
+        public static Dictionary<string, bool> GetReleaseChecklist()
+        {
+            Dictionary<string, bool> pairs = new Dictionary<string, bool>();
+
+            using (StreamReader file = new StreamReader(MONSTER_PATH + "releases.out.txt"))
+            {
+                while (!file.EndOfStream)
+                {
+                    string[] checks = file.ReadLine().Trim().Split('\t');
+                    pairs[checks[0] + "-" + checks[1]] = checks[2] == "TRUE";
+                }
+            }
+            return pairs;
+        }
 
         public static Dictionary<string, List<byte>> GetPersonalityChecklist()
         {
@@ -1372,9 +1398,6 @@ namespace DataGenerator.Data
                     if (index == 875 && entry.Forms.Count > 0)
                         formEntry.Temporary = true;
 
-                    //TODO: read from a text to determine release status
-                    formEntry.Released = hasFormeGraphics(index, entry.Forms.Count);
-
                     //vivillon meadow form should be considered standard
                     if (index == 666)
                     {
@@ -1411,10 +1434,6 @@ namespace DataGenerator.Data
                             formEntry.GenderlessWeight = 0;
                         }
                     }
-
-                    if (formEntry.Released)
-                        entry.Released = true;
-
                 }
             }
 
@@ -2023,7 +2042,13 @@ namespace DataGenerator.Data
                 foreach (PromoteDetail detail in branch.Details)
                 {
                     if (detail is EvoForm)
-                        reqForm = ((EvoForm)detail).ReqForm;
+                    {
+                        foreach (int req in ((EvoForm)detail).ReqForms)
+                        {
+                            reqForm = req;
+                            break;
+                        }
+                    }
                 }
                 int resultForm = reqForm;
                 foreach (PromoteDetail detail in branch.Details)
@@ -2036,7 +2061,13 @@ namespace DataGenerator.Data
                         foreach (PromoteDetail innerReq in setForm.Conditions)
                         {
                             if (innerReq is EvoForm)
-                                innerReqForm = ((EvoForm)innerReq).ReqForm;
+                            {
+                                foreach (int req in ((EvoForm)innerReq).ReqForms)
+                                {
+                                    innerReqForm = req;
+                                    break;
+                                }
+                            }
                         }
                         BaseMonsterForm form = evoData.Forms[innerForm];
                         form.PromoteForm = innerReqForm;
@@ -2619,107 +2650,130 @@ namespace DataGenerator.Data
         /// <summary>
         /// Prints the mon number, form, name, list missing moves/abilities, boolean sprite exists, what dungeon to find (recruitable). Spreadsheet will add "certified"
         /// </summary>
-        public static void CreateLines(MonsterData[] totalEntries)
+        public static void CreateContentLists()
         {
-            Dictionary<string, int> dexToId = new Dictionary<string, int>();
-            for (int ii = 0; ii < TOTAL_DEX; ii++)
+            HashSet<(int dex, int form)> recentChanges = new HashSet<(int dex, int form)>();
+
+            using (StreamReader inStream = new StreamReader(PathMod.DEV_PATH + "sprite_diffs.csv"))
             {
-                string fileName = monsterKeys[ii];
-                dexToId[fileName] = ii;
+                while (!inStream.EndOfStream)
+                {
+                    string[] row = inStream.ReadLine().Split(',');
+                    recentChanges.Add((int.Parse(row[0]), int.Parse(row[1])));
+                }
             }
 
             Dictionary<MonsterID, string> encounterDict = new Dictionary<MonsterID, string>();
-            //TODO: populate this
+            populateRecruitableEncounters(encounterDict);
 
             List<(string familyName, List<MonsterID> mons)> evoTrees = new List<(string, List<MonsterID>)>();
             HashSet<string> traversed = new HashSet<string>();
 
-            for (int ii = 0; ii < totalEntries.Length; ii++)
+            List<string> monsterKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
+            for (int ii = 0; ii < monsterKeys.Count; ii++)
             {
-                if (traversed.Contains(monsterKeys[ii]))
+                string key = monsterKeys[ii];
+                if (traversed.Contains(key))
                     continue;
 
-                List<MonsterID> family = getMonFamily(totalEntries, dexToId, ii, traversed);
+                List<MonsterID> family = new List<MonsterID>();
+                foreach (MonsterID monId in DevHelper.FindMonFamily(key))
+                {
+                    if (!family.Contains(monId))
+                        family.Add(monId);
+                    traversed.Add(monId.Species);
+                }
 
                 evoTrees.Add((monsterKeys[ii], family));
-
             }
 
-            List<(string family, MonsterID key, string name, string mechanics, string dungeons, bool sprite)> totalMons = new List<(string family, MonsterID key, string name, string mechanics, string dungeons, bool sprite)>();
+            List<(string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff)> totalMons = new List<(string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff)>();
 
             for (int ii = 0; ii < evoTrees.Count; ii++)
             {
                 for (int jj = 0; jj < evoTrees[ii].mons.Count; jj++)
                 {
                     MonsterID key = evoTrees[ii].mons[jj];
-                    int monId = dexToId[key.Species];
-                    MonsterData data = totalEntries[monId];
-                    MonsterFormData formData = (MonsterFormData)data.Forms[jj];
-                    //TODO: populate name, missing, sprite
+                    MonsterEntrySummary entrySummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Get(key.Species);
+                    int monId = entrySummary.SortOrder;
+                    BaseFormSummary formData = entrySummary.Forms[key.Form];
                     string family = evoTrees[ii].familyName;
-                    string name = data.Name.DefaultText + " " + formData.FormName.DefaultText;
-                    string mechanics = getMissingMechanics(formData);
-                    string dungeons = encounterDict[key];
-                    bool sprite = hasFormeGraphics(monId, jj);
-                    totalMons.Add((family, key, name, mechanics, dungeons, sprite));
+                    string name = formData.Name.DefaultText;
+                    string mechanics = getMissingMechanics(key);
+                    string dungeons = "";
+                    if (formData.Temporary)
+                        dungeons = "TEMP";
+                    else if (encounterDict.ContainsKey(key))
+                        dungeons = encounterDict[key];
+
+                    bool sprite = hasFormeGraphics(monId, key.Form);
+                    bool changed = recentChanges.Contains((monId, key.Form));
+                    totalMons.Add((family, monId, key, name, mechanics, dungeons, sprite, changed));
                 }
             }
 
-            using (StreamWriter file = new StreamWriter(GenPath.MONSTER_PATH + "gen5plus.txt"))
+            using (StreamWriter file = new StreamWriter(GenPath.MONSTER_PATH + "releases.txt"))
             {
-                foreach ((string family, MonsterID key, string name, string mechanics, string dungeons, bool sprite) mon in totalMons)
+                foreach ((string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff) mon in totalMons)
                 {
-                    file.WriteLine(mon.family + "\t" + mon.key.Species + "\t" + mon.key.Form + "\t" + mon.name + "\t" + mon.mechanics + "\t" + mon.dungeons + "\t" + (mon.sprite ? "TRUE" : "FALSE"));
+                    file.WriteLine(mon.family + "\t" + mon.index.ToString("D4") + "\t" + mon.key.Species + "\t" + mon.key.Form + "\t" + mon.name + "\t" + mon.mechanics + "\t" + mon.dungeons + "\t" + (mon.sprite ? "TRUE" : "FALSE") + "\t" + (mon.diff ? "TRUE" : "FALSE"));
                 }
             }
         }
 
-        private static string getMissingMechanics(MonsterFormData formData)
+        private static bool intrinsicUnfinished(string intrinsic)
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrEmpty(intrinsic))
+                return false;
+
+            EntrySummary summary = DataManager.Instance.DataIndices[DataManager.DataType.Intrinsic].Get(intrinsic);
+            return !summary.Released;
         }
 
-        private static List<MonsterID> getMonFamily(MonsterData[] totalEntries, Dictionary<string, int> dexToId, int ii, HashSet<string> traversed)
+        private static string getMissingMechanics(MonsterID key)
         {
-            List<MonsterID> family = new List<MonsterID>();
+            MonsterData data = DataManager.Instance.GetMonster(key.Species);
+            MonsterFormData formData = (MonsterFormData)data.Forms[key.Form];
 
-            string firstStage = monsterKeys[ii];
-            MonsterData data = DataManager.Instance.GetMonster(firstStage);
-            string prevo = data.PromoteFrom;
-            while (!String.IsNullOrEmpty(prevo))
+            HashSet<string> unfinished = new HashSet<string>();
+            //does it have any unfinished abilities?
+            if (intrinsicUnfinished(formData.Intrinsic1))
+                unfinished.Add(formData.Intrinsic1);
+            if (intrinsicUnfinished(formData.Intrinsic2))
+                unfinished.Add(formData.Intrinsic2);
+            if (intrinsicUnfinished(formData.Intrinsic3))
+                unfinished.Add(formData.Intrinsic3);
+
+            //do level skills feature any unfinished moves?
+            foreach (LevelUpSkill skill in formData.LevelSkills)
             {
-                firstStage = prevo;
-                data = DataManager.Instance.GetMonster(firstStage);
-                prevo = data.PromoteFrom;
+                EntrySummary summary = DataManager.Instance.DataIndices[DataManager.DataType.Skill].Get(skill.Skill);
+                if (!summary.Released)
+                    unfinished.Add(skill.Skill);
             }
 
-            List<string> dexNums = new List<string>();
-            dexNums.Add(firstStage.ToString());
-            FindEvos(totalEntries, dexToId, dexNums, data);
+            return String.Join(" ", unfinished);
+        }
 
-            foreach (string dexNum in dexNums)
+        private static void populateRecruitableEncounters(Dictionary<MonsterID, string> encounterDict)
+        {
+            Dictionary<MonsterID, HashSet<(string tag, ZoneLoc encounter)>> foundSpecies = DevHelper.GetAllAppearingMonsters(true);
+            foreach (MonsterID key in foundSpecies.Keys)
             {
-                List<BaseMonsterForm> forms = totalEntries[dexToId[dexNum]].Forms;
-                for (int jj = 0; jj < forms.Count; jj++)
+                HashSet<(string tag, ZoneLoc encounter)> find = foundSpecies[key];
+                HashSet<string> availableZones = new HashSet<string>();
+                bool evo = false;
+                foreach ((string tag, ZoneLoc encounter) element in find)
                 {
-                    MonsterID monID = new MonsterID(dexNum, jj, "", Gender.Unknown);
-                    family.Add(monID);
+                    if (!String.IsNullOrEmpty(element.encounter.ID))
+                        availableZones.Add(element.encounter.ID);
+                    if (element.tag == "EVOLVE")
+                        evo = true;
                 }
+                if (availableZones.Count == 0 && evo)
+                    availableZones.Add("EVOLVE");
 
-                traversed.Add(dexNum);
-            }
-
-            return family;
-        }
-
-        private static void FindEvos(MonsterData[] totalEntries, Dictionary<string, int> dexToId, List<string> dexNums, MonsterData data)
-        {
-            bool branched = data.Promotions.Count > 1;
-            foreach (PromoteBranch evo in data.Promotions)
-            {
-                dexNums.Add(evo.Result.ToString());
-                MonsterData evoData = totalEntries[dexToId[evo.Result]];
-                FindEvos(totalEntries, dexToId, dexNums, evoData);
+                encounterDict[key] = String.Join(" ", availableZones);
             }
         }
 

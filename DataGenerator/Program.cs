@@ -42,6 +42,7 @@ namespace DataGenerator
                 bool loadStrings = false;
                 bool itemPrep = false;
                 bool zonePrep = false;
+                bool monsterPrep = false;
                 bool saveStrings = false;
                 bool demo = false;
                 DataManager.DataType convertIndices = DataManager.DataType.None;
@@ -104,6 +105,11 @@ namespace DataGenerator
                     {
                         ii++;
                         zonePrep = true;
+                    }
+                    else if (args[ii] == "-monsterprep")
+                    {
+                        ii++;
+                        monsterPrep = true;
                     }
                     else if (args[ii] == "-reserialize")
                     {
@@ -186,6 +192,16 @@ namespace DataGenerator
                     DataManager.Instance.InitData();
 
                     ZoneInfo.CreateContentLists();
+                }
+
+                if (monsterPrep)
+                {
+                    LuaEngine.InitInstance();
+                    LuaEngine.Instance.LoadScripts();
+                    DataManager.InitInstance();
+                    DataManager.Instance.InitData();
+
+                    MonsterInfo.CreateContentLists();
                 }
 
                 if (loadStrings)

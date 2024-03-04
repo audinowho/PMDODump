@@ -429,7 +429,7 @@ namespace DataGenerator.Data
             //load from generated csv
             if (File.Exists(GenPath.ITEM_PATH  + "ExclusiveItem.out.txt"))
             {
-                List<string[]> rows = AutoItemInfo.LoadItemRows(GenPath.ITEM_PATH  + "ExclusiveItem.out.txt");
+                List<string[]> rows = LoadItemRows(GenPath.ITEM_PATH  + "ExclusiveItem.out.txt");
                 for (int ii = 0; ii < rows.Count; ii++)
                 {
                     string[] row = rows[ii];
