@@ -3,6 +3,16 @@ ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
 itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
 
 
+//tms
+CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
+tms.SpawnRates.SetRange(7, new IntRange(0, max_floors));
+itemSpawnZoneStep.Spawns.Add("tms", tms);
+
+
+tms.Spawns.Add(new InvItem("tm_swords_dance"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_fling"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_fly"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_bulldoze"), new IntRange(0, max_floors), 10);
 
 
 floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
@@ -16,4 +26,6 @@ poolSpawn.Priority = PR_RESPAWN_MOB;
 poolSpawn.Spawns.Add(GetTeamMob("raboot", "", "agility", "flame_charge", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("granbull", "", "roar", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("gible", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("mimikyu", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("cinderace", "", "court_change", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("tandemaus", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

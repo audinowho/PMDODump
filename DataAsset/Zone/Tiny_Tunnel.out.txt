@@ -17,4 +17,5 @@ poolSpawn.Spawns.Add(GetTeamMob("spearow", "", "", "", "", "", new RandRange(5))
 poolSpawn.Spawns.Add(GetTeamMob("zigzagoon", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("elekid", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("kricketot", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("sewaddle", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("scorbunny", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

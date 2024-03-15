@@ -2305,6 +2305,7 @@ namespace DataGenerator.Data
                 item.BeforeStatusAdds.Add(0, new PreventStatusCheck("telekinesis", new StringKey("MSG_SHED_SHELL")));
                 item.BeforeStatusAdds.Add(0, new PreventStatusCheck("clamp", new StringKey("MSG_SHED_SHELL")));
                 item.BeforeStatusAdds.Add(0, new PreventStatusCheck("infestation", new StringKey("MSG_SHED_SHELL")));
+                item.BeforeStatusAdds.Add(0, new PreventStatusCheck("magma_storm", new StringKey("MSG_SHED_SHELL")));
             }
             else if (ii == 312)
             {
@@ -3405,7 +3406,7 @@ namespace DataGenerator.Data
             }
             else if (ii == 494)
             {
-                item.Name = new LocalText("**Music Box");
+                item.Name = new LocalText("Music Box");
                 item.Desc = new LocalText("An enchanting music box that plays a beautiful melody. It is said to draw something special to it when it is kept close by.");
                 // This will trigger legendaries to appear.
                 // when they do appear, the music will change to a music box tune.

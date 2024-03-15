@@ -104,7 +104,7 @@ itemSpawnZoneStep.Spawns.Add("held", held);
 
 
 held.Spawns.Add(new InvItem("held_sticky_barb"), new IntRange(0, max_floors), 10);
-held.Spawns.Add(new InvItem("held_ring_target"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_assault_vest"), new IntRange(0, max_floors), 10);
 held.Spawns.Add(new InvItem("held_weather_rock"), new IntRange(0, max_floors), 10);
 held.Spawns.Add(new InvItem("held_wide_lens"), new IntRange(0, max_floors), 10);
 held.Spawns.Add(new InvItem("held_magnet"), new IntRange(0, max_floors), 10);
@@ -135,7 +135,7 @@ tms.Spawns.Add(new InvItem("tm_attract"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_steel_wing"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_smack_down"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_snarl"), new IntRange(0, max_floors), 10);
-tms.Spawns.Add(new InvItem("tm_flame_charge"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_volt_switch"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_bulldoze"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_substitute"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_iron_tail"), new IntRange(0, max_floors), 10);

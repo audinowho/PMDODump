@@ -16,6 +16,7 @@ necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 4
 necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
 necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(0, max_floors), 6);
 necessities.Spawns.Add(new InvItem("food_grimy"), new IntRange(0, max_floors), 10);
+necessities.Spawns.Add(new InvItem("seed_reviver", true), new IntRange(0, max_floors), 4);
 //snacks
 CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
 snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -111,6 +112,10 @@ held.Spawns.Add(new InvItem("held_never_melt_ice", true), new IntRange(0, max_fl
 held.Spawns.Add(new InvItem("held_never_melt_ice"), new IntRange(0, max_floors), 7);
 held.Spawns.Add(new InvItem("held_metal_coat", true), new IntRange(0, max_floors), 3);
 held.Spawns.Add(new InvItem("held_metal_coat"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_x_ray_specs", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_x_ray_specs"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_pierce_band", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_pierce_band"), new IntRange(0, max_floors), 7);
 //tms
 CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
 tms.SpawnRates.SetRange(7, new IntRange(0, max_floors));
@@ -142,6 +147,8 @@ tms.Spawns.Add(new InvItem("tm_pluck"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_psych_up"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_secret_power"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_natural_gift"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_ice_beam"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_blizzard"), new IntRange(0, max_floors), 10);
 
 
 floorSegment.ZoneSteps.Add(itemSpawnZoneStep);

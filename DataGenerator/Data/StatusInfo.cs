@@ -2457,6 +2457,44 @@ namespace DataGenerator.Data
                 status.AfterBeingHits.Add(0, new OnHitEvent(true, false, 100, new BattleScriptStateEvent()));
                 status.StatusStates.Set(new ScriptCallState());
             }
+            else if (ii == 138)
+            {
+                status.Name = new LocalText("Crafty Shield");
+                status.MenuName = true;
+                status.Desc = new LocalText("The Pokémon is protected from status moves. This status wears off after a few turns.");
+                status.Emoticon = "Shield_Pink";
+                status.StatusStates.Set(new TransferStatusState());
+                status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_ALREADY_PROTECTED")));
+                status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_CRAFTY_SHIELD_START"), true));
+                status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_NO_LONGER_PROTECTED")));
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Protect_Pink", 2));
+                status.BeforeBeingHits.Add(0, new EvadeCategoryEvent(Alignment.Friend | Alignment.Foe, BattleData.SkillCategory.Status, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
+                status.StatusStates.Set(new CountDownState(15));
+                status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
+            }
+            else if (ii == 139)
+            {
+                status.Name = new LocalText("Fairy Lock");
+                status.MenuName = true;
+                status.Desc = new LocalText("The Pokémon will become immobilized after attacking.");
+                status.Emoticon = "X_Purple";
+                status.StatusStates.Set(new TransferStatusState());
+                status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_FAIRY_LOCK_ALREADY")));
+                status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FAIRY_LOCK_START"), true));
+                status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
+                status.AfterActions.Add(0, new OnAggressionEvent(new StatusBattleEvent("immobilized", false, false, true, new StringKey(),
+                    new BattleAnimEvent(new BetweenEmitter(new AnimData("Embargo_Yellow_Front", 2), new AnimData("Embargo_Yellow_Back", 2)), "DUN_Ice_Shard", false, 30)), new RemoveBattleEvent(false)));
+            }
+            else if (ii == 140)
+            {
+                status.Name = new LocalText("Cooldown");
+                status.MenuName = true;
+                status.Desc = new LocalText("The Pokémon has one of its moves on cooldown and cannot use it.");
+                status.StatusStates.Set(new SlotState());
+                status.OnRefresh.Add(0, new DisableEvent());
+                status.OnSkillChanges.Add(0, new UpdateIndicesEvent());
+                status.OnActions.Add(0, new OnAggressionEvent(new RemoveBattleEvent()));
+            }
 
             if (status.Name.DefaultText.StartsWith("**"))
                 status.Name.DefaultText = status.Name.DefaultText.Replace("*", "");

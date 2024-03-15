@@ -58,7 +58,7 @@ special.Spawns.Add(new InvItem("machine_assembly_box"), new IntRange(0, max_floo
 special.Spawns.Add(new InvItem("machine_ability_capsule"), new IntRange(0, max_floors), 5);
 //evo
 CategorySpawn<InvItem> evo = new CategorySpawn<InvItem>();
-evo.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+evo.SpawnRates.SetRange(3, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("evo", evo);
 
 
@@ -115,10 +115,10 @@ held.SpawnRates.SetRange(2, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("held", held);
 
 
-held.Spawns.Add(new InvItem("held_special_band", true), new IntRange(0, max_floors), 3);
-held.Spawns.Add(new InvItem("held_special_band"), new IntRange(0, max_floors), 7);
-held.Spawns.Add(new InvItem("held_zinc_band", true), new IntRange(0, max_floors), 3);
-held.Spawns.Add(new InvItem("held_zinc_band"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_heal_ribbon", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_heal_ribbon"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_assault_vest", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_assault_vest"), new IntRange(0, max_floors), 7);
 held.Spawns.Add(new InvItem("held_pass_scarf", true), new IntRange(0, max_floors), 3);
 held.Spawns.Add(new InvItem("held_pass_scarf"), new IntRange(0, max_floors), 7);
 held.Spawns.Add(new InvItem("held_x_ray_specs", true), new IntRange(0, max_floors), 3);
@@ -127,6 +127,9 @@ held.Spawns.Add(new InvItem("held_soft_sand", true), new IntRange(0, max_floors)
 held.Spawns.Add(new InvItem("held_soft_sand"), new IntRange(0, max_floors), 7);
 held.Spawns.Add(new InvItem("held_twisted_spoon", true), new IntRange(0, max_floors), 3);
 held.Spawns.Add(new InvItem("held_twisted_spoon"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_life_orb", true), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_goggle_specs", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_goggle_specs"), new IntRange(0, max_floors), 7);
 
 
 floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
@@ -137,16 +140,22 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-poolSpawn.Spawns.Add(GetTeamMob("solrock", "", "confusion", "rock_polish", "", "", new RandRange(29), "wander_dumb"), new IntRange(4, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("meowstic", "", "psyshock", "charm", "", "", new RandRange(31), "wander_dumb"), new IntRange(8, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("meowstic", 1, "", Gender.Unknown), "", "psyshock", "charge_beam", "", "", new RandRange(31), "wander_dumb"), new IntRange(8, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("baltoy", "", "heal_block", "rapid_spin", "", "", new RandRange(26), "wander_dumb"), new IntRange(0, 8), 10);
-poolSpawn.Spawns.Add(GetTeamMob("shuppet", "", "spite", "curse", "", "", new RandRange(27), "wander_dumb"), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("meditite", "", "meditate", "force_palm", "", "", new RandRange(27), "wander_dumb"), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("natu", "", "teleport", "future_sight", "", "", new RandRange(22), "wander_dumb"), new IntRange(0, 4), 10);
-poolSpawn.Spawns.Add(GetTeamMob("ariados", "", "fell_stinger", "venom_drench", "", "", new RandRange(28), "wander_dumb"), new IntRange(4, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("bronzor", "", "psywave", "imprison", "", "", new RandRange(26), "wander_dumb"), new IntRange(0, 8), 10);
-poolSpawn.Spawns.Add(GetTeamMob("wobbuffet", "", "mirror_coat", "safeguard", "", "", new RandRange(31), "wander_dumb"), new IntRange(8, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("braixen", "", "fire_spin", "lucky_chant", "", "", new RandRange(28), "wander_dumb"), new IntRange(4, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("baltoy", "", "cosmic_power", "mud_slap", "heal_block", "", new RandRange(30), "wander_normal"), new IntRange(0, 4), 10);
+poolSpawn.Spawns.Add(GetTeamMob("braixen", "magician", "flame_charge", "lucky_chant", "", "", new RandRange(30), "thief"), new IntRange(0, 4), 10);
+poolSpawn.Spawns.Add(GetTeamMob("meditite", "", "meditate", "force_palm", "", "", new RandRange(30), "wander_normal"), new IntRange(0, 4), 10);
+poolSpawn.Spawns.Add(GetTeamMob("ariados", "", "fell_stinger", "venom_drench", "", "", new RandRange(31), "wander_normal"), new IntRange(0, 4), 10);
+poolSpawn.Spawns.Add(GetTeamMob("larvesta", "", "ember", "string_shot", "leech_life", "", new RandRange(33), "wander_normal"), new IntRange(2, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("gothorita", "", "future_sight", "play_nice", "", "", new RandRange(33), "wander_normal"), new IntRange(2, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("wobbuffet", "", "mirror_coat", "counter", "safeguard", "", new RandRange(34), "wander_normal"), new IntRange(2, 6), 10);
+poolSpawn.Spawns.Add(GetTeamMob("shuppet", "cursed_body", "spite", "curse", "", "", new RandRange(34), "wander_normal"), new IntRange(4, 8), 10);
+poolSpawn.Spawns.Add(GetTeamMob("solrock", "", "fire_spin", "embargo", "rock_slide", "", new RandRange(38), "wander_normal"), new IntRange(4, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("meowstic", "", "psyshock", "charm", "", "", new RandRange(34), "wander_normal"), new IntRange(4, 8), 10);
+poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("meowstic", 1, "", Gender.Unknown), "", "psyshock", "charge_beam", "", "", new RandRange(34), "wander_normal"), new IntRange(4, 8), 10);
+poolSpawn.Spawns.Add(GetTeamMob("bronzong", "", "psywave", "imprison", "", "", new RandRange(42), "wander_normal"), new IntRange(8, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("electrode", "", "rollout", "self_destruct", "light_screen", "", new RandRange(38), "wander_normal"), new IntRange(6, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("claydol", "", "heal_block", "psybeam", "teleport", "", new RandRange(42), "wander_normal"), new IntRange(8, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("banette", "cursed_body", "grudge", "shadow_ball", "", "", new RandRange(38), "wander_normal"), new IntRange(6, 10), 10);
+poolSpawn.Spawns.Add(GetTeamMob("gothitelle", "", "psychic", "future_sight", "", "", new RandRange(42), "wander_normal"), new IntRange(8, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("delphox", "magician", "switcheroo", "mystical_fire", "psyshock", "", new RandRange(42), "wander_normal"), new IntRange(8, max_floors), 10);
 //sleeping, holding choice scarf
-poolSpawn.Spawns.Add(GetTeamMob("espeon", "magic_bounce", "psychic", "", "", "", new RandRange(50), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("espeon", "magic_bounce", "psychic", "", "", "", new RandRange(55), "wander_normal"), new IntRange(0, max_floors), 10);

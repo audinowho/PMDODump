@@ -125,6 +125,7 @@ tms.Spawns.Add(new InvItem("tm_work_up"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_roar"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_flash"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_bullet_seed"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_psych_up"), new IntRange(0, max_floors), 10);
 
 
 floorSegment.ZoneSteps.Add(itemSpawnZoneStep);

@@ -5863,6 +5863,7 @@ namespace DataGenerator.Data
                 skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("leech_seed", false));
                 skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("clamp", false));
                 skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("infestation", false));
+                skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("magma_storm", false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimProcess(CharAnimProcess.ProcessType.Spin);//Spin

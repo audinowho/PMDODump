@@ -123,7 +123,7 @@ tms.Spawns.Add(new InvItem("tm_fly"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_infestation"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_work_up"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_roar"), new IntRange(0, max_floors), 10);
-tms.Spawns.Add(new InvItem("tm_flash"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_dazzling_gleam"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_bullet_seed"), new IntRange(0, max_floors), 10);
 
 

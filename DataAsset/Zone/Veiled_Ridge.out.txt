@@ -16,6 +16,7 @@ necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 4
 necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
 necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(0, max_floors), 6);
 necessities.Spawns.Add(new InvItem("food_grimy"), new IntRange(0, max_floors), 10);
+necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 3);
 //snacks
 CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
 snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -171,4 +172,4 @@ poolSpawn.Spawns.Add(GetTeamMob("sableye", "", "knock_off", "detect", "", "", ne
 poolSpawn.Spawns.Add(GetTeamMob("masquerain", "", "ominous_wind", "stun_spore", "", "", new RandRange(30), "wander_dumb"), new IntRange(0, 8), 10);
 poolSpawn.Spawns.Add(GetTeamMob("graveler", "", "rock_blast", "", "", "", new RandRange(32), "wander_dumb"), new IntRange(0, 12), 10);
 //spawns asleep with pearl, if initial
-poolSpawn.Spawns.Add(GetTeamMob("grumpig", "", "magic_coat", "zen_headbutt", "", "", new RandRange(30), "wander_normal"), new IntRange(4, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("grumpig", "", "magic_coat", "psywave", "confuse_ray", "", new RandRange(30), "wander_normal"), new IntRange(4, max_floors), 10);

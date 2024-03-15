@@ -125,3 +125,4 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
+poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("zorua", 1, "", Gender.Unknown), "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

@@ -19,9 +19,10 @@ itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 snacks.Spawns.Add(new InvItem("seed_hunger"), new IntRange(0, max_floors), 10);
 snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, max_floors), 10);
 snacks.Spawns.Add(new InvItem("seed_vile"), new IntRange(0, max_floors), 10);
+snacks.Spawns.Add(new InvItem("seed_plain"), new IntRange(0, max_floors), 10);
 snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 10);
-snacks.Spawns.Add(new InvItem("seed_last_chance"), new IntRange(0, max_floors), 10);
-snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, max_floors), 5);
+snacks.Spawns.Add(new InvItem("seed_last_chance"), new IntRange(0, max_floors), 5);
+snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, max_floors), 10);
 //special
 CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
 special.SpawnRates.SetRange(3, new IntRange(0, max_floors));
@@ -31,8 +32,8 @@ itemSpawnZoneStep.Spawns.Add("special", special);
 special.Spawns.Add(new InvItem("apricorn_brown"), new IntRange(0, max_floors), 10);
 special.Spawns.Add(new InvItem("apricorn_red"), new IntRange(0, max_floors), 10);
 special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, max_floors), 10);
-special.Spawns.Add(new InvItem("machine_recall_box"), new IntRange(0, max_floors), 10);
-special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, max_floors), 5);
+special.Spawns.Add(new InvItem("machine_recall_box"), new IntRange(0, max_floors), 5);
+special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, max_floors), 10);
 //throwable
 CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
 throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
@@ -40,13 +41,13 @@ itemSpawnZoneStep.Spawns.Add("throwable", throwable);
 
 
 throwable.Spawns.Add(new InvItem("ammo_gravelerock", false, 3), new IntRange(0, max_floors), 10);
-throwable.Spawns.Add(new InvItem("ammo_geo_pebble", false, 3), new IntRange(0, max_floors), 10);
+throwable.Spawns.Add(new InvItem("ammo_geo_pebble", false, 3), new IntRange(0, max_floors), 3);
 throwable.Spawns.Add(new InvItem("ammo_cacnea_spike", false, 2), new IntRange(0, max_floors), 3);
 throwable.Spawns.Add(new InvItem("ammo_iron_thorn", false, 2), new IntRange(0, max_floors), 3);
 throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 3);
 throwable.Spawns.Add(new InvItem("wand_lure", false, 3), new IntRange(0, max_floors), 3);
 throwable.Spawns.Add(new InvItem("wand_topsy_turvy", false, 2), new IntRange(0, max_floors), 3);
-throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 3);
+throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 10);
 //orbs
 CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
 orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -64,10 +65,10 @@ held.SpawnRates.SetRange(2, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("held", held);
 
 
-held.Spawns.Add(new InvItem("held_power_band", true), new IntRange(0, max_floors), 3);
-held.Spawns.Add(new InvItem("held_power_band"), new IntRange(0, max_floors), 7);
-held.Spawns.Add(new InvItem("held_defense_scarf", true), new IntRange(0, max_floors), 3);
-held.Spawns.Add(new InvItem("held_defense_scarf"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_charcoal", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_charcoal"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_mystic_water", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_mystic_water"), new IntRange(0, max_floors), 7);
 held.Spawns.Add(new InvItem("held_scope_lens", true), new IntRange(0, max_floors), 3);
 held.Spawns.Add(new InvItem("held_scope_lens"), new IntRange(0, max_floors), 7);
 held.Spawns.Add(new InvItem("held_shell_bell", true), new IntRange(0, max_floors), 3);
@@ -76,6 +77,8 @@ held.Spawns.Add(new InvItem("held_soft_sand", true), new IntRange(0, max_floors)
 held.Spawns.Add(new InvItem("held_soft_sand"), new IntRange(0, max_floors), 7);
 held.Spawns.Add(new InvItem("held_poison_barb", true), new IntRange(0, max_floors), 3);
 held.Spawns.Add(new InvItem("held_poison_barb"), new IntRange(0, max_floors), 7);
+held.Spawns.Add(new InvItem("held_twisted_spoon", true), new IntRange(0, max_floors), 3);
+held.Spawns.Add(new InvItem("held_twisted_spoon"), new IntRange(0, max_floors), 7);
 held.Spawns.Add(new InvItem("held_grip_claw", true), new IntRange(0, max_floors), 3);
 held.Spawns.Add(new InvItem("held_grip_claw"), new IntRange(0, max_floors), 7);
 //tms
@@ -110,13 +113,15 @@ poolSpawn.Priority = PR_RESPAWN_MOB;
 
 poolSpawn.Spawns.Add(GetTeamMob("cubone", "", "bone_club", "growl", "", "", new RandRange(23), "wander_normal"), new IntRange(0, 3), 10);
 poolSpawn.Spawns.Add(GetTeamMob("marowak", "", "bonemerang", "", "", "", new RandRange(28), "wander_normal"), new IntRange(3, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("hippopotas", "", "sand_tomb", "dig", "", "", new RandRange(26), "wander_normal"), new IntRange(1, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("hippopotas", "", "sand_tomb", "dig", "", "", new RandRange(26), "wander_normal"), new IntRange(0, 2), 10);
 poolSpawn.Spawns.Add(GetTeamMob("fearow", "", "drill_run", "pluck", "", "", new RandRange(24), "wander_normal"), new IntRange(0, 2), 10);
 poolSpawn.Spawns.Add(GetTeamMob("sandslash", "", "magnitude", "sand_attack", "", "", new RandRange(25), "wander_normal"), new IntRange(1, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("cacnea", "", "leech_seed", "needle_arm", "", "", new RandRange(24), "wander_normal"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("skorupi", "", "acupressure", "bug_bite", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wander_normal"), new IntRange(2, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("torkoal", "", "smokescreen", "lava_plume", "", "", new RandRange(25), "wander_normal"), new IntRange(0, 2), 10);
+poolSpawn.Spawns.Add(GetTeamMob("torkoal", "drought", "smokescreen", "lava_plume", "", "", new RandRange(25), "wander_normal"), new IntRange(0, 2), 10);
 poolSpawn.Spawns.Add(GetTeamMob("arbok", "", "screech", "glare", "crunch", "", new RandRange(25), "wander_normal"), new IntRange(2, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("thievul", "", "snarl", "assurance", "", "", new RandRange(25), "wander_normal"), new IntRange(1, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wander_normal"), new IntRange(1, max_floors), 5);
 poolSpawn.Spawns.Add(GetTeamMob("scraggy", "", "leer", "low_kick", "", "", new RandRange(24), "wander_normal"), new IntRange(0, 2), 10);
+poolSpawn.Spawns.Add(GetTeamMob("gible", "sand_veil", "sandstorm", "dragon_rage", "", "", new RandRange(25), "wander_normal"), new IntRange(2, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("rockruff", "", "odor_sleuth", "rock_throw", "", "", new RandRange(22), "wander_normal"), new IntRange(0, 2), 10);

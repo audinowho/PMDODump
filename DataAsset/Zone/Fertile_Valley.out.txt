@@ -27,7 +27,7 @@ snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, max_floors), 10);
 snacks.Spawns.Add(new InvItem("seed_hunger"), new IntRange(0, max_floors), 10);
 //special
 CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
-special.SpawnRates.SetRange(3, new IntRange(0, max_floors));
+special.SpawnRates.SetRange(30, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("special", special);
 
 

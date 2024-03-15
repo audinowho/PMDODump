@@ -76,12 +76,13 @@ itemSpawnZoneStep.Spawns.Add("orbs", orbs);
 
 orbs.Spawns.Add(new InvItem("orb_trawl"), new IntRange(0, max_floors), 10);
 orbs.Spawns.Add(new InvItem("orb_weather"), new IntRange(0, max_floors), 10);
-orbs.Spawns.Add(new InvItem("orb_fill_in"), new IntRange(0, max_floors), 10);
+orbs.Spawns.Add(new InvItem("orb_fill_in"), new IntRange(0, max_floors), 5);
+orbs.Spawns.Add(new InvItem("orb_one_room"), new IntRange(0, max_floors), 5);
 orbs.Spawns.Add(new InvItem("orb_endure"), new IntRange(0, max_floors), 10);
 orbs.Spawns.Add(new InvItem("orb_foe_seal"), new IntRange(0, max_floors), 10);
 //held
 CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
-held.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+held.SpawnRates.SetRange(3, new IntRange(0, max_floors));
 itemSpawnZoneStep.Spawns.Add("held", held);
 
 
@@ -90,7 +91,7 @@ held.Spawns.Add(new InvItem("held_metronome"), new IntRange(0, max_floors), 10);
 held.Spawns.Add(new InvItem("held_iron_ball"), new IntRange(0, max_floors), 10);
 held.Spawns.Add(new InvItem("held_cover_band"), new IntRange(0, max_floors), 10);
 held.Spawns.Add(new InvItem("held_magnet"), new IntRange(0, max_floors), 10);
-held.Spawns.Add(new InvItem("held_metal_coat"), new IntRange(0, max_floors), 10);
+held.Spawns.Add(new InvItem("held_metal_coat"), new IntRange(0, max_floors), 15);
 //tms
 CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
 tms.SpawnRates.SetRange(7, new IntRange(0, max_floors));
@@ -109,7 +110,7 @@ tms.Spawns.Add(new InvItem("tm_power_up_punch"), new IntRange(0, max_floors), 10
 tms.Spawns.Add(new InvItem("tm_infestation"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_work_up"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_incinerate"), new IntRange(0, max_floors), 10);
-tms.Spawns.Add(new InvItem("tm_roar"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_iron_tail"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_flash"), new IntRange(0, max_floors), 10);
 
 
@@ -127,7 +128,7 @@ poolSpawn.Spawns.Add(GetTeamMob("aron", "", "metal_claw", "harden", "", "", new 
 poolSpawn.Spawns.Add(GetTeamMob("nosepass", "", "rock_throw", "rest", "", "", new RandRange(22), "wander_dumb"), new IntRange(0, 3), 10);
 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("grimer", 1, "", Gender.Unknown), "", "bite", "poison_fang", "", "", new RandRange(26), "wander_dumb"), new IntRange(7, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("golbat", "", "screech", "leech_life", "", "", new RandRange(24), "wander_dumb"), new IntRange(0, 7), 10);
-poolSpawn.Spawns.Add(GetTeamMob("rhyhorn", "", "bulldoze", "", "", "", new RandRange(22), "wander_dumb"), new IntRange(0, 7), 10);
+poolSpawn.Spawns.Add(GetTeamMob("tinkatink", "", "rock_smash", "metal_claw", "", "", new RandRange(22), "wander_dumb"), new IntRange(0, 7), 10);
 poolSpawn.Spawns.Add(GetTeamMob("diglett", "", "dig", "", "", "", new RandRange(22), "wander_dumb"), new IntRange(0, 3), 10);
 poolSpawn.Spawns.Add(GetTeamMob("dugtrio", "", "dig", "sucker_punch", "", "", new RandRange(26), "wander_dumb"), new IntRange(7, max_floors), 10);
 //sleeping

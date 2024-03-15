@@ -167,7 +167,7 @@ itemSpawnZoneStep.Spawns.Add("tms", tms);
 
 
 tms.Spawns.Add(new InvItem("tm_explosion"), new IntRange(0, max_floors), 10);
-tms.Spawns.Add(new InvItem("tm_snatch"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_giga_impact"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_sunny_day"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_sandstorm"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_x_scissor"), new IntRange(0, max_floors), 10);
@@ -178,7 +178,7 @@ tms.Spawns.Add(new InvItem("tm_light_screen"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_psyshock"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_dream_eater"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_nature_power"), new IntRange(0, max_floors), 10);
-tms.Spawns.Add(new InvItem("tm_facade"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_earthquake"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_rock_slide"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_fling"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_thunderbolt"), new IntRange(0, max_floors), 10);
@@ -198,7 +198,7 @@ tms.Spawns.Add(new InvItem("tm_acrobatics"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_rock_climb"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_bulk_up"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_pluck"), new IntRange(0, max_floors), 10);
-tms.Spawns.Add(new InvItem("tm_psych_up"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_hyper_beam"), new IntRange(0, max_floors), 10);
 
 
 floorSegment.ZoneSteps.Add(itemSpawnZoneStep);

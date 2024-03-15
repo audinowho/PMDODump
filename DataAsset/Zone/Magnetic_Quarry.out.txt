@@ -107,10 +107,10 @@ tms.Spawns.Add(new InvItem("tm_thief"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_dig"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_cut"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_power_up_punch"), new IntRange(0, max_floors), 10);
-tms.Spawns.Add(new InvItem("tm_infestation"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_flash_cannon"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_work_up"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_incinerate"), new IntRange(0, max_floors), 10);
-tms.Spawns.Add(new InvItem("tm_roar"), new IntRange(0, max_floors), 10);
+tms.Spawns.Add(new InvItem("tm_iron_tail"), new IntRange(0, max_floors), 10);
 tms.Spawns.Add(new InvItem("tm_flash"), new IntRange(0, max_floors), 10);
 
 

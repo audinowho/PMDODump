@@ -2487,17 +2487,22 @@ namespace DataGenerator.Data
             }
             else if (ii == 578)
             {
-                skill.Name = new LocalText("**Crafty Shield");
+                skill.Name = new LocalText("Crafty Shield");
                 skill.Desc = new LocalText("The user protects itself and its allies from status moves with a mysterious power. This does not stop moves that do damage.");
-                skill.BaseCharges = 10;
+                skill.BaseCharges = 16;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.OnHits.Add(0, new StatusBattleEvent("crafty_shield", true, false));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new AreaAction();
+                ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(37);//Withdraw
+                ((AreaAction)skill.HitboxAction).Range = 4;
+                ((AreaAction)skill.HitboxAction).Speed = 10;
+                skill.HitboxAction.TargetAlignments = (Alignment.Self | Alignment.Friend);
+                skill.Explosion.TargetAlignments = (Alignment.Self | Alignment.Friend);
+                skill.HitboxAction.ActionFX.Sound = "DUN_Aurora_Beam_2";
+                skill.HitboxAction.ActionFX.Emitter = new SingleEmitter(new AnimData("Protect_Pink", 2));
             }
             else if (ii == 579)
             {
@@ -2663,22 +2668,24 @@ namespace DataGenerator.Data
             }
             else if (ii == 587)
             {
-                skill.Name = new LocalText("**Fairy Lock");
-                skill.Desc = new LocalText("By locking down the battlefield, the user immobilizes all other Pokémon in the area.");
-                skill.BaseCharges = 12;
+                skill.Name = new LocalText("Fairy Lock");
+                skill.Desc = new LocalText("The user locks down the battlefield, causing all other Pokémon in the area to become immobilized after attacking.");
+                skill.BaseCharges = 14;
                 skill.Data.Element = "fairy";
                 skill.Data.Category = BattleData.SkillCategory.Status;
-                skill.Data.HitRate = -1;
-                StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
-                statusStates.Set(new CountDownState(4));
-                skill.Data.OnHits.Add(0, new StatusStateBattleEvent("immobilized", true, false, statusStates));
+                skill.Data.HitRate = 100;
+                skill.Data.OnHits.Add(0, new StatusBattleEvent("fairy_lock", true, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
-                ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
+                ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
+                ((AreaAction)skill.HitboxAction).HitArea = Hitbox.AreaLimit.Full;
                 ((AreaAction)skill.HitboxAction).Range = 3;
                 ((AreaAction)skill.HitboxAction).Speed = 10;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
                 skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Ice_Shard";
+                BetweenEmitter emitter = new BetweenEmitter(new AnimData("Embargo_Yellow_Front", 2), new AnimData("Embargo_Yellow_Back", 2));
+                skill.Data.HitFX.Emitter = emitter;
             }
             else if (ii == 588)
             {
@@ -4564,19 +4571,24 @@ namespace DataGenerator.Data
             }
             else if (ii == 693)
             {
-                skill.Name = new LocalText("**Brutal Swing");
+                skill.Name = new LocalText("Brutal Swing");
                 skill.Desc = new LocalText("The user swings its body around violently to inflict damage on everything in its vicinity.");
-                skill.BaseCharges = 20;
+                skill.BaseCharges = 17;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(60));
+                skill.Data.SkillStates.Set(new BasePowerState(70));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
+                ((AttackAction)skill.HitboxAction).HitTiles = true;
+                ((AttackAction)skill.HitboxAction).WideAngle = AttackCoverage.Around;
+                skill.HitboxAction.ActionFX.Emitter = new SingleEmitter(new AnimData("Cut_Dark", 2));
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Cut";
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Shadow_Sneak_Hit", 2));
             }
             else if (ii == 694)
             {
@@ -6467,19 +6479,25 @@ namespace DataGenerator.Data
             }
             else if (ii == 806)
             {
-                skill.Name = new LocalText("**Skitter Smack");
+                skill.Name = new LocalText("Skitter Smack");
                 skill.Desc = new LocalText("The user skitters behind the target to attack. This also lowers the target’s Sp. Atk stat.");
-                skill.BaseCharges = 10;
+                skill.BaseCharges = 16;
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(70));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_special_attack", true, true, -1)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(40);//Swing
+                ((AttackAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                BattleFX preFX = new BattleFX();
+                preFX.Sound = "DUN_Grass_Knot";
+                skill.HitboxAction.PreActions.Add(preFX);
             }
             else if (ii == 807)
             {
@@ -7444,19 +7462,38 @@ namespace DataGenerator.Data
             }
             else if (ii == 866)
             {
-                skill.Name = new LocalText("**Mortal Spin");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Name = new LocalText("Mortal Spin");
+                skill.Desc = new LocalText("A spin attack that can eliminate moves such as Wrap or Leech Seed. It also destroys traps, and poisons opponents.");
+                skill.BaseCharges = 18;
                 skill.Data.Element = "poison";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(30));
+                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.BeforeActions.Add(-1, new AddContextStateEvent(new BoundAttack()));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
+                skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("wrap", false));
+                skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("bind", false));
+                skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("fire_spin", false));
+                skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("whirlpool", false));
+                skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("sand_tomb", false));
+                skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("immobilized", false));
+                skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("leech_seed", false));
+                skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("clamp", false));
+                skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("infestation", false));
+                skill.Data.AfterActions.Add(0, new RemoveStatusBattleEvent("magma_storm", false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimProcess(CharAnimProcess.ProcessType.Spin);//Spin
+                ((AttackAction)skill.HitboxAction).HitTiles = true;
+                ((AttackAction)skill.HitboxAction).WideAngle = AttackCoverage.Around;
+                SingleEmitter shootEmitter = new SingleEmitter(new AnimData("Gust_Purple", 1));
+                shootEmitter.LocHeight = 24;
+                skill.HitboxAction.ActionFX.Emitter = shootEmitter;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Gunk_Shot_2";
             }
             else if (ii == 867)
             {
@@ -7887,19 +7924,31 @@ namespace DataGenerator.Data
             }
             else if (ii == 893)
             {
-                skill.Name = new LocalText("**Gigaton Hammer");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 5;
+                skill.Name = new LocalText("Gigaton Hammer");
+                skill.Desc = new LocalText("The user swings its whole body around to attack with its huge hammer. This move can't be used twice in a row.");
+                skill.BaseCharges = 8;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(160));
+                skill.Data.SkillStates.Set(new BasePowerState(140));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.AfterActions.Add(0, new CounterDisableBattleEvent("cooldown", new StringKey()));
                 skill.Strikes = 1;
+                skill.Explosion.Range = 1;
+                skill.Explosion.HitTiles = true;
+                skill.Explosion.Speed = 10;
+                skill.Explosion.ExplodeFX.Sound = "DUN_Self-Destruct";
+                skill.Explosion.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                CircleSquareAreaEmitter explosionEmitter = new CircleSquareAreaEmitter(new AnimData("Blast_Seed", 3));
+                explosionEmitter.ParticlesPerTile = 0.8;
+                skill.Explosion.Emitter = explosionEmitter;
                 skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(23);//Slam
+                ((AttackAction)skill.HitboxAction).WideAngle = AttackCoverage.FrontAndCorners;
+                ((AttackAction)skill.HitboxAction).BurstTiles = TileAlignment.Any;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                ((AttackAction)skill.HitboxAction).Emitter = new SingleEmitter(new AnimData("Print_Fist", 12));
+                skill.HitboxAction.ActionFX.Sound = "DUN_Punch";
             }
             else if (ii == 894)
             {
