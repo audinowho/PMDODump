@@ -9,6 +9,7 @@
 * Fixed errors ocurring at the end of a dungeon completion cutscene
 * Escape does not count towards rogue mode completion
 * Stance Change switches Aegislash to Shield forme on using any status move
+* RC: Reworked Sleeping Caldera to 14+4 floors. Full Rogue rework of 21+5 floors planned later.
 * RC: Fixed an issue where Magma Storm was not counted as a partial trapping status
 * RC: Added Tinkatink, Glimmora, Klefki
 * RC: End-of-adventure inventory menu fixed to support inv extensions

@@ -505,8 +505,7 @@ namespace DataGenerator.Data
 
 
             //353 Shuppet : 174 Curse : 101 Night Shade
-            poolSpawn.Spawns.Add(GetTeamMob("shuppet", "", "curse", "night_shade", "", "", new RandRange(11)), new IntRange(6, 8), 10);
-
+            poolSpawn.Spawns.Add(GetTeamMob("shuppet", "insomnia", "night_shade", "", "", "", new RandRange(11)), new IntRange(6, 8), 10);
 
             //220 Swinub : 426 Mud Bomb
             poolSpawn.Spawns.Add(GetTeamMob("swinub", "", "mud_bomb", "", "", "", new RandRange(13), TeamMemberSpawn.MemberRole.Leader), new IntRange(6, 8), 10);
@@ -665,7 +664,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob("probopass", "", "magnet_bomb", "magnet_rise", "earth_power", "", new RandRange(26), TeamMemberSpawn.MemberRole.Loner), new IntRange(15, 17), 10);
 
             //353 Shuppet : 271 Trick : 180 Spite
-            poolSpawn.Spawns.Add(GetTeamMob("shuppet", "", "trick", "spite", "", "", new RandRange(25), "thief"), new IntRange(15, 17), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("shuppet", "insomnia", "curse", "night_shade", "", "", new RandRange(25)), new IntRange(15, 17), 10);
 
             //136 Flareon : 83 Fire Spin : 387 Last Resort
             poolSpawn.Spawns.Add(GetTeamMob("flareon", "", "fire_spin", "last_resort", "", "", new RandRange(26)), new IntRange(15, 17), 10);
@@ -748,7 +747,7 @@ namespace DataGenerator.Data
 
             //491 Acid Spray? 380 Gastro Acid?
             //317 Swalot : 60 Sticky Hold : 188 Sludge Bomb : 151 Acid Armor
-            poolSpawn.Spawns.Add(GetTeamMob("swalot", "sticky_hold", "sludge_bomb", "acid_armor", "", "", new RandRange(32), TeamMemberSpawn.MemberRole.Loner), new IntRange(18, 20), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("swalot", "liquid_ooze", "sludge_bomb", "acid_armor", "", "", new RandRange(32), TeamMemberSpawn.MemberRole.Loner), new IntRange(18, 20), 10);
 
             //50//428 Lopunny : 415 Switcheroo : 494 Entrainment : 98 Quick Attack
 
@@ -911,7 +910,7 @@ namespace DataGenerator.Data
             poolSpawn.Spawns.Add(GetTeamMob("piloswine", "", "ice_fang", "fury_attack", "take_down", "", new RandRange(38)), new IntRange(22, 24), 10);
 
             //101 Electrode : 205 Rollout : 153 Explosion : 113 Light Screen
-            poolSpawn.Spawns.Add(GetTeamMob("electrode", "", "rollout", "explosion", "", "", new RandRange(38), TeamMemberSpawn.MemberRole.Support), new IntRange(22, 24), 10);
+            poolSpawn.Spawns.Add(GetTeamMob("electrode", "", "rollout", "self_destruct", "light_screen", "", new RandRange(38), TeamMemberSpawn.MemberRole.Support), new IntRange(22, 24), 10);
 
             //1//225 Delibird : 217 Present
 

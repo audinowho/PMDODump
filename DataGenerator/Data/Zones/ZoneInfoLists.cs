@@ -145,7 +145,7 @@ namespace DataGenerator.Data
             yield return "xcl_element_water_silk";
         }
 
-        static IEnumerable<string> IterateLegendaries()
+        public static IEnumerable<string> IterateLegendaries()
         {
             yield return "articuno";
             yield return "zapdos";
@@ -255,6 +255,34 @@ namespace DataGenerator.Data
             yield return "iron_valiant";
             yield return "koraidon";
             yield return "miraidon";
+        }
+
+        private static IEnumerable<string> IterateSubLegendItems()
+        {
+            yield return "xcl_family_bird_trio_09";
+            yield return "xcl_family_bird_trio_10";
+            yield return "xcl_family_ho_oh_beasts_08";
+            yield return "xcl_family_ho_oh_beasts_09";
+            yield return "xcl_family_ho_oh_beasts_12";
+            yield return "xcl_family_ho_oh_beasts_13";
+            yield return "xcl_family_ho_oh_beasts_16";
+            yield return "xcl_family_ho_oh_beasts_17";
+            yield return "xcl_family_regi_trio_06";
+            yield return "xcl_family_regi_trio_07";
+            yield return "xcl_family_regi_trio_10";
+            yield return "xcl_family_regi_trio_11";
+            yield return "xcl_family_regi_trio_14";
+            yield return "xcl_family_regi_trio_15";
+            yield return "xcl_family_lake_trio_06";
+            yield return "xcl_family_lake_trio_07";
+            yield return "xcl_family_lati_duo_04";
+            yield return "xcl_family_lati_duo_05";
+            yield return "xcl_family_heatran_02";
+            yield return "xcl_family_heatran_03";
+            yield return "xcl_family_cresselia_02";
+            yield return "xcl_family_cresselia_03";
+            yield return "xcl_family_manaphy_phione_03";
+            yield return "xcl_family_manaphy_phione_04";
         }
 
 

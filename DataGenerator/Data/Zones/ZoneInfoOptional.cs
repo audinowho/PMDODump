@@ -2049,6 +2049,8 @@ namespace DataGenerator.Data
                 necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 3);
                 necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(0, max_floors), 6);
                 necessities.Spawns.Add(new InvItem("food_grimy"), new IntRange(0, max_floors), 10);
+                necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 3);
+
                 //snacks
                 CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
                 snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
@@ -3414,7 +3416,7 @@ namespace DataGenerator.Data
 
 
                 tms.Spawns.Add(new InvItem("tm_protect"), new IntRange(0, max_floors), 10);
-                tms.Spawns.Add(new InvItem("tm_round"), new IntRange(0, max_floors), 10);
+                tms.Spawns.Add(new InvItem("tm_giga_drain"), new IntRange(0, max_floors), 10);
                 tms.Spawns.Add(new InvItem("tm_rest"), new IntRange(0, max_floors), 10);
                 tms.Spawns.Add(new InvItem("tm_hidden_power"), new IntRange(0, max_floors), 10);
                 tms.Spawns.Add(new InvItem("tm_thief"), new IntRange(0, max_floors), 10);
@@ -4484,6 +4486,7 @@ namespace DataGenerator.Data
                     tms.Spawns.Add(new InvItem("tm_roar"), new IntRange(0, max_floors), 10);
                     tms.Spawns.Add(new InvItem("tm_flash"), new IntRange(0, max_floors), 10);
                     tms.Spawns.Add(new InvItem("tm_bullet_seed"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_psych_up"), new IntRange(0, max_floors), 10);
 
 
                     floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
@@ -5170,7 +5173,7 @@ namespace DataGenerator.Data
                     tms.Spawns.Add(new InvItem("tm_infestation"), new IntRange(0, max_floors), 10);
                     tms.Spawns.Add(new InvItem("tm_work_up"), new IntRange(0, max_floors), 10);
                     tms.Spawns.Add(new InvItem("tm_roar"), new IntRange(0, max_floors), 10);
-                    tms.Spawns.Add(new InvItem("tm_flash"), new IntRange(0, max_floors), 10);
+                    tms.Spawns.Add(new InvItem("tm_dazzling_gleam"), new IntRange(0, max_floors), 10);
                     tms.Spawns.Add(new InvItem("tm_bullet_seed"), new IntRange(0, max_floors), 10);
 
 
@@ -5571,8 +5574,8 @@ namespace DataGenerator.Data
                 snacks.Spawns.Add(new InvItem("seed_plain"), new IntRange(0, max_floors), 10);
                 snacks.Spawns.Add(new InvItem("seed_vile"), new IntRange(0, max_floors), 10);
                 snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 10);
-                snacks.Spawns.Add(new InvItem("seed_last_chance"), new IntRange(0, max_floors), 10);
-                snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, max_floors), 5);
+                snacks.Spawns.Add(new InvItem("seed_last_chance"), new IntRange(0, max_floors), 5);
+                snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, max_floors), 10);
                 //special
                 CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
                 special.SpawnRates.SetRange(3, new IntRange(0, max_floors));
@@ -5582,8 +5585,8 @@ namespace DataGenerator.Data
                 special.Spawns.Add(new InvItem("apricorn_brown"), new IntRange(0, max_floors), 10);
                 special.Spawns.Add(new InvItem("apricorn_red"), new IntRange(0, max_floors), 10);
                 special.Spawns.Add(new InvItem("apricorn_green"), new IntRange(0, max_floors), 10);
-                special.Spawns.Add(new InvItem("machine_recall_box"), new IntRange(0, max_floors), 10);
-                special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, max_floors), 5);
+                special.Spawns.Add(new InvItem("machine_recall_box"), new IntRange(0, max_floors), 5);
+                special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, max_floors), 10);
                 //throwable
                 CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
                 throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
@@ -5591,10 +5594,11 @@ namespace DataGenerator.Data
 
 
                 throwable.Spawns.Add(new InvItem("ammo_gravelerock", false, 3), new IntRange(0, max_floors), 10);
+                throwable.Spawns.Add(new InvItem("ammo_rare_fossil", false, 2), new IntRange(0, max_floors), 3);
                 throwable.Spawns.Add(new InvItem("ammo_geo_pebble", false, 3), new IntRange(0, max_floors), 10);
-                throwable.Spawns.Add(new InvItem("ammo_cacnea_spike", false, 2), new IntRange(0, max_floors), 3);
+                throwable.Spawns.Add(new InvItem("ammo_cacnea_spike", false, 2), new IntRange(0, max_floors), 5);
                 throwable.Spawns.Add(new InvItem("ammo_iron_thorn", false, 2), new IntRange(0, max_floors), 3);
-                throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 3);
+                throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 10);
                 throwable.Spawns.Add(new InvItem("wand_lure", false, 3), new IntRange(0, max_floors), 3);
                 throwable.Spawns.Add(new InvItem("wand_topsy_turvy", false, 2), new IntRange(0, max_floors), 3);
                 throwable.Spawns.Add(new InvItem("wand_path", false, 1), new IntRange(0, max_floors), 3);
@@ -5616,10 +5620,10 @@ namespace DataGenerator.Data
                 itemSpawnZoneStep.Spawns.Add("held", held);
 
 
-                held.Spawns.Add(new InvItem("held_power_band", true), new IntRange(0, max_floors), 3);
-                held.Spawns.Add(new InvItem("held_power_band"), new IntRange(0, max_floors), 7);
-                held.Spawns.Add(new InvItem("held_defense_scarf", true), new IntRange(0, max_floors), 3);
-                held.Spawns.Add(new InvItem("held_defense_scarf"), new IntRange(0, max_floors), 7);
+                held.Spawns.Add(new InvItem("held_charcoal", true), new IntRange(0, max_floors), 3);
+                held.Spawns.Add(new InvItem("held_charcoal"), new IntRange(0, max_floors), 7);
+                held.Spawns.Add(new InvItem("held_mystic_water", true), new IntRange(0, max_floors), 3);
+                held.Spawns.Add(new InvItem("held_mystic_water"), new IntRange(0, max_floors), 7);
                 held.Spawns.Add(new InvItem("held_scope_lens", true), new IntRange(0, max_floors), 3);
                 held.Spawns.Add(new InvItem("held_scope_lens"), new IntRange(0, max_floors), 7);
                 held.Spawns.Add(new InvItem("held_shell_bell", true), new IntRange(0, max_floors), 3);
@@ -5674,7 +5678,6 @@ namespace DataGenerator.Data
                 poolSpawn.Spawns.Add(GetTeamMob("trapinch", "", "mud_slap", "bide", "", "", new RandRange(24), "wait_and_see"), new IntRange(1, max_floors), 5);
                 poolSpawn.Spawns.Add(GetTeamMob("scraggy", "", "leer", "low_kick", "", "", new RandRange(24), "wait_and_see"), new IntRange(0, 2), 5);
                 poolSpawn.Spawns.Add(GetTeamMob("gible", "", "sandstorm", "dragon_rage", "", "", new RandRange(25), "wait_and_see"), new IntRange(2, max_floors), 10);
-
                 poolSpawn.Spawns.Add(GetTeamMob("rockruff", "", "odor_sleuth", "rock_throw", "", "", new RandRange(22), TeamMemberSpawn.MemberRole.Support, "wait_and_see"), new IntRange(0, 2), 10);
 
                 {
