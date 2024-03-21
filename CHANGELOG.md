@@ -6,10 +6,12 @@
 * Fixed the effect of Neutralizing Gas
 * X Items and Full Heal Range 3 -> 5
 * Psyshock BP 90->70, PP 16->11, now hits in a +-shaped pattern
+* Feint Attack cuts corners, PP 20->19
 * Fixed errors ocurring at the end of a dungeon completion cutscene
 * Escape does not count towards rogue mode completion
 * Stance Change switches Aegislash to Shield forme on using any status move
 * RC: Reworked Sleeping Caldera to 14+4 floors. Full Rogue rework of 21+5 floors planned later.
+* RC: Added Depleted Basin to serve as dead-end dungeon in light of Sleeping Caldera's upgrade
 * RC: Fixed an issue where Magma Storm was not counted as a partial trapping status
 * RC: Added Tinkatink, Glimmora, Klefki
 * RC: End-of-adventure inventory menu fixed to support inv extensions

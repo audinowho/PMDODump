@@ -1115,7 +1115,7 @@ namespace DataGenerator.Data
                     }
 
 
-                    AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), 1);
+                    AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 6, 30), new IntRange(0, max_floors - 1)), 1);
 
                     AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 2);
 
@@ -1258,7 +1258,7 @@ namespace DataGenerator.Data
                         SingularSegment structure = new SingularSegment(-1);
 
                         SpawnList<TeamMemberSpawn> enemyList = new SpawnList<TeamMemberSpawn>();
-                        enemyList.Add(GetTeamMob(new MonsterID("vivillon", 0, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
+                        enemyList.Add(GetTeamMob(new MonsterID("vivillon", 2, "", Gender.Unknown), "", "poison_powder", "psybeam", "powder", "struggle_bug", new RandRange(zone.Level)), 10);
                         structure.BaseFloor = getSecretRoom(translate, "special_rby_bird", -1, "hidden_land_wall", "hidden_land_floor", "hidden_land_secondary", "tall_grass_dark", "flying", DungeonStage.Beginner, DungeonAccessibility.MainPath, enemyList, new Loc(6, 4));
 
                         zone.Segments.Add(structure);
@@ -1696,7 +1696,7 @@ namespace DataGenerator.Data
 
 
 
-                        AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), 1);
+                        AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 6, 30), new IntRange(0, max_floors - 1)), 1);
 
                         AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 2);
 
@@ -3192,7 +3192,12 @@ namespace DataGenerator.Data
                             AddSpecificTextureData(layout, "frosty_forest_wall", "frosty_forest_floor", "frosty_forest_secondary", "tall_grass_white", "ice");
 
                         if (ii >= 7)
-                            AddGrassSteps(layout, new RandRange(4, 9), new IntRange(2, 7), new RandRange(25));
+                        {
+                            MapTerrainStencil<MapGenContext> terrainStencil = new MapTerrainStencil<MapGenContext>(true, false, false, false);
+                            TileEffectStencil<MapGenContext> noTile = new TileEffectStencil<MapGenContext>(true);
+                            PerlinWaterStep<MapGenContext> coverStep = new PerlinWaterStep<MapGenContext>(new RandRange(20), 4, new Tile("grass"), new MultiTerrainStencil<MapGenContext>(false, terrainStencil, noTile), 0, false);
+                            layout.GenSteps.Add(PR_WATER, coverStep);
+                        }
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -3894,7 +3899,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Copper Quarry");
                     zone.Rescues = 2;
                     zone.Level = 25;
-                    zone.ExpPercent = 50;
+                    zone.ExpPercent = 30;
                     zone.Rogue = RogueStatus.NoTransfer;
 
                     {
@@ -3902,7 +3907,7 @@ namespace DataGenerator.Data
                         LayeredSegment floorSegment = new LayeredSegment();
                         floorSegment.IsRelevant = true;
                         floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Copper Quarry\n{0}F"), new Priority(-15)));
+                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Copper Quarry\nB{0}F"), new Priority(-15)));
 
                         //money
                         MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
@@ -4817,6 +4822,7 @@ namespace DataGenerator.Data
             }
             else if (index == 25)
             {
+                FillDepletedBasin(zone, translate);
             }
             else if (index == 30)
                 FillSecretGarden(zone);
@@ -5867,6 +5873,7 @@ namespace DataGenerator.Data
                             AddFloorData(layout, "Mystifying Forest.ogg", 500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
+                            //buried_relic
                             if (ii < 9)
                                 AddTextureData(layout, "darknight_relic_wall", "darknight_relic_floor", "darknight_relic_secondary", "normal");
                             else

@@ -397,6 +397,14 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_WATER, trapStep);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="layout"></param>
+        /// <param name="roomBlobCount"></param>
+        /// <param name="roomBlobSize"></param>
+        /// <param name="hallPercent">Beware, this only works for one-tile halls</param>
         public static void AddGrassSteps<T>(MapGen<T> layout, RandRange roomBlobCount, IntRange roomBlobSize, RandRange hallPercent) where T : BaseMapGenContext
         {
             string coverTerrain = "grass";

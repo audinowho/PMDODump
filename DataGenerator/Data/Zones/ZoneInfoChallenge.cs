@@ -1452,7 +1452,7 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
                     //if (ii == soft_max - 1)
                     //    layout.GenSteps.Add(PR_DBG_CHECK, new DetectItemStep<ListMapGenContext>("loot_music_box"));
-                    else if (ii > soft_max)
+                    if (ii > soft_max)
                         layout.GenSteps.Add(PR_DBG_CHECK, new DetectItemStep<ListMapGenContext>("box_deluxe"));
 
 
@@ -1829,7 +1829,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(chestChanceZoneStep);
                 }
 
-                AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), 1);
+                AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 6, 30), new IntRange(0, max_floors - 1)), 1);
 
                 AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 10, 2);
 
@@ -2597,7 +2597,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                 }
 
-                AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), 1);
+                AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 6, 30), new IntRange(0, max_floors - 1)), 1);
 
                 AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 10, 2);
 
@@ -3516,7 +3516,7 @@ namespace DataGenerator.Data
 
                 AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(1, max_floors)), false);
 
-                AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors - 1)), 1);
+                AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 6, 30), new IntRange(0, max_floors - 1)), 1);
 
                 AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 2);
 
