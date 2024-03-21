@@ -2028,11 +2028,13 @@ namespace DataGenerator.Data
             }
             else if (ii == 278)
             {
-                ability.Name = new LocalText("**Zero to Hero");
-                ability.Desc = new LocalText("");
+                ability.Name = new LocalText("Zero to Hero");
+                ability.Desc = new LocalText("The Pokémon switches between Zero Form and Hero Form when entering a new floor.");
+                ability.OnMapStarts.Add(-10, new RevolvingFormeEvent("palfin", 0, 1));
             }
             else if (ii == 279)
             {
+                //PLEASE NO
                 ability.Name = new LocalText("**Commander");
                 ability.Desc = new LocalText("");
             }
