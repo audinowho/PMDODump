@@ -6013,6 +6013,8 @@ namespace DataGenerator.Data
                             {
                                 SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
                                 bossRooms.Add(getBossRoomGen<MapGenContext>("clefable", 24, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("minior", 26, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("lopunny", 26, 0, 1), 10);
                                 bossRooms.Add(getBossRoomGen<MapGenContext>("gallade", 30, 0, 1), 10);
                                 bossRooms.Add(getBossRoomGen<MapGenContext>("umbreon", 30, 0, 1), 10);
                                 bossRooms.Add(getBossRoomGen<MapGenContext>("volbeat", 30, 0, 1), 10);

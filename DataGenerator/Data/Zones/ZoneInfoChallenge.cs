@@ -4272,6 +4272,45 @@ namespace DataGenerator.Data
                 }
 
 
+                {
+                    SpreadBossZoneStep bossChanceZoneStep = new SpreadBossZoneStep(PR_ROOMS_GEN_EXTRA, PR_SPAWN_ITEMS_EXTRA, new SpreadPlanQuota(new RandDecay(1, 10, 60), new IntRange(1, max_floors)));
+
+                    {
+                        ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(16, 16), Dir8.None);
+                        bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, addSizeStep));
+                        ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
+                        bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, limitStep));
+                        ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
+                        bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, clampStep));
+                    }
+
+                    //BOSS TEAMS
+                    // no specific items to be used in lv5 dungeons
+
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("raichu", 0, 31, 2, 3), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("espeon", 0, 31, 2, 3), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("vaporeon", 0, 31, 2, 3), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("volcarona", 0, 35, 1, 1), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("minior", 0, 35, 1, 1), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("lopunny", 0, 35, 1, 1), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("delphox", 0, 35, 1, 1), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("wobbuffet", 0, 35, 1, 1), new IntRange(0, max_floors), 10);
+
+                    //sealing the boss room and treasure room
+                    {
+                        BossSealStep<ListMapGenContext> vaultStep = new BossSealStep<ListMapGenContext>("sealed_block", "tile_boss");
+                        vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BossLocked));
+                        vaultStep.Filters.Add(new RoomFilterIndex(false, 0));
+                        vaultStep.BossFilters.Add(new RoomFilterComponent(false, new BossRoom()));
+                        vaultStep.BossFilters.Add(new RoomFilterIndex(false, 0));
+                        bossChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_TILES_GEN_EXTRA, vaultStep));
+                    }
+
+                    PopulateBossItems(bossChanceZoneStep, DungeonStage.Advanced, DungeonAccessibility.Hidden, max_floors);
+
+                    floorSegment.ZoneSteps.Add(bossChanceZoneStep);
+                }
+
                 AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 2);
 
 
