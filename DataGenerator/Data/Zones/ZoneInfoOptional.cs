@@ -5929,7 +5929,10 @@ namespace DataGenerator.Data
                             GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                             path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                            path.RoomRatio = new RandRange(100);
+                            if (ii < 5)
+                                path.RoomRatio = new RandRange(100);
+                            else
+                                path.RoomRatio = new RandRange(50);
                             path.BranchRatio = new RandRange(0, 25);
 
                             SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();

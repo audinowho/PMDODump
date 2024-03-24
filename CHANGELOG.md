@@ -14,6 +14,7 @@
 * RC: Reworked Sleeping Caldera to 14+4 floors. Full Rogue rework of 21+5 floors planned later
 * RC: Reworked Relic Tower to be more difficult
 * RC: Added Depleted Basin to serve as dead-end dungeon in light of Sleeping Caldera's upgrade
+* RC: Added gangs that drop treasure boxes to dungeons that either don't recruit or give EXP.  Slightly lowered the overall enemy density of these dungeons
 * RC: Fixed an issue where Magma Storm was not counted as a partial trapping status
 * RC: Added Tinkatink, Glimmora, Klefki, Gothorita
 * RC: End-of-adventure inventory menu fixed to support inv extensions

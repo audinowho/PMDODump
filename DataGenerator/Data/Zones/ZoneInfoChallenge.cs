@@ -1706,9 +1706,22 @@ namespace DataGenerator.Data
                 poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                 poolSpawn.TeamSizes.Add(2, new IntRange(0, 10), 3);
                 poolSpawn.TeamSizes.Add(2, new IntRange(10, max_floors), 4);
-                poolSpawn.TeamSizes.Add(3, new IntRange(15, max_floors), 3);
 
                 floorSegment.ZoneSteps.Add(poolSpawn);
+
+
+
+                {
+                    BossBandContextSpawner<ListMapGenContext> spawner = new BossBandContextSpawner<ListMapGenContext>(new RandRange(4));
+                    MobSpawnExclFamily itemSpawn = new MobSpawnExclFamily("box_light", new IntRange(1), true);
+                    spawner.LeaderFeatures.Add(itemSpawn);
+
+                    SpawnRangeList<IGenStep> specialEnemySpawns = new SpawnRangeList<IGenStep>();
+                    specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
+                    SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(1, 4), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
+                    floorSegment.ZoneSteps.Add(specialEnemyStep);
+                }
+
 
                 List<string> tutorElements = new List<string>() { "poison", "psychic", "ghost" };
                 AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 3, 30), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements);
@@ -1896,15 +1909,15 @@ namespace DataGenerator.Data
                     AddMoneyData(layout, new RandRange(4, 9));
 
                     //enemies
-                    AddRespawnData(layout, 12, 100);
+                    AddRespawnData(layout, 11, 100);
                     if (ii < 4)
-                        AddEnemySpawnData(layout, 20, new RandRange(6, 10));
+                        AddEnemySpawnData(layout, 20, new RandRange(6, 9));
                     else if (ii < 8)
-                        AddEnemySpawnData(layout, 20, new RandRange(7, 10));
+                        AddEnemySpawnData(layout, 20, new RandRange(7, 9));
                     else if (ii < 16)
-                        AddEnemySpawnData(layout, 20, new RandRange(8, 11));
+                        AddEnemySpawnData(layout, 20, new RandRange(8, 10));
                     else
-                        AddEnemySpawnData(layout, 20, new RandRange(9, 12));
+                        AddEnemySpawnData(layout, 20, new RandRange(8, 11));
 
                     //items
                     if (ii < 8)
@@ -2447,6 +2460,17 @@ namespace DataGenerator.Data
                 floorSegment.ZoneSteps.Add(poolSpawn);
 
 
+                {
+                    BossBandContextSpawner<ListMapGenContext> spawner = new BossBandContextSpawner<ListMapGenContext>(new RandRange(4));
+                    MobSpawnExclFamily itemSpawn = new MobSpawnExclFamily("box_light", new IntRange(1), true);
+                    spawner.LeaderFeatures.Add(itemSpawn);
+
+                    SpawnRangeList<IGenStep> specialEnemySpawns = new SpawnRangeList<IGenStep>();
+                    specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
+                    SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(1, 4), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
+                    floorSegment.ZoneSteps.Add(specialEnemyStep);
+                }
+
                 List<string> tutorElements = new List<string>() { "dragon", "ice", "fairy" };
                 AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 3, 30), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements);
 
@@ -2668,7 +2692,7 @@ namespace DataGenerator.Data
 
                     //enemies
                     AddRespawnData(layout, 10, 130);
-                    AddEnemySpawnData(layout, 20, new RandRange(9, 11));
+                    AddEnemySpawnData(layout, 20, new RandRange(7, 10));
 
                     //items
                     if (ii < 4)

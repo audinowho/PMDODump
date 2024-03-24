@@ -2065,10 +2065,9 @@ namespace DataGenerator.Data
                     //sleeping
                     {
                         TeamMemberSpawn mob = GetTeamMob("mamoswine", "", "earthquake", "icicle_crash", "", "", new RandRange(45), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true, true);
-                        HashSet<string> exceptFor = new HashSet<string>();
-                        foreach (string legend in IterateLegendaries())
-                            exceptFor.Add(legend);
-                        MobSpawnExclAny itemSpawn = new MobSpawnExclAny("box_light", exceptFor, new IntRange(1), true);
+                        MobSpawnItem itemSpawn = new MobSpawnItem(true);
+                        foreach(string gummi in IterateGummis(true))
+                            itemSpawn.Items.Add(new InvItem(gummi), 10);
                         mob.Spawn.SpawnFeatures.Add(itemSpawn);
                         poolSpawn.Spawns.Add(mob, new IntRange(0, 6), 5);
                     }
@@ -2086,11 +2085,14 @@ namespace DataGenerator.Data
 
                     //sleeping
                     {
-                        TeamMemberSpawn mob = GetTeamMob("exploud", "", "hyper_voice", "sleep_talk", "rest", "boomburst", new RandRange(42), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true, true);
-                        HashSet<string> exceptFor = new HashSet<string>();
-                        foreach (string legend in IterateLegendaries())
-                            exceptFor.Add(legend);
-                        MobSpawnExclAny itemSpawn = new MobSpawnExclAny("box_light", exceptFor, new IntRange(1), true);
+                        TeamMemberSpawn mob = GetTeamMob("exploud", "", "hyper_voice", "sleep_talk", "rest", "boomburst", new RandRange(47), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true, true);
+                        MobSpawnItem itemSpawn = new MobSpawnItem(true);
+                        itemSpawn.Items.Add(new InvItem("boost_hp_up"), 10);
+                        itemSpawn.Items.Add(new InvItem("boost_protein"), 10);
+                        itemSpawn.Items.Add(new InvItem("boost_iron"), 10);
+                        itemSpawn.Items.Add(new InvItem("boost_calcium"), 10);
+                        itemSpawn.Items.Add(new InvItem("boost_zinc"), 10);
+                        itemSpawn.Items.Add(new InvItem("boost_carbos"), 10);
                         mob.Spawn.SpawnFeatures.Add(itemSpawn);
                         poolSpawn.Spawns.Add(mob, new IntRange(10, 14), 5);
                     }
@@ -2113,7 +2115,7 @@ namespace DataGenerator.Data
                     
                     //sleeping
                     {
-                        TeamMemberSpawn mob = GetTeamMob("rhyperior", "solid_rock", "drill_run", "rock_wrecker", "", "", new RandRange(45), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true, true);
+                        TeamMemberSpawn mob = GetTeamMob("rhyperior", "solid_rock", "drill_run", "rock_wrecker", "", "", new RandRange(50), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true, true);
                         HashSet<string> exceptFor = new HashSet<string>();
                         foreach (string legend in IterateLegendaries())
                             exceptFor.Add(legend);
@@ -2145,6 +2147,17 @@ namespace DataGenerator.Data
 
 
                     floorSegment.ZoneSteps.Add(poolSpawn);
+
+                    {
+                        BossBandContextSpawner<ListMapGenContext> spawner = new BossBandContextSpawner<ListMapGenContext>(new RandRange(4));
+                        MobSpawnExclFamily itemSpawn = new MobSpawnExclFamily("box_light", new IntRange(1), true);
+                        spawner.LeaderFeatures.Add(itemSpawn);
+
+                        SpawnRangeList<IGenStep> specialEnemySpawns = new SpawnRangeList<IGenStep>();
+                        specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(1, 5), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
+                        floorSegment.ZoneSteps.Add(specialEnemyStep);
+                    }
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
@@ -2313,13 +2326,13 @@ namespace DataGenerator.Data
                         AddMoneyData(layout, new RandRange(4, 9));
 
                         //enemies
-                        AddRespawnData(layout, 19, 120);
+                        AddRespawnData(layout, 17, 120);
                         if (ii < 12)
-                            AddEnemySpawnData(layout, 20, new RandRange(9, 12));
+                            AddEnemySpawnData(layout, 20, new RandRange(7, 10));
                         else if (ii < 20)
-                            AddEnemySpawnData(layout, 20, new RandRange(11, 14));
+                            AddEnemySpawnData(layout, 20, new RandRange(9, 12));
                         else
-                            AddEnemySpawnData(layout, 20, new RandRange(12, 16));
+                            AddEnemySpawnData(layout, 20, new RandRange(10, 14));
 
                         //items
                         AddItemData(layout, new RandRange(4, 7), 25);
@@ -2981,6 +2994,18 @@ namespace DataGenerator.Data
 
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
+
+                    {
+                        BossBandContextSpawner<ListMapGenContext> spawner = new BossBandContextSpawner<ListMapGenContext>(new RandRange(3));
+                        MobSpawnExclFamily itemSpawn = new MobSpawnExclFamily("box_light", new IntRange(1), true);
+                        spawner.LeaderFeatures.Add(itemSpawn);
+
+                        SpawnRangeList<IGenStep> specialEnemySpawns = new SpawnRangeList<IGenStep>();
+                        specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
+                        floorSegment.ZoneSteps.Add(specialEnemyStep);
+                    }
+
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
 
@@ -3218,8 +3243,8 @@ namespace DataGenerator.Data
                         AddMoneyData(layout, new RandRange(3, 8));
 
                         //enemies
-                        AddRespawnData(layout, 13, 110);
-                        AddEnemySpawnData(layout, 20, new RandRange(9, 12));
+                        AddRespawnData(layout, 11, 110);
+                        AddEnemySpawnData(layout, 20, new RandRange(7, 11));
 
                         //items
                         AddItemData(layout, new RandRange(3, 7), 25);
@@ -3572,6 +3597,17 @@ namespace DataGenerator.Data
                     poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 6);
 
                     floorSegment.ZoneSteps.Add(poolSpawn);
+
+                    {
+                        BossBandContextSpawner<ListMapGenContext> spawner = new BossBandContextSpawner<ListMapGenContext>(new RandRange(3));
+                        MobSpawnExclFamily itemSpawn = new MobSpawnExclFamily("box_light", new IntRange(1), true);
+                        spawner.LeaderFeatures.Add(itemSpawn);
+
+                        SpawnRangeList<IGenStep> specialEnemySpawns = new SpawnRangeList<IGenStep>();
+                        specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
+                        floorSegment.ZoneSteps.Add(specialEnemyStep);
+                    }
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
