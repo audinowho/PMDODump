@@ -72,7 +72,7 @@ namespace DataGenerator.Data
         ExcessiveForce,//3* deal AOE damage after defeating an enemy
         Anchor,//1*
         BarrageGuard,//2*
-        BetterOdds,//3* cannot miss and will crit if the move has 1 PP left
+        BetterOdds,//3* cannot miss and will crit if all moves have the same PP
         ClutchPerformer,//4* dodges moves in a pinch
         DistanceDodge,//4* dodges faraway moves
         CloseDodge,//4* dodges close-up moves
@@ -339,18 +339,8 @@ namespace DataGenerator.Data
                 if (traversed.Contains(monsterKeys[ii]))
                     continue;
 
-                string firstStage = monsterKeys[ii];
-                MonsterData data = DataManager.Instance.GetMonster(firstStage);
-                string prevo = data.PromoteFrom;
-                while (!String.IsNullOrEmpty(prevo))
-                {
-                    firstStage = prevo;
-                    data = DataManager.Instance.GetMonster(firstStage);
-                    prevo = data.PromoteFrom;
-                }
                 List<string> dexNums = new List<string>();
-                dexNums.Add(firstStage.ToString());
-                bool branched = FindEvos(dexNums, data);
+                bool branched = FindFullFamily(dexNums, monsterKeys[ii]);
                 evoTrees.Add(dexNums);
                 branchedEvo.Add(branched);
                 foreach (string dexNum in dexNums)
@@ -437,11 +427,11 @@ namespace DataGenerator.Data
 
                     string customName = row[1].Trim();
                     ExclusiveItemType exclType = (ExclusiveItemType)Enum.Parse(typeof(ExclusiveItemType), row[0].Substring(2));
-                    ExclusiveItemEffect exclEffect = (ExclusiveItemEffect)Int32.Parse(row[11].Substring(3, 3));
+                    ExclusiveItemEffect exclEffect = (ExclusiveItemEffect)Int32.Parse(row[12].Substring(3, 3));
                     string primaryDex = row[2].Trim();
                     dex_map[item_idx] = primaryDex;
 
-                    string[] rarityStr = row[10].Substring(0, row[10].Length-1).Split('-');
+                    string[] rarityStr = row[11].Substring(0, row[11].Length-1).Split('-');
                     int minRarity = Int32.Parse(rarityStr[0]);
                     int maxRarity = minRarity;
                     if (rarityStr.Length > 1)
@@ -449,25 +439,25 @@ namespace DataGenerator.Data
 
 
                     List<object> args = new List<object>();
-                    if (row[12] != "")
-                        args.Add(row[12].Trim());
                     if (row[13] != "")
                         args.Add(row[13].Trim());
                     if (row[14] != "")
-                        args.Add(new Stat[] { (Stat)Int32.Parse(row[14].Substring(0, 3)) });
+                        args.Add(row[14].Trim());
                     if (row[15] != "")
-                        args.Add(row[15].Trim());
+                        args.Add(new Stat[] { (Stat)Int32.Parse(row[15].Substring(0, 3)) });
                     if (row[16] != "")
-                        args.Add((BattleData.SkillCategory)Int32.Parse(row[16].Substring(0, 3)));
+                        args.Add(row[16].Trim());
                     if (row[17] != "")
-                        args.Add(Int32.Parse(row[17]));
+                        args.Add((BattleData.SkillCategory)Int32.Parse(row[17].Substring(0, 3)));
                     if (row[18] != "")
-                        args.Add(row[18].Trim());
+                        args.Add(Int32.Parse(row[18]));
+                    if (row[19] != "")
+                        args.Add(row[19].Trim());
 
                     List<string> familyStarts = new List<string>();
-                    if (row[4] != "")
+                    if (row[5] != "")
                     {
-                        string[] startDexes = row[4].Split(',');
+                        string[] startDexes = row[5].Split(',');
                         foreach (string startDex in startDexes)
                         {
                             string cutoff = startDex.Trim();
@@ -484,27 +474,18 @@ namespace DataGenerator.Data
                         if (includeFamily)
                         {
                             string firstStage = dex;
-                            MonsterData data = DataManager.Instance.GetMonster(firstStage);
-                            string prevo = data.PromoteFrom;
-                            while (!String.IsNullOrEmpty(prevo))
-                            {
-                                firstStage = prevo;
-                                data = DataManager.Instance.GetMonster(firstStage);
-                                prevo = data.PromoteFrom;
-                            }
-                            dexNums.Add(firstStage);
-                            AutoItemInfo.FindEvos(dexNums, data);
+                            FindFullFamily(dexNums, dex);
                         }
                         else
                             dexNums.Add(dex);
                     }
 
                     //decide on a family name
-                    string familyName = row[5];
+                    string familyName = row[6];
                     if (familyName == "")
                     {
                         string earliestFamily = rows[prev_start-init_idx][2].Trim();
-                        for (int nn = 1; (nn + prev_start - init_idx < rows.Count) && (rows[nn + prev_start - init_idx][8] != "A"); nn++)
+                        for (int nn = 1; (nn + prev_start - init_idx < rows.Count) && (rows[nn + prev_start - init_idx][9] != "A"); nn++)
                         {
                             MonsterEntrySummary earliestSummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Get(earliestFamily);
                             string dexNum = rows[nn + prev_start - init_idx][2].Trim();
@@ -536,9 +517,10 @@ namespace DataGenerator.Data
                     item.CannotDrop = true;
 
 
+                    bool enabled = row[4] == "True";
                     if (item.Name.DefaultText.StartsWith("**"))
                         item.Name.DefaultText = item.Name.DefaultText.Replace("*", "");
-                    else if (item.Name.DefaultText != "")
+                    else if (item.Name.DefaultText != "" && enabled)
                         item.Released = true;
 
                     if (item.Name.DefaultText != "" && !item.Released)
@@ -549,16 +531,16 @@ namespace DataGenerator.Data
 
                     if (item.Released)
                     {
-                        string trade_in = row[9];
+                        string trade_in = row[10];
                         running_tradeables.Add(trade_in);
                     }
 
                     bool reload = false;
                     if (ii == rows.Count - 1)
                         reload = true;
-                    else if (rows[ii + 1][8] == "A")
+                    else if (rows[ii + 1][9] == "A")
                         reload = true;
-                    else if (rows[ii + 1][8][0] != rows[ii][8][0] + 1)
+                    else if (rows[ii + 1][9][0] != rows[ii][9][0] + 1)
                         throw new Exception("Out of order labeling!");
 
                     if (reload)
@@ -580,8 +562,8 @@ namespace DataGenerator.Data
                             }
                             else if (running_tradeables.Count == 5)
                             {
-                                //E+B=A
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'E', 'B');
+                                //C+D+B=A
+                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'C', 'D', 'B');
                                 //C+D=E
                                 addSpecificTradeable(specific_tradeables, familyName, prev_start, 'E', 'C', 'D');
 
@@ -589,9 +571,9 @@ namespace DataGenerator.Data
                             else if (running_tradeables.Count == 6)
                             {
                                 //E+F+B=A
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'E', 'F', 'B');
+                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'B', 'E');
                                 //E+F=B
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'B', 'E', 'F');
+                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'B', 'C', 'D');
                                 //C+D=E
                                 addSpecificTradeable(specific_tradeables, familyName, prev_start, 'E', 'C', 'D');
                             }
@@ -637,8 +619,9 @@ namespace DataGenerator.Data
                                 addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'G', 'E');
                                 //G+F=B
                                 addSpecificTradeable(specific_tradeables, familyName, prev_start, 'B', 'G', 'F');
-                                //C+D=G
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'G', 'C', 'D');
+                                //C+D=E/F
+                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'E', 'C', 'D');
+                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'F', 'C', 'D');
                             }
                         }
                         else
@@ -677,47 +660,15 @@ namespace DataGenerator.Data
                                 {
                                     string old_dex = dex_map[prev_start + nn];
 
-                                    switch (primaryDex)
+                                    bool excluded = false;
+                                    foreach (string legend in ZoneInfo.IterateLegendaries())
                                     {
-                                        case "articuno"://legendary birds
-                                        case "zapdos":
-                                        case "moltres":
-                                        case "mewtwo"://mew/two
-                                        case "mew":
-                                        case "unown"://unown
-                                        case "raikou"://legendary beasts
-                                        case "entei":
-                                        case "suicune":
-                                        case "lugia"://bird duo
-                                        case "ho_oh":
-                                        case "celebi"://celebi
-                                        case "regigigas"://regis
-                                        case "regirock":
-                                        case "regice":
-                                        case "registeel":
-                                        case "latias"://lati
-                                        case "latios":
-                                        case "kyogre"://weather trio
-                                        case "groudon":
-                                        case "rayquaza":
-                                        case "jirachi"://jirachi
-                                        case "deoxys"://deoxys
-                                        case "uxie"://spirit trio
-                                        case "mesprit":
-                                        case "azelf":
-                                        case "dialga"://creation trio
-                                        case "palkia":
-                                        case "giratina":
-                                        case "heatran"://heatran
-                                        case "cresselia"://dream duo
-                                        case "darkrai":
-                                        case "shaymin"://shaymin
-                                        case "arceus"://arceus
-                                            break;
-                                        default:
-                                            random_tradeables.Add((old_asset, old_dex, old_item.Rarity));
-                                            break;
+                                        if (legend == primaryDex)
+                                            excluded = true;
+
                                     }
+                                    if (!excluded)
+                                        random_tradeables.Add((old_asset, old_dex, old_item.Rarity));
                                 }
                             }
                         }
@@ -1680,7 +1631,7 @@ namespace DataGenerator.Data
             else if (type == ExclusiveItemEffect.BetterOdds)
             {
                 item.Rarity = 2;
-                item.Desc = new LocalText("When kept in the bag, the Pokémon's attacks never miss and always land a critical hit if the move is on its last PP.");
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's attacks never miss and always land a critical hit if all moves have the same PP.");
                 if (includeEffects)
                 {
                     item.BeforeHittings.Add(0, new FamilyBattleEvent(new BetterOddsEvent()));
@@ -1936,7 +1887,7 @@ namespace DataGenerator.Data
                     BattleData.SkillCategory category = (BattleData.SkillCategory)args[0];
                     localArgs.Add(ToLocalText(category, translate ? itemEffectRows[typeof(ExclusiveItemEffect).Name + "." + type] : item.Desc, translate));
 
-                    item.AfterBeingHits.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new CounterTrapEvent("trap_spikes"))));
+                    item.AfterBeingHits.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new CounterTrapEvent("trap_spikes", new SingleEmitter(new AnimData("Puff_Brown", 3)), "DUN_Substitute"))));
                 }
             }
             else if (type == ExclusiveItemEffect.NoStatusInWeather)
@@ -2026,33 +1977,46 @@ namespace DataGenerator.Data
 
         public static void FillSpecificExclusiveData(string item_idx, ItemData item, string sprite, string name, ExclusiveItemType type, ExclusiveItemEffect effect, object[] effectArgs, string dexFamily, bool translate)
         {
-            string firstStage = dexFamily;
-            MonsterData data = DataManager.Instance.GetMonster(firstStage);
-            string prevo = data.PromoteFrom;
-            while (!String.IsNullOrEmpty(prevo))
-            {
-                firstStage = prevo.ToString();
-                data = DataManager.Instance.GetMonster(firstStage);
-                prevo = data.PromoteFrom;
-            }
             List<string> dexNums = new List<string>();
-            dexNums.Add(firstStage);
-            FindEvos(dexNums, data);
+            FindFullFamily(dexNums, dexFamily);
 
 
             FillExclusiveData(item_idx, item, sprite, name, type, effect, effectArgs, dexFamily, dexNums, translate, true);
         }
 
+        public static bool FindFullFamily(List<string> dexNums, string firstStage)
+        {
+            MonsterData data = DataManager.Instance.GetMonster(firstStage);
+            string prevo = data.PromoteFrom;
+            while (!String.IsNullOrEmpty(prevo))
+            {
+                firstStage = prevo;
+                data = DataManager.Instance.GetMonster(firstStage);
+                prevo = data.PromoteFrom;
+            }
+            if (data.Released)
+            {
+                dexNums.Add(firstStage.ToString());
+                return FindEvos(dexNums, data);
+            }
+            return false;
+        }
+
         public static bool FindEvos(List<string> dexNums, MonsterData data)
         {
-            bool branched = data.Promotions.Count > 1;
+            HashSet<string> uniquePromotions = new HashSet<string>();
+            bool branched = false;
             foreach (PromoteBranch evo in data.Promotions)
             {
-                dexNums.Add(evo.Result.ToString());
+                uniquePromotions.Add(evo.Result);
                 MonsterData evoData = DataManager.Instance.GetMonster(evo.Result);
+                if (!evoData.Released)
+                    continue;
+                if (!dexNums.Contains(evo.Result))
+                    dexNums.Add(evo.Result);
                 branched |= FindEvos(dexNums, evoData);
             }
-            return branched;
+            return branched | (uniquePromotions.Count > 1);
         }
 
         public static void FillExclusiveData(string item_idx, ItemData item, string sprite, string name, ExclusiveItemType type, ExclusiveItemEffect effect, object[] effectArgs, string primaryDexNum, List<string> dexNums, bool translate, bool family)
