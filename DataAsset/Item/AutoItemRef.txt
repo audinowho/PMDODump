@@ -51,7 +51,7 @@ Rarity	EffectType	Description
 3*	049: ExcessiveForce	When kept in the bag, the Pokémon will damage nearby enemies after defeating an enemy.
 1*	050: Anchor	When kept in the bag, the Pokémon is prevented from being forced off its location.
 2*	051: BarrageGuard	When kept in the bag, the Pokémon takes reduced damage from multiple attacks in a turn.
-2*	052: BetterOdds	When kept in the bag, the Pokémon's attacks never miss and always land a critical hit if the move is on its last PP.
+2*	052: BetterOdds	When kept in the bag, the Pokémon's attacks never miss and always land a critical hit if all moves have the same PP.
 2*	053: ClutchPerformer	When kept in the bag, the Pokémon is more likely to evade attacks when at low HP.
 3*	054: DistanceDodge	When kept in the bag, the Pokémon is more likely to evade attacks from far away.
 3*	055: CloseDodge	When kept in the bag, the Pokémon is more likely to evade attacks from close up.
