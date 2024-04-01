@@ -13,6 +13,7 @@
 * Stance Change switches Aegislash to Shield forme on using any status move
 * Changed exclusive items that guaranteed hit+crit on final PP to guarantee it when all PP is equal
 * Fixed an issue where exiting Sickly Hollow's secret rooms cleared the dungeon
+* Fixed an issue where retries in rogue mode rolled limited starters
 * RC: Reworked Sleeping Caldera to 14+4 floors. Full Rogue rework of 21+5 floors planned later
 * RC: Reworked Relic Tower to be more difficult
 * RC: Added Depleted Basin to serve as dead-end dungeon in light of Sleeping Caldera's upgrade
