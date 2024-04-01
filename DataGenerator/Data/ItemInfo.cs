@@ -30,7 +30,7 @@ namespace DataGenerator.Data
                 if (item.Item1 != "")
                     DataManager.SaveData(item.Item1, DataManager.DataType.Item.ToString(), item.Item2);
             }
-            AddExclItemData(false);
+            //AddExclItemData(false);
         }
         /// <summary>
         /// Recomputes all exclusive items with full string translations
@@ -569,21 +569,21 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Joy Seed");
                 item.Desc = new LocalText("A seed that raises the Pokémon's level by 1.");
                 item.Sprite = "Seed_White";
-                item.UseEvent.OnHits.Add(0, new LevelChangeEvent(1));
+                item.UseEvent.OnHits.Add(0, new LevelChangeEvent(1, true));
             }
             else if (ii == 103)
             {
                 item.Name = new LocalText("Golden Seed");
                 item.Desc = new LocalText("A seed that raises the Pokémon's level by 3.");
                 item.Sprite = "Seed_Yellow";
-                item.UseEvent.OnHits.Add(0, new LevelChangeEvent(3));
+                item.UseEvent.OnHits.Add(0, new LevelChangeEvent(3, true));
             }
             else if (ii == 104)
             {
                 item.Name = new LocalText("Doom Seed");
                 item.Desc = new LocalText("A seed that reduces the Pokémon's level by 5.");
                 item.Sprite = "Seed_DarkBlue";
-                item.UseEvent.OnHits.Add(0, new LevelChangeEvent(-5));
+                item.UseEvent.OnHits.Add(0, new LevelChangeEvent(-5, true));
             }
             else if (ii == 105)
             {
@@ -3214,7 +3214,7 @@ namespace DataGenerator.Data
                 item.ItemStates.Set(new FoodState());
                 item.Price = 1000;
                 item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(25, false));
-                item.UseEvent.OnHits.Add(0, new LevelChangeEvent(-1));
+                item.UseEvent.OnHits.Add(0, new LevelChangeEvent(-1, true));
                 item.UseAction = new SelfAction();
                 item.UseAction.TargetAlignments |= Alignment.Self;
                 item.Explosion.TargetAlignments |= Alignment.Self;

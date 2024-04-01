@@ -22,6 +22,7 @@
 * RC: Failing the final story battle gives no penalty
 * RC: Fixed an issue where exiting Bramble Woods mysterious distortion cleared the dungeon
 * RC: Fixed an issue where RC flag leaked into roguelocke content
+* Dev: AffectTarget for LevelChangeEvent
 * Dev: New sprites from spritecollab
 * Dev: Report error when generating with type mismatch
 * Dev: Fixed a constructor for GroundObject not taking passable parameter
