@@ -3738,7 +3738,7 @@ namespace DataGenerator.Data
                 enemyList.Add(GetTeamMob(new MonsterID("alcremie", 25, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                 enemyList.Add(GetTeamMob(new MonsterID("alcremie", 26, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
                 enemyList.Add(GetTeamMob(new MonsterID("alcremie", 27, "", Gender.Unknown), "", "sweet_kiss", "sweet_scent", "draining_kiss", "decorate", new RandRange(zone.Level)), 10);
-                structure.BaseFloor = getSecretRoom(translate, "special_gsc_ghost", -2, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary", "tall_grass_dark", "poison", DungeonStage.Advanced, DungeonAccessibility.Unlockable, enemyList, new Loc(7, 6));
+                structure.BaseFloor = getSecretRoom(translate, "special_gsc_ghost", -1, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary", "tall_grass_dark", "poison", DungeonStage.Advanced, DungeonAccessibility.Unlockable, enemyList, new Loc(7, 6));
 
                 zone.Segments.Add(structure);
             }

@@ -30,7 +30,7 @@ namespace DataGenerator.Data
                 if (item.Item1 != "")
                     DataManager.SaveData(item.Item1, DataManager.DataType.Item.ToString(), item.Item2);
             }
-            //AddExclItemData(false);
+            AddExclItemData(false);
         }
         /// <summary>
         /// Recomputes all exclusive items with full string translations
