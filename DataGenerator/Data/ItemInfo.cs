@@ -3113,7 +3113,7 @@ namespace DataGenerator.Data
                 item.Icon = 12;
                 item.UsageType = ItemData.UseType.Use;
                 item.ItemStates.Set(new UtilityState());
-                item.Price = 800;
+                item.Price = 450;
                 item.UseEvent.BeforeTryActions.Add(1, new AssemblyBoxEvent());
                 item.UseEvent.OnHits.Add(0, new WithdrawRecruitEvent());
                 item.UseAction = new SelfAction();
@@ -3128,7 +3128,7 @@ namespace DataGenerator.Data
                 item.Icon = 12;
                 item.UsageType = ItemData.UseType.Use;
                 item.ItemStates.Set(new UtilityState());
-                item.Price = 800;
+                item.Price = 150;
                 item.UseEvent.BeforeTryActions.Add(1, new StorageBoxEvent());
                 item.UseEvent.OnHits.Add(0, new WithdrawItemEvent());
                 item.UseAction = new SelfAction();

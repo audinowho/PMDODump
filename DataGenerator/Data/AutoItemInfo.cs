@@ -427,7 +427,7 @@ namespace DataGenerator.Data
 
                     string customName = row[1].Trim();
                     ExclusiveItemType exclType = (ExclusiveItemType)Enum.Parse(typeof(ExclusiveItemType), row[0].Substring(2));
-                    ExclusiveItemEffect exclEffect = (ExclusiveItemEffect)Int32.Parse(row[12].Substring(3, 3));
+                    ExclusiveItemEffect exclEffect = (ExclusiveItemEffect)Int32.Parse(row[12].Substring(0, 3));
                     string primaryDex = row[2].Trim();
                     dex_map[item_idx] = primaryDex;
 
@@ -507,7 +507,7 @@ namespace DataGenerator.Data
 
                     AutoItemInfo.FillExclusiveData(fileName, item, "", customName, exclType, exclEffect, args.ToArray(), primaryDex, dexNums, translate, includeFamily);
 
-                    item.Rarity = Math.Clamp(item.Rarity, minRarity, maxRarity);
+                    item.Rarity = (Math.Clamp(item.Rarity, minRarity, maxRarity) - 1) / 2 + 1;
                     item.Sprite = "Box_Yellow";
                     item.Icon = 10;
                     item.Price = 800 * item.Rarity;
@@ -541,7 +541,7 @@ namespace DataGenerator.Data
                     else if (rows[ii + 1][9] == "A")
                         reload = true;
                     else if (rows[ii + 1][9][0] != rows[ii][9][0] + 1)
-                        throw new Exception("Out of order labeling!");
+                        throw new Exception(String.Format("Out of order labeling on row {0}!", ii));
 
                     if (reload)
                     {
@@ -655,8 +655,8 @@ namespace DataGenerator.Data
                             if (!has_tradeables)
                             {
                                 ItemData old_item = DataManager.LoadData<ItemData>(old_asset, DataManager.DataType.Item.ToString());
-                                //has a rarity of 3 or lower
-                                if (old_item.Rarity <= 3)
+                                //has a rarity of 2 or lower
+                                if (old_item.Rarity <= 2)
                                 {
                                     string old_dex = dex_map[prev_start + nn];
 
@@ -702,7 +702,7 @@ namespace DataGenerator.Data
                 foreach ((string item, string dex, int reqCount) trade in random_tradeables)
                 {
                     List<string> wildcards = new List<string>();
-                    for (int nn = 0; nn < trade.reqCount + 1; nn++)
+                    for (int nn = 0; nn < trade.reqCount * 2; nn++)
                         wildcards.Add("\"\"");
                     file.Write("{ Item=\"" + trade.item + "\", Dex=\"" + trade.dex + "\", ReqItem={" + String.Join(',', wildcards.ToArray()) + "}},\n");
                 }
@@ -1235,14 +1235,15 @@ namespace DataGenerator.Data
             else if (type == ExclusiveItemEffect.StatOnCategoryUse)
             {
                 item.Rarity = 4;
-                item.Desc = new LocalText("When kept in the bag, the Pokémon's {0} is raised slightly when it uses a {1} move.");
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's {1} moves may increase the user's {0}.");
                 if (includeEffects)
                 {
                     localArgs.Add(DataManager.Instance.GetStatus((string)args[0]).Name);
                     BattleData.SkillCategory category = (BattleData.SkillCategory)args[1];
                     localArgs.Add(ToLocalText(category, translate ? itemEffectRows[typeof(ExclusiveItemEffect).Name + "." + type] : item.Desc, translate));
+                    int chance = (int)args[2];
 
-                    item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new StatusStackBattleEvent((string)args[0], false, true, false, 1, new StringKey("MSG_EXCL_ITEM_TYPE")))));
+                    item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new OnHitAnyEvent(false, chance, new StatusStackBattleEvent((string)args[0], false, true, false, 1, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
                 }
             }
             else if (type == ExclusiveItemEffect.MapStatusOnCategoryUse)
@@ -2098,6 +2099,7 @@ namespace DataGenerator.Data
 
             List<LocalText> localArgs = new List<LocalText>();
             FillExclusiveEffects(item, localArgs, true, effect, newArgs.ToArray(), translate);
+            item.Rarity = (item.Rarity - 1) / 2 + 1;
             item.Desc = LocalText.FormatLocalText(item.Desc, localArgs.ToArray());
 
             item.Desc = LocalText.FormatLocalText(reqStatement, elementData.Name, item.Desc);

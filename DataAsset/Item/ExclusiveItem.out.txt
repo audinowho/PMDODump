@@ -510,7 +510,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Claw		hoothoot	True	True					D	*	2*	023: StatusOnAttack		sleep					
 0* None		hoothoot	True	True					E	*	3*	000: None							
 0* None		noctowl	False	True					F	*	3*	000: None							
-3* Bow		ledian	True	True					A	*	5*	097: StatOnCategoryUse		mod_defense			003: Status		
+3* Bow		ledian	True	True					A	*	5*	097: StatOnCategoryUse		mod_speed			003: Status	25	
 2* Ring		ledian	True	True					B	*	4*	071: WeatherProtection							
 1* Card		ledyba	True	True					C	*	1*	051: BarrageGuard							
 1* Wing		ledyba	True	True					D	*	2*	053: ClutchPerformer							
@@ -885,7 +885,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Claw		nincada	True	False	nincada, ninjask, shedinja				C		1*	084: HitAndRun							
 1* Card		nincada	True	False	nincada, ninjask, shedinja				D		2*	053: ClutchPerformer							
 2* Key		nincada	True	False	nincada, ninjask, shedinja				E	CD	3*	038: LungeAttack							
-3* Mask		shedinja	True	False					H	CD	4*	010: AllTerrain							
+3* Mask		shedinja	True	False					F	CD	4*	010: AllTerrain							
 0* None	Awe Mantle	shedinja	True	False					G	EF	5*	078: EndureType	ghost						
 3* Torc		exploud	True	True					A	*	5*	011: Wallbreaker							
 3* Bangle		loudred	True	True					B	*	4*	049: ExcessiveForce							
@@ -1467,7 +1467,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		victini	True	False					D	*	1-2*	000: None							
 0* None		victini	True	False					E	*	2-3*	000: None							
 0* None		victini	False	False					F	*	2-3*	000: None							
-3* Blade		serperior	True	True					A	*	5*	101: ChanceStatOnTypeHit	grass		006: HitRate				
+3* Blade		serperior	True	True					A	*	5*	101: ChanceStatOnTypeHit	grass	mod_accuracy				25	
 2* Brooch		servine	True	True					B	*	4*	055: CloseDodge							
 1* Fang		snivy	True	True					C	*	1-2*	069: GapProber							
 1* Leaf		snivy	True	True					D	*	1-2*	104: WeaknessDodge	flying						
@@ -1477,8 +1477,8 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 2* Guard		pignite	True	True					B	*	4*	028: StatusImmune		flinch					
 1* Hair		tepig	True	True					C	*	1-2*	050: Anchor							
 1* Tooth		tepig	True	True					D	*	1-2*	039: WideAttack							
-0* None		tepig	True	True					E	*	2-3*	000: None							
-2* Rock		pignite	False	True					F	*	2-3*	024: KnockbackOnAttack							
+2* Rock		pignite	True	True					E	*	2-3*	024: KnockbackOnAttack							
+0* None		pignite	False	True					F	*	2-3*	000: None							
 3* Armor		samurott	True	True					A	*	5*	079: SpikeDropper					001: Physical		
 2* Crest		dewott	True	True					B	*	4*	047: Celebrate							
 1* Dew		oshawott	True	True					C	*	1-2*	014: DeepBreather							
@@ -1497,7 +1497,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Tooth		lillipup	True	True					D	*	2*	033: AcuteSniffer							
 2* Tag		lillipup	True	True					E	*	3*	071: WeatherProtection							
 0* None		herdier	False	True					F	*	2-3*	000: None							
-3* Choker		liepard	True	True					A	*	5*	101: ChanceStatOnTypeHit	dark		001: Attack				
+3* Choker		liepard	True	True					A	*	5*	101: ChanceStatOnTypeHit	dark	mod_attack				25	
 2* Earring		liepard	True	True					B	*	4*	038: LungeAttack							
 1* Fang		purrloin	True	True					C	*	1-2*	062: FastFriend							
 1* Hair		purrloin	True	True					D	*	1-2*	084: HitAndRun							
@@ -1551,10 +1551,10 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Thorn		maractus	True	False					D	*	1-2*	006: NVECrit							
 0* None		maractus	True	False					E	*	2-3*	000: None							
 0* None		maractus	False	False					F	*	2-3*	000: None							
-3* Poncho		scrafty	True	True					A	*	5*	051: BarrageGuard							
-2* Crest		scrafty	True	True					B	*	4*	067: SecondSTAB	poison						
+3* Poncho		scrafty	True	True					A	*	5*	067: SecondSTAB	poison						
+2* Crest		scrafty	True	True					B	*	4*	049: ExcessiveForce	none						
 1* Tail		scraggy	True	True					C	*	1-2*	055: CloseDodge							
-1* Fang		scraggy	True	True					D	*	1-2*	049: ExcessiveForce							
+1* Fang		scraggy	True	True					D	*	1-2*	051: BarrageGuard							
 2* Guard		scraggy	True	True					E	*	2-3*	096: TypeBodyguard	dark						
 0* None		scrafty	False	True					F	*	2-3*	000: None							
 3* Mask		cofagrigus	True	True					A	*	5*	004: TypeBulldozer	ghost			normal			
@@ -1564,7 +1564,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 2* Shard		yamask	True	True					E	*	3*	048: Absorption							
 0* None		cofagrigus	False	True					F	*	2-3*	000: None							
 3* Armlet		archeops	True	True					A	*	5*	067: SecondSTAB	dragon						
-0* None	Archeops Feather	archeops	True	True					B	*	4*	097: StatOnCategoryUse			006: HitRate		001: Physical		
+2* Crest		archeops	True	True					B	*	4*	097: StatOnCategoryUse		mod_speed			001: Physical	25	
 1* Claw		archen	True	True					C	*	1*	006: NVECrit							
 1* Wing		archen	True	True					D	*	2*	022: PressurePlus							
 2* Rock		archen	True	True					E	*	3*	049: ExcessiveForce							
@@ -1574,15 +1574,15 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Tail		zorua	True	True					C	*	1-2*	053: ClutchPerformer							
 3* Cape		zoroark	True	True					D	*	4*	071: WeatherProtection							
 2* Heart		zorua	True	True					E	*	2-3*	083: Gratitude							
-1* Claw		zoroark	False	True					F	*	3*	102: ChanceStatusOnCategoryHit		confuse			001: Physical		
+1* Claw		zoroark	False	True					F	*	3*	102: ChanceStatusOnCategoryHit		confuse			001: Physical	25	
 3* Apron		gothitelle	True	True					A	*	5*	082: WeaknessReduce	dark						
-2* Brooch		gothorita	True	True					B	*	4*	097: StatOnCategoryUse			002: Defense		002: Magical		
+2* Brooch		gothorita	True	True					B	*	4*	097: StatOnCategoryUse		mod_evasion			002: Magical	25	
 1* Hair		gothita	True	True					C	*	1*	027: SpecialAttacker							
-0* None	Gothita Bow	gothita	True	True					D	*	1-2*	016: MisfortuneMirror							
+3* Bow		gothita	True	True					D	*	1-2*	016: MisfortuneMirror							
 2* Ring		gothorita	True	True					E	*	2-3*	029: StatDropImmune			004: MDef				
 0* None		gothorita	False	True					F	*	2-3*	000: None							
-3* Glasses		reuniclus	True	True					A	*	5*	101: ChanceStatOnTypeHit	psychic		004: MDef				
-2* Jewel		duosion	True	True					B	*	4*	085: StatusOnCategoryHit		immobilized					
+3* Glasses		reuniclus	True	True					A	*	5*	101: ChanceStatOnTypeHit	psychic	mod_special_defense				25	
+2* Jewel		duosion	True	True					B	*	4*	085: StatusOnCategoryHit		immobilized			003: Status		
 1* Dew		solosis	True	True					C	*	1-2*	008: WaterTerrain							
 1* Beam		solosis	True	True					D	*	1-2*	059: StatMirror							
 2* Seal		solosis	True	True					E	*	2-3*	009: LavaTerrain							
@@ -1645,9 +1645,9 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 2* Crest		zweilous	True	True					B	*	4*	073: CheekPouch							
 1* Hair		deino	True	True					C	*	1*	015: PracticeSwinger							
 1* Horn		deino	True	True					D	*	2*	060: ErraticAttacker							
-2* Jaw		zweilous	True	True					E	*	2-3*	102: ChanceStatusOnCategoryHit		flinch			001: Physical	35	
+2* Jaw		zweilous	True	True					E	*	3*	102: ChanceStatusOnCategoryHit		flinch			001: Physical	25	
 0* None		zweilous	False	True					F	*	2-3*	000: None							
-3* Robe		volcarona	True	True					A	*	5*	100: ChanceStatusOnTypeHit	bug	burn					
+3* Robe		volcarona	True	True					A	*	5*	100: ChanceStatusOnTypeHit	bug	burn				35	
 2* Crest		volcarona	True	True					B	*	4*	093: AttackRangeInWeather							sunny
 1* Hair		larvesta	True	True					C	*	1*	061: ErraticDefender							
 1* Horn		larvesta	True	True					D	*	2*	104: WeaknessDodge	rock						
@@ -1719,10 +1719,10 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Card		flabebe	True	True					D	*	2*	050: Anchor							
 2* Aroma		flabebe	True	True					E	*	3*	057: SelfCurer							
 0* None		floette	False	True					F	*	2-3*	000: None							
-3* Collar		furfrou	True	False					A	*	5*	000: None							
-0* None		furfrou	True	False					B	*	4*	000: None							
-0* None		furfrou	True	False					C	*	1-2*	000: None							
-0* None		furfrou	True	False					D	*	1-2*	000: None							
+3* Collar		furfrou	True	False					A	*	5*	101: ChanceStatOnTypeHit	normal	mod_attack				25	
+2* Guard		furfrou	True	False					B	*	4*	096: TypeBodyguard	ghost						
+1* Fang		furfrou	True	False					C	*	1-2*	050: Anchor							
+1* Hair		furfrou	True	False					D	*	1-2*	051: BarrageGuard							
 0* None		furfrou	True	False					E	*	2-3*	000: None							
 0* None		furfrou	False	False					F	*	2-3*	000: None							
 3* Scope		meowstic	True	True					A	*	5*	004: TypeBulldozer	psychic			dark			
@@ -1737,11 +1737,11 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Beam		honedge	True	True					D	*	2*	061: ErraticDefender							
 0* None		honedge	True	True					E	*	2-3*	000: None							
 0* None		doublade	False	True					F	*	2-3*	000: None							
-3* Armor		barbaracle	True	True					A	*	5*	000: None							
-0* None		barbaracle	True	True					B	*	4*	000: None							
-0* None		binacle	True	True					C	*	1-2*	000: None							
-0* None		binacle	True	True					D	*	1-2*	000: None							
-0* None		binacle	True	True					E	*	2-3*	000: None							
+3* Armor		barbaracle	True	True					A	*	5*	036: WeaknessPayback	grass	immobilized					
+2* Rock		barbaracle	True	True					B	*	4*	095: CelebrateCure							
+1* Card		binacle	True	True					C	*	1*	050: Anchor							
+1* Claw		binacle	True	True					D	*	2*	018: DoubleAttacker							
+2* Guard		binacle	True	True					E	*	3*	054: DistanceDodge							
 0* None		barbaracle	False	True					F	*	2-3*	000: None							
 3* Specs		clawitzer	True	True					A	*	5*	070: PassThroughAttacker							
 3* Scope		clawitzer	True	True					B	*	4*	093: AttackRangeInWeather							rain
@@ -1752,8 +1752,8 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 3* Band		heliolisk	True	True					A	*	5*	007: Nontraitor							
 2* Crest		heliolisk	True	True					B	*	4*	093: AttackRangeInWeather							sunny
 1* Claw		helioptile	True	True					C	*	1*	027: SpecialAttacker							
-1* Tail		helioptile	True	True					D	*	2*	104: WeaknessDodge	fighting						rain
-2* Ring		helioptile	True	True					E	*	3*	080: NoStatusInWeather							
+1* Tail		helioptile	True	True					D	*	2*	104: WeaknessDodge	fighting						
+2* Ring		helioptile	True	True					E	*	3*	080: NoStatusInWeather							rain
 0* None		heliolisk	False	True					F	*	2-3*	000: None							
 3* Bangle		aurorus	True	True					A	*	5*	078: EndureType	fighting						
 3* Collar		aurorus	True	True					B	*	4*	034: MapSurveyor							
@@ -1767,11 +1767,11 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Card		carbink	True	False					D	*	1-2*	083: Gratitude							
 0* None		carbink	True	False					E	*	2-3*	000: None							
 0* None		carbink	False	False					F	*	2-3*	000: None							
-3* Coat		goodra	True	True					A	*	5*	000: None							
-0* None		sliggoo	True	True					B	*	4*	000: None							
-0* None		goomy	True	True					C	*	1-2*	000: None							
-0* None		goomy	True	True					D	*	1-2*	000: None							
-0* None		goomy	True	True					E	*	2-3*	000: None							
+3* Coat		goodra	True	True					A	*	5*	067: SecondSTAB	water						
+2* Tag		sliggoo	True	True					B	*	4*	074: HealInWater							
+1* Drool		goomy	True	True					C	*	1*	062: FastFriend							
+1* Dew		goomy	True	True					D	*	2*	059: StatMirror							
+2* Crest		goomy	True	True					E	*	3*	055: CloseDodge							
 0* None		sliggoo	False	True					F	*	2-3*	000: None							
 2* Key		klefki	True	False					A	*	5*	082: WeaknessReduce	ground						
 3* Tie		klefki	True	False					B	*	4*	010: AllTerrain							
@@ -1780,51 +1780,51 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		klefki	True	False					E	*	2-3*	000: None							
 0* None		klefki	False	False					F	*	2-3*	000: None							
 3* Mask		trevenant	True	True					A	*	5*	098: StatusOnTypeHit	ghost	immobilized					
-0* None		trevenant	True	True					B	*	4*	000: None							
-0* None		phantump	True	True					C	*	1-2*	000: None							
-0* None		phantump	True	True					D	*	1-2*	000: None							
-0* None		phantump	True	True					E	*	2-3*	000: None							
+2* Seal		trevenant	True	True					B	*	4*	081: DeepBreatherPlus							
+1* Root		phantump	True	True					C	*	1*	050: Anchor							
+1* Branch		phantump	True	True					D	*	2*	016: MisfortuneMirror							
+2* Charm		phantump	True	True					E	*	3*	048: Absorption							
 0* None		trevenant	False	True					F	*	2-3*	000: None							
 3* Mask		gourgeist	True	True					A	*	5*	098: StatusOnTypeHit	ghost	flinch					
-0* None		gourgeist	True	True					B	*	4*	000: None							
-0* None		pumpkaboo	True	True					C	*	1-2*	000: None							
-0* None		pumpkaboo	True	True					D	*	1-2*	000: None							
-0* None		pumpkaboo	True	True					E	*	2-3*	000: None							
+2* Crest		gourgeist	True	True					B	*	4*	097: StatOnCategoryUse		mod_evasion			003: Status	25	
+1* Leaf		pumpkaboo	True	True					C	*	1*	015: PracticeSwinger							
+1* Root		pumpkaboo	True	True					D	*	2*	051: BarrageGuard							
+2* Guard		pumpkaboo	True	True					E	*	2-3*	017: CounterBasher							
 0* None		gourgeist	False	True					F	*	2-3*	000: None							
-3* Cape		noivern	True	True					A	*	5*	000: None							
-0* None		noivern	True	True					B	*	4*	000: None							
-0* None		noibat	True	True					C	*	1-2*	000: None							
-0* None		noibat	True	True					D	*	1-2*	000: None							
-0* None		noibat	True	True					E	*	2-3*	000: None							
+3* Cape		noivern	True	True					A	*	5*	078: EndureType	ice						
+2* Jewel		noivern	True	True					B	*	4*	091: ProjectileAttack							
+1* Song		noibat	True	True					C	*	1*	027: SpecialAttacker							
+1* Wing		noibat	True	True					D	*	2*	060: ErraticAttacker							
+2* Earring		noibat	True	True					E	*	3*	069: GapProber							
 0* None		noivern	False	True					F	*	2-3*	000: None							
-3* Veil		xerneas	True	False					A	*	5*	000: None							
-0* None		xerneas	True	False					B	*	4*	000: None							
-0* None		xerneas	True	False					C	*	1-2*	000: None							
-0* None		xerneas	True	False					D	*	1-2*	000: None							
-0* None		xerneas	True	False					E	*	2-3*	000: None							
+0* None	Life Crown	xerneas	True	False					A	*	5*	020: AllyReviver							
+2* Jewel		xerneas	True	False					B	*	4*	046: RoyalVeil							
+1* Horn		xerneas	True	False					C	*	1*	022: PressurePlus							
+1* Song		xerneas	True	False					D	*	2*	076: HealOnNewFloor							
+2* Guard		xerneas	True	False					E	*	3*	028: StatusImmune		perish_song					
 0* None		xerneas	False	False					F	*	2-3*	000: None							
-3* Blade		yveltal	True	False					A	*	5*	000: None							
-0* None		yveltal	True	False					B	*	4*	000: None							
-0* None		yveltal	True	False					C	*	1-2*	000: None							
-0* None		yveltal	True	False					D	*	1-2*	000: None							
-0* None		yveltal	True	False					E	*	2-3*	000: None							
+0* None	Oblivion Blade	yveltal	True	False					A	*	5*	100: ChanceStatusOnTypeHit	dark	perish_song				25	
+2* Tag		yveltal	True	False					B	*	4*	095: CelebrateCure							
+1* Claw		yveltal	True	False					C	*	1*	016: MisfortuneMirror							
+1* Wing		yveltal	True	False					D	*	2*	048: Absorption							
+2* Guard		yveltal	True	False					E	*	3*	094: PPSaver							
 0* None		yveltal	False	False					F	*	2-3*	000: None							
-3* Collar		zygarde	True	False					A	CDE	5*	004: TypeBulldozer	dragon			fairy			
-3* Robe		zygarde	True	False					B	CDE	5*	004: TypeBulldozer	ground			flying			
-1* Mud		zygarde	True	False					C		1-2*	084: HitAndRun							
-1* Tail		zygarde	True	False					D		1-2*	094: PPSaver							
-2* Seal		zygarde	True	False					E	CD	2-3*	071: WeatherProtection							
-0* None		zygarde	True	False					F		2-3*	000: None							
-3* Tiara		diancie	True	False					A	*	5*	000: None							
-0* None		diancie	True	False					B	*	4*	000: None							
-0* None		diancie	True	False					C	*	1-2*	000: None							
-0* None		diancie	True	False					D	*	1-2*	000: None							
-0* None		diancie	True	False					E	*	2-3*	000: None							
+3* Collar		zygarde	True	False					A	*	5*	004: TypeBulldozer	dragon			fairy			
+3* Robe		zygarde	True	False					B	*	5*	004: TypeBulldozer	ground			flying			
+1* Mud		zygarde	True	False					C	*	1-2*	084: HitAndRun							
+1* Tail		zygarde	True	False					D	*	1-2*	094: PPSaver							
+2* Seal		zygarde	True	False					E	*	2-3*	071: WeatherProtection							
+0* None		zygarde	True	False					F	*	2-3*	000: None							
+3* Tiara		diancie	True	False					A	*	5*	036: WeaknessPayback	steel	flinch					
+3* Ruff		diancie	True	False					B	*	4*	096: TypeBodyguard	dragon						
+1* Beam		diancie	True	False					C	*	1-2*	050: Anchor							
+1* Card		diancie	True	False					D	*	1-2*	083: Gratitude							
+2* Jewel		diancie	True	False					E	*	2-3*	010: AllTerrain							
 0* None		diancie	False	False					F	*	2-3*	000: None							
 3* Torc		hoopa	True	False					A	*	5*	037: WarpPayback	dark						
-0* None		hoopa	True	False					B	*	4*	000: None							
-0* None		hoopa	True	False					C	*	1-2*	000: None							
-0* None		hoopa	True	False					D	*	1-2*	000: None							
+2* Ring		hoopa	True	False					B	*	4*	010: AllTerrain							
+1* Hair		hoopa	True	False					C	*	1*	016: MisfortuneMirror							
+1* Card		hoopa	True	False					D	*	2*	069: GapProber							
 0* None		hoopa	True	False					E	*	2-3*	000: None							
 0* None		hoopa	False	False					F	*	2-3*	000: None							
 0* None		volcanion	True	False					A	*	5*	000: None							
@@ -1845,23 +1845,23 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Gasp		popplio	True	True					D	*	1-2*	014: DeepBreather							
 2* Charm		popplio	True	True					E	*	2-3*	053: ClutchPerformer							
 0* None		brionne	False	True					F	*	2-3*	000: None							
-3* Tie		ribombee	True	True					A	*	5*	000: None							
-2* Heart		ribombee	True	True					B	*	4*	000: None							
-1* Card		cutiefly	True	True					C	*	1-2*	000: None							
-1* Wing		cutiefly	True	True					D	*	1-2*	000: None							
-0* None		cutiefly	True	True					E	*	2-3*	000: None							
+3* Tie		ribombee	True	True					A	*	5*	087: MapStatusOnCategoryUse					003: Status		misty_terrain
+2* Heart		ribombee	True	True					B	*	4*	091: ProjectileAttack							
+1* Card		cutiefly	True	True					C	*	1*	027: SpecialAttacker							
+1* Wing		cutiefly	True	True					D	*	2*	060: ErraticAttacker							
+2* Guard		cutiefly	True	True					E	*	3*	054: DistanceDodge							
 0* None		ribombee	False	True					F	*	2-3*	000: None							
-3* Collar		lycanroc	True	True					A	*	5*	000: None							
-2* Pebble		lycanroc	True	True					B	*	4*	000: None							
-1* Claw		rockruff	True	True					C	*	1-2*	000: None							
-1* Fang		rockruff	True	True					D	*	1-2*	000: None							
-0* None		rockruff	True	True					E	*	2-3*	000: None							
+3* Collar		lycanroc	True	True					A	*	5*	100: ChanceStatusOnTypeHit	rock	flinch				35	
+2* Pebble		lycanroc	True	True					B	*	4*	080: NoStatusInWeather							sandstorm
+1* Claw		rockruff	True	True					C	*	1*	084: HitAndRun							
+1* Fang		rockruff	True	True					D	*	2*	033: AcuteSniffer							
+2* Jaw		rockruff	True	True					E	*	3*	005: SuperCrit							
 0* None		lycanroc	False	True					F	*	2-3*	000: None							
-3* Hat		araquanid	True	True					A	*	5*	000: None							
-0* None		araquanid	True	True					B	*	4*	000: None							
-0* None		dewpider	True	True					C	*	1-2*	000: None							
-0* None		dewpider	True	True					D	*	1-2*	000: None							
-0* None		dewpider	True	True					E	*	2-3*	000: None							
+3* Hat		araquanid	True	True					A	*	5*	007: Nontraitor							
+0* None	Araquanid Bubble	araquanid	True	True					B	*	4*	074: HealInWater							
+1* Dew		dewpider	True	True					C	*	1*	014: DeepBreather							
+1* Claw		dewpider	True	True					D	*	2*	053: ClutchPerformer							
+2* Guard		dewpider	True	True					E	*	3*	028: StatusImmune		burn					
 0* None		araquanid	False	True					F	*	2-3*	000: None							
 0* None	Disguise Blade	lurantis	True	True					A	*	5*	067: SecondSTAB	bug						
 3* Veil		lurantis	True	True					B	*	4*	047: Celebrate							
@@ -1869,11 +1869,11 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Leaf		fomantis	True	True					D	*	2*	030: SleepWalker							
 2* Charm		fomantis	True	True					E	*	3*	031: ChargeWalker							
 0* None		lurantis	False	True					F	*	2-3*	000: None							
-3* Sash		salazzle	True	True					A	*	5*	100: ChanceStatusOnTypeHit	fire	poison					
-2* Earring		salazzle	True	True					B	*	4*	085: StatusOnCategoryHit		burn			002: Magical		
-1* Claw		salandit	True	True					C	*	1-2*	061: ErraticDefender							
-1* Fang		salandit	True	True					D	*	1-2*	023: StatusOnAttack		poison					
-0* None		salandit	True	True					E	*	2-3*	000: None							
+3* Sash		salazzle	True	True					A	*	5*	100: ChanceStatusOnTypeHit	fire	poison				35	
+2* Earring		salazzle	True	True					B	*	4*	047: Celebrate							
+1* Claw		salandit	True	True					C	*	1*	061: ErraticDefender							
+1* Fang		salandit	True	True					D	*	2*	023: StatusOnAttack		poison					
+2* Aroma		salandit	True	True					E	*	2-3*	085: StatusOnCategoryHit		burn			002: Magical		
 0* None		salazzle	False	True					F	*	2-3*	000: None							
 3* Tiara		tsareena	True	True					A	*	5*	082: WeaknessReduce	flying						
 2* Jewel		steenee	True	True					B	*	4*	047: Celebrate							
@@ -1887,17 +1887,17 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Seed		comfey	True	False					D	*	2*	083: Gratitude							
 2* Brooch		comfey	True	False					E	*	3*	089: StatusSplash							
 0* None		comfey	False	False					F	*	2-3*	000: None							
-3* Choker		golisopod	True	True					A	*	5*	000: None							
-0* None		golisopod	True	True					B	*	4*	000: None							
-0* None		wimpod	True	True					C	*	1-2*	000: None							
-0* None		wimpod	True	True					D	*	1-2*	000: None							
-0* None		wimpod	True	True					E	*	2-3*	000: None							
+3* Blade		golisopod	True	True					A	*	5*	011: Wallbreaker							
+2* Crest		golisopod	True	True					B	*	4*	047: Celebrate							
+1* Claw		wimpod	True	True					C	*	1*	084: HitAndRun							
+1* Tail		wimpod	True	True					D	*	2*	053: ClutchPerformer							
+2* Dust		wimpod	True	True					E	*	3*	054: DistanceDodge							
 0* None		golisopod	False	True					F	*	2-3*	000: None							
-3* Helmet		palossand	True	True					A	*	5*	000: None							
-0* None		palossand	True	True					B	*	4*	000: None							
-0* None		sandygast	True	True					C	*	1-2*	000: None							
-0* None		sandygast	True	True					D	*	1-2*	000: None							
-0* None		sandygast	True	True					E	*	2-3*	000: None							
+3* Helmet		palossand	True	True					A	*	5*	067: SecondSTAB	grass						
+2* Dust		palossand	True	True					B	*	4*	041: TrapBuster							
+1* Card		sandygast	True	True					C	*	1*	050: Anchor							
+1* Song		sandygast	True	True					D	*	2*	016: MisfortuneMirror							
+2* Pebble		sandygast	True	True					E	*	3*	048: Absorption							
 0* None		palossand	False	True					F	*	2-3*	000: None							
 3* Blade		silvally	True	True					A	*	5*	007: Nontraitor							
 2* Crest		silvally	True	True					B	*	4*	068: TypedAttack							
@@ -1917,7 +1917,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Claw		turtonator	True	False					D	*	1-2*	015: PracticeSwinger							
 0* None		turtonator	True	False					E	*	2-3*	000: None							
 0* None		turtonator	False	False					F	*	2-3*	000: None							
-3* Coat		togedemaru	True	False					A	*	5*	079: SpikeDropper							
+3* Coat		togedemaru	True	False					A	*	5*	079: SpikeDropper					001: Physical		
 2* Jaw		togedemaru	True	False					B	*	4*	073: CheekPouch							
 1* Fang		togedemaru	True	False					C	*	1*	006: NVECrit							
 1* Hair		togedemaru	True	False					D	*	2*	016: MisfortuneMirror							
@@ -1947,11 +1947,11 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Card		dhelmise	True	False					D	*	1-2*	050: Anchor							
 2* Coin		dhelmise	True	False					E	*	2-3*	065: ChestFinder							
 0* None		dhelmise	False	False					F	*	2-3*	000: None							
-3* Band		kommo_o	True	True					A	*	5*	000: None							
-0* None		hakamo_o	True	True					B	*	4*	000: None							
-0* None		jangmo_o	True	True					C	*	1-2*	000: None							
-0* None		jangmo_o	True	True					D	*	1-2*	000: None							
-0* None		jangmo_o	True	True					E	*	2-3*	000: None							
+0* None	Kommo-o Scales	kommo_o	True	True					A	*	5*	067: SecondSTAB	steel						
+2* Shard		hakamo_o	True	True					B	*	4*	047: Celebrate							
+1* Claw		jangmo_o	True	True					C	*	1*	026: SureHitAttacker							
+1* Horn		jangmo_o	True	True					D	*	2*	104: WeaknessDodge	fairy						
+2* Guard		hakamo_o	True	True					E	*	3*	017: CounterBasher							
 0* None		hakamo_o	False	True					F	*	2-3*	000: None							
 0* None		tapu_koko	True	False					A	*	5*	000: None							
 0* None		tapu_koko	True	False					B	*	4*	000: None							
@@ -1983,46 +1983,46 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		cosmog	True	False					D	@	1-2*	000: None							
 0* None		cosmoem	True	False					E	@	2-3*	000: None							
 0* None		cosmoem	False	False					F	@	2-3*	000: None							
-3* Hat		nihilego	True	False					A	*	5*	000: None							
-0* None		nihilego	True	False					B	*	4*	000: None							
-0* None		nihilego	True	False					C	*	1-2*	000: None							
-0* None		nihilego	True	False					D	*	1-2*	000: None							
+0* None	Ultra Hat	nihilego	True	False					A	*	5*	098: StatusOnTypeHit	psychic	poison					
+2* Dust		nihilego	True	False					B	*	4*	010: AllTerrain							
+1* Dew		nihilego	True	False					C	*	1-2*	104: WeaknessDodge	ground						
+1* Thorn		nihilego	True	False					D	*	1-2*	058: StatusMirror							
 0* None		nihilego	True	False					E	*	2-3*	000: None							
 0* None		nihilego	False	False					F	*	2-3*	000: None							
-3* Armlet		buzzwole	True	False					A	*	5*	000: None							
-0* None		buzzwole	True	False					B	*	4*	000: None							
-0* None		buzzwole	True	False					C	*	1-2*	000: None							
-0* None		buzzwole	True	False					D	*	1-2*	000: None							
+0* None	Ultra Band	buzzwole	True	False					A	*	5*	011: Wallbreaker							
+2* Medal		buzzwole	True	False					B	*	4*	048: Absorption							
+1* Horn		buzzwole	True	False					C	*	1-2*	104: WeaknessDodge	flying						
+1* Wing		buzzwole	True	False					D	*	1-2*	049: ExcessiveForce							
 0* None		buzzwole	True	False					E	*	2-3*	000: None							
 0* None		buzzwole	False	False					F	*	2-3*	000: None							
-3* Veil		pheromosa	True	False					A	*	5*	000: None							
-0* None		pheromosa	True	False					B	*	4*	000: None							
-0* None		pheromosa	True	False					C	*	1-2*	000: None							
-0* None		pheromosa	True	False					D	*	1-2*	000: None							
+0* None	Ultra Veil	pheromosa	True	False					A	*	5*	100: ChanceStatusOnTypeHit	fighting	in_love				35	
+2* Dust		pheromosa	True	False					B	*	4*	095: CelebrateCure							
+1* Claw		pheromosa	True	False					C	*	1-2*	104: WeaknessDodge	flying						
+1* Card		pheromosa	True	False					D	*	1-2*	018: DoubleAttacker							
 0* None		pheromosa	True	False					E	*	2-3*	000: None							
 0* None		pheromosa	False	False					F	*	2-3*	000: None							
-3* Choker		xurkitree	True	False					A	*	5*	000: None							
-0* None		xurkitree	True	False					B	*	4*	000: None							
-0* None		xurkitree	True	False					C	*	1-2*	000: None							
-0* None		xurkitree	True	False					D	*	1-2*	000: None							
+0* None	Ultra Wire	xurkitree	True	False					A	*	5*	087: MapStatusOnCategoryUse					002: Magical		electric_terrain
+2* Ring		xurkitree	True	False					B	*	4*	070: PassThroughAttacker							
+1* Card		xurkitree	True	False					C	*	1-2*	027: SpecialAttacker							
+1* Branch		xurkitree	True	False					D	*	1-2*	069: GapProber							
 0* None		xurkitree	True	False					E	*	2-3*	000: None							
 0* None		xurkitree	False	False					F	*	2-3*	000: None							
-3* Dress		celesteela	True	False					A	*	5*	000: None							
-0* None		celesteela	True	False					B	*	4*	000: None							
-0* None		celesteela	True	False					C	*	1-2*	000: None							
-0* None		celesteela	True	False					D	*	1-2*	000: None							
+0* None	Ultra Shoot	celesteela	True	False					A	*	5*	067: SecondSTAB	grass						
+2* Seal		celesteela	True	False					B	*	4*	041: TrapBuster							
+1* Root		celesteela	True	False					C	*	1-2*	050: Anchor							
+1* Wing		celesteela	True	False					D	*	1-2*	049: ExcessiveForce							
 0* None		celesteela	True	False					E	*	2-3*	000: None							
 0* None		celesteela	False	False					F	*	2-3*	000: None							
-3* Blade		kartana	True	False					A	*	5*	000: None							
-0* None		kartana	True	False					B	*	4*	000: None							
-0* None		kartana	True	False					C	*	1-2*	000: None							
-0* None		kartana	True	False					D	*	1-2*	000: None							
+0* None	Ultra Blade	kartana	True	False					A	*	5*	067: SecondSTAB	fighting						
+2* Tag		kartana	True	False					B	*	4*	047: Celebrate							
+1* Card		kartana	True	False					C	*	1-2*	018: DoubleAttacker							
+1* Shoot		kartana	True	False					D	*	1-2*	005: SuperCrit							
 0* None		kartana	True	False					E	*	2-3*	000: None							
 0* None		kartana	False	False					F	*	2-3*	000: None							
-3* Belt		guzzlord	True	False					A	*	5*	000: None							
-0* None		guzzlord	True	False					B	*	4*	000: None							
-0* None		guzzlord	True	False					C	*	1-2*	000: None							
-0* None		guzzlord	True	False					D	*	1-2*	000: None							
+0* None	Ultra Armor	guzzlord	True	False					A	*	5*	078: EndureType	fairy						
+2* Jaw		guzzlord	True	False					B	*	4*	073: CheekPouch							
+1* Horn		guzzlord	True	False					C	*	1-2*	051: BarrageGuard							
+1* Drool		guzzlord	True	False					D	*	1-2*	048: Absorption							
 0* None		guzzlord	True	False					E	*	2-3*	000: None							
 0* None		guzzlord	False	False					F	*	2-3*	000: None							
 0* None		necrozma	True	False					A	*	5*	000: None							
@@ -2043,22 +2043,22 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		marshadow	True	False					D	*	1-2*	000: None							
 0* None		marshadow	True	False					E	*	2-3*	000: None							
 0* None		marshadow	False	False					F	*	2-3*	000: None							
-3* Scarf		naganadel	True	True					A	*	5*	000: None							
-0* None		naganadel	True	True					B	*	4*	000: None							
-0* None		poipole	True	True					C	*	1-2*	000: None							
-0* None		poipole	True	True					D	*	1-2*	000: None							
+0* None	Ultra Stinger	naganadel	True	True					A	*	5*	100: ChanceStatusOnTypeHit	poison	immobilized				35	
+1* Wing		naganadel	True	True					B	*	4*	047: Celebrate							
+1* Thorn		poipole	True	True					C	*	1-2*	018: DoubleAttacker							
+1* Tail		poipole	True	True					D	*	1-2*	038: LungeAttack							
 0* None		poipole	True	True					E	*	2-3*	000: None							
 0* None		naganadel	False	True					F	*	2-3*	000: None							
-0* None		stakataka	True	False					A	*	5*	000: None							
-3* Shield		stakataka	True	False					B	*	4*	000: None							
-0* None		stakataka	True	False					C	*	1-2*	000: None							
-0* None		stakataka	True	False					D	*	1-2*	000: None							
+0* None	Ultra Shield	stakataka	True	False					A	*	5*	078: EndureType	fighting						
+2* Rock		stakataka	True	False					B	*	4*	081: DeepBreatherPlus							
+2* Pebble		stakataka	True	False					C	*	1-2*	015: PracticeSwinger							
+2* Shard		stakataka	True	False					D	*	1-2*	054: DistanceDodge							
 0* None		stakataka	True	False					E	*	2-3*	000: None							
 0* None		stakataka	False	False					F	*	2-3*	000: None							
-3* Mask		blacephalon	True	False					A	*	5*	000: None							
-0* None		blacephalon	True	False					B	*	4*	000: None							
-0* None		blacephalon	True	False					C	*	1-2*	000: None							
-0* None		blacephalon	True	False					D	*	1-2*	000: None							
+0* None	Ultra Balloon	blacephalon	True	False					A	*	5*	040: ExplosiveAttack							
+2* Brooch		blacephalon	True	False					B	*	4*	047: Celebrate							
+1* Shoot		blacephalon	True	False					C	*	1-2*	060: ErraticAttacker							
+1* Card		blacephalon	True	False					D	*	1-2*	042: ExplosionGuard							
 0* None		blacephalon	True	False					E	*	2-3*	000: None							
 0* None		blacephalon	False	False					F	*	2-3*	000: None							
 0* None		zeraora	True	False					A	*	5*	000: None							
@@ -2067,23 +2067,23 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		zeraora	True	False					D	*	1-2*	000: None							
 0* None		zeraora	True	False					E	*	2-3*	000: None							
 0* None		zeraora	False	False					F	*	2-3*	000: None							
-3* Cape		cinderace	True	True					A	*	5*	000: None							
-0* None		raboot	True	True					B	*	4*	000: None							
-0* None		scorbunny	True	True					C	*	1-2*	000: None							
-0* None		scorbunny	True	True					D	*	1-2*	000: None							
-0* None		scorbunny	True	True					E	*	2-3*	000: None							
+3* Cape		cinderace	True	True					A	*	5*	067: SecondSTAB	fighting						
+2* Medal		raboot	True	True					B	*	4*	047: Celebrate							
+1* Sweat		scorbunny	True	True					C	*	1*	094: PPSaver							
+1* Tooth		scorbunny	True	True					D	*	2*	088: DoubleDash							
+3* Band		raboot	True	True					E	*	3*	069: GapProber							
 0* None		raboot	False	True					F	*	2-3*	000: None							
-3* Specs		inteleon	True	True					A	*	5*	000: None							
-0* None		drizzile	True	True					B	*	4*	000: None							
-0* None		sobble	True	True					C	*	1-2*	000: None							
-0* None		sobble	True	True					D	*	1-2*	000: None							
-0* None		sobble	True	True					E	*	2-3*	000: None							
+3* Scope		inteleon	True	True					A	*	5*	086: StatusOnCategoryUse		pierce			003: Status		
+2* Ring		drizzile	True	True					B	*	4*	091: ProjectileAttack							
+1* Dew		sobble	True	True					C	*	1*	027: SpecialAttacker							
+1* Tail		sobble	True	True					D	*	2*	053: ClutchPerformer							
+2* Medal		drizzile	True	True					E	*	3*	005: SuperCrit							
 0* None		drizzile	False	True					F	*	2-3*	000: None							
-3* Mask		thievul	True	True					A	*	5*	000: None							
-0* None		thievul	True	True					B	*	4*	000: None							
-0* None		nickit	True	True					C	*	1-2*	000: None							
-0* None		nickit	True	True					D	*	1-2*	000: None							
-0* None		nickit	True	True					E	*	2-3*	000: None							
+3* Mask		thievul	True	True					A	*	5*	078: EndureType	fighting						
+2* Seal		thievul	True	True					B	*	4*	068: TypedAttack							
+1* Hair		nickit	True	True					C	*	1*	103: TypeBecomesCategory	dark				002: Magical		
+1* Tail		nickit	True	True					D	*	2*	053: ClutchPerformer							
+2* Coin		nickit	True	True					E	*	3*	063: CoinWatcher							
 0* None		thievul	False	True					F	*	2-3*	000: None							
 3* Helmet		appletun	True	False		applin			A	BE	5*	096: TypeBodyguard	water						
 2* Guard		appletun	True	False	applin, appletun	applin			B	FG	4*	048: Absorption							
@@ -2117,10 +2117,10 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		impidimp	True	True					E	*	2-3*	000: None							
 0* None		morgrem	False	True					F	*	2-3*	000: None							
 3* Scarf		frosmoth	True	True					A	*	5*	078: EndureType	fire						
-0* None		frosmoth	True	True					B	*	4*	010: AllTerrain							
-0* None		snom	True	True					C	*	1-2*	027: SpecialAttacker							
-0* None		snom	True	True					D	*	1-2*	052: BetterOdds							
-0* None		snom	True	True					E	*	2-3*	000: None							
+2* Dust		frosmoth	True	True					B	*	4*	010: AllTerrain							
+1* Card		snom	True	True					C	*	1*	027: SpecialAttacker							
+1* Thorn		snom	True	True					D	*	2*	052: BetterOdds							
+2* Jewel		snom	True	True					E	*	3*	057: SelfCurer							
 0* None		frosmoth	False	True					F	*	2-3*	000: None							
 3* Tie		eiscue	True	False					A	*	5*	067: SecondSTAB	water						
 2* Ore		eiscue	True	False					B	*	4*	054: DistanceDodge							
@@ -2128,7 +2128,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Card		eiscue	True	False					D	*	2*	051: BarrageGuard							
 0* None		eiscue	True	False					E	*	2-3*	000: None							
 0* None		eiscue	False	False					F	*	2-3*	000: None							
-3* Apron		indeedee	True	False					A	*	5*	097: StatOnCategoryUse			004: MDef		002: Magical		
+3* Apron		indeedee	True	False					A	*	5*	097: StatOnCategoryUse		mod_accuracy			002: Magical	25	
 2* Ring		indeedee	True	False					B	*	4*	089: StatusSplash							
 1* Horn		indeedee	True	False					C	*	1*	062: FastFriend							
 1* Hair		indeedee	True	False					D	*	2*	083: Gratitude							
@@ -2160,21 +2160,21 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		regidrago	False	False					F	*	2-3*	000: None							
 3* Helmet		lokix	True	True					A	*	5*	007: Nontraitor							
 2* Ring		lokix	True	True					B	*	4*	047: Celebrate							
-1* Card		nymble	True	True					C	*	1-2*	014: DeepBreather							
-1* Wing		nymble	True	True					D	*	1-2*	084: HitAndRun							
-2* Shard		nymble	True	True					E	*	2-3*	005: SuperCrit							
+1* Card		nymble	True	True					C	*	1*	014: DeepBreather							
+1* Wing		nymble	True	True					D	*	2*	084: HitAndRun							
+2* Shard		nymble	True	True					E	*	3*	005: SuperCrit							
 0* None		lokix	False	True					F	*	2-3*	000: None							
-3* Armlet		pawmot	True	True					A	*	5*	000: None							
-0* None		pawmo	True	True					B	*	4*	000: None							
-0* None		pawmi	True	True					C	*	1-2*	000: None							
-0* None		pawmi	True	True					D	*	1-2*	000: None							
-0* None		pawmi	True	True					E	*	2-3*	000: None							
+3* Armlet		pawmot	True	True					A	*	5*	100: ChanceStatusOnTypeHit	fighting	paralyze				35	
+2* Jaw		pawmo	True	True					B	*	4*	073: CheekPouch							
+1* Hair		pawmi	True	True					C	*	1*	084: HitAndRun							
+1* Claw		pawmi	True	True					D	*	2*	060: ErraticAttacker							
+2* Jewel		pawmo	True	True					E	*	3*	018: DoubleAttacker							
 0* None		pawmo	False	True					F	*	2-3*	000: None							
 3* Hat		maushold	True	True					A	*	5*	078: EndureType	fighting						
 2* Tag		maushold	True	True					B	*	4*	047: Celebrate							
-1* Hair		tandemaus	True	True					C	*	1-2*	084: HitAndRun							
-1* Fang		tandemaus	True	True					D	*	1-2*	018: DoubleAttacker							
-2* Guard		tandemaus	True	True					E	*	2-3*	054: DistanceDodge							
+1* Hair		tandemaus	True	True					C	*	1*	084: HitAndRun							
+1* Fang		tandemaus	True	True					D	*	2*	018: DoubleAttacker							
+2* Guard		tandemaus	True	True					E	*	3*	054: DistanceDodge							
 0* None		maushold	False	True					F	*	2-3*	000: None							
 3* Armlet		tinkaton	True	True					A	*	5*	040: ExplosiveAttack							
 2* Ore		tinkatuff	True	True					B	*	4*	041: TrapBuster							
@@ -2182,11 +2182,11 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Hair		tinkatink	True	True					D	*	2*	014: DeepBreather							
 2* Shard		tinkatink	True	True					E	*	3*	049: ExcessiveForce							
 0* None		tinkatuff	False	True					F	*	2-3*	000: None							
-3* Mask		palafin	True	True					A	*	5*	000: None							
-2* Seal		palafin	True	True					B	*	4*	000: None							
-1* Foam		finizen	True	True					C	*	1-2*	000: None							
-1* Dew		finizen	True	True					D	*	1-2*	000: None							
-0* None		finizen	True	True					E	*	2-3*	000: None							
+3* Mask		palafin	True	True					A	*	5*	067: SecondSTAB	fighting						
+2* Seal		palafin	True	True					B	*	4*	076: HealOnNewFloor							
+1* Foam		finizen	True	True					C	*	1*	062: FastFriend							
+1* Dew		finizen	True	True					D	*	2*	060: ErraticAttacker							
+2* Brooch		finizen	True	True					E	*	3*	096: TypeBodyguard	water						
 0* None		palafin	False	True					F	*	2-3*	000: None							
 0* None		cyclizar	True	False					A	*	5*	000: None							
 0* None		cyclizar	True	False					B	*	4*	000: None							
@@ -2197,7 +2197,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 3* Scope	Sashimi Scope	veluza	True	False					A	*	5*	086: StatusOnCategoryUse		focus_energy			003: Status		
 2* Ring	Jettison Ring	veluza	True	False					B	*	4*	048: Absorption							
 1* Tooth		veluza	True	False					C	*	1-2*	088: DoubleDash							
-1* Tail		veluza	True	False					D	*	1-2*	053: ClutchPerformer							
+1* Tail		veluza	True	False					D	*	2*	053: ClutchPerformer							
 0* None		veluza	True	False					E	*	2-3*	000: None							
 0* None		veluza	False	False					F	*	2-3*	000: None							
 0* None		flutter_mane	True	False					A	*	5*	000: None							
@@ -2213,24 +2213,8 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		iron_bundle	True	False					E	*	2-3*	000: None							
 0* None		iron_bundle	False	False					F	*	2-3*	000: None							
 3* Crown		gholdengo	True	True					A	*	5*	036: WeaknessPayback	dark	disable					
-2* Seal		gholdengo	True	True					B	*	4*	000: None							
+2* Seal		gholdengo	True	True					B	*	4*	047: Celebrate							
 1* Hair		gimmighoul	True	True					C	*	1*	053: ClutchPerformer							
 1* Card		gimmighoul	True	True					D	*	2*	062: FastFriend							
 2* Coin		gimmighoul	True	True					E	*	3*	063: CoinWatcher							
 2* Key		gholdengo	False	True					F	*	3*	065: ChestFinder							
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			True	False															
-0* None			False	False															
