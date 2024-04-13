@@ -614,6 +614,13 @@ namespace DataGenerator.Data
                                     detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
                                     layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
                                 }
+                                {
+                                    BoxSpawner<MapGenContext> boxSpawn = new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1), new RandRange(1)));
+
+                                    RandomRoomSpawnStep<MapGenContext, MapItem> secretPlacement = new RandomRoomSpawnStep<MapGenContext, MapItem>(boxSpawn);
+                                    secretPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                                    layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, secretPlacement);
+                                }
                             }
 
                             layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
@@ -966,7 +973,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("spinda", "", "dizzy_punch", "", "", "", new RandRange(18), "wander_dumb"), new IntRange(6, max_floors), 10);
                     //sleeping
                     {
-                        TeamMemberSpawn mob = GetTeamMob("farfetchd", "defiant", "aerial_ace", "knock_off", "poison_jab", "", new RandRange(25), TeamMemberSpawn.MemberRole.Loner, "wander_dumb", true);
+                        TeamMemberSpawn mob = GetTeamMob("farfetchd", "defiant", "aerial_ace", "knock_off", "poison_jab", "", new RandRange(25), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
                         MobSpawnItem itemSpawn = new MobSpawnItem(true);
                         itemSpawn.Items.Add(new InvItem("held_power_band"), 10);
                         itemSpawn.Items.Add(new InvItem("held_defense_scarf"), 10);
@@ -1068,7 +1075,7 @@ namespace DataGenerator.Data
 
                     //switch vaults
                     {
-                        SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(1, 8, 35), new IntRange(0, max_floors-1)));
+                        SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(1, 8, 40), new IntRange(0, max_floors-1)));
 
                         //making room for the vault
                         {
@@ -1173,7 +1180,7 @@ namespace DataGenerator.Data
 
                         //construct paths
                         {
-                            AddInitGridStep(layout, 4, 4, 10, 10);
+                            AddInitGridStep(layout, 4, 3, 10, 10);
 
                             GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
@@ -3071,16 +3078,16 @@ namespace DataGenerator.Data
                         shop.Items.Add(new MapItem("wand_warp", 3, 150), 40);//warp wand
                         shop.Items.Add(new MapItem("wand_purge", 3, 120), 40);//purge wand
 
-                        shop.Items.Add(new MapItem("evo_fire_stone", 0, 2500), 50);//Fire Stone
-                        shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2500), 50);//Thunder Stone
-                        shop.Items.Add(new MapItem("evo_water_stone", 0, 2500), 50);//Water Stone
-                        shop.Items.Add(new MapItem("evo_moon_stone", 0, 3500), 50);//Moon Stone
-                        shop.Items.Add(new MapItem("evo_sun_stone", 0, 3500), 50);//Sun Stone
-                        shop.Items.Add(new MapItem("evo_dusk_stone", 0, 3500), 50);//Dusk Stone
-                        shop.Items.Add(new MapItem("evo_dawn_stone", 0, 2500), 50);//Dawn Stone
-                        shop.Items.Add(new MapItem("evo_shiny_stone", 0, 3500), 50);//Shiny Stone
-                        shop.Items.Add(new MapItem("evo_leaf_stone", 0, 2500), 50);//Leaf Stone
-                        shop.Items.Add(new MapItem("evo_ice_stone", 0, 2500), 50);//Ice Stone
+                        shop.Items.Add(new MapItem("evo_fire_stone", 0, 2000), 50);//Fire Stone
+                        shop.Items.Add(new MapItem("evo_thunder_stone", 0, 2000), 50);//Thunder Stone
+                        shop.Items.Add(new MapItem("evo_water_stone", 0, 2000), 50);//Water Stone
+                        shop.Items.Add(new MapItem("evo_moon_stone", 0, 3000), 50);//Moon Stone
+                        shop.Items.Add(new MapItem("evo_sun_stone", 0, 3000), 50);//Sun Stone
+                        shop.Items.Add(new MapItem("evo_dusk_stone", 0, 3000), 50);//Dusk Stone
+                        shop.Items.Add(new MapItem("evo_dawn_stone", 0, 3000), 50);//Dawn Stone
+                        shop.Items.Add(new MapItem("evo_shiny_stone", 0, 3000), 50);//Shiny Stone
+                        shop.Items.Add(new MapItem("evo_leaf_stone", 0, 2000), 50);//Leaf Stone
+                        shop.Items.Add(new MapItem("evo_ice_stone", 0, 2000), 50);//Ice Stone
 
                         shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
                         shop.ItemThemes.Add(new ItemStateType(new FlagType(typeof(EvoState)), false, true, new RandRange(3, 5)), 10);//evo items
@@ -3409,6 +3416,13 @@ namespace DataGenerator.Data
                                 RandomRoomSpawnStep<MapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<MapGenContext, EffectTile>(treasures);
                                 detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
                                 layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
+                            }
+                            {
+                                BoxSpawner<MapGenContext> boxSpawn = new BoxSpawner<MapGenContext>("box_light", new SpeciesItemContextSpawner<MapGenContext>(new IntRange(1), new RandRange(1)));
+
+                                RandomRoomSpawnStep<MapGenContext, MapItem> secretPlacement = new RandomRoomSpawnStep<MapGenContext, MapItem>(boxSpawn);
+                                secretPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.KeyVault));
+                                layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, secretPlacement);
                             }
                         }
 
@@ -4083,8 +4097,14 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(GetTeamMob("diglett", "", "dig", "", "", "", new RandRange(22), "wander_dumb"), new IntRange(0, 3), 10);
                         poolSpawn.Spawns.Add(GetTeamMob("dugtrio", "", "dig", "sucker_punch", "", "", new RandRange(26), "wander_dumb"), new IntRange(7, max_floors), 10);
                         //sleeping
-                        poolSpawn.Spawns.Add(GetTeamMob("lairon", "", "iron_head", "iron_tail", "", "", new RandRange(32), "wander_dumb", true), new IntRange(3, max_floors), 10);
-
+                        {
+                            TeamMemberSpawn mob = GetTeamMob("lairon", "", "iron_head", "iron_tail", "", "", new RandRange(32), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
+                            MobSpawnItem itemSpawn = new MobSpawnItem(true);
+                            foreach(string gummi in IterateGummis(false))
+                                itemSpawn.Items.Add(new InvItem(gummi), 10);
+                            mob.Spawn.SpawnFeatures.Add(itemSpawn);
+                            poolSpawn.Spawns.Add(mob, new IntRange(3, max_floors), 5);
+                        }
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                         poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
 
@@ -4198,7 +4218,7 @@ namespace DataGenerator.Data
                             foreach (string key in IterateGummis(false))
                                 shop.Items.Add(new MapItem(key, 0, 800), 1);//gummis
                             foreach (string key in IterateEvoItems(EvoClass.Early))
-                                shop.Items.Add(new MapItem(key, 0, 2500), 2);
+                                shop.Items.Add(new MapItem(key, 0, 2000), 2);
                             shop.Items.Add(new MapItem("food_apple_huge", 0, 1000), 10);//huge apple
 
                             shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 9)), 10);
@@ -4395,7 +4415,7 @@ namespace DataGenerator.Data
 
                             //construct paths
                             {
-                                AddInitListStep(layout, 50, 40);
+                                AddInitListStep(layout, 46, 38);
 
                                 FloorPathBranch<ListMapGenContext> path = new FloorPathBranch<ListMapGenContext>();
 
@@ -4486,6 +4506,14 @@ namespace DataGenerator.Data
                                     RandomRoomSpawnStep<ListMapGenContext, EffectTile> detourItems = new RandomRoomSpawnStep<ListMapGenContext, EffectTile>(treasures);
                                     detourItems.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BlockVault));
                                     layout.GenSteps.Add(PR_EXITS_DETOUR, detourItems);
+                                }
+                                //items for the vault
+                                {
+                                    BoxSpawner<ListMapGenContext> boxSpawn = new BoxSpawner<ListMapGenContext>("box_light", new SpeciesItemContextSpawner<ListMapGenContext>(new IntRange(1), new RandRange(1)));
+
+                                    RandomRoomSpawnStep<ListMapGenContext, MapItem> secretPlacement = new RandomRoomSpawnStep<ListMapGenContext, MapItem>(boxSpawn);
+                                    secretPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.BlockVault));
+                                    layout.GenSteps.Add(PR_SPAWN_ITEMS_EXTRA, secretPlacement);
                                 }
                             }
 
@@ -4669,7 +4697,14 @@ namespace DataGenerator.Data
                         //In Groups
                         poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(GetGenericMob("aron", "", "iron_head", "harden", "", "", new RandRange(24), "wander_dumb"), GetGenericMob("aron", "", "iron_head", "harden", "", "", new RandRange(24), "wander_dumb")), new IntRange(0, max_floors), 20);
                         //sleeping
-                        poolSpawn.Spawns.Add(GetTeamMob("lairon", "", "iron_head", "iron_tail", "", "", new RandRange(35), "wander_dumb", true), new IntRange(0, max_floors), 10);
+                        {
+                            TeamMemberSpawn mob = GetTeamMob("lairon", "", "iron_head", "iron_tail", "", "", new RandRange(35), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
+                            MobSpawnItem itemSpawn = new MobSpawnItem(true);
+                            foreach (string gummi in IterateGummis(false))
+                                itemSpawn.Items.Add(new InvItem(gummi), 10);
+                            mob.Spawn.SpawnFeatures.Add(itemSpawn);
+                            poolSpawn.Spawns.Add(mob, new IntRange(0, max_floors), 5);
+                        }
 
                         poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                         poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
@@ -4728,10 +4763,6 @@ namespace DataGenerator.Data
                                 vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_TILES_GEN_EXTRA, vaultStep));
                             }
 
-                            //items for the vault
-                            {
-
-                            }
 
                             PopulateVaultItems(vaultChanceZoneStep, DungeonStage.Intermediate, DungeonAccessibility.MainPath, max_floors, true);
 

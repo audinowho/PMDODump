@@ -1915,6 +1915,23 @@ namespace DataGenerator.Data
                     foreach (string key in IterateVitamins())
                         chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//boosters
                 }
+
+                if (access != DungeonAccessibility.Unlockable)
+                {
+                    if (gamePhase == DungeonStage.Beginner)
+                    {
+                        foreach (string key in IterateEvoItems(EvoClass.Early))
+                            chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 20);//evo items
+                    }
+                    else if (gamePhase == DungeonStage.Intermediate || gamePhase == DungeonStage.Advanced)
+                    {
+                        foreach (string key in IterateEvoItems(EvoClass.Mid))
+                            chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 10);//evo items
+                        foreach (string key in IterateEvoItems(EvoClass.Late))
+                            chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 10);//evo items
+                    }
+                }
+
                 foreach (string key in IterateGummis(true))
                     chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
 
@@ -1938,7 +1955,13 @@ namespace DataGenerator.Data
                     chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(5, 10)), new IntRange(0, max_floors), 10);//gummis
                 }
                 else
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeNone(100, new RandRange(1, 3)), new IntRange(0, max_floors), 30);
+                {
+                    if (gamePhase <= DungeonStage.Intermediate && access != DungeonAccessibility.Unlockable)
+                        chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4)), new IntRange(0, max_floors), 10);//evo items
+
+                    chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3)), new IntRange(0, max_floors), 10);//gummis
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(1)), new ItemThemeNone(100, new RandRange(1, 3))), new IntRange(0, max_floors), 30);
+                }
             }
         }
 

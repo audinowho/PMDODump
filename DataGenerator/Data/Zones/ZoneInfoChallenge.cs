@@ -275,7 +275,7 @@ namespace DataGenerator.Data
                     chestChanceZoneStep.ModStates.Add(new FlagType(typeof(ChestModGenState)));
                     chestChanceZoneStep.HouseStepSpawns.Add(new ChestStep<ListMapGenContext>(false, GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                    PopulateChestItems(chestChanceZoneStep, DungeonStage.Intermediate, DungeonAccessibility.SidePath, false, max_floors);
+                    PopulateChestItems(chestChanceZoneStep, DungeonStage.Intermediate, DungeonAccessibility.Unlockable, false, max_floors);
 
                     floorSegment.ZoneSteps.Add(chestChanceZoneStep);
                 }
@@ -3512,10 +3512,10 @@ namespace DataGenerator.Data
 
                     shop.Items.Add(new MapItem("machine_ability_capsule", 0, 1000), 20);//Ability Capsule
 
-                    shop.Items.Add(new MapItem("evo_fire_stone", 0, 1500), 10);//Fire Stone
-                    shop.Items.Add(new MapItem("evo_dusk_stone", 0, 1500), 10);//Dusk Stone
-                    shop.Items.Add(new MapItem("evo_shiny_stone", 0, 1500), 10);//Shiny Stone
-                    shop.Items.Add(new MapItem("evo_reaper_cloth", 0, 2000), 10);//Reaper Cloth
+                    shop.Items.Add(new MapItem("evo_fire_stone", 0, 2000), 10);//Fire Stone
+                    shop.Items.Add(new MapItem("evo_dusk_stone", 0, 2000), 10);//Dusk Stone
+                    shop.Items.Add(new MapItem("evo_shiny_stone", 0, 2000), 10);//Shiny Stone
+                    shop.Items.Add(new MapItem("evo_reaper_cloth", 0, 3000), 10);//Reaper Cloth
 
                     shop.ItemThemes.Add(new ItemThemeNone(100, new RandRange(3, 6)), 10);
 
