@@ -3123,14 +3123,15 @@ namespace DataGenerator.Data
             else if (ii == 452)
             {
                 item.Name = new LocalText("Storage Box");
-                item.Desc = new LocalText("A marvelous box that lets the user add any item from storage into the Treasure Bag.");
+                item.Desc = new LocalText("A marvelous box that sends the item currently held by the user to storage.");
                 item.Sprite = "Machine_Gray";
                 item.Icon = 12;
                 item.UsageType = ItemData.UseType.Use;
                 item.ItemStates.Set(new UtilityState());
                 item.Price = 150;
-                item.UseEvent.BeforeTryActions.Add(1, new StorageBoxEvent());
-                item.UseEvent.OnHits.Add(0, new WithdrawItemEvent());
+                item.MaxStack = 3;
+                item.UseEvent.BeforeTryActions.Add(1, new DepositBoxEvent());
+                item.UseEvent.OnHits.Add(0, new StoreItemEvent());
                 item.UseAction = new SelfAction();
                 item.UseAction.TargetAlignments |= Alignment.Self;
                 item.Explosion.TargetAlignments |= Alignment.Self;
