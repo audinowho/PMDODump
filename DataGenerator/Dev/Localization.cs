@@ -52,7 +52,7 @@ namespace DataGenerator.Dev
             {
                 ItemData item = new ItemData();
                 item.UseEvent.Element = "none";
-                AutoItemInfo.FillExclusiveEffects(item, new List<LocalText>(), false, descType, new object[0], false);
+                AutoItemInfo.FillExclusiveEffects("", item, new List<LocalText>(), false, descType, new object[0], false);
                 updateWorkingLists(rows, orderedKeys, languages, typeof(ExclusiveItemEffect).Name + "." + descType, item.Comment, item.Desc);
             }
 

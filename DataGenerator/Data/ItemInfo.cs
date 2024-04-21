@@ -3790,7 +3790,6 @@ namespace DataGenerator.Data
                             fileName = "medicine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
                         item.SortCategory = 10;
                         item.UsageType = ItemData.UseType.Use;
-                        item.ItemStates.Set(new UtilityState());
                         item.Icon = 7;
                     }
                     else if (ii >= 183 && ii <= 185)//herbs
@@ -4027,6 +4026,13 @@ namespace DataGenerator.Data
                     itemFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2));
                     item.UseAction.PreActions.Add(itemFX);
                 }
+            }
+            else if (item.SortCategory == 10)
+            {
+                BattleFX itemFX = new BattleFX();
+                itemFX.Sound = "DUN_Wonder_Tile";
+                itemFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2));
+                item.UseAction.PreActions.Add(itemFX);
             }
 
             return (fileName, item);

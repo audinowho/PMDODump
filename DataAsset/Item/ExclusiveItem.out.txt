@@ -851,7 +851,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		taillow	True	True					E	*	3*	000: None							
 0* None		swellow	False	True					F	*	3*	000: None							
 0* None	Stock Scarf	pelipper	True	True					A	*	5*	036: WeaknessPayback	grass	flinch					
-3* Sash		pelipper	True	True					B	*	4*	087: MapStatusOnCategoryUse					002: Magical		rain
+3* Sash		pelipper	True	True					B	*	4*	073: CheekPouch							
 1* Card		wingull	True	True					C	*	1*	015: PracticeSwinger							
 1* Wing		wingull	True	True					D	*	2*	052: BetterOdds							
 0* None		wingull	True	True					E	*	3*	000: None							
@@ -986,7 +986,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 2* Pebble		numel	True	True					E	*	3*	075: HealInLava							
 0* None		camerupt	False	True					F	*	3*	000: None							
 0* None	Sooty Sash	torkoal	True	False					A	*	5*	036: WeaknessPayback	ground	blinker					
-3* Ruff		torkoal	True	False					B	*	4*	087: MapStatusOnCategoryUse					002: Magical		sunny
+3* Ruff		torkoal	True	False					B	*	4*	080: NoStatusInWeather							sunny
 1* Card		torkoal	True	False					C	*	1*	016: MisfortuneMirror							
 1* Beam		torkoal	True	False					D	*	2*	050: Anchor							
 0* None		torkoal	True	False					E	*	3*	000: None							
@@ -1461,11 +1461,11 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 2* Aroma		shaymin	True	False					D	*	2*	083: Gratitude							
 2* Seal		shaymin	True	False					E	*	3*	032: StairSensor							
 0* None		shaymin	False	False					F	*	3*	000: None							
-0* None		victini	True	False					A	*	5*	000: None							
-0* None		victini	True	False					B	*	4*	000: None							
-0* None		victini	True	False					C	*	1-2*	000: None							
-0* None		victini	True	False					D	*	1-2*	000: None							
-0* None		victini	True	False					E	*	2-3*	000: None							
+0* None	Victory Crown	victini	True	False					A	*	5*	020: AllyReviver							
+2* Heart		victini	True	False					B	*	4*	081: DeepBreatherPlus							
+1* Wing		victini	True	False					C	*	1*	062: FastFriend							
+1* Hair		victini	True	False					D	*	2*	083: Gratitude							
+2* Charm		victini	True	False					E	*	3*	046: RoyalVeil							
 0* None		victini	False	False					F	*	2-3*	000: None							
 3* Blade		serperior	True	True					A	*	5*	101: ChanceStatOnTypeHit	grass	mod_accuracy				25	
 2* Brooch		servine	True	True					B	*	4*	055: CloseDodge							
@@ -1695,11 +1695,11 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		kyurem	True	False					D	*	1-2*	000: None							
 0* None		kyurem	True	False					E	*	2-3*	000: None							
 0* None		kyurem	False	False					F	*	2-3*	000: None							
-0* None		meloetta	True	False					A	*	5*	000: None							
-0* None		meloetta	True	False					B	*	4*	000: None							
-0* None		meloetta	True	False					C	*	1-2*	000: None							
-0* None		meloetta	True	False					D	*	1-2*	000: None							
-0* None		meloetta	True	False					E	*	2-3*	000: None							
+3* Dress		meloetta	True	False					A	*	5*	047: Celebrate							
+3* Tiara		meloetta	True	False					B	*	4*	095: CelebrateCure							
+1* Card		meloetta	True	False					C	*	1*	026: SureHitAttacker							
+1* Song		meloetta	True	False					D	*	2*	053: ClutchPerformer							
+2* Guard		meloetta	True	False					E	*	3*	028: StatusImmune		confuse					
 0* None		meloetta	False	False					F	*	2-3*	000: None							
 0* None	G-Scope	genesect	True	False					A	*	5*	035: XRay							
 0* None	G-Booster	genesect	True	False					B	*	4*	070: PassThroughAttacker							
@@ -2194,8 +2194,8 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		cyclizar	True	False					D	*	1-2*	000: None							
 0* None		cyclizar	True	False					E	*	2-3*	000: None							
 0* None		cyclizar	False	False					F	*	2-3*	000: None							
-3* Scope	Sashimi Scope	veluza	True	False					A	*	5*	086: StatusOnCategoryUse		focus_energy			003: Status		
-2* Ring	Jettison Ring	veluza	True	False					B	*	4*	048: Absorption							
+0* None	Sashimi Scope	veluza	True	False					A	*	5*	086: StatusOnCategoryUse		focus_energy			003: Status		
+0* None	Jettison Ring	veluza	True	False					B	*	4*	048: Absorption							
 1* Tooth		veluza	True	False					C	*	1-2*	088: DoubleDash							
 1* Tail		veluza	True	False					D	*	2*	053: ClutchPerformer							
 0* None		veluza	True	False					E	*	2-3*	000: None							

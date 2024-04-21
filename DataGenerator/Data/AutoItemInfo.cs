@@ -212,7 +212,7 @@ namespace DataGenerator.Data
                 ItemData item = new ItemData();
                 item.UseEvent.Element = "none";
                 item.SortCategory = 17;
-                AutoItemInfo.FillExclusiveEffects(item, new List<LocalText>(), false, descType, new object[0], false);
+                AutoItemInfo.FillExclusiveEffects("", item, new List<LocalText>(), false, descType, new object[0], false);
 
 
                 effectTypes.Add(((int)descType).ToString("D3") + ": " + descType.ToString());
@@ -739,7 +739,7 @@ namespace DataGenerator.Data
         /// <param name="localArgs"></param>
         /// <param name="type"></param>
         /// <param name="args"></param>
-        public static void FillExclusiveEffects(ItemData item, List<LocalText> localArgs, bool includeEffects, ExclusiveItemEffect type, object[] args, bool translate)
+        public static void FillExclusiveEffects(string itemID, ItemData item, List<LocalText> localArgs, bool includeEffects, ExclusiveItemEffect type, object[] args, bool translate)
         {
             if (type == ExclusiveItemEffect.TypeStatBonus)
             {
@@ -1318,10 +1318,10 @@ namespace DataGenerator.Data
             else if (type == ExclusiveItemEffect.HitAndRun)
             {
                 item.Rarity = 1;
-                item.Desc = new LocalText("When kept in the bag, the Pokémon will take reduced damage from counter attacks.");
+                item.Desc = new LocalText("When kept in the bag, the Pokémon will not take damage from counter attacks.");
                 if (includeEffects)
                 {
-                    item.OnRefresh.Add(-1, new FamilyRefreshEvent(new MiscEvent(new HitAndRunState())));
+                    item.OnRefresh.Add(-1, new FamilyRefreshEvent(new MiscEvent(new HitAndRunState(itemID))));
                 }
             }
             else if (type == ExclusiveItemEffect.StairSensor)
@@ -2071,7 +2071,7 @@ namespace DataGenerator.Data
             LocalText reqStatement = GetExclusiveDescription(family, translate);
 
             List<LocalText> localArgs = new List<LocalText>();
-            FillExclusiveEffects(item, localArgs, true, effect, effectArgs, translate);
+            FillExclusiveEffects(item_idx, item, localArgs, true, effect, effectArgs, translate);
             item.Desc = LocalText.FormatLocalText(item.Desc, localArgs.ToArray());
 
             item.Desc = LocalText.FormatLocalText(reqStatement, monsterNames, item.Desc);
@@ -2098,7 +2098,7 @@ namespace DataGenerator.Data
             newArgs.AddRange(effectArgs);
 
             List<LocalText> localArgs = new List<LocalText>();
-            FillExclusiveEffects(item, localArgs, true, effect, newArgs.ToArray(), translate);
+            FillExclusiveEffects(item_idx, item, localArgs, true, effect, newArgs.ToArray(), translate);
             item.Rarity = (item.Rarity - 1) / 2 + 1;
             item.Desc = LocalText.FormatLocalText(item.Desc, localArgs.ToArray());
 
