@@ -2753,6 +2753,12 @@ cyclizar	FALSE	C	1-2*
 cyclizar	FALSE	D	1-2*
 cyclizar	FALSE	E	2-3*
 cyclizar	FALSE	F	2-3*
+glimmora	TRUE	A	5*
+glimmora	TRUE	B	4*
+glimmet	TRUE	C	1-2*
+glimmet	TRUE	D	1-2*
+glimmet	TRUE	E	2-3*
+glimmora	TRUE	F	2-3*
 veluza	FALSE	A	5*
 veluza	FALSE	B	4*
 veluza	FALSE	C	1-2*

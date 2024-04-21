@@ -83,7 +83,7 @@ Rarity	EffectType	Description
 4*	081: DeepBreatherPlus	When kept in the bag, it restores the PP of all moves when the Pokémon reaches a new floor.
 5*	082: WeaknessReduce	When kept in the bag, it reduces damage done by {0}-type attacks.
 2*	083: Gratitude	When kept in the bag, the Pokémon gives back recovered HP when it is healed by another Pokémon.
-1*	084: HitAndRun	When kept in the bag, the Pokémon will take reduced damage from counter attacks.
+1*	084: HitAndRun	When kept in the bag, the Pokémon will not take damage from counter attacks.
 3*	085: StatusOnCategoryHit	When kept in the bag, the Pokémon's {1} moves inflict the {0} status.
 4*	086: StatusOnCategoryUse	When kept in the bag, the Pokémon gains the {0} status after using a {1} move.
 5*	087: MapStatusOnCategoryUse	When kept in the bag, the Pokémon changes the floor to {1} after using a {0} move.
@@ -96,7 +96,7 @@ Rarity	EffectType	Description
 1*	094: PPSaver	When kept in the bag, the Pokémon's PP cannot be lowered by the moves and abilities of opposing Pokémon.
 4*	095: CelebrateCure	When kept in the bag, the Pokémon will recover from status effects after defeating an enemy.
 3*	096: TypeBodyguard	When kept in the bag, the Pokémon will step in to take {0}-type attacks for nearby allies.
-4*	097: StatOnCategoryUse	When kept in the bag, the Pokémon's {0} is raised slightly when it uses a {1} move.
+4*	097: StatOnCategoryUse	When kept in the bag, the Pokémon's {1} moves may increase the user's {0}.
 5*	098: StatusOnTypeHit	When kept in the bag, the Pokémon's {0}-type moves inflict the {1} status.
 5*	099: SweetDreams	When kept in the bag, the Pokémon gradually restores the HP of its teammates while they are asleep.
 5*	100: ChanceStatusOnTypeHit	When kept in the bag, the Pokémon's {0}-type moves have a chance to inflict the {1} status.

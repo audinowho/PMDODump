@@ -564,6 +564,8 @@ namespace DataGenerator.Data
                             {
                                 //C+D+B=A
                                 addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'C', 'D', 'B');
+                                //C+D=B
+                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'B', 'C', 'D');
                                 //C+D=E
                                 addSpecificTradeable(specific_tradeables, familyName, prev_start, 'E', 'C', 'D');
 

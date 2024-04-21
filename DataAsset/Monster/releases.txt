@@ -47,10 +47,10 @@ sandshrew	0027	sandshrew	1	Alolan Sandshrew			TRUE	FALSE
 sandshrew	0028	sandslash	1	Alolan Sandslash			FALSE	FALSE
 nidoran_f	0029	nidoran_f	0	Nidoran♀		bramble_woods secret_garden	TRUE	FALSE
 nidoran_f	0030	nidorina	0	Nidorina		secret_garden sleeping_caldera	TRUE	FALSE
-nidoran_f	0031	nidoqueen	0	Nidoqueen		EVOLVE	TRUE	FALSE
+nidoran_f	0031	nidoqueen	0	Nidoqueen		sleeping_caldera	TRUE	FALSE
 nidoran_m	0032	nidoran_m	0	Nidoran♂		bramble_woods secret_garden	TRUE	FALSE
 nidoran_m	0033	nidorino	0	Nidorino		secret_garden sleeping_caldera	TRUE	FALSE
-nidoran_m	0034	nidoking	0	Nidoking		EVOLVE	TRUE	FALSE
+nidoran_m	0034	nidoking	0	Nidoking		sleeping_caldera	TRUE	FALSE
 clefairy	0173	cleffa	0	Cleffa		guildmaster_trail secret_garden snowbound_path	TRUE	FALSE
 clefairy	0035	clefairy	0	Clefairy		guildmaster_trail moonlit_courtyard secret_garden snowbound_path	TRUE	FALSE
 clefairy	0036	clefable	0	Clefable		guildmaster_trail secret_garden snowbound_path	TRUE	FALSE
@@ -68,23 +68,23 @@ oddish	0043	oddish	0	Oddish		fertile_valley secret_garden	TRUE	FALSE
 oddish	0044	gloom	0	Gloom		moonlit_courtyard secret_garden	TRUE	FALSE
 oddish	0045	vileplume	0	Vileplume		secret_garden	TRUE	FALSE
 oddish	0182	bellossom	0	Bellossom		faded_trail secret_garden	TRUE	FALSE
-paras	0046	paras	0	Paras		guildmaster_trail trickster_woods	TRUE	FALSE
-paras	0047	parasect	0	Parasect		guildmaster_trail	TRUE	FALSE
+paras	0046	paras	0	Paras		guildmaster_trail sleeping_caldera trickster_woods	TRUE	FALSE
+paras	0047	parasect	0	Parasect		guildmaster_trail sleeping_caldera	TRUE	FALSE
 venonat	0048	venonat	0	Venonat		overgrown_wilds	TRUE	FALSE
 venonat	0049	venomoth	0	Venomoth		EVOLVE	TRUE	FALSE
 diglett	0050	diglett	0	Diglett		copper_quarry secret_garden	TRUE	FALSE
 diglett	0051	dugtrio	0	Dugtrio		copper_quarry secret_garden	TRUE	FALSE
-diglett	0050	diglett	1	Alolan Diglett			TRUE	FALSE
-diglett	0051	dugtrio	1	Alolan Dugtrio			TRUE	FALSE
-meowth	0052	meowth	0	Meowth		guildmaster_trail	TRUE	FALSE
+diglett	0050	diglett	1	Alolan Diglett		sleeping_caldera	TRUE	FALSE
+diglett	0051	dugtrio	1	Alolan Dugtrio		sleeping_caldera	TRUE	FALSE
+meowth	0052	meowth	0	Meowth		depleted_basin guildmaster_trail	TRUE	FALSE
 meowth	0053	persian	0	Persian		guildmaster_trail sickly_hollow veiled_ridge	TRUE	FALSE
-meowth	0052	meowth	1	Alolan Meowth			TRUE	TRUE
-meowth	0053	persian	1	Alolan Persian			TRUE	FALSE
+meowth	0052	meowth	1	Alolan Meowth		sleeping_caldera	TRUE	TRUE
+meowth	0053	persian	1	Alolan Persian		sleeping_caldera	TRUE	FALSE
 meowth	0052	meowth	2	Galarian Meowth			FALSE	FALSE
 meowth	0863	perrserker	0	Perrserker	steely_spirit		FALSE	FALSE
 meowth	0052	meowth	3	Gigantamax Meowth		TEMP	FALSE	FALSE
-psyduck	0054	psyduck	0	Psyduck			TRUE	FALSE
-psyduck	0055	golduck	0	Golduck		snowbound_path	TRUE	FALSE
+psyduck	0054	psyduck	0	Psyduck		sleeping_caldera	TRUE	FALSE
+psyduck	0055	golduck	0	Golduck		sleeping_caldera snowbound_path	TRUE	FALSE
 mankey	0056	mankey	0	Mankey		guildmaster_trail secret_garden trickster_woods	TRUE	FALSE
 mankey	0057	primeape	0	Primeape		guildmaster_trail secret_garden	TRUE	TRUE
 mankey	0979	annihilape	0	Annihilape	rage_fist stomping_tantrum		FALSE	FALSE
@@ -93,7 +93,7 @@ growlithe	0059	arcanine	0	Arcanine		secret_garden	TRUE	FALSE
 growlithe	0058	growlithe	1	Hisuian Growlithe			TRUE	TRUE
 growlithe	0059	arcanine	1	Hisuian Arcanine	raging_fury		TRUE	TRUE
 poliwag	0060	poliwag	0	Poliwag		faded_trail secret_garden	TRUE	FALSE
-poliwag	0061	poliwhirl	0	Poliwhirl		sleeping_caldera	TRUE	FALSE
+poliwag	0061	poliwhirl	0	Poliwhirl		EVOLVE	TRUE	FALSE
 poliwag	0062	poliwrath	0	Poliwrath		secret_garden	TRUE	FALSE
 poliwag	0186	politoed	0	Politoed		secret_garden	TRUE	FALSE
 abra	0063	abra	0	Abra		secret_garden trickster_woods	TRUE	FALSE
@@ -130,14 +130,14 @@ magnemite	0081	magnemite	0	Magnemite		copper_quarry thunderstruck_pass	TRUE	FALS
 magnemite	0082	magneton	0	Magneton		EVOLVE	TRUE	FALSE
 magnemite	0462	magnezone	0	Magnezone		EVOLVE	TRUE	FALSE
 farfetchd	0083	farfetchd	0	Farfetch'd		flyaway_cliffs secret_garden	TRUE	FALSE
-farfetchd	0083	farfetchd	1	Galarian Farfetch’d	brutal_swing		TRUE	FALSE
-farfetchd	0865	sirfetchd	0	Sirfetch'd	brutal_swing meteor_assault		TRUE	FALSE
+farfetchd	0083	farfetchd	1	Galarian Farfetch’d			TRUE	FALSE
+farfetchd	0865	sirfetchd	0	Sirfetch'd	meteor_assault		TRUE	FALSE
 doduo	0084	doduo	0	Doduo		fertile_valley	TRUE	FALSE
 doduo	0085	dodrio	0	Dodrio		EVOLVE	TRUE	FALSE
 seel	0086	seel	0	Seel		castaway_cave	TRUE	FALSE
 seel	0087	dewgong	0	Dewgong		EVOLVE	TRUE	FALSE
-grimer	0088	grimer	0	Grimer		sleeping_caldera	TRUE	FALSE
-grimer	0089	muk	0	Muk		EVOLVE	TRUE	FALSE
+grimer	0088	grimer	0	Grimer			TRUE	FALSE
+grimer	0089	muk	0	Muk			TRUE	FALSE
 grimer	0088	grimer	1	Alolan Grimer		copper_quarry	TRUE	FALSE
 grimer	0089	muk	1	Alolan Muk		EVOLVE	TRUE	FALSE
 shellder	0090	shellder	0	Shellder		guildmaster_trail	TRUE	FALSE
@@ -156,13 +156,13 @@ krabby	0098	krabby	0	Krabby		lava_floe_island	TRUE	FALSE
 krabby	0099	kingler	0	Kingler		EVOLVE	TRUE	FALSE
 krabby	0099	kingler	1	Gigantamax Kingler		TEMP	FALSE	FALSE
 voltorb	0100	voltorb	0	Voltorb		guildmaster_trail thunderstruck_pass	TRUE	TRUE
-voltorb	0101	electrode	0	Electrode		guildmaster_trail	TRUE	FALSE
+voltorb	0101	electrode	0	Electrode		guildmaster_trail relic_tower	TRUE	FALSE
 voltorb	0100	voltorb	1	Hisuian Voltorb			TRUE	FALSE
 voltorb	0101	electrode	1	Hisuian Electrode	chloroblast		FALSE	FALSE
 exeggcute	0102	exeggcute	0	Exeggcute		guildmaster_trail overgrown_wilds	TRUE	FALSE
 exeggcute	0103	exeggutor	0	Exeggutor		guildmaster_trail	TRUE	FALSE
 exeggcute	0103	exeggutor	1	Alolan Exeggutor	dragon_hammer	EVOLVE	TRUE	TRUE
-cubone	0104	cubone	0	Cubone		forsaken_desert guildmaster_trail	TRUE	TRUE
+cubone	0104	cubone	0	Cubone		forsaken_desert guildmaster_trail sleeping_caldera	TRUE	TRUE
 cubone	0105	marowak	0	Marowak		forsaken_desert guildmaster_trail	TRUE	FALSE
 cubone	0105	marowak	1	Alolan Marowak	stomping_tantrum	sleeping_caldera	TRUE	FALSE
 hitmonlee	0236	tyrogue	0	Tyrogue		guildmaster_trail	TRUE	FALSE
@@ -174,7 +174,7 @@ lickitung	0463	lickilicky	0	Lickilicky		guildmaster_trail	TRUE	FALSE
 koffing	0109	koffing	0	Koffing		guildmaster_trail veiled_ridge	TRUE	FALSE
 koffing	0110	weezing	0	Weezing		guildmaster_trail	TRUE	FALSE
 koffing	0110	weezing	1	Galarian Weezing	strange_steam		FALSE	FALSE
-rhyhorn	0111	rhyhorn	0	Rhyhorn		copper_quarry	TRUE	FALSE
+rhyhorn	0111	rhyhorn	0	Rhyhorn		depleted_basin	TRUE	FALSE
 rhyhorn	0112	rhydon	0	Rhydon		EVOLVE	TRUE	FALSE
 rhyhorn	0464	rhyperior	0	Rhyperior		EVOLVE	TRUE	FALSE
 chansey	0440	happiny	0	Happiny		secret_garden	TRUE	FALSE
@@ -201,8 +201,8 @@ scyther	0212	scizor	1	Mega Scizor		TEMP	FALSE	FALSE
 scyther	0900	kleavor	0	Kleavor	stone_axe	EVOLVE	TRUE	TRUE
 jynx	0238	smoochum	0	Smoochum		guildmaster_trail	TRUE	FALSE
 jynx	0124	jynx	0	Jynx		guildmaster_trail snowbound_path	TRUE	FALSE
-electabuzz	0239	elekid	0	Elekid			TRUE	TRUE
-electabuzz	0125	electabuzz	0	Electabuzz		thunderstruck_pass	TRUE	FALSE
+electabuzz	0239	elekid	0	Elekid		sleeping_caldera	TRUE	TRUE
+electabuzz	0125	electabuzz	0	Electabuzz		sleeping_caldera thunderstruck_pass	TRUE	FALSE
 electabuzz	0466	electivire	0	Electivire		EVOLVE	TRUE	FALSE
 magmar	0240	magby	0	Magby		lava_floe_island	TRUE	FALSE
 magmar	0126	magmar	0	Magmar		sleeping_caldera	TRUE	FALSE
@@ -228,12 +228,12 @@ eevee	0197	umbreon	0	Umbreon		guildmaster_trail moonlit_courtyard	TRUE	FALSE
 eevee	0470	leafeon	0	Leafeon		guildmaster_trail overgrown_wilds secret_garden	TRUE	FALSE
 eevee	0471	glaceon	0	Glaceon		guildmaster_trail snowbound_path	TRUE	FALSE
 eevee	0700	sylveon	0	Sylveon		guildmaster_trail moonlit_courtyard secret_garden	TRUE	FALSE
-porygon	0137	porygon	0	Porygon		copper_quarry guildmaster_trail moonlit_courtyard relic_tower snowbound_path thunderstruck_pass veiled_ridge	TRUE	FALSE
+porygon	0137	porygon	0	Porygon		copper_quarry depleted_basin guildmaster_trail moonlit_courtyard relic_tower snowbound_path thunderstruck_pass veiled_ridge	TRUE	FALSE
 porygon	0233	porygon2	0	Porygon2		guildmaster_trail moonlit_courtyard relic_tower thunderstruck_pass treacherous_mountain	TRUE	TRUE
 porygon	0474	porygon_z	0	Porygon-Z		guildmaster_trail moonlit_courtyard relic_tower thunderstruck_pass	TRUE	FALSE
-omanyte	0138	omanyte	0	Omanyte		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+omanyte	0138	omanyte	0	Omanyte		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 omanyte	0139	omastar	0	Omastar		EVOLVE	TRUE	FALSE
-kabuto	0140	kabuto	0	Kabuto		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+kabuto	0140	kabuto	0	Kabuto		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 kabuto	0141	kabutops	0	Kabutops		EVOLVE	TRUE	FALSE
 aerodactyl	0142	aerodactyl	0	Aerodactyl		guildmaster_trail	TRUE	FALSE
 aerodactyl	0142	aerodactyl	1	Mega Aerodactyl		TEMP	FALSE	FALSE
@@ -276,7 +276,7 @@ chinchou	0171	lanturn	0	Lanturn		EVOLVE	TRUE	FALSE
 togepi	0175	togepi	0	Togepi		flyaway_cliffs guildmaster_trail	TRUE	FALSE
 togepi	0176	togetic	0	Togetic		guildmaster_trail	TRUE	FALSE
 togepi	0468	togekiss	0	Togekiss		guildmaster_trail	TRUE	FALSE
-natu	0177	natu	0	Natu		guildmaster_trail relic_tower	TRUE	TRUE
+natu	0177	natu	0	Natu		guildmaster_trail	TRUE	TRUE
 natu	0178	xatu	0	Xatu		guildmaster_trail	TRUE	FALSE
 mareep	0179	mareep	0	Mareep		secret_garden	TRUE	FALSE
 mareep	0180	flaaffy	0	Flaaffy		secret_garden	TRUE	FALSE
@@ -302,43 +302,43 @@ wooper	0980	clodsire	0	Clodsire			FALSE	FALSE
 wooper	0194	wooper	1	Wooper			FALSE	FALSE
 murkrow	0198	murkrow	0	Murkrow		guildmaster_trail sickly_hollow	TRUE	FALSE
 murkrow	0430	honchkrow	0	Honchkrow		guildmaster_trail	TRUE	FALSE
-misdreavus	0200	misdreavus	0	Misdreavus		guildmaster_trail sickly_hollow	TRUE	TRUE
+misdreavus	0200	misdreavus	0	Misdreavus		depleted_basin guildmaster_trail sickly_hollow	TRUE	TRUE
 misdreavus	0429	mismagius	0	Mismagius		guildmaster_trail sickly_hollow	TRUE	FALSE
-unown	0201	unown	0	Unown A		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	1	Unown B		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	2	Unown C		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	3	Unown D		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	4	Unown E		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	5	Unown F		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	6	Unown G		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	7	Unown H		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	8	Unown I		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	9	Unown J		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	10	Unown K		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	11	Unown L		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	12	Unown M		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	13	Unown N		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	14	Unown O		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	15	Unown P		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	16	Unown Q		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	17	Unown R		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	18	Unown S		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	19	Unown T		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	20	Unown U		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	21	Unown V		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	22	Unown W		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	23	Unown X		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	24	Unown Y		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
-unown	0201	unown	25	Unown Z		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	0	Unown A		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	1	Unown B		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	2	Unown C		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	3	Unown D		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	4	Unown E		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	5	Unown F		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	6	Unown G		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	7	Unown H		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	8	Unown I		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	9	Unown J		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	10	Unown K		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	11	Unown L		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	12	Unown M		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	13	Unown N		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	14	Unown O		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	15	Unown P		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	16	Unown Q		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	17	Unown R		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	18	Unown S		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	19	Unown T		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	20	Unown U		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	21	Unown V		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	22	Unown W		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	23	Unown X		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	24	Unown Y		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+unown	0201	unown	25	Unown Z		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 unown	0201	unown	26	Unown !			TRUE	FALSE
 unown	0201	unown	27	Unown ?			TRUE	FALSE
 wobbuffet	0360	wynaut	0	Wynaut		guildmaster_trail secret_garden	TRUE	FALSE
-wobbuffet	0202	wobbuffet	0	Wobbuffet		guildmaster_trail moonlit_courtyard relic_tower secret_garden	TRUE	FALSE
+wobbuffet	0202	wobbuffet	0	Wobbuffet		guildmaster_trail moonlit_courtyard relic_tower secret_garden sleeping_caldera	TRUE	FALSE
 girafarig	0203	girafarig	0	Girafarig		overgrown_wilds	TRUE	FALSE
 girafarig	0981	farigiraf	0	Farigiraf	cud_chew armor_tail	EVOLVE	TRUE	TRUE
 pineco	0204	pineco	0	Pineco		overgrown_wilds	TRUE	FALSE
 pineco	0205	forretress	0	Forretress		snowbound_path	TRUE	FALSE
-dunsparce	0206	dunsparce	0	Dunsparce		guildmaster_trail sickly_hollow sleeping_caldera	TRUE	TRUE
+dunsparce	0206	dunsparce	0	Dunsparce		depleted_basin guildmaster_trail sickly_hollow	TRUE	TRUE
 dunsparce	0982	dudunsparce	0	Dudunsparce	hyper_drill		FALSE	FALSE
 dunsparce	0982	dudunsparce	1	Dudunsparce	hyper_drill		FALSE	FALSE
 gligar	0207	gligar	0	Gligar		faultline_ridge secret_garden	TRUE	FALSE
@@ -348,7 +348,7 @@ snubbull	0210	granbull	0	Granbull		secret_garden	TRUE	FALSE
 qwilfish	0211	qwilfish	0	Qwilfish			TRUE	FALSE
 qwilfish	0211	qwilfish	1	Hisuian Qwilfish		castaway_cave	TRUE	FALSE
 qwilfish	0904	overqwil	0	Overqwil		EVOLVE	TRUE	FALSE
-shuckle	0213	shuckle	0	Shuckle		copper_quarry faultline_ridge guildmaster_trail overgrown_wilds secret_garden	TRUE	FALSE
+shuckle	0213	shuckle	0	Shuckle		copper_quarry depleted_basin faultline_ridge guildmaster_trail overgrown_wilds secret_garden	TRUE	FALSE
 heracross	0214	heracross	0	Heracross		overgrown_wilds	TRUE	FALSE
 heracross	0214	heracross	1	Mega Heracross		TEMP	FALSE	FALSE
 sneasel	0215	sneasel	0	Sneasel		guildmaster_trail secret_garden veiled_ridge	TRUE	FALSE
@@ -357,7 +357,7 @@ sneasel	0215	sneasel	1	Hisuian Sneasel			TRUE	FALSE
 sneasel	0903	sneasler	0	Sneasler	dire_claw		FALSE	FALSE
 teddiursa	0216	teddiursa	0	Teddiursa		fertile_valley secret_garden	TRUE	FALSE
 teddiursa	0217	ursaring	0	Ursaring		secret_garden	TRUE	FALSE
-teddiursa	0901	ursaluna	0	Ursaluna	headlong_rush high_horsepower	EVOLVE	TRUE	TRUE
+teddiursa	0901	ursaluna	0	Ursaluna	headlong_rush high_horsepower		TRUE	TRUE
 slugma	0218	slugma	0	Slugma		guildmaster_trail lava_floe_island sleeping_caldera	TRUE	FALSE
 slugma	0219	magcargo	0	Magcargo		guildmaster_trail	TRUE	FALSE
 swinub	0220	swinub	0	Swinub		guildmaster_trail snowbound_path	TRUE	FALSE
@@ -436,7 +436,7 @@ surskit	0284	masquerain	0	Masquerain		veiled_ridge	TRUE	FALSE
 shroomish	0285	shroomish	0	Shroomish		bramble_woods fertile_valley	TRUE	FALSE
 shroomish	0286	breloom	0	Breloom		EVOLVE	TRUE	FALSE
 slakoth	0287	slakoth	0	Slakoth		guildmaster_trail	TRUE	FALSE
-slakoth	0288	vigoroth	0	Vigoroth		guildmaster_trail snowbound_path	TRUE	FALSE
+slakoth	0288	vigoroth	0	Vigoroth		depleted_basin guildmaster_trail snowbound_path	TRUE	FALSE
 slakoth	0289	slaking	0	Slaking		guildmaster_trail snowbound_path	TRUE	FALSE
 nincada	0290	nincada	0	Nincada		guildmaster_trail	TRUE	FALSE
 nincada	0291	ninjask	0	Ninjask		guildmaster_trail	TRUE	FALSE
@@ -446,7 +446,7 @@ whismur	0293	whismur	0	Whismur			TRUE	FALSE
 whismur	0294	loudred	0	Loudred		thunderstruck_pass	TRUE	FALSE
 whismur	0295	exploud	0	Exploud		EVOLVE	TRUE	FALSE
 makuhita	0296	makuhita	0	Makuhita		castaway_cave faultline_ridge guildmaster_trail	TRUE	FALSE
-makuhita	0297	hariyama	0	Hariyama		guildmaster_trail thunderstruck_pass	TRUE	FALSE
+makuhita	0297	hariyama	0	Hariyama		guildmaster_trail sleeping_caldera thunderstruck_pass	TRUE	FALSE
 nosepass	0299	nosepass	0	Nosepass		copper_quarry faultline_ridge guildmaster_trail	TRUE	FALSE
 nosepass	0476	probopass	0	Probopass		copper_quarry guildmaster_trail	TRUE	FALSE
 skitty	0300	skitty	0	Skitty		secret_garden	TRUE	FALSE
@@ -479,7 +479,7 @@ carvanha	0319	sharpedo	0	Sharpedo		EVOLVE	TRUE	FALSE
 carvanha	0319	sharpedo	1	Mega Sharpedo		TEMP	FALSE	FALSE
 wailmer	0320	wailmer	0	Wailmer		castaway_cave	TRUE	FALSE
 wailmer	0321	wailord	0	Wailord		EVOLVE	TRUE	FALSE
-numel	0322	numel	0	Numel		guildmaster_trail lava_floe_island	TRUE	TRUE
+numel	0322	numel	0	Numel		guildmaster_trail lava_floe_island sleeping_caldera	TRUE	TRUE
 numel	0323	camerupt	0	Camerupt		guildmaster_trail lava_floe_island sleeping_caldera	TRUE	FALSE
 numel	0323	camerupt	1	Mega Camerupt		TEMP	TRUE	TRUE
 torkoal	0324	torkoal	0	Torkoal		forsaken_desert	TRUE	FALSE
@@ -494,16 +494,16 @@ cacnea	0332	cacturne	0	Cacturne	spiky_shield	EVOLVE	TRUE	FALSE
 swablu	0333	swablu	0	Swablu		faded_trail secret_garden	TRUE	FALSE
 swablu	0334	altaria	0	Altaria		secret_garden snowbound_path	TRUE	FALSE
 swablu	0334	altaria	1	Mega Altaria		TEMP	FALSE	FALSE
-zangoose	0335	zangoose	0	Zangoose			TRUE	FALSE
+zangoose	0335	zangoose	0	Zangoose		depleted_basin	TRUE	FALSE
 seviper	0336	seviper	0	Seviper		sickly_hollow	TRUE	FALSE
 lunatone	0337	lunatone	0	Lunatone		moonlit_courtyard secret_garden	TRUE	FALSE
 solrock	0338	solrock	0	Solrock		relic_tower secret_garden	TRUE	FALSE
 barboach	0339	barboach	0	Barboach		sleeping_caldera	TRUE	FALSE
-barboach	0340	whiscash	0	Whiscash		EVOLVE	TRUE	FALSE
+barboach	0340	whiscash	0	Whiscash		sleeping_caldera	TRUE	FALSE
 corphish	0341	corphish	0	Corphish		castaway_cave fertile_valley	TRUE	TRUE
 corphish	0342	crawdaunt	0	Crawdaunt		EVOLVE	TRUE	FALSE
 baltoy	0343	baltoy	0	Baltoy		forsaken_desert guildmaster_trail relic_tower	TRUE	FALSE
-baltoy	0344	claydol	0	Claydol		guildmaster_trail sickly_hollow	TRUE	FALSE
+baltoy	0344	claydol	0	Claydol		guildmaster_trail relic_tower	TRUE	FALSE
 lileep	0345	lileep	0	Lileep			TRUE	FALSE
 lileep	0346	cradily	0	Cradily		secret_garden	TRUE	FALSE
 anorith	0347	anorith	0	Anorith			TRUE	FALSE
@@ -515,8 +515,8 @@ castform	0351	castform	1	Sunny Castform		TEMP	TRUE	FALSE
 castform	0351	castform	2	Rainy Castform		TEMP	TRUE	FALSE
 castform	0351	castform	3	Snowy Castform		TEMP	TRUE	FALSE
 kecleon	0352	kecleon	0	Kecleon		copper_quarry guildmaster_trail secret_garden sickly_hollow snowbound_path thunderstruck_pass	TRUE	FALSE
-shuppet	0353	shuppet	0	Shuppet		guildmaster_trail relic_tower	TRUE	FALSE
-shuppet	0354	banette	0	Banette		guildmaster_trail	TRUE	FALSE
+shuppet	0353	shuppet	0	Shuppet		depleted_basin guildmaster_trail relic_tower	TRUE	FALSE
+shuppet	0354	banette	0	Banette		guildmaster_trail relic_tower	TRUE	FALSE
 shuppet	0354	banette	1	Mega Banette		TEMP	TRUE	FALSE
 duskull	0355	duskull	0	Duskull		overgrown_wilds sickly_hollow	TRUE	TRUE
 duskull	0356	dusclops	0	Dusclops		EVOLVE	TRUE	FALSE
@@ -524,7 +524,7 @@ duskull	0477	dusknoir	0	Dusknoir		EVOLVE	TRUE	FALSE
 tropius	0357	tropius	0	Tropius		overgrown_wilds secret_garden	TRUE	FALSE
 chimecho	0433	chingling	0	Chingling		guildmaster_trail	TRUE	FALSE
 chimecho	0358	chimecho	0	Chimecho		guildmaster_trail	TRUE	FALSE
-absol	0359	absol	0	Absol		guildmaster_trail veiled_ridge	TRUE	FALSE
+absol	0359	absol	0	Absol		depleted_basin guildmaster_trail veiled_ridge	TRUE	FALSE
 absol	0359	absol	1	Mega Absol		TEMP	TRUE	TRUE
 snorunt	0361	snorunt	0	Snorunt		guildmaster_trail snowbound_path	TRUE	FALSE
 snorunt	0362	glalie	0	Glalie		EVOLVE	TRUE	FALSE
@@ -574,7 +574,7 @@ piplup	0393	piplup	0	Piplup		secret_garden	TRUE	FALSE
 piplup	0394	prinplup	0	Prinplup		EVOLVE	TRUE	FALSE
 piplup	0395	empoleon	0	Empoleon		secret_garden	TRUE	FALSE
 starly	0396	starly	0	Starly		faded_trail secret_garden tropical_path	TRUE	FALSE
-starly	0397	staravia	0	Staravia		flyaway_cliffs secret_garden	TRUE	FALSE
+starly	0397	staravia	0	Staravia		depleted_basin flyaway_cliffs secret_garden	TRUE	FALSE
 starly	0398	staraptor	0	Staraptor		secret_garden	TRUE	FALSE
 bidoof	0399	bidoof	0	Bidoof		trickster_woods	TRUE	FALSE
 bidoof	0400	bibarel	0	Bibarel		EVOLVE	TRUE	FALSE
@@ -583,9 +583,9 @@ kricketot	0402	kricketune	0	Kricketune		EVOLVE	TRUE	FALSE
 shinx	0403	shinx	0	Shinx		faded_trail guildmaster_trail	TRUE	FALSE
 shinx	0404	luxio	0	Luxio		guildmaster_trail trickster_woods	TRUE	FALSE
 shinx	0405	luxray	0	Luxray		guildmaster_trail snowbound_path	TRUE	FALSE
-cranidos	0408	cranidos	0	Cranidos		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+cranidos	0408	cranidos	0	Cranidos		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 cranidos	0409	rampardos	0	Rampardos		EVOLVE	TRUE	FALSE
-shieldon	0410	shieldon	0	Shieldon		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+shieldon	0410	shieldon	0	Shieldon		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 shieldon	0411	bastiodon	0	Bastiodon		EVOLVE	TRUE	FALSE
 burmy	0412	burmy	0	Plant Burmy		secret_garden	TRUE	FALSE
 burmy	0413	wormadam	0	Plant Wormadam		secret_garden	TRUE	FALSE
@@ -615,8 +615,8 @@ glameow	0431	glameow	0	Glameow		moonlit_courtyard	TRUE	FALSE
 glameow	0432	purugly	0	Purugly		EVOLVE	TRUE	FALSE
 stunky	0434	stunky	0	Stunky		sleeping_caldera	TRUE	FALSE
 stunky	0435	skuntank	0	Skuntank		EVOLVE	TRUE	FALSE
-bronzor	0436	bronzor	0	Bronzor		castaway_cave guildmaster_trail relic_tower	TRUE	FALSE
-bronzor	0437	bronzong	0	Bronzong		guildmaster_trail	TRUE	FALSE
+bronzor	0436	bronzor	0	Bronzor		castaway_cave guildmaster_trail	TRUE	FALSE
+bronzor	0437	bronzong	0	Bronzong		guildmaster_trail relic_tower	TRUE	FALSE
 chatot	0441	chatot	0	Chatot		flyaway_cliffs guildmaster_trail	TRUE	FALSE
 spiritomb	0442	spiritomb	0	Spiritomb		guildmaster_trail	TRUE	FALSE
 gible	0443	gible	0	Gible		forsaken_desert	TRUE	FALSE
@@ -656,7 +656,7 @@ regigigas	0486	regigigas	0	Regigigas			TRUE	FALSE
 giratina	0487	giratina	0	Altered Giratina			TRUE	FALSE
 giratina	0487	giratina	1	Origin Giratina			TRUE	FALSE
 cresselia	0488	cresselia	0	Cresselia			TRUE	FALSE
-phione	0489	phione	0	Phione			TRUE	FALSE
+phione	0489	phione	0	Phione		castaway_cave	TRUE	FALSE
 manaphy	0490	manaphy	0	Manaphy			TRUE	FALSE
 darkrai	0491	darkrai	0	Darkrai			TRUE	FALSE
 shaymin	0492	shaymin	0	Land Shaymin			TRUE	FALSE
@@ -692,7 +692,7 @@ oshawott	0502	dewott	0	Dewott		EVOLVE	TRUE	FALSE
 oshawott	0503	samurott	0	Samurott		EVOLVE	TRUE	FALSE
 oshawott	0503	samurott	1	Hisuian Samurott	ceaseless_edge		FALSE	FALSE
 patrat	0504	patrat	0	Patrat			TRUE	FALSE
-patrat	0505	watchog	0	Watchog			TRUE	FALSE
+patrat	0505	watchog	0	Watchog		depleted_basin	TRUE	FALSE
 lillipup	0506	lillipup	0	Lillipup			TRUE	FALSE
 lillipup	0507	herdier	0	Herdier			TRUE	FALSE
 lillipup	0508	stoutland	0	Stoutland			TRUE	FALSE
@@ -714,11 +714,11 @@ blitzle	0523	zebstrika	0	Zebstrika			FALSE	FALSE
 roggenrola	0524	roggenrola	0	Roggenrola			TRUE	FALSE
 roggenrola	0525	boldore	0	Boldore			FALSE	FALSE
 roggenrola	0526	gigalith	0	Gigalith			FALSE	FALSE
-woobat	0527	woobat	0	Woobat		castaway_cave trickster_woods	TRUE	FALSE
-woobat	0528	swoobat	0	Swoobat		EVOLVE	TRUE	FALSE
+woobat	0527	woobat	0	Woobat		castaway_cave sleeping_caldera trickster_woods	TRUE	FALSE
+woobat	0528	swoobat	0	Swoobat		sleeping_caldera	TRUE	FALSE
 drilbur	0529	drilbur	0	Drilbur			FALSE	FALSE
 drilbur	0530	excadrill	0	Excadrill			FALSE	FALSE
-audino	0531	audino	0	Audino		ambush_forest bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow thunderstruck_pass treacherous_mountain trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+audino	0531	audino	0	Audino		ambush_forest bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow thunderstruck_pass treacherous_mountain trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 audino	0531	audino	1	Mega Audino		TEMP	FALSE	FALSE
 timburr	0532	timburr	0	Timburr			TRUE	TRUE
 timburr	0533	gurdurr	0	Gurdurr			FALSE	FALSE
@@ -761,8 +761,8 @@ scraggy	0560	scrafty	0	Scrafty		veiled_ridge	TRUE	FALSE
 sigilyph	0561	sigilyph	0	Sigilyph			FALSE	FALSE
 yamask	0562	yamask	0	Yamask			TRUE	FALSE
 yamask	0563	cofagrigus	0	Cofagrigus			TRUE	TRUE
-yamask	0562	yamask	1	Galarian Yamask	wandering_spirit brutal_swing crafty_shield		FALSE	FALSE
-yamask	0867	runerigus	0	Runerigus	wandering_spirit brutal_swing crafty_shield		FALSE	FALSE
+yamask	0562	yamask	1	Galarian Yamask	wandering_spirit		FALSE	FALSE
+yamask	0867	runerigus	0	Runerigus	wandering_spirit		FALSE	FALSE
 tirtouga	0564	tirtouga	0	Tirtouga			FALSE	FALSE
 tirtouga	0565	carracosta	0	Carracosta			FALSE	FALSE
 archen	0566	archen	0	Archen			TRUE	FALSE
@@ -777,8 +777,8 @@ zorua	0571	zoroark	1	Hisuian Zoroark	bitter_malice		TRUE	TRUE
 minccino	0572	minccino	0	Minccino			TRUE	FALSE
 minccino	0573	cinccino	0	Cinccino			FALSE	FALSE
 gothita	0574	gothita	0	Gothita			TRUE	FALSE
-gothita	0575	gothorita	0	Gothorita			TRUE	FALSE
-gothita	0576	gothitelle	0	Gothitelle			TRUE	FALSE
+gothita	0575	gothorita	0	Gothorita		relic_tower	TRUE	FALSE
+gothita	0576	gothitelle	0	Gothitelle		relic_tower	TRUE	FALSE
 solosis	0577	solosis	0	Solosis			TRUE	FALSE
 solosis	0578	duosion	0	Duosion			TRUE	FALSE
 solosis	0579	reuniclus	0	Reuniclus			TRUE	FALSE
@@ -805,8 +805,8 @@ frillish	0593	jellicent	0	Jellicent			TRUE	TRUE
 alomomola	0594	alomomola	0	Alomomola			FALSE	FALSE
 joltik	0595	joltik	0	Joltik			TRUE	FALSE
 joltik	0596	galvantula	0	Galvantula			TRUE	FALSE
-ferroseed	0597	ferroseed	0	Ferroseed			TRUE	FALSE
-ferroseed	0598	ferrothorn	0	Ferrothorn			TRUE	FALSE
+ferroseed	0597	ferroseed	0	Ferroseed		sleeping_caldera	TRUE	FALSE
+ferroseed	0598	ferrothorn	0	Ferrothorn		sleeping_caldera	TRUE	FALSE
 klink	0599	klink	0	Klink	gear_grind		FALSE	FALSE
 klink	0600	klang	0	Klang	gear_grind		FALSE	FALSE
 klink	0601	klinklang	0	Klinklang	gear_grind		FALSE	FALSE
@@ -830,7 +830,7 @@ stunfisk	0618	stunfisk	0	Stunfisk			FALSE	FALSE
 stunfisk	0618	stunfisk	1	Galarian Stunfisk	mimicry snap_trap		FALSE	FALSE
 mienfoo	0619	mienfoo	0	Mienfoo			TRUE	FALSE
 mienfoo	0620	mienshao	0	Mienshao			TRUE	FALSE
-druddigon	0621	druddigon	0	Druddigon			TRUE	TRUE
+druddigon	0621	druddigon	0	Druddigon		sleeping_caldera	TRUE	TRUE
 golett	0622	golett	0	Golett			FALSE	FALSE
 golett	0623	golurk	0	Golurk			TRUE	TRUE
 pawniard	0624	pawniard	0	Pawniard		veiled_ridge	TRUE	FALSE
@@ -877,7 +877,7 @@ chespin	0651	quilladin	0	Quilladin			FALSE	FALSE
 chespin	0652	chesnaught	0	Chesnaught	spiky_shield		FALSE	FALSE
 fennekin	0653	fennekin	0	Fennekin		trickster_woods	TRUE	FALSE
 fennekin	0654	braixen	0	Braixen		relic_tower	TRUE	FALSE
-fennekin	0655	delphox	0	Delphox		EVOLVE	TRUE	TRUE
+fennekin	0655	delphox	0	Delphox		relic_tower	TRUE	TRUE
 froakie	0656	froakie	0	Froakie			TRUE	FALSE
 froakie	0657	frogadier	0	Frogadier			FALSE	FALSE
 froakie	0658	greninja	0	Greninja	mat_block water_shuriken		TRUE	FALSE
@@ -888,9 +888,9 @@ fletchling	0662	fletchinder	0	Fletchinder	gale_wings		FALSE	FALSE
 fletchling	0663	talonflame	0	Talonflame	gale_wings		FALSE	FALSE
 scatterbug	0664	scatterbug	0	Scatterbug			FALSE	FALSE
 scatterbug	0665	spewpa	0	Spewpa			FALSE	FALSE
-scatterbug	0666	vivillon	0	Meadow Vivillon		flyaway_cliffs	TRUE	FALSE
+scatterbug	0666	vivillon	0	Meadow Vivillon		depleted_basin	TRUE	FALSE
 scatterbug	0666	vivillon	1	Icy Snow Vivillon			TRUE	FALSE
-scatterbug	0666	vivillon	2	Polar Vivillon			TRUE	FALSE
+scatterbug	0666	vivillon	2	Polar Vivillon		flyaway_cliffs	TRUE	FALSE
 scatterbug	0666	vivillon	3	Tundra Vivillon			TRUE	FALSE
 scatterbug	0666	vivillon	4	Continental Vivillon			TRUE	FALSE
 scatterbug	0666	vivillon	5	Garden Vivillon			TRUE	FALSE
@@ -963,7 +963,7 @@ helioptile	0694	helioptile	0	Helioptile	parabolic_charge electrify		TRUE	FALSE
 helioptile	0695	heliolisk	0	Heliolisk	electrify parabolic_charge		TRUE	FALSE
 tyrunt	0696	tyrunt	0	Tyrunt			FALSE	FALSE
 tyrunt	0697	tyrantrum	0	Tyrantrum			FALSE	FALSE
-amaura	0698	amaura	0	Amaura		bramble_woods copper_quarry faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
+amaura	0698	amaura	0	Amaura		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 amaura	0699	aurorus	0	Aurorus		EVOLVE	TRUE	FALSE
 hawlucha	0701	hawlucha	0	Hawlucha	flying_press		FALSE	FALSE
 dedenne	0702	dedenne	0	Dedenne	parabolic_charge		FALSE	FALSE
@@ -973,7 +973,7 @@ goomy	0705	sliggoo	0	Sliggoo			TRUE	TRUE
 goomy	0706	goodra	0	Goodra			TRUE	FALSE
 goomy	0705	sliggoo	1	Hisuian Sliggoo	shelter		TRUE	TRUE
 goomy	0706	goodra	1	Hisuian Goodra	tearful_look shelter		TRUE	FALSE
-klefki	0707	klefki	0	Klefki	fairy_lock crafty_shield		TRUE	FALSE
+klefki	0707	klefki	0	Klefki		sleeping_caldera	TRUE	FALSE
 phantump	0708	phantump	0	Phantump			TRUE	FALSE
 phantump	0709	trevenant	0	Trevenant			TRUE	TRUE
 pumpkaboo	0710	pumpkaboo	0	Average Pumpkaboo			TRUE	FALSE
@@ -1046,8 +1046,8 @@ morelull	0755	morelull	0	Morelull	strength_sap spotlight		TRUE	FALSE
 morelull	0756	shiinotic	0	Shiinotic	strength_sap spotlight		FALSE	FALSE
 salandit	0757	salandit	0	Salandit		lava_floe_island	TRUE	FALSE
 salandit	0758	salazzle	0	Salazzle		lava_floe_island	TRUE	FALSE
-stufful	0759	stufful	0	Stufful	fluffy brutal_swing		TRUE	FALSE
-stufful	0760	bewear	0	Bewear	fluffy brutal_swing		FALSE	FALSE
+stufful	0759	stufful	0	Stufful	fluffy		TRUE	FALSE
+stufful	0760	bewear	0	Bewear	fluffy		FALSE	FALSE
 bounsweet	0761	bounsweet	0	Bounsweet			TRUE	FALSE
 bounsweet	0762	steenee	0	Steenee			TRUE	FALSE
 bounsweet	0763	tsareena	0	Tsareena	queenly_majesty trop_kick		TRUE	FALSE
@@ -1098,7 +1098,7 @@ togedemaru	0777	togedemaru	0	Togedemaru	spiky_shield	copper_quarry	TRUE	TRUE
 mimikyu	0778	mimikyu	0	Disguised Mimikyu			TRUE	FALSE
 mimikyu	0778	mimikyu	1	Busted Mimikyu		TEMP	TRUE	FALSE
 bruxish	0779	bruxish	0	Bruxish	dazzling psychic_fangs		TRUE	TRUE
-drampa	0780	drampa	0	Drampa			TRUE	FALSE
+drampa	0780	drampa	0	Drampa		sleeping_caldera	TRUE	FALSE
 dhelmise	0781	dhelmise	0	Dhelmise		castaway_cave	TRUE	FALSE
 jangmo_o	0782	jangmo_o	0	Jangmo-o			TRUE	FALSE
 jangmo_o	0783	hakamo_o	0	Hakamo-o			TRUE	FALSE
@@ -1117,13 +1117,13 @@ pheromosa	0795	pheromosa	0	Pheromosa	lunge		TRUE	FALSE
 xurkitree	0796	xurkitree	0	Xurkitree			TRUE	FALSE
 celesteela	0797	celesteela	0	Celesteela			TRUE	FALSE
 kartana	0798	kartana	0	Kartana	laser_focus		TRUE	FALSE
-guzzlord	0799	guzzlord	0	Guzzlord	brutal_swing stomping_tantrum		TRUE	FALSE
+guzzlord	0799	guzzlord	0	Guzzlord	stomping_tantrum		TRUE	FALSE
 necrozma	0800	necrozma	0	Necrozma			TRUE	TRUE
 necrozma	0800	necrozma	1	Dusk Necrozma	photon_geyser		TRUE	FALSE
 necrozma	0800	necrozma	2	Dawn Necrozma	photon_geyser		FALSE	FALSE
 necrozma	0800	necrozma	3	Ultra Necrozma	photon_geyser		TRUE	TRUE
-magearna	0801	magearna	0	Magearna	soul_heart crafty_shield gear_up fleur_cannon		TRUE	FALSE
-magearna	0801	magearna	1	Original Magearna	soul_heart crafty_shield gear_up fleur_cannon		TRUE	FALSE
+magearna	0801	magearna	0	Magearna	soul_heart gear_up fleur_cannon		TRUE	FALSE
+magearna	0801	magearna	1	Original Magearna	soul_heart gear_up fleur_cannon		TRUE	FALSE
 marshadow	0802	marshadow	0	Marshadow	laser_focus spectral_thief		TRUE	FALSE
 poipole	0803	poipole	0	Poipole			TRUE	FALSE
 poipole	0804	naganadel	0	Naganadel			TRUE	FALSE
@@ -1175,8 +1175,8 @@ applin	0841	flapple	0	Flapple			TRUE	FALSE
 applin	0841	flapple	1	Gigantamax Flapple		TEMP	FALSE	FALSE
 applin	0842	appletun	0	Appletun			TRUE	FALSE
 applin	0842	appletun	1	Gigantamax Appletun		TEMP	FALSE	FALSE
-silicobra	0843	silicobra	0	Silicobra	sand_spit brutal_swing		FALSE	FALSE
-silicobra	0844	sandaconda	0	Sandaconda	sand_spit brutal_swing		FALSE	FALSE
+silicobra	0843	silicobra	0	Silicobra	sand_spit		FALSE	FALSE
+silicobra	0844	sandaconda	0	Sandaconda	sand_spit		FALSE	FALSE
 silicobra	0844	sandaconda	1	Gigantamax Sandaconda	sand_spit	TEMP	FALSE	FALSE
 cramorant	0845	cramorant	0	Cramorant	gulp_missile		TRUE	FALSE
 cramorant	0845	cramorant	1	Gulping Cramorant	gulp_missile	TEMP	FALSE	FALSE
@@ -1198,8 +1198,8 @@ sinistea	0855	polteageist	0	Phony Polteageist	teatime strength_sap		FALSE	FALSE
 sinistea	0854	sinistea	1	Antique Sinistea			FALSE	FALSE
 sinistea	0855	polteageist	1	Antique Polteageist	teatime strength_sap		FALSE	FALSE
 hatenna	0856	hatenna	0	Hatenna		trickster_woods	TRUE	FALSE
-hatenna	0857	hattrem	0	Hattrem	brutal_swing	EVOLVE	TRUE	FALSE
-hatenna	0858	hatterene	0	Hatterene	brutal_swing magic_powder	EVOLVE	TRUE	FALSE
+hatenna	0857	hattrem	0	Hattrem		EVOLVE	TRUE	FALSE
+hatenna	0858	hatterene	0	Hatterene	magic_powder	EVOLVE	TRUE	FALSE
 hatenna	0858	hatterene	1	Gigantamax Hatterene		TEMP	FALSE	FALSE
 impidimp	0859	impidimp	0	Impidimp			TRUE	TRUE
 impidimp	0860	morgrem	0	Morgrem	false_surrender		TRUE	FALSE
@@ -1292,7 +1292,7 @@ cufant	0879	copperajah	0	Copperajah	high_horsepower		FALSE	FALSE
 cufant	0879	copperajah	1	Gigantamax Copperajah		TEMP	FALSE	FALSE
 dracozolt	0880	dracozolt	0	Dracozolt	bolt_beak		FALSE	FALSE
 arctozolt	0881	arctozolt	0	Arctozolt	bolt_beak		FALSE	FALSE
-dracovish	0882	dracovish	0	Dracovish	brutal_swing fishious_rend		TRUE	TRUE
+dracovish	0882	dracovish	0	Dracovish	fishious_rend		TRUE	TRUE
 arctovish	0883	arctovish	0	Arctovish	fishious_rend		FALSE	FALSE
 duraludon	0884	duraludon	0	Duraludon	stalwart breaking_swipe laser_focus		FALSE	FALSE
 duraludon	0884	duraludon	1	Gigantamax Duraludon	stalwart	TEMP	FALSE	FALSE
@@ -1376,21 +1376,21 @@ rellor	0953	rellor	0	Rellor	lunge		FALSE	FALSE
 rellor	0954	rabsca	0	Rabsca	revival_blessing lunge		FALSE	FALSE
 flittle	0955	flittle	0	Flittle			FALSE	FALSE
 flittle	0956	espathra	0	Espathra	opportunist lumina_crash		FALSE	FALSE
-tinkatink	0957	tinkatink	0	Tinkatink	brutal_swing		TRUE	FALSE
-tinkatink	0958	tinkatuff	0	Tinkatuff	brutal_swing		TRUE	FALSE
-tinkatink	0959	tinkaton	0	Tinkaton	gigaton_hammer brutal_swing		TRUE	FALSE
+tinkatink	0957	tinkatink	0	Tinkatink		copper_quarry	TRUE	FALSE
+tinkatink	0958	tinkatuff	0	Tinkatuff		EVOLVE	TRUE	FALSE
+tinkatink	0959	tinkaton	0	Tinkaton		EVOLVE	TRUE	FALSE
 wiglett	0960	wiglett	0	Wiglett	throat_chop liquidation		FALSE	FALSE
 wiglett	0961	wugtrio	0	Wugtrio	triple_dive throat_chop liquidation		FALSE	FALSE
 bombirdier	0962	bombirdier	0	Bombirdier	rocky_payload dual_wingbeat		FALSE	FALSE
 finizen	0963	finizen	0	Finizen			TRUE	FALSE
-finizen	0964	palafin	0	Palafin	zero_to_hero flip_turn jet_punch wave_crash		TRUE	FALSE
-finizen	0964	palafin	1	Palafin	zero_to_hero flip_turn jet_punch wave_crash	TEMP	FALSE	FALSE
+finizen	0964	palafin	0	Palafin	flip_turn jet_punch wave_crash		TRUE	FALSE
+finizen	0964	palafin	1	Palafin	flip_turn jet_punch wave_crash	TEMP	FALSE	FALSE
 varoom	0965	varoom	0	Varoom	spin_out		FALSE	FALSE
 varoom	0966	revavroom	0	Revavroom	spin_out		FALSE	FALSE
 cyclizar	0967	cyclizar	0	Cyclizar	breaking_swipe shed_tail		TRUE	TRUE
 orthworm	0968	orthworm	0	Orthworm	earth_eater shed_tail		FALSE	FALSE
-glimmet	0969	glimmet	0	Glimmet	toxic_debris		FALSE	FALSE
-glimmet	0970	glimmora	0	Glimmora	toxic_debris mortal_spin spiky_shield		TRUE	TRUE
+glimmet	0969	glimmet	0	Glimmet			TRUE	FALSE
+glimmet	0970	glimmora	0	Glimmora	spiky_shield	sleeping_caldera	TRUE	TRUE
 greavard	0971	greavard	0	Greavard	fluffy		FALSE	FALSE
 greavard	0972	houndstone	0	Houndstone	fluffy last_respects		FALSE	FALSE
 flamigo	0973	flamigo	0	Flamigo	costar throat_chop		FALSE	FALSE
