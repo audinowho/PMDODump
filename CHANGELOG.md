@@ -12,6 +12,7 @@
 * Feint Attack cuts corners, PP 20->19
 * Thunderbolt changed to a 2-tile piercing projectile in 8 directions, BP 85->75
 * Dark Pulse PP 11->15
+* Earth Power PP 8->10 BP 65->60
 * Fixed errors ocurring at the end of a dungeon completion cutscene
 * Escape does not count towards rogue mode completion
 * Stance Change switches Aegislash to Shield forme on using any status move
@@ -36,3 +37,4 @@
 * Dev: New sprites from spritecollab
 * Dev: Report error when generating with type mismatch
 * Dev: Fixed a constructor for GroundObject not taking passable parameter
+* Dev: Fixed crash caused by looping short sound effects
