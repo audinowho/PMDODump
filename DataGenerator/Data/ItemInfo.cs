@@ -3399,16 +3399,14 @@ namespace DataGenerator.Data
             }
             else if (ii == 493)
             {
-                item.Name = new LocalText("**Secret Slab");
-                item.Desc = new LocalText("An ancient stone slab inscribed with what seems to be prehistoric legend, rumored to hold an incredible secret. Its writings change depending on the dungeon it's used in.");
+                item.Name = new LocalText("Secret Slab");
+                item.Desc = new LocalText("An ancient stone slab inscribed with what seems to be prehistoric legend. It is said to draw something special to it when kept close by.");
                 item.Sprite = "Slab_Gold";
-                // Lua script: Will list out all restrictions the player needs to abide by to get to the dungeon's golden chamber, also keep track of which restrictions are met?
-                // If the dungeon doesn't have a golden chamber, just say it's blank.
-                item.Price = 80000;
+                item.Price = 30000;
             }
             else if (ii == 494)
             {
-                item.Name = new LocalText("Music Box");
+                item.Name = new LocalText("**Music Box");
                 item.Desc = new LocalText("An enchanting music box that plays a beautiful melody. It is said to draw something special to it when it is kept close by.");
                 item.Sprite = "Box_Blue";
                 // This will trigger legendaries to appear.

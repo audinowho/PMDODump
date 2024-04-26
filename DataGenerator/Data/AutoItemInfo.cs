@@ -467,7 +467,7 @@ namespace DataGenerator.Data
                     else
                         familyStarts.Add(primaryDex);
 
-                    bool includeFamily = row[3] == "True";
+                    bool includeFamily = row[4] == "True";
                     List<string> dexNums = new List<string>();
                     foreach (string dex in familyStarts)
                     {
@@ -517,10 +517,11 @@ namespace DataGenerator.Data
                     item.CannotDrop = true;
 
 
-                    bool enabled = row[4] == "True";
+                    bool enabled = row[3] == "True";
+                    bool familyEnabled = row[20] == "True";
                     if (item.Name.DefaultText.StartsWith("**"))
                         item.Name.DefaultText = item.Name.DefaultText.Replace("*", "");
-                    else if (item.Name.DefaultText != "" && enabled)
+                    else if (item.Name.DefaultText != "" && enabled && familyEnabled)
                         item.Released = true;
 
                     if (item.Name.DefaultText != "" && !item.Released)
