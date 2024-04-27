@@ -12,7 +12,9 @@
 * Feint Attack cuts corners, PP 20->19
 * Thunderbolt changed to a 2-tile piercing projectile in 8 directions, BP 85->75
 * Dark Pulse PP 11->15
-* Earth Power PP 8->10 BP 65->60
+* Earth Power PP 8->9 BP 65->60
+* Ice Beam PP 8->9
+* Shadow Ball PP 9->8
 * Fixed errors ocurring at the end of a dungeon completion cutscene
 * Escape does not count towards rogue mode completion
 * Stance Change switches Aegislash to Shield forme on using any status move
