@@ -263,8 +263,23 @@ namespace DataGenerator.Data
         public static MoneySpawnZoneStep GetMoneySpawn(int level, int floors_in)
         {
             RandRange addRange = new RandRange(level * 2 / 5, level * 2 / 5 + 4);
-            RandRange startRange = new RandRange(level * 3 + 25 + floors_in * addRange.Min, level * 3 + 30 + floors_in * addRange.Max);
+            RandRange startRange = new RandRange(level * 5 + 25 + floors_in * addRange.Min, level * 5 + 30 + floors_in * addRange.Max);
             return new MoneySpawnZoneStep(PR_RESPAWN_MONEY, startRange, addRange);
+        }
+
+        public static SpeciesItemListSpawner<T> GetLegendaryItemSpawner<T>(bool subLegend, bool boxLegend, bool mythical) where T : BaseMapGenContext
+        {
+            return GetLegendaryItemSpawner<T>(subLegend, boxLegend, mythical, new RandRange(1));
+        }
+
+        public static SpeciesItemListSpawner<T> GetLegendaryItemSpawner<T>(bool subLegend, bool boxLegend, bool mythical, RandRange rand) where T : BaseMapGenContext
+        {
+            SpeciesItemListSpawner<T> spawn = new SpeciesItemListSpawner<T>(new IntRange(1), rand);
+
+            foreach (string legend in IterateLegendaries(subLegend, false, boxLegend, mythical))
+                spawn.Species.Add(legend);
+
+            return spawn;
         }
 
         public static void AddMoneyData<T>(MapGen<T> layout, RandRange divAmount, bool includeHalls = false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.None) where T : ListMapGenContext

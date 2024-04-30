@@ -352,7 +352,7 @@ Key		EN
 0175-sweet_veil-0000|data.Name		Sweet Veil
 0175-sweet_veil-0001|data.Desc		Prevents party Pokémon from falling asleep.
 0176-stance_change-0000|data.Name		Stance Change
-0176-stance_change-0001|data.Desc		The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King's Shield.
+0176-stance_change-0001|data.Desc		The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses a status move.
 0177-gale_wings-0000|data.Name		Gale Wings
 0177-gale_wings-0001|data.Desc		Increases the Attack Range of Flying-type moves.
 0178-mega_launcher-0000|data.Name		Mega Launcher
@@ -556,7 +556,7 @@ Key		EN
 0277-wind_power-0000|data.Name		Wind Power
 0277-wind_power-0001|data.Desc		
 0278-zero_to_hero-0000|data.Name		Zero to Hero
-0278-zero_to_hero-0001|data.Desc		
+0278-zero_to_hero-0001|data.Desc		The Pokémon switches between Zero Form and Hero Form when entering a new floor.
 0279-commander-0000|data.Name		Commander
 0279-commander-0001|data.Desc		
 0280-electromorphosis-0000|data.Name		Electromorphosis
@@ -590,7 +590,7 @@ Key		EN
 0294-costar-0000|data.Name		Costar
 0294-costar-0001|data.Desc		
 0295-toxic_debris-0000|data.Name		Toxic Debris
-0295-toxic_debris-0001|data.Desc		
+0295-toxic_debris-0001|data.Desc		Scatters poison spikes when the Pokémon takes damage from physical moves.
 0296-armor_tail-0000|data.Name		Armor Tail
 0296-armor_tail-0001|data.Desc		
 0297-earth_eater-0000|data.Name		Earth Eater

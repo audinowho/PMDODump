@@ -24,12 +24,14 @@
 * Assembly Box Price 800 -> 450
 * Manmade medicines and X-items can be used in boss battles.
 * Added more chests to the end of Sickly Hollow and Moonlit Courtyard.
+* Slightly improved recruit rates of evolved Pokemon
 * RC: Reworked Sleeping Caldera to 14+4 floors. Full Rogue rework of 21+5 floors planned later
 * RC: Reworked Relic Tower to be more difficult and added more chests to the end
 * RC: Added Depleted Basin to serve as dead-end dungeon in light of Sleeping Caldera's upgrade
 * RC: Added gangs that drop treasure boxes to dungeons that either don't recruit or give EXP.  Slightly lowered the overall enemy density of these dungeons.
 * RC: Fixed an issue where Magma Storm was not counted as a partial trapping status
-* RC: Added Tinkatink, Glimmet, Klefki, Gothorita
+* RC: Added Tinkatink, Glimmet, Klefki, Gothorita, Noibat
+* RC: Sinnoh Evo items in Sleeping Caldera, Treacherous Mountain, Ambush Forest
 * RC: End-of-adventure inventory menu fixed to support inv extensions
 * RC: Failing the final story battle gives no penalty
 * RC: Fixed an issue where exiting Bramble Woods mysterious distortion cleared the dungeon

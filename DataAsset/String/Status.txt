@@ -41,8 +41,12 @@ Key		EN
 0000-conversion-0001|data.Desc		The Pokémon will change its type to match its moves. This status wears off after a few turns.
 0000-conversion_2-0000|data.Name		Conversion 2
 0000-conversion_2-0001|data.Desc		The Pokémon will change its type to resist incoming moves. This status wears off after a few turns.
+0000-cooldown-0000|data.Name		Cooldown
+0000-cooldown-0001|data.Desc		The Pokémon has one of its moves on cooldown and cannot use it.
 0000-counter-0000|data.Name		Counter
 0000-counter-0001|data.Desc		The Pokémon will return damage from physical attacks back at the user with double the power. This status wears off after a few turns.
+0000-crafty_shield-0000|data.Name		Crafty Shield
+0000-crafty_shield-0001|data.Desc		The Pokémon is protected from status moves. This status wears off after a few turns.
 0000-crits_landed-0000|data.Name		Crits Landed
 0000-crits_landed-0001|data.Desc		
 0000-cursed-0000|data.Name		Cursed
@@ -75,6 +79,8 @@ Key		EN
 0000-enraged-0001|data.Desc		The Pokémon will gain a boost to its Attack each time it takes damage from an attack. This status wears off after a few turns.
 0000-exposed-0000|data.Name		Exposed
 0000-exposed-0001|data.Desc		All attacks made on the Pokémon will ignore its resistances, immunities, and evasion changes.
+0000-fairy_lock-0000|data.Name		Fairy Lock
+0000-fairy_lock-0001|data.Desc		The Pokémon will become immobilized after attacking.
 0000-fire_pledge-0000|data.Name		Fire Pledge
 0000-fire_pledge-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
 0000-fire_spin-0000|data.Name		Fire Spin

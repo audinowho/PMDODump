@@ -438,11 +438,11 @@ Key		EN
 0009-medicine_amber_tear-0000|data.Name		Amber Tear
 0009-medicine_amber_tear-0001|data.Desc		An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises chances of recruiting other Pokémon to the team on the floor it's used.
 0010-medicine_dire_hit-0000|data.Name		Dire Hit
-0010-medicine_dire_hit-0001|data.Desc		An item that raises critical-hit ratio. It affects all team members up to 3 tiles away.
+0010-medicine_dire_hit-0001|data.Desc		An item that raises critical-hit ratio. It affects all team members up to 5 tiles away.
 0010-medicine_elixir-0000|data.Name		Elixir
 0010-medicine_elixir-0001|data.Desc		A spray-type medicine that somewhat restores PP. It affects all team members up to 5 tiles away.
 0010-medicine_full_heal-0000|data.Name		Full Heal
-0010-medicine_full_heal-0001|data.Desc		A spray-type medicine that cures status problems. It affects all team members up to 3 tiles away.
+0010-medicine_full_heal-0001|data.Desc		A spray-type medicine that cures status problems. It affects all team members up to 5 tiles away.
 0010-medicine_full_restore-0000|data.Name		Full Restore
 0010-medicine_full_restore-0001|data.Desc		
 0010-medicine_guard_spec-0000|data.Name		Guard Spec.
@@ -454,17 +454,17 @@ Key		EN
 0010-medicine_potion-0000|data.Name		Potion
 0010-medicine_potion-0001|data.Desc		A spray-type medicine that somewhat restores HP. It affects all team members up to 5 tiles away.
 0010-medicine_x_accuracy-0000|data.Name		X Accuracy
-0010-medicine_x_accuracy-0001|data.Desc		An item that sharply raises Accuracy. It affects all team members up to 3 tiles away.
+0010-medicine_x_accuracy-0001|data.Desc		An item that sharply raises Accuracy. It affects all team members up to 5 tiles away.
 0010-medicine_x_attack-0000|data.Name		X Attack
-0010-medicine_x_attack-0001|data.Desc		An item that sharply raises Attack. It affects all team members up to 3 tiles away.
+0010-medicine_x_attack-0001|data.Desc		An item that sharply raises Attack. It affects all team members up to 5 tiles away.
 0010-medicine_x_defense-0000|data.Name		X Defense
-0010-medicine_x_defense-0001|data.Desc		An item that sharply raises Defense. It affects all team members up to 3 tiles away.
+0010-medicine_x_defense-0001|data.Desc		An item that sharply raises Defense. It affects all team members up to 5 tiles away.
 0010-medicine_x_sp_atk-0000|data.Name		X Sp. Atk
-0010-medicine_x_sp_atk-0001|data.Desc		An item that sharply raises Special Attack. It affects all team members up to 3 tiles away.
+0010-medicine_x_sp_atk-0001|data.Desc		An item that sharply raises Special Attack. It affects all team members up to 5 tiles away.
 0010-medicine_x_sp_def-0000|data.Name		X Sp. Def
-0010-medicine_x_sp_def-0001|data.Desc		An item that sharply raises Special Defense. It affects all team members up to 3 tiles away.
+0010-medicine_x_sp_def-0001|data.Desc		An item that sharply raises Special Defense. It affects all team members up to 5 tiles away.
 0010-medicine_x_speed-0000|data.Name		X Speed
-0010-medicine_x_speed-0001|data.Desc		An item that boosts Movement Speed by 1 stage. It affects all team members up to 3 tiles away.
+0010-medicine_x_speed-0001|data.Desc		An item that boosts Movement Speed by 1 stage. It affects all team members up to 5 tiles away.
 0011-orb_all_aim-0000|data.Name		All-Aim Orb
 0011-orb_all_aim-0001|data.Desc		An orb that ensures that all of the team's attacks hit.
 0011-orb_all_dodge-0000|data.Name		All-Dodge Orb
@@ -554,7 +554,7 @@ Key		EN
 0012-machine_recall_box-0000|data.Name		Recall Box
 0012-machine_recall_box-0001|data.Desc		A marvelous box that lets the user recall any move they've learned in the past.
 0012-machine_storage_box-0000|data.Name		Storage Box
-0012-machine_storage_box-0001|data.Desc		A marvelous box that lets the user add any item from storage into the Treasure Bag.
+0012-machine_storage_box-0001|data.Desc		A marvelous box that sends the item currently held by the user to storage.
 0013-key-0000|data.Name		Key
 0013-key-0001|data.Desc		A key that unlocks a chest or door inside a dungeon.
 0014-evo_chipped_pot-0000|data.Name		Chipped Pot
@@ -625,6 +625,8 @@ Key		EN
 0015-loot_berserk_gene-0001|data.Desc		
 0015-loot_blue_orb-0000|data.Name		Blue Orb
 0015-loot_blue_orb-0001|data.Desc		
+0015-loot_comet_shard-0000|data.Name		Comet Shard
+0015-loot_comet_shard-0001|data.Desc		A shard that fell to the ground when a comet passed nearby. It sells for an extremely high price.
 0015-loot_gracidea-0000|data.Name		Gracidea
 0015-loot_gracidea-0001|data.Desc		A beautiful flower that blooms in the Secret Garden. It can be used on Shaymin once per floor to cause a Forme change.
 0015-loot_green_orb-0000|data.Name		Green Orb
@@ -645,10 +647,12 @@ Key		EN
 0015-loot_nugget-0001|data.Desc		A nugget of pure gold. It sells for a very high price.
 0015-loot_pearl-0000|data.Name		Pearl
 0015-loot_pearl-0001|data.Desc		A rather small pearl that has a very nice silvery sheen to it. It sells for a moderately high price.
+0015-loot_prison_bottle-0000|data.Name		Prison Bottle
+0015-loot_prison_bottle-0001|data.Desc		A bottle believed to have been used to seal away the power of a certain Pokémon long, long ago.
 0015-loot_red_orb-0000|data.Name		Red Orb
 0015-loot_red_orb-0001|data.Desc		
 0015-loot_secret_slab-0000|data.Name		Secret Slab
-0015-loot_secret_slab-0001|data.Desc		An ancient stone slab inscribed with what seems to be prehistoric legend, rumored to hold an incredible secret. Its writings change depending on the dungeon it's used in.
+0015-loot_secret_slab-0001|data.Desc		An ancient stone slab inscribed with what seems to be prehistoric legend. It is said to draw something special to it when kept close by.
 0015-loot_spacetime_globe-0000|data.Name		Spacetime Globe
 0015-loot_spacetime_globe-0001|data.Desc		
 0016-box_dainty-0000|data.Name		Dainty Box
@@ -840,6 +844,7 @@ Key		EN
 0017-xcl_family_bird_trio_09-0000|data.Name		Mystery Wing
 0017-xcl_family_bird_trio_10-0000|data.Name		Mystery Card
 0017-xcl_family_bird_trio_11-0000|data.Name		Mystery Seal
+0017-xcl_family_blacephalon_00-0000|data.Name		Ultra Balloon
 0017-xcl_family_bronzor_00-0000|data.Name		Mirror Torc
 0017-xcl_family_buizel_00-0000|data.Name		Float Aid
 0017-xcl_family_buizel_04-0000|data.Name		Swimmer Rock
@@ -848,11 +853,13 @@ Key		EN
 0017-xcl_family_bulbasaur_01-0000|data.Name		Plant Torc
 0017-xcl_family_bulbasaur_04-0000|data.Name		Grass Guard
 0017-xcl_family_buneary_00-0000|data.Name		Allure Coat
+0017-xcl_family_buzzwole_00-0000|data.Name		Ultra Band
 0017-xcl_family_carvanha_00-0000|data.Name		Vicious Bow
 0017-xcl_family_castform_00-0000|data.Name		Weather Cape
 0017-xcl_family_castform_04-0000|data.Name		Cloud Rock
 0017-xcl_family_caterpie_00-0000|data.Name		Glittery Bow
 0017-xcl_family_celebi_00-0000|data.Name		Chrono Veil
+0017-xcl_family_celesteela_00-0000|data.Name		Ultra Shoot
 0017-xcl_family_chansey_00-0000|data.Name		Faith Ring
 0017-xcl_family_chansey_01-0000|data.Name		Lucky Scarf
 0017-xcl_family_chansey_04-0000|data.Name		Play Tag
@@ -881,6 +888,7 @@ Key		EN
 0017-xcl_family_darkrai_00-0000|data.Name		Eclipse Robe
 0017-xcl_family_delibird_00-0000|data.Name		Snow Brooch
 0017-xcl_family_deoxys_00-0000|data.Name		Revive Robe
+0017-xcl_family_dewpider_01-0000|data.Name		Araquanid Bubble
 0017-xcl_family_dialga_00-0000|data.Name		Time Shield
 0017-xcl_family_dialga_04-0000|data.Name		Time Jewel
 0017-xcl_family_doduo_00-0000|data.Name		Fight Torc
@@ -906,8 +914,11 @@ Key		EN
 0017-xcl_family_electabuzz_05-0000|data.Name		Charge Seal
 0017-xcl_family_farfetchd_00-0000|data.Name		Bullseye Bow
 0017-xcl_family_feebas_00-0000|data.Name		Grace Scarf
+0017-xcl_family_fomantis_00-0000|data.Name		Disguise Blade
 0017-xcl_family_gastly_00-0000|data.Name		Sunglasses
 0017-xcl_family_gastly_01-0000|data.Name		Slip Scarf
+0017-xcl_family_genesect_00-0000|data.Name		G-Scope
+0017-xcl_family_genesect_01-0000|data.Name		G-Booster
 0017-xcl_family_geodude_00-0000|data.Name		Rugged Sash
 0017-xcl_family_gible_00-0000|data.Name		Mach Scarf
 0017-xcl_family_gible_01-0000|data.Name		Meteor Torc
@@ -920,6 +931,7 @@ Key		EN
 0017-xcl_family_groudon_03-0000|data.Name		Terra Coin
 0017-xcl_family_groudon_04-0000|data.Name		Terra Crest
 0017-xcl_family_growlithe_00-0000|data.Name		Legend Bow
+0017-xcl_family_guzzlord_00-0000|data.Name		Ultra Armor
 0017-xcl_family_heatran_00-0000|data.Name		Searing Ring
 0017-xcl_family_heracross_00-0000|data.Name		Horn Torc
 0017-xcl_family_hippopotas_00-0000|data.Name		Grit Veil
@@ -946,11 +958,14 @@ Key		EN
 0017-xcl_family_jynx_00-0000|data.Name		Ruin Scarf
 0017-xcl_family_jynx_04-0000|data.Name		Kiss Charm
 0017-xcl_family_jynx_05-0000|data.Name		Frozen Ore
+0017-xcl_family_kartana_00-0000|data.Name		Ultra Blade
 0017-xcl_family_krabby_00-0000|data.Name		Super Sash
 0017-xcl_family_kyogre_00-0000|data.Name		Seabed Veil
 0017-xcl_family_kyogre_02-0000|data.Name		Seabed Dew
 0017-xcl_family_kyogre_03-0000|data.Name		Seabed Coin
 0017-xcl_family_kyogre_04-0000|data.Name		Seabed Crest
+0017-xcl_family_kyurem_00-0000|data.Name		Frostbite Band
+0017-xcl_family_kyurem_01-0000|data.Name		Blizzard Veil
 0017-xcl_family_lake_trio_00-0000|data.Name		Edify Robe
 0017-xcl_family_lake_trio_02-0000|data.Name		Charity Robe
 0017-xcl_family_lake_trio_04-0000|data.Name		Hope Robe
@@ -1002,6 +1017,7 @@ Key		EN
 0017-xcl_family_mr_mime_03-0000|data.Name		Junior Card
 0017-xcl_family_mr_mime_04-0000|data.Name		Mimic Pebble
 0017-xcl_family_mr_mime_05-0000|data.Name		Bulwark Rock
+0017-xcl_family_munna_00-0000|data.Name		Dream Mist
 0017-xcl_family_nidoran_00-0000|data.Name		Impact Torc
 0017-xcl_family_nidoran_01-0000|data.Name		Nido-Crest
 0017-xcl_family_nidoran_02-0000|data.Name		Nido-Claw
@@ -1009,6 +1025,7 @@ Key		EN
 0017-xcl_family_nidoran_04-0000|data.Name		Nido-Seal
 0017-xcl_family_nidoran_05-0000|data.Name		Thorny Scarf
 0017-xcl_family_nidoran_06-0000|data.Name		King Sash
+0017-xcl_family_nihilego_00-0000|data.Name		Ultra Hat
 0017-xcl_family_nincada_00-0000|data.Name		Ninja Ruff
 0017-xcl_family_nincada_06-0000|data.Name		Awe Mantle
 0017-xcl_family_numel_00-0000|data.Name		Erupt Scarf
@@ -1021,7 +1038,9 @@ Key		EN
 0017-xcl_family_palkia_00-0000|data.Name		Space Blade
 0017-xcl_family_palkia_04-0000|data.Name		Space Jewel
 0017-xcl_family_paras_00-0000|data.Name		Firm Hat
+0017-xcl_family_petilil_00-0000|data.Name		Flower Crown
 0017-xcl_family_phanpy_00-0000|data.Name		Armor Scarf
+0017-xcl_family_pheromosa_00-0000|data.Name		Ultra Veil
 0017-xcl_family_pikachu_00-0000|data.Name		Zapper Scarf
 0017-xcl_family_pikachu_01-0000|data.Name		Volt Torc
 0017-xcl_family_pikachu_04-0000|data.Name		Express Tag
@@ -1032,6 +1051,7 @@ Key		EN
 0017-xcl_family_plusle_minun_00-0000|data.Name		Pulse Bow
 0017-xcl_family_plusle_minun_01-0000|data.Name		Spark Tie
 0017-xcl_family_plusle_minun_06-0000|data.Name		Volt Heart
+0017-xcl_family_poipole_00-0000|data.Name		Ultra Stinger
 0017-xcl_family_poliwag_00-0000|data.Name		Rain Crown
 0017-xcl_family_poliwag_01-0000|data.Name		Bold Belt
 0017-xcl_family_ponyta_00-0000|data.Name		Sunlight Bow
@@ -1051,6 +1071,8 @@ Key		EN
 0017-xcl_family_regi_trio_08-0000|data.Name		Ice Sash
 0017-xcl_family_regi_trio_12-0000|data.Name		Steel Sash
 0017-xcl_family_regi_trio_16-0000|data.Name		Royal Mantle
+0017-xcl_family_reshiram_00-0000|data.Name		Blazing Band
+0017-xcl_family_reshiram_01-0000|data.Name		Truth Lens
 0017-xcl_family_rhyhorn_01-0000|data.Name		Pierce Drill
 0017-xcl_family_riolu_00-0000|data.Name		Ravage Ring
 0017-xcl_family_riolu_04-0000|data.Name		Valiant Rock
@@ -1059,9 +1081,8 @@ Key		EN
 0017-xcl_family_roselia_01-0000|data.Name		Thorned Torc
 0017-xcl_family_rotom_00-0000|data.Name		Plasma Veil
 0017-xcl_family_sandshrew_00-0000|data.Name		Sandy Torc
-0017-xcl_family_scyther_00-0000|data.Name		Red Armlet
+0017-xcl_family_scyther_01-0000|data.Name		Red Armlet
 0017-xcl_family_scyther_04-0000|data.Name		Ambush Rock
-0017-xcl_family_scyther_05-0000|data.Name		Steel Charm
 0017-xcl_family_seel_00-0000|data.Name		North Torc
 0017-xcl_family_sentret_00-0000|data.Name		Body Collar
 0017-xcl_family_shaymin_00-0000|data.Name		Purify Veil
@@ -1095,6 +1116,7 @@ Key		EN
 0017-xcl_family_squirtle_00-0000|data.Name		Hydro Band
 0017-xcl_family_squirtle_01-0000|data.Name		Bubble Bangle
 0017-xcl_family_squirtle_04-0000|data.Name		Water Guard
+0017-xcl_family_stakataka_00-0000|data.Name		Ultra Shield
 0017-xcl_family_stantler_00-0000|data.Name		Delusion Bow
 0017-xcl_family_starly_00-0000|data.Name		Guts Sash
 0017-xcl_family_starly_01-0000|data.Name		Regret Torc
@@ -1132,14 +1154,20 @@ Key		EN
 0017-xcl_family_turtwig_01-0000|data.Name		Woody Scarf
 0017-xcl_family_turtwig_02-0000|data.Name		Lucky Leaf
 0017-xcl_family_turtwig_04-0000|data.Name		Sprout Rock
+0017-xcl_family_type_null_02-0000|data.Name		Null Claw
+0017-xcl_family_type_null_03-0000|data.Name		Null Thorn
+0017-xcl_family_type_null_04-0000|data.Name		Null Heart
 0017-xcl_family_tyrogue_00-0000|data.Name		Victory Ruff
 0017-xcl_family_tyrogue_02-0000|data.Name		Victory Belt
 0017-xcl_family_tyrogue_04-0000|data.Name		Victory Bangle
 0017-xcl_family_tyrogue_06-0000|data.Name		Muscle Charm
 0017-xcl_family_venonat_00-0000|data.Name		Gaze Goggles
+0017-xcl_family_victini_00-0000|data.Name		Victory Crown
 0017-xcl_family_volbeat_illumise_00-0000|data.Name		Neon Scarf
 0017-xcl_family_volbeat_illumise_01-0000|data.Name		Evening Bow
 0017-xcl_family_volbeat_illumise_06-0000|data.Name		Glowing Seal
+0017-xcl_family_volcanion_00-0000|data.Name		Thermal Scope
+0017-xcl_family_volcanion_03-0000|data.Name		Volcanion Scale
 0017-xcl_family_vulpix_00-0000|data.Name		Afire Collar
 0017-xcl_family_wailmer_00-0000|data.Name		Huge Bow
 0017-xcl_family_weedle_00-0000|data.Name		Charge Scarf
@@ -1148,7 +1176,12 @@ Key		EN
 0017-xcl_family_wobbuffet_04-0000|data.Name		Grin Charm
 0017-xcl_family_wobbuffet_05-0000|data.Name		Endure Rock
 0017-xcl_family_wurmple_01-0000|data.Name		Vivid Silk
+0017-xcl_family_xerneas_00-0000|data.Name		Life Crown
+0017-xcl_family_xurkitree_00-0000|data.Name		Ultra Wire
+0017-xcl_family_yveltal_00-0000|data.Name		Oblivion Blade
 0017-xcl_family_zangoose_00-0000|data.Name		Strong Sash
+0017-xcl_family_zekrom_00-0000|data.Name		Lightning Band
+0017-xcl_family_zekrom_01-0000|data.Name		Ideal Veil
 0017-xcl_family_zubat_00-0000|data.Name		Slash Bow
 0017-xcl_family_zubat_01-0000|data.Name		Absorb Scarf
 0018-lost_item_bug-0000|data.Name		Special Ingredient

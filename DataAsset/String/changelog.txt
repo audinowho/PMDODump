@@ -1,26 +1,12 @@
 Sheet: Hardcode
-    * Added _ENUM_MinimapStyle_Black
-    * Added _ENUM_MinimapStyle_Blue
-    * Added _ENUM_MinimapStyle_White
-    * Added DLG_RESTRICT_ITEM_ALL_NON_TREASURE
-    * Added DLG_RESTRICT_ITEM_SLOT_NON_TREASURE
-    * Added MENU_SETTINGS_MINIMAP_COLOR
 
 Sheet: Content
-    * Added MSG_LEVEL_STAT_CHANGE, transferred from MSG_LEVEL_STAT_DROP
-    * Erased contents of MSG_LEVEL_STAT_DROP
-    * Added MSG_STAT_BOOST_MULTI_MIN
 
 Sheet: Script
-    * Changed ground\base_camp/Hint_Sister_Line_001 from "[tmp]I met a lost Pokemon in Faulted Cliffs, but when I brought us out with an Escape Orb, she was left behind." to "[tmp]I met a lost Pokemon in Faultline Ridge, but when I brought us out with an Escape Orb, she was left behind."
 
 Sheet: Abilities
 
 Sheet: Items
-    * Added 0011-orb_monster-0000|data.Name
-    * Added 0011-orb_monster-0001|data.Desc
-    * Added 0016-xcl_test_typebecomescategory-0000|data.Name
-    * Added 0016-xcl_test_weaknessdodge-0000|data.Name
 
 Sheet: MapStatuses
 
@@ -33,8 +19,6 @@ Sheet: Tiles
 Sheet: Excl Names
 
 Sheet: Excl Effects
-    * Added ExclusiveItemEffect.TypeBecomesCategory
-    * Added ExclusiveItemEffect.WeaknessDodge
 
 Sheet: Zones
 

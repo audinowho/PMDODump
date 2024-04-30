@@ -1924,12 +1924,12 @@ namespace DataGenerator.Data
             if (evoCount == 0)//...if it doesn't have any evos (don't count future gens)
             {
                 //cannot evolve further
-                if (String.IsNullOrEmpty(entry.PromoteFrom))//single stager -25% to 65%
+                if (String.IsNullOrEmpty(entry.PromoteFrom))//single stager -20% to 70%
                     newRate = entry.JoinRate * 90 / 255 - 25;
-                else if (String.IsNullOrEmpty(totalEntries[monsterKeys.IndexOf(entry.PromoteFrom)].PromoteFrom))//second stage -40% to 20%
-                    newRate = entry.JoinRate * 60 / 255 - 40;
-                else//third stage: -65% to -15%
-                    newRate = entry.JoinRate * 50 / 255 - 65;
+                else if (String.IsNullOrEmpty(totalEntries[monsterKeys.IndexOf(entry.PromoteFrom)].PromoteFrom))//second stage -40% to 30%
+                    newRate = entry.JoinRate * 70 / 255 - 40;
+                else//third stage: -60% to -10%
+                    newRate = entry.JoinRate * 50 / 255 - 50;
             }
             else if (String.IsNullOrEmpty(entry.PromoteFrom))//first stage evolvable: 10% to 80%
             {
@@ -1939,8 +1939,8 @@ namespace DataGenerator.Data
                 else//200-255 -> 50% to 80%
                     newRate = (entry.JoinRate - 200) * 30 / 55 + 50;
             }
-            else //mid evos: -25% to 55%
-                newRate = entry.JoinRate * 80 / 255 - 25;
+            else //mid evos: -20% to 60%
+                newRate = entry.JoinRate * 80 / 255 - 20;
 
             //leave a gap at -50--40%, -25--15%, 0-10%, 25-35%
             if (newRate < 50)

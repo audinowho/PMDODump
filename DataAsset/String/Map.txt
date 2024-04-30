@@ -7,6 +7,7 @@ end_ambush_forest-0000|data.Name		Ambush Forest Grove	Hain im Auflauerwald	åŸ‹ä¼
 end_bramble_woods-0000|data.Name						
 end_champions_road-0000|data.Name						
 end_copper_quarry-0000|data.Name						
+end_depleted_basin-0000|data.Name						
 end_forsaken_desert-0000|data.Name						
 end_moonlit_courtyard-0000|data.Name						
 end_overgrown_wilds-0000|data.Name						
@@ -46,6 +47,7 @@ room_garden_cross_water-0000|data.Name
 room_garden_grid-0000|data.Name						
 room_garden_lines-0000|data.Name						
 room_inscribed_entrance-0000|data.Name						
+room_labyrinth_entrance-0000|data.Name						
 room_moon_crescent_left-0000|data.Name						
 room_moon_crescent_right-0000|data.Name						
 room_moon_dance-0000|data.Name						

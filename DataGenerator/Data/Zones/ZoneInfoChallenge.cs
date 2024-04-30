@@ -37,9 +37,10 @@ namespace DataGenerator.Data
                 floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Castaway Cave\nB{0}F"), new Priority(-15)));
 
                 //money
-                MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 5);
+                MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(120, 140), new RandRange(18, 24));
                 moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                 floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
                 //items
                 ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
                 itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
@@ -569,7 +570,7 @@ namespace DataGenerator.Data
                 zone.Level = 30;
                 zone.BagRestrict = 0;
                 zone.KeepTreasure = true;
-                zone.Rogue = RogueStatus.ItemTransfer;
+                zone.Rogue = RogueStatus.AllTransfer;
                 zone.Persistent = true;
 
                 int soft_max = 14;
@@ -580,9 +581,10 @@ namespace DataGenerator.Data
                 floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Sleeping Caldera\nB{0}F"), new Priority(-15)));
 
                 //money
-                MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 0);
+                MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(130, 150), new RandRange(18, 22));
                 moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
                 floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
                 //items
                 ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
                 itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
@@ -594,22 +596,28 @@ namespace DataGenerator.Data
                 itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
 
-                necessities.Spawns.Add(new InvItem("berry_leppa", true), new IntRange(0, max_floors), 3);
+                necessities.Spawns.Add(new InvItem("berry_leppa", true), new IntRange(0, max_floors), 2);
                 necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, max_floors), 6);
                 necessities.Spawns.Add(new InvItem("berry_oran", true), new IntRange(0, max_floors), 2);
-                necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 4);
+                necessities.Spawns.Add(new InvItem("berry_oran"), new IntRange(0, max_floors), 6);
                 necessities.Spawns.Add(new InvItem("food_banana"), new IntRange(0, max_floors), 3);
-                necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 10);
+                necessities.Spawns.Add(new InvItem("berry_lum"), new IntRange(0, max_floors), 6);
                 necessities.Spawns.Add(new InvItem("berry_sitrus"), new IntRange(0, max_floors), 6);
                 necessities.Spawns.Add(new InvItem("food_grimy"), new IntRange(0, max_floors), 3);
+
+                necessities.Spawns.Add(new InvItem("seed_reviver"), new IntRange(0, max_floors), 4);//reviver seed
+                necessities.Spawns.Add(new InvItem("seed_reviver", true), new IntRange(0, max_floors), 2);//reviver seed
+
                 //snacks
                 CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
                 snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                 itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
 
-                snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, max_floors), 10);
                 snacks.Spawns.Add(new InvItem("seed_ban"), new IntRange(0, max_floors), 10);
+                snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, max_floors), 10);
+                snacks.Spawns.Add(new InvItem("seed_ice"), new IntRange(0, max_floors), 10);
+                snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, max_floors), 10);
                 snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, max_floors), 10);
                 snacks.Spawns.Add(new InvItem("berry_occa"), new IntRange(0, max_floors), 3);
                 snacks.Spawns.Add(new InvItem("berry_coba"), new IntRange(0, max_floors), 3);
@@ -641,7 +649,7 @@ namespace DataGenerator.Data
 
                 //special
                 CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
-                special.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+                special.SpawnRates.SetRange(3, new IntRange(11, max_floors));
                 itemSpawnZoneStep.Spawns.Add("special", special);
 
                 special.Spawns.Add(new InvItem("apricorn_purple", true), new IntRange(0, max_floors), 3);
@@ -653,11 +661,12 @@ namespace DataGenerator.Data
 
                 //evo
                 CategorySpawn<InvItem> evo = new CategorySpawn<InvItem>();
-                evo.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+                evo.SpawnRates.SetRange(2, new IntRange(5, max_floors));
                 itemSpawnZoneStep.Spawns.Add("evo", evo);
 
-
                 evo.Spawns.Add(new InvItem("evo_fire_stone"), new IntRange(0, max_floors), 10);
+                evo.Spawns.Add(new InvItem("evo_moon_stone"), new IntRange(0, max_floors), 10);
+
                 //throwable
                 CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
                 throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
@@ -668,7 +677,7 @@ namespace DataGenerator.Data
                 throwable.Spawns.Add(new InvItem("ammo_iron_thorn", false, 3), new IntRange(0, max_floors), 10);
                 throwable.Spawns.Add(new InvItem("wand_pounce", false, 3), new IntRange(0, max_floors), 10);
                 throwable.Spawns.Add(new InvItem("wand_whirlwind", false, 3), new IntRange(0, max_floors), 10);
-                throwable.Spawns.Add(new InvItem("wand_warp", false, 2), new IntRange(0, max_floors), 10);
+                throwable.Spawns.Add(new InvItem("wand_slow", false, 2), new IntRange(0, max_floors), 10);
                 throwable.Spawns.Add(new InvItem("wand_lob", false, 3), new IntRange(0, max_floors), 10);
                 //orbs
                 CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
@@ -684,10 +693,9 @@ namespace DataGenerator.Data
                 orbs.Spawns.Add(new InvItem("orb_fill_in"), new IntRange(0, max_floors), 8);
                 orbs.Spawns.Add(new InvItem("orb_endure", true), new IntRange(0, max_floors), 2);
                 orbs.Spawns.Add(new InvItem("orb_endure"), new IntRange(0, max_floors), 8);
-                orbs.Spawns.Add(new InvItem("orb_mirror", true), new IntRange(0, max_floors), 2);
-                orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, max_floors), 8);
+                orbs.Spawns.Add(new InvItem("orb_mirror"), new IntRange(0, max_floors), 10);
+                orbs.Spawns.Add(new InvItem("orb_foe_hold"), new IntRange(0, max_floors), 10);
                 orbs.Spawns.Add(new InvItem("orb_cleanse"), new IntRange(8, max_floors), 10);
-                orbs.Spawns.Add(new InvItem("orb_weather"), new IntRange(0, max_floors), 10);
                 orbs.Spawns.Add(new InvItem("orb_trapbust"), new IntRange(0, max_floors), 10);
 
                 //held
@@ -726,10 +734,10 @@ namespace DataGenerator.Data
                 tms.Spawns.Add(new InvItem("tm_endure"), new IntRange(0, max_floors), 10);
                 tms.Spawns.Add(new InvItem("tm_echoed_voice"), new IntRange(0, max_floors), 10);
                 tms.Spawns.Add(new InvItem("tm_gyro_ball"), new IntRange(0, max_floors), 10);
-                tms.Spawns.Add(new InvItem("tm_recycle"), new IntRange(0, max_floors), 10);
+                tms.Spawns.Add(new InvItem("tm_hyper_beam"), new IntRange(0, max_floors), 10);
                 tms.Spawns.Add(new InvItem("tm_false_swipe"), new IntRange(0, max_floors), 10);
                 tms.Spawns.Add(new InvItem("tm_defog"), new IntRange(0, max_floors), 10);
-                tms.Spawns.Add(new InvItem("tm_telekinesis"), new IntRange(0, max_floors), 10);
+                tms.Spawns.Add(new InvItem("tm_protect"), new IntRange(0, max_floors), 10);
                 tms.Spawns.Add(new InvItem("tm_double_team"), new IntRange(0, max_floors), 10);
                 tms.Spawns.Add(new InvItem("tm_thunder_wave"), new IntRange(0, max_floors), 10);
                 tms.Spawns.Add(new InvItem("tm_attract"), new IntRange(0, max_floors), 10);
@@ -759,22 +767,24 @@ namespace DataGenerator.Data
 
                 //sleeping
                 poolSpawn.Spawns.Add(GetTeamMob("barboach", "", "water_sport", "mud_bomb", "snore", "", new RandRange(25), "wander_normal", true), new IntRange(0, 4), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("elekid", "", "swift", "shock_wave", "", "", new RandRange(25), "wander_normal"), new IntRange(0, 4), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("noibat", "", "wing_attack", "bite", "", "", new RandRange(23), "wander_normal"), new IntRange(0, 4), 10);
                 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("diglett", 1, "", Gender.Unknown), "tangling_hair", "growl", "mud_bomb", "", "", new RandRange(23), "wander_normal"), new IntRange(0, 4), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("paras", "dry_skin", "leech_life", "stun_spore", "", "", new RandRange(22), "wander_normal"), new IntRange(0, 4), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("paras", "dry_skin", "leech_life", "stun_spore", "", "", new RandRange(23), "wander_normal"), new IntRange(0, 4), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("numel", "", "flame_burst", "", "", "", new RandRange(27), "wander_normal"), new IntRange(2, 6), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("woobat", "unaware", "heart_stamp", "attract", "", "", new RandRange(27), "wander_normal"), new IntRange(2, 6), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("elekid", "", "swift", "shock_wave", "", "", new RandRange(26), "wander_normal"), new IntRange(2, 6), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("croagunk", "dry_skin", "poison_sting", "revenge", "", "", new RandRange(28), "wander_normal"), new IntRange(2, 6), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("psyduck", "", "water_gun", "confusion", "", "", new RandRange(28), "wander_normal"), new IntRange(2, 6), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("stunky", "aftermath", "poison_gas", "fury_swipes", "", "", new RandRange(27), "wander_normal"), new IntRange(4, 8), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("quilava", "", "flame_wheel", "", "", "", new RandRange(28), "wander_normal"), new IntRange(4, 8), 10);
+
+                poolSpawn.Spawns.Add(GetTeamMob("pignite", "", "flame_charge", "", "", "", new RandRange(27), "wander_normal"), new IntRange(4, 8), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("woobat", "unaware", "heart_stamp", "attract", "", "", new RandRange(29), "wander_normal"), new IntRange(4, 8), 10);
 
                 poolSpawn.Spawns.Add(GetTeamMob("ferroseed", "", "ingrain", "self_destruct", "", "", new RandRange(31), "turret"), new IntRange(4, 8), 10);
 
                 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("meowth", 1, "", Gender.Unknown), "", "pay_day", "", "", "", new RandRange(27), "wander_normal"), new IntRange(4, 8), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("cubone", "", "rage", "bone_club", "", "", new RandRange(28), "wander_normal"), new IntRange(4, 8), 10);
 
-
+                poolSpawn.Spawns.Add(GetTeamMob("glimmet", "", "stealth_rock", "rock_polish", "", "", new RandRange(30), "retreater"), new IntRange(6, 10), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("golduck", "", "yawn", "screech", "aqua_tail", "", new RandRange(31), "wander_normal"), new IntRange(6, 10), 10);
                 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("persian", 1, "", Gender.Unknown), "fur_coat", "quash", "swift", "", "", new RandRange(33), "wander_normal"), new IntRange(8, 12), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("hariyama", "", "brine", "force_palm", "whirlwind", "", new RandRange(33), "wander_normal"), new IntRange(8, 12), 10);
@@ -783,9 +793,10 @@ namespace DataGenerator.Data
                 poolSpawn.Spawns.Add(GetTeamMob("whiscash", "", "earthquake", "rest", "snore", "", new RandRange(35), "wander_normal_itemless", true), new IntRange(10, 14), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("druddigon", "rough_skin", "dragon_rage", "dragon_claw", "", "", new RandRange(35), "wander_normal_itemless"), new IntRange(10, 14), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("electabuzz", "", "light_screen", "discharge", "", "", new RandRange(35), "wander_normal_itemless"), new IntRange(10, 14), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("magmar", "", "lava_plume", "smokescreen", "", "", new RandRange(35), "wander_normal_itemless"), new IntRange(10, 14), 10);
                 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("dugtrio", 1, "", Gender.Unknown), "tangling_hair", "sucker_punch", "bulldoze", "", "", new RandRange(37), "wander_normal_itemless"), new IntRange(12, 16), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("swoobat", "unaware", "air_slash", "amnesia", "", "", new RandRange(37), "wander_normal_itemless"), new IntRange(12, 16), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("glimmora", "", "stealth_rock", "ancient_power", "", "", new RandRange(38), "retreater"), new IntRange(14, 18), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("glimmora", "", "stealth_rock", "ancient_power", "", "", new RandRange(38), "retreater_itemless"), new IntRange(14, 18), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("klefki", "", "crafty_shield", "spikes", "", "", new RandRange(39), "wander_normal_itemless"), new IntRange(14, 18), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("wobbuffet", "", "safeguard", "destiny_bond", "encore", "splash", new RandRange(39), "wander_normal_itemless"), new IntRange(14, 18), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("drampa", "berserk", "play_nice", "dragon_breath", "", "", new RandRange(39), "wander_normal_itemless"), new IntRange(14, 18), 10);
@@ -819,27 +830,27 @@ namespace DataGenerator.Data
 
 
                 {
-                    TeamMemberSpawn teamSpawn = GetTeamMob("camerupt", "", "rock_slide", "lava_plume", "", "", new RandRange(33), "wander_normal");
+                    TeamMemberSpawn teamSpawn = GetTeamMob("camerupt", "solid_rock", "rock_slide", "lava_plume", "", "", new RandRange(45), "wander_normal");
                     teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("sleeping_caldera.TookTreasure", true));
                     poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 100);
                 }
                 {
-                    TeamMemberSpawn teamSpawn = GetTeamMob("magmar", "", "fire_punch", "", "", "", new RandRange(33), "wander_normal");
+                    TeamMemberSpawn teamSpawn = GetTeamMob("magmortar", "", "flamethrower", "confuse_ray", "", "", new RandRange(45), "wander_normal");
                     teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("sleeping_caldera.TookTreasure", true));
                     poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 100);
                 }
                 {
-                    TeamMemberSpawn teamSpawn = GetTeamMob("pignite", "", "heat_crash", "rollout", "", "", new RandRange(31), "wander_normal");
+                    TeamMemberSpawn teamSpawn = GetTeamMob("emboar", "", "heat_crash", "rollout", "", "", new RandRange(45), "wander_normal");
                     teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("sleeping_caldera.TookTreasure", true));
                     poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 100);
                 }
                 {
-                    TeamMemberSpawn teamSpawn = GetTeamMob("slugma", "", "incinerate", "harden", "", "", new RandRange(33), "wander_normal");
+                    TeamMemberSpawn teamSpawn = GetTeamMob("magcargo", "", "incinerate", "earth_power", "", "", new RandRange(45), "wander_normal");
                     teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("sleeping_caldera.TookTreasure", true));
                     poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 100);
                 }
                 {
-                    TeamMemberSpawn teamSpawn = GetTeamMob(new MonsterID("marowak", 1, "", Gender.Unknown), "", "shadow_bone", "will_o_wisp", "", "", new RandRange(33), "wander_normal");
+                    TeamMemberSpawn teamSpawn = GetTeamMob(new MonsterID("marowak", 1, "", Gender.Unknown), "", "shadow_bone", "will_o_wisp", "", "", new RandRange(45), "wander_normal");
                     teamSpawn.Spawn.SpawnConditions.Add(new MobCheckSaveVar("sleeping_caldera.TookTreasure", true));
                     poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 100);
                 }
@@ -986,7 +997,9 @@ namespace DataGenerator.Data
 
                     //items for the vault
                     {
-
+                        vaultChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 300);
+                        vaultChanceZoneStep.Items.Add(new MapItem("evo_magmarizer"), new IntRange(0, max_floors), 100);
+                        vaultChanceZoneStep.Items.Add(new MapItem("evo_electirizer"), new IntRange(0, max_floors), 100);
                     }
 
                     PopulateVaultItems(vaultChanceZoneStep, DungeonStage.Intermediate, DungeonAccessibility.SidePath, max_floors, true);
@@ -1189,22 +1202,40 @@ namespace DataGenerator.Data
                     //items
                     AddItemData(layout, new RandRange(3, 7), 25);
 
-                    SpawnList<MapItem> specificSpawns = new SpawnList<MapItem>();
-                    if (ii == 0)
-                        specificSpawns.Add(new MapItem("food_apple_big"), 10);
-                    if (ii == 4 || ii == 8 || ii == 12)
                     {
-                        specificSpawns.Add(new MapItem("apricorn_purple"), 10);
-                        specificSpawns.Add(new MapItem("apricorn_red"), 10);
-                        specificSpawns.Add(new MapItem("apricorn_white"), 10);
-                        specificSpawns.Add(new MapItem("apricorn_brown"), 10);
-                        specificSpawns.Add(new MapItem("apricorn_green"), 10);
-                        specificSpawns.Add(new MapItem("apricorn_yellow"), 10);
+                        SpawnList<MapItem> specificSpawns = new SpawnList<MapItem>();
+                        if (ii == 0)
+                            specificSpawns.Add(new MapItem("food_apple_big"), 10);
+
+                        RandomRoomSpawnStep<ListMapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<ListMapGenContext, MapItem>(new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(specificSpawns, new RandRange(1))));
+                        specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
                     }
 
-                    RandomRoomSpawnStep<ListMapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<ListMapGenContext, MapItem>(new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(specificSpawns, new RandRange(1))));
-                    specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                    layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
+                    {
+                        SpawnList<MapItem> specificSpawns = new SpawnList<MapItem>();
+                        if (ii == 3 || ii == 7 || ii == 11)
+                        {
+                            specificSpawns.Add(new MapItem("apricorn_purple"), 10);
+                            specificSpawns.Add(new MapItem("apricorn_red"), 10);
+                            specificSpawns.Add(new MapItem("apricorn_white"), 10);
+                            specificSpawns.Add(new MapItem("apricorn_brown"), 10);
+                            specificSpawns.Add(new MapItem("apricorn_green"), 10);
+                            specificSpawns.Add(new MapItem("apricorn_yellow"), 10);
+                        }
+
+                        NearSpawnableSpawnStep<ListMapGenContext, MapItem, MapGenEntrance> trapStep = new NearSpawnableSpawnStep<ListMapGenContext, MapItem, MapGenEntrance>(new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(specificSpawns, new RandRange(1))), 100);
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, trapStep);
+                    }
+
+                    if (ii == 0)
+                    {
+                        List<MapItem> specificSpawns = new List<MapItem>();
+                        specificSpawns.Add(new MapItem("machine_recall_box"));
+                        RandomRoomSpawnStep<ListMapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<ListMapGenContext, MapItem>(new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(new RandBag<MapItem>(specificSpawns), new RandRange(1))));
+                        specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
+                    }
 
                     SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
                     PopulateWallItems(wallSpawns, DungeonStage.Rogue, DungeonEnvironment.Rock);
@@ -1285,7 +1316,7 @@ namespace DataGenerator.Data
                             layout.GenSteps.Add(PR_ROOMS_GEN, CreateGenericListConnect(50, 0));
                         else if (ii < soft_max)
                             layout.GenSteps.Add(PR_ROOMS_GEN, CreateGenericListConnect(40, 0));
-                        else 
+                        else
                             layout.GenSteps.Add(PR_ROOMS_GEN, CreateGenericListConnect(30, 100));
 
                     }
@@ -1320,10 +1351,8 @@ namespace DataGenerator.Data
                     {
                         //making room for the vault
                         {
-                            ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(20, 16), Dir8.None);
+                            ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(22, 22), Dir8.None);
                             layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, addSizeStep);
-                            ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
-                            layout.GenSteps.Add(PR_ROOMS_PRE_VAULT, limitStep);
                             ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
                             layout.GenSteps.Add(PR_ROOMS_PRE_VAULT_CLAMP, clampStep);
                         }
@@ -1345,8 +1374,13 @@ namespace DataGenerator.Data
                             detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
                             detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
                             detours.RoomComponents.Set(new NoEventRoom());
+                            detours.RoomComponents.Set(new ImmutableRoom());
 
                             layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, detours);
+
+
+                            ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
+                            layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, limitStep);
                         }
 
                         {
@@ -1451,9 +1485,9 @@ namespace DataGenerator.Data
 
                     layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
                     //if (ii == soft_max - 1)
-                    //    layout.GenSteps.Add(PR_DBG_CHECK, new DetectItemStep<ListMapGenContext>("loot_music_box"));
-                    if (ii > soft_max)
-                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectItemStep<ListMapGenContext>("box_deluxe"));
+                    //    layout.GenSteps.Add(PR_DBG_CHECK, new DetectItemStep<ListMapGenContext>("loot_secret_slab"));
+                    //if (ii > soft_max)
+                    //    layout.GenSteps.Add(PR_DBG_CHECK, new DetectItemStep<ListMapGenContext>("box_deluxe"));
 
 
                     floorSegment.Floors.Add(layout);
@@ -1602,7 +1636,7 @@ namespace DataGenerator.Data
                 orbs.Spawns.Add(new InvItem("orb_halving"), new IntRange(0, max_floors), 10);
                 //held
                 CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
-                held.SpawnRates.SetRange(3, new IntRange(0, max_floors));
+                held.SpawnRates.SetRange(4, new IntRange(0, max_floors));
                 itemSpawnZoneStep.Spawns.Add("held", held);
 
 
@@ -1624,7 +1658,7 @@ namespace DataGenerator.Data
                 held.Spawns.Add(new InvItem("held_dread_plate"), new IntRange(0, max_floors), 10);
                 //tms
                 CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
-                tms.SpawnRates.SetRange(10, new IntRange(0, max_floors));
+                tms.SpawnRates.SetRange(12, new IntRange(0, max_floors));
                 itemSpawnZoneStep.Spawns.Add("tms", tms);
 
 
@@ -1718,7 +1752,7 @@ namespace DataGenerator.Data
 
                     SpawnRangeList<IGenStep> specialEnemySpawns = new SpawnRangeList<IGenStep>();
                     specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
-                    SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(1, 4), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
+                    SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(1, 3), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
                     floorSegment.ZoneSteps.Add(specialEnemyStep);
                 }
 
@@ -1786,16 +1820,11 @@ namespace DataGenerator.Data
                     monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(11, 9), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                     monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(15, 13), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                    monsterChanceZoneStep.Items.Add(new MapItem("evo_thunder_stone"), new IntRange(0, 30), 4);//Thunder Stone
-                    monsterChanceZoneStep.Items.Add(new MapItem("evo_leaf_stone"), new IntRange(0, 30), 4);//Leaf Stone
-                    monsterChanceZoneStep.Items.Add(new MapItem("evo_ice_stone"), new IntRange(0, 30), 4);//Ice Stone
-                    monsterChanceZoneStep.Items.Add(new MapItem("evo_fire_stone"), new IntRange(0, max_floors), 4);//Fire Stone
-                    monsterChanceZoneStep.Items.Add(new MapItem("evo_water_stone"), new IntRange(0, max_floors), 4);//Water Stone
                     monsterChanceZoneStep.Items.Add(new MapItem("evo_moon_stone"), new IntRange(0, max_floors), 4);//Moon Stone
-                    monsterChanceZoneStep.Items.Add(new MapItem("evo_leaf_stone"), new IntRange(0, max_floors), 4);//Leaf Stone
                     monsterChanceZoneStep.Items.Add(new MapItem("evo_kings_rock"), new IntRange(0, max_floors), 4);//King's Rock
                     monsterChanceZoneStep.Items.Add(new MapItem("evo_link_cable"), new IntRange(0, max_floors), 4);//Link Cable
                     monsterChanceZoneStep.Items.Add(new MapItem("evo_sun_stone"), new IntRange(0, max_floors), 4);//Sun Stone
+                    monsterChanceZoneStep.Items.Add(new MapItem("evo_reaper_cloth"), new IntRange(0, max_floors), 4);//Sun Stone
 
                     foreach (string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
                         monsterChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
@@ -1803,13 +1832,13 @@ namespace DataGenerator.Data
                     PopulateHallItems(monsterChanceZoneStep, DungeonStage.Intermediate, DungeonAccessibility.Hidden, max_floors);
 
                     //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(100, new RandRange(5, 11)), new ParamRange(0, 30), 20);
-                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_heart_scale"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
-                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
+                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1, 3)), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
+                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(2, 4)),
                         new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(0, 30), 10);//TMs + machines
 
-                    monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
-                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
-                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
+                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeRange(true, true, new RandRange(3, 6), "loot_heart_scale")), new IntRange(0, max_floors), 30);//heart scales
+                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1, 3)), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
+                    monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1, 3)), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
                     monsterChanceZoneStep.Mobs.Add(GetGenericMob("spiritomb", "", "hypnosis", "dream_eater", "", "", new RandRange(31), "wander_normal", false, true), new IntRange(0, max_floors), 10);
                     monsterChanceZoneStep.Mobs.Add(GetGenericMob("decidueye", "long_reach", "spirit_shackle", "sucker_punch", "", "", new RandRange(37), "wander_normal", false, true), new IntRange(14, max_floors), 10);
                     monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(20, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
@@ -1921,9 +1950,9 @@ namespace DataGenerator.Data
 
                     //items
                     if (ii < 8)
-                        AddItemData(layout, new RandRange(3, 6), 25);
+                        AddItemData(layout, new RandRange(3, 5), 25);
                     else
-                        AddItemData(layout, new RandRange(4, 7), 25);
+                        AddItemData(layout, new RandRange(3, 6), 25);
 
                     SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
                     wallSpawns.Add(MapItem.CreateMoney(100), 20);
@@ -2318,8 +2347,11 @@ namespace DataGenerator.Data
                 evo.SpawnRates.SetRange(1, new IntRange(0, max_floors));
                 itemSpawnZoneStep.Spawns.Add("evo", evo);
 
-
                 evo.Spawns.Add(new InvItem("evo_dawn_stone"), new IntRange(0, max_floors), 10);
+                evo.Spawns.Add(new InvItem("evo_dusk_stone"), new IntRange(0, max_floors), 10);
+                evo.Spawns.Add(new InvItem("evo_shiny_stone"), new IntRange(0, max_floors), 10);
+                evo.Spawns.Add(new InvItem("evo_protector"), new IntRange(0, max_floors), 5);
+
                 //throwable
                 CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
                 throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
@@ -2350,7 +2382,7 @@ namespace DataGenerator.Data
                 orbs.Spawns.Add(new InvItem("orb_one_shot"), new IntRange(0, max_floors), 10);
                 //held
                 CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
-                held.SpawnRates.SetRange(3, new IntRange(0, max_floors));
+                held.SpawnRates.SetRange(4, new IntRange(0, max_floors));
                 itemSpawnZoneStep.Spawns.Add("held", held);
 
 
@@ -2373,7 +2405,7 @@ namespace DataGenerator.Data
                 held.Spawns.Add(new InvItem("held_sky_plate"), new IntRange(0, max_floors), 10);
                 //tms
                 CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
-                tms.SpawnRates.SetRange(10, new IntRange(0, max_floors));
+                tms.SpawnRates.SetRange(12, new IntRange(0, max_floors));
                 itemSpawnZoneStep.Spawns.Add("tms", tms);
 
 
@@ -2467,7 +2499,7 @@ namespace DataGenerator.Data
 
                     SpawnRangeList<IGenStep> specialEnemySpawns = new SpawnRangeList<IGenStep>();
                     specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
-                    SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(1, 4), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
+                    SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(1, 3), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
                     floorSegment.ZoneSteps.Add(specialEnemyStep);
                 }
 
@@ -2576,6 +2608,11 @@ namespace DataGenerator.Data
                         vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                         vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
                         vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_TILES_GEN_EXTRA, vaultStep));
+                    }
+
+                    //items for the vault
+                    {
+                        vaultChanceZoneStep.Items.Add(new MapItem("evo_protector"), new IntRange(0, max_floors), 150);
                     }
 
                     PopulateFOEItems(vaultChanceZoneStep, DungeonStage.Advanced, DungeonAccessibility.Hidden, max_floors);
@@ -2696,9 +2733,9 @@ namespace DataGenerator.Data
 
                     //items
                     if (ii < 4)
-                        AddItemData(layout, new RandRange(3, 6), 25);
+                        AddItemData(layout, new RandRange(3, 5), 25);
                     else
-                        AddItemData(layout, new RandRange(4, 7), 25);
+                        AddItemData(layout, new RandRange(3, 6), 25);
 
                     SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
                     wallSpawns.Add(MapItem.CreateMoney(100), 20);
@@ -3694,28 +3731,23 @@ namespace DataGenerator.Data
                     AddTextureData(layout, "mystery_jungle_2_wall", "mystery_jungle_2_floor", "mystery_jungle_2_secondary", "poison");
 
                     //add 2 chests
-
                     {
                         HashSet<string> exceptFor = new HashSet<string>();
                         foreach (string legend in IterateLegendaries())
                             exceptFor.Add(legend);
-                        SpeciesItemElementSpawner<MapLoadContext> spawn = new SpeciesItemElementSpawner<MapLoadContext>(new IntRange(4), new RandRange(1), "poison", exceptFor);
-                        BoxSpawner<MapLoadContext> box = new BoxSpawner<MapLoadContext>("box_deluxe", spawn);
+                        SpeciesItemElementSpawner<MapLoadContext> spawn = new SpeciesItemElementSpawner<MapLoadContext>(new IntRange(2), new RandRange(2), "poison", exceptFor);
+                        BoxSpawner<MapLoadContext> box = new BoxSpawner<MapLoadContext>("box_heavy", spawn);
                         List<Loc> treasureLocs = new List<Loc>();
-                        treasureLocs.Add(new Loc(7, 6));
+                        treasureLocs.Add(new Loc(6, 6));
+                        treasureLocs.Add(new Loc(8, 6));
                         layout.GenSteps.Add(PR_SPAWN_ITEMS, new SpecificSpawnStep<MapLoadContext, MapItem>(box, treasureLocs));
                     }
 
-
-                    //List<(InvItem, Loc)> items = new List<(InvItem, Loc)>();
-                    //items.Add((new InvItem("apricorn_plain"), new Loc(13, 10)));//Plain Apricorn
-                    //layout.GenSteps.Add(PR_SPAWN_ITEMS, new SpecificSpawnStep<MapLoadContext, InvItem>(items));
-
                     List<InvItem> treasure1 = new List<InvItem>();
-                    // a specific item from poison types in the dex
-                    treasure1.Add(InvItem.CreateBox("box_glittery", "medicine_amber_tear"));//Amber Tear
+                    treasure1.Add(InvItem.CreateBox("box_glittery", "seed_golden"));
                     treasure1.Add(InvItem.CreateBox("box_glittery", "ammo_golden_thorn"));//Golden Thorn
                     treasure1.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
+                    treasure1.Add(InvItem.CreateBox("box_glittery", "apricorn_glittery"));
 
                     List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
                     items.Add((treasure1, new Loc(7, 8)));
@@ -4040,20 +4072,20 @@ namespace DataGenerator.Data
                 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-                poolSpawn.Spawns.Add(GetTeamMob("baltoy", "", "cosmic_power", "mud_slap", "heal_block", "", new RandRange(30), "wander_normal"), new IntRange(0, 4), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("braixen", "magician", "flame_charge", "lucky_chant", "", "", new RandRange(30), "thief"), new IntRange(0, 4), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("meditite", "", "meditate", "force_palm", "", "", new RandRange(30), "wander_normal"), new IntRange(0, 4), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("ariados", "", "fell_stinger", "venom_drench", "", "", new RandRange(31), "wander_normal"), new IntRange(0, 4), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("larvesta", "", "ember", "string_shot", "leech_life", "", new RandRange(33), "wander_normal"), new IntRange(2, 6), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("baltoy", "", "cosmic_power", "mud_slap", "heal_block", "", new RandRange(32), "wander_normal"), new IntRange(0, 4), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("braixen", "magician", "flame_charge", "lucky_chant", "", "", new RandRange(32), "thief"), new IntRange(0, 4), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("meditite", "", "meditate", "force_palm", "", "", new RandRange(32), "wander_normal"), new IntRange(0, 4), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("ariados", "", "night_shade", "spider_web", "", "", new RandRange(32), "wander_normal"), new IntRange(0, 6), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("larvesta", "", "ember", "string_shot", "leech_life", "", new RandRange(32), "wander_normal"), new IntRange(0, 4), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("gothorita", "", "future_sight", "play_nice", "", "", new RandRange(33), "wander_normal"), new IntRange(2, 6), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("wobbuffet", "", "mirror_coat", "counter", "safeguard", "", new RandRange(34), "wander_normal"), new IntRange(2, 6), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("shuppet", "cursed_body", "spite", "curse", "", "", new RandRange(34), "wander_normal"), new IntRange(4, 8), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("wobbuffet", "", "mirror_coat", "counter", "encore", "", new RandRange(40), "wander_normal"), new IntRange(6, max_floors), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("shuppet", "cursed_body", "spite", "curse", "", "", new RandRange(35), "wander_normal"), new IntRange(4, 8), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("solrock", "", "fire_spin", "embargo", "rock_slide", "", new RandRange(38), "wander_normal"), new IntRange(4, max_floors), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("meowstic", "", "psyshock", "charm", "", "", new RandRange(34), "wander_normal"), new IntRange(4, 8), 5);
+                poolSpawn.Spawns.Add(GetTeamMob("meowstic", "", "psyshock", "charm", "", "", new RandRange(35), "wander_normal"), new IntRange(4, 8), 5);
                 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("meowstic", 1, "", Gender.Unknown), "", "psyshock", "charge_beam", "", "", new RandRange(34), "wander_normal"), new IntRange(4, 8), 5);
                 poolSpawn.Spawns.Add(GetTeamMob("bronzong", "", "psywave", "imprison", "", "", new RandRange(42), "wander_normal"), new IntRange(8, max_floors), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("electrode", "", "rollout", "self_destruct", "light_screen", "", new RandRange(38), "wander_normal"), new IntRange(6, max_floors), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("claydol", "", "heal_block", "psybeam", "teleport", "", new RandRange(42), "wander_normal"), new IntRange(8, max_floors), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("claydol", "", "heal_block", "psybeam", "teleport", "", new RandRange(42), "retreater"), new IntRange(8, max_floors), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("banette", "cursed_body", "grudge", "shadow_ball", "", "", new RandRange(38), "wander_normal"), new IntRange(6, 10), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("gothitelle", "", "psychic", "future_sight", "", "", new RandRange(42), "wander_normal"), new IntRange(8, max_floors), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("delphox", "magician", "switcheroo", "mystical_fire", "psyshock", "", new RandRange(42), "wander_normal"), new IntRange(8, max_floors), 10);
@@ -4076,7 +4108,7 @@ namespace DataGenerator.Data
                 }
 
                 poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
-                poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 3);
+                poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 4);
 
 
                 floorSegment.ZoneSteps.Add(poolSpawn);
@@ -4441,11 +4473,26 @@ namespace DataGenerator.Data
 
                     AddTextureData(layout, "buried_relic_3_wall", "buried_relic_3_floor", "buried_relic_3_secondary", "psychic");
 
+                    {
+                        HashSet<string> exceptFor = new HashSet<string>();
+                        foreach (string legend in IterateLegendaries())
+                            exceptFor.Add(legend);
+                        SpeciesItemElementSpawner<MapLoadContext> spawn = new SpeciesItemElementSpawner<MapLoadContext>(new IntRange(2), new RandRange(2), "psychic", exceptFor);
+                        BoxSpawner<MapLoadContext> box = new BoxSpawner<MapLoadContext>("box_heavy", spawn);
+                        List<Loc> treasureLocs = new List<Loc>();
+                        treasureLocs.Add(new Loc(6, 8));
+                        treasureLocs.Add(new Loc(8, 8));
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, new SpecificSpawnStep<MapLoadContext, MapItem>(box, treasureLocs));
+                    }
+
                     List<InvItem> treasure1 = new List<InvItem>();
+                    treasure1.Add(InvItem.CreateBox("box_glittery", "seed_golden"));
+                    treasure1.Add(InvItem.CreateBox("box_glittery", "ammo_golden_thorn"));//Golden Thorn
                     treasure1.Add(InvItem.CreateBox("box_glittery", "loot_nugget"));//Nugget
+                    treasure1.Add(InvItem.CreateBox("box_glittery", "apricorn_glittery"));
 
                     List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
-                    items.Add((treasure1, new Loc(7, 8)));
+                    items.Add((treasure1, new Loc(7, 11)));
                     AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
 
                     floorSegment.Floors.Add(layout);

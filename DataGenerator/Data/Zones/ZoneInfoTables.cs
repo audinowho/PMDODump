@@ -1864,7 +1864,7 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 20);//nugget
                 if (ambush)
                     chestChanceZoneStep.Items.Add(new MapItem("loot_pearl", 2), new IntRange(0, max_floors), 5);//pearl
-                chestChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 3), new IntRange(0, max_floors), 10);//heart scale
+
                 if (ambush)
                     chestChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 200);//amber tear
                 chestChanceZoneStep.Items.Add(new MapItem("ammo_rare_fossil", 3), new IntRange(0, max_floors), 20);//rare fossil
@@ -1949,18 +1949,20 @@ namespace DataGenerator.Data
                     chestChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 15);//ability capsule
                 }
 
+                chestChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
+
                 if (ambush)
                 {
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(3), "loot_pearl"), new ItemThemeNone(100, new RandRange(3, 5))), new IntRange(0, max_floors), 30);
-                    chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(5, 10)), new IntRange(0, max_floors), 10);//gummis
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(3), "loot_heart_scale"), new ItemThemeNone(100, new RandRange(3, 5))), new IntRange(0, max_floors), 30);
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(3), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(4, 7))), new IntRange(0, max_floors), 10);//gummis
                 }
                 else
                 {
                     if (gamePhase <= DungeonStage.Intermediate && access != DungeonAccessibility.Unlockable)
-                        chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4)), new IntRange(0, max_floors), 10);//evo items
+                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(1, 4))), new IntRange(0, max_floors), 10);//evo items
 
-                    chestChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3)), new IntRange(0, max_floors), 10);//gummis
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(1)), new ItemThemeNone(100, new RandRange(1, 3))), new IntRange(0, max_floors), 30);
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 3), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(2, 4))), new IntRange(0, max_floors), 10);//gummis
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1), "loot_heart_scale"), new ItemThemeNone(100, new RandRange(1, 3))), new IntRange(0, max_floors), 30);
                 }
             }
         }

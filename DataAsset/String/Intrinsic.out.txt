@@ -352,7 +352,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0175-sweet_veil-0000|data.Name		Sweet Veil	Gluco-Voile	Zuckerhülle	Velo Dulce		Dolcevelo	스위트베일	スイートベール	スイートベール	甜幕	甜幕																																																			
 0175-sweet_veil-0001|data.Desc		Prevents party Pokémon from falling asleep.	Les Pokémon de l’équipe ne peuvent pas s’endormir.	Alle Pokémon im Team können nicht einschlafen.	Evita que tu equipo Pokémon se duerma.		Impedisce a sé e agli alleati di addormentarsi.	같은 편의 포켓몬이 잠들지 않게 된다.	 かたの　ポケモンは ねむらなくなる。	味方の　ポケモンは 眠らなくなる。	我方的宝可梦不会变为睡眠状态。	我方的寶可夢 不會陷入睡眠狀態。																																																			
 0176-stance_change-0000|data.Name		Stance Change	Déclic Tactique	Taktikwechsel	Cambio Táctico		Accendilotta	배틀스위치	バトルスイッチ	バトルスイッチ	战斗切换	戰鬥切換																																																			
-0176-stance_change-0001|data.Desc		The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King's Shield.	Le Pokémon prend la Forme Assaut lorsqu’il utilise une attaque, et la Forme Parade lorsqu’il utilise Bouclier Royal.	Setzt das Pokémon eine Offensiv-Attacke ein, nimmt es die Klingenform an. Setzt es danach die Attacke Königsschild ein, nimmt es die Schildform an.	Adopta la Forma Filo al lanzar un ataque, o bien la Forma Escudo si usa el movimiento Escudo Real.		Assume la Forma Spada se usa una mossa d’attacco e la Forma Scudo se usa Scudo Reale.	공격 기술을 쓰면 블레이드폼으로 기술 킹실드를 쓰면 실드폼으로 변한다.	こうげきわざを　だすと　ブレードフォルムに わざ　キングシールドを　だすと シールドフォルムに　へんかする。	攻撃技を　出すと　ブレードフォルムに 技　キングシールドを　出すと シールドフォルムに　変化する。	如果使出攻击招式，会变为刀剑形态，如果使出招式“王者盾牌”，会变为盾牌形态。	若使出攻擊招式，會變為刀劍形態， 若使出招式「王者盾牌」， 會變為盾牌形態。																																																			
+0176-stance_change-0001|data.Desc		The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses a status move.																																																													
 0177-gale_wings-0000|data.Name		Gale Wings	Ailes Bourrasque	Orkanschwingen	Alas Vendaval		Aliraffica	질풍날개	はやてのつばさ	はやてのつばさ	疾风之翼	疾風之翼																																																			
 0177-gale_wings-0001|data.Desc		Increases the Attack Range of Flying-type moves.		Erhöht die Angriffsreichweite von Attacken des Typen Flug.				비행타입 기술의 공격범위를 증가시킨다..			增加飞行属性招式的攻击范围。																																																				
 0178-mega_launcher-0000|data.Name		Mega Launcher	Méga Blaster	Megawumme	Megadisparador		Megalancio	메가런처	メガランチャー	メガランチャー	超级发射器	超級發射器																																																			
@@ -556,7 +556,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0277-wind_power-0000|data.Name		Wind Power	Turbine Éolienne	Windkraft	Energía Eólica		Energia Eolica		ふうりょくでんき	ふうりょくでんき	风力发电																																																				
 0277-wind_power-0001|data.Desc																																																															
 0278-zero_to_hero-0000|data.Name		Zero to Hero	Supermutation	Superwechsel	Cambio Heroico		Supercambio		マイティチェンジ	マイティチェンジ	全能变身																																																				
-0278-zero_to_hero-0001|data.Desc																																																															
+0278-zero_to_hero-0001|data.Desc		The Pokémon switches between Zero Form and Hero Form when entering a new floor.																																																													
 0279-commander-0000|data.Name		Commander	Commandant	Kommandant	Comandar		Torre di Comando		しれいとう	しれいとう	发号施令																																																				
 0279-commander-0001|data.Desc																																																															
 0280-electromorphosis-0000|data.Name		Electromorphosis	Grecharge	Dynamo	Dinamo		Convertivolt		でんきにかえる	でんきにかえる	电力转换																																																				
@@ -590,7 +590,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0294-costar-0000|data.Name		Costar	Collab	Synchronauftritt	Unísono		Coprotagonismo		きょうえん	きょうえん	同台共演																																																				
 0294-costar-0001|data.Desc																																																															
 0295-toxic_debris-0000|data.Name		Toxic Debris	Dépôt Toxique	Giftbelag	Capa Tóxica		Mantossina		どくげしょう	どくげしょう	毒满地																																																				
-0295-toxic_debris-0001|data.Desc																																																															
+0295-toxic_debris-0001|data.Desc		Scatters poison spikes when the Pokémon takes damage from physical moves.																																																													
 0296-armor_tail-0000|data.Name		Armor Tail	Armure Caudale	Schweifrüstung	Cola Armadura		Codarmatura		テイルアーマー	テイルアーマー	尾甲																																																				
 0296-armor_tail-0001|data.Desc																																																															
 0297-earth_eater-0000|data.Name		Earth Eater	Absorbe-Terre	Bodenschmaus	Geofagia		Mangiaterra		どしょく	どしょく	食土																																																				

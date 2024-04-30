@@ -145,144 +145,238 @@ namespace DataGenerator.Data
             yield return "xcl_element_water_silk";
         }
 
-        public static IEnumerable<string> IterateLegendaries()
+        public static IEnumerable<string> IterateLegendaries(bool subLegend = true, bool oddLegend = true, bool boxLegend = true, bool mythical = true)
         {
-            yield return "articuno";
-            yield return "zapdos";
-            yield return "moltres";
-            yield return "mewtwo";
-            yield return "mew";
-            yield return "lugia";
-            yield return "ho_oh";
-            yield return "celebi";
-            yield return "regirock";
-            yield return "regice";
-            yield return "registeel";
-            yield return "latias";
-            yield return "latios";
-            yield return "kyogre";
-            yield return "groudon";
-            yield return "rayquaza";
-            yield return "jirachi";
-            yield return "deoxys";
-            yield return "uxie";
-            yield return "mesprit";
-            yield return "azelf";
-            yield return "dialga";
-            yield return "palkia";
-            yield return "heatran";
-            yield return "regigigas";
-            yield return "giratina";
-            yield return "cresselia";
-            yield return "phione";
-            yield return "manaphy";
-            yield return "darkrai";
-            yield return "shaymin";
-            yield return "arceus";
-            yield return "victini";
-            yield return "cobalion";
-            yield return "terrakion";
-            yield return "virizion";
-            yield return "tornadus";
-            yield return "thundurus";
-            yield return "reshiram";
-            yield return "zekrom";
-            yield return "landorus";
-            yield return "kyurem";
-            yield return "keldeo";
-            yield return "meloetta";
-            yield return "genesect";
-            yield return "xerneas";
-            yield return "yveltal";
-            yield return "zygarde";
-            yield return "diancie";
-            yield return "hoopa";
-            yield return "volcanion";
-            yield return "tapu_koko";
-            yield return "tapu_lele";
-            yield return "tapu_bulu";
-            yield return "tapu_fini";
-            yield return "cosmog";
-            yield return "cosmoem";
-            yield return "solgaleo";
-            yield return "lunala";
-            yield return "nihilego";
-            yield return "buzzwole";
-            yield return "pheromosa";
-            yield return "xurkitree";
-            yield return "celesteela";
-            yield return "kartana";
-            yield return "guzzlord";
-            yield return "necrozma";
-            yield return "magearna";
-            yield return "marshadow";
-            yield return "poipole";
-            yield return "naganadel";
-            yield return "stakataka";
-            yield return "blacephalon";
-            yield return "zeraora";
-            yield return "meltan";
-            yield return "melmetal";
-            yield return "zacian";
-            yield return "zamazenta";
-            yield return "eternatus";
-            yield return "kubfu";
-            yield return "urshifu";
-            yield return "zarude";
-            yield return "regieleki";
-            yield return "regidrago";
-            yield return "glastrier";
-            yield return "spectrier";
-            yield return "calyrex";
-            yield return "enamorus";
-            yield return "great_tusk";
-            yield return "scream_tail";
-            yield return "brute_bonnet";
-            yield return "flutter_mane";
-            yield return "slither_wing";
-            yield return "sandy_shocks";
-            yield return "iron_treads";
-            yield return "iron_bundle";
-            yield return "iron_hands";
-            yield return "iron_jugulis";
-            yield return "iron_moth";
-            yield return "iron_thorns";
-            yield return "wo_chien";
-            yield return "chien_pao";
-            yield return "ting_lu";
-            yield return "chi_yu";
-            yield return "roaring_moon";
-            yield return "iron_valiant";
-            yield return "koraidon";
-            yield return "miraidon";
+            if (subLegend)
+            {
+                yield return "articuno";
+                yield return "zapdos";
+                yield return "moltres";
+            }
+            if (boxLegend)
+                yield return "mewtwo";
+            if (mythical)
+                yield return "mew";
+            if (subLegend)
+            {
+                yield return "entei";
+                yield return "raikou";
+                yield return "suicune";
+            }
+            if (boxLegend)
+            {
+                yield return "lugia";
+                yield return "ho_oh";
+            }
+            if (mythical)
+                yield return "celebi";
+
+            if (subLegend)
+            {
+                yield return "regirock";
+                yield return "regice";
+                yield return "registeel";
+                yield return "latias";
+                yield return "latios";
+            }
+            if (boxLegend)
+            {
+                yield return "kyogre";
+                yield return "groudon";
+                yield return "rayquaza";
+            }
+            if (mythical)
+            {
+                yield return "jirachi";
+                yield return "deoxys";
+            }
+            if (subLegend)
+            {
+                yield return "uxie";
+                yield return "mesprit";
+                yield return "azelf";
+            }
+            if (boxLegend)
+            {
+                yield return "dialga";
+                yield return "palkia";
+                yield return "heatran";
+                yield return "regigigas";
+                yield return "giratina";
+            }
+            if (subLegend)
+            {
+                yield return "cresselia";
+                yield return "phione";
+            }
+            if (mythical)
+            {
+                yield return "manaphy";
+                yield return "darkrai";
+                yield return "shaymin";
+                yield return "arceus";
+                yield return "victini";
+            }
+            if (subLegend)
+            {
+                yield return "cobalion";
+                yield return "terrakion";
+                yield return "virizion";
+                yield return "tornadus";
+                yield return "thundurus";
+            }
+            if (boxLegend)
+            {
+                yield return "reshiram";
+                yield return "zekrom";
+            }
+            if (subLegend)
+                yield return "landorus";
+            if (boxLegend)
+                yield return "kyurem";
+            if (mythical)
+            {
+                yield return "keldeo";
+                yield return "meloetta";
+                yield return "genesect";
+            }
+            if (boxLegend)
+            {
+                yield return "xerneas";
+                yield return "yveltal";
+                yield return "zygarde";
+            }
+            if (mythical)
+            {
+                yield return "diancie";
+                yield return "hoopa";
+                yield return "volcanion";
+            }
+            if (subLegend)
+            {
+                yield return "tapu_koko";
+                yield return "tapu_lele";
+                yield return "tapu_bulu";
+                yield return "tapu_fini";
+            }
+            if (boxLegend)
+            {
+                yield return "cosmog";
+                yield return "cosmoem";
+                yield return "solgaleo";
+                yield return "lunala";
+            }
+            if (oddLegend)
+            {
+                yield return "nihilego";
+                yield return "buzzwole";
+                yield return "pheromosa";
+                yield return "xurkitree";
+                yield return "celesteela";
+                yield return "kartana";
+                yield return "guzzlord";
+            }
+            if (boxLegend)
+                yield return "necrozma";
+            if (mythical)
+            {
+                yield return "magearna";
+                yield return "marshadow";
+            }
+            if (oddLegend)
+            {
+                yield return "poipole";
+                yield return "naganadel";
+                yield return "stakataka";
+                yield return "blacephalon";
+            }
+            if (mythical)
+            {
+                yield return "zeraora";
+                yield return "meltan";
+                yield return "melmetal";
+            }
+            if (boxLegend)
+            {
+                yield return "zacian";
+                yield return "zamazenta";
+                yield return "eternatus";
+            }
+            if (subLegend)
+            {
+                yield return "kubfu";
+                yield return "urshifu";
+            }
+            if (mythical)
+                yield return "zarude";
+
+            if (subLegend)
+            {
+                yield return "regieleki";
+                yield return "regidrago";
+            }
+            if (subLegend)
+            {
+                yield return "glastrier";
+                yield return "spectrier";
+            }
+            if (boxLegend)
+                yield return "calyrex";
+            if (subLegend)
+                yield return "enamorus";
+            if (oddLegend)
+            {
+                yield return "great_tusk";
+                yield return "scream_tail";
+                yield return "brute_bonnet";
+                yield return "flutter_mane";
+                yield return "slither_wing";
+                yield return "sandy_shocks";
+                yield return "iron_treads";
+                yield return "iron_bundle";
+                yield return "iron_hands";
+                yield return "iron_jugulis";
+                yield return "iron_moth";
+                yield return "iron_thorns";
+            }
+            if (subLegend)
+            {
+                yield return "wo_chien";
+                yield return "chien_pao";
+                yield return "ting_lu";
+                yield return "chi_yu";
+            }
+            if (oddLegend)
+            {
+                yield return "roaring_moon";
+                yield return "iron_valiant";
+            }
+            if (boxLegend)
+            {
+                yield return "koraidon";
+                yield return "miraidon";
+            }
         }
 
         private static IEnumerable<string> IterateSubLegendItems()
         {
-            yield return "xcl_family_bird_trio_09";
-            yield return "xcl_family_bird_trio_10";
-            yield return "xcl_family_ho_oh_beasts_08";
-            yield return "xcl_family_ho_oh_beasts_09";
-            yield return "xcl_family_ho_oh_beasts_12";
-            yield return "xcl_family_ho_oh_beasts_13";
-            yield return "xcl_family_ho_oh_beasts_16";
-            yield return "xcl_family_ho_oh_beasts_17";
-            yield return "xcl_family_regi_trio_06";
-            yield return "xcl_family_regi_trio_07";
-            yield return "xcl_family_regi_trio_10";
-            yield return "xcl_family_regi_trio_11";
-            yield return "xcl_family_regi_trio_14";
-            yield return "xcl_family_regi_trio_15";
-            yield return "xcl_family_lake_trio_06";
-            yield return "xcl_family_lake_trio_07";
-            yield return "xcl_family_lati_duo_04";
-            yield return "xcl_family_lati_duo_05";
-            yield return "xcl_family_heatran_02";
-            yield return "xcl_family_heatran_03";
-            yield return "xcl_family_cresselia_02";
-            yield return "xcl_family_cresselia_03";
-            yield return "xcl_family_manaphy_phione_03";
-            yield return "xcl_family_manaphy_phione_04";
+            RarityData rarity = DataManager.Instance.UniversalData.Get<RarityData>();
+            foreach (string baseSpecies in IterateLegendaries(true, false, false, false))
+            {
+                Dictionary<int, List<string>> rarityTable;
+                if (rarity.RarityMap.TryGetValue(baseSpecies, out rarityTable))
+                {
+                    if (rarityTable.ContainsKey(1))
+                    {
+                        foreach (string item in rarityTable[1])
+                        {
+                            EntrySummary summary = DataManager.Instance.DataIndices[DataManager.DataType.Item].Get(item);
+                            if (summary.Released)
+                                yield return item;
+                        }
+                    }
+                }
+            }
         }
 
 
@@ -327,7 +421,7 @@ namespace DataGenerator.Data
                 yield return "evo_moon_stone";
                 yield return "evo_kings_rock";
                 yield return "evo_sun_ribbon";
-                yield return "evo_moon_ribbon";
+                yield return "evo_lunar_ribbon";
             }
 
             if ((evoClass & EvoClass.Early) != EvoClass.None)

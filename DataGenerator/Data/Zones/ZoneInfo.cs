@@ -1371,9 +1371,10 @@ namespace DataGenerator.Data
                         special.Spawns.Add(new InvItem("apricorn_yellow"), new IntRange(0, max_floors), 7);
                         special.Spawns.Add(new InvItem("machine_assembly_box", true), new IntRange(0, max_floors), 3);
                         special.Spawns.Add(new InvItem("machine_assembly_box"), new IntRange(0, max_floors), 7);
+
                         //evo
                         CategorySpawn<InvItem> evo = new CategorySpawn<InvItem>();
-                        evo.SpawnRates.SetRange(1, new IntRange(0, max_floors));
+                        evo.SpawnRates.SetRange(2, new IntRange(0, max_floors));
                         itemSpawnZoneStep.Spawns.Add("evo", evo);
                         evo.Spawns.Add(new InvItem("evo_thunder_stone"), new IntRange(0, max_floors), 10);
 
@@ -1932,13 +1933,15 @@ namespace DataGenerator.Data
                     special.Spawns.Add(new InvItem("machine_recall_box"), new IntRange(0, max_floors), 7);
                     special.Spawns.Add(new InvItem("key", true, 1), new IntRange(0, max_floors), 3);
                     special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, max_floors), 7);
+
                     //evo
                     CategorySpawn<InvItem> evo = new CategorySpawn<InvItem>();
                     evo.SpawnRates.SetRange(2, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("evo", evo);
 
-
                     evo.Spawns.Add(new InvItem("evo_link_cable"), new IntRange(0, max_floors), 10);
+
+
                     //throwable
                     CategorySpawn<InvItem> throwable = new CategorySpawn<InvItem>();
                     throwable.SpawnRates.SetRange(12, new IntRange(0, max_floors));
@@ -2018,7 +2021,7 @@ namespace DataGenerator.Data
                     held.Spawns.Add(new InvItem("held_toxic_plate"), new IntRange(0, max_floors), 10);
                     //tms
                     CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
-                    tms.SpawnRates.SetRange(10, new IntRange(0, max_floors));
+                    tms.SpawnRates.SetRange(12, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("tms", tms);
 
 
@@ -2149,20 +2152,20 @@ namespace DataGenerator.Data
 
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
-                    poolSpawn.TeamSizes.Add(2, new IntRange(0, max_floors), 6);
-                    poolSpawn.TeamSizes.Add(3, new IntRange(15, max_floors), 3);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(0, 15), 3);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(15, max_floors), 6);
 
 
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     {
-                        BossBandContextSpawner<ListMapGenContext> spawner = new BossBandContextSpawner<ListMapGenContext>(new RandRange(4));
+                        BossBandContextSpawner<ListMapGenContext> spawner = new BossBandContextSpawner<ListMapGenContext>(new RandRange(3));
                         MobSpawnExclFamily itemSpawn = new MobSpawnExclFamily("box_light", new IntRange(1), true);
                         spawner.LeaderFeatures.Add(itemSpawn);
 
                         SpawnRangeList<IGenStep> specialEnemySpawns = new SpawnRangeList<IGenStep>();
                         specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
-                        SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(1, 5), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
+                        SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(1, 4), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
                         floorSegment.ZoneSteps.Add(specialEnemyStep);
                     }
 
@@ -2250,13 +2253,13 @@ namespace DataGenerator.Data
                         PopulateHallItems(monsterChanceZoneStep, DungeonStage.Intermediate, DungeonAccessibility.MainPath, max_floors);
 
                         //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(100, new RandRange(5, 11)), new ParamRange(0, 30), 20);
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_heart_scale"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1, 3)), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(2, 4)),
                             new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(0, 30), 10);//TMs + machines
 
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeRange(true, true, new RandRange(3, 6), "loot_heart_scale")), new IntRange(0, max_floors), 30);//heart scales
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1, 3)), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1, 3)), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
                         monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
 
                         floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
@@ -2342,7 +2345,7 @@ namespace DataGenerator.Data
                             AddEnemySpawnData(layout, 20, new RandRange(10, 14));
 
                         //items
-                        AddItemData(layout, new RandRange(4, 7), 25);
+                        AddItemData(layout, new RandRange(3, 7), 25);
 
                         SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
                         PopulateWallItems(wallSpawns, DungeonStage.Advanced, DungeonEnvironment.Rock);
@@ -2373,8 +2376,8 @@ namespace DataGenerator.Data
                             path.GenericRooms = genericRooms;
 
                             SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
+                            genericHalls.Add(new RoomGenAngledHall<MapGenContext>(100, new DefaultHallBrush()), 10);
                             genericHalls.Add(new RoomGenAngledHall<MapGenContext>(100, new SquareHallBrush(Loc.One * 2)), 10);
-                            genericHalls.Add(new RoomGenAngledHall<MapGenContext>(0, new SquareHallBrush(Loc.One * 2)), 10);
                             path.GenericHalls = genericHalls;
 
                             layout.GenSteps.Add(PR_GRID_GEN, path);
@@ -2923,7 +2926,7 @@ namespace DataGenerator.Data
                     orbs.Spawns.Add(new InvItem("orb_weather"), new IntRange(0, max_floors), 8);
                     //held
                     CategorySpawn<InvItem> held = new CategorySpawn<InvItem>();
-                    held.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+                    held.SpawnRates.SetRange(3, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("held", held);
 
 
@@ -2941,7 +2944,7 @@ namespace DataGenerator.Data
                     held.Spawns.Add(new InvItem("held_metal_coat"), new IntRange(0, max_floors), 7);
                     //tms
                     CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
-                    tms.SpawnRates.SetRange(7, new IntRange(0, max_floors));
+                    tms.SpawnRates.SetRange(10, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("tms", tms);
 
 
@@ -3009,7 +3012,7 @@ namespace DataGenerator.Data
 
                         SpawnRangeList<IGenStep> specialEnemySpawns = new SpawnRangeList<IGenStep>();
                         specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
-                        SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
+                        SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(2, max_floors)), PR_SPAWN_MOBS, specialEnemySpawns);
                         floorSegment.ZoneSteps.Add(specialEnemyStep);
                     }
 
@@ -3254,7 +3257,7 @@ namespace DataGenerator.Data
                         AddEnemySpawnData(layout, 20, new RandRange(7, 11));
 
                         //items
-                        AddItemData(layout, new RandRange(3, 7), 25);
+                        AddItemData(layout, new RandRange(3, 6), 25);
 
                         SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
                         PopulateWallItems(wallSpawns, DungeonStage.Intermediate, DungeonEnvironment.Rock);
@@ -3667,11 +3670,12 @@ namespace DataGenerator.Data
 
                         PopulateHallItems(monsterChanceZoneStep, DungeonStage.Intermediate, DungeonAccessibility.MainPath, max_floors);
 
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_heart_scale"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1, 3)), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(2, 4)),
                             new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(0, 30), 10);//TMs + machines
 
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeRange(true, true, new RandRange(3, 6), "loot_heart_scale")), new IntRange(0, max_floors), 30);//heart scales
+
                         monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
 
                         floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
@@ -3949,7 +3953,7 @@ namespace DataGenerator.Data
                     zone.Name = new LocalText("Copper Quarry");
                     zone.Rescues = 2;
                     zone.Level = 25;
-                    zone.ExpPercent = 30;
+                    zone.ExpPercent = 40;
                     zone.Rogue = RogueStatus.NoTransfer;
 
                     {
@@ -4372,7 +4376,10 @@ namespace DataGenerator.Data
                             RoomFloorGen layout = new RoomFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B20. Copper Quarry.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                            if (ii < 7)
+                                AddFloorData(layout, "B20. Copper Quarry.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            else
+                                AddFloorData(layout, "B20. Copper Quarry.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
                             //other candidates: mt_steel,silent_chasm,great_canyon

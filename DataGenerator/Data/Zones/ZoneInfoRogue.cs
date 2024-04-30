@@ -1179,9 +1179,11 @@ namespace DataGenerator.Data
 
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, max_floors), 20);
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//no theme
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 5)), new IntRange(0, max_floors), 10);//TMs
-                monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, max_floors), 30);//gummis
-                monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 6)), new IntRange(0, max_floors), 10);//apricorns
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_deluxe", GetLegendaryItemSpawner<BaseMapGenContext>(false, true, true)), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(2, 5))), new IntRange(20, max_floors), 10);//TMs
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_deluxe", GetLegendaryItemSpawner<BaseMapGenContext>(false, true, true)), new RandRange(1)), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 6))), new IntRange(20, max_floors), 30);//gummis
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(2, 5))), new IntRange(0, 20), 10);//TMs
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 6))), new IntRange(0, 20), 30);//gummis
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 5))), new IntRange(0, 20), 10);//apricorns
 
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
@@ -1776,16 +1778,17 @@ namespace DataGenerator.Data
                 else
                     AddItemData(layout, new RandRange(4, 7), 25);
 
-                List<MapItem> specificSpawns = new List<MapItem>();
-                if (ii == 0)
-                    specificSpawns.Add(new MapItem("apricorn_plain"));//Plain Apricorn
-                if (ii == 29)
-                    specificSpawns.Add(new MapItem("seed_reviver"));//Reviver Seed
+                {
+                    List<MapItem> specificSpawns = new List<MapItem>();
+                    if (ii == 0)
+                        specificSpawns.Add(new MapItem("apricorn_plain"));//Plain Apricorn
+                    if (ii == 29)
+                        specificSpawns.Add(new MapItem("seed_reviver"));//Reviver Seed
 
-                RandomRoomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(specificSpawns)));
-                specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
-
+                    RandomRoomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(specificSpawns)));
+                    specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
+                }
 
                 SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();
                 PopulateWallItems(wallSpawns, DungeonStage.Rogue, DungeonEnvironment.Rock);
@@ -2892,10 +2895,14 @@ namespace DataGenerator.Data
 
                 //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, 30), 20);
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
-                    new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(0, 30), 10);//TMs + machines
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_deluxe", GetLegendaryItemSpawner<BaseMapGenContext>(false, true, true)), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
+                    new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(20, 30), 10);//TMs + machines
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
+                    new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(0, 20), 10);//TMs + machines
 
-                monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, 30), 30);//gummis
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_deluxe", GetLegendaryItemSpawner<BaseMapGenContext>(false, true, true)), new RandRange(1)), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 6))), new IntRange(20, 30), 30);//gummis
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 6))), new IntRange(0, 20), 30);//gummis
+
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
@@ -2908,13 +2915,13 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(11, 9), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
                 monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHallStep<ListMapGenContext>(new Loc(15, 13), GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
-                foreach (string tm_id in IterateDistroTMs(TMDistroClass.Ordinary))
+                foreach (string tm_id in IterateTMs(TMClass.Top))
                     monsterChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
 
                 PopulateHallItems(monsterChanceZoneStep, DungeonStage.Rogue, DungeonAccessibility.Unlockable, max_floors);
 
-                //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, 30), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeMoney(250, new RandRange(4, 7)), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 30), 20);//no theme
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeMoney(100, new RandRange(4, 7)), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, 34), 20);
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeMoney(100, new RandRange(4, 7)), new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_deluxe", GetLegendaryItemSpawner<BaseMapGenContext>(false, false, true)), new RandRange(1))), new IntRange(30, max_floors), 20);
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
 
                 floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
@@ -3242,7 +3249,7 @@ namespace DataGenerator.Data
                 else if (ii <= 16)
                     floorData.Music = "B22. Overgrown Wilds.ogg";
                 else if (ii <= 20)
-                    floorData.Music = "B24. Castaway Cave 2.ogg";
+                    floorData.Music = "Treeshroud Forest.ogg";
                 else if (ii <= 27)
                     floorData.Music = "B03. Demonstration 3.ogg";
                 else if (ii <= 34)
@@ -3489,6 +3496,20 @@ namespace DataGenerator.Data
                     RandomRoomSpawnStep<MapGenContext, MapItem> specificItemZoneStep = new RandomRoomSpawnStep<MapGenContext, MapItem>(new PickerSpawner<MapGenContext, MapItem>(new LoopedRand<MapItem>(new RandBag<MapItem>(specificSpawns), new RandRange(1))));
                     specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                     layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
+                }
+                if (ii >= 30)
+                {
+                    BoxSpawner<MapGenContext> boxSpawn = new BoxSpawner<MapGenContext>("box_deluxe", GetLegendaryItemSpawner<MapGenContext>(false, true, true, new RandRange(0, 2)));
+                    RandomRoomSpawnStep<MapGenContext, MapItem> secretPlacement = new RandomRoomSpawnStep<MapGenContext, MapItem>(boxSpawn);
+                    secretPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, secretPlacement);
+                }
+                if (ii == max_floors - 1)
+                {
+                    BoxSpawner<MapGenContext> boxSpawn = new BoxSpawner<MapGenContext>("box_deluxe", GetLegendaryItemSpawner<MapGenContext>(false, true, true, new RandRange(1)));
+                    RandomRoomSpawnStep<MapGenContext, MapItem> secretPlacement = new RandomRoomSpawnStep<MapGenContext, MapItem>(boxSpawn);
+                    secretPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                    layout.GenSteps.Add(PR_SPAWN_ITEMS, secretPlacement);
                 }
 
                 SpawnList<MapItem> wallSpawns = new SpawnList<MapItem>();

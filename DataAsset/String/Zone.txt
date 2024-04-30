@@ -18,10 +18,13 @@ Key		EN
 0000-champions_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Champion's Road\n{0}F
 0000-champions_road-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Clouded Road\n{0}F
 0000-copper_quarry-0000|data.Name		Copper Quarry
-0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\n{0}F
+0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\nB{0}F
 0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Lodestone Quarry\nB{0}F
 0000-debug_zone-0000|data.Name		Debug Zone
 0000-debug_zone-0001|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0000]).Name		Replay Test Zone\n{0}F
+0000-depleted_basin-0000|data.Name		Depleted Basin
+0000-depleted_basin-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Depleted Basin\nB{0}F
+0000-depleted_basin-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Cratered Basin\nB{0}F
 0000-deserted_fortress-0000|data.Name		Deserted Fortress
 0000-deserted_fortress-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Deserted Fortress\n{0}F
 0000-energy_garden-0000|data.Name		Energy Garden

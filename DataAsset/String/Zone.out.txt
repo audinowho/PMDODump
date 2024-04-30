@@ -18,10 +18,13 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-champions_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Champion's Road\n{0}F		Pass des Champions\nE{0}	Ruta del Campeón\nP{0}		Percorso dei Campioni\nP{0}				冠军之路\n{0}F
 0000-champions_road-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Clouded Road\n{0}F		Bewölkter Pass\nE{0}	Camino Nublado\nP{0}		Cammino Nuvoloso\nP{0}				阴云之路\n{0}F
 0000-copper_quarry-0000|data.Name		Copper Quarry		Kupfersteinbruch	Cantera Bronce		Miniera di Rame				采铜矿场
-0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\n{0}F		Kupfersteinbruch\nE{0}	Cantera Bronce\nP{0}		Miniera di Rame\nP{0}				采铜矿场\n{0}F
+0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\nB{0}F		Kupfersteinbruch\nU{0}	Cantera Bronce\nP-{0}		Miniera di Rame\nP-{0}				采铜矿场\nB{0}F
 0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Lodestone Quarry\nB{0}F		Magnetitsteinbruch\nU{0}							磁力矿场\nB{0}F
 0000-debug_zone-0000|data.Name		Debug Zone		Debug Zone	Zona de Debug		Zona di Debug				Debug区域
 0000-debug_zone-0001|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0000]).Name		Replay Test Zone\n{0}F		Wiederholungstest Zone\nE{0}	Zona de Prueba de Replay\nP{0}		Zona di test Replay\nP{0}				回放测试区域\n{0}F
+0000-depleted_basin-0000|data.Name		Depleted Basin					
+0000-depleted_basin-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Depleted Basin\nB{0}F					
+0000-depleted_basin-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Cratered Basin\nB{0}F					
 0000-deserted_fortress-0000|data.Name		Deserted Fortress		Verlassene Festung	Fortaleza Desolada		Fortezza Desolata				空寂要塞
 0000-deserted_fortress-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Deserted Fortress\n{0}F		Verlassene Festung\nE{0}	Fortaleza Desolada\nP{0}		Fortezza Desolata\nP{0}				空寂要塞\n{0}F
 0000-energy_garden-0000|data.Name		Energy Garden		Energiegarten	Jardín Energía		Giardino Energetico				元气花园
@@ -48,8 +51,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-guildmaster_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Guildmaster Trail\n{0}F		Gildenmeister-Pfad\nE{0}	Sendero del Maestro\nP{0}		Sentiero del Maestro Gilda\nP{0}				公会会长之路\n{0}F
 0000-hope_road-0000|data.Name		Hope Road		Pass der Hoffnung	Travesía Esperanza		Viale Speranza				希望之路
 0000-hope_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Hope Road\n{0}F		Pass der Hoffnung\nE{0}	Travesía Esperanza\nP{0}		Viale Speranza\nP{0}				希望之路\n{0}F
-0000-inscribed_cave-0000|data.Name		Inscribed Cave		Beschriftete Höhle	Cueva Inscrita		Caverna Incisa
-0000-inscribed_cave-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Inscribed Cave\nB{0}F		Beschriftete Höhle\nU{0}	Cueva Inscrita\nP-{0}		Caverna Incisa\nP-{0}
+0000-inscribed_cave-0000|data.Name		Inscribed Cave		Beschriftete Höhle	Cueva Inscrita		Caverna Incisa				刻文洞穴
+0000-inscribed_cave-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Inscribed Cave\nB{0}F		Beschriftete Höhle\nU{0}	Cueva Inscrita\nP-{0}		Caverna Incisa\nP-{0}				刻文洞穴\nB{0}F
 0000-labyrinth_of_the_lost-0000|data.Name		Labyrinth of the Lost		Labyrinth der Verlorenen	LABERINTO DE LOS PERDIDOS		Labirinto dei Dispersi				迷失迷阵
 0000-labyrinth_of_the_lost-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Labyrinth of the Lost\nB{0}F		Labyrinth der Verlorenen\nU{0}	Laberinto de los Perdidos\nP-{0}		Labirinto dei Dispersi\nP-{0}				迷失迷阵\nB{0}F
 0000-lava_floe_island-0000|data.Name		Lava Floe Island		Lavascholleninsel			Isola Banchisa di Lava				熔岩浮冰岛
@@ -63,7 +66,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-overgrown_wilds-0000|data.Name		Overgrown Wilds		Überwachsene Wildnis			Bosco Selvaggio				杂草原野
 0000-overgrown_wilds-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Overgrown Wilds\n{0}F		Überwachsene Wildnis\nE{0}			Bosco Selvaggio\nP{0}				杂草原野\n{0}F				
 0000-overgrown_wilds-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Exotic Wilds\nB{0}F		Exotische Wildnis\nU{0}			Boscaglia Esotica\nP-{0}				异草原野\nB{0}F
-0000-prism_isles-0000|data.Name		Prism Isles		Prismeninseln	Islas Prisma		Isole Prisma				棱镜岛
+0000-prism_isles-0000|data.Name		Prism Isles		Prismeninseln	Islas Prisma		Isole Prisma				棱镜群岛
 0000-prism_isles-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		White Isle\n{0}F		Weiße Insel\nE{0}	Isla Blanca\nP{0}		Isola Candida\nP{0}				白澜岛\n{0}F
 0000-relic_tower-0000|data.Name		Relic Tower		Reliktenturm	Torre Reliquia		Torre Reliquia				遗迹之塔
 0000-relic_tower-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Relic Tower\n{0}F		Reliktenturm\nE{0}	Torre Reliquia\nP{0}		Torre Reliquia\nP{0}				遗迹之塔\n{0}F
