@@ -1004,15 +1004,16 @@ namespace DataGenerator.Data
             }
             else if (ii == 38)
             {
-                tile.Name = new LocalText("Mirage Tablet");
+                tile.Name = new LocalText("Mirage Tile");
                 fileName = "tile_boss";
-                tile.Desc = new LocalText("A stone tablet engraved with a set of names. There is an indent at the bottom that fits an Explorer Badge...");
+                tile.Desc = new LocalText("A tile that shows the mirage of a formidable team of Pokémon.");
                 tile.BlockItem = true;
                 tile.StepType = TileData.TriggerType.Site;
                 tile.Anim = new ObjAnimData("Tile_Signal", 12);
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
-                tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
+                tile.LandedOnTiles.Add(0, new AskLeaderEvent());
+                tile.InteractWithTiles.Add(0, new AskIfDangerEvent());
                 tile.InteractWithTiles.Add(0, new LeaderCharEvent(new LockdownTileEvent("map_clear_check")));
                 tile.InteractWithTiles.Add(0, new LeaderCharEvent(new BossSpawnEvent()));
             }
