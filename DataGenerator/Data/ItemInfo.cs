@@ -2329,7 +2329,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A magnifying lens that boosts the Pokémon's Attack Range.");
                 item.Sprite = "Specs_LightBlue";
                 item.Price = 200;
-                item.OnActions.Add(-1, new OnMoveUseEvent(new AddRangeEvent(1)));
+                item.OnActions.Add(-1, new AddRangeEvent(1));
             }
             else if (ii == 315)
             {
