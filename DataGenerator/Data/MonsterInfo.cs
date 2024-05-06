@@ -1382,6 +1382,17 @@ namespace DataGenerator.Data
                     // hisui forms don't have info for their original game...
                     if (version == 24)
                         version = 25;
+
+                    if (false)
+                    {
+                        //mankey, primeape: must be on SV
+                        if (index == 56 || index == 57)
+                            version = 25;
+                        //girafarig: must be on SV
+                        if (index == 203)
+                            version = 25;
+                    }
+
                     MonsterFormData formEntry = LoadForme(m_dbTLConnection, version, index, dexId, formId, entry.Name);
                     formEntry.Generation = genVersion(version);
                     if (Ratio == -1)
