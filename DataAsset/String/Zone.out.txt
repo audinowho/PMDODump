@@ -22,8 +22,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Lodestone Quarry\nB{0}F		Magnetitsteinbruch\nU{0}							磁力矿场\nB{0}F
 0000-debug_zone-0000|data.Name		Debug Zone		Debug Zone	Zona de Debug		Zona di Debug				Debug区域
 0000-debug_zone-0001|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0000]).Name		Replay Test Zone\n{0}F		Wiederholungstest Zone\nE{0}	Zona de Prueba de Replay\nP{0}		Zona di test Replay\nP{0}				回放测试区域\n{0}F
-0000-depleted_basin-0000|data.Name		Depleted Basin					
-0000-depleted_basin-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Depleted Basin\nB{0}F					
+0000-depleted_basin-0000|data.Name		Depleted Basin									枯竭盆地
+0000-depleted_basin-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Depleted Basin\nB{0}F									枯竭盆地\nB{0}F
 0000-depleted_basin-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Cratered Basin\nB{0}F					
 0000-deserted_fortress-0000|data.Name		Deserted Fortress		Verlassene Festung	Fortaleza Desolada		Fortezza Desolata				空寂要塞
 0000-deserted_fortress-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Deserted Fortress\n{0}F		Verlassene Festung\nE{0}	Fortaleza Desolada\nP{0}		Fortezza Desolata\nP{0}				空寂要塞\n{0}F

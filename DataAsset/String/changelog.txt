@@ -15,6 +15,8 @@ Sheet: Moves
 Sheet: Statuses
 
 Sheet: Tiles
+    * Changed 0000-tile_boss-0000|data.Name from "Mirage Tablet" to "Mirage Tile"
+    * Significantly changed 0000-tile_boss-0001|data.Desc from "A stone tablet engraved with a set of names. There is an indent at the bottom that fits an Explorer Badge..." to "A tile that shows the mirage of a formidable team of Pokémon."
 
 Sheet: Excl Names
 
