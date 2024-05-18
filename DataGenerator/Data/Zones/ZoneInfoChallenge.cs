@@ -796,7 +796,7 @@ namespace DataGenerator.Data
                 poolSpawn.Spawns.Add(GetTeamMob("magmar", "", "lava_plume", "smokescreen", "", "", new RandRange(35), "wander_normal_itemless"), new IntRange(10, 14), 10);
                 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("dugtrio", 1, "", Gender.Unknown), "tangling_hair", "sucker_punch", "bulldoze", "", "", new RandRange(37), "wander_normal_itemless"), new IntRange(12, 16), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("swoobat", "unaware", "air_slash", "amnesia", "", "", new RandRange(37), "wander_normal_itemless"), new IntRange(12, 16), 10);
-                poolSpawn.Spawns.Add(GetTeamMob("glimmora", "", "stealth_rock", "ancient_power", "", "", new RandRange(38), "retreater_itemless"), new IntRange(14, 18), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("glimmora", "", "stealth_rock", "rock_polish", "mortal_spin", "", new RandRange(38), "retreater_itemless"), new IntRange(14, 18), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("klefki", "", "crafty_shield", "spikes", "", "", new RandRange(39), "wander_normal_itemless"), new IntRange(14, 18), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("wobbuffet", "", "safeguard", "destiny_bond", "encore", "splash", new RandRange(39), "wander_normal_itemless"), new IntRange(14, 18), 10);
                 poolSpawn.Spawns.Add(GetTeamMob("drampa", "berserk", "play_nice", "dragon_breath", "", "", new RandRange(39), "wander_normal_itemless"), new IntRange(14, 18), 10);
