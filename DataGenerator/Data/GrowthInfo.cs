@@ -138,7 +138,7 @@ namespace DataGenerator.Data
                     exp.Add(EXP_CURVES[jj,ii]);
                 }
                 GrowthData skillGroup = new GrowthData(new LocalText(Text.GetMemberTitle(((GrowthGroup)ii).ToString())), exp.ToArray());
-                DataManager.SaveData(Text.Sanitize(skillGroup.Name.DefaultText).ToLower(), DataManager.DataType.GrowthGroup.ToString(), skillGroup);
+                DataManager.SaveEntryData(Text.Sanitize(skillGroup.Name.DefaultText).ToLower(), DataManager.DataType.GrowthGroup.ToString(), skillGroup);
             }
         }
 

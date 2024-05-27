@@ -21,7 +21,7 @@ namespace DataGenerator.Data
             {
                 (string, StatusData) status = GetStatusData(ii);
                 if (status.Item1 != "")
-                    DataManager.SaveData(status.Item1, DataManager.DataType.Status.ToString(), status.Item2);
+                    DataManager.SaveEntryData(status.Item1, DataManager.DataType.Status.ToString(), status.Item2);
             }
         }
         public static (string, StatusData) GetStatusData(int ii)

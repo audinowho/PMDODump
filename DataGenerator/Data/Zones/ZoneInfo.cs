@@ -33,7 +33,7 @@ namespace DataGenerator.Data
                 {
                     ZoneData zone = GetZoneData(zonesToAdd[ii], translate);
                     if (zone.Name.DefaultText != "")
-                        DataManager.SaveData(Text.Sanitize(zone.Name.DefaultText).ToLower(), DataManager.DataType.Zone.ToString(), zone);
+                        DataManager.SaveEntryData(Text.Sanitize(zone.Name.DefaultText).ToLower(), DataManager.DataType.Zone.ToString(), zone);
                 }
             }
             else
@@ -43,7 +43,7 @@ namespace DataGenerator.Data
                 {
                     ZoneData zone = GetZoneData(ii, translate);
                     if (zone.Name.DefaultText != "")
-                        DataManager.SaveData(Text.Sanitize(zone.Name.DefaultText).ToLower(), DataManager.DataType.Zone.ToString(), zone);
+                        DataManager.SaveEntryData(Text.Sanitize(zone.Name.DefaultText).ToLower(), DataManager.DataType.Zone.ToString(), zone);
                 }
             }
         }

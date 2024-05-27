@@ -528,7 +528,7 @@ namespace DataGenerator.Data
                         incompleteLeft++;
 
                     if (item.Name.DefaultText != "")
-                        DataManager.SaveData(fileName, DataManager.DataType.Item.ToString(), item);
+                        DataManager.SaveEntryData(fileName, DataManager.DataType.Item.ToString(), item);
 
                     if (item.Released)
                     {
@@ -657,7 +657,7 @@ namespace DataGenerator.Data
                             //they are at the bottom of their trade chain
                             if (!has_tradeables)
                             {
-                                ItemData old_item = DataManager.LoadData<ItemData>(old_asset, DataManager.DataType.Item.ToString());
+                                ItemData old_item = DataManager.LoadEntryData<ItemData>(old_asset, DataManager.DataType.Item.ToString());
                                 //has a rarity of 2 or lower
                                 if (old_item.Rarity <= 2)
                                 {

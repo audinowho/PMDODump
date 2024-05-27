@@ -39,7 +39,7 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_GROUPS; ii++)
             {
                 SkillGroupData skillGroup = new SkillGroupData(new LocalText(Text.GetMemberTitle(((EggGroup)ii).ToString())));
-                DataManager.SaveData(Text.Sanitize(skillGroup.Name.DefaultText).ToLower(), DataManager.DataType.SkillGroup.ToString(), skillGroup);
+                DataManager.SaveEntryData(Text.Sanitize(skillGroup.Name.DefaultText).ToLower(), DataManager.DataType.SkillGroup.ToString(), skillGroup);
             }
         }
 

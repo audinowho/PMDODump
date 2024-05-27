@@ -22,7 +22,7 @@ namespace DataGenerator.Data
             {
                 MapStatusData status = GetMapStatusData(ii);
                 if (status.Name.DefaultText != "")
-                    DataManager.SaveData(Text.Sanitize(status.Name.DefaultText).ToLower(), DataManager.DataType.MapStatus.ToString(), status);
+                    DataManager.SaveEntryData(Text.Sanitize(status.Name.DefaultText).ToLower(), DataManager.DataType.MapStatus.ToString(), status);
             }
         }
         public static MapStatusData GetMapStatusData(int ii)

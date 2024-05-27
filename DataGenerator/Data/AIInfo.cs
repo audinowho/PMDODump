@@ -390,7 +390,7 @@ namespace DataGenerator.Data
                 if (ii < 6)
                     Tactics[ii].Assignable = true;
                 Tactics[ii].Released = true;
-                DataManager.SaveData(Tactics[ii].ID, DataManager.DataType.AI.ToString(), Tactics[ii]);
+                DataManager.SaveEntryData(Tactics[ii].ID, DataManager.DataType.AI.ToString(), Tactics[ii]);
             }
         }
 

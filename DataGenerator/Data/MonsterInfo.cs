@@ -212,7 +212,7 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < TOTAL_DEX; ii++)
             {
                 string fileName = getAssetName(totalEntries[ii].Name.DefaultText);
-                DataManager.SaveData(fileName, DataManager.DataType.Monster.ToString(), totalEntries[ii]);
+                DataManager.SaveEntryData(fileName, DataManager.DataType.Monster.ToString(), totalEntries[ii]);
                 //TotalEntries[ii].SaveXml("Dex\\" + ii + ".xml");
                 Console.WriteLine("#" + ii + " " + totalEntries[ii].Name + " Written");
             }
@@ -3116,7 +3116,7 @@ namespace DataGenerator.Data
             {
                 foreach (string key in totalMoves.Keys)
                 {
-                    SkillData skillData = DataManager.LoadData<SkillData>(key, DataManager.DataType.Skill.ToString());
+                    SkillData skillData = DataManager.LoadEntryData<SkillData>(key, DataManager.DataType.Skill.ToString());
                     int tutorCost;
                     if (skillData.BaseCharges < 10)
                         tutorCost = (10 - skillData.BaseCharges) + 7;

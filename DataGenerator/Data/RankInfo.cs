@@ -63,7 +63,7 @@ namespace DataGenerator.Data
                     data.BagSize = 40;
                 else
                     data.BagSize = 48;
-                DataManager.SaveData(Text.Sanitize(data.Name.DefaultText).ToLower(), DataManager.DataType.Rank.ToString(), data);
+                DataManager.SaveEntryData(Text.Sanitize(data.Name.DefaultText).ToLower(), DataManager.DataType.Rank.ToString(), data);
             }
         }
 

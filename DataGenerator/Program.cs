@@ -288,7 +288,7 @@ namespace DataGenerator
                     DataManager.Instance.LoadIndex(DataManager.DataType.Zone);
                     DataManager.Instance.ClearCache(DataManager.DataType.Zone);
 
-                    DataManager.Instance.UniversalData = DataManager.LoadData<TypeDict<BaseData>>(PathMod.ModPath(DataManager.MISC_PATH + "Index" + DataManager.DATA_EXT));
+                    DataManager.Instance.UniversalData = DataManager.LoadData<TypeDict<BaseData>>(DataManager.MISC_PATH, "Index", DataManager.DATA_EXT);
                     RogueEssence.Dev.DevHelper.RunExtraIndexing(DataManager.DataType.All);
                     return;
                 }
@@ -333,7 +333,7 @@ namespace DataGenerator
                     DiagManager.Instance.LogInfo("Reserializing indices");
                     RogueEssence.Dev.DevHelper.RunIndexing(reserializeIndices);
 
-                    DataManager.Instance.UniversalData = DataManager.LoadData<TypeDict<BaseData>>(PathMod.ModPath(DataManager.MISC_PATH + "Index" + DataManager.DATA_EXT));
+                    DataManager.Instance.UniversalData = DataManager.LoadData<TypeDict<BaseData>>(DataManager.MISC_PATH, "Index", DataManager.DATA_EXT);
                     RogueEssence.Dev.DevHelper.RunExtraIndexing(reserializeIndices);
                     return;
                 }
@@ -349,7 +349,7 @@ namespace DataGenerator
                     DataManager.InitDataDirs(PathMod.ModPath(""));
                     RogueEssence.Dev.DevHelper.RunIndexing(convertIndices);
 
-                    DataManager.Instance.UniversalData = DataManager.LoadData<TypeDict<BaseData>>(PathMod.ModPath(DataManager.MISC_PATH + "Index" + DataManager.DATA_EXT));
+                    DataManager.Instance.UniversalData = DataManager.LoadData<TypeDict<BaseData>>(DataManager.MISC_PATH, "Index", DataManager.DATA_EXT);
                     RogueEssence.Dev.DevHelper.RunExtraIndexing(convertIndices);
                     return;
                 }

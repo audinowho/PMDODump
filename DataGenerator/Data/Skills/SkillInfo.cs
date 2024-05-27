@@ -23,7 +23,7 @@ namespace DataGenerator.Data
 
                 (string, SkillData) move = GetSkillData(ii);
                 if (!move.Item2.Released)
-                    DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
+                    DataManager.SaveEntryData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
             }
         }
 
@@ -35,11 +35,11 @@ namespace DataGenerator.Data
                 {
 
                     (string, SkillData) move = GetSkillData(movesToAdd[ii]);
-                    SkillData oldMove = DataManager.LoadData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString(), ".json");
+                    SkillData oldMove = DataManager.LoadEntryData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString());
                     if (oldMove != null)
                     {
                         oldMove.Data.BeforeHits = move.Item2.Data.BeforeHits;
-                        DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
+                        DataManager.SaveEntryData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
                     }
                 }
             }
@@ -48,11 +48,11 @@ namespace DataGenerator.Data
                 for (int ii = 0; ii < MAX_SKILLS; ii++)
                 {
                     (string, SkillData) move = GetSkillData(ii);
-                    SkillData oldMove = DataManager.LoadData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString(), ".json");
+                    SkillData oldMove = DataManager.LoadEntryData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString());
                     if (oldMove != null)
                     {
                         oldMove.Data.OnActions = move.Item2.Data.OnActions;
-                        DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
+                        DataManager.SaveEntryData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
                     }
                 }
             }
@@ -66,7 +66,7 @@ namespace DataGenerator.Data
                 {
 
                     (string, SkillData) move = GetSkillData(movesToAdd[ii]);
-                    DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
+                    DataManager.SaveEntryData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
                 }
             }
             else
@@ -75,7 +75,7 @@ namespace DataGenerator.Data
                 {
                     (string, SkillData) move = GetSkillData(ii);
                     //System.Diagnostics.Debug.WriteLine(String.Format("{0}\t{1}", ii, move.Item1));
-                    DataManager.SaveData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
+                    DataManager.SaveEntryData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
                 }
             }
         }

@@ -74,7 +74,7 @@ namespace DataGenerator.Data
                         }
                         break;
                 }
-                DataManager.SaveData(fileName, DataManager.DataType.Skin.ToString(), data);
+                DataManager.SaveEntryData(fileName, DataManager.DataType.Skin.ToString(), data);
             }
         }
 

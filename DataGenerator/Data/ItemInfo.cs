@@ -28,7 +28,7 @@ namespace DataGenerator.Data
             {
                 (string, ItemData) item = GetItemData(ii);
                 if (item.Item1 != "")
-                    DataManager.SaveData(item.Item1, DataManager.DataType.Item.ToString(), item.Item2);
+                    DataManager.SaveEntryData(item.Item1, DataManager.DataType.Item.ToString(), item.Item2);
             }
             AddExclItemData(false);
         }
@@ -4508,7 +4508,7 @@ namespace DataGenerator.Data
                     item.Released = true;
 
                 if (item.Name.DefaultText != "")
-                    DataManager.SaveData(fileName, DataManager.DataType.Item.ToString(), item);
+                    DataManager.SaveEntryData(fileName, DataManager.DataType.Item.ToString(), item);
             }
 
             AutoItemInfo.WriteExclusiveItems(MAX_INIT_EXCL_ITEMS, translate);

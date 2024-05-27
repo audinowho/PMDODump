@@ -26,7 +26,7 @@ namespace DataGenerator.Data
             {
                 (string, TileData) tile = GetTileData(ii);
                 if (tile.Item1 != "")
-                    DataManager.SaveData(tile.Item1, DataManager.DataType.Tile.ToString(), tile.Item2);
+                    DataManager.SaveEntryData(tile.Item1, DataManager.DataType.Tile.ToString(), tile.Item2);
             }
         }
 
@@ -1349,7 +1349,7 @@ namespace DataGenerator.Data
             for (int ii = 0; ii < MAX_TERRAIN; ii++)
             {
                 (string, TerrainData) entry = GetTerrainData(ii);
-                DataManager.SaveData(entry.Item1, DataManager.DataType.Terrain.ToString(), entry.Item2);
+                DataManager.SaveEntryData(entry.Item1, DataManager.DataType.Terrain.ToString(), entry.Item2);
             }
         }
 

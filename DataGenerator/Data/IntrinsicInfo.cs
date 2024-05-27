@@ -21,7 +21,7 @@ namespace DataGenerator.Data
             {
                 (string, IntrinsicData) ability = GetIntrinsicData(ii);
                 if (ability.Item1 != "")
-                    DataManager.SaveData(ability.Item1, DataManager.DataType.Intrinsic.ToString(), ability.Item2);
+                    DataManager.SaveEntryData(ability.Item1, DataManager.DataType.Intrinsic.ToString(), ability.Item2);
             }
         }
         public static (string, IntrinsicData) GetIntrinsicData(int ii)
