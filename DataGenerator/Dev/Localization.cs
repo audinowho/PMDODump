@@ -315,7 +315,7 @@ namespace DataGenerator.Dev
 
                 data.Name = rows[entryNames[ii] + "-" + 0.ToString("D4") + "|data.Name"];
 
-                DataManager.SaveData(path, entryNames[ii], ext, data);
+                DataManager.SaveData(data, path, entryNames[ii], ext);
             }
         }
 
@@ -335,7 +335,7 @@ namespace DataGenerator.Dev
                     if (describedData.Name.DefaultText != "")
                     {
                         describedData.Name = rows[tlKey];
-                        DataManager.SaveObject(dir, describedData);
+                        DataManager.SaveObject(describedData, dir);
                     }
                 }
             }
@@ -350,7 +350,7 @@ namespace DataGenerator.Dev
             IEntryData toData = DataManager.LoadObject<IEntryData>(toDir);
 
             toData.Name = fromData.Name;
-            DataManager.SaveObject(toDir, toData);
+            DataManager.SaveObject(toData, toDir);
         }
 
         public static void WriteDescribedDataTable(DataManager.DataType dataType)
@@ -369,7 +369,7 @@ namespace DataGenerator.Dev
                     describedData.Name = rows[sort.ToString("D4") + "-" + key + "-" + 0.ToString("D4") + "|data.Name"];
                     describedData.Desc = rows[sort.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc"];
 
-                    DataManager.SaveObject(dir, describedData);
+                    DataManager.SaveObject(describedData, dir);
                 }
             }
         }
@@ -443,7 +443,7 @@ namespace DataGenerator.Dev
                     data.Desc = rows[itemIndex.Get(key).SortOrder.ToString("D4") + "-" + key + "-" + 1.ToString("D4") + "|data.Desc"];
                 }
 
-                DataManager.SaveObject(dir, data);
+                DataManager.SaveObject(data, dir);
             }
         }
 
@@ -475,7 +475,7 @@ namespace DataGenerator.Dev
                     }
                 }
 
-                DataManager.SaveObject(dir, data);
+                DataManager.SaveObject(data, dir);
             }
         }
 

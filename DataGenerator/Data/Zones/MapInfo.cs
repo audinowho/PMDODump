@@ -31,14 +31,14 @@ namespace DataGenerator.Data
             {
                 Map data = GetMapData(MapNames[ii]);
                 if (data != null)
-                    DataManager.SaveData(DataManager.MAP_PATH, MapNames[ii], DataManager.MAP_EXT, data);
+                    DataManager.SaveData(data, DataManager.MAP_PATH, MapNames[ii], DataManager.MAP_EXT);
             }
         }
         public static void AddMapData(string name)
         {
             Map data = GetMapData(name);
             if (data != null)
-                DataManager.SaveData(DataManager.MAP_PATH, name, DataManager.MAP_EXT, data);
+                DataManager.SaveData(data, DataManager.MAP_PATH, name, DataManager.MAP_EXT);
         }
 
 
@@ -472,7 +472,7 @@ namespace DataGenerator.Data
         {
             GroundMap data = GetGroundData(name);
             if (data != null)
-                DataManager.SaveData(DataManager.GROUND_PATH, name, DataManager.GROUND_EXT, data);
+                DataManager.SaveData(data, DataManager.GROUND_PATH, name, DataManager.GROUND_EXT);
         }
 
         public static GroundMap GetGroundData(string name)
