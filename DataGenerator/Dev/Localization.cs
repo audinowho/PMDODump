@@ -315,7 +315,7 @@ namespace DataGenerator.Dev
 
                 data.Name = rows[entryNames[ii] + "-" + 0.ToString("D4") + "|data.Name"];
 
-                DataManager.SaveObject(PathMod.ModPath(path + entryNames[ii] + ext), data);
+                DataManager.SaveData(path, entryNames[ii], ext, data);
             }
         }
 

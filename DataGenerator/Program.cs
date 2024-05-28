@@ -44,7 +44,6 @@ namespace DataGenerator
                 bool zonePrep = false;
                 bool monsterPrep = false;
                 bool saveStrings = false;
-                bool demo = false;
                 DataManager.DataType convertIndices = DataManager.DataType.None;
                 DataManager.DataType reserializeIndices = DataManager.DataType.None;
                 DataManager.DataType dump = DataManager.DataType.None;
@@ -154,10 +153,6 @@ namespace DataGenerator
                             jj++;
                         }
                         ii += jj - 1;
-                    }
-                    else if (args[ii] == "-demo")
-                    {
-                        demo = true;
                     }
                     else if (args[ii] == "-preconvert")
                     {
@@ -445,16 +440,6 @@ namespace DataGenerator
                         RogueEssence.Dev.DevHelper.RunExtraIndexing(dump);
                     }
                     return;
-                }
-
-                if (demo)
-                {
-                    LuaEngine.InitInstance();
-                    LuaEngine.Instance.LoadScripts();
-                    RogueEssence.Dev.DevHelper.DemoData(DataManager.DATA_PATH + "Zone/", DataManager.DATA_EXT, typeof(ZoneData));
-                    //RogueEssence.Dev.DevHelper.DemoData(DataManager.DATA_PATH + "Map/", DataManager.MAP_EXT);
-                    RogueEssence.Dev.DevHelper.DemoData(DataManager.DATA_PATH + "Ground/", DataManager.GROUND_EXT, typeof(GroundMap));
-                    RogueEssence.Dev.DevHelper.RunIndexing(DataManager.DataType.Zone);
                 }
 
 

@@ -99,7 +99,7 @@ namespace DataGenerator.Data
             universalEvent.UniversalStates.Set(new SkinTableState(1024, "shiny", "shiny_square"));
 
 
-            DataManager.SaveObject(PathMod.ModPath(DataManager.DATA_PATH + "Universal" + DataManager.DATA_EXT), universalEvent);
+            DataManager.SaveData(DataManager.DATA_PATH, "Universal", DataManager.DATA_EXT, universalEvent);
         }
 
         public static void AddUniversalData()
@@ -108,7 +108,7 @@ namespace DataGenerator.Data
             TypeDict<BaseData> baseData = new TypeDict<BaseData>();
             baseData.Set(new RarityData());
             baseData.Set(new MonsterFeatureData());
-            DataManager.SaveObject(PathMod.ModPath(DataManager.MISC_PATH + "Index" + DataManager.DATA_EXT), baseData);
+            DataManager.SaveData(DataManager.MISC_PATH, "Index", DataManager.DATA_EXT, baseData);
         }
 
         public static void AddEditorOps()
@@ -116,24 +116,24 @@ namespace DataGenerator.Data
             DeleteData(Path.Combine(PathMod.RESOURCE_PATH, "Extensions"));
             {
                 CharSheetGenAnimOp op = new CharSheetGenAnimOp();
-                DataManager.SaveObject(Path.Combine(PathMod.RESOURCE_PATH, "Extensions", "GenAnim.op"), op);
+                DataManager.SaveData(Path.Combine(PathMod.RESOURCE_PATH, "Extensions"), "GenAnim", ".op", op);
             }
             {
                 CharSheetAlignOp op = new CharSheetAlignOp();
-                DataManager.SaveObject(Path.Combine(PathMod.RESOURCE_PATH, "Extensions", "Align.op"), op);
+                DataManager.SaveData(Path.Combine(PathMod.RESOURCE_PATH, "Extensions"), "Align", ".op", op);
             }
             {
                 CharSheetMirrorOp op = new CharSheetMirrorOp();
-                DataManager.SaveObject(Path.Combine(PathMod.RESOURCE_PATH, "Extensions", "MirrorLR.op"), op);
+                DataManager.SaveData(Path.Combine(PathMod.RESOURCE_PATH, "Extensions"), "MirrorLR", ".op", op);
             }
             {
                 CharSheetMirrorOp op = new CharSheetMirrorOp();
                 op.StartRight = true;
-                DataManager.SaveObject(Path.Combine(PathMod.RESOURCE_PATH, "Extensions", "MirrorRL.op"), op);
+                DataManager.SaveData(Path.Combine(PathMod.RESOURCE_PATH, "Extensions"), "MirrorRL", ".op", op);
             }
             {
                 CharSheetCollapseOffsetsOp op = new CharSheetCollapseOffsetsOp();
-                DataManager.SaveObject(Path.Combine(PathMod.RESOURCE_PATH, "Extensions", "CollapseOffsets.op"), op);
+                DataManager.SaveData(Path.Combine(PathMod.RESOURCE_PATH, "Extensions"), "CollapseOffsets", ".op", op);
             }
         }
 
@@ -167,7 +167,7 @@ namespace DataGenerator.Data
 
                 fx.Delay = 20;
 
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "Heal" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "Heal", DataManager.DATA_EXT, fx);
             }
             {
                 BattleFX fx = new BattleFX();
@@ -193,7 +193,7 @@ namespace DataGenerator.Data
 
                 fx.Delay = 30;
 
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "RestoreCharge" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "RestoreCharge", DataManager.DATA_EXT, fx);
             }
             {
                 BattleFX fx = new BattleFX();
@@ -208,13 +208,13 @@ namespace DataGenerator.Data
                 emitter.HeightSpeed = 6;
                 fx.Emitter = emitter;
 
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "LoseCharge" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "LoseCharge", DataManager.DATA_EXT, fx);
             }
             {
                 EmoteFX fx = new EmoteFX();
                 fx.Sound = "EVT_Emote_Sweating";
                 fx.Anim = new AnimData("Emote_Sweating", 2);
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "NoCharge" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "NoCharge", DataManager.DATA_EXT, fx);
             }
             {
                 BattleFX fx = new BattleFX();
@@ -228,7 +228,7 @@ namespace DataGenerator.Data
                 emitter.StartDistance = 4;
                 fx.Emitter = emitter;
                 fx.Delay = 20;
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "Element" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "Element", DataManager.DATA_EXT, fx);
             }
             {
                 BattleFX fx = new BattleFX();
@@ -242,7 +242,7 @@ namespace DataGenerator.Data
                 emitter.StartDistance = 4;
                 fx.Emitter = emitter;
                 fx.Delay = 20;
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "Intrinsic" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "Intrinsic", DataManager.DATA_EXT, fx);
             }
             {
                 BattleFX fx = new BattleFX();
@@ -252,7 +252,7 @@ namespace DataGenerator.Data
                 emitter.Layer = DrawLayer.Front;
                 fx.Emitter = emitter;
 
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "SendHome" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "SendHome", DataManager.DATA_EXT, fx);
             }
             {
                 BattleFX fx = new BattleFX();
@@ -261,7 +261,7 @@ namespace DataGenerator.Data
                 fx.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_Out", 2));
                 fx.Delay = 20;
 
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "ItemLost" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "ItemLost", DataManager.DATA_EXT, fx);
             }
             {
                 BattleFX fx = new BattleFX();
@@ -271,25 +271,25 @@ namespace DataGenerator.Data
                 emitter.Layer = DrawLayer.Front;
                 fx.Emitter = emitter;
 
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "Warp" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "Warp", DataManager.DATA_EXT, fx);
             }
             {
                 BattleFX fx = new BattleFX();
                 fx.Sound = "DUN_Throw_Spike";
 
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "Knockback" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "Knockback", DataManager.DATA_EXT, fx);
             }
             {
                 BattleFX fx = new BattleFX();
                 fx.Sound = "DUN_Pound";
 
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "Jump" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "Jump", DataManager.DATA_EXT, fx);
             }
             {
                 BattleFX fx = new BattleFX();
                 fx.Sound = "DUN_Throw_Spike";
 
-                DataManager.SaveObject(PathMod.ModPath(DataManager.FX_PATH + "Throw" + DataManager.DATA_EXT), fx);
+                DataManager.SaveData(DataManager.FX_PATH, "Throw", DataManager.DATA_EXT, fx);
             }
         }
 
