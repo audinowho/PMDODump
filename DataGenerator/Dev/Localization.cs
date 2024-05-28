@@ -328,7 +328,7 @@ namespace DataGenerator.Dev
                 string tlKey = dataType.ToString() + "-" + key + "|data.Name";
                 if (rows.ContainsKey(tlKey))
                 {
-                    string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
+                    string dir = PathMod.NoMod(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
 
                     IEntryData describedData = DataManager.LoadObject<IEntryData>(dir);
 
@@ -343,8 +343,8 @@ namespace DataGenerator.Dev
 
         public static void CopyNamedData(DataManager.DataType dataType, string from, string to)
         {
-            string fromDir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + from + DataManager.DATA_EXT);
-            string toDir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + to + DataManager.DATA_EXT);
+            string fromDir = PathMod.NoMod(DataManager.DATA_PATH + dataType.ToString() + "/" + from + DataManager.DATA_EXT);
+            string toDir = PathMod.NoMod(DataManager.DATA_PATH + dataType.ToString() + "/" + to + DataManager.DATA_EXT);
 
             IEntryData fromData = DataManager.LoadObject<IEntryData>(fromDir);
             IEntryData toData = DataManager.LoadObject<IEntryData>(toDir);
@@ -359,7 +359,7 @@ namespace DataGenerator.Dev
             Dictionary<string, LocalText> rows = readLocalizationRows(GenPath.TL_PATH + dataType.ToString() + ".out.txt");
             foreach(string key in DataManager.Instance.DataIndices[dataType].GetOrderedKeys(true))
             {
-                string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
+                string dir = PathMod.NoMod(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
 
                 IDescribedData describedData = DataManager.LoadObject<IDescribedData>(dir);
 
@@ -385,7 +385,7 @@ namespace DataGenerator.Dev
             EntryDataIndex skillIndex = DataManager.Instance.DataIndices[DataManager.DataType.Skill];
             foreach (string key in itemIndex.GetOrderedKeys(true))
             {
-                string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
+                string dir = PathMod.NoMod(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
 
                 ItemData data = DataManager.LoadObject<ItemData>(dir);
 
@@ -453,7 +453,7 @@ namespace DataGenerator.Dev
             Dictionary<string, LocalText> rows = readLocalizationRows(GenPath.TL_PATH + dataType.ToString() + ".out.txt");
             foreach (string key in DataManager.Instance.DataIndices[dataType].GetOrderedKeys(false))
             {
-                string dir = PathMod.ModPath(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
+                string dir = PathMod.NoMod(DataManager.DATA_PATH + dataType.ToString() + "/" + key + DataManager.DATA_EXT);
 
                 ZoneData data = DataManager.LoadObject<ZoneData>(dir);
 
