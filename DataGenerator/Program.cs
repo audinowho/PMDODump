@@ -315,7 +315,7 @@ namespace DataGenerator
                     DataManager.Instance.LoadConversions();
 
                     DataManager.InitDataDirs(PathMod.ModPath(""));
-                    RogueEssence.Dev.DevHelper.ConvertAssetNames();
+                    //RogueEssence.Dev.DevHelper.ConvertAssetNames();
                     RogueEssence.Dev.DevHelper.ReserializeBase();
                     DiagManager.Instance.LogInfo("Reserializing main data");
                     RogueEssence.Dev.DevHelper.Reserialize(reserializeIndices);
