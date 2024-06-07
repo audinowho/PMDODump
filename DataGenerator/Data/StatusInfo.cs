@@ -946,7 +946,7 @@ namespace DataGenerator.Data
                 emitter.TotalParticles = 1;
                 emitter.StartHeight = 16;
                 status.AfterHittings.Add(0, new CurseEvent(new BattleAnimEvent(emitter, "DUN_Curse_2", false, 0)));
-                status.StatusStates.Set(new CountDownState(5));
+                status.StatusStates.Set(new CountDownState(10));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
             else if (ii == 51)
