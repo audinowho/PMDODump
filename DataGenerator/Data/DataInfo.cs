@@ -116,24 +116,24 @@ namespace DataGenerator.Data
             DeleteData(Path.Combine(PathMod.RESOURCE_PATH, "Extensions"));
             {
                 CharSheetGenAnimOp op = new CharSheetGenAnimOp();
-                DataManager.SaveData(op, Path.Combine(PathMod.RESOURCE_PATH, "Extensions"), "GenAnim", ".op");
+                DataManager.SaveObject(op, Path.Combine(PathMod.RESOURCE_PATH, "Extensions", "GenAnim" + ".op"));
             }
             {
                 CharSheetAlignOp op = new CharSheetAlignOp();
-                DataManager.SaveData(op, Path.Combine(PathMod.RESOURCE_PATH, "Extensions"), "Align", ".op");
+                DataManager.SaveObject(op, Path.Combine(PathMod.RESOURCE_PATH, "Extensions", "Align" + ".op"));
             }
             {
                 CharSheetMirrorOp op = new CharSheetMirrorOp();
-                DataManager.SaveData(op, Path.Combine(PathMod.RESOURCE_PATH, "Extensions"), "MirrorLR", ".op");
+                DataManager.SaveObject(op, Path.Combine(PathMod.RESOURCE_PATH, "Extensions", "MirrorLR" + ".op"));
             }
             {
                 CharSheetMirrorOp op = new CharSheetMirrorOp();
                 op.StartRight = true;
-                DataManager.SaveData(op, Path.Combine(PathMod.RESOURCE_PATH, "Extensions"), "MirrorRL", ".op");
+                DataManager.SaveObject(op, Path.Combine(PathMod.RESOURCE_PATH, "Extensions", "MirrorRL" + ".op"));
             }
             {
                 CharSheetCollapseOffsetsOp op = new CharSheetCollapseOffsetsOp();
-                DataManager.SaveData(op, Path.Combine(PathMod.RESOURCE_PATH, "Extensions"), "CollapseOffsets", ".op");
+                DataManager.SaveObject(op, Path.Combine(PathMod.RESOURCE_PATH, "Extensions", "CollapseOffsets" + ".op"));
             }
         }
 

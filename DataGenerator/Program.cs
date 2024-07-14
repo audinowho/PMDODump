@@ -25,7 +25,7 @@ namespace DataGenerator
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
 
-            string[] args = System.Environment.GetCommandLineArgs();
+            string[] args = Environment.GetCommandLineArgs();
             PathMod.InitPathMod(args[0], "origin");
             DiagManager.InitInstance();
             Serializer.InitSettings(new SerializerContractResolver(), new UpgradeBinder());
@@ -52,12 +52,12 @@ namespace DataGenerator
                 {
                     if (args[ii] == "-asset")
                     {
-                        PathMod.ASSET_PATH = System.IO.Path.GetFullPath(PathMod.ExePath + args[ii + 1]);
+                        PathMod.ASSET_PATH = Path.GetFullPath(PathMod.ExePath + args[ii + 1]);
                         ii++;
                     }
                     else if (args[ii] == "-raw")
                     {
-                        PathMod.DEV_PATH = System.IO.Path.GetFullPath(PathMod.ExePath + args[ii + 1]);
+                        PathMod.DEV_PATH = Path.GetFullPath(PathMod.ExePath + args[ii + 1]);
                         ii++;
                     }
                     else if (args[ii] == "-gen")
@@ -315,6 +315,7 @@ namespace DataGenerator
                     DataManager.Instance.LoadConversions();
 
                     DataManager.InitDataDirs(PathMod.ModPath(""));
+                    PMDC.Dev.DevHelper.ConvertLua();
                     //RogueEssence.Dev.DevHelper.ConvertAssetNames();
                     RogueEssence.Dev.DevHelper.ReserializeBase();
                     DiagManager.Instance.LogInfo("Reserializing main data");
@@ -400,7 +401,7 @@ namespace DataGenerator
                         {
                             //SkillInfo.AddUnreleasedMoveData();
                             //SkillInfo.AddMoveData();
-                            //SkillInfo.AddMoveData(229, 578, 587, 693, 866, 806, 893);
+                            //SkillInfo.AddMoveData(841);
                             //SkillInfo.AddMoveDataToAnims(120, 153);
                         }
 

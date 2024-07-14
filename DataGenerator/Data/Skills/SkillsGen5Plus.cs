@@ -7056,19 +7056,32 @@ namespace DataGenerator.Data
             }
             else if (ii == 841)
             {
-                skill.Name = new LocalText("**Bitter Malice");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 10;
+                skill.Name = new LocalText("Bitter Malice");
+                skill.Desc = new LocalText("The user attacks the target with spine-chilling resentment. This may also leave the target frozen.");
+                skill.BaseCharges = 12;
                 skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(75));
+                skill.Data.SkillStates.Set(new BasePowerState(55));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("freeze", true, true)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new OffsetAction();
+                ((OffsetAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
+                ((OffsetAction)skill.HitboxAction).HitArea = OffsetAction.OffsetArea.Area;
+                ((OffsetAction)skill.HitboxAction).Range = 2;
+                ((OffsetAction)skill.HitboxAction).Speed = 10;
+                ((OffsetAction)skill.HitboxAction).LagBehindTime = 5;
+                ((OffsetAction)skill.HitboxAction).HitTiles = true;
+                skill.Explosion.ExplodeFX.Emitter = new BetweenEmitter(new AnimData("Dark_Pulse_Back", 3), new AnimData("Dark_Pulse_Front", 3));
+                CircleSquareAreaEmitter areaEmitter = new CircleSquareAreaEmitter(new AnimData("Spite", 3));
+                areaEmitter.ParticlesPerTile = 0.8;
+                areaEmitter.RangeDiff = -12;
+                skill.Explosion.Emitter = areaEmitter;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Foggy";
             }
             else if (ii == 842)
             {
