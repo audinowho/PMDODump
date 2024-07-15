@@ -16,4 +16,5 @@ Scripts/client_secret.json
 Scripts/string_sheet_id.txt
 Scripts/zone_sheet_id.txt
 Scripts/item_sheet_id.txt
+Scripts/talk_sheet_id.txt
 venv/
