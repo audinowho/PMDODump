@@ -683,7 +683,7 @@ namespace DataGenerator.Data
             }
 
             //output trade tables to common_gen.lua
-            string path = PathMod.ModPath(LuaEngine.SCRIPT_PATH + "common_gen.lua");
+            string path = PathMod.ModPath(Path.Join(LuaEngine.SCRIPT_PATH, PathMod.BaseNamespace, "common_gen.lua"));
             using (StreamWriter file = new StreamWriter(path))
             {
                 file.Write("--[[\n" +

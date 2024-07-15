@@ -78,7 +78,7 @@ def main():
     print("Content merged.")
 
     # Script
-    localize.merge_script_text("Script",os.path.join("..","DumpAsset","Data","Script"),support)
+    localize.merge_script_text("Script",os.path.join("..","DumpAsset","Data","Script", "origin"),support)
     print("Scripts merged.")
 
     # functions.append(localize.merge_data_text("Dex","MonsterData",support))
