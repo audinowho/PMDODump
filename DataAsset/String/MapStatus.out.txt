@@ -13,23 +13,23 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-default_mapstatus-0001|data.Desc											
 0000-default_weather-0000|data.Name	Not displayed to players.  Low Priority.	Default Weather		Standard Wetter	Tiempo por defecto		Meteo predefenito				默认天气
 0000-default_weather-0001|data.Desc											
-0000-diamond_dust-0000|data.Name		Diamond Dust									
+0000-diamond_dust-0000|data.Name		Diamond Dust							ダイアモンド・ダスト	ダイアモンド・ダスト	
 0000-diamond_dust-0001|data.Desc											
-0000-electric_terrain-0000|data.Name		Electric Terrain	Champ Électrifié	Elektrofeld	Campo Eléctrico		Campo Elettrico				电气场地
+0000-electric_terrain-0000|data.Name		Electric Terrain	Champ Électrifié	Elektrofeld	Campo Eléctrico		Campo Elettrico		エレキフィールド	エレキフィールド	电气场地
 0000-electric_terrain-0001|data.Desc		Electric-type attacks are boosted, and all Pokémon on the floor cannot sleep.	Les attaques de type Électrik sont boostées et les Pokémon de l'étage ne peuvent pas s'endormir.	Elektro-Attacken sind verstärkt und alle Pokémon auf der Ebene können nicht schlafen.	Los ataques de tipo eléctrico se potencian, y todos los Pokémon en el suelo no pueden dormir.		La potenza delle mosse di tipo Elettro aumenta. Tutti i Pokémon che si trovano nel piano non possono dormire.				电属性攻击威力提高，地面上的宝可梦无法入眠。
 0000-foe_fov-0000|data.Name		Foe FOV		Gegner Sichtfeld			FOV del nemico				敌人视野
 0000-foe_fov-0001|data.Desc											
-0000-fog-0000|data.Name	Not displayed to players.	Fog	Brouillard	Nebel	Niebla		Nebbia				起雾
+0000-fog-0000|data.Name	Not displayed to players.	Fog	Brouillard	Nebel	Niebla		Nebbia		きり	きり	起雾
 0000-fog-0001|data.Desc											
-0000-grassy_terrain-0000|data.Name		Grassy Terrain	Champ Herbu	Grasfeld	Campo de hierba		Campo Erboso				青草场地
+0000-grassy_terrain-0000|data.Name		Grassy Terrain	Champ Herbu	Grasfeld	Campo de hierba		Campo Erboso		グラスフィールド	グラスフィールド	青草场地
 0000-grassy_terrain-0001|data.Desc		Grass-type attacks are boosted, Ground-type attacks are weakened, and all Pokémon on the floor slowly gain HP except Flying types.		Pflanzen-Attacken sind verstärkt, Boden-Attacken geschwächt und alle Pokémon außer Flug-Pokémon auf der Ebene erhalten langsam KP zurück.	Los ataques de tipo Planta se potencian, los ataques de tipo Tierra se debilitan y todos los Pokémon en el suelo ganan PS lentamente, excepto los de tipo Volador.		La potenza delle mosse di tipo Erba aumenta, mentre quella delle mosse di tipo Terra diminuisce. Tutti i Pokémon nel piano ripristinano PS lentamente eccetto quelli di tipo Volante.				草属性攻击提高，地面属性攻击降低，且除飞行属性外所有的宝可梦都会缓慢回复HP。
 0000-gravity-0000|data.Name		Gravity	Gravitée	Erdanziehung	Gravedad		Gravità				重力
 0000-gravity-0001|data.Desc		All Pokémon on the floor become less evasive and are forced to drop to the ground.		Alle Pokémon auf der Ebene können weniger ausweichen und sind gezwungen, auf den Boden zu fallen.	Todos los Pokémon del piso se vuelven menos evasivos y están forzados a caer al suelo.		Tutti i Pokémon presenti nel piano sono meno evasivi e costretti a toccare terra.				地面上的宝可梦会更难闪避，会飞行的宝可梦会掉到地上。
-0000-hail-0000|data.Name		Hail	Grêle	Hagel	Granizo		Grandine				冰雹
+0000-hail-0000|data.Name		Hail	Grêle	Hagel	Granizo		Grandine		あられ	あられ	冰雹
 0000-hail-0001|data.Desc		All Pokémon on the floor will take damage except Ice-types.	Tout les Pokémon de l'étage subiront des dégâts sauf les types Glace.	Alle Pokémon außer Eis werden Schaden nehmen.	Todos los Pokémon del piso recibirán daño excepto los de tipo Hielo.		Tutti i Pokémon nel piano subiscono danno eccetto quelli di tipo Ghiaccio.				除了冰属性，地面上的所有宝可梦都会受到伤害。
-0000-harsh_sun-0000|data.Name		Harsh Sun	Soleil Intense	Strenge Sonne	Sol abrasador		Luce solare accecante				大日照
+0000-harsh_sun-0000|data.Name		Harsh Sun	Soleil Intense	Strenge Sonne	Sol abrasador		Luce solare accecante		ひざしがつよい	ひざしがつよい	大日照
 0000-harsh_sun-0001|data.Desc											
-0000-heavy_rain-0000|data.Name		Heavy Rain	Pluie Battante	Starkregen	Diluvio		Acquazzone				大雨
+0000-heavy_rain-0000|data.Name		Heavy Rain	Pluie Battante	Starkregen	Diluvio		Acquazzone		あめ	あめ	大雨
 0000-heavy_rain-0001|data.Desc											
 0000-intrusion_check-0000|data.Name		Intrusion Check		Einbruchsprüfung							闯入判定
 0000-intrusion_check-0001|data.Desc											
@@ -37,7 +37,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-inverse-0001|data.Desc		All type matchups are reversed.	L'efficacité des types est inversée.	Alle Typvor- und Nachteile sind umgekehrt.	Todos las eficacias de tipo se han invertido.		L'efficacia dei tipi viene invertita.				所有属性克制关系均被反转。
 0000-items_sniffed-0000|data.Name		Items Sniffed		Items erschnüffelt							道具察觉															
 0000-items_sniffed-0001|data.Desc																	
-0000-magic_room-0000|data.Name		Magic Room	Zone Magique	Magieraum	Zona Mágica		Magicozona				魔法空间
+0000-magic_room-0000|data.Name		Magic Room	Zone Magique	Magieraum	Zona Mágica		Magicozona		マジックルーム	マジックルーム	魔法空间
 0000-magic_room-0001|data.Desc		All Pokémon on the floor have their held items and abilities disabled.	Tout les Pokémon de l'étage perdent l'effet de leurs objets tenus.	Die Items und Fähigkeiten aller Pokémon auf der Ebene werden unbrauchbar.	Todos los Pokémon del piso tienen los objetos llevados y las habilidades desactivados.		Tutti i Pokémon nel piano hanno lo strumento tenuto e l'abilità annulati.				楼层内所有宝可梦的携带道具和特性都会失效。
 0000-map_clear_check-0000|data.Name		Map Clear Check		Prüfung des Kartenabschlusses							
 0000-map_clear_check-0001|data.Desc											
@@ -57,13 +57,13 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-mysterious_force-0001|data.Desc		A mysterious force prevents Orbs, Machines, and special items from working.		Eine mysteriöse Kraft verhindert den Einsatz von Orbs, Maschinen und speziellen Items.	Una fuerza misteriosa que evita que las Esferas, máquinas y otros objetos especiales funcionen.		Una forza misteriosa previene l'utilizzo di sfere, macchine e strumenti esclusivi.				一种神秘的力量，阻止了不可思议之玉、机器和特殊道具的使用。
 0000-outlaw_clear_check-0000|data.Name		Outlaw Clear Check		Prüfung des Abschlusses von Ganoven							
 0000-outlaw_clear_check-0001|data.Desc											
-0000-psychic_terrain-0000|data.Name		Psychic Terrain		Psychofeld			Campo Psichico				精神场地
+0000-psychic_terrain-0000|data.Name		Psychic Terrain		Psychofeld			Campo Psichico		サイコフィールド	サイコフィールド	精神场地
 0000-psychic_terrain-0001|data.Desc		Psychic-type attacks are boosted, and Pokémon can evade moves from close up.		Psycho-Attacken sind verstärkt und Pokémon können Attacken von der Nähe besser ausweichen.			La potenza delle mosse di tipo Psico aumenta e i Pokémon possono schivare le mosse da vicino. 				超能力属性攻击提高，宝可梦能够躲避近身攻击。
-0000-rain-0000|data.Name		Rain	Pluvieux	Regen	Lluvioso		Pioggia				下雨
+0000-rain-0000|data.Name		Rain	Pluvieux	Regen	Lluvioso		Pioggia		あめ	あめ	下雨
 0000-rain-0001|data.Desc		Water-type attacks are boosted and Fire-type attacks are weakened.	Les attaques de type de type Eau sont boostées et les attaques de type Feu affaiblies.	Wasser-Attacken sind verstärkt und Feuer-Attacken sind geschwächt.	Los ataque de tipo Agua se potencian y los ataques de tipo Fuego se debilitan.		La potenza delle mosse di tipo Acqua aumenta, mentre quella delle mosse Fuoco dimunuisce.				水属性攻击威力提高，火属性攻击威力降低。
 0000-rescued-0000|data.Name		Rescued		Gerettet							已被救助
 0000-rescued-0001|data.Desc											
-0000-sandstorm-0000|data.Name		Sandstorm	Tempête de sable	Sandsturm	Tormenta de arena		Tempesta di sabbia				沙暴
+0000-sandstorm-0000|data.Name		Sandstorm	Tempête de sable	Sandsturm	Tormenta de arena		Tempesta di sabbia		すなあらし	すなあらし	沙暴
 0000-sandstorm-0001|data.Desc		All Pokémon on the floor will take damage except Rock, Ground, and Steel-types. The Sp. Def of Rock-types is boosted.		Alle Pokémon, welche nicht Gestein, Boden und Stahl als Typ besitzen, werden auf der Ebene Schaden nehmen. Die Spezial-Verteidigung von Gestein-Typen ist erhöht.	Todos los Pokémon del piso recibirán daño, excepto los de tipo Roca, Tierra y Acero. Aumenta la Defensa Especial de los de tipo Roca.		Tutti i Pokémon nel piano subiscono danno eccetto quelli di tipo Roccia, Terra e Acciaio. La Difesa Speciale dei Pokémon di tipo Roccia aumenta.				除了岩石，地面和钢属性的宝可梦，楼层内的所有宝可梦都会受到伤害。岩石属性的特防会提高。
 0000-scanner-0000|data.Name		Scanner		Scanner	Escáner		Scanner				侦查
 0000-scanner-0001|data.Desc											
@@ -71,19 +71,19 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-shop_security-0001|data.Desc											
 0000-shopping-0000|data.Name		Shopping		Einkaufen							购物中
 0000-shopping-0001|data.Desc											
-0000-snow-0000|data.Name	Not displayed to players.	Snow	Neigeux	Schnee	Nieve		Neve				下雪
+0000-snow-0000|data.Name	Not displayed to players.	Snow	Neigeux	Schnee	Nieve		Neve		ゆき	ゆき	下雪
 0000-snow-0001|data.Desc											
 0000-somethings_stirring-0000|data.Name		Something's stirring...		Da ist irgendwas...	Algo se está moviendo...		Qualcosa si sta muovendo...				有什么在活动……
 0000-somethings_stirring-0001|data.Desc		Something's approaching. The exploration team must leave the floor before it arrives, or they will be forced out of the dungeon.		Es scheint näher zu kommen. Das Erkundungsteam muss die nächste Ebene erreichen bevor es ankommt oder es wird gezwungen den Dungeon zu verlassen.	Algo se está acercando. El equipo de exploración debe abandonar el piso antes de que llegue, o serán forzados a salir de la mazmorra.		Qualcosa si sta avvicinando. Il team d'esplorazione deve lasciare il piano prima che ariva o sarà costretto a lasciare il dungeon.				有什么东西在靠近。探险队必须在它到达前离开楼层，否则就会强制离开迷宫。
 0000-stairs_sensed-0000|data.Name	Not displayed to players.  Low Priority.	Stairs Sensed		Treppen wahrgenommen	Escaleras Detectadas						楼梯感应
 0000-stairs_sensed-0001|data.Desc											
-0000-sunny-0000|data.Name		Sunny	Ensoleillé	Sonnig	Soleado		Sole	쾌청			日照强烈
+0000-sunny-0000|data.Name		Sunny	Ensoleillé	Sonnig	Soleado		Sole	쾌청	はれ	はれ	日照强烈
 0000-sunny-0001|data.Desc		Fire-type attacks are boosted and Water-type attacks are weakened.	Les attaques de type de type Feu sont boostées et les attaques de type Eau affaiblies.	Feuer-Attacken sind verstärkt und Wasser-Attacken sind geschwächt.	Los ataques de tipo Fuego se potencian y los ataques de tipo Agua se debilitan.		La potenza delle mosse di tipo Fuoco aumenta, mentre quella delle mosse Acqua dimunuisce.				火属性攻击威力提高，水属性攻击威力降低。
 0000-thief-0000|data.Name	Not displayed to players.  Low Priority.	Thief		Dieb	Ladrón		Ladro				盗贼
 0000-thief-0001|data.Desc											
-0000-trick_room-0000|data.Name		Trick Room	Distorsion	Bizarroraum	Espacio Raro		Distortozona	트릭룸			戏法空间
+0000-trick_room-0000|data.Name		Trick Room	Distorsion	Bizarroraum	Espacio Raro		Distortozona	트릭룸	トリックルーム	トリックルーム	戏法空间
 0000-trick_room-0001|data.Desc		Effects on all Pokémon's Movement Speed are reversed, and Pokémon with a lower Speed stat have better accuracy and evasion.		Verursacht, dass die Bewegungsgeschwindigkeit aller Pokémon umgekehrt sind. Die Genauigkeit und der Fluchtwert langsamer Pokémon sind ebenfalls erhöht.							所有宝可梦的移动速度效果反转，速度能力值更低的宝可梦获得更高的命中率和闪避率。
 0000-wind-0000|data.Name		Wind	Courant d'Air	Wind	Viento		Vento				起风
 0000-wind-0001|data.Desc		Flying-type Pokémon are protected from their weaknesses.	Les Pokémon de type Vol sont protégés de leurs faiblesses.	Flug-Pokémon sind gegen ihre Schwächen geschützt.	Los Pokémon de tipo Volador están protegidos de sus debilidades.		I Pokémon di tipo Volante sono protetti dalle loro debolezze.				飞行属性宝可梦的弱点被保护了。
-0000-wonder_room-0000|data.Name		Wonder Room	Zone Étrange	Wunderraum	Zona Extraña		Mirabilzona				奇妙空间
+0000-wonder_room-0000|data.Name		Wonder Room	Zone Étrange	Wunderraum	Zona Extraña		Mirabilzona		ワンダールーム	ワンダールーム	奇妙空间
 0000-wonder_room-0001|data.Desc		Physical attacks become Special attacks, and vice versa.	Les attaques physiques deviennent des attaques spéciales et inversement.	Physische Attacken werden zu speziellen Attacken und umgekehrt.	Los ataques Físicos se vuelve Especiales, y viceversa.		Gli attacchi fisici diventano attacchi speciali e viceversa.				物理攻击会变成特殊攻击，反之亦然。

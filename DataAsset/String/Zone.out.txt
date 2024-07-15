@@ -1,114 +1,114 @@
 Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
-0000-ambush_forest-0000|data.Name		Ambush Forest		Auflauerwald	Bosque Emboscada		Foresta Agguato				埋伏森林
-0000-ambush_forest-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Ambush Forest\nB{0}F		Auflauerwald\nU{0}	Bosque Emboscada\nP-{0}		Foresta Agguato\nP-{0}				埋伏森林\nB{0}F
-0000-barren_tundra-0000|data.Name		Barren Tundra		Karge Tundra	Tundra Árido		Tundra Desolata				寂寥苔原
-0000-barren_tundra-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Barren Tundra\n{0}F		Karge Tundra\nE{0}	Tundra Árido\nP{0}		Tundra Desolata\nP{0}				寂寥苔原\n{0}F
-0000-bramble_woods-0000|data.Name		Bramble Woods		Brombeerwald	Bosque Zarza		Foresta Rovospino				荆棘树林
-0000-bramble_woods-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Bramble Woods\nB{0}F		Brombeerwald\nU{0}	Bosque Zarza\nP-{0}		Foresta Rovospino\nP-{0}				荆棘树林\nB{0}F
-0000-bramble_woods-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Bramble Thicket\nB{0}F		Brombeerdickicht\nU{0}	Matorral Zarza\nP-{0}		Boschetto Rovospino\nP-{0}				荆棘密林\nB{0}F
-0000-bravery_road-0000|data.Name		Bravery Road		Pass der Tapferkeit	Sendero Valentía		Sentiero Coraggio				无畏之路
-0000-bravery_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Bravery Road\n{0}F		Pass der Tapferkeit\nE{0}	Sendero Valentía\nP{0}		Sentiero Coraggio\nP{0}				无畏之路\n{0}F
-0000-castaway_cave-0000|data.Name		Castaway Cave		Schiffbrüchigen-Höhle							漂泊洞窟
-0000-castaway_cave-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Castaway Cave\nB{0}F		Schiffbrüchigen-Höhle\nU{0}							漂泊洞窟\nB{0}F
-0000-cave_of_solace-0000|data.Name		Cave of Solace		Höhle des Trostes	Cueva Consuelo		Caverna Ristoro				舒缓洞窟
-0000-cave_of_solace-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Cave of Solace\nB{0}F		Höhle des Trostes\nU{0}	Cueva Consuelo\nP-{0}		Caverna Ristoro\nP-{0}				舒缓洞窟\nB{0}F
-0000-cave_of_whispers-0000|data.Name		Cave of Whispers		Höhle des Geflüsters	Cueva de los Susurros		Grotta dei Sussurri				低语洞窟
-0000-cave_of_whispers-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Cave of Whispers\nB{0}F		Höhle des Geflüsters\nU{0}	Cueva de los Susurros\nP-{0}		Grotta dei Sussurri\nP-{0}				低语洞窟\nB{0}F
-0000-champions_road-0000|data.Name		Champion's Road		Pass des Champions	Ruta del Campeón		Percorso dei Campioni				冠军之路
-0000-champions_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Champion's Road\n{0}F		Pass des Champions\nE{0}	Ruta del Campeón\nP{0}		Percorso dei Campioni\nP{0}				冠军之路\n{0}F
-0000-champions_road-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Clouded Road\n{0}F		Bewölkter Pass\nE{0}	Camino Nublado\nP{0}		Cammino Nuvoloso\nP{0}				阴云之路\n{0}F
-0000-copper_quarry-0000|data.Name		Copper Quarry		Kupfersteinbruch	Cantera Bronce		Miniera di Rame				采铜矿场
-0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\nB{0}F		Kupfersteinbruch\nU{0}	Cantera Bronce\nP-{0}		Miniera di Rame\nP-{0}				采铜矿场\nB{0}F
-0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Lodestone Quarry\nB{0}F		Magnetitsteinbruch\nU{0}							磁力矿场\nB{0}F
-0000-debug_zone-0000|data.Name		Debug Zone		Debug Zone	Zona de Debug		Zona di Debug				Debug区域
-0000-debug_zone-0001|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0000]).Name		Replay Test Zone\n{0}F		Wiederholungstest Zone\nE{0}	Zona de Prueba de Replay\nP{0}		Zona di test Replay\nP{0}				回放测试区域\n{0}F
-0000-depleted_basin-0000|data.Name		Depleted Basin									枯竭盆地
-0000-depleted_basin-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Depleted Basin\nB{0}F									枯竭盆地\nB{0}F
-0000-depleted_basin-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Cratered Basin\nB{0}F					
-0000-deserted_fortress-0000|data.Name		Deserted Fortress		Verlassene Festung	Fortaleza Desolada		Fortezza Desolata				空寂要塞
-0000-deserted_fortress-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Deserted Fortress\n{0}F		Verlassene Festung\nE{0}	Fortaleza Desolada\nP{0}		Fortezza Desolata\nP{0}				空寂要塞\n{0}F
-0000-energy_garden-0000|data.Name		Energy Garden		Energiegarten	Jardín Energía		Giardino Energetico				元气花园
-0000-energy_garden-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Energy Garden\nB{0}F		Energiegarten\nU{0}	Jardín Energía\nP-{0}		Giardino Energetico\nP-{0}				元气花园\nB{0}F
-0000-eon_island-0000|data.Name		Eon Island		Äoneninsel	Isla Eón		Isola Eone				永恒岛
-0000-eon_island-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Eon Island Coast\n{0}F		Äoneninsel\nE{0}	Costa Isla Eón\nP{0}		Costa Eone\nP{0}				永恒海滨\n{0}F
-0000-faded_trail-0000|data.Name		Faded Trail		Verbleichender Pfad	Sendero Desvanecido 		Sentiero Sbiadito				消逝山道
-0000-faded_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faded Trail\n{0}F		Verbleichender Pfad\nE{0}	Sendero Desvanecido\nP{0}		Sentiero Sbiadito\nP{0}				消逝山道\n{0}F
-0000-faded_trail-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Hidden Trail\nB{0}F		Versteckter Pfad\nU{0}	Sendero Oculto\nP-{0}		Percorso Occulto\nP-{0}				隐蔽山道\nB{0}F
-0000-faultline_ridge-0000|data.Name		Faultline Ridge		Grat der Bruchlinie			Crepaccio della Faglia				断层山脊
-0000-faultline_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faultline Ridge\n{0}F		Grat der Bruchlinie\nE{0}			Crepaccio della Faglia\nP{0}				断层山脊\n{0}F
-0000-fertile_valley-0000|data.Name		Fertile Valley		Fruchtbares Tal	Valle Fértil		Valle Fertile				丰饶山谷
-0000-fertile_valley-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Fertile Valley\nB{0}F		Fruchtbares Tal\nU{0}	Valle Fértil\nP-{0}		Valle Fertile\nP-{0}				丰饶山谷\nB{0}F
-0000-fertile_valley-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Muddy Valley\nB{0}F		Schlammiges Tal\nU{0}	Valle Lodoso\nP-{0}		Valle Fangosa\nP-{0}				泥泞山谷\nB{0}F
-0000-flyaway_cliffs-0000|data.Name		Flyaway Cliffs		Ausflugsklippen	Acantilado Nido		Colline del Volo				飞翔悬崖
-0000-flyaway_cliffs-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Flyaway Cliffs\n{0}F		Ausflugsklippen\nE{0}	Acantilado Nido\nP{0}		Colline del Volo\nP{0}				飞翔悬崖\n{0}F
-0000-forsaken_desert-0000|data.Name		Forsaken Desert		Verlassene Wüste	Desierto Abandonado		Deserto Abbandonato				落寂沙漠
-0000-forsaken_desert-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Forsaken Desert\n{0}F		Verlassene Wüste\nE{0}	Desierto Abandonado\nP{0}		Deserto Abbandonato\nP{0}				落寂沙漠\n{0}F
-0000-forsaken_desert-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room		Geheimer Raum	Sala Secreta		Stanza Segreta				秘密之间
-0000-geode_underpass-0000|data.Name		Geode Underpass		Geodenunterführung	Galería Geoda		Galleria Geode				紫晶地道
-0000-geode_underpass-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Geode Underpass\nB{0}F		Geodenunterführung\nU{0}	Galería Geoda\nP-{0}		Galleria Geode\nP-{0}				紫晶地道\nB{0}F
-0000-guildmaster_island-0000|data.Name		Guildmaster Island	Île du Maître de la Guilde	Gildenmeister-Insel	Isla Maestro		Isola del Maestro Gilda				公会会长之岛
-0000-guildmaster_trail-0000|data.Name		Guildmaster Trail		Gildenmeister-Pfad	Sendero del Maestro		Sentiero del Maestro Gilda				公会会长之路
-0000-guildmaster_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Guildmaster Trail\n{0}F		Gildenmeister-Pfad\nE{0}	Sendero del Maestro\nP{0}		Sentiero del Maestro Gilda\nP{0}				公会会长之路\n{0}F
-0000-hope_road-0000|data.Name		Hope Road		Pass der Hoffnung	Travesía Esperanza		Viale Speranza				希望之路
-0000-hope_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Hope Road\n{0}F		Pass der Hoffnung\nE{0}	Travesía Esperanza\nP{0}		Viale Speranza\nP{0}				希望之路\n{0}F
-0000-inscribed_cave-0000|data.Name		Inscribed Cave		Beschriftete Höhle	Cueva Inscrita		Caverna Incisa				刻文洞穴
-0000-inscribed_cave-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Inscribed Cave\nB{0}F		Beschriftete Höhle\nU{0}	Cueva Inscrita\nP-{0}		Caverna Incisa\nP-{0}				刻文洞穴\nB{0}F
-0000-labyrinth_of_the_lost-0000|data.Name		Labyrinth of the Lost		Labyrinth der Verlorenen	LABERINTO DE LOS PERDIDOS		Labirinto dei Dispersi				迷失迷阵
-0000-labyrinth_of_the_lost-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Labyrinth of the Lost\nB{0}F		Labyrinth der Verlorenen\nU{0}	Laberinto de los Perdidos\nP-{0}		Labirinto dei Dispersi\nP-{0}				迷失迷阵\nB{0}F
-0000-lava_floe_island-0000|data.Name		Lava Floe Island		Lavascholleninsel			Isola Banchisa di Lava				熔岩浮冰岛
-0000-lava_floe_island-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Lava Floe\nIsland\nB{0}F		Lavascholleninsel\nU{0}			Isola Banchisa di Lava\nP-{0}				熔岩浮冰岛\nB{0}F
-0000-lava_floe_island-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Abyssal Island\nB{0}F		Tiefseeinsel\nU{0}			Isola Abissale\nP-{0}				深渊之岛\nB{0}F
-0000-lost_seas-0000|data.Name		Lost Seas		Verlorene Seen	Mares Olvidados		Mare Perduto				迷失之海
-0000-lost_seas-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Lost Seas\nB{0}F		Verlorene Seen\nU{0}	Mares Olvidados\nP-{0}		Mare Perduto\nP-{0}				迷失之海\nB{0}F
-0000-moonlit_courtyard-0000|data.Name		Moonlit Courtyard		Mondheller Innenhof	Patio Luz de Luna		Prato Brillaluna				月光庭院
-0000-moonlit_courtyard-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Moonlit Courtyard\n{0}F		Mondheller Innenhof\nE{0}	Patio Luz de Luna\nP{0}		Prato Brillaluna\nP{0}				月光庭院\n{0}F
-0000-moonlit_courtyard-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Moonlit Temple\n{0}F		Mondheller Tempel\nE{0}	Templo Luz de Luna\nP{0}		Tempio Brillaluna\nP{0}				月光神庙\n{0}F
-0000-overgrown_wilds-0000|data.Name		Overgrown Wilds		Überwachsene Wildnis			Bosco Selvaggio				杂草原野
-0000-overgrown_wilds-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Overgrown Wilds\n{0}F		Überwachsene Wildnis\nE{0}			Bosco Selvaggio\nP{0}				杂草原野\n{0}F				
-0000-overgrown_wilds-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Exotic Wilds\nB{0}F		Exotische Wildnis\nU{0}			Boscaglia Esotica\nP-{0}				异草原野\nB{0}F
-0000-prism_isles-0000|data.Name		Prism Isles		Prismeninseln	Islas Prisma		Isole Prisma				棱镜群岛
-0000-prism_isles-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		White Isle\n{0}F		Weiße Insel\nE{0}	Isla Blanca\nP{0}		Isola Candida\nP{0}				白澜岛\n{0}F
-0000-relic_tower-0000|data.Name		Relic Tower		Reliktenturm	Torre Reliquia		Torre Reliquia				遗迹之塔
-0000-relic_tower-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Relic Tower\n{0}F		Reliktenturm\nE{0}	Torre Reliquia\nP{0}		Torre Reliquia\nP{0}				遗迹之塔\n{0}F
-0000-royal_halls-0000|data.Name		Royal Halls		Königliche Hallen	Salones Reales		Sale Reali				庄严大厅
-0000-royal_halls-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Royal Halls\nB{0}F		Königliche Hallen\nE{0}	Salones Reales\nP-{0}		Sale Reali\nP-{0}				庄严大厅\nB{0}F
-0000-sacred_tower-0000|data.Name		Sacred Tower		Heiliger Turm	Torreón Sagrado		Torre Sacra				神圣之塔
-0000-sacred_tower-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Sacred Tower\n{0}F		Heiliger Turm\nE{0}	Torreón Sagrado\nP{0}		Torre Sacra\nP{0}				神圣之塔\n{0}F
-0000-secret_garden-0000|data.Name		Secret Garden		Geheimer Garten	Jardín Secreto		Giardino Segreto				秘密花园
-0000-secret_garden-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Secret Garden\nB{0}F		Geheimer Garten\nU{0}	Jardín Secreto\nP-{0}		Giardino Segreto\nP{0}				秘密花园\nB{0}F
-0000-sickly_hollow-0000|data.Name		Sickly Hollow		Kränkliche Bodensenke			Valle Malsana				毒疫洞穴
-0000-sickly_hollow-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Sickly Hollow\nB{0}F		Kränkliche Bodensenke\nU{0}			Valle Malsana\nP-{0}				毒疫洞穴\nB{0}F
-0000-sleeping_caldera-0000|data.Name		Sleeping Caldera		Schlafende Caldera	Caldera Durmiente		Caldera Dormiente				沉睡火山口
-0000-sleeping_caldera-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Sleeping Caldera\nB{0}F		Schlafende Caldera\nU{0}	Caldera Durmiente\nP-{0}		Caldera Dormiente\nP-{0}				沉睡火山口\nB{0}F
-0000-snowbound_path-0000|data.Name		Snowbound Path		Eingeschneiter Pfad	Paso Helado Errático		Passo Innevato				雪封小径
-0000-snowbound_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Snowbound Path\n{0}F		Eingeschneiter Pfad\nE{0}	Paso Helado Errático\nP{0}		Passo Innevato\nP{0}				雪封小径\n{0}F	
-0000-snowbound_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Glacial Path\nB{0}F		Gletscherpfad\nU{0}			Sentiero Glaciale\nP-{0}				冰河小径\nB{0}F
-0000-starfall_heights-0000|data.Name		Starfall Heights		Sternenfallhöhen	Alto Lluevestrella		Alture Cometa				星陨高地
-0000-starfall_heights-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Starfall Heights\n{0}F		Sternenfallhöhen\nE{0}	Alto Lluevestrella\nP{0}		Alture Cometa\nP{0}				星陨高地\n{0}F
-0000-the_abyss-0000|data.Name		The Abyss		Die Kluft	El Abismo		L'Abisso				深渊
-0000-the_abyss-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Abyss\nB{0}F		Die Kluft\nU{0}	El Abismo\nP-{0}		L'Abisso\nP-{0}				深渊\nB{0}F
-0000-the_neverending_tale-0000|data.Name		The NeverEnding Tale		Die niemalsendende Geschichte			La Storia Senza Fine				无尽篇章
-0000-the_neverending_tale-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The NeverEnding Tale\nCh. {0}		Die niemalsendende Geschichte\nKap. {0}			La Storia Senza Fine\nCap. {0}				无尽篇章\n第{0}话
-0000-the_sky-0000|data.Name		The Sky		Der Himmel	El Cielo		Il Cielo				天空
-0000-the_sky-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Sky\n{0}F		Der Himmel\nE{0}	El Cielo\nP{0}		Il Cielo\nP{0}				天空\n{0}F
-0000-thunderstruck_pass-0000|data.Name		Thunderstruck Pass		Donnerschlag-Übergang	Senda Atónita		Sentiero Picchiatuono				雷霆山口
-0000-thunderstruck_pass-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Thunderstruck Pass\n{0}F		Donnerschlag-Übergang\nE{0}	Senda Atónita\nP{0}		Sentiero Picchiatuono\nP{0}				雷霆山口\n{0}F
-0000-tiny_tunnel-0000|data.Name		Tiny Tunnel		Winziger Tunnel	Túnel Pequeño		Piccola Galleria				小小地道
-0000-tiny_tunnel-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tiny Tunnel\nB{0}F		Winziger Tunnel\nU{0}	Túnel Pequeño\nP-{0}		Piccola Galleria\nP-{0}				小小地道\nB{0}F
-0000-training_maze-0000|data.Name		Training Maze		Trainings Labyrinth	Laberinto Entrenamiento		Labirinto Allenamento				训练迷宫
-0000-training_maze-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0000]).Name		Training Maze\nLv. {0}		Trainings Labyrinth\nLv.{0}	Laberinto Entrenamiento\nNiv. {0}		Labirinto Allenamento\n Liv. {0}				训练迷宫\nLv. {0}
-0000-treacherous_mountain-0000|data.Name		Treacherous Mountain		Tückisches Gebirge	Montaña Traicionera		Montagna Infida				奸诈山峰
-0000-treacherous_mountain-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Treacherous Mountain\n{0}F		Tückisches Gebirge\nE{0}	Montaña Traicionera\nP{0}		Montagna Infida\nP{0}				奸诈山峰\n{0}F
-0000-trickster_woods-0000|data.Name		Trickster Woods		Betrügerischer Wald	Arboleda Embaucadora		Bosco Imbroglio				戏法森林
-0000-trickster_woods-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Trickster Woods\n{0}F		Betrügerischer Wald\nE{0}	Arboleda Embaucadora\nP{0}		Bosco Imbroglio\nP{0}				戏法森林\n{0}F
-0000-trickster_woods-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Trickster Maze\nB{0}F		Betrügerisches Labyrinth\nU{0}	Enredado Embaucador\nP{0}		Labirinto Imbroglio\nP-{0}				戏法迷宫\nB{0}F
-0000-tropical_path-0000|data.Name		Tropical Path		Tropischer Pfad	Paso Tropical		Passaggio Tropicale				热带小径
-0000-tropical_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tropical Path\n{0}F		Tropischer Pfad\nE{0}	Paso Tropical\nP{0}		Passaggio Tropicale\nP{0}				热带小径\n{0}F
-0000-tropical_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room		Geheimer Raum	Sala Secreta		Stanza Segreta				秘密之间
-0000-veiled_ridge-0000|data.Name		Veiled Ridge		Verdeckter Grat	Ladera Velada		Crinale Velato				朦胧山脊
-0000-veiled_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Veiled Ridge\n{0}F		Verdeckter Grat\nE{0}	Ladera Velada\nP{0}		Crinale Velato\nP{0}				朦胧山脊\n{0}F
-0000-veiled_ridge-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Illusion Ridge\nB{0}F		Illusionsgrat\nU{0}	Ladera Ilusoria\nP-{0}		Cresta Illusione\nP-{0}				幻想山脊\nB{0}F
-0000-wayward_wetlands-0000|data.Name		Wayward Wetlands		Launische Auen	Humedales Caprichosos		Acquitrini Capriccio				任性湿地
-0000-wayward_wetlands-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wayward Wetlands\nB{0}F		Launische Auen\nU{0}							任性湿地\nB{0}F				
-0000-wisdom_road-0000|data.Name		Wisdom Road		Pass der Weisheit	Sendero Sabiduría		Strada della Saggezza				智慧之路
-0000-wisdom_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wisdom Road\n{0}F		Pass der Weisheit\nE{0}	Sendero Sabiduría\nP{0}		Strada della Saggezza\nP{0}				智慧之路\n{0}F
+0000-ambush_forest-0000|data.Name		Ambush Forest		Auflauerwald	Bosque Emboscada		Foresta Agguato		マチブのもり	マチブの森	埋伏森林																	
+0000-ambush_forest-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Ambush Forest\nB{0}F		Auflauerwald\nU{0}	Bosque Emboscada\nP-{0}		Foresta Agguato\nP-{0}		マチブのもり\n{0}かい	マチブの森\n{0}階	埋伏森林\nB{0}F																	
+0000-barren_tundra-0000|data.Name		Barren Tundra		Karge Tundra	Tundra Árido		Tundra Desolata		あれたはてたツンドラ	荒れ果てたツンドラ	寂寥苔原																	
+0000-barren_tundra-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Barren Tundra\n{0}F		Karge Tundra\nE{0}	Tundra Árido\nP{0}		Tundra Desolata\nP{0}		あれはてたツンドラ\n{0}かい	荒れ果てたツンドラ\n{0}階	寂寥苔原\n{0}F																	
+0000-bramble_woods-0000|data.Name		Bramble Woods		Brombeerwald	Bosque Zarza		Foresta Rovospino		いばらのもり	いばらの森	荆棘树林																	
+0000-bramble_woods-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Bramble Woods\nB{0}F		Brombeerwald\nU{0}	Bosque Zarza\nP-{0}		Foresta Rovospino\nP-{0}		いばらのもり\n{0}かい	いばらの森\n{0}階	荆棘树林\nB{0}F																	
+0000-bramble_woods-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Bramble Thicket\nB{0}F		Brombeerdickicht\nU{0}	Matorral Zarza\nP-{0}		Boschetto Rovospino\nP-{0}		ブランブルッズ\n{0}かい	ブランブルッズ\n{0}階	荆棘密林\nB{0}F																	
+0000-bravery_road-0000|data.Name		Bravery Road		Pass der Tapferkeit	Sendero Valentía		Sentiero Coraggio		ブレイブロード	ブレイブロード	无畏之路																	
+0000-bravery_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Bravery Road\n{0}F		Pass der Tapferkeit\nE{0}	Sendero Valentía\nP{0}		Sentiero Coraggio\nP{0}		ブレイブロード\n{0}かい	ブレイブロード\n{0}階	无畏之路\n{0}F																	
+0000-castaway_cave-0000|data.Name		Castaway Cave		Schiffbrüchigen-Höhle					まよいのどうくつ	迷いの洞窟	漂泊洞窟																	
+0000-castaway_cave-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Castaway Cave\nB{0}F		Schiffbrüchigen-Höhle\nU{0}					まよいのどうくつ\nB{0}かい	迷いの洞窟\n{0}階	漂泊洞窟\nB{0}F																	
+0000-cave_of_solace-0000|data.Name		Cave of Solace		Höhle des Trostes	Cueva Consuelo		Caverna Ristoro		コドクのどうくつ	コドクの洞窟	舒缓洞窟																	
+0000-cave_of_solace-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Cave of Solace\nB{0}F		Höhle des Trostes\nU{0}	Cueva Consuelo\nP-{0}		Caverna Ristoro\nP-{0}		コドクのどうくつ\nB{0}かい	コドクの洞窟\nB{0}階	舒缓洞窟\nB{0}F																	
+0000-cave_of_whispers-0000|data.Name		Cave of Whispers		Höhle des Geflüsters	Cueva de los Susurros		Grotta dei Sussurri		ささやきのどうくつ	ささやきの洞窟	低语洞窟																	
+0000-cave_of_whispers-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Cave of Whispers\nB{0}F		Höhle des Geflüsters\nU{0}	Cueva de los Susurros\nP-{0}		Grotta dei Sussurri\nP-{0}		ささやきのどうくつ\nB{0}かい	ささやきの洞窟\nB{0}階	低语洞窟\nB{0}F																	
+0000-champions_road-0000|data.Name		Champion's Road		Pass des Champions	Ruta del Campeón		Percorso dei Campioni		コパニンロード	コパニンロード	冠军之路																	
+0000-champions_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Champion's Road\n{0}F		Pass des Champions\nE{0}	Ruta del Campeón\nP{0}		Percorso dei Campioni\nP{0}		コパニンロード\n{0}かい	コパニンロード\n{0}階	冠军之路\n{0}F																	
+0000-champions_road-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Clouded Road\n{0}F		Bewölkter Pass\nE{0}	Camino Nublado\nP{0}		Cammino Nuvoloso\nP{0}		クラウデロード\n{0}かい	クラウデロード\n{0}階	阴云之路\n{0}F																	
+0000-copper_quarry-0000|data.Name		Copper Quarry		Kupfersteinbruch	Cantera Bronce		Miniera di Rame		サイドーどうざん	サイドー銅山	采铜矿场																	
+0000-copper_quarry-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Copper Quarry\nB{0}F		Kupfersteinbruch\nU{0}	Cantera Bronce\nP-{0}		Miniera di Rame\nP-{0}		サイドーどうざん\nB{0}かい	サイドー銅山\nB{0}階	采铜矿场\nB{0}F																	
+0000-copper_quarry-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Lodestone Quarry\nB{0}F		Magnetitsteinbruch\nU{0}					ジシャークエリア\n{0}かい	ジシャークエリア\n{0}階	磁力矿场\nB{0}F																	
+0000-debug_zone-0000|data.Name		Debug Zone		Debug Zone	Zona de Debug		Zona di Debug		でばっくぞぉーん	でばっくぞぉーん	Debug区域																	
+0000-debug_zone-0001|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0000]).Name		Replay Test Zone\n{0}F		Wiederholungstest Zone\nE{0}	Zona de Prueba de Replay\nP{0}		Zona di test Replay\nP{0}		リプレイテストぞーん\n{0}かい	リプレイテストゾーン\n{0}階	回放测试区域\n{0}F																	
+0000-depleted_basin-0000|data.Name		Depleted Basin							ハテアレぼんち	ハテアレ盆地	枯竭盆地																	
+0000-depleted_basin-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Depleted Basin\nB{0}F							ハテアレぼんち\nB{0}かい	ハテアレ盆地\nB{0}階	枯竭盆地\nB{0}F																	
+0000-depleted_basin-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Cratered Basin\nB{0}F							クリスタおうち\n{0}かい	クリスタ凹地\n{0}階	陨击盆地\nB{0}F																	
+0000-deserted_fortress-0000|data.Name		Deserted Fortress		Verlassene Festung	Fortaleza Desolada		Fortezza Desolata		カッポラようさい	カッポラ要塞	空寂要塞																	
+0000-deserted_fortress-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Deserted Fortress\n{0}F		Verlassene Festung\nE{0}	Fortaleza Desolada\nP{0}		Fortezza Desolata\nP{0}		カッポラようさい\n{0}かい	カッポラ要塞\n{0}階	空寂要塞\n{0}F																	
+0000-energy_garden-0000|data.Name		Energy Garden		Energiegarten	Jardín Energía		Giardino Energetico		げんきのはなぞの	げんきのはなぞの	元气花园																	
+0000-energy_garden-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Energy Garden\nB{0}F		Energiegarten\nU{0}	Jardín Energía\nP-{0}		Giardino Energetico\nP-{0}		げんきのはなぞの\n{0}かい	げんきのはなぞの\n{0}かい	元气花园\nB{0}F																	
+0000-eon_island-0000|data.Name		Eon Island		Äoneninsel	Isla Eón		Isola Eone		イオーネとう	イオーネ島	永恒岛																	
+0000-eon_island-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Eon Island Coast\n{0}F		Äoneninsel\nE{0}	Costa Isla Eón\nP{0}		Costa Eone\nP{0}		イオーネとう\n{0}かい	イオーネ島\n{0}階	永恒海滨\n{0}F																	
+0000-faded_trail-0000|data.Name		Faded Trail		Verbleichender Pfad	Sendero Desvanecido 		Sentiero Sbiadito		いろあせたさんどう	色あせた山道	消逝山道																	
+0000-faded_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faded Trail\n{0}F		Verbleichender Pfad\nE{0}	Sendero Desvanecido\nP{0}		Sentiero Sbiadito\nP{0}		いろあせたさんどう\n{0}かい	色あせた山道\n{0}階	消逝山道\n{0}F																	
+0000-faded_trail-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Hidden Trail\nB{0}F		Versteckter Pfad\nU{0}	Sendero Oculto\nP-{0}		Percorso Occulto\nP-{0}		まぼろしのさんどう\n{0}かい	幻の山道\n{0}階	隐蔽山道\nB{0}F																	
+0000-faultline_ridge-0000|data.Name		Faultline Ridge		Grat der Bruchlinie			Crepaccio della Faglia				断层山脊																	
+0000-faultline_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Faultline Ridge\n{0}F		Grat der Bruchlinie\nE{0}			Crepaccio della Faglia\nP{0}				断层山脊\n{0}F																	
+0000-fertile_valley-0000|data.Name		Fertile Valley		Fruchtbares Tal	Valle Fértil		Valle Fertile				丰饶山谷																	
+0000-fertile_valley-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Fertile Valley\nB{0}F		Fruchtbares Tal\nU{0}	Valle Fértil\nP-{0}		Valle Fertile\nP-{0}				丰饶山谷\nB{0}F																	
+0000-fertile_valley-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Muddy Valley\nB{0}F		Schlammiges Tal\nU{0}	Valle Lodoso\nP-{0}		Valle Fangosa\nP-{0}				泥泞山谷\nB{0}F																	
+0000-flyaway_cliffs-0000|data.Name		Flyaway Cliffs		Ausflugsklippen	Acantilado Nido		Colline del Volo				飞翔悬崖																	
+0000-flyaway_cliffs-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Flyaway Cliffs\n{0}F		Ausflugsklippen\nE{0}	Acantilado Nido\nP{0}		Colline del Volo\nP{0}				飞翔悬崖\n{0}F																	
+0000-forsaken_desert-0000|data.Name		Forsaken Desert		Verlassene Wüste	Desierto Abandonado		Deserto Abbandonato				落寂沙漠																	
+0000-forsaken_desert-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Forsaken Desert\n{0}F		Verlassene Wüste\nE{0}	Desierto Abandonado\nP{0}		Deserto Abbandonato\nP{0}				落寂沙漠\n{0}F																	
+0000-forsaken_desert-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room		Geheimer Raum	Sala Secreta		Stanza Segreta				秘密之间																	
+0000-geode_underpass-0000|data.Name		Geode Underpass		Geodenunterführung	Galería Geoda		Galleria Geode				紫晶地道																	
+0000-geode_underpass-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Geode Underpass\nB{0}F		Geodenunterführung\nU{0}	Galería Geoda\nP-{0}		Galleria Geode\nP-{0}				紫晶地道\nB{0}F																	
+0000-guildmaster_island-0000|data.Name		Guildmaster Island	Île du Maître de la Guilde	Gildenmeister-Insel	Isla Maestro		Isola del Maestro Gilda				公会会长之岛																	
+0000-guildmaster_trail-0000|data.Name		Guildmaster Trail		Gildenmeister-Pfad	Sendero del Maestro		Sentiero del Maestro Gilda				公会会长之路																	
+0000-guildmaster_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Guildmaster Trail\n{0}F		Gildenmeister-Pfad\nE{0}	Sendero del Maestro\nP{0}		Sentiero del Maestro Gilda\nP{0}				公会会长之路\n{0}F																	
+0000-hope_road-0000|data.Name		Hope Road		Pass der Hoffnung	Travesía Esperanza		Viale Speranza				希望之路																	
+0000-hope_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Hope Road\n{0}F		Pass der Hoffnung\nE{0}	Travesía Esperanza\nP{0}		Viale Speranza\nP{0}				希望之路\n{0}F																	
+0000-inscribed_cave-0000|data.Name		Inscribed Cave		Beschriftete Höhle	Cueva Inscrita		Caverna Incisa				刻文洞穴																	
+0000-inscribed_cave-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Inscribed Cave\nB{0}F		Beschriftete Höhle\nU{0}	Cueva Inscrita\nP-{0}		Caverna Incisa\nP-{0}				刻文洞穴\nB{0}F																	
+0000-labyrinth_of_the_lost-0000|data.Name		Labyrinth of the Lost		Labyrinth der Verlorenen	LABERINTO DE LOS PERDIDOS		Labirinto dei Dispersi				迷失迷阵																	
+0000-labyrinth_of_the_lost-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Labyrinth of the Lost\nB{0}F		Labyrinth der Verlorenen\nU{0}	Laberinto de los Perdidos\nP-{0}		Labirinto dei Dispersi\nP-{0}				迷失迷阵\nB{0}F																	
+0000-lava_floe_island-0000|data.Name		Lava Floe Island		Lavascholleninsel			Isola Banchisa di Lava				熔岩浮冰岛																	
+0000-lava_floe_island-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Lava Floe\nIsland\nB{0}F		Lavascholleninsel\nU{0}			Isola Banchisa di Lava\nP-{0}				熔岩浮冰岛\nB{0}F																	
+0000-lava_floe_island-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Abyssal Island\nB{0}F		Tiefseeinsel\nU{0}			Isola Abissale\nP-{0}				深渊之岛\nB{0}F																	
+0000-lost_seas-0000|data.Name		Lost Seas		Verlorene Seen	Mares Olvidados		Mare Perduto				迷失之海																	
+0000-lost_seas-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Lost Seas\nB{0}F		Verlorene Seen\nU{0}	Mares Olvidados\nP-{0}		Mare Perduto\nP-{0}				迷失之海\nB{0}F																	
+0000-moonlit_courtyard-0000|data.Name		Moonlit Courtyard		Mondheller Innenhof	Patio Luz de Luna		Prato Brillaluna				月光庭院																	
+0000-moonlit_courtyard-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Moonlit Courtyard\n{0}F		Mondheller Innenhof\nE{0}	Patio Luz de Luna\nP{0}		Prato Brillaluna\nP{0}				月光庭院\n{0}F																	
+0000-moonlit_courtyard-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Moonlit Temple\n{0}F		Mondheller Tempel\nE{0}	Templo Luz de Luna\nP{0}		Tempio Brillaluna\nP{0}				月光神庙\n{0}F																	
+0000-overgrown_wilds-0000|data.Name		Overgrown Wilds		Überwachsene Wildnis			Bosco Selvaggio				杂草原野																	
+0000-overgrown_wilds-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Overgrown Wilds\n{0}F		Überwachsene Wildnis\nE{0}			Bosco Selvaggio\nP{0}				杂草原野\n{0}F																	
+0000-overgrown_wilds-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Exotic Wilds\nB{0}F		Exotische Wildnis\nU{0}			Boscaglia Esotica\nP-{0}				异草原野\nB{0}F																	
+0000-prism_isles-0000|data.Name		Prism Isles		Prismeninseln	Islas Prisma		Isole Prisma				棱镜群岛																	
+0000-prism_isles-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		White Isle\n{0}F		Weiße Insel\nE{0}	Isla Blanca\nP{0}		Isola Candida\nP{0}				白澜岛\n{0}F																	
+0000-relic_tower-0000|data.Name		Relic Tower		Reliktenturm	Torre Reliquia		Torre Reliquia				遗迹之塔																	
+0000-relic_tower-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Relic Tower\n{0}F		Reliktenturm\nE{0}	Torre Reliquia\nP{0}		Torre Reliquia\nP{0}				遗迹之塔\n{0}F																	
+0000-royal_halls-0000|data.Name		Royal Halls		Königliche Hallen	Salones Reales		Sale Reali				庄严大厅																	
+0000-royal_halls-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Royal Halls\nB{0}F		Königliche Hallen\nE{0}	Salones Reales\nP-{0}		Sale Reali\nP-{0}				庄严大厅\nB{0}F																	
+0000-sacred_tower-0000|data.Name		Sacred Tower		Heiliger Turm	Torreón Sagrado		Torre Sacra				神圣之塔																	
+0000-sacred_tower-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Sacred Tower\n{0}F		Heiliger Turm\nE{0}	Torreón Sagrado\nP{0}		Torre Sacra\nP{0}				神圣之塔\n{0}F																	
+0000-secret_garden-0000|data.Name		Secret Garden		Geheimer Garten	Jardín Secreto		Giardino Segreto				秘密花园																	
+0000-secret_garden-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Secret Garden\nB{0}F		Geheimer Garten\nU{0}	Jardín Secreto\nP-{0}		Giardino Segreto\nP{0}				秘密花园\nB{0}F																	
+0000-sickly_hollow-0000|data.Name		Sickly Hollow		Kränkliche Bodensenke			Valle Malsana				毒疫洞穴																	
+0000-sickly_hollow-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Sickly Hollow\nB{0}F		Kränkliche Bodensenke\nU{0}			Valle Malsana\nP-{0}				毒疫洞穴\nB{0}F																	
+0000-sleeping_caldera-0000|data.Name		Sleeping Caldera		Schlafende Caldera	Caldera Durmiente		Caldera Dormiente				沉睡火山口																	
+0000-sleeping_caldera-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Sleeping Caldera\nB{0}F		Schlafende Caldera\nU{0}	Caldera Durmiente\nP-{0}		Caldera Dormiente\nP-{0}				沉睡火山口\nB{0}F																	
+0000-snowbound_path-0000|data.Name		Snowbound Path		Eingeschneiter Pfad	Paso Helado Errático		Passo Innevato				雪封小径																	
+0000-snowbound_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Snowbound Path\n{0}F		Eingeschneiter Pfad\nE{0}	Paso Helado Errático\nP{0}		Passo Innevato\nP{0}				雪封小径\n{0}F																	
+0000-snowbound_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Glacial Path\nB{0}F		Gletscherpfad\nU{0}			Sentiero Glaciale\nP-{0}				冰河小径\nB{0}F																	
+0000-starfall_heights-0000|data.Name		Starfall Heights		Sternenfallhöhen	Alto Lluevestrella		Alture Cometa				星陨高地																	
+0000-starfall_heights-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Starfall Heights\n{0}F		Sternenfallhöhen\nE{0}	Alto Lluevestrella\nP{0}		Alture Cometa\nP{0}				星陨高地\n{0}F																	
+0000-the_abyss-0000|data.Name		The Abyss		Die Kluft	El Abismo		L'Abisso				深渊																	
+0000-the_abyss-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Abyss\nB{0}F		Die Kluft\nU{0}	El Abismo\nP-{0}		L'Abisso\nP-{0}				深渊\nB{0}F																	
+0000-the_neverending_tale-0000|data.Name		The NeverEnding Tale		Die niemalsendende Geschichte			La Storia Senza Fine				无尽篇章																	
+0000-the_neverending_tale-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The NeverEnding Tale\nCh. {0}		Die niemalsendende Geschichte\nKap. {0}			La Storia Senza Fine\nCap. {0}				无尽篇章\n第{0}话																	
+0000-the_sky-0000|data.Name		The Sky		Der Himmel	El Cielo		Il Cielo				天空																	
+0000-the_sky-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Sky\n{0}F		Der Himmel\nE{0}	El Cielo\nP{0}		Il Cielo\nP{0}				天空\n{0}F																	
+0000-thunderstruck_pass-0000|data.Name		Thunderstruck Pass		Donnerschlag-Übergang	Senda Atónita		Sentiero Picchiatuono				雷霆山口																	
+0000-thunderstruck_pass-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Thunderstruck Pass\n{0}F		Donnerschlag-Übergang\nE{0}	Senda Atónita\nP{0}		Sentiero Picchiatuono\nP{0}				雷霆山口\n{0}F																	
+0000-tiny_tunnel-0000|data.Name		Tiny Tunnel		Winziger Tunnel	Túnel Pequeño		Piccola Galleria				小小地道																	
+0000-tiny_tunnel-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tiny Tunnel\nB{0}F		Winziger Tunnel\nU{0}	Túnel Pequeño\nP-{0}		Piccola Galleria\nP-{0}				小小地道\nB{0}F																	
+0000-training_maze-0000|data.Name		Training Maze		Trainings Labyrinth	Laberinto Entrenamiento		Labirinto Allenamento				训练迷宫																	
+0000-training_maze-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0000]).Name		Training Maze\nLv. {0}		Trainings Labyrinth\nLv.{0}	Laberinto Entrenamiento\nNiv. {0}		Labirinto Allenamento\n Liv. {0}				训练迷宫\nLv. {0}																	
+0000-treacherous_mountain-0000|data.Name		Treacherous Mountain		Tückisches Gebirge	Montaña Traicionera		Montagna Infida				奸诈山峰																	
+0000-treacherous_mountain-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Treacherous Mountain\n{0}F		Tückisches Gebirge\nE{0}	Montaña Traicionera\nP{0}		Montagna Infida\nP{0}				奸诈山峰\n{0}F																	
+0000-trickster_woods-0000|data.Name		Trickster Woods		Betrügerischer Wald	Arboleda Embaucadora		Bosco Imbroglio				戏法森林																	
+0000-trickster_woods-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Trickster Woods\n{0}F		Betrügerischer Wald\nE{0}	Arboleda Embaucadora\nP{0}		Bosco Imbroglio\nP{0}				戏法森林\n{0}F																	
+0000-trickster_woods-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Trickster Maze\nB{0}F		Betrügerisches Labyrinth\nU{0}	Enredado Embaucador\nP{0}		Labirinto Imbroglio\nP-{0}				戏法迷宫\nB{0}F																	
+0000-tropical_path-0000|data.Name		Tropical Path		Tropischer Pfad	Paso Tropical		Passaggio Tropicale				热带小径																	
+0000-tropical_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tropical Path\n{0}F		Tropischer Pfad\nE{0}	Paso Tropical\nP{0}		Passaggio Tropicale\nP{0}				热带小径\n{0}F																	
+0000-tropical_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room		Geheimer Raum	Sala Secreta		Stanza Segreta				秘密之间																	
+0000-veiled_ridge-0000|data.Name		Veiled Ridge		Verdeckter Grat	Ladera Velada		Crinale Velato				朦胧山脊																	
+0000-veiled_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Veiled Ridge\n{0}F		Verdeckter Grat\nE{0}	Ladera Velada\nP{0}		Crinale Velato\nP{0}				朦胧山脊\n{0}F																	
+0000-veiled_ridge-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Illusion Ridge\nB{0}F		Illusionsgrat\nU{0}	Ladera Ilusoria\nP-{0}		Cresta Illusione\nP-{0}				幻想山脊\nB{0}F																	
+0000-wayward_wetlands-0000|data.Name		Wayward Wetlands		Launische Auen	Humedales Caprichosos		Acquitrini Capriccio				任性湿地																	
+0000-wayward_wetlands-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wayward Wetlands\nB{0}F		Launische Auen\nU{0}							任性湿地\nB{0}F																	
+0000-wisdom_road-0000|data.Name		Wisdom Road		Pass der Weisheit	Sendero Sabiduría		Strada della Saggezza				智慧之路																	
+0000-wisdom_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Wisdom Road\n{0}F		Pass der Weisheit\nE{0}	Sendero Sabiduría\nP{0}		Strada della Saggezza\nP{0}				智慧之路\n{0}F																	

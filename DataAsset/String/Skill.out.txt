@@ -1646,7 +1646,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0840-esper_wing-0000|data.Name		Esper Wing			Ala Aural		Ali d'Aura		オーラウイング	オーラウイング	气场之翼	气场之翼																																																																																																																			
 0840-esper_wing-0001|data.Desc																																																																																																																															
 0841-bitter_malice-0000|data.Name		Bitter Malice			Rencor Reprimido		Livore		うらみつらみ	うらみつらみ	冤冤相报	冤冤相报																																																																																																																			
-0841-bitter_malice-0001|data.Desc																																																																																																																															
+0841-bitter_malice-0001|data.Desc		The user attacks the target with spine-chilling resentment. This may also leave the target frozen.																																																																																																																													
 0842-shelter-0000|data.Name		Shelter			Retracción		Barricata		たてこもる	たてこもる	闭关	闭关																																																																																																																			
 0842-shelter-0001|data.Desc																																																																																																																															
 0843-triple_arrows-0000|data.Name		Triple Arrows			Triple Flecha		Triplodardo		３ぼんのや	３ぼんのや	三连箭	三连箭																																																																																																																			
