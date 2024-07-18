@@ -26,7 +26,7 @@ namespace DataGenerator
             Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
 
             string[] args = Environment.GetCommandLineArgs();
-            PathMod.InitPathMod(args[0], "origin");
+            PathMod.InitPathMod(args[0]);
             DiagManager.InitInstance();
             Serializer.InitSettings(new SerializerContractResolver(), new UpgradeBinder());
             //DiagManager.Instance.CurSettings = DiagManager.Instance.LoadSettings();
@@ -161,7 +161,7 @@ namespace DataGenerator
                     }
                 }
 
-
+                PathMod.InitNamespaces();
                 GraphicsManager.InitParams();
 
                 DiagManager.Instance.DevMode = true;
