@@ -232,10 +232,11 @@ namespace DataGenerator.Data
 
             using (StreamReader file = new StreamReader(MONSTER_PATH + "releases.out.txt"))
             {
+                string[] header = file.ReadLine().Split('\t');
                 while (!file.EndOfStream)
                 {
                     string[] checks = file.ReadLine().Trim().Split('\t');
-                    pairs[checks[0] + "-" + checks[1]] = checks[2] == "TRUE";
+                    pairs[checks[1] + "-" + checks[3]] = checks[9] == "True";
                 }
             }
             return pairs;

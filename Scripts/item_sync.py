@@ -15,7 +15,7 @@ flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
 # at ~/.credentials/sheets.googleapis.com-python-quickstart.json
 SCOPES = 'https://www.googleapis.com/auth/spreadsheets'
 CLIENT_SECRET_FILE = 'client_secret.json'
-APPLICATION_NAME = 'Localization Sync'
+APPLICATION_NAME = 'Item Sync'
 SHEET_ID_FILE = 'item_sheet_id.txt'
 
 def get_credentials():

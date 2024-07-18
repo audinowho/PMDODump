@@ -5,7 +5,7 @@ from apiclient import discovery
 from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
-from talkGen import TalkGen
+from monsterGen import MonsterGen
 from subprocess import call
 
 import argparse
@@ -15,8 +15,8 @@ flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
 # at ~/.credentials/sheets.googleapis.com-python-quickstart.json
 SCOPES = 'https://www.googleapis.com/auth/spreadsheets'
 CLIENT_SECRET_FILE = 'client_secret.json'
-APPLICATION_NAME = 'Talk Sync'
-SHEET_ID_FILE = 'talk_sheet_id.txt'
+APPLICATION_NAME = 'Monster Sync'
+SHEET_ID_FILE = 'monster_sheet_id.txt'
 
 def get_credentials():
     """Gets valid user credentials from storage.
@@ -51,22 +51,25 @@ def get_sheet_id():
 
 def main():
     """
-    Synchronizes all strings in the entire project.  Hardcode, Script, and Data.
-    This code makes some hardcoded assumptions about the rest of the project file structure:
-    -The location of the hardcoded string table
-    -The location of the script directory
-    -The existence of various forms of content
-    -The existence of a build in the build folder (thus, the build step will actually have to be executed twice in a full deploy).
+    Synchronizes exclusive items for the project.
     """
     credentials = get_credentials()
     sheet_id = get_sheet_id()
 
-    talk = TalkGen()
-    talk.open_sheet(credentials, sheet_id)
+    monsterGen = MonsterGen()
+    monsterGen.open_sheet(credentials, sheet_id)
     print("Sheet opened.")
 
-    # Merge the talkstrings in StringsEx
-    talk.merge_talk_text("Species",os.path.join("..","DumpAsset","Strings","stringsEx"))
+    # Reference
+    monsterGen.write_data_text("releases", "Availability")
+
+    print("Updated References.")
+
+    # Monster Data
+    monsterGen.load_sheet_text("releases", "Availability")
+
+    print("Pulled Mons Data.")
+
     print("Complete.")
 
 if __name__ == '__main__':
