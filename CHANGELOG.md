@@ -1,14 +1,7 @@
-# 0.8.2 Changes #
+# 0.8.3 Changes #
 
-* Sorting will preserve multi-selections in menus
-* Fix range inaccuracies for move preview
-* Mission mod fixes
-* Added talk phrases to more post-gen6 species in town
-* Curse duration 5->10
-* Brave Bird, Flare Blitz PP 8->9
-* Take Down PP 18->17
-* Wild Charge PP 17->16
-* Volt Tackle PP 9->10, pierces through foes
-* Dev: Improve partner following logic
-* Dev: Lua modding no longer requires replacing whole files for maps, common functions, and event functions
-* BREAKING: Lua scripting has been migrated to a new system.  You must run -reserialize all for your mods.  More info @ https://wiki.pmdo.pmdcollab.org/Lua_Script_Migration
+* Dev: Modded data (such as Items, Monsters, Universal, etc) can now be saved as a patch instead of overwriting the entire file.  This allows your mod to play nice with other mods.  Use Right Click.
+* Dev: Building standalone games now works with the lua diff mod system.
+* Dev: Services can now use the OnAddMenu event to intercept and change menus.
+* Dev: Menus and menu elements now have labels, allowing modders to accurately change specific parts of specific menus they want.
+* Dev: ScriptableMenu.MenuElements is now DEPRECATED. Please use Elements instead.  Support will be dropped on v0.9
