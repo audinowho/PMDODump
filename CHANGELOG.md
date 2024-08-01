@@ -1,5 +1,6 @@
 # 0.8.3 Changes #
 
+* Fixed a bug with AI that misjudged ranges that were altered
 * Dev: Modded data (such as Items, Monsters, Universal, etc) can now be saved as a patch instead of overwriting the entire file.  This allows your mod to play nice with other mods.  Use Right Click.
 * Dev: Building standalone games now works with the lua diff mod system.
 * Dev: Services can now use the OnAddMenu event to intercept and change menus.

@@ -1645,7 +1645,7 @@ Key		EN	DE	PT	IT	ZH-HANS	FR	ES	KO	JA	JA-JP	ZH-HANT
 0839-barb_barrage-0001|data.Desc		The user launches countless toxic barbs to inflict damage. This may also poison the target. This move’s power is doubled if the target is already poisoned.				用无数的毒针进行攻击。有时还会让对手陷入中毒状态。攻击处于中毒状态的对手时，威力会变成2倍。 		El usuario lanza púas tóxicas para inflingir daño. Esto también puede envenenar al objetivo. La potencia se duplica si el objetivo está envenenado.				
 0840-esper_wing-0000|data.Name		Esper Wing			Ali d'Aura	气场之翼		Ala Aural		オーラウイング	オーラウイング	气场之翼
 0840-esper_wing-0001|data.Desc												
-0841-bitter_malice-0000|data.Name		Bitter Malice										
+0841-bitter_malice-0000|data.Name		Bitter Malice			Livore	冤冤相报		Rencor Reprimido		うらみつらみ	うらみつらみ	冤冤相报
 0841-bitter_malice-0001|data.Desc		The user attacks the target with spine-chilling resentment. This may also leave the target frozen.										
 0842-shelter-0000|data.Name		Shelter			Barricata	闭关		Retracción		たてこもる	たてこもる	闭关
 0842-shelter-0001|data.Desc												
