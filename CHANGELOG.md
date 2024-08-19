@@ -1,8 +1,7 @@
-# 0.8.3 Changes #
+# 0.8.4 Changes #
 
-* Fixed a bug with AI that misjudged ranges that were altered
-* Dev: Modded data (such as Items, Monsters, Universal, etc) can now be saved as a patch instead of overwriting the entire file.  This allows your mod to play nice with other mods.  Use Right Click.
-* Dev: Building standalone games now works with the lua diff mod system.
-* Dev: Services can now use the OnAddMenu event to intercept and change menus.
-* Dev: Menus and menu elements now have labels, allowing modders to accurately change specific parts of specific menus they want.
-* Dev: ScriptableMenu.MenuElements is now DEPRECATED. Please use Elements instead.  Support will be dropped on v0.9
+* Fixed test grounds loading error
+* Moonlit Courtyard exits to Cliff Camp
+* Moonlit Temple's exit stairs no longer take you to the end
+* Dev: Added HPFraction to AutoReviveEvent
+* Dev: Added import/export options for choice menus
