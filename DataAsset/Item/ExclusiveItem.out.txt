@@ -490,7 +490,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None	Volcano Torc	quilava	True	True					B	*	4*	054: DistanceDodge								True
 1* Hair		cyndaquil	True	True					C	*	1*	088: DoubleDash								True
 1* Claw		cyndaquil	True	True					D	*	2*	015: PracticeSwinger								True
-0* None	Blazing Rock	cyndaquil	True	True					E	*	3*	104: WeaknessDodge								True
+0* None	Blazing Rock	cyndaquil	True	True					E	*	3*	104: WeaknessDodge	ground							True
 2* Crest		quilava	False	True					F	*	3*	000: None								True
 3* Torc		feraligatr	True	True					A	*	5*	095: CelebrateCure								True
 0* None	Anger Scarf	croconaw	True	True					B	*	4*	049: ExcessiveForce								True
@@ -2027,8 +2027,8 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		guzzlord	False	False					F	*	2-3*	000: None								False
 0* None	Ultra Prism	necrozma	True	False					A	*	5*	098: StatusOnTypeHit	psychic	blinker						False
 2* Ore		necrozma	True	False					B	*	4*	047: Celebrate								False
-1* Horn		necrozma	True	False					C	*	1*	013: PPBoost								False
-1* Claw		necrozma	True	False					D	*	2*	048: Absorption						3		False
+1* Horn		necrozma	True	False					C	*	1*	013: PPBoost						2		False
+1* Claw		necrozma	True	False					D	*	2*	048: Absorption								False
 0* None		necrozma	True	False					E	*	2-3*	000: None								False
 0* None		necrozma	False	False					F	*	2-3*	000: None								False
 0* None	Clockwork Dress	magearna	True	False					A	*	5*	007: Nontraitor								False
