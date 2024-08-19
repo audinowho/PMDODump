@@ -562,7 +562,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A seed that revives a fainted Pokémon, then becomes a Plain Seed after use.");
                 item.Sprite = "Seed_Yellow";
                 item.BagEffect = true;
-                item.OnDeaths.Add(5, new AutoReviveEvent(true, "seed_plain"));
+                item.OnDeaths.Add(5, new AutoReviveEvent(true, "seed_plain", 1));
             }
             else if (ii == 102)
             {
