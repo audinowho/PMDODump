@@ -32,6 +32,7 @@ namespace DataGenerator.Data
 
         static MobSpawnStep<MapGenContext> GetUnownSpawns(string unown, int level, bool unrecruitable)
         {
+            level = Math.Max(level, 1);
             MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
             PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
             for (int ii = 0; ii < unown.Length; ii++)

@@ -276,9 +276,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "small_square", -2, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "tall_hall", -2, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, DungeonStage.Beginner, "wide_hall", -2, false, false), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
