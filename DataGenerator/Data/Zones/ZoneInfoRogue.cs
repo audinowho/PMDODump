@@ -3231,7 +3231,7 @@ namespace DataGenerator.Data
 
                 shopZoneSpawns.Add(shop, new IntRange(5, max_floors), 10);
             }
-            SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandRange(4, 14), new IntRange(2, 38)), PR_SHOPS, shopZoneSpawns);
+            SpreadStepRangeZoneStep shopZoneStep = new SpreadStepRangeZoneStep(new SpreadPlanSpaced(new RandRange(4, 12), new IntRange(2, 38)), PR_SHOPS, shopZoneSpawns);
             shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
             floorSegment.ZoneSteps.Add(shopZoneStep);
 
