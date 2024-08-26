@@ -880,6 +880,11 @@ Key		EN
 0017-xcl_family_clefairy_04-0000|data.Name		Starry Ore
 0017-xcl_family_corphish_00-0000|data.Name		Cower Sash
 0017-xcl_family_corsola_00-0000|data.Name		Eager Brooch
+0017-xcl_family_cosmog_00-0000|data.Name		Solar Crown
+0017-xcl_family_cosmog_01-0000|data.Name		Lunar Mantle
+0017-xcl_family_cosmog_02-0000|data.Name		Cosmic Dust
+0017-xcl_family_cosmog_03-0000|data.Name		Cosmic Ring
+0017-xcl_family_cosmog_04-0000|data.Name		Cosmic Shell
 0017-xcl_family_cranidos_00-0000|data.Name		Skull Helmet
 0017-xcl_family_cresselia_00-0000|data.Name		Lunar Veil
 0017-xcl_family_cyndaquil_00-0000|data.Name		Blast Bangle
@@ -888,7 +893,6 @@ Key		EN
 0017-xcl_family_darkrai_00-0000|data.Name		Eclipse Robe
 0017-xcl_family_delibird_00-0000|data.Name		Snow Brooch
 0017-xcl_family_deoxys_00-0000|data.Name		Revive Robe
-0017-xcl_family_dewpider_01-0000|data.Name		Araquanid Bubble
 0017-xcl_family_dialga_00-0000|data.Name		Time Shield
 0017-xcl_family_dialga_04-0000|data.Name		Time Jewel
 0017-xcl_family_doduo_00-0000|data.Name		Fight Torc
@@ -912,9 +916,13 @@ Key		EN
 0017-xcl_family_electabuzz_00-0000|data.Name		Voltaic Band
 0017-xcl_family_electabuzz_04-0000|data.Name		Jolt Charm
 0017-xcl_family_electabuzz_05-0000|data.Name		Charge Seal
+0017-xcl_family_eternatus_00-0000|data.Name		Eternamax Core
 0017-xcl_family_farfetchd_00-0000|data.Name		Bullseye Bow
 0017-xcl_family_feebas_00-0000|data.Name		Grace Scarf
-0017-xcl_family_fomantis_00-0000|data.Name		Disguise Blade
+0017-xcl_family_flutter_mane_00-0000|data.Name		Flutter Specs
+0017-xcl_family_flutter_mane_01-0000|data.Name		Flutter Wings
+0017-xcl_family_flutter_mane_02-0000|data.Name		Flutter Fang
+0017-xcl_family_flutter_mane_03-0000|data.Name		Flutter Cape
 0017-xcl_family_gastly_00-0000|data.Name		Sunglasses
 0017-xcl_family_gastly_01-0000|data.Name		Slip Scarf
 0017-xcl_family_genesect_00-0000|data.Name		G-Scope
@@ -947,6 +955,10 @@ Key		EN
 0017-xcl_family_horsea_00-0000|data.Name		Tornado Bow
 0017-xcl_family_horsea_01-0000|data.Name		Swirl Scarf
 0017-xcl_family_houndour_00-0000|data.Name		Pit Fang
+0017-xcl_family_iron_bundle_00-0000|data.Name		Freezing Bundle
+0017-xcl_family_iron_bundle_01-0000|data.Name		Bundle Guard
+0017-xcl_family_iron_bundle_02-0000|data.Name		Bundle Beak
+0017-xcl_family_iron_bundle_03-0000|data.Name		Bundle Scope
 0017-xcl_family_jigglypuff_00-0000|data.Name		Friend Torc
 0017-xcl_family_jigglypuff_01-0000|data.Name		Snooze Ring
 0017-xcl_family_jigglypuff_04-0000|data.Name		Bouncy Charm
@@ -987,6 +999,7 @@ Key		EN
 0017-xcl_family_lugia_04-0000|data.Name		Silver Brooch
 0017-xcl_family_lugia_05-0000|data.Name		Deep Sea Jewel
 0017-xcl_family_lunatone_solrock_06-0000|data.Name		Meteor Charm
+0017-xcl_family_magearna_00-0000|data.Name		Clockwork Dress
 0017-xcl_family_magikarp_00-0000|data.Name		Tempest Sash
 0017-xcl_family_magmar_04-0000|data.Name		Ember Jewel
 0017-xcl_family_magmar_05-0000|data.Name		Erupt Ore
@@ -1017,7 +1030,8 @@ Key		EN
 0017-xcl_family_mr_mime_03-0000|data.Name		Junior Card
 0017-xcl_family_mr_mime_04-0000|data.Name		Mimic Pebble
 0017-xcl_family_mr_mime_05-0000|data.Name		Bulwark Rock
-0017-xcl_family_munna_00-0000|data.Name		Dream Mist
+0017-xcl_family_munna_01-0000|data.Name		Dream Mist
+0017-xcl_family_necrozma_00-0000|data.Name		Ultra Prism
 0017-xcl_family_nidoran_00-0000|data.Name		Impact Torc
 0017-xcl_family_nidoran_01-0000|data.Name		Nido-Crest
 0017-xcl_family_nidoran_02-0000|data.Name		Nido-Claw
@@ -1071,6 +1085,8 @@ Key		EN
 0017-xcl_family_regi_trio_08-0000|data.Name		Ice Sash
 0017-xcl_family_regi_trio_12-0000|data.Name		Steel Sash
 0017-xcl_family_regi_trio_16-0000|data.Name		Royal Mantle
+0017-xcl_family_regidrago_00-0000|data.Name		Dragon Sash
+0017-xcl_family_regieleki_00-0000|data.Name		Electric Sash
 0017-xcl_family_reshiram_00-0000|data.Name		Blazing Band
 0017-xcl_family_reshiram_01-0000|data.Name		Truth Lens
 0017-xcl_family_rhyhorn_01-0000|data.Name		Pierce Drill
@@ -1166,8 +1182,6 @@ Key		EN
 0017-xcl_family_volbeat_illumise_00-0000|data.Name		Neon Scarf
 0017-xcl_family_volbeat_illumise_01-0000|data.Name		Evening Bow
 0017-xcl_family_volbeat_illumise_06-0000|data.Name		Glowing Seal
-0017-xcl_family_volcanion_00-0000|data.Name		Thermal Scope
-0017-xcl_family_volcanion_03-0000|data.Name		Volcanion Scale
 0017-xcl_family_vulpix_00-0000|data.Name		Afire Collar
 0017-xcl_family_wailmer_00-0000|data.Name		Huge Bow
 0017-xcl_family_weedle_00-0000|data.Name		Charge Scarf

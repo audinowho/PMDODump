@@ -1,12 +1,38 @@
 Sheet: Hardcode
 
 Sheet: Content
+    * Deleted key TALK_REST_0201_00_VAR_00
 
 Sheet: Script
+    * Added ground\cliff_camp/DexRater_Check_000
 
 Sheet: Abilities
 
 Sheet: Items
+    * Added 0017-xcl_family_cosmog_00-0000|data.Name
+    * Added 0017-xcl_family_cosmog_01-0000|data.Name
+    * Added 0017-xcl_family_cosmog_02-0000|data.Name
+    * Added 0017-xcl_family_cosmog_03-0000|data.Name
+    * Added 0017-xcl_family_cosmog_04-0000|data.Name
+    * Deleted key 0017-xcl_family_dewpider_01-0000|data.Name
+    * Added 0017-xcl_family_eternatus_00-0000|data.Name
+    * Added 0017-xcl_family_flutter_mane_00-0000|data.Name
+    * Added 0017-xcl_family_flutter_mane_01-0000|data.Name
+    * Added 0017-xcl_family_flutter_mane_02-0000|data.Name
+    * Added 0017-xcl_family_flutter_mane_03-0000|data.Name
+    * Deleted key 0017-xcl_family_fomantis_00-0000|data.Name
+    * Added 0017-xcl_family_iron_bundle_00-0000|data.Name
+    * Added 0017-xcl_family_iron_bundle_01-0000|data.Name
+    * Added 0017-xcl_family_iron_bundle_02-0000|data.Name
+    * Added 0017-xcl_family_iron_bundle_03-0000|data.Name
+    * Added 0017-xcl_family_magearna_00-0000|data.Name
+    * Deleted key 0017-xcl_family_munna_00-0000|data.Name
+    * Added 0017-xcl_family_munna_01-0000|data.Name, transferred from 0017-xcl_family_munna_00-0000|data.Name
+    * Added 0017-xcl_family_necrozma_00-0000|data.Name
+    * Added 0017-xcl_family_regidrago_00-0000|data.Name
+    * Added 0017-xcl_family_regieleki_00-0000|data.Name
+    * Deleted key 0017-xcl_family_volcanion_00-0000|data.Name
+    * Deleted key 0017-xcl_family_volcanion_03-0000|data.Name
 
 Sheet: MapStatuses
 

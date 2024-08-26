@@ -3,12 +3,12 @@ ExclusiveItemType.Apron	Pokemon name goes into the {0}	{0} Apron	Tablier de {0}	
 ExclusiveItemType.Armlet	Ex. "Pikachu Armlet"	{0} Armlet	Brassard de {0}	{0} Armband	Brazal {0}	Bracelete {0}	Fascia {0}				{0}臂章
 ExclusiveItemType.Armor	"Rhydon Armor"	{0} Armor	Armure de {0}	{0} Rüstung	Coraza {0}	Armadura {0}	Armatura {0}				{0}铠甲
 ExclusiveItemType.Aroma	"Bellossom Aroma"	{0} Aroma	Arôme de {0}	{0} Aroma	Aroma {0}	Perfume {0}	Aroma {0}				{0}香水
-ExclusiveItemType.Band	etc.	{0} Band	Bandeau de {0}	{0} Band	Banda {0}	Anel {0}	Banda {0}				{0}头巾
-ExclusiveItemType.Bangle		{0} Bangle	Bracelet de {0}	{0} Armreif	Pulsera {0}	Pulseira {0}	Bracciale {0}				{0}手镯
-ExclusiveItemType.Beam	Translated from Japanese as "Light".  Ex "Mantyke Beam" means "Mantyke's Light".  It also shows up as a yellow-colored orb sprite in game.	{0} Beam	Rayon de {0}	{0} Strahl	Rayo {0}	Luz de {0}	Luce di {0}				{0}之光
-ExclusiveItemType.Belt		{0} Belt	Ceinture de {0}	{0} Gürtel	Cinto {0}	Cinto {0}	Cintura {0}				{0}腰带
-ExclusiveItemType.Blade		{0} Blade	Lame de {0}	{0} Klinge	Cuchilla {0}	Lâmina {0}	Lama {0}				{0}刃片
-ExclusiveItemType.Bow		{0} Bow	Ruban de {0}	{0} Bogen	Lazo {0}	Laço {0}	Fiocco {0}				{0}缎带
+ExclusiveItemType.Band	etc.	{0} Band	Bandeau de {0}	{0} Band	Banda {0}	Anel {0}	Banda {0}		｛0｝のバンダナ	｛0｝のバンダナ	{0}头巾
+ExclusiveItemType.Bangle		{0} Bangle	Bracelet de {0}	{0} Armreif	Pulsera {0}	Pulseira {0}	Bracciale {0}		｛0｝のリング	｛0｝のリング	{0}手镯
+ExclusiveItemType.Beam	Translated from Japanese as "Light".  Ex "Mantyke Beam" means "Mantyke's Light".  It also shows up as a yellow-colored orb sprite in game.	{0} Beam	Rayon de {0}	{0} Strahl	Rayo {0}	Luz de {0}	Luce di {0}		｛0｝のひかり	｛0｝のひかり	{0}之光
+ExclusiveItemType.Belt		{0} Belt	Ceinture de {0}	{0} Gürtel	Cinto {0}	Cinto {0}	Cintura {0}		｛0｝のベルト	｛0｝のベルト	{0}腰带
+ExclusiveItemType.Blade		{0} Blade	Lame de {0}	{0} Klinge	Cuchilla {0}	Lâmina {0}	Lama {0}		｛0｝のやいば	｛0｝のやいば	{0}刃片
+ExclusiveItemType.Bow		{0} Bow	Ruban de {0}	{0} Bogen	Lazo {0}	Laço {0}	Fiocco {0}		｛0｝のリボン	｛0｝のリボン	{0}缎带
 ExclusiveItemType.Branch		{0} Branch	Branche de {0}	{0} Zweig	Rama {0}	Galho {0}	Ramo {0}				{0}木枝
 ExclusiveItemType.Brooch		{0} Brooch	Broche de {0}	{0} Brosche	Broche {0}		Spilla {0}				{0}胸针
 ExclusiveItemType.Cap		{0} Cap	Chapeau de {0}	{0} Mütze	Gorra {0}		Berretto {0}				{0}帽子
