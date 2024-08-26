@@ -1408,7 +1408,7 @@ namespace DataGenerator.Data
             }
             else if (type == ExclusiveItemEffect.LungeAttack)
             {
-                item.Rarity = 3;
+                item.Rarity = 5;
                 item.Desc = new LocalText("When kept in the bag, it changes the Pokémon's regular attack into a dash.");
                 if (includeEffects)
                 {
