@@ -6,9 +6,8 @@
     <AssemblyName>DataGenerator</AssemblyName>
     <AssemblyVersion>0.8.4</AssemblyVersion>
     <AssemblyCopyright>Audino 2024</AssemblyCopyright>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
   <PropertyGroup>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
