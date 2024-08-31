@@ -6867,18 +6867,28 @@ namespace DataGenerator.Data
             }
             else if (ii == 830)
             {
-                skill.Name = new LocalText("**Stone Axe");
-                skill.Desc = new LocalText("");
+                skill.Name = new LocalText("-Stone Axe");
+                skill.Desc = new LocalText("The user swings its stone axes at the target. Stone splinters left behind by this attack float around the target.");
                 skill.BaseCharges = 15;
                 skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.SkillStates.Set(new BladeState());
-                skill.Data.HitRate = 90;
-                skill.Data.SkillStates.Set(new BasePowerState(65));
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(70));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
+                skill.Data.OnHitTiles.Add(0, new SetTrapEvent("trap_stealth_rock"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
+                ((AttackAction)skill.HitboxAction).HitTiles = true;
+                ((AttackAction)skill.HitboxAction).WideAngle = AttackCoverage.Wide;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Slash";
+                SingleEmitter single = new SingleEmitter(new AnimData("Slash_Ranger", 3));
+                single.Offset = 16;
+                skill.HitboxAction.ActionFX.Emitter = single;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
             }
@@ -7153,18 +7163,28 @@ namespace DataGenerator.Data
             }
             else if (ii == 845)
             {
-                skill.Name = new LocalText("**Ceaseless Edge");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Name = new LocalText("-Ceaseless Edge");
+                skill.Desc = new LocalText("The user slashes its shell blade at the target. Shell splinters left behind by this attack remain scattered under the target as spikes.");
+                skill.BaseCharges = 14;
                 skill.Data.Element = "dark";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new BladeState());
-                skill.Data.HitRate = 90;
-                skill.Data.SkillStates.Set(new BasePowerState(65));
+                skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.HitRate = 85;
+                skill.Data.SkillStates.Set(new BasePowerState(70));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
+                skill.Data.OnHitTiles.Add(0, new SetTrapEvent("trap_spikes"));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(13);//Slice
+                ((ProjectileAction)skill.HitboxAction).Range = 2;
+                ((ProjectileAction)skill.HitboxAction).Speed = 8;
+                ((ProjectileAction)skill.HitboxAction).Rays = ProjectileAction.RayCount.Three;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
+                ((ProjectileAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
             }
