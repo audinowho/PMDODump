@@ -236,7 +236,7 @@ namespace DataGenerator.Data
                 while (!file.EndOfStream)
                 {
                     string[] checks = file.ReadLine().Trim().Split('\t');
-                    pairs[checks[1] + "-" + checks[3]] = checks[9] == "True";
+                    pairs[checks[2] + "-" + checks[4]] = checks[10] == "True";
                 }
             }
             return pairs;
@@ -1665,10 +1665,21 @@ namespace DataGenerator.Data
                     (string, SkillData) skill = SkillInfo.GetSkillData(Convert.ToInt32(reader["move_id"].ToString()));
                     levelMove.Skill = skill.Item1;
 
+                    //Girafarig gets Twin Beam at level 32
+                    //Primeape gets Rage Fist at level 35
+                    //Stantler gets Psyshield Bash at level 31
+                    //Dunsparce gets Hyper Drill at level 32
                     entry.LevelSkills.Add(levelMove);
                 }
             }
-
+            if (dexId == 57) //primeape
+                InsertLevelSkill(entry.LevelSkills, new LevelUpSkill("rage_fist", 35));
+            else if (dexId == 203) //girafarig
+                InsertLevelSkill(entry.LevelSkills, new LevelUpSkill("twin_beam", 32));
+            else if (dexId == 206) //dunsparce
+                InsertLevelSkill(entry.LevelSkills, new LevelUpSkill("hyper_drill", 32));
+            else if (dexId == 234) //tantler
+                InsertLevelSkill(entry.LevelSkills, new LevelUpSkill("psyshield_bash", 31));
 
             //other moves
             sql = "SELECT * FROM pokemon_v2_pokemonmove WHERE pokemon_id = " + dexId + " AND version_group_id > 4 AND version_group_id <= "+ version + " AND move_learn_method_id > 1";
@@ -1894,6 +1905,17 @@ namespace DataGenerator.Data
             LastOf2,
             MidOf3,
             LastOf3
+        }
+
+        public static void InsertLevelSkill(List<LevelUpSkill> skills, LevelUpSkill newSkill)
+        {
+            int insertIdx = 0;
+            foreach (LevelUpSkill skill in skills)
+            {
+                if (skill.Level < newSkill.Level)
+                    insertIdx++;
+            }
+            skills.Insert(insertIdx, newSkill);
         }
 
         public static void MapJoinRateCount(int dexIndex, MonsterData[] totalEntries, Dictionary<int, EvoPosition> evoStatus, Dictionary<EvoPosition, List<int>> evoBuckets)
@@ -2913,6 +2935,22 @@ namespace DataGenerator.Data
             }
         }
 
+
+
+        private static int CompareMonEntries((int familyIndex, string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff) key1, (int familyIndex, string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff) key2)
+        {
+            int cmp = Math.Sign(key1.familyIndex - key2.familyIndex);
+            if (cmp != 0)
+                return cmp;
+            cmp = Math.Sign(key1.index - key2.index);
+            if (cmp != 0)
+                return cmp;
+            cmp = Math.Sign(key1.key.Form - key2.key.Form);
+            if (cmp != 0)
+                return cmp;
+            return 0;
+        }
+
         /// <summary>
         /// Prints the mon number, form, name, list missing moves/abilities, boolean sprite exists, what dungeon to find (recruitable). Spreadsheet will add "certified"
         /// </summary>
@@ -2953,7 +2991,7 @@ namespace DataGenerator.Data
                 evoTrees.Add((monsterKeys[ii], family));
             }
 
-            List<(string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff)> totalMons = new List<(string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff)>();
+            List<(int familyIndex, string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff)> totalMons = new List<(int familyIndex, string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff)>();
 
             for (int ii = 0; ii < evoTrees.Count; ii++)
             {
@@ -2972,17 +3010,22 @@ namespace DataGenerator.Data
                     else if (encounterDict.ContainsKey(key))
                         dungeons = encounterDict[key];
 
+                    MonsterEntrySummary familyEntrySummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Get(family);
+                    int familyIndex = familyEntrySummary.SortOrder;
+
                     bool sprite = hasFormeGraphics(monId, key.Form);
                     bool changed = recentChanges.Contains((monId, key.Form));
-                    totalMons.Add((family, monId, key, name, mechanics, dungeons, sprite, changed));
+                    totalMons.Add((familyIndex, family, monId, key, name, mechanics, dungeons, sprite, changed));
                 }
             }
 
+            totalMons.Sort(CompareMonEntries);
+
             using (StreamWriter file = new StreamWriter(GenPath.MONSTER_PATH + "releases.txt"))
             {
-                foreach ((string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff) mon in totalMons)
+                foreach ((int familyIndex, string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff) mon in totalMons)
                 {
-                    file.WriteLine(mon.family + "\t" + mon.index.ToString("D4") + "\t" + mon.key.Species + "\t" + mon.key.Form + "\t" + mon.name + "\t" + mon.mechanics + "\t" + mon.dungeons + "\t" + (mon.sprite ? "TRUE" : "FALSE") + "\t" + (mon.diff ? "TRUE" : "FALSE"));
+                    file.WriteLine(mon.familyIndex + "\t" + mon.family + "\t" + mon.index + "\t" + mon.key.Species + "\t" + mon.key.Form + "\t" + mon.name + "\t" + mon.mechanics + "\t" + mon.dungeons + "\t" + (mon.sprite ? "TRUE" : "FALSE") + "\t" + (mon.diff ? "TRUE" : "FALSE"));
                 }
             }
         }
