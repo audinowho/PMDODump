@@ -6831,19 +6831,25 @@ namespace DataGenerator.Data
             }
             else if (ii == 828)
             {
-                skill.Name = new LocalText("**Psyshield Bash");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 10;
+                skill.Name = new LocalText("Psyshield Bash");
+                skill.Desc = new LocalText("Cloaking itself in psychic energy, the user slams into the target. This also boosts the user’s Defense stat.");
+                skill.BaseCharges = 12;
                 skill.Data.Element = "psychic";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
-                skill.Data.HitRate = 90;
-                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.HitRate = 100;
+                skill.Data.SkillStates.Set(new BasePowerState(60));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(100));
+                skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent("mod_defense", false, true, 1)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).Range = 3;
+                ((DashAction)skill.HitboxAction).StopAtWall = true;
+                ((DashAction)skill.HitboxAction).StopAtHit = true;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
             }
             else if (ii == 829)
             {
@@ -7829,19 +7835,34 @@ namespace DataGenerator.Data
             }
             else if (ii == 887)
             {
-                skill.Name = new LocalText("**Hyper Drill");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 5;
+                skill.Name = new LocalText("Hyper Drill");
+                skill.Desc = new LocalText("The user spins the pointed part of its body at high speed to pierce the target. This attack can hit a target using a move such as Protect or Detect.");
+                skill.BaseCharges = 13;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("wide_guard", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("quick_guard", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("all_protect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("detect", true));
+                skill.Data.BeforeHits.Add(-1, new RemoveStatusBattleEvent("kings_shield", true));
+                SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).CharAnim = 20;//Jab
+                ((DashAction)skill.HitboxAction).Range = 3;
+                ((DashAction)skill.HitboxAction).WideAngle = LineCoverage.FrontAndCorners;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
+                ((DashAction)skill.HitboxAction).AnimOffset = 12;
+                ((DashAction)skill.HitboxAction).Anim = new AnimData("Fury_Attack", 2);
+                skill.HitboxAction.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                skill.Explosion.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                skill.HitboxAction.ActionFX.Sound = "DUN_Fire_Blast";
             }
             else if (ii == 888)
             {
@@ -7872,19 +7893,27 @@ namespace DataGenerator.Data
             }
             else if (ii == 889)
             {
-                skill.Name = new LocalText("**Rage Fist");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 10;
+                skill.Name = new LocalText("Rage Fist");
+                skill.Desc = new LocalText("The user converts its rage into energy to attack. The more times the user has been hit before attacking, the greater the move's power.");
+                skill.BaseCharges = 14;
                 skill.Data.Element = "ghost";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.SkillStates.Set(new ContactState());
+                skill.Data.SkillStates.Set(new FistState());
+                skill.Data.BeforeHits.Add(0, new PrevHitBasePowerEvent(40, false, "was_hurt_since_attack", 10));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).CharAnim = 11;//Punch
+                ((DashAction)skill.HitboxAction).Range = 2;
+                ((DashAction)skill.HitboxAction).StopAtHit = true;
+                ((DashAction)skill.HitboxAction).StopAtWall = true;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
+                skill.HitboxAction.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Explosion.TargetAlignments = Alignment.Foe | Alignment.Friend;
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Print_Fist", 12));
             }
             else if (ii == 890)
             {

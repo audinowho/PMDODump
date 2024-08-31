@@ -1091,8 +1091,9 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Reduces damage done to nearby allies.");
                 ability.ProximityEvent.Radius = 1;
                 ability.ProximityEvent.TargetAlignments = Alignment.Friend;
+                SingleEmitter preEmitter = new SingleEmitter(new AnimData("Charge_Up", 3));
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
-                ability.ProximityEvent.BeforeBeingHits.Add(0, new MultiplyDamageEvent(3, 4, new MessageOnceEvent(new FriendGuardProcEvent(), false, true, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10), new StringKey())));
+                ability.ProximityEvent.BeforeBeingHits.Add(0, new MultiplyDamageEvent(3, 4, new OwnerBattleAnimEvent(preEmitter, ""), new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 133)
             {
@@ -1662,8 +1663,16 @@ namespace DataGenerator.Data
             }
             else if (ii == 214)
             {
-                ability.Name = new LocalText("**Queenly Majesty");
-                ability.Desc = new LocalText("Its majesty pressures the opposing Pokémon, making it unable to attack using priority moves.");
+                ability.Name = new LocalText("Queenly Majesty");
+                ability.Desc = new LocalText("Its majesty pressures opposing Pokémon, reducing their Attack Range.");
+                ability.ProximityEvent.Radius = 3;
+                ability.ProximityEvent.TargetAlignments = Alignment.Foe;
+                SingleEmitter preEmitter = new SingleEmitter(new AnimData("Metal_Burst", 2));
+                FiniteAreaEmitter emitter = new FiniteAreaEmitter(new AnimData("Sparkle_RSE", 2));
+                emitter.Range = GraphicsManager.TileSize;
+                emitter.Speed = GraphicsManager.TileSize * 10;
+                emitter.TotalParticles = 5;
+                ability.ProximityEvent.OnActions.Add(-1, new AddRangeEvent(-1, new OwnerBattleAnimEvent(preEmitter, ""), new BattleAnimEvent(emitter, "DUN_Metal_Sound", false, 10)));
             }
             else if (ii == 215)
             {
@@ -1687,8 +1696,16 @@ namespace DataGenerator.Data
             }
             else if (ii == 219)
             {
-                ability.Name = new LocalText("**Dazzling");
-                ability.Desc = new LocalText("Surprises the opposing Pokémon, making it unable to attack using priority moves.");
+                ability.Name = new LocalText("Dazzling");
+                ability.Desc = new LocalText("The Pokémon dazzles its opponents, reducing their Attack Range.");
+                ability.ProximityEvent.Radius = 3;
+                ability.ProximityEvent.TargetAlignments = Alignment.Foe;
+                SingleEmitter preEmitter = new SingleEmitter(new AnimData("Metal_Burst", 2));
+                FiniteAreaEmitter emitter = new FiniteAreaEmitter(new AnimData("Sparkle_RSE", 2));
+                emitter.Range = GraphicsManager.TileSize;
+                emitter.Speed = GraphicsManager.TileSize * 10;
+                emitter.TotalParticles = 5;
+                ability.ProximityEvent.OnActions.Add(-1, new AddRangeEvent(-1, new OwnerBattleAnimEvent(preEmitter, ""), new BattleAnimEvent(emitter, "DUN_Metal_Sound", false, 10)));
             }
             else if (ii == 220)
             {
@@ -2135,8 +2152,10 @@ namespace DataGenerator.Data
             }
             else if (ii == 296)
             {
-                ability.Name = new LocalText("**Armor Tail");
-                ability.Desc = new LocalText("");
+                ability.Name = new LocalText("Armor Tail");
+                ability.Desc = new LocalText("The mysterious tail covering the Pokémon's head protects it from distant attacks.");
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
+                ability.BeforeBeingHits.Add(0, new DistantGuardEvent(3, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 297)
             {

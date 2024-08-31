@@ -2022,7 +2022,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Blinker");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon has its Attack Range limited, allowing it to hit only targets in front. This status wears off after many turns have passed.");
+                status.Desc = new LocalText("The Pokémon has its Attack Range dropped to its lowest level. This status wears off after many turns have passed.");
                 status.Emoticon = "Blind_Blue";
                 status.StatusStates.Set(new TransferStatusState());
                 status.StatusStates.Set(new BadStatusState());
@@ -2494,6 +2494,12 @@ namespace DataGenerator.Data
                 status.OnRefresh.Add(0, new DisableEvent());
                 status.OnSkillChanges.Add(0, new UpdateIndicesEvent());
                 status.OnActions.Add(0, new OnAggressionEvent(new RemoveBattleEvent()));
+            }
+            else if (ii == 141)
+            {
+                status.Name = new LocalText("Was Hurt Since Attack");
+                status.StatusStates.Set(new StackState(1));
+                status.AfterActions.Add(0, new OnAggressionEvent(new RemoveBattleEvent()));
             }
 
             if (status.Name.DefaultText.StartsWith("**"))
