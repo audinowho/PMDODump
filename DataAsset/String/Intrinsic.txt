@@ -428,7 +428,7 @@ Key		EN
 0213-comatose-0000|data.Name		Comatose
 0213-comatose-0001|data.Desc		It's always drowsing and will never wake up. It can attack without waking up.
 0214-queenly_majesty-0000|data.Name		Queenly Majesty
-0214-queenly_majesty-0001|data.Desc		Its majesty pressures the opposing Pokémon, making it unable to attack using priority moves.
+0214-queenly_majesty-0001|data.Desc		Its majesty pressures opposing Pokémon, reducing their Attack Range.
 0215-innards_out-0000|data.Name		Innards Out
 0215-innards_out-0001|data.Desc		Damages the attacker landing the finishing hit by the amount equal to its last HP.
 0216-dancer-0000|data.Name		Dancer
@@ -438,7 +438,7 @@ Key		EN
 0218-fluffy-0000|data.Name		Fluffy
 0218-fluffy-0001|data.Desc		Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.
 0219-dazzling-0000|data.Name		Dazzling
-0219-dazzling-0001|data.Desc		Surprises the opposing Pokémon, making it unable to attack using priority moves.
+0219-dazzling-0001|data.Desc		The Pokémon dazzles its opponents, reducing their Attack Range.
 0220-soul_heart-0000|data.Name		Soul-Heart
 0220-soul_heart-0001|data.Desc		Boosts its Sp. Atk stat every time a Pokémon faints.
 0221-tangling_hair-0000|data.Name		Tangling Hair
@@ -592,7 +592,7 @@ Key		EN
 0295-toxic_debris-0000|data.Name		Toxic Debris
 0295-toxic_debris-0001|data.Desc		Scatters poison spikes when the Pokémon takes damage from physical moves.
 0296-armor_tail-0000|data.Name		Armor Tail
-0296-armor_tail-0001|data.Desc		
+0296-armor_tail-0001|data.Desc		The mysterious tail covering the Pokémon's head protects it from distant attacks.
 0297-earth_eater-0000|data.Name		Earth Eater
 0297-earth_eater-0001|data.Desc		
 0298-mycelium_might-0000|data.Name		Mycelium Might

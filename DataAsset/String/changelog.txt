@@ -1,44 +1,30 @@
 Sheet: Hardcode
 
 Sheet: Content
-    * Deleted key TALK_REST_0201_00_VAR_00
+    * Changed MSG_BUFF_MINUS_3 from "{0}'s {1} fell drastically!" to "{0}'s {1} fell severely!"
 
 Sheet: Script
-    * Added ground\cliff_camp/DexRater_Check_000
 
 Sheet: Abilities
+    * Significantly changed 0214-queenly_majesty-0001|data.Desc from "Its majesty pressures the opposing Pokémon, making it unable to attack using priority moves." to "Its majesty pressures opposing Pokémon, reducing their Attack Range."
+    * Significantly changed 0219-dazzling-0001|data.Desc from "Surprises the opposing Pokémon, making it unable to attack using priority moves." to "The Pokémon dazzles its opponents, reducing their Attack Range."
+    * Significantly changed 0296-armor_tail-0001|data.Desc from "" to "The mysterious tail covering the Pokémon's head protects it from distant attacks."
 
 Sheet: Items
-    * Added 0017-xcl_family_cosmog_00-0000|data.Name
-    * Added 0017-xcl_family_cosmog_01-0000|data.Name
-    * Added 0017-xcl_family_cosmog_02-0000|data.Name
-    * Added 0017-xcl_family_cosmog_03-0000|data.Name
-    * Added 0017-xcl_family_cosmog_04-0000|data.Name
-    * Deleted key 0017-xcl_family_dewpider_01-0000|data.Name
-    * Added 0017-xcl_family_eternatus_00-0000|data.Name
-    * Added 0017-xcl_family_flutter_mane_00-0000|data.Name
-    * Added 0017-xcl_family_flutter_mane_01-0000|data.Name
-    * Added 0017-xcl_family_flutter_mane_02-0000|data.Name
-    * Added 0017-xcl_family_flutter_mane_03-0000|data.Name
-    * Deleted key 0017-xcl_family_fomantis_00-0000|data.Name
-    * Added 0017-xcl_family_iron_bundle_00-0000|data.Name
-    * Added 0017-xcl_family_iron_bundle_01-0000|data.Name
-    * Added 0017-xcl_family_iron_bundle_02-0000|data.Name
-    * Added 0017-xcl_family_iron_bundle_03-0000|data.Name
-    * Added 0017-xcl_family_magearna_00-0000|data.Name
-    * Deleted key 0017-xcl_family_munna_00-0000|data.Name
-    * Added 0017-xcl_family_munna_01-0000|data.Name, transferred from 0017-xcl_family_munna_00-0000|data.Name
-    * Added 0017-xcl_family_necrozma_00-0000|data.Name
-    * Added 0017-xcl_family_regidrago_00-0000|data.Name
-    * Added 0017-xcl_family_regieleki_00-0000|data.Name
-    * Deleted key 0017-xcl_family_volcanion_00-0000|data.Name
-    * Deleted key 0017-xcl_family_volcanion_03-0000|data.Name
 
 Sheet: MapStatuses
 
 Sheet: Moves
+    * Significantly changed 0828-psyshield_bash-0001|data.Desc from "" to "Cloaking itself in psychic energy, the user slams into the target. This also boosts the user’s Defense stat."
+    * Significantly changed 0830-stone_axe-0001|data.Desc from "" to "The user swings its stone axes at the target. Stone splinters left behind by this attack float around the target."
+    * Significantly changed 0845-ceaseless_edge-0001|data.Desc from "" to "The user slashes its shell blade at the target. Shell splinters left behind by this attack remain scattered under the target as spikes."
+    * Significantly changed 0887-hyper_drill-0001|data.Desc from "" to "The user spins the pointed part of its body at high speed to pierce the target. This attack can hit a target using a move such as Protect or Detect."
+    * Significantly changed 0889-rage_fist-0001|data.Desc from "" to "The user converts its rage into energy to attack. The more times the user has been hit before attacking, the greater the move's power."
 
 Sheet: Statuses
+    * Significantly changed 0000-blinker-0001|data.Desc from "The Pokémon has its Attack Range limited, allowing it to hit only targets in front. This status wears off after many turns have passed." to "The Pokémon has its Attack Range dropped to its lowest level. This status wears off after many turns have passed."
+    * Added 0000-was_hurt_since_attack-0000|data.Name
+    * Added 0000-was_hurt_since_attack-0001|data.Desc
 
 Sheet: Tiles
 

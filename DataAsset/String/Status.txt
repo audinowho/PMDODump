@@ -14,7 +14,7 @@ Key		EN
 0000-bind-0000|data.Name		Bind
 0000-bind-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.
 0000-blinker-0000|data.Name		Blinker
-0000-blinker-0001|data.Desc		The Pokémon has its Attack Range limited, allowing it to hit only targets in front. This status wears off after many turns have passed.
+0000-blinker-0001|data.Desc		The Pokémon has its Attack Range dropped to its lowest level. This status wears off after many turns have passed.
 0000-bouncing-0000|data.Name		Bouncing
 0000-bouncing-0001|data.Desc		The Pokémon is in mid-air from a bounce and can avoid most moves. It will unleash the move on its next turn.
 0000-burn-0000|data.Name		Burned
@@ -267,6 +267,8 @@ Key		EN
 0000-veiled-0001|data.Desc		
 0000-was_hurt_last_turn-0000|data.Name		Was Hurt Last Turn
 0000-was_hurt_last_turn-0001|data.Desc		
+0000-was_hurt_since_attack-0000|data.Name		Was Hurt Since Attack
+0000-was_hurt_since_attack-0001|data.Desc		
 0000-water_pledge-0000|data.Name		Water Pledge
 0000-water_pledge-0001|data.Desc		The Pokémon is ready to unleash a follow-up attack whenever a foe is attacked. This status wears off after a few turns.
 0000-weakness_drain-0000|data.Name		Weakness Drain

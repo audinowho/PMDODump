@@ -880,11 +880,11 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0017-xcl_family_clefairy_04-0000|data.Name		Starry Ore	Minerai Etoilé	Sternenerz	Pepita Astro		Metalstella	별보석	ほしのほうせき		星空矿石																																																																																																																				
 0017-xcl_family_corphish_00-0000|data.Name		Cower Sash	Etolefrousse	Kauerband	Espantobanda		Panicofascia		ひるませバンダナ		畏缩纱巾																																																																																																																				
 0017-xcl_family_corsola_00-0000|data.Name		Eager Brooch	Broche Zèle	Eiferspange	Broche Ánimo		Spillabrama		はりきりブローチ		活力胸针																																																																																																																				
-0017-xcl_family_cosmog_00-0000|data.Name		Solar Crown																																																																																																																													
-0017-xcl_family_cosmog_01-0000|data.Name		Lunar Mantle																																																																																																																													
-0017-xcl_family_cosmog_02-0000|data.Name		Cosmic Dust																																																																																																																													
-0017-xcl_family_cosmog_03-0000|data.Name		Cosmic Ring																																																																																																																													
-0017-xcl_family_cosmog_04-0000|data.Name		Cosmic Shell																																																																																																																													
+0017-xcl_family_cosmog_00-0000|data.Name		Solar Crown									太阳王冠																																																																																																																				
+0017-xcl_family_cosmog_01-0000|data.Name		Lunar Mantle									月亮王冠																																																																																																																				
+0017-xcl_family_cosmog_02-0000|data.Name		Cosmic Dust									宇宙粉末																																																																																																																				
+0017-xcl_family_cosmog_03-0000|data.Name		Cosmic Ring									宇宙指环																																																																																																																				
+0017-xcl_family_cosmog_04-0000|data.Name		Cosmic Shell									宇宙之壳																																																																																																																				
 0017-xcl_family_cranidos_00-0000|data.Name		Skull Helmet	Casque Crâne	Schädelhelm	Casco Pardo		Elmoteschio		スカルヘルメット		头盖头盔																																																																																																																				
 0017-xcl_family_cresselia_00-0000|data.Name		Lunar Veil	Voile Lune	Mondschleier	Velo Lunar		Pannolunare	초승달베일	みかづきのベール		新月屏障																																																																																																																				
 0017-xcl_family_cyndaquil_00-0000|data.Name		Blast Bangle	Explojonc	Knallarmreif	Aro Ígneo		Lacciovampa	블라스트뱅글	ブラストバングル		爆炸手镯																																																																																																																				
@@ -916,13 +916,13 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0017-xcl_family_electabuzz_00-0000|data.Name		Voltaic Band	Bande Volta	Voltaikband	Cinta Voltio		Nastrovolt	뇌전머리띠	らいでんハチマキ		惊雷头巾																																																																																																																				
 0017-xcl_family_electabuzz_04-0000|data.Name		Jolt Charm	Charme Choc	Schockamulett	Voltamuleto		Monileshock	저리부적	しびれるおまもり		电麻饰物																																																																																																																				
 0017-xcl_family_electabuzz_05-0000|data.Name		Charge Seal	Sceau Charge	Ladesiegel	Cuño Voltio		Sigilcarica	충전호신부	じゅうでんのふだ		充电之符																																																																																																																				
-0017-xcl_family_eternatus_00-0000|data.Name		Eternamax Core																																																																																																																													
+0017-xcl_family_eternatus_00-0000|data.Name		Eternamax Core									无极巨化核心																																																																																																																				
 0017-xcl_family_farfetchd_00-0000|data.Name		Bullseye Bow	Ruban Mire	Trefferband	Lazo Diana		Centrofiocco		めいちゅうリボン		命中缎带																																																																																																																				
 0017-xcl_family_feebas_00-0000|data.Name		Grace Scarf	Belécharpe	Prachtschal	Pañ. Primor		Splendorvelo		うるわしスカーフ		美丽围巾																																																																																																																				
-0017-xcl_family_flutter_mane_00-0000|data.Name		Flutter Specs																																																																																																																													
-0017-xcl_family_flutter_mane_01-0000|data.Name		Flutter Wings																																																																																																																													
-0017-xcl_family_flutter_mane_02-0000|data.Name		Flutter Fang																																																																																																																													
-0017-xcl_family_flutter_mane_03-0000|data.Name		Flutter Cape																																																																																																																													
+0017-xcl_family_flutter_mane_00-0000|data.Name		Flutter Specs									振发眼镜																																																																																																																				
+0017-xcl_family_flutter_mane_01-0000|data.Name		Flutter Wings									振发之翼																																																																																																																				
+0017-xcl_family_flutter_mane_02-0000|data.Name		Flutter Fang									振发之牙																																																																																																																				
+0017-xcl_family_flutter_mane_03-0000|data.Name		Flutter Cape									振发披肩																																																																																																																				
 0017-xcl_family_gastly_00-0000|data.Name		Sunglasses	Lunettes UV	Sonnenbrille	Gafas Pardas		Lentioscure		くろいサングラス		黑色墨镜																																																																																																																				
 0017-xcl_family_gastly_01-0000|data.Name		Slip Scarf	Glissécharpe	Rutschschal	Pañ. Huida		Sgusciavelo		すりぬけスカーフ		潜行围巾																																																																																																																				
 0017-xcl_family_genesect_00-0000|data.Name		G-Scope					Mirino G				G瞄准																																																																																																																				
@@ -999,7 +999,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0017-xcl_family_lugia_04-0000|data.Name		Silver Brooch		Silberspange							白金胸针																																																																																																																				
 0017-xcl_family_lugia_05-0000|data.Name		Deep Sea Jewel		Tiefseejuwel							深海宝石																																																																																																																				
 0017-xcl_family_lunatone_solrock_06-0000|data.Name		Meteor Charm		Meteoramulett							陨石饰物																																																																																																																				
-0017-xcl_family_magearna_00-0000|data.Name		Clockwork Dress																																																																																																																													
+0017-xcl_family_magearna_00-0000|data.Name		Clockwork Dress									发条连衣裙																																																																																																																				
 0017-xcl_family_magikarp_00-0000|data.Name		Tempest Sash	Etolecyclone	Gewittergurt	Banda Tifón		Turbinfascia		あらしのバンダナ		暴雨纱巾																																																																																																																				
 0017-xcl_family_magmar_04-0000|data.Name		Ember Jewel	Joyau Braise	Glutjuwel	Gema Ascuas		Bijoufiamma	불씨보주	ひだねのほうじゅ		火球宝玉																																																																																																																				
 0017-xcl_family_magmar_05-0000|data.Name		Erupt Ore	Minerai Lave	Erupterz	Pepita Lava		Metallolava	불뿜기보석	ひふきのほうせき		涂层矿石																																																																																																																				
@@ -1031,7 +1031,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0017-xcl_family_mr_mime_04-0000|data.Name		Mimic Pebble	Galet Copie	Mimikkiesel	Mimoguijarro		Pietramimo	미믹스톤	ミミックストーン		模仿卵石																																																																																																																				
 0017-xcl_family_mr_mime_05-0000|data.Name		Bulwark Rock	Roc Rempart	Bollwerkfels	Roca Bastión		Rocciamuro	벽만들기돌	かべつくりのいし		造墙之石																																																																																																																				
 0017-xcl_family_munna_01-0000|data.Name		Dream Mist					Fumonirico				梦烟																																																																																																																				
-0017-xcl_family_necrozma_00-0000|data.Name		Ultra Prism																																																																																																																													
+0017-xcl_family_necrozma_00-0000|data.Name		Ultra Prism									究极棱镜																																																																																																																				
 0017-xcl_family_nidoran_00-0000|data.Name		Impact Torc	Torquimpact	Aufprallreif	Alhaja Golpe		Impattorque		インパクトリング		冲击饰环																																																																																																																				
 0017-xcl_family_nidoran_01-0000|data.Name		Nido-Crest		Nidokranz							尼多徽章																																																																																																																				
 0017-xcl_family_nidoran_02-0000|data.Name		Nido-Claw		Nidoklaue							尼多之爪																																																																																																																				
@@ -1052,7 +1052,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0017-xcl_family_palkia_00-0000|data.Name		Space Blade		Raumklinge							空间之剑																																																																																																																				
 0017-xcl_family_palkia_04-0000|data.Name		Space Jewel		Raumjuwel			Gioiellospazio				空间宝石																																																																																																																				
 0017-xcl_family_paras_00-0000|data.Name		Firm Hat	Chapeauferme	Steifmütze	Gorro Firme		Cappelsaldo		しゃっきりハット		牢固之帽																																																																																																																				
-0017-xcl_family_petilil_00-0000|data.Name		Flower Crown					Fiorcorona				花朵王冠																																																																																																																				
+0017-xcl_family_petilil_00-0000|data.Name		Flower Crown					Fiorcorona				花朵皇冠																																																																																																																				
 0017-xcl_family_phanpy_00-0000|data.Name		Armor Scarf	Armurécharpe	Panzerschal	Pañ. Coraza		Corazzavelo		よろいのスカーフ		铠甲围巾																																																																																																																				
 0017-xcl_family_pheromosa_00-0000|data.Name		Ultra Veil					Ultravelo				究极屏障																																																																																																																				
 0017-xcl_family_pikachu_00-0000|data.Name		Zapper Scarf	Echarpéclair	Blitzschal	Pañ. Trueno		Elettrovelo	낙뢰스카프	らくらいスカーフ		落雷围巾																																																																																																																				
@@ -1085,8 +1085,8 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0017-xcl_family_regi_trio_08-0000|data.Name		Ice Sash	Etole Glace	Eisgurt	Banda Hielo		Fasciagelo	아이스밴드	アイスバンダナ		冰之纱巾																																																																																																																				
 0017-xcl_family_regi_trio_12-0000|data.Name		Steel Sash	Etole Acier	Stahlgurt	Banda Acero		Fasciacciaio	스틸밴드	スチルバンダナ		钢之纱巾																																																																																																																				
 0017-xcl_family_regi_trio_16-0000|data.Name		Royal Mantle		Königsmantel							靛色面纱																																																																																																																				
-0017-xcl_family_regidrago_00-0000|data.Name		Dragon Sash																																																																																																																													
-0017-xcl_family_regieleki_00-0000|data.Name		Electric Sash																																																																																																																													
+0017-xcl_family_regidrago_00-0000|data.Name		Dragon Sash									龙之纱巾																																																																																																																				
+0017-xcl_family_regieleki_00-0000|data.Name		Electric Sash									电之纱巾																																																																																																																				
 0017-xcl_family_reshiram_00-0000|data.Name		Blazing Band					Fasciaincendio				炽焰头巾																																																																																																																				
 0017-xcl_family_reshiram_01-0000|data.Name		Truth Lens					Verolenti				真实之镜																																																																																																																				
 0017-xcl_family_rhyhorn_01-0000|data.Name		Pierce Drill	Foret Pointu	Drillbohrer	Tal. Envite		Perforopunta		とつげきドリル		突击钻头																																																																																																																				
