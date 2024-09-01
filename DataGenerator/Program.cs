@@ -24,30 +24,23 @@ namespace DataGenerator
 
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
+            Serializer.InitSettings(new SerializerContractResolver(), new UpgradeBinder());
 
             string[] args = Environment.GetCommandLineArgs();
             PathMod.InitPathMod(args[0]);
-            DiagManager.InitInstance();
-            Serializer.InitSettings(new SerializerContractResolver(), new UpgradeBinder());
-            //DiagManager.Instance.CurSettings = DiagManager.Instance.LoadSettings();
+
+            bool loadStrings = false;
+            bool itemPrep = false;
+            bool zonePrep = false;
+            bool monsterPrep = false;
+            bool saveStrings = false;
+            DataManager.DataType convertIndices = DataManager.DataType.None;
+            DataManager.DataType reserializeIndices = DataManager.DataType.None;
+            DataManager.DataType dump = DataManager.DataType.None;
+            bool preConvert = false;
 
             try
             {
-                DiagManager.Instance.LogInfo("=========================================");
-                DiagManager.Instance.LogInfo(String.Format("SESSION STARTED: {0}", String.Format("{0:yyyy/MM/dd HH:mm:ss}", DateTime.Now)));
-                DiagManager.Instance.LogInfo("Version: " + Versioning.GetVersion().ToString());
-                DiagManager.Instance.LogInfo(Versioning.GetDotNetInfo());
-                DiagManager.Instance.LogInfo("=========================================");
-
-                bool loadStrings = false;
-                bool itemPrep = false;
-                bool zonePrep = false;
-                bool monsterPrep = false;
-                bool saveStrings = false;
-                DataManager.DataType convertIndices = DataManager.DataType.None;
-                DataManager.DataType reserializeIndices = DataManager.DataType.None;
-                DataManager.DataType dump = DataManager.DataType.None;
-                bool preConvert = false;
                 for (int ii = 1; ii < args.Length; ii++)
                 {
                     if (args[ii] == "-asset")
@@ -160,6 +153,28 @@ namespace DataGenerator
                         ii++;
                     }
                 }
+
+                DiagManager.InitInstance();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+#endif
+                return;
+            }
+
+            try
+            {
+                //DiagManager.Instance.CurSettings = DiagManager.Instance.LoadSettings();
+
+                DiagManager.Instance.LogInfo("=========================================");
+                DiagManager.Instance.LogInfo(String.Format("SESSION STARTED: {0}", String.Format("{0:yyyy/MM/dd HH:mm:ss}", DateTime.Now)));
+                DiagManager.Instance.LogInfo("Version: " + Versioning.GetVersion().ToString());
+                DiagManager.Instance.LogInfo(Versioning.GetDotNetInfo());
+                DiagManager.Instance.LogInfo("=========================================");
+
 
                 PathMod.InitNamespaces();
                 GraphicsManager.InitParams();
