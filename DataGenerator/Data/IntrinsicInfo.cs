@@ -1963,13 +1963,13 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Transistor");
                 ability.Desc = new LocalText("Powers up Electric-type moves.");
-                ability.OnActions.Add(0, new MultiplyElementEvent("electric", 11, 10, false));
+                ability.OnActions.Add(0, new MultiplyElementEvent("electric", 6, 5, false));
             }
             else if (ii == 263)
             {
                 ability.Name = new LocalText("Dragon's Maw");
                 ability.Desc = new LocalText("Powers up Dragon-type moves.");
-                ability.OnActions.Add(0, new MultiplyElementEvent("dragon", 11, 10, false));
+                ability.OnActions.Add(0, new MultiplyElementEvent("dragon", 6, 5, false));
             }
             else if (ii == 264)
             {
