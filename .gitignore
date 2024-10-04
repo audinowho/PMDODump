@@ -7,9 +7,22 @@ obj/
 *.tmp
 *.zip
 *.manifest
-.vscode
 publish/
-.idea/
+
+# Debug logs (npm, yarn)
+*.log
+
+# Editor artifacts
+.*.sw[a-z]
+*~
+.#*
+.vscode
+.idea
+
+# OS files
+Thumbs.db
+.DS_Store
+
 __pycache__/
 Scripts/.credentials/sheets.googleapis.com-localization.json
 Scripts/client_secret.json
