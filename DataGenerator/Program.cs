@@ -307,6 +307,7 @@ namespace DataGenerator
                 {
                     using (GameBase game = new GameBase())
                     {
+                        GraphicsManager.SetWindowMode(1);
                         GraphicsManager.InitSystem(game.GraphicsDevice);
                         GraphicsManager.RebuildIndices(GraphicsManager.AssetType.All);
                     }
