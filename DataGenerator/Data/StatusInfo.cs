@@ -1196,7 +1196,7 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Mirror Coat");
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon will return damage from special attacks back at the user with double the power. This status wears off after a few turns.");
-                status.Emoticon = "Shield_Pink";
+                status.Emoticon = "Sword_Shield_Pink";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_MIRROR_COAT_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MIRROR_COAT_START"), true));
@@ -1213,7 +1213,7 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Counter");
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon will return damage from physical attacks back at the user with double the power. This status wears off after a few turns.");
-                status.Emoticon = "Sword_Brown";
+                status.Emoticon = "Sword_Shield_Brown";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_COUNTER_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_COUNTER_START"), true));
@@ -1423,7 +1423,7 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Area Counter");
                 status.MenuName = true;
                 status.Desc = new LocalText("All damage done to this Pokémon of a certain category of moves will be reflected on all foes within 3 tiles. This status wears off after many turns have passed.");
-                status.Emoticon = "Shield_DarkBlue";
+                status.Emoticon = "Sword_Shield_Green";
                 status.StatusStates.Set(new TransferStatusState());
                 status.OnStatusAdds.Add(0, new StatusLogCategoryEvent(new StringKey("MSG_AREA_COUNTER_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusLogCategoryEvent(new StringKey("MSG_AREA_COUNTER_END")));
@@ -1472,7 +1472,7 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Metal Burst");
                 status.MenuName = true;
                 status.Desc = new LocalText("All damage done to this Pokémon will be reflected on all nearby foes. This status wears off after a few turns, or if the Pokémon moves.");
-                status.Emoticon = "Shield_DarkBlue";
+                status.Emoticon = "Sword_Shield_White";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_METAL_BURST_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_METAL_BURST_START"), true));
@@ -1765,7 +1765,7 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Mini-Counter");
                 status.MenuName = true;
                 status.Desc = new LocalText("The Pokémon will return damage from all attacks back at the user. This status wears off after many turns have passed.");
-                status.Emoticon = "Shield_Pink";
+                status.Emoticon = "Sword_Shield_Blue";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_MINI_COUNTER_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_MINI_COUNTER_START"), true));
