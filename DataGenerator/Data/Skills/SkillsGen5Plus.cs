@@ -663,6 +663,7 @@ namespace DataGenerator.Data
                 skill.BaseCharges = 16;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
+                skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(40));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
