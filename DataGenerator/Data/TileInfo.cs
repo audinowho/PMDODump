@@ -1055,7 +1055,7 @@ namespace DataGenerator.Data
                 fileName = "sealed_block";
                 tile.Layer = DrawLayer.Back;
                 tile.BlockItem = true;
-                tile.StepType = TileData.TriggerType.Blocker;
+                tile.StepType = TileData.TriggerType.Unlockable;
                 tile.Anim = new ObjAnimData("Block_Blank", 1);
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Red;

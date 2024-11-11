@@ -9,6 +9,7 @@
 * Fix an issue where fake item activation did not remove the item if equipped
 * Fix traps generating on chokepoints if near a shop
 * Fix items spawning on stairs if in monster house
+* Fix chests spawning in front of a locked gate
 * Fix Leech Seed effect near a wrapped map border
 * Dev: Linux: Fixed an issue where error windows repeatedly appeared
 * Dex: Fix errors occurring when switching edit maps while entities are selected
