@@ -48,8 +48,10 @@ def main():
     Synchronizes data with the wiki
     """
     #credentials = get_credentials()
+    #https://wiki.pmdo.pmdcollab.org/index.php?title=Main_Page&action=raw
 
     url = 'https://wiki.pmdo.pmdcollab.org/w/rest.php/v1/page/Critical_Hit/bare'
+    url = 'https://wiki.pmdo.pmdcollab.org/rest.php/v1/page/Stats/bare'
     response = requests.get(url, headers=RETRIEVE_HEADERS)
     data = response.json()
 
