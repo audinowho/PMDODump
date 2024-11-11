@@ -15,3 +15,4 @@
 * Dev: Fixed running game with the -convert flag
 * Dev: Added a new editor for dungeon enemies
 * Dev: SpecificTeamSpawner no longer ignores Mob Check Save Var clauses
+* Dev: CTRL+F12 Soft Reset breaks through cutscenes now
