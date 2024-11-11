@@ -1,5 +1,7 @@
 # 0.8.6 Changes #
 
+* Fixed traps generating on chokepoints if near a shop
+* Fixed items spawning on stairs if in monster house
 * Fix Powder: No longer sticks around after being hit by a fire/electric move.  Now properly prevents action when attempting a fire/electric move.  No longer causes orbital strike when triggering with range boosters.
 * Self-hitting effects and traps are no longer counted as a "hit" in regards to the no-miss-twice rule
 * Fix an issue where fake item activation did not remove the item if equipped
