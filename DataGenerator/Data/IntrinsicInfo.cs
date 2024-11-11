@@ -669,7 +669,7 @@ namespace DataGenerator.Data
             else if (ii == 80)
             {
                 ability.Name = new LocalText("Steadfast");
-                ability.Desc = new LocalText("Boosts the Pokémon's Movement Speed each time the it flinches.");
+                ability.Desc = new LocalText("Boosts the Pokémon's Movement Speed each time it flinches.");
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new StackState(1));
                 ability.OnStatusAdds.Add(0, new StatusResponseEvent("flinch", new GiveStatusEvent("mod_speed", statusStates, false, new StringKey("MSG_STEADFAST"))));

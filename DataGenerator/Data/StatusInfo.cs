@@ -2186,14 +2186,10 @@ namespace DataGenerator.Data
 
                 status.OnActions.Add(0, new ElementNeededEvent("fire", new RemoveBattleEvent(false)));
                 status.OnActions.Add(0, new ElementNeededEvent("electric", new RemoveBattleEvent(false)));
-                status.OnActions.Add(0, new ElementNeededEvent("fire", new PreventActionEvent(new StringKey())));
-                status.OnActions.Add(0, new ElementNeededEvent("electric", new PreventActionEvent(new StringKey())));
 
                 {
-                    AreaAction altAction = new AreaAction();
-                    altAction.HitTiles = true;
-                    altAction.BurstTiles = TileAlignment.Any;
-                    altAction.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
+                    SelfAction altAction = new SelfAction();
+                    altAction.TargetAlignments = Alignment.Self;
                     ExplosionData altExplosion = new ExplosionData();
                     altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                     altExplosion.Range = 1;
@@ -2214,10 +2210,8 @@ namespace DataGenerator.Data
                 }
 
                 {
-                    AreaAction altAction = new AreaAction();
-                    altAction.HitTiles = true;
-                    altAction.BurstTiles = TileAlignment.Any;
-                    altAction.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
+                    SelfAction altAction = new SelfAction();
+                    altAction.TargetAlignments = Alignment.Self;
                     ExplosionData altExplosion = new ExplosionData();
                     altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                     altExplosion.Range = 1;
@@ -2236,14 +2230,16 @@ namespace DataGenerator.Data
                     newData.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(FoliageTerrainState))));
                     status.OnActions.Add(0, new ElementNeededEvent("electric", new InvokeCustomBattleEvent(altAction, altExplosion, newData, new StringKey("MSG_POWDER"), false)));
                 }
+
+                status.OnActions.Add(0, new ElementNeededEvent("fire", new PreventActionEvent(new StringKey(), BattleActionType.Skill)));
+                status.OnActions.Add(0, new ElementNeededEvent("electric", new PreventActionEvent(new StringKey(), BattleActionType.Skill)));
+
+
                 status.AfterBeingHits.Add(0, new ElementNeededEvent("fire", new RemoveBattleEvent(false)));
                 status.AfterBeingHits.Add(0, new ElementNeededEvent("electric", new RemoveBattleEvent(false)));
-
                 {
-                    AreaAction altAction = new AreaAction();
-                    altAction.HitTiles = true;
-                    altAction.BurstTiles = TileAlignment.Any;
-                    altAction.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
+                    SelfAction altAction = new SelfAction();
+                    altAction.TargetAlignments = Alignment.Self;
                     ExplosionData altExplosion = new ExplosionData();
                     altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                     altExplosion.Range = 1;
@@ -2265,10 +2261,8 @@ namespace DataGenerator.Data
 
 
                 {
-                    AreaAction altAction = new AreaAction();
-                    altAction.HitTiles = true;
-                    altAction.BurstTiles = TileAlignment.Any;
-                    altAction.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
+                    SelfAction altAction = new SelfAction();
+                    altAction.TargetAlignments = Alignment.Self;
                     ExplosionData altExplosion = new ExplosionData();
                     altExplosion.TargetAlignments = (Alignment.Self | Alignment.Friend | Alignment.Foe);
                     altExplosion.Range = 1;
