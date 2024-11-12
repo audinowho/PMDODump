@@ -11,9 +11,11 @@
 * Fix items spawning on stairs if in monster house
 * Fix chests spawning in front of a locked gate
 * Fix Leech Seed effect near a wrapped map border
+* Various window dimension fixes
+* Mission Mod: Escort fainting no longer results in instant game over, and you can bring as many as you want
+* Dev: Brand new editor for Dungeon Enemy Spawns
 * Dev: Linux: Fixed an issue where error windows repeatedly appeared
 * Dex: Fix errors occurring when switching edit maps while entities are selected
 * Dev: Fixed running game with the -convert flag
-* Dev: Added a new editor for dungeon enemies
 * Dev: SpecificTeamSpawner no longer ignores Mob Check Save Var clauses
 * Dev: CTRL+F12 Soft Reset breaks through cutscenes now
