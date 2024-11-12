@@ -160,7 +160,7 @@ Key		EN
 0079-rivalry-0000|data.Name		Rivalry
 0079-rivalry-0001|data.Desc		Deals more damage to Pokémon of the same gender.
 0080-steadfast-0000|data.Name		Steadfast
-0080-steadfast-0001|data.Desc		Boosts the Pokémon's Movement Speed each time the it flinches.
+0080-steadfast-0001|data.Desc		Boosts the Pokémon's Movement Speed each time it flinches.
 0081-snow_cloak-0000|data.Name		Snow Cloak
 0081-snow_cloak-0001|data.Desc		Avoids attacks from a distance when in a hailstorm.
 0082-gluttony-0000|data.Name		Gluttony
