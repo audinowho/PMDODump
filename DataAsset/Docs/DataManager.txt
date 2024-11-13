@@ -99,6 +99,59 @@ Index paths are modified like mods.  However, if multiple mods have conflicting 
 
 * <code>type</code>: None
 
+== _DATA:LoadModData``1(RogueEssence.ModHeader,System.String,System.String,System.String) ==
+
+
+Loads the data of the specified mod, and does not fall back to base if there is no mod.
+Used for reserializing/resaving where either the base or the mod's files ONLY need to be resaved.
+
+
+=== Arguments ===
+
+* <code>mod</code>: None
+* <code>subpath</code>: None
+* <code>file</code>: None
+* <code>ext</code>: None
+
+== _DATA:GetDataModStatus(System.String,System.String,System.String) ==
+
+
+Returns information of how a file has been modded, if at all.
+
+
+=== Arguments ===
+
+* <code>subpath</code>: None
+* <code>file</code>: None
+* <code>ext</code>: None
+
+== _DATA:SaveData(System.Object,System.String,System.String,System.String,RogueEssence.Data.DataManager.SavePolicy) ==
+
+
+Provides the ability to save it as a file or a mod based on whether it was loaded as a diff or not... aka whether it was a diff as a file or not.
+Can also save explicitly as a file or diff.
+
+
+=== Arguments ===
+
+* <code>entry</code>: None
+* <code>subpath</code>: None
+* <code>file</code>: None
+* <code>ext</code>: None
+* <code>savePolicy</code>: None
+
+== _DATA:SaveObject(System.Object,System.String,System.String) ==
+
+
+
+
+
+=== Arguments ===
+
+* <code>entry</code>: None
+* <code>path</code>: The location to save the file if not as a patch.
+* <code>basePath</code>: The base file to diff the json against.  Do not save as a patch if left blank.
+
 == _DATA:GetZone(System.String) ==
 
 

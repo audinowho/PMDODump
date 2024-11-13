@@ -2363,7 +2363,7 @@ TASK:WaitEntityTask(player)
 
 
 Runs a task and waits for it to complete.
-Most methods that do not expose themselves to script need ot be wrapped with this.
+Most methods that do not expose themselves to script need to be wrapped with this.
 
 
 === Arguments ===
@@ -2374,7 +2374,7 @@ Most methods that do not expose themselves to script need ot be wrapped with thi
 
 <pre>
 
-TASK:WaitTask(_DUNGEON:AddMapStatus("rain"))
+TASK:WaitTask(_DUNGEON:DropMoney(100, RogueElements.Loc(10, 10), RogueElements.Loc(10, 10)))
 
 </pre>
 

@@ -16,10 +16,10 @@ Position on the map grid in tiles.
 Character's direction.
 
 
-== Character.MustHitNext ==
+== Character.MissChain ==
 
 
-Guaranteed to hit next attack
+Times missed
 
 
 == Character.TurnWait ==

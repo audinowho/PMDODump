@@ -49,7 +49,7 @@ namespace DataGenerator.Data
             universalEvent.OnDeaths.Add(0, new ImpostorReviveEvent("imposter", "transformed"));
 
             universalEvent.OnDeaths.Add(10, new HandoutRelativeExpEvent(1, 7, 5, 2));
-            //universalEvent.OnMapStarts.Add(-10, new SingleCharScriptEvent("UpdateEscort"));
+            universalEvent.OnMapStarts.Add(-10, new SingleCharScriptEvent("UpdateEscort"));
             universalEvent.OnMapStarts.Add(-10, new StealthEvoEvent(35, "tandemaus"));
             universalEvent.OnMapStarts.Add(-10, new FadeInEvent());
             universalEvent.OnMapStarts.Add(-5, new SpecialIntroEvent());
