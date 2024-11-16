@@ -4819,7 +4819,7 @@ namespace DataGenerator.Data
 
                                 path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                                 path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                                path.FillPercent = new RandRange(55);
+                                path.FillPercent = new RandRange(40, 50);
 
                                 path.BranchRatio = new RandRange(80);
 
