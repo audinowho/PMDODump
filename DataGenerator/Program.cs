@@ -186,9 +186,9 @@ namespace DataGenerator
 
                 if (itemPrep)
                 {
+                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
                     LuaEngine.Instance.LoadScripts();
-                    DataManager.InitInstance();
                     DataManager.Instance.InitData();
 
                     AutoItemInfo.CreateContentLists();
@@ -196,9 +196,9 @@ namespace DataGenerator
 
                 if (zonePrep)
                 {
+                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
                     LuaEngine.Instance.LoadScripts();
-                    DataManager.InitInstance();
                     DataManager.Instance.InitData();
 
                     ZoneInfo.CreateContentLists();
@@ -206,9 +206,9 @@ namespace DataGenerator
 
                 if (monsterPrep)
                 {
+                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
                     LuaEngine.Instance.LoadScripts();
-                    DataManager.InitInstance();
                     DataManager.Instance.InitData();
 
                     MonsterInfo.CreateContentLists();
@@ -217,9 +217,9 @@ namespace DataGenerator
                 if (loadStrings)
                 {
                     //we need the datamanager for this
+                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
                     LuaEngine.Instance.LoadScripts();
-                    DataManager.InitInstance();
                     DataManager.Instance.InitData();
 
                     Localization.PrintDescribedStringTable(DataManager.DataType.Skill, DataManager.Instance.GetSkill);
@@ -239,10 +239,10 @@ namespace DataGenerator
                 }
                 if (saveStrings)
                 {
+                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
                     LuaEngine.Instance.LoadScripts();
                     //we need the datamanager for this
-                    DataManager.InitInstance();
                     DataManager.Instance.InitData();
 
                     Localization.WriteNamedDataTable(DataManager.DataType.Skin);
@@ -312,9 +312,9 @@ namespace DataGenerator
                         GraphicsManager.RebuildIndices(GraphicsManager.AssetType.All);
                     }
 
+                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
                     LuaEngine.Instance.LoadScripts();
-                    DataManager.InitInstance();
                     DataManager.Instance.LoadConversions();
                     RogueEssence.Dev.DevHelper.PrepareAssetConversion();
                     return;
@@ -325,9 +325,9 @@ namespace DataGenerator
                     DiagManager.Instance.LogInfo("Beginning Reserialization");
                     //we need the datamanager for this, but only while data is hardcoded
                     //TODO: remove when data is no longer hardcoded
+                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
                     LuaEngine.Instance.LoadScripts();
-                    DataManager.InitInstance();
                     DataManager.Instance.LoadConversions();
 
                     DataManager.InitDataDirs(PathMod.ModPath(""));
@@ -354,9 +354,9 @@ namespace DataGenerator
                 {
                     //we need the datamanager for this, but only while data is hardcoded
                     //TODO: remove when data is no longer hardcoded
+                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
                     LuaEngine.Instance.LoadScripts();
-                    DataManager.InitInstance();
                     DataManager.Instance.LoadConversions();
                     DataManager.InitDataDirs(PathMod.ModPath(""));
                     RogueEssence.Dev.DevHelper.RunIndexing(convertIndices);
@@ -369,8 +369,6 @@ namespace DataGenerator
                 //For exporting to data
                 if (dump > DataManager.DataType.None)
                 {
-                    LuaEngine.InitInstance();
-                    LuaEngine.Instance.LoadScripts();
 
                     //before reserializing, reserialize skill and monsters, and delete all data
                     //dump = addTypeDependency(dump, DataManager.DataType.Element, DataManager.DataType.Item);
@@ -384,6 +382,9 @@ namespace DataGenerator
 
                     {
                         DataManager.InitInstance();
+                        LuaEngine.InitInstance();
+                        LuaEngine.Instance.LoadScripts();
+
                         DataManager.Instance.LoadConversions();
                         DataInfo.AddEditorOps();
                         DataInfo.AddSystemFX();
