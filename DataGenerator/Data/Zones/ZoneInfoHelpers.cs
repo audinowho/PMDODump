@@ -454,7 +454,7 @@ namespace DataGenerator.Data
 
         public static void AddTrapsSteps<T>(MapGen<T> layout, RandRange amount, bool includeHalls = false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext
         {
-            RandomRoomSpawnStep<T, EffectTile> trapStep = new RandomRoomSpawnStep<T, EffectTile>(new ContextSpawner<T, EffectTile>(amount), includeHalls);
+            RandomRoomSpawnStep<T, EffectTile> trapStep = new RandomRoomSpawnStep<T, EffectTile>(new ContextSpawner<T, EffectTile>(amount), 100, includeHalls);
             if (connectivity != ConnectivityRoom.Connectivity.None)
                 trapStep.Filters.Add(new RoomFilterConnectivity(connectivity));
             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
@@ -462,7 +462,7 @@ namespace DataGenerator.Data
 
         public static void AddTrapListStep<T>(MapGen<T> layout, RandRange amount, SpawnList<EffectTile> effectTileSpawns, bool includeHalls = false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext
         {
-            RandomRoomSpawnStep<T, EffectTile> trapStep = new RandomRoomSpawnStep<T, EffectTile>(new PickerSpawner<T, EffectTile>(new LoopedRand<EffectTile>(effectTileSpawns, amount)), includeHalls);
+            RandomRoomSpawnStep<T, EffectTile> trapStep = new RandomRoomSpawnStep<T, EffectTile>(new PickerSpawner<T, EffectTile>(new LoopedRand<EffectTile>(effectTileSpawns, amount)), 100, includeHalls);
             if (connectivity != ConnectivityRoom.Connectivity.None)
                 trapStep.Filters.Add(new RoomFilterConnectivity(connectivity));
             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
@@ -481,6 +481,16 @@ namespace DataGenerator.Data
 
             trapStep.TerrainStencil = new MultiTerrainStencil<T>(false, terrainStencil, roomStencil);
 
+            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+        }
+
+        public static void AddTrapSweepStep<T>(MapGen<T> layout, RandRange amount, string id, bool revealed = true, bool includeHalls = false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext
+        {
+            SpawnList<EffectTile> effectTileSpawns = new SpawnList<EffectTile>();
+            effectTileSpawns.Add(new EffectTile(id, revealed), 10);
+            RandomRoomSpawnStep<T, EffectTile> trapStep = new RandomRoomSpawnStep<T, EffectTile>(new PickerSpawner<T, EffectTile>(new LoopedRand<EffectTile>(effectTileSpawns, amount)), 0, includeHalls);
+            if (connectivity != ConnectivityRoom.Connectivity.None)
+                trapStep.Filters.Add(new RoomFilterConnectivity(connectivity));
             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
         }
 

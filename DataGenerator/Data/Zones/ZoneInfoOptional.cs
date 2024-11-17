@@ -1969,12 +1969,15 @@ namespace DataGenerator.Data
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
 
-                    tileSpawn.Spawns.Add(new EffectTile("trap_warp", true), new IntRange(0, max_floors), 10);
-                    tileSpawn.Spawns.Add(new EffectTile("trap_trigger", true), new IntRange(0, max_floors), 10);
+                    tileSpawn.Spawns.Add(new EffectTile("trap_warp", true), new IntRange(0, max_floors), 50);
+                    tileSpawn.Spawns.Add(new EffectTile("trap_pp_leech", true), new IntRange(0, max_floors), 10);
+                    tileSpawn.Spawns.Add(new EffectTile("trap_hunger", true), new IntRange(0, max_floors), 10);
+                    tileSpawn.Spawns.Add(new EffectTile("trap_apple", true), new IntRange(0, max_floors), 10);
+                    tileSpawn.Spawns.Add(new EffectTile("trap_trigger", true), new IntRange(0, max_floors), 30);
 
                     {
                         //monster houses
-                        SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanChance(50, new IntRange(0, max_floors - 1)));
+                        SpreadHouseZoneStep monsterChanceZoneStep = new SpreadHouseZoneStep(PR_HOUSES, new SpreadPlanQuota(new RandRange(1, 4), new IntRange(1, max_floors)));
                         monsterChanceZoneStep.HouseStepSpawns.Add(new MonsterHouseStep<ListMapGenContext>(GetAntiFilterList(new ImmutableRoom(), new NoEventRoom())), 10);
 
                         foreach (string iter_item in IterateTypePlates())
@@ -2008,7 +2011,7 @@ namespace DataGenerator.Data
                         terrainPattern.Add(new PatternPlan("pattern_x", PatternPlan.PatternExtend.Single), 20);
                         AddTerrainPatternSteps(layout, "wall", new RandRange(2, 6), terrainPattern);
 
-                        //add water at the halls
+                        //add wall at the halls
                         {
                             RoomTerrainStep<ListMapGenContext> chasmStep = new RoomTerrainStep<ListMapGenContext>(new Tile("wall"), new RandRange(100), false, true);
                             chasmStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
@@ -2026,10 +2029,13 @@ namespace DataGenerator.Data
                         AddRespawnData(layout, 7, 90);
                         AddEnemySpawnData(layout, 20, new RandRange(4, 7));
 
-                        //TODO: ensure at least one warp tile on every room
 
                         //traps
                         AddTrapsSteps(layout, new RandRange(16, 19));
+
+                        //warp traps for everyone
+                        AddTrapSweepStep(layout, new RandRange(30), "trap_warp", true, false, ConnectivityRoom.Connectivity.Main);
+
 
                         AddInitListStep(layout, 48, 42);
 
@@ -2287,6 +2293,8 @@ namespace DataGenerator.Data
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
+                    tileSpawn.Spawns.Add(new EffectTile("trap_mud", false), new IntRange(0, max_floors), 10);//mud trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_spin", false), new IntRange(0, max_floors), 10);//spin trap
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
 
@@ -2395,7 +2403,7 @@ namespace DataGenerator.Data
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
-                        AddTrapsSteps(layout, new RandRange(6, 9));
+                        AddTrapsSteps(layout, new RandRange(2, 5));
 
                         //money
                         AddMoneyData(layout, new RandRange(1, 4));
@@ -2423,6 +2431,10 @@ namespace DataGenerator.Data
                             secretPlacement.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Disconnected));
                             layout.GenSteps.Add(PR_SPAWN_ITEMS, secretPlacement);
                         }
+
+                        // Escape traps
+                        AddTrapSweepStep(layout, new RandRange(2, 4), "trap_gust", true, false, ConnectivityRoom.Connectivity.Disconnected);
+
 
                         if (ii >= 8)
                         {
@@ -6541,7 +6553,7 @@ namespace DataGenerator.Data
                     //items
                     {
                         RandRange itemRange = new RandRange(100 + ii * 50, 120 + ii * 50);
-                        RandomRoomSpawnStep<MapGenContext, InvItem> itemStep = new RandomRoomSpawnStep<MapGenContext, InvItem>(new ContextSpawner<MapGenContext, InvItem>(itemRange), false);
+                        RandomRoomSpawnStep<MapGenContext, InvItem> itemStep = new RandomRoomSpawnStep<MapGenContext, InvItem>(new ContextSpawner<MapGenContext, InvItem>(itemRange), 100, false);
                         itemStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                         layout.GenSteps.Add(PR_SPAWN_ITEMS, itemStep);
                     }
