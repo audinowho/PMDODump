@@ -146,10 +146,10 @@ namespace DataGenerator.Data
                         AddSpecificSpawn(layout, exits, PR_EXITS);
                     }
                     //{
-                    //    List<(MapGenExit, Loc)> exits = new List<(MapGenExit, Loc)>();
-                    //    EffectTile secretStairs = new EffectTile("area_script", true);
+                    //    List<(EffectTile, Loc)> exits = new List<(EffectTile, Loc)>();
+                    //    EffectTile secretStairs = new EffectTile("sign", true);
                     //    secretStairs.TileStates.Set(new TileScriptState("Test", "{}"));
-                    //    exits.Add((new MapGenExit(secretStairs), new Loc(36, 2)));
+                    //    exits.Add((secretStairs, new Loc(36, 2)));
                     //    AddSpecificSpawn(layout, exits, PR_EXITS);
                     //}
 
@@ -186,32 +186,31 @@ namespace DataGenerator.Data
                         layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
                     }
 
-                    SpawnList<EffectTile> effectTileSpawns = new SpawnList<EffectTile>();
-                    effectTileSpawns.Add(new EffectTile("trap_mud", true), 10);//mud trap
-                    effectTileSpawns.Add(new EffectTile("trap_warp", true), 10);//warp trap
-                    effectTileSpawns.Add(new EffectTile("trap_gust", true), 10);//gust trap
-                    effectTileSpawns.Add(new EffectTile("trap_chestnut", true), 10);//chestnut trap
-                    effectTileSpawns.Add(new EffectTile("trap_poison", true), 10);//poison trap
-                    effectTileSpawns.Add(new EffectTile("trap_slumber", true), 10);//sleep trap
-                    effectTileSpawns.Add(new EffectTile("trap_sticky", true), 10);//sticky trap
-                    effectTileSpawns.Add(new EffectTile("trap_seal", true), 10);//seal trap
-                    effectTileSpawns.Add(new EffectTile("trap_self_destruct", true), 10);//selfdestruct trap
-                    effectTileSpawns.Add(new EffectTile("trap_trip", true), 10);//trip trap
-                    effectTileSpawns.Add(new EffectTile("trap_trip", true), 10);//trip trap
-                    effectTileSpawns.Add(new EffectTile("trap_hunger", true), 10);//hunger trap
-                    effectTileSpawns.Add(new EffectTile("trap_apple", true), 3);//apple trap
-                    effectTileSpawns.Add(new EffectTile("trap_apple", true), 3);//apple trap
-                    effectTileSpawns.Add(new EffectTile("trap_pp_leech", true), 10);//pp-leech trap
-                    effectTileSpawns.Add(new EffectTile("trap_summon", true), 10);//summon trap
-                    effectTileSpawns.Add(new EffectTile("trap_explosion", true), 10);//explosion trap
-                    effectTileSpawns.Add(new EffectTile("trap_slow", true), 10);//slow trap
-                    effectTileSpawns.Add(new EffectTile("trap_spin", true), 10);//spin trap
-                    effectTileSpawns.Add(new EffectTile("trap_grimy", true), 10);//grimy trap
-                    effectTileSpawns.Add(new EffectTile("trap_trigger", true), 20);//trigger trap
-                    effectTileSpawns.Add(new EffectTile("trap_grudge", true), 10);//grudge trap
 
-                    RandomSpawnStep<StairsMapGenContext, EffectTile> trapStep = new RandomSpawnStep<StairsMapGenContext, EffectTile>(new PickerSpawner<StairsMapGenContext, EffectTile>(new LoopedRand<EffectTile>(effectTileSpawns, new RandRange(300))));
-                    layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+                    {
+                        List<(EffectTile, Loc)> exits = new List<(EffectTile, Loc)>();
+                        exits.Add((new EffectTile("trap_mud", true), new Loc(2, 12)));
+                        exits.Add((new EffectTile("trap_warp", true), new Loc(4, 12)));
+                        exits.Add((new EffectTile("trap_gust", true), new Loc(6, 12)));
+                        exits.Add((new EffectTile("trap_chestnut", true), new Loc(8, 12)));
+                        exits.Add((new EffectTile("trap_poison", true), new Loc(10, 12)));
+                        exits.Add((new EffectTile("trap_slumber", true), new Loc(12, 12)));
+                        exits.Add((new EffectTile("trap_sticky", true), new Loc(14, 12)));
+                        exits.Add((new EffectTile("trap_seal", true), new Loc(16, 12)));
+                        exits.Add((new EffectTile("trap_self_destruct", true), new Loc(18, 12)));
+                        exits.Add((new EffectTile("trap_trip", true), new Loc(20, 12)));
+                        exits.Add((new EffectTile("trap_hunger", true), new Loc(2, 14)));
+                        exits.Add((new EffectTile("trap_apple", true), new Loc(4, 14)));
+                        exits.Add((new EffectTile("trap_pp_leech", true), new Loc(6, 14)));
+                        exits.Add((new EffectTile("trap_summon", true), new Loc(8, 14)));
+                        exits.Add((new EffectTile("trap_explosion", true), new Loc(10, 14)));
+                        exits.Add((new EffectTile("trap_slow", true), new Loc(12, 14)));
+                        exits.Add((new EffectTile("trap_spin", true), new Loc(14, 14)));
+                        exits.Add((new EffectTile("trap_grimy", true), new Loc(16, 14)));
+                        exits.Add((new EffectTile("trap_trigger", true), new Loc(18, 14)));
+                        exits.Add((new EffectTile("trap_grudge", true), new Loc(20, 14)));
+                        AddSpecificSpawn(layout, exits, PR_EXITS);
+                    }
 
                     List<(InvItem, Loc)> items = new List<(InvItem, Loc)>();
                     items.Add((new InvItem("berry_lum"), new Loc(7, 32)));//Lum Berry
