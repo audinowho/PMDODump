@@ -1,11 +1,15 @@
 Sheet: Hardcode
+    * Changed DLG_CHOICE_ON to _ENUM_SkillDefault_All, retaining translations
+    * Significantly changed _ENUM_SkillDefault_Attacks from "" to "Attacks Only"
+    * Changed DLG_CHOICE_OFF to _ENUM_SkillDefault_None, retaining translations
+    * Changed MENU_SETTINGS_SKILL_DEFAULT from "Default Moves" to "Switch New Moves"
+    * Added MENU_TEAM_PROMOTE_SHORT
 
 Sheet: Content
 
 Sheet: Script
 
 Sheet: Abilities
-    * Changed 0080-steadfast-0001|data.Desc from "Boosts the Pokémon's Movement Speed each time the it flinches." to "Boosts the Pokémon's Movement Speed each time it flinches."
 
 Sheet: Items
 
