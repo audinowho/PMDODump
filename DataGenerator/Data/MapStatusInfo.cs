@@ -466,7 +466,7 @@ namespace DataGenerator.Data
                 timeLimit.WarningSE2 = "DUN_Wind";
                 timeLimit.WarningSE3 = "DUN_Wind";
                 timeLimit.TimeOutSE = "DUN_Wind_2";
-                timeLimit.BGM = "C04. Wind.ogg";
+                timeLimit.BGM = "Wind.ogg";
                 status.OnMapTurnEnds.Add(7, timeLimit);
             }
             else if (ii == 23)
@@ -538,7 +538,7 @@ namespace DataGenerator.Data
                 //prevent rescue
                 status.OnMapRefresh.Add(0, new MapNoRescueEvent());
                 //constantly spawn a mon near the exit
-                status.OnMapStatusAdds.Add(0, new MapStatusBGMEvent("C07. Outlaw.ogg"));
+                status.OnMapStatusAdds.Add(0, new MapStatusBGMEvent("Outlaw.ogg"));
                 status.OnMapStatusAdds.Add(0, new MapStatusScriptEvent("SetShopkeeperHostile"));
                 status.OnMapStatusAdds.Add(0, new MapStatusSpawnStartGuardsEvent("shopkeeper"));
                 status.OnMapTurnEnds.Add(10, new PeriodicSpawnEntranceGuards(10, 40, "shopkeeper"));
@@ -590,7 +590,7 @@ namespace DataGenerator.Data
                 status.RepeatMethod = new MapStatusIgnoreEvent();
                 //prevent leaderswitch
                 status.OnMapRefresh.Add(0, new MapNoSwitchEvent());
-                status.OnMapStatusAdds.Add(0, new MapStatusBGMEvent("A11. Shop.ogg"));
+                status.OnMapStatusAdds.Add(0, new MapStatusBGMEvent("Shop.ogg"));
                 status.OnMapStatusAdds.Add(0, new MapStatusScriptEvent("ShopGreeting"));
                 status.OnTurnEnds.Add(0, new EndShopEvent("area_shop"));
                 status.OnTurnEnds.Add(0, new SingleCharScriptEvent("ShopCheckout"));

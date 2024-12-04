@@ -1604,17 +1604,17 @@ namespace DataGenerator.Data
                 MapDataStep<MapGenContext> floorData = new MapDataStep<MapGenContext>();
                 floorData.TimeLimit = 1500;
                 if (ii < 5)
-                    floorData.Music = "B01. Demonstration.ogg";
+                    floorData.Music = "Demonstration.ogg";
                 else if (ii < 9)
-                    floorData.Music = "B18. Faultline Ridge.ogg";
+                    floorData.Music = "Faultline Ridge.ogg";
                 else if (ii < 14)
-                    floorData.Music = "B07. Flyaway Cliffs.ogg";
+                    floorData.Music = "Flyaway Cliffs.ogg";
                 else if (ii < 19)
-                    floorData.Music = "B11. Enraged Caldera.ogg";
+                    floorData.Music = "Enraged Caldera.ogg";
                 else if (ii < 24)
-                    floorData.Music = "B34. Glacial Path.ogg";
+                    floorData.Music = "Glacial Path.ogg";
                 else
-                    floorData.Music = "B14. Champion Road.ogg";
+                    floorData.Music = "Champion Road.ogg";
 
                 floorData.CharSight = Map.SightRange.Dark;
 
@@ -3243,15 +3243,15 @@ namespace DataGenerator.Data
                 MapDataStep<MapGenContext> floorData = new MapDataStep<MapGenContext>();
                 floorData.TimeLimit = 1500;
                 if (ii <= 4)
-                    floorData.Music = "B02. Demonstration 2.ogg";
+                    floorData.Music = "Demonstration 2.ogg";
                 else if (ii <= 12)
-                    floorData.Music = "B25. Trickster Woods.ogg";
+                    floorData.Music = "Trickster Woods.ogg";
                 else if (ii <= 16)
-                    floorData.Music = "B22. Overgrown Wilds.ogg";
+                    floorData.Music = "Overgrown Wilds.ogg";
                 else if (ii <= 20)
                     floorData.Music = "Treeshroud Forest.ogg";
                 else if (ii <= 27)
-                    floorData.Music = "B03. Demonstration 3.ogg";
+                    floorData.Music = "Demonstration 3.ogg";
                 else if (ii <= 34)
                     floorData.Music = "Hidden Land.ogg";
                 else

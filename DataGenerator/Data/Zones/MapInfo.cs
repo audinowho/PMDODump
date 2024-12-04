@@ -61,7 +61,7 @@ namespace DataGenerator.Data
                 int height = 23;
                 map.CreateNew(width, height);
                 map.Name = new LocalText("Forest Camp");
-                map.Music = "C01. Boss Battle.ogg";
+                map.Music = "Boss Battle.ogg";
                 map.EdgeView = Map.ScrollEdge.Clamp;
 
                 for (int xx = 0; xx < width; xx++)
@@ -148,7 +148,7 @@ namespace DataGenerator.Data
                 map.CreateNew(10, 10);
                 map.EntryPoints.Add(new LocRay8(new Loc(), Dir8.Down));
                 map.Name = new LocalText("Rest Stop");
-                map.Music = "A05. Cave Camp.ogg";
+                map.Music = "Cave Camp.ogg";
             }
             else if (name == MapNames[7])
             {
@@ -156,7 +156,7 @@ namespace DataGenerator.Data
                 int height = 27;
                 map.CreateNew(width, height);
                 map.Name = new LocalText("Blizzard Camp");
-                map.Music = "C06. Final Battle.ogg";
+                map.Music = "Final Battle.ogg";
                 map.EdgeView = Map.ScrollEdge.Clamp;
 
                 map.AddLayer("Cliff");
@@ -340,7 +340,7 @@ namespace DataGenerator.Data
                 int height = 14;
                 map.CreateNew(width, height);
                 map.Name = new LocalText("**Guildmaster Summit");
-                map.Music = "C06. Final Battle.ogg";
+                map.Music = "Final Battle.ogg";
                 map.EdgeView = Map.ScrollEdge.Clamp;
 
                 for (int xx = 0; xx < width; xx++)
@@ -653,7 +653,7 @@ namespace DataGenerator.Data
                     map.AddSpawner(merchspawner2);
                 }
 
-                map.Music = "B09. Relic Tower.ogg";
+                map.Music = "Relic Tower.ogg";
             }
             else if (name == MapNames[1])
             {
@@ -817,7 +817,7 @@ namespace DataGenerator.Data
                 }
 
 
-                map.Music = "A01. Title.ogg";
+                map.Music = "Title.ogg";
             }
             else if (name == MapNames[2])
             {
@@ -1198,7 +1198,7 @@ namespace DataGenerator.Data
                 map.AddSpawner(CreateAssemblySpawner(26, new Loc(792, 184), Dir8.Left));
 
 
-                map.Music = "A02. Base Town.ogg";
+                map.Music = "Base Town.ogg";
             }
             else if (name == MapNames[3])
             {
@@ -1363,7 +1363,7 @@ namespace DataGenerator.Data
                 map.AddSpawner(CreateTeamSpawner(2, new Loc(120, 128), Dir8.DownRight));
                 map.AddSpawner(CreateTeamSpawner(3, new Loc(120, 160), Dir8.Right));
 
-                map.Music = "A02. Base Town.ogg";
+                map.Music = "Base Town.ogg";
             }
             else if (name == MapNames[4])
             {
@@ -1555,7 +1555,7 @@ namespace DataGenerator.Data
                 map.AddSpawner(CreateTeamSpawner(2, new Loc(712, 296), Dir8.Up));
                 map.AddSpawner(CreateTeamSpawner(3, new Loc(680, 296), Dir8.Up));
 
-                map.Music = "A03. Cliff Camp.ogg";
+                map.Music = "Cliff Camp.ogg";
             }
             else if (name == MapNames[5])
             {
@@ -2008,7 +2008,7 @@ namespace DataGenerator.Data
                 map.AddSpawner(CreateTeamSpawner(2, new Loc(1076, 356), Dir8.Down));
                 map.AddSpawner(CreateTeamSpawner(3, new Loc(1112, 356), Dir8.Down));
 
-                map.Music = "A04. Canyon Camp.ogg";
+                map.Music = "Canyon Camp.ogg";
             }
             else if (name == MapNames[6])
             {
@@ -2089,7 +2089,7 @@ namespace DataGenerator.Data
                 map.AddSpawner(CreateTeamSpawner(2, new Loc(120, 168), Dir8.DownRight));
                 map.AddSpawner(CreateTeamSpawner(3, new Loc(96, 192), Dir8.DownRight));
 
-                map.Music = "A05. Cave Camp.ogg";
+                map.Music = "Cave Camp.ogg";
             }
             else if (name == MapNames[7])
             {
@@ -2315,7 +2315,7 @@ namespace DataGenerator.Data
                 map.AddSpawner(CreateTeamSpawner(2, new Loc(136, 144), Dir8.DownRight));
                 map.AddSpawner(CreateTeamSpawner(3, new Loc(104, 192), Dir8.DownRight));
 
-                map.Music = "A06. Snow Camp.ogg";
+                map.Music = "Snow Camp.ogg";
             }
             else if (name == MapNames[8])
             {
@@ -2411,7 +2411,7 @@ namespace DataGenerator.Data
                 map.AddSpawner(CreateTeamSpawner(2, new Loc(232, 128), Dir8.Up));
                 map.AddSpawner(CreateTeamSpawner(3, new Loc(196, 160), Dir8.Up));
 
-                map.Music = "A07. Summit.ogg";
+                map.Music = "Summit.ogg";
             }
             else if (name == MapNames[9])
             {
@@ -2598,7 +2598,7 @@ namespace DataGenerator.Data
                     map.AddObject(groundObject);
                 }
 
-                map.Music = "A01. Title.ogg";
+                map.Music = "Title.ogg";
             }
             else if (name == MapNames[10])
             {
@@ -2685,7 +2685,7 @@ namespace DataGenerator.Data
                     map.AddObject(groundObject);
                 }
 
-                map.Music = "A09. Guildmaster.ogg";
+                map.Music = "Guildmaster.ogg";
             }
             else if (name == MapNames[11])
             {
@@ -2893,7 +2893,7 @@ namespace DataGenerator.Data
                     map.AddSpawner(evoSpawner);
                 }
 
-                map.Music = "A10. Luminous Spring.ogg";
+                map.Music = "Luminous Spring.ogg";
             }
             else if (name == MapNames[12])
             {
@@ -2993,7 +2993,7 @@ namespace DataGenerator.Data
                     map.AddMapChar(groundChar);
                 }
 
-                map.Music = "A02. Base Town.ogg";
+                map.Music = "Base Town.ogg";
             }
             else
             {

@@ -172,7 +172,7 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B04. Tropical Path.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
+                        AddFloorData(layout, "Tropical Path.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
 
                         AddWaterSteps(layout, "water", new RandRange(30));//water
 
@@ -478,7 +478,7 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B05. Faded Trail.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
+                            AddFloorData(layout, "Faded Trail.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
 
 
                             if (ii > 4)
@@ -744,7 +744,7 @@ namespace DataGenerator.Data
                             GridFloorGen layout = new GridFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B02. Demonstration 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "Demonstration 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                             AddWaterSteps(layout, "water", new RandRange(20));//empty
                             FloorTerrainStep<MapGenContext> floorPass = new FloorTerrainStep<MapGenContext>(new Tile("floor"));
@@ -1132,9 +1132,9 @@ namespace DataGenerator.Data
 
                         //Floor settings
                         if (ii < 2)
-                            AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
+                            AddFloorData(layout, "Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
                         else
-                            AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         if (ii > 2)
                             AddDefaultMapStatus(layout, "default_weather", "cloudy", "clear", "clear", "clear", "clear");
@@ -1713,7 +1713,7 @@ namespace DataGenerator.Data
                             RoomFloorGen layout = new RoomFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B10. Thunderstruck Pass.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "Thunderstruck Pass.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                             //Tilesets
                             if (ii < 5)
@@ -2294,7 +2294,7 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B14. Champion Road.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Champion Road.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         //Tilesets
                         if (ii < 8)
@@ -3212,11 +3212,11 @@ namespace DataGenerator.Data
 
                         //Floor settings
                         if (ii < 7)
-                            AddFloorData(layout, "B33. Snowbound Path.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "Snowbound Path.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                         else if (ii < 11)
-                            AddFloorData(layout, "B33. Snowbound Path.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                            AddFloorData(layout, "Snowbound Path.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
                         else
-                            AddFloorData(layout, "B33. Snowbound Path.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "Snowbound Path.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         //Tilesets
                         if (ii < 7)
@@ -3689,7 +3689,7 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B34. Glacial Path.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Glacial Path.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                         //Tilesets
                         //other candidates: mt_faraway_4
@@ -4377,9 +4377,9 @@ namespace DataGenerator.Data
 
                             //Floor settings
                             if (ii < 7)
-                                AddFloorData(layout, "B20. Copper Quarry.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                                AddFloorData(layout, "Copper Quarry.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                             else
-                                AddFloorData(layout, "B20. Copper Quarry.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                                AddFloorData(layout, "Copper Quarry.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                             //Tilesets
                             //other candidates: mt_steel,silent_chasm,great_canyon
@@ -4784,7 +4784,7 @@ namespace DataGenerator.Data
                             RoomFloorGen layout = new RoomFloorGen();
 
                             //Floor settings
-                            AddFloorData(layout, "B21. Magnetic Quarry.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "Magnetic Quarry.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                             //Tilesets
                             AddTextureData(layout, "zero_isle_east_4_wall", "zero_isle_east_4_floor", "zero_isle_east_4_secondary", "steel");

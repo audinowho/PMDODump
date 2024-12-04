@@ -1046,7 +1046,7 @@ namespace DataGenerator.Data
                 openEvent.Emitter = overlay;
                 openEvent.Warning = new StringKey("MSG_TIME_WARNING_1");
                 openEvent.WarningSE = "DUN_Wind";
-                openEvent.WarningBGM = "C04. Wind.ogg";
+                openEvent.WarningBGM = "Wind.ogg";
                 tile.InteractWithTiles.Add(0, openEvent);
             }
             else if (ii == 40)
@@ -1090,7 +1090,7 @@ namespace DataGenerator.Data
                 openEvent.Emitter = overlay;
                 openEvent.Warning = new StringKey("MSG_TIME_WARNING_1");
                 openEvent.WarningSE = "DUN_Wind";
-                openEvent.WarningBGM = "C04. Wind.ogg";
+                openEvent.WarningBGM = "Wind.ogg";
                 tile.InteractWithTiles.Add(0, openEvent);
             }
             else if (ii == 42)
@@ -1122,7 +1122,7 @@ namespace DataGenerator.Data
                 openEvent.Emitter = overlay;
                 openEvent.Warning = new StringKey("MSG_TIME_WARNING_1");
                 openEvent.WarningSE = "DUN_Wind";
-                openEvent.WarningBGM = "C04. Wind.ogg";
+                openEvent.WarningBGM = "Wind.ogg";
                 tile.InteractWithTiles.Add(0, openEvent);
             }
             else if (ii == 43)

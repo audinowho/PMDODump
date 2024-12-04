@@ -784,11 +784,11 @@ namespace DataGenerator.Data
 
                     //Floor settings
                     if (ii < 10)
-                        AddFloorData(layout, "B29. Treacherous Mountain.ogg", 3000, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Treacherous Mountain.ogg", 3000, Map.SightRange.Dark, Map.SightRange.Dark);
                     else if (ii < 20)
-                        AddFloorData(layout, "B26. Ambush Forest.ogg", 3000, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Ambush Forest.ogg", 3000, Map.SightRange.Dark, Map.SightRange.Dark);
                     else if (ii < 30)
-                        AddFloorData(layout, "B30. Treacherous Mountain 2.ogg", 3000, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Treacherous Mountain 2.ogg", 3000, Map.SightRange.Dark, Map.SightRange.Dark);
                     else if (ii < 40)
                         AddFloorData(layout, "Deep Dark Crater.ogg", 3000, Map.SightRange.Dark, Map.SightRange.Dark);
                     else if (ii < 50)

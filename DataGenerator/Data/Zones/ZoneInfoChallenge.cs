@@ -336,7 +336,7 @@ namespace DataGenerator.Data
                     GridFloorGen layout = new GridFloorGen();
 
                     //Floor settings
-                    AddFloorData(layout, "B23. Castaway Cave.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                    AddFloorData(layout, "Castaway Cave.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                     MapEffectStep<MapGenContext> takeTreasure = new MapEffectStep<MapGenContext>();
                     takeTreasure.Effect.OnMapStarts.Add(-20, new SingleCharScriptEvent("CastawayCaveAltMusic"));
@@ -1081,11 +1081,11 @@ namespace DataGenerator.Data
 
                     //Floor settings
                     if (ii < 6)
-                        AddFloorData(layout, "B17. Muddy Valley.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Muddy Valley.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                     else if (ii < soft_max - 1)
-                        AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Flyaway Cliffs.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                     else
-                        AddFloorData(layout, "B07. Flyaway Cliffs.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Flyaway Cliffs.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     if (ii >= 1 && ii < 6)
                         AddDefaultMapStatus(layout, "default_weather", "sunny", "clear", "clear");
@@ -1881,11 +1881,11 @@ namespace DataGenerator.Data
 
                     //Floor settings
                     if (ii < 8)
-                        AddFloorData(layout, "B26. Ambush Forest.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Ambush Forest.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                     else if (ii < 16)
-                        AddFloorData(layout, "B27. Ambush Forest 2.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Ambush Forest 2.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
                     else
-                        AddFloorData(layout, "B28. Ambush Forest 3.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Ambush Forest 3.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     if (ii >= 8)
                     {
@@ -2668,11 +2668,11 @@ namespace DataGenerator.Data
 
                     //Floor settings
                     if (ii < 8)
-                        AddFloorData(layout, "B29. Treacherous Mountain.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Treacherous Mountain.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
                     else if (ii < 16)
-                        AddFloorData(layout, "B30. Treacherous Mountain 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Treacherous Mountain 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                     else
-                        AddFloorData(layout, "B31. Treacherous Mountain 3.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Treacherous Mountain 3.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                     if (ii == 0)
                         AddDefaultMapStatus(layout, "default_weather", "sandstorm", "hail");
@@ -3588,9 +3588,9 @@ namespace DataGenerator.Data
 
                     //Floor settings
                     if (ii < 10)
-                        AddFloorData(layout, "B12. Sickly Hollow.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Sickly Hollow.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                     else
-                        AddFloorData(layout, "B13. Sickly Hollow 2.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Sickly Hollow 2.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     //Tilesets
                     if (ii < 10)
@@ -4376,9 +4376,9 @@ namespace DataGenerator.Data
 
                     //Floor settings
                     if (ii < 4)
-                        AddFloorData(layout, "B09. Relic Tower.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Relic Tower.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
                     else
-                        AddFloorData(layout, "B09. Relic Tower.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Relic Tower.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                     //Tilesets
                     if (ii < 8)

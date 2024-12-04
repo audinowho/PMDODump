@@ -140,7 +140,7 @@ namespace DataGenerator.Data
             AddTitleDrop(layout);
 
             //Floor settings
-            AddFloorData(layout, "B35. Mysterious Passage.ogg", 800, Map.SightRange.Dark, Map.SightRange.Dark);
+            AddFloorData(layout, "Mysterious Passage.ogg", 800, Map.SightRange.Dark, Map.SightRange.Dark);
 
             //Tilesets
             AddTextureData(layout, "the_nightmare_wall", "the_nightmare_floor", "the_nightmare_secondary", "normal");

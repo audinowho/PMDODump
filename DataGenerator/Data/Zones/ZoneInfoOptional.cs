@@ -174,7 +174,7 @@ namespace DataGenerator.Data
                     GridFloorGen layout = new GridFloorGen();
 
                     //Floor settings
-                    AddFloorData(layout, "B06. Bramble Woods.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                    AddFloorData(layout, "Bramble Woods.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                     if (ii < 3)
                     {
@@ -504,7 +504,7 @@ namespace DataGenerator.Data
                     GridFloorGen layout = new GridFloorGen();
 
                     //Floor settings
-                    AddFloorData(layout, "B19. Bramble Thicket.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                    AddFloorData(layout, "Bramble Thicket.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     AddGrassSteps(layout, new RandRange(3, 7), new IntRange(2, 6), new RandRange(50));
 
@@ -750,9 +750,9 @@ namespace DataGenerator.Data
 
                     //Floor settings
                     if (ii < 6)
-                        AddFloorData(layout, "B18. Faultline Ridge.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
+                        AddFloorData(layout, "Faultline Ridge.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
                     else
-                        AddFloorData(layout, "B18. Faultline Ridge.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Faultline Ridge.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                     if (ii < 6)
                         AddWaterSteps(layout, "water", new RandRange(30));//water
@@ -1127,7 +1127,7 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B16. Fertile Valley.ogg", 800, Map.SightRange.Clear, Map.SightRange.Clear);
+                        AddFloorData(layout, "Fertile Valley.ogg", 800, Map.SightRange.Clear, Map.SightRange.Clear);
 
                         //Tilesets
                         if (ii < 6)
@@ -1382,7 +1382,7 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B17. Muddy Valley.ogg", 1000, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Muddy Valley.ogg", 1000, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         //Tilesets
                         AddTextureData(layout, "quicksand_pit_wall", "quicksand_pit_floor", "quicksand_pit_secondary", "ground");
@@ -1755,7 +1755,7 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B38. Depleted Basin.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Depleted Basin.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         //Tilesets
                         //other candidates: mt_steel,silent_chasm,great_canyon
@@ -2327,9 +2327,9 @@ namespace DataGenerator.Data
                         RoomFloorGen layout = new RoomFloorGen();
 
                         //Floor settings
-                        string song = "B37. Lava Floe Island Fire.ogg";
+                        string song = "Lava Floe Island Fire.ogg";
                         if (ii % 2 == 0)
-                            song = "B37. Lava Floe Island Water.ogg";
+                            song = "Lava Floe Island Water.ogg";
 
                         if (ii < 8)
                             AddFloorData(layout, song, 1500, Map.SightRange.Clear, Map.SightRange.Clear);
@@ -3021,9 +3021,9 @@ namespace DataGenerator.Data
 
                     //Floor settings
                     if (ii < 12)
-                        AddFloorData(layout, "B32. Veiled Ridge.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Veiled Ridge.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                     else
-                        AddFloorData(layout, "B32. Veiled Ridge.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Veiled Ridge.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     //Tilesets
                     // other candidates: dark_hill_2,steel_aegis_cave,sealed_ruin_wall
@@ -3459,7 +3459,7 @@ namespace DataGenerator.Data
                     RoomFloorGen layout = new RoomFloorGen();
 
                     //Floor settings
-                    AddFloorData(layout, "B12. Sickly Hollow.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                    AddFloorData(layout, "Sickly Hollow.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                     //Tilesets
                     //other options: craggy_peak, sky_peak_summit_pass
@@ -3882,9 +3882,9 @@ namespace DataGenerator.Data
 
                     //Floor settings
                     if ((ii / 2) % 2 == 0)
-                        AddFloorData(layout, "B22. Overgrown Wilds.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Overgrown Wilds.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                     else
-                        AddFloorData(layout, "B22. Overgrown Wilds.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Overgrown Wilds.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     //Tilesets
                     if (ii < 4)
@@ -4251,7 +4251,7 @@ namespace DataGenerator.Data
                     RoomFloorGen layout = new RoomFloorGen();
 
                     //Floor settings
-                    AddFloorData(layout, "B22. Overgrown Wilds.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                    AddFloorData(layout, "Overgrown Wilds.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                     //Tilesets
                     AddSpecificTextureData(layout, "mystery_jungle_1_wall", "mystery_jungle_1_floor", "mystery_jungle_1_secondary", "tall_grass_dark", "bug");
@@ -4593,7 +4593,7 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B25. Trickster Woods.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
+                        AddFloorData(layout, "Trickster Woods.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Clear);
 
                         Dictionary<ItemFake, MobSpawn> spawnTable = new Dictionary<ItemFake, MobSpawn>();
                         spawnTable.Add(new ItemFake("food_apple", "applin"), GetGenericMob("applin", "", "astonish", "withdraw", "", "", new RandRange(20)));
@@ -4949,7 +4949,7 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B01. Demonstration.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        AddFloorData(layout, "Demonstration.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
                         Dictionary<ItemFake, MobSpawn> spawnTable = new Dictionary<ItemFake, MobSpawn>();
                         spawnTable.Add(new ItemFake("food_apple", "applin"), GetGenericMob("applin", "", "astonish", "withdraw", "", "", new RandRange(20)));
@@ -6055,7 +6055,7 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "B09. Relic Tower.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        AddFloorData(layout, "Relic Tower.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                         //Tilesets
                         AddTextureData(layout, "wish_cave_1_wall", "wish_cave_1_floor", "wish_cave_1_secondary", "fairy");
@@ -6468,7 +6468,7 @@ namespace DataGenerator.Data
 
 
                     //Floor settings
-                    AddFloorData(layout, "B08. Forsaken Desert.ogg", 30000, Map.SightRange.Clear, Map.SightRange.Dark);
+                    AddFloorData(layout, "Forsaken Desert.ogg", 30000, Map.SightRange.Clear, Map.SightRange.Dark);
 
                     if (ii % 2 == 1)
                         AddDefaultMapStatus(layout, "default_weather", "sunny");
