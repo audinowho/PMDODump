@@ -110,7 +110,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new StatusBattleEvent("poison", true, false, true));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"),  false));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 4)
             {
@@ -1329,6 +1329,19 @@ namespace DataGenerator.Data
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new AskLeaderEvent());
                 tile.InteractWithTiles.Add(0, new ResetFloorEvent());
+            }
+            else if (ii == 57)
+            {
+                tile.Name = new LocalText("Sea Cradle");
+                fileName = "block_cradle";
+                tile.Layer = DrawLayer.Back;
+                tile.BlockItem = true;
+                tile.StepType = TileData.TriggerType.Blocker;
+                tile.Anim = new ObjAnimData("Block_Guild", 1);
+                tile.MinimapIcon = new Loc(4, 1);
+                tile.MinimapColor = Color.Cyan;
+                tile.LandedOnTiles.Add(0, new SingleCharScriptEvent("SeaCradle"));
+                tile.InteractWithTiles.Add(0, new SingleCharScriptEvent("SeaHatch", "{ ActionScript = \"AllyInteract\""));
             }
 
             if (tile.Name.DefaultText.StartsWith("**"))
