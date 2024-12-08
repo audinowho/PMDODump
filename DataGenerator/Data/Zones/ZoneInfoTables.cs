@@ -129,7 +129,7 @@ namespace DataGenerator.Data
             return layout;
         }
 
-        static IFloorGen getMysteryRoom(bool translate, int zoneLevel, DungeonStage stage, string map_type, int moveBack, bool unrecruitable, bool noExp)
+        static IFloorGen getMysteryRoom(bool translate, int zoneLevel, string unownSpawn, DungeonStage stage, string map_type, int moveBack, bool unrecruitable, bool noExp)
         {
             GridFloorGen layout = new GridFloorGen();
 
@@ -149,15 +149,8 @@ namespace DataGenerator.Data
 
             //enemies
             {
-                RandGenStep<MapGenContext> chanceGenStep = new RandGenStep<MapGenContext>();
-                SpawnList<GenStep<MapGenContext>> spawns = new SpawnList<GenStep<MapGenContext>>();
-                spawns.Add(GetUnownSpawns("abcde", zoneLevel - 5, unrecruitable), 10);
-                spawns.Add(GetUnownSpawns("fghij", zoneLevel - 5, unrecruitable), 10);
-                spawns.Add(GetUnownSpawns("klmno", zoneLevel - 5, unrecruitable), 10);
-                spawns.Add(GetUnownSpawns("pqrst", zoneLevel - 5, unrecruitable), 10);
-                spawns.Add(GetUnownSpawns("uvwxyz", zoneLevel - 5, unrecruitable), 10);
-                chanceGenStep.Spawns = new LoopedRand<GenStep<MapGenContext>>(spawns, new RandRange(1));
-                layout.GenSteps.Add(PR_RESPAWN_MOB, chanceGenStep);
+                MobSpawnStep<MapGenContext> spawnStep = GetUnownSpawns(unownSpawn, zoneLevel - 5, unrecruitable);
+                layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
             }
             // a rare mon appears, based on the difficulty level
             if (!unrecruitable)

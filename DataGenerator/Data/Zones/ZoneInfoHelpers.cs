@@ -165,6 +165,18 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(exitZoneStep);
         }
 
+        public static void AddRoamingLegendZoneStep(ZoneSegmentBase floorSegment, int floorNum, string saveVar, string species, string item)
+        {
+            SpawnRangeList<IGenStep> roamingZoneSpawns = new SpawnRangeList<IGenStep>();
+            floorSegment.ZoneSteps.Add(new ScriptZoneStep("RoamingLegend", "{ FloorNum=" + floorNum + ", SaveVar=\"" + saveVar + "\", Species=\"" + species + "\", BoostItem=\"" + item + "\" }"));
+        }
+
+        public static void AddHiddenLegendZoneStep(ZoneSegmentBase floorSegment, int floorNum, string saveVar, string species)
+        {
+            SpawnRangeList<IGenStep> roamingZoneSpawns = new SpawnRangeList<IGenStep>();
+            floorSegment.ZoneSteps.Add(new ScriptZoneStep("HiddenLegend", "{ FloorNum=" + floorNum + ", SaveVar=\"" + saveVar + "\", ActionScript=\"AllyInteract\", Species=\"" + species + "\" }"));
+        }
+
         public static void AddTutorZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, IntRange cost, List<string> tutorElements)
         {
             RandBag<IGenStep> npcZoneSpawns = new RandBag<IGenStep>();
@@ -883,8 +895,8 @@ namespace DataGenerator.Data
             spawnBoost.SpDefBonus = MonsterFormData.MAX_STAT_BOOST;
             spawnBoost.SpeedBonus = MonsterFormData.MAX_STAT_BOOST;
             spawnBoost.MaxHPBonus = MonsterFormData.MAX_STAT_BOOST;
-            post_mob.SpawnFeatures.Add(new MobSpawnInv(false, items));
             post_mob.SpawnFeatures.Add(spawnBoost);
+            post_mob.SpawnFeatures.Add(new MobSpawnInv(false, items));
             if (keeperId > -1)
             {
                 post_mob.SpawnFeatures.Add(new MobSpawnDiscriminator(keeperId));

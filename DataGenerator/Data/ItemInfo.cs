@@ -8,6 +8,7 @@ using PMDC.Dungeon;
 using PMDC;
 using PMDC.Data;
 using RogueEssence.Ground;
+using RogueEssence.Script;
 
 namespace DataGenerator.Data
 {
@@ -3400,19 +3401,20 @@ namespace DataGenerator.Data
             else if (ii == 493)
             {
                 item.Name = new LocalText("Secret Slab");
-                item.Desc = new LocalText("An ancient stone slab inscribed with what seems to be prehistoric legend. It is said to draw something special to it when kept close by.");
+                item.Desc = new LocalText("An ancient stone slab inscribed with what seems to be prehistoric legend. Its writings change depending on where it's read.");
                 item.Sprite = "Slab_Gold";
+                item.UsageType = ItemData.UseType.Use;
                 item.Price = 30000;
+                item.MaxStack = -1;
+                item.UseEvent.BeforeTryActions.Add(1, new BattleScriptEvent("SecretSlab"));
             }
             else if (ii == 494)
             {
-                item.Name = new LocalText("**Music Box");
+                item.Name = new LocalText("Music Box");
                 item.Desc = new LocalText("An enchanting music box that plays a beautiful melody. It is said to draw something special to it when it is kept close by.");
                 item.Sprite = "Box_Blue";
                 // This will trigger legendaries to appear.
                 // when they do appear, the music will change to a music box tune.
-                // they will never spawn at the start of the dungeon, or when the wind timer is visible.
-                // they have a chance to spawn at 100 turns into the floor and no more
                 item.Price = 80000;
             }
             else if (ii == 495)
