@@ -2325,7 +2325,7 @@ namespace DataGenerator.Data
 
                     AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 3);
 
-                    AddRoamingLegendZoneStep(floorSegment, 10, "Entei", "entei", "xcl_element_fire_gem");
+                    AddRoamingLegendZoneStep(floorSegment, 11, "Entei", "entei", "extrasensory", "flame_charge", "roar", "fire_spin", "xcl_element_fire_gem");
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {

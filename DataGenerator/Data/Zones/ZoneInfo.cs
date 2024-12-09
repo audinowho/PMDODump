@@ -1711,7 +1711,7 @@ namespace DataGenerator.Data
 
                         AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 2);
                         
-                        AddRoamingLegendZoneStep(floorSegment, 8, "Raikou", "raikou", "xcl_element_electric_gem");
+                        AddRoamingLegendZoneStep(floorSegment, 8, "Raikou", "raikou", "discharge", "reflect", "roar", "volt_switch", "xcl_element_electric_gem");
 
                         for (int ii = 0; ii < max_floors; ii++)
                         {
@@ -3213,7 +3213,7 @@ namespace DataGenerator.Data
 
                     AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 3);
                     
-                    AddRoamingLegendZoneStep(floorSegment, 12, "Suicune", "suicune", "xcl_element_water_gem");
+                    AddRoamingLegendZoneStep(floorSegment, 12, "Suicune", "suicune", "hydro_pump", "tailwind", "ice_beam", "roar", "xcl_element_water_gem");
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {

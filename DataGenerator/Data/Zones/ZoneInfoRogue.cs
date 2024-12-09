@@ -1595,7 +1595,7 @@ namespace DataGenerator.Data
             shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
             floorSegment.ZoneSteps.Add(shopZoneStep);
 
-            AddHiddenLegendZoneStep(floorSegment, 22, "Latios", "latios");
+            AddHiddenLegendZoneStep(floorSegment, 11, "Latios", "latios");
 
             for (int ii = 0; ii < 30; ii++)
             {
@@ -3236,7 +3236,7 @@ namespace DataGenerator.Data
             shopZoneStep.ModStates.Add(new FlagType(typeof(ShopModGenState)));
             floorSegment.ZoneSteps.Add(shopZoneStep);
 
-            AddHiddenLegendZoneStep(floorSegment, 15, "Latias", "latias");
+            AddHiddenLegendZoneStep(floorSegment, 12, "Latias", "latias");
 
             for (int ii = 0; ii < max_floors; ii++)
             {

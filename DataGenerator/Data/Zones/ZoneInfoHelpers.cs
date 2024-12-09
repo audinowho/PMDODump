@@ -165,10 +165,10 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(exitZoneStep);
         }
 
-        public static void AddRoamingLegendZoneStep(ZoneSegmentBase floorSegment, int floorNum, string saveVar, string species, string item)
+        public static void AddRoamingLegendZoneStep(ZoneSegmentBase floorSegment, int floorNum, string saveVar, string species, string move1, string move2, string move3, string move4, string item)
         {
             SpawnRangeList<IGenStep> roamingZoneSpawns = new SpawnRangeList<IGenStep>();
-            floorSegment.ZoneSteps.Add(new ScriptZoneStep("RoamingLegend", "{ FloorNum=" + floorNum + ", SaveVar=\"" + saveVar + "\", Species=\"" + species + "\", BoostItem=\"" + item + "\" }"));
+            floorSegment.ZoneSteps.Add(new ScriptZoneStep("RoamingLegend", "{ FloorNum=" + floorNum + ", SaveVar=\"" + saveVar + "\", ActionScript=\"AllyInteract\", Species=\"" + species + "\", Move1=\"" + move1 + "\", Move2=\"" + move2 + "\", Move3=\"" + move3 + "\", Move4=\"" + move4 + "\", BoostItem=\"" + item + "\" }"));
         }
 
         public static void AddHiddenLegendZoneStep(ZoneSegmentBase floorSegment, int floorNum, string saveVar, string species)

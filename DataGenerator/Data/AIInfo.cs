@@ -351,8 +351,8 @@ namespace DataGenerator.Data
             tactic.Name = new LocalText("Super Flee Stairs");//30
             tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
             iq = AIFlags.None;
+            tactic.Plans.Add(new FleeStairsPlan(iq | AIFlags.TrapAvoider, new HashSet<string>() { "stairs_back_down", "stairs_back_up", "stairs_exit_down", "stairs_exit_up", "stairs_go_up", "stairs_go_down" }));
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider, 0, 0, 4, (TerrainData.Mobility) 14, false));
-            tactic.Plans.Add(new FleeStairsPlan(iq | AIFlags.TrapAvoider, new HashSet<string>() {"stairs_back_down", "stairs_back_up", "stairs_exit_down", "stairs_exit_up", "stairs_go_up", "stairs_go_down"}));
             Tactics.Add(tactic);
 
             tactic = new AITactic();
@@ -372,6 +372,16 @@ namespace DataGenerator.Data
             tactic.Plans.Add(new RetreaterPlan(AIFlags.AttackToEscape | AIFlags.TrapAvoider, 3));
             tactic.Plans.Add(new AttackFoesPlan(iq, 0, 0, 4, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close, 0, false));
             tactic.Plans.Add(new FollowLeaderPlan(iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
+            Tactics.Add(tactic);
+
+            tactic = new AITactic();
+            tactic.Name = new LocalText("Fleeing Legendary");//33
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
+            iq = AIFlags.WontDisturb;
+            tactic.Plans.Add(new FleeStairsPlan(iq | AIFlags.TrapAvoider, new HashSet<string>() { "stairs_back_down", "stairs_back_up", "stairs_exit_down", "stairs_exit_up", "stairs_go_up", "stairs_go_down" }, true, 2));
+            tactic.Plans.Add(new AttackFoesPlan(iq, 0, 0, 4, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close, 0, false));
             tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
