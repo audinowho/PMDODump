@@ -3406,6 +3406,9 @@ namespace DataGenerator.Data
                 item.UsageType = ItemData.UseType.Use;
                 item.Price = 30000;
                 item.MaxStack = -1;
+                item.GroundUseActions.Add(new ScriptItemEvent("GroundSlabEvent"));
+                item.GroundUseActions[0].Selection = SelectionType.Self;
+                item.GroundUseActions[0].GroundUsageType = ItemData.UseType.Use;
                 item.UseEvent.BeforeTryActions.Add(1, new BattleScriptEvent("SecretSlab"));
             }
             else if (ii == 494)
