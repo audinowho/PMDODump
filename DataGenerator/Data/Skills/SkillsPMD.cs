@@ -5326,7 +5326,7 @@ namespace DataGenerator.Data
             else if (ii == 208)
             {
                 skill.Name = new LocalText("Milk Drink");
-                skill.Desc = new LocalText("The user restores the party's HP by up to a half of its max HP");
+                skill.Desc = new LocalText("The user restores the party's HP by up to a half of its max HP.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
