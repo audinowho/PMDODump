@@ -1296,7 +1296,7 @@ namespace DataGenerator.Data
                     vaultChanceZoneStep.Mobs.Add(GetFOEMob("glaceon", "", "blizzard", "helping_hand", "hail", "", 4), new IntRange(20, 30), 10);
 
                     //64//479 Rotom : 86 Thunder Wave : 271 Trick : 435 Discharge : 164 Substitute
-                    vaultChanceZoneStep.Mobs.Add(GetFOEMob("rotom", "", "thunder_wave", "trick", "discharge", "substitute", 4), new IntRange(0, 30), 10);
+                    vaultChanceZoneStep.Mobs.Add(GetFOEMob("rotom", "", "thunder_wave", "trick", "discharge", "substitute", 4), new IntRange(8, 30), 10);
 
                     //234 !! Stantler : 43 Leer : 95 Hypnosis : 36 Take Down : 109 Confuse Ray
                     vaultChanceZoneStep.Mobs.Add(GetFOEMob("stantler", "", "leer", "hypnosis", "take_down", "confuse_ray", 4), new IntRange(0, 10), 10);
@@ -1311,7 +1311,7 @@ namespace DataGenerator.Data
                     vaultChanceZoneStep.Mobs.Add(GetFOEMob("mightyena", "", "assurance", "howl", "", "", 4), new IntRange(0, 30), 10);
 
                     //24//20 Raticate : 228 Pursuit : 162 Super Fang : 372 Assurance
-                    vaultChanceZoneStep.Mobs.Add(GetFOEMob("raticate", "", "pursuit", "super_fang", "assurance", "", 4), new IntRange(0, 30), 10);
+                    vaultChanceZoneStep.Mobs.Add(GetFOEMob("raticate", "", "pursuit", "super_fang", "assurance", "", 4), new IntRange(0, 20), 10);
 
                     //29//137 Porygon : 160 Conversion : 060 Psybeam : 324 Signal Beam : 033 Tackle
                     vaultChanceZoneStep.Mobs.Add(GetFOEMob("porygon", "", "conversion", "psybeam", "signal_beam", "tackle", 4), new IntRange(5, 25), 10);
@@ -3010,7 +3010,7 @@ namespace DataGenerator.Data
                     //327 Spinda : 077 Tangled Feet : 298 Teeter Dance : 037 Thrash
                     vaultChanceZoneStep.Mobs.Add(GetFOEMob("spinda", "tangled_feet", "teeter_dance", "thrash", "", "", 3), new IntRange(0, 30), 10);
                     //425 Drifloon : 466 Ominous Wind : 116 Focus Energy : 132 Constrict
-                    vaultChanceZoneStep.Mobs.Add(GetFOEMob("drifloon", "", "ominous_wind", "focus_energy", "constrict", "", 3), new IntRange(0, 20), 10);
+                    vaultChanceZoneStep.Mobs.Add(GetFOEMob("drifloon", "", "ominous_wind", "focus_energy", "constrict", "", 3), new IntRange(8, 20), 10);
                     //426 Drifblim : 466 Ominous Wind : 226 Baton Pass : 254 Stockpile : 107 Minimize
                     vaultChanceZoneStep.Mobs.Add(GetFOEMob("drifblim", "", "ominous_wind", "baton_pass", "stockpile", "minimize", 3), new IntRange(15, 30), 10);
                     //045 Vileplume : 077 Poison Powder : 080 Petal Dance : 051 Acid
@@ -3022,7 +3022,7 @@ namespace DataGenerator.Data
                     //346 Cradily : 275 Ingrain : 051 Acid : 378 Wring Out : 362 Brine
                     vaultChanceZoneStep.Mobs.Add(GetFOEMob("cradily", "", "ingrain", "acid", "wring_out", "brine", 3), new IntRange(0, 30), 10);
                     //279 Pelipper : 254 Stockpile : 255 Spit Up : 256 Swallow
-                    vaultChanceZoneStep.Mobs.Add(GetFOEMob("pelipper", "", "stockpile", "spit_up", "swallow", "", 3), new IntRange(0, 30), 10);
+                    vaultChanceZoneStep.Mobs.Add(GetFOEMob("pelipper", "", "stockpile", "spit_up", "swallow", "", 3), new IntRange(0, 20), 10);
                     //700 Sylveon : 182 Pixilate : 129 Swift : 113 Light Screen : 581 Misty Terrain : 585 Moonblast
                     vaultChanceZoneStep.Mobs.Add(GetFOEMob("sylveon", "pixilate", "swift", "light_screen", "misty_terrain", "moonblast", 3), new IntRange(0, 30), 10);
                     //134 Vaporeon : 270 Helping Hand : 392 Aqua Ring : 330 Muddy Water

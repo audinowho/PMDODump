@@ -145,12 +145,12 @@ namespace DataGenerator.Data
                         exits.Add((new MapGenExit(secretStairs), new Loc(35, 2)));
                         AddSpecificSpawn(layout, exits, PR_EXITS);
                     }
-                    {
-                        List<(EffectTile, Loc)> exits = new List<(EffectTile, Loc)>();
-                        EffectTile secretStairs = new EffectTile("block_cradle", true);
-                        exits.Add((secretStairs, new Loc(36, 2)));
-                        AddSpecificSpawn(layout, exits, PR_EXITS);
-                    }
+                    //{
+                    //    List<(EffectTile, Loc)> exits = new List<(EffectTile, Loc)>();
+                    //    EffectTile secretStairs = new EffectTile("tile_cradle", true);
+                    //    exits.Add((secretStairs, new Loc(36, 2)));
+                    //    AddSpecificSpawn(layout, exits, PR_EXITS);
+                    //}
 
                     layout.GenSteps.Add(PR_EXITS, new StairsStep<StairsMapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile("stairs_go_up", true))));
 

@@ -1070,6 +1070,13 @@ namespace DataGenerator.Data
                                 branch.Details.Add(new EvoSetForm(0));
                             }
                             break;
+                        case 980://clodsire
+                            {
+                                //first alt form required
+                                branch.Details.Insert(0, new EvoForm(1));
+                                branch.Details.Add(new EvoSetForm(0));
+                            }
+                            break;
                     }
 
 

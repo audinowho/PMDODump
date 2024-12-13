@@ -1293,7 +1293,7 @@ namespace DataGenerator.Data
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
                 tile.LandedOnTiles.Add(0, new SingleCharScriptEvent("GuildBlock"));//need a scripted event to check for story completion
-                tile.InteractWithTiles.Add(0, new OpenSelfEvent(new BattleFX(new SingleEmitter(new AnimData("Seven_Treasures", 3)), "EVT_Seven_Treasures", 156), false, false));
+                tile.InteractWithTiles.Add(0, new OpenSelfEvent(new BattleFX(new SingleEmitter(new AnimData("Seven_Treasures", 3)), "EVT_Seven_Treasures", 156, true), false, false));
             }
             else if (ii == 55)
             {
@@ -1333,15 +1333,17 @@ namespace DataGenerator.Data
             else if (ii == 57)
             {
                 tile.Name = new LocalText("Sea Cradle");
-                fileName = "block_cradle";
-                tile.Layer = DrawLayer.Back;
+                fileName = "tile_cradle";
+                tile.Desc = new LocalText("A cold sea current gently swirls about...");
                 tile.BlockItem = true;
-                tile.StepType = TileData.TriggerType.Blocker;
-                tile.Anim = new ObjAnimData("Block_Guild", 1);
+                tile.StepType = TileData.TriggerType.Site;
+                tile.Anim = new ObjAnimData("Sea_Cradle", 3);
+                tile.Offset = new Loc(0, -4);
+                tile.Layer = DrawLayer.Front;
                 tile.MinimapIcon = new Loc(4, 1);
                 tile.MinimapColor = Color.Cyan;
-                tile.LandedOnTiles.Add(0, new SingleCharScriptEvent("SeaCradle"));
-                tile.InteractWithTiles.Add(0, new SingleCharScriptEvent("SeaHatch", "{ ActionScript = \"AllyInteract\""));
+                tile.LandedOnTiles.Add(0, new TriggerUnderfootEvent());
+                tile.InteractWithTiles.Add(0, new SingleCharScriptEvent("SeaCradle", "{ ActionScript = \"AllyInteract\" }"));
             }
 
             if (tile.Name.DefaultText.StartsWith("**"))
