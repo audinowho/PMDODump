@@ -14,5 +14,6 @@ poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
 poolSpawn.Spawns.Add(GetTeamMob("luvdisc", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("finizen", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("qwilfish", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("relicanth", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

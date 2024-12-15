@@ -2417,8 +2417,14 @@ namespace DataGenerator.Data
                 return 493;
             else if (index < 649)
                 return 649;
-            else
+            else if (index < 721)
                 return 721;
+            else if (index < 808)
+                return 808;
+            else if (index < 905)
+                return 905;
+            else
+                return 1025;
         }
 
         private static int genVersion(int version)

@@ -1058,8 +1058,7 @@ namespace DataGenerator.Data
             tileSpawn.Spawns.Add(new EffectTile("trap_trip", true), new IntRange(0, 15), 10);//trip trap
             tileSpawn.Spawns.Add(new EffectTile("trap_trip", false), new IntRange(15, max_floors), 10);//trip trap
             tileSpawn.Spawns.Add(new EffectTile("trap_hunger", true), new IntRange(0, max_floors), 10);//hunger trap
-            tileSpawn.Spawns.Add(new EffectTile("trap_apple", true), new IntRange(0, 15), 3);//apple trap
-            tileSpawn.Spawns.Add(new EffectTile("trap_apple", false), new IntRange(15, max_floors), 3);//apple trap
+            tileSpawn.Spawns.Add(new EffectTile("trap_apple", true), new IntRange(0, max_floors), 3);//apple trap
             tileSpawn.Spawns.Add(new EffectTile("trap_pp_leech", true), new IntRange(0, max_floors), 10);//pp-leech trap
             tileSpawn.Spawns.Add(new EffectTile("trap_summon", false), new IntRange(0, max_floors), 10);//summon trap
             tileSpawn.Spawns.Add(new EffectTile("trap_explosion", false), new IntRange(0, max_floors), 10);//explosion trap

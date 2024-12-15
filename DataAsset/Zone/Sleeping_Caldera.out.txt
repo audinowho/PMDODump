@@ -185,11 +185,11 @@ poolSpawn.Spawns.Add(GetTeamMob("quilava", "", "flame_wheel", "", "", "", new Ra
 poolSpawn.Spawns.Add(GetTeamMob("ferroseed", "", "ingrain", "self_destruct", "", "", new RandRange(31), "turret"), new IntRange(4, 8), 10);
 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("meowth", 1, "", Gender.Unknown), "", "pay_day", "", "", "", new RandRange(27), "wander_normal"), new IntRange(4, 8), 10);
 poolSpawn.Spawns.Add(GetTeamMob("cubone", "", "rage", "bone_club", "", "", new RandRange(28), "wander_normal"), new IntRange(4, 8), 10);
+poolSpawn.Spawns.Add(GetTeamMob("glimmet", "", "rock_throw", "rock_polish", "", "", new RandRange(30), "retreater"), new IntRange(6, 10), 10);
 //version exclusives
-poolSpawn.Spawns.Add(GetTeamMob("glimmora", "", "stealth_rock", "ancient_power", "", "", new RandRange(31), "retreater"), new IntRange(6, 10), 10);
 poolSpawn.Spawns.Add(GetTeamMob("nidorina", "", "helping_hand", "bite", "toxic_spikes", "", new RandRange(31), "wander_normal"), new IntRange(6, 10), 10);
 poolSpawn.Spawns.Add(GetTeamMob("nidorino", "", "horn_attack", "fury_attack", "toxic_spikes", "", new RandRange(31), "wander_normal"), new IntRange(6, 10), 10);
-poolSpawn.Spawns.Add(GetTeamMob("snorlax", "", "rest", "body_slam", "", "", new RandRange(31), "wander_normal"), new IntRange(6, 10), 10);
+poolSpawn.Spawns.Add(GetTeamMob("snorlax", "", "rest", "body_slam", "", "", new RandRange(36), "wander_normal"), new IntRange(6, 10), 10);
 poolSpawn.Spawns.Add(GetTeamMob("golduck", "", "yawn", "screech", "aqua_tail", "", new RandRange(31), "wander_normal"), new IntRange(6, 10), 10);
 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("persian", 1, "", Gender.Unknown), "fur_coat", "quash", "swift", "", "", new RandRange(33), "wander_normal"), new IntRange(8, 12), 10);
 poolSpawn.Spawns.Add(GetTeamMob("hariyama", "", "brine", "force_palm", "whirlwind", "", new RandRange(33), "wander_normal"), new IntRange(8, 12), 10);
@@ -200,17 +200,18 @@ poolSpawn.Spawns.Add(GetTeamMob("druddigon", "rough_skin", "dragon_rage", "drago
 poolSpawn.Spawns.Add(GetTeamMob("electabuzz", "", "light_screen", "discharge", "", "", new RandRange(35), "wander_normal_itemless"), new IntRange(10, 14), 10);
 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("dugtrio", 1, "", Gender.Unknown), "tangling_hair", "sucker_punch", "bulldoze", "", "", new RandRange(37), "wander_normal_itemless"), new IntRange(12, 16), 10);
 poolSpawn.Spawns.Add(GetTeamMob("swoobat", "unaware", "air_slash", "amnesia", "", "", new RandRange(37), "wander_normal_itemless"), new IntRange(12, 16), 10);
+poolSpawn.Spawns.Add(GetTeamMob("glimmora", "", "stealth_rock", "ancient_power", "", "", new RandRange(39), "retreater"), new IntRange(14, 18), 10);
 poolSpawn.Spawns.Add(GetTeamMob("klefki", "", "crafty_shield", "spikes", "", "", new RandRange(39), "wander_normal_itemless"), new IntRange(14, 18), 10);
 poolSpawn.Spawns.Add(GetTeamMob("wobbuffet", "", "safeguard", "destiny_bond", "encore", "splash", new RandRange(39), "wander_normal_itemless"), new IntRange(14, 18), 10);
 poolSpawn.Spawns.Add(GetTeamMob("drampa", "berserk", "play_nice", "dragon_breath", "", "", new RandRange(39), "wander_normal_itemless"), new IntRange(14, 18), 10);
-poolSpawn.Spawns.Add(GetTeamMob("ferrothorn", "", "curse", "gyro_ball", "power_whip", "", new RandRange(39), "wander_normal_itemless"), new IntRange(14, 18), 10);
+poolSpawn.Spawns.Add(GetTeamMob("ferrothorn", "", "curse", "gyro_ball", "power_whip", "", new RandRange(39), "turret"), new IntRange(14, 18), 10);
 //version exclusives
 poolSpawn.Spawns.Add(GetTeamMob("nidoking", "", "earth_power", "megahorn", "", "", new RandRange(41), "wander_normal_itemless"), new IntRange(14, 18), 10);
 poolSpawn.Spawns.Add(GetTeamMob("nidoqueen", "", "earth_power", "superpower", "", "", new RandRange(41), "wander_normal_itemless"), new IntRange(14, 18), 10);
 poolSpawn.Spawns.Add(GetTeamMob("camerupt", "", "rock_slide", "lava_plume", "", "", new RandRange(45), "wander_normal"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("magmar", "", "fire_punch", "", "", "", new RandRange(45), "wander_normal"), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("pignite", "", "heat_crash", "rollout", "", "", new RandRange(34), "wander_normal"), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("slugma", "", "incinerate", "harden", "", "", new RandRange(34), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("pignite", "", "heat_crash", "rollout", "", "", new RandRange(45), "wander_normal"), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("slugma", "", "incinerate", "harden", "", "", new RandRange(45), "wander_normal"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("marowak", 1, "", Gender.Unknown), "", "shadow_bone", "will_o_wisp", "", "", new RandRange(45), "wander_normal"), new IntRange(0, max_floors), 10);
 //sleeping, with choice band
 poolSpawn.Spawns.Add(GetTeamMob("flareon", "", "flare_blitz", "", "", "", new RandRange(50)), new IntRange(0, max_floors), 10);

@@ -200,7 +200,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Shadow Tag");
                 ability.Desc = new LocalText("This Pokémon steps on the opposing Pokémon's shadow to prevent it from escaping.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new StatusBattleEvent("immobilized", false, true, false, new StringKey("MSG_SHADOW_TAG"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new StatusBattleEvent("immobilized", false, true, false, new StringKey("MSG_ARENA_TRAP"),
                     new BattleAnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", false, 0))));
                 //ability.AfterHittings.Add(0, new OnHitEvent(false, false, 100, new StatusBattleEvent("immobilized", true, true, false, new StringKey("MSG_SHADOW_TAG"),
                 //    new BattleAnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", true, 0))));
@@ -1686,8 +1686,11 @@ namespace DataGenerator.Data
             }
             else if (ii == 217)
             {
-                ability.Name = new LocalText("**Battery");
+                ability.Name = new LocalText("Battery");
                 ability.Desc = new LocalText("Powers up ally Pokémon's special moves.");
+                ability.ProximityEvent.Radius = 1;
+                ability.ProximityEvent.TargetAlignments = Alignment.Friend;
+                ability.ProximityEvent.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 4, 3));
             }
             else if (ii == 218)
             {
@@ -1854,8 +1857,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 245)
             {
-                ability.Name = new LocalText("**Sand Spit");
+                ability.Name = new LocalText("Sand Spit");
                 ability.Desc = new LocalText("The Pokémon creates a sandstorm when it's hit by an attack.");
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new GiveMapStatusEvent("sandstorm", 10, new StringKey("MSG_SAND_STREAM"), typeof(ExtendWeatherState))));
             }
             else if (ii == 246)
             {

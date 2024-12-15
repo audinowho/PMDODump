@@ -407,19 +407,26 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<T>(new Tile(terrain)));
         }
 
-        public static void AddTerrainPatternSteps<T>(MapGen<T> layout, string terrain, RandRange amount, SpawnList<PatternPlan> planSpawns, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext
+        public static void AddTerrainPatternSteps<T>(MapGen<T> layout, string terrain, RandRange amount, SpawnList<PatternPlan> planSpawns,
+            bool chokepoint = true, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main, bool includeHalls = false) where T : ListMapGenContext
         {
             PatternTerrainStep<T> trapStep = new PatternTerrainStep<T>(new Tile(terrain));
             trapStep.Amount = amount;
             trapStep.Maps = planSpawns;
             trapStep.AllowTerminal = true;
+            trapStep.IncludeHalls = includeHalls;
             if (connectivity != ConnectivityRoom.Connectivity.None)
                 trapStep.Filters.Add(new RoomFilterConnectivity(connectivity));
 
             MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false, false);
-            NoChokepointTerrainStencil<T> roomStencil = new NoChokepointTerrainStencil<T>(new MapTerrainStencil<T>(true, false, false, false));
             TileEffectStencil<T> noTile = new TileEffectStencil<T>(true);
-            trapStep.TerrainStencil = new MultiTerrainStencil<T>(false, terrainStencil, roomStencil, noTile);
+            MultiTerrainStencil<T> multiStencil = new MultiTerrainStencil<T>(false, terrainStencil, noTile);
+            if (chokepoint)
+            {
+                NoChokepointTerrainStencil<T> roomStencil = new NoChokepointTerrainStencil<T>(new MapTerrainStencil<T>(true, false, false, false));
+                multiStencil.List.Add(roomStencil);
+            }
+            trapStep.TerrainStencil = multiStencil;
 
             layout.GenSteps.Add(PR_WATER, trapStep);
         }
