@@ -652,7 +652,7 @@ Key		EN
 0015-loot_red_orb-0000|data.Name		Red Orb
 0015-loot_red_orb-0001|data.Desc		
 0015-loot_secret_slab-0000|data.Name		Secret Slab
-0015-loot_secret_slab-0001|data.Desc		An ancient stone slab inscribed with what seems to be prehistoric legend. It is said to draw something special to it when kept close by.
+0015-loot_secret_slab-0001|data.Desc		An ancient stone slab inscribed with what seems to be prehistoric legend. Its writings change depending on where it's read.
 0015-loot_spacetime_globe-0000|data.Name		Spacetime Globe
 0015-loot_spacetime_globe-0001|data.Desc		
 0016-box_dainty-0000|data.Name		Dainty Box

@@ -37,6 +37,8 @@ Key		EN
 0000-tile_boss-0001|data.Desc		A tile that shows the mirage of a formidable team of Pokémon.
 0000-tile_compass-0000|data.Name		Compass Tile
 0000-tile_compass-0001|data.Desc		A tile that shows the way to important locations on the floor.
+0000-tile_cradle-0000|data.Name		Sea Cradle
+0000-tile_cradle-0001|data.Desc		A cold sea current gently swirls about...
 0000-tile_evo-0000|data.Name		Luminous Site
 0000-tile_evo-0001|data.Desc		A mysterious area that allows Pokémon to evolve.
 0000-tile_fairy_ring-0000|data.Name		Fairy Ring

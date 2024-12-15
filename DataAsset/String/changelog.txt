@@ -1,13 +1,38 @@
 Sheet: Hardcode
-    * Changed DLG_CHOICE_ON to _ENUM_SkillDefault_All, retaining translations
-    * Significantly changed _ENUM_SkillDefault_Attacks from "" to "Attacks Only"
-    * Changed DLG_CHOICE_OFF to _ENUM_SkillDefault_None, retaining translations
-    * Changed MENU_SETTINGS_SKILL_DEFAULT from "Default Moves" to "Switch New Moves"
-    * Added MENU_TEAM_PROMOTE_SHORT
 
 Sheet: Content
+    * Added DLG_LEGEND_FLOOR
+    * Added DLG_LEGEND_FLOOR_GONE
+    * Significantly changed MSG_ARENA_TRAP from "{0}'s Arena Trap prevents escape!" to "{0}'s {1} prevents escape!"
+    * Added MSG_CURRENT
+    * Added MSG_CURRENT_OPEN
+    * Significantly changed MSG_SAND_STREAM from "{0}'s Sand Stream started a sandstorm!" to "{0}'s {1} started a sandstorm!"
+    * Erased contents of MSG_SHADOW_TAG
+    * Added SIGN_SLAB_EXIT_SECRET
+    * Added SIGN_SLAB_LEGEND_CHASE
+    * Added SIGN_SLAB_LEGEND_HIDE
+    * Added SIGN_SLAB_MYSTERIOSITY
+    * Added SIGN_SLAB_MYTH_NEW
+    * Added SIGN_SLAB_MYTH_TIME
+    * Added SIGN_SLAB_MYTH_WISH
+    * Added SIGN_SLAB_ROOM_SECRET
+    * Added TALK_LEGEND_CHASE_001
+    * Added TALK_LEGEND_HIDE_001
+    * Added TALK_LEGEND_SEA_001
+    * Added TALK_LEGEND_SEA_002
 
 Sheet: Script
+    * Changed ground\canyon_camp/Dragon_Line_006 from "[tmp]A second plot beat will have Team Dragon continuing their boast.[br]We're mentoring actual dragon types that look up to us in a show of dramatic irony (trapinch)." to "[tmp]We show ourselves to be arrogant, but also helpful.[br]This trapinch is but a commoner, but even a lowly bug like him can become an adventurer, thanks to us!"
+    * Changed ground\canyon_camp/Dragon_Line_007 from "[tmp]A second plot beat will have Team Dragon continuing their boast.[br]We're mentoring actual dragon types that look up to us in a show of dramatic irony (trapinch). (spoken to)" to "[tmp]Trapinch is a goober and starstruck by the dragons, they're so cool! (spoken to)"
+    * Changed ground\canyon_camp/Dragon_Line_008 from "[tmp]A third plot beat will have Team Dragon continuing their boast.[br]We're mentoring actual dragon types that look up to us in a show of dramatic irony (applin)." to "[tmp]What's this?  Dessert has come to us?  Of course, we're the kings![br]No, it's me!  Applin!  I want dungeon tips![br]Team Dragon boast about themselves and talk down on applin, but still give him good advice. [br] Applin walks away giving them way more credit than they deserve."
+    * Changed ground\canyon_camp/Dragon_Line_010 from "[tmp]After the rescue, Team Dragon is seen mentoring others as humble heroes." to "[tmp]After the rescue, Team Dragon is seen mentoring others as humble heroes.[br] They realize real heroes don't win the most battles, they help the most people."
+    * Added ground\guildmaster_summit/Special_Event_001
+    * Added ground\guildmaster_summit/Special_Event_002
+    * Added ground\guildmaster_summit/Special_Event_003
+    * Added ground\luminous_spring/Special_Event_001
+    * Added ground\luminous_spring/Special_Event_002
+    * Added ground\luminous_spring/Special_Event_003
+    * Added ground\rest_stop/Special_Event_001
 
 Sheet: Abilities
 
@@ -16,10 +41,13 @@ Sheet: Items
 Sheet: MapStatuses
 
 Sheet: Moves
+    * Changed 0208-milk_drink-0001|data.Desc from "The user restores the party's HP by up to a half of its max HP" to "The user restores the party's HP by up to a half of its max HP."
 
 Sheet: Statuses
 
 Sheet: Tiles
+    * Added 0000-tile_cradle-0000|data.Name
+    * Added 0000-tile_cradle-0001|data.Desc
 
 Sheet: Excl Names
 
@@ -28,6 +56,9 @@ Sheet: Excl Effects
 Sheet: Zones
 
 Sheet: Maps
+    * Added end_tiny_tunnel-0000|data.Name
+    * Added pattern_blob_small-0000|data.Name
+    * Added pattern_dither_three_fourth-0000|data.Name
 
 Sheet: GroundMaps
 
