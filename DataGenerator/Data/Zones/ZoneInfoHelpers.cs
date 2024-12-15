@@ -554,6 +554,22 @@ namespace DataGenerator.Data
         }
 
 
+        static void AddSpecificSpawnPool<TGenContext, TSpawnable>(MapGen<TGenContext> layout, List<(SpawnList<TSpawnable> items, Loc loc)> items, Priority priority)
+            where TGenContext : class, IPlaceableGenContext<TSpawnable>
+            where TSpawnable : ISpawnable
+        {
+            PresetMultiRand<TSpawnable> picker = new PresetMultiRand<TSpawnable>();
+            List<Loc> spawnLocs = new List<Loc>();
+            for (int ii = 0; ii < items.Count; ii++)
+            {
+                picker.ToSpawn.Add(items[ii].items);
+                spawnLocs.Add(items[ii].loc);
+            }
+            PickerSpawner<TGenContext, TSpawnable> spawn = new PickerSpawner<TGenContext, TSpawnable>(picker);
+            layout.GenSteps.Add(priority, new SpecificSpawnStep<TGenContext, TSpawnable>(spawn, spawnLocs));
+        }
+
+
         public static RoomGenSpecific<T> CreateRoomGenSpecific<T>(string[] level) where T : class, ITiledGenContext
         {
             RoomGenSpecific<T> roomGen = new RoomGenSpecific<T>(level[0].Length, level.Length, new Tile(DataManager.Instance.GenFloor));

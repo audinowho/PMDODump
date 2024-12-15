@@ -2623,13 +2623,13 @@ namespace DataGenerator.Data
                         }
 
                         // place the items of the shop
-                        List<InvItem> treasure1 = new List<InvItem>();
-                        treasure1.Add(new InvItem("food_apple", false, 0, 50));//Apple
-                        List<InvItem> treasure2 = new List<InvItem>();
-                        treasure2.Add(InvItem.CreateBox("box_light", "xcl_element_poison_dust", 8000));//Poison Dust
-                        List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
-                        List<InvItem> treasure3 = new List<InvItem>();
-                        treasure3.Add(new InvItem("wand_lob", false, 9, 180));//Lob Wand
+                        SpawnList<InvItem> treasure1 = new SpawnList<InvItem>();
+                        treasure1.Add(new InvItem("food_apple", false, 0, 50), 10);//Apple
+                        SpawnList<InvItem> treasure2 = new SpawnList<InvItem>();
+                        treasure2.Add(InvItem.CreateBox("box_light", "xcl_element_poison_dust", 8000), 10);//Poison Dust
+                        List<(SpawnList<InvItem>, Loc)> items = new List<(SpawnList<InvItem>, Loc)>();
+                        SpawnList<InvItem> treasure3 = new SpawnList<InvItem>();
+                        treasure3.Add(new InvItem("wand_lob", false, 9, 180), 10);//Lob Wand
                         items.Add((treasure1, new Loc(22, 1)));
                         items.Add((treasure2, new Loc(22, 2)));
                         items.Add((treasure3, new Loc(23, 2)));

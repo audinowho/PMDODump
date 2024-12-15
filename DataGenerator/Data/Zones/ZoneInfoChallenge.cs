@@ -71,7 +71,8 @@ namespace DataGenerator.Data
                     snacks.Spawns.Add(new InvItem("seed_hunger"), new IntRange(0, max_floors), 10);
                     //boosters
                     CategorySpawn<InvItem> boosters = new CategorySpawn<InvItem>();
-                    boosters.SpawnRates.SetRange(5, new IntRange(2, max_floors));
+                    boosters.SpawnRates.SetRange(5, new IntRange(2, 6));
+                    boosters.SpawnRates.SetRange(20, new IntRange(6, max_floors));
                     itemSpawnZoneStep.Spawns.Add("boosters", boosters);
 
 
@@ -118,7 +119,7 @@ namespace DataGenerator.Data
                     orbs.Spawns.Add(new InvItem("orb_totter"), new IntRange(0, max_floors), 10);
                     //tms
                     CategorySpawn<InvItem> tms = new CategorySpawn<InvItem>();
-                    tms.SpawnRates.SetRange(5, new IntRange(2, max_floors));
+                    tms.SpawnRates.SetRange(8, new IntRange(2, max_floors));
                     itemSpawnZoneStep.Spawns.Add("tms", tms);
 
                     foreach (string tm in IterateTMs(TMClass.Starter))
@@ -130,8 +131,9 @@ namespace DataGenerator.Data
 
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors)), new MapItem("food_apple"));
-                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
-                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors)), new MapItem("key", 1));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, 3)), new MapItem("berry_leppa"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(4, 7)), new MapItem("berry_leppa"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, 5)), new MapItem("key", 1));
 
 
                     //mobs
@@ -243,8 +245,10 @@ namespace DataGenerator.Data
                         //items
                         if (ii < 4)
                             AddItemData(layout, new RandRange(3, 6), 25);
-                        else
+                        else if (ii < 6)
                             AddItemData(layout, new RandRange(5, 8), 10);
+                        else
+                            AddItemData(layout, new RandRange(7, 10), 10);
 
                         {
                             List<MapItem> specificSpawns = new List<MapItem>();
@@ -303,6 +307,46 @@ namespace DataGenerator.Data
                         AddStairStep(layout, true);
 
                         layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
+
+                        floorSegment.Floors.Add(layout);
+                    }
+
+
+
+
+                    {
+                        LoadGen layout = new LoadGen();
+                        MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
+                        startGen.MapID = "end_tiny_tunnel";
+                        layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                        MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                        layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+
+                        AddSpecificTextureData(layout, "murky_cave_wall", "murky_cave_floor", "murky_cave_secondary", "tall_grass_dark", "bug");
+
+                        {
+                            HashSet<string> exceptFor = new HashSet<string>();
+                            foreach (string legend in IterateLegendaries())
+                                exceptFor.Add(legend);
+                            SpeciesItemElementSpawner<MapLoadContext> spawn = new SpeciesItemElementSpawner<MapLoadContext>(new IntRange(2), new RandRange(2), "bug", exceptFor);
+                            BoxSpawner<MapLoadContext> box = new BoxSpawner<MapLoadContext>("box_heavy", spawn);
+                            List<Loc> treasureLocs = new List<Loc>();
+                            treasureLocs.Add(new Loc(6, 8));
+                            treasureLocs.Add(new Loc(8, 8));
+                            layout.GenSteps.Add(PR_SPAWN_ITEMS, new SpecificSpawnStep<MapLoadContext, MapItem>(box, treasureLocs));
+                        }
+
+                        SpawnList<InvItem> treasure1 = new SpawnList<InvItem>();
+
+                        foreach (string key in IterateGummis(false))
+                            treasure1.Add(InvItem.CreateBox("box_dainty", key), 1);//gummis
+                        treasure1.Add(InvItem.CreateBox("box_dainty", "boost_nectar"), 10);
+                        treasure1.Add(InvItem.CreateBox("box_dainty", "food_apple_perfect"), 10);
+
+                        List<(SpawnList<InvItem>, Loc)> items = new List<(SpawnList<InvItem>, Loc)>();
+                        items.Add((treasure1, new Loc(7, 8)));
+                        AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
 
                         floorSegment.Floors.Add(layout);
                     }

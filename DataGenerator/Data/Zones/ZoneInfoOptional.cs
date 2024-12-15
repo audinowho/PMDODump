@@ -361,12 +361,12 @@ namespace DataGenerator.Data
                     //items.Add((new InvItem("apricorn_plain"), new Loc(13, 10)));//Plain Apricorn
                     //layout.GenSteps.Add(PR_SPAWN_ITEMS, new SpecificSpawnStep<MapLoadContext, InvItem>(items));
 
-                    List<InvItem> treasure = new List<InvItem>();
-                    treasure.Add(InvItem.CreateBox("box_light", "xcl_family_bulbasaur_02"));//Bulbasaur
-                    treasure.Add(InvItem.CreateBox("box_light", "xcl_family_charmander_02"));//Charmander
-                    treasure.Add(InvItem.CreateBox("box_light", "xcl_family_squirtle_02"));//Squirtle
-                    treasure.Add(InvItem.CreateBox("box_light", "xcl_family_pikachu_02"));//Pikachu
-                    List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
+                    SpawnList<InvItem> treasure = new SpawnList<InvItem>();
+                    treasure.Add(InvItem.CreateBox("box_light", "xcl_family_bulbasaur_02"), 10);//Bulbasaur
+                    treasure.Add(InvItem.CreateBox("box_light", "xcl_family_charmander_02"), 10);//Charmander
+                    treasure.Add(InvItem.CreateBox("box_light", "xcl_family_squirtle_02"), 10);//Squirtle
+                    treasure.Add(InvItem.CreateBox("box_light", "xcl_family_pikachu_02"), 10);//Pikachu
+                    List<(SpawnList<InvItem>, Loc)> items = new List<(SpawnList<InvItem>, Loc)>();
                     items.Add((treasure, new Loc(4, 4)));
                     AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
 

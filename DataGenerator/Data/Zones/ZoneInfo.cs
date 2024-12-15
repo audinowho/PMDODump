@@ -255,14 +255,13 @@ namespace DataGenerator.Data
                         layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
                         //add a chest
-                        List<InvItem> treasure = new List<InvItem>();
-                        treasure.Add(InvItem.CreateBox("box_dainty", "seed_reviver"));//Reviver Seed
-                        treasure.Add(InvItem.CreateBox("box_dainty", "seed_reviver"));//Reviver Seed
-                        treasure.Add(InvItem.CreateBox("box_dainty", "berry_micle"));//Micle Berry
-                        treasure.Add(InvItem.CreateBox("box_dainty", "berry_jaboca"));//Rowap Berry
-                        treasure.Add(InvItem.CreateBox("box_dainty", "berry_rowap"));//Jaboca Berry
-                        treasure.Add(InvItem.CreateBox("box_dainty", "food_apple_big"));//Big Apple
-                        List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();
+                        SpawnList<InvItem> treasure = new SpawnList<InvItem>();
+                        treasure.Add(InvItem.CreateBox("box_dainty", "seed_reviver"), 20);//Reviver Seed
+                        treasure.Add(InvItem.CreateBox("box_dainty", "berry_micle"), 10);//Micle Berry
+                        treasure.Add(InvItem.CreateBox("box_dainty", "berry_jaboca"), 10);//Rowap Berry
+                        treasure.Add(InvItem.CreateBox("box_dainty", "berry_rowap"), 10);//Jaboca Berry
+                        treasure.Add(InvItem.CreateBox("box_dainty", "food_apple_big"), 10);//Big Apple
+                        List<(SpawnList<InvItem>, Loc)> items = new List<(SpawnList<InvItem>, Loc)>();
                         items.Add((treasure, new Loc(4, 5)));
                         AddSpecificSpawnPool(layout, items, PR_SPAWN_ITEMS);
 
