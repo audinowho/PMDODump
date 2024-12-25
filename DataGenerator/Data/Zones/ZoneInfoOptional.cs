@@ -7387,7 +7387,8 @@ namespace DataGenerator.Data
                         layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
                     }
 
-                    layout.GenSteps.Add(PR_SPAWN_ITEMS, new ScriptGenStep<MapGenContext>("CastawayCaveRevisit"));
+                    if (ii == max_floors - 1)
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, new ScriptGenStep<MapGenContext>("CastawayCaveRevisit"));
 
                     //items
                     AddItemData(layout, new RandRange(3, 6), 25);
@@ -8164,7 +8165,8 @@ namespace DataGenerator.Data
                     else
                         AddEnemySpawnData(layout, 20, new RandRange(7, 11));
 
-                    layout.GenSteps.Add(PR_SPAWN_ITEMS, new ScriptGenStep<ListMapGenContext>("SleepingCalderaRevisit"));
+                    if (ii == soft_max - 1)
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, new ScriptGenStep<ListMapGenContext>("SleepingCalderaRevisit"));
 
                     //items
                     AddItemData(layout, new RandRange(3, 7), 25);

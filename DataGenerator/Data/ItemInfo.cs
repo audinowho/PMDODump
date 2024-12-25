@@ -3288,7 +3288,7 @@ namespace DataGenerator.Data
             }
             else if (ii == 484)
             {
-                item.Name = new LocalText("**Green Orb");
+                item.Name = new LocalText("**Jade Orb");
                 item.Price = 700000;
             }
             else if (ii == 485)
@@ -3296,7 +3296,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Comet Shard");
                 item.Desc = new LocalText("A shard that fell to the ground when a comet passed nearby. It sells for an extremely high price.");
                 item.Sprite = "Crystal_Blue";
-                item.Price = 60000;
+                item.Price = 80000;
             }
             else if (ii == 486)
             {
@@ -3427,6 +3427,13 @@ namespace DataGenerator.Data
                 // This will prevent mysterious distortions from occurring, and cause them to flood out when taken away
                 item.Sprite = "Piece_Yellow";
                 item.Price = 40000;
+            }
+            else if (ii == 496)
+            {
+                item.Name = new LocalText("Star Piece");
+                item.Desc = new LocalText("A shard of a pretty gem that sparkles in a red color. It can be sold at a high price to shops.");
+                item.Sprite = "Crystal_Red";
+                item.Price = 20000;
             }
             else if (ii == 545)
             {

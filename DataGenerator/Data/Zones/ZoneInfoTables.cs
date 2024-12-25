@@ -1334,6 +1334,7 @@ namespace DataGenerator.Data
                             boxTreasure.Add(new MapItem("ammo_golden_thorn"), 10);//golden thorn
                             boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
                             boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
+                            boxTreasure.Add(new MapItem("loot_heart_scale"), 10);//heart scale
                             if (access >= DungeonAccessibility.Unlockable)
                                 boxTreasure.Add(new MapItem("apricorn_glittery"), 10);//glittery apricorn
                             boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_glittery", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);
@@ -1467,6 +1468,7 @@ namespace DataGenerator.Data
                             boxTreasure.Add(new MapItem("ammo_golden_thorn"), 10);//golden thorn
                             boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
                             boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
+                            boxTreasure.Add(new MapItem("loot_heart_scale"), 10);//heart scale
                             if (access >= DungeonAccessibility.Unlockable)
                                 boxTreasure.Add(new MapItem("apricorn_glittery"), 10);//glittery apricorn
                             boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_glittery", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);
@@ -1630,6 +1632,7 @@ namespace DataGenerator.Data
                         boxTreasure.Add(new MapItem("ammo_golden_thorn"), 10);//golden thorn
                         boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
                         boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
+                        boxTreasure.Add(new MapItem("loot_heart_scale"), 10);//heart scale
                         if (gamePhase == DungeonStage.Rogue)
                             boxTreasure.Add(new MapItem("seed_golden"), 5);//golden seed
                         if (access >= DungeonAccessibility.Unlockable)
@@ -1786,6 +1789,7 @@ namespace DataGenerator.Data
                     SpawnList<MapItem> boxTreasure = new SpawnList<MapItem>();
                     boxTreasure.Add(new MapItem("ammo_golden_thorn"), 10);//golden thorn
                     boxTreasure.Add(new MapItem("medicine_amber_tear"), 10);//Amber Tear
+                    boxTreasure.Add(new MapItem("loot_heart_scale"), 10);//heart scale
                     boxTreasure.Add(new MapItem("loot_nugget"), 10);//nugget
                     boxTreasure.Add(new MapItem("seed_golden"), 5);//golden seed
                     boxSpawn.Add(new BoxSpawner<ListMapGenContext>("box_glittery", new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(boxTreasure, new RandRange(1)))), 2);

@@ -2818,7 +2818,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Snowbound Path");
                 zone.Rescues = 2;
                 zone.Level = 40;
-                zone.ExpPercent = 0;
+                zone.ExpPercent = 30;
                 zone.Rogue = RogueStatus.NoTransfer;
 
                 {
@@ -3044,6 +3044,23 @@ namespace DataGenerator.Data
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)),
                         new MapItem("apricorn_brown"), new MapItem("apricorn_white"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(max_floors / 2, max_floors - 1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
+
+
+                    {
+                        MobSpawn mob = GetGuardMob("glaceon", "", "blizzard", "", "", "", new RandRange(60), "wander_normal", "sleep");
+                        MobSpawnItem keySpawn = new MobSpawnItem(true);
+                        keySpawn.Items.Add(new InvItem("held_choice_specs"), 10);
+                        mob.SpawnFeatures.Add(keySpawn);
+
+                        SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
+                        specificTeam.Spawns.Add(mob);
+                        LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(specificTeam, new RandRange(1));
+
+                        SpawnRangeList<IGenStep> specialEnemySpawns = new SpawnRangeList<IGenStep>();
+                        specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
+                        SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandDecay(0, 1, 50), new IntRange(0, max_floors - 1)), PR_SPAWN_MOBS, specialEnemySpawns);
+                        floorSegment.ZoneSteps.Add(specialEnemyStep);
+                    }
 
                     {
                         //monster houses
@@ -3650,19 +3667,49 @@ namespace DataGenerator.Data
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("machine_assembly_box"));
 
+
                     {
-                        MobSpawn mob = GetGuardMob("glaceon", "", "blizzard", "", "", "", new RandRange(60), "wander_normal", "sleep");
-                        MobSpawnItem keySpawn = new MobSpawnItem(true);
-                        keySpawn.Items.Add(new InvItem("held_choice_specs"), 10);
-                        mob.SpawnFeatures.Add(keySpawn);
-
-                        SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
-                        specificTeam.Spawns.Add(mob);
-                        LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(specificTeam, new RandRange(1));
-
                         SpawnRangeList<IGenStep> specialEnemySpawns = new SpawnRangeList<IGenStep>();
-                        specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
-                        SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(new SpreadPlanQuota(new RandDecay(0, 1, 50), new IntRange(0, max_floors - 1)), PR_SPAWN_MOBS, specialEnemySpawns);
+                        for (int mm = 0; mm < 5; mm++)
+                        {
+                            SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
+
+                            MobSpawn mob;
+                            switch (mm)
+                            {
+                                case 1:
+                                    mob = GetGuardMob(new MonsterID("slaking", 0, "", Gender.Unknown), "", "hammer_arm", "punishment", "slack_off", "chip_away", new RandRange(45), "wander_normal", "freeze");
+                                    break;
+                                case 2:
+                                    mob = GetGuardMob(new MonsterID("slowbro", 0, "", Gender.Unknown), "", "psychic", "water_pulse", "disable", "amnesia", new RandRange(45), "wander_normal", "freeze");
+                                    break;
+                                case 3:
+                                    mob = GetGuardMob(new MonsterID("hitmontop", 0, "", Gender.Unknown), "", "triple_kick", "gyro_ball", "wide_guard", "endeavor", new RandRange(45), "wander_normal", "freeze");
+                                    break;
+                                case 4:
+                                    mob = GetGuardMob(new MonsterID("forretress", 0, "", Gender.Unknown), "", "heavy_slam", "bug_bite", "take_down", "self_destruct", new RandRange(45), "wander_normal", "freeze");
+                                    break;
+                                default:
+                                    mob = GetGuardMob(new MonsterID("luxray", 0, "", Gender.Unknown), "", "crunch", "thunder_fang", "leer", "roar", new RandRange(45), "wander_normal", "freeze");
+                                    break;
+                            }
+                            //MobSpawnItem keySpawn = new MobSpawnItem(true);
+                            //keySpawn.Items.Add(new InvItem("held_wide_lens"), 10);
+                            //mob.SpawnFeatures.Add(keySpawn);
+                            specificTeam.Spawns.Add(mob);
+
+
+                            MobSpawn captor = GetGuardMob("froslass", "cursed_body", "destiny_bond", "ice_beam", "", "", new RandRange(38), "patrol");
+                            specificTeam.Spawns.Add(captor);
+
+                            LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(specificTeam, new RandRange(1));
+
+                            specialEnemySpawns.Add(new PlaceRandomMobsStep<ListMapGenContext>(spawner), new IntRange(0, max_floors), 10);
+                        }
+
+                        SpreadPlanSpaced spacedPlan = new SpreadPlanSpaced(new RandRange(2, 6), new IntRange(0, max_floors));
+                        spacedPlan.BeginStart = true;
+                        SpreadStepRangeZoneStep specialEnemyStep = new SpreadStepRangeZoneStep(spacedPlan, PR_SPAWN_MOBS, specialEnemySpawns);
                         floorSegment.ZoneSteps.Add(specialEnemyStep);
                     }
 
@@ -4946,120 +4993,7 @@ namespace DataGenerator.Data
             }
             else if (index == 40)
             {
-                #region GEODE UNDERPASS
-                {
-                    zone.Name = new LocalText("**Geode Underpass");
-                    zone.Level = 20;
-                    zone.LevelCap = true;
-                    zone.BagRestrict = 8;
-                    zone.KeepTreasure = true;
-                    zone.TeamSize = 2;
-                    zone.Rescues = 2;
-                    zone.Rogue = RogueStatus.NoTransfer;
-
-                    {
-                        int max_floors = 12;
-                        LayeredSegment floorSegment = new LayeredSegment();
-                        floorSegment.IsRelevant = true;
-                        floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                        floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Geode Underpass\nB{0}F"), new Priority(-15)));
-
-                        //money
-                        MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
-                        moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
-                        floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
-
-                        //items
-                        ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
-                        itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
-                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
-
-
-                        //mobs
-                        TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
-                        poolSpawn.Priority = PR_RESPAWN_MOB;
-
-                        poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
-                        floorSegment.ZoneSteps.Add(poolSpawn);
-
-                        TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
-                        tileSpawn.Priority = PR_RESPAWN_TRAP;
-                        floorSegment.ZoneSteps.Add(tileSpawn);
-
-
-                        AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(1, max_floors)), true);
-
-
-                        for (int ii = 0; ii < max_floors; ii++)
-                        {
-                            GridFloorGen layout = new GridFloorGen();
-
-                            //Floor settings
-                            AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
-
-                            //Tilesets
-                            AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
-
-                            if (ii % 3 == 2)
-                                AddWaterSteps(layout, "water", new RandRange(30));//water
-
-                            //traps
-                            AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
-                            AddTrapsSteps(layout, new RandRange(6, 9));
-
-                            //money
-                            AddMoneyData(layout, new RandRange(2, 4));
-
-                            //enemies!
-                            AddRespawnData(layout, 3, 80);
-
-                            //enemies
-                            AddEnemySpawnData(layout, 20, new RandRange(2, 4));
-
-                            //items
-                            AddItemData(layout, new RandRange(3, 6), 25);
-
-
-                            //construct paths
-                            {
-                                AddInitGridStep(layout, 4, 4, 10, 10);
-
-                                GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
-                                path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                                path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                                path.RoomRatio = new RandRange(90);
-                                path.BranchRatio = new RandRange(0, 25);
-
-                                SpawnList<RoomGen<MapGenContext>> genericRooms = new SpawnList<RoomGen<MapGenContext>>();
-                                //cross
-                                genericRooms.Add(new RoomGenCross<MapGenContext>(new RandRange(4, 11), new RandRange(4, 11), new RandRange(2, 6), new RandRange(2, 6)), 10);
-                                //round
-                                genericRooms.Add(new RoomGenRound<MapGenContext>(new RandRange(5, 9), new RandRange(5, 9)), 10);
-                                path.GenericRooms = genericRooms;
-
-                                SpawnList<PermissiveRoomGen<MapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<MapGenContext>>();
-                                genericHalls.Add(new RoomGenAngledHall<MapGenContext>(50), 10);
-                                path.GenericHalls = genericHalls;
-
-                                layout.GenSteps.Add(PR_GRID_GEN, path);
-
-                                layout.GenSteps.Add(PR_GRID_GEN, CreateGenericConnect(75, 50));
-
-                            }
-
-                            AddDrawGridSteps(layout);
-
-                            AddStairStep(layout, false);
-
-                            layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<MapGenContext, MapGenEntrance, MapGenExit>());
-
-                            floorSegment.Floors.Add(layout);
-                        }
-
-                        zone.Segments.Add(floorSegment);
-                    }
-                }
-                #endregion
+                FillGeodeUnderpass(zone, translate);
             }
             else if (index == 41)
             {

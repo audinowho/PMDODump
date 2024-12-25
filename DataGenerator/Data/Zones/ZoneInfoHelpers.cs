@@ -852,7 +852,7 @@ namespace DataGenerator.Data
                 post_mob.SpecifiedSkills.Add(move4);
             post_mob.Tactic = "loot_guard";
             post_mob.Level = new RandRange(baseLv);
-            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(scaleNum, scaleDen));
+            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(scaleNum, scaleDen, false));
             post_mob.SpawnFeatures.Add(new MobSpawnMovesOff(post_mob.SpecifiedSkills.Count));
             return post_mob;
         }
@@ -865,7 +865,7 @@ namespace DataGenerator.Data
             post_mob.Tactic = tactic;
             post_mob.Level = new RandRange(1);
             post_mob.SpawnFeatures.Add(new MobSpawnWeak());
-            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(4, 3));
+            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(4, 3, true));
             return post_mob;
         }
 
@@ -892,7 +892,7 @@ namespace DataGenerator.Data
             post_mob.SpawnFeatures.Add(new MobSpawnLoc(loc));
             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, item));
             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
-            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(scaleNum, scaleDen));
+            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(scaleNum, scaleDen, false));
             MobSpawnScaledBoost boost = new MobSpawnScaledBoost(new IntRange(1, 50));
             boost.MaxHPBonus = new IntRange(15, MonsterFormData.MAX_STAT_BOOST);
             post_mob.SpawnFeatures.Add(boost);
