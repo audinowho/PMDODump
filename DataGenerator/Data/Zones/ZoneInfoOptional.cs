@@ -5522,9 +5522,9 @@ namespace DataGenerator.Data
 
                         //Floor settings
                         if (ii < 5)
-                            AddFloorData(layout, "Star Cave.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                            AddFloorData(layout, "Moonlit Courtyard.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
                         else
-                            AddFloorData(layout, "Star Cave.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                            AddFloorData(layout, "Moonlit Courtyard.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                         if (ii == 7)
                             AddDefaultMapStatus(layout, "default_weather", "misty_terrain");

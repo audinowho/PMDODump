@@ -410,23 +410,23 @@ namespace DataGenerator.Data
 
         static void FillGeodeUnderpass(ZoneData zone, bool translate)
         {
-            #region GEODE UNDERPASS
+            #region GEODE CREVICE
             {
-                zone.Name = new LocalText("Geode Underpass");
+                zone.Name = new LocalText("Geode Crevice");
                 zone.Level = 20;
                 zone.LevelCap = true;
                 zone.BagRestrict = 8;
                 zone.KeepTreasure = true;
                 zone.TeamSize = 2;
                 zone.Rescues = 2;
-                zone.Rogue = RogueStatus.NoTransfer;
+                zone.Rogue = RogueStatus.ItemTransfer;
 
                 {
                     int max_floors = 12;
                     LayeredSegment floorSegment = new LayeredSegment();
                     floorSegment.IsRelevant = true;
                     floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
-                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Geode Underpass\nB{0}F"), new Priority(-15)));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Geode Crevice\nB{0}F"), new Priority(-15)));
 
                     //money
                     MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
@@ -459,10 +459,22 @@ namespace DataGenerator.Data
                         GridFloorGen layout = new GridFloorGen();
 
                         //Floor settings
-                        AddFloorData(layout, "Title.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+                        if (ii < 4)
+                            AddFloorData(layout, "Moonlit Courtyard.ogg", 1200, Map.SightRange.Dark, Map.SightRange.Dark);
+                        else if (ii < 8)
+                            AddFloorData(layout, "Glacial Path.ogg", 1200, Map.SightRange.Clear, Map.SightRange.Clear);
+                        else
+                            AddFloorData(layout, "Limestone Cavern.ogg", 1200, Map.SightRange.Clear, Map.SightRange.Dark);
+
 
                         //Tilesets
-                        AddTextureData(layout, "test_dungeon_wall", "test_dungeon_floor", "test_dungeon_secondary", "normal");
+                        //other candidates: crystal_crossing, crystal_cave_2, southern_cavern_2
+                        if (ii < 4)
+                            AddTextureData(layout, "lapis_cave_wall", "lapis_cave_floor", "lapis_cave_secondary", "rock");
+                        else if (ii < 8)
+                            AddTextureData(layout, "crystal_cave_1_wall", "crystal_cave_1_floor", "crystal_cave_1_secondary", "ice");
+                        else
+                            AddTextureData(layout, "waterfall_pond_wall", "waterfall_pond_floor", "waterfall_pond_secondary", "rock");
 
                         if (ii % 3 == 2)
                             AddWaterSteps(layout, "water", new RandRange(30));//water
@@ -544,7 +556,7 @@ namespace DataGenerator.Data
                         MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
                         layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
 
-                        AddTextureData(layout, "murky_cave_wall", "murky_cave_floor", "murky_cave_secondary", "rock");
+                        AddTextureData(layout, "waterfall_pond_wall", "waterfall_pond_floor", "waterfall_pond_secondary", "rock");
 
                         layout.GenSteps.Add(PR_SPAWN_ITEMS, new ScriptGenStep<MapLoadContext>("GeodeUnderpassRevisit"));
 
