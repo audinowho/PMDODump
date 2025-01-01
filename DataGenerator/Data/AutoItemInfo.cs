@@ -124,7 +124,9 @@ namespace DataGenerator.Data
         ChanceStatOnTypeHit,
         ChanceStatusOnCategoryHit,
         TypeBecomesCategory,
-        WeaknessDodge
+        WeaknessDodge,
+        HeartFinder,
+        CelebrateStatus
     }
     public class AutoItemInfo
     {
@@ -1613,6 +1615,16 @@ namespace DataGenerator.Data
                     item.AfterActions.Add(1, new FamilyBattleEvent(new KnockOutNeededEvent(new RemoveStateStatusBattleEvent(typeof(BadStatusState), false, new StringKey("MSG_CURE_SELF"), battleAnim))));
                 }
             }
+            else if (type == ExclusiveItemEffect.CelebrateStatus)
+            {
+                item.Rarity = 4;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon gains the {0} status after defeating an enemy.");
+                if (includeEffects)
+                {
+                    localArgs.Add(DataManager.Instance.GetStatus((string)args[0]).Name);
+                    item.AfterActions.Add(0, new FamilyBattleEvent(new KnockOutNeededEvent(new StatusBattleEvent((string)args[0], false, true, false, new StringKey("MSG_EXCL_ITEM_TYPE")))));
+                }
+            }
             else if (type == ExclusiveItemEffect.Anchor)
             {
                 item.Rarity = 1;
@@ -1955,6 +1967,18 @@ namespace DataGenerator.Data
                     item.ProximityEvent.Radius = 1;
                     item.ProximityEvent.TargetAlignments = Alignment.Foe;
                     item.ProximityEvent.BeforeExplosions.Add(0, new DrawAttackEvent(Alignment.Friend, element, new StringKey("MSG_DRAW_ATTACK")));
+                }
+            }
+            else if (type == ExclusiveItemEffect.HeartFinder)
+            {
+                item.Rarity = 3;
+                item.Desc = new LocalText("When kept in the bag, the Pokémon may find a {0} when it enters a new floor.");
+                if (includeEffects)
+                {
+                    
+                    string element = "loot_heart_scale";
+                    localArgs.Add(DataManager.Instance.GetItem(element).Name);
+                    item.OnMapStarts.Add(0, new FamilySingleEvent(new GatherEvent(new List<string> { element }, 50, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2)), ""))));
                 }
             }
             else

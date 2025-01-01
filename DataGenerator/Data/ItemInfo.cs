@@ -4500,6 +4500,10 @@ namespace DataGenerator.Data
                     fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.TypeBecomesCategory, new object[] { "grass", BattleData.SkillCategory.Physical }, translate);
                 else if (ii == 892)
                     fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.WeaknessDodge, new object[] { "fire" }, translate);
+                else if (ii == 893)
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.HeartFinder, new object[] { }, translate);
+                else if (ii == 894)
+                    fileName = AutoItemInfo.FillExclusiveTestData(item, "", ExclusiveItemEffect.CelebrateStatus, new object[] { "electrified" }, translate);
 
                 if (ii >= 800 && ii < 900)
                     item.Comment = "Test item, do not translate";
