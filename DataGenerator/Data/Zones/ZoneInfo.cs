@@ -5862,7 +5862,7 @@ namespace DataGenerator.Data
             }
             else if (index == 52)
             {
-                FillLostSeas(zone, translate);
+                FillUnchartedWaters(zone, translate);
             }
             else if (index == 53)
             {
