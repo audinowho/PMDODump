@@ -620,7 +620,7 @@ namespace DataGenerator.Data
             return detours;
         }
 
-        public static RoomGenSpecific<T> CreateRoomGenSpecificBoss<T>(string[] level, Loc trigger, List<MobSpawn> mobs, bool severe) where T : ListMapGenContext
+        public static RoomGenSpecific<T> CreateRoomGenSpecificBoss<T>(string id, string[] level, Loc trigger, List<MobSpawn> mobs, bool severe) where T : ListMapGenContext
         {
             RoomGenSpecificBoss<T> roomGen = new RoomGenSpecificBoss<T>(level[0].Length, level.Length, new Tile(DataManager.Instance.GenFloor), "tile_boss", trigger, severe ? "Boss Battle 2.ogg" : "Boss Battle.ogg");
             roomGen.Bosses = mobs;
@@ -851,8 +851,8 @@ namespace DataGenerator.Data
             if (!String.IsNullOrEmpty(move4))
                 post_mob.SpecifiedSkills.Add(move4);
             post_mob.Tactic = "loot_guard";
-            post_mob.Level = new RandRange(baseLv);
-            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(scaleNum, scaleDen, false));
+            post_mob.Level = new RandRange(1);
+            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(baseLv, scaleNum, scaleDen, false));
             post_mob.SpawnFeatures.Add(new MobSpawnMovesOff(post_mob.SpecifiedSkills.Count));
             return post_mob;
         }
@@ -865,7 +865,7 @@ namespace DataGenerator.Data
             post_mob.Tactic = tactic;
             post_mob.Level = new RandRange(1);
             post_mob.SpawnFeatures.Add(new MobSpawnWeak());
-            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(4, 3, true));
+            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(1, 4, 3, true));
             return post_mob;
         }
 
@@ -888,11 +888,11 @@ namespace DataGenerator.Data
             if (!String.IsNullOrEmpty(move4))
                 post_mob.SpecifiedSkills.Add(move4);
             post_mob.Tactic = "boss";
-            post_mob.Level = new RandRange(baseLv);
+            post_mob.Level = new RandRange(1);
             post_mob.SpawnFeatures.Add(new MobSpawnLoc(loc));
             post_mob.SpawnFeatures.Add(new MobSpawnItem(true, item));
             post_mob.SpawnFeatures.Add(new MobSpawnUnrecruitable());
-            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(scaleNum, scaleDen, false));
+            post_mob.SpawnFeatures.Add(new MobSpawnLevelScale(baseLv, scaleNum, scaleDen, false));
             MobSpawnScaledBoost boost = new MobSpawnScaledBoost(new IntRange(1, 50));
             boost.MaxHPBonus = new IntRange(15, MonsterFormData.MAX_STAT_BOOST);
             post_mob.SpawnFeatures.Add(boost);

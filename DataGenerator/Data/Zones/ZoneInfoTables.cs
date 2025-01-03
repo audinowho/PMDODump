@@ -375,6 +375,17 @@ namespace DataGenerator.Data
             return layout;
         }
 
+        static RoomGen<T> getBossRoomGen2<T>(string id, int baseLv = 3, int scaleNum = 4, int scaleDen = 3) where T : ListMapGenContext
+        {
+            RoomGenLoadBoss<T> loadBoss = new RoomGenLoadBoss<T>(id, new Tile(DataManager.Instance.GenFloor), "tile_boss");
+            loadBoss.SpawnDetails.Add(new MobSpawnUnrecruitable());
+            loadBoss.SpawnDetails.Add(new MobSpawnLevelScale(baseLv, scaleNum, scaleDen, false));
+            MobSpawnScaledBoost boost = new MobSpawnScaledBoost(new IntRange(1, 50));
+            boost.MaxHPBonus = new IntRange(15, MonsterFormData.MAX_STAT_BOOST);
+            loadBoss.SpawnDetails.Add(boost);
+            return loadBoss;
+        }
+
         static RoomGen<T> getBossRoomGen<T>(string id, int baseLv = 3, int scaleNum = 4, int scaleDen = 3) where T : ListMapGenContext
         {
             //FOUR MEMBERS
@@ -398,7 +409,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("combee", "", "sweet_scent", "tailwind", "bug_bite", "endeavor", "", new Loc(4, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("combee", "", "sweet_scent", "tailwind", "bug_bite", "endeavor", "", new Loc(1, 4), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("combee", "", "sweet_scent", "tailwind", "bug_bite", "endeavor", "", new Loc(7, 4), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customWaterCross, new Loc(4, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customWaterCross, new Loc(4, 4), mobSpawns, false);
             }
 
 
@@ -439,7 +450,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("houndoom", "flash_fire", "flamethrower", "roar", "foul_play", "inferno", "", new Loc(1, 4), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("flareon", "flash_fire", "fire_spin", "flare_blitz", "quick_attack", "lava_plume", "", new Loc(4, 7), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("arcanine", "flash_fire", "heat_wave", "snarl", "extreme_speed", "fire_blast", "", new Loc(7, 4), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customLavaLake, new Loc(4, 4), mobSpawns, true);
+                return CreateRoomGenSpecificBoss<T>(id, customLavaLake, new Loc(4, 4), mobSpawns, true);
             }
 
 
@@ -464,7 +475,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("steelix", "", "stealth_rock", "iron_tail", "dig", "bind", "", new Loc(7, 1), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("sudowoodo", "", "hammer_arm", "counter", "block", "wood_hammer", "", new Loc(2, 3), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("donphan", "", "heavy_slam", "bulldoze", "knock_off", "rollout", "", new Loc(8, 3), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(5, 3), mobSpawns, true);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 3), mobSpawns, true);
             }
 
 
@@ -487,7 +498,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("gyarados", "", "earthquake", "waterfall", "dragon_dance", "ice_fang", "", new Loc(6, 0), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("aerodactyl", "", "stealth_rock", "agility", "rock_slide", "wide_guard", "", new Loc(0, 6), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("charizard", "", "fire_pledge", "dragon_rage", "air_cutter", "heat_wave", "", new Loc(6, 6), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customSkyChex, new Loc(3, 3), mobSpawns, true);
+                return CreateRoomGenSpecificBoss<T>(id, customSkyChex, new Loc(3, 3), mobSpawns, true);
             }
 
             if (id == "salamence")
@@ -511,7 +522,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("feraligatr", "", "superpower", "aqua_tail", "ice_fang", "crunch", "", new Loc(2, 3), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("gallade", "", "close_combat", "leaf_blade", "psycho_cut", "feint", "", new Loc(6, 3), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("honchkrow", "", "haze", "roost", "quash", "dark_pulse", "", new Loc(4, 1), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customPillarHalls, new Loc(4, 5), mobSpawns, true);
+                return CreateRoomGenSpecificBoss<T>(id, customPillarHalls, new Loc(4, 5), mobSpawns, true);
             }
 
 
@@ -551,7 +562,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("solrock", "", "heal_block", "morning_sun", "cosmic_power", "solar_beam", "", new Loc(6, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("claydol", "", "imprison", "power_split", "explosion", "extrasensory", "", new Loc(2, 6), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("bronzong", "", "safeguard", "metal_sound", "future_sight", "flash_cannon", "", new Loc(6, 6), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customSkyDiamond, new Loc(4, 4), mobSpawns, true);
+                return CreateRoomGenSpecificBoss<T>(id, customSkyDiamond, new Loc(4, 4), mobSpawns, true);
             }
 
 
@@ -573,7 +584,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("ditto", "imposter", "transform", "", "", "", "", new Loc(4, 7), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("ditto", "imposter", "transform", "", "", "", "", new Loc(1, 4), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("ditto", "imposter", "transform", "", "", "", "", new Loc(7, 4), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customPillarCross, new Loc(4, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customPillarCross, new Loc(4, 4), mobSpawns, false);
             }
 
 
@@ -597,7 +608,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("clefairy", "friend_guard", "moonlight", "cosmic_power", "lucky_chant", "stored_power", "", new Loc(4, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("jigglypuff", "friend_guard", "sing", "disable", "captivate", "round", "", new Loc(3, 3), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("happiny", "friend_guard", "charm", "refresh", "sweet_kiss", "substitute", "", new Loc(5, 3), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customSideWalls, new Loc(4, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customSideWalls, new Loc(4, 4), mobSpawns, false);
             }
 
 
@@ -619,7 +630,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("jolteon", "", "thunderbolt", "agility", "signal_beam", "stored_power", "", new Loc(3, 1), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("flareon", "", "flare_blitz", "will_o_wisp", "smog", "helping_hand", "", new Loc(5, 1), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("sylveon", "", "moonblast", "safeguard", "shadow_ball", "stored_power", "", new Loc(4, 0), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customSemiCovered, new Loc(4, 3), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customSemiCovered, new Loc(4, 3), mobSpawns, false);
             }
 
             if (id == "espeon")
@@ -640,7 +651,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("leafeon", "", "leaf_blade", "grass_whistle", "x_scissor", "helping_hand", "", new Loc(3, 1), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("glaceon", "", "frost_breath", "barrier", "water_pulse", "stored_power", "", new Loc(5, 1), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("umbreon", "", "snarl", "moonlight", "shadow_ball", "helping_hand", "", new Loc(4, 0), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customSemiCovered, new Loc(4, 3), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customSemiCovered, new Loc(4, 3), mobSpawns, false);
             }
 
 
@@ -661,7 +672,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("pachirisu", "volt_absorb", "follow_me", "super_fang", "discharge", "ion_deluge", "", new Loc(6, 1), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("raichu", "lightning_rod", "grass_knot", "thunderbolt", "focus_blast", "iron_tail", "", new Loc(2, 3), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("electrode", "aftermath", "discharge", "eerie_impulse", "sonic_boom", "charge", "", new Loc(8, 3), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customTwoPillars, new Loc(5, 3), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customTwoPillars, new Loc(5, 3), mobSpawns, false);
             }
 
 
@@ -687,7 +698,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("volcarona", "", "fiery_dance", "quiver_dance", "silver_wind", "hurricane", "", new Loc(6, 3), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("solrock", "", "stone_edge", "light_screen", "flamethrower", "rock_polish", "", new Loc(6, 8), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("lycanroc", "steadfast", "accelerock", "quick_guard", "quick_attack", "rock_climb", "", new Loc(6, 9), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customRoom, new Loc(6, 5), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customRoom, new Loc(6, 5), mobSpawns, false);
             }
 
             // Minior, Lunatone, Solrock
@@ -707,7 +718,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("minior", "", "dazzling_gleam", "acrobatics", "power_gem", "shell_smash", "", new Loc(5, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("lunatone", "", "moonblast", "hypnosis", "magic_room", "cosmic_power", "", new Loc(3, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("solrock", "", "solar_beam", "light_screen", "wonder_room", "cosmic_power", "", new Loc(7, 2), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customRoom, new Loc(5, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customRoom, new Loc(5, 4), mobSpawns, false);
             }
 
             if (id == "lopunny")
@@ -727,7 +738,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("lopunny", "cute_charm", "agility", "return", "high_jump_kick", "mirror_coat", "", new Loc(5, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("gardevoir", "synchronize", "wish", "magical_leaf", "psychic", "healing_wish", "", new Loc(4, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("medicham", "", "force_palm", "zen_headbutt", "thunder_punch", "counter", "", new Loc(6, 2), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(5, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 4), mobSpawns, false);
             }
 
             if (id == "delphox")
@@ -746,7 +757,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("delphox", "magician", "psychic", "mystical_fire", "magic_coat", "calm_mind", "", new Loc(4, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("gothitelle", "competitive", "psychic", "shadow_ball", "telekinesis", "future_sight", "", new Loc(0, 4), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("reuniclus", "magic_guard", "psychic", "energy_ball", "recover", "reflect", "", new Loc(8, 4), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(4, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(4, 4), mobSpawns, false);
             }
 
             if (id == "wobbuffet")
@@ -765,7 +776,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("wobbuffet", "", "destiny_bond", "safeguard", "encore", "mirror_coat", "", new Loc(4, 3), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("ariados", "insomnia", "spider_web", "venom_drench", "sludge_bomb", "venoshock", "", new Loc(2, 4), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("banette", "frisk", "grudge", "curse", "spite", "snatch", "", new Loc(6, 4), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(4, 5), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(4, 5), mobSpawns, false);
             }
 
 
@@ -784,7 +795,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("hippowdon", "sand_stream", "yawn", "sand_tomb", "crunch", "take_down", "", new Loc(5, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("cacturne", "sand_veil", "sand_attack", "ingrain", "needle_arm", "leech_seed", "", new Loc(3, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("sandslash", "sand_veil", "fury_swipes", "crush_claw", "sand_tomb", "dig", "", new Loc(7, 2), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(5, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 4), mobSpawns, false);
             }
 
             if (id == "thievul")
@@ -803,7 +814,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("thievul", "stakeout", "sucker_punch", "foul_play", "tail_slap", "thief", "", new Loc(4, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("scrafty", "shed_skin", "low_kick", "headbutt", "payback", "chip_away", "", new Loc(3, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("cacturne", "sand_veil", "growth", "destiny_bond", "revenge", "payback", "", new Loc(5, 2), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(4, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(4, 4), mobSpawns, false);
             }
 
             if (id == "drapion")
@@ -822,7 +833,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("drapion", "battle_armor", "acupressure", "knock_off", "toxic_spikes", "bite", "", new Loc(4, 3), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("skarmory", "sturdy", "spikes", "steel_wing", "sand_attack", "agility", "", new Loc(2, 5), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("arbok", "shed_skin", "stockpile", "coil", "swallow", "wrap", "", new Loc(6, 5), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(4, 5), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(4, 5), mobSpawns, false);
             }
 
             if (id == "lycanroc")
@@ -841,7 +852,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob(new MonsterID("lycanroc", 2, "", Gender.Unknown), "", "rock_climb", "rock_slide", "thrash", "crunch", "", new Loc(4, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob(new MonsterID("lycanroc", 0, "", Gender.Unknown), "steadfast", "accelerock", "wide_guard", "roar", "stealth_rock", "", new Loc(2, 3), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob(new MonsterID("lycanroc", 1, "", Gender.Unknown), "vital_spirit", "reversal", "counter", "roar", "stealth_rock", "", new Loc(6, 3), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(4, 5), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(4, 5), mobSpawns, false);
             }
 
             if (id == "armaldo")
@@ -858,7 +869,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("torkoal", "white_smoke", "heat_wave", "iron_defense", "smokescreen", "smog", "", new Loc(5, 1), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("cradily", "", "wring_out", "ingrain", "giga_drain", "gastro_acid", "", new Loc(3, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("armaldo", "", "x_scissor", "metal_claw", "crush_claw", "brine", "", new Loc(7, 2), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(5, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 4), mobSpawns, false);
             }
 
             if (id == "bastiodon")
@@ -875,7 +886,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("bronzong", "levitate", "rain_dance", "psywave", "safeguard", "imprison", "", new Loc(5, 1), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("bastiodon", "", "iron_defense", "metal_burst", "protect", "iron_head", "", new Loc(3, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("rampardos", "", "head_smash", "chip_away", "zen_headbutt", "take_down", "", new Loc(7, 2), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(5, 5), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 5), mobSpawns, false);
             }
 
             if (id == "aerodactyl")
@@ -893,7 +904,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("aerodactyl", "", "sky_drop", "rock_slide", "roar", "crunch", "", new Loc(5, 1), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("omastar", "", "rock_blast", "brine", "mud_shot", "tickle", "", new Loc(1, 4), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("kabutops", "", "night_slash", "feint", "aqua_jet", "endure", "", new Loc(9, 4), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(5, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 4), mobSpawns, false);
             }
 
             if (id == "flygon")
@@ -914,7 +925,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("flygon", "", "sonic_boom", "sandstorm", "uproar", "earth_power", "", new Loc(4, 3), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("dugtrio", "arena_trap", "magnitude", "night_slash", "growl", "mud_bomb", "", new Loc(2, 4), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("fearow", "", "drill_run", "drill_peck", "pursuit", "mirror_move", "", new Loc(6, 4), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(4, 6), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(4, 6), mobSpawns, false);
             }
 
             if (id == "arbok")
@@ -931,7 +942,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("arbok", "intimidate", "glare", "stockpile", "spit_up", "acid_spray", "", new Loc(5, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("marowak", "lightning_rod", "retaliate", "bonemerang", "bone_club", "rage", "", new Loc(2, 4), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("drapion", "sniper", "thunder_fang", "pursuit", "night_slash", "poison_fang", "", new Loc(8, 4), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customJigsaw, new Loc(5, 5), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 5), mobSpawns, false);
             }
 
             //   Fossil team with ancient power; omastar has shell smash
@@ -967,7 +978,7 @@ namespace DataGenerator.Data
                 //242 Blissey : 032 Serene Grace : 069 Seismic Toss : 135 Soft-Boiled : 287 Refresh : 196 Icy Wind
                 mobSpawns.Add(GetBossMob("skarmory", "sturdy", "metal_sound", "air_cutter", "spikes", "toxic", "", new Loc(3, 2), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("blissey", "serene_grace", "seismic_toss", "soft_boiled", "refresh", "icy_wind", "", new Loc(5, 2), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customShield, new Loc(4, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customShield, new Loc(4, 4), mobSpawns, false);
             }
 
             if (id == "umbreon")
@@ -987,7 +998,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("espeon", "magic_bounce", "psychic", "shadow_ball", "reflect", "dazzling_gleam", "", new Loc(3, 2), baseLv, scaleNum, scaleDen));
                 //197 Umbreon : 028 Synchronize : 236 Moonlight : 212 Mean Look : 555 Snarl : 399 Dark Pulse
                 mobSpawns.Add(GetBossMob("umbreon", "synchronize", "moonlight", "mean_look", "snarl", "dark_pulse", "", new Loc(5, 2), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customEclipse, new Loc(4, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customEclipse, new Loc(4, 4), mobSpawns, false);
             }
 
             if (id == "ampharos")
@@ -1009,7 +1020,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("manectric", "minus", "electric_terrain", "discharge", "flamethrower", "eerie_impulse", "", new Loc(3, 5), baseLv, scaleNum, scaleDen));
                 //181 Ampharos : 057 Plus : 192 Zap Cannon : 406 Dragon Pulse : 324 Signal Beam : 602 Magnetic Flux
                 mobSpawns.Add(GetBossMob("ampharos", "plus", "zap_cannon", "dragon_pulse", "signal_beam", "magnetic_flux", "", new Loc(5, 5), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customBatteryReverse, new Loc(4, 3), mobSpawns, true);
+                return CreateRoomGenSpecificBoss<T>(id, customBatteryReverse, new Loc(4, 3), mobSpawns, true);
             }
 
             if (id == "plusle")
@@ -1031,7 +1042,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("plusle", "plus", "thunder", "swift", "nasty_plot", "grass_knot", "", new Loc(3, 5), baseLv, scaleNum, scaleDen));
                 //312 Minun : 058 Minus : 240 Rain Dance : 097 Agility : 435 Discharge : 376 Trump Card
                 mobSpawns.Add(GetBossMob("minun", "minus", "rain_dance", "agility", "discharge", "trump_card", "", new Loc(5, 5), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customBattery, new Loc(4, 7), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customBattery, new Loc(4, 7), mobSpawns, false);
             }
 
 
@@ -1052,7 +1063,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("tauros", "intimidate", "rage", "thrash", "bulldoze", "payback", "", new Loc(4, 3), baseLv, scaleNum, scaleDen));
                 //241 Miltank : 113 Scrappy : 208 Milk Drink : 215 Heal Bell : 034 Body Slam : 045 Growl
                 mobSpawns.Add(GetBossMob("miltank", "scrappy", "milk_drink", "heal_bell", "body_slam", "growl", "", new Loc(4, 2), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customRailway, new Loc(4, 5), mobSpawns, true);
+                return CreateRoomGenSpecificBoss<T>(id, customRailway, new Loc(4, 5), mobSpawns, true);
             }
 
 
@@ -1073,7 +1084,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("mothim", "tinted_lens", "silver_wind", "quiver_dance", "air_slash", "psychic", "", new Loc(3, 2), baseLv, scaleNum, scaleDen));
                 //413 Wormadam : 107 Anticipation : 522 Struggle Bug : 319 Metal Sound : 450 Bug Bite : 527 Electroweb
                 mobSpawns.Add(GetBossMob(new MonsterID("wormadam", 2, "", Gender.Unknown), "anticipation", "struggle_bug", "metal_sound", "bug_bite", "electroweb", "", new Loc(5, 2), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customButterfly, new Loc(4, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customButterfly, new Loc(4, 4), mobSpawns, false);
             }
 
 
@@ -1094,7 +1105,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("politoed", "drizzle", "mist", "hypnosis", "water_pulse", "ice_beam", "", new Loc(2, 2), baseLv, scaleNum, scaleDen));
                 //062 Poliwrath : 033 Swift Swim : 187 Belly Drum : 127 Waterfall : 358 Wake-Up Slap : 509 Circle Throw
                 mobSpawns.Add(GetBossMob("poliwrath", "swift_swim", "belly_drum", "waterfall", "wake_up_slap", "circle_throw", "", new Loc(6, 2), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customWaterSwirl, new Loc(4, 4), mobSpawns, true);
+                return CreateRoomGenSpecificBoss<T>(id, customWaterSwirl, new Loc(4, 4), mobSpawns, true);
             }
 
             if (id == "slowbro")
@@ -1113,7 +1124,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("slowbro", "oblivious", "heal_pulse", "psych_up", "water_pulse", "psychic", "", new Loc(3, 3), baseLv, scaleNum, scaleDen));
                 //199 Slowking : 012 Oblivious : 376 Trump Card : 347 Calm Mind : 408 Power Gem : 281 Yawn
                 mobSpawns.Add(GetBossMob("slowking", "oblivious", "trump_card", "calm_mind", "power_gem", "yawn", "", new Loc(5, 3), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customCrownWater, new Loc(4, 5), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customCrownWater, new Loc(4, 5), mobSpawns, false);
             }
 
             if (id == "nidoking")
@@ -1132,7 +1143,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("nidoking", "sheer_force", "poison_jab", "megahorn", "focus_energy", "drill_run", "", new Loc(3, 3), baseLv, scaleNum, scaleDen));
                 //031 Nidoqueen : 079 Rivalry : 270 Helping Hand : 445 Captivate : 414 Earth Power : 482 Sludge Wave
                 mobSpawns.Add(GetBossMob("nidoqueen", "rivalry", "helping_hand", "captivate", "earth_power", "sludge_wave", "", new Loc(5, 3), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customCrown, new Loc(4, 5), mobSpawns, true);
+                return CreateRoomGenSpecificBoss<T>(id, customCrown, new Loc(4, 5), mobSpawns, true);
             }
 
 
@@ -1151,7 +1162,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("gardevoir", "trace", "dazzling_gleam", "wish", "magical_leaf", "heal_pulse", "", new Loc(3, 1), baseLv, scaleNum, scaleDen));
                 //031 Nidoqueen : 079 Rivalry : 270 Helping Hand : 445 Captivate : 414 Earth Power : 482 Sludge Wave
                 mobSpawns.Add(GetBossMob("gallade", "steadfast", "psycho_cut", "leaf_blade", "night_slash", "wide_guard", "", new Loc(5, 1), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customCrown, new Loc(4, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customCrown, new Loc(4, 4), mobSpawns, false);
             }
 
 
@@ -1172,7 +1183,7 @@ namespace DataGenerator.Data
                 mobSpawns.Add(GetBossMob("volbeat", "swarm", "tail_glow", "signal_beam", "thunder", "confuse_ray", "", new Loc(3, 3), baseLv, scaleNum, scaleDen));
                 //031 Nidoqueen : 079 Rivalry : 270 Helping Hand : 445 Captivate : 414 Earth Power : 482 Sludge Wave
                 mobSpawns.Add(GetBossMob("illumise", "tinted_lens", "moonlight", "encore", "struggle_bug", "bug_buzz", "", new Loc(5, 3), baseLv, scaleNum, scaleDen));
-                return CreateRoomGenSpecificBoss<T>(customCrown, new Loc(4, 4), mobSpawns, false);
+                return CreateRoomGenSpecificBoss<T>(id, customCrown, new Loc(4, 4), mobSpawns, false);
             }
 
 

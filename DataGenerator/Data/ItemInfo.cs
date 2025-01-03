@@ -3273,7 +3273,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Heart Scale");
                 item.Desc = new LocalText("A pretty, heart-shaped scale that is extremely rare. It glows faintly with all of the colors of the rainbow.");
                 item.Sprite = "Heart_Pink";
-                item.Price = 50;
+                item.Price = 100;
                 item.MaxStack = 9;
             }
             else if (ii == 482)
