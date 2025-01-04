@@ -644,6 +644,7 @@ namespace DataGenerator.Data
                         roomGen.Tiles[xx][yy] = new Tile(DataManager.Instance.GenFloor);
                 }
             }
+            roomGen.Dump("boss_" + id);
             return roomGen;
         }
 

@@ -6201,12 +6201,12 @@ namespace DataGenerator.Data
                         {
                             {
                                 SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("clefable", 24, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("minior", 26, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("lopunny", 26, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("gallade", 30, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("umbreon", 30, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("volbeat", 30, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("pink_wall", 24, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("celestial", 26, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("charm", 26, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("ralts_pair", 30, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("eclipse", 30, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("firefly_pair", 30, 0, 1), 10);
                                 layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericBossRoomStep(bossRooms, 0));
                             }
                             //sealing the boss room and treasure room
@@ -6732,27 +6732,27 @@ namespace DataGenerator.Data
                             //boss that only shows on second or final floor
                             if (ii == 1 || ii == 3 && kk == 0)
                             {
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("hippowdon", 23, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("thievul", 23, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("drapion", 23, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("sandstorm_2", 23, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("thief", 23, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("tanker", 23, 0, 1), 10);
                             }
                             //boss that only shows on third or final floor
                             if (ii == 2 || ii == 3 && kk > 0 && kk < 2)
                             {
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("armaldo", 23, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("fossil_hoenn", 23, 0, 1), 10);
                                 bossRooms.Add(getBossRoomGen<MapGenContext>("lycanroc", 23, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("bastiodon", 23, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("aerodactyl", 23, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("flygon", 23, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("arbok", 23, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("fossil_sinnoh", 23, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("fossil_kanto", 23, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("sand_spirit", 23, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("awd", 23, 0, 1), 10);
                                 bossRooms.Add(getBossRoomGen<MapGenContext>("ditto", 23, 0, 1), 10);
                             }
                             //special boss that only shows up on the final floor.
                             //guaranteed to be one of these, guaranteed only one of these
                             if (ii == 3 && kk == 2)
                             {
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("camerupt-water", 23, 0, 1), 10);
-                                bossRooms.Add(getBossRoomGen<MapGenContext>("claydol-water", 23, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("lava_plume_water", 23, 0, 1), 10);
+                                bossRooms.Add(getBossRoomGen<MapGenContext>("artifact_water", 23, 0, 1), 10);
                             }
                             layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericBossRoomStep(bossRooms, kk));
                         }

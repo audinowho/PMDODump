@@ -1362,26 +1362,26 @@ namespace DataGenerator.Data
                 //BOSS TEAMS
                 // no specific items to be used in lv5 dungeons
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("vespiquen"), new IntRange(0, 14), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("beehive"), new IntRange(0, 14), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("camerupt"), new IntRange(14, 19), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("lava_plume"), new IntRange(14, 19), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("tyranitar"), new IntRange(12, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("sandstorm_1"), new IntRange(12, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("dragonite"), new IntRange(23, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("dragon_1"), new IntRange(23, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("salamence"), new IntRange(19, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("dragon_2"), new IntRange(19, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("claydol"), new IntRange(23, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("artifact"), new IntRange(23, 30), 10);
 
                 bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("ditto"), new IntRange(0, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("clefable"), new IntRange(0, 14), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("pink_wall"), new IntRange(0, 14), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("vaporeon"), new IntRange(0, 30), 10);
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("espeon"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("eeveelution_1"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("eeveelution_2"), new IntRange(0, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("raichu"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("discharge"), new IntRange(0, 30), 10);
 
                 //sealing the boss room and treasure room
                 {
@@ -3058,23 +3058,23 @@ namespace DataGenerator.Data
                 }
 
                 //boss rooms
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("skarmory"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("skarmbliss"), new IntRange(0, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("umbreon"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("eclipse"), new IntRange(0, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("ampharos"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("plus_minus_2"), new IntRange(0, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("plusle"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("plus_minus_1"), new IntRange(0, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("tauros"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("cattle_pair"), new IntRange(0, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("mothim"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("burmy_pair"), new IntRange(0, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("politoed"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("poli_pair"), new IntRange(0, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("slowbro"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("slow_pair"), new IntRange(0, 30), 10);
 
-                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("nidoking"), new IntRange(0, 30), 10);
+                bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("nido_pair"), new IntRange(0, 30), 10);
 
                 //sealing the boss room and treasure room
                 {

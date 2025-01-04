@@ -377,7 +377,7 @@ namespace DataGenerator.Data
 
         static RoomGen<T> getBossRoomGen2<T>(string id, int baseLv = 3, int scaleNum = 4, int scaleDen = 3) where T : ListMapGenContext
         {
-            RoomGenLoadBoss<T> loadBoss = new RoomGenLoadBoss<T>(id, new Tile(DataManager.Instance.GenFloor), "tile_boss");
+            RoomGenLoadBoss<T> loadBoss = new RoomGenLoadBoss<T>("boss_" + id, new Tile(DataManager.Instance.GenFloor), "tile_boss");
             loadBoss.SpawnDetails.Add(new MobSpawnUnrecruitable());
             loadBoss.SpawnDetails.Add(new MobSpawnLevelScale(baseLv, scaleNum, scaleDen, false));
             MobSpawnScaledBoost boost = new MobSpawnScaledBoost(new IntRange(1, 50));
@@ -390,7 +390,7 @@ namespace DataGenerator.Data
         {
             //FOUR MEMBERS
 
-            if (id == "vespiquen")
+            if (id == "beehive")
             {
                 string[] customWaterCross = new string[] {    "~~~...~~~",
                                                                       "~~~...~~~",
@@ -413,10 +413,10 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "camerupt" || id == "camerupt-water")
+            if (id == "lava_plume" || id == "lava_plume_water")
             {
                 string[] customLavaLake;
-                if (id == "camerupt")
+                if (id == "lava_plume")
                 {
                     customLavaLake = new string[] {                   "#^^.^.^^#",
                                                                       "^^^^.^^^^",
@@ -455,7 +455,7 @@ namespace DataGenerator.Data
 
 
 
-            if (id == "tyranitar")
+            if (id == "sandstorm_1")
             {
                 string[] customJigsaw = new string[] {        "....###....",
                                                                       "##..###..##",
@@ -479,7 +479,7 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "dragonite")
+            if (id == "dragon_1")
             {
                 string[] customSkyChex = new string[] {       "..___..",
                                                                       "..___..",
@@ -501,7 +501,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customSkyChex, new Loc(3, 3), mobSpawns, true);
             }
 
-            if (id == "salamence")
+            if (id == "dragon_2")
             {
                 string[] customPillarHalls = new string[] {   ".........",
                                                                       "..#...#..",
@@ -526,10 +526,10 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "claydol" || id == "claydol-water")
+            if (id == "artifact" || id == "artifact_water")
             {
                 string[] customSkyDiamond;
-                if (id == "claydol")
+                if (id == "artifact")
                 {
                     customSkyDiamond = new string[] {    "###_._###",
                                                                       "##__.__##",
@@ -588,7 +588,7 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "clefable")
+            if (id == "pink_wall")
             {
                 string[] customSideWalls = new string[] {     ".........",
                                                                       ".........",
@@ -612,7 +612,7 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "vaporeon")
+            if (id == "eeveelution_1")
             {
                 string[] customSemiCovered = new string[] {   ".........",
                                                                       ".........",
@@ -633,7 +633,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customSemiCovered, new Loc(4, 3), mobSpawns, false);
             }
 
-            if (id == "espeon")
+            if (id == "eeveelution_2")
             {
                 string[] customSemiCovered = new string[] {   ".........",
                                                                       ".........",
@@ -655,7 +655,7 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "raichu")
+            if (id == "discharge")
             {
                 string[] customTwoPillars = new string[] {    "...........",
                                                                       "..##...##..",
@@ -681,7 +681,7 @@ namespace DataGenerator.Data
 
             // Volcarona, Solrock, Midday Lycanroc
 
-            if (id == "volcarona")
+            if (id == "sun_altar")
             {
                 string[] customRoom = new string[] {                  "..~~~~~~~~~..",
                                                                       "...~~~~~~~...",
@@ -703,7 +703,7 @@ namespace DataGenerator.Data
 
             // Minior, Lunatone, Solrock
 
-            if (id == "minior")
+            if (id == "celestial")
             {
                 string[] customRoom = new string[] {                  "...........",
                                                                       ".~.~.~.~.~.",
@@ -721,7 +721,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customRoom, new Loc(5, 4), mobSpawns, false);
             }
 
-            if (id == "lopunny")
+            if (id == "charm")
             {
                 string[] customJigsaw = new string[] {                "##..###..##",
                                                                       "#....#....#",
@@ -741,7 +741,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 4), mobSpawns, false);
             }
 
-            if (id == "delphox")
+            if (id == "psychic")
             {
                 string[] customJigsaw = new string[] {                "#.......#",
                                                                       "...~~~...",
@@ -760,7 +760,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(4, 4), mobSpawns, false);
             }
 
-            if (id == "wobbuffet")
+            if (id == "trapper")
             {
                 string[] customJigsaw = new string[] {                ".........",
                                                                       "###...###",
@@ -780,7 +780,7 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "hippowdon")
+            if (id == "sandstorm_2")
             {
                 string[] customJigsaw = new string[] {                "...........",
                                                                       ".#.#.#.#.#.",
@@ -798,7 +798,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 4), mobSpawns, false);
             }
 
-            if (id == "thievul")
+            if (id == "thief")
             {
                 string[] customJigsaw = new string[] {                "###...###",
                                                                       "###...###",
@@ -817,7 +817,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(4, 4), mobSpawns, false);
             }
 
-            if (id == "drapion")
+            if (id == "tanker")
             {
                 string[] customJigsaw = new string[] {                ".........",
                                                                       "....#....",
@@ -855,7 +855,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(4, 5), mobSpawns, false);
             }
 
-            if (id == "armaldo")
+            if (id == "fossil_hoenn")
             {
                 string[] customJigsaw = new string[] {                ".#.#.#.#.#.",
                                                                       ".#.#...#.#.",
@@ -872,7 +872,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 4), mobSpawns, false);
             }
 
-            if (id == "bastiodon")
+            if (id == "fossil_sinnoh")
             {
                 string[] customJigsaw = new string[] {                "...........",
                                                                       "####...####",
@@ -889,7 +889,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 5), mobSpawns, false);
             }
 
-            if (id == "aerodactyl")
+            if (id == "fossil_kanto")
             {
                 string[] customJigsaw = new string[] {                "##.......##",
                                                                       "#.........#",
@@ -907,7 +907,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 4), mobSpawns, false);
             }
 
-            if (id == "flygon")
+            if (id == "sand_spirit")
             {
                 string[] customJigsaw = new string[] {                "###...###",
                                                                       "##.....##",
@@ -928,7 +928,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(4, 6), mobSpawns, false);
             }
 
-            if (id == "arbok")
+            if (id == "awd")
             {
                 string[] customJigsaw = new string[] {                "#.........#",
                                                                       "...........",
@@ -937,10 +937,10 @@ namespace DataGenerator.Data
                                                                       "...........",
                                                                       "...........",
                                                                       "#.........#"};
-                //    dusclops filler
+                //    AWD
                 List<MobSpawn> mobSpawns = new List<MobSpawn>();
                 mobSpawns.Add(GetBossMob("arbok", "intimidate", "glare", "stockpile", "spit_up", "acid_spray", "", new Loc(5, 2), baseLv, scaleNum, scaleDen));
-                mobSpawns.Add(GetBossMob("marowak", "lightning_rod", "retaliate", "bonemerang", "bone_club", "rage", "", new Loc(2, 4), baseLv, scaleNum, scaleDen));
+                mobSpawns.Add(GetBossMob("weavile", "pickpocket", "ice_punch", "knock_off", "fake_out", "assurance", "", new Loc(2, 4), baseLv, scaleNum, scaleDen));
                 mobSpawns.Add(GetBossMob("drapion", "sniper", "thunder_fang", "pursuit", "night_slash", "poison_fang", "", new Loc(8, 4), baseLv, scaleNum, scaleDen));
                 return CreateRoomGenSpecificBoss<T>(id, customJigsaw, new Loc(5, 5), mobSpawns, false);
             }
@@ -960,7 +960,7 @@ namespace DataGenerator.Data
             //TWO MEMBERS
 
 
-            if (id == "skarmory")
+            if (id == "skarmbliss")
             {
                 //boss rooms
                 string[] customShield = new string[] {          ".#######.",
@@ -981,7 +981,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customShield, new Loc(4, 4), mobSpawns, false);
             }
 
-            if (id == "umbreon")
+            if (id == "eclipse")
             {
                 string[] customEclipse = new string[] {         "##.....##",
                                                                 "#.......#",
@@ -1001,7 +1001,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customEclipse, new Loc(4, 4), mobSpawns, false);
             }
 
-            if (id == "ampharos")
+            if (id == "plus_minus_2")
             {
                 string[] customBatteryReverse = new string[] {  ".........",
                                                                 "..#####..",
@@ -1023,7 +1023,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customBatteryReverse, new Loc(4, 3), mobSpawns, true);
             }
 
-            if (id == "plusle")
+            if (id == "plus_minus_1")
             {
                 string[] customBattery = new string[] {         "....#....",
                                                                 "....#....",
@@ -1046,7 +1046,7 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "tauros")
+            if (id == "cattle_pair")
             {
                 string[] customRailway = new string[] {         ".........",
                                                                 ".........",
@@ -1067,7 +1067,7 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "mothim")
+            if (id == "burmy_pair")
             {
                 string[] customButterfly = new string[] {       "#.##.##.#",
                                                                 "...#.#...",
@@ -1088,7 +1088,7 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "politoed")
+            if (id == "poli_pair")
             {
                 string[] customWaterSwirl = new string[] {      "..~~~~~..",
                                                                 ".~.....~.",
@@ -1108,7 +1108,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customWaterSwirl, new Loc(4, 4), mobSpawns, true);
             }
 
-            if (id == "slowbro")
+            if (id == "slow_pair")
             {
                 string[] customCrownWater = new string[] {  ".~~~.~~~.",
                                                             ".~~~.~~~.",
@@ -1127,7 +1127,7 @@ namespace DataGenerator.Data
                 return CreateRoomGenSpecificBoss<T>(id, customCrownWater, new Loc(4, 5), mobSpawns, false);
             }
 
-            if (id == "nidoking")
+            if (id == "nido_pair")
             {
                 string[] customCrown = new string[] {       ".###.###.",
                                                             ".###.###.",
@@ -1147,7 +1147,7 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "gallade")
+            if (id == "ralts_pair")
             {
                 string[] customCrown = new string[] {       ".........",
                                                             ".#.....#.",
@@ -1166,7 +1166,7 @@ namespace DataGenerator.Data
             }
 
 
-            if (id == "volbeat")
+            if (id == "firefly_pair")
             {
                 string[] customCrown = new string[] {       "####.####",
                                                             "#.~#.#~.#",
