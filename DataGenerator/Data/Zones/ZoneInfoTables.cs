@@ -375,18 +375,19 @@ namespace DataGenerator.Data
             return layout;
         }
 
-        static RoomGen<T> getBossRoomGen2<T>(string id, int baseLv = 3, int scaleNum = 4, int scaleDen = 3) where T : ListMapGenContext
+        static RoomGen<T> getBossRoomGen<T>(string id, int baseLv = 3, int scaleNum = 4, int scaleDen = 3, int scaleStartLv = 1) where T : ListMapGenContext
         {
             RoomGenLoadBoss<T> loadBoss = new RoomGenLoadBoss<T>("boss_" + id, new Tile(DataManager.Instance.GenFloor), "tile_boss");
             loadBoss.SpawnDetails.Add(new MobSpawnUnrecruitable());
             loadBoss.SpawnDetails.Add(new MobSpawnLevelScale(baseLv, scaleNum, scaleDen, false));
-            MobSpawnScaledBoost boost = new MobSpawnScaledBoost(new IntRange(1, 50));
-            boost.MaxHPBonus = new IntRange(15, MonsterFormData.MAX_STAT_BOOST);
+            MobSpawnScaledBoost boost = new MobSpawnScaledBoost(new IntRange(scaleStartLv, scaleStartLv + 50));
+            boost.MaxHPBonus = new IntRange(16, MonsterFormData.MAX_STAT_BOOST);
             loadBoss.SpawnDetails.Add(boost);
+            loadBoss.PreventChanges = PostProcType.Terrain;
             return loadBoss;
         }
 
-        static RoomGen<T> getBossRoomGen<T>(string id, int baseLv = 3, int scaleNum = 4, int scaleDen = 3) where T : ListMapGenContext
+        static RoomGen<T> getBossRoomGenOld<T>(string id, int baseLv = 3, int scaleNum = 4, int scaleDen = 3) where T : ListMapGenContext
         {
             //FOUR MEMBERS
 
@@ -1198,10 +1199,10 @@ namespace DataGenerator.Data
             throw new Exception("Invalid boss id");
         }
 
-        static AddBossRoomStep<T> getBossRoomStep<T>(string id, int bossIndex = 0, int baseLv = 3, int scaleNum = 4, int scaleDen = 3) where T : ListMapGenContext
+        static AddBossRoomStep<T> getBossRoomStep<T>(string id, int bossIndex = 0, int baseLv = 3, int scaleNum = 4, int scaleDen = 3, int scaleStartLv = 1) where T : ListMapGenContext
         {
             SpawnList<RoomGen<T>> bossRooms = new SpawnList<RoomGen<T>>();
-            bossRooms.Add(getBossRoomGen<T>(id, baseLv, scaleNum, scaleDen), 10);
+            bossRooms.Add(getBossRoomGen<T>(id, baseLv, scaleNum, scaleDen, scaleStartLv), 10);
             return CreateGenericBossRoomStep(bossRooms, bossIndex);
         }
 

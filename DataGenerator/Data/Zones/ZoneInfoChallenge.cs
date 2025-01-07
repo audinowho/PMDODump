@@ -1986,14 +1986,14 @@ namespace DataGenerator.Data
                     //BOSS TEAMS
                     // no specific items to be used in lv5 dungeons
 
-                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("discharge", 0, 31, 2, 3), new IntRange(0, max_floors), 10);
-                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("eeveelution_2", 0, 31, 2, 3), new IntRange(0, max_floors), 10);
-                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("eeveelution_1", 0, 31, 2, 3), new IntRange(0, max_floors), 10);
-                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("sun_altar", 0, 35, 1, 1), new IntRange(0, max_floors), 10);
-                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("celestial", 0, 35, 1, 1), new IntRange(0, max_floors), 10);
-                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("charm", 0, 35, 1, 1), new IntRange(0, max_floors), 10);
-                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("psychic", 0, 35, 1, 1), new IntRange(0, max_floors), 10);
-                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("trapper", 0, 35, 1, 1), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("discharge", 0, 31, 2, 3, 20), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("eeveelution_2", 0, 31, 2, 3, 20), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("eeveelution_1", 0, 31, 2, 3, 20), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("sun_altar", 0, 35, 1, 1, 20), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("celestial", 0, 35, 1, 1, 20), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("charm", 0, 35, 1, 1, 20), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("psychic", 0, 35, 1, 1, 20), new IntRange(0, max_floors), 10);
+                    bossChanceZoneStep.BossSteps.Add(getBossRoomStep<ListMapGenContext>("trapper", 0, 35, 1, 1, 20), new IntRange(0, max_floors), 10);
 
                     //sealing the boss room and treasure room
                     {
