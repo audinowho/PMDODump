@@ -6578,17 +6578,20 @@ namespace DataGenerator.Data
             }
             else if (ii == 812)
             {
-                skill.Name = new LocalText("**Flip Turn");
-                skill.Desc = new LocalText("After making its attack, the user rushes back to switch places with a party Pokémon in waiting.");
+                skill.Name = new LocalText("Flip Turn");
+                skill.Desc = new LocalText("After making its attack, the user jumps back several steps.");
                 skill.BaseCharges = 20;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.AfterActions.Add(0, new OnHitAnyEvent(true, 100, new HopEvent(3, true)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                ((AttackAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
             }
@@ -6943,19 +6946,32 @@ namespace DataGenerator.Data
             }
             else if (ii == 834)
             {
-                skill.Name = new LocalText("**Wave Crash");
-                skill.Desc = new LocalText("");
+                skill.Name = new LocalText("Wave Crash");
+                skill.Desc = new LocalText("The user shrouds itself in water and slams into the target with its whole body to inflict damage.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(120));
+                skill.Data.SkillStates.Set(new BasePowerState(90));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).CharAnim = 23;//Slam
+                ((DashAction)skill.HitboxAction).Range = 4;
+                ((DashAction)skill.HitboxAction).StopAtWall = true;
+                ((DashAction)skill.HitboxAction).StopAtHit = true;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
+                skill.HitboxAction.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                skill.Explosion.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                BattleFX preFX = new BattleFX();
+                preFX.Sound = "DUN_Water_Spout";
+                skill.HitboxAction.PreActions.Add(preFX);
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Cleanse_Blue", 2));
+                emitter.LocHeight = 120;
+                skill.Data.HitFX.Emitter = emitter;
+                skill.Data.HitFX.Sound = "DUN_Surf";
             }
             else if (ii == 835)
             {
@@ -7361,19 +7377,38 @@ namespace DataGenerator.Data
             }
             else if (ii == 857)
             {
-                skill.Name = new LocalText("**Jet Punch");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Name = new LocalText("Jet Punch");
+                skill.Desc = new LocalText("The user summons a torrent around its fist and punches at blinding speed.");
+                skill.BaseCharges = 12;
                 skill.Data.Element = "water";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
+                skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).CharAnim = 11;//Punch
+                ((DashAction)skill.HitboxAction).Range = 4;
+                ((DashAction)skill.HitboxAction).StopAtHit = true;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.Data.HitFX.Sound = "DUN_Punch";
+                SingleEmitter frontEmitter = new SingleEmitter(new AnimData("Print_Fist", 12));
+                FiniteReleaseEmitter endAnim = new FiniteReleaseEmitter(new AnimData("Hydro_Cannon", 5, 2, -1));
+                endAnim.BurstTime = 2;
+                endAnim.ParticlesPerBurst = 2;
+                endAnim.Bursts = 4;
+                endAnim.StartDistance = 4;
+                endAnim.Speed = 60;
+                endAnim.Layer = DrawLayer.Back;
+                ListEmitter multiEmitter = new ListEmitter();
+                multiEmitter.Anim.Add(endAnim);
+                multiEmitter.Anim.Add(frontEmitter);
+                skill.Data.HitFX.Emitter = multiEmitter;
             }
             else if (ii == 858)
             {

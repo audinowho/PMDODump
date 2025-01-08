@@ -572,7 +572,7 @@ namespace DataGenerator.Data
                         int boss_idx = 1;
                         {
                             SpawnList<RoomGen<MapGenContext>> bossRooms = new SpawnList<RoomGen<MapGenContext>>();
-                            bossRooms.Add(getBossRoomGen<MapGenContext>("psychic", 23, 0, 1), 10);
+                            bossRooms.Add(getBossRoomGen<MapGenContext>("superhero", 23, 0, 1), 10);
                             layout.GenSteps.Add(PR_ROOMS_GEN_EXTRA, CreateGenericBossRoomStep(bossRooms, boss_idx));
                         }
                         //sealing the boss room and treasure room

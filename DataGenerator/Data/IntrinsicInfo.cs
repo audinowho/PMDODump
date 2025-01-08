@@ -2051,7 +2051,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Zero to Hero");
                 ability.Desc = new LocalText("The Pokémon switches between Zero Form and Hero Form when entering a new floor.");
-                ability.OnMapStarts.Add(-10, new RevolvingFormeEvent("palfin", 0, 1));
+                ability.OnMapStarts.Add(-15, new RevolvingFormeEvent("palafin", 0, 1));
             }
             else if (ii == 279)
             {
