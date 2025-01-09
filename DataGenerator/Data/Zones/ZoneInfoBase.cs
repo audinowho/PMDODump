@@ -418,7 +418,7 @@ namespace DataGenerator.Data
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
 
                     //Tilesets
-                    AddTextureData(layout, "sky_peak_4th_pass_wall", "sky_peak_4th_pass_floor", "sky_peak_4th_pass_secondary", "normal");
+                    AddTextureData(layout, "surrounded_sea_wall", "surrounded_sea_floor", "surrounded_sea_secondary", "normal");
 
                     AddBlobWaterSteps(layout, "water", new RandRange(10), new IntRange(2, 10));
 
