@@ -8,3 +8,5 @@
 * Fixed errors occurring at Training Maze
 * Fixed an issue where Pokemon spawned in Guildmaster Trail Monster Houses only had moves at level 1
 * Dev: Added RoomGenLoadBoss, an editor-friendly way to spawn boss rooms by editing a static boss map, and then selecting it as the map to load into the random dungeon.
+* Dev: Fixed errors occurring when maps are resized more than once with NPCs on them
+* Dev: Fixed cleanups when restarting using CTRL+F12
