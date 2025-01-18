@@ -2818,7 +2818,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Snowbound Path");
                 zone.Rescues = 2;
                 zone.Level = 40;
-                zone.ExpPercent = 30;
+                zone.ExpPercent = 0;
                 zone.Rogue = RogueStatus.NoTransfer;
 
                 {
