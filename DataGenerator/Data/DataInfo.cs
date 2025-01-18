@@ -54,8 +54,8 @@ namespace DataGenerator.Data
             universalEvent.OnMapStarts.Add(-10, new FadeInEvent());
             universalEvent.OnMapStarts.Add(-5, new SpecialIntroEvent());
             universalEvent.OnMapStarts.Add(-5, new ReactivateItemsEvent());
-            universalEvent.OnTurnEnds.Add(20, new NaturalHungerUpdateEvent());
-            universalEvent.OnTurnEnds.Add(25, new NaturalRegenerationEvent());
+            universalEvent.OnTurnEnds.Add(15, new NaturalHungerEvent(1000, 80, 0, 0, 0, 0));
+            universalEvent.OnTurnEnds.Add(15, new NaturalPercentRegenEvent(12, 0, -60));
             universalEvent.ZoneSteps.Add(new ScriptZoneStep("SpawnRescueNote"));
             universalEvent.ZoneSteps.Add(new ScriptZoneStep("SpawnMissionNpcFromSV"));
             //UniversalEvent.OnWalks.Add(-5, new RevealFrontTrapEvent());
@@ -100,8 +100,6 @@ namespace DataGenerator.Data
 
             universalEvent.UniversalStates.Set(elementTable);
             universalEvent.UniversalStates.Set(new SkinTableState(1024, "shiny", "shiny_square"));
-            universalEvent.UniversalStates.Set(new HungerConsumptionRateState(100, 80, 0, 0, 0, 0));
-            universalEvent.UniversalStates.Set(new NaturalRegenerationRateState(12, 0, -60, 0, 0, 0));
 
 
             DataManager.SaveData(universalEvent, DataManager.DATA_PATH, "Universal", DataManager.DATA_EXT);
