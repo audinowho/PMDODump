@@ -2014,13 +2014,6 @@ namespace DataGenerator.Data
                         terrainPattern.Add(new PatternPlan("pattern_x", PatternPlan.PatternExtend.Single), 20);
                         AddTerrainPatternSteps(layout, "wall", new RandRange(2, 6), terrainPattern);
 
-                        //add wall at the halls
-                        {
-                            RoomTerrainStep<ListMapGenContext> chasmStep = new RoomTerrainStep<ListMapGenContext>(new Tile("wall"), new RandRange(100), false, true);
-                            chasmStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-                            chasmStep.TerrainStencil = new MatchTerrainStencil<ListMapGenContext>(false, new Tile("floor"));
-                            layout.GenSteps.Add(PR_WATER, chasmStep);
-                        }
 
                         //money
                         AddMoneyData(layout, new RandRange(2, 5));
@@ -2045,15 +2038,12 @@ namespace DataGenerator.Data
                         //construct paths
                         {
                             //Create a path that is composed of a branching tree
-                            FloorPathBranch<ListMapGenContext> path = new FloorPathBranch<ListMapGenContext>();
-                            path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                            path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                            path.HallPercent = 100;
+                            AddDisconnectedRoomsStep<ListMapGenContext> path = new AddDisconnectedRoomsStep<ListMapGenContext>();
+                            path.Components.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                             if (ii < 2)
-                                path.FillPercent = new RandRange(65);
+                                path.Amount = new RandRange(7, 9);
                             else
-                                path.FillPercent = new RandRange(55);
-                            path.BranchRatio = new RandRange(30);
+                                path.Amount = new RandRange(9, 11);
 
                             //Give it some room types to place
                             SpawnList<RoomGen<ListMapGenContext>> genericRooms = new SpawnList<RoomGen<ListMapGenContext>>();
@@ -2062,25 +2052,6 @@ namespace DataGenerator.Data
                             genericRooms.Add(new RoomGenCave<ListMapGenContext>(new RandRange(6, 12), new RandRange(6, 12)), 10);
 
                             path.GenericRooms = genericRooms;
-
-                            //Give it some hall types to place
-                            int minLength;
-                            if (ii < 2)
-                                minLength = 1;
-                            else
-                                minLength = 4;
-                            SpawnList<PermissiveRoomGen<ListMapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
-                            {
-                                RoomGenAngledHall<ListMapGenContext> hall = new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(minLength, 8), new RandRange(2));
-                                hall.Brush = new SquareHallBrush(Loc.One * 2);
-                                genericHalls.Add(hall, 20);
-                            }
-                            {
-                                RoomGenAngledHall<ListMapGenContext> hall = new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2), new RandRange(minLength, 8));
-                                hall.Brush = new SquareHallBrush(Loc.One * 2);
-                                genericHalls.Add(hall, 20);
-                            }
-                            path.GenericHalls = genericHalls;
 
                             layout.GenSteps.Add(PR_ROOMS_GEN, path);
                         }
