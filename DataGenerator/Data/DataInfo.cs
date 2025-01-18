@@ -54,6 +54,8 @@ namespace DataGenerator.Data
             universalEvent.OnMapStarts.Add(-10, new FadeInEvent());
             universalEvent.OnMapStarts.Add(-5, new SpecialIntroEvent());
             universalEvent.OnMapStarts.Add(-5, new ReactivateItemsEvent());
+            universalEvent.OnTurnEnds.Add(15, new NaturalHungerEvent(1000, 80, 0, 0, 0, 0));
+            universalEvent.OnTurnEnds.Add(15, new NaturalPercentRegenEvent(12, 0, -60));
             universalEvent.ZoneSteps.Add(new ScriptZoneStep("SpawnRescueNote"));
             universalEvent.ZoneSteps.Add(new ScriptZoneStep("SpawnMissionNpcFromSV"));
             //UniversalEvent.OnWalks.Add(-5, new RevealFrontTrapEvent());
