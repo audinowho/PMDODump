@@ -513,10 +513,10 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
         }
 
-        static void AddStairStep<T>(MapGen<T> layout, bool goDown)
+        static void AddStairStep<T>(MapGen<T> layout, bool goDown, int minDistance = 3)
             where T : class, IFloorPlanGenContext, IPlaceableGenContext<MapGenEntrance>, IPlaceableGenContext<MapGenExit>
         {
-            var step = new FloorStairsStep<T, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile(goDown ? "stairs_go_down" : "stairs_go_up", true)));
+            var step = new FloorStairsStep<T, MapGenEntrance, MapGenExit>(minDistance, new MapGenEntrance(Dir8.Down), new MapGenExit(new EffectTile(goDown ? "stairs_go_down" : "stairs_go_up", true)));
             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
             step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
             layout.GenSteps.Add(PR_EXITS, step);

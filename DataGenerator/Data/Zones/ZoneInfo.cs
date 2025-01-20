@@ -224,7 +224,7 @@ namespace DataGenerator.Data
 
                         AddDrawGridSteps(layout);
 
-                        AddStairStep(layout, false);
+                        AddStairStep(layout, false, 1);
 
                         if (ii == 3)
                         {
@@ -4993,7 +4993,7 @@ namespace DataGenerator.Data
             }
             else if (index == 40)
             {
-                FillGeodeUnderpass(zone, translate);
+                FillGeodeCrevice(zone, translate);
             }
             else if (index == 41)
             {

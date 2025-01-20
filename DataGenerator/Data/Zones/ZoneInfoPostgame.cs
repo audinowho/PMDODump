@@ -157,7 +157,7 @@ namespace DataGenerator.Data
         {
             EffectTile exitTile = new EffectTile("stairs_go_down", true);
             exitTile.TileStates.Set(new DestState(dest));
-            var step = new FloorStairsStep<T, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
+            var step = new FloorStairsStep<T, MapGenEntrance, MapGenExit>(3, new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
             step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
             step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
             layout.GenSteps.Add(PR_EXITS, step);

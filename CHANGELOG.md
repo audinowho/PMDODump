@@ -15,5 +15,7 @@
 * RC: Fixed an issue where mysterious distortions would fail to expire on wrapped maps
 * Dev: Added RoomGenLoadBoss, an editor-friendly way to spawn boss rooms by editing a static boss map, and then selecting it as the map to load into the random dungeon.
 * Dev: Fixed errors occurring when maps are resized more than once with NPCs on them
+* Dev: Improvements to ConnectBranchStep that make it work better in wrapped maps
+* Dev: Stairs Steps now have a MinDistance, where you can specify how far away the exit should at least be from the start
 * Dev: Fixed cleanups when restarting using CTRL+F12
 * Dev: Item indexing has changed.  Be sure to reserialize your mods if you mod items!

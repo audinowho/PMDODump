@@ -3911,7 +3911,7 @@ namespace DataGenerator.Data
                     //the main stairs becomes the exit stairs
                     EffectTile exitTile = new EffectTile("stairs_exit_up", true);
                     exitTile.TileStates.Set(new DestState(SegLoc.Invalid));
-                    var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>(new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
+                    var step = new FloorStairsStep<MapGenContext, MapGenEntrance, MapGenExit>(2, new MapGenEntrance(Dir8.Down), new MapGenExit(exitTile));
                     step.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                     step.Filters.Add(new RoomFilterComponent(true, new BossRoom()));
                     layout.GenSteps.Add(PR_EXITS, step);
