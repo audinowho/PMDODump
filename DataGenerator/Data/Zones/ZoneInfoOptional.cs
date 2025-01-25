@@ -573,9 +573,9 @@ namespace DataGenerator.Data
                 SingularSegment structure = new SingularSegment(-1);
 
                 ChanceFloorGen multiGen = new ChanceFloorGen();
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -2, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -2, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -2, false, false), 10);
                 structure.BaseFloor = multiGen;
 
                 zone.Segments.Add(structure);
@@ -586,9 +586,9 @@ namespace DataGenerator.Data
                 SingularSegment structure = new SingularSegment(-1);
 
                 ChanceFloorGen multiGen = new ChanceFloorGen();
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -2, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -2, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -2, false, false), 10);
                 structure.BaseFloor = multiGen;
 
                 zone.Segments.Add(structure);
@@ -923,9 +923,9 @@ namespace DataGenerator.Data
 
                 ChanceFloorGen multiGen = new ChanceFloorGen();
                 string unown = "folly";
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -2, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -2, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -2, false, false), 10);
                 structure.BaseFloor = multiGen;
 
                 zone.Segments.Add(structure);
@@ -1479,9 +1479,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -3, false, false), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -1492,9 +1492,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -3, false, false), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -2091,9 +2091,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "small_square", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "tall_hall", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "wide_hall", -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.TallHall, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.WideHall, -3, false, false), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -2104,9 +2104,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "small_square", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "tall_hall", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "wide_hall", -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.TallHall, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.WideHall, -3, false, false), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -2606,7 +2606,6 @@ namespace DataGenerator.Data
                         AddTrapsSteps(layout, new RandRange(20, 24));
 
 
-
                         //construct paths
                         {
                             //Initialize a 54x40 floorplan with which to populate with rectangular floor and halls.
@@ -2690,9 +2689,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -3, false, false), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -2703,9 +2702,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -3, false, false), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -3543,9 +3542,9 @@ namespace DataGenerator.Data
                 SingularSegment structure = new SingularSegment(-1);
 
                 ChanceFloorGen multiGen = new ChanceFloorGen();
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "small_square", -3, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "tall_hall", -3, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "wide_hall", -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.TallHall, -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.WideHall, -3, false, false), 10);
                 structure.BaseFloor = multiGen;
 
                 zone.Segments.Add(structure);
@@ -3555,9 +3554,9 @@ namespace DataGenerator.Data
                 SingularSegment structure = new SingularSegment(-1);
 
                 ChanceFloorGen multiGen = new ChanceFloorGen();
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "small_square", -3, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "tall_hall", -3, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "wide_hall", -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.TallHall, -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.WideHall, -3, false, false), 10);
                 structure.BaseFloor = multiGen;
 
                 zone.Segments.Add(structure);
@@ -4315,9 +4314,9 @@ namespace DataGenerator.Data
                 SingularSegment structure = new SingularSegment(-1);
 
                 ChanceFloorGen multiGen = new ChanceFloorGen();
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -3, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -3, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -3, false, false), 10);
                 structure.BaseFloor = multiGen;
 
                 zone.Segments.Add(structure);
@@ -4327,9 +4326,9 @@ namespace DataGenerator.Data
                 SingularSegment structure = new SingularSegment(-1);
 
                 ChanceFloorGen multiGen = new ChanceFloorGen();
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -3, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -3, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -3, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -3, false, false), 10);
                 structure.BaseFloor = multiGen;
 
                 zone.Segments.Add(structure);
@@ -5028,9 +5027,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -3, false, false), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -5041,9 +5040,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -3, false, false), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -6233,9 +6232,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -3, false, false), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -6246,9 +6245,9 @@ namespace DataGenerator.Data
                     SingularSegment structure = new SingularSegment(-1);
 
                     ChanceFloorGen multiGen = new ChanceFloorGen();
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "small_square", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "tall_hall", -3, false, false), 10);
-                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, "wide_hall", -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.SmallSquare, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.TallHall, -3, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Beginner, MysteryRoomType.WideHall, -3, false, false), 10);
                     structure.BaseFloor = multiGen;
 
                     zone.Segments.Add(structure);
@@ -9168,7 +9167,7 @@ namespace DataGenerator.Data
 
                 ChanceFloorGen multiGen = new ChanceFloorGen();
                 string unown = "trickery";
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Advanced, "small_square", -2, true, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Advanced, MysteryRoomType.SmallSquare, -2, true, false), 10);
                 structure.BaseFloor = multiGen;
 
                 zone.Segments.Add(structure);
@@ -9949,7 +9948,7 @@ namespace DataGenerator.Data
 
                 ChanceFloorGen multiGen = new ChanceFloorGen();
                 string unown = "loyalty";
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Advanced, "small_square", -2, true, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Advanced, MysteryRoomType.SmallSquare, -2, true, false), 10);
                 structure.BaseFloor = multiGen;
 
                 zone.Segments.Add(structure);
@@ -9972,5 +9971,290 @@ namespace DataGenerator.Data
             #endregion
         }
 
+
+        static void FillWaywardWetlands(ZoneData zone, bool translate)
+        {
+            #region WAYWARD WETLANDS
+            {
+                zone.Name = new LocalText("**Wayward Wetlands");
+                zone.Rescues = 3;
+                zone.Level = 25;
+                zone.BagRestrict = 0;
+                zone.KeepTreasure = true;
+                zone.MoneyRestrict = true;
+                zone.TeamSize = 2;
+                zone.Rogue = RogueStatus.NoTransfer;
+
+                {
+                    int max_floors = 16;
+                    LayeredSegment floorSegment = new LayeredSegment();
+                    floorSegment.IsRelevant = true;
+                    floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Wayward Wetlands\nB{0}F"), new Priority(-15)));
+
+                    //money
+                    MoneySpawnZoneStep moneySpawnZoneStep = GetMoneySpawn(zone.Level, 10);
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                    floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                    //items
+                    ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                    itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                    floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                    //mobs
+                    TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                    poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                    poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    floorSegment.ZoneSteps.Add(poolSpawn);
+
+                    TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                    tileSpawn.Priority = PR_RESPAWN_TRAP;
+                    floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                    for (int ii = 0; ii < max_floors; ii++)
+                    {
+                        RoomFloorGen layout = new RoomFloorGen();
+
+                        //Floor settings
+                        if (ii < 10)
+                            AddFloorData(layout, "Treeshroud Forest.ogg", 500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        else
+                            AddFloorData(layout, "Ambush Forest 3.ogg", 500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                        //Tilesets
+                        if (ii < 5)
+                            AddSpecificTextureData(layout, "mystifying_forest_wall", "water_maze_floor", "water_maze_secondary", "water_maze_wall", "water");
+                        else if (ii < 10)
+                            AddSpecificTextureData(layout, "mystifying_forest_wall", "poison_maze_floor", "poison_maze_secondary", "poison_maze_wall", "poison");
+                        else
+                            AddSpecificTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "tall_grass_dark", "grass");
+
+                        if (ii < 5)
+                            AddWaterSteps(layout, "grass", new RandRange(50));
+                        else if (ii < 10)
+                            AddWaterSteps(layout, "grass", new RandRange(80));
+
+                        //TODO: this blob step must never intrude into walkable space
+                        AddBlobWaterSteps(layout, "wall", new RandRange(3, 7), new IntRange(1, 9), false);
+
+                        {
+                            SpawnList<PatternPlan> terrainPattern = new SpawnList<PatternPlan>();
+                            terrainPattern.Add(new PatternPlan("pattern_plus", PatternPlan.PatternExtend.Single), 20);
+                            AddTerrainPatternSteps(layout, "water", new RandRange(2, 6), terrainPattern);
+                        }
+                        {
+                            SpawnList<PatternPlan> terrainPattern = new SpawnList<PatternPlan>();
+                            terrainPattern.Add(new PatternPlan("pattern_blob", PatternPlan.PatternExtend.Single), 20);
+                            AddTerrainPatternSteps(layout, "water", new RandRange(0, 5), terrainPattern);
+                        }
+
+                        //traps
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                        AddTrapsSteps(layout, new RandRange(6, 9));
+
+                        //money - Ballpark 25K
+                        AddMoneyData(layout, new RandRange(2, 4));
+
+                        //enemies! ~ lv 20 to 30
+                        AddRespawnData(layout, 3, 80);
+
+                        //enemies
+                        AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+
+                        //items
+                        AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                        //construct paths
+                        {
+                            AddInitListStep(layout, 58, 40);
+
+                            //Create a path that is composed of a branching tree
+                            FloorPathBranch<ListMapGenContext> path = new FloorPathBranch<ListMapGenContext>();
+                            path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                            path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                            path.HallPercent = 50;
+                            path.FillPercent = new RandRange(65);
+                            path.BranchRatio = new RandRange(70);
+
+                            //Give it some room types to place
+                            SpawnList<RoomGen<ListMapGenContext>> genericRooms = new SpawnList<RoomGen<ListMapGenContext>>();
+                            //cave
+                            genericRooms.Add(new RoomGenCave<ListMapGenContext>(new RandRange(6, 18), new RandRange(6, 18)), 10);
+
+                            path.GenericRooms = genericRooms;
+
+                            //Give it some hall types to place
+                            SpawnList<PermissiveRoomGen<ListMapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
+                            genericHalls.Add(new RoomGenAngledHall<ListMapGenContext>(100, new RandRange(1), new RandRange(1)), 20);
+                            path.GenericHalls = genericHalls;
+
+                            layout.GenSteps.Add(PR_ROOMS_GEN, path);
+
+                            layout.GenSteps.Add(PR_ROOMS_GEN, CreateGenericListConnect(100, 100));
+
+                        }
+
+                        AddDrawListSteps(layout);
+
+                        AddStairStep(layout, false);
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
+
+
+                        floorSegment.Floors.Add(layout);
+                    }
+
+                    zone.Segments.Add(floorSegment);
+                }
+            }
+            #endregion
+        }
+
+
+        static void FillBarrenTundra(ZoneData zone, bool translate)
+        {
+
+            #region BARREN TUNDRA
+            {
+                zone.Name = new LocalText("**Barren Tundra");
+                zone.Level = 40;
+                zone.BagRestrict = 0;
+                zone.KeepTreasure = true;
+                zone.TeamSize = 3;
+                zone.Rescues = 2;
+                zone.Rogue = RogueStatus.NoTransfer;
+
+                {
+                    int max_floors = 30;
+                    LayeredSegment floorSegment = new LayeredSegment();
+                    floorSegment.IsRelevant = true;
+                    floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+                    floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Barren Tundra\n{0}F"), new Priority(-15)));
+
+                    //money
+                    MoneySpawnZoneStep moneySpawnZoneStep = new MoneySpawnZoneStep(PR_RESPAWN_MONEY, new RandRange(1), new RandRange(1));
+                    moneySpawnZoneStep.ModStates.Add(new FlagType(typeof(CoinModGenState)));
+                    floorSegment.ZoneSteps.Add(moneySpawnZoneStep);
+
+                    //items
+                    ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
+                    itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
+                    floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
+
+
+                    //mobs
+                    TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                    poolSpawn.Priority = PR_RESPAWN_MOB;
+
+                    poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    floorSegment.ZoneSteps.Add(poolSpawn);
+
+                    TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
+                    tileSpawn.Priority = PR_RESPAWN_TRAP;
+                    floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+
+                    for (int ii = 0; ii < max_floors; ii++)
+                    {
+                        RoomFloorGen layout = new RoomFloorGen();
+
+                        //Floor settings
+                        if (ii < 20)
+                            AddFloorData(layout, "Barren Tundra.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+                        else
+                            AddFloorData(layout, "Barren Tundra 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
+
+                        //Tilesets
+                        if (ii < 10)
+                            AddSpecificTextureData(layout, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary", "tall_grass_white", "ice");
+                        else if (ii < 20)
+                            AddSpecificTextureData(layout, "mt_freeze_wall", "mt_freeze_floor", "mt_freeze_secondary", "tall_grass_white", "ice");
+                        else
+                            AddSpecificTextureData(layout, "icicle_forest_wall", "icicle_forest_floor", "icicle_forest_secondary", "tall_grass_white", "ice");
+
+                        if (ii < 10)
+                            AddWaterSteps(layout, "floor", new RandRange(60));//pit
+                        else if (ii < 20)
+                            AddWaterSteps(layout, "floor", new RandRange(55));//pit
+                        else
+                            AddWaterSteps(layout, "floor", new RandRange(50));//pit
+                                                                              //put the walls back in via "water" algorithm
+                        AddBlobWaterSteps(layout, "wall", new RandRange(3, 7), new IntRange(1, 9), false);
+
+                        //traps
+                        AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
+                        AddTrapsSteps(layout, new RandRange(6, 9));
+
+                        //money
+                        AddMoneyData(layout, new RandRange(2, 4));
+
+                        //enemies!
+                        AddRespawnData(layout, 3, 80);
+
+                        //enemies
+                        AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                        //items
+                        AddItemData(layout, new RandRange(3, 6), 25);
+
+
+                        {
+                            //construct paths
+                            AddInitListStep(layout, 58, 40, true);
+
+                            //Create a path that is composed of a branching tree
+                            FloorPathBranch<ListMapGenContext> path = new FloorPathBranch<ListMapGenContext>();
+                            path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                            path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
+                            path.HallPercent = 50;
+                            path.FillPercent = new RandRange(65);
+                            path.BranchRatio = new RandRange(70);
+
+                            //Give it some room types to place
+                            SpawnList<RoomGen<ListMapGenContext>> genericRooms = new SpawnList<RoomGen<ListMapGenContext>>();
+                            //cave
+                            genericRooms.Add(new RoomGenCave<ListMapGenContext>(new RandRange(6, 18), new RandRange(6, 18)), 10);
+
+                            //oasis
+                            RoomGenOasis<ListMapGenContext> oasisGen = new RoomGenOasis<ListMapGenContext>(new RandRange(8, 15), new RandRange(8, 15));
+                            oasisGen.WaterTerrain = new Tile("water");
+                            genericRooms.Add(oasisGen, 5);
+
+                            path.GenericRooms = genericRooms;
+
+                            //Give it some hall types to place
+                            SpawnList<PermissiveRoomGen<ListMapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
+                            genericHalls.Add(new RoomGenAngledHall<ListMapGenContext>(100, new RandRange(1), new RandRange(1)), 20);
+                            path.GenericHalls = genericHalls;
+
+                            layout.GenSteps.Add(PR_ROOMS_GEN, path);
+
+                            layout.GenSteps.Add(PR_ROOMS_GEN, CreateGenericListConnect(100, 100));
+
+                        }
+
+                        //draw paths
+                        layout.GenSteps.Add(PR_TILES_INIT, new DrawFloorToTileStep<ListMapGenContext>());
+
+                        AddStairStep(layout, false);
+
+                        layout.GenSteps.Add(PR_DBG_CHECK, new DetectIsolatedStairsStep<ListMapGenContext, MapGenEntrance, MapGenExit>());
+
+                        floorSegment.Floors.Add(layout);
+                    }
+
+                    zone.Segments.Add(floorSegment);
+                }
+            }
+            #endregion
+        }
     }
 }

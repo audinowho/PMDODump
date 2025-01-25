@@ -3255,9 +3255,9 @@ namespace DataGenerator.Data
                 else if (ii <= 27)
                     floorData.Music = "Demonstration 3.ogg";
                 else if (ii <= 34)
-                    floorData.Music = "Hidden Land.ogg";
+                    floorData.Music = "Barren Tundra.ogg";
                 else
-                    floorData.Music = "Hidden Highland.ogg";
+                    floorData.Music = "Barren Tundra 2.ogg";
 
                 if (ii <= 8)
                     floorData.CharSight = Map.SightRange.Dark;

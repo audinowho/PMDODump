@@ -213,7 +213,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -322,7 +322,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -431,7 +431,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -538,7 +538,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -647,7 +647,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -756,7 +756,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -865,7 +865,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -974,7 +974,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -1081,7 +1081,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -1185,7 +1185,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -1292,7 +1292,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -1399,7 +1399,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -1510,7 +1510,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -1617,7 +1617,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -1721,7 +1721,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -1825,7 +1825,7 @@ namespace DataGenerator.Data
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
-
+                    AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 8, 16);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -1899,6 +1899,24 @@ namespace DataGenerator.Data
                 }
                 #endregion
 
+                for (int nn = 0; nn < 16; nn++)
+                {
+                    SingularSegment structure = new SingularSegment(-1);
+
+                    ChanceFloorGen multiGen = new ChanceFloorGen();
+                    string unown = "help?";
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.PostGame, MysteryRoomType.BigSquare, -16, false, false,
+                        GetChaserMob("nihilego", "", "acid_spray", "toxic_spikes", "power_gem", "venoshock", new RandRange(zone.Level + 5)),
+                        GetChaserMob("stakataka", "", "rock_slide", "stealth_rock", "iron_head", "rock_blast", new RandRange(zone.Level + 5)),
+                        GetChaserMob("celesteela", "", "leech_seed", "heavy_slam", "metal_sound", "giga_drain", new RandRange(zone.Level + 5))), 15);
+                    //GetChaserMob("buzzwole", "", "leech_life", "bulk_up", "hammer_arm", "lunge", new RandRange(zone.Level + 5)),
+                    //GetChaserMob("pheromosa", "", "high_jump_kick", "silver_wind", "triple_kick", "me_first", new RandRange(zone.Level + 5))), 15);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.PostGame, MysteryRoomType.BigTallHall, -16, false, false), 10);
+                    multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.PostGame, MysteryRoomType.BigWideHall, -16, false, false), 10);
+                    structure.BaseFloor = multiGen;
+
+                    zone.Segments.Add(structure);
+                }
             }
             #endregion
         }

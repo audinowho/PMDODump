@@ -838,6 +838,32 @@ namespace DataGenerator.Data
             return post_mob;
         }
 
+        static MobSpawn GetChaserMob(string species, string ability, string move1, string move2, string move3, string move4, RandRange level,
+            string tactic = "wander_normal")
+        {
+            MobSpawn mob = new MobSpawn();
+            mob.BaseForm = new MonsterID(species, 0, "", Gender.Unknown);
+            mob.Intrinsic = ability;
+            if (!String.IsNullOrEmpty(move1))
+                mob.SpecifiedSkills.Add(move1);
+            if (!String.IsNullOrEmpty(move2))
+                mob.SpecifiedSkills.Add(move2);
+            if (!String.IsNullOrEmpty(move3))
+                mob.SpecifiedSkills.Add(move3);
+            if (!String.IsNullOrEmpty(move4))
+                mob.SpecifiedSkills.Add(move4);
+            mob.Level = level;
+            mob.Tactic = tactic;
+            mob.SpawnFeatures.Add(new MobSpawnMovesOff(mob.SpecifiedSkills.Count));
+            MobSpawnStatus keySpawn = new MobSpawnStatus();
+            keySpawn.Statuses.Add(new StatusEffect("veiled"), 10);
+            mob.SpawnFeatures.Add(keySpawn);
+            keySpawn = new MobSpawnStatus();
+            keySpawn.Statuses.Add(new StatusEffect("friendly_fire"), 10);
+            mob.SpawnFeatures.Add(keySpawn);
+            return mob;
+        }
+
         static MobSpawn GetFOEMob(string species, string ability, string move1, string move2, string move3, string move4, int baseLv, int scaleNum = 5, int scaleDen = 3)
         {
             MobSpawn post_mob = new MobSpawn();

@@ -4337,19 +4337,27 @@ namespace DataGenerator.Data
             }
             else if (ii == 679)
             {
-                skill.Name = new LocalText("**Lunge");
+                skill.Name = new LocalText("Lunge");
                 skill.Desc = new LocalText("The user makes a lunge at the target, attacking with full force. This also lowers the target's Attack stat.");
-                skill.BaseCharges = 15;
+                skill.BaseCharges = 14;
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
+                skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.SkillStates.Set(new AdditionalEffectState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusStackBattleEvent("mod_attack", true, true, -1)));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new DashAction();
+                ((DashAction)skill.HitboxAction).Range = 3;
+                ((DashAction)skill.HitboxAction).StopAtWall = true;
+                ((DashAction)skill.HitboxAction).StopAtHit = true;
+                ((DashAction)skill.HitboxAction).HitTiles = true;
+                skill.HitboxAction.ActionFX.Sound = "DUN_Thief";
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.Data.HitFX.Emitter = new SingleEmitter(new AnimData("Power_Whip_Hit_Front", 3));
             }
             else if (ii == 680)
             {

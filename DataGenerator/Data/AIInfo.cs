@@ -386,6 +386,16 @@ namespace DataGenerator.Data
             tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
             Tactics.Add(tactic);
 
+
+            tactic = new AITactic();
+            tactic.Name = new LocalText("Lurker");//34
+            iq = AIFlags.AttackToEscape | AIFlags.WontDisturb;
+            tactic.Plans.Add(new AttackFoesPlan(iq, 0, 0, 4, AIPlan.AttackChoice.RandomAttack, AIPlan.PositionChoice.Close, 0, false));
+            tactic.Plans.Add(new StalkerPlan(iq | AIFlags.TrapAvoider, "last_targeted_by"));
+            tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
+            Tactics.Add(tactic);
+
             //make a variant of explore to go for items (For use of team characters, certain thief enemies)
             //always avoid traps when exploring
             //always avoid traps when following a leader

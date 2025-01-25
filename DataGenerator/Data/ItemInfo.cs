@@ -82,7 +82,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Golden Apple");
                 item.Desc = new LocalText("A miraculous apple that glows with an alluring golden aura. It's far too precious and beautiful to even consider eating! If eaten, however, it would completely fill and greatly enlarge the Pokémon's belly.");
                 item.Sprite = "Apple_Gold";
-                item.Price = 3000;
+                item.Price = 30000;
                 item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(200, true, 50, false, new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Green_In", 2)), "DUN_Growth", true)));
             }
             else if (ii == 5)
@@ -114,7 +114,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Golden Banana");
                 item.Desc = new LocalText("An alluring banana that gives off a golden glow. It's valued far more as a treasure than as a food. If eaten, however, it would completely fill and enlarge the entire team's belly.");
                 item.Sprite = "Banana_Yellow";
-                item.Price = 4000;
+                item.Price = 40000;
                 item.UseEvent.OnHits.Add(0, new RestoreBellyEvent(100, true, 20, false, new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Green_In", 2)), "DUN_Growth", true)));
             }
             else if (ii == 9)
@@ -773,7 +773,7 @@ namespace DataGenerator.Data
                 fileName = "medicine_" + Text.Sanitize(item.Name.DefaultText).ToLower();
                 item.Desc = new LocalText("An amber liquid that sparkles like crystal-clear tears, rumored to be the most precious of even the rarest treasures. It raises chances of recruiting other Pokémon to the team on the floor it's used.");
                 item.Sprite = "Bottle_Gold";
-                item.Price = 2500;
+                item.Price = 1500;
                 item.MaxStack = 3;
                 item.UseEvent.OnHits.Add(0, new StatusBattleEvent("recruit_boost", true, false));
             }
@@ -3296,7 +3296,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Comet Shard");
                 item.Desc = new LocalText("A shard that fell to the ground when a comet passed nearby. It sells for an extremely high price.");
                 item.Sprite = "Crystal_Blue";
-                item.Price = 80000;
+                item.Price = 30000;
             }
             else if (ii == 486)
             {
@@ -3304,7 +3304,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A meteorite that fell from space long ago. It can be used on Deoxys once per floor to cause a Forme change.");
                 item.Sprite = "Rock_Blue";
                 item.UsageType = ItemData.UseType.UseOther;
-                item.Price = 400000;
+                item.Price = 40000;
                 item.MaxStack = -1;
                 item.UseEvent.BeforeTryActions.Add(0, new CheckItemActiveEvent());
                 item.UseEvent.BeforeTryActions.Add(1, new FormChoiceEvent("deoxys"));
@@ -3340,7 +3340,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A glowing orb can be used on Giratina once per floor to cause a Forme change.");
                 item.Sprite = "Orb_Tan";
                 item.UsageType = ItemData.UseType.UseOther;
-                item.Price = 800000;
+                item.Price = 80000;
                 item.MaxStack = -1;
                 item.UseEvent.BeforeTryActions.Add(0, new CheckItemActiveEvent());
                 item.UseEvent.BeforeTryActions.Add(1, new FormChoiceEvent("giratina"));
@@ -3431,9 +3431,17 @@ namespace DataGenerator.Data
             else if (ii == 496)
             {
                 item.Name = new LocalText("Star Piece");
-                item.Desc = new LocalText("A shard of a pretty gem that sparkles in a red color. It can be sold at a high price to shops.");
+                item.Desc = new LocalText("A shard of a pretty gem that sparkles in a red color. It can be sold at a high price.");
                 item.Sprite = "Crystal_Red";
-                item.Price = 20000;
+                item.Price = 2500;
+            }
+            else if (ii == 497)
+            {
+                //item.Name = new LocalText("Stardust");
+                //item.Desc = new LocalText("Lovely, red-colored sand with a loose, silky feel. It can be sold at a high price.");
+                //item.Sprite = "Sack_Red";
+                //item.Price = 1000;
+                //item.MaxStack = 9;
             }
             else if (ii == 545)
             {

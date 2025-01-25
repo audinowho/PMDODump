@@ -240,6 +240,55 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(combinedVaultZoneStep);
                     }
 
+
+                    //switch vaults
+                    {
+                        SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandDecay(1, 4, 40), new IntRange(0, max_floors - 1)));
+
+                        //making room for the vault
+                        {
+                            ResizeFloorStep<ListMapGenContext> addSizeStep = new ResizeFloorStep<ListMapGenContext>(new Loc(16, 16), Dir8.None);
+                            vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, addSizeStep));
+                            ClampFloorStep<ListMapGenContext> limitStep = new ClampFloorStep<ListMapGenContext>(new Loc(0), new Loc(78, 54));
+                            vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT, limitStep));
+                            ClampFloorStep<ListMapGenContext> clampStep = new ClampFloorStep<ListMapGenContext>();
+                            vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_PRE_VAULT_CLAMP, clampStep));
+                        }
+
+                        // room addition step
+                        {
+                            SpawnList<RoomGen<ListMapGenContext>> detourRooms = new SpawnList<RoomGen<ListMapGenContext>>();
+                            detourRooms.Add(new RoomGenSquare<ListMapGenContext>(new RandRange(2), new RandRange(2)), 10);
+                            SpawnList<PermissiveRoomGen<ListMapGenContext>> detourHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
+                            detourHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(2, 4), new RandRange(2, 4)), 10);
+                            AddConnectedRoomsRandStep<ListMapGenContext> detours = new AddConnectedRoomsRandStep<ListMapGenContext>(detourRooms, detourHalls);
+                            detours.Amount = new RandRange(1);
+                            detours.HallPercent = 100;
+                            detours.Filters.Add(new RoomFilterComponent(true, new NoConnectRoom(), new UnVaultableRoom()));
+                            detours.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                            detours.RoomComponents.Set(new NoConnectRoom());
+                            detours.RoomComponents.Set(new NoEventRoom());
+                            detours.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.SwitchVault));
+                            detours.HallComponents.Set(new NoConnectRoom());
+                            detours.HallComponents.Set(new NoEventRoom());
+
+                            vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_ROOMS_GEN_EXTRA, detours));
+                        }
+
+                        //sealing the vault
+                        {
+                            SwitchSealStep<ListMapGenContext> vaultStep = new SwitchSealStep<ListMapGenContext>("sealed_block", "tile_switch", 1, true, false);
+                            vaultStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.SwitchVault));
+                            vaultStep.SwitchFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+                            vaultStep.SwitchFilters.Add(new RoomFilterComponent(true, new BossRoom()));
+                            vaultChanceZoneStep.VaultSteps.Add(new GenPriority<GenStep<ListMapGenContext>>(PR_TILES_GEN_EXTRA, vaultStep));
+                        }
+
+                        PopulateVaultItems(vaultChanceZoneStep, DungeonStage.Beginner, DungeonAccessibility.Hidden, max_floors, false);
+
+                        floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
+                    }
+
                     AddEvoZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(5)), true);
 
 
@@ -528,6 +577,14 @@ namespace DataGenerator.Data
                         //items
                         AddItemData(layout, new RandRange(3, 6), 25);
 
+                        if (ii >= 4)
+                        {
+                            SpawnList<MapItem> waterSpawns = new SpawnList<MapItem>();
+                            waterSpawns.Add(new MapItem("loot_star_piece"), 50);
+                            TerrainSpawnStep<ListMapGenContext, MapItem> waterItemZoneStep = new TerrainSpawnStep<ListMapGenContext, MapItem>(new Tile("water"));
+                            waterItemZoneStep.Spawn = new PickerSpawner<ListMapGenContext, MapItem>(new LoopedRand<MapItem>(waterSpawns, new RandRange(0, 2)));
+                            layout.GenSteps.Add(PR_SPAWN_ITEMS, waterItemZoneStep);
+                        }
 
                         //construct paths
                         if (ii < 4)
@@ -1467,9 +1524,9 @@ namespace DataGenerator.Data
 
                 ChanceFloorGen multiGen = new ChanceFloorGen();
                 string unown = "toxin";
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Advanced, "small_square", -2, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Advanced, "tall_hall", -2, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Advanced, "wide_hall", -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Advanced, MysteryRoomType.SmallSquare, -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Advanced, MysteryRoomType.TallHall, -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Advanced, MysteryRoomType.WideHall, -2, false, false), 10);
                 structure.BaseFloor = multiGen;
 
                 zone.Segments.Add(structure);
@@ -2211,9 +2268,9 @@ namespace DataGenerator.Data
 
                 ChanceFloorGen multiGen = new ChanceFloorGen();
                 string unown = "knowledge";
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "small_square", -2, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "tall_hall", -2, false, false), 10);
-                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, "wide_hall", -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.SmallSquare, -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.TallHall, -2, false, false), 10);
+                multiGen.Spawns.Add(getMysteryRoom(translate, zone.Level, unown, DungeonStage.Intermediate, MysteryRoomType.WideHall, -2, false, false), 10);
                 structure.BaseFloor = multiGen;
 
                 zone.Segments.Add(structure);

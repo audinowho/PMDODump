@@ -129,7 +129,18 @@ namespace DataGenerator.Data
             return layout;
         }
 
-        static IFloorGen getMysteryRoom(bool translate, int zoneLevel, string unownSpawn, DungeonStage stage, string map_type, int moveBack, bool unrecruitable, bool noExp)
+
+        public enum MysteryRoomType
+        {
+            SmallSquare = 0,
+            WideHall = 1,
+            TallHall = 2,
+            BigSquare = 3,
+            BigTallHall = 4,
+            BigWideHall = 5,
+        }
+
+        static IFloorGen getMysteryRoom(bool translate, int zoneLevel, string unownSpawn, DungeonStage stage, MysteryRoomType map_type, int moveBack, bool unrecruitable, bool noExp, params MobSpawn[] chaserMobs)
         {
             GridFloorGen layout = new GridFloorGen();
 
@@ -139,17 +150,29 @@ namespace DataGenerator.Data
                 layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Mysterious Passage")));
             AddTitleDrop(layout);
 
-            //Floor settings
-            AddFloorData(layout, "Mysterious Passage.ogg", 800, Map.SightRange.Dark, Map.SightRange.Dark);
+            if (chaserMobs.Length == 0)
+            {
+                //Floor settings
+                AddFloorData(layout, "Mysterious Passage.ogg", 800, Map.SightRange.Dark, Map.SightRange.Dark);
 
-            //Tilesets
-            AddTextureData(layout, "the_nightmare_wall", "the_nightmare_floor", "the_nightmare_secondary", "normal");
+                //Tilesets
+                AddTextureData(layout, "the_nightmare_wall", "the_nightmare_floor", "the_nightmare_secondary", "normal");
+            }
+            else
+            {
+                // spooky music, spookier tileset
+                //Floor settings
+                AddFloorData(layout, "Mysterious Passage 2.ogg", 800, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                //Tilesets
+                AddTextureData(layout, "world_abyss_2_wall", "world_abyss_2_floor", "world_abyss_2_secondary", "normal");
+            }
 
             AddWaterSteps(layout, "pit", new RandRange(20));//water
 
             //enemies
             {
-                MobSpawnStep<MapGenContext> spawnStep = GetUnownSpawns(unownSpawn, zoneLevel - 5, unrecruitable);
+                MobSpawnStep<MapGenContext> spawnStep = GetUnownSpawns(unownSpawn, Math.Min(zoneLevel, 50) - 5, unrecruitable);
                 layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
             }
             // a rare mon appears, based on the difficulty level
@@ -157,25 +180,34 @@ namespace DataGenerator.Data
             {
                 MobSpawnStep<MapGenContext> spawnStep = new MobSpawnStep<MapGenContext>();
                 PoolTeamSpawner poolSpawn = new PoolTeamSpawner();
-                if (stage == DungeonStage.Beginner || noExp)
+                if (stage == DungeonStage.Beginner || stage == DungeonStage.Rogue || noExp)
                     poolSpawn.Spawns.Add(GetTeamMob("smeargle", "", "sketch", "", "", "", new RandRange(zoneLevel), "wander_smart"), 10);
-                if (stage == DungeonStage.Intermediate || noExp)
+                if (stage == DungeonStage.Intermediate || stage == DungeonStage.Rogue || noExp)
                     poolSpawn.Spawns.Add(GetTeamMob("porygon", "", "tri_attack", "", "", "", new RandRange(zoneLevel), "wander_smart"), 10);
-                if (stage == DungeonStage.Advanced || noExp)
+                if (stage == DungeonStage.Advanced || stage == DungeonStage.Rogue || noExp)
                     poolSpawn.Spawns.Add(GetTeamMob("kecleon", "", "synchronoise", "thief", "", "", new RandRange(zoneLevel), "thief"), 10);
+                if (stage == DungeonStage.Rogue)
+                {
+                    MobSpawn spawn = GetGenericMob("poipole", "", "toxic", "venoshock", "fury_attack", "fell_stinger", new RandRange(zoneLevel));
+                    MobSpawnStatus keySpawn = new MobSpawnStatus();
+                    keySpawn.Statuses.Add(new StatusEffect("veiled"), 10);
+                    spawn.SpawnFeatures.Add(keySpawn);
+                    poolSpawn.Spawns.Add(new TeamMemberSpawn(spawn, TeamMemberSpawn.MemberRole.Loner), 10);
+                }
                 poolSpawn.TeamSizes.Add(1, 12);
                 spawnStep.Spawns.Add(poolSpawn, 20);
                 layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
             }
 
-            AddRespawnData(layout, 7, 20);
-            AddEnemySpawnData(layout, 20, new RandRange(7));
+            int maxFoes = (map_type >= MysteryRoomType.BigSquare) ? 15 : 7;
+            AddRespawnData(layout, maxFoes, 20);
+            AddEnemySpawnData(layout, 20, new RandRange(maxFoes));
 
             //audino always appears once or thrice
             if (!noExp)
             {
                 PoolTeamSpawner subSpawn = new PoolTeamSpawner();
-                subSpawn.Spawns.Add(GetTeamMob("audino", "", "secret_power", "", "", "", new RandRange(zoneLevel), "wander_smart"), 10);
+                subSpawn.Spawns.Add(GetTeamMob("audino", "", "secret_power", "", "", "", new RandRange(Math.Min(zoneLevel, 50)), "wander_smart"), 10);
                 subSpawn.TeamSizes.Add(1, 12);
                 LoopedTeamSpawner<MapGenContext> spawner = new LoopedTeamSpawner<MapGenContext>(subSpawn);
                 if (unrecruitable)
@@ -190,17 +222,51 @@ namespace DataGenerator.Data
             //choose two fossils out of the entire selection, spawn two of each
             if (!unrecruitable)
             {
-                RandGenStep<MapGenContext> chanceGenStep = new RandGenStep<MapGenContext>();
-                SpawnList<GenStep<MapGenContext>> spawns = new SpawnList<GenStep<MapGenContext>>();
-                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("omanyte", "", "ancient_power", "brine", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
-                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("kabuto", "", "ancient_power", "aqua_jet", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
-                //spawns.Add(GetSingleSelectableSpawn(GetTeamMob("anorith", "", "ancient_power", "bug_bite", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
-                //spawns.Add(GetSingleSelectableSpawn(GetTeamMob("lileep", "", "ancient_power", "ingrain", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
-                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("cranidos", "", "ancient_power", "take_down", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
-                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("shieldon", "", "ancient_power", "iron_defense", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
-                spawns.Add(GetSingleSelectableSpawn(GetTeamMob("amaura", "", "ancient_power", "aurora_beam", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
-                chanceGenStep.Spawns = new LoopedRand<GenStep<MapGenContext>>(spawns, new RandRange(2));
-                layout.GenSteps.Add(PR_RESPAWN_MOB, chanceGenStep);
+                if (chaserMobs.Length == 0)
+                {
+                    RandGenStep<MapGenContext> chanceGenStep = new RandGenStep<MapGenContext>();
+                    SpawnList<GenStep<MapGenContext>> spawns = new SpawnList<GenStep<MapGenContext>>();
+                    if (stage <= DungeonStage.Advanced)
+                    {
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("omanyte", "", "ancient_power", "brine", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("kabuto", "", "ancient_power", "aqua_jet", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                        //spawns.Add(GetSingleSelectableSpawn(GetTeamMob("anorith", "", "ancient_power", "bug_bite", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                        //spawns.Add(GetSingleSelectableSpawn(GetTeamMob("lileep", "", "ancient_power", "ingrain", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("cranidos", "", "ancient_power", "take_down", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("shieldon", "", "ancient_power", "iron_defense", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("amaura", "", "ancient_power", "aurora_beam", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("tyrunt", "", "ancient_power", "dragon_tail", "", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                    }
+                    else
+                    {
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("omastar", "", "ancient_power", "hydro_pump", "brine", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("kabutops", "", "ancient_power", "night_slash", "aqua_jet", "", new RandRange(zoneLevel), "wander_smart")), 10);
+
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("rampardos", "", "ancient_power", "head_smash", "take_down", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("bastiodon", "", "ancient_power", "iron_defense", "metal_burst", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("aurorus", "", "ancient_power", "aurora_beam", "freeze_dry", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                        spawns.Add(GetSingleSelectableSpawn(GetTeamMob("tyrantrum", "", "ancient_power", "dragon_tail", "crunch", "", new RandRange(zoneLevel), "wander_smart")), 10);
+                    }
+                    chanceGenStep.Spawns = new LoopedRand<GenStep<MapGenContext>>(spawns, new RandRange(2));
+                    layout.GenSteps.Add(PR_RESPAWN_MOB, chanceGenStep);
+                }
+                else if (stage == DungeonStage.PostGame)
+                {
+                    // spawn from a pool of possible UBs that are hostile to other enemies.
+                    SpawnList<TeamSpawner> spawns = new SpawnList<TeamSpawner>();
+                    foreach (MobSpawn mob in chaserMobs)
+                    {
+                        SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
+                        specificTeam.Spawns.Add(mob);
+                        spawns.Add(specificTeam, 10);
+                    }
+
+                    LoopedRandTeamSpawner<MapGenContext> spawner = new LoopedRandTeamSpawner<MapGenContext>(spawns, new RandRange(1));
+                    PlaceRandomMobsStep<MapGenContext> secretMobPlacement = new PlaceRandomMobsStep<MapGenContext>(spawner);
+                    layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
+                }
+
+
             }
 
             //items
@@ -214,18 +280,39 @@ namespace DataGenerator.Data
 
             {
                 List<MapItem> treasures = new List<MapItem>();
-                treasures.Add(new MapItem("loot_pearl", 3));
-                treasures.Add(new MapItem("loot_pearl", 3));
+                if (stage <= DungeonStage.Advanced)
+                {
+                    treasures.Add(new MapItem("loot_pearl", 3));
+                    treasures.Add(new MapItem("loot_pearl", 3));
+                }
+                else
+                {
+                    treasures.Add(new MapItem("loot_star_piece"));
+                    treasures.Add(new MapItem("loot_star_piece"));
+                }
                 if (!unrecruitable)
                 {
-                    treasures.Add(new MapItem("loot_pearl", 2));
-                    treasures.Add(new MapItem("loot_pearl", 2));
+                    if (stage <= DungeonStage.Advanced)
+                    {
+                        treasures.Add(new MapItem("loot_pearl", 2));
+                        treasures.Add(new MapItem("loot_pearl", 2));
+                    }
+                    else
+                    {
+                        treasures.Add(new MapItem("loot_star_piece"));
+                        treasures.Add(new MapItem("loot_star_piece"));
+                    }
                 }
                 PickerSpawner<MapGenContext, MapItem> treasurePicker = new PickerSpawner<MapGenContext, MapItem>(new PresetMultiRand<MapItem>(treasures));
 
                 SpawnList<MapItem> recruitSpawn = new SpawnList<MapItem>();
                 if (unrecruitable)
-                    recruitSpawn.Add(new MapItem("loot_nugget"), 10);
+                {
+                    if (stage <= DungeonStage.Advanced)
+                        recruitSpawn.Add(new MapItem("loot_nugget"), 10);
+                    else
+                        recruitSpawn.Add(new MapItem("loot_star_piece"), 10);
+                }
                 else
                 {
                     recruitSpawn.Add(new MapItem("apricorn_brown"), 10);
@@ -255,9 +342,13 @@ namespace DataGenerator.Data
             //construct paths
             switch (map_type)
             {
-                case "small_square":
+                case MysteryRoomType.SmallSquare:
+                case MysteryRoomType.BigSquare:
                     {
-                        AddInitGridStep(layout, 5, 5, 6, 6, 1, true);
+                        if (map_type == MysteryRoomType.SmallSquare)
+                            AddInitGridStep(layout, 5, 5, 6, 6, 1, true);
+                        else
+                            AddInitGridStep(layout, 8, 8, 6, 6, 1, true);
 
                         GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                         path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
@@ -289,9 +380,13 @@ namespace DataGenerator.Data
                         }
                     }
                     break;
-                case "tall_hall":
+                case MysteryRoomType.TallHall:
+                case MysteryRoomType.BigTallHall:
                     {
-                        AddInitGridStep(layout, 3, 10, 3, 3, 1, true);
+                        if (map_type == MysteryRoomType.TallHall)
+                            AddInitGridStep(layout, 3, 10, 3, 3, 1, true);
+                        else
+                            AddInitGridStep(layout, 5, 14, 3, 3, 1, true);
 
                         GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                         path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
@@ -323,9 +418,13 @@ namespace DataGenerator.Data
                         }
                     }
                     break;
-                case "wide_hall":
+                case MysteryRoomType.WideHall:
+                case MysteryRoomType.BigWideHall:
                     {
-                        AddInitGridStep(layout, 12, 2, 4, 4, 1, true);
+                        if (map_type == MysteryRoomType.WideHall)
+                            AddInitGridStep(layout, 12, 2, 4, 4, 1, true);
+                        else
+                            AddInitGridStep(layout, 16, 4, 4, 4, 1, true);
 
                         GridPathBranch<MapGenContext> path = new GridPathBranch<MapGenContext>();
                         path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
