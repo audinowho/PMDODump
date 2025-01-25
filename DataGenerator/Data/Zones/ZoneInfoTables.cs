@@ -94,7 +94,7 @@ namespace DataGenerator.Data
                 subSpawn.TeamSizes.Add(1, 12);
                 LoopedTeamSpawner<MapLoadContext> spawner = new LoopedTeamSpawner<MapLoadContext>(subSpawn);
                 spawner.AmountSpawner = new RandRange(1, 3);
-                PlaceTerrainMobsStep<MapLoadContext> mobStep = new PlaceTerrainMobsStep<MapLoadContext>(spawner);
+                PlaceTerrainMobsStep<MapLoadContext> mobStep = new PlaceTerrainMobsStep<MapLoadContext>(spawner, 0);
                 mobStep.AcceptedTiles.Add(new Tile("floor"));
                 layout.GenSteps.Add(PR_SPAWN_MOBS, mobStep);
             }

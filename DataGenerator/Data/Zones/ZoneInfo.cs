@@ -1596,7 +1596,7 @@ namespace DataGenerator.Data
                             shop.Personality = 2;
                             shop.SecurityStatus = "shop_security";
 
-                            foreach (string tm_id in IterateTMs(TMClass.Top | TMClass.ShopOnly))
+                            foreach (string tm_id in IterateTMs(TMClass.Mid | TMClass.ShopOnly))
                                 shop.Items.Add(new MapItem(tm_id, 0, getTMPrice(tm_id)), 2);//TMs
 
                             shop.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 6)), 10);//TMs
@@ -3225,7 +3225,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                     }
 
-                    AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(1, max_floors)), true);
+                    AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(1, max_floors)), EvoRoomType.Small);
 
                     AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 3);
                     
@@ -4304,7 +4304,7 @@ namespace DataGenerator.Data
                             floorSegment.ZoneSteps.Add(combinedVaultZoneStep);
                         }
 
-                        AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors)), false);
+                        AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors)), EvoRoomType.Diamond);
 
                         AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 3);
 

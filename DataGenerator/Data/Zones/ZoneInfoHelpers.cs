@@ -131,17 +131,31 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(zoneStep);
         }
 
+        public enum EvoRoomType
+        {
+            Normal,
+            Small,
+            Diamond
+        }
 
-        public static void AddEvoZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, bool small)
+        public static void AddEvoZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, EvoRoomType roomType)
         {
             SpreadRoomZoneStep evoZoneStep = new SpreadRoomZoneStep(PR_GRID_GEN_EXTRA, PR_ROOMS_GEN_EXTRA, spreadPlan);
             List<BaseRoomFilter> evoFilters = new List<BaseRoomFilter>();
             evoFilters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
             evoFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
-            if (small)
-                evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvoSmall<MapGenContext>(), new RoomGenEvoSmall<ListMapGenContext>(), evoFilters), 10);
-            else
-                evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvo<MapGenContext>(), new RoomGenEvo<ListMapGenContext>(), evoFilters), 10);
+            switch(roomType)
+            {
+                case EvoRoomType.Normal:
+                    evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvo<MapGenContext>(), new RoomGenEvo<ListMapGenContext>(), evoFilters), 10);
+                    break;
+                case EvoRoomType.Small:
+                    evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvoSmall<MapGenContext>(), new RoomGenEvoSmall<ListMapGenContext>(), evoFilters), 10);
+                    break;
+                case EvoRoomType.Diamond:
+                    evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvoDiamond<MapGenContext>(), new RoomGenEvoDiamond<ListMapGenContext>(), evoFilters), 10);
+                    break;
+            }
             floorSegment.ZoneSteps.Add(evoZoneStep);
         }
 

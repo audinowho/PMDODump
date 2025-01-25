@@ -1222,7 +1222,7 @@ namespace DataGenerator.Data
                         {
                             spawner.AmountSpawner = new RandRange(10, 13);
                         }
-                        PlaceTerrainMobsStep<ListMapGenContext> secretMobPlacement = new PlaceTerrainMobsStep<ListMapGenContext>(spawner);
+                        PlaceTerrainMobsStep<ListMapGenContext> secretMobPlacement = new PlaceTerrainMobsStep<ListMapGenContext>(spawner, 0);
                         secretMobPlacement.AcceptedTiles.Add(new Tile("pit"));
                         layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
                     }

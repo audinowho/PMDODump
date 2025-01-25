@@ -1749,7 +1749,7 @@ namespace DataGenerator.Data
 
 
 
-                    AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors - 1)), false);
+                    AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors - 1)), EvoRoomType.Normal);
 
                     AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 3);
 
@@ -1964,6 +1964,7 @@ namespace DataGenerator.Data
 
                     //mobs
                     TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                    poolSpawn.Spawns.Add(GetTeamMob("absol", "pressure", "razor_wind", "", "", "", new RandRange(23), "wander_dumb"), new IntRange(0, max_floors), 5);
                     poolSpawn.Priority = PR_RESPAWN_MOB;
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
@@ -2022,9 +2023,24 @@ namespace DataGenerator.Data
                         AddItemData(layout, new RandRange(2, 5), 25);
 
                         //enemies
-                        AddRespawnData(layout, 7, 90);
-                        AddEnemySpawnData(layout, 20, new RandRange(4, 7));
+                        AddRespawnData(layout, 60, 120);
+                        AddEnemySpawnData(layout, 20, new RandRange(8, 15));
 
+
+                        {
+                            PoolTeamSpawner lurkerTeam = new PoolTeamSpawner();
+                            lurkerTeam.Spawns.Add(GetTeamMob("golurk", "iron_fist", "shadow_punch", "heavy_slam", "dynamic_punch", "", new RandRange(62), "lurker"), 10);
+                            lurkerTeam.Spawns.Add(GetTeamMob("gengar", "", "shadow_ball", "hypnosis", "spite", "", new RandRange(62), "lurker"), 10);
+                            lurkerTeam.TeamSizes.Add(1, 1);
+
+                            LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(lurkerTeam);
+                            {
+                                spawner.AmountSpawner = new RandRange(46, 50);
+                            }
+                            PlaceTerrainMobsStep<ListMapGenContext> secretMobPlacement = new PlaceTerrainMobsStep<ListMapGenContext>(spawner, 1);
+                            secretMobPlacement.AcceptedTiles.Add(new Tile("wall"));
+                            layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
+                        }
 
                         //traps
                         AddTrapsSteps(layout, new RandRange(16, 19));
@@ -2033,17 +2049,14 @@ namespace DataGenerator.Data
                         AddTrapSweepStep(layout, new RandRange(30), "trap_warp", true, false, ConnectivityRoom.Connectivity.Main);
 
 
-                        AddInitListStep(layout, 48, 42);
+                        AddInitListStep(layout, 42, 44);
 
                         //construct paths
                         {
                             //Create a path that is composed of a branching tree
                             AddDisconnectedRoomsStep<ListMapGenContext> path = new AddDisconnectedRoomsStep<ListMapGenContext>();
                             path.Components.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                            if (ii < 2)
-                                path.Amount = new RandRange(7, 9);
-                            else
-                                path.Amount = new RandRange(9, 11);
+                            path.Amount = new RandRange(6 + ii, 8 + ii);
 
                             //Give it some room types to place
                             SpawnList<RoomGen<ListMapGenContext>> genericRooms = new SpawnList<RoomGen<ListMapGenContext>>();
@@ -2290,7 +2303,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(chestChanceZoneStep);
                     }
 
-                    AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(1, max_floors)), false);
+                    AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(1, max_floors)), EvoRoomType.Normal);
 
                     AddHiddenStairStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 6, 30), new IntRange(0, max_floors - 1)), 2);
 
@@ -5482,7 +5495,7 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(danceZoneStep);
                     }
 
-                    AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(1, max_floors)), true);
+                    AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(1, max_floors)), EvoRoomType.Small);
 
                     AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 3);
 
@@ -7266,7 +7279,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                 }
 
-                AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(1, max_floors - 1)), false);
+                AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(1, max_floors - 1)), EvoRoomType.Normal);
 
                 for (int ii = 0; ii < max_floors; ii++)
                 {
@@ -8010,7 +8023,7 @@ namespace DataGenerator.Data
                     floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                 }
 
-                AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(1, max_floors - 1)), false);
+                AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(1, max_floors - 1)), EvoRoomType.Normal);
 
                 for (int ii = 0; ii < max_floors; ii++)
                 {
@@ -10005,6 +10018,7 @@ namespace DataGenerator.Data
 
                     //mobs
                     TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                    poolSpawn.Spawns.Add(GetTeamMob("scyther", "", "razor_wind", "", "", "", new RandRange(23), "wander_dumb"), new IntRange(0, max_floors), 5);
                     poolSpawn.Priority = PR_RESPAWN_MOB;
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
@@ -10065,6 +10079,24 @@ namespace DataGenerator.Data
 
                         //enemies
                         AddEnemySpawnData(layout, 20, new RandRange(2, 4));
+
+                        {
+                            PoolTeamSpawner lurkerTeam = new PoolTeamSpawner();
+                            lurkerTeam.Spawns.Add(GetTeamMob("tangrowth", "", "block", "bind", "poison_powder", "mega_drain", new RandRange(30), "lurker"), 10);
+                            lurkerTeam.Spawns.Add(GetTeamMob("politoed", "", "hypnosis", "perish_song", "bubble_beam", "", new RandRange(30), "lurker"), 10);
+                            lurkerTeam.Spawns.Add(GetTeamMob("crawdaunt", "", "razor_shell", "night_slash", "", "", new RandRange(30), "lurker"), 10);
+                            lurkerTeam.Spawns.Add(GetTeamMob("pinsir", "", "vice_grip", "x_scissor", "revenge", "", new RandRange(30), "lurker"), 10);
+                            lurkerTeam.Spawns.Add(GetTeamMob("victreebel", "", "sleep_powder", "growth", "wring_out", "leaf_tornado", new RandRange(30), "lurker"), 10);
+                            lurkerTeam.TeamSizes.Add(1, 1);
+
+                            LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(lurkerTeam);
+                            {
+                                spawner.AmountSpawner = new RandRange(46, 50);
+                            }
+                            PlaceTerrainMobsStep<ListMapGenContext> secretMobPlacement = new PlaceTerrainMobsStep<ListMapGenContext>(spawner, 1);
+                            secretMobPlacement.AcceptedTiles.Add(new Tile("grass"));
+                            layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
+                        }
 
 
                         //items
