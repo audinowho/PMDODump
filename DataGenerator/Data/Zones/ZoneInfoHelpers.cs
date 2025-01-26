@@ -144,18 +144,30 @@ namespace DataGenerator.Data
             List<BaseRoomFilter> evoFilters = new List<BaseRoomFilter>();
             evoFilters.Add(new RoomFilterComponent(true, new ImmutableRoom()));
             evoFilters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
+
+            string room_string = "";
             switch(roomType)
             {
                 case EvoRoomType.Normal:
-                    evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvo<MapGenContext>(), new RoomGenEvo<ListMapGenContext>(), evoFilters), 10);
+                    room_string = "room_evo_altar_normal";
                     break;
                 case EvoRoomType.Small:
-                    evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvoSmall<MapGenContext>(), new RoomGenEvoSmall<ListMapGenContext>(), evoFilters), 10);
+                    room_string = "room_evo_altar_small";
                     break;
                 case EvoRoomType.Diamond:
-                    evoZoneStep.Spawns.Add(new RoomGenOption(new RoomGenEvoDiamond<MapGenContext>(), new RoomGenEvoDiamond<ListMapGenContext>(), evoFilters), 10);
+                    room_string = "room_evo_altar_diamond";
                     break;
             }
+
+            RoomGenLoadEvo<MapGenContext> gridRoom = new RoomGenLoadEvo<MapGenContext>();
+            gridRoom.TriggerTile = "tile_evo";
+            gridRoom.MapID = room_string;
+            gridRoom.PreventChanges = PostProcType.Panel | PostProcType.Terrain;
+            RoomGenLoadEvo<ListMapGenContext> listRoom = new RoomGenLoadEvo<ListMapGenContext>();
+            listRoom.TriggerTile = "tile_evo";
+            listRoom.MapID = room_string;
+            listRoom.PreventChanges = PostProcType.Panel | PostProcType.Terrain;
+            evoZoneStep.Spawns.Add(new RoomGenOption(gridRoom, listRoom, evoFilters), 10);
             floorSegment.ZoneSteps.Add(evoZoneStep);
         }
 
