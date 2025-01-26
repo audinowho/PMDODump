@@ -105,7 +105,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SAND_START"), true));
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SAND_END"), true));
-                status.BeforeBeingHits.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 2, 3));
+                status.BeforeBeingHits.Add(0, new CharElementNeededEvent("rock", new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 2, 3)));
                 status.OnMapTurnEnds.Add(0, new WeatherDamageEvent(new System.Type[] { typeof(MagicGuardState), typeof(SandState) }, "rock", "ground", "steel"));
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
@@ -175,11 +175,20 @@ namespace DataGenerator.Data
             else if (ii == 7)
             {
                 status.Name = new LocalText("Snow");
+                status.Desc = new LocalText("The Defense of Ice-types is boosted.");
                 OverlayEmitter overlay = new OverlayEmitter();
                 overlay.Anim = new BGAnimData("Snow", 4);
                 overlay.Layer = DrawLayer.Top;
                 status.Emitter = overlay;
                 status.RepeatMethod = new MapStatusRefreshEvent();
+                status.StatusStates.Set(new MapWeatherState());
+                status.OnMapStatusAdds.Add(0, new MapStatusSoundEvent("DUN_Snowy_Weather"));
+                status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SNOW_START"), true));
+                status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
+                status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SNOW_END"), true));
+                status.BeforeBeingHits.Add(0, new CharElementNeededEvent("ice", new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 2, 3)));
+                status.StatusStates.Set(new MapCountDownState(50));
+                status.OnMapTurnEnds.Add(5, new MapStatusCountDownEvent());
             }
             else if (ii == 8)
             {

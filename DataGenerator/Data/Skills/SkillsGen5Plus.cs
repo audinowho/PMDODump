@@ -4607,7 +4607,7 @@ namespace DataGenerator.Data
                 skill.Data.Element = "ice";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
-                skill.Data.OnActions.Add(-1, new WeatherRequiredEvent("hail", new StringKey("MSG_NOT_HAILING")));
+                skill.Data.OnActions.Add(-1, new WeatherRequiredEvent(new StringKey("MSG_NOT_HAILING"), "hail", "snow"));
                 skill.Data.OnHits.Add(0, new StatusBattleEvent("light_screen", true, false));
                 skill.Data.OnHits.Add(0, new StatusBattleEvent("reflect", true, false));
                 skill.Strikes = 1;

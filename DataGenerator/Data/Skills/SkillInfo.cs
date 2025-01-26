@@ -38,6 +38,8 @@ namespace DataGenerator.Data
                     SkillData oldMove = DataManager.LoadEntryData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString());
                     if (oldMove != null)
                     {
+                        //oldMove.Data.OnActions = move.Item2.Data.OnActions;
+                        //oldMove.Data.OnHits = move.Item2.Data.OnHits;
                         oldMove.Data.BeforeHits = move.Item2.Data.BeforeHits;
                         DataManager.SaveEntryData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
                     }

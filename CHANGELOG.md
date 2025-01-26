@@ -3,6 +3,7 @@
 * Tiny Tunnel Team Size 3 -> 2, item limit 8 -> 16
 * New Exclusive Item effects
 * Heart Scale Price 50 -> 100
+* Fixed an issue that gave all Pokemon increased Sp. Def in Sandstorm, instead of just Rock-types.
 * Fixed outlaw music in mission mod
 * Fixed outlaws failing to spawn in mission mod when the first team member is fainted
 * Fixed ally AI refusing to move when in the middle of hazardous terrain
@@ -13,6 +14,7 @@
 * Optimized assembly menu, summary menu, item menu, adventure completion to be less file intensive
 * RC: Lowered the vitamin boosts given to bosses in Relic Tower; they were boosted on a range of level 1 to 50, when players enter with their own vitamin boosts removed.
 * RC: Fixed an issue where mysterious distortions would fail to expire on wrapped maps
+* RC: Snowy weather can appear naturally in certain dungeon maps. It is considered identical to Hail, except it increases Ice-types' Defense instead of damagin non-ice-type Pokemon. It cannot be triggered by any other means.
 * Dev: Added RoomGenLoadBoss, an editor-friendly way to spawn boss rooms by editing a static boss map, and then selecting it as the map to load into the random dungeon.
 * Dev: Fixed errors occurring when maps are resized more than once with NPCs on them
 * Dev: Improvements to ConnectBranchStep that make it work better in wrapped maps

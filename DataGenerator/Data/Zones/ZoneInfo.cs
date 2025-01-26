@@ -3243,6 +3243,15 @@ namespace DataGenerator.Data
                         else
                             AddFloorData(layout, "Snowbound Path.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
+                        if (ii < 4)
+                        {
+
+                        }
+                        else if (ii < 11)
+                            AddDefaultMapStatus(layout, "default_weather", "snow", "clear", "clear", "clear");
+                        else
+                            AddDefaultMapStatus(layout, "default_weather", "snow", "clear", "clear");
+
                         //Tilesets
                         if (ii < 7)
                             AddSpecificTextureData(layout, "snow_path_wall", "snow_path_floor", "snow_path_secondary", "tall_grass_white", "ice");
@@ -3745,6 +3754,8 @@ namespace DataGenerator.Data
 
                         //Floor settings
                         AddFloorData(layout, "Glacial Path.ogg", 1500, Map.SightRange.Dark, Map.SightRange.Dark);
+
+                        //AddDefaultMapStatus(layout, "default_weather", "hail");
 
                         //Tilesets
                         //other candidates: mt_faraway_4

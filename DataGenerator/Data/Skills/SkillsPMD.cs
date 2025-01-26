@@ -1526,6 +1526,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(85));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(50));
                 skill.Data.OnActions.Add(0, new WeatherNeededEvent("hail", new SetAccuracyEvent(-1)));
+                skill.Data.OnActions.Add(0, new WeatherNeededEvent("snow", new SetAccuracyEvent(-1)));
                 skill.Data.OnActions.Add(0, new WeatherNeededEvent("sunny", new SetAccuracyEvent(50)));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("freeze", true, true)));
@@ -1979,6 +1980,7 @@ namespace DataGenerator.Data
                 skill.Data.OnActions.Add(0, new WeatherNeededEvent("rain", new MultiplyDamageEvent(2, 3)));
                 skill.Data.OnActions.Add(0, new WeatherNeededEvent("sandstorm", new MultiplyDamageEvent(2, 3)));
                 skill.Data.OnActions.Add(0, new WeatherNeededEvent("hail", new MultiplyDamageEvent(2, 3)));
+                skill.Data.OnActions.Add(0, new WeatherNeededEvent("snow", new MultiplyDamageEvent(2, 3)));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", terrainEmitter, new FlagType(typeof(WallTerrainState))));
@@ -5987,6 +5989,7 @@ namespace DataGenerator.Data
                 weather.Add("rain", false);
                 weather.Add("sandstorm", false);
                 weather.Add("hail", false);
+                weather.Add("snow", false);
                 skill.Data.OnHits.Add(0, new WeatherHPEvent(4, weather));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
@@ -6012,6 +6015,7 @@ namespace DataGenerator.Data
                 weather.Add("rain", false);
                 weather.Add("sandstorm", false);
                 weather.Add("hail", false);
+                weather.Add("snow", false);
                 skill.Data.OnHits.Add(0, new WeatherHPEvent(6, weather));
                 skill.Strikes = 1;
                 skill.HitboxAction = new SelfAction();
@@ -6044,6 +6048,7 @@ namespace DataGenerator.Data
                 weather.Add("rain", false);
                 weather.Add("sandstorm", false);
                 weather.Add("hail", false);
+                weather.Add("snow", false);
                 skill.Data.OnHits.Add(0, new WeatherHPEvent(3, weather));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
@@ -8137,6 +8142,7 @@ namespace DataGenerator.Data
                     newData.HitFX.Emitter = endAnim;
 
                     weather.Add("hail", newData);
+                    weather.Add("snow", newData);
                 }
                 skill.Data.BeforeHits.Add(-5, new WeatherDifferentEvent(weather));
 

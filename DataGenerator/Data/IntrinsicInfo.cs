@@ -517,6 +517,7 @@ namespace DataGenerator.Data
                     weather.Add("rain", 2);
                     weather.Add("sunny", 1);
                     weather.Add("hail", 3);
+                    weather.Add("snow", 3);
                     ability.OnMapStatusAdds.Add(0, new WeatherFormeChangeEvent("castform", 0, weather));
                 }
                 {
@@ -524,6 +525,7 @@ namespace DataGenerator.Data
                     weather.Add("rain", 2);
                     weather.Add("sunny", 1);
                     weather.Add("hail", 3);
+                    weather.Add("snow", 3);
                     ability.OnMapStatusRemoves.Add(0, new WeatherFormeChangeEvent("castform", 0, weather));
                 }
                 {
@@ -531,6 +533,7 @@ namespace DataGenerator.Data
                     weather.Add("rain", 2);
                     weather.Add("sunny", 1);
                     weather.Add("hail", 3);
+                    weather.Add("snow", 3);
                     ability.OnMapStarts.Add(-11, new WeatherFormeEvent("castform", 0, weather));
                 }
             }
@@ -680,6 +683,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Avoids attacks from a distance when in a hailstorm.");
                 ability.OnRefresh.Add(0, new MiscEvent(new HailState()));
                 ability.BeforeBeingHits.Add(0, new WeatherNeededEvent("hail", new EvadeDistanceEvent()));
+                ability.BeforeBeingHits.Add(0, new WeatherNeededEvent("snow", new EvadeDistanceEvent()));
             }
             else if (ii == 82)
             {
@@ -926,6 +930,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("The Pokémon gradually regains HP when battling in a hailstorm.");
                 ability.OnRefresh.Add(0, new MiscEvent(new HailState()));
                 ability.AfterActions.Add(0, new WeatherNeededEvent("hail", new OnMoveUseEvent(new RestoreHPEvent(1, 8, false))));
+                ability.AfterActions.Add(0, new WeatherNeededEvent("snow", new OnMoveUseEvent(new RestoreHPEvent(1, 8, false))));
             }
             else if (ii == 116)
             {
@@ -1596,6 +1601,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Boosts the Pokémon's Speed stat in a hailstorm.");
                 ability.OnRefresh.Add(0, new MiscEvent(new HailState()));
                 ability.OnRefresh.Add(0, new WeatherSpeedEvent("hail"));
+                ability.OnRefresh.Add(0, new WeatherSpeedEvent("snow"));
             }
             else if (ii == 203)
             {
@@ -1889,6 +1895,7 @@ namespace DataGenerator.Data
                 {
                     Dictionary<string, int> weather = new Dictionary<string, int>();
                     weather.Add("hail", 0);
+                    weather.Add("snow", 0);
                     ability.OnTurnEnds.Add(0, new WeatherFormeSingleEvent("eiscue", -1, weather, new AnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Wonder_Tile", 10)));
                 }
             }

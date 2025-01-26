@@ -10204,6 +10204,15 @@ namespace DataGenerator.Data
                         else
                             AddFloorData(layout, "Barren Tundra 2.ogg", 1500, Map.SightRange.Clear, Map.SightRange.Dark);
 
+                        if (ii == 0)
+                            AddDefaultMapStatus(layout, "default_weather", "snow");
+                        else if (ii < 10)
+                            AddDefaultMapStatus(layout, "default_weather", "snow", "clear", "clear");
+                        else if (ii < 20)
+                            AddDefaultMapStatus(layout, "default_weather", "snow", "clear");
+                        else if (ii % 2 == 0)
+                            AddDefaultMapStatus(layout, "default_weather", "hail", "snow", "clear");
+
                         //Tilesets
                         if (ii < 10)
                             AddSpecificTextureData(layout, "mt_faraway_2_wall", "mt_faraway_2_floor", "mt_faraway_2_secondary", "tall_grass_white", "ice");
