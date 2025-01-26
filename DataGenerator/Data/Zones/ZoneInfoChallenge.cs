@@ -826,7 +826,7 @@ namespace DataGenerator.Data
                     {
                         LoadGen layout = new LoadGen();
                         MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
-                        startGen.MapID = "end_geode_underpass";
+                        startGen.MapID = "end_geode_crevice";
                         layout.GenSteps.Add(PR_FILE_LOAD, startGen);
 
                         MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
@@ -834,7 +834,7 @@ namespace DataGenerator.Data
 
                         AddTextureData(layout, "waterfall_pond_wall", "waterfall_pond_floor", "waterfall_pond_secondary", "rock");
 
-                        layout.GenSteps.Add(PR_SPAWN_ITEMS, new ScriptGenStep<MapLoadContext>("GeodeUnderpassRevisit"));
+                        layout.GenSteps.Add(PR_SPAWN_ITEMS, new ScriptGenStep<MapLoadContext>("GeodeCreviceRevisit"));
 
                         {
                             SpawnList<MapItem> treasure = new SpawnList<MapItem>();
