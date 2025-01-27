@@ -38,7 +38,14 @@ namespace DataGenerator.Data
             mobility.ElementPair["ghost"] = TerrainData.Mobility.Block;
             universalEvent.OnRefresh.Add(-5, mobility);
             universalEvent.InitActionData.Add(-10, new PreSkillEvent());
-            universalEvent.InitActionData.Add(-10, new PreItemEvent());
+
+            Dictionary<ItemData.UseType, StringKey> useMsgs = new Dictionary<ItemData.UseType, StringKey>();
+            useMsgs[ItemData.UseType.Eat] = new StringKey("MSG_USE_EAT");
+            useMsgs[ItemData.UseType.Drink] = new StringKey("MSG_USE_DRINK");
+            useMsgs[ItemData.UseType.Learn] = new StringKey("MSG_USE_OPERATE");
+            useMsgs[ItemData.UseType.Use] = new StringKey("MSG_USE");
+            universalEvent.InitActionData.Add(-10, new PreItemEvent(useMsgs));
+
             universalEvent.InitActionData.Add(-10, new PreThrowEvent());
             universalEvent.OnEquips.Add(0, new CurseWarningEvent());
             universalEvent.BeforeHits.Add(-10, new PreHitEvent());

@@ -691,7 +691,13 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Steals and eats a food item from an attacker that made direct contact.");
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(EdibleState)));
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, true, true, 100, new UseFoeItemEvent(true, false, "seed_decoy", eligibles, false, true)));
+
+                Dictionary<ItemData.UseType, StringKey> useMsgs = new Dictionary<ItemData.UseType, StringKey>();
+                useMsgs[ItemData.UseType.Eat] = new StringKey("MSG_STEAL_EAT");
+                useMsgs[ItemData.UseType.Drink] = new StringKey("MSG_STEAL_DRINK");
+                useMsgs[ItemData.UseType.Learn] = new StringKey("MSG_STEAL_OPERATE");
+                useMsgs[ItemData.UseType.Use] = new StringKey("MSG_STEAL_USE");
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, true, true, 100, new UseFoeItemEvent(true, false, "seed_decoy", eligibles, false, true, useMsgs)));
             }
             else if (ii == 83)
             {

@@ -9545,7 +9545,13 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(EdibleState)));
-                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new UseFoeItemEvent(false, false, "seed_decoy", eligibles, true, false)));
+
+                Dictionary<ItemData.UseType, StringKey> useMsgs = new Dictionary<ItemData.UseType, StringKey>();
+                useMsgs[ItemData.UseType.Eat] = new StringKey("MSG_STEAL_EAT");
+                useMsgs[ItemData.UseType.Drink] = new StringKey("MSG_STEAL_DRINK");
+                useMsgs[ItemData.UseType.Learn] = new StringKey("MSG_STEAL_OPERATE");
+                useMsgs[ItemData.UseType.Use] = new StringKey("MSG_STEAL_USE");
+                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new UseFoeItemEvent(false, false, "seed_decoy", eligibles, true, false, useMsgs)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(20);//Jab
@@ -11821,7 +11827,13 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 HashSet<FlagType> eligibles = new HashSet<FlagType>();
                 eligibles.Add(new FlagType(typeof(EdibleState)));
-                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new UseFoeItemEvent(false, false, "seed_decoy", eligibles, true, false)));
+
+                Dictionary<ItemData.UseType, StringKey> useMsgs = new Dictionary<ItemData.UseType, StringKey>();
+                useMsgs[ItemData.UseType.Eat] = new StringKey("MSG_STEAL_EAT");
+                useMsgs[ItemData.UseType.Drink] = new StringKey("MSG_STEAL_DRINK");
+                useMsgs[ItemData.UseType.Learn] = new StringKey("MSG_STEAL_OPERATE");
+                useMsgs[ItemData.UseType.Use] = new StringKey("MSG_STEAL_USE");
+                skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new UseFoeItemEvent(false, false, "seed_decoy", eligibles, true, false, useMsgs)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(18);//Bite
