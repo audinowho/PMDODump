@@ -1,7 +1,8 @@
 # 0.8.9 Changes #
 
-* Tiny Tunnel Team Size 3 -> 2, item limit 8 -> 16
+* Tiny Tunnel Team Size 3 -> 2, removed the chance for enemies to spawn in groups for this dungeon
 * New Exclusive Item effects
+* Added the ability Cud Chew
 * Heart Scale Price 50 -> 100
 * Fixed an issue that gave all Pokemon increased Sp. Def in Sandstorm, instead of just Rock-types.
 * Fixed outlaw music in mission mod
@@ -20,4 +21,4 @@
 * Dev: Improvements to ConnectBranchStep that make it work better in wrapped maps
 * Dev: Stairs Steps now have a MinDistance, where you can specify how far away the exit should at least be from the start
 * Dev: Fixed cleanups when restarting using CTRL+F12
-* Dev: Item indexing has changed.  Be sure to reserialize your mods if you mod items!
+* Dev: Item indexing has changed.  Be sure to reserialize your mods!

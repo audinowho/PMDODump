@@ -2495,6 +2495,23 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new StackState(1));
                 status.AfterActions.Add(0, new OnAggressionEvent(new RemoveBattleEvent()));
             }
+            else if (ii == 142)
+            {
+                status.Name = new LocalText("Cud Chew");
+                status.MenuName = true;
+                status.Desc = new LocalText("The Pokémon has eaten a berry, and will eat it again a few turns in the future.");
+                status.Emoticon = "Exclaim_Green";
+                status.StatusStates.Set(new TransferStatusState());
+                status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_CUD_CHEW_START"), true));
+                List<SingleCharEvent> effects = new List<SingleCharEvent>();
+                effects.Add(new RemoveEvent(true));
+                status.StatusStates.Set(new IDState());
+                Dictionary<ItemData.UseType, StringKey> useMsgs = new Dictionary<ItemData.UseType, StringKey>();
+                useMsgs[ItemData.UseType.Eat] = new StringKey("MSG_CUD_CHEW_ATTACK");
+                effects.Add(new UseStateItemEvent(useMsgs));
+                status.StatusStates.Set(new CountDownState(10));
+                status.OnTurnEnds.Add(1, new CountDownEvent(effects));
+            }
 
             if (status.Name.DefaultText.StartsWith("**"))
                 status.Name.DefaultText = status.Name.DefaultText.Replace("*", "");

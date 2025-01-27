@@ -2135,8 +2135,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 291)
             {
-                ability.Name = new LocalText("**Cud Chew");
-                ability.Desc = new LocalText("");
+                ability.Name = new LocalText("Cud Chew");
+                ability.Desc = new LocalText("When the Pokémon eats a berry, it will regurgitate that berry several turns later and eat it one more time.");
+                ability.AfterBeingHits.Add(0, new BerryNeededEvent(new StatusItemBattleEvent("cud_chew", true, false)));
             }
             else if (ii == 292)
             {
