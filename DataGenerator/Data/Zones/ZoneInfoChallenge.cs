@@ -27,7 +27,7 @@ namespace DataGenerator.Data
                 zone.Name = new LocalText("Tiny Tunnel");
                 zone.Level = 5;
                 zone.LevelCap = true;
-                zone.BagRestrict = 16;
+                zone.BagRestrict = 8;
                 zone.KeepTreasure = true;
                 zone.TeamSize = 2;
                 zone.Rescues = 2;
@@ -162,7 +162,6 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("kricketune", "technician", "growl", "leech_life", "sing", "", new RandRange(14)), new IntRange(7, 8), 10);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
-                    poolSpawn.TeamSizes.Add(2, new IntRange(5, max_floors), 4);
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -494,10 +493,26 @@ namespace DataGenerator.Data
                     poolSpawn.Priority = PR_RESPAWN_MOB;
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(4, 8), 4);
+                    poolSpawn.TeamSizes.Add(2, new IntRange(8, max_floors), 6);
                     floorSegment.ZoneSteps.Add(poolSpawn);
 
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
+                    tileSpawn.Spawns.Add(new EffectTile("trap_mud", false), new IntRange(0, max_floors), 10);//mud trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_warp", true), new IntRange(0, max_floors), 10);//warp trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_gust", false), new IntRange(0, max_floors), 10);//gust trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_chestnut", false), new IntRange(0, max_floors), 10);//chestnut trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_poison", false), new IntRange(0, max_floors), 10);//poison trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_slumber", false), new IntRange(0, max_floors), 10);//sleep trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_sticky", false), new IntRange(4, max_floors), 10);//sticky trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_seal", false), new IntRange(0, max_floors), 10);//seal trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_self_destruct", false), new IntRange(0, max_floors), 10);//selfdestruct trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_trip", true), new IntRange(0, max_floors), 10);//trip trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_pp_leech", true), new IntRange(4, max_floors), 10);//pp-leech trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_explosion", false), new IntRange(4, max_floors), 10);//explosion trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_slow", false), new IntRange(0, max_floors), 10);//slow trap
+                    tileSpawn.Spawns.Add(new EffectTile("trap_spin", false), new IntRange(0, max_floors), 10);//spin trap
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
 
@@ -544,7 +559,15 @@ namespace DataGenerator.Data
                         floorSegment.ZoneSteps.Add(chestChanceZoneStep);
                     }
 
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, max_floors)), new MapItem("food_apple"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
+
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors)), new MapItem("orb_cleanse"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, 5)), new MapItem("key", 1));
+
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(1, max_floors)),
+                        new MapItem("apricorn_blue"), new MapItem("apricorn_green"), new MapItem("apricorn_brown"), new MapItem("apricorn_purple"),
+                        new MapItem("apricorn_red"), new MapItem("apricorn_white"), new MapItem("apricorn_yellow"), new MapItem("apricorn_black"));
 
                     AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(1, max_floors)), EvoRoomType.Diamond);
 

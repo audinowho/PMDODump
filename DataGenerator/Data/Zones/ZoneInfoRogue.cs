@@ -1072,13 +1072,13 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(tileSpawn);
 
 
-            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, 30)), new MapItem("food_apple"));
-            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(13, 15), new IntRange(0, 30)), new MapItem("food_apple_big"));
-            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, 30)), new MapItem("berry_leppa"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, max_floors)), new MapItem("food_apple"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(13, 15), new IntRange(0, max_floors)), new MapItem("food_apple_big"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
             AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, 5)), new MapItem("key", 1));
-            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, 30)), new MapItem("machine_assembly_box"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 7), new IntRange(6, max_floors)), new MapItem("machine_assembly_box"));
 
-            AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 10, 50), new IntRange(3, 30)), new MapItem("orb_cleanse"));
+            AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 10, 50), new IntRange(3, max_floors)), new MapItem("orb_cleanse"));
 
             AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(1, 21)),
                 new MapItem("apricorn_blue"), new MapItem("apricorn_green"), new MapItem("apricorn_brown"), new MapItem("apricorn_purple"),
