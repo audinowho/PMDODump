@@ -89,36 +89,35 @@ namespace DataGenerator.Data
 
             //snacks
             CategorySpawn<InvItem> snacks = new CategorySpawn<InvItem>();
-            snacks.SpawnRates.SetRange(10, new IntRange(0, 30));
+            snacks.SpawnRates.SetRange(10, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("snacks", snacks);
 
-            foreach(string key in IteratePinchBerries())
-                snacks.Spawns.Add(new InvItem(key), new IntRange(0, 30), 3);
-            snacks.Spawns.Add(new InvItem("berry_enigma"), new IntRange(0, 30), 4);//enigma berry
+            foreach (string key in IteratePinchBerries())
+                snacks.Spawns.Add(new InvItem(key), new IntRange(0, max_floors), 3);
+            snacks.Spawns.Add(new InvItem("berry_enigma"), new IntRange(0, max_floors), 4);//enigma berry
 
-            snacks.Spawns.Add(new InvItem("berry_jaboca"), new IntRange(0, 30), 5);//Jaboca
-            snacks.Spawns.Add(new InvItem("berry_rowap"), new IntRange(0, 30), 5);//Rowap
+            snacks.Spawns.Add(new InvItem("berry_jaboca"), new IntRange(0, max_floors), 5);//Jaboca
+            snacks.Spawns.Add(new InvItem("berry_rowap"), new IntRange(0, max_floors), 5);//Rowap
 
             foreach (string key in IterateTypeBerries())
-                snacks.Spawns.Add(new InvItem(key), new IntRange(6, 30), 1);
+                snacks.Spawns.Add(new InvItem(key), new IntRange(6, max_floors), 1);
 
-            snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, 30), 20);//blast seed
-            snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, 30), 10);//warp seed
-            snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, 30), 10);//decoy seed
-            snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, 30), 10);//sleep seed
-            snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, 30), 10);//blinker seed
-            snacks.Spawns.Add(new InvItem("seed_last_chance"), new IntRange(0, 30), 5);//last-chance seed
-            snacks.Spawns.Add(new InvItem("seed_doom"), new IntRange(0, 30), 5);//doom seed
-            snacks.Spawns.Add(new InvItem("seed_ban"), new IntRange(0, 30), 10);//ban seed
-            snacks.Spawns.Add(new InvItem("seed_pure"), new IntRange(0, 30), 4);//pure seed
-            snacks.Spawns.Add(new InvItem("seed_pure", true), new IntRange(0, 30), 4);//pure seed
-            snacks.Spawns.Add(new InvItem("seed_ice"), new IntRange(0, 30), 10);//ice seed
-            snacks.Spawns.Add(new InvItem("seed_vile"), new IntRange(0, 30), 10);//vile seed
+            snacks.Spawns.Add(new InvItem("seed_blast"), new IntRange(0, max_floors), 20);//blast seed
+            snacks.Spawns.Add(new InvItem("seed_warp"), new IntRange(0, max_floors), 10);//warp seed
+            snacks.Spawns.Add(new InvItem("seed_decoy"), new IntRange(0, max_floors), 10);//decoy seed
+            snacks.Spawns.Add(new InvItem("seed_sleep"), new IntRange(0, max_floors), 10);//sleep seed
+            snacks.Spawns.Add(new InvItem("seed_blinker"), new IntRange(0, max_floors), 10);//blinker seed
+            snacks.Spawns.Add(new InvItem("seed_last_chance"), new IntRange(0, max_floors), 5);//last-chance seed
+            snacks.Spawns.Add(new InvItem("seed_doom"), new IntRange(0, max_floors), 5);//doom seed
+            snacks.Spawns.Add(new InvItem("seed_ban"), new IntRange(0, max_floors), 10);//ban seed
+            snacks.Spawns.Add(new InvItem("seed_pure"), new IntRange(0, max_floors), 4);//pure seed
+            snacks.Spawns.Add(new InvItem("seed_pure", true), new IntRange(0, max_floors), 4);//pure seed
+            snacks.Spawns.Add(new InvItem("seed_ice"), new IntRange(0, max_floors), 10);//ice seed
+            snacks.Spawns.Add(new InvItem("seed_vile"), new IntRange(0, max_floors), 10);//vile seed
 
-            snacks.Spawns.Add(new InvItem("herb_power"), new IntRange(0, 30), 10);//power herb
-            snacks.Spawns.Add(new InvItem("herb_mental"), new IntRange(0, 30), 5);//mental herb
-            snacks.Spawns.Add(new InvItem("herb_white"), new IntRange(0, 30), 50);//white herb
-
+            snacks.Spawns.Add(new InvItem("herb_power"), new IntRange(0, max_floors), 10);//power herb
+            snacks.Spawns.Add(new InvItem("herb_mental"), new IntRange(0, max_floors), 5);//mental herb
+            snacks.Spawns.Add(new InvItem("herb_white"), new IntRange(0, max_floors), 50);//white herb
 
             //boosters
             CategorySpawn<InvItem> boosters = new CategorySpawn<InvItem>();
@@ -471,13 +470,6 @@ namespace DataGenerator.Data
                 //268 Cascoon : 106 Harden : 450 Bug Bite
                 poolSpawn.Spawns.Add(GetTeamMob("cascoon", "", "harden", "bug_bite", "", "", new RandRange(8), TeamMemberSpawn.MemberRole.Leader, "wait_attack"), new IntRange(4, 6), 10);
             }
-
-            //if (ii >= 9 && ii < 10)
-            //{
-            //    //174 * Igglybuff : 383 Copycat
-            //    //appears in a special situation
-            //    GetGenericMob(mobZoneStep, 174, -1, 383, -1, -1, -1, new RangeSpawn(15));
-            //}
 
 
             //447 Riolu : 068 Counter : 098 Quick Attack
