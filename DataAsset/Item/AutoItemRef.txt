@@ -37,7 +37,7 @@ Rarity	EffectType	Description
 5*	035: XRay	When kept in the bag, it allows the Pokémon to see foes and items in heavy darkness.
 5*	036: WeaknessPayback	When kept in the bag, it inflicts the {1} status on the attacker when the Pokémon is hit with a {0}-type move.
 5*	037: WarpPayback	When kept in the bag, it warps the attackers away when the Pokémon is hit with a {0}-type move.
-3*	038: LungeAttack	When kept in the bag, it changes the Pokémon's regular attack into a dash.
+5*	038: LungeAttack	When kept in the bag, it changes the Pokémon's regular attack into a dash.
 2*	039: WideAttack	When kept in the bag, the Pokémon's regular attack will hit the front and sides.
 5*	040: ExplosiveAttack	When kept in the bag, the Pokémon's regular attack explodes outwards with splash damage.
 4*	041: TrapBuster	When kept in the bag, the Pokémon's moves will destroy traps.
@@ -104,3 +104,5 @@ Rarity	EffectType	Description
 3*	102: ChanceStatusOnCategoryHit	When kept in the bag, the Pokémon's {1} moves may inflict the {0} status.
 1*	103: TypeBecomesCategory	When kept in the bag, the Pokémon's {0}-type moves are change to become {1}.
 2*	104: WeaknessDodge	When kept in the bag, the Pokémon becomes extremely likely to avoid {0}-type attacks.
+3*	105: HeartFinder	When kept in the bag, the Pokémon may find a {0} when it enters a new floor.
+4*	106: CelebrateStatus	When kept in the bag, the Pokémon gains the {0} status after defeating an enemy.

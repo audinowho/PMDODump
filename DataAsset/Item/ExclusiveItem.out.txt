@@ -9,7 +9,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None	Kindle Scarf	charmeleon	True	True					B	*	4*	070: PassThroughAttacker								True
 1* Claw		charmander	True	True					C	*	1*	015: PracticeSwinger								True
 1* Fang		charmander	True	True					D	*	2*	019: MasterHurler								True
-0* None	Fiery Heart	charmander	True	True					E	*	3*	038: LungeAttack								True
+0* None	Fiery Heart	charmander	True	True					E	*	3*	049: ExcessiveForce								True
 2* Crest		charmeleon	False	True					F	*	3*	000: None								True
 0* None	Hydro Band	blastoise	True	True					A	*	5*	082: WeaknessReduce	electric							True
 0* None	Bubble Bangle	wartortle	True	True					B	*	4*	056: FastHealer								True
@@ -36,10 +36,10 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 2* Charm		pidgey	True	True					E	*	3*	032: StairSensor								True
 0* None		pidgeotto	False	True					F	*	3*	000: None								True
 0* None	Overcome Bow	raticate	True	True					A	*	5*	072: RemoveAbilityAttack								True
-3* Scarf		raticate	True	True					B	*	4*	071: WeatherProtection								True
+3* Scarf		raticate	True	True					B	*	4*	038: LungeAttack								True
 1* Hair		rattata	True	True					C	*	1*	084: HitAndRun								True
 1* Tooth		rattata	True	True					D	*	2*	013: PPBoost						2		True
-2* Key		rattata	True	True					E	*	3*	038: LungeAttack								True
+2* Key		rattata	True	True					E	*	3*	071: WeatherProtection								True
 0* None		raticate	False	True					F	*	3*	000: None								True
 0* None	Wing Scarf	fearow	True	True					A	*	5*	067: SecondSTAB	ground							True
 3* Collar		fearow	True	True					B	*	4*	005: SuperCrit								True
@@ -371,11 +371,11 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		pinsir	False	False					F	*	3*	000: None								True
 0* None	Rushing Bow	tauros	True	False		tauros_miltank			A	/	5*	095: CelebrateCure								True
 0* None	Milky Scarf	miltank	True	False		tauros_miltank			B	/	5*	037: WarpPayback	fighting							True
-1* Tail		tauros	True	False	tauros, miltank	tauros_miltank			C	/	1*	038: LungeAttack								True
+1* Tail		tauros	True	False	tauros, miltank	tauros_miltank			C	/	1*	006: NVECrit								True
 1* Card		miltank	True	False	tauros, miltank	tauros_miltank			D	/	1*	015: PracticeSwinger								True
 2* Crest		tauros	True	False	tauros, miltank	tauros_miltank			E	/	4*	025: ThrowOnAttack								True
 2* Seal		miltank	True	False	tauros, miltank	tauros_miltank			F	/	4*	048: Absorption								True
-0* None	Field Crest	tauros	False	False	tauros, miltank	tauros_miltank			G	/	3*	056: FastHealer								True
+0* None	Field Crest	tauros	False	False	tauros, miltank	tauros_miltank			G	/	3*	038: LungeAttack								True
 0* None	Tempest Sash	gyarados	True	True					A	*	5*	067: SecondSTAB	dragon							True
 3* Float		gyarados	True	True					B	*	4*	049: ExcessiveForce								True
 1* Foam		magikarp	True	True					C	*	1*	026: SureHitAttacker								True
@@ -881,10 +881,10 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None		slakoth	True	True					E	*	3*	000: None								True
 0* None		vigoroth	False	True					F	*	3*	000: None								True
 0* None	Ninja Ruff	ninjask	True	False	nincada, ninjask				A	EB	5*	034: MapSurveyor								True
-3* Specs		ninjask	True	False	nincada, ninjask				B	CD	4*	041: TrapBuster								True
+3* Specs		ninjask	True	False	nincada, ninjask				B	CD	4*	038: LungeAttack								True
 1* Claw		nincada	True	False	nincada, ninjask, shedinja				C		1*	084: HitAndRun								True
 1* Card		nincada	True	False	nincada, ninjask, shedinja				D		2*	053: ClutchPerformer								True
-2* Key		nincada	True	False	nincada, ninjask, shedinja				E	CD	3*	038: LungeAttack								True
+2* Key		nincada	True	False	nincada, ninjask, shedinja				E	CD	3*	041: TrapBuster								True
 3* Mask		shedinja	True	False					F	CD	4*	010: AllTerrain								True
 0* None	Awe Mantle	shedinja	True	False					G	EF	5*	078: EndureType	ghost							True
 3* Torc		exploud	True	True					A	*	5*	011: Wallbreaker								True
@@ -1142,8 +1142,8 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Foam		relicanth	True	False					D	*	2*	014: DeepBreather								True
 2* Key		relicanth	True	False					E	*	3*	069: GapProber								True
 2* Ore		relicanth	False	False					F	*	3*	054: DistanceDodge								True
-3* Torc		luvdisc	True	False					A	*	5*	093: AttackRangeInWeather							rain	True
-3* Cape		luvdisc	True	False					B	*	4*	046: RoyalVeil								True
+3* Torc		luvdisc	True	False					A	*	5*	046: RoyalVeil								True
+3* Cape		luvdisc	True	False					B	*	4*	105: HeartFinder								True
 1* Foam		luvdisc	True	False					C	*	1*	062: FastFriend								True
 1* Card		luvdisc	True	False					D	*	2*	059: StatMirror								True
 2* Earring		luvdisc	True	False					E	*	3*	055: CloseDodge								True
@@ -1213,8 +1213,8 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None	Revive Robe	deoxys	True	False					A	*	5*	081: DeepBreatherPlus								True
 3* Scarf		deoxys	True	False					B	*	4*	010: AllTerrain								True
 1* Beam		deoxys	True	False					C	*	1*	043: WandMaster								True
-1* Card		deoxys	True	False					D	*	2*	019: MasterHurler								True
-2* Jewel		deoxys	True	False					E	*	3*	022: PressurePlus								True
+1* Card		deoxys	True	False					D	*	2*	022: PressurePlus								True
+2* Jewel		deoxys	True	False					E	*	3*	038: LungeAttack								True
 0* None		deoxys	False	False					F	*	3*	000: None								True
 0* None	Forest Torc	torterra	True	True					A	*	5*	095: CelebrateCure								True
 0* None	Woody Scarf	grotle	True	True					B	*	4*	047: Celebrate								True
@@ -1256,7 +1256,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 0* None	Spark Scarf	luxio	True	True					B	*	4*	069: GapProber								True
 1* Claw		shinx	True	True					C	*	1*	014: DeepBreather								True
 1* Fang		shinx	True	True					D	*	2*	053: ClutchPerformer								True
-0* None	Flash Tag	shinx	True	True					E	*	3*	038: LungeAttack								True
+0* None	Flash Tag	shinx	True	True					E	*	3*	017: CounterBasher								True
 0* None	Spark Tag	luxio	False	True					F	*	3*	034: MapSurveyor								True
 0* None	Skull Helmet	rampardos	True	True					A	*	5*	086: StatusOnCategoryUse		enraged			003: Status			True
 3* Band		rampardos	True	True					B	*	4*	049: ExcessiveForce								True
@@ -1456,10 +1456,10 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 2* Ring		darkrai	True	False					E	*	3*	070: PassThroughAttacker								True
 0* None		darkrai	False	False					F	*	3*	000: None								True
 0* None	Purify Veil	shaymin	True	False					A	*	5*	046: RoyalVeil								True
-3* Torc		shaymin	True	False					B	*	4*	010: AllTerrain								True
+3* Torc		shaymin	True	False					B	*	4*	038: LungeAttack								True
 1* Seed		shaymin	True	False					C	*	1*	062: FastFriend								True
 2* Aroma		shaymin	True	False					D	*	2*	083: Gratitude								True
-2* Seal		shaymin	True	False					E	*	3*	032: StairSensor								True
+2* Seal		shaymin	True	False					E	*	3*	010: AllTerrain								True
 0* None		shaymin	False	False					F	*	3*	000: None								True
 0* None	Victory Crown	victini	True	False					A	*	5*	020: AllyReviver								False
 2* Heart		victini	True	False					B	*	4*	081: DeepBreatherPlus								False
@@ -1468,10 +1468,10 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 2* Charm		victini	True	False					E	*	3*	046: RoyalVeil								False
 0* None		victini	False	False					F	*	2-3*	000: None								False
 3* Blade		serperior	True	True					A	*	5*	101: ChanceStatOnTypeHit	grass	mod_accuracy				25		True
-2* Brooch		servine	True	True					B	*	4*	055: CloseDodge								True
+2* Brooch		servine	True	True					B	*	4*	038: LungeAttack								True
 1* Fang		snivy	True	True					C	*	1-2*	069: GapProber								True
 1* Leaf		snivy	True	True					D	*	1-2*	104: WeaknessDodge	flying							True
-1* Shoot		servine	True	True					E	*	2-3*	038: LungeAttack								True
+1* Shoot		servine	True	True					E	*	2-3*	084: HitAndRun								True
 0* None		servine	False	True					F	*	2-3*	000: None								True
 3* Belt		emboar	True	True					A	*	5*	078: EndureType	psychic							True
 2* Guard		pignite	True	True					B	*	4*	028: StatusImmune		flinch						True
@@ -1531,7 +1531,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 3* Shield		swadloon	True	True					B	*	4*	086: StatusOnCategoryUse		quick_guard			003: Status			False
 1* Leaf		sewaddle	True	True					C	*	1-2*	029: StatDropImmune			001: Attack					False
 1* Dew		sewaddle	True	True					D	*	1-2*	006: NVECrit								False
-2* Aroma		sewaddle	True	True					E	*	2-3*	038: LungeAttack								False
+2* Aroma		sewaddle	True	True					E	*	2-3*	088: DoubleDash								False
 2* Guard		swadloon	False	True					F	*	2-3*	055: CloseDodge								False
 0* None	Flower Crown	lilligant	True	True					A	*	5*	089: StatusSplash								True
 2* Crest		lilligant	True	True					B	*	4*	046: RoyalVeil								True
@@ -1627,7 +1627,7 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 2* Seal		mienshao	True	True					B	*	4*	047: Celebrate								False
 1* Claw		mienfoo	True	True					C	*	1*	018: DoubleAttacker								False
 1* Sweat		mienfoo	True	True					D	*	2*	104: WeaknessDodge	flying							False
-2* Charm		mienfoo	True	True					E	*	3*	038: LungeAttack								False
+2* Charm		mienfoo	True	True					E	*	3*	088: DoubleDash								False
 0* None		mienshao	False	True					F	*	2-3*	000: None								False
 3* Bangle		druddigon	True	False					A	*	5*	004: TypeBulldozer	dragon			fairy				True
 2* Heart		druddigon	True	False					B	*	4*	080: NoStatusInWeather							sunny	True
@@ -2188,10 +2188,10 @@ Generic Name	Custom Name	User	ON	Evos	Custom Group	Group Name	Name	Item For	Inde
 1* Dew		finizen	True	True					D	*	2*	060: ErraticAttacker								False
 2* Brooch		finizen	True	True					E	*	3*	096: TypeBodyguard	water							False
 0* None		palafin	False	True					F	*	2-3*	000: None								False
-3* Helmet		cyclizar	True	False					A	*	5*	034: MapSurveyor								False
+3* Helmet		cyclizar	True	False					A	*	5*	038: LungeAttack								False
 2* Medal		cyclizar	True	False					B	*	4*	097: StatOnCategoryUse		mod_speed			001: Physical	25		False
 1* Tail		cyclizar	True	False					C	*	1*	062: FastFriend								False
-1* Claw		cyclizar	True	False					D	*	2*	038: LungeAttack								False
+1* Claw		cyclizar	True	False					D	*	2*	033: AcuteSniffer								False
 0* None		cyclizar	True	False					E	*	3*	000: None								False
 0* None		cyclizar	False	False					F	*	2-3*	000: None								False
 3* Crown		glimmora	True	True					A	*	5*	104: WeaknessDodge	ground							True

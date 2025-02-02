@@ -12,100 +12,100 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 1* Hair	010: AllTerrain		alomomola	ground	conversion_2	heavy_rain	
 1* Horn	011: Wallbreaker		altaria	ice	counter	inverse	
 1* Leaf	012: GapFiller		amaura	none	crafty_shield	magic_room	
-1* Mud	013: PPBoost		ambipom	normal	cursed	misty_terrain	
-1* Root	014: DeepBreather		amoonguss	poison	decoy	move_ban	
-1* Seed	015: PracticeSwinger		ampharos	psychic	destiny_bond	mysterious_distortion	
-1* Shoot	016: MisfortuneMirror		annihilape	rock	detect	mysterious_force	
-1* Song	017: CounterBasher		anorith	steel	disable	psychic_terrain	
-1* Sweat	018: DoubleAttacker		appletun	water	electrified	rain	
-1* Tail	019: MasterHurler		applin		embargo	sandstorm	
-1* Thorn	020: AllyReviver		araquanid		encore	snow	
-1* Tooth	021: AllyReviverBattle		arbok		endure	sunny	
-1* Twig	022: PressurePlus		arboliva		enraged	trick_room	
-1* Wing	023: StatusOnAttack		arcanine		exposed	wind	
-2* Aroma	024: KnockbackOnAttack		arceus		fairy_lock	wonder_room	
-2* Brooch	025: ThrowOnAttack		archen		fire_pledge		
-2* Charm	026: SureHitAttacker		archeops		fire_spin		
-2* Coin	027: SpecialAttacker		arctibax		flinch		
-2* Crest	028: StatusImmune		arctovish		focus_energy		
-2* Dust	029: StatDropImmune		arctozolt		follow_me		
-2* Earring	030: SleepWalker		ariados		freeze		
-2* Guard	031: ChargeWalker		armaldo		grass_pledge		
-2* Heart	032: StairSensor		armarouge		grudge		
-2* Jaw	033: AcuteSniffer		aromatisse		heal_block		
-2* Jewel	034: MapSurveyor		aron		illusion		
-2* Key	035: XRay		arrokuda		immobilized		
-2* Medal	036: WeaknessPayback		articuno		in_love		
-2* Ore	037: WarpPayback		audino		infestation		
-2* Pebble	038: LungeAttack		aurorus		ingrain		
-2* Ring	039: WideAttack		avalugg		invisible		
-2* Rock	040: ExplosiveAttack		axew		kings_shield		
-2* Seal	041: TrapBuster		azelf		leech_seed		
-2* Shard	042: ExplosionGuard		azumarill		light_screen		
-2* Tag	043: WandMaster		azurill		lucky_chant		
-3* Apron	044: WandSpread		bagon		magic_coat		
-3* Armlet	045: MultiRayShot		baltoy		magma_storm		
-3* Armor	046: RoyalVeil		banette		magnet_rise		
-3* Band	047: Celebrate		barbaracle		mental_charged		
-3* Bangle	048: Absorption		barboach		metal_burst		
-3* Belt	049: ExcessiveForce		barraskewda		mini_counter		
-3* Blade	050: Anchor		basculegion		miracle_eye		
-3* Bow	051: BarrageGuard		basculin		mirror_coat		
-3* Cap	052: BetterOdds		bastiodon		mist		
-3* Cape	053: ClutchPerformer		baxcalibur		mod_accuracy		
-3* Choker	054: DistanceDodge		bayleef		mod_attack		
-3* Coat	055: CloseDodge		beartic		mod_defense		
-3* Collar	056: FastHealer		beautifly		mod_evasion		
-3* Crown	057: SelfCurer		beedrill		mod_range		
-3* Dress	058: StatusMirror		beheeyem		mod_special_attack		
-3* Drill	059: StatMirror		beldum		mod_special_defense		
-3* Float	060: ErraticAttacker		bellibolt		mod_speed		
-3* Glasses	061: ErraticDefender		bellossom		nightmare		
-3* Hat	062: FastFriend		bellsprout		paralyze		
-3* Helmet	063: CoinWatcher		bergmite		paused		
-3* Mantle	064: HiddenStairFinder		bewear		perish_song		
-3* Mask	065: ChestFinder		bibarel		pierce		
-3* Poncho	066: ShopFinder		bidoof		poison		
-3* Robe	067: SecondSTAB		binacle		poison_toxic		
-3* Ruff	068: TypedAttack		bisharp		powder		
-3* Sash	069: GapProber		blacephalon		power_charged		
-3* Scarf	070: PassThroughAttacker		blastoise		protect		
-3* Scope	071: WeatherProtection		blaziken		quick_guard		
-3* Shield	072: RemoveAbilityAttack		blipbug		rage_powder		
-3* Specs	073: CheekPouch		blissey		recruit_boost		
-3* Tiara	074: HealInWater		blitzle		reflect		
-3* Tie	075: HealInLava		boldore		regeneration		
-3* Torc	076: HealOnNewFloor		boltund		retaliate		
-3* Veil	077: EndureCategory		bombirdier		roosting		
-	078: EndureType		bonsly		safeguard		
-	079: SpikeDropper		bouffalant		sand_tomb		
-	080: NoStatusInWeather		bounsweet		sleep		
-	081: DeepBreatherPlus		braixen		sleepless		
-	082: WeaknessReduce		brambleghast		slip		
-	083: Gratitude		bramblin		snatch		
-	084: HitAndRun		braviary		stat_charged		
-	085: StatusOnCategoryHit		breloom		status_protection		
-	086: StatusOnCategoryUse		brionne		stockpile		
-	087: MapStatusOnCategoryUse		bronzong		super_mobile		
-	088: DoubleDash		bronzor		sure_shot		
-	089: StatusSplash		brute_bonnet		taunted		
-	090: DevolveOnAttack		bruxish		telekinesis		
-	091: ProjectileAttack		budew		torment		
-	092: MetronomePlus		buizel		type_boosted		
-	093: AttackRangeInWeather		bulbasaur		type_converted		
-	094: PPSaver		buneary		type_protected		
-	095: CelebrateCure		bunnelby		water_pledge		
-	096: TypeBodyguard		burmy		weakness_drain		
-	097: StatOnCategoryUse		butterfree		whirlpool		
-	098: StatusOnTypeHit		buzzwole		wide_guard		
-	099: SweetDreams		cacnea		wish		
-	100: ChanceStatusOnTypeHit		cacturne		yawning		
-	101: ChanceStatOnTypeHit		calyrex				
+1* Mud	013: PPBoost		ambipom	normal	cud_chew	misty_terrain	
+1* Root	014: DeepBreather		amoonguss	poison	cursed	move_ban	
+1* Seed	015: PracticeSwinger		ampharos	psychic	decoy	mysterious_distortion	
+1* Shoot	016: MisfortuneMirror		annihilape	rock	destiny_bond	mysterious_force	
+1* Song	017: CounterBasher		anorith	steel	detect	psychic_terrain	
+1* Sweat	018: DoubleAttacker		appletun	water	disable	rain	
+1* Tail	019: MasterHurler		applin		electrified	sandstorm	
+1* Thorn	020: AllyReviver		araquanid		embargo	snow	
+1* Tooth	021: AllyReviverBattle		arbok		encore	sunny	
+1* Twig	022: PressurePlus		arboliva		endure	trick_room	
+1* Wing	023: StatusOnAttack		arcanine		enraged	wind	
+2* Aroma	024: KnockbackOnAttack		arceus		exposed	wonder_room	
+2* Brooch	025: ThrowOnAttack		archen		fairy_lock		
+2* Charm	026: SureHitAttacker		archeops		fire_pledge		
+2* Coin	027: SpecialAttacker		arctibax		fire_spin		
+2* Crest	028: StatusImmune		arctovish		flinch		
+2* Dust	029: StatDropImmune		arctozolt		focus_energy		
+2* Earring	030: SleepWalker		ariados		follow_me		
+2* Guard	031: ChargeWalker		armaldo		freeze		
+2* Heart	032: StairSensor		armarouge		grass_pledge		
+2* Jaw	033: AcuteSniffer		aromatisse		grudge		
+2* Jewel	034: MapSurveyor		aron		heal_block		
+2* Key	035: XRay		arrokuda		illusion		
+2* Medal	036: WeaknessPayback		articuno		immobilized		
+2* Ore	037: WarpPayback		audino		in_love		
+2* Pebble	038: LungeAttack		aurorus		infestation		
+2* Ring	039: WideAttack		avalugg		ingrain		
+2* Rock	040: ExplosiveAttack		axew		invisible		
+2* Seal	041: TrapBuster		azelf		kings_shield		
+2* Shard	042: ExplosionGuard		azumarill		leech_seed		
+2* Tag	043: WandMaster		azurill		light_screen		
+3* Apron	044: WandSpread		bagon		lucky_chant		
+3* Armlet	045: MultiRayShot		baltoy		magic_coat		
+3* Armor	046: RoyalVeil		banette		magma_storm		
+3* Band	047: Celebrate		barbaracle		magnet_rise		
+3* Bangle	048: Absorption		barboach		mental_charged		
+3* Belt	049: ExcessiveForce		barraskewda		metal_burst		
+3* Blade	050: Anchor		basculegion		mini_counter		
+3* Bow	051: BarrageGuard		basculin		miracle_eye		
+3* Cap	052: BetterOdds		bastiodon		mirror_coat		
+3* Cape	053: ClutchPerformer		baxcalibur		mist		
+3* Choker	054: DistanceDodge		bayleef		mod_accuracy		
+3* Coat	055: CloseDodge		beartic		mod_attack		
+3* Collar	056: FastHealer		beautifly		mod_defense		
+3* Crown	057: SelfCurer		beedrill		mod_evasion		
+3* Dress	058: StatusMirror		beheeyem		mod_range		
+3* Drill	059: StatMirror		beldum		mod_special_attack		
+3* Float	060: ErraticAttacker		bellibolt		mod_special_defense		
+3* Glasses	061: ErraticDefender		bellossom		mod_speed		
+3* Hat	062: FastFriend		bellsprout		nightmare		
+3* Helmet	063: CoinWatcher		bergmite		paralyze		
+3* Mantle	064: HiddenStairFinder		bewear		paused		
+3* Mask	065: ChestFinder		bibarel		perish_song		
+3* Poncho	066: ShopFinder		bidoof		pierce		
+3* Robe	067: SecondSTAB		binacle		poison		
+3* Ruff	068: TypedAttack		bisharp		poison_toxic		
+3* Sash	069: GapProber		blacephalon		powder		
+3* Scarf	070: PassThroughAttacker		blastoise		power_charged		
+3* Scope	071: WeatherProtection		blaziken		protect		
+3* Shield	072: RemoveAbilityAttack		blipbug		quick_guard		
+3* Specs	073: CheekPouch		blissey		rage_powder		
+3* Tiara	074: HealInWater		blitzle		recruit_boost		
+3* Tie	075: HealInLava		boldore		reflect		
+3* Torc	076: HealOnNewFloor		boltund		regeneration		
+3* Veil	077: EndureCategory		bombirdier		retaliate		
+	078: EndureType		bonsly		roosting		
+	079: SpikeDropper		bouffalant		safeguard		
+	080: NoStatusInWeather		bounsweet		sand_tomb		
+	081: DeepBreatherPlus		braixen		sleep		
+	082: WeaknessReduce		brambleghast		sleepless		
+	083: Gratitude		bramblin		slip		
+	084: HitAndRun		braviary		snatch		
+	085: StatusOnCategoryHit		breloom		stat_charged		
+	086: StatusOnCategoryUse		brionne		status_protection		
+	087: MapStatusOnCategoryUse		bronzong		stockpile		
+	088: DoubleDash		bronzor		super_mobile		
+	089: StatusSplash		brute_bonnet		sure_shot		
+	090: DevolveOnAttack		bruxish		taunted		
+	091: ProjectileAttack		budew		telekinesis		
+	092: MetronomePlus		buizel		torment		
+	093: AttackRangeInWeather		bulbasaur		type_boosted		
+	094: PPSaver		buneary		type_converted		
+	095: CelebrateCure		bunnelby		type_protected		
+	096: TypeBodyguard		burmy		water_pledge		
+	097: StatOnCategoryUse		butterfree		weakness_drain		
+	098: StatusOnTypeHit		buzzwole		whirlpool		
+	099: SweetDreams		cacnea		wide_guard		
+	100: ChanceStatusOnTypeHit		cacturne		wish		
+	101: ChanceStatOnTypeHit		calyrex		yawning		
 	102: ChanceStatusOnCategoryHit		camerupt				
 	103: TypeBecomesCategory		capsakid				
 	104: WeaknessDodge		carbink				
-			carkol				
-			carnivine				
+	105: HeartFinder		carkol				
+	106: CelebrateStatus		carnivine				
 			carracosta				
 			carvanha				
 			cascoon				
