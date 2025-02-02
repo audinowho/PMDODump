@@ -85,12 +85,18 @@ class TransferNode:
 
 
 def generateMap(transfer_dict, dict, name_stack, added_nodes):
-    if len(name_stack) <= 2 and transfer_dict.portrait_dest is None and transfer_dict.sprite_dest is None \
-            and dict.name != "" and transfer_dict.name != dict.name:
+    if transfer_dict.name != dict.name:
         result_str = " ".join(name_stack)
         if not dict.canon:
             result_str = "*" + result_str
+
+        if len(name_stack) <= 2 and transfer_dict.portrait_dest is None and transfer_dict.sprite_dest is None \
+                and dict.name != "":
+            result_str = "+" + result_str
+        else:
+            result_str = "~" + result_str
         added_nodes.append(result_str)
+
     transfer_dict.name = dict.name
     if transfer_dict.portrait_dest is None:
         if not dict.canon:

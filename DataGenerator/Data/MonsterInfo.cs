@@ -1391,16 +1391,6 @@ namespace DataGenerator.Data
                     if (version == 24)
                         version = 25;
 
-                    if (false)
-                    {
-                        //mankey, primeape: must be on SV
-                        if (index == 56 || index == 57)
-                            version = 25;
-                        //girafarig: must be on SV
-                        if (index == 203)
-                            version = 25;
-                    }
-
                     MonsterFormData formEntry = LoadForme(m_dbTLConnection, version, index, dexId, formId, entry.Name);
                     formEntry.Generation = genVersion(version);
                     if (Ratio == -1)
@@ -1672,13 +1662,14 @@ namespace DataGenerator.Data
                     (string, SkillData) skill = SkillInfo.GetSkillData(Convert.ToInt32(reader["move_id"].ToString()));
                     levelMove.Skill = skill.Item1;
 
-                    //Girafarig gets Twin Beam at level 32
-                    //Primeape gets Rage Fist at level 35
-                    //Stantler gets Psyshield Bash at level 31
-                    //Dunsparce gets Hyper Drill at level 32
                     entry.LevelSkills.Add(levelMove);
                 }
             }
+
+            //Girafarig gets Twin Beam at level 32
+            //Primeape gets Rage Fist at level 35
+            //Stantler gets Psyshield Bash at level 31
+            //Dunsparce gets Hyper Drill at level 32
             if (dexId == 57) //primeape
                 InsertLevelSkill(entry.LevelSkills, new LevelUpSkill("rage_fist", 35));
             else if (dexId == 203) //girafarig
