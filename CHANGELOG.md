@@ -17,6 +17,7 @@
 * RC: Fixed an issue where mysterious distortions would fail to expire on wrapped maps
 * RC: Snowy weather can appear naturally in certain dungeon maps. It is considered identical to Hail, except it increases Ice-types' Defense instead of damagin non-ice-type Pokemon. It cannot be triggered by any other means.
 * Dev: Added RoomGenLoadBoss, an editor-friendly way to spawn boss rooms by editing a static boss map, and then selecting it as the map to load into the random dungeon.
+* Dev: Added RoomGenLoadEvo, an editor-friendly way to spawn evo rooms.  The hardcoded rooms are now deprecated.
 * Dev: Fixed errors occurring when maps are resized more than once with NPCs on them
 * Dev: Improvements to ConnectBranchStep that make it work better in wrapped maps
 * Dev: Stairs Steps now have a MinDistance, where you can specify how far away the exit should at least be from the start
