@@ -27,3 +27,4 @@ poolSpawn.Spawns.Add(GetTeamMob("vanilluxe", "", "", "", "", "", new RandRange(5
 poolSpawn.Spawns.Add(GetTeamMob("weezing", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("infernape", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("reuniclus", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("arcanine", 1, "", Gender.Unknown), "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
