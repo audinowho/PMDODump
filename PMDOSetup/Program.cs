@@ -239,10 +239,12 @@ namespace PMDOSetup
             {
                 (int Left, int Top) cursor = Console.GetCursorPosition();
                 Console.SetCursorPosition(0, cursor.Top);
+				Console.Write(new string(' ', Console.BufferWidth));
+                Console.SetCursorPosition(0, cursor.Top);
                 if (e.TotalBytesToReceive > -1)
-                    Console.Write(String.Format("Progress: {0}/{1} Bytes", e.BytesReceived, e.TotalBytesToReceive));
+                    Console.Write(String.Format("Progress: {0} / {1}", FileSizeToPrettyString(e.BytesReceived), FileSizeToPrettyString(e.TotalBytesToReceive)));
                 else
-                    Console.Write(String.Format("Progress: {0} Bytes", e.BytesReceived));
+                    Console.Write(String.Format("Progress: {0}", FileSizeToPrettyString(e.BytesReceived)));
             }
         }
         private static void Wc_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
@@ -466,7 +468,7 @@ namespace PMDOSetup
             SaveXml();
             Console.WriteLine("Done.");
             if (firstInstall)
-                Console.WriteLine("Future runs of this file will check for updates.");
+                Console.WriteLine("Future runs of this file will check for updates. This window can now be closed.");
 
             ReadKey();
         }
@@ -775,6 +777,22 @@ namespace PMDOSetup
             XmlNode node = doc.CreateElement(name);
             node.InnerText = text;
             parentNode.AppendChild(node);
+        }
+		
+		
+        
+        private static string FileSizeToPrettyString(double fileSize)
+		{
+            const bool useBase10Separator = true;
+            string[] sizes = { "B", "KB", "MB", "GB", "TB" };
+            int order = 0;
+            while (fileSize >= (useBase10Separator ? 1000 : 1024) && order < sizes.Length - 1)
+			{
+                order++;
+                fileSize = fileSize / (useBase10Separator ? 1000 : 1024);
+            }
+            
+            return String.Format("{0:0.###} {1}", fileSize, sizes[order]);
         }
     }
 }
