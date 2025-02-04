@@ -239,7 +239,7 @@ namespace PMDOSetup
             {
                 (int Left, int Top) cursor = Console.GetCursorPosition();
                 Console.SetCursorPosition(0, cursor.Top);
-				Console.Write(new string(' ', Console.BufferWidth));
+                Console.Write(new string(' ', Console.BufferWidth));
                 Console.SetCursorPosition(0, cursor.Top);
                 if (e.TotalBytesToReceive > -1)
                     Console.Write(String.Format("Progress: {0} / {1}", FileSizeToPrettyString(e.BytesReceived), FileSizeToPrettyString(e.TotalBytesToReceive)));
@@ -778,16 +778,14 @@ namespace PMDOSetup
             node.InnerText = text;
             parentNode.AppendChild(node);
         }
-		
-		
-        
+
         private static string FileSizeToPrettyString(double fileSize)
-		{
+        {
             const bool useBase10Separator = true;
             string[] sizes = { "B", "KB", "MB", "GB", "TB" };
             int order = 0;
             while (fileSize >= (useBase10Separator ? 1000 : 1024) && order < sizes.Length - 1)
-			{
+            {
                 order++;
                 fileSize = fileSize / (useBase10Separator ? 1000 : 1024);
             }
