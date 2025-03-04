@@ -572,8 +572,6 @@ namespace DataGenerator.Data
             //296 Makuhita : 282 Knock Off : 292 Arm Thrust
             poolSpawn.Spawns.Add(GetTeamMob("makuhita", "", "knock_off", "arm_thrust", "", "", new RandRange(18)), new IntRange(10, 12), 10);
 
-            //37//304 Aron : 232 Metal Claw : 334 Iron Defense
-
             //23//104 Cubone : 099 Rage : 125 Bone Club
             poolSpawn.Spawns.Add(GetTeamMob("cubone", "", "rage", "bone_club", "", "", new RandRange(23)), new IntRange(10, 12), 10);
 
@@ -667,8 +665,6 @@ namespace DataGenerator.Data
             //34//019 Rattata : 283 Endeavor : 098 Quick Attack
 
             //34//075 Graveler : 446 Stealth Rock : 350 Rock Blast
-
-            //26//223 Remoraid : 055 Hustle : 116 Focus Energy : 199 Lock-On : 352 Water Pulse
 
             //31//459 Snover : 420 Ice Shard : 320 Grass Whistle : 275 Ingrain
 
@@ -1234,7 +1230,7 @@ namespace DataGenerator.Data
 
             //switch vaults
             {
-                SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandRange(1, 4), new IntRange(0, 30)));
+                SpreadVaultZoneStep vaultChanceZoneStep = new SpreadVaultZoneStep(PR_SPAWN_ITEMS_EXTRA, PR_SPAWN_TRAPS, PR_SPAWN_MOBS_EXTRA, new SpreadPlanQuota(new RandRange(1, 5), new IntRange(0, max_floors)));
 
                 //making room for the vault
                 {

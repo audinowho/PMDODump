@@ -2995,7 +2995,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("jynx", "", "lovely_kiss", "draining_kiss", "ice_punch", "", new RandRange(36), "wander_dumb"), new IntRange(11, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("snorunt", "ice_body", "frost_breath", "", "", "", new RandRange(36), "wander_dumb"), new IntRange(0, 11), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("frosmoth", "", "hail", "bug_buzz", "", "", new RandRange(35), "wander_dumb"), new IntRange(11, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("vanillish", "snow_cloak", "icicle_spear", "mist", "", "", new RandRange(35), "wander_dumb"), new IntRange(6, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("vanillish", "snow_cloak", "icicle_spear", "mist", "icy_wind", "", new RandRange(35), "wander_dumb"), new IntRange(6, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("furret", "", "foresight", "follow_me", "rest", "", new RandRange(36), "wander_dumb"), new IntRange(2, 15), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("altaria", "", "dragon_breath", "", "", "", new RandRange(36), "wander_dumb"), new IntRange(11, max_floors), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("snover", "", "ice_shard", "ingrain", "", "", new RandRange(36), "wander_dumb"), new IntRange(0, 11), 10);
