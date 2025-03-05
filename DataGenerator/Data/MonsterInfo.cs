@@ -2992,7 +2992,29 @@ namespace DataGenerator.Data
                     traversed.Add(monId.Species);
                 }
 
-                evoTrees.Add((monsterKeys[ii], family));
+                // look for an evo tree that already contains this mon
+                // stupid shedinja
+                bool added_one = false;
+                foreach ((string familyName, List<MonsterID> mons) in evoTrees)
+                {
+                    foreach (MonsterID existingMon in family)
+                    {
+                        if (existingMon.Species == familyName)
+                        {
+                            if (!mons.Contains(new MonsterID(key, 0, "", Gender.Unknown)))
+                                mons.Add(new MonsterID(key, 0, "", Gender.Unknown));
+                            traversed.Add(key);
+                            added_one = true;
+                            break;
+                        }
+                    }
+                    if (added_one)
+                        break;
+                }
+                if (added_one)
+                    continue;
+
+                evoTrees.Add((key, family));
             }
 
             List<(int familyIndex, string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff)> totalMons = new List<(int familyIndex, string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff)>();

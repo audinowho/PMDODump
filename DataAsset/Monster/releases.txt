@@ -61,9 +61,9 @@
 39	jigglypuff	39	jigglypuff	0	Jigglypuff		guildmaster_trail	TRUE	FALSE
 39	jigglypuff	40	wigglytuff	0	Wigglytuff		guildmaster_trail	TRUE	FALSE
 39	jigglypuff	174	igglybuff	0	Igglybuff		guildmaster_trail	TRUE	FALSE
-41	zubat	41	zubat	0	Zubat		sickly_hollow	TRUE	FALSE
-41	zubat	42	golbat	0	Golbat		copper_quarry sickly_hollow	TRUE	FALSE
-41	zubat	169	crobat	0	Crobat		EVOLVE	TRUE	FALSE
+41	zubat	41	zubat	0	Zubat		geode_crevice sickly_hollow	TRUE	FALSE
+41	zubat	42	golbat	0	Golbat		copper_quarry geode_crevice sickly_hollow	TRUE	FALSE
+41	zubat	169	crobat	0	Crobat		geode_crevice	TRUE	FALSE
 43	oddish	43	oddish	0	Oddish		fertile_valley secret_garden	TRUE	FALSE
 43	oddish	44	gloom	0	Gloom		moonlit_courtyard secret_garden	TRUE	FALSE
 43	oddish	45	vileplume	0	Vileplume		secret_garden	TRUE	FALSE
@@ -76,11 +76,11 @@
 50	diglett	50	diglett	1	Alolan Diglett		sleeping_caldera	TRUE	FALSE
 50	diglett	51	dugtrio	0	Dugtrio		copper_quarry secret_garden	TRUE	FALSE
 50	diglett	51	dugtrio	1	Alolan Dugtrio		sleeping_caldera	TRUE	FALSE
-52	meowth	52	meowth	0	Meowth		depleted_basin guildmaster_trail	TRUE	FALSE
+52	meowth	52	meowth	0	Meowth		depleted_basin geode_crevice guildmaster_trail	TRUE	FALSE
 52	meowth	52	meowth	1	Alolan Meowth		sleeping_caldera	TRUE	FALSE
 52	meowth	52	meowth	2	Galarian Meowth			FALSE	FALSE
 52	meowth	52	meowth	3	Gigantamax Meowth		TEMP	FALSE	FALSE
-52	meowth	53	persian	0	Persian		guildmaster_trail sickly_hollow veiled_ridge	TRUE	FALSE
+52	meowth	53	persian	0	Persian		geode_crevice guildmaster_trail sickly_hollow veiled_ridge	TRUE	FALSE
 52	meowth	53	persian	1	Alolan Persian		sleeping_caldera	TRUE	FALSE
 52	meowth	863	perrserker	0	Perrserker	steely_spirit		FALSE	FALSE
 54	psyduck	54	psyduck	0	Psyduck		sleeping_caldera	TRUE	FALSE
@@ -126,8 +126,8 @@
 79	slowpoke	80	slowbro	2	Galarian Slowbro	quick_draw shell_side_arm		FALSE	FALSE
 79	slowpoke	199	slowking	0	Slowking		EVOLVE	TRUE	FALSE
 79	slowpoke	199	slowking	1	Galarian Slowking	curious_medicine eerie_spell		FALSE	FALSE
-81	magnemite	81	magnemite	0	Magnemite		copper_quarry thunderstruck_pass	TRUE	FALSE
-81	magnemite	82	magneton	0	Magneton		EVOLVE	TRUE	FALSE
+81	magnemite	81	magnemite	0	Magnemite		copper_quarry geode_crevice thunderstruck_pass	TRUE	FALSE
+81	magnemite	82	magneton	0	Magneton		geode_crevice	TRUE	FALSE
 81	magnemite	462	magnezone	0	Magnezone		EVOLVE	TRUE	FALSE
 83	farfetchd	83	farfetchd	0	Farfetch'd		flyaway_cliffs secret_garden	TRUE	FALSE
 83	farfetchd	83	farfetchd	1	Galarian Farfetch’d			TRUE	FALSE
@@ -173,7 +173,7 @@
 108	lickitung	463	lickilicky	0	Lickilicky		guildmaster_trail	TRUE	FALSE
 109	koffing	109	koffing	0	Koffing		guildmaster_trail veiled_ridge	TRUE	FALSE
 109	koffing	110	weezing	0	Weezing		guildmaster_trail	TRUE	FALSE
-109	koffing	110	weezing	1	Galarian Weezing	strange_steam		TRUE	TRUE
+109	koffing	110	weezing	1	Galarian Weezing	strange_steam	EVOLVE	TRUE	TRUE
 111	rhyhorn	111	rhyhorn	0	Rhyhorn		depleted_basin	TRUE	FALSE
 111	rhyhorn	112	rhydon	0	Rhydon		EVOLVE	TRUE	FALSE
 111	rhyhorn	464	rhyperior	0	Rhyperior		EVOLVE	TRUE	FALSE
@@ -192,7 +192,7 @@
 120	staryu	120	staryu	0	Staryu		tropical_path	TRUE	FALSE
 120	staryu	121	starmie	0	Starmie		EVOLVE	TRUE	FALSE
 122	mr_mime	122	mr_mime	0	Mr. Mime		guildmaster_trail moonlit_courtyard	TRUE	FALSE
-122	mr_mime	122	mr_mime	1	Galarian Mr. Mime	screen_cleaner		TRUE	TRUE
+122	mr_mime	122	mr_mime	1	Galarian Mr. Mime	screen_cleaner	EVOLVE	TRUE	TRUE
 122	mr_mime	439	mime_jr	0	Mime Jr.		guildmaster_trail moonlit_courtyard	TRUE	FALSE
 122	mr_mime	866	mr_rime	0	Mr. Rime	screen_cleaner		FALSE	FALSE
 123	scyther	123	scyther	0	Scyther		guildmaster_trail	TRUE	FALSE
@@ -282,8 +282,8 @@
 179	mareep	180	flaaffy	0	Flaaffy		secret_garden	TRUE	FALSE
 179	mareep	181	ampharos	0	Ampharos		secret_garden	TRUE	FALSE
 179	mareep	181	ampharos	1	Mega Ampharos		TEMP	FALSE	FALSE
-183	marill	183	marill	0	Marill		EVOLVE	TRUE	TRUE
-183	marill	184	azumarill	0	Azumarill		snowbound_path	TRUE	FALSE
+183	marill	183	marill	0	Marill		geode_crevice	TRUE	TRUE
+183	marill	184	azumarill	0	Azumarill		geode_crevice snowbound_path	TRUE	FALSE
 183	marill	298	azurill	0	Azurill		fertile_valley	TRUE	FALSE
 185	sudowoodo	185	sudowoodo	0	Sudowoodo		guildmaster_trail secret_garden	TRUE	FALSE
 185	sudowoodo	438	bonsly	0	Bonsly		faded_trail fertile_valley guildmaster_trail secret_garden	TRUE	FALSE
@@ -366,18 +366,18 @@
 222	corsola	222	corsola	0	Corsola		castaway_cave	TRUE	FALSE
 222	corsola	222	corsola	1	Galarian Corsola	strength_sap		TRUE	FALSE
 222	corsola	864	cursola	0	Cursola	strength_sap		TRUE	FALSE
-223	remoraid	223	remoraid	0	Remoraid		lava_floe_island	TRUE	FALSE
-223	remoraid	224	octillery	0	Octillery		guildmaster_trail lava_floe_island	TRUE	FALSE
+223	remoraid	223	remoraid	0	Remoraid		geode_crevice lava_floe_island	TRUE	FALSE
+223	remoraid	224	octillery	0	Octillery		geode_crevice guildmaster_trail lava_floe_island	TRUE	FALSE
 225	delibird	225	delibird	0	Delibird		guildmaster_trail	TRUE	FALSE
 226	mantine	226	mantine	0	Mantine		castaway_cave	TRUE	FALSE
 226	mantine	458	mantyke	0	Mantyke		castaway_cave	TRUE	FALSE
 227	skarmory	227	skarmory	0	Skarmory		flyaway_cliffs secret_garden	TRUE	FALSE
-228	houndour	228	houndour	0	Houndour		guildmaster_trail trickster_woods	TRUE	FALSE
-228	houndour	229	houndoom	0	Houndoom		guildmaster_trail	TRUE	FALSE
+228	houndour	228	houndour	0	Houndour		geode_crevice guildmaster_trail trickster_woods	TRUE	FALSE
+228	houndour	229	houndoom	0	Houndoom		geode_crevice guildmaster_trail	TRUE	FALSE
 228	houndour	229	houndoom	1	Mega Houndoom		TEMP	TRUE	FALSE
 231	phanpy	231	phanpy	0	Phanpy		faultline_ridge guildmaster_trail	TRUE	FALSE
 231	phanpy	232	donphan	0	Donphan		guildmaster_trail	TRUE	FALSE
-234	stantler	234	stantler	0	Stantler		guildmaster_trail secret_garden snowbound_path thunderstruck_pass treacherous_mountain	TRUE	FALSE
+234	stantler	234	stantler	0	Stantler		geode_crevice guildmaster_trail secret_garden snowbound_path thunderstruck_pass treacherous_mountain	TRUE	FALSE
 234	stantler	899	wyrdeer	0	Wyrdeer			TRUE	TRUE
 235	smeargle	235	smeargle	0	Smeargle		bramble_woods faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds snowbound_path trickster_woods tropical_path	TRUE	FALSE
 241	miltank	241	miltank	0	Miltank			TRUE	FALSE
@@ -438,12 +438,11 @@
 287	slakoth	287	slakoth	0	Slakoth		guildmaster_trail	TRUE	FALSE
 287	slakoth	288	vigoroth	0	Vigoroth		depleted_basin guildmaster_trail snowbound_path	TRUE	FALSE
 287	slakoth	289	slaking	0	Slaking		guildmaster_trail snowbound_path	TRUE	FALSE
-290	nincada	290	nincada	0	Nincada		guildmaster_trail	TRUE	FALSE
-290	nincada	291	ninjask	0	Ninjask		guildmaster_trail	TRUE	FALSE
-292	shedinja	290	nincada	0	Nincada		guildmaster_trail	TRUE	FALSE
-292	shedinja	291	ninjask	0	Ninjask		guildmaster_trail	TRUE	FALSE
-293	whismur	293	whismur	0	Whismur		tiny_tunnel	TRUE	FALSE
-293	whismur	294	loudred	0	Loudred		thunderstruck_pass	TRUE	FALSE
+290	nincada	290	nincada	0	Nincada		geode_crevice guildmaster_trail	TRUE	FALSE
+290	nincada	291	ninjask	0	Ninjask		geode_crevice guildmaster_trail	TRUE	FALSE
+290	nincada	292	shedinja	0	Shedinja		geode_crevice guildmaster_trail	TRUE	FALSE
+293	whismur	293	whismur	0	Whismur		geode_crevice tiny_tunnel	TRUE	FALSE
+293	whismur	294	loudred	0	Loudred		geode_crevice thunderstruck_pass	TRUE	FALSE
 293	whismur	295	exploud	0	Exploud		EVOLVE	TRUE	FALSE
 296	makuhita	296	makuhita	0	Makuhita		castaway_cave faultline_ridge guildmaster_trail	TRUE	FALSE
 296	makuhita	297	hariyama	0	Hariyama		guildmaster_trail sleeping_caldera thunderstruck_pass	TRUE	FALSE
@@ -451,7 +450,7 @@
 299	nosepass	476	probopass	0	Probopass		copper_quarry guildmaster_trail	TRUE	FALSE
 300	skitty	300	skitty	0	Skitty		secret_garden	TRUE	FALSE
 300	skitty	301	delcatty	0	Delcatty		secret_garden	TRUE	FALSE
-302	sableye	302	sableye	0	Sableye		secret_garden veiled_ridge	TRUE	FALSE
+302	sableye	302	sableye	0	Sableye		geode_crevice secret_garden veiled_ridge	TRUE	FALSE
 302	sableye	302	sableye	1	Mega Sableye		TEMP	TRUE	FALSE
 303	mawile	303	mawile	0	Mawile		copper_quarry guildmaster_trail	TRUE	FALSE
 303	mawile	303	mawile	1	Mega Mawile		TEMP	FALSE	FALSE
@@ -459,8 +458,8 @@
 304	aron	305	lairon	0	Lairon		copper_quarry	TRUE	FALSE
 304	aron	306	aggron	0	Aggron		EVOLVE	TRUE	TRUE
 304	aron	306	aggron	1	Mega Aggron		TEMP	FALSE	FALSE
-307	meditite	307	meditite	0	Meditite		relic_tower	TRUE	FALSE
-307	meditite	308	medicham	0	Medicham		EVOLVE	TRUE	FALSE
+307	meditite	307	meditite	0	Meditite		geode_crevice relic_tower	TRUE	FALSE
+307	meditite	308	medicham	0	Medicham		geode_crevice	TRUE	FALSE
 307	meditite	308	medicham	1	Mega Medicham		TEMP	FALSE	FALSE
 309	electrike	309	electrike	0	Electrike		secret_garden	TRUE	FALSE
 309	electrike	310	manectric	0	Manectric		secret_garden	TRUE	FALSE
@@ -530,8 +529,8 @@
 361	snorunt	362	glalie	0	Glalie		EVOLVE	TRUE	FALSE
 361	snorunt	362	glalie	1	Mega Glalie		TEMP	TRUE	TRUE
 361	snorunt	478	froslass	0	Froslass		guildmaster_trail snowbound_path	TRUE	FALSE
-363	spheal	363	spheal	0	Spheal		lava_floe_island	TRUE	FALSE
-363	spheal	364	sealeo	0	Sealeo		EVOLVE	TRUE	FALSE
+363	spheal	363	spheal	0	Spheal		geode_crevice lava_floe_island	TRUE	FALSE
+363	spheal	364	sealeo	0	Sealeo		geode_crevice	TRUE	FALSE
 363	spheal	365	walrein	0	Walrein		EVOLVE	TRUE	TRUE
 366	clamperl	366	clamperl	0	Clamperl		castaway_cave	TRUE	FALSE
 366	clamperl	367	huntail	0	Huntail		castaway_cave	TRUE	FALSE
@@ -597,8 +596,8 @@
 415	combee	415	combee	0	Combee		trickster_woods	TRUE	FALSE
 415	combee	416	vespiquen	0	Vespiquen		EVOLVE	TRUE	FALSE
 417	pachirisu	417	pachirisu	0	Pachirisu		guildmaster_trail	TRUE	TRUE
-418	buizel	418	buizel	0	Buizel		trickster_woods	TRUE	FALSE
-418	buizel	419	floatzel	0	Floatzel		EVOLVE	TRUE	FALSE
+418	buizel	418	buizel	0	Buizel		geode_crevice trickster_woods	TRUE	FALSE
+418	buizel	419	floatzel	0	Floatzel		geode_crevice	TRUE	FALSE
 420	cherubi	420	cherubi	0	Cherubi		guildmaster_trail overgrown_wilds	TRUE	FALSE
 420	cherubi	421	cherrim	0	Overcast Cherrim		guildmaster_trail	TRUE	FALSE
 420	cherubi	421	cherrim	1	Sunshine Cherrim		TEMP	TRUE	FALSE
@@ -779,12 +778,12 @@
 574	gothita	574	gothita	0	Gothita			TRUE	FALSE
 574	gothita	575	gothorita	0	Gothorita		relic_tower	TRUE	FALSE
 574	gothita	576	gothitelle	0	Gothitelle		relic_tower	TRUE	FALSE
-577	solosis	577	solosis	0	Solosis			TRUE	FALSE
-577	solosis	578	duosion	0	Duosion			TRUE	FALSE
-577	solosis	579	reuniclus	0	Reuniclus			TRUE	FALSE
+577	solosis	577	solosis	0	Solosis		geode_crevice	TRUE	FALSE
+577	solosis	578	duosion	0	Duosion		geode_crevice	TRUE	FALSE
+577	solosis	579	reuniclus	0	Reuniclus		EVOLVE	TRUE	FALSE
 580	ducklett	580	ducklett	0	Ducklett			FALSE	FALSE
 580	ducklett	581	swanna	0	Swanna			TRUE	FALSE
-582	vanillite	582	vanillite	0	Vanillite			TRUE	TRUE
+582	vanillite	582	vanillite	0	Vanillite		geode_crevice	TRUE	TRUE
 582	vanillite	583	vanillish	0	Vanillish		snowbound_path	TRUE	FALSE
 582	vanillite	584	vanilluxe	0	Vanilluxe		EVOLVE	TRUE	FALSE
 585	deerling	585	deerling	0	Spring Deerling		trickster_woods	TRUE	FALSE
@@ -823,7 +822,7 @@
 610	axew	612	haxorus	0	Haxorus			TRUE	FALSE
 613	cubchoo	613	cubchoo	0	Cubchoo			TRUE	FALSE
 613	cubchoo	614	beartic	0	Beartic			TRUE	TRUE
-615	cryogonal	615	cryogonal	0	Cryogonal			TRUE	FALSE
+615	cryogonal	615	cryogonal	0	Cryogonal		geode_crevice	TRUE	FALSE
 616	shelmet	616	shelmet	0	Shelmet			FALSE	FALSE
 616	shelmet	617	accelgor	0	Accelgor	water_shuriken		FALSE	FALSE
 618	stunfisk	618	stunfisk	0	Stunfisk			TRUE	FALSE
@@ -831,8 +830,8 @@
 619	mienfoo	619	mienfoo	0	Mienfoo			TRUE	FALSE
 619	mienfoo	620	mienshao	0	Mienshao			TRUE	FALSE
 621	druddigon	621	druddigon	0	Druddigon		sleeping_caldera	TRUE	FALSE
-622	golett	622	golett	0	Golett			TRUE	FALSE
-622	golett	623	golurk	0	Golurk		depleted_basin	TRUE	FALSE
+622	golett	622	golett	0	Golett		geode_crevice	TRUE	FALSE
+622	golett	623	golurk	0	Golurk		depleted_basin geode_crevice	TRUE	FALSE
 624	pawniard	624	pawniard	0	Pawniard		veiled_ridge	TRUE	FALSE
 624	pawniard	625	bisharp	0	Bisharp		EVOLVE	TRUE	FALSE
 624	pawniard	983	kingambit	0	Kingambit		EVOLVE	TRUE	FALSE
@@ -940,9 +939,9 @@
 676	furfrou	676	furfrou	7	La Reine Furfrou			FALSE	FALSE
 676	furfrou	676	furfrou	8	Kabuki Furfrou			TRUE	FALSE
 676	furfrou	676	furfrou	9	Pharaoh Furfrou			FALSE	FALSE
-677	espurr	677	espurr	0	Espurr			TRUE	FALSE
-677	espurr	678	meowstic	0	Male Meowstic		relic_tower	TRUE	FALSE
-677	espurr	678	meowstic	1	Female Meowstic		relic_tower	TRUE	FALSE
+677	espurr	677	espurr	0	Espurr		geode_crevice	TRUE	FALSE
+677	espurr	678	meowstic	0	Male Meowstic		geode_crevice relic_tower	TRUE	FALSE
+677	espurr	678	meowstic	1	Female Meowstic		geode_crevice relic_tower	TRUE	FALSE
 679	honedge	679	honedge	0	Honedge		castaway_cave	TRUE	FALSE
 679	honedge	680	doublade	0	Doublade		EVOLVE	TRUE	FALSE
 679	honedge	681	aegislash	0	Shield Aegislash		EVOLVE	TRUE	FALSE
@@ -965,9 +964,9 @@
 696	tyrunt	697	tyrantrum	0	Tyrantrum		EVOLVE	TRUE	FALSE
 698	amaura	698	amaura	0	Amaura		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 698	amaura	699	aurorus	0	Aurorus		EVOLVE	TRUE	FALSE
-701	hawlucha	701	hawlucha	0	Hawlucha	flying_press		TRUE	TRUE
+701	hawlucha	701	hawlucha	0	Hawlucha	flying_press	geode_crevice	TRUE	TRUE
 702	dedenne	702	dedenne	0	Dedenne	parabolic_charge		TRUE	TRUE
-703	carbink	703	carbink	0	Carbink		copper_quarry	TRUE	FALSE
+703	carbink	703	carbink	0	Carbink		copper_quarry geode_crevice	TRUE	FALSE
 704	goomy	704	goomy	0	Goomy			TRUE	FALSE
 704	goomy	705	sliggoo	0	Sliggoo			TRUE	FALSE
 704	goomy	705	sliggoo	1	Hisuian Sliggoo	shelter		TRUE	FALSE
@@ -1017,9 +1016,9 @@
 731	pikipek	733	toucannon	0	Toucannon	beak_blast		FALSE	FALSE
 734	yungoos	734	yungoos	0	Yungoos			FALSE	FALSE
 734	yungoos	735	gumshoos	0	Gumshoos			FALSE	FALSE
-736	grubbin	736	grubbin	0	Grubbin			TRUE	FALSE
-736	grubbin	737	charjabug	0	Charjabug			TRUE	FALSE
-736	grubbin	738	vikavolt	0	Vikavolt			TRUE	FALSE
+736	grubbin	736	grubbin	0	Grubbin		geode_crevice	TRUE	FALSE
+736	grubbin	737	charjabug	0	Charjabug		geode_crevice	TRUE	FALSE
+736	grubbin	738	vikavolt	0	Vikavolt		geode_crevice	TRUE	FALSE
 739	crabrawler	739	crabrawler	0	Crabrawler			TRUE	FALSE
 739	crabrawler	740	crabominable	0	Crabominable	ice_hammer		TRUE	TRUE
 741	oricorio	741	oricorio	0	Baile Oricorio	dancer revelation_dance		FALSE	FALSE
@@ -1054,8 +1053,8 @@
 764	comfey	764	comfey	0	Comfey		secret_garden	TRUE	FALSE
 765	oranguru	765	oranguru	0	Oranguru	instruct		FALSE	FALSE
 766	passimian	766	passimian	0	Passimian			TRUE	TRUE
-767	wimpod	767	wimpod	0	Wimpod	wimp_out		TRUE	FALSE
-767	wimpod	768	golisopod	0	Golisopod	emergency_exit liquidation		TRUE	FALSE
+767	wimpod	767	wimpod	0	Wimpod	wimp_out	geode_crevice	TRUE	FALSE
+767	wimpod	768	golisopod	0	Golisopod	emergency_exit liquidation	EVOLVE	TRUE	FALSE
 769	sandygast	769	sandygast	0	Sandygast	water_compaction shore_up		TRUE	FALSE
 769	sandygast	770	palossand	0	Palossand	water_compaction shore_up		TRUE	TRUE
 771	pyukumuku	771	pyukumuku	0	Pyukumuku	innards_out purify		TRUE	FALSE
@@ -1175,8 +1174,8 @@
 840	applin	841	flapple	1	Gigantamax Flapple		TEMP	FALSE	FALSE
 840	applin	842	appletun	0	Appletun			TRUE	FALSE
 840	applin	842	appletun	1	Gigantamax Appletun		TEMP	FALSE	FALSE
-843	silicobra	843	silicobra	0	Silicobra			TRUE	FALSE
-843	silicobra	844	sandaconda	0	Sandaconda			TRUE	FALSE
+843	silicobra	843	silicobra	0	Silicobra		geode_crevice	TRUE	FALSE
+843	silicobra	844	sandaconda	0	Sandaconda		geode_crevice	TRUE	FALSE
 843	silicobra	844	sandaconda	1	Gigantamax Sandaconda		TEMP	FALSE	FALSE
 845	cramorant	845	cramorant	0	Cramorant	gulp_missile		TRUE	FALSE
 845	cramorant	845	cramorant	1	Gulping Cramorant	gulp_missile	TEMP	FALSE	FALSE
@@ -1197,8 +1196,8 @@
 854	sinistea	854	sinistea	1	Antique Sinistea			FALSE	FALSE
 854	sinistea	855	polteageist	0	Phony Polteageist	teatime strength_sap		TRUE	FALSE
 854	sinistea	855	polteageist	1	Antique Polteageist	teatime strength_sap		FALSE	FALSE
-856	hatenna	856	hatenna	0	Hatenna		trickster_woods	TRUE	FALSE
-856	hatenna	857	hattrem	0	Hattrem		EVOLVE	TRUE	FALSE
+856	hatenna	856	hatenna	0	Hatenna		geode_crevice trickster_woods	TRUE	FALSE
+856	hatenna	857	hattrem	0	Hattrem		geode_crevice	TRUE	FALSE
 856	hatenna	858	hatterene	0	Hatterene	magic_powder	EVOLVE	TRUE	FALSE
 856	hatenna	858	hatterene	1	Gigantamax Hatterene		TEMP	FALSE	FALSE
 859	impidimp	859	impidimp	0	Impidimp			TRUE	FALSE
@@ -1280,7 +1279,7 @@
 871	pincurchin	871	pincurchin	0	Pincurchin			FALSE	FALSE
 872	snom	872	snom	0	Snom			TRUE	FALSE
 872	snom	873	frosmoth	0	Frosmoth		snowbound_path	TRUE	FALSE
-874	stonjourner	874	stonjourner	0	Stonjourner	power_spot		TRUE	FALSE
+874	stonjourner	874	stonjourner	0	Stonjourner	power_spot	geode_crevice	TRUE	FALSE
 875	eiscue	875	eiscue	0	Ice Eiscue		snowbound_path	TRUE	FALSE
 875	eiscue	875	eiscue	1	Noice Eiscue		TEMP	TRUE	FALSE
 876	indeedee	876	indeedee	0	Male Indeedee			TRUE	FALSE
