@@ -2202,7 +2202,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A held item that makes it easier for team members to recruit wild Pokémon.");
                 item.Sprite = "Bow_Pink";
                 item.Price = 2000;
-                item.OnActions.Add(0, new FlatRecruitmentEvent(30));
+                item.BeforeHittings.Add(0, new FlatRecruitmentEvent(30));
             }
             else if (ii == 301)
             {
@@ -2218,7 +2218,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A held item that makes it easier for team members to recruit lower-leveled wild Pokémon.");
                 item.Sprite = "Mask_Gold";
                 item.Price = 4000;
-                item.OnActions.Add(0, new LevelRecruitmentEvent());
+                item.BeforeHittings.Add(0, new LevelRecruitmentEvent());
             }
             else if (ii == 303)
             {
