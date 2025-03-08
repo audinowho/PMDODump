@@ -11,6 +11,8 @@
 * Fixed ally AI refusing to move when in the middle of hazardous terrain
 * Fixed an issue where pauses displayed incorrectly on dialogueboxes
 * Fixed errors occurring at Training Maze
+* Fixed softlock that occurs when revisiting a floor in a 2-way dungeon that was exited with different party members under mobility-altering statuses
+* Fixed softlock that occurs under a specific setup of traps and untraversible terrain that would cause a player to warp in a loop.
 * Fixed an issue where Pokemon spawned in Guildmaster Trail Monster Houses only had moves at level 1
 * Fixed dungeons generating secret exit guards incorrectly
 * Shedinja properly marked as released
