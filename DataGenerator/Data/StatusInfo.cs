@@ -2512,6 +2512,24 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new CountDownState(10));
                 status.OnTurnEnds.Add(1, new CountDownEvent(effects));
             }
+            else if (ii == 143)
+            {
+                status.Name = new LocalText("Salt Cure");
+                status.MenuName = true;
+                status.Desc = new LocalText("The Pokémon takes gradual damage from the salt cure. This status wears off after a few turns.");
+                status.Emoticon = "Skull_Tan";
+                status.StatusStates.Set(new BadStatusState());
+                status.StatusStates.Set(new TransferStatusState());
+                status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey()));
+                status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SALT_CURE_START"), true));
+                status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
+                status.StatusStates.Set(new CountDownState(4));
+                status.StatusStates.Set(new HPState());
+                status.OnTurnEnds.Add(0, new BattleLogOwnerEvent(new StringKey("MSG_HURT_BY")));
+                status.OnTurnEnds.Add(0, new AnimEvent(new SingleEmitter(new AnimData("Puff_White", 3)), "_UNK_DUN_Spray_Hit", 0));
+                status.OnTurnEnds.Add(0, new DamageEvent());
+                status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
+            }
 
             if (status.Name.DefaultText.StartsWith("**"))
                 status.Name.DefaultText = status.Name.DefaultText.Replace("*", "");

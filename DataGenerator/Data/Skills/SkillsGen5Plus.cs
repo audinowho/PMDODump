@@ -7513,17 +7513,24 @@ namespace DataGenerator.Data
             }
             else if (ii == 864)
             {
-                skill.Name = new LocalText("**Salt Cure");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 15;
+                skill.Name = new LocalText("=Salt Cure");
+                skill.Desc = new LocalText("The user salt cures the target, inflicting damage every turn. This move is super effective on Steel and Water types.");
+                skill.BaseCharges = 14;
                 skill.Data.Element = "rock";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = 100;
-                skill.Data.SkillStates.Set(new BasePowerState(40));
+                skill.Data.SkillStates.Set(new BasePowerState(20));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.ElementEffects.Add(0, new TypeSuperEvent("water"));
+                skill.Data.ElementEffects.Add(0, new TypeSuperEvent("steel"));
+                skill.Data.OnHits.Add(0, new GiveContinuousDamageEvent("salt_cure", true, true, false));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new AreaAction();
+                ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
+                ((AreaAction)skill.HitboxAction).HitArea = Hitbox.AreaLimit.Cone;
+                ((AreaAction)skill.HitboxAction).Range = 2;
+                ((AreaAction)skill.HitboxAction).Speed = 10;
+                ((AreaAction)skill.HitboxAction).HitTiles = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
             }

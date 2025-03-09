@@ -1551,13 +1551,21 @@ namespace DataGenerator.Data
             }
             else if (ii == 193)
             {
-                ability.Name = new LocalText("**Wimp Out");
-                ability.Desc = new LocalText("The Pokémon cowardly switches out when its HP becomes half or less.");
+                ability.Name = new LocalText("Wimp Out");
+                ability.Desc = new LocalText("The Pokémon warps away when its HP becomes half or less.");
+                PinchNeededEvent pinch = new PinchNeededEvent(2, new HitCounterEvent(Alignment.Foe, true, false, true, 100, new RandomWarpEvent(50, true)));
+                pinch.AffectTarget = true;
+                ability.AfterBeingHits.Add(1, pinch);
             }
             else if (ii == 194)
             {
-                ability.Name = new LocalText("**Emergency Exit");
-                ability.Desc = new LocalText("The Pokémon, sensing danger, switches out when its HP becomes half or less.");
+                ability.Name = new LocalText("Emergency Exit");
+                ability.Desc = new LocalText("The Pokémon jumps back when its HP becomes half or less.");
+                HopEvent hop = new HopEvent(5, true);
+                hop.AffectTarget = true;
+                PinchNeededEvent pinch = new PinchNeededEvent(2, new HitCounterEvent(Alignment.Foe, true, false, true, 100, hop));
+                pinch.AffectTarget = true;
+                ability.AfterBeingHits.Add(1, pinch);
             }
             else if (ii == 195)
             {
@@ -2032,13 +2040,21 @@ namespace DataGenerator.Data
             }
             else if (ii == 272)
             {
-                ability.Name = new LocalText("**Purifying Salt");
-                ability.Desc = new LocalText("");
+                ability.Name = new LocalText("Purifying Salt");
+                ability.Desc = new LocalText("The Pokémon's pure salt protects it from major status conditions and halves the damage taken from Ghost-type moves.");
+                ability.BeforeStatusAdds.Add(0, new StateStatusCheck(typeof(MajorStatusState), new StringKey("MSG_PROTECT_STATUS"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
+                SingleEmitter emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1));
+                ability.BeforeBeingHits.Add(0, new MultiplyElementEvent("ghost", 1, 2, false, new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10)));
             }
             else if (ii == 273)
             {
-                ability.Name = new LocalText("**Well-Baked Body");
-                ability.Desc = new LocalText("");
+                ability.Name = new LocalText("Well-Baked Body");
+                ability.Desc = new LocalText("The Pokémon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted.");
+                ability.ProximityEvent.Radius = 0;
+                ability.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
+                ability.ProximityEvent.BeforeExplosions.Add(0, new IsolateElementEvent("fire"));
+                ability.BeforeBeingHits.Add(5, new AbsorbElementEvent("fire", false, true,
+                    new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Drink", new StatusStackBattleEvent("mod_defense", true, false, 1)));
             }
             else if (ii == 274)
             {
