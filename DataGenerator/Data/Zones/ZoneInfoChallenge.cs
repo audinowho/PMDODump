@@ -1144,7 +1144,7 @@ namespace DataGenerator.Data
 
                             LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(specificTeam);
                             {
-                                spawner.AmountSpawner = new RandDecay(1, 4, 50);
+                                spawner.AmountSpawner = new RandDecay(0, 3, 60);
                             }
                             PlaceRandomMobsStep<ListMapGenContext> secretMobPlacement = new PlaceRandomMobsStep<ListMapGenContext>(spawner);
                             layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
