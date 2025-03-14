@@ -386,9 +386,9 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0192-stamina-0000|data.Name		Stamina	Endurance	Zähigkeit	Firmeza		Sopportazione	지구력	じきゅうりょく	じきゅうりょく	持久力	持久力																																																			
 0192-stamina-0001|data.Desc		The Pokémon may boost its Defense stat when hit by a move.		Wird es von einer Attacke getroffen, steigt eventuell seine Verteidigung.							受到攻击时，防御有时会提高。																																																				
 0193-wimp_out-0000|data.Name		Wimp Out	Escampette	Reißaus	Huida		Fuggifuggi	도망태세	にげごし	にげごし	跃跃欲逃	躍躍欲逃																																																			
-0193-wimp_out-0001|data.Desc		The Pokémon cowardly switches out when its HP becomes half or less.	Le Pokémon perd confiance quand ses PV tombent à la moitié et s'enfuit dans sa Poké Ball.	Fallen seine KP auf die Hälfte des Maximalwerts oder weniger, zieht es sich ängstlich zurück.	Se asusta y abandona el terreno de combate cuando sus PS se ven reducidos a la mitad.		Se i PS scendono a metà o meno, il Pokémon si fa prendere dalla paura e abbandona la lotta in tutta fretta.	HP가 절반이 되면 황급히 도망쳐서 지닌 포켓몬으로 돌아간다.	ＨＰが　はんぶんに　なると あわてて　にげだして てもちに　ひっこんで　しまう。	ＨＰが　半分に　なると あわてて　逃げ出して 手持ちに　引っ込んで　しまう。	HP变为一半时，会慌慌张张逃走，退回同行队伍中。	ＨＰ變為一半時， 會慌慌張張逃走， 退回同行隊伍裡面。																																																			
+0193-wimp_out-0001|data.Desc		The Pokémon warps away when its HP becomes half or less.																																																													
 0194-emergency_exit-0000|data.Name		Emergency Exit	Repli Tactique	Rückzug	Retirada		Passoindietro	위기회피	ききかいひ	ききかいひ	危险回避	危險迴避																																																			
-0194-emergency_exit-0001|data.Desc		The Pokémon, sensing danger, switches out when its HP becomes half or less.	Le Pokémon évite les situations inutilement dangereuses. Quand ses PV tombent à la moitié, il se réfugie dans sa Poké Ball.	Fallen seine KP auf die Hälfte des Maximalwerts oder weniger, bringt es sich in Sicherheit.	Abandona el terreno de combate cuando sus PS se ven reducidos a la mitad para evitar males mayores.		Se i PS scendono a metà o meno, il Pokémon abbandona la lotta per sfuggire al pericolo.	HP가 절반이 되면 위험을 회피하기 위해 지닌 포켓몬으로 돌아간다.	ＨＰが　はんぶんに　なると きけんを　かいひするため てもちに　ひっこんで　しまう。	ＨＰが　半分に　なると 危険を　回避するため 手持ちに　引っ込んで　しまう。	HP变为一半时，为了回避危险，会退回到同行队伍中。	ＨＰ減到一半時， 為了避開危險， 會退回同行隊伍裡面。																																																			
+0194-emergency_exit-0001|data.Desc		The Pokémon jumps back when its HP becomes half or less.																																																													
 0195-water_compaction-0000|data.Name		Water Compaction	Sable Humide	Verklumpen	Hidrorrefuerzo		Idrorinforzo	꾸덕꾸덕굳기	みずがため	みずがため	遇水凝固	遇水凝固																																																			
 0195-water_compaction-0001|data.Desc		Boosts the Pokémon's Defense stat sharply when hit by a Water-type move.	Augmente beaucoup la Défense du Pokémon quand il subit une capacité de type Eau.	Wird es von einer Wasser-Attacke getroffen, steigt seine Verteidigung stark.	Aumenta mucho la Defensa si le alcanza un movimiento de tipo Agua.		Se il Pokémon subisce una mossa di tipo Acqua, la sua Difesa aumenta di molto.	물타입의 기술을 받으면 방어가 크게 올라간다.	みずタイプの　わざを　うけると ぼうぎょが　ぐーんと　あがる。	みずタイプの　技を　受けると 防御が　ぐーんと　上がる。	受到水属性的招式攻击时，防御会大幅提高。	受到水屬性的招式攻擊時， 防禦會大幅提高。																																																			
 0196-merciless-0000|data.Name		Merciless	Cruauté	Quälerei	Ensañamiento		Spietatezza	무도한행동	ひとでなし	ひとでなし	不仁不义	不仁不義																																																			
@@ -544,9 +544,9 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0271-anger_shell-0000|data.Name		Anger Shell	Courroupace	Wutpanzer	Coraza Ira		Iraguscio		いかりのこうら	いかりのこうら	愤怒甲壳																																																				
 0271-anger_shell-0001|data.Desc																																																															
 0272-purifying_salt-0000|data.Name		Purifying Salt	Sel Purificateur	Läutersalz	Sal Purificadora		Sale Purificante		きよめのしお	きよめのしお	洁净之盐																																																				
-0272-purifying_salt-0001|data.Desc																																																															
+0272-purifying_salt-0001|data.Desc		The Pokémon's pure salt protects it from major status conditions and halves the damage taken from Ghost-type moves.																																																													
 0273-well_baked_body-0000|data.Name		Well-Baked Body	Bien Cuit	Knusperkruste	Cuerpo Horneado		Bentostato		こんがりボディ	こんがりボディ	焦香之躯																																																				
-0273-well_baked_body-0001|data.Desc																																																															
+0273-well_baked_body-0001|data.Desc		The Pokémon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted.																																																													
 0274-wind_rider-0000|data.Name		Wind Rider	Aéroporté	Windreiter	Surcavientos		Vento Propizio		かぜのり	かぜのり	乘风																																																				
 0274-wind_rider-0001|data.Desc																																																															
 0275-guard_dog-0000|data.Name		Guard Dog	Chien de Garde	Wachhund	Perro Guardián		Cane da Guardia		ばんけん	ばんけん	看门犬																																																				
@@ -582,7 +582,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0290-opportunist-0000|data.Name		Opportunist	Opportuniste	Profiteur	Oportunista		Scrocco		びんじょう	びんじょう	跟风																																																				
 0290-opportunist-0001|data.Desc																																																															
 0291-cud_chew-0000|data.Name		Cud Chew	Ruminant	Wiederkäuer	Rumia		Ruminante		はんすう	はんすう	反刍																																																				
-0291-cud_chew-0001|data.Desc																																																															
+0291-cud_chew-0001|data.Desc		When the Pokémon eats a berry, it will regurgitate that berry several turns later and eat it one more time.																																																													
 0292-sharpness-0000|data.Name		Sharpness	Incisif	Scharfkantig	Cortante		Affilama		きれあじ	きれあじ	锋锐																																																				
 0292-sharpness-0001|data.Desc		Powers up slicing moves.			Aumenta el poder de los movimientos cortantes.						提高切割对手的招式的威力。																																																				
 0293-supreme_overlord-0000|data.Name		Supreme Overlord	Général Suprême	Feldherr	General Supremo		Generale Supremo		そうだいしょう	そうだいしょう	大将																																																				

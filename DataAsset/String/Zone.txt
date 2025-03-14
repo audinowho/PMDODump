@@ -44,8 +44,8 @@ Key		EN
 0000-forsaken_desert-0000|data.Name		Forsaken Desert
 0000-forsaken_desert-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Forsaken Desert\n{0}F
 0000-forsaken_desert-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room
-0000-geode_underpass-0000|data.Name		Geode Underpass
-0000-geode_underpass-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Geode Underpass\nB{0}F
+0000-geode_crevice-0000|data.Name		Geode Crevice
+0000-geode_crevice-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Geode Crevice\nB{0}F
 0000-guildmaster_island-0000|data.Name		Guildmaster Island
 0000-guildmaster_trail-0000|data.Name		Guildmaster Trail
 0000-guildmaster_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Guildmaster Trail\n{0}F
@@ -58,8 +58,6 @@ Key		EN
 0000-lava_floe_island-0000|data.Name		Lava Floe Island
 0000-lava_floe_island-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Lava Floe\nIsland\nB{0}F
 0000-lava_floe_island-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Abyssal Island\nB{0}F
-0000-lost_seas-0000|data.Name		Lost Seas
-0000-lost_seas-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Lost Seas\nB{0}F
 0000-moonlit_courtyard-0000|data.Name		Moonlit Courtyard
 0000-moonlit_courtyard-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Moonlit Courtyard\n{0}F
 0000-moonlit_courtyard-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Moonlit Temple\n{0}F
@@ -105,6 +103,23 @@ Key		EN
 0000-tropical_path-0000|data.Name		Tropical Path
 0000-tropical_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tropical Path\n{0}F
 0000-tropical_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room
+0000-uncharted_waters-0000|data.Name		Uncharted Waters
+0000-uncharted_waters-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Shallow Waters\nB{0}F
+0000-uncharted_waters-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Temperate Waters\nB{0}F
+0000-uncharted_waters-0003|((FloorNameIDZoneStep)data.Segments[0002].ZoneSteps[0001]).Name		Swift Waters\nB{0}F
+0000-uncharted_waters-0004|((FloorNameIDZoneStep)data.Segments[0003].ZoneSteps[0001]).Name		Chilly Waters\nB{0}F
+0000-uncharted_waters-0005|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0001]).Name		Rendevous Waters\nB{0}F
+0000-uncharted_waters-0006|((FloorNameIDZoneStep)data.Segments[0005].ZoneSteps[0001]).Name		Rushing Waters\nB{0}F
+0000-uncharted_waters-0007|((FloorNameIDZoneStep)data.Segments[0006].ZoneSteps[0001]).Name		Forbidden Waters\nB{0}F
+0000-uncharted_waters-0008|((FloorNameIDZoneStep)data.Segments[0007].ZoneSteps[0001]).Name		Tropical Waters\nB{0}F
+0000-uncharted_waters-0009|((FloorNameIDZoneStep)data.Segments[0008].ZoneSteps[0001]).Name		Stagnant Waters\nB{0}F
+0000-uncharted_waters-0010|((FloorNameIDZoneStep)data.Segments[0009].ZoneSteps[0001]).Name		Deep Waters\nB{0}F
+0000-uncharted_waters-0011|((FloorNameIDZoneStep)data.Segments[0010].ZoneSteps[0001]).Name		Frothy Waters\nB{0}F
+0000-uncharted_waters-0012|((FloorNameIDZoneStep)data.Segments[0011].ZoneSteps[0001]).Name		Spawning Waters\nB{0}F
+0000-uncharted_waters-0013|((FloorNameIDZoneStep)data.Segments[0012].ZoneSteps[0001]).Name		Winding Waters\nB{0}F
+0000-uncharted_waters-0014|((FloorNameIDZoneStep)data.Segments[0013].ZoneSteps[0001]).Name		Shimmering Waters\nB{0}F
+0000-uncharted_waters-0015|((FloorNameIDZoneStep)data.Segments[0014].ZoneSteps[0001]).Name		Spiraling Waters\nB{0}F
+0000-uncharted_waters-0016|((FloorNameIDZoneStep)data.Segments[0015].ZoneSteps[0001]).Name		Silver Waters\nB{0}F
 0000-veiled_ridge-0000|data.Name		Veiled Ridge
 0000-veiled_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Veiled Ridge\n{0}F
 0000-veiled_ridge-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Illusion Ridge\nB{0}F

@@ -72,7 +72,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-shopping-0000|data.Name		Shopping		Einkaufen							购物中
 0000-shopping-0001|data.Desc											
 0000-snow-0000|data.Name	Not displayed to players.	Snow	Neigeux	Schnee	Nieve		Neve		ゆき	ゆき	下雪
-0000-snow-0001|data.Desc											
+0000-snow-0001|data.Desc		The Defense of Ice-types is boosted.									
 0000-somethings_stirring-0000|data.Name		Something's stirring...		Da ist irgendwas...	Algo se está moviendo...		Qualcosa si sta muovendo...				有什么在活动……
 0000-somethings_stirring-0001|data.Desc		Something's approaching. The exploration team must leave the floor before it arrives, or they will be forced out of the dungeon.		Es scheint näher zu kommen. Das Erkundungsteam muss die nächste Ebene erreichen bevor es ankommt oder es wird gezwungen den Dungeon zu verlassen.	Algo se está acercando. El equipo de exploración debe abandonar el piso antes de que llegue, o serán forzados a salir de la mazmorra.		Qualcosa si sta avvicinando. Il team d'esplorazione deve lasciare il piano prima che ariva o sarà costretto a lasciare il dungeon.				有什么东西在靠近。探险队必须在它到达前离开楼层，否则就会强制离开迷宫。
 0000-stairs_sensed-0000|data.Name	Not displayed to players.  Low Priority.	Stairs Sensed		Treppen wahrgenommen	Escaleras Detectadas						楼梯感应

@@ -1,64 +1,124 @@
 Sheet: Hardcode
 
 Sheet: Content
-    * Added DLG_LEGEND_FLOOR
-    * Added DLG_LEGEND_FLOOR_GONE
-    * Significantly changed MSG_ARENA_TRAP from "{0}'s Arena Trap prevents escape!" to "{0}'s {1} prevents escape!"
-    * Added MSG_CURRENT
-    * Added MSG_CURRENT_OPEN
-    * Significantly changed MSG_SAND_STREAM from "{0}'s Sand Stream started a sandstorm!" to "{0}'s {1} started a sandstorm!"
-    * Erased contents of MSG_SHADOW_TAG
-    * Added SIGN_SLAB_EXIT_SECRET
-    * Added SIGN_SLAB_LEGEND_CHASE
-    * Added SIGN_SLAB_LEGEND_HIDE
-    * Added SIGN_SLAB_MYSTERIOSITY
-    * Added SIGN_SLAB_MYTH_NEW
-    * Added SIGN_SLAB_MYTH_TIME
-    * Added SIGN_SLAB_MYTH_WISH
-    * Added SIGN_SLAB_ROOM_SECRET
-    * Added TALK_LEGEND_CHASE_001
-    * Added TALK_LEGEND_HIDE_001
-    * Added TALK_LEGEND_SEA_001
-    * Added TALK_LEGEND_SEA_002
+    * Added MSG_CUD_CHEW_ATTACK
+    * Added MSG_CUD_CHEW_START
+    * Added MSG_SALT_CURE_START
+    * Added MSG_SNOW_END
+    * Added MSG_SNOW_START
 
 Sheet: Script
-    * Changed ground\canyon_camp/Dragon_Line_006 from "[tmp]A second plot beat will have Team Dragon continuing their boast.[br]We're mentoring actual dragon types that look up to us in a show of dramatic irony (trapinch)." to "[tmp]We show ourselves to be arrogant, but also helpful.[br]This trapinch is but a commoner, but even a lowly bug like him can become an adventurer, thanks to us!"
-    * Changed ground\canyon_camp/Dragon_Line_007 from "[tmp]A second plot beat will have Team Dragon continuing their boast.[br]We're mentoring actual dragon types that look up to us in a show of dramatic irony (trapinch). (spoken to)" to "[tmp]Trapinch is a goober and starstruck by the dragons, they're so cool! (spoken to)"
-    * Changed ground\canyon_camp/Dragon_Line_008 from "[tmp]A third plot beat will have Team Dragon continuing their boast.[br]We're mentoring actual dragon types that look up to us in a show of dramatic irony (applin)." to "[tmp]What's this?  Dessert has come to us?  Of course, we're the kings![br]No, it's me!  Applin!  I want dungeon tips![br]Team Dragon boast about themselves and talk down on applin, but still give him good advice. [br] Applin walks away giving them way more credit than they deserve."
-    * Changed ground\canyon_camp/Dragon_Line_010 from "[tmp]After the rescue, Team Dragon is seen mentoring others as humble heroes." to "[tmp]After the rescue, Team Dragon is seen mentoring others as humble heroes.[br] They realize real heroes don't win the most battles, they help the most people."
-    * Added ground\guildmaster_summit/Special_Event_001
-    * Added ground\guildmaster_summit/Special_Event_002
-    * Added ground\guildmaster_summit/Special_Event_003
-    * Added ground\luminous_spring/Special_Event_001
-    * Added ground\luminous_spring/Special_Event_002
-    * Added ground\luminous_spring/Special_Event_003
-    * Added ground\rest_stop/Special_Event_001
 
 Sheet: Abilities
+    * Significantly changed 0193-wimp_out-0001|data.Desc from "The Pokémon cowardly switches out when its HP becomes half or less." to "The Pokémon warps away when its HP becomes half or less."
+    * Significantly changed 0194-emergency_exit-0001|data.Desc from "The Pokémon, sensing danger, switches out when its HP becomes half or less." to "The Pokémon jumps back when its HP becomes half or less."
+    * Significantly changed 0272-purifying_salt-0001|data.Desc from "" to "The Pokémon's pure salt protects it from major status conditions and halves the damage taken from Ghost-type moves."
+    * Significantly changed 0273-well_baked_body-0001|data.Desc from "" to "The Pokémon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted."
+    * Significantly changed 0291-cud_chew-0001|data.Desc from "" to "When the Pokémon eats a berry, it will regurgitate that berry several turns later and eat it one more time."
 
 Sheet: Items
+    * Deleted key 0015-loot_green_orb-0000|data.Name
+    * Deleted key 0015-loot_green_orb-0001|data.Desc
+    * Added 0015-loot_jade_orb-0000|data.Name
+    * Added 0015-loot_jade_orb-0001|data.Desc
+    * Added 0015-loot_star_piece-0000|data.Name
+    * Added 0015-loot_star_piece-0001|data.Desc
+    * Added 0016-xcl_test_celebratestatus-0000|data.Name
+    * Added 0016-xcl_test_heartfinder-0000|data.Name
 
 Sheet: MapStatuses
+    * Significantly changed 0000-snow-0001|data.Desc from "" to "The Defense of Ice-types is boosted."
 
 Sheet: Moves
-    * Changed 0208-milk_drink-0001|data.Desc from "The user restores the party's HP by up to a half of its max HP" to "The user restores the party's HP by up to a half of its max HP."
+    * Changed 0369-u_turn-0001|data.Desc to 0812-flip_turn-0001|data.Desc, retaining translations
+    * Significantly changed 0834-wave_crash-0001|data.Desc from "" to "The user shrouds itself in water and slams into the target with its whole body to inflict damage."
+    * Significantly changed 0857-jet_punch-0001|data.Desc from "" to "The user summons a torrent around its fist and punches at blinding speed."
+    * Significantly changed 0864-salt_cure-0001|data.Desc from "" to "The user salt cures the target, inflicting damage every turn. This move is super effective on Steel and Water types."
 
 Sheet: Statuses
+    * Added 0000-cud_chew-0000|data.Name
+    * Added 0000-cud_chew-0001|data.Desc
+    * Added 0000-salt_cure-0000|data.Name
+    * Added 0000-salt_cure-0001|data.Desc
 
 Sheet: Tiles
-    * Added 0000-tile_cradle-0000|data.Name
-    * Added 0000-tile_cradle-0001|data.Desc
 
 Sheet: Excl Names
 
 Sheet: Excl Effects
+    * Added ExclusiveItemEffect.CelebrateStatus
+    * Added ExclusiveItemEffect.HeartFinder
 
 Sheet: Zones
+    * Added 0000-geode_crevice-0000|data.Name
+    * Added 0000-geode_crevice-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
+    * Deleted key 0000-geode_underpass-0000|data.Name
+    * Deleted key 0000-geode_underpass-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
+    * Deleted key 0000-lost_seas-0000|data.Name
+    * Deleted key 0000-lost_seas-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0000|data.Name
+    * Added 0000-uncharted_waters-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0003|((FloorNameIDZoneStep)data.Segments[0002].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0004|((FloorNameIDZoneStep)data.Segments[0003].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0005|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0006|((FloorNameIDZoneStep)data.Segments[0005].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0007|((FloorNameIDZoneStep)data.Segments[0006].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0008|((FloorNameIDZoneStep)data.Segments[0007].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0009|((FloorNameIDZoneStep)data.Segments[0008].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0010|((FloorNameIDZoneStep)data.Segments[0009].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0011|((FloorNameIDZoneStep)data.Segments[0010].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0012|((FloorNameIDZoneStep)data.Segments[0011].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0013|((FloorNameIDZoneStep)data.Segments[0012].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0014|((FloorNameIDZoneStep)data.Segments[0013].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0015|((FloorNameIDZoneStep)data.Segments[0014].ZoneSteps[0001]).Name
+    * Added 0000-uncharted_waters-0016|((FloorNameIDZoneStep)data.Segments[0015].ZoneSteps[0001]).Name
 
 Sheet: Maps
-    * Added end_tiny_tunnel-0000|data.Name
-    * Added pattern_blob_small-0000|data.Name
-    * Added pattern_dither_three_fourth-0000|data.Name
+    * Added boss_artifact-0000|data.Name
+    * Added boss_artifact_water-0000|data.Name
+    * Added boss_awd-0000|data.Name
+    * Added boss_beehive-0000|data.Name
+    * Added boss_burmy_pair-0000|data.Name
+    * Added boss_cattle_pair-0000|data.Name
+    * Added boss_celestial-0000|data.Name
+    * Added boss_charm-0000|data.Name
+    * Added boss_discharge-0000|data.Name
+    * Added boss_ditto-0000|data.Name
+    * Added boss_dragon_1-0000|data.Name
+    * Added boss_dragon_2-0000|data.Name
+    * Added boss_eclipse-0000|data.Name
+    * Added boss_eeveelution_1-0000|data.Name
+    * Added boss_eeveelution_2-0000|data.Name
+    * Added boss_firefly_pair-0000|data.Name
+    * Added boss_fossil_hoenn-0000|data.Name
+    * Added boss_fossil_kanto-0000|data.Name
+    * Added boss_fossil_sinnoh-0000|data.Name
+    * Added boss_lava_plume-0000|data.Name
+    * Added boss_lava_plume_water-0000|data.Name
+    * Added boss_lycanroc-0000|data.Name
+    * Added boss_nido_pair-0000|data.Name
+    * Added boss_pink_wall-0000|data.Name
+    * Added boss_plus_minus_1-0000|data.Name
+    * Added boss_plus_minus_2-0000|data.Name
+    * Added boss_poli_pair-0000|data.Name
+    * Added boss_psychic-0000|data.Name
+    * Added boss_ralts_pair-0000|data.Name
+    * Added boss_sand_spirit-0000|data.Name
+    * Added boss_sandstorm_1-0000|data.Name
+    * Added boss_sandstorm_2-0000|data.Name
+    * Added boss_skarmbliss-0000|data.Name
+    * Added boss_slow_pair-0000|data.Name
+    * Added boss_sun_altar-0000|data.Name
+    * Added boss_superhero-0000|data.Name
+    * Added boss_tanker-0000|data.Name
+    * Added boss_thief-0000|data.Name
+    * Added boss_trapper-0000|data.Name
+    * Added end_geode_crevice-0000|data.Name
+    * Added end_spawning_waters-0000|data.Name
+    * Added room_evo_altar_diamond-0000|data.Name
+    * Added room_evo_altar_normal-0000|data.Name
+    * Added room_evo_altar_small-0000|data.Name
 
 Sheet: GroundMaps
 

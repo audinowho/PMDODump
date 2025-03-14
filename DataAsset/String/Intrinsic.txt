@@ -386,9 +386,9 @@ Key		EN
 0192-stamina-0000|data.Name		Stamina
 0192-stamina-0001|data.Desc		The Pokémon may boost its Defense stat when hit by a move.
 0193-wimp_out-0000|data.Name		Wimp Out
-0193-wimp_out-0001|data.Desc		The Pokémon cowardly switches out when its HP becomes half or less.
+0193-wimp_out-0001|data.Desc		The Pokémon warps away when its HP becomes half or less.
 0194-emergency_exit-0000|data.Name		Emergency Exit
-0194-emergency_exit-0001|data.Desc		The Pokémon, sensing danger, switches out when its HP becomes half or less.
+0194-emergency_exit-0001|data.Desc		The Pokémon jumps back when its HP becomes half or less.
 0195-water_compaction-0000|data.Name		Water Compaction
 0195-water_compaction-0001|data.Desc		Boosts the Pokémon's Defense stat sharply when hit by a Water-type move.
 0196-merciless-0000|data.Name		Merciless
@@ -544,9 +544,9 @@ Key		EN
 0271-anger_shell-0000|data.Name		Anger Shell
 0271-anger_shell-0001|data.Desc		
 0272-purifying_salt-0000|data.Name		Purifying Salt
-0272-purifying_salt-0001|data.Desc		
+0272-purifying_salt-0001|data.Desc		The Pokémon's pure salt protects it from major status conditions and halves the damage taken from Ghost-type moves.
 0273-well_baked_body-0000|data.Name		Well-Baked Body
-0273-well_baked_body-0001|data.Desc		
+0273-well_baked_body-0001|data.Desc		The Pokémon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted.
 0274-wind_rider-0000|data.Name		Wind Rider
 0274-wind_rider-0001|data.Desc		
 0275-guard_dog-0000|data.Name		Guard Dog
@@ -582,7 +582,7 @@ Key		EN
 0290-opportunist-0000|data.Name		Opportunist
 0290-opportunist-0001|data.Desc		
 0291-cud_chew-0000|data.Name		Cud Chew
-0291-cud_chew-0001|data.Desc		
+0291-cud_chew-0001|data.Desc		When the Pokémon eats a berry, it will regurgitate that berry several turns later and eat it one more time.
 0292-sharpness-0000|data.Name		Sharpness
 0292-sharpness-0001|data.Desc		Powers up slicing moves.
 0293-supreme_overlord-0000|data.Name		Supreme Overlord

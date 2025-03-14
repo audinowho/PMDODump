@@ -72,7 +72,7 @@ Key		EN
 0000-shopping-0000|data.Name		Shopping
 0000-shopping-0001|data.Desc		
 0000-snow-0000|data.Name		Snow
-0000-snow-0001|data.Desc		
+0000-snow-0001|data.Desc		The Defense of Ice-types is boosted.
 0000-somethings_stirring-0000|data.Name		Something's stirring...
 0000-somethings_stirring-0001|data.Desc		Something's approaching. The exploration team must leave the floor before it arrives, or they will be forced out of the dungeon.
 0000-stairs_sensed-0000|data.Name		Stairs Sensed

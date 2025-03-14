@@ -104,3 +104,5 @@ ExclusiveItemEffect.ChanceStatOnTypeHit		When kept in the bag, the Pokémon's {0
 ExclusiveItemEffect.ChanceStatusOnCategoryHit		When kept in the bag, the Pokémon's {1} moves may inflict the {0} status.
 ExclusiveItemEffect.TypeBecomesCategory		When kept in the bag, the Pokémon's {0}-type moves are change to become {1}.
 ExclusiveItemEffect.WeaknessDodge		When kept in the bag, the Pokémon becomes extremely likely to avoid {0}-type attacks.
+ExclusiveItemEffect.HeartFinder		When kept in the bag, the Pokémon may find a {0} when it enters a new floor.
+ExclusiveItemEffect.CelebrateStatus		When kept in the bag, the Pokémon gains the {0} status after defeating an enemy.

@@ -13,7 +13,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-sealed_block-0001|data.Desc																												
 0000-sealed_door-0000|data.Name	Not displayed to players.	Sealed Door	Porte Scellée	Versiegelte Tür	Puerta Sellada		Porta sigillata	봉인된문			钥匙门																	
 0000-sealed_door-0001|data.Desc																												
-0000-sealed_guild-0000|data.Name		Guild Gate		Gildentor							公会大门																	
+0000-sealed_guild-0000|data.Name		Guild Gate	Porte de la Guilde	Gildentor							公会大门																	
 0000-sealed_guild-0001|data.Desc																												
 0000-sign-0000|data.Name		Sign	Panneau	Schild	Letrero		Cartello				标牌																	
 0000-sign-0001|data.Desc																												
@@ -33,18 +33,18 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-stairs_secret_down-0001|data.Desc		Stairs leading to an unknown location.	Des escaliers menant à un endroit inconnu.	Stufen, welche zu einem unbekannten Ort führen.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.		Scale che portano in un luogo sconosciuto.	알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.			通向一个未知地点的楼梯。																	
 0000-stairs_secret_up-0000|data.Name		Secret Stairs	Escaliers Secrets	Geheime Treppe	Escaleras Secretas		Scale segrete	비밀의 계단			秘密楼梯																	
 0000-stairs_secret_up-0001|data.Desc		Stairs leading to an unknown location.	Des escaliers menant à un endroit inconnu.	Stufen, welche zu einem unbekannten Ort führen.	Escaleras que llevan a una lugar desconocido. Los exploradores deben estar preparados para enfrentar cualquier peligro antes de continuar.		Scale che portano in un luogo sconosciuto.	알 수 없는 곳으로 향하는 계단. 모험가는 준비를 철저히 하고 들어가야 할 것이다.			通向一个未知地点的楼梯。																	
-0000-tile_boss-0000|data.Name		Mirage Tile		Trugbild-Tafel							幻象石板																	
-0000-tile_boss-0001|data.Desc		A tile that shows the mirage of a formidable team of Pokémon.																										
+0000-tile_boss-0000|data.Name		Mirage Tile		Trugbild-Tafel							幻象地板																	
+0000-tile_boss-0001|data.Desc		A tile that shows the mirage of a formidable team of Pokémon.									展现强大宝可梦队伍幻象的地板。																	
 0000-tile_compass-0000|data.Name		Compass Tile	Case Compas	Kompassfeld							指南地板																	
 0000-tile_compass-0001|data.Desc		A tile that shows the way to important locations on the floor.	Une case qui indique le chemin vers les endroits importants du sol.	Ein Feld, das den Weg zu den wichtigsten Orten der Ebene zeigt.							可以指向楼层内重要地点的地板。																	
-0000-tile_cradle-0000|data.Name		Sea Cradle																										
-0000-tile_cradle-0001|data.Desc		A cold sea current gently swirls about...																										
+0000-tile_cradle-0000|data.Name		Sea Cradle									海之摇篮																	
+0000-tile_cradle-0001|data.Desc		A cold sea current gently swirls about...									一股冰凉的海流温柔地环绕……																	
 0000-tile_evo-0000|data.Name		Luminous Site	Zone Lumineuse	Leuchtende Fläche	Area Luminosa			빛의 지대			光之领域																	
 0000-tile_evo-0001|data.Desc		A mysterious area that allows Pokémon to evolve.	Un endroit mystérieux qui permet aux Pokémon d'évoluer.	Ein mysteriöser Bereich, welcher Pokémon die Entwicklung ermöglicht.	Un área misteriosa que permite a los Pokémon evolucionar.			포켓몬이 진화할 수 있게 해주는 신비한 지대.			可以让宝可梦进化的不可思议区域。																	
-0000-tile_fairy_ring-0000|data.Name		Fairy Ring		Feenring							妖精环圈																	
-0000-tile_fairy_ring-0001|data.Desc		A mysterious energy permeates the area...		Eine mysteriöse Energie umgiebt diesen Ort...							一股不可思议的力量弥漫在这里......																	
-0000-tile_mystery-0000|data.Name		Mystery Site		Mysteriöser Ort							不可思议区域																	
-0000-tile_mystery-0001|data.Desc		???		???							？？？																	
+0000-tile_fairy_ring-0000|data.Name		Fairy Ring	Anneau Féerique	Feenring							妖精环圈																	
+0000-tile_fairy_ring-0001|data.Desc		A mysterious energy permeates the area...	Une énergie mysterieuse se répend dans la zone ...	Eine mysteriöse Energie umgiebt diesen Ort...							一股不可思议的力量弥漫在这里......																	
+0000-tile_mystery-0000|data.Name		Mystery Site	Lieu Mysterieux	Mysteriöser Ort							不可思议区域																	
+0000-tile_mystery-0001|data.Desc		???	???	???							？？？																	
 0000-tile_rescue-0000|data.Name		Rescue Point	Point de Sauvetage	Rettungszone	Punto de rescate						救助地点																	
 0000-tile_rescue-0001|data.Desc		It's the rescue spot where your friend's team went down! Send an A-OK mail to rescue the defeated team.	C'est le lieu de sauvetage où l'équipe de votre ami a été vaincue ! Envoyez un courrier A-OK pour sauver l'équipe vaincue.	In dieser Rettungszone wurde das Team deines Freundes besiegt! Versende einen OK Brief um das besiegte Team zu retten.	¡Es el lugar de rescate donde el equipo amigo cayó derrotado! Envia un correo A-OK para rescatar al equipo derrotado.						这是你朋友的队伍倒下的救助点！发送复活信，救援被击败的队伍吧。																	
 0000-tile_reset-0000|data.Name		Reset Tile	Case de Réinitialisation	Zurücksetzfeld	Baldosa Reinicio						重置地板																	

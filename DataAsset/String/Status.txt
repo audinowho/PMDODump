@@ -49,6 +49,8 @@ Key		EN
 0000-crafty_shield-0001|data.Desc		The Pokémon is protected from status moves. This status wears off after a few turns.
 0000-crits_landed-0000|data.Name		Crits Landed
 0000-crits_landed-0001|data.Desc		
+0000-cud_chew-0000|data.Name		Cud Chew
+0000-cud_chew-0001|data.Desc		The Pokémon has eaten a berry, and will eat it again a few turns in the future.
 0000-cursed-0000|data.Name		Cursed
 0000-cursed-0001|data.Desc		The Pokémon is cursed and will take damage each time it attacks a foe. This status wears off after a few turns.
 0000-decoy-0000|data.Name		Decoy
@@ -217,6 +219,8 @@ Key		EN
 0000-roosting-0001|data.Desc		The Pokémon is roosting, eliminating its Flying-type matchups. This status wears off when the Pokémon moves.
 0000-safeguard-0000|data.Name		Safeguard
 0000-safeguard-0001|data.Desc		The Pokémon is protected from bad status effects with a veil. This status wears off after many turns have passed.
+0000-salt_cure-0000|data.Name		Salt Cure
+0000-salt_cure-0001|data.Desc		The Pokémon takes gradual damage from the salt cure. This status wears off after a few turns.
 0000-sand_tomb-0000|data.Name		Sand Tomb
 0000-sand_tomb-0001|data.Desc		The Pokémon is trapped in quicksand, taking gradual damage and preventing it from moving. This status wears off after a few turns.
 0000-shadow_force-0000|data.Name		Shadow Force

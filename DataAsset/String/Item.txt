@@ -629,12 +629,12 @@ Key		EN
 0015-loot_comet_shard-0001|data.Desc		A shard that fell to the ground when a comet passed nearby. It sells for an extremely high price.
 0015-loot_gracidea-0000|data.Name		Gracidea
 0015-loot_gracidea-0001|data.Desc		A beautiful flower that blooms in the Secret Garden. It can be used on Shaymin once per floor to cause a Forme change.
-0015-loot_green_orb-0000|data.Name		Green Orb
-0015-loot_green_orb-0001|data.Desc		
 0015-loot_griseous_orb-0000|data.Name		Griseous Orb
 0015-loot_griseous_orb-0001|data.Desc		A glowing orb can be used on Giratina once per floor to cause a Forme change.
 0015-loot_heart_scale-0000|data.Name		Heart Scale
 0015-loot_heart_scale-0001|data.Desc		A pretty, heart-shaped scale that is extremely rare. It glows faintly with all of the colors of the rainbow.
+0015-loot_jade_orb-0000|data.Name		Jade Orb
+0015-loot_jade_orb-0001|data.Desc		
 0015-loot_lustrous_orb-0000|data.Name		Lustrous Orb
 0015-loot_lustrous_orb-0001|data.Desc		
 0015-loot_meteorite-0000|data.Name		Meteorite
@@ -655,6 +655,8 @@ Key		EN
 0015-loot_secret_slab-0001|data.Desc		An ancient stone slab inscribed with what seems to be prehistoric legend. Its writings change depending on where it's read.
 0015-loot_spacetime_globe-0000|data.Name		Spacetime Globe
 0015-loot_spacetime_globe-0001|data.Desc		
+0015-loot_star_piece-0000|data.Name		Star Piece
+0015-loot_star_piece-0001|data.Desc		A shard of a pretty gem that sparkles in a red color. It can be sold at a high price.
 0016-box_dainty-0000|data.Name		Dainty Box
 0016-box_dainty-0001|data.Desc		A box that is dainty and fashionable. There is something tasty inside!
 0016-box_deluxe-0000|data.Name		Deluxe Box
@@ -748,6 +750,7 @@ Key		EN
 0016-xcl_test_barrageguard-0000|data.Name		BarrageGuard Test
 0016-xcl_test_betterodds-0000|data.Name		BetterOdds Test
 0016-xcl_test_celebrate-0000|data.Name		Celebrate Test
+0016-xcl_test_celebratestatus-0000|data.Name		CelebrateStatus Test
 0016-xcl_test_chargewalker-0000|data.Name		ChargeWalker Test
 0016-xcl_test_cheekpouch-0000|data.Name		CheekPouch Test
 0016-xcl_test_chestfinder-0000|data.Name		ChestFinder Test
@@ -775,6 +778,7 @@ Key		EN
 0016-xcl_test_healinlava-0000|data.Name		HealInLava Test
 0016-xcl_test_healinwater-0000|data.Name		HealInWater Test
 0016-xcl_test_healonnewfloor-0000|data.Name		HealOnNewFloor Test
+0016-xcl_test_heartfinder-0000|data.Name		HeartFinder Test
 0016-xcl_test_hiddenstairfinder-0000|data.Name		HiddenStairFinder Test
 0016-xcl_test_hitandrun-0000|data.Name		HitAndRun Test
 0016-xcl_test_knockbackonattack-0000|data.Name		KnockbackOnAttack Test
