@@ -1879,7 +1879,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Sand Spit");
                 ability.Desc = new LocalText("The Pokémon creates a sandstorm when it's hit by an attack.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new GiveMapStatusEvent("sandstorm", 10, new StringKey("MSG_SAND_STREAM"), typeof(ExtendWeatherState))));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, true, false, false, 100, new GiveMapStatusEvent("sandstorm", 10, new StringKey("MSG_SAND_STREAM"), typeof(ExtendWeatherState))));
             }
             else if (ii == 246)
             {

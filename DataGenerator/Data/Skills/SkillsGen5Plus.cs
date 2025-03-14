@@ -2103,14 +2103,16 @@ namespace DataGenerator.Data
             }
             else if (ii == 560)
             {
-                skill.Name = new LocalText("**Flying Press");
+                skill.Name = new LocalText("Flying Press");
                 skill.Desc = new LocalText("The user dives down onto the target from the sky. This move is Fighting and Flying type simultaneously.");
-                skill.BaseCharges = 10;
+                skill.BaseCharges = 15;
                 skill.Data.Element = "fighting";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
-                skill.Data.HitRate = 95;
+                skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.ElementEffects.Add(0, new TypeAddEvent("flying"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
