@@ -4724,6 +4724,8 @@ namespace DataGenerator.Data
                             floorSegment.ZoneSteps.Add(vaultChanceZoneStep);
                         }
 
+                        AddEvoZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(0, max_floors)), EvoRoomType.Diamond);
+
                         AddMysteriosityZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 4), new IntRange(0, max_floors - 1)), 5, 3);
 
 

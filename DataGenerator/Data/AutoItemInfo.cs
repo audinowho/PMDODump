@@ -1141,7 +1141,7 @@ namespace DataGenerator.Data
             else if (type == ExclusiveItemEffect.TypeBecomesCategory)
             {
                 item.Rarity = 1;
-                item.Desc = new LocalText("When kept in the bag, the Pokémon's {0}-type moves are change to become {1}.");
+                item.Desc = new LocalText("When kept in the bag, the Pokémon's {0}-type moves are changed to become {1}.");
                 if (includeEffects)
                 {
                     string element = (string)args[0];

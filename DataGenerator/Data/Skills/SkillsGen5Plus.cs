@@ -7643,17 +7643,20 @@ namespace DataGenerator.Data
             }
             else if (ii == 870)
             {
-                skill.Name = new LocalText("**Flower Trick");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 10;
+                skill.Name = new LocalText("Flower Trick");
+                skill.Desc = new LocalText("The user throws a rigged bouquet of flowers at the target. This attack never misses and always lands a critical hit.");
+                skill.BaseCharges = 11;
                 skill.Data.Element = "grass";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.HitRate = -1;
-                skill.Data.SkillStates.Set(new BasePowerState(70));
+                skill.Data.SkillStates.Set(new BasePowerState(50));
+                skill.Data.OnActions.Add(0, new BoostCriticalEvent(4));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new ThrowAction();
+                ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                ((ThrowAction)skill.HitboxAction).Coverage = ThrowAction.ArcCoverage.WideAngle;
+                ((ThrowAction)skill.HitboxAction).Range = 3;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
             }

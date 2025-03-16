@@ -1975,7 +1975,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusAnimEvent(emitter, "DUN_Transform", 20, true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 status.StatusStates.Set(new MonsterIDState());
-                status.OnRefresh.Add(0, new IllusionEvent());
+                status.OnRefresh.Add(-1, new IllusionEvent());
                 status.OnDeaths.Add(-11, new RemoveEvent(true));
                 //status.AfterBeingHits.Add(0, new RemoveOnDamageEvent());
             }

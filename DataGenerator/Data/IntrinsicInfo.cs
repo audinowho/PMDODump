@@ -1196,7 +1196,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Regenerator");
                 ability.Desc = new LocalText("Restores HP when there are no threats nearby.");
-                ability.OnTurnEnds.Add(0, new RegeneratorEvent(7, 8));
+                ability.OnTurnEnds.Add(0, new BellyNeededEvent(1, new RegeneratorEvent(5, 16)));
             }
             else if (ii == 145)
             {
