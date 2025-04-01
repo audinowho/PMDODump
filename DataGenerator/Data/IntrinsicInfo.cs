@@ -316,7 +316,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Huge Power");
                 ability.Desc = new LocalText("Boosts the Pokémon's Attack stat.");
-                ability.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 3, 2));
+                ability.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 2, 1));
             }
             else if (ii == 38)
             {
@@ -630,7 +630,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Pure Power");
                 ability.Desc = new LocalText("Boosts the Pokémon's Attack stat.");
-                ability.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 3, 2));
+                ability.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 2, 1));
             }
             else if (ii == 75)
             {
@@ -1553,19 +1553,15 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Wimp Out");
                 ability.Desc = new LocalText("The Pokémon warps away when its HP becomes half or less.");
-                PinchNeededEvent pinch = new PinchNeededEvent(2, new HitCounterEvent(Alignment.Foe, true, false, true, 100, new RandomWarpEvent(50, true)));
-                pinch.AffectTarget = true;
-                ability.AfterBeingHits.Add(1, pinch);
+                PinchNeededSingleEvent pinch = new PinchNeededSingleEvent(2, new RandomWarpSingleEvent(50));
+                ability.OnTurnStarts.Add(1, new ReactToHitEvent("was_hurt_last_turn", pinch));
             }
             else if (ii == 194)
             {
                 ability.Name = new LocalText("Emergency Exit");
                 ability.Desc = new LocalText("The Pokémon jumps back when its HP becomes half or less.");
-                HopEvent hop = new HopEvent(5, true);
-                hop.AffectTarget = true;
-                PinchNeededEvent pinch = new PinchNeededEvent(2, new HitCounterEvent(Alignment.Foe, true, false, true, 100, hop));
-                pinch.AffectTarget = true;
-                ability.AfterBeingHits.Add(1, pinch);
+                PinchNeededSingleEvent pinch = new PinchNeededSingleEvent(2, new HopSingleEvent(5, true));
+                ability.OnTurnStarts.Add(1, new ReactToHitEvent("was_hurt_last_turn", pinch));
             }
             else if (ii == 195)
             {

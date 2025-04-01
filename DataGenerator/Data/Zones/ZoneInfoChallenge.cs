@@ -736,27 +736,27 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("zubat", "", "leech_life", "bite", "", "", new RandRange(15)), new IntRange(0, 3), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("nincada", "", "bide", "scratch", "harden", "", new RandRange(17)), new IntRange(0, 3), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("vanillite", "", "icicle_spear", "mist", "", "", new RandRange(16)), new IntRange(1, 4), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("marill", "thick_fat", "bubble_beam", "defense_curl", "", "", new RandRange(17)), new IntRange(1, 4), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("grubbin", "", "bug_bite", "", "", "", new RandRange(15)), new IntRange(2, 5), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("marill", "", "bubble_beam", "defense_curl", "", "", new RandRange(17)), new IntRange(1, 4), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("hatenna", "", "play_nice", "life_dew", "", "", new RandRange(17)), new IntRange(2, 5), 10);
                     //helps nacli, growlithe, drilbur
                     poolSpawn.Spawns.Add(GetTeamMob("silicobra", "sand_spit", "brutal_swing", "bulldoze", "", "", new RandRange(20)), new IntRange(3, 6), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("nacli", "purifying_salt", "harden", "rock_throw", "", "", new RandRange(20)), new IntRange(3, 6), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("minccino", "", "tickle", "double_slap", "sing", "", new RandRange(20)), new IntRange(3, 6), 10);
                     poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("growlithe", 1, "", Gender.Unknown), "flash_fire", "flame_wheel", "howl", "", "", new RandRange(23)), new IntRange(3, 6), 10);
+					poolSpawn.Spawns.Add(GetTeamMob("grubbin", "", "bug_bite", "", "", "", new RandRange(18)), new IntRange(4, 7), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("drilbur", "sand_rush", "metal_claw", "mud_slap", "", "", new RandRange(21)), new IntRange(4, 7), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("minccino", "", "tickle", "double_slap", "sing", "", new RandRange(21)), new IntRange(4, 7), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("nacli", "purifying_salt", "harden", "rock_throw", "", "", new RandRange(21)), new IntRange(4, 7), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("buizel", "", "aqua_jet", "sonic_boom", "", "", new RandRange(21)), new IntRange(4, 7), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("spheal", "thick_fat", "ice_ball", "powder_snow", "", "", new RandRange(21)), new IntRange(4, 7), 10);
                     //alerter
-                    poolSpawn.Spawns.Add(GetTeamMob("solosis", "magic_guard", "psywave", "reflect", "charm", "", new RandRange(23), TeamMemberSpawn.MemberRole.Support), new IntRange(5, 8), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("solosis", "magic_guard", "psywave", "reflect", "", "", new RandRange(23)), new IntRange(5, 8), 10);
                     //alerter
                     poolSpawn.Spawns.Add(GetTeamMob("ninjask", "", "swords_dance", "slash", "", "", new RandRange(20)), new IntRange(5, 8), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("magnemite", "sturdy", "thunder_shock", "metal_sound", "thunder_wave", "", new RandRange(24)), new IntRange(6, 9), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("magnemite", "sturdy", "thunder_shock", "metal_sound", "", "", new RandRange(24)), new IntRange(6, 9), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("meditite", "pure_power", "meditate", "force_palm", "confusion", "", new RandRange(24)), new IntRange(6, 9), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("naclstack", "purifying_salt", "recover", "salt_cure", "", "", new RandRange(26)), new IntRange(7, 10), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("golett", "no_guard", "shadow_punch", "magnitude", "mega_punch", "", new RandRange(26)), new IntRange(7, 10), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("shedinja", "", "leech_life", "mud_slap", "shadow_sneak", "", new RandRange(26)), new IntRange(7, 10), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("charjabug", "", "string_shot", "bug_bite", "", "", new RandRange(27), TeamMemberSpawn.MemberRole.Support), new IntRange(8, 11), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("charjabug", "", "string_shot", "bug_bite", "", "", new RandRange(26), TeamMemberSpawn.MemberRole.Support), new IntRange(8, 11), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("golbat", "", "screech", "confuse_ray", "leech_life", "", new RandRange(27)), new IntRange(8, 11), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("sableye", "", "knock_off", "detect", "", "", new RandRange(27)), new IntRange(8, 11), 10);
                     //helps shedinja
@@ -947,8 +947,9 @@ namespace DataGenerator.Data
                             vaultChanceZoneStep.Mobs.Add(GetFOEMob("sandaconda", "sand_spit", "brutal_swing", "bulldoze", "minimize", "", 20), new IntRange(0, max_floors), 10);
                             vaultChanceZoneStep.Mobs.Add(GetFOEMob("carbink", "", "ancient_power", "stealth_rock", "reflect", "", 20), new IntRange(0, max_floors), 10);
                             vaultChanceZoneStep.Mobs.Add(GetFOEMob("ludicolo", "rain_dish", "fake_out", "mega_drain", "rain_dance", "nature_power", 20), new IntRange(0, max_floors), 10);
+                            vaultChanceZoneStep.Mobs.Add(GetFOEMob("golisopod", "", "first_impression", "razor_shell", "", "", 20), new IntRange(0, max_floors), 10);
                             vaultChanceZoneStep.Mobs.Add(GetFOEMob("crobat", "", "mean_look", "poison_fang", "haze", "confuse_ray", 20), new IntRange(4, max_floors), 10);
-                            vaultChanceZoneStep.Mobs.Add(GetFOEMob("golisopod", "", "first_impression", "razor_shell", "spite", "", 20), new IntRange(4, max_floors), 10);
+							vaultChanceZoneStep.Mobs.Add(GetFOEMob("lapras", "water_absorb", "ice_beam", "perish_song", "brine", "", 3), new IntRange(4, max_floors), 10);
                             vaultChanceZoneStep.Mobs.Add(GetFOEMob("medicham", "pure_power", "high_jump_kick", "zen_headbutt", "psych_up", "", 20), new IntRange(4, max_floors), 10);
                             vaultChanceZoneStep.Mobs.Add(GetFOEMob("golurk", "no_guard", "shadow_punch", "dynamic_punch", "mega_punch", "", 20), new IntRange(8, max_floors), 10);
                         }

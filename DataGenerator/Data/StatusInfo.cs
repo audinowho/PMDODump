@@ -1649,7 +1649,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Snatch");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon is ready to snatch any stat-boosting move that foes use on themselves. This status wears off after a few turns.");
+                status.Desc = new LocalText("The Pokémon is ready to snatch status moves that anyone else uses on themselves. This status wears off after a few turns.");
                 status.Emoticon = "Question_DarkBlue";
                 status.StatusStates.Set(new TransferStatusState());
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_NOTHING_HAPPENED")));
