@@ -7835,6 +7835,7 @@ namespace DataGenerator.Data
 
                 AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, max_floors)), new MapItem("food_apple"), new MapItem("food_banana"));
                 AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
+                AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandRange(1), new IntRange(soft_max, max_floors)), new MapItem("apricorn_red"), new MapItem("apricorn_yellow"));
                 AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 8, 50), new IntRange(0, max_floors)), new MapItem("key", 1));
                 AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, max_floors - 1), new IntRange(8, max_floors)), new MapItem("orb_cleanse"));
 

@@ -1541,7 +1541,7 @@ namespace DataGenerator.Data
             else if (ii == 233)
             {
                 item.Name = new LocalText("Purge Wand");
-                item.Desc = new LocalText("A wand to be waved at a Pokémon. It removes all stat boosts and damages the target for each stat boosted. Stat drops will heal the target instead.");
+                item.Desc = new LocalText("A wand to be waved at a Pokémon. It removes all stat boosts in an area and damages targets for each stat boosted. Stat drops will heal the target instead.");
                 item.Sprite = "Wand_Blue";
                 item.Price = 5;
                 item.Explosion.Range = 1;
@@ -2419,7 +2419,7 @@ namespace DataGenerator.Data
             else if (ii == 325)
             {
                 item.Name = new LocalText("Iron Ball");
-                item.Desc = new LocalText("A held item that weighs the Pokémon down, and allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.");
+                item.Desc = new LocalText("A held item that weighs the Pokémon down, forcing it to pause between moves. It also allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.");
                 item.Sprite = "Iron_Ball";
                 item.Price = 300;
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();

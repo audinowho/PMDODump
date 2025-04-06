@@ -316,7 +316,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Huge Power");
                 ability.Desc = new LocalText("Boosts the Pokémon's Attack stat.");
-                ability.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 2, 1));
+                ability.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 3, 2));
             }
             else if (ii == 38)
             {
@@ -368,7 +368,7 @@ namespace DataGenerator.Data
                 ability.Name = new LocalText("Magnet Pull");
                 ability.Desc = new LocalText("Pulls Steel-type targets to this Pokémon.");
                 //ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe | Alignment.Friend, false, false, true, 100, new CharElementNeededEvent("steel", new WarpHereEvent(new StringKey("MSG_MAGNET_PULL"), false))));
-                ability.AfterHittings.Add(5, new OnHitEvent(false, false, 100, new CharElementNeededEvent("steel", new WarpHereEvent(new StringKey("MSG_MAGNET_PULL"), true))));
+                ability.AfterHittings.Add(5, new OnHitEvent(false, false, 100, new CharElementNeededEvent("steel", true, false, new WarpHereEvent(new StringKey("MSG_MAGNET_PULL"), true))));
             }
             else if (ii == 43)
             {
@@ -630,7 +630,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Pure Power");
                 ability.Desc = new LocalText("Boosts the Pokémon's Attack stat.");
-                ability.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 2, 1));
+                ability.OnActions.Add(0, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 3, 2));
             }
             else if (ii == 75)
             {

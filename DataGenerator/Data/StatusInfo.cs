@@ -594,7 +594,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SOLAR_BEAM_CHARGE")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("solar_beam"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.OnRefresh.Add(0, new ImmobilizationEvent(typeof(ChargeWalkerState)));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -608,7 +608,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SKULL_BASH_CHARGE")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("skull_bash"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.OnRefresh.Add(0, new ImmobilizationEvent(typeof(ChargeWalkerState)));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -623,7 +623,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_RAZOR_WIND_CHARGE")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("razor_wind"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.OnRefresh.Add(0, new ImmobilizationEvent(typeof(ChargeWalkerState)));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -637,7 +637,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_SKY_ATTACK_CHARGE")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("sky_attack"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.OnRefresh.Add(0, new ImmobilizationEvent(typeof(ChargeWalkerState)));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -652,7 +652,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FOCUS_PUNCH_END")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("focus_punch"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false));
                 status.AfterBeingHits.Add(0, new RemoveOnDamageEvent());
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -677,7 +677,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownEvent(effects));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("dig"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new OnActionEvent(new BattlelessEvent(false, new RemoveLocTrapEvent()), new BattlelessEvent(false, new RemoveLocTerrainEvent("wall")), new RemoveBattleEvent(false)));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[3] { "earthquake", "fissure", "magnitude" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -696,7 +696,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("fly"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -722,7 +722,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("dive"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[2] { "surf", "whirlpool" }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -739,7 +739,7 @@ namespace DataGenerator.Data
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_BOUNCE_END")));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("bounce"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.OnRefresh.Add(0, new ImmobilizationEvent());
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));
@@ -760,7 +760,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("phantom_force"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[0] { }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -779,7 +779,7 @@ namespace DataGenerator.Data
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("shadow_force"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[0] { }));
                 status.OnRefresh.Add(0, new AttackOnlyEvent());
@@ -797,7 +797,7 @@ namespace DataGenerator.Data
                 status.StatusStates.Set(new HPState());
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("bide"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveBide()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.StatusStates.Set(new CountDownState(2));
                 status.BeforeActions.Add(0, new UnleashEvent());
                 status.AfterBeingHits.Add(0, new BideEvent());
@@ -882,7 +882,7 @@ namespace DataGenerator.Data
                 status.DrawEffect = DrawEffect.Spinning;
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck());
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("petal_dance"));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
                 status.StatusStates.Set(new CountDownState(3));
@@ -900,7 +900,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("The Pokémon will use Thrash repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.");
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck());
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("thrash"));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
                 status.StatusStates.Set(new CountDownState(3));
@@ -918,7 +918,7 @@ namespace DataGenerator.Data
                 status.Desc = new LocalText("The Pokémon will use Outrage repeatedly until the status wears off. This status wears off after a few turns, leaving the Pokémon confused from fatigue.");
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck());
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("outrage"));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 List<SingleCharEvent> effects = new List<SingleCharEvent>();
                 effects.Add(new RemoveEvent(true));
                 status.StatusStates.Set(new CountDownState(3));
@@ -1403,7 +1403,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Embargo");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon is rendered incapable of using any items, and its held item item loses its effect. This status wears off after many turns have passed.");
+                status.Desc = new LocalText("The Pokémon is rendered incapable of using any items, and its held item loses its effect. This status wears off after many turns have passed.");
                 status.Emoticon = "X_Brown";
                 status.StatusStates.Set(new BadStatusState());
                 status.StatusStates.Set(new TransferStatusState());
@@ -2364,7 +2364,7 @@ namespace DataGenerator.Data
                 status.OnTurnStarts.Add(0, new CheckNullTargetEvent(true));
                 status.BeforeTryActions.Add(-1, new ForceMoveEvent("sky_drop"));
                 status.BeforeTryActions.Add(-1, new AddContextStateEvent(new MoveCharge()));
-                status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
+                status.BeforeTryActions.Add(-1, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Item, BattleActionType.Throw));
                 status.BeforeActions.Add(0, new ForceFaceTargetEvent());
                 status.BeforeActions.Add(0, new RemoveOnActionEvent(false, true));
                 status.BeforeBeingHits.Add(-2, new SemiInvulEvent(new string[8] { "gust", "whirlwind", "thunder", "twister", "sky_uppercut", "smack_down", "hurricane", "thousand_arrows" }));

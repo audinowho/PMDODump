@@ -105,7 +105,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SAND_START"), true));
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SAND_END"), true));
-                status.BeforeBeingHits.Add(0, new CharElementNeededEvent("rock", new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 2, 3)));
+                status.BeforeBeingHits.Add(0, new CharElementNeededEvent("rock", true, false, new MultiplyCategoryEvent(BattleData.SkillCategory.Magical, 2, 3)));
                 status.OnMapTurnEnds.Add(0, new WeatherDamageEvent(new System.Type[] { typeof(MagicGuardState), typeof(SandState) }, "rock", "ground", "steel"));
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.StatusStates.Set(new MapTickState(0));
@@ -186,7 +186,7 @@ namespace DataGenerator.Data
                 status.OnMapStatusAdds.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SNOW_START"), true));
                 status.OnMapStatusAdds.Add(-5, new ReplaceStatusGroupEvent(typeof(MapWeatherState)));
                 status.OnMapStatusRemoves.Add(0, new MapStatusBattleLogEvent(new StringKey("MSG_SNOW_END"), true));
-                status.BeforeBeingHits.Add(0, new CharElementNeededEvent("ice", new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 2, 3)));
+                status.BeforeBeingHits.Add(0, new CharElementNeededEvent("ice", true, false, new MultiplyCategoryEvent(BattleData.SkillCategory.Physical, 2, 3)));
                 status.StatusStates.Set(new MapCountDownState(50));
                 status.OnMapTurnEnds.Add(5, new MapStatusCountDownEvent());
             }

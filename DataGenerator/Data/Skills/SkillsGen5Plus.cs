@@ -849,6 +849,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(55));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(35));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
+                skill.Data.BeforeHits.Add(0, new RemoveStatusBattleEvent("freeze", true));
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("burn", true, true)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
