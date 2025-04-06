@@ -6,4 +6,5 @@
 * Fixed an issue that caused permadeath in storymode
 * Fixed a hub map AI race condition
 * Emergency Exit and Wimp Out resolve at the start of the ability holder's turn.
+* RC: Added a consistency guarantee for spawning a correct apricorn for Sleeping Caldera's guardian
 * Dev: Fixed PreventAction event's choosing of actions in editor
