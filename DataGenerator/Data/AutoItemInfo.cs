@@ -352,41 +352,50 @@ namespace DataGenerator.Data
             path = GenPath.ITEM_PATH  + "EvoTreeRef.txt";
             using (StreamWriter file = new StreamWriter(path))
             {
-                file.WriteLine("User\tEvo\tIndex\tRarity");
+                file.WriteLine("Family\tUser\tEvo\tIndex\tRarity");
                 for (int ii = 0; ii < evoTrees.Count; ii++)
                 {
                     List<string> evoTree = evoTrees[ii];
+
+                    int familyIndex = int.MaxValue;
+                    foreach (string species in evoTree)
+                    {
+                        MonsterEntrySummary familyEntrySummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Get(species);
+                        if (familyEntrySummary.SortOrder < familyIndex)
+                            familyIndex = familyEntrySummary.SortOrder;
+                    }
+
                     if (branchedEvo[ii])
                     {
-                        for (int jj = evoTree.Count - 1; jj >= 0; jj--)
-                            file.WriteLine(evoTree[jj] + "\tFALSE\t"+(char)('A'+ (evoTree.Count - 1 - jj)) +"\t5*");
+                        for (int jj = 0; jj < 6; jj++)
+                            file.WriteLine(familyIndex.ToString() + "\t" + evoTree[Math.Max(0, evoTree.Count - 1 - jj)] + "\tFALSE\t"+(char)('A'+ jj) +"\t5*");
                     }
                     else if (evoTree.Count == 3)
                     {
-                        file.WriteLine(evoTree[2] + "\tTRUE\tA\t5*");
-                        file.WriteLine(evoTree[1] + "\tTRUE\tB\t4*");
-                        file.WriteLine(evoTree[0] + "\tTRUE\tC\t1-2*");
-                        file.WriteLine(evoTree[0] + "\tTRUE\tD\t1-2*");
-                        file.WriteLine(evoTree[0] + "\tTRUE\tE\t2-3*");
-                        file.WriteLine(evoTree[1] + "\tTRUE\tF\t2-3*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[2] + "\tTRUE\tA\t5*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[1] + "\tTRUE\tB\t4*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tTRUE\tC\t1-2*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tTRUE\tD\t1-2*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tTRUE\tE\t2-3*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[1] + "\tTRUE\tF\t2-3*");
                     }
                     else if (evoTree.Count == 2)
                     {
-                        file.WriteLine(evoTree[1] + "\tTRUE\tA\t5*");
-                        file.WriteLine(evoTree[1] + "\tTRUE\tB\t4*");
-                        file.WriteLine(evoTree[0] + "\tTRUE\tC\t1-2*");
-                        file.WriteLine(evoTree[0] + "\tTRUE\tD\t1-2*");
-                        file.WriteLine(evoTree[0] + "\tTRUE\tE\t2-3*");
-                        file.WriteLine(evoTree[1] + "\tTRUE\tF\t2-3*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[1] + "\tTRUE\tA\t5*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[1] + "\tTRUE\tB\t4*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tTRUE\tC\t1-2*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tTRUE\tD\t1-2*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tTRUE\tE\t2-3*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[1] + "\tTRUE\tF\t2-3*");
                     }
                     else if (evoTree.Count == 1)
                     {
-                        file.WriteLine(evoTree[0] + "\tFALSE\tA\t5*");
-                        file.WriteLine(evoTree[0] + "\tFALSE\tB\t4*");
-                        file.WriteLine(evoTree[0] + "\tFALSE\tC\t1-2*");
-                        file.WriteLine(evoTree[0] + "\tFALSE\tD\t1-2*");
-                        file.WriteLine(evoTree[0] + "\tFALSE\tE\t2-3*");
-                        file.WriteLine(evoTree[0] + "\tFALSE\tF\t2-3*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tFALSE\tA\t5*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tFALSE\tB\t4*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tFALSE\tC\t1-2*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tFALSE\tD\t1-2*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tFALSE\tE\t2-3*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tFALSE\tF\t2-3*");
                     }
                 }
             }

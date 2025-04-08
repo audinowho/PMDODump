@@ -3976,7 +3976,7 @@ namespace DataGenerator.Data
             else if (ii == 660)
             {
                 skill.Name = new LocalText("**First Impression");
-                skill.Desc = new LocalText("Although this move has great power, it only works the first turn the user is in battle.");
+                skill.Desc = new LocalText("Although this move has great power, it fails on targets directly in front.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "bug";
                 skill.Data.Category = BattleData.SkillCategory.Physical;
