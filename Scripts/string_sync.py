@@ -61,8 +61,8 @@ def main():
     credentials = get_credentials()
     sheet_id = get_sheet_id()
 
-    localize = Localization()
-    localize.open_sheet(credentials, sheet_id)
+    localize = Localization(credentials, sheet_id)
+    localize.open_sheet()
     print("Sheet opened.")
 
     # Data

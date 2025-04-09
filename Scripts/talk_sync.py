@@ -61,8 +61,8 @@ def main():
     credentials = get_credentials()
     sheet_id = get_sheet_id()
 
-    talk = TalkGen()
-    talk.open_sheet(credentials, sheet_id)
+    talk = TalkGen(credentials, sheet_id)
+    talk.open_sheet()
     print("Sheet opened.")
 
     # Merge the talkstrings in StringsEx

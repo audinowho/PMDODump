@@ -60,8 +60,8 @@ def main():
     sheet_ids = get_sheet_ids()
 
     for sheet_id in sheet_ids:
-        zoneGen = ZoneGen()
-        zoneGen.open_sheet(credentials, sheet_id)
+        zoneGen = ZoneGen(credentials, sheet_id)
+        zoneGen.open_sheet()
         print("Sheet opened.")
 
         # Reference

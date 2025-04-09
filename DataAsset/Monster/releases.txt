@@ -1,3 +1,4 @@
+F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 0	missingno	0	missingno	0	Missingno.			TRUE	FALSE
 0	missingno	0	missingno	1	Substitute			TRUE	FALSE
 1	bulbasaur	1	bulbasaur	0	Bulbasaur		guildmaster_trail	TRUE	FALSE

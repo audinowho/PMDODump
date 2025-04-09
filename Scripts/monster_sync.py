@@ -56,8 +56,8 @@ def main():
     credentials = get_credentials()
     sheet_id = get_sheet_id()
 
-    monsterGen = MonsterGen()
-    monsterGen.open_sheet(credentials, sheet_id)
+    monsterGen = MonsterGen(credentials, sheet_id)
+    monsterGen.open_sheet()
     print("Sheet opened.")
 
     # Reference

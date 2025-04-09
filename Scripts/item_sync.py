@@ -56,8 +56,8 @@ def main():
     credentials = get_credentials()
     sheet_id = get_sheet_id()
 
-    itemGen = ItemGen()
-    itemGen.open_sheet(credentials, sheet_id)
+    itemGen = ItemGen(credentials, sheet_id)
+    itemGen.open_sheet()
     print("Sheet opened.")
 
     # Reference
@@ -66,13 +66,18 @@ def main():
 
 
     # Reference
-    itemGen.write_data_text("PreAutoItem", "Resources")
-    itemGen.write_data_text("AutoItemRef", "Reference")
+#    itemGen.write_data_text("PreAutoItem", "Resources")
+#    itemGen.write_data_text("AutoItemRef", "Reference")
 
     print("Updated References.")
 
+    # add any new mons to the list
+    itemGen.merge_data_text("EvoTreeRef", "Content")
+
+    print("Merged Families.")
+
     # Item Data
-    itemGen.load_sheet_text("ExclusiveItem", "Content")
+#    itemGen.load_sheet_text("ExclusiveItem", "Content")
 
     print("Pulled Item Data.")
 

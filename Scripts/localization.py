@@ -4,11 +4,11 @@ import xml.etree.ElementTree as ET
 import glob
 import time
 from apiclient import discovery
+from sheetMerge import SheetMerge, WAIT_TIME
 
 SHEET_CONTENT_START = 4
 KEY_INDEX = 0
 COMMENT_INDEX = 1
-WAIT_TIME = 3
 DEFAULT_COLOR = {'red' : 1.0, 'green' : 1.0, 'blue' : 1.0 }
 
 def create_color_req(sheet_id, row_range, col_range, color):
@@ -26,16 +26,16 @@ def create_color_req(sheet_id, row_range, col_range, color):
         }
     }
 
-class Localization:
+class Localization(SheetMerge):
     """
     A class for syncronizing the strings in the project files
     with the google doc spreadsheets containing translations.
     """
-    def open_sheet(self, credentials, id):
-        http = credentials.authorize(httplib2.Http())
-        discoveryUrl = ('https://sheets.googleapis.com/$discovery/rest?' 'version=v4')
-        self._service = discovery.build('sheets', 'v4', http=http, discoveryServiceUrl=discoveryUrl)
-        self._id = id
+    def __init__(self, credentials, id):
+        super().__init__(credentials, id, SHEET_CONTENT_START)
+
+    def open_sheet(self):
+        super().open_sheet()
         self.changelogger = open("../DataAsset/String/changelog.txt", 'w', encoding='utf-8')
 
     def close_sheet(self):
@@ -126,7 +126,7 @@ class Localization:
         # load data from google sheets
         header, colored_sheet = self._query_sheet_colored(sheet_name)
         # load data from translation table file
-        table = self._query_txt(os.path.join("..", "DataAsset", "String", txt_name+".txt"))
+        _, table = self._query_txt(os.path.join("..", "DataAsset", "String", txt_name+".txt"))
         # merge the data together, back into the google sheets
         self._merge_sheet_table(sheet_name, colored_sheet, table)
         # read the google sheets again
@@ -150,7 +150,7 @@ class Localization:
         # load data from google sheets
         header, colored_sheet = self._query_sheet_colored(sheet_name)
         # load data from translation table file
-        table = self._query_txt(os.path.join("..", "DataAsset", "String", type_name+".txt"))
+        _, table = self._query_txt(os.path.join("..", "DataAsset", "String", type_name+".txt"))
         # merge the data together, back into the google sheets
         self._merge_sheet_table(sheet_name, colored_sheet, table)
         # read the google sheets again
@@ -326,21 +326,6 @@ class Localization:
         for key in keys:
             result.append([key, resx_comment_dict[key], resx_dict[key]])
         return result
-
-    def _query_txt(self, txt_path):
-        """
-        Gets all translation entries from a pre-formatted txt file.  Only key, comments, and english.
-        """
-        output = []
-        header = True
-        with open(txt_path, encoding='utf-8') as txt:
-            for line in txt:
-                # remember to remove the newline
-                cols = line[:-1].split('\t')
-                if not header:
-                    output.append(cols[:3])
-                header = False
-        return output
 
     def _update_support(self, header_row, sheet, support):
         """
@@ -565,7 +550,7 @@ class Localization:
             sheet_ind += 1
         self.changelogger.write("\n")
 
-    def _write_resx(self, header_row, sheet, resx_path):
+    def _write_lang_resx(self, header_row, sheet, resx_path):
         """
         Takes the array of localization strings from google sheets,
         and writes it to a .resx file
@@ -575,150 +560,17 @@ class Localization:
 
             file_name = resx_path + '.'
             if lang == "en":
-                file_name = file_name + 'resx'
+                file_name = file_name
             else:
-                file_name = file_name + lang + '.resx'
-            with open(file_name, 'w', encoding='utf-8') as txt:
-                txt.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" + \
-                    "<root>\n" + \
-                    "  <!-- \n" + \
-                    "    Microsoft ResX Schema \n" + \
-                    "    \n" + \
-                    "    Version 2.0\n" + \
-                    "    \n" + \
-                    "    The primary goals of this format is to allow a simple XML format \n" + \
-                    "    that is mostly human readable. The generation and parsing of the \n" + \
-                    "    various data types are done through the TypeConverter classes \n" + \
-                    "    associated with the data types.\n" + \
-                    "    \n" + \
-                    "    Example:\n" + \
-                    "    \n" + \
-                    "    ... ado.net/XML headers & schema ...\n" + \
-                    "    <resheader name=\"resmimetype\">text/microsoft-resx</resheader>\n" + \
-                    "    <resheader name=\"version\">2.0</resheader>\n" + \
-                    "    <resheader name=\"reader\">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>\n" + \
-                    "    <resheader name=\"writer\">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>\n" + \
-                    "    <data name=\"Name1\"><value>this is my long string</value><comment>this is a comment</comment></data>\n" + \
-                    "    <data name=\"Color1\" type=\"System.Drawing.Color, System.Drawing\">Blue</data>\n" + \
-                    "    <data name=\"Bitmap1\" mimetype=\"application/x-microsoft.net.object.binary.base64\">\n" + \
-                    "        <value>[base64 mime encoded serialized .NET Framework object]</value>\n" + \
-                    "    </data>\n" + \
-                    "    <data name=\"Icon1\" type=\"System.Drawing.Icon, System.Drawing\" mimetype=\"application/x-microsoft.net.object.bytearray.base64\">\n" + \
-                    "        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>\n" + \
-                    "        <comment>This is a comment</comment>\n" + \
-                    "    </data>\n" + \
-                    "                \n" + \
-                    "    There are any number of \"resheader\" rows that contain simple \n" + \
-                    "    name/value pairs.\n" + \
-                    "    \n" + \
-                    "    Each data row contains a name, and value. The row also contains a \n" + \
-                    "    type or mimetype. Type corresponds to a .NET class that support \n" + \
-                    "    text/value conversion through the TypeConverter architecture. \n" + \
-                    "    Classes that don\'t support this are serialized and stored with the \n" + \
-                    "    mimetype set.\n" + \
-                    "    \n" + \
-                    "    The mimetype is used for serialized objects, and tells the \n" + \
-                    "    ResXResourceReader how to depersist the object. This is currently not \n" + \
-                    "    extensible. For a given mimetype the value must be set accordingly:\n" + \
-                    "    \n" + \
-                    "    Note - application/x-microsoft.net.object.binary.base64 is the format \n" + \
-                    "    that the ResXResourceWriter will generate, however the reader can \n" + \
-                    "    read any of the formats listed below.\n" + \
-                    "    \n" + \
-                    "    mimetype: application/x-microsoft.net.object.binary.base64\n" + \
-                    "    value   : The object must be serialized with \n" + \
-                    "            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter\n" + \
-                    "            : and then encoded with base64 encoding.\n" + \
-                    "    \n" + \
-                    "    mimetype: application/x-microsoft.net.object.soap.base64\n" + \
-                    "    value   : The object must be serialized with \n" + \
-                    "            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter\n" + \
-                    "            : and then encoded with base64 encoding.\n" + \
-                    "\n" + \
-                    "    mimetype: application/x-microsoft.net.object.bytearray.base64\n" + \
-                    "    value   : The object must be serialized into a byte array \n" + \
-                    "            : using a System.ComponentModel.TypeConverter\n" + \
-                    "            : and then encoded with base64 encoding.\n" + \
-                    "    -->\n" + \
-                    "  <xsd:schema id=\"root\" xmlns=\"\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\">\n" + \
-                    "    <xsd:import namespace=\"http://www.w3.org/XML/1998/namespace\" />\n" + \
-                    "    <xsd:element name=\"root\" msdata:IsDataSet=\"true\">\n" + \
-                    "      <xsd:complexType>\n" + \
-                    "        <xsd:choice maxOccurs=\"unbounded\">\n" + \
-                    "          <xsd:element name=\"metadata\">\n" + \
-                    "            <xsd:complexType>\n" + \
-                    "              <xsd:sequence>\n" + \
-                    "                <xsd:element name=\"value\" type=\"xsd:string\" minOccurs=\"0\" />\n" + \
-                    "              </xsd:sequence>\n" + \
-                    "              <xsd:attribute name=\"name\" use=\"required\" type=\"xsd:string\" />\n" + \
-                    "              <xsd:attribute name=\"type\" type=\"xsd:string\" />\n" + \
-                    "              <xsd:attribute name=\"mimetype\" type=\"xsd:string\" />\n" + \
-                    "              <xsd:attribute ref=\"xml:space\" />\n" + \
-                    "            </xsd:complexType>\n" + \
-                    "          </xsd:element>\n" + \
-                    "          <xsd:element name=\"assembly\">\n" + \
-                    "            <xsd:complexType>\n" + \
-                    "              <xsd:attribute name=\"alias\" type=\"xsd:string\" />\n" + \
-                    "              <xsd:attribute name=\"name\" type=\"xsd:string\" />\n" + \
-                    "            </xsd:complexType>\n" + \
-                    "          </xsd:element>\n" + \
-                    "          <xsd:element name=\"data\">\n" + \
-                    "            <xsd:complexType>\n" + \
-                    "              <xsd:sequence>\n" + \
-                    "                <xsd:element name=\"value\" type=\"xsd:string\" minOccurs=\"0\" msdata:Ordinal=\"1\" />\n" + \
-                    "                <xsd:element name=\"comment\" type=\"xsd:string\" minOccurs=\"0\" msdata:Ordinal=\"2\" />\n" + \
-                    "              </xsd:sequence>\n" + \
-                    "              <xsd:attribute name=\"name\" type=\"xsd:string\" use=\"required\" msdata:Ordinal=\"1\" />\n" + \
-                    "              <xsd:attribute name=\"type\" type=\"xsd:string\" msdata:Ordinal=\"3\" />\n" + \
-                    "              <xsd:attribute name=\"mimetype\" type=\"xsd:string\" msdata:Ordinal=\"4\" />\n" + \
-                    "              <xsd:attribute ref=\"xml:space\" />\n" + \
-                    "            </xsd:complexType>\n" + \
-                    "          </xsd:element>\n" + \
-                    "          <xsd:element name=\"resheader\">\n" + \
-                    "            <xsd:complexType>\n" + \
-                    "              <xsd:sequence>\n" + \
-                    "                <xsd:element name=\"value\" type=\"xsd:string\" minOccurs=\"0\" msdata:Ordinal=\"1\" />\n" + \
-                    "              </xsd:sequence>\n" + \
-                    "              <xsd:attribute name=\"name\" type=\"xsd:string\" use=\"required\" />\n" + \
-                    "            </xsd:complexType>\n" + \
-                    "          </xsd:element>\n" + \
-                    "        </xsd:choice>\n" + \
-                    "      </xsd:complexType>\n" + \
-                    "    </xsd:element>\n" + \
-                    "  </xsd:schema>\n" + \
-                    "  <resheader name=\"resmimetype\">\n" + \
-                    "    <value>text/microsoft-resx</value>\n" + \
-                    "  </resheader>\n" + \
-                    "  <resheader name=\"version\">\n" + \
-                    "    <value>2.0</value>\n" + \
-                    "  </resheader>\n" + \
-                    "  <resheader name=\"reader\">\n" + \
-                    "    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>\n" + \
-                    "  </resheader>\n" + \
-                    "  <resheader name=\"writer\">\n" + \
-                    "    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>\n" + \
-                    "  </resheader>\n")
+                file_name = file_name + lang
 
-                for row in sheet:
-                    if index >= len(row):
-                        continue
-                    key = row[KEY_INDEX]
-                    comment = row[COMMENT_INDEX]
-                    val = row[index]
-                    if val != "" or lang == "en":
-                        txt.write("  <data name=\""+key+"\" xml:space=\"preserve\">\n")
-                        txt.write("    <value>"+val+"</value>\n")
-                        txt.write("    <comment>"+comment+"</comment>")
-                        txt.write("  </data>\n")
-                txt.write("</root>")
+            resource_all = [(row[KEY_INDEX], row[COMMENT_INDEX], row[index]) for row in sheet]
+            resource = []
+            for row in resource_all:
+                if row[3] != "" or lang == "en":
+                    resource.append(row)
+
+            self._write_resx(resource_all, file_name)
 
 
-    def _write_txt(self, txt_path, header_row, sheet):
-        """
-        Writes all translation entries to a pre-formatted txt file.
-        """
-        with open(txt_path, 'w', encoding='utf-8') as txt:
-            txt.write('\t'.join(header_row)+"\n")
-            for line in sheet:
-                txt.write('\t'.join(line)+"\n")
 

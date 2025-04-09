@@ -3049,6 +3049,7 @@ namespace DataGenerator.Data
 
             using (StreamWriter file = new StreamWriter(GenPath.MONSTER_PATH + "releases.txt"))
             {
+                file.WriteLine("F###\tFamily\t###\tSpecies\tForm\tName\tUnimplemented\tEncounter\tSprited\tDiff");
                 foreach ((int familyIndex, string family, int index, MonsterID key, string name, string mechanics, string dungeons, bool sprite, bool diff) mon in totalMons)
                 {
                     file.WriteLine(mon.familyIndex + "\t" + mon.family + "\t" + mon.index + "\t" + mon.key.Species + "\t" + mon.key.Form + "\t" + mon.name + "\t" + mon.mechanics + "\t" + mon.dungeons + "\t" + (mon.sprite ? "TRUE" : "FALSE") + "\t" + (mon.diff ? "TRUE" : "FALSE"));
