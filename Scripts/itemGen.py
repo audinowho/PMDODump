@@ -180,15 +180,9 @@ class ItemGen:
                     continue
                 for idx, row in enumerate(changed_families[species]):
                     trade = ""
-                    if row[2] == "TRUE":
-                        trade = "*"
                     if idx < len(cmb_families[species][idx]):
                         old_row = cmb_families[species][idx]
                         old_row[2] = row[2]
-                        old_row[5] = row[5]
-                        old_row[10] = row[10]
-                        old_row[11] = trade
-                        old_row[12] = row[12]
                     else:
                         cmb_families[species][idx].append(row)
 

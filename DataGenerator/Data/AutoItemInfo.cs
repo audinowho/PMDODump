@@ -380,7 +380,7 @@ namespace DataGenerator.Data
                         file.WriteLine(familyIndex.ToString() + "\t" + evoTree[1] + "\tTRUE\tB\t4*");
                         file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tTRUE\tC\t1-2*");
                         file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tTRUE\tD\t1-2*");
-                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[0] + "\tTRUE\tE\t2-3*");
+                        file.WriteLine(familyIndex.ToString() + "\t" + evoTree[1] + "\tTRUE\tE\t2-3*");
                         file.WriteLine(familyIndex.ToString() + "\t" + evoTree[1] + "\tTRUE\tF\t2-3*");
                     }
                     else if (evoTree.Count == 2)
