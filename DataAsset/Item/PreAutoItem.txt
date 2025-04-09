@@ -79,29 +79,29 @@ ItemType	EffectType	Stat	Monster	Element	Status	MapStatus	Category
 3* Veil	077: EndureCategory		bombirdier		retaliate		
 	078: EndureType		bonsly		roosting		
 	079: SpikeDropper		bouffalant		safeguard		
-	080: NoStatusInWeather		bounsweet		sand_tomb		
-	081: DeepBreatherPlus		braixen		sleep		
-	082: WeaknessReduce		brambleghast		sleepless		
-	083: Gratitude		bramblin		slip		
-	084: HitAndRun		braviary		snatch		
-	085: StatusOnCategoryHit		breloom		stat_charged		
-	086: StatusOnCategoryUse		brionne		status_protection		
-	087: MapStatusOnCategoryUse		bronzong		stockpile		
-	088: DoubleDash		bronzor		super_mobile		
-	089: StatusSplash		brute_bonnet		sure_shot		
-	090: DevolveOnAttack		bruxish		taunted		
-	091: ProjectileAttack		budew		telekinesis		
-	092: MetronomePlus		buizel		torment		
-	093: AttackRangeInWeather		bulbasaur		type_boosted		
-	094: PPSaver		buneary		type_converted		
-	095: CelebrateCure		bunnelby		type_protected		
-	096: TypeBodyguard		burmy		water_pledge		
-	097: StatOnCategoryUse		butterfree		weakness_drain		
-	098: StatusOnTypeHit		buzzwole		whirlpool		
-	099: SweetDreams		cacnea		wide_guard		
-	100: ChanceStatusOnTypeHit		cacturne		wish		
-	101: ChanceStatOnTypeHit		calyrex		yawning		
-	102: ChanceStatusOnCategoryHit		camerupt				
+	080: NoStatusInWeather		bounsweet		salt_cure		
+	081: DeepBreatherPlus		braixen		sand_tomb		
+	082: WeaknessReduce		brambleghast		sleep		
+	083: Gratitude		bramblin		sleepless		
+	084: HitAndRun		braviary		slip		
+	085: StatusOnCategoryHit		breloom		snatch		
+	086: StatusOnCategoryUse		brionne		stat_charged		
+	087: MapStatusOnCategoryUse		bronzong		status_protection		
+	088: DoubleDash		bronzor		stockpile		
+	089: StatusSplash		brute_bonnet		super_mobile		
+	090: DevolveOnAttack		bruxish		sure_shot		
+	091: ProjectileAttack		budew		taunted		
+	092: MetronomePlus		buizel		telekinesis		
+	093: AttackRangeInWeather		bulbasaur		torment		
+	094: PPSaver		buneary		type_boosted		
+	095: CelebrateCure		bunnelby		type_converted		
+	096: TypeBodyguard		burmy		type_protected		
+	097: StatOnCategoryUse		butterfree		water_pledge		
+	098: StatusOnTypeHit		buzzwole		weakness_drain		
+	099: SweetDreams		cacnea		whirlpool		
+	100: ChanceStatusOnTypeHit		cacturne		wide_guard		
+	101: ChanceStatOnTypeHit		calyrex		wish		
+	102: ChanceStatusOnCategoryHit		camerupt		yawning		
 	103: TypeBecomesCategory		capsakid				
 	104: WeaknessDodge		carbink				
 	105: HeartFinder		carkol				

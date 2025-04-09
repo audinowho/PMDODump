@@ -341,6 +341,10 @@ namespace DataGenerator.Data
                 if (traversed.Contains(monsterKeys[ii]))
                     continue;
 
+                MonsterData data = DataManager.Instance.GetMonster(monsterKeys[ii]);
+                if (!data.Released)
+                    continue;
+
                 List<string> dexNums = new List<string>();
                 bool branched = FindFullFamily(dexNums, monsterKeys[ii]);
                 evoTrees.Add(dexNums);
@@ -427,6 +431,10 @@ namespace DataGenerator.Data
             int prev_start = init_idx;
             List<string> running_tradeables = new List<string>();
 
+            //read the Monster/releases.out.txt
+            //get a list of all species that have at least one row that is certified + NOT NeedsPlace
+            //if a excl item family has at least one member available, allow that item family to be written out
+
             //load from generated csv
             if (File.Exists(GenPath.ITEM_PATH  + "ExclusiveItem.out.txt"))
             {
@@ -438,11 +446,11 @@ namespace DataGenerator.Data
 
                     string customName = row[1].Trim();
                     ExclusiveItemType exclType = (ExclusiveItemType)Enum.Parse(typeof(ExclusiveItemType), row[0].Substring(2));
-                    ExclusiveItemEffect exclEffect = (ExclusiveItemEffect)Int32.Parse(row[12].Substring(0, 3));
+                    ExclusiveItemEffect exclEffect = (ExclusiveItemEffect)Int32.Parse(row[13].Substring(0, 3));
                     string primaryDex = row[2].Trim();
                     dex_map[item_idx] = primaryDex;
 
-                    string[] rarityStr = row[11].Substring(0, row[11].Length-1).Split('-');
+                    string[] rarityStr = row[12].Substring(0, row[12].Length-1).Split('-');
                     int minRarity = Int32.Parse(rarityStr[0]);
                     int maxRarity = minRarity;
                     if (rarityStr.Length > 1)
@@ -450,25 +458,25 @@ namespace DataGenerator.Data
 
 
                     List<object> args = new List<object>();
-                    if (row[13] != "")
-                        args.Add(row[13].Trim());
                     if (row[14] != "")
                         args.Add(row[14].Trim());
                     if (row[15] != "")
-                        args.Add(new Stat[] { (Stat)Int32.Parse(row[15].Substring(0, 3)) });
+                        args.Add(row[15].Trim());
                     if (row[16] != "")
-                        args.Add(row[16].Trim());
+                        args.Add(new Stat[] { (Stat)Int32.Parse(row[16].Substring(0, 3)) });
                     if (row[17] != "")
-                        args.Add((BattleData.SkillCategory)Int32.Parse(row[17].Substring(0, 3)));
+                        args.Add(row[17].Trim());
                     if (row[18] != "")
-                        args.Add(Int32.Parse(row[18]));
+                        args.Add((BattleData.SkillCategory)Int32.Parse(row[18].Substring(0, 3)));
                     if (row[19] != "")
-                        args.Add(row[19].Trim());
+                        args.Add(Int32.Parse(row[19]));
+                    if (row[20] != "")
+                        args.Add(row[20].Trim());
 
                     List<string> familyStarts = new List<string>();
-                    if (row[5] != "")
+                    if (row[6] != "")
                     {
-                        string[] startDexes = row[5].Split(',');
+                        string[] startDexes = row[6].Split(',');
                         foreach (string startDex in startDexes)
                         {
                             string cutoff = startDex.Trim();
@@ -478,7 +486,7 @@ namespace DataGenerator.Data
                     else
                         familyStarts.Add(primaryDex);
 
-                    bool includeFamily = row[4] == "True";
+                    bool includeFamily = row[5] == "True";
                     List<string> dexNums = new List<string>();
                     foreach (string dex in familyStarts)
                     {
@@ -492,11 +500,11 @@ namespace DataGenerator.Data
                     }
 
                     //decide on a family name
-                    string familyName = row[6];
+                    string familyName = row[7];
                     if (familyName == "")
                     {
                         string earliestFamily = rows[prev_start-init_idx][2].Trim();
-                        for (int nn = 1; (nn + prev_start - init_idx < rows.Count) && (rows[nn + prev_start - init_idx][9] != "A"); nn++)
+                        for (int nn = 1; (nn + prev_start - init_idx < rows.Count) && (rows[nn + prev_start - init_idx][10] != "A"); nn++)
                         {
                             MonsterEntrySummary earliestSummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Get(earliestFamily);
                             string dexNum = rows[nn + prev_start - init_idx][2].Trim();
@@ -528,8 +536,9 @@ namespace DataGenerator.Data
                     item.CannotDrop = true;
 
 
-                    bool enabled = row[3] == "True";
-                    bool familyEnabled = row[20] == "True";
+                    bool enabled = row[4] == "True";
+                    // TODO: 
+                    bool familyEnabled = false;
                     if (item.Name.DefaultText.StartsWith("**"))
                         item.Name.DefaultText = item.Name.DefaultText.Replace("*", "");
                     else if (item.Name.DefaultText != "" && enabled && familyEnabled)
@@ -543,16 +552,16 @@ namespace DataGenerator.Data
 
                     if (item.Released)
                     {
-                        string trade_in = row[10];
+                        string trade_in = row[11];
                         running_tradeables.Add(trade_in);
                     }
 
                     bool reload = false;
                     if (ii == rows.Count - 1)
                         reload = true;
-                    else if (rows[ii + 1][9] == "A")
+                    else if (rows[ii + 1][10] == "A")
                         reload = true;
-                    else if (rows[ii + 1][9][0] != rows[ii][9][0] + 1)
+                    else if (rows[ii + 1][10][0] != rows[ii][10][0] + 1)
                         throw new Exception(String.Format("Out of order labeling on row {0}!", ii));
 
                     if (reload)
