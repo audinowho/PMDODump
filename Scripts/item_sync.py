@@ -66,8 +66,8 @@ def main():
 
 
     # Reference
-#    itemGen.write_data_text("PreAutoItem", "Resources")
-#    itemGen.write_data_text("AutoItemRef", "Reference")
+    itemGen.write_data_text("PreAutoItem", "Resources")
+    itemGen.write_data_text("AutoItemRef", "Reference")
 
     print("Updated References.")
 
@@ -77,7 +77,7 @@ def main():
     print("Merged Families.")
 
     # Item Data
-#    itemGen.load_sheet_text("ExclusiveItem", "Content")
+    itemGen.load_sheet_text("ExclusiveItem", "Content")
 
     print("Pulled Item Data.")
 

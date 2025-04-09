@@ -409,11 +409,7 @@ class Localization(SheetMerge):
             sheet_id = resp['sheets'][0]['properties']['sheetId']
 
         sheet_ind = SHEET_CONTENT_START
-        traversed = 0
         for cmb_key in cmb_keys:
-            traversed = traversed+1
-            if traversed % 100 == 0:
-                print(str(traversed) + " merged")
 
             pair = cmb_dict[cmb_key]
             local_str = pair[0]
@@ -548,6 +544,8 @@ class Localization(SheetMerge):
                                     self.changelogger.write("    * Changed " + cmb_key +" from \"" + remote_str +"\" to \"" + local_str +"\"\n")
 
             sheet_ind += 1
+            if (sheet_ind - SHEET_CONTENT_START) % 100 == 0:
+                print(str(sheet_ind - SHEET_CONTENT_START) + " merged")
         self.changelogger.write("\n")
 
     def _write_lang_resx(self, header_row, sheet, resx_path):

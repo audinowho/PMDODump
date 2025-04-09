@@ -65,12 +65,8 @@ class ItemGen(SheetMerge):
 
         new_table = []
         for row in table:
-            trade = ""
-            if row[2] == "TRUE":
-                trade = "*"
-            new_row = ["0* None", "", row[1], row[0], "FALSE", row[2], "", "", "",
-                       "=IF(G{0} = "",IF(F{0},CONCAT(C{0},\"'s Family\"),C{0}),G{0})", row[3], trade, row[4],
-                      "000: None","","","","","","","","","","","","","","","","","","",""]
+            new_row = ["0* None", "", row[1], row[0], "FALSE", row[2], "", "", "", "", row[3], row[4], row[5],
+                      "000: None", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
             new_table.append(new_row)
 
         return new_table
@@ -82,7 +78,7 @@ class ItemGen(SheetMerge):
             family_id = int(row[3])
             if family_id not in new_dict:
                 new_dict[family_id] = []
-            new_dict[family_id].append(row)
+            new_dict[family_id].append(row.copy())
         return new_dict
 
     def _get_family_diff(self, f1, f2):
@@ -174,7 +170,6 @@ class ItemGen(SheetMerge):
                         deferred_families.append(species)
                     continue
                 for idx, row in enumerate(changed_families[species]):
-                    trade = ""
                     if idx < len(cmb_families[species][idx]):
                         old_row = cmb_families[species][idx]
                         old_row[2] = row[2]
@@ -199,6 +194,59 @@ class ItemGen(SheetMerge):
 
         # sort the keys properly
         cmb_keys = sorted(cmb_keys)
+
+        resp = self._service.spreadsheets().get(spreadsheetId=self._id, ranges=sheet_name).execute()
+
+        if len(resp['sheets']) != 1:
+            raise ValueError("Could not find unambiguous sheet " + sheet_name)
+        else:
+            sheet_id = resp['sheets'][0]['properties']['sheetId']
+
+        sheet_ind = SHEET_CONTENT_START
+        for cmb_key in cmb_keys:
+            group = cmb_families[cmb_key]
+            remote_group = None
+            if cmb_key in remote_families:
+                remote_group = remote_families[cmb_key]
+
+            for idx, row in enumerate(group):
+
+                # remote_group does not exist? insert all rows and populate
+                # row of cmb_group does not exist in remote_group? insert row and populate
+                diff = False
+                if remote_group is None or idx >= len(remote_group):
+                    body = { "insertDimension": { "range": { "sheetId": sheet_id, "dimension": "ROWS", "startIndex": sheet_ind-1, "endIndex": sheet_ind } } }
+                    self._service.spreadsheets().batchUpdate(spreadsheetId=self._id, body={'requests': [body]}).execute()
+                    diff = True
+                else:
+                    remote_row = remote_group[idx]
+                    for col_idx in range(len(row)):
+                        if row[col_idx] != remote_row[col_idx]:
+                            diff = True
+                            break
+
+                # row of cmb_group is different from row of remote_group? update
+                if diff:
+                    range_name = sheet_name + "!"+str(sheet_ind)+":"+str(sheet_ind)
+                    row[8] = "=IF(A{0} = \"0* None\",B{0},CONCAT(C{0}, MID(A{0}, 3, 100)))".format(sheet_ind)
+                    row[9] = "=IF(G{0} = \"\",IF(F{0},CONCAT(C{0},\"'s Family\"),C{0}),G{0})".format(sheet_ind)
+
+                    body = { 'values': [row] }
+                    self._service.spreadsheets().values().update(spreadsheetId=self._id, range=range_name, valueInputOption="USER_ENTERED", body=body).execute()
+                    time.sleep(WAIT_TIME)
+
+                sheet_ind += 1
+                if (sheet_ind - SHEET_CONTENT_START) % 100 == 0:
+                    print(str(sheet_ind - SHEET_CONTENT_START) + " merged")
+
+            # cmb_group does not exist?  impossible: cmb_families is a superset of remote_families
+            # row of remote_group does not exist in cmb_group? delete row
+            idx = len(group)
+            if remote_group is not None:
+                while idx < len(remote_group):
+                    body = { "deleteDimension": { "range": { "sheetId": sheet_id, "dimension": "ROWS", "startIndex": sheet_ind-1, "endIndex": sheet_ind } } }
+                    self._service.spreadsheets().batchUpdate(spreadsheetId=self._id, body={'requests': [body]}).execute()
+                    idx += 1
 
         return new_prev
 

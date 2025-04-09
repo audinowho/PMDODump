@@ -1,2779 +1,2773 @@
-Family	User	Evo	Index	Rarity
-0	missingno	FALSE	A	5*
-0	missingno	FALSE	B	4*
-0	missingno	FALSE	C	1-2*
-0	missingno	FALSE	D	1-2*
-0	missingno	FALSE	E	2-3*
-0	missingno	FALSE	F	2-3*
-1	venusaur	TRUE	A	5*
-1	ivysaur	TRUE	B	4*
-1	bulbasaur	TRUE	C	1-2*
-1	bulbasaur	TRUE	D	1-2*
-1	ivysaur	TRUE	E	2-3*
-1	ivysaur	TRUE	F	2-3*
-4	charizard	TRUE	A	5*
-4	charmeleon	TRUE	B	4*
-4	charmander	TRUE	C	1-2*
-4	charmander	TRUE	D	1-2*
-4	charmeleon	TRUE	E	2-3*
-4	charmeleon	TRUE	F	2-3*
-7	blastoise	TRUE	A	5*
-7	wartortle	TRUE	B	4*
-7	squirtle	TRUE	C	1-2*
-7	squirtle	TRUE	D	1-2*
-7	wartortle	TRUE	E	2-3*
-7	wartortle	TRUE	F	2-3*
-10	butterfree	TRUE	A	5*
-10	metapod	TRUE	B	4*
-10	caterpie	TRUE	C	1-2*
-10	caterpie	TRUE	D	1-2*
-10	metapod	TRUE	E	2-3*
-10	metapod	TRUE	F	2-3*
-13	beedrill	TRUE	A	5*
-13	kakuna	TRUE	B	4*
-13	weedle	TRUE	C	1-2*
-13	weedle	TRUE	D	1-2*
-13	kakuna	TRUE	E	2-3*
-13	kakuna	TRUE	F	2-3*
-16	pidgeot	TRUE	A	5*
-16	pidgeotto	TRUE	B	4*
-16	pidgey	TRUE	C	1-2*
-16	pidgey	TRUE	D	1-2*
-16	pidgeotto	TRUE	E	2-3*
-16	pidgeotto	TRUE	F	2-3*
-19	raticate	TRUE	A	5*
-19	raticate	TRUE	B	4*
-19	rattata	TRUE	C	1-2*
-19	rattata	TRUE	D	1-2*
-19	rattata	TRUE	E	2-3*
-19	raticate	TRUE	F	2-3*
-21	fearow	TRUE	A	5*
-21	fearow	TRUE	B	4*
-21	spearow	TRUE	C	1-2*
-21	spearow	TRUE	D	1-2*
-21	spearow	TRUE	E	2-3*
-21	fearow	TRUE	F	2-3*
-23	arbok	TRUE	A	5*
-23	arbok	TRUE	B	4*
-23	ekans	TRUE	C	1-2*
-23	ekans	TRUE	D	1-2*
-23	ekans	TRUE	E	2-3*
-23	arbok	TRUE	F	2-3*
-25	raichu	TRUE	A	5*
-25	pikachu	TRUE	B	4*
-25	pichu	TRUE	C	1-2*
-25	pichu	TRUE	D	1-2*
-25	pikachu	TRUE	E	2-3*
-25	pikachu	TRUE	F	2-3*
-27	sandslash	TRUE	A	5*
-27	sandslash	TRUE	B	4*
-27	sandshrew	TRUE	C	1-2*
-27	sandshrew	TRUE	D	1-2*
-27	sandshrew	TRUE	E	2-3*
-27	sandslash	TRUE	F	2-3*
-29	nidoqueen	TRUE	A	5*
-29	nidorina	TRUE	B	4*
-29	nidoran_f	TRUE	C	1-2*
-29	nidoran_f	TRUE	D	1-2*
-29	nidorina	TRUE	E	2-3*
-29	nidorina	TRUE	F	2-3*
-32	nidoking	TRUE	A	5*
-32	nidorino	TRUE	B	4*
-32	nidoran_m	TRUE	C	1-2*
-32	nidoran_m	TRUE	D	1-2*
-32	nidorino	TRUE	E	2-3*
-32	nidorino	TRUE	F	2-3*
-35	clefable	TRUE	A	5*
-35	clefairy	TRUE	B	4*
-35	cleffa	TRUE	C	1-2*
-35	cleffa	TRUE	D	1-2*
-35	clefairy	TRUE	E	2-3*
-35	clefairy	TRUE	F	2-3*
-37	ninetales	TRUE	A	5*
-37	ninetales	TRUE	B	4*
-37	vulpix	TRUE	C	1-2*
-37	vulpix	TRUE	D	1-2*
-37	vulpix	TRUE	E	2-3*
-37	ninetales	TRUE	F	2-3*
-39	wigglytuff	TRUE	A	5*
-39	jigglypuff	TRUE	B	4*
-39	igglybuff	TRUE	C	1-2*
-39	igglybuff	TRUE	D	1-2*
-39	jigglypuff	TRUE	E	2-3*
-39	jigglypuff	TRUE	F	2-3*
-41	crobat	TRUE	A	5*
-41	golbat	TRUE	B	4*
-41	zubat	TRUE	C	1-2*
-41	zubat	TRUE	D	1-2*
-41	golbat	TRUE	E	2-3*
-41	golbat	TRUE	F	2-3*
-43	bellossom	FALSE	A	5*
-43	vileplume	FALSE	B	5*
-43	gloom	FALSE	C	5*
-43	oddish	FALSE	D	5*
-43	oddish	FALSE	E	5*
-43	oddish	FALSE	F	5*
-46	parasect	TRUE	A	5*
-46	parasect	TRUE	B	4*
-46	paras	TRUE	C	1-2*
-46	paras	TRUE	D	1-2*
-46	paras	TRUE	E	2-3*
-46	parasect	TRUE	F	2-3*
-48	venomoth	TRUE	A	5*
-48	venomoth	TRUE	B	4*
-48	venonat	TRUE	C	1-2*
-48	venonat	TRUE	D	1-2*
-48	venonat	TRUE	E	2-3*
-48	venomoth	TRUE	F	2-3*
-50	dugtrio	TRUE	A	5*
-50	dugtrio	TRUE	B	4*
-50	diglett	TRUE	C	1-2*
-50	diglett	TRUE	D	1-2*
-50	diglett	TRUE	E	2-3*
-50	dugtrio	TRUE	F	2-3*
-52	persian	FALSE	A	5*
-52	meowth	FALSE	B	5*
-52	meowth	FALSE	C	5*
-52	meowth	FALSE	D	5*
-52	meowth	FALSE	E	5*
-52	meowth	FALSE	F	5*
-54	golduck	TRUE	A	5*
-54	golduck	TRUE	B	4*
-54	psyduck	TRUE	C	1-2*
-54	psyduck	TRUE	D	1-2*
-54	psyduck	TRUE	E	2-3*
-54	golduck	TRUE	F	2-3*
-56	annihilape	TRUE	A	5*
-56	primeape	TRUE	B	4*
-56	mankey	TRUE	C	1-2*
-56	mankey	TRUE	D	1-2*
-56	primeape	TRUE	E	2-3*
-56	primeape	TRUE	F	2-3*
-58	arcanine	TRUE	A	5*
-58	arcanine	TRUE	B	4*
-58	growlithe	TRUE	C	1-2*
-58	growlithe	TRUE	D	1-2*
-58	growlithe	TRUE	E	2-3*
-58	arcanine	TRUE	F	2-3*
-60	politoed	FALSE	A	5*
-60	poliwrath	FALSE	B	5*
-60	poliwhirl	FALSE	C	5*
-60	poliwag	FALSE	D	5*
-60	poliwag	FALSE	E	5*
-60	poliwag	FALSE	F	5*
-63	alakazam	TRUE	A	5*
-63	kadabra	TRUE	B	4*
-63	abra	TRUE	C	1-2*
-63	abra	TRUE	D	1-2*
-63	kadabra	TRUE	E	2-3*
-63	kadabra	TRUE	F	2-3*
-66	machamp	TRUE	A	5*
-66	machoke	TRUE	B	4*
-66	machop	TRUE	C	1-2*
-66	machop	TRUE	D	1-2*
-66	machoke	TRUE	E	2-3*
-66	machoke	TRUE	F	2-3*
-69	victreebel	TRUE	A	5*
-69	weepinbell	TRUE	B	4*
-69	bellsprout	TRUE	C	1-2*
-69	bellsprout	TRUE	D	1-2*
-69	weepinbell	TRUE	E	2-3*
-69	weepinbell	TRUE	F	2-3*
-72	tentacruel	TRUE	A	5*
-72	tentacruel	TRUE	B	4*
-72	tentacool	TRUE	C	1-2*
-72	tentacool	TRUE	D	1-2*
-72	tentacool	TRUE	E	2-3*
-72	tentacruel	TRUE	F	2-3*
-74	golem	TRUE	A	5*
-74	graveler	TRUE	B	4*
-74	geodude	TRUE	C	1-2*
-74	geodude	TRUE	D	1-2*
-74	graveler	TRUE	E	2-3*
-74	graveler	TRUE	F	2-3*
-77	rapidash	TRUE	A	5*
-77	rapidash	TRUE	B	4*
-77	ponyta	TRUE	C	1-2*
-77	ponyta	TRUE	D	1-2*
-77	ponyta	TRUE	E	2-3*
-77	rapidash	TRUE	F	2-3*
-79	slowking	FALSE	A	5*
-79	slowbro	FALSE	B	5*
-79	slowpoke	FALSE	C	5*
-79	slowpoke	FALSE	D	5*
-79	slowpoke	FALSE	E	5*
-79	slowpoke	FALSE	F	5*
-81	magnezone	TRUE	A	5*
-81	magneton	TRUE	B	4*
-81	magnemite	TRUE	C	1-2*
-81	magnemite	TRUE	D	1-2*
-81	magneton	TRUE	E	2-3*
-81	magneton	TRUE	F	2-3*
-83	sirfetchd	TRUE	A	5*
-83	sirfetchd	TRUE	B	4*
-83	farfetchd	TRUE	C	1-2*
-83	farfetchd	TRUE	D	1-2*
-83	farfetchd	TRUE	E	2-3*
-83	sirfetchd	TRUE	F	2-3*
-84	dodrio	TRUE	A	5*
-84	dodrio	TRUE	B	4*
-84	doduo	TRUE	C	1-2*
-84	doduo	TRUE	D	1-2*
-84	doduo	TRUE	E	2-3*
-84	dodrio	TRUE	F	2-3*
-86	dewgong	TRUE	A	5*
-86	dewgong	TRUE	B	4*
-86	seel	TRUE	C	1-2*
-86	seel	TRUE	D	1-2*
-86	seel	TRUE	E	2-3*
-86	dewgong	TRUE	F	2-3*
-88	muk	TRUE	A	5*
-88	muk	TRUE	B	4*
-88	grimer	TRUE	C	1-2*
-88	grimer	TRUE	D	1-2*
-88	grimer	TRUE	E	2-3*
-88	muk	TRUE	F	2-3*
-90	cloyster	TRUE	A	5*
-90	cloyster	TRUE	B	4*
-90	shellder	TRUE	C	1-2*
-90	shellder	TRUE	D	1-2*
-90	shellder	TRUE	E	2-3*
-90	cloyster	TRUE	F	2-3*
-92	gengar	TRUE	A	5*
-92	haunter	TRUE	B	4*
-92	gastly	TRUE	C	1-2*
-92	gastly	TRUE	D	1-2*
-92	haunter	TRUE	E	2-3*
-92	haunter	TRUE	F	2-3*
-95	steelix	TRUE	A	5*
-95	steelix	TRUE	B	4*
-95	onix	TRUE	C	1-2*
-95	onix	TRUE	D	1-2*
-95	onix	TRUE	E	2-3*
-95	steelix	TRUE	F	2-3*
-96	hypno	TRUE	A	5*
-96	hypno	TRUE	B	4*
-96	drowzee	TRUE	C	1-2*
-96	drowzee	TRUE	D	1-2*
-96	drowzee	TRUE	E	2-3*
-96	hypno	TRUE	F	2-3*
-98	kingler	TRUE	A	5*
-98	kingler	TRUE	B	4*
-98	krabby	TRUE	C	1-2*
-98	krabby	TRUE	D	1-2*
-98	krabby	TRUE	E	2-3*
-98	kingler	TRUE	F	2-3*
-100	electrode	TRUE	A	5*
-100	electrode	TRUE	B	4*
-100	voltorb	TRUE	C	1-2*
-100	voltorb	TRUE	D	1-2*
-100	voltorb	TRUE	E	2-3*
-100	electrode	TRUE	F	2-3*
-102	exeggutor	TRUE	A	5*
-102	exeggutor	TRUE	B	4*
-102	exeggcute	TRUE	C	1-2*
-102	exeggcute	TRUE	D	1-2*
-102	exeggcute	TRUE	E	2-3*
-102	exeggutor	TRUE	F	2-3*
-104	marowak	TRUE	A	5*
-104	marowak	TRUE	B	4*
-104	cubone	TRUE	C	1-2*
-104	cubone	TRUE	D	1-2*
-104	cubone	TRUE	E	2-3*
-104	marowak	TRUE	F	2-3*
-106	hitmontop	FALSE	A	5*
-106	hitmonchan	FALSE	B	5*
-106	hitmonlee	FALSE	C	5*
-106	tyrogue	FALSE	D	5*
-106	tyrogue	FALSE	E	5*
-106	tyrogue	FALSE	F	5*
-108	lickilicky	TRUE	A	5*
-108	lickilicky	TRUE	B	4*
-108	lickitung	TRUE	C	1-2*
-108	lickitung	TRUE	D	1-2*
-108	lickitung	TRUE	E	2-3*
-108	lickilicky	TRUE	F	2-3*
-109	weezing	TRUE	A	5*
-109	weezing	TRUE	B	4*
-109	koffing	TRUE	C	1-2*
-109	koffing	TRUE	D	1-2*
-109	koffing	TRUE	E	2-3*
-109	weezing	TRUE	F	2-3*
-111	rhyperior	TRUE	A	5*
-111	rhydon	TRUE	B	4*
-111	rhyhorn	TRUE	C	1-2*
-111	rhyhorn	TRUE	D	1-2*
-111	rhydon	TRUE	E	2-3*
-111	rhydon	TRUE	F	2-3*
-113	blissey	TRUE	A	5*
-113	chansey	TRUE	B	4*
-113	happiny	TRUE	C	1-2*
-113	happiny	TRUE	D	1-2*
-113	chansey	TRUE	E	2-3*
-113	chansey	TRUE	F	2-3*
-114	tangrowth	TRUE	A	5*
-114	tangrowth	TRUE	B	4*
-114	tangela	TRUE	C	1-2*
-114	tangela	TRUE	D	1-2*
-114	tangela	TRUE	E	2-3*
-114	tangrowth	TRUE	F	2-3*
-115	kangaskhan	FALSE	A	5*
-115	kangaskhan	FALSE	B	4*
-115	kangaskhan	FALSE	C	1-2*
-115	kangaskhan	FALSE	D	1-2*
-115	kangaskhan	FALSE	E	2-3*
-115	kangaskhan	FALSE	F	2-3*
-116	kingdra	TRUE	A	5*
-116	seadra	TRUE	B	4*
-116	horsea	TRUE	C	1-2*
-116	horsea	TRUE	D	1-2*
-116	seadra	TRUE	E	2-3*
-116	seadra	TRUE	F	2-3*
-118	seaking	TRUE	A	5*
-118	seaking	TRUE	B	4*
-118	goldeen	TRUE	C	1-2*
-118	goldeen	TRUE	D	1-2*
-118	goldeen	TRUE	E	2-3*
-118	seaking	TRUE	F	2-3*
-120	starmie	TRUE	A	5*
-120	starmie	TRUE	B	4*
-120	staryu	TRUE	C	1-2*
-120	staryu	TRUE	D	1-2*
-120	staryu	TRUE	E	2-3*
-120	starmie	TRUE	F	2-3*
-122	mr_mime	TRUE	A	5*
-122	mr_mime	TRUE	B	4*
-122	mime_jr	TRUE	C	1-2*
-122	mime_jr	TRUE	D	1-2*
-122	mime_jr	TRUE	E	2-3*
-122	mr_mime	TRUE	F	2-3*
-123	kleavor	FALSE	A	5*
-123	scizor	FALSE	B	5*
-123	scyther	FALSE	C	5*
-123	scyther	FALSE	D	5*
-123	scyther	FALSE	E	5*
-123	scyther	FALSE	F	5*
-124	jynx	TRUE	A	5*
-124	jynx	TRUE	B	4*
-124	smoochum	TRUE	C	1-2*
-124	smoochum	TRUE	D	1-2*
-124	smoochum	TRUE	E	2-3*
-124	jynx	TRUE	F	2-3*
-125	electivire	TRUE	A	5*
-125	electabuzz	TRUE	B	4*
-125	elekid	TRUE	C	1-2*
-125	elekid	TRUE	D	1-2*
-125	electabuzz	TRUE	E	2-3*
-125	electabuzz	TRUE	F	2-3*
-126	magmortar	TRUE	A	5*
-126	magmar	TRUE	B	4*
-126	magby	TRUE	C	1-2*
-126	magby	TRUE	D	1-2*
-126	magmar	TRUE	E	2-3*
-126	magmar	TRUE	F	2-3*
-127	pinsir	FALSE	A	5*
-127	pinsir	FALSE	B	4*
-127	pinsir	FALSE	C	1-2*
-127	pinsir	FALSE	D	1-2*
-127	pinsir	FALSE	E	2-3*
-127	pinsir	FALSE	F	2-3*
-128	tauros	FALSE	A	5*
-128	tauros	FALSE	B	4*
-128	tauros	FALSE	C	1-2*
-128	tauros	FALSE	D	1-2*
-128	tauros	FALSE	E	2-3*
-128	tauros	FALSE	F	2-3*
-129	gyarados	TRUE	A	5*
-129	gyarados	TRUE	B	4*
-129	magikarp	TRUE	C	1-2*
-129	magikarp	TRUE	D	1-2*
-129	magikarp	TRUE	E	2-3*
-129	gyarados	TRUE	F	2-3*
-131	lapras	FALSE	A	5*
-131	lapras	FALSE	B	4*
-131	lapras	FALSE	C	1-2*
-131	lapras	FALSE	D	1-2*
-131	lapras	FALSE	E	2-3*
-131	lapras	FALSE	F	2-3*
-132	ditto	FALSE	A	5*
-132	ditto	FALSE	B	4*
-132	ditto	FALSE	C	1-2*
-132	ditto	FALSE	D	1-2*
-132	ditto	FALSE	E	2-3*
-132	ditto	FALSE	F	2-3*
-133	sylveon	FALSE	A	5*
-133	glaceon	FALSE	B	5*
-133	leafeon	FALSE	C	5*
-133	umbreon	FALSE	D	5*
-133	espeon	FALSE	E	5*
-133	flareon	FALSE	F	5*
-137	porygon_z	TRUE	A	5*
-137	porygon2	TRUE	B	4*
-137	porygon	TRUE	C	1-2*
-137	porygon	TRUE	D	1-2*
-137	porygon2	TRUE	E	2-3*
-137	porygon2	TRUE	F	2-3*
-138	omastar	TRUE	A	5*
-138	omastar	TRUE	B	4*
-138	omanyte	TRUE	C	1-2*
-138	omanyte	TRUE	D	1-2*
-138	omanyte	TRUE	E	2-3*
-138	omastar	TRUE	F	2-3*
-140	kabutops	TRUE	A	5*
-140	kabutops	TRUE	B	4*
-140	kabuto	TRUE	C	1-2*
-140	kabuto	TRUE	D	1-2*
-140	kabuto	TRUE	E	2-3*
-140	kabutops	TRUE	F	2-3*
-142	aerodactyl	FALSE	A	5*
-142	aerodactyl	FALSE	B	4*
-142	aerodactyl	FALSE	C	1-2*
-142	aerodactyl	FALSE	D	1-2*
-142	aerodactyl	FALSE	E	2-3*
-142	aerodactyl	FALSE	F	2-3*
-143	snorlax	TRUE	A	5*
-143	snorlax	TRUE	B	4*
-143	munchlax	TRUE	C	1-2*
-143	munchlax	TRUE	D	1-2*
-143	munchlax	TRUE	E	2-3*
-143	snorlax	TRUE	F	2-3*
-144	articuno	FALSE	A	5*
-144	articuno	FALSE	B	4*
-144	articuno	FALSE	C	1-2*
-144	articuno	FALSE	D	1-2*
-144	articuno	FALSE	E	2-3*
-144	articuno	FALSE	F	2-3*
-145	zapdos	FALSE	A	5*
-145	zapdos	FALSE	B	4*
-145	zapdos	FALSE	C	1-2*
-145	zapdos	FALSE	D	1-2*
-145	zapdos	FALSE	E	2-3*
-145	zapdos	FALSE	F	2-3*
-146	moltres	FALSE	A	5*
-146	moltres	FALSE	B	4*
-146	moltres	FALSE	C	1-2*
-146	moltres	FALSE	D	1-2*
-146	moltres	FALSE	E	2-3*
-146	moltres	FALSE	F	2-3*
-147	dragonite	TRUE	A	5*
-147	dragonair	TRUE	B	4*
-147	dratini	TRUE	C	1-2*
-147	dratini	TRUE	D	1-2*
-147	dragonair	TRUE	E	2-3*
-147	dragonair	TRUE	F	2-3*
-150	mewtwo	FALSE	A	5*
-150	mewtwo	FALSE	B	4*
-150	mewtwo	FALSE	C	1-2*
-150	mewtwo	FALSE	D	1-2*
-150	mewtwo	FALSE	E	2-3*
-150	mewtwo	FALSE	F	2-3*
-151	mew	FALSE	A	5*
-151	mew	FALSE	B	4*
-151	mew	FALSE	C	1-2*
-151	mew	FALSE	D	1-2*
-151	mew	FALSE	E	2-3*
-151	mew	FALSE	F	2-3*
-152	meganium	TRUE	A	5*
-152	bayleef	TRUE	B	4*
-152	chikorita	TRUE	C	1-2*
-152	chikorita	TRUE	D	1-2*
-152	bayleef	TRUE	E	2-3*
-152	bayleef	TRUE	F	2-3*
-155	typhlosion	TRUE	A	5*
-155	quilava	TRUE	B	4*
-155	cyndaquil	TRUE	C	1-2*
-155	cyndaquil	TRUE	D	1-2*
-155	quilava	TRUE	E	2-3*
-155	quilava	TRUE	F	2-3*
-158	feraligatr	TRUE	A	5*
-158	croconaw	TRUE	B	4*
-158	totodile	TRUE	C	1-2*
-158	totodile	TRUE	D	1-2*
-158	croconaw	TRUE	E	2-3*
-158	croconaw	TRUE	F	2-3*
-161	furret	TRUE	A	5*
-161	furret	TRUE	B	4*
-161	sentret	TRUE	C	1-2*
-161	sentret	TRUE	D	1-2*
-161	sentret	TRUE	E	2-3*
-161	furret	TRUE	F	2-3*
-163	noctowl	TRUE	A	5*
-163	noctowl	TRUE	B	4*
-163	hoothoot	TRUE	C	1-2*
-163	hoothoot	TRUE	D	1-2*
-163	hoothoot	TRUE	E	2-3*
-163	noctowl	TRUE	F	2-3*
-165	ledian	TRUE	A	5*
-165	ledian	TRUE	B	4*
-165	ledyba	TRUE	C	1-2*
-165	ledyba	TRUE	D	1-2*
-165	ledyba	TRUE	E	2-3*
-165	ledian	TRUE	F	2-3*
-167	ariados	TRUE	A	5*
-167	ariados	TRUE	B	4*
-167	spinarak	TRUE	C	1-2*
-167	spinarak	TRUE	D	1-2*
-167	spinarak	TRUE	E	2-3*
-167	ariados	TRUE	F	2-3*
-170	lanturn	TRUE	A	5*
-170	lanturn	TRUE	B	4*
-170	chinchou	TRUE	C	1-2*
-170	chinchou	TRUE	D	1-2*
-170	chinchou	TRUE	E	2-3*
-170	lanturn	TRUE	F	2-3*
-175	togekiss	TRUE	A	5*
-175	togetic	TRUE	B	4*
-175	togepi	TRUE	C	1-2*
-175	togepi	TRUE	D	1-2*
-175	togetic	TRUE	E	2-3*
-175	togetic	TRUE	F	2-3*
-177	xatu	TRUE	A	5*
-177	xatu	TRUE	B	4*
-177	natu	TRUE	C	1-2*
-177	natu	TRUE	D	1-2*
-177	natu	TRUE	E	2-3*
-177	xatu	TRUE	F	2-3*
-179	ampharos	TRUE	A	5*
-179	flaaffy	TRUE	B	4*
-179	mareep	TRUE	C	1-2*
-179	mareep	TRUE	D	1-2*
-179	flaaffy	TRUE	E	2-3*
-179	flaaffy	TRUE	F	2-3*
-183	azumarill	TRUE	A	5*
-183	marill	TRUE	B	4*
-183	azurill	TRUE	C	1-2*
-183	azurill	TRUE	D	1-2*
-183	marill	TRUE	E	2-3*
-183	marill	TRUE	F	2-3*
-185	sudowoodo	TRUE	A	5*
-185	sudowoodo	TRUE	B	4*
-185	bonsly	TRUE	C	1-2*
-185	bonsly	TRUE	D	1-2*
-185	bonsly	TRUE	E	2-3*
-185	sudowoodo	TRUE	F	2-3*
-187	jumpluff	TRUE	A	5*
-187	skiploom	TRUE	B	4*
-187	hoppip	TRUE	C	1-2*
-187	hoppip	TRUE	D	1-2*
-187	skiploom	TRUE	E	2-3*
-187	skiploom	TRUE	F	2-3*
-190	ambipom	TRUE	A	5*
-190	ambipom	TRUE	B	4*
-190	aipom	TRUE	C	1-2*
-190	aipom	TRUE	D	1-2*
-190	aipom	TRUE	E	2-3*
-190	ambipom	TRUE	F	2-3*
-191	sunflora	TRUE	A	5*
-191	sunflora	TRUE	B	4*
-191	sunkern	TRUE	C	1-2*
-191	sunkern	TRUE	D	1-2*
-191	sunkern	TRUE	E	2-3*
-191	sunflora	TRUE	F	2-3*
-193	yanmega	TRUE	A	5*
-193	yanmega	TRUE	B	4*
-193	yanma	TRUE	C	1-2*
-193	yanma	TRUE	D	1-2*
-193	yanma	TRUE	E	2-3*
-193	yanmega	TRUE	F	2-3*
-194	clodsire	FALSE	A	5*
-194	quagsire	FALSE	B	5*
-194	wooper	FALSE	C	5*
-194	wooper	FALSE	D	5*
-194	wooper	FALSE	E	5*
-194	wooper	FALSE	F	5*
-198	honchkrow	TRUE	A	5*
-198	honchkrow	TRUE	B	4*
-198	murkrow	TRUE	C	1-2*
-198	murkrow	TRUE	D	1-2*
-198	murkrow	TRUE	E	2-3*
-198	honchkrow	TRUE	F	2-3*
-200	mismagius	TRUE	A	5*
-200	mismagius	TRUE	B	4*
-200	misdreavus	TRUE	C	1-2*
-200	misdreavus	TRUE	D	1-2*
-200	misdreavus	TRUE	E	2-3*
-200	mismagius	TRUE	F	2-3*
-201	unown	FALSE	A	5*
-201	unown	FALSE	B	4*
-201	unown	FALSE	C	1-2*
-201	unown	FALSE	D	1-2*
-201	unown	FALSE	E	2-3*
-201	unown	FALSE	F	2-3*
-202	wobbuffet	TRUE	A	5*
-202	wobbuffet	TRUE	B	4*
-202	wynaut	TRUE	C	1-2*
-202	wynaut	TRUE	D	1-2*
-202	wynaut	TRUE	E	2-3*
-202	wobbuffet	TRUE	F	2-3*
-203	farigiraf	TRUE	A	5*
-203	farigiraf	TRUE	B	4*
-203	girafarig	TRUE	C	1-2*
-203	girafarig	TRUE	D	1-2*
-203	girafarig	TRUE	E	2-3*
-203	farigiraf	TRUE	F	2-3*
-204	forretress	TRUE	A	5*
-204	forretress	TRUE	B	4*
-204	pineco	TRUE	C	1-2*
-204	pineco	TRUE	D	1-2*
-204	pineco	TRUE	E	2-3*
-204	forretress	TRUE	F	2-3*
-206	dunsparce	FALSE	A	5*
-206	dunsparce	FALSE	B	4*
-206	dunsparce	FALSE	C	1-2*
-206	dunsparce	FALSE	D	1-2*
-206	dunsparce	FALSE	E	2-3*
-206	dunsparce	FALSE	F	2-3*
-207	gliscor	TRUE	A	5*
-207	gliscor	TRUE	B	4*
-207	gligar	TRUE	C	1-2*
-207	gligar	TRUE	D	1-2*
-207	gligar	TRUE	E	2-3*
-207	gliscor	TRUE	F	2-3*
-209	granbull	TRUE	A	5*
-209	granbull	TRUE	B	4*
-209	snubbull	TRUE	C	1-2*
-209	snubbull	TRUE	D	1-2*
-209	snubbull	TRUE	E	2-3*
-209	granbull	TRUE	F	2-3*
-211	overqwil	TRUE	A	5*
-211	overqwil	TRUE	B	4*
-211	qwilfish	TRUE	C	1-2*
-211	qwilfish	TRUE	D	1-2*
-211	qwilfish	TRUE	E	2-3*
-211	overqwil	TRUE	F	2-3*
-213	shuckle	FALSE	A	5*
-213	shuckle	FALSE	B	4*
-213	shuckle	FALSE	C	1-2*
-213	shuckle	FALSE	D	1-2*
-213	shuckle	FALSE	E	2-3*
-213	shuckle	FALSE	F	2-3*
-214	heracross	FALSE	A	5*
-214	heracross	FALSE	B	4*
-214	heracross	FALSE	C	1-2*
-214	heracross	FALSE	D	1-2*
-214	heracross	FALSE	E	2-3*
-214	heracross	FALSE	F	2-3*
-215	sneasler	FALSE	A	5*
-215	weavile	FALSE	B	5*
-215	sneasel	FALSE	C	5*
-215	sneasel	FALSE	D	5*
-215	sneasel	FALSE	E	5*
-215	sneasel	FALSE	F	5*
-216	ursaluna	TRUE	A	5*
-216	ursaring	TRUE	B	4*
-216	teddiursa	TRUE	C	1-2*
-216	teddiursa	TRUE	D	1-2*
-216	ursaring	TRUE	E	2-3*
-216	ursaring	TRUE	F	2-3*
-218	magcargo	TRUE	A	5*
-218	magcargo	TRUE	B	4*
-218	slugma	TRUE	C	1-2*
-218	slugma	TRUE	D	1-2*
-218	slugma	TRUE	E	2-3*
-218	magcargo	TRUE	F	2-3*
-220	mamoswine	TRUE	A	5*
-220	piloswine	TRUE	B	4*
-220	swinub	TRUE	C	1-2*
-220	swinub	TRUE	D	1-2*
-220	piloswine	TRUE	E	2-3*
-220	piloswine	TRUE	F	2-3*
-222	corsola	FALSE	A	5*
-222	corsola	FALSE	B	4*
-222	corsola	FALSE	C	1-2*
-222	corsola	FALSE	D	1-2*
-222	corsola	FALSE	E	2-3*
-222	corsola	FALSE	F	2-3*
-223	octillery	TRUE	A	5*
-223	octillery	TRUE	B	4*
-223	remoraid	TRUE	C	1-2*
-223	remoraid	TRUE	D	1-2*
-223	remoraid	TRUE	E	2-3*
-223	octillery	TRUE	F	2-3*
-225	delibird	FALSE	A	5*
-225	delibird	FALSE	B	4*
-225	delibird	FALSE	C	1-2*
-225	delibird	FALSE	D	1-2*
-225	delibird	FALSE	E	2-3*
-225	delibird	FALSE	F	2-3*
-226	mantine	TRUE	A	5*
-226	mantine	TRUE	B	4*
-226	mantyke	TRUE	C	1-2*
-226	mantyke	TRUE	D	1-2*
-226	mantyke	TRUE	E	2-3*
-226	mantine	TRUE	F	2-3*
-227	skarmory	FALSE	A	5*
-227	skarmory	FALSE	B	4*
-227	skarmory	FALSE	C	1-2*
-227	skarmory	FALSE	D	1-2*
-227	skarmory	FALSE	E	2-3*
-227	skarmory	FALSE	F	2-3*
-228	houndoom	TRUE	A	5*
-228	houndoom	TRUE	B	4*
-228	houndour	TRUE	C	1-2*
-228	houndour	TRUE	D	1-2*
-228	houndour	TRUE	E	2-3*
-228	houndoom	TRUE	F	2-3*
-231	donphan	TRUE	A	5*
-231	donphan	TRUE	B	4*
-231	phanpy	TRUE	C	1-2*
-231	phanpy	TRUE	D	1-2*
-231	phanpy	TRUE	E	2-3*
-231	donphan	TRUE	F	2-3*
-234	stantler	FALSE	A	5*
-234	stantler	FALSE	B	4*
-234	stantler	FALSE	C	1-2*
-234	stantler	FALSE	D	1-2*
-234	stantler	FALSE	E	2-3*
-234	stantler	FALSE	F	2-3*
-235	smeargle	FALSE	A	5*
-235	smeargle	FALSE	B	4*
-235	smeargle	FALSE	C	1-2*
-235	smeargle	FALSE	D	1-2*
-235	smeargle	FALSE	E	2-3*
-235	smeargle	FALSE	F	2-3*
-241	miltank	FALSE	A	5*
-241	miltank	FALSE	B	4*
-241	miltank	FALSE	C	1-2*
-241	miltank	FALSE	D	1-2*
-241	miltank	FALSE	E	2-3*
-241	miltank	FALSE	F	2-3*
-243	raikou	FALSE	A	5*
-243	raikou	FALSE	B	4*
-243	raikou	FALSE	C	1-2*
-243	raikou	FALSE	D	1-2*
-243	raikou	FALSE	E	2-3*
-243	raikou	FALSE	F	2-3*
-244	entei	FALSE	A	5*
-244	entei	FALSE	B	4*
-244	entei	FALSE	C	1-2*
-244	entei	FALSE	D	1-2*
-244	entei	FALSE	E	2-3*
-244	entei	FALSE	F	2-3*
-245	suicune	FALSE	A	5*
-245	suicune	FALSE	B	4*
-245	suicune	FALSE	C	1-2*
-245	suicune	FALSE	D	1-2*
-245	suicune	FALSE	E	2-3*
-245	suicune	FALSE	F	2-3*
-246	tyranitar	TRUE	A	5*
-246	pupitar	TRUE	B	4*
-246	larvitar	TRUE	C	1-2*
-246	larvitar	TRUE	D	1-2*
-246	pupitar	TRUE	E	2-3*
-246	pupitar	TRUE	F	2-3*
-249	lugia	FALSE	A	5*
-249	lugia	FALSE	B	4*
-249	lugia	FALSE	C	1-2*
-249	lugia	FALSE	D	1-2*
-249	lugia	FALSE	E	2-3*
-249	lugia	FALSE	F	2-3*
-250	ho_oh	FALSE	A	5*
-250	ho_oh	FALSE	B	4*
-250	ho_oh	FALSE	C	1-2*
-250	ho_oh	FALSE	D	1-2*
-250	ho_oh	FALSE	E	2-3*
-250	ho_oh	FALSE	F	2-3*
-251	celebi	FALSE	A	5*
-251	celebi	FALSE	B	4*
-251	celebi	FALSE	C	1-2*
-251	celebi	FALSE	D	1-2*
-251	celebi	FALSE	E	2-3*
-251	celebi	FALSE	F	2-3*
-252	sceptile	TRUE	A	5*
-252	grovyle	TRUE	B	4*
-252	treecko	TRUE	C	1-2*
-252	treecko	TRUE	D	1-2*
-252	grovyle	TRUE	E	2-3*
-252	grovyle	TRUE	F	2-3*
-255	blaziken	TRUE	A	5*
-255	combusken	TRUE	B	4*
-255	torchic	TRUE	C	1-2*
-255	torchic	TRUE	D	1-2*
-255	combusken	TRUE	E	2-3*
-255	combusken	TRUE	F	2-3*
-258	swampert	TRUE	A	5*
-258	marshtomp	TRUE	B	4*
-258	mudkip	TRUE	C	1-2*
-258	mudkip	TRUE	D	1-2*
-258	marshtomp	TRUE	E	2-3*
-258	marshtomp	TRUE	F	2-3*
-261	mightyena	TRUE	A	5*
-261	mightyena	TRUE	B	4*
-261	poochyena	TRUE	C	1-2*
-261	poochyena	TRUE	D	1-2*
-261	poochyena	TRUE	E	2-3*
-261	mightyena	TRUE	F	2-3*
-263	obstagoon	TRUE	A	5*
-263	linoone	TRUE	B	4*
-263	zigzagoon	TRUE	C	1-2*
-263	zigzagoon	TRUE	D	1-2*
-263	linoone	TRUE	E	2-3*
-263	linoone	TRUE	F	2-3*
-265	dustox	FALSE	A	5*
-265	cascoon	FALSE	B	5*
-265	beautifly	FALSE	C	5*
-265	silcoon	FALSE	D	5*
-265	wurmple	FALSE	E	5*
-265	wurmple	FALSE	F	5*
-270	ludicolo	TRUE	A	5*
-270	lombre	TRUE	B	4*
-270	lotad	TRUE	C	1-2*
-270	lotad	TRUE	D	1-2*
-270	lombre	TRUE	E	2-3*
-270	lombre	TRUE	F	2-3*
-273	shiftry	TRUE	A	5*
-273	nuzleaf	TRUE	B	4*
-273	seedot	TRUE	C	1-2*
-273	seedot	TRUE	D	1-2*
-273	nuzleaf	TRUE	E	2-3*
-273	nuzleaf	TRUE	F	2-3*
-276	swellow	TRUE	A	5*
-276	swellow	TRUE	B	4*
-276	taillow	TRUE	C	1-2*
-276	taillow	TRUE	D	1-2*
-276	taillow	TRUE	E	2-3*
-276	swellow	TRUE	F	2-3*
-278	pelipper	TRUE	A	5*
-278	pelipper	TRUE	B	4*
-278	wingull	TRUE	C	1-2*
-278	wingull	TRUE	D	1-2*
-278	wingull	TRUE	E	2-3*
-278	pelipper	TRUE	F	2-3*
-280	gallade	FALSE	A	5*
-280	gardevoir	FALSE	B	5*
-280	kirlia	FALSE	C	5*
-280	ralts	FALSE	D	5*
-280	ralts	FALSE	E	5*
-280	ralts	FALSE	F	5*
-283	masquerain	TRUE	A	5*
-283	masquerain	TRUE	B	4*
-283	surskit	TRUE	C	1-2*
-283	surskit	TRUE	D	1-2*
-283	surskit	TRUE	E	2-3*
-283	masquerain	TRUE	F	2-3*
-285	breloom	TRUE	A	5*
-285	breloom	TRUE	B	4*
-285	shroomish	TRUE	C	1-2*
-285	shroomish	TRUE	D	1-2*
-285	shroomish	TRUE	E	2-3*
-285	breloom	TRUE	F	2-3*
-287	slaking	TRUE	A	5*
-287	vigoroth	TRUE	B	4*
-287	slakoth	TRUE	C	1-2*
-287	slakoth	TRUE	D	1-2*
-287	vigoroth	TRUE	E	2-3*
-287	vigoroth	TRUE	F	2-3*
-290	ninjask	TRUE	A	5*
-290	ninjask	TRUE	B	4*
-290	nincada	TRUE	C	1-2*
-290	nincada	TRUE	D	1-2*
-290	nincada	TRUE	E	2-3*
-290	ninjask	TRUE	F	2-3*
-290	ninjask	TRUE	A	5*
-290	ninjask	TRUE	B	4*
-290	nincada	TRUE	C	1-2*
-290	nincada	TRUE	D	1-2*
-290	nincada	TRUE	E	2-3*
-290	ninjask	TRUE	F	2-3*
-293	exploud	TRUE	A	5*
-293	loudred	TRUE	B	4*
-293	whismur	TRUE	C	1-2*
-293	whismur	TRUE	D	1-2*
-293	loudred	TRUE	E	2-3*
-293	loudred	TRUE	F	2-3*
-296	hariyama	TRUE	A	5*
-296	hariyama	TRUE	B	4*
-296	makuhita	TRUE	C	1-2*
-296	makuhita	TRUE	D	1-2*
-296	makuhita	TRUE	E	2-3*
-296	hariyama	TRUE	F	2-3*
-299	probopass	TRUE	A	5*
-299	probopass	TRUE	B	4*
-299	nosepass	TRUE	C	1-2*
-299	nosepass	TRUE	D	1-2*
-299	nosepass	TRUE	E	2-3*
-299	probopass	TRUE	F	2-3*
-300	delcatty	TRUE	A	5*
-300	delcatty	TRUE	B	4*
-300	skitty	TRUE	C	1-2*
-300	skitty	TRUE	D	1-2*
-300	skitty	TRUE	E	2-3*
-300	delcatty	TRUE	F	2-3*
-302	sableye	FALSE	A	5*
-302	sableye	FALSE	B	4*
-302	sableye	FALSE	C	1-2*
-302	sableye	FALSE	D	1-2*
-302	sableye	FALSE	E	2-3*
-302	sableye	FALSE	F	2-3*
-303	mawile	FALSE	A	5*
-303	mawile	FALSE	B	4*
-303	mawile	FALSE	C	1-2*
-303	mawile	FALSE	D	1-2*
-303	mawile	FALSE	E	2-3*
-303	mawile	FALSE	F	2-3*
-304	aggron	TRUE	A	5*
-304	lairon	TRUE	B	4*
-304	aron	TRUE	C	1-2*
-304	aron	TRUE	D	1-2*
-304	lairon	TRUE	E	2-3*
-304	lairon	TRUE	F	2-3*
-307	medicham	TRUE	A	5*
-307	medicham	TRUE	B	4*
-307	meditite	TRUE	C	1-2*
-307	meditite	TRUE	D	1-2*
-307	meditite	TRUE	E	2-3*
-307	medicham	TRUE	F	2-3*
-309	manectric	TRUE	A	5*
-309	manectric	TRUE	B	4*
-309	electrike	TRUE	C	1-2*
-309	electrike	TRUE	D	1-2*
-309	electrike	TRUE	E	2-3*
-309	manectric	TRUE	F	2-3*
-311	plusle	FALSE	A	5*
-311	plusle	FALSE	B	4*
-311	plusle	FALSE	C	1-2*
-311	plusle	FALSE	D	1-2*
-311	plusle	FALSE	E	2-3*
-311	plusle	FALSE	F	2-3*
-312	minun	FALSE	A	5*
-312	minun	FALSE	B	4*
-312	minun	FALSE	C	1-2*
-312	minun	FALSE	D	1-2*
-312	minun	FALSE	E	2-3*
-312	minun	FALSE	F	2-3*
-313	volbeat	FALSE	A	5*
-313	volbeat	FALSE	B	4*
-313	volbeat	FALSE	C	1-2*
-313	volbeat	FALSE	D	1-2*
-313	volbeat	FALSE	E	2-3*
-313	volbeat	FALSE	F	2-3*
-314	illumise	FALSE	A	5*
-314	illumise	FALSE	B	4*
-314	illumise	FALSE	C	1-2*
-314	illumise	FALSE	D	1-2*
-314	illumise	FALSE	E	2-3*
-314	illumise	FALSE	F	2-3*
-315	roserade	TRUE	A	5*
-315	roselia	TRUE	B	4*
-315	budew	TRUE	C	1-2*
-315	budew	TRUE	D	1-2*
-315	roselia	TRUE	E	2-3*
-315	roselia	TRUE	F	2-3*
-316	swalot	TRUE	A	5*
-316	swalot	TRUE	B	4*
-316	gulpin	TRUE	C	1-2*
-316	gulpin	TRUE	D	1-2*
-316	gulpin	TRUE	E	2-3*
-316	swalot	TRUE	F	2-3*
-318	sharpedo	TRUE	A	5*
-318	sharpedo	TRUE	B	4*
-318	carvanha	TRUE	C	1-2*
-318	carvanha	TRUE	D	1-2*
-318	carvanha	TRUE	E	2-3*
-318	sharpedo	TRUE	F	2-3*
-320	wailord	TRUE	A	5*
-320	wailord	TRUE	B	4*
-320	wailmer	TRUE	C	1-2*
-320	wailmer	TRUE	D	1-2*
-320	wailmer	TRUE	E	2-3*
-320	wailord	TRUE	F	2-3*
-322	camerupt	TRUE	A	5*
-322	camerupt	TRUE	B	4*
-322	numel	TRUE	C	1-2*
-322	numel	TRUE	D	1-2*
-322	numel	TRUE	E	2-3*
-322	camerupt	TRUE	F	2-3*
-324	torkoal	FALSE	A	5*
-324	torkoal	FALSE	B	4*
-324	torkoal	FALSE	C	1-2*
-324	torkoal	FALSE	D	1-2*
-324	torkoal	FALSE	E	2-3*
-324	torkoal	FALSE	F	2-3*
-325	grumpig	TRUE	A	5*
-325	grumpig	TRUE	B	4*
-325	spoink	TRUE	C	1-2*
-325	spoink	TRUE	D	1-2*
-325	spoink	TRUE	E	2-3*
-325	grumpig	TRUE	F	2-3*
-327	spinda	FALSE	A	5*
-327	spinda	FALSE	B	4*
-327	spinda	FALSE	C	1-2*
-327	spinda	FALSE	D	1-2*
-327	spinda	FALSE	E	2-3*
-327	spinda	FALSE	F	2-3*
-328	flygon	TRUE	A	5*
-328	vibrava	TRUE	B	4*
-328	trapinch	TRUE	C	1-2*
-328	trapinch	TRUE	D	1-2*
-328	vibrava	TRUE	E	2-3*
-328	vibrava	TRUE	F	2-3*
-331	cacturne	TRUE	A	5*
-331	cacturne	TRUE	B	4*
-331	cacnea	TRUE	C	1-2*
-331	cacnea	TRUE	D	1-2*
-331	cacnea	TRUE	E	2-3*
-331	cacturne	TRUE	F	2-3*
-333	altaria	TRUE	A	5*
-333	altaria	TRUE	B	4*
-333	swablu	TRUE	C	1-2*
-333	swablu	TRUE	D	1-2*
-333	swablu	TRUE	E	2-3*
-333	altaria	TRUE	F	2-3*
-335	zangoose	FALSE	A	5*
-335	zangoose	FALSE	B	4*
-335	zangoose	FALSE	C	1-2*
-335	zangoose	FALSE	D	1-2*
-335	zangoose	FALSE	E	2-3*
-335	zangoose	FALSE	F	2-3*
-336	seviper	FALSE	A	5*
-336	seviper	FALSE	B	4*
-336	seviper	FALSE	C	1-2*
-336	seviper	FALSE	D	1-2*
-336	seviper	FALSE	E	2-3*
-336	seviper	FALSE	F	2-3*
-337	lunatone	FALSE	A	5*
-337	lunatone	FALSE	B	4*
-337	lunatone	FALSE	C	1-2*
-337	lunatone	FALSE	D	1-2*
-337	lunatone	FALSE	E	2-3*
-337	lunatone	FALSE	F	2-3*
-338	solrock	FALSE	A	5*
-338	solrock	FALSE	B	4*
-338	solrock	FALSE	C	1-2*
-338	solrock	FALSE	D	1-2*
-338	solrock	FALSE	E	2-3*
-338	solrock	FALSE	F	2-3*
-339	whiscash	TRUE	A	5*
-339	whiscash	TRUE	B	4*
-339	barboach	TRUE	C	1-2*
-339	barboach	TRUE	D	1-2*
-339	barboach	TRUE	E	2-3*
-339	whiscash	TRUE	F	2-3*
-341	crawdaunt	TRUE	A	5*
-341	crawdaunt	TRUE	B	4*
-341	corphish	TRUE	C	1-2*
-341	corphish	TRUE	D	1-2*
-341	corphish	TRUE	E	2-3*
-341	crawdaunt	TRUE	F	2-3*
-343	claydol	TRUE	A	5*
-343	claydol	TRUE	B	4*
-343	baltoy	TRUE	C	1-2*
-343	baltoy	TRUE	D	1-2*
-343	baltoy	TRUE	E	2-3*
-343	claydol	TRUE	F	2-3*
-345	cradily	TRUE	A	5*
-345	cradily	TRUE	B	4*
-345	lileep	TRUE	C	1-2*
-345	lileep	TRUE	D	1-2*
-345	lileep	TRUE	E	2-3*
-345	cradily	TRUE	F	2-3*
-347	armaldo	TRUE	A	5*
-347	armaldo	TRUE	B	4*
-347	anorith	TRUE	C	1-2*
-347	anorith	TRUE	D	1-2*
-347	anorith	TRUE	E	2-3*
-347	armaldo	TRUE	F	2-3*
-349	milotic	TRUE	A	5*
-349	milotic	TRUE	B	4*
-349	feebas	TRUE	C	1-2*
-349	feebas	TRUE	D	1-2*
-349	feebas	TRUE	E	2-3*
-349	milotic	TRUE	F	2-3*
-351	castform	FALSE	A	5*
-351	castform	FALSE	B	4*
-351	castform	FALSE	C	1-2*
-351	castform	FALSE	D	1-2*
-351	castform	FALSE	E	2-3*
-351	castform	FALSE	F	2-3*
-352	kecleon	FALSE	A	5*
-352	kecleon	FALSE	B	4*
-352	kecleon	FALSE	C	1-2*
-352	kecleon	FALSE	D	1-2*
-352	kecleon	FALSE	E	2-3*
-352	kecleon	FALSE	F	2-3*
-353	banette	TRUE	A	5*
-353	banette	TRUE	B	4*
-353	shuppet	TRUE	C	1-2*
-353	shuppet	TRUE	D	1-2*
-353	shuppet	TRUE	E	2-3*
-353	banette	TRUE	F	2-3*
-355	dusknoir	TRUE	A	5*
-355	dusclops	TRUE	B	4*
-355	duskull	TRUE	C	1-2*
-355	duskull	TRUE	D	1-2*
-355	dusclops	TRUE	E	2-3*
-355	dusclops	TRUE	F	2-3*
-357	tropius	FALSE	A	5*
-357	tropius	FALSE	B	4*
-357	tropius	FALSE	C	1-2*
-357	tropius	FALSE	D	1-2*
-357	tropius	FALSE	E	2-3*
-357	tropius	FALSE	F	2-3*
-358	chimecho	TRUE	A	5*
-358	chimecho	TRUE	B	4*
-358	chingling	TRUE	C	1-2*
-358	chingling	TRUE	D	1-2*
-358	chingling	TRUE	E	2-3*
-358	chimecho	TRUE	F	2-3*
-359	absol	FALSE	A	5*
-359	absol	FALSE	B	4*
-359	absol	FALSE	C	1-2*
-359	absol	FALSE	D	1-2*
-359	absol	FALSE	E	2-3*
-359	absol	FALSE	F	2-3*
-361	froslass	FALSE	A	5*
-361	glalie	FALSE	B	5*
-361	snorunt	FALSE	C	5*
-361	snorunt	FALSE	D	5*
-361	snorunt	FALSE	E	5*
-361	snorunt	FALSE	F	5*
-363	walrein	TRUE	A	5*
-363	sealeo	TRUE	B	4*
-363	spheal	TRUE	C	1-2*
-363	spheal	TRUE	D	1-2*
-363	sealeo	TRUE	E	2-3*
-363	sealeo	TRUE	F	2-3*
-366	gorebyss	FALSE	A	5*
-366	huntail	FALSE	B	5*
-366	clamperl	FALSE	C	5*
-366	clamperl	FALSE	D	5*
-366	clamperl	FALSE	E	5*
-366	clamperl	FALSE	F	5*
-369	relicanth	FALSE	A	5*
-369	relicanth	FALSE	B	4*
-369	relicanth	FALSE	C	1-2*
-369	relicanth	FALSE	D	1-2*
-369	relicanth	FALSE	E	2-3*
-369	relicanth	FALSE	F	2-3*
-370	luvdisc	FALSE	A	5*
-370	luvdisc	FALSE	B	4*
-370	luvdisc	FALSE	C	1-2*
-370	luvdisc	FALSE	D	1-2*
-370	luvdisc	FALSE	E	2-3*
-370	luvdisc	FALSE	F	2-3*
-371	salamence	TRUE	A	5*
-371	shelgon	TRUE	B	4*
-371	bagon	TRUE	C	1-2*
-371	bagon	TRUE	D	1-2*
-371	shelgon	TRUE	E	2-3*
-371	shelgon	TRUE	F	2-3*
-374	metagross	TRUE	A	5*
-374	metang	TRUE	B	4*
-374	beldum	TRUE	C	1-2*
-374	beldum	TRUE	D	1-2*
-374	metang	TRUE	E	2-3*
-374	metang	TRUE	F	2-3*
-377	regirock	FALSE	A	5*
-377	regirock	FALSE	B	4*
-377	regirock	FALSE	C	1-2*
-377	regirock	FALSE	D	1-2*
-377	regirock	FALSE	E	2-3*
-377	regirock	FALSE	F	2-3*
-378	regice	FALSE	A	5*
-378	regice	FALSE	B	4*
-378	regice	FALSE	C	1-2*
-378	regice	FALSE	D	1-2*
-378	regice	FALSE	E	2-3*
-378	regice	FALSE	F	2-3*
-379	registeel	FALSE	A	5*
-379	registeel	FALSE	B	4*
-379	registeel	FALSE	C	1-2*
-379	registeel	FALSE	D	1-2*
-379	registeel	FALSE	E	2-3*
-379	registeel	FALSE	F	2-3*
-380	latias	FALSE	A	5*
-380	latias	FALSE	B	4*
-380	latias	FALSE	C	1-2*
-380	latias	FALSE	D	1-2*
-380	latias	FALSE	E	2-3*
-380	latias	FALSE	F	2-3*
-381	latios	FALSE	A	5*
-381	latios	FALSE	B	4*
-381	latios	FALSE	C	1-2*
-381	latios	FALSE	D	1-2*
-381	latios	FALSE	E	2-3*
-381	latios	FALSE	F	2-3*
-382	kyogre	FALSE	A	5*
-382	kyogre	FALSE	B	4*
-382	kyogre	FALSE	C	1-2*
-382	kyogre	FALSE	D	1-2*
-382	kyogre	FALSE	E	2-3*
-382	kyogre	FALSE	F	2-3*
-383	groudon	FALSE	A	5*
-383	groudon	FALSE	B	4*
-383	groudon	FALSE	C	1-2*
-383	groudon	FALSE	D	1-2*
-383	groudon	FALSE	E	2-3*
-383	groudon	FALSE	F	2-3*
-384	rayquaza	FALSE	A	5*
-384	rayquaza	FALSE	B	4*
-384	rayquaza	FALSE	C	1-2*
-384	rayquaza	FALSE	D	1-2*
-384	rayquaza	FALSE	E	2-3*
-384	rayquaza	FALSE	F	2-3*
-385	jirachi	FALSE	A	5*
-385	jirachi	FALSE	B	4*
-385	jirachi	FALSE	C	1-2*
-385	jirachi	FALSE	D	1-2*
-385	jirachi	FALSE	E	2-3*
-385	jirachi	FALSE	F	2-3*
-386	deoxys	FALSE	A	5*
-386	deoxys	FALSE	B	4*
-386	deoxys	FALSE	C	1-2*
-386	deoxys	FALSE	D	1-2*
-386	deoxys	FALSE	E	2-3*
-386	deoxys	FALSE	F	2-3*
-387	torterra	TRUE	A	5*
-387	grotle	TRUE	B	4*
-387	turtwig	TRUE	C	1-2*
-387	turtwig	TRUE	D	1-2*
-387	grotle	TRUE	E	2-3*
-387	grotle	TRUE	F	2-3*
-390	infernape	TRUE	A	5*
-390	monferno	TRUE	B	4*
-390	chimchar	TRUE	C	1-2*
-390	chimchar	TRUE	D	1-2*
-390	monferno	TRUE	E	2-3*
-390	monferno	TRUE	F	2-3*
-393	empoleon	TRUE	A	5*
-393	prinplup	TRUE	B	4*
-393	piplup	TRUE	C	1-2*
-393	piplup	TRUE	D	1-2*
-393	prinplup	TRUE	E	2-3*
-393	prinplup	TRUE	F	2-3*
-396	staraptor	TRUE	A	5*
-396	staravia	TRUE	B	4*
-396	starly	TRUE	C	1-2*
-396	starly	TRUE	D	1-2*
-396	staravia	TRUE	E	2-3*
-396	staravia	TRUE	F	2-3*
-399	bibarel	TRUE	A	5*
-399	bibarel	TRUE	B	4*
-399	bidoof	TRUE	C	1-2*
-399	bidoof	TRUE	D	1-2*
-399	bidoof	TRUE	E	2-3*
-399	bibarel	TRUE	F	2-3*
-401	kricketune	TRUE	A	5*
-401	kricketune	TRUE	B	4*
-401	kricketot	TRUE	C	1-2*
-401	kricketot	TRUE	D	1-2*
-401	kricketot	TRUE	E	2-3*
-401	kricketune	TRUE	F	2-3*
-403	luxray	TRUE	A	5*
-403	luxio	TRUE	B	4*
-403	shinx	TRUE	C	1-2*
-403	shinx	TRUE	D	1-2*
-403	luxio	TRUE	E	2-3*
-403	luxio	TRUE	F	2-3*
-408	rampardos	TRUE	A	5*
-408	rampardos	TRUE	B	4*
-408	cranidos	TRUE	C	1-2*
-408	cranidos	TRUE	D	1-2*
-408	cranidos	TRUE	E	2-3*
-408	rampardos	TRUE	F	2-3*
-410	bastiodon	TRUE	A	5*
-410	bastiodon	TRUE	B	4*
-410	shieldon	TRUE	C	1-2*
-410	shieldon	TRUE	D	1-2*
-410	shieldon	TRUE	E	2-3*
-410	bastiodon	TRUE	F	2-3*
-412	mothim	FALSE	A	5*
-412	wormadam	FALSE	B	5*
-412	burmy	FALSE	C	5*
-412	burmy	FALSE	D	5*
-412	burmy	FALSE	E	5*
-412	burmy	FALSE	F	5*
-415	vespiquen	TRUE	A	5*
-415	vespiquen	TRUE	B	4*
-415	combee	TRUE	C	1-2*
-415	combee	TRUE	D	1-2*
-415	combee	TRUE	E	2-3*
-415	vespiquen	TRUE	F	2-3*
-417	pachirisu	FALSE	A	5*
-417	pachirisu	FALSE	B	4*
-417	pachirisu	FALSE	C	1-2*
-417	pachirisu	FALSE	D	1-2*
-417	pachirisu	FALSE	E	2-3*
-417	pachirisu	FALSE	F	2-3*
-418	floatzel	TRUE	A	5*
-418	floatzel	TRUE	B	4*
-418	buizel	TRUE	C	1-2*
-418	buizel	TRUE	D	1-2*
-418	buizel	TRUE	E	2-3*
-418	floatzel	TRUE	F	2-3*
-420	cherrim	TRUE	A	5*
-420	cherrim	TRUE	B	4*
-420	cherubi	TRUE	C	1-2*
-420	cherubi	TRUE	D	1-2*
-420	cherubi	TRUE	E	2-3*
-420	cherrim	TRUE	F	2-3*
-422	gastrodon	TRUE	A	5*
-422	gastrodon	TRUE	B	4*
-422	shellos	TRUE	C	1-2*
-422	shellos	TRUE	D	1-2*
-422	shellos	TRUE	E	2-3*
-422	gastrodon	TRUE	F	2-3*
-425	drifblim	TRUE	A	5*
-425	drifblim	TRUE	B	4*
-425	drifloon	TRUE	C	1-2*
-425	drifloon	TRUE	D	1-2*
-425	drifloon	TRUE	E	2-3*
-425	drifblim	TRUE	F	2-3*
-427	lopunny	TRUE	A	5*
-427	lopunny	TRUE	B	4*
-427	buneary	TRUE	C	1-2*
-427	buneary	TRUE	D	1-2*
-427	buneary	TRUE	E	2-3*
-427	lopunny	TRUE	F	2-3*
-431	purugly	TRUE	A	5*
-431	purugly	TRUE	B	4*
-431	glameow	TRUE	C	1-2*
-431	glameow	TRUE	D	1-2*
-431	glameow	TRUE	E	2-3*
-431	purugly	TRUE	F	2-3*
-434	skuntank	TRUE	A	5*
-434	skuntank	TRUE	B	4*
-434	stunky	TRUE	C	1-2*
-434	stunky	TRUE	D	1-2*
-434	stunky	TRUE	E	2-3*
-434	skuntank	TRUE	F	2-3*
-436	bronzong	TRUE	A	5*
-436	bronzong	TRUE	B	4*
-436	bronzor	TRUE	C	1-2*
-436	bronzor	TRUE	D	1-2*
-436	bronzor	TRUE	E	2-3*
-436	bronzong	TRUE	F	2-3*
-441	chatot	FALSE	A	5*
-441	chatot	FALSE	B	4*
-441	chatot	FALSE	C	1-2*
-441	chatot	FALSE	D	1-2*
-441	chatot	FALSE	E	2-3*
-441	chatot	FALSE	F	2-3*
-442	spiritomb	FALSE	A	5*
-442	spiritomb	FALSE	B	4*
-442	spiritomb	FALSE	C	1-2*
-442	spiritomb	FALSE	D	1-2*
-442	spiritomb	FALSE	E	2-3*
-442	spiritomb	FALSE	F	2-3*
-443	garchomp	TRUE	A	5*
-443	gabite	TRUE	B	4*
-443	gible	TRUE	C	1-2*
-443	gible	TRUE	D	1-2*
-443	gabite	TRUE	E	2-3*
-443	gabite	TRUE	F	2-3*
-447	lucario	TRUE	A	5*
-447	lucario	TRUE	B	4*
-447	riolu	TRUE	C	1-2*
-447	riolu	TRUE	D	1-2*
-447	riolu	TRUE	E	2-3*
-447	lucario	TRUE	F	2-3*
-449	hippowdon	TRUE	A	5*
-449	hippowdon	TRUE	B	4*
-449	hippopotas	TRUE	C	1-2*
-449	hippopotas	TRUE	D	1-2*
-449	hippopotas	TRUE	E	2-3*
-449	hippowdon	TRUE	F	2-3*
-451	drapion	TRUE	A	5*
-451	drapion	TRUE	B	4*
-451	skorupi	TRUE	C	1-2*
-451	skorupi	TRUE	D	1-2*
-451	skorupi	TRUE	E	2-3*
-451	drapion	TRUE	F	2-3*
-453	toxicroak	TRUE	A	5*
-453	toxicroak	TRUE	B	4*
-453	croagunk	TRUE	C	1-2*
-453	croagunk	TRUE	D	1-2*
-453	croagunk	TRUE	E	2-3*
-453	toxicroak	TRUE	F	2-3*
-455	carnivine	FALSE	A	5*
-455	carnivine	FALSE	B	4*
-455	carnivine	FALSE	C	1-2*
-455	carnivine	FALSE	D	1-2*
-455	carnivine	FALSE	E	2-3*
-455	carnivine	FALSE	F	2-3*
-456	lumineon	TRUE	A	5*
-456	lumineon	TRUE	B	4*
-456	finneon	TRUE	C	1-2*
-456	finneon	TRUE	D	1-2*
-456	finneon	TRUE	E	2-3*
-456	lumineon	TRUE	F	2-3*
-459	abomasnow	TRUE	A	5*
-459	abomasnow	TRUE	B	4*
-459	snover	TRUE	C	1-2*
-459	snover	TRUE	D	1-2*
-459	snover	TRUE	E	2-3*
-459	abomasnow	TRUE	F	2-3*
-479	rotom	FALSE	A	5*
-479	rotom	FALSE	B	4*
-479	rotom	FALSE	C	1-2*
-479	rotom	FALSE	D	1-2*
-479	rotom	FALSE	E	2-3*
-479	rotom	FALSE	F	2-3*
-480	uxie	FALSE	A	5*
-480	uxie	FALSE	B	4*
-480	uxie	FALSE	C	1-2*
-480	uxie	FALSE	D	1-2*
-480	uxie	FALSE	E	2-3*
-480	uxie	FALSE	F	2-3*
-481	mesprit	FALSE	A	5*
-481	mesprit	FALSE	B	4*
-481	mesprit	FALSE	C	1-2*
-481	mesprit	FALSE	D	1-2*
-481	mesprit	FALSE	E	2-3*
-481	mesprit	FALSE	F	2-3*
-482	azelf	FALSE	A	5*
-482	azelf	FALSE	B	4*
-482	azelf	FALSE	C	1-2*
-482	azelf	FALSE	D	1-2*
-482	azelf	FALSE	E	2-3*
-482	azelf	FALSE	F	2-3*
-483	dialga	FALSE	A	5*
-483	dialga	FALSE	B	4*
-483	dialga	FALSE	C	1-2*
-483	dialga	FALSE	D	1-2*
-483	dialga	FALSE	E	2-3*
-483	dialga	FALSE	F	2-3*
-484	palkia	FALSE	A	5*
-484	palkia	FALSE	B	4*
-484	palkia	FALSE	C	1-2*
-484	palkia	FALSE	D	1-2*
-484	palkia	FALSE	E	2-3*
-484	palkia	FALSE	F	2-3*
-485	heatran	FALSE	A	5*
-485	heatran	FALSE	B	4*
-485	heatran	FALSE	C	1-2*
-485	heatran	FALSE	D	1-2*
-485	heatran	FALSE	E	2-3*
-485	heatran	FALSE	F	2-3*
-486	regigigas	FALSE	A	5*
-486	regigigas	FALSE	B	4*
-486	regigigas	FALSE	C	1-2*
-486	regigigas	FALSE	D	1-2*
-486	regigigas	FALSE	E	2-3*
-486	regigigas	FALSE	F	2-3*
-487	giratina	FALSE	A	5*
-487	giratina	FALSE	B	4*
-487	giratina	FALSE	C	1-2*
-487	giratina	FALSE	D	1-2*
-487	giratina	FALSE	E	2-3*
-487	giratina	FALSE	F	2-3*
-488	cresselia	FALSE	A	5*
-488	cresselia	FALSE	B	4*
-488	cresselia	FALSE	C	1-2*
-488	cresselia	FALSE	D	1-2*
-488	cresselia	FALSE	E	2-3*
-488	cresselia	FALSE	F	2-3*
-489	phione	FALSE	A	5*
-489	phione	FALSE	B	4*
-489	phione	FALSE	C	1-2*
-489	phione	FALSE	D	1-2*
-489	phione	FALSE	E	2-3*
-489	phione	FALSE	F	2-3*
-490	manaphy	FALSE	A	5*
-490	manaphy	FALSE	B	4*
-490	manaphy	FALSE	C	1-2*
-490	manaphy	FALSE	D	1-2*
-490	manaphy	FALSE	E	2-3*
-490	manaphy	FALSE	F	2-3*
-491	darkrai	FALSE	A	5*
-491	darkrai	FALSE	B	4*
-491	darkrai	FALSE	C	1-2*
-491	darkrai	FALSE	D	1-2*
-491	darkrai	FALSE	E	2-3*
-491	darkrai	FALSE	F	2-3*
-492	shaymin	FALSE	A	5*
-492	shaymin	FALSE	B	4*
-492	shaymin	FALSE	C	1-2*
-492	shaymin	FALSE	D	1-2*
-492	shaymin	FALSE	E	2-3*
-492	shaymin	FALSE	F	2-3*
-493	arceus	FALSE	A	5*
-493	arceus	FALSE	B	4*
-493	arceus	FALSE	C	1-2*
-493	arceus	FALSE	D	1-2*
-493	arceus	FALSE	E	2-3*
-493	arceus	FALSE	F	2-3*
-494	victini	FALSE	A	5*
-494	victini	FALSE	B	4*
-494	victini	FALSE	C	1-2*
-494	victini	FALSE	D	1-2*
-494	victini	FALSE	E	2-3*
-494	victini	FALSE	F	2-3*
-495	serperior	TRUE	A	5*
-495	servine	TRUE	B	4*
-495	snivy	TRUE	C	1-2*
-495	snivy	TRUE	D	1-2*
-495	servine	TRUE	E	2-3*
-495	servine	TRUE	F	2-3*
-498	emboar	TRUE	A	5*
-498	pignite	TRUE	B	4*
-498	tepig	TRUE	C	1-2*
-498	tepig	TRUE	D	1-2*
-498	pignite	TRUE	E	2-3*
-498	pignite	TRUE	F	2-3*
-501	samurott	TRUE	A	5*
-501	dewott	TRUE	B	4*
-501	oshawott	TRUE	C	1-2*
-501	oshawott	TRUE	D	1-2*
-501	dewott	TRUE	E	2-3*
-501	dewott	TRUE	F	2-3*
-504	watchog	TRUE	A	5*
-504	watchog	TRUE	B	4*
-504	patrat	TRUE	C	1-2*
-504	patrat	TRUE	D	1-2*
-504	patrat	TRUE	E	2-3*
-504	watchog	TRUE	F	2-3*
-506	stoutland	TRUE	A	5*
-506	herdier	TRUE	B	4*
-506	lillipup	TRUE	C	1-2*
-506	lillipup	TRUE	D	1-2*
-506	herdier	TRUE	E	2-3*
-506	herdier	TRUE	F	2-3*
-509	liepard	TRUE	A	5*
-509	liepard	TRUE	B	4*
-509	purrloin	TRUE	C	1-2*
-509	purrloin	TRUE	D	1-2*
-509	purrloin	TRUE	E	2-3*
-509	liepard	TRUE	F	2-3*
-513	pansear	FALSE	A	5*
-513	pansear	FALSE	B	4*
-513	pansear	FALSE	C	1-2*
-513	pansear	FALSE	D	1-2*
-513	pansear	FALSE	E	2-3*
-513	pansear	FALSE	F	2-3*
-517	musharna	TRUE	A	5*
-517	musharna	TRUE	B	4*
-517	munna	TRUE	C	1-2*
-517	munna	TRUE	D	1-2*
-517	munna	TRUE	E	2-3*
-517	musharna	TRUE	F	2-3*
-519	pidove	FALSE	A	5*
-519	pidove	FALSE	B	4*
-519	pidove	FALSE	C	1-2*
-519	pidove	FALSE	D	1-2*
-519	pidove	FALSE	E	2-3*
-519	pidove	FALSE	F	2-3*
-519	pidove	FALSE	A	5*
-519	pidove	FALSE	B	4*
-519	pidove	FALSE	C	1-2*
-519	pidove	FALSE	D	1-2*
-519	pidove	FALSE	E	2-3*
-519	pidove	FALSE	F	2-3*
-524	roggenrola	FALSE	A	5*
-524	roggenrola	FALSE	B	4*
-524	roggenrola	FALSE	C	1-2*
-524	roggenrola	FALSE	D	1-2*
-524	roggenrola	FALSE	E	2-3*
-524	roggenrola	FALSE	F	2-3*
-527	swoobat	TRUE	A	5*
-527	swoobat	TRUE	B	4*
-527	woobat	TRUE	C	1-2*
-527	woobat	TRUE	D	1-2*
-527	woobat	TRUE	E	2-3*
-527	swoobat	TRUE	F	2-3*
-529	excadrill	TRUE	A	5*
-529	excadrill	TRUE	B	4*
-529	drilbur	TRUE	C	1-2*
-529	drilbur	TRUE	D	1-2*
-529	drilbur	TRUE	E	2-3*
-529	excadrill	TRUE	F	2-3*
-531	audino	FALSE	A	5*
-531	audino	FALSE	B	4*
-531	audino	FALSE	C	1-2*
-531	audino	FALSE	D	1-2*
-531	audino	FALSE	E	2-3*
-531	audino	FALSE	F	2-3*
-532	timburr	FALSE	A	5*
-532	timburr	FALSE	B	4*
-532	timburr	FALSE	C	1-2*
-532	timburr	FALSE	D	1-2*
-532	timburr	FALSE	E	2-3*
-532	timburr	FALSE	F	2-3*
-535	seismitoad	TRUE	A	5*
-535	palpitoad	TRUE	B	4*
-535	tympole	TRUE	C	1-2*
-535	tympole	TRUE	D	1-2*
-535	palpitoad	TRUE	E	2-3*
-535	palpitoad	TRUE	F	2-3*
-540	leavanny	TRUE	A	5*
-540	swadloon	TRUE	B	4*
-540	sewaddle	TRUE	C	1-2*
-540	sewaddle	TRUE	D	1-2*
-540	swadloon	TRUE	E	2-3*
-540	swadloon	TRUE	F	2-3*
-543	scolipede	TRUE	A	5*
-543	whirlipede	TRUE	B	4*
-543	venipede	TRUE	C	1-2*
-543	venipede	TRUE	D	1-2*
-543	whirlipede	TRUE	E	2-3*
-543	whirlipede	TRUE	F	2-3*
-546	cottonee	FALSE	A	5*
-546	cottonee	FALSE	B	4*
-546	cottonee	FALSE	C	1-2*
-546	cottonee	FALSE	D	1-2*
-546	cottonee	FALSE	E	2-3*
-546	cottonee	FALSE	F	2-3*
-548	lilligant	TRUE	A	5*
-548	lilligant	TRUE	B	4*
-548	petilil	TRUE	C	1-2*
-548	petilil	TRUE	D	1-2*
-548	petilil	TRUE	E	2-3*
-548	lilligant	TRUE	F	2-3*
-550	basculegion	TRUE	A	5*
-550	basculegion	TRUE	B	4*
-550	basculin	TRUE	C	1-2*
-550	basculin	TRUE	D	1-2*
-550	basculin	TRUE	E	2-3*
-550	basculegion	TRUE	F	2-3*
-551	krookodile	TRUE	A	5*
-551	krokorok	TRUE	B	4*
-551	sandile	TRUE	C	1-2*
-551	sandile	TRUE	D	1-2*
-551	krokorok	TRUE	E	2-3*
-551	krokorok	TRUE	F	2-3*
-554	darmanitan	TRUE	A	5*
-554	darmanitan	TRUE	B	4*
-554	darumaka	TRUE	C	1-2*
-554	darumaka	TRUE	D	1-2*
-554	darumaka	TRUE	E	2-3*
-554	darmanitan	TRUE	F	2-3*
-556	maractus	FALSE	A	5*
-556	maractus	FALSE	B	4*
-556	maractus	FALSE	C	1-2*
-556	maractus	FALSE	D	1-2*
-556	maractus	FALSE	E	2-3*
-556	maractus	FALSE	F	2-3*
-559	scrafty	TRUE	A	5*
-559	scrafty	TRUE	B	4*
-559	scraggy	TRUE	C	1-2*
-559	scraggy	TRUE	D	1-2*
-559	scraggy	TRUE	E	2-3*
-559	scrafty	TRUE	F	2-3*
-561	sigilyph	FALSE	A	5*
-561	sigilyph	FALSE	B	4*
-561	sigilyph	FALSE	C	1-2*
-561	sigilyph	FALSE	D	1-2*
-561	sigilyph	FALSE	E	2-3*
-561	sigilyph	FALSE	F	2-3*
-562	runerigus	FALSE	A	5*
-562	cofagrigus	FALSE	B	5*
-562	yamask	FALSE	C	5*
-562	yamask	FALSE	D	5*
-562	yamask	FALSE	E	5*
-562	yamask	FALSE	F	5*
-566	archeops	TRUE	A	5*
-566	archeops	TRUE	B	4*
-566	archen	TRUE	C	1-2*
-566	archen	TRUE	D	1-2*
-566	archen	TRUE	E	2-3*
-566	archeops	TRUE	F	2-3*
-568	garbodor	TRUE	A	5*
-568	garbodor	TRUE	B	4*
-568	trubbish	TRUE	C	1-2*
-568	trubbish	TRUE	D	1-2*
-568	trubbish	TRUE	E	2-3*
-568	garbodor	TRUE	F	2-3*
-570	zoroark	TRUE	A	5*
-570	zoroark	TRUE	B	4*
-570	zorua	TRUE	C	1-2*
-570	zorua	TRUE	D	1-2*
-570	zorua	TRUE	E	2-3*
-570	zoroark	TRUE	F	2-3*
-572	cinccino	TRUE	A	5*
-572	cinccino	TRUE	B	4*
-572	minccino	TRUE	C	1-2*
-572	minccino	TRUE	D	1-2*
-572	minccino	TRUE	E	2-3*
-572	cinccino	TRUE	F	2-3*
-574	gothitelle	TRUE	A	5*
-574	gothorita	TRUE	B	4*
-574	gothita	TRUE	C	1-2*
-574	gothita	TRUE	D	1-2*
-574	gothorita	TRUE	E	2-3*
-574	gothorita	TRUE	F	2-3*
-577	reuniclus	TRUE	A	5*
-577	duosion	TRUE	B	4*
-577	solosis	TRUE	C	1-2*
-577	solosis	TRUE	D	1-2*
-577	duosion	TRUE	E	2-3*
-577	duosion	TRUE	F	2-3*
-582	vanilluxe	TRUE	A	5*
-582	vanillish	TRUE	B	4*
-582	vanillite	TRUE	C	1-2*
-582	vanillite	TRUE	D	1-2*
-582	vanillish	TRUE	E	2-3*
-582	vanillish	TRUE	F	2-3*
-585	sawsbuck	TRUE	A	5*
-585	sawsbuck	TRUE	B	4*
-585	deerling	TRUE	C	1-2*
-585	deerling	TRUE	D	1-2*
-585	deerling	TRUE	E	2-3*
-585	sawsbuck	TRUE	F	2-3*
-587	emolga	FALSE	A	5*
-587	emolga	FALSE	B	4*
-587	emolga	FALSE	C	1-2*
-587	emolga	FALSE	D	1-2*
-587	emolga	FALSE	E	2-3*
-587	emolga	FALSE	F	2-3*
-590	foongus	FALSE	A	5*
-590	foongus	FALSE	B	4*
-590	foongus	FALSE	C	1-2*
-590	foongus	FALSE	D	1-2*
-590	foongus	FALSE	E	2-3*
-590	foongus	FALSE	F	2-3*
-597	ferrothorn	TRUE	A	5*
-597	ferrothorn	TRUE	B	4*
-597	ferroseed	TRUE	C	1-2*
-597	ferroseed	TRUE	D	1-2*
-597	ferroseed	TRUE	E	2-3*
-597	ferrothorn	TRUE	F	2-3*
-605	beheeyem	TRUE	A	5*
-605	beheeyem	TRUE	B	4*
-605	elgyem	TRUE	C	1-2*
-605	elgyem	TRUE	D	1-2*
-605	elgyem	TRUE	E	2-3*
-605	beheeyem	TRUE	F	2-3*
-607	chandelure	TRUE	A	5*
-607	lampent	TRUE	B	4*
-607	litwick	TRUE	C	1-2*
-607	litwick	TRUE	D	1-2*
-607	lampent	TRUE	E	2-3*
-607	lampent	TRUE	F	2-3*
-610	haxorus	TRUE	A	5*
-610	fraxure	TRUE	B	4*
-610	axew	TRUE	C	1-2*
-610	axew	TRUE	D	1-2*
-610	fraxure	TRUE	E	2-3*
-610	fraxure	TRUE	F	2-3*
-613	beartic	TRUE	A	5*
-613	beartic	TRUE	B	4*
-613	cubchoo	TRUE	C	1-2*
-613	cubchoo	TRUE	D	1-2*
-613	cubchoo	TRUE	E	2-3*
-613	beartic	TRUE	F	2-3*
-615	cryogonal	FALSE	A	5*
-615	cryogonal	FALSE	B	4*
-615	cryogonal	FALSE	C	1-2*
-615	cryogonal	FALSE	D	1-2*
-615	cryogonal	FALSE	E	2-3*
-615	cryogonal	FALSE	F	2-3*
-619	mienshao	TRUE	A	5*
-619	mienshao	TRUE	B	4*
-619	mienfoo	TRUE	C	1-2*
-619	mienfoo	TRUE	D	1-2*
-619	mienfoo	TRUE	E	2-3*
-619	mienshao	TRUE	F	2-3*
-621	druddigon	FALSE	A	5*
-621	druddigon	FALSE	B	4*
-621	druddigon	FALSE	C	1-2*
-621	druddigon	FALSE	D	1-2*
-621	druddigon	FALSE	E	2-3*
-621	druddigon	FALSE	F	2-3*
-622	golurk	TRUE	A	5*
-622	golurk	TRUE	B	4*
-622	golett	TRUE	C	1-2*
-622	golett	TRUE	D	1-2*
-622	golett	TRUE	E	2-3*
-622	golurk	TRUE	F	2-3*
-624	kingambit	TRUE	A	5*
-624	bisharp	TRUE	B	4*
-624	pawniard	TRUE	C	1-2*
-624	pawniard	TRUE	D	1-2*
-624	bisharp	TRUE	E	2-3*
-624	bisharp	TRUE	F	2-3*
-627	braviary	TRUE	A	5*
-627	braviary	TRUE	B	4*
-627	rufflet	TRUE	C	1-2*
-627	rufflet	TRUE	D	1-2*
-627	rufflet	TRUE	E	2-3*
-627	braviary	TRUE	F	2-3*
-631	heatmor	FALSE	A	5*
-631	heatmor	FALSE	B	4*
-631	heatmor	FALSE	C	1-2*
-631	heatmor	FALSE	D	1-2*
-631	heatmor	FALSE	E	2-3*
-631	heatmor	FALSE	F	2-3*
-632	durant	FALSE	A	5*
-632	durant	FALSE	B	4*
-632	durant	FALSE	C	1-2*
-632	durant	FALSE	D	1-2*
-632	durant	FALSE	E	2-3*
-632	durant	FALSE	F	2-3*
-633	hydreigon	TRUE	A	5*
-633	zweilous	TRUE	B	4*
-633	deino	TRUE	C	1-2*
-633	deino	TRUE	D	1-2*
-633	zweilous	TRUE	E	2-3*
-633	zweilous	TRUE	F	2-3*
-636	volcarona	TRUE	A	5*
-636	volcarona	TRUE	B	4*
-636	larvesta	TRUE	C	1-2*
-636	larvesta	TRUE	D	1-2*
-636	larvesta	TRUE	E	2-3*
-636	volcarona	TRUE	F	2-3*
-638	cobalion	FALSE	A	5*
-638	cobalion	FALSE	B	4*
-638	cobalion	FALSE	C	1-2*
-638	cobalion	FALSE	D	1-2*
-638	cobalion	FALSE	E	2-3*
-638	cobalion	FALSE	F	2-3*
-639	terrakion	FALSE	A	5*
-639	terrakion	FALSE	B	4*
-639	terrakion	FALSE	C	1-2*
-639	terrakion	FALSE	D	1-2*
-639	terrakion	FALSE	E	2-3*
-639	terrakion	FALSE	F	2-3*
-640	virizion	FALSE	A	5*
-640	virizion	FALSE	B	4*
-640	virizion	FALSE	C	1-2*
-640	virizion	FALSE	D	1-2*
-640	virizion	FALSE	E	2-3*
-640	virizion	FALSE	F	2-3*
-641	tornadus	FALSE	A	5*
-641	tornadus	FALSE	B	4*
-641	tornadus	FALSE	C	1-2*
-641	tornadus	FALSE	D	1-2*
-641	tornadus	FALSE	E	2-3*
-641	tornadus	FALSE	F	2-3*
-642	thundurus	FALSE	A	5*
-642	thundurus	FALSE	B	4*
-642	thundurus	FALSE	C	1-2*
-642	thundurus	FALSE	D	1-2*
-642	thundurus	FALSE	E	2-3*
-642	thundurus	FALSE	F	2-3*
-643	reshiram	FALSE	A	5*
-643	reshiram	FALSE	B	4*
-643	reshiram	FALSE	C	1-2*
-643	reshiram	FALSE	D	1-2*
-643	reshiram	FALSE	E	2-3*
-643	reshiram	FALSE	F	2-3*
-644	zekrom	FALSE	A	5*
-644	zekrom	FALSE	B	4*
-644	zekrom	FALSE	C	1-2*
-644	zekrom	FALSE	D	1-2*
-644	zekrom	FALSE	E	2-3*
-644	zekrom	FALSE	F	2-3*
-645	landorus	FALSE	A	5*
-645	landorus	FALSE	B	4*
-645	landorus	FALSE	C	1-2*
-645	landorus	FALSE	D	1-2*
-645	landorus	FALSE	E	2-3*
-645	landorus	FALSE	F	2-3*
-646	kyurem	FALSE	A	5*
-646	kyurem	FALSE	B	4*
-646	kyurem	FALSE	C	1-2*
-646	kyurem	FALSE	D	1-2*
-646	kyurem	FALSE	E	2-3*
-646	kyurem	FALSE	F	2-3*
-647	keldeo	FALSE	A	5*
-647	keldeo	FALSE	B	4*
-647	keldeo	FALSE	C	1-2*
-647	keldeo	FALSE	D	1-2*
-647	keldeo	FALSE	E	2-3*
-647	keldeo	FALSE	F	2-3*
-648	meloetta	FALSE	A	5*
-648	meloetta	FALSE	B	4*
-648	meloetta	FALSE	C	1-2*
-648	meloetta	FALSE	D	1-2*
-648	meloetta	FALSE	E	2-3*
-648	meloetta	FALSE	F	2-3*
-649	genesect	FALSE	A	5*
-649	genesect	FALSE	B	4*
-649	genesect	FALSE	C	1-2*
-649	genesect	FALSE	D	1-2*
-649	genesect	FALSE	E	2-3*
-649	genesect	FALSE	F	2-3*
-650	chespin	FALSE	A	5*
-650	chespin	FALSE	B	4*
-650	chespin	FALSE	C	1-2*
-650	chespin	FALSE	D	1-2*
-650	chespin	FALSE	E	2-3*
-650	chespin	FALSE	F	2-3*
-653	delphox	TRUE	A	5*
-653	braixen	TRUE	B	4*
-653	fennekin	TRUE	C	1-2*
-653	fennekin	TRUE	D	1-2*
-653	braixen	TRUE	E	2-3*
-653	braixen	TRUE	F	2-3*
-656	greninja	TRUE	A	5*
-656	frogadier	TRUE	B	4*
-656	froakie	TRUE	C	1-2*
-656	froakie	TRUE	D	1-2*
-656	frogadier	TRUE	E	2-3*
-656	frogadier	TRUE	F	2-3*
-659	bunnelby	FALSE	A	5*
-659	bunnelby	FALSE	B	4*
-659	bunnelby	FALSE	C	1-2*
-659	bunnelby	FALSE	D	1-2*
-659	bunnelby	FALSE	E	2-3*
-659	bunnelby	FALSE	F	2-3*
-661	talonflame	TRUE	A	5*
-661	fletchinder	TRUE	B	4*
-661	fletchling	TRUE	C	1-2*
-661	fletchling	TRUE	D	1-2*
-661	fletchinder	TRUE	E	2-3*
-661	fletchinder	TRUE	F	2-3*
-667	litleo	FALSE	A	5*
-667	litleo	FALSE	B	4*
-667	litleo	FALSE	C	1-2*
-667	litleo	FALSE	D	1-2*
-667	litleo	FALSE	E	2-3*
-667	litleo	FALSE	F	2-3*
-669	florges	TRUE	A	5*
-669	floette	TRUE	B	4*
-669	flabebe	TRUE	C	1-2*
-669	flabebe	TRUE	D	1-2*
-669	floette	TRUE	E	2-3*
-669	floette	TRUE	F	2-3*
-672	skiddo	FALSE	A	5*
-672	skiddo	FALSE	B	4*
-672	skiddo	FALSE	C	1-2*
-672	skiddo	FALSE	D	1-2*
-672	skiddo	FALSE	E	2-3*
-672	skiddo	FALSE	F	2-3*
-674	pangoro	TRUE	A	5*
-674	pangoro	TRUE	B	4*
-674	pancham	TRUE	C	1-2*
-674	pancham	TRUE	D	1-2*
-674	pancham	TRUE	E	2-3*
-674	pangoro	TRUE	F	2-3*
-676	furfrou	FALSE	A	5*
-676	furfrou	FALSE	B	4*
-676	furfrou	FALSE	C	1-2*
-676	furfrou	FALSE	D	1-2*
-676	furfrou	FALSE	E	2-3*
-676	furfrou	FALSE	F	2-3*
-677	meowstic	TRUE	A	5*
-677	meowstic	TRUE	B	4*
-677	espurr	TRUE	C	1-2*
-677	espurr	TRUE	D	1-2*
-677	espurr	TRUE	E	2-3*
-677	meowstic	TRUE	F	2-3*
-679	aegislash	TRUE	A	5*
-679	doublade	TRUE	B	4*
-679	honedge	TRUE	C	1-2*
-679	honedge	TRUE	D	1-2*
-679	doublade	TRUE	E	2-3*
-679	doublade	TRUE	F	2-3*
-682	spritzee	FALSE	A	5*
-682	spritzee	FALSE	B	4*
-682	spritzee	FALSE	C	1-2*
-682	spritzee	FALSE	D	1-2*
-682	spritzee	FALSE	E	2-3*
-682	spritzee	FALSE	F	2-3*
-684	slurpuff	TRUE	A	5*
-684	slurpuff	TRUE	B	4*
-684	swirlix	TRUE	C	1-2*
-684	swirlix	TRUE	D	1-2*
-684	swirlix	TRUE	E	2-3*
-684	slurpuff	TRUE	F	2-3*
-686	malamar	TRUE	A	5*
-686	malamar	TRUE	B	4*
-686	inkay	TRUE	C	1-2*
-686	inkay	TRUE	D	1-2*
-686	inkay	TRUE	E	2-3*
-686	malamar	TRUE	F	2-3*
-688	barbaracle	TRUE	A	5*
-688	barbaracle	TRUE	B	4*
-688	binacle	TRUE	C	1-2*
-688	binacle	TRUE	D	1-2*
-688	binacle	TRUE	E	2-3*
-688	barbaracle	TRUE	F	2-3*
-692	clawitzer	TRUE	A	5*
-692	clawitzer	TRUE	B	4*
-692	clauncher	TRUE	C	1-2*
-692	clauncher	TRUE	D	1-2*
-692	clauncher	TRUE	E	2-3*
-692	clawitzer	TRUE	F	2-3*
-694	heliolisk	TRUE	A	5*
-694	heliolisk	TRUE	B	4*
-694	helioptile	TRUE	C	1-2*
-694	helioptile	TRUE	D	1-2*
-694	helioptile	TRUE	E	2-3*
-694	heliolisk	TRUE	F	2-3*
-696	tyrantrum	TRUE	A	5*
-696	tyrantrum	TRUE	B	4*
-696	tyrunt	TRUE	C	1-2*
-696	tyrunt	TRUE	D	1-2*
-696	tyrunt	TRUE	E	2-3*
-696	tyrantrum	TRUE	F	2-3*
-698	aurorus	TRUE	A	5*
-698	aurorus	TRUE	B	4*
-698	amaura	TRUE	C	1-2*
-698	amaura	TRUE	D	1-2*
-698	amaura	TRUE	E	2-3*
-698	aurorus	TRUE	F	2-3*
-701	hawlucha	FALSE	A	5*
-701	hawlucha	FALSE	B	4*
-701	hawlucha	FALSE	C	1-2*
-701	hawlucha	FALSE	D	1-2*
-701	hawlucha	FALSE	E	2-3*
-701	hawlucha	FALSE	F	2-3*
-703	carbink	FALSE	A	5*
-703	carbink	FALSE	B	4*
-703	carbink	FALSE	C	1-2*
-703	carbink	FALSE	D	1-2*
-703	carbink	FALSE	E	2-3*
-703	carbink	FALSE	F	2-3*
-704	goodra	TRUE	A	5*
-704	sliggoo	TRUE	B	4*
-704	goomy	TRUE	C	1-2*
-704	goomy	TRUE	D	1-2*
-704	sliggoo	TRUE	E	2-3*
-704	sliggoo	TRUE	F	2-3*
-707	klefki	FALSE	A	5*
-707	klefki	FALSE	B	4*
-707	klefki	FALSE	C	1-2*
-707	klefki	FALSE	D	1-2*
-707	klefki	FALSE	E	2-3*
-707	klefki	FALSE	F	2-3*
-708	trevenant	TRUE	A	5*
-708	trevenant	TRUE	B	4*
-708	phantump	TRUE	C	1-2*
-708	phantump	TRUE	D	1-2*
-708	phantump	TRUE	E	2-3*
-708	trevenant	TRUE	F	2-3*
-710	gourgeist	TRUE	A	5*
-710	gourgeist	TRUE	B	4*
-710	pumpkaboo	TRUE	C	1-2*
-710	pumpkaboo	TRUE	D	1-2*
-710	pumpkaboo	TRUE	E	2-3*
-710	gourgeist	TRUE	F	2-3*
-714	noivern	TRUE	A	5*
-714	noivern	TRUE	B	4*
-714	noibat	TRUE	C	1-2*
-714	noibat	TRUE	D	1-2*
-714	noibat	TRUE	E	2-3*
-714	noivern	TRUE	F	2-3*
-716	xerneas	FALSE	A	5*
-716	xerneas	FALSE	B	4*
-716	xerneas	FALSE	C	1-2*
-716	xerneas	FALSE	D	1-2*
-716	xerneas	FALSE	E	2-3*
-716	xerneas	FALSE	F	2-3*
-717	yveltal	FALSE	A	5*
-717	yveltal	FALSE	B	4*
-717	yveltal	FALSE	C	1-2*
-717	yveltal	FALSE	D	1-2*
-717	yveltal	FALSE	E	2-3*
-717	yveltal	FALSE	F	2-3*
-718	zygarde	FALSE	A	5*
-718	zygarde	FALSE	B	4*
-718	zygarde	FALSE	C	1-2*
-718	zygarde	FALSE	D	1-2*
-718	zygarde	FALSE	E	2-3*
-718	zygarde	FALSE	F	2-3*
-719	diancie	FALSE	A	5*
-719	diancie	FALSE	B	4*
-719	diancie	FALSE	C	1-2*
-719	diancie	FALSE	D	1-2*
-719	diancie	FALSE	E	2-3*
-719	diancie	FALSE	F	2-3*
-720	hoopa	FALSE	A	5*
-720	hoopa	FALSE	B	4*
-720	hoopa	FALSE	C	1-2*
-720	hoopa	FALSE	D	1-2*
-720	hoopa	FALSE	E	2-3*
-720	hoopa	FALSE	F	2-3*
-721	volcanion	FALSE	A	5*
-721	volcanion	FALSE	B	4*
-721	volcanion	FALSE	C	1-2*
-721	volcanion	FALSE	D	1-2*
-721	volcanion	FALSE	E	2-3*
-721	volcanion	FALSE	F	2-3*
-722	decidueye	TRUE	A	5*
-722	dartrix	TRUE	B	4*
-722	rowlet	TRUE	C	1-2*
-722	rowlet	TRUE	D	1-2*
-722	dartrix	TRUE	E	2-3*
-722	dartrix	TRUE	F	2-3*
-725	incineroar	TRUE	A	5*
-725	torracat	TRUE	B	4*
-725	litten	TRUE	C	1-2*
-725	litten	TRUE	D	1-2*
-725	torracat	TRUE	E	2-3*
-725	torracat	TRUE	F	2-3*
-728	primarina	TRUE	A	5*
-728	brionne	TRUE	B	4*
-728	popplio	TRUE	C	1-2*
-728	popplio	TRUE	D	1-2*
-728	brionne	TRUE	E	2-3*
-728	brionne	TRUE	F	2-3*
-736	vikavolt	TRUE	A	5*
-736	charjabug	TRUE	B	4*
-736	grubbin	TRUE	C	1-2*
-736	grubbin	TRUE	D	1-2*
-736	charjabug	TRUE	E	2-3*
-736	charjabug	TRUE	F	2-3*
-739	crabominable	TRUE	A	5*
-739	crabominable	TRUE	B	4*
-739	crabrawler	TRUE	C	1-2*
-739	crabrawler	TRUE	D	1-2*
-739	crabrawler	TRUE	E	2-3*
-739	crabominable	TRUE	F	2-3*
-742	ribombee	TRUE	A	5*
-742	ribombee	TRUE	B	4*
-742	cutiefly	TRUE	C	1-2*
-742	cutiefly	TRUE	D	1-2*
-742	cutiefly	TRUE	E	2-3*
-742	ribombee	TRUE	F	2-3*
-744	lycanroc	TRUE	A	5*
-744	lycanroc	TRUE	B	4*
-744	rockruff	TRUE	C	1-2*
-744	rockruff	TRUE	D	1-2*
-744	rockruff	TRUE	E	2-3*
-744	lycanroc	TRUE	F	2-3*
-746	wishiwashi	FALSE	A	5*
-746	wishiwashi	FALSE	B	4*
-746	wishiwashi	FALSE	C	1-2*
-746	wishiwashi	FALSE	D	1-2*
-746	wishiwashi	FALSE	E	2-3*
-746	wishiwashi	FALSE	F	2-3*
-747	mareanie	FALSE	A	5*
-747	mareanie	FALSE	B	4*
-747	mareanie	FALSE	C	1-2*
-747	mareanie	FALSE	D	1-2*
-747	mareanie	FALSE	E	2-3*
-747	mareanie	FALSE	F	2-3*
-749	mudbray	FALSE	A	5*
-749	mudbray	FALSE	B	4*
-749	mudbray	FALSE	C	1-2*
-749	mudbray	FALSE	D	1-2*
-749	mudbray	FALSE	E	2-3*
-749	mudbray	FALSE	F	2-3*
-751	araquanid	TRUE	A	5*
-751	araquanid	TRUE	B	4*
-751	dewpider	TRUE	C	1-2*
-751	dewpider	TRUE	D	1-2*
-751	dewpider	TRUE	E	2-3*
-751	araquanid	TRUE	F	2-3*
-753	lurantis	TRUE	A	5*
-753	lurantis	TRUE	B	4*
-753	fomantis	TRUE	C	1-2*
-753	fomantis	TRUE	D	1-2*
-753	fomantis	TRUE	E	2-3*
-753	lurantis	TRUE	F	2-3*
-755	morelull	FALSE	A	5*
-755	morelull	FALSE	B	4*
-755	morelull	FALSE	C	1-2*
-755	morelull	FALSE	D	1-2*
-755	morelull	FALSE	E	2-3*
-755	morelull	FALSE	F	2-3*
-757	salazzle	TRUE	A	5*
-757	salazzle	TRUE	B	4*
-757	salandit	TRUE	C	1-2*
-757	salandit	TRUE	D	1-2*
-757	salandit	TRUE	E	2-3*
-757	salazzle	TRUE	F	2-3*
-759	bewear	TRUE	A	5*
-759	bewear	TRUE	B	4*
-759	stufful	TRUE	C	1-2*
-759	stufful	TRUE	D	1-2*
-759	stufful	TRUE	E	2-3*
-759	bewear	TRUE	F	2-3*
-761	tsareena	TRUE	A	5*
-761	steenee	TRUE	B	4*
-761	bounsweet	TRUE	C	1-2*
-761	bounsweet	TRUE	D	1-2*
-761	steenee	TRUE	E	2-3*
-761	steenee	TRUE	F	2-3*
-764	comfey	FALSE	A	5*
-764	comfey	FALSE	B	4*
-764	comfey	FALSE	C	1-2*
-764	comfey	FALSE	D	1-2*
-764	comfey	FALSE	E	2-3*
-764	comfey	FALSE	F	2-3*
-766	passimian	FALSE	A	5*
-766	passimian	FALSE	B	4*
-766	passimian	FALSE	C	1-2*
-766	passimian	FALSE	D	1-2*
-766	passimian	FALSE	E	2-3*
-766	passimian	FALSE	F	2-3*
-767	golisopod	TRUE	A	5*
-767	golisopod	TRUE	B	4*
-767	wimpod	TRUE	C	1-2*
-767	wimpod	TRUE	D	1-2*
-767	wimpod	TRUE	E	2-3*
-767	golisopod	TRUE	F	2-3*
-769	palossand	TRUE	A	5*
-769	palossand	TRUE	B	4*
-769	sandygast	TRUE	C	1-2*
-769	sandygast	TRUE	D	1-2*
-769	sandygast	TRUE	E	2-3*
-769	palossand	TRUE	F	2-3*
-771	pyukumuku	FALSE	A	5*
-771	pyukumuku	FALSE	B	4*
-771	pyukumuku	FALSE	C	1-2*
-771	pyukumuku	FALSE	D	1-2*
-771	pyukumuku	FALSE	E	2-3*
-771	pyukumuku	FALSE	F	2-3*
-772	silvally	TRUE	A	5*
-772	silvally	TRUE	B	4*
-772	type_null	TRUE	C	1-2*
-772	type_null	TRUE	D	1-2*
-772	type_null	TRUE	E	2-3*
-772	silvally	TRUE	F	2-3*
-774	minior	FALSE	A	5*
-774	minior	FALSE	B	4*
-774	minior	FALSE	C	1-2*
-774	minior	FALSE	D	1-2*
-774	minior	FALSE	E	2-3*
-774	minior	FALSE	F	2-3*
-776	turtonator	FALSE	A	5*
-776	turtonator	FALSE	B	4*
-776	turtonator	FALSE	C	1-2*
-776	turtonator	FALSE	D	1-2*
-776	turtonator	FALSE	E	2-3*
-776	turtonator	FALSE	F	2-3*
-777	togedemaru	FALSE	A	5*
-777	togedemaru	FALSE	B	4*
-777	togedemaru	FALSE	C	1-2*
-777	togedemaru	FALSE	D	1-2*
-777	togedemaru	FALSE	E	2-3*
-777	togedemaru	FALSE	F	2-3*
-778	mimikyu	FALSE	A	5*
-778	mimikyu	FALSE	B	4*
-778	mimikyu	FALSE	C	1-2*
-778	mimikyu	FALSE	D	1-2*
-778	mimikyu	FALSE	E	2-3*
-778	mimikyu	FALSE	F	2-3*
-779	bruxish	FALSE	A	5*
-779	bruxish	FALSE	B	4*
-779	bruxish	FALSE	C	1-2*
-779	bruxish	FALSE	D	1-2*
-779	bruxish	FALSE	E	2-3*
-779	bruxish	FALSE	F	2-3*
-780	drampa	FALSE	A	5*
-780	drampa	FALSE	B	4*
-780	drampa	FALSE	C	1-2*
-780	drampa	FALSE	D	1-2*
-780	drampa	FALSE	E	2-3*
-780	drampa	FALSE	F	2-3*
-781	dhelmise	FALSE	A	5*
-781	dhelmise	FALSE	B	4*
-781	dhelmise	FALSE	C	1-2*
-781	dhelmise	FALSE	D	1-2*
-781	dhelmise	FALSE	E	2-3*
-781	dhelmise	FALSE	F	2-3*
-782	kommo_o	TRUE	A	5*
-782	hakamo_o	TRUE	B	4*
-782	jangmo_o	TRUE	C	1-2*
-782	jangmo_o	TRUE	D	1-2*
-782	hakamo_o	TRUE	E	2-3*
-782	hakamo_o	TRUE	F	2-3*
-785	tapu_koko	FALSE	A	5*
-785	tapu_koko	FALSE	B	4*
-785	tapu_koko	FALSE	C	1-2*
-785	tapu_koko	FALSE	D	1-2*
-785	tapu_koko	FALSE	E	2-3*
-785	tapu_koko	FALSE	F	2-3*
-786	tapu_lele	FALSE	A	5*
-786	tapu_lele	FALSE	B	4*
-786	tapu_lele	FALSE	C	1-2*
-786	tapu_lele	FALSE	D	1-2*
-786	tapu_lele	FALSE	E	2-3*
-786	tapu_lele	FALSE	F	2-3*
-787	tapu_bulu	FALSE	A	5*
-787	tapu_bulu	FALSE	B	4*
-787	tapu_bulu	FALSE	C	1-2*
-787	tapu_bulu	FALSE	D	1-2*
-787	tapu_bulu	FALSE	E	2-3*
-787	tapu_bulu	FALSE	F	2-3*
-788	tapu_fini	FALSE	A	5*
-788	tapu_fini	FALSE	B	4*
-788	tapu_fini	FALSE	C	1-2*
-788	tapu_fini	FALSE	D	1-2*
-788	tapu_fini	FALSE	E	2-3*
-788	tapu_fini	FALSE	F	2-3*
-789	lunala	FALSE	A	5*
-789	solgaleo	FALSE	B	5*
-789	cosmoem	FALSE	C	5*
-789	cosmog	FALSE	D	5*
-789	cosmog	FALSE	E	5*
-789	cosmog	FALSE	F	5*
-793	nihilego	FALSE	A	5*
-793	nihilego	FALSE	B	4*
-793	nihilego	FALSE	C	1-2*
-793	nihilego	FALSE	D	1-2*
-793	nihilego	FALSE	E	2-3*
-793	nihilego	FALSE	F	2-3*
-794	buzzwole	FALSE	A	5*
-794	buzzwole	FALSE	B	4*
-794	buzzwole	FALSE	C	1-2*
-794	buzzwole	FALSE	D	1-2*
-794	buzzwole	FALSE	E	2-3*
-794	buzzwole	FALSE	F	2-3*
-795	pheromosa	FALSE	A	5*
-795	pheromosa	FALSE	B	4*
-795	pheromosa	FALSE	C	1-2*
-795	pheromosa	FALSE	D	1-2*
-795	pheromosa	FALSE	E	2-3*
-795	pheromosa	FALSE	F	2-3*
-796	xurkitree	FALSE	A	5*
-796	xurkitree	FALSE	B	4*
-796	xurkitree	FALSE	C	1-2*
-796	xurkitree	FALSE	D	1-2*
-796	xurkitree	FALSE	E	2-3*
-796	xurkitree	FALSE	F	2-3*
-797	celesteela	FALSE	A	5*
-797	celesteela	FALSE	B	4*
-797	celesteela	FALSE	C	1-2*
-797	celesteela	FALSE	D	1-2*
-797	celesteela	FALSE	E	2-3*
-797	celesteela	FALSE	F	2-3*
-798	kartana	FALSE	A	5*
-798	kartana	FALSE	B	4*
-798	kartana	FALSE	C	1-2*
-798	kartana	FALSE	D	1-2*
-798	kartana	FALSE	E	2-3*
-798	kartana	FALSE	F	2-3*
-799	guzzlord	FALSE	A	5*
-799	guzzlord	FALSE	B	4*
-799	guzzlord	FALSE	C	1-2*
-799	guzzlord	FALSE	D	1-2*
-799	guzzlord	FALSE	E	2-3*
-799	guzzlord	FALSE	F	2-3*
-800	necrozma	FALSE	A	5*
-800	necrozma	FALSE	B	4*
-800	necrozma	FALSE	C	1-2*
-800	necrozma	FALSE	D	1-2*
-800	necrozma	FALSE	E	2-3*
-800	necrozma	FALSE	F	2-3*
-801	magearna	FALSE	A	5*
-801	magearna	FALSE	B	4*
-801	magearna	FALSE	C	1-2*
-801	magearna	FALSE	D	1-2*
-801	magearna	FALSE	E	2-3*
-801	magearna	FALSE	F	2-3*
-802	marshadow	FALSE	A	5*
-802	marshadow	FALSE	B	4*
-802	marshadow	FALSE	C	1-2*
-802	marshadow	FALSE	D	1-2*
-802	marshadow	FALSE	E	2-3*
-802	marshadow	FALSE	F	2-3*
-803	naganadel	TRUE	A	5*
-803	naganadel	TRUE	B	4*
-803	poipole	TRUE	C	1-2*
-803	poipole	TRUE	D	1-2*
-803	poipole	TRUE	E	2-3*
-803	naganadel	TRUE	F	2-3*
-805	stakataka	FALSE	A	5*
-805	stakataka	FALSE	B	4*
-805	stakataka	FALSE	C	1-2*
-805	stakataka	FALSE	D	1-2*
-805	stakataka	FALSE	E	2-3*
-805	stakataka	FALSE	F	2-3*
-806	blacephalon	FALSE	A	5*
-806	blacephalon	FALSE	B	4*
-806	blacephalon	FALSE	C	1-2*
-806	blacephalon	FALSE	D	1-2*
-806	blacephalon	FALSE	E	2-3*
-806	blacephalon	FALSE	F	2-3*
-807	zeraora	FALSE	A	5*
-807	zeraora	FALSE	B	4*
-807	zeraora	FALSE	C	1-2*
-807	zeraora	FALSE	D	1-2*
-807	zeraora	FALSE	E	2-3*
-807	zeraora	FALSE	F	2-3*
-808	melmetal	TRUE	A	5*
-808	melmetal	TRUE	B	4*
-808	meltan	TRUE	C	1-2*
-808	meltan	TRUE	D	1-2*
-808	meltan	TRUE	E	2-3*
-808	melmetal	TRUE	F	2-3*
-810	grookey	FALSE	A	5*
-810	grookey	FALSE	B	4*
-810	grookey	FALSE	C	1-2*
-810	grookey	FALSE	D	1-2*
-810	grookey	FALSE	E	2-3*
-810	grookey	FALSE	F	2-3*
-813	cinderace	TRUE	A	5*
-813	raboot	TRUE	B	4*
-813	scorbunny	TRUE	C	1-2*
-813	scorbunny	TRUE	D	1-2*
-813	raboot	TRUE	E	2-3*
-813	raboot	TRUE	F	2-3*
-816	inteleon	TRUE	A	5*
-816	drizzile	TRUE	B	4*
-816	sobble	TRUE	C	1-2*
-816	sobble	TRUE	D	1-2*
-816	drizzile	TRUE	E	2-3*
-816	drizzile	TRUE	F	2-3*
-821	corviknight	TRUE	A	5*
-821	corvisquire	TRUE	B	4*
-821	rookidee	TRUE	C	1-2*
-821	rookidee	TRUE	D	1-2*
-821	corvisquire	TRUE	E	2-3*
-821	corvisquire	TRUE	F	2-3*
-827	thievul	TRUE	A	5*
-827	thievul	TRUE	B	4*
-827	nickit	TRUE	C	1-2*
-827	nickit	TRUE	D	1-2*
-827	nickit	TRUE	E	2-3*
-827	thievul	TRUE	F	2-3*
-831	wooloo	FALSE	A	5*
-831	wooloo	FALSE	B	4*
-831	wooloo	FALSE	C	1-2*
-831	wooloo	FALSE	D	1-2*
-831	wooloo	FALSE	E	2-3*
-831	wooloo	FALSE	F	2-3*
-835	yamper	FALSE	A	5*
-835	yamper	FALSE	B	4*
-835	yamper	FALSE	C	1-2*
-835	yamper	FALSE	D	1-2*
-835	yamper	FALSE	E	2-3*
-835	yamper	FALSE	F	2-3*
-840	appletun	FALSE	A	5*
-840	flapple	FALSE	B	5*
-840	applin	FALSE	C	5*
-840	applin	FALSE	D	5*
-840	applin	FALSE	E	5*
-840	applin	FALSE	F	5*
-843	sandaconda	TRUE	A	5*
-843	sandaconda	TRUE	B	4*
-843	silicobra	TRUE	C	1-2*
-843	silicobra	TRUE	D	1-2*
-843	silicobra	TRUE	E	2-3*
-843	sandaconda	TRUE	F	2-3*
-845	cramorant	FALSE	A	5*
-845	cramorant	FALSE	B	4*
-845	cramorant	FALSE	C	1-2*
-845	cramorant	FALSE	D	1-2*
-845	cramorant	FALSE	E	2-3*
-845	cramorant	FALSE	F	2-3*
-846	arrokuda	FALSE	A	5*
-846	arrokuda	FALSE	B	4*
-846	arrokuda	FALSE	C	1-2*
-846	arrokuda	FALSE	D	1-2*
-846	arrokuda	FALSE	E	2-3*
-846	arrokuda	FALSE	F	2-3*
-848	toxtricity	TRUE	A	5*
-848	toxtricity	TRUE	B	4*
-848	toxel	TRUE	C	1-2*
-848	toxel	TRUE	D	1-2*
-848	toxel	TRUE	E	2-3*
-848	toxtricity	TRUE	F	2-3*
-850	centiskorch	TRUE	A	5*
-850	centiskorch	TRUE	B	4*
-850	sizzlipede	TRUE	C	1-2*
-850	sizzlipede	TRUE	D	1-2*
-850	sizzlipede	TRUE	E	2-3*
-850	centiskorch	TRUE	F	2-3*
-852	clobbopus	FALSE	A	5*
-852	clobbopus	FALSE	B	4*
-852	clobbopus	FALSE	C	1-2*
-852	clobbopus	FALSE	D	1-2*
-852	clobbopus	FALSE	E	2-3*
-852	clobbopus	FALSE	F	2-3*
-854	polteageist	TRUE	A	5*
-854	polteageist	TRUE	B	4*
-854	sinistea	TRUE	C	1-2*
-854	sinistea	TRUE	D	1-2*
-854	sinistea	TRUE	E	2-3*
-854	polteageist	TRUE	F	2-3*
-856	hatterene	TRUE	A	5*
-856	hattrem	TRUE	B	4*
-856	hatenna	TRUE	C	1-2*
-856	hatenna	TRUE	D	1-2*
-856	hattrem	TRUE	E	2-3*
-856	hattrem	TRUE	F	2-3*
-859	grimmsnarl	TRUE	A	5*
-859	morgrem	TRUE	B	4*
-859	impidimp	TRUE	C	1-2*
-859	impidimp	TRUE	D	1-2*
-859	morgrem	TRUE	E	2-3*
-859	morgrem	TRUE	F	2-3*
-872	frosmoth	TRUE	A	5*
-872	frosmoth	TRUE	B	4*
-872	snom	TRUE	C	1-2*
-872	snom	TRUE	D	1-2*
-872	snom	TRUE	E	2-3*
-872	frosmoth	TRUE	F	2-3*
-874	stonjourner	FALSE	A	5*
-874	stonjourner	FALSE	B	4*
-874	stonjourner	FALSE	C	1-2*
-874	stonjourner	FALSE	D	1-2*
-874	stonjourner	FALSE	E	2-3*
-874	stonjourner	FALSE	F	2-3*
-875	eiscue	FALSE	A	5*
-875	eiscue	FALSE	B	4*
-875	eiscue	FALSE	C	1-2*
-875	eiscue	FALSE	D	1-2*
-875	eiscue	FALSE	E	2-3*
-875	eiscue	FALSE	F	2-3*
-876	indeedee	FALSE	A	5*
-876	indeedee	FALSE	B	4*
-876	indeedee	FALSE	C	1-2*
-876	indeedee	FALSE	D	1-2*
-876	indeedee	FALSE	E	2-3*
-876	indeedee	FALSE	F	2-3*
-877	morpeko	FALSE	A	5*
-877	morpeko	FALSE	B	4*
-877	morpeko	FALSE	C	1-2*
-877	morpeko	FALSE	D	1-2*
-877	morpeko	FALSE	E	2-3*
-877	morpeko	FALSE	F	2-3*
-881	arctozolt	FALSE	A	5*
-881	arctozolt	FALSE	B	4*
-881	arctozolt	FALSE	C	1-2*
-881	arctozolt	FALSE	D	1-2*
-881	arctozolt	FALSE	E	2-3*
-881	arctozolt	FALSE	F	2-3*
-882	dracovish	FALSE	A	5*
-882	dracovish	FALSE	B	4*
-882	dracovish	FALSE	C	1-2*
-882	dracovish	FALSE	D	1-2*
-882	dracovish	FALSE	E	2-3*
-882	dracovish	FALSE	F	2-3*
-884	duraludon	FALSE	A	5*
-884	duraludon	FALSE	B	4*
-884	duraludon	FALSE	C	1-2*
-884	duraludon	FALSE	D	1-2*
-884	duraludon	FALSE	E	2-3*
-884	duraludon	FALSE	F	2-3*
-885	dragapult	TRUE	A	5*
-885	drakloak	TRUE	B	4*
-885	dreepy	TRUE	C	1-2*
-885	dreepy	TRUE	D	1-2*
-885	drakloak	TRUE	E	2-3*
-885	drakloak	TRUE	F	2-3*
-888	zacian	FALSE	A	5*
-888	zacian	FALSE	B	4*
-888	zacian	FALSE	C	1-2*
-888	zacian	FALSE	D	1-2*
-888	zacian	FALSE	E	2-3*
-888	zacian	FALSE	F	2-3*
-890	eternatus	FALSE	A	5*
-890	eternatus	FALSE	B	4*
-890	eternatus	FALSE	C	1-2*
-890	eternatus	FALSE	D	1-2*
-890	eternatus	FALSE	E	2-3*
-890	eternatus	FALSE	F	2-3*
-891	urshifu	TRUE	A	5*
-891	urshifu	TRUE	B	4*
-891	kubfu	TRUE	C	1-2*
-891	kubfu	TRUE	D	1-2*
-891	kubfu	TRUE	E	2-3*
-891	urshifu	TRUE	F	2-3*
-894	regieleki	FALSE	A	5*
-894	regieleki	FALSE	B	4*
-894	regieleki	FALSE	C	1-2*
-894	regieleki	FALSE	D	1-2*
-894	regieleki	FALSE	E	2-3*
-894	regieleki	FALSE	F	2-3*
-895	regidrago	FALSE	A	5*
-895	regidrago	FALSE	B	4*
-895	regidrago	FALSE	C	1-2*
-895	regidrago	FALSE	D	1-2*
-895	regidrago	FALSE	E	2-3*
-895	regidrago	FALSE	F	2-3*
-897	spectrier	FALSE	A	5*
-897	spectrier	FALSE	B	4*
-897	spectrier	FALSE	C	1-2*
-897	spectrier	FALSE	D	1-2*
-897	spectrier	FALSE	E	2-3*
-897	spectrier	FALSE	F	2-3*
-905	enamorus	FALSE	A	5*
-905	enamorus	FALSE	B	4*
-905	enamorus	FALSE	C	1-2*
-905	enamorus	FALSE	D	1-2*
-905	enamorus	FALSE	E	2-3*
-905	enamorus	FALSE	F	2-3*
-906	sprigatito	FALSE	A	5*
-906	sprigatito	FALSE	B	4*
-906	sprigatito	FALSE	C	1-2*
-906	sprigatito	FALSE	D	1-2*
-906	sprigatito	FALSE	E	2-3*
-906	sprigatito	FALSE	F	2-3*
-909	skeledirge	TRUE	A	5*
-909	crocalor	TRUE	B	4*
-909	fuecoco	TRUE	C	1-2*
-909	fuecoco	TRUE	D	1-2*
-909	crocalor	TRUE	E	2-3*
-909	crocalor	TRUE	F	2-3*
-912	quaxly	FALSE	A	5*
-912	quaxly	FALSE	B	4*
-912	quaxly	FALSE	C	1-2*
-912	quaxly	FALSE	D	1-2*
-912	quaxly	FALSE	E	2-3*
-912	quaxly	FALSE	F	2-3*
-912	quaxly	FALSE	A	5*
-912	quaxly	FALSE	B	4*
-912	quaxly	FALSE	C	1-2*
-912	quaxly	FALSE	D	1-2*
-912	quaxly	FALSE	E	2-3*
-912	quaxly	FALSE	F	2-3*
-915	lechonk	FALSE	A	5*
-915	lechonk	FALSE	B	4*
-915	lechonk	FALSE	C	1-2*
-915	lechonk	FALSE	D	1-2*
-915	lechonk	FALSE	E	2-3*
-915	lechonk	FALSE	F	2-3*
-919	lokix	TRUE	A	5*
-919	lokix	TRUE	B	4*
-919	nymble	TRUE	C	1-2*
-919	nymble	TRUE	D	1-2*
-919	nymble	TRUE	E	2-3*
-919	lokix	TRUE	F	2-3*
-921	pawmot	TRUE	A	5*
-921	pawmo	TRUE	B	4*
-921	pawmi	TRUE	C	1-2*
-921	pawmi	TRUE	D	1-2*
-921	pawmo	TRUE	E	2-3*
-921	pawmo	TRUE	F	2-3*
-924	maushold	TRUE	A	5*
-924	maushold	TRUE	B	4*
-924	tandemaus	TRUE	C	1-2*
-924	tandemaus	TRUE	D	1-2*
-924	tandemaus	TRUE	E	2-3*
-924	maushold	TRUE	F	2-3*
-926	dachsbun	TRUE	A	5*
-926	dachsbun	TRUE	B	4*
-926	fidough	TRUE	C	1-2*
-926	fidough	TRUE	D	1-2*
-926	fidough	TRUE	E	2-3*
-926	dachsbun	TRUE	F	2-3*
-928	smoliv	FALSE	A	5*
-928	smoliv	FALSE	B	4*
-928	smoliv	FALSE	C	1-2*
-928	smoliv	FALSE	D	1-2*
-928	smoliv	FALSE	E	2-3*
-928	smoliv	FALSE	F	2-3*
-935	ceruledge	FALSE	A	5*
-935	charcadet	FALSE	B	5*
-935	charcadet	FALSE	C	5*
-935	charcadet	FALSE	D	5*
-935	charcadet	FALSE	E	5*
-935	charcadet	FALSE	F	5*
-938	bellibolt	TRUE	A	5*
-938	bellibolt	TRUE	B	4*
-938	tadbulb	TRUE	C	1-2*
-938	tadbulb	TRUE	D	1-2*
-938	tadbulb	TRUE	E	2-3*
-938	bellibolt	TRUE	F	2-3*
-940	kilowattrel	TRUE	A	5*
-940	kilowattrel	TRUE	B	4*
-940	wattrel	TRUE	C	1-2*
-940	wattrel	TRUE	D	1-2*
-940	wattrel	TRUE	E	2-3*
-940	kilowattrel	TRUE	F	2-3*
-951	scovillain	TRUE	A	5*
-951	scovillain	TRUE	B	4*
-951	capsakid	TRUE	C	1-2*
-951	capsakid	TRUE	D	1-2*
-951	capsakid	TRUE	E	2-3*
-951	scovillain	TRUE	F	2-3*
-957	tinkaton	TRUE	A	5*
-957	tinkatuff	TRUE	B	4*
-957	tinkatink	TRUE	C	1-2*
-957	tinkatink	TRUE	D	1-2*
-957	tinkatuff	TRUE	E	2-3*
-957	tinkatuff	TRUE	F	2-3*
-960	wiglett	FALSE	A	5*
-960	wiglett	FALSE	B	4*
-960	wiglett	FALSE	C	1-2*
-960	wiglett	FALSE	D	1-2*
-960	wiglett	FALSE	E	2-3*
-960	wiglett	FALSE	F	2-3*
-963	palafin	TRUE	A	5*
-963	palafin	TRUE	B	4*
-963	finizen	TRUE	C	1-2*
-963	finizen	TRUE	D	1-2*
-963	finizen	TRUE	E	2-3*
-963	palafin	TRUE	F	2-3*
-965	revavroom	TRUE	A	5*
-965	revavroom	TRUE	B	4*
-965	varoom	TRUE	C	1-2*
-965	varoom	TRUE	D	1-2*
-965	varoom	TRUE	E	2-3*
-965	revavroom	TRUE	F	2-3*
-967	cyclizar	FALSE	A	5*
-967	cyclizar	FALSE	B	4*
-967	cyclizar	FALSE	C	1-2*
-967	cyclizar	FALSE	D	1-2*
-967	cyclizar	FALSE	E	2-3*
-967	cyclizar	FALSE	F	2-3*
-968	orthworm	FALSE	A	5*
-968	orthworm	FALSE	B	4*
-968	orthworm	FALSE	C	1-2*
-968	orthworm	FALSE	D	1-2*
-968	orthworm	FALSE	E	2-3*
-968	orthworm	FALSE	F	2-3*
-969	glimmora	TRUE	A	5*
-969	glimmora	TRUE	B	4*
-969	glimmet	TRUE	C	1-2*
-969	glimmet	TRUE	D	1-2*
-969	glimmet	TRUE	E	2-3*
-969	glimmora	TRUE	F	2-3*
-971	greavard	FALSE	A	5*
-971	greavard	FALSE	B	4*
-971	greavard	FALSE	C	1-2*
-971	greavard	FALSE	D	1-2*
-971	greavard	FALSE	E	2-3*
-971	greavard	FALSE	F	2-3*
-976	veluza	FALSE	A	5*
-976	veluza	FALSE	B	4*
-976	veluza	FALSE	C	1-2*
-976	veluza	FALSE	D	1-2*
-976	veluza	FALSE	E	2-3*
-976	veluza	FALSE	F	2-3*
-978	tatsugiri	FALSE	A	5*
-978	tatsugiri	FALSE	B	4*
-978	tatsugiri	FALSE	C	1-2*
-978	tatsugiri	FALSE	D	1-2*
-978	tatsugiri	FALSE	E	2-3*
-978	tatsugiri	FALSE	F	2-3*
-984	great_tusk	FALSE	A	5*
-984	great_tusk	FALSE	B	4*
-984	great_tusk	FALSE	C	1-2*
-984	great_tusk	FALSE	D	1-2*
-984	great_tusk	FALSE	E	2-3*
-984	great_tusk	FALSE	F	2-3*
-985	scream_tail	FALSE	A	5*
-985	scream_tail	FALSE	B	4*
-985	scream_tail	FALSE	C	1-2*
-985	scream_tail	FALSE	D	1-2*
-985	scream_tail	FALSE	E	2-3*
-985	scream_tail	FALSE	F	2-3*
-987	flutter_mane	FALSE	A	5*
-987	flutter_mane	FALSE	B	4*
-987	flutter_mane	FALSE	C	1-2*
-987	flutter_mane	FALSE	D	1-2*
-987	flutter_mane	FALSE	E	2-3*
-987	flutter_mane	FALSE	F	2-3*
-988	slither_wing	FALSE	A	5*
-988	slither_wing	FALSE	B	4*
-988	slither_wing	FALSE	C	1-2*
-988	slither_wing	FALSE	D	1-2*
-988	slither_wing	FALSE	E	2-3*
-988	slither_wing	FALSE	F	2-3*
-991	iron_bundle	FALSE	A	5*
-991	iron_bundle	FALSE	B	4*
-991	iron_bundle	FALSE	C	1-2*
-991	iron_bundle	FALSE	D	1-2*
-991	iron_bundle	FALSE	E	2-3*
-991	iron_bundle	FALSE	F	2-3*
-992	iron_hands	FALSE	A	5*
-992	iron_hands	FALSE	B	4*
-992	iron_hands	FALSE	C	1-2*
-992	iron_hands	FALSE	D	1-2*
-992	iron_hands	FALSE	E	2-3*
-992	iron_hands	FALSE	F	2-3*
-996	baxcalibur	TRUE	A	5*
-996	arctibax	TRUE	B	4*
-996	frigibax	TRUE	C	1-2*
-996	frigibax	TRUE	D	1-2*
-996	arctibax	TRUE	E	2-3*
-996	arctibax	TRUE	F	2-3*
-999	gholdengo	TRUE	A	5*
-999	gholdengo	TRUE	B	4*
-999	gimmighoul	TRUE	C	1-2*
-999	gimmighoul	TRUE	D	1-2*
-999	gimmighoul	TRUE	E	2-3*
-999	gholdengo	TRUE	F	2-3*
-1006	iron_valiant	FALSE	A	5*
-1006	iron_valiant	FALSE	B	4*
-1006	iron_valiant	FALSE	C	1-2*
-1006	iron_valiant	FALSE	D	1-2*
-1006	iron_valiant	FALSE	E	2-3*
-1006	iron_valiant	FALSE	F	2-3*
+Family	User	Evo	Index	Trade	Rarity
+1	venusaur	TRUE	A	*	5*
+1	ivysaur	TRUE	B	*	4*
+1	bulbasaur	TRUE	C	*	1-2*
+1	bulbasaur	TRUE	D	*	1-2*
+1	bulbasaur	TRUE	E	*	2-3*
+1	ivysaur	TRUE	F	*	2-3*
+4	charizard	TRUE	A	*	5*
+4	charmeleon	TRUE	B	*	4*
+4	charmander	TRUE	C	*	1-2*
+4	charmander	TRUE	D	*	1-2*
+4	charmander	TRUE	E	*	2-3*
+4	charmeleon	TRUE	F	*	2-3*
+7	blastoise	TRUE	A	*	5*
+7	wartortle	TRUE	B	*	4*
+7	squirtle	TRUE	C	*	1-2*
+7	squirtle	TRUE	D	*	1-2*
+7	squirtle	TRUE	E	*	2-3*
+7	wartortle	TRUE	F	*	2-3*
+10	butterfree	TRUE	A	*	5*
+10	metapod	TRUE	B	*	4*
+10	caterpie	TRUE	C	*	1-2*
+10	caterpie	TRUE	D	*	1-2*
+10	caterpie	TRUE	E	*	2-3*
+10	metapod	TRUE	F	*	2-3*
+13	beedrill	TRUE	A	*	5*
+13	kakuna	TRUE	B	*	4*
+13	weedle	TRUE	C	*	1-2*
+13	weedle	TRUE	D	*	1-2*
+13	weedle	TRUE	E	*	2-3*
+13	kakuna	TRUE	F	*	2-3*
+16	pidgeot	TRUE	A	*	5*
+16	pidgeotto	TRUE	B	*	4*
+16	pidgey	TRUE	C	*	1-2*
+16	pidgey	TRUE	D	*	1-2*
+16	pidgey	TRUE	E	*	2-3*
+16	pidgeotto	TRUE	F	*	2-3*
+19	raticate	TRUE	A	*	5*
+19	raticate	TRUE	B	*	4*
+19	rattata	TRUE	C	*	1-2*
+19	rattata	TRUE	D	*	1-2*
+19	rattata	TRUE	E	*	2-3*
+19	raticate	TRUE	F	*	2-3*
+21	fearow	TRUE	A	*	5*
+21	fearow	TRUE	B	*	4*
+21	spearow	TRUE	C	*	1-2*
+21	spearow	TRUE	D	*	1-2*
+21	spearow	TRUE	E	*	2-3*
+21	fearow	TRUE	F	*	2-3*
+23	arbok	TRUE	A	*	5*
+23	arbok	TRUE	B	*	4*
+23	ekans	TRUE	C	*	1-2*
+23	ekans	TRUE	D	*	1-2*
+23	ekans	TRUE	E	*	2-3*
+23	arbok	TRUE	F	*	2-3*
+25	raichu	TRUE	A	*	5*
+25	pikachu	TRUE	B	*	4*
+25	pichu	TRUE	C	*	1-2*
+25	pichu	TRUE	D	*	1-2*
+25	pichu	TRUE	E	*	2-3*
+25	pikachu	TRUE	F	*	2-3*
+27	sandslash	TRUE	A	*	5*
+27	sandslash	TRUE	B	*	4*
+27	sandshrew	TRUE	C	*	1-2*
+27	sandshrew	TRUE	D	*	1-2*
+27	sandshrew	TRUE	E	*	2-3*
+27	sandslash	TRUE	F	*	2-3*
+29	nidoqueen	TRUE	A	*	5*
+29	nidorina	TRUE	B	*	4*
+29	nidoran_f	TRUE	C	*	1-2*
+29	nidoran_f	TRUE	D	*	1-2*
+29	nidoran_f	TRUE	E	*	2-3*
+29	nidorina	TRUE	F	*	2-3*
+32	nidoking	TRUE	A	*	5*
+32	nidorino	TRUE	B	*	4*
+32	nidoran_m	TRUE	C	*	1-2*
+32	nidoran_m	TRUE	D	*	1-2*
+32	nidoran_m	TRUE	E	*	2-3*
+32	nidorino	TRUE	F	*	2-3*
+35	clefable	TRUE	A	*	5*
+35	clefairy	TRUE	B	*	4*
+35	cleffa	TRUE	C	*	1-2*
+35	cleffa	TRUE	D	*	1-2*
+35	cleffa	TRUE	E	*	2-3*
+35	clefairy	TRUE	F	*	2-3*
+37	ninetales	TRUE	A	*	5*
+37	ninetales	TRUE	B	*	4*
+37	vulpix	TRUE	C	*	1-2*
+37	vulpix	TRUE	D	*	1-2*
+37	vulpix	TRUE	E	*	2-3*
+37	ninetales	TRUE	F	*	2-3*
+39	wigglytuff	TRUE	A	*	5*
+39	jigglypuff	TRUE	B	*	4*
+39	igglybuff	TRUE	C	*	1-2*
+39	igglybuff	TRUE	D	*	1-2*
+39	igglybuff	TRUE	E	*	2-3*
+39	jigglypuff	TRUE	F	*	2-3*
+41	crobat	TRUE	A	*	5*
+41	golbat	TRUE	B	*	4*
+41	zubat	TRUE	C	*	1-2*
+41	zubat	TRUE	D	*	1-2*
+41	zubat	TRUE	E	*	2-3*
+41	golbat	TRUE	F	*	2-3*
+43	bellossom	FALSE	A	@	5*
+43	vileplume	FALSE	B	@	5*
+43	gloom	FALSE	C	@	1-2*
+43	oddish	FALSE	D	@	1-2*
+43	oddish	FALSE	E	@	3-4*
+43	oddish	FALSE	F	@	3-4*
+46	parasect	TRUE	A	*	5*
+46	parasect	TRUE	B	*	4*
+46	paras	TRUE	C	*	1-2*
+46	paras	TRUE	D	*	1-2*
+46	paras	TRUE	E	*	2-3*
+46	parasect	TRUE	F	*	2-3*
+48	venomoth	TRUE	A	*	5*
+48	venomoth	TRUE	B	*	4*
+48	venonat	TRUE	C	*	1-2*
+48	venonat	TRUE	D	*	1-2*
+48	venonat	TRUE	E	*	2-3*
+48	venomoth	TRUE	F	*	2-3*
+50	dugtrio	TRUE	A	*	5*
+50	dugtrio	TRUE	B	*	4*
+50	diglett	TRUE	C	*	1-2*
+50	diglett	TRUE	D	*	1-2*
+50	diglett	TRUE	E	*	2-3*
+50	dugtrio	TRUE	F	*	2-3*
+52	persian	FALSE	A	@	5*
+52	meowth	FALSE	B	@	5*
+52	meowth	FALSE	C	@	1-2*
+52	meowth	FALSE	D	@	1-2*
+52	meowth	FALSE	E	@	3-4*
+52	meowth	FALSE	F	@	3-4*
+54	golduck	TRUE	A	*	5*
+54	golduck	TRUE	B	*	4*
+54	psyduck	TRUE	C	*	1-2*
+54	psyduck	TRUE	D	*	1-2*
+54	psyduck	TRUE	E	*	2-3*
+54	golduck	TRUE	F	*	2-3*
+56	annihilape	TRUE	A	*	5*
+56	primeape	TRUE	B	*	4*
+56	mankey	TRUE	C	*	1-2*
+56	mankey	TRUE	D	*	1-2*
+56	mankey	TRUE	E	*	2-3*
+56	primeape	TRUE	F	*	2-3*
+58	arcanine	TRUE	A	*	5*
+58	arcanine	TRUE	B	*	4*
+58	growlithe	TRUE	C	*	1-2*
+58	growlithe	TRUE	D	*	1-2*
+58	growlithe	TRUE	E	*	2-3*
+58	arcanine	TRUE	F	*	2-3*
+60	politoed	FALSE	A	@	5*
+60	poliwrath	FALSE	B	@	5*
+60	poliwhirl	FALSE	C	@	1-2*
+60	poliwag	FALSE	D	@	1-2*
+60	poliwag	FALSE	E	@	3-4*
+60	poliwag	FALSE	F	@	3-4*
+63	alakazam	TRUE	A	*	5*
+63	kadabra	TRUE	B	*	4*
+63	abra	TRUE	C	*	1-2*
+63	abra	TRUE	D	*	1-2*
+63	abra	TRUE	E	*	2-3*
+63	kadabra	TRUE	F	*	2-3*
+66	machamp	TRUE	A	*	5*
+66	machoke	TRUE	B	*	4*
+66	machop	TRUE	C	*	1-2*
+66	machop	TRUE	D	*	1-2*
+66	machop	TRUE	E	*	2-3*
+66	machoke	TRUE	F	*	2-3*
+69	victreebel	TRUE	A	*	5*
+69	weepinbell	TRUE	B	*	4*
+69	bellsprout	TRUE	C	*	1-2*
+69	bellsprout	TRUE	D	*	1-2*
+69	bellsprout	TRUE	E	*	2-3*
+69	weepinbell	TRUE	F	*	2-3*
+72	tentacruel	TRUE	A	*	5*
+72	tentacruel	TRUE	B	*	4*
+72	tentacool	TRUE	C	*	1-2*
+72	tentacool	TRUE	D	*	1-2*
+72	tentacool	TRUE	E	*	2-3*
+72	tentacruel	TRUE	F	*	2-3*
+74	golem	TRUE	A	*	5*
+74	graveler	TRUE	B	*	4*
+74	geodude	TRUE	C	*	1-2*
+74	geodude	TRUE	D	*	1-2*
+74	geodude	TRUE	E	*	2-3*
+74	graveler	TRUE	F	*	2-3*
+77	rapidash	TRUE	A	*	5*
+77	rapidash	TRUE	B	*	4*
+77	ponyta	TRUE	C	*	1-2*
+77	ponyta	TRUE	D	*	1-2*
+77	ponyta	TRUE	E	*	2-3*
+77	rapidash	TRUE	F	*	2-3*
+79	slowking	FALSE	A	@	5*
+79	slowbro	FALSE	B	@	5*
+79	slowpoke	FALSE	C	@	1-2*
+79	slowpoke	FALSE	D	@	1-2*
+79	slowpoke	FALSE	E	@	3-4*
+79	slowpoke	FALSE	F	@	3-4*
+81	magnezone	TRUE	A	*	5*
+81	magneton	TRUE	B	*	4*
+81	magnemite	TRUE	C	*	1-2*
+81	magnemite	TRUE	D	*	1-2*
+81	magnemite	TRUE	E	*	2-3*
+81	magneton	TRUE	F	*	2-3*
+83	sirfetchd	TRUE	A	*	5*
+83	sirfetchd	TRUE	B	*	4*
+83	farfetchd	TRUE	C	*	1-2*
+83	farfetchd	TRUE	D	*	1-2*
+83	farfetchd	TRUE	E	*	2-3*
+83	sirfetchd	TRUE	F	*	2-3*
+84	dodrio	TRUE	A	*	5*
+84	dodrio	TRUE	B	*	4*
+84	doduo	TRUE	C	*	1-2*
+84	doduo	TRUE	D	*	1-2*
+84	doduo	TRUE	E	*	2-3*
+84	dodrio	TRUE	F	*	2-3*
+86	dewgong	TRUE	A	*	5*
+86	dewgong	TRUE	B	*	4*
+86	seel	TRUE	C	*	1-2*
+86	seel	TRUE	D	*	1-2*
+86	seel	TRUE	E	*	2-3*
+86	dewgong	TRUE	F	*	2-3*
+88	muk	TRUE	A	*	5*
+88	muk	TRUE	B	*	4*
+88	grimer	TRUE	C	*	1-2*
+88	grimer	TRUE	D	*	1-2*
+88	grimer	TRUE	E	*	2-3*
+88	muk	TRUE	F	*	2-3*
+90	cloyster	TRUE	A	*	5*
+90	cloyster	TRUE	B	*	4*
+90	shellder	TRUE	C	*	1-2*
+90	shellder	TRUE	D	*	1-2*
+90	shellder	TRUE	E	*	2-3*
+90	cloyster	TRUE	F	*	2-3*
+92	gengar	TRUE	A	*	5*
+92	haunter	TRUE	B	*	4*
+92	gastly	TRUE	C	*	1-2*
+92	gastly	TRUE	D	*	1-2*
+92	gastly	TRUE	E	*	2-3*
+92	haunter	TRUE	F	*	2-3*
+95	steelix	TRUE	A	*	5*
+95	steelix	TRUE	B	*	4*
+95	onix	TRUE	C	*	1-2*
+95	onix	TRUE	D	*	1-2*
+95	onix	TRUE	E	*	2-3*
+95	steelix	TRUE	F	*	2-3*
+96	hypno	TRUE	A	*	5*
+96	hypno	TRUE	B	*	4*
+96	drowzee	TRUE	C	*	1-2*
+96	drowzee	TRUE	D	*	1-2*
+96	drowzee	TRUE	E	*	2-3*
+96	hypno	TRUE	F	*	2-3*
+98	kingler	TRUE	A	*	5*
+98	kingler	TRUE	B	*	4*
+98	krabby	TRUE	C	*	1-2*
+98	krabby	TRUE	D	*	1-2*
+98	krabby	TRUE	E	*	2-3*
+98	kingler	TRUE	F	*	2-3*
+100	electrode	TRUE	A	*	5*
+100	electrode	TRUE	B	*	4*
+100	voltorb	TRUE	C	*	1-2*
+100	voltorb	TRUE	D	*	1-2*
+100	voltorb	TRUE	E	*	2-3*
+100	electrode	TRUE	F	*	2-3*
+102	exeggutor	TRUE	A	*	5*
+102	exeggutor	TRUE	B	*	4*
+102	exeggcute	TRUE	C	*	1-2*
+102	exeggcute	TRUE	D	*	1-2*
+102	exeggcute	TRUE	E	*	2-3*
+102	exeggutor	TRUE	F	*	2-3*
+104	marowak	TRUE	A	*	5*
+104	marowak	TRUE	B	*	4*
+104	cubone	TRUE	C	*	1-2*
+104	cubone	TRUE	D	*	1-2*
+104	cubone	TRUE	E	*	2-3*
+104	marowak	TRUE	F	*	2-3*
+106	hitmontop	FALSE	A	@	5*
+106	hitmonchan	FALSE	B	@	5*
+106	hitmonlee	FALSE	C	@	1-2*
+106	tyrogue	FALSE	D	@	1-2*
+106	tyrogue	FALSE	E	@	3-4*
+106	tyrogue	FALSE	F	@	3-4*
+108	lickilicky	TRUE	A	*	5*
+108	lickilicky	TRUE	B	*	4*
+108	lickitung	TRUE	C	*	1-2*
+108	lickitung	TRUE	D	*	1-2*
+108	lickitung	TRUE	E	*	2-3*
+108	lickilicky	TRUE	F	*	2-3*
+109	weezing	TRUE	A	*	5*
+109	weezing	TRUE	B	*	4*
+109	koffing	TRUE	C	*	1-2*
+109	koffing	TRUE	D	*	1-2*
+109	koffing	TRUE	E	*	2-3*
+109	weezing	TRUE	F	*	2-3*
+111	rhyperior	TRUE	A	*	5*
+111	rhydon	TRUE	B	*	4*
+111	rhyhorn	TRUE	C	*	1-2*
+111	rhyhorn	TRUE	D	*	1-2*
+111	rhyhorn	TRUE	E	*	2-3*
+111	rhydon	TRUE	F	*	2-3*
+113	blissey	TRUE	A	*	5*
+113	chansey	TRUE	B	*	4*
+113	happiny	TRUE	C	*	1-2*
+113	happiny	TRUE	D	*	1-2*
+113	happiny	TRUE	E	*	2-3*
+113	chansey	TRUE	F	*	2-3*
+114	tangrowth	TRUE	A	*	5*
+114	tangrowth	TRUE	B	*	4*
+114	tangela	TRUE	C	*	1-2*
+114	tangela	TRUE	D	*	1-2*
+114	tangela	TRUE	E	*	2-3*
+114	tangrowth	TRUE	F	*	2-3*
+115	kangaskhan	FALSE	A	*	5*
+115	kangaskhan	FALSE	B	*	4*
+115	kangaskhan	FALSE	C	*	1-2*
+115	kangaskhan	FALSE	D	*	1-2*
+115	kangaskhan	FALSE	E	*	2-3*
+115	kangaskhan	FALSE	F	*	2-3*
+116	kingdra	TRUE	A	*	5*
+116	seadra	TRUE	B	*	4*
+116	horsea	TRUE	C	*	1-2*
+116	horsea	TRUE	D	*	1-2*
+116	horsea	TRUE	E	*	2-3*
+116	seadra	TRUE	F	*	2-3*
+118	seaking	TRUE	A	*	5*
+118	seaking	TRUE	B	*	4*
+118	goldeen	TRUE	C	*	1-2*
+118	goldeen	TRUE	D	*	1-2*
+118	goldeen	TRUE	E	*	2-3*
+118	seaking	TRUE	F	*	2-3*
+120	starmie	TRUE	A	*	5*
+120	starmie	TRUE	B	*	4*
+120	staryu	TRUE	C	*	1-2*
+120	staryu	TRUE	D	*	1-2*
+120	staryu	TRUE	E	*	2-3*
+120	starmie	TRUE	F	*	2-3*
+122	mr_mime	TRUE	A	*	5*
+122	mr_mime	TRUE	B	*	4*
+122	mime_jr	TRUE	C	*	1-2*
+122	mime_jr	TRUE	D	*	1-2*
+122	mime_jr	TRUE	E	*	2-3*
+122	mr_mime	TRUE	F	*	2-3*
+123	kleavor	FALSE	A	@	5*
+123	scizor	FALSE	B	@	5*
+123	scyther	FALSE	C	@	1-2*
+123	scyther	FALSE	D	@	1-2*
+123	scyther	FALSE	E	@	3-4*
+123	scyther	FALSE	F	@	3-4*
+124	jynx	TRUE	A	*	5*
+124	jynx	TRUE	B	*	4*
+124	smoochum	TRUE	C	*	1-2*
+124	smoochum	TRUE	D	*	1-2*
+124	smoochum	TRUE	E	*	2-3*
+124	jynx	TRUE	F	*	2-3*
+125	electivire	TRUE	A	*	5*
+125	electabuzz	TRUE	B	*	4*
+125	elekid	TRUE	C	*	1-2*
+125	elekid	TRUE	D	*	1-2*
+125	elekid	TRUE	E	*	2-3*
+125	electabuzz	TRUE	F	*	2-3*
+126	magmortar	TRUE	A	*	5*
+126	magmar	TRUE	B	*	4*
+126	magby	TRUE	C	*	1-2*
+126	magby	TRUE	D	*	1-2*
+126	magby	TRUE	E	*	2-3*
+126	magmar	TRUE	F	*	2-3*
+127	pinsir	FALSE	A	*	5*
+127	pinsir	FALSE	B	*	4*
+127	pinsir	FALSE	C	*	1-2*
+127	pinsir	FALSE	D	*	1-2*
+127	pinsir	FALSE	E	*	2-3*
+127	pinsir	FALSE	F	*	2-3*
+128	tauros	FALSE	A	*	5*
+128	tauros	FALSE	B	*	4*
+128	tauros	FALSE	C	*	1-2*
+128	tauros	FALSE	D	*	1-2*
+128	tauros	FALSE	E	*	2-3*
+128	tauros	FALSE	F	*	2-3*
+129	gyarados	TRUE	A	*	5*
+129	gyarados	TRUE	B	*	4*
+129	magikarp	TRUE	C	*	1-2*
+129	magikarp	TRUE	D	*	1-2*
+129	magikarp	TRUE	E	*	2-3*
+129	gyarados	TRUE	F	*	2-3*
+131	lapras	FALSE	A	*	5*
+131	lapras	FALSE	B	*	4*
+131	lapras	FALSE	C	*	1-2*
+131	lapras	FALSE	D	*	1-2*
+131	lapras	FALSE	E	*	2-3*
+131	lapras	FALSE	F	*	2-3*
+132	ditto	FALSE	A	*	5*
+132	ditto	FALSE	B	*	4*
+132	ditto	FALSE	C	*	1-2*
+132	ditto	FALSE	D	*	1-2*
+132	ditto	FALSE	E	*	2-3*
+132	ditto	FALSE	F	*	2-3*
+133	sylveon	FALSE	A	@	5*
+133	glaceon	FALSE	B	@	5*
+133	leafeon	FALSE	C	@	1-2*
+133	umbreon	FALSE	D	@	1-2*
+133	espeon	FALSE	E	@	3-4*
+133	flareon	FALSE	F	@	3-4*
+137	porygon_z	TRUE	A	*	5*
+137	porygon2	TRUE	B	*	4*
+137	porygon	TRUE	C	*	1-2*
+137	porygon	TRUE	D	*	1-2*
+137	porygon	TRUE	E	*	2-3*
+137	porygon2	TRUE	F	*	2-3*
+138	omastar	TRUE	A	*	5*
+138	omastar	TRUE	B	*	4*
+138	omanyte	TRUE	C	*	1-2*
+138	omanyte	TRUE	D	*	1-2*
+138	omanyte	TRUE	E	*	2-3*
+138	omastar	TRUE	F	*	2-3*
+140	kabutops	TRUE	A	*	5*
+140	kabutops	TRUE	B	*	4*
+140	kabuto	TRUE	C	*	1-2*
+140	kabuto	TRUE	D	*	1-2*
+140	kabuto	TRUE	E	*	2-3*
+140	kabutops	TRUE	F	*	2-3*
+142	aerodactyl	FALSE	A	*	5*
+142	aerodactyl	FALSE	B	*	4*
+142	aerodactyl	FALSE	C	*	1-2*
+142	aerodactyl	FALSE	D	*	1-2*
+142	aerodactyl	FALSE	E	*	2-3*
+142	aerodactyl	FALSE	F	*	2-3*
+143	snorlax	TRUE	A	*	5*
+143	snorlax	TRUE	B	*	4*
+143	munchlax	TRUE	C	*	1-2*
+143	munchlax	TRUE	D	*	1-2*
+143	munchlax	TRUE	E	*	2-3*
+143	snorlax	TRUE	F	*	2-3*
+144	articuno	FALSE	A	*	5*
+144	articuno	FALSE	B	*	4*
+144	articuno	FALSE	C	*	1-2*
+144	articuno	FALSE	D	*	1-2*
+144	articuno	FALSE	E	*	2-3*
+144	articuno	FALSE	F	*	2-3*
+145	zapdos	FALSE	A	*	5*
+145	zapdos	FALSE	B	*	4*
+145	zapdos	FALSE	C	*	1-2*
+145	zapdos	FALSE	D	*	1-2*
+145	zapdos	FALSE	E	*	2-3*
+145	zapdos	FALSE	F	*	2-3*
+146	moltres	FALSE	A	*	5*
+146	moltres	FALSE	B	*	4*
+146	moltres	FALSE	C	*	1-2*
+146	moltres	FALSE	D	*	1-2*
+146	moltres	FALSE	E	*	2-3*
+146	moltres	FALSE	F	*	2-3*
+147	dragonite	TRUE	A	*	5*
+147	dragonair	TRUE	B	*	4*
+147	dratini	TRUE	C	*	1-2*
+147	dratini	TRUE	D	*	1-2*
+147	dratini	TRUE	E	*	2-3*
+147	dragonair	TRUE	F	*	2-3*
+150	mewtwo	FALSE	A	*	5*
+150	mewtwo	FALSE	B	*	4*
+150	mewtwo	FALSE	C	*	1-2*
+150	mewtwo	FALSE	D	*	1-2*
+150	mewtwo	FALSE	E	*	2-3*
+150	mewtwo	FALSE	F	*	2-3*
+151	mew	FALSE	A	*	5*
+151	mew	FALSE	B	*	4*
+151	mew	FALSE	C	*	1-2*
+151	mew	FALSE	D	*	1-2*
+151	mew	FALSE	E	*	2-3*
+151	mew	FALSE	F	*	2-3*
+152	meganium	TRUE	A	*	5*
+152	bayleef	TRUE	B	*	4*
+152	chikorita	TRUE	C	*	1-2*
+152	chikorita	TRUE	D	*	1-2*
+152	chikorita	TRUE	E	*	2-3*
+152	bayleef	TRUE	F	*	2-3*
+155	typhlosion	TRUE	A	*	5*
+155	quilava	TRUE	B	*	4*
+155	cyndaquil	TRUE	C	*	1-2*
+155	cyndaquil	TRUE	D	*	1-2*
+155	cyndaquil	TRUE	E	*	2-3*
+155	quilava	TRUE	F	*	2-3*
+158	feraligatr	TRUE	A	*	5*
+158	croconaw	TRUE	B	*	4*
+158	totodile	TRUE	C	*	1-2*
+158	totodile	TRUE	D	*	1-2*
+158	totodile	TRUE	E	*	2-3*
+158	croconaw	TRUE	F	*	2-3*
+161	furret	TRUE	A	*	5*
+161	furret	TRUE	B	*	4*
+161	sentret	TRUE	C	*	1-2*
+161	sentret	TRUE	D	*	1-2*
+161	sentret	TRUE	E	*	2-3*
+161	furret	TRUE	F	*	2-3*
+163	noctowl	TRUE	A	*	5*
+163	noctowl	TRUE	B	*	4*
+163	hoothoot	TRUE	C	*	1-2*
+163	hoothoot	TRUE	D	*	1-2*
+163	hoothoot	TRUE	E	*	2-3*
+163	noctowl	TRUE	F	*	2-3*
+165	ledian	TRUE	A	*	5*
+165	ledian	TRUE	B	*	4*
+165	ledyba	TRUE	C	*	1-2*
+165	ledyba	TRUE	D	*	1-2*
+165	ledyba	TRUE	E	*	2-3*
+165	ledian	TRUE	F	*	2-3*
+167	ariados	TRUE	A	*	5*
+167	ariados	TRUE	B	*	4*
+167	spinarak	TRUE	C	*	1-2*
+167	spinarak	TRUE	D	*	1-2*
+167	spinarak	TRUE	E	*	2-3*
+167	ariados	TRUE	F	*	2-3*
+170	lanturn	TRUE	A	*	5*
+170	lanturn	TRUE	B	*	4*
+170	chinchou	TRUE	C	*	1-2*
+170	chinchou	TRUE	D	*	1-2*
+170	chinchou	TRUE	E	*	2-3*
+170	lanturn	TRUE	F	*	2-3*
+175	togekiss	TRUE	A	*	5*
+175	togetic	TRUE	B	*	4*
+175	togepi	TRUE	C	*	1-2*
+175	togepi	TRUE	D	*	1-2*
+175	togepi	TRUE	E	*	2-3*
+175	togetic	TRUE	F	*	2-3*
+177	xatu	TRUE	A	*	5*
+177	xatu	TRUE	B	*	4*
+177	natu	TRUE	C	*	1-2*
+177	natu	TRUE	D	*	1-2*
+177	natu	TRUE	E	*	2-3*
+177	xatu	TRUE	F	*	2-3*
+179	ampharos	TRUE	A	*	5*
+179	flaaffy	TRUE	B	*	4*
+179	mareep	TRUE	C	*	1-2*
+179	mareep	TRUE	D	*	1-2*
+179	mareep	TRUE	E	*	2-3*
+179	flaaffy	TRUE	F	*	2-3*
+183	azumarill	TRUE	A	*	5*
+183	marill	TRUE	B	*	4*
+183	azurill	TRUE	C	*	1-2*
+183	azurill	TRUE	D	*	1-2*
+183	azurill	TRUE	E	*	2-3*
+183	marill	TRUE	F	*	2-3*
+185	sudowoodo	TRUE	A	*	5*
+185	sudowoodo	TRUE	B	*	4*
+185	bonsly	TRUE	C	*	1-2*
+185	bonsly	TRUE	D	*	1-2*
+185	bonsly	TRUE	E	*	2-3*
+185	sudowoodo	TRUE	F	*	2-3*
+187	jumpluff	TRUE	A	*	5*
+187	skiploom	TRUE	B	*	4*
+187	hoppip	TRUE	C	*	1-2*
+187	hoppip	TRUE	D	*	1-2*
+187	hoppip	TRUE	E	*	2-3*
+187	skiploom	TRUE	F	*	2-3*
+190	ambipom	TRUE	A	*	5*
+190	ambipom	TRUE	B	*	4*
+190	aipom	TRUE	C	*	1-2*
+190	aipom	TRUE	D	*	1-2*
+190	aipom	TRUE	E	*	2-3*
+190	ambipom	TRUE	F	*	2-3*
+191	sunflora	TRUE	A	*	5*
+191	sunflora	TRUE	B	*	4*
+191	sunkern	TRUE	C	*	1-2*
+191	sunkern	TRUE	D	*	1-2*
+191	sunkern	TRUE	E	*	2-3*
+191	sunflora	TRUE	F	*	2-3*
+193	yanmega	TRUE	A	*	5*
+193	yanmega	TRUE	B	*	4*
+193	yanma	TRUE	C	*	1-2*
+193	yanma	TRUE	D	*	1-2*
+193	yanma	TRUE	E	*	2-3*
+193	yanmega	TRUE	F	*	2-3*
+194	clodsire	FALSE	A	@	5*
+194	quagsire	FALSE	B	@	5*
+194	wooper	FALSE	C	@	1-2*
+194	wooper	FALSE	D	@	1-2*
+194	wooper	FALSE	E	@	3-4*
+194	wooper	FALSE	F	@	3-4*
+198	honchkrow	TRUE	A	*	5*
+198	honchkrow	TRUE	B	*	4*
+198	murkrow	TRUE	C	*	1-2*
+198	murkrow	TRUE	D	*	1-2*
+198	murkrow	TRUE	E	*	2-3*
+198	honchkrow	TRUE	F	*	2-3*
+200	mismagius	TRUE	A	*	5*
+200	mismagius	TRUE	B	*	4*
+200	misdreavus	TRUE	C	*	1-2*
+200	misdreavus	TRUE	D	*	1-2*
+200	misdreavus	TRUE	E	*	2-3*
+200	mismagius	TRUE	F	*	2-3*
+201	unown	FALSE	A	*	5*
+201	unown	FALSE	B	*	4*
+201	unown	FALSE	C	*	1-2*
+201	unown	FALSE	D	*	1-2*
+201	unown	FALSE	E	*	2-3*
+201	unown	FALSE	F	*	2-3*
+202	wobbuffet	TRUE	A	*	5*
+202	wobbuffet	TRUE	B	*	4*
+202	wynaut	TRUE	C	*	1-2*
+202	wynaut	TRUE	D	*	1-2*
+202	wynaut	TRUE	E	*	2-3*
+202	wobbuffet	TRUE	F	*	2-3*
+203	farigiraf	TRUE	A	*	5*
+203	farigiraf	TRUE	B	*	4*
+203	girafarig	TRUE	C	*	1-2*
+203	girafarig	TRUE	D	*	1-2*
+203	girafarig	TRUE	E	*	2-3*
+203	farigiraf	TRUE	F	*	2-3*
+204	forretress	TRUE	A	*	5*
+204	forretress	TRUE	B	*	4*
+204	pineco	TRUE	C	*	1-2*
+204	pineco	TRUE	D	*	1-2*
+204	pineco	TRUE	E	*	2-3*
+204	forretress	TRUE	F	*	2-3*
+206	dunsparce	FALSE	A	*	5*
+206	dunsparce	FALSE	B	*	4*
+206	dunsparce	FALSE	C	*	1-2*
+206	dunsparce	FALSE	D	*	1-2*
+206	dunsparce	FALSE	E	*	2-3*
+206	dunsparce	FALSE	F	*	2-3*
+207	gliscor	TRUE	A	*	5*
+207	gliscor	TRUE	B	*	4*
+207	gligar	TRUE	C	*	1-2*
+207	gligar	TRUE	D	*	1-2*
+207	gligar	TRUE	E	*	2-3*
+207	gliscor	TRUE	F	*	2-3*
+209	granbull	TRUE	A	*	5*
+209	granbull	TRUE	B	*	4*
+209	snubbull	TRUE	C	*	1-2*
+209	snubbull	TRUE	D	*	1-2*
+209	snubbull	TRUE	E	*	2-3*
+209	granbull	TRUE	F	*	2-3*
+211	overqwil	TRUE	A	*	5*
+211	overqwil	TRUE	B	*	4*
+211	qwilfish	TRUE	C	*	1-2*
+211	qwilfish	TRUE	D	*	1-2*
+211	qwilfish	TRUE	E	*	2-3*
+211	overqwil	TRUE	F	*	2-3*
+213	shuckle	FALSE	A	*	5*
+213	shuckle	FALSE	B	*	4*
+213	shuckle	FALSE	C	*	1-2*
+213	shuckle	FALSE	D	*	1-2*
+213	shuckle	FALSE	E	*	2-3*
+213	shuckle	FALSE	F	*	2-3*
+214	heracross	FALSE	A	*	5*
+214	heracross	FALSE	B	*	4*
+214	heracross	FALSE	C	*	1-2*
+214	heracross	FALSE	D	*	1-2*
+214	heracross	FALSE	E	*	2-3*
+214	heracross	FALSE	F	*	2-3*
+215	sneasler	FALSE	A	@	5*
+215	weavile	FALSE	B	@	5*
+215	sneasel	FALSE	C	@	1-2*
+215	sneasel	FALSE	D	@	1-2*
+215	sneasel	FALSE	E	@	3-4*
+215	sneasel	FALSE	F	@	3-4*
+216	ursaluna	TRUE	A	*	5*
+216	ursaring	TRUE	B	*	4*
+216	teddiursa	TRUE	C	*	1-2*
+216	teddiursa	TRUE	D	*	1-2*
+216	teddiursa	TRUE	E	*	2-3*
+216	ursaring	TRUE	F	*	2-3*
+218	magcargo	TRUE	A	*	5*
+218	magcargo	TRUE	B	*	4*
+218	slugma	TRUE	C	*	1-2*
+218	slugma	TRUE	D	*	1-2*
+218	slugma	TRUE	E	*	2-3*
+218	magcargo	TRUE	F	*	2-3*
+220	mamoswine	TRUE	A	*	5*
+220	piloswine	TRUE	B	*	4*
+220	swinub	TRUE	C	*	1-2*
+220	swinub	TRUE	D	*	1-2*
+220	swinub	TRUE	E	*	2-3*
+220	piloswine	TRUE	F	*	2-3*
+222	corsola	FALSE	A	*	5*
+222	corsola	FALSE	B	*	4*
+222	corsola	FALSE	C	*	1-2*
+222	corsola	FALSE	D	*	1-2*
+222	corsola	FALSE	E	*	2-3*
+222	corsola	FALSE	F	*	2-3*
+223	octillery	TRUE	A	*	5*
+223	octillery	TRUE	B	*	4*
+223	remoraid	TRUE	C	*	1-2*
+223	remoraid	TRUE	D	*	1-2*
+223	remoraid	TRUE	E	*	2-3*
+223	octillery	TRUE	F	*	2-3*
+225	delibird	FALSE	A	*	5*
+225	delibird	FALSE	B	*	4*
+225	delibird	FALSE	C	*	1-2*
+225	delibird	FALSE	D	*	1-2*
+225	delibird	FALSE	E	*	2-3*
+225	delibird	FALSE	F	*	2-3*
+226	mantine	TRUE	A	*	5*
+226	mantine	TRUE	B	*	4*
+226	mantyke	TRUE	C	*	1-2*
+226	mantyke	TRUE	D	*	1-2*
+226	mantyke	TRUE	E	*	2-3*
+226	mantine	TRUE	F	*	2-3*
+227	skarmory	FALSE	A	*	5*
+227	skarmory	FALSE	B	*	4*
+227	skarmory	FALSE	C	*	1-2*
+227	skarmory	FALSE	D	*	1-2*
+227	skarmory	FALSE	E	*	2-3*
+227	skarmory	FALSE	F	*	2-3*
+228	houndoom	TRUE	A	*	5*
+228	houndoom	TRUE	B	*	4*
+228	houndour	TRUE	C	*	1-2*
+228	houndour	TRUE	D	*	1-2*
+228	houndour	TRUE	E	*	2-3*
+228	houndoom	TRUE	F	*	2-3*
+231	donphan	TRUE	A	*	5*
+231	donphan	TRUE	B	*	4*
+231	phanpy	TRUE	C	*	1-2*
+231	phanpy	TRUE	D	*	1-2*
+231	phanpy	TRUE	E	*	2-3*
+231	donphan	TRUE	F	*	2-3*
+234	stantler	FALSE	A	*	5*
+234	stantler	FALSE	B	*	4*
+234	stantler	FALSE	C	*	1-2*
+234	stantler	FALSE	D	*	1-2*
+234	stantler	FALSE	E	*	2-3*
+234	stantler	FALSE	F	*	2-3*
+235	smeargle	FALSE	A	*	5*
+235	smeargle	FALSE	B	*	4*
+235	smeargle	FALSE	C	*	1-2*
+235	smeargle	FALSE	D	*	1-2*
+235	smeargle	FALSE	E	*	2-3*
+235	smeargle	FALSE	F	*	2-3*
+241	miltank	FALSE	A	*	5*
+241	miltank	FALSE	B	*	4*
+241	miltank	FALSE	C	*	1-2*
+241	miltank	FALSE	D	*	1-2*
+241	miltank	FALSE	E	*	2-3*
+241	miltank	FALSE	F	*	2-3*
+243	raikou	FALSE	A	*	5*
+243	raikou	FALSE	B	*	4*
+243	raikou	FALSE	C	*	1-2*
+243	raikou	FALSE	D	*	1-2*
+243	raikou	FALSE	E	*	2-3*
+243	raikou	FALSE	F	*	2-3*
+244	entei	FALSE	A	*	5*
+244	entei	FALSE	B	*	4*
+244	entei	FALSE	C	*	1-2*
+244	entei	FALSE	D	*	1-2*
+244	entei	FALSE	E	*	2-3*
+244	entei	FALSE	F	*	2-3*
+245	suicune	FALSE	A	*	5*
+245	suicune	FALSE	B	*	4*
+245	suicune	FALSE	C	*	1-2*
+245	suicune	FALSE	D	*	1-2*
+245	suicune	FALSE	E	*	2-3*
+245	suicune	FALSE	F	*	2-3*
+246	tyranitar	TRUE	A	*	5*
+246	pupitar	TRUE	B	*	4*
+246	larvitar	TRUE	C	*	1-2*
+246	larvitar	TRUE	D	*	1-2*
+246	larvitar	TRUE	E	*	2-3*
+246	pupitar	TRUE	F	*	2-3*
+249	lugia	FALSE	A	*	5*
+249	lugia	FALSE	B	*	4*
+249	lugia	FALSE	C	*	1-2*
+249	lugia	FALSE	D	*	1-2*
+249	lugia	FALSE	E	*	2-3*
+249	lugia	FALSE	F	*	2-3*
+250	ho_oh	FALSE	A	*	5*
+250	ho_oh	FALSE	B	*	4*
+250	ho_oh	FALSE	C	*	1-2*
+250	ho_oh	FALSE	D	*	1-2*
+250	ho_oh	FALSE	E	*	2-3*
+250	ho_oh	FALSE	F	*	2-3*
+251	celebi	FALSE	A	*	5*
+251	celebi	FALSE	B	*	4*
+251	celebi	FALSE	C	*	1-2*
+251	celebi	FALSE	D	*	1-2*
+251	celebi	FALSE	E	*	2-3*
+251	celebi	FALSE	F	*	2-3*
+252	sceptile	TRUE	A	*	5*
+252	grovyle	TRUE	B	*	4*
+252	treecko	TRUE	C	*	1-2*
+252	treecko	TRUE	D	*	1-2*
+252	treecko	TRUE	E	*	2-3*
+252	grovyle	TRUE	F	*	2-3*
+255	blaziken	TRUE	A	*	5*
+255	combusken	TRUE	B	*	4*
+255	torchic	TRUE	C	*	1-2*
+255	torchic	TRUE	D	*	1-2*
+255	torchic	TRUE	E	*	2-3*
+255	combusken	TRUE	F	*	2-3*
+258	swampert	TRUE	A	*	5*
+258	marshtomp	TRUE	B	*	4*
+258	mudkip	TRUE	C	*	1-2*
+258	mudkip	TRUE	D	*	1-2*
+258	mudkip	TRUE	E	*	2-3*
+258	marshtomp	TRUE	F	*	2-3*
+261	mightyena	TRUE	A	*	5*
+261	mightyena	TRUE	B	*	4*
+261	poochyena	TRUE	C	*	1-2*
+261	poochyena	TRUE	D	*	1-2*
+261	poochyena	TRUE	E	*	2-3*
+261	mightyena	TRUE	F	*	2-3*
+263	obstagoon	TRUE	A	*	5*
+263	linoone	TRUE	B	*	4*
+263	zigzagoon	TRUE	C	*	1-2*
+263	zigzagoon	TRUE	D	*	1-2*
+263	zigzagoon	TRUE	E	*	2-3*
+263	linoone	TRUE	F	*	2-3*
+265	dustox	FALSE	A	@	5*
+265	cascoon	FALSE	B	@	5*
+265	beautifly	FALSE	C	@	1-2*
+265	silcoon	FALSE	D	@	1-2*
+265	wurmple	FALSE	E	@	3-4*
+265	wurmple	FALSE	F	@	3-4*
+270	ludicolo	TRUE	A	*	5*
+270	lombre	TRUE	B	*	4*
+270	lotad	TRUE	C	*	1-2*
+270	lotad	TRUE	D	*	1-2*
+270	lotad	TRUE	E	*	2-3*
+270	lombre	TRUE	F	*	2-3*
+273	shiftry	TRUE	A	*	5*
+273	nuzleaf	TRUE	B	*	4*
+273	seedot	TRUE	C	*	1-2*
+273	seedot	TRUE	D	*	1-2*
+273	seedot	TRUE	E	*	2-3*
+273	nuzleaf	TRUE	F	*	2-3*
+276	swellow	TRUE	A	*	5*
+276	swellow	TRUE	B	*	4*
+276	taillow	TRUE	C	*	1-2*
+276	taillow	TRUE	D	*	1-2*
+276	taillow	TRUE	E	*	2-3*
+276	swellow	TRUE	F	*	2-3*
+278	pelipper	TRUE	A	*	5*
+278	pelipper	TRUE	B	*	4*
+278	wingull	TRUE	C	*	1-2*
+278	wingull	TRUE	D	*	1-2*
+278	wingull	TRUE	E	*	2-3*
+278	pelipper	TRUE	F	*	2-3*
+280	gallade	FALSE	A	@	5*
+280	gardevoir	FALSE	B	@	5*
+280	kirlia	FALSE	C	@	1-2*
+280	ralts	FALSE	D	@	1-2*
+280	ralts	FALSE	E	@	3-4*
+280	ralts	FALSE	F	@	3-4*
+283	masquerain	TRUE	A	*	5*
+283	masquerain	TRUE	B	*	4*
+283	surskit	TRUE	C	*	1-2*
+283	surskit	TRUE	D	*	1-2*
+283	surskit	TRUE	E	*	2-3*
+283	masquerain	TRUE	F	*	2-3*
+285	breloom	TRUE	A	*	5*
+285	breloom	TRUE	B	*	4*
+285	shroomish	TRUE	C	*	1-2*
+285	shroomish	TRUE	D	*	1-2*
+285	shroomish	TRUE	E	*	2-3*
+285	breloom	TRUE	F	*	2-3*
+287	slaking	TRUE	A	*	5*
+287	vigoroth	TRUE	B	*	4*
+287	slakoth	TRUE	C	*	1-2*
+287	slakoth	TRUE	D	*	1-2*
+287	slakoth	TRUE	E	*	2-3*
+287	vigoroth	TRUE	F	*	2-3*
+290	ninjask	TRUE	A	*	5*
+290	ninjask	TRUE	B	*	4*
+290	nincada	TRUE	C	*	1-2*
+290	nincada	TRUE	D	*	1-2*
+290	nincada	TRUE	E	*	2-3*
+290	ninjask	TRUE	F	*	2-3*
+290	ninjask	TRUE	A	*	5*
+290	ninjask	TRUE	B	*	4*
+290	nincada	TRUE	C	*	1-2*
+290	nincada	TRUE	D	*	1-2*
+290	nincada	TRUE	E	*	2-3*
+290	ninjask	TRUE	F	*	2-3*
+293	exploud	TRUE	A	*	5*
+293	loudred	TRUE	B	*	4*
+293	whismur	TRUE	C	*	1-2*
+293	whismur	TRUE	D	*	1-2*
+293	whismur	TRUE	E	*	2-3*
+293	loudred	TRUE	F	*	2-3*
+296	hariyama	TRUE	A	*	5*
+296	hariyama	TRUE	B	*	4*
+296	makuhita	TRUE	C	*	1-2*
+296	makuhita	TRUE	D	*	1-2*
+296	makuhita	TRUE	E	*	2-3*
+296	hariyama	TRUE	F	*	2-3*
+299	probopass	TRUE	A	*	5*
+299	probopass	TRUE	B	*	4*
+299	nosepass	TRUE	C	*	1-2*
+299	nosepass	TRUE	D	*	1-2*
+299	nosepass	TRUE	E	*	2-3*
+299	probopass	TRUE	F	*	2-3*
+300	delcatty	TRUE	A	*	5*
+300	delcatty	TRUE	B	*	4*
+300	skitty	TRUE	C	*	1-2*
+300	skitty	TRUE	D	*	1-2*
+300	skitty	TRUE	E	*	2-3*
+300	delcatty	TRUE	F	*	2-3*
+302	sableye	FALSE	A	*	5*
+302	sableye	FALSE	B	*	4*
+302	sableye	FALSE	C	*	1-2*
+302	sableye	FALSE	D	*	1-2*
+302	sableye	FALSE	E	*	2-3*
+302	sableye	FALSE	F	*	2-3*
+303	mawile	FALSE	A	*	5*
+303	mawile	FALSE	B	*	4*
+303	mawile	FALSE	C	*	1-2*
+303	mawile	FALSE	D	*	1-2*
+303	mawile	FALSE	E	*	2-3*
+303	mawile	FALSE	F	*	2-3*
+304	aggron	TRUE	A	*	5*
+304	lairon	TRUE	B	*	4*
+304	aron	TRUE	C	*	1-2*
+304	aron	TRUE	D	*	1-2*
+304	aron	TRUE	E	*	2-3*
+304	lairon	TRUE	F	*	2-3*
+307	medicham	TRUE	A	*	5*
+307	medicham	TRUE	B	*	4*
+307	meditite	TRUE	C	*	1-2*
+307	meditite	TRUE	D	*	1-2*
+307	meditite	TRUE	E	*	2-3*
+307	medicham	TRUE	F	*	2-3*
+309	manectric	TRUE	A	*	5*
+309	manectric	TRUE	B	*	4*
+309	electrike	TRUE	C	*	1-2*
+309	electrike	TRUE	D	*	1-2*
+309	electrike	TRUE	E	*	2-3*
+309	manectric	TRUE	F	*	2-3*
+311	plusle	FALSE	A	*	5*
+311	plusle	FALSE	B	*	4*
+311	plusle	FALSE	C	*	1-2*
+311	plusle	FALSE	D	*	1-2*
+311	plusle	FALSE	E	*	2-3*
+311	plusle	FALSE	F	*	2-3*
+312	minun	FALSE	A	*	5*
+312	minun	FALSE	B	*	4*
+312	minun	FALSE	C	*	1-2*
+312	minun	FALSE	D	*	1-2*
+312	minun	FALSE	E	*	2-3*
+312	minun	FALSE	F	*	2-3*
+313	volbeat	FALSE	A	*	5*
+313	volbeat	FALSE	B	*	4*
+313	volbeat	FALSE	C	*	1-2*
+313	volbeat	FALSE	D	*	1-2*
+313	volbeat	FALSE	E	*	2-3*
+313	volbeat	FALSE	F	*	2-3*
+314	illumise	FALSE	A	*	5*
+314	illumise	FALSE	B	*	4*
+314	illumise	FALSE	C	*	1-2*
+314	illumise	FALSE	D	*	1-2*
+314	illumise	FALSE	E	*	2-3*
+314	illumise	FALSE	F	*	2-3*
+315	roserade	TRUE	A	*	5*
+315	roselia	TRUE	B	*	4*
+315	budew	TRUE	C	*	1-2*
+315	budew	TRUE	D	*	1-2*
+315	budew	TRUE	E	*	2-3*
+315	roselia	TRUE	F	*	2-3*
+316	swalot	TRUE	A	*	5*
+316	swalot	TRUE	B	*	4*
+316	gulpin	TRUE	C	*	1-2*
+316	gulpin	TRUE	D	*	1-2*
+316	gulpin	TRUE	E	*	2-3*
+316	swalot	TRUE	F	*	2-3*
+318	sharpedo	TRUE	A	*	5*
+318	sharpedo	TRUE	B	*	4*
+318	carvanha	TRUE	C	*	1-2*
+318	carvanha	TRUE	D	*	1-2*
+318	carvanha	TRUE	E	*	2-3*
+318	sharpedo	TRUE	F	*	2-3*
+320	wailord	TRUE	A	*	5*
+320	wailord	TRUE	B	*	4*
+320	wailmer	TRUE	C	*	1-2*
+320	wailmer	TRUE	D	*	1-2*
+320	wailmer	TRUE	E	*	2-3*
+320	wailord	TRUE	F	*	2-3*
+322	camerupt	TRUE	A	*	5*
+322	camerupt	TRUE	B	*	4*
+322	numel	TRUE	C	*	1-2*
+322	numel	TRUE	D	*	1-2*
+322	numel	TRUE	E	*	2-3*
+322	camerupt	TRUE	F	*	2-3*
+324	torkoal	FALSE	A	*	5*
+324	torkoal	FALSE	B	*	4*
+324	torkoal	FALSE	C	*	1-2*
+324	torkoal	FALSE	D	*	1-2*
+324	torkoal	FALSE	E	*	2-3*
+324	torkoal	FALSE	F	*	2-3*
+325	grumpig	TRUE	A	*	5*
+325	grumpig	TRUE	B	*	4*
+325	spoink	TRUE	C	*	1-2*
+325	spoink	TRUE	D	*	1-2*
+325	spoink	TRUE	E	*	2-3*
+325	grumpig	TRUE	F	*	2-3*
+327	spinda	FALSE	A	*	5*
+327	spinda	FALSE	B	*	4*
+327	spinda	FALSE	C	*	1-2*
+327	spinda	FALSE	D	*	1-2*
+327	spinda	FALSE	E	*	2-3*
+327	spinda	FALSE	F	*	2-3*
+328	flygon	TRUE	A	*	5*
+328	vibrava	TRUE	B	*	4*
+328	trapinch	TRUE	C	*	1-2*
+328	trapinch	TRUE	D	*	1-2*
+328	trapinch	TRUE	E	*	2-3*
+328	vibrava	TRUE	F	*	2-3*
+331	cacturne	TRUE	A	*	5*
+331	cacturne	TRUE	B	*	4*
+331	cacnea	TRUE	C	*	1-2*
+331	cacnea	TRUE	D	*	1-2*
+331	cacnea	TRUE	E	*	2-3*
+331	cacturne	TRUE	F	*	2-3*
+333	altaria	TRUE	A	*	5*
+333	altaria	TRUE	B	*	4*
+333	swablu	TRUE	C	*	1-2*
+333	swablu	TRUE	D	*	1-2*
+333	swablu	TRUE	E	*	2-3*
+333	altaria	TRUE	F	*	2-3*
+335	zangoose	FALSE	A	*	5*
+335	zangoose	FALSE	B	*	4*
+335	zangoose	FALSE	C	*	1-2*
+335	zangoose	FALSE	D	*	1-2*
+335	zangoose	FALSE	E	*	2-3*
+335	zangoose	FALSE	F	*	2-3*
+336	seviper	FALSE	A	*	5*
+336	seviper	FALSE	B	*	4*
+336	seviper	FALSE	C	*	1-2*
+336	seviper	FALSE	D	*	1-2*
+336	seviper	FALSE	E	*	2-3*
+336	seviper	FALSE	F	*	2-3*
+337	lunatone	FALSE	A	*	5*
+337	lunatone	FALSE	B	*	4*
+337	lunatone	FALSE	C	*	1-2*
+337	lunatone	FALSE	D	*	1-2*
+337	lunatone	FALSE	E	*	2-3*
+337	lunatone	FALSE	F	*	2-3*
+338	solrock	FALSE	A	*	5*
+338	solrock	FALSE	B	*	4*
+338	solrock	FALSE	C	*	1-2*
+338	solrock	FALSE	D	*	1-2*
+338	solrock	FALSE	E	*	2-3*
+338	solrock	FALSE	F	*	2-3*
+339	whiscash	TRUE	A	*	5*
+339	whiscash	TRUE	B	*	4*
+339	barboach	TRUE	C	*	1-2*
+339	barboach	TRUE	D	*	1-2*
+339	barboach	TRUE	E	*	2-3*
+339	whiscash	TRUE	F	*	2-3*
+341	crawdaunt	TRUE	A	*	5*
+341	crawdaunt	TRUE	B	*	4*
+341	corphish	TRUE	C	*	1-2*
+341	corphish	TRUE	D	*	1-2*
+341	corphish	TRUE	E	*	2-3*
+341	crawdaunt	TRUE	F	*	2-3*
+343	claydol	TRUE	A	*	5*
+343	claydol	TRUE	B	*	4*
+343	baltoy	TRUE	C	*	1-2*
+343	baltoy	TRUE	D	*	1-2*
+343	baltoy	TRUE	E	*	2-3*
+343	claydol	TRUE	F	*	2-3*
+345	cradily	TRUE	A	*	5*
+345	cradily	TRUE	B	*	4*
+345	lileep	TRUE	C	*	1-2*
+345	lileep	TRUE	D	*	1-2*
+345	lileep	TRUE	E	*	2-3*
+345	cradily	TRUE	F	*	2-3*
+347	armaldo	TRUE	A	*	5*
+347	armaldo	TRUE	B	*	4*
+347	anorith	TRUE	C	*	1-2*
+347	anorith	TRUE	D	*	1-2*
+347	anorith	TRUE	E	*	2-3*
+347	armaldo	TRUE	F	*	2-3*
+349	milotic	TRUE	A	*	5*
+349	milotic	TRUE	B	*	4*
+349	feebas	TRUE	C	*	1-2*
+349	feebas	TRUE	D	*	1-2*
+349	feebas	TRUE	E	*	2-3*
+349	milotic	TRUE	F	*	2-3*
+351	castform	FALSE	A	*	5*
+351	castform	FALSE	B	*	4*
+351	castform	FALSE	C	*	1-2*
+351	castform	FALSE	D	*	1-2*
+351	castform	FALSE	E	*	2-3*
+351	castform	FALSE	F	*	2-3*
+352	kecleon	FALSE	A	*	5*
+352	kecleon	FALSE	B	*	4*
+352	kecleon	FALSE	C	*	1-2*
+352	kecleon	FALSE	D	*	1-2*
+352	kecleon	FALSE	E	*	2-3*
+352	kecleon	FALSE	F	*	2-3*
+353	banette	TRUE	A	*	5*
+353	banette	TRUE	B	*	4*
+353	shuppet	TRUE	C	*	1-2*
+353	shuppet	TRUE	D	*	1-2*
+353	shuppet	TRUE	E	*	2-3*
+353	banette	TRUE	F	*	2-3*
+355	dusknoir	TRUE	A	*	5*
+355	dusclops	TRUE	B	*	4*
+355	duskull	TRUE	C	*	1-2*
+355	duskull	TRUE	D	*	1-2*
+355	duskull	TRUE	E	*	2-3*
+355	dusclops	TRUE	F	*	2-3*
+357	tropius	FALSE	A	*	5*
+357	tropius	FALSE	B	*	4*
+357	tropius	FALSE	C	*	1-2*
+357	tropius	FALSE	D	*	1-2*
+357	tropius	FALSE	E	*	2-3*
+357	tropius	FALSE	F	*	2-3*
+358	chimecho	TRUE	A	*	5*
+358	chimecho	TRUE	B	*	4*
+358	chingling	TRUE	C	*	1-2*
+358	chingling	TRUE	D	*	1-2*
+358	chingling	TRUE	E	*	2-3*
+358	chimecho	TRUE	F	*	2-3*
+359	absol	FALSE	A	*	5*
+359	absol	FALSE	B	*	4*
+359	absol	FALSE	C	*	1-2*
+359	absol	FALSE	D	*	1-2*
+359	absol	FALSE	E	*	2-3*
+359	absol	FALSE	F	*	2-3*
+361	froslass	FALSE	A	@	5*
+361	glalie	FALSE	B	@	5*
+361	snorunt	FALSE	C	@	1-2*
+361	snorunt	FALSE	D	@	1-2*
+361	snorunt	FALSE	E	@	3-4*
+361	snorunt	FALSE	F	@	3-4*
+363	walrein	TRUE	A	*	5*
+363	sealeo	TRUE	B	*	4*
+363	spheal	TRUE	C	*	1-2*
+363	spheal	TRUE	D	*	1-2*
+363	spheal	TRUE	E	*	2-3*
+363	sealeo	TRUE	F	*	2-3*
+366	gorebyss	FALSE	A	@	5*
+366	huntail	FALSE	B	@	5*
+366	clamperl	FALSE	C	@	1-2*
+366	clamperl	FALSE	D	@	1-2*
+366	clamperl	FALSE	E	@	3-4*
+366	clamperl	FALSE	F	@	3-4*
+369	relicanth	FALSE	A	*	5*
+369	relicanth	FALSE	B	*	4*
+369	relicanth	FALSE	C	*	1-2*
+369	relicanth	FALSE	D	*	1-2*
+369	relicanth	FALSE	E	*	2-3*
+369	relicanth	FALSE	F	*	2-3*
+370	luvdisc	FALSE	A	*	5*
+370	luvdisc	FALSE	B	*	4*
+370	luvdisc	FALSE	C	*	1-2*
+370	luvdisc	FALSE	D	*	1-2*
+370	luvdisc	FALSE	E	*	2-3*
+370	luvdisc	FALSE	F	*	2-3*
+371	salamence	TRUE	A	*	5*
+371	shelgon	TRUE	B	*	4*
+371	bagon	TRUE	C	*	1-2*
+371	bagon	TRUE	D	*	1-2*
+371	bagon	TRUE	E	*	2-3*
+371	shelgon	TRUE	F	*	2-3*
+374	metagross	TRUE	A	*	5*
+374	metang	TRUE	B	*	4*
+374	beldum	TRUE	C	*	1-2*
+374	beldum	TRUE	D	*	1-2*
+374	beldum	TRUE	E	*	2-3*
+374	metang	TRUE	F	*	2-3*
+377	regirock	FALSE	A	*	5*
+377	regirock	FALSE	B	*	4*
+377	regirock	FALSE	C	*	1-2*
+377	regirock	FALSE	D	*	1-2*
+377	regirock	FALSE	E	*	2-3*
+377	regirock	FALSE	F	*	2-3*
+378	regice	FALSE	A	*	5*
+378	regice	FALSE	B	*	4*
+378	regice	FALSE	C	*	1-2*
+378	regice	FALSE	D	*	1-2*
+378	regice	FALSE	E	*	2-3*
+378	regice	FALSE	F	*	2-3*
+379	registeel	FALSE	A	*	5*
+379	registeel	FALSE	B	*	4*
+379	registeel	FALSE	C	*	1-2*
+379	registeel	FALSE	D	*	1-2*
+379	registeel	FALSE	E	*	2-3*
+379	registeel	FALSE	F	*	2-3*
+380	latias	FALSE	A	*	5*
+380	latias	FALSE	B	*	4*
+380	latias	FALSE	C	*	1-2*
+380	latias	FALSE	D	*	1-2*
+380	latias	FALSE	E	*	2-3*
+380	latias	FALSE	F	*	2-3*
+381	latios	FALSE	A	*	5*
+381	latios	FALSE	B	*	4*
+381	latios	FALSE	C	*	1-2*
+381	latios	FALSE	D	*	1-2*
+381	latios	FALSE	E	*	2-3*
+381	latios	FALSE	F	*	2-3*
+382	kyogre	FALSE	A	*	5*
+382	kyogre	FALSE	B	*	4*
+382	kyogre	FALSE	C	*	1-2*
+382	kyogre	FALSE	D	*	1-2*
+382	kyogre	FALSE	E	*	2-3*
+382	kyogre	FALSE	F	*	2-3*
+383	groudon	FALSE	A	*	5*
+383	groudon	FALSE	B	*	4*
+383	groudon	FALSE	C	*	1-2*
+383	groudon	FALSE	D	*	1-2*
+383	groudon	FALSE	E	*	2-3*
+383	groudon	FALSE	F	*	2-3*
+384	rayquaza	FALSE	A	*	5*
+384	rayquaza	FALSE	B	*	4*
+384	rayquaza	FALSE	C	*	1-2*
+384	rayquaza	FALSE	D	*	1-2*
+384	rayquaza	FALSE	E	*	2-3*
+384	rayquaza	FALSE	F	*	2-3*
+385	jirachi	FALSE	A	*	5*
+385	jirachi	FALSE	B	*	4*
+385	jirachi	FALSE	C	*	1-2*
+385	jirachi	FALSE	D	*	1-2*
+385	jirachi	FALSE	E	*	2-3*
+385	jirachi	FALSE	F	*	2-3*
+386	deoxys	FALSE	A	*	5*
+386	deoxys	FALSE	B	*	4*
+386	deoxys	FALSE	C	*	1-2*
+386	deoxys	FALSE	D	*	1-2*
+386	deoxys	FALSE	E	*	2-3*
+386	deoxys	FALSE	F	*	2-3*
+387	torterra	TRUE	A	*	5*
+387	grotle	TRUE	B	*	4*
+387	turtwig	TRUE	C	*	1-2*
+387	turtwig	TRUE	D	*	1-2*
+387	turtwig	TRUE	E	*	2-3*
+387	grotle	TRUE	F	*	2-3*
+390	infernape	TRUE	A	*	5*
+390	monferno	TRUE	B	*	4*
+390	chimchar	TRUE	C	*	1-2*
+390	chimchar	TRUE	D	*	1-2*
+390	chimchar	TRUE	E	*	2-3*
+390	monferno	TRUE	F	*	2-3*
+393	empoleon	TRUE	A	*	5*
+393	prinplup	TRUE	B	*	4*
+393	piplup	TRUE	C	*	1-2*
+393	piplup	TRUE	D	*	1-2*
+393	piplup	TRUE	E	*	2-3*
+393	prinplup	TRUE	F	*	2-3*
+396	staraptor	TRUE	A	*	5*
+396	staravia	TRUE	B	*	4*
+396	starly	TRUE	C	*	1-2*
+396	starly	TRUE	D	*	1-2*
+396	starly	TRUE	E	*	2-3*
+396	staravia	TRUE	F	*	2-3*
+399	bibarel	TRUE	A	*	5*
+399	bibarel	TRUE	B	*	4*
+399	bidoof	TRUE	C	*	1-2*
+399	bidoof	TRUE	D	*	1-2*
+399	bidoof	TRUE	E	*	2-3*
+399	bibarel	TRUE	F	*	2-3*
+401	kricketune	TRUE	A	*	5*
+401	kricketune	TRUE	B	*	4*
+401	kricketot	TRUE	C	*	1-2*
+401	kricketot	TRUE	D	*	1-2*
+401	kricketot	TRUE	E	*	2-3*
+401	kricketune	TRUE	F	*	2-3*
+403	luxray	TRUE	A	*	5*
+403	luxio	TRUE	B	*	4*
+403	shinx	TRUE	C	*	1-2*
+403	shinx	TRUE	D	*	1-2*
+403	shinx	TRUE	E	*	2-3*
+403	luxio	TRUE	F	*	2-3*
+408	rampardos	TRUE	A	*	5*
+408	rampardos	TRUE	B	*	4*
+408	cranidos	TRUE	C	*	1-2*
+408	cranidos	TRUE	D	*	1-2*
+408	cranidos	TRUE	E	*	2-3*
+408	rampardos	TRUE	F	*	2-3*
+410	bastiodon	TRUE	A	*	5*
+410	bastiodon	TRUE	B	*	4*
+410	shieldon	TRUE	C	*	1-2*
+410	shieldon	TRUE	D	*	1-2*
+410	shieldon	TRUE	E	*	2-3*
+410	bastiodon	TRUE	F	*	2-3*
+412	mothim	FALSE	A	@	5*
+412	wormadam	FALSE	B	@	5*
+412	burmy	FALSE	C	@	1-2*
+412	burmy	FALSE	D	@	1-2*
+412	burmy	FALSE	E	@	3-4*
+412	burmy	FALSE	F	@	3-4*
+415	vespiquen	TRUE	A	*	5*
+415	vespiquen	TRUE	B	*	4*
+415	combee	TRUE	C	*	1-2*
+415	combee	TRUE	D	*	1-2*
+415	combee	TRUE	E	*	2-3*
+415	vespiquen	TRUE	F	*	2-3*
+417	pachirisu	FALSE	A	*	5*
+417	pachirisu	FALSE	B	*	4*
+417	pachirisu	FALSE	C	*	1-2*
+417	pachirisu	FALSE	D	*	1-2*
+417	pachirisu	FALSE	E	*	2-3*
+417	pachirisu	FALSE	F	*	2-3*
+418	floatzel	TRUE	A	*	5*
+418	floatzel	TRUE	B	*	4*
+418	buizel	TRUE	C	*	1-2*
+418	buizel	TRUE	D	*	1-2*
+418	buizel	TRUE	E	*	2-3*
+418	floatzel	TRUE	F	*	2-3*
+420	cherrim	TRUE	A	*	5*
+420	cherrim	TRUE	B	*	4*
+420	cherubi	TRUE	C	*	1-2*
+420	cherubi	TRUE	D	*	1-2*
+420	cherubi	TRUE	E	*	2-3*
+420	cherrim	TRUE	F	*	2-3*
+422	gastrodon	TRUE	A	*	5*
+422	gastrodon	TRUE	B	*	4*
+422	shellos	TRUE	C	*	1-2*
+422	shellos	TRUE	D	*	1-2*
+422	shellos	TRUE	E	*	2-3*
+422	gastrodon	TRUE	F	*	2-3*
+425	drifblim	TRUE	A	*	5*
+425	drifblim	TRUE	B	*	4*
+425	drifloon	TRUE	C	*	1-2*
+425	drifloon	TRUE	D	*	1-2*
+425	drifloon	TRUE	E	*	2-3*
+425	drifblim	TRUE	F	*	2-3*
+427	lopunny	TRUE	A	*	5*
+427	lopunny	TRUE	B	*	4*
+427	buneary	TRUE	C	*	1-2*
+427	buneary	TRUE	D	*	1-2*
+427	buneary	TRUE	E	*	2-3*
+427	lopunny	TRUE	F	*	2-3*
+431	purugly	TRUE	A	*	5*
+431	purugly	TRUE	B	*	4*
+431	glameow	TRUE	C	*	1-2*
+431	glameow	TRUE	D	*	1-2*
+431	glameow	TRUE	E	*	2-3*
+431	purugly	TRUE	F	*	2-3*
+434	skuntank	TRUE	A	*	5*
+434	skuntank	TRUE	B	*	4*
+434	stunky	TRUE	C	*	1-2*
+434	stunky	TRUE	D	*	1-2*
+434	stunky	TRUE	E	*	2-3*
+434	skuntank	TRUE	F	*	2-3*
+436	bronzong	TRUE	A	*	5*
+436	bronzong	TRUE	B	*	4*
+436	bronzor	TRUE	C	*	1-2*
+436	bronzor	TRUE	D	*	1-2*
+436	bronzor	TRUE	E	*	2-3*
+436	bronzong	TRUE	F	*	2-3*
+441	chatot	FALSE	A	*	5*
+441	chatot	FALSE	B	*	4*
+441	chatot	FALSE	C	*	1-2*
+441	chatot	FALSE	D	*	1-2*
+441	chatot	FALSE	E	*	2-3*
+441	chatot	FALSE	F	*	2-3*
+442	spiritomb	FALSE	A	*	5*
+442	spiritomb	FALSE	B	*	4*
+442	spiritomb	FALSE	C	*	1-2*
+442	spiritomb	FALSE	D	*	1-2*
+442	spiritomb	FALSE	E	*	2-3*
+442	spiritomb	FALSE	F	*	2-3*
+443	garchomp	TRUE	A	*	5*
+443	gabite	TRUE	B	*	4*
+443	gible	TRUE	C	*	1-2*
+443	gible	TRUE	D	*	1-2*
+443	gible	TRUE	E	*	2-3*
+443	gabite	TRUE	F	*	2-3*
+447	lucario	TRUE	A	*	5*
+447	lucario	TRUE	B	*	4*
+447	riolu	TRUE	C	*	1-2*
+447	riolu	TRUE	D	*	1-2*
+447	riolu	TRUE	E	*	2-3*
+447	lucario	TRUE	F	*	2-3*
+449	hippowdon	TRUE	A	*	5*
+449	hippowdon	TRUE	B	*	4*
+449	hippopotas	TRUE	C	*	1-2*
+449	hippopotas	TRUE	D	*	1-2*
+449	hippopotas	TRUE	E	*	2-3*
+449	hippowdon	TRUE	F	*	2-3*
+451	drapion	TRUE	A	*	5*
+451	drapion	TRUE	B	*	4*
+451	skorupi	TRUE	C	*	1-2*
+451	skorupi	TRUE	D	*	1-2*
+451	skorupi	TRUE	E	*	2-3*
+451	drapion	TRUE	F	*	2-3*
+453	toxicroak	TRUE	A	*	5*
+453	toxicroak	TRUE	B	*	4*
+453	croagunk	TRUE	C	*	1-2*
+453	croagunk	TRUE	D	*	1-2*
+453	croagunk	TRUE	E	*	2-3*
+453	toxicroak	TRUE	F	*	2-3*
+455	carnivine	FALSE	A	*	5*
+455	carnivine	FALSE	B	*	4*
+455	carnivine	FALSE	C	*	1-2*
+455	carnivine	FALSE	D	*	1-2*
+455	carnivine	FALSE	E	*	2-3*
+455	carnivine	FALSE	F	*	2-3*
+456	lumineon	TRUE	A	*	5*
+456	lumineon	TRUE	B	*	4*
+456	finneon	TRUE	C	*	1-2*
+456	finneon	TRUE	D	*	1-2*
+456	finneon	TRUE	E	*	2-3*
+456	lumineon	TRUE	F	*	2-3*
+459	abomasnow	TRUE	A	*	5*
+459	abomasnow	TRUE	B	*	4*
+459	snover	TRUE	C	*	1-2*
+459	snover	TRUE	D	*	1-2*
+459	snover	TRUE	E	*	2-3*
+459	abomasnow	TRUE	F	*	2-3*
+479	rotom	FALSE	A	*	5*
+479	rotom	FALSE	B	*	4*
+479	rotom	FALSE	C	*	1-2*
+479	rotom	FALSE	D	*	1-2*
+479	rotom	FALSE	E	*	2-3*
+479	rotom	FALSE	F	*	2-3*
+480	uxie	FALSE	A	*	5*
+480	uxie	FALSE	B	*	4*
+480	uxie	FALSE	C	*	1-2*
+480	uxie	FALSE	D	*	1-2*
+480	uxie	FALSE	E	*	2-3*
+480	uxie	FALSE	F	*	2-3*
+481	mesprit	FALSE	A	*	5*
+481	mesprit	FALSE	B	*	4*
+481	mesprit	FALSE	C	*	1-2*
+481	mesprit	FALSE	D	*	1-2*
+481	mesprit	FALSE	E	*	2-3*
+481	mesprit	FALSE	F	*	2-3*
+482	azelf	FALSE	A	*	5*
+482	azelf	FALSE	B	*	4*
+482	azelf	FALSE	C	*	1-2*
+482	azelf	FALSE	D	*	1-2*
+482	azelf	FALSE	E	*	2-3*
+482	azelf	FALSE	F	*	2-3*
+483	dialga	FALSE	A	*	5*
+483	dialga	FALSE	B	*	4*
+483	dialga	FALSE	C	*	1-2*
+483	dialga	FALSE	D	*	1-2*
+483	dialga	FALSE	E	*	2-3*
+483	dialga	FALSE	F	*	2-3*
+484	palkia	FALSE	A	*	5*
+484	palkia	FALSE	B	*	4*
+484	palkia	FALSE	C	*	1-2*
+484	palkia	FALSE	D	*	1-2*
+484	palkia	FALSE	E	*	2-3*
+484	palkia	FALSE	F	*	2-3*
+485	heatran	FALSE	A	*	5*
+485	heatran	FALSE	B	*	4*
+485	heatran	FALSE	C	*	1-2*
+485	heatran	FALSE	D	*	1-2*
+485	heatran	FALSE	E	*	2-3*
+485	heatran	FALSE	F	*	2-3*
+486	regigigas	FALSE	A	*	5*
+486	regigigas	FALSE	B	*	4*
+486	regigigas	FALSE	C	*	1-2*
+486	regigigas	FALSE	D	*	1-2*
+486	regigigas	FALSE	E	*	2-3*
+486	regigigas	FALSE	F	*	2-3*
+487	giratina	FALSE	A	*	5*
+487	giratina	FALSE	B	*	4*
+487	giratina	FALSE	C	*	1-2*
+487	giratina	FALSE	D	*	1-2*
+487	giratina	FALSE	E	*	2-3*
+487	giratina	FALSE	F	*	2-3*
+488	cresselia	FALSE	A	*	5*
+488	cresselia	FALSE	B	*	4*
+488	cresselia	FALSE	C	*	1-2*
+488	cresselia	FALSE	D	*	1-2*
+488	cresselia	FALSE	E	*	2-3*
+488	cresselia	FALSE	F	*	2-3*
+489	phione	FALSE	A	*	5*
+489	phione	FALSE	B	*	4*
+489	phione	FALSE	C	*	1-2*
+489	phione	FALSE	D	*	1-2*
+489	phione	FALSE	E	*	2-3*
+489	phione	FALSE	F	*	2-3*
+490	manaphy	FALSE	A	*	5*
+490	manaphy	FALSE	B	*	4*
+490	manaphy	FALSE	C	*	1-2*
+490	manaphy	FALSE	D	*	1-2*
+490	manaphy	FALSE	E	*	2-3*
+490	manaphy	FALSE	F	*	2-3*
+491	darkrai	FALSE	A	*	5*
+491	darkrai	FALSE	B	*	4*
+491	darkrai	FALSE	C	*	1-2*
+491	darkrai	FALSE	D	*	1-2*
+491	darkrai	FALSE	E	*	2-3*
+491	darkrai	FALSE	F	*	2-3*
+492	shaymin	FALSE	A	*	5*
+492	shaymin	FALSE	B	*	4*
+492	shaymin	FALSE	C	*	1-2*
+492	shaymin	FALSE	D	*	1-2*
+492	shaymin	FALSE	E	*	2-3*
+492	shaymin	FALSE	F	*	2-3*
+493	arceus	FALSE	A	*	5*
+493	arceus	FALSE	B	*	4*
+493	arceus	FALSE	C	*	1-2*
+493	arceus	FALSE	D	*	1-2*
+493	arceus	FALSE	E	*	2-3*
+493	arceus	FALSE	F	*	2-3*
+494	victini	FALSE	A	*	5*
+494	victini	FALSE	B	*	4*
+494	victini	FALSE	C	*	1-2*
+494	victini	FALSE	D	*	1-2*
+494	victini	FALSE	E	*	2-3*
+494	victini	FALSE	F	*	2-3*
+495	serperior	TRUE	A	*	5*
+495	servine	TRUE	B	*	4*
+495	snivy	TRUE	C	*	1-2*
+495	snivy	TRUE	D	*	1-2*
+495	snivy	TRUE	E	*	2-3*
+495	servine	TRUE	F	*	2-3*
+498	emboar	TRUE	A	*	5*
+498	pignite	TRUE	B	*	4*
+498	tepig	TRUE	C	*	1-2*
+498	tepig	TRUE	D	*	1-2*
+498	tepig	TRUE	E	*	2-3*
+498	pignite	TRUE	F	*	2-3*
+501	samurott	TRUE	A	*	5*
+501	dewott	TRUE	B	*	4*
+501	oshawott	TRUE	C	*	1-2*
+501	oshawott	TRUE	D	*	1-2*
+501	oshawott	TRUE	E	*	2-3*
+501	dewott	TRUE	F	*	2-3*
+504	watchog	TRUE	A	*	5*
+504	watchog	TRUE	B	*	4*
+504	patrat	TRUE	C	*	1-2*
+504	patrat	TRUE	D	*	1-2*
+504	patrat	TRUE	E	*	2-3*
+504	watchog	TRUE	F	*	2-3*
+506	stoutland	TRUE	A	*	5*
+506	herdier	TRUE	B	*	4*
+506	lillipup	TRUE	C	*	1-2*
+506	lillipup	TRUE	D	*	1-2*
+506	lillipup	TRUE	E	*	2-3*
+506	herdier	TRUE	F	*	2-3*
+509	liepard	TRUE	A	*	5*
+509	liepard	TRUE	B	*	4*
+509	purrloin	TRUE	C	*	1-2*
+509	purrloin	TRUE	D	*	1-2*
+509	purrloin	TRUE	E	*	2-3*
+509	liepard	TRUE	F	*	2-3*
+513	pansear	FALSE	A	*	5*
+513	pansear	FALSE	B	*	4*
+513	pansear	FALSE	C	*	1-2*
+513	pansear	FALSE	D	*	1-2*
+513	pansear	FALSE	E	*	2-3*
+513	pansear	FALSE	F	*	2-3*
+517	musharna	TRUE	A	*	5*
+517	musharna	TRUE	B	*	4*
+517	munna	TRUE	C	*	1-2*
+517	munna	TRUE	D	*	1-2*
+517	munna	TRUE	E	*	2-3*
+517	musharna	TRUE	F	*	2-3*
+519	pidove	FALSE	A	*	5*
+519	pidove	FALSE	B	*	4*
+519	pidove	FALSE	C	*	1-2*
+519	pidove	FALSE	D	*	1-2*
+519	pidove	FALSE	E	*	2-3*
+519	pidove	FALSE	F	*	2-3*
+519	pidove	FALSE	A	*	5*
+519	pidove	FALSE	B	*	4*
+519	pidove	FALSE	C	*	1-2*
+519	pidove	FALSE	D	*	1-2*
+519	pidove	FALSE	E	*	2-3*
+519	pidove	FALSE	F	*	2-3*
+524	roggenrola	FALSE	A	*	5*
+524	roggenrola	FALSE	B	*	4*
+524	roggenrola	FALSE	C	*	1-2*
+524	roggenrola	FALSE	D	*	1-2*
+524	roggenrola	FALSE	E	*	2-3*
+524	roggenrola	FALSE	F	*	2-3*
+527	swoobat	TRUE	A	*	5*
+527	swoobat	TRUE	B	*	4*
+527	woobat	TRUE	C	*	1-2*
+527	woobat	TRUE	D	*	1-2*
+527	woobat	TRUE	E	*	2-3*
+527	swoobat	TRUE	F	*	2-3*
+529	excadrill	TRUE	A	*	5*
+529	excadrill	TRUE	B	*	4*
+529	drilbur	TRUE	C	*	1-2*
+529	drilbur	TRUE	D	*	1-2*
+529	drilbur	TRUE	E	*	2-3*
+529	excadrill	TRUE	F	*	2-3*
+531	audino	FALSE	A	*	5*
+531	audino	FALSE	B	*	4*
+531	audino	FALSE	C	*	1-2*
+531	audino	FALSE	D	*	1-2*
+531	audino	FALSE	E	*	2-3*
+531	audino	FALSE	F	*	2-3*
+532	timburr	FALSE	A	*	5*
+532	timburr	FALSE	B	*	4*
+532	timburr	FALSE	C	*	1-2*
+532	timburr	FALSE	D	*	1-2*
+532	timburr	FALSE	E	*	2-3*
+532	timburr	FALSE	F	*	2-3*
+535	seismitoad	TRUE	A	*	5*
+535	palpitoad	TRUE	B	*	4*
+535	tympole	TRUE	C	*	1-2*
+535	tympole	TRUE	D	*	1-2*
+535	tympole	TRUE	E	*	2-3*
+535	palpitoad	TRUE	F	*	2-3*
+540	leavanny	TRUE	A	*	5*
+540	swadloon	TRUE	B	*	4*
+540	sewaddle	TRUE	C	*	1-2*
+540	sewaddle	TRUE	D	*	1-2*
+540	sewaddle	TRUE	E	*	2-3*
+540	swadloon	TRUE	F	*	2-3*
+543	scolipede	TRUE	A	*	5*
+543	whirlipede	TRUE	B	*	4*
+543	venipede	TRUE	C	*	1-2*
+543	venipede	TRUE	D	*	1-2*
+543	venipede	TRUE	E	*	2-3*
+543	whirlipede	TRUE	F	*	2-3*
+546	cottonee	FALSE	A	*	5*
+546	cottonee	FALSE	B	*	4*
+546	cottonee	FALSE	C	*	1-2*
+546	cottonee	FALSE	D	*	1-2*
+546	cottonee	FALSE	E	*	2-3*
+546	cottonee	FALSE	F	*	2-3*
+548	lilligant	TRUE	A	*	5*
+548	lilligant	TRUE	B	*	4*
+548	petilil	TRUE	C	*	1-2*
+548	petilil	TRUE	D	*	1-2*
+548	petilil	TRUE	E	*	2-3*
+548	lilligant	TRUE	F	*	2-3*
+550	basculegion	TRUE	A	*	5*
+550	basculegion	TRUE	B	*	4*
+550	basculin	TRUE	C	*	1-2*
+550	basculin	TRUE	D	*	1-2*
+550	basculin	TRUE	E	*	2-3*
+550	basculegion	TRUE	F	*	2-3*
+551	krookodile	TRUE	A	*	5*
+551	krokorok	TRUE	B	*	4*
+551	sandile	TRUE	C	*	1-2*
+551	sandile	TRUE	D	*	1-2*
+551	sandile	TRUE	E	*	2-3*
+551	krokorok	TRUE	F	*	2-3*
+554	darmanitan	TRUE	A	*	5*
+554	darmanitan	TRUE	B	*	4*
+554	darumaka	TRUE	C	*	1-2*
+554	darumaka	TRUE	D	*	1-2*
+554	darumaka	TRUE	E	*	2-3*
+554	darmanitan	TRUE	F	*	2-3*
+556	maractus	FALSE	A	*	5*
+556	maractus	FALSE	B	*	4*
+556	maractus	FALSE	C	*	1-2*
+556	maractus	FALSE	D	*	1-2*
+556	maractus	FALSE	E	*	2-3*
+556	maractus	FALSE	F	*	2-3*
+559	scrafty	TRUE	A	*	5*
+559	scrafty	TRUE	B	*	4*
+559	scraggy	TRUE	C	*	1-2*
+559	scraggy	TRUE	D	*	1-2*
+559	scraggy	TRUE	E	*	2-3*
+559	scrafty	TRUE	F	*	2-3*
+561	sigilyph	FALSE	A	*	5*
+561	sigilyph	FALSE	B	*	4*
+561	sigilyph	FALSE	C	*	1-2*
+561	sigilyph	FALSE	D	*	1-2*
+561	sigilyph	FALSE	E	*	2-3*
+561	sigilyph	FALSE	F	*	2-3*
+562	runerigus	FALSE	A	@	5*
+562	cofagrigus	FALSE	B	@	5*
+562	yamask	FALSE	C	@	1-2*
+562	yamask	FALSE	D	@	1-2*
+562	yamask	FALSE	E	@	3-4*
+562	yamask	FALSE	F	@	3-4*
+566	archeops	TRUE	A	*	5*
+566	archeops	TRUE	B	*	4*
+566	archen	TRUE	C	*	1-2*
+566	archen	TRUE	D	*	1-2*
+566	archen	TRUE	E	*	2-3*
+566	archeops	TRUE	F	*	2-3*
+568	garbodor	TRUE	A	*	5*
+568	garbodor	TRUE	B	*	4*
+568	trubbish	TRUE	C	*	1-2*
+568	trubbish	TRUE	D	*	1-2*
+568	trubbish	TRUE	E	*	2-3*
+568	garbodor	TRUE	F	*	2-3*
+570	zoroark	TRUE	A	*	5*
+570	zoroark	TRUE	B	*	4*
+570	zorua	TRUE	C	*	1-2*
+570	zorua	TRUE	D	*	1-2*
+570	zorua	TRUE	E	*	2-3*
+570	zoroark	TRUE	F	*	2-3*
+572	cinccino	TRUE	A	*	5*
+572	cinccino	TRUE	B	*	4*
+572	minccino	TRUE	C	*	1-2*
+572	minccino	TRUE	D	*	1-2*
+572	minccino	TRUE	E	*	2-3*
+572	cinccino	TRUE	F	*	2-3*
+574	gothitelle	TRUE	A	*	5*
+574	gothorita	TRUE	B	*	4*
+574	gothita	TRUE	C	*	1-2*
+574	gothita	TRUE	D	*	1-2*
+574	gothita	TRUE	E	*	2-3*
+574	gothorita	TRUE	F	*	2-3*
+577	reuniclus	TRUE	A	*	5*
+577	duosion	TRUE	B	*	4*
+577	solosis	TRUE	C	*	1-2*
+577	solosis	TRUE	D	*	1-2*
+577	solosis	TRUE	E	*	2-3*
+577	duosion	TRUE	F	*	2-3*
+582	vanilluxe	TRUE	A	*	5*
+582	vanillish	TRUE	B	*	4*
+582	vanillite	TRUE	C	*	1-2*
+582	vanillite	TRUE	D	*	1-2*
+582	vanillite	TRUE	E	*	2-3*
+582	vanillish	TRUE	F	*	2-3*
+585	sawsbuck	TRUE	A	*	5*
+585	sawsbuck	TRUE	B	*	4*
+585	deerling	TRUE	C	*	1-2*
+585	deerling	TRUE	D	*	1-2*
+585	deerling	TRUE	E	*	2-3*
+585	sawsbuck	TRUE	F	*	2-3*
+587	emolga	FALSE	A	*	5*
+587	emolga	FALSE	B	*	4*
+587	emolga	FALSE	C	*	1-2*
+587	emolga	FALSE	D	*	1-2*
+587	emolga	FALSE	E	*	2-3*
+587	emolga	FALSE	F	*	2-3*
+590	foongus	FALSE	A	*	5*
+590	foongus	FALSE	B	*	4*
+590	foongus	FALSE	C	*	1-2*
+590	foongus	FALSE	D	*	1-2*
+590	foongus	FALSE	E	*	2-3*
+590	foongus	FALSE	F	*	2-3*
+597	ferrothorn	TRUE	A	*	5*
+597	ferrothorn	TRUE	B	*	4*
+597	ferroseed	TRUE	C	*	1-2*
+597	ferroseed	TRUE	D	*	1-2*
+597	ferroseed	TRUE	E	*	2-3*
+597	ferrothorn	TRUE	F	*	2-3*
+605	beheeyem	TRUE	A	*	5*
+605	beheeyem	TRUE	B	*	4*
+605	elgyem	TRUE	C	*	1-2*
+605	elgyem	TRUE	D	*	1-2*
+605	elgyem	TRUE	E	*	2-3*
+605	beheeyem	TRUE	F	*	2-3*
+607	chandelure	TRUE	A	*	5*
+607	lampent	TRUE	B	*	4*
+607	litwick	TRUE	C	*	1-2*
+607	litwick	TRUE	D	*	1-2*
+607	litwick	TRUE	E	*	2-3*
+607	lampent	TRUE	F	*	2-3*
+610	haxorus	TRUE	A	*	5*
+610	fraxure	TRUE	B	*	4*
+610	axew	TRUE	C	*	1-2*
+610	axew	TRUE	D	*	1-2*
+610	axew	TRUE	E	*	2-3*
+610	fraxure	TRUE	F	*	2-3*
+613	beartic	TRUE	A	*	5*
+613	beartic	TRUE	B	*	4*
+613	cubchoo	TRUE	C	*	1-2*
+613	cubchoo	TRUE	D	*	1-2*
+613	cubchoo	TRUE	E	*	2-3*
+613	beartic	TRUE	F	*	2-3*
+615	cryogonal	FALSE	A	*	5*
+615	cryogonal	FALSE	B	*	4*
+615	cryogonal	FALSE	C	*	1-2*
+615	cryogonal	FALSE	D	*	1-2*
+615	cryogonal	FALSE	E	*	2-3*
+615	cryogonal	FALSE	F	*	2-3*
+619	mienshao	TRUE	A	*	5*
+619	mienshao	TRUE	B	*	4*
+619	mienfoo	TRUE	C	*	1-2*
+619	mienfoo	TRUE	D	*	1-2*
+619	mienfoo	TRUE	E	*	2-3*
+619	mienshao	TRUE	F	*	2-3*
+621	druddigon	FALSE	A	*	5*
+621	druddigon	FALSE	B	*	4*
+621	druddigon	FALSE	C	*	1-2*
+621	druddigon	FALSE	D	*	1-2*
+621	druddigon	FALSE	E	*	2-3*
+621	druddigon	FALSE	F	*	2-3*
+622	golurk	TRUE	A	*	5*
+622	golurk	TRUE	B	*	4*
+622	golett	TRUE	C	*	1-2*
+622	golett	TRUE	D	*	1-2*
+622	golett	TRUE	E	*	2-3*
+622	golurk	TRUE	F	*	2-3*
+624	kingambit	TRUE	A	*	5*
+624	bisharp	TRUE	B	*	4*
+624	pawniard	TRUE	C	*	1-2*
+624	pawniard	TRUE	D	*	1-2*
+624	pawniard	TRUE	E	*	2-3*
+624	bisharp	TRUE	F	*	2-3*
+627	braviary	TRUE	A	*	5*
+627	braviary	TRUE	B	*	4*
+627	rufflet	TRUE	C	*	1-2*
+627	rufflet	TRUE	D	*	1-2*
+627	rufflet	TRUE	E	*	2-3*
+627	braviary	TRUE	F	*	2-3*
+631	heatmor	FALSE	A	*	5*
+631	heatmor	FALSE	B	*	4*
+631	heatmor	FALSE	C	*	1-2*
+631	heatmor	FALSE	D	*	1-2*
+631	heatmor	FALSE	E	*	2-3*
+631	heatmor	FALSE	F	*	2-3*
+632	durant	FALSE	A	*	5*
+632	durant	FALSE	B	*	4*
+632	durant	FALSE	C	*	1-2*
+632	durant	FALSE	D	*	1-2*
+632	durant	FALSE	E	*	2-3*
+632	durant	FALSE	F	*	2-3*
+633	hydreigon	TRUE	A	*	5*
+633	zweilous	TRUE	B	*	4*
+633	deino	TRUE	C	*	1-2*
+633	deino	TRUE	D	*	1-2*
+633	deino	TRUE	E	*	2-3*
+633	zweilous	TRUE	F	*	2-3*
+636	volcarona	TRUE	A	*	5*
+636	volcarona	TRUE	B	*	4*
+636	larvesta	TRUE	C	*	1-2*
+636	larvesta	TRUE	D	*	1-2*
+636	larvesta	TRUE	E	*	2-3*
+636	volcarona	TRUE	F	*	2-3*
+638	cobalion	FALSE	A	*	5*
+638	cobalion	FALSE	B	*	4*
+638	cobalion	FALSE	C	*	1-2*
+638	cobalion	FALSE	D	*	1-2*
+638	cobalion	FALSE	E	*	2-3*
+638	cobalion	FALSE	F	*	2-3*
+639	terrakion	FALSE	A	*	5*
+639	terrakion	FALSE	B	*	4*
+639	terrakion	FALSE	C	*	1-2*
+639	terrakion	FALSE	D	*	1-2*
+639	terrakion	FALSE	E	*	2-3*
+639	terrakion	FALSE	F	*	2-3*
+640	virizion	FALSE	A	*	5*
+640	virizion	FALSE	B	*	4*
+640	virizion	FALSE	C	*	1-2*
+640	virizion	FALSE	D	*	1-2*
+640	virizion	FALSE	E	*	2-3*
+640	virizion	FALSE	F	*	2-3*
+641	tornadus	FALSE	A	*	5*
+641	tornadus	FALSE	B	*	4*
+641	tornadus	FALSE	C	*	1-2*
+641	tornadus	FALSE	D	*	1-2*
+641	tornadus	FALSE	E	*	2-3*
+641	tornadus	FALSE	F	*	2-3*
+642	thundurus	FALSE	A	*	5*
+642	thundurus	FALSE	B	*	4*
+642	thundurus	FALSE	C	*	1-2*
+642	thundurus	FALSE	D	*	1-2*
+642	thundurus	FALSE	E	*	2-3*
+642	thundurus	FALSE	F	*	2-3*
+643	reshiram	FALSE	A	*	5*
+643	reshiram	FALSE	B	*	4*
+643	reshiram	FALSE	C	*	1-2*
+643	reshiram	FALSE	D	*	1-2*
+643	reshiram	FALSE	E	*	2-3*
+643	reshiram	FALSE	F	*	2-3*
+644	zekrom	FALSE	A	*	5*
+644	zekrom	FALSE	B	*	4*
+644	zekrom	FALSE	C	*	1-2*
+644	zekrom	FALSE	D	*	1-2*
+644	zekrom	FALSE	E	*	2-3*
+644	zekrom	FALSE	F	*	2-3*
+645	landorus	FALSE	A	*	5*
+645	landorus	FALSE	B	*	4*
+645	landorus	FALSE	C	*	1-2*
+645	landorus	FALSE	D	*	1-2*
+645	landorus	FALSE	E	*	2-3*
+645	landorus	FALSE	F	*	2-3*
+646	kyurem	FALSE	A	*	5*
+646	kyurem	FALSE	B	*	4*
+646	kyurem	FALSE	C	*	1-2*
+646	kyurem	FALSE	D	*	1-2*
+646	kyurem	FALSE	E	*	2-3*
+646	kyurem	FALSE	F	*	2-3*
+647	keldeo	FALSE	A	*	5*
+647	keldeo	FALSE	B	*	4*
+647	keldeo	FALSE	C	*	1-2*
+647	keldeo	FALSE	D	*	1-2*
+647	keldeo	FALSE	E	*	2-3*
+647	keldeo	FALSE	F	*	2-3*
+648	meloetta	FALSE	A	*	5*
+648	meloetta	FALSE	B	*	4*
+648	meloetta	FALSE	C	*	1-2*
+648	meloetta	FALSE	D	*	1-2*
+648	meloetta	FALSE	E	*	2-3*
+648	meloetta	FALSE	F	*	2-3*
+649	genesect	FALSE	A	*	5*
+649	genesect	FALSE	B	*	4*
+649	genesect	FALSE	C	*	1-2*
+649	genesect	FALSE	D	*	1-2*
+649	genesect	FALSE	E	*	2-3*
+649	genesect	FALSE	F	*	2-3*
+650	chespin	FALSE	A	*	5*
+650	chespin	FALSE	B	*	4*
+650	chespin	FALSE	C	*	1-2*
+650	chespin	FALSE	D	*	1-2*
+650	chespin	FALSE	E	*	2-3*
+650	chespin	FALSE	F	*	2-3*
+653	delphox	TRUE	A	*	5*
+653	braixen	TRUE	B	*	4*
+653	fennekin	TRUE	C	*	1-2*
+653	fennekin	TRUE	D	*	1-2*
+653	fennekin	TRUE	E	*	2-3*
+653	braixen	TRUE	F	*	2-3*
+656	greninja	TRUE	A	*	5*
+656	frogadier	TRUE	B	*	4*
+656	froakie	TRUE	C	*	1-2*
+656	froakie	TRUE	D	*	1-2*
+656	froakie	TRUE	E	*	2-3*
+656	frogadier	TRUE	F	*	2-3*
+659	bunnelby	FALSE	A	*	5*
+659	bunnelby	FALSE	B	*	4*
+659	bunnelby	FALSE	C	*	1-2*
+659	bunnelby	FALSE	D	*	1-2*
+659	bunnelby	FALSE	E	*	2-3*
+659	bunnelby	FALSE	F	*	2-3*
+661	talonflame	TRUE	A	*	5*
+661	fletchinder	TRUE	B	*	4*
+661	fletchling	TRUE	C	*	1-2*
+661	fletchling	TRUE	D	*	1-2*
+661	fletchling	TRUE	E	*	2-3*
+661	fletchinder	TRUE	F	*	2-3*
+667	litleo	FALSE	A	*	5*
+667	litleo	FALSE	B	*	4*
+667	litleo	FALSE	C	*	1-2*
+667	litleo	FALSE	D	*	1-2*
+667	litleo	FALSE	E	*	2-3*
+667	litleo	FALSE	F	*	2-3*
+669	florges	TRUE	A	*	5*
+669	floette	TRUE	B	*	4*
+669	flabebe	TRUE	C	*	1-2*
+669	flabebe	TRUE	D	*	1-2*
+669	flabebe	TRUE	E	*	2-3*
+669	floette	TRUE	F	*	2-3*
+672	skiddo	FALSE	A	*	5*
+672	skiddo	FALSE	B	*	4*
+672	skiddo	FALSE	C	*	1-2*
+672	skiddo	FALSE	D	*	1-2*
+672	skiddo	FALSE	E	*	2-3*
+672	skiddo	FALSE	F	*	2-3*
+674	pangoro	TRUE	A	*	5*
+674	pangoro	TRUE	B	*	4*
+674	pancham	TRUE	C	*	1-2*
+674	pancham	TRUE	D	*	1-2*
+674	pancham	TRUE	E	*	2-3*
+674	pangoro	TRUE	F	*	2-3*
+676	furfrou	FALSE	A	*	5*
+676	furfrou	FALSE	B	*	4*
+676	furfrou	FALSE	C	*	1-2*
+676	furfrou	FALSE	D	*	1-2*
+676	furfrou	FALSE	E	*	2-3*
+676	furfrou	FALSE	F	*	2-3*
+677	meowstic	TRUE	A	*	5*
+677	meowstic	TRUE	B	*	4*
+677	espurr	TRUE	C	*	1-2*
+677	espurr	TRUE	D	*	1-2*
+677	espurr	TRUE	E	*	2-3*
+677	meowstic	TRUE	F	*	2-3*
+679	aegislash	TRUE	A	*	5*
+679	doublade	TRUE	B	*	4*
+679	honedge	TRUE	C	*	1-2*
+679	honedge	TRUE	D	*	1-2*
+679	honedge	TRUE	E	*	2-3*
+679	doublade	TRUE	F	*	2-3*
+682	spritzee	FALSE	A	*	5*
+682	spritzee	FALSE	B	*	4*
+682	spritzee	FALSE	C	*	1-2*
+682	spritzee	FALSE	D	*	1-2*
+682	spritzee	FALSE	E	*	2-3*
+682	spritzee	FALSE	F	*	2-3*
+684	slurpuff	TRUE	A	*	5*
+684	slurpuff	TRUE	B	*	4*
+684	swirlix	TRUE	C	*	1-2*
+684	swirlix	TRUE	D	*	1-2*
+684	swirlix	TRUE	E	*	2-3*
+684	slurpuff	TRUE	F	*	2-3*
+686	malamar	TRUE	A	*	5*
+686	malamar	TRUE	B	*	4*
+686	inkay	TRUE	C	*	1-2*
+686	inkay	TRUE	D	*	1-2*
+686	inkay	TRUE	E	*	2-3*
+686	malamar	TRUE	F	*	2-3*
+688	barbaracle	TRUE	A	*	5*
+688	barbaracle	TRUE	B	*	4*
+688	binacle	TRUE	C	*	1-2*
+688	binacle	TRUE	D	*	1-2*
+688	binacle	TRUE	E	*	2-3*
+688	barbaracle	TRUE	F	*	2-3*
+692	clawitzer	TRUE	A	*	5*
+692	clawitzer	TRUE	B	*	4*
+692	clauncher	TRUE	C	*	1-2*
+692	clauncher	TRUE	D	*	1-2*
+692	clauncher	TRUE	E	*	2-3*
+692	clawitzer	TRUE	F	*	2-3*
+694	heliolisk	TRUE	A	*	5*
+694	heliolisk	TRUE	B	*	4*
+694	helioptile	TRUE	C	*	1-2*
+694	helioptile	TRUE	D	*	1-2*
+694	helioptile	TRUE	E	*	2-3*
+694	heliolisk	TRUE	F	*	2-3*
+696	tyrantrum	TRUE	A	*	5*
+696	tyrantrum	TRUE	B	*	4*
+696	tyrunt	TRUE	C	*	1-2*
+696	tyrunt	TRUE	D	*	1-2*
+696	tyrunt	TRUE	E	*	2-3*
+696	tyrantrum	TRUE	F	*	2-3*
+698	aurorus	TRUE	A	*	5*
+698	aurorus	TRUE	B	*	4*
+698	amaura	TRUE	C	*	1-2*
+698	amaura	TRUE	D	*	1-2*
+698	amaura	TRUE	E	*	2-3*
+698	aurorus	TRUE	F	*	2-3*
+701	hawlucha	FALSE	A	*	5*
+701	hawlucha	FALSE	B	*	4*
+701	hawlucha	FALSE	C	*	1-2*
+701	hawlucha	FALSE	D	*	1-2*
+701	hawlucha	FALSE	E	*	2-3*
+701	hawlucha	FALSE	F	*	2-3*
+703	carbink	FALSE	A	*	5*
+703	carbink	FALSE	B	*	4*
+703	carbink	FALSE	C	*	1-2*
+703	carbink	FALSE	D	*	1-2*
+703	carbink	FALSE	E	*	2-3*
+703	carbink	FALSE	F	*	2-3*
+704	goodra	TRUE	A	*	5*
+704	sliggoo	TRUE	B	*	4*
+704	goomy	TRUE	C	*	1-2*
+704	goomy	TRUE	D	*	1-2*
+704	goomy	TRUE	E	*	2-3*
+704	sliggoo	TRUE	F	*	2-3*
+707	klefki	FALSE	A	*	5*
+707	klefki	FALSE	B	*	4*
+707	klefki	FALSE	C	*	1-2*
+707	klefki	FALSE	D	*	1-2*
+707	klefki	FALSE	E	*	2-3*
+707	klefki	FALSE	F	*	2-3*
+708	trevenant	TRUE	A	*	5*
+708	trevenant	TRUE	B	*	4*
+708	phantump	TRUE	C	*	1-2*
+708	phantump	TRUE	D	*	1-2*
+708	phantump	TRUE	E	*	2-3*
+708	trevenant	TRUE	F	*	2-3*
+710	gourgeist	TRUE	A	*	5*
+710	gourgeist	TRUE	B	*	4*
+710	pumpkaboo	TRUE	C	*	1-2*
+710	pumpkaboo	TRUE	D	*	1-2*
+710	pumpkaboo	TRUE	E	*	2-3*
+710	gourgeist	TRUE	F	*	2-3*
+714	noivern	TRUE	A	*	5*
+714	noivern	TRUE	B	*	4*
+714	noibat	TRUE	C	*	1-2*
+714	noibat	TRUE	D	*	1-2*
+714	noibat	TRUE	E	*	2-3*
+714	noivern	TRUE	F	*	2-3*
+716	xerneas	FALSE	A	*	5*
+716	xerneas	FALSE	B	*	4*
+716	xerneas	FALSE	C	*	1-2*
+716	xerneas	FALSE	D	*	1-2*
+716	xerneas	FALSE	E	*	2-3*
+716	xerneas	FALSE	F	*	2-3*
+717	yveltal	FALSE	A	*	5*
+717	yveltal	FALSE	B	*	4*
+717	yveltal	FALSE	C	*	1-2*
+717	yveltal	FALSE	D	*	1-2*
+717	yveltal	FALSE	E	*	2-3*
+717	yveltal	FALSE	F	*	2-3*
+718	zygarde	FALSE	A	*	5*
+718	zygarde	FALSE	B	*	4*
+718	zygarde	FALSE	C	*	1-2*
+718	zygarde	FALSE	D	*	1-2*
+718	zygarde	FALSE	E	*	2-3*
+718	zygarde	FALSE	F	*	2-3*
+719	diancie	FALSE	A	*	5*
+719	diancie	FALSE	B	*	4*
+719	diancie	FALSE	C	*	1-2*
+719	diancie	FALSE	D	*	1-2*
+719	diancie	FALSE	E	*	2-3*
+719	diancie	FALSE	F	*	2-3*
+720	hoopa	FALSE	A	*	5*
+720	hoopa	FALSE	B	*	4*
+720	hoopa	FALSE	C	*	1-2*
+720	hoopa	FALSE	D	*	1-2*
+720	hoopa	FALSE	E	*	2-3*
+720	hoopa	FALSE	F	*	2-3*
+721	volcanion	FALSE	A	*	5*
+721	volcanion	FALSE	B	*	4*
+721	volcanion	FALSE	C	*	1-2*
+721	volcanion	FALSE	D	*	1-2*
+721	volcanion	FALSE	E	*	2-3*
+721	volcanion	FALSE	F	*	2-3*
+722	decidueye	TRUE	A	*	5*
+722	dartrix	TRUE	B	*	4*
+722	rowlet	TRUE	C	*	1-2*
+722	rowlet	TRUE	D	*	1-2*
+722	rowlet	TRUE	E	*	2-3*
+722	dartrix	TRUE	F	*	2-3*
+725	incineroar	TRUE	A	*	5*
+725	torracat	TRUE	B	*	4*
+725	litten	TRUE	C	*	1-2*
+725	litten	TRUE	D	*	1-2*
+725	litten	TRUE	E	*	2-3*
+725	torracat	TRUE	F	*	2-3*
+728	primarina	TRUE	A	*	5*
+728	brionne	TRUE	B	*	4*
+728	popplio	TRUE	C	*	1-2*
+728	popplio	TRUE	D	*	1-2*
+728	popplio	TRUE	E	*	2-3*
+728	brionne	TRUE	F	*	2-3*
+736	vikavolt	TRUE	A	*	5*
+736	charjabug	TRUE	B	*	4*
+736	grubbin	TRUE	C	*	1-2*
+736	grubbin	TRUE	D	*	1-2*
+736	grubbin	TRUE	E	*	2-3*
+736	charjabug	TRUE	F	*	2-3*
+739	crabominable	TRUE	A	*	5*
+739	crabominable	TRUE	B	*	4*
+739	crabrawler	TRUE	C	*	1-2*
+739	crabrawler	TRUE	D	*	1-2*
+739	crabrawler	TRUE	E	*	2-3*
+739	crabominable	TRUE	F	*	2-3*
+742	ribombee	TRUE	A	*	5*
+742	ribombee	TRUE	B	*	4*
+742	cutiefly	TRUE	C	*	1-2*
+742	cutiefly	TRUE	D	*	1-2*
+742	cutiefly	TRUE	E	*	2-3*
+742	ribombee	TRUE	F	*	2-3*
+744	lycanroc	TRUE	A	*	5*
+744	lycanroc	TRUE	B	*	4*
+744	rockruff	TRUE	C	*	1-2*
+744	rockruff	TRUE	D	*	1-2*
+744	rockruff	TRUE	E	*	2-3*
+744	lycanroc	TRUE	F	*	2-3*
+746	wishiwashi	FALSE	A	*	5*
+746	wishiwashi	FALSE	B	*	4*
+746	wishiwashi	FALSE	C	*	1-2*
+746	wishiwashi	FALSE	D	*	1-2*
+746	wishiwashi	FALSE	E	*	2-3*
+746	wishiwashi	FALSE	F	*	2-3*
+747	mareanie	FALSE	A	*	5*
+747	mareanie	FALSE	B	*	4*
+747	mareanie	FALSE	C	*	1-2*
+747	mareanie	FALSE	D	*	1-2*
+747	mareanie	FALSE	E	*	2-3*
+747	mareanie	FALSE	F	*	2-3*
+749	mudbray	FALSE	A	*	5*
+749	mudbray	FALSE	B	*	4*
+749	mudbray	FALSE	C	*	1-2*
+749	mudbray	FALSE	D	*	1-2*
+749	mudbray	FALSE	E	*	2-3*
+749	mudbray	FALSE	F	*	2-3*
+751	araquanid	TRUE	A	*	5*
+751	araquanid	TRUE	B	*	4*
+751	dewpider	TRUE	C	*	1-2*
+751	dewpider	TRUE	D	*	1-2*
+751	dewpider	TRUE	E	*	2-3*
+751	araquanid	TRUE	F	*	2-3*
+753	lurantis	TRUE	A	*	5*
+753	lurantis	TRUE	B	*	4*
+753	fomantis	TRUE	C	*	1-2*
+753	fomantis	TRUE	D	*	1-2*
+753	fomantis	TRUE	E	*	2-3*
+753	lurantis	TRUE	F	*	2-3*
+755	morelull	FALSE	A	*	5*
+755	morelull	FALSE	B	*	4*
+755	morelull	FALSE	C	*	1-2*
+755	morelull	FALSE	D	*	1-2*
+755	morelull	FALSE	E	*	2-3*
+755	morelull	FALSE	F	*	2-3*
+757	salazzle	TRUE	A	*	5*
+757	salazzle	TRUE	B	*	4*
+757	salandit	TRUE	C	*	1-2*
+757	salandit	TRUE	D	*	1-2*
+757	salandit	TRUE	E	*	2-3*
+757	salazzle	TRUE	F	*	2-3*
+759	bewear	TRUE	A	*	5*
+759	bewear	TRUE	B	*	4*
+759	stufful	TRUE	C	*	1-2*
+759	stufful	TRUE	D	*	1-2*
+759	stufful	TRUE	E	*	2-3*
+759	bewear	TRUE	F	*	2-3*
+761	tsareena	TRUE	A	*	5*
+761	steenee	TRUE	B	*	4*
+761	bounsweet	TRUE	C	*	1-2*
+761	bounsweet	TRUE	D	*	1-2*
+761	bounsweet	TRUE	E	*	2-3*
+761	steenee	TRUE	F	*	2-3*
+764	comfey	FALSE	A	*	5*
+764	comfey	FALSE	B	*	4*
+764	comfey	FALSE	C	*	1-2*
+764	comfey	FALSE	D	*	1-2*
+764	comfey	FALSE	E	*	2-3*
+764	comfey	FALSE	F	*	2-3*
+766	passimian	FALSE	A	*	5*
+766	passimian	FALSE	B	*	4*
+766	passimian	FALSE	C	*	1-2*
+766	passimian	FALSE	D	*	1-2*
+766	passimian	FALSE	E	*	2-3*
+766	passimian	FALSE	F	*	2-3*
+767	golisopod	TRUE	A	*	5*
+767	golisopod	TRUE	B	*	4*
+767	wimpod	TRUE	C	*	1-2*
+767	wimpod	TRUE	D	*	1-2*
+767	wimpod	TRUE	E	*	2-3*
+767	golisopod	TRUE	F	*	2-3*
+769	palossand	TRUE	A	*	5*
+769	palossand	TRUE	B	*	4*
+769	sandygast	TRUE	C	*	1-2*
+769	sandygast	TRUE	D	*	1-2*
+769	sandygast	TRUE	E	*	2-3*
+769	palossand	TRUE	F	*	2-3*
+771	pyukumuku	FALSE	A	*	5*
+771	pyukumuku	FALSE	B	*	4*
+771	pyukumuku	FALSE	C	*	1-2*
+771	pyukumuku	FALSE	D	*	1-2*
+771	pyukumuku	FALSE	E	*	2-3*
+771	pyukumuku	FALSE	F	*	2-3*
+772	silvally	TRUE	A	*	5*
+772	silvally	TRUE	B	*	4*
+772	type_null	TRUE	C	*	1-2*
+772	type_null	TRUE	D	*	1-2*
+772	type_null	TRUE	E	*	2-3*
+772	silvally	TRUE	F	*	2-3*
+774	minior	FALSE	A	*	5*
+774	minior	FALSE	B	*	4*
+774	minior	FALSE	C	*	1-2*
+774	minior	FALSE	D	*	1-2*
+774	minior	FALSE	E	*	2-3*
+774	minior	FALSE	F	*	2-3*
+776	turtonator	FALSE	A	*	5*
+776	turtonator	FALSE	B	*	4*
+776	turtonator	FALSE	C	*	1-2*
+776	turtonator	FALSE	D	*	1-2*
+776	turtonator	FALSE	E	*	2-3*
+776	turtonator	FALSE	F	*	2-3*
+777	togedemaru	FALSE	A	*	5*
+777	togedemaru	FALSE	B	*	4*
+777	togedemaru	FALSE	C	*	1-2*
+777	togedemaru	FALSE	D	*	1-2*
+777	togedemaru	FALSE	E	*	2-3*
+777	togedemaru	FALSE	F	*	2-3*
+778	mimikyu	FALSE	A	*	5*
+778	mimikyu	FALSE	B	*	4*
+778	mimikyu	FALSE	C	*	1-2*
+778	mimikyu	FALSE	D	*	1-2*
+778	mimikyu	FALSE	E	*	2-3*
+778	mimikyu	FALSE	F	*	2-3*
+779	bruxish	FALSE	A	*	5*
+779	bruxish	FALSE	B	*	4*
+779	bruxish	FALSE	C	*	1-2*
+779	bruxish	FALSE	D	*	1-2*
+779	bruxish	FALSE	E	*	2-3*
+779	bruxish	FALSE	F	*	2-3*
+780	drampa	FALSE	A	*	5*
+780	drampa	FALSE	B	*	4*
+780	drampa	FALSE	C	*	1-2*
+780	drampa	FALSE	D	*	1-2*
+780	drampa	FALSE	E	*	2-3*
+780	drampa	FALSE	F	*	2-3*
+781	dhelmise	FALSE	A	*	5*
+781	dhelmise	FALSE	B	*	4*
+781	dhelmise	FALSE	C	*	1-2*
+781	dhelmise	FALSE	D	*	1-2*
+781	dhelmise	FALSE	E	*	2-3*
+781	dhelmise	FALSE	F	*	2-3*
+782	kommo_o	TRUE	A	*	5*
+782	hakamo_o	TRUE	B	*	4*
+782	jangmo_o	TRUE	C	*	1-2*
+782	jangmo_o	TRUE	D	*	1-2*
+782	jangmo_o	TRUE	E	*	2-3*
+782	hakamo_o	TRUE	F	*	2-3*
+785	tapu_koko	FALSE	A	*	5*
+785	tapu_koko	FALSE	B	*	4*
+785	tapu_koko	FALSE	C	*	1-2*
+785	tapu_koko	FALSE	D	*	1-2*
+785	tapu_koko	FALSE	E	*	2-3*
+785	tapu_koko	FALSE	F	*	2-3*
+786	tapu_lele	FALSE	A	*	5*
+786	tapu_lele	FALSE	B	*	4*
+786	tapu_lele	FALSE	C	*	1-2*
+786	tapu_lele	FALSE	D	*	1-2*
+786	tapu_lele	FALSE	E	*	2-3*
+786	tapu_lele	FALSE	F	*	2-3*
+787	tapu_bulu	FALSE	A	*	5*
+787	tapu_bulu	FALSE	B	*	4*
+787	tapu_bulu	FALSE	C	*	1-2*
+787	tapu_bulu	FALSE	D	*	1-2*
+787	tapu_bulu	FALSE	E	*	2-3*
+787	tapu_bulu	FALSE	F	*	2-3*
+788	tapu_fini	FALSE	A	*	5*
+788	tapu_fini	FALSE	B	*	4*
+788	tapu_fini	FALSE	C	*	1-2*
+788	tapu_fini	FALSE	D	*	1-2*
+788	tapu_fini	FALSE	E	*	2-3*
+788	tapu_fini	FALSE	F	*	2-3*
+789	lunala	FALSE	A	@	5*
+789	solgaleo	FALSE	B	@	5*
+789	cosmoem	FALSE	C	@	1-2*
+789	cosmog	FALSE	D	@	1-2*
+789	cosmog	FALSE	E	@	3-4*
+789	cosmog	FALSE	F	@	3-4*
+793	nihilego	FALSE	A	*	5*
+793	nihilego	FALSE	B	*	4*
+793	nihilego	FALSE	C	*	1-2*
+793	nihilego	FALSE	D	*	1-2*
+793	nihilego	FALSE	E	*	2-3*
+793	nihilego	FALSE	F	*	2-3*
+794	buzzwole	FALSE	A	*	5*
+794	buzzwole	FALSE	B	*	4*
+794	buzzwole	FALSE	C	*	1-2*
+794	buzzwole	FALSE	D	*	1-2*
+794	buzzwole	FALSE	E	*	2-3*
+794	buzzwole	FALSE	F	*	2-3*
+795	pheromosa	FALSE	A	*	5*
+795	pheromosa	FALSE	B	*	4*
+795	pheromosa	FALSE	C	*	1-2*
+795	pheromosa	FALSE	D	*	1-2*
+795	pheromosa	FALSE	E	*	2-3*
+795	pheromosa	FALSE	F	*	2-3*
+796	xurkitree	FALSE	A	*	5*
+796	xurkitree	FALSE	B	*	4*
+796	xurkitree	FALSE	C	*	1-2*
+796	xurkitree	FALSE	D	*	1-2*
+796	xurkitree	FALSE	E	*	2-3*
+796	xurkitree	FALSE	F	*	2-3*
+797	celesteela	FALSE	A	*	5*
+797	celesteela	FALSE	B	*	4*
+797	celesteela	FALSE	C	*	1-2*
+797	celesteela	FALSE	D	*	1-2*
+797	celesteela	FALSE	E	*	2-3*
+797	celesteela	FALSE	F	*	2-3*
+798	kartana	FALSE	A	*	5*
+798	kartana	FALSE	B	*	4*
+798	kartana	FALSE	C	*	1-2*
+798	kartana	FALSE	D	*	1-2*
+798	kartana	FALSE	E	*	2-3*
+798	kartana	FALSE	F	*	2-3*
+799	guzzlord	FALSE	A	*	5*
+799	guzzlord	FALSE	B	*	4*
+799	guzzlord	FALSE	C	*	1-2*
+799	guzzlord	FALSE	D	*	1-2*
+799	guzzlord	FALSE	E	*	2-3*
+799	guzzlord	FALSE	F	*	2-3*
+800	necrozma	FALSE	A	*	5*
+800	necrozma	FALSE	B	*	4*
+800	necrozma	FALSE	C	*	1-2*
+800	necrozma	FALSE	D	*	1-2*
+800	necrozma	FALSE	E	*	2-3*
+800	necrozma	FALSE	F	*	2-3*
+801	magearna	FALSE	A	*	5*
+801	magearna	FALSE	B	*	4*
+801	magearna	FALSE	C	*	1-2*
+801	magearna	FALSE	D	*	1-2*
+801	magearna	FALSE	E	*	2-3*
+801	magearna	FALSE	F	*	2-3*
+802	marshadow	FALSE	A	*	5*
+802	marshadow	FALSE	B	*	4*
+802	marshadow	FALSE	C	*	1-2*
+802	marshadow	FALSE	D	*	1-2*
+802	marshadow	FALSE	E	*	2-3*
+802	marshadow	FALSE	F	*	2-3*
+803	naganadel	TRUE	A	*	5*
+803	naganadel	TRUE	B	*	4*
+803	poipole	TRUE	C	*	1-2*
+803	poipole	TRUE	D	*	1-2*
+803	poipole	TRUE	E	*	2-3*
+803	naganadel	TRUE	F	*	2-3*
+805	stakataka	FALSE	A	*	5*
+805	stakataka	FALSE	B	*	4*
+805	stakataka	FALSE	C	*	1-2*
+805	stakataka	FALSE	D	*	1-2*
+805	stakataka	FALSE	E	*	2-3*
+805	stakataka	FALSE	F	*	2-3*
+806	blacephalon	FALSE	A	*	5*
+806	blacephalon	FALSE	B	*	4*
+806	blacephalon	FALSE	C	*	1-2*
+806	blacephalon	FALSE	D	*	1-2*
+806	blacephalon	FALSE	E	*	2-3*
+806	blacephalon	FALSE	F	*	2-3*
+807	zeraora	FALSE	A	*	5*
+807	zeraora	FALSE	B	*	4*
+807	zeraora	FALSE	C	*	1-2*
+807	zeraora	FALSE	D	*	1-2*
+807	zeraora	FALSE	E	*	2-3*
+807	zeraora	FALSE	F	*	2-3*
+808	melmetal	TRUE	A	*	5*
+808	melmetal	TRUE	B	*	4*
+808	meltan	TRUE	C	*	1-2*
+808	meltan	TRUE	D	*	1-2*
+808	meltan	TRUE	E	*	2-3*
+808	melmetal	TRUE	F	*	2-3*
+810	grookey	FALSE	A	*	5*
+810	grookey	FALSE	B	*	4*
+810	grookey	FALSE	C	*	1-2*
+810	grookey	FALSE	D	*	1-2*
+810	grookey	FALSE	E	*	2-3*
+810	grookey	FALSE	F	*	2-3*
+813	cinderace	TRUE	A	*	5*
+813	raboot	TRUE	B	*	4*
+813	scorbunny	TRUE	C	*	1-2*
+813	scorbunny	TRUE	D	*	1-2*
+813	scorbunny	TRUE	E	*	2-3*
+813	raboot	TRUE	F	*	2-3*
+816	inteleon	TRUE	A	*	5*
+816	drizzile	TRUE	B	*	4*
+816	sobble	TRUE	C	*	1-2*
+816	sobble	TRUE	D	*	1-2*
+816	sobble	TRUE	E	*	2-3*
+816	drizzile	TRUE	F	*	2-3*
+821	corviknight	TRUE	A	*	5*
+821	corvisquire	TRUE	B	*	4*
+821	rookidee	TRUE	C	*	1-2*
+821	rookidee	TRUE	D	*	1-2*
+821	rookidee	TRUE	E	*	2-3*
+821	corvisquire	TRUE	F	*	2-3*
+827	thievul	TRUE	A	*	5*
+827	thievul	TRUE	B	*	4*
+827	nickit	TRUE	C	*	1-2*
+827	nickit	TRUE	D	*	1-2*
+827	nickit	TRUE	E	*	2-3*
+827	thievul	TRUE	F	*	2-3*
+831	wooloo	FALSE	A	*	5*
+831	wooloo	FALSE	B	*	4*
+831	wooloo	FALSE	C	*	1-2*
+831	wooloo	FALSE	D	*	1-2*
+831	wooloo	FALSE	E	*	2-3*
+831	wooloo	FALSE	F	*	2-3*
+835	yamper	FALSE	A	*	5*
+835	yamper	FALSE	B	*	4*
+835	yamper	FALSE	C	*	1-2*
+835	yamper	FALSE	D	*	1-2*
+835	yamper	FALSE	E	*	2-3*
+835	yamper	FALSE	F	*	2-3*
+840	appletun	FALSE	A	@	5*
+840	flapple	FALSE	B	@	5*
+840	applin	FALSE	C	@	1-2*
+840	applin	FALSE	D	@	1-2*
+840	applin	FALSE	E	@	3-4*
+840	applin	FALSE	F	@	3-4*
+843	sandaconda	TRUE	A	*	5*
+843	sandaconda	TRUE	B	*	4*
+843	silicobra	TRUE	C	*	1-2*
+843	silicobra	TRUE	D	*	1-2*
+843	silicobra	TRUE	E	*	2-3*
+843	sandaconda	TRUE	F	*	2-3*
+845	cramorant	FALSE	A	*	5*
+845	cramorant	FALSE	B	*	4*
+845	cramorant	FALSE	C	*	1-2*
+845	cramorant	FALSE	D	*	1-2*
+845	cramorant	FALSE	E	*	2-3*
+845	cramorant	FALSE	F	*	2-3*
+846	arrokuda	FALSE	A	*	5*
+846	arrokuda	FALSE	B	*	4*
+846	arrokuda	FALSE	C	*	1-2*
+846	arrokuda	FALSE	D	*	1-2*
+846	arrokuda	FALSE	E	*	2-3*
+846	arrokuda	FALSE	F	*	2-3*
+848	toxtricity	TRUE	A	*	5*
+848	toxtricity	TRUE	B	*	4*
+848	toxel	TRUE	C	*	1-2*
+848	toxel	TRUE	D	*	1-2*
+848	toxel	TRUE	E	*	2-3*
+848	toxtricity	TRUE	F	*	2-3*
+850	centiskorch	TRUE	A	*	5*
+850	centiskorch	TRUE	B	*	4*
+850	sizzlipede	TRUE	C	*	1-2*
+850	sizzlipede	TRUE	D	*	1-2*
+850	sizzlipede	TRUE	E	*	2-3*
+850	centiskorch	TRUE	F	*	2-3*
+852	clobbopus	FALSE	A	*	5*
+852	clobbopus	FALSE	B	*	4*
+852	clobbopus	FALSE	C	*	1-2*
+852	clobbopus	FALSE	D	*	1-2*
+852	clobbopus	FALSE	E	*	2-3*
+852	clobbopus	FALSE	F	*	2-3*
+854	polteageist	TRUE	A	*	5*
+854	polteageist	TRUE	B	*	4*
+854	sinistea	TRUE	C	*	1-2*
+854	sinistea	TRUE	D	*	1-2*
+854	sinistea	TRUE	E	*	2-3*
+854	polteageist	TRUE	F	*	2-3*
+856	hatterene	TRUE	A	*	5*
+856	hattrem	TRUE	B	*	4*
+856	hatenna	TRUE	C	*	1-2*
+856	hatenna	TRUE	D	*	1-2*
+856	hatenna	TRUE	E	*	2-3*
+856	hattrem	TRUE	F	*	2-3*
+859	grimmsnarl	TRUE	A	*	5*
+859	morgrem	TRUE	B	*	4*
+859	impidimp	TRUE	C	*	1-2*
+859	impidimp	TRUE	D	*	1-2*
+859	impidimp	TRUE	E	*	2-3*
+859	morgrem	TRUE	F	*	2-3*
+872	frosmoth	TRUE	A	*	5*
+872	frosmoth	TRUE	B	*	4*
+872	snom	TRUE	C	*	1-2*
+872	snom	TRUE	D	*	1-2*
+872	snom	TRUE	E	*	2-3*
+872	frosmoth	TRUE	F	*	2-3*
+874	stonjourner	FALSE	A	*	5*
+874	stonjourner	FALSE	B	*	4*
+874	stonjourner	FALSE	C	*	1-2*
+874	stonjourner	FALSE	D	*	1-2*
+874	stonjourner	FALSE	E	*	2-3*
+874	stonjourner	FALSE	F	*	2-3*
+875	eiscue	FALSE	A	*	5*
+875	eiscue	FALSE	B	*	4*
+875	eiscue	FALSE	C	*	1-2*
+875	eiscue	FALSE	D	*	1-2*
+875	eiscue	FALSE	E	*	2-3*
+875	eiscue	FALSE	F	*	2-3*
+876	indeedee	FALSE	A	*	5*
+876	indeedee	FALSE	B	*	4*
+876	indeedee	FALSE	C	*	1-2*
+876	indeedee	FALSE	D	*	1-2*
+876	indeedee	FALSE	E	*	2-3*
+876	indeedee	FALSE	F	*	2-3*
+877	morpeko	FALSE	A	*	5*
+877	morpeko	FALSE	B	*	4*
+877	morpeko	FALSE	C	*	1-2*
+877	morpeko	FALSE	D	*	1-2*
+877	morpeko	FALSE	E	*	2-3*
+877	morpeko	FALSE	F	*	2-3*
+881	arctozolt	FALSE	A	*	5*
+881	arctozolt	FALSE	B	*	4*
+881	arctozolt	FALSE	C	*	1-2*
+881	arctozolt	FALSE	D	*	1-2*
+881	arctozolt	FALSE	E	*	2-3*
+881	arctozolt	FALSE	F	*	2-3*
+882	dracovish	FALSE	A	*	5*
+882	dracovish	FALSE	B	*	4*
+882	dracovish	FALSE	C	*	1-2*
+882	dracovish	FALSE	D	*	1-2*
+882	dracovish	FALSE	E	*	2-3*
+882	dracovish	FALSE	F	*	2-3*
+884	duraludon	FALSE	A	*	5*
+884	duraludon	FALSE	B	*	4*
+884	duraludon	FALSE	C	*	1-2*
+884	duraludon	FALSE	D	*	1-2*
+884	duraludon	FALSE	E	*	2-3*
+884	duraludon	FALSE	F	*	2-3*
+885	dragapult	TRUE	A	*	5*
+885	drakloak	TRUE	B	*	4*
+885	dreepy	TRUE	C	*	1-2*
+885	dreepy	TRUE	D	*	1-2*
+885	dreepy	TRUE	E	*	2-3*
+885	drakloak	TRUE	F	*	2-3*
+888	zacian	FALSE	A	*	5*
+888	zacian	FALSE	B	*	4*
+888	zacian	FALSE	C	*	1-2*
+888	zacian	FALSE	D	*	1-2*
+888	zacian	FALSE	E	*	2-3*
+888	zacian	FALSE	F	*	2-3*
+890	eternatus	FALSE	A	*	5*
+890	eternatus	FALSE	B	*	4*
+890	eternatus	FALSE	C	*	1-2*
+890	eternatus	FALSE	D	*	1-2*
+890	eternatus	FALSE	E	*	2-3*
+890	eternatus	FALSE	F	*	2-3*
+891	urshifu	TRUE	A	*	5*
+891	urshifu	TRUE	B	*	4*
+891	kubfu	TRUE	C	*	1-2*
+891	kubfu	TRUE	D	*	1-2*
+891	kubfu	TRUE	E	*	2-3*
+891	urshifu	TRUE	F	*	2-3*
+894	regieleki	FALSE	A	*	5*
+894	regieleki	FALSE	B	*	4*
+894	regieleki	FALSE	C	*	1-2*
+894	regieleki	FALSE	D	*	1-2*
+894	regieleki	FALSE	E	*	2-3*
+894	regieleki	FALSE	F	*	2-3*
+895	regidrago	FALSE	A	*	5*
+895	regidrago	FALSE	B	*	4*
+895	regidrago	FALSE	C	*	1-2*
+895	regidrago	FALSE	D	*	1-2*
+895	regidrago	FALSE	E	*	2-3*
+895	regidrago	FALSE	F	*	2-3*
+897	spectrier	FALSE	A	*	5*
+897	spectrier	FALSE	B	*	4*
+897	spectrier	FALSE	C	*	1-2*
+897	spectrier	FALSE	D	*	1-2*
+897	spectrier	FALSE	E	*	2-3*
+897	spectrier	FALSE	F	*	2-3*
+905	enamorus	FALSE	A	*	5*
+905	enamorus	FALSE	B	*	4*
+905	enamorus	FALSE	C	*	1-2*
+905	enamorus	FALSE	D	*	1-2*
+905	enamorus	FALSE	E	*	2-3*
+905	enamorus	FALSE	F	*	2-3*
+906	sprigatito	FALSE	A	*	5*
+906	sprigatito	FALSE	B	*	4*
+906	sprigatito	FALSE	C	*	1-2*
+906	sprigatito	FALSE	D	*	1-2*
+906	sprigatito	FALSE	E	*	2-3*
+906	sprigatito	FALSE	F	*	2-3*
+909	skeledirge	TRUE	A	*	5*
+909	crocalor	TRUE	B	*	4*
+909	fuecoco	TRUE	C	*	1-2*
+909	fuecoco	TRUE	D	*	1-2*
+909	fuecoco	TRUE	E	*	2-3*
+909	crocalor	TRUE	F	*	2-3*
+912	quaxly	FALSE	A	*	5*
+912	quaxly	FALSE	B	*	4*
+912	quaxly	FALSE	C	*	1-2*
+912	quaxly	FALSE	D	*	1-2*
+912	quaxly	FALSE	E	*	2-3*
+912	quaxly	FALSE	F	*	2-3*
+912	quaxly	FALSE	A	*	5*
+912	quaxly	FALSE	B	*	4*
+912	quaxly	FALSE	C	*	1-2*
+912	quaxly	FALSE	D	*	1-2*
+912	quaxly	FALSE	E	*	2-3*
+912	quaxly	FALSE	F	*	2-3*
+915	lechonk	FALSE	A	*	5*
+915	lechonk	FALSE	B	*	4*
+915	lechonk	FALSE	C	*	1-2*
+915	lechonk	FALSE	D	*	1-2*
+915	lechonk	FALSE	E	*	2-3*
+915	lechonk	FALSE	F	*	2-3*
+919	lokix	TRUE	A	*	5*
+919	lokix	TRUE	B	*	4*
+919	nymble	TRUE	C	*	1-2*
+919	nymble	TRUE	D	*	1-2*
+919	nymble	TRUE	E	*	2-3*
+919	lokix	TRUE	F	*	2-3*
+921	pawmot	TRUE	A	*	5*
+921	pawmo	TRUE	B	*	4*
+921	pawmi	TRUE	C	*	1-2*
+921	pawmi	TRUE	D	*	1-2*
+921	pawmi	TRUE	E	*	2-3*
+921	pawmo	TRUE	F	*	2-3*
+924	maushold	TRUE	A	*	5*
+924	maushold	TRUE	B	*	4*
+924	tandemaus	TRUE	C	*	1-2*
+924	tandemaus	TRUE	D	*	1-2*
+924	tandemaus	TRUE	E	*	2-3*
+924	maushold	TRUE	F	*	2-3*
+926	dachsbun	TRUE	A	*	5*
+926	dachsbun	TRUE	B	*	4*
+926	fidough	TRUE	C	*	1-2*
+926	fidough	TRUE	D	*	1-2*
+926	fidough	TRUE	E	*	2-3*
+926	dachsbun	TRUE	F	*	2-3*
+928	smoliv	FALSE	A	*	5*
+928	smoliv	FALSE	B	*	4*
+928	smoliv	FALSE	C	*	1-2*
+928	smoliv	FALSE	D	*	1-2*
+928	smoliv	FALSE	E	*	2-3*
+928	smoliv	FALSE	F	*	2-3*
+935	ceruledge	FALSE	A	@	5*
+935	charcadet	FALSE	B	@	5*
+935	charcadet	FALSE	C	@	1-2*
+935	charcadet	FALSE	D	@	1-2*
+935	charcadet	FALSE	E	@	3-4*
+935	charcadet	FALSE	F	@	3-4*
+938	bellibolt	TRUE	A	*	5*
+938	bellibolt	TRUE	B	*	4*
+938	tadbulb	TRUE	C	*	1-2*
+938	tadbulb	TRUE	D	*	1-2*
+938	tadbulb	TRUE	E	*	2-3*
+938	bellibolt	TRUE	F	*	2-3*
+940	kilowattrel	TRUE	A	*	5*
+940	kilowattrel	TRUE	B	*	4*
+940	wattrel	TRUE	C	*	1-2*
+940	wattrel	TRUE	D	*	1-2*
+940	wattrel	TRUE	E	*	2-3*
+940	kilowattrel	TRUE	F	*	2-3*
+951	scovillain	TRUE	A	*	5*
+951	scovillain	TRUE	B	*	4*
+951	capsakid	TRUE	C	*	1-2*
+951	capsakid	TRUE	D	*	1-2*
+951	capsakid	TRUE	E	*	2-3*
+951	scovillain	TRUE	F	*	2-3*
+957	tinkaton	TRUE	A	*	5*
+957	tinkatuff	TRUE	B	*	4*
+957	tinkatink	TRUE	C	*	1-2*
+957	tinkatink	TRUE	D	*	1-2*
+957	tinkatink	TRUE	E	*	2-3*
+957	tinkatuff	TRUE	F	*	2-3*
+960	wiglett	FALSE	A	*	5*
+960	wiglett	FALSE	B	*	4*
+960	wiglett	FALSE	C	*	1-2*
+960	wiglett	FALSE	D	*	1-2*
+960	wiglett	FALSE	E	*	2-3*
+960	wiglett	FALSE	F	*	2-3*
+963	palafin	TRUE	A	*	5*
+963	palafin	TRUE	B	*	4*
+963	finizen	TRUE	C	*	1-2*
+963	finizen	TRUE	D	*	1-2*
+963	finizen	TRUE	E	*	2-3*
+963	palafin	TRUE	F	*	2-3*
+965	revavroom	TRUE	A	*	5*
+965	revavroom	TRUE	B	*	4*
+965	varoom	TRUE	C	*	1-2*
+965	varoom	TRUE	D	*	1-2*
+965	varoom	TRUE	E	*	2-3*
+965	revavroom	TRUE	F	*	2-3*
+967	cyclizar	FALSE	A	*	5*
+967	cyclizar	FALSE	B	*	4*
+967	cyclizar	FALSE	C	*	1-2*
+967	cyclizar	FALSE	D	*	1-2*
+967	cyclizar	FALSE	E	*	2-3*
+967	cyclizar	FALSE	F	*	2-3*
+968	orthworm	FALSE	A	*	5*
+968	orthworm	FALSE	B	*	4*
+968	orthworm	FALSE	C	*	1-2*
+968	orthworm	FALSE	D	*	1-2*
+968	orthworm	FALSE	E	*	2-3*
+968	orthworm	FALSE	F	*	2-3*
+969	glimmora	TRUE	A	*	5*
+969	glimmora	TRUE	B	*	4*
+969	glimmet	TRUE	C	*	1-2*
+969	glimmet	TRUE	D	*	1-2*
+969	glimmet	TRUE	E	*	2-3*
+969	glimmora	TRUE	F	*	2-3*
+971	greavard	FALSE	A	*	5*
+971	greavard	FALSE	B	*	4*
+971	greavard	FALSE	C	*	1-2*
+971	greavard	FALSE	D	*	1-2*
+971	greavard	FALSE	E	*	2-3*
+971	greavard	FALSE	F	*	2-3*
+976	veluza	FALSE	A	*	5*
+976	veluza	FALSE	B	*	4*
+976	veluza	FALSE	C	*	1-2*
+976	veluza	FALSE	D	*	1-2*
+976	veluza	FALSE	E	*	2-3*
+976	veluza	FALSE	F	*	2-3*
+978	tatsugiri	FALSE	A	*	5*
+978	tatsugiri	FALSE	B	*	4*
+978	tatsugiri	FALSE	C	*	1-2*
+978	tatsugiri	FALSE	D	*	1-2*
+978	tatsugiri	FALSE	E	*	2-3*
+978	tatsugiri	FALSE	F	*	2-3*
+984	great_tusk	FALSE	A	*	5*
+984	great_tusk	FALSE	B	*	4*
+984	great_tusk	FALSE	C	*	1-2*
+984	great_tusk	FALSE	D	*	1-2*
+984	great_tusk	FALSE	E	*	2-3*
+984	great_tusk	FALSE	F	*	2-3*
+985	scream_tail	FALSE	A	*	5*
+985	scream_tail	FALSE	B	*	4*
+985	scream_tail	FALSE	C	*	1-2*
+985	scream_tail	FALSE	D	*	1-2*
+985	scream_tail	FALSE	E	*	2-3*
+985	scream_tail	FALSE	F	*	2-3*
+987	flutter_mane	FALSE	A	*	5*
+987	flutter_mane	FALSE	B	*	4*
+987	flutter_mane	FALSE	C	*	1-2*
+987	flutter_mane	FALSE	D	*	1-2*
+987	flutter_mane	FALSE	E	*	2-3*
+987	flutter_mane	FALSE	F	*	2-3*
+988	slither_wing	FALSE	A	*	5*
+988	slither_wing	FALSE	B	*	4*
+988	slither_wing	FALSE	C	*	1-2*
+988	slither_wing	FALSE	D	*	1-2*
+988	slither_wing	FALSE	E	*	2-3*
+988	slither_wing	FALSE	F	*	2-3*
+991	iron_bundle	FALSE	A	*	5*
+991	iron_bundle	FALSE	B	*	4*
+991	iron_bundle	FALSE	C	*	1-2*
+991	iron_bundle	FALSE	D	*	1-2*
+991	iron_bundle	FALSE	E	*	2-3*
+991	iron_bundle	FALSE	F	*	2-3*
+992	iron_hands	FALSE	A	*	5*
+992	iron_hands	FALSE	B	*	4*
+992	iron_hands	FALSE	C	*	1-2*
+992	iron_hands	FALSE	D	*	1-2*
+992	iron_hands	FALSE	E	*	2-3*
+992	iron_hands	FALSE	F	*	2-3*
+996	baxcalibur	TRUE	A	*	5*
+996	arctibax	TRUE	B	*	4*
+996	frigibax	TRUE	C	*	1-2*
+996	frigibax	TRUE	D	*	1-2*
+996	frigibax	TRUE	E	*	2-3*
+996	arctibax	TRUE	F	*	2-3*
+999	gholdengo	TRUE	A	*	5*
+999	gholdengo	TRUE	B	*	4*
+999	gimmighoul	TRUE	C	*	1-2*
+999	gimmighoul	TRUE	D	*	1-2*
+999	gimmighoul	TRUE	E	*	2-3*
+999	gholdengo	TRUE	F	*	2-3*
+1006	iron_valiant	FALSE	A	*	5*
+1006	iron_valiant	FALSE	B	*	4*
+1006	iron_valiant	FALSE	C	*	1-2*
+1006	iron_valiant	FALSE	D	*	1-2*
+1006	iron_valiant	FALSE	E	*	2-3*
+1006	iron_valiant	FALSE	F	*	2-3*

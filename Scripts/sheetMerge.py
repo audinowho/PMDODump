@@ -59,14 +59,16 @@ class SheetMerge:
             content_row = []
             if 'values' in row:
                 for cell in row['values']:
-                    if 'userEnteredValue' in cell and 'stringValue' in cell['userEnteredValue']:
-                        content_str = cell['userEnteredValue']['stringValue']
-                    elif 'userEnteredValue' in cell and 'boolValue' in cell['userEnteredValue']:
-                        content_str = str(cell['userEnteredValue']['boolValue'])
-                    elif 'userEnteredValue' in cell and 'numberValue' in cell['userEnteredValue']:
-                        content_str = str(cell['userEnteredValue']['numberValue'])
-                    else:
-                        content_str = ''
+                    content_str = ''
+                    if 'userEnteredValue' in cell:
+                        user_val = cell['userEnteredValue']
+                        if 'stringValue' in user_val:
+                            content_str = user_val['stringValue']
+                        elif 'boolValue' in user_val:
+                            content_str = str(user_val['boolValue'])
+                        elif 'numberValue' in user_val:
+                            content_str = str(user_val['numberValue'])
+
                     if '\n' in content_str:
                         print('Newline found in ' + sheet_name + ': ' + content_str)
                     content_row.append(content_str)
