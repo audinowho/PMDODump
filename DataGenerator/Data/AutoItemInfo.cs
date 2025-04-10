@@ -435,88 +435,78 @@ namespace DataGenerator.Data
             int incompleteLeft = 0;
             List<(string item, string[] reqItem)> specific_tradeables = new List<(string, string[])>();
             List<(string item, string dex, int reqCount)> random_tradeables = new List<(string, string, int)>();
-            Dictionary<int, string> dex_map = new Dictionary<int, string>();
-
-            int prev_start = init_idx;
-            List<string> running_tradeables = new List<string>();
-
-            //read the Monster/releases.out.txt
-            //get a list of all species that have at least one row that is certified + NOT NeedsPlace
-            //if a excl item family has at least one member available, allow that item family to be written out
 
             //load from generated csv
             if (File.Exists(GenPath.ITEM_PATH  + "ExclusiveItem.out.txt"))
             {
+                Dictionary<int, bool> available_species = new Dictionary<int, bool>();
+                HashSet<string> takenNames = new HashSet<string>();
+                //read the Monster/releases.out.txt
+                using (StreamReader file = new StreamReader(MonsterInfo.MONSTER_PATH + "releases.out.txt"))
+                {
+                    string[] header = file.ReadLine().Split('\t');
+                    while (!file.EndOfStream)
+                    {
+                        string[] checks = file.ReadLine().Trim().Split('\t');
+
+                        //get a list of all species that have at least one row that is certified + NOT NeedsPlace
+                        int family_num = Int32.Parse(checks[0]);
+                        bool certified = checks[10] == "True";
+                        bool needsPlace = checks[12] == "True";
+                        if (certified && !needsPlace)
+                            available_species[family_num] = true;
+                    }
+                }
+
                 List<string[]> rows = LoadItemRows(GenPath.ITEM_PATH  + "ExclusiveItem.out.txt");
+
+                Dictionary<int, List<string[]>> families = new Dictionary<int, List<string[]>>();
+                int prev_family = 0;
                 for (int ii = 0; ii < rows.Count; ii++)
                 {
                     string[] row = rows[ii];
-                    int item_idx = ii + init_idx;
-
-                    string customName = row[1].Trim();
-                    ExclusiveItemType exclType = (ExclusiveItemType)Enum.Parse(typeof(ExclusiveItemType), row[0].Substring(2));
-                    ExclusiveItemEffect exclEffect = (ExclusiveItemEffect)Int32.Parse(row[13].Substring(0, 3));
-                    string primaryDex = row[2].Trim();
-                    dex_map[item_idx] = primaryDex;
-
-                    string[] rarityStr = row[12].Substring(0, row[12].Length-1).Split('-');
-                    int minRarity = Int32.Parse(rarityStr[0]);
-                    int maxRarity = minRarity;
-                    if (rarityStr.Length > 1)
-                        maxRarity = Int32.Parse(rarityStr[1]);
-
-
-                    List<object> args = new List<object>();
-                    if (row[14] != "")
-                        args.Add(row[14].Trim());
-                    if (row[15] != "")
-                        args.Add(row[15].Trim());
-                    if (row[16] != "")
-                        args.Add(new Stat[] { (Stat)Int32.Parse(row[16].Substring(0, 3)) });
-                    if (row[17] != "")
-                        args.Add(row[17].Trim());
-                    if (row[18] != "")
-                        args.Add((BattleData.SkillCategory)Int32.Parse(row[18].Substring(0, 3)));
-                    if (row[19] != "")
-                        args.Add(Int32.Parse(row[19]));
-                    if (row[20] != "")
-                        args.Add(row[20].Trim());
-
-                    List<string> familyStarts = new List<string>();
-                    if (row[6] != "")
+                    int family_idx = Int32.Parse(row[3]);
+                    if (family_idx < prev_family)
+                        throw new Exception(String.Format("Out of order family on row {0}!", ii));
+                    else if (family_idx == prev_family)
                     {
-                        string[] startDexes = row[6].Split(',');
-                        foreach (string startDex in startDexes)
-                        {
-                            string cutoff = startDex.Trim();
-                            familyStarts.Add(cutoff);
-                        }
+                        List<string[]> family_rows = families[family_idx];
+                        char chr1 = family_rows[family_rows.Count - 1][10][0];
+                        char chr2 = row[10][0];
+                        if (chr1 + 1 != chr2)
+                            throw new Exception(String.Format("Out of order labeling on row {0}!", ii));
                     }
-                    else
-                        familyStarts.Add(primaryDex);
 
-                    bool includeFamily = row[5] == "True";
-                    List<string> dexNums = new List<string>();
-                    foreach (string dex in familyStarts)
+                    if (!families.ContainsKey(family_idx))
                     {
-                        if (includeFamily)
-                        {
-                            string firstStage = dex;
-                            FindFullFamily(dexNums, dex);
-                        }
-                        else
-                            dexNums.Add(dex);
+                        if (row[10] != "A")
+                            throw new Exception(String.Format("Out of order labeling on row {0}!", ii));
+                        families[family_idx] = new List<string[]>();
                     }
+                    families[family_idx].Add(row);
+                    prev_family = family_idx;
+                }
+
+                List<int> family_list = new List<int>();
+                foreach (int family_idx in families.Keys)
+                    family_list.Add(family_idx);
+                family_list.Sort();
+
+
+                for (int hh = 0; hh < family_list.Count; hh++)
+                {
+                    int family_idx = family_list[hh];
+                    List<string[]> family_rows = families[family_idx];
 
                     //decide on a family name
-                    string familyName = row[7];
+                    string familyName = family_rows[0][7];
                     if (familyName == "")
                     {
-                        string earliestFamily = rows[prev_start-init_idx][2].Trim();
-                        for (int nn = 1; (nn + prev_start - init_idx < rows.Count) && (rows[nn + prev_start - init_idx][10] != "A"); nn++)
+                        string earliestFamily = family_rows[0][2].Trim();
+                        for (int nn = 1; nn < family_rows.Count; nn++)
                         {
                             MonsterEntrySummary earliestSummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Get(earliestFamily);
-                            string dexNum = rows[nn + prev_start - init_idx][2].Trim();
+                            string dexNum = family_rows[nn][2].Trim();
 
                             MonsterEntrySummary newSummary = (MonsterEntrySummary)DataManager.Instance.DataIndices[DataManager.DataType.Monster].Get(dexNum);
                             if (newSummary.SortOrder < earliestSummary.SortOrder)
@@ -524,191 +514,251 @@ namespace DataGenerator.Data
                         }
                         familyName = earliestFamily;
                     }
-                    string fileName = getAssetName(familyName, item_idx - prev_start);
 
-                    ItemData item = new ItemData();
-                    item.UseEvent.Element = "none";
-                    item.SortCategory = 17;
+                    //if a excl item family has at least one member available, allow that item family to be written out
+                    bool familyEnabled = available_species.ContainsKey(family_idx);
 
-                    if (exclType != ExclusiveItemType.None && customName != "")
-                        Console.WriteLine(String.Format("Item {0} found with both name \"{1}\" and type {2}.", fileName, customName, exclType));
+                    List<string[]> tradeables = new List<string[]>();
 
-                    AutoItemInfo.FillExclusiveData(fileName, item, "", customName, exclType, exclEffect, args.ToArray(), primaryDex, dexNums, translate, includeFamily);
-
-                    item.Rarity = (Math.Clamp(item.Rarity, minRarity, maxRarity) - 1) / 2 + 1;
-                    item.Sprite = "Box_Yellow";
-                    item.Icon = 10;
-                    item.Price = 800 * item.Rarity;
-                    item.UsageType = ItemData.UseType.Treasure;
-                    item.ItemStates.Set(new MaterialState());
-                    item.BagEffect = true;
-                    item.CannotDrop = true;
-
-
-                    bool enabled = row[4] == "True";
-                    // TODO: 
-                    bool familyEnabled = false;
-                    if (item.Name.DefaultText.StartsWith("**"))
-                        item.Name.DefaultText = item.Name.DefaultText.Replace("*", "");
-                    else if (item.Name.DefaultText != "" && enabled && familyEnabled)
-                        item.Released = true;
-
-                    if (item.Name.DefaultText != "" && !item.Released)
-                        incompleteLeft++;
-
-                    if (item.Name.DefaultText != "")
-                        DataManager.SaveEntryData(fileName, DataManager.DataType.Item.ToString(), item);
-
-                    if (item.Released)
+                    for (int ii = 0; ii < family_rows.Count; ii++)
                     {
-                        string trade_in = row[11];
-                        running_tradeables.Add(trade_in);
-                    }
+                        string[] row = family_rows[ii];
 
-                    bool reload = false;
-                    if (ii == rows.Count - 1)
-                        reload = true;
-                    else if (rows[ii + 1][10] == "A")
-                        reload = true;
-                    else if (rows[ii + 1][10][0] != rows[ii][10][0] + 1)
-                        throw new Exception(String.Format("Out of order labeling on row {0}!", ii));
+                        string customName = row[1].Trim();
+                        ExclusiveItemType exclType = (ExclusiveItemType)Enum.Parse(typeof(ExclusiveItemType), row[0].Substring(2));
+                        ExclusiveItemEffect exclEffect = (ExclusiveItemEffect)Int32.Parse(row[13].Substring(0, 3));
+                        string primaryDex = row[2].Trim();
 
-                    if (reload)
-                    {
-                        int prev_tradeable_count = specific_tradeables.Count;
-                        if (running_tradeables.Count == 0)
-                        {
+                        string[] rarityStr = row[12].Substring(0, row[12].Length - 1).Split('-');
+                        int minRarity = Int32.Parse(rarityStr[0]);
+                        int maxRarity = minRarity;
+                        if (rarityStr.Length > 1)
+                            maxRarity = Int32.Parse(rarityStr[1]);
 
-                        }
-                        else if (running_tradeables[0] == "*")
-                        {
-                            //autocalculate normal case
-                            if (running_tradeables.Count == 4)
-                            {
-                                //C+D+B=A
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'C', 'D', 'B');
-                                //C+D=B
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'B', 'C', 'D');
-                            }
-                            else if (running_tradeables.Count == 5)
-                            {
-                                //C+D+B=A
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'C', 'D', 'B');
-                                //C+D=B
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'B', 'C', 'D');
-                                //C+D=E
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'E', 'C', 'D');
 
-                            }
-                            else if (running_tradeables.Count == 6)
-                            {
-                                //E+F+B=A
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'B', 'E');
-                                //E+F=B
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'B', 'C', 'D');
-                                //C+D=E
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'E', 'C', 'D');
-                            }
-                        }
-                        else if (running_tradeables[0] == "@")
+                        List<object> args = new List<object>();
+                        if (row[14] != "")
+                            args.Add(row[14].Trim());
+                        if (row[15] != "")
+                            args.Add(row[15].Trim());
+                        if (row[16] != "")
+                            args.Add(new Stat[] { (Stat)Int32.Parse(row[16].Substring(0, 3)) });
+                        if (row[17] != "")
+                            args.Add(row[17].Trim());
+                        if (row[18] != "")
+                            args.Add((BattleData.SkillCategory)Int32.Parse(row[18].Substring(0, 3)));
+                        if (row[19] != "")
+                            args.Add(Int32.Parse(row[19]));
+                        if (row[20] != "")
+                            args.Add(row[20].Trim());
+
+                        List<string> familyStarts = new List<string>();
+                        if (row[6] != "")
                         {
-                            //autocalculate branch evo case
-                            if (running_tradeables.Count == 5)
+                            string[] startDexes = row[6].Split(',');
+                            foreach (string startDex in startDexes)
                             {
-                                //C+D+E=A/B
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'C', 'D', 'E');
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'B', 'C', 'D', 'E');
-                                //C+D=E
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'E', 'C', 'D');
-                            }
-                            else if (running_tradeables.Count == 6)
-                            {
-                                //C+D+E=A
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'C', 'D', 'E');
-                                //C+D+F=B
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'B', 'C', 'D', 'F');
-                                //C+D=E/F
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'E', 'C', 'D');
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'F', 'C', 'D');
-                            }
-                        }
-                        else if (running_tradeables[0] == "/")
-                        {
-                            //autocalculate counterpart case
-                            if (running_tradeables.Count == 6)
-                            {
-                                //C+D+E=A
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'C', 'D', 'E');
-                                //C+D+F=B
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'B', 'C', 'D', 'F');
-                                //C+D=E/F
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'E', 'C', 'D');
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'F', 'C', 'D');
-                            }
-                            else if (running_tradeables.Count == 7)
-                            {
-                                //G+E=A
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'A', 'G', 'E');
-                                //G+F=B
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'B', 'G', 'F');
-                                //C+D=E/F
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'E', 'C', 'D');
-                                addSpecificTradeable(specific_tradeables, familyName, prev_start, 'F', 'C', 'D');
+                                string cutoff = startDex.Trim();
+                                familyStarts.Add(cutoff);
                             }
                         }
                         else
-                        {
-                            for (int nn = 0; nn < running_tradeables.Count; nn++)
-                            {
-                                List<string> trade_ins = new List<string>();
-                                for (int kk = 0; kk < running_tradeables[nn].Length; kk++)
-                                    trade_ins.Add(getAssetName(familyName, running_tradeables[nn][kk] - 'A'));
+                            familyStarts.Add(primaryDex);
 
-                                //only add if they have trade-ins
-                                if (trade_ins.Count > 0)
-                                    specific_tradeables.Add((getAssetName(familyName, nn), trade_ins.ToArray()));
+                        bool includeFamily = row[5] == "True";
+                        List<string> dexNums = new List<string>();
+                        foreach (string dex in familyStarts)
+                        {
+                            if (includeFamily)
+                            {
+                                string firstStage = dex;
+                                FindFullFamily(dexNums, dex);
                             }
+                            else
+                                dexNums.Add(dex);
                         }
 
-                        //add to random tradeable pool if...
-                        for (int nn = 0; nn < running_tradeables.Count; nn++)
+                        string fileName = getAssetName(familyName, ii);
+
+                        ItemData item = new ItemData();
+                        item.UseEvent.Element = "none";
+                        item.SortCategory = 17;
+
+                        if (exclType != ExclusiveItemType.None && customName != "")
+                            Console.WriteLine(String.Format("Item {0} found with both name \"{1}\" and type {2}.", fileName, customName, exclType));
+
+                        AutoItemInfo.FillExclusiveData(fileName, item, "", customName, exclType, exclEffect, args.ToArray(), primaryDex, dexNums, translate, includeFamily);
+
+                        item.Rarity = (Math.Clamp(item.Rarity, minRarity, maxRarity) - 1) / 2 + 1;
+                        item.Sprite = "Box_Yellow";
+                        item.Icon = 10;
+                        item.Price = 800 * item.Rarity;
+                        item.UsageType = ItemData.UseType.Treasure;
+                        item.ItemStates.Set(new MaterialState());
+                        item.BagEffect = true;
+                        item.CannotDrop = true;
+
+
+                        bool enabled = row[4] == "True";
+
+                        if (item.Name.DefaultText.StartsWith("**"))
+                            item.Name.DefaultText = item.Name.DefaultText.Replace("*", "");
+                        else if (item.Name.DefaultText != "" && enabled && familyEnabled)
+                            item.Released = true;
+
+                        if (item.Name.DefaultText != "" && !item.Released)
+                            incompleteLeft++;
+
+                        if (item.Name.DefaultText != "")
                         {
-                            string old_asset = getAssetName(familyName, nn);
-                            bool has_tradeables = false;
-                            for (int kk = prev_tradeable_count; kk < specific_tradeables.Count; kk++)
-                            {
-                                if (specific_tradeables[kk].item == old_asset)
-                                {
-                                    has_tradeables = true;
-                                    break;
-                                }
-                            }
-                            //they are at the bottom of their trade chain
-                            if (!has_tradeables)
-                            {
-                                ItemData old_item = DataManager.LoadEntryData<ItemData>(old_asset, DataManager.DataType.Item.ToString());
-                                //has a rarity of 2 or lower
-                                if (old_item.Rarity <= 2)
-                                {
-                                    string old_dex = dex_map[prev_start + nn];
+                            if (takenNames.Contains(item.Name.DefaultText))
+                                Console.WriteLine(String.Format("Name '{0}' is already taken!", item.Name.DefaultText));
+                            takenNames.Add(item.Name.DefaultText);
 
-                                    bool excluded = false;
-                                    foreach (string legend in ZoneInfo.IterateLegendaries())
-                                    {
-                                        if (legend == primaryDex)
-                                            excluded = true;
-
-                                    }
-                                    if (!excluded)
-                                        random_tradeables.Add((old_asset, old_dex, old_item.Rarity));
-                                }
-                            }
+                            DataManager.SaveEntryData(fileName, DataManager.DataType.Item.ToString(), item);
                         }
 
-                        running_tradeables.Clear();
-                        prev_start = item_idx + 1;
+                        if (item.Released)
+                        {
+                            tradeables.Add(row);
+                            if (tradeables.Count < ii + 1)
+                                throw new Exception(String.Format("Out of order releasing on {0}!", fileName));
+                        }
+
                     }
+
+
+                    if (tradeables.Count == 0)
+                    {
+
+                    }
+                    else if (tradeables[0][11] == "*")
+                    {
+                        //autocalculate normal case
+                        if (tradeables.Count == 4)
+                        {
+                            //C+D+B=A
+                            addSpecificTradeable(specific_tradeables, familyName, 'A', 'C', 'D', 'B');
+                            //C+D=B
+                            addSpecificTradeable(specific_tradeables, familyName, 'B', 'C', 'D');
+                        }
+                        else if (tradeables.Count == 5)
+                        {
+                            //C+D+B=A
+                            addSpecificTradeable(specific_tradeables, familyName, 'A', 'C', 'D', 'B');
+                            //C+D=B
+                            addSpecificTradeable(specific_tradeables, familyName, 'B', 'C', 'D');
+                            //C+D=E
+                            addSpecificTradeable(specific_tradeables, familyName, 'E', 'C', 'D');
+
+                        }
+                        else if (tradeables.Count == 6)
+                        {
+                            //E+F+B=A
+                            addSpecificTradeable(specific_tradeables, familyName, 'A', 'B', 'E');
+                            //E+F=B
+                            addSpecificTradeable(specific_tradeables, familyName, 'B', 'C', 'D');
+                            //C+D=E
+                            addSpecificTradeable(specific_tradeables, familyName, 'E', 'C', 'D');
+                        }
+                    }
+                    else if (tradeables[0][11] == "@")
+                    {
+                        //autocalculate branch evo case
+                        if (tradeables.Count == 5)
+                        {
+                            //C+D+E=A/B
+                            addSpecificTradeable(specific_tradeables, familyName, 'A', 'C', 'D', 'E');
+                            addSpecificTradeable(specific_tradeables, familyName, 'B', 'C', 'D', 'E');
+                            //C+D=E
+                            addSpecificTradeable(specific_tradeables, familyName, 'E', 'C', 'D');
+                        }
+                        else if (tradeables.Count == 6)
+                        {
+                            //C+D+E=A
+                            addSpecificTradeable(specific_tradeables, familyName, 'A', 'C', 'D', 'E');
+                            //C+D+F=B
+                            addSpecificTradeable(specific_tradeables, familyName, 'B', 'C', 'D', 'F');
+                            //C+D=E/F
+                            addSpecificTradeable(specific_tradeables, familyName, 'E', 'C', 'D');
+                            addSpecificTradeable(specific_tradeables, familyName, 'F', 'C', 'D');
+                        }
+                    }
+                    else if (tradeables[0][11] == "/")
+                    {
+                        //autocalculate counterpart case
+                        if (tradeables.Count == 6)
+                        {
+                            //C+D+E=A
+                            addSpecificTradeable(specific_tradeables, familyName, 'A', 'C', 'D', 'E');
+                            //C+D+F=B
+                            addSpecificTradeable(specific_tradeables, familyName, 'B', 'C', 'D', 'F');
+                            //C+D=E/F
+                            addSpecificTradeable(specific_tradeables, familyName, 'E', 'C', 'D');
+                            addSpecificTradeable(specific_tradeables, familyName, 'F', 'C', 'D');
+                        }
+                        else if (tradeables.Count == 7)
+                        {
+                            //G+E=A
+                            addSpecificTradeable(specific_tradeables, familyName, 'A', 'G', 'E');
+                            //G+F=B
+                            addSpecificTradeable(specific_tradeables, familyName, 'B', 'G', 'F');
+                            //C+D=E/F
+                            addSpecificTradeable(specific_tradeables, familyName, 'E', 'C', 'D');
+                            addSpecificTradeable(specific_tradeables, familyName, 'F', 'C', 'D');
+                        }
+                    }
+                    else
+                    {
+                        for (int nn = 0; nn < tradeables.Count; nn++)
+                        {
+                            List<string> trade_ins = new List<string>();
+                            for (int kk = 0; kk < tradeables[nn][11].Length; kk++)
+                                trade_ins.Add(getAssetName(familyName, tradeables[nn][11][kk] - 'A'));
+
+                            //only add if they have trade-ins
+                            if (trade_ins.Count > 0)
+                                specific_tradeables.Add((getAssetName(familyName, nn), trade_ins.ToArray()));
+                        }
+                    }
+
+                    //add to random tradeable pool if...
+                    for (int nn = 0; nn < tradeables.Count; nn++)
+                    {
+                        string item_id = getAssetName(familyName, nn);
+                        bool has_tradeables = false;
+                        for (int kk = 0; kk < specific_tradeables.Count; kk++)
+                        {
+                            if (specific_tradeables[kk].item == item_id)
+                            {
+                                has_tradeables = true;
+                                break;
+                            }
+                        }
+                        //they are at the bottom of their trade chain
+                        if (!has_tradeables)
+                        {
+                            ItemData itemData = DataManager.LoadEntryData<ItemData>(item_id, DataManager.DataType.Item.ToString());
+                            //has a rarity of 2 or lower
+                            if (itemData.Rarity <= 2)
+                            {
+                                string species = tradeables[nn][2];
+
+                                bool excluded = false;
+                                foreach (string legend in ZoneInfo.IterateLegendaries())
+                                {
+                                    if (legend == species)
+                                        excluded = true;
+
+                                }
+                                if (!excluded)
+                                    random_tradeables.Add((item_id, species, itemData.Rarity));
+                            }
+                        }
+                    }
+
                 }
+
             }
 
             //output trade tables to common_gen.lua
@@ -744,7 +794,7 @@ namespace DataGenerator.Data
             Console.WriteLine(String.Format("Incomplete Left: {0}", incompleteLeft));
         }
 
-        private static void addSpecificTradeable(List<(string, string[])> specific_tradeables, string family_name, int start_item, char result, params char[] trades)
+        private static void addSpecificTradeable(List<(string, string[])> specific_tradeables, string family_name, char result, params char[] trades)
         {
             List<string> trade_items = new List<string>();
             foreach (char trade in trades)

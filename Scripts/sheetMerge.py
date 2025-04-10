@@ -40,7 +40,7 @@ class SheetMerge:
 
         return self._query_sheet_range(sheet_name, sheet_name + "!"+str(self._sheet_content_start)+":"+str(self._sheet_content_start+total_rows-1))
 
-    def _query_sheet_range(self, sheet_name, range_name):
+    def _query_sheet_range(self, sheet_name, range_name, user_entered=False):
         """
         Gets all values from a given google sheet, automatically figuring out height/width.
         Includes header row.
@@ -60,14 +60,23 @@ class SheetMerge:
             if 'values' in row:
                 for cell in row['values']:
                     content_str = ''
-                    if 'userEnteredValue' in cell:
-                        user_val = cell['userEnteredValue']
-                        if 'stringValue' in user_val:
-                            content_str = user_val['stringValue']
-                        elif 'boolValue' in user_val:
-                            content_str = str(user_val['boolValue'])
-                        elif 'numberValue' in user_val:
-                            content_str = str(user_val['numberValue'])
+                    read_val = None
+
+                    chosen_val = 'effectiveValue'
+                    if user_entered:
+                        chosen_val = 'userEnteredValue'
+                    if chosen_val in cell:
+                        read_val = cell[chosen_val]
+
+                    if read_val is not None:
+                        if 'stringValue' in read_val:
+                            content_str = read_val['stringValue']
+                        elif 'boolValue' in read_val:
+                            content_str = str(read_val['boolValue'])
+                        elif 'numberValue' in read_val:
+                            content_str = str(read_val['numberValue'])
+                        elif 'formulaValue' in read_val:
+                            content_str = str(read_val['formulaValue'])
 
                     if '\n' in content_str:
                         print('Newline found in ' + sheet_name + ': ' + content_str)

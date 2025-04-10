@@ -61,7 +61,7 @@ namespace DataGenerator.Data
         static int[] added = { 4, 12 };
         const int TOTAL_LANG_COLS = 13;
         const int ADD_VERSION_ID = 25;
-        static string MONSTER_PATH { get => GenPath.DATA_GEN_PATH + "Monster/"; }
+        public static string MONSTER_PATH { get => GenPath.DATA_GEN_PATH + "Monster/"; }
         static string TL_FILE { get => MONSTER_PATH + "pokedex.9.sqlite"; }
 
         static List<string> monsterKeys;
