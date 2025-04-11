@@ -764,13 +764,12 @@ namespace DataGenerator.Data
                     //alerter
                     poolSpawn.Spawns.Add(GetTeamMob("cryogonal", "", "haze", "icy_wind", "", "", new RandRange(29)), new IntRange(9, 12), 10);
                     poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("arcanine", 1, "", Gender.Unknown), "flash_fire", "flamethrower", "rock_slide", "", "", new RandRange(29), TeamMemberSpawn.MemberRole.Loner), new IntRange(9, 12), 10);
-                    //poolSpawn.Spawns.Add(GetTeamMob("stonjourner", "", "gravity", "rock_polish", "rock_tomb", "", new RandRange(29), TeamMemberSpawn.MemberRole.Support), new IntRange(9, 12), 10);
+                    //poolSpawn.Spawns.Add(GetTeamMob("stonjourner", "", "gravity", "rock_tomb", "", "", new RandRange(29), TeamMemberSpawn.MemberRole.Support), new IntRange(9, 12), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("hawlucha", "unburden", "flying_press", "roost", "", "", new RandRange(30), TeamMemberSpawn.MemberRole.Loner), new IntRange(10, 13), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("cinccino", "", "sing", "tail_slap", "", "", new RandRange(30)), new IntRange(10, 13), 10);
                     //alerter
-                    poolSpawn.Spawns.Add(GetTeamMob("hattrem", "", "play_nice", "life_dew", "aromatherapy", "", new RandRange(30), TeamMemberSpawn.MemberRole.Support), new IntRange(10, 13), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("hattrem", "", "play_nice", "life_dew", "psybeam", "", new RandRange(30), TeamMemberSpawn.MemberRole.Support), new IntRange(10, 13), 10);
                     
-                    //alerter
                     poolSpawn.Spawns.Add(GetTeamMob("meowstic", "", "psyshock", "charm", "", "", new RandRange(31)), new IntRange(11, max_floors), 5);
                     poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("meowstic", 1, "", Gender.Unknown), "", "psyshock", "charge_beam", "", "", new RandRange(31)), new IntRange(11, max_floors), 5);
 
@@ -787,8 +786,8 @@ namespace DataGenerator.Data
                             itemSpawn.Items.Add(new InvItem(item_name), 100);
                         mob.SpawnFeatures.Add(itemSpawn);
                         poolSpawn.SpecificSpawns.Add(new SpecificTeamSpawner(mob,
-                            GetGenericMob("whismur", "", "uproar", "", "", "", new RandRange(17), "wander_normal", true),
-                            GetGenericMob("whismur", "", "uproar", "", "", "", new RandRange(17), "wander_normal", true)),
+                            GetGenericMob("whismur", "", "uproar", "astonish", "", "", new RandRange(17), "wander_normal", true),
+                            GetGenericMob("whismur", "", "uproar", "astonish", "", "", new RandRange(17), "wander_normal", true)),
                             new IntRange(2, 5), 5);
                     }
 
@@ -803,7 +802,7 @@ namespace DataGenerator.Data
                     }
                     // sleeping with star piece
                     {
-                        TeamMemberSpawn mob = GetTeamMob("loudred", "", "sleep_talk", "hyper_voice", "", "", new RandRange(34), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
+                        TeamMemberSpawn mob = GetTeamMob("vanillish", "", "ice_beam", "mirror_shot", "", "", new RandRange(34), TeamMemberSpawn.MemberRole.Loner, "wander_normal", true);
                         MobSpawnItem itemSpawn = new MobSpawnItem(true);
                         itemSpawn.Items.Add(new InvItem("loot_star_piece"), 100);
                         mob.Spawn.SpawnFeatures.Add(itemSpawn);
