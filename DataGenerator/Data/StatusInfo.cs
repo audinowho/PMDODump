@@ -24,6 +24,18 @@ namespace DataGenerator.Data
                     DataManager.SaveEntryData(status.Item1, DataManager.DataType.Status.ToString(), status.Item2);
             }
         }
+
+        public static void AddMinStatusData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Status.ToString());
+            for (int ii = 0; ii < 1; ii++)
+            {
+                (string, StatusData) status = GetStatusData(ii);
+                if (status.Item1 != "")
+                    DataManager.SaveEntryData(status.Item1, DataManager.DataType.Status.ToString(), status.Item2);
+            }
+        }
+
         public static (string, StatusData) GetStatusData(int ii)
         {
             string fileName = "";

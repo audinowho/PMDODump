@@ -48,6 +48,15 @@ namespace DataGenerator.Data
             }
         }
 
+        public static void AddMinElementData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Element.ToString());
+            for (int ii = 0; ii < 1; ii++)
+            {
+                ElementData element = new ElementData(new LocalText(((Element)ii).ToString()), (char)(ii + 0xE080));
+                DataManager.SaveEntryData(Text.Sanitize(element.Name.DefaultText).ToLower(), DataManager.DataType.Element.ToString(), element);
+            }
+        }
     }
 }
 

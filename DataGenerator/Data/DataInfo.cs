@@ -112,6 +112,14 @@ namespace DataGenerator.Data
             DataManager.SaveData(universalEvent, DataManager.DATA_PATH, "Universal", DataManager.DATA_EXT);
         }
 
+        public static void AddMinUniversalEvent()
+        {
+            File.Delete(PathMod.ModPath(DataManager.DATA_PATH + "Universal" + DataManager.DATA_EXT));
+            UniversalActiveEffect universalEvent = new UniversalActiveEffect();
+
+            DataManager.SaveData(universalEvent, DataManager.DATA_PATH, "Universal", DataManager.DATA_EXT);
+        }
+
         public static void AddUniversalData()
         {
             File.Delete(PathMod.ModPath(DataManager.MISC_PATH + "Index" + DataManager.DATA_EXT));
@@ -299,6 +307,59 @@ namespace DataGenerator.Data
                 BattleFX fx = new BattleFX();
                 fx.Sound = "DUN_Throw_Spike";
 
+                DataManager.SaveData(fx, DataManager.FX_PATH, "Throw", DataManager.DATA_EXT);
+            }
+        }
+
+        public static void AddMinSystemFX()
+        {
+            DeleteData(PathMod.ModPath(DataManager.FX_PATH));
+            {
+                BattleFX fx = new BattleFX();
+                DataManager.SaveData(fx, DataManager.FX_PATH, "Heal", DataManager.DATA_EXT);
+            }
+            {
+                BattleFX fx = new BattleFX();
+                DataManager.SaveData(fx, DataManager.FX_PATH, "RestoreCharge", DataManager.DATA_EXT);
+            }
+            {
+                BattleFX fx = new BattleFX();
+                DataManager.SaveData(fx, DataManager.FX_PATH, "LoseCharge", DataManager.DATA_EXT);
+            }
+            {
+                EmoteFX fx = new EmoteFX();
+                DataManager.SaveData(fx, DataManager.FX_PATH, "NoCharge", DataManager.DATA_EXT);
+            }
+            {
+                BattleFX fx = new BattleFX();
+                DataManager.SaveData(fx, DataManager.FX_PATH, "Element", DataManager.DATA_EXT);
+            }
+            {
+                BattleFX fx = new BattleFX();
+                DataManager.SaveData(fx, DataManager.FX_PATH, "Intrinsic", DataManager.DATA_EXT);
+            }
+            {
+                BattleFX fx = new BattleFX();
+                DataManager.SaveData(fx, DataManager.FX_PATH, "SendHome", DataManager.DATA_EXT);
+            }
+            {
+                BattleFX fx = new BattleFX();
+                DataManager.SaveData(fx, DataManager.FX_PATH, "ItemLost", DataManager.DATA_EXT);
+            }
+            {
+                BattleFX fx = new BattleFX();
+                DataManager.SaveData(fx, DataManager.FX_PATH, "Warp", DataManager.DATA_EXT);
+            }
+            {
+                BattleFX fx = new BattleFX();
+                DataManager.SaveData(fx, DataManager.FX_PATH, "Knockback", DataManager.DATA_EXT);
+            }
+            {
+                BattleFX fx = new BattleFX();
+                DataManager.SaveData(fx, DataManager.FX_PATH, "Jump", DataManager.DATA_EXT);
+            }
+            {
+                BattleFX fx = new BattleFX();
                 DataManager.SaveData(fx, DataManager.FX_PATH, "Throw", DataManager.DATA_EXT);
             }
         }

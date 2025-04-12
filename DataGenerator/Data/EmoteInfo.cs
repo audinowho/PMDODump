@@ -22,12 +22,23 @@ namespace DataGenerator.Data
                 DataManager.SaveEntryData(Text.Sanitize(emote.Name.DefaultText).ToLower(), DataManager.DataType.Emote.ToString(), emote);
             }
         }
+        public static void AddMinEmoteData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Emote.ToString());
+            for (int ii = 0; ii < 1; ii++)
+            {
+                EmoteData emote = GetEmoteData(ii);
+                DataManager.SaveEntryData(Text.Sanitize(emote.Name.DefaultText).ToLower(), DataManager.DataType.Emote.ToString(), emote);
+            }
+        }
 
         public static EmoteData GetEmoteData(int ii)
         {
             if (ii == 0)
             {
-                return new EmoteData();
+                EmoteData data = new EmoteData();
+                data.Name = new LocalText("None");
+                return data;
             }
             else if (ii == 1)
             {

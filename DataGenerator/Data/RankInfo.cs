@@ -67,6 +67,17 @@ namespace DataGenerator.Data
             }
         }
 
+        public static void AddMinRankData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Rank.ToString());
+            for (int ii = 0; ii < 1; ii++)
+            {
+                string next = "";
+                RankData data = new RankData(new LocalText(Text.GetMemberTitle(((TeamRank)ii).ToString())), 24, RANK_NEXT[ii], next);
+                data.BagSize = 24;
+                DataManager.SaveEntryData(Text.Sanitize(data.Name.DefaultText).ToLower(), DataManager.DataType.Rank.ToString(), data);
+            }
+        }
     }
 }
 

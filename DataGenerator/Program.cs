@@ -37,6 +37,7 @@ namespace DataGenerator
             DataManager.DataType convertIndices = DataManager.DataType.None;
             DataManager.DataType reserializeIndices = DataManager.DataType.None;
             DataManager.DataType dump = DataManager.DataType.None;
+            bool dumpMin = false;
             bool preConvert = false;
 
             try
@@ -146,6 +147,11 @@ namespace DataGenerator
                             jj++;
                         }
                         ii += jj - 1;
+                    }
+                    else if (args[ii] == "-dumpmin")
+                    {
+                        dumpMin = true;
+                        ii++;
                     }
                     else if (args[ii] == "-preconvert")
                     {
@@ -456,6 +462,60 @@ namespace DataGenerator
                         reserializeType |= DataManager.DataType.Zone;
                         reserializeType |= DataManager.DataType.Item;
                         RogueEssence.Dev.DevHelper.RunIndexing(reserializeType & dump);
+
+                        RogueEssence.Dev.DevHelper.RunExtraIndexing(dump);
+                    }
+                    return;
+                }
+                
+                if (dumpMin)
+                {
+                    {
+                        DataManager.InitInstance();
+                        LuaEngine.InitInstance();
+                        LuaEngine.Instance.LoadScripts();
+
+                        DataInfo.AddEditorOps();
+                        DataInfo.AddMinSystemFX();
+                        DataInfo.AddMinUniversalEvent();
+                        //DataInfo.AddMinUniversalData();
+                        DataManager.Instance.InitBase();
+
+                        ElementInfo.AddMinElementData();
+                        GrowthInfo.AddMinGrowthGroupData();
+                        SkillGroupInfo.AddMinSkillGroupData();
+                        EmoteInfo.AddMinEmoteData();
+                        AIInfo.AddMinAIData();
+                        TileInfo.AddMinTileData();
+                        TileInfo.AddMinTerrainData();
+                        RankInfo.AddMinRankData();
+                        SkinInfo.AddMinSkinData();
+
+                        MonsterInfo.AddMinMonsterData();
+
+                        SkillInfo.AddMinMoveData();
+                        IntrinsicInfo.AddMinIntrinsicData();
+                        StatusInfo.AddMinStatusData();
+                        MapStatusInfo.AddMinMapStatusData();
+
+                        DataManager.DataType reserializeType = DataManager.DataType.All;
+                        reserializeType ^= DataManager.DataType.Zone;
+                        reserializeType ^= DataManager.DataType.Item;
+                        RogueEssence.Dev.DevHelper.RunIndexing(reserializeType);
+                    }
+
+                    {
+                        DataManager.InitInstance();
+                        DataManager.Instance.InitData();
+                        ItemInfo.AddMinItemData();
+                        ZoneInfo.AddMinZoneData();
+                    }
+
+                    {
+                        DataManager.DataType reserializeType = DataManager.DataType.None;
+                        reserializeType |= DataManager.DataType.Zone;
+                        reserializeType |= DataManager.DataType.Item;
+                        RogueEssence.Dev.DevHelper.RunIndexing(reserializeType);
 
                         RogueEssence.Dev.DevHelper.RunExtraIndexing(dump);
                     }

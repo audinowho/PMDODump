@@ -31,6 +31,17 @@ namespace DataGenerator.Data
         }
 
 
+        public static void AddMinTileData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Tile.ToString());
+            for (int ii = 0; ii < 1; ii++)
+            {
+                (string, TileData) tile = GetTileData(ii);
+                if (tile.Item1 != "")
+                    DataManager.SaveEntryData(tile.Item1, DataManager.DataType.Tile.ToString(), tile.Item2);
+            }
+        }
+
 
 
         public static (string, TileData) GetTileData(int ii)
@@ -1367,6 +1378,17 @@ namespace DataGenerator.Data
                 DataManager.SaveEntryData(entry.Item1, DataManager.DataType.Terrain.ToString(), entry.Item2);
             }
         }
+
+        public static void AddMinTerrainData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Terrain.ToString());
+            for (int ii = 0; ii < 1; ii++)
+            {
+                (string, TerrainData) entry = GetTerrainData(ii);
+                DataManager.SaveEntryData(entry.Item1, DataManager.DataType.Terrain.ToString(), entry.Item2);
+            }
+        }
+
 
         //TODO: we need one class specifically for ground, and one class specifically for wall
         //Also make the ground and wall instance classes hold the textures, and make those modifiable on runtime (for generation)

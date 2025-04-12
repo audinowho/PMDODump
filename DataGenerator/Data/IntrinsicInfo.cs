@@ -24,6 +24,18 @@ namespace DataGenerator.Data
                     DataManager.SaveEntryData(ability.Item1, DataManager.DataType.Intrinsic.ToString(), ability.Item2);
             }
         }
+
+        public static void AddMinIntrinsicData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Intrinsic.ToString());
+            for (int ii = 0; ii < 1; ii++)
+            {
+                (string, IntrinsicData) ability = GetIntrinsicData(ii);
+                if (ability.Item1 != "")
+                    DataManager.SaveEntryData(ability.Item1, DataManager.DataType.Intrinsic.ToString(), ability.Item2);
+            }
+        }
+
         public static (string, IntrinsicData) GetIntrinsicData(int ii)
         {
             string fileName = "";

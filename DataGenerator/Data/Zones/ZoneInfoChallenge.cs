@@ -765,7 +765,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("cryogonal", "", "haze", "icy_wind", "", "", new RandRange(29)), new IntRange(9, 12), 10);
                     poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("arcanine", 1, "", Gender.Unknown), "flash_fire", "flamethrower", "rock_slide", "", "", new RandRange(29), TeamMemberSpawn.MemberRole.Loner), new IntRange(9, 12), 10);
                     //poolSpawn.Spawns.Add(GetTeamMob("stonjourner", "", "gravity", "rock_tomb", "", "", new RandRange(29), TeamMemberSpawn.MemberRole.Support), new IntRange(9, 12), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("hawlucha", "unburden", "flying_press", "roost", "", "", new RandRange(30), TeamMemberSpawn.MemberRole.Loner), new IntRange(10, 13), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("hawlucha", "unburden", "flying_press", "", "", "", new RandRange(30), TeamMemberSpawn.MemberRole.Loner), new IntRange(10, 13), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("cinccino", "", "sing", "tail_slap", "", "", new RandRange(30)), new IntRange(10, 13), 10);
                     //alerter
                     poolSpawn.Spawns.Add(GetTeamMob("hattrem", "", "play_nice", "life_dew", "psybeam", "", new RandRange(30), TeamMemberSpawn.MemberRole.Support), new IntRange(10, 13), 10);

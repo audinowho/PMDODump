@@ -425,6 +425,32 @@ namespace DataGenerator.Data
             }
         }
 
+
+        public static void AddMinAIData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.AI.ToString());
+
+
+            List<AITactic> Tactics = new List<AITactic>();
+            AITactic tactic = new AITactic();
+            tactic.Name = new LocalText("Stick Together");//0
+            tactic.ID = Text.Sanitize(tactic.Name.DefaultText).ToLower();
+            AIFlags iq = AIFlags.ItemGrabber | AIFlags.ItemMaster | AIFlags.KnowsMatchups | AIFlags.TeamPartner | AIFlags.PlayerSense;
+            tactic.Plans.Add(new PrepareWithLeaderPlan(iq | AIFlags.TrapAvoider, 0, 0, 0, AIPlan.AttackChoice.SmartAttack, 0, false));
+            tactic.Plans.Add(new AttackFoesPlan(iq | AIFlags.TrapAvoider, 0, 0, 0, AIPlan.AttackChoice.SmartAttack, AIPlan.PositionChoice.Avoid, 0, false));
+            tactic.Plans.Add(new FindItemPlan(iq | AIFlags.TrapAvoider, true));
+            tactic.Plans.Add(new ExplorePlan(iq | AIFlags.TrapAvoider));
+            tactic.Plans.Add(new WaitPlan(iq | AIFlags.TrapAvoider));
+            Tactics.Add(tactic);
+
+            for (int ii = 0; ii < Tactics.Count; ii++)
+            {
+                if (ii < 6)
+                    Tactics[ii].Assignable = true;
+                Tactics[ii].Released = true;
+                DataManager.SaveEntryData(Tactics[ii].ID, DataManager.DataType.AI.ToString(), Tactics[ii]);
+            }
+        }
     }
 }
 

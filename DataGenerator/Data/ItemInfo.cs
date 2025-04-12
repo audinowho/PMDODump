@@ -33,6 +33,19 @@ namespace DataGenerator.Data
             }
             AddExclItemData(false);
         }
+
+        public static void AddMinItemData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Item.ToString());
+
+            for (int ii = 0; ii < 1; ii++)
+            {
+                (string, ItemData) item = GetItemData(ii);
+                if (item.Item1 != "")
+                    DataManager.SaveEntryData(item.Item1, DataManager.DataType.Item.ToString(), item.Item2);
+            }
+        }
+
         /// <summary>
         /// Recomputes all exclusive items with full string translations
         /// </summary>

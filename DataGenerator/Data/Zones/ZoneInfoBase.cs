@@ -4106,7 +4106,21 @@ namespace DataGenerator.Data
 
         #endregion
 
+        public static void AddMinZoneData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Zone.ToString());
 
+            ZoneData zone = new ZoneData();
+            zone.Name = new LocalText("Debug Zone");
+
+            if (zone.Name.DefaultText.StartsWith("**"))
+                zone.Name.DefaultText = zone.Name.DefaultText.Replace("*", "");
+            else if (zone.Name.DefaultText != "")
+                zone.Released = true;
+
+            if (zone.Name.DefaultText != "")
+                DataManager.SaveEntryData(Text.Sanitize(zone.Name.DefaultText).ToLower(), DataManager.DataType.Zone.ToString(), zone);
+        }
 
         public static void AddTestTextureData<T>(MapGen<T> layout, string block, string ground, string water, bool independent = false) where T : BaseMapGenContext
         {

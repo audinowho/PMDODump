@@ -42,6 +42,15 @@ namespace DataGenerator.Data
                 DataManager.SaveEntryData(Text.Sanitize(skillGroup.Name.DefaultText).ToLower(), DataManager.DataType.SkillGroup.ToString(), skillGroup);
             }
         }
+        public static void AddMinSkillGroupData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.SkillGroup.ToString());
+            for (int ii = 0; ii < 1; ii++)
+            {
+                SkillGroupData skillGroup = new SkillGroupData(new LocalText(Text.GetMemberTitle(((EggGroup)ii).ToString())));
+                DataManager.SaveEntryData(Text.Sanitize(skillGroup.Name.DefaultText).ToLower(), DataManager.DataType.SkillGroup.ToString(), skillGroup);
+            }
+        }
 
     }
 }

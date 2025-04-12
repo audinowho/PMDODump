@@ -141,6 +141,18 @@ namespace DataGenerator.Data
                 DataManager.SaveEntryData(Text.Sanitize(skillGroup.Name.DefaultText).ToLower(), DataManager.DataType.GrowthGroup.ToString(), skillGroup);
             }
         }
+        public static void AddMinGrowthGroupData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.GrowthGroup.ToString());
+
+            List<int> exp = new List<int>();
+            for (int jj = 0; jj < EXP_CURVES.GetLength(0); jj++)
+            {
+                exp.Add(jj * 100);
+            }
+            GrowthData skillGroup = new GrowthData(new LocalText(Text.GetMemberTitle(GrowthGroup.Slow.ToString())), exp.ToArray());
+            DataManager.SaveEntryData(Text.Sanitize(skillGroup.Name.DefaultText).ToLower(), DataManager.DataType.GrowthGroup.ToString(), skillGroup);
+        }
 
     }
 }

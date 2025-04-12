@@ -78,6 +78,19 @@ namespace DataGenerator.Data
             }
         }
 
+        public static void AddMinSkinData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Skin.ToString());
+
+            for (int ii = 0; ii < MAX_GROUPS; ii++)
+            {
+                SkinData data = new SkinData(new LocalText("Normal"), '\0');
+                data.IndexNum = ii;
+                string fileName = "normal";
+                data.MinimapColor = Color.Red;
+                DataManager.SaveEntryData(fileName, DataManager.DataType.Skin.ToString(), data);
+            }
+        }
     }
 }
 

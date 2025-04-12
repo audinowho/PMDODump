@@ -117,6 +117,15 @@ namespace DataGenerator.Data
 
             return (fileName, skill);
         }
-        
+
+        public static void AddMinMoveData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Skill.ToString());
+            for (int ii = 0; ii < 1; ii++)
+            {
+                (string, SkillData) move = GetSkillData(ii);
+                DataManager.SaveEntryData(move.Item1, DataManager.DataType.Skill.ToString(), move.Item2);
+            }
+        }
     }
 }

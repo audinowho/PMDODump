@@ -68,8 +68,6 @@ namespace DataGenerator.Data
 
         public static void AddMonsterData()
         {
-            //DataInfo.DeleteIndexedData(DataManager.DataType.Monster.ToString());
-
             langIDs = new Dictionary<int, string>();
             langIDs.Add(1, "ja");
             langIDs.Add(3, "ko");
@@ -107,6 +105,8 @@ namespace DataGenerator.Data
 
         public static void CreateDex()
         {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Monster.ToString());
+
             //SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=" + DEX_FILE + ";Version=3;");
             //m_dbConnection.Open();
             //SQLiteConnection m_db7Connection = new SQLiteConnection("Data Source=" + DEX_7_FILE + ";Version=3;");
@@ -217,6 +217,70 @@ namespace DataGenerator.Data
                 Console.WriteLine("#" + ii + " " + totalEntries[ii].Name + " Written");
             }
         }
+
+
+
+        public static void AddMinMonsterData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.Monster.ToString());
+
+            MonsterData[] totalEntries = new MonsterData[1];
+
+            {
+                int ii = 0;
+                {
+                    MonsterData entry = new MonsterData();
+                    entry.IndexNum = 0;
+                    entry.Name = new LocalText("Debug");
+                    entry.Title = new LocalText("???");
+                    entry.JoinRate = 0;
+                    entry.EXPTable = Text.Sanitize(Text.GetMemberTitle(GrowthInfo.GrowthGroup.Slow.ToString())).ToLower();
+                    entry.SkillGroup1 = Text.Sanitize(Text.GetMemberTitle(SkillGroupInfo.EggGroup.Undiscovered.ToString())).ToLower();
+                    entry.SkillGroup2 = Text.Sanitize(Text.GetMemberTitle(SkillGroupInfo.EggGroup.Undiscovered.ToString())).ToLower();
+
+
+                    MonsterFormData formEntry = new MonsterFormData();
+                    formEntry.FormName = new LocalText("Unknown");
+                    formEntry.GenderlessWeight = 1;
+                    formEntry.Height = 1;
+                    formEntry.Weight = 1;
+                    formEntry.ExpYield = 1;
+                    formEntry.BaseHP = 1;
+                    formEntry.BaseAtk = 1;
+                    formEntry.BaseDef = 1;
+                    formEntry.BaseMAtk = 1;
+                    formEntry.BaseMDef = 1;
+                    formEntry.BaseSpeed = 1;
+                    formEntry.Element1 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
+                    formEntry.Element2 = Text.Sanitize(Text.GetMemberTitle(ElementInfo.Element.None.ToString())).ToLower();
+                    formEntry.Intrinsic1 = "none";
+                    formEntry.Intrinsic2 = "none";
+                    formEntry.Intrinsic3 = "none";
+                    formEntry.LevelSkills.Add(new LevelUpSkill("attack", 0));
+                    entry.Forms.Add(formEntry);
+
+
+                    totalEntries[ii] = entry;
+                }
+                Console.WriteLine("#" + ii + " " + totalEntries[ii].Name + " Read");
+                for (int jj = 0; jj < totalEntries[ii].Forms.Count; jj++)
+                {
+                    List<byte> personality = new List<byte>();
+                    ((MonsterFormData)totalEntries[ii].Forms[jj]).Personalities = personality;
+                }
+                totalEntries[ii].Released = true;
+            }
+
+
+            for (int ii = 0; ii < 1; ii++)
+            {
+                string fileName = getAssetName(totalEntries[ii].Name.DefaultText);
+                DataManager.SaveEntryData(fileName, DataManager.DataType.Monster.ToString(), totalEntries[ii]);
+                //TotalEntries[ii].SaveXml("Dex\\" + ii + ".xml");
+                Console.WriteLine("#" + ii + " " + totalEntries[ii].Name + " Written");
+            }
+        }
+
 
         public static void ClearCurrentConsoleLine()
         {

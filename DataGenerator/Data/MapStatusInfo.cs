@@ -25,6 +25,18 @@ namespace DataGenerator.Data
                     DataManager.SaveEntryData(Text.Sanitize(status.Name.DefaultText).ToLower(), DataManager.DataType.MapStatus.ToString(), status);
             }
         }
+
+        public static void AddMinMapStatusData()
+        {
+            DataInfo.DeleteIndexedData(DataManager.DataType.MapStatus.ToString());
+            for (int ii = 0; ii < 1; ii++)
+            {
+                MapStatusData status = GetMapStatusData(ii);
+                if (status.Name.DefaultText != "")
+                    DataManager.SaveEntryData(Text.Sanitize(status.Name.DefaultText).ToLower(), DataManager.DataType.MapStatus.ToString(), status);
+            }
+        }
+
         public static MapStatusData GetMapStatusData(int ii)
         {
             MapStatusData status = new MapStatusData();
