@@ -742,7 +742,7 @@ namespace DataGenerator.Data
                     //helps nacli, growlithe, drilbur
                     poolSpawn.Spawns.Add(GetTeamMob("silicobra", "sand_spit", "brutal_swing", "bulldoze", "", "", new RandRange(19)), new IntRange(3, 6), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("grubbin", "", "bug_bite", "", "", "", new RandRange(17)), new IntRange(3, 6), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("growlithe", 1, "", Gender.Unknown), "flash_fire", "flame_wheel", "howl", "", "", new RandRange(20)), new IntRange(3, 6), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("growlithe", 1, "", Gender.Unknown), "flash_fire", "flame_wheel", "howl", "", "", new RandRange(19)), new IntRange(3, 6), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("minccino", "", "tickle", "sing", "", "", new RandRange(20)), new IntRange(3, 6), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("drilbur", "sand_rush", "metal_claw", "mud_slap", "", "", new RandRange(21)), new IntRange(4, 7), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("nacli", "purifying_salt", "harden", "rock_throw", "", "", new RandRange(21)), new IntRange(4, 7), 10);
@@ -762,21 +762,21 @@ namespace DataGenerator.Data
                     //helps shedinja
                     poolSpawn.Spawns.Add(GetTeamMob("lombre", "", "water_sport", "fake_out", "nature_power", "", new RandRange(27)), new IntRange(8, 11), 10);
                     //alerter
-                    poolSpawn.Spawns.Add(GetTeamMob("cryogonal", "", "haze", "icy_wind", "", "", new RandRange(29)), new IntRange(9, 12), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("arcanine", 1, "", Gender.Unknown), "flash_fire", "flamethrower", "rock_slide", "", "", new RandRange(29), TeamMemberSpawn.MemberRole.Loner), new IntRange(9, 12), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("cryogonal", "", "haze", "icy_wind", "", "", new RandRange(28)), new IntRange(9, 12), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("arcanine", 1, "", Gender.Unknown), "flash_fire", "flamethrower", "rock_slide", "", "", new RandRange(28), TeamMemberSpawn.MemberRole.Loner), new IntRange(9, 12), 10);
                     //poolSpawn.Spawns.Add(GetTeamMob("stonjourner", "", "gravity", "rock_tomb", "", "", new RandRange(29), TeamMemberSpawn.MemberRole.Support), new IntRange(9, 12), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("hawlucha", "unburden", "flying_press", "", "", "", new RandRange(30), TeamMemberSpawn.MemberRole.Loner), new IntRange(10, 13), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("cinccino", "", "sing", "tail_slap", "", "", new RandRange(30)), new IntRange(10, 13), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("hawlucha", "unburden", "flying_press", "", "", "", new RandRange(29), TeamMemberSpawn.MemberRole.Loner), new IntRange(10, 13), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("cinccino", "", "sing", "tail_slap", "", "", new RandRange(29)), new IntRange(10, 13), 10);
                     //alerter
-                    poolSpawn.Spawns.Add(GetTeamMob("hattrem", "", "play_nice", "life_dew", "psybeam", "", new RandRange(30), TeamMemberSpawn.MemberRole.Support), new IntRange(10, 13), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("hattrem", "", "play_nice", "life_dew", "psybeam", "", new RandRange(29), TeamMemberSpawn.MemberRole.Support), new IntRange(10, 13), 10);
                     
-                    poolSpawn.Spawns.Add(GetTeamMob("meowstic", "", "psyshock", "charm", "", "", new RandRange(31)), new IntRange(11, max_floors), 5);
-                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("meowstic", 1, "", Gender.Unknown), "", "psyshock", "charge_beam", "", "", new RandRange(31)), new IntRange(11, max_floors), 5);
+                    poolSpawn.Spawns.Add(GetTeamMob("meowstic", "", "psyshock", "charm", "", "", new RandRange(30)), new IntRange(11, max_floors), 5);
+                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("meowstic", 1, "", Gender.Unknown), "", "psyshock", "charge_beam", "", "", new RandRange(30)), new IntRange(11, max_floors), 5);
 
-                    poolSpawn.Spawns.Add(GetTeamMob("excadrill", "sand_rush", "sandstorm", "dig", "slash", "", new RandRange(31)), new IntRange(11, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("azumarill", "huge_power", "aqua_tail", "rollout", "play_rough", "", new RandRange(31)), new IntRange(11, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("duosion", "magic_guard", "future_sight", "reflect", "light_screen", "", new RandRange(32), TeamMemberSpawn.MemberRole.Support), new IntRange(12, max_floors), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("vikavolt", "", "bug_buzz", "thunderbolt", "", "", new RandRange(32)), new IntRange(12, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("excadrill", "sand_rush", "sandstorm", "dig", "slash", "", new RandRange(30)), new IntRange(11, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("azumarill", "huge_power", "aqua_tail", "rollout", "play_rough", "", new RandRange(30)), new IntRange(11, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("duosion", "magic_guard", "recover", "reflect", "light_screen", "", new RandRange(31), TeamMemberSpawn.MemberRole.Support), new IntRange(12, max_floors), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("vikavolt", "", "bug_buzz", "thunderbolt", "", "", new RandRange(31)), new IntRange(12, max_floors), 10);
 
                     //sleeping with gummi, groups x3
                     {
