@@ -303,7 +303,8 @@ namespace DataGenerator.Data
                     //poolSpawn.TeamSizes.Add(1, 12);
                     //spawnStep.Spawns.Add(poolSpawn, 100);
 
-                    SpecificTeamSpawner teamSpawn = new SpecificTeamSpawner(GetGenericMob("castform", "", "", "", "", "", new RandRange(18), "wander_smart", true, true), GetGenericMob("castform", "", "", "", "", "", new RandRange(18), "wander_smart", true, true));
+                    //SpecificTeamSpawner teamSpawn = new SpecificTeamSpawner(GetGenericMob("castform", "", "", "", "", "", new RandRange(18), "wander_smart", true, true), GetGenericMob("castform", "", "", "", "", "", new RandRange(18), "wander_smart", true, true));
+                    SpecificTeamSpawner teamSpawn = new SpecificTeamSpawner(GetGenericMob("yanma", "", "silver_wind", "", "", "", new RandRange(30), "wander_smart"), GetGenericMob("yanma", "", "silver_wind", "", "", "", new RandRange(30), "wander_smart"));
                     spawnStep.Spawns.Add(teamSpawn, 100);
                     layout.GenSteps.Add(PR_RESPAWN_MOB, spawnStep);
 
@@ -318,9 +319,9 @@ namespace DataGenerator.Data
                         monsterHouse.Items.Add(new MapItem("orb_escape"), 10);
                         monsterHouse.ItemThemes.Add(new ItemThemeNone(50, new RandRange(5, 10)), 10);
                         List<string> monsterKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
-                        for (int ii = 387; ii < 397; ii++)
-                            monsterHouse.Mobs.Add(GetGenericMob(monsterKeys[ii], "", "", "", "", "", new RandRange(10, 20)), 10);
-                        monsterHouse.MobThemes.Add(new MobThemeNone(50, new RandRange(6, 11)), 10);
+                        for (int ii = 291; ii < 292; ii++)
+                            monsterHouse.Mobs.Add(GetGenericMob(monsterKeys[ii], "", "", "", "", "", new RandRange(50)), 10);
+                        monsterHouse.MobThemes.Add(new MobThemeNone(100, new RandRange(6, 11)), 10);
                         layout.GenSteps.Add(PR_HOUSES, monsterHouse);
                     }
 
