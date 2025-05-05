@@ -696,7 +696,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A seed that freezes the Pokémon for many turns.");
                 item.Sprite = "Seed_Blue";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
-                statusStates.Set(new CountDownState(30));
+                statusStates.Set(new CountDownState(20));
                 item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("freeze", true, false, statusStates));
             }
             else if (ii == 116)
@@ -1977,7 +1977,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("An orb that freezes all enemies. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_LightBlue";
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
-                statusStates.Set(new CountDownState(20));
+                statusStates.Set(new CountDownState(10));
                 item.UseEvent.OnHits.Add(0, new StatusStateBattleEvent("freeze", true, false, statusStates));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;

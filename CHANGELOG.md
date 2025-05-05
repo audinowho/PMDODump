@@ -1,6 +1,8 @@
 # 0.8.10 Changes #
 
 * Fixed AI quirk that caused allies to spam attacks that can be absorbed by an ally's ability
+* Freeze: 10->5 turns
+* CounterBasher exclusive items reflect full damage.
 * Fixed damage underflow in circumstances with low base power and high multiplier.
 * Various renewable recovery effects don't work when starving
 * Fixed an issue that caused permadeath in storymode

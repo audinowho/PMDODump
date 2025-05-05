@@ -121,7 +121,7 @@ namespace DataGenerator.Data
                 endAnim.Layer = DrawLayer.Front;
                 status.OnStatusRemoves.Add(0, new StatusAnimEvent(endAnim, "DUN_Ice_Ball_2", 0, true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FREEZE_END")));
-                status.StatusStates.Set(new CountDownState(10));
+                status.StatusStates.Set(new CountDownState(5));
                 status.OnTurnStarts.Add(0, new CountDownRemoveEvent(true));
                 status.BeforeTryActions.Add(0, new PreventActionEvent(new StringKey("MSG_CANT_USE_ITEM"), BattleActionType.Throw));
                 status.BeforeTryActions.Add(0, new PreventItemActionEvent(new StringKey("MSG_CANT_USE_ITEM"), new FlagType(typeof(CurerState))));

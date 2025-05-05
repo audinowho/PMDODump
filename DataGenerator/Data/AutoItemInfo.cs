@@ -1056,7 +1056,7 @@ namespace DataGenerator.Data
                 {
                     SingleEmitter emitter = new SingleEmitter(new BeamAnimData("Column_Blue", 3, -1, -1, 192));
                     SingleEmitter targetEmitter = new SingleEmitter(new AnimData("Hit_Neutral", 3));
-                    item.AfterBeingHits.Add(0, new FamilyBattleEvent(new CounterNonSkillEvent(1, 2, new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 10), new BattleAnimEvent(targetEmitter, "DUN_Hit_Neutral", false))));
+                    item.AfterBeingHits.Add(0, new FamilyBattleEvent(new CounterNonSkillEvent(1, 1, new BattleAnimEvent(emitter, "DUN_Light_Screen", true, 10), new BattleAnimEvent(targetEmitter, "DUN_Hit_Neutral", false))));
                 }
             }
             else if (type == ExclusiveItemEffect.Gratitude)
