@@ -10,6 +10,7 @@
 * Fixed a hub map AI race condition
 * Emergency Exit and Wimp Out resolve at the start of the ability holder's turn.
 * Minor menu behavior fixes
+* Mission Board Mod: Fixed issue where taking two or more escort missions would not have all escorts join the party
 * RC: Added a consistency guarantee for spawning a correct apricorn for Sleeping Caldera's guardian
 * Dev: Removed common_talk.lua, which means COMMON.PERSONALITY is removed.  Possible personalities are automatically calculated; check the update to COMMON.DungeonInteract
 * Dev: Fixed PreventAction event's choosing of actions in editor
