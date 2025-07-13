@@ -6510,7 +6510,7 @@ namespace DataGenerator.Data
             else if (ii == 255)
             {
                 skill.Name = new LocalText("Spit Up");
-                skill.Desc = new LocalText("The power stored using the move Stockpile is released at once in an attack. The more power is stored, the more powerful the attack.");
+                skill.Desc = new LocalText("The power stored using the move Stockpile is released at once in an attack. The range and power increase the more power is stored.");
                 skill.BaseCharges = 10;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Magical;
