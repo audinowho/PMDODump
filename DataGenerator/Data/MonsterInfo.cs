@@ -1414,6 +1414,8 @@ namespace DataGenerator.Data
                         break;
                     if ((index == 664 || index == 665) && read > 1)//only 1 scatterbug/spewpa form
                         break;
+                    if (index == 718 && (read == 2 || read == 3))//skip power construct 10 and 50% zygarde
+                        continue;
                     if (index == 735 && read > 1)//only 1 gumshoos form
                         break;
                     if (index == 738 && read > 1)//only 1 vikavolt form
@@ -1477,7 +1479,7 @@ namespace DataGenerator.Data
 
                     if (index == 678)//meowstic; forme has fixed gender ratio
                     {
-                        if (entry.Forms.Count == 0)//male
+                        if (read == 1)//male
                         {
                             formEntry.MaleWeight = 8;
                             formEntry.FemaleWeight = 0;
@@ -1490,36 +1492,63 @@ namespace DataGenerator.Data
                             formEntry.GenderlessWeight = 0;
                         }
                     }
+
+                    if (index == 902)//basculegion; forme has fixed gender ratio
+                    {
+                        if (read == 1)//male
+                        {
+                            formEntry.MaleWeight = 8;
+                            formEntry.FemaleWeight = 0;
+                            formEntry.GenderlessWeight = 0;
+                        }
+                        else
+                        {
+                            formEntry.MaleWeight = 0;
+                            formEntry.FemaleWeight = 8;
+                            formEntry.GenderlessWeight = 0;
+                        }
+                    }
+
                     //special-case in-battle only formes
                     //arceus
-                    if (index == 493 && entry.Forms.Count > 0)
+                    if (index == 493 && read > 1)
                         formEntry.Temporary = true;
                     //genesect
-                    if (index == 649 && entry.Forms.Count > 0)
-                        formEntry.Temporary = true;
-                    //zygarde
-                    if (index == 718 && entry.Forms.Count > 1)
+                    if (index == 649 && read > 1)
                         formEntry.Temporary = true;
                     //silvally
-                    if (index == 773 && entry.Forms.Count > 0)
+                    if (index == 773 && read > 1)
                         formEntry.Temporary = true;
                     //cramorant
-                    if (index == 845 && entry.Forms.Count > 0)
+                    if (index == 845 && read > 1)
                         formEntry.Temporary = true;
                     //noice eiscue
-                    if (index == 875 && entry.Forms.Count > 0)
+                    if (index == 875 && read > 1)
                         formEntry.Temporary = true;
+
+                    int addFormToIndex = entry.Forms.Count;
 
                     //vivillon meadow form should be considered standard
                     if (index == 666)
                     {
-                        if (entry.Forms.Count == 6)
-                            entry.Forms.Insert(0, formEntry);
-                        else
-                            entry.Forms.Add(formEntry);
+                        if (read == 7)
+                            addFormToIndex = 0;
                     }
-                    else
-                        entry.Forms.Add(formEntry);
+
+                    //zygarde
+                    if (index == 718)
+                    {
+                        // complete zygarde: temporary
+                        if (read == 4)
+                            formEntry.Temporary = true;
+                        // 10% zygarde: before complete
+                        if (read == 5)
+                            addFormToIndex = 1;
+                    }
+
+
+                    entry.Forms.Insert(addFormToIndex, formEntry);
+
 
                     //alcremie needs more forms to represent ALL appearances
                     if (index == 869)
@@ -1528,22 +1557,6 @@ namespace DataGenerator.Data
                         {
                             MonsterFormData formCopy = formEntry.Copy();
                             entry.Forms.Add(formCopy);
-                        }
-                    }
-
-                    if (index == 902)//basculegion; forme has fixed gender ratio
-                    {
-                        if (entry.Forms.Count == 0)//male
-                        {
-                            formEntry.MaleWeight = 8;
-                            formEntry.FemaleWeight = 0;
-                            formEntry.GenderlessWeight = 0;
-                        }
-                        else
-                        {
-                            formEntry.MaleWeight = 0;
-                            formEntry.FemaleWeight = 8;
-                            formEntry.GenderlessWeight = 0;
                         }
                     }
                 }
