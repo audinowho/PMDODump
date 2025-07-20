@@ -14,6 +14,7 @@
 * Mission Board Mod: Fixed issue where taking two or more escort missions would not have all escorts join the party
 * RC: Added a consistency guarantee for spawning a correct apricorn for Sleeping Caldera's guardian
 * Dev: Removed common_talk.lua, which means COMMON.PERSONALITY is removed.  Possible personalities are automatically calculated; check the update to COMMON.DungeonInteract
+* Scriptable Extra Spawn features and conditions
 * Dev: Fixed PreventAction event's choosing of actions in editor
 * Dev: Map position in ground/map editor
 * Dev: Intrinsic3 chance spawn feature
