@@ -10,6 +10,7 @@
 * Fixed a hub map AI race condition
 * Emergency Exit and Wimp Out resolve at the start of the ability holder's turn.
 * Minor menu behavior fixes
+* Using a Monster Orb on a map that has no item spawns will no longer give an error
 * Mission Board Mod: Fixed issue where taking two or more escort missions would not have all escorts join the party
 * RC: Added a consistency guarantee for spawning a correct apricorn for Sleeping Caldera's guardian
 * Dev: Removed common_talk.lua, which means COMMON.PERSONALITY is removed.  Possible personalities are automatically calculated; check the update to COMMON.DungeonInteract
@@ -18,3 +19,4 @@
 * Dev: Intrinsic3 chance spawn feature
 * Dev: It's possible to add map BGs to dungeons
 * Dev: Added UI:SetCustomDialogue() for setting custom-made dialogue boxes (Extremely avanced)
+* Fixed an off-by-one issue with level range display in spawn editor
