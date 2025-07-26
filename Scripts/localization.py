@@ -57,7 +57,7 @@ class Localization(SheetMerge):
         # update support
         self._update_support(header, sheet, support)
         # write the resx file
-        self._write_resx(header, sheet, resx_path)
+        self._write_lang_resx(header, sheet, resx_path)
 
     def merge_script_text(self, sheet_name, folder, support):
         """
@@ -94,7 +94,7 @@ class Localization(SheetMerge):
 
         # write each data to its own resx file
         for resx_path in sheet_dict:
-            self._write_resx(header, sheet_dict[resx_path], os.path.join(resx_path, "strings"))
+            self._write_lang_resx(header, sheet_dict[resx_path], os.path.join(resx_path, "strings"))
 
     def _recursive_find_strings(self, folder, sub_folder, resource_keys):
         """
