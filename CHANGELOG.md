@@ -19,5 +19,6 @@
 * Dev: Map position in ground/map editor
 * Dev: Intrinsic3 chance spawn feature
 * Dev: It's possible to add map BGs to dungeons
+* Dev: You can now add custom upgrade code to your mods that catches upgrade cases from specific versions.
 * Dev: Added UI:SetCustomDialogue() for setting custom-made dialogue boxes (Extremely avanced)
 * Fixed an off-by-one issue with level range display in spawn editor
