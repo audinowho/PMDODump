@@ -72,7 +72,7 @@ Key		EN
 0000-electrified-0000|data.Name		Electrified
 0000-electrified-0001|data.Desc		The Pokémon has all of its moves converted to the Electric-type. This status wears off after a few turns.
 0000-embargo-0000|data.Name		Embargo
-0000-embargo-0001|data.Desc		The Pokémon is rendered incapable of using any items, and its held item item loses its effect. This status wears off after many turns have passed.
+0000-embargo-0001|data.Desc		The Pokémon is rendered incapable of using any items, and its held item loses its effect. This status wears off after many turns have passed.
 0000-encore-0000|data.Name		Encore
 0000-encore-0001|data.Desc		The Pokémon is given an encore, forcing it to repeat the last move it used. This status wears off after a few turns.
 0000-endure-0000|data.Name		Endure
@@ -238,7 +238,7 @@ Key		EN
 0000-slip-0000|data.Name		Slip
 0000-slip-0001|data.Desc		The Pokémon is given the ability to traverse water.
 0000-snatch-0000|data.Name		Snatch
-0000-snatch-0001|data.Desc		The Pokémon is ready to snatch any stat-boosting move that foes use on themselves. This status wears off after a few turns.
+0000-snatch-0001|data.Desc		The Pokémon is ready to snatch status moves that anyone else uses on themselves. This status wears off after a few turns.
 0000-stat_charged-0000|data.Name		Stat-Charged
 0000-stat_charged-0001|data.Desc		The Pokémon is protected from all stat changes, including its own.
 0000-status_protection-0000|data.Name		Status Protection

@@ -11,7 +11,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 4	charmander	6	charizard	0	Charizard		guildmaster_trail	TRUE	FALSE
 4	charmander	6	charizard	1	Mega Charizard X		TEMP	TRUE	FALSE
 4	charmander	6	charizard	2	Mega Charizard Y		TEMP	FALSE	FALSE
-4	charmander	6	charizard	3	Gigantamax Charizard		TEMP	TRUE	TRUE
+4	charmander	6	charizard	3	Gigantamax Charizard		TEMP	TRUE	FALSE
 7	squirtle	7	squirtle	0	Squirtle		guildmaster_trail	TRUE	FALSE
 7	squirtle	8	wartortle	0	Wartortle		guildmaster_trail	TRUE	FALSE
 7	squirtle	9	blastoise	0	Blastoise		guildmaster_trail	TRUE	FALSE
@@ -25,7 +25,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 13	weedle	14	kakuna	0	Kakuna		bramble_woods	TRUE	FALSE
 13	weedle	15	beedrill	0	Beedrill		bramble_woods fertile_valley secret_garden sickly_hollow	TRUE	FALSE
 13	weedle	15	beedrill	1	Mega Beedrill		TEMP	FALSE	FALSE
-16	pidgey	16	pidgey	0	Pidgey		guildmaster_trail	TRUE	TRUE
+16	pidgey	16	pidgey	0	Pidgey		guildmaster_trail	TRUE	FALSE
 16	pidgey	17	pidgeotto	0	Pidgeotto		guildmaster_trail	TRUE	FALSE
 16	pidgey	18	pidgeot	0	Pidgeot		guildmaster_trail	TRUE	FALSE
 16	pidgey	18	pidgeot	1	Mega Pidgeot		TEMP	FALSE	FALSE
@@ -43,9 +43,9 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 25	pikachu	26	raichu	1	Alolan Raichu		EVOLVE	TRUE	FALSE
 25	pikachu	172	pichu	0	Pichu		guildmaster_trail	TRUE	FALSE
 27	sandshrew	27	sandshrew	0	Sandshrew		bramble_woods lava_floe_island trickster_woods tropical_path	TRUE	FALSE
-27	sandshrew	27	sandshrew	1	Alolan Sandshrew			TRUE	FALSE
+27	sandshrew	27	sandshrew	1	Alolan Sandshrew			TRUE	TRUE
 27	sandshrew	28	sandslash	0	Sandslash		forsaken_desert	TRUE	FALSE
-27	sandshrew	28	sandslash	1	Alolan Sandslash			TRUE	FALSE
+27	sandshrew	28	sandslash	1	Alolan Sandslash			TRUE	TRUE
 29	nidoran_f	29	nidoran_f	0	Nidoran♀		bramble_woods secret_garden	TRUE	FALSE
 29	nidoran_f	30	nidorina	0	Nidorina		secret_garden sleeping_caldera	TRUE	FALSE
 29	nidoran_f	31	nidoqueen	0	Nidoqueen		sleeping_caldera	TRUE	FALSE
@@ -59,7 +59,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 37	vulpix	37	vulpix	1	Alolan Vulpix		guildmaster_trail	TRUE	FALSE
 37	vulpix	38	ninetales	0	Ninetales		guildmaster_trail veiled_ridge	TRUE	FALSE
 37	vulpix	38	ninetales	1	Alolan Ninetales		snowbound_path	TRUE	FALSE
-39	jigglypuff	39	jigglypuff	0	Jigglypuff		guildmaster_trail	TRUE	FALSE
+39	jigglypuff	39	jigglypuff	0	Jigglypuff		guildmaster_trail	TRUE	TRUE
 39	jigglypuff	40	wigglytuff	0	Wigglytuff		guildmaster_trail	TRUE	FALSE
 39	jigglypuff	174	igglybuff	0	Igglybuff		guildmaster_trail	TRUE	FALSE
 41	zubat	41	zubat	0	Zubat		geode_crevice sickly_hollow	TRUE	FALSE
@@ -77,11 +77,11 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 50	diglett	50	diglett	1	Alolan Diglett		sleeping_caldera	TRUE	FALSE
 50	diglett	51	dugtrio	0	Dugtrio		copper_quarry secret_garden	TRUE	FALSE
 50	diglett	51	dugtrio	1	Alolan Dugtrio		sleeping_caldera	TRUE	FALSE
-52	meowth	52	meowth	0	Meowth		depleted_basin geode_crevice guildmaster_trail	TRUE	FALSE
+52	meowth	52	meowth	0	Meowth		depleted_basin guildmaster_trail	TRUE	FALSE
 52	meowth	52	meowth	1	Alolan Meowth		sleeping_caldera	TRUE	FALSE
 52	meowth	52	meowth	2	Galarian Meowth			FALSE	FALSE
 52	meowth	52	meowth	3	Gigantamax Meowth		TEMP	FALSE	FALSE
-52	meowth	53	persian	0	Persian		geode_crevice guildmaster_trail sickly_hollow veiled_ridge	TRUE	FALSE
+52	meowth	53	persian	0	Persian		guildmaster_trail sickly_hollow veiled_ridge	TRUE	FALSE
 52	meowth	53	persian	1	Alolan Persian		sleeping_caldera	TRUE	FALSE
 52	meowth	863	perrserker	0	Perrserker	steely_spirit		FALSE	FALSE
 54	psyduck	54	psyduck	0	Psyduck		sleeping_caldera	TRUE	FALSE
@@ -90,9 +90,9 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 56	mankey	57	primeape	0	Primeape		guildmaster_trail secret_garden	TRUE	FALSE
 56	mankey	979	annihilape	0	Annihilape	stomping_tantrum	EVOLVE	TRUE	FALSE
 58	growlithe	58	growlithe	0	Growlithe		lava_floe_island secret_garden	TRUE	FALSE
-58	growlithe	58	growlithe	1	Hisuian Growlithe			TRUE	FALSE
+58	growlithe	58	growlithe	1	Hisuian Growlithe		geode_crevice	TRUE	FALSE
 58	growlithe	59	arcanine	0	Arcanine		secret_garden	TRUE	FALSE
-58	growlithe	59	arcanine	1	Hisuian Arcanine	raging_fury		TRUE	FALSE
+58	growlithe	59	arcanine	1	Hisuian Arcanine	raging_fury	geode_crevice	TRUE	FALSE
 60	poliwag	60	poliwag	0	Poliwag		faded_trail secret_garden	TRUE	FALSE
 60	poliwag	61	poliwhirl	0	Poliwhirl		EVOLVE	TRUE	FALSE
 60	poliwag	62	poliwrath	0	Poliwrath		secret_garden	TRUE	FALSE
@@ -100,7 +100,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 63	abra	63	abra	0	Abra		secret_garden trickster_woods	TRUE	FALSE
 63	abra	64	kadabra	0	Kadabra		secret_garden	TRUE	FALSE
 63	abra	65	alakazam	0	Alakazam		secret_garden	TRUE	FALSE
-63	abra	65	alakazam	1	Mega Alakazam		TEMP	TRUE	TRUE
+63	abra	65	alakazam	1	Mega Alakazam		TEMP	TRUE	FALSE
 66	machop	66	machop	0	Machop		lava_floe_island secret_garden	TRUE	FALSE
 66	machop	67	machoke	0	Machoke		secret_garden	TRUE	FALSE
 66	machop	68	machamp	0	Machamp		lava_floe_island secret_garden	TRUE	FALSE
@@ -116,7 +116,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 74	geodude	75	graveler	1	Alolan Graveler		EVOLVE	TRUE	FALSE
 74	geodude	76	golem	0	Golem		secret_garden	TRUE	FALSE
 74	geodude	76	golem	1	Alolan Golem		EVOLVE	TRUE	FALSE
-77	ponyta	77	ponyta	0	Ponyta		secret_garden	TRUE	FALSE
+77	ponyta	77	ponyta	0	Ponyta		secret_garden	TRUE	TRUE
 77	ponyta	77	ponyta	1	Galarian Ponyta			TRUE	FALSE
 77	ponyta	78	rapidash	0	Rapidash		secret_garden	TRUE	FALSE
 77	ponyta	78	rapidash	1	Galarian Rapidash			TRUE	FALSE
@@ -124,9 +124,9 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 79	slowpoke	79	slowpoke	1	Galarian Slowpoke			TRUE	FALSE
 79	slowpoke	80	slowbro	0	Slowbro		secret_garden snowbound_path	TRUE	FALSE
 79	slowpoke	80	slowbro	1	Mega Slowbro		TEMP	TRUE	TRUE
-79	slowpoke	80	slowbro	2	Galarian Slowbro	quick_draw shell_side_arm		FALSE	FALSE
+79	slowpoke	80	slowbro	2	Galarian Slowbro	quick_draw shell_side_arm		TRUE	FALSE
 79	slowpoke	199	slowking	0	Slowking		EVOLVE	TRUE	FALSE
-79	slowpoke	199	slowking	1	Galarian Slowking	curious_medicine eerie_spell		FALSE	FALSE
+79	slowpoke	199	slowking	1	Galarian Slowking	curious_medicine eerie_spell		TRUE	TRUE
 81	magnemite	81	magnemite	0	Magnemite		copper_quarry geode_crevice thunderstruck_pass	TRUE	FALSE
 81	magnemite	82	magneton	0	Magneton		geode_crevice	TRUE	FALSE
 81	magnemite	462	magnezone	0	Magnezone		EVOLVE	TRUE	FALSE
@@ -137,7 +137,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 84	doduo	85	dodrio	0	Dodrio		EVOLVE	TRUE	FALSE
 86	seel	86	seel	0	Seel		castaway_cave	TRUE	FALSE
 86	seel	87	dewgong	0	Dewgong		EVOLVE	TRUE	FALSE
-88	grimer	88	grimer	0	Grimer			TRUE	TRUE
+88	grimer	88	grimer	0	Grimer			TRUE	FALSE
 88	grimer	88	grimer	1	Alolan Grimer		copper_quarry	TRUE	FALSE
 88	grimer	89	muk	0	Muk			TRUE	FALSE
 88	grimer	89	muk	1	Alolan Muk		EVOLVE	TRUE	FALSE
@@ -146,12 +146,12 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 92	gastly	92	gastly	0	Gastly		secret_garden	TRUE	FALSE
 92	gastly	93	haunter	0	Haunter		secret_garden	TRUE	FALSE
 92	gastly	94	gengar	0	Gengar		depleted_basin secret_garden	TRUE	FALSE
-92	gastly	94	gengar	1	Mega Gengar		TEMP	TRUE	TRUE
+92	gastly	94	gengar	1	Mega Gengar		TEMP	TRUE	FALSE
 92	gastly	94	gengar	2	Gigantamax Gengar		TEMP	FALSE	FALSE
 95	onix	95	onix	0	Onix		copper_quarry guildmaster_trail	TRUE	FALSE
 95	onix	208	steelix	0	Steelix		guildmaster_trail	TRUE	FALSE
 95	onix	208	steelix	1	Mega Steelix		TEMP	TRUE	FALSE
-96	drowzee	96	drowzee	0	Drowzee		guildmaster_trail moonlit_courtyard	TRUE	TRUE
+96	drowzee	96	drowzee	0	Drowzee		guildmaster_trail moonlit_courtyard	TRUE	FALSE
 96	drowzee	97	hypno	0	Hypno		guildmaster_trail	TRUE	FALSE
 98	krabby	98	krabby	0	Krabby		lava_floe_island	TRUE	FALSE
 98	krabby	99	kingler	0	Kingler		EVOLVE	TRUE	FALSE
@@ -163,7 +163,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 102	exeggcute	102	exeggcute	0	Exeggcute		guildmaster_trail overgrown_wilds	TRUE	FALSE
 102	exeggcute	103	exeggutor	0	Exeggutor		guildmaster_trail	TRUE	FALSE
 102	exeggcute	103	exeggutor	1	Alolan Exeggutor	dragon_hammer	EVOLVE	TRUE	FALSE
-104	cubone	104	cubone	0	Cubone		forsaken_desert guildmaster_trail sleeping_caldera	TRUE	TRUE
+104	cubone	104	cubone	0	Cubone		forsaken_desert guildmaster_trail sleeping_caldera	TRUE	FALSE
 104	cubone	105	marowak	0	Marowak		forsaken_desert guildmaster_trail	TRUE	FALSE
 104	cubone	105	marowak	1	Alolan Marowak	stomping_tantrum	sleeping_caldera	TRUE	FALSE
 106	hitmonlee	106	hitmonlee	0	Hitmonlee		guildmaster_trail snowbound_path	TRUE	FALSE
@@ -174,7 +174,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 108	lickitung	463	lickilicky	0	Lickilicky		guildmaster_trail	TRUE	FALSE
 109	koffing	109	koffing	0	Koffing		guildmaster_trail veiled_ridge	TRUE	FALSE
 109	koffing	110	weezing	0	Weezing		guildmaster_trail	TRUE	FALSE
-109	koffing	110	weezing	1	Galarian Weezing	strange_steam	EVOLVE	TRUE	TRUE
+109	koffing	110	weezing	1	Galarian Weezing	strange_steam	EVOLVE	TRUE	FALSE
 111	rhyhorn	111	rhyhorn	0	Rhyhorn		depleted_basin	TRUE	FALSE
 111	rhyhorn	112	rhydon	0	Rhydon		EVOLVE	TRUE	FALSE
 111	rhyhorn	464	rhyperior	0	Rhyperior		EVOLVE	TRUE	FALSE
@@ -183,8 +183,8 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 113	chansey	440	happiny	0	Happiny		secret_garden	TRUE	FALSE
 114	tangela	114	tangela	0	Tangela		faded_trail	TRUE	FALSE
 114	tangela	465	tangrowth	0	Tangrowth		EVOLVE	TRUE	FALSE
-115	kangaskhan	115	kangaskhan	0	Kangaskhan		guildmaster_trail snowbound_path thunderstruck_pass	TRUE	FALSE
-115	kangaskhan	115	kangaskhan	1	Mega Kangaskhan	parental_bond	TEMP	TRUE	FALSE
+115	kangaskhan	115	kangaskhan	0	Kangaskhan		guildmaster_trail snowbound_path thunderstruck_pass	TRUE	TRUE
+115	kangaskhan	115	kangaskhan	1	Mega Kangaskhan	parental_bond	TEMP	TRUE	TRUE
 116	horsea	116	horsea	0	Horsea		castaway_cave	TRUE	FALSE
 116	horsea	117	seadra	0	Seadra		EVOLVE	TRUE	FALSE
 116	horsea	230	kingdra	0	Kingdra		EVOLVE	TRUE	FALSE
@@ -193,8 +193,8 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 120	staryu	120	staryu	0	Staryu		tropical_path	TRUE	FALSE
 120	staryu	121	starmie	0	Starmie		EVOLVE	TRUE	FALSE
 122	mr_mime	122	mr_mime	0	Mr. Mime		guildmaster_trail moonlit_courtyard	TRUE	FALSE
-122	mr_mime	122	mr_mime	1	Galarian Mr. Mime	screen_cleaner	EVOLVE	TRUE	TRUE
-122	mr_mime	439	mime_jr	0	Mime Jr.		guildmaster_trail moonlit_courtyard	TRUE	FALSE
+122	mr_mime	122	mr_mime	1	Galarian Mr. Mime	screen_cleaner	EVOLVE	TRUE	FALSE
+122	mr_mime	439	mime_jr	0	Mime Jr.		guildmaster_trail moonlit_courtyard	TRUE	TRUE
 122	mr_mime	866	mr_rime	0	Mr. Rime	screen_cleaner		FALSE	FALSE
 123	scyther	123	scyther	0	Scyther		guildmaster_trail	TRUE	FALSE
 123	scyther	212	scizor	0	Scizor		guildmaster_trail	TRUE	FALSE
@@ -215,7 +215,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 128	tauros	128	tauros	2	Tauros	raging_bull		TRUE	FALSE
 128	tauros	128	tauros	3	Tauros	raging_bull		TRUE	TRUE
 129	magikarp	129	magikarp	0	Magikarp		guildmaster_trail lava_floe_island	TRUE	FALSE
-129	magikarp	130	gyarados	0	Gyarados		guildmaster_trail lava_floe_island treacherous_mountain	TRUE	TRUE
+129	magikarp	130	gyarados	0	Gyarados		guildmaster_trail lava_floe_island treacherous_mountain	TRUE	FALSE
 129	magikarp	130	gyarados	1	Mega Gyarados		TEMP	FALSE	FALSE
 131	lapras	131	lapras	0	Lapras		secret_garden snowbound_path treacherous_mountain	TRUE	FALSE
 131	lapras	131	lapras	1	Gigantamax Lapras		TEMP	FALSE	FALSE
@@ -227,7 +227,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 133	eevee	196	espeon	0	Espeon		guildmaster_trail relic_tower secret_garden	TRUE	FALSE
 133	eevee	197	umbreon	0	Umbreon		guildmaster_trail moonlit_courtyard	TRUE	FALSE
 133	eevee	470	leafeon	0	Leafeon		guildmaster_trail overgrown_wilds secret_garden	TRUE	FALSE
-133	eevee	471	glaceon	0	Glaceon		guildmaster_trail snowbound_path	TRUE	TRUE
+133	eevee	471	glaceon	0	Glaceon		guildmaster_trail snowbound_path	TRUE	FALSE
 133	eevee	700	sylveon	0	Sylveon		guildmaster_trail moonlit_courtyard secret_garden	TRUE	FALSE
 137	porygon	137	porygon	0	Porygon		copper_quarry depleted_basin geode_crevice guildmaster_trail moonlit_courtyard relic_tower snowbound_path thunderstruck_pass veiled_ridge	TRUE	FALSE
 137	porygon	233	porygon2	0	Porygon2		geode_crevice guildmaster_trail moonlit_courtyard relic_tower thunderstruck_pass treacherous_mountain	TRUE	FALSE
@@ -237,15 +237,15 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 140	kabuto	140	kabuto	0	Kabuto		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 140	kabuto	141	kabutops	0	Kabutops		EVOLVE	TRUE	FALSE
 142	aerodactyl	142	aerodactyl	0	Aerodactyl		guildmaster_trail	TRUE	FALSE
-142	aerodactyl	142	aerodactyl	1	Mega Aerodactyl		TEMP	TRUE	TRUE
+142	aerodactyl	142	aerodactyl	1	Mega Aerodactyl		TEMP	TRUE	FALSE
 143	snorlax	143	snorlax	0	Snorlax		guildmaster_trail sleeping_caldera	TRUE	FALSE
 143	snorlax	143	snorlax	1	Gigantamax Snorlax		TEMP	FALSE	FALSE
 143	snorlax	446	munchlax	0	Munchlax		guildmaster_trail	TRUE	FALSE
-144	articuno	144	articuno	0	Articuno			TRUE	TRUE
+144	articuno	144	articuno	0	Articuno			TRUE	FALSE
 144	articuno	144	articuno	1	Galarian Articuno	freezing_glare		TRUE	TRUE
 145	zapdos	145	zapdos	0	Zapdos			TRUE	FALSE
 145	zapdos	145	zapdos	1	Galarian Zapdos	thunderous_kick		TRUE	FALSE
-146	moltres	146	moltres	0	Moltres			TRUE	TRUE
+146	moltres	146	moltres	0	Moltres			TRUE	FALSE
 146	moltres	146	moltres	1	Galarian Moltres	fiery_wrath		TRUE	FALSE
 147	dratini	147	dratini	0	Dratini		castaway_cave guildmaster_trail secret_garden	TRUE	FALSE
 147	dratini	148	dragonair	0	Dragonair		secret_garden	TRUE	FALSE
@@ -283,7 +283,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 179	mareep	180	flaaffy	0	Flaaffy		secret_garden	TRUE	FALSE
 179	mareep	181	ampharos	0	Ampharos		secret_garden	TRUE	FALSE
 179	mareep	181	ampharos	1	Mega Ampharos		TEMP	FALSE	FALSE
-183	marill	183	marill	0	Marill		geode_crevice	TRUE	TRUE
+183	marill	183	marill	0	Marill		geode_crevice	TRUE	FALSE
 183	marill	184	azumarill	0	Azumarill		geode_crevice snowbound_path	TRUE	FALSE
 183	marill	298	azurill	0	Azurill		fertile_valley	TRUE	FALSE
 185	sudowoodo	185	sudowoodo	0	Sudowoodo		guildmaster_trail secret_garden	TRUE	FALSE
@@ -302,7 +302,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 194	wooper	195	quagsire	0	Quagsire		guildmaster_trail	TRUE	FALSE
 194	wooper	980	clodsire	0	Clodsire			TRUE	FALSE
 198	murkrow	198	murkrow	0	Murkrow		guildmaster_trail sickly_hollow	TRUE	FALSE
-198	murkrow	430	honchkrow	0	Honchkrow		guildmaster_trail	TRUE	TRUE
+198	murkrow	430	honchkrow	0	Honchkrow		guildmaster_trail	TRUE	FALSE
 200	misdreavus	200	misdreavus	0	Misdreavus		depleted_basin guildmaster_trail sickly_hollow	TRUE	FALSE
 200	misdreavus	429	mismagius	0	Mismagius		guildmaster_trail sickly_hollow	TRUE	FALSE
 201	unown	201	unown	0	Unown A		bramble_woods copper_quarry depleted_basin fertile_valley snowbound_path tropical_path veiled_ridge	TRUE	FALSE
@@ -352,7 +352,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 213	shuckle	213	shuckle	0	Shuckle		copper_quarry depleted_basin faultline_ridge guildmaster_trail overgrown_wilds secret_garden	TRUE	FALSE
 214	heracross	214	heracross	0	Heracross		overgrown_wilds	TRUE	FALSE
 214	heracross	214	heracross	1	Mega Heracross		TEMP	FALSE	FALSE
-215	sneasel	215	sneasel	0	Sneasel		guildmaster_trail secret_garden veiled_ridge	TRUE	TRUE
+215	sneasel	215	sneasel	0	Sneasel		guildmaster_trail secret_garden veiled_ridge	TRUE	FALSE
 215	sneasel	215	sneasel	1	Hisuian Sneasel			TRUE	FALSE
 215	sneasel	461	weavile	0	Weavile		guildmaster_trail secret_garden	TRUE	FALSE
 215	sneasel	903	sneasler	0	Sneasler	dire_claw		TRUE	FALSE
@@ -367,14 +367,14 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 222	corsola	222	corsola	0	Corsola		castaway_cave	TRUE	FALSE
 222	corsola	222	corsola	1	Galarian Corsola	strength_sap		TRUE	FALSE
 222	corsola	864	cursola	0	Cursola	strength_sap		TRUE	FALSE
-223	remoraid	223	remoraid	0	Remoraid		geode_crevice lava_floe_island	TRUE	FALSE
-223	remoraid	224	octillery	0	Octillery		geode_crevice guildmaster_trail lava_floe_island	TRUE	FALSE
+223	remoraid	223	remoraid	0	Remoraid		lava_floe_island	TRUE	FALSE
+223	remoraid	224	octillery	0	Octillery		guildmaster_trail lava_floe_island	TRUE	FALSE
 225	delibird	225	delibird	0	Delibird		guildmaster_trail	TRUE	FALSE
 226	mantine	226	mantine	0	Mantine		castaway_cave	TRUE	FALSE
 226	mantine	458	mantyke	0	Mantyke		castaway_cave	TRUE	FALSE
 227	skarmory	227	skarmory	0	Skarmory		flyaway_cliffs secret_garden	TRUE	FALSE
-228	houndour	228	houndour	0	Houndour		geode_crevice guildmaster_trail trickster_woods	TRUE	FALSE
-228	houndour	229	houndoom	0	Houndoom		geode_crevice guildmaster_trail	TRUE	FALSE
+228	houndour	228	houndour	0	Houndour		guildmaster_trail trickster_woods	TRUE	FALSE
+228	houndour	229	houndoom	0	Houndoom		guildmaster_trail	TRUE	FALSE
 228	houndour	229	houndoom	1	Mega Houndoom		TEMP	TRUE	FALSE
 231	phanpy	231	phanpy	0	Phanpy		faultline_ridge guildmaster_trail	TRUE	FALSE
 231	phanpy	232	donphan	0	Donphan		guildmaster_trail	TRUE	FALSE
@@ -382,18 +382,18 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 234	stantler	899	wyrdeer	0	Wyrdeer			TRUE	TRUE
 235	smeargle	235	smeargle	0	Smeargle		bramble_woods faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds snowbound_path trickster_woods tropical_path	TRUE	FALSE
 241	miltank	241	miltank	0	Miltank			TRUE	FALSE
-243	raikou	243	raikou	0	Raikou			TRUE	TRUE
-244	entei	244	entei	0	Entei			TRUE	TRUE
+243	raikou	243	raikou	0	Raikou			TRUE	FALSE
+244	entei	244	entei	0	Entei			TRUE	FALSE
 245	suicune	245	suicune	0	Suicune			TRUE	FALSE
 246	larvitar	246	larvitar	0	Larvitar		guildmaster_trail	TRUE	FALSE
 246	larvitar	247	pupitar	0	Pupitar		guildmaster_trail	TRUE	FALSE
-246	larvitar	248	tyranitar	0	Tyranitar		guildmaster_trail	TRUE	TRUE
+246	larvitar	248	tyranitar	0	Tyranitar		guildmaster_trail	TRUE	FALSE
 246	larvitar	248	tyranitar	1	Mega Tyranitar		TEMP	FALSE	FALSE
-249	lugia	249	lugia	0	Lugia			TRUE	TRUE
+249	lugia	249	lugia	0	Lugia			TRUE	FALSE
 250	ho_oh	250	ho_oh	0	Ho-Oh			TRUE	FALSE
-251	celebi	251	celebi	0	Celebi			TRUE	TRUE
+251	celebi	251	celebi	0	Celebi			TRUE	FALSE
 252	treecko	252	treecko	0	Treecko			TRUE	FALSE
-252	treecko	253	grovyle	0	Grovyle		overgrown_wilds	TRUE	TRUE
+252	treecko	253	grovyle	0	Grovyle		overgrown_wilds	TRUE	FALSE
 252	treecko	254	sceptile	0	Sceptile		EVOLVE	TRUE	FALSE
 252	treecko	254	sceptile	1	Mega Sceptile		TEMP	TRUE	FALSE
 255	torchic	255	torchic	0	Torchic			TRUE	FALSE
@@ -409,21 +409,21 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 263	zigzagoon	263	zigzagoon	0	Zigzagoon		tiny_tunnel	TRUE	FALSE
 263	zigzagoon	263	zigzagoon	1	Galarian Zigzagoon			TRUE	FALSE
 263	zigzagoon	264	linoone	0	Linoone		copper_quarry	TRUE	FALSE
-263	zigzagoon	264	linoone	1	Galarian Linoone			TRUE	TRUE
-263	zigzagoon	862	obstagoon	0	Obstagoon	obstruct		TRUE	TRUE
+263	zigzagoon	264	linoone	1	Galarian Linoone			TRUE	FALSE
+263	zigzagoon	862	obstagoon	0	Obstagoon	obstruct		TRUE	FALSE
 265	wurmple	265	wurmple	0	Wurmple		guildmaster_trail tiny_tunnel	TRUE	FALSE
 265	wurmple	266	silcoon	0	Silcoon		guildmaster_trail tiny_tunnel	TRUE	FALSE
 265	wurmple	267	beautifly	0	Beautifly		guildmaster_trail tiny_tunnel	TRUE	FALSE
 265	wurmple	268	cascoon	0	Cascoon		guildmaster_trail tiny_tunnel	TRUE	FALSE
 265	wurmple	269	dustox	0	Dustox		guildmaster_trail tiny_tunnel	TRUE	FALSE
-270	lotad	270	lotad	0	Lotad		fertile_valley	TRUE	FALSE
-270	lotad	271	lombre	0	Lombre		EVOLVE	TRUE	FALSE
-270	lotad	272	ludicolo	0	Ludicolo		EVOLVE	TRUE	FALSE
+270	lotad	270	lotad	0	Lotad		fertile_valley geode_crevice	TRUE	FALSE
+270	lotad	271	lombre	0	Lombre		geode_crevice	TRUE	FALSE
+270	lotad	272	ludicolo	0	Ludicolo		geode_crevice	TRUE	FALSE
 273	seedot	273	seedot	0	Seedot		overgrown_wilds secret_garden	TRUE	FALSE
-273	seedot	274	nuzleaf	0	Nuzleaf		secret_garden	TRUE	FALSE
+273	seedot	274	nuzleaf	0	Nuzleaf		secret_garden	TRUE	TRUE
 273	seedot	275	shiftry	0	Shiftry		secret_garden snowbound_path treacherous_mountain	TRUE	FALSE
 276	taillow	276	taillow	0	Taillow		overgrown_wilds	TRUE	FALSE
-276	taillow	277	swellow	0	Swellow		EVOLVE	TRUE	TRUE
+276	taillow	277	swellow	0	Swellow		EVOLVE	TRUE	FALSE
 278	wingull	278	wingull	0	Wingull		flyaway_cliffs	TRUE	FALSE
 278	wingull	279	pelipper	0	Pelipper		secret_garden	TRUE	FALSE
 280	ralts	280	ralts	0	Ralts		guildmaster_trail moonlit_courtyard	TRUE	FALSE
@@ -454,10 +454,10 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 302	sableye	302	sableye	0	Sableye		geode_crevice secret_garden veiled_ridge	TRUE	FALSE
 302	sableye	302	sableye	1	Mega Sableye		TEMP	TRUE	FALSE
 303	mawile	303	mawile	0	Mawile		copper_quarry guildmaster_trail	TRUE	FALSE
-303	mawile	303	mawile	1	Mega Mawile		TEMP	FALSE	FALSE
+303	mawile	303	mawile	1	Mega Mawile		TEMP	TRUE	TRUE
 304	aron	304	aron	0	Aron		copper_quarry	TRUE	FALSE
 304	aron	305	lairon	0	Lairon		copper_quarry	TRUE	FALSE
-304	aron	306	aggron	0	Aggron		EVOLVE	TRUE	TRUE
+304	aron	306	aggron	0	Aggron		EVOLVE	TRUE	FALSE
 304	aron	306	aggron	1	Mega Aggron		TEMP	FALSE	FALSE
 307	meditite	307	meditite	0	Meditite		geode_crevice relic_tower	TRUE	FALSE
 307	meditite	308	medicham	0	Medicham		geode_crevice	TRUE	FALSE
@@ -465,47 +465,47 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 309	electrike	309	electrike	0	Electrike		secret_garden	TRUE	FALSE
 309	electrike	310	manectric	0	Manectric		secret_garden	TRUE	FALSE
 309	electrike	310	manectric	1	Mega Manectric		TEMP	TRUE	FALSE
-311	plusle	311	plusle	0	Plusle		flyaway_cliffs secret_garden thunderstruck_pass	TRUE	TRUE
-312	minun	312	minun	0	Minun		flyaway_cliffs secret_garden thunderstruck_pass	TRUE	TRUE
+311	plusle	311	plusle	0	Plusle		flyaway_cliffs secret_garden thunderstruck_pass	TRUE	FALSE
+312	minun	312	minun	0	Minun		flyaway_cliffs secret_garden thunderstruck_pass	TRUE	FALSE
 313	volbeat	313	volbeat	0	Volbeat		moonlit_courtyard	TRUE	FALSE
 314	illumise	314	illumise	0	Illumise		moonlit_courtyard	TRUE	FALSE
 315	roselia	315	roselia	0	Roselia		bramble_woods guildmaster_trail moonlit_courtyard sickly_hollow	TRUE	FALSE
 315	roselia	406	budew	0	Budew		bramble_woods guildmaster_trail	TRUE	FALSE
 315	roselia	407	roserade	0	Roserade		guildmaster_trail sickly_hollow	TRUE	FALSE
 316	gulpin	316	gulpin	0	Gulpin		fertile_valley guildmaster_trail	TRUE	FALSE
-316	gulpin	317	swalot	0	Swalot		guildmaster_trail	TRUE	FALSE
+316	gulpin	317	swalot	0	Swalot		guildmaster_trail	TRUE	TRUE
 318	carvanha	318	carvanha	0	Carvanha		castaway_cave	TRUE	FALSE
 318	carvanha	319	sharpedo	0	Sharpedo		EVOLVE	TRUE	FALSE
 318	carvanha	319	sharpedo	1	Mega Sharpedo		TEMP	FALSE	FALSE
 320	wailmer	320	wailmer	0	Wailmer		castaway_cave	TRUE	FALSE
-320	wailmer	321	wailord	0	Wailord		EVOLVE	TRUE	TRUE
+320	wailmer	321	wailord	0	Wailord		EVOLVE	TRUE	FALSE
 322	numel	322	numel	0	Numel		guildmaster_trail lava_floe_island sleeping_caldera	TRUE	FALSE
 322	numel	323	camerupt	0	Camerupt		guildmaster_trail lava_floe_island sleeping_caldera	TRUE	FALSE
 322	numel	323	camerupt	1	Mega Camerupt		TEMP	TRUE	FALSE
 324	torkoal	324	torkoal	0	Torkoal		forsaken_desert	TRUE	FALSE
 325	spoink	325	spoink	0	Spoink		secret_garden	TRUE	FALSE
 325	spoink	326	grumpig	0	Grumpig		secret_garden veiled_ridge	TRUE	FALSE
-327	spinda	327	spinda	0	Spinda		flyaway_cliffs secret_garden	TRUE	TRUE
+327	spinda	327	spinda	0	Spinda		flyaway_cliffs secret_garden	TRUE	FALSE
 328	trapinch	328	trapinch	0	Trapinch		forsaken_desert guildmaster_trail	TRUE	FALSE
 328	trapinch	329	vibrava	0	Vibrava		guildmaster_trail	TRUE	FALSE
 328	trapinch	330	flygon	0	Flygon		guildmaster_trail	TRUE	FALSE
 331	cacnea	331	cacnea	0	Cacnea		forsaken_desert	TRUE	FALSE
 331	cacnea	332	cacturne	0	Cacturne	spiky_shield	EVOLVE	TRUE	FALSE
 333	swablu	333	swablu	0	Swablu		faded_trail secret_garden	TRUE	FALSE
-333	swablu	334	altaria	0	Altaria		secret_garden snowbound_path	TRUE	FALSE
+333	swablu	334	altaria	0	Altaria		secret_garden snowbound_path	TRUE	TRUE
 333	swablu	334	altaria	1	Mega Altaria		TEMP	FALSE	FALSE
 335	zangoose	335	zangoose	0	Zangoose		depleted_basin	TRUE	FALSE
 336	seviper	336	seviper	0	Seviper		sickly_hollow	TRUE	FALSE
-337	lunatone	337	lunatone	0	Lunatone		moonlit_courtyard secret_garden	TRUE	TRUE
+337	lunatone	337	lunatone	0	Lunatone		moonlit_courtyard secret_garden	TRUE	FALSE
 338	solrock	338	solrock	0	Solrock		relic_tower secret_garden	TRUE	FALSE
 339	barboach	339	barboach	0	Barboach		sleeping_caldera	TRUE	FALSE
 339	barboach	340	whiscash	0	Whiscash		sleeping_caldera	TRUE	FALSE
-341	corphish	341	corphish	0	Corphish		castaway_cave fertile_valley	TRUE	FALSE
+341	corphish	341	corphish	0	Corphish		castaway_cave fertile_valley	TRUE	TRUE
 341	corphish	342	crawdaunt	0	Crawdaunt		EVOLVE	TRUE	FALSE
 343	baltoy	343	baltoy	0	Baltoy		forsaken_desert guildmaster_trail relic_tower	TRUE	FALSE
 343	baltoy	344	claydol	0	Claydol		guildmaster_trail relic_tower	TRUE	FALSE
 345	lileep	345	lileep	0	Lileep			TRUE	FALSE
-345	lileep	346	cradily	0	Cradily		secret_garden	TRUE	TRUE
+345	lileep	346	cradily	0	Cradily		secret_garden	TRUE	FALSE
 347	anorith	347	anorith	0	Anorith			TRUE	FALSE
 347	anorith	348	armaldo	0	Armaldo		secret_garden	TRUE	FALSE
 349	feebas	349	feebas	0	Feebas			TRUE	FALSE
@@ -515,24 +515,24 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 351	castform	351	castform	2	Rainy Castform		TEMP	TRUE	FALSE
 351	castform	351	castform	3	Snowy Castform		TEMP	TRUE	FALSE
 352	kecleon	352	kecleon	0	Kecleon		copper_quarry guildmaster_trail secret_garden sickly_hollow snowbound_path thunderstruck_pass	TRUE	FALSE
-353	shuppet	353	shuppet	0	Shuppet		depleted_basin guildmaster_trail relic_tower	TRUE	TRUE
+353	shuppet	353	shuppet	0	Shuppet		depleted_basin guildmaster_trail relic_tower	TRUE	FALSE
 353	shuppet	354	banette	0	Banette		guildmaster_trail relic_tower	TRUE	FALSE
 353	shuppet	354	banette	1	Mega Banette		TEMP	TRUE	FALSE
 355	duskull	355	duskull	0	Duskull		overgrown_wilds sickly_hollow	TRUE	FALSE
 355	duskull	356	dusclops	0	Dusclops		EVOLVE	TRUE	FALSE
-355	duskull	477	dusknoir	0	Dusknoir		EVOLVE	TRUE	TRUE
+355	duskull	477	dusknoir	0	Dusknoir		EVOLVE	TRUE	FALSE
 357	tropius	357	tropius	0	Tropius		overgrown_wilds secret_garden	TRUE	FALSE
 358	chimecho	358	chimecho	0	Chimecho		guildmaster_trail	TRUE	FALSE
 358	chimecho	433	chingling	0	Chingling		guildmaster_trail	TRUE	FALSE
-359	absol	359	absol	0	Absol		depleted_basin guildmaster_trail veiled_ridge	TRUE	TRUE
+359	absol	359	absol	0	Absol		depleted_basin guildmaster_trail veiled_ridge	TRUE	FALSE
 359	absol	359	absol	1	Mega Absol		TEMP	TRUE	FALSE
-361	snorunt	361	snorunt	0	Snorunt		guildmaster_trail snowbound_path	TRUE	TRUE
+361	snorunt	361	snorunt	0	Snorunt		guildmaster_trail snowbound_path	TRUE	FALSE
 361	snorunt	362	glalie	0	Glalie		EVOLVE	TRUE	FALSE
 361	snorunt	362	glalie	1	Mega Glalie		TEMP	TRUE	TRUE
 361	snorunt	478	froslass	0	Froslass		guildmaster_trail snowbound_path	TRUE	FALSE
 363	spheal	363	spheal	0	Spheal		geode_crevice lava_floe_island	TRUE	FALSE
-363	spheal	364	sealeo	0	Sealeo		geode_crevice	TRUE	FALSE
-363	spheal	365	walrein	0	Walrein		EVOLVE	TRUE	TRUE
+363	spheal	364	sealeo	0	Sealeo		EVOLVE	TRUE	FALSE
+363	spheal	365	walrein	0	Walrein		EVOLVE	TRUE	FALSE
 366	clamperl	366	clamperl	0	Clamperl		castaway_cave	TRUE	FALSE
 366	clamperl	367	huntail	0	Huntail		castaway_cave	TRUE	FALSE
 366	clamperl	368	gorebyss	0	Gorebyss		castaway_cave	TRUE	FALSE
@@ -550,22 +550,22 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 378	regice	378	regice	0	Regice			TRUE	FALSE
 379	registeel	379	registeel	0	Registeel			TRUE	FALSE
 380	latias	380	latias	0	Latias			TRUE	FALSE
-380	latias	380	latias	1	Mega Latias		TEMP	FALSE	FALSE
+380	latias	380	latias	1	Mega Latias		TEMP	TRUE	TRUE
 381	latios	381	latios	0	Latios			TRUE	FALSE
-381	latios	381	latios	1	Mega Latios		TEMP	FALSE	FALSE
+381	latios	381	latios	1	Mega Latios		TEMP	TRUE	TRUE
 382	kyogre	382	kyogre	0	Kyogre	origin_pulse		TRUE	FALSE
-382	kyogre	382	kyogre	1	Primal Kyogre	origin_pulse	TEMP	TRUE	TRUE
+382	kyogre	382	kyogre	1	Primal Kyogre	origin_pulse	TEMP	TRUE	FALSE
 383	groudon	383	groudon	0	Groudon	precipice_blades		TRUE	FALSE
-383	groudon	383	groudon	1	Primal Groudon	precipice_blades	TEMP	TRUE	TRUE
+383	groudon	383	groudon	1	Primal Groudon	precipice_blades	TEMP	TRUE	FALSE
 384	rayquaza	384	rayquaza	0	Rayquaza			TRUE	FALSE
 384	rayquaza	384	rayquaza	1	Mega Rayquaza		TEMP	TRUE	FALSE
-385	jirachi	385	jirachi	0	Jirachi			TRUE	TRUE
+385	jirachi	385	jirachi	0	Jirachi			TRUE	FALSE
 386	deoxys	386	deoxys	0	Normal Deoxys			TRUE	FALSE
 386	deoxys	386	deoxys	1	Attack Deoxys			TRUE	FALSE
 386	deoxys	386	deoxys	2	Defense Deoxys			TRUE	FALSE
 386	deoxys	386	deoxys	3	Speed Deoxys			TRUE	FALSE
 387	turtwig	387	turtwig	0	Turtwig		secret_garden	TRUE	FALSE
-387	turtwig	388	grotle	0	Grotle		EVOLVE	TRUE	FALSE
+387	turtwig	388	grotle	0	Grotle		EVOLVE	TRUE	TRUE
 387	turtwig	389	torterra	0	Torterra		secret_garden	TRUE	FALSE
 390	chimchar	390	chimchar	0	Chimchar		secret_garden	TRUE	FALSE
 390	chimchar	391	monferno	0	Monferno		secret_garden	TRUE	FALSE
@@ -576,7 +576,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 396	starly	396	starly	0	Starly		faded_trail secret_garden tropical_path	TRUE	FALSE
 396	starly	397	staravia	0	Staravia		depleted_basin flyaway_cliffs secret_garden	TRUE	FALSE
 396	starly	398	staraptor	0	Staraptor		secret_garden	TRUE	FALSE
-399	bidoof	399	bidoof	0	Bidoof		trickster_woods	TRUE	TRUE
+399	bidoof	399	bidoof	0	Bidoof		trickster_woods	TRUE	FALSE
 399	bidoof	400	bibarel	0	Bibarel		EVOLVE	TRUE	FALSE
 401	kricketot	401	kricketot	0	Kricketot		faded_trail tiny_tunnel	TRUE	FALSE
 401	kricketot	402	kricketune	0	Kricketune		tiny_tunnel	TRUE	FALSE
@@ -587,7 +587,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 408	cranidos	409	rampardos	0	Rampardos		EVOLVE	TRUE	FALSE
 410	shieldon	410	shieldon	0	Shieldon		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 410	shieldon	411	bastiodon	0	Bastiodon		EVOLVE	TRUE	FALSE
-412	burmy	412	burmy	0	Plant Burmy		secret_garden	TRUE	FALSE
+412	burmy	412	burmy	0	Plant Burmy		secret_garden	TRUE	TRUE
 412	burmy	412	burmy	1	Sandy Burmy		secret_garden	TRUE	FALSE
 412	burmy	412	burmy	2	Trash Burmy		secret_garden	TRUE	FALSE
 412	burmy	413	wormadam	0	Plant Wormadam		secret_garden	TRUE	FALSE
@@ -596,7 +596,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 412	burmy	414	mothim	0	Mothim		secret_garden	TRUE	FALSE
 415	combee	415	combee	0	Combee		trickster_woods	TRUE	FALSE
 415	combee	416	vespiquen	0	Vespiquen		EVOLVE	TRUE	FALSE
-417	pachirisu	417	pachirisu	0	Pachirisu		guildmaster_trail	TRUE	TRUE
+417	pachirisu	417	pachirisu	0	Pachirisu		guildmaster_trail	TRUE	FALSE
 418	buizel	418	buizel	0	Buizel		geode_crevice trickster_woods	TRUE	FALSE
 418	buizel	419	floatzel	0	Floatzel		geode_crevice	TRUE	FALSE
 420	cherubi	420	cherubi	0	Cherubi		guildmaster_trail overgrown_wilds	TRUE	FALSE
@@ -609,12 +609,12 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 425	drifloon	425	drifloon	0	Drifloon		lava_floe_island secret_garden	TRUE	FALSE
 425	drifloon	426	drifblim	0	Drifblim		lava_floe_island secret_garden treacherous_mountain	TRUE	FALSE
 427	buneary	427	buneary	0	Buneary		guildmaster_trail	TRUE	FALSE
-427	buneary	428	lopunny	0	Lopunny		guildmaster_trail	TRUE	TRUE
+427	buneary	428	lopunny	0	Lopunny		guildmaster_trail	TRUE	FALSE
 427	buneary	428	lopunny	1	Mega Lopunny		TEMP	TRUE	FALSE
 431	glameow	431	glameow	0	Glameow		moonlit_courtyard	TRUE	FALSE
 431	glameow	432	purugly	0	Purugly		EVOLVE	TRUE	FALSE
 434	stunky	434	stunky	0	Stunky		sleeping_caldera	TRUE	FALSE
-434	stunky	435	skuntank	0	Skuntank		EVOLVE	TRUE	TRUE
+434	stunky	435	skuntank	0	Skuntank		EVOLVE	TRUE	FALSE
 436	bronzor	436	bronzor	0	Bronzor		castaway_cave guildmaster_trail	TRUE	FALSE
 436	bronzor	437	bronzong	0	Bronzong		guildmaster_trail relic_tower	TRUE	FALSE
 441	chatot	441	chatot	0	Chatot		flyaway_cliffs guildmaster_trail	TRUE	FALSE
@@ -624,13 +624,13 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 443	gible	445	garchomp	0	Garchomp		EVOLVE	TRUE	FALSE
 443	gible	445	garchomp	1	Mega Garchomp		TEMP	FALSE	FALSE
 447	riolu	447	riolu	0	Riolu		faultline_ridge guildmaster_trail	TRUE	FALSE
-447	riolu	448	lucario	0	Lucario		guildmaster_trail	TRUE	TRUE
+447	riolu	448	lucario	0	Lucario		guildmaster_trail	TRUE	FALSE
 447	riolu	448	lucario	1	Mega Lucario		TEMP	TRUE	TRUE
 449	hippopotas	449	hippopotas	0	Hippopotas		forsaken_desert	TRUE	FALSE
 449	hippopotas	450	hippowdon	0	Hippowdon		EVOLVE	TRUE	FALSE
 451	skorupi	451	skorupi	0	Skorupi		forsaken_desert	TRUE	FALSE
 451	skorupi	452	drapion	0	Drapion		guildmaster_trail secret_garden treacherous_mountain	TRUE	FALSE
-453	croagunk	453	croagunk	0	Croagunk		sickly_hollow sleeping_caldera	TRUE	TRUE
+453	croagunk	453	croagunk	0	Croagunk		sickly_hollow sleeping_caldera	TRUE	FALSE
 453	croagunk	454	toxicroak	0	Toxicroak		sickly_hollow	TRUE	FALSE
 455	carnivine	455	carnivine	0	Carnivine		guildmaster_trail	TRUE	FALSE
 456	finneon	456	finneon	0	Finneon		guildmaster_trail lava_floe_island	TRUE	FALSE
@@ -648,18 +648,18 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 481	mesprit	481	mesprit	0	Mesprit			TRUE	FALSE
 482	azelf	482	azelf	0	Azelf			TRUE	FALSE
 483	dialga	483	dialga	0	Dialga			TRUE	FALSE
-483	dialga	483	dialga	1	Origin Dialga			TRUE	TRUE
+483	dialga	483	dialga	1	Origin Dialga			TRUE	FALSE
 484	palkia	484	palkia	0	Palkia			TRUE	FALSE
-484	palkia	484	palkia	1	Origin Palkia			TRUE	TRUE
+484	palkia	484	palkia	1	Origin Palkia			TRUE	FALSE
 485	heatran	485	heatran	0	Heatran			TRUE	FALSE
 486	regigigas	486	regigigas	0	Regigigas			TRUE	FALSE
 487	giratina	487	giratina	0	Altered Giratina			TRUE	FALSE
 487	giratina	487	giratina	1	Origin Giratina			TRUE	FALSE
 488	cresselia	488	cresselia	0	Cresselia			TRUE	FALSE
 489	phione	489	phione	0	Phione		castaway_cave	TRUE	FALSE
-490	manaphy	490	manaphy	0	Manaphy			TRUE	TRUE
-491	darkrai	491	darkrai	0	Darkrai			TRUE	TRUE
-492	shaymin	492	shaymin	0	Land Shaymin			TRUE	TRUE
+490	manaphy	490	manaphy	0	Manaphy			TRUE	FALSE
+491	darkrai	491	darkrai	0	Darkrai			TRUE	FALSE
+492	shaymin	492	shaymin	0	Land Shaymin			TRUE	FALSE
 492	shaymin	492	shaymin	1	Sky Shaymin			TRUE	FALSE
 493	arceus	493	arceus	0	Normal Arceus			TRUE	FALSE
 493	arceus	493	arceus	1	Fighting Arceus		TEMP	TRUE	FALSE
@@ -690,7 +690,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 501	oshawott	501	oshawott	0	Oshawott		lava_floe_island	TRUE	FALSE
 501	oshawott	502	dewott	0	Dewott		EVOLVE	TRUE	FALSE
 501	oshawott	503	samurott	0	Samurott		EVOLVE	TRUE	FALSE
-501	oshawott	503	samurott	1	Hisuian Samurott		EVOLVE	TRUE	TRUE
+501	oshawott	503	samurott	1	Hisuian Samurott		EVOLVE	TRUE	FALSE
 504	patrat	504	patrat	0	Patrat			TRUE	FALSE
 504	patrat	505	watchog	0	Watchog		depleted_basin	TRUE	FALSE
 506	lillipup	506	lillipup	0	Lillipup			TRUE	FALSE
@@ -699,7 +699,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 509	purrloin	509	purrloin	0	Purrloin		tiny_tunnel	TRUE	FALSE
 509	purrloin	510	liepard	0	Liepard		EVOLVE	TRUE	FALSE
 511	pansage	511	pansage	0	Pansage			TRUE	TRUE
-511	pansage	512	simisage	0	Simisage			FALSE	FALSE
+511	pansage	512	simisage	0	Simisage			TRUE	TRUE
 513	pansear	513	pansear	0	Pansear			TRUE	FALSE
 513	pansear	514	simisear	0	Simisear			FALSE	FALSE
 515	panpour	515	panpour	0	Panpour			TRUE	TRUE
@@ -708,53 +708,53 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 517	munna	518	musharna	0	Musharna			TRUE	FALSE
 519	pidove	519	pidove	0	Pidove			TRUE	FALSE
 519	pidove	520	tranquill	0	Tranquill			FALSE	FALSE
-519	pidove	521	unfezant	0	Unfezant			TRUE	TRUE
+519	pidove	521	unfezant	0	Unfezant			TRUE	FALSE
 522	blitzle	522	blitzle	0	Blitzle			FALSE	FALSE
 522	blitzle	523	zebstrika	0	Zebstrika			FALSE	FALSE
-524	roggenrola	524	roggenrola	0	Roggenrola			TRUE	TRUE
+524	roggenrola	524	roggenrola	0	Roggenrola			TRUE	FALSE
 524	roggenrola	525	boldore	0	Boldore			TRUE	TRUE
-524	roggenrola	526	gigalith	0	Gigalith			FALSE	FALSE
+524	roggenrola	526	gigalith	0	Gigalith			TRUE	TRUE
 527	woobat	527	woobat	0	Woobat		castaway_cave sleeping_caldera trickster_woods	TRUE	FALSE
 527	woobat	528	swoobat	0	Swoobat		sleeping_caldera	TRUE	FALSE
-529	drilbur	529	drilbur	0	Drilbur			TRUE	FALSE
-529	drilbur	530	excadrill	0	Excadrill			TRUE	TRUE
+529	drilbur	529	drilbur	0	Drilbur		geode_crevice	TRUE	FALSE
+529	drilbur	530	excadrill	0	Excadrill		geode_crevice	TRUE	FALSE
 531	audino	531	audino	0	Audino		ambush_forest bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow thunderstruck_pass treacherous_mountain trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 531	audino	531	audino	1	Mega Audino		TEMP	FALSE	FALSE
 532	timburr	532	timburr	0	Timburr			TRUE	FALSE
 532	timburr	533	gurdurr	0	Gurdurr			TRUE	TRUE
 532	timburr	534	conkeldurr	0	Conkeldurr			TRUE	TRUE
 535	tympole	535	tympole	0	Tympole			TRUE	FALSE
-535	tympole	536	palpitoad	0	Palpitoad			TRUE	TRUE
+535	tympole	536	palpitoad	0	Palpitoad			TRUE	FALSE
 535	tympole	537	seismitoad	0	Seismitoad			TRUE	FALSE
 538	throh	538	throh	0	Throh			FALSE	FALSE
 539	sawk	539	sawk	0	Sawk			FALSE	FALSE
 540	sewaddle	540	sewaddle	0	Sewaddle		tiny_tunnel	TRUE	FALSE
 540	sewaddle	541	swadloon	0	Swadloon		EVOLVE	TRUE	FALSE
 540	sewaddle	542	leavanny	0	Leavanny		overgrown_wilds	TRUE	FALSE
-543	venipede	543	venipede	0	Venipede			TRUE	FALSE
-543	venipede	544	whirlipede	0	Whirlipede			TRUE	TRUE
+543	venipede	543	venipede	0	Venipede			TRUE	TRUE
+543	venipede	544	whirlipede	0	Whirlipede			TRUE	FALSE
 543	venipede	545	scolipede	0	Scolipede			TRUE	FALSE
 546	cottonee	546	cottonee	0	Cottonee			TRUE	FALSE
 546	cottonee	547	whimsicott	0	Whimsicott			TRUE	FALSE
 548	petilil	548	petilil	0	Petilil		faded_trail	TRUE	FALSE
 548	petilil	549	lilligant	0	Lilligant		EVOLVE	TRUE	FALSE
-548	petilil	549	lilligant	1	Hisuian Lilligant	victory_dance solar_blade axe_kick		FALSE	FALSE
+548	petilil	549	lilligant	1	Hisuian Lilligant	victory_dance solar_blade axe_kick		TRUE	TRUE
 550	basculin	550	basculin	0	Red-Striped Basculin			TRUE	TRUE
 550	basculin	550	basculin	1	Blue-Striped Basculin			TRUE	TRUE
-550	basculin	550	basculin	2	White-Striped Basculin			TRUE	TRUE
-550	basculin	902	basculegion	0	Male Basculegion			TRUE	TRUE
+550	basculin	550	basculin	2	White-Striped Basculin			TRUE	FALSE
+550	basculin	902	basculegion	0	Male Basculegion			TRUE	FALSE
 550	basculin	902	basculegion	1	Female Basculegion			FALSE	FALSE
 551	sandile	551	sandile	0	Sandile			TRUE	FALSE
 551	sandile	552	krokorok	0	Krokorok			TRUE	FALSE
 551	sandile	553	krookodile	0	Krookodile			TRUE	FALSE
 554	darumaka	554	darumaka	0	Darumaka			TRUE	FALSE
 554	darumaka	554	darumaka	1	Galarian Darumaka			TRUE	FALSE
-554	darumaka	555	darmanitan	0	Standard Darmanitan	zen_mode		TRUE	TRUE
+554	darumaka	555	darmanitan	0	Standard Darmanitan	zen_mode		TRUE	FALSE
 554	darumaka	555	darmanitan	1	Zen Darmanitan	zen_mode	TEMP	TRUE	TRUE
 554	darumaka	555	darmanitan	2	Standard Galarian Darmanitan	gorilla_tactics zen_mode		FALSE	FALSE
 554	darumaka	555	darmanitan	3	Zen Galarian Darmanitan	gorilla_tactics zen_mode		FALSE	FALSE
 556	maractus	556	maractus	0	Maractus	spiky_shield		TRUE	FALSE
-557	dwebble	557	dwebble	0	Dwebble			FALSE	FALSE
+557	dwebble	557	dwebble	0	Dwebble			TRUE	TRUE
 557	dwebble	558	crustle	0	Crustle			FALSE	FALSE
 559	scraggy	559	scraggy	0	Scraggy		forsaken_desert	TRUE	FALSE
 559	scraggy	560	scrafty	0	Scrafty		veiled_ridge	TRUE	FALSE
@@ -765,7 +765,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 562	yamask	867	runerigus	0	Runerigus	wandering_spirit		TRUE	FALSE
 564	tirtouga	564	tirtouga	0	Tirtouga			FALSE	FALSE
 564	tirtouga	565	carracosta	0	Carracosta			FALSE	FALSE
-566	archen	566	archen	0	Archen			TRUE	FALSE
+566	archen	566	archen	0	Archen			TRUE	TRUE
 566	archen	567	archeops	0	Archeops			TRUE	FALSE
 568	trubbish	568	trubbish	0	Trubbish			TRUE	FALSE
 568	trubbish	569	garbodor	0	Garbodor			TRUE	FALSE
@@ -773,9 +773,9 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 570	zorua	570	zorua	0	Zorua		veiled_ridge	TRUE	FALSE
 570	zorua	570	zorua	1	Hisuian Zorua			TRUE	FALSE
 570	zorua	571	zoroark	0	Zoroark		veiled_ridge	TRUE	FALSE
-570	zorua	571	zoroark	1	Hisuian Zoroark			TRUE	FALSE
-572	minccino	572	minccino	0	Minccino			TRUE	TRUE
-572	minccino	573	cinccino	0	Cinccino			TRUE	TRUE
+570	zorua	571	zoroark	1	Hisuian Zoroark			TRUE	TRUE
+572	minccino	572	minccino	0	Minccino		geode_crevice	TRUE	FALSE
+572	minccino	573	cinccino	0	Cinccino		geode_crevice	TRUE	FALSE
 574	gothita	574	gothita	0	Gothita			TRUE	FALSE
 574	gothita	575	gothorita	0	Gothorita		relic_tower	TRUE	FALSE
 574	gothita	576	gothitelle	0	Gothitelle		relic_tower	TRUE	FALSE
@@ -783,7 +783,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 577	solosis	578	duosion	0	Duosion		geode_crevice	TRUE	FALSE
 577	solosis	579	reuniclus	0	Reuniclus		EVOLVE	TRUE	FALSE
 580	ducklett	580	ducklett	0	Ducklett			FALSE	FALSE
-580	ducklett	581	swanna	0	Swanna			TRUE	FALSE
+580	ducklett	581	swanna	0	Swanna			TRUE	TRUE
 582	vanillite	582	vanillite	0	Vanillite		geode_crevice	TRUE	TRUE
 582	vanillite	583	vanillish	0	Vanillish		snowbound_path	TRUE	FALSE
 582	vanillite	584	vanilluxe	0	Vanilluxe		EVOLVE	TRUE	FALSE
@@ -791,10 +791,10 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 585	deerling	585	deerling	1	Summer Deerling		trickster_woods	TRUE	FALSE
 585	deerling	585	deerling	2	Autumn Deerling		trickster_woods	TRUE	FALSE
 585	deerling	585	deerling	3	Winter Deerling		trickster_woods	TRUE	FALSE
-585	deerling	586	sawsbuck	0	Spring Sawsbuck		EVOLVE	TRUE	FALSE
-585	deerling	586	sawsbuck	1	Summer Sawsbuck			FALSE	FALSE
-585	deerling	586	sawsbuck	2	Autumn Sawsbuck			FALSE	FALSE
-585	deerling	586	sawsbuck	3	Winter Sawsbuck			FALSE	FALSE
+585	deerling	586	sawsbuck	0	Spring Sawsbuck		EVOLVE	TRUE	TRUE
+585	deerling	586	sawsbuck	1	Summer Sawsbuck			TRUE	TRUE
+585	deerling	586	sawsbuck	2	Autumn Sawsbuck			TRUE	TRUE
+585	deerling	586	sawsbuck	3	Winter Sawsbuck			TRUE	TRUE
 587	emolga	587	emolga	0	Emolga			TRUE	FALSE
 588	karrablast	588	karrablast	0	Karrablast			FALSE	FALSE
 588	karrablast	589	escavalier	0	Escavalier			TRUE	FALSE
@@ -822,7 +822,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 610	axew	611	fraxure	0	Fraxure			TRUE	FALSE
 610	axew	612	haxorus	0	Haxorus			TRUE	FALSE
 613	cubchoo	613	cubchoo	0	Cubchoo			TRUE	FALSE
-613	cubchoo	614	beartic	0	Beartic			TRUE	TRUE
+613	cubchoo	614	beartic	0	Beartic			TRUE	FALSE
 615	cryogonal	615	cryogonal	0	Cryogonal		geode_crevice	TRUE	FALSE
 616	shelmet	616	shelmet	0	Shelmet			FALSE	FALSE
 616	shelmet	617	accelgor	0	Accelgor	water_shuriken		FALSE	FALSE
@@ -837,13 +837,13 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 624	pawniard	625	bisharp	0	Bisharp		EVOLVE	TRUE	FALSE
 624	pawniard	983	kingambit	0	Kingambit		EVOLVE	TRUE	FALSE
 626	bouffalant	626	bouffalant	0	Bouffalant	head_charge		FALSE	FALSE
-627	rufflet	627	rufflet	0	Rufflet			TRUE	FALSE
+627	rufflet	627	rufflet	0	Rufflet			TRUE	TRUE
 627	rufflet	628	braviary	0	Braviary			TRUE	FALSE
 627	rufflet	628	braviary	1	Hisuian Braviary	esper_wing		TRUE	TRUE
 629	vullaby	629	vullaby	0	Vullaby			TRUE	TRUE
 629	vullaby	630	mandibuzz	0	Mandibuzz			TRUE	FALSE
 631	heatmor	631	heatmor	0	Heatmor			TRUE	FALSE
-632	durant	632	durant	0	Durant			TRUE	TRUE
+632	durant	632	durant	0	Durant			TRUE	FALSE
 633	deino	633	deino	0	Deino			TRUE	FALSE
 633	deino	634	zweilous	0	Zweilous			TRUE	FALSE
 633	deino	635	hydreigon	0	Hydreigon			TRUE	FALSE
@@ -856,12 +856,12 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 641	tornadus	641	tornadus	1	Therian Tornadus			FALSE	FALSE
 642	thundurus	642	thundurus	0	Incarnate Thundurus			TRUE	FALSE
 642	thundurus	642	thundurus	1	Therian Thundurus			FALSE	FALSE
-643	reshiram	643	reshiram	0	Reshiram	turboblaze fusion_flare blue_flare		TRUE	FALSE
+643	reshiram	643	reshiram	0	Reshiram	turboblaze fusion_flare blue_flare		TRUE	TRUE
 644	zekrom	644	zekrom	0	Zekrom	teravolt fusion_bolt bolt_strike		TRUE	FALSE
 645	landorus	645	landorus	0	Incarnate Landorus			TRUE	FALSE
 645	landorus	645	landorus	1	Therian Landorus			TRUE	TRUE
-646	kyurem	646	kyurem	0	Kyurem			TRUE	TRUE
-646	kyurem	646	kyurem	1	Black Kyurem	teravolt fusion_bolt freeze_shock		TRUE	TRUE
+646	kyurem	646	kyurem	0	Kyurem			TRUE	FALSE
+646	kyurem	646	kyurem	1	Black Kyurem	teravolt fusion_bolt freeze_shock		TRUE	FALSE
 646	kyurem	646	kyurem	2	White Kyurem	turboblaze fusion_flare ice_burn		TRUE	FALSE
 647	keldeo	647	keldeo	0	Ordinary Keldeo			TRUE	FALSE
 647	keldeo	647	keldeo	1	Resolute Keldeo			FALSE	FALSE
@@ -876,7 +876,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 650	chespin	651	quilladin	0	Quilladin			TRUE	TRUE
 650	chespin	652	chesnaught	0	Chesnaught	spiky_shield		TRUE	TRUE
 653	fennekin	653	fennekin	0	Fennekin		trickster_woods	TRUE	FALSE
-653	fennekin	654	braixen	0	Braixen		relic_tower	TRUE	TRUE
+653	fennekin	654	braixen	0	Braixen		relic_tower	TRUE	FALSE
 653	fennekin	655	delphox	0	Delphox		relic_tower	TRUE	FALSE
 656	froakie	656	froakie	0	Froakie			TRUE	FALSE
 656	froakie	657	frogadier	0	Frogadier			TRUE	FALSE
@@ -884,10 +884,10 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 659	bunnelby	659	bunnelby	0	Bunnelby			TRUE	FALSE
 659	bunnelby	660	diggersby	0	Diggersby			FALSE	FALSE
 661	fletchling	661	fletchling	0	Fletchling	gale_wings		TRUE	FALSE
-661	fletchling	662	fletchinder	0	Fletchinder	gale_wings		TRUE	TRUE
-661	fletchling	663	talonflame	0	Talonflame	gale_wings		TRUE	TRUE
+661	fletchling	662	fletchinder	0	Fletchinder	gale_wings		TRUE	FALSE
+661	fletchling	663	talonflame	0	Talonflame	gale_wings		TRUE	FALSE
 664	scatterbug	664	scatterbug	0	Scatterbug			TRUE	TRUE
-664	scatterbug	665	spewpa	0	Spewpa			FALSE	FALSE
+664	scatterbug	665	spewpa	0	Spewpa			TRUE	TRUE
 664	scatterbug	666	vivillon	0	Meadow Vivillon		depleted_basin	TRUE	FALSE
 664	scatterbug	666	vivillon	1	Icy Snow Vivillon			TRUE	FALSE
 664	scatterbug	666	vivillon	2	Polar Vivillon		flyaway_cliffs	TRUE	FALSE
@@ -928,8 +928,8 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 669	flabebe	671	florges	4	White Florges		EVOLVE	TRUE	FALSE
 672	skiddo	672	skiddo	0	Skiddo			TRUE	FALSE
 672	skiddo	673	gogoat	0	Gogoat			TRUE	TRUE
-674	pancham	674	pancham	0	Pancham			TRUE	TRUE
-674	pancham	675	pangoro	0	Pangoro			TRUE	TRUE
+674	pancham	674	pancham	0	Pancham			TRUE	FALSE
+674	pancham	675	pangoro	0	Pangoro			TRUE	FALSE
 676	furfrou	676	furfrou	0	Natural Furfrou			TRUE	FALSE
 676	furfrou	676	furfrou	1	Heart Furfrou			FALSE	FALSE
 676	furfrou	676	furfrou	2	Star Furfrou			FALSE	FALSE
@@ -941,31 +941,31 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 676	furfrou	676	furfrou	8	Kabuki Furfrou			TRUE	FALSE
 676	furfrou	676	furfrou	9	Pharaoh Furfrou			FALSE	FALSE
 677	espurr	677	espurr	0	Espurr		geode_crevice	TRUE	FALSE
-677	espurr	678	meowstic	0	Male Meowstic		geode_crevice relic_tower	TRUE	FALSE
+677	espurr	678	meowstic	0	Male Meowstic		geode_crevice relic_tower	TRUE	TRUE
 677	espurr	678	meowstic	1	Female Meowstic		geode_crevice relic_tower	TRUE	FALSE
 679	honedge	679	honedge	0	Honedge		castaway_cave	TRUE	FALSE
 679	honedge	680	doublade	0	Doublade		EVOLVE	TRUE	FALSE
-679	honedge	681	aegislash	0	Shield Aegislash		EVOLVE	TRUE	FALSE
-679	honedge	681	aegislash	1	Blade Aegislash		TEMP	TRUE	FALSE
+679	honedge	681	aegislash	0	Shield Aegislash		EVOLVE	TRUE	TRUE
+679	honedge	681	aegislash	1	Blade Aegislash		TEMP	TRUE	TRUE
 682	spritzee	682	spritzee	0	Spritzee			TRUE	FALSE
-682	spritzee	683	aromatisse	0	Aromatisse			FALSE	FALSE
+682	spritzee	683	aromatisse	0	Aromatisse			TRUE	TRUE
 684	swirlix	684	swirlix	0	Swirlix			TRUE	FALSE
 684	swirlix	685	slurpuff	0	Slurpuff			TRUE	FALSE
 686	inkay	686	inkay	0	Inkay	topsy_turvy		TRUE	TRUE
-686	inkay	687	malamar	0	Malamar	topsy_turvy		TRUE	TRUE
+686	inkay	687	malamar	0	Malamar	topsy_turvy		TRUE	FALSE
 688	binacle	688	binacle	0	Binacle			TRUE	FALSE
 688	binacle	689	barbaracle	0	Barbaracle			TRUE	TRUE
 690	skrelp	690	skrelp	0	Skrelp			TRUE	TRUE
 690	skrelp	691	dragalge	0	Dragalge			TRUE	FALSE
 692	clauncher	692	clauncher	0	Clauncher			TRUE	FALSE
 692	clauncher	693	clawitzer	0	Clawitzer			TRUE	FALSE
-694	helioptile	694	helioptile	0	Helioptile	parabolic_charge electrify		TRUE	TRUE
+694	helioptile	694	helioptile	0	Helioptile	parabolic_charge electrify		TRUE	FALSE
 694	helioptile	695	heliolisk	0	Heliolisk	electrify parabolic_charge		TRUE	FALSE
 696	tyrunt	696	tyrunt	0	Tyrunt		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 696	tyrunt	697	tyrantrum	0	Tyrantrum		EVOLVE	TRUE	FALSE
 698	amaura	698	amaura	0	Amaura		bramble_woods copper_quarry depleted_basin faded_trail faultline_ridge fertile_valley flyaway_cliffs lava_floe_island moonlit_courtyard overgrown_wilds relic_tower sickly_hollow snowbound_path thunderstruck_pass trickster_woods tropical_path veiled_ridge	TRUE	FALSE
 698	amaura	699	aurorus	0	Aurorus		EVOLVE	TRUE	FALSE
-701	hawlucha	701	hawlucha	0	Hawlucha	flying_press	geode_crevice	TRUE	TRUE
+701	hawlucha	701	hawlucha	0	Hawlucha		geode_crevice	TRUE	FALSE
 702	dedenne	702	dedenne	0	Dedenne	parabolic_charge		TRUE	TRUE
 703	carbink	703	carbink	0	Carbink		copper_quarry geode_crevice	TRUE	FALSE
 704	goomy	704	goomy	0	Goomy			TRUE	FALSE
@@ -987,34 +987,34 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 712	bergmite	712	bergmite	0	Bergmite			FALSE	FALSE
 712	bergmite	713	avalugg	0	Avalugg			FALSE	FALSE
 712	bergmite	713	avalugg	1	Hisuian Avalugg	mountain_gale		FALSE	FALSE
-714	noibat	714	noibat	0	Noibat		sleeping_caldera	TRUE	FALSE
+714	noibat	714	noibat	0	Noibat		sleeping_caldera	TRUE	TRUE
 714	noibat	715	noivern	0	Noivern		EVOLVE	TRUE	FALSE
 716	xerneas	716	xerneas	0	Neutral Xerneas	geomancy		TRUE	FALSE
 716	xerneas	716	xerneas	1	Active Xerneas	geomancy	TEMP	FALSE	FALSE
 717	yveltal	717	yveltal	0	Yveltal	oblivion_wing		TRUE	FALSE
-718	zygarde	718	zygarde	0	Zygarde	aura_break lands_wrath		TRUE	TRUE
+718	zygarde	718	zygarde	0	Zygarde	aura_break lands_wrath		TRUE	FALSE
 718	zygarde	718	zygarde	1	10% Zygarde	power_construct lands_wrath		TRUE	TRUE
-718	zygarde	718	zygarde	2	50% Zygarde	power_construct lands_wrath	TEMP	TRUE	FALSE
+718	zygarde	718	zygarde	2	50% Zygarde	power_construct lands_wrath	TEMP	TRUE	TRUE
 718	zygarde	718	zygarde	3	Complete Zygarde	power_construct lands_wrath	TEMP	FALSE	FALSE
 718	zygarde	718	zygarde	4	10% Zygarde	aura_break lands_wrath	TEMP	FALSE	FALSE
 719	diancie	719	diancie	0	Diancie	diamond_storm		TRUE	FALSE
 719	diancie	719	diancie	1	Mega Diancie	diamond_storm	TEMP	TRUE	FALSE
 720	hoopa	720	hoopa	0	Confined Hoopa	hyperspace_hole		TRUE	FALSE
-720	hoopa	720	hoopa	1	Hoopa Unbound	hyperspace_fury		TRUE	TRUE
+720	hoopa	720	hoopa	1	Hoopa Unbound	hyperspace_fury		TRUE	FALSE
 721	volcanion	721	volcanion	0	Volcanion	steam_eruption		TRUE	FALSE
 722	rowlet	722	rowlet	0	Rowlet		tiny_tunnel	TRUE	FALSE
 722	rowlet	723	dartrix	0	Dartrix		EVOLVE	TRUE	FALSE
 722	rowlet	724	decidueye	0	Decidueye		EVOLVE	TRUE	FALSE
 722	rowlet	724	decidueye	1	Hisuian Decidueye	triple_arrows		TRUE	TRUE
 725	litten	725	litten	0	Litten			TRUE	FALSE
-725	litten	726	torracat	0	Torracat			TRUE	TRUE
+725	litten	726	torracat	0	Torracat			TRUE	FALSE
 725	litten	727	incineroar	0	Incineroar	darkest_lariat throat_chop		TRUE	FALSE
 728	popplio	728	popplio	0	Popplio			TRUE	FALSE
 728	popplio	729	brionne	0	Brionne			TRUE	FALSE
 728	popplio	730	primarina	0	Primarina	sparkling_aria		TRUE	FALSE
 731	pikipek	731	pikipek	0	Pikipek			FALSE	FALSE
 731	pikipek	732	trumbeak	0	Trumbeak			FALSE	FALSE
-731	pikipek	733	toucannon	0	Toucannon	beak_blast		FALSE	FALSE
+731	pikipek	733	toucannon	0	Toucannon	beak_blast		TRUE	TRUE
 734	yungoos	734	yungoos	0	Yungoos			FALSE	FALSE
 734	yungoos	735	gumshoos	0	Gumshoos			FALSE	FALSE
 736	grubbin	736	grubbin	0	Grubbin		geode_crevice	TRUE	FALSE
@@ -1033,13 +1033,13 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 744	rockruff	745	lycanroc	1	Midnight Lycanroc		forsaken_desert	TRUE	FALSE
 744	rockruff	745	lycanroc	2	Dusk Lycanroc		EVOLVE	TRUE	FALSE
 746	wishiwashi	746	wishiwashi	0	Solo Wishiwashi	schooling tearful_look		TRUE	FALSE
-746	wishiwashi	746	wishiwashi	1	School Wishiwashi	schooling tearful_look	TEMP	TRUE	TRUE
+746	wishiwashi	746	wishiwashi	1	School Wishiwashi	schooling tearful_look	TEMP	TRUE	FALSE
 747	mareanie	747	mareanie	0	Mareanie	merciless liquidation		TRUE	FALSE
 747	mareanie	748	toxapex	0	Toxapex	merciless baneful_bunker liquidation		FALSE	FALSE
 749	mudbray	749	mudbray	0	Mudbray	high_horsepower		TRUE	FALSE
 749	mudbray	750	mudsdale	0	Mudsdale	high_horsepower		FALSE	FALSE
 751	dewpider	751	dewpider	0	Dewpider	water_bubble liquidation		TRUE	FALSE
-751	dewpider	752	araquanid	0	Araquanid	water_bubble liquidation		TRUE	FALSE
+751	dewpider	752	araquanid	0	Araquanid	water_bubble liquidation		TRUE	TRUE
 753	fomantis	753	fomantis	0	Fomantis			TRUE	FALSE
 753	fomantis	754	lurantis	0	Lurantis	solar_blade		TRUE	FALSE
 755	morelull	755	morelull	0	Morelull	strength_sap spotlight		TRUE	FALSE
@@ -1047,37 +1047,37 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 757	salandit	757	salandit	0	Salandit		lava_floe_island	TRUE	TRUE
 757	salandit	758	salazzle	0	Salazzle		lava_floe_island	TRUE	FALSE
 759	stufful	759	stufful	0	Stufful	fluffy		TRUE	FALSE
-759	stufful	760	bewear	0	Bewear	fluffy		TRUE	TRUE
+759	stufful	760	bewear	0	Bewear	fluffy		TRUE	FALSE
 761	bounsweet	761	bounsweet	0	Bounsweet			TRUE	FALSE
 761	bounsweet	762	steenee	0	Steenee			TRUE	FALSE
 761	bounsweet	763	tsareena	0	Tsareena	trop_kick		TRUE	FALSE
 764	comfey	764	comfey	0	Comfey		secret_garden	TRUE	FALSE
 765	oranguru	765	oranguru	0	Oranguru	instruct		FALSE	FALSE
-766	passimian	766	passimian	0	Passimian			TRUE	TRUE
-767	wimpod	767	wimpod	0	Wimpod	wimp_out	geode_crevice	TRUE	FALSE
-767	wimpod	768	golisopod	0	Golisopod	emergency_exit liquidation	EVOLVE	TRUE	FALSE
+766	passimian	766	passimian	0	Passimian			TRUE	FALSE
+767	wimpod	767	wimpod	0	Wimpod		geode_crevice	TRUE	FALSE
+767	wimpod	768	golisopod	0	Golisopod	liquidation	geode_crevice	TRUE	FALSE
 769	sandygast	769	sandygast	0	Sandygast	water_compaction shore_up		TRUE	FALSE
 769	sandygast	770	palossand	0	Palossand	water_compaction shore_up		TRUE	TRUE
 771	pyukumuku	771	pyukumuku	0	Pyukumuku	innards_out purify		TRUE	FALSE
 772	type_null	772	type_null	0	Type: Null			TRUE	FALSE
-772	type_null	773	silvally	0	Silvally	rks_system multi_attack		TRUE	TRUE
-772	type_null	773	silvally	1	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	2	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	3	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	4	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	5	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	6	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	7	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	8	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	9	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	10	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	11	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	12	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	13	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	14	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	15	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	16	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
-772	type_null	773	silvally	17	Silvally	rks_system multi_attack	TEMP	TRUE	TRUE
+772	type_null	773	silvally	0	Silvally	rks_system multi_attack		TRUE	FALSE
+772	type_null	773	silvally	1	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	2	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	3	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	4	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	5	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	6	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	7	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	8	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	9	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	10	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	11	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	12	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	13	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	14	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	15	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	16	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
+772	type_null	773	silvally	17	Silvally	rks_system multi_attack	TEMP	TRUE	FALSE
 774	minior	774	minior	0	Red Meteor Minior			TRUE	FALSE
 774	minior	774	minior	1	Orange Meteor Minior		TEMP	TRUE	FALSE
 774	minior	774	minior	2	Yellow Meteor Minior		TEMP	TRUE	FALSE
@@ -1100,7 +1100,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 779	bruxish	779	bruxish	0	Bruxish	psychic_fangs		TRUE	FALSE
 780	drampa	780	drampa	0	Drampa		sleeping_caldera	TRUE	FALSE
 781	dhelmise	781	dhelmise	0	Dhelmise		castaway_cave	TRUE	FALSE
-782	jangmo_o	782	jangmo_o	0	Jangmo-o			TRUE	TRUE
+782	jangmo_o	782	jangmo_o	0	Jangmo-o			TRUE	FALSE
 782	jangmo_o	783	hakamo_o	0	Hakamo-o			TRUE	FALSE
 782	jangmo_o	784	kommo_o	0	Kommo-o	clanging_scales		TRUE	FALSE
 785	tapu_koko	785	tapu_koko	0	Tapu Koko	natures_madness		TRUE	FALSE
@@ -1116,7 +1116,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 795	pheromosa	795	pheromosa	0	Pheromosa			TRUE	FALSE
 796	xurkitree	796	xurkitree	0	Xurkitree			TRUE	FALSE
 797	celesteela	797	celesteela	0	Celesteela			TRUE	FALSE
-798	kartana	798	kartana	0	Kartana	laser_focus		TRUE	FALSE
+798	kartana	798	kartana	0	Kartana	laser_focus		TRUE	TRUE
 799	guzzlord	799	guzzlord	0	Guzzlord	stomping_tantrum		TRUE	FALSE
 800	necrozma	800	necrozma	0	Necrozma			TRUE	FALSE
 800	necrozma	800	necrozma	1	Dusk Necrozma	photon_geyser		TRUE	FALSE
@@ -1124,47 +1124,47 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 800	necrozma	800	necrozma	3	Ultra Necrozma	photon_geyser		TRUE	FALSE
 801	magearna	801	magearna	0	Magearna	soul_heart gear_up fleur_cannon		TRUE	FALSE
 801	magearna	801	magearna	1	Original Magearna	soul_heart gear_up fleur_cannon		TRUE	FALSE
-802	marshadow	802	marshadow	0	Marshadow	laser_focus spectral_thief		TRUE	TRUE
+802	marshadow	802	marshadow	0	Marshadow	laser_focus spectral_thief		TRUE	FALSE
 803	poipole	803	poipole	0	Poipole			TRUE	FALSE
 803	poipole	804	naganadel	0	Naganadel			TRUE	FALSE
 805	stakataka	805	stakataka	0	Stakataka			TRUE	FALSE
 806	blacephalon	806	blacephalon	0	Blacephalon	mind_blown		TRUE	FALSE
 807	zeraora	807	zeraora	0	Zeraora	plasma_fists		TRUE	FALSE
-808	meltan	808	meltan	0	Meltan			TRUE	TRUE
+808	meltan	808	meltan	0	Meltan			TRUE	FALSE
 808	meltan	809	melmetal	0	Melmetal	double_iron_bash		TRUE	FALSE
 808	meltan	809	melmetal	1	Gigantamax Melmetal		TEMP	FALSE	FALSE
 810	grookey	810	grookey	0	Grookey	branch_poke		TRUE	FALSE
-810	grookey	811	thwackey	0	Thwackey	branch_poke		FALSE	FALSE
-810	grookey	812	rillaboom	0	Rillaboom	drum_beating branch_poke		FALSE	FALSE
+810	grookey	811	thwackey	0	Thwackey	branch_poke		TRUE	TRUE
+810	grookey	812	rillaboom	0	Rillaboom	drum_beating branch_poke		TRUE	TRUE
 810	grookey	812	rillaboom	1	Gigantamax Rillaboom		TEMP	FALSE	FALSE
 813	scorbunny	813	scorbunny	0	Scorbunny		tiny_tunnel	TRUE	FALSE
 813	scorbunny	814	raboot	0	Raboot		EVOLVE	TRUE	FALSE
 813	scorbunny	815	cinderace	0	Cinderace		EVOLVE	TRUE	FALSE
 813	scorbunny	815	cinderace	1	Gigantamax Cinderace		TEMP	FALSE	FALSE
-816	sobble	816	sobble	0	Sobble	tearful_look liquidation		TRUE	TRUE
-816	sobble	817	drizzile	0	Drizzile	tearful_look liquidation		TRUE	FALSE
+816	sobble	816	sobble	0	Sobble	tearful_look liquidation		TRUE	FALSE
+816	sobble	817	drizzile	0	Drizzile	tearful_look liquidation		TRUE	TRUE
 816	sobble	818	inteleon	0	Inteleon	snipe_shot tearful_look liquidation		TRUE	FALSE
 816	sobble	818	inteleon	1	Gigantamax Inteleon		TEMP	FALSE	FALSE
 819	skwovet	819	skwovet	0	Skwovet	stuff_cheeks		FALSE	FALSE
 819	skwovet	820	greedent	0	Greedent	stuff_cheeks		FALSE	FALSE
-821	rookidee	821	rookidee	0	Rookidee	power_trip		TRUE	TRUE
+821	rookidee	821	rookidee	0	Rookidee	power_trip		TRUE	FALSE
 821	rookidee	822	corvisquire	0	Corvisquire	power_trip		TRUE	FALSE
-821	rookidee	823	corviknight	0	Corviknight	power_trip		TRUE	TRUE
+821	rookidee	823	corviknight	0	Corviknight	power_trip		TRUE	FALSE
 821	rookidee	823	corviknight	1	Gigantamax Corviknight		TEMP	FALSE	FALSE
-824	blipbug	824	blipbug	0	Blipbug			FALSE	FALSE
-824	blipbug	825	dottler	0	Dottler			FALSE	FALSE
-824	blipbug	826	orbeetle	0	Orbeetle			FALSE	FALSE
+824	blipbug	824	blipbug	0	Blipbug			TRUE	TRUE
+824	blipbug	825	dottler	0	Dottler			TRUE	TRUE
+824	blipbug	826	orbeetle	0	Orbeetle			TRUE	TRUE
 824	blipbug	826	orbeetle	1	Gigantamax Orbeetle		TEMP	FALSE	FALSE
 827	nickit	827	nickit	0	Nickit		tiny_tunnel	TRUE	FALSE
 827	nickit	828	thievul	0	Thievul		forsaken_desert	TRUE	FALSE
-829	gossifleur	829	gossifleur	0	Gossifleur	cotton_down		FALSE	FALSE
+829	gossifleur	829	gossifleur	0	Gossifleur	cotton_down		TRUE	TRUE
 829	gossifleur	830	eldegoss	0	Eldegoss	cotton_down		TRUE	FALSE
 831	wooloo	831	wooloo	0	Wooloo	fluffy		TRUE	FALSE
 831	wooloo	832	dubwool	0	Dubwool	fluffy		FALSE	FALSE
-833	chewtle	833	chewtle	0	Chewtle	jaw_lock liquidation		TRUE	TRUE
+833	chewtle	833	chewtle	0	Chewtle	jaw_lock liquidation		TRUE	FALSE
 833	chewtle	834	drednaw	0	Drednaw	jaw_lock liquidation		FALSE	FALSE
 833	chewtle	834	drednaw	1	Gigantamax Drednaw		TEMP	FALSE	FALSE
-835	yamper	835	yamper	0	Yamper			TRUE	TRUE
+835	yamper	835	yamper	0	Yamper			TRUE	FALSE
 835	yamper	836	boltund	0	Boltund	electrify		FALSE	FALSE
 837	rolycoly	837	rolycoly	0	Rolycoly	steam_engine		FALSE	FALSE
 837	rolycoly	838	carkol	0	Carkol	steam_engine burn_up		FALSE	FALSE
@@ -1184,15 +1184,15 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 846	arrokuda	846	arrokuda	0	Arrokuda	propeller_tail laser_focus liquidation		TRUE	FALSE
 846	arrokuda	847	barraskewda	0	Barraskewda	propeller_tail throat_chop laser_focus liquidation		FALSE	FALSE
 848	toxel	848	toxel	0	Toxel	tearful_look		TRUE	FALSE
-848	toxel	849	toxtricity	0	Amped Toxtricity	punk_rock tearful_look overdrive		TRUE	FALSE
+848	toxel	849	toxtricity	0	Amped Toxtricity	punk_rock tearful_look overdrive		TRUE	TRUE
 848	toxel	849	toxtricity	1	Low Key Toxtricity	punk_rock tearful_look overdrive		TRUE	TRUE
 848	toxel	849	toxtricity	2	Gigantamax Amped Toxtricity	punk_rock	TEMP	FALSE	FALSE
 848	toxel	849	toxtricity	3	Gigantamax Low Key Toxtricity	punk_rock	TEMP	FALSE	FALSE
-850	sizzlipede	850	sizzlipede	0	Sizzlipede	fire_lash burn_up		TRUE	TRUE
-850	sizzlipede	851	centiskorch	0	Centiskorch	fire_lash burn_up		TRUE	TRUE
+850	sizzlipede	850	sizzlipede	0	Sizzlipede	fire_lash burn_up		TRUE	FALSE
+850	sizzlipede	851	centiskorch	0	Centiskorch	fire_lash burn_up		TRUE	FALSE
 850	sizzlipede	851	centiskorch	1	Gigantamax Centiskorch		TEMP	FALSE	FALSE
 852	clobbopus	852	clobbopus	0	Clobbopus			TRUE	FALSE
-852	clobbopus	853	grapploct	0	Grapploct	octolock topsy_turvy		FALSE	FALSE
+852	clobbopus	853	grapploct	0	Grapploct	octolock topsy_turvy		TRUE	TRUE
 854	sinistea	854	sinistea	0	Phony Sinistea			TRUE	FALSE
 854	sinistea	854	sinistea	1	Antique Sinistea			FALSE	FALSE
 854	sinistea	855	polteageist	0	Phony Polteageist	teatime strength_sap		TRUE	FALSE
@@ -1202,10 +1202,10 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 856	hatenna	858	hatterene	0	Hatterene	magic_powder	EVOLVE	TRUE	FALSE
 856	hatenna	858	hatterene	1	Gigantamax Hatterene		TEMP	FALSE	FALSE
 859	impidimp	859	impidimp	0	Impidimp			TRUE	FALSE
-859	impidimp	860	morgrem	0	Morgrem	false_surrender		TRUE	FALSE
+859	impidimp	860	morgrem	0	Morgrem	false_surrender		TRUE	TRUE
 859	impidimp	861	grimmsnarl	0	Grimmsnarl	spirit_break false_surrender		TRUE	FALSE
 859	impidimp	861	grimmsnarl	1	Gigantamax Grimmsnarl		TEMP	FALSE	FALSE
-868	milcery	868	milcery	0	Milcery			FALSE	FALSE
+868	milcery	868	milcery	0	Milcery			TRUE	TRUE
 868	milcery	869	alcremie	0	Vanilla Cream Alcremie		moonlit_courtyard	TRUE	FALSE
 868	milcery	869	alcremie	1	Vanilla Cream Alcremie		moonlit_courtyard	TRUE	FALSE
 868	milcery	869	alcremie	2	Vanilla Cream Alcremie		moonlit_courtyard	TRUE	FALSE
@@ -1269,7 +1269,7 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 868	milcery	869	alcremie	60	Rainbow Swirl Alcremie			TRUE	FALSE
 868	milcery	869	alcremie	61	Rainbow Swirl Alcremie			TRUE	FALSE
 868	milcery	869	alcremie	62	Rainbow Swirl Alcremie			TRUE	FALSE
-868	milcery	869	alcremie	63	Gigantamax Alcremie		TEMP	TRUE	TRUE
+868	milcery	869	alcremie	63	Gigantamax Alcremie		TEMP	TRUE	FALSE
 868	milcery	869	alcremie	64	Gigantamax Alcremie		TEMP	FALSE	FALSE
 868	milcery	869	alcremie	65	Gigantamax Alcremie		TEMP	FALSE	FALSE
 868	milcery	869	alcremie	66	Gigantamax Alcremie		TEMP	FALSE	FALSE
@@ -1277,21 +1277,21 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 868	milcery	869	alcremie	68	Gigantamax Alcremie		TEMP	FALSE	FALSE
 868	milcery	869	alcremie	69	Gigantamax Alcremie		TEMP	FALSE	FALSE
 870	falinks	870	falinks	0	Falinks	no_retreat		FALSE	FALSE
-871	pincurchin	871	pincurchin	0	Pincurchin			FALSE	FALSE
+871	pincurchin	871	pincurchin	0	Pincurchin			TRUE	TRUE
 872	snom	872	snom	0	Snom			TRUE	FALSE
 872	snom	873	frosmoth	0	Frosmoth		snowbound_path	TRUE	FALSE
-874	stonjourner	874	stonjourner	0	Stonjourner	power_spot	geode_crevice	TRUE	FALSE
+874	stonjourner	874	stonjourner	0	Stonjourner	power_spot		TRUE	FALSE
 875	eiscue	875	eiscue	0	Ice Eiscue		snowbound_path	TRUE	FALSE
 875	eiscue	875	eiscue	1	Noice Eiscue		TEMP	TRUE	FALSE
 876	indeedee	876	indeedee	0	Male Indeedee			TRUE	FALSE
-876	indeedee	876	indeedee	1	Female Indeedee			TRUE	FALSE
+876	indeedee	876	indeedee	1	Female Indeedee			TRUE	TRUE
 877	morpeko	877	morpeko	0	Full Belly Morpeko	hunger_switch power_trip aura_wheel		TRUE	FALSE
 877	morpeko	877	morpeko	1	Hangry Morpeko	hunger_switch power_trip aura_wheel		TRUE	FALSE
 878	cufant	878	cufant	0	Cufant	high_horsepower		FALSE	FALSE
-878	cufant	879	copperajah	0	Copperajah	high_horsepower		TRUE	TRUE
+878	cufant	879	copperajah	0	Copperajah	high_horsepower		TRUE	FALSE
 878	cufant	879	copperajah	1	Gigantamax Copperajah		TEMP	FALSE	FALSE
 880	dracozolt	880	dracozolt	0	Dracozolt	bolt_beak		TRUE	TRUE
-881	arctozolt	881	arctozolt	0	Arctozolt	bolt_beak		TRUE	TRUE
+881	arctozolt	881	arctozolt	0	Arctozolt	bolt_beak		TRUE	FALSE
 882	dracovish	882	dracovish	0	Dracovish	fishious_rend		TRUE	TRUE
 883	arctovish	883	arctovish	0	Arctovish	fishious_rend		TRUE	TRUE
 884	duraludon	884	duraludon	0	Duraludon	stalwart breaking_swipe laser_focus		TRUE	FALSE
@@ -1299,11 +1299,11 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 885	dreepy	885	dreepy	0	Dreepy			TRUE	FALSE
 885	dreepy	886	drakloak	0	Drakloak			TRUE	FALSE
 885	dreepy	887	dragapult	0	Dragapult	dragon_darts		TRUE	FALSE
-888	zacian	888	zacian	0	Zacian	intrepid_sword laser_focus		TRUE	TRUE
+888	zacian	888	zacian	0	Zacian	intrepid_sword laser_focus		TRUE	FALSE
 888	zacian	888	zacian	1	Crowned Zacian	intrepid_sword laser_focus		TRUE	TRUE
 889	zamazenta	889	zamazenta	0	Zamazenta	dauntless_shield laser_focus		FALSE	FALSE
 889	zamazenta	889	zamazenta	1	Crowned Zamazenta	dauntless_shield laser_focus		FALSE	FALSE
-890	eternatus	890	eternatus	0	Eternatus	dynamax_cannon eternabeam		TRUE	FALSE
+890	eternatus	890	eternatus	0	Eternatus	dynamax_cannon eternabeam		TRUE	TRUE
 890	eternatus	890	eternatus	1	Eternamax Eternatus	dynamax_cannon eternabeam		FALSE	FALSE
 891	kubfu	891	kubfu	0	Kubfu			TRUE	FALSE
 891	kubfu	892	urshifu	0	Single Strike Urshifu	unseen_fist wicked_blow		TRUE	FALSE
@@ -1315,14 +1315,14 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 895	regidrago	895	regidrago	0	Regidrago	laser_focus dragon_energy		TRUE	FALSE
 896	glastrier	896	glastrier	0	Glastrier	chilling_neigh		FALSE	FALSE
 897	spectrier	897	spectrier	0	Spectrier	grim_neigh		TRUE	FALSE
-898	calyrex	898	calyrex	0	Calyrex			FALSE	FALSE
+898	calyrex	898	calyrex	0	Calyrex			TRUE	TRUE
 898	calyrex	898	calyrex	1	Ice Calyrex	as_one_chill glacial_lance		FALSE	FALSE
 898	calyrex	898	calyrex	2	Shadow Calyrex	as_one_grim astral_barrage		FALSE	FALSE
 905	enamorus	905	enamorus	0	Incarnate Enamorus	springtide_storm		TRUE	FALSE
 905	enamorus	905	enamorus	1	Therian Enamorus	springtide_storm		TRUE	FALSE
 906	sprigatito	906	sprigatito	0	Sprigatito			TRUE	TRUE
 906	sprigatito	907	floragato	0	Floragato			TRUE	TRUE
-906	sprigatito	908	meowscarada	0	Meowscarada	flower_trick		FALSE	FALSE
+906	sprigatito	908	meowscarada	0	Meowscarada			TRUE	TRUE
 909	fuecoco	909	fuecoco	0	Fuecoco			TRUE	FALSE
 909	fuecoco	910	crocalor	0	Crocalor			TRUE	FALSE
 909	fuecoco	911	skeledirge	0	Skeledirge	torch_song		TRUE	FALSE
@@ -1333,32 +1333,32 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 915	lechonk	916	oinkologne	0	Oinkologne	lingering_aroma		FALSE	FALSE
 915	lechonk	916	oinkologne	1	Oinkologne			FALSE	FALSE
 917	tarountula	917	tarountula	0	Tarountula	throat_chop		FALSE	FALSE
-917	tarountula	918	spidops	0	Spidops	silk_trap throat_chop		TRUE	TRUE
+917	tarountula	918	spidops	0	Spidops	silk_trap throat_chop		TRUE	FALSE
 919	nymble	919	nymble	0	Nymble			TRUE	FALSE
 919	nymble	920	lokix	0	Lokix	throat_chop axe_kick		TRUE	FALSE
 921	pawmi	921	pawmi	0	Pawmi			TRUE	FALSE
 921	pawmi	922	pawmo	0	Pawmo			TRUE	FALSE
 921	pawmi	923	pawmot	0	Pawmot	revival_blessing double_shock		TRUE	FALSE
 924	tandemaus	924	tandemaus	0	Tandemaus			TRUE	FALSE
-924	tandemaus	925	maushold	0	Maushold	tidy_up		TRUE	TRUE
-924	tandemaus	925	maushold	1	Maushold	tidy_up		TRUE	TRUE
+924	tandemaus	925	maushold	0	Maushold	tidy_up		TRUE	FALSE
+924	tandemaus	925	maushold	1	Maushold	tidy_up		TRUE	FALSE
 926	fidough	926	fidough	0	Fidough			TRUE	FALSE
-926	fidough	927	dachsbun	0	Dachsbun	well_baked_body		TRUE	TRUE
+926	fidough	927	dachsbun	0	Dachsbun			TRUE	FALSE
 928	smoliv	928	smoliv	0	Smoliv	terrain_pulse		TRUE	FALSE
-928	smoliv	929	dolliv	0	Dolliv	terrain_pulse		FALSE	FALSE
+928	smoliv	929	dolliv	0	Dolliv	terrain_pulse		TRUE	TRUE
 928	smoliv	930	arboliva	0	Arboliva	seed_sower terrain_pulse		FALSE	FALSE
 931	squawkabilly	931	squawkabilly	0	Squawkabilly			FALSE	FALSE
 931	squawkabilly	931	squawkabilly	1	Squawkabilly			FALSE	FALSE
 931	squawkabilly	931	squawkabilly	2	Squawkabilly			FALSE	FALSE
 931	squawkabilly	931	squawkabilly	3	Squawkabilly			FALSE	FALSE
-932	nacli	932	nacli	0	Nacli	purifying_salt		TRUE	TRUE
-932	nacli	933	naclstack	0	Naclstack	purifying_salt salt_cure		TRUE	TRUE
-932	nacli	934	garganacl	0	Garganacl	purifying_salt salt_cure		TRUE	TRUE
+932	nacli	932	nacli	0	Nacli		geode_crevice	TRUE	TRUE
+932	nacli	933	naclstack	0	Naclstack		geode_crevice	TRUE	FALSE
+932	nacli	934	garganacl	0	Garganacl		geode_crevice	TRUE	TRUE
 935	charcadet	935	charcadet	0	Charcadet			TRUE	FALSE
-935	charcadet	936	armarouge	0	Armarouge	expanding_force armor_cannon		FALSE	FALSE
-935	charcadet	937	ceruledge	0	Ceruledge	bitter_blade		TRUE	FALSE
-938	tadbulb	938	tadbulb	0	Tadbulb			TRUE	TRUE
-938	tadbulb	939	bellibolt	0	Bellibolt	electromorphosis		TRUE	FALSE
+935	charcadet	936	armarouge	0	Armarouge	expanding_force armor_cannon		TRUE	TRUE
+935	charcadet	937	ceruledge	0	Ceruledge	bitter_blade		TRUE	TRUE
+938	tadbulb	938	tadbulb	0	Tadbulb			TRUE	FALSE
+938	tadbulb	939	bellibolt	0	Bellibolt	electromorphosis		TRUE	TRUE
 940	wattrel	940	wattrel	0	Wattrel	wind_power dual_wingbeat		TRUE	FALSE
 940	wattrel	941	kilowattrel	0	Kilowattrel	wind_power dual_wingbeat		TRUE	FALSE
 942	maschiff	942	maschiff	0	Maschiff	jaw_lock		FALSE	FALSE
@@ -1370,50 +1370,50 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 948	toedscool	948	toedscool	0	Toedscool	mycelium_might		TRUE	TRUE
 948	toedscool	949	toedscruel	0	Toedscruel	mycelium_might		FALSE	FALSE
 950	klawf	950	klawf	0	Klawf	anger_shell high_horsepower		FALSE	FALSE
-951	capsakid	951	capsakid	0	Capsakid			TRUE	TRUE
-951	capsakid	952	scovillain	0	Scovillain	spicy_extract		TRUE	TRUE
+951	capsakid	951	capsakid	0	Capsakid			TRUE	FALSE
+951	capsakid	952	scovillain	0	Scovillain	spicy_extract		TRUE	FALSE
 953	rellor	953	rellor	0	Rellor			FALSE	FALSE
 953	rellor	954	rabsca	0	Rabsca	revival_blessing		FALSE	FALSE
-955	flittle	955	flittle	0	Flittle			FALSE	FALSE
+955	flittle	955	flittle	0	Flittle			TRUE	TRUE
 955	flittle	956	espathra	0	Espathra	opportunist lumina_crash		FALSE	FALSE
 957	tinkatink	957	tinkatink	0	Tinkatink		copper_quarry	TRUE	FALSE
 957	tinkatink	958	tinkatuff	0	Tinkatuff		EVOLVE	TRUE	FALSE
 957	tinkatink	959	tinkaton	0	Tinkaton		EVOLVE	TRUE	FALSE
-960	wiglett	960	wiglett	0	Wiglett	throat_chop liquidation		TRUE	TRUE
-960	wiglett	961	wugtrio	0	Wugtrio	triple_dive throat_chop liquidation		FALSE	FALSE
+960	wiglett	960	wiglett	0	Wiglett	throat_chop liquidation		TRUE	FALSE
+960	wiglett	961	wugtrio	0	Wugtrio	triple_dive throat_chop liquidation		TRUE	TRUE
 962	bombirdier	962	bombirdier	0	Bombirdier	rocky_payload dual_wingbeat		FALSE	FALSE
 963	finizen	963	finizen	0	Finizen			TRUE	FALSE
 963	finizen	964	palafin	0	Palafin			TRUE	FALSE
 963	finizen	964	palafin	1	Palafin		TEMP	TRUE	FALSE
-965	varoom	965	varoom	0	Varoom	spin_out		TRUE	TRUE
-965	varoom	966	revavroom	0	Revavroom	spin_out		TRUE	TRUE
+965	varoom	965	varoom	0	Varoom	spin_out		TRUE	FALSE
+965	varoom	966	revavroom	0	Revavroom	spin_out		TRUE	FALSE
 967	cyclizar	967	cyclizar	0	Cyclizar	breaking_swipe shed_tail		TRUE	FALSE
-968	orthworm	968	orthworm	0	Orthworm	earth_eater shed_tail		TRUE	FALSE
+968	orthworm	968	orthworm	0	Orthworm	earth_eater shed_tail		TRUE	TRUE
 969	glimmet	969	glimmet	0	Glimmet		sleeping_caldera	TRUE	FALSE
 969	glimmet	970	glimmora	0	Glimmora	spiky_shield	sleeping_caldera	TRUE	FALSE
-971	greavard	971	greavard	0	Greavard	fluffy		TRUE	TRUE
+971	greavard	971	greavard	0	Greavard	fluffy		TRUE	FALSE
 971	greavard	972	houndstone	0	Houndstone	fluffy last_respects		TRUE	TRUE
 973	flamigo	973	flamigo	0	Flamigo	costar throat_chop		FALSE	FALSE
-974	cetoddle	974	cetoddle	0	Cetoddle	ice_spinner		FALSE	FALSE
-974	cetoddle	975	cetitan	0	Cetitan	ice_spinner		FALSE	FALSE
+974	cetoddle	974	cetoddle	0	Cetoddle	ice_spinner		TRUE	TRUE
+974	cetoddle	975	cetitan	0	Cetitan	ice_spinner		TRUE	TRUE
 976	veluza	976	veluza	0	Veluza	aqua_cutter fillet_away liquidation		TRUE	FALSE
 977	dondozo	977	dondozo	0	Dondozo	order_up		FALSE	FALSE
-978	tatsugiri	978	tatsugiri	0	Tatsugiri	commander		FALSE	FALSE
-978	tatsugiri	978	tatsugiri	1	Tatsugiri	commander		TRUE	TRUE
+978	tatsugiri	978	tatsugiri	0	Tatsugiri	commander		TRUE	TRUE
+978	tatsugiri	978	tatsugiri	1	Tatsugiri	commander		TRUE	FALSE
 978	tatsugiri	978	tatsugiri	2	Tatsugiri	commander		TRUE	TRUE
-984	great_tusk	984	great_tusk	0	Great Tusk	protosynthesis stomping_tantrum headlong_rush		TRUE	TRUE
-985	scream_tail	985	scream_tail	0	Scream Tail	protosynthesis psychic_fangs		TRUE	TRUE
+984	great_tusk	984	great_tusk	0	Great Tusk	protosynthesis stomping_tantrum headlong_rush		TRUE	FALSE
+985	scream_tail	985	scream_tail	0	Scream Tail	protosynthesis psychic_fangs		TRUE	FALSE
 986	brute_bonnet	986	brute_bonnet	0	Brute Bonnet	protosynthesis		FALSE	FALSE
 987	flutter_mane	987	flutter_mane	0	Flutter Mane	protosynthesis		TRUE	FALSE
-988	slither_wing	988	slither_wing	0	Slither Wing	protosynthesis dual_wingbeat		TRUE	TRUE
-989	sandy_shocks	989	sandy_shocks	0	Sandy Shocks	protosynthesis		FALSE	FALSE
-990	iron_treads	990	iron_treads	0	Iron Treads	quark_drive stomping_tantrum steel_roller		TRUE	TRUE
+988	slither_wing	988	slither_wing	0	Slither Wing	protosynthesis dual_wingbeat		TRUE	FALSE
+989	sandy_shocks	989	sandy_shocks	0	Sandy Shocks	protosynthesis		TRUE	TRUE
+990	iron_treads	990	iron_treads	0	Iron Treads	quark_drive stomping_tantrum steel_roller		TRUE	FALSE
 991	iron_bundle	991	iron_bundle	0	Iron Bundle	quark_drive snowscape		TRUE	FALSE
 992	iron_hands	992	iron_hands	0	Iron Hands	quark_drive		TRUE	FALSE
 993	iron_jugulis	993	iron_jugulis	0	Iron Jugulis	quark_drive		FALSE	FALSE
 994	iron_moth	994	iron_moth	0	Iron Moth	quark_drive		FALSE	FALSE
-995	iron_thorns	995	iron_thorns	0	Iron Thorns	quark_drive		FALSE	FALSE
-996	frigibax	996	frigibax	0	Frigibax	thermal_exchange		TRUE	TRUE
+995	iron_thorns	995	iron_thorns	0	Iron Thorns	quark_drive		TRUE	TRUE
+996	frigibax	996	frigibax	0	Frigibax	thermal_exchange		TRUE	FALSE
 996	frigibax	997	arctibax	0	Arctibax	thermal_exchange		TRUE	FALSE
 996	frigibax	998	baxcalibur	0	Baxcalibur	thermal_exchange glaive_rush breaking_swipe snowscape		TRUE	FALSE
 999	gimmighoul	999	gimmighoul	0	Gimmighoul			FALSE	FALSE
@@ -1421,11 +1421,11 @@ F###	Family	###	Species	Form	Name	Unimplemented	Encounter	Sprited	Diff
 999	gimmighoul	1000	gholdengo	0	Gholdengo	good_as_gold make_it_rain		TRUE	FALSE
 1001	wo_chien	1001	wo_chien	0	Wo-Chien	ruination		FALSE	FALSE
 1002	chien_pao	1002	chien_pao	0	Chien-Pao	snowscape ruination throat_chop		FALSE	FALSE
-1003	ting_lu	1003	ting_lu	0	Ting-Lu	stomping_tantrum ruination throat_chop		FALSE	FALSE
-1004	chi_yu	1004	chi_yu	0	Chi-Yu	ruination		FALSE	FALSE
-1005	roaring_moon	1005	roaring_moon	0	Roaring Moon	protosynthesis throat_chop		FALSE	FALSE
+1003	ting_lu	1003	ting_lu	0	Ting-Lu	stomping_tantrum ruination throat_chop		TRUE	TRUE
+1004	chi_yu	1004	chi_yu	0	Chi-Yu	ruination		TRUE	TRUE
+1005	roaring_moon	1005	roaring_moon	0	Roaring Moon	protosynthesis throat_chop		TRUE	TRUE
 1006	iron_valiant	1006	iron_valiant	0	Iron Valiant	quark_drive spirit_break		TRUE	FALSE
-1007	koraidon	1007	koraidon	0	Koraidon	orichalcum_pulse breaking_swipe collision_course		FALSE	FALSE
+1007	koraidon	1007	koraidon	0	Koraidon	orichalcum_pulse breaking_swipe collision_course		TRUE	TRUE
 1008	miraidon	1008	miraidon	0	Miraidon	hadron_engine parabolic_charge electro_drift		FALSE	FALSE
-1009	walking_wake	1009	walking_wake	0	Walking Wake	protosynthesis breaking_swipe hydro_steam		FALSE	FALSE
+1009	walking_wake	1009	walking_wake	0	Walking Wake	protosynthesis breaking_swipe hydro_steam		TRUE	TRUE
 1010	iron_leaves	1010	iron_leaves	0	Iron Leaves	quark_drive psyblade solar_blade		FALSE	FALSE

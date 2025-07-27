@@ -60,7 +60,7 @@ Key		EN
 0001-held_insect_plate-0000|data.Name		Insect Plate
 0001-held_insect_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Bug-type moves.
 0001-held_iron_ball-0000|data.Name		Iron Ball
-0001-held_iron_ball-0001|data.Desc		A held item that weighs the Pokémon down, and allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.
+0001-held_iron_ball-0001|data.Desc		A held item that weighs the Pokémon down, forcing it to pause between moves. It also allows Ground-type moves to hit Flying-type and levitating holders. This item sticks when held.
 0001-held_iron_plate-0000|data.Name		Iron Plate
 0001-held_iron_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Steel-type moves.
 0001-held_life_orb-0000|data.Name		Life Orb
@@ -180,7 +180,7 @@ Key		EN
 0003-wand_pounce-0000|data.Name		Pounce Wand
 0003-wand_pounce-0001|data.Desc		A wand to be waved at a Pokémon or wall. It causes the user to jump to that location.
 0003-wand_purge-0000|data.Name		Purge Wand
-0003-wand_purge-0001|data.Desc		A wand to be waved at a Pokémon. It removes all stat boosts and damages the target for each stat boosted. Stat drops will heal the target instead.
+0003-wand_purge-0001|data.Desc		A wand to be waved at a Pokémon. It removes all stat boosts in an area and damages targets for each stat boosted. Stat drops will heal the target instead.
 0003-wand_slow-0000|data.Name		Slow Wand
 0003-wand_slow-0001|data.Desc		A wand to be waved at a Pokémon. It reduces the Movement Speed of the target by 1 level.
 0003-wand_stayaway-0000|data.Name		Stayaway Wand
@@ -1027,7 +1027,7 @@ Key		EN
 0017-xcl_family_meowth_04-0000|data.Name		Coin Charm
 0017-xcl_family_meowth_05-0000|data.Name		Insight Rock
 0017-xcl_family_mew_duo_00-0000|data.Name		Havoc Robe
-0017-xcl_family_mew_duo_05-0000|data.Name		Life Ring
+0017-xcl_family_mew_duo_04-0000|data.Name		Life Ring
 0017-xcl_family_misdreavus_00-0000|data.Name		Magic Hat
 0017-xcl_family_mr_mime_00-0000|data.Name		Barrier Bow
 0017-xcl_family_mr_mime_02-0000|data.Name		Junior Beam

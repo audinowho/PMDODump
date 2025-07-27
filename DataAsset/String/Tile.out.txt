@@ -38,7 +38,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-tile_compass-0000|data.Name		Compass Tile	Case Compas	Kompassfeld							指南地板																	
 0000-tile_compass-0001|data.Desc		A tile that shows the way to important locations on the floor.	Une case qui indique le chemin vers les endroits importants du sol.	Ein Feld, das den Weg zu den wichtigsten Orten der Ebene zeigt.							可以指向楼层内重要地点的地板。																	
 0000-tile_cradle-0000|data.Name		Sea Cradle									海之摇篮																	
-0000-tile_cradle-0001|data.Desc		A cold sea current gently swirls about...									一股冰凉的海流温柔地环绕……																	
+0000-tile_cradle-0001|data.Desc		A cold sea current gently swirls about...									冰凉的海流温柔地环绕着……																	
 0000-tile_evo-0000|data.Name		Luminous Site	Zone Lumineuse	Leuchtende Fläche	Area Luminosa			빛의 지대			光之领域																	
 0000-tile_evo-0001|data.Desc		A mysterious area that allows Pokémon to evolve.	Un endroit mystérieux qui permet aux Pokémon d'évoluer.	Ein mysteriöser Bereich, welcher Pokémon die Entwicklung ermöglicht.	Un área misteriosa que permite a los Pokémon evolucionar.			포켓몬이 진화할 수 있게 해주는 신비한 지대.			可以让宝可梦进化的不可思议区域。																	
 0000-tile_fairy_ring-0000|data.Name		Fairy Ring	Anneau Féerique	Feenring							妖精环圈																	
