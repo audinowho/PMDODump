@@ -556,16 +556,21 @@ class Localization(SheetMerge):
         for index in range(COMMENT_INDEX+1, len(header_row)):
             lang = header_row[index].lower()
 
-            file_name = resx_path + '.'
             if lang == "en":
-                file_name = file_name
+                file_name = resx_path
             else:
-                file_name = file_name + lang
+                file_name = resx_path + '.' + lang
 
-            resource_all = [(row[KEY_INDEX], row[COMMENT_INDEX], row[index]) for row in sheet]
+            resource_all = []
+            for row in sheet:
+                content = ""
+                if index < len(row):
+                    content = row[index]
+                resource_all.append((row[KEY_INDEX], row[COMMENT_INDEX], content))
+
             resource = []
             for row in resource_all:
-                if row[3] != "" or lang == "en":
+                if row[2] != "" or lang == "en":
                     resource.append(row)
 
             self._write_resx(resource_all, file_name)
