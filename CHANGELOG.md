@@ -1,5 +1,6 @@
 # 0.8.10 Changes #
 
+* Limited the movesets of various Pokemon in Geode Crevice
 * Reworked the turn order system to make speed boosts feel more fair https://wiki.pmdo.pmdcollab.org/User:IDK/Speed_Rework
 * Fixed AI quirk that caused allies to spam attacks that can be absorbed by an ally's ability
 * Freeze: 10->5 turns
