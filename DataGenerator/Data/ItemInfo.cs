@@ -679,7 +679,7 @@ namespace DataGenerator.Data
             else if (ii == 113)
             {
                 item.Name = new LocalText("Blinker Seed");
-                item.Desc = new LocalText("A seed that gives the Blinker status, reducing the Pokémon's Attack Range to its lowest level.");
+                item.Desc = new LocalText("A seed that gives the Blinker status, reducing the Pokémon's Attack Range by 3.");
                 item.Sprite = "Seed_DarkBlue";
                 item.UseEvent.OnHits.Add(0, new StatusBattleEvent("blinker", true, false));
             }

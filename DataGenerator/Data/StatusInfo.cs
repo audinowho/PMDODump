@@ -2034,7 +2034,7 @@ namespace DataGenerator.Data
             {
                 status.Name = new LocalText("Blinker");
                 status.MenuName = true;
-                status.Desc = new LocalText("The Pokémon has its Attack Range dropped to its lowest level. This status wears off after many turns have passed.");
+                status.Desc = new LocalText("The Pokémon has its Attack Range dropped by 3. This status wears off after many turns have passed.");
                 status.Emoticon = "Blind_Blue";
                 status.StatusStates.Set(new TransferStatusState());
                 status.StatusStates.Set(new BadStatusState());
