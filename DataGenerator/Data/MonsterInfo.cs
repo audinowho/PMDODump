@@ -1170,6 +1170,7 @@ namespace DataGenerator.Data
                         //hisui
                         case 157://typhlosion
                         case 503://samurott
+                        case 549://lilligant
                         case 628://braviary
                         case 705://sliggoo
                         case 713://avalugg
