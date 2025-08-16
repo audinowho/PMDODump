@@ -2333,17 +2333,17 @@ namespace DataGenerator.Data
             {
                 item.Name = new LocalText("Scope Lens");
                 item.Desc = new LocalText("A lens used for scoping out weak points. It boosts the holder’s critical-hit ratio.");
-                item.Sprite = "Specs_DarkBlue";
+                item.Sprite = "Specs_Yellow";
                 item.Price = 200;
                 item.OnActions.Add(0, new BoostCriticalEvent(1));
             }
             else if (ii == 314)
             {
                 item.Name = new LocalText("Wide Lens");
-                item.Desc = new LocalText("A magnifying lens that boosts the Pokémon's Attack Range.");
+                item.Desc = new LocalText("A magnifying lens that boosts the Pokémon's Accuracy.");
                 item.Sprite = "Specs_LightBlue";
                 item.Price = 200;
-                item.OnActions.Add(-1, new AddRangeEvent(1));
+                item.OnActions.Add(0, new MultiplyAccuracyEvent(3, 2));
             }
             else if (ii == 315)
             {
@@ -2452,10 +2452,12 @@ namespace DataGenerator.Data
             }
             else if (ii == 327)
             {
-                item.Name = new LocalText("**Black Sludge");
-                item.Desc = new LocalText("A held item that increases the HP regeneration of Poison-types, but prevents it for any other type. This item sticks when held.");
-                item.Sprite = "Rock_Purple";
-                item.Price = 1;
+                item.Name = new LocalText("Fickle Lens");
+                item.Desc = new LocalText("A held item that boosts the Pokémon's Attack Range, but prevents it from using the same move successively. This item sticks when held.");
+                item.Sprite = "Specs_LightBlue";
+                item.Price = 200;
+                item.OnActions.Add(-1, new AddRangeEvent(1));
+                item.OnRefresh.Add(0, new MoveLockEvent("last_used_move_slot", false));
             }
             else if (ii == 328)
             {

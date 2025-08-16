@@ -2146,6 +2146,7 @@ namespace DataGenerator.Data
                     monsterChanceZoneStep.Items.Add(new MapItem("held_choice_specs"), new IntRange(0, max_floors), 1);//Choice Specs
                     monsterChanceZoneStep.Items.Add(new MapItem("held_choice_band"), new IntRange(0, max_floors), 1);//Choice Band
                     monsterChanceZoneStep.Items.Add(new MapItem("held_assault_vest"), new IntRange(0, max_floors), 1);//Assault Vest
+                    monsterChanceZoneStep.Items.Add(new MapItem("held_fickle_lens"), new IntRange(0, max_floors), 1);//Fickle Lens
                     monsterChanceZoneStep.Items.Add(new MapItem("held_life_orb"), new IntRange(0, max_floors), 1);//Life Orb
                 }
             }
@@ -2211,6 +2212,7 @@ namespace DataGenerator.Data
                     monsterChanceZoneStep.Items.Add(new MapItem("held_choice_specs"), new IntRange(0, max_floors), 1);//Choice Specs
                     monsterChanceZoneStep.Items.Add(new MapItem("held_choice_band"), new IntRange(0, max_floors), 1);//Choice Band
                     monsterChanceZoneStep.Items.Add(new MapItem("held_assault_vest"), new IntRange(0, max_floors), 1);//Assault Vest
+                    monsterChanceZoneStep.Items.Add(new MapItem("held_fickle_lens"), new IntRange(0, max_floors), 1);//Fickle Lens
                     monsterChanceZoneStep.Items.Add(new MapItem("held_life_orb"), new IntRange(0, max_floors), 1);//Life Orb
                 }
             }

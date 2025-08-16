@@ -334,6 +334,7 @@ namespace DataGenerator.Data
             heldItems.Spawns.Add(new InvItem("held_choice_specs"), range, stickRate);//Choice Specs
             heldItems.Spawns.Add(new InvItem("held_choice_band"), range, stickRate);//Choice Band
             heldItems.Spawns.Add(new InvItem("held_assault_vest"), range, stickRate);//Assault Vest
+            heldItems.Spawns.Add(new InvItem("held_fickle_lens"), range, stickRate);//Fickle lens
             heldItems.Spawns.Add(new InvItem("held_life_orb"), range, stickRate);//Life Orb
             heldItems.Spawns.Add(new InvItem("held_heal_ribbon"), range, stickRate);//Heal Ribbon
 
@@ -346,6 +347,7 @@ namespace DataGenerator.Data
             heldItems.Spawns.Add(new InvItem("held_choice_specs"), range, stickRate);//Choice Specs
             heldItems.Spawns.Add(new InvItem("held_choice_band"), range, stickRate);//Choice Band
             heldItems.Spawns.Add(new InvItem("held_assault_vest"), range, stickRate);//Assault Vest
+            heldItems.Spawns.Add(new InvItem("held_fickle_lens"), range, stickRate);//Fickle Lens
             heldItems.Spawns.Add(new InvItem("held_life_orb"), range, stickRate);//Life Orb
             heldItems.Spawns.Add(new InvItem("held_heal_ribbon"), range, stickRate);//Heal Ribbon
 
@@ -1823,6 +1825,7 @@ namespace DataGenerator.Data
                         secretItemSpawns.Add(new InvItem("held_choice_specs"), 3);//Choice Specs
                         secretItemSpawns.Add(new InvItem("held_choice_band"), 3);//Choice Band
                         secretItemSpawns.Add(new InvItem("held_assault_vest"), 3);//Assault Vest
+                        secretItemSpawns.Add(new InvItem("held_fickle_lens"), 3);//Fickle Lens
                         secretItemSpawns.Add(new InvItem("held_life_orb"), 3);//Life Orb
                         secretItemSpawns.Add(new InvItem("held_heal_ribbon"), 3);//Heal Ribbon
                         secretItemSpawns.Add(new InvItem("key", false, 1), 35);//Key
@@ -2521,6 +2524,7 @@ namespace DataGenerator.Data
             held.Spawns.Add(new InvItem("held_choice_specs"), new IntRange(0, max_floors), 10);//Choice Specs
             held.Spawns.Add(new InvItem("held_choice_band"), new IntRange(0, max_floors), 10);//Choice Band
             held.Spawns.Add(new InvItem("held_assault_vest"), new IntRange(0, max_floors), 10);//Assault Vest
+            held.Spawns.Add(new InvItem("held_fickle_lens"), new IntRange(0, max_floors), 10);//Fickle Lens
             held.Spawns.Add(new InvItem("held_life_orb"), new IntRange(0, max_floors), 10);//Life Orb
             held.Spawns.Add(new InvItem("held_heal_ribbon", true), new IntRange(0, max_floors), 5);//Heal Ribbon
             held.Spawns.Add(new InvItem("held_heal_ribbon"), new IntRange(0, max_floors), 5);//Heal Ribbon

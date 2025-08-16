@@ -1416,6 +1416,7 @@ namespace DataGenerator.Data
 
                         held.Spawns.Add(new InvItem("held_sticky_barb"), new IntRange(0, max_floors), 10);
                         held.Spawns.Add(new InvItem("held_assault_vest"), new IntRange(0, max_floors), 10);
+                        held.Spawns.Add(new InvItem("held_fickle_lens"), new IntRange(0, max_floors), 10);
                         held.Spawns.Add(new InvItem("held_weather_rock"), new IntRange(0, max_floors), 10);
                         held.Spawns.Add(new InvItem("held_wide_lens"), new IntRange(0, max_floors), 10);
                         held.Spawns.Add(new InvItem("held_magnet"), new IntRange(0, max_floors), 10);
@@ -1520,7 +1521,7 @@ namespace DataGenerator.Data
 
                             MobSpawn mob = GetGuardMob("jolteon", "", "thunder", "agility", "shadow_ball", "", new RandRange(50), "wander_normal", "sleep");
                             MobSpawnItem keySpawn = new MobSpawnItem(true);
-                            keySpawn.Items.Add(new InvItem("held_wide_lens"), 10);
+                            keySpawn.Items.Add(new InvItem("held_fickle_lens"), 10);
                             mob.SpawnFeatures.Add(keySpawn);
 
                             SpecificTeamSpawner specificTeam = new SpecificTeamSpawner();
