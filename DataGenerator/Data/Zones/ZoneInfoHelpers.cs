@@ -410,13 +410,13 @@ namespace DataGenerator.Data
         /// <param name="layout"></param>
         /// <param name="terrain"></param>
         /// <param name="amount"></param>
-        /// <param name="amount"></param>
+        /// <param name="size"></param>
         /// <param name="eraseIsolated"></param>
         public static void AddBlobWaterSteps<T>(MapGen<T> layout, string terrain, RandRange amount, IntRange size, bool eraseIsolated = true) where T : StairsMapGenContext
         {
             MultiBlobStencil<T> multiBlobStencil = new MultiBlobStencil<T>(false);
 
-            if (eraseIsolated)
+            if (eraseIsolated) // not allowed to draw blob if at least one tile being drawn over isn't a non-blocked tile
                 multiBlobStencil.List.Add(new BlobTileStencil<T>(new MapTerrainStencil<T>(false, false, true, true), true));
 
             //not allowed to draw the blob over start or end.
@@ -429,6 +429,37 @@ namespace DataGenerator.Data
 
             //not allowed to draw individual tiles over unbreakable tiles
             BlobWaterStep<T> waterStep = new BlobWaterStep<T>(amount, new Tile(terrain), new MatchTerrainStencil<T>(true, new Tile("unbreakable")), multiBlobStencil, size, new IntRange(Math.Max(size.Min, 7), Math.Max(size.Max * 3 / 2, 8)));
+            layout.GenSteps.Add(PR_WATER, waterStep);
+            layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<T>(new Tile(terrain)));
+        }
+
+        /// <summary>
+        /// Adds water a number of times with patterns using loaded maps.  These blobs can eat into walkable tiles, but respect chokepoints.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="layout"></param>
+        /// <param name="terrain"></param>
+        /// <param name="amount"></param>
+        /// <param name="planSpawns"></param>
+        /// <param name="eraseIsolated"></param>
+        public static void AddPatternWaterSteps<T>(MapGen<T> layout, string terrain, RandRange amount, SpawnList<string> planSpawns, bool eraseIsolated = true) where T : StairsMapGenContext
+        {
+            MultiBlobStencil<T> multiBlobStencil = new MultiBlobStencil<T>(false);
+
+            if (eraseIsolated) // not allowed to draw blob if at least one tile being drawn over isn't a non-blocked tile
+                multiBlobStencil.List.Add(new BlobTileStencil<T>(new MapTerrainStencil<T>(false, false, true, true), true));
+
+            //not allowed to draw the blob over start or end.
+            multiBlobStencil.List.Add(new StairsStencil<T>(true));
+            //effect tile checks are also needed since even though they are postproc-shielded, it'll cut off the path to those locations
+            multiBlobStencil.List.Add(new BlobTileStencil<T>(new TileEffectStencil<T>(true)));
+
+            //not allowed to draw the blob such that chokepoints are removed
+            multiBlobStencil.List.Add(new NoChokepointStencil<T>(new MapTerrainStencil<T>(false, false, true, true)));
+
+            //not allowed to draw individual tiles over unbreakable tiles
+            PatternWaterStep<T> waterStep = new PatternWaterStep<T>(amount, new Tile(terrain), new MatchTerrainStencil<T>(true, new Tile("unbreakable")), multiBlobStencil);
+            waterStep.Maps = planSpawns;
             layout.GenSteps.Add(PR_WATER, waterStep);
             layout.GenSteps.Add(PR_WATER_DIAG, new DropDiagonalBlockStep<T>(new Tile(terrain)));
         }
@@ -458,7 +489,7 @@ namespace DataGenerator.Data
         }
 
         /// <summary>
-        /// 
+        /// Adds blobs of grass into rooms and perlin noise into halls
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="layout"></param>

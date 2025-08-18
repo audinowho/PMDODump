@@ -6809,7 +6809,9 @@ namespace DataGenerator.Data
                         chestStep.Items.Add(new MapItem("held_pierce_band"), 10);//pierce band
                         chestStep.Items.Add(new MapItem("held_friend_bow"), 10);//friend bow
                         chestStep.Items.Add(new MapItem("held_goggle_specs"), 10);//goggle specs
-                        chestStep.Items.Add(new MapItem("evo_harmony_scarf"), 10);//harmony scarf
+                        chestStep.Items.Add(new MapItem("evo_magmarizer"), 3);
+                        chestStep.Items.Add(new MapItem("evo_electirizer"), 3);
+                        chestStep.Items.Add(new MapItem("evo_reaper_cloth"), 3);
 
                         chestStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(HeldState)), false, true, new RandRange(1)), 10);//held
                         chestStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(DrinkState)), false, true, new RandRange(3, 6)), 10);//vitamins
@@ -9992,7 +9994,7 @@ namespace DataGenerator.Data
             {
                 zone.Name = new LocalText("**Wayward Wetlands");
                 zone.Rescues = 3;
-                zone.Level = 25;
+                zone.Level = 20;
                 zone.BagRestrict = 0;
                 zone.KeepTreasure = true;
                 zone.MoneyRestrict = true;
@@ -10019,6 +10021,7 @@ namespace DataGenerator.Data
 
                     //mobs
                     TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
+                    poolSpawn.Spawns.Add(GetTeamMob("masquerain", "", "air_cutter", "", "", "", new RandRange(23), "wander_dumb"), new IntRange(0, max_floors), 5);
                     poolSpawn.Spawns.Add(GetTeamMob("scyther", "", "razor_wind", "", "", "", new RandRange(23), "wander_dumb"), new IntRange(0, max_floors), 5);
                     poolSpawn.Priority = PR_RESPAWN_MOB;
 
@@ -10036,37 +10039,76 @@ namespace DataGenerator.Data
                         RoomFloorGen layout = new RoomFloorGen();
 
                         //Floor settings
-                        if (ii < 10)
+                        if (ii < 12)
                             AddFloorData(layout, "Treeshroud Forest.ogg", 500, Map.SightRange.Clear, Map.SightRange.Dark);
                         else
                             AddFloorData(layout, "Ambush Forest 3.ogg", 500, Map.SightRange.Dark, Map.SightRange.Dark);
 
                         //Tilesets
-                        if (ii < 5)
+                        if (ii < 8)
                             AddSpecificTextureData(layout, "mystifying_forest_wall", "water_maze_floor", "water_maze_secondary", "water_maze_wall", "water");
-                        else if (ii < 10)
+                        else if (ii < 12)
                             AddSpecificTextureData(layout, "mystifying_forest_wall", "poison_maze_floor", "poison_maze_secondary", "poison_maze_wall", "poison");
                         else
-                            AddSpecificTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "tall_grass_dark", "grass");
+                            AddSpecificTextureData(layout, "deep_dusk_forest_2_wall", "deep_dusk_forest_2_floor", "deep_dusk_forest_2_secondary", "tall_grass_yellow", "grass");
 
-                        if (ii < 5)
+                        if (ii >= 8)
+                        {
+                            //add one-tile grass in one-tile halls
+                            SpawnList<string> blockPattern = new SpawnList<string>();
+                            blockPattern.Add("pattern_dither_fourth", 10);
+
+                            RandRange roomBlobCount = new RandRange(30, 40);
+                            string coverTerrain = "grass";
+                            {
+                                MapTerrainStencil<ListMapGenContext> terrainStencil = new MapTerrainStencil<ListMapGenContext>(true, false, false, false);
+                                NoChokepointTerrainStencil<ListMapGenContext> roomStencil = new NoChokepointTerrainStencil<ListMapGenContext>(new MapTerrainStencil<ListMapGenContext>(true, false, false, false));
+                                roomStencil.Negate = true;
+                                TileEffectStencil<ListMapGenContext> noTile = new TileEffectStencil<ListMapGenContext>(true);
+                                PatternWaterStep<ListMapGenContext> coverStep = new PatternWaterStep<ListMapGenContext>(roomBlobCount, new Tile(coverTerrain), new MultiTerrainStencil<ListMapGenContext>(false, terrainStencil, roomStencil, noTile), new DefaultBlobStencil<ListMapGenContext>());
+                                coverStep.Maps = blockPattern;
+                                layout.GenSteps.Add(PR_WATER, coverStep);
+                            }
+                        }
+
+                        if (ii < 4)
                             AddWaterSteps(layout, "grass", new RandRange(50));
-                        else if (ii < 10)
+                        else
                             AddWaterSteps(layout, "grass", new RandRange(80));
 
-                        //TODO: this blob step must never intrude into walkable space
-                        AddBlobWaterSteps(layout, "wall", new RandRange(3, 7), new IntRange(1, 9), false);
+                        // this blob step must never intrude into walkable space
+                        {
+                            string terrain = "wall";
+                            RandRange blobAmount = new RandRange(3, 7);
+                            IntRange size = new IntRange(2, 9);
+                            BlobTilePercentStencil<ListMapGenContext> blobStencil = new BlobTilePercentStencil<ListMapGenContext>(50, new MatchTerrainStencil<ListMapGenContext>(true, new Tile("floor")));
+                            MatchTerrainStencil<ListMapGenContext>  tileStencil = new MatchTerrainStencil<ListMapGenContext>(true, new Tile("unbreakable"), new Tile("floor"));
 
-                        {
-                            SpawnList<PatternPlan> terrainPattern = new SpawnList<PatternPlan>();
-                            terrainPattern.Add(new PatternPlan("pattern_plus", PatternPlan.PatternExtend.Single), 20);
-                            AddTerrainPatternSteps(layout, "water", new RandRange(2, 6), terrainPattern);
+                            //not allowed to draw individual tiles over unbreakable tiles
+                            BlobWaterStep<ListMapGenContext> waterStep = new BlobWaterStep<ListMapGenContext>(blobAmount, new Tile(terrain), tileStencil, blobStencil, size, new IntRange(Math.Max(size.Min, 7), Math.Max(size.Max * 3 / 2, 8)));
+                            layout.GenSteps.Add(PR_WATER, waterStep);
                         }
+
+                        string water_terrain = "water";
+                        if (ii >= 8 && ii < 12)
+                            water_terrain = "water_poison";
+
+                        // this water is allowed to be spawned anywhere there's floor or grass
+                        SpawnList<string> terrainPattern = new SpawnList<string>();
+                        if (ii < 8 || ii >= 12)
                         {
-                            SpawnList<PatternPlan> terrainPattern = new SpawnList<PatternPlan>();
-                            terrainPattern.Add(new PatternPlan("pattern_blob", PatternPlan.PatternExtend.Single), 20);
-                            AddTerrainPatternSteps(layout, "water", new RandRange(0, 5), terrainPattern);
+                            terrainPattern.Add("pattern_plus", 10);
+                            terrainPattern.Add("pattern_blob", 10);
                         }
+                        terrainPattern.Add("pattern_dither_three_fourth", 20);
+                        terrainPattern.Add("pattern_blob_small", 10);
+
+                        if (ii < 8)
+                            AddPatternWaterSteps(layout, water_terrain, new RandRange(12, 17), terrainPattern, false);
+                        else if (ii < 12)
+                            AddPatternWaterSteps(layout, water_terrain, new RandRange(7, 12), terrainPattern);
+                        else
+                            AddPatternWaterSteps(layout, water_terrain, new RandRange(20, 25), terrainPattern);
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
@@ -10091,9 +10133,11 @@ namespace DataGenerator.Data
                             lurkerTeam.TeamSizes.Add(1, 1);
 
                             LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(lurkerTeam);
-                            {
+
+                            if (ii < 2)
+                                spawner.AmountSpawner = new RandRange(20, 28);
+                            else
                                 spawner.AmountSpawner = new RandRange(46, 50);
-                            }
                             PlaceTerrainMobsStep<ListMapGenContext> secretMobPlacement = new PlaceTerrainMobsStep<ListMapGenContext>(spawner, 1);
                             secretMobPlacement.AcceptedTiles.Add(new Tile("grass"));
                             layout.GenSteps.Add(PR_SPAWN_MOBS, secretMobPlacement);
@@ -10112,20 +10156,43 @@ namespace DataGenerator.Data
                             FloorPathBranch<ListMapGenContext> path = new FloorPathBranch<ListMapGenContext>();
                             path.RoomComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
                             path.HallComponents.Set(new ConnectivityRoom(ConnectivityRoom.Connectivity.Main));
-                            path.HallPercent = 50;
-                            path.FillPercent = new RandRange(65);
+                            path.HallPercent = 100;
+                            if (ii < 12)
+                                path.FillPercent = new RandRange(60);
+                            else
+                                path.FillPercent = new RandRange(65);
                             path.BranchRatio = new RandRange(70);
 
                             //Give it some room types to place
                             SpawnList<RoomGen<ListMapGenContext>> genericRooms = new SpawnList<RoomGen<ListMapGenContext>>();
-                            //cave
-                            genericRooms.Add(new RoomGenCave<ListMapGenContext>(new RandRange(6, 18), new RandRange(6, 18)), 10);
+                            //bumped
+                            genericRooms.Add(new RoomGenBump<ListMapGenContext>(new RandRange(3), new RandRange(3), new RandRange(0, 50)), 15);
+
+                            if (ii < 8)
+                            {
+                                //cave
+                                genericRooms.Add(new RoomGenCave<ListMapGenContext>(new RandRange(6, 18), new RandRange(6, 18)), 10);
+                            }
+                            else if (ii < 12)
+                            {
+                                //cave
+                                genericRooms.Add(new RoomGenCave<ListMapGenContext>(new RandRange(5, 16), new RandRange(5, 16)), 10);
+                            }
+                            else
+                            {
+                                RoomGenOasis<ListMapGenContext> oasisGen = new RoomGenOasis<ListMapGenContext>(new RandRange(5, 16), new RandRange(5, 16));
+                                oasisGen.WaterTerrain = new Tile("water");
+                                genericRooms.Add(oasisGen, 10);
+                            }
 
                             path.GenericRooms = genericRooms;
 
                             //Give it some hall types to place
                             SpawnList<PermissiveRoomGen<ListMapGenContext>> genericHalls = new SpawnList<PermissiveRoomGen<ListMapGenContext>>();
-                            genericHalls.Add(new RoomGenAngledHall<ListMapGenContext>(100, new RandRange(1), new RandRange(1)), 20);
+                            if (ii < 12)
+                                genericHalls.Add(new RoomGenAngledHall<ListMapGenContext>(0, new RandRange(1), new RandRange(1)), 10);
+                            if (ii >= 4)
+                                genericHalls.Add(new RoomGenAngledHall<ListMapGenContext>(100, new RandRange(2, 5), new RandRange(2, 5)), 10);
                             path.GenericHalls = genericHalls;
 
                             layout.GenSteps.Add(PR_ROOMS_GEN, path);
