@@ -1,5 +1,7 @@
 # 0.8.11 Changes #
 
+* Reverted the speed changes of 0.8.10 due to the inability to kite normal speed foes.
+* Fixed Pastel Veil (was not working)
 * Fixed talk behavior of team members in town.
 * Fixed error occurring when angering shopkeepers
 * Fixed errors in outlaw missions occurring when setting up outlaws' moves.

@@ -1968,6 +1968,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Pastel Veil");
                 ability.Desc = new LocalText("Protects the Pokémon and its ally Pokémon from being poisoned.");
+                ability.ProximityEvent.Radius = 3;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Self | Alignment.Friend);
                 ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison", new StringKey("MSG_PASTEL_VEIL"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
                 ability.ProximityEvent.BeforeStatusAdds.Add(0, new PreventStatusCheck("poison_toxic", new StringKey("MSG_PASTEL_VEIL"), new StatusAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_In", 1)), "DUN_Screen_Hit", 10)));
