@@ -36,7 +36,8 @@ namespace DataGenerator.Data
 
             LayeredSegment floorSegment = new LayeredSegment();
             floorSegment.IsRelevant = true;
-            floorSegment.ZoneSteps.Add(new SaveVarsZoneStep(PR_EXITS_RESCUE));
+            floorSegment.ZoneSteps.Add(new ScriptZoneStep("SpawnMissionNpcFromSV"));
+            floorSegment.ZoneSteps.Add(new ScriptZoneStep("FloorRecord"));
             floorSegment.ZoneSteps.Add(new FloorNameDropZoneStep(PR_FLOOR_DATA, new LocalText("Guildmaster Trail\n{0}F"), new Priority(-15)));
 
             //money
@@ -71,7 +72,7 @@ namespace DataGenerator.Data
 
             //necesities
             CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
-            necessities.SpawnRates.SetRange(14, new IntRange(0, 30));
+            necessities.SpawnRates.SetRange(14, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("necessities", necessities);
 
             necessities.Spawns.Add(new InvItem("berry_leppa"), new IntRange(0, 30), 30);//Leppa
@@ -121,13 +122,13 @@ namespace DataGenerator.Data
 
             //boosters
             CategorySpawn<InvItem> boosters = new CategorySpawn<InvItem>();
-            boosters.SpawnRates.SetRange(7, new IntRange(0, 30));
+            boosters.SpawnRates.SetRange(7, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("boosters", boosters);
 
             foreach (string key in IterateGummis(false))
-                boosters.Spawns.Add(new InvItem(key), new IntRange(0, 30), 1);
+                boosters.Spawns.Add(new InvItem(key), new IntRange(0, max_floors), 1);
 
-            IntRange range = new IntRange(3, 30);
+            IntRange range = new IntRange(3, max_floors);
 
             boosters.Spawns.Add(new InvItem("boost_protein"), range, 2);//protein
             boosters.Spawns.Add(new InvItem("boost_iron"), range, 2);//iron
@@ -138,10 +139,10 @@ namespace DataGenerator.Data
 
             //throwable
             CategorySpawn<InvItem> ammo = new CategorySpawn<InvItem>();
-            ammo.SpawnRates.SetRange(12, new IntRange(0, 30));
+            ammo.SpawnRates.SetRange(12, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("ammo", ammo);
 
-            range = new IntRange(0, 30);
+            range = new IntRange(0, max_floors);
             {
                 ammo.Spawns.Add(new InvItem("ammo_stick", false, 4), range, 10);//stick
                 ammo.Spawns.Add(new InvItem("ammo_cacnea_spike", false, 3), range, 10);//cacnea spike
@@ -170,7 +171,7 @@ namespace DataGenerator.Data
 
             //special items
             CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
-            special.SpawnRates.SetRange(7, new IntRange(0, 30));
+            special.SpawnRates.SetRange(7, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("special", special);
 
             {
@@ -202,19 +203,19 @@ namespace DataGenerator.Data
             }
 
             special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, 25), 40);//Key
-            special.Spawns.Add(new InvItem("machine_assembly_box"), new IntRange(9, 30), 35);//Assembly Box
+            special.Spawns.Add(new InvItem("machine_assembly_box"), new IntRange(9, max_floors), 35);//Assembly Box
                                                                           //special.Spawns.Add(new InvItem("machine_storage_box"), 10);//Storage Box
-            special.Spawns.Add(new InvItem("machine_ability_capsule"), new IntRange(13, 30), 15); // Ability Capsule
+            special.Spawns.Add(new InvItem("machine_ability_capsule"), new IntRange(13, max_floors), 15); // Ability Capsule
 
 
 
             //orbs
             CategorySpawn<InvItem> orbs = new CategorySpawn<InvItem>();
-            orbs.SpawnRates.SetRange(10, new IntRange(0, 30));
+            orbs.SpawnRates.SetRange(10, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("orbs", orbs);
 
             {
-                range = new IntRange(3, 30);
+                range = new IntRange(3, max_floors);
                 orbs.Spawns.Add(new InvItem("orb_one_room"), range, 7);//One-Room Orb
                 orbs.Spawns.Add(new InvItem("orb_fill_in"), range, 7);//Fill-In Orb
                 orbs.Spawns.Add(new InvItem("orb_one_room", true), range, 3);//One-Room Orb
@@ -276,13 +277,13 @@ namespace DataGenerator.Data
 
             //held items
             CategorySpawn<InvItem> heldItems = new CategorySpawn<InvItem>();
-            heldItems.SpawnRates.SetRange(2, new IntRange(0, 30));
+            heldItems.SpawnRates.SetRange(2, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("held", heldItems);
 
             foreach (string key in IterateTypeBoosters())
-                heldItems.Spawns.Add(new InvItem(key), new IntRange(0, 30), 1);
+                heldItems.Spawns.Add(new InvItem(key), new IntRange(0, max_floors), 1);
             foreach (string key in IterateTypePlates())
-                heldItems.Spawns.Add(new InvItem(key), new IntRange(0, 30), 1);
+                heldItems.Spawns.Add(new InvItem(key), new IntRange(0, max_floors), 1);
 
             heldItems.Spawns.Add(new InvItem("held_mobile_scarf"), new IntRange(0, 20), 2);//Mobile Scarf
             heldItems.Spawns.Add(new InvItem("held_pass_scarf"), new IntRange(0, 20), 2);//Pass Scarf
@@ -339,7 +340,7 @@ namespace DataGenerator.Data
             heldItems.Spawns.Add(new InvItem("held_heal_ribbon"), range, stickRate);//Heal Ribbon
 
             stickRate = 1;
-            range = new IntRange(15, 30);
+            range = new IntRange(15, max_floors);
 
             heldItems.Spawns.Add(new InvItem("held_weather_rock"), range, stickRate);//Weather Rock
             heldItems.Spawns.Add(new InvItem("held_expert_belt"), range, stickRate);//Expert Belt
@@ -352,8 +353,8 @@ namespace DataGenerator.Data
             heldItems.Spawns.Add(new InvItem("held_heal_ribbon"), range, stickRate);//Heal Ribbon
 
 
-            heldItems.Spawns.Add(new InvItem("held_warp_scarf"), new IntRange(0, 30), 1);//Warp Scarf
-            heldItems.Spawns.Add(new InvItem("held_warp_scarf", true), new IntRange(0, 30), 1);//Warp Scarf
+            heldItems.Spawns.Add(new InvItem("held_warp_scarf"), new IntRange(0, max_floors), 1);//Warp Scarf
+            heldItems.Spawns.Add(new InvItem("held_warp_scarf", true), new IntRange(0, max_floors), 1);//Warp Scarf
 
 
             range = new IntRange(8, 30);
@@ -364,16 +365,16 @@ namespace DataGenerator.Data
 
             //machines
             CategorySpawn<InvItem> machines = new CategorySpawn<InvItem>();
-            machines.SpawnRates.SetRange(7, new IntRange(0, 30));
+            machines.SpawnRates.SetRange(7, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("tms", machines);
 
-            range = new IntRange(0, 30);
+            range = new IntRange(0, max_floors);
 
             //tms
             foreach (string tm_id in IterateTMs(TMClass.Starter | TMClass.Bottom | TMClass.Mid))
                 machines.Spawns.Add(new InvItem(tm_id), range, 2);
 
-            range = new IntRange(10, 30);
+            range = new IntRange(10, max_floors);
 
             //tms
             foreach (string tm_id in IterateTMs(TMClass.Top))
@@ -384,7 +385,7 @@ namespace DataGenerator.Data
 
             //evo items
             CategorySpawn<InvItem> evoItems = new CategorySpawn<InvItem>();
-            evoItems.SpawnRates.SetRange(3, new IntRange(0, 30));
+            evoItems.SpawnRates.SetRange(3, new IntRange(0, max_floors));
             itemSpawnZoneStep.Spawns.Add("evo", evoItems);
 
             range = new IntRange(0, 25);
@@ -455,14 +456,10 @@ namespace DataGenerator.Data
 
 
             {
-                //155 Cyndaquil : 43 Leer : 52 Ember
-                poolSpawn.Spawns.Add(GetTeamMob("cyndaquil", "", "leer", "ember", "", "", new RandRange(10), "wander_normal", true), new IntRange(3, 5), 10);
 
-                //152 Chikorita : 77 Poison Powder : 075 Razor Leaf
-                poolSpawn.Spawns.Add(GetTeamMob("chikorita", "", "poison_powder", "vine_whip", "", "", new RandRange(10), "wander_normal", true), new IntRange(3, 5), 10);
-
-                //158 Totodile : 44 Bite : 55 Water Gun
-                poolSpawn.Spawns.Add(GetTeamMob("totodile", "", "bite", "water_gun", "", "", new RandRange(10), "wander_normal", true), new IntRange(3, 5), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("treecko", "", "absorb", "quick_attack", "", "", new RandRange(10), "wander_normal", true), new IntRange(3, 5), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("torchic", "", "growl", "ember", "", "", new RandRange(10), "wander_normal", true), new IntRange(3, 5), 10);
+                poolSpawn.Spawns.Add(GetTeamMob("mudkip", "", "mud_slap", "water_gun", "", "", new RandRange(10), "wander_normal", true), new IntRange(3, 5), 10);
             }
 
 
@@ -1082,7 +1079,9 @@ namespace DataGenerator.Data
             AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(1, max_floors)), EvoRoomType.Normal);
 
 
-            string[] dexMap = { "bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "chikorita", "bayleef", "meganium", "cyndaquil", "quilava", "typhlosion", "totodile", "croconaw", "feraligatr",
+            string[] dexMap = { "bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise",
+                                    "chikorita", "bayleef", "meganium", "cyndaquil", "quilava", "typhlosion", "totodile", "croconaw", "feraligatr",
+                                    "treecko", "grovyle", "sceptile", "torchic", "combusken", "blaziken", "mudkip", "marshtomp", "swampert",
                                       "pichu", "pikachu", "raichu", "sentret", "furret", "buneary", "lopunny",
                                       "pidgey", "pidgeotto", "pidgeot", "cleffa", "clefairy", "clefable", "wurmple", "silcoon", "beautifly", "cascoon", "dustox", "togepi", "togetic",
                                       "togekiss", "slakoth", "vigoroth", "slaking", "shinx", "luxio", "luxray", "cherubi", "cherrim", "nincada", "ninjask", "shedinja",
