@@ -10,6 +10,9 @@
 * Refactored level-reset logic to avoid potential data loss.
 * Added Fickle Specs: +1 Attack Range, Torment effect, Sticky
 * Wide Lens effect -> Boost accuracy x1.5
+* Fixed an issue where self-inflicted statuses and stat drops were not processed as such.
+* Fixed issues where Justified, Rattled, and Color Change triggered on self-target
+* Fix Lilligant-H evolution method
 * Fixed talk behavior of team members in town.
 * Fixed error occurring when angering shopkeepers
 * Moves that temporarily learn moves such as Transform and Mimic will switch on/off for AI use based on settings.

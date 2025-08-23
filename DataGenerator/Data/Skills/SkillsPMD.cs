@@ -896,7 +896,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new HPRecoilEvent(5, false));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(6, true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 4;
@@ -918,7 +918,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new StatusBattleEvent("thrash", false, true));
+                skill.Data.AfterActions.Add(0, new StatusBattleEvent("thrash", false, true, true, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 23;//Slam
@@ -947,7 +947,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(5, true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -1667,7 +1667,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
-                skill.Data.AfterActions.Add(0, new StatusStateBattleEvent("paused", false, true, statusStates));
+                skill.Data.AfterActions.Add(0, new StatusStateBattleEvent("paused", false, true, true, false, statusStates));
                 skill.Strikes = 1;
                 skill.HitboxAction = new WaveMotionAction();
                 ((WaveMotionAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -1738,7 +1738,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new HPRecoilEvent(5, false));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(6, true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(40);//Swing
@@ -2090,7 +2090,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new StatusBattleEvent("petal_dance", false, true));
+                skill.Data.AfterActions.Add(0, new StatusBattleEvent("petal_dance", false, true, true, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(27);//Twirl
@@ -4476,7 +4476,7 @@ namespace DataGenerator.Data
                 newData.Category = BattleData.SkillCategory.Status;
                 newData.HitRate = -1;
                 newData.OnHits.Add(0, new ChipDamageEvent(5));
-                newData.OnHits.Add(0, new StatusHPBattleEvent("cursed", true, true, false, 5));
+                newData.OnHits.Add(0, new StatusHPBattleEvent("cursed", true, true, false, false, 5));
                 FiniteSprinkleEmitter emitter = new FiniteSprinkleEmitter(new AnimData("Curse", 5));
                 emitter.HeightSpeed = 36;
                 emitter.TotalParticles = 1;
@@ -5133,7 +5133,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new StatusBattleEvent("outrage", false, true));
+                skill.Data.AfterActions.Add(0, new StatusBattleEvent("outrage", false, true, true, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(40);//Swing
@@ -5414,7 +5414,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(50));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent("mod_defense", false, true, 1)));
+                skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent("mod_defense", false, true, true, false, 1)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 2;
@@ -5944,7 +5944,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
-                skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent("mod_attack", false, true, 1)));
+                skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent("mod_attack", false, true, true, false, 1)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Charge_Start", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
                 skill.Strikes = 1;
@@ -6285,11 +6285,11 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 GroupEvent groupEvent = new GroupEvent();
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_speed", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_attack", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_defense", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_attack", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_defense", false, true, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_speed", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_attack", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_defense", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_attack", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_defense", false, true, true, false, 1));
                 skill.Data.AfterActions.Add(0, new AdditionalEndEvent(groupEvent));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
@@ -6339,7 +6339,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 80;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
-                skill.Data.OnHits.Add(-1, new FutureAttackEvent("future_sight", true, false, false));
+                skill.Data.OnHits.Add(-1, new FutureAttackEvent("future_sight"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -7109,7 +7109,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new HealState());
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new StatusHPBattleEvent("wish", true, false, false, 2));
+                skill.Data.OnHits.Add(0, new StatusHPBattleEvent("wish", true, false, false, false, 2));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(25);//Appeal
@@ -7197,8 +7197,8 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
-                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_attack", false, true, -1));
-                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_defense", false, true, -1));
+                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_attack", false, true, true, false, -1));
+                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_defense", false, true, true, false, -1));
                 skill.Strikes = 1;
                 skill.Explosion.ExplodeFX.ScreenMovement = new ScreenMover(0, 8, 30);
                 skill.HitboxAction = new DashAction();
@@ -7554,14 +7554,14 @@ namespace DataGenerator.Data
                 terrain.Add("misty_terrain", new StatusStackBattleEvent("mod_attack", true, true, -1));
 
                 Dictionary<string, BattleEvent> types = new Dictionary<string, BattleEvent>();
-                types.Add(Text.Sanitize(((ElementInfo.Element)01).ToString()).ToLower(), new StatusStackBattleEvent("mod_accuracy", false, true, 1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)01).ToString()).ToLower(), new StatusStackBattleEvent("mod_accuracy", false, true, true, false, 1));
                 types.Add(Text.Sanitize(((ElementInfo.Element)02).ToString()).ToLower(), new StatusBattleEvent("flinch", true, true));
-                types.Add(Text.Sanitize(((ElementInfo.Element)03).ToString()).ToLower(), new StatusStackBattleEvent("mod_special_defense", false, true, 1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)03).ToString()).ToLower(), new StatusStackBattleEvent("mod_special_defense", false, true, true, false, 1));
                 types.Add(Text.Sanitize(((ElementInfo.Element)04).ToString()).ToLower(), new StatusBattleEvent("paralyze", true, true));
                 types.Add(Text.Sanitize(((ElementInfo.Element)05).ToString()).ToLower(), new StatusStackBattleEvent("mod_attack", true, true, -1));
-                types.Add(Text.Sanitize(((ElementInfo.Element)06).ToString()).ToLower(), new StatusStackBattleEvent("mod_attack", false, true, 1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)06).ToString()).ToLower(), new StatusStackBattleEvent("mod_attack", false, true, true, false, 1));
                 types.Add(Text.Sanitize(((ElementInfo.Element)07).ToString()).ToLower(), new StatusBattleEvent("burn", true, true));
-                types.Add(Text.Sanitize(((ElementInfo.Element)08).ToString()).ToLower(), new StatusStackBattleEvent("mod_speed", false, true, 1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)08).ToString()).ToLower(), new StatusStackBattleEvent("mod_speed", false, true, true, false, 1));
                 types.Add(Text.Sanitize(((ElementInfo.Element)09).ToString()).ToLower(), new StatusBattleEvent("confuse", true, true));
                 types.Add(Text.Sanitize(((ElementInfo.Element)10).ToString()).ToLower(), new StatusBattleEvent("sleep", true, true));
                 types.Add(Text.Sanitize(((ElementInfo.Element)11).ToString()).ToLower(), new StatusBattleEvent("immobilized", true, false));
@@ -7570,7 +7570,7 @@ namespace DataGenerator.Data
                 types.Add(Text.Sanitize(((ElementInfo.Element)14).ToString()).ToLower(), new StatusBattleEvent("poison_toxic", true, true));
                 types.Add(Text.Sanitize(((ElementInfo.Element)15).ToString()).ToLower(), new StatusStackBattleEvent("mod_special_defense", true, true, -1));
                 types.Add(Text.Sanitize(((ElementInfo.Element)16).ToString()).ToLower(), new StatusStackBattleEvent("mod_defense", true, true, -1));
-                types.Add(Text.Sanitize(((ElementInfo.Element)17).ToString()).ToLower(), new StatusStackBattleEvent("mod_defense", false, true, 1));
+                types.Add(Text.Sanitize(((ElementInfo.Element)17).ToString()).ToLower(), new StatusStackBattleEvent("mod_defense", false, true, true, false, 1));
                 types.Add(Text.Sanitize(((ElementInfo.Element)18).ToString()).ToLower(), new StatusStackBattleEvent("mod_speed", true, true, -1));
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new NatureSpecialEvent(terrain, types)));
                 skill.Strikes = 1;
@@ -7986,7 +7986,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
-                skill.Data.AfterActions.Add(0, new StatusBattleEvent("paused", false, true));
+                skill.Data.AfterActions.Add(0, new StatusBattleEvent("paused", false, true, true, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -8011,7 +8011,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new StatusBattleEvent("paused", false, true));
+                skill.Data.AfterActions.Add(0, new StatusBattleEvent("paused", false, true, true, false));
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState)), new FlagType(typeof(LavaTerrainState))));
                 skill.Strikes = 1;
@@ -8046,7 +8046,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(80));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(50));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent("mod_attack", false, true, 1)));
+                skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent("mod_attack", false, true, true, false, 1)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 11;//Punch
@@ -8248,7 +8248,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
-                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_attack", false, true, -2));
+                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_attack", false, true, true, false, -2));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -8322,11 +8322,11 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 GroupEvent groupEvent = new GroupEvent();
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_speed", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_attack", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_defense", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_attack", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_defense", false, true, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_speed", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_attack", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_defense", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_attack", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_defense", false, true, true, false, 1));
                 skill.Data.AfterActions.Add(0, new AdditionalEndEvent(groupEvent));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
@@ -8812,7 +8812,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(130));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new StatusBattleEvent("paused", false, true));
+                skill.Data.AfterActions.Add(0, new StatusBattleEvent("paused", false, true, true, false));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();
                 ((AreaAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -8952,7 +8952,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("paralyze", true, true)));
-                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(5, true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -9170,7 +9170,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(130));
-                skill.Data.OnHits.Add(-1, new FutureAttackEvent("doom_desire", true, false, false));
+                skill.Data.OnHits.Add(-1, new FutureAttackEvent("doom_desire"));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ThrowAction();
                 ((ThrowAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(36);//Special
@@ -9202,7 +9202,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_attack", false, true, -2));
+                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_attack", false, true, true, false, -2));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
                 skill.Explosion.HitTiles = true;
@@ -9337,7 +9337,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_speed", false, true, -1));
+                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_speed", false, true, true, false, -1));
                 skill.Strikes = 1;
                 skill.Explosion.ExplodeFX.ScreenMovement = new ScreenMover(0, 8, 30);
                 skill.HitboxAction = new AttackAction();
@@ -9667,8 +9667,8 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_defense", false, true, -1));
-                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_defense", false, true, -1));
+                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_defense", false, true, true, false, -1));
+                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_defense", false, true, true, false, -1));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(15);//MultiStrike
@@ -10248,7 +10248,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(0, new AdditionalEvent(new StatusBattleEvent("burn", true, true)));
                 SingleEmitter cuttingEmitter = new SingleEmitter(new AnimData("Grass_Clear", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", cuttingEmitter, new FlagType(typeof(FoliageTerrainState))));
-                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(5, true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -10775,7 +10775,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(5, true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).Range = 5;
@@ -10850,7 +10850,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
-                skill.Data.AfterActions.Add(0, new StatusStateBattleEvent("paused", false, true, statusStates));
+                skill.Data.AfterActions.Add(0, new StatusStateBattleEvent("paused", false, true, true, false, statusStates));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
                 skill.Explosion.Range = 1;
@@ -11331,7 +11331,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(60));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_attack", false, true, -2));
+                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_attack", false, true, true, false, -2));
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTrapEvent());
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
@@ -11433,7 +11433,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_attack", false, true, -2));
+                skill.Data.AfterActions.Add(0, new StatusStackBattleEvent("mod_special_attack", false, true, true, false, -2));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -11502,7 +11502,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 90;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new StatusBattleEvent("paused", false, true));
+                skill.Data.AfterActions.Add(0, new StatusBattleEvent("paused", false, true, true, false));
                 skill.Data.OnHitTiles.Add(0, new RemoveItemEvent(true));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("", new EmptyFiniteEmitter(), new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
@@ -11857,7 +11857,7 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new BasePowerState(40));
                 skill.Data.SkillStates.Set(new AdditionalEffectState(70));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent("mod_special_attack", false, true, 1)));
+                skill.Data.AfterActions.Add(0, new AdditionalEndEvent(new StatusStackBattleEvent("mod_special_attack", false, true, true, false, 1)));
                 skill.Strikes = 1;
                 skill.HitboxAction = new ProjectileAction();
                 ((ProjectileAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(07);//Shoot
@@ -11884,7 +11884,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, false));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(5, true));
                 skill.Strikes = 1;
                 skill.HitboxAction = new DashAction();
                 ((DashAction)skill.HitboxAction).CharAnim = 23;//Slam
@@ -12002,7 +12002,7 @@ namespace DataGenerator.Data
                 skill.Data.HitRate = 75;
                 skill.Data.SkillStates.Set(new BasePowerState(120));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
-                skill.Data.AfterActions.Add(0, new HPRecoilEvent(3, false));
+                skill.Data.AfterActions.Add(0, new HPRecoilEvent(4, true));
                 SingleEmitter terrainEmitter = new SingleEmitter(new AnimData("Wall_Break", 2));
                 skill.Data.OnHitTiles.Add(0, new RemoveTerrainStateEvent("DUN_Rollout", terrainEmitter, new FlagType(typeof(WallTerrainState))));
                 skill.Strikes = 1;
@@ -12056,7 +12056,7 @@ namespace DataGenerator.Data
                 skill.Data.OnHits.Add(0, new OnHitEvent(true, false, 100, new StatusBattleEvent("paused", true, true)));
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(4));
-                skill.Data.AfterActions.Add(0, new StatusStateBattleEvent("paused", false, true, statusStates));
+                skill.Data.AfterActions.Add(0, new StatusStateBattleEvent("paused", false, true, true, false, statusStates));
                 skill.Strikes = 1;
                 skill.HitboxAction = new WaveMotionAction();
                 ((WaveMotionAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(30);//Sound
@@ -12229,11 +12229,11 @@ namespace DataGenerator.Data
                 skill.Data.SkillStates.Set(new AdditionalEffectState(25));
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 GroupEvent groupEvent = new GroupEvent();
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_speed", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_attack", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_defense", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_attack", false, true, 1));
-                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_defense", false, true, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_speed", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_attack", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_defense", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_attack", false, true, true, false, 1));
+                groupEvent.BaseEvents.Add(new StatusStackBattleEvent("mod_special_defense", false, true, true, false, 1));
                 skill.Data.AfterActions.Add(0, new AdditionalEndEvent(groupEvent));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AreaAction();

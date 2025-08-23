@@ -27,6 +27,7 @@ namespace DataGenerator.Data
             }
         }
 
+        // moves all event data from the created move to the existing move
         public static void AddMoveDataToAnims(params int[] movesToAdd)
         {
             if (movesToAdd.Length > 0)
@@ -38,9 +39,7 @@ namespace DataGenerator.Data
                     SkillData oldMove = DataManager.LoadEntryData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString());
                     if (oldMove != null)
                     {
-                        //oldMove.Data.OnActions = move.Item2.Data.OnActions;
-                        //oldMove.Data.OnHits = move.Item2.Data.OnHits;
-                        oldMove.Data.BeforeHits = move.Item2.Data.BeforeHits;
+                        oldMove.Data.AfterActions = move.Item2.Data.AfterActions;
                         DataManager.SaveEntryData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
                     }
                 }
@@ -53,7 +52,7 @@ namespace DataGenerator.Data
                     SkillData oldMove = DataManager.LoadEntryData<SkillData>(move.Item1, DataManager.DataType.Skill.ToString());
                     if (oldMove != null)
                     {
-                        oldMove.Data.OnActions = move.Item2.Data.OnActions;
+                        oldMove.Data.AfterActions = move.Item2.Data.AfterActions;
                         DataManager.SaveEntryData(move.Item1, DataManager.DataType.Skill.ToString(), oldMove);
                     }
                 }
