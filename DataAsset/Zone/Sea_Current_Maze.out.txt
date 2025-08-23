@@ -13,11 +13,43 @@ TeamSpawnZoneStep poolSpawn = new TeamSpawnZoneStep();
 poolSpawn.Priority = PR_RESPAWN_MOB;
 
 
-poolSpawn.Spawns.Add(GetTeamMob("luvdisc", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+//packs of 3
+poolSpawn.Spawns.Add(GetTeamMob("luvdisc", "", "agility", "water_pulse", "aqua_ring", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("finizen", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("qwilfish", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("relicanth", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
-poolSpawn.Spawns.Add(GetTeamMob("wishiwashi", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("wishiwashi", "", "dive", "aqua_tail", "feint_attack", "", new RandRange(55), TeamMemberSpawn.MemberRole.Loner, "retreater"), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("tynamo", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("clauncher", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("inkay", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+//always together
+poolSpawn.Spawns.Add(GetTeamMob("mantine", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+//always together
+poolSpawn.Spawns.Add(GetTeamMob("remoraid", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("altaria", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("pelipper", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("dragonair", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("slowbro", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("slowking", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("raichu", 1, "", Gender.Unknown), "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("exeggutor", 1, "", Gender.Unknown), "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("tentacruel", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("golisopod", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("dewgong", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("vanilluxe", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("pidgeot", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("bellossom", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("vivillon", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("sealeo", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("walrein", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("starmie", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("seaking", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("empoleon", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("crabrawler", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("palossand", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("pyukumuku", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("bruxish", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("eiscue", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("jumpluff", "", "memento", "sleep_powder", "rage_powder", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("sharpedo", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("kingler", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);

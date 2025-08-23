@@ -17,3 +17,4 @@ poolSpawn.Spawns.Add(GetTeamMob("bulbasaur", "", "", "", "", "", new RandRange(5
 poolSpawn.Spawns.Add(GetTeamMob("charmander", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("squirtle", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
 poolSpawn.Spawns.Add(GetTeamMob("farigiraf", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
+poolSpawn.Spawns.Add(GetTeamMob("lillipup", "", "", "", "", "", new RandRange(5)), new IntRange(0, max_floors), 10);
