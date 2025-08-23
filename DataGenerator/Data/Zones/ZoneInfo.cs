@@ -2092,7 +2092,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("absol", "super_luck", "night_slash", "swords_dance", "", "", new RandRange(38), "wander_normal", false, true), new IntRange(2, 6), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("florges", "", "petal_blizzard", "flower_shield", "", "", new RandRange(38), "wander_normal", false, true), new IntRange(2, 8), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("machamp", "no_guard", "dynamic_punch", "", "", "", new RandRange(39), "wander_normal", false, true), new IntRange(2, 8), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("golem", "", "stone_edge", "rock_blast", "", "", new RandRange(39), "wander_normal", false, true), new IntRange(4, 8), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("golem", "", "explosion", "rollout", "", "", new RandRange(39), "wander_normal", false, true), new IntRange(4, 8), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("swalot", "liquid_ooze", "sludge_bomb", "encore", "", "", new RandRange(39), "wander_normal", false, true), new IntRange(4, 8), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("drapion", "", "poison_jab", "sucker_punch", "", "", new RandRange(39), "wander_normal", false, true), new IntRange(6, 12), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("magnezone", "", "discharge", "magnet_bomb", "", "", new RandRange(38), "wander_normal", false, true), new IntRange(4, 10), 10);

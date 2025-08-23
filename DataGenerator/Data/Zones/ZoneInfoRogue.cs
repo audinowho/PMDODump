@@ -763,8 +763,6 @@ namespace DataGenerator.Data
 
             //35//329 Vibrava : 225 Dragon Breath : 048 Supersonic
 
-            //44//076 Golem : 153 Explosion : 205 Rollout
-
             //38//324 Torkoal : 257 Heat Wave : 334 Iron Defense : 175 Flail
 
             //39 Jigglypuff : 47 Sing : 156 Rest : 574 Disarming Voice

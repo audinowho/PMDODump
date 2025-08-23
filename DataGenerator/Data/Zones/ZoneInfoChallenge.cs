@@ -160,6 +160,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("dustox", "", "confusion", "string_shot", "", "", new RandRange(13)), new IntRange(6, 8), 10);
                     poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("rattata", 1, "", Gender.Unknown), "hustle", "focus_energy", "bite", "", "", new RandRange(14)), new IntRange(7, 8), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("kricketune", "technician", "growl", "leech_life", "sing", "", new RandRange(14)), new IntRange(7, 8), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("snom", "", "powder_snow", "", "", "", new RandRange(14)), new IntRange(7, 8), 10);
 
                     poolSpawn.TeamSizes.Add(1, new IntRange(0, max_floors), 12);
                     floorSegment.ZoneSteps.Add(poolSpawn);
