@@ -1157,8 +1157,8 @@ namespace DataGenerator.Data
                 {
                     localArgs.Add(DataManager.Instance.GetStatus((string)args[0]).Name);
 
-                    item.AfterHittings.Add(0, new FamilyBattleEvent(new RegularAttackNeededEvent(new OnHitEvent(true, false, 35, new StatusBattleEvent((string)args[0], true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
-                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ThrownItemNeededEvent(new OnHitEvent(true, false, 35, new StatusBattleEvent((string)args[0], true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new RegularAttackNeededEvent(new OnHitEvent(true, false, 35, new StatusBattleEvent((string)args[0], true, true, false, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ThrownItemNeededEvent(new OnHitEvent(true, false, 35, new StatusBattleEvent((string)args[0], true, true, false, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
                 }
             }
             else if (type == ExclusiveItemEffect.DevolveOnAttack)
@@ -1243,7 +1243,7 @@ namespace DataGenerator.Data
                     BattleData.SkillCategory category = (BattleData.SkillCategory)args[1];
                     localArgs.Add(ToLocalText(category, translate ? itemEffectRows[typeof(ExclusiveItemEffect).Name + "." + type] : item.Desc, translate));
 
-                    item.AfterHittings.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new OnHitEvent(false, false, 100, new StatusBattleEvent((string)args[0], true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new OnHitEvent(false, false, 100, new StatusBattleEvent((string)args[0], true, true, false, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
                 }
             }
             else if (type == ExclusiveItemEffect.ChanceStatusOnCategoryHit)
@@ -1257,7 +1257,7 @@ namespace DataGenerator.Data
                     localArgs.Add(ToLocalText(category, translate ? itemEffectRows[typeof(ExclusiveItemEffect).Name + "." + type] : item.Desc, translate));
                     int chance = (int)args[2];
 
-                    item.AfterHittings.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new OnHitEvent(false, false, chance, new StatusBattleEvent((string)args[0], true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new OnHitEvent(false, false, chance, new StatusBattleEvent((string)args[0], true, true, false, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
                 }
             }
             else if (type == ExclusiveItemEffect.StatusOnTypeHit)
@@ -1270,7 +1270,7 @@ namespace DataGenerator.Data
                     localArgs.Add(DataManager.Instance.GetElement(element).Name);
                     localArgs.Add(DataManager.Instance.GetStatus((string)args[1]).Name);
 
-                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ElementNeededEvent(element, new OnHitEvent(false, false, 100, new StatusBattleEvent((string)args[1], true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ElementNeededEvent(element, new OnHitEvent(false, false, 100, new StatusBattleEvent((string)args[1], true, true, false, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
                 }
             }
             else if (type == ExclusiveItemEffect.ChanceStatusOnTypeHit)
@@ -1284,7 +1284,7 @@ namespace DataGenerator.Data
                     localArgs.Add(DataManager.Instance.GetStatus((string)args[1]).Name);
                     int chance = (int)args[2];
 
-                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ElementNeededEvent(element, new OnHitEvent(false, false, chance, new StatusBattleEvent((string)args[1], true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ElementNeededEvent(element, new OnHitEvent(false, false, chance, new StatusBattleEvent((string)args[1], true, true, false, false, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
                 }
             }
             else if (type == ExclusiveItemEffect.ChanceStatOnTypeHit)
@@ -1298,7 +1298,7 @@ namespace DataGenerator.Data
                     localArgs.Add(DataManager.Instance.GetStatus((string)args[1]).Name);
                     int chance = (int)args[2];
 
-                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ElementNeededEvent(element, new OnHitEvent(false, false, chance, new StatusStackBattleEvent((string)args[1], true, true, false, -1, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                    item.AfterHittings.Add(0, new FamilyBattleEvent(new ElementNeededEvent(element, new OnHitEvent(false, false, chance, new StatusStackBattleEvent((string)args[1], true, true, false, false, -1, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
                 }
             }
             else if (type == ExclusiveItemEffect.StatusOnCategoryUse)
@@ -1311,7 +1311,7 @@ namespace DataGenerator.Data
                     BattleData.SkillCategory category = (BattleData.SkillCategory)args[1];
                     localArgs.Add(ToLocalText(category, translate ? itemEffectRows[typeof(ExclusiveItemEffect).Name + "." + type] : item.Desc, translate));
 
-                    item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new StatusBattleEvent((string)args[0], false, true, false, new StringKey("MSG_EXCL_ITEM_TYPE")))));
+                    item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new StatusBattleEvent((string)args[0], false, true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE")))));
                 }
             }
             else if (type == ExclusiveItemEffect.StatOnCategoryUse)
@@ -1325,7 +1325,7 @@ namespace DataGenerator.Data
                     localArgs.Add(ToLocalText(category, translate ? itemEffectRows[typeof(ExclusiveItemEffect).Name + "." + type] : item.Desc, translate));
                     int chance = (int)args[2];
 
-                    item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new OnHitAnyEvent(false, chance, new StatusStackBattleEvent((string)args[0], false, true, false, 1, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
+                    item.AfterActions.Add(0, new FamilyBattleEvent(new CategoryNeededEvent(category, new OnHitAnyEvent(false, chance, new StatusStackBattleEvent((string)args[0], false, true, true, false, 1, new StringKey("MSG_EXCL_ITEM_TYPE"))))));
                 }
             }
             else if (type == ExclusiveItemEffect.MapStatusOnCategoryUse)
@@ -1456,7 +1456,7 @@ namespace DataGenerator.Data
                     localArgs.Add(DataManager.Instance.GetElement(counterElement).Name);
                     localArgs.Add(DataManager.Instance.GetStatus(counterStatus).Name);
 
-                    item.AfterBeingHits.Add(0, new FamilyBattleEvent(new ElementNeededEvent(counterElement, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new StatusBattleEvent(counterStatus, false, true, false, new StringKey("MSG_EXCL_ITEM_TYPE"),
+                    item.AfterBeingHits.Add(0, new FamilyBattleEvent(new ElementNeededEvent(counterElement, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new StatusBattleEvent(counterStatus, false, true, false, false, new StringKey("MSG_EXCL_ITEM_TYPE"),
                         new BattleAnimEvent(new SingleEmitter(new AnimData("Circle_Small_Blue_Out", 2)), "DUN_Switcher", false, 0))))));
                 }
             }
@@ -1699,7 +1699,7 @@ namespace DataGenerator.Data
                 if (includeEffects)
                 {
                     localArgs.Add(DataManager.Instance.GetStatus((string)args[0]).Name);
-                    item.AfterActions.Add(0, new FamilyBattleEvent(new KnockOutNeededEvent(new StatusBattleEvent((string)args[0], false, true, false, new StringKey("MSG_EXCL_ITEM_TYPE")))));
+                    item.AfterActions.Add(0, new FamilyBattleEvent(new KnockOutNeededEvent(new StatusBattleEvent((string)args[0], false, true, true, false, new StringKey("MSG_EXCL_ITEM_TYPE")))));
                 }
             }
             else if (type == ExclusiveItemEffect.Anchor)

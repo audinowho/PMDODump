@@ -120,7 +120,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusBattleEvent("poison", true, false, true));
+                newData.OnHits.Add(0, new StatusBattleEvent("poison", true, false, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 4)
@@ -150,7 +150,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusBattleEvent("sleep", true, false, true));
+                newData.OnHits.Add(0, new StatusBattleEvent("sleep", true, false, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 5)
@@ -184,7 +184,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusBattleEvent("confuse", true, false, true));
+                newData.OnHits.Add(0, new StatusBattleEvent("confuse", true, false, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 6)
@@ -215,7 +215,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, true, -1));
+                newData.OnHits.Add(0, new StatusStackBattleEvent("mod_speed", true, false, false, true, -1));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 7)
@@ -275,7 +275,7 @@ namespace DataGenerator.Data
                 newData.Element = "none";
                 newData.HitFX.Emitter = new SingleEmitter(new AnimData("X_RSE", 15), 3);
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot", true, false));
+                newData.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot", false, true, false));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 9)
@@ -369,7 +369,7 @@ namespace DataGenerator.Data
                 newData.OnHits.Add(0, new SetItemStickyEvent(true, false, "seed_decoy", true, new HashSet<FlagType>()));
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(5));
-                newData.OnHits.Add(0, new StatusStateBattleEvent("immobilized", true, false, true, statusStates));
+                newData.OnHits.Add(0, new StatusStateBattleEvent("immobilized", true, false, false, true, statusStates));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 12)
@@ -655,7 +655,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusBattleEvent("poison_toxic", true, false, true));
+                newData.OnHits.Add(0, new StatusBattleEvent("poison_toxic", true, false, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 22)
@@ -741,7 +741,7 @@ namespace DataGenerator.Data
                 BattleData newData = new BattleData();
                 newData.Element = "none";
                 newData.HitRate = -1;
-                newData.OnHits.Add(0, new StatusBattleEvent("grudge", true, false, true));
+                newData.OnHits.Add(0, new StatusBattleEvent("grudge", true, false, false, true));
                 tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
             }
             else if (ii == 25)

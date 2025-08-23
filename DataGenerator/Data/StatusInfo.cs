@@ -2446,7 +2446,7 @@ namespace DataGenerator.Data
                 SingleEmitter emitter = new SingleEmitter(new AnimData("Protect_Yellow", 2));
                 status.BeforeBeingHits.Add(0, new AttackingMoveNeededEvent(new ProtectEvent(new BattleAnimEvent(emitter, "DUN_Screen_Hit", true, 10))));
                 //TODO: this is kind of a hack and should technically be bound to the protection from before via some kind of context state
-                //currently te bug won't surface unless Unseen Fist or some other move is added the ignores protect but does not lift it
+                //currently te bug won't surface unless Unseen Fist or some other move is added that ignores protect but does not lift it
                 status.BeforeBeingHits.Add(15, new AttackingMoveNeededEvent(new StatusStackBattleEvent("mod_attack", false, true, -1)));
                 status.StatusStates.Set(new RecentState());
                 status.StatusStates.Set(new CountDownState(3));
@@ -2488,7 +2488,7 @@ namespace DataGenerator.Data
                 status.BeforeStatusAdds.Add(0, new SameStatusCheck(new StringKey("MSG_FAIRY_LOCK_ALREADY")));
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_FAIRY_LOCK_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
-                status.AfterActions.Add(0, new OnAggressionEvent(new StatusBattleEvent("immobilized", false, false, true, new StringKey(),
+                status.AfterActions.Add(0, new OnAggressionEvent(new StatusBattleEvent("immobilized", false, false, false, true, new StringKey(),
                     new BattleAnimEvent(new BetweenEmitter(new AnimData("Embargo_Yellow_Front", 2), new AnimData("Embargo_Yellow_Back", 2)), "DUN_Ice_Shard", false, 30)), new RemoveBattleEvent(false)));
             }
             else if (ii == 140)

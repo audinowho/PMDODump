@@ -2145,7 +2145,7 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Foe-Seal Orb");
                 item.Desc = new LocalText("An orb that seals the last-used move of all enemies. It affects all enemies up to 5 tiles away.");
                 item.Sprite = "Orb_DarkBlue";
-                item.UseEvent.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot", false, true));
+                item.UseEvent.OnHits.Add(0, new DisableBattleEvent("disable", "last_used_move_slot", false, false, true));
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
                 ((AreaAction)item.UseAction).Speed = 10;
@@ -2419,7 +2419,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A bizarre orb that will badly poison the holder. This item sticks when held.");
                 item.Sprite = "Toxic_Orb";
                 item.Price = 300;
-                item.AfterActions.Add(0, new OnAggressionEvent(new StatusBattleEvent("poison_toxic", false, true)));
+                item.AfterActions.Add(0, new OnAggressionEvent(new StatusBattleEvent("poison_toxic", false, true, true, false)));
             }
             else if (ii == 324)
             {
@@ -2427,7 +2427,7 @@ namespace DataGenerator.Data
                 item.Desc = new LocalText("A bizarre orb that will afflict the holder with a burn. This item sticks when held.");
                 item.Sprite = "Flame_Orb";
                 item.Price = 300;
-                item.AfterActions.Add(0, new OnAggressionEvent(new StatusBattleEvent("burn", false, true)));
+                item.AfterActions.Add(0, new OnAggressionEvent(new StatusBattleEvent("burn", false, true, true, false)));
             }
             else if (ii == 325)
             {
@@ -2437,7 +2437,7 @@ namespace DataGenerator.Data
                 item.Price = 300;
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(2));
-                item.AfterActions.Add(0, new OnMoveUseEvent(new StatusStateBattleEvent("paused", false, true, statusStates)));
+                item.AfterActions.Add(0, new OnMoveUseEvent(new StatusStateBattleEvent("paused", false, true, true, false, statusStates)));
                 item.OnRefresh.Add(0, new MiscEvent(new AnchorState()));
                 item.TargetElementEffects.Add(1, new TypeVulnerableEvent("ground"));
             }

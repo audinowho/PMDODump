@@ -55,7 +55,7 @@ namespace DataGenerator.Data
                 emitter.Bursts = 3;
                 emitter.Speed = 48;
                 emitter.StartDistance = 4;
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("flinch", false, true, false, new StringKey("MSG_STENCH"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("flinch", false, true, false, false, new StringKey("MSG_STENCH"),
                     new BattleAnimEvent(emitter, "DUN_Smokescreen", false, 30))));
             }
             else if (ii == 2)
@@ -107,7 +107,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Static");
                 ability.Desc = new LocalText("The Pokémon is charged with static electricity, so contact with it may cause paralysis.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("paralyze", false, true, false, new StringKey("MSG_STATIC"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("paralyze", false, true, false, false, new StringKey("MSG_STATIC"),
                     new BattleAnimEvent(new SingleEmitter(new AnimData("Spark", 3)), "DUN_Paralyzed", false, 0))));
             }
             else if (ii == 10)
@@ -212,7 +212,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Shadow Tag");
                 ability.Desc = new LocalText("This Pokémon steps on the opposing Pokémon's shadow to prevent it from escaping.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new StatusBattleEvent("immobilized", false, true, false, new StringKey("MSG_ARENA_TRAP"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new StatusBattleEvent("immobilized", false, true, false, false, new StringKey("MSG_ARENA_TRAP"),
                     new BattleAnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", false, 0))));
                 //ability.AfterHittings.Add(0, new OnHitEvent(false, false, 100, new StatusBattleEvent("immobilized", true, true, false, new StringKey("MSG_SHADOW_TAG"),
                 //    new BattleAnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", true, 0))));
@@ -262,9 +262,9 @@ namespace DataGenerator.Data
                 emitter3.Speed = 48;
                 emitter3.StartDistance = 4;
                 ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100,
-                    new StatusBattleEvent("sleep", false, true, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter1, "DUN_Substitute", false, 20)),
-                    new StatusBattleEvent("paralyze", false, true, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter2, "DUN_Substitute", false, 20)),
-                    new StatusBattleEvent("poison", false, true, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter3, "DUN_Substitute", false, 20))));
+                    new StatusBattleEvent("sleep", false, true, false, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter1, "DUN_Substitute", false, 20)),
+                    new StatusBattleEvent("paralyze", false, true, false, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter2, "DUN_Substitute", false, 20)),
+                    new StatusBattleEvent("poison", false, true, false, false, new StringKey("MSG_EFFECT_SPORE"), new BattleAnimEvent(emitter3, "DUN_Substitute", false, 20))));
             }
             else if (ii == 28)
             {
@@ -342,7 +342,7 @@ namespace DataGenerator.Data
                 emitter.StartHeight = -4;
                 emitter.HeightSpeed = 12;
                 emitter.SpeedDiff = 4;
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("poison", false, true, false, new StringKey("MSG_POISON_POINT"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("poison", false, true, false, false, new StringKey("MSG_POISON_POINT"),
                     new BattleAnimEvent(emitter, "DUN_Toxic", false, 30))));
             }
             else if (ii == 39)
@@ -427,7 +427,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Contact with the Pokémon may burn the attacker. Thrown items will also burn up on contact.");
                 SingleEmitter endEmitter = new SingleEmitter(new AnimData("Burned", 3));
                 endEmitter.LocHeight = 8;
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("burn", false, true, false, new StringKey("MSG_FLAME_BODY"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("burn", false, true, false, false, new StringKey("MSG_FLAME_BODY"),
                     new BattleAnimEvent(endEmitter, "DUN_Flamethrower_3", false, 0))));
                 ability.ProximityEvent.Radius = 0;
                 ability.ProximityEvent.TargetAlignments = (Alignment.Friend | Alignment.Foe);
@@ -486,7 +486,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("The Pokémon can't attack on consecutive turns.");
                 StateCollection<StatusState> statusStates = new StateCollection<StatusState>();
                 statusStates.Set(new CountDownState(2));
-                ability.AfterActions.Add(0, new OnMoveUseEvent(new StatusStateBattleEvent("paused", false, true, statusStates)));
+                ability.AfterActions.Add(0, new OnMoveUseEvent(new StatusStateBattleEvent("paused", false, true, true, false, statusStates)));
             }
             else if (ii == 55)
             {
@@ -501,7 +501,7 @@ namespace DataGenerator.Data
                 ability.Desc = new LocalText("Contact with the Pokémon may cause infatuation.");
                 SingleEmitter endAnim = new SingleEmitter(new AnimData("Charm", 1));
                 endAnim.LocHeight = 16;
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("in_love", false, true, false, new StringKey("MSG_CUTE_CHARM"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 35, new StatusBattleEvent("in_love", false, true, false, false, new StringKey("MSG_CUTE_CHARM"),
                     new BattleAnimEvent(endAnim, "DUN_Charm", false, 20))));
             }
             else if (ii == 57)
@@ -622,7 +622,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Arena Trap");
                 ability.Desc = new LocalText("Prevents grounded opposing Pokémon from fleeing.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new CheckImmunityBattleEvent("ground", false, new StatusBattleEvent("immobilized", false, true, false, new StringKey("MSG_ARENA_TRAP")))));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent(Alignment.Foe, false, false, false, 100, new CheckImmunityBattleEvent("ground", false, new StatusBattleEvent("immobilized", false, true, false, false, new StringKey("MSG_ARENA_TRAP")))));
                 //ability.AfterHittings.Add(0, new OnHitEvent(false, false, 100, new CheckImmunityBattleEvent("ground", true, new StatusBattleEvent("immobilized", true, true, false, new StringKey("MSG_ARENA_TRAP")))));
             }
             else if (ii == 72)
@@ -715,7 +715,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Anger Point");
                 ability.Desc = new LocalText("The Pokémon is angered when it takes a critical hit, and that maxes its Attack stat.");
-                ability.AfterBeingHits.Add(0, new CritNeededEvent(new StatusStackBattleEvent("mod_attack", true, true, false, 12, new StringKey("MSG_ANGER_POINT"))));
+                ability.AfterBeingHits.Add(0, new CritNeededEvent(new StatusStackBattleEvent("mod_attack", true, true, false, false, 12, new StringKey("MSG_ANGER_POINT"))));
             }
             else if (ii == 84)
             {
@@ -1201,7 +1201,7 @@ namespace DataGenerator.Data
                 emitter.StartHeight = -4;
                 emitter.HeightSpeed = 12;
                 emitter.SpeedDiff = 4;
-                ability.AfterHittings.Add(0, new OnHitEvent(true, true, 25, new StatusBattleEvent("poison", true, true, false, new StringKey("MSG_POISON_TOUCH"),
+                ability.AfterHittings.Add(0, new OnHitEvent(true, true, 25, new StatusBattleEvent("poison", true, true, false, false, new StringKey("MSG_POISON_TOUCH"),
                     new BattleAnimEvent(emitter, "DUN_Toxic", true, 30))));
             }
             else if (ii == 144)
@@ -1267,21 +1267,21 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Moxie");
                 ability.Desc = new LocalText("The Pokémon shows moxie, which may boost the Attack stat after knocking out any Pokémon with a move.");
-                ability.AfterActions.Add(0, new KnockOutNeededEvent(new OnMoveUseEvent(new OnHitAnyEvent(true, 50, new StatusStackBattleEvent("mod_attack", false, true, false, 1, new StringKey("MSG_MOXIE"))))));
+                ability.AfterActions.Add(0, new KnockOutNeededEvent(new OnMoveUseEvent(new OnHitAnyEvent(true, 50, new StatusStackBattleEvent("mod_attack", false, true, true, false, 1, new StringKey("MSG_MOXIE"))))));
             }
             else if (ii == 154)
             {
                 ability.Name = new LocalText("Justified");
                 ability.Desc = new LocalText("Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.");
-                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_attack", true, true, false, 1, new StringKey("MSG_JUSTIFIED")))));
+                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_attack", true, true, false, false, 1, new StringKey("MSG_JUSTIFIED")))));
             }
             else if (ii == 155)
             {
                 ability.Name = new LocalText("Rattled");
                 ability.Desc = new LocalText("Dark-, Ghost-, and Bug-type moves scare the Pokémon and boost its Movement Speed.");
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_speed", true, true, false, 1, new StringKey("MSG_RATTLED"))));
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("ghost", new StatusStackBattleEvent("mod_speed", true, true, false, 1, new StringKey("MSG_RATTLED"))));
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("bug", new StatusStackBattleEvent("mod_speed", true, true, false, 1, new StringKey("MSG_RATTLED"))));
+                ability.AfterBeingHits.Add(0, new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_speed", true, true, false, false, 1, new StringKey("MSG_RATTLED"))));
+                ability.AfterBeingHits.Add(0, new ElementNeededEvent("ghost", new StatusStackBattleEvent("mod_speed", true, true, false, false, 1, new StringKey("MSG_RATTLED"))));
+                ability.AfterBeingHits.Add(0, new ElementNeededEvent("bug", new StatusStackBattleEvent("mod_speed", true, true, false, false, 1, new StringKey("MSG_RATTLED"))));
             }
             else if (ii == 156)
             {
@@ -1559,7 +1559,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Stamina");
                 ability.Desc = new LocalText("The Pokémon may boost its Defense stat when hit by a move.");
-                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new HitCounterEvent((Alignment.Friend | Alignment.Foe), true, false, true, 25, new StatusStackBattleEvent("mod_defense", true, true, false, 1, new StringKey("MSG_STAMINA")))));
+                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new HitCounterEvent((Alignment.Friend | Alignment.Foe), true, false, true, 25, new StatusStackBattleEvent("mod_defense", true, true, false, false, 1, new StringKey("MSG_STAMINA")))));
             }
             else if (ii == 193)
             {
@@ -1945,7 +1945,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Perish Body");
                 ability.Desc = new LocalText("When hit by a move that makes direct contact, the attacker will receive the Perish Count status.");
-                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100, new StatusBattleEvent("perish_song", false, true, false, new StringKey("MSG_HAS_ABILITY"),
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), 100, new StatusBattleEvent("perish_song", false, true, false, false, new StringKey("MSG_HAS_ABILITY"),
                     new BattleAnimEvent(new SingleEmitter(new AnimData("Dark_Pulse_Ranger", 3)), "DUN_Night_Shade", false, 30))));
             }
             else if (ii == 254)
