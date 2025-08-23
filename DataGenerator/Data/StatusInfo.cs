@@ -2082,7 +2082,7 @@ namespace DataGenerator.Data
                 status.OnStatusAdds.Add(0, new StatusBattleLogEvent(new StringKey("MSG_CONVERSION_2_START"), true));
                 status.OnStatusRemoves.Add(0, new StatusBattleLogEvent(new StringKey("MSG_STATUS_END")));
                 status.StatusStates.Set(new CountDownState(10));
-                status.BeforeBeingHits.Add(0, new Conversion2Event());
+                status.BeforeBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), false, false, true, 100, new Conversion2Event()));
                 status.OnTurnEnds.Add(0, new CountDownRemoveEvent(true));
             }
             else if (ii == 118)

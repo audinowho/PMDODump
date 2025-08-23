@@ -162,7 +162,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Color Change");
                 ability.Desc = new LocalText("The Pokémon's type becomes the type of the move used on it.");
-                ability.AfterBeingHits.Add(0, new ConversionEvent(true));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), false, false, true, 100, new ConversionEvent(true)));
             }
             else if (ii == 17)
             {
@@ -1273,15 +1273,15 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Justified");
                 ability.Desc = new LocalText("Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.");
-                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_attack", true, true, false, false, 1, new StringKey("MSG_JUSTIFIED")))));
+                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new HitCounterEvent((Alignment.Friend | Alignment.Foe), false, false, true, 100, new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_attack", true, true, false, false, 1, new StringKey("MSG_JUSTIFIED"))))));
             }
             else if (ii == 155)
             {
                 ability.Name = new LocalText("Rattled");
                 ability.Desc = new LocalText("Dark-, Ghost-, and Bug-type moves scare the Pokémon and boost its Movement Speed.");
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_speed", true, true, false, false, 1, new StringKey("MSG_RATTLED"))));
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("ghost", new StatusStackBattleEvent("mod_speed", true, true, false, false, 1, new StringKey("MSG_RATTLED"))));
-                ability.AfterBeingHits.Add(0, new ElementNeededEvent("bug", new StatusStackBattleEvent("mod_speed", true, true, false, false, 1, new StringKey("MSG_RATTLED"))));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), false, false, true, 100, new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_speed", true, true, false, false, 1, new StringKey("MSG_RATTLED")))));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), false, false, true, 100, new ElementNeededEvent("ghost", new StatusStackBattleEvent("mod_speed", true, true, false, false, 1, new StringKey("MSG_RATTLED")))));
+                ability.AfterBeingHits.Add(0, new HitCounterEvent((Alignment.Friend | Alignment.Foe), false, false, true, 100, new ElementNeededEvent("bug", new StatusStackBattleEvent("mod_speed", true, true, false, false, 1, new StringKey("MSG_RATTLED")))));
             }
             else if (ii == 156)
             {
