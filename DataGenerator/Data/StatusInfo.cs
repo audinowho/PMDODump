@@ -559,7 +559,8 @@ namespace DataGenerator.Data
                 status.Name = new LocalText("Last Targeted By");
                 status.Targeted = true;
                 status.StatusStates.Set(new HPState());//damage dealt
-                //status.StatusStates.Set(new CountState());//turns passed since it was initially targeted
+                status.StatusStates.Set(new CountDownState());//turns passed since it was initially hit
+                status.OnTurnEnds.Add(0, new CountUpEvent());
             }
             else if (ii == 26)
             {
