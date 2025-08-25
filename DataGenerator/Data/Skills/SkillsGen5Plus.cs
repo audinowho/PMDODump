@@ -4983,17 +4983,26 @@ namespace DataGenerator.Data
             }
             else if (ii == 715)
             {
-                skill.Name = new LocalText("**Tearful Look");
+                skill.Name = new LocalText("Tearful Look");
                 skill.Desc = new LocalText("The user gets teary eyed to make the target lose its combative spirit. This lowers the target's Attack and Sp. Atk stats.");
-                skill.BaseCharges = 20;
+                skill.BaseCharges = 13;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.OnHits.Add(0, new StatusStackBattleEvent("mod_attack", true, false, -1));
+                skill.Data.OnHits.Add(0, new StatusStackBattleEvent("mod_special_attack", true, false, -1));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
+                skill.HitboxAction = new ProjectileAction();
+                ((ProjectileAction)skill.HitboxAction).Range = 8;
+                ((ProjectileAction)skill.HitboxAction).Speed = 15;
+                ((ProjectileAction)skill.HitboxAction).StopAtWall = true;
+                ((ProjectileAction)skill.HitboxAction).StopAtHit = true;
                 skill.HitboxAction.TargetAlignments = Alignment.Foe;
                 skill.Explosion.TargetAlignments = Alignment.Foe;
+                BattleFX preFX = new BattleFX();
+                preFX.Emitter = new SingleEmitter(new AnimData("Leer", 2));
+                preFX.Sound = "DUN_Leer_2";
+                skill.HitboxAction.PreActions.Add(preFX);
             }
             else if (ii == 716)
             {
@@ -7132,17 +7141,19 @@ namespace DataGenerator.Data
             }
             else if (ii == 842)
             {
-                skill.Name = new LocalText("**Shelter");
-                skill.Desc = new LocalText("");
-                skill.BaseCharges = 10;
+                skill.Name = new LocalText("Shelter");
+                skill.Desc = new LocalText("The user makes its skin as hard as an iron shield, boosting its Defense and Evasion.");
+                skill.BaseCharges = 18;
                 skill.Data.Element = "steel";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.HitRate = -1;
+                skill.Data.OnHits.Add(0, new StatusStackBattleEvent("mod_defense", true, false, 1));
+                skill.Data.OnHits.Add(0, new StatusStackBattleEvent("mod_evasion", true, false, 1));
                 skill.Strikes = 1;
-                skill.HitboxAction = new AttackAction();
-                ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(05);//Attack
-                skill.HitboxAction.TargetAlignments = Alignment.Foe;
-                skill.Explosion.TargetAlignments = Alignment.Foe;
+                skill.HitboxAction = new SelfAction();
+                ((SelfAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(37);//Withdraw
+                skill.HitboxAction.TargetAlignments = Alignment.Self;
+                skill.Explosion.TargetAlignments = Alignment.Self;
             }
             else if (ii == 843)
             {
