@@ -4,12 +4,16 @@
 * Added Johto starters to initial starter list.
 * Swapped out wild sleeping Johto starters in Guildmaster Trail for Hoenn starters.
 * Added Snom to Tiny Tunnel
+* Slightly decreased the map size of certain layouts in Ambush forest
 * Reverted the speed changes of 0.8.10 due to the inability to kite normal speed foes.
 * Fixed Pastel Veil (was not working)
 * Fixed errors in outlaw missions occurring when setting up outlaws' moves.
 * Refactored level-reset logic to avoid potential data loss.
 * Added Fickle Specs: +1 Attack Range, Torment effect, Sticky
+* Vile Seed: Stat drop changed from -3 -> -6
 * Wide Lens effect -> Boost accuracy x1.5
+* Evo stones affect thrown items too
+* Golden Thorn reworked to factor level into its calculation of money spawn, and is treated as a Special move if the thrower's SpAtk is higher than its Attack.
 * Fixed an issue where self-inflicted statuses and stat drops were not processed as such.
 * Fixed issues where various abilities that triggered on-hit triggered on self-target
 * Fix Lilligant-H evolution method

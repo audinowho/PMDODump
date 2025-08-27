@@ -2744,13 +2744,13 @@ namespace DataGenerator.Data
             else if (ii == 590)
             {
                 skill.Name = new LocalText("Confide");
-                skill.Desc = new LocalText("The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.");
-                skill.BaseCharges = 18;
+                skill.Desc = new LocalText("The user tells the target a secret, and the target loses its ability to concentrate. This harshly lowers the target's Sp. Atk stat.");
+                skill.BaseCharges = 17;
                 skill.Data.Element = "normal";
                 skill.Data.Category = BattleData.SkillCategory.Status;
                 skill.Data.SkillStates.Set(new SoundState());
                 skill.Data.HitRate = -1;
-                skill.Data.OnHits.Add(0, new StatusStackBattleEvent("mod_special_attack", true, false, -1));
+                skill.Data.OnHits.Add(0, new StatusStackBattleEvent("mod_special_attack", true, false, -2));
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
                 ((AttackAction)skill.HitboxAction).CharAnimData = new CharAnimFrameType(06);//Charge
@@ -5121,6 +5121,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(100));
+                skill.Data.OnActions.Add(-11, new BestCategoryEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -5137,6 +5138,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = -1;
                 skill.Data.SkillStates.Set(new BasePowerState(200));
+                skill.Data.OnActions.Add(-11, new BestCategoryEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -6430,6 +6432,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(90));
+                skill.Data.OnActions.Add(-11, new BestCategoryEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();
@@ -7315,6 +7318,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Magical;
                 skill.Data.HitRate = 100;
                 skill.Data.SkillStates.Set(new BasePowerState(80));
+                skill.Data.OnActions.Add(-11, new BestCategoryEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
                 skill.HitboxAction = new AttackAction();

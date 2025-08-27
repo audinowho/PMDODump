@@ -640,10 +640,10 @@ namespace DataGenerator.Data
             else if (ii == 111)
             {
                 item.Name = new LocalText("Vile Seed");
-                item.Desc = new LocalText("A seed that drastically lowers the Pokémon's Defense and Special Defense.");
+                item.Desc = new LocalText("A seed that lowers the Pokémon's Defense and Special Defense to their lowest levels.");
                 item.Sprite = "Seed_DarkBlue";
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_defense", true, false, -3));
-                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_defense", true, false, -3));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_defense", true, false, -6));
+                item.UseEvent.OnHits.Add(0, new StatusStackBattleEvent("mod_special_defense", true, false, -6));
             }
             else if (ii == 112)
             {
@@ -1224,16 +1224,18 @@ namespace DataGenerator.Data
             else if (ii == 205)
             {
                 item.Name = new LocalText("Golden Thorn");
-                item.Desc = new LocalText("A brilliantly shining thorn crafted from solid gold. It is a fantastically precious item that gives its owner serious bragging rights. When hurled, it flies in a straight line to inflict damage on any Pokémon it hits, scattering coins everywhere.");
+                item.Desc = new LocalText("A brilliantly shining thorn crafted from solid gold. When hurled, it flies in a straight line and inflicts damage with the user’s Attack or Sp. Atk stat— whichever is higher. It scatters coins for each target it hits.");
                 item.Sprite = "Thorn_Yellow";
                 item.Icon = 1;
                 item.ThrowAnim = new AnimData("Thorn_Gold", 60);
                 item.Price = 111;
                 item.UseEvent.Category = BattleData.SkillCategory.Physical;
+                //change the attack category as early as possible
+                item.UseEvent.OnActions.Add(-11, new BestCategoryEvent());
                 item.UseEvent.SkillStates.Set(new BasePowerState(50));
                 item.UseEvent.OnActions.Add(0, new PierceEvent(false, true, true, false));
                 item.UseEvent.OnHits.Add(-1, new DamageFormulaEvent());
-                item.UseEvent.AfterActions.Add(0, new DamageMoneyEvent(10));
+                item.UseEvent.OnHits.Add(0, new DamageMoneyEvent(1, 10));
             }
             else if (ii == 206)
             {
@@ -2648,44 +2650,50 @@ namespace DataGenerator.Data
             else if (ii == 351)
             {
                 item.Name = new LocalText("Fire Stone");
-                item.Desc = new LocalText("A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fire-type.");
+                item.Desc = new LocalText("A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Fire-type.");
                 item.Sprite = "Stone_Red";
                 item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "fire")));
+                item.OnActions.Add(-1, new ThrownItemNeededEvent(new ChangeMoveElementEvent("none", "fire")));
             }
             else if (ii == 352)
             {
                 item.Name = new LocalText("Thunder Stone");
-                item.Desc = new LocalText("A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Electric-type.");
+                item.Desc = new LocalText("A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Electric-type.");
                 item.Sprite = "Stone_Gold";
                 item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "electric")));
+                item.OnActions.Add(-1, new ThrownItemNeededEvent(new ChangeMoveElementEvent("none", "electric")));
             }
             else if (ii == 353)
             {
                 item.Name = new LocalText("Water Stone");
-                item.Desc = new LocalText("A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Water-type.");
+                item.Desc = new LocalText("A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Water-type.");
                 item.Sprite = "Stone_Blue";
                 item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "water")));
+                item.OnActions.Add(-1, new ThrownItemNeededEvent(new ChangeMoveElementEvent("none", "water")));
             }
             else if (ii == 354)
             {
                 item.Name = new LocalText("Leaf Stone");
-                item.Desc = new LocalText("A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Grass-type.");
+                item.Desc = new LocalText("A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Grass-type.");
                 item.Sprite = "Stone_Green";
                 item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "grass")));
+                item.OnActions.Add(-1, new ThrownItemNeededEvent(new ChangeMoveElementEvent("none", "grass")));
             }
             else if (ii == 355)
             {
                 item.Name = new LocalText("Moon Stone");
-                item.Desc = new LocalText("An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fairy-type.");
+                item.Desc = new LocalText("An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Fairy-type.");
                 item.Sprite = "Stone_Black";
                 item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "fairy")));
+                item.OnActions.Add(-1, new ThrownItemNeededEvent(new ChangeMoveElementEvent("none", "fairy")));
             }
             else if (ii == 356)
             {
                 item.Name = new LocalText("Sun Stone");
-                item.Desc = new LocalText("An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Psychic-type.");
+                item.Desc = new LocalText("An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Psychic-type.");
                 item.Sprite = "Stone_Orange";
                 item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "psychic")));
+                item.OnActions.Add(-1, new ThrownItemNeededEvent(new ChangeMoveElementEvent("none", "psychic")));
             }
             else if (ii == 357)
             {
@@ -2824,9 +2832,10 @@ namespace DataGenerator.Data
             else if (ii == 379)
             {
                 item.Name = new LocalText("Ice Stone");
-                item.Desc = new LocalText("A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks to Ice-type.");
+                item.Desc = new LocalText("A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks and thrown items to Ice-type.");
                 item.Sprite = "Stone_LightBlue";
                 item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "ice")));
+                item.OnActions.Add(-1, new ThrownItemNeededEvent(new ChangeMoveElementEvent("none", "ice")));
             }
             else if (ii == 380)
             {
