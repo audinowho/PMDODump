@@ -20,7 +20,8 @@
 * Fixed talk behavior of team members in town.
 * Fixed error occurring when angering shopkeepers
 * Moves that temporarily learn moves such as Transform and Mimic will switch on/off for AI use based on settings.
+* Increased the visibility of tiles with character-darkness cover
 * Minor encounter changes
-* Minor dialogue changes.
+* Minor dialogue changes
 * Cyrillic letter support
 * Mission Mod: Fixed blackscreen with missions taking place in alternate segments

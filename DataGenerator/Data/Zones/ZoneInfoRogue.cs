@@ -1119,14 +1119,15 @@ namespace DataGenerator.Data
 
                 PopulateHouseItems(monsterChanceZoneStep, DungeonStage.Rogue, DungeonAccessibility.MainPath, max_floors);
 
-                //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, max_floors), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//no theme
-                                                                                                                                                                                                                         //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMoney(500, new ParamRange(5, 11)), new ParamRange(0, 30));
+                SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
+                garnishList.Add(new MapItem("loot_pearl", 2), 10);
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//no theme
+                //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMoney(500, new ParamRange(5, 11)), new ParamRange(0, 30));
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 5)), new IntRange(0, max_floors), 10);//TMs
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, max_floors), 30);//gummis
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 6)), new IntRange(0, max_floors), 10);//apricorns
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
                 for (int ii = 0; ii < dexMap.Length; ii++)
                     monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, max_floors), 10);//all monsters in the game
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, max_floors), 10);
@@ -1162,17 +1163,17 @@ namespace DataGenerator.Data
 
                 PopulateHallItems(monsterChanceZoneStep, DungeonStage.Rogue, DungeonAccessibility.MainPath, max_floors);
 
-
-                //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, max_floors), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//no theme
+                SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
+                garnishList.Add(new MapItem("loot_pearl", 2), 10);
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//no theme
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_deluxe", GetLegendaryItemSpawner<BaseMapGenContext>(false, true, true)), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(2, 5))), new IntRange(20, max_floors), 10);//TMs
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_deluxe", GetLegendaryItemSpawner<BaseMapGenContext>(false, true, true)), new RandRange(1)), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 6))), new IntRange(20, max_floors), 30);//gummis
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(2, 5))), new IntRange(0, 20), 10);//TMs
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 6))), new IntRange(0, 20), 30);//gummis
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 5))), new IntRange(0, 20), 10);//apricorns
 
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 40);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 20);//evo items
                 for (int ii = 0; ii < dexMap.Length; ii++)
                     monsterChanceZoneStep.Mobs.Add(GetHouseMob(dexMap[ii], "wander_smart"), new IntRange(0, max_floors), 10);//all monsters in the game
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(50, new RandRange(7, 13)), new IntRange(19, max_floors), 10);
@@ -2850,13 +2851,14 @@ namespace DataGenerator.Data
 
                 PopulateHouseItems(monsterChanceZoneStep, DungeonStage.Rogue, DungeonAccessibility.Unlockable, max_floors);
 
-                //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, max_floors), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, max_floors), 30);//no theme
+                SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
+                garnishList.Add(new MapItem("loot_pearl", 2), 10);
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, max_floors), 30);//no theme
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
                     new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(0, 30), 10);//TMs + machines
                 monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, max_floors), 30);//gummis
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
                 floorSegment.ZoneSteps.Add(monsterChanceZoneStep);
             }
@@ -2881,9 +2883,10 @@ namespace DataGenerator.Data
                     monsterChanceZoneStep.Items.Add(new MapItem(tm_id), new IntRange(0, max_floors), 2);//TMs
 
                 PopulateHallItems(monsterChanceZoneStep, DungeonStage.Rogue, DungeonAccessibility.Unlockable, max_floors);
-
-                //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeNone(0, new RandRange(5, 11)), new ParamRange(0, 30), 20);
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
+                
+                SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
+                garnishList.Add(new MapItem("loot_pearl", 2), 10);
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemThemeNone(80, new RandRange(2, 4))), new IntRange(0, 30), 30);//no theme
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_deluxe", GetLegendaryItemSpawner<BaseMapGenContext>(false, true, true)), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
                     new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(20, 30), 10);//TMs + machines
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(3, 5)),
@@ -2892,8 +2895,8 @@ namespace DataGenerator.Data
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_deluxe", GetLegendaryItemSpawner<BaseMapGenContext>(false, true, true)), new RandRange(1)), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 6))), new IntRange(20, 30), 30);//gummis
                 monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 6))), new IntRange(0, 20), 30);//gummis
 
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
-                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
+                monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
                 monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
 
                 floorSegment.ZoneSteps.Add(monsterChanceZoneStep);

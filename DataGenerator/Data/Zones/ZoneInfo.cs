@@ -1547,7 +1547,9 @@ namespace DataGenerator.Data
 
                             PopulateHouseItems(monsterChanceZoneStep, DungeonStage.Beginner, DungeonAccessibility.MainPath, max_floors);
 
-                            monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(40, new RandRange(2, 4))), new IntRange(0, max_floors), 30);//no theme
+                            SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
+                            garnishList.Add(new MapItem("loot_pearl", 2), 10);
+                            monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemThemeNone(40, new RandRange(2, 4))), new IntRange(0, max_floors), 30);//no theme
 
                             monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, max_floors), 20);//gummis
                             monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(2, 6)), new IntRange(0, 10), 10);//apricorns
@@ -2217,7 +2219,9 @@ namespace DataGenerator.Data
 
                         PopulateHouseItems(monsterChanceZoneStep, DungeonStage.Advanced, DungeonAccessibility.MainPath, max_floors);
 
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 4), "loot_pearl"), new ItemThemeNone(40, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//no theme
+                        SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
+                        garnishList.Add(new MapItem("loot_pearl", 2), 10);
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(1, 4), garnishList), new ItemThemeNone(40, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//no theme
                                                                                                                                                                                                                                     //monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMoney(500, new ParamRange(5, 11)), new ParamRange(0, 30));
                         monsterChanceZoneStep.ItemThemes.Add(new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 5)), new IntRange(0, max_floors), 15);//TMs
                         monsterChanceZoneStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 7)), new IntRange(0, max_floors), 30);//gummis
@@ -2263,7 +2267,9 @@ namespace DataGenerator.Data
                         monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(2, 4)),
                             new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(0, 30), 10);//TMs + machines
 
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeRange(true, true, new RandRange(3, 6), "loot_heart_scale")), new IntRange(0, max_floors), 30);//heart scales
+                        SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
+                        garnishList.Add(new MapItem("loot_heart_scale", 2), 10);
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeDirect(new RandRange(3, 6), garnishList)), new IntRange(0, max_floors), 30);//heart scales
                         monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1, 3)), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(0, 10), 20);//evo items
                         monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1, 3)), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(2, 4))), new IntRange(10, 20), 10);//evo items
                         monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
@@ -3739,7 +3745,9 @@ namespace DataGenerator.Data
                         monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeType(ItemData.UseType.Learn, false, true, new RandRange(2, 4)),
                             new ItemThemeRange(true, true, new RandRange(0, 2), ItemArray(IterateMachines()))), new IntRange(0, 30), 10);//TMs + machines
 
-                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeRange(true, true, new RandRange(3, 6), "loot_heart_scale")), new IntRange(0, max_floors), 30);//heart scales
+                        SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
+                        garnishList.Add(new MapItem("loot_heart_scale", 2), 10);
+                        monsterChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeBox(new BoxSpawner<BaseMapGenContext>("box_light", new SpeciesItemContextSpawner<BaseMapGenContext>(new IntRange(1), new RandRange(1))), new RandRange(1)), new ItemThemeDirect(new RandRange(3, 6), garnishList)), new IntRange(0, max_floors), 30);//heart scales
 
                         monsterChanceZoneStep.MobThemes.Add(new MobThemeNone(0, new RandRange(7, 13)), new IntRange(0, max_floors), 10);
 

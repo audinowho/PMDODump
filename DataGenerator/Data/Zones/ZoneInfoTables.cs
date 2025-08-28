@@ -1971,8 +1971,6 @@ namespace DataGenerator.Data
                 chestChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, max_floors), 20);//max potion
 
                 chestChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 20);//nugget
-                if (ambush)
-                    chestChanceZoneStep.Items.Add(new MapItem("loot_pearl", 2), new IntRange(0, max_floors), 5);//pearl
 
                 if (ambush)
                     chestChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 200);//amber tear
@@ -1989,17 +1987,19 @@ namespace DataGenerator.Data
 
                 if (ambush)
                 {
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeNone(50, new RandRange(4, 7))), new IntRange(0, max_floors), 30);
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 5), "seed_reviver")), new IntRange(0, max_floors), 10);//reviver seed
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(2, 5), "seed_joy")), new IntRange(0, max_floors), 10);//joy seed
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(1), "seed_golden")), new IntRange(0, max_floors), 10);//golden seed
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(1), "evo_harmony_scarf")), new IntRange(20, max_floors), 20);//Harmony Scarf
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 6), ItemArray(IterateManmades()))), new IntRange(0, max_floors), 20);//manmade items
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemStateType(new FlagType(typeof(EquipState)), true, true, new RandRange(3, 6))), new IntRange(0, max_floors), 20);//equip
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeRange(true, true, new RandRange(3, 6), ItemArray(IterateTypePlates()))), new IntRange(0, max_floors), 10);//plates
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 6))), new IntRange(0, max_floors), 20);//TMs
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(4, 9))), new IntRange(0, max_floors), 10);//gummis
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2, 5), "loot_pearl"), new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(3, 7))), new IntRange(0, max_floors), 10);//apricorns
+                    SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
+                    garnishList.Add(new MapItem("loot_pearl", 1), 10);
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(4, 10), garnishList), new ItemThemeNone(50, new RandRange(4, 7))), new IntRange(0, max_floors), 30);
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(4, 10), garnishList), new ItemThemeRange(true, true, new RandRange(3, 5), "seed_reviver")), new IntRange(0, max_floors), 10);//reviver seed
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(4, 10), garnishList), new ItemThemeRange(true, true, new RandRange(2, 5), "seed_joy")), new IntRange(0, max_floors), 10);//joy seed
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(4, 10), garnishList), new ItemThemeRange(true, true, new RandRange(1), "seed_golden")), new IntRange(0, max_floors), 10);//golden seed
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(4, 10), garnishList), new ItemThemeRange(true, true, new RandRange(1), "evo_harmony_scarf")), new IntRange(20, max_floors), 20);//Harmony Scarf
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(4, 10), garnishList), new ItemThemeRange(true, true, new RandRange(3, 6), ItemArray(IterateManmades()))), new IntRange(0, max_floors), 20);//manmade items
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(4, 10), garnishList), new ItemStateType(new FlagType(typeof(EquipState)), true, true, new RandRange(3, 6))), new IntRange(0, max_floors), 20);//equip
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(4, 10), garnishList), new ItemThemeRange(true, true, new RandRange(3, 6), ItemArray(IterateTypePlates()))), new IntRange(0, max_floors), 10);//plates
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(4, 10), garnishList), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(3, 6))), new IntRange(0, max_floors), 20);//TMs
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(4, 10), garnishList), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(4, 9))), new IntRange(0, max_floors), 10);//gummis
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(4, 10), garnishList), new ItemStateType(new FlagType(typeof(RecruitState)), true, true, new RandRange(3, 7))), new IntRange(0, max_floors), 10);//apricorns
                 }
                 else
                 {
@@ -2058,20 +2058,20 @@ namespace DataGenerator.Data
                     chestChanceZoneStep.Items.Add(new MapItem("machine_ability_capsule"), new IntRange(0, max_floors), 15);//ability capsule
                 }
 
-                chestChanceZoneStep.Items.Add(new MapItem("loot_heart_scale", 2), new IntRange(0, max_floors), 10);//heart scale
-
+                SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
+                garnishList.Add(new MapItem("loot_heart_scale", 1), 10);
                 if (ambush)
                 {
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(3), "loot_heart_scale"), new ItemThemeNone(100, new RandRange(3, 5))), new IntRange(0, max_floors), 30);
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(3), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(4, 7))), new IntRange(0, max_floors), 10);//gummis
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(6), garnishList), new ItemThemeNone(100, new RandRange(3, 5))), new IntRange(0, max_floors), 30);
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(6), garnishList), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(4, 7))), new IntRange(0, max_floors), 10);//gummis
                 }
                 else
                 {
                     if (gamePhase <= DungeonStage.Intermediate && access != DungeonAccessibility.Unlockable)
-                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(2), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(1, 4))), new IntRange(0, max_floors), 10);//evo items
+                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemStateType(new FlagType(typeof(EvoState)), true, true, new RandRange(1, 4))), new IntRange(0, max_floors), 10);//evo items
 
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1, 3), "loot_heart_scale"), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(2, 4))), new IntRange(0, max_floors), 10);//gummis
-                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeRange(true, true, new RandRange(1), "loot_heart_scale"), new ItemThemeNone(100, new RandRange(1, 3))), new IntRange(0, max_floors), 30);
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(2, 4), garnishList), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(2, 4))), new IntRange(0, max_floors), 10);//gummis
+                    chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(2), garnishList), new ItemThemeNone(100, new RandRange(1, 3))), new IntRange(0, max_floors), 30);
                 }
             }
         }
@@ -2093,7 +2093,6 @@ namespace DataGenerator.Data
             else
             {
                 monsterChanceZoneStep.Items.Add(new MapItem("loot_nugget"), new IntRange(0, max_floors), 10);//nugget
-                monsterChanceZoneStep.Items.Add(new MapItem("loot_pearl", 2), new IntRange(0, max_floors), 10);//pearl
             }
 
             monsterChanceZoneStep.Items.Add(new MapItem("food_banana"), new IntRange(0, max_floors), 25);//banana
