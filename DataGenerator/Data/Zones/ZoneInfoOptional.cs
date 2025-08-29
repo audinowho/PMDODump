@@ -10076,6 +10076,7 @@ namespace DataGenerator.Data
                         ammo.Spawns.Add(new InvItem("wand_slow", false, 3), range, 10);//slow wand
                         ammo.Spawns.Add(new InvItem("wand_path", false, 4), range, 10);//path wand
                         ammo.Spawns.Add(new InvItem("wand_pounce", false, 4), range, 10);//pounce wand
+                        ammo.Spawns.Add(new InvItem("wand_topsy_turvy", false, 3), range, 10);
                         ammo.Spawns.Add(new InvItem("wand_switcher", false, 4), range, 10);//switcher wand
                         ammo.Spawns.Add(new InvItem("wand_whirlwind", false, 4), range, 10);//whirlwind wand
                         ammo.Spawns.Add(new InvItem("wand_lure", false, 4), range, 10);//lure wand
@@ -10086,7 +10087,7 @@ namespace DataGenerator.Data
 
                     //special items
                     CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
-                    special.SpawnRates.SetRange(3, new IntRange(2, max_floors));
+                    special.SpawnRates.SetRange(4, new IntRange(2, max_floors));
                     itemSpawnZoneStep.Spawns.Add("special", special);
 
                     {
@@ -10098,6 +10099,8 @@ namespace DataGenerator.Data
                         special.Spawns.Add(new InvItem("apricorn_white"), range, 10);
                         special.Spawns.Add(new InvItem("apricorn_green"), range, 10);
                         special.Spawns.Add(new InvItem("apricorn_brown"), range, 10);
+
+                        special.Spawns.Add(new InvItem("key", false, 1), new IntRange(0, 12), 30);//Key
 
                     }
 
@@ -10324,8 +10327,8 @@ namespace DataGenerator.Data
                     tileSpawn.Spawns.Add(new EffectTile("trap_spin", false), new IntRange(0, max_floors), 10);//spin trap
                     tileSpawn.Spawns.Add(new EffectTile("trap_grimy", false), new IntRange(0, max_floors), 10);//grimy trap
 
-                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, max_floors)), new MapItem("food_apple"));
-                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 5), new IntRange(0, 12)), new MapItem("food_apple"));
+                    AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(3, 6), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(0, 10, 50), new IntRange(3, max_floors)), new MapItem("orb_cleanse"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(0, 12)), new MapItem("herb_white"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(2, 5), new IntRange(0, 12)), new MapItem("key", 1));
@@ -10352,12 +10355,12 @@ namespace DataGenerator.Data
                         //golden thorns for score attack
                         SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
                         garnishList.Add(new MapItem("ammo_golden_thorn", 1), 10);
-                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemThemeNone(50, new RandRange(2, 4))), new IntRange(0, max_floors), 30);
+                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemThemeNone(50, new RandRange(1, 3))), new IntRange(0, max_floors), 30);
                         chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemThemeRange(true, true, new RandRange(2, 4), "seed_reviver")), new IntRange(0, max_floors), 10);//reviver seed
                         chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemThemeRange(true, true, new RandRange(1, 3), "seed_joy")), new IntRange(0, max_floors), 10);//joy seed
-                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemStateType(new FlagType(typeof(EquipState)), true, true, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//equip
+                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemStateType(new FlagType(typeof(EquipState)), true, true, new RandRange(1, 3))), new IntRange(0, max_floors), 20);//equip
                         chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//TMs
-                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(3, 5))), new IntRange(0, max_floors), 10);//gummis
+                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(2, 4))), new IntRange(0, max_floors), 10);//gummis
 
                         floorSegment.ZoneSteps.Add(chestChanceZoneStep);
                     }
@@ -10368,7 +10371,7 @@ namespace DataGenerator.Data
 
                     //traveling move tutors
                     List<string> tutorElements = new List<string>() { "water", "dragon", "grass", "poison", "flying" };
-                    AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 4, 40), new IntRange(0, max_floors), true), new IntRange(3, 10), tutorElements);
+                    AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 4, 50), new IntRange(0, max_floors), true), new IntRange(3, 10), tutorElements);
 
                     for (int ii = 0; ii < max_floors; ii++)
                     {
@@ -10460,7 +10463,7 @@ namespace DataGenerator.Data
                         AddTrapsSteps(layout, new RandRange(12, 15));
 
                         //money - Ballpark 25K
-                        AddMoneyData(layout, new RandRange(2, 5));
+                        AddMoneyData(layout, new RandRange(2, 6));
 
                         //enemies!
                         if (ii < 2)
@@ -10523,7 +10526,7 @@ namespace DataGenerator.Data
                             if (ii >= 12)
                                 lurkerTeam.Spawns.Add(GetTeamMob("kleavor", "", "stone_axe", "double_hit", "", "", new RandRange(30), "lurker"), 10);
                             if (ii >= 14)
-                                lurkerTeam.Spawns.Add(GetTeamMob("sliggoo", "", "dragon_breath", "body_slam", "", "", new RandRange(31), "lurker"), 10);
+                                lurkerTeam.Spawns.Add(GetTeamMob("sliggoo", "", "dragon_breath", "body_slam", "infestation", "", new RandRange(31), "lurker"), 10);
                             lurkerTeam.TeamSizes.Add(1, 1);
 
                             LoopedTeamSpawner<ListMapGenContext> spawner = new LoopedTeamSpawner<ListMapGenContext>(lurkerTeam);
@@ -10569,6 +10572,7 @@ namespace DataGenerator.Data
                         }
 
                         //sticky vitamins in rooms
+                        if (ii >= 2)
                         {
                             List<InvItem> specificSpawns = new List<InvItem>();
                             specificSpawns.Add(new InvItem("boost_hp_up", true));
@@ -10576,7 +10580,14 @@ namespace DataGenerator.Data
                             specificSpawns.Add(new InvItem("boost_zinc", true));
                             specificSpawns.Add(new InvItem("boost_carbos", true));
 
-                            RandomRoomSpawnStep<ListMapGenContext, InvItem> specificItemZoneStep = new RandomRoomSpawnStep<ListMapGenContext, InvItem>(new PickerSpawner<ListMapGenContext, InvItem>(new LoopedRand<InvItem>(new RandBag<InvItem>(specificSpawns), new RandDecay(0, 10, 60))));
+                            RandDecay randAmount;
+                            if (ii < 4)
+                                randAmount = new RandDecay(0, 10, 30);
+                            else if (ii < 8)
+                                randAmount = new RandDecay(0, 10, 50);
+                            else
+                                randAmount = new RandDecay(0, 10, 40);
+                            RandomRoomSpawnStep<ListMapGenContext, InvItem> specificItemZoneStep = new RandomRoomSpawnStep<ListMapGenContext, InvItem>(new PickerSpawner<ListMapGenContext, InvItem>(new LoopedRand<InvItem>(new RandBag<InvItem>(specificSpawns), randAmount)));
                             specificItemZoneStep.Filters.Add(new RoomFilterConnectivity(ConnectivityRoom.Connectivity.Main));
                             layout.GenSteps.Add(PR_SPAWN_ITEMS, specificItemZoneStep);
                         }

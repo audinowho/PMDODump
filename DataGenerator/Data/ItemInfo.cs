@@ -1224,7 +1224,7 @@ namespace DataGenerator.Data
             else if (ii == 205)
             {
                 item.Name = new LocalText("Golden Thorn");
-                item.Desc = new LocalText("A brilliantly shining thorn crafted from solid gold. When hurled, it flies in a straight line and inflicts damage with the user’s Attack or Sp. Atk stat— whichever is higher. It scatters coins for each target it hits.");
+                item.Desc = new LocalText("A brilliantly shining thorn crafted from solid gold. When hurled, it flies in a straight line to inflict damage on any Pokémon it hits, scattering coins everywhere.");
                 item.Sprite = "Thorn_Yellow";
                 item.Icon = 1;
                 item.ThrowAnim = new AnimData("Thorn_Gold", 60);
@@ -1810,9 +1810,8 @@ namespace DataGenerator.Data
             {
                 item.Name = new LocalText("One-Shot Orb");
                 item.Desc = new LocalText("An orb that causes the target to instantly faint, if it hits. It affects all enemies up to 5 tiles away.");
-                item.UseEvent.HitRate = 100;
+                item.UseEvent.HitRate = 1;
                 item.Sprite = "Orb_Purple";
-                item.UseEvent.BeforeHits.Add(0, new CustomHitRateEvent(1, 2));
                 item.UseEvent.OnHits.Add(-1, new OHKODamageEvent());
                 item.UseAction = new AreaAction();
                 ((AreaAction)item.UseAction).Range = 5;
