@@ -12,7 +12,7 @@
 * Added Fickle Specs: +1 Attack Range, Torment effect, Sticky
 * Vile Seed: Stat drop changed from -3 -> -6
 * Wide Lens effect -> Boost accuracy x1.5
-* Evo stones affect thrown items too
+* Evo stones affect thrown items too, and the Dawn, Shiny, and Dusk Stones have effects as well.
 * Golden Thorn reworked to factor level into its calculation of money spawn, and is treated as a Special move if the thrower's SpAtk is higher than its Attack.
 * Fixed an issue where self-inflicted statuses and stat drops were not processed as such.
 * Fixed issues where various abilities that triggered on-hit triggered on self-target

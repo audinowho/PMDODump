@@ -2727,20 +2727,26 @@ namespace DataGenerator.Data
             else if (ii == 362)
             {
                 item.Name = new LocalText("Shiny Stone");
-                item.Desc = new LocalText("An odd stone that shines with dazzling light. It allows certain kinds of Pokémon to evolve.");
+                item.Desc = new LocalText("An odd stone that shines with dazzling light. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Normal-type.");
                 item.Sprite = "Stone_Yellow";
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "normal")));
+                item.OnActions.Add(-1, new ThrownItemNeededEvent(new ChangeMoveElementEvent("none", "normal")));
             }
             else if (ii == 363)
             {
                 item.Name = new LocalText("Dusk Stone");
-                item.Desc = new LocalText("An odd stone with a mesmerizing darkness. It allows certain kinds of Pokémon to evolve.");
+                item.Desc = new LocalText("An odd stone with a mesmerizing darkness. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Ghost-type.");
                 item.Sprite = "Stone_Purple";
+                item.OnActions.Add(-1, new RegularAttackNeededEvent(new ChangeMoveElementEvent("none", "ghost")));
+                item.OnActions.Add(-1, new ThrownItemNeededEvent(new ChangeMoveElementEvent("none", "ghost")));
             }
             else if (ii == 364)
             {
                 item.Name = new LocalText("Dawn Stone");
-                item.Desc = new LocalText("An odd stone that glints like an eye. It allows certain kinds of Pokémon to evolve.");
+                item.Desc = new LocalText("An odd stone that glints like an eye. It allows certain kinds of Pokémon to evolve. If held, the Pokémon's regular attacks and thrown items are changed from physical to special.");
                 item.Sprite = "Stone_White";
+                item.BeforeActions.Add(-5, new RegularAttackNeededEvent(new FlipCategoryEvent(false)));
+                item.BeforeActions.Add(-5, new ThrownItemNeededEvent(new FlipCategoryEvent(false)));
             }
             else if (ii == 365)
             {
