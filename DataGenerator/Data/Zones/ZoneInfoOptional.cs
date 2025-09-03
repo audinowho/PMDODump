@@ -10193,7 +10193,7 @@ namespace DataGenerator.Data
 
                     //evo items
                     CategorySpawn<InvItem> evoItems = new CategorySpawn<InvItem>();
-                    evoItems.SpawnRates.SetRange(3, new IntRange(0, max_floors));
+                    evoItems.SpawnRates.SetRange(2, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("evo", evoItems);
                     {
 
@@ -10224,7 +10224,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("basculin", "adaptability", "aqua_jet", "", "", "", new RandRange(20), "wander_normal_itemless"), new IntRange(4, 8), 5);
                     poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("basculin", 1, "", Gender.Unknown), "adaptability", "aqua_jet", "", "", "", new RandRange(20), "wander_normal_itemless"), new IntRange(4, 8), 5);
                     poolSpawn.Spawns.Add(GetTeamMob("ekans", "", "glare", "wrap", "", "", new RandRange(20), "wander_normal_itemless"), new IntRange(4, 8), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob("yanma", "speed_boost", "sonic_boom", "", "", "", new RandRange(20), "wander_normal_itemless"), new IntRange(4, 8), 10);
+                    poolSpawn.Spawns.Add(GetTeamMob("yanma", "speed_boost", "sonic_boom", "", "", "", new RandRange(20), "wander_normal_itemless"), new IntRange(4, 8), 5);
                     poolSpawn.Spawns.Add(GetTeamMob("skiddo", "", "growth", "razor_leaf", "", "", new RandRange(20), "retreater_itemless"), new IntRange(4, 8), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("tangela", "regenerator", "growth", "mega_drain", "constrict", "", new RandRange(21), "retreater_itemless"), new IntRange(6, 10), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("swellow", "", "aerial_ace", "focus_energy", "", "", new RandRange(21), "wander_normal_itemless"), new IntRange(6, 10), 10);
@@ -10359,12 +10359,12 @@ namespace DataGenerator.Data
                         //golden thorns for score attack
                         SpawnList<MapItem> garnishList = new SpawnList<MapItem>();
                         garnishList.Add(new MapItem("ammo_golden_thorn", 1), 10);
-                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemThemeNone(50, new RandRange(1, 3))), new IntRange(0, max_floors), 30);
-                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemThemeRange(true, true, new RandRange(2, 4), "seed_reviver")), new IntRange(0, max_floors), 10);//reviver seed
-                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemThemeRange(true, true, new RandRange(1, 3), "seed_joy")), new IntRange(0, max_floors), 10);//joy seed
-                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemStateType(new FlagType(typeof(EquipState)), true, true, new RandRange(1, 3))), new IntRange(0, max_floors), 20);//equip
-                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//TMs
-                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(3), garnishList), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(2, 4))), new IntRange(0, max_floors), 10);//gummis
+                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(2), garnishList), new ItemThemeNone(50, new RandRange(1, 3))), new IntRange(0, max_floors), 30);
+                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(2), garnishList), new ItemThemeRange(true, true, new RandRange(2, 4), "seed_reviver")), new IntRange(0, max_floors), 10);//reviver seed
+                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(2), garnishList), new ItemThemeRange(true, true, new RandRange(1, 3), "seed_joy")), new IntRange(0, max_floors), 10);//joy seed
+                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(2), garnishList), new ItemStateType(new FlagType(typeof(EquipState)), true, true, new RandRange(1, 3))), new IntRange(0, max_floors), 20);//equip
+                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(2), garnishList), new ItemThemeType(ItemData.UseType.Learn, true, true, new RandRange(2, 4))), new IntRange(0, max_floors), 20);//TMs
+                        chestChanceZoneStep.ItemThemes.Add(new ItemThemeMultiple(new ItemThemeDirect(new RandRange(2), garnishList), new ItemStateType(new FlagType(typeof(GummiState)), true, true, new RandRange(2, 4))), new IntRange(0, max_floors), 10);//gummis
 
                         floorSegment.ZoneSteps.Add(chestChanceZoneStep);
                     }
