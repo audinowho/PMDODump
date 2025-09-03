@@ -540,7 +540,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0269-seed_sower-0000|data.Name		Seed Sower	Semencier	Streusaat	Disemillar		Spargisemi		こぼれダネ	こぼれダネ	掉出种子																																																							
 0269-seed_sower-0001|data.Desc																																																																		
 0270-thermal_exchange-0000|data.Name		Thermal Exchange	Thermodynamique	Thermowandel	Termoscambio		Termoscambio		ねつこうかん	ねつこうかん	热交换																																																							
-0270-thermal_exchange-0001|data.Desc																																																																		
+0270-thermal_exchange-0001|data.Desc		Boosts the Attack stat when the Pokémon is hit by a Fire-type move.																																																																
 0271-anger_shell-0000|data.Name		Anger Shell	Courroupace	Wutpanzer	Coraza Ira		Iraguscio		いかりのこうら	いかりのこうら	愤怒甲壳																																																							
 0271-anger_shell-0001|data.Desc																																																																		
 0272-purifying_salt-0000|data.Name		Purifying Salt	Sel Purificateur	Läutersalz	Sal Purificadora		Sale Purificante		きよめのしお	きよめのしお	洁净之盐																																																							
