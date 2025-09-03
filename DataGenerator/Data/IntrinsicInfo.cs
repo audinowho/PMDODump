@@ -1273,7 +1273,7 @@ namespace DataGenerator.Data
             {
                 ability.Name = new LocalText("Justified");
                 ability.Desc = new LocalText("Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.");
-                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new HitCounterEvent((Alignment.Friend | Alignment.Foe), false, false, true, 100, new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_attack", true, true, false, false, 1, new StringKey("MSG_JUSTIFIED"))))));
+                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new HitCounterEvent((Alignment.Friend | Alignment.Foe), false, false, true, 100, new ElementNeededEvent("dark", new StatusStackBattleEvent("mod_attack", true, true, false, false, 1, new StringKey("MSG_ABILITY_ATK_BOOST"))))));
             }
             else if (ii == 155)
             {
@@ -2039,8 +2039,9 @@ namespace DataGenerator.Data
             }
             else if (ii == 270)
             {
-                ability.Name = new LocalText("**Thermal Exchange");
-                ability.Desc = new LocalText("");
+                ability.Name = new LocalText("Thermal Exchange");
+                ability.Desc = new LocalText("Boosts the Attack stat when the Pokémon is hit by a Fire-type move.");
+                ability.AfterBeingHits.Add(0, new OnMoveUseEvent(new HitCounterEvent((Alignment.Friend | Alignment.Foe), false, false, true, 100, new ElementNeededEvent("fire", new StatusStackBattleEvent("mod_attack", true, true, false, false, 1, new StringKey("MSG_ABILITY_ATK_BOOST"))))));
             }
             else if (ii == 271)
             {

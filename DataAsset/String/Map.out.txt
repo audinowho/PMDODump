@@ -57,6 +57,7 @@ end_spawning_waters-0000|data.Name
 end_tiny_tunnel-0000|data.Name													
 end_treacherous_mountain-0000|data.Name		Treacherous Mountain Cave	Grotte de la montagne traitresse	Höhle im tückischem Gebirge							奸诈山洞		
 end_veiled_ridge-0000|data.Name													
+end_wayward_wetlands-0000|data.Name													
 final_stop-0000|data.Name		Blizzard Camp	Camp du blizzard	Blizzard-Lager							风雪营地		
 forest_camp-0000|data.Name		Forest Camp	Camp de la forêt	Wald-Lager	Campamento Bosque		Accampamento Boschivo				森林营地		
 guild_hut-0000|data.Name													

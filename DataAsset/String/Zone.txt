@@ -48,7 +48,7 @@ Key		EN
 0000-geode_crevice-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Geode Crevice\nB{0}F
 0000-guildmaster_island-0000|data.Name		Guildmaster Island
 0000-guildmaster_trail-0000|data.Name		Guildmaster Trail
-0000-guildmaster_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Guildmaster Trail\n{0}F
+0000-guildmaster_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0002]).Name		Guildmaster Trail\n{0}F
 0000-hope_road-0000|data.Name		Hope Road
 0000-hope_road-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Hope Road\n{0}F
 0000-inscribed_cave-0000|data.Name		Inscribed Cave

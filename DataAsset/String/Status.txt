@@ -14,7 +14,7 @@ Key		EN
 0000-bind-0000|data.Name		Bind
 0000-bind-0001|data.Desc		The Pokémon is rendered incapable of any action, and takes gradual damage from the foe. This status wears off after a few turns.
 0000-blinker-0000|data.Name		Blinker
-0000-blinker-0001|data.Desc		The Pokémon has its Attack Range dropped to its lowest level. This status wears off after many turns have passed.
+0000-blinker-0001|data.Desc		The Pokémon has its Attack Range dropped by 3. This status wears off after many turns have passed.
 0000-bouncing-0000|data.Name		Bouncing
 0000-bouncing-0001|data.Desc		The Pokémon is in mid-air from a bounce and can avoid most moves. It will unleash the move on its next turn.
 0000-burn-0000|data.Name		Burned

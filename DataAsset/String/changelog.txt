@@ -7,12 +7,37 @@ Sheet: Script
 Sheet: Abilities
 
 Sheet: Items
+    * Deleted key 0001-held_black_sludge-0000|data.Name
+    * Deleted key 0001-held_black_sludge-0001|data.Desc
+    * Added 0001-held_fickle_lens-0000|data.Name
+    * Added 0001-held_fickle_lens-0001|data.Desc
+    * Significantly changed 0001-held_wide_lens-0001|data.Desc from "A magnifying lens that boosts the Pokémon's Attack Range." to "A magnifying lens that boosts the Pokémon's Accuracy."
+    * Changed 0002-ammo_golden_thorn-0001|data.Desc from "A brilliantly shining thorn crafted from solid gold. It is a fantastically precious item that gives its owner serious bragging rights. When hurled, it flies in a straight line to inflict damage on any Pokémon it hits, scattering coins everywhere." to "A brilliantly shining thorn crafted from solid gold. When hurled, it flies in a straight line to inflict damage on any Pokémon it hits, scattering coins everywhere."
+    * Significantly changed 0007-seed_blinker-0001|data.Desc from "A seed that gives the Blinker status, reducing the Pokémon's Attack Range to its lowest level." to "A seed that gives the Blinker status, reducing the Pokémon's Attack Range by 3."
+    * Significantly changed 0007-seed_vile-0001|data.Desc from "A seed that drastically lowers the Pokémon's Defense and Special Defense." to "A seed that lowers the Pokémon's Defense and Special Defense to their lowest levels."
+    * Significantly changed 0014-evo_dawn_stone-0001|data.Desc from "An odd stone that glints like an eye. It allows certain kinds of Pokémon to evolve." to "An odd stone that glints like an eye. It allows certain kinds of Pokémon to evolve. If held, the Pokémon's regular attacks and thrown items are changed from physical to special."
+    * Significantly changed 0014-evo_dusk_stone-0001|data.Desc from "An odd stone with a mesmerizing darkness. It allows certain kinds of Pokémon to evolve." to "An odd stone with a mesmerizing darkness. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Ghost-type."
+    * Significantly changed 0014-evo_fire_stone-0001|data.Desc from "A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fire-type." to "A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Fire-type."
+    * Significantly changed 0014-evo_ice_stone-0001|data.Desc from "A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks to Ice-type." to "A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks and thrown items to Ice-type."
+    * Significantly changed 0014-evo_leaf_stone-0001|data.Desc from "A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Grass-type." to "A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Grass-type."
+    * Significantly changed 0014-evo_moon_stone-0001|data.Desc from "An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fairy-type." to "An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Fairy-type."
+    * Significantly changed 0014-evo_shiny_stone-0001|data.Desc from "An odd stone that shines with dazzling light. It allows certain kinds of Pokémon to evolve." to "An odd stone that shines with dazzling light. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Normal-type."
+    * Significantly changed 0014-evo_sun_stone-0001|data.Desc from "An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Psychic-type." to "An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Psychic-type."
+    * Significantly changed 0014-evo_thunder_stone-0001|data.Desc from "A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Electric-type." to "A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Electric-type."
+    * Significantly changed 0014-evo_water_stone-0001|data.Desc from "A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Water-type." to "A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Water-type."
 
 Sheet: MapStatuses
 
 Sheet: Moves
+    * Significantly changed 0590-confide-0001|data.Desc from "The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat." to "The user tells the target a secret, and the target loses its ability to concentrate. This harshly lowers the target's Sp. Atk stat."
+    * Significantly changed 0834-wave_crash-0001|data.Desc from "The user shrouds itself in water and slams into the target with its whole body to inflict damage." to "The user shrouds itself in water and slams into the target with its whole body to inflict damage. This also damages the user quite a lot."
+    * Significantly changed 0837-victory_dance-0001|data.Desc from "" to "The user performs an intense dance to usher in victory, boosting its Attack, Defense, and Movement Speed."
+    * Significantly changed 0842-shelter-0001|data.Desc from "" to "The user makes its skin as hard as an iron shield, boosting its Defense and Evasion."
+    * Significantly changed 0853-axe_kick-0001|data.Desc from "" to "The user jumps high, then slams its heel down upon the target. This may also confuse the target. If it misses, the user takes damage instead."
+    * Significantly changed 0885-trailblaze-0001|data.Desc from "" to "The user attacks suddenly as if leaping out from tall grass. The user's nimble footwork boosts its Movement Speed."
 
 Sheet: Statuses
+    * Significantly changed 0000-blinker-0001|data.Desc from "The Pokémon has its Attack Range dropped to its lowest level. This status wears off after many turns have passed." to "The Pokémon has its Attack Range dropped by 3. This status wears off after many turns have passed."
 
 Sheet: Tiles
 
@@ -21,8 +46,11 @@ Sheet: Excl Names
 Sheet: Excl Effects
 
 Sheet: Zones
+    * Deleted key 0000-guildmaster_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
+    * Added 0000-guildmaster_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0002]).Name, transferred from 0000-guildmaster_trail-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name
 
 Sheet: Maps
+    * Added end_wayward_wetlands-0000|data.Name
 
 Sheet: GroundMaps
 

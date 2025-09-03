@@ -11,8 +11,6 @@ Key		EN
 0001-held_black_belt-0001|data.Desc		An item to be held by a Pokémon. This belt helps the wearer to focus and boosts the power of Fighting-type moves.
 0001-held_black_glasses-0000|data.Name		Black Glasses
 0001-held_black_glasses-0001|data.Desc		An item to be held by a Pokémon. A pair of shady-looking glasses that boost the power of Dark-type moves.
-0001-held_black_sludge-0000|data.Name		Black Sludge
-0001-held_black_sludge-0001|data.Desc		A held item that increases the HP regeneration of Poison-types, but prevents it for any other type. This item sticks when held.
 0001-held_blank_plate-0000|data.Name		Blank Plate
 0001-held_blank_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Normal-type moves.
 0001-held_charcoal-0000|data.Name		Charcoal
@@ -37,6 +35,8 @@ Key		EN
 0001-held_earth_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Ground-type moves.
 0001-held_expert_belt-0000|data.Name		Expert Belt
 0001-held_expert_belt-0001|data.Desc		A well-worn belt that boosts the power of super-effective moves.
+0001-held_fickle_lens-0000|data.Name		Fickle Lens
+0001-held_fickle_lens-0001|data.Desc		A held item that boosts the Pokémon's Attack Range, but prevents it from using the same move successively. This item sticks when held.
 0001-held_fist_plate-0000|data.Name		Fist Plate
 0001-held_fist_plate-0001|data.Desc		An item to be held by a Pokémon. It's a stone tablet that halves the damage of Fighting-type moves.
 0001-held_flame_orb-0000|data.Name		Flame Orb
@@ -142,7 +142,7 @@ Key		EN
 0001-held_weather_rock-0000|data.Name		Weather Rock
 0001-held_weather_rock-0001|data.Desc		An item that increases the duration of weather moves used by the holder.
 0001-held_wide_lens-0000|data.Name		Wide Lens
-0001-held_wide_lens-0001|data.Desc		A magnifying lens that boosts the Pokémon's Attack Range.
+0001-held_wide_lens-0001|data.Desc		A magnifying lens that boosts the Pokémon's Accuracy.
 0001-held_x_ray_specs-0000|data.Name		X-Ray Specs
 0001-held_x_ray_specs-0001|data.Desc		A held item that enables the Pokémon to see enemies through heavy darkness.
 0001-held_zap_plate-0000|data.Name		Zap Plate
@@ -156,7 +156,7 @@ Key		EN
 0002-ammo_geo_pebble-0000|data.Name		Geo Pebble
 0002-ammo_geo_pebble-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target. It causes the target to flinch.
 0002-ammo_golden_thorn-0000|data.Name		Golden Thorn
-0002-ammo_golden_thorn-0001|data.Desc		A brilliantly shining thorn crafted from solid gold. It is a fantastically precious item that gives its owner serious bragging rights. When hurled, it flies in a straight line to inflict damage on any Pokémon it hits, scattering coins everywhere.
+0002-ammo_golden_thorn-0001|data.Desc		A brilliantly shining thorn crafted from solid gold. When hurled, it flies in a straight line to inflict damage on any Pokémon it hits, scattering coins everywhere.
 0002-ammo_gravelerock-0000|data.Name		Gravelerock
 0002-ammo_gravelerock-0001|data.Desc		A weapon to be thrown. It flies high in an arc to clear obstacles and strike the target's area.
 0002-ammo_iron_thorn-0000|data.Name		Iron Thorn
@@ -358,7 +358,7 @@ Key		EN
 0007-seed_blast-0000|data.Name		Blast Seed
 0007-seed_blast-0001|data.Desc		A seed that causes the Pokémon to release a blast on the tile in front of it, causing damage.
 0007-seed_blinker-0000|data.Name		Blinker Seed
-0007-seed_blinker-0001|data.Desc		A seed that gives the Blinker status, reducing the Pokémon's Attack Range to its lowest level.
+0007-seed_blinker-0001|data.Desc		A seed that gives the Blinker status, reducing the Pokémon's Attack Range by 3.
 0007-seed_decoy-0000|data.Name		Decoy Seed
 0007-seed_decoy-0001|data.Desc		A seed that gives the Pokémon the Decoy status, making it a target of everyone's attacks. Moves that target the team's inventory will always pick this item first.
 0007-seed_doom-0000|data.Name		Doom Seed
@@ -388,7 +388,7 @@ Key		EN
 0007-seed_vanish-0000|data.Name		Vanish Seed
 0007-seed_vanish-0001|data.Desc		
 0007-seed_vile-0000|data.Name		Vile Seed
-0007-seed_vile-0001|data.Desc		A seed that drastically lowers the Pokémon's Defense and Special Defense.
+0007-seed_vile-0001|data.Desc		A seed that lowers the Pokémon's Defense and Special Defense to their lowest levels.
 0007-seed_warp-0000|data.Name		Warp Seed
 0007-seed_warp-0001|data.Desc		A seed that warps the Pokémon and its nearby allies to a different place on the floor.
 0008-apricorn_big-0000|data.Name		Big Apricorn
@@ -562,7 +562,7 @@ Key		EN
 0014-evo_cracked_pot-0000|data.Name		Cracked Pot
 0014-evo_cracked_pot-0001|data.Desc		A peculiar teapot that can make a certain species of Pokémon evolve. It may be cracked, but tea poured from it is delicious.
 0014-evo_dawn_stone-0000|data.Name		Dawn Stone
-0014-evo_dawn_stone-0001|data.Desc		An odd stone that glints like an eye. It allows certain kinds of Pokémon to evolve.
+0014-evo_dawn_stone-0001|data.Desc		An odd stone that glints like an eye. It allows certain kinds of Pokémon to evolve. If held, the Pokémon's regular attacks and thrown items are changed from physical to special.
 0014-evo_deep_sea_scale-0000|data.Name		Deep Sea Scale
 0014-evo_deep_sea_scale-0001|data.Desc		A pretty scale that shines faintly. It allows a certain kind of Pokémon to evolve.
 0014-evo_deep_sea_tooth-0000|data.Name		Deep Sea Tooth
@@ -570,21 +570,21 @@ Key		EN
 0014-evo_dubious_disc-0000|data.Name		Dubious Disc
 0014-evo_dubious_disc-0001|data.Desc		An enigmatic disc that overflows with dubious data. It allows a certain kind of Pokémon to evolve.
 0014-evo_dusk_stone-0000|data.Name		Dusk Stone
-0014-evo_dusk_stone-0001|data.Desc		An odd stone with a mesmerizing darkness. It allows certain kinds of Pokémon to evolve.
+0014-evo_dusk_stone-0001|data.Desc		An odd stone with a mesmerizing darkness. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Ghost-type.
 0014-evo_electirizer-0000|data.Name		Electirizer
 0014-evo_electirizer-0001|data.Desc		A box full of a massive amount of electric energy. It allows a certain kind of Pokémon to evolve.
 0014-evo_everstone-0000|data.Name		Everstone
 0014-evo_everstone-0001|data.Desc		
 0014-evo_fire_stone-0000|data.Name		Fire Stone
-0014-evo_fire_stone-0001|data.Desc		A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fire-type.
+0014-evo_fire_stone-0001|data.Desc		A peculiar orange stone that radiates warmth like a flame. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Fire-type.
 0014-evo_harmony_scarf-0000|data.Name		Harmony Scarf
 0014-evo_harmony_scarf-0001|data.Desc		A scarf woven from the fibers of a legendary tree. It allows the Pokémon to evolve, regardless of its requirements.
 0014-evo_ice_stone-0000|data.Name		Ice Stone
-0014-evo_ice_stone-0001|data.Desc		A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks to Ice-type.
+0014-evo_ice_stone-0001|data.Desc		A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern. If held, it changes the Pokémon's regular attacks and thrown items to Ice-type.
 0014-evo_kings_rock-0000|data.Name		King's Rock
 0014-evo_kings_rock-0001|data.Desc		An impressive icon that conveys a kingly nobility. When the holder successfully inflicts damage, the target may also flinch.
 0014-evo_leaf_stone-0000|data.Name		Leaf Stone
-0014-evo_leaf_stone-0001|data.Desc		A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Grass-type.
+0014-evo_leaf_stone-0001|data.Desc		A peculiar stone inscribed with a leafy pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Grass-type.
 0014-evo_link_cable-0000|data.Name		Link Cable
 0014-evo_link_cable-0001|data.Desc		An intriguing cable used for linking unknown devices. It allows a certain kind of Pokémon to evolve.
 0014-evo_lunar_ribbon-0000|data.Name		Lunar Ribbon
@@ -592,7 +592,7 @@ Key		EN
 0014-evo_magmarizer-0000|data.Name		Magmarizer
 0014-evo_magmarizer-0001|data.Desc		A box brimming with a huge amount of magma energy. It allows a certain kind of Pokémon to evolve.
 0014-evo_moon_stone-0000|data.Name		Moon Stone
-0014-evo_moon_stone-0001|data.Desc		An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Fairy-type.
+0014-evo_moon_stone-0001|data.Desc		An odd stone that gleams like the moon in the evening sky. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Fairy-type.
 0014-evo_oval_stone-0000|data.Name		Oval Stone
 0014-evo_oval_stone-0001|data.Desc		A surprisingly smooth, rounded stone. It allows a certain kind of Pokémon to evolve.
 0014-evo_prism_scale-0000|data.Name		Prism Scale
@@ -606,17 +606,17 @@ Key		EN
 0014-evo_reaper_cloth-0000|data.Name		Reaper Cloth
 0014-evo_reaper_cloth-0001|data.Desc		An eerie cloth imbued with horrifyingly strong spiritual energy. It allows a certain kind of Pokémon to evolve.
 0014-evo_shiny_stone-0000|data.Name		Shiny Stone
-0014-evo_shiny_stone-0001|data.Desc		An odd stone that shines with dazzling light. It allows certain kinds of Pokémon to evolve.
+0014-evo_shiny_stone-0001|data.Desc		An odd stone that shines with dazzling light. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Normal-type.
 0014-evo_sun_ribbon-0000|data.Name		Sun Ribbon
 0014-evo_sun_ribbon-0001|data.Desc		A ribbon infused with sunshine. It allows a certain kind of Pokémon to evolve.
 0014-evo_sun_stone-0000|data.Name		Sun Stone
-0014-evo_sun_stone-0001|data.Desc		An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Psychic-type.
+0014-evo_sun_stone-0001|data.Desc		An odd stone that glows with sunny warmth. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Psychic-type.
 0014-evo_thunder_stone-0000|data.Name		Thunder Stone
-0014-evo_thunder_stone-0001|data.Desc		A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Electric-type.
+0014-evo_thunder_stone-0001|data.Desc		A peculiar stone inscribed with a thunderbolt pattern. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Electric-type.
 0014-evo_up_grade-0000|data.Name		Up-Grade
 0014-evo_up_grade-0001|data.Desc		A mysterious device filled with all sorts of data. It allows a certain kind of Pokémon to evolve.
 0014-evo_water_stone-0000|data.Name		Water Stone
-0014-evo_water_stone-0001|data.Desc		A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks to Water-type.
+0014-evo_water_stone-0001|data.Desc		A peculiar stone that holds the color of clearest blue. It allows certain kinds of Pokémon to evolve. If held, it changes the Pokémon's regular attacks and thrown items to Water-type.
 0015-egg_mystery-0000|data.Name		Mystery Egg
 0015-egg_mystery-0001|data.Desc		An egg with bizarre colors that have never been seen before. What could this egg be?
 0015-loot_adamant_orb-0000|data.Name		Adamant Orb
