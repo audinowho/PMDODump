@@ -33,6 +33,7 @@ namespace PMDOSetup
         static string saveDir;
         static string saveBackupDir;
 
+        static Version lastUpdaterVersion;
         static Version lastVersion;
         static int argNum;
         static void Main()
@@ -150,7 +151,7 @@ namespace PMDOSetup
             //3: read from site what version is uploaded. if greater than the current version, upgrade
             using (var wc = new WebClient())
             {
-                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                wc.Headers.Add("user-agent", "PMDOSetup/0.1.0");
                 string latestResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/latest", curVerRepo));
                 JsonElement latestJson = JsonDocument.Parse(latestResponse).RootElement;
 
@@ -190,7 +191,7 @@ namespace PMDOSetup
                 wc.DownloadProgressChanged += Wc_DownloadProgressChanged;
                 wc.DownloadFileCompleted += Wc_DownloadFileCompleted;
                 Console.WriteLine("Downloading from {0} to {1}. May take a while...", updaterFile, tempUpdater);
-                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                wc.Headers.Add("user-agent", "PMDOSetup/0.1.0");
                 DownloadIncomplete = true;
                 wc.DownloadFileAsync(new Uri(updaterFile), tempUpdater);
                 while (DownloadIncomplete)
@@ -258,7 +259,7 @@ namespace PMDOSetup
             //3: read from site what version is uploaded. if greater than the current version, upgrade
             using (var wc = new WebClient())
             {
-                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                wc.Headers.Add("user-agent", "PMDOSetup/0.1.0");
                 string builds = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases", curVerRepo));
 
                 List<Release> releases = new List<Release>();
@@ -273,22 +274,31 @@ namespace PMDOSetup
                     releases.Add(specificRelease);
                 }
 
-                Console.Clear();
-                Console.WriteLine("Choose a Version:");
-                for (int ii = 1; ii < releases.Count && ii < 10; ii++)
-                    Console.WriteLine("{0}: {1}", ii, releases[ii].Name);
+                int offset = 0;
 
-                ConsoleKeyInfo keyInfo = Console.ReadKey();
-                int choice = keyInfo.Key - ConsoleKey.D0;
-
-                Console.WriteLine();
-                if (choice < 1 || choice > 9 || choice > releases.Count)
+                while (true)
                 {
-                    Console.WriteLine("Invalid selection.");
-                    return null;
+                    Console.Clear();
+                    Console.WriteLine("Choose a Version:");
+                    for (int ii = 1; ii + offset < releases.Count && ii < 10; ii++)
+                        Console.WriteLine("{0}: {1}", ii, releases[ii + offset].Name);
+                    Console.WriteLine("Left/Right Arrow Keys to browse, ESC to cancel");
+
+                    ConsoleKeyInfo keyInfo = Console.ReadKey();
+
+                    if (keyInfo.Key == ConsoleKey.LeftArrow && offset > 0)
+                        offset -= 9;
+                    else if (keyInfo.Key == ConsoleKey.RightArrow && offset + 9 < releases.Count)
+                        offset += 9;
+                    else if (keyInfo.Key == ConsoleKey.Escape)
+                        return null;
+                    
+                    int choice = keyInfo.Key - ConsoleKey.D0;
+
+                    Console.WriteLine();
+                    if (choice >= 1 && choice <= 9 && choice <= releases.Count)
+                        return releases[choice + offset];
                 }
-                else
-                    return releases[choice];
             }
         }
 
@@ -303,7 +313,7 @@ namespace PMDOSetup
             //3: read from site what version is uploaded. if greater than the current version, upgrade
             using (var wc = new WebClient())
             {
-                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                wc.Headers.Add("user-agent", "PMDOSetup/0.1.0");
                 if (specificRelease == null)
                 {
                     string latestResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/latest", curVerRepo));
@@ -337,10 +347,16 @@ namespace PMDOSetup
                 Console.WriteLine(specificRelease.Body);
                 Console.WriteLine();
 
+                string needed_zip;
+                if (nextVersion < new Version(0, 8, 11))
+                    needed_zip = String.Format("{0}.zip", GetCurrentPlatform());
+                else
+                    needed_zip = String.Format("pmdc-{0}.zip", GetCurrentPlatform());
+
                 Regex pattern = new Regex(@"https://github\.com/(?<repo>\w+/\w+).git");
                 {
                     //Get the exe submodule's version (commit) at this tag
-                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                    wc.Headers.Add("user-agent", "PMDOSetup/0.1.0");
                     string exeSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, exeSubmodule, specificRelease.Tag_Name));
                     JsonElement exeSubmoduleJson = JsonDocument.Parse(exeSubmoduleResponse).RootElement;
 
@@ -351,7 +367,7 @@ namespace PMDOSetup
                     string refStr = exeSubmoduleJson.GetProperty("sha").GetString();
 
                     //Get the tag associated with the commit (there'd better be one)
-                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                    wc.Headers.Add("user-agent", "PMDOSetup/0.1.0");
                     string exeTagsResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/tags", exeRepo));
                     JsonElement exeTagsJson = JsonDocument.Parse(exeTagsResponse).RootElement;
                     //TODO: the above request only gets the first 30 results in a paginated whole.  We technically want to iterate all tags to properly search for the one we want.
@@ -362,7 +378,7 @@ namespace PMDOSetup
                         string tagName = tagJson.GetProperty("name").GetString();
                         if (tagSha == refStr)
                         {
-                            wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                            wc.Headers.Add("user-agent", "PMDOSetup/0.1.0");
                             string tagReleasesResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/releases/tags/{1}", exeRepo, tagName));
                             JsonElement tagReleasesJson = JsonDocument.Parse(tagReleasesResponse).RootElement;
 
@@ -370,7 +386,7 @@ namespace PMDOSetup
                             foreach (JsonElement assetJson in exeJson.EnumerateArray())
                             {
                                 string assetName = assetJson.GetProperty("name").GetString();
-                                if (assetName == String.Format("{0}.zip", GetCurrentPlatform()))
+                                if (assetName == needed_zip)
                                 {
                                     exeFile = assetJson.GetProperty("browser_download_url").GetString();
                                     break;
@@ -388,7 +404,7 @@ namespace PMDOSetup
                 string assetFile;
                 {
                     //Get the asset submodule's version at this tag
-                    wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                    wc.Headers.Add("user-agent", "PMDOSetup/0.1.0");
                     string assetSubmoduleResponse = wc.DownloadString(String.Format("https://api.github.com/repos/{0}/contents/{1}?ref={2}", curVerRepo, assetSubmodule, specificRelease.Tag_Name));
                     JsonElement assetSubmoduleJson = JsonDocument.Parse(assetSubmoduleResponse).RootElement;
 
@@ -421,7 +437,7 @@ namespace PMDOSetup
                 wc.DownloadProgressChanged += Wc_DownloadProgressChanged;
                 wc.DownloadFileCompleted += Wc_DownloadFileCompleted;
                 Console.WriteLine("Downloading from {0} to {1}. May take a while...", exeFile, tempExe);
-                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                wc.Headers.Add("user-agent", "PMDOSetup/0.1.0");
                 DownloadIncomplete = true;
                 wc.DownloadFileAsync(new Uri(exeFile), tempExe);
                 while (DownloadIncomplete)
@@ -429,7 +445,7 @@ namespace PMDOSetup
                 Console.WriteLine();
 
                 Console.WriteLine("Downloading from {0} to {1}. May take a while...", assetFile, tempAsset);
-                wc.Headers.Add("user-agent", "PMDOSetup/2.0.0");
+                wc.Headers.Add("user-agent", "PMDOSetup/0.1.0");
                 DownloadIncomplete = true;
                 wc.DownloadFileAsync(new Uri(assetFile), tempAsset);
                 while (DownloadIncomplete)
@@ -593,6 +609,8 @@ namespace PMDOSetup
                     XmlDocument xmldoc = new XmlDocument();
                     xmldoc.Load(path);
 
+                    lastUpdaterVersion = new Version(xmldoc.SelectSingleNode("Config/UpdaterVersion").InnerText);
+
                     curVerRepo = xmldoc.SelectSingleNode("Config/ExeRepo").InnerText;
                     assetSubmodule = xmldoc.SelectSingleNode("Config/Asset").InnerText;
                     lastVersion = new Version(xmldoc.SelectSingleNode("Config/LastVersion").InnerText);
@@ -606,6 +624,7 @@ namespace PMDOSetup
                     XmlNode exes = xmldoc.SelectSingleNode("Config/Executables");
                     foreach (XmlNode key in exes.SelectNodes("Exe"))
                         executableFiles.Add(key.InnerText);
+
                 }
                 else
                 {
@@ -626,6 +645,7 @@ namespace PMDOSetup
         {
             curVerRepo = "audinowho/PMDODump";
             assetSubmodule = "DumpAsset";
+            lastUpdaterVersion = new Version(0, 0, 0, 0);
             lastVersion = new Version(0, 0, 0, 0);
             filesToDelete = new List<string>();
             executableFiles = new List<string>();
@@ -638,6 +658,7 @@ namespace PMDOSetup
             filesToDelete.Add("PMDO/Licenses/");
             filesToDelete.Add("PMDO/Strings/");
             filesToDelete.Add("PMDO/MODS/All_Starters");
+            filesToDelete.Add("PMDO/MODS/Enable_Mission_Board");
             filesToDelete.Add("PMDO/MODS/Gender_Unlock");
             filesToDelete.Add("PMDO/MODS/Music_Notice");
             filesToDelete.Add("PMDO/MODS/Visible_Monster_Houses");
@@ -671,6 +692,7 @@ namespace PMDOSetup
 
                 appendConfigNode(xmldoc, docNode, "ExeRepo", curVerRepo);
                 appendConfigNode(xmldoc, docNode, "Asset", assetSubmodule);
+                appendConfigNode(xmldoc, docNode, "LastUpdaterVersion", Assembly.GetEntryAssembly().GetName().Version.ToString());
                 appendConfigNode(xmldoc, docNode, "LastVersion", lastVersion.ToString());
 
                 XmlNode keys = xmldoc.CreateElement("ToDelete");

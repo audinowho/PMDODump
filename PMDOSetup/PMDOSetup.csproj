@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
+    <AssemblyVersion>0.1.0</AssemblyVersion>
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <PropertyGroup Condition="'$(RuntimeIdentifier)' != ''">
