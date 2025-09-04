@@ -692,7 +692,7 @@ namespace PMDOSetup
 
                 appendConfigNode(xmldoc, docNode, "ExeRepo", curVerRepo);
                 appendConfigNode(xmldoc, docNode, "Asset", assetSubmodule);
-                appendConfigNode(xmldoc, docNode, "LastUpdaterVersion", Assembly.GetEntryAssembly().GetName().Version.ToString());
+                appendConfigNode(xmldoc, docNode, "UpdaterVersion", Assembly.GetEntryAssembly().GetName().Version.ToString());
                 appendConfigNode(xmldoc, docNode, "LastVersion", lastVersion.ToString());
 
                 XmlNode keys = xmldoc.CreateElement("ToDelete");
