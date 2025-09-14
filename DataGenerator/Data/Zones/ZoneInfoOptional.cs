@@ -10024,8 +10024,6 @@ namespace DataGenerator.Data
                     //items
                     ItemSpawnZoneStep itemSpawnZoneStep = new ItemSpawnZoneStep();
                     itemSpawnZoneStep.Priority = PR_RESPAWN_ITEM;
-                    floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
-
 
                     //necesities
                     CategorySpawn<InvItem> necessities = new CategorySpawn<InvItem>();
@@ -10087,7 +10085,7 @@ namespace DataGenerator.Data
 
                     //special items
                     CategorySpawn<InvItem> special = new CategorySpawn<InvItem>();
-                    special.SpawnRates.SetRange(4, new IntRange(2, max_floors));
+                    special.SpawnRates.SetRange(5, new IntRange(2, max_floors));
                     itemSpawnZoneStep.Spawns.Add("special", special);
 
                     {
@@ -10193,7 +10191,7 @@ namespace DataGenerator.Data
 
                     //evo items
                     CategorySpawn<InvItem> evoItems = new CategorySpawn<InvItem>();
-                    evoItems.SpawnRates.SetRange(2, new IntRange(0, max_floors));
+                    evoItems.SpawnRates.SetRange(3, new IntRange(0, max_floors));
                     itemSpawnZoneStep.Spawns.Add("evo", evoItems);
                     {
 
@@ -10201,8 +10199,8 @@ namespace DataGenerator.Data
                         evoItems.Spawns.Add(new InvItem("evo_fire_stone"), range, 10);//Fire Stone
                         evoItems.Spawns.Add(new InvItem("evo_water_stone"), range, 10);//Water Stone
                         evoItems.Spawns.Add(new InvItem("evo_leaf_stone"), range, 10);//Leaf Stone
-                        floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
                     }
+                    floorSegment.ZoneSteps.Add(itemSpawnZoneStep);
 
 
                     //mobs
@@ -10350,7 +10348,7 @@ namespace DataGenerator.Data
                             chestChanceZoneStep.Items.Add(new MapItem(key), new IntRange(0, max_floors), 4);//gummis
                         chestChanceZoneStep.Items.Add(new MapItem("medicine_max_elixir"), new IntRange(0, max_floors), 20);//max elixir
                         chestChanceZoneStep.Items.Add(new MapItem("medicine_max_potion"), new IntRange(0, max_floors), 20);//max potion
-                        chestChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear"), new IntRange(0, max_floors), 50);//amber tear
+                        chestChanceZoneStep.Items.Add(new MapItem("medicine_amber_tear", 1), new IntRange(0, max_floors), 50);//amber tear
                         chestChanceZoneStep.Items.Add(new MapItem("seed_reviver"), new IntRange(0, max_floors), 20);//reviver seed
                         chestChanceZoneStep.Items.Add(new MapItem("seed_joy"), new IntRange(0, max_floors), 20);//joy seed
                         chestChanceZoneStep.Items.Add(new MapItem("machine_recall_box"), new IntRange(0, max_floors), 10);//link box
@@ -10561,7 +10559,7 @@ namespace DataGenerator.Data
 
 
                         //items
-                        AddItemData(layout, new RandRange(4, 7), 25);
+                        AddItemData(layout, new RandRange(6, 9), 25);
 
                         if (ii == 0)
                         {
