@@ -8715,7 +8715,7 @@ namespace DataGenerator.Data
 
 
                 List<string> tutorElements = new List<string>() { "poison", "psychic", "ghost" };
-                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 3, 30), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements);
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 3, 30), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements, 1);
 
 
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
@@ -9463,7 +9463,7 @@ namespace DataGenerator.Data
                 }
 
                 List<string> tutorElements = new List<string>() { "dragon", "ice", "fairy" };
-                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 3, 30), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements);
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(2, 3, 30), new IntRange(0, max_floors), true), new IntRange(5, 13), tutorElements, 1);
 
 
                 TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();

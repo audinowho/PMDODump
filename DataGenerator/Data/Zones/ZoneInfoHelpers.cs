@@ -203,13 +203,13 @@ namespace DataGenerator.Data
             floorSegment.ZoneSteps.Add(new ScriptZoneStep("HiddenLegend", "{ FloorNum=" + floorNum + ", SaveVar=\"" + saveVar + "\", ActionScript=\"AllyInteract\", Species=\"" + species + "\" }"));
         }
 
-        public static void AddTutorZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, IntRange cost, List<string> tutorElements)
+        public static void AddTutorZoneStep(ZoneSegmentBase floorSegment, SpreadPlanBase spreadPlan, IntRange cost, List<string> tutorElements, int discriminator = 0)
         {
             RandBag<IGenStep> npcZoneSpawns = new RandBag<IGenStep>();
             List<string> quotedElements = new List<string>();
             foreach (string element in tutorElements)
                 quotedElements.Add(String.Format("\"{0}\"", element));
-            npcZoneSpawns.ToSpawn.Add(new ScriptGenStep<ListMapGenContext>("SpawnRandomTutor", "{ MinCost = "+ cost.Min +", MaxCost = "+ cost.Max+", Elements = {" + String.Join(", ", quotedElements) + "}}"));
+            npcZoneSpawns.ToSpawn.Add(new ScriptGenStep<ListMapGenContext>("SpawnRandomTutor", "{ MinCost = "+ cost.Min +", MaxCost = "+ cost.Max+", Elements = {" + String.Join(", ", quotedElements) + "}, Discriminator = " + discriminator +" }"));
             SpreadStepZoneStep exitZoneStep = new SpreadStepZoneStep(spreadPlan, PR_SPAWN_MOBS_EXTRA, npcZoneSpawns);
             floorSegment.ZoneSteps.Add(exitZoneStep);
         }

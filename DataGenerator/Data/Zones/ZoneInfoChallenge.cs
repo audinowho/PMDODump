@@ -1896,7 +1896,7 @@ namespace DataGenerator.Data
 
                 //traveling move tutors
                 List<string> tutorElements = new List<string>() { "psychic", "grass", "fairy" };
-                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 4, 40), new IntRange(0, max_floors), true), new IntRange(5, 10), tutorElements);
+                AddTutorZoneStep(floorSegment, new SpreadPlanQuota(new RandDecay(1, 4, 40), new IntRange(0, max_floors), true), new IntRange(5, 10), tutorElements, 2);
 
 
                 AddEvoZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(1, max_floors)), EvoRoomType.Normal);
