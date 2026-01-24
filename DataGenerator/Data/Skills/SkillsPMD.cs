@@ -5262,7 +5262,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
-                skill.Data.SkillStates.Set(new BasePowerState(15));
+                skill.Data.SkillStates.Set(new BasePowerState(20));
                 skill.Data.BeforeHits.Add(0, new TipPowerEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
@@ -7836,7 +7836,7 @@ namespace DataGenerator.Data
                 skill.Data.Category = BattleData.SkillCategory.Physical;
                 skill.Data.SkillStates.Set(new ContactState());
                 skill.Data.HitRate = 90;
-                skill.Data.SkillStates.Set(new BasePowerState(15));
+                skill.Data.SkillStates.Set(new BasePowerState(20));
                 skill.Data.BeforeHits.Add(0, new TipPowerEvent());
                 skill.Data.OnHits.Add(-1, new DamageFormulaEvent());
                 skill.Strikes = 1;
