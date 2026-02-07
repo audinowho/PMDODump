@@ -1582,7 +1582,7 @@ namespace DataGenerator.Data
                     poolSpawn.Spawns.Add(GetTeamMob("tangela", "regenerator", "growth", "mega_drain", "constrict", "", new RandRange(21), "retreater_itemless"), new IntRange(6, 10), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("swellow", "", "aerial_ace", "focus_energy", "", "", new RandRange(21), "wander_normal_itemless"), new IntRange(6, 10), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("goomy", "", "bubble", "dragon_breath", "", "", new RandRange(22), "retreater_itemless"), new IntRange(8, 12), 10);
-                    poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("farfetchd", 1, "", Gender.Unknown), "", "brutal_swing", "rock_smash", "", "", new RandRange(22), "wander_normal_itemless"), new IntRange(8, 12), 10);
+                    //poolSpawn.Spawns.Add(GetTeamMob(new MonsterID("farfetchd", 1, "", Gender.Unknown), "", "brutal_swing", "rock_smash", "", "", new RandRange(22), "wander_normal_itemless"), new IntRange(8, 12), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("grimer", "", "sludge", "mud_bomb", "", "", new RandRange(22), "wander_normal_itemless"), new IntRange(8, 12), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("weepinbell", "", "acid", "wrap", "", "", new RandRange(22), "wander_normal_itemless"), new IntRange(8, 12), 10);
                     poolSpawn.Spawns.Add(GetTeamMob("corphish", "", "leer", "vice_grip", "knock_off", "", new RandRange(22), "retreater_itemless"), new IntRange(8, 12), 10);

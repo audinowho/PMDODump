@@ -1540,7 +1540,7 @@ namespace DataGenerator.Data
                 shop.Items.Add(new MapItem("evo_sun_ribbon", 0, 3500), 50);//Sun Ribbon
                 shop.Items.Add(new MapItem("evo_lunar_ribbon", 0, 3500), 50);//Moon Ribbon
 
-                shop.Items.Add(new MapItem("held_metal_coat", 0, 3500), 40);//Metal Coat
+                shop.Items.Add(new MapItem("held_metal_coat", 0, 2000), 30);//Metal Coat
                 foreach (string key in IterateTypeBoosters())
                     shop.Items.Add(new MapItem(key, 0, 2000), 10);//type items
                 foreach (string key in IterateTypePlates())

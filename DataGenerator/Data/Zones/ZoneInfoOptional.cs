@@ -5954,7 +5954,7 @@ namespace DataGenerator.Data
                         poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 10);
                     }
                     {
-                        TeamMemberSpawn teamSpawn = GetTeamMob(new MonsterID("floette", 4, "", Gender.Unknown), "", "grassy_terrain", "wish", "", "", new RandRange(19), TeamMemberSpawn.MemberRole.Support, "wander_dumb");
+                        TeamMemberSpawn teamSpawn = GetTeamMob(new MonsterID("floette", 4, "", Gender.Unknown), "", "grassy_terrain", "wish", "", "", new RandRange(24), TeamMemberSpawn.MemberRole.Support, "wander_dumb");
                         teamSpawn.Spawn.SpawnConditions.Add(new MobCheckVersionDiff(4, 5));
                         poolSpawn.Spawns.Add(teamSpawn, new IntRange(0, max_floors), 10);
                     }
