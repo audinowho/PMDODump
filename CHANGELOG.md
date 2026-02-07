@@ -1,6 +1,7 @@
 # 0.8.12 Changes #
 
 * Added wandering move tutors to the demo.
+* Added more dex completion rewards.
 * Fixed some item spawns in Wayward Wetlands.
 * Fixed a crash from recruiting a pokemon after defeating the last-indexed team on the map
 * Fixed a softlock from recruiting and sending home a pokemon that was standing on terrain it naturally can't
