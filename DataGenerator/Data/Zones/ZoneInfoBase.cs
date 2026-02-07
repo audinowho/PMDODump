@@ -3644,6 +3644,10 @@ namespace DataGenerator.Data
                 MappedRoomStep<MapLoadContext> startGen = new MappedRoomStep<MapLoadContext>();
                 startGen.MapID = MapInfo.MapNames[jj];
                 layout.GenSteps.Add(PR_FILE_LOAD, startGen);
+
+                MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
+                layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+
                 MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
                 noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
                 layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);

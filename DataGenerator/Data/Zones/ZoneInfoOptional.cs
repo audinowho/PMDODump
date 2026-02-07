@@ -352,6 +352,9 @@ namespace DataGenerator.Data
 
                     MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
                     layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+                    MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
+                    noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
+                    layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
 
                     AddTextureData(layout, "mystifying_forest_wall", "mystifying_forest_floor", "mystifying_forest_secondary", "bug");
 
@@ -1920,6 +1923,9 @@ namespace DataGenerator.Data
 
                         MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
                         layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+                        MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
+                        noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
+                        layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
 
                         //fix this texture
                         AddTextureData(layout, "quicksand_cave_wall", "quicksand_cave_floor", "quicksand_cave_secondary", "normal", true);
@@ -3189,6 +3195,9 @@ namespace DataGenerator.Data
 
                     MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
                     layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+                    MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
+                    noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
+                    layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
 
                     AddTextureData(layout, "rock_path_tds_wall", "rock_path_tds_floor", "rock_path_tds_secondary", "dark");
 
@@ -4011,6 +4020,9 @@ namespace DataGenerator.Data
 
                     MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
                     layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+                    MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
+                    noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
+                    layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
 
                     AddSpecificTextureData(layout, "southern_jungle_wall", "southern_jungle_floor", "southern_jungle_secondary", "tall_grass_dark", "grass");
 
@@ -5750,6 +5762,9 @@ namespace DataGenerator.Data
 
                         MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
                         layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+                        MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
+                        noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
+                        layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
 
                         AddSpecificTextureData(layout, "moonlit_courtyard_2_wall", "moonlit_courtyard_floor", "moonlit_courtyard_secondary", "tall_grass_blue", "fairy");
 
@@ -6841,6 +6856,9 @@ namespace DataGenerator.Data
 
                     MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
                     layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+                    MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
+                    noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
+                    layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
 
                     AddTextureData(layout, "northern_desert_2_wall", "northern_desert_2_floor", "northern_desert_2_secondary", "ground");
 
@@ -6882,6 +6900,9 @@ namespace DataGenerator.Data
 
                     MapTimeLimitStep<MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
                     layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+                    MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
+                    noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
+                    layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
 
                     //add a chest
                     List<(List<InvItem>, Loc)> items = new List<(List<InvItem>, Loc)>();

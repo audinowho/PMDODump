@@ -81,6 +81,9 @@ namespace DataGenerator.Data
 
             MapTimeLimitStep <MapLoadContext> floorData = new MapTimeLimitStep<MapLoadContext>(600);
             layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+            MapEffectStep<MapLoadContext> noRescue = new MapEffectStep<MapLoadContext>();
+            noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
+            layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
 
             //Tilesets
             if (String.IsNullOrEmpty(grass))
@@ -149,6 +152,12 @@ namespace DataGenerator.Data
             else
                 layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Mysterious Passage")));
             AddTitleDrop(layout);
+
+            MapTimeLimitStep<MapGenContext> floorData = new MapTimeLimitStep<MapGenContext>(800);
+            layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
+            MapEffectStep<MapGenContext> noRescue = new MapEffectStep<MapGenContext>();
+            noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
+            layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);
 
             if (chaserMobs.Length == 0)
             {
