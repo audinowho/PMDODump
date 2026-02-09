@@ -862,6 +862,37 @@ namespace DataGenerator.Data
                     tileSpawn.Spawns.Add(new EffectTile("trap_spin", false), new IntRange(0, max_floors), 10);//spin trap
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
+                    RangeStepZoneStep zoneStep = new RangeStepZoneStep();
+                    zoneStep.StepPriority = PR_SPAWN_TRAPS;
+                    {
+                        SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                        patternList.Add(new PatternPlan("pattern_teeth", PatternPlan.PatternExtend.Extrapolate), 5);
+                        patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
+                        patternList.Add(new PatternPlan("pattern_slash", PatternPlan.PatternExtend.Repeat2D), 5);
+                        patternList.Add(new PatternPlan("pattern_crosshair", PatternPlan.PatternExtend.Extrapolate), 5);
+
+                        SpawnList<EffectTile> spawner = new SpawnList<EffectTile>();
+                        spawner.Add(new EffectTile("trap_mud", false), 10);
+                        spawner.Add(new EffectTile("trap_gust", false), 10);
+                        spawner.Add(new EffectTile("trap_chestnut", false), 10);
+                        spawner.Add(new EffectTile("trap_poison", false), 10);
+                        spawner.Add(new EffectTile("trap_slumber", false), 10);
+                        spawner.Add(new EffectTile("trap_sticky", false), 10);
+                        spawner.Add(new EffectTile("trap_seal", false), 10);
+                        spawner.Add(new EffectTile("trap_self_destruct", false), 10);
+                        spawner.Add(new EffectTile("trap_explosion", true), 10);
+                        spawner.Add(new EffectTile("trap_slow", false), 10);
+                        spawner.Add(new EffectTile("trap_spin", false), 10);
+
+                        SpawnList<EffectTile> centerSpawner = new SpawnList<EffectTile>();
+                        centerSpawner.Add(new EffectTile("trap_warp", true), 10);
+                        centerSpawner.Add(new EffectTile("trap_trip", true), 10);
+                        centerSpawner.Add(new EffectTile("trap_pp_leech", true), 10);
+
+                        IGenStep trapStep = CreateTrapPatternStep<MapGenContext>(new RandRange(1, 3), patternList, spawner, centerSpawner, 35);
+                        zoneStep.Spawns.SetRange(trapStep, new IntRange(4, max_floors));
+                    }
+                    floorSegment.ZoneSteps.Add(zoneStep);
 
                     {
                         //monster houses
@@ -1086,16 +1117,6 @@ namespace DataGenerator.Data
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
 
                         AddTrapsSteps(layout, new RandRange(8, 12));
-                        if (ii >= 4)
-                        {
-                            //some patterns
-                            SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
-                            patternList.Add(new PatternPlan("pattern_teeth", PatternPlan.PatternExtend.Extrapolate), 5);
-                            patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
-                            patternList.Add(new PatternPlan("pattern_slash", PatternPlan.PatternExtend.Repeat2D), 5);
-                            patternList.Add(new PatternPlan("pattern_crosshair", PatternPlan.PatternExtend.Extrapolate), 5);
-                            AddTrapPatternSteps(layout, new RandRange(1, 3), patternList);
-                        }
 
                         //money
                         if (ii < 8)
@@ -2502,7 +2523,6 @@ namespace DataGenerator.Data
                 tileSpawn.Spawns.Add(new EffectTile("trap_slow", true), new IntRange(0, max_floors), 10);//slow trap
                 tileSpawn.Spawns.Add(new EffectTile("trap_spin", true), new IntRange(0, max_floors), 10);//spin trap
                 tileSpawn.Spawns.Add(new EffectTile("trap_grimy", true), new IntRange(0, max_floors), 10);//grimy trap
-                tileSpawn.Spawns.Add(new EffectTile("trap_trigger", true), new IntRange(0, max_floors), 20);//trigger trap
                 floorSegment.ZoneSteps.Add(tileSpawn);
 
 

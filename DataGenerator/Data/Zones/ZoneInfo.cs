@@ -2199,6 +2199,34 @@ namespace DataGenerator.Data
 
                     floorSegment.ZoneSteps.Add(tileSpawn);
 
+                    RangeStepZoneStep zoneStep = new RangeStepZoneStep();
+                    zoneStep.StepPriority = PR_SPAWN_TRAPS;
+                    {
+                        SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                        patternList.Add(new PatternPlan("pattern_dither_fourth", PatternPlan.PatternExtend.Repeat2D), 5);
+                        patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
+                        patternList.Add(new PatternPlan("pattern_x_repeat", PatternPlan.PatternExtend.Repeat2D), 5);
+
+                        SpawnList<EffectTile> spawner = new SpawnList<EffectTile>();
+                        spawner.Add(new EffectTile("trap_slumber", false), 10);
+                        spawner.Add(new EffectTile("trap_sticky", false), 10);
+                        spawner.Add(new EffectTile("trap_spin", false), 10);
+                        spawner.Add(new EffectTile("trap_grimy", false), 10);
+                        spawner.Add(new EffectTile("trap_poison", false), 10);
+                        spawner.Add(new EffectTile("trap_mud", false), 10);
+                        spawner.Add(new EffectTile("trap_self_destruct", false), 10);
+
+                        SpawnList<EffectTile> centerSpawner = new SpawnList<EffectTile>();
+                        centerSpawner.Add(new EffectTile("trap_pp_leech", true), 10);
+                        centerSpawner.Add(new EffectTile("trap_hunger", true), 10);
+                        centerSpawner.Add(new EffectTile("trap_trigger", true), 60);
+                        centerSpawner.Add(new EffectTile("trap_grudge", true), 10);
+                        centerSpawner.Add(new EffectTile("trap_summon", true), 10);
+
+                        IGenStep trapStep = CreateTrapPatternStep<ListMapGenContext>(new RandRange(2, 4), patternList, spawner, centerSpawner, 40);
+                        zoneStep.Spawns.SetRange(trapStep, new IntRange(0, max_floors));
+                    }
+                    floorSegment.ZoneSteps.Add(zoneStep);
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(6, 10), new IntRange(0, max_floors)), new MapItem("food_apple"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_oran"));
@@ -2337,13 +2365,6 @@ namespace DataGenerator.Data
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
-
-
-                        SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
-                        patternList.Add(new PatternPlan("pattern_dither_fourth", PatternPlan.PatternExtend.Repeat2D), 5);
-                        patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
-                        patternList.Add(new PatternPlan("pattern_x_repeat", PatternPlan.PatternExtend.Repeat2D), 5);
-                        AddTrapPatternSteps(layout, new RandRange(2, 4), patternList);
 
                         AddTrapsSteps(layout, new RandRange(10, 14));
 
@@ -2645,8 +2666,37 @@ namespace DataGenerator.Data
                     tileSpawn.Spawns.Add(new EffectTile("trap_grudge", true), new IntRange(0, max_floors), 10);//grudge trap
                     tileSpawn.Spawns.Add(new EffectTile("trap_summon", true), new IntRange(0, max_floors), 10);//summon trap
 
-
                     floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+                    RangeStepZoneStep zoneStep = new RangeStepZoneStep();
+                    zoneStep.StepPriority = PR_SPAWN_TRAPS;
+                    {
+                        SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                        patternList.Add(new PatternPlan("pattern_dither_fourth", PatternPlan.PatternExtend.Repeat2D), 5);
+                        patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
+                        patternList.Add(new PatternPlan("pattern_x_repeat", PatternPlan.PatternExtend.Repeat2D), 5);
+
+                        SpawnList<EffectTile> spawner = new SpawnList<EffectTile>();
+                        spawner.Add(new EffectTile("trap_slumber", false), 10);
+                        spawner.Add(new EffectTile("trap_sticky", false), 10);
+                        spawner.Add(new EffectTile("trap_spin", false), 10);
+                        spawner.Add(new EffectTile("trap_grimy", false), 10);
+                        spawner.Add(new EffectTile("trap_poison", false), 10);
+                        spawner.Add(new EffectTile("trap_mud", false), 10);
+                        spawner.Add(new EffectTile("trap_self_destruct", false), 10);
+
+                        SpawnList<EffectTile> centerSpawner = new SpawnList<EffectTile>();
+                        centerSpawner.Add(new EffectTile("trap_pp_leech", true), 10);
+                        centerSpawner.Add(new EffectTile("trap_hunger", true), 10);
+                        centerSpawner.Add(new EffectTile("trap_trigger", true), 60);
+                        centerSpawner.Add(new EffectTile("trap_grudge", true), 10);
+                        centerSpawner.Add(new EffectTile("trap_summon", true), 10);
+
+                        IGenStep trapStep = CreateTrapPatternStep<ListMapGenContext>(new RandRange(2, 4), patternList, spawner, centerSpawner, 40);
+                        zoneStep.Spawns.SetRange(trapStep, new IntRange(0, max_floors));
+                    }
+                    floorSegment.ZoneSteps.Add(zoneStep);
 
 
                     {
@@ -2707,12 +2757,6 @@ namespace DataGenerator.Data
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(5, 8), "tile_wonder");//wonder tile
-
-                        SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
-                        patternList.Add(new PatternPlan("pattern_dither_fourth", PatternPlan.PatternExtend.Repeat2D), 5);
-                        patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
-                        patternList.Add(new PatternPlan("pattern_x_repeat", PatternPlan.PatternExtend.Repeat2D), 5);
-                        AddTrapPatternSteps(layout, new RandRange(2, 4), patternList);
 
                         AddTrapsSteps(layout, new RandRange(16, 19));
 
@@ -3041,7 +3085,6 @@ namespace DataGenerator.Data
                     TileSpawnZoneStep tileSpawn = new TileSpawnZoneStep();
                     tileSpawn.Priority = PR_RESPAWN_TRAP;
 
-
                     tileSpawn.Spawns.Add(new EffectTile("trap_pp_leech", true), new IntRange(0, max_floors), 10);//pp-leech trap
                     tileSpawn.Spawns.Add(new EffectTile("trap_explosion", false), new IntRange(0, max_floors), 10);//explosion trap
                     tileSpawn.Spawns.Add(new EffectTile("trap_slumber", false), new IntRange(0, max_floors), 10);//sleep trap
@@ -3050,8 +3093,60 @@ namespace DataGenerator.Data
                     tileSpawn.Spawns.Add(new EffectTile("trap_seal", false), new IntRange(0, max_floors), 10);//seal trap
                     tileSpawn.Spawns.Add(new EffectTile("trap_sticky", false), new IntRange(0, max_floors), 10);//sticky trap
 
-
                     floorSegment.ZoneSteps.Add(tileSpawn);
+
+
+                    {
+                        RangeStepZoneStep zoneStep = new RangeStepZoneStep();
+                        zoneStep.StepPriority = PR_SPAWN_TRAPS;
+                        SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                        patternList.Add(new PatternPlan("pattern_teeth", PatternPlan.PatternExtend.Extrapolate), 5);
+                        patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
+                        patternList.Add(new PatternPlan("pattern_x", PatternPlan.PatternExtend.Extrapolate), 5);
+                        patternList.Add(new PatternPlan("pattern_bubble", PatternPlan.PatternExtend.Single), 5);
+
+                        SpawnList<EffectTile> spawner = new SpawnList<EffectTile>();
+                        spawner.Add(new EffectTile("trap_explosion", true), 10);
+                        spawner.Add(new EffectTile("trap_slumber", false), 10);
+                        spawner.Add(new EffectTile("trap_gust", false), 10);
+                        spawner.Add(new EffectTile("trap_seal", false), 10);
+                        spawner.Add(new EffectTile("trap_sticky", false), 10);
+
+                        SpawnList<EffectTile> centerSpawner = new SpawnList<EffectTile>();
+                        centerSpawner.Add(new EffectTile("trap_explosion", true), 10);
+                        centerSpawner.Add(new EffectTile("trap_hunger", true), 10);
+                        centerSpawner.Add(new EffectTile("trap_pp_leech", true), 10);
+
+                        IGenStep trapStep = CreateTrapPatternStep<ListMapGenContext>(new RandRange(0, 4), patternList, spawner, centerSpawner, 25);
+                        zoneStep.Spawns.SetRange(trapStep, new IntRange(0, 11));
+                        floorSegment.ZoneSteps.Add(zoneStep);
+                    }
+                    {
+                        RangeStepZoneStep zoneStep = new RangeStepZoneStep();
+                        zoneStep.StepPriority = PR_SPAWN_TRAPS;
+                        SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                        patternList.Add(new PatternPlan("pattern_teeth", PatternPlan.PatternExtend.Extrapolate), 5);
+                        patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
+                        patternList.Add(new PatternPlan("pattern_x", PatternPlan.PatternExtend.Extrapolate), 5);
+                        patternList.Add(new PatternPlan("pattern_bubble", PatternPlan.PatternExtend.Single), 5);
+
+                        SpawnList<EffectTile> spawner = new SpawnList<EffectTile>();
+                        spawner.Add(new EffectTile("trap_explosion", true), 10);
+                        spawner.Add(new EffectTile("trap_slumber", false), 10);
+                        spawner.Add(new EffectTile("trap_gust", false), 10);
+                        spawner.Add(new EffectTile("trap_seal", false), 10);
+                        spawner.Add(new EffectTile("trap_sticky", false), 10);
+
+                        SpawnList<EffectTile> centerSpawner = new SpawnList<EffectTile>();
+                        centerSpawner.Add(new EffectTile("trap_trigger", true), 60);
+                        centerSpawner.Add(new EffectTile("trap_pp_leech", true), 10);
+                        centerSpawner.Add(new EffectTile("trap_explosion", true), 10);
+
+                        IGenStep trapStep = CreateTrapPatternStep<ListMapGenContext>(new RandRange(2, 5), patternList, spawner, centerSpawner, 40);
+                        zoneStep.Spawns.SetRange(trapStep, new IntRange(11, max_floors));
+                        floorSegment.ZoneSteps.Add(zoneStep);
+                    }
+
 
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 8), new IntRange(0, max_floors)), new MapItem("food_grimy"));
                     AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
@@ -3286,16 +3381,6 @@ namespace DataGenerator.Data
 
                         //traps
                         AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
-
-                        SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
-                        patternList.Add(new PatternPlan("pattern_teeth", PatternPlan.PatternExtend.Extrapolate), 5);
-                        patternList.Add(new PatternPlan("pattern_squiggle", PatternPlan.PatternExtend.Repeat1D), 5);
-                        patternList.Add(new PatternPlan("pattern_x", PatternPlan.PatternExtend.Extrapolate), 5);
-                        patternList.Add(new PatternPlan("pattern_bubble", PatternPlan.PatternExtend.Single), 5);
-                        if (ii < 11)
-                            AddTrapPatternSteps(layout, new RandRange(0, 4), patternList);
-                        else
-                            AddTrapPatternSteps(layout, new RandRange(2, 5), patternList);
 
                         AddTrapsSteps(layout, new RandRange(20, 24), true);
 
@@ -4113,6 +4198,29 @@ namespace DataGenerator.Data
 
                         floorSegment.ZoneSteps.Add(tileSpawn);
 
+
+                        RangeStepZoneStep zoneStep = new RangeStepZoneStep();
+                        zoneStep.StepPriority = PR_SPAWN_TRAPS;
+                        {
+                            SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
+                            patternList.Add(new PatternPlan("pattern_dither_fourth", PatternPlan.PatternExtend.Repeat2D), 5);
+                            patternList.Add(new PatternPlan("pattern_x", PatternPlan.PatternExtend.Extrapolate), 5);
+
+                            SpawnList<EffectTile> spawner = new SpawnList<EffectTile>();
+                            spawner.Add(new EffectTile("trap_explosion", true), 10);
+                            spawner.Add(new EffectTile("trap_sticky", false), 10);
+                            spawner.Add(new EffectTile("trap_poison", false), 10);
+                            spawner.Add(new EffectTile("trap_mud", false), 10);
+
+                            SpawnList<EffectTile> centerSpawner = new SpawnList<EffectTile>();
+                            centerSpawner.Add(new EffectTile("trap_explosion", true), 10);
+                            centerSpawner.Add(new EffectTile("trap_trip", true), 10);
+
+                            IGenStep trapStep = CreateTrapPatternStep<ListMapGenContext>(new RandRange(1, 4), patternList, spawner, centerSpawner, 35);
+                            zoneStep.Spawns.SetRange(trapStep, new IntRange(0, max_floors));
+                        }
+                        floorSegment.ZoneSteps.Add(zoneStep);
+
                         AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 8), new IntRange(0, max_floors)), new MapItem("food_apple"), new MapItem("food_grimy"));
                         AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(0, max_floors)), new MapItem("berry_leppa"));
                         AddItemSpreadZoneStep(floorSegment, new SpreadPlanSpaced(new RandRange(4, 7), new IntRange(3, max_floors)), new MapItem("machine_assembly_box"));
@@ -4359,11 +4467,6 @@ namespace DataGenerator.Data
 
                             //traps
                             AddSingleTrapStep(layout, new RandRange(2, 4), "tile_wonder");//wonder tile
-
-                            SpawnList<PatternPlan> patternList = new SpawnList<PatternPlan>();
-                            patternList.Add(new PatternPlan("pattern_dither_fourth", PatternPlan.PatternExtend.Repeat2D), 5);
-                            patternList.Add(new PatternPlan("pattern_x", PatternPlan.PatternExtend.Extrapolate), 5);
-                            AddTrapPatternSteps(layout, new RandRange(1, 4), patternList);
 
                             AddTrapsSteps(layout, new RandRange(10, 14));
 

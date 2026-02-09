@@ -9,7 +9,7 @@
 * Removed the option to request rescue in non-standard floors.
 * Fixed an issue where move tutors on overworld maps would not recognize the new starters
 * Fixed an issue where Rollout/Ice Ball do 2x more damage than written in their descriptions.  BP 15 -> 20.
-* Trip Traps break on trigger
+* Modified trap patterns.
 * Liquid Ooze Damage reduced by half
 * Fixed an issue where Monster House spawns appear with their level 1 movesets.
 * Modding: Added the ForceAIEvent, a refresh event that allows AI to control the player

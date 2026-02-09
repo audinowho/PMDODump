@@ -544,20 +544,23 @@ namespace DataGenerator.Data
             layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
         }
 
-        public static void AddTrapPatternSteps<T>(MapGen<T> layout, RandRange amount, SpawnList<PatternPlan> planSpawns, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext
+        public static PatternSpawnCenterStep<T, EffectTile> CreateTrapPatternStep<T>(RandRange amount, SpawnList<PatternPlan> planSpawns, SpawnList<EffectTile> spawner, SpawnList<EffectTile> centerSpawner, int spawnChance, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext
         {
-            PatternSpawnStep<T, EffectTile> trapStep = new PatternSpawnStep<T, EffectTile>();
+            PatternSpawnCenterStep<T, EffectTile> trapStep = new PatternSpawnCenterStep<T, EffectTile>();
             trapStep.Amount = amount;
             trapStep.Maps = planSpawns;
             if (connectivity != ConnectivityRoom.Connectivity.None)
                 trapStep.Filters.Add(new RoomFilterConnectivity(connectivity));
+            trapStep.Spawner = spawner;
+            trapStep.CenterSpawner = centerSpawner;
+            trapStep.CenterSpawnChance = spawnChance;
 
             MapTerrainStencil<T> terrainStencil = new MapTerrainStencil<T>(true, false, false, false);
             NoChokepointTerrainStencil<T> roomStencil = new NoChokepointTerrainStencil<T>(new MapTerrainStencil<T>(true, false, false, false));
 
             trapStep.TerrainStencil = new MultiTerrainStencil<T>(false, terrainStencil, roomStencil);
 
-            layout.GenSteps.Add(PR_SPAWN_TRAPS, trapStep);
+            return trapStep;
         }
 
         public static void AddTrapSweepStep<T>(MapGen<T> layout, RandRange amount, string id, bool revealed = true, bool includeHalls = false, ConnectivityRoom.Connectivity connectivity = ConnectivityRoom.Connectivity.Main) where T : ListMapGenContext

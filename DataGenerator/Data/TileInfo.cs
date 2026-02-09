@@ -713,7 +713,7 @@ namespace DataGenerator.Data
                 //newData.HitEffects.Add(-1, new DamageFormulaEffect());
                 newData.HitCharAction = new CharAnimFrameType(04);//Hurt
                 newData.OnHits.Add(0, new DropItemEvent(false, false, "seed_decoy", new HashSet<FlagType>(), new StringKey(), false));
-                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), true));
+                tile.InteractWithTiles.Add(0, new InvokeTrapEvent(altAction, altExplosion, newData, new StringKey("MSG_TILE_CHECK"), false));
             }
             else if (ii == 24)
             {
