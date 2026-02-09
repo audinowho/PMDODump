@@ -12,4 +12,5 @@
 * Modified trap patterns.
 * Liquid Ooze Damage reduced by half
 * Fixed an issue where Monster House spawns appear with their level 1 movesets.
+* Minor encounter adjustments (gender, level, ability)
 * Modding: Added the ForceAIEvent, a refresh event that allows AI to control the player
