@@ -3474,35 +3474,35 @@ namespace DataGenerator.Data
             }
             else if (ii == 545)
             {
-                item.Name = new LocalText("Special Ingredient");
-                item.Comment = "Do not Translate";
+                item.Name = new LocalText("Gold Berry");
+                item.Comment = "";
                 fileName = "lost_item_bug";
-                item.Sprite = "Flower_Blue";
-                item.Desc = new LocalText("A mission item.");
+                item.Sprite = "Fruit_Yellow";
+                item.Desc = new LocalText("A peculiar berry once used for medicine. It is loved by Shuckle for making fermented juice.");
             }
             else if (ii == 546)
             {
                 item.Name = new LocalText("Lost Satchel");
-                item.Comment = "Do not Translate";
+                item.Comment = "";
                 fileName = "lost_item_dark";
-                item.Sprite = "Flower_Blue";
-                item.Desc = new LocalText("A mission item.");
+                item.Sprite = "Box_Tan";
+                item.Desc = new LocalText("A satchel of items left behind from an exploration. Return it to Mightyena.");
             }
             else if (ii == 547)
             {
                 item.Name = new LocalText("Lost Scarf");
-                item.Comment = "Do not Translate";
+                item.Comment = "";
                 fileName = "lost_item_ground";
-                item.Sprite = "Flower_Blue";
-                item.Desc = new LocalText("A mission item.");
+                item.Sprite = "Scarf_Brown";
+                item.Desc = new LocalText("A tattered scarf that Donphan was looking for. Did it belong to an explorer?");
             }
             else if (ii == 548)
             {
                 item.Name = new LocalText("Herba Mystica");
-                item.Comment = "Do not Translate";
+                item.Comment = "";
                 fileName = "lost_item_grass";
-                item.Sprite = "Flower_Blue";
-                item.Desc = new LocalText("A mission item.");
+                item.Sprite = "Flower_Green";
+                item.Desc = new LocalText("A rare and bitter herb that's said to dramatically bolster a body's immune defenses. Chimecho can make it into a medicine.");
             }
             else if (ii == 549)
             {

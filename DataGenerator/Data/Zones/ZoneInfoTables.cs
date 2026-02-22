@@ -153,8 +153,6 @@ namespace DataGenerator.Data
                 layout.GenSteps.Add(PR_FLOOR_DATA, new MapNameIDStep<MapGenContext>(new LocalText("Mysterious Passage")));
             AddTitleDrop(layout);
 
-            MapTimeLimitStep<MapGenContext> floorData = new MapTimeLimitStep<MapGenContext>(800);
-            layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
             MapEffectStep<MapGenContext> noRescue = new MapEffectStep<MapGenContext>();
             noRescue.Effect.OnMapRefresh.Add(0, new MapNoRescueEvent());
             layout.GenSteps.Add(PR_FLOOR_DATA, noRescue);

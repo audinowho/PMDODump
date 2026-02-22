@@ -13,4 +13,7 @@
 * Liquid Ooze Damage reduced by half
 * Fixed an issue where Monster House spawns appear with their level 1 movesets.
 * Minor encounter adjustments (gender, level, ability)
+* Made Fast battle speed affect attacks or traps that completely whiff
+* RC: Quest and quest item writing pass
 * Modding: Added the ForceAIEvent, a refresh event that allows AI to control the player
+* Modding: Fix for selecting Undiscovered for Egg group

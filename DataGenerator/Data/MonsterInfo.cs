@@ -555,6 +555,8 @@ namespace DataGenerator.Data
             //egg groups
             sql = "SELECT * FROM pokemon_v2_pokemonegggroup WHERE pokemon_species_id = " + index;
             command = new SQLiteCommand(sql, m_dbTLConnection);
+            entry.SkillGroup1 = Text.Sanitize(Text.GetMemberTitle(SkillGroupInfo.EggGroup.Undiscovered.ToString())).ToLower();
+            entry.SkillGroup2 = Text.Sanitize(Text.GetMemberTitle(SkillGroupInfo.EggGroup.Undiscovered.ToString())).ToLower();
             using (SQLiteDataReader reader = command.ExecuteReader())
             {
                 int read = 0;
