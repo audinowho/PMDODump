@@ -1,19 +1,17 @@
 Sheet: Hardcode
 
 Sheet: Content
-    * Significantly changed MSG_JUSTIFIED from "{0}'s Justified raised its Attack!" to "{0}'s {1} raised its Attack!"
-    * Significantly changed MSG_WATER_VEIL from "{0}'s Water Veil prevented it from being burned!" to "{0}'s {1} prevented it from being burned!"
 
 Sheet: Script
 
 Sheet: Abilities
-    * Significantly changed 0270-thermal_exchange-0001|data.Desc from "" to "Boosts the Attack stat when the Pokémon is hit by a Fire-type move."
 
 Sheet: Items
 
 Sheet: MapStatuses
 
 Sheet: Moves
+    * Erased contents of 0895-aqua_cutter-0001|data.Desc
 
 Sheet: Statuses
 
