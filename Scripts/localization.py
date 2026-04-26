@@ -1,9 +1,7 @@
 import os
-import httplib2
 import xml.etree.ElementTree as ET
 import glob
 import time
-from apiclient import discovery
 from sheetMerge import SheetMerge, WAIT_TIME
 
 SHEET_CONTENT_START = 4
