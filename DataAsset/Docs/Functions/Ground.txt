@@ -1,0 +1,630 @@
+This page shows all properties of Functions/Ground that can be manipulated from Lua
+
+== GROUND:Hide(System.String) ==
+
+
+Hides an entity.
+
+
+=== Arguments ===
+
+* <code>entityname</code>: The name of the entity to hide.
+
+== GROUND:Unhide(System.String) ==
+
+
+Unhides an entity.
+
+
+=== Arguments ===
+
+* <code>entityname</code>: The name of the entity to unhide.
+
+== GROUND:RemoveObject(System.String) ==
+
+
+Deletes an object from the ground map, identified by its instance name.
+
+
+=== Arguments ===
+
+* <code>instancename</code>: The instance name of the object.
+
+=== Returns ===
+
+Returns true if succeeded, false otherwise.
+
+== GROUND:RemoveCharacter(System.String) ==
+
+
+Deletes a character from the ground map, identified by its instance name.
+
+
+=== Arguments ===
+
+* <code>instancename</code>: The instance name of the object.
+
+=== Returns ===
+
+Returns true if succeeded, false otherwise.
+
+== GROUND:CreateCharacterFromCharData(System.String,RogueEssence.Dungeon.Character,System.Int32,System.Int32,RogueElements.Dir8) ==
+
+
+Creates a ground character, given a dungeon character.
+
+
+=== Arguments ===
+
+* <code>instancename</code>: The instance name to give the character
+* <code>data</code>: Character data to create from
+* <code>x</code>: X coordinate of the character
+* <code>y</code>: Y coordinate of the character
+* <code>direction</code>: Direction the character will face, defaults to Dir8.Down
+
+== GROUND:RefreshPlayer ==
+
+
+Reloads the controllable player's character data to be the current team's leader.
+
+
+== GROUND:SetPlayer(RogueEssence.Dungeon.CharData) ==
+
+
+Sets the controllable player to use new character data
+
+
+=== Arguments ===
+
+* <code>charData</code>: The new character data
+
+== GROUND:SpawnerDoSpawn(System.String) ==
+
+
+Make the specified spawner run its spawn method.
+
+
+=== Arguments ===
+
+* <code>spawnername</code>: None
+
+=== Returns ===
+
+The ground character spawned.
+
+== GROUND:SpawnerSetSpawn(System.String,RogueEssence.Dungeon.CharData) ==
+
+
+Sets the character to the specified spawner
+
+
+=== Arguments ===
+
+* <code>spawnername</code>: The spawner to set the character to, by name
+* <code>spawnChar</code>: The character to spawn.
+
+== GROUND:CharTurnToChar(RogueEssence.Ground.GroundChar,RogueEssence.Ground.GroundChar) ==
+
+
+Makes a character turn to face another character instantly.
+
+
+=== Arguments ===
+
+* <code>turnchar</code>: The character that is turning.
+* <code>turnto</code>: The character to turn to.
+
+== GROUND:CharTurnToCharAnimated ==
+
+
+Makes a character do an animated turn to face another character over the specified time.
+Clockwise or counter-clockwise are chosen based on the closest direction.
+Waits until the operation is completed.
+
+
+=== Arguments ===
+
+* <code>curch</code>: Character that is turning
+* <code>turnto</code>: Character to turn to
+* <code>framedur</code>: Time spent on each direction, in frames
+
+=== Example ===
+
+<pre>
+
+CharTurnToCharAnimated(charFrom, charTo, 3)
+
+</pre>
+
+== GROUND:EntTurn(RogueEssence.Ground.GroundEntity,RogueElements.Dir8) ==
+
+
+Makes a ground entity turn to face a direction.
+
+
+=== Arguments ===
+
+* <code>ent</code>: The ground entity.  Can be a character or object.
+* <code>direction</code>: The direction to face.
+
+== GROUND:CharAnimateTurn ==
+
+
+Makes a character do an animated turn to face a chosen direction over the specified time.
+Must specify clockwise or counter-clockwise.
+Waits until the operation is completed.
+
+
+=== Arguments ===
+
+* <code>ch</code>: The character to turn
+* <code>direction</code>: The direction to turn to
+* <code>framedur</code>: The time spent in each intermediate direction, in frames
+* <code>ccw</code>: false if clockwise, true if counter-clockwise
+
+=== Example ===
+
+<pre>
+
+CharTurnToCharAnimated(charFrom, Dir8.Left, 3, true)
+
+</pre>
+
+== GROUND:_CharAnimateTurnTo(RogueEssence.Ground.GroundChar,RogueElements.Dir8,System.Int32) ==
+
+
+Makes a character do an animated turn to face a chosen direction over the specified time.
+Waits until the operation is completed.
+
+
+=== Arguments ===
+
+* <code>ch</code>: The character to turn
+* <code>direction</code>: The direction to turn to
+* <code>framedur</code>: The time spent in each intermediate direction, in frames
+
+=== Example ===
+
+<pre>
+
+CharAnimateTurnTo(charFrom, Dir8.Left, 3)
+
+</pre>
+
+== GROUND:TeleportTo(RogueEssence.Ground.GroundEntity,System.Int32,System.Int32,RogueElements.Dir8,System.Int32) ==
+
+
+Repositions the ground entity in a specified location.
+
+
+=== Arguments ===
+
+* <code>ent</code>: The ground entity to reposition
+* <code>x</code>: The X coordinate of the destination
+* <code>y</code>: The Y coordinate of the destination
+* <code>direction</code>: The direction to point the entity.  Defaults to Dir8.None, which leaves it untouched.
+* <code>height</code>: None
+
+== GROUND:MoveInDirection ==
+
+
+Make ground character move in a direction.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to move
+* <code>direction</code>: Direction to move in
+* <code>duration</code>: Duration of movement, in frames
+* <code>run</code>: True if using a running animation, false otherwise
+* <code>speed</code>: Speed in pixels per frame
+
+=== Example ===
+
+<pre>
+
+GROUND:MoveInDirection(player, Dir8.Down, 24, false, 2)
+
+</pre>
+
+== GROUND:MoveToPosition ==
+
+
+Make ground character move to a position.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to move
+* <code>x</code>: X coordinate of destination
+* <code>y</code>: Y  coordinate of destination
+* <code>run</code>: True if using a running animation, false otherwise
+* <code>speed</code>: Speed in pixels per frame
+
+=== Example ===
+
+<pre>
+
+GROUND:MoveInDirection(player, 200, 240, false, 2)
+
+</pre>
+
+== GROUND:MoveToMarker ==
+
+
+Make ground character move to a ground marker.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to move
+* <code>mark</code>: GroundMarker object ot move to
+* <code>run</code>: True if using a running animation, false otherwise
+* <code>speed</code>: Speed in pixels per frame
+
+=== Example ===
+
+<pre>
+
+GROUND:MoveInDirection(player, marker, false, 2)
+
+</pre>
+
+== GROUND:MoveObjectToPosition ==
+
+
+Make ground object move to a position.
+
+
+=== Arguments ===
+
+* <code>ent</code>: Ground Entity to move
+* <code>x</code>: X coordinate of destination
+* <code>y</code>: Y  coordinate of destination
+* <code>speed</code>: Speed in pixels per frame
+
+=== Example ===
+
+<pre>
+
+GROUND:MoveInDirection(player, 200, 240, 2)
+
+</pre>
+
+== GROUND:AnimateInDirection ==
+
+
+Make a ground character move in a direction with custom animation
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to move
+* <code>anim</code>: Name of the animation
+* <code>animDir</code>: Direction of animation
+* <code>direction</code>: Direction to move in
+* <code>duration</code>: Duration of movement, in frames
+* <code>animSpeed</code>: Speed of animation, where 1.0 represents normal speed
+* <code>speed</code>: Speed movement, in pixels per frame
+
+=== Example ===
+
+<pre>
+
+GROUND:AnimateInDirection(player, "Hurt", Dir8.Down, 24, 0.5, 2)
+
+</pre>
+
+== GROUND:AnimateToPosition ==
+
+
+Make a ground entity move to a position with custom animation
+
+
+=== Arguments ===
+
+* <code>ent</code>: Entity to move
+* <code>anim</code>: Name of the animation
+* <code>animDir</code>: Direction of animation
+* <code>x</code>: X coordinate of the destination
+* <code>y</code>: Y coordinate of the destination
+* <code>animSpeed</code>: Speed of animation, where 1.0 represents normal speed
+* <code>speed</code>: Speed movement, in pixels per frame
+* <code>height</code>: Height of the destination
+
+=== Example ===
+
+<pre>
+
+GROUND:AnimateToPosition(player, "Hurt", Dir8.Down, 200, 240, 0.5, 2)
+
+</pre>
+
+== GROUND:CharSetEmote(RogueEssence.Ground.GroundChar,System.String,System.Int32) ==
+
+
+Make a character emote on the ground map.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to emote
+* <code>emoteid</code>: ID of the emote
+* <code>cycles</code>: The number of times to play the emote.
+
+== GROUND:CharSetDrawEffect(RogueEssence.Ground.GroundChar,RogueEssence.Dungeon.DrawEffect) ==
+
+
+Sets the ground character's draw effect to become invisible, shaking, still, etc.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Target ground character.
+* <code>effect</code>: The draw effect.
+
+== GROUND:CharEndDrawEffect(RogueEssence.Ground.GroundChar,RogueEssence.Dungeon.DrawEffect) ==
+
+
+Sets the ground character's draw effect to become invisible, shaking, still, etc.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Target ground character.
+* <code>effect</code>: The draw effect.
+
+== GROUND:CharGetAnimFallback(RogueEssence.Ground.GroundChar,System.String) ==
+
+
+Gets the fallback animation for the character.
+
+
+=== Arguments ===
+
+* <code>chara</code>: None
+* <code>anim</code>: The anim to get the fallback anim of.
+
+=== Returns ===
+
+The fallback animation, as a string.  Blank if there is none.  Will return anim if anim already exists.
+
+== GROUND:CharGetAnim(RogueEssence.Ground.GroundChar) ==
+
+
+Gets a character's current animation as a string.
+
+
+=== Arguments ===
+
+* <code>chara</code>: None
+
+== GROUND:CharGetAnimPoint(RogueEssence.Ground.GroundChar,RogueEssence.Content.ActionPointType) ==
+
+
+Gets the chosen action point of the character at this specific frame.
+
+
+=== Arguments ===
+
+* <code>chara</code>: None
+* <code>actionPoint</code>: The ype of action point to retrieve the coordinates for.
+
+=== Returns ===
+
+The location of the action point in absolute coordinates on the map.
+
+== GROUND:CharSetAnim(RogueEssence.Ground.GroundChar,System.String,System.Boolean) ==
+
+
+Set a character's animation.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to animate
+* <code>anim</code>: Name of the animation
+* <code>loop</code>: Whether to loop the animation
+
+== GROUND:CharEndAnim(RogueEssence.Ground.GroundChar) ==
+
+
+Stops a character's current animation, reverting them to default idle.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to stop animating
+
+== GROUND:CharWaitAnim ==
+
+
+Makes the character perform an animation and waits until it's over.
+
+
+=== Arguments ===
+
+* <code>ent</code>: Character to animate
+* <code>anim</code>: Animation to play
+
+=== Example ===
+
+<pre>
+
+GROUND:CharWaitAnim(player, "Hurt")
+
+</pre>
+
+== GROUND:CharSetAction(RogueEssence.Ground.GroundChar,RogueEssence.Ground.GroundAction) ==
+
+
+Set a character's action.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to perfom the action
+* <code>action</code>: The action to perform
+
+== GROUND:CharWaitAction ==
+
+
+Makes the character perform an action and waits until it's over.
+
+
+=== Arguments ===
+
+* <code>ent</code>: Character to animate
+* <code>action</code>: Action to perform
+
+=== Example ===
+
+<pre>
+
+GROUND:CharWaitAction(player, action)
+
+</pre>
+
+== GROUND:ObjectSetAnim(RogueEssence.Ground.GroundObject,System.Int32,System.Int32,System.Int32,RogueElements.Dir8,System.Int32) ==
+
+
+Sets a ground object's animation.  After it finishes, it will return to the default animation.
+
+
+=== Arguments ===
+
+* <code>obj</code>: The object to animate
+* <code>frameTime</code>: The duration of each frame of animation
+* <code>startFrame</code>: The start frame of animation
+* <code>endFrame</code>: The end frame of animation
+* <code>dir</code>: The direction of the animation
+* <code>cycles</code>: The number of times to repeat the animation
+
+== GROUND:ObjectSetDefaultAnim(RogueEssence.Ground.GroundObject,System.String,System.Int32,System.Int32,System.Int32,RogueElements.Dir8) ==
+
+
+Sets a ground object's default animation.
+
+
+=== Arguments ===
+
+* <code>obj</code>: The object to animate
+* <code>animName</code>: The name of the animation
+* <code>frameTime</code>: The duration of each frame of animation
+* <code>startFrame</code>: The start frame of animation
+* <code>endFrame</code>: The end frame of animation
+* <code>dir</code>: The direction of the animation
+
+== GROUND:ObjectWaitAnimFrame ==
+
+
+Waits for the object to reach a specific frame before continuing.
+
+
+=== Arguments ===
+
+* <code>obj</code>: The object ot wait on
+* <code>frame</code>: The frame of animation to wait on.
+
+=== Example ===
+
+<pre>
+
+GROUND:WaitObjectAnim(fountain, 3)
+
+</pre>
+
+== GROUND:PlayVFX(RogueEssence.Content.FiniteEmitter,System.Int32,System.Int32,RogueElements.Dir8) ==
+
+
+Plays a VFX using a finite emitter that generates BaseAnims.
+
+
+=== Arguments ===
+
+* <code>emitter</code>: The VFX emitter
+* <code>x</code>: X position
+* <code>y</code>: Y Position
+* <code>dir</code>: Direction to orient the VFX, defaults to Down
+
+== GROUND:PlayVFX(RogueEssence.Content.FiniteEmitter,System.Int32,System.Int32,RogueElements.Dir8,System.Int32,System.Int32) ==
+
+
+Plays a VFX that has a start position and an end position.  It uses a finite emitter that generates BaseAnims.
+
+
+=== Arguments ===
+
+* <code>emitter</code>: The VFX emitter
+* <code>x</code>: Start X position
+* <code>y</code>: Start Y Position
+* <code>dir</code>: Direction to orient the VFX, defaults to Down.
+* <code>xTo</code>: End X position
+* <code>yTo</code>: End Y position
+
+== GROUND:PlayVFXAnim(RogueEssence.Content.BaseAnim,RogueEssence.Content.DrawLayer) ==
+
+
+Plays a VFX using just a BaseAnim
+
+
+=== Arguments ===
+
+* <code>anim</code>: The animation to play
+* <code>layer</code>: The layer to put it on
+
+== GROUND:MoveScreen(RogueEssence.Content.ScreenMover) ==
+
+
+Plays a screen-moving effect.
+
+
+=== Arguments ===
+
+* <code>mover</code>: The screen mover.
+
+== GROUND:HandoutEXP ==
+
+
+Gives a character a set amount of EXP.
+Also handles leveling up and learning new moves.
+
+
+=== Arguments ===
+
+* <code>character</code>: The characters to level up.
+* <code>experience</code>: The amount of EXP to gain.
+
+== GROUND:LevelUpChar ==
+
+
+Levels up a character a certain amount of times all at once.
+Also handles learning new moves.
+
+
+=== Arguments ===
+
+* <code>character</code>: The characters to level up.
+* <code>numLevelUps</code>: The number of level ups.
+
+== GROUND:AddMapStatus(System.String) ==
+
+
+Adds a mapstatus to the ground map.  Map statuses only have an aesthetic effect in ground maps.
+
+
+=== Arguments ===
+
+* <code>statusIdx</code>: The ID of the Map Status
+
+== GROUND:RemoveMapStatus(System.String) ==
+
+
+Removes a map status from the ground map.
+
+
+=== Arguments ===
+
+* <code>statusIdx</code>: The ID of the Map Status to remove.
+
+[[Category:Data Class Documentation]]

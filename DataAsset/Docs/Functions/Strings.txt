@@ -1,0 +1,67 @@
+This page shows all properties of Functions/Strings that can be manipulated from Lua
+
+== STRINGS:LocaleCode ==
+
+
+Gets the current language setting of the game.
+
+
+=== Returns ===
+
+The current language, represented by a locale code.
+
+== STRINGS:Format(System.String,System.Object[]) ==
+
+
+Formats a string.  Will unescape escaped characters and process grammar tags.
+
+
+=== Arguments ===
+
+* <code>fmt</code>: String to format.
+* <code>para</code>: Arguments
+
+=== Returns ===
+
+The formatted string.
+
+== STRINGS:FormatKey(System.String,System.Object[]) ==
+
+
+Formats a string given a string key.  Will unescape escaped characters.
+
+
+=== Arguments ===
+
+* <code>fmt</code>: The string key to format
+* <code>para</code>: string arguments
+
+== STRINGS:LocalKeyString(System.Int32) ==
+
+
+Gets the string representing a button or key.
+
+
+=== Arguments ===
+
+* <code>index</code>: The input type of the input.
+
+=== Returns ===
+
+The string representing the button o key the input maps to.
+
+== STRINGS:CreateList(NLua.LuaTable) ==
+
+
+Builds a single string of comma separated elements.
+
+
+=== Arguments ===
+
+* <code>listStrings</code>: LuaTable of strings containing the elements to build the list from.
+
+=== Returns ===
+
+The combined string containing all elements.
+
+[[Category:Data Class Documentation]]

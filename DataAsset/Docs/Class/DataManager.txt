@@ -1,4 +1,4 @@
-This page shows all properties of DataManager that can be manipulated from Lua
+This page shows all properties of Class/DataManager that can be manipulated from Lua
 
 == _DATA.Start ==
 

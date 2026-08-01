@@ -1,0 +1,892 @@
+This page shows all properties of Functions/UI that can be manipulated from Lua
+
+== UI:WaitInput ==
+
+
+Waits for the player to press a button before continuing.
+
+
+=== Arguments ===
+
+* <code>anyInput</code>: If false, only the Continue button will let the game continue. If true, any button will work.
+
+=== Example ===
+
+<pre>
+
+UI:WaitInput(true)
+
+</pre>
+
+== UI:WaitForPlayerInput ==
+
+
+Waits for the player to press at least one of the given inputs before continuing.
+If an empty table is supplied, then this function behaves like WaitInput.
+
+
+=== Arguments ===
+
+* <code>inputs</code>: A table of inputs, either as InputTypes or as ints. The game will continue if any one of them are hit. If empty, any button will work.
+
+=== Example ===
+
+<pre>
+
+local input = RogueEssence.FrameInput.InputType
+
+UI:WaitForPlayerInput({}) --This will accept any input
+UI:WaitForPlayerInput({input.Menu, input.Cancel}) --This only accepts the menu or cancel button specifically
+
+</pre>
+
+== UI:WaitShowDialogue ==
+
+
+Displays a dialogue box with text, waiting until the player completes it.
+Takes a string as an argument.
+
+
+=== Arguments ===
+
+* <code>text</code>: The text to display.
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
+
+=== Example ===
+
+<pre>
+
+UI:WaitShowDialogue("Hello World!")
+
+</pre>
+
+== UI:WaitShowTimedDialogue ==
+
+
+Displays a dialogue box with text, waiting until the specified time has expired.
+
+
+=== Arguments ===
+
+* <code>text</code>: The text to display.
+* <code>waitTime</code>: The time for the textbox to remain on screen. Pass -1 to wait for layer input.
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
+
+=== Example ===
+
+<pre>
+
+UI:WaitShowTimedDialogue("Hello World!", 120)
+
+</pre>
+
+== UI:TextDialogue(System.String,System.Int32,NLua.LuaTable) ==
+
+
+Sets the current dialogue text to be shown.  Requires WaitDialog to actually display.
+
+
+=== Arguments ===
+
+* <code>text</code>: The text to display.
+* <code>waitTime</code>: The time for the textbox to remain on screen. Pass -1 to wait for layer input.
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
+
+== UI:WaitShowVoiceOver ==
+
+
+Displays a voice over, waiting until the player completes it.
+
+
+=== Arguments ===
+
+* <code>text</code>: The text to display.
+* <code>expireTime</code>: The time for the textbox to remain on screen. Pass -1 to wait for layer input.
+* <code>x</code>: The X position of the box
+* <code>y</code>: The Y position of the box
+* <code>width</code>: Width of the box
+* <code>height</code>: Height of the box
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
+
+=== Example ===
+
+<pre>
+
+UI:WaitShowVoiceOver("Hello World!", 120)
+
+</pre>
+
+== UI:TextVoiceOver(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,NLua.LuaTable) ==
+
+
+Sets the current voice-over text to be shown.  Requires WaitDialog to actually display.
+
+
+=== Arguments ===
+
+* <code>text</code>: The text to display.
+* <code>expireTime</code>: The time for the textbox to remain on screen. Pass -1 to wait for layer input.
+* <code>x</code>: The X position of the box
+* <code>y</code>: The Y position of the box
+* <code>width</code>: Width of the box
+* <code>height</code>: Height of the box
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
+
+== UI:TextPopUp(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean) ==
+
+
+Makes text pop up in the bottom-left corner by default. Displays concurrently with any other process.
+
+
+=== Arguments ===
+
+* <code>text</code>: The text to display.
+* <code>expireTime</code>: The time for the textbox to remain on screen.
+* <code>x</code>: The X position of the box
+* <code>y</code>: The Y position of the box
+* <code>width</code>: Width of the box
+* <code>height</code>: Height of the box
+* <code>centerH</code>: Horizontal centering
+* <code>centerV</code>: Vertical centering
+
+== UI:WaitShowTitle ==
+
+
+Fades in a title text, waiting until the fade-in is complete.
+
+
+=== Arguments ===
+
+* <code>text</code>: The text to display.
+* <code>time</code>: The time for the text to fade in.
+
+=== Example ===
+
+<pre>
+
+UI:WaitShowTitle("Hello World!", 60)
+
+</pre>
+
+== UI:TextShowTitle(System.String,System.Int32) ==
+
+
+Shows text in the format of a title drop.  Requires WaitDialog to actually display.
+
+
+=== Arguments ===
+
+* <code>text</code>: The text to display.
+* <code>time</code>: The time for the text to fade in.
+
+== UI:WaitHideTitle ==
+
+
+Fades out the currently displayed title, waiting until the fade-out is complete.
+
+
+=== Arguments ===
+
+* <code>time</code>: The time for the text to fade in.
+
+=== Example ===
+
+<pre>
+
+UI:WaitHideTitle(60)
+
+</pre>
+
+== UI:TextFadeTitle(System.Int32) ==
+
+
+Fades out the text set in a title drop.  Requires WaitDialog to actually fade.
+
+
+=== Arguments ===
+
+* <code>time</code>: The time for the text to fade in.
+
+== UI:SetCustomDialogue(RogueEssence.Menu.DialogueBox) ==
+
+
+Displays a custom dialogue of the caller's choice.
+
+UI:WaitDialog() must be called afterwards for the dialogue to be actually displayed,
+and for execution to suspend until the dialogue is completed.
+
+
+== UI:WaitShowBG ==
+
+
+Fades in a chosen background image, with a chosen framerate, at a certain fade time, waiting until the fade-in is complete.
+
+
+=== Arguments ===
+
+* <code>bg</code>: The background to show, from the list of BG textures.
+* <code>frameTime</code>: Framerate of the image animation.
+* <code>fadeInTime</code>: Time taken to fade in the image.
+
+=== Example ===
+
+<pre>
+
+UI:WaitShowBG("TestBG", 3, 60)
+
+</pre>
+
+== UI:ShowBG(System.String,System.Int32,System.Int32) ==
+
+
+Sets an image to display.  Requires WaitDialog to actually display.
+
+
+=== Arguments ===
+
+* <code>bg</code>: The background to show, from the list of BG textures.
+* <code>frameTime</code>: Framerate of the image animation.
+* <code>fadeInTime</code>: Time taken to fade in the image.
+
+== UI:WaitHideBG ==
+
+
+Fades out the current background image, waiting until the fade-out is complete.
+
+
+=== Arguments ===
+
+* <code>time</code>: Time taken to fade out the image.
+
+=== Example ===
+
+<pre>
+
+UI:WaitHideBG(60)
+
+</pre>
+
+== UI:FadeBG(System.Int32) ==
+
+
+Prepares a fade-out of the current image.  Requires WaitDialog to actually display.
+
+
+=== Arguments ===
+
+* <code>time</code>: Time taken to fade out the image.
+
+== UI:ResetSpeaker(System.Boolean) ==
+
+
+Clears the current speaker, so none is displayed the next time TextDialogue is called.
+This also resets any custom dialogue box positions, portrait positions, and choice positions.
+
+
+=== Arguments ===
+
+* <code>keysound</code>: If turned on, the text from the dialogue boxes make sounds.  Default is on.
+
+== UI:SetSpeaker(System.String,System.Boolean,System.String,System.Int32,System.String,RogueEssence.Data.Gender) ==
+
+
+Sets the speaker to be displayed during the following calls to the TextDialogue functions.  It resets speaker emotion.
+
+
+=== Arguments ===
+
+* <code>name</code>: Speaker name.
+* <code>keysound</code>: Plays sounds when text appears.
+* <code>specie</code>: Species of the speaker
+* <code>form</code>: Form of the speaker
+* <code>skin</code>: Skin of the speaker
+* <code>gender</code>: Gender of the speaker
+
+== UI:SetSpeaker(RogueEssence.Ground.GroundChar,System.Boolean) ==
+
+
+Sets the speaker to be displayed during the following calls to the TextDialogue functions.  It resets speaker emotion.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to set as speaker. This is a character in a ground map.
+* <code>keysound</code>: Plays sounds when text appears.
+
+== UI:SetSpeaker(RogueEssence.Dungeon.Character,System.Boolean) ==
+
+
+Sets the speaker to be displayed during the following calls to the TextDialogue functions.  It resets speaker emotion.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to set as speaker. This is a character in a dungeon map.
+* <code>keysound</code>: Plays sounds when text appears.
+
+== UI:SetSpeakerReverse(System.Boolean) ==
+
+
+Reverses the speaker orientation to face left instead of right.  This depends on the boolean passed in.
+
+
+=== Arguments ===
+
+* <code>reverse</code>: Faces right if false, left if true.
+
+== UI:SetChoiceLoc(System.Int32,System.Int32) ==
+
+
+Sets the position of the choices for a question dialog.
+
+
+=== Arguments ===
+
+* <code>x</code>: The X position
+* <code>y</code>: The Y position
+
+== UI:ResetChoiceLoc ==
+
+
+Sets the position of the choices for a question dialog back to default.
+
+
+== UI:SetBounds(System.Int32,System.Int32,System.Int32,System.Int32) ==
+
+
+Sets the position and size of the dialogue box.
+
+
+=== Arguments ===
+
+* <code>x</code>: The X position of the box
+* <code>y</code>: The Y position of the box
+* <code>width</code>: Width of the box
+* <code>height</code>: Height of the box
+
+== UI:SetSe(System.String,System.Int32) ==
+
+
+Sets the speaker sound effect and speak frames played in the TextDialogue functions.
+
+
+=== Arguments ===
+
+* <code>newSe</code>: The sound effect of the box
+* <code>speakTime</code>: The amount of frames to wait between each sound effect
+
+=== Example ===
+
+<pre>
+
+UI:SetSe("Battle/_UNK_DUN_Water_Drop", 3)
+
+</pre>
+
+== UI:SetSe(System.String) ==
+
+
+Sets the speaker sound effect played in the TextDialogue functions.
+
+
+=== Arguments ===
+
+* <code>newSe</code>: The sound effect of the box
+
+=== Example ===
+
+<pre>
+
+UI:SetSe("Menu/Unknown-3")
+
+</pre>
+
+== UI:SetSpeakTime(System.Int32) ==
+
+
+Sets the speak frames played in the TextDialogue functions.
+
+
+=== Arguments ===
+
+* <code>speakTime</code>: The amount of frames to wait between each sound effect
+
+=== Example ===
+
+<pre>
+
+UI:SetSpeakTime(10)
+
+</pre>
+
+== UI:ResetSe ==
+
+
+Resets to the default speaker sound effect and speaker frames.
+
+
+== UI:ResetBounds ==
+
+
+Resets the position and size of the dialogue box.
+
+
+== UI:SetSpeakerLoc(System.Int32,System.Int32) ==
+
+
+Sets the position of the speaker in a dialogue box.
+
+
+=== Arguments ===
+
+* <code>x</code>: The X position
+* <code>y</code>: The Y position
+
+== UI:ResetSpeakerLoc ==
+
+
+Resets the position of the speaker in a dialogue box.
+
+
+== UI:SetSpeakerEmotion(System.String,System.Boolean) ==
+
+
+Sets the emotion of the speaker in the dialogue box.
+
+
+=== Arguments ===
+
+* <code>emo</code>: Emotion to display
+* <code>reverse</code>: Faces right if false, left if true.
+
+== UI:SetCenter(System.Boolean,System.Boolean) ==
+
+
+Sets the centering of the text in the textbox.
+
+
+=== Arguments ===
+
+* <code>centerH</code>: Horizontal centering
+* <code>centerV</code>: Vertical centering
+
+== UI:SetAutoFinish(System.Boolean) ==
+
+
+Makes the text automatically finish when it shows up.
+
+
+=== Arguments ===
+
+* <code>autoFinish</code>: Auto-finishes text if true.
+
+== UI:WaitDialog ==
+
+
+Displays the currently set dialogue box and waits for the player to complete it.
+
+
+=== Example ===
+
+<pre>
+
+UI:WaitDialog()
+
+</pre>
+
+== UI:_DummyWait ==
+
+
+Instantly break. Used as default/invalid value when returning a yieldable value.
+
+
+== UI:ChoiceMenuYesNo(System.String,System.Boolean,NLua.LuaTable) ==
+
+
+Ask a question answered by yes or no via character dialogue to the player.
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the integer value indicating the result of the menu, UI:ChoiceResult() must be called.
+
+The Yes/No menu returns 1 for yes, and 0 for no.
+
+
+=== Arguments ===
+
+* <code>message</code>: Question to be asked to the user.
+* <code>bdefaultstono</code>: Whether the cursor starts on no by default
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
+
+== UI:NameMenu(System.String,System.String,System.Int32,System.String) ==
+
+
+Displays the name input box.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the string value indicating the result of the menu, UI:ChoiceResult() must be called.
+
+
+=== Arguments ===
+
+* <code>title</code>: The text to show above the input line.
+* <code>desc</code>: The text to show below the input line.
+* <code>maxLength</code>: The length of the text in pixels.
+* <code>defaultName</code>: Name to start the textbox with.
+
+== UI:AssemblyMenu ==
+
+
+Displays a menu for replacing party members with the assembly.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the boolean value indicating whether the team composition was changed or not, UI:ChoiceResult() must be called.
+
+
+== UI:ShopMenu(NLua.LuaTable) ==
+
+
+Displays the Shop menu.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the table indicating the indices of items chosen, UI:ChoiceResult() must be called.
+
+
+=== Arguments ===
+
+* <code>goods</code>: A table of items to be sold.  The format is { Item=InvItem, Price=int } for each item.
+
+== UI:SellMenu ==
+
+
+Displays the Sell menu.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the table indicating the indices of items to sell, UI:ChoiceResult() must be called.
+
+
+== UI:StorageMenu ==
+
+
+Displays the Storage menu for which to exchange items in the inventory with.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the menu is exited.
+
+
+== UI:WithdrawMenu ==
+
+
+Displays the Storage menu for which to withdraw from.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the menu is exited.
+
+
+== UI:BankMenu ==
+
+
+Displays the Bank menu.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the menu is exited.
+
+
+== UI:SpoilsMenu(NLua.LuaTable) ==
+
+
+Displays the Spoils menu.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the menu is exited.
+
+
+=== Arguments ===
+
+* <code>appraisalMap</code>: A table of mappings from containers to items, in the format of { Box=InvItem , Item=InvItem }
+
+== UI:AppraiseMenu ==
+
+
+Displays the Appraisal menu.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the table indicating the indices of items chosen, UI:ChoiceResult() must be called.
+
+
+== UI:TutorTeamMenu(NLua.LuaFunction) ==
+
+
+Displays the Tutor Team menu.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the integer representing the chosen team member, UI:ChoiceResult() must be called.
+
+
+== UI:RelearnMenu(RogueEssence.Dungeon.Character) ==
+
+
+Displays the Relearn menu for a character.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the integer representing the chosen skill, UI:ChoiceResult() must be called.
+
+
+=== Arguments ===
+
+* <code>chara</code>: The character to relearn skills
+
+== UI:LearnMenu(RogueEssence.Dungeon.Character,System.String) ==
+
+
+Displays the Learn menu for a character to replace an existing skill with a new one.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the integer representing the chosen skill, UI:ChoiceResult() must be called.
+
+
+=== Arguments ===
+
+* <code>chara</code>: The character to relearn skills
+* <code>skillNum</code>: The new skill
+
+== UI:ForgetMenu(RogueEssence.Dungeon.Character) ==
+
+
+Displays the Forget menu for a character to forget a skill.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the integer representing the chosen skill, UI:ChoiceResult() must be called.
+
+
+=== Arguments ===
+
+* <code>chara</code>: The character to relearn skills
+
+== UI:ShowPromoteMenu ==
+
+
+Displays the Promote menu to choose a team member to promote.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the integer representing the chosen team slot, UI:ChoiceResult() must be called.
+
+
+== UI:CanSwapMenu(NLua.LuaTable) ==
+
+
+TODO
+
+
+== UI:SwapMenu(NLua.LuaTable,NLua.LuaTable) ==
+
+
+TODO
+
+
+== UI:TributeMenu(System.Int32) ==
+
+
+TODO
+
+
+== UI:ShowMusicMenu(System.Boolean,NLua.LuaTable) ==
+
+
+Displays the Music menu to browse music for the game.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the string representing the chosen song, UI:ChoiceResult() must be called.
+
+
+=== Arguments ===
+
+* <code>hardMod</code>: Set to true if you want to only include music of the current quest mod.
+* <code>spoilerUnlocks</code>: A lua table of strings representing progression flags that have been completed.
+            Any ogg file that uses this tag as a spoiler tag will display in the menu only if the flag has been passed.
+
+== UI:DungeonChoice(System.String,RogueEssence.Dungeon.ZoneLoc) ==
+
+
+Ask to enter a destintion via character dialogue to the player.
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the integer value indicating the result of the menu, UI:ChoiceResult() must be called.
+
+The Yes/No menu returns 1 for yes, and 0 for no.
+
+
+=== Arguments ===
+
+* <code>name</code>: Name of the destination
+* <code>dest</code>: The ZoneLoc location of the destination.
+
+== UI:DestinationMenu(NLua.LuaTable,System.Object) ==
+
+
+Marks the start of a choice menu for choosing destinations, showing a preview of restrictions and requirements for dungeons.
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the ZoneLoc indicating the chosen destination, UI:ChoiceResult() must be called.
+
+
+=== Arguments ===
+
+* <code>destinations</code>: A lua table representing the list of destinations with each element in the format of { Name=string, Dest=ZoneLoc }
+
+== UI:ServersMenu ==
+
+
+TODO
+
+
+== UI:ContactsMenu ==
+
+
+TODO
+
+
+== UI:SOSMenu ==
+
+
+TODO
+
+
+== UI:AOKMenu ==
+
+
+TODO
+
+
+== UI:PeersMenu ==
+
+
+TODO
+
+
+== UI:ShowConnectMenu ==
+
+
+TODO
+
+
+== UI:CurrentActivityMenu ==
+
+
+TODO
+
+
+== UI:ChooseMonsterMenu(System.String,NLua.LuaTable,System.Boolean,System.Boolean,System.Int32) ==
+
+
+Marks the start of a choice menu for choosing monsters, showing a preview of their appearances via portrait.
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the string indicating the chosen species, UI:ChoiceResult() must be called.
+
+
+=== Arguments ===
+
+* <code>title</code>: The title of the menu
+* <code>choices</code>: A lua table of choices with each element being a MonsterID.
+* <code>canMenu</code>: If set to true, the Menu Button exits the menu if pressed.
+* <code>canCancel</code>: If set to true, the Cancel Button exits the menu if pressed.
+* <code>slotsPerPage</code>: Slots to display per page
+
+== UI:SetCustomMenu(RogueEssence.Menu.InteractableMenu) ==
+
+
+Displays a custom menu of the caller's choice.
+
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the menu is exited.
+
+
+== UI:BeginChoiceMenu(System.String,NLua.LuaTable,System.Object,System.Object,NLua.LuaTable) ==
+
+
+Marks the start of a multi-choice menu.
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the integer value indicating the result of the menu, UI:ChoiceResult() must be called.
+
+
+=== Arguments ===
+
+* <code>message</code>: The question to ask the user.
+* <code>choicesPairs</code>: A table of choices.  Each choice can be either a string, or { string, bool } representing the text and enabled status.
+* <code>defaultChoice</code>: The cursor starts on this choice.
+* <code>cancelChoice</code>: This choice is chosen if the player presses the cancel button.
+* <code>callbacks</code>: The Lua table of callbacks for the textbox to call.
+
+== UI:BeginMultiPageMenu(System.Int32,System.Int32,System.Int32,System.String,NLua.LuaTable,System.Int32,System.Object,System.Object) ==
+
+
+Marks the start of a multi-paged choice menu.
+UI:WaitForChoice() must be called afterwards for the menu to be actually displayed,
+and for execution to suspend until the choice is returned.
+Then to recover the integer value indicating the result of the menu, UI:ChoiceResult() must be called.
+
+
+=== Arguments ===
+
+* <code>x</code>: X position of the menu
+* <code>y</code>: Y position of the menu
+* <code>width</code>: Width of the menu
+* <code>title</code>: Height of the menu
+* <code>choicesPairs</code>: A table of choices.  Each choice can be either a string, or { string, bool } representing the text and enabled status.
+* <code>linesPerPage</code>: Number of choices per page
+* <code>defaultChoice</code>: The cursor starts on this choice.
+* <code>cancelChoice</code>: This choice is chosen if the player presses the cancel button.
+
+== UI:ChoiceResult ==
+
+
+Get the result of the last choice menu
+
+
+=== Returns ===
+
+The result of the choice
+
+== UI:GetChoiceAction(System.Object) ==
+
+
+It's complicated.
+
+
+=== Arguments ===
+
+* <code>obj</code>: None
+
+== UI:WaitForChoice ==
+
+
+Displays the currently set choice menu and waits for the player's selection to complete.
+
+
+=== Example ===
+
+<pre>
+
+UI:WaitForChoice()
+
+</pre>
+
+== UI:__WaitForChoice ==
+
+
+Wait for choice and then CLEAN UP m_curchoice
+
+
+[[Category:Data Class Documentation]]

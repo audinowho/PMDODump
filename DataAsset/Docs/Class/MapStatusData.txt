@@ -1,4 +1,4 @@
-This page shows all properties of MapStatusData that can be manipulated from Lua
+This page shows all properties of Class/MapStatusData that can be manipulated from Lua
 
 == MapStatusData.Name ==
 

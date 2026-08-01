@@ -1,4 +1,4 @@
-This page shows all properties of MonsterData that can be manipulated from Lua
+This page shows all properties of Class/MonsterData that can be manipulated from Lua
 
 == MonsterData.Name ==
 

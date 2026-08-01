@@ -1,4 +1,4 @@
-This page shows all properties of StatusData that can be manipulated from Lua
+This page shows all properties of Class/StatusData that can be manipulated from Lua
 
 == StatusData.Name ==
 

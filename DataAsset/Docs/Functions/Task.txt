@@ -1,0 +1,132 @@
+This page shows all properties of Functions/Task that can be manipulated from Lua
+
+== TASK:StartEntityTask(RogueEssence.Ground.GroundEntity,NLua.LuaFunction) ==
+
+
+Helper function to make an entity run the specified task.
+Will not replace a running task!
+Tasks are run interlocked with the script processing and game processing, and characters cannot run multiple tasks at the same time.
+
+
+=== Arguments ===
+
+* <code>ent</code>: Entity which will run the task.
+* <code>fn</code>: Task coroutine.
+
+== TASK:StopEntityTask(RogueEssence.Ground.GroundEntity) ==
+
+
+Helper function to force stop an entity's current task.
+
+
+=== Arguments ===
+
+* <code>ent</code>: Entity running the task to stop.
+
+== TASK:WaitStartEntityTask ==
+
+
+Makes an entity run a specified task, and waits for it to complete.
+
+
+=== Arguments ===
+
+* <code>ent</code>: Entity which will run the task.
+* <code>fn</code>: Task coroutine.
+
+=== Example ===
+
+<pre>
+
+TODO
+
+</pre>
+
+== TASK:WaitEntityTask ==
+
+
+Waits for the specified entity to finish its task.
+
+
+=== Arguments ===
+
+* <code>ent</code>: Entity which task we'll wait on.
+
+=== Example ===
+
+<pre>
+
+TASK:WaitEntityTask(player)
+
+</pre>
+
+== TASK:WaitTask ==
+
+
+Runs a task and waits for it to complete.
+Most methods that do not expose themselves to script need to be wrapped with this.
+
+
+=== Arguments ===
+
+* <code>obj</code>: The task to wait on.
+
+=== Example ===
+
+<pre>
+
+TASK:WaitTask(_DUNGEON:DropMoney(100, RogueElements.Loc(10, 10), RogueElements.Loc(10, 10)))
+
+</pre>
+
+== TASK:StartScriptLocalCoroutine(NLua.LuaFunction,System.Object[]) ==
+
+
+A wrapper around the StartCoroutine method of the GameManager, so lua coroutines can be executed locally to the script context.
+AKA, it will block the script execution while its executed.
+
+
+=== Arguments ===
+
+* <code>fn</code>: None
+* <code>args</code>: None
+
+== TASK:BranchCoroutine(System.Object) ==
+
+
+Starts a new coroutine to run parallel to the current execution.
+Useful for performing multiple actions at once.
+
+
+=== Arguments ===
+
+* <code>obj</code>: The task to run in parallel
+
+=== Example ===
+
+<pre>
+
+local coro1 = TASK:BranchCoroutine(GAME:_FadeIn(60))
+
+</pre>
+
+== TASK:JoinCoroutines ==
+
+
+Waits for all specified coroutines to finish before continuing execution.
+Often used for coroutines created using TASK:BranchCoroutine()
+
+
+=== Arguments ===
+
+* <code>coroTable</code>: A table of coroutines to wait on.
+
+=== Example ===
+
+<pre>
+
+TASK:JoinCoroutines({coro1})
+
+</pre>
+
+[[Category:Data Class Documentation]]

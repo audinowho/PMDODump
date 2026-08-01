@@ -1,0 +1,194 @@
+This page shows all properties of Functions/Sound that can be manipulated from Lua
+
+== SOUND:PlaySE(System.String) ==
+
+
+Plays a sound effect
+
+
+=== Arguments ===
+
+* <code>name</code>: Sound file name, relative to the Content/SE folder
+
+== SOUND:PlayBattleSE(System.String) ==
+
+
+Plays a sound effect specifically from the Battle/ subdirectory
+
+
+=== Arguments ===
+
+* <code>name</code>: Sound file name, relative to the Content/SE/Battle folder
+
+== SOUND:WaitSE ==
+
+
+Plays a sound effect, and waits for it to complete before continuing.
+
+
+=== Example ===
+
+<pre>
+
+SOUND:WaitSE("Battle/Hit")
+
+</pre>
+
+== SOUND:LoopSE(System.String) ==
+
+
+Plays a continuous sound effect
+
+
+=== Arguments ===
+
+* <code>name</code>: Sound file name, relative to the Content/SE folder
+
+== SOUND:LoopBattleSE(System.String) ==
+
+
+Plays a continuous sound effect
+
+
+=== Arguments ===
+
+* <code>name</code>: Sound file name, relative to the Content/SE/Battle folder
+
+== SOUND:StopSE(System.String) ==
+
+
+Stops a continuous sound effect
+
+
+=== Arguments ===
+
+* <code>name</code>: Sound file name, relative to the Content/SE folder
+
+== SOUND:StopBattleSE(System.String) ==
+
+
+Stops a continuous sound effect
+
+
+=== Arguments ===
+
+* <code>name</code>: Sound file name, relative to the Content/SE/Battle folder
+
+== SOUND:FadeInSE(System.String,System.Int32) ==
+
+
+Plays a continuous sound effect, fading in over a specified amount of time
+
+
+=== Arguments ===
+
+* <code>name</code>: Sound file name, relative to the Content/SE folder
+* <code>fadeTime</code>: Time in frames for the sound to fade in
+
+== SOUND:FadeInBattleSE(System.String,System.Int32) ==
+
+
+Plays a continuous sound effect, fading in over a specified amount of time
+
+
+=== Arguments ===
+
+* <code>name</code>: Sound file name, relative to the Content/SE/Battle folder
+* <code>fadeTime</code>: Time in frames for the sound to fade in
+
+== SOUND:FadeOutSE(System.String,System.Int32) ==
+
+
+Stops a continuous sound effect, fading out over a specified amount of time
+
+
+=== Arguments ===
+
+* <code>name</code>: Sound file name, relative to the Content/SE folder
+* <code>fadeTime</code>: Time in frames for the sound to fade out
+
+== SOUND:FadeOutBattleSE(System.String,System.Int32) ==
+
+
+Stops a continuous sound effect, fading out over a specified amount of time
+
+
+=== Arguments ===
+
+* <code>name</code>: Sound file name, relative to the Content/SE/Battle folder
+* <code>fadeTime</code>: Time in frames for the sound to fade out
+
+== SOUND:PlayFanfare(System.String) ==
+
+
+Plays a sound effect that temporarily mutes the music for its duration
+
+
+=== Arguments ===
+
+* <code>name</code>: Sound file name, relative to the Content/SE folder
+
+== SOUND:WaitFanfare ==
+
+
+Plays a sound effect that temporarily mutes the music for its duration.
+This function waits for the sound to complete before continuing.
+
+
+=== Example ===
+
+<pre>
+
+SOUND:WaitFanfare("Battle/LevelUp")
+
+</pre>
+
+== SOUND:PlayBGM(System.String,System.Boolean,System.Int32) ==
+
+
+Plays a song, replacing the current one.
+
+
+=== Arguments ===
+
+* <code>name</code>: The file name of the song, relative to the Content/Music folder.
+* <code>fade</code>: Whether to fade the old song out, or start a new one.
+* <code>fadeTime</code>: The amount of time, in frames, to fade out the old song.
+
+== SOUND:StopBGM ==
+
+
+Stops playing the current song.
+
+
+== SOUND:FadeOutBGM(System.Int32) ==
+
+
+Fades out the current song.
+
+
+=== Arguments ===
+
+* <code>fadeTime</code>: The amount of time, in frames, to fade out the song.
+
+== SOUND:SetBGMVolume(System.Single) ==
+
+
+Sets the current volume of the song.
+
+
+=== Arguments ===
+
+* <code>val</code>: A float value between 0 and 1
+
+== SOUND:GetCurrentSong ==
+
+
+Gets the currently playing song.  If the current song is fading out, gets the next song to be played.
+
+
+=== Returns ===
+
+The filename of the song, relative to the Content/Music folder
+
+[[Category:Data Class Documentation]]

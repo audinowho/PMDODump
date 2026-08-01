@@ -1,4 +1,4 @@
-This page shows all properties of BattleContext that can be manipulated from Lua
+This page shows all properties of Class/BattleContext that can be manipulated from Lua
 
 == BattleContext.StrikeStartTile ==
 

@@ -1,4 +1,4 @@
-This page shows all properties of Character that can be manipulated from Lua
+This page shows all properties of Class/Character that can be manipulated from Lua
 
 == Character.Absentee ==
 

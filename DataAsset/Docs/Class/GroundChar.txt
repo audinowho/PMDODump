@@ -1,4 +1,4 @@
-This page shows all properties of GroundChar that can be manipulated from Lua
+This page shows all properties of Class/GroundChar that can be manipulated from Lua
 
 == BaseTaskUser.ThinkType ==
 

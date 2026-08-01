@@ -1,0 +1,156 @@
+This page shows all properties of Functions/AI that can be manipulated from Lua
+
+== DUNGEON:CharTurnToChar(RogueEssence.Dungeon.Character,RogueEssence.Dungeon.Character) ==
+
+
+Makes a character turn to face another
+
+
+=== Arguments ===
+
+* <code>curch</code>: None
+* <code>turnto</code>: None
+
+== DUNGEON:LastDungeonResult ==
+
+
+Gets the result of the last dungeon adventure.
+
+
+== DUNGEON:DungeonCurrentFloor ==
+
+
+Returns the floor number of the current dungeon.
+
+
+== DUNGEON:DungeonAssetName ==
+
+
+Returns the internal name for the current dungeon.
+
+
+== DUNGEON:DungeonDisplayName ==
+
+
+Returns the localized name of the current dungeon.
+
+
+== DUNGEON:CharSetEmote(RogueEssence.Dungeon.Character,System.String,System.Int32) ==
+
+
+Set a character's emote in a dungeon map.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to emote
+* <code>emoteid</code>: ID of the emote
+* <code>cycles</code>: The number of times to play the emote.
+
+== DUNGEON:CharStartAnim ==
+
+
+Set a character's animation.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to animate
+* <code>anim</code>: Name of the animation
+* <code>loop</code>: Whether to loop the animation
+
+=== Example ===
+
+<pre>
+
+DUNGEON:CharStartAnim(player, anim, false)
+
+</pre>
+
+== DUNGEON:CharEndAnim ==
+
+
+Stops a character's current animation, reverting them to default idle.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to stop animating
+
+=== Example ===
+
+<pre>
+
+DUNGEON:CharEndAnim(player)
+
+</pre>
+
+== DUNGEON:CharWaitAnim ==
+
+
+Set a character's animation, and waits until it completed before continue.
+
+
+=== Arguments ===
+
+* <code>chara</code>: Character to animate
+* <code>anim</code>: Name of the animation
+
+=== Example ===
+
+<pre>
+
+DUNGEON:CharStartAnim(player, anim)
+
+</pre>
+
+== DUNGEON:PlayVFX(RogueEssence.Content.FiniteEmitter,System.Int32,System.Int32,RogueElements.Dir8) ==
+
+
+Plays a VFX in the dungeon map
+
+
+=== Arguments ===
+
+* <code>emitter</code>: The VFX emitter
+* <code>x</code>: X position in pixels
+* <code>y</code>: Y Position in pixels
+* <code>dir</code>: Direction to orient the VFX, defaults to Down
+
+== DUNGEON:PlayVFX(RogueEssence.Content.FiniteEmitter,System.Int32,System.Int32,RogueElements.Dir8,System.Int32,System.Int32) ==
+
+
+Plays a VFX that has a start position and an end position.  It uses a finite emitter that generates BaseAnims.
+
+
+=== Arguments ===
+
+* <code>emitter</code>: The VFX emitter
+* <code>x</code>: Start X position in pixels
+* <code>y</code>: Start Y Position in pixels
+* <code>dir</code>: Direction to orient the VFX, defaults to Down.
+* <code>xTo</code>: End X position in pixels
+* <code>yTo</code>: End Y position in pixels
+
+== DUNGEON:PlayVFXAnim(RogueEssence.Content.BaseAnim,RogueEssence.Content.DrawLayer) ==
+
+
+Plays a VFX using just a BaseAnim
+
+
+=== Arguments ===
+
+* <code>anim</code>: The animation to play
+* <code>layer</code>: The layer to put it on
+
+== DUNGEON:MoveScreen(RogueEssence.Content.ScreenMover) ==
+
+
+Plays a screen-moving effect.
+
+
+=== Arguments ===
+
+* <code>mover</code>: The screen mover.
+
+[[Category:Data Class Documentation]]

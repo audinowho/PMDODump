@@ -1,4 +1,4 @@
-This page shows all properties of SkillData that can be manipulated from Lua
+This page shows all properties of Class/SkillData that can be manipulated from Lua
 
 == SkillData.Name ==
 

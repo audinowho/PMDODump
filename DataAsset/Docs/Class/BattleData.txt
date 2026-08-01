@@ -1,4 +1,4 @@
-This page shows all properties of BattleData that can be manipulated from Lua
+This page shows all properties of Class/BattleData that can be manipulated from Lua
 
 == BattleData.Element ==
 
