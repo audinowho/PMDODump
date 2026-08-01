@@ -1,3 +1,5 @@
+This page shows all properties of GroundChar that can be manipulated from Lua
+
 == BaseTaskUser.ThinkType ==
 
 
@@ -46,7 +48,13 @@ can be placed and activated only when needed by the map scenario.
 == GroundEntity.EntOrder ==
 
 
-The draw/interaction order of the entity.  Lower values are handled before higher ones.
+The draw order of the entity.  Lower values are handled before higher ones.
+
+
+== GroundEntity.InteractOrder ==
+
+
+The interact order of the entity.  Lower values are handled before higher ones.
 
 
 == GroundEntity.DevEntColoring ==
@@ -55,3 +63,4 @@ The draw/interaction order of the entity.  Lower values are handled before highe
 The color of the boxes and etc around the entity
 
 
+[[Category:Data Class Documentation]]

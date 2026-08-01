@@ -1,3 +1,5 @@
+This page shows all properties of SkillData that can be manipulated from Lua
+
 == SkillData.Name ==
 
 
@@ -59,3 +61,4 @@ Events that occur with this skill.
 Before it's used, when it hits, after it's used, etc.
 
 
+[[Category:Data Class Documentation]]

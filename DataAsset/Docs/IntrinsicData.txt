@@ -1,3 +1,5 @@
+This page shows all properties of IntrinsicData that can be manipulated from Lua
+
 == IntrinsicData.Name ==
 
 
@@ -28,3 +30,4 @@ Comments visible to only developers
 Index number of the intrinsic for sorting.  Must be unique
 
 
+[[Category:Data Class Documentation]]

@@ -1,3 +1,5 @@
+This page shows all properties of MapStatusData that can be manipulated from Lua
+
 == MapStatusData.Name ==
 
 
@@ -58,3 +60,4 @@ Triggers when a characer needs to refresh traits
 Triggers when something attempts to add a map status when it already exists
 
 
+[[Category:Data Class Documentation]]

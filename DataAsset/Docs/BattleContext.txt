@@ -1,3 +1,5 @@
+This page shows all properties of BattleContext that can be manipulated from Lua
+
 == BattleContext.StrikeStartTile ==
 
 
@@ -144,3 +146,4 @@ The character that is performing the action
 Whether the action should be canceled or not.
 
 
+[[Category:Data Class Documentation]]

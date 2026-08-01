@@ -1,3 +1,5 @@
+This page shows all properties of BattleData that can be manipulated from Lua
+
 == BattleData.Element ==
 
 
@@ -107,3 +109,4 @@ Target character animation when it is hit.
 Only plays if the target is actually hit.
 
 
+[[Category:Data Class Documentation]]

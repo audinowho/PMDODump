@@ -1,3 +1,5 @@
+This page shows all properties of Character that can be manipulated from Lua
+
 == Character.Absentee ==
 
 
@@ -28,12 +30,6 @@ Times missed
 The number of turns this character must wait before being able to move again.
 
 
-== Character.TiersUsed ==
-
-
-The number of turn tiers that this character has moved OR acted on.
-
-
 == Character.TurnUsed ==
 
 
@@ -50,6 +46,12 @@ Will prevent the passive item effects.  Does not prevent active use.
 
 
 Prevents passive intrinsic effects
+
+
+== Character.ForceAI ==
+
+
+Will act as AI even if controlled
 
 
 == Character.MovesScrambled ==
@@ -100,3 +102,4 @@ Cannot be removed from assembly.
 Cannot be removed from team.
 
 
+[[Category:Data Class Documentation]]

@@ -73,8 +73,8 @@ def getRelevantClassMap(node, classes, node_types):
 def convertClassesToWiki(out_file, classes, node_types):
     doc_paths = ["RogueEssence.xml", "PMDC.xml", "RogueElements.xml"]
 
-    with open(os.path.join("..", "DataAsset", "Docs", out_file), 'w', encoding='utf-8') as txt:
-
+    with open(os.path.join("..", "DataAsset", "Docs", out_file + ".txt"), 'w', encoding='utf-8') as txt:
+        txt.write("This page shows all properties of {0} that can be manipulated from Lua\n\n".format(out_file))
         for doc_path in doc_paths:
             tree = ET.parse(os.path.join("..","DumpAsset","Editor","Docs", doc_path))
             root = tree.getroot()
@@ -84,6 +84,8 @@ def convertClassesToWiki(out_file, classes, node_types):
                 if class_key is not None:
                     doc_txt = convertToDocs(member_node, class_key, classes[class_key], sep)
                     txt.write(doc_txt + "\n\n")
+
+        txt.write("[[Category:Data Class Documentation]]")
 
 def main():
 
@@ -98,13 +100,13 @@ def main():
         "RogueEssence.Script.ScriptAI": "AI"
     }
 
-    convertClassesToWiki("Script.txt", class_maps, {"M": ":", "F": ":"})
+    convertClassesToWiki("Script", class_maps, {"M": ":", "F": ":"})
 
     class_maps = {
         "RogueEssence.Dungeon.Character": "Character",
         "RogueEssence.Dungeon.CharData": "CharData"
     }
-    convertClassesToWiki("Character.txt", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Character", class_maps, {"P": ".", "F": "."})
 
     class_maps = {
         "RogueEssence.Ground.GroundChar": "GroundChar",
@@ -112,7 +114,7 @@ def main():
         "RogueEssence.Ground.BaseTaskUser": "BaseTaskUser",
         "RogueEssence.Ground.GroundEntity": "GroundEntity"
     }
-    convertClassesToWiki("GroundChar.txt", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("GroundChar", class_maps, {"P": ".", "F": "."})
 
     class_maps = {
         "RogueEssence.Dungeon.BattleContext": "BattleContext",
@@ -120,49 +122,49 @@ def main():
         "RogueEssence.Dungeon.GameContext": "GameContext"
     }
 
-    convertClassesToWiki("BattleContext.txt", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("BattleContext", class_maps, {"P": ".", "F": "."})
 
     class_maps = {
         "RogueEssence.Data.BattleData": "BattleData"
     }
 
-    convertClassesToWiki("BattleData.txt", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("BattleData", class_maps, {"P": ".", "F": "."})
 
     class_maps = {
         "RogueEssence.Data.TileData": "TileData"
     }
 
-    convertClassesToWiki("TileData.txt", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("TileData", class_maps, {"P": ".", "F": "."})
 
     class_maps = {
         "RogueEssence.Data.MapStatusData": "MapStatusData"
     }
 
-    convertClassesToWiki("MapStatusData.txt", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("MapStatusData", class_maps, {"P": ".", "F": "."})
 
     class_maps = {
         "RogueEssence.Data.StatusData": "StatusData"
     }
 
-    convertClassesToWiki("StatusData.txt", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("StatusData", class_maps, {"P": ".", "F": "."})
 
     class_maps = {
         "RogueEssence.Data.SkillData": "SkillData"
     }
 
-    convertClassesToWiki("SkillData.txt", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("SkillData", class_maps, {"P": ".", "F": "."})
 
     class_maps = {
         "RogueEssence.Data.IntrinsicData": "IntrinsicData"
     }
 
-    convertClassesToWiki("IntrinsicData.txt", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("IntrinsicData", class_maps, {"P": ".", "F": "."})
 
     class_maps = {
         "RogueEssence.Data.ItemData": "ItemData"
     }
 
-    convertClassesToWiki("ItemData.txt", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("ItemData", class_maps, {"P": ".", "F": "."})
 
     class_maps = {
         "RogueEssence.Data.MonsterData": "MonsterData",
@@ -170,13 +172,13 @@ def main():
         "PMDC.Data.MonsterFormData": "MonsterFormData"
     }
 
-    convertClassesToWiki("MonsterData.txt", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("MonsterData", class_maps, {"P": ".", "F": "."})
 
     class_maps = {
         "RogueEssence.Data.DataManager": "_DATA"
     }
 
-    convertClassesToWiki("DataManager.txt", class_maps, {"P": ".", "F": ".", "M": ":"})
+    convertClassesToWiki("DataManager", class_maps, {"P": ".", "F": ".", "M": ":"})
 
     print("Complete.")
 

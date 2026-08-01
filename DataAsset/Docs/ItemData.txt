@@ -1,3 +1,5 @@
+This page shows all properties of ItemData that can be manipulated from Lua
+
 == ItemData.Name ==
 
 
@@ -129,3 +131,4 @@ Defines the custom graphics for the item when it is thrown.
 Set to an empty anim to use the item's own sprite.
 
 
+[[Category:Data Class Documentation]]

@@ -1,3 +1,5 @@
+This page shows all properties of MonsterData that can be manipulated from Lua
+
 == MonsterData.Name ==
 
 
@@ -232,3 +234,4 @@ Egg moves
 Tutor moves
 
 
+[[Category:Data Class Documentation]]

@@ -1,3 +1,5 @@
+This page shows all properties of StatusData that can be manipulated from Lua
+
 == StatusData.Name ==
 
 
@@ -83,3 +85,4 @@ Event for when the character's skills are changed or swapped around.
 Passive effects applied to the character that inflicted the status.
 
 
+[[Category:Data Class Documentation]]

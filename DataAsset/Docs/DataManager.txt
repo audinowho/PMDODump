@@ -1,3 +1,5 @@
+This page shows all properties of DataManager that can be manipulated from Lua
+
 == _DATA.Start ==
 
 
@@ -471,3 +473,4 @@ Deletes replays from the replay folder corresponding to the current mod.
 
 * <code>includeFav</code>: Favorites will be deleted too.
 
+[[Category:Data Class Documentation]]

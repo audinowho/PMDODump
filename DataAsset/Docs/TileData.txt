@@ -1,3 +1,5 @@
+This page shows all properties of TileData that can be manipulated from Lua
+
 == TileData.Name ==
 
 
@@ -77,3 +79,4 @@ Also triggers if forced on or winds up on it in any other way.
 What happens when the character voluntarily triggers the tile.
 
 
+[[Category:Data Class Documentation]]

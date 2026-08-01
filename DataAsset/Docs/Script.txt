@@ -1,3 +1,5 @@
+This page shows all properties of Script that can be manipulated from Lua
+
 == AI:SetCharacterAI(RogueEssence.Ground.GroundChar,System.String,System.Object[]) ==
 
 
@@ -397,6 +399,45 @@ Enters a zone and begins a new adventure.
 * <code>structureid</code>: The segment within the dungeon to start in.  -1 represents ground maps.
 * <code>mapid</code>: The id of the ground map or dungeon map within the dungeon segment.
 * <code>entry</code>: The entry point on the resulting map
+
+== GAME:FadeOutFront ==
+
+
+Fade out the screen. Waits to complete before continuing.
+This fade specifically comes in front of the menu.
+
+
+=== Arguments ===
+
+* <code>white</code>: Fade to white if set to true.  Fades to black otherwise.
+* <code>duration</code>: The amount of time to fade in frames.
+
+=== Example ===
+
+<pre>
+
+GAME:FadeOutFront(false, 60)
+
+</pre>
+
+== GAME:FadeInFront ==
+
+
+Fade in the screen. Waits to complete before continuing.
+This fade specifically comes in front of the menu.
+
+
+=== Arguments ===
+
+* <code>duration</code>: The amount of time to fade in frames.
+
+=== Example ===
+
+<pre>
+
+GAME:FadeOutFront(false, 60)
+
+</pre>
 
 == GAME:FadeOut ==
 
@@ -1407,36 +1448,6 @@ Unhides an entity.
 
 * <code>entityname</code>: The name of the entity to unhide.
 
-== GROUND:CreateObject(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32) ==
-
-
-TODO: WIP
-
-
-=== Arguments ===
-
-* <code>objtype</code>: None
-* <code>instancename</code>: None
-* <code>x</code>: None
-* <code>y</code>: None
-* <code>w</code>: None
-* <code>h</code>: None
-
-== GROUND:CreateCharacter(System.String,System.String,System.Int32,System.Int32,System.String,System.String) ==
-
-
-TODO: WIP
-
-
-=== Arguments ===
-
-* <code>chartype</code>: None
-* <code>instancename</code>: None
-* <code>x</code>: None
-* <code>y</code>: None
-* <code>actionfun</code>: None
-* <code>thinkfun</code>: None
-
 == GROUND:RemoveObject(System.String) ==
 
 
@@ -1587,7 +1598,7 @@ CharTurnToCharAnimated(charFrom, Dir8.Left, 3, true)
 
 </pre>
 
-== GROUND:CharAnimateTurnTo ==
+== GROUND:_CharAnimateTurnTo(RogueEssence.Ground.GroundChar,RogueElements.Dir8,System.Int32) ==
 
 
 Makes a character do an animated turn to face a chosen direction over the specified time.
@@ -1604,7 +1615,7 @@ Waits until the operation is completed.
 
 <pre>
 
-CharTurnToCharAnimated(charFrom, Dir8.Left, 3)
+CharAnimateTurnTo(charFrom, Dir8.Left, 3)
 
 </pre>
 
@@ -2434,6 +2445,40 @@ TASK:JoinCoroutines({coro1})
 Waits for the player to press a button before continuing.
 
 
+=== Arguments ===
+
+* <code>anyInput</code>: If false, only the Continue button will let the game continue. If true, any button will work.
+
+=== Example ===
+
+<pre>
+
+UI:WaitInput(true)
+
+</pre>
+
+== UI:WaitForPlayerInput ==
+
+
+Waits for the player to press at least one of the given inputs before continuing.
+If an empty table is supplied, then this function behaves like WaitInput.
+
+
+=== Arguments ===
+
+* <code>inputs</code>: A table of inputs, either as InputTypes or as ints. The game will continue if any one of them are hit. If empty, any button will work.
+
+=== Example ===
+
+<pre>
+
+local input = RogueEssence.FrameInput.InputType
+
+UI:WaitForPlayerInput({}) --This will accept any input
+UI:WaitForPlayerInput({input.Menu, input.Cancel}) --This only accepts the menu or cancel button specifically
+
+</pre>
+
 == UI:WaitShowDialogue ==
 
 
@@ -2600,6 +2645,15 @@ Fades out the text set in a title drop.  Requires WaitDialog to actually fade.
 === Arguments ===
 
 * <code>time</code>: The time for the text to fade in.
+
+== UI:SetCustomDialogue(RogueEssence.Menu.DialogueBox) ==
+
+
+Displays a custom dialogue of the caller's choice.
+
+UI:WaitDialog() must be called afterwards for the dialogue to be actually displayed,
+and for execution to suspend until the dialogue is completed.
+
 
 == UI:WaitShowBG ==
 
@@ -3084,7 +3138,7 @@ TODO
 TODO
 
 
-== UI:ShowMusicMenu(NLua.LuaTable) ==
+== UI:ShowMusicMenu(System.Boolean,NLua.LuaTable) ==
 
 
 Displays the Music menu to browse music for the game.
@@ -3096,6 +3150,7 @@ Then to recover the string representing the chosen song, UI:ChoiceResult() must 
 
 === Arguments ===
 
+* <code>hardMod</code>: Set to true if you want to only include music of the current quest mod.
 * <code>spoilerUnlocks</code>: A lua table of strings representing progression flags that have been completed.
             Any ogg file that uses this tag as a spoiler tag will display in the menu only if the flag has been passed.
 
@@ -3273,3 +3328,4 @@ UI:WaitForChoice()
 Wait for choice and then CLEAN UP m_curchoice
 
 
+[[Category:Data Class Documentation]]
