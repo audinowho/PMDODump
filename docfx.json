@@ -1,0 +1,37 @@
+{
+	"metadata": [
+	{
+		"src": [
+		{
+			"files": [ "**/*.csproj" ],
+			"exclude": [ "**/bin/**", "**/obj/**" ],
+			"src": "PMDC/RogueEssence/RogueElements/RogueElements"
+		}
+		],
+		"dest": "DataAsset/Docs/RogueElements",
+		"outputFormat": "mref"
+	},
+	{
+		"src": [
+		{
+			"files": [ "**/*.csproj" ],
+			"exclude": [ "**/bin/**", "**/obj/**" ],
+			"src": "PMDC/RogueEssence/RogueEssence"
+		}
+		],
+		"dest": "DataAsset/Docs/RogueEssence",
+		"outputFormat": "mref"
+	},
+	{
+		"src": [
+		{
+			"files": [ "**/*.csproj" ],
+			"exclude": [ "**/bin/**", "**/obj/**" ],
+			"src": "PMDC/PMDC"
+		}
+		],
+		"dest": "DataAsset/Docs/PMDC",
+		"outputFormat": "mref"
+	}
+	]
+}
