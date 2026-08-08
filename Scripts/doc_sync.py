@@ -2,7 +2,7 @@ import os
 import re
 import json
 import shutil
-
+import yaml
 
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as minidom
@@ -14,155 +14,261 @@ dotnet docfx metadata docfx.json --outputFormat mref
 to generate the files needed for this script.
 '''
 
-def convertToDocs(node, class_from, class_to, sep):
-    node_class_name = node.attrib["name"]
-    node_class_name = node_class_name[2:]
+def convertToDocs(node, backup_node, friendly_name):
+    attrib_name = node['source']['id']
 
     wiki_section = []
-    class_call = "== {0} ==".format(node_class_name[(len(class_from)+1):])
-    wiki_section.append(class_call)
+    table_section = []
 
-    if node.type == "F":
+    method_node = None
+    if node['type'] == 'Method':
+        method_node = node
+    elif backup_node is not None and backup_node['type'] == 'Method':
+        method_node = backup_node
+
+    if method_node is not None:
+        wiki_section.append("{{ClassMethod")
+    else:
+        wiki_section.append("{{ClassProperty")
+
+    wiki_section.append("|title={0}".format(attrib_name))
+
+    if method_node is not None:
+        sep = ':'
         param_names = []
-        for param_node in node.iter('param'):
-            param_names.append(param_node.attrib["name"])
+        if 'parameters' in method_node['syntax']:
+            for param_node in method_node['syntax']['parameters']:
+                param_names.append(param_node["id"])
         arg_signature = "({0})".format(", ".join(param_names))
     else:
+        sep = '.'
         arg_signature = ""
-    class_code = "<code>{0}{1}{2}{3}</code>".format(class_to, sep, node_class_name[(len(class_from)+1):], arg_signature)
-    wiki_section.append(class_code)
+    wiki_section.append("|call={0}{1}{2}{3}".format(friendly_name, sep, attrib_name, arg_signature))
 
-    if node.type != "F":
-        type_note = "'''Type:''' {0}".format(node.member_type)
-        wiki_section.append(type_note)
+    if method_node is None:
+        member_type = node['syntax']['return']['type']
+        wiki_section.append("|type={0}".format(member_type))
 
-    summary_node = node.find("summary")
-    if summary_node is not None and summary_node.text is not None:
-        summary_lines = summary_node.text.split("\n")
-        summary_lines = [line.strip() for line in summary_lines]
-        wiki_section.append("\n".join(summary_lines))
+    description = ""
+    if 'summary' in node:
+        summary_node = node['summary']
+        description = summary_node.replace('\n', '<br>')
+        wiki_section.append("|description={0}".format(description))
 
     params = []
-    for param_node in node.iter('param'):
-        params.append("{{ArgRow\n|name={0}\n|type={1}\n|desc={2}\n}}".format(param_node.attrib["name"], param_node.attrib["type"], param_node.text))
+    if method_node is not None:
+        table_section.append('<tr>\n<td>'+attrib_name+'</td>\n<td>'+description+'</td>\n</tr>')
+        if 'parameters' in method_node['syntax']:
+            for param_node in method_node['syntax']['parameters']:
+                description = ""
+                if 'description' in param_node:
+                    description = param_node['description'].replace('\n', '<br>')
+                params.append("{{ArgRow|name="+param_node["id"]+"|type="+param_node["type"]+"|desc="+description+"}}")
 
     if len(params) > 0:
-        args_header = "==== Parameters ===="
-        wiki_section.append(args_header)
-
-        wiki_section.append("{| class=\"wikitable\"\n{{ArgHeader}}{0}|}".format("\n".join(params)))
+        wiki_section.append("|params=")
+        for param in params:
+            wiki_section.append(param)
 
     returns = ""
-    returns_node = node.find("returns")
-    if returns_node is not None and returns_node.text is not None:
-        returns = "{{ReturnRow\n|type={0}\n|desc={1}\n}}".format(returns_node.attrib["type"], returns_node.text)
+    if method_node is not None:
+        if 'return' in node['syntax']:
+            returns_node = node['syntax']['return']
+            description = ""
+            if 'description' in returns_node:
+                description = returns_node['description'].replace('\n', '<br>')
+            returns = "{{ReturnRow|type="+returns_node["type"]+"|desc="+description+"}}"
 
     if returns != "":
-        returns_header = "==== Returns ===="
-        wiki_section.append(returns_header)
+        wiki_section.append("|returns=")
+        wiki_section.append(returns)
 
-        wiki_section.append("{| class=\"wikitable\"\n{{ReturnHeader}}{0}|}".format(returns))
+    examples = []
+    if 'example' in node:
+        for example in node['example']:
+            examples.append(example.replace('\n', '<br>'))
+    if len(examples) > 0:
+        wiki_section.append("|example=")
+        wiki_section.append("<br><br>".join(examples))
 
-    example_node = node.find("example")
+    wiki_section.append("}}")
+    return "\n".join(wiki_section), "\n".join(table_section)
 
-    if example_node is not None:
-        example_header = "==== Example ===="
-        wiki_section.append(example_header)
+def convert_to_link(source_file):
+    github_repo_map = {}
+    github_repo_map[r'https://github.com/PMDCollab/PMDC/blob/master/PMDC'] = os.path.abspath(os.path.join('..', 'PMDC', 'PMDC'))
+    github_repo_map[r'https://github.com/RogueCollab/RogueEssence/blob/master/RogueEssence'] = os.path.abspath(os.path.join('..', 'PMDC', 'RogueEssence', 'RogueEssence'))
+    github_repo_map[r'https://github.com/audinowho/RogueElements/blob/master/RogueElements'] = os.path.abspath(os.path.join('..', 'PMDC', 'RogueEssence', 'RogueElements', 'RogueElements'))
 
-        example_lines = example_node.text.split("\n")
-        example_lines = [line.strip() for line in example_lines]
-        example = "<pre>\n{0}\n</pre>".format("\n".join(example_lines))
-        wiki_section.append(example)
+    for link in github_repo_map:
+        parent_path = github_repo_map[link]
+        if source_file.startswith(parent_path):
+            head = source_file[len(parent_path):]
+            final_link = link + head.replace('\\', '/')
+            return final_link
+    return None
 
-    wiki_section.append("=== Usage ===")
-    wiki_section.append("---")
+def convert_to_filename(main_out_file, source_file, split_format):
+    if split_format is None:
+        return main_out_file
 
-    return "\n\n".join(wiki_section)
+    _, filename = os.path.split(source_file)
+    base_name, _ = os.path.splitext(filename)
+    truncated_name = base_name[len(split_format):]
+    name_pieces = []
+    last_start = 0
+    for ii in range(1, len(truncated_name)):
+        if truncated_name[ii].isupper():
+            name_pieces.append(truncated_name[last_start:ii])
+            last_start = ii
+    name_pieces.append(truncated_name[last_start:])
+    return main_out_file + "/" + "_".join(name_pieces)
 
-def getRelevantClassMap(node, classes, node_types):
+def convertClassesToWiki(main_out_file, friendly_name, is_singleton, is_quick_reference, classes, split_format, accepted_types):
 
-    node_class_name = node.attrib["name"]
-    node_separator = None
-    for node_type in node_types:
-        if node_class_name.startswith(node_type + ":"):
-            node_separator = node_types[node_type]
+    ref_links = {}
+    out_files = {}
+    table_files = {}
 
-    if node_separator is not None:
-        node_class_name = node_class_name[2:]
-        for class_name in classes:
-            if node_class_name.startswith(class_name):
-                return (class_name, node_separator)
 
-    return None, None
+    for class_name in classes:
+        with open(os.path.join("..", "DataAsset", "Docs", class_name + ".yml"), 'r') as file:
+            class_yaml = yaml.safe_load(file)
 
-def convertClassesToWiki(out_file, classes, node_types):
-    doc_paths = ["RogueEssence.xml", "PMDC.xml", "RogueElements.xml"]
+        item_links = {}
+        skip_items = {}
+        for item in class_yaml['items']:
+            if item['type'] in accepted_types:
+                if 'summary' in item:
+                    summary_re = re.search(r'\[LuaFunction\] (\S+)', item['summary'])
+                    if summary_re:
+                        other_class = summary_re.group(1)
+                        item_links[other_class] = item
+                        full_match = summary_re.group(0)
+                        if full_match == item['summary']:
+                            skip_items[item['name']] = item['summary']
 
-    with open(os.path.join("..", "DataAsset", "Docs", out_file + ".txt"), 'w', encoding='utf-8') as txt:
-        txt.write("This page shows all properties of {0} that can be manipulated from Lua\n\n".format(out_file))
-        for doc_path in doc_paths:
-            tree = ET.parse(os.path.join("..","DumpAsset","Editor","Docs", doc_path))
-            root = tree.getroot()
-            members_node = root.find('members')
-            for member_node in members_node.iter('member'):
-                class_key, sep = getRelevantClassMap(member_node, classes, node_types)
-                if class_key is not None:
-                    doc_txt = convertToDocs(member_node, class_key, classes[class_key], sep)
-                    txt.write(doc_txt + "\n\n")
 
-        txt.write("[[Category:Data Class Documentation]]")
+        for item in class_yaml['items']:
+            if item['type'] in accepted_types:
+
+                source_file = item['source']['path']
+                out_file = convert_to_filename(main_out_file, source_file, split_format)
+                if out_file not in out_files:
+                    out_files[out_file] = []
+                    table_files[out_file] = []
+                    ref_links[out_file] = {}
+
+                github_link = convert_to_link(source_file)
+                ref_links[out_file][github_link] = True
+
+                if item['name'] in skip_items:
+                    continue
+                if 'const ' in item['syntax']['content']:
+                    continue
+                if '[NonSerialized]' in item['syntax']['content']:
+                    continue
+                backup_item = None
+                if item['name'] in item_links:
+                    backup_item = item_links[item['name']]
+                doc_txt, table_txt = convertToDocs(item, backup_item, friendly_name)
+                out_files[out_file].append(doc_txt + "\n\n")
+                if is_quick_reference:
+                    table_files[out_file].append(table_txt + "\n")
+
+
+    for out_file in out_files:
+        outfile_full = os.path.join("..", "DataAsset", "WIKI", out_file + ".txt")
+        outfile_dir, _ = os.path.split(outfile_full)
+        os.makedirs(outfile_dir, exist_ok=True)
+        with open(outfile_full, 'w', encoding='utf-8') as txt:
+            first_key = next(iter(classes))
+            first_class = first_key.split('.')[-1]
+
+            if is_quick_reference:
+                txt.write("{{Hat Note|More functions: [[Script Reference]]''}}\n\n")
+
+            txt.write("This page documents the {0} class for Lua scripting.\n\n".format(first_class))
+            if is_singleton:
+                txt.write("As a singleton class, it can be accessed from Lua with <code>{0}</code>.\n\n".format(friendly_name))
+            else:
+                txt.write("As an instanced class, it be accessed from Lua after assigning the instance to a variable, such as <code>{0}</code>\n\n".format(friendly_name))
+
+            write_rows = out_files[out_file]
+            for row in write_rows:
+                txt.write(row)
+
+            txt.write("== References ==\n\n")
+            for link in ref_links[out_file]:
+                txt.write(link + "\n\n")
+
+            if is_quick_reference:
+                txt.write("[[Category:Quick Reference]]")
+            else:
+                txt.write("[[Category:Data Class Documentation]]")
+
+    for out_file in table_files:
+        write_rows = table_files[out_file]
+        if len(write_rows) == 0:
+            continue
+        outfile_full = os.path.join("..", "DataAsset", "WIKI", out_file, "Table.txt")
+        outfile_dir, _ = os.path.split(outfile_full)
+        os.makedirs(outfile_dir, exist_ok=True)
+        with open(outfile_full, 'w', encoding='utf-8') as txt:
+
+            txt.write('<table class="wikitable">\n<tr>\n<th>Name</th>\n<th>Description</th>\n</tr>')
+            for row in write_rows:
+                txt.write(row)
+            txt.write('</table>')
 
 def main():
-
-    os.makedirs(os.path.join("..", "DataAsset", "Docs", "Functions"), exist_ok=True)
-    os.makedirs(os.path.join("..", "DataAsset", "Docs", "Class"), exist_ok=True)
 
     class_maps = {
         "RogueEssence.Script.ScriptAI": "AI"
     }
-    convertClassesToWiki("Functions/AI", class_maps, {"M": ":", "F": ":"})
+    convertClassesToWiki("AI (functions)", "AI", True, True, class_maps, None, ["Method", "Field"])
 
     class_maps = {
         "RogueEssence.Script.ScriptDungeon": "DUNGEON"
     }
-    convertClassesToWiki("Functions/Dungeon", class_maps, {"M": ":", "F": ":"})
+    convertClassesToWiki("Dungeon (functions)", "DUNGEON", True, True, class_maps, None, ["Method", "Field"])
 
     class_maps = {
         "RogueEssence.Script.ScriptGame": "GAME",
     }
-    convertClassesToWiki("Functions/Game", class_maps, {"M": ":", "F": ":"})
+    convertClassesToWiki("Game (functions)", "GAME", True, True, class_maps, "ScriptGame", ["Method", "Field"])
 
     class_maps = {
         "RogueEssence.Script.ScriptGround": "GROUND",
     }
-    convertClassesToWiki("Functions/Ground", class_maps, {"M": ":", "F": ":"})
+    convertClassesToWiki("Ground (functions)", "GROUND", True, True, class_maps, "ScriptGround", ["Method", "Field"])
 
     class_maps = {
         "RogueEssence.Script.ScriptSound": "SOUND",
     }
-    convertClassesToWiki("Functions/Sound", class_maps, {"M": ":", "F": ":"})
+    convertClassesToWiki("Sound (functions)", "SOUND", True, True, class_maps, None, ["Method", "Field"])
 
     class_maps = {
         "RogueEssence.Script.ScriptStrings": "STRINGS",
     }
-    convertClassesToWiki("Functions/Strings", class_maps, {"M": ":", "F": ":"})
+    convertClassesToWiki("Strings (functions)", "STRINGS", True, True, class_maps, None, ["Method", "Field"])
 
     class_maps = {
         "RogueEssence.Script.ScriptTask": "TASK",
     }
-    convertClassesToWiki("Functions/Task", class_maps, {"M": ":", "F": ":"})
+    convertClassesToWiki("Task (functions)", "TASK", True, True, class_maps, None, ["Method", "Field"])
 
     class_maps = {
         "RogueEssence.Script.ScriptUI": "UI",
     }
-    convertClassesToWiki("Functions/UI", class_maps, {"M": ":", "F": ":"})
+    convertClassesToWiki("UI (functions)", "UI", True, True, class_maps, "ScriptUI", ["Method", "Field"])
 
 
     class_maps = {
         "RogueEssence.Dungeon.Character": "Character",
         "RogueEssence.Dungeon.CharData": "CharData"
     }
-    convertClassesToWiki("Class/Character", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Class%3ACharacter", "character", False, False, class_maps, None, ["Property", "Field"])
 
     class_maps = {
         "RogueEssence.Ground.GroundChar": "GroundChar",
@@ -170,61 +276,65 @@ def main():
         "RogueEssence.Ground.BaseTaskUser": "BaseTaskUser",
         "RogueEssence.Ground.GroundEntity": "GroundEntity"
     }
-    convertClassesToWiki("Class/GroundChar", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Class%3AGroundChar", "groundChar", False, False, class_maps, None, ["Property", "Field"])
 
     class_maps = {
         "RogueEssence.Dungeon.BattleContext": "BattleContext",
         "RogueEssence.Dungeon.UserTargetGameContext": "UserTargetGameContext",
         "RogueEssence.Dungeon.GameContext": "GameContext"
     }
-    convertClassesToWiki("Class/BattleContext", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Class%3ABattleContext", "battleContext", False, False, class_maps, None, ["Property", "Field"])
 
     class_maps = {
         "RogueEssence.Data.BattleData": "BattleData"
     }
-    convertClassesToWiki("Class/BattleData", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Class%3ABattleData", "battleData", False, False, class_maps, None, ["Property", "Field"])
 
     class_maps = {
         "RogueEssence.Data.TileData": "TileData"
     }
-    convertClassesToWiki("Class/TileData", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Class%3ATileData", "tileData", False, False, class_maps, None, ["Property", "Field"])
 
     class_maps = {
         "RogueEssence.Data.MapStatusData": "MapStatusData"
     }
-    convertClassesToWiki("Class/MapStatusData", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Class%3AMapStatusData", "mapStatusData", False, False, class_maps, None, ["Property", "Field"])
 
     class_maps = {
         "RogueEssence.Data.StatusData": "StatusData"
     }
-    convertClassesToWiki("Class/StatusData", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Class%3AStatusData", "statusData", False, False, class_maps, None, ["Property", "Field"])
 
     class_maps = {
         "RogueEssence.Data.SkillData": "SkillData"
     }
-    convertClassesToWiki("Class/SkillData", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Class%3ASkillData", "skillData", False, False, class_maps, None, ["Property", "Field"])
 
     class_maps = {
         "RogueEssence.Data.IntrinsicData": "IntrinsicData"
     }
-    convertClassesToWiki("Class/IntrinsicData", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Class%3AIntrinsicData", "intrisicData", False, False, class_maps, None, ["Property", "Field"])
 
     class_maps = {
         "RogueEssence.Data.ItemData": "ItemData"
     }
-    convertClassesToWiki("Class/ItemData", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Class%3AItemData", "itemData", False, False, class_maps, None, ["Property", "Field"])
 
     class_maps = {
-        "RogueEssence.Data.MonsterData": "MonsterData",
-        "RogueEssence.Data.BaseMonsterForm": "BaseMonsterForm",
-        "PMDC.Data.MonsterFormData": "MonsterFormData"
+        "RogueEssence.Data.MonsterData": "MonsterData"
     }
-    convertClassesToWiki("Class/MonsterData", class_maps, {"P": ".", "F": "."})
+    convertClassesToWiki("Class%3AMonsterData", "monsterData", False, False, class_maps, None, ["Property", "Field"])
+
+    class_maps = {
+        "PMDC.Data.MonsterFormData": "MonsterFormData",
+        "RogueEssence.Data.BaseMonsterForm": "BaseMonsterForm"
+    }
+    convertClassesToWiki("Class%3AMonsterFormData", "monsterFormData", False, False, class_maps, None, ["Property", "Field"])
 
     class_maps = {
         "RogueEssence.Data.DataManager": "_DATA"
     }
-    convertClassesToWiki("Class/DataManager", class_maps, {"P": ".", "F": ".", "M": ":"})
+    convertClassesToWiki("Class%3ADataManager", "_DATA", True, False, class_maps, None, ["Property", "Field", "Method"])
 
     print("Complete.")
 

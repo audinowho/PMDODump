@@ -74,7 +74,7 @@ class WikiGen:
             if os.path.isdir(os.path.join(dir, full_child)):
                 self.uploadDirF(dir, full_child, mergeF)
             else:
-                page_name, _ = os.path.splitext(full_child.replace('\\', '%2F').replace(' ', '_'))
+                page_name, _ = os.path.splitext(full_child.replace('%3A', ':').replace('\\', '%2F').replace(' ', '_'))
                 self.uploadPage(dir, full_child, page_name, mergeF)
 
 def get_credentials():
@@ -98,8 +98,8 @@ def main():
 
     #wikiGen.uploadPage(os.path.join("..", "DataAsset", "Docs"), "BattleContext.txt", "Class:BattleContext")
 
-    #wikiGen.uploadDir(os.path.join("..", "DataAsset", "WIKI"), "")
-    wikiGen.uploadDirF(os.path.join("..", "DataAsset", "WIKI"), "", wikiGen.mergeDesc)
+    wikiGen.uploadDir(os.path.join("..", "DataAsset", "WIKI"), "")
+    #wikiGen.uploadDirF(os.path.join("..", "DataAsset", "WIKI"), "", wikiGen.mergeDesc)
 
     print("Complete.")
 
